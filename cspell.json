@@ -3,7 +3,8 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
-        "msrc"
+        "msrc",
+        "struct"
     ],
     "ignoreWords": [],
     "flagWords": [
