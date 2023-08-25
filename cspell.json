@@ -1,0 +1,18 @@
+{
+    "version": "0.2",
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "msrc",
+        "struct"
+    ],
+    "ignoreWords": [],
+    "flagWords": [
+        "teh"
+    ],
+    "import": [],
+    "ignorePaths": [
+        "cspell.json",
+        "LICENSE"
+    ]
+}
