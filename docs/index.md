@@ -1,1 +1,1 @@
-# Welcome to m365copilot-docs!
+# Welcome to m365copilot-docs
