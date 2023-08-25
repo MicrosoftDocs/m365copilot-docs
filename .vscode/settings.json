@@ -1,0 +1,6 @@
+{
+  "cSpell.spellCheckOnlyWorkspaceFiles": true,
+  "markdownlint.ignore": [
+    "LICENSE-CODE"
+  ]
+}
