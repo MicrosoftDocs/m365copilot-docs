@@ -4,3 +4,5 @@
   href: topic1.md
 - name: External topic
   href: /microsoftteams/platform/copilot/how-to-extend-copilot?context=m365copilot/context
+- name: Kiota topic
+  href: /openapi/kiota/install?context=m365copilot/context
