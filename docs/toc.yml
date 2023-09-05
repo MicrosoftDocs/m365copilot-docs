@@ -1,2 +1,6 @@
 - name: Index
   href: index.md
+- name: Test topic
+  href: topic1.md
+- name: External topic
+  href: /microsoftteams/platform/copilot/how-to-extend-copilot?context=m365copilot/context
