@@ -1,3 +1,4 @@
-- name: 'M365 Copilot'
+items:
+- name: M365 Copilot
   tocHref: /
-  topicHref: /
+  topicHref: /index
