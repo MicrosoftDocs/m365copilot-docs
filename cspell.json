@@ -3,8 +3,10 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "docfx",
         "microsoftteams",
         "msrc",
+        "permissioned",
         "struct"
     ],
     "ignoreWords": [],
