@@ -1,0 +1,30 @@
+### YamlMime: Hub
+
+title: Microsoft 365 Copilot extensibility documentation
+summary: Learn how to extend Microsoft 365 Copilot
+brand: m365
+
+metadata:
+  title: Microsoft 365 Copilot extensibility documentation
+  description: Learn how to extend Microsoft 365 Copilot
+  ms.service: microsoft-365-copilot
+  ms.topic: hub-page
+  author: jasonjoh
+  ms.author: jasonjoh
+  ms.date: 09/18/2023
+
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+  items:
+    - title: Extending Microsoft 365 Copilot
+      itemType: overview
+      url: ./overview.md
+    - title: Microsoft Graph connectors
+      itemType: concept
+      url: ./graph-connectors.md
+    - title: Message extensions
+      itemType: concept
+      url: ./message-extensions.md
+    - title: Power Platform connectors
+      itemType: concept
+      url: ./power-platform-connectors.md

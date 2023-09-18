@@ -43,7 +43,8 @@
       "breadcrumb_path": "/m365copilot/breadcrumb/toc.json",
       "feedback_system": "Standard",
       "permissioned-type": "public",
-      "uhfHeaderId": "MSDocsHeader-MSGraph"
+      "uhfHeaderId": "MSDocsHeader-MSGraph",
+      "ms.service": "microsoft-365-copilot"
     },
     "fileMetadata": {},
     "template": [],
