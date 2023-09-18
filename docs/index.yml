@@ -19,10 +19,6 @@ highlightedContent:
     - title: Extending Microsoft 365 Copilot
       itemType: overview
       url: ./overview.md
-
-highlightedContent:
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
-  items:
     - title: API plugins
       itemType: concept
       url: ./api-plugins.md
