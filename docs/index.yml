@@ -19,15 +19,27 @@ highlightedContent:
     - title: Extending Microsoft 365 Copilot
       itemType: overview
       url: ./overview.md
+
+conceptualContent:
+  title: Extension points
+  items:
     - title: API plugins
-      itemType: concept
-      url: ./api-plugins.md
+      links:
+        - text: Overview
+          itemType: overview
+          url: ./api-plugins.md
     - title: Microsoft Graph connectors
-      itemType: concept
-      url: ./graph-connectors.md
+      links:
+        - text: Overview
+          itemType: overview
+          url: ./graph-connectors.md
     - title: Message extensions
-      itemType: concept
-      url: ./message-extensions.md
+      links:
+        - text: Overview
+          itemType: overview
+          url: ./message-extensions.md
     - title: Power Platform connectors
-      itemType: concept
-      url: ./power-platform-connectors.md
+      links:
+        - text: Overview
+          itemType: overview
+          url: ./power-platform-connectors.md
