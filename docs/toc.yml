@@ -13,7 +13,7 @@
     - name: Message extensions
       href: message-extensions.md
     - name: Microsoft Graph connectors
-      href: graph-connectors.md.md
+      href: graph-connectors.md
     - name: Power Platform connectors
       href: power-platform-connectors.md
     - name: API plugins
@@ -23,7 +23,7 @@
     - name: Message extensions
       href: message-extensions.md
     - name: Microsoft Graph connectors
-      href: graph-connectors.md.md
+      href: graph-connectors.md
     - name: Power Platform connectors
       href: power-platform-connectors.md
     - name: API plugins
@@ -33,7 +33,7 @@
     - name: Message extensions
       href: message-extensions.md
     - name: Microsoft Graph connectors
-      href: graph-connectors.md.md
+      href: graph-connectors.md
     - name: Power Platform connectors
       href: power-platform-connectors.md
     - name: API plugins
