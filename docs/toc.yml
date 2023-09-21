@@ -9,7 +9,7 @@
 - name: API plugins
   href: api-plugins.md
 - name: External topic
-  href: /microsoftteams/platform/copilot/how-to-extend-copilot?context=m365copilot/context
+  href: /openapi/kiota/install?context=m365copilot/context
 - name: Get started
   items:
     - name: Message extensions
