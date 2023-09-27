@@ -1,3 +1,4 @@
-- name: '<please enter product name here>'
-  tocHref: /
-  topicHref: /
+items:
+- name: M365 Copilot
+  tocHref: /m365copilot/
+  topicHref: /m365copilot/index

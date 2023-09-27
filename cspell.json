@@ -3,7 +3,13 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "docfx",
+        "kiota",
+        "microsoftteams",
         "msrc",
+        "openapi",
+        "permissioned",
+        "quickstart",
         "struct"
     ],
     "ignoreWords": [],
