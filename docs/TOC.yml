@@ -1,0 +1,61 @@
+- name: Extend Microsoft 365 Copilot
+  href: index.md
+- name: Get started
+  expanded: true
+  items:
+    - name: Extend copilot for your scenario
+      href: decision-guide.md
+    - name: The Microsoft 365 Copilot platform
+      href: platform.md
+- name: Plan
+  items:
+    - name: Copilot plugins as Microsoft 365 apps
+      href: plan/plugins-are-apps.md
+    - name: Best practices
+      href: plan/best-practice.md
+    - name: Data, Privacy, and Security
+      href: plan/data-privacy-security.md
+    - name: Plugins and the Copilot orchestrator
+      href: plan/orchestrator.md
+- name: Build
+  items:
+    - name: Set up your dev environment
+      href: develop/prerequisites.md
+    - name: Authentication
+      href: develop/authentication.md
+    - name: Build API-based plugins
+      items:
+        - name: Overview
+          href: /microsoftteams/platform/copilot/build-api-based-message-extension?context=m365copilot/context
+        - name: Build an API-based plugin
+          href: /microsoftteams/platform/copilot/copilot-overview?context=m365copilot/context
+    - name: Build message extension plugins
+      items:
+        - name: Overview
+          href: /microsoftteams/platform/copilot/build-bot-based-message-extension?context=m365copilot/context
+        - name: Build a message extension plugin
+          href: /microsoftteams/platform/copilot/copilot-overview?context=m365copilot/context
+    - name: Build Microsoft Graph connectors
+      items:
+        - name: Overview
+          href: /graph/custom-connector-sdk-sample-overview?context=m365copilot/context
+        - name: Build a graph connector
+          href: /graph/connecting-external-content-connectors-overview?context=m365copilot/context
+    - name: Build Power Platform connectors
+      items:
+        - name: Overview 
+          href: /connectors/custom-connectors/define-blank?context=m365copilot/context
+        - name: Build a Power Platform connector
+          href: /connectors/connectors?context=m365copilot/context
+- name: Publish
+  href: publish.md
+- name: Integrate Microsoft 365 data to a copilot
+  href: m365-data.md
+- name: Resources
+  items:
+  - name: FAQ
+    href: develop/faq.md
+  - name: Samples
+    href: develop/samples.md
+  - name: Support
+    href: develop/support.md
