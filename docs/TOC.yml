@@ -11,7 +11,7 @@
   items:
     - name: Copilot plugins as Microsoft 365 apps
       href: plan/plugins-are-apps.md
-    - name: Best practices
+    - name: Best practices for copilot extensibility
       href: plan/best-practice.md
     - name: Data, Privacy, and Security
       href: plan/data-privacy-security.md
@@ -21,27 +21,19 @@
   items:
     - name: Set up your dev environment
       href: develop/prerequisites.md
-    - name: Authentication
-      href: develop/authentication.md
-    - name: Build API-based plugins
+    - name: Message extension plugins
       items:
         - name: Overview
-          href: /microsoftteams/platform/copilot/build-api-based-message-extension?context=m365copilot/context
-        - name: Build an API-based plugin
-          href: /microsoftteams/platform/copilot/copilot-overview?context=m365copilot/context
-    - name: Build message extension plugins
-      items:
-        - name: Overview
-          href: /microsoftteams/platform/copilot/build-bot-based-message-extension?context=m365copilot/context
+          href: message-extension/overview-bot.md
         - name: Build a message extension plugin
           href: /microsoftteams/platform/copilot/copilot-overview?context=m365copilot/context
-    - name: Build Microsoft Graph connectors
+    - name: Microsoft Graph connectors
       items:
         - name: Overview
           href: /graph/custom-connector-sdk-sample-overview?context=m365copilot/context
         - name: Build a graph connector
           href: /graph/connecting-external-content-connectors-overview?context=m365copilot/context
-    - name: Build Power Platform connectors
+    - name: Power Platform connectors
       items:
         - name: Overview 
           href: /connectors/custom-connectors/define-blank?context=m365copilot/context
