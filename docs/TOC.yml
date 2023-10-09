@@ -1,5 +1,8 @@
+
+- name: Microsoft 365 Copilot developer documentation
+  href: index.yml
 - name: Extend Microsoft 365 Copilot
-  href: index.md
+  href: overview.md
 - name: Get started
   expanded: true
   items:
