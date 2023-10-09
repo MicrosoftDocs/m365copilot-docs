@@ -1,0 +1,74 @@
+### YamlMime:Hub
+
+title: Microsoft 365 Copilot developer documentation
+summary: Microsoft 365 Copilot is a next-generation AI tool that combines the power of foundation models with your data in Microsoft Graph and Microsoft 365 apps to turn your words into the most powerful productivity tool on the planet. With the plugins, every developer can integrate their apps and services into Microsoft 365 Copilot. 
+brand: m365
+metadata:
+  title: Microsoft 365 Copilot developer documentation
+  description: Integrate your apps and services with Microsoft 365 Copilot and unleash the power of AI
+  ms.topic: hub-page
+  ms.prod: ms-365
+  author: timura
+
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+  items:
+    - title: What is Microsoft 365 Copilot?
+      itemType: overview
+      url: ./overview.md
+    - title: Which extensibility options if for you?
+      itemType: quickstart
+      url: ./decision-guide.md
+    - text: Microsoft 365 Copilot for Admin
+      url: https://learn.microsoft.com/en-us/microsoft-365-copilot/
+    - title: TBD
+      itemType: overview
+      url: ./
+
+productDirectory:
+  title: SDKs and tools
+  items:
+    # Card
+    - title: Graph Connectors
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: ./assets/images/hub/..svg
+      url: https://learn.microsoft.com/graph/connecting-external-content-connectors-overview
+    # Card
+    - title: Teams Message Extensions
+      imageSrc: ./assets/images/hub/..svg
+      url: 
+    # Card
+    - title: Message Extensions with API
+      imageSrc: ./assets/images/hub/..svg
+      url: 
+    # Card
+    - title: Power Platform Connectors
+      imageSrc: ./assets/images/hub/..svg
+      url: https://learn.microsoft.com/connectors/connectors
+
+additionalContent:
+  sections:
+    - title: Guides and Resources
+      items:
+        # Card
+        - title: Video
+          links:
+            - text: Video title
+              url: /
+        # Card
+        - title: Learn more
+          links:
+            - text: Microsoft 365 Learning Path
+              url: https://learn.microsoft.com/en-us/training/paths/get-started-with-microsoft-365-copilot/
+            - text: Microsoft 365 Developer YouTube channel
+              url: https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ
+            - text: Microsoft 365 Blog
+              url: https://www.microsoft.com/en-us/microsoft-365/blog/
+
+        # Card
+        - title: Community
+          links:
+            - text: Microsoft 365 & Power Platform Community 
+              url: https://pnp.github.io/
+            - text: Microsoft AI learning and community hub
+              url: https://learn.microsoft.com/ai/    
