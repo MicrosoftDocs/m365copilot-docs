@@ -28,31 +28,45 @@ highlightedContent:
       itemType: overview
       url: ./
 
+# productDirectory section 
 productDirectory:
   title: Microsoft 365 Copilot connectors and plugins
+  summary: Microsoft 365 Copilot extensibility product and services 
   items:
     # Card
     - title: Graph Connectors
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/index/image1.svg 
+      summary: cardsummary-gc
       url: https://learn.microsoft.com/graph/connecting-external-content-connectors-overview
-    # Card
     - title: Teams Message Extensions
-      url: microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
-    # Card
+      imageSrc: ./media/index/image1.svg 
+      summary: cardsummary-me
+      url: https://microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
     - title: Message Extensions with API
-      url: microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
-    # Card
+      imageSrc: ./media/index/image1.svg 
+      summary: cardsummary-meapi
+      url: https://microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
     - title: Power Platform Connectors
+      imageSrc: ./media/index/image1.svg 
+      summary: cardsummary-ppc
       url: https://learn.microsoft.com/connectors/connectors
 
+# additionalContent section 
+# Card with links style
 additionalContent:
+  # Supports up to 4 subsections
   sections:
     - title: Guides and Resources
+      summary: subsectionsummary
       items:
         # Card
         - title: Video
           links:
-            - text: Video title
-              url: /
+            - text: Video title 1
+              url: ./file1a.md
+            - text: Video title 2
+              url: ./file1b.md
         # Card
         - title: Learn more
           links:
@@ -62,11 +76,11 @@ additionalContent:
               url: https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ
             - text: Microsoft 365 Blog
               url: https://www.microsoft.com/en-us/microsoft-365/blog/
-
         # Card
         - title: Community
           links:
             - text: Microsoft 365 & Power Platform Community 
               url: https://pnp.github.io/
             - text: Microsoft AI learning and community hub
-              url: https://learn.microsoft.com/ai/    
+              url: https://learn.microsoft.com/ai/  
+
