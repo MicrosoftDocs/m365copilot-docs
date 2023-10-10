@@ -1,8 +1,8 @@
 ---
 title: Extend Microsoft 365 Copilot
 description: Extend Microsoft 365 Copilot with the intelligence of external services, apps, and data
-author:
-ms.author:
+author: microsoftdocs
+ms.author: microsoftdocs
 ms.topic: overview
 ms.date: 11/1/2023
 ---
@@ -37,7 +37,7 @@ TODO: Please edit - Introduce API-based, ME plugins
 
 A plugin allows Copilot to interact directly with third-party data, apps, and services, enhancing its capabilities and broadening its range of capabilities.
 
-There are a few ways to develope Copilot plugins— one way to build a plugin is connecting an API data point using Open API specification. Another way is building a bot-based Message Extensions. If you have built apps with [Message Extensions](https://review.learn.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) for Microsoft Teams or Outlook, your apps should be already compatible with Copilot.
+There are a few ways to develope Copilot plugins— one way to build a plugin is connecting an API data point using Open API specification. Another way is building a bot-based Message Extensions. If you have built apps with [Message Extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) for Microsoft Teams or Outlook, your apps should be already compatible with Copilot.
 
 ### Connect your data
 

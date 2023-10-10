@@ -1,8 +1,8 @@
 ---
 title: Extend copilot for your scenario
 description: Understand which type of Microsoft 365 Copilot plugin or connector works best for your business use case
-author:
-ms.author: jthake
+author: girliemac
+ms.author: timura
 ms.service: microsoft-365-copilot
 ms.topic: conceptual
 ms.date: 11/1/2023
@@ -45,5 +45,4 @@ On the other hand, Bot-based plugins are message extensions that use a bot to ha
 |---------|---------|
 |- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
 
-You can learn more about Message extensions on [Teams Platform documentation](https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
-
+You can learn more about Message extensions on [Teams Platform documentation](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).

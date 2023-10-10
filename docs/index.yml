@@ -23,10 +23,10 @@ highlightedContent:
       url: ./decision-guide.md
     - title: Microsoft 365 Copilot for Admin
       itemType: overview
-      url: https://learn.microsoft.com/en-us/microsoft-365-copilot/
+      url: /microsoft-365-copilot/
     - title: TBD
       itemType: overview
-      url: ./
+      url: ./overview.md
 
 # productDirectory section 
 productDirectory:
@@ -36,20 +36,16 @@ productDirectory:
     # Card
     - title: Graph Connectors
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/index/image1.svg 
-      summary: cardsummary-gc
+      imageSrc: ./assets/icons/microsoft-graph.svg
+      summary: Connect external data to Graph Connectors
       url: https://learn.microsoft.com/graph/connecting-external-content-connectors-overview
     - title: Teams Message Extensions
-      imageSrc: ./media/index/image1.svg 
-      summary: cardsummary-me
-      url: https://microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
-    - title: Message Extensions with API
-      imageSrc: ./media/index/image1.svg 
-      summary: cardsummary-meapi
+      imageSrc: ./assets/icons/teams.svg 
+      summary: Extend Message Extension to Copilot
       url: https://microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
     - title: Power Platform Connectors
-      imageSrc: ./media/index/image1.svg 
-      summary: cardsummary-ppc
+      imageSrc: ./assets/icons/power-platform.svg 
+      summary: Connect external data to Power Platform Connectors
       url: https://learn.microsoft.com/connectors/connectors
 
 # additionalContent section 
@@ -64,23 +60,23 @@ additionalContent:
         - title: Video
           links:
             - text: Video title 1
-              url: ./file1a.md
+              url: https://youtube.com
             - text: Video title 2
-              url: ./file1b.md
+              url: https://youtube.com
         # Card
         - title: Learn more
           links:
             - text: Microsoft 365 Learning Path
-              url: https://learn.microsoft.com/en-us/training/paths/get-started-with-microsoft-365-copilot/
+              url: /training/paths/get-started-with-microsoft-365-copilot/
             - text: Microsoft 365 Developer YouTube channel
               url: https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ
             - text: Microsoft 365 Blog
-              url: https://www.microsoft.com/en-us/microsoft-365/blog/
+              url: https://www.microsoft.com/microsoft-365/blog/
         # Card
         - title: Community
           links:
             - text: Microsoft 365 & Power Platform Community 
               url: https://pnp.github.io/
             - text: Microsoft AI learning and community hub
-              url: https://learn.microsoft.com/ai/  
+              url: /ai/  
 
