@@ -12,10 +12,7 @@ metadata:
 
 # Maximum of 8 items
 highlightedContent:
-sections:
-  - title: Developing plugins for Microsoft 365 Copilot # Optional but good for SEO. Remove if not applicable.
-    summary: temp # Optional but good for SEO. Remove if not applicable.
-   # itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
+    # itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
     items:
     # Card
     - title: What is Microsoft 365 Copilot?
@@ -24,7 +21,8 @@ sections:
     - title: Which extensibility options if for you?
       itemType: quickstart
       url: ./decision-guide.md
-    - text: Microsoft 365 Copilot for Admin
+    - title: Microsoft 365 Copilot for Admin
+      itemType: overview
       url: https://learn.microsoft.com/en-us/microsoft-365-copilot/
     - title: TBD
       itemType: overview
@@ -35,20 +33,15 @@ productDirectory:
   items:
     # Card
     - title: Graph Connectors
-      # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./assets/images/hub/..svg
       url: https://learn.microsoft.com/graph/connecting-external-content-connectors-overview
     # Card
     - title: Teams Message Extensions
-      imageSrc: ./assets/images/hub/..svg
       url: microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
     # Card
     - title: Message Extensions with API
-      imageSrc: ./assets/images/hub/..svg
       url: microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
     # Card
     - title: Power Platform Connectors
-      imageSrc: ./assets/images/hub/..svg
       url: https://learn.microsoft.com/connectors/connectors
 
 additionalContent:
