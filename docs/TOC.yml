@@ -33,12 +33,42 @@
     - name: Microsoft Graph connectors
       items:
         - name: Overview
-          href: /graph/custom-connector-sdk-sample-overview?context=m365copilot/context
-        - name: Build a graph connector
           href: /graph/connecting-external-content-connectors-overview?context=m365copilot/context
+        - name: Connectors experiences
+          href: /graph/connecting-external-content-experiences?context=m365copilot/context
+        - name: Connectors API
+          href: /graph/connecting-external-content-connectors-api-overview?context=m365copilot/context
+        - name: Build your first connector
+          href: /graph/connecting-external-content-build-quickstart?context=m365copilot/context
+        - name: Microsoft Graph connectors SDK
+          items:
+            - name: Overview
+              href: /graph/custom-connector-sdk-sample-overview?context=m365copilot/context
+            - name: Build the connector
+              href: /graph/custom-connector-sdk-sample-create?context=m365copilot/context
+            - name: Test the connector
+              href: /graph/custom-connector-sdk-sample-test?context=m365copilot/context
+            - name: Host the connector as a Windows service
+              href: /graph/custom-connector-sdk-sample-hosting?context=m365copilot/context
+            - name: Publish the connector
+              href: /graph/custom-connector-sdk-sample-publish?context=m365copilot/context
+            - name: Surface the data in search
+              href: /graph/custom-connector-sdk-sample-search?context=m365copilot/context
+        - name: Simplify connector deployment
+          href: /graph/connecting-external-content-deploy-teams?context=m365copilot/context
+        - name: Manage connections
+          href: /graph/connecting-external-content-manage-connections?context=m365copilot/context
+        - name: Manage schema
+          href: /graph/connecting-external-content-manage-schema?context=m365copilot/context
+        - name: Manage items
+          href: /graph/connecting-external-content-manage-items?context=m365copilot/context
+        - name: Use external groups
+          href: /graph/connecting-external-content-external-groups?context=m365copilot/context
+        - name: API limits
+          href: /graph/connecting-external-content-api-limits?context=m365copilot/context
     - name: Power Platform connectors
       items:
-        - name: Overview 
+        - name: Overview
           href: /connectors/custom-connectors/define-blank?context=m365copilot/context
         - name: Build a Power Platform connector
           href: /connectors/connectors?context=m365copilot/context
