@@ -44,5 +44,4 @@ On the other hand, Bot-based plugins are message extensions that use a bot to ha
 |API based message extension  |Bot based message extension  |
 |---------|---------|
 |- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
-
 You can learn more about Message extensions on [Teams Platform documentation](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)
