@@ -54,7 +54,7 @@ additionalContent:
   # Supports up to 4 subsections
   sections:
     - title: Guides and Resources
-      summary: subsectionsummary
+      summary: You can learn more about M365 extensibility
       items:
         # Card
         - title: Video

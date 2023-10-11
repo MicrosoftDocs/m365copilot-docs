@@ -1,8 +1,6 @@
 ---
 title: Extend Microsoft 365 Copilot
 description: Extend Microsoft 365 Copilot with the intelligence of external services, apps, and data
-author: microsoftdocs
-ms.author: microsoftdocs
 ms.topic: overview
 ms.date: 11/1/2023
 ---
