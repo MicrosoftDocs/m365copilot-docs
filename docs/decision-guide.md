@@ -14,10 +14,10 @@ Intro - business use-cases and scenarios here.
 
 ## Extensibility options for Microsoft 365 Copilot
 
-You have more than one way to personalize Microsoft 365 Copilot with the intelligence of external services, apps, and data. 
+You have more than one way to personalize Microsoft 365 Copilot with the intelligence of external services, apps, and data.
 To start building your connector or plugins, you can select the tools and SDKs based on how you want to develope.
 
-:::image type="content" source="assets/images/decision-making-tree.png" alt-text="Dicision-making questions to figure out which M365 Copilot extensibility service you should use":::
+:::image type="content" source="assets/images/decision-making-tree.png" alt-text="Decision-making questions to figure out which M365 Copilot extensibility service you should use":::
 
 1. If you have invested in Power Platform already and want to expose the external data in PP too, additionally to Copilot, naturally your choice would be Power Platform connectors.
 2. If you want to benefit from Microsoft 365 Semantic Index and connect your data in Microsoft 365, including Microsoft Search, Context IQ, and the Microsoft 365 app, Graph Connectors would be your friend.
@@ -27,9 +27,9 @@ To start building your connector or plugins, you can select the tools and SDKs b
 
 ## Types of Message Extensions
 
-Message extensions and plugins are a way to extend the functionality of Microsoft Teams by allowing users to interact with your app or service from the message compose box. 
+Message extensions and plugins are a way to extend the functionality of Microsoft Teams by allowing users to interact with your app or service from the message compose box.
 
-Message extensions has distinct user-experience and can be used to insert content, trigger actions, or display information in a task module or a card. 
+Message extensions has distinct user-experience and can be used to insert content, trigger actions, or display information in a task module or a card.
 
 A user can interact with external data either from the Message Extension UI on chat client across Microsoft 365, or with Copilot.
 
@@ -37,9 +37,9 @@ A user can interact with external data either from the Message Extension UI on c
 
 
 ### What are the differences between Bot-based and API-based Plugins?
-API-based plugins are message extensions that use a web service to handle user requests and responses. They do not require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit. 
+API-based plugins are message extensions that use a web service to handle user requests and responses. They do not require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit.
 
-On the other hand, Bot-based plugins are message extensions that use a bot to handle user requests and responses. They require a bot registration and a bot framework SDK. They can be configured and deployed using the App Studio or the Teams Toolkit. 
+On the other hand, Bot-based plugins are message extensions that use a bot to handle user requests and responses. They require a bot registration and a bot framework SDK. They can be configured and deployed using the App Studio or the Teams Toolkit.
 
 |API based message extension  |Bot based message extension  |
 |---------|---------|
