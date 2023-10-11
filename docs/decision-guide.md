@@ -35,8 +35,8 @@ A user can interact with external data either from the Message Extension UI on c
 
 (may need some visual help to explain the UX)
 
-
 ### What are the differences between Bot-based and API-based Plugins?
+
 API-based plugins are message extensions that use a web service to handle user requests and responses. They do not require a bot registration or a bot framework SDK. They can be configured and deployed using the Developer Portal for Teams or the Teams Toolkit.
 
 On the other hand, Bot-based plugins are message extensions that use a bot to handle user requests and responses. They require a bot registration and a bot framework SDK. They can be configured and deployed using the App Studio or the Teams Toolkit.
@@ -45,4 +45,4 @@ On the other hand, Bot-based plugins are message extensions that use a bot to ha
 |---------|---------|
 |- Simpler and faster to create and maintain <br> - Use this option if you’re not planning to add a conversational bot to your app  <br> - Do not require any additional code or resources for bot logic <br> - Suitable for scenarios where the plugin only needs to communicate with a web service and does not need any complex logic or state management <br> - Privatized traffic as they don’t rely on Azure bot infrastructure.| - More flexibility <br> - Use this option if you’re also planning to build a conversational bot <br> - Can leverage the full capabilities of the bot framework SDK <br> - Suitable for scenarios where the plugin needs to communicate with multiple services, handle complex logic or user interactions, or maintain state across sessions.|
 
-You can learn more about Message extensions on [Teams Platform documentation](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
+You can learn more about Message extensions on [Teams Platform documentation](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)
