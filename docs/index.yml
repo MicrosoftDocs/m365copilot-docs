@@ -1,0 +1,82 @@
+### YamlMime:Hub
+
+title: Microsoft 365 Copilot developer documentation
+summary: Microsoft 365 Copilot is a next-generation AI tool that combines the power of foundation models with your data in Microsoft Graph and Microsoft 365 apps to turn your words into the most powerful productivity tool on the planet. With the plugins, every developer can integrate their apps and services into Microsoft 365 Copilot. 
+brand: m365
+metadata:
+  title: Microsoft 365 Copilot developer documentation
+  description: Integrate your apps and services with Microsoft 365 Copilot and unleash the power of AI
+  ms.topic: hub-page
+  ms.prod: ms-365
+  author: 
+
+# Maximum of 8 items
+highlightedContent:
+    # itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
+    items:
+    # Card
+    - title: What is Microsoft 365 Copilot?
+      itemType: overview
+      url: ./overview.md
+    - title: Which extensibility options if for you?
+      itemType: quickstart
+      url: ./decision-guide.md
+    - title: Microsoft 365 Copilot for Admin
+      itemType: overview
+      url: /microsoft-365-copilot/
+    - title: TBD
+      itemType: overview
+      url: ./overview.md
+
+# productDirectory section 
+productDirectory:
+  title: Microsoft 365 Copilot connectors and plugins
+  summary: Microsoft 365 Copilot extensibility product and services 
+  items:
+    # Card
+    - title: Graph Connectors
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./assets/icons/microsoft-graph.svg
+      summary: Connect external data to Graph Connectors
+      url: https://learn.microsoft.com/graph/connecting-external-content-connectors-overview
+    - title: Teams Message Extensions
+      imageSrc: ./assets/icons/teams.svg 
+      summary: Extend Message Extension to Copilot
+      url: https://microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+    - title: Power Platform Connectors
+      imageSrc: ./assets/icons/power-platform.svg 
+      summary: Connect external data to Power Platform Connectors
+      url: https://learn.microsoft.com/connectors/connectors
+
+# additionalContent section 
+# Card with links style
+additionalContent:
+  # Supports up to 4 subsections
+  sections:
+    - title: Guides and Resources
+      summary: You can learn more about M365 extensibility
+      items:
+        # Card
+        - title: Video
+          links:
+            - text: Video title 1
+              url: https://youtube.com
+            - text: Video title 2
+              url: https://youtube.com
+        # Card
+        - title: Learn more
+          links:
+            - text: Microsoft 365 Learning Path
+              url: /training/paths/get-started-with-microsoft-365-copilot/
+            - text: Microsoft 365 Developer YouTube channel
+              url: https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ
+            - text: Microsoft 365 Blog
+              url: https://www.microsoft.com/microsoft-365/blog/
+        # Card
+        - title: Community
+          links:
+            - text: Microsoft 365 & Power Platform Community 
+              url: https://pnp.github.io/
+            - text: Microsoft AI learning and community hub
+              url: /ai/  
+
