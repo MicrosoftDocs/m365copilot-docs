@@ -37,6 +37,3 @@ And if you want to build a Teams message extension app:
 
 > [!div class="nextstepaction"]
 > [Start building Message Extension]((/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?context=m365copilot/context))
-
-
-
