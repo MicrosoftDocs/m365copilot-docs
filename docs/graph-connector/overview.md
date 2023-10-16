@@ -19,7 +19,7 @@ By using Microsoft Graph connectors to ingest your external content into Microso
 
 In addition, users can hover over in-text citations in Microsoft 365 Copilot's response to get a preview of the external item referenced.
 
-![A screenshot of hoverving over a Graph connectors response in Microsoft 365 Copilot](assets/images/connectors-copilot-hover.png)
+![A screenshot of hovering over a Graph connectors response in Microsoft 365 Copilot](assets/images/connectors-copilot-hover.png)
 
 If users desire to dive deeper into the referenced content, they can click on one of the reference links at the bottom of the response.
 
