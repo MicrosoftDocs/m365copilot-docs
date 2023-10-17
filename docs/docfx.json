@@ -40,7 +40,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/m365copilot/breadcrumb/toc.json",
+      "breadcrumb_path": "/microsoft-365-copilot/platform/breadcrumb/toc.json",
       "feedback_system": "Standard",
       "permissioned-type": "public",
       "uhfHeaderId": "MSDocsHeader-MSGraph",
