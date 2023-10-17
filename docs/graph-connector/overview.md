@@ -1,7 +1,7 @@
 ---
 title: Build Microsoft Graph connectors for Microsoft 365 Copilot
 description: Extend Microsoft 365 Copilot with Microsoft Graph connectors
-author: 
+author:
 ms.author: muwagerikpe
 ms.topic: overview
 ms.date: 11/14/2023
@@ -15,15 +15,15 @@ Microsoft 365 Copilot is your copilot for work. It combines the power of Large L
 
 By using Microsoft Graph connectors to ingest your external content into Microsoft Graph, your users can use Microsoft 365 Copilot to find, summarize, and learn from your line-of-business data through natural language prompts.
 
-![A screenshot of Graph connectors in Microsoft 365 Copilot](assets/images/connectors-copilot-response.png)
+![A screenshot of Graph connectors in Microsoft 365 Copilot](../assets/images/connectors-copilot-response.png)
 
 In addition, users can hover over in-text citations in Microsoft 365 Copilot's response to get a preview of the external item referenced.
 
-![A screenshot of hovering over a Graph connectors response in Microsoft 365 Copilot](assets/images/connectors-copilot-hover.png)
+![A screenshot of hovering over a Graph connectors response in Microsoft 365 Copilot](../assets/images/connectors-copilot-hover.png)
 
 If users desire to dive deeper into the referenced content, they can click on one of the reference links at the bottom of the response.
 
-![A screenshot of Graph connectors reference list in Microsoft 365 Copilot](assets/images/connectors-copilot-logo.png)
+![A screenshot of Graph connectors reference list in Microsoft 365 Copilot](../assets/images/connectors-copilot-logo.png)
 
 ## Create your own custom Microsoft Graph connection
 
