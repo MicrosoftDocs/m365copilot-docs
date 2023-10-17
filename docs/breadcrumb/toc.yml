@@ -1,14 +1,14 @@
 items:
 - name: Microsoft 365 Copilot
-  tocHref: /m365copilot
-  topicHref: /m365copilot/index
+  tocHref: /microsoft-365-copilot/platform/
+  topicHref: /microsoft-365-copilot/platform/index
   items:
   - name: Copilot Plugins
     tocHref: /microsoftteams/platform/copilot
-    topicHref: /m365copilot/index
+    topicHref: /microsoft-365-copilot/platform/index
   - name: Graph connectors
     tocHref: /graph/
-    topicHref: /m365copilot/index
+    topicHref: /microsoft-365-copilot/platform/index
   - name: Power Platform connector
     tocHref: /connectors/
-    topicHref: /m365copilot/index
+    topicHref: /microsoft-365-copilot/platform/index
