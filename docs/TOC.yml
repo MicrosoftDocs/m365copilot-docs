@@ -33,7 +33,7 @@
     - name: Microsoft Graph connectors
       items:
         - name: Overview
-          href: /graph/connecting-external-content-connectors-overview?context=m365copilot/context
+          href: /graph-connector/overview.md
         - name: Connectors experiences
           href: /graph/connecting-external-content-experiences?context=m365copilot/context
         - name: Connectors API
