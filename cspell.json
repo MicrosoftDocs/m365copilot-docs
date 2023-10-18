@@ -21,6 +21,7 @@
     ],
     "import": [],
     "ignorePaths": [
+        ".openpublishing.publish.config.json",
         "cspell.json",
         "LICENSE"
     ]
