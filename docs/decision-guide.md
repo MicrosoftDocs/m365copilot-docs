@@ -1,7 +1,6 @@
 ---
 title: Extend copilot for your scenario
 description: Understand which type of Microsoft 365 Copilot plugin or connector works best for your business use case
-ms.service: microsoft-365-copilot
 ms.topic: conceptual
 ms.date: 11/1/2023
 ---

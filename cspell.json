@@ -13,7 +13,10 @@
         "openapi",
         "permissioned",
         "quickstart",
-        "struct"
+        "struct",
+        "discoverability",
+        "erikadoyle",
+        "edoyle"
     ],
     "ignoreWords": [],
     "flagWords": [
