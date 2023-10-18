@@ -32,6 +32,8 @@
           href: /microsoftteams/platform/copilot/copilot-overview?context=/microsoft-365-copilot/platform/context
     - name: Microsoft Graph connectors
       items:
+        - name: Microsoft Graph connectors in Microsoft 365 Copilot
+          href: graph-connector/overview.md
         - name: Overview
           href: /graph/connecting-external-content-connectors-overview?context=/microsoft-365-copilot/platform/context
         - name: Connectors experiences
