@@ -27,12 +27,7 @@ If users desire to dive deeper into the referenced content, they can click on on
 
 ## Create your own custom Microsoft Graph connection
 
-The following solutions are available to help you build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph:
-
-- [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=m365copilot/context)
-- [Microsoft Graph connectors SDK](/graph/custom-connector-sdk-sample-overview?context=m365copilot/context)
-
-Use the Microsoft Graph connectors REST APIs to build a custom Microsoft Graph connection if you want full control to ensure that your connection meets your requirements. Use the Microsoft Graph connectors SDK if you want to minimize coding. The SDK is comprised of a framework, contract components, and tools to help you write and test your code.
+You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=m365copilot/context) to build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph. You can use the Microsoft Graph connectors APIs to create and manage external Microsoft Graph connections, define and register the schema of external data types, ingest external data items into Microsoft Graph, and sync external groups.
 
 ## Configuring your custom Microsoft Graph connection for Microsoft 365 Copilot
 
@@ -45,4 +40,3 @@ To make sure that Microsoft 365 Copilot uses your content effectively:
 ## See also
 
 - [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=m365copilot/context)
-- [Microsoft Graph connectors SDK](/graph/custom-connector-sdk-sample-overview?context=m365copilot/context)
