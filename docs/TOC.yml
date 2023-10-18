@@ -40,20 +40,6 @@
           href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/platform/context
         - name: Build your first connector
           href: /graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/platform/context
-        - name: Microsoft Graph connectors SDK
-          items:
-            - name: Overview
-              href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/platform/context
-            - name: Build the connector
-              href: /graph/custom-connector-sdk-sample-create?context=/microsoft-365-copilot/platform/context
-            - name: Test the connector
-              href: /graph/custom-connector-sdk-sample-test?context=/microsoft-365-copilot/platform/context
-            - name: Host the connector as a Windows service
-              href: /graph/custom-connector-sdk-sample-hosting?context=/microsoft-365-copilot/platform/context
-            - name: Publish the connector
-              href: /graph/custom-connector-sdk-sample-publish?context=/microsoft-365-copilot/platform/context
-            - name: Surface the data in search
-              href: /graph/custom-connector-sdk-sample-search?context=/microsoft-365-copilot/platform/context
         - name: Simplify connector deployment
           href: /graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/platform/context
         - name: Manage connections
