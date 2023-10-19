@@ -8,9 +8,6 @@ ms.date: 11/1/2023
 
 # Extend Microsoft 365 Copilot
 
-> [!IMPORTANT]
-> The information in this article only applies to the [Microsoft 365 Copilot Early Access Program](https://www.microsoft.com/microsoft-365/blog/2023/05/09/introducing-the-microsoft-365-copilot-early-access-program-and-new-capabilities-in-copilot/), an invite-only preview program for commercial customers. Details are subject to change.
-
 As a developer, you can extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work.
 
 [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) is the copilot built for modern work. It combines the power of large language models (LLMs) with data in the Microsoft Graph and the Microsoft 365 suite of apps to be the personal work assistant empowering every person in every organization to achieve more.

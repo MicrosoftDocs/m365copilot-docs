@@ -4,7 +4,9 @@
 - name: Get started
   expanded: true
   items:
-    - name: Extend copilot for your scenario
+    - name: Tour the copilot platform
+      href: platform.md
+    - name: Choose your extensibility path
       href: decision-guide.md
     - name: Set up your dev environment
       href: prerequisites.md
@@ -58,8 +60,6 @@
       href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
 - name: Publish
   href: publish.md
-- name: Integrate Microsoft 365 data to a copilot
-  href: integrate-m365-data-with-your-copilot.md
 - name: Resources
   items:
   - name: Samples
