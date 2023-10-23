@@ -25,14 +25,14 @@ To start building your connector or plugins, you can select the tools and SDKs b
 If you want to go low-code with Power Platform Connector:
 
 > [!div class="nextstepaction"]
-> [Start building Power Platform Connector](/connectors/custom-connectors/define-blank?context=m365copilot/context)
+> [Start building Power Platform Connector](/connectors/custom-connectors/define-blank?context=microsoft-365-copilot/extensibility/context)
 
 If you want to start creating Graph connector:
 
 > [!div class="nextstepaction"]
-> [Start building Graph Connector](/graph/connecting-external-content-connectors-overview?context=m365copilot/context)
+> [Start building Graph Connector](/graph/connecting-external-content-connectors-overview?context=microsoft-365-copilot/extensibility/context)
 
 And if you want to build a Teams message extension app:
 
 > [!div class="nextstepaction"]
-> [Start building Message Extension]((/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?context=m365copilot/context))
+> [Start building Message Extension]((/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?context=microsoft-365-copilot/extensibility/context))
