@@ -33,7 +33,7 @@
         - name: Overview
           href: /connectors/custom-connectors/define-blank?context=/microsoft-365-copilot/extensibility/context
         - name: Build a Power Platform connector
-          href: /connectors/connectors?context=/microsoft-365-copilot/platform/context
+          href: /connectors/connectors?context=/microsoft-365-copilot/extensibility/context
 - name: Build Microsoft Graph connectors
   items:
     - name: Microsoft Graph connectors in Microsoft 365 Copilot
