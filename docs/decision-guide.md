@@ -2,7 +2,7 @@
 title: Extend copilot for your scenario
 description: Understand which type of Microsoft 365 Copilot plugin or connector works best for your business use case
 ms.topic: conceptual
-ms.date: 11/1/2023
+ms.date: 11/14/2023
 ---
 
 # Extend Copilot for your scenario
@@ -12,7 +12,7 @@ Intro - business use-cases and scenarios here.
 ## Extensibility options for Microsoft 365 Copilot
 
 You have more than one way to personalize Microsoft 365 Copilot with the intelligence of external services, apps, and data.
-To start building your connector or plugins, you can select the tools and SDKs based on how you want to develope.
+To start building your connector or plugins, you can select the tools and SDKs based on how you want to develop.
 
 :::image type="content" source="assets/images/decision-making-tree.png" alt-text="Decision-making questions to figure out which M365 Copilot extensibility service you should use":::
 

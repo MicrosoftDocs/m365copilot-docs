@@ -4,18 +4,18 @@
 - name: Get started
   expanded: true
   items:
-    - name: Tour the copilot platform
-      href: platform.md
+    - name: Tour the copilot ecosystem
+      href: ecosystem.md
     - name: Choose your extensibility path
       href: decision-guide.md
     - name: Set up your dev environment
       href: prerequisites.md
 - name: Plan
   items:
-    - name: Copilot orchestrator
+    - name: How copilot chooses plugins to use
       href: orchestrator.md
     - name: What makes a good plugin?
-      href: best-practice.md
+      href: plugin-guidelines.md
     - name: Copilot plugins as Microsoft 365 apps
       href: plugins-are-apps.md
     - name: Data, Privacy, and Security
@@ -26,14 +26,14 @@
       items:
         - name: Overview
           href: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?context=/microsoft-365-copilot/extensibility/context
-        - name: Tutorial
+        - name: Build a message extension plugin
           href: /microsoftteams/platform/copilot/how-to-extend-copilot?context=/microsoft-365-copilot/extensibility/context
     - name: Start with a Power Platform connector
       items:
         - name: Overview
-          href: /connectors/custom-connectors/define-blank?context=/microsoft-365-copilot/extensibility/context
-        - name: Build a Power Platform connector
           href: /connectors/connectors?context=/microsoft-365-copilot/extensibility/context
+        - name: Build a Power Platform connector
+          href: /connectors/custom-connectors/define-blank?context=/microsoft-365-copilot/extensibility/context
 - name: Build Microsoft Graph connectors
   items:
     - name: Microsoft Graph connectors in Microsoft 365 Copilot
@@ -63,6 +63,6 @@
 - name: Resources
   items:
   - name: Samples
-    href: /samples/browse/?expanded=ms-graph&products=microsoft-graph-connectors-api
+    href: https://learn.microsoft.com/samples/browse/?expanded=ms-graph&products=microsoft-graph-connectors-api
   - name: Feedback
     href: https://feedbackportal.microsoft.com/feedback

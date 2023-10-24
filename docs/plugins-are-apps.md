@@ -4,7 +4,7 @@ description: Learn how to take advantage of the Microsoft 365 platform opportuni
 author: erikadoyle
 ms.author: edoyle
 ms.topic: best-practice
-ms.date: 11/1/2023
+ms.date: 11/14/2023
 ---
 
 # Copilot plugins as Microsoft 365 apps

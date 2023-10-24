@@ -2,7 +2,7 @@
 title: Extend Microsoft 365 Copilot
 description: Extend, enrich, and customize Microsoft 365 Copilot with external services, apps, and data
 ms.topic: overview
-ms.date: 11/1/2023
+ms.date: 11/14/2023
 
 ---
 
@@ -46,13 +46,13 @@ Plugins expand your users' skills by interacting with your web service using nat
 - **Retrieve relational data** such as reporting on service tickets assigned to a given team member
 - **Perform actions across apps** such as creating a new task in your organization's work tracking system
 
-You can build copilot plugins by building a Microsoft Teams message extension or a Power Platform connector, with even more options coming soon. If you already have a message extension or Power Platform connector, then you already have a plugin that works with Microsoft 365 Copilot. Learn more about [what makes a good plugin for copilot](best-practice.md) and how to [ensure copilot chooses your plugin](orchestrator.md) to use when its skills are needed.
+You can build copilot plugins by building a Microsoft Teams message extension or a Power Platform connector, with even more options coming soon. If you already have a message extension or Power Platform connector, then you already have a plugin that works with Microsoft 365 Copilot. Learn more about [what makes a good plugin for copilot](plugin-guidelines.md) and how to [ensure copilot chooses your plugin](orchestrator.md) to use when its skills are needed.
 
 ### Connectors
 
 Graph connectors increase the discoverability and engagement of your enterprise data by deeply integrating your data into the Microsoft 365 Copilot experience. With Graph connectors, you can:
 
-- **Make the most of your external data** for functions like enriched data analysis, giving Copilot the ability to access and analyze your diverse datasets from different sources, enabling more comprehensive insights
+- **Make the most of your external data** by giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights
 - **Use Copilot as a research aid**, letting Copilot find, summarize, and perform Q&A natively by leveraging the dataset of your choice
 - **Surface the intelligence of Copilot** in Microsoft Search, ContextIQ, and more to enhance the ways your users are already searching for answers
 
