@@ -3,9 +3,13 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "discoverability",
         "docfx",
+        "edoyle",
+        "erikadoyle",
         "jthake",
         "kiota",
+        "lightbox",
         "microsoftteams",
         "msrc",
         "muwagerikpe",
@@ -14,9 +18,7 @@
         "permissioned",
         "quickstart",
         "struct",
-        "discoverability",
-        "erikadoyle",
-        "edoyle"
+        "timura"
     ],
     "ignoreWords": [],
     "flagWords": [
