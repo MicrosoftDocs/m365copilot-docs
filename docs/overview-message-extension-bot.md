@@ -1,13 +1,13 @@
 ---
 title: Build message extensions for Microsoft 365 Copilot
-description: Extend Microsoft 365 Copilot with message extensions
+description: Intro Microsoft 365 Copilot with message extensions
 ms.topic: overview
 ms.date: 11/14/2023
 ---
 
 # Message extensions for Microsoft 365 Copilot
 
-Message extensions are features for Microsoft Teams that enable users to engage with your web service. 
+Message extensions are features for Microsoft Teams that enable users to engage with your web service.
 
 The user-interaction is typically initiated by a user through buttons and forms within the Teams client, to search or initiate actions in an external system from the compose message area, the command box, or directly from a message. The results of these interactions can be returned to the Teams client as a richly formatted card.
 
