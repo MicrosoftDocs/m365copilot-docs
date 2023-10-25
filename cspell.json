@@ -1,0 +1,31 @@
+{
+    "version": "0.2",
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "docfx",
+        "jthake",
+        "kiota",
+        "microsoftteams",
+        "msrc",
+        "muwagerikpe",
+        "nextstepaction",
+        "openapi",
+        "permissioned",
+        "quickstart",
+        "struct",
+        "discoverability",
+        "erikadoyle",
+        "edoyle"
+    ],
+    "ignoreWords": [],
+    "flagWords": [
+        "teh"
+    ],
+    "import": [],
+    "ignorePaths": [
+        ".openpublishing.publish.config.json",
+        "cspell.json",
+        "LICENSE"
+    ]
+}

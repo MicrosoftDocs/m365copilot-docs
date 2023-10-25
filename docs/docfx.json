@@ -40,9 +40,11 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/m365copilot/breadcrumb/toc.json",
+      "breadcrumb_path": "/microsoft-365-copilot/extensibility/breadcrumb/toc.json",
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "permissioned-type": "public",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "ms.service": "microsoft-365-copilot"
     },
     "fileMetadata": {},
     "template": [],
