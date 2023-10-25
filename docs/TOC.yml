@@ -25,8 +25,10 @@
     - name: Start with a Teams message extension
       items:
         - name: Overview
-          href: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?context=/microsoft-365-copilot/extensibility/context
-        - name: Build a message extension plugin
+          href: overview-message-extension-bot.md
+        - name: Build a basic message extension
+          href: /microsoftteams/platform/get-started/build-message-extension?context=/microsoft-365-copilot/extensibility/context
+        - name: Make it work with Copilot
           href: /microsoftteams/platform/copilot/how-to-extend-copilot?context=/microsoft-365-copilot/extensibility/context
     - name: Start with a Power Platform connector
       items:
