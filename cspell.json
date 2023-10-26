@@ -18,7 +18,8 @@
         "permissioned",
         "quickstart",
         "struct",
-        "timura"
+        "timura",
+        "vscodeversion"
     ],
     "ignoreWords": [],
     "flagWords": [
