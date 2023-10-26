@@ -14,7 +14,7 @@ These interactions are typically triggered by users via buttons and forms within
 With the introduction of Copilot, the game has changed. Users can now leverage natural language input to invoke a message extension's search function, bypassing the need for specific user-interface (UI) commands. This means they can get search results in a more intuitive and user-friendly manner.
 
 > [!NOTE]
-> Message extension's action commands are not yet supported for use in copilot plugins. 
+> Message extension's action commands are not yet supported for use in copilot plugins.
 
 This illustrate compares how a user can interact with a massage extension on Teams client and Microsoft 365 Copilot:
 
@@ -31,7 +31,7 @@ You can create a message extension using Teams Toolkit, which helps you to creat
 
 ## Next step
 
-Follow the step-by-step guides to build your first message extension app:
+Follow the step-by-step guides to build your first message extension plugin:
 
 > [!div class="nextstepaction"]
-> [Get started with message extension](/microsoftteams/platform/get-started/build-message-extension?context=/microsoft-365-copilot/extensibility/context)
+> [Get started with message extension plugin](build-me-bot-plugin.md)
