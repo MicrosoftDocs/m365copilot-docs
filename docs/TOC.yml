@@ -26,10 +26,8 @@
       items:
         - name: Overview
           href: overview-message-extension-bot.md
-        - name: Build a basic message extension
-          href: /microsoftteams/platform/get-started/build-message-extension?context=/microsoft-365-copilot/extensibility/context
-        - name: Make it work with Copilot
-          href: /microsoftteams/platform/copilot/how-to-extend-copilot?context=/microsoft-365-copilot/extensibility/context
+        - name: Build a message extension plugin
+          href: build-me-bot-plugin.md
     - name: Start with a Power Platform connector
       items:
         - name: Overview

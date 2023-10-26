@@ -7,11 +7,16 @@ ms.date: 11/14/2023
 
 # Message extensions for Microsoft 365 Copilot
 
-Message extensions are a powerful feature in Microsoft Teams, designed to facilitate user engagement with your web service
+Message extensions are a powerful feature in Microsoft Teams and Outlook, designed to facilitate user engagement with your web service
 
-These interactions are typically triggered by users via buttons and forms within the Teams client. This allows them to search or initiate actions in an external system, right from the compose message area, the command box, or even directly from a message. The outcomes of these interactions are delivered back to the Teams client in the form of a richly formatted card.
+These interactions are typically triggered by users via buttons and forms within Team and Outlook client. This allows them to search or initiate actions in an external system, right from the compose message area, or even directly from a message. The outcomes of these interactions are delivered back to the client in the form of a richly formatted card.
 
 With the introduction of Copilot, the game has changed. Users can now leverage natural language input to invoke a message extension's search function, bypassing the need for specific user-interface (UI) commands. This means they can get search results in a more intuitive and user-friendly manner.
+
+> [!NOTE]
+> Message extension's action commands are not yet supported for use in copilot plugins. 
+
+This illustrate compares how a user can interact with a massage extension on Teams client and Microsoft 365 Copilot:
 
 :::image type="content" source="assets/images/message-extensions-ux.png" alt-text="this illustrates two user experiences of message extensions- one way is to invoke from Teams client and another is Copilot" lightbox="assets/images/message-extensions-ux.png":::
 
