@@ -16,7 +16,7 @@ Make sure you have [set up your development environment](prerequisites.md) alrea
 
 ## Install the Teams Toolkit
 
-The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
+The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more.
 
 You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`. In this tutorial, we are going to install Teams Toolkit extension on Visual Studio Code.
 
@@ -24,7 +24,7 @@ You can use the toolkit with Visual Studio Code, or CLI (command-line interface)
 1. In the search box, enter Teams Toolkit.
 1. Select Install next to the Teams Toolkit.
 
-TODO - SCREENSHOT 
+TODO - SCREENSHOT
 :::image type="content" source="/assets/images/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="/assets/images/install-toolkit-vscodeversion.png":::
 
 The Teams Toolkit :::image type="icon" source="/assets/images/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
@@ -51,7 +51,7 @@ TODO - step-by-step instruction here with screenshots
 
 TODO - step-by-step instruction here with screenshots
 
-## Deploy 
+## Deploy
 
 Should we include it???
 
