@@ -20,10 +20,10 @@ These interactions are typically triggered via buttons and forms within Team and
 
 ## Message extension with Copilot
 
+With the introduction of Copilot for Microsoft 365, the game has changed. Users can now leverage natural language input to invoke a message extension's search function, bypassing the need for specific user-interface (UI) commands. In essence, your users’ words become the catalyst for Copilot’s actions, calling the appropriate plugin for their request.
+
 > [!NOTE]
 > Plugins for Microsoft 365 Copilot are in public preview. Message extension action commands are not yet supported for use in copilot plugins.
-
-With the introduction of Copilot for Microsoft 365, the game has changed. Users can now leverage natural language input to invoke a message extension's search function, bypassing the need for specific user-interface (UI) commands. In essence, your users’ words become the catalyst for Copilot’s actions, calling the appropriate plugin for their request.
 
 This illustrate compares how a user can interact with a massage extension on Teams client and Microsoft 365 Copilot:
 
