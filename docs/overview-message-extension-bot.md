@@ -35,9 +35,9 @@ Your users can do so much more than just getting search queries. With the integr
 
 ## Build message extensions using Bot Framework
 
-There are a few ways to build message extensions, but to extend the capabilities for Copilot, you need to built one with [Bot Framework](https://dev.botframework.com/), which is a SDK, commonly used to create variety bots using C#, Java, Python, and JavaScript.
+There are a few ways to build message extensions, but to extend the capabilities for Copilot, you need to built one with [Bot Framework](https://dev.botframework.com/) SDK, commonly used to create variety of bots, including Teams bots.
 
-You can create a message extension using Teams Toolkit, which helps you to create a project by scaffolding a template that suits your needs.
+For development, you can use [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) for Visual Studio Code to build your message extensions. It helps you to create a project by scaffolding a template that suits your needs!
 
 ## Next step
 
