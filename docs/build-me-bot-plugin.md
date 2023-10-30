@@ -1,7 +1,8 @@
 ---
 title: Build message extension for Copilot
 description: Learn how to build your first message extension plugin for Copilot
-ms.author: edoyle
+author: girliemac
+ms.author: timura
 ms.topic: overview
 ms.date: 11/14/2023
 ---
@@ -12,22 +13,28 @@ In this tutorial, you'll learn to build a search-based message extension plugin 
 
 ## Prerequisites
 
-Make sure you have [set up your development environment](prerequisites.md) already!
+Make sure you have read [set up your development environment](prerequisites.md) already and have [Microsoft 365 developer account](https://developer.microsoft.com/microsoft-365/dev-program).
 
-## Install the Teams Toolkit
+Also, you need the following tools:
+
+- [Visual Studio Code](https://code.visualstudio.com/download) latest version
+- [Node.js](https://nodejs.org/en/download/) v14.x, v16.x or v18.x
+- [Microsoft Team client](https://www.microsoft.com/microsoft-teams/download-app)
+- [Microsoft Edge](https://www.microsoft.com/edge)(recommended) or [Google Chrome](https://www.google.com/chrome/)
+
+## Install Teams Toolkit
 
 The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more.
 
 You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`. In this tutorial, we are going to install Teams Toolkit extension on Visual Studio Code.
 
-1. Open Visual Studio Code and select the Extensions view (Ctrl+Shift+X / ⌘⇧-X or View > Extensions).
-1. In the search box, enter Teams Toolkit.
-1. Select Install next to the Teams Toolkit.
+1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+1. In the search box, enter **Teams Toolkit**.
+1. Select **Install** next to the Teams Toolkit.
 
-TODO - SCREENSHOT
-:::image type="content" source="/assets/images/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="/assets/images/install-toolkit-vscodeversion.png":::
+:::image type="content" source="assets/images/build-me/install-toolkit-vscode.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
-The Teams Toolkit :::image type="icon" source="/assets/images/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+The Teams Toolkit :::image type="icon" source="assets/icons/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
 You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
