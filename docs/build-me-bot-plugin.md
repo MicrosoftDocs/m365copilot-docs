@@ -32,9 +32,9 @@ You can use the toolkit with Visual Studio Code, or CLI (command-line interface)
 1. In the search box, enter **Teams Toolkit**.
 1. Select **Install** next to the Teams Toolkit.
 
-:::image type="content" source="/assets/images/build-me/install-toolkit-vscode.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+:::image type="content" source="assets/images/build-me/install-toolkit-vscode.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
-The Teams Toolkit :::image type="icon" source="/assets/icons/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+The Teams Toolkit :::image type="icon" source="assets/icons/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
 You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
