@@ -1,7 +1,8 @@
 ---
 title: Build message extension for Copilot
 description: Learn how to build your first message extension plugin for Copilot
-ms.author: edoyle
+author: girliemac
+ms.author: timura
 ms.topic: overview
 ms.date: 11/14/2023
 ---
@@ -15,6 +16,7 @@ In this tutorial, you'll learn to build a search-based message extension plugin 
 Make sure you have read [set up your development environment](prerequisites.md) already and have [Microsoft 365 developer account](https://developer.microsoft.com/microsoft-365/dev-program).
 
 Also, you need the following tools:
+
 - [Visual Studio Code](https://code.visualstudio.com/download) latest version
 - [Node.js](https://nodejs.org/en/download/) v14.x, v16.x or v18.x
 - [Microsoft Team client](https://www.microsoft.com/microsoft-teams/download-app)
