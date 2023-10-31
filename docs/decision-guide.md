@@ -31,14 +31,14 @@ Here are some practical examples of what you can develop for your organization:
 
     Assume your engineering team relies on a project management software. You can build a custom tool that enables users to monitor open tickets. For instance, a user can request information on all issues assigned to them, and Copilot for Microsoft 365 can seamlessly retrieve and present this data from your plugin.
 
-:::image type="content" source="assets/images/copilot-scenario-01.png" alt-text="This illustration shows Copilot plugin scenario, where an engineer asks to show all open tickets for him":::
+:::image type="content" source="assets/images/copilot-scenario-01.png" alt-text="This illustration shows Copilot plugin scenario, where an engineer asks to show all open tickets for him" border="false":::
 
 ## Choose your extensibility path
 
 You have more than one way to personalize Microsoft 365 Copilot with the intelligence of external services, apps, and data.
 To start building your connector or plugins, you can select the tools and SDKs based on how you want to develop.
 
-:::image type="content" source="assets/images/decision-making-tree.png" alt-text="Decision-making questions to figure out which M365 Copilot extensibility service you should use":::
+:::image type="content" source="assets/images/decision-making-tree.png" alt-text="Decision-making questions to figure out which M365 Copilot extensibility service you should use" lightbox="assets/images/decision-making-tree.png":::
 
 1. If you are a low-code developer, who have invested in Power Platform already and want to expose the external data in Power Platform too, additionally to Copilot, naturally your choice would be Power Platform connectors.
 2. If you want to connect your data in Microsoft 365, including Microsoft Search, Context IQ, and the Microsoft 365 app, Graph Connectors would be your option.
