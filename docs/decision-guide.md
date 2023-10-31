@@ -19,6 +19,12 @@ Copilot extensibility helps your collaborative workspace to be more productive b
 
 Here are some practical examples of what you can develop for your organization:
 
+* **Issue tracking for engineering team**
+
+    Assume your engineering team relies on a project management software. You can build a custom tool that enables users to monitor open tickets. For instance, a user can request information on all issues assigned to them, and Copilot for Microsoft 365 can seamlessly retrieve and present this data from your plugin.
+
+:::image type="content" source="assets/images/copilot-scenario-01.png" alt-text="This illustration shows Copilot plugin scenario, where an engineer asks to show all open tickets for him" border="false":::
+
 * **Product inventory for E-commerce**
 
     If your business operates in the realm of commerce, you can build an internal inventory tool by connecting it to your product database. For example, a user can ask Copilot to verify the availability of specific items, streamlining your internal processes.
@@ -26,12 +32,6 @@ Here are some practical examples of what you can develop for your organization:
 * **Enterprise knowledge sharing**
 
     Consider a multinational corporation with a wealth of knowledge and insights stored in various formats - documents, emails, chat transcripts, spread across multiple systems. Microsoft Graph connectors can facilitate the consolidation of this data, making it searchable from a single, unified interface. This ensures that your organization's collective wisdom is readily accessible.
-
-* **Issue tracking for engineering team**
-
-    Assume your engineering team relies on a project management software. You can build a custom tool that enables users to monitor open tickets. For instance, a user can request information on all issues assigned to them, and Copilot for Microsoft 365 can seamlessly retrieve and present this data from your plugin.
-
-:::image type="content" source="assets/images/copilot-scenario-01.png" alt-text="This illustration shows Copilot plugin scenario, where an engineer asks to show all open tickets for him" border="false":::
 
 ## Choose your extensibility path
 
