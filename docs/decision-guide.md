@@ -52,9 +52,9 @@ If you want to go low-code with Power Platform Connector:
 If you want to start creating Graph connector:
 
 > [!div class="nextstepaction"]
-> [Start building Graph Connector](/graph/connecting-external-content-connectors-overview?context=microsoft-365-copilot/extensibility/context)
+> [Start building Graph Connector](overview-graph-connectors.md)
 
 And if you want to build a Teams message extension app:
 
 > [!div class="nextstepaction"]
-> [Start building Message Extension]((/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?context=microsoft-365-copilot/extensibility/context))
+> [Start building Message Extension](overview-message-extension-bot.md)
