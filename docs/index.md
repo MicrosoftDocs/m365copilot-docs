@@ -1,6 +1,8 @@
 ---
 title: Extend Microsoft 365 Copilot
 description: Extend, enrich, and customize Microsoft 365 Copilot with external services, apps, and data
+author: erikadoyle
+ms.author: edoyle
 ms.topic: overview
 ms.date: 11/14/2023
 
@@ -60,9 +62,8 @@ There are three main steps to set up a Graph connector: (1) Create a connection,
 
 ## Extensibility preview support
 
-TODO: More info / general roadmap for dev preview
-
-TODO: support matrix (Copilot hosts x extensibility types)
+TODO: Current state of preview and general roadmap
+TODO: Current state of Copilot experiences supporting extensibility (M365 chat in Teams)
 
 ## Next step
 

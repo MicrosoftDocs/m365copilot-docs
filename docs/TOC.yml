@@ -16,7 +16,7 @@
       href: orchestrator.md
     - name: What makes a good plugin?
       href: plugin-guidelines.md
-    - name: Copilot plugins as Microsoft 365 apps
+    - name: Copilot plugins are Microsoft 365 apps
       href: plugins-are-apps.md
     - name: Data, Privacy, and Security
       href: /microsoft-365-copilot/microsoft-365-copilot-privacy?context=/microsoft-365-copilot/extensibility/context
