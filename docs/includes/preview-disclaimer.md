@@ -6,4 +6,4 @@ ms.topic: include
 <!-- markdownlint-disable MD041-->
 
 > [!IMPORTANT]
-> Microsoft Copilot for Microsoft 365 extensibility is currently in preview.
+> Plugins for Microsoft Copilot are in preview and only work in Microsoft Copilot in Microsoft Teams.
