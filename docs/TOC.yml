@@ -28,6 +28,8 @@
           href: overview-message-extension-bot.md
         - name: Build a message extension plugin
           href: build-me-bot-plugin.md
+        - name: Guidelines for message extension for Copilot
+          href: /microsoftteams/platform/concepts/deploy-and-publish/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context
     - name: Start with a Power Platform connector
       items:
         - name: Overview
