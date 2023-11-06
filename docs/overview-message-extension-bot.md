@@ -41,9 +41,12 @@ There are a few ways to build message extensions, but to extend the capabilities
 
 For development, you can use [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) for Visual Studio Code to build your message extensions. It helps you to create a project by scaffolding a template that suits your needs!
 
-## Next step
+## Next steps
 
 Follow the step-by-step guides to build your first message extension plugin:
 
 > [!div class="nextstepaction"]
-> [Get started with message extension plugin](build-me-bot-plugin.md)
+> [Get ready to build message extension plugin for Copilot](prerequisites-message-extension-bot.md)
+
+> [!div class="nextstepaction"]
+> [Build your first message extension plugin for Copilot](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
