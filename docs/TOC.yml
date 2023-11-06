@@ -19,7 +19,7 @@
     - name: Copilot plugins are Microsoft 365 apps
       href: plugins-are-apps.md
     - name: Data, Privacy, and Security
-      href: /microsoft-365-copilot/microsoft-365-copilot-privacy?context=/microsoft-365-copilot/extensibility/context
+      href: data-privacy-security.md
 - name: Build plugins
   items:
     - name: Start with a Teams message extension
@@ -28,8 +28,8 @@
           href: overview-message-extension-bot.md
         - name: Build a message extension plugin
           href: build-me-bot-plugin.md
-        - name: Guidelines for message extension for Copilot
-          href: /microsoftteams/platform/concepts/deploy-and-publish/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context
+        - name: Guidelines for message extension plugins
+          href: /microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context
     - name: Start with a Power Platform connector
       items:
         - name: Overview

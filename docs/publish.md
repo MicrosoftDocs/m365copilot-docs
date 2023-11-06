@@ -17,9 +17,9 @@ The following table summarizes the distribution support for copilot extensibilit
 
 |Copilot extensibility type  | Single tenant  | Multi-tenant| Notes|
 |----------|-----------|------------|-----------|
-|[Teams message extension plugins](#teams-message-extension-plugins) | ✔️ |✔️*| *Limited to invite-only ISV preview|
-|[Power Platform connectors as plugins](#power-platform-connectors-as-plugins)| ✔️|✔️*|*Limited to invite-only ISV preview for verified publishers|
-|[Microsoft Graph connectors](#microsoft-graph-connectors-for-copilot)| ✔️| ❌*| *Can be distributed as Teams apps, limited to invite-only ISV preview|
+|[Teams message extension plugins](#teams-message-extension-plugins) | ✔️ |✔️| |
+|[Power Platform connectors as plugins](#power-platform-connectors-as-plugins)| ✔️|✔️*|*Store submission limited to verified publishers|
+|[Microsoft Graph connectors](#microsoft-graph-connectors-for-copilot)| ✔️| ❌*| *Standalone connectors not supported; can be distributed as Teams apps|
 
 The remainder of this article outlines the distribution processes for each copilot extensibility type.
 
@@ -31,37 +31,34 @@ Message extension copilot plugins are packaged and distributed in the same way a
 
 Follow these [instructions to upload your custom app package](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#upload-custom-teams-apps-that-work-on-outlook-and-the-microsoft-365-app) to the **Integrated Apps** portal of Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)). From there, admins can manage access, configure default settings, and review and consent to the requested data and permissions for both your [app experience](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#how-to-manage-the-availability-of-an-app-in-your-organization) and [plugin experience](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps).
 
-### Distribute a message extension plugin through in-product app stores
+### Distribute a message extension plugin to the Teams app store
 
-Submit your app package to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program**.
+Ensure your app meets validation criteria for [Teams Apps extensible as Microsoft Copilot for Microsoft 365 plugins](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=pr-en-us-9402#teams-apps-extensible-as-microsoft-365-copilot-plugin), then submit your app package to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program**.
 
-TODO: Summarize validation/certification criteria for MEs, plugins
-
-> [!NOTE]
-> The *Microsoft 365 and Copilot program* for Microsoft Partner Center is currently limited for invite-only private preview. Please use this TODO [form to request invitation](https://www.microsoft.com/microsoft-365/blog/2023/05/09/introducing-the-microsoft-365-copilot-early-access-program-and-new-capabilities-in-copilot/) and obtain access.
-
-TODO: Describe/screenshot plugin in Teams app store
+Once accepted, your plugin will appear in the **Works with Copilot** category of the Store within Microsoft Teams.
 
 ## Power Platform connectors as plugins
 
-The single-tenant distribution process for Power Platform connectors as copilot plugins is the same as for regular Power Platform connectors. However, the multi-tenant distribution process works a little differently and is currently open to only *verified publishers*.
+TODO: Verify this section.
+
+Power Platform connector plugins can be shared across an organization or published broadly to the in-product Teams app store. In both cases, Power Platform plugins can be used in Copilot for Microsoft 365 once the *Dynamics 365 and Copilot Studio* app is deployed from Microsoft Admin Center. From Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)), open Settings > Integrated Apps > **Available Apps** and select **Dynamics 365 and Copilot Studio**.
 
 ### Distribute a Power Platform connector plugin to your organization
 
-Follow these [instructions to share a custom connector](/connectors/custom-connectors/share) using Power Apps portal ([make.powerapps.com](https://make.powerapps.com)).
+By default, Power Platform plugins are only visible and usable in Power Virtual Agent or Copilot Studio by the person who created them. They can be authorized for sharing at the Power Platform object level.
 
-TODO: Summarize validation/certification criteria for PowerPlat connectors, plugins
+Follow these [instructions to share a custom connector](/connectors/custom-connectors/share) using Power Apps portal ([make.powerapps.com](https://make.powerapps.com/environments/customconnectors)).
 
-### Distribute a Power Platform connector plugin through Microsoft Commercial Marketplace
+In order to use the connector as a Copilot plugin, the *M365 Copilot* setting must first be enabled in Power Platform admin center. From Power Platform admin center, open Environment > Product > Settings > **Features** and select **M365 Copilot**.
+
+### Distribute a Power Platform connector plugin to the Teams app store
 
 Submit your app package to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program**.
 
 > [!NOTE]
-> The *Microsoft 365 and Copilot program* for Microsoft Partner Center is currently limited for invite-only private preview for Power Platform [verified publishers](/connectors/custom-connectors/certification-submission). Independent publisher certification is not yet available.
->
-> If you are a verified publisher, please use this TODO [form to request invitation](https://www.microsoft.com/microsoft-365/blog/2023/05/09/introducing-the-microsoft-365-copilot-early-access-program-and-new-capabilities-in-copilot/) and obtain access.
+> The *Microsoft 365 and Copilot program* for Microsoft Partner Center is currently limited to Power Platform [verified publishers](/connectors/custom-connectors/certification-submission). Independent publisher certification is not yet available.
 
-TODO: Describe/screenshot where plugin publishes to
+Once accepted, your plugin will appear in the **Works with Copilot** category of the Store within Microsoft Teams.
 
 ## Microsoft Graph connectors for copilot
 
@@ -75,13 +72,9 @@ For **Graph connectors within Teams apps**, follow these [instructions to upload
 
 ### Distribute a Graph connector for copilot to the Teams app store
 
-For **Graph connectors within Teams apps**, submit your app package to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program**.
+For **Graph connectors within Teams apps**, ensure your app meets validation criteria for [Apps extended across Microsoft 365 clients](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#apps-extended-across-microsoft-365-clients), then submit your app package to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program**.
 
-TODO: Summarize validation/certification criteria for GCs within Teams apps (and/or as Copilot connectors)
+Once accepted, your plugin will appear in the **Works with Copilot** category of the Store within Microsoft Teams.
 
 > [!NOTE]
-> The *Microsoft 365 and Copilot program* for Microsoft Partner Center is currently limited for invite-only private preview for Graph connectors within Teams apps. Standalone Graph connector publishing is not currently available.
->
-> If you have a Graph connector within a Teams app, please use this TODO [form to request invitation](https://www.microsoft.com/microsoft-365/blog/2023/05/09/introducing-the-microsoft-365-copilot-early-access-program-and-new-capabilities-in-copilot/) and obtain access.
-
-TODO: Describe plugin in Teams app store (link to ME section above)
+> The *Microsoft 365 and Copilot program* for Microsoft Partner Center is currently limited to Graph connectors within Teams apps. Standalone Graph connector publishing through Partner Center is not currently available.
