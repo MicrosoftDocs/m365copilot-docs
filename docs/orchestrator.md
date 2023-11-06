@@ -23,10 +23,12 @@ TODO: Maybe a conceptual diagram here (tasks, skills, plugins, orchestrator)?
 
 Between the end-user's natural language input to Copilot's natural language output, the Microsoft 365 Copilot orchestrator works behind the scenes to select and execute the right skill(s) from the right plugin(s) for the end-user's given task.
 
+TODO: Describe how orchestrator fits in to overall copilot stack
+:::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the Microsoft Copilot technology stack. From bottom to top: Microsoft Cloud, AI infrastructure, Your data, Foundation models, AI orchestration, Microsoft Copilots | Your copilots, Teams AI Library, Graph connectors, Plugin extensibility":::
+
 The following chart illustrates how the Microsoft 365 Copilot orchestrator selects the right plugin, with the right skill, at the right time, even when there are thousands of options to choose from.
 
-TODO: Rework diagram for public audience
-:::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="{alt-text}":::
+:::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
 
 1. **Natural language input**
 
