@@ -11,6 +11,8 @@ ms.date: 11/14/2023
 
 In this tutorial, you'll learn to build a search-based message extension plugin for Copilot. This sample plugin allows your users to (add the description here).
 
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+
 ## Prerequisites
 
 Make sure you have read [set up your development environment](prerequisites.md) already and have [Microsoft 365 developer account](https://developer.microsoft.com/microsoft-365/dev-program).

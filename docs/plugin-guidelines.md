@@ -1,13 +1,15 @@
 ---
 title: Write high quality Microsoft 365 Copilot plugins
 description: Learn what makes a good Microsoft 365 Copilot plugin and best practices
-author: 
+author:
 ms.author:
 ms.topic: best-practice
 ms.date: 11/1/2023
 ---
 
 # Write high quality Microsoft 365 Copilot plugins
+
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
 Can we generalize/repurpose this article for all plugins:
 

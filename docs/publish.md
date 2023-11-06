@@ -11,6 +11,8 @@ ms.date: 11/14/2023
 
 Depending on its intended purpose as a line-of-business or marketable software solution, plugins and connectors can be published to your organization or to the Microsoft Commercial Marketplace through [Microsoft Partner Center](https://partner.microsoft.com). This article describes the current state of distribution options and procedures for copilot extensibility.
 
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+
 The following table summarizes the distribution support for copilot extensibility scenarios, according to single tenant (line-of-business) or multi-tenant (independent software vendor, or *ISV*) channels.
 
 |Copilot extensibility type  | Single tenant  | Multi-tenant| Notes|

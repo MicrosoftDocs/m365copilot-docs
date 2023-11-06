@@ -1,6 +1,8 @@
 ---
 title: Extend Microsoft 365 Copilot
 description: Extend, enrich, and customize Microsoft 365 Copilot with external services, apps, and data
+author: erikadoyle
+ms.author: edoyle
 ms.topic: overview
 ms.date: 11/14/2023
 
@@ -40,6 +42,8 @@ There are two ways of extending Microsoft 365 Copilot: by augmenting copilot wit
 
 ### Plugins
 
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+
 Plugins expand your users' skills by interacting with your web service using natural language in Microsoft 365 Chat. With plugins, you can:
 
 - **Access real-time information** such as finding the latest news coverage on a product launch
@@ -60,9 +64,8 @@ There are three main steps to set up a Graph connector: (1) Create a connection,
 
 ## Extensibility preview support
 
-TODO: More info / general roadmap for dev preview
-
-TODO: support matrix (Copilot hosts x extensibility types)
+TODO: Current state of preview and general roadmap
+TODO: Current state of Copilot experiences supporting extensibility (M365 chat in Teams)
 
 ## Next step
 
