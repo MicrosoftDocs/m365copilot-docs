@@ -58,13 +58,11 @@
       href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
     - name: API limits
       href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
-    - name: Sample connectors
-      href: graph-connector-samples.md
 - name: Publish
   href: publish.md
 - name: Resources
   items:
   - name: Samples
-    href: https://learn.microsoft.com/samples/browse/?expanded=ms-graph&products=microsoft-graph-connectors-api
+    href: samples.md
   - name: Feedback
     href: https://feedbackportal.microsoft.com/feedback
