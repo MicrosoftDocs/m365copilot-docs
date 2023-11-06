@@ -42,6 +42,8 @@ There are two ways of extending Microsoft 365 Copilot: by augmenting copilot wit
 
 ### Plugins
 
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+
 Plugins expand your users' skills by interacting with your web service using natural language in Microsoft 365 Chat. With plugins, you can:
 
 - **Access real-time information** such as finding the latest news coverage on a product launch

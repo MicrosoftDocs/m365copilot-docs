@@ -8,3 +8,5 @@ ms.date: 11/14/2023
 ---
 
 # Copilot plugins are Microsoft 365 apps
+
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]

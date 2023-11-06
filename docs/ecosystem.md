@@ -28,6 +28,8 @@ The plugins and connectors you build extend, enrich, and customize copilot for t
 
 This article will walk you through the resources of the Microsoft 365 ecosystem available to you as a developer of copilot extensibility solutions.
 
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+
 ## Copilot plugins and connectors work across Microsoft 365 experiences
 
 There are over 350 million daily active users across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, Power Point, and the Microsoft 365 app. When you write a copilot plugin or connector, it can reach all the places copilot runs across Microsoft 365.
