@@ -63,4 +63,4 @@ Now you are ready to build your first message extension plugin for Copilot!
 Follow the step-by-step guides to build your first message extension plugin:
 
 > [!div class="nextstepaction"]
-> [Build your first message extension plugin for Copilot](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
+> [Build your first message extension plugin for Copilot](/microsoftteams/platform/messaging-extensions/build-bot-based-plugin?tabs=visual-studio&context=/microsoft-365-copilot/extensibility/context)

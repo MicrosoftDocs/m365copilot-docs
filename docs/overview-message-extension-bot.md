@@ -24,9 +24,6 @@ With the introduction of Copilot for Microsoft 365, the game has changed. Users 
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-> [!NOTE]
-> Plugins for Microsoft 365 Copilot are in public preview. Message extension action commands are not yet supported for use in copilot plugins.
-
 This illustrate compares how a user can interact with a massage extension on Teams client and Microsoft 365 Copilot:
 
 :::image type="content" source="assets/images/message-extensions-ux.png" alt-text="this illustrates two user experiences of message extensions- one way is to invoke from Teams client and another is Copilot" lightbox="assets/images/message-extensions-ux.png":::
@@ -49,4 +46,4 @@ Follow the step-by-step guides to build your first message extension plugin:
 > [Get ready to build message extension plugin for Copilot](prerequisites-message-extension-bot.md)
 
 > [!div class="nextstepaction"]
-> [Build your first message extension plugin for Copilot](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
+> [Build your first message extension plugin for Copilot](/microsoftteams/platform/messaging-extensions/build-bot-based-plugin?tabs=visual-studio&context=/microsoft-365-copilot/extensibility/context)
