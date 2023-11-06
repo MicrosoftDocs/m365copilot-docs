@@ -17,6 +17,8 @@ But how does Copilot know which skill to use when you ask for help? How does it 
 
 This article will explain the logic behind Copilot's skill selection process and how you can ensure Copilot employs your plugin at every opportunity it can benefit your users.
 
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+
 TODO: Maybe a conceptual diagram here (tasks, skills, plugins, orchestrator)?
 
 ## The copilot orchestrator
@@ -76,7 +78,7 @@ TODO: wordsmith all sections below for public docs.
 
 As a plugin author, you'll want to be precise in the description of what the plugin does and does not do. While it's tempting to add extra information to try and boost the likelihood of a plugin being used by Copilot (similar to SEO for a web page), this can result in the following critical issues.
 
-- A generic plugin description can prevent the appropriate plugin for the job from getting picked up and if this happens frequently the user can turn off such plugin  
+- A generic plugin description can prevent the appropriate plugin for the job from getting picked up and if this happens frequently the user can turn off such plugin
 
 - When selected incorrectly, failures in plugin execution or its response are very likely outcomes. Copilots can not surface plugins that have high error rates. End users can also down-vote responses from copilot and over time this data can be used to identify offending plugins for Admins/ copilot to take actions.
 
@@ -84,7 +86,7 @@ As a plugin author, you'll want to be precise in the description of what the plu
 
 Plugin Manifest description: “This is the Salesforce plugin that brings back opportunities, leads and contacts from Salesforce” is better than the description that says “Salesforce plugin”.
 
-Plugin action description: Saying “This is the D365 Sales plugin that can be used to retrieve data from important Sales entities” is misleading and it is better to say “This is the D365 Sales plugin that brings back opportunities, leads and contacts from Salesforce”.  
+Plugin action description: Saying “This is the D365 Sales plugin that can be used to retrieve data from important Sales entities” is misleading and it is better to say “This is the D365 Sales plugin that brings back opportunities, leads and contacts from Salesforce”.
 
 Plugin action parameter description: Similarly, for each of the connector action descriptions need to describe the specific action as follows “This action brings back D365 Sales leads based on Lead creation date range in MM/DD/YYYY format.” Providing input details helps copilot know possible ways to interrogate the action and map data fields from user input to those needed by underlying plugin and API action that it is exposing. Providing formatting information for a parameter helps the copilot conform the input it submits when invoking the API.
 
@@ -92,11 +94,11 @@ Plugin action parameter description: Similarly, for each of the connector action
 
 While thinking about user prompts, expect required inputs need to be part of their instruction to copilot.
 
-We have seen limited scenarios where LLMs are able to guess an input however this was was the exception vs the rule. As an example, for a Weather connector which required two inputs (1) Location (2) Unit of Temperature when the user asked “Show me the weather in Seattle, WA” and did not provide the unit of measure, the copilot added Fahrenheit as a unit of measure when invoking the plugin. It is possible in this case the copilot assumed given the user is asking a question about a location in United States where Fahrenheit is the commonly used temperature unit, that degree Fahrenheit should be used. However, we have seen other scenarios where the copilot was unable to guess the input or guessed it incorrectly. This is where testing against the copilot is the only sure shot way to know expected behavior.  
+We have seen limited scenarios where LLMs are able to guess an input however this was was the exception vs the rule. As an example, for a Weather connector which required two inputs (1) Location (2) Unit of Temperature when the user asked “Show me the weather in Seattle, WA” and did not provide the unit of measure, the copilot added Fahrenheit as a unit of measure when invoking the plugin. It is possible in this case the copilot assumed given the user is asking a question about a location in United States where Fahrenheit is the commonly used temperature unit, that degree Fahrenheit should be used. However, we have seen other scenarios where the copilot was unable to guess the input or guessed it incorrectly. This is where testing against the copilot is the only sure shot way to know expected behavior.
 
 ### Validate operations copilots can perform in terms of reasoning over the plugin response
 
-While we have seen some basic capabilities in reasoning over the output, this requires testing and mileage can vary.  
+While we have seen some basic capabilities in reasoning over the output, this requires testing and mileage can vary.
 
 As an example, in the case “Show me opportunities that have high probability of closing” LLM was able to filter the returned opportunities and displayed ones with > 50% chance of closing. Please note choice of 50% was arbitrary but reasonable given lack of user input. However, LLM also displayed closed opportunities in this scenario that had 100% probability of closing so prompt had to be modified to “Show me open opportunities that have high probability of closing”.
 

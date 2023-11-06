@@ -13,6 +13,8 @@ You can enhance Copilot's functionality by developing plugins and connectors to 
 
 Create Copilot plugins to extend its capabilities, such as crafting a Microsoft Teams message extension or a Power Platform connector. Alternatively, employ connectors to seamlessly integrate your enterprise data into the Microsoft 365 Copilot experience.
 
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+
 ## Extend Copilot for your scenario
 
 Copilot extensibility helps your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Create something brand new for Copilot or integrate an existing app.
