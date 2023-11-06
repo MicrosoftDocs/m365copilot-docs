@@ -42,8 +42,6 @@
   items:
     - name: Microsoft Graph connectors in Microsoft 365 Copilot
       href: overview-graph-connector.md
-    - name: Overview
-      href: /graph/connecting-external-content-connectors-overview?context=/microsoft-365-copilot/extensibility/context
     - name: Connectors experiences
       href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
     - name: Connectors API
@@ -67,6 +65,6 @@
 - name: Resources
   items:
   - name: Samples
-    href: https://learn.microsoft.com/samples/browse/?expanded=ms-graph&products=microsoft-graph-connectors-api
+    href: samples.md
   - name: Feedback
     href: https://feedbackportal.microsoft.com/feedback
