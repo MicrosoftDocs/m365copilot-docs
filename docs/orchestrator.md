@@ -21,13 +21,12 @@ This article will explain the logic behind Copilot's skill selection process and
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-TODO: Maybe a conceptual diagram here (tasks, skills, plugins, orchestrator)?
-
 ## The copilot orchestrator
 
-Between the end-user's natural language input to Copilot's natural language output, the Microsoft 365 Copilot orchestrator works behind the scenes to select and execute the right skill(s) from the right plugin(s) for the end-user's given task.
+Between the end-user's natural language input to Copilot's natural language output, the Microsoft Copilot orchestrator works behind the scenes to select and execute the right skill(s) from the right plugin(s) for the end-user's given task.
 
-TODO: Describe how orchestrator fits in to overall copilot stack
+The orchestration layer represents the interface between foundation LLMs and the many ways you can extend, enrich, and customize Copilot for the way your customers work.
+
 :::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the Microsoft Copilot technology stack. From bottom to top: Microsoft Cloud, AI infrastructure, Your data, Foundation models, AI orchestration, Microsoft Copilots | Your copilots, Teams AI Library, Graph connectors, Plugin extensibility":::
 
 The following chart illustrates how the Microsoft 365 Copilot orchestrator selects the right plugin, with the right skill, at the right time, even when there are thousands of options to choose from.
@@ -48,7 +47,7 @@ The following chart illustrates how the Microsoft 365 Copilot orchestrator selec
 
 4. **Mapping user's intent to slots**
 
-    The orchestrator maps the user's tasks to plugin skills and/or built-in Copilot skill functions, mapping the implicit constraints from the user's prompt to the parameter values required to execute each of the identified skills. TODO: Define slots (skills or skill parameters?)
+    The orchestrator maps the user's tasks to plugin skills and/or built-in Copilot skill functions, mapping implicit constraints from the user's prompt to the slots (parameter values) required to execute each of the identified skills.
 
 5. **Execute tool**
 

@@ -64,12 +64,13 @@ There are three main steps to set up a Graph connector: (1) Create a connection,
 
 ## Extensibility preview support
 
-TODO: Current state of preview and general roadmap
-TODO: Current state of Copilot experiences supporting extensibility (M365 chat in Teams)
+Support for plugins and Graph connectors is currently limited to Copilot for Microsoft 365 chat within Teams. Future support will expand to other Copilot for Microsoft 365 surfaces.
+
+:::image type="content" source="assets/images/copilot-m365-teams.png" alt-text="{alt-text}":::
 
 ## Next step
 
-There's a growing number of ways you can extend Microsoft 365 Copilot, including Microsoft Graph connectors, Teams message extension plugins, and Power Platform connectors.
+There's a growing number of ways you can extend Microsoft 365 Copilot, including Microsoft Graph connectors, Teams message extension plugins, and Power Platform connector plugins.
 
 > [!div class="nextstepaction"]
 > [Choose your copilot extensibility path](decision-guide.md)

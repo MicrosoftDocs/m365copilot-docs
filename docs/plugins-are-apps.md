@@ -11,9 +11,9 @@ ms.date: 11/14/2023
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-When you build a copilot message extension plugin you're also building an app that runs across the Microsoft 365 ecosystem. [Copilot for Microsoft 365](ecosystem.md) takes advantage of the [extensibility available to Microsoft Teams apps](/microsoftteams/platform/m365-apps/overview) by building upon Teams message extensions. That means that the copilot you create is also a [Teams search-based message extension](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension) that can freely flow across the Microsoft 365 experiences that support it and is part of the rich set of extensibility options that exist for Microsoft 365.
+When you build a message extension copilot plugin you're also building an app that runs across the Microsoft 365 ecosystem. [Copilot for Microsoft 365](ecosystem.md) takes advantage of the [extensibility available to Microsoft Teams apps](/microsoftteams/platform/m365-apps/overview) by building upon Teams message extensions. That means that the copilot plugin you create is also a [Teams search-based message extension](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension) that can freely flow across the Microsoft 365 experiences that support it and is part of the rich set of extensibility options that exist for Microsoft 365.
 
-With Microsoft 365 you can create apps that are contextually aware of where they're running and can provide an ideal experience right where your customers are working. Saving users time in context switching between apps and simplifying the coding experience for you. When used as a copilot, your plugin is hosted within the relevant copilot for Microsoft 365 experience. When used as a Teams app, it  surfaces as a message extension in the relevant Microsoft 365 experience (Teams, Microsoft 365 app, Outlook).
+With Microsoft 365 you can create apps that are contextually aware of where they're running and can provide an ideal experience right where your customers are working. Saving users time in context switching between apps and simplifying the coding experience for you. When used with copilot, your plugin is surfaced within relevant copilot for Microsoft 365 experiences. When used as a Teams app, it  surfaces as a message extension in the relevant Microsoft 365 experience (Teams, Microsoft 365 app, Outlook).
 
 ## App development for Microsoft 365
 
@@ -46,7 +46,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 
 #### App manifest
 
-Using a single [app manifest](/microsoftteams/platform/resources/schema/manifest-schema.md) you can define a Teams app that extends across Microsoft 365, as well as a copilot for Microsoft 365. Additionally, with an aim toward simplifying and streamlining the Microsoft 365 developer ecosystem, Microsoft continues to expand the app manifest into other areas of Microsoft 365 with support for defining and deploying Office Add-ins in the [developer preview version](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview.md) of the Microsoft Teams app manifest. Currently, this preview is limited to Outlook Add-ins running on subscription Microsoft 365 for Windows app. For more information, see [app manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview).
+Using a single [app manifest](/microsoftteams/platform/resources/schema/manifest-schema.md) you can define a Teams app that extends across Microsoft 365, as well as a plugin for Microsoft Copilot. Additionally, with an aim toward simplifying and streamlining the Microsoft 365 developer ecosystem, Microsoft continues to expand the app manifest into other areas of Microsoft 365 with support for defining and deploying Office Add-ins in the [developer preview version](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview.md) of the Microsoft Teams app manifest. Currently, this preview is limited to Outlook Add-ins running on subscription Microsoft 365 for Windows app. For more information, see [app manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview).
 
 #### TeamsJS library
 
@@ -54,7 +54,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) can help you create host
 
 #### Teams toolkit (v5)
 
-[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals.md) makes it simple to get started with app development for Microsoft Teams, and now copilots for Microsoft 365 as well, using Visual Studio Code.
+[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals.md) makes it simple to get started with app development for Microsoft Teams, and now copilot plugins for Microsoft 365 as well, using Visual Studio Code.
 
 * Start with a project template for common line-of-business app scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
@@ -69,7 +69,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) can help you create host
 
 When thinking about creating an app that will live within and build upon the Microsoft 365 ecosystem of apps, it's important to consider how it will aid your users in doing their work and completing their daily tasks. After all, time saved in context switching not only makes for a more productive user, but also a happier one. By leveraging the ability of Microsoft Teams apps to extend across Microsoft 365, you can reduce the amount of code you need to write and maintain.
 
-Additionally, by being thoughtful in your app planning, including how your copilot interacts with the other extensibility options of Microsoft 365, you can create an experience that's more cohesive and introduces less friction to users as they go about their work. To better understand how to accomplish that, it can be useful to think about some of the common categories of apps that tend to be created within the Microsoft 365 ecosystem and consider how you can take advantage of the extension opportunities available to you within Microsoft 365.
+Additionally, by being thoughtful in your app planning, including how your copilot plugins interact with the other extensibility options of Microsoft 365, you can create an experience that's more cohesive and introduces less friction to users as they go about their work. To better understand how to accomplish that, it can be useful to think about some of the common categories of apps that tend to be created within the Microsoft 365 ecosystem and consider how you can take advantage of the extension opportunities available to you within Microsoft 365.
 
 The following sections highlight common components of different app categories, though not exhaustive, these list are meant to help you get a general understanding of some possible features to consider during design. Some categories also provide app design playbooks to help you get started.
 

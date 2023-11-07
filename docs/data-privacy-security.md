@@ -29,7 +29,7 @@ When you plug in you app to Copilot as a plugin, your external data stays within
 
 Message extension plugins use the same [authentication process for Teams message extensions](/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview).
 
-TODO: Power Platform summary
+Power Platform plugins use the same [authentication process for custom connectors](/connectors/custom-connectors/azure-active-directory-authentication).
 
 ## Considerations for line-of-business developers
 
@@ -44,19 +44,20 @@ Microsoft Copilot for Microsoft 365 only shares data with and searches in plugin
 
 ## Considerations for independent software vendors
 
-Message extension copilot plugins are packaged and distributed in the same way as Microsoft Teams apps that are integrated to run across the Microsoft 365 ecosystem. Microsoft Graph connectors can also be packaged and distributed in the same way.
+Message extension copilot plugins are packaged and distributed in the same way as Microsoft Teams apps that are integrated to run across the Microsoft 365 ecosystem. Microsoft Graph connectors can also be packaged and distributed in the same way as Teams apps.
 
-Submission of your app package to the Microsoft Partner Center *Microsoft 365 and Copilot* program requires the compliance with the following for acceptance to in-product stores:
+Power Platform plugins are certified and distributed in the same way as Power Platform connectors, by first publishing your connector to the [Power Platform Connectors](https://github.com/microsoft/PowerPlatformConnectors) open source repository, and then submitting its information to Microsoft.
+
+Submission of your app package to the Microsoft Partner Center *Microsoft 365 and Copilot* program requires the compliance with the following certification policies for acceptance to in-product stores.
 
 - Microsoft Commercial Marketplace certification policies:
   - [100 General](/marketplace/certification-policies#100-general)
-  - [1140 Teams](/legal/marketplace/certification-policies#1140-teams) (especially [1140.9 Teams apps extensible as Microsoft 365 Copilot plugins](/legal/marketplace/certification-policies#1140-teams))
-- [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines)
-
-TODO: Power Platform summary
+  - [1140 Teams](/legal/marketplace/certification-policies#1140-teams) (including [1140.9 Teams apps extensible as Microsoft 365 Copilot plugins](/legal/marketplace/certification-policies#1140-teams)) (Message extension plugins)
+- [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines) (Message extension plugins and Graph connectors in Teams apps)
+- [Verified publisher certification process](/connectors/custom-connectors/certification-submission) (Power Platform connector plugins)
 
 ## See also
 
 [Publish plugins and connectors for Microsoft 365 Copilot](publish.md)
 
-[Microsoft commitment to responsible AI](/ai/responsible-ai)
+[Microsoft commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai)

@@ -21,7 +21,7 @@ As part of the broader Microsoft 365 ecosystem, the value of your copilot plugin
 
 The plugins and connectors you build for Copilot are part of the larger Microsoft 365 Copilot system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through the different native components of, and extensions to, the copilot system.
 
-TODO: Add icons for extensibility and visually anchor to M365 Apps (plugins) and MS Graph (connectors)
+PLACEHOLDER IMAGE:
 :::image type="content" source="assets/images/copilot-system-flow.png" alt-text="{alt-text}":::
 
 The plugins and connectors you build extend, enrich, and customize copilot for the unique way your customers work. And as part of the broader Microsoft 365 ecosystem, your copilot plugins and connectors benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and a host of development tools and support.
@@ -50,11 +50,11 @@ Microsoft is simplifying the way Copilot plugins and other Microsoft 365 apps an
 
 ### Unified manifest and app package
 
-TODO
+The Microsoft 365 ecosystem uses a single unified manifest and app packaging format for distributing Copilot plugins and connectors, Office Add-ins, SharePoint Framework solutions, and Teams apps extended to work across Microsoft 365 experiences. The [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) (previously called *Teams app manifest*) defines how your app (or plugin, connector, etc.) integrates into Teams, Copilot, and other Microsoft 365 experiences. The [app package](/microsoftteams/platform/concepts/build-and-test/apps-package) consists of the app manifest and app icons (app logic and data storage are hosted independently).
 
 ### Microsoft 365 and Copilot program for Partner Center
 
-For independent software vendors (ISVs), we're building out the **Microsoft 365 and Copilot** program (formerly known as [*Office store*](/partner-center/marketplace/why-publish)) within  Microsoft Partner Center ([partner.microsoft.com](https://partner.microsoft.com)) to be your home base for publishing Microsoft 365 apps, services, and copilot extensibility solutions.
+For independent software vendors (ISVs), we're building out the **Microsoft 365 and Copilot** program (formerly known as [*Office store*](/partner-center/marketplace/why-publish)) within Microsoft Partner Center ([partner.microsoft.com](https://partner.microsoft.com)) to be your home base for publishing Microsoft 365 apps, services, and copilot extensibility solutions.
 
 Once purchased and deployed by an organization, your Copilot plugins are incorporated into a unified catalog representing copilot's available skill repertoire.
 
@@ -62,32 +62,22 @@ To learn more, see [Publish plugins and connectors for Microsoft 365 Copilot](./
 
 ### Microsoft Admin Center
 
-For line-of-business developers and IT admins, Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)) is your one stop to upload custom copilot plugins and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions. Learn more about copilot-related management options in TODO: Link to MAC docs copilot section
+For line-of-business developers and IT admins, Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)) is your one stop to upload custom copilot plugins and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions. Learn more about copilot-related management options in the [Microsoft 365 Copilot extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps) section of Microsoft 365 admin center help documentation.
 
 For details on deploying a custom copilot plugin or connector to your organization, see [Publish plugins and connectors for Microsoft 365 Copilot](./publish.md).
 
 ## Comprehensive tools and support
 
-TODO: Introduce tools for building Copilot plugins and connectors
-
-TODO: Power Platform representation
+Microsoft 365 provides a rich set of developer resources for extending Microsoft Copilot, Teams, and other Microsoft 365 experiences.
 
 ### Teams Toolkit
 
-TODO
+[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) helps developers create and deploy Teams apps that work across Microsoft 365 and Copilot with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a "zero-configuration" approach to the developer experience. Teams Toolkit is available as [Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit), [Visual Studio workload](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs), and as the [TeamsFx command line interface](/microsoftteams/platform/toolkit/teamsfx-cli).
 
-### Teams Developer Portal
+### Developer Portal for Teams
 
-TODO
+The [Developer Portal for Teams](/microsoftteams/platform/concepts/build-and-test/teams-developer-portal) is the primary tool for configuring, distributing, and managing Microsoft Teams apps, including apps extended to run across Microsoft 365 and Copilot plugins. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-### Code samples
+## Microsoft security, trust, and commitment to Responsible AI
 
-TODO: Link to Copilot samples, Teams/GCs/PowerPlat samples
-
-### Copilot extensibility support and feedback
-
-TODO: Summarize + link support and feedback resources
-
-## Microsoft Security, Trust, and commitment to Responsible AI
-
-TODO: Summarize security/privacy/responsible AI for developers and link off to copilot article for further details.
+Microsoft 365 Copilot is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary.  Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more info, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
