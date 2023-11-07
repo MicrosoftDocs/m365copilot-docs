@@ -134,7 +134,6 @@ Creation apps are used to create and manage digital content. They help users by 
 Business process apps enable the automation of typical business processes for organizations such as employee expense management, purchase order management, and business travel management. Some of the developer opportunities for this style of app are::
 
 * **Share documents with the correct set of people** - Easily access documents where you are working and invite team members or clients to view and collaborate on documents. Follow up with real-time notifications about reports to quickly respond or take action.
-* **Manage permissions and requests** - Approve, respond, share with your team, where you are working- seamlessly and effortlessly.
 * **Digital signatures made simple** - Obtain signature on documents directly in Teams, Microsoft 365 app, or Outlook.
 * **Instant in-line approvals** - Get approvals in real-time during discussions to keep your work moving and projects on track.
 * **Tailor your notification channels to suit your customers needs** - Direct notifications from each app to the right channels and react promptly to critical updates while prioritizing and silencing others.
