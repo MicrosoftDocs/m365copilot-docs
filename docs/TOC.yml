@@ -4,7 +4,7 @@
 - name: Get started
   expanded: true
   items:
-    - name: Tour the copilot ecosystem
+    - name: Tour the Copilot ecosystem
       href: ecosystem.md
     - name: Choose your extensibility path
       href: decision-guide.md
@@ -12,7 +12,7 @@
       href: prerequisites.md
 - name: Plan
   items:
-    - name: How copilot chooses plugins to use
+    - name: How Copilot chooses plugins to use
       href: orchestrator.md
     - name: What makes a good plugin?
       href: plugin-guidelines.md

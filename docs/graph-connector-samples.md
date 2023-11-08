@@ -1,15 +1,15 @@
 ---
-title: Microsoft Graph connector samples for Microsoft Copilot for Microsoft 365
-description: Extend Microsoft Copilot for Microsoft 365 with Microsoft Graph connectors
+title: Microsoft Graph connector samples for Microsoft 365 Copilot
+description: Extend Microsoft 365 Copilot with Microsoft Graph connectors
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: conceptual
 ms.date: 11/14/2023
 ---
 
-# Microsoft Graph connector samples for Microsoft Copilot for Microsoft 365
+# Microsoft Graph connector samples for Microsoft 365 Copilot
 
-The following samples implement Microsoft Graph connectors that extend Microsoft Copilot for Microsoft 365.
+The following samples implement Microsoft Graph connectors that extend Microsoft 365 Copilot.
 
 | Sample | Description |
 |--------|-------------|
