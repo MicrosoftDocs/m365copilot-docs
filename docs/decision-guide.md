@@ -36,19 +36,24 @@ One consideration would be your data types—what structure your data has, and h
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
-| Structure          | Un-structured or Flattened data | Structured data |
-| Data volume        | Up to 5M items per connection   | Suitable for high volume data (5M+) |
-| Data activity      | Up to 20 requests per second    | Suitable for high activity (20 req/sec. or more)|
-| Read/write         | Read-only                       | Writable
+| **Structure**          | Un-structured or Flattened data | Structured data |
+| **Data volume**        | Up to 5M items per connection   | Suitable for high volume data (5M+) |
+| **Data activity**      | Up to 20 requests per second    | Suitable for high activity (20 req/sec. or more)|
+| **Read/write**         | Read-only                       | Writable
+
+This is an example of the writable data with a message extension. This plugin manages a product inventory, which Copilot can find data from the inventory and displays it in Adaptive Card, where it allows a user to modify the stock.
+:::image type="content" source="assets/images/plugin-example-northwind.png" alt-text="A screenshot that shows an example of writable data via a message extension" lightbox="assets/images/plugin-example-northwind.png":::
 
 #### Benefits and limitations
 
 You probably want to consult the pros and cons of these to choose the right one for you too!
 
+For instance, Graph connectors help keep third-party data within the compliance boundary by indexing the data, where the real-time data through the use of message extensions are not indexed and can be shared or accessed outside of the defined compliance boundaries.
+
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
 | **Benefits**    | <li>Relevance based on user activities  <li>Semantic discovery of content <li>Activities (view, modify, shared with) help with ranking <li>Data stays within compliance boundary| <li>Discoverability in Store <li>Enabling branded experience <li>Better UX with Adaptive cards|
-| **Limitations** | <li>Max 30 connectors in Tenant <li>Relatively low data volume and activity <li>User visibility <li>Need to keep in sync if you are in external groups outside of Azure AD group | <li>Plugins need to be manually enabled <li>M365 data can leaves compliance boundary  <li>Orchestrator can only reason 10 plugins per prompt <li>Performance depends on developers & hosting|
+| **Limitations** | <li>Max 30 connectors in Tenant <li>Relatively low data volume and activity <li>User visibility <li>Need to keep in sync if you are in external groups outside of Azure AD group | <li>Plugins need to be manually enabled <li>Data can leaves compliance boundary  <li>Orchestrator can only reason 10 plugins per prompt <li>Performance depends on developers & hosting|
 
 ### The more you know
 
