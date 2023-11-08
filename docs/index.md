@@ -34,6 +34,26 @@ When you extend Microsoft 365 Copilot, you maximize the efficiency of your apps 
 
 - **Connecting any software** to any other software for any scenario with natural language.
 
+## Extend Copilot for your scenario
+
+Copilot extensibility helps your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Create something brand new for Copilot or integrate an existing app.
+
+Here are some practical examples of what you can develop for your organization:
+
+- **Issue tracking for engineering team**
+
+    Assume your engineering team relies on a project management software. You can build a custom tool that enables users to monitor open tickets. For instance, a user can request information on all issues assigned to them, and Copilot for Microsoft 365 can seamlessly retrieve and present this data from your plugin.
+
+:::image type="content" source="assets/images/copilot-scenario-01.png" alt-text="This illustration shows Copilot plugin scenario, where an engineer asks to show all open tickets for him" border="false":::
+
+- **Product inventory for E-commerce**
+
+    If your business operates in the realm of commerce, you can build an internal inventory tool by connecting it to your product database. For example, a user can ask Copilot to verify the availability of specific items, streamlining your internal processes.
+
+- **Enterprise knowledge sharing**
+
+    Consider a multinational corporation with a wealth of knowledge and insights stored in various formats - documents, emails, chat transcripts, spread across multiple systems. Microsoft Graph connectors can facilitate the consolidation of this data, making it searchable from a single, unified interface. This ensures that your organization's collective wisdom is readily accessible.
+
 ## Plug in your apps, connect your data
 
 There are two ways of extending Microsoft 365 Copilot: by augmenting copilot with skills through *plugins*, and grounding it with organizational data through Graph *connectors*.
@@ -66,6 +86,7 @@ There are three main steps to set up a Graph connector: (1) Create a connection,
 
 Support for plugins and Graph connectors is currently limited to Copilot for Microsoft 365 chat within Teams. Future support will expand to other Copilot for Microsoft 365 surfaces.
 
+TO-DO: Need a new screenshot
 :::image type="content" source="assets/images/copilot-m365-teams.png" alt-text="{alt-text}":::
 
 ## Next step
