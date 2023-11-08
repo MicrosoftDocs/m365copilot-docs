@@ -1,13 +1,13 @@
 ---
-title: Data, Privacy, and Security for Microsoft Copilot extensibility
-description: Learn how to protect your customer's data as a developer of Microsoft Copilot extensibility solutions
+title: Data, Privacy, and Security for Microsoft 365 Copilot extensibility
+description: Learn how to protect your customer's data as a developer of Microsoft 365 Copilot extensibility solutions
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.date: 11/14/2023
 ---
 
-# Data, Privacy, and Security for Microsoft Copilot extensibility
+# Data, Privacy, and Security for Microsoft 365 Copilot extensibility
 
 When you use a Copilot plugin or connector, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin or connector to generate a response or complete a command. This article will outline data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
 
@@ -33,9 +33,9 @@ Power Platform plugins use the same [authentication process for custom connector
 
 ## Considerations for line-of-business developers
 
-Microsoft Copilot for Microsoft 365 only shares data with and searches in plugins or connectors that are enabled for Copilot by a Microsoft 365 admin. As a line-of-business developer of Copilot extensibility solutions, ensure you and your admin are familiar with:
+Microsoft 365 Copilot only shares data with and searches in plugins or connectors that are enabled for Copilot by a Microsoft 365 admin. As a line-of-business developer of Copilot extensibility solutions, ensure you and your admin are familiar with:
 
-- [Copilot for Microsoft 365 requirements](/microsoft-365-copilot/microsoft-365-copilot-requirements)
+- [Microsoft 365 Copilot requirements](/microsoft-365-copilot/microsoft-365-copilot-requirements)
 - [Data, Privacy, and Security for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-privacy) admin documentation
 - [Zero Trust for Microsoft 365 Copilot](/security/zero-trust/zero-trust-tech-illus#zero-trust-for-microsoft-365-copilot) deployment plan for applying Zero Trust principles to Microsoft Copilot
 - Microsoft Admin Center procedures:
@@ -44,7 +44,7 @@ Microsoft Copilot for Microsoft 365 only shares data with and searches in plugin
 
 ## Considerations for independent software vendors
 
-Message extension copilot plugins are packaged and distributed in the same way as Microsoft Teams apps that are integrated to run across the Microsoft 365 ecosystem. Microsoft Graph connectors can also be packaged and distributed in the same way as Teams apps.
+Message extension Copilot plugins are packaged and distributed in the same way as Microsoft Teams apps that are integrated to run across the Microsoft 365 ecosystem. Microsoft Graph connectors can also be packaged and distributed in the same way as Teams apps.
 
 Power Platform plugins are certified and distributed in the same way as Power Platform connectors, by first publishing your connector to the [Power Platform Connectors](https://github.com/microsoft/PowerPlatformConnectors) open source repository, and then submitting its information to Microsoft.
 

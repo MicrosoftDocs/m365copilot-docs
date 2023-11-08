@@ -1,17 +1,17 @@
 ---
-title: Build high quality copilot plugins for Microsoft 365
-description: Here are best practices for building copilot plugins for Microsoft 365
+title: Build high quality Copilot plugins for Microsoft 365
+description: Here are best practices for building Copilot plugins for Microsoft 365
 author: erikadoyle
 ms.author: edoyle
 ms.topic: best-practice
 ms.date: 11/1/2023
 ---
 
-# Build high quality copilot plugins for Microsoft 365
+# Build high quality Copilot plugins for Microsoft 365
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-When you build a plugin, you enable your users to interact with your web service using natural language with Microsoft Copilot. Plugins expand copilot's skills to accomplish tasks on behalf of your users. They are especially good at:
+When you build a plugin, you enable your users to interact with your web service using natural language with Microsoft Copilot. Plugins expand Copilot's skills to accomplish tasks on behalf of your users. They are especially good at:
 
 - Accessing real-time information,
 - Retrieving relational data, and
@@ -19,8 +19,9 @@ When you build a plugin, you enable your users to interact with your web service
 
 ## Qualities of a good plugin
 
-A clear and concise [description of your plugin](orchestrator.md#plugin-search-optimization) is essential for copilot to recognize its capabilities and match it with the appropriate user tasks. Upon runtime, you can ensure your plugin provides the best possible user experience by designing your plugin with the following characteristics.
+A clear and concise [description of your plugin](orchestrator.md#plugin-search-optimization) is essential for Copilot to recognize its capabilities and match it with the appropriate user tasks. Upon runtime, you can ensure your plugin provides the best possible user experience by designing your plugin with the following characteristics.
 
+<!-- markdownlint-disable DOCSMD003 -->
 :::row:::
     :::column:::
         :::image type="content" source="assets/images/icon-search.png" alt-text="Image representing 'Robust search'":::
@@ -28,11 +29,11 @@ A clear and concise [description of your plugin](orchestrator.md#plugin-search-o
         **Support search**
 
         Anticipate and support the most common searches users will perform.
-        
+
     :::column-end:::
     :::column:::
         :::image type="content" source="assets/images/icon-deep-content.png" alt-text="Image representing 'Deep content retrieval'":::
-        
+
         **Retrieve deep content**
 
         Search match with the surrounding paragraph. Provide an Adaptive Card response with additional information.
@@ -58,7 +59,7 @@ A clear and concise [description of your plugin](orchestrator.md#plugin-search-o
 
 ## Plugin best practices
 
-The remainder of this article will cover best practices for building high quality copilot plugins.
+The remainder of this article will cover best practices for building high quality Copilot plugins.
 
 ### Build for safety and responsible AI
 
