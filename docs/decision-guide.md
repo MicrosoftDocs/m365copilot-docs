@@ -42,7 +42,7 @@ If you want to go low-code with Power Platform Connector:
 If you want to start creating Graph connector:
 
 > [!div class="nextstepaction"]
-> [Start building Graph Connector](overview-graph-connectors.md)
+> [Start building Graph Connector](overview-graph-connector.md)
 
 And if you want to build a Teams message extension app:
 
