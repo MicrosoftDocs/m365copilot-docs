@@ -42,6 +42,7 @@ One consideration would be your data types—what structure your data has, and h
 | **Read/write**         | Read-only                       | Writable
 
 This is an example of the writable data with a message extension. This plugin manages a product inventory, which Copilot can find data from the inventory and displays it in Adaptive Card, where it allows a user to modify the stock.
+
 :::image type="content" source="assets/images/plugin-example-northwind.png" alt-text="A screenshot that shows an example of writable data via a message extension" lightbox="assets/images/plugin-example-northwind.png":::
 
 #### Benefits and limitations
