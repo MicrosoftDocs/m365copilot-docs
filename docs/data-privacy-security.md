@@ -11,7 +11,7 @@ ms.date: 11/14/2023
 
 When you use a Copilot plugin or connector, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin or connector to generate a response or complete a command. This article will outline data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
 
-:::image type="content" source="assets/images/validation-principles.png" alt-text="Diagram key considerations for developing Copilot extensibility: Enterprise security and trust, Responsible AI, High-quality user experience, High-value functionality":::
+:::image type="content" source="assets/images/validation-principles.png" alt-text="Diagram key considerations for developing Copilot extensibility: Enterprise security and trust, Responsible AI, High-quality user experience, High-value functionality" border="false":::
 
 ## Graph connectors
 
