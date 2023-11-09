@@ -24,7 +24,7 @@ A clear and concise [description of your plugin](orchestrator.md#plugin-search-o
 <!-- markdownlint-disable DOCSMD003 -->
 :::row:::
     :::column:::
-        :::image type="content" source="assets/images/icon-search.png" alt-text="Image representing 'Robust search'":::
+        :::image type="content" source="assets/images/icon-search.png" alt-text="Image representing 'Robust search'" border="false":::
 
         **Support search**
 
@@ -32,7 +32,7 @@ A clear and concise [description of your plugin](orchestrator.md#plugin-search-o
 
     :::column-end:::
     :::column:::
-        :::image type="content" source="assets/images/icon-deep-content.png" alt-text="Image representing 'Deep content retrieval'":::
+        :::image type="content" source="assets/images/icon-deep-content.png" alt-text="Image representing 'Deep content retrieval'" border="false":::
 
         **Retrieve deep content**
 
@@ -42,14 +42,14 @@ A clear and concise [description of your plugin](orchestrator.md#plugin-search-o
 
 :::row:::
     :::column:::
-        :::image type="content" source="assets/images/icon-actionable.png" alt-text="Image representing 'Actionable'":::
+        :::image type="content" source="assets/images/icon-actionable.png" alt-text="Image representing 'Actionable'" border="false":::
 
         **Present actionable results**
 
         Include a way for the user to take action, such as a deep link to your website, or a modal dialog.
     :::column-end:::
     :::column:::
-        :::image type="content" source="assets/images/icon-preview.png" alt-text="Image representing 'Provide a preview'":::
+        :::image type="content" source="assets/images/icon-preview.png" alt-text="Image representing 'Provide a preview'" border="false":::
 
         **Provide a preview**
 
