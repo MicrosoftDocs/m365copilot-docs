@@ -20,7 +20,7 @@ On its own, Microsoft 365 Copilot is a powerful productivity tool for keeping us
 
 However, business workflows don't typically run exclusively on Microsoft 365 applications and data formats. With Copilot extensibility, you can augment Microsoft 365 Copilot with custom skills and organizational knowledge specific to your enterprise and users to enable truly spectacular AI scenarios. You can extend  Copilot's skills by **customizing your app to be a Copilot plugin** that increases user productivity across daily tasks and workflows. You can enrich the organizational knowledge accessible to Copilot ([Semantic Index](/microsoft-365-copilot/microsoft-365-copilot-overview#semantic-index)) with your enterprise data by **connecting your custom content and data** with Graph connectors.
 
-:::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with 'Organizational knowledge (Semantic Index)' as the x-axis and 'User skills' as the y-axis showing that you can extend Copilot skills with plugins and extend Copilot knowledge with graph connectors" border="false":::
+:::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with 'Organizational knowledge (Semantic Index)' as the x-axis and 'User skills' as the y-axis showing that you can extend Copilot skills with plugins and extend Copilot knowledge with graph connectors" border="false" lightbox="assets/images/skills-knowledge-chart.png":::
 
 When you extend Microsoft 365 Copilot, you maximize the efficiency of your apps and data with AI, by:
 
@@ -58,7 +58,7 @@ Here are some practical examples of what you can develop for your organization:
 
 There are two ways of extending Microsoft 365 Copilot: by augmenting Copilot with skills through *plugins*, and grounding it with organizational data through Graph *connectors*.
 
-:::image type="content" source="assets/images/m365-copilot-extensibility.png" alt-text="This diagram of M365 Copilot Extensibility shows how the external data consumed in Copilot is connected via Copilot plugins and Graph connectors":::
+:::image type="content" source="assets/images/m365-copilot-extensibility.png" alt-text="This diagram of M365 Copilot Extensibility shows how the external data consumed in Copilot is connected via Copilot plugins and Graph connectors" lightbox="assets/images/m365-copilot-extensibility.png":::
 
 ### Plugins
 
