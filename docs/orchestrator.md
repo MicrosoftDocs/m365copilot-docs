@@ -1,5 +1,5 @@
 ---
-title: How copilot decides which plugin to use
+title: How Microsoft 365 Copilot decides which plugin to use
 description: Learn how the Microsoft 365 orchestrator determines which plugin skill to apply for a given user prompt.
 author: erikadoyle
 ms.author: edoyle
@@ -7,8 +7,7 @@ ms.topic: overview
 ms.date: 11/14/2023
 ---
 
-<!-- markdownlint-disable MD024 -->
-<!-- markdownlint-disable MD051 -->
+<!-- markdownlint-disable MD024 MD051 -->
 # How Microsoft 365 Copilot decides which plugin to use
 
 Microsoft 365 Copilot is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **skills** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
@@ -21,13 +20,12 @@ This article will explain the logic behind Copilot's skill selection process and
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-TODO: Maybe a conceptual diagram here (tasks, skills, plugins, orchestrator)?
+## The Copilot orchestrator
 
-## The copilot orchestrator
+Between the end-user's natural language input to Copilot's natural language output, the Microsoft Copilot orchestrator works behind the scenes to select and execute the right skill(s) from the right plugin(s) for the end-user's given task.
 
-Between the end-user's natural language input to Copilot's natural language output, the Microsoft 365 Copilot orchestrator works behind the scenes to select and execute the right skill(s) from the right plugin(s) for the end-user's given task.
+The orchestration layer represents the interface between foundation LLMs and the many ways you can extend, enrich, and customize Copilot for the way your customers work.
 
-TODO: Describe how orchestrator fits in to overall copilot stack
 :::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the Microsoft Copilot technology stack. From bottom to top: Microsoft Cloud, AI infrastructure, Your data, Foundation models, AI orchestration, Microsoft Copilots | Your copilots, Teams AI Library, Graph connectors, Plugin extensibility":::
 
 The following chart illustrates how the Microsoft 365 Copilot orchestrator selects the right plugin, with the right skill, at the right time, even when there are thousands of options to choose from.
@@ -40,7 +38,7 @@ The following chart illustrates how the Microsoft 365 Copilot orchestrator selec
 
 2. **Search for relevant tools**
 
-    The copilot orchestrator searches its tool catalog of installed and enabled plugins for an initial list of relevant skills.
+    The Copilot orchestrator searches its tool catalog of installed and enabled plugins for an initial list of relevant skills.
 
 3. **Reasoning**
 
@@ -48,7 +46,7 @@ The following chart illustrates how the Microsoft 365 Copilot orchestrator selec
 
 4. **Mapping user's intent to slots**
 
-    The orchestrator maps the user's tasks to plugin skills and/or built-in Copilot skill functions, mapping the implicit constraints from the user's prompt to the parameter values required to execute each of the identified skills. TODO: Define slots (skills or skill parameters?)
+    The orchestrator maps the user's tasks to plugin skills and/or built-in Copilot skill functions, mapping implicit constraints from the user's prompt to the slots (parameter values) required to execute each of the identified skills.
 
 5. **Execute tool**
 
@@ -62,7 +60,7 @@ The following chart illustrates how the Microsoft 365 Copilot orchestrator selec
 
     Finally, Copilot delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
-If you imagine a user's prompt to copilot like a construction project, then the copilot orchestrator is the *general contractor*, who coordinates and organizes the work of the specialist *subcontractors*, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's  input (in other words, that Copilot's response satisfies the user's intent in their request).
+If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the *general contractor*, who coordinates and organizes the work of the specialist *subcontractors*, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's  input (in other words, that Copilot's response satisfies the user's intent in their request).
 
 However, its the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This will instill a sense of trust in your users and ensure Copilot will call your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin for the orchestrator to find and use.
 
@@ -312,7 +310,7 @@ Advanced search: Search for high priority tasks related to Northwind that are du
         "title": "Priority",
         "description": "Send priority of tasks. Acceptable values are: high, medium, low, NA ",
         "inputType": "text"
-    }] 
+    }]
 ```
 
 #### [Surveys](#tab/surveys)

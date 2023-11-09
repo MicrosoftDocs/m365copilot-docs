@@ -1,19 +1,19 @@
 ---
-title: Microsoft Copilot for Microsoft 365 extensibility samples
-description: Extend Microsoft Copilot for Microsoft 365 with plugins and Microsoft Graph connectors
+title: Microsoft 365 Copilot extensibility samples
+description: Extend Microsoft 365 Copilot with plugins and Microsoft Graph connectors
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: conceptual
 ms.date: 11/14/2023
 ---
 
-# Microsoft Copilot for Microsoft 365 extensibility samples
+# Microsoft 365 Copilot extensibility samples
 
-## Plugins for Copilot for Microsoft 365
+## Plugins for Microsoft 365 Copilot
 
 ### Teams message extension samples
 
-The following samples implement Teams message extensions that extend Copilot for Microsoft 365.
+The following samples implement Teams message extensions that extend Microsoft 365 Copilot.
 
 | Sample | Description |
 |--------|-------------|
@@ -21,7 +21,7 @@ The following samples implement Teams message extensions that extend Copilot for
 
 ## Microsoft Graph connector samples
 
-The following samples implement Microsoft Graph connectors that extend Copilot for Microsoft 365.
+The following samples implement Microsoft Graph connectors that extend Microsoft 365 Copilot.
 
 | Sample | Description |
 |--------|-------------|
