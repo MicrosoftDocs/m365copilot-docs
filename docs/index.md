@@ -86,7 +86,6 @@ There are three main steps to set up a Graph connector: (1) Create a connection,
 
 Support for plugins and Graph connectors is currently limited to Microsoft 365 Copilot chat within Teams. Future support will expand to other Microsoft 365 Copilot surfaces.
 
-TO-DO: Need a new screenshot
 :::image type="content" source="assets/images/copilot-m365-teams.png" alt-text="{alt-text}":::
 
 ## Next step
