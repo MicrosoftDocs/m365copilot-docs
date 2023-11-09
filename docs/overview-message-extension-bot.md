@@ -24,7 +24,7 @@ With the introduction of Microsoft 365 Copilot, the game has changed. Users can 
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-This illustrate compares how a user can interact with a massage extension on Teams client and Microsoft 365 Copilot:
+This illustrate compares how a user can interact with a message extension on Teams client and Microsoft 365 Copilot:
 
 :::image type="content" source="assets/images/message-extensions-ux.png" alt-text="this illustrates two user experiences of message extensions- one way is to invoke from Teams client and another is Copilot" lightbox="assets/images/message-extensions-ux.png":::
 
