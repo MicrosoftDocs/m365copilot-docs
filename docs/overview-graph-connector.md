@@ -43,9 +43,11 @@ In addition, search administrators should ensure that your Graph Connector conne
 - Open the Admin Center, go to **Search & intelligence** > **Customizations** > **Verticals** and select the **All** vertical.
 - Select **Manage connector result**. Ensure that **Show results inline** is selected and that the connections that you want to enable for Search and Copilot are checked.
 
-## Semantic Labels in Microsoft 365 Copilot
+## Semantic Labels and Property Labels in Microsoft 365 Copilot
 
 As stated earlier, it is recommended that you apply as many semantic labels to your schema as applicable. This is because your end-users can use semantic labels as part of their prompt in Microsoft 365 Copilot. For example, an end-user can ask Copilot for all of the files that were last modified within the last week. If the `lastModifiedDateTime` semantic label is not applied to your schema, then Microsoft 365 Copilot will not be able to return the expected result to that user.
+
+The `searchable` property label is the most important with respect to Microsoft 365 Copilot. It defines which properties can be searched against. If you would like your users' prompts in Microsoft 365 Copilot to match content stored in certain properties, then you should make those properties searchable.
 
 ## See also
 
