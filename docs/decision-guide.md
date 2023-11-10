@@ -1,26 +1,26 @@
 ---
-title: Extensibility options for Microsoft 365 Copilot
-description: Understand which type of Microsoft 365 Copilot plugin or connector works best for you
+title: Extensibility options for Microsoft Copilot for Microsoft 365
+description: Understand which type of Microsoft Copilot for Microsoft 365 plugin or connector works best for you
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
 ms.date: 11/14/2023
 ---
 
-# Extensibility options for Microsoft 365 Copilot
+# Extensibility options for Microsoft Copilot for Microsoft 365
 
 You can enhance Copilot's functionality by developing plugins and connectors to fit your needs.
 
-Create Copilot plugins to extend its capabilities, such as crafting a Microsoft Teams message extension or a Power Platform connector. Alternatively, employ connectors to seamlessly integrate your enterprise data into the Microsoft 365 Copilot experience.
+Create Copilot plugins to extend its capabilities, such as crafting a Microsoft Teams message extension or a Power Platform connector. Alternatively, employ connectors to seamlessly integrate your enterprise data into the Copilot for Microsoft 365 experience.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
 ## Choose your extensibility path
 
-You have more than one way to personalize Microsoft 365 Copilot with the intelligence of external services, apps, and data.
+You have more than one way to personalize Copilot for Microsoft 365 with the intelligence of external services, apps, and data.
 To start building your connector or plugins, you can select the tools and SDKs based on how you want to develop.
 
-:::image type="content" source="assets/images/decision-making-tree.png" alt-text="Decision-making questions to figure out which M365 Copilot extensibility service you should use" lightbox="assets/images/decision-making-tree.png":::
+:::image type="content" source="assets/images/decision-making-tree.png" alt-text="Decision-making questions to figure out which Copilot for Microsoft 365 extensibility service you should use" lightbox="assets/images/decision-making-tree.png":::
 
 1. If you are a low-code developer, who have invested in Power Platform already and want to expose the external data in Power Platform too, additionally to Copilot, naturally your choice would be Power Platform connectors.
 2. If you want to connect your data in Microsoft 365, including Microsoft Search, Context IQ, and the Microsoft 365 app, Graph Connectors would be your option.
@@ -46,7 +46,7 @@ This is an example of the writable data with a message extension. This plugin ma
 :::image type="content" source="assets/images/plugin-example-northwind.png" alt-text="A screenshot that shows an example of writable data via a message extension" lightbox="assets/images/plugin-example-northwind.png":::
 
 > [!TIP]
-> You can find the sample code for *Northwind Inventory* plugin at [Microsoft 365 Copilot extensibility samples](samples.md#teams-message-extension-samples).
+> You can find the sample code for *Northwind Inventory* plugin at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#teams-message-extension-samples).
 
 #### Benefits and limitations
 
@@ -60,14 +60,14 @@ You probably want to consult the pros and cons of these to choose the right one 
 For instance, Graph connectors help keep third-party data within the compliance boundary by indexing the data. On the other hand, the real-time data through the use of message extensions are not indexed and can be shared or accessed outside of the defined compliance boundaries. As a plugin developer, you are responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information.
 
 > [!TIP]
-> You can find more information about it at [Data, Privacy, and Security for Microsoft 365 Copilot extensibility](data-privacy-security.md).
+> You can find more information about it at [Data, Privacy, and Security for Microsoft Copilot for Microsoft 365 extensibility](data-privacy-security.md).
 
 This is a sample response from Copilot, utilizing data from Graph connector. The Graph connector in question indexes issues and repositories from GitHub, presenting the results in plain text as opposed to an Adaptive Card format. By comparing this with the Message extension example provided earlier, you can see the differences between them.
 
 :::image type="content" source="assets/images/gc-example-github.png" alt-text="A screenshot that shows an example of Copilot response from Graph connector" lightbox="assets/images/gc-example-github.png":::
 
 > [!TIP]
-> You can find the sample code for *Microsoft Graph TypeScript GitHub connector* at [Microsoft 365 Copilot extensibility samples](samples.md#microsoft-graph-connector-samples).
+> You can find the sample code for *Microsoft Graph TypeScript GitHub connector* at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#microsoft-graph-connector-samples).
 
 ### The more you know
 

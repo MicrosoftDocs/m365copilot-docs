@@ -1,5 +1,5 @@
 ---
-title: How Microsoft 365 Copilot decides which plugin to use
+title: How Microsoft Copilot for Microsoft 365 decides which plugin to use
 description: Learn how the Microsoft 365 orchestrator determines which plugin skill to apply for a given user prompt.
 author: erikadoyle
 ms.author: edoyle
@@ -8,13 +8,13 @@ ms.date: 11/14/2023
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
-# How Microsoft 365 Copilot decides which plugin to use
+# How Microsoft Copilot for Microsoft 365 decides which plugin to use
 
-Microsoft 365 Copilot is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **skills** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
+Microsoft Copilot for Microsoft 365 is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **skills** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
 
-Like any copilot, Microsoft 365 Copilot is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot requires *plugins*. **Plugins** extend Microsoft 365 Copilot's skills and utility for end users, enabling it to choose the right skill from thousands.
+Like any copilot, Copilot for Microsoft 365 is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot requires *plugins*. **Plugins** extend Copilot for Microsoft 365's skills and utility for end users, enabling it to choose the right skill from thousands.
 
-But how does Copilot know which skill to use when you ask for help? How does it interpret your request and match it to the best skill available? That's the job of the Microsoft 365 Copilot **orchestrator**.
+But how does Copilot know which skill to use when you ask for help? How does it interpret your request and match it to the best skill available? That's the job of the Copilot for Microsoft 365 **orchestrator**.
 
 This article will explain the logic behind Copilot's skill selection process and how you can ensure Copilot employs your plugin at every opportunity it can benefit your users.
 
@@ -28,13 +28,13 @@ The orchestration layer represents the interface between foundation LLMs and the
 
 :::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the Microsoft Copilot technology stack. From bottom to top: Microsoft Cloud, AI infrastructure, Your data, Foundation models, AI orchestration, Microsoft Copilots | Your copilots, Teams AI Library, Graph connectors, Plugin extensibility":::
 
-The following chart illustrates how the Microsoft 365 Copilot orchestrator selects the right plugin, with the right skill, at the right time, even when there are thousands of options to choose from.
+The following chart illustrates how the Copilot for Microsoft 365 orchestrator selects the right plugin, with the right skill, at the right time, even when there are thousands of options to choose from.
 
 :::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
 
 1. **Natural language input**
 
-    The user types a prompt into Microsoft 365 Copilot chat.
+    The user types a prompt into Copilot for Microsoft 365 chat.
 
 2. **Search for relevant tools**
 
@@ -66,7 +66,7 @@ However, its the responsibility of each plugin to provide Copilot with an accura
 
 ## Plugin search optimization
 
-Microsoft 365 Copilot can uniquely choose the right skill from thousands. But how can you make sure Copilot will choose *your plugin* to provide the right skill?
+Copilot for Microsoft 365 can uniquely choose the right skill from thousands. But how can you make sure Copilot will choose *your plugin* to provide the right skill?
 
 The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring Copilot knows when and how to invoke your plugin.
 
@@ -413,7 +413,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ## Next step
 
-Learn best practices for optimizing plugin discoverability and usefulness in Microsoft 365 Copilot.
+Learn best practices for optimizing plugin discoverability and usefulness in Copilot for Microsoft 365.
 
 > [!div class="nextstepaction"]
 > [Learn what makes a high quality plugin](plugin-guidelines.md)
