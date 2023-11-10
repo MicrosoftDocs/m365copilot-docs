@@ -65,9 +65,9 @@ Accounts used to test Copilot extensibility need a Microsoft Copilot for Microso
 
 ## Frequently asked questions
 
-- Can I upgrade my standard Microsoft 365 license to a Microsoft Copilot license?
+### Can I upgrade my standard Microsoft 365 license to a Microsoft Copilot license?
   - No, you cannot. For standard Microsoft 365 licenses, Copilot is disabled. To have Microsoft Copilot for Microsoft 365, you need to buy a minimum of 300 licenses.
-- Can I use my standard Microsoft 365 developer tenant to develop with Microsoft Copilot for Microsoft 365?
+### Can I use my standard Microsoft 365 developer tenant to develop with Microsoft Copilot for Microsoft 365?
   - No. You must qualify for and obtain the Microsoft 365 E5 Developer SKU V2 (without Windows and Audio-conferencing), and then purchase Microsoft Copilot for Microsoft 365 Developer.
-- Can sandbox tenants with Copilot be renewed once the licenses expire?
+### Can sandbox tenants with Copilot be renewed once the licenses expire?
   - Yes. If you continue to qualify for the Microsoft 365 E5 Developer SKU V2, your development environment will auto-renew.
