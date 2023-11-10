@@ -18,6 +18,7 @@ The following samples implement Teams message extensions that extend Microsoft 3
 | Sample | Description |
 |--------|-------------|
 | [Northwind Inventory extension](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) | This TypeScript sample implements a Teams message extension that allows users to query data from the Northwind sample database and take action on that data. |
+| [Cognitive search extension](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-doc-search-js) | This JavaScript sample implements a Teams message extension that uses cognitive search to enable vector search of documents. |
 
 ## Microsoft Graph connector samples
 
@@ -26,6 +27,7 @@ The following samples implement Microsoft Graph connectors that extend Microsoft
 | Sample | Description |
 |--------|-------------|
 | [.NET GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-dotnet) | This .NET application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |
+| [Python GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-python) | This Python application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |
 | [TypeScript GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-typescript) | This TypeScript application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |
 
 ### Samples from the community
