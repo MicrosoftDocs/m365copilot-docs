@@ -80,7 +80,7 @@ Graph connectors increase the discoverability and engagement of your enterprise 
 - **Use Copilot as a research aid**, letting Copilot find, summarize, and perform Q&A natively by leveraging the dataset of your choice
 - **Surface the intelligence of Copilot** in Microsoft Search, ContextIQ, and more to enhance the ways your users are already searching for answers
 
-There are three main steps to set up a Graph connector: (1) Create a connection, (2) Register your schema, and then (3) Ingest your content to the Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in Microsoft 365 App. Learn more about [how Graph connectors work in Copilot](overview-graph-connector.md) and [best practices for configuration](overview-graph-connector.md#configuring-your-custom-microsoft-graph-connection-for-microsoft-365-copilot).
+There are three main steps to set up a Graph connector: (1) Create a connection, (2) Register your schema, and then (3) Ingest your content to the Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in Microsoft 365 App. Learn more about [how Graph connectors work in Copilot](overview-graph-connector.md) and [best practices for configuration](overview-graph-connector.md#configuring-your-custom-microsoft-graph-connection-for-copilot-for-microsoft-365).
 
 ## Extensibility preview support
 
