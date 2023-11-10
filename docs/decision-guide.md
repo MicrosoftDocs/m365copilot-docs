@@ -22,9 +22,9 @@ To start building your connector or plugins, you can select the tools and SDKs b
 
 :::image type="content" source="assets/images/decision-making-tree.png" alt-text="Decision-making questions to figure out which Copilot for Microsoft 365 extensibility service you should use" lightbox="assets/images/decision-making-tree.png":::
 
-1. If you are a low-code developer, who have invested in Power Platform already and want to expose the external data in Power Platform too, additionally to Copilot, naturally your choice would be Power Platform connectors.
-2. If you want to connect your data in Microsoft 365, including Microsoft Search, Context IQ, and the Microsoft 365 app, Graph Connectors would be your option.
-3. And if you would like to connect real-time data from external source on the fly, Message Extensions should be your choice. Write the logic using Bot Framework! And if you have built Message Extension apps for Teams before, a great news is that your app is Copilot-ready already! Make sure that your app manifest is most up-to-date.
+1. If you are a no-code or low-code developer, who have invested in Power Platform already and want to expose the external data in Power Platform too, additionally to Copilot, naturally your choice would be Power Platform connectors.
+1. If you leverage [Semantic Index](/microsoft-365-copilot/microsoft-365-copilot-overview#semantic-index) and connect your unstructured enterprise data in Microsoft 365, including Microsoft Search, Context IQ, and the Microsoft 365 app, Graph Connectors would be your option.
+1. And if you would like to connect your structured data in real-time from external source on the fly, Message Extensions should be your choice. Write the logic using Bot Framework! And if you have built Message Extension apps for Teams before, a great news is that your app is Copilot-ready already! Make sure that your app manifest is most up-to-date.
 
 ### Decisions, decisions
 
@@ -77,7 +77,7 @@ Above all, if your main consideration is a quick development by just calling an 
 |:-------------------|:--------------------------------|:--------------------------------|
 | **Also work with**                    | <li>Context IQ <li>Viva Topics <li>Enterprise Search in M365.com, Sharepoint, and Bing @ work <li>Content recommendations in M365 apps | <li>Teams chat <li>Outlook |
 | **Ease of development**               | <li>Fast connect, register schema, and index items | <li>Teams Toolkit for Visual Studio & VS Code <li>Sideloading for development & test |
-| **Developer experience limitations**  | <li>No tools for Visual Studio & VS Code <li>No sideloading <li>Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Azure AD group | <li>Steep learning curve <li>More time to develope <li>Need to handle multi-parameter prompts.
+| **Developer experience limitations**  | <li>No tools for Visual Studio & VS Code <li>No sideloading <li>Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Azure AD group | <li>Steep learning curve <li>More time to develop <li>Need to handle multi-parameter prompts.
 
 Message extension plugin developers should handle all potential prompt scenarios from users. Single-parameter prompts can be as simple as:
 > Find Chai in Northwind Inventory
