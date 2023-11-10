@@ -24,7 +24,7 @@ To start building your connector or plugins, you can select the tools and SDKs b
 
 1. If you are a no-code or low-code developer, who have invested in Power Platform already and want to expose the external data in Power Platform too, additionally to Copilot, naturally your choice would be Power Platform connectors.
 1. If you leverage [Semantic Index](/microsoft-365-copilot/microsoft-365-copilot-overview#semantic-index) and connect your unstructured enterprise data in Microsoft 365, including Microsoft Search, Context IQ, and the Microsoft 365 app, Graph Connectors would be your option.
-1. And if you would like to connect your structured data in real-time from external source on the fly, Message Extensions should be your choice. Write the logic using Bot Framework! And if you have built Message Extension apps for Teams before, a great news is that your app is Copilot-ready already! Make sure that your app manifest is most up-to-date.
+1. And if you would like to connect your structured data in real-time from external source on the fly, Message Extensions should be your choice. Write the logic using Bot Framework. And if you have built Message Extension apps for Teams before, a great news is that your app is already Copilot-ready! Make sure that your app manifest is most up-to-date.
 
 ### Decisions, decisions
 
@@ -50,11 +50,11 @@ This is an example of the writable data with a message extension. This plugin ma
 
 #### Benefits and limitations
 
-You probably want to consult the pros and cons of these to choose the right one for you too!
+You may want to explore the pros and cons of each option before making a decision.
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
-| **Benefits**    | <li>Relevance based on user activities  <li>Semantic discovery of content <li>Activities (such as view, modify, and shared) with help with ranking and relevance of search results <li>Data stays within compliance boundary| <li>Discoverability in Store <li>Enabling branded experience <li>Better UX with Adaptive Cards|
+| **Benefits**    | <li>Relevance based on user activities  <li>Semantic discovery of content without turning on a plugin<li>Activities (such as view, modify, and shared) with help with ranking and relevance of search results <li>Data stays within compliance boundary| <li>Discoverability in Store <li>Enabling branded experience <li>Better UX with Adaptive Cards|
 | **Limitations** | <li>Max 30 connectors in Tenant <li>Relatively low data volume and activity <li>App visibility to users | <li>Plugins need to be manually enabled <li>Data can leaves compliance boundary  <li>[Orchestrator](orchestrator.md) can only reason 10 plugins per prompt <li>Performance depends on developers & hosting|
 
 For instance, Graph connectors help keep third-party data within the compliance boundary by indexing the data. On the other hand, the real-time data through the use of message extensions are not indexed and can be shared or accessed outside of the defined compliance boundaries. As a plugin developer, you are responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information.
@@ -65,6 +65,8 @@ For instance, Graph connectors help keep third-party data within the compliance 
 This is a sample response from Copilot, utilizing data from Graph connector. The Graph connector in question indexes issues and repositories from GitHub, presenting the results in plain text as opposed to an Adaptive Card format. By comparing this with the Message extension example provided earlier, you can see the differences between them.
 
 :::image type="content" source="assets/images/gc-example-github.png" alt-text="A screenshot that shows an example of Copilot response from Graph connector" lightbox="assets/images/gc-example-github.png":::
+
+This can be an advantage for Graph connector developers for speedy development, however, it's worth noting that message extensions could enhance user experiences by presenting results in beautifully designed Adaptive Cards.
 
 > [!TIP]
 > You can find the sample code for *Microsoft Graph TypeScript GitHub connector* at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#microsoft-graph-connector-samples).
