@@ -18,7 +18,7 @@ The following samples implement Teams message extensions that extend Microsoft 3
 | Sample | Description |
 |--------|-------------|
 | [Northwind Inventory extension](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) | This TypeScript sample implements a Teams message extension that allows users to query data from the Northwind sample database and take action on that data. |
-| [TODO](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-doc-search-js) | This JavaScript sample implements a Teams message extension that TODO. |
+| [Cognitive search extension](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-doc-search-js) | This JavaScript sample implements a Teams message extension that uses cognitive search to enable vector search of documents. |
 
 ## Microsoft Graph connector samples
 
