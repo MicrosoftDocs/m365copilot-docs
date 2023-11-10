@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 11/14/2023
 ---
 
-# Publish plugins and connectors for Microsoft 365 Copilot
+# Publish plugins and connectors for Microsoft Copilot for Microsoft 365
 
 Depending on its intended purpose as a line-of-business or marketable software solution, plugins and connectors can be published to your organization or to the Microsoft Commercial Marketplace through [Microsoft Partner Center](https://partner.microsoft.com). This article describes the current state of distribution options and procedures for Copilot extensibility.
 
@@ -33,13 +33,13 @@ Follow these [instructions to upload your custom app package](/microsoft-365/adm
 
 ### Distribute a message extension plugin to the Teams app store
 
-Ensure your app meets validation criteria for [Teams Apps extensible as Microsoft Microsoft 365 Copilot plugins](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=pr-en-us-9402#teams-apps-extensible-as-microsoft-365-copilot-plugin), then submit your app package to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program**.
+Ensure your app meets validation criteria for [Teams Apps extensible as Microsoft Copilot for Microsoft 365 plugins](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=pr-en-us-9402#teams-apps-extensible-as-microsoft-365-copilot-plugin), then submit your app package to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program**.
 
 Once accepted, your plugin will appear in the **Works with Copilot** category of the Store within Microsoft Teams.
 
 ## Power Platform connectors as plugins
 
-Power Platform connector plugins can be shared across an organization or published broadly to the in-product Teams app store. In both cases, Power Platform plugins can be used in Microsoft 365 Copilot once the *Dynamics 365 and Copilot Studio* app is deployed from Microsoft Admin Center. From Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)), open Settings > Integrated Apps > **Available Apps** and select **Dynamics 365 and Copilot Studio**.
+Power Platform connector plugins can be shared across an organization or published broadly to the in-product Teams app store. In both cases, Power Platform plugins can be used in Copilot for Microsoft 365 once the *Dynamics 365 and Copilot Studio* app is deployed from Microsoft Admin Center. From Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)), open Settings > Integrated Apps > **Available Apps** and select **Dynamics 365 and Copilot Studio**.
 
 ### Distribute a Power Platform connector plugin to your organization
 

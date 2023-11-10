@@ -1,13 +1,13 @@
 ---
-title: Data, Privacy, and Security for Microsoft 365 Copilot extensibility
-description: Learn how to protect your customer's data as a developer of Microsoft 365 Copilot extensibility solutions
+title: Data, Privacy, and Security for Microsoft Copilot for Microsoft 365 extensibility
+description: Learn how to protect your customer's data as a developer of Microsoft Copilot for Microsoft 365 extensibility solutions
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.date: 11/14/2023
 ---
 
-# Data, Privacy, and Security for Microsoft 365 Copilot extensibility
+# Data, Privacy, and Security for Microsoft Copilot for Microsoft 365 extensibility
 
 When you use a Copilot plugin or connector, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin or connector to generate a response or complete a command. This article will outline data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
 
@@ -15,7 +15,7 @@ When you use a Copilot plugin or connector, queries based on your prompts, conve
 
 ## Graph connectors
 
-Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. Semantic Index honors the user identity-based access boundary so that the grounding process only accesses content that the current user is authorized to access. This is also true of external data within Semantic Index.
+Copilot for Microsoft 365 presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. Semantic Index honors the user identity-based access boundary so that the grounding process only accesses content that the current user is authorized to access. This is also true of external data within Semantic Index.
 
 When you connect your external data to Copilot with a Microsoft Graph connector, your data flows into Semantic Index. You can manage permissions to view external items by associating an [access control list](/graph/connecting-external-content-manage-items?branch=main#access-control-list) (ACL) with a Microsoft Entra user and group ID or an [external group](/graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context).
 
@@ -33,11 +33,11 @@ Power Platform plugins use the same [authentication process for custom connector
 
 ## Considerations for line-of-business developers
 
-Microsoft 365 Copilot only shares data with and searches in plugins or connectors that are enabled for Copilot by a Microsoft 365 admin. As a line-of-business developer of Copilot extensibility solutions, ensure you and your admin are familiar with:
+Copilot for Microsoft 365 only shares data with and searches in plugins or connectors that are enabled for Copilot by a Microsoft 365 admin. As a line-of-business developer of Copilot extensibility solutions, ensure you and your admin are familiar with:
 
-- [Microsoft 365 Copilot requirements](/microsoft-365-copilot/microsoft-365-copilot-requirements)
-- [Data, Privacy, and Security for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-privacy) admin documentation
-- [Zero Trust for Microsoft 365 Copilot](/security/zero-trust/zero-trust-tech-illus#zero-trust-for-microsoft-365-copilot) deployment plan for applying Zero Trust principles to Microsoft Copilot
+- [Microsoft Copilot for Microsoft 365 requirements](/microsoft-365-copilot/microsoft-365-copilot-requirements)
+- [Data, Privacy, and Security for Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/microsoft-365-copilot-privacy) admin documentation
+- [Zero Trust for Microsoft Copilot for Microsoft 365](/security/zero-trust/zero-trust-tech-illus#zero-trust-for-microsoft-365-copilot) deployment plan for applying Zero Trust principles to Microsoft Copilot
 - Microsoft Admin Center procedures:
   - [Managing plugins for Copilot](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps)
   - [Managing Microsoft Graph connectors](/microsoftsearch/connectors-overview).
@@ -52,12 +52,12 @@ Submission of your app package to the Microsoft Partner Center *Microsoft 365 an
 
 - Microsoft Commercial Marketplace certification policies:
   - [100 General](/marketplace/certification-policies#100-general)
-  - [1140 Teams](/legal/marketplace/certification-policies#1140-teams) (including [1140.9 Teams apps extensible as Microsoft 365 Copilot plugins](/legal/marketplace/certification-policies#1140-teams)) (Message extension plugins)
+  - [1140 Teams](/legal/marketplace/certification-policies#1140-teams) (including [1140.9 Teams apps extensible as Microsoft Copilot for Microsoft 365 plugins](/legal/marketplace/certification-policies#1140-teams)) (Message extension plugins)
 - [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines) (Message extension plugins and Graph connectors in Teams apps)
 - [Verified publisher certification process](/connectors/custom-connectors/certification-submission) (Power Platform connector plugins)
 
 ## See also
 
-[Publish plugins and connectors for Microsoft 365 Copilot](publish.md)
+[Publish plugins and connectors for Microsoft Copilot for Microsoft 365](publish.md)
 
 [Microsoft commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai)

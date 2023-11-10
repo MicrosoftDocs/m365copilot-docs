@@ -1,15 +1,15 @@
 ---
-title: Set up your dev environment to build message extension for Microsoft 365 Copilot
-description: Prerequisites to build your first message extension plugin for Microsoft 365 Copilot
+title: Set up your dev environment to build message extension for Microsoft Copilot for Microsoft 365
+description: Prerequisites to build your first message extension plugin for Microsoft Copilot for Microsoft 365
 author: girliemac
 ms.author: timura
 ms.topic: overview
 ms.date: 11/14/2023
 ---
 
-# Get ready to build your first message extension plugin for Microsoft 365 Copilot
+# Get ready to build your first message extension plugin for Microsoft Copilot for Microsoft 365
 
-Before you get started to build a search-based message extension plugin for Copilot, you need to set up your development. Make sure you read the general requirements at [Your development environment for Microsoft 365 Copilot extensibility](prerequisites.md).
+Before you get started to build a search-based message extension plugin for Copilot, you need to set up your development. Make sure you read the general requirements at [Your development environment for Microsoft Copilot for Microsoft 365 extensibility](prerequisites.md).
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
