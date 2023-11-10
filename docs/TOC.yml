@@ -1,5 +1,5 @@
 
-- name: Microsoft 365 Copilot extensibility
+- name: Microsoft Copilot for Microsoft 365 extensibility
   href: index.md
 - name: Get started
   expanded: true
@@ -40,7 +40,7 @@
           href: /connectors/custom-connectors/define-blank?context=/microsoft-365-copilot/extensibility/context
 - name: Build Microsoft Graph connectors
   items:
-    - name: Microsoft Graph connectors in Microsoft 365 Copilot
+    - name: Microsoft Graph connectors in Copilot for Microsoft 365
       href: overview-graph-connector.md
     - name: Connectors experiences
       href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
