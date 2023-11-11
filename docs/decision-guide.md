@@ -26,7 +26,7 @@ To start building your connector or plugins, you can select the tools and SDKs b
 
 There are more factors that you want to consider when deciding which option to pick. If you are a proficient coder who favors a high-level programming option over a no-code or low-code one, you still want to consider the following aspects.
 
-### Data types
+## Data types
 
 One consideration would be your data types—what structure your data has, and how much volume and activity you want, also, if you want your data to be modifiable by users.
 
@@ -44,7 +44,7 @@ This is an example of writable data with a message extension. This plugin manage
 > [!TIP]
 > You can find the sample code for *Northwind Inventory* plugin at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#teams-message-extension-samples).
 
-### Benefits and limitations
+## Benefits and limitations
 
 You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first:
 
