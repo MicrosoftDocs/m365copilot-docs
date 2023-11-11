@@ -21,7 +21,7 @@ Using Dynamics 365 and Power Platform, you can create AI plugins that enhance Mi
 
 ## AI plugins
 
-AI plugins in Power Platform leverage Power Platform components such as power automate flows, certified connectors or prompts to define a specific business behavior that you can add to a copilot. Copilot will use the appropriate plugin able to address the questions of an end user in the application.
+AI plugins in Power Platform leverage Power Platform components such as Power Automate flows, certified connectors or prompts to define a specific business behavior that you can add to a copilot. Copilot will use the appropriate plugin able to address the questions of an end user in the application. More information: [Extend copilots with AI plugins](/power-virtual-agents/copilot-plugins-overview)
 
 Copilot in Dynamics 365 apps such as Finance, Supply Chain Management, and Sales on the other hand allows you to perform various kinds of tasks providing different kinds of information using large language models (LLM).
 
@@ -79,7 +79,7 @@ After deployment, Power Platform environment admins must enable the **M365 Copil
 
 ## Use AI plugins
 
-After plugins are created or enabled, you can share them, and use [AI plugins in Microsoft 365 Copilot](/power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin).
+After plugins are created or enabled, you can share them, and use [AI plugins in Microsoft 365 Copilot](/power-virtual-agents/copilot-plugins-overview).
 
 You can also use AI plugins as available in Dynamics 365 apps such as [Finance, Supply Chain Management](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot), and Dynamics 365 Sales.
 
