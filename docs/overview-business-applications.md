@@ -1,10 +1,10 @@
 ---
 title: Build plugins using Microsoft business applications
 description: Extend Microsoft Copilot for Microsoft 365 using Microsoft Dynamics 365 apps and Microsoft Power Platform
-ms.topic: overview
-ms.date: 11/14/2023
 author: tapanm-msft
 ms.author: tapanm
+ms.topic: overview
+ms.date: 11/14/2023
 ---
 
 # Build plugins using Microsoft business applications
