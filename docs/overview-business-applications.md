@@ -41,7 +41,7 @@ Connectors allow retrieving and updating data from data sources accessed through
 
 ### Open AI plugins
 
-Open AI plugins provide access to data sources, allowing specific data to be surfaced through AI experiences that would not normally be available through general models. Learn more: [Add an OpenAI plugin](/power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin)
+Open AI plugins provide access to data sources, allowing specific data to be surfaced through AI experiences that would not normally be available through general models. Learn more: [Add an OpenAI plugin (preview)](/power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin)
 
 ### Topics plugins
 
@@ -87,5 +87,5 @@ You can also use AI plugins as available in Dynamics 365 apps such as [Finance, 
 
 - [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt)
 - [Create a connector AI plugin (preview)](/connectors/create-a-connector-ai-plugin)
-- [Add an OpenAI plugin](/power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin)
+- [Add an OpenAI plugin (preview)](/power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin)
 - [Create a Topic (preview)](/power-virtual-agents/copilot-conversational-plugins)
