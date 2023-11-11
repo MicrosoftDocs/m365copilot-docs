@@ -11,7 +11,7 @@ ms.date: 11/14/2023
 
 There’s a growing number of ways you can expand, enrich, and customize Copilot with plugins and Graph connectors. This article will discuss and compare Copilot extensibility options.
 
-Create Copilot plugins to extend its capabilities, such as crafting a Microsoft Teams message extension or a Power Platform connector. Alternatively, employ connectors to seamlessly integrate your enterprise data into the Copilot for Microsoft 365 experience.
+Create plugins to extend Copilot's capabilities, such as crafting a Microsoft Teams message extension or a Power Platform connector. Alternatively, employ connectors to seamlessly integrate your enterprise data into the Copilot for Microsoft 365 experience.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 

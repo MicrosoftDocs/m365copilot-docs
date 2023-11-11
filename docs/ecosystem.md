@@ -1,5 +1,5 @@
 ---
-title: The Microsoft Copilot for Microsoft 365 ecosystem
+title: Microsoft Copilot in the Microsoft 365 ecosystem
 description: A plugin or connector written for Copilot will run across the Microsoft 365 ecosystem. Learn how to leverage the Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
 author: erikadoyle
 ms.author: edoyle
@@ -7,11 +7,11 @@ ms.topic: overview
 ms.date: 11/14/2023
 ---
 
-# The Microsoft Copilot for Microsoft 365 ecosystem
+# Microsoft Copilot in the Microsoft 365 ecosystem
 
 When you extend Microsoft Copilot for Microsoft 365 with your external data through connectors and with your specialized skills through plugins, you're leveraging the entire Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
 
-As part of the broader Microsoft 365 ecosystem, the value of your Copilot plugins and connectors are amplified in the following ways:
+As part of the broader Microsoft 365 ecosystem, the value of your plugins and connectors are amplified in the following ways:
 
 - As a **Developer**, you can *write once, and run anywhere* across the growing list of Microsoft 365 host applications for Copilot and integrated apps. Copilot seamlessly integrates your plugins and connectors with its entire repertoire of skills and knowledge, making your *integration with Copilot the last one* you'll ever have to perform.
 
@@ -21,20 +21,21 @@ As part of the broader Microsoft 365 ecosystem, the value of your Copilot plugin
 
 The plugins and connectors you build for Copilot are part of the larger Copilot for Microsoft 365 system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through the different native components of, and extensions to, the Copilot system.
 
-PLACEHOLDER IMAGE:
-:::image type="content" source="assets/images/copilot-system-flow.png" alt-text="{alt-text}":::
+:::image type="content" source="assets/images/copilot-system-flow.png" alt-text="Diagram that shows the flow of data across components of  Copilot and the Microsoft 365 ecosystem" lightbox="assets/images/copilot-system-flow.png":::
 
-The plugins and connectors you build extend, enrich, and customize Copilot for the unique way your customers work. And as part of the broader Microsoft 365 ecosystem, your Copilot plugins and connectors benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and a host of development tools and support.
+*The Copilot system uses data from a plugin in two stages: (1) matching the users's prompt to the most relevant skill and parameters, and (2) determining which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage is part of step 6 of the diagram.*
+
+The plugins and connectors you build extend, enrich, and customize Copilot for the unique way your customers work. And as part of the broader Microsoft 365 ecosystem, your plugins and connectors benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and a host of development tools and support.
 
 This article will walk you through the resources of the Microsoft 365 ecosystem available to you as a developer of Copilot extensibility solutions.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-## Copilot plugins and connectors work across Microsoft 365 experiences
+## Plugins and connectors work across Microsoft 365 experiences
 
-There are over 350 million daily active users across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, Power Point, and the Microsoft 365 app. When you write a Copilot plugin or connector, it can reach all the places Copilot runs across Microsoft 365.
+There are over 350 million daily active users across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, Power Point, and the Microsoft 365 app. When you write a plugin or connector, it can reach all the places Copilot runs across Microsoft 365.
 
-. . . but that's not all! Depending on the [way you extend Copilot](./decision-guide.md), your plugin or connector also runs outside of Copilot experiences. The following table lists alternate ways the skills and knowledge from your Copilot plugins and connectors are available to end-users within an organization:
+. . . but that's not all! Depending on the [way you extend Copilot](./decision-guide.md), your plugin or connector also runs outside of Copilot experiences. The following table lists alternate ways the skills and knowledge from your plugins and connectors are available to end-users within an organization:
 
 |Copilot extensibility type|Microsoft 365 product availability|Learn more|
 |----------|-----------|------------|
@@ -46,25 +47,25 @@ Thanks to centralized publishing and management resources, administrators can ea
 
 ## Simplified distribution and management
 
-Microsoft is simplifying the way Copilot plugins and other Microsoft 365 apps and services are published and managed, both within your organization and within in-product app stores of Microsoft 365 products.
+Microsoft is simplifying the way plugins and other Microsoft 365 apps and services are published and managed, both within your organization and within in-product app stores of Microsoft 365 products.
 
 ### Unified manifest and app package
 
-The Microsoft 365 ecosystem uses a single unified manifest and app packaging format for distributing Copilot plugins and connectors, Office Add-ins, SharePoint Framework solutions, and Teams apps extended to work across Microsoft 365 experiences. The [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) (previously called *Teams app manifest*) defines how your app (or plugin, connector, etc.) integrates into Teams, Copilot, and other Microsoft 365 experiences. The [app package](/microsoftteams/platform/concepts/build-and-test/apps-package) consists of the app manifest and app icons (app logic and data storage are hosted independently).
+The Microsoft 365 ecosystem uses a single unified manifest and app packaging format for distributing plugins and connectors for Copilot, Office Add-ins, SharePoint Framework solutions, and Teams apps extended to work across Microsoft 365 experiences. The [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) (previously called *Teams app manifest*) defines how your app (or plugin, connector, etc.) integrates into Teams, Copilot, and other Microsoft 365 experiences. The [app package](/microsoftteams/platform/concepts/build-and-test/apps-package) consists of the app manifest and app icons (app logic and data storage are hosted independently).
 
 ### Microsoft 365 and Copilot program for Partner Center
 
 For independent software vendors (ISVs), we're building out the **Microsoft 365 and Copilot** program (formerly known as [*Office store*](/partner-center/marketplace/why-publish)) within Microsoft Partner Center ([partner.microsoft.com](https://partner.microsoft.com)) to be your home base for publishing Microsoft 365 apps, services, and Copilot extensibility solutions.
 
-Once purchased and deployed by an organization, your Copilot plugins are incorporated into a unified catalog representing Copilot's available skill repertoire.
+Once purchased and deployed by an organization, your plugins are incorporated into a unified catalog representing Copilot's available skill repertoire.
 
 To learn more, see [Publish plugins and connectors for Microsoft Copilot for Microsoft 365](./publish.md).
 
 ### Microsoft Admin Center
 
-For line-of-business developers and IT admins, Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)) is your one stop to upload custom Copilot plugins and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions. Learn more about Copilot-related management options in the [Microsoft Copilot for Microsoft 365 extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps) section of Microsoft 365 admin center help documentation.
+For line-of-business developers and IT admins, Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)) is your one stop to upload custom plugins and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions. Learn more about Copilot-related management options in the [Microsoft Copilot for Microsoft 365 extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps) section of Microsoft 365 admin center help documentation.
 
-For details on deploying a custom Copilot plugin or connector to your organization, see [Publish plugins and connectors for Microsoft Copilot for Microsoft 365](./publish.md).
+For details on deploying a custom plugin or connector to your organization, see [Publish plugins and connectors for Microsoft Copilot for Microsoft 365](./publish.md).
 
 ## Comprehensive tools and support
 
@@ -76,7 +77,7 @@ Microsoft 365 provides a rich set of developer resources for extending Microsoft
 
 ### Developer Portal for Teams
 
-The [Developer Portal for Teams](/microsoftteams/platform/concepts/build-and-test/teams-developer-portal) is the primary tool for configuring, distributing, and managing Microsoft Teams apps, including apps extended to run across Microsoft 365 and Copilot plugins. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+The [Developer Portal for Teams](/microsoftteams/platform/concepts/build-and-test/teams-developer-portal) is the primary tool for configuring, distributing, and managing Microsoft Teams apps, including apps extended to run across Microsoft 365 and Microsoft Copilot. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
 ## Microsoft security, trust, and commitment to Responsible AI
 
