@@ -75,7 +75,7 @@ Now that the selected integrated app with plugin is deployed, ensure the applica
 
 After deployment, Power Platform environment admins must enable the **M365 Copilot** setting for the environment in Power Platform admin center. To enable this setting, go to [Power Platform admin center](https://admin.powerplatform.com/) &gt; **Environment** &gt; **Settings** &gt; **Product** &gt; **Features**, and then, turn **M365 Copilot** to **On**.
 
-    :::image type="content" source="assets/images/overview-business-applications/power-platform-setting.png" alt-text="This screenshot shows the Power Platform admin center to enable Microsoft 365 Copilot feature.":::
+:::image type="content" source="assets/images/overview-business-applications/power-platform-setting.png" alt-text="This screenshot shows the Power Platform admin center to enable Microsoft 365 Copilot feature.":::
 
 ## Use AI plugins
 
