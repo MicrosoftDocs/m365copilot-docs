@@ -1,6 +1,6 @@
 ---
-title: How Microsoft Copilot for Microsoft 365 decides which plugin to use
-description: Learn how the Microsoft 365 orchestrator determines which plugin skill to apply for a given user prompt.
+title: How Copilot for Microsoft 365 decides which plugin to use
+description: Learn how the Microsoft Copilot orchestrator determines which plugin skill to apply for a given user prompt.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
@@ -8,7 +8,7 @@ ms.date: 11/14/2023
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
-# How Microsoft Copilot for Microsoft 365 decides which plugin to use
+# How Copilot for Microsoft 365 decides which plugin to use
 
 Microsoft Copilot for Microsoft 365 is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **skills** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
 
@@ -151,7 +151,7 @@ The following table lists the short description examples for various plugin scen
 
 #### [General](#tab/general)
 
-**Description**:  Stock and share look up tool.
+**Description**:  Search and share stock quotes.
 
 **App description example:**
 
@@ -166,7 +166,7 @@ The following table lists the short description examples for various plugin scen
     "full": "Contoso stocks"
   },
   "description": {
-    "short": "Stock and share look up tool.",
+    "short": "Search and share stock quotes.",
     "full": "Get real-time stock quotes and share them in a conversation. Search by company name, share, or stocks."
 ```
 
@@ -280,7 +280,7 @@ The following table lists search command examples for various plugin scenarios:
 
 A good parameter description explains what the parameter is, not what the parameter does, and the expected format.
 
-When used directly in Microsoft Teams chat and Outlook mail compose, you can use a message extension to query one parameter at a time. When used as a Copilot plugin, message extension search commands support up to five parameters (one parameter must be visible in the message extension search bar). A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+When used directly in Microsoft Teams chat and Outlook mail compose, you can use a message extension to query one parameter at a time. When used as a plugin, message extension search commands support up to five parameters (one parameter must be visible in the message extension search bar). A parameter must have a good description, which should describe the expected input, including format or type.
 
 The following are few examples on basic and advances search requests for various plugin scenarios:
 
@@ -296,19 +296,19 @@ Advanced search: Search for high priority tasks related to Northwind that are du
     {
         "name": "Name",
         "title": "Project or Task Name",
-        "description": "Send project name or task name as keyword",
+        "description": "Project name or task name as keyword",
         "inputType": "text"
     },
     {
         "name": "Time",
         "title": "Time",
-        "description": "Send date or number of days for which you need tasks for.Output: Number",
+        "description": "Date or number of days for which to find tasks. Output: Number",
         "inputType": "text"
     },
     {
         "name": "Priority",
         "title": "Priority",
-        "description": "Send priority of tasks. Acceptable values are: high, medium, low, NA ",
+        "description": "Priority of tasks. Acceptable values: high, medium, low, NA ",
         "inputType": "text"
     }]
 ```
@@ -325,19 +325,19 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
   {
     "name": "SurveyName",
     "title": "Name of Survey",
-    "description": "Send survey name or related keyword",
+    "description": "Survey name or related keyword",
     "inputType": "text"
   },
   {
     "name": "Tags",
     "title": "Tags",
-    "description": "Send product name or keywords related pertaining to a question",
+    "description": "Product name or keywords related pertaining to a question",
     "inputType": "text"
   },
   {
     "name": "ResponseNumber",
     "title": "Response number",
-    "description": "Send number of responses received for a survey. Output: Number",
+    "description": "Number of responses received for a survey. Output: Number",
     "inputType": "text"
   }
 ]
@@ -355,19 +355,19 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
   {
     "name": "TypeofLeads",
     "title": "Type of Leads",
-    "description": "Send what types of leads user is looking for. Acceptable fields are: Qualified, Unqualified and New.",
+    "description": "Types of leads to find. Acceptable fields are: Qualified, Unqualified and New.",
     "inputType": "text"
   },
   {
     "name": "Status",
     "title": "Status",
-    "description": "Send status of leads. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
+    "description": "Status of leads. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
     "inputType": "text"
   },
   {
     "name": "Time",
     "title": "Time",
-    "description": "Send number of days for which you need status of leads for. Output: Number",
+    "description": "Number of days for which to find status of leads. Output: Number",
     "inputType": "text"
   }
 ]
@@ -391,19 +391,19 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
   {
     "name": "NumberofStocks",
     "title": "Ranked Number of Stocks",
-    "description": "Provide number of stocks in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
+    "description": "Number of stocks in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
     "inputType": "text"
   },
   {
     "name": "P/B",
     "title": "Price to Book Ratio",
-    "description": "Send P/B or Price to book ratio of a stock. Output format: >x.xx or <x.xx",
+    "description": "P/B or Price to Book ratio of a stock. Output format: >x.xx or <x.xx",
     "inputType": "text"
   },
   {
     "name": "P/E",
     "title": "Price to Earnings Ratio",
-    "description": "Send P/E or Price to Earnings ratio of a stock with comparison. Output format: >x.xx or <x.xx",
+    "description": "P/E or Price to Earnings ratio of a stock with comparison. Output format: >x.xx or <x.xx",
     "inputType": "text"
   }
 ]
