@@ -37,13 +37,13 @@
         - name: Overview
           href: overview-business-applications.md
         - name: Create a custom prompt (preview)
-          href: /ai-builder/create-a-custom-prompt
+          href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
         - name: Create a connector AI plugin (preview)
-          href: /connectors/create-a-connector-ai-plugin
+          href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
         - name: Add an OpenAI plugin (preview)
-          href: /power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin
+          href: /power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin?context=/microsoft-365-copilot/extensibility/context
         - name: Create a topic (preview)
-          href: /power-virtual-agents/copilot-conversational-plugins
+          href: /power-virtual-agents/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
 - name: Build Microsoft Graph connectors
   items:
     - name: Microsoft Graph connectors in Copilot for Microsoft 365
