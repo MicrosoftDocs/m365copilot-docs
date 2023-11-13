@@ -50,10 +50,9 @@ Developers need the ability to [sideload the Teams message extension plugin](/mi
 
 ### Requirements for Power Platform connector development
 
-TODO: Verify this and add more info links as needed
+A tenant administrator must enable the **M365 Copilot** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). To enable this setting, go to [Power Platform admin center](https://admin.powerplatform.com/) > **Environment** > **Settings** > **Product** > **Features**, and then, turn **M365 Copilot** to **On**.
 
-- A tenant administrator must deploy the **Dynamics 365 and Copilot Studio** app in the [Microsoft admin center](https://admin.microsoft.com/).
-- A tenant administrator must enable the **M365 Copilot** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+:::image type="content" source="assets/images/overview-business-applications/power-platform-setting.png" alt-text="This screenshot shows the Power Platform admin center to enable Microsoft 365 Copilot feature.":::
 
 ## Security and privacy
 
