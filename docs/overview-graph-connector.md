@@ -11,6 +11,8 @@ ms.date: 11/14/2023
 
 Microsoft Copilot for Microsoft 365 is your copilot for work. It combines the power of Large Language Models (LLMs) and your data in Microsoft Graph to unlock productivity. However, organizational data is not limited to Microsoft content sources like OneDrive and SharePoint. Enterprise data is spread across many line-of-business content sources, and the entirety of your organization's data needs to participate in Copilot for Microsoft 365 in order to maximize its benefits. Microsoft Graph connectors provide a platform for you to ingest your line-of-business data into Microsoft Graph, so that Copilot for Microsoft 365 can reason over the entirety of your enterprise content.
 
+:::image type="content" source="assets/images/copilot_graph-connectors-infographic.png" alt-text="Alt text" lightbox="assets/images/copilot_graph-connectors-infographic.png":::
+
 ## How Microsoft Graph connector content surfaces in Copilot for Microsoft 365
 
 By using Microsoft Graph connectors to ingest your external content into Microsoft Graph, your users can use Copilot for Microsoft 365 to find, summarize, and learn from your line-of-business data through natural language prompts.
