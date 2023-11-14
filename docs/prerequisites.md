@@ -48,7 +48,7 @@ To learn more and choose the best extensibility path for you and your customer, 
 
 Developers need the ability to [sideload the Teams message extension plugin](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) in order to install, test and debug apps directly in your Teams environment without having to publish to your organization. An administrator must [enable custom app uploading](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) in your Microsoft 365 tenant (sandbox or production).
 
-During the Public Preview of plugins, customers who are licensed for Copilot in **production** will need their IT admins to enable their tenant for the Preview features by submitting a support ticket using the "enable plugins" template or making a request to their Microsoft Customer Success Account Manager.
+During the public preview of plugins, customers who are licensed for Copilot in **production** will need an administrator to enable their tenant for the preview by submitting a support ticket using the "enable plugins" template, or making a request to their Microsoft Customer Success Account Manager.
 
 ### Requirements for Power Platform connector development
 
