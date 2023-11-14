@@ -32,12 +32,18 @@
           href: /microsoftteams/platform/messaging-extensions/build-bot-based-plugin?tabs=visual-studio&context=/microsoft-365-copilot/extensibility/context
         - name: Guidelines for message extension plugins
           href: /microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context
-    - name: Start with a Power Platform connector
+    - name: Start with Microsoft business applications
       items:
         - name: Overview
-          href: /connectors/connectors?context=/microsoft-365-copilot/extensibility/context
-        - name: Build a Power Platform connector
-          href: /connectors/custom-connectors/define-blank?context=/microsoft-365-copilot/extensibility/context
+          href: overview-business-applications.md
+        - name: Create a custom prompt (preview)
+          href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+        - name: Create a connector AI plugin (preview)
+          href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
+        - name: Add an OpenAI plugin (preview)
+          href: /power-virtual-agents/copilot-ai-plugins?context=/microsoft-365-copilot/extensibility/context#add-an-openai-plugin
+        - name: Create a topic (preview)
+          href: /power-virtual-agents/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
 - name: Build Microsoft Graph connectors
   items:
     - name: Microsoft Graph connectors in Copilot for Microsoft 365
