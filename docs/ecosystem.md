@@ -21,7 +21,7 @@ As part of the broader Microsoft 365 ecosystem, the value of your plugins and co
 
 The plugins and connectors you build for Copilot are part of the larger Copilot for Microsoft 365 system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through the different native components of, and extensions to, the Copilot system.
 
-:::image type="content" source="assets/images/copilot-system-flow.png" alt-text="Diagram that shows the flow of data across components of  Copilot and the Microsoft 365 ecosystem" lightbox="assets/images/copilot-system-flow.png":::
+:::image type="content" source="assets/images/copilot-system-flow.png" alt-text="Diagram that shows the flow of data across components of Copilot and the Microsoft 365 ecosystem" lightbox="assets/images/copilot-system-flow.png":::
 
 *The Copilot system uses data from a plugin in two stages: (1) matching the users's prompt to the most relevant skill and parameters, and (2) determining which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage is part of step 6 of the diagram.*
 
@@ -82,3 +82,5 @@ The [Developer Portal for Teams](/microsoftteams/platform/concepts/build-and-tes
 ## Microsoft security, trust, and commitment to Responsible AI
 
 Copilot for Microsoft 365 is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary.  Copilot for Microsoft 365 presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more info, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
+
+To learn more as a developer of Copilot extensibility solutions, see [Data, Privacy, and Security considerations of extending Copilot for Microsoft 365](./data-privacy-security.md)
