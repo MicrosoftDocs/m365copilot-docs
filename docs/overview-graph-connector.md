@@ -19,7 +19,7 @@ In this article, you will learn how your Graph connector content participates in
 
 By using Microsoft Graph connectors to ingest your external content into Microsoft Graph, your users can use Copilot for Microsoft 365 to find, summarize, and learn from your line-of-business data through natural language prompts.
 
-![A screenshot of Graph connectors in Copilot for Microsoft 365](assets/images/connectors-copilot-response.png)
+:::image type="content" source="assets/images/connectors-copilot-response.png" alt-text="A screenshot of Graph connectors in Copilot for Microsoft 365" lightbox="assets/images/connectors-copilot-response.png":::
 
 In addition, users can hover over in-text citations in Copilot for Microsoft 365's response to get a preview of the external item referenced.
 
