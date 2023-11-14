@@ -44,11 +44,13 @@ To learn more and choose the best extensibility path for you and your customer, 
 - A search administrator or global administrator must register an application and grant admin consent for the required Microsoft Graph permissions. As a developer working in production, this might not be an option. Any deployed Graph connector will be tenant-wide accessible unless the external items security is locked down.
 - Indexing content with your connector is subject to the available index quota in the tenant. Standard Microsoft 365 Developer Tenant and M365 Copilot Developer tenant comes with quota to let developers start building connectors without any cost. To learn more, see [Microsoft Graph connectors license](/microsoftsearch/licensing).
 
-### Requirements for Teams message extension development
-
-Developers need the ability to [sideload the Teams message extension plugin](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) in order to install, test and debug apps directly in your Teams environment without having to publish to your organization. An administrator must [enable custom app uploading](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) in your Microsoft 365 tenant (sandbox or production).
+### Requirements for plugin development
 
 During the public preview of plugins, customers who are licensed for Copilot in **production** will need an administrator to enable their tenant for the preview by submitting a support ticket using the "enable plugins" template, or making a request to their Microsoft Customer Success Account Manager.
+
+#### Requirements for Teams message extension development
+
+Developers need the ability to [sideload the Teams message extension plugin](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) in order to install, test and debug apps directly in your Teams environment without having to publish to your organization. An administrator must [enable custom app uploading](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) in your Microsoft 365 tenant (sandbox or production).
 
 ### Requirements for Power Platform connector development
 
