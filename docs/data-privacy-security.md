@@ -1,13 +1,13 @@
 ---
-title: Data, Privacy, and Security for Microsoft Copilot for Microsoft 365 extensibility
-description: Learn how to protect your customer's data as a developer of Microsoft Copilot for Microsoft 365 extensibility solutions
+title: Data, Privacy, and Security considerations of extending Copilot for Microsoft 365
+description: Learn how to protect your customer's data when you extend Microsoft Copilot for Microsoft 365
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.date: 11/14/2023
 ---
 
-# Data, Privacy, and Security for Microsoft Copilot for Microsoft 365 extensibility
+# Data, Privacy, and Security considerations of extending Copilot for Microsoft 365
 
 When you extend Copilot's repertoire of skills with a plugin, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin to generate a response or complete a command. When you extend Copilot with a Microsoft Graph connector, your data is ingested into the Semantic Index but remains in your tenant. This article will outline data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
 
@@ -48,13 +48,21 @@ Message extension plugins are packaged and distributed in the same way as Micros
 
 Power Platform plugins are certified and distributed in the same way as Power Platform connectors, by first publishing your connector to the [Power Platform Connectors](https://github.com/microsoft/PowerPlatformConnectors) open source repository, and then submitting its information to Microsoft.
 
-Submission of your app package to the Microsoft Partner Center *Microsoft 365 and Copilot* program requires the compliance with the following certification policies for acceptance to in-product stores.
+Submission of your app package to the Microsoft Partner Center *Microsoft 365 and Copilot* program requires meeting [certification policies](./publish.md#microsoft-365-and-copilot-program) for acceptance to Microsoft 365 in-product stores. Microsoft Commercial Marketplace certification policies and Teams Store validation guidelines regarding privacy, security, and responsible AI include:
 
-- Microsoft Commercial Marketplace certification policies:
-  - [100 General](/marketplace/certification-policies#100-general)
-  - [1140 Teams](/legal/marketplace/certification-policies#1140-teams) (including [1140.9 Teams apps extensible as Microsoft Copilot for Microsoft 365 plugins](/legal/marketplace/certification-policies#1140-teams)) (Message extension plugins)
-- [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines) (Message extension plugins and Graph connectors in Teams apps)
-- [Verified publisher certification process](/connectors/custom-connectors/certification-submission) (Power Platform connector plugins)
+| Commercial marketplace certification policy | Teams store guidelines |
+|----------|-----------|
+| [100.5 Offer information](/legal/marketplace/certification-policies#1005-offer-information) | [Privacy policy](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy), [Terms of use](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#terms-of-use)  |
+| [100.6 Personal information](/legal/marketplace/certification-policies#1006-personal-information) | [Sensitive content](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#sensitive-content) |
+| [100.11 Security](/legal/marketplace/certification-policies#10011-security) | |
+| [1140.3 Security](/legal/marketplace/certification-policies#11403-security) | [Security](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#security) |
+| [1140.3.1 Financial transactions](/legal/marketplace/certification-policies#114031-financial-transactions) | [Financial information](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#financial-information) |
+| [1140.3.2 Bots and message extensions](/legal/marketplace/certification-policies#114032-bots-and-messaging-extensions) | [Bots](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#bots) |
+| [1140.3.3 External domains](/legal/marketplace/certification-policies#114033-external-domains) | [External domains](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#external-domains)|
+| [1140.4.1 General](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) | [Responsible AI checks](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=pr-en-us-9402#teams-apps-extensible-as-microsoft-365-chat-plugin) |
+| [1140.9 Teams apps extensible as plugins for Microsoft Copilot for Microsoft 365](/legal/marketplace/certification-policies#11409-teams-apps-extensible-as-microsoft-365-copilot-plugin) | [Teams apps extensible as plugins for Microsoft Copilot](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-microsoft-365-chat-plugin) |
+
+Submission to the Microsoft 365 and Copilot program is currently limited to  [verified publishers](/entra/identity-platform/publisher-verification-overview). This provides end-users and organizational admins assurance that the publisher of an app has been verified as authentic by Microsoft.
 
 ## See also
 

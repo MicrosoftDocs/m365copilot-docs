@@ -52,12 +52,6 @@ During the public preview of plugins, customers who are licensed for Copilot in 
 
 Developers need the ability to [sideload the Teams message extension plugin](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) in order to install, test and debug apps directly in your Teams environment without having to publish to your organization. An administrator must [enable custom app uploading](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) in your Microsoft 365 tenant (sandbox or production).
 
-### Requirements for Power Platform connector development
-
-A tenant administrator must enable the **M365 Copilot** setting in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). To enable this setting, go to [Power Platform admin center](https://admin.powerplatform.com/) > **Environment** > **Settings** > **Product** > **Features**, and then, turn **M365 Copilot** to **On**.
-
-:::image type="content" source="assets/images/overview-business-applications/power-platform-setting.png" alt-text="This screenshot shows the Power Platform admin center to enable Microsoft 365 Copilot feature.":::
-
 ## Security and privacy
 
 Copilot uses existing permissions and policies to deliver the most relevant information, building on top of our existing commitments to data security and data privacy in the enterprise. For details on how Copilot uses and protects organizational data, see [Data, Privacy, and Security for Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/microsoft-365-copilot-privacy).
@@ -75,9 +69,13 @@ No. For standard Microsoft 365 licenses, Copilot is disabled. To have Microsoft 
 
 #### Can I use my standard Microsoft 365 developer tenant to develop with Microsoft Copilot for Microsoft 365?
 
-No. You must qualify for and obtain the Microsoft 365 E5 Developer SKU V2 (without Windows and Audio-conferencing), and then purchase Microsoft Copilot for Microsoft 365 Developer.
+No. You must qualify for and obtain the Microsoft 365 E5 Developer SKU V2 (without Windows and Audio-conferencing), and then purchase Microsoft Copilot for Microsoft 365 Developer. Currently this is only available to a limited set of ISVs in the TAP.
 
 #### Can sandbox tenants with Copilot be renewed once the licenses expire?
 
 Yes. If you continue to qualify for the Microsoft 365 E5 Developer SKU V2, your development environment will auto-renew.
+
+#### I'm not an ISV and I don't have Microsoft Copilot licenses. Can I develop for Copilot for Microsoft 365?
+
+Not at this time. There is currently no timeline for broader availability of sandbox tenants.
 <!-- markdownlint-enable MD001 -->
