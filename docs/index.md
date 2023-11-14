@@ -5,7 +5,6 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.date: 11/14/2023
-
 ---
 
 # Extend Microsoft Copilot for Microsoft 365
@@ -16,7 +15,7 @@ On its own, Copilot for Microsoft 365 is a powerful productivity tool for keepin
 
 :::image type="content" source="assets/images/copilot-system.png" alt-text="Visual representation of the Copilot for Microsoft 365 system: Foundational models (LLMs) + Microsoft Graph (your data) + Microsoft 365 and 3rd party apps":::
 
-However, business workflows don't typically run exclusively on Microsoft 365 applications and data formats. With Copilot extensibility, you can augment Copilot for Microsoft 365 with custom skills and organizational knowledge specific to your enterprise and users to enable truly spectacular AI scenarios. You can extend  Copilot's skills by **customizing your app to be a plugin** that increases user productivity across daily tasks and workflows. You can enrich the organizational knowledge accessible to Copilot and [semantic index](/microsoft-365-copilot/microsoft-365-copilot-overview#semantic-index) by **ingesting your enterprise data and content with Microsoft Graph connectors**.
+However, business workflows don't typically run exclusively on Microsoft 365 applications and data formats. With Copilot extensibility, you can augment Copilot for Microsoft 365 with custom skills and organizational knowledge specific to your enterprise and users to enable truly spectacular AI scenarios. You can extend Copilot's skills by **transforming your app into a plugin** that increases user productivity across daily tasks and workflows. You can enrich the organizational knowledge accessible to Copilot by **ingesting your enterprise data and content with Microsoft Graph connectors**.
 
 :::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with 'Organizational knowledge (Semantic Index)' as the x-axis and 'User skills' as the y-axis showing that you can extend Copilot skills with plugins and extend Copilot knowledge with graph connectors" border="false" lightbox="assets/images/skills-knowledge-chart.png":::
 
@@ -64,7 +63,7 @@ Plugins expand your users' skills by interacting with your web service using nat
 - **Retrieve relational data** such as reporting on service tickets assigned to a given team member
 - **Perform actions across apps** such as creating a new task in your organization's work tracking system
 
-You can build plugins by building a Microsoft Teams message extension or a Power Platform connector, with even more options coming soon. If you already have a message extension or Power Platform connector, then you . Learn more about [what makes a good plugin for Copilot](plugin-guidelines.md) and how to [ensure Copilot chooses your plugin](orchestrator.md) to use when its skills are needed.
+You can build plugins by building a Microsoft Teams message extension or a Power Platform connector, with even more options coming soon. If you already have a message extension or Power Platform connector, then you already have the foundation to create a plugin for Copilot. Learn more about [what makes a good plugin for Copilot](plugin-guidelines.md) and how to [ensure Copilot chooses your plugin](orchestrator.md) to use when its skills are needed.
 
 ### Microsoft Graph connectors
 
@@ -78,9 +77,11 @@ There are three main steps to set up a Graph connector: (1) Create a connection,
 
 ## Extensibility preview support
 
-Support for plugins and Graph connectors is currently limited to Microsoft 365 Chat for Teams desktop and web clients. Future support will expand to other Microsoft Copilot surfaces.
+Support for plugins is in preview and limited to Microsoft 365 Chat for Teams.
 
 :::image type="content" source="assets/images/copilot-m365-teams.png" alt-text="{alt-text}":::
+
+Support for Graph connectors currently includes Microsoft 365 Chat experiences in Teams, Microsoft 365 (Office) app, and Microsoft Bing.
 
 ## Next step
 
