@@ -17,7 +17,7 @@ Microsoft Copilot for Microsoft 365 is your copilot for work. It combines the po
 
 ## Watch the overview
 
-> [!VIDEO https://www.youtube.com/embed/2OftQrc7PPQ]
+> [!VIDEO https://www.youtube.com/embed/17rAOh9313g]
 
 ## How Microsoft Graph connector content surfaces in Copilot for Microsoft 365
 
