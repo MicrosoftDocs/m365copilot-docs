@@ -69,12 +69,6 @@ Microsoft 365 admins can manage integrated apps with plugins for Microsoft Copil
 
 Now that the selected integrated app with plugin is deployed, ensure the applicable Power Platform environment is enabled to allow Microsoft 365 Copilot using the next steps.
 
-## Enable Microsoft Copilot for Microsoft 365 in Power Platform
-
-After deployment, Power Platform environment admins must enable the **M365 Copilot** setting for the environment in Power Platform admin center. This setting is set to **Off** by default. To enable this setting, go to [Power Platform admin center](https://admin.powerplatform.com/) &gt; **Environment** &gt; **Settings** &gt; **Product** &gt; **Features**, and then, turn **M365 Copilot** to **On**.
-
-:::image type="content" source="assets/images/overview-business-applications/power-platform-setting.png" alt-text="This screenshot shows the Power Platform admin center to enable Microsoft Copilot feature.":::
-
 ## Use plugins
 
 After plugins are created or enabled, you can share them, and use [plugins in Microsoft Copilot](/power-virtual-agents/copilot-plugins-overview).
