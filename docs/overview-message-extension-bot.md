@@ -18,6 +18,10 @@ These interactions are typically triggered via buttons and forms within Microsof
 > [!IMPORTANT]
 > Message extensions are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](/microsoftteams/platform/concepts/app-fundamentals-overview.md#government-community-cloud?context=/microsoft-365-copilot/extensibility/context) environments.
 
+## Watch the overview
+
+> [!VIDEO https://www.youtube.com/embed/vvNFCagkdcE]
+
 ## Message extension with Copilot
 
 With the introduction of Copilot for Microsoft 365, the game has changed. Users can now leverage natural language input to invoke a message extension's search function, bypassing the need for specific user-interface (UI) commands. In essence, your users’ words become the catalyst for Copilot’s actions, calling the appropriate plugin for their request.
