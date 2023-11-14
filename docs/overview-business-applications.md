@@ -17,7 +17,7 @@ Dynamics 365 revolutionizes CRM and ERP by applying intelligence to all forms of
 
 Power Platform is a suite of business applications that centralizes all your business processes. It is a low-code platform for rapidly building customized end-to-end business solutions.
 
-Using Dynamics 365 and Power Platform, you can create AI plugins that enhance Microsoft 365 Copilot capabilities and utilize them through applications such as Microsoft 365 Chat.
+Using Dynamics 365 and Power Platform, you can create AI plugins that enhance capabilities and utilize Microsoft Copilot to interact with your data.
 
 ## AI plugins
 
@@ -47,9 +47,9 @@ Open AI plugins provide access to data sources, allowing specific data to be sur
 
 Use Microsoft Copilot Studio to create Topics, enabling customers to custom craft plugins that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external API's via connectors, and send summary results to the user. Learn more: [Create a Topic (preview)](/power-virtual-agents/copilot-conversational-plugins)
 
-## Enable integrated apps with plugins for Microsoft 365 Copilot
+## Enable integrated apps with plugins for Microsoft Copilot for Microsoft 365
 
-Microsoft 365 admins can manage integrated apps with plugins for Microsoft 365 Copilot in the Microsoft 365 admin center. To access the settings, you need to be a global administrator or a service administrator. Follow these steps to access the plugins settings:
+Microsoft 365 admins can manage integrated apps with plugins for Microsoft Copilot in the Microsoft 365 admin center. To access the settings, you need to be a global administrator or a service administrator. Follow these steps to access the plugins settings:
 
 1. Sign into the Microsoft 365 admin center with your admin account.
 
@@ -71,17 +71,17 @@ Microsoft 365 admins can manage integrated apps with plugins for Microsoft 365 C
 
 Now that the selected integrated app with plugin is deployed, ensure the applicable Power Platform environment is enabled to allow Microsoft 365 Copilot using the next steps.
 
-## Enable Microsoft 365 Copilot in Power Platform
+## Enable Microsoft Copilot for Microsoft 365 in Power Platform
 
 After deployment, Power Platform environment admins must enable the **M365 Copilot** setting for the environment in Power Platform admin center. To enable this setting, go to [Power Platform admin center](https://admin.powerplatform.com/) &gt; **Environment** &gt; **Settings** &gt; **Product** &gt; **Features**, and then, turn **M365 Copilot** to **On**.
 
-:::image type="content" source="assets/images/overview-business-applications/power-platform-setting.png" alt-text="This screenshot shows the Power Platform admin center to enable Microsoft 365 Copilot feature.":::
+:::image type="content" source="assets/images/overview-business-applications/power-platform-setting.png" alt-text="This screenshot shows the Power Platform admin center to enable Microsoft Copilot feature.":::
 
 ## Use AI plugins
 
-After plugins are created or enabled, you can share them, and use [AI plugins in Microsoft 365 Copilot](/power-virtual-agents/copilot-plugins-overview).
+After plugins are created or enabled, you can share them, and use [AI plugins in Microsoft Copilot](/power-virtual-agents/copilot-plugins-overview).
 
-You can also use AI plugins as available in Dynamics 365 apps such as [Finance, Supply Chain Management](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot), and Dynamics 365 Sales.
+You can also use AI plugins as available in Dynamics 365 apps such as [Finance, Supply Chain Management](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot), and [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales).
 
 ### See also
 
