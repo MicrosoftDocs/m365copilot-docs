@@ -35,7 +35,7 @@ Copilot users must have either a Microsoft 365 E3 or E5 license and a Microsoft 
 
 ## Extensibility
 
-Developers can extend Microsoft Copilot for Microsoft 365 with the intelligence of external services and data in two ways: building plugins with [Teams message extension plugins](overview-message-extension-bot.md) and [Power Platform connectors with plugins](overview-power-platform.md), or using [Microsoft Graph connectors](overview-graph-connector.md).
+Developers can extend Microsoft Copilot for Microsoft 365 with the intelligence of external services and data in two ways: building plugins with [Teams message extension plugins](overview-message-extension-bot.md) and [AI plugins with Microsoft business applications](overview-business-applications.md), or using [Microsoft Graph connectors](overview-graph-connector.md).
 
 To learn more and choose the best extensibility path for you and your customer, see [Extensibility options for Copilot](decision-guide.md).
 
