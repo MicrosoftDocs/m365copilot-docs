@@ -17,35 +17,33 @@ Dynamics 365 revolutionizes CRM and ERP by applying intelligence to all forms of
 
 Power Platform is a suite of business applications that centralizes all your business processes. It is a low-code platform for rapidly building customized end-to-end business solutions.
 
-Using Dynamics 365 and Power Platform, you can create AI plugins that enhance capabilities and utilize Microsoft Copilot to interact with your data.
+Using Dynamics 365 and Power Platform, you can create plugins for Microsoft Copilot that enhance capabilities and utilize Copilot to interact with your data.
 
-## AI plugins
+## Plugins for Microsoft Copilot
 
-AI plugins in Power Platform leverage Power Platform components such as Power Automate flows, certified connectors or prompts to define a specific business behavior that you can add to a copilot. Copilot will use the appropriate plugin able to address the questions of an end user in the application. More information: [Extend copilots with AI plugins](/power-virtual-agents/copilot-plugins-overview)
+Plugins for Microsoft Copilot in Power Platform leverage Power Platform components such as Power Automate flows, certified connectors or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot will use the appropriate plugin able to address the questions of an end user in the application. For more information, see [Create and configure copilot plugins (preview)](/power-virtual-agents/copilot-plugins-overview).
 
-Copilot in Dynamics 365 apps such as Finance, Supply Chain Management, and Sales on the other hand allows you to perform various kinds of tasks providing different kinds of information using large language models (LLM).
+## Types of plugins
 
-## Types of AI plugins
-
-There are diverse types of AI plugins, as explained below.
+There are diverse types of plugins, as explained below.
 
 ### Prompts
 
-Prompts allow generating content using natural language which includes summarizing, classifying, extracting entities, translating, assessing sentiment and much more. Learn more: [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt)
+Prompts allow generating content using natural language which includes summarizing, classifying, extracting entities, translating, assessing sentiment and much more. To learn more, see [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context).
 
 We are adding the ability to use your data to provide improved answers soon.
 
-### Connector plugins
+### Power Platform connector plugins
 
-Connectors allow retrieving and updating data from data sources accessed through APIs. Connectors make it possible to access data from popular Enterprise systems such as Salesforce, Zendesk, MailChimp and Github and are routinely used by makers in their Power Apps and flows. Learn more: [Create a connector AI plugin (preview)](/connectors/create-a-connector-ai-plugin)
+Power Platform connectors allow retrieving and updating data from data sources accessed through APIs. Connectors make it possible to access data from popular Enterprise systems such as Salesforce, Zendesk, MailChimp and Github and are routinely used by makers in their Power Apps and flows. To learn more, see [Create a connector plugin (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context).
 
-### Open AI plugins
+### OpenAI plugins
 
-Open AI plugins provide access to data sources, allowing specific data to be surfaced through AI experiences that would not normally be available through general models. Learn more: [Add an OpenAI plugin (preview)](/power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin)
+OpenAI plugins provide access to data sources, allowing specific data to be surfaced through AI experiences that would not normally be available through general models. To learn more, see [Add an OpenAI plugin (preview)](/power-virtual-agents/copilot-ai-plugins?context=/microsoft-365-copilot/extensibility/context#add-an-openai-plugin).
 
 ### Topics plugins
 
-Use Microsoft Copilot Studio to create Topics, enabling customers to custom craft plugins that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external API's via connectors, and send summary results to the user. Learn more: [Create a Topic (preview)](/power-virtual-agents/copilot-conversational-plugins)
+Use Microsoft Copilot Studio to create Topics, enabling customers to craft custom plugins that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external API's via connectors, and send summary results to the user. To learn more, see [Create a Topic (preview)](/power-virtual-agents/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context).
 
 ## Enable integrated apps with plugins for Microsoft Copilot for Microsoft 365
 
@@ -77,15 +75,15 @@ After deployment, Power Platform environment admins must enable the **M365 Copil
 
 :::image type="content" source="assets/images/overview-business-applications/power-platform-setting.png" alt-text="This screenshot shows the Power Platform admin center to enable Microsoft Copilot feature.":::
 
-## Use AI plugins
+## Use plugins
 
-After plugins are created or enabled, you can share them, and use [AI plugins in Microsoft Copilot](/power-virtual-agents/copilot-plugins-overview).
+After plugins are created or enabled, you can share them, and use [plugins in Microsoft Copilot](/power-virtual-agents/copilot-plugins-overview).
 
-You can also use AI plugins as available in Dynamics 365 apps such as [Finance, Supply Chain Management](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot), and [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales).
+You can also use plugins available in Dynamics 365 apps such as [Finance, Supply Chain Management](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot), and [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales).
 
 ### See also
 
-- [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt)
-- [Create a connector AI plugin (preview)](/connectors/create-a-connector-ai-plugin)
-- [Add an OpenAI plugin (preview)](/power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin)
-- [Create a Topic (preview)](/power-virtual-agents/copilot-conversational-plugins)
+- [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context)
+- [Create a connector plugin (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context)
+- [Add an OpenAI plugin (preview)](/power-virtual-agents/copilot-ai-plugins#add-an-openai-plugin?context=/microsoft-365-copilot/extensibility/context)
+- [Create a Topic (preview)](/power-virtual-agents/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context)
