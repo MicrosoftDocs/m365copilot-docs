@@ -71,9 +71,13 @@ No. For standard Microsoft 365 licenses, Copilot is disabled. To have Microsoft 
 
 #### Can I use my standard Microsoft 365 developer tenant to develop with Microsoft Copilot for Microsoft 365?
 
-No. You must qualify for and obtain the Microsoft 365 E5 Developer SKU V2 (without Windows and Audio-conferencing), and then purchase Microsoft Copilot for Microsoft 365 Developer.
+No. You must qualify for and obtain the Microsoft 365 E5 Developer SKU V2 (without Windows and Audio-conferencing), and then purchase Microsoft Copilot for Microsoft 365 Developer. Currently this is only available to a limited set of ISVs in the TAP.
 
 #### Can sandbox tenants with Copilot be renewed once the licenses expire?
 
 Yes. If you continue to qualify for the Microsoft 365 E5 Developer SKU V2, your development environment will auto-renew.
+
+#### I'm not an ISV and I don't have Microsoft Copilot licenses. Can I develop for Copilot for Microsoft 365?
+
+Not at this time. There is currently no timeline for broader availability of sandbox tenants.
 <!-- markdownlint-enable MD001 -->
