@@ -27,6 +27,10 @@ When you extend Copilot for Microsoft 365, you maximize the efficiency of your a
 
 - **Inheriting world-class security**, compliance, and privacy policies.
 
+## Watch the overview
+
+> [!VIDEO https://www.youtube.com/embed/2OftQrc7PPQ]
+
 ## Extend Copilot for your scenario
 
 Copilot extensibility helps your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Create something brand new for Copilot or integrate an existing app.
