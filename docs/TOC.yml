@@ -68,7 +68,5 @@
       href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
 - name: Publish
   href: publish.md
-- name: Resources
-  items:
-  - name: Samples
-    href: samples.md
+- name: Samples
+  href: samples.md

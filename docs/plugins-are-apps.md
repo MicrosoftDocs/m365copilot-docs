@@ -149,4 +149,4 @@ Apps that enable groups of people to collaborate virtually, in real-time, with s
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Extend a message extension for Microsoft 365 as a Copilot plugin](https://aka.ms/extendcopilotm365/me)
+> [Extend a message extension as a Copilot plugin](/microsoftteams/platform/messaging-extensions/build-bot-based-plugin?context=/microsoft-365-copilot/extensibility/context)
