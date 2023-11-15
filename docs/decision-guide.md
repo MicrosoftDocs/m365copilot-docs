@@ -88,15 +88,15 @@ While multi-parameters can be more complex with multiple inquiries, such as:
 Ensure that you check the requirements to start building connectors and plugins:
 
 > [!div class="nextstepaction"]
-> [Prerequisites](/prerequisites)
+> [Prerequisites](prerequisites.md)
 
 ### Start building
 
 > [!div class="nextstepaction"]
-> [Start with Microsoft Graph connectors](/overview-graph-connector)
+> [Start with Microsoft Graph connectors](overview-graph-connector.md)
 
 > [!div class="nextstepaction"]
-> [Start with Microsoft Teams Message extensions](/overview-message-extension-bot)
+> [Start with Microsoft Teams Message extensions](overview-message-extension-bot.md)
 
 > [!div class="nextstepaction"]
-> [Start with Microsoft business applications](/overview-business-applications)
+> [Start with Microsoft business applications](overview-business-applications.md)
