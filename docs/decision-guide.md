@@ -32,10 +32,10 @@ Consider your data: how it's structured, the level of volume and activity you ex
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
-| **Structure**          | [Un-structured or flattened data](/#Unstructured-data) | [Structured data](/#Structured-data) |
+| **Structure**          | [Un-structured or flattened data](#unstructured-data) | [Structured data](#structured-data) |
 | **Data volume**        | Up to 5M items per connection   | Suitable for high volume data (Over 5M) |
 | **Data activity**      | Up to 20 requests per second    | Suitable for high activity (Over 20 req/sec.)|
-| **Summarize / Act**         | [Summarize](/#Summarize) only                       | [Summarize](/#Summarize) + [Act](/#Act)
+| **Summarize / Act**         | [Summarize](#summarize) only                       | [Summarize](#summarize) + [Act](#act)
 
 ### Unstructured data
 
@@ -66,7 +66,7 @@ You may want to explore the pros and cons of each option before making a decisio
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
-| **Benefits**       | <li>[Relevance based on user activities](/#Relevance-based-on-user-activities)  <li>[Semantic discovery of content without turning on a plugin](/#Semantic-discovery-of-content-without-turning-on-a-plugin) <li>[Data stays within compliance boundary](/#Data-stays-within-compliance-boundary) | <li>[Discoverability in Store](/#Discoverability-in-Store) <li>[Enabling branded experience](/#Enabling-branded-experience) <li>[Better UX with Adaptive Cards](/#Better-UX-with-Adaptive-Cards)|
+| **Benefits**       | <li>[Relevance based on user activities](#relevance-based-on-user-activities)  <li>[Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin) <li>[Data stays within compliance boundary](#data-stays-within-compliance-boundary) | <li>[Discoverability in Store](#discoverability-in-store) <li>[Enabling branded experience](#enabling-branded-experience) <li>[Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)|
 | **Positive Developer Experience** | <li>Fast connect, register schema, and index items | <li>Teams Toolkit for Visual Studio & VS Code <li>Sideloading for development & test |
 | **Also work with** | <li>Context IQ <li>Viva Topics <li>Enterprise Search in M365.com, Sharepoint, and Bing @ work <li>Content recommendations in M365 apps | <li>Teams chat <li>Outlook |
 
