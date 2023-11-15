@@ -32,11 +32,21 @@ One consideration would be your data types—what structure your data has, and h
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
-| **Structure**          | Un-structured or flattened data | Structured data |
+| **Structure**          | [Un-structured or flattened data](/#Unstructured-data) | [Structured data](/#Structured-data) |
 | **Data volume**        | Up to 5M items per connection   | Suitable for high volume data (Over 5M) |
 | **Data activity**      | Up to 20 requests per second    | Suitable for high activity (Over 20 req/sec.)|
-| **Read/write**         | Read-only                       | Writable
+| **Summarize / Act **         | [Summarize](/#Summarize) only                       | [Summarize](/#Summarize) + [Act](/#Act)
 
+### Unstructured data
+Unstructured data refers to data that is not organized in a predefined manner, such as plain text-based documents, wiki pages, and pdfs. Copilot can be used to analyze and extract information from unstructured data, and generate new content based on the patterns and relationships it identifies. For example, Copilot could analyze company policy documents and answer a question specific to an employee.
+
+### Structured data
+Structured data refers to data that is organized in a predefined manner, often in the form of tables with rows and columns. Copilot can be used to analyze and extract information from structured data, and generate new content based on the patterns and relationships it identifies. For example, Copilot could analyze sales data and generate a report summarizing key trends and insights.
+
+### Summarize
+Copilot can analyze and extract key information from large amounts of data, and present it in a concise and coherent manner. This can be particularly useful for tasks such as summarizing long documents or email threads, where the AI can identify the most important points and present them in a clear and easy-to-understand format.
+
+### Act
 This is an example of writable data with a message extension. This plugin manages a product inventory, which Copilot searches the data from the inventory and displays the results in Adaptive Card, where it allows a user to modify the stock.
 
 :::image type="content" source="assets/images/plugin-example-northwind.png" alt-text="A screenshot that shows an example of writable data via a message extension" lightbox="assets/images/plugin-example-northwind.png":::
@@ -44,21 +54,37 @@ This is an example of writable data with a message extension. This plugin manage
 > [!TIP]
 > You can find the sample code for *Northwind Inventory* plugin at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#teams-message-extension-samples).
 
-## Benefits and limitations
+**Coming soon**: Copilot can take action on prompts by analyzing the input and using machine learning techniques to generate new content. Copilot can look at the commands available in the plugin based on the descriptions of it and its parameters. Copilot will then use revelant data it has access to to "stuff" these into the parameters and call the command.
+
+## Benefits
 
 You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first:
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
-| **Benefits**       | <li>Relevance based on user activities  <li>Semantic discovery of content without turning on a plugin<li>Activities (such as view, modify, and shared) with help with ranking and relevance of search results <li>Data stays within compliance boundary| <li>Discoverability in Store <li>Enabling branded experience <li>Better UX with Adaptive Cards|
+| **Benefits**       | <li>[Relevance based on user activities](/#Relevance-based-on-user-activities)  <li>[Semantic discovery of content without turning on a plugin](/#Semantic-discovery-of-content-without-turning-on-a-plugin) <li>[Data stays within compliance boundary](/#Data-stays-within-compliance-boundary) | <li>[Discoverability in Store](/#Discoverability-in-Store) <li>[Enabling branded experience](/#Enabling-branded-experience) <li>[Better UX with Adaptive Cards](/#Better-UX-with-Adaptive-Cards)|
 | **Positive Developer Experience** | <li>Fast connect, register schema, and index items | <li>Teams Toolkit for Visual Studio & VS Code <li>Sideloading for development & test |
 | **Also work with** | <li>Context IQ <li>Viva Topics <li>Enterprise Search in M365.com, Sharepoint, and Bing @ work <li>Content recommendations in M365 apps | <li>Teams chat <li>Outlook |
 
+### Relevance based on user activities
+After you have indexed an external item with Graph Connectors, you can also add activities too (such as view, modify, and shared). These activities improve the relevance of the items such as the users that modified the item, in a similar way to native Microsoft 365 documents.
+
+### Semantic discovery of content without turning on a plugin
+Items indexed using Graph Connectors are part of the Microsoft Graph and therefore immediately accessbile for summarization alongside Microsoft 365 content like documents, emails and events of a user. Plugins require that the administrators have enabled plugins, that the Plugin app is installed and enabled by the user.
+
+### Discoverability in Store
+Plugins are deployed via user or admin acquisition through the Teams Store or App Source marketplace. This is a great discoverability benefit of plugins.
+
+### Enabling branded experience
+Plugins have more visibility to a user that they available as they are part of the plugin management fly out in the Copilot chat experience.
+
+### Data stays within compliance boundary
 For instance, Graph connectors help keep third-party data within the compliance boundary by indexing the data. On the other hand, the real-time data through the use of message extensions are not indexed and can be shared or accessed outside of the defined compliance boundaries. As a plugin developer, you are responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information.
 
 > [!TIP]
 > You can find more information about it at [Data, Privacy, and Security for Microsoft Copilot for Microsoft 365 extensibility](data-privacy-security.md).
 
+### Better UX with Adaptive Cards
 This screen below shows a sample response from Copilot, utilizing data from Graph connector. The Graph connector indexes issues and repositories from GitHub, presenting the results in plain text as opposed to an Adaptive Card format. By comparing this with the Message extension example shown earlier, you can see the differences between them.
 
 :::image type="content" source="assets/images/gc-example-github.png" alt-text="A screenshot that shows an example of Copilot response from Graph connector" lightbox="assets/images/gc-example-github.png":::
@@ -69,6 +95,8 @@ However, it's worth noting that message extensions could enhance user experience
 
 > [!TIP]
 > You can find the sample code for *Microsoft Graph TypeScript GitHub connector* at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#microsoft-graph-connector-samples).
+
+## Limitations
 
 Now, consider the limitations of each option:
 
@@ -82,3 +110,7 @@ Message extension plugin developers should handle all potential prompt scenarios
 
 While multi-parameters can be more complex with multiple inquiries, such as:
 > We've been receiving partial orders for tofu. Find the supplier in Northwind and draft an email summarizing our inventory and reminding them they should stop sending partial orders per our MOQ policy.
+
+
+
+
