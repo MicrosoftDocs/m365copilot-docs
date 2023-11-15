@@ -4,7 +4,7 @@ description: Intro Microsoft Copilot for Microsoft 365 with message extensions
 author: girliemac
 ms.author: timura
 ms.topic: overview
-ms.date: 11/14/2023
+ms.date: 11/15/2023
 ---
 
 # Message extensions for Microsoft Copilot for Microsoft 365
@@ -38,12 +38,9 @@ There are a few ways to build [message extensions](/microsoftteams/platform/mess
 
 For development, you can use [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) for Visual Studio Code to build your message extensions. The toolkit helps you to create a project by scaffolding a template that suits your needs!
 
-## Next steps
+## Next step
 
-Follow the step-by-step guides to build your first message extension plugin:
-
-> [!div class="nextstepaction"]
-> [Get ready to build message extension plugin for Copilot](prerequisites-message-extension-bot.md)
+Get ready to build plugins for Copilot for Microsoft 365:
 
 > [!div class="nextstepaction"]
-> [Build your first message extension plugin for Copilot](/microsoftteams/platform/messaging-extensions/build-bot-based-plugin?tabs=visual-studio&context=/microsoft-365-copilot/extensibility/context)
+> [Set up your dev environment for message extension plugins](prerequisites-message-extension-bot.md)

@@ -4,7 +4,7 @@ description: Message extension plugins are also Microsoft 365 apps. Learn how to
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: best-practice
-ms.date: 11/14/2023
+ms.date: 11/15/2023
 ---
 
 # Plugins are Microsoft 365 apps
@@ -17,15 +17,15 @@ This article will introduce Microsoft 365 developer resources for plugin and app
 
 ## App development for Microsoft 365
 
-The [Microsoft 365 ecosystem of apps](ecosystem.md) supports users in collaborating with others, planning and organizing work, creating content, and working efficiently. For developers, Microsoft 365 offers a platform for the creation of apps that can surface wherever users are, reducing context switching and enabling them to be more productive. Through the [extension of Microsoft Teams apps](/microsoftteams/platform/m365-apps/overview.md), you can create a single experience that functions in a tailored way, wherever your customers choose to use them.
+The [Microsoft 365 ecosystem of apps](ecosystem.md) supports users in collaborating with others, planning and organizing work, creating content, and working efficiently. For developers, Microsoft 365 offers a platform for the creation of apps that can surface wherever users are, reducing context switching and enabling them to be more productive. By [extending Teams apps across Microsoft 365](/microsoftteams/platform/m365-apps/overview.md), you can create a tailored app experience that keeps users in the flow of their work across Microsoft 365 applications.
 
 ### App model for Microsoft 365
 
-The ability for apps to surface contextually across the Microsoft 365 app ecosystem and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)), or your organization's private app store, is accomplished through usage of an [app manifest](/microsoftteams/platform/resources/schema/manifest-schema.md) (previously called Teams app manifest) (version 1.13 and later) and single app package. Along with that, development is supported with APIs in the [Microsoft Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-library.md) and through tooling provided as part of [Teams Toolkit](/microsoftteams/platform/toolkit/visual-studio-code-overview.md).
+The ability for apps to surface contextually across the Microsoft 365 app ecosystem and publish to Microsoft Commercial Marketplace (or your organization's private app store) is facilitated through a unified [app manifest](/microsoftteams/platform/resources/schema/manifest-schema.md) and app packaging format. Along with that, development is supported with APIs in the [Microsoft Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-library.md) and with [Teams Toolkit](/microsoftteams/platform/toolkit/visual-studio-code-overview.md) developer tools.
 
 #### App elements
 
-The Teams app platform continues to evolve and expand holistically into the Microsoft 365 ecosystem. For details about support of Teams app platform elements across Microsoft 365 (Teams, Outlook, and Microsoft 365 as application hosts) see the support matrix in the [Teams extensibility overview](/microsoftteams/platform/m365-apps/overview.md). Some of the key extensibility elements available to developers are:
+The Teams app platform has been expanding into the Microsoft 365 ecosystem. For details about support of Teams app platform elements across Microsoft 365 application hosts (including Teams, Outlook, and Microsoft 365 app) see [Teams extensibility overview](/microsoftteams/platform/m365-apps/overview.md). Teams app elements that are extensible across additional Microsoft 365 app hosts include:
 
 - Personal apps
 - Message extensions
@@ -35,20 +35,17 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 - Meeting extensions
 - Office add-ins
 
-Particularly relevant for Copilot development are message extensions. [Message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) enable user to engage with your web services through buttons and forms within the Microsoft Teams client and are also one of the options for creating a Copilot for Microsoft 365.
+Particularly relevant for Copilot extensibility are message extensions. [Message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) enable user to engage with your web services through buttons and forms within the Microsoft Teams client and are also one of the options for creating a plugin for Copilot for Microsoft 365.
 
 #### App manifest
 
-Using a single [app manifest](/microsoftteams/platform/resources/schema/manifest-schema.md) you can define a Teams app that extends across Microsoft 365, as well as a plugin for Microsoft Copilot. Additionally, with an aim toward simplifying and streamlining the Microsoft 365 developer ecosystem, Microsoft continues to expand the app manifest into other areas of Microsoft 365 with support for defining and deploying Office Add-ins in the [developer preview version](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview.md) of the Microsoft Teams app manifest. Currently, this preview is limited to Outlook Add-ins running on subscription Microsoft 365 for Windows app. For more information, see [app manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview).
+Using a unified [app manifest](/microsoftteams/platform/resources/schema/manifest-schema.md) for Microsoft 365, you can define [Teams apps that work across Microsoft 365](/microsoftteams/platform/m365-apps/overview) application hosts and also [Outlook add-ins](/office/dev/add-ins/quickstarts/outlook-quickstart-json-manifest) from a single app package.
 
 #### Tools and libraries
 
-[Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) makes it simple to get started with app development for Microsoft Teams, and now copilot plugins for Microsoft 365 as well, using Visual Studio Code. You can start a project directly from samples and templates for common line-of-business app scenarios, as well as run and debug to Microsoft 365 apps directly from familiar tools. At the same time, many logistical tasks such as app registration, configuration, and deployment are streamlined for you. To understand more about creating your own unique environment and the other features of the toolkit, see the [Teams Toolkit overview](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals.md).
+The [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) for Visual Studio Code makes it simple to get started with app development for Microsoft Teams and now Copilot plugins for Microsoft 365 as well. You can start a project directly from samples and templates for common line-of-business app scenarios, as well as run and debug to Microsoft 365 apps. At the same time, many logistical tasks such as app registration, configuration, and deployment are streamlined for you. To learn more, see [Teams Toolkit overview](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
 
-Along with the Toolkit, Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook. Starting with version 2.0.0, the TeamsJS library was refactored to [enable Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview.md), in addition to Microsoft Teams. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](/microsoftteams/platform/m365-apps/teamsjs-support-m365.md).
-
-> [!NOTE]
-> The [Teams Toolkit v5 Guide](https://aka.ms/teamsfx-v5.0-guide) is a good resource to learn about key features of the toolkit, such as life cycles and actions.
+Along with Teams Toolkit, Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook. Starting with version 2.5.0, the TeamsJS library enables [Teams apps to run in other Microsoft 365 experiences](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. For a summary of host application support for Teams apps, see [TeamsJS capability support across Microsoft 365](/microsoftteams/platform/m365-apps/teamsjs-support-m365.md).
 
 ## Planning your app
 
@@ -149,7 +146,7 @@ Apps that enable groups of people to collaborate virtually, in real-time, with s
 - [Message extension sample code](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)
 - [Teams Toolkit for Visual Studio Code overview](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5)
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [Extend a message extension for Microsoft 365 as a Copilot plugin](https://aka.ms/extendcopilotm365/me)
+> [Extend a message extension as a Copilot plugin](/microsoftteams/platform/messaging-extensions/build-bot-based-plugin?context=/microsoft-365-copilot/extensibility/context)

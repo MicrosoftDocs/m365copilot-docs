@@ -4,7 +4,7 @@ description: Extend, enrich, and customize Microsoft Copilot for Microsoft 365 w
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 11/14/2023
+ms.date: 11/15/2023
 ---
 
 # Extend Microsoft Copilot for Microsoft 365
@@ -17,7 +17,7 @@ On its own, Copilot for Microsoft 365 is a powerful productivity tool for keepin
 
 However, business workflows don't typically run exclusively on Microsoft 365 applications and data formats. With Copilot extensibility, you can augment Copilot for Microsoft 365 with custom skills and organizational knowledge specific to your enterprise and users to enable truly spectacular AI scenarios. You can extend Copilot's skills by **transforming your app into a plugin** that increases user productivity across daily tasks and workflows. You can enrich the organizational knowledge accessible to Copilot by **ingesting your enterprise data and content with Microsoft Graph connectors**.
 
-:::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with 'Organizational knowledge (Semantic Index)' as the x-axis and 'User skills' as the y-axis showing that you can extend Copilot skills with plugins and extend Copilot knowledge with graph connectors" border="false" lightbox="assets/images/skills-knowledge-chart.png":::
+:::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with organizational 'Knowledge' as the x-axis and user 'Skills' as the y-axis showing that you can extend Copilot skills with plugins and extend Copilot knowledge with Graph connectors" border="false" lightbox="assets/images/skills-knowledge-chart.png":::
 
 When you extend Copilot for Microsoft 365, you maximize the efficiency of your apps and data with AI, by:
 

@@ -4,7 +4,7 @@ description: Here are best practices for building plugins for Microsoft 365
 author: erikadoyle
 ms.author: edoyle
 ms.topic: best-practice
-ms.date: 11/1/2023
+ms.date: 11/15/2023
 ---
 
 # Build high quality plugins for Microsoft 365
@@ -19,7 +19,7 @@ When you build a plugin, you enable your users to interact with your web service
 
 ## Qualities of a good plugin
 
-A clear and concise [description of your plugin](orchestrator.md#plugin-search-optimization) is essential for Copilot to recognize its capabilities and match it with the appropriate user tasks. Upon runtime, you can ensure your plugin provides the best possible user experience by designing your plugin with the following characteristics.
+A clear and concise [description of your plugin](orchestrator.md#plugin-search-optimization) is essential for Copilot to recognize its capabilities and match it with the appropriate user tasks. You can ensure your plugin provides the best possible user experience at runtime by designing your plugin with the following characteristics.
 
 <!-- markdownlint-disable DOCSMD003 -->
 :::row:::
@@ -65,7 +65,7 @@ The remainder of this article will cover best practices for building high qualit
 
 - Anti-Compete: Avoid using the name of any other plugin in both short and full descriptions.
 - Responsible AI: Avoid using inappropriate or offensive keywords.
-- Prompt injection: Ensure that the Text doesn't lead to prompt injections. Additionally, description must not contain symbols or text that indicate that it can be used as code for Prompt injection. Avoid using phrases, functions, and codes that call an app recurrently.
+- Prompt injection: Ensure that text doesn't lead to prompt injections. Additionally, descriptions must not contain symbols or text that indicate they can be used as code for prompt injection. Avoid using phrases, functions, and codes that call an app recursively.
 
 ### Support multi-parameter search queries
 

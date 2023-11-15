@@ -4,7 +4,7 @@ description: Learn how the Microsoft Copilot orchestrator determines which plugi
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 11/14/2023
+ms.date: 11/15/2023
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
@@ -34,7 +34,7 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 1. **Natural language input**
 
-    The user types a prompt into Copilot for Microsoft 365 chat.
+    The user types a prompt to Copilot through Microsoft 365 chat.
 
 2. **Search for relevant tools**
 
@@ -42,7 +42,7 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 3. **Reasoning**
 
-    Copilot draws upon its [Semantic Index](/microsoft-365-copilot/microsoft-365-copilot-overview#semantic-index), the combined knowledge of its LLM and your organizational data from Microsoft Graph, to analyze the request and determine the context of the user. It then breaks down the user's prompt into intents, or goals. Each goal is then broken into tasks.
+    Copilot draws upon the combined knowledge of its LLM and your organizational data from Microsoft Graph to analyze the request and determine the context of the user. It then breaks down the user's prompt into intents, or goals. Each goal is then broken into tasks.
 
 4. **Mapping user's intent to slots**
 

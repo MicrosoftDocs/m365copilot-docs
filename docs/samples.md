@@ -4,7 +4,7 @@ description: Extend Microsoft Copilot for Microsoft 365 with plugins and Microso
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: conceptual
-ms.date: 11/14/2023
+ms.date: 11/15/2023
 ---
 
 # Microsoft Copilot for Microsoft 365 extensibility samples
