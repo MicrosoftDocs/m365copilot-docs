@@ -117,7 +117,7 @@ However, it's worth noting that message extensions could enhance user experience
 Now, consider the limitations of each option:
 
 |                    | Graph connectors                | Message extension plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|
+|-------------------|--------------------------------|--------------------------------|
 | **Limitations** | Max 30 connectors in Tenant<br/>Relatively low data volume and activity<br/>App visibility to users | Plugins need to be manually enabled<br/>Data can leave compliance boundary<br/>[Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt<br/>Performance depends on developers & hosting |
 | **Developer experience limitations**  | No tools for Visual Studio & VS Code<br/>No sideloading<br/>Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group | Steep learning curve<br/>More time to develop<br/>Need to handle multi-parameter prompts. |
 
