@@ -20,7 +20,7 @@ To start building your connector or plugins, you can select the tools and SDKs b
 
 :::image type="content" source="assets/images/decision-making-tree.png" alt-text="Decision-making questions to figure out which Copilot for Microsoft 365 extensibility service you should use" lightbox="assets/images/decision-making-tree.png":::
 
-1. If you are a no-code or low-code developer, who has invested in Power Platform already and wants to expose the external data in Power Platform too, additionally to Copilot, naturally your choice would be Power Platform connectors.
+1. If you are a no-code or low-code developer, who has invested in Power Platform already and wants to expose the external data in Power Platform too, additionally to Copilot, naturally your choice would be Microsoft Power Platform connectors.
 1. If you leverage Microsoft Graph and connect your unstructured enterprise data in Microsoft 365, including Microsoft Search, Context IQ, and the Microsoft 365 app, Graph Connectors would be your option.
 1. And if you would like to connect your structured data in real-time from external sources on the fly, Message Extensions should be your choice. Write the logic using Bot Framework. And if you have built Message Extension apps for Teams before, great news is that your app already has the foundation of a plugin for Copilot! Make sure that your app manifest is up-to-date, and the app meets all criteria if you are publishing as plugin.
 
@@ -99,4 +99,4 @@ Ensure that you check the requirements to start building connectors and plugins:
 > [Start with Microsoft Teams Message extensions](overview-message-extension-bot.md)
 
 > [!div class="nextstepaction"]
-> [Start with Microsoft business applications](overview-business-applications.md)
+> [Start with Microsoft Power Platform connectors](overview-business-applications.md)
