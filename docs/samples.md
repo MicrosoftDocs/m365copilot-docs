@@ -20,6 +20,10 @@ The following samples implement Teams message extensions that extend Copilot for
 | [Northwind Inventory extension](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) | This TypeScript sample implements a Teams message extension that allows users to query data from the Northwind sample database and take action on that data. |
 | [Cognitive search extension](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-doc-search-js) | This JavaScript sample implements a Teams message extension that uses cognitive search to enable vector search of documents. |
 
+#### Write a message extension for Teams and Copilot for Microsoft 365
+
+> [!VIDEO https://www.youtube.com/embed/zK-L83cwJ8c]
+
 ## Microsoft Graph connector samples
 
 The following samples implement Microsoft Graph connectors that extend Copilot for Microsoft 365.
@@ -33,3 +37,7 @@ The following samples implement Microsoft Graph connectors that extend Copilot f
 ### Samples from the community
 
 You can find the latest list of Microsoft Graph connector samples from the community in the [Microsoft Adoption center](https://adoption.microsoft.com/sample-solution-gallery/?product=Microsoft+Graph+connectors&product=Microsoft+365+Copilot).
+
+### Build your first customer Graph connector for Copilot for Microsoft 365
+
+> [!VIDEO https://www.youtube.com/embed/2oQ_6wXrwDQ]

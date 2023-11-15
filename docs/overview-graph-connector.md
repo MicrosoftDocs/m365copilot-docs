@@ -15,6 +15,10 @@ In this article, you will learn how your Graph connector content participates in
 
 :::image type="content" source="assets/images/copilot_graph-connectors-infographic.png" alt-text="This infographic summarizes how Microsoft Graph connectors make your data available to Microsoft 365 intelligent experiences" lightbox="assets/images/copilot_graph-connectors-infographic.png":::
 
+## Watch the overview
+
+> [!VIDEO https://www.youtube.com/embed/17rAOh9313g]
+
 ## How Microsoft Graph connector content surfaces in Copilot for Microsoft 365
 
 By using Microsoft Graph connectors to ingest your external content into Microsoft Graph, your users can use Copilot for Microsoft 365 to find, summarize, and learn from your line-of-business data through natural language prompts.
