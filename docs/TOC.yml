@@ -1,10 +1,10 @@
 
-- name: Microsoft 365 Copilot extensibility
+- name: Microsoft Copilot for Microsoft 365 extensibility
   href: index.md
 - name: Get started
   expanded: true
   items:
-    - name: Tour the copilot ecosystem
+    - name: Tour the Copilot ecosystem
       href: ecosystem.md
     - name: Choose your extensibility path
       href: decision-guide.md
@@ -12,34 +12,42 @@
       href: prerequisites.md
 - name: Plan
   items:
-    - name: How copilot chooses plugins to use
+    - name: How Copilot chooses plugins to use
       href: orchestrator.md
     - name: What makes a good plugin?
       href: plugin-guidelines.md
-    - name: Copilot plugins as Microsoft 365 apps
+    - name: Plugins are Microsoft 365 apps
       href: plugins-are-apps.md
     - name: Data, Privacy, and Security
-      href: /microsoft-365-copilot/microsoft-365-copilot-privacy?context=/microsoft-365-copilot/extensibility/context
+      href: data-privacy-security.md
 - name: Build plugins
   items:
     - name: Start with a Teams message extension
       items:
         - name: Overview
-          href: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?context=/microsoft-365-copilot/extensibility/context
+          href: overview-message-extension-bot.md
+        - name: Prerequisites
+          href: prerequisites-message-extension-bot.md
         - name: Build a message extension plugin
-          href: /microsoftteams/platform/copilot/how-to-extend-copilot?context=/microsoft-365-copilot/extensibility/context
-    - name: Start with a Power Platform connector
+          href: /microsoftteams/platform/messaging-extensions/build-bot-based-plugin?context=/microsoft-365-copilot/extensibility/context
+        - name: Guidelines for message extension plugins
+          href: /microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context
+    - name: Start with Microsoft business applications
       items:
         - name: Overview
-          href: /connectors/connectors?context=/microsoft-365-copilot/extensibility/context
-        - name: Build a Power Platform connector
-          href: /connectors/custom-connectors/define-blank?context=/microsoft-365-copilot/extensibility/context
+          href: overview-business-applications.md
+        - name: Create a custom prompt (preview)
+          href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+        - name: Create a connector AI plugin (preview)
+          href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
+        - name: Add an OpenAI plugin (preview)
+          href: /power-virtual-agents/copilot-ai-plugins?context=/microsoft-365-copilot/extensibility/context#add-an-openai-plugin
+        - name: Create a topic (preview)
+          href: /power-virtual-agents/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
 - name: Build Microsoft Graph connectors
   items:
-    - name: Microsoft Graph connectors in Microsoft 365 Copilot
+    - name: Microsoft Graph connectors in Copilot for Microsoft 365
       href: overview-graph-connector.md
-    - name: Overview
-      href: /graph/connecting-external-content-connectors-overview?context=/microsoft-365-copilot/extensibility/context
     - name: Connectors experiences
       href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
     - name: Connectors API
@@ -60,9 +68,5 @@
       href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
 - name: Publish
   href: publish.md
-- name: Resources
-  items:
-  - name: Samples
-    href: https://learn.microsoft.com/samples/browse/?expanded=ms-graph&products=microsoft-graph-connectors-api
-  - name: Feedback
-    href: https://feedbackportal.microsoft.com/feedback
+- name: Samples
+  href: samples.md
