@@ -62,7 +62,23 @@ This is an example of writable data with a message extension. This plugin manage
 
 ## Benefits
 
-You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first:
+You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first.
+
+### Graph connector benefits
+
+- [Relevance based on user activities](#relevance-based-on-user-activities)
+- [Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin)
+- [Data stays within compliance boundary](#data-stays-within-compliance-boundary)
+- Fast connect, register schema, and index items
+- Works with Context IQ, Viva Topics, Enterprise Search in M365.com, Sharepoint, and Bing @ work, and Content recommendations in Microsoft 365 apps
+
+### Message extension plugin benefits
+
+- [Discoverability in Store](#discoverability-in-store)
+- [Enabling branded experience](#enabling-branded-experience)
+- [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)
+- Teams Toolkit for Visual Studio & VS Code
+- Sideloading for development & test
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
@@ -114,7 +130,26 @@ However, it's worth noting that message extensions could enhance user experience
 
 ## Limitations
 
-Now, consider the limitations of each option:
+Now, consider the limitations of each option.
+
+### Graph connector limitations
+
+- Max 30 connectors in tenant
+- Relatively low data volume and activity
+- App visibility to users
+- No tools for Visual Studio & VS Code
+- No sideloading
+- Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group
+
+### Message extension plugin limitations
+
+- Plugins need to be manually enabled
+- Data can leave compliance boundary
+- [Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt
+- Performance depends on developers & hosting
+- Steep learning curve for developers
+- More time to develop
+- Need to handle multi-parameter prompts
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
