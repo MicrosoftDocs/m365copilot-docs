@@ -4,7 +4,7 @@ description: Learn how to distribute Microsoft 365 plugins and connectors to you
 author: erikadoyle
 ms.author: edoyle
 ms.topic: conceptual
-ms.date: 11/14/2023
+ms.date: 11/15/2023
 ---
 # Publish plugins and Graph connectors for Copilot for Microsoft 365
 
@@ -28,7 +28,7 @@ As an independent software vendor, you can distribute your app through the  **Mi
 
 - Microsoft Commercial Marketplace certification policies:
   - [100 General](/legal/marketplace/certification-policies#100-general)
-  - [1140 Teams](/legal/marketplace/certification-policies#1140-teams) (including [1140.9 Teams apps extensible as Microsoft Copilot for Microsoft 365 plugins](/legal/marketplace/certification-policies#1140-teams))
+  - [1140 Teams](/legal/marketplace/certification-policies#1140-teams) (including [1140.9 Teams apps extensible as Microsoft Copilot for Microsoft 365 plugins](/legal/marketplace/certification-policies#11409-teams-apps-extensible-as-microsoft-365-copilot-plugin))
 - [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines)
 - [Publisher verification](/entra/identity-platform/publisher-verification-overview)
 
@@ -44,7 +44,7 @@ Follow these [instructions to upload your custom app package](/microsoft-365/adm
 
 ### Distribute plugins through Microsoft Partner Center
 
-Ensure your app meets validation criteria for [Teams apps used as plugins for Microsoft Copilot](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=pr-en-us-9402#teams-apps-extensible-as-microsoft-365-copilot-plugin), then submit your app package to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program**.
+Ensure your app meets validation criteria for [Teams apps used as plugins for Microsoft Copilot](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-microsoft-365-copilot-plugin), then submit your app package to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program**.
 
 Once validated and approved by Microsoft, your plugin will be an active offer in the Microsoft Commercial Marketplace and ready for IT enablement. Once enabled by an IT administrator, it will appear in the **Works with Copilot** category of the Store within Microsoft Teams. Once deployed by an admin or acquired by a user, it will then appear as an installed plugin of Microsoft 365 Chat.
 

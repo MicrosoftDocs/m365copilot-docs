@@ -29,7 +29,7 @@
         - name: Prerequisites
           href: prerequisites-message-extension-bot.md
         - name: Build a message extension plugin
-          href: /microsoftteams/platform/messaging-extensions/build-bot-based-plugin?tabs=visual-studio&context=/microsoft-365-copilot/extensibility/context
+          href: /microsoftteams/platform/messaging-extensions/build-bot-based-plugin?context=/microsoft-365-copilot/extensibility/context
         - name: Guidelines for message extension plugins
           href: /microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context
     - name: Start with Microsoft business applications
@@ -68,7 +68,5 @@
       href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
 - name: Publish
   href: publish.md
-- name: Resources
-  items:
-  - name: Samples
-    href: samples.md
+- name: Samples
+  href: samples.md

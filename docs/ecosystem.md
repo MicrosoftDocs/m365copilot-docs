@@ -4,7 +4,7 @@ description: A plugin or connector written for Copilot will run across the Micro
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 11/14/2023
+ms.date: 11/15/2023
 ---
 
 # Microsoft Copilot in the Microsoft 365 ecosystem
@@ -55,7 +55,7 @@ The Microsoft 365 ecosystem uses a single unified manifest and app packaging for
 
 ### Microsoft 365 and Copilot program for Partner Center
 
-For independent software vendors (ISVs), we're building out the **Microsoft 365 and Copilot** program (formerly known as [*Office store*](/partner-center/marketplace/why-publish)) within Microsoft Partner Center ([partner.microsoft.com](https://partner.microsoft.com)) to be your home base for publishing Microsoft 365 apps, services, and Copilot extensibility solutions.
+For independent software vendors (ISVs), we're building out the **Microsoft 365 and Copilot** program (formerly known as *Office store*) within Microsoft Partner Center ([partner.microsoft.com](https://partner.microsoft.com)) to be your home base for publishing Microsoft 365 apps, services, and Copilot extensibility solutions.
 
 Once purchased and deployed by an organization, your plugins are incorporated into a unified catalog representing Copilot's available skill repertoire.
 
