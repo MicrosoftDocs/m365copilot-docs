@@ -66,9 +66,15 @@ You may want to explore the pros and cons of each option before making a decisio
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
-| **Benefits**       | <li>[Relevance based on user activities](#relevance-based-on-user-activities)  <li>[Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin) <li>[Data stays within compliance boundary](#data-stays-within-compliance-boundary) | <li>[Discoverability in Store](#discoverability-in-store) <li>[Enabling branded experience](#enabling-branded-experience) <li>[Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)|
-| **Positive Developer Experience** | <li>Fast connect, register schema, and index items | <li>Teams Toolkit for Visual Studio & VS Code <li>Sideloading for development & test |
-| **Also work with** | <li>Context IQ <li>Viva Topics <li>Enterprise Search in M365.com, Sharepoint, and Bing @ work <li>Content recommendations in M365 apps | <li>Teams chat <li>Outlook |
+| **Benefits**       | [Relevance based on user activities](#relevance-based-on-user-activities) | [Discoverability in Store](#discoverability-in-store) |
+| | [Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin) | [Enabling branded experience](#enabling-branded-experience) |
+| | [Data stays within compliance boundary](#data-stays-within-compliance-boundary) | [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards) |
+| **Positive Developer Experience** | Fast connect, register schema, and index items | Teams Toolkit for Visual Studio & VS Code |
+| | | Sideloading for development & test |
+| **Also work with** | Context IQ | Teams chat |
+| | Viva Topics | Outlook |
+| | Enterprise Search in M365.com, Sharepoint, and Bing @ work | |
+| | Content recommendations in M365 apps | |
 
 ### Relevance based on user activities
 
@@ -112,8 +118,8 @@ Now, consider the limitations of each option:
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
-| **Limitations** | <li>Max 30 connectors in Tenant <li>Relatively low data volume and activity <li>App visibility to users | <li>Plugins need to be manually enabled <li>Data can leaves compliance boundary  <li>[Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt <li>Performance depends on developers & hosting|
-| **Developer experience limitations**  | <li>No tools for Visual Studio & VS Code <li>No sideloading <li>Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group | <li>Steep learning curve <li>More time to develop <li>Need to handle multi-parameter prompts.
+| **Limitations** | Max 30 connectors in Tenant<br/>Relatively low data volume and activity<br/>App visibility to users | Plugins need to be manually enabled<br/>Data can leave compliance boundary<br/>[Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt<br/>Performance depends on developers & hosting |
+| **Developer experience limitations**  | No tools for Visual Studio & VS Code<br/>No sideloading<br/>Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group | Steep learning curve<br/>More time to develop<br/>Need to handle multi-parameter prompts. |
 
 Message extension plugin developers should handle all potential prompt scenarios from users. Single-parameter prompts can be as simple as:
 > Find Chai in Northwind Inventory
