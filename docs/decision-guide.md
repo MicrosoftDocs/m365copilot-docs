@@ -72,7 +72,7 @@ You may want to explore the pros and cons of each option before making a decisio
 |:--------------------------------|:--------------------------------|:--------------------------------|
 | **Benefits**       |
 | [Relevance based on user activities](#relevance-based-on-user-activities) | [Discoverability in Store](#discoverability-in-store) | Fatest to first run experience |
-| [Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin) | [Enabling branded experience](#enabling-branded-experience) | No coding experience required |
+| [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin) | [Enabling branded experience](#enabling-branded-experience) | No coding experience required |
 | [Data stays within compliance boundary](#data-stays-within-compliance-boundary) | [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards) | |
 | **Positive Developer Experience** | 
 | Fast connect, register schema, and index items | Teams Toolkit for Visual Studio & VS Code | Low code GUI IDE |
