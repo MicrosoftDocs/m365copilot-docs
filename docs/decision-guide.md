@@ -70,7 +70,6 @@ You may want to explore the pros and cons of each option before making a decisio
 
 :::row :::
     :::column:::
-        <br/>
     :::column-end:::
     :::column:::
         **Graph connectors**
