@@ -68,40 +68,6 @@ This is an example of writable data with a message extension. This plugin manage
 
 You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first.
 
-:::row:::
-    :::column:::
-    :::column-end:::
-    :::column:::
-        **Graph connectors**
-    :::column-end:::
-    :::column:::
-        **Message extension plugins**
-    :::column-end:::
-    :::column:::
-        **Copilot Studio plugins**
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-        **Benefits**
-    :::column-end:::
-    :::column:::
-        - [Relevance based on user activities](#relevance-based-on-user-activities)
-        - [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin)
-        - [Data stays within compliance boundary](#data-stays-within-compliance-boundary)
-    :::column-end:::
-    :::column:::
-        - [Discoverability in Store](#discoverability-in-store)
-        - [Enabling branded experience](#enabling-branded-experience)
-        - [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)
-    :::column-end:::
-    :::column:::
-        - Fastest to first run experience
-        - No coding experience required
-    :::column-end:::
-:::row-end:::
-
 | Graph connectors                | Message extension plugins       | Copilot Studio plugins       |
 |:--------------------------------|:--------------------------------|:--------------------------------|
 | **Benefits**       |
