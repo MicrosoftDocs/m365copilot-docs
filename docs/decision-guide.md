@@ -34,11 +34,11 @@ Consider your data: how it's structured, the level of volume and activity you ex
 |:--------------------------------|:--------------------------------|:--------------------------------|
 | **Data Structure** |
 | [Un-structured or flattened data](#unstructured-data) | [Structured data](#structured-data) | [Structured data](#structured-data) |
-| **Data volume**        | 
+| **Data volume**        |
 | Up to 5M items per connection   | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M)  |
-| **Data activity**      | 
+| **Data activity**      |
 | Up to 20 requests per second    | Suitable for high activity (Over 20 req/sec.)  |Suitable for high activity (Over 20 req/sec.)|
-| **Summarize / Act**         | 
+| **Summarize / Act**         |
 | [Summarize](#summarize) only                       | [Summarize](#summarize) + [Act](#act) | [Summarize](#summarize) only  |
 
 ### Unstructured data
@@ -68,13 +68,48 @@ This is an example of writable data with a message extension. This plugin manage
 
 You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first.
 
+:::row :::
+    :::column:::
+        <br/>
+    :::column-end:::
+    :::column:::
+        **Graph connectors**
+    :::column-end:::
+    :::column:::
+        **Message extension plugins**
+    :::column-end:::
+    :::column:::
+        **Copilot Studio plugins**
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        **Benefits**
+    :::column-end:::
+    :::column:::
+        - [Relevance based on user activities](#relevance-based-on-user-activities)
+        - [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin)
+        - [Data stays within compliance boundary](#data-stays-within-compliance-boundary)
+    :::column-end:::
+    :::column:::
+        - [Discoverability in Store](#discoverability-in-store)
+        - [Enabling branded experience](#enabling-branded-experience)
+        - [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)
+    :::column-end:::
+    :::column:::
+        - Fastest to first run experience
+        - No coding experience required
+    :::column-end:::
+:::row-end:::
+
 | Graph connectors                | Message extension plugins       | Copilot Studio plugins       |
 |:--------------------------------|:--------------------------------|:--------------------------------|
 | **Benefits**       |
 | [Relevance based on user activities](#relevance-based-on-user-activities) | [Discoverability in Store](#discoverability-in-store) | Fatest to first run experience |
 | [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin) | [Enabling branded experience](#enabling-branded-experience) | No coding experience required |
 | [Data stays within compliance boundary](#data-stays-within-compliance-boundary) | [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards) | |
-| **Positive Developer Experience** | 
+| **Positive Developer Experience** |
 | Fast connect, register schema, and index items | Teams Toolkit for Visual Studio & VS Code | Low code GUI IDE |
 | | Sideloading for development & test | |
 | **Also work with** |
@@ -127,7 +162,7 @@ Now, consider the limitations of each option.
 |:--------------------------------|:--------------------------------|:--------------------------------|
 | **Limitations** |
 | - [Max 30 connectors in Tenant](/graph/connecting-external-content-api-limits?branch=main&branchFallbackFrom=pr-en-us-77&context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)<br/>- Relatively low data volume and activity<br/>- App visibility to users | - [Plugins need to be manually enabled](#plugins-need-to-be-manually-enabled)<br/>- [Data can leave compliance boundary](#data-can-leave-compliance-boundary)<br/>- [Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt<br/>- [Performance depends on developers and hosting](#performance-depends-on-developers) | - [Power Platform licenses required](#power-platform-licenses-required) <br/>- No adaptive card support  |
-| **Developer experience limitations**  | 
+| **Developer experience limitations**  |
 | - [No sideloading](#no-sideloading)<br/>- [Potentially sync External Group ACLs](#potentially-sync-external-group-acls) | - [Multi-parameter prompt complexity](#multi-parameter-prompt-complexity) | - [No Continuous Integration experience](#no-continuous-integration-experience) |
 
 ### Plugins need to be manually enabled
