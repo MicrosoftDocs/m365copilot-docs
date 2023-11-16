@@ -30,12 +30,12 @@ There are more factors that you want to consider when deciding which option to p
 
 Consider your data: how it's structured, the level of volume and activity you expect, and the required data access.
 
-|                    | Graph connectors                | Message extension plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|
-| **Structure**          | [Un-structured or flattened data](#unstructured-data) | [Structured data](#structured-data) |
-| **Data volume**        | Up to 5M items per connection   | Suitable for high volume data (Over 5M) |
-| **Data activity**      | Up to 20 requests per second    | Suitable for high activity (Over 20 req/sec.)|
-| **Summarize / Act**         | [Summarize](#summarize) only                       | [Summarize](#summarize) + [Act](#act)
+|                    | Graph connectors                | Message extension plugins       | Copilot Studio plugins       |
+|:-------------------|:--------------------------------|:--------------------------------|:--------------------------------|
+| **Structure**          | [Un-structured or flattened data](#unstructured-data) | [Structured data](#structured-data) | [Structured data](#structured-data) |
+| **Data volume**        | Up to 5M items per connection   | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M)  |
+| **Data activity**      | Up to 20 requests per second    | Suitable for high activity (Over 20 req/sec.)  |Suitable for high activity (Over 20 req/sec.)|
+| **Summarize / Act**         | [Summarize](#summarize) only                       | [Summarize](#summarize) + [Act](#act) | [Summarize](#summarize) only  |
 
 ### Unstructured data
 
@@ -80,17 +80,17 @@ You may want to explore the pros and cons of each option before making a decisio
 - Teams Toolkit for Visual Studio & VS Code
 - Sideloading for development & test
 
-|                    | Graph connectors                | Message extension plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|
-| **Benefits**       | [Relevance based on user activities](#relevance-based-on-user-activities) | [Discoverability in Store](#discoverability-in-store) |
-| | [Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin) | [Enabling branded experience](#enabling-branded-experience) |
-| | [Data stays within compliance boundary](#data-stays-within-compliance-boundary) | [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards) |
-| **Positive Developer Experience** | Fast connect, register schema, and index items | Teams Toolkit for Visual Studio & VS Code |
-| | | Sideloading for development & test |
-| **Also work with** | Context IQ | Teams chat |
-| | Viva Topics | Outlook |
-| | Enterprise Search in M365.com, Sharepoint, and Bing @ work | |
-| | Content recommendations in M365 apps | |
+|                    | Graph connectors                | Message extension plugins       | Copilot Studio plugins       |
+|:-------------------|:--------------------------------|:--------------------------------|:--------------------------------|
+| **Benefits**       | [Relevance based on user activities](#relevance-based-on-user-activities) | [Discoverability in Store](#discoverability-in-store) | Fatest to first run experience |
+| | [Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin) | [Enabling branded experience](#enabling-branded-experience) | No coding experience required |
+| | [Data stays within compliance boundary](#data-stays-within-compliance-boundary) | [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards) | |
+| **Positive Developer Experience** | Fast connect, register schema, and index items | Teams Toolkit for Visual Studio & VS Code | Low code GUI IDE |
+| | | Sideloading for development & test | |
+| **Also work with** | Context IQ | Teams chat | |
+| | Viva Topics | Outlook | |
+| | Enterprise Search in M365.com, Sharepoint, and Bing @ work | | |
+| | Content recommendations in M365 apps | | |
 
 ### Relevance based on user activities
 
@@ -151,10 +151,10 @@ Now, consider the limitations of each option.
 - More time to develop
 - Need to handle multi-parameter prompts
 
-|                    | Graph connectors                | Message extension plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|
-| **Limitations** | - Max 30 connectors in Tenant<br/>- Relatively low data volume and activity<br/>- App visibility to users | - Plugins need to be manually enabled<br/>- Data can leave compliance boundary<br/>- [Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt<br/>- Performance depends on developers & hosting |
-| **Developer experience limitations**  | - No tools for Visual Studio & VS Code<br/>- No sideloading<br/>- Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group | - Steep learning curve<br/>- More time to develop<br/>- Need to handle multi-parameter prompts. |
+|                    | Graph connectors                | Message extension plugins       | Copoilot Studio plugins       |
+|:-------------------|:--------------------------------|:--------------------------------|:--------------------------------|
+| **Limitations** | - Max 30 connectors in Tenant<br/>- Relatively low data volume and activity<br/>- App visibility to users | - Plugins need to be manually enabled<br/>- Data can leave compliance boundary<br/>[Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt<br/>- Performance depends on developers & hosting | - Power Platform licenses required <br/>- No adaptive card support  |
+| **Developer experience limitations**  | - No tools for Visual Studio & VS Code<br/>- No sideloading<br/>- Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group | - Steep learning curve<br/>- More time to develop<br/>- Need to handle multi-parameter prompts. | - No CI/CD experience |
 
 Message extension plugin developers should handle all potential prompt scenarios from users. Single-parameter prompts can be as simple as:
 > Find Chai in Northwind Inventory
