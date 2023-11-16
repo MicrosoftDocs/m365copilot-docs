@@ -30,12 +30,16 @@ There are more factors that you want to consider when deciding which option to p
 
 Consider your data: how it's structured, the level of volume and activity you expect, and the required data access.
 
-|                    | Graph connectors                | Message extension plugins       | Copilot Studio plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|:--------------------------------|
-| **Structure**          | [Un-structured or flattened data](#unstructured-data) | [Structured data](#structured-data) | [Structured data](#structured-data) |
-| **Data volume**        | Up to 5M items per connection   | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M)  |
-| **Data activity**      | Up to 20 requests per second    | Suitable for high activity (Over 20 req/sec.)  |Suitable for high activity (Over 20 req/sec.)|
-| **Summarize / Act**         | [Summarize](#summarize) only                       | [Summarize](#summarize) + [Act](#act) | [Summarize](#summarize) only  |
+| Graph connectors                | Message extension plugins       | Copilot Studio plugins       |
+|:--------------------------------|:--------------------------------|:--------------------------------|
+| **Data Structure** |
+| [Un-structured or flattened data](#unstructured-data) | [Structured data](#structured-data) | [Structured data](#structured-data) |
+| **Data volume**        | 
+| Up to 5M items per connection   | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M)  |
+| **Data activity**      | 
+| Up to 20 requests per second    | Suitable for high activity (Over 20 req/sec.)  |Suitable for high activity (Over 20 req/sec.)|
+| **Summarize / Act**         | 
+| [Summarize](#summarize) only                       | [Summarize](#summarize) + [Act](#act) | [Summarize](#summarize) only  |
 
 ### Unstructured data
 
@@ -64,33 +68,20 @@ This is an example of writable data with a message extension. This plugin manage
 
 You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first.
 
-### Graph connector benefits
-
-- [Relevance based on user activities](#relevance-based-on-user-activities)
-- [Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin)
-- [Data stays within compliance boundary](#data-stays-within-compliance-boundary)
-- Fast connect, register schema, and index items
-- Works with Context IQ, Viva Topics, Enterprise Search in M365.com, Sharepoint, and Bing @ work, and Content recommendations in Microsoft 365 apps
-
-### Message extension plugin benefits
-
-- [Discoverability in Store](#discoverability-in-store)
-- [Enabling branded experience](#enabling-branded-experience)
-- [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)
-- Teams Toolkit for Visual Studio & VS Code
-- Sideloading for development & test
-
-|                    | Graph connectors                | Message extension plugins       | Copilot Studio plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|:--------------------------------|
-| **Benefits**       | [Relevance based on user activities](#relevance-based-on-user-activities) | [Discoverability in Store](#discoverability-in-store) | Fatest to first run experience |
-| | [Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin) | [Enabling branded experience](#enabling-branded-experience) | No coding experience required |
-| | [Data stays within compliance boundary](#data-stays-within-compliance-boundary) | [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards) | |
-| **Positive Developer Experience** | Fast connect, register schema, and index items | Teams Toolkit for Visual Studio & VS Code | Low code GUI IDE |
-| | | Sideloading for development & test | |
-| **Also work with** | Context IQ | Teams chat | |
-| | Viva Topics | Outlook | |
-| | Enterprise Search in M365.com, Sharepoint, and Bing @ work | | |
-| | Content recommendations in M365 apps | | |
+| Graph connectors                | Message extension plugins       | Copilot Studio plugins       |
+|:--------------------------------|:--------------------------------|:--------------------------------|
+| **Benefits**       |
+| [Relevance based on user activities](#relevance-based-on-user-activities) | [Discoverability in Store](#discoverability-in-store) | Fatest to first run experience |
+| [Semantic discovery of content without turning on a plugin](#semantic-discovery-of-content-without-turning-on-a-plugin) | [Enabling branded experience](#enabling-branded-experience) | No coding experience required |
+| [Data stays within compliance boundary](#data-stays-within-compliance-boundary) | [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards) | |
+| **Positive Developer Experience** | 
+| Fast connect, register schema, and index items | Teams Toolkit for Visual Studio & VS Code | Low code GUI IDE |
+| | Sideloading for development & test | |
+| **Also work with** |
+| Context IQ | Teams chat | |
+| Viva Topics | Outlook | |
+| Enterprise Search in M365.com, Sharepoint, and Bing @ work | | |
+| Content recommendations in M365 apps | | |
 
 ### Relevance based on user activities
 
@@ -132,35 +123,42 @@ However, it's worth noting that message extensions could enhance user experience
 
 Now, consider the limitations of each option.
 
-### Graph connector limitations
+| Graph connectors                | Message extension plugins       | Copoilot Studio plugins       |
+|:--------------------------------|:--------------------------------|:--------------------------------|
+| **Limitations** |
+| - [Max 30 connectors in Tenant](/graph/connecting-external-content-api-limits?branch=main&branchFallbackFrom=pr-en-us-77&context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)<br/>- Relatively low data volume and activity<br/>- App visibility to users | - [Plugins need to be manually enabled](#plugins-need-to-be-manually-enabled)<br/>- [Data can leave compliance boundary](#data-can-leave-compliance-boundary)<br/>- [Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt<br/>- [Performance depends on developers and hosting](#performance-depends-on-developers) | - [Power Platform licenses required](#power-platform-licenses-required) <br/>- No adaptive card support  |
+| **Developer experience limitations**  | 
+| - [No sideloading](#no-sideloading)<br/>- [Potentially sync External Group ACLs](#potentially-sync-external-group-acls) | - [Multi-parameter prompt complexity](#multi-parameter-prompt-complexity) | - [No Continuous Integration experience](#no-continuous-integration-experience) |
 
-- Max 30 connectors in tenant
-- Relatively low data volume and activity
-- App visibility to users
-- No tools for Visual Studio & VS Code
-- No sideloading
-- Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group
+### Plugins need to be manually enabled
+Unlike Graph Connected external items that are part of Microsoft Graph and immediate available to Copilot summarization. Administrators first need to enable Plugins in the tenant as part of Public Preview ([https://aka.ms/extend-Copilot](https://aka.ms/extend-Copilot)). Additionally, the user of Copilot for Microsoft 365 needs to enable the plugin in the plugin management flyout.
 
-### Message extension plugin limitations
+### Data can leave compliance boundary
+Graph Connectors inserts external items into the Microsoft Graph. When Copilot selects a Plugin as part of its orchestration, it calls the bot framework commmand and populates the parameters with data based on the description of the parameters. THe data it provides can be any of the data available to it in Microsoft 365 or other data provided by Plugins in the conversational session. The bot framework commands are hosted externally to the Microsoft 365 boundary.
 
-- Plugins need to be manually enabled
-- Data can leave compliance boundary
-- [Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt
-- Performance depends on developers & hosting
-- Steep learning curve for developers
-- More time to develop
-- Need to handle multi-parameter prompts
+### Performance depends on developers
+The Plugin bot framework commands that are invoked by Copilot are external and the response times of it are dependent on the developer hosting it.
 
-|                    | Graph connectors                | Message extension plugins       | Copoilot Studio plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|:--------------------------------|
-| **Limitations** | - Max 30 connectors in Tenant<br/>- Relatively low data volume and activity<br/>- App visibility to users | - Plugins need to be manually enabled<br/>- Data can leave compliance boundary<br/>[Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt<br/>- Performance depends on developers & hosting | - Power Platform licenses required <br/>- No adaptive card support  |
-| **Developer experience limitations**  | - No tools for Visual Studio & VS Code<br/>- No sideloading<br/>- Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group | - Steep learning curve<br/>- More time to develop<br/>- Need to handle multi-parameter prompts. | - No CI/CD experience |
+### Power Platform licenses required
+To build with Copilot Studio is included as part of the Microsoft Copilot licneses. If the Plugin uses Power Platform Connectors the required licenses are required to execute them.
 
+### No sideloading
+There is no ability to side load with Graph Connectors. As a developer you will need Entra ID admin access to your tenant to register and consert the required Graph permission and also the Search Administrator role to deploy your Graph Connector to Copilot.
+
+### No Continuous Integration experience
+Low code IDE does not have an ability to check in source code currently in to a allow for versioning and deploying into dev/test/production processes.
+
+### Potentially sync External Group ACLs
+If you don't implement Entra ID Groups in your system, you will need to create External Groups calling Graph APIs and maintain sync state of the memebership of these groups with your systems groups.
+
+### Multi-parameter prompt complexity
 Message extension plugin developers should handle all potential prompt scenarios from users. Single-parameter prompts can be as simple as:
 > Find Chai in Northwind Inventory
 
 Multi-parameters can be more complex with multiple inquiries, such as:
 > We've been receiving partial orders for tofu. Find the supplier in Northwind and draft an email summarizing our inventory and reminding them they should stop sending partial orders per our MOQ policy.
+
+
 
 ## Next step
 
