@@ -68,7 +68,7 @@ This is an example of writable data with a message extension. This plugin manage
 
 You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first.
 
-:::row :::
+:::row:::
     :::column:::
     :::column-end:::
     :::column:::
