@@ -27,9 +27,7 @@ In the Teams client,
 
 :::image type="content" source="assets/images/build-me/sideloadable.png" alt-text="A screenshot of Teams client that shows how to check if your custom app is sideloadable":::
 
-If you don't have the option to upload a custom app, talk to your Teams administrator, or get a free Teams developer account by joining the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) and sign up for the **E5 subscription**.
-
-Once you are done, sign in to Teams using the administrator account you just set up. Verify that you have the Upload a custom app option in Teams.
+If you don't have the option to upload a custom app, talk to your Teams administrator.
 
 ## Install prerequisites to your machine
 
