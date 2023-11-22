@@ -52,7 +52,7 @@ You may want to explore the pros and cons of each option before making a decisio
 |:-------------------|:--------------------------------|:--------------------------------|
 | **Benefits**       | <li>Relevance based on user activities  <li>Semantic discovery of content without turning on a plugin<li>Activities (such as view, modify, and shared) with help with ranking and relevance of search results <li>Data stays within compliance boundary| <li>Discoverability in Store <li>Enabling branded experience <li>Better UX with Adaptive Cards|
 | **Developer experience features** | <li>Fast connect, register schema, and index items | <li>Teams Toolkit for Visual Studio & VS Code <li>Sideloading for development & test |
-| **Also work with** | <li>Context IQ <li>Viva Topics <li>Enterprise Search in M365.com, Sharepoint, and Bing @ work <li>Content recommendations in M365 apps | <li>Teams chat <li>Outlook |
+| **Also work with** | <li>Context IQ <li>Viva Topics <li>Enterprise Search in M365.com, SharePoint, and Bing @ work <li>Content recommendations in M365 apps | <li>Teams chat <li>Outlook |
 
 For instance, Graph connectors help keep third-party data within the compliance boundary by indexing the data. On the other hand, the real-time data through the use of message extensions are not indexed and can be shared or accessed outside of the defined compliance boundaries. As a plugin developer, you are responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information.
 
