@@ -16,7 +16,7 @@ Message extensions are a powerful feature in Microsoft Teams, as well as in Outl
 These interactions are typically triggered via buttons and forms within Microsoft Teams and Outlook clients. This mechanism allows users to search or initiate actions in an external system, right from the compose message area, or even directly from a message. The outcomes of these interactions are delivered back to the client in the form of a richly formatted card.
 
 > [!IMPORTANT]
-> Message extensions are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](/microsoftteams/platform/concepts/app-fundamentals-overview.md#government-community-cloud?context=/microsoft-365-copilot/extensibility/context) environments.
+> Message extensions are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](/microsoftteams/platform/concepts/app-fundamentals-overview#government-community-cloud?context=/microsoft-365-copilot/extensibility/context) environments.
 
 ## Watch the overview
 
@@ -38,7 +38,7 @@ Your users can do so much more than just getting search queries. With the integr
 
 ## Build message extensions using Bot Framework
 
-There are a few ways to build [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions.md), but to extend the capabilities for Copilot, you need to built one with [Bot Framework](https://dev.botframework.com/) SDK, commonly used to create a variety of bots, including Teams bots.
+There are a few ways to build [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), but to extend the capabilities for Copilot, you need to built one with [Bot Framework](https://dev.botframework.com/) SDK, commonly used to create a variety of bots, including Teams bots.
 
 For development, you can use [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) for Visual Studio Code to build your message extensions. The toolkit helps you to create a project by scaffolding a template that suits your needs!
 
