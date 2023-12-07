@@ -1,6 +1,6 @@
 ---
-title: Plugins are Microsoft 365 apps
-description: Message extension plugins are also Microsoft 365 apps. Learn how to take advantage of the Microsoft 365 platform opportunity and extend the reach of your plugin.
+title: Plugins are apps for Microsoft 365
+description: Message extension plugins are also apps for Microsoft 365. Learn how to take advantage of the Microsoft 365 platform opportunity and extend the reach of your plugin.
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: best-practice
@@ -46,6 +46,15 @@ Using a unified [app manifest](/microsoftteams/platform/resources/schema/manifes
 The [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) for Visual Studio Code makes it simple to get started with app development for Microsoft Teams and now Copilot plugins for Microsoft 365 as well. You can start a project directly from samples and templates for common line-of-business app scenarios, as well as run and debug to Microsoft 365 apps. At the same time, many logistical tasks such as app registration, configuration, and deployment are streamlined for you. To learn more, see [Teams Toolkit overview](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
 
 Along with Teams Toolkit, Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook. Starting with version 2.5.0, the TeamsJS library enables [Teams apps to run in other Microsoft 365 experiences](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. For a summary of host application support for Teams apps, see [TeamsJS capability support across Microsoft 365](/microsoftteams/platform/m365-apps/teamsjs-support-m365).
+
+## Designing your app
+
+Designing an app that will span the Microsoft 365 ecosystem can be a complex challenge. You'll want to ensure your app feels consistent across the Microsoft 365 ecosystem, while also providing a tailored experience within the context of each Microsoft 365 host application. To help you address that challenge, you can use the Microsoft 365 UI Kit (preview), which provides both guidance and templates to help you create your app.
+
+> [!div class="nextstepaction"]
+> [Preview the Microsoft 365 UI Kit (Figma)](https://aka.ms/M365UIKit)
+
+The Microsoft 365 UI Kit expands the *Teams design system* to work with apps that run across the Microsoft 365 ecosystem. To learn more about these foundational concepts, see [Designing your Microsoft Teams app](/microsoftteams/platform/concepts/design/design-teams-app-overview).
 
 ## Planning your app
 
