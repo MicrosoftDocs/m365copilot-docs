@@ -7,7 +7,7 @@ ms.topic: best-practice
 ms.date: 11/27/2023
 ---
 
-# Plugins are Microsoft 365 apps
+# Plugins are apps for Microsoft 365
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
