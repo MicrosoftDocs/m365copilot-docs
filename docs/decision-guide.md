@@ -4,7 +4,7 @@ description: Understand which type of Microsoft Copilot for Microsoft 365 plugin
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 11/15/2023
+ms.date: 12/12/2023
 ---
 
 # Extensibility options for Microsoft Copilot for Microsoft 365
@@ -76,6 +76,7 @@ Now, consider the limitations of each option:
 |:-------------------|:--------------------------------|:--------------------------------|
 | **Limitations** | <li>Max 30 connectors in Tenant <li>Relatively low data volume and activity <li>App visibility to users | <li>Plugins need to be manually enabled <li>Data can leaves compliance boundary  <li>[Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt <li>Performance depends on developers & hosting|
 | **Developer experience limitations**  | <li>No tools for Visual Studio & VS Code <li>No sideloading <li>Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group | <li>Steep learning curve <li>More time to develop <li>Need to handle multi-parameter prompts.
+| **More info**| [Graph connectors API limits](/graph/connecting-external-content-api-limits?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)| [Technical requirements for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext&tabs=tasks#technical-requirements)
 
 Message extension plugin developers should handle all potential prompt scenarios from users. Single-parameter prompts can be as simple as:
 > Find Chai in Northwind Inventory
