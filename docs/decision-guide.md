@@ -74,7 +74,7 @@ Now, consider the limitations of each option:
 
 |                    | Graph connectors                | Message extension plugins       |
 |:-------------------|:--------------------------------|:--------------------------------|
-| **Limitations** | <li>Max 30 connectors in Tenant <li>Relatively low data volume and activity <li>App visibility to users | <li>Plugins need to be manually enabled <li>Data can leaves compliance boundary  <li>[Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt <li>Performance depends on developers & hosting|
+| **Limitations** | <li>Max 30 connectors in Tenant <li>Relatively low data volume and activity <li>App visibility to users | <li>Max 1 million plugins enabled per user <li>Plugins need to be manually enabled <li>Data can leaves compliance boundary  <li>[Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt <li>Performance depends on developers & hosting|
 | **Developer experience limitations**  | <li>No tools for Visual Studio & VS Code <li>No sideloading <li>Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group | <li>Steep learning curve <li>More time to develop <li>Need to handle multi-parameter prompts.
 | **More info**| [Graph connectors API limits](/graph/connecting-external-content-api-limits?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)| [Technical requirements for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext&tabs=tasks#technical-requirements)
 
