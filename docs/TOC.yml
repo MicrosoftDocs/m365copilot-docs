@@ -16,7 +16,7 @@
       href: orchestrator.md
     - name: What makes a good plugin?
       href: plugin-guidelines.md
-    - name: Plugins are Microsoft 365 apps
+    - name: Plugins are apps for Microsoft 365
       href: plugins-are-apps.md
     - name: Data, Privacy, and Security
       href: data-privacy-security.md
@@ -70,3 +70,5 @@
   href: publish.md
 - name: Samples
   href: samples.md
+- name: Microsoft Q&A
+  href: /answers/tags/466/copilot-m365-development

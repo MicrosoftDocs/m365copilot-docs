@@ -4,7 +4,7 @@ description: Understand which type of Microsoft Copilot for Microsoft 365 plugin
 author: girliemac
 ms.author: jthake-msft
 ms.topic: conceptual
-ms.date: 11/15/2023
+ms.date: 12/12/2023
 ---
 
 # Extensibility options for Microsoft Copilot for Microsoft 365
