@@ -116,29 +116,36 @@ Now, consider the limitations of each option.
 |  Copilot Studio conversational plugins         |  - No adaptive card support <br/> - No multi-turn support <br/> - No auth support      |   - [No Continuous Integration experience](#no-continuous-integration-experience)    |
 |  Copilot Studio AI plugins        |        |       |
 
-
 ### Plugins need to be manually enabled
+
 Unlike Graph Connected external items that are part of Microsoft Graph and immediate available to Copilot summarization. Administrators first need to enable Plugins in the tenant as part of Public Preview ([https://aka.ms/extend-Copilot](https://aka.ms/extend-Copilot)). Additionally, the user of Copilot for Microsoft 365 needs to enable the plugin in the plugin management flyout.
 
 ### Data can leave compliance boundary
+
 Graph Connectors inserts external items into the Microsoft Graph. When Copilot selects a Plugin as part of its orchestration, it calls the bot framework commmand and populates the parameters with data based on the description of the parameters. THe data it provides can be any of the data available to it in Microsoft 365 or other data provided by Plugins in the conversational session. The bot framework commands are hosted externally to the Microsoft 365 boundary.
 
 ### Performance depends on developers
+
 The Plugin bot framework commands that are invoked by Copilot are external and the response times of it are dependent on the developer hosting it.
 
 ### Power Platform licenses required
+
 To build with Copilot Studio is included as part of the Microsoft Copilot licneses. If the Plugin uses Power Platform Connectors the required licenses are required to execute them.
 
 ### No sideloading
+
 There is no ability to side load with Graph Connectors. As a developer you will need Entra ID admin access to your tenant to register and consert the required Graph permission and also the Search Administrator role to deploy your Graph Connector to Copilot.
 
 ### No Continuous Integration experience
+
 Low code IDE does not have an ability to check in source code currently in to a allow for versioning and deploying into dev/test/production processes.
 
 ### Potentially sync External Group ACLs
+
 If you don't implement Entra ID Groups in your system, you will need to create External Groups calling Graph APIs and maintain sync state of the memebership of these groups with your systems groups.
 
 ### Multi-parameter prompt complexity
+
 Message extension plugin developers should handle all potential prompt scenarios from users. Single-parameter prompts can be as simple as:
 > Find Chai in Northwind Inventory
 
