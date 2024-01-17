@@ -26,17 +26,10 @@ When developing with Copilot in production environments, be aware of potential a
 
 We recommend that our ISV partners who build multi-tenant solutions acquire a new sandbox Microsoft 365 tenant with Copilot. ISVs that want to do this must be a member of the [Microsoft 365 Developer Technology Adoption Program (TAP)](https://aka.ms/m365devtap).
 
-#### Technical and licensing requirements for ISVs partners in the TAP
 
-Developers must acquire the Microsoft 365 E5 Developer SKU V2 (without Windows and Audio-conferencing). This provides up to 25 developer licenses for Copilot for Microsoft 365.
+### Customers with existing Microsoft 365 and Copilot licenses
 
-### Enterprise customers with Microsoft Copilot for Microsoft 365
-
-It is also possible to develop Copilot integrations by working directly in an enterprise production environment. Customers should call their Microsoft representative to get more information on how to acquire Copilot.
-
-#### Technical and licensing requirements for enterprise users
-
-Copilot users must have either a Microsoft 365 E3 or E5 license and a Microsoft Entra ID account, which gives them access to the Microsoft 365 apps and services that work with Copilot. Enterprise customers need to be on the Current Channel or Monthly Enterprise Channel for Microsoft 365 apps to have access to Copilot.
+It is also possible to develop Copilot integrations by working directly in a Microsoft 365 E3 or E5 production environment with Copilot licensing. Contact your Microsoft representative to [add Copilot to your Microsoft plan](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing).  Enterprise customers need to be on the Current Channel or Monthly Enterprise Channel for Microsoft 365 apps to have access to Copilot.
 
 ## Extensibility
 
@@ -72,9 +65,11 @@ Accounts used to test Copilot extensibility need a Microsoft Copilot for Microso
 
 Yes. If you have a Microsoft 365 Business Standard (E3) or Business Premium (E5) license, you can [purchase a license for Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365).
 
-#### Can I use my standard Microsoft 365 sandbox tenant to develop with Microsoft Copilot for Microsoft 365?
+Yes. If you have a Microsoft 365 Business Standard (E3) or Business Premium (E5) license, you can [purchase a license for Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365) on a one-year or three-year term basis.
 
-No. Microsoft 365 sandbox tenants (Microsoft 365 E5 Developer SKU V2) with Copilot are currently available to a limited set of ISVs in the TAP.
+#### Can I use my Microsoft 365 Developer Program instant sandbox tenant to develop with Microsoft Copilot for Microsoft 365?
+
+No. Microsoft 365 Developer Program sandbox tenant does not support commerce and therefore you cannot purchase Copilot for Microsoft 365 for it.
 
 #### Can sandbox tenants with Copilot be renewed once the licenses expire?
 
