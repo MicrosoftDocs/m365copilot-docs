@@ -1,5 +1,5 @@
 ---
-title: Set up your development environment for Microsoft Copilot for Microsoft 365
+title: Set up your development environment for Copilot for Microsoft 365
 description: Learn the prerequisites for extending Copilot for Microsoft 365 with plugins and connectors
 author: maisarissi
 ms.author: maisarissi
@@ -7,21 +7,18 @@ ms.topic: how-to
 ms.date: 1/17/2024
 ---
 
-# Set up your development environment for Microsoft 365
+# Set up your development environment for Copilot for Microsoft 365
 
-Copilot for Microsoft 365 is [generally available](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/microsoft-365-copilot-is-generally-available/ba-p/3969331), and extensibility for Copilot for Microsoft 365 is in public preview. [Copilot for Microsoft 365 is available to organizations](https://blogs.microsoft.com/blog/2024/01/15/bringing-the-full-power-of-copilot-to-more-people-and-businesses/) of all sizes (there is no seat purchase minimum).
+Copilot for Microsoft 365 is [generally available](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/microsoft-365-copilot-is-generally-available/ba-p/3969331), and extensibility for Copilot for Microsoft 365 is in public preview. [Copilot for Microsoft 365 is available to organizations](https://blogs.microsoft.com/blog/2024/01/15/bringing-the-full-power-of-copilot-to-more-people-and-businesses/) of all sizes (there is no seat purchase minimum). [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro) (Copilot for individuals) does not currently support extensibility.
 
-> [!NOTE]
-> Unlike Copilot for Microsoft 365, [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro) (Copilot for individuals) does not currently support extensibility.
-
-This topic summarizes the developer environment prerequisites and requirements to extend, enrich, and customize Microsoft Copilot for Microsoft 365 for the unique way your customers work.
+This topic summarizes the developer environment prerequisites and requirements to extend, enrich, and customize Copilot for Microsoft 365 for the unique way your customers work.
 
 ## Prerequisites
 
 Developers have two ways to obtain a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](#isv-partners-in-microsoft-365-developer-tap)), or (2) through an enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 
 > [!NOTE]
-> Copilot for Microsoft 365 is not available with [Microsoft 365 E5 instant sandbox](https://developer.microsoft.com/microsoft-365/dev-program#Subscription) tenants for development and testing. It is currently only available to a limited set of ISV partners in the TAP.
+> Copilot for Microsoft 365 is not publicly available with [Microsoft 365 Developer Program instant sandbox](https://developer.microsoft.com/microsoft-365/dev-program#Subscription) tenants for development and testing. Availability is currently limited to ISV partners in the TAP.
 
 When developing with Copilot in production environments, be aware of potential admin-imposed limitations. For instance, administrators can block sideloading of custom apps or may not grant the necessary permissions required to build Graph connectors. Sandbox tenants provide an environment where you can develop solutions independent of your production environment and be your own administrator.
 
@@ -31,11 +28,11 @@ We recommend that our ISV partners who build multi-tenant solutions acquire a ne
 
 #### Technical and licensing requirements for ISVs partners in the TAP
 
-Developers must purchase the (free) Microsoft 365 E5 (25 license) Developer SKU V2 (without Windows and Audio-conferencing). This enables you to purchase up to 25 licenses for Microsoft Copilot for Microsoft 365 Developer.
+Developers must acquire the Microsoft 365 E5 Developer SKU V2 (without Windows and Audio-conferencing). This provides up to 25 developer licenses for Copilot for Microsoft 365.
 
 ### Enterprise customers with Microsoft Copilot for Microsoft 365
 
-It is also possible to develop integrations by working directly in a production environment. Customers should call their Microsoft representative to get more information on how to acquire Copilot.
+It is also possible to develop Copilot integrations by working directly in an enterprise production environment. Customers should call their Microsoft representative to get more information on how to acquire Copilot.
 
 #### Technical and licensing requirements for enterprise users
 
@@ -71,13 +68,13 @@ Accounts used to test Copilot extensibility need a Microsoft Copilot for Microso
 ## Frequently asked questions
 
 <!-- markdownlint-disable MD001 -->
-#### Can I upgrade my standard Microsoft 365 license to a Microsoft Copilot license?
+#### Can I upgrade my standard Microsoft 365 license to use Copilot for Microsoft 365?
 
-No. For standard Microsoft 365 licenses, Copilot is disabled. To have Microsoft Copilot for Microsoft 365, you need to buy a minimum of 300 licenses.
+Yes. If you have a Microsoft 365 Business Standard (E3) or Business Premium (E5) license, you can [purchase a license for Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365).
 
-#### Can I use my standard Microsoft 365 developer tenant to develop with Microsoft Copilot for Microsoft 365?
+#### Can I use my standard Microsoft 365 sandbox tenant to develop with Microsoft Copilot for Microsoft 365?
 
-No. You must qualify for and obtain the Microsoft 365 E5 Developer SKU V2 (without Windows and Audio-conferencing), and then purchase Microsoft Copilot for Microsoft 365 Developer. Currently this is only available to a limited set of ISVs in the TAP.
+No. Microsoft 365 sandbox tenants (Microsoft 365 E5 Developer SKU V2) with Copilot are currently available to a limited set of ISVs in the TAP.
 
 #### Can sandbox tenants with Copilot be renewed once the licenses expire?
 
