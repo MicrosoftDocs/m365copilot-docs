@@ -4,12 +4,17 @@ description: Learn the prerequisites for extending Copilot for Microsoft 365 wit
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
-ms.date: 11/15/2023
+ms.date: 1/17/2024
 ---
 
 # Set up your development environment for Microsoft 365
 
-Copilot for Microsoft 365 is [generally available](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/microsoft-365-copilot-is-generally-available/ba-p/3969331), and extensibility for Copilot for Microsoft 365 is in public preview. This topic summarizes the developer environment prerequisites and requirements to extend, enrich, and customize Microsoft Copilot for Microsoft 365 for the unique way your customers work.
+Copilot for Microsoft 365 is [generally available](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/microsoft-365-copilot-is-generally-available/ba-p/3969331), and extensibility for Copilot for Microsoft 365 is in public preview. [Copilot for Microsoft 365 is available to organizations](https://blogs.microsoft.com/blog/2024/01/15/bringing-the-full-power-of-copilot-to-more-people-and-businesses/) of all sizes (there is no seat purchase minimum).
+
+> [!NOTE]
+> Unlike Copilot for Microsoft 365, [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro) (Copilot for individuals) does not currently support extensibility.
+
+This topic summarizes the developer environment prerequisites and requirements to extend, enrich, and customize Microsoft Copilot for Microsoft 365 for the unique way your customers work.
 
 ## Prerequisites
 
