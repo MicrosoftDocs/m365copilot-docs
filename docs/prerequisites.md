@@ -18,7 +18,10 @@ This topic summarizes the developer environment prerequisites and requirements t
 
 ## Prerequisites
 
-Developers have two ways to obtain a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](#isv-partners-in-microsoft-365-developer-tap)), or with (2) through an enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
+Developers have two ways to obtain a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](#isv-partners-in-microsoft-365-developer-tap)), or (2) through an enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
+
+> [!NOTE]
+> Copilot for Microsoft 365 is not available with [Microsoft 365 E5 instant sandbox](https://developer.microsoft.com/microsoft-365/dev-program#Subscription) tenants for development and testing. It is currently only available to a limited set of ISV partners in the TAP.
 
 When developing with Copilot in production environments, be aware of potential admin-imposed limitations. For instance, administrators can block sideloading of custom apps or may not grant the necessary permissions required to build Graph connectors. Sandbox tenants provide an environment where you can develop solutions independent of your production environment and be your own administrator.
 
@@ -32,7 +35,7 @@ Developers must purchase the (free) Microsoft 365 E5 (25 license) Developer SKU 
 
 ### Enterprise customers with Microsoft Copilot for Microsoft 365
 
-It is also possible to develop integrations by working directly in a production environment. To do this enterprise customers must purchase Microsoft Copilot for Microsoft 365 at a minimum of 300 licenses. Customers should call their Microsoft representative to get more information on how to acquire Copilot.
+It is also possible to develop integrations by working directly in a production environment. Customers should call their Microsoft representative to get more information on how to acquire Copilot.
 
 #### Technical and licensing requirements for enterprise users
 
