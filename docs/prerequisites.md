@@ -15,7 +15,7 @@ This topic summarizes the developer environment prerequisites and requirements t
 
 ## Prerequisites
 
-Developers have two ways to obtain a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](#isv-partners-in-microsoft-365-developer-tap)), or (2) through an enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
+Developers have two ways to obtain a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](#isv-partners-in-microsoft-365-developer-tap)), or (2) with a Microsoft 365 E3 or E5 production environment with a Copilot for Microsoft 365 license.
 
 > [!NOTE]
 > Copilot for Microsoft 365 is not publicly available with [Microsoft 365 Developer Program instant sandbox](https://developer.microsoft.com/microsoft-365/dev-program#Subscription) tenants for development and testing. Sandbox tenant availability is currently limited to ISV partners in the TAP.
@@ -62,8 +62,6 @@ Accounts used to test Copilot extensibility need a Microsoft Copilot for Microso
 <!-- markdownlint-disable MD001 -->
 #### Can I upgrade my standard Microsoft 365 license to use Copilot for Microsoft 365?
 
-Yes. If you have a Microsoft 365 Business Standard (E3) or Business Premium (E5) license, you can [purchase a license for Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365).
-
 Yes. If you have a Microsoft 365 Business Standard (E3) or Business Premium (E5) license, you can [purchase a license for Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365) on a one-year or three-year term basis.
 
 #### Can I use my Microsoft 365 Developer Program instant sandbox tenant to develop with Microsoft Copilot for Microsoft 365?
@@ -74,7 +72,7 @@ No. Microsoft 365 Developer Program sandbox tenant does not support commerce and
 
 Yes. If you continue to qualify for the Microsoft 365 E5 Developer SKU V2, your development environment will auto-renew.
 
-#### I'm not an ISV and I don't have Microsoft Copilot licenses. Can I develop for Copilot for Microsoft 365?
+#### I'm not an ISV and I don't have a Microsoft Copilot license. Can I develop for Copilot for Microsoft 365?
 
 Not at this time. There is currently no timeline for broader availability of sandbox tenants.
 <!-- markdownlint-enable MD001 -->
