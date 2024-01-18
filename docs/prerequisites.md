@@ -26,7 +26,6 @@ When developing with Copilot in production environments, be aware of potential a
 
 We recommend that our ISV partners who build multi-tenant solutions acquire a new sandbox Microsoft 365 tenant with Copilot. ISVs that want to do this must be a member of the [Microsoft 365 Developer Technology Adoption Program (TAP)](https://aka.ms/m365devtap).
 
-
 ### Customers with existing Microsoft 365 and Copilot licenses
 
 It is also possible to develop Copilot integrations by working directly in a Microsoft 365 E3 or E5 production environment with Copilot licensing. Contact your Microsoft representative to [add Copilot to your Microsoft plan](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing).  Enterprise customers need to be on the Current Channel or Monthly Enterprise Channel for Microsoft 365 apps to have access to Copilot.
