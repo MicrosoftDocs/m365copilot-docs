@@ -19,7 +19,7 @@ To inquire about general questions related to Copilot and Copilot samples use th
 |:------------|:------------|
 | Microsoft Copilot for Microsoft 365 service issues, development issues, and limited advisory support. | If you have a Premier/Unified support agreement for Microsoft 365, visit the [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home#/homepage) and use the Support menu to open a service request. |
 | General questions about Microsoft Copilot for Microsoft 365 | If you have general questions on Microsoft Copilot for Microsoft 365, submit your questions on [Microsoft Q&A](/answers/tags/465/copilot-m365.html). |
-| Developer community help | [Microsoft Q&A](/answers.html) exists as the home of technical questions and answers for Microsoft products. Use the [Microsoft Copilot for Microsoft 365 Development](/answers/tags/466/copilot-m365-development.html) tag to post questions, connect with other developers, and submit answers. |
+| Developer community help | [Microsoft Q&A](/answers/) exists as the home of technical questions and answers for Microsoft products. Use the [Microsoft Copilot for Microsoft 365 Development](/answers/tags/466/copilot-m365-development.html) tag to post questions, connect with other developers, and submit answers. |
 | Extensibility samples | Submit issues and ask general questions related to samples using the respective Microsoft Copilot for Microsoft 365 [extensibility samples](samples.md) GitHub repositories. |
 
 ### Report issues
