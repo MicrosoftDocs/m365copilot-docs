@@ -40,10 +40,8 @@
           href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
         - name: Create a connector AI plugin (preview)
           href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-        - name: Add an OpenAI plugin (preview)
-          href: /power-virtual-agents/copilot-ai-plugins?context=/microsoft-365-copilot/extensibility/context#add-an-openai-plugin
         - name: Create a topic (preview)
-          href: /power-virtual-agents/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
+          href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
 - name: Build Microsoft Graph connectors
   items:
     - name: Microsoft Graph connectors in Copilot for Microsoft 365
