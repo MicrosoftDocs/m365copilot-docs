@@ -53,7 +53,7 @@ As a developer, you'll need the ability to [sideload custom apps](/microsoftteam
 
 You can use *developer mode* while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt. From  *M365 Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
 
-:::image type="content" source="./assets/images/devmode-on.png" alt-text="Screenshot of `M365 Chat` session where user has typed `-developer on` to successfully enable developer mode":::
+:::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `M365 Chat` session where user has typed `-developer on` to successfully enable developer mode":::
 
 For more info, see [Debugging plugin selection](/orchestrator.md#debugging-plugin-selection).
 

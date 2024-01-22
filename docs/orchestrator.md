@@ -415,7 +415,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 You can use *developer mode* while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt. From  *M365 Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
 
-:::image type="content" source="./assets/images/devmode-on.png" alt-text="Screenshot of `M365 Chat` session where user has typed `-developer on` to successfully enable developer mode":::
+:::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `M365 Chat` session where user has typed `-developer on` to successfully enable developer mode":::
 
 While developer mode is enabled, a card with debug information will be returned whenever the orchestrator searches specifically within your enterprise knowledge (data) and/or skills (plugins) to respond to a prompt. The debug info card includes the following fields:
 
@@ -424,7 +424,7 @@ While developer mode is enabled, a card with debug information will be returned 
 - **Selected functions for execution**: A list of plugin functions selected for invocation based on orchestrator reasoning
 - **Function execution details**: Request and response function execution status
 
-:::image type="content" source="assets/images/devmode-debug-success.png" alt-text="Screenshot of `M365 Chat` session where Copilot has returned a card with debugging information showing the successful matching, selection, and function execution of an enabled plugin":::
+:::image type="content" source="assets/images/developer-mode-debug-success.png" alt-text="Screenshot of `M365 Chat` session where Copilot has returned a card with debugging information showing the successful matching, selection, and function execution of an enabled plugin":::
 
 ### Troubleshooting execution failures
 
