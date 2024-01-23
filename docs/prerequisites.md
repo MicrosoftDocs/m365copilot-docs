@@ -30,8 +30,8 @@ We recommend that our ISV partners who build multi-tenant solutions acquire a ne
 
 It is also possible to develop Copilot integrations by working directly in a Microsoft 365 production environment with Copilot licensing. These include:
 
-- [Microsoft 365 E5 and E3](/microsoft-365/enterprise/microsoft365-plans-and-pricing)
-- [Office 365 E5 and E3](/microsoft-365/enterprise/office365-plans-and-pricing)
+- [Microsoft 365 E5 and E3](https://www.microsoft.com//microsoft-365/enterprise/microsoft365-plans-and-pricing)
+- [Office 365 E5 and E3](https://www.microsoft.com/microsoft-365/enterprise/office365-plans-and-pricing)
 - [Microsoft 365 Business Premium and Business Standard](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products)
 
 Contact your Microsoft representative to [add Copilot to your Microsoft plan](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing).  Enterprise customers need to be on the Current Channel or Monthly Enterprise Channel for Microsoft 365 apps to have access to Copilot.
