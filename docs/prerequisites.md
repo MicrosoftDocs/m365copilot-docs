@@ -15,7 +15,7 @@ This topic summarizes the developer environment prerequisites and requirements t
 
 ## Prerequisites
 
-Developers have two ways to obtain a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](#isv-partners-in-microsoft-365-developer-tap)), or (2) with a Microsoft 365 E3 or E5 production environment with a Copilot for Microsoft 365 license.
+Developers have two ways to obtain a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](#isv-partners-in-microsoft-365-developer-tap)), or (2) with an eligible Microsoft 365 or Office 365 production environment with a Copilot for Microsoft 365 license.
 
 > [!NOTE]
 > Copilot for Microsoft 365 is not publicly available with [Microsoft 365 Developer Program instant sandbox](https://developer.microsoft.com/microsoft-365/dev-program#Subscription) tenants for development and testing. Sandbox tenant availability is currently limited to ISV partners in the TAP.
@@ -28,7 +28,13 @@ We recommend that our ISV partners who build multi-tenant solutions acquire a ne
 
 ### Customers with existing Microsoft 365 and Copilot licenses
 
-It is also possible to develop Copilot integrations by working directly in a Microsoft 365 E3 or E5 production environment with Copilot licensing. Contact your Microsoft representative to [add Copilot to your Microsoft plan](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing).  Enterprise customers need to be on the Current Channel or Monthly Enterprise Channel for Microsoft 365 apps to have access to Copilot.
+It is also possible to develop Copilot integrations by working directly in a Microsoft 365 production environment with Copilot licensing. These include:
+
+- [Microsoft 365 E5 and E3](/microsoft-365/enterprise/microsoft365-plans-and-pricing)
+- [Office 365 E5 and E3](/microsoft-365/enterprise/office365-plans-and-pricing)
+- [Microsoft 365 Business Premium and Business Standard](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products)
+
+Contact your Microsoft representative to [add Copilot to your Microsoft plan](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing).  Enterprise customers need to be on the Current Channel or Monthly Enterprise Channel for Microsoft 365 apps to have access to Copilot.
 
 ## Extensibility
 
@@ -60,17 +66,17 @@ Accounts used to test Copilot extensibility need a Microsoft Copilot for Microso
 ## Frequently asked questions
 
 <!-- markdownlint-disable MD001 -->
-#### Can I upgrade my standard Microsoft 365 license to use Copilot for Microsoft 365?
+#### Can I upgrade my Microsoft 365 business license to use Copilot for Microsoft 365?
 
-Yes. If you have a Microsoft 365 Business Standard (E3) or Business Premium (E5) license, you can [purchase a license for Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365) on a one-year or three-year term basis.
+Yes. If you have a Microsoft 365 Business Standard or Business Premium license, you can [purchase a license for Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365) on a one-year or three-year term basis.
 
 #### Can I use my Microsoft 365 Developer Program instant sandbox tenant to develop with Microsoft Copilot for Microsoft 365?
 
 No. Microsoft 365 Developer Program sandbox tenant does not support commerce and therefore you cannot purchase Copilot for Microsoft 365 for it.
 
-#### Can sandbox tenants with Copilot be renewed once the licenses expire?
+#### Can ISV sandbox tenants with Copilot be renewed once the licenses expire?
 
-Yes. If you continue to qualify for the Microsoft 365 E5 Developer SKU V2, your development environment will auto-renew.
+Yes. If you continue to qualify for the ISV sandbox tenant (Microsoft 365 E5 Developer SKU V2), your development environment will auto-renew.
 
 #### I'm not an ISV and I don't have a Microsoft Copilot license. Can I develop for Copilot for Microsoft 365?
 
