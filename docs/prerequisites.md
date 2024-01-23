@@ -57,11 +57,11 @@ As a developer, you'll need the ability to [sideload custom apps](/microsoftteam
 
 ### Enabling developer mode
 
-You can use *developer mode* while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt. From  *M365 Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
+You can use *developer mode* for M365 Chat while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt. From  *M365 Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `M365 Chat` session where user has typed `-developer on` to successfully enable developer mode":::
 
-For more info, see [Debugging plugin selection](/orchestrator.md#debugging-plugin-selection).
+Developer mode is only available within M365 Chat (Copilot for Microsoft 365) experiences and does not surface in Microsoft Copilot (Copilot with Bing) chat. For more info, see [Debugging plugin selection](orchestrator.md#debugging-plugin-selection).
 
 ## Security and privacy
 

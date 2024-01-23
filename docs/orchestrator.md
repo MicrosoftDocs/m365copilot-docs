@@ -442,9 +442,9 @@ If no plugins were enabled, the debug info card will return empty.
 
 If no enabled plugin matched the search intent of the prompt, the debug info card will report *No functions selected for execution*. If Copilot was previously matching and executing your plugin functions successfully, this could be an indication of throttling.
 
-#### Card with empty *Function execution details*
+#### Card with empty or failed *Function execution details*
 
-For non-message extension plugins, if the function execution details or request status is empty, it indicates a failure during Copilot's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it is most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your Open API definition.
+For non-message extension plugins, if the function execution details or request status is empty or failed, it indicates a failure during Copilot's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it is most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your Open API definition.
 
 #### Card with function execution response status of `0`
 
