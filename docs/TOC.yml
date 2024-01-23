@@ -1,4 +1,3 @@
-
 - name: Microsoft Copilot for Microsoft 365 extensibility
   href: index.md
 - name: Get started
@@ -68,5 +67,5 @@
   href: publish.md
 - name: Samples
   href: samples.md
-- name: Microsoft Q&A
-  href: /answers/tags/466/copilot-m365-development
+- name: Support and feedback
+  href: feedback.md
