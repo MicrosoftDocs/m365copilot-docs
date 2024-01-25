@@ -446,7 +446,7 @@ If no enabled plugin matched the search intent of the prompt, the debug info car
 
 For non-message extension plugins, if the function execution details or request status is empty or failed, it indicates a failure during Copilot's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it is most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your Open API definition.
 
-For message extension plugins, note that a nine second maximum response time is enforced. For more more info, review the [technical requirements](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#technical-requirements) for message extension plugins.
+For message extension plugins, best practice is to optimize for responses under nine seconds. For more more info, review the [technical requirements](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#technical-requirements) for message extension plugins.
 
 #### Card with function execution response status of `0`
 
