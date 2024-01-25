@@ -55,6 +55,14 @@ During the public preview of plugins, customers who are licensed for Copilot in 
 
 As a developer, you'll need the ability to [sideload custom apps](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) in order to install, test and debug message extension apps and plugins directly in the Teams environment without having to publish to your organization. An administrator must [enable custom app uploading](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) in your Microsoft 365 tenant (sandbox or production).
 
+### Enabling developer mode
+
+You can use *developer mode* for M365 Chat while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt. From  *M365 Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
+
+:::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `M365 Chat` session where user has typed `-developer on` to successfully enable developer mode":::
+
+Developer mode is only available within M365 Chat (Copilot for Microsoft 365) experiences and does not surface in Microsoft Copilot (Copilot with Bing) chat. For more info, see [Debugging plugin selection](orchestrator.md#debugging-plugin-selection).
+
 ## Security and privacy
 
 Copilot uses existing permissions and policies to deliver the most relevant information, building on top of our existing commitments to data security and data privacy in the enterprise. For details on how Copilot uses and protects organizational data, see [Data, Privacy, and Security for Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/microsoft-365-copilot-privacy). For data privacy and security considerations for developing different Copilot extensibility solutions, see [Data, Privacy, and Security considerations of extending Copilot for Microsoft 365](data-privacy-security.md).
