@@ -434,13 +434,21 @@ Here are some common failures you might encounter when debugging plugin executio
 
 If the orchestrator doesn't require your Microsoft 365 data or skills to respond to a prompt, no debug info card will be returned.
 
+Debug cards are also not returned in cases of capacity throttling, where you will typically see an error message to try again later.
+
 #### Empty debug card
 
 If no plugins were enabled, the debug info card will return empty.
 
+#### Card with empty *Matched functions*
+
+If relevant plugins are enabled, yet no matched functions were returned for the given prompt, this likely indicates the prompt did not explicitly mention the plugin name.
+
 #### Card with empty *Selected functions for execution*
 
-If no enabled plugin matched the search intent of the prompt, the debug info card will report *No functions selected for execution*. If Copilot was previously matching and executing your plugin functions successfully, this could be an indication of throttling.
+If no enabled plugin matched the search intent of the prompt, the debug info card will report *No functions selected for execution*. This is likely because the command description in the manifest is not semantically related to the  search intent of the given prompt.
+
+If Copilot was previously matching and executing your plugin functions successfully, this could be an indication of throttling.
 
 #### Card with empty or failed *Function execution details*
 
