@@ -5,7 +5,8 @@ on:
     branches: [ main, live ]
   push:
     branches: [ main, live ]
-
+permissions: 
+  pull-requests: read
 jobs:
   lint:
     name: Lint and spell-check
