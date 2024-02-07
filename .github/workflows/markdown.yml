@@ -5,14 +5,16 @@ on:
     branches: [ main, live ]
   push:
     branches: [ main, live ]
-
+permissions:
+  pull-requests: read
+  contents: read
 jobs:
   lint:
     name: Lint and spell-check
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Lint
       uses: DavidAnson/markdownlint-cli2-action@v9
       with:
