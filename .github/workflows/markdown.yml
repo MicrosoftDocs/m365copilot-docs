@@ -20,6 +20,6 @@ jobs:
       with:
         globs: '**/*.md'
     - name: Spell check
-      uses: streetsidesoftware/cspell-action@v5
+      uses: streetsidesoftware/cspell-action@v2
       with:
         files: '**/*.{md,yml}'
