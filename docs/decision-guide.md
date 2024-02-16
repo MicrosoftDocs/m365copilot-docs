@@ -51,7 +51,7 @@ This is an example of writable data with a message extension. This plugin manage
 > [!TIP]
 > You can find the sample code for *Northwind Inventory* plugin at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#teams-message-extension-samples).
 
-**Coming soon**: Copilot can take action on prompts by analyzing the input and using machine learning techniques to generate new content. Copilot can look at the commands available in the plugin based on the descriptions of it and its parameters. Copilot will then use relevant data it has access to to "stuff" these into the parameters and call the command.
+**Coming soon**: Copilot can take action on prompts by analyzing the input and using machine learning techniques to generate new content. Copilot can look at the commands available in the plugin based on the descriptions of it and its parameters. Copilot will then use relevant data it has access to and "stuff" these into the parameters and call the command.
 
 ## Benefits
 
