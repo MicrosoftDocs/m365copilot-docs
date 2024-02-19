@@ -147,8 +147,6 @@ Message extension plugin developers should handle all potential prompt scenarios
 Multi-parameters can be more complex with multiple inquiries, such as:
 > We've been receiving partial orders for tofu. Find the supplier in Northwind and draft an email summarizing our inventory and reminding them they should stop sending partial orders per our MOQ policy.
 
-
-
 ## Next step
 
 Learn prerequisites for building connectors and plugins:
