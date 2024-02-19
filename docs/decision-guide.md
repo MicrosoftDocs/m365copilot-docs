@@ -117,7 +117,7 @@ Unlike Graph Connected external items that are part of Microsoft Graph and immed
 
 ### Data can leave compliance boundary
 
-Graph Connectors inserts external items into the Microsoft Graph. When Copilot selects a Plugin as part of its orchestration, it calls the bot framework commmand and populates the parameters with data based on the description of the parameters. THe data it provides can be any of the data available to it in Microsoft 365 or other data provided by Plugins in the conversational session. The bot framework commands are hosted externally to the Microsoft 365 boundary.
+Graph Connectors inserts external items into the Microsoft Graph. When Copilot selects a Plugin as part of its orchestration, it calls the bot framework command and populates the parameters with data based on the description of the parameters. THe data it provides can be any of the data available to it in Microsoft 365 or other data provided by Plugins in the conversational session. The bot framework commands are hosted externally to the Microsoft 365 boundary.
 
 ### Performance depends on developers
 
@@ -125,11 +125,11 @@ The Plugin bot framework commands that are invoked by Copilot are external and t
 
 ### Power Platform licenses required
 
-To build with Copilot Studio is included as part of the Microsoft Copilot licneses. If the Plugin uses Power Platform Connectors the required licenses are required to execute them.
+To build with Copilot Studio is included as part of the Microsoft Copilot licenses. If the Plugin uses Power Platform Connectors the required licenses are required to execute them.
 
 ### No sideloading
 
-There is no ability to side load with Graph Connectors. As a developer you will need Entra ID admin access to your tenant to register and consert the required Graph permission and also the Search Administrator role to deploy your Graph Connector to Copilot.
+There is no ability to side load with Graph Connectors. As a developer you will need Entra ID admin access to your tenant to register and consent the required Graph permission and also the Search Administrator role to deploy your Graph Connector to Copilot.
 
 ### No Continuous Integration experience
 
@@ -137,7 +137,7 @@ Low code IDE does not have an ability to check in source code currently in to a 
 
 ### Potentially sync External Group ACLs
 
-If you don't implement Entra ID Groups in your system, you will need to create External Groups calling Graph APIs and maintain sync state of the memebership of these groups with your systems groups.
+If you don't implement Entra ID Groups in your system, you will need to create External Groups calling Graph APIs and maintain sync state of the membership of these groups with your systems groups.
 
 ### Multi-parameter prompt complexity
 
