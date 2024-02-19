@@ -25,7 +25,7 @@ There are many factors that you want to consider when deciding which option to p
 Consider your data: how it's structured, the level of volume and activity you expect, and the required data access.
 
 | Solution | Data structure | Data volume | Data activity | Summarize/ Act |
-|:-------|:-------|:---------|:----------|:----------| 
+|-------|-------|---------|----------|----------|
 | **Graph connectors** | [Un-structured or flattened data](#unstructured-data) | Up to 5M items per connection | Up to 20 requests per second | [Summarize](#summarize) only |
 | **Message extension plugins** | [Structured data](#structured-data) | Suitable for high volume data (Over 5M) | Suitable for high activity (Over 20 req/sec.)  | [Summarize](#summarize) + [Act](#act) |
 | **Copilot Studio plugins** | [Structured data](#structured-data) | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M) | [Summarize](#summarize) only |
