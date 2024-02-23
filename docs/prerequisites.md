@@ -15,7 +15,8 @@ This article summarizes the developer environment prerequisites and requirements
 
 ## Prerequisites
 
-Developers have two ways to obtain a developer environment for Copilot: 
+Developers have two ways to obtain a developer environment for Copilot:
+
 1. With a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](#isv-partners-in-microsoft-365-developer-tap)).
 2. With an eligible Microsoft 365 or Office 365 production environment with a Copilot for Microsoft 365 license.
 
