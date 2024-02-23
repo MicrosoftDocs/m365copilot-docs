@@ -49,7 +49,7 @@ To learn more and choose the best extensibility path for you and your customer, 
 
 ### Requirements for plugin development
 
-During the public preview of plugins, customers who are licensed for Copilot in **production** will need an administrator to enable their tenant for the preview by submitting a support ticket using the sentence "enable plugins for Copilot for Microsoft 365" within the ticket, or making a request to their Microsoft Customer Success Account Manager.
+During the public preview, customers with a Copilot licenses can extend Copilot and build plugins.
 
 #### Requirements for Teams message extension development
 
