@@ -27,7 +27,7 @@ When developing with Copilot in production environments, be aware of potential a
 
 ### ISV Partners in Microsoft 365 Developer TAP
 
-We recommend that our ISV partners who build multitenant solutions acquire a new sandbox Microsoft 365 tenant with Copilot. Interested ISVs must be members of the [Microsoft 365 Developer Technology Adoption Program (TAP)](https://aka.ms/m365devtap).
+We recommend that our ISV partners who build multi-tenant solutions acquire a new sandbox Microsoft 365 tenant with Copilot. Interested ISVs must be members of the [Microsoft 365 Developer Technology Adoption Program (TAP)](https://aka.ms/m365devtap).
 
 ### Customers with existing Microsoft 365 and Copilot licenses
 
