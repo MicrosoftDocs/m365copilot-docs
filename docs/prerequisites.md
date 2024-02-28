@@ -52,7 +52,7 @@ To learn more and choose the best extensibility path for you and your customer, 
 
 ### Requirements for plugin development
 
-During the public preview, customers with a Copilot license can extend Copilot and build plugins. For the requisites to create conversational and AI plugins with Copilot Studio see: [Create and configure copilot plugins with Copilot Studio](/power-virtual-agents/copilot-plugins-overview#prerequisites).
+During the public preview, customers with a Copilot license can extend Copilot and build plugins. For the requisites to create conversational and AI plugins with Copilot Studio see: [Create and configure copilot plugins with Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview#prerequisites).
 
 #### Requirements for Teams message extension development
 
