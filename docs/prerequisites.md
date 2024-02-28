@@ -17,7 +17,7 @@ This article summarizes the developer environment prerequisites and requirements
 
 Developers have two ways to obtain a developer environment for Copilot:
 
-1. With a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](#isv-partners-in-microsoft-365-developer-tap)).
+1. With a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [Microsoft 365 Developer Technology Adoption Program (TAP) membership](#isv-partners-in-microsoft-365-developer-tap)).
 2. With an eligible Microsoft 365 or Office 365 production environment with a Copilot for Microsoft 365 license.
 
 > [!NOTE]
@@ -60,11 +60,11 @@ As a developer, you need the ability to [sideload custom apps](/microsoftteams/p
 
 ### Enabling developer mode
 
-You can use *developer mode* for Microsoft 365 Chat while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt. From  *M365 Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
+You can use *developer mode* for **M365 Chat** while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt. From  *M365 Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `M365 Chat` session where user has typed `-developer on` to successfully enable developer mode":::
 
-Developer mode is only available within Microsoft 365 Chat (Copilot for Microsoft 365) experiences and doesn't surface in Microsoft Copilot (Copilot with Bing) chat. For more info, see [Debugging plugin selection](orchestrator.md#debugging-plugin-selection).
+Developer mode is only available within **M365 Chat** (Copilot for Microsoft 365) experiences and doesn't surface in Microsoft Copilot (Copilot with Bing) chat. For more info, see [Debugging plugin selection](orchestrator.md#debugging-plugin-selection).
 
 ## Security and privacy
 
