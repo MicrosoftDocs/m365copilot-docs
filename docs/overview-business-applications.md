@@ -63,6 +63,7 @@ You can also create new plugins using Power Platform components in Microsoft Cop
     :::image type="content" source="assets/images/overview-business-applications/integrated-apps-dynamics365.png" alt-text="This screenshot shows Microsoft Dynamics 365 as an available integrated app in Microsoft 365 admin center." lightbox="assets/images/overview-business-applications/integrated-apps-dynamics365.png":::
 
     > [!TIP]
+    >
     > - For Power Automate flows, search for "Power Automate" app.
     > - For Power Platform connector plugins, search for the respective connector names. For example, FreshDesk.
 
