@@ -11,7 +11,7 @@ ms.date: 03/01/2024
 # Build plugins using Microsoft business applications
 
 > [!IMPORTANT]
-> Microsoft business applications plugins for Microsoft Copilot for Microsoft 365 are in gated preview. During the preview, production tenants must be licensed with Microsoft Copilot for Microsoft 365 and must opt-in to enable plugins by either contacting Microsoft Customer Success Account Manager or by submitting a support ticket with title "Enable Copilot plugins for Tenants".
+> Microsoft business applications plugins for Microsoft Copilot for Microsoft 365 are in gated preview. During the preview, production tenants must be licensed for Copilot for Microsoft 365 and an administrator must opt-in to enable plugins by either contacting their Microsoft Customer Success Account Manager or by submitting a support ticket with the title "Enable Copilot plugins for tenants".
 
 Microsoft business applications include a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent consisting of Microsoft Dynamics 365 and Microsoft Power Platform.
 
@@ -23,53 +23,53 @@ Using Dynamics 365 and Power Platform, you can create plugins for Microsoft Copi
 
 ## Plugins for Microsoft Copilot
 
-Plugins for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and Power Platform components such as Power Automate flows, certified connectors or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot will use the appropriate plugin able to address the questions of an end user in the application. Following are the built-in plugins shipped to you.
+Plugins for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and Power Platform components such as Power Automate flows, certified connectors or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot will use the appropriate plugin able to address the questions of an end user in the application. The following built-in plugins are available.
 
 - Plugins from Microsoft Dynamics 365 apps
-    - [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales) (preview)
-    - [Dynamics 365 Customer Service](/dynamics365/customer-service/administer/cs-region-availability-service-limits?branch=mg-copilot-faq) (preview)
-    - [Dynamics 365 Field Service](/dynamics365/field-service/flw-m365-chat) (preview)
-    - [Dynamics 365 Supply Chain](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot) (preview)
+  - [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales) (preview)
+  - [Dynamics 365 Customer Service](/dynamics365/customer-service/administer/cs-region-availability-service-limits?branch=mg-copilot-faq) (preview)
+  - [Dynamics 365 Field Service](/dynamics365/field-service/flw-m365-chat) (preview)
+  - [Dynamics 365 Supply Chain](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot) (preview)
 - Plugins for [Microsoft Power Platform connectors](/connectors/create-a-connector-ai-plugin#supported-queries-for-certified-connectors)
-    - FreshDesk
-    - GitHub
-    - MailChimp
-    - MSN Weather
-    - SalesForce
-    - Zendesk
+  - FreshDesk
+  - GitHub
+  - MailChimp
+  - MSN Weather
+  - SalesForce
+  - Zendesk
 - Plugins for Microsoft Power Automate flows
-    - List my tasks from To Do and Planner
-    - List my pending approvals
+  - List my tasks from To Do and Planner
+  - List my pending approvals
 
 You can also create new plugins using Power Platform components in Microsoft Copilot Studio. For more information, see [Create and configure copilot plugins (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
 
-## Get Microsoft Copilot for Microsoft 365 licenses and set up the plugin
+## Get Copilot for Microsoft 365 licenses and set up a plugin
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-1. Obtain the appropriate number of [Microsoft 365 Copilot licenses](/microsoft-365-copilot/microsoft-365-copilot-setup#manage-licenses-for-copilot).
+1. Obtain the appropriate number of [Copilot for Microsoft 365 licenses](/microsoft-365-copilot/microsoft-365-copilot-setup#provision-copilot-for-microsoft-365-licenses).
 
-1. Raise a support ticket with title "Enable Copilot plugins for Tenants" to prepare your tenant for plugins. Once the ticket is resolved, move to next step.
+1. Raise a support ticket with title "Enable Copilot plugins for tenants" to prepare your tenant for plugins. Once the ticket is resolved, move to next step.
 
 1. To setup the plugin:
 
     - Sign in to the Microsoft 365 admin center with your admin account.
     - Expand **Settings** on the side navigation pane and select **Integrated apps**.
-    - Under the **Available apps** tab, search for the plugin.
+    - Under the **Available apps** tab, search for the plugin you want to deploy.
 
-        :::image type="content" source="assets/images/overview-business-applications/integrated-apps-dynamics365.png" alt-text="This screenshot shows Microsoft Dynamics 365 as available integrated app in Microsoft 365 admin center.":::
+        :::image type="content" source="assets/images/overview-business-applications/integrated-apps-dynamics365.png" alt-text="This screenshot shows Microsoft Dynamics 365 as an available integrated app in Microsoft 365 admin center." lightbox="assets/images/overview-business-applications/integrated-apps-dynamics365.png":::
 
         > [!TIP]
         > - For Power Automate flows, search for "Power Automate" app.
         > - For Power Platform connector plugins, search for the respective connector names. For example, FreshDesk.
 
-    - Select an integrated app containing the plugin to block or deploy.
+    - Select an integrated app containing the plugin to deploy.
 
-        :::image type="content" source="assets/images/overview-business-applications/microsoft-dynamics-365.png" alt-text="This screenshot shows Microsoft 365 admin center section where you can deploy or block an integrated app.":::
+        :::image type="content" source="assets/images/overview-business-applications/microsoft-dynamics-365.png" alt-text="This screenshot shows Microsoft 365 admin center section where you can deploy or block an integrated app." lightbox="assets/images/overview-business-applications/microsoft-dynamics-365.png":::
 
-    - Open **Users** tab, choose to deploy for all users, a specific set of users, or yourself.
+    - Select **Next** to open the **Users** tab, choose to deploy for all users, a specific set of users, or yourself.
 
-        :::image type="content" source="assets/images/overview-business-applications/deploy-d365.png" alt-text="This screenshot shows the option to deploy app to all users  or to specific users.":::
+        :::image type="content" source="assets/images/overview-business-applications/deploy-d365.png" alt-text="This screenshot shows the option to deploy an app to all users or to specific users.":::
 
     - Select **Update**.
 
@@ -126,9 +126,7 @@ Use Microsoft Copilot Studio to create Topics, enabling customers to craft custo
 
 ## Use plugins
 
-After plugins are created, you should publish them which then starts appearing in AI Plugins page in Microsoft Copilot Studio.
-
-To use these plugins created in Microsoft Copilot Studio, you should search and deploy "Copilot Studio" app in Microsoft 365 admin center > Settings > Integrated apps.
+After a plugin is created, publish is so it appears in the AI Plugins page in Microsoft Copilot Studio. To use plugins created in Microsoft Copilot Studio, deploy the "Copilot Studio" app in Microsoft 365 admin center > Settings > Integrated apps.
 
 ### See also
 
