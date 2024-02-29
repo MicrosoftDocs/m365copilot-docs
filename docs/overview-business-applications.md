@@ -105,7 +105,7 @@ You can create new Copilot plugins in Microsoft Copilot Studio, which requires a
 
 There are multiple starting points for plugin development. You can extend the built-in plugins or you can create a new plugin. For extending the built-in plugins, refer to respective plugins page.
 
-For plugin creation, you can start with a custom prompt or a power platform connector or a topic.
+For plugin creation, you can start with a custom prompt, a Power Platform connector, or a conversational plugin.
 
 ### Start with a custom prompt
 
