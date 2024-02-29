@@ -41,7 +41,7 @@ Plugins for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and P
     - List my tasks from To Do and Planner
     - List my pending approvals
 
-You can also create new plugins using Power Platform components in Microsoft Copilot Studio. For more information, see [<u>Create and configure copilot plugins (preview)</u>](https://learn.microsoft.com/en-us/microsoft-copilot-studio/copilot-plugins-overview).
+You can also create new plugins using Power Platform components in Microsoft Copilot Studio. For more information, see [Create and configure copilot plugins (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
 
 ## Get Microsoft Copilot for Microsoft 365 licenses and set up the plugin
 
