@@ -4,12 +4,14 @@ description: Extend Microsoft Copilot for Microsoft 365 using Microsoft Dynamics
 author: tapanm-msft
 ms.author: tapanm
 ms.topic: overview
-ms.date: 11/15/2023
+ms.date: 03/01/2024
 ---
+
 
 # Build plugins using Microsoft business applications
 
-[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+> [!IMPORTANT]
+> Microsoft business applications plugins for Microsoft Copilot for Microsoft 365 are in gated preview. During the preview, production tenants must be licensed with Microsoft Copilot for Microsoft 365 and must opt-in to enable plugins by either contacting Microsoft Customer Success Account Manager or by submitting a support ticket with title "Enable Copilot plugins for Tenants".
 
 Microsoft business applications include a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent consisting of Microsoft Dynamics 365 and Microsoft Power Platform.
 
@@ -21,55 +23,112 @@ Using Dynamics 365 and Power Platform, you can create plugins for Microsoft Copi
 
 ## Plugins for Microsoft Copilot
 
-Plugins for Microsoft Copilot in Power Platform leverage Power Platform components such as Power Automate flows, certified connectors or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot will use the appropriate plugin able to address the questions of an end user in the application. For more information, see [Create and configure copilot plugins (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
+Plugins for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and Power Platform components such as Power Automate flows, certified connectors or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot will use the appropriate plugin able to address the questions of an end user in the application. Following are the built-in plugins shipped to you.
+
+- Plugins from Microsoft Dynamics 365 apps
+    - [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales) (preview)
+    - [Dynamics 365 Customer Service](/dynamics365/customer-service/administer/cs-region-availability-service-limits?branch=mg-copilot-faq) (preview)
+    - [Dynamics 365 Field Service](/dynamics365/field-service/flw-m365-chat) (preview)
+    - [Dynamics 365 Supply Chain](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot) (preview)
+- Plugins for [Microsoft Power Platform connectors](/connectors/create-a-connector-ai-plugin#supported-queries-for-certified-connectors)
+    - FreshDesk
+    - GitHub
+    - MailChimp
+    - MSN Weather
+    - SalesForce
+    - Zendesk
+- Plugins for Microsoft Power Automate flows
+    - List my tasks from To Do and Planner
+    - List my pending approvals
+
+You can also create new plugins using Power Platform components in Microsoft Copilot Studio. For more information, see [<u>Create and configure copilot plugins (preview)</u>](https://learn.microsoft.com/en-us/microsoft-copilot-studio/copilot-plugins-overview).
+
+## Get Microsoft Copilot for Microsoft 365 licenses and set up the plugin
+
+1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
+
+1. Obtain the appropriate number of [Microsoft 365 Copilot licenses](/microsoft-365-copilot/microsoft-365-copilot-setup#manage-licenses-for-copilot).
+
+1. Raise a support ticket with title "Enable Copilot plugins for Tenants" to prepare your tenant for plugins. Once the ticket is resolved, move to next step.
+
+1. To setup the plugin:
+
+    - Sign in to the Microsoft 365 admin center with your admin account.
+    - Expand **Settings** on the side navigation pane and select **Integrated apps**.
+    - Under the **Available apps** tab, search for the plugin.
+
+        :::image type="content" source="assets/images/overview-business-applications/integrated-apps-dynamics365.png" alt-text="This screenshot shows Microsoft Dynamics 365 as available integrated app in Microsoft 365 admin center.":::
+
+        > [!TIP]
+        > - For Power Automate flows, search for "Power Automate" app.
+        > - For Power Platform connector plugins, search for the respective connector names. For example, FreshDesk.
+
+    - Select an integrated app containing the plugin to block or deploy.
+
+        :::image type="content" source="assets/images/overview-business-applications/microsoft-dynamics-365.png" alt-text="This screenshot shows Microsoft 365 admin center section where you can deploy or block an integrated app.":::
+
+    - Open **Users** tab, choose to deploy for all users, a specific set of users, or yourself.
+
+        :::image type="content" source="assets/images/overview-business-applications/deploy-d365.png" alt-text="This screenshot shows the option to deploy app to all users  or to specific users.":::
+
+    - Select **Update**.
+
+    Now that the selected integrated app with plugin is deployed, ensure the applicable Power Platform environment is enabled to allow Microsoft 365 Copilot using the next steps.
+
+1. Consent to moving data across regions using the steps described in [data movement across regions](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions) article. For more information, see [How data movement across regions works](/power-platform/admin/geographical-availability-copilot#how-data-movement-across-regions-works).
+
+> [!NOTE]
+> The "apps" appear under Microsoft 365 admin center > Settings > Integrated Apps is called as "Titles".
+
+## Use the built-in plugins in Microsoft 365 Chat in Microsoft Teams
+
+You can use the built-in plugins shipped by Microsoft in your M365 Chat in Microsoft Teams. Here are the steps to use:
+
+1. Login to Teams app with your credentials.
+
+1. Open the Copilot app. You can have couple of different versions installed in your teams client like "M365 Chat" or "Copilot". For best results, use the latest version.
+
+    :::image type="content" source="assets/images/overview-business-applications/m365-chat.png" alt-text="This screenshot shows the M365 chat experience.":::
+
+    In case you don't find the copilot, search in Teams store. Here is how the Copilot window looks like with a plugin flyout.
+
+    :::image type="content" source="assets/images/overview-business-applications/plugin-flyout.png" alt-text="This screenshot shows the plugin flyout highlighted.":::
+
+1. Select the plugin flyout and enable the plugin (toggle on) you want to use from the plugin flyout.
+
+    :::image type="content" source="assets/images/overview-business-applications/plugins.png" alt-text="This screenshot shows the plugins listed in chat experience.":::
+
+1. Start a natural language conversation and get results.
+
+    :::image type="content" source="assets/images/overview-business-applications/example.png" alt-text="This screenshot shows an example text for search and to get the results.":::
+
+## Create plugins
 
 ### Plugin development paths
 
-There are multiple starting points for creating a plugin.
+There are multiple starting points for plugin development. You can extend the built-in plugins or you can create a new plugin. For extending the built-in plugins, refer to respective plugins page.
 
-#### Start with a custom prompt
+For plugin creation, you can start with a custom prompt or a power platform connector or a topic.
 
-Prompts allow generating content using natural language which includes summarizing, classifying, extracting entities, translating, assessing sentiment and much more. To learn more, see [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context).
+### Start with a custom prompt
+
+Prompts allow generating content using natural language which includes summarizing, classifying, extracting entities, translating, assessing sentiment and much more. To learn more, see [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context).
 
 We are adding the ability to use your data to provide improved answers soon.
 
-#### Start with a Power Platform connector
+### Start with a Power Platform connector
 
-Power Platform connectors allow retrieving and updating data from data sources accessed through APIs. Connectors make it possible to access data from popular Enterprise systems such as Salesforce, Zendesk, MailChimp and Github and are routinely used by makers in their Power Apps and flows. To learn more, see [Create a plugin from a connector (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context).
+Power Platform connectors allow retrieving and updating data from data sources accessed through APIs. Connectors make it possible to access data from popular Enterprise systems such as Salesforce, Zendesk, MailChimp and Github and are routinely used by makers in their Power Apps and flows. To learn more, see [Create a plugin from a connector (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context).
 
-#### Start with a Topic
+### Start with a Topic
 
-Use Microsoft Copilot Studio to create Topics, enabling customers to craft custom plugins that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external API's via connectors, and send summary results to the user. To learn more, see [Create a Topic (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context).
-
-## Enable integrated apps with plugins for Microsoft Copilot for Microsoft 365
-
-Microsoft 365 admins can manage integrated apps with plugins for Microsoft Copilot in the Microsoft 365 admin center. To access the settings, you need to be a global administrator or a service administrator. Follow these steps to access the plugins settings:
-
-1. Sign into the Microsoft 365 admin center with your admin account.
-
-1. Go to **Settings** &gt; **Integrated apps**.
-
-1. Under the **Available apps** tab, search for the plugin.
-
-    :::image type="content" source="assets/images/overview-business-applications/integrated-apps-dynamics365.png" alt-text="This screenshot shows Microsoft Dynamics 365 as available integrated app in Microsoft 365 admin center.":::
-
-1. Select an integrated app containing the plugin to block or deploy.
-
-    :::image type="content" source="assets/images/overview-business-applications/deploy-block-app.png" alt-text="This screenshot shows Microsoft 365 admin center section where you can deploy or block an integrated app.":::
-
-1. Choose to deploy for all users, a specific set of users, or yourself.
-
-    :::image type="content" source="assets/images/overview-business-applications/select-users.png" alt-text="This screenshot shows the option to deploy app to all users, or to specific users.":::
-
-1. Select **Update**.
-
-Now that the selected integrated app with plugin is deployed, ensure the applicable Power Platform environment is enabled to allow Microsoft 365 Copilot using the next steps.
+Use Microsoft Copilot Studio to create Topics, enabling customers to craft custom plugins that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external API's via connectors, and send summary results to the user. To learn more, see [Create a Topic (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context).
 
 ## Use plugins
 
-After plugins are created or enabled, you can share them, and use [plugins in Microsoft Copilot](/microsoft-copilot-studio/copilot-plugins-overview).
+After plugins are created, you should publish them which then starts appearing in AI Plugins page in Microsoft Copilot Studio.
 
-You can also use plugins available in Dynamics 365 apps such as [Finance, Supply Chain Management](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot), and [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales).
+To use these plugins created in Microsoft Copilot Studio, you should search and deploy "Copilot Studio" app in Microsoft 365 admin center > Settings > Integrated apps.
 
 ### See also
 
