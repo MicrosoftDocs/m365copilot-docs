@@ -4,7 +4,6 @@ description: Extend Microsoft Copilot for Microsoft 365 using Microsoft Dynamics
 author: tapanm-msft
 ms.author: tapanm
 ms.topic: overview
-ms.date: 03/01/2024
 ---
 
 
