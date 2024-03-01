@@ -36,6 +36,7 @@ Plugins for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and P
   - MSN Weather
   - SalesForce
   - ServiceNow
+  - Twilio
   - Zendesk
 - Plugins for Microsoft Power Automate flows
   - List my tasks from To Do and Planner
