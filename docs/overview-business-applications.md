@@ -132,7 +132,7 @@ To comply with data residency requirements, only a subset of environments (top 2
 
 1. Open [portal.azure.com](https://portal.azure.com/) and click on the **Tenant** properties. Note down the *Country or Region* associated with your tenant.  
 
-2. Open Power Platform Admin Center, select the **Environments** page and sort all environments by *Type*, *Region* and *Created on* (descending).
+2. Open [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/), select the **Environments** page and sort all environments by *Type*, *Region* and *Created on* (descending).
 
 3. In the first 20 environments you find where *Type* is “Production”, the allowlisted environments are the ones with their region matching the region associated with your tenant.
 
