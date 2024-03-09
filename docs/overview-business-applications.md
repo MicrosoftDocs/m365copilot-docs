@@ -126,6 +126,17 @@ Use Microsoft Copilot Studio to create conversational plugins that retrieve and 
 
 After a plugin is created, publish is so it appears in the AI Plugins page in Microsoft Copilot Studio. To use plugins created in Microsoft Copilot Studio, deploy the "Copilot Studio" app in Microsoft 365 admin center's **Settings** -> **Integrated apps**.
 
+## Known limitations
+To comply to the data residency requirements, only a subset of environments (top 20) are allowed per tenant with M365 Copilot. Eventually this limit will be removed in the upcoming weeks. The following are the steps to identify the allowlisted 20 environments: 
+
+1. Go to [portal.azure.com](https://portal.azure.com/) and click on the Tenant properties. This following screen will show up.  Note down the “Country or Region” associated with your tenant.  
+
+2. Go to Power Platform Admin Center, Environments page and sort all environments by “Type”, “Region” and “Created on” (descending). 
+
+3. The first 20 environments you find where Type is “Production”, Region is matching with the one associated with tenant are the ones allow listed.  
+
+4. In case you want to test the plugins in an environment other than it, then you need to provision a new environment in the same region. Otherwise, you need to wait until the allow listing limits are removed.  
+
 ### See also
 
 - [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context)
