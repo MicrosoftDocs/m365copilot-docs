@@ -1,8 +1,8 @@
 ---
 title: Build plugins using Microsoft business applications
 description: Extend Microsoft Copilot for Microsoft 365 using Microsoft Dynamics 365 apps and Microsoft Power Platform
-author: tapanm-msft
-ms.author: tapanm
+author: jhaskett-msft
+ms.author: jhaskett
 ms.topic: overview
 ---
 
@@ -124,7 +124,19 @@ Use Microsoft Copilot Studio to create conversational plugins that retrieve and 
 
 ## Use plugins
 
-After a plugin is created, publish is so it appears in the AI Plugins page in Microsoft Copilot Studio. To use plugins created in Microsoft Copilot Studio, deploy the "Copilot Studio" app in Microsoft 365 admin center's **Settings** -> **Integrated apps**.
+After a plugin is created, publish it so it appears in the AI Plugins page in Microsoft Copilot Studio. To use plugins created in Microsoft Copilot Studio, deploy the "Copilot Studio" app in Microsoft 365 admin center's **Settings** -> **Integrated apps**.
+
+## Known limitations
+
+To comply with data residency requirements, only a subset of environments (top 20) are allowed per tenant with Copilot for Microsoft 365. This is a temporary limit will be removed in the future. Here's how to identify the allowlisted 20 environments:
+
+1. Open [portal.azure.com](https://portal.azure.com/) and click on the **Tenant** properties. Note down the *Country or Region* associated with your tenant.  
+
+2. Open [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/), select the **Environments** page and sort all environments by *Type*, *Region* and *Created on* (descending).
+
+3. In the first 20 environments you find where *Type* is “Production”, the allowlisted environments are the ones with their region matching the region associated with your tenant.
+
+4. To test plugins in an environment outside of the top 20 that are allowlisted, you can to provision a new environment in the same region. Otherwise, you'll need to wait until the allowlisting limits are removed.  
 
 ### See also
 
