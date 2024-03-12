@@ -38,7 +38,7 @@ Plugins for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and P
   - ServiceNow
   - Twilio
   - Zendesk
-- Plugins for Microsoft Power Automate flows
+- [Plugins for Microsoft Power Automate flows](/power-automate/flow-plugins-m365) (preview)
   - List my tasks from To Do and Planner
   - List my pending approvals
 
