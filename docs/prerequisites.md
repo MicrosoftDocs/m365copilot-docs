@@ -65,7 +65,7 @@ For details see: [Create and configure copilot plugins with Copilot Studio](/mic
 
 As a developer, you need the ability to [sideload custom apps](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) in order to install, test, and debug message extension apps and plugins directly in the Teams environment without having to publish to your organization. An administrator must [enable custom app uploading](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) in your Microsoft 365 tenant (sandbox or production).
 
-[!INCLUDE [preview-disclaimer](~/../msteams-docs/includes/bots/message-extension-plugin-developer-mode.md)
+[!INCLUDE [preview-disclaimer](~/../msteams-docs/includes/bots/message-extension-plugin-developer-mode.md)]
 
 ## Security and privacy
 
