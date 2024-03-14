@@ -27,6 +27,12 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "main",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "msteams-docs",
+      "url": "https://github.com/MicrosoftDocs/msteams-docs/",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {},
