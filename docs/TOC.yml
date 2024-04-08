@@ -39,7 +39,7 @@
           href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
         - name: Create a connector AI plugin (preview)
           href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-        - name: Create a topic (preview)
+        - name: Create a conversational plugin (preview)
           href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
 - name: Build Microsoft Graph connectors
   items:
