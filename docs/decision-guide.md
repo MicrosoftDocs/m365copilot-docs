@@ -125,7 +125,7 @@ The Plugin bot framework commands that are invoked by Copilot are external and t
 
 ### Power Platform licenses required
 
-To build with Copilot Studio is included as part of the Microsoft Copilot licenses. If the Plugin uses Power Platform Connectors the required licenses are required to execute them.
+Building with Copilot Studio is included as part of the Microsoft Copilot license. If the Plugin uses Power Platform Connectors, users require a Power Platform license to use them.
 
 ### No sideloading
 
