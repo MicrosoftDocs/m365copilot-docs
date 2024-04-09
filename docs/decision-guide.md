@@ -129,7 +129,7 @@ To build with Copilot Studio is included as part of the Microsoft Copilot licens
 
 ### No sideloading
 
-There is no ability to side load with Graph Connectors. As a developer you will need Entra ID admin access to your tenant to register and consent the required Graph permission and also the Search Administrator role to deploy your Graph Connector to Copilot.
+There is no ability to side load with Graph Connectors. As a developer you will need Entra ID admin access to your tenant to register and consent to the required Graph permissions. The Search Administrator role is required to deploy your Graph Connector to Copilot.
 
 ### Potentially sync External Group ACLs
 
