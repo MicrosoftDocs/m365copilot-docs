@@ -59,10 +59,10 @@ You may want to explore the pros and cons of each option before making a decisio
 
 | Extensibility option | Benefits    |  Also work with   |
 |:--------------------------------|:--------------------------------|:--------------------------------|
-|  Graph connectors               |  - [Relevance based on user activities](#relevance-based-on-user-activities)  <br/>  - [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin) <br/> - [Data stays within compliance boundary](#data-stays-within-compliance-boundary)              |  - Context IQ <br/> - Viva Topics <br /> -  Enterprise Search in M365.com, SharePoint, and Bing @ work <br /> - Content recommendations in M365 apps    |
-|  Message extension plugins      |   - [Discoverability in Store](#discoverability-in-store) <br/> -   [Enabling branded experience](#enabling-branded-experience)  <br /> -[Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)            | - Outlook <br /> - Teams chat       |
-|  Copilot Studio conversational plugins         |    - Fastest to first run experience <br /> - No coding experience required             |  - Generative answers grounded with public websites, SharePoint, Azure OpenAI, and custom data sources <br /> - Connect to PowerPlatform connectors like SAP, Salesforce, SQL and DataVerse. |
-|  Copilot Studio AI plugins         |    - Fastest to first run experience <br /> - No coding experience required             | - Copilot for M365   |
+|  Graph connectors               |  [Relevance based on user activities](#relevance-based-on-user-activities)  <br/>  [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin) <br/> [Data stays within compliance boundary](#data-stays-within-compliance-boundary)              |  Context IQ <br/> Viva Topics <br /> Enterprise Search in M365.com, SharePoint, and Bing @ work <br /> Content recommendations in M365 apps    |
+|  Message extension plugins      |   [Discoverability in Store](#discoverability-in-store) <br/> [Enabling branded experience](#enabling-branded-experience)  <br /> [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)            | Outlook <br /> Teams chat       |
+|  Copilot Studio conversational plugins         |    Fastest to first run experience <br /> No coding experience required             |  Generative answers grounded with public websites, SharePoint, Azure OpenAI, and custom data sources <br /> Connect to PowerPlatform connectors like SAP, Salesforce, SQL and DataVerse. |
+|  Copilot Studio AI plugins         |    Fastest to first run experience <br /> No coding experience required             | Copilot for M365   |
 
 ### Relevance based on user activities
 
@@ -70,7 +70,7 @@ After you have indexed an external item with Graph Connectors, you can also add 
 
 ### Semantic discovery of content without turning on a plugin
 
-Items indexed using Graph Connectors are part of the Microsoft Graph and therefore immediately accessible for summarization alongside Microsoft 365 content like documents, emails and events of a user. Plugins require that the administrators have enabled plugins, that the Plugin app is installed and enabled by the user.
+Items indexed using Graph Connectors are part of the Microsoft Graph and therefore immediately accessible for summarization alongside Microsoft 365 content like documents, emails and events of a user. Plugins require that the administrators have enabled plugins, that the plugin app is installed and enabled by the user.
 
 ### Discoverability in Store
 
@@ -113,19 +113,19 @@ Now, consider the limitations of each option.
 
 ### Plugins need to be manually enabled
 
-Unlike Graph Connected external items that are part of Microsoft Graph and immediate available to Copilot summarization. Administrators first need to enable Plugins in the tenant as part of Public Preview ([https://aka.ms/extend-Copilot](https://aka.ms/extend-Copilot)). Additionally, the user of Copilot for Microsoft 365 needs to enable the plugin in the plugin management flyout.
+Unlike Graph Connected external items that are part of Microsoft Graph and immediate available to Copilot summarization. Administrators first need to enable plugins in the tenant as part of Public Preview ([https://aka.ms/extend-Copilot](https://aka.ms/extend-Copilot)). Additionally, the user of Copilot for Microsoft 365 needs to enable the plugin in the plugin management flyout.
 
 ### Data can leave compliance boundary
 
-Graph Connectors inserts external items into the Microsoft Graph. When Copilot selects a Plugin as part of its orchestration, it calls the bot framework command and populates the parameters with data based on the description of the parameters. THe data it provides can be any of the data available to it in Microsoft 365 or other data provided by Plugins in the conversational session. The bot framework commands are hosted externally to the Microsoft 365 boundary.
+Graph Connectors inserts external items into the Microsoft Graph. When Copilot selects a plugin as part of its orchestration, it calls the bot framework command and populates the parameters with data based on the description of the parameters. THe data it provides can be any of the data available to it in Microsoft 365 or other data provided by plugins in the conversational session. The bot framework commands are hosted externally to the Microsoft 365 boundary.
 
 ### Performance depends on developers
 
-The Plugin bot framework commands that are invoked by Copilot are external and the response times of it are dependent on the developer hosting it.
+The plugin bot framework commands that are invoked by Copilot are external and the response times of it are dependent on the developer hosting it.
 
 ### Power Platform licenses required
 
-Building with Copilot Studio is included as part of the Microsoft Copilot license. If the Plugin uses Power Platform Connectors, users require a Power Platform license to use them.
+Building with Copilot Studio is included as part of the Microsoft Copilot license. If the plugin uses Power Platform Connectors, users require a Power Platform license to use them.
 
 ### No sideloading
 
