@@ -59,10 +59,10 @@ You may want to explore the pros and cons of each option before making a decisio
 
 | Extensibility option | Benefits    |  Also work with   |
 |:--------------------------------|:--------------------------------|:--------------------------------|
-|  Graph connectors               |  [Relevance based on user activities](#relevance-based-on-user-activities)  <br/>  [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin) <br/> [Data stays within compliance boundary](#data-stays-within-compliance-boundary)              |  Context IQ <br/> Viva Topics <br /> Enterprise Search in M365.com, SharePoint, and Bing @ work <br /> Content recommendations in M365 apps    |
-|  Message extension plugins      |   [Discoverability in Store](#discoverability-in-store) <br/> [Enabling branded experience](#enabling-branded-experience)  <br /> [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)            | Outlook <br /> Teams chat       |
-|  Copilot Studio conversational plugins         |    Fastest to first run experience <br /> No coding experience required             |  Generative answers grounded with public websites, SharePoint, Azure OpenAI, and custom data sources <br /> Connect to PowerPlatform connectors like SAP, Salesforce, SQL and DataVerse. |
-|  Copilot Studio AI plugins         |    Fastest to first run experience <br /> No coding experience required             | Copilot for M365   |
+|  Graph connectors               |  [Relevance based on user activities](#relevance-based-on-user-activities)  <br/> <br/> [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin) <br/> <br/> [Data stays within compliance boundary](#data-stays-within-compliance-boundary)              |  Context IQ <br/> Viva Topics <br/> <br/> Enterprise Search in M365.com, SharePoint, and Bing @ work <br/> <br/> Content recommendations in M365 apps    |
+|  Message extension plugins      |   [Discoverability in Store](#discoverability-in-store) <br/> <br/> [Enabling branded experience](#enabling-branded-experience)  <br/> <br/> [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)            | Outlook <br/>  <br/> Teams chat       |
+|  Copilot Studio conversational plugins         |    Fastest to first run experience <br/> <br/> No coding experience required             |  Generative answers grounded with public websites, SharePoint, Azure OpenAI, and custom data sources <br/> <br/> Connect to PowerPlatform connectors like SAP, Salesforce, SQL and DataVerse. |
+|  Copilot Studio AI plugins         |    Fastest to first run experience <br/> <br/> No coding experience required             | Copilot for M365   |
 
 ### Relevance based on user activities
 
