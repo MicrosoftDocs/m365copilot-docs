@@ -2,7 +2,7 @@
 title: Extensibility options for Microsoft Copilot for Microsoft 365
 description: Understand which type of Microsoft Copilot for Microsoft 365 plugin or connector works best for you
 author: girliemac
-ms.author: jthake-msft
+ms.author: jthake
 ms.topic: conceptual
 ms.date: 12/12/2023
 ---
@@ -57,11 +57,11 @@ This is an example of writable data with a message extension. This plugin manage
 
 You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first.
 
-|                  | Benefits                  |  Also work with       |
+| Extensibility option | Benefits    |  Also work with   |
 |:--------------------------------|:--------------------------------|:--------------------------------|
 |  Graph connectors               |  - [Relevance based on user activities](#relevance-based-on-user-activities)  <br/>  - [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin) <br/> - [Data stays within compliance boundary](#data-stays-within-compliance-boundary)              |  - Context IQ <br/> - Viva Topics <br /> -  Enterprise Search in M365.com, SharePoint, and Bing @ work <br /> - Content recommendations in M365 apps    |
 |  Message extension plugins      |   - [Discoverability in Store](#discoverability-in-store) <br/> -   [Enabling branded experience](#enabling-branded-experience)  <br /> -[Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)            | - Outlook <br /> - Teams chat       |
-|  Copilot Studio conversational plugins         |    - Fastest to first run experience <br /> - No coding experience required             |  - Generative answers grounded with public websites, SharePoint, Azure OpenAI, and custom data sources <br /> - Connect to PowerPlatform connectors like SAP, Salesforce, SQL and Dataverse. |
+|  Copilot Studio conversational plugins         |    - Fastest to first run experience <br /> - No coding experience required             |  - Generative answers grounded with public websites, SharePoint, Azure OpenAI, and custom data sources <br /> - Connect to PowerPlatform connectors like SAP, Salesforce, SQL and DataVerse. |
 |  Copilot Studio AI plugins         |    - Fastest to first run experience <br /> - No coding experience required             | - Copilot for M365   |
 
 ### Relevance based on user activities
@@ -104,7 +104,7 @@ However, it's worth noting that message extensions could enhance user experience
 
 Now, consider the limitations of each option.
 
-|                  | General Limitations                  |  Tooling limitations       |
+| Extensibility option | General Limitations                  |  Tooling limitations       |
 |:--------------------------------|:--------------------------------|:--------------------------------|
 |  Graph connectors               |  - [Max 30 connectors in Tenant](/graph/connecting-external-content-api-limits?branch=main&branchFallbackFrom=pr-en-us-77&context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)<br/>- Relatively low data volume and activity<br/>- App visibility to users <br /> [Graph connectors API limits](/graph/connecting-external-content-api-limits?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)      |  - [No sideloading](#no-sideloading)<br/>- [Potentially sync External Group ACLs](#potentially-sync-external-group-acls)     |
 |  Message extension plugins      |   - Max one million plugins enabled per user <br/> - [Plugins need to be manually enabled](#plugins-need-to-be-manually-enabled)<br/>- [Data can leave compliance boundary](#data-can-leave-compliance-boundary)<br/>- [Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt<br/>- [Performance depends on developers and hosting](#performance-depends-on-developers) <br/> [Technical requirements for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext&tabs=tasks#technical-requirements)     |  - [Multi-parameter prompt complexity](#multi-parameter-prompt-complexity)     |
