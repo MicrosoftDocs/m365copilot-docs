@@ -2,7 +2,7 @@
 title: Extensibility options for Microsoft Copilot for Microsoft 365
 description: Understand which type of Microsoft Copilot for Microsoft 365 plugin or connector works best for you
 author: girliemac
-ms.author: timura
+ms.author: jthake
 ms.topic: conceptual
 ms.date: 12/12/2023
 ---
@@ -18,46 +18,76 @@ Create plugins to extend Copilot's capabilities, such as crafting a Microsoft Te
 You have more than one way to personalize Copilot for Microsoft 365 with the intelligence of external services, apps, and data.
 To start building your connector or plugins, you can select the tools and SDKs based on how you want to develop.
 
-:::image type="content" source="assets/images/decision-making-tree.png" alt-text="Decision-making questions to figure out which Copilot for Microsoft 365 extensibility service you should use" lightbox="assets/images/decision-making-tree.png":::
-
-1. If you are a no-code or low-code developer, who has invested in Power Platform already and wants to expose the external data in Power Platform too, additionally to Copilot, naturally your choice would be Microsoft Power Platform connectors.
-1. If you leverage Microsoft Graph and connect your unstructured enterprise data in Microsoft 365, including Microsoft Search, Context IQ, and the Microsoft 365 app, Graph Connectors would be your option.
-1. And if you would like to connect your structured data in real-time from external sources on the fly, Message Extensions should be your choice. Write the logic using Bot Framework. And if you have built Message Extension apps for Teams before, great news is that your app already has the foundation of a plugin for Copilot! Make sure that your app manifest is up-to-date, and the app meets all criteria if you are publishing as plugin.
-
-There are more factors that you want to consider when deciding which option to pick. If you are a proficient coder who favors a high-level programming option over a no-code or low-code one, you still want to consider the following aspects.
+There are many factors that you want to consider when deciding which option to pick. If you are a proficient coder who favors a high-level programming option over a no-code or low-code one, you still want to consider the following aspects.
 
 ## Data types
 
 Consider your data: how it's structured, the level of volume and activity you expect, and the required data access.
 
-|                    | Graph connectors                | Message extension plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|
-| **Structure**          | Un-structured or flattened data | Structured data |
-| **Data volume**        | Up to 5M items per connection   | Suitable for high volume data (Over 5M) |
-| **Data activity**      | Up to 20 requests per second    | Suitable for high activity (Over 20 req/sec.)|
-| **Read/write**         | Read-only                       | Writable
+| Solution | Data structure | Data volume | Data activity | Summarize/ Act |
+|-------|-------|---------|----------|----------|
+| **Graph connectors** | [Un-structured or flattened data](#unstructured-data) | Up to 5M items per connection | Up to 20 requests per second | [Summarize](#summarize) only |
+| **Message extension plugins** | [Structured data](#structured-data) | Suitable for high volume data (Over 5M) | Suitable for high activity (Over 20 req/sec.)  | [Summarize](#summarize) + [Act](#act) |
+| **Copilot Studio plugins** | [Structured data](#structured-data) | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M) | [Summarize](#summarize) only |
 
-Here is an example of writable data with a message extension. This plugin manages a product inventory, which Copilot searches the data from the inventory and displays the results in Adaptive Card, where it allows a user to modify the stock.
+### Unstructured data
+
+Unstructured data refers to data that is not organized in a predefined manner, such as plain text-based documents, wiki pages, and PDF files. Copilot can be used to analyze and extract information from unstructured data, and generate new content based on the patterns and relationships it identifies. For example, Copilot could analyze company policy documents and answer a question specific to an employee.
+
+### Structured data
+
+Structured data refers to data that is organized in a predefined manner, often in the form of tables with rows and columns. Copilot can be used to analyze and extract information from structured data, and generate new content based on the patterns and relationships it identifies. For example, Copilot could analyze sales data and generate a report summarizing key trends and insights.
+
+### Summarize
+
+Copilot can analyze and extract key information from large amounts of data, and present it in a concise and coherent manner. This can be particularly useful for tasks such as summarizing long documents or email threads, where the AI can identify the most important points and present them in a clear and easy-to-understand format.
+
+### Act
+
+This is an example of writable data with a message extension. This plugin manages a product inventory, which Copilot searches the data from the inventory and displays the results in Adaptive Card, where it allows a user to modify the stock.
 
 :::image type="content" source="assets/images/plugin-example-northwind.png" alt-text="A screenshot that shows an example of writable data via a message extension" lightbox="assets/images/plugin-example-northwind.png":::
 
 > [!TIP]
 > You can find the sample code for *Northwind Inventory* plugin at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#teams-message-extension-samples).
 
-## Benefits and limitations
+**Coming soon**: Copilot can take action on prompts by analyzing the input and using machine learning techniques to generate new content. Copilot can look at the commands available in the plugin based on the descriptions of it and its parameters. Copilot will then use relevant data it has access to and "stuff" these into the parameters and call the command.
 
-You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first:
+## Benefits
 
-|                    | Graph connectors                | Message extension plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|
-| **Benefits**       | <li>Relevance based on user activities  <li>Semantic discovery of content without turning on a plugin<li>Activities (such as view, modify, and shared) with help with ranking and relevance of search results <li>Data stays within compliance boundary| <li>Discoverability in Store <li>Enabling branded experience <li>Better UX with Adaptive Cards|
-| **Developer experience features** | <li>Fast connect, register schema, and index items | <li>Teams Toolkit for Visual Studio & VS Code <li>Sideloading for development & test |
-| **Also work with** | <li>Context IQ <li>Viva Topics <li>Enterprise Search in M365.com, SharePoint, and Bing @ work <li>Content recommendations in M365 apps | <li>Teams chat <li>Outlook |
+You may want to explore the pros and cons of each option before making a decision. Let's take a look at the good parts of each option first.
+
+| Extensibility option | Benefits    |  Also work with   |
+|:--------------------------------|:--------------------------------|:--------------------------------|
+|  Graph connectors               |  [Relevance based on user activities](#relevance-based-on-user-activities)  <br/> <br/> [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin) <br/> <br/> [Data stays within compliance boundary](#data-stays-within-compliance-boundary)              |  Context IQ <br/> <br/> Viva Topics <br/> <br/> Enterprise Search in M365.com, SharePoint, and Bing @ work <br/> <br/> Content recommendations in M365 apps    |
+|  Message extension plugins      |   [Discoverability in Store](#discoverability-in-store) <br/> <br/> [Enabling branded experience](#enabling-branded-experience)  <br/> <br/> [Better UX with Adaptive Cards](#better-ux-with-adaptive-cards)            | Outlook <br/>  <br/> Teams chat       |
+|  Copilot Studio conversational plugins         |    Fastest to first run experience <br/> <br/> No coding experience required             |  Generative answers grounded with public websites, SharePoint, Azure OpenAI, and custom data sources <br/> <br/> Connect to PowerPlatform connectors like SAP, Salesforce, SQL and DataVerse. |
+|  Copilot Studio AI plugins         |    Fastest to first run experience <br/> <br/> No coding experience required             | Copilot for M365   |
+
+### Relevance based on user activities
+
+After you have indexed an external item with Graph Connectors, you can also add activities too (such as view, modify, and shared). These activities improve the relevance of the items such as the users that modified the item, in a similar way to native Microsoft 365 documents.
+
+### Semantic discovery of content without turning on a plugin
+
+Items indexed using Graph Connectors are part of the Microsoft Graph and therefore immediately accessible for summarization alongside Microsoft 365 content like documents, emails and events of a user. Plugins require that the administrators have enabled plugins, that the plugin app is installed and enabled by the user.
+
+### Discoverability in Store
+
+Plugins are deployed via user or admin acquisition through the Teams Store or App Source marketplace. This is a great discoverability benefit of plugins.
+
+### Enabling branded experience
+
+Plugins have more visibility to a user that they available as they are part of the plugin management fly out in the Copilot chat experience.
+
+### Data stays within compliance boundary
 
 For instance, Graph connectors help keep third-party data within the compliance boundary by indexing the data. On the other hand, the real-time data through the use of message extensions are not indexed and can be shared or accessed outside of the defined compliance boundaries. As a plugin developer, you are responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information.
 
 > [!TIP]
 > You can find more information about it at [Data, Privacy, and Security for Microsoft Copilot for Microsoft 365 extensibility](data-privacy-security.md).
+
+### Better UX with Adaptive Cards
 
 This screen below shows a sample response from Copilot, utilizing data from Graph connector. The Graph connector indexes issues and repositories from GitHub, presenting the results in plain text as opposed to an Adaptive Card format. By comparing this with the Message extension example shown earlier, you can see the differences between them.
 
@@ -70,13 +100,42 @@ However, it's worth noting that message extensions could enhance user experience
 > [!TIP]
 > You can find the sample code for *Microsoft Graph TypeScript GitHub connector* at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#microsoft-graph-connector-samples).
 
-Now, consider the limitations of each option:
+## Limitations
 
-|                    | Graph connectors                | Message extension plugins       |
-|:-------------------|:--------------------------------|:--------------------------------|
-| **Limitations** | <li>Max 30 connectors in Tenant <li>Relatively low data volume and activity <li>App visibility to users | <li>Max one million plugins enabled per user <li>Plugins need to be manually enabled <li>Data can leaves compliance boundary  <li>[Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt <li>Performance depends on developers & hosting|
-| **Developer experience limitations**  | <li>No tools for Visual Studio & VS Code <li>No sideloading <li>Need to keep in sync with the access control list (ACL) manually if you are in external groups outside of Entra ID (Azure AD) group | <li>Steep learning curve <li>More time to develop <li>Need to handle multi-parameter prompts.
-| **More info**| [Graph connectors API limits](/graph/connecting-external-content-api-limits?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)| [Technical requirements for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext&tabs=tasks#technical-requirements)
+Now, consider the limitations of each option.
+
+| Extensibility option | General Limitations                  |  Tooling limitations       |
+|:--------------------------------|:--------------------------------|:--------------------------------|
+|  Graph connectors               |  [Max 30 connectors in Tenant](/graph/connecting-external-content-api-limits?branch=main&branchFallbackFrom=pr-en-us-77&context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) <br/> <br/> Relatively low data volume and activity<br/> <br/> App visibility to users <br/> <br/> [Graph connectors API limits](/graph/connecting-external-content-api-limits?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)      |  [No sideloading](#no-sideloading) <br/>  <br/> [Potentially sync External Group ACLs](#potentially-sync-external-group-acls)     |
+|  Message extension plugins      |   Max one million plugins enabled per user <br/> <br/> [Plugins need to be manually enabled](#plugins-need-to-be-manually-enabled) <br/> <br/> [Data can leave compliance boundary](#data-can-leave-compliance-boundary) <br/> <br/> [Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt<br/> <br/> [Performance depends on developers and hosting](#performance-depends-on-developers) <br/> <br/> [Technical requirements for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext&tabs=tasks#technical-requirements)     | [Multi-parameter prompt complexity](#multi-parameter-prompt-complexity)     |
+|  Copilot Studio conversational plugins         |  No adaptive card support <br/> <br/> No custom parameters support    |   One function per plugin <br/> <br/> No control over response/reasoning instructions <br/> <br/> Plugin available just within the tenant |
+|  Copilot Studio AI plugins        |  No adaptive card support <br/> <br/> No data grounding <br/> <br/> No structured output    |  GPT-3.5 model only    |
+
+### Plugins need to be manually enabled
+
+Unlike Graph Connected external items that are part of Microsoft Graph and immediate available to Copilot summarization. Administrators first need to enable plugins in the tenant as part of Public Preview ([https://aka.ms/extend-Copilot](https://aka.ms/extend-Copilot)). Additionally, the user of Copilot for Microsoft 365 needs to enable the plugin in the plugin management flyout.
+
+### Data can leave compliance boundary
+
+Graph Connectors inserts external items into the Microsoft Graph. When Copilot selects a plugin as part of its orchestration, it calls the bot framework command and populates the parameters with data based on the description of the parameters. THe data it provides can be any of the data available to it in Microsoft 365 or other data provided by plugins in the conversational session. The bot framework commands are hosted externally to the Microsoft 365 boundary.
+
+### Performance depends on developers
+
+The plugin bot framework commands that are invoked by Copilot are external and the response times of it are dependent on the developer hosting it.
+
+### Power Platform licenses required
+
+Building with Copilot Studio is included as part of the Microsoft Copilot license. If the plugin uses Power Platform Connectors, users require a Power Platform license to use them.
+
+### No sideloading
+
+There is no ability to side load with Graph Connectors. As a developer you will need Entra ID admin access to your tenant to register and consent to the required Graph permissions. The Search Administrator role is required to deploy your Graph Connector to Copilot.
+
+### Potentially sync External Group ACLs
+
+If you don't implement Entra ID Groups in your system, you will need to create External Groups calling Graph APIs and maintain sync state of the membership of these groups with your systems groups.
+
+### Multi-parameter prompt complexity
 
 Message extension plugin developers should handle all potential prompt scenarios from users. Single-parameter prompts can be as simple as:
 > Find Chai in Northwind Inventory
