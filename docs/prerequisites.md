@@ -52,11 +52,12 @@ To learn more and choose the best extensibility path for you and your customer, 
 
 ### Requirements for plugin development
 
-During the public preview, customers with a Copilot license can extend Copilot and build plugins. To create conversational and AI plugins that your end users can use in their chats with Microsoft Copilot, you need:
+During the public preview, customers with a Copilot license can extend Copilot and build plugins.
+
+To create conversational and AI plugins that your end users can use in their chats with Microsoft Copilot, you need:
 
 - [A license for Microsoft Copilot Studio (or an existing Power Virtual Agents license)](/microsoft-copilot-studio/requirements-licensing-subscriptions).
 - [Licenses for Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/overview-business-applications#get-copilot-for-microsoft-365-licenses-and-enable-plugins).
-- To submit a support ticket with the title **Enable Copilot plugins for tenants** or make a request to the Microsoft Customer Success Account Manager for your organization.
 - Your Microsoft 365 tenant admin to [deploy the Dynamics 365 and Copilot Studio app in the Microsoft 365 admin center](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-microsoft-copilot-studio-app-admin).
 
 For details see: [Create and configure copilot plugins with Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview#prerequisites).
