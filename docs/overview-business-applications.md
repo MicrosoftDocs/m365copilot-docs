@@ -6,11 +6,7 @@ ms.author: jhaskett
 ms.topic: overview
 ---
 
-
 # Build plugins using Microsoft business applications
-
-> [!IMPORTANT]
-> Microsoft business applications plugins for Microsoft Copilot for Microsoft 365 are in gated preview. During the preview, production tenants must be licensed for Copilot for Microsoft 365 and an administrator must opt-in to enable plugins by either contacting their Microsoft Customer Success Account Manager or by submitting a support ticket with the title "Enable Copilot plugins for tenants".
 
 Microsoft business applications include a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent consisting of Microsoft Dynamics 365 and Microsoft Power Platform.
 
@@ -51,8 +47,6 @@ You can also create new plugins using Power Platform components in Microsoft Cop
 1. Obtain the appropriate number of [Copilot for Microsoft 365 licenses](/microsoft-365-copilot/microsoft-365-copilot-setup#provision-copilot-for-microsoft-365-licenses).
 
 1. [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot) by consenting to moving data across regions as applicable.
-
-1. Raise a support ticket with title "Enable Copilot plugins for tenants" to prepare your tenant for plugins. Once the ticket is resolved, it may take up to 12 hours for the changes to take effect. Once the "Dynamics 365" app appears in the list of available apps in Microsoft 365 admin center's **Settings**->**Integrated apps**, plugins have been enabled.
 
 ## Deploy a plugin
 
