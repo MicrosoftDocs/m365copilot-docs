@@ -22,7 +22,7 @@ Plugins for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and P
 
 - Plugins from Microsoft Dynamics 365 apps
   - [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales) (preview)
-  - [Dynamics 365 Customer Service](/dynamics365/customer-service/administer/cs-region-availability-service-limits?branch=mg-copilot-faq) (preview)
+  - [Dynamics 365 Customer Service](/dynamics365/customer-service/use/copilot-chat-customer-service-data) (preview)
   - [Dynamics 365 Field Service](/dynamics365/field-service/flw-m365-chat) (preview)
   - [Dynamics 365 Supply Chain](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot) (preview)
 - Plugins for [Microsoft Power Platform connectors](/connectors/create-a-connector-ai-plugin#supported-queries-for-certified-connectors)
