@@ -70,7 +70,7 @@ Copilot for Microsoft 365 can uniquely choose the right skill from thousands. Bu
 
 The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring Copilot knows when and how to invoke your plugin.
 
-The following sections provide guidance and examples for plugins, skills, and parameter descriptions.
+The following sections provide guidance and examples for plugins, skills, parameter, and semantic descriptions.
 
 ### Plugin descriptions
 
@@ -409,6 +409,122 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ]
 ```
 
+---
+
+### Search command description
+
+Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords. Search command descriptions must:
+
+* Focus on what and how the command searches (detailed list) in natural language.
+* Include verbs and synonyms, if applicable.
+* Focus on keywords that are likely to be used in the search function of your native apps.
+
+#### Semantic description
+
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+
+We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
+
+* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
+* Avoid grammar and punctuation errors. *[Mandatory fix]*
+* Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
+* Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
+
+The following table lists the command and semantic description examples for each category:
+
+# [Tasks](#tab/tasks)
+
+**Description**: Search for high priority tasks related to Northwind that are due tomorrow.
+
+**Command description example:**
+
+```json
+"commands": [
+        {
+          "id": "Search",
+          "type": "query",
+          "title": "Tasks",
+          "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
+          "SemanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details."
+          "initialRun": true,
+          "fetchTask": false,
+          "context": [
+            "commandBox",
+            "compose",
+            "message"
+          ],
+```
+
+# [Surveys](#tab/surveys)
+
+**Description**: Search for surveys, drafts, and results with keywords or number of respondents.
+
+**Command description example:**
+
+```json
+"commands": [
+        {
+          "id": "Search",
+          "type": "query",
+          "title": "Survey",
+          "description": "Search for surveys, drafts, and results with keywords or number of respondents.",
+          "semanticDescription": "This command enables users to search for surveys, drafts, and results based on specific keywords or the number of respondents."
+          "initialRun": true,
+          "fetchTask": false,
+          "context": [
+            "commandBox",
+            "compose",
+            "message"
+          ],
+```
+
+# [CRM](#tab/crm)
+
+**Description**: Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.
+
+**Command description example:**
+
+```json
+"commands": [
+        {
+          "id": "Search",
+          "type": "query",
+          "title": "CRM",
+          "description": "Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.",
+          "semanticDescription": "This command allows users to search for leads in the CRM system based on specific criteria.",
+          "initialRun": true,
+          "fetchTask": false,
+          "context": [
+            "commandBox",
+            "compose",
+            "message"
+          ],
+```
+
+# [General](#tab/general)
+
+**Description**: Find number of stocks or listed equities using keywords, key ratios, index, and so on.
+
+**Command description example:**
+
+```json
+"commands": [
+        {
+          "id": "Search",
+          "type": "query",
+          "title": "General",
+          "description": "Find number of stocks or listed equities using keywords, key ratios, and index.",
+          "initialRun": true,
+          "fetchTask": false,
+          "context": [
+            "commandBox",
+            "compose",
+            "message"
+          ],
+```
 ---
 
 ## Debugging plugin selection
