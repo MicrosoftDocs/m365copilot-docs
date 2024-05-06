@@ -415,9 +415,9 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords. Search command descriptions must:
 
-* Focus on what and how the command searches (detailed list) in natural language.
-* Include verbs and synonyms, if applicable.
-* Focus on keywords that are likely to be used in the search function of your native apps.
+- Focus on what and how the command searches (detailed list) in natural language.
+- Include verbs and synonyms, if applicable.
+- Focus on keywords that are likely to be used in the search function of your native apps.
 
 #### Semantic description
 
@@ -427,11 +427,11 @@ The `semanticDescription` property isn't a mandatory field. However, if you add 
 
 We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
-* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
-* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
-* Avoid grammar and punctuation errors. *[Mandatory fix]*
-* Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
-* Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
+- Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+- Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
+- Avoid grammar and punctuation errors. *[Mandatory fix]*
+- Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
+- Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
 
 The following table lists the command and semantic description examples for each category:
 
@@ -525,7 +525,6 @@ The following table lists the command and semantic description examples for each
             "message"
           ],
 ```
----
 
 ## Debugging plugin selection
 
