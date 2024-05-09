@@ -12,7 +12,7 @@ ms.date: 11/15/2023
 
 Microsoft Copilot for Microsoft 365 is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **skills** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
 
-Like any copilot, Copilot for Microsoft 365 is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot requires *plugins*. **Plugins** extend Copilot for Microsoft 365's skills and utility for end users, enabling it to choose the right skill from thousands.
+Like any copilot, Copilot for Microsoft 365 is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot requires *plugins*. **Plugins** extend Copilot for Microsoft 365's skills and utility for end users, enabling it to choose the right skill for a given task or request.
 
 But how does Copilot know which skill to use when you ask for help? How does it interpret your request and match it to the best skill available? That's the job of the Copilot for Microsoft 365 **orchestrator**.
 
@@ -28,29 +28,71 @@ The orchestration layer represents the interface between foundation LLMs and the
 
 :::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the Microsoft Copilot technology stack. From bottom to top: Microsoft Cloud, AI infrastructure, Your data, Foundation models, AI orchestration, Microsoft Copilots | Your copilots, Teams AI Library, Graph connectors, Plugin extensibility":::
 
-The following chart illustrates how the Copilot for Microsoft 365 orchestrator selects the right plugin, with the right skill, at the right time, even when there are thousands of options to choose from.
+The following chart illustrates how the Copilot for Microsoft 365 orchestrator selects the right plugin, with the right skill, at the right time, even when there are multiple options to choose from.
 
 :::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
 
 1. **Natural language input**
 
-    The user types a prompt to Copilot through Microsoft 365 chat.
+    The user types a prompt through Microsoft365 Copilot. For example "What tickets are assigned to me right now?"
 
 2. **Search for relevant tools**
+   
+    Copilot draws upon the combined knowledge of its LLM and user's organizational data from Microsoft Graph to analyze the request and determine the context of the user. It then breaks down the user's prompt into intents, or goals. Each goal is then broken into tasks.
 
-    The Copilot orchestrator searches its tool catalog of installed and enabled plugins for an initial list of relevant skills.
+   The Copilot orchestrator then searches its tools catalog of installed and enabled plugins for an initial list of relevant skills from the availlable tools to determine which tools to use to fulfill the users request.
 
-3. **Reasoning**
+    In the case of the sample prompt for tickets assigned to the user, the orchestrator will look for a plugin that has ability to provide ticket information instead of relying on its inbuilt skills like summarizing, web-searching or image-generation.
 
-    Copilot draws upon the combined knowledge of its LLM and your organizational data from Microsoft Graph to analyze the request and determine the context of the user. It then breaks down the user's prompt into intents, or goals. Each goal is then broken into tasks.
+4. **Reasoning and Responding**
 
-4. **Mapping user's intent to slots**
+    Once the orchestartor selects the plugin with the right skills for the task at hand, it determines which function within the plugin to use based on the descriptions of the functions. The function has a reasoning state and a responding state. The reasoning state is used to determine if the function should be used and the responding state has instruction on how the response will be presented.
 
-    The orchestrator maps the user's tasks to plugin skills and/or built-in Copilot skill functions, mapping implicit constraints from the user's prompt to the slots (parameter values) required to execute each of the identified skills.
+    In our tickets example, the responding state instructs the orchestrator to format the response as an adaptive card.
+
+```json
+{
+
+// part of the plugin skipped for brevity
+
+"functions": [
+                {
+                    "name": "getTickets",
+                    "states": {
+                        "reasoning": {
+                            "description": "\n# `{{ function.declaration }}`: Returns a list of tickets with their status and priority.",
+                            "instructions": []
+                        },
+                        "responding": {
+                            "description": "\n# `{{ function.declaration }}`: Returns a list of tickets with their status and priority.",
+                            "instructions": ["I will present the information returned by this tool in the format of an adaptive card."]
+                        }
+                    }
+                }
+            ],
+"runtimes": [
+                {
+                    "type": "OpenApi",
+                    "auth": {
+                      "type": "none"
+                    },
+                    "spec": {
+                        "url": "https://contoso-tickets-plugin.net/openapi.yaml"
+                    },
+                    "run_for_functions": [
+                        "getTickets"
+                    ]
+                }
+            ]
+
+// part of the plugin skipped for brevity
+
+}
+```
 
 5. **Execute tool**
 
-    Copilot and its plugins are called to execute their selected skills.
+    Copilot executes the selected functions in the plugin following the reasoning and responding instructions. Copilot uses the OpenAPI description in the plugin to make API requests. 
 
 6. **Generate summary**
 
@@ -62,9 +104,9 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the *general contractor*, who coordinates and organizes the work of the specialist *subcontractors*, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's  input (in other words, that Copilot's response satisfies the user's intent in their request).
 
-However, its the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This will instill a sense of trust in your users and ensure Copilot will call your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin for the orchestrator to find and use.
+However, its the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This will instill a sense of trust in your users and ensure Copilot will call your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
 
-## Plugin search optimization
+## Plugin Optimization
 
 Copilot for Microsoft 365 can uniquely choose the right skill from thousands. But how can you make sure Copilot will choose *your plugin* to provide the right skill?
 
