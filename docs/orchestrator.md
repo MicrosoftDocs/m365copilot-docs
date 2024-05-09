@@ -53,8 +53,6 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 ```json
 {
 
-// part of the plugin skipped for brevity
-
 "functions": [
                 {
                     "name": "getTickets",
@@ -84,8 +82,6 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
                     ]
                 }
             ]
-
-// part of the plugin skipped for brevity
 
 }
 ```
