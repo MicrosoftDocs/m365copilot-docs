@@ -33,9 +33,11 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 :::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
 
 1. **Natural language input**
+
 The user types a prompt through Microsoft365 Copilot. For example "What tickets are assigned to me right now?"
 
 2. **Search for relevant tools**
+
 Copilot draws upon the combined knowledge of its LLM and user's organizational data from Microsoft Graph to analyze the request and determine the context of the user. It then breaks down the user's prompt into intents, or goals. Each goal is then broken into tasks.
 
 The Copilot orchestrator then searches its tools catalog of installed and enabled plugins for an initial list of relevant skills from the availlable tools to determine which tools to use to fulfill the users request.
