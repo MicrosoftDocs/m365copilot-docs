@@ -45,6 +45,7 @@ The Copilot orchestrator then searches its tools catalog of installed and enable
 In the case of the sample prompt for tickets assigned to the user, the orchestrator will look for a plugin that has ability to provide ticket information instead of relying on its inbuilt skills like summarizing, web-searching or image-generation.
 
 4. **Reasoning and Responding**
+
 Once the orchestartor selects the plugin with the right skills for the task at hand, it determines which function within the plugin to use based on the descriptions of the functions. The function has a reasoning state and a responding state. The reasoning state is used to determine if the function should be used and the responding state has instruction on how the response will be presented.
 
     In our tickets example, the responding state instructs the orchestrator to format the response as an adaptive card.
@@ -86,9 +87,10 @@ Once the orchestartor selects the plugin with the right skills for the task at h
 ```
 
 5. **Execute tool**
+
 Copilot executes the selected functions in the plugin following the reasoning and responding instructions. Copilot uses the OpenAPI description in the plugin to make API requests. 
 
-6. **Generate summary**
+7. **Generate summary**
 
 Copilot merges, filters, or ranks the responses from different assistants, and generates a single response for the user.
 
