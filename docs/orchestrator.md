@@ -34,19 +34,19 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 1. **Natural language input**
 
-    The user types a prompt through Microsoft365 Copilot. For example "What tickets are assigned to me right now?"
+The user types a prompt through Microsoft365 Copilot. For example "What tickets are assigned to me right now?"
 
 2. **Search for relevant tools**
-   
-    Copilot draws upon the combined knowledge of its LLM and user's organizational data from Microsoft Graph to analyze the request and determine the context of the user. It then breaks down the user's prompt into intents, or goals. Each goal is then broken into tasks.
 
-   The Copilot orchestrator then searches its tools catalog of installed and enabled plugins for an initial list of relevant skills from the availlable tools to determine which tools to use to fulfill the users request.
+Copilot draws upon the combined knowledge of its LLM and user's organizational data from Microsoft Graph to analyze the request and determine the context of the user. It then breaks down the user's prompt into intents, or goals. Each goal is then broken into tasks.
 
-    In the case of the sample prompt for tickets assigned to the user, the orchestrator will look for a plugin that has ability to provide ticket information instead of relying on its inbuilt skills like summarizing, web-searching or image-generation.
+The Copilot orchestrator then searches its tools catalog of installed and enabled plugins for an initial list of relevant skills from the availlable tools to determine which tools to use to fulfill the users request.
+
+In the case of the sample prompt for tickets assigned to the user, the orchestrator will look for a plugin that has ability to provide ticket information instead of relying on its inbuilt skills like summarizing, web-searching or image-generation.
 
 4. **Reasoning and Responding**
 
-    Once the orchestartor selects the plugin with the right skills for the task at hand, it determines which function within the plugin to use based on the descriptions of the functions. The function has a reasoning state and a responding state. The reasoning state is used to determine if the function should be used and the responding state has instruction on how the response will be presented.
+Once the orchestartor selects the plugin with the right skills for the task at hand, it determines which function within the plugin to use based on the descriptions of the functions. The function has a reasoning state and a responding state. The reasoning state is used to determine if the function should be used and the responding state has instruction on how the response will be presented.
 
     In our tickets example, the responding state instructs the orchestrator to format the response as an adaptive card.
 
@@ -88,15 +88,15 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 5. **Execute tool**
 
-    Copilot executes the selected functions in the plugin following the reasoning and responding instructions. Copilot uses the OpenAPI description in the plugin to make API requests. 
+Copilot executes the selected functions in the plugin following the reasoning and responding instructions. Copilot uses the OpenAPI description in the plugin to make API requests. 
 
 6. **Generate summary**
 
-    Copilot merges, filters, or ranks the responses from different assistants, and generates a single response for the user.
+Copilot merges, filters, or ranks the responses from different assistants, and generates a single response for the user.
 
 7. **Natural language output**
 
-    Finally, Copilot delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
+Finally, Copilot delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
 If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the *general contractor*, who coordinates and organizes the work of the specialist *subcontractors*, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's  input (in other words, that Copilot's response satisfies the user's intent in their request).
 
