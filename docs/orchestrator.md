@@ -68,7 +68,9 @@ However, its the responsibility of each plugin to provide Copilot with an accura
 
 Copilot for Microsoft 365 can uniquely choose the right skill from thousands. But how can you make sure Copilot will choose *your plugin* to provide the right skill?
 
-The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring Copilot knows when and how to invoke your plugin.
+The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring the Copilot orchestrator knows when and how to invoke your plugin.
+
+### Matching mechanisms
 
 When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (*functions*) from installed plugins to identify up to five skills which best match the query. The orchestrator first tries to match on **exact words** (*lexical match*) and expands its search scope as needed to include matches on **descriptive meanings** (*semantic match*), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, here is the hierarchy of matching mechanisms for Copilot plugin function selection:
 
