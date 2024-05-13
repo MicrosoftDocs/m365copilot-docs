@@ -4,7 +4,7 @@ description: Learn how the Microsoft Copilot orchestrator determines which plugi
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 11/15/2023
+ms.date: 05/21/2024
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
@@ -70,7 +70,16 @@ Copilot for Microsoft 365 can uniquely choose the right skill from thousands. Bu
 
 The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring Copilot knows when and how to invoke your plugin.
 
-The following sections provide guidance and examples for plugins, skills, and parameter descriptions.
+When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (*functions*) from installed plugins to identify up to five skills which best match the query. The orchestrator first tries to match on **exact words** (*lexical match*) and expands its search scope as needed to include matches on **descriptive meanings** (*semantic match*), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, here is the hierarchy of matching mechanisms for Copilot plugin function selection:
+
+1. Lexical match on function name
+1. Semantic match on function description
+1. Lexical match on plugin name (adds all plugin functions to candidate list)
+1. Semantic match on plugin name (adds all plugin functions to candidate list)
+
+The orchestrator works through the above list until all five function candidate slots are filled.
+
+The following sections provide guidance and examples for authoring names and descriptions for plugins, skills (functions), and parameters.
 
 ### Plugin descriptions
 
