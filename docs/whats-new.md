@@ -27,4 +27,4 @@ Copilot extensions allow you to customize Copilot with tailored experiences that
 - API plugins: Connect your APIs as plugins to Microsoft Copilot from Visual Studio Code or Microsoft Copilot Studio.
 - Flow plugins: Use Microsoft Copilot Studio to create plugins that map to existing flows or processes in your organization.
 - Connector AI plugins: Use Microsoft Copilot Studio to create plugins for existing data sources using out of the box or custom connectors.
-- Prompt plugins: Use Microsoft Copilot Studio to build custom actions grounded on your data in Dataverse.
+- Prompt plugins: Use Microsoft Copilot Studio to build custom actions grounded on your data in DataVerse.
