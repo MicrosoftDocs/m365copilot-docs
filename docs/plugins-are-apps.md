@@ -4,7 +4,7 @@ description: Message extension plugins are also apps for Microsoft 365. Learn ho
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: best-practice
-ms.date: 11/27/2023
+ms.date: 05/20/2024
 ---
 
 # Plugins are apps for Microsoft 365
@@ -84,6 +84,7 @@ Creation apps are used to create and manage digital content. They help users by 
 - **Collaborate efficiently** - Easily add files for your team or clients to review when creating events, emails, and messages. Quickly access relevant files in the context of meetings or teammates.
 - **Integrated search** - Quickly find your resources across Microsoft, regardless of format.
 - **Cross reference of information during content creation** - Quickly find and use project-related documents in the context of your creation.
+- **Access and communicate the latest data** - Easily access, view, and share your project's most recent data all from a single app.
 - **Shortcuts to frequent creations** - Quickly access frequent creation to boost productivity and creativity.
 - **Discover new apps and create with AI suggestions based on your ideas** - Discover AI-powered app suggestions tailored to your content.
 
@@ -92,12 +93,13 @@ Creation apps are used to create and manage digital content. They help users by 
 
 ### Business process apps
 
-Business process apps enable the automation of typical business processes for organizations such as employee expense management, purchase order management, and business travel management. Some of the developer opportunities for this style of app are::
+Business process apps enable the automation of typical business processes for organizations, such as employee expense management, purchase order management, and business travel management. Some of the developer opportunities for this style of app are:
 
 - **Share documents with the correct set of people** - Easily access documents where you are working and invite team members or clients to view and collaborate on documents. Follow up with real-time notifications about reports to quickly respond or take action.
 - **Digital signatures made simple** - Obtain signature on documents directly in Teams, Microsoft 365 app, or Outlook.
 - **Instant in-line approvals** - Get approvals in real-time during discussions to keep your work moving and projects on track.
 - **Tailor your notification channels to suit your customers needs** - Direct notifications from each app to the right channels and react promptly to critical updates while prioritizing and silencing others.
+- **Request information in a secure environment** - Request or follow up on information you need from your team members or clients while ensuring that the information is protected.
 - **Access the latest information, updated in real-time wherever it’s shared** - Share live data that dynamically updates so your message is always relevant and up to date.
 - **Reports at your fingertips** - Scan and access documents while communicating with teammates and clients across multiple devices and Microsoft 365 apps.
 - **Easily reference data and files during meetings** - Access, reference, and share information real-time during meetings ensuring collaboration and informed decisions.
