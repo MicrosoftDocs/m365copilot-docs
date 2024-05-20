@@ -70,7 +70,7 @@ Copilot for Microsoft 365 can uniquely choose the right skill from thousands. Bu
 
 The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring Copilot knows when and how to invoke your plugin.
 
-The following sections provide guidance and examples for plugins, skills, parameter, and semantic descriptions.
+The following sections provide guidance and examples for plugins, skills, and parameter.
 
 ### Plugin descriptions
 
@@ -448,7 +448,7 @@ The following table lists the command and semantic description examples for each
           "type": "query",
           "title": "Tasks",
           "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
-          "SemanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details."
+          "semanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details."
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -525,6 +525,8 @@ The following table lists the command and semantic description examples for each
             "message"
           ],
 ```
+
+---
 
 ## Debugging plugin selection
 
