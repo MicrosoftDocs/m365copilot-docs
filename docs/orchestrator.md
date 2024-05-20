@@ -8,15 +8,16 @@ ms.date: 11/15/2023
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
+
 # How Copilot for Microsoft 365 decides which plugin to use
 
 Microsoft Copilot for Microsoft 365 is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **skills** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
 
-Like any copilot, Copilot for Microsoft 365 is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot requires *plugins*. **Plugins** extend Copilot for Microsoft 365's skills and utility for end users, enabling it to choose the right skill for a given task or request.
+Like any large language model(LLM), Copilot for Microsoft 365 is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot requires _plugins_. **Plugins** extend Copilot for Microsoft 365's skills and utility for end users, enabling it to choose the right skill for a given task or request.
 
 But how does Copilot know which skill to use when you ask for help? How does it interpret your request and match it to the best skill available? That's the job of the Copilot for Microsoft 365 **orchestrator**.
 
-This article will explain the logic behind Copilot's skill selection process and how you can ensure Copilot employs your plugin at every opportunity it can benefit your users.
+This article will explain the logic behind Copilot's skill selection process and how you can ensure Copilot employs your plugin at every opportunity it can to benefit your users.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
@@ -32,85 +33,43 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 :::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
 
-1. **Natural language input**
+1.**Natural language input**
 
-   The user types a prompt through Microsoft365 Copilot. For example "What tickets are assigned to me right now?"
+The user types a prompt through Microsoft365 Copilot UI. For example "What tickets are assigned to me right now?"
 
-2. **Search for relevant tools**
+2.**Preliminary checks**
 
-   Copilot draws upon the combined knowledge of its LLM and user's organizational data from Microsoft Graph to analyze the request and determine the 
-   context of the user. It then breaks down the user's prompt into intents, or goals. Each goal is then broken into tasks.
+Copilot analyzes the prompt to ensure it follows responsible AI criteria, is not attempting a jailbreak and it is not harmful and hands the prompt over to the orchestrator.
 
-   The Copilot orchestrator then searches its tools catalog of installed and enabled plugins for an initial list of relevant skills from the availlable 
-   tools to determine which tools to use to fulfill the users request.
+3.**Reasoning**
 
-   In the case of the sample prompt for tickets assigned to the user, the orchestrator will look for a plugin that has ability to provide ticket 
-   information instead of relying on its inbuilt skills like summarizing, web-searching or image-generation.
+The orchestrator creates a plan with several actions that it is going to perform in an attempt to response to the user's prompt.
+3a.**Intent and Tool Selection** The orchestrator begins by dissecting the user's prompt to identify the underlying intents or goals. Utilizing Microsoft Graph data, it gains insights into the user's current context, which is crucial for tailoring the response. Once the intent and context are clear, the orchestrator reviews its arsenal of inbuilt tools—ranging from summarization and web search to image generation—to find a match for the user's needs. If the inbuilt tools fall short, the orchestrator taps into external resources to gather the necessary information to address the prompt effectively.
 
-4. **Reasoning and Responding**
+3b.**Function Matching and Parameter Determination** At this juncture, the orchestrator engages in a meticulous semantic and lexical comparison of the available plugins' function descriptions against the user's intent. This process ensures the selection of the most relevant plugins to fulfill the request. With the candidate functions pinpointed, the orchestrator collaborates with the LLM to ascertain the parameters needed for the function calls. This step concludes with the orchestrator crafting well-structured requests, complete with any required authentication, ready to be processed by a specialized tool adept at making API calls.
 
-   Once the orchestartor selects the plugin with the right skills for the task at hand, it determines which function within the plugin to use based on the 
-   descriptions of the functions. The function has a reasoning state and a responding state. The reasoning state is used to determine if the function 
-   should be used and the responding state has instruction on how the response will be presented.
+3c.**Result Analysis and Response Formulation** Upon receiving the outcomes of the API calls, the orchestrator conducts a thorough analysis to determine their adequacy in satisfying the user's request. Should the information be insufficient, the orchestrator contemplates additional function calls to enrich the response. After a comprehensive evaluation, the orchestrator either proceeds with further requests or transitions to the response phase, where it formulates a coherent and informative reply to the user's initial prompt.
+The orchestrator breaks down the prompt into intents or goals and then leverages Microsoft Graph data to determine the user's context.
 
-   In our tickets example, the responding state instructs the orchestrator to format the response as an adaptive card.
+4.**Responding**
 
-   ```json
-   {
+The orchestrator analyzes the information returned by all the tools it selected and prepares a response to the user's prompt. It uses the reasoning instructions from the functions that it called together with its inbuilt capabilities to formulate a response.
 
-   "functions": [
-                {
-                    "name": "getTickets",
-                    "states": {
-                        "reasoning": {
-                            "description": "\n# `{{ function.declaration }}`: Returns a list of tickets with their status and priority.",
-                            "instructions": []
-                        },
-                        "responding": {
-                            "description": "\n# `{{ function.declaration }}`: Returns a list of tickets with their status and priority.",
-                            "instructions": ["I will present the information returned by this tool in the format of an adaptive card."]
-                        }
-                    }
-                }
-            ],
-   "runtimes": [
-                {
-                    "type": "OpenApi",
-                    "auth": {
-                      "type": "none"
-                    },
-                    "spec": {
-                        "url": "https://contoso-tickets-plugin.net/openapi.yaml"
-                    },
-                    "run_for_functions": [
-                        "getTickets"
-                    ]
-                }
-            ]
+5.**Generate summary**
 
-   }
-   ```
+The orchestrator merges, filters, or ranks the responses from different assistants, and generates a single response for the user.
 
-5. **Execute tool**
+6.**Natural language output**
 
-   Copilot executes the selected functions in the plugin following the reasoning and responding instructions. Copilot uses the OpenAPI description in the 
-   plugin to make API requests. 
+Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
-7. **Generate summary**
-
-   Copilot merges, filters, or ranks the responses from different assistants, and generates a single response for the user.
-
-7. **Natural language output**
-
-   Finally, Copilot delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
-
-If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the *general contractor*, who coordinates and organizes the work of the specialist *subcontractors*, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's  input (in other words, that Copilot's response satisfies the user's intent in their request).
+If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the _general contractor_, who coordinates and organizes the work of the specialist _subcontractors_, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's input (in other words, that Copilot's response satisfies the user's intent in their request).
 
 However, its the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This will instill a sense of trust in your users and ensure Copilot will call your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
 
 ## Plugin Optimization
 
-Copilot for Microsoft 365 can uniquely choose the right skill from thousands. But how can you make sure Copilot will choose *your plugin* to provide the right skill?
+Copilot for Microsoft 365 can uniquely choose the right skill from thousands. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
 
 The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring Copilot knows when and how to invoke your plugin.
 
@@ -195,7 +154,7 @@ The following table lists the short description examples for various plugin scen
 
 #### [General](#tab/general)
 
-**Description**:  Search and share stock quotes.
+**Description**: Search and share stock quotes.
 
 **App description example:**
 
@@ -457,13 +416,13 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ## Debugging plugin selection
 
-You can use *developer mode* while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt. From  *M365 Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
+You can use _developer mode_ while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt. From _M365 Chat_, you can enable developer mode by typing `-developer on` (or `off` to disable).
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `M365 Chat` session where user has typed `-developer on` to successfully enable developer mode":::
 
 While developer mode is enabled, a card with debug information will be returned whenever the orchestrator searches specifically within your enterprise knowledge (data) and/or skills (plugins) to respond to a prompt. The debug info card includes the following fields:
 
-- **Enabled plugins**: A list of plugins enabled by the user (from *Plugins* control below the chat input box)
+- **Enabled plugins**: A list of plugins enabled by the user (from _Plugins_ control below the chat input box)
 - **Matched functions**: A list of plugins and functions matched in the runtime app index lookup
 - **Selected functions for execution**: A list of plugin functions selected for invocation based on orchestrator reasoning
 - **Function execution details**: Request and response function execution status
@@ -484,17 +443,17 @@ Debug cards are also not returned in cases of capacity throttling, where you wil
 
 If no plugins were enabled, the debug info card will return empty.
 
-#### Card with empty *Matched functions*
+#### Card with empty _Matched functions_
 
 If relevant plugins are enabled, yet no matched functions were returned for the given prompt, this likely indicates the prompt did not explicitly mention the plugin name.
 
-#### Card with empty *Selected functions for execution*
+#### Card with empty _Selected functions for execution_
 
-If no enabled plugin matched the search intent of the prompt, the debug info card will report *No functions selected for execution*. This is likely because the command description in the manifest is not semantically related to the  search intent of the given prompt.
+If no enabled plugin matched the search intent of the prompt, the debug info card will report _No functions selected for execution_. This is likely because the command description in the manifest is not semantically related to the search intent of the given prompt.
 
 If Copilot was previously matching and executing your plugin functions successfully, this could be an indication of throttling.
 
-#### Card with empty or failed *Function execution details*
+#### Card with empty or failed _Function execution details_
 
 For non-message extension plugins, if the function execution details or request status is empty or failed, it indicates a failure during Copilot's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it is most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your Open API definition.
 
@@ -502,11 +461,10 @@ For message extension plugins, best practice is to optimize for responses under 
 
 #### Card with function execution response status of `0`
 
-If the *Function execution details* is reporting a *Response Status* of `0`, but *Request status* of `Success`, this might be an indication of timeout. Currently the timeout limit for Copilot execution of a plugin API is set at 10 seconds.
+If the _Function execution details_ is reporting a _Response Status_ of `0`, but _Request status_ of `Success`, this might be an indication of timeout. Currently the timeout limit for Copilot execution of a plugin API is set at 10 seconds.
 
 ## Next step
 
 Learn best practices for optimizing plugin discoverability and usefulness in Copilot for Microsoft 365.
 
-> [!div class="nextstepaction"]
-> [Learn what makes a high quality plugin](plugin-guidelines.md)
+> [!div class="nextstepaction"] > [Learn what makes a high quality plugin](plugin-guidelines.md)
