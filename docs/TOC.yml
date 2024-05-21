@@ -98,13 +98,13 @@
     - name: Custom engine copilots
       href: overview-custom-engine-copilot.md
     - name: Teams AI library overview
-      href: /microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context
+      href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context
     - name: Core capabilities of the Teams AI library
-      href: /microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/how-conversation-ai-core-capabilities?context=/microsoft-365-copilot/extensibility/context
+      href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/how-conversation-ai-core-capabilities?context=/microsoft-365-copilot/extensibility/context
     - name: Get started with the Teams AI library
-      href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start?context=/microsoft-365-copilot/extensibility/context
+      href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/how-conversation-ai-get-started?context=/microsoft-365-copilot/extensibility/context
     - name: Quick start guide for the Teams AI library
-      href: /microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/how-conversation-ai-quick-start?context=/microsoft-365-copilot/extensibility/context
+      href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start?context=/microsoft-365-copilot/extensibility/context
     - name: Build custom copilot using Teams Toolkit
       href: /microsoftteams/platform/teams-ai-library-tutorial
     - name: Teams AI library FAQs
