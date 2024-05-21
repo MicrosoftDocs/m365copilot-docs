@@ -33,34 +33,37 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 :::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
 
-1.**Natural language input**
+1. ### Natural language input
 
 The user types a prompt through Microsoft365 Copilot UI. For example "What tickets are assigned to me right now?"
 
-2.**Preliminary checks**
+2. ### Preliminary checks
 
 Copilot analyzes the prompt to ensure it follows responsible AI criteria, is not attempting a jailbreak and it is not harmful and hands the prompt over to the orchestrator.
 
-3.**Reasoning**
+3. ### Reasoning
 
 The orchestrator formulates a plan comprising multiple actions that it will perform in an attempt to respond to the user's prompt.
 
-3a. **Intent and Tool Selection:** The orchestrator begins by dissecting the user's prompt to identify the underlying intents or goals. Utilizing Microsoft Graph data, it gains insights into the user's current context, which is crucial for tailoring the response. Once the intent and context are clear, the orchestrator reviews its arsenal of inbuilt tools—ranging from summarization and web search to image generation—to find a match for the user's needs. If the inbuilt tools fall short, the orchestrator taps into external resources to gather the necessary information to address the prompt effectively.
+3a. **Intent and Tool Selection:**
+The orchestrator begins by dissecting the user's prompt to identify the underlying intents or goals. Utilizing Microsoft Graph data, it gains insights into the user's current context, which is crucial for tailoring the response. Once the intent and context are clear, the orchestrator reviews its arsenal of inbuilt tools—ranging from summarization and web search to image generation—to find a match for the user's needs. If the inbuilt tools fall short, the orchestrator taps into external resources to gather the necessary information to address the prompt effectively.
 
-3b. **Function Matching and Parameter Determination:** At this juncture, the orchestrator engages in a meticulous semantic and lexical comparison of the available plugins' function descriptions against the user's intent. This process ensures the selection of the most relevant plugins to fulfill the request. With the candidate functions pinpointed, the orchestrator collaborates with the LLM to ascertain the parameters needed for the function calls. This step concludes with the orchestrator crafting well-structured requests, complete with any required authentication, ready to be processed by a specialized tool adept at making API calls.
+3b. **Function Matching and Parameter Determination:**
+At this juncture, the orchestrator engages in a meticulous semantic and lexical comparison of the available plugins' function descriptions against the user's intent. This process ensures the selection of the most relevant plugins to fulfill the request. With the candidate functions pinpointed, the orchestrator collaborates with the LLM to ascertain the parameters needed for the function calls. This step concludes with the orchestrator crafting well-structured requests, complete with any required authentication, ready to be processed by a specialized tool adept at making API calls.
 
-3c. **Result Analysis and Response Formulation:** Upon receiving the outcomes of the API calls, the orchestrator conducts a thorough analysis to determine their adequacy in satisfying the user's request. Should the information be insufficient, the orchestrator contemplates additional function calls to enrich the response. After a comprehensive evaluation, the orchestrator either proceeds with further requests or transitions to the response phase, where it formulates a coherent and informative reply to the user's initial prompt.
+3c. **Result Analysis and Response Formulation:**
+Upon receiving the outcomes of the API calls, the orchestrator conducts a thorough analysis to determine their adequacy in satisfying the user's request. Should the information be insufficient, the orchestrator contemplates additional function calls to enrich the response. After a comprehensive evaluation, the orchestrator either proceeds with further requests or transitions to the response phase, where it formulates a coherent and informative reply to the user's initial prompt.
 The orchestrator breaks down the prompt into intents or goals and then leverages Microsoft Graph data to determine the user's context.
 
-4.**Responding**
+4. ### Responding
 
 The orchestrator analyzes the information returned by all the tools it selected and prepares a response to the user's prompt. It uses the reasoning instructions from the functions that it called together with its inbuilt capabilities to formulate a response.
 
-5.**Generate summary**
+5. ### Generate summary
 
 The orchestrator merges, filters, or ranks the responses from different assistants, and generates a single response for the user.
 
-6.**Natural language output**
+6. ### Natural language output
 
 Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
