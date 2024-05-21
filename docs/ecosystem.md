@@ -4,7 +4,7 @@ description: A plugin or connector written for Copilot will run across the Micro
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 11/15/2023
+ms.date: 5/21/2024
 ---
 
 # Microsoft Copilot in the Microsoft 365 ecosystem
@@ -21,9 +21,9 @@ As part of the broader Microsoft 365 ecosystem, the value of your plugins and co
 
 The plugins and connectors you build for Copilot are part of the larger Copilot for Microsoft 365 system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through the different native components of, and extensions to, the Copilot system.
 
-:::image type="content" source="assets/images/copilot-system-flow.png" alt-text="Diagram that shows the flow of data across components of Copilot and the Microsoft 365 ecosystem" lightbox="assets/images/copilot-system-flow.png":::
+:::image type="content" source="assets/images/copilot-architecture.png" alt-text="Diagram that shows the flow of data across components of Copilot and the Microsoft 365 ecosystem" lightbox="assets/images/copilot-architecture.png":::
 
-*The Copilot system uses data from a plugin in two stages: (1) matching the users's prompt to the most relevant skill and parameters, and (2) determining which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage is part of step 6 of the diagram.*
+*The Copilot system uses data from a plugin in two stages: (1) matching the users's prompt to the most relevant skill and parameters, and (2) determining which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response back to the user.*
 
 The plugins and connectors you build extend, enrich, and customize Copilot for the unique way your customers work. And as part of the broader Microsoft 365 ecosystem, your plugins and connectors benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and a host of development tools and support.
 
