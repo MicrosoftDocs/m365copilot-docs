@@ -33,15 +33,15 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 :::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
 
-1. ### Natural language input
+1.**Natural language input**
 
 The user types a prompt through Microsoft365 Copilot UI. For example "What tickets are assigned to me right now?"
 
-2. ### Preliminary checks
+2.**Preliminary checks**
 
 Copilot analyzes the prompt to ensure it follows responsible AI criteria, is not attempting a jailbreak and it is not harmful and hands the prompt over to the orchestrator.
 
-3. ### Reasoning
+3.**Reasoning**
 
 The orchestrator formulates a plan comprising multiple actions that it will perform in an attempt to respond to the user's prompt.
 
@@ -55,15 +55,15 @@ At this juncture, the orchestrator engages in a meticulous semantic and lexical 
 Upon receiving the outcomes of the API calls, the orchestrator conducts a thorough analysis to determine their adequacy in satisfying the user's request. Should the information be insufficient, the orchestrator contemplates additional function calls to enrich the response. After a comprehensive evaluation, the orchestrator either proceeds with further requests or transitions to the response phase, where it formulates a coherent and informative reply to the user's initial prompt.
 The orchestrator breaks down the prompt into intents or goals and then leverages Microsoft Graph data to determine the user's context.
 
-4. ### Responding
+4.**Responding**
 
 The orchestrator analyzes the information returned by all the tools it selected and prepares a response to the user's prompt. It uses the reasoning instructions from the functions that it called together with its inbuilt capabilities to formulate a response.
 
-5. ### Generate summary
+5.**Generate summary**
 
 The orchestrator merges, filters, or ranks the responses from different assistants, and generates a single response for the user.
 
-6. ### Natural language output
+6.**Natural language output**
 
 Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
