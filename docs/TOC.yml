@@ -70,7 +70,7 @@
       href: /microsoftteams/platform/bots/how-to/conversations/bot-copilot-handoff?context=/microsoft-365-copilot/extensibility/context
   - name: Copilot Studio connectors and actions (preview)
     items:
-    - name: Copilot connectors on Copilot Studio
+    - name: Copilot connectors on Copilot Studio overview
       href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
     - name: Copilot Studio actions
       href: overview-business-applications.md
