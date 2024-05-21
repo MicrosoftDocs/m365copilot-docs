@@ -1,31 +1,36 @@
 ---
-title: Build plugins using Microsoft business applications
-description: Extend Microsoft Copilot for Microsoft 365 using Microsoft Dynamics 365 apps and Microsoft Power Platform
+title: Extend with actions using Microsoft Copilot Studio
+description: Extend Copilot for Microsoft 365 using Microsoft Power Platform and Microsoft Copilot Studio
 author: jhaskett-msft
 ms.author: jhaskett
 ms.topic: overview
 ---
 
-# Build plugins using Microsoft business applications
 
-Microsoft business applications include a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent consisting of Microsoft Dynamics 365 and Microsoft Power Platform.
+# Extend with actions using Microsoft Copilot Studio
+
+> [!IMPORTANT]
+> Actions for Copilot for Microsoft 365 are in public preview.
+> Production tenants must be licensed for Copilot for Microsoft 365.
+
+Copilot Studio actions plug into Copilot for Microsoft 365 to extend its skills, leveraging Microsoft business applications, a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent consisting of Microsoft Dynamics 365 and Microsoft Power Platform.
 
 Dynamics 365 revolutionizes CRM and ERP by applying intelligence to all forms of data. It enables organizations to evolve from reactive business decisions to proactive insights that allow your employees to accelerate business results.
 
 Power Platform is a suite of business applications that centralizes all your business processes. It is a low-code platform for rapidly building customized end-to-end business solutions.
 
-Using Dynamics 365 and Power Platform, you can create plugins for Microsoft Copilot that enhance capabilities and utilize Copilot to interact with your data.
+Using Dynamics 365 and Power Platform, you can create actions for Microsoft Copilot that enhance capabilities and utilize Copilot to interact with your data.
 
-## Plugins for Microsoft Copilot
+## Actions for Microsoft Copilot
 
-Plugins for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and Power Platform components such as Power Automate flows, certified connectors or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot will use the appropriate plugin able to address the questions of an end user in the application. The following built-in plugins are available.
+Actions for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and Power Platform components such as Power Automate flows, certified connectors or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot will use the appropriate action to address the questions of an end user in the application. The following built-in actions are available.
 
-- Plugins from Microsoft Dynamics 365 apps
+- Microsoft Dynamics 365 apps
   - [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales) (preview)
   - [Dynamics 365 Customer Service](/dynamics365/customer-service/use/copilot-chat-customer-service-data) (preview)
   - [Dynamics 365 Field Service](/dynamics365/field-service/flw-m365-chat) (preview)
   - [Dynamics 365 Supply Chain](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot) (preview)
-- Plugins for [Microsoft Power Platform connectors](/connectors/create-a-connector-ai-plugin#supported-queries-for-certified-connectors)
+- [Microsoft Power Platform connectors](/connectors/create-a-connector-ai-plugin#supported-queries-for-certified-connectors)
   - FreshDesk
   - GitHub
   - MailChimp
@@ -34,11 +39,11 @@ Plugins for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and P
   - ServiceNow
   - Twilio
   - Zendesk
-- [Plugins for Microsoft Power Automate flows](/power-automate/flow-plugins-m365) (preview)
+- [Power Automate flows](/power-automate/flow-plugins-m365) (preview)
   - List my tasks from To Do and Planner
   - List my pending approvals
 
-You can also create new plugins using Power Platform components in Microsoft Copilot Studio. For more information, see [Create and configure copilot plugins (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
+You can also create new actions using Power Platform components in Microsoft Copilot Studio. For more information, see [Create and configure copilot actions (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
 
 ## Get Copilot for Microsoft 365 licenses and enable plugins
 
@@ -74,9 +79,9 @@ You can also create new plugins using Power Platform components in Microsoft Cop
 > [!NOTE]
 > The apps that appear under **Integrated apps** are sometimes referred to as "titles".
 
-## Use the built-in plugins in Copilot for Microsoft 365 in Microsoft Teams
+## Use the built-in actions in Copilot for Microsoft 365 in Microsoft Teams
 
-You can use the built-in plugins shipped by Microsoft in your Copilot for Microsoft 365 app in Microsoft Teams.
+You can use the built-in actions shipped by Microsoft in your Copilot for Microsoft 365 app in Microsoft Teams.
 
 1. Login to Microsoft Teams app.
 
@@ -92,17 +97,17 @@ You can use the built-in plugins shipped by Microsoft in your Copilot for Micros
 
     :::image type="content" source="assets/images/overview-business-applications/example.png" alt-text="This screenshot shows an example text for search and to get the results.":::
 
-## Create plugins
+## Create actions
 
-You can create new Copilot plugins in Microsoft Copilot Studio, which requires a Microsoft Copilot Studio license. For more information, see [Create and configure copilot plugins (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
+You can create new Copilot action in Microsoft Copilot Studio, which requires a Microsoft Copilot Studio license. For more information, see [Create and configure copilot plugins (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
 
-### Plugin development paths
+### Action development paths
 
-There are multiple starting points for plugin development. You can extend the built-in plugins or you can create a new plugin. For extending the built-in plugins, refer to respective plugins page.
+There are multiple starting points for action development. You can extend the built-in actions or you can create a new action. For extending the built-in actions, refer to respective action page.
 
-For plugin creation, you can start with a custom prompt, a Power Platform connector, or a conversational plugin.
+For action creation, you can start with a custom prompt, a Power Platform connector, a Power Automate flow or a conversational action.
 
-### Start with a custom prompt
+### Start with a prompt
 
 Prompts allow generating content using natural language which includes summarizing, classifying, extracting entities, translating, assessing sentiment and much more. To learn more, see [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context).
 
@@ -112,13 +117,13 @@ We are adding the ability to use your data to provide improved answers soon.
 
 Power Platform connectors allow retrieving and updating data from data sources accessed through APIs. Connectors make it possible to access data from popular Enterprise systems such as Salesforce, Zendesk, MailChimp and Github and are routinely used by makers in their Power Apps and flows. To learn more, see [Create a plugin from a connector (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context).
 
-### Start with a conversational plugin
+### Start with a conversational action
 
-Use Microsoft Copilot Studio to create conversational plugins that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external API's via connectors, and send summary results to the user. To learn more, see [Create a conversational plugin (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context).
+Use Microsoft Copilot Studio to create conversational action that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external API's via connectors, and send summary results to the user. To learn more, see [Create a conversational action (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context).
 
-## Use plugins
+## Use actions
 
-After a plugin is created, publish it so it appears in the AI Plugins page in Microsoft Copilot Studio. To use plugins created in Microsoft Copilot Studio, deploy the "Copilot Studio" app in Microsoft 365 admin center's **Settings** -> **Integrated apps**.
+After an action is created, publish it so it appears in the Actions page in Microsoft Copilot Studio. To use actions created in Microsoft Copilot Studio, deploy the "Copilot Studio" app in Microsoft 365 admin center's **Settings** -> **Integrated apps**.
 
 ## Known limitations
 
@@ -130,10 +135,11 @@ To comply with data residency requirements, only a subset of environments (top 2
 
 3. In the first 20 environments you find where *Type* is “Production”, the allowlisted environments are the ones with their region matching the region associated with your tenant.
 
-4. To test plugins in an environment outside of the top 20 that are allowlisted, you can to provision a new environment in the same region. Otherwise, you'll need to wait until the allowlisting limits are removed.  
+4. To test actions in an environment outside of the top 20 that are allowlisted, you can to provision a new environment in the same region. Otherwise, you'll need to wait until the allowlisting limits are removed.  
 
 ### See also
 
 - [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context)
-- [Create a connector plugin (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context)
-- [Create a conversational plugin (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context)
+- [Create a connector action (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context)
+- [Create a conversational action (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context)
+- [Create a flow action (preview)](/power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context)

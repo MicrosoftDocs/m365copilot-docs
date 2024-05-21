@@ -72,7 +72,7 @@ You can use *developer mode* for **M365 Chat** while testing your plugin to veri
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `M365 Chat` session where user has typed `-developer on` to successfully enable developer mode":::
 
-Developer mode is only available within **M365 Chat** (Copilot for Microsoft 365) experiences and doesn't surface in Microsoft Copilot (Copilot with Bing) chat. For more info, see [Debugging plugin selection](orchestrator.md#debugging-plugin-selection).
+Developer mode is only available within **M365 Chat** (Copilot for Microsoft 365) experiences and doesn't surface in Microsoft Copilot (Copilot with Bing) chat. For more info, see [Debugging plugin selection](debugging-copilot-plugin.md).
 
 ## Security and privacy
 
