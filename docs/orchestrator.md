@@ -39,7 +39,7 @@ The user types a prompt through Microsoft365 Copilot UI. For example "What ticke
 
 2.**Preliminary checks**
 
-Copilot analyzes the prompt to ensure it follows responsible AI criteria, is not attempting a jailbreak and it is not harmful and hands the prompt over to the orchestrator.
+Copilot analyzes the prompt for responsible AI checks, jailbreak checks and that it does not pose any risk.
 
 3.**Reasoning**
 
