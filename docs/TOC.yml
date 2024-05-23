@@ -66,6 +66,8 @@
       href: /microsoftteams/platform/messaging-extensions/build-bot-based-plugin?context=/microsoft-365-copilot/extensibility/context
     - name: Guidelines for message extension plugins
       href: /microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context
+    - name: Hand off to a custom engine copilot
+      href: /microsoftteams/platform/bots/how-to/conversations/bot-copilot-handoff?context=/microsoft-365-copilot/extensibility/context
   - name: Copilot Studio connectors and actions (preview)
     items:
     - name: Copilot connectors on Copilot Studio overview
