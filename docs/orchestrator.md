@@ -433,11 +433,13 @@ We recommend you to review the following guidelines for semantic description to 
 - Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
 - Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
 
-The following table lists the command and semantic description examples for each category:
+A semantic description command must explain the requirements of the system in a natural language; it must contain a combination of acceptable parameters, enums, acronyms, and output format. The following table lists the command and semantic description examples for each category:
 
 # [Tasks](#tab/tasks)
 
-**Description**: Search for high priority tasks related to Northwind that are due tomorrow.
+**Description**:
+Basic search: Search for tasks related to Northwind.
+Advanced search: Search for high priority tasks related to Northwind that are due tomorrow.
 
 **Command description example:**
 
@@ -460,7 +462,9 @@ The following table lists the command and semantic description examples for each
 
 # [Surveys](#tab/surveys)
 
-**Description**: Search for surveys, drafts, and results with keywords or number of respondents.
+**Description**:
+Basic search: Retrieve respondents surveys.
+Advanced search: Retrieve recent customer satisfaction surveys, drafts, and results with keywords or number of respondents.
 
 **Command description example:**
 
@@ -483,7 +487,9 @@ The following table lists the command and semantic description examples for each
 
 # [CRM](#tab/crm)
 
-**Description**: Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.
+**Description**:
+Basic search: Fetch qualified leads.
+Advanced search: Fetch qualified unqualified, and quoted leads of clients and customers for a specific criteria.
 
 **Command description example:**
 
@@ -506,7 +512,9 @@ The following table lists the command and semantic description examples for each
 
 # [General](#tab/general)
 
-**Description**: Find number of stocks or listed equities using keywords, key ratios, index, and so on.
+**Description**:
+Basic search: Find stocks in NASDAQ.
+Advanced search: Find number of stocks or listed equities using keywords, key ratios, and index.
 
 **Command description example:**
 
