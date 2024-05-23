@@ -437,8 +437,8 @@ A semantic description command must explain the requirements of the system in a 
 
 # [Tasks](#tab/tasks)
 
-**Description**:
-Basic search: Search for tasks related to Northwind.
+**Description**:</br>
+Basic search: Search for tasks related to Northwind.</br>
 Advanced search: Search for high priority tasks related to Northwind that are due tomorrow.
 
 **Command description example:**
@@ -462,8 +462,8 @@ Advanced search: Search for high priority tasks related to Northwind that are du
 
 # [Surveys](#tab/surveys)
 
-**Description**:
-Basic search: Retrieve respondents surveys.
+**Description**:</br>
+Basic search: Retrieve respondents surveys.</br>
 Advanced search: Retrieve recent customer satisfaction surveys, drafts, and results with keywords or number of respondents.
 
 **Command description example:**
@@ -487,8 +487,8 @@ Advanced search: Retrieve recent customer satisfaction surveys, drafts, and resu
 
 # [CRM](#tab/crm)
 
-**Description**:
-Basic search: Fetch qualified leads.
+**Description**:</br>
+Basic search: Fetch qualified leads.</br>
 Advanced search: Fetch qualified unqualified, and quoted leads of clients and customers for a specific criteria.
 
 **Command description example:**
@@ -512,8 +512,8 @@ Advanced search: Fetch qualified unqualified, and quoted leads of clients and cu
 
 # [General](#tab/general)
 
-**Description**:
-Basic search: Find stocks in NASDAQ.
+**Description**:</br>
+Basic search: Find stocks in NASDAQ.</br>
 Advanced search: Find number of stocks or listed equities using keywords, key ratios, and index.
 
 **Command description example:**
