@@ -52,7 +52,7 @@ The orchestrator begins by dissecting the user's prompt to identify the underlyi
 At this point, the orchestrator does a semantic and lexical comparison of the available plugins' functions descriptions against the user's intent. This process ensures the selection of the most relevant plugins to fulfill the request. With the candidate functions pinpointed, the orchestrator collaborates with the foundation LLM to ascertain the parameters needed for the function calls. This step concludes with the orchestrator crafting well-structured requests, complete with any required authentication, ready to be processed by a tool specialized for making API calls.
 
 3c. **Result Analysis and Response Formulation:**
-Upon receiving the outcomes of the API calls, the orchestrator conducts a thorough analysis to determine their adequacy in satisfying the user's request. Should the information be insufficient, the orchestrator contemplates additional function calls to enrich the response. After a comprehensive evaluation, the orchestrator either proceeds with further requests or transitions to the response phase, where it formulates a reply to the user's initial prompt.
+Upon receiving the outcomes of the API calls, the orchestrator conducts a thorough analysis to determine their adequacy in satisfying the user's request. If the information is insufficient, the orchestrator contemplates additional function calls to enrich the response. After a comprehensive evaluation, the orchestrator either proceeds with further requests or transitions to the response phase, where it formulates a reply to the user's initial prompt.
 
 4.**Responding**
 
