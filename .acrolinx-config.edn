@@ -1,0 +1,50 @@
+{:allowed-branchname-matches ["main" "release-*"]
+ :allowed-filename-matches ["docs/"] ;; Can be overridden in repo-specific edn file. This is an allow list that identifies which folders contain the files Acrolinx will check. Separate multiple folders as follows ["folder/" "folder2"]
+ 
+ :use-gh-statuses true
+ 
+ :targets 
+   {
+     :counts {
+              ;;:spelling 10
+              ;;:grammar 3
+              ;;:total 15 ;; absolute flag count but i don't know the difference between this and issues
+              ;;:issues 15 ;; coming from the platform, will need to be tested.
+             }
+     :scores {
+              ;;:terminology 100
+              ;;:qualityscore 80 ;; Remove the ;; to turn on the min score. Set 80 to whatever min score client wants (eventually should be 80) and leave the structure in place
+              ;;:spelling 40
+             }
+   }
+ 
+ :guidance-profile "d2b6c2c8-00ee-47f1-8d10-b280cc3434c1" ;; Profile ID for "M365-specific"
+
+ :template-header
+
+ "
+
+## Acrolinx Scorecards
+
+**A minimum Acrolinx score of 80 is required.**
+
+Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology.
+
+| Article | Acrolinx<br>score | Lowest<br>category<br>score | Correctness<br>score | Scorecard | Processed |
+|---------|:--------------:|:--------------------:|:------:|:---------:|:---------:|
+"
+
+ :template-change ;; Can be overriden in repo-specific edn file. This displays in the pull request results pane.
+ "| ${s/file} | ${acrolinx/qualityscore} | ${acrolinx/scores/min-score} | ${acrolinx/scores/correctness} | [link](${acrolinx/scorecard}) | ${s/status} |
+"
+
+ :template-footer ;; Can be overriden in repo-specific edn file. This displays in the pull request results pane. 
+ "
+**More information about Acrolinx**
+
+- [Install Acrolinx locally for VSCode](https://review.docs.microsoft.com/help/contribute/contribute-acrolinx-vscode)
+- [False positives or issues](https://aka.ms/acrolinxbug)
+- [Troubleshooting issues with Acrolinx](https://review.docs.microsoft.com/help/contribute/acrolinx-error-messages)
+
+"
+}
