@@ -100,9 +100,9 @@ Or you want to design tailored conversations for predictable scenarios that requ
 
 With Azure AI services, you can craft a custom AI chatbot for **Teams** and **Microsoft 365** applications. If you’re seeking a custom bot solution that operates on Teams chat, then building with the **Teams AI Library** is the perfect fit for you. You can utilize the **Teams Toolkit** to start coding, and also leverage the new Teams app deployment features on Azure AI Studio.
 
-#### Microsoft Copilot stack or your stack?
+#### How does it differ from Copilot extensions for Microsoft 365?
 
-In the context of building Copilot for Microsoft 365, there are several options available. This diagram provides a comparison between the Copilot extensibility options (Graph connectors, plugins, and declarative Copilot) and the custom engine Copilot:
+In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the [Copilot extensibility options](decision-guide.md) (Graph connectors, plugins, and declarative Copilot) and the custom engine Copilot:
 
 :::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between extend or build for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
