@@ -74,6 +74,8 @@ Ensure your app meets certification criteria for [Power Platform Connectors](/co
 
 Once certified and published by Microsoft, your connector will be available on Power Automate, Power Apps, and Logic Apps and your plugin will be ready for IT enablement in the Microsoft Admin Center. The Copilot plugin will then appear as an installed plugin in Copilot for Microsoft 365.
 
+For more info, see [Get your Power Platform connector and plugin certified](/connectors/custom-connectors/submit-certification).
+
 ## Microsoft Graph connectors for Copilot
 
 Microsoft Graph connector publishing options depend on whether you have a standalone connector or a connector that's part of a Microsoft Teams app. While both scenarios are supported for single-tenant distribution, submission to the Microsoft Partner Center *Microsoft 365 and Copilot program* is currently limited to Graph connectors packaged within Teams apps.
