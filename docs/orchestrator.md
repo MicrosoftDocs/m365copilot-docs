@@ -39,7 +39,7 @@ The user types a prompt through Microsoft365 Copilot UI. For example "What ticke
 
 2.**Preliminary checks**
 
-Copilot analyzes the prompt for responsible AI checks, jailbreak checks and that it does not pose any risk.
+Copilot analyzes the prompt for responsible AI checks, jailbreak checks and that it does not pose any risk. If the prompt fails any of the checks, Copilot disengages the conversation.
 
 3.**Reasoning**
 
@@ -49,9 +49,12 @@ The orchestrator formulates a plan comprising multiple actions that it will perf
 The orchestrator begins by dissecting the user's prompt to identify the underlying intents or goals. Utilizing Microsoft Graph data, it gains insights into the user's current context, which is crucial for tailoring the response. Once the intent and context are clear, the orchestrator reviews its collection of inbuilt tools—ranging from summarization and web search to image generation—to find a match for the user's needs. If the inbuilt tools fall short, the orchestrator looks through the enabled plugins to gather the necessary information to address the prompt effectively.
 
 3b. **Function Matching and Parameter Determination:**
-At this point, the orchestrator does a semantic and lexical comparison of the available plugins' functions descriptions against the user's intent. This process ensures the selection of the most relevant plugins to fulfill the request. With the candidate functions pinpointed, the orchestrator collaborates with the foundation LLM to ascertain the parameters needed for the function calls. This step concludes with the orchestrator crafting well-structured requests, complete with any required authentication, ready to be processed by a tool specialized for making API calls.
+At this point, the orchestrator does a semantic and lexical comparison of the available plugins' functions descriptions against the user's intent. This process ensures the selection of the most relevant plugins to fulfill the request. With the candidate functions pinpointed, the orchestrator collaborates with the foundation LLM to gather the parameters needed for the function calls. This step concludes with the orchestrator crafting well-structured requests, complete with any required authentication, ready to be processed by a tool specialized for making API calls.
 
-3c. **Result Analysis and Response Formulation:**
+3c. **Tool execution:**
+The tool executor takes the structured API request and makes an API call to the server outlined in the plugin's OpenAPI description. The tool returns the result from the API call to the orchestrator for further processing.
+
+3d. **Result Analysis and Response Formulation:**
 Upon receiving the outcomes of the API calls, the orchestrator conducts a thorough analysis to determine their adequacy in satisfying the user's request. If the information is insufficient, the orchestrator contemplates additional function calls to enrich the response. After a comprehensive evaluation, the orchestrator either proceeds with further requests or transitions to the response phase, where it formulates a reply to the user's initial prompt.
 
 4.**Responding**
