@@ -46,10 +46,10 @@ Copilot analyzes the prompt for responsible AI checks, jailbreak checks and that
 The orchestrator formulates a plan comprising multiple actions that it will perform in an attempt to respond to the user's prompt.
 
 3a. **Intent and Tool Selection:**
-The orchestrator begins by dissecting the user's prompt to identify the underlying intents or goals. Utilizing Microsoft Graph data, it gains insights into the user's current context, which is crucial for tailoring the response. Once the intent and context are clear, the orchestrator reviews its collection of inbuilt tools—ranging from summarization and web search to image generation—to find a match for the user's needs. If the inbuilt tools fall short, the orchestrator looks through the enabled plugins to gather the necessary information to address the prompt effectively.
+The orchestrator begins by analyzing the user's prompt to identify the context and the underlying intents or goals. Once the intent and context are clear, the orchestrator reviews its collection of inbuilt tools-ranging from summarization, web search to image generation-and enabled plugins to find which tool has a skill that matches the user's needs.
 
 3b. **Function Matching and Parameter Determination:**
-At this point, the orchestrator does a semantic and lexical comparison of the available plugins' functions descriptions against the user's intent. This process ensures the selection of the most relevant plugins to fulfill the request. With the candidate functions pinpointed, the orchestrator collaborates with the foundation LLM to gather the parameters needed for the function calls. This step concludes with the orchestrator crafting well-structured requests, complete with any required authentication, ready to be processed by a tool specialized for making API calls.
+If the orchestrator determines to use available plugins it does a lexical match of the available plugin title's with the user's prompt to select a plugin and a sematic search across the plugin functions to select the appropriate skill. With the candidate functions identified, the orchestrator collaborates with the foundation LLM to gather the parameters needed for the function calls. This step concludes with the orchestrator crafting well-structured requests, complete with any required authentication, ready to be processed by a tool specialized for making API calls.
 
 3c. **Tool execution:**
 The tool executor takes the structured API request and makes an API call to the server outlined in the plugin's OpenAPI description. The tool returns the result from the API call to the orchestrator for further processing.
@@ -63,7 +63,7 @@ The orchestrator analyzes the information returned by all the tools it selected 
 
 5.**Generate summary**
 
-The orchestrator merges, filters, or ranks the responses from different assistants, and generates a single response for the user.
+The orchestrator merges, filters, or ranks the responses from different tools, and generates a single response for the user.
 
 6.**Natural language output**
 
