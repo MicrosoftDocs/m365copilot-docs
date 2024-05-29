@@ -4,7 +4,7 @@ description: When building Microsoft 365 AI solutions for business, you can eith
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 05/10/2024
+ms.date: 05/22/2024
 ---
 
 # Extending Microsoft Copilot versus building your own copilot
@@ -100,7 +100,13 @@ Or you want to design tailored conversations for predictable scenarios that requ
 
 With Azure AI services, you can craft a custom AI chatbot for **Teams** and **Microsoft 365** applications. If you’re seeking a custom bot solution that operates on Teams chat, then building with the **Teams AI Library** is the perfect fit for you. You can utilize the **Teams Toolkit** to start coding, and also leverage the new Teams app deployment features on Azure AI Studio.
 
-:::image type="content" source="assets/images/enterprise-copilot.png" border="true" alt-text="This diagram compares options between extend or build for M365" lightbox="assets/images/enterprise-copilot.png":::
+#### How does it differ from Copilot extensions for Microsoft 365?
+
+In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the [Copilot extensibility options](decision-guide.md) (Graph connectors, plugins, and declarative Copilot) and the custom engine Copilot:
+
+:::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between extend or build for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
+
+The custom engine Copilot operates on a BYO (Bring Your Own) model. So you'll use your preferred LLM and orchestrator instead of leveraging Microsoft Copilot services.
 
 Building with **Teams AI Library** is an excellent choice if:
 
@@ -113,7 +119,7 @@ Learn more on building your own [custom engine copilot](overview-custom-engine-c
 ## Extending GitHub Copilot
 
 GitHub Copilot is an AI-powered coding assistant that aids you in writing code. It suggests lines or blocks of code as you type, enhancing your coding efficiency. It’s compatible with IDEs, including Visual Studio Code.
-If you’re interested in expanding its capabilities, you can learn how to build plugins for GitHub Copilot. For detailed instructions and guidelines, please refer to [GitHub Copilot documentation](https://docs.github.com).
+If you’re interested in expanding its capabilities, now you can build extensions for GitHub Copilot. Stay tuned for detailed instructions and guidelines on [GitHub Copilot documentation](https://docs.github.com).
 
 ## Next step
 
