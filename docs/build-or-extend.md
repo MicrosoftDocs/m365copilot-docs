@@ -13,7 +13,7 @@ When it comes to deciding on your approach to AI development, there are numerous
 
 :::image type="content" source="assets/images/build-or-extend.png" alt-text="A diagram that shows a summary of Build copilots or extend Microsoft Copilot. Read the article on this page for the details." lightbox="assets/images/build-or-extend.png" :::
 
-This decision guide will help you explore your options and considerations.
+This decision guide helps you explore your options and considerations.
 
 ## Extending Microsoft Copilot
 
@@ -23,13 +23,13 @@ There are three versions of Microsoft Copilot:
 
 - [**Microsoft Copilot**](https://copilot.microsoft.com/) - Available at [copilot.microsoft.com](https://copilot.microsoft.com/) and free for all users
 - [**Copilot Pro**](https://www.microsoft.com/store/b/copilotpro) - A subscription-based version that offers faster performance and enhanced creativity capabilities
-- [**Copilot for Microsoft 365**](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365) - Available as "Work" profile with Copilot for Microsoft 365 subscription, specifically designed for enterprise users to enhance productivity within Microsoft 365 applications
+- [**Copilot for Microsoft 365**](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365) - Available as "Work" profile with Copilot for Microsoft 365 subscription, designed for enterprise users to enhance productivity within Microsoft 365 applications
 
 By extending Copilot, you can tap into the vast knowledge and capabilities of Copilot’s Large Language Models (LLMs) and natural language processing. And when you expand Copilot for Microsoft 365, you gain the added advantage of utilizing the organizational knowledge within your workplace.
 
 ### Is extending Microsoft Copilot the right choice for you?
 
-Building a full-fledged or stand-alone Retrieval-Augmented Generation (RAG) solution is not always what you need. Extending an existing interface with your own data may be the best suited solution for you.
+Building a full-fledged or stand-alone Retrieval-Augmented Generation (RAG) solution isn't always what you need. Extending an existing interface with your own data may be the best suited solution for you.
 
 Extending **Copilot** is right for you if:
 
@@ -40,16 +40,16 @@ For more on extending Copilot for all web users, see [Overview of plugins for Mi
 
 Additionally, you can also extend **Copilot for Microsoft 365** for enterprise users with extra features. This option is for you if:
 
-- You are considering building AI solutions for organizations to boost employee productivity across businesses
-- You want to leverage people-centric data with Microsoft Graph to provide more personalized experience for your users
+- You're considering building AI solutions for organizations to boost employee productivity across businesses
+- You want to apply people-centric data with Microsoft Graph to provide more personalized experience for your users
 - You want to use Graph Connector, SharePoint site library, or Dataverse table that is used in the workflow as your RAG data source
 
 #### What can you create by extending Copilot for Microsoft 365?
 
 You can either develop copilot extensions internally for your organization or build extensions that are publicly available. Here are some examples:
 
-- You are a developer within an organization, who builds tools and applications intended for internal business use
-- Or you are a developer at a *software as a service* (SaaS) company, who specializes in developing, marketing, and selling software products
+- You're a developer within an organization, who builds tools and applications intended for internal business use
+- Or you're a developer at a *software-as-a-service* (SaaS) company, who specializes in developing, marketing, and selling software products
 
 :::image type="content" source="assets/images/personas-extend-copilot.png" border="false" alt-text="Persona 3 - I am a developer, who manages the product database at an e-commerce company, and I want to build an inventory catalog plugin that brings the product information for internal org. Persona 4 - I am a developer at a SaaS company, where we specialize a workspace design collaboration tool. And I want to build A collaboration extension that helps users discover content and share with their teammates." lightbox="assets/images/personas-extend-copilot.png":::
 
@@ -70,7 +70,7 @@ If you’re a proficient developer and looking to create a fully customized end-
 - Full control on product branding
 - Choice of language models and orchestration
 
-Or, if you are building products like:
+Or, if you're building products like:
 
 - A customer service chatbot for your e-commerce site
 - A virtual assistant to schedule appointments for your healthcare service
@@ -80,13 +80,13 @@ Or, if you are building products like:
 
 . . . then building a custom AI app with [**Azure AI Services**](/azure/developer/intro/azure-ai-for-developers) is probably the right choice for you.
 
-When you choose to build a custom copilot, you have a broad spectrum of cognitive services and machine learning capabilities to leverage. These services come with pre-built models that can be tailored and deployed, making them perfect for applications that require features such as vision, speech, and language comprehension. RAG solutions can be utilized in conjunction with Azure AI services to develop applications capable of generating responses based on external data. This allows your bespoke AI assistants to be fully integrated with company data and documents or fetch real-time data from APIs.
+When you choose to build a custom copilot, you have a broad spectrum of cognitive services and machine learning capabilities to take advantage of. These services come with prebuilt models that can be tailored and deployed, making them perfect for applications that require features such as vision, speech, and language comprehension. RAG solutions can be utilized with Azure AI services to develop applications capable of generating responses based on external data. It allows your bespoke AI assistants to be fully integrated with company data and documents or fetch real-time data from APIs.
 
 If you're ready to build your own custom AI solutions, check out [**Azure AI Studio**](/azure/ai-studio/what-is-ai-studio).
 
 Otherwise, if you prefer:
 
-- A rapid development with its no-code interface, templates, co-pilot authoring run-time capabilities, and built-in analytics
+- A rapid development with its no-code interface, templates, authoring run-time capabilities, and built-in analytics
 
 Or you want to design tailored conversations for predictable scenarios that require specific responses such as:
 
@@ -98,7 +98,7 @@ Or you want to design tailored conversations for predictable scenarios that requ
 
 ### Is building a custom engine copilot for Microsoft 365 right for you?
 
-With Azure AI services, you can craft a custom AI chatbot for **Teams** and **Microsoft 365** applications. If you’re seeking a custom bot solution that operates on Teams chat, then building with the **Teams AI Library** is the perfect fit for you. You can utilize the **Teams Toolkit** to start coding, and also leverage the new Teams app deployment features on Azure AI Studio.
+With Azure AI services, you can craft a custom AI chatbot for **Teams** and **Microsoft 365** applications. If you’re seeking a custom bot solution that operates on Teams chat, then building with the **Teams AI Library** is the perfect fit for you. You can utilize the **Teams Toolkit** to start coding, also new Teams app deployment features on Azure AI Studio.
 
 #### How does it differ from Copilot extensions for Microsoft 365?
 
@@ -106,7 +106,7 @@ In the context of building copilots for Microsoft 365, there are several options
 
 :::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilot for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
-The custom engine Copilot operates on a BYO (Bring Your Own) model. So you'll use your preferred LLM and orchestrator instead of leveraging Microsoft Copilot services.
+The custom engine Copilot operates on a BYO (Bring Your Own) model. So you use your preferred LLM and orchestrator instead of Microsoft Copilot services.
 
 Building custom engine copilot with **Teams AI Library** is an excellent choice if:
 
@@ -133,4 +133,4 @@ Indeed, there are several ways to extend Copilot to better suit your specific ne
 - [Azure AI Studio](/azure/ai-studio/what-is-ai-studio?tabs=home)
 - [Teams AI Library](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview)
 - [Copilot plugins for Bing](/copilot/plugins/overview)
-- [Adopt, extend and build Copilot experiences across the Microsoft Cloud](/microsoft-cloud/dev/copilot/overview)
+- [Adopt, extend, and build Copilot experiences across the Microsoft Cloud](/microsoft-cloud/dev/copilot/overview)
