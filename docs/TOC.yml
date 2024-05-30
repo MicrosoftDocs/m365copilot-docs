@@ -14,6 +14,8 @@
     href: data-privacy-security.md
 - name: Extend Microsoft Copilot or build your own
   href: build-or-extend.md
+- name: Extensibility guide for ISVs
+  href: /microsoft-cloud/dev/copilot/isv-extensibility-story?context=/microsoft-365-copilot/extensibility/context
 - name: Get started
   expanded: true
   items:
