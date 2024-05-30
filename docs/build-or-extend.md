@@ -102,13 +102,13 @@ With Azure AI services, you can craft a custom AI chatbot for **Teams** and **Mi
 
 #### How does it differ from Copilot extensions for Microsoft 365?
 
-In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the [Copilot extensibility options](decision-guide.md) (Graph connectors, plugins, and declarative Copilot) and the custom engine Copilot:
+In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the [Copilot extensibility options](decision-guide.md) (Graph connectors, plugins, as well as declarative copilots, which can connect to Graph connectors and plugins) and the custom engine copilot:
 
-:::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between extend or build for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
+:::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilot for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
 The custom engine Copilot operates on a BYO (Bring Your Own) model. So you'll use your preferred LLM and orchestrator instead of leveraging Microsoft Copilot services.
 
-Building with **Teams AI Library** is an excellent choice if:
+Building custom engine copilot with **Teams AI Library** is an excellent choice if:
 
 - You want to choose models and orchestration
 - You have prior experience in building Teams bots or are familiar with Teams bot development
