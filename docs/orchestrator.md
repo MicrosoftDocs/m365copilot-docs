@@ -33,39 +33,39 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 :::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
 
-1.**Natural language input**
+1. **Natural language input**
 
-The user types a prompt through Microsoft365 Copilot UI. For example "What tickets are assigned to me right now?"
+The user submits a query via the Microsoft365 Copilot UI, such as "What tickets are assigned to me right now?"
 
-2.**Preliminary checks**
+2. **Preliminary checks**
 
-Copilot analyzes the prompt for responsible AI checks, jailbreak checks and that it does not pose any risk. If the prompt fails any of the checks, Copilot disengages the conversation.
+Copilot conducts several checks on the query, including responsible AI checks and security measures to ensure it doesn’t pose any risks. If the query fails any of these checks, Copilot will terminate the interaction.
 
-3.**Reasoning**
+3. **Reasoning**
 
-The orchestrator formulates a plan comprising multiple actions that it will perform in an attempt to respond to the user's prompt.
+The Copilot orchestrator formulates a plan comprising of multiple actions that it will perform in an attempt to respond to the user's prompt.
 
-3a. **Intent and Tool Selection:**
-The orchestrator begins by analyzing the user's prompt to identify the context and the underlying intents or goals. Once the intent and context are clear, the orchestrator reviews its collection of inbuilt tools-ranging from summarization, web search to image generation-and enabled plugins to find which tool has a skill that matches the user's needs.
+3a. **Context and Tool Selection:**
+
+The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps. The LLM may proceed directly to generating a response using Copilot’s built-in capabilities, or it may determine that additional data is necessary. If further information is needed, the LLM provides guidance on how to obtain this information from other tools. Following the LLM's guidance, the orchestrator searches the plugins store to find the appropriate plugin (tool) based on the plugin titles and descriptions. It then identifies the specific functions (skills) within these selected plugins that are best suited to provide the required information.
 
 3b. **Function Matching and Parameter Determination:**
-If the orchestrator determines to use available plugins it does a lexical match of the available plugin title's with the user's prompt to select a plugin and a sematic search across the plugin functions to select the appropriate skill. With the candidate functions identified, the orchestrator collaborates with the foundation LLM to gather the parameters needed for the function calls. This step concludes with the orchestrator crafting well-structured requests, complete with any required authentication, ready to be processed by a tool specialized for making API calls.
+
+The orchestrator constructs a new query incorporating the context, selected tools, and their functions, and sends this to the LLM to formulate the appropriate API request(s) for obtaining the required information. The LLM determines the necessary functions and parameters and returns a structured request to the orchestrator.
 
 3c. **Tool execution:**
-The tool executor takes the structured API request and makes an API call to the server outlined in the plugin's OpenAPI description. The tool returns the result from the API call to the orchestrator for further processing.
+
+The orchestrator forwards this API request to the tool executor, which securely connects to the API server located outside of Copilot's infrastructure. It executes the request and sends the results back to the orchestrator for further processing.
 
 3d. **Result Analysis and Response Formulation:**
-Upon receiving the outcomes of the API calls, the orchestrator conducts a thorough analysis to determine their adequacy in satisfying the user's request. If the information is insufficient, the orchestrator contemplates additional function calls to enrich the response. After a comprehensive evaluation, the orchestrator either proceeds with further requests or transitions to the response phase, where it formulates a reply to the user's initial prompt.
+
+The orchestrator integrates the API response into the ongoing context and consults the LLM in a continuous reasoning loop until the LLM deems it appropriate to generate a final response.
 
 4.**Responding**
 
-The orchestrator analyzes the information returned by all the tools it selected and prepares a response to the user's prompt. It uses the reasoning instructions from the functions that it called together with its inbuilt capabilities to formulate a response.
+The orchestrator compiles all the information gathered during the reasoning process and submits it to the LLM to create a final response. After ensuring the response complies with Responsible AI guidelines, it sends the response back to the orchestrator, which logs it in the context store and delivers it to the user via the Copilot UI.
 
-5.**Generate summary**
-
-The orchestrator merges, filters, or ranks the responses from different tools, and generates a single response for the user.
-
-6.**Natural language output**
+5.**Natural language output**
 
 Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
