@@ -70,7 +70,7 @@ Copilot for Microsoft 365 can uniquely choose the right skill from thousands. Bu
 
 The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring Copilot knows when and how to invoke your plugin.
 
-The following sections provide guidance and examples for plugins, skills, and parameter.
+The following sections provide guidance and examples for plugins, skills, and parameter descriptions.
 
 ### Plugin descriptions
 
