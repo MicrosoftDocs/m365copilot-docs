@@ -184,7 +184,13 @@ Search skill descriptions should:
 - Include verbs and synonyms, if applicable.
 - Focus on keywords that are likely to be used in the search function of your native apps.
 
-The following table lists search command examples for various plugin scenarios:
+#### Semantic description
+
+The [semanticDescription](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+
+The following table lists command and semantic description examples for various plugin scenarios:
 
 #### [Tasks](#tab/tasks)
 
@@ -198,7 +204,8 @@ The following table lists search command examples for various plugin scenarios:
           "id": "Search",
           "type": "query",
           "title": "Tasks",
-          "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
+          "description": "Search for high priority tasks related to Northwind that are due tomorrow",
+          "semanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -221,6 +228,7 @@ The following table lists search command examples for various plugin scenarios:
           "type": "query",
           "title": "Survey",
           "description": "Search for surveys, drafts, and results with keywords or number of respondents.",
+          "semanticDescription": "This command enables users to search for surveys, drafts, and results based on specific keywords or the number of respondents.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -243,6 +251,7 @@ The following table lists search command examples for various plugin scenarios:
           "type": "query",
           "title": "CRM",
           "description": "Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.",
+          "semanticDescription": "This command allows users to search for leads in the CRM system based on specific criteria.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -282,7 +291,9 @@ A good parameter description explains what the parameter is, not what the parame
 
 When used directly in Microsoft Teams chat and Outlook mail compose, you can use a message extension to query one parameter at a time. When used as a plugin, message extension search commands support up to five parameters (one parameter must be visible in the message extension search bar). A parameter must have a good description, which should describe the expected input, including format or type.
 
-The following are few examples on basic and advances search requests for various plugin scenarios:
+The [semanticDescription](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The following are a few examples of basic and advanced search requests for various plugin scenarios:
 
 #### [Tasks](#tab/tasks)
 
@@ -303,12 +314,14 @@ Advanced search: Search for high priority tasks related to Northwind that are du
         "name": "Time",
         "title": "Time",
         "description": "Date or number of days for which to find tasks. Output: Number",
+        "semanticDescription": "Date or number of days for which you need tasks for. Output: Number",
         "inputType": "text"
     },
     {
         "name": "Priority",
         "title": "Priority",
         "description": "Priority of tasks. Acceptable values: high, medium, low, NA ",
+        "semanticDescription": "Priority of tasks. Acceptable values are high, medium, low, NA",
         "inputType": "text"
     }]
 ```
@@ -338,6 +351,7 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
     "name": "ResponseNumber",
     "title": "Response number",
     "description": "Number of responses received for a survey. Output: Number",
+    "semanticDescription": "Number of responses received for a survey. Output: Number",
     "inputType": "text"
   }
 ]
@@ -362,12 +376,14 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
     "name": "Status",
     "title": "Status",
     "description": "Status of leads. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
+    "semanticDescription": "Status of leads to find. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
     "inputType": "text"
   },
   {
     "name": "Time",
     "title": "Time",
     "description": "Number of days for which to find status of leads. Output: Number",
+    "semanticDescription": "Number of days to search for leads with given status. Output: Number",
     "inputType": "text"
   }
 ]
@@ -386,155 +402,34 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
     "name": "StockIndex",
     "title": "Stock Index",
     "description": "Name of index in which user wants to find stocks",
+    "semanticDescription": "Name of stock market index used to search for stocks",
     "inputType": "text"
   },
   {
     "name": "NumberofStocks",
     "title": "Ranked Number of Stocks",
     "description": "Number of stocks in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
+    "semanticDescription": "Number of stocks to return in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
     "inputType": "text"
   },
   {
     "name": "P/B",
     "title": "Price to Book Ratio",
     "description": "P/B or Price to Book ratio of a stock. Output format: >x.xx or <x.xx",
+    "semanticDescription": "Price to book (P/B) ratio of a stock. Output format: >x.xx or <x.xx",
     "inputType": "text"
   },
   {
     "name": "P/E",
     "title": "Price to Earnings Ratio",
     "description": "P/E or Price to Earnings ratio of a stock with comparison. Output format: >x.xx or <x.xx",
+    "semanticDescription": "Price to Earnings (P/E) ratio of a stock with comparison. Output format: >x.xx or <x.xx",
     "inputType": "text"
-  }
-]
+  }]
 ```
 
 ---
 
-### Search command description
-
-Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords. Search command descriptions must:
-
-- Focus on what and how the command searches (detailed list) in natural language.
-- Include verbs and synonyms, if applicable.
-- Focus on keywords that are likely to be used in the search function of your native apps.
-
-#### Semantic description
-
-The [semanticDescription](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
-
-The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
-
-We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
-
-- Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
-- Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
-- Avoid grammar and punctuation errors. *[Mandatory fix]*
-- Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
-- Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
-
-A semantic description command must explain the requirements of the system in a natural language; it must contain a combination of acceptable parameters, enums, acronyms, and output format. The following table lists the command and semantic description examples for each category:
-
-# [Tasks](#tab/tasks)
-
-**Description**:</br>
-Basic search: Search for tasks related to Northwind.</br>
-Advanced search: Search for high priority tasks related to Northwind that are due tomorrow.
-
-**Command description example:**
-
-```json
-"commands": [
-        {
-          "id": "Search",
-          "type": "query",
-          "title": "Tasks",
-          "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
-          "semanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details."
-          "initialRun": true,
-          "fetchTask": false,
-          "context": [
-            "commandBox",
-            "compose",
-            "message"
-          ],
-```
-
-# [Surveys](#tab/surveys)
-
-**Description**:</br>
-Basic search: Retrieve respondents surveys.</br>
-Advanced search: Retrieve recent customer satisfaction surveys, drafts, and results with keywords or number of respondents.
-
-**Command description example:**
-
-```json
-"commands": [
-        {
-          "id": "Search",
-          "type": "query",
-          "title": "Survey",
-          "description": "Search for surveys, drafts, and results with keywords or number of respondents.",
-          "semanticDescription": "This command enables users to search for surveys, drafts, and results based on specific keywords or the number of respondents."
-          "initialRun": true,
-          "fetchTask": false,
-          "context": [
-            "commandBox",
-            "compose",
-            "message"
-          ],
-```
-
-# [CRM](#tab/crm)
-
-**Description**:</br>
-Basic search: Fetch qualified leads.</br>
-Advanced search: Fetch qualified unqualified, and quoted leads of clients and customers for a specific criteria.
-
-**Command description example:**
-
-```json
-"commands": [
-        {
-          "id": "Search",
-          "type": "query",
-          "title": "CRM",
-          "description": "Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.",
-          "semanticDescription": "This command allows users to search for leads in the CRM system based on specific criteria.",
-          "initialRun": true,
-          "fetchTask": false,
-          "context": [
-            "commandBox",
-            "compose",
-            "message"
-          ],
-```
-
-# [General](#tab/general)
-
-**Description**:</br>
-Basic search: Find stocks in NASDAQ.</br>
-Advanced search: Find number of stocks or listed equities using keywords, key ratios, and index.
-
-**Command description example:**
-
-```json
-"commands": [
-        {
-          "id": "Search",
-          "type": "query",
-          "title": "General",
-          "description": "Find number of stocks or listed equities using keywords, key ratios, and index.",
-          "initialRun": true,
-          "fetchTask": false,
-          "context": [
-            "commandBox",
-            "compose",
-            "message"
-          ],
-```
-
----
 
 ## Next step
 
