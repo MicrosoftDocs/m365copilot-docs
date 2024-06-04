@@ -20,28 +20,28 @@ Follow these steps to extend your existing Graph Connectors directly from the Mi
 2. Select **Data Sources**.
 3. Under the Connections tab, select **Create Extension**.
 
-    :::image type="content" source="assets/images/" alt-text="A screenshot that shows Search and intelligence page in the Admin Center." lightbox="assets/images/" :::
+    :::image type="content" source="assets/images/search-intelligence-page.png" alt-text="A screenshot that shows Search and intelligence page in the Admin Center." lightbox="assets/images/search-intelligence-page.png" :::
 
 4. Provide the following fields to create the Copilot extension and select **Create**:
 
-    - **Add connections:** An existing Graph Connector that will be leveraged by the extension.
+    - **Add connections:** An existing Graph Connector that is the data source of the extension.
     - **Change Icon:** Symbol-based icons representing the theme or function of the Copilot extension.
     - **Name:** The primary identifier that reflects the Copilot extension's functionality.
     - **Description**: A brief overview detailing the Copilot extension’s purpose and capabilities, setting the right user expectations.
     - **Give instructions for this extension:** Concise guidance on how to interact with the Copilot extension, including question formatting, interaction tips to maximize effectiveness, and do’s and don’ts.
     - **Conversation Starters:** Suggested prompts to initiate interactions, demonstrating the conversational scope and easing user engagement.
 
-    :::image type="content" source="assets/images/" alt-text="A screenshot that shows the Create Copilot extension panel." lightbox="assets/images/" :::
+    :::image type="content" source="assets/images/create-extension-si.png" alt-text="A screenshot that shows success page." lightbox="assets/images/create-extension-si.png" :::
 
 5. The Copilot extension for your Graph Connector is successfully created and ready to preview.
 
-    :::image type="content" source="assets/images/" alt-text="A screenshot that shows success page." lightbox="assets/images/" :::
+    :::image type="content" source="assets/images/extension-ready-si.png" alt-text="A screenshot that shows the Create Copilot extension panel." lightbox="assets/images/extension-ready-si.png" :::
 
 ## Manage Copilot extensions from the Admin Center
 
 The administrators can manage the extensions from the **Extensions** tab.
 
-:::image type="content" source="assets/images/" alt-text="A screenshot that shows the Extensions tab." lightbox="assets/images/" :::
+:::image type="content" source="assets/images/manage-extensions-si.png" alt-text="A screenshot that shows the Extensions tab." lightbox="assets/images/manage-extensions-si.png" :::
 
 ## See also
 
