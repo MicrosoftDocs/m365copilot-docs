@@ -224,7 +224,7 @@ To add conversation starters to your declarative copilot, follow these steps:
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The updated conversation starters are now available in your declarative copilot.
+1. The updated conversation starters will be available in your declarative copilot after you refresh the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-conversation-starters.png" alt-text="Screenshot shows the conversations starters from the declarative copilot in Copilot for Microsoft 365.":::
 
@@ -250,7 +250,7 @@ To add web content using Bing to your declarative copilot, follow these steps:
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The declarative copilot will now have access to web content to generate its answers.
+1. The declarative copilot will have access to web content to generate its answers after you reload the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-web-search.png" alt-text="Screenshot shows the web content from the declarative copilot in Copilot for Microsoft 365.":::
 
@@ -289,7 +289,7 @@ To add OneDrive and SharePoint knowledge to your declarative copilot, follow the
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The declarative copilot will now have access to OneDrive and SharePoint content to generate its answers.
+1. The declarative copilot will have access to OneDrive and SharePoint content to generate its answers after you reload the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-odsp.png" alt-text="Screenshot shows the OneDrive and SharePoint content from the declarative copilot in Copilot for Microsoft 365.":::
 
@@ -337,7 +337,7 @@ To add Graph Connectors knowledge to your declarative copilot, follow these step
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The declarative copilot will now have access to GraphConnectors content to generate its answers.
+1. The declarative copilot will have access to GraphConnectors content to generate its answers after you reload the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-gc.png" alt-text="Screenshot shows the Graph Connectors content from the declarative copilot in Copilot for Microsoft 365.":::
 
@@ -386,7 +386,7 @@ To add a plugin to your declarative copilot, follow these steps:
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The declarative copilot will now have access to your plugin content to generate its answers.
+1. The declarative copilot will have access to your plugin content to generate its answers after you reload the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-plugin.png" alt-text="Screenshot shows the plugin content from the declarative copilot in Copilot for Microsoft 365.":::
 
