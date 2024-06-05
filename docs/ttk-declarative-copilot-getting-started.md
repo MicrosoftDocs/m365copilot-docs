@@ -47,8 +47,9 @@ Set the environment variable **TEAMSFX_DECLARATIVE_COPILOT** and **KIOTA_CONFIG_
 #### [Windows](#tab/windows)
 
 ```powershell
-[Environment]::SetEnvironmentVariable('TEAMSFX_DECLARATIVE_COPILOT','true')
-[Environment]::SetEnvironmentVariable('KIOTA_CONFIG_PREVIEW','true')
+[Environment]::SetEnvironmentVariable("TEAMSFX_DECLARATIVE_COPILOT", 'true', "User")
+[Environment]::SetEnvironmentVariable("KIOTA_CONFIG_PREVIEW", "true", "User")
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 ```
 
 #### [Linux](#tab/linux)
@@ -59,6 +60,7 @@ Open your environment configuration file (for example, **~/.bashrc** or **~/.zsh
 sudo code ~/.bashrc
 export TEAMSFX_DECLARATIVE_COPILOT=true
 export KIOTA_CONFIG_PREVIEW=true
+source ~/.bashrc
 ```
 
 #### [Mac OSX](#tab/mac-os)
@@ -68,6 +70,7 @@ Open your environment configuration file (`sudo vi /etc/launchd.conf`) and add t
 ```bash
 setenv TEAMSFX_DECLARATIVE_COPILOT true
 setenv KIOTA_CONFIG_PREVIEW true
+egrep -v '^\s*#' /etc/launchd.conf | launchctl
 ```
 
 ---
@@ -176,16 +179,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
       Created environment file (secret) at ~/src/demos/ttk-declarative-copilot/env/.env.dev.user 
     ```
 
-1. In the command prompt window, enter the following command to preview your app in Teams:
-
-    ```bash
-    ~ > src > demos > ttk-declarative-copilot > teamsapp preview --env dev
-    ████████████████████  100% | [1/1] Microsoft 365 Account  (✔) Done.
-    Microsoft 365 Account (...) is signed in and custom app upload permission is enabled
-    teams web client is being launched for you to preview the app: https://teams.microsoft.com/?appTenantId=...&login_hint=...
-    ████████████████████  100% | [1/1] preview  (✔) Done.
-    (⚠) Warning: If you changed the manifest file, please run 'teamsapp provision --env dev' to install app again.
-    ```
+1. Navigate to the Copilot application with the URL [https://microsoft365.com/chat](https://microsoft365.com/chat)
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-welcome.png" alt-text="Screenshot shows the initial screen from Copilot for Microsoft 365.":::
   
