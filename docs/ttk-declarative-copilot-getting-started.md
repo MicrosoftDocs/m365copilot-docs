@@ -57,9 +57,8 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 Open your environment configuration file (for example, **~/.bashrc** or **~/.zshrc**) and add the following line:
 
 ```bash
-sudo code ~/.bashrc
-export TEAMSFX_DECLARATIVE_COPILOT=true
-export KIOTA_CONFIG_PREVIEW=true
+sudo echo 'export TEAMSFX_DECLARATIVE_COPILOT=true' >> ~/.bashrc
+sudo echo 'export KIOTA_CONFIG_PREVIEW=true' >> ~/.bashrc
 source ~/.bashrc
 ```
 
