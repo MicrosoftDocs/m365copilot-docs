@@ -187,7 +187,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc.png" alt-text="Screenshot shows the landing screen for the declarative copilot in Copilot for Microsoft 365.":::
 
-1. Enter a prompt and ensure that it replies with "Thanks for using Teams Toolkit to create your declarative copilot!"
+1. Enter a question for your declarative copilot and ensure that it replies with "Thanks for using Teams Toolkit to create your declarative copilot!"
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative copilot in Copilot for Microsoft 365.":::
 
