@@ -195,7 +195,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 
 To add conversation starters to your declarative copilot, follow these steps:
 
-1. Open the your project in Visual Studio Code.
+1. Open the project in Visual Studio Code.
 
     ```bash
     code .
@@ -339,7 +339,7 @@ To add Graph Connectors knowledge to your declarative copilot, follow these step
 
 1. The declarative copilot will have access to GraphConnectors content to generate its answers after you reload the page.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-gc.png" alt-text="Screenshot shows the Graph Connectors content from the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-gc.png" alt-text="Screenshot shows Graph Connectors content from the declarative copilot in Copilot for Microsoft 365.":::
 
 ## Add a plugin
 
@@ -394,7 +394,7 @@ To add a plugin to your declarative copilot, follow these steps:
 
 To improve the instructions of your declarative copilot, follow these steps:
 
-1. Open the `appPackage/declarativeCopilot.json` file and add edit the `instructions` value:
+1. Open the `appPackage/declarativeCopilot.json` file and edit the `instructions` value:
 
     ```json
     {
