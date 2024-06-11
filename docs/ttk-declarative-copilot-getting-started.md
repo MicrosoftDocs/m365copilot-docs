@@ -74,7 +74,9 @@ egrep -v '^\s*#' /etc/launchd.conf | launchctl
 
 ---
 
-Close and reopen your terminal to ensure all changes are taken into account.
+> [!WARNING]
+>
+> Close and reopen your terminal to ensure all changes are taken into account.
 
 ### Install Teams Toolkit CLI
 
