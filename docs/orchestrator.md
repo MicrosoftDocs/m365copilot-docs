@@ -47,15 +47,17 @@ The Copilot orchestrator formulates a plan comprising of multiple actions that i
 
 3a. **Context and Tool Selection:**
 
-The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps. The LLM may proceed directly to generating a response using Copilot’s built-in capabilities, or it may determine that additional data is necessary. If further information is needed, the LLM provides guidance on how to obtain this information from other tools. Following the LLM's guidance, the orchestrator searches the plugins store to find the appropriate plugin (tool) based on the plugin titles and descriptions. It then identifies the specific functions (skills) within these selected plugins that are best suited to provide the required information.
+The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps.
+The LLM may proceed to generating a response using Copilot’s built-in capabilities, or it may determine that additional data is necessary.
+If further information is needed, the orchestrator does a search for the plugins(tools) with the right skill for the task from the user's enabled plugins based on the plugins descriptions and their functions descriptions.
 
 3b. **Function Matching and Parameter Determination:**
 
-The orchestrator constructs a new query incorporating the context, selected tools, and their functions, and sends this to the LLM to formulate the appropriate API request(s) for obtaining the required information. The LLM determines the necessary functions and parameters and returns a structured request to the orchestrator.
+The orchestrator formulates a new prompt incorporating the user’s initial query, the updated context, and the selected plugins, and presents it to the LLM. The LLM evaluates the input and specifies the optimal plugin and function within that plugin to address the task. It then provides the orchestrator with the necessary function details and parameters required to gather the needed information.
 
 3c. **Tool execution:**
 
-The orchestrator forwards this API request to the tool executor, which securely connects to the API server located outside of Copilot's infrastructure. It executes the request and sends the results back to the orchestrator for further processing.
+The orchestrator uses the response from the LLM to construct an API request and send the request to the tool executor, which securely connects to the API server located outside of Copilot's infrastructure. It executes the request and sends the results back to the orchestrator for further processing.
 
 3d. **Result Analysis and Response Formulation:**
 
