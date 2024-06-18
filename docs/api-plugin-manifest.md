@@ -1,6 +1,6 @@
 ---
 title: API plugin manifest schema for Microsoft Copilot for Microsoft 365
-description: Learn about API plugins in Microsoft Copilot for Microsoft 365
+description: Learn about the members and properties you can use in a manifest file for an API plugin in Microsoft Copilot for Microsoft 365
 author: pabrosse
 ms.author: pabrosse
 ms.topic: reference
@@ -17,7 +17,7 @@ The following article describes the schema used by API plugin manifest files. Fo
 
 Here is an example of a plugin manifest file that uses most of the manifest members and object properties described in the article:
 
-[!INCLUDE [Complete plugin manifest for Contoso Real Estate plugin](./includes/full-type-b-manifest.md)]
+[!INCLUDE [Complete plugin manifest for Contoso Real Estate plugin](includes/full-type-b-manifest.md)]
 
 ## Manifest members
 
@@ -39,7 +39,7 @@ The following members can be used at the root level of a plugin manifest:
 
 ## Capabilities object
 
-Lists the capabilities that the plugin supports. Currently, the only capability that can be specified is localization, which is used to provide translations to strings in your plugin manifest file. To learn about how to localize strings in your plugin manifest, see [Localize your plugin manifest](./how-to/localize-manifest.md).
+Lists the capabilities that the plugin supports. Currently, the only capability that can be specified is localization, which is used to provide translations to strings in your plugin manifest file.
 
 Here is an example of a capabilities object that specifies translations for the `name_for_human` and `description_for_human` members:
 
