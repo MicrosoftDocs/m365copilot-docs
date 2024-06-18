@@ -17,7 +17,7 @@ The following article describes the schema used by API plugin manifest files. Fo
 
 Here is an example of a plugin manifest file that uses most of the manifest members and object properties described in the article:
 
-[!INCLUDE [Complete plugin manifest for Contoso Real Estate plugin](includes/full-type-b-manifest.md)]
+[!INCLUDE [Complete plugin manifest for Contoso Real Estate plugin](includes/complete-api-plugin-manifest-file.md)]
 
 ## Manifest members
 
