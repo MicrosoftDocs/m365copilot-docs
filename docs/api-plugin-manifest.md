@@ -8,7 +8,7 @@ ms.topic: reference
 
 # API plugin manifest schema for Microsoft Copilot for Microsoft 365
 
-API plugins enable Copilot for Microsoft 365 to interact with REST APIs that are described by an [OpenAPI specification](https://www.openapis.org/what-is-openapi). The OpenAPI specification in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
+API plugins enable Copilot for Microsoft 365 to interact with REST APIs that are described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
 
 The following article describes the schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft Copilot for Microsoft 365](./overview-api-plugins.md).
 
@@ -17,7 +17,7 @@ The following article describes the schema used by API plugin manifest files. Fo
 
 Here is an example of a plugin manifest file that uses most of the manifest members and object properties described in the article:
 
-[!INCLUDE [Complete plugin manifest for Contoso Real Estate plugin](includes/complete-api-plugin-manifest-file.md)]
+[!INCLUDE [Sample plugin manifest for Contoso Real Estate plugin](includes/sample-api-plugin-manifest-file.md)]
 
 ## Manifest members
 
@@ -178,9 +178,9 @@ The following properties can be used in a function object:
 
 | Property | Description | Type | Required? | Guideline |
 | --- | --- | --- | --- | --- |
-| `name` | Name that uniquely identifies the function. | String | Yes | The string identifier must match the `^[A-Za-z0-9_]+$` regular expression. When this function is run by an `OpenApi` runtime, the name must match the `operationId` value in the OpenAPI specification file. |
+| `name` | Name that uniquely identifies the function. | String | Yes | The string identifier must match the `^[A-Za-z0-9_]+$` regular expression. When this function is run by an `OpenApi` runtime, the name must match the `operationId` value in the OpenAPI description file. |
 | `description` | Description of the function that's better tailored to the model, such as token context length considerations or keyword usage for improved plugin prompting. | String | No | N/A |
-| `parameters` | Description of the parameters that the function accepts. | [Parameters object](#parameters-object). | Yes | An empty object can be used for functions that have no parameters. When using an `OpenApi` runtime, the parameters defined in the OpenAPI specification are used by the model. |
+| `parameters` | Description of the parameters that the function accepts. | [Parameters object](#parameters-object). | Yes | An empty object can be used for functions that have no parameters. When using an `OpenApi` runtime, the parameters defined in the OpenAPI description are used by the model. |
 | `returns` | Description of the function's return value. | [Return object](#return-object) | Yes | N/A |
 | `states` | An object used to provide specific instructions for when the function is invoked during a specific state of the plugin processing flow. | Object where keys are `reasoning` or `responding` and values are of type [State object](#state-object) | No | Use `reasoning` to provide instructions for when Microsoft Copilot is calling the function and doing computations. Use `responding` for when Microsoft Copilot is generating text to be shown to the user. |
 
@@ -288,14 +288,14 @@ The following properties can be used in a function's state object:
 | Property | Description | Type | Required? | Guideline |
 | --- | --- | --- | --- | --- |
 | `description` | Description of the function when the function is used during a specific plugin processing flow state. | String | Yes | Include ``\n# `{{ function.declaration }}` `` at the beginning of the description and then describe what the function does during the state. |
-| `instructions` | List of instructions that Microsoft Copilot should use when running the function during a specific plugin processing flow state. | Array of strings | Yes | Provide a list of instructions that can be used to augment the model's built-in prompt when calling the function. Include `\n* ` at the beginning of each instruction string. |
+| `instructions` | List of instructions that Microsoft Copilot should use when running the function during a specific plugin processing flow state. | Array of strings | Yes | Provide a list of instructions that can be used to augment the model's built-in prompt when calling the function. Include `\n* ` at the beginning of each instruction string to help the model use the function. |
 | `examples` | List of examples for the model to better understand how the function should be used during a specific plugin processing flow state. | Array of strings | No | N/A |
 
 ## Runtime object
 
 A runtime object describes the mechanics of how a plugin function is invoked, and which functions the runtime is used for.
 
-Here is an example of a runtime object that describes how the `getListings` function is invoked using an OpenApi specification:
+Here is an example of a runtime object that describes how the `getListings` function is invoked using an OpenAPI description:
 
 ```json
 { 
@@ -349,7 +349,7 @@ The following properties can be used in a runtime's OpenApi spec object:
 
 | Property | Description | Type | Required? | Guideline |
 | --- | --- | --- | --- | --- |
-| `url` | URL to fetch the OpenApi specification file. | String | Yes | N/A |
+| `url` | URL to fetch the OpenAPI description file. | String | Yes | N/A |
 | `progress_style` | The progress style that will be used to display the progress of the function. | String | No | Must be one of `none`, `showUsage`, `showUsageWithInput`, or `showUsageWithInputAndOutput`. |
 
 ## See also
