@@ -91,7 +91,7 @@ While Copilot provides basic capabilities in reasoning over the output of a plug
 
 ### Provide visually rich responses to user queries
 
-Respond to user input with structured, actionable, and visually rich [Adaptive Cards](/microsoftteams/platform/messaging-extensions/high-quality-message-extension). Ensure your Adaptive Card responses are informationally dense, and provide at least one action button and two additional pieces of information (in addition to your app logo, title, thumbnail, and title of the information). As additional information, it's useful to provide the most frequently searched attributes, such as *status*, *date*, or *assigned to* fields.
+Respond to user input with structured, actionable, and visually rich [Adaptive Cards](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#adaptive-card-response). Ensure your Adaptive Card responses are informationally dense, and provide at least one action button and two additional pieces of information (in addition to your app logo, title, thumbnail, and title of the information). As additional information, it's useful to provide the most frequently searched attributes, such as *status*, *date*, or *assigned to* fields.
 
 ## See also
 
