@@ -11,7 +11,7 @@ ms.date: 11/15/2023
 
 # How Copilot for Microsoft 365 decides which plugin to use
 
-Microsoft Copilot for Microsoft 365 is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **skills** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
+Microsoft Copilot for Microsoft 365 is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **capabilities** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
 
 Like any large language model(LLM), Copilot for Microsoft 365 is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot requires _plugins_. **Plugins** extend Copilot for Microsoft 365's skills and utility for end users, enabling it to choose the right skill for a given task or request.
 
@@ -31,7 +31,7 @@ The orchestration layer represents the interface between foundation LLMs and the
 
 The following chart illustrates how the Copilot for Microsoft 365 orchestrator selects the right plugin, with the right skill, at the right time, even when there are multiple options to choose from.
 
-:::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
+:::image type="content" source="assets/images/copilot_orchestrator_sequence_v2.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
 
 1. **Natural language input**
 
@@ -57,17 +57,17 @@ The orchestrator formulates a new prompt incorporating the user’s initial quer
 
 3c. **Tool execution:**
 
-The orchestrator uses the response from the LLM to construct an API request and send the request to the tool executor, which securely connects to the API server located outside of Copilot's infrastructure. It executes the request and sends the results back to the orchestrator for further processing.
+The orchestrator uses the response from the LLM to construct an API request and send the request to the tool executor, which securely retrieves the requested information located outside of Copilot's infrastructure. It executes the request and sends the results back to the orchestrator for further processing.
 
 3d. **Result Analysis and Response Formulation:**
 
 The orchestrator integrates the API response into the ongoing context and consults the LLM in a continuous reasoning loop until the LLM deems it appropriate to generate a final response.
 
-4.**Responding**
+4. **Responding**
 
 The orchestrator compiles all the information gathered during the reasoning process and submits it to the LLM to create a final response. After ensuring the response complies with Responsible AI guidelines, it sends the response back to the orchestrator, which logs it in the context store and delivers it to the user via the Copilot UI.
 
-5.**Natural language output**
+5. **Natural language output**
 
 Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
