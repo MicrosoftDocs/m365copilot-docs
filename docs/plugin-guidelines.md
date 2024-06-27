@@ -11,7 +11,7 @@ ms.date: 6/26/2024
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-When you build a plugin, you enable your users to interact with your web service using natural language with Microsoft Copilot. Plugins expand Copilot's skills to accomplish tasks on behalf of your users. They are especially good at:
+When you build a plugin, you enable your users to interact with your web service using natural language with Microsoft Copilot. Plugins expand Copilot's skills to accomplish tasks on behalf of your users. They're especially good at:
 
 - Accessing real-time information,
 - Retrieving relational data, and
@@ -59,7 +59,7 @@ A clear and concise [description of your plugin](orchestrator.md#plugin-search-o
 
 ## Plugin best practices
 
-The remainder of this article will cover best practices for building high quality plugins.
+The remainder of this article covers best practices for building high quality plugins.
 
 ### Build for safety and responsible AI
 
@@ -75,23 +75,23 @@ Ensure search parameters have good descriptions and explicit input types and out
 
 ### Avoid generic descriptions of your plugin, its skills, and parameters
 
-Be precise in the description of what the plugin does and does not do. While it's tempting to add extra information to try and boost the likelihood of a plugin being used by Copilot, this can result in the following critical issues:
+Be precise in the description of what the plugin does and doesn't do. While it's tempting to add extra information to try to boost the likelihood of a plugin being used by Copilot, this can result in the following critical issues:
 
-- A generic plugin description can prevent the appropriate plugin for the job from getting picked up and if this happens frequently the user might disable the plugin.
+- A generic plugin description prevents the appropriate plugin for the job from getting picked up and if this happens frequently the user might disable the plugin.
 
-- When selected incorrectly, failures in plugin execution or response are likely outcomes. Copilot will not surface plugins that have high error rates, and user trust in the plugin could erode.
+- When selected incorrectly, failures in plugin execution or response are likely outcomes. Copilot won't surface plugins that have high error rates, and user trust in the plugin could erode.
 
-### Do not assume Copilot can guess required inputs
+### Don't assume Copilot can guess required inputs
 
 Only in limited scenarios is Copilot able to guess an input to a user prompt. Most of the time, required inputs to plugin queries need to be stated explicitly in the user's prompt to Copilot. Best practice is to test your plugin with different prompts to Copilot to anticipate expected behavior.
 
 ### Validate operations Copilot can perform in terms of reasoning over the plugin response
 
-While Copilot provides basic capabilities in reasoning over the output of a plugin response, results will vary depending on the scenario. Best practice is to test your plugin with different prompts that require post-processing to anticipate expected behavior.
+While Copilot provides basic capabilities in reasoning over the output of a plugin response, results vary depending on the scenario. Best practice is to test your plugin with different prompts that require post-processing to anticipate expected behavior.
 
 ### Provide visually rich responses to user queries
 
-Respond to user input in a structured, actionable, and visually-rich [Adaptive Card](/microsoftteams/platform/messaging-extensions/high-quality-message-extension). Ensure your Adaptive Card responses are informationally dense, and provide at least one action button and two pieces additional pieces of information (in addition to your app logo, title, thumbnail, and title of the information). As additional information, it's useful to provide the most frequently searched attributes, such as *status*, *date*, or *assigned to* fields.
+Respond to user input in a structured, actionable, and visually rich [Adaptive Card](/microsoftteams/platform/messaging-extensions/high-quality-message-extension). Ensure your Adaptive Card responses are informationally dense, and provide at least one action button and two additional pieces of information (in addition to your app logo, title, thumbnail, and title of the information). As additional information, it's useful to provide the most frequently searched attributes, such as *status*, *date*, or *assigned to* fields.
 
 ## See also
 
