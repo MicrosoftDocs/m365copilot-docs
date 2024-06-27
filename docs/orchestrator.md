@@ -87,7 +87,7 @@ When a user submits a query to Copilot, the orchestrator searches its full catal
 
 1. Lexical match on function name.
 2. Semantic match on function description.
-3. Lexical match on plugin name (adds all plugin functions to candidate list). _This step is currently in private preview._
+3. Lexical match on plugin name (adds all plugin functions to candidate list). **This step is currently in private preview.**
 4. Semantic match on plugin name (adds all plugin functions to candidate list).
 
 The orchestrator works through the above list until all five function candidate slots are filled.
