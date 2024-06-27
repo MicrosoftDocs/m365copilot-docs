@@ -11,7 +11,18 @@ ms.date: 06/27/2024
 
 Microsoft Copilot is designed to be a versatile platform that integrates with Microsoft 365 and offers a range of functionalities for developers to build upon. It includes features like Graph Connectors, API Plugins, and the ability to create Copilot Extensions.
 
-In the evolving landscape of AI-driven assistance, Microsoft 365 Copilot offers two distinct pathways for enhancing productivity and streamlining workflows: Declarative Copilots and Custom Copilots. Understanding the differences between these two can empower developers and organizations to make informed decisions tailored to their unique needs.
+Copilots are natural language assistants that can help with creative tasks, generate insights, and execute automated workflows. Copilots are composed Of workflows, actions, knowledge, and triggers, powered by one or more foundation models and an orchestrator that oversees and synchronizes operations Of the copilot, Copilots can power gem-Al capabilities in apps, web services and can be published as Copilot extensions to extend and customize Microsoft Copilot.
+
+Let's understand more about each item that makes a copilot:
+
+* **Workflows**: Workflows guide copilot's behavior, scope, and functionalities.
+* **Triggers**: Triggers prompt copilot to take proactive actions and automate tasks.
+* **Actions**: Actions are copilot can perform on behalf Of users external systems.
+* **Knowledge**: Knowledge and RAG techniques are used by copilot to provide relevant, contextual responses. 
+* **Orchestrator**: Orchestrator synchronizes processing of user prompts across foundation models, knowledge, and actions.
+* **Foundation models**: Foundation models are Al models that can perform a wide range of tasks.
+
+Microsoft 365 Copilot offers two distinct pathways for enhancing productivity and streamlining workflows: Declarative Copilots and Custom Copilots. Understanding the differences between these two can empower developers and organizations to make informed decisions tailored to their unique needs.
 
 Declarative Copilots are a type of extension that combines Microsoft Copilot with custom instructions. They allow for a more personalized experience by adding domain knowledge and focusing on specific data sources or user roles within an organization. The Low-Code Approach Declarative Copilots are designed for ease of use, allowing users to converse with, build, or extend functionalities using low to pro code models. These copilots are crafted declaratively with Copilot Studio, utilizing custom instructions and, optionally, training on organizational data.
 
