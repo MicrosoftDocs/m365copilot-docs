@@ -4,7 +4,7 @@ description: Here are best practices for building plugins for Microsoft Copilot 
 author: erikadoyle
 ms.author: edoyle
 ms.topic: best-practice
-ms.date: 11/15/2023
+ms.date: 6/26/2024
 ---
 
 # Build high quality plugins for Microsoft Copilot
@@ -69,7 +69,9 @@ The remainder of this article will cover best practices for building high qualit
 
 ### Support multi-parameter search queries
 
-To support complex prompts, expand the scope of your search support to handle two or more search query `parameters` simultaneously by enabling multi-parameter support in your plugin [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#composeextensionscommands).
+To support complex prompts, expand the scope of your search support to handle three or more search query `parameters` simultaneously by enabling multi-parameter support in your plugin [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#composeextensionscommands).
+
+Ensure search parameters have good descriptions and explicit input types and output formats.
 
 ### Avoid generic descriptions of your plugin, its skills, and parameters
 
@@ -86,3 +88,13 @@ Only in limited scenarios is Copilot able to guess an input to a user prompt. Mo
 ### Validate operations Copilot can perform in terms of reasoning over the plugin response
 
 While Copilot provides basic capabilities in reasoning over the output of a plugin response, results will vary depending on the scenario. Best practice is to test your plugin with different prompts that require post-processing to anticipate expected behavior.
+
+### Provide visually rich responses to user queries
+
+Respond to user input in a structured, actionable, and visually-rich [Adaptive Card](/microsoftteams/platform/messaging-extensions/high-quality-message-extension). Ensure your Adaptive Card responses are informationally dense, and provide at least one action button and two pieces additional pieces of information (in addition to your app logo, title, thumbnail, and title of the information). As additional information, it's useful to provide the most frequently searched attributes, such as *status*, *date*, or *assigned to* fields.
+
+## See also
+
+[Guidelines to create or upgrade Copilot extensions](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
+
+[Publish plugins and Graph connectors for Copilot](./publish.md)
