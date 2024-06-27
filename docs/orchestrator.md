@@ -35,7 +35,7 @@ The following chart illustrates how the Copilot for Microsoft 365 orchestrator s
 
 1. **Natural language input**
 
-The user submits a query via the Microsoft365 Copilot UI, such as "What tickets are assigned to me right now?"
+The user submits a query to Copilot, such as "What tickets are assigned to me right now?"
 
 2. **Preliminary checks**
 
@@ -73,4 +73,4 @@ Finally, the orchestrator delivers the response to the user and updates the conv
 
 If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the _general contractor_, who coordinates and organizes the work of the specialist _subcontractors_, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's input (in other words, that Copilot's response satisfies the user's intent in their request).
 
-However, its the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This will instill a sense of trust in your users and ensure Copilot will call your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
+However, its the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This will instill a sense of trust in your users and ensure Copilot will call your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin manifest and OpenAPI documents for the orchestrator to easily find and use your plugin.
