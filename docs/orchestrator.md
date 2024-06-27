@@ -86,9 +86,9 @@ The answer lies in how you describe your plugin, its skills, and the parameters 
 When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (_functions_) from installed plugins to identify up to five skills which best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, here is the hierarchy of matching mechanisms for Copilot plugin function selection:
 
 1. Lexical match on function name.
-1. Semantic match on function description.
-1. Lexical match on plugin name (adds all plugin functions to candidate list). _This step is currently in private preview._
-1. Semantic match on plugin name (adds all plugin functions to candidate list).
+2. Semantic match on function description.
+3. Lexical match on plugin name (adds all plugin functions to candidate list). _This step is currently in private preview._
+4. Semantic match on plugin name (adds all plugin functions to candidate list).
 
 The orchestrator works through the above list until all five function candidate slots are filled.
 
