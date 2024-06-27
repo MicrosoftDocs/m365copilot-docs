@@ -4,12 +4,12 @@ description: Learn how to protect your customer's data when you extend Microsoft
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 11/15/2023
+ms.date: 06/26/2024
 ---
 
 # Data, Privacy, and Security considerations of extending Copilot for Microsoft 365
 
-When you extend Copilot's repertoire of skills with a plugin, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin to generate a response or complete a command. When you extend Copilot with a Microsoft Graph connector, your external data is ingested into Microsoft Graph and remains in your tenant. This article will outline data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
+When you extend Copilot's repertoire of skills with a plugin, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin to generate a response or complete a command. When you extend Copilot with a Microsoft Graph connector, your external data is ingested into Microsoft Graph and remains in your tenant. This article outlines data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
 
 :::image type="content" source="assets/images/validation-principles.png" alt-text="Diagram key considerations for developing Copilot extensibility: Enterprise security and trust, Responsible AI, High-quality user experience, High-value functionality" border="false":::
 
@@ -23,13 +23,13 @@ Prompts, responses, and data accessed through Microsoft Graph aren't used to tra
 
 ## Plugins
 
-Similar to traditional [Teams apps](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [Power Platform connectors](/connectors/custom-connectors/certification-submission#step-4b-product-or-end-service-metadata), plugins for Microsoft Copilot are individually governed by their terms of use and privacy policies. As a plugin developer, you are responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information. Admins and users can then view your [privacy policy](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [terms of use](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#terms-of-use) in the app store before choosing to add or use your plugin as a Copilot data source.
+Similar to traditional [Teams apps](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [Power Platform connectors](/connectors/custom-connectors/certification-submission#step-4b-product-or-end-service-metadata), plugins for Microsoft Copilot are individually governed by their terms of use and privacy policies. As a plugin developer, you're responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information. Admins and users can then view your [privacy policy](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [terms of use](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#terms-of-use) in the app store before choosing to add or use your plugin as a Copilot data source.
 
 When you plug in your app to Copilot as a plugin, your external data stays within your app; it *does not* flow into Microsoft Graph or is used to train Microsoft Copilot LLMs. Copilot does, however, generate a search query to send to your plugin on the user's behalf based on their prompt and conversation history with Copilot, and data the user has access to in Microsoft 365.
 
 Message extension plugins use the same [authentication process for Teams message extensions](/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview).
 
-Power Platform plugins use the same [authentication process for custom connectors](/connectors/custom-connectors/azure-active-directory-authentication).
+Power Platform connector plugins use the same [authentication process for custom connectors](/connectors/custom-connectors/azure-active-directory-authentication).
 
 ## Considerations for line-of-business developers
 
@@ -44,11 +44,11 @@ Copilot for Microsoft 365 only shares data with and searches in plugins or conne
 
 ## Considerations for independent software vendors
 
-Message extension plugins are packaged and distributed in the same way as Microsoft Teams apps that are integrated to run across the Microsoft 365 ecosystem. Microsoft Graph connectors can also be packaged and distributed in the same way as Teams apps.
+Power Platform connectors as Copilot plugins are [certified](/connectors/custom-connectors/certification-submission) and [packaged](/connectors/custom-connectors/certification-submission#connector-and-plugin-packaging-guide) in the same way as regular [Power Platform Connectors](/connectors/custom-connectors/certification-submission). They can then be submitted to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program** as a **Power Platform Connector**.
 
-Power Platform plugins are certified and distributed in the same way as Power Platform connectors, by first publishing your connector to the [Power Platform Connectors](https://github.com/microsoft/PowerPlatformConnectors) open source repository, and then submitting its information to Microsoft.
+Message extension plugins are packaged and distributed in the same way as  [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package) that are [integrated to run across the Microsoft 365 ecosystem](/microsoftteams/platform/m365-apps/overview). Microsoft Graph connectors can also be packaged and distributed in the same way as Teams apps.
 
-Submission of your app package to the Microsoft Partner Center *Microsoft 365 and Copilot* program requires meeting [certification policies](./publish.md#microsoft-365-and-copilot-program) for acceptance to Microsoft 365 in-product stores. Microsoft Commercial Marketplace certification policies and Teams Store validation guidelines regarding privacy, security, and responsible AI include:
+Submission of your app package to the Microsoft Partner Center *Microsoft 365 and Copilot* program requires meeting [certification policies](./publish.md#microsoft-365-and-copilot-program) for acceptance to Microsoft 365 in-product stores. Microsoft Commercial Marketplace certification policies and applicable Teams Store validation guidelines regarding privacy, security, and responsible AI include:
 
 | Commercial marketplace certification policy | Teams store guidelines |
 |----------|-----------|
@@ -62,9 +62,11 @@ Submission of your app package to the Microsoft Partner Center *Microsoft 365 an
 | [1140.4.1 General](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) | [Responsible AI checks](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines?branch=pr-en-us-9402#teams-apps-extensible-as-microsoft-365-chat-plugin) |
 | [1140.9 Teams apps extensible as plugins for Microsoft Copilot for Microsoft 365](/legal/marketplace/certification-policies#11409-teams-apps-extensible-as-microsoft-365-copilot-plugin) | [Teams apps extensible as plugins for Microsoft Copilot](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-microsoft-365-chat-plugin) |
 
-Submission to the Microsoft 365 and Copilot program is currently limited to  [verified publishers](/entra/identity-platform/publisher-verification-overview). This provides end-users and organizational admins assurance that the publisher of an app has been verified as authentic by Microsoft.
+For Microsoft Graph connectors (packaged as Teams apps), submission to the Microsoft 365 and Copilot program is currently limited to  [verified publishers](/entra/identity-platform/publisher-verification-overview). This provides end-users and organizational admins assurance that the publisher of an app has been verified as authentic by Microsoft.
 
 ## See also
+
+[Data, Privacy, and Security for Microsoft Copilot (Microsoft 365 admin)](/copilot/microsoft-365/microsoft-365-copilot-privacy)
 
 [Publish plugins and connectors for Microsoft Copilot for Microsoft 365](publish.md)
 
