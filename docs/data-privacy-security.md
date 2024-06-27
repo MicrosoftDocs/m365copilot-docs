@@ -44,7 +44,7 @@ Copilot for Microsoft 365 only shares data with and searches in plugins or conne
 
 ## Considerations for independent software vendors
 
-Power Platform connectors as Copilot plugins are [certified](/connectors/custom-connectors/certification-submission) and [packaged](/connectors/custom-connectors/certification-submission) in the same way as regular [Power Platform Connectors](/connectors/custom-connectors/certification-submission). They can then be submitted to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program** as a **Power Platform Connector**.
+Power Platform connectors as Copilot plugins are [certified](/connectors/custom-connectors/certification-submission) and [packaged](/connectors/custom-connectors/certification-submission#connector-and-plugin-packaging-guide) in the same way as regular [Power Platform Connectors](/connectors/custom-connectors/certification-submission). They can then be submitted to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program** as a **Power Platform Connector**.
 
 Message extension plugins are packaged and distributed in the same way as  [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package) that are [integrated to run across the Microsoft 365 ecosystem](/microsoftteams/platform/m365-apps/overview). Microsoft Graph connectors can also be packaged and distributed in the same way as Teams apps.
 
