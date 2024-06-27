@@ -4,7 +4,7 @@ description: Learn how the Microsoft Copilot orchestrator determines which plugi
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 11/15/2023
+ms.date: 06/25/2024
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
@@ -74,9 +74,20 @@ However, its the responsibility of each plugin to provide Copilot with an accura
 
 Copilot for Microsoft 365 can uniquely choose the right skill from thousands. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
 
-The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring Copilot knows when and how to invoke your plugin.
+The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring the Copilot orchestrator knows when and how to invoke your plugin.
 
-The following sections provide guidance and examples for plugins, skills, and parameter descriptions.
+### Matching mechanisms
+
+When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (*functions*) from installed plugins to identify up to five skills which best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, here is the hierarchy of matching mechanisms for Copilot plugin function selection:
+
+1. Lexical match on function name.
+1. Semantic match on function description.
+1. Lexical match on plugin name (adds all plugin functions to candidate list). *This step is currently in private preview.*
+1. Semantic match on plugin name (adds all plugin functions to candidate list).
+
+The orchestrator works through the above list until all five function candidate slots are filled.
+
+The following sections provide guidance and examples for authoring names and descriptions for plugins, skills (functions), and parameters.
 
 ### Plugin descriptions
 
@@ -190,7 +201,13 @@ Search skill descriptions should:
 - Include verbs and synonyms, if applicable.
 - Focus on keywords that are likely to be used in the search function of your native apps.
 
-The following table lists search command examples for various plugin scenarios:
+#### Semantic description
+
+The [semanticDescription](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+
+The following table lists command and semantic description examples for various plugin scenarios:
 
 #### [Tasks](#tab/tasks)
 
@@ -204,7 +221,8 @@ The following table lists search command examples for various plugin scenarios:
           "id": "Search",
           "type": "query",
           "title": "Tasks",
-          "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
+          "description": "Search for high priority tasks related to Northwind that are due tomorrow",
+          "semanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -227,6 +245,7 @@ The following table lists search command examples for various plugin scenarios:
           "type": "query",
           "title": "Survey",
           "description": "Search for surveys, drafts, and results with keywords or number of respondents.",
+          "semanticDescription": "This command enables users to search for surveys, drafts, and results based on specific keywords or the number of respondents.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -249,6 +268,7 @@ The following table lists search command examples for various plugin scenarios:
           "type": "query",
           "title": "CRM",
           "description": "Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.",
+          "semanticDescription": "This command allows users to search for leads in the CRM system based on specific criteria.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -288,7 +308,9 @@ A good parameter description explains what the parameter is, not what the parame
 
 When used directly in Microsoft Teams chat and Outlook mail compose, you can use a message extension to query one parameter at a time. When used as a plugin, message extension search commands support up to five parameters (one parameter must be visible in the message extension search bar). A parameter must have a good description, which should describe the expected input, including format or type.
 
-The following are few examples on basic and advances search requests for various plugin scenarios:
+The [semanticDescription](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The following are a few examples of basic and advanced search requests for various plugin scenarios:
 
 #### [Tasks](#tab/tasks)
 
@@ -309,12 +331,14 @@ Advanced search: Search for high priority tasks related to Northwind that are du
         "name": "Time",
         "title": "Time",
         "description": "Date or number of days for which to find tasks. Output: Number",
+        "semanticDescription": "Date or number of days for which you need tasks for. Output: Number",
         "inputType": "text"
     },
     {
         "name": "Priority",
         "title": "Priority",
         "description": "Priority of tasks. Acceptable values: high, medium, low, NA ",
+        "semanticDescription": "Priority of tasks. Acceptable values are high, medium, low, NA",
         "inputType": "text"
     }]
 ```
@@ -344,6 +368,7 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
     "name": "ResponseNumber",
     "title": "Response number",
     "description": "Number of responses received for a survey. Output: Number",
+    "semanticDescription": "Number of responses received for a survey. Output: Number",
     "inputType": "text"
   }
 ]
@@ -368,12 +393,14 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
     "name": "Status",
     "title": "Status",
     "description": "Status of leads. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
+    "semanticDescription": "Status of leads to find. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
     "inputType": "text"
   },
   {
     "name": "Time",
     "title": "Time",
     "description": "Number of days for which to find status of leads. Output: Number",
+    "semanticDescription": "Number of days to search for leads with given status. Output: Number",
     "inputType": "text"
   }
 ]
@@ -392,30 +419,34 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
     "name": "StockIndex",
     "title": "Stock Index",
     "description": "Name of index in which user wants to find stocks",
+    "semanticDescription": "Name of stock market index used to search for stocks",
     "inputType": "text"
   },
   {
     "name": "NumberofStocks",
     "title": "Ranked Number of Stocks",
     "description": "Number of stocks in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
+    "semanticDescription": "Number of stocks to return in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
     "inputType": "text"
   },
   {
     "name": "P/B",
     "title": "Price to Book Ratio",
     "description": "P/B or Price to Book ratio of a stock. Output format: >x.xx or <x.xx",
+    "semanticDescription": "Price to book (P/B) ratio of a stock. Output format: >x.xx or <x.xx",
     "inputType": "text"
   },
   {
     "name": "P/E",
     "title": "Price to Earnings Ratio",
     "description": "P/E or Price to Earnings ratio of a stock with comparison. Output format: >x.xx or <x.xx",
+    "semanticDescription": "Price to Earnings (P/E) ratio of a stock with comparison. Output format: >x.xx or <x.xx",
     "inputType": "text"
-  }
-]
+  }]
 ```
 
 ---
+
 
 ## Next step
 
