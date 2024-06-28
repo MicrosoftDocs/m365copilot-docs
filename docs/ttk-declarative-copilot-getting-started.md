@@ -349,7 +349,7 @@ To add a plugin to your declarative copilot, follow these steps:
 1. Execute the following command:
 
     ```bash
-    ~ > src > demos > ttk-declarative-copilot > kiota plugin add --openapi https://aka.ms/repairshub/openapi.json --plugin-name "RepairsHub" --type microsoft --output appPackage
+    ~ > src > demos > ttk-declarative-copilot > kiota plugin add --openapi https://aka.ms/repairshub/openapi.json --plugin-name "RepairsHub" --type apiplugin --output appPackage
     warn: Kiota.Builder.KiotaBuilder[0]
           OpenAPI warning: #/paths/~1repairs/get/responses/200/content/application~1json/schema/items/properties/image - The format uri is not supported by Kiota and the string type will be used.
     warn: Kiota.Builder.KiotaBuilder[0]
