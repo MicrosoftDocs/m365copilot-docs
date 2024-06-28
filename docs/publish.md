@@ -70,7 +70,7 @@ In order to use the connector as a plugin, the *M365 Copilot* setting must first
 
 ### Distribute a Power Platform connector plugin through Microsoft Partner Center (preview)
 
-Ensure your app meets certification criteria for [Power Platform Connectors](/connectors/custom-connectors/certification-submission), then submit your [app package](/connectors/custom-connectors/certification-submission) to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program** as a **Power Platform Connector**.
+Ensure your app meets certification criteria for [Power Platform Connectors](/connectors/custom-connectors/certification-submission), then submit your [app package](/connectors/custom-connectors/certification-submission#connector-and-plugin-packaging-guide) to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program** as a **Power Platform Connector**.
 
 Once certified and published by Microsoft, your connector is available on Power Automate, Power Apps, and Logic Apps and your plugin is ready for IT enablement in the Microsoft Admin Center. The Copilot plugin will then appear as an installed plugin in Copilot for Microsoft 365.
 
