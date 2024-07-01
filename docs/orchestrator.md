@@ -75,7 +75,7 @@ If you imagine a user's prompt to Copilot like a construction project, then the 
 
 However, its the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This will instill a sense of trust in your users and ensure Copilot will call your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
 
-## Plugin Optimization
+## Plugin optimization
 
 Copilot for Microsoft 365 can uniquely choose the right skill from the many in its repertoire. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
 
