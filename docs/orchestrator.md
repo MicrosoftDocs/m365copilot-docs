@@ -456,4 +456,5 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 Learn best practices for optimizing plugin discoverability and usefulness in Copilot for Microsoft 365.
 
-> [!div class="nextstepaction"] > [Learn what makes a high quality plugin](plugin-guidelines.md)
+> [!div class="nextstepaction"]
+> [Learn what makes a high quality plugin](plugin-guidelines.md)
