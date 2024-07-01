@@ -33,6 +33,18 @@ If users desire to dive deeper into the referenced content, they can click on on
 
 ![A screenshot of Graph connectors reference list in Copilot for Microsoft 365](assets/images/connectors-copilot-logo.png)
 
+## Microsoft Graph connectors gallery
+
+The [Microsoft Graph connectors gallery](https://www.microsoft.com/microsoft-search/connectors) includes a brief description of each of the connectors created by Microsoft and our partners, and a link to each partner's website.
+
+With more than 100 connectors currently available, you can connect to popular Microsoft and non-Microsoft services such as Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and many more.
+
+Visit the connectors gallery to find all the information you need to get started using connectors.
+
+<br>
+
+![Image showing the new connectors gallery.](assets/images/connectors-gallery.png)
+
 ## Create your own custom Microsoft Graph connection
 
 You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph. You can use the Microsoft Graph connectors APIs to create and manage external Microsoft Graph connections, define and register the schema of external data types, ingest external data items into Microsoft Graph, and sync external groups.
