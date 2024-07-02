@@ -121,6 +121,8 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete copilots
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
+      - name: Declarative and custom engine copilots
+        href: custom-and-declarative-copilot.md
 - name: Publish and manage extensions
   expanded: true
   items:
