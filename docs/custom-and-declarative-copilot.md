@@ -1,6 +1,6 @@
 ---
 title: Custom and declarative copilots
-description: When building Microsoft 365 AI solutions for business, you can either extend Copilot or build your own copilot from the ground up. Use this decision guide to explore your options and considerations.
+description: When building Microsoft 365 Copilot solutions for business, you can either extend Copilot or build your own Copilot from the ground up.
 author: v-ypalikila
 ms.author: timura
 ms.topic: conceptual
@@ -23,9 +23,9 @@ The decision to use a declarative or custom copilot hinges on several factors:
 
 |Declarative copilots  |Custom Engine copilots  |
 |---------|---------|
-|Use Copilot's orcestrator and model     |   Use custom orchestrator and model |
+|Use Copilot's orchestrator and model     |   Use custom orchestrator and model |
 |For scenarios, which require a high level of focus or specialization.| For scenarios demanding extensive customization and control over the AI’s behavior|
-|Developers who need to tailor Copilot for their scenarios can build Declarative copilots by simply declarating instructions in the app manifest. | Developers who need an advance customization for their Copilot experience can build Custom engine copilots by creating an AI chatbot.|
+|Developers who need to tailor Copilot for their scenarios can build Declarative copilots by declaring instructions in the app manifest. | Developers who need an advance customization for their Copilot experience can build Custom engine copilots by creating an AI chatbot.|
 |You can start with a managed stack with Copilot Studio where you can:<br> * Quickly and securely build a solution based on your unique instructions, knowledge, and actions. <br><br> * Control the orchestration Of your large language model to fit your specific workflows. <br><br> * Deploy your copilots across websites, messaging channels, Microsoft Teams and as copilot extensions to serve employees, customers, and partners.    |You can enhance your own copilot with Azure AI Studio to: <br><br> * Use prebuilt models or train models using your data. <br><br> * Build and manage your AI applications. <br><br> * Use tools for creating, refining, evaluating, and maintaining the building blocks of your copilot.        |
 |Can extend skills and knowledge by utilizing Graph Connectors and plugins | Can extend skills and knowledge by utilizing Retrieval-Augmented Generation (RAG) and custom functions.|
 
