@@ -7,4 +7,4 @@ ms.topic: include
 
 > [!WARNING]
 >
-> Declarative copilots for Microsoft 365 are in private preview.
+> Declarative copilots for Microsoft 365 are in **private preview**.
