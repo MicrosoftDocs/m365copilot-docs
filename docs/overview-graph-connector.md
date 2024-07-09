@@ -45,6 +45,11 @@ Visit the connectors gallery to find all the information you need to get started
 
 ![Image showing the new connectors gallery.](assets/images/connectors-gallery.png)
 
+
+> [!IMPORTANT]
+>
+> To learn more about pre-built connectors go to [Set up Microsoft built Graph Connectors](/microsoftsearch/configure-connector.md) .
+
 ## Create your own custom Microsoft Graph connection
 
 You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph. You can use the Microsoft Graph connectors APIs to create and manage external Microsoft Graph connections, define and register the schema of external data types, ingest external data items into Microsoft Graph, and sync external groups.
