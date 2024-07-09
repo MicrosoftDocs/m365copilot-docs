@@ -48,7 +48,7 @@ Visit the connectors gallery to find all the information you need to get started
 
 > [!IMPORTANT]
 >
-> To learn more about pre-built connectors go to [Set up Microsoft built Graph Connectors](/microsoftsearch/configure-connector.md) .
+> To learn more about pre-built connectors go to [Set up Microsoft built Graph Connectors](/microsoftsearch/configure-connector) .
 
 ## Create your own custom Microsoft Graph connection
 
