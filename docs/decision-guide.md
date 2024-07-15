@@ -96,7 +96,7 @@ How you build and which tools you should use is up to you. Your choices are:
 ### Weighing your options
 
 There are many factors that you want to consider when deciding which option to pick.
-Before settling on a path, it’s wise to consider the pros and cons of each option. This ensure you make an informed decision that aligns with your development needs and goals.
+Before settling on a path, it’s wise to consider the pros and cons of each option. This ensures you make an informed decision that aligns with your development needs and goals.
 
 | Extensibility options   | Benefits                           | Limitations                          |
 |:------------------------|:-----------------------------------|:-------------------------------------|
@@ -125,7 +125,7 @@ With Azure AI services, you can craft a custom AI chatbot for Teams and Microsof
 
 ### How does it differ from Copilot extensions for Microsoft 365?
 
-In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the **Copilot extensibility** options (Graph connectors, plugins, as well as declarative copilots, which can connect to Graph connectors and plugins) and the **custom engine copilot**:
+In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the **Copilot extensibility** options (Graph connectors, plugins, and declarative copilots, which can connect to Graph connectors and plugins) and the **custom engine copilot**:
 
 :::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilot for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
