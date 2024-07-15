@@ -116,13 +116,12 @@ Consider your data: how it's structured, the level of volume and activity you ex
 | **Message extension plugins** | Structured data (organized in a predefined manner, often in the form of tables with rows and columns)| Suitable for high volume data (Over 5M) | Suitable for high activity (Over 20 req/sec.)  | Summarize + Act (with Adaptive Card, a user can modify the data)|
 | **Copilot Studio plugins** | Structured data | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M) | Summarize only |
 
-> [!TIP]
-> You can find the sample code for *Northwind Inventory* plugin at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#teams-message-extension-samples).
-
 **Coming soon**: Soon, Copilot will analyze input prompts using machine learning techniques to generate new content. It examines available plugin commands based on their descriptions and parameters. Then, it populates relevant data into those parameters and executes the command.
 
 ## Option 2: Building a custom engine copilot for Microsoft 365
 With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution that operates on Teams chat, then building with the Teams AI Library is the perfect fit for you.
+
+:::image type="content" source="https://learn.microsoft.com/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="A diagram that explains how a custom engine copilot agent in Teams work" lightbox="https://learn.microsoft.com/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
 
 ### How does it differ from Copilot extensions for Microsoft 365?
 
@@ -138,7 +137,7 @@ Building custom engine copilot with **Teams AI Library** is an excellent choice 
 - You have prior experience in building Teams bots or are familiar with Teams bot development
 - You aim to have your conversational AI bot accessible to all Microsoft 365 users, regardless of their Copilot licensing status
 
-🎯 Learn more on building your own [custom engine copilot](overview-custom-engine-copilot.md) with the Teams AI Library.
+🎯 Learn more on building your own [**custom engine copilot**](overview-custom-engine-copilot.md) with the Teams AI Library.
 
 ## Next step
 
