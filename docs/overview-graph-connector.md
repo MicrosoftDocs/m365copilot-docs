@@ -11,6 +11,10 @@ ms.date: 11/15/2023
 
 Microsoft Graph connectors provide a platform for you to ingest your unstructured, line-of-business data into Microsoft Graph, so that Copilot for Microsoft 365 can reason over the entirety of your enterprise content. Content ingested through Graph connectors is added to the Microsoft Graph; this unlocks semantic understanding of your users' prompts in Copilot for Microsoft 365. However, Graph connectors are not limited to Copilot for Microsoft 365. Graph connector content participates in other Microsoft 365 intelligent experiences like Microsoft Search, Context IQ, and the Microsoft 365 app.
 
+> [!IMPORTANT]
+>
+> To learn more about pre-built connectors go to [Set up Microsoft built Graph Connectors](/microsoftsearch/configure-connector).
+
 In this article, you will learn how your Graph connector content participates in Copilot for Microsoft 365 and how to configure your custom Graph connections for Copilot for Microsoft 365.
 
 :::image type="content" source="assets/images/copilot_graph-connectors-infographic.png" alt-text="This infographic summarizes how Microsoft Graph connectors make your data available to Microsoft 365 intelligent experiences" lightbox="assets/images/copilot_graph-connectors-infographic.png":::
