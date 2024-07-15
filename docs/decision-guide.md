@@ -29,8 +29,7 @@ Here's your first decision to make:
 
 ## Option 1. Extending Microsoft Copilot
 
-Okay, you want to leverage the Copilot orchestrator. Now, let's have a quick grasp of Microsoft Copilot—
-**Microsoft Copilot** is available for end-users across multiple Microsoft products, including: Microsoft 365 (Office) app, Teams, Outlook, PowerPoint, Word, Excel, Power Apps, Power Automate, Power Virtual Agents, Power Pages, and Dynamics 365.
+Okay, you want to leverage the Copilot orchestrator. Now, let's have a quick grasp of Microsoft Copilot—**Microsoft Copilot** is available for end-users across multiple Microsoft products, including: Microsoft 365 (Office) app, Teams, Outlook, PowerPoint, Word, Excel, Power Apps, Power Automate, Power Virtual Agents, Power Pages, and Dynamics 365.
 
 And **Copilot for Microsoft 365** is available as "Work" profile with Copilot for Microsoft 365 subscription, designed for enterprise users to enhance productivity within Microsoft 365 applications
 By extending Copilot, you can tap into the vast knowledge and capabilities of Copilot’s Large Language Models (LLMs) and natural language processing. And when you expand Copilot for Microsoft 365, you gain the added advantage of utilizing the organizational knowledge within your workplace.
@@ -47,7 +46,7 @@ By **extending Copilot for Microsoft 365** for enterprise users with extra featu
 
 ### Extensibility options for Microsoft Copilot for Microsoft 365
 
-Now, it’s important to understand the variety of methods available for leveraging the capabilities of external services, apps, and data.
+Now, it’s important to understand the variety of methods available for applying the capabilities of external services, apps, and data.
 
 > [!VIDEO https://www.youtube.com/embed/ILPOhVz9OdI]
 
@@ -84,7 +83,7 @@ And there are the growing number of extensions you build. Your options include:
 
 ### Tool options: Pro-code or low-code?
 
-Your journey will vary based on your desired outcomes and your coding expertise. Whether you’re a seasoned coder or prefer low-code or no-code solutions, there’s a suite of tools tailored to your development style.
+Your journey vary based on your desired outcomes and your coding expertise. Whether you’re a seasoned coder or prefer low-code or no-code solutions, there’s a suite of tools tailored to your development style.
 
 How you build and which tools you should use is up to you. Your choices are:
 
@@ -97,14 +96,14 @@ How you build and which tools you should use is up to you. Your choices are:
 ### Weighing your options
 
 There are many factors that you want to consider when deciding which option to pick.
-Before settling on a path, it’s wise to consider the pros and cons of each option. This will ensure you make an informed decision that aligns with your development needs and goals.
+Before settling on a path, it’s wise to consider the pros and cons of each option. This ensure you make an informed decision that aligns with your development needs and goals.
 
 | Extensibility options   | Benefits                           | Limitations                          |
 |:------------------------|:-----------------------------------|:-------------------------------------|
-| **Graph connectors**               |  Able to add activities (e.g. View, modify, and shared), which improve the relevance<br/> <br/> Semantic discovery of content is immediately available without turning on<br/> <br/> Content in Graph also works with ContextIO, Content Recommendations and Enterprise Search in Microsoft365.com, SPO, and Bing at Work<br/> <br/> Third-party data stays within compliance boundary by indexing the data ([Learn more](data-privacy-security.md))  | Not visible or discoverable to end-users unless used with declarative copilots and/or message extensions <br/> <br/> No sideloading. The Search Administrator role is required to deploy your Graph Connector to Copilot<br/> <br/> If you don't implement Entra ID Groups in your system, you will need to create External Groups calling Graph APIs and maintain sync state of the membership  |
+| **Graph connectors**               |  Able to add activities (*e.g.* View, modify, and shared), which improve the relevance<br/> <br/> Semantic discovery of content is immediately available without turning on<br/> <br/> Content in Graph also works with ContextIO, Content Recommendations and Enterprise Search in Microsoft365.com, SPO, and Bing at Work<br/> <br/> Third-party data stays within compliance boundary by indexing the data ([Learn more](data-privacy-security.md))  | Not visible or discoverable to end-users unless used with declarative copilots and/or message extensions <br/> <br/> No sideloading. The Search Administrator role is required to deploy your Graph Connector to Copilot<br/> <br/> If you don't implement Entra ID Groups in your system, you need to create External Groups calling Graph APIs and maintain sync state of the membership  |
 | **Declarative copilots**     | Your own branded chat experience <br/> <br/> Improved discoverability and user-experiences   | Still in private preview and features are limited  |
 | **API plugins**                  | Support search and action <br/> <br/> Support basic Adaptive Cards for better UX <br/> <br/> Simpler development with existing REST APIs with OpenAPI specifications <br/><br/> You can include instructions to LLM    | Still in private preview and features are limited       |
-| **Teams message extensions** | Discoverable through Teams Store or App Source marketplace <br/> <br/> Support search and action <br/> <br/> Support Adaptive Cards for better UX and more controls <br/><br/> Works on Outlook too <br/> <br/> If you previously have build message extensions for Teams, they now work as plugins         | Max one million plugins enabled per user <br/> <br/> Limited numbers of commands (max 3) and parameters (max 5) <br/> <br/> Orchestrator only reasons with 10 plugins per prompt <br/> <br/> Data can leave compliance boundary, as it calls the bot framework command, which is hosted externally to the Microsoft 365 boundary<br/> <br/> Performance depends on developers and hosting<br/> <br/> Handling multi-parameters with complex prompts can be challenging |
+| **Teams message extensions** | Discoverable through Teams Store or App Source marketplace <br/> <br/> Support search and action <br/> <br/> Support Adaptive Cards for better UX and more controls <br/><br/> Works on Outlook too <br/> <br/> If you previously have build message extensions for Teams, they now work as plugins         | Max 1 million plugins enabled per user <br/> <br/> Limited numbers of commands (max 3) and parameters (max 5) <br/> <br/> Orchestrator only reasons with 10 plugins per prompt <br/> <br/> Data can leave compliance boundary, as it calls the bot framework command, which is hosted externally to the Microsoft 365 boundary<br/> <br/> Performance depends on developers and hosting<br/> <br/> Handling multi-parameters with complex prompts can be challenging |
 | **Copilot Studio plugins**   | Fastest to first run experience <br/> <br/> No infrastructure management is needed <br/> <br/> No coding experience required <br/> <br/> Copilot Studio is included as part of the Microsoft Copilot license            | Customization can be limited <br/> <br/> Scaling might be limited to Microsoft Copilot Studio subscription tiers <br/> <br/> If the plugin uses Power Platform Connectors, users require a Power Platform license           |
 
 #### Data types
@@ -113,14 +112,14 @@ Consider your data: how it's structured, the level of volume and activity you ex
 
 | Solution | Data structure | Data volume | Data activity | Summarize/ Act |
 |-------|-------|---------|----------|----------|
-| **Graph connectors** | Unstructured data (e.g. plain text documents, wiki pages, and PDF files) | Up to 5M items per connection | Up to 20 requests per second | Summarize (Copilot analyzes and extracts key information) only |
-| **Message extension plugins** | Structured data (organized in a predefined manner, often in the form of tables with rows and columns)| Suitable for high volume data (Over 5M) | Suitable for high activity (Over 20 req/sec.)  | Summarize + Act (with Adaptive Card, the data that Copilot gets can be modified by a user)|
+| **Graph connectors** | Unstructured data (*e.g.* plain text documents, wiki pages, and PDF files) | Up to 5M items per connection | Up to 20 requests per second | Summarize (Copilot analyzes and extracts key information) only |
+| **Message extension plugins** | Structured data (organized in a predefined manner, often in the form of tables with rows and columns)| Suitable for high volume data (Over 5M) | Suitable for high activity (Over 20 req/sec.)  | Summarize + Act (with Adaptive Card, a user can modify the data)|
 | **Copilot Studio plugins** | Structured data | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M) | Summarize only |
 
 > [!TIP]
 > You can find the sample code for *Northwind Inventory* plugin at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#teams-message-extension-samples).
 
-**Coming soon**: Copilot can take action on prompts by analyzing the input and using machine learning techniques to generate new content. Copilot can look at the commands available in the plugin based on the descriptions of it and its parameters. Copilot will then use relevant data it has access to and "stuff" these into the parameters and call the command.
+**Coming soon**: Soon, Copilot will analyze input prompts using machine learning techniques to generate new content. It examines available plugin commands based on their descriptions and parameters. Then, it populates relevant data into those parameters and executes the command.
 
 ## Option 2: Building a custom engine copilot for Microsoft 365
 With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution that operates on Teams chat, then building with the Teams AI Library is the perfect fit for you.
