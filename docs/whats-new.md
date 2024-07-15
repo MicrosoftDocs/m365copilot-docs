@@ -11,7 +11,7 @@ ms.date: 05/21/2024
 
 As a developer, you can extend, enrich, and customize [Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. In this article, we cover news and updates related to Copilot for M365 extensibility.
 
-## May 2024: new in private preview
+## August 2024: new in public preview
 
 ### Build your own copilot and publish it as a Copilot extension
 
