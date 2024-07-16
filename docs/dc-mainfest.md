@@ -12,6 +12,13 @@ This following article describes a specification that establishes the Declarativ
 
 Declarative Copilots (DCs) are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the DC manifest which acts as a structured framework to specialize and enhance functionalities a specific user needs. 
 
+> [!IMPORTANT]
+> Declarative Copilots are currently in limited public preview.
+
+Here is an example of a DC manifest file that uses most of the manifest members and object properties described in the article:
+
+[!INCLUDE [Sample DC manifest for Repairs Declarative Copilot](includes/dc-manifest-json.md)]
+
 ## Conventions
 
 ### Relative references in URLs
