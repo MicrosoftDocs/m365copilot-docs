@@ -8,7 +8,7 @@ ms.topic: reference
 
 # API plugin manifest schema for Microsoft Copilot for Microsoft 365
 
-API plugins enable Copilot for Microsoft 365 to interact with REST APIs that are described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
+API plugins enable Copilot for Microsoft 365 to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
 
 The following article describes the schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft Copilot for Microsoft 365](./overview-api-plugins.md).
 
@@ -24,15 +24,15 @@ The plugin manifest object contains the following properties.
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.1`. |
-| `name_for_human` | String | Required. A short, human-readable name for the plugin. It MUST contain at least 1 non-whitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
+| `name_for_human` | String | Required. A short, human-readable name for the plugin. It MUST contain at least one nonwhitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
 | `namespace` | String | Deprecated. Optional. |
-| `description_for_model` | String | Optional. The description for the plugin that will be provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
+| `description_for_model` | String | Optional. The description for the plugin that is provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
 | `description_for_human` | String | Required. A human-readable description of the plugin. Characters beyond 100 MAY be ignored. This property is localizable. |
 | `logo_url` | String | Optional. A URL used to fetch a logo that MAY be used by the orchestrator. Implementations MAY provide alternative methods to provide logos that meet their visual requirements. This property is localizable. |
 | `contact_email` | String | Optional. An email address of a contact for safety/moderation, support, and deactivation. |
 | `legal_info_url` | String | Optional. An absolute URL that locates a document containing the terms of service for the plugin. This property is localizable. |
 | `privacy_policy_url` | String | Optional. An absolute URL that locates a document containing the privacy policy for the plugin. This property is localizable. |
-| `functions` | Array of [Function object](#function-object) | Optional. A set of function objects describing the functions available to the plugin. Each function object name MUST be unique within the array. The order of the array is not significant. If the functions member is not present and there exists an OpenAPI runtime, the functions will be inferred from the OpenAPI operations. |
+| `functions` | Array of [Function object](#function-object) | Optional. A set of function objects describing the functions available to the plugin. Each function object name MUST be unique within the array. The order of the array isn't significant. If the `functions` property isn't present and there's an OpenAPI runtime, the functions are inferred from the OpenAPI operations. |
 | `runtimes` | Array of [Local endpoint runtime object](#local-endpoint-runtime-object) OR [OpenAPI runtime object](#openapi-runtime-object) | Optional. A set of runtime objects describing the runtimes used by the plugin. |
 | `capabilities` | [Plugin capabilities object](#plugin-capabilities-object) | Optional. Describes capabilities of the plugin. |
 
@@ -58,7 +58,7 @@ The function object contains the following properties.
 | `id` | String | Optional. |
 | `name` | String | Required. A string that uniquely identifies this function. Runtime objects MAY reference this identifier to bind the runtime to the function. When the function is bound to an OpenAPI runtime, the value must match an `operationId` value in the OpenAPI description. Value must match the `^[A-Za-z0-9_]+$` regular expression. |
 | `description` | String | Optional. A description better tailored to the model, such as token context length considerations or keyword usage for improved plugin prompting. |
-| `parameters` | [Function parameters object](#function-parameters-object) | Optional. An object that contains members that describe the parameters of a function in a runtime agnostic way. It mirrors the shape of [json-schema][] to leverage the knowledge of the LLM but only supports a small subset of the JSON schema capabilities. If the `parameters` property is not present, functions described by a runtime object of type `openApi` will use the OpenAPI description to determine the parameters. Each member in the JSON object is a function parameter object that describes the semantics of the parameter. |
+| `parameters` | [Function parameters object](#function-parameters-object) | Optional. An object that contains members that describe the parameters of a function in a runtime agnostic way. It mirrors the shape of [json-schema][] but only supports a small subset of the JSON schema capabilities. If the `parameters` property isn't present, functions described by a runtime object of type `OpenApi` use the OpenAPI description to determine the parameters. Each member in the JSON object is a function parameter object that describes the semantics of the parameter. |
 | `returns` | [Return object](#return-object) OR [Rich return object](#rich-return-object) | Optional. Describes the semantics of the value returned from the function. |
 | `states` | [Function states object](#function-states-object) | Optional. Defines state objects for orchestrator states. |
 | `capabilities` | [Function capabilities object](#function-capabilities-object) | Optional. Contains a collection of data used to configure optional capabilities of the orchestrator while invoking the function. |
@@ -71,8 +71,8 @@ The function states object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `reasoning` | [State object](#state-object) | Optional. When the model can call functions and do computations. |
-| `responding` | [State object](#state-object) | Optional. When the model can generate text that will be shown to the user. The model cannot invoke functions in the responding state. |
+| `reasoning` | [State object](#state-object) | Optional. The state in which the model can call functions and do computations. |
+| `responding` | [State object](#state-object) | Optional. The state in which the model can generate text that is shown to the user. The model can't invoke functions in the responding state. |
 | `disengaging` | [State object](#state-object) | Optional. |
 
 #### Function capabilities object
@@ -83,7 +83,7 @@ The function capabilities object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `confirmation` | [Confirmation object](#confirmation-object) | Optional. Describes a confirmation prompt that SHOULD be presented to the user before invoking the function. |
+| `confirmation` | [Confirmation object](#confirmation-object) | Optional. Describes a confirmation dialog that SHOULD be presented to the user before invoking the function. |
 | `response_semantics` | [Response semantics object](#response-semantics-object) | Optional. Describes how the orchestrator can interpret the response payload and provide a visual rendering. |
 
 ### Response semantics object
@@ -96,7 +96,7 @@ The response semantics object contains the following properties.
 | -------- | ---- | ----------- |
 | `data_path` | String | Required. A JSONPath [RFC9535][] query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
 | `properties` | [Response semantics properties object](#response-semantics-properties-object) | Optional. Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value. |
-| `static_template` | Object | Optional. A JSON object that conforms with the [Adaptive Card Schema](http://adaptivecards.io/schemas/adaptive-card.json) and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` is not present or fails to resolve to an adaptive card. |
+| `static_template` | Object | Optional. A JSON object that conforms with the [Adaptive Card Schema](https://adaptivecards.io/schemas/adaptive-card.json) and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` isn't present or fails to resolve to an adaptive card. |
 | `oauth_card_path` | String | Optional. |
 
 #### Response semantics properties object
@@ -116,11 +116,11 @@ The response semantics properties object contains the following properties.
 
 #### Response semantics static template object
 
-A JSON object that conforms with the [Adaptive Card Schema](http://adaptivecards.io/schemas/adaptive-card.json) and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` is not present or fails to resolve to an adaptive card.
+A JSON object that conforms with the [Adaptive Card Schema](https://adaptivecards.io/schemas/adaptive-card.json) and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` isn't present or fails to resolve to an adaptive card.
 
 ### Conversation starter object
 
-An example of a question that can be answered by the plugin.
+An example of a question that the plugin can answer.
 
 The conversation starter object contains the following properties.
 
@@ -131,7 +131,7 @@ The conversation starter object contains the following properties.
 
 ### OpenAPI runtime object
 
-Describes the mechanics of how OpenAPI functions are invoked by the plugin.
+Describes how the plugin invokes OpenAPI functions.
 
 The OpenAPI runtime object contains the following properties.
 
@@ -139,7 +139,7 @@ The OpenAPI runtime object contains the following properties.
 | -------- | ---- | ----------- |
 | `type` | String | Required. Identifies this runtime as an OpenAPI runtime. Must be set to `OpenApi`. |
 | `auth` | [Runtime authentication object](#runtime-authentication-object) | Required. Authentication information required to invoke the runtime. |
-| `run_for_functions` | Array of String | Optional. The names of the functions that will be invoked by this runtime. If this property is omitted then all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
+| `run_for_functions` | Array of String | Optional. The names of the functions that are available in this runtime. If this property is omitted, all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
 | `spec` | [OpenAPI specification object](#openapi-specification-object) | Required. Contains the OpenAPI information required to invoke the runtime. |
 
 #### OpenAPI specification object
@@ -151,8 +151,8 @@ The OpenAPI specification object contains the following properties.
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `url` | String | Optional. The URL to fetch the OpenAPI specification, called with a GET request. This member is required unless `api_description` is present. |
-| `api_description` | String | Optional. A string that contains an OpenAPI description. If this member is present then `url` is not required and will be ignored if present. |
-| `progress_style` | String | Optional. The progress style that will be used to display the progress of the function. Possible values are: `None`, `ShowUsage`, `ShowUsageWithInput`, `ShowUsageWithInputAndOutput`. |
+| `api_description` | String | Optional. A string that contains an OpenAPI description. If this member is present, `url` isn't required and is ignored if present. |
+| `progress_style` | String | Optional. The progress style that is used to display the progress of the function. Possible values are: `None`, `ShowUsage`, `ShowUsageWithInput`, `ShowUsageWithInputAndOutput`. |
 
 ### Runtime authentication object
 
@@ -167,14 +167,14 @@ The runtime authentication object contains the following properties.
 
 ### Local endpoint runtime object
 
-Describes the mechanics of how local endpoint functions are invoked by the plugin.
+Describes how the plugin invokes local endpoint functions.
 
 The local endpoint runtime object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `type` | String | Required. Identifies this runtime as a local endpoint runtime. Must be set to `LocalPlugin`. |
-| `run_for_functions` | Array of String | Optional. The names of the functions that will be invoked by this runtime. If this property is omitted then all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
+| `run_for_functions` | Array of String | Optional. The names of the functions that are available in this runtime. If this property is omitted, all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
 | `spec` | [Local endpoint specification object](#local-endpoint-specification-object) | Required. Contains the local endpoint information required to invoke the runtime. |
 
 #### Local endpoint specification object
@@ -185,7 +185,7 @@ The local endpoint specification object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `local_endpoint` | String | Required. A local runtime identifier that links to a specific function to invoke locally (e.g. in the case of Windows it will link to a particular app). |
+| `local_endpoint` | String | Required. A local runtime identifier that links to a specific function to invoke locally (for example, on Windows it links to a particular app). |
 
 ### Localization object
 
@@ -252,7 +252,7 @@ The function parameter object contains the following properties.
 | `items` | [Function parameter object](#function-parameter-object) | Optional. A function parameter object that describes a single element in an array. MUST only be present when `type` is `array`. |
 | `enum` | Array of String | Optional. An array of valid values for this parameter. MUST only be present when `type` is `string`. |
 | `description` | String | Optional. A description of the parameter. |
-| `default` | Array, Boolean, String, Number, Integer | Optional. A value of the type specified by the `type` property that indicates the value the API uses when a value for an optional parameter is not provided. |
+| `default` | Array, Boolean, String, Number, Integer | Optional. A value of the type specified by the `type` property that indicates the value the API uses when a value for an optional parameter isn't provided. |
 
 ### Return object
 
@@ -284,12 +284,12 @@ The state object contains the following properties.
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `description` | String | Optional. Describes the purpose of a function when used in a specific orchestrator state. |
-| `instructions` | Array, String | Optional. A string or an array of strings that are used to provide instructions to the orchestrator on how to use this function while in a specific orchestrator state. Providing a single string indicates the intent to provide a complete set of instructions that would override any built-in function prompts. Providing an array of strings indicates the intent to augment the built in function prompting mechanism. |
+| `instructions` | Array, String | Optional. A string or an array of strings that are used to provide instructions to the orchestrator on how to use this function while in a specific orchestrator state. Providing a single string indicates the intent to provide a complete set of instructions that would override any built-in function prompts. Providing an array of strings indicates the intent to augment the built-in function prompting mechanism. |
 | `examples` | Array, String | Optional. A string or an array of strings that are used to provide examples to the orchestrator on how this function can be invoked. |
 
 ### Confirmation object
 
-Describes how the orchestrator prompts the user to confirm before calling a function.
+Describes how the orchestrator asks the user to confirm before calling a function.
 
 The confirmation object contains the following properties.
 
@@ -301,7 +301,7 @@ The confirmation object contains the following properties.
 
 ## Example
 
-Here is an example of a plugin manifest file that uses most of the manifest members and object properties described in the article:
+Here's an example of a plugin manifest file that uses most of the manifest members and object properties described in the article:
 
 [!INCLUDE [Sample plugin manifest for Contoso Real Estate plugin](includes/sample-api-plugin-manifest-file.md)]
 
