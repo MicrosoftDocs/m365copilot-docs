@@ -33,7 +33,7 @@ The plugin manifest object contains the following properties.
 | `legal_info_url` | String | Optional. An absolute URL that locates a document containing the terms of service for the plugin. This property is localizable. |
 | `privacy_policy_url` | String | Optional. An absolute URL that locates a document containing the privacy policy for the plugin. This property is localizable. |
 | `functions` | Array of [Function object](#function-object) | Optional. A set of function objects describing the functions available to the plugin. Each function object name MUST be unique within the array. The order of the array isn't significant. If the `functions` property isn't present and there's an OpenAPI runtime, the functions are inferred from the OpenAPI operations. |
-| `runtimes` | Array of [Local endpoint runtime object](#local-endpoint-runtime-object) OR [OpenAPI runtime object](#openapi-runtime-object) | Optional. A set of runtime objects describing the runtimes used by the plugin. |
+| `runtimes` | Array of [OpenAPI runtime object](#openapi-runtime-object) | Optional. A set of runtime objects describing the runtimes used by the plugin. |
 | `capabilities` | [Plugin capabilities object](#plugin-capabilities-object) | Optional. Describes capabilities of the plugin. |
 
 ### Plugin capabilities object
@@ -164,28 +164,6 @@ The runtime authentication object contains the following properties.
 | -------- | ---- | ----------- |
 | `type` | String | Optional. Specifies the type of authentication required to invoke a function. Possible values are: `None`, `OAuthPluginVault`, `ApiKeyPluginVault`. |
 | `reference_id` | String | Optional. A value used when `type` is `OAuthPluginVault` or `ApiKeyPluginVault`. The `reference_id` value is acquired independently when providing the necessary authentication configuration values. This mechanism exists to prevent the need for storing secret values in the plugin manifest. |
-
-### Local endpoint runtime object
-
-Describes how the plugin invokes local endpoint functions.
-
-The local endpoint runtime object contains the following properties.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `type` | String | Required. Identifies this runtime as a local endpoint runtime. Must be set to `LocalPlugin`. |
-| `run_for_functions` | Array of String | Optional. The names of the functions that are available in this runtime. If this property is omitted, all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
-| `spec` | [Local endpoint specification object](#local-endpoint-specification-object) | Required. Contains the local endpoint information required to invoke the runtime. |
-
-#### Local endpoint specification object
-
-Contains the local endpoint information required to invoke the runtime.
-
-The local endpoint specification object contains the following properties.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `local_endpoint` | String | Required. A local runtime identifier that links to a specific function to invoke locally (for example, on Windows it links to a particular app). |
 
 ### Localization object
 
