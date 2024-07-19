@@ -31,6 +31,8 @@
   items:
   - name: Microsoft Graph connectors in Copilot for Microsoft 365
     href: overview-graph-connector.md
+  - name: Enhancing Microsoft Copilot Discovery with Graph Connector Content
+    href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
   - name: Connectors experiences
     href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
   - name: Connectors API

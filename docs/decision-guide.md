@@ -15,6 +15,8 @@ After [making the decision to extend Microsoft Copilot](build-or-extend.md), itâ
 
 ## Explore your extensibility options
 
+> [!VIDEO https://www.youtube.com/embed/ILPOhVz9OdI]
+
 Let's look at all the options you have available.
 
 :::image type="content" source="assets/images/decision-making-guide.png" alt-text="A diagram that shows various developer options." lightbox="assets/images/decision-making-guide.png":::
