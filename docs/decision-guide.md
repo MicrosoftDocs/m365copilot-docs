@@ -120,7 +120,7 @@ Consider your data: how it's structured, the level of volume and activity you ex
 
 With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution on Teams chat, then building your own copilots is the perfect fit for you.
 
-:::image type="content" source="https://learn.microsoft.com/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="A diagram that explains how a custom engine copilot agent in Teams work" lightbox="https://learn.microsoft.com/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
+:::image type="content" source="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="A diagram that explains how a custom engine copilot agent in Teams work" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
 
 ### How does it differ from Copilot extensions for Microsoft 365?
 
