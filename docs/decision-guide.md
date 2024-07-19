@@ -1,10 +1,10 @@
 ---
-title: Your options for Microsoft Copilot for Microsoft 365
+title: Your extensibility options for Microsoft Copilot
 description: Understand which type of Microsoft Copilot for Microsoft 365 plugin or connector works best for you
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 07/18/2024
+ms.date: 07/19/2024
 ---
 
 # Your extensibility options for Microsoft 365 Copilot
@@ -24,9 +24,9 @@ Here's your first decision-making point; extending Copilot to leverage the orche
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." lightbox="assets/images/m365-extensibility-decisions.png" :::
 
-- 🎯 If you want to **leverage the Copilot orchestrator**, go to the next section, [Option 1](#option-1-extending-microsoft-copilot) for extending Microsoft Copilot
+- 🎯 If you want to **extending Microsoft Copilot**, go to the next section, [Option 1](#option-1-extending-microsoft-copilot)!
   - 🎯 Then, you have choices for extensions; build declarative copilots, plugins, or connectors. Find out about [extensibility types](#types-of-copilot-extensibility-for-microsoft-365)
-- 🎯 Otherwise, jump to [Option 2](#option-2-building-a-custom-engine-copilot-for-microsoft-365) to **use your own**!
+- 🎯 Otherwise, jump to [Option 2](#option-2-building-a-custom-engine-copilot-for-microsoft-365) to **build your own copilots**!
 
 ## Option 1. Extending Microsoft Copilot
 
@@ -87,7 +87,7 @@ How you build and which tools you should use is up to you. Your choices are:
 
 - 🎯 **Pro-code** options are declarative copilots, API plugins, message extensions, and Graph connectors. [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) would be your best friend for the development to tailor your copilots.
 
-- 🎯 **Low-code** or **no-code** options are declarative copilots, all Copilot Studio actions, and Graph connectors. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
+- 🎯 **Low-code** or **no-code** options are declarative copilots, all Copilot Studio actions, and Graph connectors as knowledge source. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
 
 :::image type="content" source="assets/images/decision-making-guide.png" alt-text="A diagram that shows various developer options." lightbox="assets/images/decision-making-guide.png":::
 
@@ -118,7 +118,7 @@ Consider your data: how it's structured, the level of volume and activity you ex
 
 ## Option 2: Building a custom engine copilot for Microsoft 365
 
-With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution that operates on Teams chat, then building with the Teams AI Library is the perfect fit for you.
+With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution on Teams chat, then building your own copilots is the perfect fit for you.
 
 :::image type="content" source="https://learn.microsoft.com/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="A diagram that explains how a custom engine copilot agent in Teams work" lightbox="https://learn.microsoft.com/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
 
@@ -128,15 +128,23 @@ In the context of building copilots for Microsoft 365, there are several options
 
 :::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilot for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
-The custom engine Copilot operates on a BYO (Bring Your Own) model. So, you use your preferred LLM and orchestrator instead of Microsoft Copilot services.
+The custom engine copilot operates on a BYO (Bring Your Own) model. So, you can use your preferred LLM and orchestrator.
 
-Building custom engine copilot with **Teams AI Library** is an excellent choice if:
+Building custom engine copilot is an excellent choice if:
 
 - You want to choose models and orchestration
 - You have prior experience in building Teams bots or are familiar with Teams bot development
 - You aim to have your conversational AI bot accessible to all Microsoft 365 users, regardless of their Copilot licensing status
 
-🎯 Learn more on building your own [**custom engine copilot**](overview-custom-engine-copilot.md) with the Teams AI Library.
+🎯 Learn more on building your own [**custom engine copilot**](overview-custom-engine-copilot.md).
+
+### Tool options: Pro-code or low-code?
+
+How you build and which tools you should use is up to you. Your choices are:
+
+- 🎯 **Pro-code**: If you prefer coding for full customization, use **Teams AI Library** with [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+
+- 🎯 **Low-code** or **no-code**: You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to build Copilot Studio custom copilots.
 
 ## Next step
 
