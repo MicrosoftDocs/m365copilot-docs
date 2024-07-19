@@ -61,4 +61,4 @@ There are two tools developers can use to generate API plugin packages.
 
 ## See also
 
-* [API plugin manifest schema for Microsoft Copilot for Microsoft 365](./api-plugin-manifest.md)
+- [API plugin manifest schema for Microsoft Copilot for Microsoft 365](./api-plugin-manifest.md)

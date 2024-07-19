@@ -1,8 +1,8 @@
 ---
 title: API plugin manifest schema for Microsoft Copilot for Microsoft 365
 description: Learn about the members and properties you can use in a manifest file for an API plugin in Microsoft Copilot for Microsoft 365
-author: captainbrosset
-ms.author: pabrosse
+author: jasonjoh
+ms.author: jasonjoh
 ms.topic: reference
 ---
 
@@ -15,343 +15,301 @@ The following article describes the schema used by API plugin manifest files. Fo
 > [!IMPORTANT]
 > API plugins are currently in limited private preview. More details will be published once a public preview is announced.
 
+## Plugin manifest object
+
+The root of the plugin manifest document is a JSON object that contains members that describe the plugin.
+
+The plugin manifest object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.1`. |
+| `name_for_human` | String | Required. A short, human-readable name for the plugin. It MUST contain at least 1 non-whitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
+| `namespace` | String | Deprecated. Optional. |
+| `description_for_model` | String | Optional. The description for the plugin that will be provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
+| `description_for_human` | String | Required. A human-readable description of the plugin. Characters beyond 100 MAY be ignored. This property is localizable. |
+| `logo_url` | String | Optional. A URL used to fetch a logo that MAY be used by the orchestrator. Implementations MAY provide alternative methods to provide logos that meet their visual requirements. This property is localizable. |
+| `contact_email` | String | Optional. An email address of a contact for safety/moderation, support, and deactivation. |
+| `legal_info_url` | String | Optional. An absolute URL that locates a document containing the terms of service for the plugin. This property is localizable. |
+| `privacy_policy_url` | String | Optional. An absolute URL that locates a document containing the privacy policy for the plugin. This property is localizable. |
+| `functions` | Array of [Function object](#function-object) | Optional. A set of function objects describing the functions available to the plugin. Each function object name MUST be unique within the array. The order of the array is not significant. If the functions member is not present and there exists an OpenAPI runtime, the functions will be inferred from the OpenAPI operations. |
+| `runtimes` | Array of [Local endpoint runtime object](#local-endpoint-runtime-object) OR [OpenAPI runtime object](#openapi-runtime-object) | Optional. A set of runtime objects describing the runtimes used by the plugin. |
+| `capabilities` | [Plugin capabilities object](#plugin-capabilities-object) | Optional. Describes capabilities of the plugin. |
+
+### Plugin capabilities object
+
+Describes capabilities of the plugin.
+
+The plugin capabilities object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `localization` | [Localization object](#localization-object) | Optional. Provides mappings for strings in different languages and locales. Certain properties can be localized using a [Liquid][] filter called `localize`. |
+| `conversation_starters` | Array of [Conversation starter object](#conversation-starter-object) | Optional. Conversation starters that can be displayed to the user for suggestions on how to invoke the plugin. |
+
+### Function object
+
+Information related to how the model should interact with a function.
+
+The function object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `id` | String | Optional. |
+| `name` | String | Required. A string that uniquely identifies this function. Runtime objects MAY reference this identifier to bind the runtime to the function. When the function is bound to an OpenAPI runtime, the value must match an `operationId` value in the OpenAPI description. Value must match the `^[A-Za-z0-9_]+$` regular expression. |
+| `description` | String | Optional. A description better tailored to the model, such as token context length considerations or keyword usage for improved plugin prompting. |
+| `parameters` | [Function parameters object](#function-parameters-object) | Optional. An object that contains members that describe the parameters of a function in a runtime agnostic way. It mirrors the shape of [json-schema][] to leverage the knowledge of the LLM but only supports a small subset of the JSON schema capabilities. If the `parameters` property is not present, functions described by a runtime object of type `openApi` will use the OpenAPI description to determine the parameters. Each member in the JSON object is a function parameter object that describes the semantics of the parameter. |
+| `returns` | [Return object](#return-object) OR [Rich return object](#rich-return-object) | Optional. Describes the semantics of the value returned from the function. |
+| `states` | [Function states object](#function-states-object) | Optional. Defines state objects for orchestrator states. |
+| `capabilities` | [Function capabilities object](#function-capabilities-object) | Optional. Contains a collection of data used to configure optional capabilities of the orchestrator while invoking the function. |
+
+#### Function states object
+
+Defines state objects for orchestrator states.
+
+The function states object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `reasoning` | [State object](#state-object) | Optional. When the model can call functions and do computations. |
+| `responding` | [State object](#state-object) | Optional. When the model can generate text that will be shown to the user. The model cannot invoke functions in the responding state. |
+| `disengaging` | [State object](#state-object) | Optional. |
+
+#### Function capabilities object
+
+Contains a collection of data used to configure optional capabilities of the orchestrator while invoking the function.
+
+The function capabilities object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `confirmation` | [Confirmation object](#confirmation-object) | Optional. Describes a confirmation prompt that SHOULD be presented to the user before invoking the function. |
+| `response_semantics` | [Response semantics object](#response-semantics-object) | Optional. Describes how the orchestrator can interpret the response payload and provide a visual rendering. |
+
+### Response semantics object
+
+Contains information to identify semantics of response payload and enable rendering that information in a rich visual experience using [adaptive cards](https://adaptivecards.io/).
+
+The response semantics object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `data_path` | String | Required. A JSONPath [RFC9535][] query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
+| `properties` | [Response semantics properties object](#response-semantics-properties-object) | Optional. Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value. |
+| `static_template` | Object | Optional. A JSON object that conforms with the [Adaptive Card Schema](http://adaptivecards.io/schemas/adaptive-card.json) and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` is not present or fails to resolve to an adaptive card. |
+| `oauth_card_path` | String | Optional. |
+
+#### Response semantics properties object
+
+Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value.
+
+The response semantics properties object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `title` | String | Optional. Title of a citation for the result. |
+| `subtitle` | String | Optional. Subtitle of a citation for the result. |
+| `url` | String | Optional. URL of a citation for the result. |
+| `thumbnail_url` | String | Optional. URL of a thumbnail image for the result. |
+| `information_protection_label` | String | Optional. Data sensitivity indicator of the result contents. |
+| `template_selector` | String | Optional. A JSONPath expression to an Adaptive Card instance to be used for rendering the result. |
+
+#### Response semantics static template object
+
+A JSON object that conforms with the [Adaptive Card Schema](http://adaptivecards.io/schemas/adaptive-card.json) and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` is not present or fails to resolve to an adaptive card.
+
+### Conversation starter object
+
+An example of a question that can be answered by the plugin.
+
+The conversation starter object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `text` | String | Required. The text of the conversation starter. This property is localizable. |
+| `title` | String | Optional. The title of the conversation starter. This property is localizable. |
+
+### OpenAPI runtime object
+
+Describes the mechanics of how OpenAPI functions are invoked by the plugin.
+
+The OpenAPI runtime object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `type` | String | Required. Identifies this runtime as an OpenAPI runtime. Must be set to `OpenApi`. |
+| `auth` | [Runtime authentication object](#runtime-authentication-object) | Required. Authentication information required to invoke the runtime. |
+| `run_for_functions` | Array of String | Optional. The names of the functions that will be invoked by this runtime. If this property is omitted then all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
+| `spec` | [OpenAPI specification object](#openapi-specification-object) | Required. Contains the OpenAPI information required to invoke the runtime. |
+
+#### OpenAPI specification object
+
+Contains the OpenAPI information required to invoke the runtime.
+
+The OpenAPI specification object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `url` | String | Optional. The URL to fetch the OpenAPI specification, called with a GET request. This member is required unless `api_description` is present. |
+| `api_description` | String | Optional. A string that contains an OpenAPI description. If this member is present then `url` is not required and will be ignored if present. |
+| `progress_style` | String | Optional. The progress style that will be used to display the progress of the function. Possible values are: `None`, `ShowUsage`, `ShowUsageWithInput`, `ShowUsageWithInputAndOutput`. |
+
+### Runtime authentication object
+
+Contains information used by the plugin to authenticate to the runtime.
+
+The runtime authentication object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `type` | String | Optional. Specifies the type of authentication required to invoke a function. Possible values are: `None`, `OAuthPluginVault`, `ApiKeyPluginVault`. |
+| `reference_id` | String | Optional. A value used when `type` is `OAuthPluginVault` or `ApiKeyPluginVault`. The `reference_id` value is acquired independently when providing the necessary authentication configuration values. This mechanism exists to prevent the need for storing secret values in the plugin manifest. |
+
+### Local endpoint runtime object
+
+Describes the mechanics of how local endpoint functions are invoked by the plugin.
+
+The local endpoint runtime object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `type` | String | Required. Identifies this runtime as a local endpoint runtime. Must be set to `LocalPlugin`. |
+| `run_for_functions` | Array of String | Optional. The names of the functions that will be invoked by this runtime. If this property is omitted then all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
+| `spec` | [Local endpoint specification object](#local-endpoint-specification-object) | Required. Contains the local endpoint information required to invoke the runtime. |
+
+#### Local endpoint specification object
+
+Contains the local endpoint information required to invoke the runtime.
+
+The local endpoint specification object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `local_endpoint` | String | Required. A local runtime identifier that links to a specific function to invoke locally (e.g. in the case of Windows it will link to a particular app). |
+
+### Localization object
+
+Contains mappings for strings in different languages and locales.
+
+The localization object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| Name matching `^(?i)[a-z]{2,3}(-[a-z]{2})?(?-i)$` | [Language-specific localized properties object](#language-specific-localized-properties-object) | Optional. Contains translations of localizable properties for the language represented by the property's name, which is a [BCP47][] language tag. |
+
+#### Language-specific localized properties object
+
+Contains translations of localizable properties for the language represented by the property's name, which is a [BCP47][] language tag.
+
+The language-specific localized properties object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| Name matching `^[A-Za-z_][A-Za-z0-9_]*$` | [Localized property object](#localized-property-object) | Optional. Contains the localized value for the localizable property identified by this property's name. |
+
+##### Localized property object
+
+Contains the localized value for the localizable property identified by this property's name.
+
+The localized property object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `message` | String | Required. A localized, human-readable string that is used for the localizable property's value. |
+| `description` | String | Required. A localized description that can be displayed to the model. |
+
+### Function parameters object
+
+An object that is used to identify the set of parameters that can be passed to the function. This object is structured to mirror the shape of a JSON Schema object but it only supports a subset of JSON Schema keywords.
+
+The function parameters object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `type` | String | Optional. The JSON Schema type. Must be set to `object`. |
+| `properties` | [Function parameters properties object](#function-parameters-properties-object) | Required. An object that maps parameter names to their definitions. |
+| `required` | Array of String | Optional. The names of properties that are required parameters. Unlike in JSON Schema, the values in this array MUST match the names listed in the `properties` property. |
+
+#### Function parameters properties object
+
+An object that maps parameter names to their definitions.
+
+The function parameters properties object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| Name matching `^[A-Za-z0-9_]+$` | [Function parameter object](#function-parameter-object) | Optional. The parameter definition that corresponds to the parameter that matches the property name. |
+
+### Function parameter object
+
+An object that describes the semantics of a function parameter.
+
+The function parameter object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `type` | String | Required. Specifies the parameter's type. Possible values are: `string`, `array`, `boolean`, `integer`, `number`. |
+| `items` | [Function parameter object](#function-parameter-object) | Optional. A function parameter object that describes a single element in an array. MUST only be present when `type` is `array`. |
+| `enum` | Array of String | Optional. An array of valid values for this parameter. MUST only be present when `type` is `string`. |
+| `description` | String | Optional. A description of the parameter. |
+| `default` | Array, Boolean, String, Number, Integer | Optional. A value of the type specified by the `type` property that indicates the value the API uses when a value for an optional parameter is not provided. |
+
+### Return object
+
+Contains the semantics of the value returned from the function.
+
+The return object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `type` | String | Required. Specifies the type of the value returned by the API. Possible values are: `string`. |
+| `description` | String | Optional. A description of the value returned by the API. |
+
+### Rich return object
+
+Indicates that the function returns a response that is compatible with the Rich Responses protocol.
+
+The rich return object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `$ref` | String | Required. Must be set to `https://copilot.microsoft.com/schemas/rich-response-v1.0.json`. |
+
+### State object
+
+Contains specific instructions for when a function is invoked in a specific orchestrator state.
+
+The state object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `description` | String | Optional. Describes the purpose of a function when used in a specific orchestrator state. |
+| `instructions` | Array, String | Optional. A string or an array of strings that are used to provide instructions to the orchestrator on how to use this function while in a specific orchestrator state. Providing a single string indicates the intent to provide a complete set of instructions that would override any built-in function prompts. Providing an array of strings indicates the intent to augment the built in function prompting mechanism. |
+| `examples` | Array, String | Optional. A string or an array of strings that are used to provide examples to the orchestrator on how this function can be invoked. |
+
+### Confirmation object
+
+Describes how the orchestrator prompts the user to confirm before calling a function.
+
+The confirmation object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `type` | String | Optional. Specifies the type of confirmation. Possible values are: `None`, `AdaptiveCard`. |
+| `title` | String | Optional. The title of the confirmation dialog. This property is localizable. |
+| `body` | String | Optional. The text of the confirmation dialog. This property is localizable. |
+
+## Example
+
 Here is an example of a plugin manifest file that uses most of the manifest members and object properties described in the article:
 
 [!INCLUDE [Sample plugin manifest for Contoso Real Estate plugin](includes/sample-api-plugin-manifest-file.md)]
 
-## Manifest members
-
-The following members can be used at the root level of a plugin manifest:
-
-| Member | Description | Type | Required? | Localizable? | Guideline |
-| --- | --- | --- | --- | --- | --- |
-| `schema_version` | Version of the manifest schema that this plugin is using. | String | Yes | No | The value must be "v1", "v2", or "v2.1" |
-| `name_for_human` | Name of the plugin, displayed to users in the Microsoft Copilot experience where your plugin is installed. | String | Yes | Yes | Limited to 20 characters. |
-| `description_for_human` | Description of the plugin, displayed to users in the Microsoft Copilot experience where your plugin is installed. | String | Yes | Yes | Limited to 100 characters. |
-| `description_for_model` | Description of the general capabilities of the plugin, for the model that powers Microsoft Copilot. This description should describe what the plugin is for, and in what circumstances its functions are relevant. | String | Yes | No | Limited to 2048 characters. This is a factual description of your plugin. Describe what your plugin does for users and in what circumstances its functions are relevant. |
-| `logo_url` | The URL to your plugin's logo. | String | Yes | No | The URL must point to an image resource. |
-| `contact_email` | Email address for support, moderation, and deactivation requests about your plugin. | String | Yes | No | N/A |
-| `legal_info_url` | URL of the terms of use, terms of service, or end user license for your plugin.  The terms are directly between you and the end user. | String | Yes | Yes | N/A |
-| `privacy_policy_url` | URL of the privacy policy for your plugin. | String | Yes | Yes | N/A |
-| `capabilities` | Optional capabilities that the plugin supports. | [Capabilities object](#capabilities-object) | No | No | This member is used to provide translations to strings in your plugin manifest file. |
-| `functions` | A list of functions that your plugin supports. Each function object specifies what the function does, and how the model that powers Microsoft Copilot should interact with the function. | Array of [Function object](#function-object) | Yes | No | Each function name must be unique within the array. The order of items in the array is not significant. |
-| `runtimes` | A list of runtimes that your plugin uses. Each runtime object describes the mechanics of how a plugin function is invoked. | Array of [Runtime object](#runtime-object) | Yes | No | N/A |
-
-## Capabilities object
-
-Lists the capabilities that the plugin supports. Currently, the only capability that can be specified is localization, which is used to provide translations to strings in your plugin manifest file.
-
-Here is an example of a capabilities object that specifies translations for the `name_for_human` and `description_for_human` members:
-
-```json
-{
-  "localization": {
-    "en-us": {
-      "nameForHuman": {
-        "message": "Contoso Real Estate",
-        "description": "Name for human, in English"
-      },
-      "descriptionForHuman": {
-        "message": "Find up-to-date, detailed real estate properties for sale on the market",
-        "description": "Description for human, in English"
-      }
-    },
-    "fr-fr": {
-      "nameForHuman": {
-        "message": "Contoso Immobilier",
-        "description": "Name for human, in French"
-      },
-      "descriptionForHuman": {
-        "message": "Trouvez des propriétés immobilières à vendre sur le marché",
-        "description": "Description for human, in French"
-      }
-    }
-  }
-}
-```
-
-The following properties can be used in a capabilities object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `localization` | Translations for strings in your plugin manifest file. | [Localization object](#localization-object) | No | N/A |
-
-#### Localization object
-
-Object where keys are language tags and values are [Localized properties objects](#localized-properties-object). For example:
-
-```json
-{
-  "en-us": {
-    "nameForHuman": {
-      "message": "Contoso Real Estate",
-      "description": "Name for human, in English"
-    },
-    "descriptionForHuman": {
-      "message": "Find up-to-date, detailed real estate properties for sale on the market",
-      "description": "Description for human, in English"
-    }
-  }
-}
-```
-
-Valid language tags are defined in the [Tags for Identifying Languages RFC](https://www.rfc-editor.org/rfc/rfc5646). Examples of valid language tags include `en-us`, `fr-fr`, and `es-es`.
-
-#### Localized properties object
-
-Object where keys are unique identifiers within the manifiest file that can be used to localize strings, and values are [Localized property object](#localized-property-object). For example:
-
-```json
-{
-  "nameForHuman": {
-    "message": "Contoso Real Estate",
-    "description": "Name for human, in English"
-  },
-  "descriptionForHuman": {
-    "message": "Find up-to-date, detailed real estate properties for sale on the market",
-    "description": "Description for human, in English"
-  }
-}
-```
-
-###### Localized property object
-
-A localized property object describes localized string and provides its translation. For example:
-
-```json
-{
-  "message": "Contoso Real Estate",
-  "description": "Name for human, in English"
-}
-```
-
-The following properties can be used in a localized property object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `message` | The translation of the string. | String | Yes | N/A |
-| `description` | Description of the localized string. | String | No | N/A |
-
-## Function object
-
-Specifies what the function does, and how the model that powers Microsoft Copilot should interact with the function.
-
-Here is an example of a function called `getListings`, which returns a list of properties for sale that match some specified search criteria:
-
-```json
-{
-  "name": "getListings",
-  "description": "Get a list of properties matching the specified criteria",
-  "parameters": {
-    "type" : "object",
-    "properties": {
-      "city": {
-        "type": "string",
-        "description": "The city to search in"
-      },
-      "bedrooms": {
-        "type": "number",
-        "description": "The number of bedrooms"
-      }
-    },
-    "required": [ "city" ]
-  },
-  "returns": {
-    "type": "string",
-    "description": "A list of properties"
-  },
-  "states": {
-    "reasoning": {
-      "description": "\n# `{{ function.declaration }}` returns a list of real estate properties for sale based on the specified criteria.",
-      "instructions": [
-        "\n* Examine the output of the `{{ function.declaration }}` function.",
-        "\n* Determine if the response contains an error field.",
-        "\n* If an error is present, provide the error code and error message from the JSON response to the user.",
-        "\n* If there is no error, extract and include as much relevant information as possible from the JSON response to meet the users needs.",
-      ]
-    }
-  }
-}
-```
-
-The following properties can be used in a function object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `name` | Name that uniquely identifies the function. | String | Yes | The string identifier must match the `^[A-Za-z0-9_]+$` regular expression. When this function is run by an `OpenApi` runtime, the name must match the `operationId` value in the OpenAPI description file. |
-| `description` | Description of the function that's better tailored to the model, such as token context length considerations or keyword usage for improved plugin prompting. | String | No | N/A |
-| `parameters` | Description of the parameters that the function accepts. | [Parameters object](#parameters-object). | Yes | An empty object can be used for functions that have no parameters. When using an `OpenApi` runtime, the parameters defined in the OpenAPI description are used by the model. |
-| `returns` | Description of the function's return value. | [Return object](#return-object) | Yes | N/A |
-| `states` | An object used to provide specific instructions for when the function is invoked during a specific state of the plugin processing flow. | Object where keys are `reasoning` or `responding` and values are of type [State object](#state-object) | No | Use `reasoning` to provide instructions for when Microsoft Copilot is calling the function and doing computations. Use `responding` for when Microsoft Copilot is generating text to be shown to the user. |
-
-#### Parameters object
-
-The parameters object describes the parameters that the function accepts, and which of those parameters are required.
-
-Here is an example of a parameters object that describes two parameters, `city` and `bedrooms`, and specifies that `city` is required:
-
-```json
-{
-  "type" : "object",
-  "properties": {
-    "city": {
-      "type": "string",
-      "description": "The city to search in"
-    },
-    "bedrooms": {
-      "type": "number",
-      "description": "The number of bedrooms"
-    }
-  },
-  "required": [ "city" ]
-}
-```
-
-The following properties can be used in a function's parameters object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `type` | Type of function parameters | String | Yes | Must be `"object"` |
-| `properties` | Object describing the list of function parameters. | Object where keys are parameter names and values are of type [Parameter object](#parameter-object) | Yes | N/A |
-| `required` | List of required parameters. | Array of strings | No | N/A |
-
-###### Parameter object
-
-A parameter object describes a single parameter that the function accepts. For example:
-
-```json
-{
-  "type": "string",
-  "description": "The city to search in"
-}
-```
-
-The following properties can be used in a function's parameter object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `type` | Type of parameter | String | Yes | Must be one of `"string"`, `"array"`, `"boolean"`, `"integer"`, `"number"` |
-| `description` | Description of the data that can be passed as the parameter. | String | Yes | N/A |
-| `items` | Object describing the type of items in an array. | [Parameter object](#parameter-object) | No | Can only be used when the `type` property is `"array"` |
-| `enum` | List of possible values for the parameter. | Array of strings | No | Can only be used when the `type` property is `"string"` |
-| `default` | Indicates what value to use when a parameter value for an optional parameter is not provided. | The same type as the `type` property of the parameter | No | N/A |
-
-Here is an additional example of a parameter object that describes an array of strings:
-
-```json
-{
-  "type": "array",
-  "description": "The list of amenities to search for",
-  "items": {
-    "type": "string",
-    "description": "An amenity to search for"
-  }
-}
-```
-
-#### Return object
-
-A return object describes what the function returns. The following properties can be used in a function's return object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `type` | Type of the return value | String | Yes | Must be `"string"` |
-| `description` | Description of the data that the function returns. | String | Yes | N/A |
-
-#### State object
-
-The state object of a function can be used to provide specific instructions to Microsoft Copilot at different stages of the plugin processing flow.
-
-Each state object corresponds to a given plugin processing flow state, as described below:
-
-* `reasoning`: to provide instructions for when Microsoft Copilot is calling the function and doing computations.
-* `responding`: to provide instructions for when Microsoft Copilot is generating text to be shown to the user.
-
-Here is an example of a state object that describes instructions to be used when Microsoft Copilot is calling the function:
-
-```json
-{
-  "description": "\n# `{{ function.declaration }}` returns a list of real estate properties for sale based on the specified criteria.",
-  "instructions": [
-    "\n* If the user mentions a city in their question, only search in that city by using the city parameter.",
-    "\n* If the user asks for properties with things like parking space, heating, jacuzzi, or similar amenities, use the amenities parameter to filter the results.",
-    "\n* Only use the list of amenities provided in the amenities parameter enum. If the user asked for an amenity that is not in the list, find the closest match from the list, or ignore it if no match can be found.",
-    "\n* Determine if the response contains an error field.",
-    "\n* If an error is present, provide the error code and error message from the JSON response to the user.",
-    "\n* If there is no error, extract and include as much relevant information as possible from the JSON response to meet the users needs."
-  ]
-}
-```
-
-The following properties can be used in a function's state object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `description` | Description of the function when the function is used during a specific plugin processing flow state. | String | Yes | Include ``\n# `{{ function.declaration }}` `` at the beginning of the description and then describe what the function does during the state. |
-| `instructions` | List of instructions that Microsoft Copilot should use when running the function during a specific plugin processing flow state. | Array of strings | Yes | Provide a list of instructions that can be used to augment the model's built-in prompt when calling the function. Include `\n* ` at the beginning of each instruction string to help the model use the function. |
-| `examples` | List of examples for the model to better understand how the function should be used during a specific plugin processing flow state. | Array of strings | No | N/A |
-
-## Runtime object
-
-A runtime object describes the mechanics of how a plugin function is invoked, and which functions the runtime is used for.
-
-Here is an example of a runtime object that describes how the `getListings` function is invoked using an OpenAPI description:
-
-```json
-{ 
-  "type": "OpenApi", 
-  "auth": { "type": "none" },
-  "run_for_functions": [ "getListings" ],
-  "spec": { "url": "http://contoso.com/openapi.yaml" }
-}
-```
-
-The following properties can be used in a runtime object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `type` | Type of runtime. | String | Yes | Must be `OpenApi`. |
-| `auth` | Authentication information required to invoke the runtime. | [Runtime authentication object](#runtime-authentication-object) | Yes | N/A |
-| `run_for_functions` | The names of the functions that this runtime is used for. | Array of strings | No | If this property is omitted, this runtime is used to run all functions. The list of names can contain wildcard characters. |
-| `spec` | Information required to invoke the runtime | [OpenApi Spec object](#openapi-spec-object) | Yes | N/A |
-
-#### Runtime authentication object
-
-Describes the authentication required to invoke the runtime. Currently, authentication isn't supported.
-
-Here is an example of a runtime authentication object:
-
-```json
-{
-  "type": "none"
-}
-```
-
-The following properties can be used in a runtime's authentication object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `type` | Type of authentication required to invoke the runtime. | String | Yes | Currently the only supported value is `none`. |
-
-#### OpenApi Spec object
-
-The OpenApi spec object is one of the two types of spec objects that can be used as the value of the `spec` property in a runtime object.
-
-Here is an example of a OpenApi spec object:
-
-```json
-{
-  "url": "http://contoso.com/openapi.yaml"
-}
-```
-
-The following properties can be used in a runtime's OpenApi spec object:
-
-| Property | Description | Type | Required? | Guideline |
-| --- | --- | --- | --- | --- |
-| `url` | URL to fetch the OpenAPI description file. | String | Yes | N/A |
-| `progress_style` | The progress style that will be used to display the progress of the function. | String | No | Must be one of `none`, `showUsage`, `showUsageWithInput`, or `showUsageWithInputAndOutput`. |
-
 ## See also
 
-* [API plugins for Microsoft Copilot for Microsoft 365](./overview-api-plugins.md)
+- [API plugins for Microsoft Copilot for Microsoft 365](./overview-api-plugins.md)
+
+[liquid]: https://shopify.github.io/liquid/
+[json-schema]: https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema
+[rfc9535]: https://www.rfc-editor.org/rfc/rfc9535
+[bcp47]: https://www.rfc-editor.org/rfc/rfc5646
