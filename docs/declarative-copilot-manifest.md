@@ -15,10 +15,6 @@ Declarative Copilots (DCs) are valuable in understanding and generating human-li
 > [!IMPORTANT]
 > Declarative Copilots are currently in limited public preview.
 
-Here's an example of a DC manifest file that uses most of the manifest members and object properties described in the article:
-
-[!INCLUDE [Sample DC manifest for Repairs Declarative Copilot](includes/dc-manifest-json.md)]
-
 ## Conventions
 
 ### Relative references in URLs
@@ -161,3 +157,9 @@ The connection object contains the following properties.
 | `connection_id` | String | Required. The unique identifier of the Microsoft Graph connector. |
 
 [api plugins]: api-plugin-manifest.md
+
+## Example
+
+Here's an example of a DC manifest file that uses most of the manifest members and object properties described in the article:
+
+[!INCLUDE [Sample DC manifest for Repairs Declarative Copilot](includes/dc-manifest-json.md)]
