@@ -9,7 +9,7 @@ ms.date: 1/17/2024
 
 # Set up your development environment for Copilot for Microsoft 365
 
-Copilot for Microsoft 365 is [generally available](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/microsoft-365-copilot-is-generally-available/ba-p/3969331), and extensibility for Copilot for Microsoft 365 is in public preview. [Copilot for Microsoft 365 is available to organizations](https://blogs.microsoft.com/blog/2024/01/15/bringing-the-full-power-of-copilot-to-more-people-and-businesses/) of all sizes. There's no minimum license purchase, but there's a 12-month commitment after a one-month free trial. [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro) (Copilot for individuals) doesn't currently support extensibility.
+Copilot for Microsoft 365 is [generally available](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/microsoft-365-copilot-is-generally-available/ba-p/3969331), and extensibility for Copilot for Microsoft 365 is in public preview. Copilot for Microsoft 365 is [available to organizations](/copilot/microsoft-365/microsoft-365-copilot-overview#availability) of all sizes. There's no minimum license purchase, but there's a 12-month commitment after a one-month free trial. [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro) (Copilot for individuals) doesn't currently support extensibility.
 
 This article summarizes the developer environment prerequisites and requirements to extend, enrich, and customize Copilot for Microsoft 365 for the unique way your customers work.
 
@@ -31,11 +31,7 @@ We recommend that our ISV partners who build multi-tenant solutions acquire a ne
 
 ### Customers with existing Microsoft 365 and Copilot licenses
 
-It's also possible to develop Copilot integrations by working directly in a Microsoft 365 production environment with Copilot licensing. These environments include:
-
-- [Microsoft 365 E5 and E3](https://www.microsoft.com//microsoft-365/enterprise/microsoft365-plans-and-pricing)
-- [Office 365 E5 and E3](https://www.microsoft.com/microsoft-365/enterprise/office365-plans-and-pricing)
-- [Microsoft 365 Business Premium and Business Standard](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products)
+It's also possible to develop Copilot integrations by working directly in an eligible [Microsoft 365 production environment](/copilot/microsoft-365/microsoft-365-copilot-overview#availability) with a [Copilot for Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/enterprise/copilot-for-microsoft-365) license.
 
 Contact your Microsoft representative to [add Copilot to your Microsoft plan](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing).  Enterprise customers need to be on the Current Channel or Monthly Enterprise Channel for Microsoft 365 apps to have access to Copilot.
 
