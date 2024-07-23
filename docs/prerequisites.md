@@ -18,7 +18,7 @@ This article summarizes the developer environment prerequisites and requirements
 Developers have two ways to obtain a developer environment for Copilot:
 
 1. With a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [Microsoft 365 Developer Technology Adoption Program (TAP) membership](#isv-partners-in-microsoft-365-developer-tap)).
-2. With an eligible Microsoft 365 or Office 365 production environment with a Copilot for Microsoft 365 license.
+2. With an eligible [Microsoft 365 or Office 365 production environment](#customers-with-existing-microsoft-365-and-copilot-licenses) with a Copilot for Microsoft 365 license.
 
 > [!NOTE]
 > Copilot for Microsoft 365 is not publicly available with [Microsoft 365 Developer Program instant sandbox](https://developer.microsoft.com/microsoft-365/dev-program#Subscription) tenants for development and testing. Sandbox tenant availability is currently limited to Independent Software Vendor (ISV) partners in the TAP.
