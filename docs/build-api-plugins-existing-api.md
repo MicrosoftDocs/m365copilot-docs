@@ -91,14 +91,15 @@ For this step, you will need the following values from client ID and client secr
 1. Fill in the following fields.
 
     - **Registration name**: `Budget Tracker Auth`
-    - **Base URL**: Your dev tunnel URL
+    - **Base URL**: Your **API base URL**
     - **Restrict usage by org**: **My organization only**
     - **Restrict usage by app**: **Any Teams app**
-    - **Client ID**: Client ID from your **Budget Tracker Plugin** app registration
-    - **Client secret**: Client secret from your **Budget Tracker Plugin** app registration
-    - **Authorization endpoint**: `https://login.microsoftonline.com/YOUR_TENANT_ID/oauth2/v2.0/authorize`, replace `YOUR_TENANT_ID` with the tenant ID from your **Budget Tracker Plugin** app registration
-    - **Token endpoint**: `https://login.microsoftonline.com/YOUR_TENANT_ID/oauth2/v2.0/token`, replace `YOUR_TENANT_ID` with the tenant ID from your **Budget Tracker Plugin** app registration
-    - **Scope**: API scope from your **Budget Tracker Service** app registration
+    - **Client ID**: Your **Plugin client ID**
+    - **Client secret**: Your **Plugin client secret**
+    - **Authorization endpoint**: Your **Authorization endpoint**
+    - **Token endpoint**: Your **Token endpoint**
+    - **Refresh endpoint**: Your **Token endpoint**
+    - **Scope**: Your **API scope**.
 
 1. Select **Save**.
 
@@ -137,7 +138,11 @@ For this step, you will need the following values from client ID and client secr
 
 1. In the **Lifecycle** pane, select **Provision**.
 
-1. If your OpenAPI specification includes a supported [security scheme](https://swagger.io/specification/#security-scheme-object) (`oauth2` or `apiKey`), Teams Toolkit prompts for details. If you're using the Budget Tracker sample, it prompts for the client ID and client secret for your plugin. Enter that information, then read the prompt in the dialog and select **Confirm** to continue.
+1. When prompted to **Enter client id for OAuth registration...**, enter your **Plugin client ID**.
+
+1. When prompted to **Enter client secret for OAuth registration...**, enter your **Plugin client secret**.
+
+1. Read the prompt in the dialog and select **Confirm** to continue.
 
 1. Wait for the toolkit to report that is finished provisioning.
 
