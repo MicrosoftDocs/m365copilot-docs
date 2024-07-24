@@ -40,7 +40,7 @@ There are over 350 million daily active users across applications in the Microso
 |Copilot extensibility type|Microsoft 365 product availability|Learn more|
 |----------|-----------|------------|
 |[Teams message extension plugins](./overview-message-extension-bot.md)|Copilot for Microsoft 365, Teams, Outlook| [Plugins as Microsoft 365 apps](./plugins-are-apps.md) |
-|[Power Platform connector plugins](/connectors/connectors)|Copilot for Microsoft 365, Power Automate, Power Apps, Azure Logic Apps| [Connectors overview](/connectors/connectors)|
+|[Power Platform connector plugins](/connectors/connectors)|Copilot for Microsoft 365, Power Automate, Power Apps, Azure Logic apps| [Connectors overview](/connectors/connectors)|
 |[Microsoft Graph connectors](./overview-graph-connector.md)|Copilot for Microsoft 365, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
 
 Thanks to centralized publishing and management resources, administrators can easily share and confidently manage your Copilot extensibility solutions, ensuring they benefit the widest possible audience.
@@ -65,7 +65,7 @@ To learn more, see [Publish plugins and connectors for Microsoft Copilot for Mic
 
 For line-of-business developers and IT admins, [Microsoft Admin Center](https://admin.microsoft.com) is your one stop to upload custom plugins and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions. Learn more about Copilot-related management options in the [Microsoft Copilot for Microsoft 365 extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps) section of Microsoft 365 admin center help documentation.
 
-For details on deploying a custom plugin or connector to your organization, see [Publish plugins and connectors for Microsoft Copilot for Microsoft 365](./publish.md).
+For more information on deploying a custom plugin or connector to your organization, see [Publish plugins and connectors for Microsoft Copilot for Microsoft 365](./publish.md).
 
 ## Comprehensive tools and support
 
@@ -73,7 +73,7 @@ Microsoft 365 provides a rich set of developer resources for extending Microsoft
 
 ### Teams Toolkit
 
-[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) helps developers create and deploy Teams apps that work across Microsoft 365 and Copilot with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a "zero-configuration" approach to the developer experience. Teams Toolkit is available as [Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit), [Visual Studio workload](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs), and as the [TeamsFx command line interface](/microsoftteams/platform/toolkit/teams-toolkit-cli).
+[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) helps developers create and deploy Teams apps that work across Microsoft 365 and Copilot with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a *zero-configuration* approach to the developer experience. Teams Toolkit is available as [Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit), [Visual Studio workload](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs), and as the [TeamsFx command line interface](/microsoftteams/platform/toolkit/teams-toolkit-cli).
 
 ### Developer Portal for Teams
 
