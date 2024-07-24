@@ -151,9 +151,17 @@ For this step, you will need the following values from client ID and client secr
     Compress-Archive -Path * -DestinationPath ./BudgetTracker.zip
     ```
 
-1. Open your browser and browse to the [Teams apps developer portal](https://dev.teams.microsoft.com/apps). Select **Apps** in the left-hand navigation.
+1. Use the following command to login to the Teams Toolkit CLI.
 
-1. Select **Import app**. Browse to **BudgetTracker.zip** and select **Open**.
+    ```bash
+    teamsapp account login
+    ```
+
+1. Use the following command to sideload the plugin for the logged in user.
+
+    ```bash
+    teamsapp install --file-path ./BudgetTracker.zip
+    ```
 
 ---
 
