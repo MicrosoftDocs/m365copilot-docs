@@ -37,6 +37,8 @@ API plugins are a ZIP file that contains the following files.
 
 1. Open Visual Studio Code. If Teams Toolkit is not already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
 
+1. Select **File** -> **Preferences** -> **Settings**. In the **Settings** window, search for `copilot` to locate the **Fx-extension: Develop Copilot Plugin** option. If not already enabled, enable the setting and restart Visual Studio Code.
+
 1. Select the **Teams Toolkit** icon in the left-hand Activity Bar.
 
 1. Select **Create a New App** in the Teams Toolkit task pane.
@@ -78,7 +80,7 @@ Once you complete these steps, Kiota will generate the required files for the pl
 
 #### Add authentication details
 
-For this step, you will need the following values from client ID and client secret for your **Budget Tracker Plugin** app registration you created when [configuring the Budget Tracker sample]().
+For this step, you will need the following values from client ID and client secret for your **Budget Tracker Plugin** app registration you created when [configuring the Budget Tracker sample](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin#configure-the-sample).
 
 - Tenant ID, client ID and client secret from your **Budget Tracker Plugin** app registration
 - API scope from your **Budget Tracker Service** app registration
