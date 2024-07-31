@@ -11,7 +11,7 @@ ms.date: 05/16/2024
 
 As a developer, you can extend, enrich, and customize [Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work.
 
-On its own, Copilot for Microsoft 365 is a powerful productivity tool for keeping users in the flow of their work across Microsoft 365 applications. It provides users with **general skills** such as understanding, summarizing, predicting, recalling, translating, and generating content. It draws from a **baseline of your organizational knowledge** by indexing content in the Microsoft Graph, such as the emails, chats and documents that users have permission to access.
+On its own, Copilot for Microsoft 365 is a powerful productivity tool for keeping users in the flow of their work across Microsoft 365 applications. It provides users with **general skills** such as understanding, summarizing, predicting, recalling, translating, and generating content. It draws from a **baseline of your organizational knowledge** by indexing content in the Microsoft Graph, such as the emails, chats, and documents that users have permission to access.
 
 :::image type="content" source="assets/images/copilot-system.png" alt-text="Visual representation of the Copilot for Microsoft 365 system: Foundational models (LLMs) + Microsoft Graph (your data) + Microsoft 365 and 3rd party apps" border="false":::
 
@@ -23,9 +23,9 @@ However, business workflows don't typically run exclusively on Microsoft 365 app
 
 :::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with organizational 'Knowledge' as the x-axis and user 'Skills' as the y-axis showing that you can extend Copilot skills with plugins and extend Copilot knowledge with Graph connectors" border="false" lightbox="assets/images/skills-knowledge-chart.png":::
 
-- **Adding knowledge** - You can enrich the organizational knowledge accessible to Copilot by ingesting your enterprise data and content with Microsoft Graph connectors.
-- **Adding skills** - You can extend Copilot's actionable knowledge by transforming your apps into plugins that increase user productivity across daily tasks and workflows.
-- **Enhancing overall experience** (Preview) - With combining extra data sources that contain specific domain knowledge in a declarative copilot that includes instructions to guide the user through the workflow and match intents. Declarative copilots can seamlessly integrate with plugins and connectors.
+- **Adding knowledge**: You can enrich the organizational knowledge accessible to Copilot by ingesting your enterprise data and content with Microsoft Graph connectors.
+- **Adding skills**: You can extend Copilot's actionable knowledge by transforming your apps into plugins that increase user productivity across daily tasks and workflows.
+- **Enhancing overall experience** (Preview): With combining extra data sources that contain specific domain knowledge in a declarative copilot that includes instructions to guide the user through the workflow and match intents. Declarative copilots can seamlessly integrate with plugins and connectors.
 
 ## Extend Copilot for your scenario
 
@@ -33,19 +33,13 @@ Copilot extensibility helps your collaborative workspace to be more productive b
 
 Here are some practical examples of what you can develop for your organization:
 
-- **Issue tracking for engineering team**
+- **Issue tracking for engineering team**: Take for example an engineering team that relies on project management software. You can build a custom tool that enables users to monitor open tickets. For instance, a user can request information on all issues assigned to them, and Copilot for Microsoft 365 can seamlessly retrieve and present this data from your plugin.
 
-    Take for example an engineering team that relies on project management software. You can build a custom tool that enables users to monitor open tickets. For instance, a user can request information on all issues assigned to them, and Copilot for Microsoft 365 can seamlessly retrieve and present this data from your plugin.
+  :::image type="content" source="assets/images/copilot-scenario-01.png" alt-text="This illustration shows a plugin scenario where an engineer asks to show all open tickets for him" border="false":::
 
-:::image type="content" source="assets/images/copilot-scenario-01.png" alt-text="This illustration shows a plugin scenario where an engineer asks to show all open tickets for him" border="false":::
+- **Product inventory for E-commerce**: If your business operates in the realm of commerce, you can build an internal inventory tool by connecting it to your product database. For example, a user can ask Copilot to verify the availability of specific items, streamlining your internal processes.
 
-- **Product inventory for E-commerce**
-
-    If your business operates in the realm of commerce, you can build an internal inventory tool by connecting it to your product database. For example, a user can ask Copilot to verify the availability of specific items, streamlining your internal processes.
-
-- **Enterprise knowledge sharing**
-
-    Consider a multinational corporation with a wealth of knowledge and insights stored in various formats, including documents, emails, and chat transcripts, that are spread across multiple systems. Microsoft Graph connectors can facilitate the consolidation of this data, making it searchable from a single, unified interface. This ensures that your organization's collective wisdom is readily accessible.
+- **Enterprise knowledge sharing**: Consider a multinational corporation with a wealth of knowledge and insights stored in various formats, including documents, emails, and chat transcripts, that are spread across multiple systems. Microsoft Graph connectors can facilitate the consolidation of this data, making it searchable from a single, unified interface. This ensures that your organization's collective wisdom is readily accessible.
 
 ## Types of extensibility
 

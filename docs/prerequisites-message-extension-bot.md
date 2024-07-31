@@ -56,7 +56,7 @@ The Teams Toolkit :::image type="icon" source="assets/icons/teams-toolkit-sideba
 
 You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-Now you are ready to build your first message extension plugin for Copilot!
+Now you're ready to build your first message extension plugin for Copilot!
 
 ## Next step
 

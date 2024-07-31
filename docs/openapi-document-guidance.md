@@ -30,7 +30,7 @@ info:
 
 Additionally add a meaningful description of each operation supported by your API. After Copilot chooses to use a plugin based on the user's prompt and the plugin description, it searches through the descriptions of the paths to determine the endpoint to use to satisfy the user's request.
 
-Operation IDs are shown during debugging as functions to indicate which operations Copilot is attempting to execute. Here's a sample of an openAPI document and a sample of the corresponding debugger output:
+Operation IDs are shown during debugging as functions to indicate which operations Copilot is attempting to execute. Here's a sample of an OpenAPI document and a sample of the corresponding debugger output:
 
 ```yaml
 paths:

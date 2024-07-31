@@ -15,7 +15,7 @@ API plugins enable Copilot for Microsoft 365 to interact with REST APIs that are
 
 An API plugin provides an OpenAPI specification document and a plugin manifest that Copilot uses to learn the capabilities of the API. Copilot can then decide when an installed and enabled plugin's API is suited to answer any given prompt.
 
-For example, consider a budgets API that allows for querying and creating budgets, as well as charging expense or adding funds to existing budgets. The prompt "How much is left in the Contoso travel budget" could trigger a budget plugin, making the following API call.
+For example, consider a budgets API that allows for querying and creating budgets, and charging expense or adding funds to existing budgets. The prompt "How much is left in the Contoso travel budget" could trigger a budget plugin, making the following API call.
 
 ```http
 GET /budgets?name=contoso%20travel
@@ -42,7 +42,7 @@ Copilot responds to the user, using the information returned: "The charge of $50
 
 For some actions, you may want the user to confirm the details before making the API call. Plugin developers can assign confirmation dialogs to specific functions. These dialogs are defined using [Adaptive Cards](/adaptive-cards) syntax.
 
-Take the prompt to charge a budget. To avoid incorrect charges to budgets, a plugin can add a confirmation to that particular function. Copilot will present the dialog with the function parameters it generates, allowing the user to proceed or cancel.
+Take the prompt to charge a budget. To avoid incorrect charges to budgets, a plugin can add a confirmation to that particular function. Copilot presents the dialog with the function parameters it generates, allowing the user to proceed or cancel.
 
 :::image type="content" source="assets/images/api-plugins/plugin-confirmation.png" alt-text="A screenshot of a plugin confirmation dialog":::
 

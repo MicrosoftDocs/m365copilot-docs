@@ -1,6 +1,6 @@
 ---
 title: Microsoft Copilot in the Microsoft 365 ecosystem
-description: A plugin or connector written for Copilot will run across the Microsoft 365 ecosystem. Learn how to use the Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
+description: A plugin or connector written for Copilot runs across the Microsoft 365 ecosystem. Learn how to use the Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
@@ -27,7 +27,7 @@ The plugins and connectors you build for Copilot are part of the larger Copilot 
 
 The plugins and connectors you build extend, enrich, and customize Copilot for the unique way your customers work. And as part of the broader Microsoft 365 ecosystem, your plugins and connectors benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and a host of development tools and support.
 
-This article will walk you through the resources of the Microsoft 365 ecosystem available to you as a developer of Copilot extensibility solutions.
+This article walks you through the resources of the Microsoft 365 ecosystem available to you as a developer of Copilot extensibility solutions.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 

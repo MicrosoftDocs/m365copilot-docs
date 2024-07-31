@@ -13,8 +13,8 @@ ms.date: 6/26/2024
 
 When you build a plugin, you enable your users to interact with your web service using natural language with Microsoft Copilot. Plugins expand Copilot's skills to accomplish tasks on behalf of your users. They're especially good at:
 
-- Accessing real-time information,
-- Retrieving relational data, and
+- Accessing real-time information
+- Retrieving relational data
 - Performing actions across apps
 
 ## Qualities of a good plugin

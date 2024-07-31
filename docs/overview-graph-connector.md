@@ -9,13 +9,13 @@ ms.date: 11/15/2023
 
 # Microsoft Graph Connectors for Microsoft Copilot for Microsoft 365
 
-Microsoft Graph connectors provide a platform for you to ingest your unstructured, line-of-business data into Microsoft Graph, so that Copilot for Microsoft 365 can reason over the entirety of your enterprise content. Content ingested through Graph connectors is added to the Microsoft Graph; this unlocks semantic understanding of your users' prompts in Copilot for Microsoft 365. However, Graph connectors are not limited to Copilot for Microsoft 365. Graph connector content participates in other Microsoft 365 intelligent experiences like Microsoft Search, Context IQ, and the Microsoft 365 app.
+Microsoft Graph connectors provide a platform for you to ingest your unstructured, line-of-business data into Microsoft Graph, so that Copilot for Microsoft 365 can reason over the entirety of your enterprise content. Content ingested through Graph connectors is added to the Microsoft Graph; this unlocks semantic understanding of your users' prompts in Copilot for Microsoft 365. However, Graph connectors aren't limited to Copilot for Microsoft 365. Graph connector content participates in other Microsoft 365 intelligent experiences like Microsoft Search, Context IQ, and the Microsoft 365 app.
 
 > [!IMPORTANT]
 >
 > To learn more about pre-built connectors go to [Set up Microsoft built Graph Connectors](/microsoftsearch/configure-connector).
 
-In this article, you will learn how your Graph connector content participates in Copilot for Microsoft 365 and how to configure your custom Graph connections for Copilot for Microsoft 365.
+In this article, you'll learn how your Graph connector content participates in Copilot for Microsoft 365 and how to configure your custom Graph connections for Copilot for Microsoft 365.
 
 :::image type="content" source="assets/images/copilot_graph-connectors-infographic.png" alt-text="This infographic summarizes how Microsoft Graph connectors make your data available to Microsoft 365 intelligent experiences" lightbox="assets/images/copilot_graph-connectors-infographic.png":::
 
@@ -33,7 +33,7 @@ In addition, users can hover over in-text citations in Copilot for Microsoft 365
 
 ![A screenshot of hovering over a Graph connectors response in Copilot for Microsoft 365](assets/images/connectors-copilot-hover.png)
 
-If users desire to dive deeper into the referenced content, they can click on one of the reference links at the bottom of the response.
+If users desire to dive deeper into the referenced content, they can select one of the reference links at the bottom of the response.
 
 ![A screenshot of Graph connectors reference list in Copilot for Microsoft 365](assets/images/connectors-copilot-logo.png)
 
@@ -56,7 +56,7 @@ Visit the connectors gallery to find all the information you need to get started
 
 ## Create your own custom Microsoft Graph connection
 
-You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph. You can use the Microsoft Graph connectors APIs to create and manage external Microsoft Graph connections, define and register the schema of external data types, ingest external data items into Microsoft Graph, and sync external groups.
+You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph. You can use the Microsoft Graph connectors APIs to create and manage external Microsoft Graph connections, define, and register the schema of external data types, ingest external data items into Microsoft Graph, and sync external groups.
 
 ## Configuring your custom Microsoft Graph connection for Copilot for Microsoft 365
 
@@ -69,12 +69,13 @@ To make sure that Copilot for Microsoft 365 uses your content effectively:
 
 In addition, search administrators should ensure that your Graph Connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical), using the following steps.
 
-- Open the Admin Center, go to **Search & intelligence** > **Customizations** > **Verticals** and select the **All** vertical.
+- Open the [Admin Center](https://admin.microsoft.com/), go to **Search & intelligence** > **Customizations** > **Verticals** and select **All**.
+
 - Select **Manage connector result**. Ensure that **Show results inline** is selected and that the connections that you want to enable for Search and Copilot are checked.
 
 ## Semantic Labels and Property Labels in Copilot for Microsoft 365
 
-As stated earlier, it is recommended that you apply as many semantic labels to your schema as applicable. This is because your end-users can use semantic labels as part of their prompt in Copilot for Microsoft 365. For example, an end-user can ask Copilot for all of the files that were last modified within the last week. If the `lastModifiedDateTime` semantic label is not applied to your schema, then Copilot for Microsoft 365 will not be able to return the expected result to that user.
+As stated earlier, we recommended that you apply as many semantic labels to your schema as applicable. This is because your end-users can use semantic labels as part of their prompt in Copilot for Microsoft 365. For example, an end-user can ask Copilot for all of the files that were last modified within the last week. If the `lastModifiedDateTime` semantic label isn't applied to your schema, then Copilot for Microsoft 365 can't return the expected result to that user.
 
 The `searchable` property label is the most important with respect to Copilot for Microsoft 365. It defines which properties can be searched against. If you would like your users' prompts in Copilot for Microsoft 365 to match content stored in certain properties, then you should make those properties searchable.
 
