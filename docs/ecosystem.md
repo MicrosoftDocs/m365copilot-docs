@@ -33,7 +33,7 @@ This article will walk you through the resources of the Microsoft 365 ecosystem 
 
 ## Plugins and connectors work across Microsoft 365 experiences
 
-There are over 350 million daily active users across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, Power Point, and the Microsoft 365 app. When you write a plugin or connector, it can reach all the places Copilot runs across Microsoft 365.
+There are over 350 million daily active users across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, Power Point, and the Microsoft 365 app. When you write a plugin or connector, it can reach all the places Copilot extensibility is supported across Microsoft 365.
 
 . . . but that's not all! Depending on the [way you extend Copilot](./decision-guide.md), your plugin or connector also runs outside of Copilot experiences. The following table lists alternate ways the skills and knowledge from your plugins and connectors are available to end-users within an organization:
 

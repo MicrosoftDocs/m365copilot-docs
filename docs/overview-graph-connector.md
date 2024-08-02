@@ -11,6 +11,10 @@ ms.date: 11/15/2023
 
 Microsoft Graph connectors provide a platform for you to ingest your unstructured, line-of-business data into Microsoft Graph, so that Copilot for Microsoft 365 can reason over the entirety of your enterprise content. Content ingested through Graph connectors is added to the Microsoft Graph; this unlocks semantic understanding of your users' prompts in Copilot for Microsoft 365. However, Graph connectors are not limited to Copilot for Microsoft 365. Graph connector content participates in other Microsoft 365 intelligent experiences like Microsoft Search, Context IQ, and the Microsoft 365 app.
 
+> [!IMPORTANT]
+>
+> To learn more about pre-built connectors go to [Set up Microsoft built Graph Connectors](/microsoftsearch/configure-connector).
+
 In this article, you will learn how your Graph connector content participates in Copilot for Microsoft 365 and how to configure your custom Graph connections for Copilot for Microsoft 365.
 
 :::image type="content" source="assets/images/copilot_graph-connectors-infographic.png" alt-text="This infographic summarizes how Microsoft Graph connectors make your data available to Microsoft 365 intelligent experiences" lightbox="assets/images/copilot_graph-connectors-infographic.png":::
@@ -32,6 +36,23 @@ In addition, users can hover over in-text citations in Copilot for Microsoft 365
 If users desire to dive deeper into the referenced content, they can click on one of the reference links at the bottom of the response.
 
 ![A screenshot of Graph connectors reference list in Copilot for Microsoft 365](assets/images/connectors-copilot-logo.png)
+
+## Microsoft Graph connectors gallery
+
+The [Microsoft Graph connectors gallery](https://www.microsoft.com/microsoft-search/connectors) includes a brief description of each of the connectors created by Microsoft and our partners, and a link to each partner's website.
+
+With more than 100 connectors currently available, you can connect to popular Microsoft and non-Microsoft services such as Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and many more.
+
+Visit the connectors gallery to find all the information you need to get started using connectors.
+
+<br>
+
+![Image showing the new connectors gallery.](assets/images/connectors-gallery.png)
+
+
+> [!IMPORTANT]
+>
+> To learn more about pre-built connectors go to [Set up Microsoft built Graph Connectors](/microsoftsearch/configure-connector) .
 
 ## Create your own custom Microsoft Graph connection
 
