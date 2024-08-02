@@ -4,6 +4,8 @@ ms.author: pabrosse
 ms.topic: include
 ---
 
+<!-- markdownlint-disable MD041 -->
+
 ```json
 {
   "schema_version": "v2",
@@ -90,14 +92,14 @@ ms.topic: include
       },
       "states": {
         "reasoning": {
-          "description": "\n# `{{ function.declaration }}` returns a list of real estate properties for sale based on the specified criteria.",
+          "description": "`getListings` returns a list of real estate properties for sale based on the specified criteria.",
           "instructions": [
-            "\n* If the user mentions a city in their question, only search in that city by using the city parameter.",
-            "\n* If the user asks for properties with things like parking space, heating, jacuzzi, or similar amenities, use the amenities parameter to filter the results.",
-            "\n* Only use the list of amenities provided in the amenities parameter enum. If the user asked for an amenity that is not in the list, find the closest match from the list, or ignore it if no match can be found.",
-            "\n* Determine if the response contains an error field.",
-            "\n* If an error is present, provide the error code and error message from the JSON response to the user.",
-            "\n* If there is no error, extract and include as much relevant information as possible from the JSON response to meet the users needs."
+            "If the user mentions a city in their question, only search in that city by using the city parameter.",
+            "If the user asks for properties with things like parking space, heating, jacuzzi, or similar amenities, use the amenities parameter to filter the results.",
+            "Only use the list of amenities provided in the amenities parameter enum. If the user asked for an amenity that is not in the list, find the closest match from the list, or ignore it if no match can be found.",
+            "Determine if the response contains an error field.",
+            "If an error is present, provide the error code and error message from the JSON response to the user.",
+            "If there is no error, extract and include as much relevant information as possible from the JSON response to meet the users needs."
           ]
         }
       }
@@ -125,10 +127,10 @@ ms.topic: include
       },
       "states": {
         "responding": {
-          "description": "\n# `{{ function.declaration }}` returns a unique ID that identifies the newly saved search.",
+          "description": "`saveSearch` returns a unique ID that identifies the newly saved search.",
           "instructions": [
-            "\n* Examine the output of the `{{ function.declaration }}` function.",
-            "\n* Extract the unique ID integer from the output and include it in your response to the user."
+            "Examine the output of the `saveSearch` function.",
+            "Extract the unique ID integer from the output and include it in your response to the user."
           ]
         }
       }
@@ -153,8 +155,8 @@ ms.topic: include
     }
   ],
   "runtimes": [
-    { 
-      "type": "OpenApi", 
+    {
+      "type": "OpenApi",
       "auth": { "type": "none" },
       "run_for_functions": [ "getListings", "saveSearch", "deleteSavedSearch" ],
       "spec": { "url": "http://contoso.com/openapi.yaml" }
