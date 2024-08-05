@@ -16,7 +16,7 @@ ms.topic: how-to
 
 ## Create the plugin and API
 
-1. Open Visual Studio Code. If Teams Toolkit is not already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
+1. Open Visual Studio Code. If Teams Toolkit isn't already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
 
 1. Select the **Teams Toolkit** icon in the left-hand Activity Bar.
 
@@ -30,21 +30,21 @@ ms.topic: how-to
 
 1. Select **OAuth** for the **Authentication Type**.
 
-1. Select your preferred programming language, JavaScript or TypeScript. This guide assumes TypeScript.
+1. Select your preferred programming language: JavaScript or TypeScript. This guide assumes TypeScript.
 
 1. Choose a location for the API plugin project.
 
 1. Enter a name for your plugin project.
 
-Once you complete these steps, Teams Toolkit will generate the required files for the plugin and open a new Visual Studio Code window with the plugin project loaded. For details on the project, see the **README.md** file in the generated project's root directory.
+Once you complete these steps, Teams Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded. For details on the project, see the **README.md** file in the generated project's root directory.
 
 ## Run the plugin
 
 1. In the Visual Studio Code window with the plugin project loaded, select the **Teams Toolkit** icon in the left-hand Activity Bar.
 
-1. In the **Accounts** pane, select **Sign in to Microsoft 365**. (If you are already signed in continue to the next step).
+1. In the **Accounts** pane, select **Sign in to Microsoft 365**. (If you're already signed in continue to the next step).
 
-1. Confirm that both **Custom App Upload Enabled** and **Copilot Access Enabled** display under your Microsoft 365 account. If they do not, check with your organization admin. See [Requirements for plugin development](prerequisites.md#requirements-for-plugin-development) for details.
+1. Confirm that both **Custom App Upload Enabled** and **Copilot Access Enabled** display under your Microsoft 365 account. If they don't, check with your organization admin. See [Requirements for plugin development](prerequisites.md#requirements-for-plugin-development) for details.
 
 1. Select the **Run and Debug** icon in the left-hand Activity Bar.
 
@@ -68,11 +68,11 @@ At this point, the plugin is running locally on your development machine without
 
 1. In the **Lifecycle** pane, select **Provision**.
 
-1. When prompted for a resource group name, either accept the default or change it as desired and press **Enter**.
+1. When asked for a resource group name, either accept the default or change it as desired and press **Enter**.
 
 1. Select a location for the resource group.
 
-1. Review the prompt. If everything looks correct, select **Provision** to continue.
+1. Review the message in the dialog. If everything looks correct, select **Provision** to continue.
 
 1. Wait for the provisioning steps to complete, then select **Deploy** in the **Lifecycle** pane.
 

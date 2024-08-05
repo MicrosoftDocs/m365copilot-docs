@@ -31,11 +31,11 @@ API plugins are a ZIP file that contains the following files.
 
 - The OpenAPI specification for the REST API.
 - An [API plugin manifest](api-plugin-manifest.md) that references the included OpenAPI specification and describes the available operations, authentication method, and response formats.
-- A [Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema) (e.g. `manifest.json`) with a `copilotExtensions` property that references the API plugin manifest.
+- A [Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema) (for example, `manifest.json`) with a `copilotExtensions` property that references the API plugin manifest.
 
 ### [Teams Toolkit](#tab/toolkit)
 
-1. Open Visual Studio Code. If Teams Toolkit is not already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
+1. Open Visual Studio Code. If Teams Toolkit isn't already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
 
 1. Select **File** -> **Preferences** -> **Settings**. In the **Settings** window, search for `copilot` to locate the **Fx-extension: Develop Copilot Plugin** option. If not already enabled, enable the setting and restart Visual Studio Code.
 
@@ -59,11 +59,11 @@ API plugins are a ZIP file that contains the following files.
 
 1. Enter `Budget Tracker` as a name for the plugin.
 
-Once you complete these steps, Teams Toolkit will generate the required files for the plugin and open a new Visual Studio Code window with the plugin project loaded.
+Once you complete these steps, Teams Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded.
 
 ### [Kiota](#tab/kiota)
 
-1. If you do not already have Kiota installed, see [Install Kiota](/openapi/kiota/install) for instructions to install.
+1. [Install Kiota](/openapi/kiota/install) if it isn't already installed.
 
 1. Open your command-line interface (CLI) in the root of the Budget Tracker sample.
 
@@ -73,16 +73,16 @@ Once you complete these steps, Teams Toolkit will generate the required files fo
     kiota plugin add --openapi ./openapi/openapi.yml --plugin-name "Budget Tracker" --type APIPlugin --output ./plugin
     ```
 
-Once you complete these steps, Kiota will generate the required files for the plugin in the **./plugin** folder.
+Once you complete these steps, Kiota generates the required files for the plugin in the **./plugin** folder.
 
 > [!NOTE]
 > The Budget Tracker sample already contains icon files (**color.png** and **outline.png**) in the **./plugin** folder. For your own plugin, see [Teams app manifest reference](/microsoftteams/platform/resources/schema/manifest-schema#icons) for guidelines on generating icons.
 
 #### Add authentication details
 
-For this step, you will need the following values from client ID and client secret for your **Budget Tracker Plugin** app registration you created when [configuring the Budget Tracker sample](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin#configure-the-sample).
+For this step, you need the following values from client ID and client secret for your **Budget Tracker Plugin** app registration you created when [configuring the Budget Tracker sample](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin#configure-the-sample).
 
-- Tenant ID, client ID and client secret from your **Budget Tracker Plugin** app registration
+- Tenant ID, client ID, and client secret from your **Budget Tracker Plugin** app registration
 - API scope from your **Budget Tracker Service** app registration
 - Your dev tunnel URL
 
@@ -134,17 +134,17 @@ For this step, you will need the following values from client ID and client secr
 
 1. Select the **Teams Toolkit** icon in the left-hand Activity Bar.
 
-1. In the **Accounts** pane, select **Sign in to Microsoft 365**. (If you are already signed in continue to the next step).
+1. In the **Accounts** pane, select **Sign in to Microsoft 365**. (If you're already signed in continue to the next step).
 
-1. Confirm that both **Custom App Upload Enabled** and **Copilot Access Enabled** display under your Microsoft 365 account. If they do not, check with your organization admin. See [Requirements for plugin development](prerequisites.md#requirements-for-plugin-development) for details.
+1. Confirm that both **Custom App Upload Enabled** and **Copilot Access Enabled** display under your Microsoft 365 account. If they don't, check with your organization admin. See [Requirements for plugin development](prerequisites.md#requirements-for-plugin-development) for details.
 
 1. In the **Lifecycle** pane, select **Provision**.
 
-1. When prompted to **Enter client id for OAuth registration...**, enter your **Plugin client ID**.
+1. When asked to **Enter client id for OAuth registration...**, enter your **Plugin client ID**.
 
-1. When prompted to **Enter client secret for OAuth registration...**, enter your **Plugin client secret**.
+1. When asked to **Enter client secret for OAuth registration...**, enter your **Plugin client secret**.
 
-1. Read the prompt in the dialog and select **Confirm** to continue.
+1. Read the message in the dialog and select **Confirm** to continue.
 
 1. Wait for the toolkit to report that is finished provisioning.
 
@@ -152,13 +152,13 @@ For this step, you will need the following values from client ID and client secr
 
 ### [Kiota](#tab/kiota)
 
-1. Use your preferred tool for creating ZIP files to add all of the files in the **./plugin** directory to a ZIP file named **BudgetTracker.zip**. For example, the following PowerShell command run in the **./plugin** directory will generate the file.
+1. Use your preferred tool for creating ZIP files to add all of the files in the **./plugin** directory to a ZIP file named **BudgetTracker.zip**. For example, the following PowerShell command run in the **./plugin** directory generates the file.
 
     ```powershell
     Compress-Archive -Path * -DestinationPath ./BudgetTracker.zip
     ```
 
-1. Use the following command to login to the Teams Toolkit CLI.
+1. Use the following command to log in to the Teams Toolkit CLI.
 
     ```bash
     teamsapp account login
