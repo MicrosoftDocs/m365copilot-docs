@@ -52,10 +52,14 @@
 - name: Add skills with plugins
   expanded: true
   items:
-  - name: API plugins (coming soon)
+  - name: API plugins
     items:
     - name: Overview
       href: overview-api-plugins.md
+    - name: Build an API plugin with a new API
+      href: build-api-plugins-new-api.md
+    - name: Build an API plugin from an existing API
+      href: build-api-plugins-existing-api.md
     - name: Best practices for writing OpenAPI specs
       href: openapi-document-guidance.md
   - name: Teams message extension plugins
