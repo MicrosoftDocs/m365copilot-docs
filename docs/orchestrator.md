@@ -4,19 +4,20 @@ description: Learn how the Microsoft Copilot orchestrator determines which plugi
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 11/15/2023
+ms.date: 06/25/2024
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
+
 # How Copilot for Microsoft 365 decides which plugin to use
 
 Microsoft Copilot for Microsoft 365 is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **skills** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
 
-Like any copilot, Copilot for Microsoft 365 is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot requires *plugins*. **Plugins** extend Copilot for Microsoft 365's skills and utility for end users, enabling it to choose the right skill from thousands.
+Like any copilot, Copilot for Microsoft 365 is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot requires _plugins_. **Plugins** extend Copilot for Microsoft 365's skills and utility for end users, enabling it to choose the right skill from its repertoire.
 
 But how does Copilot know which skill to use when you ask for help? How does it interpret your request and match it to the best skill available? That's the job of the Copilot for Microsoft 365 **orchestrator**.
 
-This article will explain the logic behind Copilot's skill selection process and how you can ensure Copilot employs your plugin at every opportunity it can benefit your users.
+This article will explain the logic behind Copilot's skill selection process and how you can ensure Copilot employs your plugin at every opportunity to benefit your users.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
@@ -28,49 +29,70 @@ The orchestration layer represents the interface between foundation LLMs and the
 
 :::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the Microsoft Copilot technology stack. From bottom to top: Microsoft Cloud, AI infrastructure, Your data, Foundation models, AI orchestration, Microsoft Copilots | Your copilots, Teams AI Library, Graph connectors, Plugin extensibility":::
 
-The following chart illustrates how the Copilot for Microsoft 365 orchestrator selects the right plugin, with the right skill, at the right time, even when there are thousands of options to choose from.
+The following chart illustrates how the Copilot for Microsoft 365 orchestrator selects the right plugin, with the right skill, at the right time, even when there are multiple options to choose from.
 
-:::image type="content" source="assets/images/orchestrator-sequence.png" alt-text="Visual illustration of the sequential steps in the text following this image.":::
+:::image type="content" source="assets/images/copilot_orchestrator_sequence_v2.png" alt-text="Visual illustration of the sequential steps in the text following this image." lightbox="assets/images/copilot_orchestrator_sequence_v2.png":::
 
 1. **Natural language input**
 
-    The user types a prompt to Copilot through Microsoft 365 chat.
+The user submits a query to Copilot, such as "What tickets are assigned to me right now?"
 
-2. **Search for relevant tools**
+2. **Preliminary checks**
 
-    The Copilot orchestrator searches its tool catalog of installed and enabled plugins for an initial list of relevant skills.
+Copilot conducts several checks on the query, including responsible AI checks and security measures to ensure it doesn’t pose any risks. If the query fails any of these checks, Copilot will terminate the interaction.
 
 3. **Reasoning**
 
-    Copilot draws upon the combined knowledge of its LLM and your organizational data from Microsoft Graph to analyze the request and determine the context of the user. It then breaks down the user's prompt into intents, or goals. Each goal is then broken into tasks.
+The Copilot orchestrator formulates a plan comprising of multiple actions that it will perform in an attempt to respond to the user's prompt.
 
-4. **Mapping user's intent to slots**
+3a. **Context and Tool Selection:**
 
-    The orchestrator maps the user's tasks to plugin skills and/or built-in Copilot skill functions, mapping implicit constraints from the user's prompt to the slots (parameter values) required to execute each of the identified skills.
+The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps.
+The LLM may proceed to generating a response using Copilot’s built-in capabilities, or it may determine that additional data is necessary.
+If further information is needed, the orchestrator does a search for the plugins(tools) with the right skill for the task from the user's enabled plugins based on the plugins descriptions and their functions descriptions.
 
-5. **Execute tool**
+3b. **Function Matching and Parameter Determination:**
 
-    Copilot and its plugins are called to execute their selected skills.
+The orchestrator formulates a new prompt incorporating the user’s initial query, the updated context, and the selected plugins, and presents it to the LLM. The LLM evaluates the input and specifies the optimal plugin and function within that plugin to address the task. It then provides the orchestrator with the necessary function details and parameters required to gather the needed information.
 
-6. **Generate summary**
+3c. **Tool execution:**
 
-    Copilot merges, filters, or ranks the responses from different assistants, and generates a single response for the user.
+The orchestrator uses the response from the LLM to construct an API request and send the request to the tool executor, which securely retrieves the requested information located outside of Copilot's infrastructure. It executes the request and sends the results back to the orchestrator for further processing.
 
-7. **Natural language output**
+3d. **Result Analysis and Response Formulation:**
 
-    Finally, Copilot delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
+The orchestrator integrates the API response into the ongoing context and consults the LLM in a continuous reasoning loop until the LLM deems it appropriate to generate a final response.
 
-If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the *general contractor*, who coordinates and organizes the work of the specialist *subcontractors*, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's  input (in other words, that Copilot's response satisfies the user's intent in their request).
+4. **Responding**
 
-However, its the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This will instill a sense of trust in your users and ensure Copilot will call your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin for the orchestrator to find and use.
+The orchestrator compiles all the information gathered during the reasoning process and submits it to the LLM to create a final response. After ensuring the response complies with Responsible AI guidelines, it sends the response back to the orchestrator, which logs it in the context store and delivers it to the user via the Copilot UI.
 
-## Plugin search optimization
+5. **Natural language output**
 
-Copilot for Microsoft 365 can uniquely choose the right skill from thousands. But how can you make sure Copilot will choose *your plugin* to provide the right skill?
+Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
-The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring Copilot knows when and how to invoke your plugin.
+If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the _general contractor_, who coordinates and organizes the work of the specialist _subcontractors_, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's input (in other words, that Copilot's response satisfies the user's intent in their request).
 
-The following sections provide guidance and examples for plugins, skills, and parameter descriptions.
+However, its the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This will instill a sense of trust in your users and ensure Copilot will call your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
+
+## Plugin optimization
+
+Copilot for Microsoft 365 can uniquely choose the right skill from the many in its repertoire. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
+
+The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring the Copilot orchestrator knows when and how to invoke your plugin.
+
+### Matching mechanisms
+
+When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (_functions_) from installed plugins to identify up to five skills which best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, here is the hierarchy of matching mechanisms for Copilot plugin function selection:
+
+1. Lexical match on function name.
+2. Semantic match on function description.
+3. Lexical match on plugin name (adds all plugin functions to candidate list). **This step is currently in private preview.**
+4. Semantic match on plugin name (adds all plugin functions to candidate list).
+
+The orchestrator works through the above list until all five function candidate slots are filled.
+
+The following sections provide guidance and examples for authoring names and descriptions for plugins, skills (functions), and parameters.
 
 ### Plugin descriptions
 
@@ -151,7 +173,7 @@ The following table lists the short description examples for various plugin scen
 
 #### [General](#tab/general)
 
-**Description**:  Search and share stock quotes.
+**Description**: Search and share stock quotes.
 
 **App description example:**
 
@@ -184,7 +206,13 @@ Search skill descriptions should:
 - Include verbs and synonyms, if applicable.
 - Focus on keywords that are likely to be used in the search function of your native apps.
 
-The following table lists search command examples for various plugin scenarios:
+#### Semantic description
+
+The [semanticDescription](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+
+The following table lists command and semantic description examples for various plugin scenarios:
 
 #### [Tasks](#tab/tasks)
 
@@ -198,7 +226,8 @@ The following table lists search command examples for various plugin scenarios:
           "id": "Search",
           "type": "query",
           "title": "Tasks",
-          "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
+          "description": "Search for high priority tasks related to Northwind that are due tomorrow",
+          "semanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -221,6 +250,7 @@ The following table lists search command examples for various plugin scenarios:
           "type": "query",
           "title": "Survey",
           "description": "Search for surveys, drafts, and results with keywords or number of respondents.",
+          "semanticDescription": "This command enables users to search for surveys, drafts, and results based on specific keywords or the number of respondents.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -243,6 +273,7 @@ The following table lists search command examples for various plugin scenarios:
           "type": "query",
           "title": "CRM",
           "description": "Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.",
+          "semanticDescription": "This command allows users to search for leads in the CRM system based on specific criteria.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -282,7 +313,9 @@ A good parameter description explains what the parameter is, not what the parame
 
 When used directly in Microsoft Teams chat and Outlook mail compose, you can use a message extension to query one parameter at a time. When used as a plugin, message extension search commands support up to five parameters (one parameter must be visible in the message extension search bar). A parameter must have a good description, which should describe the expected input, including format or type.
 
-The following are few examples on basic and advances search requests for various plugin scenarios:
+The [semanticDescription](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The following are a few examples of basic and advanced search requests for various plugin scenarios:
 
 #### [Tasks](#tab/tasks)
 
@@ -303,12 +336,14 @@ Advanced search: Search for high priority tasks related to Northwind that are du
         "name": "Time",
         "title": "Time",
         "description": "Date or number of days for which to find tasks. Output: Number",
+        "semanticDescription": "Date or number of days for which you need tasks for. Output: Number",
         "inputType": "text"
     },
     {
         "name": "Priority",
         "title": "Priority",
         "description": "Priority of tasks. Acceptable values: high, medium, low, NA ",
+        "semanticDescription": "Priority of tasks. Acceptable values are high, medium, low, NA",
         "inputType": "text"
     }]
 ```
@@ -338,6 +373,7 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
     "name": "ResponseNumber",
     "title": "Response number",
     "description": "Number of responses received for a survey. Output: Number",
+    "semanticDescription": "Number of responses received for a survey. Output: Number",
     "inputType": "text"
   }
 ]
@@ -362,12 +398,14 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
     "name": "Status",
     "title": "Status",
     "description": "Status of leads. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
+    "semanticDescription": "Status of leads to find. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
     "inputType": "text"
   },
   {
     "name": "Time",
     "title": "Time",
     "description": "Number of days for which to find status of leads. Output: Number",
+    "semanticDescription": "Number of days to search for leads with given status. Output: Number",
     "inputType": "text"
   }
 ]
@@ -386,27 +424,30 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
     "name": "StockIndex",
     "title": "Stock Index",
     "description": "Name of index in which user wants to find stocks",
+    "semanticDescription": "Name of stock market index used to search for stocks",
     "inputType": "text"
   },
   {
     "name": "NumberofStocks",
     "title": "Ranked Number of Stocks",
     "description": "Number of stocks in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
+    "semanticDescription": "Number of stocks to return in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
     "inputType": "text"
   },
   {
     "name": "P/B",
     "title": "Price to Book Ratio",
     "description": "P/B or Price to Book ratio of a stock. Output format: >x.xx or <x.xx",
+    "semanticDescription": "Price to book (P/B) ratio of a stock. Output format: >x.xx or <x.xx",
     "inputType": "text"
   },
   {
     "name": "P/E",
     "title": "Price to Earnings Ratio",
     "description": "P/E or Price to Earnings ratio of a stock with comparison. Output format: >x.xx or <x.xx",
+    "semanticDescription": "Price to Earnings (P/E) ratio of a stock with comparison. Output format: >x.xx or <x.xx",
     "inputType": "text"
-  }
-]
+  }]
 ```
 
 ---
