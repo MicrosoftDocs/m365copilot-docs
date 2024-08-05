@@ -60,6 +60,8 @@
       href: build-api-plugins-new-api.md
     - name: Build an API plugin from an existing API
       href: build-api-plugins-existing-api.md
+    - name: Confirmation prompts
+      href: api-plugin-confirmation-prompts.md
     - name: Best practices for writing OpenAPI specs
       href: openapi-document-guidance.md
   - name: Teams message extension plugins
