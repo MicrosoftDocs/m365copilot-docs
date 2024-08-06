@@ -4,7 +4,7 @@ description: Understand which type of Microsoft Copilot for Microsoft 365 plugin
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 07/19/2024
+ms.date: 08/10/2024
 ---
 
 # Your extensibility options for Microsoft 365 Copilot
@@ -20,7 +20,7 @@ When you're looking to create a fully customized end-to-end AI product to cater 
 
 On the other hand, you can extend Microsoft Copilot, which is powered by private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot combines LLM responses with organizational context to provide relevant assistance. When you build extensions for Copilot, you can utilize the [orchestration layer](orchestrator.md) representing the interface between foundation LLMs, to select and execute the right content from the right plugin.
 
-Here's your first decision-making point; extending Copilot to leverage the orchestrator, or build with your own?
+Here's your first decision-making point; extending Copilot to leverage the model and orchestrator, or build with your choice?
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." lightbox="assets/images/m365-extensibility-decisions.png" :::
 
@@ -50,11 +50,11 @@ Now, it’s important to understand the variety of methods available for applyin
 
 > [!VIDEO https://www.youtube.com/embed/ILPOhVz9OdI]
 
-There are two distinct extension interfaces for Microsoft Copilot for end-users: standalone plugins that connect REST APIs, and declarative copilots. As an analogy, you can view Microsoft Copilot as something like an operating system, where plugins are services, and declarative copilots are apps.
+There are two distinct extension interfaces for Microsoft Copilot for end-users: standalone plugins that connect REST APIs, and declarative copilots. As an analogy, you can view Microsoft Copilot as something like an operating system, where plugins are services, and declarative copilots are apps. You can add a plugin and/or connector to a declarative copilot, or you can build a stand-alone plugin or connector.
 
 Now, let's find out which extensibility option(s) are for you—
 
-To create a copilot for specific tasks and domain knowledge, build:
+To customize Microsoft Copilot to create a specific copilot for certain tasks and domain knowledge, build:
 
 - 🎯 [**Declarative copilots**](overview-declarative-copilot.md)
 
@@ -66,13 +66,8 @@ And there are the growing number of extensions you build. Your options include:
 
 - **Plugins**, which add skills and actions to Microsoft 365.
   - 🎯 [**API plugins**](overview-api-plugins.md) can work either standalone, or with declarative copilots by calling REST APIs via OpenAPI service.
-  - 🎯 [**Message Extensions**](overview-message-extension-bot.md) for Teams are the search and action capability for Teams that now work as plugins too.
-  - 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment.
-    - **Conversational actions**, which can be created directly in Copilot Studio, to process a user query by completing one or more operations, and then sends one or more responses back to the user.
-    - **Prompts** which use AI Builder and natural language understanding including grounding on Dataverse to target the specific scenarios and workflows within your business.
-    - **Flows**, which use Power Automate flow to map existing flows or processes in your organization to perform actions, and retrieve and work with data.
-    - **Connectors**, which use Power Platform connectors to access data from other systems, such as popular enterprise products like Salesforce, Zendesk, MailChimp, and GitHub.
-
+  - 🎯 [**Teams Message Extensions**](overview-message-extension-bot.md) for Teams are the search and action capability for Teams that now work as plugins too.
+  - 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Conversational actions**, **Prompts**, **Flows**, and **Connectors**.
 > [!NOTE]
 > Connectors and plugins can be built as a stand-alone, or with a declarative copilot.
 
@@ -91,30 +86,15 @@ How you build and which tools you should use is up to you. Your choices are:
 
 :::image type="content" source="assets/images/decision-making-guide.png" alt-text="A diagram that shows various developer options." lightbox="assets/images/decision-making-guide.png":::
 
-### Weighing your options
-
-There are many factors that you want to consider when deciding which option to pick.
-Before settling on a path, it’s wise to consider the pros and cons of each option. This ensures you make an informed decision that aligns with your development needs and goals.
-
-| Extensibility options   | Benefits                           | Limitations                          |
-|:------------------------|:-----------------------------------|:-------------------------------------|
-| **Graph connectors**               |  Able to add activities (*e.g.* View, modify, and shared), which improve the relevance<br/> <br/> Semantic discovery of content is immediately available without turning on<br/> <br/> Content in Graph also works with ContextIO, Content Recommendations and Enterprise Search in Microsoft365.com, SPO, and Bing at Work<br/> <br/> Third-party data stays within compliance boundary by indexing the data ([Learn more](data-privacy-security.md))  | Not visible or discoverable to end-users unless used with declarative copilots and/or message extensions <br/> <br/> No sideloading. The Search Administrator role is required to deploy your Graph Connector to Copilot<br/> <br/> If you don't implement Entra ID Groups in your system, you need to create External Groups calling Graph APIs and maintain sync state of the membership  |
-| **Declarative copilots**     | Your own branded chat experience <br/> <br/> Improved discoverability and user-experiences   | Still in private preview and features are limited  |
-| **API plugins**                  | Support search and action <br/> <br/> Support basic Adaptive Cards for better UX <br/> <br/> Simpler development with existing REST APIs with OpenAPI specifications <br/><br/> You can include instructions to LLM    | Still in private preview and features are limited       |
-| **Teams message extensions** | Discoverable through Teams Store or App Source marketplace <br/> <br/> Support search and action <br/> <br/> Support Adaptive Cards for better UX and more controls <br/><br/> Works on Outlook too <br/> <br/> If you previously have build message extensions for Teams, they now work as plugins         | Max 1 million plugins enabled per user <br/> <br/> Limited numbers of commands (max 3) and parameters (max 5) <br/> <br/> Orchestrator only reasons with 10 plugins per prompt <br/> <br/> Data can leave compliance boundary, as it calls the bot framework command, which is hosted externally to the Microsoft 365 boundary<br/> <br/> Performance depends on developers and hosting<br/> <br/> Handling multi-parameters with complex prompts can be challenging |
-| **Copilot Studio plugins**   | Fastest to first run experience <br/> <br/> No infrastructure management is needed <br/> <br/> No coding experience required <br/> <br/> Copilot Studio is included as part of the Microsoft Copilot license            | Customization can be limited <br/> <br/> Scaling might be limited to Microsoft Copilot Studio subscription tiers <br/> <br/> If the plugin uses Power Platform Connectors, users require a Power Platform license           |
-
 #### Data types
 
-Consider your data: how it's structured, the level of volume and activity you expect, and the required data access.
+Consider your data: how it's structured, the level of volume and activity you expect, and the required data access. When you want to add your own data, either with connectors or plugins, there are many factors that you want to consider.
 
-| Solution | Data structure | Data volume | Data activity | Summarize/ Act |
+| Solution | Data structure | Data volume | Data activity | Can modify data |
 |-------|-------|---------|----------|----------|
-| **Graph connectors** | Unstructured data (*e.g.* plain text documents, wiki pages, and PDF files) | Up to 5M items per connection | Up to 20 requests per second | Summarize (Copilot analyzes and extracts key information) only |
-| **Message extension plugins** | Structured data (organized in a predefined manner, often in the form of tables with rows and columns)| Suitable for high volume data (Over 5M) | Suitable for high activity (Over 20 req/sec.)  | Summarize + Act (with Adaptive Card, a user can modify the data)|
-| **Copilot Studio plugins** | Structured data | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M) | Summarize only |
-
-**Coming soon**: Soon, Copilot will analyze input prompts using machine learning techniques to generate new content. It examines available plugin commands based on their descriptions and parameters. Then, it populates relevant data into those parameters and executes the command.
+| **Graph connectors** | Unstructured data (*e.g.* plain text documents, wiki pages, and PDF files) | Up to 5M items per connection | Up to 20 requests per second | No. Copilot only analyzes and extracts key information to summarize the data. |
+| **Plugins** | Structured data (organized in a predefined manner, often in the form of tables with rows and columns)| Suitable for high volume data | Suitable for high activity | Yes. A user can modify the data via Adaptive Card UI. |
+| **Copilot Studio Actions** | Structured data | Suitable for high volume data | Suitable for high activity | No. Copilot only summarizes the data. |
 
 ## Option 2: Building a custom engine copilot for Microsoft 365
 
@@ -126,17 +106,17 @@ With Azure AI services, you can craft a custom AI chatbot for Teams and Microsof
 
 In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the **Copilot extensibility** options (Graph connectors, plugins, and declarative copilots, which can connect to Graph connectors and plugins) and the **custom engine copilot**:
 
-:::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilot for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
+:::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilots for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
-The custom engine copilot operates on a BYO (Bring Your Own) model. So, you can use your preferred LLM and orchestrator.
+The custom engine copilots operates on a BYO (Bring Your Own) model. So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
 
-Building custom engine copilot is an excellent choice if:
+Building custom engine copilots is an excellent choice if:
 
-- You want to choose models and orchestration
+- You want to use models and orchestration of your choice
 - You have prior experience in building Teams bots or are familiar with Teams bot development
-- You aim to have your conversational AI bot accessible to all Microsoft 365 users, regardless of their Copilot licensing status
+- You aim to have your conversational AI bot accessible to all Microsoft 365 users, regardless of your Copilot licensing status
 
-🎯 Learn more on building your own [**custom engine copilot**](overview-custom-engine-copilot.md).
+🎯 Learn more on building your own [**custom engine copilots**](overview-custom-engine-copilot.md).
 
 ### Tool options: Pro-code or low-code?
 
