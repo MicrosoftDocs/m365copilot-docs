@@ -13,7 +13,7 @@ ms.topic: overview
 > Actions for Copilot for Microsoft 365 are in public preview.
 > Production tenants must be licensed for Copilot for Microsoft 365.
 
-Copilot Studio actions plug into Copilot for Microsoft 365 to extend its skills, leveraging Microsoft business applications, a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent consisting of Microsoft Dynamics 365 and Microsoft Power Platform.
+Copilot Studio actions plug into Copilot for Microsoft 365 to extend its skills, using Microsoft business applications, a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent consisting of Microsoft Dynamics 365 and Microsoft Power Platform.
 
 Dynamics 365 revolutionizes CRM and ERP by applying intelligence to all forms of data. It enables organizations to evolve from reactive business decisions to proactive insights that allow your employees to accelerate business results.
 
