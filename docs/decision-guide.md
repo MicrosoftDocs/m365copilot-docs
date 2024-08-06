@@ -50,26 +50,26 @@ Now, it’s important to understand the variety of methods available for applyin
 
 > [!VIDEO https://www.youtube.com/embed/ILPOhVz9OdI]
 
-There are two distinct extension interfaces for Microsoft Copilot for end-users: standalone plugins that connect REST APIs, and declarative copilots. As an analogy, you can view Microsoft Copilot as something like an operating system, where plugins are services, and declarative copilots are apps. You can add a plugin and/or connector to a declarative copilot, or you can build a stand-alone plugin or connector.
+There are two distinct extension interfaces for Microsoft Copilot for end-users: standalone plugins that connect REST APIs, and declarative copilots. As an analogy, you can view Microsoft Copilot as something like an operating system, where plugins are services, and declarative copilots are apps. 
 
 Now, let's find out which extensibility options are for you—
 
-To customize Microsoft Copilot to create a specific copilot for certain tasks and domain knowledge, build:
+To customize Microsoft Copilot to create a specific copilot for particular tasks and domain knowledge, build:
 
-- 🎯 [**Declarative copilots**](overview-declarative-copilot.md)
+- 🎯 [**Declarative copilots**](overview-declarative-copilot.md), which are designed to enhance the user experience by allowing the creation of personalized chat experiences to provide tailored interactions and responses
+
+:::image type="content" source="assets/images/declarative-copilot-ui.png" alt-text="A fictional declarative copilot UI." lightbox="assets/images/declarative-copilot-ui.png" border="false":::
 
 To add unstructured data into Microsoft Graph, use:
 
-- 🎯 [**Graph connectors**](overview-graph-connector.md), which enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services
+- 🎯 [**Graph connectors**](overview-graph-connector.md), which enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. They can work either standalone, or with declarative copilots
 
 And there are the growing number of extensions you build. Your options include:
 
-- **Plugins**, which add skills and actions to Microsoft 365.
+- **Plugins**, which add skills and actions to Microsoft 365. Plugins have a few different types that are built differently
   - 🎯 [**API plugins**](overview-api-plugins.md) can work either standalone, or with declarative copilots by calling REST APIs via OpenAPI service.
   - 🎯 [**Teams Message Extensions**](overview-message-extension-bot.md) for Teams are the search and action capability for Teams that now work as plugins too.
   - 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Conversational actions**, **Prompts**, **Flows**, and **Connectors**.
-> [!NOTE]
-> Connectors and plugins can be built as a stand-alone, or with a declarative copilot.
 
 > [!TIP]
 > If you've built message extensions for Teams before, you can immediately see the value of Copilot extensibility, but if you want to build the latest and greatest, try building API plugins and Graph Connectors!
