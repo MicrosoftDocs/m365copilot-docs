@@ -36,7 +36,7 @@ And **Copilot for Microsoft 365** is available as "Work" profile with Copilot fo
 
 By **extending Copilot for Microsoft 365** for enterprise users,
 
-- Your service will be a part of the Microsoft ecosystem, enabling your users to benefit from the user experience of Microsoft products and allowing you to reach millions of users
+- Your service can be a part of the Microsoft ecosystem, enabling your users to benefit from the user experience of Microsoft products and allowing you to reach millions of users
 - You can build an AI solutions for organizations to boost employee productivity across businesses
 - You can apply people-centric data with Microsoft Graph to provide more personalized experience for your users
 - You can use Graph Connector, SharePoint site library, or Dataverse table that is used in the workflow as your RAG data source
@@ -52,7 +52,7 @@ Now, it’s important to understand the variety of methods available for applyin
 
 There are two distinct extension interfaces for Microsoft Copilot for end-users: standalone plugins that connect REST APIs, and declarative copilots. As an analogy, you can view Microsoft Copilot as something like an operating system, where plugins are services, and declarative copilots are apps. You can add a plugin and/or connector to a declarative copilot, or you can build a stand-alone plugin or connector.
 
-Now, let's find out which extensibility option(s) are for you—
+Now, let's find out which extensibility options are for you—
 
 To customize Microsoft Copilot to create a specific copilot for certain tasks and domain knowledge, build:
 
@@ -108,7 +108,7 @@ In the context of building copilots for Microsoft 365, there are several options
 
 :::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilots for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
-The custom engine copilots operates on a BYO (Bring Your Own) model. So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
+The custom engine copilots operate on a BYO (Bring Your Own) model. So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
 
 Building custom engine copilots is an excellent choice if:
 
