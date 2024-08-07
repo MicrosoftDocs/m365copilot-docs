@@ -6,7 +6,7 @@ ms.author: edoyle
 ms.topic: conceptual
 ms.date: 5/20/2024
 ---
-# Publish plugins and Graph connectors for Copilot for Microsoft 365
+# Publish extensions for Copilot for Microsoft 365
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 

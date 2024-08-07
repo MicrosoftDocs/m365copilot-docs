@@ -39,7 +39,7 @@ There are over 350 million daily active users across applications in the Microso
 
 |Copilot extensibility type|Microsoft 365 product availability|Learn more|
 |----------|-----------|------------|
-|[Teams message extension plugins](./overview-message-extension-bot.md)|Copilot for Microsoft 365, Teams, Outlook| [Plugins as Microsoft 365 apps](./plugins-are-apps.md) |
+|[Teams message extension plugins](./overview-message-extension-bot.md)|Copilot for Microsoft 365, Teams, Outlook| [Extensions as Microsoft 365 apps](./extensions-are-apps.md) |
 |[Power Platform connector plugins](/connectors/connectors)|Copilot for Microsoft 365, Power Automate, Power Apps, Azure Logic Apps| [Connectors overview](/connectors/connectors)|
 |[Microsoft Graph connectors](./overview-graph-connector.md)|Copilot for Microsoft 365, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
 
