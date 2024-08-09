@@ -4,7 +4,7 @@ description: Understand which type of Microsoft Copilot for Microsoft 365 plugin
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 08/10/2024
+ms.date: 08/12/2024
 ---
 
 # Your extensibility options for Microsoft 365 Copilot
@@ -30,7 +30,7 @@ Here's your first decision-making point; extending Copilot to leverage the model
 - You have prior experience in building a Teams message extension (so that you can just update it as a Copilot plugin)
 
 **You probably want to build a custom engine copilot if any of the following is true:**
-- You want to use a particular model, LLM or SLM, for your service
+- You want to use a particular model, an LLM or small language model (SLM), for your service
 - You want your service to be independent from Microsoft Copilot, accessible to all Microsoft 365 users, regardless of your Copilot licensing status 
 - You have prior experience in building a Teams bot, or are familiar with Teams bot development (so you can quickly get started with Teams AI Library to build a custom engine copilot)
 
@@ -39,6 +39,10 @@ Here's your first decision-making point; extending Copilot to leverage the model
 - 🎯 If you want to **extend Microsoft Copilot**, go to the next section, [Option 1](#option-1-extending-microsoft-copilot)!
   - 🎯 Then, you have choices for extensions; build declarative copilots, plugins, or connectors. Find out about [extensibility types](#types-of-copilot-extensibility-for-microsoft-365)
 - 🎯 Otherwise, jump to [Option 2](#option-2-building-a-custom-engine-copilot-for-microsoft-365) to **build your own copilots**!
+
+<br/>
+
+---
 
 ## Option 1. Extending Microsoft Copilot
 
@@ -68,20 +72,40 @@ Now, let's find out which extensibility options are for you—
 
 To customize Microsoft Copilot to create a specific copilot for particular tasks and domain knowledge, build:
 
-- 🎯 [**Declarative copilots**](overview-declarative-copilot.md), which are designed to enhance the user experience by allowing the creation of personalized chat experiences to provide tailored interactions and responses, with a similar look-and-feel with Microsoft Copilot interface.
+#### Declarative copilots
+
+🎯 [**Declarative copilots**](overview-declarative-copilot.md) are designed to enhance the user experience by allowing the creation of personalized chat experiences to provide tailored interactions and responses, with a similar look-and-feel with Microsoft Copilot interface.
 
 :::image type="content" source="assets/images/declarative-copilot-ui.png" alt-text="A fictional declarative copilot UI." lightbox="assets/images/declarative-copilot-ui.png" border="false":::
 
-To add unstructured data into Microsoft Graph, use:
+When & why to use Declarative copilots:
 
-- 🎯 [**Graph connectors**](overview-graph-connector.md), which enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. They can work either standalone, or with declarative copilots.
+- Scenario that requires ​focus or specialization
+- Layer on top of the full capability ​of Copilot for Microsoft 365 ​
+- Target specific roles or areas ​in organization, such as HR, Sales, and Finance
+- Scope to specific data sources including domain knowledge​
+- Custom instructions to enable nuanced interpretation of data received from sources like plugins​
 
+And you can connect your declarative copilots with connectors and plugins.
+
+#### Microsoft Graph connectors
+
+🎯 [**Graph connectors**](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. They can work either standalone, or with declarative copilots.
+
+> [!NOTE]
+> Connectors can be built as a stand-alone, or with a declarative copilot.
+
+#### Plugins
+
+**Plugins** add skills and actions to Microsoft 365. Plugins have a few different types that are built differently.
 And there are the growing number of extensions you build. Your options include:
 
-- **Plugins**, which add skills and actions to Microsoft 365. Plugins have a few different types that are built differently.
-  - 🎯 [**API plugins**](overview-api-plugins.md) can work either standalone, or with declarative copilots by calling REST APIs via OpenAPI service.
-  - 🎯 [**Teams Message Extensions**](overview-message-extension-bot.md) for Teams are the search and action capability for Teams that now work as plugins too.
-  - 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Conversational actions**, **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
+- 🎯 [**API plugins**](overview-api-plugins.md) can work either standalone, or with declarative copilots by calling REST APIs via OpenAPI service.
+- 🎯 [**Teams Message Extensions**](overview-message-extension-bot.md) for Teams are the search and action capability for Teams that now work as plugins too.
+- 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Conversational actions**, **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
+
+> [!NOTE]
+> Plugins can be built as a stand-alone, or with a declarative copilot.
 
 > [!TIP]
 > If you've built message extensions for Teams before, you can immediately see the value of Copilot extensibility, but if you want to build the latest and greatest, try building API plugins and Graph Connectors!
@@ -118,7 +142,7 @@ The custom engine copilots operate on a BYO (Bring Your Own) model. So, your cop
 
 How you build and which tools you should use is up to you. Your choices are:
 
-- 🎯 **Pro-code**: If you prefer coding for full customization, develop one with [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). You can either begins with:
+- 🎯 **Pro-code**: If you prefer coding for full customization, develop one with [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). You can start with either:
   - [**Teams AI Library**](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview) to code, or
   - [**Azure OpenAI Studio**](https://oai.azure.com/) to configure then export the generated code to Teams Toolkit to deploy to Teams!
 

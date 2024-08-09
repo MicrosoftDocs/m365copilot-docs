@@ -4,7 +4,7 @@ description: Extend, enrich, and customize Microsoft Copilot for Microsoft 365 w
 author: girliemac
 ms.author: timura
 ms.topic: overview
-ms.date: 05/16/2024
+ms.date: 08/12/2024
 ---
 
 # Extend Microsoft Copilot for Microsoft 365
@@ -19,13 +19,16 @@ However, business workflows don't typically run exclusively on Microsoft 365 app
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-## What can you do to extend Microsoft Copilot?
+## Copilot extensions
 
 :::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with organizational 'Knowledge' as the x-axis and user 'Skills' as the y-axis showing that you can extend Copilot skills with plugins and extend Copilot knowledge with Graph connectors" border="false" lightbox="assets/images/skills-knowledge-chart.png":::
 
-- **Adding knowledge** - You can enrich the organizational knowledge accessible to Copilot by ingesting your enterprise data and content with Microsoft Graph connectors.
-- **Adding skills** - You can extend Copilot's actionable knowledge by transforming your apps into plugins that increase user productivity across daily tasks and workflows.
-- **Enhancing overall experience** (Preview) - With combining extra data sources that contain specific domain knowledge in a declarative copilot that includes instructions to guide the user through the workflow and match intents. Declarative copilots can seamlessly integrate with plugins and connectors.
+Extend and customize with:
+
+- Your business data
+- Your apps
+- Your workflows
+- Your automation
 
 ## Extend Copilot for your scenario
 
@@ -47,11 +50,26 @@ Here are some practical examples of what you can develop for your organization:
 
     Consider a multinational corporation with a wealth of knowledge and insights stored in various formats, including documents, emails, and chat transcripts, that are spread across multiple systems. Microsoft Graph connectors can facilitate the consolidation of this data, making it searchable from a single, unified interface. This ensures that your organization's collective wisdom is readily accessible.
 
+:::image type="content" source="assets/images/personas-extend-copilot.png" border="false" alt-text="Persona 1 - I am a developer, who manages the product database at an e-commerce company, and I want to build an inventory catalog plugin that brings the product information for internal org. Persona 2 - I am a marketing manager, who aims to launch a new campaign for my products. And I want a tool that helps developing marketing assets specifically tailored to the campaign." lightbox="assets/images/personas-extend-copilot.png":::
+
+
 ## Types of extensibility
 
 There are several ways you can extend Copilot for Microsoft 365.
 
 :::image type="content" source="assets/images/m365-extensibility-types.png" alt-text="This illustration shows types of extensibility options, Graph connector, plugins, and declarative copilots" border="true" lightbox="assets/images/m365-extensibility-types.png":::
+
+### Declarative copilots 
+
+Copilots with declarative instructions act as a standalone custom version of the Copilot for Microsoft 365 chat experience. Declarative copilots provide you with more tailoring, tuning, and control of the user experience. Declarative copilots have:
+
+- **Familiar user interface** with Copilot for Microsoft 365
+- **Domain-specific knowledge** applied for specific tasks, such as travel planner or nutrition assistant
+- **Ability to integrate with plugins and connectors** to call specialized services and access domain expertise
+
+You can connect connectors and plugins to your declarative copilot. Connectors and plugins can be built as a stand-alone, too.
+
+Learn more about [declarative copilots](overview-declarative-copilot.md).
 
 ### Microsoft Graph connectors
 
@@ -63,20 +81,6 @@ Graph connectors increase the discoverability and engagement of your enterprise 
 
 There are three main steps to set up a Graph connector: (1) Create a connection, (2) Register your schema, and then (3) Ingest your content to the Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in the Microsoft 365 (Office) app. Learn more about [how Graph connectors work in Copilot](overview-graph-connector.md) and [best practices for configuration](overview-graph-connector.md#configuring-your-custom-microsoft-graph-connection-for-copilot-for-microsoft-365).
 
-<br/>
-
----
-
-There are two distinct extension interfaces for Microsoft Copilot for *end-users*— one is **declarative copilots**, and another is **plugins** that connect APIs. For user, as an analogy, you can view Microsoft Copilot as something like an operating system, where plugins are services and declarative copilots are apps!
-
-### Declarative copilots (Preview)
-
-Copilots with declarative instructions act as a standalone custom version of the Copilot for Microsoft 365 chat experience. Declarative copilots provide you with more tailoring, tuning, and control of the user experience. Declarative copilots have:
-
-- **Familiar user interface** with Copilot for Microsoft 365
-- **Domain-specific knowledge** applied for specific tasks, such as travel planner or nutrition assistant
-- **Ability to integrate with plugins and connectors** to call specialized services and access domain expertise
-
 ### Plugins
 
 Plugins expand your users' skills by interacting with your web service using natural language in Microsoft Copilot. With plugins, you can:
@@ -85,9 +89,21 @@ Plugins expand your users' skills by interacting with your web service using nat
 - **Retrieve relational data** such as reporting on service tickets assigned to a given team member
 - **Perform actions across apps** such as creating a new task in your organization's work tracking system
 
+Learn more about: 
+- [API plugins](overview-api-plugins.md)
+- [Message extensions](overview-message-extension-bot.md)
+- [Copilot Studio Actions](overview-business-applications.md)
+
 The main differences between these extensions and Graph connectors are how the data is consumed. Data from a Graph connector requires prior ingestion to the Copilot semantic index; extensions fetch and act upon data in real-time.
 
 :::image type="content" source="assets/images/m365-copilot-extensibility.png" alt-text="Illustration showing how plugins and connectors interact with Copilot and Microsoft 365 data" lightbox="assets/images/m365-copilot-extensibility.png":::
+
+
+### Custom engine copilots
+
+**Custom engine copilots** act as copilots and looks like a part of Microsoft Copilot extension family to the end-users, however, this is technically not the same. Custom engine copilots are conversational Teams bots designed to harness the powerful capabilities of Large Language Models (LLMs).
+
+Learn more about [custom engine copilots](overview-custom-engine-copilot.md).
 
 ## Next step
 
