@@ -31,7 +31,7 @@ We recommend that our ISV partners who build multi-tenant solutions acquire a ne
 
 ### Customers with existing Microsoft 365 and Copilot licenses
 
-It's also possible to develop Copilot integrations by working directly in an eligible [Microsoft 365 production environment](/copilot/microsoft-365/microsoft-365-copilot-overview#availability) with a [Copilot for Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/enterprise/copilot-for-microsoft-365) license.
+It's also possible to develop Copilot integrations by working directly in an eligible [Microsoft 365 production environment](/copilot/microsoft-365/microsoft-365-copilot-overview#availability) with a [Copilot for Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365) license.
 
 Contact your Microsoft representative to add Copilot to your Microsoft plan.  Enterprise customers need to be on the Current Channel or Monthly Enterprise Channel for Microsoft 365 apps to have access to Copilot.
 

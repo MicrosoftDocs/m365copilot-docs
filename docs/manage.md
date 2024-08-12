@@ -13,17 +13,17 @@ Placeholder for Copilot extensions management overview (M365+Copilot admin 101 f
 
 MAC
 
-https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?view=o365-worldwide&context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext
+https://learn.microsoft.com/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?view=o365-worldwide&context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext
 https://admin.microsoft.com/
 
 TAC
 
-https://learn.microsoft.com/en-us/microsoftteams/manage-apps
+https://learn.microsoft.com/microsoftteams/manage-apps
 https://admin.teams.microsoft.com/policies/manage-apps
 
 
 Custom apps
 
-Teams: https://learn.microsoft.com/en-us/microsoftteams/teams-custom-app-policies-and-settings
+Teams: https://learn.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings
 
-Power Platform: https://learn.microsoft.com/en-us/microsoftteams/manage-power-platform-apps
+Power Platform: https://learn.microsoft.com/microsoftteams/manage-power-platform-apps

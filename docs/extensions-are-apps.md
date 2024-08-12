@@ -21,13 +21,66 @@ The Microsoft 365 ecosystem is evolving into an integrated app platform, where y
 
 ### App package
 
-The app package for Microsoft 365, including Copilot extensions, is a zip file that contains one or more configuration (manifest) files and your app's icons. Your app logic and data storage are hosted elsewhere and accessed by the Microsoft 365 host application via HTTPS. You'll submit the app package to your admin to publish to your organization or to Partner Center to publish to Microsoft AppSource.
+The app package for Microsoft 365, including Copilot extensions, is a zip file that contains one or more configuration (manifest) files and your app icons. Your app logic and data storage are hosted elsewhere and accessed by the Microsoft 365 host application via HTTPS. You'll submit the app package to your admin to publish to your organization or to Partner Center to publish to Microsoft AppSource.
+
+:::image type="content" source="assets/images/app-package.png" alt-text="Diagram showing the anatomy of a Microsoft 365 app package: app manifest (.json file) + icons (color and outline .png files) wrapped in a .zip file":::
+
+At minimum, an app package contains an app manifest (`manifest.json`) file and `color.png` and `outline.png` icons. It may also contain manifests for a declarative copilot, API plugin, and localization files for other supported languages.
 
 ## App icons
 
-PLACEHOLDER explainer on required app icons
+Your app package must include both a color and outline version of your Copilot extension icon, as .png files. These icons have specific size requirements in order to pass store validation.
+
+
+
+TODO INCORPORATE:
 
 According to the current implementation, usually the small and large icon are set as the same. But in some cases, depending on the ingestion source the field might be overridden. Anyhow, in case of BizChat Extensibility, the field "outline" in the manifest will be set as small icon and used in the BizChat UX.
+
+### Color icon
+
+The color version of your icon displays in each Microsoft 365 host application's app store.
+
+:::row:::
+:::column:::
+
+:::image type="content" source="assets/images/color-icon.png" alt-text="Sample image of an app color icon, showing 192x192 pixels as total icon size with background included, with a central 96x96 pixel space showing the 'Safe region' for the app symbol":::
+
+:::column-end:::
+:::column span="2":::
+
+
+Your color icon:
+
+- Can be any color
+- Must be 192 x 192 pixels total
+- Should be 96 x 96 pixels for the symbol itself (to allow 48 pixels of padding for [host scenarios where it is cropped](/microsoftteams/platform/concepts/build-and-test/apps-package#color-icon))
+- Must sit atop a fully solid or fully transparent square background
+
+:::column-end:::
+:::row-end:::
+
+### Outline icon
+
+The outline version of your icon displays when your tab app is in use or pinned to the app bar of its Microsoft 365 host application.
+
+:::row:::
+:::column:::
+
+:::image type="content" source="assets/images/outline-icon.png" alt-text="Sample image of an app outline icon, showing 32x32 pixel size and white icon outline with transparent background":::
+
+:::column-end:::
+:::column span="2":::
+
+Your outline icon:
+
+- Must be 32 x 32 pixels
+- Must be either white with a transparent background, or transparent with a white background
+- Must not contain additional padding around the symbol
+
+:::column-end:::
+:::row-end:::
+
 
 ## App manifest
 
