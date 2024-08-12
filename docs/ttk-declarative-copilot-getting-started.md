@@ -47,8 +47,9 @@ Set the environment variable **TEAMSFX_DECLARATIVE_COPILOT** and **KIOTA_CONFIG_
 #### [Windows](#tab/windows)
 
 ```powershell
-[Environment]::SetEnvironmentVariable('TEAMSFX_DECLARATIVE_COPILOT','true')
-[Environment]::SetEnvironmentVariable('KIOTA_CONFIG_PREVIEW','true')
+[Environment]::SetEnvironmentVariable("TEAMSFX_DECLARATIVE_COPILOT", 'true', "User")
+[Environment]::SetEnvironmentVariable("KIOTA_CONFIG_PREVIEW", "true", "User")
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 ```
 
 #### [Linux](#tab/linux)
@@ -56,9 +57,9 @@ Set the environment variable **TEAMSFX_DECLARATIVE_COPILOT** and **KIOTA_CONFIG_
 Open your environment configuration file (for example, **~/.bashrc** or **~/.zshrc**) and add the following line:
 
 ```bash
-sudo code ~/.bashrc
-export TEAMSFX_DECLARATIVE_COPILOT=true
-export KIOTA_CONFIG_PREVIEW=true
+sudo echo 'export TEAMSFX_DECLARATIVE_COPILOT=true' >> ~/.bashrc
+sudo echo 'export KIOTA_CONFIG_PREVIEW=true' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 #### [Mac OSX](#tab/mac-os)
@@ -68,9 +69,14 @@ Open your environment configuration file (`sudo vi /etc/launchd.conf`) and add t
 ```bash
 setenv TEAMSFX_DECLARATIVE_COPILOT true
 setenv KIOTA_CONFIG_PREVIEW true
+egrep -v '^\s*#' /etc/launchd.conf | launchctl
 ```
 
 ---
+
+> [!WARNING]
+>
+> Close and reopen your terminal to ensure all changes are taken into account.
 
 ### Install Teams Toolkit CLI
 
@@ -176,16 +182,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
       Created environment file (secret) at ~/src/demos/ttk-declarative-copilot/env/.env.dev.user 
     ```
 
-1. In the command prompt window, enter the following command to preview your app in Teams:
-
-    ```bash
-    ~ > src > demos > ttk-declarative-copilot > teamsapp preview --env dev
-    ████████████████████  100% | [1/1] Microsoft 365 Account  (✔) Done.
-    Microsoft 365 Account (...) is signed in and custom app upload permission is enabled
-    teams web client is being launched for you to preview the app: https://teams.microsoft.com/?appTenantId=...&login_hint=...
-    ████████████████████  100% | [1/1] preview  (✔) Done.
-    (⚠) Warning: If you changed the manifest file, please run 'teamsapp provision --env dev' to install app again.
-    ```
+1. Navigate to the Copilot application with the URL [https://microsoft365.com/chat](https://microsoft365.com/chat)
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-welcome.png" alt-text="Screenshot shows the initial screen from Copilot for Microsoft 365.":::
   
@@ -194,7 +191,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc.png" alt-text="Screenshot shows the landing screen for the declarative copilot in Copilot for Microsoft 365.":::
 
-1. Enter a prompt and ensure that it replies with "Thanks for using Teams Toolkit to create your declarative copilot!"
+1. Enter a question for your declarative copilot and ensure that it replies with "Thanks for using Teams Toolkit to create your declarative copilot!"
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative copilot in Copilot for Microsoft 365.":::
 
@@ -202,7 +199,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 
 To add conversation starters to your declarative copilot, follow these steps:
 
-1. Open the your project in Visual Studio Code.
+1. Open the project in Visual Studio Code.
 
     ```bash
     code .
@@ -231,7 +228,7 @@ To add conversation starters to your declarative copilot, follow these steps:
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The updated conversation starters are now available in your declarative copilot.
+1. The updated conversation starters will be available in your declarative copilot after you refresh the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-conversation-starters.png" alt-text="Screenshot shows the conversations starters from the declarative copilot in Copilot for Microsoft 365.":::
 
@@ -257,7 +254,7 @@ To add web content using Bing to your declarative copilot, follow these steps:
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The declarative copilot will now have access to web content to generate its answers.
+1. The declarative copilot will have access to web content to generate its answers after you reload the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-web-search.png" alt-text="Screenshot shows the web content from the declarative copilot in Copilot for Microsoft 365.":::
 
@@ -296,7 +293,7 @@ To add OneDrive and SharePoint knowledge to your declarative copilot, follow the
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The declarative copilot will now have access to OneDrive and SharePoint content to generate its answers.
+1. The declarative copilot will have access to OneDrive and SharePoint content to generate its answers after you reload the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-odsp.png" alt-text="Screenshot shows the OneDrive and SharePoint content from the declarative copilot in Copilot for Microsoft 365.":::
 
@@ -344,9 +341,9 @@ To add Graph Connectors knowledge to your declarative copilot, follow these step
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The declarative copilot will now have access to GraphConnectors content to generate its answers.
+1. The declarative copilot will have access to GraphConnectors content to generate its answers after you reload the page.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-gc.png" alt-text="Screenshot shows the Graph Connectors content from the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-gc.png" alt-text="Screenshot shows Graph Connectors content from the declarative copilot in Copilot for Microsoft 365.":::
 
 ## Add a plugin
 
@@ -393,7 +390,7 @@ To add a plugin to your declarative copilot, follow these steps:
     ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
     ```
 
-1. The declarative copilot will now have access to your plugin content to generate its answers.
+1. The declarative copilot will have access to your plugin content to generate its answers after you reload the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-plugin.png" alt-text="Screenshot shows the plugin content from the declarative copilot in Copilot for Microsoft 365.":::
 
@@ -401,7 +398,7 @@ To add a plugin to your declarative copilot, follow these steps:
 
 To improve the instructions of your declarative copilot, follow these steps:
 
-1. Open the `appPackage/declarativeCopilot.json` file and add edit the `instructions` value:
+1. Open the `appPackage/declarativeCopilot.json` file and edit the `instructions` value:
 
     ```json
     {
