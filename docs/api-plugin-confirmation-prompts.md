@@ -16,7 +16,11 @@ Normally, Copilot for Microsoft 365 shows the user the always allow option for H
 
 Developers can control whether Copilot for Microsoft 365 shows the always allow option for a specific operation by adding the `x-openai-isConsequential` property in the OpenAPI document for their API. Setting this property to `true` disables the always allow option, and setting it to `false` enables it.
 
-For example, consider an API that creates a reminder: `POST /reminders`. Because it's a POST operation, Copilot for Microsoft 365 asks the user to confirm every time this API is used, and doesn't give the user the option to always allow this operation. To enable the always allow option, add the `x-openai-isConsequential` property set to false as shown in the following example.
+For example, consider an API that creates a reminder: `POST /reminders`. Because it's a POST operation, Copilot for Microsoft 365 asks the user to confirm every time this API is used, and doesn't give the user the option to always allow this operation.
+
+:::image type="content" source="assets/images/api-plugins/post-confirm.png" alt-text="Copilot confirmation dialog for a POST operation.":::
+
+To enable the always allow option, add the `x-openai-isConsequential` property set to false as shown in the following example.
 
 ```yml
 post:
@@ -32,7 +36,11 @@ post:
     required: true
 ```
 
-Now imagine a related API that retrieves existing reminders: `GET /reminders`. Since it's a GET, Copilot for Microsoft 365 shows the user the always allow option. This behavior can be changed by adding `x-openai-isConsequential` set to true.
+Now imagine a related API that retrieves existing reminders: `GET /reminders`. Since it's a GET, Copilot for Microsoft 365 shows the user the always allow option.
+
+:::image type="content" source="assets/images/api-plugins/get-always-allow.png" alt-text="Copilot confirmation dialog for a GET operation.":::
+
+This behavior can be changed by adding `x-openai-isConsequential` set to true.
 
 ```yml
 get:
