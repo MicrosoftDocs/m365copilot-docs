@@ -17,7 +17,7 @@ This article will walk you through the key parts of the Microsoft 365 app model 
 
 ## App model for Microsoft 365
 
-The Microsoft 365 ecosystem is evolving into an integrated app platform, where you can use a common app model to define and package your app. What started as a way to [extend Teams apps to run in other Microsoft 365 applications](/microsoftteams/platform/m365-apps/overview?context=/microsoft-365-copilot/extensibility/context) has since expanded to support the distribution of [Graph connectors](), [Outlook Add-ins](), and now Copilot extensions.
+The Microsoft 365 ecosystem is evolving into an integrated app platform, where you can use a common app model to define and package your app. What started as a way to [extend Teams apps to run in other Microsoft 365 applications](/microsoftteams/platform/m365-apps/overview?context=/microsoft-365-copilot/extensibility/context) has since expanded to support the distribution of [Graph connectors](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context), [Outlook Add-ins](/office/dev/add-ins/develop/unified-manifest-overview), and now Copilot extensions.
 
 ### App package
 
@@ -25,13 +25,16 @@ The app package for Microsoft 365, including Copilot extensions, is a zip file t
 
 :::image type="content" source="assets/images/app-package.png" alt-text="Diagram showing the anatomy of a Microsoft 365 app package: app manifest (.json file) + icons (color and outline .png files) wrapped in a .zip file":::
 
-At minimum, an app package contains an app manifest (`manifest.json`) file and `color.png` and `outline.png` icons. It may also contain manifests for a declarative copilot, API plugin, and localization files for other supported languages.
+At minimum, an app package contains:
+ - the app manifest (`manifest.json`) file,
+ - `color.png` icon, and a
+ - `outline.png` icon
+ 
+It may also contain manifests for a declarative copilot, API plugin, and localization files for other supported languages.
 
 ## App icons
 
 Your app package must include both a color and outline version of your Copilot extension icon, as .png files. These icons have specific size requirements in order to pass store validation.
-
-
 
 TODO INCORPORATE:
 
@@ -84,7 +87,7 @@ Your outline icon:
 
 ## App manifest
 
-The app manifest for Microsoft 365 (previously known as *Teams app manifest*) is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](), however it has since expanded (as of version 1.17) to define apps that run across Microsoft 365 hosts, in addition to Teams.
+The app manifest for Microsoft 365 (previously known as *Teams app manifest*) is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package), however it has since expanded (since version 1.17) to define apps that run across Microsoft 365 hosts, in addition to Teams.
 
 Every app manifest must include the following information:
 
@@ -94,17 +97,14 @@ Every app manifest must include the following information:
 - `icons` - contains paths to the icon files that will be used within the Microsoft 365 application host.
 - Additional elements of your app - manifest sections define the integration points of your app, such as tabs, bots, and message extensions.
 
-For detailed manifest guidance, see the [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) schema documentation.
+For detailed manifest guidance, see the app manifest schema reference for the [developer preview](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) and [latest release](/microsoftteams/platform/resources/schema/manifest-schema) versions.
 
-### Declarative copilot manifest
+## Declarative copilot manifest
 
-PLACEHOLDER for overview on DCs and API Plugins + links to reference docs.
 
-### API plugin manifest
 
-## Localization
+## API plugin manifest
 
-PLACEHOLDER
 
 ## See also
 
