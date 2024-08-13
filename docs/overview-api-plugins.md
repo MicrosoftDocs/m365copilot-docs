@@ -40,17 +40,17 @@ Copilot responds to the user, using the information returned: "The charge of $50
 
 ## Confirming actions
 
-For some actions, you may want the user to confirm the details before making the API call. Plugin developers can assign confirmation dialogs to specific functions. These dialogs are defined using [Adaptive Cards](/adaptive-cards) syntax.
+Copilot asks the user before sending any data to an API plugin.
 
-Take the prompt to charge a budget. To avoid incorrect charges to budgets, a plugin can add a confirmation to that particular function. Copilot will present the dialog with the function parameters it generates, allowing the user to proceed or cancel.
+:::image type="content" source="assets/images/api-plugins/get-always-allow.png" alt-text="A screenshot of a plugin confirmation dialog":::
 
-:::image type="content" source="assets/images/api-plugins/plugin-confirmation.png" alt-text="A screenshot of a plugin confirmation dialog":::
+By default, APIs that only retrieve data give the user an "Always allow" option, while APIs that modify data do not. Plugin developers can override these defaults. For details, see [Confirmation prompts for API plugins for Microsoft Copilot for Microsoft 365](api-plugin-confirmation-prompts.md).
 
 ## Customizing response presentation
 
 Copilot generates conversational responses using data from API responses. Plugins can customize this by providing Adaptive Card templates to display data in a structured way.
 
-:::image type="content" source="assets/images/api-plugins/adaptive-card-response.png" alt-text="A screenshot of an Adaptive Card response from an API plugin":::
+:::image type="content" source="assets/images/api-plugins/adaptive-card-citation.png" alt-text="A screenshot of an Adaptive Card response from an API plugin":::
 
 ## Generating API plugin packages
 
