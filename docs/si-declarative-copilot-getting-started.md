@@ -8,7 +8,9 @@ ms.topic: overview
 
 # Build declarative copilots from Microsoft 365 Admin Center
 
-Graph Connectors are an excellent way to integrate enterprise data with Copilot, including declarative copilots. For enterprises that prefer a tailored approach, Graph Connectors can be used with declarative copilots to enable customized solutions that meet specific business purposes, allowing seamless interaction with business data. The Microsoft 365 Admin Center now allows administrators to create declarative copilots to extend existing Graph Connectors. Administrators can create, edit, and manage their declarative copilots directly from the Microsoft 365 Admin Center.
+Graph Connectors are an excellent way to integrate enterprise data with Copilot, including declarative copilots. For enterprises that prefer a tailored approach, Graph Connectors can be used with declarative copilots to enable customized solutions that meet specific business purposes, allowing seamless interaction with business data.
+
+The Microsoft 365 Admin Center now allows Global Administrators to create declarative copilots to extend existing Graph Connectors. Note that only Global Administrators can create, edit, and manage their declarative copilots directly from the Microsoft 365 Admin Center.
 
 [!INCLUDE [preview-disclaimer-copilot](includes/preview-disclaimer-copilot.md)]
 
@@ -37,7 +39,11 @@ Follow these steps to extend your existing Graph Connectors directly from the Mi
 
     :::image type="content" source="assets/images/extension-ready-si.png" alt-text="A screenshot that shows the Copilot extension panel." lightbox="assets/images/extension-ready-si.png" :::
 
-## Manage Copilot extensions from the Admin Center
+6. Open Copilot for Microsoft 365 to start testing your Copilot extension. In Copilot for Microsoft 365, you can find your Copilot extension under the **Copilot chats and more** section.
+     
+    :::image type="content" source="assets/images/extension-ready-si.png" alt-text="A screenshot that shows the Copilot extension panel." lightbox="assets/images/si-preview.png" :::
+
+## Manage and deploy Copilot extensions from the Admin Center
 
 The administrators can manage the extensions from the **Extensions** tab.
 
