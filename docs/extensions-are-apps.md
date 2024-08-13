@@ -30,7 +30,7 @@ At minimum, an app package contains:
  - `color.png` icon, and a
  - `outline.png` icon
  
-It may also contain manifests for a declarative copilot, API plugin, and localization files for other supported languages.
+The app package can also contain declarative copilot and API plugin definitions, as well as localization files for other supported languages.
 
 ## App icons
 
@@ -91,13 +91,20 @@ The app manifest for Microsoft 365 (previously known as *Teams app manifest*) is
 
 Every app manifest must include the following information:
 
+- `version` - The version number of the app, in the format of MAJOR.MINOR.PATCH ([semver](http://semver.org/) standard)
 - `developer` - contains information about your company like it's name and website url.
 - `name` - contains the name of your app experience, displayed to users in the Microsoft 365 application host.
-- `localizationInfo` - contains information about default language and paths to additional language files.
+- `description` - Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 - `icons` - contains paths to the icon files that will be used within the Microsoft 365 application host.
 - Additional elements of your app - manifest sections define the integration points of your app, such as tabs, bots, and message extensions.
+- `accentColor` - A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.
+- `id` - The unique Microsoft-generated identifier for this app, in GUID form.
+- `developer` - Specifies information about the developer and their business. For apps submitted to AppSource, the value must match the values that you provide in the Partner Center app submission form.
+- PLACEHOLDER for one or more capabilities
 
-For detailed manifest guidance, see the app manifest schema reference for the [developer preview](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) and [latest release](/microsoftteams/platform/resources/schema/manifest-schema) versions.
+TODO example manifest snippet
+
+TODO copilotExtensions explainer
 
 ## Declarative copilot manifest
 
@@ -108,7 +115,7 @@ For detailed manifest guidance, see the app manifest schema reference for the [d
 
 ## See also
 
-- [Plugins and connectors work across Microsoft 365 experiences](ecosystem.md#plugins-and-connectors-work-across-microsoft-365-experiences)
-- [Teams apps across Microsoft 365](/microsoftteams/platform/m365-apps/overview?context=/microsoft-365-copilot/extensibility/context)
+- [App manifest schema reference](microsoftteams/platform/resources/schema/manifest-schema-dev-preview?context=/microsoft-365-copilot/extensibility/context)
+- [App manifest schema reference (Developer preview)](/microsoftteams/platform/resources/schema/manifest-schema?context=/microsoft-365-copilot/extensibility/context)
 - [Manage extensions for Copilot](manage.md)
 - [Publish extensions for Copilot for Microsoft 365](publish.md)
