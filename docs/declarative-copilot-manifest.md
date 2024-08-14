@@ -42,8 +42,8 @@ The declarative copilot manifest object contains the following properties.
 | `description` | String | Required. The description of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. Value must match the `^[A-Za-z0-9]+$` regular expression. |
 | `instructions` | String | Required. The detailed instructions or guidelines on how the declarative copilot should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
 | `capabilities` | Array of [Web search object](#web-search-object) OR [OneDrive and SharePoint object](#onedrive-and-sharepoint-object) OR [Microsoft Graph connectors object](#microsoft-graph-connectors-object) | Optional. Contains an array of objects that define capabilities of the declarative copilot. There MUST NOT be more than five objects in the array. |
-| `conversation_starters` | Array of [Conversation starter object](#conversation-starter-object) | Optional. A list of examples of questions that the declarative copilot can answer. There MUST NOT be more than six objects in the array. |
-| `actions` | Array of [Action object](#action-object) | Optional. A list of objects that identify [API plugins][] that provide actions accessible to the declarative copilot. |
+| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. A list of examples of questions that the declarative copilot can answer. There MUST NOT be more than six objects in the array. |
+| `actions` | Array of [Action object](#actions-object) | Optional. A list of objects that identify [API plugins][] that provide actions accessible to the declarative copilot. |
 
 ### Example of Declarative Copilot Manifest object
 
@@ -148,10 +148,10 @@ The OneDrive and SharePoint object contains the following properties:
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `name` | String | Required. Must be set to `OneDriveAndSharePoint`. |
-| `items_by_sharepoint_ids` | Array of [SharePoint identifier object](#sharepoint-identifier-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. |
-| `items_by_url` | Array of [SharePoint URL object](#sharepoint-url-object) | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. |
+| `items_by_sharepoint_ids` | Array of [Items by SharePoint Ids object](#items-by-sharepoint-ids-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. |
+| `items_by_url` | Array of [Items by URL object](#items-by-url-object) | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. |
 
-#### Items by Sharepoint Ids Object
+#### Items by SharePoint Ids Object
 
 `items_by_sharepoint_ids` is a JSON array. Each JSON object within the array contains the following properties.
 
@@ -216,7 +216,7 @@ The conversation starter object contains the following properties:
 | `text` | String | Required. A suggestion that the user can use to obtain the desired result from the DC. It MUST contain at least one nonwhitespace character. |
 | `title` | String | Optional. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
 
-## Action object
+## Actions object
 
 Actions are an optional JSON object in the manifest. It acts as a developer input and can be considered as plugins.
 
