@@ -1,10 +1,10 @@
 ---
 title: Your extensibility options for Microsoft Copilot
-description: Understand which type of Microsoft Copilot for Microsoft 365 plugin or connector works best for you
+description: Understand which type of Microsoft 365 Copilot extensions works best for you
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 08/12/2024
+ms.date: 08/16/2024
 ---
 
 # Your extensibility options for Microsoft 365 Copilot
@@ -48,9 +48,9 @@ Here's your first decision-making point; extending Copilot to leverage the model
 
 Okay, you want to leverage the Copilot orchestrator. Now, let's have a quick grasp of Microsoft Copilot—**Microsoft Copilot** is available for end-users across multiple Microsoft products, including: Microsoft 365 (Office) app, Teams, Outlook, PowerPoint, Word, Excel, Power Apps, Power Automate, Power Virtual Agents, Power Pages, and Dynamics 365.
 
-And **Copilot for Microsoft 365** is available as "Work" profile with Copilot for Microsoft 365 subscription, designed for enterprise users to enhance productivity within Microsoft 365 applications.
+And **Microsoft 365 Copilot** is available as "Work" profile with Microsoft 365 Copilot subscription, designed for enterprise users to enhance productivity within Microsoft 365 applications.
 
-By **extending Copilot for Microsoft 365** for enterprise users,
+By **extending Microsoft 365 Copilot** for enterprise users,
 
 - Your service can be a part of the Microsoft ecosystem, enabling your users to benefit from the user experience of Microsoft products and allowing you to reach millions of users
 - You can build an AI solutions for organizations to boost employee productivity across businesses
@@ -66,7 +66,7 @@ Now, it’s important to understand the variety of methods available for applyin
 
 > [!VIDEO https://www.youtube.com/embed/ILPOhVz9OdI]
 
-There are two distinct extension interfaces for Microsoft Copilot for end-users: standalone plugins that connect REST APIs, and declarative copilots. As an analogy, you can view Microsoft Copilot as something like an operating system, where plugins are services, and declarative copilots are apps. 
+From an end-user perspective, Microsoft Copilot offers two distinct extension interfaces: standalone plugins and declarative copilots. Standalone plugins connect REST APIs directly within the context of your tasks, while declarative copilots function like apps. Think of Microsoft Copilot as an operating system, where plugins act as services, and declarative copilots serve as applications.
 
 Now, let's find out which extensibility options are for you—
 
@@ -81,7 +81,7 @@ To customize Microsoft Copilot to create a specific copilot for particular tasks
 When & why to use Declarative copilots:
 
 - Scenario that requires ​focus or specialization
-- Layer on top of the full capability ​of Copilot for Microsoft 365 ​
+- Layer on top of the full capability ​of Microsoft 365 Copilot​
 - Target specific roles or areas ​in organization, such as HR, Sales, and Finance
 - Scope to specific data sources including domain knowledge​
 - Custom instructions to enable nuanced interpretation of data received from sources like plugins​
@@ -130,7 +130,7 @@ With Azure AI services, you can craft a custom AI chatbot for Teams and Microsof
 
 ### How does it differ from Copilot extensions for Microsoft 365?
 
-In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the **Copilot extensibility** options (Graph connectors, plugins, and declarative copilots, which can connect to Graph connectors and plugins) and the **custom engine copilot**:
+In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the **extensions** (Graph connectors, plugins, and declarative copilots, which can connect to Graph connectors and plugins) and the **custom engine copilot**:
 
 :::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilots for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
