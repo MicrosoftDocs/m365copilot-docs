@@ -10,7 +10,7 @@ ms.topic: overview
 
 Graph Connectors are an excellent way to integrate enterprise data with Copilot, including declarative copilots. For enterprises that prefer a tailored approach, Graph Connectors can be used with declarative copilots to enable customized solutions that meet specific business purposes, allowing seamless interaction with business data.
 
-The Microsoft 365 Admin Center now allows Global Administrators to create declarative copilots to extend existing Graph Connectors. Note that only Global Administrators can create, edit, and manage their declarative copilots directly from the Microsoft 365 Admin Center.
+The Microsoft 365 Admin Center now allows Global Administrators to create declarative copilots to extend existing Graph Connectors. Only Global Administrators can create, edit, and manage their declarative copilots directly from the Microsoft 365 Admin Center.
 
 [!INCLUDE [preview-disclaimer-copilot](includes/preview-disclaimer-copilot.md)]
 
@@ -24,7 +24,7 @@ Follow these steps to extend your existing Graph Connectors directly from the Mi
 
     :::image type="content" source="assets/images/search-intelligence-page.png" alt-text="A screenshot that shows Search and intelligence page in the Admin Center." lightbox="assets/images/search-intelligence-page.png" :::
 
-4. Provide the following fields to create the Copilot extension and select **Create**:
+4. Provide the following mandatory fields to create the Copilot extension and select **Create**. Make sure to stay in the character limits to be able to successfully create the Copilot extension:
 
     - **Add connections:** An existing Graph Connector that is the data source of the extension.
     - **Change Icon:** Symbol-based icons representing the theme or function of the Copilot extension.
