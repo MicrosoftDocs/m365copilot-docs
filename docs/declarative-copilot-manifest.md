@@ -157,10 +157,10 @@ The OneDrive and SharePoint object contains the following properties:
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `site_id` | String | Optional. The GUID identifier of a SharePoint or OneDrive site. |
-| `web_id` | String | Optional. The GUID identifier of a SharePoint or OneDrive web. |
-| `list_id` | String | Optional. The GUID identifier of a SharePoint or OneDrive list. |
-| `unique_id` | String | Optional. The GUID identifier of a SharePoint or OneDrive. |
+| `site_id` | String | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
+| `web_id` | String | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
+| `list_id` | String | Optional. A unique GUID identifier for a list within a SharePoint or OneDrive site. |
+| `unique_id` | String | Optional. A unique GUID identifier used to represent a specific entity or resource. |
 
 #### Items by URL Object
 
