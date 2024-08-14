@@ -40,26 +40,110 @@ The declarative copilot manifest object contains the following properties.
 | `id` | String | Optional. |
 | `name` | String | Required. The name of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. Value must match the `^[A-Za-z0-9]+$` regular expression. |
 | `description` | String | Required. The description of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. Value must match the `^[A-Za-z0-9]+$` regular expression. |
-| `instructions` | String | Optional. The detailed instructions or guidelines on how the declarative copilot should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
+| `instructions` | String | Required. The detailed instructions or guidelines on how the declarative copilot should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
 | `capabilities` | Array of [Web search object](#web-search-object) OR [OneDrive and SharePoint object](#onedrive-and-sharepoint-object) OR [Microsoft Graph connectors object](#microsoft-graph-connectors-object) | Optional. Contains an array of objects that define capabilities of the declarative copilot. There MUST NOT be more than five objects in the array. |
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starter-object) | Optional. A list of examples of questions that the declarative copilot can answer. There MUST NOT be more than six objects in the array. |
 | `actions` | Array of [Action object](#action-object) | Optional. A list of objects that identify [API plugins][] that provide actions accessible to the declarative copilot. |
+
+### Example of Declarative Copilot Manifest object
+
+The following example of required fields within a Copilot Declarative Copilot manifest:
+
+```json
+{
+    "name" : "Repairs DC",
+    "description": "This DC is meant to help track any tickets and repairs",
+    "instructions": "This DC needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
+}
+```
+## Capabilities Type
+
+Capabilities is an optional JSON object in the manifest that can support built in capabilities to extend the knowledge within your Declarative Copilot. It has a member called `name` that is required. The `name` member MUST be one of the following values:
+
+| Value | Details |
+|---|---|
+| WebSearch | Enables capability to search the Web for relevant content |
+| GraphicArt | Enables capability to create images and art based on the text input from the user|  
+| CodeInterpreter | Enables capability to generate and execute code. | 
+| OneDriveAndSharePoint |  Enables capability to search a user's SharePoint and OneDrive for grounding info. |
+| GraphConnector | Enables capability to search for selected graph connectors for grounding info.|
+
+### Example of Capabilities 
+
+```json
+{
+    "capabilities": [
+        {
+            "name": "WebSearch"
+        },
+        {
+            "name": "GraphicArt"
+        },
+        {
+            "name": "CodeInterpreter"
+        },
+        {
+            "name": "OneDriveAndSharePoint",
+            "items_by_sharepoint_ids": [
+                {
+                    "site_id": "bc54a8cc-8c2e-4e62-99cf-660b3594bbfd",
+                    "web_id": "a5377427-f041-49b5-a2e9-0d58f4343939",
+                    "list_id": "78A4158C-D2E0-4708-A07D-EE751111E462",  
+                    "unique_id": "304fcfdf-8842-434d-a56f-44a1e54fbed2"
+                }
+             ],
+             "items_by_url": [ {
+                    "url": "https://microsoft.sharepoint-df.com/teams/taiger/Documents/Folders1"
+                } 
+             ]
+        },
+        {
+            "name": "GraphConnectors",
+            "connections": [
+                {
+                    "connection_id": "jiraTickets"
+                }
+            ]
+        }
+    ]
+}
+```
 
 ### Web search object
 
 Indicates that the declarative copilot can search the web for grounding information.
 
-The web search object contains the following properties.
+The web search object contains the following properties:
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `name` | String | Required. Must be set to `WebSearch`. |
 
+### Graphic Art object
+
+Indicates that the declarative copilot can create images and art based on the text input from the user.
+
+The graphic art object contains the following properties:
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `name` | String | Required. Must be set to `GraphicArt`. |
+
+### Code Interpreter object 
+
+Indicates that the declarative copilot can generate and execute code.
+
+The code interpreter object contains the following properties:
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `name` | String | Required. Must be set to `CodeInterpreter`. |
+
 ### OneDrive and SharePoint object
 
 Indicates that the declarative copilot can search a user's SharePoint and OneDrive for grounding information.
 
-The OneDrive and SharePoint object contains the following properties.
+The OneDrive and SharePoint object contains the following properties:
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
@@ -67,86 +151,37 @@ The OneDrive and SharePoint object contains the following properties.
 | `items_by_sharepoint_ids` | Array of [SharePoint identifier object](#sharepoint-identifier-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. |
 | `items_by_url` | Array of [SharePoint URL object](#sharepoint-url-object) | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. |
 
-### Microsoft Graph connectors object
+#### Items by Sharepoint Ids Object
 
-Indicates that the declarative copilot can search selected Microsoft Graph connectors for grounding information.
-
-The microsoft graph connectors object contains the following properties.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `name` | String | Required. Must be set to `GraphConnectors`. |
-| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Microsoft Graph connectors available to the declarative copilot. |
-
-### Conversation starter object
-
-Contains hints that are displayed to the user to demonstrate how they can get started using the declarative copilot.
-
-The conversation starter object contains the following properties.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `text` | String | Required. A suggestion that the user can use to obtain the desired result from the DC. It MUST contain at least one nonwhitespace character. |
-| `title` | String | Optional. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
-
-### Action object
-
-Identifies an API plugin manifest for a plugin used as an action by the declarative copilot.
-
-The action object contains the following properties.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `id` | String | Required. A unique identifier for the action. It MAY be represented by a GUID. |
-| `file` | String | Required. A path to the API plugin manifest for this action. |
-
-### SharePoint identifier object
-
-Contains one or more object identifiers that identify a SharePoint or OneDrive resource.
-
-The SharePoint identifier object contains the following properties.
+`items_by_sharepoint_ids` is a JSON array. Each JSON object within the array contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `site_id` | String | Optional. The GUID identifier of a SharePoint or OneDrive site. |
 | `web_id` | String | Optional. The GUID identifier of a SharePoint or OneDrive web. |
 | `list_id` | String | Optional. The GUID identifier of a SharePoint or OneDrive list. |
-| `unique_id` | String | Optional. The GUID identifier of a SharePoint or OneDrive ???. |
+| `unique_id` | String | Optional. The GUID identifier of a SharePoint or OneDrive. |
 
-### SharePoint URL object
+#### Items by URL Object
 
-Represents the URL of a SharePoint or OneDrive resource.
-
-The SharePoint url object contains the following properties.
+`items_by_url` is a JSON array. Each JSON object within the array contains the following properties: 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `url` | String | Optional. An absolute URL to a SharePoint or OneDrive resource. |
 
-### File object
+### Microsoft Graph Connectors object
 
-Describes a file.
+Indicates that the Declarative Copilot can search selected Microsoft Graph Connectors for grounding information.
 
-The file object contains the following properties.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `site_id` | String | Optional. |
-| `web_id` | String | Optional. |
-| `list_id` | String | Optional. |
-| `unique_id` | String | Optional. |
-| `file_name` | String | Optional. |
-
-### Site object
-
-The site object contains the following properties.
+The Microsoft Graph Connectors object contains the following properties:
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `path` | String | Required. |
-| `site_name` | String | Required. |
+| `name` | String | Required. Must be set to `GraphConnectors`. |
+| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Microsoft Graph connectors available to the Declarative Copilot. |
 
-### Connection object
+#### Connection object
 
 Identifies a Microsoft Graph connector.
 
@@ -158,7 +193,53 @@ The connection object contains the following properties.
 
 [api plugins]: api-plugin-manifest.md
 
-## Example
+## Conversation Starters object
+
+Conversation Starters is an optional JSON object in the manifest. It contains hints that are displayed to the user to demonstrate how they can get started using the Declarative Copilot.
+
+### Example of Conversation Starters 
+
+```json
+{
+    "conversation_starters": [{ 
+        "title": "My Open Repairs",
+        "text": "What open repairs are assigned to me?" 
+    }],
+}
+```
+### Conversation Starters Properties 
+
+The conversation starter object contains the following properties:
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `text` | String | Required. A suggestion that the user can use to obtain the desired result from the DC. It MUST contain at least one nonwhitespace character. |
+| `title` | String | Optional. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
+
+## Action object
+
+Actions are an optional JSON object in the manifest. It acts as a developer input and can be considered as plugins.
+
+### Example of Actions Object
+
+``` json
+{
+    "actions": [{  
+        "id": "repairsPlugin",   
+        "file": "plugin.json" 
+    }] 
+}
+```
+### Actions Properties
+
+The action object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `id` | String | Required. A unique identifier for the action. It MAY be represented by a GUID. |
+| `file` | String | Required. A path to the API plugin manifest for this action. |
+
+## Declarative Copilot Manifest Example
 
 Here's an example of a DC manifest file that uses most of the manifest members and object properties described in the article:
 
