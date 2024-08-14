@@ -49,6 +49,8 @@
     href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
   - name: API limits
     href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
+  - name: Learning path
+    href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
 - name: Add skills with plugins
   expanded: true
   items:
