@@ -161,7 +161,7 @@ Here's an example that references both a declarative copilot and API plugin:
 
 You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience. Referencing your API plugin from the app manifest root enables it for use more broadly in the base mode Microsoft 365 Copilot chat experience.
 
-:::image type="content" source="" alt-text="Diagram showing that declarative copilot and API plugin definition files are referenced from the app manifest file. You can also reference an API plugin from a declarative copilot manifest.":::
+PLACEHOLDER FOR IMAGE: Diagram showing that declarative copilot and API plugin definition files are referenced from the app manifest file. You can also reference an API plugin from a declarative copilot manifest.
 
 Please note the following:
 
