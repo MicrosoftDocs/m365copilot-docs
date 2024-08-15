@@ -39,7 +39,7 @@ Your app package must include both a color and outline version of your Copilot e
 
 ### Color icon
 
-The color icon represents your Copilot extension within the Microsoft Copilot UI and in-product (Teams, Outlook, Microsoft 365) app stores.
+The color icon represents your extension within the Microsoft Copilot UI and in-product (Teams, Outlook, Microsoft 365) app stores.
 
 :::row:::
 :::column:::
@@ -83,24 +83,74 @@ Your outline icon:
 
 ## App manifest
 
-The app manifest for Microsoft 365 (previously known as *Teams app manifest*) is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package), however it has since expanded (since version 1.17) to define apps that run across Microsoft 365 hosts, in addition to Teams.
+The app manifest for Microsoft 365 is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package), however it has since expanded (since version 1.17) to define apps that run across Microsoft 365 hosts, in addition to Teams.
+
+If you're using Microsoft Copilot Studio to build a declarative copilot, the app manifest will be generated for you based on the info you provide during the creation process.
 
 Every app manifest must include the following information:
 
-- `version` - The version number of the app, in the format of MAJOR.MINOR.PATCH ([semver](http://semver.org/) standard)
-- `developer` - contains information about your company like it's name and website url.
-- `name` - contains the name of your app experience, displayed to users in the Microsoft 365 application host.
-- `description` - Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
-- `icons` - contains paths to the icon files that will be used within the Microsoft 365 application host.
-- Additional elements of your app - manifest sections define the integration points of your app, such as tabs, bots, and message extensions.
-- `accentColor` - A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.
-- `id` - The unique Microsoft-generated identifier for this app, in GUID form.
-- `developer` - Specifies information about the developer and their business. For apps submitted to AppSource, the value must match the values that you provide in the Partner Center app submission form.
-- PLACEHOLDER for one or more capabilities
+| Manifest field | Description |
+|--|--|
+| [version](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#version?context=/microsoft-365-copilot/extensibility/context)| The version number of the app, in the format of MAJOR.MINOR.PATCH ([semver](http://semver.org/) standard). |
+| [id](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#id?context=/microsoft-365-copilot/extensibility/context) | The unique generated identifier for this app from Microsoft Application Registration Portal ([apps.dev.microsoft.com](https://apps.dev.microsoft.com/)), in GUID form. |
+| [developer](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#developer?context=/microsoft-365-copilot/extensibility/context) | Information about the developer, including name, website, and links to privacy policy and terms of use. For apps submitted to AppSource, values must match the value provided in the Partner Center app submission form.
+| [name](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#name?context=/microsoft-365-copilot/extensibility/context) | The name of your app, as displayed to end-users within the application host.|
+| [description](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#description?context=/microsoft-365-copilot/extensibility/context) | Short and long descriptions of your app for users. For apps submitted to AppSource, these values must match the information in your AppSource entry.|
+| [icons](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#icons?context=/microsoft-365-copilot/extensibility/context) | Relative paths to color and outline icon files.|
+| [accentColor](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#accentColor?context=/microsoft-365-copilot/extensibility/context) | A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.|
+| *Definitions for specific app capabilities* | A definition for each app capability, such as personal tabs ([staticTabs](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#staticTabs?context=/microsoft-365-copilot/extensibility/context)), message extensions ([composeExtensions](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeExtensions?context=/microsoft-365-copilot/extensibility/context)), or [bots](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#bots?context=/microsoft-365-copilot/extensibility/context). Declarative copilots and API plugins are defined under the [copilotExtensions](#copilotextensions-definitions) node.
 
-TODO example manifest snippet
+Here's an example app manifest that defines a declarative copilot and an API plugin:
 
-TODO copilotExtensions explainer
+```json
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.18/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.18",
+    "version": "1.0.0",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "developer": {
+        "name": "Northwind Traders",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/termofuse",
+        "termsOfUseUrl": "https://www.example.com/privacy"
+    },
+    "icons": {
+        "color": "Northwind-Logo-196.png",
+        "outline": "Northwind-Logo-32.png"
+    },
+    "name": {
+        "short": "Northwind Inventory",
+        "full": "Northwind Inventory App"
+    },
+    "description": {
+        "short": "App allows you to find and update product inventory information",
+        "full": "Northwind Inventory is the ultimate tool for managing your product inventory. With its intuitive interface and powerful features, you'll be able to easily find your products by name, category, inventory status, and supplier city. You can also update inventory information with the app."
+    },
+    "accentColor": "#3690E9",
+    "copilotExtensions": {
+        "declarativeCopilots": [
+            {
+                "id": "copilot1",
+                "file": "declarativeCopilot1.json"
+            }
+        ],
+        "plugins": [
+            {
+                "id": "plugin1",
+                "file": "plugin1.json"
+            }
+        ]
+    }
+}
+```
+
+### `copilotExtensions` definitions
+
+Declarative copilots and API plugins each have their own definition schemas. These definition files are referenced from the `copilotExtensions` object.
+
+You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience.
+
+
 
 ## Declarative copilot manifest
 
