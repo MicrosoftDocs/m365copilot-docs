@@ -140,8 +140,6 @@ Here's an example app manifest with placholder sections at the end for message e
 
 Declarative copilots and API plugins each have their own definition schemas. These definition files, along with unique IDs, are referenced from the `copilotExtensions` object of the app manifest. 
 
-:::image type="content" source="" alt-text="Diagram showing that declarative copilot and API plugin definition files are referenced from the app manifest file.":::
-
 Here's an example that references both a declarative copilot and API plugin:
 
 ```json
@@ -161,13 +159,15 @@ Here's an example that references both a declarative copilot and API plugin:
     },
 ```
 
+You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience. Referencing your API plugin from the app manifest root enables it for use more broadly in the base mode Microsoft 365 Copilot chat experience.
+
+:::image type="content" source="" alt-text="Diagram showing that declarative copilot and API plugin definition files are referenced from the app manifest file. You can also reference an API plugin from a declarative copilot manifest.":::
+
 Please note the following:
 
 - Currently only one declarative copilot definition and one API plugin definition is supported per app manifest.
 
 - When using Copilot Studio to build Copilot extensions, a unique `id` will be generated for each, as part of the overall app manifest generation. When building extensions with Teams Toolkit or your own IDE, you assign the `id` yourself, according to your own conventions or friendly name.
-
-You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience. Referencing your API plugin from the app manifest root enables it for use more broadly in the base mode Microsoft 365 Copilot chat experience.
 
 ## Declarative copilot manifest
 
