@@ -129,7 +129,7 @@ Here's an example app manifest with placholder sections at the end for message e
     "accentColor": "#3690E9",
     "composeExtensions": {
         ...
-    }
+    },
     "copilotExtensions": {
         ...
     }
