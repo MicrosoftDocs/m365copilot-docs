@@ -23,26 +23,23 @@ The Microsoft 365 ecosystem is evolving into an integrated app platform, where y
 
 The app package for Microsoft 365, including Copilot extensions, is a zip file that contains one or more configuration (manifest) files and your app icons. Your app logic and data storage are hosted elsewhere and accessed by the Microsoft 365 host application via HTTPS. You'll submit the app package to your admin to publish to your organization or to Partner Center to publish to Microsoft AppSource.
 
-:::image type="content" source="assets/images/app-package.png" alt-text="Diagram showing the anatomy of a Microsoft 365 app package: app manifest (.json file) + icons (color and outline .png files) wrapped in a .zip file":::
-
 At minimum, an app package contains:
- - the app manifest (`manifest.json`) file,
- - `color.png` icon, and a
- - `outline.png` icon
- 
+
+ - the **app manifest** (`manifest.json`), which describes app configuration, capabilities, required resources, and important attributes,
+ - a **large color icon** (`color.png`), a full-color 92x92 icon to disply your extension in the Microsoft Copilot UI and store, and
+ - a **small outline icon** (`outline.png`), a 32x32 icon with transparent background (not currently used in Copilot, but required to pass validation)
+
 The app package can also contain declarative copilot and API plugin definitions, as well as localization files for other supported languages.
+
+:::image type="content" source="assets/images/app-package.png" alt-text="Diagram showing the anatomy of a Microsoft 365 app package: app manifest (.json file) + icons (color and outline .png files) wrapped in a .zip file":::
 
 ## App icons
 
 Your app package must include both a color and outline version of your Copilot extension icon, as .png files. These icons have specific size requirements in order to pass store validation.
 
-TODO INCORPORATE:
-
-According to the current implementation, usually the small and large icon are set as the same. But in some cases, depending on the ingestion source the field might be overridden. Anyhow, in case of BizChat Extensibility, the field "outline" in the manifest will be set as small icon and used in the BizChat UX.
-
 ### Color icon
 
-The color version of your icon displays in each Microsoft 365 host application's app store.
+The color icon represents your Copilot extension within the Microsoft Copilot UI and in-product (Teams, Outlook, Microsoft 365) app stores.
 
 :::row:::
 :::column:::
@@ -51,7 +48,6 @@ The color version of your icon displays in each Microsoft 365 host application's
 
 :::column-end:::
 :::column span="2":::
-
 
 Your color icon:
 
@@ -63,9 +59,10 @@ Your color icon:
 :::column-end:::
 :::row-end:::
 
+
 ### Outline icon
 
-The outline version of your icon displays when your tab app is in use or pinned to the app bar of its Microsoft 365 host application.
+The outline icon is used to represent pinned and/or active apps on the Teams app bar. It's not currently used for Copilot extensions, but still required in order for the app package to pass validation.
 
 :::row:::
 :::column:::
@@ -83,7 +80,6 @@ Your outline icon:
 
 :::column-end:::
 :::row-end:::
-
 
 ## App manifest
 
