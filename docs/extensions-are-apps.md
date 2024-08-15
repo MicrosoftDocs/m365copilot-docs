@@ -100,7 +100,7 @@ Every app manifest must include the following information:
 | [accentColor](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#accentColor?context=/microsoft-365-copilot/extensibility/context) | A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.|
 | *Definitions for specific app capabilities* | A definition for each app capability, such as personal tabs ([staticTabs](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#staticTabs?context=/microsoft-365-copilot/extensibility/context)), message extensions ([composeExtensions](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeExtensions?context=/microsoft-365-copilot/extensibility/context)), or [bots](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#bots?context=/microsoft-365-copilot/extensibility/context). Declarative copilots and API plugins are defined under the [copilotExtensions](#copilotextensions-definitions) node.
 
-Here's an example app manifest that defines a declarative copilot and an API plugin:
+Here's an example app manifest with placholder sections at the end for message extension and copilot extension app capabilities:
 
 ```json
 {
@@ -127,6 +127,24 @@ Here's an example app manifest that defines a declarative copilot and an API plu
         "full": "Northwind Inventory is the ultimate tool for managing your product inventory. With its intuitive interface and powerful features, you'll be able to easily find your products by name, category, inventory status, and supplier city. You can also update inventory information with the app."
     },
     "accentColor": "#3690E9",
+    "composeExtensions": {
+        ...
+    }
+    "copilotExtensions": {
+        ...
+    }
+}
+```
+
+### `copilotExtensions` definitions
+
+Declarative copilots and API plugins each have their own definition schemas. These definition files, along with unique IDs, are referenced from the `copilotExtensions` object of the app manifest. 
+
+:::image type="content" source="" alt-text="Diagram showing that declarative copilot and API plugin definition files are referenced from the app manifest file.":::
+
+Here's an example that references both a declarative copilot and API plugin:
+
+```json
     "copilotExtensions": {
         "declarativeCopilots": [
             {
@@ -140,24 +158,28 @@ Here's an example app manifest that defines a declarative copilot and an API plu
                 "file": "plugin1.json"
             }
         ]
-    }
-}
+    },
 ```
 
-### `copilotExtensions` definitions
+Please note the following:
 
-Declarative copilots and API plugins each have their own definition schemas. These definition files are referenced from the `copilotExtensions` object.
+- Currently only one declarative copilot definition and one API plugin definition is supported per app manifest.
 
-You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience.
+- When using Copilot Studio to build Copilot extensions, a unique `id` will be generated for each, as part of the overall app manifest generation. When building extensions with Teams Toolkit or your own IDE, you assign the `id` yourself, according to your own conventions or friendly name.
 
-
+You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience. Referencing your API plugin from the app manifest root enables it for use more broadly in the base mode Microsoft 365 Copilot chat experience.
 
 ## Declarative copilot manifest
 
+The declarative copilot manifest includes instructions for Copilot responses, conversation starter sample prompts, data sources used for grounding, and a list of actions (API plugin skills) the copilot is able to perform.
 
+To learn more, see [Declarative copilot manifest schema for Microsoft 365 Copilot](declarative-copilot-manifest.md).
 
 ## API plugin manifest
 
+The API plugin manifest describes the plugin's capabilities, including the the APIs it supports and the operations it can perform. It also includes metadata such as name, description, version, and a reference to the OpenAPI definition of the REST APIs with which it interacts.
+
+To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest.md).
 
 ## See also
 
