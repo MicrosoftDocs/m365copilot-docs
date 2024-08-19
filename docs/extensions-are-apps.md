@@ -26,7 +26,7 @@ The app package for Microsoft 365, including Copilot extensions, is a zip file t
 At minimum, an app package contains:
 
  - the **app manifest** (`manifest.json`), which describes app configuration, capabilities, required resources, and important attributes,
- - a **large color icon** (`color.png`), a full-color 92x92 icon to disply your extension in the Microsoft Copilot UI and store, and
+ - a **large color icon** (`color.png`), a full-color 92x92 icon to display your extension in the Microsoft Copilot UI and store, and
  - a **small outline icon** (`outline.png`), a 32x32 icon with transparent background (not currently used in Copilot, but required to pass validation)
 
 The app package can also contain declarative copilot and API plugin definitions, as well as localization files for other supported languages.
