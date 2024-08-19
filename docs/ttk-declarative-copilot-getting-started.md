@@ -46,7 +46,7 @@ Set the environment variable **TEAMSFX_DECLARATIVE_COPILOT** and **KIOTA_CONFIG_
 
 #### [Windows](#tab/windows)
 
-Open a PowerShell terminal - for example Windows PowerShell - and run the following commands.
+Open a PowerShell terminal and run the following commands.
 
 ```powershell
 [Environment]::SetEnvironmentVariable("TEAMSFX_DECLARATIVE_COPILOT", 'true', "User")
