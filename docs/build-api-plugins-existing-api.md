@@ -45,7 +45,7 @@ API plugins are a ZIP file that contains the following files.
 
     :::image type="content" source="assets/images/api-plugins/create-plugin-ttk.png" alt-text="A screenshot of the Teams Toolkit interface":::
 
-1. Select **API Plugin**.
+1. Select **Copilot Extension**, then select **API Plugin**.
 
 1. Select **Start with an OpenAPI Description Document**.
 
@@ -60,6 +60,13 @@ API plugins are a ZIP file that contains the following files.
 1. Enter `Budget Tracker` as a name for the plugin.
 
 Once you complete these steps, Teams Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded.
+
+> [!NOTE]
+> If your identity server requires Proof Key for Code Exchange (PKCE), uncomment the following line in **teamsapp.yml** in the API plugin project.
+>
+> ```yml
+> # isPKCEEnabled: true
+> ```
 
 ### [Kiota](#tab/kiota)
 

@@ -24,7 +24,7 @@ ms.topic: how-to
 
     :::image type="content" source="assets/images/api-plugins/create-plugin-ttk.png" alt-text="A screenshot of the Teams Toolkit interface":::
 
-1. Select **API Plugin**.
+1. Select **Copilot Extension**, then select **API Plugin**.
 
 1. Select **Start with a new API**.
 
