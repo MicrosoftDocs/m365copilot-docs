@@ -84,6 +84,8 @@
       href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
     - name: Prompts
       href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+    - name: Learning path
+      href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
   - name: Debug with developer mode in Copilot
     href: debugging-copilot-plugin.md
 - name: Build your own copilot
