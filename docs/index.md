@@ -52,7 +52,7 @@ There are several ways you can extend Copilot for Microsoft 365.
 Graph connectors increase the discoverability and engagement of your enterprise data by deeply integrating your data into the Copilot for Microsoft 365 experience. With Graph connectors, you can:
 
 - **Make the most of your external data** by giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights
-- **Use Copilot as a research aid**, letting Copilot find, summarize, and perform Q&A natively by leveraging the dataset of your choice
+- **Use Copilot as a research aid**, letting Copilot find, summarize, and perform Q&A natively by using the dataset of your choice
 - **Surface the intelligence of Copilot** in Microsoft Search, ContextIQ, and more to enhance the ways your users are already searching for answers
 
 There are three main steps to set up a Graph connector: (1) Create a connection, (2) Register your schema, and then (3) Ingest your content to the Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in the Microsoft 365 (Office) app. Learn more about [how Graph connectors work in Copilot](overview-graph-connector.md) and [best practices for configuration](overview-graph-connector.md#configuring-your-custom-microsoft-graph-connection-for-copilot-for-microsoft-365).
