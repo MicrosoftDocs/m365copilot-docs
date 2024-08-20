@@ -31,7 +31,7 @@ At minimum, an app package contains:
 
 The app package can also contain declarative copilot and API plugin definitions, as well as localization files for other supported languages.
 
-:::image type="content" source="assets/images/app-package.png" border="false" alt-text="Diagram showing the anatomy of a Microsoft 365 app package: app manifest (.json file) + icons (color and outline .png files) wrapped in a .zip file":::
+:::image type="content" source="assets/images/app-package.png" alt-text="Diagram showing the anatomy of a Microsoft 365 app package: app manifest (.json file) + icons (color and outline .png files) wrapped in a .zip file" border="false":::
 
 ## App icons
 
@@ -161,7 +161,7 @@ Here's an example that references both a declarative copilot and API plugin:
 
 You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience. Referencing your API plugin from the app manifest root enables it for use more broadly in the base mode Microsoft 365 Copilot chat experience.
 
-:::image type="content" border="false" source="assets/images/app-manifest-extensions.png" alt-text="Diagram showing app manifest referencing a declarative copilot manifest and API plugin manifest. The declarative copilot manifest references another API plugin manifest":::
+:::image type="content" source="assets/images/app-manifest-extensions.png" alt-text="Diagram showing app manifest referencing a declarative copilot manifest and API plugin manifest. The declarative copilot manifest references another API plugin manifest" border="false":::
 
 Please note the following:
 
