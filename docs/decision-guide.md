@@ -83,7 +83,7 @@ And there are the growing number of extensions you build. Your options include:
 
 Your journey vary based on your desired outcomes and your coding expertise. Whether you’re a seasoned coder or prefer low-code or no-code solutions, there’s a suite of tools tailored to your development style.
 
-How you build and which tools you should use is up to you. Your choices are:
+How you build and which tools you must use is up to you. Your choices are:
 
 - 🎯 **Pro-code** options are declarative copilots, API plugins, message extensions, and Graph connectors. [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) would be your best friend for the development to tailor your copilots.
 
@@ -140,7 +140,7 @@ Building custom engine copilot is an excellent choice if:
 
 ### Tool options: Pro-code or low-code?
 
-How you build and which tools you should use is up to you. Your choices are:
+How you build and which tools you must use is up to you. Your choices are:
 
 - 🎯 **Pro-code**: If you prefer coding for full customization, use **Teams AI Library** with [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 

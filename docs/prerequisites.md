@@ -56,7 +56,7 @@ To create conversational and AI plugins that your end users can use in their cha
 - [Licenses for Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/overview-business-applications#get-copilot-for-microsoft-365-licenses-and-enable-plugins).
 - Your Microsoft 365 tenant admin to [deploy the Dynamics 365 and Copilot Studio app in the Microsoft 365 admin center](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-microsoft-copilot-studio-app-admin).
 
-For details see: [Create and configure copilot plugins with Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview#prerequisites).
+For more information, see: [Create and configure copilot plugins with Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview#prerequisites).
 
 #### Requirements for Teams message extension development
 

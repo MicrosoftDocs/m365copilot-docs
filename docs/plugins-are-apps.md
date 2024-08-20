@@ -34,11 +34,11 @@ The Teams app platform has been expanding into the Microsoft 365 ecosystem. Team
 - [Meeting extensions](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings) that provide a way for apps to make meetings more productive.
 - [Outlook add-ins](/microsoftteams/platform/m365-apps/combine-office-add-in-and-teams-app), which are web apps that extend the functionality of Outlook.
 
-Particularly relevant for Copilot extensibility are message extensions. [Message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) enable user to engage with your web services through buttons and forms within the Microsoft Teams client and are also one of the options for creating a plugin for Copilot for Microsoft 365. For details about extending Teams apps across Microsoft 365 and support of Teams app platform elements across Microsoft 365 application hosts (including Teams, Outlook, and Microsoft 365 app) see the [Teams extensibility overview](/microsoftteams/platform/m365-apps/overview).
+Particularly relevant for Copilot extensibility are message extensions. [Message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) enable user to engage with your web services through buttons and forms within the Microsoft Teams client and are also one of the options for creating a plugin for Copilot for Microsoft 365. For details about extending Teams apps across Microsoft 365 and support of Teams app platform elements across Microsoft 365 application hosts (including Teams, Outlook, and Microsoft 365 app) see [Teams extensibility overview](/microsoftteams/platform/m365-apps/overview).
 
 #### App package and manifest
 
-When a user installs your app, they install an app package that contains only a configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such as on localhost during development and Microsoft Azure in production. The package itself is essentially just a zip file. For additional information about packages, see the [Teams app package](/microsoftteams/platform/concepts/build-and-test/apps-package) article.
+When a user installs your app, they install an app package that contains only a configuration file (previously called Teams app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such as on localhost during development and Microsoft Azure in production. The package itself is essentially just a zip file. For more information, see [Teams app package](/microsoftteams/platform/concepts/build-and-test/apps-package).
 
 Using an app package and a unified app manifest for Microsoft 365, you can define Teams apps that work across Microsoft 365 application hosts and also [Outlook add-ins](/office/dev/add-ins/quickstarts/outlook-quickstart-json-manifest) from a single app package. The manifest (version 1.17 or later) is a json file that describes how your app integrates into Microsoft products through key elements such as:
 
@@ -50,11 +50,11 @@ Using an app package and a unified app manifest for Microsoft 365, you can defin
 
 For an example of a manifest, including how features such as tabs are defined, see the manifest used in the [Teams Toolkit Todo List sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/v2.4.0/todo-list-with-Azure-backend-M365/appPackage/manifest.json), which also shows how easy it is to define an app that extends across the Microsoft 365 ecosystem of apps.
 
-For detailed manifest guidance, see the [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) schema documentation.
+For more information, see [app manifest schema](/microsoftteams/platform/resources/schema/manifest-schema).
 
 #### Tools and libraries
 
-The Teams Toolkit for Visual Studio Code makes it simple to get started with app development for Microsoft Teams and now Copilot plugins for Microsoft 365 as well. You can start a project directly from samples and templates for common line-of-business app scenarios, as well as run and debug to Microsoft 365 apps. At the same time, many logistical tasks such as app registration, configuration, and deployment are streamlined for you. To learn more, see [Teams Toolkit overview](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
+The Teams Toolkit for Visual Studio Code makes it simple to get started with app development for Microsoft Teams and now Copilot plugins for Microsoft 365 as well. You can start a project directly from samples and templates for common line-of-business app scenarios, as well as run and debug to Microsoft 365 apps. At the same time, many logistical tasks such as app registration, configuration, and deployment are streamlined for you. For more information, see [Teams Toolkit overview](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
 
 Teams Toolkit appears within Visual Studio Code as an extension. After you install Teams Toolkit, it opens within the Visual Studio Code window and provides easy access to documentation, how-to guides, app creation, and samples.
 
@@ -85,7 +85,7 @@ Some key features of the UI kit are:
 > [!div class="nextstepaction"]
 > [Preview the Microsoft 365 UI Kit (Figma)](https://aka.ms/M365UIKit)
 
-The Microsoft 365 UI Kit expands the *Teams design system* to work with apps that run across the Microsoft 365 ecosystem. To learn more about these foundational concepts, see [Designing your Microsoft Teams app](/microsoftteams/platform/concepts/design/design-teams-app-overview).
+The Microsoft 365 UI Kit expands the *Teams design system* to work with apps that run across the Microsoft 365 ecosystem. For more information, see [designing your Microsoft Teams app](/microsoftteams/platform/concepts/design/design-teams-app-overview).
 
 ## Planning your app
 

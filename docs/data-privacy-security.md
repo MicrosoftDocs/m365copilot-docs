@@ -39,8 +39,8 @@ Copilot for Microsoft 365 only shares data with and searches in plugins or conne
 - [Data, Privacy, and Security for Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/microsoft-365-copilot-privacy) admin documentation
 - [Zero Trust for Microsoft Copilot for Microsoft 365](/security/zero-trust/zero-trust-tech-illus#zero-trust-for-microsoft-365-copilot) deployment plan for applying Zero Trust principles to Microsoft Copilot
 - Microsoft Admin Center procedures:
-  - [Managing plugins for Copilot](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps)
-  - [Managing Microsoft Graph connectors](/microsoftsearch/connectors-overview).
+  - [Manage plugins for Copilot](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps)
+  - [Manage Microsoft Graph connectors](/microsoftsearch/connectors-overview).
 
 ## Considerations for independent software vendors
 

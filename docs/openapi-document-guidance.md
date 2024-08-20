@@ -59,7 +59,7 @@ parameters:
     required: false
 ```
 
-**Responses:** Clearly define all possible responses for each operation, including both success and error responses. Each response should have a status code and a description of what it represents. Including examples of responses helps Copilot to understand what to expect from the API.
+**Responses:** Clearly define all possible responses for each operation, including both success and error responses. Each response must have a status code and a description of what it represents. Including examples of responses helps Copilot to understand what to expect from the API.
 
 ```yaml
 responses:

@@ -67,7 +67,7 @@ To make sure that Copilot for Microsoft 365 uses your content effectively:
 - Add [user activities](/graph/api/externalconnectors-externalitem-addactivities) on your items. For a list of supported activity types, see [externalActivity](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in importance.
 - Provide meaningful descriptions in the `description` property when [creating connections](/graph/api/externalconnectors-external-post-connections). Rich descriptions improve the likelihood of displaying content in Copilot.
 
-In addition, search administrators should ensure that your Graph Connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical), using the following steps.
+In addition, search administrators must ensure that your Graph Connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical), using the following steps.
 
 - Open the [Admin Center](https://admin.microsoft.com/), go to **Search & intelligence** > **Customizations** > **Verticals** and select **All**.
 
@@ -77,7 +77,7 @@ In addition, search administrators should ensure that your Graph Connector conne
 
 As stated earlier, we recommended that you apply as many semantic labels to your schema as applicable. This is because your end-users can use semantic labels as part of their prompt in Copilot for Microsoft 365. For example, an end-user can ask Copilot for all of the files that were last modified within the last week. If the `lastModifiedDateTime` semantic label isn't applied to your schema, then Copilot for Microsoft 365 can't return the expected result to that user.
 
-The `searchable` property label is the most important with respect to Copilot for Microsoft 365. It defines which properties can be searched against. If you would like your users' prompts in Copilot for Microsoft 365 to match content stored in certain properties, then you should make those properties searchable.
+The `searchable` property label is the most important with respect to Copilot for Microsoft 365. It defines which properties can be searched against. If you would like your users' prompts in Copilot for Microsoft 365 to match content stored in certain properties, then you must make those properties searchable.
 
 ## See also
 

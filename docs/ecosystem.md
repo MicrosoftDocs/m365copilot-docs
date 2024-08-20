@@ -59,13 +59,13 @@ For independent software vendors (ISVs), we're building out the **Microsoft 365 
 
 Once purchased and deployed by an organization, your plugins are incorporated into a unified catalog representing Copilot's available skill list.
 
-To learn more, see [Publish plugins and connectors for Microsoft Copilot for Microsoft 365](./publish.md).
+To learn more, see [publish plugins and connectors for Microsoft Copilot for Microsoft 365](./publish.md).
 
 ### Microsoft Admin Center
 
 For line-of-business developers and IT admins, [Microsoft Admin Center](https://admin.microsoft.com) is your one stop to upload custom plugins and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions. Learn more about Copilot-related management options in the [Microsoft Copilot for Microsoft 365 extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps) section of Microsoft 365 admin center help documentation.
 
-For more information on deploying a custom plugin or connector to your organization, see [Publish plugins and connectors for Microsoft Copilot for Microsoft 365](./publish.md).
+For more information on deploying a custom plugin or connector to your organization, see [publish plugins and connectors for Microsoft Copilot for Microsoft 365](./publish.md).
 
 ## Comprehensive tools and support
 
@@ -81,6 +81,6 @@ Microsoft 365 provides a rich set of developer resources for extending Microsoft
 
 ## Microsoft security, trust, and commitment to Responsible AI
 
-Copilot for Microsoft 365 is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary.  Copilot for Microsoft 365 presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more infoormation, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
+Copilot for Microsoft 365 is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary.  Copilot for Microsoft 365 presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more information, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
 
-To learn more as a developer of Copilot extensibility solutions, see [Data, Privacy, and Security considerations of extending Copilot for Microsoft 365](./data-privacy-security.md).
+To learn more as a developer of Copilot extensibility solutions, see [data, Privacy, and Security considerations of extending Copilot for Microsoft 365](./data-privacy-security.md).
