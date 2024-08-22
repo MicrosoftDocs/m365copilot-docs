@@ -109,20 +109,14 @@ For more details see [Install Kiota](/openapi/kiota/install#install-as-net-tool)
 
 ### [Teams Toolkit](#tab/ttk)
 
-#### Create a basic declarative copilot
-
 To create a declarative copilot using Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. Select **Teams Toolkit > Create a New App**.
 
-    :::image type="content" source="microsoftteams/platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
-
-
+    :::image type="content" source="/microsoftteams/platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
 ### [CLI](#tab/cli)
-
-#### Create a basic declarative copilot
 
 To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 
@@ -242,6 +236,8 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 1. Enter a question for your declarative copilot and ensure that it replies with "Thanks for using Teams Toolkit to create your declarative copilot!"
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative copilot in Copilot for Microsoft 365.":::
+
+---
 
 ## Add conversation starters
 
