@@ -48,19 +48,20 @@ To learn more and choose the best extensibility path for you and your customer, 
 
 ### Requirements for plugin development
 
-During the public preview, customers with a Copilot license can extend Copilot and build plugins.
+In addition to an active Microsoft 365 Copilot license, there are several additional prerequisites for building plugins for Copilot.
 
-To create conversational and AI plugins that your end users can use in their chats with Microsoft Copilot, you need:
+To create declarative copilots and plugins with Teams Toolkit and other IDEs, you'll need:
 
-- [A license for Microsoft Copilot Studio (or an existing Power Virtual Agents license)](/microsoft-copilot-studio/requirements-licensing-subscriptions).
-- [Licenses for Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/overview-business-applications#get-copilot-for-microsoft-365-licenses-and-enable-plugins).
+- Your Teams admin to enable the abilities to [upload and interact with custom apps](manage.md#manage-extensions-built-with-teams-toolkit-and-other-ides) in your Microsoft 365 tenant (sandbox or production)
+
+To create copilots and plugins with Copilot Studio, you'll need:
+
+- [A license for Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) (or an existing Power Virtual Agents license).
+- Your Power Platform admin or Dynamics 365 admin to [enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot) in Power Platform admin center.
 - Your Microsoft 365 tenant admin to [deploy the Dynamics 365 and Copilot Studio app in the Microsoft 365 admin center](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-microsoft-copilot-studio-app-admin).
 
-For details see: [Create and configure copilot plugins with Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview#prerequisites).
+    For more details, see [Create and configure copilot plugins with Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview#prerequisites).
 
-#### Requirements for Teams message extension development
-
-As a developer, you need the ability to [sideload custom apps](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload) in order to install, test, and debug message extension apps and plugins directly in the Teams environment without having to publish to your organization. An administrator must [enable custom app uploading](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) in your Microsoft 365 tenant (sandbox or production).
 
 ### Enabling developer mode
 
