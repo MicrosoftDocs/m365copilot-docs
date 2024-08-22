@@ -136,6 +136,10 @@ To create a declarative copilot using Teams Toolkit, follow these steps:
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-name.png" alt-text="Screenshot shows the name of the application to create.":::
 
+1. You application is now scaffolded and available for publishing.
+
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-scaffolded.png" alt-text="Screenshot shows the fully scaffolded application.":::
+
 ### [CLI](#tab/cli)
 
 To create a declarative copilot using Teams Toolkit CLI, follow these steps:
