@@ -37,6 +37,9 @@ The app package can also contain declarative copilot and API plugin definitions,
 
 Your app package must include both a color and outline version of your Copilot extension icon, as .png files. These icons have specific size requirements in order to pass store validation.
 
+> [!NOTE]
+> Currently only the color icon is used to represent Copilot extensions to the end-user (both as its store listing and within Microsoft 365 Copilot UI), but an outline icon is still required when submitting the app package to Microsoft AppSource.
+
 ### Color icon
 
 The color icon represents your extension within the Microsoft Copilot UI and in-product (Teams, Outlook, Microsoft 365) app stores.
@@ -100,7 +103,7 @@ Every app manifest must include the following information:
 | [accentColor](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#accentColor?context=/microsoft-365-copilot/extensibility/context) | A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.|
 | *Definitions for specific app capabilities* | A definition for each app capability, such as personal tabs ([staticTabs](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#staticTabs?context=/microsoft-365-copilot/extensibility/context)), message extensions ([composeExtensions](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeExtensions?context=/microsoft-365-copilot/extensibility/context)), or [bots](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#bots?context=/microsoft-365-copilot/extensibility/context). Declarative copilots and API plugins are defined under the [copilotExtensions](#copilotextensions-definitions) node.
 
-Here's an example app manifest with placholder sections at the end for message extension and copilot extension app capabilities:
+Here's an example app manifest with placeholder sections at the end for message extension and copilot extension app capabilities:
 
 ```json
 {
@@ -159,7 +162,7 @@ Here's an example that references both a declarative copilot and API plugin:
     },
 ```
 
-You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience. Referencing your API plugin from the app manifest root enables it for use more broadly in the base mode Microsoft 365 Copilot chat experience.
+You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience. Referencing your API plugin from the app manifest root enables it for broader use in the base mode Microsoft 365 Copilot chat experience.
 
 :::image type="content" source="assets/images/app-manifest-extensions.png" alt-text="Diagram showing app manifest referencing a declarative copilot manifest and API plugin manifest. The declarative copilot manifest references another API plugin manifest" border="false":::
 
