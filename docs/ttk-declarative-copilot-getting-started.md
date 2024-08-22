@@ -46,6 +46,8 @@ Set the environment variable **TEAMSFX_DECLARATIVE_COPILOT** and **KIOTA_CONFIG_
 
 #### [Windows](#tab/windows)
 
+Open a PowerShell terminal and run the following commands.
+
 ```powershell
 [Environment]::SetEnvironmentVariable("TEAMSFX_DECLARATIVE_COPILOT", 'true', "User")
 [Environment]::SetEnvironmentVariable("KIOTA_CONFIG_PREVIEW", "true", "User")
@@ -74,9 +76,20 @@ egrep -v '^\s*#' /etc/launchd.conf | launchctl
 
 ---
 
+> [!WARNING]
+>
+> Close and reopen your terminal to ensure all changes are taken into account.
+
 ### Install Teams Toolkit CLI
 
-Follow the steps in [Install Teams Toolkit CLI](/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-three#get-started).
+Run the following command in your Command Prompt or in a PowerShell terminal.
+
+```bash
+npm install -g @microsoft/teamsapp-cli
+teamsapp -h
+```
+
+For more details see [Install Teams Toolkit CLI](/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-three#get-started).
 
 ### Install Teams Toolkit Visual Studio Code extension
 
@@ -84,7 +97,15 @@ Follow the steps in [Install Teams Toolkit Visual Studio Code extension](/micros
 
 ### Install Kiota
 
-Follow the steps in [Install Kiota](/openapi/kiota/install#install-as-net-tool).
+If you have the [.NET SDK](https://dotnet.microsoft.com/en-us/download) installed, you can install Kiota as a [.NET tool](/dotnet/core/tools/global-tools).
+
+To install the tool, execute the following command in your Command Prompt or in a PowerShell terminal.
+
+```bash
+dotnet tool install --global Microsoft.OpenApi.Kiota
+```
+
+For more details see [Install Kiota](/openapi/kiota/install#install-as-net-tool).
 
 ### Create a declarative copilot using Teams Toolkit CLI
 
@@ -93,8 +114,7 @@ Follow the steps in [Install Kiota](/openapi/kiota/install#install-as-net-tool).
 To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 
 1. Go to **Command Prompt**.
-1. Enter `teamsapp new` in the terminal.
-1. Select **Declarative copilot**. Use the arrow keys to switch between options.
+1. Enter **`teamsapp new`** in the terminal and select **Declarative copilot**. Use the arrow keys to switch between options.
 
     ```bash
     ~ src > demos > teamsapp new
@@ -119,7 +139,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
     ◯ Declarative Copilot with a plugin using Azure Functions A declarative Copilot containing a Copilot plugin with a new API from Azure Functions
     ```
 
-1. Enter the location for your project and select **Enter**.
+1. Enter the location path of the folder where you'd like to save your project and select **Enter**.
 1. Enter the name of your application and select **Enter**.
 
     ```bash
@@ -133,20 +153,39 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
     Project created at: ~/src/demos/ttk-declarative-copilot
     ```
 
-1. Authenticate to Microsoft 365 by entering the following command:
-
-    ```bash
-    ~ > src > demos > teamsapp auth login m365
-    Log in to your Microsoft 365 account - opening default web browser at https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=...&scope=https%3A%2F%2Fdev.teams.microsoft.com%2FAppDefinitions.ReadWrite%20openid%20profile%20offline_access&redirect_uri=http%3A%2F%2Flocalhost%3A35177&client-request-id=...&response_mode=query&response_type=code&x-client-SKU=msal.js.node&x-client-VER=...&x-client-OS=...&x-client-CPU=...&client_info=1&code_challenge=...&code_challenge_method=S256&prompt=select_account#
+1. Authenticate to Microsoft 365 by entering the following command.
     
+    ```bash
+    teamsapp auth login m365
+    ```
+    
+    You'll see the following result.
+    
+    ```bash    
+    Log in to your Microsoft 365 account - opening default web browser at https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=...&scope=https%3A%2F%2Fdev.teams.microsoft.com%2FAppDefinitions.ReadWrite%20openid%20profile%20offline_access&redirect_uri=http%3A%2F%2Flocalhost%3A35177&client-request-id=...&response_mode=query&response_type=code&x-client-SKU=msal.js.node&x-client-VER=...&x-client-OS=...&x-client-CPU=...&client_info=1&code_challenge=...&code_challenge_method=S256&prompt=select_account#
+    ```
+    
+    Once you log in, you'll see the following result.
+    
+    ```bash
     (✔) Success: Successfully signed into Microsoft 365.
     Your Microsoft 365 account is: admin@consoto.onmicrosoft.com.
     ```
 
-1. Go to the folder path where your project is created and enter the following command to install your app in Copilot for Microsoft 365:
+1. Go to the folder path where your project was created.
+    In this case, we are going to the folder **ttk-declarative-copilot**. Replace the name `ttk-declarative-copilot` with the name of your folder.
+    ```bash
+    cd ttk-declarative-copilot
+    ```
+    
+1. Enter the following command to install your app in Copilot for Microsoft 365.
 
     ```bash
-    ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
+    teamsapp provision --env dev
+    ```
+
+    You'll see the following result.
+    ```bash
     Executing provision
 
     Lifecycle stage: provision(4 step(s) in total). The following actions will be executed:
@@ -218,10 +257,10 @@ To add conversation starters to your declarative copilot, follow these steps:
     }
     ```
 
-1. Using the Teams Toolkit CLI, enter the following command to update your app:
+1. Using the Teams Toolkit CLI, enter the following command to update your app. Make sure your terminal is in your project folder.
 
     ```bash
-    ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
+    teamsapp provision --env dev
     ```
 
 1. The updated conversation starters will be available in your declarative copilot after you refresh the page.
@@ -244,10 +283,10 @@ To add web content using Bing to your declarative copilot, follow these steps:
     }
     ```
 
-1. Using the Teams Toolkit CLI, enter the following command to update your app:
+1. Using the Teams Toolkit CLI, enter the following command to update your app. Make sure your terminal is in your project folder.
 
     ```bash
-    ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
+    teamsapp provision --env dev
     ```
 
 1. The declarative copilot will have access to web content to generate its answers after you reload the page.
@@ -283,10 +322,10 @@ To add OneDrive and SharePoint knowledge to your declarative copilot, follow the
     > * Replace `https://contoso.sharepoint.com/sites/ProductSupport` with your SharePoint site URL.
     > * Not specifying the `items_by_url` array will default to the entire corpus of OneDrive and SharePoint content available to the logged in user.
 
-1. Using the Teams Toolkit CLI, enter the following command to update your app:
+1. Using the Teams Toolkit CLI, enter the following command to update your app.
 
     ```bash
-    ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
+    teamsapp provision --env dev
     ```
 
 1. The declarative copilot will have access to OneDrive and SharePoint content to generate its answers after you reload the page.
@@ -334,7 +373,7 @@ To add Graph Connectors knowledge to your declarative copilot, follow these step
 1. Using the Teams Toolkit CLI, enter the following command to update your app:
 
     ```bash
-    ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
+    teamsapp provision --env dev
     ```
 
 1. The declarative copilot will have access to GraphConnectors content to generate its answers after you reload the page.
@@ -346,10 +385,20 @@ To add Graph Connectors knowledge to your declarative copilot, follow these step
 To add a plugin to your declarative copilot, follow these steps:
 
 1. Go to **Command Prompt**.
-1. Execute the following command:
-
+1. Navigate to your project folder. In this case, our project folder is called `ttk-declarative-copilot`. Replace this with the name of your folder.
     ```bash
-    ~ > src > demos > ttk-declarative-copilot > kiota plugin add --openapi https://aka.ms/repairshub/openapi.json --plugin-name "RepairsHub" --type apiplugin --output appPackage
+    cd ttk-declarative-copilot
+    ```
+
+1. Execute the following command:
+    
+    ```bash
+    kiota plugin add --openapi https://aka.ms/repairshub/openapi.json --plugin-name "RepairsHub" --type apiplugin --output appPackage
+    ```
+    
+    You'll see the following result.
+    
+    ```bash
     warn: Kiota.Builder.KiotaBuilder[0]
           OpenAPI warning: #/paths/~1repairs/get/responses/200/content/application~1json/schema/items/properties/image - The format uri is not supported by Kiota and the string type will be used.
     warn: Kiota.Builder.KiotaBuilder[0]
@@ -383,7 +432,7 @@ To add a plugin to your declarative copilot, follow these steps:
 1. Using the Teams Toolkit CLI, enter the following command to update your app:
 
     ```bash
-    ~ > src > demos > ttk-declarative-copilot > teamsapp provision --env dev
+    teamsapp provision --env dev
     ```
 
 1. The declarative copilot will have access to your plugin content to generate its answers after you reload the page.

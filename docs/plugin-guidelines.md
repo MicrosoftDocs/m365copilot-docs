@@ -19,7 +19,7 @@ When you build a plugin, you enable your users to interact with your web service
 
 ## Qualities of a good plugin
 
-A clear and concise [description of your plugin](orchestrator.md#plugin-search-optimization) is essential for Copilot to recognize its capabilities and match it with the appropriate user tasks. You can ensure your plugin provides the best possible user experience at runtime by designing your plugin with the following characteristics.
+A clear and concise [description of your plugin](orchestrator.md#plugin-optimization) is essential for Copilot to recognize its capabilities and match it with the appropriate user tasks. You can ensure your plugin provides the best possible user experience at runtime by designing your plugin with the following characteristics.
 
 <!-- markdownlint-disable DOCSMD003 -->
 :::row:::
@@ -95,6 +95,6 @@ Respond to user input with structured, actionable, and visually rich [Adaptive C
 
 ## See also
 
-[Guidelines to create or upgrade Copilot extensions](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
+[Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
 
 [Publish plugins and Graph connectors for Copilot](./publish.md)
