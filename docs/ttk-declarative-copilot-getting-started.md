@@ -116,6 +116,26 @@ To create a declarative copilot using Teams Toolkit, follow these steps:
 
     :::image type="content" source="/microsoftteams/platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
+1. Select **Copilot Extensions**.
+
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-extension.png" alt-text="Screenshot shows the App Capability to select.":::
+
+1. Select **Declarative copilot**.
+
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-dc.png" alt-text="Screenshot shows the type of Copilot extension to select.":::
+
+1. Select **No plugin** to create a basic declarative copilot.
+
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-no-plugin.png" alt-text="Screenshot shows the type of declarative copilot to select.":::
+
+1. Select **Default folder** to store your project root folder in the default location..
+
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-default-folder.png" alt-text="Screenshot shows the folder to select.":::
+
+1. Choose your **Application name**.
+
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-name.png" alt-text="Screenshot shows the name of the application to create.":::
+
 ### [CLI](#tab/cli)
 
 To create a declarative copilot using Teams Toolkit CLI, follow these steps:
