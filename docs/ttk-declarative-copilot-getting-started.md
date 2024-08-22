@@ -426,7 +426,7 @@ To add a plugin to your declarative copilot, follow these steps:
 1. Execute the following command:
     
     ```bash
-    kiota plugin add --openapi https://aka.ms/repairshub/openapi.json --plugin-name "RepairsHub" --type microsoft --output appPackage
+    kiota plugin add --openapi https://aka.ms/repairshub/openapi.json --plugin-name "RepairsHub" --type apiplugin --output appPackage
     ```
     
     You'll see the following result.
