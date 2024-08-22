@@ -107,7 +107,20 @@ dotnet tool install --global Microsoft.OpenApi.Kiota
 
 For more details see [Install Kiota](/openapi/kiota/install#install-as-net-tool).
 
-### Create a declarative copilot using Teams Toolkit CLI
+### [Teams Toolkit](#tab/ttk)
+
+#### Create a basic declarative copilot
+
+To create a declarative copilot using Teams Toolkit, follow these steps:
+
+1. Open **Visual Studio Code**.
+1. Select **Teams Toolkit > Create a New App**.
+
+    :::image type="content" source="microsoftteams/platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
+
+
+
+### [CLI](#tab/cli)
 
 #### Create a basic declarative copilot
 
