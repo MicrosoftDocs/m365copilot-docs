@@ -40,6 +40,8 @@ Your app package must include both a color and outline version of your Copilot e
 > [!NOTE]
 > Currently only the color icon is used to represent Copilot extensions to the end-user (both as its store listing and within Microsoft 365 Copilot UI), but an outline icon is still required when submitting the app package to Microsoft AppSource.
 
+For further design guidance on color and outline icons for the Microsoft 365 app package, [App icons for Teams Store and app bar](/microsoftteams/platform/concepts/design/design-teams-app-icon-store-appbar).
+
 ### Color icon
 
 The color icon represents your extension within the Microsoft Copilot UI and in-product (Teams, Outlook, Microsoft 365) app stores.
@@ -139,6 +141,8 @@ Here's an example app manifest with placeholder sections at the end for message 
 }
 ```
 
+To learn more, see the [App manifest schema reference](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview?context=/microsoft-365-copilot/extensibility/context) (generally available version), and [Developer preview app manifest schema reference](/microsoftteams/platform/resources/schema/manifest-schema?context=/microsoft-365-copilot/extensibility/context).
+
 ### `copilotExtensions` definitions
 
 Declarative copilots and API plugins each have their own definition schemas. These definition files, along with unique IDs, are referenced from the `copilotExtensions` object of the app manifest. 
@@ -188,11 +192,9 @@ To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-pl
 
 TODO
 
+To learn more, see [Localize your app (Microsoft Teams)](/microsoftteams/platform/concepts/build-and-test/apps-localization) and the [Localization schema reference](/microsoftteams/platform/resources/schema/localization-schema).
+
 ## See also
 
-- [App manifest schema reference](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview?context=/microsoft-365-copilot/extensibility/context)
-- [Developer preview app manifest schema reference](/microsoftteams/platform/resources/schema/manifest-schema?context=/microsoft-365-copilot/extensibility/context)
-- [Localization schema reference](/microsoftteams/platform/resources/schema/localization-schema)
-- [Localize your app (Microsoft Teams)](/microsoftteams/platform/concepts/build-and-test/apps-localization)
 - [Manage extensions for Copilot](manage.md)
 - [Publish extensions for Copilot for Microsoft 365](publish.md)

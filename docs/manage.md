@@ -9,14 +9,14 @@ ms.date: 8/15/2024
 
 # Manage extensions for Copilot for Microsoft 365
 
-This article describes the different types of admin controls for managing Copilot extensions. Extensions for Microsoft 365 Copilot are packaged, distributed, and managed in the same way as other apps that run across the integrated Microsoft 365 platform. At its core, the integrated Microsoft 365 app platform extends the Teams app platform to provide a [unified app model](extensions-are-apps.md) for extensibility within the Microsoft 365 ecosystem. App management controls for Microsoft 365 are also converging to the centralized Microsoft admin center. However, some controls are still accessible only from Teams admin center.
+This article describes the different types of admin controls for managing Copilot extensions. Extensions for Microsoft 365 Copilot are packaged, distributed, and managed in the same way as other apps that run across the integrated Microsoft 365 platform. At its core, the integrated Microsoft 365 app platform extends the Teams app platform to provide a [unified app model](extensions-are-apps.md) for extensibility within the Microsoft 365 ecosystem. App management controls for Microsoft 365 are also converging to the centralized Microsoft admin center. However, some necessary controls are accessible only from other admin centers.
 
 The following table summarizes admin management tools for Copilot extensibility scenarios, according to distribution.
 
 | Method of building Copilot extension | Published to AppSource (Store) | Published to organization | Uploaded for personal use|
 |----------|-----------|------------|-----------|
 |[Teams Toolkit](#manage-extensions-built-with-teams-toolkit) | Microsoft admin center | Teams admin center, Microsoft admin center| Teams admin center|
-|[Copilot Studio](#manage-extensions-built-with-copilot-studio)| Microsoft admin center| Power Platform admin center, Microsoft admin center | Power Platform admin center|
+|[Copilot Studio](#manage-extensions-built-with-copilot-studio)| Microsoft admin center| Power Platform admin center, Microsoft admin center | Power Platform admin center, Microsoft admin center|
 
 ## Manage extensions published to AppSource
 
@@ -53,41 +53,38 @@ Admins can [upload Copilot extensions](/microsoft-365/admin/manage/teams-apps-wo
 
 ### Extensions uploaded for personal use
 
-Once packaged as Microsoft 365 apps, Copilot extensions can be uploaded (or *sideloaded*) by non-admins for personal use, such as for testing during the development process. Users can upload and deploy app packages directly from Teams Toolkit (Lifecycle > **Provision**), and also from Teams Toolkit CLI (`teamsapp install`) or Teams client (Apps > Manage your apps > Upload an app > **Upload a custom app**). Users can uninstall an app using Teams Toolkit CLI (`teamsapp uninstall`) or Teams client (from Apps > Manage your apps, select the app and then **Remove**).
+Once packaged as Microsoft 365 apps, Copilot extensions can be uploaded (or *sideloaded*) by non-admins for personal use, such as for testing during the development process. Users can upload and deploy app packages directly from:
+
+- **Teams Toolkit client**: Select Lifecycle > **Provision**
+
+- **Teams Toolkit CLI**: Use the command `teamsapp install` (and `teamsapp uninstall` to uninstall)
+
+- **Teams client**: Select Apps > Manage your apps > Upload an app > **Upload a custom app** (and to uninstall, Apps > Manage your apps, select the app and **Remove**)
 
 Custom apps for personal use are managed by the user. However, admins have the ability to globally disable the ability to upload custom apps for personal use [as described above](#manage-extensions-built-with-teams-toolkit-and-other-ides).
 
 ## Manage extensions built with Copilot Studio
 
-Admin must first deploy Copilot Studio app:
+Copilot extensions that are built with Copilot Studio require a different set of admin controls to enable deployment for organizational and personal use in Microsoft 365 Copilot. In addition to an active license for Microsoft Copilot Studio, you'll need:
 
-https://learn.microsoft.com/en-us/microsoft-copilot-studio/copilot-plugins-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext#use-actions-in-microsoft-copilot
+ In **Power Platform admin center**, your Power Platform admin or Dynamics 365 admin to [enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot):
 
+:::image type="content" source="assets/images/power-platform-admin-center-genai-features.png" alt-text="Screenshot of Power Platform admin center with 'Generative AI features' card highlighted":::
+    
+In **Microsoft admin center**, your Microsoft 365 tenant admin to [deploy Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-microsoft-copilot-studio-app-admin) to your tenant:
+
+:::image type="content" source="assets/images/mac-integrated-apps-copilot-studio.png" alt-text="Copilot Studio shown as an available app within 'Integrated apps' section of Microsoft admin center":::
 
 ### Copilot Studio apps published to your organization
 
+By default, actions are only visible and usable in Microsoft Copilot by the person who authored them.
 
+However, the action author can share their plugins in the portal where they created them.
 
 ### Copilot Studio extensions for personal use
 
-Testing
+The end user enables the connection from within their chat with Microsoft Copilot.
 
-https://learn.microsoft.com/en-us/microsoft-copilot-studio/copilot-plugins-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext#testing
+For more info, see [Enable Power Platform plugins for Microsoft 365 Copilot](/microsoft-copilot-studio/copilot-plugins-overview?context=microsoft-365-copilot/extensibility/context)
 
-## See also
-
-- Publish
-- MAC
-- TAC - Custom apps
-- TAC - PP
-
-https://learn.microsoft.com/microsoftteams/manage-apps
-https://admin.teams.microsoft.com/policies/manage-apps
-
-https://learn.microsoft.com/en-us/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#how-to-manage-the-availability-of-an-app-in-your-organization
-
-Custom apps
-
-Teams: https://learn.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings
-
-Power Platform: https://learn.microsoft.com/microsoftteams/manage-power-platform-apps
+For more info, see [Testing connector actions as plugins for Microsoft 365 Copilot](/microsoft-copilot-studio/copilot-plugins-overview?context=microsoft-365-copilot/extensibility/context). 
