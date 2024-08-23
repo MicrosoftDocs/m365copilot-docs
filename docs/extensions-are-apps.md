@@ -188,12 +188,6 @@ The API plugin manifest describes the plugin's capabilities, including the the A
 
 To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest.md).
 
-## Localizing your extension
-
-TODO
-
-To learn more, see [Localize your app (Microsoft Teams)](/microsoftteams/platform/concepts/build-and-test/apps-localization) and the [Localization schema reference](/microsoftteams/platform/resources/schema/localization-schema).
-
 ## See also
 
 - [Manage extensions for Copilot](manage.md)

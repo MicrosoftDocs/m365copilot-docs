@@ -56,7 +56,7 @@ From Microsoft admin center, admins can:
 - Deploy or remove apps with extensions for Copilot for the whole organization or specific users or groups.
 - Block or unblock apps with extensions for Copilot for the whole organization.
 
-For more info, see [Manage extensions for Copilot in the Microsoft 365 admin center](microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#manage-extensions-for-copilot-in-the-microsoft-365-admin-center).
+For more info, see [Manage extensions for Copilot in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#manage-extensions-for-copilot-in-the-microsoft-365-admin-center).
 
 Admins can also upload, deploy, and block apps from Teams admin center too, however be aware that the [settings in Teams admin center override](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#what-happens-to-your-settings-on-teams-and-outlook) those made in Microsoft admin center for apps running in Teams. 
 Best practice is to manage Copilot extensions from Microsoft admin center wherever possible, then fine-tune any settings in Teams admin center that aren't available in Microsoft admin center or that are only applicable when running apps in Teams.
@@ -95,7 +95,7 @@ As part of the Copilot Studio authoring flow, you have the option to [test your 
 
 Once ready for distribution, you can [publish your extension from Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=microsoft-365-copilot/extensibility/context#publishing-a-copilot-extension) as a share link, invitation to specific users or groups, submission to your organizational catalog (to be approved by admin), or as downloadable app package zip file.
 
-Once submitted for publish to the organization, admins manage approval and deployment for  [Copilot Studio extensions in Microsoft admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=microsoft-365-copilot/extensibility/context#publish-extensions-for-copilot).
+Upon submission to the organizational catalog, admins manage approval and deployment for [Copilot Studio extensions in Microsoft admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=microsoft-365-copilot/extensibility/context#publish-extensions-for-copilot).
 
 Copilot extensions published for personal use or sharing can be managed by the extension creator in Copilot Studio.
 
