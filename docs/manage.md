@@ -15,8 +15,8 @@ The following table summarizes admin management tools for Copilot extensibility 
 
 | Method of building Copilot extension | Published to AppSource (Store) | Published to organization | Uploaded for personal use|
 |----------|-----------|------------|-----------|
-|[Teams Toolkit](#manage-extensions-built-with-teams-toolkit) | Microsoft admin center | Teams admin center, Microsoft admin center| Teams admin center|
-|[Copilot Studio](#manage-extensions-built-with-copilot-studio)| Microsoft admin center| Power Platform admin center, Teams admin center, Microsoft admin center | Power Platform admin center, Teams admin center, Microsoft admin center|
+|[Teams Toolkit](#manage-extensions-built-with-teams-toolkit) | Microsoft admin center | Teams admin center,<br> Microsoft admin center| Teams admin center|
+|[Copilot Studio](#manage-extensions-built-with-copilot-studio)| Microsoft admin center| Power Platform admin center,<br> Teams admin center,<br> Microsoft admin center | Power Platform admin center,<br> Teams admin center,<br> Microsoft admin center|
 
 ## Manage extensions published to AppSource
 
