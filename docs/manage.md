@@ -16,7 +16,7 @@ The following table summarizes admin management tools for Copilot extensibility 
 | Method of building Copilot extension | Published to AppSource (Store) | Published to organization | Uploaded for personal use|
 |----------|-----------|------------|-----------|
 |[Teams Toolkit](#manage-extensions-built-with-teams-toolkit) | Microsoft admin center | Teams admin center, Microsoft admin center| Teams admin center|
-|[Copilot Studio](#manage-extensions-built-with-copilot-studio)| Microsoft admin center| Power Platform admin center, Microsoft admin center | Power Platform admin center, Microsoft admin center|
+|[Copilot Studio](#manage-extensions-built-with-copilot-studio)| Microsoft admin center| Power Platform admin center, Teams admin center, Microsoft admin center | Power Platform admin center, Teams admin center, Microsoft admin center|
 
 ## Manage extensions published to AppSource
 
@@ -59,32 +59,34 @@ Once packaged as Microsoft 365 apps, Copilot extensions can be uploaded (or *sid
 
 - **Teams Toolkit CLI**: Use the command `teamsapp install` (and `teamsapp uninstall` to uninstall)
 
-- **Teams client**: Select Apps > Manage your apps > Upload an app > **Upload a custom app** (and to uninstall, Apps > Manage your apps, select the app and **Remove**)
+- **Teams client**: Select Apps > Manage your apps > Upload an app > **Upload a custom app** (and to uninstall, Apps > Manage your apps > [select the app] and **Remove**)
 
 Custom apps for personal use are managed by the user. However, admins have the ability to globally disable the ability to upload custom apps for personal use [as described above](#manage-extensions-built-with-teams-toolkit-and-other-ides).
 
 ## Manage extensions built with Copilot Studio
 
-Copilot extensions that are built with Copilot Studio require a different set of admin controls to enable deployment for organizational and personal use in Microsoft 365 Copilot. In addition to an active license for Microsoft Copilot Studio, you'll need:
+Copilot extensions that are built with Copilot Studio require a different set of admin controls to enable deployment for organizational and personal use in Microsoft 365 Copilot. These enablements span across several admin centers. In addition to a Copilot Studio license for building extensions, you'll need:
 
- In **Power Platform admin center**, your Power Platform admin or Dynamics 365 admin to [enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot):
-
-:::image type="content" source="assets/images/power-platform-admin-center-genai-features.png" alt-text="Screenshot of Power Platform admin center with 'Generative AI features' card highlighted":::
-    
 In **Microsoft admin center**, your Microsoft 365 tenant admin to [deploy Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-microsoft-copilot-studio-app-admin) to your tenant:
 
 :::image type="content" source="assets/images/mac-integrated-apps-copilot-studio.png" alt-text="Copilot Studio shown as an available app within 'Integrated apps' section of Microsoft admin center":::
 
-### Copilot Studio apps published to your organization
+In **Teams admin center**, your Teams admin to [allow Shared Copilot Extensions, Shared Copilots, and Shared Power apps](/manage-power-platform-apps#allow-or-block-microsoft-power-platform-apps-for-your-organization) for your oganization. Admins can also scope permissions to [specific users](manage-power-platform-apps#allow-microsoft-power-platform-apps-for-specific-users).
 
-By default, actions are only visible and usable in Microsoft Copilot by the person who authored them.
+:::image type="content" source="assets/images/tac-shared-cs-apps.png" alt-text="'Manage apps' view of Teams admin center, with 'Shared Copilot Extensions', 'Shared Copilots', and 'Shared Power Apps' outlined in red":::
 
-However, the action author can share their plugins in the portal where they created them.
+ In **Power Platform admin center**, your Power Platform admin or Dynamics 365 admin to [enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot):
+
+:::image type="content" source="assets/images/powerplatform-admin-center-genai-features.png" alt-text="Screenshot of Power Platform admin center with 'Generative AI features' card outlined in red":::
+
+### Copilot Studio extensions published to your organization
+
+By default, actions are only visible and usable as plugins in Microsoft Copilot by the person who authored them. You can submit your actions to 
 
 ### Copilot Studio extensions for personal use
 
-The end user enables the connection from within their chat with Microsoft Copilot.
+As part of the action authoring flow, you have the option to test your action by sideloading it as a plugin for Microsoft 365 Copilot so that it's only visible to you.
 
-For more info, see [Enable Power Platform plugins for Microsoft 365 Copilot](/microsoft-copilot-studio/copilot-plugins-overview?context=microsoft-365-copilot/extensibility/context)
+For more info, see [Testing connector actions as plugins for Microsoft 365 Copilot](/microsoft-copilot-studio/copilot-plugins-overview?context=microsoft-365-copilot/extensibility/context).
 
-For more info, see [Testing connector actions as plugins for Microsoft 365 Copilot](/microsoft-copilot-studio/copilot-plugins-overview?context=microsoft-365-copilot/extensibility/context). 
+
