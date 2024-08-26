@@ -246,15 +246,15 @@ For each language file, specify the following properties from the app localizati
 
 TODO: Are all the current required fields for Teams loc schema still required for 1.18 / Copilot extensions?
 
-| Manifest field | Description | Max length| Required |
+| Manifest field | Description | Required |
 |--|--|--|--|
-| `@schema` | The URL to localization schema. For Copilot extensions, use v1.18: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.18/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
-| `name.short` | Replaces the short name from app manifest with value provided. | 30 characters | ✔️ |
-| `name.full` | Replaces the full name from app manifest with value provided | 100 characters | ✔️ |
-| `description.short`| Replaces the short description from app manifest with value provided. | 80 characters | ✔️ |
-| `description.full` | Replaces full description from app manifest with value provided. | 4000 characters | ✔️ |
-| *Key/value pairs for localized strings in Copilot extensions* | For Copilot extensions, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DC_Name": "Copilote de Communications"`| | |
-| *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`|
+| `@schema` | The URL to localization schema. For Copilot extensions, use v1.18: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.18/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. |✔️ |
+| `name.short` | Replaces the short name from app manifest with value provided. | ✔️ |
+| `name.full` | Replaces the full name from app manifest with value provided | ✔️ |
+| `description.short`| Replaces the short description from app manifest with value provided. | ✔️ |
+| `description.full` | Replaces full description from app manifest with value provided. | ✔️ |
+| *Key/value pairs for localized strings in Copilot extensions* | For Copilot extensions, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DC_Name": "Copilote de Communications"`| |
+| *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`||
 
 Here's an example language file, with localized strings for both Copilot extension and personal tabs:
 
