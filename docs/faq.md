@@ -1,6 +1,6 @@
 ---
-title: FAQ for Microsoft 365 Copilot
-description: Frequently asked questions for Microsoft Copilot extensions
+title: Microsoft 365 Copilot extensibility FAQ
+description: Frequently asked questions for Microsoft Copilot extensions and beyond
 author: girliemac
 ms.author: timura
 ms.topic: best-practice
@@ -101,4 +101,4 @@ You can create intelligent bots for Teams and M365 from the **Deploy to Teams** 
 
 ---
 
-You have more questions and feedback? [Let us know](feedback.ms)!
+You have more questions and feedback? [Let us know](feedback.md)!

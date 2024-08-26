@@ -130,5 +130,7 @@
     href: publish.md
   - name: Manage plugins for Copilot in Integrated Apps
     href: /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context
+- name: FAQ
+  href: faq.md
 - name: Support and feedback
   href: feedback.md
