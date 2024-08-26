@@ -194,7 +194,7 @@ The way you localize a Copilot extension is slightly different than how you loca
 
 You'll use the same localization file (per language) for both classic Teams app capabilities and Copilot extensions. However, while all other app manifest fields are referenced using JSONPath expressions in the language file(s), Copilot extension-related fields are simply referenced using dictionary keys.
 
-:::image type="content" source="assets/images/loc-manifest.png" alt-text="Diagram showing the relationship between app manifest, copilot manifest, and a language file for the purposes of localizing a Copilot extension":::
+:::image type="content" source="assets/images/loc-manifest.png" alt-text="Diagram showing the relationship between app manifest, copilot manifest, and a language file for the purposes of localizing a Copilot extension" border="false":::
 
 Following are the steps for supporting additional languages (beyond the default) to your Copilot extension.
 
