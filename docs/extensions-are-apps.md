@@ -194,7 +194,7 @@ The way you localize a Copilot extension is slightly different than how you loca
 
 You'll use the same localization file (per language) for both classic Teams app capabilities and Copilot extensions. However, while all other app manifest fields are referenced using JSONPath expressions in the language file(s), Copilot extension-related fields are simply referenced using dictionary keys.
 
-DIAGRAM
+:::image type="content" source="assets/images/loc-manifest.png" alt-text="Diagram showing the relationship between app manifest, copilot manifest, and a language file for the purposes of localizing a Copilot extension":::
 
 Following are the steps for supporting additional languages (beyond the default) to your Copilot extension.
 
@@ -256,7 +256,7 @@ TODO: Are all the current required fields for Teams loc schema still required fo
 | *Key/value pairs for localized strings in Copilot extensions* | For Copilot extensions, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DC_Name": "Copilote de Communications"`| | |
 | *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`|
 
-Here's an example language file, with localized strings for both Copilot extensions and personal tabs:
+Here's an example language file, with localized strings for both Copilot extension and personal tabs:
 
 ```json
 {
