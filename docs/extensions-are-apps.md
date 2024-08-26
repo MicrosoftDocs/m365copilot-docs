@@ -188,6 +188,95 @@ The API plugin manifest describes the plugin's capabilities, including the the A
 
 To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest.md).
 
+## Localizing your extension
+
+The way you localize a Copilot extension is slightly different than how you localize other capabilities (such as tabs, bots, and message extensions) in the app manifest. 
+
+You'll use the same localization file (per language) for both classic Teams app capabilities and Copilot extensions. However, while all other app manifest fields are referenced using JSONPath expressions in the language file(s), Copilot extension-related fields are simply referenced using dictionary keys.
+
+DIAGRAM
+
+Following are the steps for supporting additional languages (beyond the default) to your Copilot extension.
+
+### 1. Update your Copilot extension manifest(s) with tokenized keys
+
+Update your declarative copilot and/or API plugin manifests with tokenized keys (indicated with double square brackets, for example `[[PLUGIN_NAME]]`) for any field values you wish to localize. Localization keys much match this regular expression: `^[a-zA-Z_][a-zA-Z0-9_]*$`
+
+Here's an example declarative copilot manifest with tokenized values for its name and description:
+
+```json
+{
+    "$schema": "https://aka.ms/json-schemas/copilot-extensions/v1.0/declarative-copilot.schema.json",
+    "name": "[[DC_Name]]",
+    "description": "[[DC_Description]]",
+    "instructions": "# You are an assistant..."
+}
+```
+
+### 2. Add `localizationInfo` to your app manifest
+
+Add the `localizationInfo` section to your app manifest, with [language tags](/globalization/locale/standard-locale-names) and relative paths to each supported language file within your app package. 
+
+If your extension supports more than one language, then you must specify a standalone language file for every supported language, *including your default language*.
+
+TODO: Is the above statement true? (Seems like it should be, or at least will be for 2.0, so a good thing to advise customers to do now)
+
+Here's an example localization info section in app manifest:
+
+```json
+"localizationInfo": {
+    "defaultLanguageTag": "en",
+    "defaultLanguageFile": "en.json",
+    "additionalLanguages": [
+        {
+            "languageTag": "fr",
+            "file": "fr.json"
+        }
+    ]
+},
+```
+
+If your extension doesn't support additional languages, the default language strings are represented within app manifest file itself. (Single language app packages don't require a separate language file for the default language.)
+
+### 3. Create a localization file for each additional language
+
+Create a localization file for each additional supported language with values for the tokenized keys, using the file names specified (for `defaultLanguageFile` and `file` properties) in app manifest from the previous step.
+
+For each language file, specify the following properties from the app localization schema:
+
+TODO: Are all the current required fields for Teams loc schema still required for 1.18 / Copilot extensions?
+
+| Manifest field | Description | Max length| Required |
+|--|--|--|--|
+| `@schema` | The URL to localization schema. For Copilot extensions, use v1.18: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.18/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
+| `name.short` | Replaces the short name from app manifest with value provided. | 30 characters | ✔️ |
+| `name.full` | Replaces the full name from app manifest with value provided | 100 characters | ✔️ |
+| `description.short`| Replaces the short description from app manifest with value provided. | 80 characters | ✔️ |
+| `description.full` | Replaces full description from app manifest with value provided. | 4000 characters | ✔️ |
+| *Key/value pairs for localized strings in Copilot extensions* | For Copilot extensions, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DC_Name": "Copilote de Communications"`| | |
+| *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`|
+
+Here's an example language file, with localized strings for both Copilot extensions and personal tabs:
+
+```json
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.18/MicrosoftTeams.Localization.schema.json",
+    "name.short": "Copilote de Communications",
+    "name.full": "Copilote pour les Communications",
+    "description.short": "Outils pour les professionnels de la communication",
+    "description.full": "Outils pour les professionnels de la communication Contoso, y compris la galerie de ressources et les assistants personnels",
+    "localizationKeys": {
+        "DC_Name": "Copilote de Communications",
+        "DC_Description": "Un assistant pour les professionnels de la communication et des relations publiques chez Contoso."
+    },
+    "staticTabs[0].name": "Accueil",
+    "staticTabs[1].name": "Galerie de ressources",
+    "staticTabs[2].name": "À propos de Contoso"
+}
+```
+
+To learn more, see [Localize your app (Microsoft Teams)](/microsoftteams/platform/concepts/build-and-test/apps-localization) and the [Localization schema reference](/microsoftteams/platform/resources/schema/localization-schema).
+
 ## See also
 
 - [Manage extensions for Copilot](manage.md)
