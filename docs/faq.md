@@ -4,26 +4,35 @@ description: Frequently asked questions for Microsoft Copilot extensions and bey
 author: girliemac
 ms.author: timura
 ms.topic: best-practice
-ms.date: 08/26/2024
+ms.date: 08/27/2024
 ---
 
 # Frequently asked questions for Microsoft Copilot extensibility and beyond
 
 This section provides answers to the frequently asked questions (FAQs) about Microsoft 365 Copilot extensibility and related topics.
 
-## Pro-code vs. Copilot Studio questions
+## "What is the difference between A and B" questions
 
-Building a Copilot extension with Teams Toolkit for pro-coders and Copilot Studio for low-coders offers different approaches and tools for developers. Some of the unique technology and terminology may confuse you, so here are some questions and answers:
+#### What is the difference between declarative copilots and custom engine copilots?
 
-#### What is the difference between plugins and actions?
+**Declarative copilots**: also commonly known as Copilot extensions in the end-user Copilot experience, are essentially a collection of Custom Knowledge (via instructions and grounding data), and Custom Skills (including Actions, Triggers and Workflows) on top of Microsoft 365 Copilot orchestrator and foundation models powering an *immersive* conversational experience. These copilots can be integrated within Microsoft 365 and can utilize Copilot connectors to light up advanced functionality. Declarative copilots can be packaged along with other features such as an API plugin and various Teams and Microsoft 365 app features.
 
-While the terms "actions" and "plugins" in Copilot Studio are often used interchangeably, they have distinct meanings. Generally, an action refers to a single API call from a plugin (*e.g.*, "Close ticket #1234"), whereas a plugin encompasses a collection of functions (*e.g.*, close, create, resolve, etc.).
+**Custom engine copilots**: are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs. These include copilots built with Copilot Studio, Teams AI library, Azure AI, etc. Custom engine copilots currently work as standalone, Teams apps and, in the future, as *immersive* Copilot extension experiences. 
+
+No sure which one to build? [Your extensibility options for Microsoft 365 Copilot](decision-guide.md) article may help you.
+
+
+#### What is the difference between Actions and plugins?
+
+In general, *Actions* are the functionality that provide skills to Copilot via Copilot extensions. Developers can build Actions from Copilot connectors (plugins and Power Platform connectors), conversational, prompt or flow. With Actions developers can light up Copilot extensions that work *in context* of Microsoft 365 Copilot or they can also be used to provide skills to Copilot extensions that work in immersive experiences, such as declarative copilots.
+
+While the terms "actions" and "plugins" might be used interchangeably, however, technically an Action refers to a single API call from a plugin (*e.g.*, "Close ticket #1234"), whereas a plugin encompasses a collection of functions (*e.g.*, close, create, resolve, etc.).
 
 #### What is the equivalent of API-based plugins in Copilot Studio?
 
 The orchestrator and connector mechanisms in Copilot Studio differ from API-based plugins. To connect an API with Copilot Studio, you need to create a custom connector that uses OpenAPI V2 swagger and add an AI description. This approach allows you to integrate various APIs seamlessly and apply the AI capabilities of Copilot Studio for enhanced functionality.
 
-#### What are the differences between Power Graph connectors and Power Platform connectors?
+#### What are the differences between Graph connectors and Power Platform connectors?
 
 **Power Graph connectors** enable bringing additional information periodically to the Microsoft Graph making it discoverable across various Microsoft 365 experiences including Copilot for Microsoft 365. The connection is synchronous to data-providing services, replicating data into Microsoft 365 for use in Copilot and other scenarios. 
 
@@ -47,21 +56,29 @@ All response generation features of copilots are tested, measured, and validated
 
 For each capability, we conducted several tests to validate Microsoft Copilot for Microsoft 365. In addition to all Copilot for Microsoft 365 related capabilities, Responsible AI (RAI) testing was performed on different harm types to evaluate defect rates. The defect scores are then used to improve the model and mitigate the harm. It's important to keep in mind that the system was designed to mimic natural human communication, but the output may be inaccurate, incorrect, or out of date.
 
-## License & price questions
+## License questions
 
 #### What licenses do I need to purchase to develop extensions or custom engine copilots?
 
-The [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing) is an extra service that isn't included with standard Microsoft 365 licenses. The cost for Microsoft 365 Copilot is $30 USD per user per month, with an annual subscription. This license provides AI capabilities within the Office suite of applications, including Teams, Word, Outlook, Excel, PowerPoint, OneNote, Forms, and Loop. To build extensions for Microsoft 365 Copilot, you may need extra licensing:
+There's no extra license requirement to build Copilot extensions, when you have the [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing).
 
-**Building Copilot extensions with Teams Toolkit (for Pro-Coders)**: Requires a Microsoft 365 Copilot license. Pro-coders can build custom plugins and extensions using Teams Toolkit, which is free to use.
-
-**Copilot Extensibility with Copilot Studio**: Requires both [a tenant license and a per-user license](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing). The tenant license costs $200 per month and allows for 25,000 messages. Each user who creates copilots needs a zero-cost per-user license. The Copilot Studio license is included with the Microsoft 365 Copilot SKU, which is priced at $30 per user per month. 
+**Copilot Extensibility with Copilot Studio**: [Copilot Studio license](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) isn't required to build Copilot extensions, however, if you build AI solutions other than Copilot extensions, the license is required.
 
 On the other hand, if you wish to **build custom engine copilot** using Teams AI Library, you aren't required Microsoft 365 Copilot license. Instead, the cost depends on the Azure services consumed in the app. See the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/).
 
 #### Can I have Copilot license for development purposes?
 
 Unfortunately, the Copilot license doesn't apply to the Microsoft 365 development tenant. You need to purchase a separate tenant with a Copilot license or build on a production environment, although the latter isn't recommended.
+
+## Teams Toolkit questions
+
+#### What is the value of using Teams Toolkit?
+
+If you are already a Visual Studio Code user, Teams Toolkit runs on VS Code with GitHub integration! Also, you can take advantage of the features like, CI/CD, and multi-tenants support.
+
+#### Do I need a connector to connect an OpenAPI?
+
+No, Teams Toolkit lets you directly access to OpenAPI without any intermediate layer. So, if you already have an API, create an OpenAPI specification then make it into a plugin fairly easily.
 
 ## Azure AI questions
 
@@ -89,15 +106,19 @@ Use Cases for Azure AI services include creating bespoke AI solutions, such as:
 
 #### What are the differences between Copilot Studio and Azure AI Studio?
 
-**Copilot Studio** is designed for users who prefer a low-code or no-code approach. It applies AI to create chatbot and copilots with a range of features such as AI integration and easy deployment across various channels. 
+THe differences are the scope, customization, and integration they offer.
 
-[**Azure AI Studio**](/azure/ai-studio/what-is-ai-studio) is a coding-based platform that empowers seasoned developers to build and deploy intelligent, fully customizable bots. You can integrate these various AI tools and models, allowing developers to innovate with AI in a secure and responsible manner, however, Azure AI Studio is not the tool to *extend* Microsoft 365 Copilot.
+**Copilot Studio** comes with low-code features for users who prefer the approach. It applies AI to create chatbot and copilots with a range of features such as AI integration and easy deployment across various channels. 
 
-#### Can I build Microsoft Copilot extensions with Azure AI Studio? 
+[**Azure AI Studio**](/azure/ai-studio/what-is-ai-studio) is a coding-based platform that empowers developers to build and deploy intelligent, fully customizable bots. You can integrate these various AI tools and models, allowing developers to innovate with AI in a secure and responsible manner, however, Azure AI Studio is not the tool for *extending* Microsoft 365 Copilot.
 
-If you want to build with a model of your choice using Azure AI Studio, instead of *extending* Microsoft Copilot with Microsoft 365 enterprise data, you should build **Custom engine copilot**. To learn more about the difference between custom engine copilots and declarative copilots, read [Your extensibility options for Microsoft 365 Copilot](decision-guide.md).
+#### Can I build Microsoft Copilot extensions with Azure AI services? 
 
-You can create intelligent bots for Teams and Microsoft 365 from the **Deploy to Teams** feature with Teams Toolkit.
+If you want to use Azure AI services, we recommend you to build **Custom engine copilot**, instead of *extending* Microsoft Copilot.
+
+You can build Custom engine copilot with Microsoft 365 enterprise data, using the web-based interface of [Azure OpenAI Studio](https://oai.azure.com/). You can create intelligent bots for Teams and Microsoft 365 from the **Deploy to Teams** feature with Teams Toolkit.
+
+To learn more about the difference between custom engine copilots and declarative copilots, read [Your extensibility options for Microsoft 365 Copilot](decision-guide.md).
 
 ---
 
