@@ -44,7 +44,6 @@ The plugin capabilities object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `localization` | [Localization object](#localization-object) | Optional. Provides mappings for strings in different languages and locales. Certain properties can be localized using a [Liquid][] filter called `localize`. |
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starter-object) | Optional. Conversation starters that can be displayed to the user for suggestions on how to invoke the plugin. |
 
 ### Function object
@@ -165,37 +164,6 @@ The runtime authentication object contains the following properties.
 | `type` | String | Optional. Specifies the type of authentication required to invoke a function. Possible values are: `None`, `OAuthPluginVault`, `ApiKeyPluginVault`. |
 | `reference_id` | String | Optional. A value used when `type` is `OAuthPluginVault` or `ApiKeyPluginVault`. The `reference_id` value is acquired independently when providing the necessary authentication configuration values. This mechanism exists to prevent the need for storing secret values in the plugin manifest. |
 
-### Localization object
-
-Contains mappings for strings in different languages and locales.
-
-The localization object contains the following properties.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| Name matching `^(?i)[a-z]{2,3}(-[a-z]{2})?(?-i)$` | [Language-specific localized properties object](#language-specific-localized-properties-object) | Optional. Contains translations of localizable properties for the language represented by the property's name, which is a [BCP47][] language tag. |
-
-#### Language-specific localized properties object
-
-Contains translations of localizable properties for the language represented by the property's name, which is a [BCP47][] language tag.
-
-The language-specific localized properties object contains the following properties.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| Name matching `^[A-Za-z_][A-Za-z0-9_]*$` | [Localized property object](#localized-property-object) | Optional. Contains the localized value for the localizable property identified by this property's name. |
-
-##### Localized property object
-
-Contains the localized value for the localizable property identified by this property's name.
-
-The localized property object contains the following properties.
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `message` | String | Required. A localized, human-readable string that is used for the localizable property's value. |
-| `description` | String | Required. A localized description that can be displayed to the model. |
-
 ### Function parameters object
 
 An object that is used to identify the set of parameters that can be passed to the function. This object is structured to mirror the shape of a JSON Schema object but it only supports a subset of JSON Schema keywords.
@@ -287,7 +255,5 @@ Here's an example of a plugin manifest file that uses most of the manifest membe
 
 - [API plugins for Microsoft Copilot for Microsoft 365](./overview-api-plugins.md)
 
-[liquid]: https://shopify.github.io/liquid/
 [json-schema]: https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema
 [rfc9535]: https://www.rfc-editor.org/rfc/rfc9535
-[bcp47]: https://www.rfc-editor.org/rfc/rfc5646
