@@ -26,6 +26,20 @@ Unless specified otherwise, all string properties SHOULD be limited to 4K charac
 
 JSON objects defined in this document support only the described properties. Unrecognized properties in any JSON object SHOULD make the entire document invalid.
 
+### String localization
+
+Localizable strings can use a localization key instead of a literal value. The syntax is `[[key_name]]`, where `key_name` is the key name in the `localizationKeys` property in your localization files. For details on localization, see [Localizing your extension](extensions-are-apps.md#localizing-your-extension).
+
+#### Localized string example
+
+```json
+{
+    "schema_version": "v2.1",
+    "name_for_human": "[[plugin_name]]",
+    "description_for_human": "[[plugin_description]]"
+}
+```
+
 ## Plugin manifest object
 
 The root of the plugin manifest document is a JSON object that contains properties that describe the plugin.
