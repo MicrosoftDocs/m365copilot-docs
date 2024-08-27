@@ -189,19 +189,19 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
     ```
 
 * Authenticate to Microsoft 365 by entering the following command.
-    
+
     ```bash
     teamsapp auth login m365
     ```
-    
+
     You'll see the following result.
-    
-    ```bash    
+
+    ```bash
     Log in to your Microsoft 365 account - opening default web browser at https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=...&scope=https%3A%2F%2Fdev.teams.microsoft.com%2FAppDefinitions.ReadWrite%20openid%20profile%20offline_access&redirect_uri=http%3A%2F%2Flocalhost%3A35177&client-request-id=...&response_mode=query&response_type=code&x-client-SKU=msal.js.node&x-client-VER=...&x-client-OS=...&x-client-CPU=...&client_info=1&code_challenge=...&code_challenge_method=S256&prompt=select_account#
     ```
-    
+
     Once you log in, you'll see the following result.
-    
+
     ```bash
     (✔) Success: Successfully signed into Microsoft 365.
     Your Microsoft 365 account is: admin@consoto.onmicrosoft.com.
@@ -209,10 +209,11 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 
 * Go to the folder path where your project was created.
     In this case, we are going to the folder **ttk-declarative-copilot**. Replace the name `ttk-declarative-copilot` with the name of your folder.
+
     ```bash
     cd ttk-declarative-copilot
     ```
-    
+
 * Enter the following command to install your app in Copilot for Microsoft 365.
 
     ```bash
@@ -220,6 +221,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
     ```
 
     You'll see the following result.
+
     ```bash
     Executing provision
 
@@ -318,7 +320,6 @@ To add conversation starters to your declarative copilot, follow these steps:
 
 ---
 
-
 * The updated conversation starters will be available in your declarative copilot after you refresh the page.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-conversation-starters.png" alt-text="Screenshot shows the conversations starters from the declarative copilot in Copilot for Microsoft 365.":::
@@ -386,6 +387,7 @@ To add OneDrive and SharePoint knowledge to your declarative copilot, follow the
     > [!NOTE]
     >
     > * Replace `https://contoso.sharepoint.com/sites/ProductSupport` with your SharePoint site URL.
+    > * URLs should be full path to SharePoint items (site, document library, folder, or file). You can use the "Copy direct link" option in SharePoint to get the full path or files and folders. To achieve this, right-click on the file or folder and select **Details**. Navigate to **Path** and click on the copy icon.
     > * Not specifying the `items_by_url` array will default to the entire corpus of OneDrive and SharePoint content available to the logged in user.
 
 ### [Teams Toolkit](#tab/ttk)
@@ -472,18 +474,19 @@ To add a plugin to your declarative copilot, follow these steps:
 
 * Go to **Command Prompt**.
 * Navigate to your project folder. In this case, our project folder is called `ttk-declarative-copilot`. Replace this with the name of your folder.
+
     ```bash
     cd ttk-declarative-copilot
     ```
 
 * Execute the following command:
-    
+
     ```bash
     kiota plugin add --openapi https://aka.ms/repairshub/openapi.json --plugin-name "RepairsHub" --type apiplugin --output appPackage
     ```
-    
+
     You'll see the following result.
-    
+
     ```bash
     warn: Kiota.Builder.KiotaBuilder[0]
           OpenAPI warning: #/paths/~1repairs/get/responses/200/content/application~1json/schema/items/properties/image - The format uri is not supported by Kiota and the string type will be used.
@@ -500,7 +503,7 @@ To add a plugin to your declarative copilot, follow these steps:
 
     > [!NOTE]
     >
-    > * Replace the OpenAPI description URL to a local or hosted description to use your own API
+    > Replace the OpenAPI description URL to a local or hosted description to use your own API
 
 * Open the `appPackage/declarativeCopilot.json` file and add the `actions` array:
 
@@ -528,6 +531,7 @@ To add a plugin to your declarative copilot, follow these steps:
     ```bash
     teamsapp provision --env dev
     ```
+
 ---
 
 * The declarative copilot will have access to your plugin content to generate its answers after you reload the page.
