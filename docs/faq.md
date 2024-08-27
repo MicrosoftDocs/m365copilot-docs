@@ -7,7 +7,7 @@ ms.topic: best-practice
 ms.date: 08/27/2024
 ---
 
-# Frequently asked questions for Microsoft Copilot extensibility and beyond
+# Frequently asked questions for Microsoft 365 Copilot extensibility and beyond
 
 This section provides answers to the frequently asked questions (FAQs) about Microsoft 365 Copilot extensibility and related topics.
 
@@ -15,7 +15,7 @@ This section provides answers to the frequently asked questions (FAQs) about Mic
 
 #### What is the difference between declarative copilots and custom engine copilots?
 
-**Declarative copilots**: also commonly known as Copilot extensions in the end-user Copilot experience, are essentially a collection of Custom Knowledge (via instructions and grounding data), and Custom Skills (including Actions, Triggers and Workflows) on top of Microsoft 365 Copilot orchestrator and foundation models powering an *immersive* conversational experience. These copilots can be integrated within Microsoft 365 and can utilize Copilot connectors to light up advanced functionality. Declarative copilots can be packaged along with other features such as an API plugin and various Teams and Microsoft 365 app features.
+**Declarative copilots**: also known as Copilot extensions in the end-user Copilot experience, are tools that enhance the Microsoft 365 Copilot experience. They combine custom knowledge and skills (like actions, triggers, and workflows) to create a rich conversational experience. These copilots can be integrated into Microsoft 365 and use connectors for advanced features. They can also include other features like API plugins and app functionalities for Teams and Microsoft 365.
 
 **Custom engine copilots**: are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs. These include copilots built with Copilot Studio, Teams AI library, Azure AI, etc. Custom engine copilots currently work as standalone, Teams apps and, in the future, as *immersive* Copilot extension experiences. 
 
@@ -24,9 +24,9 @@ No sure which one to build? [Your extensibility options for Microsoft 365 Copilo
 
 #### What is the difference between Actions and plugins?
 
-In general, *Actions* are the functionality that provide skills to Copilot via Copilot extensions. Developers can build Actions from Copilot connectors (plugins and Power Platform connectors), conversational, prompt or flow. With Actions developers can light up Copilot extensions that work *in context* of Microsoft 365 Copilot or they can also be used to provide skills to Copilot extensions that work in immersive experiences, such as declarative copilots.
+In general, *Actions* are the functionality that provides skills to Copilot via Copilot extensions. Developers can build Actions from Copilot connectors (plugins and Power Platform connectors), conversational, prompt, or flow. With Actions developers can light up Copilot extensions that work *in context* of Microsoft 365 Copilot or they can also be used to provide skills to Copilot extensions that work in immersive experiences, such as declarative copilots.
 
-While the terms "actions" and "plugins" might be used interchangeably, however, technically an Action refers to a single API call from a plugin (*e.g.*, "Close ticket #1234"), whereas a plugin encompasses a collection of functions (*e.g.*, close, create, resolve, etc.).
+While the terms "actions" and "plugins" are sometimes used interchangeably, however, technically an Action refers to a single API call from a plugin (*e.g.*, "Close ticket #1234"), whereas a plugin encompasses a collection of functions (*e.g.*, close, create, resolve, etc.).
 
 #### What is the equivalent of API-based plugins in Copilot Studio?
 
@@ -74,7 +74,7 @@ Unfortunately, the Copilot license doesn't apply to the Microsoft 365 developmen
 
 #### What is the value of using Teams Toolkit?
 
-If you are already a Visual Studio Code user, Teams Toolkit runs on VS Code with GitHub integration! Also, you can take advantage of the features like, CI/CD, and multi-tenants support.
+If you're already a Visual Studio Code user, Teams Toolkit runs on VS Code with GitHub integration! Also, you can take advantage of the features like, CI/CD, and multitenants support.
 
 #### Do I need a connector to connect an OpenAPI?
 
@@ -106,7 +106,7 @@ Use Cases for Azure AI services include creating bespoke AI solutions, such as:
 
 #### What are the differences between Copilot Studio and Azure AI Studio?
 
-THe differences are the scope, customization, and integration they offer.
+The differences are the scope, customization, and integration they offer.
 
 **Copilot Studio** comes with low-code features for users who prefer the approach. It applies AI to create chatbot and copilots with a range of features such as AI integration and easy deployment across various channels. 
 
