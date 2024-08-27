@@ -142,7 +142,7 @@ To create a declarative copilot using Teams Toolkit, follow these steps:
 
 1. To publish your application, select **Publish**.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-publish.png" alt-text="Screenshot shows the Publish menu.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-provision.png" alt-text="Screenshot shows the Publish menu.":::
 
 ### [CLI](#tab/cli)
 
@@ -306,7 +306,7 @@ To add conversation starters to your declarative copilot, follow these steps:
 
 1. Using Teams Toolkit, select **Publish**.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-publish.png" alt-text="Screenshot shows the Publish menu.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-provision.png" alt-text="Screenshot shows the Publish menu.":::
 
 ### [CLI](#tab/cli)
 
@@ -343,7 +343,7 @@ To add web content using Bing to your declarative copilot, follow these steps:
 
 1. Using Teams Toolkit, select **Publish**.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-publish.png" alt-text="Screenshot shows the Publish menu.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-provision.png" alt-text="Screenshot shows the Publish menu.":::
 
 ### [CLI](#tab/cli)
 
@@ -392,7 +392,7 @@ To add OneDrive and SharePoint knowledge to your declarative copilot, follow the
 
 1. Using Teams Toolkit, select **Publish**.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-publish.png" alt-text="Screenshot shows the Publish menu.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-provision.png" alt-text="Screenshot shows the Publish menu.":::
 
 ### [CLI](#tab/cli)
 
@@ -450,7 +450,7 @@ To add Graph Connectors knowledge to your declarative copilot, follow these step
 
 1. Using Teams Toolkit, select **Publish**.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-publish.png" alt-text="Screenshot shows the Publish menu.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-provision.png" alt-text="Screenshot shows the Publish menu.":::
 
 ### [CLI](#tab/cli)
 
@@ -519,7 +519,7 @@ To add a plugin to your declarative copilot, follow these steps:
 
 1. Using Teams Toolkit, select **Publish**.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-publish.png" alt-text="Screenshot shows the Publish menu.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-provision.png" alt-text="Screenshot shows the Publish menu.":::
 
 ### [CLI](#tab/cli)
 
@@ -556,7 +556,7 @@ To improve the instructions of your declarative copilot, follow these steps:
 
 1. Using Teams Toolkit, select **Publish**.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-publish.png" alt-text="Screenshot shows the Publish menu.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-provision.png" alt-text="Screenshot shows the Publish menu.":::
 
 ### [CLI](#tab/cli)
 
