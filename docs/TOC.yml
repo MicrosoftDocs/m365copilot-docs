@@ -69,6 +69,8 @@
       href: api-plugin-confirmation-prompts.md
     - name: Best practices for writing OpenAPI specs
       href: openapi-document-guidance.md
+    - name: API plugin manifest reference
+      href: api-plugin-manifest.md
   - name: Teams message extension plugins
     items:
     - name: Overview
