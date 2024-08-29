@@ -4,7 +4,7 @@ description: Frequently asked questions for Microsoft Copilot extensions and bey
 author: girliemac
 ms.author: timura
 ms.topic: best-practice
-ms.date: 08/27/2024
+ms.date: 08/28/2024
 ---
 
 # Frequently asked questions for Microsoft 365 Copilot extensibility and beyond
@@ -21,6 +21,9 @@ This section provides answers to the frequently asked questions (FAQs) about Mic
 
 No sure which one to build? [Your extensibility options for Microsoft 365 Copilot](decision-guide.md) article may help you.
 
+#### What is the difference between custom engine copilots and Copilot Studio custom copilot?
+
+**Custom engine copilots** and **Copilot Studio custom Copilot** share a similar characteristic—they don't use Microsoft Copilot foundation model or orchestration. So, if you want to add more additional and advanced customization around orchestration, foundation models, work flows, triggers or any additional thing, or your users don't have or don't want Microsoft 365 Copilot, go through the custom copilot path, which you can build through several alternatives such as Teams AI library, or Azure Open AI for custom engine copilots, or Copilot Studio to build custom copilots.
 
 #### What is the difference between Actions and plugins?
 
