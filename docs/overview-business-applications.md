@@ -129,7 +129,7 @@ Power Platform connectors allow retrieving and updating data from data sources a
 
 ### Start with a conversational action
 
-Use Microsoft Copilot Studio to create conversational actions that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external APIs via connectors, and send summary results to the user. Learn more in  [Create conversational actions (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context).
+Use Microsoft Copilot Studio to create conversational actions that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external APIs via connectors, and send summary results to the user. Learn more in [Create conversational actions (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context).
 
 ## Related information
 
