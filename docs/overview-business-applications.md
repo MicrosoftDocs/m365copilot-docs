@@ -57,7 +57,7 @@ You can also create new actions using Power Platform components in Microsoft Cop
 
 To deploy a plugin, sign in to the Microsoft 365 admin center and locate the plugin in the list of Integrated Apps. Select the plugin you want and follow the steps to complete the deployment.
 
-To find Power Automate flows, search for "Power Automate". For Power Platform connector plugins, search for the respective connector name. For example, FreshDesk.
+To find Power Automate flows, search for "Power Automate". For Power Platform connector plugins, search for the respective connector name; for example, FreshDesk. For Copilot artifacts such as actions created in Microsoft Copilot Studio, search for "Copilot Studio".
 
 To find Dynamics 365 plugins for Copilot for Microsoft 365, search for "Dynamics 365". The search results will show the available Dynamics 365 plugins. 
 
@@ -130,24 +130,6 @@ Power Platform connectors allow retrieving and updating data from data sources a
 ### Start with a conversational action
 
 Use Microsoft Copilot Studio to create conversational actions that retrieve and integrate data across multiple sources with AI, execute custom logic on the results, access external APIs via connectors, and send summary results to the user. Learn more in  [Create conversational actions (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context).
-
-## Use actions
-
-After an action is created, publish it so it appears in the Actions page in Microsoft Copilot Studio. To use actions created in Microsoft Copilot Studio, deploy the "Copilot Studio" app in Microsoft 365 admin center's **Settings** -> **Integrated apps**.
-
-## Known limitations
-
-To comply with data residency requirements, only a subset of environments (top 20) are allowed per tenant with Copilot for Microsoft 365. This limit is temporary and will be removed in the future. Here's how to identify the allowlisted 20 environments:
-
-1. Open [portal.azure.com](https://portal.azure.com/) and select **Tenant** properties.
- 
-1. Note down the *Country or Region* associated with your tenant.
-
-1. Open [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/), select the **Environments** page, and sort all environments by *Type,* *Region,* and *Created on* (descending).
-
-In the first 20 environments you find where *Type* is “Production,” the allowlisted environments are the ones where the region matches the region associated with your tenant.
-
-To test actions in an environment outside of the top 20 that are allowlisted, you can provision a new environment in the same region. Otherwise, you'll need to wait until the limits are removed.
 
 ## Related information
 
