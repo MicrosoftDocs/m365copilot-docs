@@ -34,8 +34,8 @@ The following samples implement custom copilots using custom orchestration and m
 
 | Sample | Description |
 |--------|-------------|
-| [Meeting Helper with Azure Open AI](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-ai-meeting-helper) | This example demonstrates how Azure Open AI extracts action items from meeting transcriptions for all participants who subscribed to the meeting, and subsequently sends these action items to each individual user in a 1:1 chat after the meeting concludes. |
-| [Virtual assistant bot](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-virtual-assistant) | This is a sample application that demonstrates a root bot that routes inputs to skill bots for tailored responses. |
+| [Meeting Helper with Azure OpenAI](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-ai-meeting-helper) | This example demonstrates how Azure OpenAI extracts action items from meeting transcriptions for all participants who subscribed to a meeting. It then sends these action items to each individual user in a 1:1 chat after the meeting concludes. |
+| [Virtual assistant bot](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-virtual-assistant) | This sample application demonstrates a root bot that routes inputs to skill bots for tailored responses. |
 
 ## Plugins for Copilot for Microsoft 365
 
@@ -53,7 +53,7 @@ The following samples implement Teams message extensions that extend Copilot for
 | [TypeScript Multi Parameters](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-multiparam-ts) | Plugin that demonstrates how to implement complex utterances and support deep retrieval |
 | [JavaScript Multi Parameters](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-multiparam-js) | Plugin that demonstrates how to implement complex utterances and support deep retrieval |
 | [Compliance checker](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-ai-doc-compliance-checker) | Use Azure OpenAI to compare proposal documents against a guideline document and return whether the proposal complies and why/why not. |
-| [Expert finder](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-expert-finder-js) | This sample implements a Teams message extension that can be used to query a database of candidates based on their skills, location and availability. The sample, when used with Copilot for M365, demonstrates SSO, and Copilot's ability to perform multi-parameter search. |
+| [Expert finder](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-expert-finder-js) | This sample implements a Teams message extension that can be used to query a database of candidates based on their skills, location, and availability. The sample, when used with Copilot for Microsoft 365, demonstrates Single Sign-On (SSO), and Copilot's ability to perform multi-parameter search. |
 
 #### Write a message extension for Teams and Copilot for Microsoft 365
 
