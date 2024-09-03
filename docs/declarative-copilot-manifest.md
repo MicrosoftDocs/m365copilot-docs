@@ -1,8 +1,8 @@
 ---
 title: Declarative copilot schema for Microsoft Copilot for Microsoft 365
 description: Learn about the properties you can use in a manifest file for declarative copilot in Microsoft Copilot for Microsoft 365
-author: rimisra2
-ms.author: rimisra
+author: jasonjoh and rimisra
+ms.author: jasonjoh and rimisra 
 ms.topic: reference
 ---
 
@@ -39,11 +39,11 @@ The declarative copilot manifest object contains the following properties.
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
 | `id`                    | String                                                                | Optional. |
-| `name`                  | String                                                                | Required. The name of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. Value must match the `^[A-Za-z0-9]+$` regular expression. |
-| `description`           | String                                                                | Required. The description of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. Value must match the `^[A-Za-z0-9]+$` regular expression. |
+| `name`                  | String                                                                | Required. Localizable. The name of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. Value must match the `^[A-Za-z0-9]+$` regular expression. |
+| `description`           | String                                                                | Required. Localizable. The description of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. Value must match the `^[A-Za-z0-9]+$` regular expression. |
 | `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative copilot should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative copilot. There MUST NOT be more than five objects in the array. |
-| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. A list of examples of questions that the declarative copilot can answer. There MUST NOT be more than six objects in the array. |
+| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative copilot can answer. There MUST NOT be more than six objects in the array. |
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative copilot. |
 
 ### Example of declarative copilot manifest object
@@ -172,8 +172,8 @@ The conversation starter object contains the following properties:
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `text`   | String | Required. A suggestion that the user can use to obtain the desired result from the declarative copilot. It MUST contain at least one nonwhitespace character. |
-| `title`  | String | Optional. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
+| `text`   | String | Required. Localizable. A suggestion that the user can use to obtain the desired result from the declarative copilot. It MUST contain at least one nonwhitespace character. |
+| `title`  | String | Optional. Localizable. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
 
 ### Conversation starters object example
 
