@@ -93,7 +93,7 @@ For more details see [Install Teams Toolkit CLI](/microsoftteams/platform/toolki
 
 ### Install Teams Toolkit Visual Studio Code extension
 
-Follow the steps in [Install Teams Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode).
+Follow the steps in [Install Teams Toolkit Visual Studio Code extension](microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-a-prerelease-version) to install the pre-release version.
 
 ### Install Kiota
 
