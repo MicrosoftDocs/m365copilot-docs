@@ -28,6 +28,15 @@ You can find the latest list of Microsoft Graph connector samples from the commu
 
 > [!VIDEO https://www.youtube.com/embed/2oQ_6wXrwDQ]
 
+## Declarative copilot with API plugin samples
+
+The following samples implement custom copilots using Microsoft's orchestration and models.
+
+| Sample | Description |
+|--------|-------------|
+| [Trey Research Copilot extension (OAuth version)](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/cext-trey-research-auth) | This example demonstrates how to build your own copilot using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This sample includes authentication. |
+| [Trey Research Copilot extension (anonymous version)](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/cext-trey-research) | This example demonstrates how to build your own copilot using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This version of the Trey Research sample doesn't do authentication, but might be useful for demos and experimentation. |
+
 ## Custom engine copilot samples
 
 The following samples implement custom copilots using custom orchestration and models.
