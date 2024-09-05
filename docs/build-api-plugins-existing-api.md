@@ -70,24 +70,11 @@ Once you complete these steps, Teams Toolkit generates the required files for th
 
 ### [Kiota](#tab/kiota)
 
-1. [Install Kiota](/openapi/kiota/install) if it isn't already installed.
+Start by registering an OAuth client in the Teams apps developer portal to get a client registration ID. Then use the client registration ID to create the plugin with the appropriate authentication details.
 
-1. Open your command-line interface (CLI) in the root of the Budget Tracker sample.
+#### Register an OAuth client
 
-1. Create the plugin by using the following command.
-
-    ```bash
-    kiota plugin add --openapi ./openapi/openapi.yml --plugin-name "Budget Tracker" --type APIPlugin --output ./plugin
-    ```
-
-Once you complete these steps, Kiota generates the required files for the plugin in the **./plugin** folder.
-
-> [!NOTE]
-> The Budget Tracker sample already contains icon files (**color.png** and **outline.png**) in the **./plugin** folder. For your own plugin, see [Teams app manifest reference](/microsoftteams/platform/resources/schema/manifest-schema#icons) for guidelines on generating icons.
-
-#### Add authentication details
-
-For this step, you need the following values from client ID and client secret for your **Budget Tracker Plugin** app registration you created when [configuring the Budget Tracker sample](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin#configure-the-sample).
+For this step, you need the following values for your **Budget Tracker Plugin** you created when [configuring the Budget Tracker sample](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin#configure-the-sample).
 
 - Tenant ID, client ID, and client secret from your **Budget Tracker Plugin** app registration
 - API scope from your **Budget Tracker Service** app registration
@@ -114,22 +101,24 @@ For this step, you need the following values from client ID and client secret fo
 
 1. Copy the value of **OAuth client registration ID**.
 
-1. Open **./plugin/budget tracker-apiplugin.json** and locate the following lines.
+#### Create the plugin with Kiota
 
-    ```json
-    "auth": {
-      "type": "None"
-    },
+1. [Install Kiota](/openapi/kiota/install) if it isn't already installed.
+
+1. Open your command-line interface (CLI) in the root of the Budget Tracker sample.
+
+1. Create the plugin by using the following command, replacing `client-registration-id` with the **OAuth client registration ID** from the Teams apps developer portal.
+
+    ```bash
+    kiota plugin add --plugin-name "Budget Tracker" --openapi ./openapi/openapi.yml \
+    --output ./plugin --type APIPlugin \
+    --authentication-type OAuth2 --authentication-ref-id client-registration-id
     ```
 
-1. Replace those lines with the following, replacing `OAUTH_CLIENT_ID` with the **OAuth client registration ID** you copied from the Teams developer portal.
+Once you complete these steps, Kiota generates the required files for the plugin in the **./output** folder.
 
-    ```json
-    "auth": {
-      "type": "OAuthPluginVault",
-      "reference_id": "OAUTH_CLIENT_ID"
-    },
-    ``
+> [!NOTE]
+> The Budget Tracker sample already contains icon files (**color.png** and **outline.png**) in the **./plugin** folder. For your own plugin, see [Teams app manifest reference](/microsoftteams/platform/resources/schema/manifest-schema#icons) for guidelines on generating icons.
 
 ---
 
