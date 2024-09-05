@@ -10,20 +10,37 @@ ms.topic: how-to
 
 # Build API plugins from an existing API for Microsoft Copilot for Microsoft 365
 
-[API plugins](overview-api-plugins.md) connect your existing REST API to Microsoft Copilot for Microsoft 365. You can use the [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) or [Kiota](/openapi/kiota/overview) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi). Teams Toolkit offers a UI-based experience, while Kiota offers a command line interface (CLI) experience.
+[API plugins](overview-api-plugins.md) connect your existing REST API to Microsoft Copilot for Microsoft 365. You can use the [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi).
 
 ## Prerequisites
 
 - Requirements specified in [Requirements for plugin development](prerequisites.md#requirements-for-plugin-development)
 - An existing REST API with an OpenAPI specification (this walkthrough uses the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin))
 - [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.9 or later (if using Teams Toolkit to generate the plugin)
-- [Kiota](/openapi/kiota/install) (if using Kiota to generate the plugin)
-- [Teams Toolkit CLI](/microsoftteams/platform/toolkit/teams-toolkit-cli) (if using Kiota to generate the plugin)
+- [Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit)
+- Optional: [Microsoft Kiota Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-graph.kiota)
 
 > [!TIP]
 > For the best results, make sure that your OpenAPI specification follows the guidelines detailed in [How to make an OpenAPI document effective in extending Copilot](openapi-document-guidance.md).
 
 To follow along with this guide, download the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin) and configure it to run on your local development machine. Build and run the sample at least once to generate the **openapi.yml** file for the API.
+
+## Enable plugin development in Teams Toolkit
+
+1. Open Visual Studio Code. If Teams Toolkit isn't already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
+
+1. Select **File** -> **Preferences** -> **Settings**. In the **Settings** window, search for `copilot` to locate the **Fx-extension: Develop Copilot Plugin** option. If not already enabled, enable the setting.
+
+1. In the **Settings** window, search for `kiota` to locate the **Fx-extension: Enable Microsoft Kiota** option. If you want to enable Kiota, enable this option. Otherwise, disable it. For details, see [Benefits of enabling Microsoft Kiota](#benefits-of-enabling-microsoft-kiota).
+
+1. If you made any changes to settings, restart Visual Studio Code before proceeding.
+
+### Benefits of enabling Microsoft Kiota
+
+Enabling Microsoft Kiota in Teams Toolkit has the following benefits.
+
+- The user interface for selecting operations from the OpenAPI document is replaced with an API explorer that is better suited for large OpenAPI documents.
+- The developer is able to search for public OpenAPI descriptions using [Kiota's search command](/openapi/kiota/using#description-search).
 
 ## Create the plugin
 
@@ -33,11 +50,7 @@ API plugins are a ZIP file that contains the following files.
 - An [API plugin manifest](api-plugin-manifest.md) that references the included OpenAPI specification and describes the available operations, authentication method, and response formats.
 - A [Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema) (for example, `manifest.json`) with a `copilotExtensions` property that references the API plugin manifest.
 
-### [Teams Toolkit](#tab/toolkit)
-
 1. Open Visual Studio Code. If Teams Toolkit isn't already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
-
-1. Select **File** -> **Preferences** -> **Settings**. In the **Settings** window, search for `copilot` to locate the **Fx-extension: Develop Copilot Plugin** option. If not already enabled, enable the setting and restart Visual Studio Code.
 
 1. Select the **Teams Toolkit** icon in the left-hand Activity Bar.
 
@@ -49,6 +62,10 @@ API plugins are a ZIP file that contains the following files.
 
 1. Select **Start with an OpenAPI Description Document**.
 
+The next steps differ depending on if you enabled Microsoft Kiota or not.
+
+### [Teams Toolkit without Kiota](#tab/toolkit)
+
 1. Select **Browse** and browse to the location of the OpenAPI specification from the Budget Tracker sample, located at **./openapi/openapi.yml**.
 
 1. Select all the operations to enable for the plugin.
@@ -59,6 +76,24 @@ API plugins are a ZIP file that contains the following files.
 
 1. Enter `Budget Tracker` as a name for the plugin.
 
+### [Teams Toolkit with Kiota](#tab/kiota)
+
+1. Select **Browse path** and browse to the location of the OpenAPI specification from the Budget Tracker sample, located at **./openapi/openapi.yml**.
+
+1. The side bar view changes to the Kiota API explorer. Use the **Add all** button to select all the operations to enable for the plugin.
+
+    :::image type="content" source="assets/images/api-plugins/select-operations-kiota.png" alt-text="The Kiota UI to select operations":::
+
+1. Select the **Generate** button in the Kiota API explorer.
+
+    :::image type="content" source="assets/images/api-plugins/generate-plugin-kiota.png" alt-text="The Generate button in the Kiota API explorer":::
+
+1. Choose a location for the API plugin project.
+
+1. Enter `Budget Tracker` as a name for the plugin.
+
+---
+
 Once you complete these steps, Teams Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded.
 
 > [!NOTE]
@@ -68,63 +103,7 @@ Once you complete these steps, Teams Toolkit generates the required files for th
 > # isPKCEEnabled: true
 > ```
 
-### [Kiota](#tab/kiota)
-
-Start by registering an OAuth client in the Teams apps developer portal to get a client registration ID. Then use the client registration ID to create the plugin with the appropriate authentication details.
-
-#### Register an OAuth client
-
-For this step, you need the following values for your **Budget Tracker Plugin** you created when [configuring the Budget Tracker sample](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin#configure-the-sample).
-
-- Tenant ID, client ID, and client secret from your **Budget Tracker Plugin** app registration
-- API scope from your **Budget Tracker Service** app registration
-- Your dev tunnel URL
-
-1. Open your browser and browse to the [Teams apps developer portal](https://dev.teams.microsoft.com/tools). Select **Tools** in the left-hand navigation.
-
-1. Select **OAuth client registration**. If you have no existing registrations, select **Register client**; if you have existing registrations, select **New OAuth client registration**.
-
-1. Fill in the following fields.
-
-    - **Registration name**: `Budget Tracker Auth`
-    - **Base URL**: Your **API base URL**
-    - **Restrict usage by org**: **My organization only**
-    - **Restrict usage by app**: **Any Teams app**
-    - **Client ID**: Your **Plugin client ID**
-    - **Client secret**: Your **Plugin client secret**
-    - **Authorization endpoint**: Your **Authorization endpoint**
-    - **Token endpoint**: Your **Token endpoint**
-    - **Refresh endpoint**: Your **Token endpoint**
-    - **Scope**: Your **API scope**.
-
-1. Select **Save**.
-
-1. Copy the value of **OAuth client registration ID**.
-
-#### Create the plugin with Kiota
-
-1. [Install Kiota](/openapi/kiota/install) if it isn't already installed.
-
-1. Open your command-line interface (CLI) in the root of the Budget Tracker sample.
-
-1. Create the plugin by using the following command, replacing `client-registration-id` with the **OAuth client registration ID** from the Teams apps developer portal.
-
-    ```bash
-    kiota plugin add --plugin-name "Budget Tracker" --openapi ./openapi/openapi.yml \
-    --output ./plugin --type APIPlugin \
-    --authentication-type OAuth2 --authentication-ref-id client-registration-id
-    ```
-
-Once you complete these steps, Kiota generates the required files for the plugin in the **./output** folder.
-
-> [!NOTE]
-> The Budget Tracker sample already contains icon files (**color.png** and **outline.png**) in the **./plugin** folder. For your own plugin, see [Teams app manifest reference](/microsoftteams/platform/resources/schema/manifest-schema#icons) for guidelines on generating icons.
-
----
-
 ## Package and sideload the plugin
-
-### [Teams Toolkit](#tab/toolkit)
 
 1. Open the plugin project in Visual Studio Code.
 
@@ -145,28 +124,6 @@ Once you complete these steps, Kiota generates the required files for the plugin
 1. Wait for the toolkit to report that is finished provisioning.
 
     :::image type="content" source="assets/images/api-plugins/provision-complete-ttk.png" alt-text="The Teams Toolkit message confirming successful provisioning":::
-
-### [Kiota](#tab/kiota)
-
-1. Use your preferred tool for creating ZIP files to add all of the files in the **./plugin** directory to a ZIP file named **BudgetTracker.zip**. For example, the following PowerShell command run in the **./plugin** directory generates the file.
-
-    ```powershell
-    Compress-Archive -Path * -DestinationPath ./BudgetTracker.zip
-    ```
-
-1. Use the following command to log in to the Teams Toolkit CLI.
-
-    ```bash
-    teamsapp account login
-    ```
-
-1. Use the following command to sideload the plugin for the logged in user.
-
-    ```bash
-    teamsapp install --file-path ./BudgetTracker.zip
-    ```
-
----
 
 Your plugin is now available to test with your user account in Copilot for Microsoft 365 in Microsoft Teams.
 
