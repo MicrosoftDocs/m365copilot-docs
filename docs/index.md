@@ -4,22 +4,105 @@ description: Extend, enrich, and customize Microsoft 365 Copilot with external s
 author: girliemac
 ms.author: timura
 ms.topic: overview
-ms.date: 08/14/2024
+ms.date: 09/05/2024
 ---
 
 # Extend Microsoft 365 Copilot
 
-**Microsoft 365 Copilot** is a powerful productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, leveraging Microsoft Graph data. It offers *skills* such as understanding, summarizing, predicting, recalling, translating, and generating content. By indexing content in the Microsoft Graph, it draws from your organization's *knowledge*, including emails, chats, and documents that users have permission to access.
+**Microsoft 365 Copilot** is a powerful productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, leveraging Microsoft Graph data.
+
+It offers *knowledge* including organizational knowledge such as emails, chats, and documents that users have permission to access, and *skills*, such as understanding, summarizing, predicting, recalling, translating, and generating content. 
 
 :::image type="content" source="assets/images/copilot-system.png" alt-text="Visual representation of the Copilot for Microsoft 365 system: Foundational models (LLMs) + Microsoft Graph (your data) + Microsoft 365 and 3rd party apps" border="false":::
 
-As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) to suit the unique needs of your customers.
+**Copilot extensibility** is the ability to customize and extend Microsoft Copilot with additional knowledge and skills, including from other copilots. As a developer, you can extend Microsoft 365 Copilot with **Copilot extensions** to suit the unique needs of your customers.
 
-[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
-
-Business workflows often involve more than just Microsoft 365 applications and data formats. Copilot's extensibility allows developers to integrate additional knowledge and skills. IT Admins can also configure Copilot connectors in the Microsoft 365 Admin Center to expand the knowledge available to all users in their tenant, while respecting data access limitations.
+Additionally, IT Admins can configure appropriate Copilot connectors in [Microsoft 365 Admin Center](https://admin.microsoft.com) and [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) to expand knowledge available to all users ​in their tenant, respecting data access limitations from the knowledge ​source itself.
 
 :::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with organizational 'Knowledge' as the x-axis and user 'Skills' as the y-axis showing that you can extend Copilot skills with plugins and extend Copilot knowledge with Graph connectors" border="false" lightbox="assets/images/skills-knowledge-chart.png":::
+
+## Types of copilots
+
+**Copilots** are intelligent AI assistants that use generative AI to help people achieve more, for examples,helping with creative tasks, generating insights, and executing automated workflows.
+
+There are two types of copilots you can build—Declarative copilots and custom copilots.
+
+**Declarative copilots**, also commonly known as **Copilot extensions**, in the end-user Copilot experience, are essentially a collection of *Custom Knowledge* (via instructions and grounding data), and *Custom Skills* (including Actions, Triggers, and Workflows) hosted on top of M365 Copilot orchestrator and foundation models powering a conversational experience. These copilots can be integrated within Microsoft 365 and can utilize Copilot connectors to light up advanced functionality.​
+
+On the other hand, **Custom copilots** are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs with your own stack. These include copilots built with Copilot Studio, Teams AI library, Azure AI, etc. Custom copilots currently work as standalone, Teams apps and, in the future, as Copilot extension experiences.
+
+:::image type="content" source="assets/images/m365-extensibility-types.png" alt-text="This illustration shows types of extensibility options, Graph connector, plugins, and declarative copilots" border="true" lightbox="assets/images/m365-extensibility-types.png":::
+
+To find out which copilots work the best for you, learn the differences at [Your copilot options for Microsoft 365](decision-guide.md).
+
+## Types of Microsoft 365 Copilot extensions
+
+There are multiple ways to extend Microsoft 365 Copilot.
+
+### Declarative copilots 
+
+As you learned earlier, a declarative copilot comprises a collection of Custom Knowledge and Custom Skills. You can seamlessly integrate it within Microsoft 365 using Copilot connectors to unlock advanced functionality.
+
+Declarative copilots have:
+
+- **Familiar user interface** with Copilot for Microsoft 365
+- **Domain-specific knowledge** applied for specific tasks, such as travel planner or nutrition assistant
+- **Ability to integrate with plugins and connectors** to call specialized services and access domain expertise
+
+Learn more about [declarative copilots](overview-declarative-copilot.md).
+
+### Copilot connectors
+
+Copilot connectors are building blocks of Copilot extensions. They allow developers and IT admins to leverage Custom Knowledge and to build Custom Skills and to Microsoft Copilot’s out-of-box features via Copilot extensions. ​
+
+Copilot connectors consist of Microsoft Graph connectors, Power Platform connectors, plugins, and others.
+
+#### Graph connectors
+
+Graph connectors enable you to extend Microsoft Copilot by integrating external data sources into Microsoft Graph, enhancing Copilot's ability to reason over your enterprise content and provide more comprehensive responses. This integration allows Copilot to access and utilize a broader range of organizational knowledge.
+
+With Graph connectors, you can:
+
+- **Make the most of your external data** by giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights
+- **Use Copilot as a research aid**, letting Copilot find, summarize, and perform Q&A natively by leveraging the dataset of your choice
+- **Surface the intelligence of Copilot** in Microsoft Search, ContextIQ, and more to enhance the ways your users are already searching for answers
+
+There are three main steps to set up a Graph connector: (1) Create a connection, (2) Register your schema, and then (3) Ingest your content to the Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in the Microsoft 365 (Office) app. Learn more about [how Graph connectors work in Copilot](overview-graph-connector.md).
+
+#### Power Platform connectors
+
+Power Platform connectors are essential components that enable Power Platform applications, such as Power Automate, Power Apps, and Logic Apps, to interact with external services and data sources. They also enhance the capabilities of Microsoft 365 Copilot by enabling it to integrate with a wide range of external services and data sources, perform custom actions, and access a broader range of data types.
+
+Unlike Graph connectors, Power platform connectors are real-time data retrieval with read/write actions. For example, you can create a connector that allows your users to track an issue in real-time, also let them create actions, such as creating a ticket for the tracker.
+
+### Plugins
+
+Plugins enable copilots to interact with other systems to read or write information in near real time. With plugins, you can:
+
+- **Access real-time information** such as finding the latest news coverage on a product launch
+- **Retrieve relational data** such as reporting on service tickets assigned to a given team member
+- **Perform actions across apps** such as creating a new task in your organization's work tracking system
+
+There are a few different ways to create plugins:
+ 
+- Make an API into a Copilot plugin with [API plugins](overview-api-plugins.md)
+- Teams [Message extensions](overview-message-extension-bot.md) are now work as plugins
+- Create [Copilot Studio Actions](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), if you prefer no-code/low-code
+
+[!INCLUDE preview-disclaimer]
+
+## Copilot extension user-experience
+
+As a developer, you can extend Microsoft 365 Copilot by building Copilot extensions to tailor the user experience. When building Copilot extensions, you can provide *In context* and *immersive* experiences.
+
+- **In-context experience**: This is where users can @mention the extension and interact with it within the chat conversation with Microsoft 365 Copilot
+- **Immersive experience**: This allows users to chat directly with the extension, providing an embedded experience
+
+:::image type="content" source="assets/images/copilot-experiences.png" alt-text="This illustration shows two distinct copilot user experiences" border="false":::
+
+To build **in-context experiences**, you can use plugins and declarative copilots. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems. ​
+
+To build an **immersive experience**, you use Declarative copilots. When a user activates a Copilot extension with an *immersive* experience, the conversation is a 1:1 interaction with the extension, tailored to its capabilities and scope.
 
 ## Extend Copilot for your scenario
 
@@ -43,79 +126,12 @@ Here are some practical examples of what you can develop for your organization:
 
 :::image type="content" source="assets/images/personas-extend-copilot.png" border="false" alt-text="Persona 1 - I am a developer, who manages the product database at an e-commerce company, and I want to build an inventory catalog plugin that brings the product information for internal org. Persona 2 - I am a marketing manager, who aims to launch a new campaign for my products. And I want a tool that helps developing marketing assets tailored to the campaign." lightbox="assets/images/personas-extend-copilot.png":::
 
-
-## Types of Microsoft 365 Copilot extensions
-
-There are multiple types of extensions and ways to extend Microsoft 365 Copilot.
-
-:::image type="content" source="assets/images/m365-extensibility-types.png" alt-text="This illustration shows types of extensibility options, Graph connector, plugins, and declarative copilots" border="true" lightbox="assets/images/m365-extensibility-types.png":::
-
-### Declarative copilots 
-
-Declarative copilots are essentially a collection of *Custom Knowledge* (via instructions and grounding data), and *Custom Skills* (including Actions, Triggers, and Workflows) on top of Microsoft 365 Copilot orchestrator and foundation models. Declarative copilots provide you with more tailoring, tuning, and control of the user experience. 
-
-Declarative copilots have:
-
-- **Familiar user interface** with Copilot for Microsoft 365
-- **Domain-specific knowledge** applied for specific tasks, such as travel planner or nutrition assistant
-- **Ability to integrate with plugins and connectors** to call specialized services and access domain expertise
-
-You can connect connectors and plugins to your declarative copilot. Connectors and plugins can be built as a stand-alone, too.
-
-Learn more about [declarative copilots](overview-declarative-copilot.md).
-
-### Copilot connectors
-
-Copilot connectors enable seamless integration with various external services and data sources, and they're the basic building blocks of Copilot extensions. They allow developers and IT admins to build Custom Actions and Custom Grounding to Microsoft Copilot's out-of-box features via Copilot extensions. 
-
-#### Graph connectors
-
-Graph connectors are a type of Copilot connector that enables bringing additional information periodically to the Microsoft Graph making it discoverable across various Microsoft 365 experiences including Copilot for Microsoft 365.
-
-With Graph connectors, you can:
-
-- **Make the most of your external data** by giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights
-- **Use Copilot as a research aid**, letting Copilot find, summarize, and perform Q&A natively by leveraging the dataset of your choice
-- **Surface the intelligence of Copilot** in Microsoft Search, ContextIQ, and more to enhance the ways your users are already searching for answers
-
-There are three main steps to set up a Graph connector: (1) Create a connection, (2) Register your schema, and then (3) Ingest your content to the Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in the Microsoft 365 (Office) app. Learn more about [how Graph connectors work in Copilot](overview-graph-connector.md).
-
-#### Power Platform connectors
-
-Power Platform connectors are essential components that enable Power Platform applications, such as Power Automate, Power Apps, and Logic Apps, to interact with external services and data sources. They also enhance the capabilities of Microsoft 365 Copilot by enabling it to integrate with a wide range of external services and data sources, perform custom actions, and access a broader range of data types.
-
-Unlike Graph connectors, Power platform connectors are real-time data retrieval with read/write actions. For example, you can create a connector that allows your users to track an issue in real-time, also let them create actions, such as creating a ticket for the tracker.
-
-
-### Plugins
-
-Plugins enable copilots to interact with other systems to read or write information in near real time. With plugins, you can:
-
-- **Access real-time information** such as finding the latest news coverage on a product launch
-- **Retrieve relational data** such as reporting on service tickets assigned to a given team member
-- **Perform actions across apps** such as creating a new task in your organization's work tracking system
-
-There are a few different ways to create plugins:
- 
-- Make an API into a Copilot plugin with [API plugins](overview-api-plugins.md)
-- Teams [Message extensions](overview-message-extension-bot.md) are now work as plugins
-- Create [Copilot Studio Actions](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), if you prefer no-code/low-code
-
-> [!NOTE]
-> **Actions** are the collective term for plugins as custom skills and performing an action, and the term is often used interchangeably with plugins.
-
-### Custom engine copilots
-
-**Custom engine copilots** are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs. Custom engine copilots currently work as standalone Teams apps only and, in the future, will also power Copilot extensions experiences.
-
-Learn more about [custom engine copilots](overview-custom-engine-copilot.md).
-
 ## Next step
 
 Learn more about the two main paths for AI-driven business transformation: extending Copilot for Microsoft 365 and building custom AI solutions from the ground up.
 
 > [!div class="nextstepaction"]
-> [Extend Microsoft Copilot or build your own](build-or-extend.md)
+> [Frequently asked questions](faq.md)
 
 If you're ready to extend Copilot for Microsoft 365, learn more about your extensibility options.
 

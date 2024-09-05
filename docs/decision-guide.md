@@ -1,13 +1,13 @@
 ---
-title: Your extensibility options for Microsoft Copilot
-description: Understand which type of Microsoft 365 Copilot extensions works best for you
+title: Your copilot options for Microsoft 365
+description: Understand which type of copilots and Microsoft 365 Copilot extensions works best for you
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
 ms.date: 08/16/2024
 ---
 
-# Your extensibility options for Microsoft 365 Copilot
+# Your copilot options for Microsoft 365
 
 When it comes to deciding on your approach to AI development, there are numerous options to consider. Microsoft offers [Azure AI solutions](/azure/developer/intro/azure-ai-for-developers) and Microsoft Copilot extensibility options. 
 This guide aims to streamline your journey through the options for Microsoft 365, assisting you in identifying the most suitable solution aligned with your specific needs and goals.
