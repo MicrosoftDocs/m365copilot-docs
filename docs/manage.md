@@ -22,41 +22,40 @@ The following table summarizes admin management tools for Copilot extensibility 
 
 Copilot extensions that are published to the Microsoft Commercial Marketplace (AppSource) and acquired from the in-product store are centrally managed from the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)). This is the case regardless of how the extension was built—with Copilot Studio, Teams Toolkit, or another IDE.
 
-*Global Admin* and *Azure Application Admin* roles can deploy and uninstall apps, manage which apps are available to which users, and block apps from publish in Microsoft admin center.
+*Global Admin* and *Azure Application Admin* roles can deploy and uninstall apps, manage which apps are available to which users, and block apps in Microsoft admin center.
 
 :::image type="content" source="./assets/images/mac-integrated-apps.png" alt-text="Screenshot of the 'Integrated apps' section of Microsoft admin center":::
 
 To learn more about managing published Copilot extensions, see [Manage extensions for Copilot in Microsoft admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context).
 
-## Manage extensions built with Teams Toolkit and other IDEs
+## Manage extensions built with Teams Toolkit
 
-Line-of-business apps for Microsoft 365, including Copilot extensions, that are published to your organization or for personal use are called **Custom apps**. Admins control who in your tenant can upload custom apps (either for publishing to the organization, or for personal use) from Teams admin center. Settings to allow the upload and use of custom apps are *only available* in **Teams admin center**. 
+Line-of-business apps for Microsoft 365, including Copilot extensions, that are published to your organization or for personal use are called **Custom apps**. Admins control who in your tenant can upload custom apps for personal use from Teams admin center. Settings to allow the upload and use of custom apps are *only available* in **Teams admin center**. 
 
-To allow non-admin users in a tenant to submit custom apps to their organization or upload for personal use, the following setting must be enabled. From Teams admin center, select Teams apps > Setup policies > **Global (Org-wide default)** and enable **Upload custom apps**:
+To allow non-admin users in a tenant to upload custom apps for personal use, the following setting must be enabled. From Teams admin center, select Teams apps > Setup policies > **Global (Org-wide default)** and enable **Upload custom apps**:
 
 :::image type="content" source="./assets/images/tac-setup-policies.png" alt-text="Screenshot of org-wide setup policy with 'Upload custom apps' toggle enabled in Teams admin center":::
 
-To allow users in an organization to interact with custom apps, the following settings must be enabled. From Teams admin center, select Teams apps > Manage apps > Actions (dropdown control) > **Org-wide app settings**. Scroll to the **Custom apps** section and enable the following toggles as needed:
+To allow users in an organization to interact with custom apps uploaded for personal use, the following setting must be enabled. From Teams admin center, select Teams apps > Manage apps > Actions (dropdown control) > **Org-wide app settings**. Scroll to the **Custom apps** section and enable **Let users interact with custom apps in preview**:
 
-:::image type="content" source="./assets/images/tac-custom-apps.png" alt-text="Screenshot of the 'Custom apps' settings in Teams admin center with both toggles enabled":::
-
-- **Let users install and use available apps by default**: Custom apps published to the organization are assigned to all users by default.
-- **Let users interact with custom apps in preview**: All users are allowed to use custom apps for personal use by default.
+:::image type="content" source="./assets/images/tac-custom-apps.png" alt-text="Screenshot of the 'Custom apps' settings in Teams admin center with 'Let users interact with custom apps in preview' enabled":::
 
 For more granular per-user and per-team settings, admins can create [app setup policies for custom apps](/microsoftteams/teams-custom-app-policies-and-settings#app-setup-policy-settings-for-custom-apps) in Teams admin center. For custom apps published to the organization, per-user access can be centrally managed from Microsoft admin center, as described in the next section.
 
 ### Extensions published to your organization
 
-Once published to your organization, custom apps are centrally managed from the [**Integrated Apps**](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context) section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like third-party apps acquired from the store. The only difference is that end-users will see these custom, line-of-business apps and extensions labeled with **Built for your org** in the in-product app store.
+Once [published](./publish.md) to your organization, Copilot extensions (as *custom apps*) are centrally managed from the [**Integrated Apps**](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context) section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like third-party apps acquired from the store. The only difference is that end-users will see these custom, line-of-business apps and extensions labeled with **Built for your org** in the in-product app store.
 
 From Microsoft admin center, admins can:
 
 - Enable/disable Copilot extensibility for the whole organization through Microsoft 365 admin center settings.
 - Make available an app with extensions for Copilot to specific users or groups.
-- Deploy or remove apps with extensions for Copilot for the whole organization or specific users or groups.
+- Install and uninstall apps with extensions for Copilot for the whole organization or specific users or groups.
 - Block or unblock apps with extensions for Copilot for the whole organization.
 
 For more info, see [Manage extensions for Copilot in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#manage-extensions-for-copilot-in-the-microsoft-365-admin-center).
+
+
 
 Admins can also upload, deploy, and block apps from Teams admin center too, however be aware that the [settings in Teams admin center override](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#what-happens-to-your-settings-on-teams-and-outlook) those made in Microsoft admin center for apps running in Teams. 
 Best practice is to manage Copilot extensions from Microsoft admin center wherever possible, then fine-tune any settings in Teams admin center that aren't available in Microsoft admin center or that are only applicable when running apps in Teams.
@@ -97,7 +96,7 @@ Once ready for distribution, you can [publish your extension from Copilot Studio
 
 Upon submission to the organizational catalog, admins manage approval and deployment for [Copilot Studio extensions in Microsoft admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=microsoft-365-copilot/extensibility/context#publish-extensions-for-copilot).
 
-Copilot extensions published for personal use or sharing can be managed by the extension creator in Copilot Studio.
+Copilot extensions published for personal use or sharing can be managed by the extension creator in Copilot Studio from the [Availability Options](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context#availablity-options) page.
 
 ## See also
 
