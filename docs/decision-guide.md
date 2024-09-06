@@ -1,162 +1,152 @@
 ---
-title: Extensibility options for Microsoft Copilot for Microsoft 365
-description: Understand which type of Microsoft Copilot for Microsoft 365 plugin or connector works best for you
+title: Your extensibility options for Microsoft Copilot
+description: Understand which type of Microsoft 365 Copilot extensions works best for you
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 05/14/2024
+ms.date: 08/16/2024
 ---
 
-# Extensibility options for Microsoft Copilot for Microsoft 365
+# Your extensibility options for Microsoft 365 Copilot
 
-After [making the decision to extend Microsoft Copilot](build-or-extend.md), it’s important to understand the variety of methods available for leveraging the capabilities of external services, apps, and data. This guide aims to streamline your journey through the extensibility options of Copilot for Microsoft 365, assisting you in identifying the most suitable solution aligned with your specific needs and goals.
+When it comes to deciding on your approach to AI development, there are numerous options to consider. Microsoft offers [Azure AI solutions](/azure/developer/intro/azure-ai-for-developers) and Microsoft Copilot extensibility options. 
+This guide aims to streamline your journey through the options for Microsoft 365, assisting you in identifying the most suitable solution aligned with your specific needs and goals.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-## Explore your extensibility options
+## Extend Copilot or build a custom engine copilot?
+
+When you're looking to create a fully customized end-to-end AI product to cater to your business needs, you typically choose language models and orchestration for your Retrieval-Augmented Generation (RAG) solutions.
+
+On the other hand, you can extend Microsoft Copilot, which is powered by private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot combines LLM responses with organizational context to provide relevant assistance. When you build extensions for Copilot, you can utilize the [orchestration layer](orchestrator.md) representing the interface between foundation LLMs, to select and execute the right content from the right plugin.
+
+Here's your first decision-making point; extending Copilot to leverage the model and orchestrator, or build with your choice?
+
+:::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." lightbox="assets/images/m365-extensibility-decisions.png" :::
+
+**You probably want to extend Microsoft Copilot if any of the following is true:**
+- You want to build a service on top of Microsoft Copilot
+- You have a REST API (so that you can plug it into your Copilot plugin)
+- You have prior experience in building a Teams message extension (so that you can just update it as a Copilot plugin)
+
+**You probably want to build a custom engine copilot if any of the following is true:**
+- You want to use a particular model, an LLM or small language model (SLM), for your service
+- You want your service to be independent from Microsoft Copilot, accessible to all Microsoft 365 users, regardless of your Copilot licensing status 
+- You have prior experience in building a Teams bot, or are familiar with Teams bot development (so you can quickly get started with Teams AI Library to build a custom engine copilot)
+
+### Pick your option
+
+- 🎯 If you want to **extend Microsoft Copilot**, go to the next section, [Option 1](#option-1-extending-microsoft-copilot)!
+  - 🎯 Then, you have choices for extensions; build declarative copilots, plugins, or connectors. Find out about [extensibility types](#types-of-copilot-extensibility-for-microsoft-365)
+- 🎯 Otherwise, jump to [Option 2](#option-2-building-a-custom-engine-copilot-for-microsoft-365) to **build your own copilots**!
+
+<br/>
+
+---
+
+## Option 1. Extending Microsoft Copilot
+
+Okay, you want to leverage the Copilot orchestrator. Now, let's have a quick grasp of Microsoft Copilot—**Microsoft Copilot** is available for end-users across multiple Microsoft products, including: Microsoft 365 (Office) app, Teams, Outlook, PowerPoint, Word, Excel, Power Apps, Power Automate, Power Virtual Agents, Power Pages, and Dynamics 365.
+
+And **Microsoft 365 Copilot** is available as "Work" profile with Microsoft 365 Copilot subscription, designed for enterprise users to enhance productivity within Microsoft 365 applications.
+
+By **extending Microsoft 365 Copilot** for enterprise users,
+
+- Your service can be a part of the Microsoft ecosystem, enabling your users to benefit from the user experience of Microsoft products and allowing you to reach millions of users
+- You can build an AI solutions for organizations to boost employee productivity across businesses
+- You can apply people-centric data with Microsoft Graph to provide more personalized experience for your users
+- You can use Graph Connector, SharePoint site library, or Dataverse table that is used in the workflow as your RAG data source
+
+> [!TIP]
+> Are you a business decision maker? Check out the [Microsoft Copilot Scenario Library](https://adoption.microsoft.com/copilot-scenario-library/)
+
+### Types of copilot extensibility for Microsoft 365
+
+Now, it’s important to understand the variety of methods available for applying the capabilities of external services, apps, and data.
 
 > [!VIDEO https://www.youtube.com/embed/ILPOhVz9OdI]
 
-Let's look at all the options you have available.
+From an end-user perspective, Microsoft Copilot offers two distinct extension interfaces: standalone plugins and declarative copilots. Standalone plugins connect REST APIs directly within the context of your tasks, while declarative copilots function like apps. Think of Microsoft Copilot as an operating system, where plugins act as services, and declarative copilots serve as applications.
+
+Now, let's find out which extensibility options are for you—
+
+To customize Microsoft Copilot to create a specific copilot for particular tasks and domain knowledge, build:
+
+#### Declarative copilots
+
+🎯 [**Declarative copilots**](overview-declarative-copilot.md) are designed to enhance the user experience by allowing the creation of personalized chat experiences to provide tailored interactions and responses, with a similar look-and-feel with Microsoft Copilot interface.
+
+:::image type="content" source="assets/images/declarative-copilot-ui.png" alt-text="A fictional declarative copilot UI." lightbox="assets/images/declarative-copilot-ui.png" border="false":::
+
+When & why to use Declarative copilots:
+
+- Scenario that requires ​focus or specialization
+- Layer on top of the full capability ​of Microsoft 365 Copilot​
+- Target specific roles or areas ​in organization, such as HR, Sales, and Finance
+- Scope to specific data sources including domain knowledge​
+- Custom instructions to enable nuanced interpretation of data received from sources like plugins​
+
+And you can connect your declarative copilots with connectors and plugins.
+
+#### Microsoft Graph connectors
+
+🎯 [**Graph connectors**](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. They can work either standalone, or with declarative copilots.
+
+> [!NOTE]
+> Connectors can be built as a stand-alone, or with a declarative copilot.
+
+#### Plugins
+
+**Plugins** add skills and actions to Microsoft 365. Plugins have a few different types that are built differently.
+And there are the growing number of extensions you build. Your options include:
+
+- 🎯 [**API plugins**](overview-api-plugins.md) can work either standalone, or with declarative copilots by calling REST APIs via OpenAPI service.
+- 🎯 [**Teams Message Extensions**](overview-message-extension-bot.md) for Teams are the search and action capability for Teams that now work as plugins too.
+- 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Conversational actions**, **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
+
+> [!NOTE]
+> Plugins can be built as a stand-alone, or with a declarative copilot.
+
+> [!TIP]
+> If you've built message extensions for Teams before, you can immediately see the value of Copilot extensibility, but if you want to build the latest and greatest, try building API plugins and Graph Connectors!
+
+### Tool options: Pro-code or low-code?
+
+Your journey vary based on your desired outcomes and your coding expertise. Whether you're a seasoned coder or prefer low-code or no-code solutions, there’s a suite of tools tailored to your development style.
+
+How you build and which tools you should use is up to you. Your choices are:
+
+- 🎯 **Pro-code** options are declarative copilots, API plugins, message extensions, and Graph connectors. [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) would be your best friend for the development to tailor your copilots.
+
+- 🎯 **Low-code** or **no-code** options are declarative copilots, all Copilot Studio actions, and Graph connectors as knowledge source. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
 
 :::image type="content" source="assets/images/decision-making-guide.png" alt-text="A diagram that shows various developer options." lightbox="assets/images/decision-making-guide.png":::
 
-To add unstructured data into Microsoft Graph, use:
+## Option 2: Building a custom engine copilot for Microsoft 365
 
-- **Graph connectors**, which enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services.
+With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution on Teams chat, then building your own copilots is the perfect fit for you.
 
-And there are the growing number of extensions you build. Your options include:
+:::image type="content" source="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="A diagram that explains how a custom engine copilot agent in Teams work" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
 
-- **Declarative copilots**, which are designed for specific tasks or domain knowledge.
-- **Plugins**, which add skills and actions to Microsoft 365.
-  - **API plugins** can work either standalone, or with declarative copilots by calling REST APIs via OpenAPI service.
-  - **Message Extensions** for Teams are the search and action capability for Teams that now work as plugins too.
-  - **Actions in Copilot Studio**, which connects Microsoft 365 and the Power Platform environment.
-    - **Conversational actions**, which can be created directly in Copilot Studio, to process a user query by completing one or more operations, and then sends one or more responses back to the user.
-    - **Prompts** which use AI Builder and natural language understanding including grounding on Dataverse to target the specific scenarios and workflows within your business.
-    - **Flows**, which use Power Automate flow to map existing flows or processes in your organization to perform actions, and retrieve and work with data.
-    - **Connectors**, which use Power Platform connectors to access data from other systems, such as popular enterprise products like Salesforce, Zendesk, MailChimp, and GitHub.
+### How does it differ from Copilot extensions for Microsoft 365?
 
-## Pro-code or low-code?
+In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the **extensions** (Graph connectors, plugins, and declarative copilots, which can connect to Graph connectors and plugins) and the **custom engine copilot**:
 
-Your journey will vary based on your desired outcomes and your coding expertise. Whether you’re a seasoned coder or prefer low-code or no-code solutions, there’s a suite of tools tailored to your development style.
+:::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilots for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
-**Pro-code** options are declarative copilots, API plugins, message extensions, and Graph connectors. [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) would be your best friend for the development to tailor your copilots.
+The custom engine copilots operate on a BYO (Bring Your Own) model. So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
 
-**Low-code** or **no-code** options are declarative copilots, all Copilot Studio actions, and Graph connectors. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
+🎯 Learn more on building your own [**custom engine copilots**](overview-custom-engine-copilot.md).
 
-## Weighing your options
+### Tool options: Pro-code or low-code?
 
-There are many factors that you want to consider when deciding which option to pick.
-Before settling on a path, it’s wise to consider the pros and cons of each option. This will ensure you make an informed decision that aligns with your development needs and goals.
+How you build and which tools you should use is up to you. Your choices are:
 
-| Extensibility options   | Benefits                           | Limitations                          |
-|:------------------------|:-----------------------------------|:-------------------------------------|
-| **Graph connectors**               |  [Relevance based on user activities](#relevance-based-on-user-activities)  <br/> <br/> [Semantic discovery of content](#semantic-discovery-of-content-without-turning-on-a-plugin) <br/> <br/> Content in Graph also works with ContextIO, Content Recommendations and Enterprise Search in Microsoft365.com, SPO, and Bing at Work <br/> <br/> [Data stays within compliance boundary](#data-stays-within-compliance-boundary)              | Not visible or discoverable to end-users unless used with declarative copilots and/or message extensions <br/> <br/> [No sideloading](#no-sideloading) <br/> <br/> [Potentially sync External Group ACLs](#potentially-sync-external-group-acls) |
-| **Declarative copilots**     | Your own branded chat experience <br/> <br/> Improved discoverability and user-experiences   | Still in private preview and features are limited  |
-| **API plugins**                  | Support search and action <br/> <br/> [Support basic Adaptive Cards for better UX](#better-ux-with-adaptive-cards) <br/> <br/> Simpler development with existing REST APIs with OpenAPI specifications <br/><br/> You can include instructions to LLM    | Still in private preview and features are limited       |
-| **Teams message extensions** | Discoverable through Teams Store or App Source marketplace <br/> <br/> Support search and action <br/> <br/> [Support Adaptive Cards for better UX](#better-ux-with-adaptive-cards) and more controls <br/><br/> Works on Outlook too <br/> <br/> If you previously have build message extensions for Teams, they now work as plugins         | [Max one million plugins enabled per user](/graph/connecting-external-content-api-limits) <br/> <br/> [Plugins need to be manually enabled](/graph/connecting-external-content-api-limits) <br/> <br/> Limited numbers of commands (max 3) and parameters (max 5) <br/><br/> [Data can leave compliance boundary](#data-can-leave-compliance-boundary) <br/><br/> [Orchestrator](orchestrator.md) can only reason with 10 plugins per prompt <br/> <br/> [Performance depends on developers and hosting](#performance-depends-on-developers) <br/> <br/> Technical requirements for message extension plugins ([See Teams doc](/microsoftteams/platform/messaging-extensions/high-quality-message-extension#technical-requirements)) <br/> <br/> [Multi-parameter prompt complexity](#multi-parameter-prompt-complexity) |
-| **Copilot Studio plugins**   | Fastest to first run experience <br/> <br/> No infrastructure management is needed <br/> <br/> No coding experience required <br/> <br/> Copilot Studio is included as part of the Microsoft Copilot license            | Customization can be limited <br/> <br/> Scaling might be limited to Microsoft Copilot Studio subscription tiers <br/> <br/> If the plugin uses Power Platform Connectors, users require a Power Platform license           |
+- 🎯 **Pro-code**: If you prefer coding for full customization, develop one with [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). You can start with either:
+  - [**Teams AI Library**](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview) to code, or
+  - [**Azure OpenAI Studio**](https://oai.azure.com/) to configure then export the generated code to Teams Toolkit to deploy to Teams!
 
-Here's a brief explanation of some of the pros and cons—
-
-### Benefits
-
-#### Relevance based on user activities
-
-**Graph connectors**: After you have indexed an external item with Graph Connectors, you can also add activities too (such as view, modify, and shared). These activities improve the relevance of the items such as the users that modified the item, in a similar way to native Microsoft 365 documents.
-
-#### Semantic discovery of content without turning on a plugin
-
-**Graph connectors**: Items indexed using Graph Connectors are part of the Microsoft Graph and therefore immediately accessible for summarization alongside Microsoft 365 content like documents, emails and events of a user. Plugins require that the administrators have enabled plugins, that the plugin app is installed and enabled by the user.
-
-#### Data stays within compliance boundary
-
-**Graph connectors**: For instance, Graph connectors help keep third-party data within the compliance boundary by indexing the data. On the other hand, the real-time data through the use of message extensions are not indexed and can be shared or accessed outside of the defined compliance boundaries. As a plugin developer, you are responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information.
-
-> [!TIP]
-> You can find more information about it at [Data, Privacy, and Security for Microsoft Copilot for Microsoft 365 extensibility](data-privacy-security.md).
-
-#### Better UX with Adaptive Cards
-
-**API plugins & Message extensions**: This screen shows a sample response from a message extension plugin that utilizes Adaptive Cards. The response from Copilot is nicely displayed in a table with different font styles and colors, along with actionable buttons.
-
-:::image type="content" source="assets/images/plugin-example-northwind.png" alt-text="A screenshot that shows an example of rich UI in message extension" lightbox="assets/images/plugin-example-northwind.png":::
-
-On the other hand, this screen below shows a sample response from Copilot, utilizing data from Graph connector. The Graph connector indexes issues and repositories from GitHub, presenting the results in plain text as opposed to an Adaptive Card format.
-
-:::image type="content" source="assets/images/gc-example-github.png" alt-text="A screenshot that shows an example of Copilot response from Graph connector" lightbox="assets/images/gc-example-github.png":::
-
-If you're developer who wants to connect data quickly by using an API, Graph connectors might be the solution for you.
-However, it's worth noting that message extensions could enhance user experiences by presenting results in beautifully designed Adaptive Cards. Message extensions are full-featured Microsoft 365 apps that also work with Copilot.
-
-> [!TIP]
-> You can find the sample code for *Microsoft Graph TypeScript GitHub connector* at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#microsoft-graph-connector-samples).
-
-**Coming soon**: Copilot can take action on prompts by analyzing the input and using machine learning techniques to generate new content. Copilot can look at the commands available in the plugin based on the descriptions of it and its parameters. Copilot will then use relevant data it has access to and "stuff" these into the parameters and call the command.
-
-### Limitations
-
-#### No sideloading
-
-**Graph Connectors**: There is no ability to side load with Graph Connectors. As a developer you will need Entra ID admin access to your tenant to register and consent to the required Graph permissions. The Search Administrator role is required to deploy your Graph Connector to Copilot.
-
-#### Potentially sync External Group ACLs
-
-**Graph Connectors**: **Graph Connectors**: If you don't implement Entra ID Groups in your system, you will need to create External Groups calling Graph APIs and maintain sync state of the membership of these groups with your systems groups.
-
-#### Plugins need to be manually enabled
-
-**Graph Connectors**: Unlike Graph Connected external items that are part of Microsoft Graph and immediate available to Copilot summarization. Administrators first need to enable plugins in the tenant as part of Public Preview ([https://aka.ms/extend-Copilot](https://aka.ms/extend-Copilot)). Additionally, the user of Copilot for Microsoft 365 needs to enable the plugin in the plugin management flyout.
-
-#### Data can leave compliance boundary
-
-**Message extensions**: Graph Connectors inserts external items into the Microsoft Graph. When Copilot selects a plugin as part of its orchestration, it calls the bot framework command and populates the parameters with data based on the description of the parameters. THe data it provides can be any of the data available to it in Microsoft 365 or other data provided by plugins in the conversational session. The bot framework commands are hosted externally to the Microsoft 365 boundary.
-
-#### Multi-parameter prompt complexity
-
-**Message extensions**: Message extension plugin developers should handle all potential prompt scenarios from users. Single-parameter prompts can be as simple as:
-> Find Chai in Northwind Inventory
-
-Multi-parameters can be more complex with multiple inquiries, such as:
-> We've been receiving partial orders for tofu. Find the supplier in Northwind and draft an email summarizing our inventory and reminding them they should stop sending partial orders per our MOQ policy.
-
-#### Performance depends on developers
-
-**Message extensions**: The plugin bot framework commands that are invoked by Copilot are external and the response times of it are dependent on the developer hosting it.
-
-## Data types
-
-Consider your data: how it's structured, the level of volume and activity you expect, and the required data access.
-
-| Solution | Data structure | Data volume | Data activity | Summarize/ Act |
-|-------|-------|---------|----------|----------|
-| **Graph connectors** | [Un-structured or flattened data](#unstructured-data) | Up to 5M items per connection | Up to 20 requests per second | [Summarize](#summarize) only |
-| **Message extension plugins** | [Structured data](#structured-data) | Suitable for high volume data (Over 5M) | Suitable for high activity (Over 20 req/sec.)  | [Summarize](#summarize) + [Act](#act) |
-| **Copilot Studio plugins** | [Structured data](#structured-data) | Suitable for high volume data (Over 5M) | Suitable for high volume data (Over 5M) | [Summarize](#summarize) only |
-
-### Unstructured data
-
-Unstructured data refers to data that is not organized in a predefined manner, such as plain text-based documents, wiki pages, and PDF files. Copilot can be used to analyze and extract information from unstructured data, and generate new content based on the patterns and relationships it identifies. For example, Copilot could analyze company policy documents and answer a question specific to an employee.
-
-### Structured data
-
-Structured data refers to data that is organized in a predefined manner, often in the form of tables with rows and columns. Copilot can be used to analyze and extract information from structured data, and generate new content based on the patterns and relationships it identifies. For example, Copilot could analyze sales data and generate a report summarizing key trends and insights.
-
-### Summarize
-
-Copilot can analyze and extract key information from large amounts of data, and present it in a concise and coherent manner. This can be particularly useful for tasks such as summarizing long documents or email threads, where the AI can identify the most important points and present them in a clear and easy-to-understand format.
-
-### Act
-
-This is the same example of writable data with a message extension shown earlier. This plugin manages a product inventory, which Copilot searches the data from the inventory and displays the results in Adaptive Card, where it allows a user to modify the data.
-
-:::image type="content" source="assets/images/plugin-example-northwind-action.png" alt-text="A screenshot that shows an example of writable data via a message extension" lightbox="assets/images/plugin-example-northwind.png":::
-
-> [!TIP]
-> You can find the sample code for *Northwind Inventory* plugin at [Microsoft Copilot for Microsoft 365 extensibility samples](samples.md#teams-message-extension-samples).
-
-**Coming soon**: Copilot can take action on prompts by analyzing the input and using machine learning techniques to generate new content. Copilot can look at the commands available in the plugin based on the descriptions of it and its parameters. Copilot will then use relevant data it has access to and "stuff" these into the parameters and call the command.
+- 🎯 **Low-code** or **no-code**: You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) to build Copilot Studio custom copilots.
 
 ## Next step
 
@@ -172,3 +162,4 @@ Learn prerequisites for building connectors and plugins:
 - [API plugins overview](overview-api-plugins.md)
 - [Copilot Studio plugins overview](overview-business-applications.md)
 - [Teams Message extensions overview](overview-message-extension-bot.md)
+- [Teams AI Library](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview)

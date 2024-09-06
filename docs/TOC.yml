@@ -8,12 +8,10 @@
     href: orchestrator.md
   - name: What makes a good plugin?
     href: plugin-guidelines.md
-  - name: Plugins are apps for Microsoft 365
-    href: plugins-are-apps.md
+  - name: Extensions are apps for Microsoft 365
+    href: extensions-are-apps.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
-- name: Extend Microsoft Copilot or build your own
-  href: build-or-extend.md
 - name: Extensibility guide for ISVs
   href: /microsoft-cloud/dev/copilot/isv-extensibility-story?context=/microsoft-365-copilot/extensibility/context
 - name: Get started
@@ -31,6 +29,8 @@
   items:
   - name: Microsoft Graph connectors in Copilot for Microsoft 365
     href: overview-graph-connector.md
+  - name: Enhancing Microsoft Copilot Discovery with Graph Connector Content
+    href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
   - name: Connectors experiences
     href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
   - name: Connectors API
@@ -84,6 +84,8 @@
       href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
     - name: Prompts
       href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+    - name: Learning path
+      href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
   - name: Debug with developer mode in Copilot
     href: debugging-copilot-plugin.md
 - name: Build your own copilot
@@ -124,9 +126,15 @@
 - name: Publish and manage extensions
   expanded: true
   items:
-  - name: Publish
+  - name: Publish extensions
     href: publish.md
-  - name: Manage plugins for Copilot in Integrated Apps
-    href: /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context
+  - name: Manage extensions
+    items:
+    - name: Overview
+      href: manage.md
+    - name: Manage extensions in Microsoft 365 admin center
+      href: /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context
+- name: FAQ
+  href: faq.md
 - name: Support and feedback
   href: feedback.md
