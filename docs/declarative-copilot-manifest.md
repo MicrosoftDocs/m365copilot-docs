@@ -38,10 +38,10 @@ The declarative copilot manifest object contains the following properties.
 
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
-| `id`                    | String                                                                | Optional. Value must match the `^(?!\\[\\[)(.*?)(?<!\\]\\])$` regular expression. |
-| `name`                  | String                                                                | Required. Localizable. The name of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. Value must match the `^(\\[\\[)[a-zA-Z_][a-zA-Z0-9_]*(\\]\\])$|^(?!(.*?\\[\\[.*?|.*?\\]\\].*?)).*$` regular expression. |
-| `description`           | String                                                                | Required. Localizable. The description of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. Value must match the `^[A-Za-z0-9]+$` regular expression. |
-| `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative copilot should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. Value must match the `^(?!\\[\\[)((.|\\n)*?)(?<!\\]\\])$` regular expression. |
+| `id`                    | String                                                                | Optional.   |
+| `name`                  | String                                                                | Required. Localizable. The name of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
+| `description`           | String                                                                | Required. Localizable. The description of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
+| `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative copilot should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative copilot. There MUST NOT be more than five objects in the array. |
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative copilot can answer. There MUST NOT be more than six objects in the array. |
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative copilot. |
@@ -126,7 +126,7 @@ The OneDrive and SharePoint object contains the following properties.
 
 ##### Items by SharePoint IDs object
 
-The Items by SharePoint IDs object contains the following properties. All values below must match `^(?!\\[\\[)(.*?)(?<!\\]\\])$` regular expression.
+The Items by SharePoint IDs object contains the following properties.
 
 | Property    | Type   | Description |
 | ----------- | ------ | ----------- |
@@ -141,7 +141,7 @@ The Items by URL object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `url`    | String | Optional. An absolute URL to a SharePoint or OneDrive resource. Value must match the `^(?!\\[\\[)(.*?)(?<!\\]\\])$` regular expression.  |
+| `url`    | String | Optional. An absolute URL to a SharePoint or OneDrive resource. |
 
 #### Microsoft Graph connectors object
 
@@ -162,7 +162,7 @@ The connection object contains the following properties.
 
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
-| `connection_id` | String | Required. The unique identifier of the Microsoft Graph connector. Value must match the `^(?!\\[\\[)(.*?)(?<!\\]\\])$` regular expression. |
+| `connection_id` | String | Required. The unique identifier of the Microsoft Graph connector. |
 
 ### Conversation starters object
 
@@ -172,8 +172,8 @@ The conversation starter object contains the following properties:
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `text`   | String | Required. Localizable. A suggestion that the user can use to obtain the desired result from the declarative copilot. It MUST contain at least one nonwhitespace character. Value must match the `^(\\[\\[)[a-zA-Z_][a-zA-Z0-9_]*(\\]\\])$|^(?!(.*?\\[\\[.*?|.*?\\]\\].*?)).*$` regular expression.|
-| `title`  | String | Optional. Localizable. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. Value must match the `^(\\[\\[)[a-zA-Z_][a-zA-Z0-9_]*(\\]\\])$|^(?!(.*?\\[\\[.*?|.*?\\]\\].*?)).*$` regular expression.|
+| `text`   | String | Required. Localizable. A suggestion that the user can use to obtain the desired result from the declarative copilot. It MUST contain at least one nonwhitespace character. |
+| `title`  | String | Optional. Localizable. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
 
 ### Conversation starters object example
 
@@ -196,8 +196,8 @@ The action object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `id`     | String | Required. A unique identifier for the action. It MAY be represented by a GUID. Value must match the `^(?!\\[\\[)(.*?)(?<!\\]\\])$` regular expression.|
-| `file`   | String | Required. A path to the API plugin manifest for this action. Value must match the `^(?!\\[\\[)(.*?)(?<!\\]\\])$` regular expression. |
+| `id`     | String | Required. A unique identifier for the action. It MAY be represented by a GUID. |
+| `file`   | String | Required. A path to the API plugin manifest for this action. |
 
 #### Actions object example
 
