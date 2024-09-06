@@ -512,7 +512,7 @@ To add a plugin to your declarative copilot, follow these steps:
         "actions": [
             { 
                 "id": "repairsPlugin",
-                "file": "repairshub-microsoft.json"
+                "file": "repairshub-apiplugin.json"
             }
         ]
     }
