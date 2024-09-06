@@ -2,7 +2,7 @@
 title: Declarative copilot schema for Microsoft Copilot for Microsoft 365
 description: Learn about the properties you can use in a manifest file for declarative copilot in Microsoft Copilot for Microsoft 365
 author: rimisra2
-ms.author: jasonjoh and rimisra 
+ms.author: rimisra
 ms.topic: reference
 ---
 
