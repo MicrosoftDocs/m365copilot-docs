@@ -48,7 +48,7 @@ The declarative copilot manifest object contains the following properties.
 
 ### Example of declarative copilot manifest object
 
-The following is an example of required fields within a declarative copilot manifest.
+The following JSON is an example of required fields within a declarative copilot manifest.
 
 ```json
 {
@@ -166,7 +166,7 @@ The connection object contains the following properties.
 
 ### Conversation starters object
 
-Conversation starters is an optional JSON object in the manifest. It contains hints that are displayed to the user to demonstrate how they can get started using the declarative copilot.
+The conversation starters object is optional in the manifest. It contains hints that are displayed to the user to demonstrate how they can get started using the declarative copilot.
 
 The conversation starter object contains the following properties:
 
@@ -196,7 +196,7 @@ The action object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `id`     | String | Required. A unique identifier for the action. It MAY be represented by a GUID. |
+| `id`     | String | Required. A unique identifier for the action. It MAY be a GUID. |
 | `file`   | String | Required. A path to the API plugin manifest for this action. |
 
 #### Actions object example
