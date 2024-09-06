@@ -5,6 +5,7 @@ author: girliemac
 ms.author: timura
 ms.topic: conceptual
 ms.date: 07/19/2024
+ms.custom: [copilot-learning-hub]
 ---
 
 # Your extensibility options for Microsoft 365 Copilot
