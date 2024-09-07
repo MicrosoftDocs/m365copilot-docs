@@ -35,7 +35,7 @@ On the other hand, **Custom copilots** are developed using custom foundation mod
 
 To find out which copilots work the best for you, learn the differences at [Your copilot options for Microsoft 365](decision-guide.md).
 
-## Types of Microsoft 365 Copilot extensions
+## Types of Microsoft 365 Copilot extensibility
 
 There are multiple ways to extend Microsoft 365 Copilot.
 
