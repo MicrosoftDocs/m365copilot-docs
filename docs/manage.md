@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 9/16/2024
 ---
 
-# Manage extensibility for Copilot for Microsoft 365
+# Manage extensibility for Microsoft 365 Copilot
 
 This article describes the admin controls for managing different Microsoft 365 Copilot extensibility types. 
 
@@ -23,7 +23,7 @@ The following table summarizes admin management tools during the Copilot extensi
 |Message extension plugins|- Enable upload of custom apps (Teams admin center)|- Deploy or remove plugins (Microsoft admin center)<br>- Manage access to specific users (Microsoft admin center)|- Deploy or remove plugins (Microsoft admin center)<br>- Manage access to specific users (Microsoft admin center)
 |Copilot Studio actions|- Enable copilots and generative AI features (Power Platform admin center)
 
-## Agents and actions created in Copilot Studio
+## Agents, actions, and connectors created in Copilot Studio
 
 Copilot Studio provides a streamlined, low-code process for creating, sharing, and publishing Copilot agents and actions for line-of-business applications within an organization. In order to start building Microsoft 365 Copilot agents and actions with Copilot Studio, you'll need licenses for:
 
