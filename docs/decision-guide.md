@@ -1,13 +1,14 @@
 ---
-title: Your extensibility options for Microsoft Copilot
-description: Understand which type of Microsoft 365 Copilot extensions works best for you
+title: Your copilot options for Microsoft 365
+description: Understand which type of copilots and Microsoft 365 Copilot extensions works best for you
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 08/16/2024
+ms.date: 09/06/2024
+ms.custom: [copilot-learning-hub]
 ---
 
-# Your extensibility options for Microsoft 365 Copilot
+# Your copilot options for Microsoft 365
 
 When it comes to deciding on your approach to AI development, there are numerous options to consider. Microsoft offers [Azure AI solutions](/azure/developer/intro/azure-ai-for-developers) and Microsoft Copilot extensibility options. 
 This guide aims to streamline your journey through the options for Microsoft 365, assisting you in identifying the most suitable solution aligned with your specific needs and goals.
@@ -24,27 +25,27 @@ Here's your first decision-making point; extending Copilot to leverage the model
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." lightbox="assets/images/m365-extensibility-decisions.png" :::
 
-**You probably want to extend Microsoft Copilot if any of the following is true:**
-- You want to build a service on top of Microsoft Copilot
+**Extend Microsoft 365 Copilot if any of the following is true:**
+- You want to build a service on top of Microsoft 365 Copilot
 - You have a REST API (so that you can plug it into your Copilot plugin)
 - You have prior experience in building a Teams message extension (so that you can just update it as a Copilot plugin)
 
-**You probably want to build a custom engine copilot if any of the following is true:**
+**Build a custom copilot if any of the following is true:**
 - You want to use a particular model, an LLM or small language model (SLM), for your service
 - You want your service to be independent from Microsoft Copilot, accessible to all Microsoft 365 users, regardless of your Copilot licensing status 
 - You have prior experience in building a Teams bot, or are familiar with Teams bot development (so you can quickly get started with Teams AI Library to build a custom engine copilot)
 
 ### Pick your option
 
-- 🎯 If you want to **extend Microsoft Copilot**, go to the next section, [Option 1](#option-1-extending-microsoft-copilot)!
-  - 🎯 Then, you have choices for extensions; build declarative copilots, plugins, or connectors. Find out about [extensibility types](#types-of-copilot-extensibility-for-microsoft-365)
+- 🎯 If you want to **extend Microsoft Copilot**, go to the next section, [Option 1](#option-1-extending-microsoft-365-copilot)!
+  - 🎯 Then, you have choices for extensions; build declarative copilots, plugins, or connectors. Find out about [extensibility types](#types-of-microsoft-365-copilot-extensibility)
 - 🎯 Otherwise, jump to [Option 2](#option-2-building-a-custom-engine-copilot-for-microsoft-365) to **build your own copilots**!
 
 <br/>
 
 ---
 
-## Option 1. Extending Microsoft Copilot
+## Option 1. Extending Microsoft 365 Copilot
 
 Okay, you want to leverage the Copilot orchestrator. Now, let's have a quick grasp of Microsoft Copilot—**Microsoft Copilot** is available for end-users across multiple Microsoft products, including: Microsoft 365 (Office) app, Teams, Outlook, PowerPoint, Word, Excel, Power Apps, Power Automate, Power Virtual Agents, Power Pages, and Dynamics 365.
 
@@ -60,9 +61,9 @@ By **extending Microsoft 365 Copilot** for enterprise users,
 > [!TIP]
 > Are you a business decision maker? Check out the [Microsoft Copilot Scenario Library](https://adoption.microsoft.com/copilot-scenario-library/)
 
-### Types of copilot extensibility for Microsoft 365
+### Types of Microsoft 365 Copilot extensibility
 
-Now, it’s important to understand the variety of methods available for applying the capabilities of external services, apps, and data.
+Now, it's important to understand the variety of methods available for applying the capabilities of external services, apps, and data.
 
 > [!VIDEO https://www.youtube.com/embed/ILPOhVz9OdI]
 
@@ -88,37 +89,40 @@ When & why to use Declarative copilots:
 
 And you can connect your declarative copilots with connectors and plugins.
 
-#### Microsoft Graph connectors
+#### Connectors
+
+Use connectors to ingest external data to your copilots.
 
 🎯 [**Graph connectors**](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. They can work either standalone, or with declarative copilots.
+
+🎯 [**Power Platform connectors**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) enable Power Platform applications to interact with external services and data sources in real-time. 
 
 > [!NOTE]
 > Connectors can be built as a stand-alone, or with a declarative copilot.
 
 #### Plugins
 
-**Plugins** add skills and actions to Microsoft 365. Plugins have a few different types that are built differently.
-And there are the growing number of extensions you build. Your options include:
+**Plugins** add skills and actions to Microsoft 365. Plugins have a few different types that are built differently. There are the growing number of extensions you build. Your options include:
 
 - 🎯 [**API plugins**](overview-api-plugins.md) can work either standalone, or with declarative copilots by calling REST APIs via OpenAPI service.
 - 🎯 [**Teams Message Extensions**](overview-message-extension-bot.md) for Teams are the search and action capability for Teams that now work as plugins too.
-- 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Conversational actions**, **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
+- 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
 
 > [!NOTE]
-> Plugins can be built as a stand-alone, or with a declarative copilot.
+> Currently, API plugins can be only built with a declarative copilot.
 
 > [!TIP]
 > If you've built message extensions for Teams before, you can immediately see the value of Copilot extensibility, but if you want to build the latest and greatest, try building API plugins and Graph Connectors!
 
 ### Tool options: Pro-code or low-code?
 
-Your journey vary based on your desired outcomes and your coding expertise. Whether you're a seasoned coder or prefer low-code or no-code solutions, there’s a suite of tools tailored to your development style.
+Your journey vary based on your desired outcomes and your coding expertise. Whether you're a seasoned coder or prefer low-code or no-code solutions, there's a suite of tools tailored to your development style.
 
 How you build and which tools you should use is up to you. Your choices are:
 
 - 🎯 **Pro-code** options are declarative copilots, API plugins, message extensions, and Graph connectors. [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) would be your best friend for the development to tailor your copilots.
 
-- 🎯 **Low-code** or **no-code** options are declarative copilots, all Copilot Studio actions, and Graph connectors as knowledge source. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
+- 🎯 **Low-code** or **no-code** options are declarative copilots, all Copilot Studio actions, and Power Platform connectors as knowledge source. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
 
 :::image type="content" source="assets/images/decision-making-guide.png" alt-text="A diagram that shows various developer options." lightbox="assets/images/decision-making-guide.png":::
 
