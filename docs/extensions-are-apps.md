@@ -234,27 +234,7 @@ If your extension doesn't support additional languages, the default language str
 
 Create a localization file for each additional supported language with values for the tokenized keys, using the file names specified (for `defaultLanguageFile` and `file` properties) in app manifest from the previous step.
 
-For each language file, specify the following properties from the app localization schema that are required to be localized:
-
-| Manifest field | Description | Max length| Required |
-|--|--|--|--|
-| `@schema` | The URL to localization schema. For Copilot extensions, use v1.18: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.18/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
-| `name.short` | Replaces the short name from app manifest with value provided. | 30 characters | ✔️ |
-| `name.full` | Replaces the full name from app manifest with value provided | 100 characters | ✔️ |
-| `description.short`| Replaces the short description from app manifest with value provided. | 80 characters | ✔️ |
-| `description.full` | Replaces full description from app manifest with value provided. | 4000 characters | ✔️ |
-| *Key/value pairs for localized strings in Copilot extensions* | For Copilot extensions, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DC_Name": "Copilote de Communications"`| | |
-| *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`|
-
-The following fields are localizable within the declarative copilot manifest:
-
-| Manifest field | Description | Max length| Required |
-|--|--|--|--|
-| `name`| The name of the declarative copilot. Must contain at least one non-whitespace character.| 100 characters| ✔️|
-| `description`| The description of the declarative copilot. Must contain at least one non-whitespace character.| 1,000 characters | ✔️|
-| `conversation_starters`| A list (array) of examples of questions that the declarative copilot can answer, where each example is represented by an object with `title` and `text`, both of which are localizable.| 6 objects in the array||
-
-Here's an example language file, with localized strings for both Copilot extension and personal tabs:
+Here's an example language file, `fr.json`, with localized strings for both Copilot extension and personal tabs:
 
 ```json
 {
@@ -273,7 +253,48 @@ Here's an example language file, with localized strings for both Copilot extensi
 }
 ```
 
+#### Localizable fields in app manifest
+
+For each language file, specify the following properties from the app localization schema that are required to be localized:
+
+| Manifest field | Description | Max length| Required |
+|--|--|--|--|
+| `@schema` | The URL to localization schema. For Copilot extensions, use v1.18: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.18/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
+| `name.short` | Replaces the short name from app manifest with value provided. | 30 characters | ✔️ |
+| `name.full` | Replaces the full name from app manifest with value provided | 100 characters | ✔️ |
+| `description.short`| Replaces the short description from app manifest with value provided. | 80 characters | ✔️ |
+| `description.full` | Replaces full description from app manifest with value provided. | 4000 characters | ✔️ |
+| *Key/value pairs for localized strings in Copilot extensions* | For Copilot extensions, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DC_Name": "Copilote de Communications"`| | |
+| *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`|
+
 To learn more, see [Localize your app (Microsoft Teams)](/microsoftteams/platform/concepts/build-and-test/apps-localization) and the [Localization schema reference](/microsoftteams/platform/resources/schema/localization-schema).
+
+#### Localizable fields in declarative copilot manifest
+
+The following fields are localizable within the declarative copilot manifest:
+
+| Manifest field | Description | Max length| Required |
+|--|--|--|--|
+| `name`| The name of the declarative copilot. Must contain at least one non-whitespace character.| 100 characters| ✔️|
+| `description`| The description of the declarative copilot. Must contain at least one non-whitespace character.| 1,000 characters | ✔️|
+| `conversation_starters`| A list (array) of examples of questions that the declarative copilot can answer, where each example is represented by an object with `title` and `text`, both of which are localizable.| 6 objects in the array||
+
+To learn more, see [Declarative copilot manifest reference](./declarative-copilot-manifest.md).
+
+#### Localizable fields in API plugin manifest
+
+The following fields are localizable within the API plugin manifest:
+
+| Manifest field | Description | Max length| Required |
+|--|--|--|--|
+|`name_for_human`| A short, human-readable name for the plugin. It must contain at least one non-whitespace character.| 20 characters |✔️|
+|`description_for_model`|  The description for the plugin that is provided to the model, including what the plugin is for, and in what circumstances its functions are relevant.| 2,048 characters| |
+|`description_for_human`| A human-readable description of the plugin.| 100 characters|✔️|
+|`logo_url`|A URL used to fetch a logo that may be used by the orchestrator. ||
+|`legal_info_url`|An absolute URL that locates a document containing the terms of service for the plugin.| |
+|`privacy_policy_url`|An absolute URL that locates a document containing the privacy policy for the plugin.||
+
+To learn more, see [API plugin manifest reference](./api-plugin-manifest.md).
 
 ## See also
 
