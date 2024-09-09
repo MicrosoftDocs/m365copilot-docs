@@ -5,6 +5,7 @@ author: girliemac
 ms.author: timura
 ms.topic: overview
 ms.date: 09/09/2024
+ms.custom: [copilot-learning-hub]
 ---
 
 # Extend Microsoft 365 Copilot

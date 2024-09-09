@@ -5,6 +5,7 @@ author: girliemac
 ms.author: timura
 ms.topic: conceptual
 ms.date: 09/06/2024
+ms.custom: [copilot-learning-hub]
 ---
 
 # Your copilot options for Microsoft 365
