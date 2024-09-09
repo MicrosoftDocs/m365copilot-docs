@@ -4,12 +4,12 @@ description: Extend, enrich, and customize Microsoft 365 Copilot with external s
 author: girliemac
 ms.author: timura
 ms.topic: overview
-ms.date: 09/05/2024
+ms.date: 09/09/2024
 ---
 
 # Extend Microsoft 365 Copilot
 
-**Microsoft 365 Copilot** is a powerful productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, leveraging Microsoft Graph data.
+**Microsoft 365 Copilot** is an AI-powered productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, leveraging Microsoft Graph data.
 
 It offers *knowledge* including organizational knowledge such as emails, chats, and documents that users have permission to access, and *skills*, such as understanding, summarizing, predicting, recalling, translating, and generating content. 
 

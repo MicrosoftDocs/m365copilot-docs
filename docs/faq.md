@@ -4,7 +4,7 @@ description: Frequently asked questions for Microsoft Copilot extensions and bey
 author: girliemac
 ms.author: timura
 ms.topic: best-practice
-ms.date: 08/28/2024
+ms.date: 09/09/2024
 ---
 
 # Frequently asked questions for Microsoft 365 Copilot extensibility and beyond
@@ -44,6 +44,10 @@ In contrast, **Power Platform connectors** enable copilots to interact with othe
 For Microsoft Graph connectors, any valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license allows you to view data from connectors in your search results. However, you need sufficient index quota to ingest content from those connectors.
 
 For Power Platform connectors, the licensing requirements can vary depending on the specific connectors and the actions you want to perform. Some connectors may require premium licenses, which aren't included in the standard Microsoft 365 licenses.
+
+#### What are the differences between Copilot extensibility and Azure AI services?
+
+Please jump to the [Azure AI questions](#azure-ai-questions) section below!
 
 ## Data and safety questions
 
@@ -125,4 +129,4 @@ To learn more about the difference between custom engine copilots and declarativ
 
 ---
 
-You have more questions and feedback? [Let us know](feedback.md)!
+🙋 You have more questions and feedback? [Let us know](feedback.md)!
