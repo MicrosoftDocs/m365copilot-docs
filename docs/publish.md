@@ -17,7 +17,7 @@ The following table summarizes the distribution support for Copilot extensibilit
 |Copilot extensibility type  | Single tenant  | Multitenant| Notes|
 |----------|-----------|------------|-----------|
 |[Copilot agents](#copilot-agents)| ✔️ |✔️*|*Supported for Copilot agents created with Teams Toolkit|
-|[Teams message extension plugins](#teams-message-extension-apps-as-plugins-for-copilot) | ✔️ |✔️||
+|[Teams message extension plugins](#teams-message-extension-plugins-for-copilot) | ✔️ |✔️||
 |[Copilot Studio actions](#copilot-studio-actions-as-plugins-for-copilot)| ✔️|✔️||
 |[Microsoft Graph connectors](#microsoft-graph-connectors-for-copilot)| ✔️| ✔️*| *Standalone connectors not supported; can be distributed as Teams apps for verified publishers| 
 
@@ -54,7 +54,9 @@ When built with Copilot Studio, agents for Microsoft 365 Copilot can also be pub
 
 ### Distribute a Copilot agent to your organization
 
-Follow these [instructions to upload your custom app package](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#upload-custom-teams-apps-that-work-on-outlook-and-the-microsoft-365-app) to the **Integrated Apps** section of Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)). From there, admins can manage access, configure default settings, and review and consent to requested data and permissions.
+If you use Copilot Studio to create an agent for Microsoft 365 Copilot, you can use [Copilot Studio to publish your agent](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#publishing-a-copilot-extension) for sharing and/or submit it for [publish to your organization's catalog](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps#publish-extensions-for-copilot) by an admin.
+
+If you use Teams Toolkit to build an agent for Microsoft 365 Copilot,  [build your app package](/microsoftteams/platform/toolkit/publish#build-app-package) with Teams Toolkit and [upload it as a custom app package](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#upload-custom-teams-apps-that-work-on-outlook-and-the-microsoft-365-app) to the **Integrated Apps** section of Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)). From there, admins can manage access, configure default settings, and review and consent to requested data and permissions.
 
 ### Distribute your Copilot agent through Microsoft Partner Center
 
@@ -97,7 +99,7 @@ Power Platform connector actions as Copilot plugins can be shared across an orga
 
 By default, Copilot Studio actions are only visible and usable in Copilot Studio by the person who created them. They can be authorized for sharing at the Power Platform object level. Follow these [instructions to publish a connector action](/microsoft-copilot-studio/microsoft-copilot-extend-action-connector#publish) from Copilot Studio. 
 
-Once published, an administrator must enable your connector action it before it can be used within Microsoft 365 Copilot or a custom copilot, in addition to meeting the [end-user prerequisites for using actions](microsoft-copilot-studio/copilot-plugins-overview#use-actions-in-microsoft-copilot) in Microsoft 365 Copilot.
+Once published, an administrator must enable your connector action it before it can be used within Microsoft 365 Copilot or a custom copilot, in addition to meeting the [end-user prerequisites for using actions](/microsoft-copilot-studio/copilot-plugins-overview#use-actions-in-microsoft-copilot) in Microsoft 365 Copilot.
 
 ### Distribute a Copilot Studio action through Microsoft Partner Center (preview)
 
