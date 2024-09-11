@@ -8,6 +8,8 @@ ms.topic: conceptual
 
 # Authentication schemes for API plugins for Microsoft Copilot for Microsoft 365
 
+[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+
 API plugins for Copilot for Microsoft 365 support three authentication schemes to connect to their backend APIs.
 
 - OAuth 2.0 authorization code flow

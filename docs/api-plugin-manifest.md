@@ -8,6 +8,8 @@ ms.topic: reference
 
 # API plugin manifest schema for Microsoft Copilot for Microsoft 365
 
+[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+
 API plugins enable Copilot for Microsoft 365 to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
 
 The following article describes the schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft Copilot for Microsoft 365](./overview-api-plugins.md).

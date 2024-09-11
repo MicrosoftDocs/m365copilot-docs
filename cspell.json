@@ -73,6 +73,7 @@
     "ignorePaths": [
         ".openpublishing.publish.config.json",
         "cspell.json",
-        "LICENSE"
+        "LICENSE",
+        "sharepoint-id-query-response.json"
     ]
 }
