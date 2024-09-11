@@ -109,6 +109,10 @@
     items:
     - name: Declarative copilots (coming soon)
       href: overview-declarative-copilot.md
+    - name: Retrieve capabilities IDs
+      href: declarative-copilot-capabilities-ids.md
+    - name: Declarative copilot manifest reference
+      href: declarative-copilot-manifest.md
   - name: Use your custom orchestrator and models
     expanded: false
     items:
