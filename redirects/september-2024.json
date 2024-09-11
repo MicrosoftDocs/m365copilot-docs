@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/plugins-are-apps.md",
+      "redirect_url": "/docs/extensions-are-apps.md",
+      "redirect_document_id": true
+    }
+  ]
+}

@@ -30,5 +30,8 @@
     }
   ],
   "branch_target_mapping": {},
-  "targets": {}
+  "targets": {},
+  "redirection_files": [
+    "redirects/september-2024.json"
+  ]
 }
