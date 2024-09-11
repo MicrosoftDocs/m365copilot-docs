@@ -10,6 +10,8 @@ ms.topic: how-to
 
 # Build API plugins from an existing API for Microsoft Copilot for Microsoft 365
 
+[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+
 [API plugins](overview-api-plugins.md) connect your existing REST API to Microsoft Copilot for Microsoft 365. You can use the [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi).
 
 ## Prerequisites
