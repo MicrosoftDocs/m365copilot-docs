@@ -45,6 +45,8 @@
     href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/extensibility/context
   - name: Manage items
     href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/extensibility/context
+  - name: Out-of-the-box Microsoft Graph connectors
+    href: /MicrosoftSearch/out-of-the-box-overview
   - name: Use external groups
     href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
   - name: API limits
