@@ -32,6 +32,6 @@
   "branch_target_mapping": {},
   "targets": {},
   "redirection_files": [
-    "redirects/september-2024.json"
+    "redirects/.openpublishing.redirection.september-2024.json"
   ]
 }
