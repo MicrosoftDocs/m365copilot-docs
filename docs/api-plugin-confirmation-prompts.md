@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 By default, Microsoft Copilot for Microsoft 365 asks the user to allow it to send data to a plugin before it sends it. The user is able to see the data to be sent and is given a choice to allow or decline. For some API operations, users are given the option to always allow data to be sent, which prevents future confirmation prompts for that particular operation.
 
-Normally, Copilot for Microsoft 365 shows the user the always allow option for HTTP GET operations, and doesn't show the option for POST, PATCH, PUT, and DELETE. API plugin developers can change this behavior for individual operations in their API. Developers can also customize the text that's displayed to the user as part of the confirmation prompt.
+Normally, Copilot for Microsoft 365 shows the user the always allow option for HTTP GET operations, and doesn't show the option for POST, PATCH, PUT, and DELETE. API plugin developers can change this behavior for individual operations in their API. Developers can also customize the text that Copilot displays to the user as part of the confirmation prompt.
 
 ## Overriding prompt behavior
 
@@ -52,17 +52,18 @@ get:
 
 ## Customizing confirmation text
 
-Developers can specify the confirmation text by setting the `body` property in the [Confirmation object](api-plugin-manifest.md#confirmation-object) in the function's [Function capabilities object](api-plugin-manifest.md#function-capabilities-object) in the plugin manifest. If this property isn't present in the manifest, the `description` property in the [Function object](api-plugin-manifest.md#function-object) is used instead.
+Developers can specify the confirmation text by setting the `body` property in the [Confirmation object](api-plugin-manifest.md#confirmation-object) in the function's [Function capabilities object](api-plugin-manifest.md#function-capabilities-object) in the plugin manifest. The value of `body` should be indicative of what the function does. If this property isn't present in the manifest, the `description` property in the [Function object](api-plugin-manifest.md#function-object) is used instead.
 
 ```json
 {
-    "name": "GetBudgets",
-    "description": "Returns details including name and available funds of budgets, optionally filtered by budget name",
-    "capabilities": {
-        "confirmation": {
-            "type": "AdaptiveCard",
-            "body": "Do you want to proceed?"
-        }
+  "name": "GetBudgets",
+  "description": "Returns details including name and available funds of budgets, optionally filtered by budget name",
+  "capabilities": {
+    "confirmation": {
+      "type": "AdaptiveCard",
+      "title": "Search budgets",
+      "body": "Do you want to allow searching for budgets?"
     }
+  }
 }
 ```
