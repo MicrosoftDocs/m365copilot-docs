@@ -4,7 +4,7 @@ description: Understand which type of copilots and Microsoft 365 Copilot extensi
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 09/06/2024
+ms.date: 09/16/2024
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -21,7 +21,7 @@ When you're looking to create a fully customized end-to-end AI product to cater 
 
 On the other hand, you can extend Microsoft Copilot, which is powered by private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot combines LLM responses with organizational context to provide relevant assistance. When you build extensions for Copilot, you can utilize the [orchestration layer](orchestrator.md) representing the interface between foundation LLMs, to select and execute the right content from the right plugin.
 
-Here's your first decision-making point; extending Copilot to leverage the model and orchestrator, or build with your choice?
+Here's your first decision-making point; extending Copilot to utilize the model and orchestrator, or build with your choice?
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." lightbox="assets/images/m365-extensibility-decisions.png" :::
 
@@ -31,7 +31,7 @@ Here's your first decision-making point; extending Copilot to leverage the model
 - You have prior experience in building a Teams message extension (so that you can just update it as a Copilot plugin)
 
 **Build a custom copilot if any of the following is true:**
-- You want to use a particular model, an LLM or small language model (SLM), for your service
+- You want to use particular models, either LLM or small language model (SLM), for your service
 - You want your service to be independent from Microsoft Copilot, accessible to all Microsoft 365 users, regardless of your Copilot licensing status 
 - You have prior experience in building a Teams bot, or are familiar with Teams bot development (so you can quickly get started with Teams AI Library to build a custom engine copilot)
 
@@ -116,7 +116,7 @@ Use connectors to ingest external data to your copilots.
 
 ### Tool options: Pro-code or low-code?
 
-Your journey vary based on your desired outcomes and your coding expertise. Whether you're a seasoned coder or prefer low-code or no-code solutions, there's a suite of tools tailored to your development style.
+Your journey varies based on your desired outcomes and your coding expertise. Whether you're a seasoned coder or prefer low-code or no-code solutions, there's a suite of tools tailored to your development style.
 
 How you build and which tools you should use is up to you. Your choices are:
 
