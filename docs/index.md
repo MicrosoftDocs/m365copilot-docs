@@ -95,7 +95,7 @@ There are a few different ways to create plugins—**API plugins**, **Teams Mess
 - Teams [Message extensions](overview-message-extension-bot.md) are now work as plugins
 - Create [Copilot Studio Actions](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), if you prefer no-code/low-code
 
-[!INCLUDE [Preview disclaimer](preview-disclaimer.md)]
+[!INCLUDE [disclaimer](includes/api-plugins-dc-only.md)]
 
 ## Copilot extension user-experience
 
