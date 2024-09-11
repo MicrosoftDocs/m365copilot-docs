@@ -97,7 +97,7 @@ This section describes how developers can retrieve the value to set in the follo
 
 1. Browse to [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) and sign in with your admin account.
 
-1. Select your user avatar in the upper right corner and select **Consent to permissions**.:
+1. Select your user avatar in the upper right corner and select **Consent to permissions**.
 
 1. Search for `Sites.Read.All` and select **Consent** for that permission. Follow the prompts to grant consent. Repeat this process for `Files.Read.All`.
 
