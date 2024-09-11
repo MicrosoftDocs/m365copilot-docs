@@ -12,17 +12,12 @@ ms.topic: reference
 
 This article describes methods for developers to retrieve the necessary IDs to include Graph connectors and SharePoint/OneDrive files within the `capabilities` section of their [declarative copilot manifest](declarative-copilot-manifest.md). Developers can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
-> [!NOTE]
-> All sections will require developers to work with admins to ensure they have the required permissions approved within [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
->
-> - ExternalConnection.Read.All (Graph connectors)
-> - Sites.Read.All (SharePoint/OneDrive)
-> - Files.Read.All (SharePoint/OneDrive)
-> - Sites.FullControl.All (SharePoint/OneDrive)
-
 ## Microsoft Graph connectors
 
 This section describes how developers can retrieve the value to set in the `connection_id` property of the [Connection object](declarative-copilot-manifest.md#connection-object) in the [Microsoft Graph connectors object](declarative-copilot-manifest.md#microsoft-graph-connectors-object) in the manifest.
+
+> [!IMPORTANT]
+> Querying for Microsoft Graph connectors requires an admin account.
 
 ### [Graph Explorer](#tab/explorer)
 
@@ -36,11 +31,11 @@ This section describes how developers can retrieve the value to set in the `conn
 
 1. Search for `ExternalConnection.Read.All` and select **Consent** for that permission. Follow the prompts to grant consent.
 
-    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-external-connection-permission.png" alt-text="A screenshot of Graph Explorer's permission consent dialog":::
+    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-external-connection-permission.png" alt-text="A screenshot of Graph Explorer's permission consent dialog with ExternalConnection.Read.All":::
 
 1. Enter `https://graph.microsoft.com/v1.0/external/connections?$select=id,name` in the request field and select **Run query**.
 
-    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-get-connections.png" alt-text="A screenshot of Graph Explorer's request field":::
+    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-get-connections.png" alt-text="A screenshot of Graph Explorer's request field with the connections query":::
 
 1. Locate the connector you want and copy its `id` property. For example, to use the **GitHub Repos** connector in the following response, copy the `githubrepos` value.
 
@@ -102,19 +97,15 @@ This section describes how developers can retrieve the value to set in the follo
 
 1. Browse to [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) and sign in with your admin account.
 
-    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-sign-in.png" alt-text="A screenshot of the Graph Explorer sign in button":::
-
-1. Select your user avatar in the upper right corner and select **Consent to permissions**.
-
-    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-consent-to-permissions.png" alt-text="A screenshot of the user profile flyout in Graph Explorer":::
+1. Select your user avatar in the upper right corner and select **Consent to permissions**.:
 
 1. Search for `Sites.Read.All` and select **Consent** for that permission. Follow the prompts to grant consent. Repeat this process for `Files.Read.All`.
 
-    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-sites-permission.png" alt-text="A screenshot of Graph Explorer's permission consent dialog":::
+    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-sites-permission.png" alt-text="A screenshot of Graph Explorer's permission consent dialog with Sites.Read.All":::
 
 1. Change the method dropdown to **POST** and enter `https://graph.microsoft.com/v1.0/search/query` in the request field.
 
-    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-post-query.png" alt-text="A screenshot of Graph Explorer's request field":::
+    :::image type="content" source="assets/images/declarative-copilots/graph-explorer-post-query.png" alt-text="A screenshot of Graph Explorer's request field with a search query":::
 
 1. Add the following in the **Request body**, replacing `https://yoursharepointsite.com/sites/YourSite/Shared%20Documents/YourFile.docx` with the URL to the file or folder you want to get IDs for.
 
