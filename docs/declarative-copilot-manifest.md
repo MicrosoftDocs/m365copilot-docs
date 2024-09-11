@@ -135,6 +135,9 @@ The Items by SharePoint IDs object contains the following properties.
 | `list_id`   | String | Optional. A unique GUID identifier for a list within a SharePoint or OneDrive site. |
 | `unique_id` | String | Optional. A unique GUID identifier used to represent a specific entity or resource. |
 
+> [!TIP]
+> For instructions on getting the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative copilot manifest](declarative-copilot-capabilities-ids.md).
+
 ##### Items by URL object
 
 The Items by URL object contains the following properties.
@@ -163,6 +166,9 @@ The connection object contains the following properties.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `connection_id` | String | Required. The unique identifier of the Microsoft Graph connector. |
+
+> [!TIP]
+> For instructions on getting the unique identifier for a Microsoft Graph connector, see [Retrieving capabilities IDs for declarative copilot manifest](declarative-copilot-capabilities-ids.md).
 
 ### Conversation starters object
 
