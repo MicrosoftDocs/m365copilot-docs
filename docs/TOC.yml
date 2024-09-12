@@ -43,29 +43,29 @@
     items:
     - name: Setup overview
       href: /microsoftsearch/configure-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Add staged rollout to connectors
-        href: /microsoftsearch/staged-rollout-for-graph-connectors?context=/microsoft-365-copilot/extensibility/context
-      - name: Microsoft Graph connectors in Microsoft 365 Copilot
+    - name: Add staged rollout to connectors
+      href: /microsoftsearch/staged-rollout-for-graph-connectors?context=/microsoft-365-copilot/extensibility/context
+    - name: Microsoft Graph connectors in Microsoft 365 Copilot
+      items:
+      - name: Enhancing Microsoft 365 Copilot discovery with Microsoft Graph connector content
+        href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
+    - name: On-prem connectors
+      items:
+      - name: Connector agent setup
+        href: /microsoftsearch/graph-connector-agent?context=/microsoft-365-copilot/extensibility/context
+      - name: Connector agent release history
+        href: /microsoftsearch/graph-connector-agent-releases?context=/microsoft-365-copilot/extensibility/context
+    - name: Map non-Azure AD Identities
+      href: /microsoftsearch/map-non-aad?context=/microsoft-365-copilot/extensibility/context
+    - name: Map Microsoft Entra identities
+      href: /microsoftsearch/map-aad?context=/microsoft-365-copilot/extensibility/context
+    - name: Microsoft Graph prebuilt connectors
+      href: /microsoftsearch/pre-built-connectors-overview?context=/microsoft-365-copilot/extensibility/context
+      items:
+      - name: Azure Data Lake Storage Gen2
         items:
-        - name: Enhancing Microsoft 365 Copilot discovery with Microsoft Graph connector content
-          href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
-      - name: On-prem connectors
-        items:
-        - name: Connector agent setup
-          href: /microsoftsearch/graph-connector-agent?context=/microsoft-365-copilot/extensibility/context
-        - name: Connector agent release history
-          href: /microsoftsearch/graph-connector-agent-releases?context=/microsoft-365-copilot/extensibility/context
-      - name: Map non-Azure AD Identities
-        href: /microsoftsearch/map-non-aad?context=/microsoft-365-copilot/extensibility/context
-      - name: Map Microsoft Entra identities
-        href: /microsoftsearch/map-aad?context=/microsoft-365-copilot/extensibility/context
-      - name: Microsoft Graph prebuilt connectors
-        href: /microsoftsearch/pre-built-connectors-overview?context=/microsoft-365-copilot/extensibility/context
-        items:
-        - name: Azure Data Lake Storage Gen2
-          items:
-          - name: Setup
-            href: /microsoftsearch/azure-data-lake-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Setup
+          href: /microsoftsearch/azure-data-lake-connector?context=/microsoft-365-copilot/extensibility/context
         - name: Azure DevOps Work Items
           items:
           - name: Setup
