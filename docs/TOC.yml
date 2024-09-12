@@ -52,12 +52,25 @@
 - name: Add skills with plugins
   expanded: true
   items:
-  - name: API plugins (coming soon)
+  - name: API plugins
     items:
     - name: Overview
       href: overview-api-plugins.md
+    - name: Build an API plugin with a new API
+      href: build-api-plugins-new-api.md
+    - name: Build an API plugin from an existing API
+      href: build-api-plugins-existing-api.md
+    - name: Authentication
+      href: api-plugin-authentication.md
+    - name: Adaptive Card responses
+      href: api-plugin-adaptive-cards.md
+      displayName: response, response_semantics
+    - name: Confirmation prompts
+      href: api-plugin-confirmation-prompts.md
     - name: Best practices for writing OpenAPI specs
       href: openapi-document-guidance.md
+    - name: API plugin manifest reference
+      href: api-plugin-manifest.md
   - name: Teams message extension plugins
     items:
     - name: Overview
@@ -96,6 +109,10 @@
     items:
     - name: Declarative copilots (coming soon)
       href: overview-declarative-copilot.md
+    - name: Retrieve capabilities IDs
+      href: declarative-copilot-capabilities-ids.md
+    - name: Declarative copilot manifest reference
+      href: declarative-copilot-manifest.md
   - name: Use your custom orchestrator and models
     expanded: false
     items:

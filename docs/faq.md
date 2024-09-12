@@ -4,7 +4,7 @@ description: Frequently asked questions for Microsoft Copilot extensions and bey
 author: girliemac
 ms.author: timura
 ms.topic: best-practice
-ms.date: 08/28/2024
+ms.date: 09/16/2024
 ---
 
 # Frequently asked questions for Microsoft 365 Copilot extensibility and beyond
@@ -17,13 +17,13 @@ This section provides answers to the frequently asked questions (FAQs) about Mic
 
 **Declarative copilots**: also known as Copilot extensions in the end-user Copilot experience, are tools that enhance the Microsoft 365 Copilot experience. They combine custom knowledge and skills (like actions, triggers, and workflows) to create a rich conversational experience. These copilots can be integrated into Microsoft 365 and use connectors for advanced features. They can also include other features like API plugins and app functionalities for Teams and Microsoft 365.
 
-**Custom engine copilots**: are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs. These include copilots built with Copilot Studio, Teams AI library, Azure AI, etc. Custom engine copilots currently work as standalone, Teams apps and, in the future, as *immersive* Copilot extension experiences. 
+**Custom engine copilots**: are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs. These custom copilots include copilots built with Copilot Studio, Teams AI library, Azure AI, etc. Custom engine copilots currently work as standalone, Teams apps and, in the future, as *immersive* Copilot extension experiences. 
 
 No sure which one to build? [Your extensibility options for Microsoft 365 Copilot](decision-guide.md) article may help you.
 
 #### What is the difference between custom engine copilots and Copilot Studio custom copilot?
 
-**Custom engine copilots** and **Copilot Studio custom Copilot** share a similar characteristic—they don't use Microsoft Copilot foundation model or orchestration. So, if you want to add more additional and advanced customization around orchestration, foundation models, work flows, triggers or any additional thing, or your users don't have or don't want Microsoft 365 Copilot, go through the custom copilot path, which you can build through several alternatives such as Teams AI library, or Azure Open AI for custom engine copilots, or Copilot Studio to build custom copilots.
+**Custom engine copilots** and **Copilot Studio custom Copilot** share a similar characteristic—they don't use the Microsoft Copilot foundation model or orchestration. If you need more advanced customization around orchestration, or if your users don't use Microsoft 365 Copilot, consider the custom copilot path. You can build this through several alternatives, such as the Teams AI library or Azure OpenAI for custom engine copilots, or Copilot Studio for building custom copilots.
 
 #### What is the difference between Actions and plugins?
 
@@ -44,6 +44,10 @@ In contrast, **Power Platform connectors** enable copilots to interact with othe
 For Microsoft Graph connectors, any valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license allows you to view data from connectors in your search results. However, you need sufficient index quota to ingest content from those connectors.
 
 For Power Platform connectors, the licensing requirements can vary depending on the specific connectors and the actions you want to perform. Some connectors may require premium licenses, which aren't included in the standard Microsoft 365 licenses.
+
+#### What are the differences between Copilot extensibility and Azure AI services?
+
+Jump to the [Azure AI questions](#azure-ai-questions) section below!
 
 ## Data and safety questions
 
@@ -125,4 +129,4 @@ To learn more about the difference between custom engine copilots and declarativ
 
 ---
 
-You have more questions and feedback? [Let us know](feedback.md)!
+🙋 You have more questions and feedback? [Let us know](feedback.md)!

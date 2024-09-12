@@ -48,10 +48,9 @@ Declarative copilot's app package and its core elements mentioned can be created
 
 | **Start with** | **Summary** |
 |:------------|:------------|
-| Teams Toolkit (Private Preview) | Build declarative copilots using Teams Toolkit and Teams Toolkit CLI. |
-| Copilot Studio (Private Preview) | Build declarative copilots using the builder integrated in Copilot Studio. |
-| Microsoft 365 Admin Center (Private Preview) | Build declarative copilots using grounding data from Microsoft Graph connectors. |
-| SharePoint (Private Preview) | Build declarative copilots using grounding data from SharePoint files. |
+| [Teams Toolkit](./ttk-declarative-copilot-getting-started.md) | Build declarative copilots using Teams Toolkit and Teams Toolkit CLI. |
+| Copilot Studio | Build declarative copilots using the builder integrated in Copilot Studio. |
+| SharePoint | Build declarative copilots using grounding data from SharePoint files. |
 
 ## See also
 
