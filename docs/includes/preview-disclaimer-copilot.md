@@ -5,6 +5,6 @@ ms.topic: include
 
 <!-- markdownlint-disable MD041-->
 
-> [!WARNING]
+> [!IMPORTANT]
 >
-> Declarative copilots for Microsoft 365 are in **public preview**.
+> Declarative copilots for Microsoft 365 are **generally available**.
