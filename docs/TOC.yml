@@ -25,7 +25,7 @@
     href: samples.md
   - name: Learning path
     href: /training/paths/copilot-m365-extensibility/
-- name: Add knowledge with Graph Connectors
+- name: Add knowledge with Microsoft Graph connectors
   items:
   - name: Microsoft Graph connectors in Copilot for Microsoft 365
     href: overview-graph-connector.md
