@@ -1,6 +1,6 @@
 ---
 title: Build Microsoft Graph connectors for Microsoft Copilot for Microsoft 365
-description:  Extend Microsoft Copilot for Microsoft 365 with Microsoft Graph connectors
+description: Extend Microsoft Copilot for Microsoft 365 with Microsoft Graph connectors
 author: muwagerikpe
 ms.author: muwagerikpe
 ms.topic: overview
