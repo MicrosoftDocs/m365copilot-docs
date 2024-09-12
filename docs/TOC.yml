@@ -140,17 +140,15 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete copilots
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
-- name: Publish and manage extensions
-  expanded: true
+- name: Publish
+  href: publish.md
+- name: Manage
+  expanded: false
   items:
-  - name: Publish extensions
-    href: publish.md
-  - name: Manage extensions
-    items:
-    - name: Overview
-      href: manage.md
-    - name: Manage extensions in Microsoft 365 admin center
-      href: /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context
+  - name: Overview
+    href: manage.md
+  - name: Manage extensions in Microsoft 365 admin center
+    href: /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context
 - name: FAQ
   href: faq.md
 - name: Support and feedback

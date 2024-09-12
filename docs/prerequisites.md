@@ -1,10 +1,10 @@
 ---
 title: Set up your development environment for Copilot for Microsoft 365
-description: Learn the prerequisites for extending Copilot for Microsoft 365 with plugins and connectors.
+description: Learn the prerequisites for extending Copilot for Microsoft 365 with agents, plugins, and connectors.
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
-ms.date: 1/17/2024
+ms.date: 9/16/2024
 ---
 
 # Set up your development environment for Copilot for Microsoft 365
@@ -37,30 +37,37 @@ Contact your Microsoft representative to add Copilot to your Microsoft plan.  En
 
 ## Extensibility
 
-Developers can extend Microsoft Copilot for Microsoft 365 with the intelligence of external services and data in two ways: building plugins with [Teams message extension plugins](overview-message-extension-bot.md) and [AI plugins with Microsoft business applications](overview-business-applications.md), or using [Microsoft Graph connectors](overview-graph-connector.md).
+Developers can extend Microsoft Copilot for Microsoft 365 with the intelligence of external services and data in several ways: through customizing Copilot with agents, adding skills through [Teams message extension plugins](overview-message-extension-bot.md) and [Copilot Studio actions](overview-business-applications.md), or extending Copilot's knowledge through [Microsoft Graph connectors](overview-graph-connector.md).
 
 To learn more and choose the best extensibility path for you and your customer, see [Extensibility options for Copilot](decision-guide.md).
 
-### Requirements for Microsoft Graph connector development
+### Requirements for developing Microsoft Graph connector
 
-- A search administrator or global administrator must register an application and grant admin consent for the required Microsoft Graph permissions. As a developer working in production, this might not be an option. Any deployed Graph connector is tenant-wide accessible unless the external items security is locked down.
+- A search administrator or global administrator must [register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for the required Microsoft Graph permissions in **Microsoft Entra admin center** ([entra.microsoft.com](https://entra.microsoft.com/)). As a developer working in production, this might not be an option. Any deployed Graph connector is tenant-wide accessible unless the external items security is locked down.
+- A search administrator will also need to ensure that Microsoft Graph connections you intend for Microsoft Search and Microsoft 365 Copilot are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) through the **Search & intelligence** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 - Indexing content with your connector is subject to the available index quota in the tenant. Standard Microsoft 365 Developer Tenant and Microsoft 365 Copilot Developer tenant comes with quota to let developers start building connectors without any cost. To learn more, see [Microsoft Graph connectors license](/microsoftsearch/licensing).
 
-### Requirements for plugin development
+### Requirements for developing agents and plugins
 
-In addition to an active Microsoft 365 Copilot license, there are several additional prerequisites for building plugins for Copilot.
+In addition to a Microsoft 365 Copilot license, there are several additional prerequisites for building agents and plugins for Copilot.
 
-To create declarative copilots and plugins with Teams Toolkit and other IDEs, you'll need:
+#### Building with Teams Toolkit
 
-- Your Teams admin to enable the abilities to [upload and interact with custom apps](manage.md#manage-extensions-built-with-teams-toolkit-and-other-ides) in your Microsoft 365 tenant (sandbox or production)
+To build agents and plugins with Teams Toolkit and other IDEs, you'll need your admin to enable the ability to sideload a *custom app* to your tenant. From Teams admin center, select Teams apps > Setup policies > **Global (Org-wide default)** and enable **Upload custom apps**:
 
-To create copilots and plugins with Copilot Studio, you'll need:
+:::image type="content" source="./assets/images/tac-setup-policies.png" alt-text="Screenshot of org-wide setup policy with 'Upload custom apps' toggle enabled in Teams admin center":::
+
+You can manage your sideloaded custom apps, including Copilot agents, from the Teams client by selecting: Apps > **Manage your apps**.
+
+#### Creating with Copilot Studio
+
+To create agents and actions with Copilot Studio, you'll need:
 
 - [A license for Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) (or an existing Power Virtual Agents license).
-- Your Power Platform admin or Dynamics 365 admin to [enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot) in Power Platform admin center.
-- Your Microsoft 365 tenant admin to [deploy the Dynamics 365 and Copilot Studio app in the Microsoft 365 admin center](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-microsoft-copilot-studio-app-admin).
+- Your Power Platform admin or Dynamics 365 admin to [enable Generative AI features](/power-platform/admin/geographical-availability-copilot) in Power Platform admin center.
+- Your Microsoft 365 tenant admin to [deploy the Copilot Studio app in the Microsoft 365 admin center](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-microsoft-copilot-studio-app-admin).
 
-    For more details, see [Create and configure copilot plugins with Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview#prerequisites).
+For more details, see Copilot Studio [Prerequisites for actions](/microsoft-copilot-studio/copilot-plugins-overview#use-actions-in-microsoft-copilot) and [Prerequisites for Copilot agents](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#prerequisites).
 
 
 ### Enabling developer mode

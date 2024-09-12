@@ -4,7 +4,7 @@ description: Copilot extensions are also apps for Microsoft 365, which use a uni
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: concept-article
-ms.date: 08/15/2024
+ms.date: 09/16/2024
 ---
 
 # Copilot extensions are apps for Microsoft 365
@@ -35,7 +35,7 @@ The app package can also contain declarative copilot and API plugin definitions,
 
 ## App icons
 
-Your app package must include both a color and outline version of your Copilot extension icon, as .png files. These icons have specific size requirements in order to pass store validation.
+Your app package must include both a color and outline version of your app icon, as .png files. These icons have specific size requirements in order to pass store validation.
 
 > [!NOTE]
 > Currently only the color icon is used to represent Copilot extensions to the end-user (both as its store listing and within Microsoft 365 Copilot UI), but an outline icon is still required when submitting the app package to Microsoft AppSource.
@@ -88,7 +88,7 @@ Your outline icon:
 
 ## App manifest
 
-The app manifest for Microsoft 365 is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package), however it has since expanded (since version 1.17) to define apps that run across Microsoft 365 hosts, in addition to Teams.
+The app manifest for Microsoft 365 is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package), however it has since expanded (since version 1.13) to define apps that run across Microsoft 365 hosts, in addition to Teams.
 
 If you're using Microsoft Copilot Studio to build a declarative copilot, the app manifest will be generated for you based on the info you provide during the creation process.
 
@@ -145,9 +145,9 @@ To learn more, see the [App manifest schema reference](/microsoftteams/platform/
 
 ### `copilotExtensions` definitions
 
-Declarative copilots and API plugins each have their own definition schemas. These definition files, along with unique IDs, are referenced from the `copilotExtensions` object of the app manifest. 
+Declarative copilots and API plugins each have their own definition schemas. The definition file for a declarative copilot is referenced from the `copilotExtensions` object of the app manifest.
 
-Here's an example that references both a declarative copilot and API plugin:
+Here's an example that references a declarative copilot:
 
 ```json
     "copilotExtensions": {
@@ -156,23 +156,17 @@ Here's an example that references both a declarative copilot and API plugin:
                 "id": "copilot1",
                 "file": "declarativeCopilot1.json"
             }
-        ],
-        "plugins": [
-            {
-                "id": "plugin1",
-                "file": "plugin1.json"
-            }
         ]
     },
 ```
 
-You can also reference an API plugin definition directly within a declarative copilot definition, so that the plugin functionality is directly integrated within the copilot experience. Referencing your API plugin from the app manifest root enables it for broader use in the base mode Microsoft 365 Copilot chat experience.
+The definition of an API plugin is referenced from the declarative copilot definition.
 
 :::image type="content" source="assets/images/app-manifest-extensions.png" alt-text="Diagram showing app manifest referencing a declarative copilot manifest and API plugin manifest. The declarative copilot manifest references another API plugin manifest" border="false":::
 
 Please note the following:
 
-- Currently only one declarative copilot definition and one API plugin definition is supported per app manifest.
+- Currently only one declarative copilot definition is supported per app manifest. Only one API plugin is supported per declarative copilot.
 
 - When using Copilot Studio to build Copilot extensions, a unique `id` will be generated for each, as part of the overall app manifest generation. When building extensions with Teams Toolkit or your own IDE, you assign the `id` yourself, according to your own conventions or friendly name.
 
@@ -184,7 +178,7 @@ To learn more, see [Declarative copilot manifest schema for Microsoft 365 Copilo
 
 ## API plugin manifest
 
-The API plugin manifest describes the plugin's capabilities, including the the APIs it supports and the operations it can perform. It also includes metadata such as name, description, version, and a reference to the OpenAPI definition of the REST APIs with which it interacts. API plugins can be referenced directly from the app manifest for broad use across Microsoft 365 Copilot experiences, or from within a declarative copilot manifest so that it's only called from your copilot.
+The API plugin manifest describes the plugin's capabilities, including the the APIs it supports and the operations it can perform. It also includes metadata such as name, description, version, and a reference to the OpenAPI definition of the REST APIs with which it interacts. API plugins can be referenced from within a declarative copilot manifest to be called directly from the declarative copilot experience.
 
 To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest.md).
 
@@ -192,9 +186,9 @@ To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-pl
 
 The way you localize a Copilot extension is slightly different than how you localize other capabilities (such as tabs, bots, and message extensions) in the app manifest. 
 
-You'll use the same localization file (per language) for both classic Teams app capabilities and Copilot extensions. However, while all other app manifest fields are referenced using JSONPath expressions in the language file(s), Copilot extension-related fields are simply referenced using dictionary keys.
+You'll use the same localization file (per language) for both classic Teams app capabilities and Copilot extensions. However, while all other app manifest fields are referenced using JSONPath expressions in the language file(s), Copilot extension-related fields are simply referenced using dictionary keys. Unlike classic Teams app capabilities, which use default language strings in the app manifest itself, localized Copilot extensions require a language file for the default language as well as for each additional language.
 
-:::image type="content" source="assets/images/loc-manifest.png" alt-text="Diagram showing the relationship between app manifest, copilot manifest, and a language file for the purposes of localizing a Copilot extension" border="false":::
+:::image type="content" source="assets/images/loc-manifest.png" alt-text="Diagram showing the relationship between app manifest, copilot manifest, and a language file for the purposes of localizing a Copilot extension":::
 
 Following are the steps for supporting additional languages (beyond the default) to your Copilot extension.
 
@@ -219,8 +213,6 @@ Add the `localizationInfo` section to your app manifest, with [language tags](/g
 
 If your extension supports more than one language, then you must specify a standalone language file for every supported language, *including your default language*.
 
-TODO: Is the above statement true? (Seems like it should be, or at least will be for 2.0, so a good thing to advise customers to do now)
-
 Here's an example localization info section in app manifest:
 
 ```json
@@ -242,21 +234,7 @@ If your extension doesn't support additional languages, the default language str
 
 Create a localization file for each additional supported language with values for the tokenized keys, using the file names specified (for `defaultLanguageFile` and `file` properties) in app manifest from the previous step.
 
-For each language file, specify the following properties from the app localization schema:
-
-TODO: Are all the current required fields for Teams loc schema still required for 1.18 / Copilot extensions?
-
-| Manifest field | Description | Required |
-|--|--|--|--|
-| `@schema` | The URL to localization schema. For Copilot extensions, use v1.18: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.18/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. |✔️ |
-| `name.short` | Replaces the short name from app manifest with value provided. | ✔️ |
-| `name.full` | Replaces the full name from app manifest with value provided | ✔️ |
-| `description.short`| Replaces the short description from app manifest with value provided. | ✔️ |
-| `description.full` | Replaces full description from app manifest with value provided. | ✔️ |
-| *Key/value pairs for localized strings in Copilot extensions* | For Copilot extensions, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DC_Name": "Copilote de Communications"`| |
-| *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`||
-
-Here's an example language file, with localized strings for both Copilot extension and personal tabs:
+Here's an example language file, `fr.json`, with localized strings for both Copilot extension and personal tabs:
 
 ```json
 {
@@ -275,7 +253,48 @@ Here's an example language file, with localized strings for both Copilot extensi
 }
 ```
 
+#### Localizable fields in app manifest
+
+For each language file, specify the following properties from the app localization schema that are required to be localized:
+
+| Manifest field | Description | Max length| Required |
+|--|--|--|--|
+| `@schema` | The URL to localization schema. For Copilot extensions, use v1.18: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.18/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
+| `name.short` | Replaces the short name from app manifest with value provided. | 30 characters | ✔️ |
+| `name.full` | Replaces the full name from app manifest with value provided | 100 characters | ✔️ |
+| `description.short`| Replaces the short description from app manifest with value provided. | 80 characters | ✔️ |
+| `description.full` | Replaces full description from app manifest with value provided. | 4000 characters | ✔️ |
+| *Key/value pairs for localized strings in Copilot extensions* | For Copilot extensions, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DC_Name": "Copilote de Communications"`| | |
+| *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`|
+
 To learn more, see [Localize your app (Microsoft Teams)](/microsoftteams/platform/concepts/build-and-test/apps-localization) and the [Localization schema reference](/microsoftteams/platform/resources/schema/localization-schema).
+
+#### Localizable fields in declarative copilot manifest
+
+The following fields are localizable within the declarative copilot manifest:
+
+| Manifest field | Description | Max length| Required |
+|--|--|--|--|
+| `name`| The name of the declarative copilot. Must contain at least one non-whitespace character.| 100 characters| ✔️|
+| `description`| The description of the declarative copilot. Must contain at least one non-whitespace character.| 1,000 characters | ✔️|
+| `conversation_starters`| A list (array) of examples of questions that the declarative copilot can answer, where each example is represented by an object with `title` and `text`, both of which are localizable.| 6 objects in the array||
+
+To learn more, see [Declarative copilot manifest reference](./declarative-copilot-manifest.md).
+
+#### Localizable fields in API plugin manifest
+
+The following fields are localizable within the API plugin manifest:
+
+| Manifest field | Description | Max length| Required |
+|--|--|--|--|
+|`name_for_human`| A short, human-readable name for the plugin. It must contain at least one non-whitespace character.| 20 characters |✔️|
+|`description_for_model`|  The description for the plugin that is provided to the model, including what the plugin is for, and in what circumstances its functions are relevant.| 2,048 characters| |
+|`description_for_human`| A human-readable description of the plugin.| 100 characters|✔️|
+|`logo_url`|A URL used to fetch a logo that may be used by the orchestrator. ||
+|`legal_info_url`|An absolute URL that locates a document containing the terms of service for the plugin.| |
+|`privacy_policy_url`|An absolute URL that locates a document containing the privacy policy for the plugin.||
+
+To learn more, see [API plugin manifest reference](./api-plugin-manifest.md).
 
 ## See also
 
