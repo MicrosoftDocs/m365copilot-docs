@@ -134,15 +134,15 @@
         - name: ServiceNow Catalog
           items:
           - name: Setup
-            href: servicenow-catalog-connector?context=/microsoft-365-copilot/extensibility/context
+            href: /microsoftsearch/servicenow-catalog-connector?context=/microsoft-365-copilot/extensibility/context
           - name: Troubleshooting
-            href: troubleshoot-servicenow-catalog-connector?context=/microsoft-365-copilot/extensibility/context
+            href: /microsoftsearch/troubleshoot-servicenow-catalog-connector?context=/microsoft-365-copilot/extensibility/context
         - name: ServiceNow Knowledge
           items:
           - name: Setup
-            href: servicenow-knowledge-connector?context=/microsoft-365-copilot/extensibility/context
+            href: /microsoftsearch/servicenow-knowledge-connector?context=/microsoft-365-copilot/extensibility/context
           - name: Troubleshooting
-            href: troubleshoot-servicenow-knowledge-connector?context=/microsoft-365-copilot/extensibility/context
+            href: /microsoftsearch/troubleshoot-servicenow-knowledge-connector?context=/microsoft-365-copilot/extensibility/context
         - name: ServiceNow Tickets
           items:
           - name: Setup
