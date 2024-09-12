@@ -31,21 +31,21 @@
   - name: Use Copilot's orchestrator and models
     expanded: true
     items:
-    - name: Declarative agents
+    - name: Declarative agents overview
       href: overview-declarative-agent.md
     - name: Transparency FAQs about declarative agents
       href: transparencyfaq-declarativeagent.md
+    - name: Build with Visual Studio Code
+      expanded: true
       items:
-      - name: Build with Visual Studio Code
-        items:
-        - name: Build a declarative agent with Visual Studio Code
-          href: ttk-declarative-agent-getting-started.md
-        - name: Retrieve capabilities IDs
-          href: declarative-agent-capabilities-ids.md
-        - name: Declarative agent manifest reference
-          href: declarative-agent-manifest.md
-      - name: Build with Microsoft Copilot Studio
-        href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+      - name: Build a declarative agent with Visual Studio Code
+        href: ttk-declarative-agent-getting-started.md
+      - name: Retrieve capabilities IDs
+        href: declarative-agent-capabilities-ids.md
+      - name: Declarative agent manifest reference
+        href: declarative-agent-manifest.md
+    - name: Build with Microsoft Copilot Studio
+      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
   - name: Use your custom orchestrator and models
     expanded: false
     items:
