@@ -39,6 +39,8 @@
     href: /graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context
   - name: Simplify connector deployment
     href: /graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context
+  - name: Set up Microsoft-built connectors
+    href: /microsoftsearch/configure-connector?context=/microsoft-365-copilot/extensibility/context
   - name: Manage connections
     href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/extensibility/context
   - name: Manage schema
