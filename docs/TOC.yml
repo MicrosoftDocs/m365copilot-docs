@@ -1,4 +1,4 @@
-- name: Microsoft Copilot for Microsoft 365 extensibility
+- name: Microsoft 365 Copilot extensibility
   href: index.md
 - name: Work with the Copilot ecosystem
   items:
@@ -107,17 +107,17 @@
   - name: Use Copilot's orchestrator and models
     expanded: true
     items:
-    - name: Declarative copilots (coming soon)
-      href: overview-declarative-copilot.md
+    - name: Declarative agents
+      href: overview-declarative-agent.md
     - name: Retrieve capabilities IDs
-      href: declarative-copilot-capabilities-ids.md
-    - name: Declarative copilot manifest reference
-      href: declarative-copilot-manifest.md
+      href: declarative-agent-capabilities-ids.md
+    - name: Declarative agent manifest reference
+      href: declarative-agent-manifest.md
   - name: Use your custom orchestrator and models
     expanded: false
     items:
-    - name: Custom engine copilots
-      href: overview-custom-engine-copilot.md
+    - name: Custom engine agents
+      href: overview-custom-engine-agent.md
     - name: Build with VS Code and Teams AI library
       items:
       - name: Teams AI library overview
