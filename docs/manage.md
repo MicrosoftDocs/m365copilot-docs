@@ -40,17 +40,17 @@ However, Copilot Studio and Teams Toolkit have different development prerequisit
 
 - For Copilot Studio, see [Prerequisites for creating Copilot agents with Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#prerequisites).
 
-- For Teams Toolkit, see [Prerequisites for building agents and plugins with Teams Toolkit and other IDEs](./prerequisites.md#building-with-teams-toolkit).
+- For Teams Toolkit, see [Prerequisites for building agents and plugins](./prerequisites.md#building-with-teams-toolkit).
 
 ### Custom agents
 
-#### Built with Teams Toolkit
+#### Custom agents built with Teams Toolkit
 
 Custom agents created with Teams Toolkit and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like Copilot agents. As Teams bot apps, they can also be managed them through **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)).
 
 For required admin settings for developing custom agents, see [Prerequisites for building agents and plugins with Teams Toolkit and other IDEs](./prerequisites.md#building-with-teams-toolkit).
 
-#### Created with Copilot Studio
+#### Custom agents created with Copilot Studio
 
 You can publish custom agents (copilots) built with Copilot Studio to different [Power Platform environments](/microsoft-copilot-studio/environments-first-run-experience), which are managed from the **Power Platform admin center** ([admin.powerplatform.com](https://admin.powerplatform.com)).
 
@@ -88,7 +88,7 @@ Graph connectors that are packaged as Microsoft 365 apps and published to an org
 
 However, the **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) provides additional admin controls to enable or disable the Graph connector within the app, so long as you implement a `graphConnector.notificationUrl` for your app to handle the enable / disable notifications. For more info, see [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context).
 
-For admin settings for developing Graph connectors, see [Requirements for developing Microsoft graph connectors](./prerequisites.md#requirements-for-developing-microsoft-graph-connector).
+For admin prerequisites for developing Graph connectors, see [Requirements for developing Microsoft graph connectors](./prerequisites.md#requirements-for-developing-microsoft-graph-connector).
 
 ## See also
 

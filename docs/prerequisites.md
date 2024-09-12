@@ -53,11 +53,11 @@ In addition to a Microsoft 365 Copilot license, there are several additional pre
 
 #### Building with Teams Toolkit
 
-To build agents and plugins with Teams Toolkit and other IDEs, you'll need your admin to enable the ability to sideload a *Custom app* to your tenant. From Teams admin center, select Teams apps > Setup policies > **Global (Org-wide default)** and enable **Upload custom apps**:
+To build agents and plugins with Teams Toolkit and other IDEs, you'll need your admin to enable the ability to sideload a *custom app* to your tenant. From Teams admin center, select Teams apps > Setup policies > **Global (Org-wide default)** and enable **Upload custom apps**:
 
 :::image type="content" source="./assets/images/tac-setup-policies.png" alt-text="Screenshot of org-wide setup policy with 'Upload custom apps' toggle enabled in Teams admin center":::
 
-You can manage your sideloaded custom apps from Teams: Apps > **Manage your apps**.
+You can manage your sideloaded custom apps, including Copilot agents, from the Teams client by selecting: Apps > **Manage your apps**.
 
 #### Creating with Copilot Studio
 
