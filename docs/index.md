@@ -1,5 +1,5 @@
 ---
-title: Extend Microsoft 365 Copilot 
+title: Extend Microsoft 365 Copilot
 description: Extend, enrich, and customize Microsoft 365 Copilot with external services, apps, and data
 author: girliemac
 ms.author: timura
@@ -10,15 +10,15 @@ ms.custom: [copilot-learning-hub]
 
 # Extend Microsoft 365 Copilot
 
-**Microsoft 365 Copilot** is an AI-powered productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, grounding with Microsoft Graph data. 
+**Microsoft 365 Copilot** is an AI-powered productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, grounding with Microsoft Graph data.
 
-It offers *knowledge*, such as emails, chats, and documents that users have permission to access, and *skills*, such as understanding, summarizing, predicting, recalling, translating, and generating content. 
+It offers *knowledge*, such as emails, chats, and documents that users have permission to access, and *skills*, such as understanding, summarizing, predicting, recalling, translating, and generating content.
 
 :::image type="content" source="assets/images/anatomy-m365-copilot.png" alt-text="Visual representation of the Copilot for Microsoft 365 system: models, orchestrator, knowledge, skills, and UX" border="false":::
 
-**Copilot extensibility** is the ability to customize and extend Microsoft 365 Copilot with additional knowledge and skills. 
+**Copilot extensibility** is the ability to customize and extend Microsoft 365 Copilot with additional knowledge and skills.
 
-As a developer, you can extend Microsoft 365 Copilot to build **Copilot agents** to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot, tailoring it to suit the unique needs of your customers. 
+As a developer, you can extend Microsoft 365 Copilot to build **Copilot agents** to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot, tailoring it to suit the unique needs of your customers.
 
 Copilot agents are fundamentally composed of Custom Knowledge (via instructions and grounding data), Custom Skills (including Actions, Triggers, and Workflows), and Autonomy (including planning, learning, and escalation).
 
@@ -46,7 +46,7 @@ As you just learned, **declarative agents** comprise a collection of custom know
 
 Declarative agents have:
 
-- **Familiar user interface**, which look like and work like Microsoft Copilot 
+- **Familiar user interface**, which look like and work like Microsoft Copilot
 - **Domain-specific knowledge** applied for specific tasks, such as travel planner or nutrition assistant
 - **Ability to integrate with plugins and connectors** to call specialized services and access domain expertise
 
@@ -74,7 +74,7 @@ With Graph connectors, you can:
 
 Power Platform connectors are essential components that enable [Power Platform applications](https://www.microsoft.com/power-platform#products), such as Power Automate, Power Apps, and Logic Apps, to interact with external services and data sources. They also enhance the capabilities of Microsoft 365 Copilot by enabling it to integrate with a wide range of external services and data sources, perform custom actions, and access a broader range of data types.
 
-Unlike Graph connectors, Power platform connectors are real-time data retrieval with read/write actions. For example, you can create a connector that allows your users to track an issue in real-time, also let them create actions, such as creating a ticket for the tracker. 
+Unlike Graph connectors, Power platform connectors are real-time data retrieval with read/write actions. For example, you can create a connector that allows your users to track an issue in real-time, also let them create actions, such as creating a ticket for the tracker.
 
 📖 Learn more: [Connect and extend with Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context)
 
@@ -92,8 +92,8 @@ There are a few different ways to create plugins—**API plugins**, **Teams Mess
 - Make an API into a Copilot plugin with [API plugins](overview-api-plugins.md)
 - Teams [Message extensions](overview-message-extension-bot.md) are now work as plugins
 - Create [Copilot Studio Actions](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), if you prefer no-code/low-code
- 
-[!INCLUDE [disclaimer](includes/api-plugins-dc-only.md)]
+
+[!INCLUDE [disclaimer](includes/api-plugins-declarative-agents-only.md)]
 
 ## Copilot agent in-app experience
 

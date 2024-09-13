@@ -11,7 +11,7 @@ ms.custom: [copilot-learning-hub]
 
 API plugins enable Copilot for Microsoft 365 to interact with REST APIs that are described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). With an API plugin, Copilot users can ask Copilot to not only query a REST API for information, but to create, update, and delete data and objects. Anything the REST API can do is accessible via natural language prompts.
 
-[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
 An API plugin provides an OpenAPI description document and a plugin manifest that Copilot uses to learn the capabilities of the API. Copilot can then decide when an installed and enabled plugin's API is suited to answer any given prompt. To learn more about the manifest file that an API plugin requires, see [API plugin manifest schema for Microsoft Copilot for Microsoft 365](./api-plugin-manifest.md).
 

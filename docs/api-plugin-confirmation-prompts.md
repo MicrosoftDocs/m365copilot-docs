@@ -8,7 +8,7 @@ ms.topic: conceptual
 
 # Confirmation prompts for API plugins for Microsoft Copilot for Microsoft 365
 
-[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
 By default, Microsoft Copilot for Microsoft 365 asks the user to confirm sending data to a plugin before it sends it to prevent unintended consequences in external systems. The user is able to see the data to be sent and is given a choice to allow or decline. For some API operations, users are given the option to always allow data to be sent, which prevents future confirmation prompts for that particular operation.
 
