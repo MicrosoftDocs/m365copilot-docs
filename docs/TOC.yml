@@ -27,21 +27,15 @@
     href: /training/paths/copilot-m365-extensibility/
 - name: Add knowledge with Microsoft Graph connectors
   items:
-  - name: Microsoft Graph connectors in Copilot for Microsoft 365
+  - name: Microsoft Graph connectors in Microsoft 365 Copilot
     href: overview-graph-connector.md
-  - name: Enhancing Microsoft Copilot Discovery with Microsoft Graph connector content
+  - name: Enhancing Microsoft 365 Copilot discovery with Microsoft Graph connector content
     href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
-  - name: Connectors experiences
+  - name: Connector experiences
     href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
-  - name: Connectors API
-    href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/extensibility/context
-  - name: Build your first connector
-    href: /graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context
-  - name: Simplify connector deployment
-    href: /graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context
-  - name: Set up Microsoft-built connectors
+  - name: Set up connectors
     items:
-    - name: Setup overview
+    - name: Overview
       href: /microsoftsearch/configure-connector?context=/microsoft-365-copilot/extensibility/context
     - name: Add staged rollout to connectors
       href: /microsoftsearch/staged-rollout-for-graph-connectors?context=/microsoft-365-copilot/extensibility/context
@@ -147,6 +141,12 @@
           href: /microsoftsearch/servicenow-tickets-connector?context=/microsoft-365-copilot/extensibility/context
         - name: Troubleshooting
           href: /microsoftsearch/troubleshoot-servicenow-tickets-connector?context=/microsoft-365-copilot/extensibility/context
+  - name: Connectors API
+    href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/extensibility/context
+  - name: Build your first connector
+    href: /graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context
+  - name: Simplify connector deployment
+    href: /graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context        
   - name: Manage connections
     href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/extensibility/context
   - name: Manage schema
