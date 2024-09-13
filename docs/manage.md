@@ -9,7 +9,7 @@ ms.date: 9/16/2024
 
 # Manage extensibility for Microsoft 365 Copilot
 
-This article describes the admin controls for managing different Microsoft 365 Copilot extensibility types. 
+This article describes the admin controls for managing different Microsoft 365 Copilot extensibility types.
 
 Microsoft 365 Copilot agents, plugins, and connectors are packaged, distributed, and managed in the same way as other apps that run across the integrated Microsoft 365 platform. At its core, the integrated Microsoft 365 app platform extends the Teams app platform to provide a [unified app model](extensions-are-apps.md) for extensibility within the Microsoft 365 ecosystem. App management controls for Microsoft 365 are also converging to the centralized Microsoft admin center. However, some necessary controls are accessible only from other admin centers.
 
@@ -78,7 +78,7 @@ Tenant admins can also enable or disable different types of actions from working
 
 ### API plugins
 
-[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
 Refer to [Copilot agents](#copilot-agents) for details on managing Copilot agents with API plugins.
 
@@ -95,5 +95,3 @@ For admin prerequisites for developing Graph connectors, see [Requirements for d
 [Set up your dev environment for Microsoft 365 Copilot](prerequisites.md)
 
 [Publish extensions for Microsoft 365 Copilot](publish.md)
-
-

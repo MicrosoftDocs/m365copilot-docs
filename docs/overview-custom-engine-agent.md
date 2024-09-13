@@ -1,29 +1,29 @@
 ---
-title: Custom engine copilots for Microsoft 365
-description: Custom engine copilots are sophisticated conversational bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction.
+title: Custom engine agents for Microsoft 365
+description: Custom engine agents are sophisticated conversational bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction.
 author: aycabas
 ms.author: aycabas
 ms.topic: overview
 ---
 
 
-# Custom engine copilots for Microsoft 365 overview
+# Custom engine agents for Microsoft 365 overview
 
-Custom engine copilots are conversational Teams bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction. These advanced bots mark a significant departure from traditional bots, offering an extensive range of features that elevate the overall user experience.
+Custom engine agents are conversational Teams bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction. These advanced bots mark a significant departure from traditional bots, offering an extensive range of features that elevate the overall user experience.
 
-Custom engine copilots utilize LLM technology at their core that allows them to easily understand and respond to user queries, creating dynamic and immersive interactions. Custom engine copilots also offer advanced functionalities such as UI manipulation, task execution, and content creation, making them indispensable tools for streamlining workflows and boosting productivity.
+Custom engine agents utilize LLM technology at their core that allows them to easily understand and respond to user queries, creating dynamic and immersive interactions. Custom engine agents also offer advanced functionalities such as UI manipulation, task execution, and content creation, making them indispensable tools for streamlining workflows and boosting productivity.
 
 [!INCLUDE [preview-disclaimer-copilot](includes/preview-disclaimer-copilot-no-license.md)]
 
-## Build custom engine copilots
+## Build custom engine agents
 
-For enterprises seeking bot solutions that are precisely customized to user demands and scenarios, using **Teams AI Library** to utilize LLMs that adhere to Microsoft's UX principles and are compatible with Teams and Microsoft 365 is a great choice. Developing custom engine copilots with the Teams AI Library can provide more natural, intuitive, and specialized user interaction experiences. This option is advantageous for developers wishing to customize model selection and orchestration, applying prior experience in Teams bot development, or aiming to ensure accessibility for all Microsoft 365 users.
+For enterprises seeking bot solutions that are precisely customized to user demands and scenarios, using **Teams AI Library** to utilize LLMs that adhere to Microsoft's UX principles and are compatible with Teams and Microsoft 365 is a great choice. Developing custom engine agents with the Teams AI Library can provide more natural, intuitive, and specialized user interaction experiences. This option is advantageous for developers wishing to customize model selection and orchestration, applying prior experience in Teams bot development, or aiming to ensure accessibility for all Microsoft 365 users.
 
 Developers can also utilize the **Teams Toolkit** to easily construct their projects, taking advantage of its prebuilt templates for a seamless project launch, offering an ideal solution for quick starts, easy debugging, and deployment.
 
 ### Explore templates to get started
 
-Kickstart building your custom engine copilots using Teams AI library with the prebuilt templates available in Teams Toolkit:
+Kickstart building your custom engine agents using Teams AI library with the prebuilt templates available in Teams Toolkit:
 
 | **Template** | **Description** |
 |:------------|:------------|
@@ -33,7 +33,7 @@ Kickstart building your custom engine copilots using Teams AI library with the p
 
 ### Take a tour of the sample scenarios
 
-Explore sample scenarios available in [Teams AI library GitHub repository](https://github.com/microsoft/teams-ai) to understand more about the capabilities you can add in your custom engine copilot:
+Explore sample scenarios available in [Teams AI library GitHub repository](https://github.com/microsoft/teams-ai) to understand more about the capabilities you can add in your custom engine agents:
 
 | **Sample** | **Description** | **C#** | **JS** | **Python** |
 |:------------|:------------|:------------|:------------|:------------|
@@ -45,7 +45,7 @@ Explore sample scenarios available in [Teams AI library GitHub repository](https
 
 ## Next steps
 
-Discover the possibilities of custom engine copilots with a closer look at Teams AI Library.
+Discover the possibilities of custom engine agents with a closer look at Teams AI Library.
 
 > [!div class="nextstepaction"]
 > [Teams AI library Overview](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
@@ -55,4 +55,4 @@ Discover the possibilities of custom engine copilots with a closer look at Teams
 
 ## See also
 
-- [Extending Microsoft Copilot versus building your own copilot](build-or-extend.md)
+- [Your Copilot agent options for Microsoft 365](decision-guide.md)

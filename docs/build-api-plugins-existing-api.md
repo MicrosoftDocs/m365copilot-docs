@@ -1,6 +1,6 @@
 ---
-title: Build API plugins from an existing API for Microsoft Copilot for Microsoft 365
-description: Learn how to build API plugins from an existing API for Microsoft Copilot for Microsoft 365
+title: Build API plugins from an existing API for Microsoft 365 Copilot
+description: Learn how to build API plugins from an existing API for Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
@@ -8,11 +8,11 @@ ms.topic: how-to
 
 <!-- markdownlint-disable MD024 MD051 -->
 
-# Build API plugins from an existing API for Microsoft Copilot for Microsoft 365
+# Build API plugins from an existing API for Microsoft 365 Copilot
 
-[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-[API plugins](overview-api-plugins.md) connect your existing REST API to Microsoft Copilot for Microsoft 365. You can use the [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi).
+[API plugins](overview-api-plugins.md) connect your existing REST API to Microsoft 365 Copilot. You can use the [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi).
 
 ## Prerequisites
 
@@ -127,7 +127,7 @@ Once you complete these steps, Teams Toolkit generates the required files for th
 
     :::image type="content" source="assets/images/api-plugins/provision-complete-ttk.png" alt-text="The Teams Toolkit message confirming successful provisioning":::
 
-Your plugin is now available to test with your user account in Copilot for Microsoft 365 in Microsoft Teams.
+Your plugin is now available to test with your user account in Microsoft 365 Copilot in Microsoft Teams.
 
 ## Use the plugin
 

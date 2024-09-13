@@ -1,16 +1,16 @@
 ---
-title: Adaptive Card response templates for API plugins for Microsoft Copilot for Microsoft 365
-description: Learn how to use Adaptive Card response templates to customize API plugins responses in Microsoft Copilot for Microsoft 365
+title: Adaptive Card response templates for API plugins for Microsoft 365 Copilot
+description: Learn how to use Adaptive Card response templates to customize API plugins responses in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: conceptual
 ---
 
-# Adaptive Card response templates for API plugins for Microsoft Copilot for Microsoft 365
+# Adaptive Card response templates for API plugins for Microsoft 365 Copilot
 
-[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-API plugins can use Adaptive Card response templates to enhance the response that Copilot for Microsoft 365 generates based on the response received from the API. The Adaptive Card renders citations within the generated response.
+API plugins can use Adaptive Card response templates to enhance the response that Microsoft 365 Copilot generates based on the response received from the API. The Adaptive Card renders citations within the generated response.
 
 API plugins can define an Adaptive Card response template in two ways: as a static template defined in the [API plugin manifest](api-plugin-manifest.md), or as a dynamic template returned as part of the API response. Plugin developers defined templates using the [Adaptive Card schema](https://adaptivecards.io/explorer/) in combination with the [Adaptive Cards template language](/adaptive-cards/templating/language).
 
@@ -77,7 +77,7 @@ Consider this static template and the following API response.
 
 This combination results in the following Adaptive Card.
 
-:::image type="content" source="assets/images/api-plugins/adaptive-card-citation.png" alt-text="An Adaptive Card rendering a citation in Copilot for Microsoft 365":::
+:::image type="content" source="assets/images/api-plugins/adaptive-card-citation.png" alt-text="An Adaptive Card rendering a citation in Microsoft 365 Copilot":::
 
 ## Dynamic response templates
 

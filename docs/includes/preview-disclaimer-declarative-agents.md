@@ -7,4 +7,4 @@ ms.topic: include
 
 > [!IMPORTANT]
 >
-> Declarative copilots for Microsoft 365 are **generally available**.
+> Declarative agents for Microsoft 365 are **generally available**.
