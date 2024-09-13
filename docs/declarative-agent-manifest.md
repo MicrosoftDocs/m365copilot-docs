@@ -12,6 +12,10 @@ This article describes a specification that establishes the declarative agent ma
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
+## JSON schema
+
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/declarative-agent/v1.0/schema.json).
+
 ## Conventions
 
 ### Relative references in URLs
