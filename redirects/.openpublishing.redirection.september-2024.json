@@ -9,6 +9,16 @@
       "source_path_from_root": "/docs/ttk-declarative-copilot-getting-started.md",
       "redirect_url": "/microsoft-365-copilot/extensibility/build-declarative-agents",
       "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/overview-declarative-copilot.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/overview-declarative-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/overview-custom-engine-copilot.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/overview-custom-engine-agent",
+      "redirect_document_id": true
     }
   ]
 }
