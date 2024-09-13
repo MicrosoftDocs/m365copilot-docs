@@ -14,6 +14,10 @@ API plugins enable Microsoft 365 Copilot to interact with REST APIs described by
 
 The following article describes the schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
 
+## JSON schema
+
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/plugin/v2.1/schema.json).
+
 ## Conventions
 
 ### Relative references in URLs
