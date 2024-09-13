@@ -20,13 +20,13 @@ Declarative agents are powered by Copilot for Microsoft 365, therefore they util
 
 - **Real-time customer support with seamless system integrations:** Assume having a team of support agents dedicated to providing your customers adequate and timely support while constantly monitoring and updating customers' live order status. You can increase their productivity by enhancing your existing process with a declarative agent. A copilot that seamlessly integrates with a plugin for the order management system to access and provide real-time order updates to customers.
 
-:::image type="content" source="assets/images/declarative-copilot-scenarios.png" alt-text="A diagram that shows two scenarios of declarative agents mentioned in the article." lightbox="assets/images/declarative-copilot-scenarios.png" :::
+:::image type="content" source="assets/images/declarative-agent-scenarios.png" alt-text="A diagram that shows two scenarios of declarative agents mentioned in the article." lightbox="assets/images/declarative-copilot-scenarios.png" :::
 
 ## Explore the benefits of declarative agents
 
 You can engage with declarative agents within the same interface of Copilot for Microsoft 365. Inside the Copilot for Microsoft 365 interface, you can access declarative agents by opening the right-hand side menu.
 
-:::image type="content" source="assets/images/declarative-copilot-showcase.png" alt-text="Screenshots that show declarative agents running on Microsoft 365." lightbox="assets/images/declarative-copilot-showcase.png" :::
+:::image type="content" source="assets/images/declarative-agent-showcase.png" alt-text="Screenshots that show declarative agents running on Microsoft 365." lightbox="assets/images/declarative-copilot-showcase.png" :::
 
 Core benefits of implementing declarative agents into your operations include:
 
