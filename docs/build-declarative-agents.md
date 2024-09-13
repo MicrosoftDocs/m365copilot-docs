@@ -24,6 +24,8 @@ ms.date: 05/10/2024
 
 To learn about what is a declarative copilot, see [Declarative copilots for Microsoft 365 overview](overview-declarative-agent.md).
 
+[!INCLUDE [security-note](includes/security-on-das-note.md)]
+
 ## Prerequisites
 
 Before you get started, ensure that you're familiar with the following standards and guidelines for declarative copilots for Copilot for Microsoft 365:
