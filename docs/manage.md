@@ -95,5 +95,3 @@ For admin prerequisites for developing Graph connectors, see [Requirements for d
 [Set up your dev environment for Microsoft 365 Copilot](prerequisites.md)
 
 [Publish extensions for Microsoft 365 Copilot](publish.md)
-
-
