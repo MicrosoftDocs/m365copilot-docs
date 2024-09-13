@@ -16,9 +16,9 @@ When it comes to deciding on your approach to AI development, there are numerous
 
 When you're looking to create a fully customized end-to-end AI product to cater to your business needs, you typically choose language models and orchestration for your Retrieval-Augmented Generation (RAG) solutions.
 
-Or, you can *extend* Microsoft 365 Copilot, which is powered by private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot combines LLM responses with organizational context to provide relevant assistance. When you build agents for Copilot, you can utilize the [orchestration layer](orchestrator.md) representing the interface between foundation LLMs, to select and execute the right content from the right plugin.
+However, with Microsoft 365 Copilot, you also have a choice of *extending* Copilot's private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot combines LLM responses with organizational context to provide relevant assistance. When you extend Copilot, you can utilize the [orchestration layer](orchestrator.md) representing the interface between foundation LLMs, to select and execute the right content from the right plugin.
 
-Here's your first decision-making point; extending Copilot to utilize the model and orchestrator, or build with your choice?
+Here's your first decision-making point; extending Copilot to utilize the model and orchestrator, or build a custom agent with your choice?
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." lightbox="assets/images/m365-extensibility-decisions.png" :::
 
@@ -80,12 +80,9 @@ When & why to use declarative agents:
 
 Use connectors to ingest external data to your copilots.
 
-🎯 [**Graph connectors**](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. They can work either standalone, or with declarative agents.
+🎯 [**Graph connectors**](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. **They can work either standalone, or with declarative agents**.
 
 🎯 [**Power Platform connectors**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) enable Power Platform applications to interact with external services and data sources in real-time. 
-
-> [!NOTE]
-> Connectors can be built as a stand-alone, or with a declarative agent.
 
 #### Plugins
 
@@ -96,7 +93,7 @@ Use connectors to ingest external data to your copilots.
 - 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
 
 > [!NOTE]
-> Currently, API plugins are only available as actions that works within declarative agents.
+> Currently, API plugins are only available as actions that works within declarative agents. They don't work as standalone plugin at this moment.
 
 > [!TIP]
 > If you've built message extensions for Teams before, you can immediately see the value of Copilot extensibility, but if you want to build the latest and greatest, try building API plugins and Graph Connectors!
@@ -121,7 +118,7 @@ With Azure AI services, you can craft a custom AI chatbot for Teams and Microsof
 
 ### How does it differ from extending Copilot?
 
-This diagram provides a comparison between extending Copilot (Connectors, plugins, and declarative agents, which can connect to Graph connectors and plugins) and building custom engine agents:
+This diagram provides a comparison between Copilot extensions (Connectors, plugins, and declarative agents) and building custom engine agents:
 
 :::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between extending Copilot and custom engine agents for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 

@@ -46,7 +46,7 @@ As you just learned, **declarative agents** comprise a collection of custom know
 
 Declarative agents have:
 
-- **Familiar user interface** with Copilot for Microsoft 365
+- **Familiar user interface**, which look like and work like Microsoft Copilot 
 - **Domain-specific knowledge** applied for specific tasks, such as travel planner or nutrition assistant
 - **Ability to integrate with plugins and connectors** to call specialized services and access domain expertise
 
@@ -67,8 +67,6 @@ With Graph connectors, you can:
 - **Make the most of your external data** by giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights
 - **Use Copilot as a research aid**, letting Copilot find, summarize, and perform Q&A natively by using the dataset of your choice
 - **Surface the intelligence of Copilot** in Microsoft Search, ContextIQ, and more to enhance the ways your users are already searching for answers
-
-There are three main steps to set up a Graph connector: (1) Create a connection, (2) Register your schema, and then (3) Ingest your content to the Microsoft Graph. 
 
 📖 Learn more: [Graph connectors overview](overview-graph-connector.md)
 
@@ -99,7 +97,7 @@ There are a few different ways to create plugins—**API plugins**, **Teams Mess
 
 ## Copilot agent in-app experience
 
-As a developer, you can extend Microsoft 365 Copilot by building Copilot agents to tailor the user experience. When building Copilot agents, you can provide *In context* and *immersive* experiences.
+When you build Copilot agents, you can tailor the user experience by providing *In context* and *immersive* experiences.
 
 - **In-context experience**: For example in Business Chat (BizChat), users can `@`-mention the agent and interact with it within the chat conversation with Microsoft 365 Copilot
 - **Immersive experience**: This allows users to chat directly with the agent, providing an embedded experience
