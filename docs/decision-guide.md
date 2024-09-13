@@ -20,7 +20,7 @@ However, with Microsoft 365 Copilot, you also have a choice of *extending* Copil
 
 Here's your first decision-making point; extending Copilot to utilize the model and orchestrator, or build a custom agent with your choice?
 
-:::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." lightbox="assets/images/m365-extensibility-decisions.png" :::
+:::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." border="false" lightbox="assets/images/m365-extensibility-decisions.png" :::
 
 **Extend Microsoft 365 Copilot if any of the following apply:**
 - You want to build a service on top of Microsoft 365 Copilot
@@ -108,19 +108,19 @@ How you build and which tools you should use is up to you. Your choices are:
 
 - 🎯 **Low-code** or **no-code** options are declarative agents, all Copilot Studio actions, and Power Platform connectors as knowledge source. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
 
-:::image type="content" source="assets/images/decision-making-guide.png" alt-text="A diagram that shows various developer options." lightbox="assets/images/decision-making-guide.png":::
+:::image type="content" source="assets/images/decision-making-guide.png" alt-text="A diagram that shows various developer options." border="false" lightbox="assets/images/decision-making-guide.png":::
 
 ## Option 2: Building a custom engine agent for Microsoft 365
 
 With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution on Teams chat, then building your own copilots is the perfect fit for you.
 
-:::image type="content" source="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="A diagram that explains how a custom engine agent in Teams work" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
+:::image type="content" source="assets/images/teams-ai-library.png" alt-text="A diagram that explains how a custom engine agent in Teams work" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
 
 ### How does it differ from extending Copilot?
 
 This diagram provides a comparison between Copilot extensions (Connectors, plugins, and declarative agents) and building custom engine agents:
 
-:::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between extending Copilot and custom engine agents for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
+:::image type="content" source="assets/images/copilot-ext-vs-cec.png" alt-text="This diagram compares options between extending Copilot and custom engine agents for M365" lightbox="assets/images/copilot-ext-vs-cec.png" border="false":::
 
 The custom engine agents operate on a BYO (Bring Your Own) model. So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
 

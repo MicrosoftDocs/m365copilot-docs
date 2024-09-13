@@ -36,7 +36,7 @@ Copilot agents can be built via a declarative or custom engine approach.
 
 On the other hand, **custom engine agents** are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs with your own stack. These include agents built with Copilot Studio, Teams AI library, Azure AI, etc. Custom agents work as standalone Teams apps, and in the future, as Copilot agents.
 
-:::image type="content" source="assets/images/m365-extensibility-types.png" alt-text="This illustration shows types of extensibility options, Graph connector, plugins, and declarative agents" border="true" lightbox="assets/images/m365-extensibility-types.png":::
+:::image type="content" source="assets/images/m365-extensibility-types.png" alt-text="This illustration shows types of extensibility options, Graph connector, plugins, and declarative agents" border="false" lightbox="assets/images/m365-extensibility-types.png":::
 
 To find out which agents work the best for you, learn the differences at [Your agent options for Microsoft 365](decision-guide.md).
 
