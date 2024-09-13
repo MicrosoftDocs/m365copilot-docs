@@ -1,6 +1,6 @@
 ---
-title: Your copilot options for Microsoft 365
-description: Understand which type of copilots and Microsoft 365 Copilot extensions works best for you
+title: Your Copilot agent options for Microsoft 365
+description: Understand which type of copilots and Microsoft 365 Copilot agents works best for you
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
@@ -8,37 +8,34 @@ ms.date: 09/16/2024
 ms.custom: [copilot-learning-hub]
 ---
 
-# Your copilot options for Microsoft 365
+# Your Copilot agent options for Microsoft 365
 
-When it comes to deciding on your approach to AI development, there are numerous options to consider. Microsoft offers [Azure AI solutions](/azure/developer/intro/azure-ai-for-developers) and Microsoft Copilot extensibility options. 
-This guide aims to streamline your journey through the options for Microsoft 365, assisting you in identifying the most suitable solution aligned with your specific needs and goals.
+When it comes to deciding on your approach to AI development, there are numerous options to consider, including Microsoft 365 Copilot extensibility options and Azure AI solutions. This guide aims to streamline your journey through the options for Microsoft 365, assisting you in identifying the most suitable solution aligned with your specific needs and goals.
 
-[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
-
-## Extend Copilot or build a custom engine copilot?
+## Extend Copilot or build a custom engine agent?
 
 When you're looking to create a fully customized end-to-end AI product to cater to your business needs, you typically choose language models and orchestration for your Retrieval-Augmented Generation (RAG) solutions.
 
-On the other hand, you can extend Microsoft Copilot, which is powered by private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot combines LLM responses with organizational context to provide relevant assistance. When you build extensions for Copilot, you can utilize the [orchestration layer](orchestrator.md) representing the interface between foundation LLMs, to select and execute the right content from the right plugin.
+Or, you can *extend* Microsoft 365 Copilot, which is powered by private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot combines LLM responses with organizational context to provide relevant assistance. When you build agents for Copilot, you can utilize the [orchestration layer](orchestrator.md) representing the interface between foundation LLMs, to select and execute the right content from the right plugin.
 
 Here's your first decision-making point; extending Copilot to utilize the model and orchestrator, or build with your choice?
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." lightbox="assets/images/m365-extensibility-decisions.png" :::
 
-**Extend Microsoft 365 Copilot if any of the following is true:**
+**Extend Microsoft 365 Copilot if any of the following apply:**
 - You want to build a service on top of Microsoft 365 Copilot
-- You have a REST API (so that you can plug it into your Copilot plugin)
-- You have prior experience in building a Teams message extension (so that you can just update it as a Copilot plugin)
+- You have a REST API (so that you can plug it into your agent)
+- You have prior experience in building a Teams message extension (so that you can just update it as a plugin)
 
-**Build a custom copilot if any of the following is true:**
+**Build a custom copilot if any of the following apply:**
 - You want to use particular models, either LLM or small language model (SLM), for your service
-- You want your service to be independent from Microsoft Copilot, accessible to all Microsoft 365 users, regardless of your Copilot licensing status 
-- You have prior experience in building a Teams bot, or are familiar with Teams bot development (so you can quickly get started with Teams AI Library to build a custom engine copilot)
+- You want your service to be independent from Microsoft 365 Copilot, accessible to all Microsoft 365 users regardless of their Copilot licensing status 
+- You have prior experience in building a Teams bot, or are familiar with Teams bot development (so you can quickly get started with Teams AI Library to build a custom engine agent)
 
 ### Pick your option
 
 - 🎯 If you want to **extend Microsoft Copilot**, go to the next section, [Option 1](#option-1-extending-microsoft-365-copilot)!
-  - 🎯 Then, you have choices for extensions; build declarative copilots, plugins, or connectors. Find out about [extensibility types](#types-of-microsoft-365-copilot-extensibility)
+  - 🎯 Then, you have choices for agents; build declarative agents, plugins, or connectors. Find out about [extensibility types](#types-of-microsoft-365-copilot-extensibility)
 - 🎯 Otherwise, jump to [Option 2](#option-2-building-a-custom-engine-copilot-for-microsoft-365) to **build your own copilots**!
 
 <br/>
@@ -47,7 +44,7 @@ Here's your first decision-making point; extending Copilot to utilize the model 
 
 ## Option 1. Extending Microsoft 365 Copilot
 
-Okay, you want to leverage the Copilot orchestrator. Now, let's have a quick grasp of Microsoft Copilot—**Microsoft Copilot** is available for end-users across multiple Microsoft products, including: Microsoft 365 (Office) app, Teams, Outlook, PowerPoint, Word, Excel, Power Apps, Power Automate, Power Virtual Agents, Power Pages, and Dynamics 365.
+Okay, you want to leverage the Copilot orchestrator! Let's have a quick grasp—**Microsoft Copilot** is available for end-users across multiple Microsoft products, including: Microsoft 365 (Office) app, Teams, Outlook, PowerPoint, Word, Excel, Power Apps, Power Automate, Power Virtual Agents, Power Pages, and Dynamics 365.
 
 And **Microsoft 365 Copilot** is available as "Work" profile with Microsoft 365 Copilot subscription, designed for enterprise users to enhance productivity within Microsoft 365 applications.
 
@@ -63,53 +60,43 @@ By **extending Microsoft 365 Copilot** for enterprise users,
 
 ### Types of Microsoft 365 Copilot extensibility
 
-Now, it's important to understand the variety of methods available for applying the capabilities of external services, apps, and data.
+Now, it's important to understand the variety of methods available for applying the capabilities of external services, apps, and data. Let's find out which extensibility options are for you—
 
-> [!VIDEO https://www.youtube.com/embed/ILPOhVz9OdI]
+#### Declarative agents
 
-From an end-user perspective, Microsoft Copilot offers two distinct extension interfaces: standalone plugins and declarative copilots. Standalone plugins connect REST APIs directly within the context of your tasks, while declarative copilots function like apps. Think of Microsoft Copilot as an operating system, where plugins act as services, and declarative copilots serve as applications.
+🎯 [**Declarative agents**](overview-declarative-agent.md) are designed to enhance the user experience by allowing the creation of personalized chat experiences to provide tailored interactions and responses, with a similar look-and-feel with Microsoft Copilot interface in Business Chat, also as a 1:1 chat in Teams. Build a declarative agent if you want a specific agent for particular tasks and domain knowledge.
 
-Now, let's find out which extensibility options are for you—
+:::image type="content" source="assets/images/declarative-copilot-ui.png" alt-text="A fictional declarative agent UI." lightbox="assets/images/declarative-copilot-ui.png" border="false":::
 
-To customize Microsoft Copilot to create a specific copilot for particular tasks and domain knowledge, build:
-
-#### Declarative copilots
-
-🎯 [**Declarative copilots**](overview-declarative-copilot.md) are designed to enhance the user experience by allowing the creation of personalized chat experiences to provide tailored interactions and responses, with a similar look-and-feel with Microsoft Copilot interface.
-
-:::image type="content" source="assets/images/declarative-copilot-ui.png" alt-text="A fictional declarative copilot UI." lightbox="assets/images/declarative-copilot-ui.png" border="false":::
-
-When & why to use Declarative copilots:
+When & why to use declarative agents:
 
 - Scenario that requires ​focus or specialization
 - Layer on top of the full capability ​of Microsoft 365 Copilot​
 - Target specific roles or areas ​in organization, such as HR, Sales, and Finance
 - Scope to specific data sources including domain knowledge​
-- Custom instructions to enable nuanced interpretation of data received from sources like plugins​
-
-And you can connect your declarative copilots with connectors and plugins.
+- Custom instructions to enable nuanced interpretation of data received from sources like plugins​ and connectors
 
 #### Connectors
 
 Use connectors to ingest external data to your copilots.
 
-🎯 [**Graph connectors**](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. They can work either standalone, or with declarative copilots.
+🎯 [**Graph connectors**](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. They can work either standalone, or with declarative agents.
 
 🎯 [**Power Platform connectors**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) enable Power Platform applications to interact with external services and data sources in real-time. 
 
 > [!NOTE]
-> Connectors can be built as a stand-alone, or with a declarative copilot.
+> Connectors can be built as a stand-alone, or with a declarative agent.
 
 #### Plugins
 
-**Plugins** add skills and actions to Microsoft 365. Plugins have a few different types that are built differently. There are the growing number of extensions you build. Your options include:
+**Plugins** add skills and actions to Microsoft 365. Plugins have a few different types that are built differently. There are the growing number of agents you build. Your options include:
 
-- 🎯 [**API plugins**](overview-api-plugins.md) can work either standalone, or with declarative copilots by calling REST APIs via OpenAPI service.
-- 🎯 [**Teams Message Extensions**](overview-message-extension-bot.md) for Teams are the search and action capability for Teams that now work as plugins too.
+- 🎯 [**API plugins**](overview-api-plugins.md) can work with declarative agents by calling REST APIs via OpenAPI service.
+- 🎯 [**Teams Message Extensions**](overview-message-extension-bot.md) for Teams are the search and action capability for Teams that now work as a standalone plugins too.
 - 🎯 [**Actions in Copilot Studio**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
 
 > [!NOTE]
-> Currently, API plugins can be only built with a declarative copilot.
+> Currently, API plugins are only available as actions that works within declarative agents.
 
 > [!TIP]
 > If you've built message extensions for Teams before, you can immediately see the value of Copilot extensibility, but if you want to build the latest and greatest, try building API plugins and Graph Connectors!
@@ -120,27 +107,27 @@ Your journey varies based on your desired outcomes and your coding expertise. Wh
 
 How you build and which tools you should use is up to you. Your choices are:
 
-- 🎯 **Pro-code** options are declarative copilots, API plugins, message extensions, and Graph connectors. [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) would be your best friend for the development to tailor your copilots.
+- 🎯 **Pro-code** options are declarative agents, API plugins, message extensions, and Graph connectors. [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) would be your best friend for the development to tailor your copilots.
 
-- 🎯 **Low-code** or **no-code** options are declarative copilots, all Copilot Studio actions, and Power Platform connectors as knowledge source. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
+- 🎯 **Low-code** or **no-code** options are declarative agents, all Copilot Studio actions, and Power Platform connectors as knowledge source. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
 
 :::image type="content" source="assets/images/decision-making-guide.png" alt-text="A diagram that shows various developer options." lightbox="assets/images/decision-making-guide.png":::
 
-## Option 2: Building a custom engine copilot for Microsoft 365
+## Option 2: Building a custom engine agent for Microsoft 365
 
 With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution on Teams chat, then building your own copilots is the perfect fit for you.
 
-:::image type="content" source="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="A diagram that explains how a custom engine copilot agent in Teams work" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
+:::image type="content" source="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="A diagram that explains how a custom engine agent in Teams work" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
 
-### How does it differ from Copilot extensions for Microsoft 365?
+### How does it differ from extending Copilot?
 
-In the context of building copilots for Microsoft 365, there are several options available. This diagram provides a comparison between the **extensions** (Graph connectors, plugins, and declarative copilots, which can connect to Graph connectors and plugins) and the **custom engine copilot**:
+This diagram provides a comparison between extending Copilot (Connectors, plugins, and declarative agents, which can connect to Graph connectors and plugins) and building custom engine agents:
 
-:::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between Copilot extensions and custom engine copilots for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
+:::image type="content" source="assets/images/copilot-ext-vs-cec.png" border="true" alt-text="This diagram compares options between extending Copilot and custom engine agents for M365" lightbox="assets/images/copilot-ext-vs-cec.png":::
 
-The custom engine copilots operate on a BYO (Bring Your Own) model. So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
+The custom engine agents operate on a BYO (Bring Your Own) model. So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
 
-🎯 Learn more on building your own [**custom engine copilots**](overview-custom-engine-copilot.md).
+🎯 Learn more on building your own [**custom engine agents**](overview-custom-engine-agent.md).
 
 ### Tool options: Pro-code or low-code?
 
@@ -162,8 +149,9 @@ Learn prerequisites for building connectors and plugins:
 ### See also
 
 - [Microsoft Graph connectors overview](overview-graph-connector.md)
-- [Declarative copilot overview](overview-declarative-copilot.md)
+- [Declarative agent overview](overview-declarative-agent.md)
 - [API plugins overview](overview-api-plugins.md)
 - [Copilot Studio plugins overview](overview-business-applications.md)
 - [Teams Message extensions overview](overview-message-extension-bot.md)
 - [Teams AI Library](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview)
+- [Azure AI app development](/azure/developer/intro/azure-ai-for-developers)
