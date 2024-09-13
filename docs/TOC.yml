@@ -47,8 +47,6 @@
       href: /microsoftsearch/staged-rollout-for-graph-connectors?context=/microsoft-365-copilot/extensibility/context
     - name: Microsoft Graph connectors in Microsoft 365 Copilot
       items:
-      - name: Enhancing Microsoft 365 Copilot discovery with Microsoft Graph connector content
-        href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
     - name: On-prem connectors
       items:
       - name: Connector agent setup
