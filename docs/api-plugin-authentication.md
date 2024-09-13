@@ -1,16 +1,16 @@
 ---
-title: Authentication schemes for API plugins for Microsoft Copilot for Microsoft 365
-description: Learn about the supported authentication schemes for API plugins in Microsoft Copilot for Microsoft 365
+title: Authentication schemes for API plugins for Microsoft 365 Copilot
+description: Learn about the supported authentication schemes for API plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: conceptual
 ---
 
-# Authentication schemes for API plugins for Microsoft Copilot for Microsoft 365
+# Authentication schemes for API plugins for Microsoft 365 Copilot
 
-[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-API plugins for Copilot for Microsoft 365 support three authentication schemes to connect to their backend APIs.
+API plugins for Microsoft 365 Copilot support three authentication schemes to connect to their backend APIs.
 
 - OAuth 2.0 authorization code flow
 - API key

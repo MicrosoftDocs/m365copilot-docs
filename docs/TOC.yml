@@ -34,12 +34,12 @@
     - name: Declarative agents overview
       href: overview-declarative-agent.md
     - name: Transparency FAQs about declarative agents
-      href: transparencyfaq-declarativeagent.md
+      href: transparency-faq-declarative-agent.md
     - name: Build with Visual Studio Code
       expanded: true
       items:
       - name: Build a declarative agent with Visual Studio Code
-        href: ttk-declarative-agent-getting-started.md
+        href: build-declarative-agents.md
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference
@@ -75,7 +75,7 @@
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
 - name: Add knowledge with Graph Connectors
   items:
-  - name: Microsoft Graph connectors in Copilot for Microsoft 365
+  - name: Microsoft Graph connectors in Microsoft 365 Copilot
     href: overview-graph-connector.md
   - name: Enhancing Microsoft Copilot Discovery with Graph Connector Content
     href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context

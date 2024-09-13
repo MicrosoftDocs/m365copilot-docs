@@ -19,7 +19,7 @@ The following table summarizes the distribution support for Copilot extensibilit
 |[Copilot agents](#copilot-agents)| ✔️ |✔️*|*Supported for Copilot agents created with Teams Toolkit|
 |[Teams message extension plugins](#teams-message-extension-plugins-for-copilot) | ✔️ |✔️||
 |[Copilot Studio actions](#copilot-studio-actions-as-plugins-for-copilot)| ✔️|✔️||
-|[Microsoft Graph connectors](#microsoft-graph-connectors-for-copilot)| ✔️| ✔️*| *Standalone connectors not supported; can be distributed as Teams apps for verified publishers| 
+|[Microsoft Graph connectors](#microsoft-graph-connectors-for-copilot)| ✔️| ✔️*| *Standalone connectors not supported; can be distributed as Teams apps for verified publishers|
 
 The remainder of this article outlines the distribution processes for each Copilot extensibility type.
 
@@ -68,10 +68,10 @@ Before submitting your Copilot agent to Partner Center, ensure it meets all appl
 1. Provide rich responses with Adaptive Cards
 1. Seek user confirmation before committing any actions on behalf of the user
 1. Include API plugin functionality (referenced from declarative copilot manifest)
-1. Respond and fail gracefully to topics that are outside the scope of the agent's expertise 
+1. Respond and fail gracefully to topics that are outside the scope of the agent's expertise
 1. Do not spam the user by sending multiple messages in short succession
 
-Once ready, submit your app package to Microsoft Partner Center through the **Microsoft 365 and Copilot program** as a *Teams app*. 
+Once ready, submit your app package to Microsoft Partner Center through the **Microsoft 365 and Copilot program** as a *Teams app*.
 
 Once validated and approved by Microsoft, your agent is an active offer in the Microsoft Commercial Marketplace and ready for IT enablement. Once enabled by an IT administrator, it appears in the **Copilot extensions** category of the store within Microsoft Teams. Once deployed by an admin or acquired by a user, it will then appear as an installed agent for Microsoft 365 Copilot.
 
@@ -87,17 +87,17 @@ Follow these [instructions to upload your custom app package](/microsoft-365/adm
 
 Before submitting your message extension app to Partner Center, ensure it meets all applicable [Microsoft Commercial Marketplace certification policies](#microsoft-365-and-copilot-program) and also the [guidelines for high-quality message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension).
 
-Once ready, submit your app package to Microsoft Partner Center through the **Microsoft 365 and Copilot program** as a *Teams app*. 
+Once ready, submit your app package to Microsoft Partner Center through the **Microsoft 365 and Copilot program** as a *Teams app*.
 
 Once validated and approved by Microsoft, your plugin is an active offer in the Microsoft Commercial Marketplace and ready for IT enablement. Once enabled by an IT administrator, it appears in the Copilot extensions category of the store within Microsoft Teams. Once deployed by an admin or acquired by a user, it will then appear as an installed plugin for Microsoft 365 Copilot.
 
 ## Copilot Studio actions as plugins for Copilot
 
-Power Platform connector actions as Copilot plugins can be shared across an organization or published broadly via Microsoft Partner Center. Once an action is published, your administrator has to review and enable the plugin for use. 
+Power Platform connector actions as Copilot plugins can be shared across an organization or published broadly via Microsoft Partner Center. Once an action is published, your administrator has to review and enable the plugin for use.
 
 ### Distribute a Copilot Studio action to your organization
 
-By default, Copilot Studio actions are only visible and usable in Copilot Studio by the person who created them. They can be authorized for sharing at the Power Platform object level. Follow these [instructions to publish a connector action](/microsoft-copilot-studio/microsoft-copilot-extend-action-connector#publish) from Copilot Studio. 
+By default, Copilot Studio actions are only visible and usable in Copilot Studio by the person who created them. They can be authorized for sharing at the Power Platform object level. Follow these [instructions to publish a connector action](/microsoft-copilot-studio/microsoft-copilot-extend-action-connector#publish) from Copilot Studio.
 
 Once published, an administrator must enable your connector action it before it can be used within Microsoft 365 Copilot or a custom copilot, in addition to meeting the [end-user prerequisites for using actions](/microsoft-copilot-studio/copilot-plugins-overview#use-actions-in-microsoft-copilot) in Microsoft 365 Copilot.
 

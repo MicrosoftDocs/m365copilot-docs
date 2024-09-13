@@ -1,18 +1,18 @@
 ---
-title: API plugin manifest schema for Microsoft Copilot for Microsoft 365
-description: Learn about the properties you can use in a manifest file for an API plugin in Microsoft Copilot for Microsoft 365
+title: API plugin manifest schema for Microsoft 365 Copilot
+description: Learn about the properties you can use in a manifest file for an API plugin in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: reference
 ---
 
-# API plugin manifest schema for Microsoft Copilot for Microsoft 365
+# API plugin manifest schema for Microsoft 365 Copilot
 
-[!INCLUDE [api-plugins-dc-only](includes/api-plugins-dc-only.md)]
+[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-API plugins enable Copilot for Microsoft 365 to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
+API plugins enable Microsoft 365 Copilot to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
 
-The following article describes the schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft Copilot for Microsoft 365](./overview-api-plugins.md).
+The following article describes the schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
 
 ## Conventions
 
@@ -468,7 +468,7 @@ Here's an example of a plugin manifest file that uses most of the manifest prope
 
 ## See also
 
-- [API plugins for Microsoft Copilot for Microsoft 365](./overview-api-plugins.md)
+- [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md)
 
 [json-schema]: https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema
 [rfc9535]: https://www.rfc-editor.org/rfc/rfc9535

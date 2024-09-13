@@ -55,4 +55,4 @@ Discover the possibilities of custom engine agents with a closer look at Teams A
 
 ## See also
 
-- [Extending Microsoft Copilot versus building your own copilot](build-or-extend.md)
+- [Your Copilot agent options for Microsoft 365](decision-guide.md)

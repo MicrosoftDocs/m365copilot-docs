@@ -1,16 +1,16 @@
 ---
-title: Declarative copilot schema for Microsoft Copilot for Microsoft 365
-description: Learn about the properties you can use in a manifest file for declarative copilot in Microsoft Copilot for Microsoft 365
+title: Declarative agent schema for Microsoft 365 Copilot
+description: Learn about the properties you can use in a manifest file for declarative agent in Microsoft 365 Copilot
 author: rimisra2
 ms.author: rimisra
 ms.topic: reference
 ---
 
-# Declarative copilot schema for Microsoft Copilot for Microsoft 365
+# Declarative agent schema for Microsoft 365 Copilot
 
-This article describes a specification that establishes the declarative copilot manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems.
+This article describes a specification that establishes the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems.
 
-Declarative copilots are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative copilot manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
+Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
 ## Conventions
 
@@ -30,37 +30,37 @@ JSON objects defined in this document support only the described properties. Unr
 
 Localizable strings can use a localization key instead of a literal value. The syntax is `[[key_name]]`, where `key_name` is the key name in the `localizationKeys` property in your localization files. For details on localization, see [Localizing your extension](extensions-are-apps.md#localizing-your-extension).
 
-## Declarative copilot manifest object
+## Declarative agent manifest object
 
 The root of the manifest document is a JSON object that covers required fields, capabilities, conversation starters, and actions.
 
-The declarative copilot manifest object contains the following properties.
+The declarative agent manifest object contains the following properties.
 
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
 | `id`                    | String                                                                | Optional.   |
-| `name`                  | String                                                                | Required. Localizable. The name of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
-| `description`           | String                                                                | Required. Localizable. The description of the declarative copilot. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
-| `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative copilot should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
-| `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative copilot. There MUST NOT be more than five objects in the array. |
-| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative copilot can answer. There MUST NOT be more than six objects in the array. |
-| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative copilot. |
+| `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
+| `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
+| `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
+| `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. There MUST NOT be more than five objects in the array. |
+| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than six objects in the array. |
+| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
 
-### Example of declarative copilot manifest object
+### Example of declarative agent manifest object
 
-The following JSON is an example of required fields within a declarative copilot manifest.
+The following JSON is an example of required fields within a declarative agent manifest.
 
 ```json
 {
-  "name" : "Repairs copilot",
-  "description": "This declarative copilot is meant to help track any tickets and repairs",
-  "instructions": "This declarative copilot needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
+  "name" : "Repairs agent",
+  "description": "This declarative agent is meant to help track any tickets and repairs",
+  "instructions": "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
 }
 ```
 
 ### Capabilities object
 
-The capabilities object is the base type of objects in the `capabilities` property in the declarative copilot manifest object. The possible object types are:
+The capabilities object is the base type of objects in the `capabilities` property in the declarative agent manifest object. The possible object types are:
 
 - [Web search object](#web-search-object)
 - [OneDrive and SharePoint object](#onedrive-and-sharepoint-object)
@@ -104,7 +104,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 
 #### Web search object
 
-Indicates that the declarative copilot can search the web for grounding information.
+Indicates that the declarative agent can search the web for grounding information.
 
 The web search object contains the following properties.
 
@@ -114,7 +114,7 @@ The web search object contains the following properties.
 
 #### OneDrive and SharePoint object
 
-Indicates that the declarative copilot can search a user's SharePoint and OneDrive for grounding information.
+Indicates that the declarative agent can search a user's SharePoint and OneDrive for grounding information.
 
 The OneDrive and SharePoint object contains the following properties.
 
@@ -136,7 +136,7 @@ The Items by SharePoint IDs object contains the following properties.
 | `unique_id` | String | Optional. A unique GUID identifier used to represent a specific entity or resource. |
 
 > [!TIP]
-> For instructions on getting the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative copilot manifest](declarative-copilot-capabilities-ids.md).
+> For instructions on getting the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
 
 ##### Items by URL object
 
@@ -148,14 +148,14 @@ The Items by URL object contains the following properties.
 
 #### Microsoft Graph connectors object
 
-Indicates that the declarative copilot can search selected Microsoft Graph connectors for grounding information.
+Indicates that the declarative agent can search selected Microsoft Graph connectors for grounding information.
 
 The Microsoft Graph connectors object contains the following properties.
 
 | Property      | Type                                             | Description |
 | ------------- | ------------------------------------------------ | ----------- |
 | `name`        | String                                           | Required. Must be set to `GraphConnectors`. |
-| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Microsoft Graph connectors available to the declarative copilot. |
+| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Microsoft Graph connectors available to the declarative agent. |
 
 ##### Connection object
 
@@ -168,17 +168,17 @@ The connection object contains the following properties.
 | `connection_id` | String | Required. The unique identifier of the Microsoft Graph connector. |
 
 > [!TIP]
-> For instructions on getting the unique identifier for a Microsoft Graph connector, see [Retrieving capabilities IDs for declarative copilot manifest](declarative-copilot-capabilities-ids.md).
+> For instructions on getting the unique identifier for a Microsoft Graph connector, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
 
 ### Conversation starters object
 
-The conversation starters object is optional in the manifest. It contains hints that are displayed to the user to demonstrate how they can get started using the declarative copilot.
+The conversation starters object is optional in the manifest. It contains hints that are displayed to the user to demonstrate how they can get started using the declarative agent.
 
 The conversation starter object contains the following properties:
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `text`   | String | Required. Localizable. A suggestion that the user can use to obtain the desired result from the declarative copilot. It MUST contain at least one nonwhitespace character. |
+| `text`   | String | Required. Localizable. A suggestion that the user can use to obtain the desired result from the declarative agent. It MUST contain at least one nonwhitespace character. |
 | `title`  | String | Optional. Localizable. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
 
 ### Conversation starters object example
@@ -218,8 +218,8 @@ The action object contains the following properties.
 }
 ```
 
-## Declarative copilot Manifest Example
+## Declarative agent manifest example
 
-Here's an example of a declarative copilot manifest file that uses most of the manifest properties described in this article.
+Here's an example of a declarative agent manifest file that uses most of the manifest properties described in this article.
 
-[!INCLUDE [Sample declarative copilot manifest for Repairs declarative copilot](includes/dc-manifest-json.md)]
+[!INCLUDE [Sample declarative agent manifest for Repairs declarative agent](includes/declarative-agent-manifest-json.md)]
