@@ -174,7 +174,7 @@ Please note the following:
 
 The declarative copilot manifest includes instructions for Copilot responses, conversation starter sample prompts, data sources used for grounding, and a list of actions (API plugin skills) the copilot is able to perform.
 
-To learn more, see [Declarative copilot manifest schema for Microsoft 365 Copilot](declarative-copilot-manifest.md).
+To learn more, see [Declarative copilot manifest schema for Microsoft 365 Copilot](declarative-agent-manifest.md).
 
 ## API plugin manifest
 
@@ -184,7 +184,7 @@ To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-pl
 
 ## Localizing your extension
 
-The way you localize a Copilot extension is slightly different than how you localize other capabilities (such as tabs, bots, and message extensions) in the app manifest. 
+The way you localize a Copilot extension is slightly different than how you localize other capabilities (such as tabs, bots, and message extensions) in the app manifest.
 
 You'll use the same localization file (per language) for both classic Teams app capabilities and Copilot extensions. However, while all other app manifest fields are referenced using JSONPath expressions in the language file(s), Copilot extension-related fields are simply referenced using dictionary keys. Unlike classic Teams app capabilities, which use default language strings in the app manifest itself, localized Copilot extensions require a language file for the default language as well as for each additional language.
 
@@ -209,7 +209,7 @@ Here's an example declarative copilot manifest with tokenized values for its nam
 
 ### 2. Add `localizationInfo` to your app manifest
 
-Add the `localizationInfo` section to your app manifest, with [language tags](/globalization/locale/standard-locale-names) and relative paths to each supported language file within your app package. 
+Add the `localizationInfo` section to your app manifest, with [language tags](/globalization/locale/standard-locale-names) and relative paths to each supported language file within your app package.
 
 If your extension supports more than one language, then you must specify a standalone language file for every supported language, *including your default language*.
 
@@ -279,7 +279,7 @@ The following fields are localizable within the declarative copilot manifest:
 | `description`| The description of the declarative copilot. Must contain at least one non-whitespace character.| 1,000 characters | ✔️|
 | `conversation_starters`| A list (array) of examples of questions that the declarative copilot can answer, where each example is represented by an object with `title` and `text`, both of which are localizable.| 6 objects in the array||
 
-To learn more, see [Declarative copilot manifest reference](./declarative-copilot-manifest.md).
+To learn more, see [Declarative copilot manifest reference](./declarative-agent-manifest.md).
 
 #### Localizable fields in API plugin manifest
 

@@ -20,5 +20,11 @@
       "redirect_url": "/microsoft-365-copilot/extensibility/overview-custom-engine-agent",
       "redirect_document_id": true
     }
+    ,
+    {
+      "source_path_from_root": "/docs/build-or-extend.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/decision-guide",
+      "redirect_document_id": false
+    }
   ]
 }
