@@ -33,4 +33,4 @@ For each capability that is supported in Declarative agents, we have conducted s
 
 In Copilot Studio, Declarative agents are only supported for use in English for public preview.
 
-For end users, there are user disclaimers with terms and privacy commitments on Declarative agent's homepage. For line-of-business developers and IT admins, Microsoft Admin Center is where to manage Copilot extensibility solutions. For detailed information about how Copilot for Microsoft 365 uses, protects, and shares organizational information to power extensibility, see [Data, Privacy, and Security for Copilot for Microsoft 365.](/microsoft-365/microsoft-365-copilot-privacy).
+For end users, there are user disclaimers with terms and privacy commitments on Declarative agent's homepage. For line-of-business developers and IT admins, Microsoft Admin Center is where to manage Copilot extensibility solutions. For detailed information about how Copilot for Microsoft 365 uses, protects, and shares organizational information to power extensibility, see [Data, Privacy, and Security for Copilot for Microsoft 365.](/copilot/microsoft-365/microsoft-365-copilot-privacy).
