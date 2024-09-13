@@ -25,19 +25,24 @@ No sure which one to build? [Your extensibility options for Microsoft 365 Copilo
 
 **Custom engine agents** and **Copilot Studio custom agents** share a similar characteristic—they don't use the Microsoft Copilot foundation model or orchestration. If you need more advanced customization around orchestration, or if your users don't use Microsoft 365 Copilot, consider the custom agent path. You can build this through several alternatives, such as the Teams AI library or Azure OpenAI for custom engine agents, or Copilot Studio for building custom agents.
 
-#### What is the difference between Actions and plugins?
+#### What is the difference between actions and plugins?
 
-In general, *Actions* are the functionality that provides skills to Copilot via Copilot agents. Developers can build Actions from Copilot connectors (plugins and Power Platform connectors), conversational, prompt, or flow. With Actions developers can light up Copilot agents that work *in context* of Microsoft 365 Copilot or they can also be used to provide skills to Copilot agents that work in immersive experiences, such as declarative agents.
+While the terms "actions" and "plugins" are sometimes used interchangeably, however, technically an action refers to a single API call from a plugin (*e.g.*, "Close ticket #1234"), whereas a plugin encompasses a collection of functions (*e.g.*, close, create, resolve, etc.).
 
-While the terms "actions" and "plugins" are sometimes used interchangeably, however, technically an Action refers to a single API call from a plugin (*e.g.*, "Close ticket #1234"), whereas a plugin encompasses a collection of functions (*e.g.*, close, create, resolve, etc.).
+In general, actions are the functionality that provides skills to Copilot within Declarative agents. Developers can use Copilot Studio to build Actions from Power Platform connectors, or they can create conversational, prompt, or flow connectors using the Copilot Studio design canvas. Developers can use Teams Toolkit, or any technology stack that supports standard REST APIs, to build actions as API Plugins.
+With actions you can light up Copilot agents that work *in-context* of Microsoft 365 Copilot, or they can also be used to provide skills to Copilot agents that work in *immersive* experiences, such as declarative agents.
 
-#### What is the equivalent of API-based plugins in Copilot Studio?
+#### What is the difference between Power Platform Plugins and API Connectors
+ 
+Both Power Platform connectors and API Plugins allow calling of a standard REST API given an Open AI definition (Swagger) that describes it. However Power Platform connectors are used from Power Platform, which includes Copilot Studio, and API Plugins are defined in a Microsoft Teams/Microsoft 365 application package along with declarative agents.
+
+#### What is the equivalent of API plugins in Copilot Studio?
 
 The orchestrator and connector mechanisms in Copilot Studio differ from API-based plugins. To connect an API with Copilot Studio, you need to create a custom connector that uses OpenAPI V2 swagger and add an AI description. This approach allows you to integrate various APIs seamlessly and apply the AI capabilities of Copilot Studio for enhanced functionality.
 
 #### What are the differences between Graph connectors and Power Platform connectors?
 
-**Power Graph connectors** enable bringing additional information periodically to the Microsoft Graph making it discoverable across various Microsoft 365 experiences including Copilot for Microsoft 365. The connection is synchronous to data-providing services, replicating data into Microsoft 365 for use in Copilot and other scenarios. 
+**Graph connectors** enable bringing additional information to the Microsoft Graph making it discoverable across various Microsoft 365 experiences including Copilot for Microsoft 365. The connection is synchronous to data-providing services, replicating data into Microsoft 365 for use in Copilot and other scenarios. 
 
 In contrast, **Power Platform connectors** enable agents to interact with other systems to retrieve information in near real-time (*e.g.*, "Get ticket #1234") also establish read/write actions (*e.g.*, "Create a ticket").
 
@@ -83,9 +88,9 @@ Unfortunately, the Copilot license doesn't apply to the Microsoft 365 developmen
 
 If you're already a Visual Studio Code user, Teams Toolkit runs on VS Code with GitHub integration! Also, you can take advantage of the features like, CI/CD, and multitenants support.
 
-#### Do I need a connector to connect an OpenAPI?
+#### What do I need to connect to an API?
 
-No, Teams Toolkit lets you directly access to OpenAPI without any intermediate layer. So, if you already have an API, create an OpenAPI specification then make it into a plugin fairly easily.
+Unlike the low-code solution, where you use Power Platform connector to connect an API, Teams Toolkit lets you build an application package so Copilot can access a REST API without any intermediate layer; all you need to do is include an OpenAPI definition. It's important to add detailed descriptions to the OpenAPI definition so Copilot knows how to use the API; simplifying very large or complex API's may be necessary in some cases.
 
 ## Azure AI questions
 

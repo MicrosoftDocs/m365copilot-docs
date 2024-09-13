@@ -8,7 +8,7 @@ ms.date: 09/16/2024
 ms.custom: [copilot-learning-hub]
 ---
 
-# Extend Microsoft 365 Copilot
+# Microsoft 365 Copilot extensibility
 
 **Microsoft 365 Copilot** is an AI-powered productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, grounding with Microsoft Graph data.
 
@@ -34,7 +34,7 @@ Copilot agents can be built via a declarative or custom engine approach.
 
 **Declarative agents** are essentially a collection of *custom knowledge* (via instructions and grounding data), and *custom skills* (including Actions, Triggers, and Workflows) hosted on top of Copilot orchestrator and foundation models powering a conversational experience. These agents can be integrated within Microsoft 365 and can utilize Copilot connectors to light up advanced functionality.​
 
-On the other hand, **custom engine agents** are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs with your own stack. These include agents built with Copilot Studio, Teams AI library, Azure AI, etc. Custom agents work as standalone Teams apps, and in the future, as Copilot agents.
+On the other hand, **custom engine agents** are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs with your own stack. These include agents built with Copilot Studio, Teams AI library, Azure AI, etc. Custom engine agents work as standalone Teams apps, and in the future as Copilot agents.
 
 :::image type="content" source="assets/images/m365-extensibility-types.png" alt-text="This illustration shows types of extensibility options, Graph connector, plugins, and declarative agents" border="false" lightbox="assets/images/m365-extensibility-types.png":::
 
@@ -42,7 +42,7 @@ To find out which agents work the best for you, learn the differences at [Your a
 
 ## Types of extensibility options
 
-As you just learned, **declarative agents** comprise a collection of custom knowledge and custom skills. You can seamlessly integrate it within Microsoft 365 using Copilot connectors to unlock advanced functionality.
+As you just learned, **declarative agents** comprise a collection of custom knowledge and custom skills. You can seamlessly integrate it within Microsoft 365 using Copilot connectors to call standard REST APIs to integrate with other applications or add your own functionality.
 
 Declarative agents have:
 
@@ -54,7 +54,7 @@ Declarative agents have:
 
 ### Copilot connectors
 
-Copilot connectors are building blocks of Copilot agents. They allow developers and IT admins to apply Custom Knowledge and to build Custom Skills and to Microsoft Copilot’s out-of-box features via Copilot agents. ​
+Copilot connectors allow developers and IT admins to apply Custom Knowledge and to build Custom Skills and to Microsoft Copilot’s out-of-box features via Copilot agents. ​
 
 There are two types of connectors—Microsoft **Graph connectors**, and **Power Platform connectors**.
 
@@ -90,7 +90,7 @@ There are a few different ways to create plugins—**API plugins**, **Teams Mess
 
 📖 Learn more:
 - Make an API into a Copilot plugin with [API plugins](overview-api-plugins.md)
-- Teams [Message extensions](overview-message-extension-bot.md) are now work as plugins
+- Teams [Message extensions](overview-message-extension-bot.md) now work as standalone plugins
 - Create [Copilot Studio Actions](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), if you prefer no-code/low-code
 
 [!INCLUDE [disclaimer](includes/api-plugins-declarative-agents-only.md)]
@@ -103,6 +103,9 @@ When you build Copilot agents, you can tailor the user experience by providing *
 - **Immersive experience**: This allows users to chat directly with the agent, providing an embedded experience
 
 :::image type="content" source="assets/images/copilot-experiences.png" alt-text="This illustration shows two distinct copilot user experiences" border="false":::
+
+> [!NOTE]
+> Business Chat (BizChat) is the full featured and secure chat experience available to Microsoft 365 Copilot. BizChat is available on the web via the Microsoft 365 App, Teams, and Outlook.​
 
 To build **in-context experiences**, you can use plugins and declarative agents. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems. ​
 
