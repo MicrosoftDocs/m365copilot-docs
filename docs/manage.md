@@ -80,7 +80,7 @@ Tenant admins can also enable or disable different types of actions from working
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-Refer to [Copilot agents](#copilot-agents) for details on managing Copilot agents with API plugins.
+Refer to [Agents](#agents) for details on managing Copilot agents with API plugins.
 
 ## Graph connectors
 

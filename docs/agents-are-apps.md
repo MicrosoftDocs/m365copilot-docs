@@ -162,7 +162,7 @@ Here's an example that references a declarative agent:
 
 The definition of an API plugin is referenced from the declarative agent definition.
 
-:::image type="content" source="assets/images/app-manifest-agent.png" alt-text="Diagram showing app manifest referencing a declarative agent manifest and API plugin manifest. The declarative agent manifest references another API plugin manifest" border="false":::
+:::image type="content" source="assets/images/app-manifest-agents.png" alt-text="Diagram showing app manifest referencing a declarative agent manifest and API plugin manifest. The declarative agent manifest references another API plugin manifest" border="false":::
 
 Please note the following:
 

@@ -21,7 +21,7 @@ Declarative agents can be created and interacted with privately or published to 
 
 ## What are declarative agents intended uses?
 
-To allow users in the enterprise to explore user-published declarative agents and access those declarative agents within their tenants. Read more about how you can tailor your declarative agents here: [Declarative agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-declarative-agent#tailor-declarative-agents-for-your-scenario).
+To allow users in the enterprise to explore user-published declarative agents and access those declarative agents within their tenants. Read more about how you can tailor your declarative agents here: [Declarative agents for Microsoft 365](./overview-declarative-agent.md#tailor-declarative-agents-for-your-scenario).
 
 ## How were declarative agents evaluated? What metrics are used to measure performance?
 
