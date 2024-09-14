@@ -57,4 +57,4 @@ Declarative agent's app package and its core elements mentioned can be created w
 - [Extensibility options for Microsoft Copilot for Microsoft 365](decision-guide.md)
 - [Microsoft Copilot in the Microsoft 365 ecosystem](ecosystem.md)
 - [Microsoft Graph Connectors for Microsoft Copilot for Microsoft 365](overview-graph-connector.md)
-- [Extensions are apps for Microsoft 365](extensions-are-apps.md)
+- [Copilot agents are apps for Microsoft 365](agents-are-apps.md)

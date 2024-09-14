@@ -1,5 +1,5 @@
 ---
-title: Microsoft Copilot in the Microsoft 365 ecosystem
+title: Copilot in the Microsoft 365 ecosystem
 description: A plugin or connector written for Copilot will run across the Microsoft 365 ecosystem. Learn how to leverage the Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
 author: erikadoyle
 ms.author: edoyle
@@ -7,7 +7,7 @@ ms.topic: overview
 ms.date: 9/16/2024
 ---
 
-# Microsoft Copilot in the Microsoft 365 ecosystem
+# Copilot in the Microsoft 365 ecosystem
 
 When you customize Microsoft 365 Copilot with agents and extend its skills with plugins and knowledge with connectors, you're leveraging the entire Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
 
@@ -19,13 +19,13 @@ As part of the broader Microsoft 365 ecosystem, the value of your agents, plugin
 
 - **Business decision makers and IT admins** can *confidently adopt and centrally manage* your enterprise-grade technology, backed by the security and trust of Microsoft's commitment to Responsible AI.
 
-The agents, plugins, and connectors you build for Copilot are part of the larger Copilot for Microsoft 365 system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through the different native components of, and extensions to, the Copilot system.
+The agents, plugins, and connectors you build for Copilot are part of the larger Microsoft 365 Copilot system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through different native components and agents of the Copilot system.
 
-:::image type="content" source="assets/images/copilot-architecture.png" alt-text="Diagram that shows the flow of data across components of Copilot and the Microsoft 365 ecosystem" lightbox="assets/images/copilot-architecture.png":::
+:::image type="content" source="assets/images/copilot-architecture.png" alt-text="Diagram that shows the flow of data across components of Microsoft 365 Copilot ecosystem" lightbox="assets/images/copilot-architecture.png":::
 
 *The Copilot system uses data from a plugin in two stages: (1) matching the users's prompt to the most relevant skill and parameters, and (2) determining which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response back to the user.*
 
-You can build extend, enrich, and customize Copilot for the unique way your customers work. And as part of the broader Microsoft 365 ecosystem, your Copilot extensions benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and a host of development tools and support.
+You can build extend, enrich, and customize Copilot for the unique way your customers work. And as part of the broader Microsoft 365 ecosystem, your Copilot agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and a host of development tools and support.
 
 This article will walk you through the resources of the Microsoft 365 ecosystem available to you as a developer of Copilot extensibility solutions.
 
@@ -39,9 +39,9 @@ There are over 350 million daily active users across applications in the Microso
 
 |Copilot extensibility type|Microsoft 365 product availability|Learn more|
 |----------|-----------|------------|
-|[Teams message extension plugins](./overview-message-extension-bot.md)|Copilot for Microsoft 365, Teams, Outlook| [Extensions as Microsoft 365 apps](./extensions-are-apps.md) |
-|[Power Platform connector plugins](/connectors/connectors)|Copilot for Microsoft 365, Power Automate, Power Apps, Azure Logic Apps| [Connectors overview](/connectors/connectors)|
-|[Microsoft Graph connectors](./overview-graph-connector.md)|Copilot for Microsoft 365, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
+|[Teams message extension plugins](./overview-message-extension-bot.md)|Microsoft 365 Copilot, Teams, Outlook| [Copilot agents are Microsoft 365 apps](./agents-are-apps.md) |
+|[Power Platform connector plugins](/connectors/connectors)|Microsoft 365 Copilot, Power Automate, Power Apps, Azure Logic Apps| [Connectors overview](/connectors/connectors)|
+|[Microsoft Graph connectors](./overview-graph-connector.md)|Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
 
 Thanks to centralized publishing and management resources, administrators can easily share and confidently manage your Copilot extensibility solutions, ensuring they benefit the widest possible audience.
 
@@ -51,9 +51,9 @@ Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other M
 
 ### Unified app model
 
-The Microsoft 365 ecosystem provides a unified app model for distributing and managing Copilot extensions, Teams apps, Outlook Add-ins, SharePoint Framework solutions, and more. The app package for Microsoft 365 is a zip file that contains one or more configuration (manifest) files and your app icons.
+The Microsoft 365 ecosystem provides a unified app model for distributing and managing Copilot agents, Teams apps, Outlook Add-ins, SharePoint Framework solutions, and more. The app package for Microsoft 365 is a zip file that contains one or more configuration (manifest) files and your app icons.
 
-To learn more, see [Copilot extensions are apps for Microsoft 365](extensions-are-apps.md).
+To learn more, see [Copilot agents are apps for Microsoft 365](agents-are-apps.md).
 
 ### Microsoft 365 and Copilot program for Partner Center
 
@@ -65,11 +65,11 @@ To learn more, see [Publish agents, plugins, and connectors for Microsoft 365 Co
 
 ### Microsoft admin center
 
-For line-of-business developers and IT admins, Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)) is your one stop to publish custom extensions and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions. 
+For line-of-business developers and IT admins, Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)) is your one stop to publish Copilot agents and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions. 
 
-For details on deploying a custom extension to your organization, see [Publish plugins and connectors for Copilot](./publish.md).
+For details on deploying agents, plugins, and Graph connectors to your organization, see [Publish agents for Copilot](./publish.md).
 
-To learn more about managing Copilot extensions, see [Manage extensions for Copilot for Microsoft 365](manage.md).
+To learn more about managing Copilot agents, see [Manage extensibility for Microsoft 365 Copilot](manage.md).
 
 
 ## Comprehensive tools and support
@@ -78,7 +78,7 @@ Microsoft 365 provides a rich set of developer resources for extending Microsoft
 
 ### Teams Toolkit
 
-[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)  is the *Pro-code* option for building and debugging Copilot agents, plugins, and custom engine copilots. It provides support for all major Microsoft 365 platform extensibility surfaces, including Copilot for Microsoft 365 extensions, tabs, bots, message extensions, and Outlook Add-ins. Teams Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
+[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)  is the *Pro-code* option for building and debugging Copilot agents, plugins, and custom engine copilots. It provides support for all major Microsoft 365 platform extensibility surfaces, including Copilot agents, tabs, bots, message extensions, and Outlook Add-ins. Teams Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
 
 
 ### Copilot Studio
@@ -91,6 +91,6 @@ Microsoft 365 Copilot [developer mode](./debugging-copilot-plugin.md) provides a
 
 ## Microsoft security, trust, and commitment to Responsible AI
 
-Copilot for Microsoft 365 is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary.  Copilot for Microsoft 365 presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more info, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
+Microsoft 365 Copilot is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary.  Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more info, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
 
-To learn more as a developer of Copilot extensibility solutions, see [Data, Privacy, and Security considerations of extending Copilot for Microsoft 365](./data-privacy-security.md)
+To learn more as a developer of Copilot extensibility solutions, see [Data, Privacy, and Security considerations of extending Microsoft 365 Copilot](./data-privacy-security.md)
