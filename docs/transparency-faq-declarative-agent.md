@@ -23,7 +23,7 @@ Declarative agents provide a custom chat experience without a need to write impe
 
 To provide a custom chat experience using the power of Microsoft 365 Copilot. Users are familiar with the idea of asking an expert; equipped with appropriate instructions, connectors, and actions, declarative agents can become such an expert with a minimum of development effort.
 
-Read more about how you can tailor your declarative agents here: [Declarative agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-declarative-agent#tailor-declarative-agents-for-your-scenario).
+Read more about how you can tailor your declarative agents here: [Declarative agents for Microsoft 365](overview-declarative-agent.md#tailor-declarative-agents-for-your-scenario).
 
 ## How were declarative agents evaluated? What metrics are used to measure performance?
 

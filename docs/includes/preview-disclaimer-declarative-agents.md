@@ -7,4 +7,4 @@ ms.topic: include
 
 > [!IMPORTANT]
 >
-> Declarative agents for Microsoft 365 are currently in a **generally available** phase. However, access will be staged and may not be available to all users immediately. Full availability is expected at a later date.
+> Copilot agents are in a staged GA, starting September 16th, 2024 and and rolling out to all customers by the end of October.
