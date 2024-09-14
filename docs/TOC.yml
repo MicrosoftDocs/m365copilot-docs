@@ -8,8 +8,8 @@
     href: orchestrator.md
   - name: What makes a good plugin?
     href: plugin-guidelines.md
-  - name: Extensions are apps for Microsoft 365
-    href: extensions-are-apps.md
+  - name: Agents are apps for Microsoft 365
+    href: agents-are-apps.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 - name: Extensibility guide for ISVs
@@ -156,7 +156,7 @@
   items:
   - name: Overview
     href: manage.md
-  - name: Manage extensions in Microsoft 365 admin center
+  - name: Manage Copilot agents in Microsoft 365 admin center
     href: /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context
 - name: FAQ
   href: faq.md
