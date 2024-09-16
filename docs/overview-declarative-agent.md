@@ -49,8 +49,8 @@ Declarative agent's app package and its core elements mentioned can be created w
 | **Start with** | **Summary** |
 |:------------|:------------|
 | [Teams Toolkit](./build-declarative-agents.md) | Build declarative agents using Teams Toolkit and Teams Toolkit CLI. |
-| Copilot Studio | Build declarative agents using the builder integrated in Copilot Studio. |
-| SharePoint | Build declarative agents using grounding data from SharePoint files. |
+| [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) | Build declarative agents using the builder integrated in Copilot Studio. |
+| [SharePoint](./build-declarative-agents.md#add-onedrive-and-sharepoint-knowledge) | Build declarative agents using grounding data from SharePoint files. |
 
 ## See also
 
