@@ -53,7 +53,7 @@ Open a PowerShell terminal and run the following commands.
 ```powershell
 [Environment]::SetEnvironmentVariable("TEAMSFX_DECLARATIVE_COPILOT", 'true', "User")
 [Environment]::SetEnvironmentVariable("KIOTA_CONFIG_PREVIEW", "true", "User")
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 ```
 
 #### [Linux](#tab/linux)
@@ -95,7 +95,7 @@ For more details see [Install Teams Toolkit CLI](/microsoftteams/platform/toolki
 
 ### Install Teams Toolkit Visual Studio Code extension
 
-Follow the steps in [Install Teams Toolkit Visual Studio Code extension](microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-a-prerelease-version) to install the pre-release version.
+Follow the steps in [Install Teams Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-a-prerelease-version) to install the pre-release version.
 
 ### Install Kiota
 
@@ -253,7 +253,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
     ████████████████████  100% | [4/4] Provision  (✔) Done.
     4/4 actions in provision stage executed successfully.
     4/4 actions in provision stage executed successfully.
-      Created environment file (secret) at ~/src/demos/ttk-declarative-copilot/env/.env.dev.user 
+      Created environment file (secret) at ~/src/demos/ttk-declarative-copilot/env/.env.dev.user
     ```
 
 ---
@@ -261,7 +261,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 * Navigate to the Copilot application with the URL [https://microsoft365.com/chat](https://microsoft365.com/chat)
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-welcome.png" alt-text="Screenshot shows the initial screen from Copilot for Microsoft 365.":::
-  
+
 * Next to the **New Chat** button, select the conversation drawer icon.
 * Select the declarative copilot **Teams toolkit declarative copilot**
 
@@ -294,7 +294,7 @@ To add conversation starters to your declarative copilot, follow these steps:
     ```json
     {
         "conversation_starters": [
-            { 
+            {
                 "title": "Getting Started",
                 "text": "How can I get started with Teams Toolkit?"
             },
@@ -374,7 +374,7 @@ To add OneDrive and SharePoint knowledge to your declarative copilot, follow the
             {
                 "name": "WebSearch"
             },
-            { 
+            {
                 "name": "OneDriveAndSharePoint",
                 "items_by_url": [
                     {
@@ -424,7 +424,7 @@ To add Graph Connectors knowledge to your declarative copilot, follow these step
             {
                 "name": "WebSearch"
             },
-            { 
+            {
                 "name": "OneDriveAndSharePoint",
                 "items_by_url": [
                     {
@@ -498,7 +498,7 @@ To add a plugin to your declarative copilot, follow these steps:
           OpenAPI warning: #/paths/~1repairs/patch/requestBody/content/application~1json/schema/properties/image - The format uri is not supported by Kiota and the string type will be used.
     Generation completed successfully
     Client base url set to https://piercerepairsapi.azurewebsites.net
-    
+
     Hint: use the --include-path and --exclude-path options with glob patterns to filter the paths generated.
     Example: kiota plugin add --include-path "**/foo" -a "~/src/demos/ttk-declarative-copilot/.kiota/apimanifest.json#RepairsHub"
     ```
@@ -512,7 +512,7 @@ To add a plugin to your declarative copilot, follow these steps:
     ```json
     {
         "actions": [
-            { 
+            {
                 "id": "repairsPlugin",
                 "file": "repairshub-apiplugin.json"
             }
