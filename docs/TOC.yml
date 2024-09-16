@@ -150,7 +150,11 @@
   - name: Debug with developer mode in Copilot
     href: debugging-copilot-plugin.md
 - name: Publish
-  href: publish.md
+  items:
+  - name: Overview 
+    href: publish.md
+  - name: Validation guidelines for Copilot agents
+    href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
 - name: Manage
   expanded: false
   items:
