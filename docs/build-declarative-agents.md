@@ -1,48 +1,48 @@
 ---
-title: Create declarative copilots using Teams Toolkit
+title: Create declarative agents using Teams Toolkit
 author: slevert
-description: Learn how to build a declarative copilot for Copilot for Microsoft 365 using Teams Toolkit.
+description: Learn how to build a declarative agent for Microsoft 365 Copilot using Teams Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: slevert
 ms.date: 05/10/2024
 ---
 <!-- markdownlint-disable MD025 MD051 -->
-# Build a declarative copilot for Copilot for Microsoft 365
+# Build a declarative agent for Microsoft 365 Copilot
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer-declarative-agents.md)]
 
 > [!NOTE]
 >
-> * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
+> * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
->   * An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a Copilot for Microsoft 365 license.
+>   * An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a Microsoft 365 Copilot license.
 
-## What is a declarative copilot?
+## What is a declarative agent?
 
-:::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative copilot in Copilot for Microsoft 365.":::
+:::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
 
-To learn about what is a declarative copilot, see [Declarative copilots for Microsoft 365 overview](overview-declarative-agent.md).
+For an overview on declarative agents, see [Declarative agents for Microsoft 365 Copilot](overview-declarative-agent.md).
 
 [!INCLUDE [security-note](includes/security-on-das-note.md)]
 
 ## Prerequisites
 
-Before you get started, ensure that you're familiar with the following standards and guidelines for declarative copilots for Copilot for Microsoft 365:
+Before you get started, ensure that you're familiar with the following standards and guidelines for declarative agents for Microsoft 365 Copilot:
 
 * Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
 
-## Create a declarative copilot
+## Create a declarative agent
 
-Let's create a declarative copilot where you can provide instructions, grounding in Microsoft 365 data, and integration with existing APIs via plugins.
+Let's create a declarative agent where you can provide instructions, grounding in Microsoft 365 data, and integration with existing APIs via plugins.
 
-Before you get started, ensure that you install the following tools to build and deploy your declarative copilot:
+Before you get started, ensure that you install the following tools to build and deploy your declarative agent:
 
 ### Environment variables
 
 > [!NOTE]
 >
-> This step is temporary until declarative copilots are available publicly.
+> This step is temporary until declarative agents are available publicly.
 
 Set the environment variable **TEAMSFX_DECLARATIVE_COPILOT** and **KIOTA_CONFIG_PREVIEW** to **true**.
 
@@ -111,7 +111,7 @@ For more details see [Install Kiota](/openapi/kiota/install#install-as-net-tool)
 
 ### [Teams Toolkit](#tab/ttk)
 
-To create a declarative copilot using Teams Toolkit, follow these steps:
+To create a declarative agent using Teams Toolkit, follow these steps:
 
 * Open **Visual Studio Code**.
 * Select **Teams Toolkit > Create a New App**.
@@ -124,13 +124,13 @@ To create a declarative copilot using Teams Toolkit, follow these steps:
 
 * Select **Declarative copilot**.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-dc.png" alt-text="Screenshot shows the type of Copilot extension to select.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-dc.png" alt-text="Screenshot shows the type of Copilot agent to select.":::
 
-* Select **No plugin** to create a basic declarative copilot.
+* Select **No plugin** to create a basic declarative agent.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-no-plugin.png" alt-text="Screenshot shows the type of declarative copilot to select.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-no-plugin.png" alt-text="Screenshot shows the type of declarative agent to select.":::
 
-* Select **Default folder** to store your project root folder in the default location..
+* Select **Default folder** to store your project root folder in the default location.
 
     :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-select-default-folder.png" alt-text="Screenshot shows the folder to select.":::
 
@@ -148,7 +148,7 @@ To create a declarative copilot using Teams Toolkit, follow these steps:
 
 ### [CLI](#tab/cli)
 
-To create a declarative copilot using Teams Toolkit CLI, follow these steps:
+To create a declarative agent using Teams Toolkit CLI, follow these steps:
 
 * Go to **Command Prompt**.
 * Enter **`teamsapp new`** in the terminal and select **Declarative copilot**. Use the arrow keys to switch between options.
@@ -216,7 +216,7 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
     cd ttk-declarative-copilot
     ```
 
-* Enter the following command to install your app in Copilot for Microsoft 365.
+* Enter the following command to install your app in Microsoft 365 Copilot.
 
     ```bash
     teamsapp provision --env dev
@@ -260,20 +260,20 @@ To create a declarative copilot using Teams Toolkit CLI, follow these steps:
 
 * Navigate to the Copilot application with the URL [https://microsoft365.com/chat](https://microsoft365.com/chat)
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-welcome.png" alt-text="Screenshot shows the initial screen from Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-welcome.png" alt-text="Screenshot shows the initial screen from Microsoft 365 Copilot.":::
 
 * Next to the **New Chat** button, select the conversation drawer icon.
-* Select the declarative copilot **Teams toolkit declarative copilot**
+* Select the declarative agent **Teams toolkit declarative copilot**
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc.png" alt-text="Screenshot shows the landing screen for the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc.png" alt-text="Screenshot shows the landing screen for the declarative agent in Microsoft 365 Copilot.":::
 
-* Enter a question for your declarative copilot and ensure that it replies with "Thanks for using Teams Toolkit to create your declarative copilot!"
+* Enter a question for your declarative agent and ensure that it replies with "Thanks for using Teams Toolkit to create your declarative copilot!"
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
 
 ## Add conversation starters
 
-To add conversation starters to your declarative copilot, follow these steps:
+To add conversation starters to your declarative agent, follow these steps:
 
 ### [Teams Toolkit](#tab/ttk)
 
@@ -322,13 +322,13 @@ To add conversation starters to your declarative copilot, follow these steps:
 
 ---
 
-* The updated conversation starters will be available in your declarative copilot after you refresh the page.
+* The updated conversation starters will be available in your declarative agent after you refresh the page.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-conversation-starters.png" alt-text="Screenshot shows the conversations starters from the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-conversation-starters.png" alt-text="Screenshot shows the conversations starters from the declarative agent in Microsoft 365 Copilot.":::
 
 ## Add web content
 
-To add web content using Bing to your declarative copilot, follow these steps:
+To add web content using Bing to your agent, follow these steps:
 
 * Open the `appPackage/declarativeCopilot.json` file and add the `capabilities` array with the following content:
 
@@ -358,13 +358,13 @@ To add web content using Bing to your declarative copilot, follow these steps:
 
 ---
 
-* The declarative copilot will have access to web content to generate its answers after you reload the page.
+* The declarative agent will have access to web content to generate its answers after you reload the page.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-web-search.png" alt-text="Screenshot shows the web content from the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-web-search.png" alt-text="Screenshot shows the web content from the declarative agent in Microsoft 365 Copilot.":::
 
 ## Add OneDrive and SharePoint knowledge
 
-To add OneDrive and SharePoint knowledge to your declarative copilot, follow these steps:
+To add OneDrive and SharePoint knowledge to your declarative agent, follow these steps:
 
 * Open the `appPackage/declarativeCopilot.json` file and add to the `capabilities` array the following content:
 
@@ -408,13 +408,13 @@ To add OneDrive and SharePoint knowledge to your declarative copilot, follow the
 
 ---
 
-* The declarative copilot will have access to OneDrive and SharePoint content to generate its answers after you reload the page.
+* The declarative agent will have access to OneDrive and SharePoint content to generate its answers after you reload the page.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-odsp.png" alt-text="Screenshot shows the OneDrive and SharePoint content from the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-odsp.png" alt-text="Screenshot shows the OneDrive and SharePoint content from the declarative agent in Microsoft 365 Copilot.":::
 
 ## Add Graph Connectors knowledge
 
-To add Graph Connectors knowledge to your declarative copilot, follow these steps:
+To add Graph Connectors knowledge to your declarative agent, follow these steps:
 
 * Open the `appPackage/declarativeCopilot.json` file and add to the `capabilities` array the following content:
 
@@ -466,13 +466,13 @@ To add Graph Connectors knowledge to your declarative copilot, follow these step
 
 ---
 
-* The declarative copilot will have access to GraphConnectors content to generate its answers after you reload the page.
+* The declarative agent will have access to GraphConnectors content to generate its answers after you reload the page.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-gc.png" alt-text="Screenshot shows Graph Connectors content from the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-gc.png" alt-text="Screenshot shows Graph Connectors content from the declarative agent in Microsoft 365.":::
 
 ## Add a plugin
 
-To add a plugin to your declarative copilot, follow these steps:
+To add a plugin to your declarative agent, follow these steps:
 
 * Go to **Command Prompt**.
 * Navigate to your project folder. In this case, our project folder is called `ttk-declarative-copilot`. Replace this with the name of your folder.
@@ -536,13 +536,13 @@ To add a plugin to your declarative copilot, follow these steps:
 
 ---
 
-* The declarative copilot will have access to your plugin content to generate its answers after you reload the page.
+* The declarative agent will have access to your plugin content to generate its answers after you reload the page.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-plugin.png" alt-text="Screenshot shows the plugin content from the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-plugin.png" alt-text="Screenshot shows the plugin content from the declarative agent in Microsoft 365 Copilot.":::
 
-## Improve the instructions of your declarative copilot
+## Improve the instructions of your declarative agent
 
-To improve the instructions of your declarative copilot, follow these steps:
+To improve the instructions of your declarative agent, follow these steps:
 
 * Open the `appPackage/declarativeCopilot.json` file and edit the `instructions` value:
 
@@ -556,7 +556,7 @@ To improve the instructions of your declarative copilot, follow these steps:
     >
     > * The `instructions` value is on a single line. Use `\\n` to add a new line.
 
-    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-instructions.png" alt-text="Screenshot shows an updates answer based on the instructions from the declarative copilot in Copilot for Microsoft 365.":::
+    :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-instructions.png" alt-text="Screenshot shows an updates answer based on the instructions from the declarative agent in Microsoft 365 Copilot.":::
 
 ### [Teams Toolkit](#tab/ttk)
 
@@ -574,4 +574,4 @@ To improve the instructions of your declarative copilot, follow these steps:
 
 ---
 
-* The declarative copilot will have access to your updated instructions after you reload the page.
+* The declarative agent will have access to your updated instructions after you reload the page.
