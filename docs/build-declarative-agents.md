@@ -10,7 +10,7 @@ ms.date: 05/10/2024
 <!-- markdownlint-disable MD025 MD051 -->
 # Build a declarative copilot for Copilot for Microsoft 365
 
-[!INCLUDE [preview-disclaimer](includes/preview-disclaimer-copilot.md)]
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer-declarative-agents.md)]
 
 > [!NOTE]
 >
@@ -22,7 +22,9 @@ ms.date: 05/10/2024
 
 :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative copilot in Copilot for Microsoft 365.":::
 
-To learn about what is a declarative copilot, see [Declarative copilots for Microsoft 365 overview](overview-declarative-copilot.md).
+To learn about what is a declarative copilot, see [Declarative copilots for Microsoft 365 overview](overview-declarative-agent.md).
+
+[!INCLUDE [security-note](includes/security-on-das-note.md)]
 
 ## Prerequisites
 

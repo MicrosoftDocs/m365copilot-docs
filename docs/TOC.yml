@@ -1,4 +1,4 @@
-- name: Microsoft Copilot for Microsoft 365 extensibility
+- name: Microsoft 365 Copilot extensibility
   href: index.md
 - name: Work with the Copilot ecosystem
   items:
@@ -8,8 +8,8 @@
     href: orchestrator.md
   - name: What makes a good plugin?
     href: plugin-guidelines.md
-  - name: Plugins are apps for Microsoft 365
-    href: plugins-are-apps.md
+  - name: Agents are apps for Microsoft 365
+    href: agents-are-apps.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 - name: Extensibility guide for ISVs
@@ -25,9 +25,57 @@
     href: samples.md
   - name: Learning path
     href: /training/paths/copilot-m365-extensibility/
+- name: Build a Copilot agent
+  expanded: true
+  items:
+  - name: Use Copilot's orchestrator and models
+    expanded: true
+    items:
+    - name: Declarative agents overview
+      href: overview-declarative-agent.md
+    - name: Transparency FAQs about declarative agents
+      href: transparency-faq-declarative-agent.md
+    - name: Build with Visual Studio Code
+      expanded: true
+      items:
+      - name: Build a declarative agent with Visual Studio Code
+        href: build-declarative-agents.md
+      - name: Retrieve capabilities IDs
+        href: declarative-agent-capabilities-ids.md
+      - name: Declarative agent manifest reference
+        href: declarative-agent-manifest.md
+    - name: Build with Microsoft Copilot Studio
+      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+  - name: Use your custom orchestrator and models
+    expanded: false
+    items:
+    - name: Custom engine agents
+      href: overview-custom-engine-agent.md
+    - name: Build with VS Code and Teams AI library
+      items:
+      - name: Teams AI library overview
+        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context
+      - name: Core capabilities of the Teams AI library
+        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/how-conversation-ai-core-capabilities?context=/microsoft-365-copilot/extensibility/context
+      - name: Get started with the Teams AI library
+        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/how-conversation-ai-get-started?context=/microsoft-365-copilot/extensibility/context
+      - name: Quick start guide for the Teams AI library
+        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start?context=/microsoft-365-copilot/extensibility/context
+      - name: Build custom copilot using Teams Toolkit
+        href: /microsoftteams/platform/teams-ai-library-tutorial
+      - name: Teams AI library FAQs
+        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/coversational-ai-faq?context=/microsoft-365-copilot/extensibility/context
+    - name: Build with Microsoft Copilot Studio
+      items:
+      - name: Quickstart
+        href: /microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context
+      - name: Key concepts
+        href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
+      - name: Create and delete copilots
+        href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
 - name: Add knowledge with Graph Connectors
   items:
-  - name: Microsoft Graph connectors in Copilot for Microsoft 365
+  - name: Microsoft Graph connectors in Microsoft 365 Copilot
     href: overview-graph-connector.md
   - name: Enhancing Microsoft Copilot Discovery with Graph Connector Content
     href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
@@ -52,12 +100,25 @@
 - name: Add skills with plugins
   expanded: true
   items:
-  - name: API plugins (coming soon)
+  - name: API plugins
     items:
     - name: Overview
       href: overview-api-plugins.md
+    - name: Build an API plugin with a new API
+      href: build-api-plugins-new-api.md
+    - name: Build an API plugin from an existing API
+      href: build-api-plugins-existing-api.md
+    - name: Authentication
+      href: api-plugin-authentication.md
+    - name: Adaptive Card responses
+      href: api-plugin-adaptive-cards.md
+      displayName: response, response_semantics
+    - name: Confirmation prompts
+      href: api-plugin-confirmation-prompts.md
     - name: Best practices for writing OpenAPI specs
       href: openapi-document-guidance.md
+    - name: API plugin manifest reference
+      href: api-plugin-manifest.md
   - name: Teams message extension plugins
     items:
     - name: Overview
@@ -88,47 +149,16 @@
       href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
   - name: Debug with developer mode in Copilot
     href: debugging-copilot-plugin.md
-- name: Build your own copilot
-  expanded: true
+- name: Publish
+  href: publish.md
+- name: Manage
+  expanded: false
   items:
-  - name: Use Copilot's orchestrator and models
-    expanded: true
-    items:
-    - name: Declarative copilots (coming soon)
-      href: overview-declarative-copilot.md
-  - name: Use your custom orchestrator and models
-    expanded: false
-    items:
-    - name: Custom engine copilots
-      href: overview-custom-engine-copilot.md
-    - name: Build with VS Code and Teams AI library
-      items:
-      - name: Teams AI library overview
-        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context
-      - name: Core capabilities of the Teams AI library
-        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/how-conversation-ai-core-capabilities?context=/microsoft-365-copilot/extensibility/context
-      - name: Get started with the Teams AI library
-        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/how-conversation-ai-get-started?context=/microsoft-365-copilot/extensibility/context
-      - name: Quick start guide for the Teams AI library
-        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start?context=/microsoft-365-copilot/extensibility/context
-      - name: Build custom copilot using Teams Toolkit
-        href: /microsoftteams/platform/teams-ai-library-tutorial
-      - name: Teams AI library FAQs
-        href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/coversational-ai-faq?context=/microsoft-365-copilot/extensibility/context
-    - name: Build with Microsoft Copilot Studio
-      items:
-      - name: Quickstart
-        href: /microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context
-      - name: Key concepts
-        href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
-      - name: Create and delete copilots
-        href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
-- name: Publish and manage extensions
-  expanded: true
-  items:
-  - name: Publish
-    href: publish.md
-  - name: Manage plugins for Copilot in Integrated Apps
+  - name: Overview
+    href: manage.md
+  - name: Manage Copilot agents in Microsoft 365 admin center
     href: /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context
+- name: FAQ
+  href: faq.md
 - name: Support and feedback
   href: feedback.md

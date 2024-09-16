@@ -1,0 +1,34 @@
+{
+  "value": [
+    {
+      "searchTerms": [],
+      "hitsContainers": [
+        {
+          "hits": [
+            {
+              "hitId": "01AJOINAHZHINTBHPESZBISPIPSJG3D5EO",
+              "rank": 1,
+              "summary": "Reorder policy Our reorder policy for suppliers is straightforward and designed to maintain cost-efficiency and inventory control. We kindly request that no order exceeds a total",
+              "resource": {
+                "@odata.type": "#microsoft.graph.driveItem",
+                "listItem": {
+                  "@odata.type": "#microsoft.graph.listItem",
+                  "id": "301b3af9-e49d-4296-893d-0f924db1f48e",
+                  "fields": {
+                    "fileName": "YourFile.docx",
+                    "listId": "12fde922-4fab-4238-8227-521829cd1099",
+                    "webId": "a25fab47-f3b9-4fa3-8ed9-1acb83c12a4f",
+                    "siteId": "5863dfa5-b39d-4cd1-92a6-5cf539e04971",
+                    "uniqueId": "{301b3af9-e49d-4296-893d-0f924db1f48e}"
+                  }
+                }
+              }
+            }
+          ],
+          "total": 1,
+          "moreResultsAvailable": false
+        }
+      ]
+    }
+  ]
+}
