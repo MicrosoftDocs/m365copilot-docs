@@ -24,7 +24,8 @@ While developer mode is enabled, a card with debug information will be returned 
 - **Selected functions for execution**: A list of plugin functions selected for invocation based on orchestrator reasoning
 - **Function execution details**: Request and response function execution status
 
-:::image type="content" source="assets/images/developer-mode-debug-success.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing the successful matching, selection, and function execution of an enabled plugin":::
+:::image type="content" source="assets/images/developer-mode-debug-success-v2.1.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing the successful matching, selection, and function execution of an enabled plugin":::
+:::image type="content" source="assets/images/developer-mode-debug-success-v2.2.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing the successful selection, and function execution of an enabled plugin":::
 
 ### Troubleshooting execution failures
 
@@ -36,29 +37,27 @@ If the orchestrator doesn't require your Microsoft 365 data or skills to respond
 
 Debug cards are also not returned in cases of capacity throttling, where you will typically see an error message to try again later.
 
-#### Empty debug card
+#### Card with *No plugins enabled*
 
-If no plugins were enabled, the debug info card will return empty.
+If no plugins were enabled, the Enabled plugins section will indicate that there are no plugins enabled.
 
-#### Card with empty *Matched functions*
+#### Card with *No Matched functions*
 
 If relevant plugins are enabled, yet no matched functions were returned for the given prompt, this likely indicates the prompt did not explicitly mention the plugin name.
 
-#### Card with empty *Selected functions for execution*
+#### Card with *No functions selected for execution*
 
 If no enabled plugin matched the search intent of the prompt, the debug info card will report *No functions selected for execution*. This is likely because the command description in the manifest is not semantically related to the search intent of the given prompt.
 
 If copilot was previously matching and executing your plugin functions successfully, this could be an indication of throttling.
 
-#### Card with empty or failed *Function execution details*
+#### Card with empty or failed *No Function execution details*
 
-For non-message extension plugins, if the function execution details or request status is empty or failed, it indicates a failure during copilot's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it is most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your Open API definition.
+For non-message extension plugins, if the there are failed or no function execution details , it indicates a failure during copilot's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it is most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your Open API definition.
 
 For message extension plugins, best practice is to optimize for responses under nine seconds. For more more info, review the [technical requirements](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#technical-requirements) for message extension plugins.
 
-#### Card with function execution response status of `0`
-
-If the *Function execution details* is reporting a *Response Status* of `0`, but *Request status* of `Success`, this might be an indication of timeout. Currently the timeout limit for copilot execution of a plugin API is set at 10 seconds.
+ Currently the timeout limit for copilot execution of a plugin API is set at 10 seconds.
 
 ### Reporting an issue
 

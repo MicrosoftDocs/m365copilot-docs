@@ -62,7 +62,8 @@ You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-con
 
 To make sure that Copilot for Microsoft 365 uses your content effectively:
 
-- Apply [semantic labels](/graph/connecting-external-content-manage-schema). Semantic labels help Copilot for Microsoft 365 interpret the semantic meaning of your schema. Apply as many of them to your schema as applicable. The `iconUrl`, `title`, and `url` labels must be applied for content to surface in Copilot.
+- Apply [semantic labels](/graph/connecting-external-content-manage-schema). Semantic labels help Copilot for Microsoft 365 interpret the semantic meaning of your schema. Apply as many of them to your schema as applicable. The `iconUrl`, `title`, and `url` labels must be applied for content to surface in Copilot. Currently, only the `title` semantic label can be used in prompts in Copilot for Microsoft 365. However, more semantic labels will be supported as the platform evolves, so applying all applicable labels will prevent you from needing to recreate your schema in the future.
+- Ingest content relevant to external items as text. Users can query against the content property of external items in Copilot for Microsoft 365. Copilot for Microsoft 365 performs better on content rich items.
 - Add a [urlToItemResolver](/graph/api/resources/externalconnectors-urltoitemresolverbase) in [activitySettings](/graph/api/resources/externalconnectors-activitysettings) when you [create your connection](/graph/connecting-external-content-manage-connections#create-a-connection). A `urlToItemResolver` enables the platform to detect when users share URLs from your external content with each other. Copilot for Microsoft 365 has a higher likelihood of displaying content that has been shared with that user.
 - Add [user activities](/graph/api/externalconnectors-externalitem-addactivities) on your items. For a list of supported activity types, see [externalActivity](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in importance.
 - Provide meaningful descriptions in the `description` property when [creating connections](/graph/api/externalconnectors-external-post-connections). Rich descriptions improve the likelihood of displaying content in Copilot.
@@ -72,12 +73,6 @@ In addition, search administrators must ensure that your Graph Connector connect
 - Open the [Admin Center](https://admin.microsoft.com/), go to **Search & intelligence** > **Customizations** > **Verticals** and select **All**.
 
 - Select **Manage connector result**. Ensure that **Show results inline** is selected and that the connections that you want to enable for Search and Copilot are checked.
-
-## Semantic Labels and Property Labels in Copilot for Microsoft 365
-
-As stated earlier, we recommended that you apply as many semantic labels to your schema as applicable. This is because your end-users can use semantic labels as part of their prompt in Copilot for Microsoft 365. For example, an end-user can ask Copilot for all of the files that were last modified within the last week. If the `lastModifiedDateTime` semantic label isn't applied to your schema, then Copilot for Microsoft 365 can't return the expected result to that user.
-
-The `searchable` property label is the most important with respect to Copilot for Microsoft 365. It defines which properties can be searched against. If you would like your users' prompts in Copilot for Microsoft 365 to match content stored in certain properties, then you must make those properties searchable.
 
 ## See also
 

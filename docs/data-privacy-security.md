@@ -31,6 +31,11 @@ Message extension plugins use the same [authentication process for Teams message
 
 Power Platform connector plugins use the same [authentication process for custom connectors](/connectors/custom-connectors/azure-active-directory-authentication).
 
+
+## Declarative copilots
+
+[!INCLUDE [security-note](includes/security-on-das-note.md)]
+
 ## Considerations for line-of-business developers
 
 Copilot for Microsoft 365 only shares data with and searches in plugins or connectors that are enabled for Copilot by a Microsoft 365 admin. As a line-of-business developer of Copilot extensibility solutions, ensure you and your admin are familiar with:

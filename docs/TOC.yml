@@ -1,4 +1,4 @@
-- name: Microsoft Copilot for Microsoft 365 extensibility
+- name: Microsoft 365 Copilot extensibility
   href: index.md
 - name: Work with the Copilot ecosystem
   items:
@@ -8,8 +8,8 @@
     href: orchestrator.md
   - name: What makes a good plugin?
     href: plugin-guidelines.md
-  - name: Plugins are apps for Microsoft 365
-    href: plugins-are-apps.md
+  - name: Agents are apps for Microsoft 365
+    href: agents-are-apps.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 - name: Extensibility guide for ISVs
@@ -25,82 +25,32 @@
     href: samples.md
   - name: Learning path
     href: /training/paths/copilot-m365-extensibility/
-- name: Add knowledge with Graph Connectors
-  items:
-  - name: Microsoft Graph connectors in Copilot for Microsoft 365
-    href: overview-graph-connector.md
-  - name: Enhancing Microsoft Copilot Discovery with Graph Connector Content
-    href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
-  - name: Connectors experiences
-    href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
-  - name: Connectors API
-    href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/extensibility/context
-  - name: Build your first connector
-    href: /graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context
-  - name: Simplify connector deployment
-    href: /graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context
-  - name: Manage connections
-    href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/extensibility/context
-  - name: Manage schema
-    href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/extensibility/context
-  - name: Manage items
-    href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/extensibility/context
-  - name: Use external groups
-    href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
-  - name: API limits
-    href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
-- name: Add skills with plugins
-  expanded: true
-  items:
-  - name: API plugins (coming soon)
-    items:
-    - name: Overview
-      href: overview-api-plugins.md
-    - name: Best practices for writing OpenAPI specs
-      href: openapi-document-guidance.md
-  - name: Teams message extension plugins
-    items:
-    - name: Overview
-      href: overview-message-extension-bot.md
-    - name: Prerequisites
-      href: prerequisites-message-extension-bot.md
-    - name: Build a message extension plugin
-      href: /microsoftteams/platform/messaging-extensions/build-bot-based-plugin?context=/microsoft-365-copilot/extensibility/context
-    - name: Guidelines for message extension plugins
-      href: /microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context
-    - name: Hand off to a custom engine copilot
-      href: /microsoftteams/platform/bots/how-to/conversations/bot-copilot-handoff?context=/microsoft-365-copilot/extensibility/context
-  - name: Copilot Studio connectors and actions (preview)
-    items:
-    - name: Copilot connectors on Copilot Studio overview
-      href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
-    - name: Copilot Studio actions
-      href: overview-business-applications.md
-    - name: Connector actions
-      href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-    - name: Conversational actions
-      href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
-    - name: Power Automate flow actions
-      href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
-    - name: Prompts
-      href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
-    - name: Learning path
-      href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
-  - name: Debug with developer mode in Copilot
-    href: debugging-copilot-plugin.md
-- name: Build your own copilot
+- name: Build a Copilot agent
   expanded: true
   items:
   - name: Use Copilot's orchestrator and models
     expanded: true
     items:
-    - name: Declarative copilots (coming soon)
-      href: overview-declarative-copilot.md
+    - name: Declarative agents overview
+      href: overview-declarative-agent.md
+    - name: Transparency FAQs about declarative agents
+      href: transparency-faq-declarative-agent.md
+    - name: Build with Visual Studio Code
+      expanded: true
+      items:
+      - name: Build a declarative agent with Visual Studio Code
+        href: build-declarative-agents.md
+      - name: Retrieve capabilities IDs
+        href: declarative-agent-capabilities-ids.md
+      - name: Declarative agent manifest reference
+        href: declarative-agent-manifest.md
+    - name: Build with Microsoft Copilot Studio
+      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
   - name: Use your custom orchestrator and models
     expanded: false
     items:
-    - name: Custom engine copilots
-      href: overview-custom-engine-copilot.md
+    - name: Custom engine agents
+      href: overview-custom-engine-agent.md
     - name: Build with VS Code and Teams AI library
       items:
       - name: Teams AI library overview
@@ -123,12 +73,194 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete copilots
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
-- name: Publish and manage extensions
+- name: Add knowledge with Microsoft Graph Connectors
+  items:
+  - name: Microsoft Graph connectors in Microsoft 365 Copilot
+    href: overview-graph-connector.md
+  - name: Enhancing Microsoft 365 Copilot discovery with Microsoft Graph connector content
+    href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
+  - name: Connector experiences
+    href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
+  - name: Set up connectors
+    items:
+    - name: Overview
+      href: /microsoftsearch/configure-connector?context=/microsoft-365-copilot/extensibility/context
+    - name: Add staged rollout to connectors
+      href: /microsoftsearch/staged-rollout-for-graph-connectors?context=/microsoft-365-copilot/extensibility/context
+    - name: Microsoft Graph connectors in Microsoft 365 Copilot
+      items:
+    - name: On-prem connectors
+      items:
+      - name: Connector agent setup
+        href: /microsoftsearch/graph-connector-agent?context=/microsoft-365-copilot/extensibility/context
+      - name: Connector agent release history
+        href: /microsoftsearch/graph-connector-agent-releases?context=/microsoft-365-copilot/extensibility/context
+    - name: Map non-Azure AD Identities
+      href: /microsoftsearch/map-non-aad?context=/microsoft-365-copilot/extensibility/context
+    - name: Map Microsoft Entra identities
+      href: /microsoftsearch/map-aad?context=/microsoft-365-copilot/extensibility/context
+    - name: Microsoft Graph prebuilt connectors
+      href: /microsoftsearch/pre-built-connectors-overview?context=/microsoft-365-copilot/extensibility/context
+      items:
+      - name: Azure Data Lake Storage Gen2
+        items:
+        - name: Setup
+          href: /microsoftsearch/azure-data-lake-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: Azure DevOps Work Items
+        items:
+        - name: Setup
+          href: /microsoftsearch/azure-devops-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-azure-devops-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: Azure DevOps Wiki
+        items:
+        - name: Setup
+          href: /microsoftsearch/azure-devops-wiki-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-azure-devops-wiki-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: Azure SQL and Microsoft SQL Server
+        items:
+        - name: Setup
+          href: /microsoftsearch/MSSQL-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-mssql-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: Confluence Cloud
+        items:
+        - name: Setup
+          href: /microsoftsearch/confluence-cloud-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-confluence-cloud-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: Confluence On-premises (preview)
+        items:
+        - name: Setup
+          href: /microsoftsearch/confluence-onpremises-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-confluence-onpremises-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: CSV
+        href: /microsoftsearch/csv-connector?context=/microsoft-365-copilot/extensibility/context
+        items:
+        - name: Setup
+          href: /microsoftsearch/csv-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: Jira Cloud
+        items:
+        - name: Setup
+          href: /microsoftsearch/jira-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-jira-cloud-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: Enterprise websites
+        items:
+        - name: Setup
+          href: /microsoftsearch/enterprise-web-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-enterprise-web-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: File Share
+        items:
+        - name: Setup
+          href: /microsoftsearch/fileshare-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: MediaWiki
+        items:
+        - name: Setup
+          href: /microsoftsearch/mediawiki-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: Oracle SQL
+        items:
+        - name: Setup
+          href: /microsoftsearch/OracleSQL-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-oraclesql-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: Salesforce
+        items:
+        - name: Setup
+          href: /microsoftsearch/salesforce-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: ServiceNow Catalog
+        items:
+        - name: Setup
+          href: /microsoftsearch/servicenow-catalog-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-servicenow-catalog-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: ServiceNow Knowledge
+        items:
+        - name: Setup
+          href: /microsoftsearch/servicenow-knowledge-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-servicenow-knowledge-connector?context=/microsoft-365-copilot/extensibility/context
+      - name: ServiceNow Tickets
+        items:
+        - name: Setup
+          href: /microsoftsearch/servicenow-tickets-connector?context=/microsoft-365-copilot/extensibility/context
+        - name: Troubleshooting
+          href: /microsoftsearch/troubleshoot-servicenow-tickets-connector?context=/microsoft-365-copilot/extensibility/context
+  - name: Connectors API
+    href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/extensibility/context
+  - name: Build your first connector
+    href: /graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context
+  - name: Simplify connector deployment
+    href: /graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context        
+  - name: Manage connections
+    href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/extensibility/context
+  - name: Manage schema
+    href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/extensibility/context
+  - name: Manage items
+    href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/extensibility/context
+  - name: Use external groups
+    href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
+  - name: API limits
+    href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
+- name: Add skills with plugins
   expanded: true
   items:
-  - name: Publish
+  - name: API plugins
+    items:
+    - name: Overview
+      href: overview-api-plugins.md
+    - name: Build an API plugin with a new API
+      href: build-api-plugins-new-api.md
+    - name: Build an API plugin from an existing API
+      href: build-api-plugins-existing-api.md
+    - name: Authentication
+      href: api-plugin-authentication.md
+    - name: Adaptive Card responses
+      href: api-plugin-adaptive-cards.md
+      displayName: response, response_semantics
+    - name: Confirmation prompts
+      href: api-plugin-confirmation-prompts.md
+    - name: Best practices for writing OpenAPI specs
+      href: openapi-document-guidance.md
+    - name: API plugin manifest reference
+      href: api-plugin-manifest.md
+  - name: Teams message extension plugins
+    href: overview-message-extension-bot.md
+  - name: Copilot Studio connectors and actions (preview)
+    items:
+    - name: Copilot connectors on Copilot Studio overview
+      href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
+    - name: Copilot Studio actions
+      href: overview-business-applications.md
+    - name: Connector actions
+      href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
+    - name: Conversational actions
+      href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
+    - name: Power Automate flow actions
+      href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
+    - name: Prompts
+      href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+    - name: Learning path
+      href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
+  - name: Debug with developer mode in Copilot
+    href: debugging-copilot-plugin.md
+- name: Publish
+  items:
+  - name: Overview 
     href: publish.md
-  - name: Manage plugins for Copilot in Integrated Apps
+  - name: Validation guidelines for Copilot agents
+    href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
+- name: Manage
+  expanded: false
+  items:
+  - name: Overview
+    href: manage.md
+  - name: Manage Copilot agents in Microsoft 365 admin center
     href: /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context
+- name: FAQ
+  href: faq.md
 - name: Support and feedback
   href: feedback.md

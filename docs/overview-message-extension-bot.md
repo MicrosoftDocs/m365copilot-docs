@@ -1,13 +1,13 @@
 ---
-title: Build message extensions for Microsoft Copilot for Microsoft 365
-description: Intro Microsoft Copilot for Microsoft 365 with message extensions
+title: Build message extensions for Microsoft 365 Copilot
+description: Introducing message extensions as plugins for Microsoft 365 Copilot
 author: girliemac
 ms.author: timura
 ms.topic: overview
-ms.date: 11/15/2023
+ms.date: 09/16/2024
 ---
 
-# Message extensions for Microsoft Copilot for Microsoft 365
+# Message extensions for Microsoft 365 Copilot
 
 ## What are message extensions?
 
@@ -24,15 +24,15 @@ These interactions are typically triggered via buttons and forms within Microsof
 
 ## Message extension with Copilot
 
-With the introduction of Copilot for Microsoft 365, the game has changed. Users can now leverage natural language input to invoke a message extension's search function, bypassing the need for specific user-interface (UI) commands. In essence, your users’ words become the catalyst for Copilot’s actions, calling the appropriate plugin for their request.
+With the introduction of Microsoft 365 Copilot, the game has changed. Users can now leverage natural language input to invoke a message extension's search function, bypassing the need for specific user-interface (UI) commands. In essence, your users’ words become the catalyst for Copilot’s actions, calling the appropriate plugin for their request.
 
-[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+[!INCLUDE [preview-disclaimer for ME](includes/preview-disclaimer-me.md)]
 
-The following illustration shows how a user interaction with a message extension on Teams client and Copilot for Microsoft 365 differ:
+The following illustration shows how a user interaction with a message extension on Teams client and Microsoft 365 Copilot differ:
 
 :::image type="content" source="assets/images/message-extensions-ux.png" alt-text="Illustration of two different user experiences for message extensions,  one way is to invoke from Teams client and another is with Copilot" lightbox="assets/images/message-extensions-ux.png":::
 
-Your users can do so much more than just getting search queries. With the integration of message extensions and Copilot for Microsoft 365, they can ask all sorts of follow-up questions. As Copilot is powered by Generative AI, it can understand, summarize, predict, and generate content across a multitude of Microsoft 365 applications, thereby boosting user productivity and creativity.
+Your users can do so much more than just getting search queries. With the integration of message extensions and Microsoft 365 Copilot, they can ask all sorts of follow-up questions. As Copilot is powered by Generative AI, it can understand, summarize, predict, and generate content across a multitude of Microsoft 365 applications, thereby boosting user productivity and creativity.
 
  A user can ask about what’s in stock for a product, then, for example, she can also request Copilot to populate a table with various products. Moreover, she can even instruct Copilot to draft an email summarizing the inventory as a reminder for the supplier!
 
@@ -44,7 +44,7 @@ For development, you can use [Teams Toolkit](https://marketplace.visualstudio.co
 
 ## Next step
 
-Get ready to build plugins for Copilot for Microsoft 365:
+Get ready to build plugins for Microsoft 365 Copilot:
 
 > [!div class="nextstepaction"]
 > [Set up your dev environment for message extension plugins](prerequisites-message-extension-bot.md)

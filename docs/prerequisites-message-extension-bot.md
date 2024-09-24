@@ -1,19 +1,19 @@
 ---
-title: Set up your dev environment to build message extension plugins for Microsoft Copilot for Microsoft 365
-description: Prerequisites to build your first message extension plugin for Microsoft Copilot for Microsoft 365
+title: Set up your dev environment to build message extension plugins for Microsoft 365 Copilot
+description: Prerequisites to build your first message extension plugin for Microsoft 365 Copilot
 author: girliemac
 ms.author: timura
 ms.topic: overview
-ms.date: 11/15/2023
+ms.date: 09/16/2024
 ---
 
-# Set up your dev environment to build message extension plugins for Microsoft Copilot for Microsoft 365
+# Set up your dev environment to build message extension plugins for Microsoft 365 Copilot
 
-[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+[!INCLUDE [preview-disclaimer for ME](includes/preview-disclaimer-me.md)]
 
-Before you get started to build a search-based message extension plugin for Copilot, make sure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](prerequisites.md#isv-partners-in-microsoft-365-developer-tap)), or with (2) through an enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
+Before you get started to build a search-based message extension plugin for Copilot, make sure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](prerequisites.md#isv-partners-in-microsoft-365-developer-tap)), or with (2) through an enterprise customer production environment with Microsoft 365 Copilot licenses.
 
-Read the general requirements at [Your development environment for Microsoft Copilot for Microsoft 365 extensibility](prerequisites.md) for more.
+Read the general requirements at [Your development environment for Microsoft 365 Copilot extensibility](prerequisites.md) for more.
 
 ## Set up your Teams development tenant
 
