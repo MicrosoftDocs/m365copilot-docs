@@ -75,7 +75,7 @@ To use OAuth 2.0 authentication in your plugin, set the `type` property of the [
 
 ## API key
 
-This authentication scheme allows a plugin to access an API using a long-lived API key or token. This token is sent in API requests in the `Authorization` header as a bearer token. This can be represented in an OpenAPI document in the `securitySchemes` property. See [Bearer Authentication](https://swagger.io/docs/specification/authentication/bearer-authentication/) for details.
+This authentication scheme allows a plugin to access an API using a long-lived API key or token. This token is sent in API requests in the `Authorization` header as a bearer token. You cannot define a custom header. This can be represented in an OpenAPI document in the `securitySchemes` property. See [Bearer Authentication](https://swagger.io/docs/specification/authentication/bearer-authentication/) for details.
 
 ```yml
 securitySchemes:
