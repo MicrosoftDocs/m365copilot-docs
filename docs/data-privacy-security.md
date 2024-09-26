@@ -44,7 +44,7 @@ Microsoft 365 Copilot only shares data with and searches in plugins or connector
   - [Managing plugins for Copilot](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps)
   - [Managing Microsoft Graph connectors](/microsoftsearch/connectors-overview).
 
-## Considerations for independent software vendors
+## Considerations for independent software publishers
 
 Power Platform connectors as Copilot plugins are [certified](/connectors/custom-connectors/certification-submission) and [packaged](/connectors/custom-connectors/certification-submission#connector-and-plugin-packaging-guide) in the same way as regular [Power Platform Connectors](/connectors/custom-connectors/certification-submission). They can then be submitted to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program** as a **Power Platform Connector**.
 
