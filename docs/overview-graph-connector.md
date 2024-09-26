@@ -60,7 +60,7 @@ You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-con
 
 ## Configuring your custom Microsoft Graph connection for Microsoft 365 Copilot
 
-To make sure that MIcrosoft 365 Copilot uses your content effectively:
+To make sure that Microsoft 365 Copilot uses your content effectively:
 
 - Apply [semantic labels](/graph/connecting-external-content-manage-schema). Semantic labels help Microsoft 365 Copilot interpret the semantic meaning of your schema. Apply as many of them to your schema as applicable. The `iconUrl`, `title`, and `url` labels must be applied for content to surface in Copilot. Currently, only the `title` semantic label can be used in prompts in Microsoft 365 Copilot. However, more semantic labels will be supported as the platform evolves, so applying all applicable labels will prevent you from needing to recreate your schema in the future.
 - Ingest content relevant to external items as text. Users can query against the content property of external items in Microsoft 365 Copilot. Microsoft 365 Copilot performs better on content rich items.
