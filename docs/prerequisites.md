@@ -37,7 +37,7 @@ Contact your Microsoft representative to add Copilot to your Microsoft plan.  En
 
 ## Extensibility
 
-Developers can extend Microsoft Microsoft 365 Copilot with the intelligence of external services and data in several ways: through customizing Copilot with agents, adding skills through [Teams message extension plugins](overview-message-extension-bot.md) and [Copilot Studio actions](overview-business-applications.md), or extending Copilot's knowledge through [Microsoft Graph connectors](overview-graph-connector.md).
+Developers can extend Microsoft 365 Copilot with the intelligence of external services and data in several ways: through customizing Copilot with agents, adding skills through [Teams message extension plugins](overview-message-extension-bot.md) and [Copilot Studio actions](overview-business-applications.md), or extending Copilot's knowledge through [Microsoft Graph connectors](overview-graph-connector.md).
 
 To learn more and choose the best extensibility path for you and your customer, see [Extensibility options for Copilot](decision-guide.md).
 

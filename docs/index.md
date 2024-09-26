@@ -14,7 +14,7 @@ ms.custom: [copilot-learning-hub]
 
 It offers *knowledge*, such as emails, chats, and documents that users have permission to access, and *skills*, such as understanding, summarizing, predicting, recalling, translating, and generating content.
 
-:::image type="content" source="assets/images/anatomy-m365-copilot.png" alt-text="Visual representation of the Copilot for Microsoft 365 system: models, orchestrator, knowledge, skills, and UX" border="false":::
+:::image type="content" source="assets/images/anatomy-m365-copilot.png" alt-text="Visual representation of the Microsoft 365 Copilot system: models, orchestrator, knowledge, skills, and UX" border="false":::
 
 **Copilot extensibility** is the ability to customize and extend Microsoft 365 Copilot with additional knowledge and skills.
 
@@ -119,7 +119,7 @@ Here are some practical examples of what you can develop for your organization:
 
 - **Issue tracking for engineering team**
 
-    Take, for example, an engineering team that relies on project management software. You can build an agent that enables users to monitor open tickets. For instance, a user can request information on all issues assigned to them, and Copilot for Microsoft 365 can seamlessly retrieve and present this data from your plugin.
+    Take, for example, an engineering team that relies on project management software. You can build an agent that enables users to monitor open tickets. For instance, a user can request information on all issues assigned to them, and Microsoft 365 Copilot can seamlessly retrieve and present this data from your plugin.
 
 :::image type="content" source="assets/images/copilot-scenario-01.png" alt-text="This illustration shows an agent scenario where an engineer asks to show all open tickets for him" border="false":::
 
@@ -140,7 +140,7 @@ Learn more about the two main paths for AI-driven business transformation: exten
 > [!div class="nextstepaction"]
 > [Frequently asked questions](faq.md)
 
-If you're ready to extend Copilot for Microsoft 365, learn more about your extensibility options.
+If you're ready to extend Microsoft 365 Copilot, learn more about your extensibility options.
 
 > [!div class="nextstepaction"]
 > [Choose your Copilot extensibility path](decision-guide.md)
