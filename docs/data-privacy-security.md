@@ -13,6 +13,8 @@ When you extend Copilot's repertoire of skills with a plugin, queries based on y
 
 :::image type="content" source="assets/images/validation-principles.png" alt-text="Diagram key considerations for developing Copilot extensibility: Enterprise security and trust, Responsible AI, High-quality user experience, High-value functionality" border="false":::
 
+[!INCLUDE [security-note](includes/security-on-das-note.md)]
+
 ## Graph connectors
 
 Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. Microsoft Graph honors the user identity-based access boundary so that the Copilot grounding process only accesses content that the current user is authorized to access. This is also true of external data within Microsoft Graph ingested from a Graph connector.
@@ -27,11 +29,11 @@ Similar to traditional [Teams apps](/microsoftteams/platform/concepts/deploy-and
 
 When you plug in your app to Copilot as a plugin, your external data stays within your app; it *does not* flow into Microsoft Graph or is used to train Microsoft Copilot LLMs. Copilot does, however, generate a search query to send to your plugin on the user's behalf based on their prompt and conversation history with Copilot, and data the user has access to in Microsoft 365.
 
+Supported [API plugins authentication schemes](./api-plugin-authentication.md) include OAuth 2.0 authorization code flow and API key.
+
 Message extension plugins use the same [authentication process for Teams message extensions](/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview).
 
 Power Platform connector plugins use the same [authentication process for custom connectors](/connectors/custom-connectors/azure-active-directory-authentication).
-
-[!INCLUDE [security-note](includes/security-on-das-note.md)]
 
 ## Considerations for line-of-business developers
 
@@ -41,7 +43,7 @@ Microsoft 365 Copilot only shares data with and searches in plugins or connector
 - [Data, Privacy, and Security for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-privacy) admin documentation
 - [Zero Trust principles for Microsoft 365 Copilot](/security/zero-trust/zero-trust-tech-illus#zero-trust-for-microsoft-365-copilot) deployment plan for applying Zero Trust principles to Microsoft Copilot
 - Microsoft Admin Center procedures:
-  - [Managing plugins for Copilot](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps)
+  - [Managing agents for Copilot](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps)
   - [Managing Microsoft Graph connectors](/microsoftsearch/connectors-overview).
 
 ## Considerations for independent software publishers
@@ -70,6 +72,6 @@ For Microsoft Graph connectors (packaged as Teams apps), submission to the Micro
 
 [Data, Privacy, and Security for Microsoft Copilot (Microsoft 365 admin)](/copilot/microsoft-365/microsoft-365-copilot-privacy)
 
-[Publish plugins and connectors for Microsoft 365 Copilot](publish.md)
+[Publish agents for Microsoft 365 Copilot](publish.md)
 
 [Microsoft commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai)
