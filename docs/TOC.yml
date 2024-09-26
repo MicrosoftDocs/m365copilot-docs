@@ -259,7 +259,7 @@
   - name: Overview
     href: manage.md
   - name: Manage Copilot agents in Microsoft 365 admin center
-    href: /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context
+    href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365-copilot/extensibility/context
 - name: FAQ
   href: faq.md
 - name: Support and feedback
