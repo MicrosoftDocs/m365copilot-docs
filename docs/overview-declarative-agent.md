@@ -30,7 +30,7 @@ You can engage with declarative agents within the same interface of Microsoft 36
 
 Core benefits of implementing declarative agents into your operations include:
 
-- **Familiar user interface:** Declarative agents utilize the same friendly user interface with Microsoft 365 Copilot. You can adopt and engage with these copilots tailored for their business scenario that look and feel like Microsoft 365 Copilot.
+- **Familiar user interface:** Declarative agents utilize the same friendly user interface with Microsoft 365 Copilot. You can adopt and engage with these agents tailored for their business scenario that look and feel like Microsoft 365 Copilot.
 - **Enhanced enterprise knowledge:** Similar to Microsoft 365 Copilot, declarative agents can also utilize enterprise data from Graph Connectors and SharePoint files. By applying existing enterprise knowledge and the familiar Copilot interface, you can streamline their workflows, making it easier to engage with data within the organization.
 - **Seamless integration with plugins:** Enterprises can extend declarative agents using plugins to retrieve data and execute tasks on external systems. Declarative agents can utilize multiple plugins at the same time.
 - **Prioritized security, privacy, and compliance:** For prioritizing Security, Privacy and Compliance for the enterprise, declarative agents are built on a secure foundation, inheriting all data protections provided by Microsoft 365 Copilot. Enterprise admins have visibility and control over the distribution of declarative agents within their tenant via the Microsoft Admin Center console.

@@ -1,6 +1,6 @@
 ---
 title: Extend with actions using Microsoft Copilot Studio
-description: Extend Copilot for Microsoft 365 using Microsoft Power Platform and Microsoft Copilot Studio.
+description: Extend Microsoft 365 Copilot using Microsoft Power Platform and Microsoft Copilot Studio.
 author: jhaskett-msft
 ms.author: jhaskett
 ms.topic: overview
@@ -10,10 +10,10 @@ ms.topic: overview
 # Extend with actions using Microsoft Copilot Studio
 
 > [!IMPORTANT]
-> Actions for Copilot for Microsoft 365 are in public preview.
-> Production tenants must be licensed for Copilot for Microsoft 365.
+> Actions for Microsoft 365 Copilot are in public preview.
+> Production tenants must be licensed for Microsoft 365 Copilot.
 
-Copilot Studio actions plug into Copilot for Microsoft 365 to extend its skills, leveraging Microsoft business applications, a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent consisting of Microsoft Dynamics 365 and Microsoft Power Platform.
+Copilot Studio actions plug into Microsoft 365 Copilot to extend its skills, leveraging Microsoft business applications, a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent consisting of Microsoft Dynamics 365 and Microsoft Power Platform.
 
 Dynamics 365 revolutionizes CRM and ERP by applying intelligence to all forms of data. It enables organizations to evolve from reactive business decisions to proactive insights that allow your employees to accelerate business results.
 
@@ -45,11 +45,11 @@ Actions for Microsoft Copilot in Power Platform leverage Dynamics 365 apps and P
 
 You can also create new actions using Power Platform components in Microsoft Copilot Studio. Learn more in [Copilot connectors, actions, and extensions overview (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
 
-## Get Copilot for Microsoft 365 licenses and enable plugins
+## Get Microsoft 365 Copilot licenses and enable plugins
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-1. Obtain the appropriate number of [Copilot for Microsoft 365 licenses](/microsoft-365-copilot/microsoft-365-copilot-setup#provision-copilot-for-microsoft-365-licenses).
+1. Obtain the appropriate number of [Microsoft 365 Copilot licenses](/microsoft-365-copilot/microsoft-365-copilot-setup#provision-copilot-for-microsoft-365-licenses).
 
 1. [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot) by consenting to moving data across regions as applicable.
 
@@ -59,7 +59,7 @@ To deploy a plugin, sign in to the Microsoft 365 admin center and locate the plu
 
 To find Power Automate flows, search for "Power Automate". For Power Platform connector plugins, search for the respective connector name; for example, FreshDesk. For Copilot artifacts such as actions created in Microsoft Copilot Studio, search for "Copilot Studio".
 
-To find Dynamics 365 plugins for Copilot for Microsoft 365, search for "Dynamics 365". The search results will show the available Dynamics 365 plugins. 
+To find Dynamics 365 plugins for Microsoft 365 Copilot, search for "Dynamics 365". The search results will show the available Dynamics 365 plugins. 
 
 |For                                   |  Select                           |
 |--------------------------------------|-----------------------------------|
@@ -88,14 +88,14 @@ In this example, we'll deploy the Dynamics 365 Field Service plugin:
 
     :::image type="content" source="assets/images/overview-business-applications/microsoft-dynamics-365-field.png" alt-text="Screenshot showing the option to deploy an app to all users or to specific users.":::
 
-1. Select **Next** and complete the remaining steps to deploy the app. It might take up to four hours for the deployed app's plugin to show in Copilot for Microsoft 365.
+1. Select **Next** and complete the remaining steps to deploy the app. It might take up to four hours for the deployed app's plugin to show in Microsoft 365 Copilot.
 
 > [!NOTE]
 > The apps that appear under **Integrated apps** are sometimes referred to as "titles".
 
-## Use the built-in actions in Copilot for Microsoft 365 in Microsoft Teams
+## Use the built-in actions in Microsoft 365 Copilot in Microsoft Teams
 
-You can use the built-in actions shipped by Microsoft in your Copilot for Microsoft 365 app in Microsoft Teams.
+You can use the built-in actions shipped by Microsoft in your Microsoft 365 Copilot app in Microsoft Teams.
 
 1. Log in to Microsoft Teams app.
 

@@ -1,6 +1,6 @@
 ---
 title: What's new in Microsoft 365 Copilot
-description: Find how what's new in Microsoft 365 Copilot extensibility, plugins, declarative copilots, custom engine copilots, connectors, and more.
+description: Find how what's new in Microsoft 365 Copilot extensibility, plugins, declarative agents, custom engine agents, connectors, and more.
 author: isvargasmsft
 ms.author: isvargas
 ms.topic: overview
