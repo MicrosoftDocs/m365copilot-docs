@@ -13,7 +13,7 @@
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 - name: Extensibility guide for ISVs
-  href: /microsoft-cloud/dev/copilot/isv-extensibility-story?context=/microsoft-365-copilot/extensibility/context
+  href: /microsoft-cloud/dev/copilot/isv/isv-extensibility-story?context=/microsoft-365-copilot/extensibility/context
 - name: Get started
   expanded: true
   items:
