@@ -7,7 +7,7 @@ The Copilot Studio agent builder lets you create and customize Copilot agents th
 
 For example, you might want to create an agent that provides writing or presentation coaching that is tailored to organizational standards or a team onboarding agent that responds with specific information about the user’s new team and helps them complete onboarding tasks. 
 
-![alt text](/assets/images/copilot-studio-agent-builder/embedded-authoring-starter.png "Copilot Studio Agent Builder initialization screen") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-starter.png "Copilot Studio Agent Builder initialization screen") 
 
 These agents are also referred to as "[declarative agents](https://learn.microsoft.com/microsoft-365-copilot/extensibility/overview-declarative-agent)", because you can simply *declare* instructions, knowledge and actions to extend Microsoft 365 Copilot. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft Copilot.  You don’t need to understand the intricacies of conversational user experience, turn-based conversations, prompt engineering or modification, or any coding languages. 
 
@@ -22,7 +22,7 @@ You can build agents from the following apps and sites:
 > [!NOTE]
 > Agent builder is only available under the Work section of Microsoft 365 Copilot app. It is not available on mobile versions of these apps and sites, or for Microsoft 365 Copilot locations that are not listed in this article.
  
-![alt text](embedded-authoring-entry.png "Entrypoint in Microsoft 365 Copilot") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-entry.png "Entrypoint in Microsoft 365 Copilot") 
 
 ## Prerequisites
 
@@ -120,7 +120,7 @@ You can also select files or folders from the SharePoint file picker. On the lef
 
 After selecting a site, you can select several files and folders. Doing so references the SharePoint file or folder into the Copilot agent’s knowledge sources. When there are multiple folders in the same site, click the button next to the folder name to view other folders. 
 
-![alt text](embedded-authoring-sharepoint-picker-folders.png "SharePoint file picker") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-sharepoint-picker-folders.png "SharePoint file picker") 
  
 You can also upload files into SharePoint using the picker. The file will appear in the same folder once it is finished uploading and will be ready for use in agent builder. 
 
@@ -132,7 +132,7 @@ When the underlying file uploaded to SharePoint has been renamed or deleted, the
 > [!NOTE] 
 > The Preview Chat can still be used even when certain Knowledge sources are not ready for consumption. The Copilot agent does not provide responses from those sources until it finishes preparation.
 
-![alt text](embedded-authoring-knowledge-preparing.png "Knowledge sources preparing state") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-knowledge-preparing.png "Knowledge sources preparing state") 
 
 #### Graph connectors
 Graph connectors allow Copilot agents to include knowledge from external repositories or Systems of Record such as customer accounts, incident tickets and knowledge articles. 
@@ -141,21 +141,21 @@ Admins must enable and configure Graph connectors in the [Microsoft Admin Center
 
 If at least one connector has been enabled, you can add it to your Copilot agent. Your agent will then be able to answer questions related to that connector. Because the connector is set up at the tenant level, the information retrieved from the connector is indexed and refreshed according to the way in which the connector was set up. The Copilot agent may cite relevant information from the indexed data and link the end user to the data source.
 
-![alt text](embedded-authoring-graph-connectors.png "Graph Connectors") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-graph-connectors.png "Graph Connectors") 
 
 ## Create the Copilot agent 
 Changes made to the Copilot agent are automatically saved in the agent builder. When you’re satisfied with its behavior and content, you can create the Copilot agent to use it in Microsoft 365 Copilot by selecting "Create" on the top right corner.
 
 Once the Copilot agent is created successfully, selecting "Go to agent" will bring you back into Microsoft 365 Copilot with a new chat opened with the Copilot agent. You can easily return to chat with their Copilot agents from the right rail of Microsoft Copilot.
 
-![alt text](embedded-authoring-create.png "Creating a Copilot agent") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-create.png "Creating a Copilot agent") 
 
 ## Share the Copilot agent
 You can share your Copilot agent with other users via a link once it has been created. When sharing an agent, the people you share the agent with can use it, but they can’t edit it.
 
 You can change the sharing option at any time by clicking the "Share" button at the top right corner.
 
-![alt text](embedded-authoring-share-button.png "Share button") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-share-button.png "Share button") 
  
 ### Sharing options
 Several sharing options are available:
@@ -182,19 +182,19 @@ If the sharing on a file or folder fails, the Copilot agent will still be shared
 
 When a user’s access to the Copilot agent is removed, it will not affect their access to the shared file or folders. Use file permission management in SharePoint to manage user’s access to the files and folders.
 
-![alt text](embedded-authoring-auto-share.png "Auto-sharing knowledge sources") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-auto-share.png "Auto-sharing knowledge sources") 
 
 ## Copilot agent acquisition
 The shared link brings end users to the office.com app store to view the details of the agent before adding it to Microsoft Copilot. After adding it, they can open the Copilot agent in Microsoft Copilot with a new chat created. This only needs to be done the first time for a Copilot agent, users can return to Microsoft Copilot to find the agent on the right rail for subsequent uses. 
 
-![alt text](embedded-authoring-app-acquisition.png "End user acquiring the Copilot agent") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-app-acquisition.png "End user acquiring the Copilot agent") 
 
 ## Manage Copilot agents 
 To manage an existing agent, you can:
 1. Select "…" and "Edit" from a Copilot agent on the right rail of Microsoft Copilot
 1. Select "Create agents" from the right rail of Microsoft Copilot and select the "View all agents" option from the name drop down menu
 
-![alt text](embedded-authoring-last-accessed.png "Viewing most recently accessed Copilot agents") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-last-accessed.png "Viewing most recently accessed Copilot agents") 
  
 Both options will show the "My agents" list. You can select the existing agent that you want to change or update.
 
@@ -204,7 +204,7 @@ Both options will show the "My agents" list. You can select the existing agent t
 ### Update your Copilot agent
 Changes made to Copilot agents are automatically saved in the agent builder. The Copilot agent author will need to update their agent for it to receive the latest configuration in Microsoft Copilot. Shared users of the Copilot agent will not see the latest changes until it has been updated. To update a previously created agent, select "Update" on the top right corner. Your changes may take several minutes to propagate for end users.
  
-![alt text](embedded-authoring-update-button.png "Viewing most recently accessed Copilot agents") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-update-button.png "Viewing most recently accessed Copilot agents") 
 
 > [!NOTE] 
 > It is highly recommended to re-share your Copilot agent with the same group of users when the Copilot agent has SharePoint file and folder knowledge source and have been shared with specific users in the organization. This will auto share the files and folders again with the users to ensure consistent copilot experience. 
@@ -230,7 +230,7 @@ If sharing failed, users who don’t have access to the folder and files will no
 
 ## Get Support
 To get support, please click "Send feedback" in M365 Copilot. 
- ![alt text](embedded-authoring-send-feedback.png "Send feedback button in Microsoft 365 Copilot") 
+ ![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-send-feedback.png "Send feedback button in Microsoft 365 Copilot") 
 
 In your feedback ticket, please detail the issue you are facing and include the following pieces of information in the feedback dialog:
 - Specify that the issue is related to "Copilot Studio"
@@ -240,9 +240,9 @@ In your feedback ticket, please detail the issue you are facing and include the 
 - If the issue is related to the Preview Chat or Describe Tab, please also type "/debug" within the chatbox and include the contents in your ticket
  You can find and copy these details in the Copilot Studio agent builder within the "Get support" section of the Help dropdown menu.
 
-![alt text](embedded-authoring-get-support-1.png "Find the support details in Agent Builder")
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-1.png "Find the support details in Agent Builder")
  
-![alt text](embedded-authoring-get-support-2.png "Copy the support details in Agent Builder") 
+![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-2.png "Copy the support details in Agent Builder") 
 
 ## Governance
 Admins can govern this feature by revoking access to the "Copilot Studio in Copilot for M365" application within the "Microsoft 365 Copilot" license in the Microsoft Admin Center. To learn more about the Microsoft 365 Copilot license, see [Microsoft Microsoft 365 Copilot—Features and Plans](https://www.microsoft.com/microsoft-365/copilot/enterprise). To learn more about how to assign or unassign licenses for users in the Microsoft 365 admin center, see [Assign or unassign licenses](https://learn.microsoft.com/microsoft-365/admin/manage/assign-licenses-to-users?view=o365-worldwide).
