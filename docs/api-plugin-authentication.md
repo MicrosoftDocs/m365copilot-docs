@@ -18,7 +18,7 @@ API plugins for Microsoft 365 Copilot support three authentication schemes to co
 
 ## OAuth 2.0 authorization code flow
 
-This authentication scheme allows a plugin to access an API using a bearer token acquired by an OAuth 2.0 authorization code flow. This can be represented in an OpenAPI document in the `securitySchemes` property. See [OAuth 2.0](https://swagger.io/docs/specification/authentication/oauth2/) for details.
+This authentication scheme allows a plugin to access an API using a bearer token acquired by an OAuth 2.0 authorization code flow. This scheme can be represented in an OpenAPI document in the `securitySchemes` property. See [OAuth 2.0](https://swagger.io/docs/specification/authentication/oauth2/) for details.
 
 > [!IMPORTANT]
 > API plugins only support the authorization code flow for OAuth 2.0.
@@ -75,7 +75,7 @@ To use OAuth 2.0 authentication in your plugin, set the `type` property of the [
 
 ## API key via bearer auth
 
-This authentication scheme allows a plugin to access an API using a long-lived API key or token. This token is sent in API requests in the `Authorization` header as a bearer token. This can be represented in an OpenAPI document in the `securitySchemes` property. See [Bearer Authentication](https://swagger.io/docs/specification/authentication/bearer-authentication/) for details.
+This authentication scheme allows a plugin to access an API using a long-lived API key or token. This token is sent in API requests in the `Authorization` header as a bearer token. This scheme can be represented in an OpenAPI document in the `securitySchemes` property. See [Bearer Authentication](https://swagger.io/docs/specification/authentication/bearer-authentication/) for details.
 
 ```yml
 securitySchemes:
@@ -122,7 +122,7 @@ To use API key authentication in your plugin, set the `type` property of the [ru
 
 ## No authentication (anonymous)
 
-For APIs that do not require any authentication, or for developer environments where authentication is not yet implemented, plugins can access the APIs anonymously. In this case, set the `type` property of the [runtime authentication object](api-plugin-manifest.md#runtime-authentication-object) to `None`.
+For APIs that don't require any authentication, or for developer environments where authentication isn't yet implemented, plugins can access the APIs anonymously. In this case, set the `type` property of the [runtime authentication object](api-plugin-manifest.md#runtime-authentication-object) to `None`.
 
 ```json
 "auth": {
