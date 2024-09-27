@@ -1,6 +1,6 @@
 ---
 title: Your Copilot agent options for Microsoft 365
-description: Understand which type of copilots and Microsoft 365 Copilot agents works best for you
+description: Understand which type Microsoft 365 Copilot agents works best for you
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
@@ -74,7 +74,7 @@ When & why to use declarative agents:
 
 #### Connectors
 
-Use connectors to ingest external data to your copilots.
+Use connectors to ingest external data to your agents.
 
 🎯 [**Graph connectors**](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. **They can work either standalone, or with declarative agents**.
 
@@ -100,7 +100,7 @@ Your journey varies based on your desired outcomes and your coding expertise. Wh
 
 How you build and which tools you use are up to you. Your choices are:
 
-- 🎯 **Pro-code** options are declarative agents, API plugins, message extensions, and Graph connectors. [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) would be your best friend for the development to tailor your copilots.
+- 🎯 **Pro-code** options are declarative agents, API plugins, message extensions, and Graph connectors. [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) would be your best friend for the development to tailor your agents.
 
 - 🎯 **Low-code** or **no-code** options are declarative agents, all Copilot Studio actions, and Power Platform connectors as knowledge source. You can develop rapidly with user-friendly interface on [**Copilot Studio**](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
 
@@ -108,7 +108,7 @@ How you build and which tools you use are up to you. Your choices are:
 
 ## Option 2: Building a custom engine agent for Microsoft 365
 
-With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution on Teams chat, then building your own copilots is the perfect fit for you.
+With Azure AI services, you can craft a custom AI chatbot for Teams and Microsoft 365 applications. If you’re seeking a custom bot solution on Teams chat, then building your own agents is the perfect fit for you.
 
 :::image type="content" source="assets/images/teams-ai-library.png" alt-text="A diagram that explains how a custom engine agent in Teams work" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
 

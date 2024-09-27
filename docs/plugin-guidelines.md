@@ -1,6 +1,6 @@
 ---
 title: Build high quality plugins for Microsoft Copilot
-description: Here are best practices for building plugins for Microsoft Copilot for Microsoft 365
+description: Here are best practices for building plugins for Microsoft 365 Copilot
 author: erikadoyle
 ms.author: edoyle
 ms.topic: best-practice

@@ -42,7 +42,7 @@ The orchestrator and connector mechanisms in Copilot Studio differ from API-base
 
 #### What are the differences between Graph connectors and Power Platform connectors?
 
-**Graph connectors** enable bringing additional information to the Microsoft Graph making it discoverable across various Microsoft 365 experiences including Copilot for Microsoft 365. The connection is synchronous to data-providing services, replicating data into Microsoft 365 for use in Copilot and other scenarios. 
+**Graph connectors** enable bringing additional information to the Microsoft Graph making it discoverable across various Microsoft 365 experiences including Microsoft 365 Copilot. The connection is synchronous to data-providing services, replicating data into Microsoft 365 for use in Copilot and other scenarios. 
 
 In contrast, **Power Platform connectors** enable agents to interact with other systems to retrieve information in near real-time (*e.g.*, "Get ticket #1234") also establish read/write actions (*e.g.*, "Create a ticket").
 
@@ -58,15 +58,15 @@ Jump to the [Azure AI questions](#azure-ai-questions) section below!
 
 #### Is my data with Microsoft 365 Copilot protected?
 
-Yes, your data with Microsoft 365 Copilot is protected. Microsoft Copilot for Microsoft 365 adheres to strict privacy, security, and compliance standards, including GDPR and the EU Data Boundary. It uses encryption for data in transit and at rest, and doesn't retain prompts or responses beyond a short caching period for runtime purposes. Additionally, it only accesses data you have permission to see within your Microsoft 365 environment. 
+Yes, your data with Microsoft 365 Copilot is protected. Microsoft 365 Copilot adheres to strict privacy, security, and compliance standards, including GDPR and the EU Data Boundary. It uses encryption for data in transit and at rest, and doesn't retain prompts or responses beyond a short caching period for runtime purposes. Additionally, it only accesses data you have permission to see within your Microsoft 365 environment. 
 
-When you extend Copilot, it can share queries based on your prompts, conversation history, and Microsoft 365 data with the agent to generate responses or complete commands. Additionally, any external data from connectors is ingested into Microsoft Graph and stays within your tenant. Learn more at [Data, Privacy, and Security considerations of extending Copilot for Microsoft 365](data-privacy-security.md).
+When you extend Copilot, it can share queries based on your prompts, conversation history, and Microsoft 365 data with the agent to generate responses or complete commands. Additionally, any external data from connectors is ingested into Microsoft Graph and stays within your tenant. Learn more at [Data, Privacy, and Security considerations of extending Microsoft 365 Copilot](data-privacy-security.md).
 
 #### How are the performance and safety evaluated? 
 
 All response generation features of agents are tested, measured, and validated internally before releasing generally. Such evaluations are done using extensive experimentation to ensure accurate, grounded, and responsible responses that align with human preferences.
 
-For each capability, we conducted several tests to validate Microsoft Copilot for Microsoft 365. In addition to all Copilot for Microsoft 365 related capabilities, Responsible AI (RAI) testing was performed on different harm types to evaluate defect rates. The defect scores are then used to improve the model and mitigate the harm. It's important to keep in mind that the system was designed to mimic natural human communication, but the output may be inaccurate, incorrect, or out of date.
+For each capability, we conducted several tests to validate Microsoft 365 Copilot. In addition to all Microsoft 365 Copilot related capabilities, Responsible AI (RAI) testing was performed on different harm types to evaluate defect rates. The defect scores are then used to improve the model and mitigate the harm. It's important to keep in mind that the system was designed to mimic natural human communication, but the output may be inaccurate, incorrect, or out of date.
 
 ## License questions
 

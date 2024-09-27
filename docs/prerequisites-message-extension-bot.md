@@ -11,7 +11,7 @@ ms.date: 09/16/2024
 
 [!INCLUDE [preview-disclaimer for ME](includes/preview-disclaimer-me.md)]
 
-Before you get started to build a search-based message extension plugin for Copilot, make sure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](prerequisites.md#isv-partners-in-microsoft-365-developer-tap)), or with (2) through an enterprise customer production environment with Microsoft 365 Copilot licenses.
+Before you get started to build a search-based message extension plugin for Copilot, make sure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Copilot: (1) with a sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](prerequisites.md#isv-partners-in-microsoft-365-developer-tap)), or with (2) through an enterprise customer production environment with Microsoft 365 Copilot licenses.
 
 Read the general requirements at [Your development environment for Microsoft 365 Copilot extensibility](prerequisites.md) for more.
 

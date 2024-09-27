@@ -70,7 +70,7 @@ Microsoft 365 provides a rich set of developer resources for extending Microsoft
 
 ### Teams Toolkit
 
-[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)  is the *Pro-code* option for building and debugging Copilot agents, plugins, and custom engine copilots. It provides support for all major Microsoft 365 platform extensibility surfaces, including Copilot agents, tabs, bots, message extensions, and Outlook Add-ins. Teams Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
+[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)  is the *Pro-code* option for building and debugging Copilot agents, plugins, and custom engine agents. It provides support for all major Microsoft 365 platform extensibility surfaces, including Copilot agents, tabs, bots, message extensions, and Outlook Add-ins. Teams Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
 
 ### Copilot Studio
 

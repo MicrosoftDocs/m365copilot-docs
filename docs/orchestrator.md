@@ -27,7 +27,7 @@ Between the end-user's natural language input to Copilot's natural language outp
 
 The orchestration layer represents the interface between foundation Large Language Models (LLMs) and the many ways you can extend, enrich, and customize Copilot for the way your customers work.
 
-:::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the Microsoft Copilot technology stack. From bottom to top: Microsoft Cloud, AI infrastructure, Your data, Foundation models, AI orchestration, Microsoft Copilots | Your copilots, Teams AI Library, Graph connectors, Plugin extensibility":::
+:::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the AI orchestration layer, situated between Copilot extensibility options and the Microsoft AI Cloud stack (Foundation models, Your data, AI infrastructure)":::
 
 The following chart illustrates how the Microsoft 365 Copilot orchestrator selects the right plugin, with the right skill, at the right time, even when there are multiple options to choose from.
 

@@ -14,7 +14,7 @@ ms.custom: [copilot-learning-hub]
 
 It offers *knowledge*, such as emails, chats, and documents that users have permission to access, and *skills*, such as understanding, summarizing, predicting, recalling, translating, and generating content.
 
-:::image type="content" source="assets/images/anatomy-m365-copilot.png" alt-text="Visual representation of the Copilot for Microsoft 365 system: models, orchestrator, knowledge, skills, and UX" border="false":::
+:::image type="content" source="assets/images/anatomy-m365-copilot.png" alt-text="Visual representation of the Microsoft 365 Copilot system: models, orchestrator, knowledge, skills, and UX" border="false":::
 
 **Copilot extensibility** is the ability to customize and extend Microsoft 365 Copilot with additional knowledge and skills.
 
@@ -141,7 +141,7 @@ Learn more about the two main paths for AI-driven business transformation: exten
 > [!div class="nextstepaction"]
 > [Frequently asked questions](faq.md)
 
-If you're ready to extend Copilot for Microsoft 365, learn more about your extensibility options.
+If you're ready to extend Microsoft 365 Copilot, learn more about your extensibility options.
 
 > [!div class="nextstepaction"]
 > [Choose your Copilot extensibility path](decision-guide.md)
