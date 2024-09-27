@@ -1,6 +1,6 @@
 ---
 title: Copilot in the Microsoft 365 ecosystem
-description: A plugin or connector written for Copilot runs across the Microsoft 365 ecosystem. Learn how to use the Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
+description: A plugin or connector written for Copilot runs across the Microsoft 365 ecosystem. Learn how to leverage the Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
@@ -9,7 +9,7 @@ ms.date: 9/16/2024
 
 # Copilot in the Microsoft 365 ecosystem
 
-When you customize Microsoft 365 Copilot with agents and extend its skills with plugins and knowledge with connectors, you're using the entire Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
+When you customize Microsoft 365 Copilot with agents and extend its skills with plugins and knowledge with connectors, you're leveraging the entire Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
 
 - As a **Developer**, you can *write once, and run anywhere* across the growing list of Microsoft 365 host applications for Copilot and integrated apps. Copilot seamlessly integrates your agents, plugins, and connectors with its entire list of skills and knowledge, making your *integration with Copilot the last one* you'll ever have to perform.
 
@@ -84,4 +84,4 @@ Microsoft 365 Copilot [developer mode](./debugging-copilot-plugin.md) provides a
 
 Microsoft 365 Copilot is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary.  Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more info, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
 
-To learn more as a developer of Copilot extensibility solutions, see [data, Privacy, and Security considerations of extending Microsoft 365 Copilot](./data-privacy-security.md)
+To learn more as a developer of Copilot extensibility solutions, see [Data, Privacy, and Security considerations of extending Microsoft 365 Copilot](./data-privacy-security.md)
