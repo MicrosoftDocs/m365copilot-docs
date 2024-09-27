@@ -1,5 +1,5 @@
 # Copilot Studio Agent Builder 
-<!--- NOTE TO EDITOR: This feature will be released as Extended Preview on September 26, 2024 to a limited group of users and GA on October 9, 2024. --->
+<!--- NOTE TO EDITOR: This feature will be release as GA on October 9, 2024. --->
 
 Build Copilot agents for [Microsoft 365 Copilot](https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly with the Copilot Studio agent builder in Microsoft 365 Business Chat.  <!-- NOTE TO EDITOR: Please align the current Copilot naming with latest marketing changes-->
 
@@ -7,7 +7,7 @@ The Copilot Studio agent builder lets you create and customize Copilot agents th
 
 For example, you might want to create an agent that provides writing or presentation coaching that is tailored to organizational standards or a team onboarding agent that responds with specific information about the user’s new team and helps them complete onboarding tasks. 
 
-![alt text](embedded-authoring-starter.png "Copilot Studio Agent Builder initialization screen") 
+![alt text](/assets/images/copilot-studio-agent-builder/embedded-authoring-starter.png "Copilot Studio Agent Builder initialization screen") 
 
 These agents are also referred to as "[declarative agents](https://learn.microsoft.com/microsoft-365-copilot/extensibility/overview-declarative-agent)", because you can simply *declare* instructions, knowledge and actions to extend Microsoft 365 Copilot. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft Copilot.  You don’t need to understand the intricacies of conversational user experience, turn-based conversations, prompt engineering or modification, or any coding languages. 
 
