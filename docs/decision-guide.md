@@ -124,7 +124,7 @@ The custom engine agents operate on a BYO (Bring Your Own) model. So, your copil
 
 ### Tool options: Pro-code or low-code?
 
-How you build and which tools you must use is up to you. Your choices are:
+How you build and which tools you use are up to you. Your choices are:
 
 - 🎯 **Pro-code**: If you prefer coding for full customization, develop one with [**Teams Toolkit**](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). You can start with either:
   - [**Teams AI Library**](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview) to code, or
