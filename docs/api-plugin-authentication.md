@@ -13,7 +13,7 @@ ms.topic: conceptual
 API plugins for Microsoft 365 Copilot support three authentication schemes to connect to their backend APIs.
 
 - OAuth 2.0 authorization code flow
-- API key
+- API key via [bearer authentication](https://swagger.io/docs/specification/authentication/bearer-authentication/)
 - No authentication (anonymous)
 
 ## OAuth 2.0 authorization code flow
@@ -73,9 +73,9 @@ To use OAuth 2.0 authentication in your plugin, set the `type` property of the [
 },
 ```
 
-## API key
+## API key via bearer auth
 
-This authentication scheme allows a plugin to access an API using a long-lived API key or token. This token is sent in API requests in the `Authorization` header as a bearer token. You cannot define a custom header. This can be represented in an OpenAPI document in the `securitySchemes` property. See [Bearer Authentication](https://swagger.io/docs/specification/authentication/bearer-authentication/) for details.
+This authentication scheme allows a plugin to access an API using a long-lived API key or token. This token is sent in API requests in the `Authorization` header as a bearer token. This can be represented in an OpenAPI document in the `securitySchemes` property. See [Bearer Authentication](https://swagger.io/docs/specification/authentication/bearer-authentication/) for details.
 
 ```yml
 securitySchemes:
@@ -83,6 +83,9 @@ securitySchemes:
     type: http
     scheme: bearer
 ```
+
+> [!NOTE]
+> API plugins don't support the OpenAPI [API key security scheme](https://swagger.io/docs/specification/authentication/api-keys/). APIs that use API keys for authentication must use the bearer authentication security scheme and accept the API key in the `Authorization` header. You can't define a custom header or send the key as a query parameter or cookie.
 
 To use this authentication scheme in a plugin, you must register an API key in the [Teams Developer portal](https://dev.teams.microsoft.com/).
 
