@@ -1,8 +1,8 @@
 ---
 title: How to make an OpenAPI document effective in extending Copilot capabilities.
 description: Learn what makes an OpenAPI description most effective for extending Copilot skills
-author: njaci1
-ms.author: kelvinnjaci
+author: erikadoyle
+ms.author: edoyle
 ms.topic: how-to
 ms.date: 05/21/2024
 ---
