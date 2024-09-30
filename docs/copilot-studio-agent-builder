@@ -31,7 +31,7 @@ You need a license for [Microsoft 365 Copilot](https://www.microsoft.com/microso
 ## Availability and Language Support 
 
 ### Geographic Availability
-The agent builder is available in these geos: Australia, Brazil, Europe, Germany, India, Japan, Switzerland, United Arab Emirates, United Kingdom and United States. 
+The agent builder is available in these geos: Australia, Brazil, Canada, Europe, Germany, India, Japan, Switzerland, United Arab Emirates, United Kingdom and United States. 
 
 In regions where the agent builder is not yet supported, the user has the option to create a Copilot agent in the full version of [Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-get-started?tabs=web)
 
