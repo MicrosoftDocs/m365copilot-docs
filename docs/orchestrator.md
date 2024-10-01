@@ -53,13 +53,11 @@ The following chart illustrates how the Microsoft 365 Copilot orchestrator selec
 
 1. **Responding**: The orchestrator compiles all the information gathered during the reasoning process and submits it to the LLM to create a final response. After ensuring the response complies with Responsible AI guidelines, it sends the response back to the orchestrator, which logs it in the context store and delivers it to the user via the Copilot UI.
 
-1. **Natural language output**
+1. **Natural language output**: Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
-Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
+ If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the _general contractor_, who coordinates and organizes the work of the specialist _subcontractors_, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's input (in other words, that Copilot's response satisfies the user's intent in their request).
 
-If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the _general contractor_, who coordinates and organizes the work of the specialist _subcontractors_, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's input (in other words, that Copilot's response satisfies the user's intent in their request).
-
-However, it's the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This instills a sense of trust in your users and ensure Copilot calls your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
+ However, it's the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This instills a sense of trust in your users and ensure Copilot calls your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
 
 ## Plugin optimization
 
