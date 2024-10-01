@@ -41,9 +41,9 @@ The following chart illustrates how the Microsoft 365 Copilot orchestrator selec
 
    1. **Context and Tool Selection**: The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps.
 
-    The LLM may proceed to generating a response using Copilot’s built-in capabilities, or it may determine that additional data is necessary.
+      The LLM may proceed to generating a response using Copilot’s built-in capabilities, or it may determine that additional data is necessary.
 
-    If further information is needed, the orchestrator does a search for the plugins(tools) with the right skill for the task from the user's enabled plugins based on the plugins descriptions and their functions descriptions.
+      If further information is needed, the orchestrator does a search for the plugins(tools) with the right skill for the task from the user's enabled plugins based on the plugins descriptions and their functions descriptions.
 
    1. **Function Matching and Parameter Determination**: The orchestrator formulates a new prompt incorporating the user’s initial query, the updated context, and the selected plugins, and presents it to the LLM. The LLM evaluates the input and specifies the optimal plugin and function within that plugin to address the task. It then provides the orchestrator with the necessary function details and parameters required to gather the needed information.
 
