@@ -72,14 +72,14 @@ The following table describes the fields that make up the Copilot agent:
 | Knowledge |	You can specify up to 20 knowledge sources (including SharePoint sites, folders, and files) or utilize Graph connections that have been set up by your tenant admin. See the Knowledge section below to learn more. |
 
  
-## Preview Chat 
-The preview chat is an ephemeral instance of the user’s desired Copilot agent that shows up as a side-by-side screen within the authoring experience. It can be used to test the Copilot agent while creating it or while making subsequent updates, so you can test the agent before deploying updates to end users. 
+## Try your Copilot agent
+The agent on the right pane is an ephemeral instance of the user’s desired Copilot agent that shows up as a side-by-side screen within the authoring experience. It can be used to test the Copilot agent while creating it or while making subsequent updates, so you can test the agent before deploying updates to end users. 
 
-Using the preview chat, you can easily test your Copilot agent to experience it in a similar way to end users. The preview chat allows you to enter prompts once you’ve entered or used the Describe tab to add a Name, Description, and Instructions for your Copilot agent. Once entered, it’ll behavior according to those instructions like a fully-fledged Copilot agent, including the ability to respond to complex queries within its realm of specified knowledge. The preview chat updates during each turn of the conversation as new information is added while building the agent. 
+Using the test pane, you can easily test your Copilot agent to experience it in a similar way to end users. It allows you to enter prompts once you’ve entered or used the Describe tab to add a Name, Description, and Instructions for your Copilot agent. Once entered, it’ll behavior according to those instructions like a fully-fledged Copilot agent, including the ability to respond to complex queries within its realm of specified knowledge. The agent updates during each turn of the conversation as new information is added in the Describe or Configure pane. 
 
-Unlike a fully-fledged, created Copilot agent, the preview chat has not yet been created yet. For example, you can’t use the preview agent to share prompts, provide feedback, or @mention other copilots in the Microsoft 365 Copilot app—these features become available after creating the full Copilot agent. 
+Unlike a fully-fledged, created Copilot agent, the agent you see in the test pane has not yet been created yet. For example, you can’t use it to share prompts, provide feedback, or @mention other agents in the Microsoft 365 Copilot app—these features become available after creating the full Copilot agent. 
 
-The preview chat initially appears with suggested starter prompts, which when clicked invokes the prompt and starts the conversation. You can select "New Chat" to start a new conversation with the agent to view the starter prompts again.
+The test pane initially appears with suggested starter prompts, which when clicked invokes the prompt and starts the conversation. You can select "New Chat" to start a new conversation with the agent to view the starter prompts again.
 
 ## Knowledge 
 The agent builder allows you to configure specific knowledge sources for the agent to reference. This feature helps the Copilot agent provide more relevant answers based on specific files, folders, and sites from SharePoint as well as [Microsoft Graph connectors](https://learn.microsoft.com/graph/connecting-external-content-connectors-overview).   
@@ -125,12 +125,12 @@ After selecting a site, you can select several files and folders. Doing so refer
 You can also upload files into SharePoint using the picker. The file will appear in the same folder once it is finished uploading and will be ready for use in agent builder. 
 
 #### File readiness 
-When new files are uploaded to SharePoint, they can take up to several minutes to be ready for Copilot agent to include in its response. You can still test your Copilot agent with the preview chat even if sources are not ready; however, responses will not include information from the newly uploaded file until it is ready. You can check the file readiness by looking in the Knowledge section in the Configure tab; the file will have the word "Processing" next to it. 
+When new files are uploaded to SharePoint, they can take up to several minutes to be ready for Copilot agent to include in its response. You can still test your Copilot agent with the test pane even if sources are not ready; however, responses will not include information from the newly uploaded file until it is ready. You can check the file readiness by looking in the Knowledge section in the Configure tab; the file will have the word "Processing" next to it. 
 
 When the underlying file uploaded to SharePoint has been renamed or deleted, the Copilot agent will pick up the changes. You can also click the reload button on top of the Knowledge section to manually reload the state. 
 
 > [!NOTE] 
-> The Preview Chat can still be used even when certain Knowledge sources are not ready for consumption. The Copilot agent does not provide responses from those sources until it finishes preparation.
+> The test pane can still be used even when certain Knowledge sources are not ready for consumption. The Copilot agent does not provide responses from those sources until it finishes preparation.
 
 ![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-knowledge-preparing.png "Knowledge sources preparing state") 
 
@@ -237,7 +237,7 @@ In your feedback ticket, please detail the issue you are facing and include the 
 - Agent ID
 - Tenant ID
 - Session ID
-- If the issue is related to the Preview Chat or Describe Tab, please also type "/debug" within the chatbox and include the contents in your ticket
+- If the issue is related to the test pane  or Describe Tab, please also type "/debug" within the chatbox and include the contents in your ticket
  You can find and copy these details in the Copilot Studio agent builder within the "Get support" section of the Help dropdown menu.
 
 ![alt text](assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-1.png "Find the support details in Agent Builder")
