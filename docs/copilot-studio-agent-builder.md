@@ -169,7 +169,7 @@ Several sharing options are available:
 | Sharing option                                          | Description |
 | ------------------------------------------------------- | ----------- |
 | Anyone in your organization                             | Anyone in your tenant can use the sharing link to use the Copilot agent. |
-| Specific users in your organization via security groups | Specific user groups can use the sharing link to use the Copilot agent. These user groups must be specified via [security groups](/microsoft-365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide) in your tenant's Microsoft directory. |
+| Specific users in your organization via security groups | Specific user groups can use the sharing link to use the Copilot agent. These user groups must be specified via [security groups](/microsoft-365/admin/email/create-edit-or-delete-a-security-group) in your tenant's Microsoft directory. |
 | Only me                                                 | Only the author of the Copilot agent can use the Copilot agent. The sharing link can't be used by anyone else. This sharing option is selected by default. |
 
 > [!NOTE]
