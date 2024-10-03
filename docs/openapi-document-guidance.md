@@ -1,8 +1,8 @@
 ---
 title: How to make an OpenAPI document effective in extending Copilot capabilities.
 description: Learn what makes an OpenAPI description most effective for extending Copilot skills
-author: njaci1
-ms.author: kelvinnjaci
+author: erikadoyle
+ms.author: edoyle
 ms.topic: how-to
 ms.date: 05/21/2024
 ---
@@ -30,7 +30,7 @@ info:
 
 Additionally add a meaningful description of each operation supported by your API. After Copilot chooses to use a plugin based on the user's prompt and the plugin description, it searches through the descriptions of the paths to determine the endpoint to use to satisfy the user's request.
 
-Operation IDs are shown during debugging as functions to indicate which operations Copilot is attempting to execute. Here's a sample of an openAPI document and a sample of the corresponding debugger output:
+Operation IDs are shown during debugging as functions to indicate which operations Copilot is attempting to execute. Here's a sample of an OpenAPI document and a sample of the corresponding debugger output:
 
 ```yaml
 paths:
@@ -59,7 +59,7 @@ parameters:
     required: false
 ```
 
-**Responses:** Clearly define all possible responses for each operation, including both success and error responses. Each response should have a status code and a description of what it represents. Including examples of responses helps Copilot to understand what to expect from the API.
+**Responses:** Clearly define all possible responses for each operation, including both success and error responses. Each response must have a status code and a description of what it represents. Including examples of responses helps Copilot to understand what to expect from the API.
 
 ```yaml
 responses:
