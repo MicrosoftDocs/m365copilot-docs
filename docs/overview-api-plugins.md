@@ -15,7 +15,7 @@ API plugins enable Microsoft 365 Copilot to interact with REST APIs that are des
 
 An API plugin provides an OpenAPI description document and a plugin manifest that Copilot uses to learn the capabilities of the API. Copilot can then decide when an installed and enabled plugin's API is suited to answer any given prompt. To learn more about the manifest file that an API plugin requires, see [API plugin manifest schema for Microsoft 365 Copilot](./api-plugin-manifest.md).
 
-For example, consider a budgets API that allows for querying and creating budgets, as well as charging expense or adding funds to existing budgets. The prompt "How much is left in the Contoso travel budget" could trigger a budget plugin, making the following API call.
+For example, consider a budgets API that allows for querying and creating budgets, and charging expense or adding funds to existing budgets. The prompt "How much is left in the Contoso travel budget" could trigger a budget plugin, making the following API call.
 
 ```http
 GET /budgets?name=contoso%20travel
@@ -42,9 +42,9 @@ Copilot responds to the user, using the information returned: "The charge of $50
 
 Copilot asks the user before sending any data to an API plugin.
 
-:::image type="content" source="assets/images/api-plugins/get-always-allow.png" alt-text="A screenshot of a plugin confirmation dialog":::
+:::image type="content" source="assets/images/api-plugins/get-always-allow.png" alt-text="A screenshot of a plugin confirmation dialog.":::
 
-By default, APIs that only retrieve data give the user an "Always allow" option, while APIs that modify data do not. Plugin developers can override these defaults. For details, see [Confirmation prompts for API plugins for Microsoft 365 Copilot](api-plugin-confirmation-prompts.md).
+By default, APIs that only retrieve data give the user an "Always allow" option, while APIs that modify data do not. Plugin developers can override these defaults. For more information, see [confirmation prompts for API plugins for Microsoft 365 Copilot](api-plugin-confirmation-prompts.md).
 
 ## Customizing response presentation
 

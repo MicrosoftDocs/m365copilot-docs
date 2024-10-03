@@ -9,7 +9,7 @@ ms.date: 09/26/2024
 
 # Data, Privacy, and Security considerations of extending Microsoft 365 Copilot 
 
-When you extend Copilot's repertoire of skills with a plugin, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin to generate a response or complete a command. When you extend Copilot with a Microsoft Graph connector, your external data is ingested into Microsoft Graph and remains in your tenant. This article outlines data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
+When you extend Copilot's list of skills with a plugin, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin to generate a response or complete a command. When you extend Copilot with a Microsoft Graph connector, your external data is ingested into Microsoft Graph and remains in your tenant. This article outlines data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
 
 :::image type="content" source="assets/images/validation-principles.png" alt-text="Diagram key considerations for developing Copilot extensibility: Enterprise security and trust, Responsible AI, High-quality user experience, High-value functionality" border="false":::
 
