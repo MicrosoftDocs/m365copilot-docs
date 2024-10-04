@@ -116,7 +116,7 @@ The Copilot agent can reference specific SharePoint sites, files, and folders as
 
 #### Entering a URL for a SharePoint site or folder
 
-You can enter a URL for a SharePoint site or folder, such as `contoso.sharepoint.com/sites/policies`. The Copilot agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like *contoso.sharepoint.com/sites/policies*. The Copilot agent uses relevant information to provide a targeted response.
+You can enter a URL for a SharePoint site or folder, such as `contoso.sharepoint.com/sites/policies`. The Copilot agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The Copilot agent uses relevant information to provide a targeted response.
 
 > [!NOTE]
 >
