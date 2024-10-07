@@ -24,7 +24,6 @@ You can build agents from the following apps and sites:
 - microsoft365.com/chat
 - office.com/chat
 - Microsoft Teams Desktop and web client
-- Microsoft Outlook Desktop and web client
 
 > [!NOTE]
 > Agent builder is only available under the Work section of Microsoft 365 Copilot app. It is not available on mobile versions of these apps and sites, or for Microsoft 365 Copilot locations that are not listed in this article.
