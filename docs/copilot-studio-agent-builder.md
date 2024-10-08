@@ -52,7 +52,7 @@ The following authoring languages are supported: `cs-CZ`, `da-DK`, `de-DE`, `el-
 
 ## Author a Copilot agent
 
-The Agent builder allows you to author a Copilot agent in two ways: either using natural language (**Describe** tab) or manually (**Configure** tab). Both tabs work seamlessly to provide a rich authoring experience.
+The agent builder allows you to author a Copilot agent in two ways: either using natural language (**Describe** tab) or manually (**Configure** tab). Both tabs work seamlessly to provide a rich authoring experience.
 
 The availability of the **Describe** tab is based on geographic availability and language support. The **Describe** tab only supports English. When the authoring language is set to English, the **Describe** tab is available in the following regions: Australia, India, Japan, United Arab Emirates, United Kingdom, and United States. You can build your agent via the **Configure** tab if the **Describe** tab is unsupported in your region or preferred language.
 
@@ -257,7 +257,7 @@ You can find and copy these details in the Copilot Studio agent builder within t
 
 ## Governance
 
-Admins can govern this feature by revoking access to the Copilot Studio in Copilot for M365 application within the Microsoft 365 Copilot license in the Microsoft admin center. To learn more about the Microsoft 365 Copilot license, see [Microsoft Microsoft 365 Copilot—Features and Plans](https://www.microsoft.com/microsoft-365/copilot/enterprise). To learn more about how to assign or unassign licenses for users in the Microsoft 365 admin center, see [Assign or unassign licenses](/microsoft-365/admin/manage/assign-licenses-to-users).
+Admins can govern this feature by revoking access to the **Copilot Studio in Copilot for M365** application within the Microsoft 365 Copilot license in the Microsoft admin center. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise). To learn more about how to assign or unassign licenses for users in the Microsoft 365 admin center, see [Assign or unassign licenses](/microsoft-365/admin/manage/assign-licenses-to-users).
 
 ## Compliance
 
