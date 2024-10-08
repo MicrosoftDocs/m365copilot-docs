@@ -12,6 +12,8 @@ Building a declarative agent allows you to craft your own copilot by declaring i
 
 [!INCLUDE [preview-disclaimer-declarative-agents](includes/preview-disclaimer-declarative-agents.md)]
 
+[!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
+
 ## Tailor declarative agents for your scenario
 
 Declarative agents are powered by Microsoft 365 Copilot, therefore they utilize the same scalable infrastructure and platform while their purposes are designed for your business needs. Learn more about the use cases for declarative agents by taking a look at these two example scenarios:

@@ -12,6 +12,8 @@ ms.date: 05/10/2024
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer-declarative-agents.md)]
 
+[!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
+
 > [!NOTE]
 >
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Copilot:
