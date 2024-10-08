@@ -33,7 +33,7 @@ In addition, users can hover over in-text citations in Microsoft 365 Copilot res
 
 ![A screenshot of hovering over a Graph connectors response in Microsoft 365 Copilot](assets/images/connectors-copilot-hover.png)
 
-If users desire to dive deeper into the referenced content, they can click on one of the reference links at the bottom of the response.
+If users desire to dive deeper into the referenced content, they can select one of the reference links at the bottom of the response.
 
 ![A screenshot of Graph connectors reference list in Microsoft 365 Copilot](assets/images/connectors-copilot-logo.png)
 
@@ -56,7 +56,7 @@ Visit the connectors gallery to find all the information you need to get started
 
 ## Create your own custom Microsoft Graph connection
 
-You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph. You can use the Microsoft Graph connectors APIs to create and manage external Microsoft Graph connections, define and register the schema of external data types, ingest external data items into Microsoft Graph, and sync external groups.
+You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph. You can use the Microsoft Graph connectors APIs to create and manage external Microsoft Graph connections, define, and register the schema of external data types, ingest external data items into Microsoft Graph, and sync external groups.
 
 ## Configuring your custom Microsoft Graph connection for Microsoft 365 Copilot
 
@@ -68,9 +68,10 @@ To make sure that Microsoft 365 Copilot uses your content effectively:
 - Add [user activities](/graph/api/externalconnectors-externalitem-addactivities) on your items. For a list of supported activity types, see [externalActivity](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in importance.
 - Provide meaningful descriptions in the `description` property when [creating connections](/graph/api/externalconnectors-external-post-connections). Rich descriptions improve the likelihood of displaying content in Copilot.
 
-In addition, search administrators should ensure that your Graph Connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical), using the following steps.
+In addition, search administrators must ensure that your Graph Connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical), using the following steps.
 
-- Open the Admin Center, go to **Search & intelligence** > **Customizations** > **Verticals** and select the **All** vertical.
+- Open the [Admin Center](https://admin.microsoft.com/), go to **Search & intelligence** > **Customizations** > **Verticals** and select **All**.
+
 - Select **Manage connector result**. Ensure that **Show results inline** is selected and that the connections that you want to enable for Search and Copilot are checked.
 
 ## See also

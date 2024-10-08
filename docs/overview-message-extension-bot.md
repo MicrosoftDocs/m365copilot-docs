@@ -11,7 +11,7 @@ ms.date: 09/16/2024
 
 ## What are message extensions?
 
-Message extensions are a powerful feature in Microsoft Teams, as well as in Outlook, designed to facilitate user engagement with your web service. Additionally, they allow users to interact with your app directly from the chat interface.
+Message extensions are a powerful feature in Microsoft Teams, and in Outlook, designed to facilitate user engagement with your web service. Additionally, they allow users to interact with your app directly from the chat interface.
 
 These interactions are typically triggered via buttons and forms within Microsoft Teams and Outlook clients. This mechanism allows users to search or initiate actions in an external system, right from the compose message area, or even directly from a message. The outcomes of these interactions are delivered back to the client in the form of a richly formatted card.
 
@@ -38,7 +38,7 @@ Your users can do so much more than just getting search queries. With the integr
 
 ## Build message extensions using Bot Framework
 
-There are a few ways to build [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), but to extend the capabilities for Copilot, you need to built one with [Bot Framework](https://dev.botframework.com/) SDK, commonly used to create a variety of bots, including Teams bots.
+There are a few ways to build [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), but to extend the capabilities for Copilot, you need to build one with [Bot Framework](https://dev.botframework.com/) SDK, commonly used to create various bots, including Teams bots.
 
 For development, you can use [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) for Visual Studio Code to build your message extensions. The toolkit helps you to create a project by scaffolding a template that suits your needs!
 
