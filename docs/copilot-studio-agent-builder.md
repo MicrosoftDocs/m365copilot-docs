@@ -261,32 +261,12 @@ Admins can govern this feature by revoking access to the **Copilot Studio in Cop
 
 ## Compliance
 
-### Data Subject Rights
-
-The European Union (EU) General Data Protection Regulation (GDPR) gives significant rights to individuals regarding their data. Refer to the Microsoft Learn [General Data Protection Regulation Summary](/compliance/regulatory/gdpr) for an overview of GDPR, including terminology, an action plan, and readiness checklists to help you meet your obligations under GDPR when using Microsoft products and services.
-
-You can learn more about GDPR and how Microsoft helps support it and our customers affected by it.
-
-- The [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/gdpr-overview) provides general information, compliance best practices, and documentation helpful to GDPR accountability, such as Data Protection Impact Assessments, Data Subject Requests, and data breach notification.
-- The [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) provides information about how Microsoft services help support compliance with GDPR.
-
-For more information and guidance, see the [Dynamics 365 Data Subject Requests guide](/compliance/regulatory/gdpr-dsr-dynamics365).
-
-To delete your agent data, see [Delete your Copilot agent](#delete-your-copilot-agent).
-
-> [!NOTE]
-> Because access to your agent is managed by your Microsoft Entra ID tenant administrator, other users with admin permissions have access to your agent content.
-
-### Requests to rectify personal data (Admin only)
-
-If a data subject asks you to rectify their personal data that resides in your organization, you and your organization must determine if it's appropriate to honor the request. Rectifying the data might include taking actions such as editing, redacting, or removing personal data.
-
-You can use Microsoft Entra to manage Copilot Studio users' identities. Enterprise customers can manage personal data rectify requests, including limited editing features, per the nature of a given Microsoft service. As a data processor, Microsoft doesn't offer the ability to correct system-generated logs because these logs reflect factual activities and constitute a historical record of events within Microsoft services.
+For information about data subject rights and responding to requests to rectify personal data, see [Personal data requests for Copilot Studio](/microsoft-copilot-studio/personal-data-summary).
 
 ## Known Limitations
 
 - Only general web browsing, Microsoft Graph connectors, SharePoint sites, folders, and files can be specified as knowledge sources. You can upload your local folders and files into SharePoint. Specifying specific public URL as a knowledge source isn't supported.
 - Share with specific users in the organization only supports security groups and not individual users.
-- Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You'll need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
+- Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
 - Agent builder doesn't yet support [Lockbox](/power-platform/admin/about-lockbox) or [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview).
 - Agents created via Copilot Studio agent builder can't be used in Teams Chat.
