@@ -51,7 +51,6 @@ Set the environment variable **TEAMSFX_DECLARATIVE_COPILOT** and **KIOTA_CONFIG_
 Open a PowerShell terminal and run the following commands.
 
 ```powershell
-[Environment]::SetEnvironmentVariable("TEAMSFX_DECLARATIVE_COPILOT", 'true', "User")
 [Environment]::SetEnvironmentVariable("KIOTA_CONFIG_PREVIEW", "true", "User")
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 ```
@@ -61,7 +60,6 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 Open your environment configuration file (for example, **~/.bashrc** or **~/.zshrc**) and add the following line:
 
 ```bash
-sudo echo 'export TEAMSFX_DECLARATIVE_COPILOT=true' >> ~/.bashrc
 sudo echo 'export KIOTA_CONFIG_PREVIEW=true' >> ~/.bashrc
 source ~/.bashrc
 ```
@@ -71,7 +69,6 @@ source ~/.bashrc
 Open your environment configuration file (`sudo vi /etc/launchd.conf`) and add the following line:
 
 ```bash
-setenv TEAMSFX_DECLARATIVE_COPILOT true
 setenv KIOTA_CONFIG_PREVIEW true
 egrep -v '^\s*#' /etc/launchd.conf | launchctl
 ```
