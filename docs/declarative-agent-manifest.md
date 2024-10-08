@@ -125,8 +125,8 @@ The OneDrive and SharePoint object contains the following properties.
 | Property                  | Type                                                                       | Description |
 | ------------------------- | -------------------------------------------------------------------------- | ----------- |
 | `name`                    | String                                                                     | Required. Must be set to `OneDriveAndSharePoint`. |
-| `items_by_sharepoint_ids` | Array of [Items by SharePoint IDs object](#items-by-sharepoint-ids-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. |
-| `items_by_url`            | Array of [Items by URL object](#items-by-url-object)                       | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. |
+| `items_by_sharepoint_ids` | Array of [Items by SharePoint IDs object](#items-by-sharepoint-ids-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If both the `items_by_sharepoint_ids` and the `items_by_url` properties are omitted, all OneDrive and Sharepoint sources in the organization are available to the declarative agent. |
+| `items_by_url`            | Array of [Items by URL object](#items-by-url-object)                       | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If both the `items_by_sharepoint_ids` and the `items_by_url` properties are omitted, all OneDrive and Sharepoint sources in the organization are available to the declarative agent. |
 
 ##### Items by SharePoint IDs object
 
@@ -159,7 +159,7 @@ The Microsoft Graph connectors object contains the following properties.
 | Property      | Type                                             | Description |
 | ------------- | ------------------------------------------------ | ----------- |
 | `name`        | String                                           | Required. Must be set to `GraphConnectors`. |
-| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Microsoft Graph connectors available to the declarative agent. |
+| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Microsoft Graph connectors available to the declarative agent. If this property is omitted, all Microsoft Graph connectors in the organization are available to the declarative agent. |
 
 ##### Connection object
 

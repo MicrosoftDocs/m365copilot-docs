@@ -26,9 +26,9 @@ ms.topic: how-to
 
     :::image type="content" source="assets/images/api-plugins/create-plugin-ttk.png" alt-text="A screenshot of the Teams Toolkit interface":::
 
-1. Select **Copilot Extension**, then select **API Plugin**.
+1. Select **Copilot Agent**, then select **Declarative Agent**.
 
-1. Select **Start with a new API**.
+1. Select **Add plugin**, then select **Start with a new API**.
 
 1. Select **OAuth** for the **Authentication Type**.
 
@@ -36,7 +36,7 @@ ms.topic: how-to
 
 1. Choose a location for the API plugin project.
 
-1. Enter a name for your plugin project.
+1. Enter `Repairs Agent` as a name for your plugin project.
 
 Once you complete these steps, Teams Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded. For details on the project, see the **README.md** file in the generated project's root directory.
 
@@ -58,7 +58,7 @@ Teams Toolkit builds the project, creates the plugin package, and sideloads it f
 
 1. In Microsoft Teams in your browser, select **Copilot**.
 
-1. In the message compose area, select the **Plugins** icon, then enable **testlocal** in the **Plugins** flyout.
+1. Select **Repairs Agentlocal** in the Copilot agents list on the right-hand side. If the list isn't available, select the **Copilot chats and more** icon in the top right corner.
 
 1. Send a message to Copilot about repairs. For example, try `Which repairs are assigned to Karin?`.
 
@@ -84,6 +84,6 @@ Once you complete these steps, the plugin is deployed as an Azure Function with 
 
 1. In Microsoft Teams in your browser, select **Copilot**.
 
-1. In the message compose area, select the **Plugins** icon, then enable **testdev** in the **Plugins** flyout.
+1. Select **Repairs Agentdev** in the Copilot agents list on the right-hand side.
 
 1. Send a message to Copilot about repairs. For example, try `Which repairs are assigned to Issac?`.
