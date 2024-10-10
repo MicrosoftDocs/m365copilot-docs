@@ -10,37 +10,38 @@ ms.date: 05/10/2024
 <!-- markdownlint-disable MD024 MD051 -->
 # Build a declarative agent for Microsoft 365 Copilot
 
+A declarative agent is a customized version of Microsoft 365 Copilot that allows users to create personalized experiences by declaring specific instructions, actions, and knowledge. This article provides information about how to build a declarative agent by using Teams Toolkit and Teams Toolkit CLI.
+
+The following image shows a declarative agent built by using Teams Toolkit.
+
+:::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
+
+For overview information, see [Declarative agents for Microsoft 365 Copilot](overview-declarative-agent.md).
+
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer-declarative-agents.md)]
 
 [!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
 
-> [!NOTE]
-> Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Copilot:
->
-> - A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
-> - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a Microsoft 365 Copilot license.
-
-## What is a declarative agent?
-
-:::image type="content" source="assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
-
-For an overview on declarative agents, see [Declarative agents for Microsoft 365 Copilot](overview-declarative-agent.md).
-
-[!INCLUDE [security-note](includes/security-on-das-note.md)]
-
 ## Prerequisites
+
+Before you start, make sure that Microsoft 365 Copilot is available for your organization. The following options are available for your development environment:
+
+- A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
+- An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a Microsoft 365 Copilot license.
+
+The following resources are required to complete the steps described in this article:
 
 - [Teams Toolkit CLI](/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-three#get-started) beta version
 - [Teams Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-a-prerelease-version) prerelease version
 - [Kiota .NET tool](/openapi/kiota/install#install-as-net-tool) prerelease version
 
-Before you get started, ensure that you're familiar with the following standards and guidelines for declarative agents for Microsoft 365 Copilot:
+Make sure that you're familiar with the following standards and guidelines for declarative agents for Microsoft 365 Copilot:
 
-- Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
+- Standards for compliance, performance, security, and user experience described in [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
 
 ## Create a declarative agent
 
-Let's create a declarative agent where you can provide instructions, grounding in Microsoft 365 data, and integration with existing APIs via plugins.
+The following steps describe how to create a declarative agent where you can provide instructions, grounding in Microsoft 365 data, and integration with existing APIs via plugins.
 
 ### [Teams Toolkit](#tab/ttk)
 
@@ -269,7 +270,7 @@ The declarative agent will have access to OneDrive and SharePoint content to gen
 
 :::image type="content" source="assets/images/build-dc/ttk-copilot-dc-od-sp.png" alt-text="Screenshot shows the OneDrive and SharePoint content from the declarative agent in Microsoft 365 Copilot.":::
 
-## Add Graph Connectors knowledge
+## Add Microsoft Graph connectors knowledge
 
 Open the `appPackage/declarativeCopilot.json` file and add to the `capabilities` array the following content:
 
@@ -301,8 +302,8 @@ Open the `appPackage/declarativeCopilot.json` file and add to the `capabilities`
 
 > [!NOTE]
 >
-> - Replace `foodStore` with your Graph Connectors connection ID.
-> - Not specifying the `connections` array will default to the entire corpus of Graph Connectors content available to the logged in user.
+> - Replace `foodStore` with your Microsoft Graph connectors connection ID.
+> - Not specifying the `connections` array will default to the entire corpus of Microsoft Graph connectors content available to the logged in user.
 
 ### [Teams Toolkit](#tab/ttk)
 
@@ -318,9 +319,9 @@ teamsapp provision --env dev
 
 ---
 
-The declarative agent will have access to GraphConnectors content to generate its answers after you reload the page.
+The declarative agent will have access to Microsoft Graph connectors content to generate its answers after you reload the page.
 
-:::image type="content" source="assets/images/build-dc/ttk-copilot-dc-gc.png" alt-text="Screenshot shows Graph Connectors content from the declarative agent in Microsoft 365.":::
+:::image type="content" source="assets/images/build-dc/ttk-copilot-dc-gc.png" alt-text="Screenshot shows Microsoft Graph connectors content from the declarative agent in Microsoft 365.":::
 
 ## Add a plugin
 
@@ -405,9 +406,10 @@ teamsapp provision --env dev
 
 The declarative agent will have access to your updated instructions after you reload the page.
 
-## Ensuring Responsive Adaptive Cards Across Microsoft 365 Copilot Hubs
+## Ensure responsive Adaptive Cards across Microsoft 365 Copilot hubs
 
-It's crucial that adaptive cards are designed to be responsive across various surface sizes. This ensures a seamless user experience, regardless of the device or platform being used. To achieve this, it's essential to validate the adaptive cards on different Microsoft 365 Copilot hubs, including Teams, Word, and PowerPoint. By doing so, we can ensure that the adaptive cards function optimally and provide a consistent experience across all platforms. The following are some best practices:
-- In some apps, Adaptive Cards would be rendered at a maximum width of 276px. Optimize the responsiveness of the card's content so that it renders well at this size.
-- Using a single column layout for the adaptive content is optimal for smaller width viewports.
-- Using percentages to define the width of elements within the Adaptive Cards is recommended.
+Adaptive cards must be designed to be responsive across various surface sizes. This ensures a seamless user experience, regardless of the device or platform being used. To achieve this, make sure to validate the adaptive cards on different Microsoft 365 Copilot hubs, including Teams, Word, and PowerPoint. Doing so ensures that the adaptive cards function optimally and provide a consistent experience across all platforms. Apply the following best practices:
+
+- In some apps, Adaptive Cards are rendered at a maximum width of 276px. Optimize the responsiveness of the card's content so that it renders well at this size.
+- Use a single column layout for the adaptive content for smaller width viewports.
+- Use percentages to define the width of elements within the Adaptive Cards.
