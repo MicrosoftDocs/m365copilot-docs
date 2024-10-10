@@ -577,3 +577,10 @@ To improve the instructions of your declarative agent, follow these steps:
 ---
 
 * The declarative agent will have access to your updated instructions after you reload the page.
+
+## Ensuring Responsive Adaptive Cards Across Microsoft 365 Copilot Hubs
+
+It's crucial that adaptive cards are designed to be responsive across various surface sizes. This ensures a seamless user experience, regardless of the device or platform being used. To achieve this, it's essential to validate the adaptive cards on different Microsoft 365 Copilot hubs, including Teams, Word, and PowerPoint. By doing so, we can ensure that the adaptive cards function optimally and provide a consistent experience across all platforms. The following are some best practices:
+- In some apps, Adaptive Cards would be rendered at a maximum width of 276px. Please optimize the responsiveness of the card's content so that it renders well at this size.
+- Using a single column layout for the adaptive content is optimal for smaller width viewports.
+- Using percentages to define the width of elements within the Adaptive Cards is recommended.
