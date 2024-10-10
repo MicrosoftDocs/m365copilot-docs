@@ -38,6 +38,10 @@ For information regarding regional availability and supported languages, see [Co
 
 Admins can govern this feature by revoking access to the **Copilot Studio in Copilot for M365** application within the Microsoft 365 Copilot license in the Microsoft admin center. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise). To learn more about how to assign or unassign licenses for users in the Microsoft 365 admin center, see [Assign or unassign licenses](/microsoft-365/admin/manage/assign-licenses-to-users).
 
+## Data processing
+
+Copilot Studio capabilities for Microsoft 365 are processed by the Copilot Studio service and may enable data flow both to and from Microsoft 365 and Copilot Studio. This data may include Microsoft 365 data, prompts, instructions, configurations, and output content. Use of the integrated Copilot Studio and Microsoft 365 services is governed by the respective [product terms](https://go.microsoft.com/fwlink/?linkid=2173816) and compliance commitments.
+
 ## Compliance
 
 For information about data subject rights and responding to requests to rectify personal data, see [Personal data requests for Copilot Studio](/microsoft-copilot-studio/personal-data-summary).
