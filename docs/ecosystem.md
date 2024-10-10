@@ -21,7 +21,7 @@ The agents, plugins, and connectors you build for Copilot are part of the larger
 
 :::image type="content" source="assets/images/copilot-architecture.png" alt-text="Diagram that shows the flow of data across components of Microsoft 365 Copilot ecosystem" lightbox="assets/images/copilot-architecture.png":::
 
-*The Copilot system uses data from a plugin in two stages: (1) matching the users's prompt to the most relevant skill and parameters, and (2) determining which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response back to the user.*
+*The Copilot system uses data from a plugin in two stages: (1) matching the user's prompt to the most relevant skill and parameters, and (2) determining which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response back to the user.*
 
 You can build extend, enrich, and customize Copilot for the unique way your customers work. And as part of the broader Microsoft 365 ecosystem, your Copilot agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and a host of development tools and support.
 
