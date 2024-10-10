@@ -18,7 +18,7 @@ ms.topic: how-to
 
 - Requirements specified in [Requirements for plugin development](prerequisites.md#requirements-for-developing-agents-and-plugins)
 - An existing REST API with an OpenAPI specification (this walkthrough uses the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin))
-- [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.9 or later (if using Teams Toolkit to generate the plugin)
+- [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.9 or later
 - [Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit)
 - Optional: [Microsoft Kiota Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-graph.kiota)
 
@@ -60,9 +60,9 @@ API plugins are a ZIP file that contains the following files.
 
     :::image type="content" source="assets/images/api-plugins/create-plugin-ttk.png" alt-text="A screenshot of the Teams Toolkit interface":::
 
-1. Select **Copilot Extension**, then select **API Plugin**.
+1. Select **Copilot Agent**, then select **Declarative Agent**.
 
-1. Select **Start with an OpenAPI Description Document**.
+1. Select **Add plugin**, then select **Start with an OpenAPI Description Document**.
 
 The next steps differ depending on if you enabled Microsoft Kiota or not.
 
@@ -137,6 +137,10 @@ Your plugin is now available to test with your user account in Microsoft 365 Cop
 
 1. Select **Copilot** in the **Chat** pane.
 
-1. In the message compose area, select the **Plugins** icon, then enable **Budget Tracker** in the **Plugins** flyout.
+1. Select **Budget Tracker** in the Copilot agents list on the right-hand side. If the list isn't available, select the **Copilot chats and more** icon in the top right corner.
 
-    :::image type="content" source="assets/images/api-plugins/enable-plugin.png" alt-text="The Budget Tracker plugin enabled in the Plugins flyout":::
+    :::image type="content" source="assets/images/api-plugins/copilot-agents.png" alt-text="A screenshot of the Copilot agents list in Microsoft Teams":::
+
+1. Ask a question about budgets. For example, try `How much is left in the Fourth Coffee lobby renovation budget?`. When prompted, choose **Always allow** or **Allow once** to proceed.
+
+1. When asked to sign in, select **Sign in to Budget Tracker**.

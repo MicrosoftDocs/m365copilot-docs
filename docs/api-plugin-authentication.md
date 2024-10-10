@@ -43,6 +43,9 @@ To use this authentication scheme in a plugin, you must register an OAuth client
 
 ### Register an OAuth client
 
+> [!NOTE]
+> If your OAuth provider requires specifying allowed redirect URIs when registering your app, include `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` in the allowed redirect URIs.
+
 1. Open your browser and browse to the [Teams apps developer portal](https://dev.teams.microsoft.com/tools). Select **Tools** in the left-hand navigation.
 
 1. Select **OAuth client registration**. If you have no existing registrations, select **Register client**; if you have existing registrations, select **New OAuth client registration**.
