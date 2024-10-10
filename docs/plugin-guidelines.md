@@ -95,6 +95,5 @@ Respond to user input with structured, actionable, and visually rich [Adaptive C
 
 ## See also
 
-[Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
-
-[Publish plugins and Graph connectors for Copilot](./publish.md)
+- [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
+- [Publish plugins and Graph connectors for Copilot](./publish.md)
