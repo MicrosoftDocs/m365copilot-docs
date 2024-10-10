@@ -24,7 +24,9 @@ For overview information, see [Declarative agents for Microsoft 365 Copilot](ove
 
 ## Prerequisites
 
-Before you start, make sure that Microsoft 365 Copilot is available for your organization. The following options are available for your development environment:
+Before you start, make sure that Microsoft 365 Copilot is available for your organization. 
+
+The following options are available for your development environment:
 
 - A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a Microsoft 365 Copilot license.
