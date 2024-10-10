@@ -147,7 +147,7 @@ To learn more, see the [Developer preview app manifest schema reference](/micros
 
 Declarative agents and API plugins each have their own definition schemas. The definition file for a declarative agent is referenced from the `copilotExtensions` object of the app manifest.
 
-The following example references a declarative agent:
+The following example shows how to reference a declarative agent:
 
 ```json
     "copilotExtensions": {
