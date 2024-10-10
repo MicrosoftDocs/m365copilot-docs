@@ -13,7 +13,7 @@ ms.date: 09/16/2024
 
 When you build a Copilot agent, you're also building an app for Microsoft 365. Apps for Microsoft 365 share a common manifest schema and packaging format, and unified distribution and management processes and tools. The end result is that your apps and Copilot agents reach the widest possible audience and appear contextually within the workflow of your users.
 
-This article will walk you through the key parts of the Microsoft 365 app model for Copilot agent development.
+This article walks you through the key parts of the Microsoft 365 app model for Copilot agent development.
 
 ## App model for Microsoft 365
 
@@ -90,7 +90,7 @@ Your outline icon:
 
 The app manifest for Microsoft 365 is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package), however it has since expanded (since version 1.13) to define apps that run across Microsoft 365 hosts, in addition to Teams.
 
-If you're using Microsoft Copilot Studio to build a declarative agent, the app manifest will be generated for you based on the info you provide during the creation process.
+If you're using Microsoft Copilot Studio to build a declarative agent, the app manifest is generated for you based on the info you provide during the creation process.
 
 Every app manifest must include the following information:
 
@@ -105,7 +105,7 @@ Every app manifest must include the following information:
 | [accentColor](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#accentColor?context=/microsoft-365-copilot/extensibility/context) | A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.|
 | *Definitions for specific app capabilities* | A definition for each app capability, such as personal tabs ([staticTabs](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#staticTabs?context=/microsoft-365-copilot/extensibility/context)), message extensions ([composeExtensions](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeExtensions?context=/microsoft-365-copilot/extensibility/context)), or [bots](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#bots?context=/microsoft-365-copilot/extensibility/context). Declarative agents and API plugins are defined under the [copilotExtensions](#copilotextensions-definitions) node.
 
-Here's an example app manifest with placeholder sections at the end for message extension and declarative agent app capabilities:
+The following example shows an app manifest with placeholder sections at the end for message extension and declarative agent app capabilities:
 
 ```json
 {
@@ -147,7 +147,7 @@ To learn more, see the [Developer preview app manifest schema reference](/micros
 
 Declarative agents and API plugins each have their own definition schemas. The definition file for a declarative agent is referenced from the `copilotExtensions` object of the app manifest.
 
-Here's an example that references a declarative agent:
+The following example shows how to reference a declarative agent:
 
 ```json
     "copilotExtensions": {
@@ -168,7 +168,7 @@ Please note the following:
 
 - Currently only one declarative agent definition is supported per app manifest. Only one API plugin is supported per declarative agent.
 
-- When using Copilot Studio to build Copilot agents, a unique `id` will be generated for each, as part of the overall app manifest generation. When building agents with Teams Toolkit or your own IDE, you assign the `id` yourself, according to your own conventions or friendly name.
+- When you use Copilot Studio to build Copilot agents, a unique `id` is generated for each, as part of the overall app manifest generation. When building agents with Teams Toolkit or your own IDE, you assign the `id` yourself, according to your own conventions or friendly name.
 
 ## Declarative agent manifest
 
@@ -178,7 +178,7 @@ To learn more, see [Declarative agent manifest schema for Microsoft 365 Copilot]
 
 ## API plugin manifest
 
-The API plugin manifest describes the plugin's capabilities, including the the APIs it supports and the operations it can perform. It also includes metadata such as name, description, version, and a reference to the OpenAPI definition of the REST APIs with which it interacts. API plugins can be referenced from a declarative agent manifest to be used within the declarative agent experience.
+The API plugin manifest describes the plugin's capabilities, including the APIs it supports and the operations it can perform. It also includes metadata such as name, description, version, and a reference to the OpenAPI definition of the REST APIs with which it interacts. API plugins can be referenced from a declarative agent manifest to be used within the declarative agent experience.
 
 To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest.md).
 
@@ -190,13 +190,13 @@ You'll use the same localization file (per language) for both classic Teams app 
 
 :::image type="content" source="assets/images/loc-manifest.png" alt-text="Diagram showing the relationship between app manifest, declarative agent manifest, and a language file for the purposes of localizing a Copilot agent":::
 
-Following are the steps for supporting additional languages (beyond the default) to your Copilot agents.
+The following steps show how to support additional languages (beyond the default) for your Copilot agents.
 
 ### 1. Update your Copilot agent manifest(s) with tokenized keys
 
 Update your declarative agent and/or API plugin manifests with tokenized keys (indicated with double square brackets, for example `[[PLUGIN_NAME]]`) for any field values you wish to localize. Localization keys much match this regular expression: `^[a-zA-Z_][a-zA-Z0-9_]*$`
 
-Here's an example declarative agent manifest with tokenized values for its name and description:
+The following example shows a declarative agent manifest with tokenized values for its name and description:
 
 ```json
 {
@@ -213,7 +213,7 @@ Add the `localizationInfo` section to your app manifest, with [language tags](/g
 
 If your Copilot agent supports more than one language, then you must specify a standalone language file for every supported language, *including your default language*.
 
-Here's an example localization info section in app manifest:
+The following example shows the localization info section in an app manifest:
 
 ```json
 "localizationInfo": {
@@ -234,7 +234,7 @@ If your Copilot agent doesn't support additional languages, the default language
 
 Create a localization file for each additional supported language with values for the tokenized keys, using the file names specified (for `defaultLanguageFile` and `file` properties) in app manifest from the previous step.
 
-Here's an example language file, `fr.json`, with localized strings for both a Copilot agent and personal tabs:
+The following example show a language file, `fr.json`, with localized strings for both a Copilot agent and personal tabs:
 
 ```json
 {
