@@ -84,7 +84,7 @@ After providing the SharePoint site URL, press **Enter** to add it as a knowledg
 
 #### Opening the SharePoint file picker
 
-You can also select files or folders from the SharePoint file picker. The left pane displays your OneDrive Business files and recently accessed SharePoint sites. You can view more SharePoint sites by selecting **More places**. If you recently created a site, it will appear after several minutes.
+You can also select files or folders from the SharePoint file picker. The left pane displays your recently accessed SharePoint sites. You can view more SharePoint sites by selecting **More places**. If you recently created a site, it will appear after several minutes.
 
 > [!NOTE]
 > The SharePoint picker may not show all the [communication sites](/microsoft-365/community/team-site-or-communication-site) that you have access to. Communication sites only show up in the **Quick Access** and **Recent** sections of the SharePoint picker.
