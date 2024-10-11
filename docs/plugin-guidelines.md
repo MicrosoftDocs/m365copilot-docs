@@ -1,17 +1,17 @@
 ---
-title: Build high quality plugins for Microsoft Copilot
-description: Here are best practices for building plugins for Microsoft 365 Copilot
+title: Build high-quality plugins for Microsoft 365 Copilot
+description: Discover best practices for building plugins for Microsoft 365 Copilot.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: best-practice
 ms.date: 6/26/2024
 ---
 
-# Build high quality plugins for Microsoft Copilot
+# Build high-quality plugins for Microsoft 365 Copilot
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-When you build a plugin, you enable your users to interact with your web service using natural language with Microsoft Copilot. Plugins expand Copilot's skills to accomplish tasks on behalf of your users. They're especially good at:
+When you build a plugin, you enable your users to interact with your web service using natural language with Microsoft 365 Copilot. Plugins expand Copilot's skills to accomplish tasks on behalf of your users. They're especially good at:
 
 - Accessing real-time information
 - Retrieving relational data
@@ -96,4 +96,4 @@ Respond to user input with structured, actionable, and visually rich [Adaptive C
 ## See also
 
 - [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
-- [Publish plugins and Graph connectors for Copilot](./publish.md)
+- [Publish plugins and Microsoft Graph connectors for Copilot](./publish.md)
