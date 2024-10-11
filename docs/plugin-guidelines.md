@@ -36,7 +36,7 @@ A clear and concise [description of your plugin](orchestrator.md#plugin-optimiza
 
         **Retrieve deep content**
 
-        Ensure the search matches with the surrounding paragraph. Provide an Adaptive Card response with additional information.
+        Make sure that the search matches with the surrounding paragraph. Provide an Adaptive Card response with additional information.
     :::column-end:::
 :::row-end:::
 
