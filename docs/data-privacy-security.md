@@ -1,21 +1,21 @@
 ---
-title: Data, Privacy, and Security considerations of extending Microsoft 365 Copilot 
-description: Learn how to protect your customer's data when you extend Microsoft 365 Copilot
+title: Data, privacy, and security considerations for extending Microsoft 365 Copilot 
+description: Learn how to protect your customer's data when you extend Microsoft 365 Copilot.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.date: 09/26/2024
 ---
 
-# Data, Privacy, and Security considerations of extending Microsoft 365 Copilot 
+# Data, privacy, and security considerations for extending Microsoft 365 Copilot 
 
-When you extend Copilot's list of skills with a plugin, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin to generate a response or complete a command. When you extend Copilot with a Microsoft Graph connector, your external data is ingested into Microsoft Graph and remains in your tenant. This article outlines data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
+When you extend the list of Copilot skills with a plugin, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the plugin to generate a response or complete a command. When you extend Copilot with a Microsoft Graph connector, your external data is ingested into Microsoft Graph and remains in your tenant. This article outlines data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
 
 :::image type="content" source="assets/images/validation-principles.png" alt-text="Diagram key considerations for developing Copilot extensibility: Enterprise security and trust, Responsible AI, High-quality user experience, High-value functionality" border="false":::
 
 [!INCLUDE [security-note](includes/security-on-das-note.md)]
 
-## Graph connectors
+## Microsoft Graph connectors
 
 Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. Microsoft Graph honors the user identity-based access boundary so that the Copilot grounding process only accesses content that the current user is authorized to access. This is also true of external data within Microsoft Graph ingested from a Microsoft Graph connector.
 
@@ -27,7 +27,7 @@ Prompts, responses, and data accessed through Microsoft Graph aren't used to tra
 
 Similar to traditional [Teams apps](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [Power Platform connectors](/connectors/custom-connectors/certification-submission#step-4b-product-or-end-service-metadata), plugins for Microsoft Copilot are individually governed by their terms of use and privacy policies. As a plugin developer, you're responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information. Admins and users can then view your [privacy policy](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [terms of use](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#terms-of-use) in the app store before choosing to add or use your plugin as a Copilot data source.
 
-When you plug in your app to Copilot as a plugin, your external data stays within your app; it *does not* flow into Microsoft Graph or is used to train Microsoft Copilot LLMs. Copilot does, however, generate a search query to send to your plugin on the user's behalf based on their prompt and conversation history with Copilot, and data the user has access to in Microsoft 365.
+When you plug in your app to Copilot as a plugin, your external data stays within your app; it *doesn't* flow into Microsoft Graph or is used to train Microsoft Copilot LLMs. Copilot does, however, generate a search query to send to your plugin on the user's behalf based on their prompt and conversation history with Copilot, and data the user has access to in Microsoft 365.
 
 Supported [API plugins authentication schemes](./api-plugin-authentication.md) include OAuth 2.0 authorization code flow and API key.
 
@@ -70,8 +70,6 @@ For Microsoft Graph connectors (packaged as Teams apps), submission to the Micro
 
 ## See also
 
-[Data, Privacy, and Security for Microsoft Copilot (Microsoft 365 admin)](/copilot/microsoft-365/microsoft-365-copilot-privacy)
-
-[Publish agents for Microsoft 365 Copilot](publish.md)
-
-[Microsoft commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai)
+- [Data, Privacy, and Security for Microsoft Copilot (Microsoft 365 admin)](/copilot/microsoft-365/microsoft-365-copilot-privacy)
+- [Publish agents for Microsoft 365 Copilot](publish.md)
+- [Microsoft commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai)
