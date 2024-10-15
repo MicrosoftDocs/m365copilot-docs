@@ -1,14 +1,18 @@
 ---
-title: Copilot Studio agent builder availability and language support
+title: Copilot Studio agent builder regional availability and language support
 description: Learn about the regional availability and supported languages for Copilot Studio agent builder.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.topic: conceptual
 ---
 
-# Copilot Studio agent builder availability and language support
+# Agent builder regional availability and language support
 
-Copilot Studio agent builder is available in these countries/regions.
+This article provides information about Copilot Studio regional availability and the agent and authoring languages that Copilot Studio supports.
+
+## Regional availability
+
+Copilot Studio agent builder is available in the following countries/regions:
 
 - Australia
 - Brazil
@@ -26,7 +30,7 @@ In regions where the agent builder isn't supported, the user can create a Copilo
 
 ## Agent languages
 
-A user can chat with an agent created using the Copilot Studio agent builder using any of these languages. You can create agents to engage with users in the supported languages.
+A user can chat with an agent created using the Copilot Studio agent builder in the following languages: 
 
 - English
 - French
@@ -37,11 +41,13 @@ A user can chat with an agent created using the Copilot Studio agent builder usi
 - Spanish
 - Simplified Chinese
 
+You can create agents to engage with users in any of the supported languages.
+
 ## Authoring languages
 
 The authoring language is the one in which the authoring UI is presented. By default, this language is your Microsoft 365 language setting. You can change the authoring language by [changing your Microsoft 365 language setting](https://support.microsoft.com/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b).
 
-The following authoring languages are supported.
+The following authoring languages are supported:
 
 - `cs-CZ`
 - `da-DK`
