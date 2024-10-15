@@ -20,8 +20,6 @@ For overview information, see [Declarative agents for Microsoft 365 Copilot](ove
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer-declarative-agents.md)]
 
-[!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
-
 ## Prerequisites
 
 Before you start, make sure that Microsoft 365 Copilot is available for your organization. 
