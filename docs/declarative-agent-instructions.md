@@ -11,7 +11,7 @@ ms.date: 10/17/2024
 
 Declarative agents are customized versions of Microsoft 365 Copilot that help you to create personalized experiences by declaring specific instructions, actions, and knowledge. This article provides guidance for writing effective instructions for a declarative agent. Use this guidance to help to ensure that your declarative agent responds appropriately to user requests, handles data accurately, and maintains a consistent workflow.
 
-This guidance applies to developers and makers who are using Teams Toolkit or [Copilot St](https://learn.microsoft.com/en-us/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context)udio to create declarative agents.
+This guidance applies to developers and makers who are using [Teams Toolkit](microsoft-365-copilot/extensibility/build-declarative-agents) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
 
 ## Instruction components
 
@@ -30,17 +30,15 @@ In addition, when relevant, instructions include:
 -   Non-standard terms
 -   Follow-up and closing
 
-Consider applying the following structure when you plan the Instructions for the declarative agent. This will help to ensure that you consider all components.
-
 The following diagram shows the primary components of declarative agent instructions.
 
-![A diagram of a work flow Description automatically generated](media/fa587e5f5042011ec5e79f4e62371f13.png)
+![Diagram of the components of agent instructions, including purpose, guidelines, and skills](media/fa587e5f5042011ec5e79f4e62371f13.png)
 
 ### Purpose
 
 Clearly define the role and the area of expertise of the agent, including the primary function it serves.
 
-*Example*
+#### Example
 
 You are a learning coach, dedicated to helping me enhance my understanding of complex topics, practice existing skills, and find the right learning process.
 
@@ -48,7 +46,7 @@ You are a learning coach, dedicated to helping me enhance my understanding of co
 
 Define how the agent should communicate. An agent might be concise, detailed, interactive, or suggestive. Also include any restrictions that should be applied.
 
-*Example*
+#### Example
 
 Guidelines:
 
@@ -60,7 +58,7 @@ Guidelines:
 
 List the main tasks the agent is expected to perform. This can include generating suggestions, automating tasks, providing explanations, or guiding the user through processes. It can also reflect the agent conversation starters.
 
-*Example*
+#### Example
 
 Skills:
 
@@ -70,7 +68,9 @@ You are a learning coach. When asked a question, break down complex concepts int
 
 Clearly define the workflow structure and outline the order in which to complete tasks. This helps the agent to guide users through processes in a logical and efficient way. For example, if a task involves multiple steps, instruct the agent that the steps should be completed in sequential order and that that users must complete each step before they move on to the next.
 
-*Example* Follow the steps
+#### Example 
+
+Follow these steps:
 
 1\. Ask for the name of the individual.
 
@@ -84,11 +84,13 @@ Clearly define the workflow structure and outline the order in which to complete
 
 Provide examples of ideal interactions that show how the agent should respond in different scenarios.
 
-Example **User prompt**: I’m having trouble understanding the basics of machine learning. Can you explain it to me?
+#### Example 
+
+**User prompt**: I'm having trouble understanding the basics of machine learning. Can you explain it to me?
 
 **Learning coach response**:
 
--   **Beginner explanation**: Machine learning is a type of artificial intelligence where computers learn from data to make decisions or predictions. Think of it like teaching a dog new tricks – at first, it needs guidance, but over time, it learns to do it on its own with practice.
+-   **Beginner explanation**: Machine learning is a type of artificial intelligence where computers learn from data to make decisions or predictions. Think of it like teaching a dog new tricks - at first, it needs guidance, but over time, it learns to do it on its own with practice.
 -   **Intermediate explanation**: At a higher level, machine learning involves algorithms that find patterns in data. These patterns help the machine make predictions or decisions without being explicitly programmed. For example, a machine learning model could predict house prices based on historical data.
 -   **Advanced explanation**: "In technical terms, machine learning uses statistical techniques and algorithms like linear regression, decision trees, and neural networks to build models that generalize well on new data, minimizing error through optimization techniques.
 
@@ -98,7 +100,7 @@ Instruct the agent how to handle situations when a user requests something witho
 
 Error handling can be part of the general directions or a specific skill description.
 
-*Example*
+#### Example 
 
 -   If you encounter a situation where you cannot proceed, respond with, ”I need more information to assist you further. Could you clarify?”
 -   Avoid providing external links.
@@ -109,7 +111,7 @@ Instruct the agent to seek feedback from the user to refine its suggestions and 
 
 Feedback can be part of the general directions or a skill description.
 
-*Example*
+#### Example 
 
 -   After providing a suggestion, ask me if it meets my needs or if adjustments are needed.
 -   If I provide feedback, adjust your response or offer alternative solutions.
@@ -121,7 +123,7 @@ Define any specific terms that are non-standard or unique to the organization in
 
 Term definitions can be part of the general directions or a specific skill description.
 
-*Example*
+#### Example 
 
 LEU means Learning Engagement Units. This term is used to quantify the engagement level of learners in various training programs.
 
@@ -158,7 +160,7 @@ Developing instructions for declarative agents is often iterative and typically 
 
 ## Best practices for agent instructions
 
-In summary, it’s important to keep your agent instructions structured and follow an iterative process of to test and improve your instructions until the agent provides satisfying results.
+In summary, it's important to keep your agent instructions structured and follow an iterative process of to test and improve your instructions until the agent provides satisfying results.
 
 As you develop your instructions, apply the following best practices:
 
@@ -176,7 +178,7 @@ As you develop your instructions, apply the following best practices:
 
 ## Declarative agent manifest
 
-For a sample manifest file for a declarative agent created with the Teams Toolkit, see [Declarative agent schema for Microsoft 365 Copilot \| Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-manifest#declarative-agent-manifest-example)
+For a sample manifest file for a declarative agent created with the Teams Toolkit, see [Declarative agent schema for Microsoft 365 Copilot \| Microsoft Learn](/microsoft-365-copilot/extensibility/declarative-agent-manifest#declarative-agent-manifest-example)
 
 The manifest includes the following fields:
 
