@@ -35,7 +35,7 @@
       href: overview-declarative-agent.md
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
-    - name: Write effective instructions for declarative agents
+    - name: Write effective instructions
       href: declarative-agent-instructions.md
     - name: Build with Visual Studio Code
       expanded: true
