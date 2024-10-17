@@ -8,7 +8,11 @@ ms.topic: conceptual
 
 # Overview of Copilot Studio agent builder
 
-The Copilot Studio agent builder in Microsoft 365 Copilot enables you to build Copilot agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly. Use Copilot Studio agent builder to create and customize Copilot agents that can be used with Microsoft 365 Copilot to cover scenario-specific uses cases, such as:
+The Copilot Studio agent builder in Microsoft 365 Copilot enables you to build Copilot agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly.
+
+Copilot Studio agent builder offers an immediate, interactive AI development experience within Microsoft 365 Copilot, which is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use the full [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
+
+Use Copilot Studio agent builder to create and customize Copilot agents that can be used with Microsoft 365 Copilot to cover scenario-specific uses cases, such as:
 
 - An agent that provides writing or presentation coaching that is tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
@@ -30,13 +34,13 @@ You can build agents from the following apps and sites:
 
 ## Prerequisites
 
-You need a license for [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise) with the **Copilot Studio in Copilot for Microsoft 365** app enabled and a license for Microsoft 365. Admins can assign or unassign licenses for users in the [Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users).
+You need a license for [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise) with the **Copilot Studio in Copilot for M365** app enabled and a license for Microsoft 365. Admins can assign or unassign licenses for users in the [Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users).
 
 For information regarding regional availability and supported languages, see [Copilot Studio agent builder availability and language support](copilot-studio-agent-builder-availability.md).
 
 ## Governance
 
-Admins can govern this feature by revoking access to the **Copilot Studio in Copilot for Microsoft 365** application within the Microsoft 365 Copilot license in the Microsoft admin center. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise). To learn more about how to assign or unassign licenses for users in the Microsoft 365 admin center, see [Assign or unassign licenses](/microsoft-365/admin/manage/assign-licenses-to-users).
+Admins can govern this feature by revoking access to the **Copilot Studio in Copilot for M365** application within the Microsoft 365 Copilot license in the Microsoft admin center. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise). To learn more about how to assign or unassign licenses for users in the Microsoft 365 admin center, see [Assign or unassign licenses](/microsoft-365/admin/manage/assign-licenses-to-users).
 
 ## Data processing
 
