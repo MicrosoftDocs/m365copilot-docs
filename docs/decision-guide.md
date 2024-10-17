@@ -22,8 +22,6 @@ However, with Microsoft 365 Copilot, you also have a choice of *extending* Copil
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." border="false" lightbox="assets/images/m365-extensibility-decisions.png" :::
 
-📍 Another thing to consider is if you plan to distribute your agent in multiple Microsoft 365 hubs, for instance, agent that runs on both Teams *and* Outlook. It's important to note that this is currently supported only by custom engine agents.
-
 📍 Also, if you're looking to leverage agentic AI for executing complex, multi-step workflows, including proactive triggers, long-running tasks, and asynchronous processing, then custom engine agents are the way to go.
 
 Now, let's determine which type of agent you should build:
@@ -126,7 +124,7 @@ This diagram provides a comparison between Copilot extensions (Connectors, plugi
 
 :::image type="content" source="assets/images/copilot-ext-vs-cec.png" alt-text="This diagram compares options between extending Copilot and custom engine agents for M365" lightbox="assets/images/copilot-ext-vs-cec.png" border="false":::
 
-The custom engine agents operate on a BYOM (Bring Your Own model). So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
+The custom engine agents operate on a BYOM (Bring Your Own Model). So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
 
 With BYOM, your can achieve:
 - Deterministic workflows
