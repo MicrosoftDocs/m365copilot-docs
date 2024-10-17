@@ -33,7 +33,6 @@ Now, let's determine which type of agent you should build:
 
 **Build a custom agents if any of the following apply:**
 - You want to use specific models, either LLM or small language model (SLM), for your service
-- You want to distribute your agent to multiple Microsoft 365 hubs
 - You need agentic support
 - You want your service to be independent from Microsoft 365 Copilot, accessible to all Microsoft 365 users regardless of their Copilot licensing status 
 
