@@ -38,7 +38,7 @@ The following diagram shows the primary components of declarative agent instruct
 
 Clearly define the role and the area of expertise of the agent, including the primary function it serves.
 
-#### Example
+#### Purpose example
 
 You are a learning coach, dedicated to helping me enhance my understanding of complex topics, practice existing skills, and find the right learning process.
 
@@ -46,19 +46,19 @@ You are a learning coach, dedicated to helping me enhance my understanding of co
 
 Define how the agent should communicate. An agent might be concise, detailed, interactive, or suggestive. Also include any restrictions that should be applied.
 
-#### Example
+#### Guidelines example
 
 Guidelines:
 
-1\. Avoid sharing external links.
+1. Avoid sharing external links.
 
-2\. Maintain an informal tone throughout our interactions.
+2. Maintain an informal tone throughout our interactions.
 
 ### Skills
 
 List the main tasks the agent is expected to perform. This can include generating suggestions, automating tasks, providing explanations, or guiding the user through processes. It can also reflect the agent conversation starters.
 
-#### Example
+#### Skills example
 
 Skills:
 
@@ -68,7 +68,7 @@ You are a learning coach. When asked a question, break down complex concepts int
 
 Clearly define the workflow structure and outline the order in which to complete tasks. This helps the agent to guide users through processes in a logical and efficient way. For example, if a task involves multiple steps, instruct the agent that the steps should be completed in sequential order and that that users must complete each step before they move on to the next.
 
-#### Example 
+#### Step-by-step instructions example 
 
 Follow these steps:
 
@@ -84,7 +84,7 @@ Follow these steps:
 
 Provide examples of ideal interactions that show how the agent should respond in different scenarios.
 
-#### Example 
+#### Ideal interaction example
 
 **User prompt**: I'm having trouble understanding the basics of machine learning. Can you explain it to me?
 
@@ -100,7 +100,7 @@ Instruct the agent how to handle situations when a user requests something witho
 
 Error handling can be part of the general directions or a specific skill description.
 
-#### Example 
+#### Error handling example 
 
 -   If you encounter a situation where you cannot proceed, respond with, ”I need more information to assist you further. Could you clarify?”
 -   Avoid providing external links.
@@ -111,7 +111,7 @@ Instruct the agent to seek feedback from the user to refine its suggestions and 
 
 Feedback can be part of the general directions or a skill description.
 
-#### Example 
+#### Feedback and iteration example 
 
 -   After providing a suggestion, ask me if it meets my needs or if adjustments are needed.
 -   If I provide feedback, adjust your response or offer alternative solutions.
@@ -123,7 +123,7 @@ Define any specific terms that are non-standard or unique to the organization in
 
 Term definitions can be part of the general directions or a specific skill description.
 
-#### Example 
+#### Non-standard terms example 
 
 LEU means Learning Engagement Units. This term is used to quantify the engagement level of learners in various training programs.
 
@@ -135,8 +135,10 @@ Also instruct the agent how to properly close a session, such as by summarizing 
 
 Closing instructions can be part of the general directions or a skill description.
 
--   *Example* After providing a suggestion, ask me if it meets my needs or if adjustments are needed.
--   At the end of each interaction with me on a specific topic, ask me how you did and ask me to use the thumbs up and down.
+#### Follow up and closing example 
+
+- After providing a suggestion, ask me if it meets my needs or if adjustments are needed.
+- At the end of each interaction with me on a specific topic, ask me how you did and ask me to use the thumbs up and down.
 
 ## Iterate on your instructions
 
@@ -144,19 +146,20 @@ Developing instructions for declarative agents is often iterative and typically 
 
 1.  **Create** instructions and conversation starters for your agent following the structure and format described in this article.
 2.  **Publish** your agent. Responsible AI practices are integrated into the validation process to ensure that agents uphold ethical standards. For more details, see:  
-    \- Responsible AI tools and practices  
-    \- Apps powered by artificial intelligence
+    - [Responsible AI tools and practices]()  
+    - [Apps powered by artificial intelligence]()
 3.  **Test** your agent.
     1.  Compare a user prompt against Microsoft 365 Copilot to confirm that the agent brings additional value when answering .
     2.  Verify that the conversation starters work as expected with the step-by-step guidance.
     3.  Verify that the agent acts according to the instructions provided.
     4.  Confirm that user prompts outside of the conversation starters are handled appropriately.
 4.  **Iterate** on instructions to explore whether you can further improve the output.
-    1.  Modify instructions to change the behavior of the agent.
-    2.  Try adding knowledge like web search, OneDrive/SharePoint, or Microsoft Graph connectors, if needed using Teams Toolkit or Copilot Studio.
+    - Modify instructions to change the behavior of the agent.
+    - Try adding knowledge like web search, OneDrive/SharePoint, or Microsoft Graph connectors, if needed using Teams Toolkit or Copilot Studio.
 
-        The following diagram illustrates the iterative process for creating and refining declarative agent instructions.  
-        ![](media/88d5ad2ee5d488bb4cf5f4cf67dae9be.png)
+The following diagram illustrates the iterative process for creating and refining declarative agent instructions.  
+
+![Diagram showing the iterative steps to create and refine agent instructions](media/88d5ad2ee5d488bb4cf5f4cf67dae9be.png)
 
 ## Best practices for agent instructions
 
@@ -164,31 +167,32 @@ In summary, it's important to keep your agent instructions structured and follow
 
 As you develop your instructions, apply the following best practices:
 
-**Be specific**. Vague or ambiguous instructions can lead to misunderstandings and incorrect responses. Clearly define the tasks, context, expectations, and any specific requirements.
+- **Be specific**. Vague or ambiguous instructions can lead to misunderstandings and incorrect responses. Clearly define the tasks, context, expectations, and any specific requirements.
 
-**Break tasks into smaller steps**. Performance is better when the flow consists of smaller and more granular steps.
+- **Break tasks into smaller steps**. Performance is better when the flow consists of smaller and more granular steps.
 
-**Use clear syntax**. Include punctuation, headings, and section separators that allow easier parsing of the instructions. Use delimiters between sections to separate instructions from examples.
+- **Use clear syntax**. Include punctuation, headings, and section separators that allow easier parsing of the instructions. Use delimiters between sections to separate instructions from examples.
 
-**Use examples**. Provide detailed examples and scenarios to illustrate the desired outcomes. The more precise the instructions, the better the agent can perform its tasks accurately and efficiently. **Few-shot prompting** involves providing the agent with a few solved examples before asking it to solve a new problem. **Chain-of-thought** techniques instruct the agent to provide a step-by-step solution.
+- **Use examples**. Provide detailed examples and scenarios to illustrate the desired outcomes. The more precise the instructions, the better the agent can perform its tasks accurately and efficiently. **Few-shot prompting** involves providing the agent with a few solved examples before asking it to solve a new problem. **Chain-of-thought** techniques instruct the agent to provide a step-by-step solution.
 
-**Use Do instead of Do Not**. Tell the agent what to do; avoid telling it what not to do. Telling the agent what to do provides more specificity.
+- **Use Do instead of Do Not**. Tell the agent what to do; avoid telling it what not to do. Telling the agent what to do provides more specificity.
 
-**Add knowledge**. If you add knowledge to the agent, describe what is represented by each knowledge source in your instructions.
+- **Add knowledge**. If you add knowledge to the agent, describe what is represented by each knowledge source in your instructions.
 
 ## Declarative agent manifest
 
-For a sample manifest file for a declarative agent created with the Teams Toolkit, see [Declarative agent schema for Microsoft 365 Copilot \| Microsoft Learn](/microsoft-365-copilot/extensibility/declarative-agent-manifest#declarative-agent-manifest-example)
+For a sample manifest file for a declarative agent created with the Teams Toolkit, see [Declarative agent schema for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/declarative-agent-manifest#declarative-agent-manifest-example).
 
 The manifest includes the following fields:
 
-**Instructions** references the instructions file. This separation makes it easier for you to read the instructions.
+- **Instructions** references the instructions file. This separation makes it easier for you to read the instructions.
 
-**Conversation starters** provide sample prompts for a user to show how the agent can be used.
+- **Conversation starters** provide sample prompts for a user to show how the agent can be used.
 
-**Capabilities** allow you to add web search, OneDrive/SharePoint, or Microsoft Graph connectors knowledge.
+- **Capabilities** allow you to add web search, OneDrive/SharePoint, or Microsoft Graph connectors knowledge.
 
-**Note.** You can also use Copilot Studio to create declarative agents. For details, see Create a copilot extension.
+> [!NOTE]
+> You can also use Copilot Studio to create declarative agents. For details, see [Create a copilot extension](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
 
 The following image shows a manifest file for a declarative agent.
 
