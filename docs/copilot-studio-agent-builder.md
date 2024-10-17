@@ -10,7 +10,8 @@ ms.topic: conceptual
 
 The Copilot Studio agent builder in Microsoft 365 Copilot enables you to build Copilot agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly.
 
-Copilot Studio agent builder offers an immediate, interactive AI development experience within Microsoft 365 Copilot, which is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use the full [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
+> [!NOTE]
+> Copilot Studio agent builder offers an immediate, interactive AI development experience within Microsoft 365 Copilot, which is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use the full [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
 
 Use Copilot Studio agent builder to create and customize Copilot agents that can be used with Microsoft 365 Copilot to cover scenario-specific uses cases, such as:
 
