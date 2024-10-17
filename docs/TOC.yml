@@ -28,13 +28,15 @@
 - name: Build a Copilot agent
   expanded: true
   items:
-  - name: Use Copilot's orchestrator and models
+  - name: Build a declarative agent
     expanded: true
     items:
     - name: Declarative agents overview
       href: overview-declarative-agent.md
-    - name: Transparency FAQs about declarative agents
+    - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
+    - name: Write effective instructions for declarative agents
+      href: declarative-agent-instructions.md
     - name: Build with Visual Studio Code
       expanded: true
       items:
@@ -46,10 +48,10 @@
         href: declarative-agent-manifest.md
     - name: Build with Microsoft Copilot Studio
       href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
-  - name: Use your custom orchestrator and models
+  - name: Build a custom engine agent
     expanded: false
     items:
-    - name: Custom engine agents
+    - name: Custom engine agent overview
       href: overview-custom-engine-agent.md
     - name: Build with VS Code and Teams AI library
       items:

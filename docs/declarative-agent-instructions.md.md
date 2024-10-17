@@ -2,7 +2,7 @@
 title: Write effective instructions for declarative agents
 description: Learn how to write effective instructions for your declarative agent.
 author: lauragra
-ms.author: lauragra
+ms.author: jchudakova
 ms.topic: conceptual
 ms.date: 10/17/2024
 ---
