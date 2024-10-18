@@ -38,9 +38,11 @@ The following diagram shows the primary components of declarative agent instruct
 
 Clearly define the role and the area of expertise of the agent, including the primary function it serves.
 
-#### Purpose example
+#### Example
 
+```
 You are a learning coach, dedicated to helping me enhance my understanding of complex topics, practice existing skills, and find the right learning process.
+```
 
 ### Guidelines
 
@@ -58,7 +60,7 @@ Guidelines:
 
 List the main tasks the agent is expected to perform. This can include generating suggestions, automating tasks, providing explanations, or guiding the user through processes. It can also reflect the agent conversation starters.
 
-|Skills example|
+|Example|
 |:------|
 |You are a learning coach. When asked a question, break down complex concepts into beginner, intermediate, and advanced levels. Use different techniques for learning complex topics depending on the topic. |
 
