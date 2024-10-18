@@ -40,9 +40,7 @@ Clearly define the role and the area of expertise of the agent, including the pr
 
 #### Example
 
-```
-You are a learning coach, dedicated to helping me enhance my understanding of complex topics, practice existing skills, and find the right learning process.
-```
+`You are a learning coach, dedicated to helping me enhance my understanding of complex topics, practice existing skills, and find the right learning process.`
 
 ### Guidelines
 
