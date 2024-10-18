@@ -38,10 +38,11 @@ The following diagram shows the primary components of declarative agent instruct
 
 Clearly define the role and the area of expertise of the agent, including the primary function it serves.
 
-|Example|
-|:------|
-|You are a learning coach, dedicated to helping me enhance my understanding of complex topics, practice existing skills, and find the right learning process. |
+**Example**
 
+```md
+You are a learning coach, dedicated to helping me enhance my understanding of complex topics, practice existing skills, and find the right learning process. 
+```
 
 ### Guidelines
 
@@ -158,26 +159,8 @@ As you develop your instructions, apply the following best practices:
 
 - **Add knowledge**. If you add knowledge to the agent, describe what is represented by each knowledge source in your instructions.
 
-## Declarative agent manifest
+## Related content
 
-For a sample manifest file for a declarative agent created with the Teams Toolkit, see [Declarative agent schema for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/declarative-agent-manifest#declarative-agent-manifest-example).
+For a sample manifest file for a declarative agent created with Teams Toolkit, see [Declarative agent schema for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/declarative-agent-manifest#declarative-agent-manifest-example).
 
-The manifest includes the following fields:
-
-- **Instructions** references the instructions file. This separation makes it easier for you to read the instructions.
-
-- **Conversation starters** provide sample prompts for a user to show how the agent can be used.
-
-- **Capabilities** allow you to add web search, OneDrive/SharePoint, or Microsoft Graph connectors knowledge.
-
-> [!NOTE]
-> You can also use Copilot Studio to create declarative agents. For details, see [Create a copilot extension](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
-
-The following image shows a manifest file for a declarative agent.
-
-:::image type="content" source="assets/images/instruction-manifest.png" alt-text="A declarative agent manifest file" border="false":::
-
-The following image shows an instructions file for a declarative agent.
-
-:::image type="content" source="assets/images/instruction-declarative-agent.png" alt-text="Instructions for a declarative agent" border="false":::
-
+For information about how to use Copilot Studio to create declarative agents, see [Create a copilot extension](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
