@@ -52,7 +52,7 @@ Define how the agent should communicate. An agent might be concise, detailed, in
 
 ```md
 1. Avoid sharing external links.
-1. Maintain an informal tone throughout our interactions.
+2. Maintain an informal tone throughout our interactions.
 ```
 
 
@@ -71,18 +71,31 @@ Use different techniques for learning complex topics depending on the topic.
 
 Clearly define the workflow structure and outline the order in which to complete tasks. This helps the agent to guide users through processes in a logical and efficient way. For example, if a task involves multiple steps, instruct the agent that the steps should be completed in sequential order and that that users must complete each step before they move on to the next.
 
-|Example|
-|:------|
-|Follow these steps:<br /><br />1. Ask for the name of the individual.<br />2. List the nomination categories.<br />3. Ask about their contributions.<br />4. Draft the nomination. |
+**Example**
+
+```md
+Follow these steps:
+1. Ask for the name of the individual.
+2. List the nomination categories.
+3. Ask about their contributions.
+4. Draft the nomination.
+```
 
 ### Interaction examples
 
 Provide examples of ideal interactions that show how the agent should respond in different scenarios.
 
-|Example|
-|:------|
-|**User prompt**: I'm having trouble understanding the basics of machine learning. Can you explain it to me?|
-|**Learning coach response**:<br /><br />- **Beginner explanation**: Machine learning is a type of artificial intelligence where computers learn from data to make decisions or predictions. Think of it like teaching a dog new tricks - at first, it needs guidance, but over time, it learns to do it on its own with practice.<br />- **Intermediate explanation**: At a higher level, machine learning involves algorithms that find patterns in data. These patterns help the machine make predictions or decisions without being explicitly programmed. For example, a machine learning model could predict house prices based on historical data.<br />- **Advanced explanation**: "In technical terms, machine learning uses statistical techniques and algorithms like linear regression, decision trees, and neural networks to build models that generalize well on new data, minimizing error through optimization techniques.
+**Example**
+
+```md
+**User prompt**: I'm having trouble understanding the basics of machine learning. Can you explain it to me?
+
+**Learning coach response**:
+
+- **Beginner explanation**: Machine learning is a type of artificial intelligence where computers learn from data to make decisions or predictions. Think of it like teaching a dog new tricks - at first, it needs guidance, but over time, it learns to do it on its own with practice.
+- **Intermediate explanation**: At a higher level, machine learning involves algorithms that find patterns in data. These patterns help the machine make predictions or decisions without being explicitly programmed. For example, a machine learning model could predict house prices based on historical data.
+- **Advanced explanation**: "In technical terms, machine learning uses statistical techniques and algorithms like linear regression, decision trees, and neural networks to build models that generalize well on new data, minimizing error through optimization techniques.
+```
 
 ### Error handling and limitations
 
@@ -90,9 +103,12 @@ Instruct the agent how to handle situations when a user requests something witho
 
 Error handling can be part of the general directions or a specific skill description.
 
-|Example|
-|:------|
-|- If you encounter a situation where you cannot proceed, respond with, "I need more information to assist you further. Could you clarify?"<br />- Avoid providing external links. |
+**Example**
+
+```md
+- If you encounter a situation where you cannot proceed, respond with, "I need more information to assist you further. Could you clarify?"
+- Avoid providing external links.
+```
 
 ### Feedback and iteration
 
@@ -100,9 +116,13 @@ Instruct the agent to seek feedback from the user to refine its suggestions and 
 
 Feedback can be part of the general directions or a skill description.
 
-|Example|
-|:------|
-|- After providing a suggestion, ask me if it meets my needs or if adjustments are needed.<br />- If I provide feedback, adjust your response or offer alternative solutions.<br />- Continue refining your suggestions based on my input until I'm satisfied. |
+**Example**
+
+```md
+- After providing a suggestion, ask me if it meets my needs or if adjustments are needed.
+- If I provide feedback, adjust your response or offer alternative solutions.
+- Continue refining your suggestions based on my input until I'm satisfied. 
+```
 
 ### Non-standard terms
 
@@ -168,6 +188,5 @@ As you develop your instructions, apply the following best practices:
 
 ## Related content
 
-For a sample manifest file for a declarative agent created with Teams Toolkit, see [Declarative agent schema for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/declarative-agent-manifest#declarative-agent-manifest-example).
-
-For information about how to use Copilot Studio to create declarative agents, see [Create a copilot extension](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
+- For a sample manifest file for a declarative agent created with Teams Toolkit, see [Declarative agent schema for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/declarative-agent-manifest#declarative-agent-manifest-example).
+- For information about how to use Copilot Studio to create declarative agents, see [Create a copilot extension](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
