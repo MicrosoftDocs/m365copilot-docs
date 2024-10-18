@@ -4,7 +4,7 @@ description: Understand which type Microsoft 365 Copilot agents works best for y
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 10/16/2024
+ms.date: 10/18/2024
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -18,11 +18,11 @@ When you're looking to create a fully customized end-to-end AI product to cater 
 
 However, with Microsoft 365 Copilot, you also have a choice of *extending* Copilot's private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot's LLM is grounded in each tenant's Microsoft 365 content so it can work with the documents, messages, and other business context people use every day. When you extend Copilot, you can utilize the [orchestration layer](orchestrator.md) representing the interface between foundation LLMs, to select and execute the right content from the right plugin.
 
-📍 Here's your first decision-making point; extending Copilot to utilize the model and orchestrator, or build a custom agent with your choice?
+📍 Your first decision is whether to extend Microsoft 365 Copilot by using the existing orchestrator to build a declarative agent, or whether to use your own custom orchestrator to build a custom engine agent.
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." border="false" lightbox="assets/images/m365-extensibility-decisions.png" :::
 
-📍 Also, if you're looking to leverage agentic AI for executing complex, multi-step workflows, including proactive triggers, long-running tasks, and asynchronous processing, then custom engine agents are the way to go.
+📍 If you want to use agentic AI to run complex, multi-step workflows, including proactive triggers, long-running tasks, and asynchronous processing, choose to build custom engine agents.
 
 Now, let's determine which type of agent you should build:
 
@@ -123,12 +123,12 @@ This diagram provides a comparison between Copilot extensions (Connectors, plugi
 
 :::image type="content" source="assets/images/copilot-ext-vs-cec.png" alt-text="This diagram compares options between extending Copilot and custom engine agents for M365" lightbox="assets/images/copilot-ext-vs-cec.png" border="false":::
 
-The custom engine agents operate on a BYOM (Bring Your Own Model). So, your copilot is independent from Microsoft Copilot and its LLM and orchestrator.
+Custom engine agents are based on a bring your own model (BYOM) premise. With custom engine agents, your agent is independent of Microsoft 365 Copilot and its LLM and orchestrator.
 
-With BYOM, your can achieve:
+By using custom engine agents, you can achieve:
 - Deterministic workflows
 - Custom citations and authoritative sources to the responses
-- tenant specific intent
+- Tenant-specific intent
 
 🎯 Learn more on building your own [**custom engine agents**](overview-custom-engine-agent.md).
 
