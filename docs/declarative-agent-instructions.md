@@ -130,9 +130,11 @@ Define any specific terms that are non-standard or unique to the organization in
 
 Term definitions can be part of the general directions or a specific skill description.
 
-#### Non-standard terms example 
+**Example**
 
+```md
 LEU means Learning Engagement Units. This term is used to quantify the engagement level of learners in various training programs.
+```
 
 ### Follow-up and closing
 
@@ -142,10 +144,10 @@ Also instruct the agent how to properly close a session, such as by summarizing 
 
 Closing instructions can be part of the general directions or a skill description.
 
-#### Follow up and closing example 
-
+```md
 - After providing a suggestion, ask me if it meets my needs or if adjustments are needed.
 - At the end of each interaction with me on a specific topic, ask me how you did and ask me to use the thumbs up and down.
+```
 
 ## Iterate on your instructions
 
