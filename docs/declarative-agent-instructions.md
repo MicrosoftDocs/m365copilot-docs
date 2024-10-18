@@ -32,7 +32,7 @@ In addition, when relevant, instructions include:
 
 The following diagram shows the primary components of declarative agent instructions.
 
-![Diagram of the components of agent instructions, including purpose, guidelines, and skills](media/fa587e5f5042011ec5e79f4e62371f13.png)
+:::image type="content" source="assets/images/instruction-components.png" alt-text="Diagram of the components of agent instructions, including purpose, guidelines, and skills" border="false":::
 
 ### Purpose
 
@@ -163,9 +163,9 @@ Developing instructions for declarative agents is often iterative and typically 
     - Modify instructions to change the behavior of the agent.
     - Try adding knowledge like web search, OneDrive/SharePoint, or Microsoft Graph connectors, if needed using Teams Toolkit or Copilot Studio.
 
-The following diagram illustrates the iterative process for creating and refining declarative agent instructions.  
+The following diagram illustrates the iterative process for creating and refining declarative agent instructions. 
 
-![Diagram showing the iterative steps to create and refine agent instructions](media/88d5ad2ee5d488bb4cf5f4cf67dae9be.png)
+:::image type="content" source="assets/images/instruction-process.png" alt-text="Diagram showing the iterative steps to create and refine agent instructions" border="false":::
 
 ## Best practices for agent instructions
 
@@ -202,8 +202,9 @@ The manifest includes the following fields:
 
 The following image shows a manifest file for a declarative agent.
 
-![](media/bb87961ae9f74494730372af1039e668.png)
+:::image type="content" source="assets/images/instruction-manifest.png" alt-text="A declarative agent manifest file" border="false":::
 
 The following image shows an instructions file for a declarative agent.
 
-![](media/74f7cef8796a60bbc58b8251231dd14b.png)
+:::image type="content" source="assets/images/instruction-declarative-agent.png" alt-text="Instructions for a declarative agent" border="false":::
+
