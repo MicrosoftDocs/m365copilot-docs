@@ -192,3 +192,4 @@ As you develop your instructions, apply the following best practices:
 
 - For a sample manifest file for a declarative agent created with Teams Toolkit, see [Declarative agent schema for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/declarative-agent-manifest#declarative-agent-manifest-example).
 - For information about how to use Copilot Studio to create declarative agents, see [Create a copilot extension](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
+- For information about validation requirements for declarative agents, see [Validation guidelines for Copilot agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context).
