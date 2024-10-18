@@ -110,7 +110,7 @@ Error handling can be part of the general directions or a specific skill descrip
 
 #### Error handling example 
 
--   If you encounter a situation where you cannot proceed, respond with, ”I need more information to assist you further. Could you clarify?”
+-   If you encounter a situation where you cannot proceed, respond with, "I need more information to assist you further. Could you clarify?"
 -   Avoid providing external links.
 
 ### Feedback and iteration
@@ -123,7 +123,7 @@ Feedback can be part of the general directions or a skill description.
 
 -   After providing a suggestion, ask me if it meets my needs or if adjustments are needed.
 -   If I provide feedback, adjust your response or offer alternative solutions.
--   Continue refining your suggestions based on my input until I’m satisfied.
+-   Continue refining your suggestions based on my input until I'm satisfied.
 
 ### Non-standard terms
 
@@ -154,8 +154,8 @@ Developing instructions for declarative agents is often iterative and typically 
 
 1.  **Create** instructions and conversation starters for your agent following the structure and format described in this article.
 2.  **Publish** your agent. Responsible AI practices are integrated into the validation process to ensure that agents uphold ethical standards. For more details, see:  
-    - [Responsible AI tools and practices]()  
-    - [Apps powered by artificial intelligence]()
+    - [Responsible AI tools and practices](https://www.microsoft.com/ai/tools-practices)  
+    - [Apps powered by artificial intelligence](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#apps-powered-by-artificial-intelligence?context=/microsoft-365-copilot/extensibility/context)
 3.  **Test** your agent.
     1.  Compare a user prompt against Microsoft 365 Copilot to confirm that the agent brings additional value when answering .
     2.  Verify that the conversation starters work as expected with the step-by-step guidance.
