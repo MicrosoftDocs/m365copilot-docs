@@ -38,21 +38,18 @@ The following diagram shows the primary components of declarative agent instruct
 
 Clearly define the role and the area of expertise of the agent, including the primary function it serves.
 
-#### Example
+|Example|
+|:------|
+|You are a learning coach, dedicated to helping me enhance my understanding of complex topics, practice existing skills, and find the right learning process. |
 
-`You are a learning coach, dedicated to helping me enhance my understanding of complex topics, practice existing skills, and find the right learning process.`
 
 ### Guidelines
 
 Define how the agent should communicate. An agent might be concise, detailed, interactive, or suggestive. Also include any restrictions that should be applied.
 
-#### Guidelines example
-
-Guidelines:
-
-1. Avoid sharing external links.
-
-2. Maintain an informal tone throughout our interactions.
+|Example|
+|:------|
+|1. Avoid sharing external links.<br />2. Maintain an informal tone throughout our interactions. |
 
 ### Skills
 
@@ -62,43 +59,22 @@ List the main tasks the agent is expected to perform. This can include generatin
 |:------|
 |You are a learning coach. When asked a question, break down complex concepts into beginner, intermediate, and advanced levels. Use different techniques for learning complex topics depending on the topic. |
 
-<!-- 
-#### Skills example
-
-Skills:
-
-You are a learning coach. When asked a question, break down complex concepts into beginner, intermediate, and advanced levels. Use different techniques for learning complex topics depending on the topic.
--->
-
 ### Step-by-step instructions
 
 Clearly define the workflow structure and outline the order in which to complete tasks. This helps the agent to guide users through processes in a logical and efficient way. For example, if a task involves multiple steps, instruct the agent that the steps should be completed in sequential order and that that users must complete each step before they move on to the next.
 
-#### Step-by-step instructions example 
-
-Follow these steps:
-
-1\. Ask for the name of the individual.
-
-2\. List the nomination categories.
-
-3\. Ask about their contributions.
-
-4\. Draft the nomination.
+|Example|
+|:------|
+|Follow these steps:<br /><br />1. Ask for the name of the individual.<br />2. List the nomination categories.<br />3. Ask about their contributions.<br />4. Draft the nomination. |
 
 ### Interaction examples
 
 Provide examples of ideal interactions that show how the agent should respond in different scenarios.
 
-#### Ideal interaction example
-
-**User prompt**: I'm having trouble understanding the basics of machine learning. Can you explain it to me?
-
-**Learning coach response**:
-
--   **Beginner explanation**: Machine learning is a type of artificial intelligence where computers learn from data to make decisions or predictions. Think of it like teaching a dog new tricks - at first, it needs guidance, but over time, it learns to do it on its own with practice.
--   **Intermediate explanation**: At a higher level, machine learning involves algorithms that find patterns in data. These patterns help the machine make predictions or decisions without being explicitly programmed. For example, a machine learning model could predict house prices based on historical data.
--   **Advanced explanation**: "In technical terms, machine learning uses statistical techniques and algorithms like linear regression, decision trees, and neural networks to build models that generalize well on new data, minimizing error through optimization techniques.
+|Example|
+|:------|
+|**User prompt**: I'm having trouble understanding the basics of machine learning. Can you explain it to me?|
+|**Learning coach response**:<br /><br />- **Beginner explanation**: Machine learning is a type of artificial intelligence where computers learn from data to make decisions or predictions. Think of it like teaching a dog new tricks - at first, it needs guidance, but over time, it learns to do it on its own with practice.<br />- **Intermediate explanation**: At a higher level, machine learning involves algorithms that find patterns in data. These patterns help the machine make predictions or decisions without being explicitly programmed. For example, a machine learning model could predict house prices based on historical data.<br />- **Advanced explanation**: "In technical terms, machine learning uses statistical techniques and algorithms like linear regression, decision trees, and neural networks to build models that generalize well on new data, minimizing error through optimization techniques.
 
 ### Error handling and limitations
 
@@ -106,10 +82,9 @@ Instruct the agent how to handle situations when a user requests something witho
 
 Error handling can be part of the general directions or a specific skill description.
 
-#### Error handling example 
-
--   If you encounter a situation where you cannot proceed, respond with, "I need more information to assist you further. Could you clarify?"
--   Avoid providing external links.
+|Example|
+|:------|
+|- If you encounter a situation where you cannot proceed, respond with, "I need more information to assist you further. Could you clarify?"<br />- Avoid providing external links. |
 
 ### Feedback and iteration
 
@@ -117,11 +92,9 @@ Instruct the agent to seek feedback from the user to refine its suggestions and 
 
 Feedback can be part of the general directions or a skill description.
 
-#### Feedback and iteration example 
-
--   After providing a suggestion, ask me if it meets my needs or if adjustments are needed.
--   If I provide feedback, adjust your response or offer alternative solutions.
--   Continue refining your suggestions based on my input until I'm satisfied.
+|Example|
+|:------|
+|- After providing a suggestion, ask me if it meets my needs or if adjustments are needed.<br />- If I provide feedback, adjust your response or offer alternative solutions.<br />- Continue refining your suggestions based on my input until I'm satisfied. |
 
 ### Non-standard terms
 
