@@ -37,7 +37,7 @@
       href: transparency-faq-declarative-agent.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
-    - name: Build with Visual Studio Code
+    - name: Use Visual Studio Code
       expanded: true
       items:
       - name: Build a declarative agent with Visual Studio Code
@@ -46,14 +46,14 @@
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference
         href: declarative-agent-manifest.md
-    - name: Build with Microsoft Copilot Studio
+    - name: Use Microsoft Copilot Studio
       href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
   - name: Build a custom engine agent
     expanded: false
     items:
     - name: Custom engine agent overview
       href: overview-custom-engine-agent.md
-    - name: Build with VS Code and Teams AI library
+    - name: Use VS Code and Teams AI library
       items:
       - name: Teams AI library overview
         href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context
@@ -67,7 +67,7 @@
         href: /microsoftteams/platform/teams-ai-library-tutorial
       - name: Teams AI library FAQs
         href: /microsoftteams/platform/bots/how-to/teams%20conversational%20ai/coversational-ai-faq?context=/microsoft-365-copilot/extensibility/context
-    - name: Build with Microsoft Copilot Studio
+    - name: Use Microsoft Copilot Studio
       items:
       - name: Quickstart
         href: /microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context
@@ -75,7 +75,7 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete copilots
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
-- name: Add knowledge with Microsoft Graph Connectors
+- name: Add knowledge with Microsoft Graph connectors
   items:
   - name: Microsoft Graph connectors in Microsoft 365 Copilot
     href: overview-graph-connector.md
