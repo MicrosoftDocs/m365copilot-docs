@@ -11,7 +11,7 @@ ms.date: 10/17/2024
 
 Declarative agents are customized versions of Microsoft 365 Copilot that help you to create personalized experiences by declaring specific instructions, actions, and knowledge. This article provides guidance for writing effective instructions for a declarative agent. Use this guidance to help to ensure that your declarative agent responds appropriately to user requests, handles data accurately, and maintains a consistent workflow.
 
-This guidance applies to developers and makers who are using [Teams Toolkit](microsoft-365-copilot/extensibility/build-declarative-agents) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
+This guidance applies to developers and makers who are using [Teams Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
 
 ## Instruction components
 
@@ -58,11 +58,17 @@ Guidelines:
 
 List the main tasks the agent is expected to perform. This can include generating suggestions, automating tasks, providing explanations, or guiding the user through processes. It can also reflect the agent conversation starters.
 
+|Skills example|
+|:------|
+|You are a learning coach. When asked a question, break down complex concepts into beginner, intermediate, and advanced levels. Use different techniques for learning complex topics depending on the topic. |
+
+<!-- 
 #### Skills example
 
 Skills:
 
 You are a learning coach. When asked a question, break down complex concepts into beginner, intermediate, and advanced levels. Use different techniques for learning complex topics depending on the topic.
+-->
 
 ### Step-by-step instructions
 
