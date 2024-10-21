@@ -103,7 +103,7 @@ Every app manifest must include the following information:
 | [description](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#description?context=/microsoft-365-copilot/extensibility/context) | Short and long descriptions of your app for users. For apps submitted to AppSource, these values must match the information in your AppSource entry.|
 | [icons](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#icons?context=/microsoft-365-copilot/extensibility/context) | Relative paths to color and outline icon files.|
 | [accentColor](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#accentColor?context=/microsoft-365-copilot/extensibility/context) | A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.|
-| *Definitions for specific app capabilities* | A definition for each app capability, such as personal tabs ([staticTabs](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#staticTabs?context=/microsoft-365-copilot/extensibility/context)), message extensions ([composeExtensions](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeExtensions?context=/microsoft-365-copilot/extensibility/context)), or [bots](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#bots?context=/microsoft-365-copilot/extensibility/context). Declarative agents and API plugins are defined under the [copilotExtensions](#copilotextensions-definitions) node.
+| *Definitions for specific app capabilities* | A definition for each app capability, such as personal tabs ([staticTabs](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#staticTabs?context=/microsoft-365-copilot/extensibility/context)), message extensions ([composeExtensions](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeExtensions?context=/microsoft-365-copilot/extensibility/context)), or [bots](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#bots?context=/microsoft-365-copilot/extensibility/context). Declarative agents and API plugins are defined under the [copilotAgents](#copilotagents-definitions) node.
 
 The following example shows an app manifest with placeholder sections at the end for message extension and declarative agent app capabilities:
 
@@ -135,7 +135,7 @@ The following example shows an app manifest with placeholder sections at the end
     "composeExtensions": {
         ...
     },
-    "copilotExtensions": {
+    "copilotAgents": {
         ...
     }
 }
@@ -143,15 +143,15 @@ The following example shows an app manifest with placeholder sections at the end
 
 To learn more, see the [Developer preview app manifest schema reference](/microsoftteams/platform/resources/schema/manifest-schema?context=/microsoft-365-copilot/extensibility/context).
 
-### `copilotExtensions` definitions
+### `copilotAgents` definitions
 
-Declarative agents and API plugins each have their own definition schemas. The definition file for a declarative agent is referenced from the `copilotExtensions` object of the app manifest.
+Declarative agents and API plugins each have their own definition schemas. The definition file for a declarative agent is referenced from the `copilotAgents` object of the app manifest.
 
 The following example shows how to reference a declarative agent:
 
 ```json
-    "copilotExtensions": {
-        "declarativeCopilots": [
+    "copilotAgents": {
+        "declarativeAgents": [
             {
                 "id": "agent1",
                 "file": "declarativeAgent1.json"
