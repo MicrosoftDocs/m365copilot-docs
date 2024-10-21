@@ -23,8 +23,8 @@
     href: prerequisites.md
   - name: Samples collection
     href: samples.md
-  - name: Learning path
-    href: /training/paths/copilot-m365-extensibility/
+  - name: Learning resources
+    href: https://learn.microsoft.com/collections/p11pb18wmq6xqq
 - name: Build a Copilot agent
   expanded: true
   items:
