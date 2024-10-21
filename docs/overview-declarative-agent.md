@@ -50,6 +50,7 @@ You can use your tool of choice to create a declarative agent app package. To ge
 |:------------|:------------|
 | [Teams Toolkit](./build-declarative-agents.md) | Build declarative agents using Teams Toolkit and Teams Toolkit CLI. |
 | [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) | Build declarative agents using the builder integrated in Copilot Studio. |
+| [Copilot Studio agent builder](copilot-studio-agent-builder.md) | Build declarative agents using the integrated builder in Microsoft 365 Copilot. |
 | [SharePoint](./build-declarative-agents.md#add-onedrive-and-sharepoint-knowledge) | Build declarative agents using grounding data from SharePoint files. |
 
 ## Related content

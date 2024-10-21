@@ -46,8 +46,18 @@
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference
         href: declarative-agent-manifest.md
-    - name: Use Microsoft Copilot Studio
-      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+    - name: Build with Copilot Studio agent builder
+      items:
+      - name: Overview
+        href: copilot-studio-agent-builder.md
+      - name: Build agents
+        href: copilot-studio-agent-builder-build.md
+      - name: Publish agents
+        href: copilot-studio-agent-builder-publish.md
+      - name: Availability and language support
+        href: copilot-studio-agent-builder-availability.md
+      - name: Build in Microsoft Copilot Studio
+        href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
   - name: Build a custom engine agent
     expanded: false
     items:
@@ -196,7 +206,7 @@
   - name: Build your first connector
     href: /graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context
   - name: Simplify connector deployment
-    href: /graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context        
+    href: /graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context
   - name: Manage connections
     href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/extensibility/context
   - name: Manage schema
@@ -251,7 +261,7 @@
     href: debugging-copilot-plugin.md
 - name: Publish
   items:
-  - name: Overview 
+  - name: Overview
     href: publish.md
   - name: Validation guidelines for Copilot agents
     href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
