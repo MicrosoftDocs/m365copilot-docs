@@ -37,14 +37,14 @@ Core benefits of implementing declarative agents into your operations include:
 
 ## Build declarative agents
 
-Take a look at the core elements required for building a declarative agent app package:
+The following are the core elements of a declarative agent app package:
 
 - **App manifest:** Describes how your app is configured, including its capabilities, required resources, and other important attributes.
-- **App icons:** Each package requires a color and outline icon for your declarative agents.
+- **App icons:** The app package requires a color and outline icon for your declarative agents.
 - **Declarative agents manifest:** Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
-- **Plugin manifest (Optional):** Describes how your plugin is configured, including its required fields and capabilities.
+- **Plugin manifest (optional):** Describes how your plugin is configured, including its required fields and capabilities.
 
-Declarative agent's app package and its core elements mentioned can be created with any tool of choice. For a smooth getting started experience, you can start building declarative agents by selecting one of the appropriate toolsets that suits your specific scenario. The following table shows the options of recommended toolsets to get started.
+You can use your tool of choice to create a declarative agent app package. To get started, you can choose from the tools listed in the following table. 
 
 | **Start with** | **Summary** |
 |:------------|:------------|
@@ -53,9 +53,10 @@ Declarative agent's app package and its core elements mentioned can be created w
 | [Copilot Studio agent builder](copilot-studio-agent-builder.md) | Build declarative agents using the integrated builder in Microsoft 365 Copilot. |
 | [SharePoint](./build-declarative-agents.md#add-onedrive-and-sharepoint-knowledge) | Build declarative agents using grounding data from SharePoint files. |
 
-## See also
+## Related content
 
 - [Extensibility options for Microsoft 365 Copilot](decision-guide.md)
 - [Microsoft Copilot in the Microsoft 365 ecosystem](ecosystem.md)
-- [Microsoft Graph Connectors for Microsoft 365 Copilot](overview-graph-connector.md)
+- [Microsoft Graph connectors for Microsoft 365 Copilot](overview-graph-connector.md)
 - [Copilot agents are apps for Microsoft 365](agents-are-apps.md)
+- [Write effective instructions for declarative agents](declarative-agent-instructions.md)
