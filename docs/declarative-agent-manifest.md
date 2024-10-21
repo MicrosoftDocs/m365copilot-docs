@@ -227,3 +227,7 @@ The action object contains the following properties.
 Here's an example of a declarative agent manifest file that uses most of the manifest properties described in this article.
 
 [!INCLUDE [Sample declarative agent manifest for Repairs declarative agent](includes/declarative-agent-manifest-json.md)]
+
+## Related content
+
+- [Write effective instructions for declarative agents](declarative-agent-instructions.md)
