@@ -10,6 +10,13 @@ ms.topic: overview
 
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. In this article, we cover what's new related to Microsoft 365 Copilot extensibility.
 
+## October 2024: New and generally available
+
+### Use the Copilot Studio agent builder to build declarative agents
+
+Use Copilot Studio agent builder to create and customize Copilot agents that are targeted to your specific scenarios. With the agent builder, you can use natural language to describe your agent, or you can build it manually. To learn more, see [Overview of Copilot Studio agent builder](copilot-studio-agent-builder.md).
+
+
 ## August 2024: New in public preview
 
 ### Build your own agent and publish it as a Copilot extension
