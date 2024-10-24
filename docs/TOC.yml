@@ -24,7 +24,7 @@
   - name: Samples collection
     href: samples.md
   - name: Learning resources
-    href: https://learn.microsoft.com/collections/p11pb18wmq6xqq
+    href: /collections/p11pb18wmq6xqq
 - name: Build a Copilot agent
   expanded: true
   items:
@@ -41,7 +41,7 @@
       expanded: true
       items:
       - name: Build a declarative agent with Visual Studio Code
-        href: build-declarative-agents.md
+        href: build-declarative-agents.yml
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference

@@ -1,0 +1,39 @@
+### YamlMime:Tutorial
+title: Create declarative agents using Teams Toolkit
+metadata:
+  title: Create declarative agents using Teams Toolkit
+  description: Learn how to build a declarative agent for Microsoft 365 Copilot using Teams Toolkit.
+  audience: Developer
+  level: Beginner
+  displayType: one-column
+  ms.date: 10/23/2024
+  author: sebastienlevert
+  ms.author: slevert
+  ms.topic: tutorial
+  scenarios: getting-started
+items:
+- content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/01-intro.md)]
+- title: Create a declarative agent
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/02-create-agent.md)]
+- title: Add instructions
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/03-add-instructions.md)]
+- title: Add conversation starters
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/04-add-conversation-starters.md)]
+- title: Add web content
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/05-add-web-content.md)]
+- title: Add OneDrive and SharePoint content
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/06-add-onedrive-sharepoint.md)]
+- title: Add Microsoft Graph connectors content
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/07-add-ms-graph-connectors.md)]
+- title: Add API plugins
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/08-add-plugins.md)]
+- content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/09-completed.md)]

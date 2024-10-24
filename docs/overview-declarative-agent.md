@@ -46,14 +46,14 @@ The following are the core elements of a declarative agent app package:
 - **Declarative agents manifest:** Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
 - **Plugin manifest (optional):** Describes how your plugin is configured, including its required fields and capabilities.
 
-You can use your tool of choice to create a declarative agent app package. To get started, you can choose from the tools listed in the following table. 
+You can use your tool of choice to create a declarative agent app package. To get started, you can choose from the tools listed in the following table.
 
 | **Start with** | **Summary** |
 |:------------|:------------|
-| [Teams Toolkit](./build-declarative-agents.md) | Build declarative agents using Teams Toolkit and Teams Toolkit CLI. |
+| [Teams Toolkit](./build-declarative-agents.yml) | Build declarative agents using Teams Toolkit. |
 | [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) | Build declarative agents using the builder integrated in Copilot Studio. |
 | [Copilot Studio agent builder](copilot-studio-agent-builder.md) | Build declarative agents using the integrated builder in Microsoft 365 Copilot. |
-| [SharePoint](./build-declarative-agents.md#add-onedrive-and-sharepoint-knowledge) | Build declarative agents using grounding data from SharePoint files. |
+| [SharePoint](./build-declarative-agents.yml?tutorial-step=5) | Build declarative agents using grounding data from SharePoint files. |
 
 ## Related content
 

@@ -216,6 +216,14 @@ The combination of this plugin manifest and API response results in the followin
 
 Plugins can combine the use of both static and dynamic templates. In this scenario, the static template acts as a default template that is used if the item doesn't have the `template_selector` property present, or if its value doesn't resolve to a template in the API response.
 
+## Ensure responsive Adaptive Cards across Microsoft 365 Copilot hubs
+
+Adaptive cards must be designed to be responsive across various surface sizes. This ensures a seamless user experience, regardless of the device or platform being used. To achieve this, make sure to validate the adaptive cards on different Microsoft 365 Copilot hubs, including Teams, Word, and PowerPoint. Doing so ensures that the adaptive cards function optimally and provide a consistent experience across all platforms. Apply the following best practices:
+
+- In some apps, Adaptive Cards are rendered at a maximum width of 251px. Optimize the responsiveness of the card's content so that it renders well at this size.
+- Use a single column layout for the adaptive content for smaller width view ports.
+- Use percentages to define the width of elements within the Adaptive Cards.
+
 ## See also
 
 - [Adaptive Card designer](https://adaptivecards.io/designer/) to design and test Adaptive Cards in a visual tool.
