@@ -412,6 +412,6 @@ The declarative agent will have access to your updated instructions after you re
 
 Adaptive cards must be designed to be responsive across various surface sizes. This ensures a seamless user experience, regardless of the device or platform being used. To achieve this, make sure to validate the adaptive cards on different Microsoft 365 Copilot hubs, including Teams, Word, and PowerPoint. Doing so ensures that the adaptive cards function optimally and provide a consistent experience across all platforms. Apply the following best practices:
 
-- In some apps, Adaptive Cards are rendered at a maximum width of 276px. Optimize the responsiveness of the card's content so that it renders well at this size.
+- In some apps, Adaptive Cards are rendered at a maximum width of 251px. Optimize the responsiveness of the card's content so that it renders well at this size.
 - Use a single column layout for the adaptive content for smaller width viewports.
 - Use percentages to define the width of elements within the Adaptive Cards.
