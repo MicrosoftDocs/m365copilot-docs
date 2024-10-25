@@ -3,7 +3,7 @@ title: Microsoft 365 Copilot developer community support and feedback
 description: Help and resources needed for Microsoft 365 Copilot
 author: mobajemu
 ms.author: mobajemu
-ms.topic: reference
+ms.topic: conceptual
 ms.date: 01/18/2024
 ---
 
