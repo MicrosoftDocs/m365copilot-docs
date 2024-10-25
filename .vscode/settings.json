@@ -1,6 +1,11 @@
 {
   "cSpell.spellCheckOnlyWorkspaceFiles": true,
-  "markdownlint.ignore": [
-    "LICENSE-CODE"
-  ]
+  "markdownlint.lintWorkspaceGlobs": [
+    "**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
+    "!**/.git",
+    "!**/LICENSE_CODE"
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml"
+  }
 }
