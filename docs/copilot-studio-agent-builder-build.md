@@ -8,18 +8,28 @@ ms.topic: conceptual
 
 # Build agents with Copilot Studio agent builder
 
-The Copilot Studio agent builder allows you to author a Copilot agent in two ways: by using natural language (via the **Describe** tab) or manually (via the **Configure** tab). Both tabs work seamlessly to provide a rich authoring experience.
+The Copilot Studio agent builder provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-The availability of the **Describe** tab is based on geographic availability and language support. The **Describe** tab only supports English. When the authoring language is set to English, the **Describe** tab is available in the following regions: 
+To get started with the Copilot Studio agent builder, open the Copilot app in Microsoft 365, select **Work**, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Business Chat (BizChat) in Teams.
 
-- Australia
-- India
-- Japan
-- United Arab Emirates
-- United Kingdom
-- United States
+You can author your declarative agent in two ways:
 
-You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your region or preferred language.
+- Via the **Describe** tab, using natural language
+- Via the **Configure** tab where you can build it manually
+
+Both tabs work seamlessly to provide a rich authoring experience.
+
+> [!NOTE]
+> The availability of the **Describe** tab is based on geographic availability and language support. The **Describe** tab only supports English. When the authoring language is set to English, the **Describe** tab is available in the following regions: 
+>
+> - Australia
+> - India
+> - Japan
+> - United Arab Emirates
+> - United Kingdom
+> - United States
+>
+> You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your region or preferred language.
 
 ## Describe your Copilot agent
 
