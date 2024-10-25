@@ -1,13 +1,12 @@
 name: New content request
 description: Use this template to file a request for new Microsoft 365 Copilot extensibility documentation.
-title: "[New content request]: "
+title: "[Content request]: "
 labels: ["triage"]
 projects: [" "]
 assignees: lauragra
 
 body:
   details: "Are you requesting new content or an update to existing content?"
-  request:
   type: 
     required: true
     options:
