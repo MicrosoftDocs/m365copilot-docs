@@ -200,7 +200,7 @@ The following example shows a declarative agent manifest with tokenized values f
 
 ```json
 {
-    "$schema": "https://aka.ms/json-schemas/copilot-extensions/v1.0/declarative-copilot.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
     "name": "[[DA_Name]]",
     "description": "[[DA_Description]]",
     "instructions": "# You are an assistant..."

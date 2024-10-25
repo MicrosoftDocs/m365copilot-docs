@@ -1,0 +1,213 @@
+openapi: '3.0.2'
+info:
+  title: Posts API
+  version: '1.0'
+servers:
+- url: https://jsonplaceholder.typicode.com/
+
+components:
+  schemas:
+    post:
+      type: object
+      properties:
+        userId:
+          type: integer
+          description: The ID of the user that authored the post.
+        id:
+          type: integer
+        title:
+          type: string
+        body:
+          type: string
+    user:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        username:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        website:
+          type: string
+        address:
+          $ref: '#/components/schemas/address'
+        company:
+          $ref: '#/components/schemas/company'
+    address:
+      type: object
+      properties:
+        street:
+          type: string
+        suite:
+          type: string
+        city:
+          type: string
+        zipcode:
+          type: string
+        geo:
+          $ref: '#/components/schemas/coordinates'
+    coordinates:
+      type: object
+      properties:
+        lat:
+          type: string
+          description: The latitude of the location
+        lng:
+          type: string
+          description: The longitude of the location
+    company:
+      type: object
+      properties:
+        name:
+          type: string
+        catchPhrase:
+          type: string
+        bs:
+          type: string
+  parameters:
+    post-id:
+      name: post-id
+      in: path
+      description: 'key: id of post'
+      required: true
+      style: simple
+      schema:
+        type: integer
+    user-id:
+      name: user-id
+      in: path
+      description: 'key: id of user'
+      required: true
+      style: simple
+      schema:
+        type: integer
+
+paths:
+  /posts:
+    get:
+      description: Get posts
+      operationId: GetPosts
+      parameters:
+      - name: userId
+        in: query
+        description: Filter results by user ID
+        required: false
+        style: form
+        schema:
+          type: integer
+          maxItems: 1
+      - name: title
+        in: query
+        description: Filter results by title
+        required: false
+        style: form
+        schema:
+          type: string
+          maxItems: 1
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/post'
+    post:
+      description: 'Create post'
+      operationId: CreatePost
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/post'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/post'
+  /posts/{post-id}:
+    get:
+      description: 'Get post by ID'
+      operationId: GetPostById
+      parameters:
+      - $ref: '#/components/parameters/post-id'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/post'
+    patch:
+      description: 'Update post'
+      operationId: UpdatePost
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/post'
+      parameters:
+      - $ref: '#/components/parameters/post-id'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/post'
+    delete:
+      description: 'Delete post'
+      operationId: DeletePost
+      parameters:
+      - $ref: '#/components/parameters/post-id'
+      responses:
+        '200':
+          description: OK
+  /users:
+    get:
+      summary: Get users
+      description: Returns details about users
+      operationId: GetUsers
+      parameters:
+      - name: name
+        in: query
+        description: The user's real name
+        schema:
+          type: string
+      - name: username
+        in: query
+        description: The user's login name
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/user'
+  /users/{user-id}:
+    get:
+      description: 'Get user by ID'
+      operationId: GetUserById
+      parameters:
+      - $ref: '#/components/parameters/post-id'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user'
