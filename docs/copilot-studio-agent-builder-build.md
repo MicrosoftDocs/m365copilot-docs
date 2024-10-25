@@ -10,7 +10,9 @@ ms.topic: conceptual
 
 The Copilot Studio agent builder provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-To get started with the Copilot Studio agent builder, open the Copilot app in Microsoft 365, select **Work**, and in the right rail, choose **Create agents**. You can author your declarative agent in two ways:
+To get started with the Copilot Studio agent builder, open the Copilot app in Microsoft 365, select **Work**, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Business Chat (BizChat) in Teams.
+
+You can author your declarative agent in two ways:
 
 - Via the **Describe** tab, using natural language
 - Via the **Configure** tab where you can build it manually
