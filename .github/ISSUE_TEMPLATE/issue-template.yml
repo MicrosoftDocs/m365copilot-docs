@@ -1,0 +1,60 @@
+name: Microsoft 365 Copilot extensibility content request
+description: Use this template to file a request for new Microsoft 365 Copilot extensibility documentation or an update to existing content.
+title: "[Content request]: "
+labels:
+- triage
+assignees:
+- lauragra
+
+body:
+- type: dropdown
+  id: issue_type
+  attributes:
+    label: Issue type
+    description: Are you requesting new content or an update to existing content?
+    multiple: false
+    options:
+    - New content request
+    - Update to existing content
+  validations:
+    required: true
+
+- type: textarea
+  id: details
+  attributes:
+    label: Details
+    description: Please describe your content request. If it's an update, please provide the link to the topic to be updated. If new content, include a link to a spec or a content draft.
+  validations:
+    required: true
+
+- type: input
+  id: sme
+  attributes:
+    label: Subject matter expert
+    description: Provide the names of SMEs who can help to craft or review the content.
+  validations:
+    required: true
+
+- type: dropdown
+  id: priority
+  attributes:
+    label: Priority
+    multiple: false
+    options:
+    - P1 - The request is blocking or affects multiple customers or is related to security, privacy, etc.
+    - P2 - The request is a high priority but not urgent.
+    - P3 - The request is medium priority and is not blocking.
+    default: 2
+  validations:
+    required: true
+
+- type: input
+  id: target_publish_date
+  attributes:
+    label: Target publish date
+
+- type: textarea
+  id: additional_details
+  attributes:
+    label: Additional details
+    description: Provide any additional details that will help us manage your request.
