@@ -35,7 +35,7 @@ You can build agents from the following apps and sites:
 
 ## Prerequisites
 
-You need a license for [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise) with the **Copilot Studio in Copilot for M365** app enabled and a license for Microsoft 365. Admins can assign or unassign licenses for users in the [Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users).
+You need a license for [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise) and a license for Microsoft 365. Admins can assign or unassign licenses for users in the [Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users).
 
 For information regarding regional availability and supported languages, see [Copilot Studio agent builder availability and language support](copilot-studio-agent-builder-availability.md).
 
