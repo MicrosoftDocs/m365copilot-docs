@@ -16,11 +16,11 @@ It offers *knowledge*, such as emails, chats, and documents that users have perm
 
 :::image type="content" source="assets/images/anatomy-m365-copilot.png" alt-text="Visual representation of the Microsoft 365 Copilot system: models, orchestrator, knowledge, skills, and UX" border="false":::
 
-As a developer, you can customize and extend Microsoft 365 Copilot with additional knowledge and skills. You can build Copilot agents to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot, tailoring it to suit the unique needs of your customers.
+As a developer, you can customize and extend Microsoft 365 Copilot with additional knowledge and skills by building *Copilot agents*. With Copilot agents, you can bring custom knowledge, skills, and process automation into Microsoft 365 Copilot, tailoring it to suit the unique needs of your customers.
 
 ## What are Copilot agents?
 
-Copilot agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Agents enable customers to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot, tailoring it to their specific needs. They can be optimized for specific tasks, such as retrieving information, summarizing data, and taking actions like sending emails or updating records. 
+Copilot agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Copilot agents enable customers to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for their specific needs. You can optimize Copilot agents for specific tasks, such as retrieving information, summarizing data, and taking actions like sending emails or updating records. 
 
 Copilot agents include the following components:
 
@@ -31,15 +31,7 @@ Copilot agents include the following components:
 :::image type="content" source="assets/images/anatomy-agents.png" alt-text="Visual representation of the Copilot agents: models, orchestrator, knowledge, skills, anatomy, and UX" border="false":::
 
 
-Agents can be customized to meet specific business needs, such as:
-
-- Human Resources agent
-- Analytics agent
-- Project management agent
-- Legal agent
-- Image creation agent
-
-The following practical examples illustrate the types of agents you can develop for your organization.
+Agents can be customized to meet specific business needs, such as Human Resources, analytics, project management, Legal, image creation, and more. The following practical examples illustrate the types of agents you can develop for your organization.
 
 - **Project management agent for engineering team**
 
@@ -53,7 +45,7 @@ The following practical examples illustrate the types of agents you can develop 
 
    If you need images for your marketing campaign, you can create an agent that develops marketing assets specifically tailored to your campaign.
 
-## Types of Copilot agents
+## Copilot extensibility options
 
 Copilot agents can be built using either a declarative or custom engine approach. This gives you, as a developer, the flexibility to choose how you want to build your agents, while providing the same experience to end users.
 
@@ -65,20 +57,18 @@ Copilot agents can be built using either a declarative or custom engine approach
 
 :::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with organizational 'Knowledge' as the x-axis and user 'Skills' as the y-axis" border="false" lightbox="assets/images/skills-knowledge-chart.png":::
 
-For more information about the two types of agents, see [Your agent options for Microsoft 365](decision-guide.md).
+For more information about the two approaches to building agents, see [Your agent options for Microsoft 365](decision-guide.md).
 
-## Copilot agent extensibility options
-
-You can add knowledge and skills to Copilot agents via Copilot connectors and API plugins.
+You can add knowledge and skills to Copilot agents via Copilot connectors and plugins.
 
 ### Copilot connectors
 
-Copilot connectors are building blocks that enable developers to add custom knowledge and custom skills to Copilot agents. You can extend your Copilot agents via the following types of Copilot connectors:
+Copilot connectors are building blocks that enable you to add custom knowledge and custom skills to Copilot agents. You can extend your Copilot agents via the following types of Copilot connectors:
 
 - Microsoft Graph connectors
 - Power Platform connectors
 
-IT Admins can configure appropriate Copilot connectors in [Microsoft 365 Admin Center](https://admin.microsoft.com) and [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) to expand knowledge available to all users ​in their tenant, respecting data access limitations from the knowledge ​source itself.
+IT Admins can configure appropriate Copilot connectors in [Microsoft 365 Admin Center](https://admin.microsoft.com) and [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) to expand the knowledge available to all users ​in their tenant, while respecting data access limitations from the knowledge ​source itself.
 
 #### Microsoft Graph connectors
 
@@ -119,16 +109,17 @@ You can create the following types of plugins:
 When you build Copilot agents, you can tailor the user experience by providing *in context* and *immersive* experiences.
 
 - **In-context experience**: An in-app experience where users interact Business Chat (BizChat) in the context of an app, such as a Teams chat or a Word document. Users can `@`-mention the agent and interact with it directly within the app experience.
+
+  To build **in-context experiences**, you can use plugins and declarative agents. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems. 
+
 - **Immersive experience**: The full experience of the Copilot app in Microsoft 365. Users chat directly with the agent embedded in Copilot.
+
+    To build an **immersive experience**, you use declarative agents. When a user activates a Copilot agent with an *immersive* experience, the conversation is a 1:1 interaction with the agent, tailored to its capabilities and scope.
 
 :::image type="content" source="assets/images/copilot-experiences.png" alt-text="This illustration shows two distinct copilot user experiences, in context and immersive" border="false":::
 
 > [!NOTE]
 > BizChat is the full-featured and secure chat experience for Microsoft 365 Copilot. BizChat is available on the web via the Microsoft 365 App and is integrated into Teams, Outlook, Word, and PowerPoint.​
-
-To build **in-context experiences**, you can use plugins and declarative agents. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems. ​
-
-To build an **immersive experience**, you use declarative agents. When a user activates a Copilot agent with an *immersive* experience, the conversation is a 1:1 interaction with the agent, tailored to its capabilities and scope.
 
 ## Related content
 
