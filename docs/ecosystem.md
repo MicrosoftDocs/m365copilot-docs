@@ -1,39 +1,37 @@
 ---
-title: Copilot in the Microsoft 365 ecosystem
-description: A plugin or connector written for Copilot runs across the Microsoft 365 ecosystem. Learn how to leverage the Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
+title: Copilot Agents, Plugins, and Connectors in the Microsoft 365 Ecosystem
+description: Copilot agents, plugins, and connectors run across the Microsoft 365 ecosystem. Learn how the Microsoft 365 ecosystem extends the reach of your apps, services, and data.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 9/16/2024
+ms.date: 10/31/2024
 ---
 
-# Copilot in the Microsoft 365 ecosystem
+# Copilot extensibility in the Microsoft 365 ecosystem
 
-When you customize Microsoft 365 Copilot with agents and extend its skills with plugins and knowledge with connectors, you're leveraging the entire Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
+When you customize Microsoft 365 Copilot with Copilot agents and use plugins and connectors to extend Copilot's skills and knowledge, you're taking advantage of the entire Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
 
-- As a **Developer**, you can *write once, and run anywhere* across the growing list of Microsoft 365 host applications for Copilot and integrated apps. Copilot seamlessly integrates your agents, plugins, and connectors with its entire list of skills and knowledge, making your *integration with Copilot the last one* you'll ever have to perform.
+- As a **developer**, you can *write once and run anywhere* across the growing list of Microsoft 365 host applications and integrated apps. Copilot seamlessly integrates your agents, plugins, and connectors with its list of skills and knowledge. You won't have to integrate with any other Microsoft 365 apps and services.
 
-- Your **End-users** will *stay in the flow of their work*, using the apps and services supporting their workflow as skills and knowledge accessible through Copilot's natural language interface.
+- Your **end-users** will *stay in the flow of their work*, using the apps and services that support their workflow as skills and knowledge that they access through Copilot's natural language interface.
 
-- **Business decision makers and IT admins** can *confidently adopt and centrally manage* your enterprise-grade technology, backed by the security and trust of Microsoft's commitment to Responsible AI.
+- **Business decision makers and IT admins** can *confidently adopt and centrally manage* your enterprise-grade technology, backed by Microsoft's commitment to [Responsible AI](#microsoft-security-trust-and-commitment-to-responsible-ai).
 
 The agents, plugins, and connectors you build for Copilot are part of the larger Microsoft 365 Copilot system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through different native components and agents of the Copilot system.
 
-:::image type="content" source="assets/images/copilot-architecture.png" alt-text="Diagram that shows the flow of data across components of Microsoft 365 Copilot ecosystem" lightbox="assets/images/copilot-architecture.png":::
+:::image type="content" source="assets/images/copilot-architecture.png" alt-text="Diagram that shows the flow of data across components of the Microsoft 365 Copilot ecosystem" lightbox="assets/images/copilot-architecture.png":::
 
-*The Copilot system uses data from a plugin in two stages: (1) matching the user's prompt to the most relevant skill and parameters, and (2) determining which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response back to the user.*
+The Copilot system uses data from a plugin in two stages: (1) it matches the user's prompt to the most relevant skill and parameters, and (2) it determines which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response for the user.
 
-You can build extend, enrich, and customize Copilot for the unique way your customers work. And as part of the broader Microsoft 365 ecosystem, your Copilot agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and a host of development tools and support.
-
-This article walks you through the resources of the Microsoft 365 ecosystem available to you as a developer of Copilot extensibility solutions.
+You can extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. As part of the broader Microsoft 365 ecosystem, your Copilot agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and comprehensive development tools and support.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-## Plugins and connectors work across Microsoft 365 experiences
+## Plugin and connector availability in Microsoft 365 experiences
 
-There are over 350 million daily active users across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, Power Point, and the Microsoft 365 app. When you write a plugin or connector, it can reach all the places Copilot extensibility is supported across Microsoft 365.
+Over 350 million users are active daily across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, PowerPoint, and the Microsoft 365 app. When you write a plugin or connector, it can reach all the apps that support Copilot extensibility across Microsoft 365.
 
-. . . but that's not all! Depending on the [way you extend Copilot](./decision-guide.md), your plugin or connector also runs outside of Copilot experiences. The following table lists alternate ways the skills and knowledge from your plugins and connectors are available to end-users within an organization:
+Your plugin or connector also runs outside of Copilot experiences. The following table lists all the ways the skills and knowledge from your plugins and connectors are available to users within an organization.
 
 |Copilot extensibility type|Microsoft 365 product availability|Learn more|
 |----------|-----------|------------|
