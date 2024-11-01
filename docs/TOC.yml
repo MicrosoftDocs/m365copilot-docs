@@ -1,6 +1,6 @@
 - name: Microsoft 365 Copilot extensibility
   href: index.md
-- name: Work with the Copilot ecosystem
+- name: Explore
   items:
   - name: Copilot in the Microsoft 365 ecosystem
     href: ecosystem.md

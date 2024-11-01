@@ -1,15 +1,15 @@
 ---
-title: How Microsoft 365 Copilot decides which plugin to use
+title: How the Microsoft 365 Copilot Orchestrator Chooses Plugins
 description: Learn how the Microsoft Copilot orchestrator determines which plugin skill to apply for a given user prompt.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 08/15/2024
+ms.date: 11/01/2024
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
 
-# How Microsoft 365 Copilot decides which plugin to use
+# Overview of the Microsoft 365 Copilot orchestrator
 
 Microsoft 365 Copilot is your personal assistant for work. It helps with various general **tasks**, such as writing, summarizing, researching, and more. Copilot has different **skills** that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
 
@@ -17,13 +17,13 @@ Like any copilot, Microsoft 365 Copilot is trained with data at a point in time.
 
 But how does Copilot know which skill to use when you ask for help? How does it interpret your request and match it to the best skill available? That's the job of the Microsoft 365 Copilot **orchestrator**.
 
-This article explains the logic behind Copilot's skill selection process and how you can ensure Copilot employs your plugin at every opportunity to benefit your users.
+This article explains the logic behind Copilot's skill selection process and how you can ensure that Copilot uses your plugin at every opportunity to benefit your users.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-## The Copilot orchestrator
+## Copilot orchestrator
 
-Between the end-user's natural language input to Copilot's natural language output, the Microsoft Copilot orchestrator works behind the scenes to select and execute the right skill(s) from the right plugin(s) for the end-user's given task.
+Between the user's natural language input and Copilot's natural language output, the Copilot orchestrator works behind the scenes to select and run the right skills from the right plugins for the user's given task.
 
 The orchestration layer represents the interface between foundation Large Language Models (LLMs) and the many ways you can extend, enrich, and customize Copilot for the way your customers work.
 

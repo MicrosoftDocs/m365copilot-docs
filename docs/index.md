@@ -47,7 +47,7 @@ Agents can be customized to meet specific business needs, such as human resource
 
 ## Copilot extensibility options
 
-You can build Copilot agents by using either a declarative or custom engine approach. This gives you, as a developer, the flexibility to choose how you want to build your agents, while providing the same experience to end users.
+You can build Copilot agents by using either a declarative or custom engine approach. This gives you, as a developer, the flexibility to choose how you want to build your agents, while providing the same experience to users.
 
 **Declarative agents** are a collection of *custom knowledge* (via instructions and grounding data), and *custom skills* (including actions, triggers, and workflows) hosted on the Microsoft 365 Copilot orchestrator and foundation models to power a conversational experience. These agents can be integrated within Microsoft 365 and can use Copilot connectors and plugins to light up advanced functionality.​
 
