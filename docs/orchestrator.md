@@ -35,58 +35,58 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
 1. **Natural language input**: The user submits a query to Copilot, such as "What tickets are assigned to me right now?"
 
-1. **Preliminary checks**: Copilot conducts several checks on the query, including responsible AI checks and security measures to ensure it doesn’t pose any risks. If the query fails any of these checks, Copilot terminates the interaction.
+1. **Preliminary checks**: Copilot conducts several checks on the query, including responsible AI checks and security measures to ensure it doesn't pose any risks. If the query fails any of these checks, Copilot terminates the interaction.
 
-1. **Reasoning**: The Copilot orchestrator formulates a plan comprising of multiple actions that it performs in an attempt to respond to the user's prompt.
+1. **Reasoning**: The Copilot orchestrator formulates a plan comprised of multiple actions that it performs in an attempt to respond to the user's prompt.
 
-   1. **Context and Tool Selection**: The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps.
+   1. **Context and tool selection**: The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps.
 
-      The LLM may proceed to generating a response using Copilot’s built-in capabilities, or it may determine that additional data is necessary.
+      The LLM might proceed to generating a response using Copilot's built-in capabilities, or it might determine that additional data is necessary.
 
-      If further information is needed, the orchestrator does a search for the plugins(tools) with the right skill for the task from the user's enabled plugins based on the plugins descriptions and their functions descriptions.
+      If more information is needed, the orchestrator does a search for the plugins (tools) with the right skill for the task from the user's enabled plugins based on the descriptions of the plugins and their functions.
 
-   1. **Function Matching and Parameter Determination**: The orchestrator formulates a new prompt incorporating the user’s initial query, the updated context, and the selected plugins, and presents it to the LLM. The LLM evaluates the input and specifies the optimal plugin and function within that plugin to address the task. It then provides the orchestrator with the necessary function details and parameters required to gather the needed information.
+   1. **Function matching and parameter determination**: The orchestrator formulates a new prompt that incorporates the user's initial query, the updated context, and the selected plugins, and presents it to the LLM. The LLM evaluates the input and specifies the optimal plugin and function within that plugin to address the task. It then provides the orchestrator with the necessary function details and parameters required to gather the needed information.
 
-   1. **Tool execution**: The orchestrator uses the response from the LLM to construct an API request and send the request to the tool executor, which securely retrieves the requested information located outside of Copilot's infrastructure. It executes the request and sends the results back to the orchestrator for further processing.
+   1. **Tool initiation**: The orchestrator uses the response from the LLM to construct an API request and send the request to the tool initiator, which securely retrieves the requested information located outside of Copilot's infrastructure. It runs the request and sends the results back to the orchestrator for further processing.
 
-   1. **Result Analysis and Response Formulation**: The orchestrator integrates the API response into the ongoing context and consults the LLM in a continuous reasoning loop until the LLM deems it appropriate to generate a final response.
+   1. **Result analysis and response formulation**: The orchestrator integrates the API response into the ongoing context and consults the LLM in a continuous reasoning loop until the LLM deems it appropriate to generate a final response.
 
 1. **Responding**: The orchestrator compiles all the information gathered during the reasoning process and submits it to the LLM to create a final response. After ensuring the response complies with Responsible AI guidelines, it sends the response back to the orchestrator, which logs it in the context store and delivers it to the user via the Copilot UI.
 
 1. **Natural language output**: Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
-      If you imagine a user's prompt to Copilot like a construction project, then the Copilot orchestrator is the _general contractor_, who coordinates and organizes the work of the specialist _subcontractors_, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring the project is "completed" according to specifications implied by the user's input (in other words, that Copilot's response satisfies the user's intent in their request).
+      If you imagine a user's prompt to Copilot like a construction project, the Copilot orchestrator is the general contractor, who coordinates and organizes the work of the specialist subcontractors, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring that the project is completed according to specifications implied by the user's input (in other words, that Copilot's response satisfies the user's intent in their request).
 
-      However, it's the responsibility of each plugin to provide Copilot with an accurate description of its skills and to execute its skills effectively. This instills a sense of trust in your users and ensure Copilot calls your plugin each time its skills are needed. The next section provides more details on how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
+      Each plugin must provide Copilot with an accurate description of its skills and run its skills effectively. This instills a sense of trust in your users and ensures that Copilot calls your plugin each time its skills are needed. 
+
+The next section provides more details about how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
 
 ## Plugin optimization
 
 Microsoft 365 Copilot can uniquely choose the right skill from the many in its repertoire. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
 
-The answer lies in how you describe your plugin, its skills, and the parameters for skill execution. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring the Copilot orchestrator knows when and how to invoke your plugin.
+The answer lies in how you describe your plugin, its skills, and the parameters for initation of skills. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring that the Copilot orchestrator knows when and how to invoke your plugin.
 
-The way you describe your plugin to the orchestrator depends on the type of plugin you build, as summarized by the following table.
+The way you describe your plugin to the orchestrator depends on the type of plugin you build, as described in the following table.
 
 | Plugin type  | Described by | Learn more|
 |----------|-----------|------------|
-|API Plugins |  OpenAPI description | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md) |
+|API plugins |  OpenAPI description | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md) |
 | Copilot Studio actions | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)  |
 | Message extension plugins | App manifest   | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
 
 ### Matching mechanisms
 
-When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (_functions_) from installed plugins to identify up to five skills, which best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, here's the hierarchy of matching mechanisms for Copilot plugin function selection:
+When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
 
 1. Lexical match on function name.
 2. Semantic match on function description. **This step is currently in private preview.**
 3. Lexical match on plugin name (adds all plugin functions to candidate list).
 4. Semantic match on plugin name (adds all plugin functions to candidate list).
 
-The orchestrator works through the above list until all five function candidate slots are filled.
+The orchestrator works through this list until all five function candidate slots are filled.
 
 ## Next step
 
-Learn best practices for optimizing plugin discoverability and usefulness.
-
 > [!div class="nextstepaction"]
-> [Learn what makes a high quality plugin](plugin-guidelines.md)
+> [Explore best practices for high-quality plugin](plugin-guidelines.md)
