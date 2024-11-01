@@ -59,7 +59,16 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
       Each plugin must provide Copilot with an accurate description of its skills and run its skills effectively. This instills a sense of trust in your users and ensures that Copilot calls your plugin each time its skills are needed. 
 
-## Next step
+## How Copilot's orchestrator matches plugins to user queries
 
-> [!div class="nextstepaction"]
-> [Explore best practices for high-quality plugin](plugin-guidelines.md)
+When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
+
+1. Lexical match on function name.
+2. Semantic match on function description. **This step is currently in private preview.**
+3. Lexical match on plugin name (adds all plugin functions to candidate list).
+4. Semantic match on plugin name (adds all plugin functions to candidate list).
+
+The orchestrator works through this list until all five function candidate slots are filled.
+
+To best ensure that the Copilot orchestrator chooses your plugin to provide the right skill for users' queries, apply the [Explore best practices for high-quality plugins](plugin-guidelines.md).
+

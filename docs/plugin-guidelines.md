@@ -31,17 +31,6 @@ The way you describe your plugin to the orchestrator depends on the type of plug
 | Copilot Studio actions | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)  |
 | Message extension plugins | App manifest   | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
 
-### Matching mechanisms
-
-When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
-
-1. Lexical match on function name.
-2. Semantic match on function description. **This step is currently in private preview.**
-3. Lexical match on plugin name (adds all plugin functions to candidate list).
-4. Semantic match on plugin name (adds all plugin functions to candidate list).
-
-The orchestrator works through this list until all five function candidate slots are filled.
-
 ## Qualities of a good plugin
 
 A clear and concise description of your plugin is essential for Copilot to recognize its capabilities and match it with the appropriate user tasks. You can ensure your plugin provides the best possible user experience at runtime by designing your plugin with the following characteristics.
