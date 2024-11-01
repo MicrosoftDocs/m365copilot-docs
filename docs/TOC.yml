@@ -6,8 +6,6 @@
     href: ecosystem.md
   - name: Copilot orchestrator
     href: orchestrator.md
-  - name: What makes a good plugin?
-    href: plugin-guidelines.md
   - name: Agents are apps for Microsoft 365
     href: agents-are-apps.md
   - name: Data, Privacy, and Security
@@ -222,8 +220,10 @@
 - name: Add skills with plugins
   expanded: true
   items:
-  - name: API plugins
-    items:
+    - name: Best practices for high-quality plugins
+      href: plugin-guidelines.md
+    - name: API plugins
+      items:
     - name: Overview
       href: overview-api-plugins.md
     - name: Build an API plugin with a new API

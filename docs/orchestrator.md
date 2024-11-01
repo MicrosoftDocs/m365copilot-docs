@@ -59,33 +59,6 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
       Each plugin must provide Copilot with an accurate description of its skills and run its skills effectively. This instills a sense of trust in your users and ensures that Copilot calls your plugin each time its skills are needed. 
 
-The next section provides more details about how to optimize your plugin and your OpenAPI documents for the orchestrator to find and use.
-
-## Plugin optimization
-
-Microsoft 365 Copilot can uniquely choose the right skill from the many in its repertoire. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
-
-The answer lies in how you describe your plugin, its skills, and the parameters for initation of skills. Specifying concise and accurate descriptions in your plugin manifest is critical to ensuring that the Copilot orchestrator knows when and how to invoke your plugin.
-
-The way you describe your plugin to the orchestrator depends on the type of plugin you build, as described in the following table.
-
-| Plugin type  | Described by | Learn more|
-|----------|-----------|------------|
-|API plugins |  OpenAPI description | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md) |
-| Copilot Studio actions | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)  |
-| Message extension plugins | App manifest   | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
-
-### Matching mechanisms
-
-When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
-
-1. Lexical match on function name.
-2. Semantic match on function description. **This step is currently in private preview.**
-3. Lexical match on plugin name (adds all plugin functions to candidate list).
-4. Semantic match on plugin name (adds all plugin functions to candidate list).
-
-The orchestrator works through this list until all five function candidate slots are filled.
-
 ## Next step
 
 > [!div class="nextstepaction"]
