@@ -4,10 +4,12 @@ description: Extend Microsoft 365 Copilot with plugins and Microsoft Graph conne
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: conceptual
-ms.date: 11/15/2023
+ms.date: 11/01/2024
 ---
 
 # Microsoft 365 Copilot extensibility samples
+
+This article provides links to code samples to help you develop Copilot extensibility solutions, including Copilot agents, Microsoft Graph connectors, and plugins.
 
 ## Microsoft Graph connector samples
 
@@ -20,19 +22,17 @@ The following samples implement Microsoft Graph connectors that extend Microsoft
 | [Python GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-python) | This Python application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |
 | [TypeScript GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-typescript) | This TypeScript application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |
 
-### Samples from the community
+### Microsoft Graph connector samples from the community
 
 You can find the latest list of Microsoft Graph connector samples from the community in the [Microsoft Adoption center](https://adoption.microsoft.com/sample-solution-gallery/?product=Microsoft+Graph+connectors&product=Microsoft+365+Copilot).
 
-### Build your first customer Graph connector for Microsoft 365 Copilot
-
-> [!VIDEO https://www.youtube.com/embed/2oQ_6wXrwDQ]
-
 ## Declarative agent samples
+
+The following Copilot agent samples are available from the PNP community.
 
 | Sample | Description |
 |--------|-------------|
-| [Career Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-CareerCoach) | Provides personalized career development suggestions, including role understanding, skill gap analysis, learning opportunities, and career transition plans. It aims to understand the user’s current role, identify career goals, assess skills and gaps, suggest learning opportunities and create a detailed action plan for future growth. |
+| [Career Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-CareerCoach) | Provides personalized career development suggestions, including role understanding, skill gap analysis, learning opportunities, and career transition plans. It aims to understand the user's current role, identify career goals, assess skills and gaps, suggest learning opportunities and create a detailed action plan for future growth. |
 | [Idea Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-IdeaCoach) | Facilitates brainstorming sessions and planning, offering creative exercises, idea organization techniques, and feedback for improvement. It uses a fun, collaborative tone, asks iterative questions and provides detailed agendas and creative suggestions for running effective brainstorming sessions. |
 | [Learning Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-LearningCoach) | Helps users understand complex topics by breaking them down into simple, intermediate, and advanced summaries, and also provides guided practice and learning plans. It employs various techniques for learning complex topics, including glossaries, analogies, practice exercises and structured study plans. |
 | [Prompt Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-PromptCoach) | Assists users in creating effective and well-structured prompts for Copilot. Offering analysis, compliance checks and improvement suggestions. It asks for information on the goal, context, source, and expectations to generate effective prompts and provides detailed analyses for to help elevate your prompt writing prowess. |
@@ -74,6 +74,7 @@ The following samples implement Teams message extensions that extend Microsoft 3
 | [Compliance checker](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-ai-doc-compliance-checker) | Use Azure OpenAI to compare proposal documents against a guideline document and return whether the proposal complies and why/why not. |
 | [Expert finder](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-expert-finder-js) | This sample implements a Teams message extension that can be used to query a database of candidates based on their skills, location, and availability. The sample, when used with Microsoft 365 Copilot, demonstrates Single Sign-On (SSO), and Copilot's ability to perform multi-parameter search. |
 
-#### Write a message extension for Teams and Microsoft 365 Copilot
+## Videos
 
-> [!VIDEO https://www.youtube.com/embed/zK-L83cwJ8c]
+- [Build your first customer Graph connector for Microsoft 365 Copilot](https://www.youtube.com/embed/2oQ_6wXrwDQ)
+- [Write a message extension for Teams and Microsoft 365 Copilot](https://www.youtube.com/embed/zK-L83cwJ8c)
