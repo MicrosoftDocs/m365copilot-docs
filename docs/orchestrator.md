@@ -23,13 +23,13 @@ This article explains the logic behind Copilot's skill selection process and how
 
 ## Copilot orchestrator
 
-Between the user's natural language input and Copilot's natural language output, the Copilot orchestrator works behind the scenes to select and run the right skills from the right plugins for the user's given task.
+Between the user's natural language input and Copilot's natural language output, the Copilot orchestrator works behind the scenes to select and run the right skills from the right plugins for the user's task.
 
 The orchestration layer represents the interface between foundation Large Language Models (LLMs) and the many ways you can extend, enrich, and customize Copilot for the way your customers work.
 
 :::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the AI orchestration layer, situated between Copilot extensibility options and the Microsoft AI Cloud stack (Foundation models, Your data, AI infrastructure)":::
 
-The following chart illustrates how the Microsoft 365 Copilot orchestrator selects the right plugin, with the right skill, at the right time, even when there are multiple options to choose from.
+The following diagram illustrates how the Microsoft 365 Copilot orchestrator selects the right plugin, with the right skill, at the right time, even when there are multiple options to choose from.
 
 :::image type="content" source="assets/images/copilot_orchestrator_sequence_v2.png" alt-text="Visual illustration of the sequential steps in the text following this image." lightbox="assets/images/copilot_orchestrator_sequence_v2.png":::
 

@@ -4,7 +4,7 @@
   items:
   - name: Copilot in the Microsoft 365 ecosystem
     href: ecosystem.md
-  - name: How Copilot chooses plugins to use
+  - name: Copilot orchestrator
     href: orchestrator.md
   - name: What makes a good plugin?
     href: plugin-guidelines.md
