@@ -219,28 +219,28 @@
     href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
 - name: Add skills with plugins
   expanded: true
-  items:
+    items:
     - name: Best practices for high-quality plugins
       href: plugin-guidelines.md
     - name: API plugins
       items:
-    - name: Overview
-      href: overview-api-plugins.md
-    - name: Build an API plugin with a new API
-      href: build-api-plugins-new-api.md
-    - name: Build an API plugin from an existing API
-      href: build-api-plugins-existing-api.md
-    - name: Authentication
-      href: api-plugin-authentication.md
-    - name: Adaptive Card responses
-      href: api-plugin-adaptive-cards.md
-      displayName: response, response_semantics
-    - name: Confirmation prompts
-      href: api-plugin-confirmation-prompts.md
-    - name: Best practices for writing OpenAPI specs
-      href: openapi-document-guidance.md
-    - name: API plugin manifest reference
-      href: api-plugin-manifest.md
+      - name: Overview
+        href: overview-api-plugins.md
+      - name: Build an API plugin with a new API
+        href: build-api-plugins-new-api.md
+      - name: Build an API plugin from an existing API
+        href: build-api-plugins-existing-api.md
+      - name: Authentication
+        href: api-plugin-authentication.md
+      - name: Adaptive Card responses
+        href: api-plugin-adaptive-cards.md
+        displayName: response, response_semantics
+      - name: Confirmation prompts
+        href: api-plugin-confirmation-prompts.md
+      - name: Best practices for writing OpenAPI specs
+        href: openapi-document-guidance.md
+      - name: API plugin manifest reference
+        href: api-plugin-manifest.md
     - name: Teams message extension plugins
       href: overview-message-extension-bot.md
     - name: Copilot Studio connectors and actions (preview)
