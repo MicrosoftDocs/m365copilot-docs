@@ -8,7 +8,7 @@ ms.date: 10/08/2024
 ms.custom: [copilot-learning-hub]
 ---
 
-# Microsoft 365 Copilot extensibility
+# Microsoft 365 Copilot extensibility overview
 
 Microsoft 365 Copilot is an AI-powered productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, grounded in data from Microsoft Graph.
 
