@@ -27,6 +27,23 @@ You can extend, enrich, and customize Microsoft 365 Copilot for the unique way y
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
+## Copilot agent in-app experience
+
+When you build Copilot agents, you can tailor the user experience by providing *in context* and *immersive* experiences.
+
+- **In-context experience**: An in-app experience where users interact Business Chat (BizChat) in the context of an app, such as a Teams chat or a Word document. Users can `@`-mention the agent and interact with it directly within the app experience.
+
+  To build **in-context experiences**, you can use plugins and declarative agents. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems. 
+
+- **Immersive experience**: The full experience of the Copilot app in Microsoft 365. Users chat directly with the agent embedded in Copilot.
+
+    To build an **immersive experience**, you use declarative agents. When a user activates a Copilot agent with an *immersive* experience, the conversation is a 1:1 interaction with the agent, tailored to its capabilities and scope.
+
+:::image type="content" source="assets/images/copilot-experiences.png" alt-text="This illustration shows two distinct copilot user experiences, in context and immersive" border="false":::
+
+> [!NOTE]
+> BizChat is the full-featured and secure chat experience for Microsoft 365 Copilot. BizChat is available on the web via the Microsoft 365 App and is integrated into Teams, Outlook, Word, and PowerPoint.​
+
 ## Plugin and connector availability in Microsoft 365 experiences
 
 Over 350 million users are active daily across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, PowerPoint, and the Microsoft 365 app. When you write a plugin or connector, it can reach all the apps that support Copilot extensibility across Microsoft 365.
