@@ -17,7 +17,7 @@ When you build a plugin, you enable your users to interact with your web service
 - Retrieving relational data
 - Performing actions across apps
 
-## Plugin optimization
+## Optimize your plugin for Copilot orchestrator
 
 Microsoft 365 Copilot can uniquely choose the right skill from the many in its repertoire. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
 
