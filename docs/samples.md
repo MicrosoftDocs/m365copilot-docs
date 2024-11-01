@@ -15,7 +15,7 @@ The following samples implement Microsoft Graph connectors that extend Microsoft
 
 | Sample | Description |
 |--------|-------------|
-| [.NET Microsoft Graph docs connector](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-graph-connector-dotnet-csharp-graphdocs-ttk/) | This sample .NET project shows you how to build a Microsoft Graph connector to ingest unstructured data to Microsoft 365 and make it available to Microsoft 365 Copilot. The project uses Teams Toolkit for Visual Studio to package the connector as a Microsoft Teams apps and simplify its deployment in the organization. |
+| [.NET Microsoft Graph docs connector](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-graph-connector-dotnet-csharp-graphdocs-ttk/) | This sample .NET project shows you how to build a Microsoft Graph connector to ingest unstructured data to Microsoft 365 and make it available to Microsoft 365 Copilot. The project uses Teams Toolkit for Visual Studio to package the connector as a Microsoft Teams app and simplify its deployment in the organization. |
 | [.NET GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-dotnet) | This .NET application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |
 | [Python GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-python) | This Python application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |
 | [TypeScript GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-typescript) | This TypeScript application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |
@@ -27,6 +27,16 @@ You can find the latest list of Microsoft Graph connector samples from the commu
 ### Build your first customer Graph connector for Microsoft 365 Copilot
 
 > [!VIDEO https://www.youtube.com/embed/2oQ_6wXrwDQ]
+
+## Declarative agent samples
+
+| Sample | Description |
+|--------|-------------|
+| [Career Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-CareerCoach) | Provides personalized career development suggestions, including role understanding, skill gap analysis, learning opportunities, and career transition plans. It aims to understand the user’s current role, identify career goals, assess skills and gaps, suggest learning opportunities and create a detailed action plan for future growth. |
+| [Idea Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-IdeaCoach) | Facilitates brainstorming sessions and planning, offering creative exercises, idea organization techniques, and feedback for improvement. It uses a fun, collaborative tone, asks iterative questions and provides detailed agendas and creative suggestions for running effective brainstorming sessions. |
+| [Learning Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-LearningCoach) | Helps users understand complex topics by breaking them down into simple, intermediate, and advanced summaries, and also provides guided practice and learning plans. It employs various techniques for learning complex topics, including glossaries, analogies, practice exercises and structured study plans. |
+| [Prompt Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-PromptCoach) | Assists users in creating effective and well-structured prompts for Copilot. Offering analysis, compliance checks and improvement suggestions. It asks for information on the goal, context, source, and expectations to generate effective prompts and provides detailed analyses for to help elevate your prompt writing prowess. |
+| [Writing Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-WritingCoach) | Provides detailed feedback on writing, helps change the tone of messages, translates text, and helps writing instructions, stories, blog posts, and whitepapers. It focuses on clarity, coherence, grammar, and overall impact, offering specific improvements and alternatives for various types of document authoring. |
 
 ## Declarative agent with API plugin samples
 
