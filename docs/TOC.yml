@@ -219,7 +219,7 @@
     href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
 - name: Add skills with plugins
   expanded: true
-    items:
+  items:
     - name: Best practices for high-quality plugins
       href: plugin-guidelines.md
     - name: API plugins
