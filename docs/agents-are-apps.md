@@ -1,33 +1,29 @@
 ---
-title: Copilot agents are apps for Microsoft 365
-description: Copilot agents are also apps for Microsoft 365, which use a unified process for packaging, publishing, and management.
+title: Microsoft 365 App Model for Copilot Agents
+description: Learn how Copilot agents are also apps for Microsoft 365, which use a unified process for packaging, publishing, and management.
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: concept-article
-ms.date: 09/16/2024
+ms.date: 11/01/2024
 ---
 
-# Copilot agents are apps for Microsoft 365
-
-[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+# Copilot agent app package
 
 When you build a Copilot agent, you're also building an app for Microsoft 365. Apps for Microsoft 365 share a common manifest schema and packaging format, and unified distribution and management processes and tools. The end result is that your apps and Copilot agents reach the widest possible audience and appear contextually within the workflow of your users.
 
-This article walks you through the key parts of the Microsoft 365 app model for Copilot agent development.
+This article describes the key parts of the Microsoft 365 app model that apply to Copilot agent development.
 
-## App model for Microsoft 365
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-The Microsoft 365 ecosystem is evolving into an integrated app platform, where you can use a common app model to define and package your app. What started as a way to [extend Teams apps to run in other Microsoft 365 applications](/microsoftteams/platform/m365-apps/overview?context=/microsoft-365-copilot/extensibility/context) has since expanded to support the distribution of [Microsoft Graph connectors](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context), [Outlook Add-ins](/office/dev/add-ins/develop/unified-manifest-overview), and now Copilot agents.
-
-### App package
+## App package
 
 The app package for Microsoft 365, including Copilot agents, is a zip file that contains one or more configuration (manifest) files and your app icons. Your app logic and data storage are hosted elsewhere and accessed by the Microsoft 365 host application via HTTPS. You'll submit the app package to your admin to publish to your organization or to Partner Center to publish to Microsoft AppSource.
 
 At minimum, an app package contains:
 
- - the **app manifest** (`manifest.json`), which describes app configuration, capabilities, required resources, and important attributes,
- - a **large color icon** (`color.png`), a full-color 92x92 icon to display your agent in the Microsoft Copilot UI and store, and
- - a **small outline icon** (`outline.png`), a 32x32 icon with transparent background (not currently used in Copilot, but required to pass validation)
+ - The **app manifest** (`manifest.json`), which describes app configuration, capabilities, required resources, and important attributes
+ - A **large color icon** (`color.png`), a full-color 92x92 icon to display your agent in the Microsoft Copilot UI and store
+ - A **small outline icon** (`outline.png`), a 32x32 icon with transparent background (not currently used in Copilot, but required to pass validation)
 
 The app package can also contain declarative agent and API plugin definitions, as well as localization files for other supported languages.
 
@@ -38,9 +34,9 @@ The app package can also contain declarative agent and API plugin definitions, a
 Your app package must include both a color and outline version of your app icon, as .png files. These icons have specific size requirements in order to pass store validation.
 
 > [!NOTE]
-> Currently only the color icon is used to represent Copilot agents to the end-user (both as its store listing and within Microsoft 365 Copilot UI), but an outline icon is still required when submitting the app package to Microsoft AppSource.
+> Currently only the color icon is used to represent Copilot agents to users (both as its store listing and within the Microsoft 365 Copilot UI), but an outline icon is still required when you submit the app package to Microsoft AppSource.
 
-For further design guidance on color and outline icons for the Microsoft 365 app package, [App icons for Teams Store and app bar](/microsoftteams/platform/concepts/design/design-teams-app-icon-store-appbar).
+For design guidance for color and outline icons for the Microsoft 365 app package, see [App icons for Teams Store and app bar](/microsoftteams/platform/concepts/design/design-teams-app-icon-store-appbar).
 
 ### Color icon
 
@@ -57,8 +53,8 @@ The color icon represents your agent within the Microsoft Copilot UI and in-prod
 Your color icon:
 
 - Can be any color
-- Must be 192 x 192 pixels total
-- Should be 96 x 96 pixels for the symbol itself (to allow 48 pixels of padding for [host scenarios where it is cropped](/microsoftteams/platform/concepts/build-and-test/apps-package#color-icon))
+- Must be 192 x 192 pixels in size
+- Should contain a symbol of 96 x 96 pixels (to allow 48 pixels of padding for [host scenarios where it is cropped](/microsoftteams/platform/concepts/build-and-test/apps-package#color-icon))
 - Must sit atop a fully solid or fully transparent square background
 
 :::column-end:::
@@ -88,11 +84,11 @@ Your outline icon:
 
 ## App manifest
 
-The app manifest for Microsoft 365 is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package), however it has since expanded (since version 1.13) to define apps that run across Microsoft 365 hosts, in addition to Teams.
+The app manifest for Microsoft 365 is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package); however, starting with version 1.13, it supports apps that run across Microsoft 365 hosts, in addition to Teams.
 
-If you're using Microsoft Copilot Studio to build a declarative agent, the app manifest is generated for you based on the info you provide during the creation process.
+If you're using Copilot Studio to build a declarative agent, the app manifest is generated for you based on the information you provide during the creation process.
 
-Every app manifest must include the following information:
+Every app manifest must include the following fields.
 
 | Manifest field | Description |
 |--|--|
@@ -105,7 +101,7 @@ Every app manifest must include the following information:
 | [accentColor](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#accentColor?context=/microsoft-365-copilot/extensibility/context) | A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.|
 | *Definitions for specific app capabilities* | A definition for each app capability, such as personal tabs ([staticTabs](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#staticTabs?context=/microsoft-365-copilot/extensibility/context)), message extensions ([composeExtensions](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeExtensions?context=/microsoft-365-copilot/extensibility/context)), or [bots](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#bots?context=/microsoft-365-copilot/extensibility/context). Declarative agents and API plugins are defined under the [copilotAgents](#copilotagents-definitions) node.
 
-The following example shows an app manifest with placeholder sections at the end for message extension and declarative agent app capabilities:
+The following example shows an app manifest with placeholder sections at the end for message extension and declarative agent app capabilities.
 
 ```json
 {
@@ -141,7 +137,7 @@ The following example shows an app manifest with placeholder sections at the end
 }
 ```
 
-To learn more, see the [Developer preview app manifest schema reference](/microsoftteams/platform/resources/schema/manifest-schema?context=/microsoft-365-copilot/extensibility/context).
+To learn more, see [App manifest](/microsoftteams/platform/resources/schema/manifest-schema?context=/microsoft-365-copilot/extensibility/context).
 
 ### `copilotAgents` definitions
 
@@ -164,7 +160,7 @@ The definition of an API plugin is referenced from the declarative agent definit
 
 :::image type="content" source="assets/images/app-manifest-agents.png" alt-text="Diagram showing app manifest referencing a declarative agent manifest and API plugin manifest. The declarative agent manifest references another API plugin manifest" border="false":::
 
-Please note the following:
+Note the following:
 
 - Currently only one declarative agent definition is supported per app manifest. Only one API plugin is supported per declarative agent.
 
