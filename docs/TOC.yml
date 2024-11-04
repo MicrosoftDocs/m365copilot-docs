@@ -2,7 +2,7 @@
   href: index.md
 - name: Explore
   items:
-  - name: Copilot extensibility in the Microsoft 365 ecosystem
+  - name: Copilot agents in the Microsoft 365 ecosystem
     href: ecosystem.md
   - name: Copilot agent app package
     href: agents-are-apps.md
