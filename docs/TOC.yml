@@ -37,6 +37,8 @@
       href: transparency-faq-declarative-agent.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
+    - name: Localize your agent
+      href: localize-agents.md
     - name: Use Visual Studio Code
       expanded: true
       items:
