@@ -1,6 +1,6 @@
 ---
-title: Copilot Agents, Plugins, and Connectors in the Microsoft 365 Ecosystem
-description: Copilot agents, plugins, and connectors run across the Microsoft 365 ecosystem. Learn how the Microsoft 365 ecosystem extends the reach of your apps, services, and data.
+title: Agents, Plugins, and Connectors in the Microsoft 365 Ecosystem
+description: Agents, plugins, and connectors run across the Microsoft 365 ecosystem. Learn how the Microsoft 365 ecosystem extends the reach of your apps, services, and data.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
@@ -9,13 +9,13 @@ ms.date: 10/31/2024
 
 # Copilot extensibility in the Microsoft 365 ecosystem
 
-When you customize Microsoft 365 Copilot with Copilot agents and use plugins and connectors to extend Copilot's skills and knowledge, you're taking advantage of the entire Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
+When you customize Microsoft 365 Copilot with agents and use plugins and connectors to extend Copilot's skills and knowledge, you're taking advantage of the entire Microsoft 365 ecosystem to extend the reach of your apps, services, and data.
 
-- As a **developer**, you can *write once and run anywhere* across the growing list of Microsoft 365 host applications and integrated apps. Copilot seamlessly integrates your agents, plugins, and connectors with its list of skills and knowledge. You won't have to integrate with any other Microsoft 365 apps and services.
+- As a developer, you can *write once and run anywhere* across the growing list of Microsoft 365 host applications and integrated apps. Copilot seamlessly integrates your agents, plugins, and connectors with its list of skills and knowledge. You won't have to integrate with any other Microsoft 365 apps and services.
 
-- Your **end-users** will *stay in the flow of their work*, using the apps and services that support their workflow as skills and knowledge that they access through Copilot's natural language interface.
+- Your users will *stay in the flow of their work*, using the apps and services that support their workflow as skills and knowledge that they access through Copilot's natural language interface.
 
-- **Business decision makers and IT admins** can *confidently adopt and centrally manage* your enterprise-grade technology, backed by Microsoft's commitment to [Responsible AI](#microsoft-security-trust-and-commitment-to-responsible-ai).
+- Business decision makers and IT admins can *confidently adopt and centrally manage* your enterprise-grade technology, backed by Microsoft's commitment to [Responsible AI](#microsoft-security-trust-and-commitment-to-responsible-ai).
 
 The agents, plugins, and connectors you build for Copilot are part of the larger Microsoft 365 Copilot system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through different native components and agents of the Copilot system.
 
@@ -23,21 +23,21 @@ The agents, plugins, and connectors you build for Copilot are part of the larger
 
 The Copilot system uses data from a plugin in two stages: (1) it matches the user's prompt to the most relevant skill and parameters, and (2) it determines which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response for the user.
 
-You can extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. As part of the broader Microsoft 365 ecosystem, your Copilot agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and comprehensive development tools and support.
+You can extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. As part of the broader Microsoft 365 ecosystem, your  agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and comprehensive development tools and support.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-## Copilot agent in-app experience
+## Agent in-app experience
 
-When you build Copilot agents, you can tailor the user experience by providing *in context* and *immersive* experiences.
+When you build agents, you can tailor the user experience by providing *in context* and *immersive* experiences.
 
 - **In-context experience**: An in-app experience where users interact Business Chat (BizChat) in the context of an app, such as a Teams chat or a Word document. Users can `@`-mention the agent and interact with it directly within the app experience.
 
-  To build **in-context experiences**, you can use plugins and declarative agents. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems. 
+  To build in-context experiences, you can use plugins and declarative agents. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems. 
 
 - **Immersive experience**: The full experience of the Copilot app in Microsoft 365. Users chat directly with the agent embedded in Copilot.
 
-    To build an **immersive experience**, you use declarative agents. When a user activates a Copilot agent with an *immersive* experience, the conversation is a 1:1 interaction with the agent, tailored to its capabilities and scope.
+    To build an immersive experience, you use declarative agents. When a user activates an agent with an *immersive* experience, the conversation is a 1:1 interaction with the agent, tailored to its capabilities and scope.
 
 :::image type="content" source="assets/images/copilot-experiences.png" alt-text="This illustration shows two distinct copilot user experiences, in context and immersive" border="false":::
 
@@ -52,7 +52,7 @@ Your plugin or connector also runs outside of Copilot experiences. The following
 
 |Copilot extensibility type|Microsoft 365 product availability|Learn more|
 |----------|-----------|------------|
-|[Teams message extension plugins](./overview-message-extension-bot.md)|Microsoft 365 Copilot, Teams, Outlook| [Copilot agents are Microsoft 365 apps](./agents-are-apps.md) |
+|[Teams message extension plugins](./overview-message-extension-bot.md)|Microsoft 365 Copilot, Teams, Outlook| [Agents are Microsoft 365 apps](./agents-are-apps.md) |
 |[Power Platform connector plugins](/connectors/connectors)|Microsoft 365 Copilot, Power Automate, Power apps, Azure Logic apps| [Connectors overview](/connectors/connectors)|
 |[Microsoft Graph connectors](./overview-graph-connector.md)|Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
 
@@ -60,9 +60,9 @@ Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other M
 
 ## Unified app model
 
-The Microsoft 365 ecosystem provides a unified app model for distributing and managing Copilot agents, Teams apps, Outlook Add-ins, SharePoint Framework solutions, and more. The app package for Microsoft 365 is a zip file that contains one or more configuration (manifest) files and your app icons.
+The Microsoft 365 ecosystem provides a unified app model for distributing and managing agents, Teams apps, Outlook Add-ins, SharePoint Framework solutions, and more. The app package for Microsoft 365 is a zip file that contains one or more configuration (manifest) files and your app icons.
 
-To learn more, see [Copilot agents are apps for Microsoft 365](agents-are-apps.md).
+To learn more, see [Agents are apps for Microsoft 365](agents-are-apps.md).
 
 ### Microsoft 365 and Copilot program for Partner Center
 
@@ -74,11 +74,11 @@ To learn more, see [Publish agents for Microsoft 365 Copilot](./publish.md).
 
 ### Microsoft admin center
 
-Line-of-business developers and IT admins can publish Copilot agents and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions via the Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)).
+Line-of-business developers and IT admins can publish agents and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions via the Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)).
 
 For more information about deploying agents, plugins, and Microsoft Graph connectors to your organization, see [Publish agents for Microsoft 365 Copilot](./publish.md).
 
-To learn more about managing Copilot agents, see [Manage extensibility for Microsoft 365 Copilot](manage.md).
+To learn more about managing agents, see [Manage extensibility for Microsoft 365 Copilot](manage.md).
 
 ## Comprehensive tools and support
 
@@ -86,11 +86,11 @@ Microsoft 365 provides a rich set of developer resources for extending Microsoft
 
 ### Teams Toolkit
 
-[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)  is the *pro-code* option for building and debugging Copilot agents, plugins, and custom engine agents. It provides support for all major Microsoft 365 platform extensibility surfaces, including Copilot agents, tabs, bots, message extensions, and Outlook Add-ins. Teams Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
+[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)  is the *pro-code* option for building and debugging agents, plugins, and custom engine agents. It provides support for all major Microsoft 365 platform extensibility surfaces, including agents, tabs, bots, message extensions, and Outlook Add-ins. Teams Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
 
 ### Copilot Studio
 
-[Microsoft Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) is the graphical *low-code* option for copilot extensibility, including Microsoft 365 Copilot agents, custom agents, and actions (plugins). Copilot Studio (previously known as *Power Virtual Agents*) is available as a standalone web app [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com/) and also as an [app for Microsoft Teams](https://aka.ms/PVATeamsApp?azure-portal=true).
+[Microsoft Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) is the graphical *low-code* option for copilot extensibility, including Microsoft 365 agents, custom agents, and actions (plugins). Copilot Studio (previously known as *Power Virtual Agents*) is available as a standalone web app [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com/) and also as an [app for Microsoft Teams](https://aka.ms/PVATeamsApp?azure-portal=true).
 
 ### Copilot developer mode
 

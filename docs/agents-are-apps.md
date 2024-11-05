@@ -1,23 +1,23 @@
 ---
-title: Microsoft 365 App Model for Copilot Agents
-description: Learn how Copilot agents are also apps for Microsoft 365, which use a unified process for packaging, publishing, and management.
+title: Microsoft 365 App Model for Agents
+description: Learn how agents use the Microsoft 365 app package, including a unified process for packaging, publishing, and management.
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: concept-article
 ms.date: 11/01/2024
 ---
 
-# Copilot agent app package
+# Agent app package
 
-When you build a Copilot agent, you're also building an app for Microsoft 365. Apps for Microsoft 365 share a common manifest schema and packaging format, and unified distribution and management processes and tools. The end result is that your apps and Copilot agents reach the widest possible audience and appear contextually within the workflow of your users.
+When you build an agent, you're also building an app for Microsoft 365. Apps for Microsoft 365 share a common manifest schema and packaging format, and unified distribution and management processes and tools. The end result is that your apps and agents reach the widest possible audience and appear contextually within the workflow of your users.
 
-This article describes the key parts of the Microsoft 365 app model that apply to Copilot agent development.
+This article describes the key parts of the Microsoft 365 app model that apply to agent development.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
 ## App package
 
-The app package for Microsoft 365, including Copilot agents, is a zip file that contains one or more configuration (manifest) files and your app icons. Your app logic and data storage are hosted elsewhere and accessed by the Microsoft 365 host application via HTTPS. You'll submit the app package to your admin to publish to your organization or to Partner Center to publish to Microsoft AppSource.
+The app package for Microsoft 365, including agents, is a zip file that contains one or more configuration (manifest) files and your app icons. Your app logic and data storage are hosted elsewhere and accessed by the Microsoft 365 host application via HTTPS. You'll submit the app package to your admin to publish to your organization or to Partner Center to publish to Microsoft AppSource.
 
 At minimum, an app package contains:
 
@@ -34,7 +34,7 @@ The app package can also contain declarative agent and API plugin definitions, a
 Your app package must include both a color and outline version of your app icon, as .png files. These icons have specific size requirements in order to pass store validation.
 
 > [!NOTE]
-> Currently only the color icon is used to represent Copilot agents to users (both as its store listing and within the Microsoft 365 Copilot UI), but an outline icon is still required when you submit the app package to Microsoft AppSource.
+> Currently only the color icon is used to represent agents to users (both as its store listing and within the Microsoft 365 Copilot UI), but an outline icon is still required when you submit the app package to Microsoft AppSource.
 
 For design guidance for color and outline icons for the Microsoft 365 app package, see [App icons for Teams Store and app bar](/microsoftteams/platform/concepts/design/design-teams-app-icon-store-appbar).
 
@@ -63,7 +63,7 @@ Your color icon:
 
 ### Outline icon
 
-The outline icon is used to represent pinned and/or active apps on the Teams app bar. It's not currently used for Copilot agents, but still required in order for the app package to pass validation.
+The outline icon is used to represent pinned and/or active apps on the Teams app bar. It's not currently used for agents, but still required in order for the app package to pass validation.
 
 :::row:::
 :::column:::
@@ -164,7 +164,7 @@ Note the following:
 
 - Currently only one declarative agent definition is supported per app manifest. Only one API plugin is supported per declarative agent.
 
-- When you use Copilot Studio to build Copilot agents, a unique `id` is generated for each, as part of the overall app manifest generation. When building agents with Teams Toolkit or your own IDE, you assign the `id` yourself, according to your own conventions or friendly name.
+- When you use Copilot Studio to build agents, a unique `id` is generated for each, as part of the overall app manifest generation. When building agents with Teams Toolkit or your own IDE, you assign the `id` yourself, according to your own conventions or friendly name.
 
 ## Declarative agent manifest
 

@@ -1,10 +1,10 @@
 ---
 title: Extend Microsoft 365 Copilot
-description: Extend, enrich, and customize Microsoft 365 Copilot with external services, apps, and data.
+description: Extend, enrich, and customize Microsoft 365 Copilot with agents, external services, and data.
 author: girliemac
 ms.author: timura
 ms.topic: overview
-ms.date: 10/08/2024
+ms.date: 11/05/2024
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -16,19 +16,19 @@ It offers *knowledge*, such as emails, chats, and documents that users have perm
 
 :::image type="content" source="assets/images/anatomy-m365-copilot.png" alt-text="Visual representation of the Microsoft 365 Copilot system: models, orchestrator, knowledge, skills, and UX" border="false":::
 
-As a developer, you can customize and extend Microsoft 365 Copilot with additional knowledge and skills by building *Copilot agents*. With Copilot agents, you can bring custom knowledge, skills, and process automation into Microsoft 365 Copilot, tailoring it to suit the unique needs of your customers.
+As a developer, you can customize and extend Microsoft 365 Copilot with additional knowledge and skills by building *agents*. With agents, you can bring custom knowledge, skills, and process automation into Microsoft 365 Copilot, tailoring it to suit the unique needs of your customers.
 
-## What are Copilot agents?
+## What are agents?
 
-Copilot agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Copilot agents enable customers to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for their specific needs. You can optimize Copilot agents for specific tasks, such as retrieving information, summarizing data, and taking actions like sending emails or updating records. 
+Agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Agents enable customers to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for their specific needs. You can optimize agents for specific tasks, such as retrieving information, summarizing data, and taking actions like sending emails or updating records. 
 
-Copilot agents include the following components:
+Agents include the following components:
 
 - Custom knowledge (via instructions and grounding data)
 - Custom skills (including actions, triggers, and workflows) 
 - Autonomy (including planning, learning, and escalation)
 
-:::image type="content" source="assets/images/anatomy-agents.png" alt-text="Visual representation of the Copilot agents: models, orchestrator, knowledge, skills, anatomy, and UX" border="false":::
+:::image type="content" source="assets/images/anatomy-agents.png" alt-text="Visual representation of agents: models, orchestrator, knowledge, skills, anatomy, and UX" border="false":::
 
 
 Agents can be customized to meet specific business needs, such as human resources, analytics, project management, legal, image creation, and more. The following practical examples illustrate the types of agents you can develop for your organization.
@@ -47,7 +47,7 @@ Agents can be customized to meet specific business needs, such as human resource
 
 ## Copilot extensibility options
 
-You can build Copilot agents by using either a declarative or custom engine approach. This gives you, as a developer, the flexibility to choose how you want to build your agents, while providing the same experience to users.
+You can build agents by using either a declarative or custom engine approach. This gives you, as a developer, the flexibility to choose how you want to build your agents, while providing the same experience to users.
 
 **Declarative agents** are a collection of *custom knowledge* (via instructions and grounding data), and *custom skills* (including actions, triggers, and workflows) hosted on the Microsoft 365 Copilot orchestrator and foundation models to power a conversational experience. These agents can be integrated within Microsoft 365 and can use Copilot connectors and plugins to light up advanced functionality.​
 
@@ -55,7 +55,7 @@ You can build Copilot agents by using either a declarative or custom engine appr
 
 :::image type="content" source="assets/images/m365-extensibility-types.png" alt-text="This illustration declarative agents comprised of connectors and plugins, and custom engine agents" border="false" lightbox="assets/images/m365-extensibility-types.png":::
 
-You can add knowledge and skills to Copilot agents via Copilot connectors and plugins.
+You can add knowledge and skills to agents via Copilot connectors and plugins.
 
 :::image type="content" source="assets/images/skills-knowledge-chart.png" alt-text="Chart with organizational 'Knowledge' as the x-axis and user 'Skills' as the y-axis" border="false" lightbox="assets/images/skills-knowledge-chart.png":::
 
@@ -63,7 +63,7 @@ For more information about the two approaches to building agents, see [Your agen
 
 ### Copilot connectors
 
-Copilot connectors are building blocks that enable you to add custom knowledge and custom skills to Copilot agents. You can extend your Copilot agents via the following types of Copilot connectors:
+Copilot connectors are building blocks that enable you to add custom knowledge and custom skills to agents. You can extend your agents via the following types of Copilot connectors:
 
 - Microsoft Graph connectors
 - Power Platform connectors
@@ -106,6 +106,6 @@ You can create the following types of plugins:
 
 ## Related content
 
-- [Your Copilot agent options for Microsoft 365](decision-guide.md)
+- [Your agent options for Microsoft 365](decision-guide.md)
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Custom engine agent overview](overview-custom-engine-agent.md)
