@@ -1,5 +1,5 @@
 ---
-title: Publish and manage Copilot Studio agent builder agents
+title: Publish and Manage Copilot Studio Agent Builder Agents
 description: Learn how to publish and manage Copilot agents built with Copilot Studio agent builder.
 author: jasonxian-msft
 ms.author: jasonxian
@@ -85,7 +85,7 @@ To delete an agent, you can:
 
 ## Troubleshooting
 
-When sharing an agent and its knowledge sources, you might encounter the errors listed in the following tabl.
+When sharing an agent and its knowledge sources, you might encounter the errors listed in the following table.
 
 <!-- markdownlint-disable MD033 -->
 | Error code           | Description |
