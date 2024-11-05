@@ -76,9 +76,9 @@ Microsoft Graph connectors enable you to extend Microsoft 365 Copilot by integra
 
 With Microsoft Graph connectors, you can:
 
-- **Make the most of your external data** by giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights.
-- **Use Copilot as a research aid** to find, summarize, and perform Q&A natively by using the dataset of your choice.
-- **Surface the intelligence of Copilot** in Microsoft Search, ContextIQ, and more to enhance the ways your users are already searching for answers.
+- Make the most of your external data by giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights.
+- Use Copilot as a research aid to find, summarize, and perform Q&A natively by using the dataset of your choice.
+- Surface the intelligence of Copilot in Microsoft Search, ContextIQ, and more to enhance the ways your users are already searching for answers.
 
 For more information, see [Microsoft Graph connectors overview](overview-graph-connector.md).
 
@@ -94,9 +94,9 @@ For more information, see [Copilot connectors and actions](/microsoft-copilot-st
 
 Plugins are available as *actions* for declarative agents to interact with other systems to read or write information in near real-time. Use plugins to:
 
-- **Access real-time information** such as the latest news coverage for a product launch.
-- **Retrieve relational data** such as reporting on service tickets assigned to a given team member.
-- **Perform actions across apps** such as creating a new task in your organization's work tracking system.
+- Access real-time information such as the latest news coverage for a product launch.
+- Retrieve relational data such as reporting on service tickets assigned to a given team member.
+- Perform actions across apps such as creating a new task in your organization's work tracking system.
 
 You can create the following types of plugins:
 

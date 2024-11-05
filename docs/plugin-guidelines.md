@@ -17,20 +17,6 @@ When you build a plugin, you enable your users to interact with your web service
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-## Optimize your plugin for Copilot orchestrator
-
-Microsoft 365 Copilot can uniquely choose the right skill from the many skills in its repertoire. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
-
-The answer lies in how you describe your plugin, its skills, and the parameters for initiation of skills. Specify concise and accurate descriptions in your plugin manifest to best ensure that the Copilot orchestrator knows when and how to invoke your plugin.
-
-The way you describe your plugin to the orchestrator depends on the type of plugin you build, as described in the following table.
-
-| Plugin type  | Described by | Learn more|
-|----------|-----------|------------|
-|API plugins |  OpenAPI description | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md) |
-| Copilot Studio actions | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)  |
-| Message extension plugins | App manifest   | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
-
 ## Qualities of a good plugin
 
 A clear and concise description of your plugin is essential for Copilot to recognize its capabilities and match it with the appropriate user tasks. You can ensure your plugin provides the best possible user experience at runtime by designing your plugin with the following characteristics.
@@ -71,6 +57,21 @@ A clear and concise description of your plugin is essential for Copilot to recog
     :::column-end:::
 :::row-end:::
 
+## Optimize your plugin for Copilot orchestrator
+
+Microsoft 365 Copilot can uniquely choose the right skill from the many skills in its repertoire. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
+
+The answer lies in how you describe your plugin, its skills, and the parameters for initiation of skills. Specify concise and accurate descriptions in your plugin manifest to best ensure that the Copilot orchestrator knows when and how to invoke your plugin.
+
+The way you describe your plugin to the orchestrator depends on the type of plugin you build, as described in the following table.
+
+| Plugin type  | Described by | Learn more|
+|----------|-----------|------------|
+|API plugins |  OpenAPI description | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md) |
+| Copilot Studio actions | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)  |
+| Message extension plugins | App manifest   | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
+
+
 ## Plugin best practices
 
 This section describes best practices for building high-quality plugins.
@@ -109,5 +110,5 @@ Respond to user input with structured, actionable, and visually rich [Adaptive C
 
 ## Related content
 
-- [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
-- [Publish plugins and Microsoft Graph connectors for Copilot](./publish.md)
+- [API plugins for Microsoft 365 Copilot](overview-api-plugins.md)
+- [Validation guidelines for agents](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context)
