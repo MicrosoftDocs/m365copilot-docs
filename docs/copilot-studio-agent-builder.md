@@ -41,7 +41,7 @@ For information regarding regional availability and supported languages, see [Co
 
 ## Governance
 
-Admins can govern this feature by revoking access to the Microsoft 365 Copilot license in the Microsoft admin center. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise). To learn more about how to assign or unassign licenses for users in the Microsoft 365 admin center, see [Assign or unassign licenses](/microsoft-365/admin/manage/assign-licenses-to-users).
+Agents you build via Copilot Studio agent builder are included in your Microsoft 365 Copilot license. These agents feature functionality that is a subset of what Microsoft 365 Copilot supports. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise).
 
 ## Data processing
 
