@@ -49,7 +49,6 @@ Visit the connectors gallery to find all the information you need to get started
 
 ![Image showing the new connectors gallery.](assets/images/connectors-gallery.png)
 
-
 > [!IMPORTANT]
 >
 > To learn more about pre-built connectors go to [Set up Microsoft built Graph Connectors](/microsoftsearch/configure-connector) .

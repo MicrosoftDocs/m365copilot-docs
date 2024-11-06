@@ -16,46 +16,47 @@ When it comes to deciding on your approach to AI development, there are numerous
 
 When you're looking to create a fully customized end-to-end AI product to cater to your business needs, you typically choose language models and orchestration for your Retrieval-Augmented Generation (RAG) solutions.
 
-However, with Microsoft 365 Copilot, you also have a choice of *extending* Copilot's private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot's LLM is grounded in each tenant's Microsoft 365 content so it can work with the documents, messages, and other business context people use every day. When you extend Copilot, you can utilize the [orchestration layer](orchestrator.md) representing the interface between foundation LLMs, to select and execute the right content from the right plugin.
+However, with Microsoft 365 Copilot, you also have a choice of extending Copilot's private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot's LLM is grounded in each tenant's Microsoft 365 content so it can work with the documents, messages, and other business content people use every day. When you extend Copilot, you provide specific knowledge sources and skills that Copilot's [orchestration layer](orchestrator.md) uses to generate responses.
 
-📍 Your first decision is whether to extend Microsoft 365 Copilot by using the existing orchestrator to build a declarative agent, or whether to use your own custom orchestrator to build a custom engine agent.
+:::row:::
+    :::column:::
+        ### Reasons to extend Microsoft 365 Copilot
 
-:::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 extensibility options are best for you. Read the article on this page for the details." border="false" lightbox="assets/images/m365-extensibility-decisions.png" :::
+        - You want to take advantage of Copilot's model and orchestrator.
+        - You have external data that you want to make available to Copilot to reason over via a [Microsoft Graph connector](overview-graph-connector.md).
+        - You have an existing API that could be used as an [API plugin](overview-api-plugins.md) for read and write access to real-time data.
+        - You have an existing [Teams message extension](overview-message-extension-bot.md) that you can use as a plugin.
+    :::column-end:::
+    :::column:::
+        **Reasons to build a custom engine agent**
 
-📍 If you want to use agentic AI to run complex, multi-step workflows, including proactive triggers, long-running tasks, and asynchronous processing, choose to build custom engine agents.
-
-Now, let's determine which type of agent you should build:
+        - You want to use specific models (LLM or small language model (SLM)) for your service.
+        - You need agentic AI support.
+        - You want your service to be independent from Microsoft 365 Copilot, accessible to all Microsoft 365 users regardless of their Copilot licensing status.
+    :::column-end:::
+:::row-end:::
 
 **Extend Microsoft 365 Copilot if any of the following apply:**
-- You want to build a service on top of Microsoft 365 Copilot, utilizing Copilot's model and orchestrator
-- You have previously built an API plugin (so that you can now plug it into your agent)
-- You have prior experience in building a Teams message extension (so that you can just update it as a plugin)
 
-**Build a custom agents if any of the following apply:**
-- You want to use specific models, either LLM or small language model (SLM), for your service
-- You need agentic support
-- You want your service to be independent from Microsoft 365 Copilot, accessible to all Microsoft 365 users regardless of their Copilot licensing status 
+- You want to take advantage of Copilot's model and orchestrator.
+- You have external data that you want to make available to Copilot to reason over via a [Microsoft Graph connector](overview-graph-connector.md).
+- You have an existing API that could be used as an [API plugin](overview-api-plugins.md) for read and write access to real-time data.
+- You have an existing [Teams message extension](overview-message-extension-bot.md) that you can use as a plugin.
 
-### Pick your option
+**Build a custom agent if any of the following apply:**
 
-- 🎯 If you want to **extend Microsoft Copilot**, go to the next section, [Option 1](#option-1-extending-microsoft-365-copilot)!
-  - 🎯 Then, you have choices for agents; build declarative agents, plugins, or connectors. Find out about [extensibility types](#types-of-microsoft-365-copilot-extensibility)
-- 🎯 Otherwise, jump to [Option 2](#option-2-building-a-custom-engine-agent-for-microsoft-365) to **build your own custom agents**!
+- You want to use specific models (LLM or small language model (SLM)) for your service.
+- You need agentic AI support.
+- You want your service to be independent from Microsoft 365 Copilot, accessible to all Microsoft 365 users regardless of their Copilot licensing status.
 
-<br/>
+## Extending Microsoft 365 Copilot
 
----
+Extending Microsoft 365 Copilot for enterprise users
 
-## Option 1. Extending Microsoft 365 Copilot
-
-Okay, you want to leverage the Copilot orchestrator! Let's have a quick grasp—Microsoft 365 Copilot is designed for enterprise users with Microsoft 365 Copilot subscription, to enhance productivity within Microsoft 365 applications.
-
-By **extending Microsoft 365 Copilot** for enterprise users,
-
-- Your service can be a part of the Microsoft ecosystem, enabling your users to benefit from the user experience of Microsoft products and allowing you to reach millions of users
-- You can build an AI solutions for organizations to boost employee productivity across businesses
-- You can apply people-centric data with Microsoft Graph to provide more personalized experience for your users
-- You can use Graph Connector, SharePoint site library, or Dataverse table that is used in the workflow as your RAG data source
+- Your service can be a part of the Microsoft ecosystem, enabling your users to benefit from the user experience of Microsoft products and allowing you to reach millions of users.
+- You can build an AI solution for organizations to boost employee productivity across businesses.
+- You can apply people-centric data with Microsoft Graph to provide more personalized experience for your users.
+- You can use Graph Connectors, SharePoint site libraries, or Dataverse tables that are used in the workflow as your RAG data source.
 
 > [!TIP]
 > Are you a business decision maker? Check out the [Microsoft Copilot Scenario Library](https://adoption.microsoft.com/copilot-scenario-library/)
@@ -83,7 +84,7 @@ Use connectors to ingest external data to your agents.
 
 🎯 [**Graph connectors**](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. **They can work either standalone, or with declarative agents**.
 
-🎯 [**Power Platform connectors**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) enable Power Platform applications to interact with external services and data sources in real-time. 
+🎯 [**Power Platform connectors**](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) enable Power Platform applications to interact with external services and data sources in real-time.
 
 #### Plugins
 
