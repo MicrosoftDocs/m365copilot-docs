@@ -64,7 +64,7 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
 
 1. Lexical match on function name.
-2. Semantic match on function description. **This step is currently in private preview.**
+2. Semantic match on function description.
 3. Lexical match on plugin name (adds all plugin functions to candidate list).
 4. Semantic match on plugin name (adds all plugin functions to candidate list).
 

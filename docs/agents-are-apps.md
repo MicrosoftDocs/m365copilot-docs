@@ -7,7 +7,7 @@ ms.topic: concept-article
 ms.date: 11/01/2024
 ---
 
-# Agent app package
+# Agents are apps for Microsoft 365
 
 When you build an agent, you're also building an app for Microsoft 365. Apps for Microsoft 365 share a common manifest schema and packaging format, and unified distribution and management processes and tools. The end result is that your apps and agents reach the widest possible audience and appear contextually within the workflow of your users.
 
@@ -180,5 +180,6 @@ To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-pl
 
 ## Related content
 
+- [Localize your agent](localize-agents.md)
 - [Manage extensibility for Microsoft 365 Copilot](manage.md)
 - [Publish agents for Microsoft 365 Copilot](publish.md)

@@ -4,7 +4,7 @@
   items:
   - name: Agents in the Microsoft 365 ecosystem
     href: ecosystem.md
-  - name: Agent app package
+  - name: Agents are apps for Microsoft 365
     href: agents-are-apps.md
   - name: Copilot orchestrator
     href: orchestrator.md
@@ -245,7 +245,7 @@
         href: api-plugin-manifest.md
     - name: Teams message extension plugins
       href: overview-message-extension-bot.md
-    - name: Copilot Studio connectors and actions (preview)
+    - name: Copilot Studio connectors and actions
       items:
       - name: Copilot connectors on Copilot Studio overview
         href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
