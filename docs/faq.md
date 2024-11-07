@@ -1,13 +1,13 @@
 ---
-title: Microsoft 365 Copilot extensibility FAQ
-description: Frequently asked questions for Microsoft Copilot agents and beyond
+title: Microsoft 365 Copilot Extensibility FAQ
+description: Frequently asked questions for Microsoft agents and beyond
 author: girliemac
 ms.author: timura
 ms.topic: best-practice
 ms.date: 09/16/2024
 ---
 
-# Frequently asked questions for Microsoft 365 Copilot extensibility and beyond
+# Frequently asked questions for Microsoft 365 Copilot extensibility
 
 This section provides answers to the frequently asked questions (FAQs) about Microsoft 365 Copilot extensibility and related topics.
 
@@ -17,7 +17,7 @@ This section provides answers to the frequently asked questions (FAQs) about Mic
 
 **Declarative agents**: are tools that enhance the Microsoft 365 Copilot experience. They combine custom knowledge and skills (like actions, triggers, and workflows) to create a rich conversational experience. These agents can be integrated into Microsoft 365 and use connectors for advanced features. They can also include other features like API plugins and app functionalities for Teams and Microsoft 365.
 
-**Custom engine agents**: are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs. These custom agents include agents built with Copilot Studio, Teams AI library, Azure AI, etc. Custom engine agents currently work as standalone, Teams apps and, in the future, as *immersive* Copilot agent experiences. 
+**Custom engine agents**: are developed using custom foundation models and orchestrators and can be tailored to specific enterprise needs. These custom agents include agents built with Copilot Studio, Teams AI library, Azure AI, etc. Custom engine agents currently work as standalone, Teams apps and, in the future, as *immersive* agent experiences. 
 
 No sure which one to build? [Your extensibility options for Microsoft 365 Copilot](decision-guide.md) article may help you.
 
@@ -30,7 +30,7 @@ No sure which one to build? [Your extensibility options for Microsoft 365 Copilo
 While the terms "actions" and "plugins" are sometimes used interchangeably, however, technically an action refers to a single API call from a plugin (*e.g.*, "Close ticket #1234"), whereas a plugin encompasses a collection of functions (*e.g.*, close, create, resolve, etc.).
 
 In general, actions are the functionality that provides skills to Copilot within Declarative agents. Developers can use Copilot Studio to build Actions from Power Platform connectors, or they can create conversational, prompt, or flow connectors using the Copilot Studio design canvas. Developers can use Teams Toolkit, or any technology stack that supports standard REST APIs, to build actions as API Plugins.
-With actions you can light up Copilot agents that work *in-context* of Microsoft 365 Copilot, or they can also be used to provide skills to Copilot agents that work in *immersive* experiences, such as declarative agents.
+With actions you can light up agents that work *in-context* of Microsoft 365 Copilot, or they can also be used to provide skills to agents that work in *immersive* experiences, such as declarative agents.
 
 #### What is the difference between Power Platform Plugins and API Connectors
  
@@ -74,7 +74,7 @@ For each capability, we conducted several tests to validate Microsoft 365 Copilo
 
 There's no extra license requirement to build declarative agents (including Graph connectors and plugins), when you have the [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing).
 
-**Copilot Extensibility with Copilot Studio**: [Copilot Studio license](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) isn't required to build Copilot agents, however, if you build AI solutions other than Copilot agents, the license is required.
+**Copilot Extensibility with Copilot Studio**: [Copilot Studio license](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) isn't required to build agents, however, if you build AI solutions other than agents, the license is required.
 
 On the other hand, if you wish to **build custom engine agent** using Teams AI Library, you aren't required Microsoft 365 Copilot license. Instead, the cost depends on the Azure services consumed in the app. See the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/).
 
@@ -124,7 +124,7 @@ The differences are the scope, customization, and integration they offer.
 
 [**Azure AI Studio**](/azure/ai-studio/what-is-ai-studio) is a coding-based platform that empowers developers to build and deploy intelligent, fully customizable bots. You can integrate these various AI tools and models, allowing developers to innovate with AI in a secure and responsible manner, however, Azure AI Studio is not the tool for *extending* Microsoft 365 Copilot.
 
-#### Can I build Microsoft Copilot agents with Azure AI services? 
+#### Can I build Microsoft agents with Azure AI services? 
 
 If you want to use Azure AI services, we recommend you to build **Custom engine agent**, instead of *extending* Microsoft Copilot.
 

@@ -26,7 +26,7 @@ Copilot Studio agent builder is available in the following countries/regions:
 - United Kingdom
 - United States
 
-In regions where the agent builder isn't supported, the user can create a Copilot agent in the full version of [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started)
+In regions where the agent builder isn't supported, the user can create an agent in the full version of [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started)
 
 ## Agent languages
 

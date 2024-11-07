@@ -14,13 +14,13 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 ### Use the Copilot Studio agent builder to build declarative agents
 
-Use the Copilot Studio agent builder to create and customize Copilot agents for your specific scenarios. With the agent builder, you can use natural language to describe your agent, or you can build it manually via a rich authoring experience. To learn more, see [Overview of Copilot Studio agent builder](copilot-studio-agent-builder.md).
+Use the Copilot Studio agent builder to create and customize agents for your specific scenarios. With the agent builder, you can use natural language to describe your agent, or you can build it manually via a rich authoring experience. To learn more, see [Overview of Copilot Studio agent builder](copilot-studio-agent-builder.md).
 
 ## September 2024: New and generally available
 
-### Build your own Copilot agent
+### Build your own agent
 
-You can build your own Copilot agents to focus on your specific use cases. Provide custom instructions to tailor responses, ground agents in your organization's data, and add more skills with actions.
+You can build your own agents to focus on your specific use cases. Provide custom instructions to tailor responses, ground agents in your organization's data, and add more skills with actions.
 
 You can build agents in two ways:
 - [Build delcarative agents](overview-declarative-agent.md) by using the Microsoft 365 Copilot orchestrator and foundation models. You can use Visual Studio Code or the Copilot Studio agent builder.

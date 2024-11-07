@@ -9,11 +9,11 @@ ms.date: 11/01/2024
 
 # Microsoft 365 Copilot extensibility samples
 
-This article provides links to code samples to help you develop Copilot extensibility solutions, including Copilot agents, Microsoft Graph connectors, and plugins.
+This article provides links to code samples to help you develop Copilot extensibility solutions, including agents, Microsoft Graph connectors, and plugins.
 
 ## Declarative agent samples
 
-The following Copilot agent samples are available from the PNP community.
+The following declarative agent samples are available from the PNP community.
 
 | Sample | Description |
 |--------|-------------|
