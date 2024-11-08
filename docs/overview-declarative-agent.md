@@ -58,5 +58,5 @@ You can use your tool of choice to create a declarative agent app package. To ge
 - [Extensibility options for Microsoft 365 Copilot](decision-guide.md)
 - [Microsoft Copilot in the Microsoft 365 ecosystem](ecosystem.md)
 - [Microsoft Graph connectors for Microsoft 365 Copilot](overview-graph-connector.md)
-- [Copilot agents are apps for Microsoft 365](agents-are-apps.md)
+- [Agents are apps for Microsoft 365](agents-are-apps.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)

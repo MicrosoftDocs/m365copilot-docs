@@ -25,7 +25,7 @@
     href: samples.md
   - name: Learning resources
     href: /collections/p11pb18wmq6xqq
-- name: Build a Copilot agent
+- name: Build an agent
   expanded: true
   items:
   - name: Build a declarative agent
@@ -267,14 +267,14 @@
   items:
   - name: Overview
     href: publish.md
-  - name: Validation guidelines for Copilot agents
+  - name: Validation guidelines for agents
     href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
 - name: Manage
   expanded: false
   items:
   - name: Overview
     href: manage.md
-  - name: Manage Copilot agents in Microsoft 365 admin center
+  - name: Manage agents in Microsoft 365 admin center
     href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365-copilot/extensibility/context
 - name: FAQ
   href: faq.md
