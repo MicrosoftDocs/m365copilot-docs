@@ -57,7 +57,7 @@ Declarative agents are a great choice for the following cases.
 Plugins add skills and actions to declarative agents.
 
 - [API plugins](overview-api-plugins.md) extend declarative agents by calling REST APIs that have an OpenAPI description.
-- [Actions in Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context), which connects Microsoft 365 and the Power Platform environment. Actions include **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
+- [Actions in Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) connect Microsoft 365 Copilot and the Power Platform environment. Actions include **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
 - [Teams message extensions](overview-message-extension-bot.md) are the search and action capability for Teams that now work as plugins for agents.
 
 > [!TIP]
