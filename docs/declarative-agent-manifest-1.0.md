@@ -1,14 +1,16 @@
 ---
-title: Declarative agent schema for Microsoft 365 Copilot
-description: Learn about the properties you can use in a manifest file for declarative agent in Microsoft 365 Copilot
+title: Declarative agent schema 1.0 for Microsoft 365 Copilot
+description: Learn about the 1.0 schema for a manifest file for declarative agents in Microsoft 365 Copilot
 author: rimisra2
 ms.author: rimisra
 ms.topic: reference
 ---
 
-# Declarative agent schema for Microsoft 365 Copilot
+# Declarative agent schema 1.0 for Microsoft 365 Copilot
 
-This article describes a specification that establishes the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems.
+This article describes the 1.0 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems.
+
+[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
@@ -42,6 +44,7 @@ The declarative agent manifest object contains the following properties.
 
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
+| `version`               | String                                                                | Required. The schema version. Must be set to `v1.0`. |
 | `id`                    | String                                                                | Optional.   |
 | `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
 | `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |

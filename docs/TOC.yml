@@ -47,7 +47,11 @@
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference
-        href: declarative-agent-manifest.md
+        items:
+        - name: Version 1.2
+          href: declarative-agent-manifest-1.2.md
+        - name: Version 1.0
+          href: declarative-agent-manifest-1.0.md
     - name: Build with Copilot Studio agent builder
       items:
       - name: Overview
@@ -91,7 +95,7 @@
   items:
   - name: Microsoft Graph connectors in Microsoft 365 Copilot
     href: overview-graph-connector.md
-  - name: Enhancing Microsoft 365 Copilot discovery with Microsoft Graph connector content
+  - name: Enhance Copilot discovery of Microsoft Graph connector content
     href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
   - name: Connector experiences
     href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
@@ -222,47 +226,47 @@
 - name: Add skills with plugins
   expanded: true
   items:
-    - name: Best practices for high-quality plugins
-      href: plugin-guidelines.md
-    - name: API plugins
-      items:
-      - name: Overview
-        href: overview-api-plugins.md
-      - name: Build an API plugin with a new API
-        href: build-api-plugins-new-api.md
-      - name: Build an API plugin from an existing API
-        href: build-api-plugins-existing-api.md
-      - name: Authentication
-        href: api-plugin-authentication.md
-      - name: Adaptive Card responses
-        href: api-plugin-adaptive-cards.md
-        displayName: response, response_semantics
-      - name: Confirmation prompts
-        href: api-plugin-confirmation-prompts.md
-      - name: Best practices for writing OpenAPI specs
-        href: openapi-document-guidance.md
-      - name: API plugin manifest reference
-        href: api-plugin-manifest.md
-    - name: Teams message extension plugins
-      href: overview-message-extension-bot.md
-    - name: Copilot Studio connectors and actions
-      items:
-      - name: Copilot connectors on Copilot Studio overview
-        href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
-      - name: Copilot Studio actions
-        href: overview-business-applications.md
-      - name: Connector actions
-        href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-      - name: Conversational actions
-        href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
-      - name: Power Automate flow actions
-        href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
-      - name: Prompts
-        href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
-      - name: Learning path
-        href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
-    - name: Debug with developer mode in Copilot
-      href: debugging-copilot-plugin.md
+  - name: Best practices for high-quality plugins
+    href: plugin-guidelines.md
+  - name: API plugins
+    items:
+    - name: Overview
+      href: overview-api-plugins.md
+    - name: Build an API plugin with a new API
+      href: build-api-plugins-new-api.md
+    - name: Build an API plugin from an existing API
+      href: build-api-plugins-existing-api.md
+    - name: Authentication
+      href: api-plugin-authentication.md
+    - name: Adaptive Card responses
+      href: api-plugin-adaptive-cards.md
+      displayName: response, response_semantics
+    - name: Confirmation prompts
+      href: api-plugin-confirmation-prompts.md
+    - name: Best practices for writing OpenAPI specs
+      href: openapi-document-guidance.md
+    - name: API plugin manifest reference
+      href: api-plugin-manifest.md
+  - name: Teams message extension plugins
+    href: overview-message-extension-bot.md
+  - name: Copilot Studio connectors and actions
+    items:
+    - name: Copilot connectors on Copilot Studio overview
+      href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
+    - name: Copilot Studio actions
+      href: overview-business-applications.md
+    - name: Connector actions
+      href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
+    - name: Conversational actions
+      href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
+    - name: Power Automate flow actions
+      href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
+    - name: Prompts
+      href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+    - name: Learning path
+      href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
+  - name: Debug with developer mode in Copilot
+    href: debugging-copilot-plugin.md
 - name: Publish
   items:
   - name: Overview
