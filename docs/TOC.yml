@@ -37,6 +37,8 @@
       href: transparency-faq-declarative-agent.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
+    - name: Add agent capabilities
+      href: add-agent-capabilities.md
     - name: Localize your agent
       href: localize-agents.md
     - name: Use Visual Studio Code
@@ -48,7 +50,7 @@
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference
         href: declarative-agent-manifest.md
-    - name: Build with Copilot Studio agent builder
+    - name: Use Copilot Studio agent builder
       items:
       - name: Overview
         href: copilot-studio-agent-builder.md
