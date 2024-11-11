@@ -147,7 +147,7 @@ The site object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `url`    | String | Required. An absolute URL to a site to be searched for content. |
+| `url`    | String | Required. An absolute URL to a site to be searched for content. The URL MUST NOT contain more than 2 path segments (for example, `https://contoso.com/projects/mark-8` is valid, `https://contoso.com/projects/mark-8/beta-program` is not valid). The URL MUST NOT contain any query parameters. |
 
 #### OneDrive and SharePoint object
 
