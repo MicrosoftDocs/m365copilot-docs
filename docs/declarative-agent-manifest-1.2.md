@@ -137,7 +137,7 @@ The web search object contains the following properties.
 | Property | Type                                 | Description |
 | -------- | ------------------------------------ | ----------- |
 | `name`   | String                               | Required. Must be set to `WebSearch`. |
-| `sites`  | Array of [Site object](#site-object) | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. The array MUST NOT contain more than 5 items. |
+| `sites`  | Array of [Site object](#site-object) | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. The array MUST NOT contain more than four items. |
 
 ##### Site object
 
