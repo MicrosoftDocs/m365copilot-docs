@@ -170,7 +170,7 @@ Note the following:
 
 The declarative agent manifest includes instructions for Copilot responses, conversation starter sample prompts, data sources used for grounding, and a list of actions (API plugin skills) the agent is able to perform.
 
-To learn more, see [Declarative agent manifest schema for Microsoft 365 Copilot](declarative-agent-manifest.md).
+To learn more, see [Declarative agent manifest schema for Microsoft 365 Copilot](declarative-agent-manifest-1.2.md).
 
 ## API plugin manifest
 
