@@ -8,3 +8,56 @@ ms.date: 11/15/2024
 ---
 
 # Add capabilities to your declarative agent
+
+You can enhance the user experience of your declarative agent by adding capabilities. The **capabilities** element in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the user capabilities that you can add to your agents.
+
+## Code interpreter
+
+Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario. It also accepts files as input for modifications and analysis.
+
+### Code interpreter examples
+
+#### Data graphing
+
+The user prompt "Graph the first 20 numbers in a Fibonacci sequence" generates both a line graph and, when the user clicks the `</> Code` button, provides the corresponding Python code.
+
+#### Data visualization
+
+The user prompt "Create a word cloud of top baby names last year" generates a word cloud that includes the top names, as shown in the following example.
+
+## Enable code interpreter
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the capabilities property in your manifest reference, as shown in the following example.
+
+If you're using [Copilot Studio agent builder](/copilot-studio-agent-builder) to create your agent, on the Configure tab, under Capabilities, choose the toggle next to Code interpreter.
+
+## Image generator
+
+The image generation capability enables declarative agents to generate images based on user prompts. This feature uses the existing [Designer](https://designer.microsoft.com/) functionality to create visually appealing and contextually relevant graphics, and includes the following features:
+
+- **Multiple image generation**: For each user prompt, the agent generates four images.
+- **Interactive image options**: Users can click on each generated image to view it in full size. They can download, copy, or view content credentials for the full-size image. They can also click the side arrow to scroll through the four images.
+- **Image modification**: Users can follow up with subsequent prompts to modify the original images without losing context. For example, first prompt: "Create a photo of a happy puppy running around in a yard." Second prompt: "Include a tennis ball."
+- **Feedback mechanism**: Users can provide feedback on the generated images by giving a thumbs up or thumbs down. This helps improve the quality of future image generations.
+- **Clipboard and sharing**: Users can copy the generated images to their clipboard to paste into other applications, or they can share the generated images directly from the interface.
+
+### Image generation examples
+
+The following examples show what users can do with the image generation capability in your agent.
+
+- **User prompt**: Create an image of a serene beach at sunset with palm trees and gentle waves.
+  - The following image shows the result.
+- **User prompt**: Design a flyer for a summer music festival and add a date for May 15, 2024.
+  - The following image shows the result.
+- **User prompt**: Generate an icon for a mobile app featuring a recipe book and orange icon color.
+  - The following image shows the result.
+
+## Enable image generator
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the capabilities property in your manifest reference, as shown in the following example.
+
+If you're using [Copilot Studio agent builder](/copilot-studio-agent-builder) to create your agent, on the Configure tab, under Capabilities, choose the toggle next to Image generator.
+
+## Related content
+
+- [Declarative agent manifest reference](declarative-agent-manifest.md)
