@@ -1,22 +1,26 @@
 ---
-title: API plugin manifest schema for Microsoft 365 Copilot
+title: API plugin manifest schema 2.2 for Microsoft 365 Copilot
 description: Learn about the properties you can use in a manifest file for an API plugin in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: reference
 ---
 
-# API plugin manifest schema for Microsoft 365 Copilot
-
-[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
+# API plugin manifest schema 2.2 for Microsoft 365 Copilot
 
 API plugins enable Microsoft 365 Copilot to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
 
-The following article describes the schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
+The following article describes the 2.2 schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
+
+## Changes from previous version
+
+This schema version introduces the following changes from [version 2.1](api-plugin-manifest-2.1.md).
+
+- TBD
 
 ## JSON schema
 
-The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/plugin/v2.1/schema.json).
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/plugin/v2.2/schema.json).
 
 ## Conventions
 
@@ -40,7 +44,7 @@ Localizable strings can use a localization key instead of a literal value. The s
 
 ```json
 {
-    "schema_version": "v2.1",
+    "schema_version": "v2.2",
     "name_for_human": "[[plugin_name]]",
     "description_for_human": "[[plugin_description]]"
 }
@@ -54,7 +58,7 @@ The plugin manifest object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.1`. |
+| `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.2`. |
 | `name_for_human` | String | Required. A short, human-readable name for the plugin. It MUST contain at least one nonwhitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
 | `namespace` | String | Deprecated. Optional. |
 | `description_for_model` | String | Optional. The description for the plugin that is provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
