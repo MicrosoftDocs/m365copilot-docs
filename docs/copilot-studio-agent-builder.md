@@ -1,5 +1,5 @@
 ---
-title: Overview of Copilot Studio agent builder
+title: Use Copilot Studio Agent Builder to Build Agents
 description: Learn how to use Copilot Studio agent builder to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
@@ -8,12 +8,12 @@ ms.topic: conceptual
 
 # Overview of Copilot Studio agent builder
 
-The Copilot Studio agent builder in Microsoft 365 Copilot enables you to build Copilot agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly.
+The Copilot Studio agent builder in Microsoft 365 Copilot enables you to build agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly.
 
 > [!NOTE]
 > Copilot Studio agent builder offers an immediate, interactive AI development experience within Microsoft 365 Copilot, which is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use the full [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
 
-Use Copilot Studio agent builder to create and customize Copilot agents that can be used with Microsoft 365 Copilot to cover scenario-specific uses cases, such as:
+Use Copilot Studio agent builder to create and customize agents that can be used with Microsoft 365 Copilot to cover scenario-specific uses cases, such as:
 
 - An agent that provides writing or presentation coaching that is tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
@@ -31,7 +31,7 @@ You can build agents from the following apps and sites:
 > [!NOTE]
 > Agent builder is only available under the Work section of the Microsoft 365 Copilot app. It is not available on mobile versions of these apps and sites, or for Microsoft 365 Copilot locations that are not listed in this article.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-entry.png" alt-text="Copilot agent builder entry point in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-entry.png" alt-text="Agent builder entry point in Microsoft 365 Copilot":::
 
 ## Prerequisites
 

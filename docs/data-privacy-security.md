@@ -1,5 +1,5 @@
 ---
-title: Data, privacy, and security considerations for extending Microsoft 365 Copilot 
+title: Data, Privacy, and Security and Microsoft 365 Copilot Extensibility 
 description: Learn how to protect your customer's data when you extend Microsoft 365 Copilot.
 author: erikadoyle
 ms.author: edoyle

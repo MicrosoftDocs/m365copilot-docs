@@ -1,19 +1,17 @@
 - name: Microsoft 365 Copilot extensibility
   href: index.md
-- name: Work with the Copilot ecosystem
+- name: Explore
   items:
-  - name: Tour the Copilot ecosystem
+  - name: Agents in the Microsoft 365 ecosystem
     href: ecosystem.md
-  - name: How Copilot chooses plugins to use
-    href: orchestrator.md
-  - name: What makes a good plugin?
-    href: plugin-guidelines.md
   - name: Agents are apps for Microsoft 365
     href: agents-are-apps.md
+  - name: Copilot orchestrator
+    href: orchestrator.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
-- name: Extensibility guide for ISVs
-  href: /microsoft-cloud/dev/copilot/isv/isv-extensibility-story?context=/microsoft-365-copilot/extensibility/context
+  - name: Extensibility guide for ISVs
+    href: /microsoft-cloud/dev/copilot/isv/isv-extensibility-story?context=/microsoft-365-copilot/extensibility/context
 - name: What's new
   href: whats-new.md
 - name: Get started
@@ -27,7 +25,7 @@
     href: samples.md
   - name: Learning resources
     href: /collections/p11pb18wmq6xqq
-- name: Build a Copilot agent
+- name: Build an agent
   expanded: true
   items:
   - name: Build a declarative agent
@@ -39,6 +37,8 @@
       href: transparency-faq-declarative-agent.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
+    - name: Localize your agent
+      href: localize-agents.md
     - name: Use Visual Studio Code
       expanded: true
       items:
@@ -222,57 +222,59 @@
 - name: Add skills with plugins
   expanded: true
   items:
-  - name: API plugins
-    items:
-    - name: Overview
-      href: overview-api-plugins.md
-    - name: Build an API plugin with a new API
-      href: build-api-plugins-new-api.md
-    - name: Build an API plugin from an existing API
-      href: build-api-plugins-existing-api.md
-    - name: Authentication
-      href: api-plugin-authentication.md
-    - name: Adaptive Card responses
-      href: api-plugin-adaptive-cards.md
-      displayName: response, response_semantics
-    - name: Confirmation prompts
-      href: api-plugin-confirmation-prompts.md
-    - name: Best practices for writing OpenAPI specs
-      href: openapi-document-guidance.md
-    - name: API plugin manifest reference
-      href: api-plugin-manifest.md
-  - name: Teams message extension plugins
-    href: overview-message-extension-bot.md
-  - name: Copilot Studio connectors and actions (preview)
-    items:
-    - name: Copilot connectors on Copilot Studio overview
-      href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
-    - name: Copilot Studio actions
-      href: overview-business-applications.md
-    - name: Connector actions
-      href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-    - name: Conversational actions
-      href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
-    - name: Power Automate flow actions
-      href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
-    - name: Prompts
-      href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
-    - name: Learning path
-      href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
-  - name: Debug with developer mode in Copilot
-    href: debugging-copilot-plugin.md
+    - name: Best practices for high-quality plugins
+      href: plugin-guidelines.md
+    - name: API plugins
+      items:
+      - name: Overview
+        href: overview-api-plugins.md
+      - name: Build an API plugin with a new API
+        href: build-api-plugins-new-api.md
+      - name: Build an API plugin from an existing API
+        href: build-api-plugins-existing-api.md
+      - name: Authentication
+        href: api-plugin-authentication.md
+      - name: Adaptive Card responses
+        href: api-plugin-adaptive-cards.md
+        displayName: response, response_semantics
+      - name: Confirmation prompts
+        href: api-plugin-confirmation-prompts.md
+      - name: Best practices for writing OpenAPI specs
+        href: openapi-document-guidance.md
+      - name: API plugin manifest reference
+        href: api-plugin-manifest.md
+    - name: Teams message extension plugins
+      href: overview-message-extension-bot.md
+    - name: Copilot Studio connectors and actions
+      items:
+      - name: Copilot connectors on Copilot Studio overview
+        href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
+      - name: Copilot Studio actions
+        href: overview-business-applications.md
+      - name: Connector actions
+        href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
+      - name: Conversational actions
+        href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
+      - name: Power Automate flow actions
+        href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
+      - name: Prompts
+        href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+      - name: Learning path
+        href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
+    - name: Debug with developer mode in Copilot
+      href: debugging-copilot-plugin.md
 - name: Publish
   items:
   - name: Overview
     href: publish.md
-  - name: Validation guidelines for Copilot agents
+  - name: Validation guidelines for agents
     href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
 - name: Manage
   expanded: false
   items:
   - name: Overview
     href: manage.md
-  - name: Manage Copilot agents in Microsoft 365 admin center
+  - name: Manage agents in Microsoft 365 admin center
     href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365-copilot/extensibility/context
 - name: FAQ
   href: faq.md
