@@ -16,7 +16,7 @@ The following article describes the 2.2 schema used by API plugin manifest files
 
 This schema version introduces the following changes from [version 2.1](api-plugin-manifest-2.1.md).
 
-- TBD
+- Added the `security_info` property to the [Function capabilities object](#function-capabilities-object). This property allows you to attest to the behavior of the plugin in order to assess the risks of calling the function.
 
 ## JSON schema
 
@@ -265,6 +265,7 @@ The function capabilities object contains the following properties.
 | -------- | ---- | ----------- |
 | `confirmation` | [Confirmation object](#confirmation-object) | Optional. Describes a confirmation dialog that SHOULD be presented to the user before invoking the function. |
 | `response_semantics` | [Response semantics object](#response-semantics-object) | Optional. Describes how the orchestrator can interpret the response payload and provide a visual rendering. |
+| `security_info`      | [Security info object](#security-info-object)           | Optional. Contains attestations about the behavior of the plugin in order to assess the risks of calling the function. If this property is omitted, the function is unable to interact with other plugins or capabilities of the containing agent. |
 
 #### Confirmation object
 
@@ -369,6 +370,25 @@ The response semantics properties object contains the following properties.
 | `thumbnail_url` | String | Optional. URL of a thumbnail image for the result. |
 | `information_protection_label` | String | Optional. Data sensitivity indicator of the result contents. |
 | `template_selector` | String | Optional. A JSONPath expression to an Adaptive Card instance to be used for rendering the result. |
+
+#### Security info object
+
+Contains information use to determine the relative risk of invoking the function.
+
+The security info object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `data_handling` | Array of String | Required. An array of strings that describe the data handling behavior of the function. Valid values are `GetPublicData`, `GetPrivateData`, `DataTransform`, and `ResourceStateUpdate`. |
+
+##### Data handling values
+
+| Value                 | Description | Example |
+| --------------------- | ----------- | ------- |
+| `GetPublicData`       | Indicates the function retrieves data from an external source that doesn't require authentication. | A function that makes a service call to retrieve data from a public website. |
+| `GetPrivateData`      | Indicates the function retrieves data from an external source that requires authentication or from the user's current application. | A function that gets data from a private database or from the user's currently open document. |
+| `DataTransform`       | Indicates that the function only returns an output based on the input, without introducing any new data or causing a resource update. | A function that converts a number to a word or formats a date. |
+| `ResourceStateUpdate` | Indicates that the function affects a resource by initiating a transaction, changing a process in the real world, granting or denying permissions, or performing any other action that would require explicit user confirmation. | A function that books a hotel room or changes the state of a work item from `active` to `resolved`. |
 
 ### OpenAPI runtime object
 
