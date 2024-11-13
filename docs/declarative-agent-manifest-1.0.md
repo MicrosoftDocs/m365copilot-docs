@@ -229,7 +229,7 @@ The action object contains the following properties.
 
 Here's an example of a declarative agent manifest file that uses most of the manifest properties described in this article.
 
-[!INCLUDE [Sample declarative agent manifest for Repairs declarative agent](includes/declarative-agent-manifest-json.md)]
+:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.0.json":::
 
 ## Related content
 
