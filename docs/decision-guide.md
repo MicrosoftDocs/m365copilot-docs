@@ -47,7 +47,7 @@ There are two ways you can extend Microsoft 365 Copilot. You can customize Copil
 Declarative agents are a great choice for the following cases.
 
 - You want to layer on top of the full capability ​of Microsoft 365 Copilot​.
-- Your scenario requires ​focus or specialization.
+- Your scenario requires ​focus or specialization. For example, focusing knowledge on a specific set of documents or specializing in financial topics.
 - You want to target specific roles or areas in your organization, like Human Resources, Sales, or Finance.
 - You want to scope to specific data sources including domain knowledge​, Microsoft Graph connectors, and plugins.
 - You want to enable nuanced interpretation of data received from data sources via custom instructions.
