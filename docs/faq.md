@@ -4,7 +4,7 @@ description: Frequently asked questions for Microsoft agents and beyond
 author: girliemac
 ms.author: timura
 ms.topic: best-practice
-ms.date: 09/16/2024
+ms.date: 11/19/2024
 ---
 
 # Frequently asked questions for Microsoft 365 Copilot extensibility
@@ -54,19 +54,20 @@ For Power Platform connectors, the licensing requirements can vary depending on 
 
 Jump to the [Azure AI questions](#azure-ai-questions) section below!
 
-## Data and safety questions
+## Copilot Security questions
 
 #### Is my data with Microsoft 365 Copilot protected?
 
-Yes, your data with Microsoft 365 Copilot is protected. Microsoft 365 Copilot adheres to strict privacy, security, and compliance standards, including GDPR and the EU Data Boundary. It uses encryption for data in transit and at rest, and doesn't retain prompts or responses beyond a short caching period for runtime purposes. Additionally, it only accesses data you have permission to see within your Microsoft 365 environment. 
+Yes. Microsoft 365 Copilot adheres to strict privacy, security, and compliance standards. To learn more about how Microsoft 365 Copilot handles your organization data anf the third party data, read: 
 
-When you extend Copilot, it can share queries based on your prompts, conversation history, and Microsoft 365 data with the agent to generate responses or complete commands. Additionally, any external data from connectors is ingested into Microsoft Graph and stays within your tenant. Learn more at [Data, Privacy, and Security considerations of extending Microsoft 365 Copilot](data-privacy-security.md).
+[Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy?view=o365-worldwide).
 
-#### How are the performance and safety evaluated? 
+#### What are data retention policies?
 
-All response generation features of agents are tested, measured, and validated internally before releasing generally. Such evaluations are done using extensive experimentation to ensure accurate, grounded, and responsible responses that align with human preferences.
+Find out all about data retention in Copilot, read: 
 
-For each capability, we conducted several tests to validate Microsoft 365 Copilot. In addition to all Microsoft 365 Copilot related capabilities, Responsible AI (RAI) testing was performed on different harm types to evaluate defect rates. The defect scores are then used to improve the model and mitigate the harm. It's important to keep in mind that the system was designed to mimic natural human communication, but the output may be inaccurate, incorrect, or out of date.
+[Learn about retention for Copilot](/purview/retention-policies-copilot)
+
 
 ## License questions
 
@@ -103,6 +104,8 @@ Azure AI services and Copilot extensibility cater to different needs and use cas
 - **Customization**: Allows for the creation of plugins, connectors, and declarative agents to enhance productivity tools like Word, Excel, and Teams.
 - **Integration**: Primarily integrates with Microsoft 365 applications, leveraging organizational data and context
 
+:::image type="content" source="assets/images/personas-extend-copilot.png" border="false" alt-text="Persona 1 - I am a developer, who manages the product database at an e-commerce company, and I want to build an inventory catalog plugin that brings the product information for internal org. Persona 2 - I am a marketing manager, who aims to launch a new campaign for my products. And I want a tool that helps developing marketing assets tailored to the campaign." lightbox="assets/images/personas-extend-copilot.png":::
+
 **Azure AI Services**
 - **Scope**: Azure AI services provide a broad range of AI capabilities, including machine learning, cognitive services, and the Azure OpenAI Service.
 - **Customization**: Highly customizable, allowing developers to build and deploy AI models tailored to specific business needs.
@@ -116,19 +119,19 @@ Use Cases for Azure AI services include creating bespoke AI solutions, such as:
 
 :::image type="content" source="assets/images/personas-build-custom-ai-apps.png" border="false" alt-text="Persona 1 - I'm an engineer, working for an e-commerce company, and I want to build a smart customer service chatbot for our shoe store. Persona 2 - I'm a game developer, and I want to craft a game featuring fictional characters that can engage in natural conversations with the players." lightbox="assets/images/personas-build-custom-ai-apps.png":::
 
-#### What are the differences between Copilot Studio and Azure AI Studio?
+#### What are the differences between Copilot Studio and Azure AI Foundry?
 
 The differences are the scope, customization, and integration they offer.
 
 **Copilot Studio** comes with low-code features for users who prefer the approach. It applies AI to create chatbot and agents with a range of features such as AI integration and easy deployment across various channels. 
 
-[**Azure AI Studio**](/azure/ai-studio/what-is-ai-studio) is a coding-based platform that empowers developers to build and deploy intelligent, fully customizable bots. You can integrate these various AI tools and models, allowing developers to innovate with AI in a secure and responsible manner, however, Azure AI Studio is not the tool for *extending* Microsoft 365 Copilot.
+[**Azure AI Foundry**](/azure/ai-studio/what-is-ai-studio) (formerly known as Azure AI Studio) is a coding-based platform that empowers developers to build and deploy intelligent, fully customizable bots. You can integrate these various AI tools and models, allowing developers to innovate with AI in a secure and responsible manner, however, Azure AI Foundry is not the tool for *extending* Microsoft 365 Copilot's model and orchestrator.
 
 #### Can I build Microsoft agents with Azure AI services? 
 
-If you want to use Azure AI services, we recommend you to build **Custom engine agent**, instead of *extending* Microsoft Copilot.
+If you want to use Azure AI services, we recommend you to build **Custom engine agents**, instead of declarative agents.
 
-You can build Custom engine agent with Microsoft 365 enterprise data, using the web-based interface of [Azure OpenAI Studio](https://oai.azure.com/). You can create intelligent bots for Teams and Microsoft 365 from the **Deploy to Teams** feature with Teams Toolkit.
+And if you choose to work with OpenAI models, such as GPT-4 turbo, you can take advantage of the web-based interface of [Azure OpenAI Studio](https://oai.azure.com/), which comes with the **Deploy to Teams** feature that generates a code template that you can modify, test, and deploy using Teams Toolkit.
 
 To learn more about the difference between custom engine agents and declarative agents, read [Your extensibility options for Microsoft 365 Copilot](decision-guide.md).
 
