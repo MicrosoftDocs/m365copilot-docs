@@ -1,8 +1,9 @@
 ---
 title: API plugin manifest schema 2.2 for Microsoft 365 Copilot
-description: Learn about the properties you can use in a manifest file for an API plugin in Microsoft 365 Copilot
+description: Learn about the 2.2 schema for a manifest file for an API plugin in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
+ms.date: 11/13/2024
 ms.topic: reference
 ---
 
@@ -492,7 +493,7 @@ The conversation starter object contains the following properties.
 
 Here's an example of a plugin manifest file that uses most of the manifest properties and object properties described in the article:
 
-[!INCLUDE [Sample plugin manifest for Contoso Real Estate plugin](includes/sample-api-plugin-manifest-file.md)]
+:::code language="json" source="includes/sample-manifests/plugin-sample-manifest-2.2.json":::
 
 ## See also
 
