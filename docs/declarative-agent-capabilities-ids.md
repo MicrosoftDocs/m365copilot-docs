@@ -3,6 +3,7 @@ title: Retrieving capabilities IDs for declarative agent manifest
 description: Learn how to retrieve capabilities IDs for your declarative agent manifest
 author: rimisra2
 ms.author: rimisra
+ms.date: 11/13/2024
 ms.topic: conceptual
 ---
 
