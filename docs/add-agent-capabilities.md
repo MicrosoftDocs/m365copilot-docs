@@ -21,9 +21,17 @@ Code interpreter is an advanced tool designed to solve complex tasks via Python 
 
 The user prompt "Graph the first 20 numbers in a Fibonacci sequence" generates both a line graph and, when the user clicks the `</> Code` button, provides the corresponding Python code.
 
+The following images show examples of the results of a data graphing request.
+
+:::image type="content" source="assets/images/code-interpreter-python-1.png" alt-text="Graph response to the user prompt":::
+
+:::image type="content" source="assets/images/code-interpreter-python-2.png" alt-text="Python code response to the user prompt":::
+
 #### Data visualization
 
 The user prompt "Create a word cloud of top baby names last year" generates a word cloud that includes the top names, as shown in the following example.
+
+:::image type="content" source="assets/images/code-interpreter-word-cloud.png" alt-text="Word cloud response to the user prompt":::
 
 ## Enable code interpreter
 
@@ -45,12 +53,23 @@ The image generation capability enables declarative agents to generate images ba
 
 The following examples show what users can do with the image generation capability in your agent.
 
-- **User prompt**: Create an image of a serene beach at sunset with palm trees and gentle waves.
-  - The following image shows the result.
-- **User prompt**: Design a flyer for a summer music festival and add a date for May 15, 2024.
-  - The following image shows the result.
-- **User prompt**: Generate an icon for a mobile app featuring a recipe book and orange icon color.
-  - The following image shows the result.
+**User prompt**: Create an image of a serene beach at sunset with palm trees and gentle waves.
+
+The following image shows the result.
+
+:::image type="content" source="assets/images/image-gen-beach.png" alt-text="Beach image response to the user prompt":::
+
+**User prompt**: Design a flyer for a summer music festival and add a date for May 15, 2024.
+
+The following image shows the result.
+
+:::image type="content" source="assets/images/image-gen-festival.png" alt-text="Festival flyer image response to the user prompt":::
+
+**User prompt**: Generate an icon for a mobile app featuring a recipe book and orange icon color.
+
+The following image shows the result.
+
+:::image type="content" source="assets/images/image-gen-icon.png" alt-text="Mobile app icon response to the user prompt":::
 
 ## Enable image generator
 
