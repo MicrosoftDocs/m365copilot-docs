@@ -23,18 +23,18 @@ No sure which one to build? [Your extensibility options for Microsoft 365 Copilo
 
 #### What is the difference between custom engine agents and Copilot Studio custom agent?
 
-**Custom engine agents** and **Copilot Studio custom agents** share a similar characteristic—they don't use the Microsoft Copilot foundation model or orchestration. If you need more advanced customization around orchestration, or if your users don't use Microsoft 365 Copilot, consider the custom agent path. You can build this through several alternatives, such as the Teams AI library or Azure OpenAI for custom engine agents, or Copilot Studio for building custom agents.
+**Custom engine agents** and **Copilot Studio custom agents** share a similar characteristic—they don't use the Microsoft Copilot foundation model or orchestration. If you need more advanced customization around orchestration, or if your users don't use Microsoft 365 Copilot, consider the custom agent path. For advanced coders, you can build custom engine agents with Teams AI library or Azure OpenAI, or use Copilot Studio for building custom agents.
 
 #### What is the difference between actions and plugins?
 
-While the terms "actions" and "plugins" are sometimes used interchangeably, however, technically an action refers to a single API call from a plugin (*e.g.*, "Close ticket #1234"), whereas a plugin encompasses a collection of functions (*e.g.*, close, create, resolve, etc.).
+Although *actions* and *plugins* are sometimes used interchangeably, an action is actually a single API call from a plugin (like 'Close ticket #1234'), while a plugin is a set of functions (such as close, create, resolve, etc.).
 
 In general, actions are the functionality that provides skills to Copilot within Declarative agents. Developers can use Copilot Studio to build Actions from Power Platform connectors, or they can create conversational, prompt, or flow connectors using the Copilot Studio design canvas. Developers can use Teams Toolkit, or any technology stack that supports standard REST APIs, to build actions as API Plugins.
 With actions you can light up agents that work *in-context* of Microsoft 365 Copilot, or they can also be used to provide skills to agents that work in *immersive* experiences, such as declarative agents.
 
 #### What is the difference between Power Platform Plugins and API Connectors
  
-Both Power Platform connectors and API Plugins allow calling of a standard REST API given an Open AI definition (Swagger) that describes it. However Power Platform connectors are used from Power Platform, which includes Copilot Studio, and API Plugins are defined in a Microsoft Teams/Microsoft 365 application package along with declarative agents.
+Both Power Platform connectors and API Plugins allow calling of a standard REST API given an Open API definition (Swagger) that describes it. However Power Platform connectors are used from Power Platform, which includes Copilot Studio, and API Plugins are defined in a Microsoft Teams/Microsoft 365 application package along with declarative agents.
 
 #### What is the equivalent of API plugins in Copilot Studio?
 
@@ -52,20 +52,17 @@ For Power Platform connectors, the licensing requirements can vary depending on 
 
 #### What are the differences between Copilot extensibility and Azure AI services?
 
-Jump to the [Azure AI questions](#azure-ai-questions) section below!
+Jump to the [Azure AI questions](#azure-ai-questions) section!
 
 ## Copilot Security questions
 
 #### Is my data with Microsoft 365 Copilot protected?
 
-Yes. Microsoft 365 Copilot adheres to strict privacy, security, and compliance standards. To learn more about how Microsoft 365 Copilot handles your organization data anf the third party data, read: 
-
-[Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy?view=o365-worldwide).
+Yes. Microsoft 365 Copilot adheres to strict privacy, security, and compliance standards. To learn more about how Microsoft 365 Copilot handles your organization data and the third party data, read: [Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy).
 
 #### What are data retention policies?
 
 Find out all about data retention in Copilot, read: 
-
 [Learn about retention for Copilot](/purview/retention-policies-copilot)
 
 
@@ -91,7 +88,7 @@ If you're already a Visual Studio Code user, Teams Toolkit runs on VS Code with 
 
 #### What do I need to connect to an API?
 
-Unlike the low-code solution, where you use Power Platform connector to connect an API, Teams Toolkit lets you build an application package so Copilot can access a REST API without any intermediate layer; all you need to do is include an OpenAPI definition. It's important to add detailed descriptions to the OpenAPI definition so Copilot knows how to use the API; simplifying very large or complex API's may be necessary in some cases.
+Unlike the low-code solution that uses a Power Platform connector to connect an API, Teams Toolkit lets you build an application package so Copilot can directly access a REST API without any intermediate layer. You just need to include an OpenAPI definition. It's important to add detailed descriptions to the OpenAPI definition so Copilot knows how to use the API. In some cases, you may need to simplify very large or complex APIs.
 
 ## Azure AI questions
 
