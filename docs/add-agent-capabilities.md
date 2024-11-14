@@ -37,6 +37,16 @@ The user prompt "Create a word cloud of top baby names last year" generates a wo
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the capabilities property in your manifest reference, as shown in the following example.
 
+```json
+{
+  "capabilities": [
+    {
+      "name": "CodeInterpreter"
+    }
+  ]
+}
+```
+
 If you're using [Copilot Studio agent builder](/copilot-studio-agent-builder) to create your agent, on the Configure tab, under Capabilities, choose the toggle next to Code interpreter.
 
 ## Image generator
@@ -74,6 +84,16 @@ The following image shows the result.
 ## Enable image generator
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the capabilities property in your manifest reference, as shown in the following example.
+
+```json
+{
+  "capabilities": [
+    {
+      "name": "GraphicArt"
+    }
+  ]
+}
+```
 
 If you're using [Copilot Studio agent builder](/copilot-studio-agent-builder) to create your agent, on the Configure tab, under Capabilities, choose the toggle next to Image generator.
 
