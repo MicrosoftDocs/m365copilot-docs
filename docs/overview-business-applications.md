@@ -3,6 +3,7 @@ title: Extend with actions using Microsoft Copilot Studio
 description: Extend Microsoft 365 Copilot using Microsoft Power Platform and Microsoft Copilot Studio.
 author: jhaskett-msft
 ms.author: jhaskett
+ms.date: 09/26/2024
 ms.topic: overview
 ---
 
@@ -59,7 +60,7 @@ To deploy a plugin, sign in to the Microsoft 365 admin center and locate the plu
 
 To find Power Automate flows, search for "Power Automate". For Power Platform connector plugins, search for the respective connector name; for example, FreshDesk. For Copilot artifacts such as actions created in Microsoft Copilot Studio, search for "Copilot Studio".
 
-To find Dynamics 365 plugins for Microsoft 365 Copilot, search for "Dynamics 365". The search results will show the available Dynamics 365 plugins. 
+To find Dynamics 365 plugins for Microsoft 365 Copilot, search for "Dynamics 365". The search results will show the available Dynamics 365 plugins.
 
 |For                                   |  Select                           |
 |--------------------------------------|-----------------------------------|
@@ -99,7 +100,7 @@ You can use the built-in actions shipped by Microsoft in your Microsoft 365 Copi
 
 1. Log in to Microsoft Teams app.
 
-1. Open the Copilot app. If the Copilot app isn't in your sidebar, search in the Teams app store. 
+1. Open the Copilot app. If the Copilot app isn't in your sidebar, search in the Teams app store.
 
 1. Select the plugins icon and enable the plugin you want to use from the plugin flyout.
 
