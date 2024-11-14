@@ -33,7 +33,7 @@ However, with Microsoft 365 Copilot, you also have a choice of extending Copilot
 
 ## Extend Microsoft 365 Copilot
 
-There are two ways you can extend Microsoft 365 Copilot. You can customize Copilot with [declarative agents](#declarative-agents) and [plugins](#plugins), and you can add knowledge to Copilot and agents with [connectors](#connectors).
+There are two ways you can extend Microsoft 365 Copilot. You can customize Copilot with [declarative agents](#declarative-agents) and [plugins](#plugins), and you can add knowledge to Copilot and agents with [Microsoft Graph connectors](#microsoft-graph-connectors).
 
 > [!TIP]
 > Are you a business decision maker? Check out the [Microsoft Copilot Scenario Library](https://adoption.microsoft.com/copilot-scenario-library/).
@@ -58,19 +58,15 @@ Plugins add skills and actions to declarative agents.
 
 - [API plugins](overview-api-plugins.md) extend declarative agents by calling REST APIs that have an OpenAPI description.
 - [Actions in Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) connect Microsoft 365 Copilot and the Power Platform environment. Actions include **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
+- [Power Platform connectors](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) enable declarative agents created with Microsoft Copilot Studio to interact with external services and data sources in real-time.
 - [Teams message extensions](overview-message-extension-bot.md) are the search and action capability for Teams that now work as plugins for agents.
 
 > [!TIP]
 > If you have an existing Teams message extension, you can use it as a plugin with little or no modifications. For new plugins, we recommend creating API plugins.
 
-### Connectors
+### Microsoft Graph connectors
 
-Use connectors to ingest external data to your agents.
-
-- [Microsoft Graph connectors](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. Items ingested via a Microsoft Graph connector are available to Microsoft 365 Copilot as well as declarative agents.
-- [Power Platform connectors](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) enable declarative agents created with Microsoft Copilot Studio to interact with external services and data sources in real-time.
-
-[!INCLUDE [copilot-studio-agent-naming](includes/copilot-studio-agent-naming.md)]
+[Microsoft Graph connectors](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. Items ingested via a Microsoft Graph connector are available to Microsoft 365 Copilot as well as declarative agents.
 
 ### Extend Microsoft 365 Copilot with pro-code or low-code
 
@@ -95,6 +91,8 @@ How you build and which tools you use are up to you. Your choices are:
 
 - The pro-code option allows for full customization. Develop with [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for Visual Studio Code and start with either the [Teams AI Library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context), or [Azure OpenAI Studio](https://oai.azure.com/) to configure then export the generated code to Teams Toolkit.
 - For low-code or no-code, you can develop custom agents rapidly with a user-friendly interface in [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
+
+    [!INCLUDE [copilot-studio-agent-naming](includes/copilot-studio-agent-naming.md)]
 
 ## Next step
 
