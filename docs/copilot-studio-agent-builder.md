@@ -3,6 +3,7 @@ title: Use Copilot Studio Agent Builder to Build Agents
 description: Learn how to use Copilot Studio agent builder to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
+ms.date: 11/06/2024
 ms.topic: conceptual
 ---
 

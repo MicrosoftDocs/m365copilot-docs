@@ -3,6 +3,7 @@ title: Publish and Manage Copilot Studio Agent Builder Agents
 description: Learn how to publish and manage agents built with Copilot Studio agent builder.
 author: jasonxian-msft
 ms.author: jasonxian
+ms.date: 11/06/2024
 ms.topic: conceptual
 ---
 
@@ -12,7 +13,7 @@ This article describes how to create or publish agents built with Copilot Studio
 
 ## Create the agent
 
-While you are [building your agent](copilot-studio-agent-builder.md), changes made to the agent are automatically saved in the agent builder. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner. 
+While you are [building your agent](copilot-studio-agent-builder.md), changes made to the agent are automatically saved in the agent builder. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
 
 After the agent is created successfully, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft Copilot.
 
