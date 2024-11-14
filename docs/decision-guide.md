@@ -31,7 +31,7 @@ However, with Microsoft 365 Copilot, you also have a choice of extending Copilot
 - You need agentic AI support.
 - You want your service to be independent from Microsoft 365 Copilot, accessible to all Microsoft 365 users regardless of their Copilot licensing status.
 
-:::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 Copilot extensibility options are best for you." lightbox="assets/images/m365-extensibility-decisions.png" :::
+:::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 Copilot extensibility options are best for you." lightbox="assets/images/m365-extensibility-decisions.png" border="false" :::
 
 ## Extend Microsoft 365 Copilot
 
