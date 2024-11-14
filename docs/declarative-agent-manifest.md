@@ -3,6 +3,7 @@ title: Declarative agent schema for Microsoft 365 Copilot
 description: Learn about the properties you can use in a manifest file for declarative agent in Microsoft 365 Copilot
 author: rimisra2
 ms.author: rimisra
+ms.date: 11/06/2024
 ms.topic: reference
 ---
 
