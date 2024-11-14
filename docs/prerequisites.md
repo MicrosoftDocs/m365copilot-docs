@@ -57,7 +57,7 @@ To build agents and plugins with Teams Toolkit and other IDEs, you'll need your 
 
 :::image type="content" source="./assets/images/tac-setup-policies.png" alt-text="Screenshot of org-wide setup policy with 'Upload custom apps' toggle enabled in Teams admin center":::
 
-You can manage your sideloaded custom apps, including Copilot agents, from the Teams client by selecting: Apps > **Manage your apps**.
+You can manage your sideloaded custom apps, including agents, from the Teams client by selecting: Apps > **Manage your apps**.
 
 #### Creating with Copilot Studio
 
@@ -67,7 +67,7 @@ To create agents and actions with Copilot Studio, you'll need:
 - Your Power Platform admin or Dynamics 365 admin to [enable Generative AI features](/power-platform/admin/geographical-availability-copilot) in Power Platform admin center.
 - Your Microsoft 365 tenant admin to [deploy the Copilot Studio app in the Microsoft 365 admin center](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-microsoft-copilot-studio-app-admin).
 
-For more details, see Copilot Studio [Prerequisites for actions](/microsoft-copilot-studio/copilot-plugins-overview#use-actions-in-microsoft-copilot) and [Prerequisites for Copilot agents](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#prerequisites).
+For more details, see Copilot Studio [Prerequisites for actions](/microsoft-copilot-studio/copilot-plugins-overview#use-actions-in-microsoft-copilot) and [Prerequisites for agents](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#prerequisites).
 
 
 ### Enabling developer mode

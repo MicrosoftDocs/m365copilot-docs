@@ -9,11 +9,11 @@ ms.date: 11/01/2024
 
 # Microsoft 365 Copilot extensibility samples
 
-This article provides links to code samples to help you develop Copilot extensibility solutions, including Copilot agents, Microsoft Graph connectors, and plugins.
+This article provides links to code samples to help you develop Copilot extensibility solutions, including agents, Microsoft Graph connectors, and plugins.
 
 ## Declarative agent samples
 
-The following Copilot agent samples are available from the PNP community.
+The following declarative agent samples are available from the PNP community.
 
 | Sample | Description |
 |--------|-------------|
@@ -47,6 +47,7 @@ The following samples implement Microsoft Graph connectors that extend Microsoft
 
 | Sample | Description |
 |--------|-------------|
+| [TypeScript policies connector](https://adoption.microsoft.com/en-us/sample-solution-gallery/sample/pnp-graph-connector-nodejs-typescript-policies/) | This sample contains a Microsoft Graph connector that shows how to ingest local policies into Microsoft 365. For each file, it extracts the metadata from front matter, maps them to the external connection's schema, and ingests the content, retaining the content and metadata. The ingested content is set to be visible to everyone in the organization. |
 | [.NET Microsoft Graph docs connector](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-graph-connector-dotnet-csharp-graphdocs-ttk/) | This sample .NET project shows you how to build a Microsoft Graph connector to ingest unstructured data to Microsoft 365 and make it available to Microsoft 365 Copilot. The project uses Teams Toolkit for Visual Studio to package the connector as a Microsoft Teams app and simplify its deployment in the organization. |
 | [.NET GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-dotnet) | This .NET application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |
 | [Python GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-python) | This Python application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 App, and more. |

@@ -10,8 +10,6 @@ ms.topic: overview
 
 Building a declarative agent allows you to craft your own copilot by declaring instructions, actions, and knowledge to customize Microsoft 365 Copilot. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft Copilot. By tailoring Microsoft Copilot for your business purposes, declarative agents facilitate smoother collaboration, increased productivity, and streamlined workflows. With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to resolving customer issues efficiently.
 
-[!INCLUDE [preview-disclaimer-declarative-agents](includes/preview-disclaimer-declarative-agents.md)]
-
 [!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
 
 ## Tailor declarative agents for your scenario
@@ -60,5 +58,5 @@ You can use your tool of choice to create a declarative agent app package. To ge
 - [Extensibility options for Microsoft 365 Copilot](decision-guide.md)
 - [Microsoft Copilot in the Microsoft 365 ecosystem](ecosystem.md)
 - [Microsoft Graph connectors for Microsoft 365 Copilot](overview-graph-connector.md)
-- [Copilot agents are apps for Microsoft 365](agents-are-apps.md)
+- [Agents are apps for Microsoft 365](agents-are-apps.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)

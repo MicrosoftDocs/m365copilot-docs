@@ -24,11 +24,11 @@ All of the extensibility options for Microsoft 365 Copilot, including agents, pl
 From Microsoft admin center, admins can:
 
 - Enable/disable Copilot extensibility for the whole organization through Microsoft 365 admin center settings.
-- Make available Copilot agents to specific users or groups.
-- Install and uninstall Copilot agents for the whole organization or specific users or groups.
-- Block or unblock Copilot agents for the whole organization.
+- Make available agents to specific users or groups.
+- Install and uninstall agents for the whole organization or specific users or groups.
+- Block or unblock agents for the whole organization.
 
-To learn more about managing published Copilot agents and other extensibility types, see [Manage Copilot agents for Copilot in Microsoft admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context).
+To learn more about managing published agents and other extensibility types, see [Manage agents for Copilot in Microsoft admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context).
 
 ## Agents
 
@@ -38,7 +38,7 @@ Regardless if they are built with Copilot Studio or Teams Toolkit, declarative a
 
 However, Copilot Studio and Teams Toolkit have different development prerequisites that must be enabled by an admin before you can start building declarative agents:
 
-- For Copilot Studio, see [Prerequisites for creating Copilot agents with Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#prerequisites).
+- For Copilot Studio, see [Prerequisites for creating agents with Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#prerequisites).
 
 - For Teams Toolkit, see [Prerequisites for building agents and plugins](./prerequisites.md#building-with-teams-toolkit).
 
@@ -80,7 +80,7 @@ Tenant admins can also enable or disable different types of actions from working
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-Refer to [Agents](#agents) for details on managing Copilot agents with API plugins.
+Refer to [Agents](#agents) for details on managing agents with API plugins.
 
 ## Graph connectors
 

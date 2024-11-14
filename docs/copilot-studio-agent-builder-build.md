@@ -1,5 +1,5 @@
 ---
-title: Use the Copilot Studio agent builder to build Copilot agents
+title: Use the Copilot Studio Agent Builder to Build Agents
 description: Learn how to build Copilot agents by using Copilot Studio agent builder in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
@@ -31,13 +31,13 @@ Both tabs work seamlessly to provide a rich authoring experience.
 >
 > You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your region or preferred language.
 
-## Describe your Copilot agent
+## Describe your agent
 
-The **Describe** tab allows you to create an agent using plain language. As you provide information conversationally, the agent's name, description, and instructions update continuously to refine the agent's behavior. This experience provides a rich yet simple natural language way to create a customized Copilot agent. After you create a Copilot agent, you can return to the agent and use the **Describe** tab to update it using natural language.
+The **Describe** tab allows you to create an agent using plain language. As you provide information conversationally, the agent's name, description, and instructions update continuously to refine the agent's behavior. This experience provides a rich yet simple natural language way to create a customized agent. After you create an agent, you can return to the agent and use the **Describe** tab to update it using natural language.
 
-You build agents in plain language by answering the questions the agent builder asks. The builder progressively updates the Copilot agent in each turn of the conversation, and changes are saved automatically. You can make updates to the Copilot agent in any turn of the conversation. Changes to the agent's name, description, and instructions update automatically. However, you can't add an icon or knowledge sources directly from the **Describe** tab. Use the **Configure** tab to add an icon or knowledge sources.
+You build agents in plain language by answering the questions the agent builder asks. The builder progressively updates the agent in each turn of the conversation, and changes are saved automatically. You can make updates to the agent in any turn of the conversation. Changes to the agent's name, description, and instructions update automatically. However, you can't add an icon or knowledge sources directly from the **Describe** tab. Use the **Configure** tab to add an icon or knowledge sources.
 
-## Configure your Copilot agent
+## Configure your agent
 
 In addition to using the **Describe** tab, you can also directly configure the agent's behavior using the **Configure** tab.
 
@@ -45,7 +45,7 @@ The **Configure** tab provides you with the ability to view and edit information
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-configure.png" alt-text="The Configure tab lets users manually edit the agent":::
 
-The following table describes the fields that make up the Copilot agent.
+The following table describes the fields that make up the agent.
 
 <!-- markdownlint-disable MD033 -->
 | Field               | Description |
@@ -58,39 +58,39 @@ The following table describes the fields that make up the Copilot agent.
 | **Starter Prompts** | Starter prompts help other users understand commonly supported scenarios by your agent. Each starter prompt comes with a name and description. There's no minimum number of starter prompts. |
 <!-- markdownlint-enable MD033 -->
 
-## Try your Copilot agent
+## Try your agent
 
-The agent in the right pane is an ephemeral instance of the Copilot agent that shows up as a side-by-side screen within the authoring experience. You can use it to test the agent while you're creating or making updates to it. You can test your Copilot agent in the test pane to experience it in a similar way to end users. The test pane is enabled after the agent has name, description, and instructions. It behaves according to those instructions like a fully fledged Copilot agent, including the ability to respond to complex queries within its realm of specified knowledge. The agent updates during each turn of the conversation as new information is added in the **Describe** or **Configure** tab.
+The agent in the right pane is an ephemeral instance of the agent that shows up as a side-by-side screen within the authoring experience. You can use it to test the agent while you're creating or making updates to it. You can test your agent in the test pane to experience it in a similar way to end users. The test pane is enabled after the agent has name, description, and instructions. It behaves according to those instructions like a fully fledged agent, including the ability to respond to complex queries within its realm of specified knowledge. The agent updates during each turn of the conversation as new information is added in the **Describe** or **Configure** tab.
 
-The agent you see in the test pane isn't created yet, so some features aren't available. For example, you can't use it to share prompts, provide feedback, or @mention other agents in the Microsoft 365 Copilot app. These features become available after you create the Copilot agent.
+The agent you see in the test pane isn't created yet, so some features aren't available. For example, you can't use it to share prompts, provide feedback, or @mention other agents in the Microsoft 365 Copilot app. These features become available after you create the agent.
 
 The test pane initially appears with suggested starter prompts, which when clicked invokes the prompt and starts the conversation. You can select **New Chat** to start a new conversation with the agent to view the starter prompts again.
 
 ## Add knowledge sources
 
-The agent builder allows you to configure specific knowledge sources for the agent to reference. This feature helps the Copilot agent provide more relevant answers based on specific files, folders, and sites from SharePoint and [Microsoft Graph connectors](/graph/connecting-external-content-connectors-overview).
+The agent builder allows you to configure specific knowledge sources for the agent to reference. This feature helps the agent provide more relevant answers based on specific files, folders, and sites from SharePoint and [Microsoft Graph connectors](/graph/connecting-external-content-connectors-overview).
 
 ### Web content
 
-You can enable or disable web content when you author or edit your Copilot agent.
+You can enable or disable web content when you author or edit your agent.
 
-When web content is enabled, the Copilot agent can use publicly available web information to augment its response to a prompt. Responses shown to the user are also shown with citations and labeled with an icon to represent web content use. When web content is disabled, the Copilot agent uses its pretrained knowledge and any knowledge sources you add.
+When web content is enabled, the agent can use publicly available web information to augment its response to a prompt. Responses shown to the user are also shown with citations and labeled with an icon to represent web content use. When web content is disabled, the agent uses its pretrained knowledge and any knowledge sources you add.
 
 ### SharePoint content
 
-The Copilot agent can reference specific SharePoint sites, files, and folders as its knowledge source. When referencing sources from SharePoint, consider the following limits:
+The agent can reference specific SharePoint sites, files, and folders as its knowledge source. When referencing sources from SharePoint, consider the following limits:
 
 - The following are the supported file types: .docx, .doc, .pdf, .txt, .pptx, .ppt, .html
 - Individual files must not be larger than 150 MB.
-- A total of 20 knowledge sources (including sites, folders, and files) can be selected for each Copilot agent.
-- Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the Copilot agent is generating a response.
+- A total of 20 knowledge sources (including sites, folders, and files) can be selected for each agent.
+- Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
 
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you won't be able to use SharePoint as a knowledge source.
 
 #### Entering a URL for a SharePoint site or folder
 
-You can enter a URL for a SharePoint site or folder, such as `contoso.sharepoint.com/sites/policies`. The Copilot agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The Copilot agent uses relevant information to provide a targeted response.
+You can enter a URL for a SharePoint site or folder, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
 > [!NOTE]
 >
@@ -108,7 +108,7 @@ You can also select files or folders from the SharePoint file picker. The left p
 > [!NOTE]
 > The SharePoint picker might not show all the [communication sites](/microsoft-365/community/team-site-or-communication-site) that you have access to. Communication sites only show up in the **Quick Access** and **Recent** sections of the SharePoint picker.
 
-After you select a site, you can select several files and folders. Doing so adds the SharePoint file or folder to the Copilot agent's knowledge sources. When the same site includes multiple folders, select the button next to the folder name to view other folders.
+After you select a site, you can select several files and folders. Doing so adds the SharePoint file or folder to the agent's knowledge sources. When the same site includes multiple folders, select the button next to the folder name to view other folders.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-sharepoint-picker-folders.png" alt-text="SharePoint file picker":::
 
@@ -116,17 +116,17 @@ You can also upload files into SharePoint by using the picker. The file appears 
 
 #### File readiness
 
-When new files are uploaded to SharePoint, they can take up to several minutes to be ready for Copilot agent to include in its response. You can still test your Copilot agent in the test pane if sources aren't ready. However, responses won't include information from the newly uploaded file until it's ready. 
+When new files are uploaded to SharePoint, they can take up to several minutes to be ready for the agent to include in its response. You can still test your agent in the test pane if sources aren't ready. However, responses won't include information from the newly uploaded file until it's ready. 
 
-You can check the file readiness by looking in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When the underlying file uploaded to SharePoint is renamed or deleted, the Copilot agent picks up the changes. You can also select the reload button on top of the **Knowledge** section to manually reload the state.
+You can check the file readiness by looking in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When the underlying file uploaded to SharePoint is renamed or deleted, the agent picks up the changes. You can also select the reload button on top of the **Knowledge** section to manually reload the state.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-knowledge-preparing.png" alt-text="Knowledge sources preparing state":::
 
 ### Microsoft Graph connectors
 
-Microsoft Graph connectors allow Copilot agents to include knowledge from external repositories or systems such as customer accounts, incident tickets, and knowledge articles. Admins must enable and configure Microsoft Graph connectors in the [Microsoft Admin Center](/microsoftsearch/configure-connector). At first, the connectors may be collapsed in the **From your organization** section of the **Knowledge** sources.
+Microsoft Graph connectors allow agents to include knowledge from external repositories or systems such as customer accounts, incident tickets, and knowledge articles. Admins must enable and configure Microsoft Graph connectors in the [Microsoft Admin Center](/microsoftsearch/configure-connector). At first, the connectors may be collapsed in the **From your organization** section of the **Knowledge** sources.
 
-If at least one connector is enabled, you can add it to your Copilot agent. Your agent is able to answer questions related to that connector. The information retrieved from the connector is indexed and refreshed according to the way in which the connector was configured. The Copilot agent can cite relevant information from the indexed data and link the end user to the data source.
+If at least one connector is enabled, you can add it to your agent. Your agent is able to answer questions related to that connector. The information retrieved from the connector is indexed and refreshed according to the way in which the connector was configured. The agent can cite relevant information from the indexed data and link the end user to the data source.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-graph-connectors.png" alt-text="Graph connectors in hte Knowledge sources":::
 
