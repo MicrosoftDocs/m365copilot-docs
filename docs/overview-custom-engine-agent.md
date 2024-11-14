@@ -11,7 +11,7 @@ ms.topic: overview
 
 Custom engine agents are conversational Teams bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction. These advanced bots mark a significant departure from traditional bots, offering an extensive range of features that elevate the overall user experience.
 
-:::image type="content" source="assets/images/teams-ai-library.png" alt-text="A diagram that explains how a custom engine agent in Teams work" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
+:::image type="content" source="assets/images/teams-ai-library.png" alt-text="A diagram that shows how a custom engine agent in Teams works" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
 
 Custom engine agents utilize LLM technology that allows them to easily understand and respond to user queries, creating dynamic and immersive interactions. Custom engine agents also offer advanced functionalities such as UI manipulation, task execution, and content creation. These capabilities make custom engine agents indispensable tools for streamlining workflows and boosting productivity.
 
