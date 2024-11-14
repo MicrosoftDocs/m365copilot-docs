@@ -19,7 +19,7 @@ This schema version introduces the following changes from [version 1.0](declarat
 
 - The `sites` property is added to the [web search object](#web-search-object). This allows the web search capability to be limited to allowed sites.
 - The [graphic art](#graphic-art-object) capability was added. This capability allows the declarative agent to generate images and art based on user input.
-- The [code interpreter](#code-interpreter-object) capability was added. This capability allows the declarative agent to generate and execute code.
+- The [code interpreter](#code-interpreter-object) capability was added. This capability allows the declarative agent to generate and execute Python code.
 
 ## JSON schema
 
@@ -210,7 +210,7 @@ The connection object contains the following properties.
 
 #### Graphic art object
 
-Indicates that the declarative agent can create images and art based on the text input from the user.
+Indicates that the declarative agent can create images and art based on the text input from the user. For more information, see [Image generator](add-agent-capabilities.md#image-generator).
 
 The graphic art object contains the following properties.
 
@@ -220,7 +220,7 @@ The graphic art object contains the following properties.
 
 #### Code interpreter object
 
-Indicates that the declarative agent can generate and execute code.
+Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more. For more information, see [Code interpreter](add-agent-capabilities.md#code-interpreter).
 
 The web search object contains the following properties.
 
