@@ -16,7 +16,7 @@ You can enhance the user experience of your declarative agent by adding capabili
 Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario. It also accepts files as input for modifications and analysis.
 
 > [!NOTE]
-> Code interpreter doesn't currently work when the agent runs in the in-context experience.
+> Code interpreter is not currently supported for in-context experiences. Agents that have the code interpreter capability enabled are suppressed in host apps.
 
 ### Code interpreter examples
 
@@ -38,7 +38,7 @@ The user prompt "Create a word cloud of top baby names last year" generates a wo
 
 ## Enable code interpreter
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the capabilities property in your manifest reference, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the capabilities property in your manifest reference, as shown in the following example.
 
 ```json
 {
@@ -50,7 +50,7 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 }
 ```
 
-If you're using [Copilot Studio agent builder](/copilot-studio-agent-builder) to create your agent, on the Configure tab, under Capabilities, choose the toggle next to Code interpreter.
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the Configure tab, under Capabilities, choose the toggle next to Code interpreter.
 
 ## Image generator
 
@@ -86,7 +86,7 @@ The following image shows the result.
 
 ## Enable image generator
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the capabilities property in your manifest reference, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the capabilities property in your manifest reference, as shown in the following example.
 
 ```json
 {
@@ -98,7 +98,7 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 }
 ```
 
-If you're using [Copilot Studio agent builder](/copilot-studio-agent-builder) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Image generator**.
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Image generator**.
 
 > [!NOTE]
 > The image generator doesn't currently work in the test pane in Copilot Studio agent builder.
