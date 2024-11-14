@@ -3,6 +3,7 @@ title: Copilot Studio agent builder regional availability and language support
 description: Learn about the regional availability and supported languages for Copilot Studio agent builder.
 author: jasonxian-msft
 ms.author: jasonxian
+ms.date: 11/06/2024
 ms.topic: conceptual
 ---
 
@@ -30,7 +31,7 @@ In regions where the agent builder isn't supported, the user can create an agent
 
 ## Agent languages
 
-A user can chat with an agent created using the Copilot Studio agent builder in the following languages: 
+A user can chat with an agent created using the Copilot Studio agent builder in the following languages:
 
 - English
 - French

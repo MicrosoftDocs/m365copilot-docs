@@ -3,6 +3,7 @@ title: API plugin manifest schema for Microsoft 365 Copilot
 description: Learn about the properties you can use in a manifest file for an API plugin in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
+ms.date: 11/06/2024
 ms.topic: reference
 ---
 

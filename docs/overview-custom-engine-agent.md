@@ -3,6 +3,7 @@ title: Custom engine agents for Microsoft 365
 description: Custom engine agents are sophisticated conversational bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction.
 author: aycabas
 ms.author: aycabas
+ms.date: 11/06/2024
 ms.topic: overview
 ---
 
