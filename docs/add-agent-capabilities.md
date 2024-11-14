@@ -15,6 +15,9 @@ You can enhance the user experience of your declarative agent by adding capabili
 
 Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario. It also accepts files as input for modifications and analysis.
 
+> [!NOTE]
+> Code interpreter doesn't currently work when the agent runs in the in-context experience.
+
 ### Code interpreter examples
 
 #### Data graphing
@@ -58,7 +61,7 @@ The image generation capability enables declarative agents to generate images ba
 - **Image modification**: Users can follow up with subsequent prompts to modify the original images without losing context. For example, first prompt: "Create a photo of a happy puppy running around in a yard." Second prompt: "Include a tennis ball."
 - **Feedback mechanism**: Users can provide feedback on the generated images by giving a thumbs up or thumbs down. This helps improve the quality of future image generations.
 - **Clipboard and sharing**: Users can copy the generated images to their clipboard to paste into other applications, or they can share the generated images directly from the interface.
-
+ 
 ### Image generation examples
 
 The following examples show what users can do with the image generation capability in your agent.
@@ -95,8 +98,13 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 }
 ```
 
-If you're using [Copilot Studio agent builder](/copilot-studio-agent-builder) to create your agent, on the Configure tab, under Capabilities, choose the toggle next to Image generator.
+If you're using [Copilot Studio agent builder](/copilot-studio-agent-builder) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Image generator**.
+
+> [!NOTE]
+> The image generator doesn't currently work in the test pane in Copilot Studio agent builder.
+
 
 ## Related content
 
+- [Declarative agents overview](overview-declarative-agent.md)
 - [Declarative agent manifest reference](declarative-agent-manifest.md)
