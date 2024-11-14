@@ -3,6 +3,7 @@ title: Authentication schemes for API plugins for Microsoft 365 Copilot
 description: Learn about the supported authentication schemes for API plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
+ms.date: 10/09/2024
 ms.topic: conceptual
 ---
 
