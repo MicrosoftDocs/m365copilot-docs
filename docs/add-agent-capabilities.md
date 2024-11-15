@@ -36,7 +36,7 @@ The user prompt "Create a word cloud of top pet names" generates a word cloud th
 
 :::image type="content" source="assets/images/code-interpreter-pet-word-cloud.png" alt-text="Word cloud response to the user prompt":::
 
-## Enable code interpreter
+### Enable code interpreter
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the capabilities property in your manifest reference, as shown in the following example.
 
@@ -86,7 +86,7 @@ The following image shows the result.
 
 :::image type="content" source="assets/images/image-gen-icon.png" alt-text="Mobile app icon response to the user prompt":::
 
-## Enable image generator
+### Enable image generator
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the capabilities property in your manifest reference, as shown in the following example.
 
