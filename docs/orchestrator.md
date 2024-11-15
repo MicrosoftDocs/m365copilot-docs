@@ -4,7 +4,7 @@ description: Learn how the Microsoft Copilot orchestrator determines which plugi
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 11/12/2024
+ms.date: 11/18/2024
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
@@ -43,7 +43,7 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
       The LLM might proceed to generating a response using Copilot's built-in capabilities, or it might determine that additional data is necessary.
 
-      If more information is needed, the orchestrator does a search for the plugins (tools) with the right skill for the task from the user's enabled plugins based on the descriptions of the plugins and their functions.
+      If more information is needed, the orchestrator does a search for the plugins (tools) with the right skill for the task from the agent's enabled plugins based on the descriptions of the plugins and their functions.
 
    1. **Function matching and parameter determination**: The orchestrator formulates a new prompt that incorporates the user's initial query, the updated context, and the selected plugins, and presents it to the LLM. The LLM evaluates the input and specifies the optimal plugin and function within that plugin to address the task. It then provides the orchestrator with the necessary function details and parameters required to gather the needed information.
 
@@ -55,13 +55,9 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
 1. **Natural language output**: Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
-      If you imagine a user's prompt to Copilot like a construction project, the Copilot orchestrator is the general contractor, who coordinates and organizes the work of the specialist subcontractors, your plugins. Similar to a general contractor, the orchestrator is responsible for ensuring that the project is completed according to specifications implied by the user's input (in other words, that Copilot's response satisfies the user's intent in their request).
-
-      Each plugin must provide Copilot with an accurate description of its skills and run its skills effectively. This instills a sense of trust in your users and ensures that Copilot calls your plugin each time its skills are needed. 
-
 ## How Copilot's orchestrator matches plugins to user queries
 
-When a user submits a query to Copilot, the orchestrator searches its full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
+When a user submits a query to your Copilot agent, the orchestrator searches the agent's full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
 
 1. Lexical match on function name.
 2. Semantic match on function description.
@@ -70,5 +66,4 @@ When a user submits a query to Copilot, the orchestrator searches its full catal
 
 The orchestrator works through this list until all five function candidate slots are filled.
 
-To best ensure that the Copilot orchestrator chooses your plugin to provide the right skill for users' queries, apply the [Explore best practices for high-quality plugins](plugin-guidelines.md).
-
+Check out [Validation guidelines for Copilot agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365-copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.

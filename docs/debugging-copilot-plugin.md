@@ -4,7 +4,7 @@ description: Learn how to test and debug how copilot agents select and use plugi
 author: carolkigoonya
 ms.author: ckigoonya
 ms.topic: overview
-ms.date: 04/24/2024
+ms.date: 11/18/2024
 ---
 
 # Debug a copilot agent with developer mode
