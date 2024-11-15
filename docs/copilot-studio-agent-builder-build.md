@@ -3,6 +3,7 @@ title: Use the Copilot Studio Agent Builder to Build Agents
 description: Learn how to build Copilot agents by using Copilot Studio agent builder in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
+ms.date: 11/06/2024
 ms.topic: conceptual
 ---
 
@@ -20,7 +21,7 @@ You can author your declarative agent in two ways:
 Both tabs work seamlessly to provide a rich authoring experience.
 
 > [!NOTE]
-> The availability of the **Describe** tab is based on geographic availability and language support. The **Describe** tab only supports English. When the authoring language is set to English, the **Describe** tab is available in the following regions: 
+> The availability of the **Describe** tab is based on geographic availability and language support. The **Describe** tab only supports English. When the authoring language is set to English, the **Describe** tab is available in the following regions:
 >
 > - Australia
 > - India
@@ -117,7 +118,7 @@ You can also upload files into SharePoint by using the picker. The file appears 
 
 #### File readiness
 
-When new files are uploaded to SharePoint, they can take up to several minutes to be ready for the agent to include in its response. You can still test your agent in the test pane if sources aren't ready. However, responses won't include information from the newly uploaded file until it's ready. 
+When new files are uploaded to SharePoint, they can take up to several minutes to be ready for the agent to include in its response. You can still test your agent in the test pane if sources aren't ready. However, responses won't include information from the newly uploaded file until it's ready.
 
 You can check the file readiness by looking in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When the underlying file uploaded to SharePoint is renamed or deleted, the agent picks up the changes. You can also select the reload button on top of the **Knowledge** section to manually reload the state.
 
