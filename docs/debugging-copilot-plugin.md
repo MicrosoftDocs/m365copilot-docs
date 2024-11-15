@@ -1,25 +1,25 @@
 ---
-title: Debug a copilot plugin with developer mode
-description: Learn how to test and debug a copilot orchestrator plugin
+title: Debug a copilot agent with developer mode
+description: Learn how to test and debug how copilot agents select and use plugins
 author: carolkigoonya
 ms.author: ckigoonya
 ms.topic: overview
 ms.date: 04/24/2024
 ---
 
-# Debug a copilot plugin with developer mode
+# Debug a copilot agent with developer mode
 
-You can use *developer mode* while testing your plugin to verify if and how the orchestrator selected your plugin for use in response to a given prompt.
+You can use *developer mode* while testing your agent to verify if and how the copilot orchestrator selected your plugins for use in response to given prompts.
 
-## Using copilot plugin developer mode
+## Using copilot developer mode
 
 From *copilot Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `copilot Chat` session where user has typed `-developer on` to successfully enable developer mode":::
 
-While developer mode is enabled, a card with debug information will be returned whenever the orchestrator searches specifically within your enterprise knowledge (data) and/or skills (plugins) to respond to a prompt. The debug info card includes the following fields:
+While developer mode is enabled, a card with debug information will be returned whenever the orchestrator searches specifically within your enterprise knowledge (data) and/or skills (plugins) within your agent to respond to a prompt. The debug info card includes the following fields:
 
-- **Enabled plugins**: A list of plugins enabled by the user (from *Plugins* control below the chat input box)
+- **Enabled plugins**: A list of plugins enabled for the agent
 - **Matched functions**: A list of plugins and functions matched in the runtime app index lookup
 - **Selected functions for execution**: A list of plugin functions selected for invocation based on orchestrator reasoning
 - **Function execution details**: Request and response function execution status
