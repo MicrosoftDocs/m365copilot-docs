@@ -156,7 +156,7 @@ The following example shows how to reference a declarative agent:
     },
 ```
 
-The definition of an API plugin is referenced (under [`actions`](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-manifest#actions-object)) from the declarative agent definition.
+The definition of an API plugin is referenced (under [`actions`](./declarative-agent-manifest.md#actions-object)) from the declarative agent definition.
 
 :::image type="content" source="assets/images/app-manifest-agents.png" alt-text="Diagram showing app manifest referencing a declarative agent manifest and API plugin manifest. The declarative agent manifest references another API plugin manifest" border="false":::
 
