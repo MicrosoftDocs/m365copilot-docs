@@ -13,7 +13,7 @@ You can enhance the user experience of your declarative agent by adding capabili
 
 ## Code interpreter
 
-Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario. It also accepts files as input for modifications and analysis.
+Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario, and accepts files as input for modifications and analysis.
 
 > [!NOTE]
 > Code interpreter is not currently supported for in-context experiences. Agents that have the code interpreter capability enabled are suppressed in host apps.
@@ -32,7 +32,7 @@ The following images show examples of the results of a data graphing request.
 
 #### Data visualization
 
-The user prompt "Create a word cloud of top baby names last year" generates a word cloud that includes the top names, as shown in the following example.
+The user prompt "Create a word cloud of top pet names" generates a word cloud that includes the top names, as shown in the following example.
 
 :::image type="content" source="assets/images/code-interpreter-word-cloud.png" alt-text="Word cloud response to the user prompt":::
 
