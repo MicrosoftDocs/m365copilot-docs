@@ -34,7 +34,7 @@ The following images show examples of the results of a data graphing request.
 
 The user prompt "Create a word cloud of top pet names" generates a word cloud that includes the top names, as shown in the following example.
 
-:::image type="content" source="assets/images/code-interpreter-word-cloud.png" alt-text="Word cloud response to the user prompt":::
+:::image type="content" source="assets/images/code-interpreter-pet-word-cloud.png" alt-text="Word cloud response to the user prompt":::
 
 ## Enable code interpreter
 
@@ -50,7 +50,9 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 }
 ```
 
-If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the Configure tab, under Capabilities, choose the toggle next to Code interpreter.
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under Capabilities, choose the toggle next to **Code interpreter**.
+
+:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of the agent builder":::
 
 ## Image generator
 
@@ -70,13 +72,13 @@ The following examples show what users can do with the image generation capabili
 
 The following image shows the result.
 
-:::image type="content" source="assets/images/image-gen-beach.png" alt-text="Beach image response to the user prompt":::
+:::image type="content" source="assets/images/image-gen-beach-prompt.png" alt-text="Beach image response to the user prompt":::
 
 **User prompt**: Design a flyer for a summer music festival and add a date for May 15, 2024.
 
 The following image shows the result.
 
-:::image type="content" source="assets/images/image-gen-festival.png" alt-text="Festival flyer image response to the user prompt":::
+:::image type="content" source="assets/images/image-gen-flier-prompt.png" alt-text="Festival flyer image response to the user prompt":::
 
 **User prompt**: Generate an icon for a mobile app featuring a recipe book and orange icon color.
 
@@ -100,9 +102,10 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 
 If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Image generator**.
 
+:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of the agent builder":::
+
 > [!NOTE]
 > The image generator doesn't currently work in the test pane in Copilot Studio agent builder.
-
 
 ## Related content
 
