@@ -38,7 +38,7 @@ The user prompt "Create a word cloud of top pet names" generates a word cloud th
 
 ### Enable code interpreter
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the capabilities property in your manifest reference, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest reference, as shown in the following example.
 
 ```json
 {
@@ -50,13 +50,13 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 }
 ```
 
-If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under Capabilities, choose the toggle next to **Code interpreter**.
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Code interpreter**.
 
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of the agent builder":::
 
 ## Image generator
 
-The image generation capability enables declarative agents to generate images based on user prompts. This feature uses the existing [Designer](https://designer.microsoft.com/) functionality to create visually appealing and contextually relevant graphics, and includes the following features:
+The image generator capability enables declarative agents to generate images based on user prompts. Image generator uses the existing [Designer](https://designer.microsoft.com/) functionality to create visually appealing and contextually relevant graphics, and includes the following features:
 
 - **Multiple image generation**: For each user prompt, the agent generates four images.
 - **Interactive image options**: Users can click on each generated image to view it in full size. They can download, copy, or view content credentials for the full-size image. They can also click the side arrow to scroll through the four images.
@@ -80,15 +80,9 @@ The following image shows the result.
 
 :::image type="content" source="assets/images/image-gen-flier-prompt.png" alt-text="Festival flyer image response to the user prompt":::
 
-**User prompt**: Generate an icon for a mobile app featuring a recipe book and orange icon color.
-
-The following image shows the result.
-
-:::image type="content" source="assets/images/image-gen-icon.png" alt-text="Mobile app icon response to the user prompt":::
-
 ### Enable image generator
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the capabilities property in your manifest reference, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest reference, as shown in the following example.
 
 ```json
 {
