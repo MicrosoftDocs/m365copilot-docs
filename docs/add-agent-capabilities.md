@@ -16,7 +16,7 @@ You can enhance the user experience of your declarative agent by adding capabili
 Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario, and accepts files as input for modifications and analysis.
 
 > [!NOTE]
-> Code interpreter is not currently supported for in-context experiences. Agents that have the code interpreter capability enabled are suppressed in host apps.
+> Support for in-context agents that have code interpreter enabled varies by host.
 
 ### Code interpreter examples
 
