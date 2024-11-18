@@ -53,7 +53,7 @@ If copilot was previously matching and executing your plugin functions successfu
 
 #### Card with empty or failed *No Function execution details*
 
-For non-message extension plugins, if there are failed or no function execution details , it indicates a failure during copilot's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it's most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your Open API definition.
+For non-message extension plugins, if there are failed or no function execution details, it indicates a failure during your agent's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it's most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your Open API definition.
 
 For message extension plugins, best practice is to optimize for responses under nine seconds. For more info, review the [technical requirements](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#technical-requirements) for message extension plugins.
 
