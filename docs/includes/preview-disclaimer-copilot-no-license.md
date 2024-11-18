@@ -8,4 +8,4 @@ ms.topic: include
 > [!IMPORTANT]
 >
 > - Custom engine agents are conversational Teams bots with custom LLM, therefore they don't require Microsoft 365 Copilot license to build, debug and deploy.
-> - The cost of a custom engine copilot depends on the Azure services consumed in the app. To estimate the cost, visit the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/).
+> - The cost of a custom engine agent depends on the Azure services consumed in the app. To estimate the cost, visit the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/).
