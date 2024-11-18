@@ -13,7 +13,7 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 ## November 2024
 
-### Declarative agent capabilities
+### Add capabilities to your declarative agent
 
 Add new capabilities to your declarative agents, including a code interpreter and an image generator. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
 
