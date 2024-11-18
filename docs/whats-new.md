@@ -17,6 +17,14 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 Add new capabilities to your declarative agents, including a code interpreter and an image generator. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
 
+### Declarative agent manifest version 1.2
+
+A new version of the declarative agent manifest schema has been released. Version 1.2 adds support for scoped web search and the new code interpreter and image generator capabilities. To learn more, see [Declarative agent schema 1.2 for Microsoft 365 Copilot](declarative-agent-manifest-1.2.md).
+
+### API plugin manifest version 2.2
+
+A new version of the API plugin manifest schema has been released. Version 2.2 adds support for data handling attestation. To learn more, see [API plugin manifest schema 2.2 for Microsoft 365 Copilot](api-plugin-manifest-2.2.md).
+
 ## October 2024
 
 ### Use the Copilot Studio agent builder to build declarative agents
@@ -30,6 +38,6 @@ Use the Copilot Studio agent builder to create and customize agents for your spe
 You can build your own agents to focus on your specific use cases. Provide custom instructions to tailor responses, ground agents in your organization's data, and add more skills with actions.
 
 You can build agents in two ways:
-- [Build delcarative agents](overview-declarative-agent.md) by using the Microsoft 365 Copilot orchestrator and foundation models. You can use Visual Studio Code or the Copilot Studio agent builder.
-- [Build custom engine agents](overview-custom-engine-agent.md) with your custom orchestrator and foundation models by using Azure AI Studio and Visual Studio Code.
 
+- [Build declarative agents](overview-declarative-agent.md) by using the Microsoft 365 Copilot orchestrator and foundation models. You can use Visual Studio Code or the Copilot Studio agent builder.
+- [Build custom engine agents](overview-custom-engine-agent.md) with your custom orchestrator and foundation models by using Azure AI Studio and Visual Studio Code.
