@@ -17,7 +17,7 @@ From *copilot Chat*, you can enable developer mode by typing `-developer on` (or
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `copilot Chat` session where user has typed `-developer on` to successfully enable developer mode":::
 
-While developer mode is enabled, a card with debug information returns whenever the orchestrator searches specifically within your enterprise knowledge (data) o skills (plugins) within your agent to respond to a prompt. The debug info card includes the following fields:
+While developer mode is enabled, a card with debug information returns whenever the orchestrator searches specifically within your enterprise knowledge (data) or skills (plugins) within your agent to respond to a prompt. The debug info card includes the following fields:
 
 - **Enabled plugins**: A list of plugins enabled for the agent
 - **Matched functions**: A list of plugins and functions matched in the runtime app index lookup
