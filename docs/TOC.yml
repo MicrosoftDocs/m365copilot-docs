@@ -246,7 +246,11 @@
     - name: Best practices for writing OpenAPI specs
       href: openapi-document-guidance.md
     - name: API plugin manifest reference
-      href: api-plugin-manifest.md
+      items:
+      - name: Version 2.2
+        href: api-plugin-manifest-2.2.md
+      - name: Version 2.1
+        href: api-plugin-manifest-2.1.md
   - name: Teams message extension plugins
     href: overview-message-extension-bot.md
   - name: Copilot Studio connectors and actions
