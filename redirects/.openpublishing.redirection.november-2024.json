@@ -1,0 +1,14 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/declarative-agent-manifest.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-manifest.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api-plugin-manifest-2.2",
+      "redirect_document_id": false
+    }
+  ]
+}

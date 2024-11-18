@@ -16,7 +16,7 @@ The following table summarizes the distribution support for Copilot extensibilit
 
 |Copilot extensibility type | Single tenant | Multitenant| Notes|
 |----------|-----------|------------|-----------|
-|[Agents](#copilot-agents) (declarative agents)| ✔️ |✔️*|*Supported for agents created with Teams Toolkit|
+|[Agents](#agents) (declarative agents)| ✔️ |✔️*|*Supported for agents created with Teams Toolkit|
 |[Teams message extension plugins](#teams-message-extension-plugins-for-copilot) | ✔️ |✔️||
 |[Copilot Studio actions](#copilot-studio-actions-as-plugins-for-copilot)| ✔️|✔️||
 |[Microsoft Graph connectors](#microsoft-graph-connectors-for-copilot)| ✔️| ✔️*| *Standalone connectors not supported; can be distributed as Teams apps for verified publishers|
