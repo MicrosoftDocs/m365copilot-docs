@@ -1,16 +1,16 @@
 ---
-title: Your extensibility options for Microsoft 365 Copilot
+title: Microsoft 365 Copilot Extensibility Options
 description: Understand which Microsoft 365 Copilot extensibility option works best for you
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
-ms.date: 10/18/2024
+ms.date: 11/18/2024
 ms.custom: [copilot-learning-hub]
 ---
 
 # Your extensibility options for Microsoft 365 Copilot
 
-When it comes to deciding on your approach to AI development, there are numerous options to consider, including Microsoft 365 Copilot extensibility options and Azure AI solutions. This guide aims to streamline your journey through the options for Microsoft 365, assisting you in identifying the most suitable solution aligned with your specific needs and goals.
+When it comes to deciding on your approach to AI development, there are numerous options to consider, including Microsoft 365 Copilot extensibility options and Azure AI solutions. This article helps you identify the Microsoft 365 extensibility option that is best aligned with your specific needs and goals.
 
 ## Extend Copilot's models or build a custom engine agent?
 
@@ -96,19 +96,9 @@ How you build and which tools you use are up to you. Your choices are:
 
     [!INCLUDE [copilot-studio-agent-naming](includes/copilot-studio-agent-naming.md)]
 
-## Next step
-
-Learn prerequisites for building connectors and plugins:
-
-> [!div class="nextstepaction"]
-> [Set up your dev environment](prerequisites.md)
-
-### See also
+## Related content
 
 - [Microsoft Graph connectors overview](overview-graph-connector.md)
 - [Declarative agent overview](overview-declarative-agent.md)
 - [API plugins overview](overview-api-plugins.md)
 - [Copilot Studio plugins overview](overview-business-applications.md)
-- [Teams Message extensions overview](overview-message-extension-bot.md)
-- [Teams AI Library](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview)
-- [Azure AI app development](/azure/developer/intro/azure-ai-for-developers)
