@@ -47,7 +47,11 @@
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference
-        href: declarative-agent-manifest.md
+        items:
+        - name: Version 1.2
+          href: declarative-agent-manifest-1.2.md
+        - name: Version 1.0
+          href: declarative-agent-manifest-1.0.md
     - name: Build with Copilot Studio agent builder
       items:
       - name: Overview

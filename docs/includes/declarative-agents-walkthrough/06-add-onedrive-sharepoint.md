@@ -24,7 +24,7 @@ In this section, you add the contents of a SharePoint site to the available know
     ]
     ```
 
-    For more information, see [OneDrive and SharePoint object](../../declarative-agent-manifest.md#onedrive-and-sharepoint-object).
+    For more information, see [OneDrive and SharePoint object](../../declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object).
 
     > [!NOTE]
     >

@@ -106,7 +106,7 @@ The following fields are localizable within the declarative agent manifest.
 | `description`| The description of the declarative agent. Must contain at least one non-whitespace character.| 1,000 characters | ✔️|
 | `conversation_starters`| A list (array) of examples of questions that the declarative agent can answer, where each example is represented by an object with `title` and `text`, both of which are localizable.| 6 objects in the array||
 
-To learn more, see [Declarative agent manifest reference](./declarative-agent-manifest.md).
+To learn more, see [Declarative agent manifest reference](./declarative-agent-manifest-1.2.md).
 
 #### Localizable fields in API plugin manifest
 
