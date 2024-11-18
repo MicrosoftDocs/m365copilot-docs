@@ -46,6 +46,8 @@ For Copilot Studio actions (Power Platform connectors) as plugins:
   - [5000 Power Platform Connectors](/legal/marketplace/certification-policies#5000-power-platform-connectors) (including [5000.4 Connectors with AI Plugin](/legal/marketplace/certification-policies#50004-connectors-with-ai-plugin))
 - [Prepare Power Platform connector and plugin files for certification](/connectors/custom-connectors/certification-submission)
 
+To submit your app package to the Copilot and Microsoft 365 program in Partner Center, see the [Store step-by-step submission guide](/partner-center/marketplace-offers/add-in-submission-guide).
+
 ## Agents
 
 [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
