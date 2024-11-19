@@ -1,22 +1,28 @@
 ---
-title: API plugin manifest schema for Microsoft 365 Copilot
-description: Learn about the properties you can use in a manifest file for an API plugin in Microsoft 365 Copilot
+title: API plugin manifest schema 2.2 for Microsoft 365 Copilot
+description: Learn about the 2.2 schema for a manifest file for an API plugin in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
+ms.date: 11/13/2024
 ms.topic: reference
 ---
 
-# API plugin manifest schema for Microsoft 365 Copilot
-
-[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
+# API plugin manifest schema 2.2 for Microsoft 365 Copilot
 
 API plugins enable Microsoft 365 Copilot to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
 
-The following article describes the schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
+The following article describes the 2.2 schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
+
+## Changes from previous version
+
+This schema version introduces the following changes from [version 2.1](api-plugin-manifest-2.1.md).
+
+- Added the `security_info` property to the [Function capabilities object](#function-capabilities-object). This property allows you to attest to the behavior of the plugin in order to assess the risks of calling the function.
+- Removed the deprecated `localization` property from the [plugin capabilities object](#plugin-capabilities-object). Manifests generated with Teams Toolkit using the 2.1 schema included the deprecated `localization` property. Manifests using the 2.2 schema will fail validation if this property is included.
 
 ## JSON schema
 
-The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/plugin/v2.1/schema.json).
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/plugin/v2.2/schema.json).
 
 ## Conventions
 
@@ -40,7 +46,7 @@ Localizable strings can use a localization key instead of a literal value. The s
 
 ```json
 {
-    "schema_version": "v2.1",
+    "schema_version": "v2.2",
     "name_for_human": "[[plugin_name]]",
     "description_for_human": "[[plugin_description]]"
 }
@@ -54,7 +60,7 @@ The plugin manifest object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.1`. |
+| `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.2`. |
 | `name_for_human` | String | Required. A short, human-readable name for the plugin. It MUST contain at least one nonwhitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
 | `namespace` | String | Deprecated. Optional. |
 | `description_for_model` | String | Optional. The description for the plugin that is provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
@@ -261,6 +267,7 @@ The function capabilities object contains the following properties.
 | -------- | ---- | ----------- |
 | `confirmation` | [Confirmation object](#confirmation-object) | Optional. Describes a confirmation dialog that SHOULD be presented to the user before invoking the function. |
 | `response_semantics` | [Response semantics object](#response-semantics-object) | Optional. Describes how the orchestrator can interpret the response payload and provide a visual rendering. |
+| `security_info`      | [Security info object](#security-info-object)           | Optional. Contains attestations about the behavior of the plugin in order to assess the risks of calling the function. If this property is omitted, the function is unable to interact with other plugins or capabilities of the containing agent. |
 
 #### Confirmation object
 
@@ -366,6 +373,29 @@ The response semantics properties object contains the following properties.
 | `information_protection_label` | String | Optional. Data sensitivity indicator of the result contents. |
 | `template_selector` | String | Optional. A JSONPath expression to an Adaptive Card instance to be used for rendering the result. |
 
+#### Security info object
+
+Contains information use to determine the relative risk of invoking the function.
+
+The security info object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `data_handling` | Array of String | Required. An array of strings that describe the data handling behavior of the function. Valid values are `GetPublicData`, `GetPrivateData`, `DataTransform`, `DataExport`, and `ResourceStateUpdate`. |
+
+##### Data handling values
+
+| Value                 | Description | Example |
+| --------------------- | ----------- | ------- |
+| `GetPublicData`       | Indicates the function retrieves data from an external source that doesn't require authentication. | A function that makes a service call to retrieve data from a public website. |
+| `GetPrivateData`      | Indicates the function retrieves data from an external source that requires authentication or from the user's current application. | A function that gets data from a private database or from the user's currently open document. |
+| `DataTransform`       | Indicates that the function only returns an output based on the input, without introducing any new data or causing a resource update. | A function that converts a number to a word or formats a date. |
+| `DataExport`          | Indicates that the function sends or writes data to a location outside of the function itself. | A function that saves data to a local or cloud file. |
+| `ResourceStateUpdate` | Indicates that the function affects a resource by initiating a transaction, changing a process in the real world, granting or denying permissions, or performing any other action that would require explicit user confirmation. | A function that books a hotel room or changes the state of a work item from `active` to `resolved`. |
+
+> [!NOTE]
+> Plugin manifests that use the `DataExport` value may fail validation when attempting to install the plugin. This is temporary and will be resolved soon.
+
 ### OpenAPI runtime object
 
 Describes how the plugin invokes OpenAPI functions.
@@ -468,7 +498,7 @@ The conversation starter object contains the following properties.
 
 Here's an example of a plugin manifest file that uses most of the manifest properties and object properties described in the article:
 
-[!INCLUDE [Sample plugin manifest for Contoso Real Estate plugin](includes/sample-api-plugin-manifest-file.md)]
+:::code language="json" source="includes/sample-manifests/plugin-sample-manifest-2.2.json":::
 
 ## See also
 

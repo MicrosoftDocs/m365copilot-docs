@@ -3,6 +3,7 @@ title: Use Copilot Studio Agent Builder to Build Agents
 description: Learn how to use Copilot Studio agent builder to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
+ms.date: 11/06/2024
 ms.topic: conceptual
 ---
 
@@ -46,6 +47,10 @@ Agents you build via Copilot Studio agent builder are included in your Microsoft
 ## Data processing
 
 Copilot Studio capabilities for Microsoft 365 are processed by the Copilot Studio service and can enable data flow both to and from Microsoft 365 and Copilot Studio. This data can include Microsoft 365 data, prompts, instructions, configurations, and output content. Use of the integrated Copilot Studio and Microsoft 365 services is governed by the respective [product terms](https://go.microsoft.com/fwlink/?linkid=2173816) and compliance commitments.
+
+## Data storage
+
+Agents created via agent builder are stored in Cosmos DB on the organization's tenant. Copilot Studio agent builder calls Power Platform APIs, but it doesn't store data in Dataverse or consume Dataverse storage capacity.
 
 ## Compliance
 

@@ -1,40 +1,15 @@
----
-author: captainbrosset
-ms.author: pabrosse
-ms.topic: include
----
-
-<!-- markdownlint-disable MD041 -->
-
-```json
 {
-  "schema_version": "v2",
-  "name_for_human": "{{ 'nameForHuman' | localize: 'en-us' }}",
-  "description_for_human": "{{ 'descriptionForHuman' | localize: 'en-us' }}",
+  "schema_version": "v2.2",
+  "name_for_human": "Contoso Real Estate",
+  "description_for_human": "Find up-to-date, detailed real estate properties for sale on the market",
   "description_for_model": "Plugin for finding properties for sale. Use it whenever a user asks about real estate properties for sale on the market. This plugin can be used to search for properties in a particular city, and with a given number of bedrooms, bathrooms, and amenities.",
   "capabilities": {
-    "localization": {
-      "en-us": {
-        "nameForHuman": {
-          "message": "Contoso Real Estate",
-          "description": "Name for human, in English"
-        },
-        "descriptionForHuman": {
-          "message": "Find up-to-date, detailed real estate properties for sale on the market",
-          "description": "Description for human, in English"
-        }
-      },
-      "fr-fr": {
-        "nameForHuman": {
-          "message": "Contoso Immobilier",
-          "description": "Name for human, in French"
-        },
-        "descriptionForHuman": {
-          "message": "Trouvez des propriétés immobilières à vendre sur le marché",
-          "description": "Description for human, in French"
-        }
+    "conversation_starters": [
+      {
+        "title": "Available listings",
+        "text": "What listings are available in my area?"
       }
-    }
+    ]
   },
   "functions": [
     {
@@ -102,13 +77,21 @@ ms.topic: include
             "If there is no error, extract and include as much relevant information as possible from the JSON response to meet the users needs."
           ]
         }
+      },
+      "capabilities": {
+        "security_info": {
+          "data_handling": [
+            "GetPublicData",
+            "GetPrivateData"
+          ]
+        }
       }
     },
     {
       "name": "saveSearch",
       "description": "Save a search for properties for sale",
       "parameters": {
-        "type" : "object",
+        "type": "object",
         "properties": {
           "city": {
             "type": "string",
@@ -119,7 +102,9 @@ ms.topic: include
             "description": "The number of bedrooms"
           }
         },
-        "required": [ "city" ]
+        "required": [
+          "city"
+        ]
       },
       "returns": {
         "type": "string",
@@ -133,37 +118,60 @@ ms.topic: include
             "Extract the unique ID integer from the output and include it in your response to the user."
           ]
         }
+      },
+      "capabilities": {
+        "security_info": {
+          "data_handling": [
+            "ResourceStateUpdate"
+          ]
+        }
       }
     },
     {
       "name": "deleteSavedSearch",
       "description": "Delete a previously saved search",
       "parameters": {
-        "type" : "object",
+        "type": "object",
         "properties": {
           "id": {
             "type": "integer",
             "description": "The unique ID of the saved search"
           }
         },
-        "required": [ "id" ]
+        "required": [
+          "id"
+        ]
       },
       "returns": {
         "type": "string",
         "description": "True if the saved search was deleted, false otherwise"
+      },
+      "capabilities": {
+        "security_info": {
+          "data_handling": [
+            "ResourceStateUpdate"
+          ]
+        }
       }
     }
   ],
   "runtimes": [
     {
       "type": "OpenApi",
-      "auth": { "type": "none" },
-      "run_for_functions": [ "getListings", "saveSearch", "deleteSavedSearch" ],
-      "spec": { "url": "http://contoso.com/openapi.yaml" }
+      "auth": {
+        "type": "none"
+      },
+      "run_for_functions": [
+        "getListings",
+        "saveSearch",
+        "deleteSavedSearch"
+      ],
+      "spec": {
+        "url": "http://contoso.com/openapi.yaml"
+      }
     }
   ],
   "logo_url": "http://contoso.com/logo.png",
   "contact_email": "contact@contoso.com",
-  "legal_info_url": "https://contoso.com/legal/",
+  "legal_info_url": "https://contoso.com/legal/"
 }
-```

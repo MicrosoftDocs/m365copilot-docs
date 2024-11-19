@@ -21,7 +21,7 @@ In this section, you add conversation starters to your agent. Conversation start
     ]
     ```
 
-    For more information, see [Conversation starters object](../../declarative-agent-manifest.md#conversation-starters-object).
+    For more information, see [Conversation starters object](../../declarative-agent-manifest-1.2.md#conversation-starters-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
 

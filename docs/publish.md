@@ -16,7 +16,7 @@ The following table summarizes the distribution support for Copilot extensibilit
 
 |Copilot extensibility type | Single tenant | Multitenant| Notes|
 |----------|-----------|------------|-----------|
-|[Agents](#copilot-agents) (declarative agents)| ✔️ |✔️*|*Supported for agents created with Teams Toolkit|
+|[Agents](#agents) (declarative agents)| ✔️ |✔️*|*Supported for agents created with Teams Toolkit|
 |[Teams message extension plugins](#teams-message-extension-plugins-for-copilot) | ✔️ |✔️||
 |[Copilot Studio actions](#copilot-studio-actions-as-plugins-for-copilot)| ✔️|✔️||
 |[Microsoft Graph connectors](#microsoft-graph-connectors-for-copilot)| ✔️| ✔️*| *Standalone connectors not supported; can be distributed as Teams apps for verified publishers|
@@ -45,6 +45,8 @@ For Copilot Studio actions (Power Platform connectors) as plugins:
   - [100 General](/legal/marketplace/certification-policies#100-general)
   - [5000 Power Platform Connectors](/legal/marketplace/certification-policies#5000-power-platform-connectors) (including [5000.4 Connectors with AI Plugin](/legal/marketplace/certification-policies#50004-connectors-with-ai-plugin))
 - [Prepare Power Platform connector and plugin files for certification](/connectors/custom-connectors/certification-submission)
+
+To submit your app package to the Microsoft 365 and Copilot program in Partner Center, see the [Store step-by-step submission guide](/partner-center/marketplace-offers/add-in-submission-guide).
 
 ## Agents
 

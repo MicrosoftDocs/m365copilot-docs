@@ -32,7 +32,7 @@ In this section, you add items ingested by a Microsoft Graph connector to the av
     ]
     ```
 
-    For more information, see [Microsoft Graph connectors object](../../declarative-agent-manifest.md#microsoft-graph-connectors-object).
+    For more information, see [Microsoft Graph connectors object](../../declarative-agent-manifest-1.2.md#microsoft-graph-connectors-object).
 
     > [!NOTE]
     >
