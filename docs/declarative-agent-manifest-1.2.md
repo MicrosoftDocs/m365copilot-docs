@@ -19,7 +19,6 @@ This schema version introduces the following changes from [version 1.0](declarat
 
 - The `sites` property is added to the [web search object](#web-search-object). This allows the web search capability to be limited to allowed sites.
 - The [graphic art](#graphic-art-object) capability was added. This capability allows the declarative agent to generate images and art based on user input.
-- The [code interpreter](#code-interpreter-object) capability was added. This capability allows the declarative agent to generate and execute Python code.
 
 ## JSON schema
 
@@ -80,7 +79,6 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [OneDrive and SharePoint object](#onedrive-and-sharepoint-object)
 - [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
 - [Graphic art object](#graphic-art-object)
-- [Code interpreter object](#code-interpreter-object)
 
 #### Example of capabilities
 
@@ -218,15 +216,6 @@ The graphic art object contains the following properties.
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `GraphicArt`. |
 
-#### Code interpreter object
-
-Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more. For more information, see [Code interpreter](add-agent-capabilities.md#code-interpreter).
-
-The web search object contains the following properties.
-
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `CodeInterpreter`. |
 
 ### Conversation starters object
 
