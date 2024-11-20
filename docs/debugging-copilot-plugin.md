@@ -1,13 +1,13 @@
 ---
-title: Debug a copilot agent with developer mode
-description: Learn how to test and debug how copilot agents select and use plugins
+title: Debug an agent with developer mode
+description: Learn how to test and debug how agents select and use plugins
 author: carolkigoonya
 ms.author: ckigoonya
 ms.topic: overview
 ms.date: 11/18/2024
 ---
 
-# Debug a copilot agent with developer mode
+# Debug an agent with developer mode
 
 You can use *developer mode* while testing your agent to verify if and how the copilot orchestrator selected your plugins for use in response to given prompts.
 
