@@ -21,16 +21,21 @@ You can author your declarative agent in two ways:
 Both tabs work seamlessly to provide a rich authoring experience.
 
 > [!NOTE]
-> The availability of the **Describe** tab is based on geographic availability and language support. The **Describe** tab only supports English. When the authoring language is set to English, the **Describe** tab is available in the following regions:
+> The availability of the **Describe** tab is based on [geographic availability and language support](copilot-studio-agent-builder-availability.md). The **Describe** tab supports these languages:
 >
-> - Australia
-> - India
-> - Japan
-> - United Arab Emirates
-> - United Kingdom
-> - United States
 >
-> You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your region or preferred language.
+> - English
+> - Danish
+> - Dutch
+> - French
+> - German
+> - Italian
+> - Japanese
+> - Portuguese
+> - Spanish
+> - Simplified Chinese 
+
+> You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your geography or preferred language.
 
 ## Describe your agent
 
