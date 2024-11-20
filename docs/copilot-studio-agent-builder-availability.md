@@ -3,7 +3,7 @@ title: Copilot Studio agent builder regional availability and language support
 description: Learn about the regional availability and supported languages for Copilot Studio agent builder.
 author: jasonxian-msft
 ms.author: jasonxian
-ms.date: 11/06/2024
+ms.date: 11/18/2024
 ms.topic: conceptual
 ---
 
@@ -13,21 +13,23 @@ This article provides information about Copilot Studio regional availability and
 
 ## Regional availability
 
-Copilot Studio agent builder is available in the following countries/regions:
+Copilot Studio agent builder is available in the following geographies:
 
+- Asia Pacific
 - Australia
-- Brazil
 - Canada
 - Europe
+- France
 - Germany
 - India
 - Japan
+- South America
 - Switzerland
 - United Arab Emirates
 - United Kingdom
 - United States
 
-In regions where the agent builder isn't supported, the user can create an agent in the full version of [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started)
+Geographic availability is based on Copilot Studio’s [data locations](https://learn.microsoft.com/microsoft-copilot-studio/data-location).
 
 ## Agent languages
 
