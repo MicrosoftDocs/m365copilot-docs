@@ -65,6 +65,7 @@ The following are current known limitations:
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
 - Agent builder doesn't currently support [Lockbox](/power-platform/admin/about-lockbox) or [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview).
 - Agents created via Copilot Studio agent builder can't be used in Teams Chat.
+- If a tenant has disabled web content via [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in agent builder. However, the **Web content** toggle in the **Knowledge** pane is not disabled. This is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
 
 ## Get support
 
