@@ -86,10 +86,21 @@ When web content is enabled, the agent can use publicly available web informatio
 
 The agent can reference specific SharePoint sites, files, and folders as its knowledge source. When referencing sources from SharePoint, consider the following limits:
 
-- The following are the supported file types: .docx, .doc, .pdf, .txt, .pptx, .ppt, .html
-- Individual files must not be larger than 150 MB.
 - A total of 20 knowledge sources (including sites, folders, and files) can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
+
+The following table lists the supported file types and their respective limits:
+<!-- markdownlint-disable MD033 -->
+| File Type               | File Size Limit |
+| ------------------- | ----------- |
+| .docx            | 512 MB |
+| .doc            | 150 MB |
+| .pdf     | 512 MB |
+| .txt    | 150 MB |
+| .pptx       | 512 MB |
+| .ppt | 150 MB |
+| .html | 150 MB |
+<!-- markdownlint-enable MD033 -->
 
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you won't be able to use SharePoint as a knowledge source.
