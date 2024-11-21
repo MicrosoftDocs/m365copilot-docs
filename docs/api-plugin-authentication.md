@@ -41,6 +41,12 @@ To use this authentication scheme in a plugin, you must register an OAuth client
 
 > [!TIP]
 > If your OpenAPI document includes the `securitySchemes` property, Teams Toolkit can register your OAuth client and update your manifest for you when you [generate a plugin from an existing API](build-api-plugins-existing-api.md).
+>
+> If your OAuth provider supports Proof Key for Code Exchange (PKCE), uncomment the following line in **teamsapp.yml** in your API plugin project.
+>
+> ```yml
+> # isPKCEEnabled: true
+> ```
 
 ### Register an OAuth client
 
@@ -61,6 +67,7 @@ To use this authentication scheme in a plugin, you must register an OAuth client
     - **Token endpoint**: The URL from your OAuth 2.0 server that apps use to [redeem a code for an access token](/entra/identity-platform/v2-oauth2-auth-code-flow#redeem-a-code-for-an-access-token)
     - **Refresh endpoint**: The URL from your OAuth 2.0 server that apps use to [refresh the access token](/entra/identity-platform/v2-oauth2-auth-code-flow#refresh-the-access-token)
     - **Scope**: The permission scope defined by your API that grants access.
+    - **Enable Proof Key for Code Exchange (PKCE)**: Enable this if your OAuth provider supports PKCE.
 
 1. Select **Save**.
 
