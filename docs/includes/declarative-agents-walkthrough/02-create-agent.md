@@ -12,7 +12,7 @@ Begin by creating a basic declarative agent.
 
     :::image type="content" source="../../assets/images/build-da/ttk/create-new-app.png" alt-text="A screenshot of the Create a New App button in the Teams Toolkit sidebar":::
 
-1. Select **Copilot Agent**.
+1. Select **Agent**.
 
     :::image type="content" source="../../assets/images/build-da/ttk/select-copilot-agent.png" alt-text="A screenshot of the New Project options with Copilot Agent selected":::
 
