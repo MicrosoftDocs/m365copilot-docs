@@ -89,9 +89,10 @@ The agent can reference specific SharePoint sites, files, and folders as its kno
 - A total of 20 knowledge sources (including sites, folders, and files) can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
 
-The following table lists the supported file types and their respective limits:
+The following table lists the supported file types and their respective limits.
+
 <!-- markdownlint-disable MD033 -->
-| File Type               | File Size Limit |
+| File type               | File size limit |
 | ------------------- | ----------- |
 | .docx            | 512 MB |
 | .doc            | 150 MB |
