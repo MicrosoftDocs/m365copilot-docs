@@ -81,11 +81,11 @@ Follow these [instructions to upload your custom app package](/microsoft-365/adm
 
 ### Distribute a message extension plugin through Microsoft Partner Center
 
-Before submitting your message extension app to Partner Center, ensure it meets all applicable [Microsoft Commercial Marketplace certification policies](#microsoft-365-and-copilot-program) and also the [guidelines for high-quality message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension).
+Before you submit your message extension app to Partner Center, make sure that it meets all applicable [Microsoft Commercial Marketplace certification policies](#microsoft-365-and-copilot-program) and also the [guidelines for high-quality message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension).
 
-Once ready, submit your app package to Microsoft Partner Center through the **Microsoft 365 and Copilot program** as a *Teams app*.
+When ready, submit your app package to Microsoft Partner Center through the **Microsoft 365 and Copilot program** as a *Teams app*.
 
-Once validated and approved by Microsoft, your plugin is an active offer in the Microsoft Commercial Marketplace and ready for IT enablement. Once enabled by an IT administrator, it appears in the *Copilot agents* category of the store within Microsoft Teams. Once deployed by an admin or acquired by a user, it will then appear as an installed plugin for Microsoft 365 Copilot.
+After your submission is validated and approved by Microsoft, your plugin is an active offer in the Microsoft Commercial Marketplace and ready for IT enablement. When enabled by an IT administrator, it appears in the **Agents** category of the store within Microsoft Teams. When it's deployed by an admin or acquired by a user, it appears as an installed plugin for Microsoft 365 Copilot.
 
 ## Copilot Studio actions as plugins for Copilot
 
