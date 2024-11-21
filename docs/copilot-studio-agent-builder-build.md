@@ -1,9 +1,9 @@
 ---
 title: Use the Copilot Studio Agent Builder to Build Agents
-description: Learn how to build Copilot agents by using Copilot Studio agent builder in Microsoft 365 Copilot.
+description: Learn how to build agents by using Copilot Studio agent builder in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
-ms.date: 11/06/2024
+ms.date: 11/20/2024
 ms.topic: conceptual
 ---
 
@@ -21,14 +21,18 @@ You can author your declarative agent in two ways:
 Both tabs work seamlessly to provide a rich authoring experience.
 
 > [!NOTE]
-> The availability of the **Describe** tab is based on geographic availability and language support. The **Describe** tab only supports English. When the authoring language is set to English, the **Describe** tab is available in the following regions:
+> The availability of the **Describe** tab is based on [geographic availability and language support](copilot-studio-agent-builder-availability.md). The **Describe** tab supports the following languages:
 >
-> - Australia
-> - India
-> - Japan
-> - United Arab Emirates
-> - United Kingdom
-> - United States
+> - Danish
+> - Dutch
+> - English
+> - French
+> - German
+> - Italian
+> - Japanese
+> - Portuguese
+> - Spanish
+> - Simplified Chinese
 >
 > You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your region or preferred language.
 
@@ -82,10 +86,22 @@ When web content is enabled, the agent can use publicly available web informatio
 
 The agent can reference specific SharePoint sites, files, and folders as its knowledge source. When referencing sources from SharePoint, consider the following limits:
 
-- The following are the supported file types: .docx, .doc, .pdf, .txt, .pptx, .ppt, .html
-- Individual files must not be larger than 150 MB.
 - A total of 20 knowledge sources (including sites, folders, and files) can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
+
+The following table lists the supported file types and their respective limits.
+
+<!-- markdownlint-disable MD033 -->
+| File type               | File size limit |
+| ------------------- | ----------- |
+| .docx            | 512 MB |
+| .doc            | 150 MB |
+| .pdf     | 512 MB |
+| .txt    | 150 MB |
+| .pptx       | 512 MB |
+| .ppt | 150 MB |
+| .html | 150 MB |
+<!-- markdownlint-enable MD033 -->
 
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you won't be able to use SharePoint as a knowledge source.

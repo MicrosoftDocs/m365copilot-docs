@@ -13,9 +13,9 @@ ms.date: 11/18/2024
 
 Microsoft 365 Copilot is your personal assistant for work. It helps with various general tasks, such as writing, summarizing, researching, and more. Copilot has different skills that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
 
-Like any copilot, Microsoft 365 Copilot is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, Copilot agents require _plugins_. Plugins within an agent extend Microsoft 365 Copilot's skills and utility for end users, enabling it to choose the right skill from its full repertoire.
+Like any copilot, Microsoft 365 Copilot is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, agents require _plugins_. Plugins within an agent extend Microsoft 365 Copilot's skills and utility for end users, enabling it to choose the right skill from its full repertoire.
 
-But how does your Copilot agent know which skill to use when you ask for help? How does it interpret your request and match it to the best skill available? That's the job of the Microsoft 365 Copilot orchestrator.
+But how does your agent know which skill to use when you ask for help? How does it interpret your request and match it to the best skill available? That's the job of the Microsoft 365 Copilot orchestrator.
 
 This article explains the logic behind Copilot's skill selection process and how you can ensure that Copilot uses the right plugin from your agent at every opportunity to benefit your users.
 
@@ -33,7 +33,7 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
 :::image type="content" source="assets/images/copilot_orchestrator_sequence_v2.png" alt-text="Visual illustration of the sequential steps in the text following this image." lightbox="assets/images/copilot_orchestrator_sequence_v2.png":::
 
-1. **Natural language input**: The user submits a query to your Copilot agent, such as "What tickets are assigned to me right now?"
+1. **Natural language input**: The user submits a query to your agent, such as "What tickets are assigned to me right now?"
 
 1. **Preliminary checks**: Copilot conducts several checks on the query, including responsible AI checks and security measures to ensure it doesn't pose any risks. If the query fails any of these checks, Copilot terminates the interaction.
 
@@ -57,7 +57,7 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
 ## How Copilot's orchestrator matches plugins to user queries
 
-When a user submits a query to your Copilot agent, the orchestrator searches the agent's full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
+When a user submits a query to your agent, the orchestrator searches the agent's full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
 
 1. Lexical match on function name.
 2. Semantic match on function description.
@@ -66,4 +66,4 @@ When a user submits a query to your Copilot agent, the orchestrator searches the
 
 The orchestrator works through this list until all five function candidate slots are filled.
 
-Check out [Validation guidelines for Copilot agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365-copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.
+Check out [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365-copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.

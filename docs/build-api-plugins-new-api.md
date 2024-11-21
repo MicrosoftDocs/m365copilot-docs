@@ -27,7 +27,7 @@ ms.topic: how-to
 
     :::image type="content" source="assets/images/api-plugins/create-plugin-ttk.png" alt-text="A screenshot of the Teams Toolkit interface":::
 
-1. Select **Copilot Agent**, then select **Declarative Agent**.
+1. Select **Agent**, then select **Declarative Agent**.
 
 1. Select **Add plugin**, then select **Start with a new API**.
 
@@ -59,7 +59,7 @@ Teams Toolkit builds the project, creates the plugin package, and sideloads it f
 
 1. In Microsoft Teams in your browser, select **Copilot**.
 
-1. Select **Repairs Agentlocal** in the Copilot agents list on the right-hand side. If the list isn't available, select the **Copilot chats and more** icon in the top right corner.
+1. Select **Repairs Agentlocal** in the Agents list on the right-hand side. If the list isn't available, select the **Copilot chats and more** icon in the top right corner.
 
 1. Send a message to Copilot about repairs. For example, try `Which repairs are assigned to Karin?`.
 
@@ -85,6 +85,6 @@ Once you complete these steps, the plugin is deployed as an Azure Function with 
 
 1. In Microsoft Teams in your browser, select **Copilot**.
 
-1. Select **Repairs Agentdev** in the Copilot agents list on the right-hand side.
+1. Select **Repairs Agentdev** in the Agents list on the right-hand side.
 
 1. Send a message to Copilot about repairs. For example, try `Which repairs are assigned to Issac?`.

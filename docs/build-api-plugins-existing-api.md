@@ -61,7 +61,7 @@ API plugins are a ZIP file that contains the following files.
 
     :::image type="content" source="assets/images/api-plugins/create-plugin-ttk.png" alt-text="A screenshot of the Teams Toolkit interface":::
 
-1. Select **Copilot Agent**, then select **Declarative Agent**.
+1. Select **Agent**, then select **Declarative Agent**.
 
 1. Select **Add plugin**, then select **Start with an OpenAPI Description Document**.
 
@@ -138,9 +138,9 @@ Your plugin is now available to test with your user account in Microsoft 365 Cop
 
 1. Select **Copilot** in the **Chat** pane.
 
-1. Select **Budget Tracker** in the Copilot agents list on the right-hand side. If the list isn't available, select the **Copilot chats and more** icon in the top right corner.
+1. Select **Budget Tracker** in the Agents list on the right-hand side. If the list isn't available, select the **Copilot chats and more** icon in the top right corner.
 
-    :::image type="content" source="assets/images/api-plugins/copilot-agents.png" alt-text="A screenshot of the Copilot agents list in Microsoft Teams":::
+    :::image type="content" source="assets/images/api-plugins/copilot-agents.png" alt-text="A screenshot of the Agents list in Microsoft Teams":::
 
 1. Ask a question about budgets. For example, try `How much is left in the Fourth Coffee lobby renovation budget?`. When prompted, choose **Always allow** or **Allow once** to proceed.
 
