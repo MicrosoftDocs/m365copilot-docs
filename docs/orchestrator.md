@@ -57,7 +57,7 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
 ## How Copilot's orchestrator matches plugins to user queries
 
-When a user submits a query to your Copilot agent, the orchestrator searches the agent's full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
+When a user submits a query to your agent, the orchestrator searches the agent's full catalog of skills (_functions_) from installed plugins to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general plugin descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot plugin function selection:
 
 1. Lexical match on function name.
 2. Semantic match on function description.
@@ -66,4 +66,4 @@ When a user submits a query to your Copilot agent, the orchestrator searches the
 
 The orchestrator works through this list until all five function candidate slots are filled.
 
-Check out [Validation guidelines for Copilot agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365-copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.
+Check out [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365-copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.

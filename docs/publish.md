@@ -35,7 +35,7 @@ For agents, message extension plugins, and Microsoft Graph connectors:
 
 - Microsoft Commercial Marketplace certification policies:
   - [100 General](/legal/marketplace/certification-policies#100-general)
-  - [1140 Teams](/legal/marketplace/certification-policies#1140-teams) (including [1140.9 Copilot agents for Microsoft 365 Copilot](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365))
+  - [1140 Teams](/legal/marketplace/certification-policies#1140-teams) (including [1140.9 Agents for Microsoft 365 Copilot](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365))
 - [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines)
 - [Publisher verification](/entra/identity-platform/publisher-verification-overview)
 

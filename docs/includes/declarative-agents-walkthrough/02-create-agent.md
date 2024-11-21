@@ -14,7 +14,7 @@ Begin by creating a basic declarative agent.
 
 1. Select **Agent**.
 
-    :::image type="content" source="../../assets/images/build-da/ttk/select-copilot-agent.png" alt-text="A screenshot of the New Project options with Copilot Agent selected":::
+    :::image type="content" source="../../assets/images/build-da/ttk/select-copilot-agent.png" alt-text="A screenshot of the New Project options with Agent selected":::
 
 1. Select **Declarative Agent**.
 
