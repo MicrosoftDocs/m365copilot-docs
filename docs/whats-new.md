@@ -15,11 +15,11 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 ### Add capabilities to your declarative agent
 
-Add new capabilities to your declarative agents, including an image generator. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
+Add new capabilities to your declarative agents, including a code interpreter and an image generator. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
 
 ### Declarative agent manifest version 1.2
 
-A new version of the declarative agent manifest schema has been released. Version 1.2 adds support for scoped web search and the new image generator capabilities. To learn more, see [Declarative agent schema 1.2 for Microsoft 365 Copilot](declarative-agent-manifest-1.2.md).
+A new version of the declarative agent manifest schema has been released. Version 1.2 adds support for scoped web search and the new code interpreter and image generator capabilities. To learn more, see [Declarative agent schema 1.2 for Microsoft 365 Copilot](declarative-agent-manifest-1.2.md).
 
 ### API plugin manifest version 2.2
 
