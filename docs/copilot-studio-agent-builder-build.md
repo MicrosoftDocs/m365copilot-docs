@@ -21,7 +21,7 @@ You can author your declarative agent in two ways:
 Both tabs work seamlessly to provide a rich authoring experience.
 
 > [!NOTE]
-> The availability of the **Describe** tab is based on [geographic availability and language support](copilot-studio-agent-builder-availability.md). The **Describe** tab supports these languages:
+> The availability of the **Describe** tab is based on [geographic availability and language support](copilot-studio-agent-builder-availability.md). The **Describe** tab supports the following languages:
 >
 > - Danish
 > - Dutch
