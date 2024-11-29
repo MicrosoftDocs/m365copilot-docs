@@ -71,4 +71,4 @@ Discover the possibilities of custom engine agents with a closer look at Teams A
 
 ## See also
 
-- [Your agent options for Microsoft 365](decision-guide.md)
+[Your agent options for Microsoft 365](decision-guide.md)
