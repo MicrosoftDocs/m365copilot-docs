@@ -56,19 +56,9 @@ Microsoft Copilot Studio empowers teams to quickly and easily create powerful co
 
 [!INCLUDE [copilot-studio-agent-naming](includes/copilot-studio-agent-naming.md)]
 
-## Next steps
-
-Discover the possibilities of custom engine agents with a closer look at Teams AI Library.
-
-> [!div class="nextstepaction"]
-> [Teams AI library Overview](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
-
-> [!div class="nextstepaction"]
-> [Get started with a Teams AI library tutorial](/microsoftteams/platform/teams-ai-library-tutorial)
-
-> [!div class="nextstepaction"]
-> [Get started with Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
-
 ## Related content
 
-[Your agent options for Microsoft 365](decision-guide.md)
+- [Teams AI library Overview](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
+- [Get started with a Teams AI library tutorial](/microsoftteams/platform/teams-ai-library-tutorial)
+- [Get started with Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
+- [Your agent options for Microsoft 365](decision-guide.md)
