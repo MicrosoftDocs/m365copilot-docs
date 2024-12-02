@@ -69,6 +69,6 @@ Discover the possibilities of custom engine agents with a closer look at Teams A
 > [!div class="nextstepaction"]
 > [Get started with Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
 
-## See also
+## Related content
 
 [Your agent options for Microsoft 365](decision-guide.md)
