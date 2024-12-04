@@ -22,7 +22,10 @@ API plugins for Microsoft 365 Copilot support three authentication schemes to co
 This authentication scheme allows a plugin to access an API using a bearer token acquired by an OAuth 2.0 authorization code flow. This scheme can be represented in an OpenAPI document in the `securitySchemes` property. See [OAuth 2.0](https://swagger.io/docs/specification/authentication/oauth2/) for details.
 
 > [!IMPORTANT]
-> API plugins only support the authorization code flow for OAuth 2.0.
+> API plugin support for OAuth 2.0 has the following limitations.
+>
+> - API plugins only support the authorization code flow for OAuth 2.0.
+> - OAuth 2.0 servers that return `307 Temporary Redirect` HTTP status codes from their token endpoint are not supported.
 
 ```yml
 securitySchemes:
@@ -67,7 +70,7 @@ To use this authentication scheme in a plugin, you must register an OAuth client
     - **Token endpoint**: The URL from your OAuth 2.0 server that apps use to [redeem a code for an access token](/entra/identity-platform/v2-oauth2-auth-code-flow#redeem-a-code-for-an-access-token)
     - **Refresh endpoint**: The URL from your OAuth 2.0 server that apps use to [refresh the access token](/entra/identity-platform/v2-oauth2-auth-code-flow#refresh-the-access-token)
     - **Scope**: The permission scope defined by your API that grants access.
-    - **Enable Proof Key for Code Exchange (PKCE)**: Enable this if your OAuth provider supports PKCE.
+    - **Enable Proof Key for Code Exchange (PKCE)**: Enable this setting if your OAuth provider supports PKCE.
 
 1. Select **Save**.
 
