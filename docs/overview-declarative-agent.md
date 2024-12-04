@@ -9,17 +9,17 @@ ms.topic: overview
 
 # Declarative agents for Microsoft 365 Copilot overview
 
-Declarative agents are designed to help you meet the unique business needs of your users by enabling you to customize Microsoft 365 Copilot. When you build a declarative agent, you provide the instructions, actions, and knowledge to tailor the Microsoft 365 Copilot experience. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft Copilot. By tailoring Microsoft Copilot for your business scenarios, declarative agents facilitate smoother collaboration, increased productivity, and streamlined workflows. 
+Declarative agents enable you to customize Microsoft 365 Copilot to help you meet the unique business needs of your users. When you build a declarative agent, you provide the instructions, actions, and knowledge to tailor Copilot for your business scenarios. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft Copilot. Building declarative agents helps you optimize collaboration, increase productivity, and streamline workflows in your organization. 
 
-With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to resolving customer issues efficiently. You can also add capabilities to your agent such as image generation or a code interpreter. 
+With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock additional functionality for your users.
 
 ## Tailor declarative agents for your scenario
 
 Declarative agents are powered by Microsoft 365 Copilot. They use the same scalable infrastructure and platform but are scoped to meet your specific business needs. The following examples illustrate possible use cases for your agents:
 
-- **Employee IT self-help with enhanced knowledge** - Imagine a world where your employees can resolve their technical issues without relying on the internal IT help desk. You can streamline and simplify IT workflows by building a declarative agent to expedite resolution of common issues. This specialized agent draws from internal curated knowledge stored in SharePoint sites to provide employees fast and effective assistance, while reducing costs for the organization.
+- **Employee IT self-help with enhanced knowledge** - Imagine a world where your employees can resolve their technical issues without relying on the internal IT help desk. You can streamline and simplify IT workflows by building a declarative agent to expedite resolution of common issues. This specialized agent draws from internal knowledge stored in SharePoint sites to provide employees fast and effective assistance, while reducing costs for the organization.
 
-- **Real-time customer support with seamless system integrations** - Assume having a support team dedicated to providing customer support while also monitoring and updating customers' live order status. You can increase the support team's productivity by enhancing your existing process with a declarative agent that seamlessly integrates with a plugin for the order management system to access and provide real-time order updates to customers.
+- **Real-time customer support with seamless system integrations** - Assume having a support team dedicated to providing customer support while also monitoring customers' live order status. You can increase the support team's productivity by enhancing your existing process with a declarative agent that seamlessly integrates with a plugin for the order management system to access and provide real-time order updates to customers.
 
 :::image type="content" source="assets/images/declarative-agent-scenarios.png" alt-text="A diagram that shows two scenarios of declarative agents mentioned in the article." lightbox="assets/images/declarative-agent-scenarios.png" :::
 
@@ -44,10 +44,10 @@ Users can select declarative agents from the right pane in Copilot. They can the
 
 The following are the core elements of a declarative agent app package:
 
-- **App manifest:** Describes how your app is configured, including its capabilities, required resources, and other important attributes.
-- **App icons:** The app package requires a color and outline icon for your declarative agents.
-- **Declarative agents manifest:** Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
-- **Plugin manifest (optional):** Describes how your plugin is configured, including its required fields and capabilities.
+- **App manifest** - Describes how your app is configured, including its capabilities, required resources, and other important attributes.
+- **App icons** - The app package requires a color and outline icon for your declarative agents.
+- **Declarative agents manifest** - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
+- **Plugin manifest (optional)** - Describes how your plugin is configured, including its required fields and capabilities.
 
 You can use your tool of choice to create a declarative agent app package. To get started, choose from the tools listed in the following table.
 
@@ -60,7 +60,6 @@ You can use your tool of choice to create a declarative agent app package. To ge
 
 ## Related content
 
-- [Extensibility options for Microsoft 365 Copilot](decision-guide.md)
 - [Agents in the Microsoft 365 ecosystem](ecosystem.md)
 - [Agents are apps for Microsoft 365](agents-are-apps.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
