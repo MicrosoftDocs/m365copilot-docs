@@ -22,7 +22,10 @@ API plugins for Microsoft 365 Copilot support three authentication schemes to co
 This authentication scheme allows a plugin to access an API using a bearer token acquired by an OAuth 2.0 authorization code flow. This scheme can be represented in an OpenAPI document in the `securitySchemes` property. See [OAuth 2.0](https://swagger.io/docs/specification/authentication/oauth2/) for details.
 
 > [!IMPORTANT]
-> API plugins only support the authorization code flow for OAuth 2.0.
+> API plugin support for OAuth 2.0 has the following limitations.
+>
+> - API plugins only support the authorization code flow for OAuth 2.0.
+> - OAuth 2.0 servers that return `307 Temporary Redirect` HTTP status codes from their token endpoint are not supported.
 
 ```yml
 securitySchemes:
