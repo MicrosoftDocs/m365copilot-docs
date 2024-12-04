@@ -1,6 +1,6 @@
 ---
 title: Declarative Agents for Microsoft 365 Copilot
-description: Declarative agent is a way for you to craft your own copilot by declaring instructions, actions, and knowledge to customize Microsoft 365 Copilot.
+description: Learn how you can use declarative agents to meet business needs. Declarative agents customize Microsoft 365 Copilot via instructions, actions, and knowledge.
 author: aycabas
 ms.author: aycabas
 ms.date: 12/04/2024
