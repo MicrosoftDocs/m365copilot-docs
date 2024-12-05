@@ -66,7 +66,7 @@ There are two tools developers can use to generate API plugin packages.
 
 To protect the user's privacy, Copilot redacts any URLs contained in API responses. The sole exception to this behavior is any URL in a property specified by the `url` property in the [Response semantics properties object](api-plugin-manifest.md#response-semantics-properties-object).
 
-## See also
+## Related content
 
 - [Build API plugins from an existing API for Microsoft 365 Copilot](build-api-plugins-existing-api.md)
 - [Build API plugins with a new API for Microsoft 365 Copilot](build-api-plugins-new-api.md)

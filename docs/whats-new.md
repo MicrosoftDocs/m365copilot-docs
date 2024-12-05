@@ -40,4 +40,4 @@ You can build your own agents to focus on your specific use cases. Provide custo
 You can build agents in two ways:
 
 - [Build declarative agents](overview-declarative-agent.md) by using the Microsoft 365 Copilot orchestrator and foundation models. You can use Visual Studio Code or the Copilot Studio agent builder.
-- [Build custom engine agents](overview-custom-engine-agent.md) with your custom orchestrator and foundation models by using Azure AI Studio and Visual Studio Code.
+- [Build custom engine agents](overview-custom-engine-agent.md) with your custom orchestrator and foundation models by using Azure AI Foundry and Visual Studio Code.
