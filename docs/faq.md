@@ -1,15 +1,15 @@
 ---
 title: Microsoft 365 Copilot Extensibility FAQ
-description: Frequently asked questions for Microsoft agents and beyond
+description: Get answers to frequently asked questions related to Microsoft 365 Copilot extensibility.
 author: girliemac
 ms.author: timura
 ms.topic: best-practice
-ms.date: 11/19/2024
+ms.date: 12/04/2024
 ---
 
 # Frequently asked questions for Microsoft 365 Copilot extensibility
 
-This section provides answers to the frequently asked questions (FAQs) about Microsoft 365 Copilot extensibility and related topics.
+This article provides answers to the frequently asked questions (FAQs) about Microsoft 365 Copilot extensibility and related topics.
 
 ## General questions
 
@@ -33,9 +33,9 @@ In general, actions are the functionality that provides skills to Copilot within
 
 With actions, you can light up agents that work *in-context* of Microsoft 365 Copilot, or you can use them to provide skills to agents that work in *immersive* experiences, such as declarative agents.
 
-### What's the difference between Power Platform plugins and API connectors
+### What's the difference between Power Platform plugins and API connectors?
  
-Both Power Platform connectors and API plugins allow for the calling of a standard REST API given an Open API definition (Swagger) that describes it. Power Platform connectors are used from Power Platform, which includes Copilot Studio, and API plugins are defined in a Microsoft Teams or Microsoft 365 app package along with declarative agents.
+Both Power Platform connectors and API plugins allow for the calling of a standard REST API given an OpenAPI definition (Swagger) that describes it. Power Platform connectors are used from Power Platform, which includes Copilot Studio, and API plugins are defined in a Microsoft Teams or Microsoft 365 app package along with declarative agents.
 
 ### What's the equivalent of API plugins in Copilot Studio?
 
@@ -91,7 +91,7 @@ Azure AI services and Copilot extensibility cater to different needs and use cas
 
 ### What are the differences between Copilot extensibility and Azure AI services?
 
-The following table describes the differences between Copilot extensibility and Azure AI services.
+See the following table to learn about the differences between Copilot extensibility and Azure AI services.
 
 | Feature | Copilot extensibility | Azure AI services|
 |:--------|:----------------------|:-----------------|
@@ -99,7 +99,7 @@ The following table describes the differences between Copilot extensibility and 
 | Customization| Allows for the creation of plugins, connectors, and declarative agents to enhance productivity tools like Word, Excel, and Teams.|Highly customizable, allowing you to build and deploy AI models tailored to specific business needs.|
 | Integration|Primarily integrates with Microsoft 365 applications, using organizational data and context.|Can be integrated into various applications and services beyond the Microsoft ecosystem.|
 
-The following image shows examples of use cases for Copilot extensibility.
+**Copilot extensibility use cases**
 
 :::image type="content" source="assets/images/personas-extend-copilot.png" border="false" alt-text="Persona 1 - I am a developer, who manages the product database at an e-commerce company, and I want to build an inventory catalog plugin that brings the product information for internal org. Persona 2 - I am a marketing manager, who aims to launch a new campaign for my products. And I want a tool that helps developing marketing assets tailored to the campaign." lightbox="assets/images/personas-extend-copilot.png":::
 
@@ -122,7 +122,7 @@ Copilot Studio comes with low-code features for users who prefer that approach. 
 
 ### Can I build declarative agents with Azure AI services? 
 
-If you want to use Azure AI services, we recommend you to build custom engine agents, instead of declarative agents.
+If you want to use Azure AI services, we recommend you to build custom engine agents instead of declarative agents.
 
 If you choose to work with OpenAI models, such as GPT-4 turbo, you can take advantage of the web-based interface of [Azure OpenAI Studio](https://oai.azure.com/), which comes with the **Deploy to Teams** feature that generates a code template that you can modify, test, and deploy using Teams Toolkit.
 
