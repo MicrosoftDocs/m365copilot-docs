@@ -84,14 +84,14 @@
       - name: How to use the Teams AI library
         href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started?context=/microsoft-365-copilot/extensibility/context
       - name: Teams AI library FAQs
-        href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/coversational-ai-faq?context=/microsoft-365-copilot/extensibility/context
+        href: /microsoftteams/platform/teams-faq#teams-ai-library?context=/microsoft-365-copilot/extensibility/context
     - name: Use Microsoft Copilot Studio
       items:
       - name: Quickstart
         href: /microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context
       - name: Key concepts
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
-      - name: Create and delete copilots
+      - name: Create and delete agents
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
 - name: Add knowledge with Microsoft Graph connectors
   items:

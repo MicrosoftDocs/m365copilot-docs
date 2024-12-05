@@ -1,6 +1,6 @@
 ---
 title: Publish Microsoft 365 Copilot Extensibility Solutions
-description: Learn how to distribute Microsoft 365 Copilot agents, plugins, and Graph connectors to your organization or the Microsoft Commercial Marketplace.
+description: Learn how to distribute Microsoft 365 Copilot agents, plugins, and Microsoft Graph connectors to your organization or the Microsoft Commercial Marketplace.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.date: 9/16/2024
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
 
-This article describes the current state of Microsoft 365 distribution options and procedures for Copilot extensibility. Depending on its intended purpose as a line-of-business or marketable software solution, agents, plugins, and Graph connectors can be published to your organization or to the Microsoft Commercial Marketplace through [Microsoft Partner Center](https://partner.microsoft.com).
+This article describes the current state of Microsoft 365 distribution options and procedures for Copilot extensibility. Depending on its intended purpose as a line-of-business or marketable software solution, agents, plugins, and Microsoft Graph connectors can be published to your organization or to the Microsoft Commercial Marketplace through [Microsoft Partner Center](https://partner.microsoft.com).
 
 The following table summarizes the distribution support for Copilot extensibility scenarios, according to single tenant (line-of-business) or multitenant (independent software vendor, or *ISV*) channels.
 
@@ -107,19 +107,19 @@ For more info, see [Get your Power Platform connector and plugin certified](/con
 
 ## Microsoft Graph connectors for Copilot
 
-Microsoft Graph connector publishing options depend on whether you have a standalone connector or a connector that's part of a Microsoft Teams app. While both scenarios are supported for single-tenant distribution, submission to the Microsoft Partner Center *Microsoft 365 and Copilot program* is currently limited to Graph connectors packaged within Teams apps.
+Microsoft Graph connector publishing options depend on whether you have a standalone connector or a connector that's part of a Microsoft Teams app. While both scenarios are supported for single-tenant distribution, submission to the Microsoft Partner Center *Microsoft 365 and Copilot program* is currently limited to Microsoft Graph connectors packaged within Teams apps.
 
-### Distribute a Graph connector for Copilot to your organization
+### Distribute a Microsoft Graph connector for Copilot to your organization
 
-For **standalone Graph connectors**, follow these [instructions to set up and manage Microsoft Graph connectors](/microsoftsearch/configure-connector) in the Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)).
+You can distribute standalone Microsoft Graph connectors through the Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)). For details, see [Set up and manage Microsoft Graph connectors](/microsoftsearch/configure-connector).
 
-For **Graph connectors within Teams apps**, follow these [instructions to deploy your connector using the Teams admin center](/graph/connecting-external-content-deploy-teams).
+You can distribute Microsoft Graph connectors within Teams apps via the Teams admin center. For details, see [Enable the simplified admin experience for your Microsoft Graph connector](/graph/connecting-external-content-deploy-teams).
 
-### Distribute a Graph connector for Copilot through Microsoft Partner Center
+### Distribute a Microsoft Graph connector for Copilot through Microsoft Partner Center
 
-For **Graph connectors within Teams apps**, ensure your app meets all applicable [Microsoft Commercial Marketplace certification policies](#microsoft-365-and-copilot-program), then submit your app package to Microsoft Partner Center through the **Microsoft 365 and Copilot program** as a *Teams app*. For more info, see [Make your Microsoft Graph connector available for other organizations](/graph/connecting-external-content-deploy-teams#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
+For Microsoft Graph connectors within Teams apps, make sure that your app meets all applicable [Microsoft Commercial Marketplace certification policies](#microsoft-365-and-copilot-program), then submit your app package to Microsoft Partner Center through the Microsoft 365 and Copilot program as a *Teams app*. For more information, see [Make your Microsoft Graph connector available for other organizations](/graph/connecting-external-content-deploy-teams#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
 
-Once validated and approved by Microsoft, your app is an active offer in the Microsoft Commercial Marketplace and ready for IT enablement. Once enabled by an IT administrator, it appears in the **Agents** category of the store within Microsoft Teams.
+After your app package is validated and approved by Microsoft, your app is an active offer in the Microsoft Commercial Marketplace and ready for IT enablement. When enabled by an IT administrator, it appears in the **Agents** category of the store within Microsoft Teams.
 
 > [!NOTE]
 > The *Microsoft 365 and Copilot program* for Microsoft Partner Center is currently limited to Microsoft Graph connectors within Teams apps. Standalone Microsoft Graph connector publishing through Partner Center is not currently available.

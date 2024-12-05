@@ -68,7 +68,7 @@ Submission of your app package to the Microsoft Partner Center *Microsoft 365 an
 
 For Microsoft Graph connectors (packaged as Teams apps), submission to the Microsoft 365 and Copilot program is currently limited to  [verified publishers](/entra/identity-platform/publisher-verification-overview). This provides end-users and organizational admins assurance that the publisher of an app has been verified as authentic by Microsoft.
 
-## See also
+## Related content
 
 - [Data, Privacy, and Security for Microsoft Copilot (Microsoft 365 admin)](/copilot/microsoft-365/microsoft-365-copilot-privacy)
 - [Publish agents for Microsoft 365 Copilot](publish.md)

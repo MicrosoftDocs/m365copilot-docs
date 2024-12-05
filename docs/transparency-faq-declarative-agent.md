@@ -1,38 +1,36 @@
 ---
-title: Declarative agents FAQ
+title: Declarative Agents in Microsoft 365 Copilot FAQ
 description: The transparency FAQ for declarative agents provides detailed information about what declarative agents are, their intended uses, and how they're evaluated.
 author: simranajwani
 ms.author: simranajwani
 ms.topic: faq
-ms.date: 09/16/2024
+ms.date: 12/04/2024
 ---
 
 # Declarative agents FAQ
 
-The transparency FAQ for declarative agents provides detailed information about what declarative agents are, their intended uses, and how they're evaluated.
+This FAQ answers common questions about what declarative agents for Microsoft 365 Copilot are, their intended uses, and how they're evaluated.
 
 ## What are declarative agents?
 
-Declarative agents are customized versions of Microsoft 365 Copilot that enable customers to create personalized experiences that run in Microsoft 365 Copilot. This feature builds on top of the Microsoft 365 Copilot system. Users can build declarative agents with capabilities and instructions on their purpose and behavior. Users can also add the option to access enterprise knowledge (including SharePoint and Graph Connectors). Read more about declarative agents: [Declarative agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-declarative-agent). Read more about overall Copilot Extensibility options: [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/).
+Declarative agents are customized versions of Microsoft 365 Copilot that enable customers to create personalized experiences that run in Microsoft 365 Copilot. This feature builds on the Microsoft 365 Copilot system. Users can build declarative agents with capabilities and instructions that define the agent's purpose and behavior. Users can also add the option to access enterprise knowledge (including SharePoint and Microsoft Graph connectors). To learn more, see [Declarative agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-declarative-agent). 
 
 ## What can declarative agents do?
 
-Declarative agents provide a custom chat experience without a need to write imperative code. They can be created and used privately or published to make them available to other users. End users can see declarative agents on the right side panel under Copilot.
+Declarative agents provide a custom chat experience without a need to write imperative code. They can be created and used privately or published to make them available to other users. Users can see declarative agents on the right side panel in Microsoft 365 Copilot and in the Copilot experiences in Teams, Word, and PowerPoint.
 
 ## What are declarative agents intended uses?
 
-To provide a custom chat experience using the power of Microsoft 365 Copilot. Users are familiar with the idea of asking an expert; equipped with appropriate instructions, connectors, and actions, declarative agents can become such an expert with a minimum of development effort.
+Declarative agents provide a custom chat experience based on the power of Microsoft 365 Copilot. Users are familiar with the idea of asking an expert; equipped with appropriate instructions, connectors, and actions, declarative agents can become experts with a minimum of development effort.
 
-Read more about how you can tailor your declarative agents here: [Declarative agents for Microsoft 365](overview-declarative-agent.md#tailor-declarative-agents-for-your-scenario).
+For more information about how you can tailor your declarative agents, see [Declarative agents for Microsoft 365](overview-declarative-agent.md#tailor-declarative-agents-for-your-scenario).
 
 ## How were declarative agents evaluated? What metrics are used to measure performance?
 
-All response generation features of agents are tested, measured, and validated internally before releasing generally. Such evaluations are done using extensive experimentation to ensure accurate, grounded, and responsible responses that align with human preferences.
+All response generation features of agents are tested, measured, and validated internally before they are released. Such evaluations are done using extensive experimentation to ensure accurate, grounded, and responsible responses that align with human preferences.
 
 For each capability that is supported in declarative agents, we conduct several tests to validate Microsoft 365 Copilot. In addition to all Microsoft 365 Copilot related capabilities, Responsible AI (RAI) testing was performed on different harm types to evaluate defect rates. The defect scores are then used to improve the model and mitigate the harm. It's important to keep in mind that the system was designed to mimic natural human communication, but the output can be inaccurate, incorrect, or out of date.
 
-## What are the limitations of declarative agents? How can users minimize the effects of declarative agent's limitations when using the system?
+## What are the limitations of declarative agents and how can users minimize the effects?
 
-In Copilot Studio, declarative agents are only supported for use in English for public preview.
-
-For end users, there are user disclaimers with terms and privacy commitments on each declarative agent's homepage. For line-of-business developers and IT admins, Microsoft Admin Center is where to manage Copilot extensibility solutions. For detailed information about how Microsoft 365 Copilot uses, protects, and shares organizational information to power extensibility, see [Data, Privacy, and Security for Microsoft 365 Copilot.](/copilot/microsoft-365/microsoft-365-copilot-privacy).
+Disclaimers with terms and privacy commitments for users appear on the home page for each declarative agent. For line-of-business developers and IT admins, Copilot extensibility solutions are managed in the Microsoft Admin Center. For more information about how Microsoft 365 Copilot uses, protects, and shares organizational information to power extensibility, see [Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy).

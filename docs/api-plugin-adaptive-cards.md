@@ -225,7 +225,7 @@ Adaptive cards must be designed to be responsive across various surface sizes. T
 - Use a single column layout for the adaptive content for smaller width view ports.
 - Use percentages to define the width of elements within the Adaptive Cards.
 
-## See also
+## Related content
 
 - [Adaptive Card designer](https://adaptivecards.io/designer/) to design and test Adaptive Cards in a visual tool.
 - [Adaptive Card documentation](/adaptive-cards)
