@@ -471,7 +471,7 @@ Here's an example of a plugin manifest file that uses most of the manifest prope
 
 :::code language="json" source="includes/sample-manifests/plugin-sample-manifest-2.1.json":::
 
-## See also
+## Related content
 
 - [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md)
 
