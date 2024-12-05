@@ -1,6 +1,6 @@
 ---
 title: Publish Microsoft 365 Copilot Extensibility Solutions
-description: Learn how to distribute Microsoft 365 Copilot agents, plugins, and Graph connectors to your organization or the Microsoft Commercial Marketplace.
+description: Learn how to distribute Microsoft 365 Copilot agents, plugins, and Microsoft Graph connectors to your organization or the Microsoft Commercial Marketplace.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: conceptual

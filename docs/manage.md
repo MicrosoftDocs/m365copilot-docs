@@ -1,6 +1,6 @@
 ---
-title: Manage agents, plugins, and connectors for Microsoft 365 Copilot
-description: Learn about admin controls for Microsoft 365 Copilot extensibility
+title: Manage Agents, Plugins, and Connectors for Microsoft 365 Copilot
+description: Learn about admin controls for Microsoft 365 Copilot extensibility.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: conceptual
