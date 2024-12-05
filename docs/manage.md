@@ -82,16 +82,14 @@ Tenant admins can also enable or disable different types of actions from working
 
 Refer to [Agents](#agents) for details on managing agents with API plugins.
 
-## Graph connectors
+## Microsoft Graph connectors
 
-Graph connectors that are packaged as Microsoft 365 apps and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like other Teams apps extended across Microsoft 365.
+Microsoft Graph connectors that are packaged as Microsoft 365 apps and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of Microsoft admin center ([admin.microsoft.com](https://admin.microsoft.com)), just like other Teams apps extended across Microsoft 365.
 
-However, the **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) provides additional admin controls to enable or disable the Graph connector within the app, so long as you implement a `graphConnector.notificationUrl` for your app to handle the enable / disable notifications. For more info, see [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context).
+However, the Teams admin center ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) provides additional admin controls to enable or disable the Microsoft Graph connector within the app, as long as you implement a `graphConnector.notificationUrl` for your app to handle the enable / disable notifications. For more information, see [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context).
 
-For admin prerequisites for developing Graph connectors, see [Requirements for developing Microsoft graph connectors](./prerequisites.md#requirements-for-developing-microsoft-graph-connector).
+For admin prerequisites for developing Microsoft Graph connectors, see [Requirements for developing Microsoft graph connectors](./prerequisites.md#requirements-for-developing-microsoft-graph-connector).
 
-## See also
+## Related content
 
-[Set up your dev environment for Microsoft 365 Copilot](prerequisites.md)
-
-[Publish agents for Microsoft 365 Copilot](publish.md)
+- [Publish agents for Microsoft 365 Copilot](publish.md)
