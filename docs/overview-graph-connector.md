@@ -17,8 +17,7 @@ Microsoft Graph connectors provide a platform for you to ingest your unstructure
 
 This article describes how Microsoft Graph connector contents are part of Microsoft 365 Copilot and how you can configure your custom Microsoft Graph connections for Microsoft 365 Copilot.
 
-For a summary of how Microsoft Graph connectors make your data available to Microsoft 365 intelligent experiences, see the [infographic]
-(https://cdn.graph.office.net/prod/media/graph/connectors/Teams-Copilot_Graph-connectors-infographic_110623.pdf).
+For a summary of how Microsoft Graph connectors make your data available to Microsoft 365 intelligent experiences, see the [infographic](https://cdn.graph.office.net/prod/media/graph/connectors/Teams-Copilot_Graph-connectors-infographic_110623.pdf).
 
 ## How Microsoft Graph connector content surfaces in Microsoft 365 Copilot
 
