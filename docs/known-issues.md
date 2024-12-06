@@ -11,7 +11,7 @@ ms.date: 12/04/2024
 
 This article provides information about known issues related to Microsoft 365 Copilot extensibility and any available workarounds.
 
-## Declarative agents known issues
+## Declarative agents
 
 ### Newly installed Copilot agents might not show in the Teams client right away
 
@@ -21,7 +21,7 @@ In some cases, a Copilot agent installed from the store doesn't immediately show
 
 As a workaround, the user can switch to another chat and then return to BizChat.
 
-## Power Automate Flows aren't fully supported as actions in declarative agents
+### Power Automate Flows aren't fully supported as actions in declarative agents
 
 Power Automate Flows as actions in declarative agents might not run reliably and might not return results.
 
@@ -43,7 +43,7 @@ Prompts to get a list of items based on custom metadata aren't supported. For ex
 
 This issue doesn't currently have a workaround. You can get items based on matches with the title or description of the connector item.
 
-## Microsoft Graph connectors known issues
+## Microsoft Graph connectors
 
 ### Prompts to get items based on custom metadata aren't supported
 
@@ -51,7 +51,7 @@ Prompts to get a list of items based on custom metadata, such as "Get a list of 
 
 ## API plugin known issues
 
-## Some OpenAPI features aren't supported
+### Some OpenAPI features aren't supported
 
 The following OpenAPI features aren't supported for API plugins:
 
