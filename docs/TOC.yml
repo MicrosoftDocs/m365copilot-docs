@@ -262,5 +262,7 @@
     href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365-copilot/extensibility/context
 - name: FAQ
   href: faq.md
+- name: Known issues
+  href: known-issues.md
 - name: Support and feedback
   href: feedback.md

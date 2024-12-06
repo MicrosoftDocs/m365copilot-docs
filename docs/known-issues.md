@@ -21,7 +21,7 @@ In some cases, a Copilot agent installed from the store doesn't immediately show
 
 As a workaround, the user can switch to another chat and then return to BizChat.
 
-## Power Automate Flows are not fully supported as actions in declarative agents
+## Power Automate Flows aren't fully supported as actions in declarative agents
 
 Power Automate Flows as actions in declarative agents might not run reliably and might not return results.
 
@@ -35,16 +35,9 @@ Copilot responses don't show links in the response body. Links are replaced with
 
 This issue applies to links from any content source, including SharePoint, Microsoft Graph connectors, and plugins.
 
-<!-- This issue is specific only to 3S partner?>
+### Prompts to get a list based on custom metadata aren't supported 
 
-## Language setting updates respected only from Teams clients
-
-3S has an index of extensions that is used by Sydney to get the list of eligible plugins for a given prompt, and also to list the plugins and DCs in the picker / right rail experiences. This index does not support multiple locales. It snaps to the language sent from client at the time of acquisition. This locale is updated only there is a language update received from a Teams client. If Copilot is used from a non-Teams client on a different language, the index is not updated and will process the requests against plugin information in the locale used previously. 
--->
-
-### Prompts to get a list based on custom metadata are not supported 
-
-Prompts to get a list of items based on custom metadata are not supported. For example, a prompt such as "Get me a list of ServiceNow tickets assigned to me" where "Assigned To" is based on custom metadata, doesn't work because it isn't mapped to label properties of the connection schema.
+Prompts to get a list of items based on custom metadata aren't supported. For example, the prompt "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is based on custom metadata, doesn't work because the metadata isn't mapped to connection schema label properties.
 
 #### Workaround
 
@@ -60,7 +53,7 @@ Prompts to get a list of items based on custom metadata, such as "Get a list of 
 
 ## Some OpenAPI features aren't supported
 
-The following OpenAPI features are not supported for API plugins:
+The following OpenAPI features aren't supported for API plugins:
 
 - Nested objects in API method request bodies or parameters
 - Polymorphic references (`oneOf`, `allOf`, `anyOf`)
