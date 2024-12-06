@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/prerequisites-message-extension-bot.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/prerequisites",
+      "redirect_document_id": false
+    }
+  ]
+}
