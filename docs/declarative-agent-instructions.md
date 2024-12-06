@@ -158,7 +158,7 @@ Developing instructions for declarative agents is often iterative and typically 
     - [Responsible AI tools and practices](https://www.microsoft.com/ai/tools-practices)  
     - [Apps powered by artificial intelligence](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#apps-powered-by-artificial-intelligence?context=/microsoft-365-copilot/extensibility/context)
 3.  **Test** your agent.
-    1.  Compare a user prompt against Microsoft 365 Copilot to confirm that the agent brings additional value when answering .
+    1.  Compare a user prompt against Microsoft 365 Copilot to confirm that the agent brings additional value when answering.
     2.  Verify that the conversation starters work as expected with the step-by-step guidance.
     3.  Verify that the agent acts according to the instructions provided.
     4.  Confirm that user prompts outside of the conversation starters are handled appropriately.
