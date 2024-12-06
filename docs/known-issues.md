@@ -1,37 +1,39 @@
 ---
-title: Known issues
+title: Known Issues in Microsoft 365 Copilot Extensibility
 description: Find information about current known issues related to Microsoft 365 Copilot extensibility and the recommended workarounds.
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
-ms.date: 10/11/2024
+ms.date: 12/04/2024
 ---
 
 # Known issues
 
 This article provides information about known issues related to Microsoft 365 Copilot extensibility and any available workarounds.
 
-## Newly installed Copilot agents might not show in the Teams client right away
+## Declarative agents known issues
+
+### Newly installed Copilot agents might not show in the Teams client right away
 
 In some cases, a Copilot agent installed from the store doesn't immediately show up in Business Chat (BizChat) in the Teams client.
 
-### Workaround
+#### Workaround
 
 As a workaround, the user can switch to another chat and then return to BizChat.
 
 ## Power Automate Flows are not fully supported as actions in declarative agents
 
-Power Automate Flows as actions in declarative copilots might not run reliably and might not return results.
+Power Automate Flows as actions in declarative agents might not run reliably and might not return results.
 
-### Workaround
+#### Workaround
 
 Currently, no workaround for the issue that the flows might not return results is available. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
 
-## Links are removed from Copilot responses
+### Links are removed from Copilot responses
 
-Copilot responses don't show links in the response body. Links are replaced with the following message: An external link was removed to protect your privacy. 
+Copilot responses don't show links in the response body. Links are replaced with the following message: `An external link was removed to protect your privacy`. 
 
-This issue applies to links from any content source, including SharePoint, Microsoft Graph connectors, and Plugins.
+This issue applies to links from any content source, including SharePoint, Microsoft Graph connectors, and plugins.
 
 <!-- This issue is specific only to 3S partner?>
 
@@ -40,11 +42,37 @@ This issue applies to links from any content source, including SharePoint, Micro
 3S has an index of extensions that is used by Sydney to get the list of eligible plugins for a given prompt, and also to list the plugins and DCs in the picker / right rail experiences. This index does not support multiple locales. It snaps to the language sent from client at the time of acquisition. This locale is updated only there is a language update received from a Teams client. If Copilot is used from a non-Teams client on a different language, the index is not updated and will process the requests against plugin information in the locale used previously. 
 -->
 
-## Prompts to get a list based on custom metadata are not supported 
+### Prompts to get a list based on custom metadata are not supported 
 
-Prompts to get a list of items based on custom metadata are not supported. For example, a prompt such as "Get me a list of ServiceNow tickets assigned to Me" where "Assigned To" is based on custom metadata, doesn't work because it isn't mapped to label properties of the connection schema.
+Prompts to get a list of items based on custom metadata are not supported. For example, a prompt such as "Get me a list of ServiceNow tickets assigned to me" where "Assigned To" is based on custom metadata, doesn't work because it isn't mapped to label properties of the connection schema.
 
-### Workaround
+#### Workaround
 
-This issue doesn't currently have a workaround. You can get items based on matches with the title or description of the connectior item.
+This issue doesn't currently have a workaround. You can get items based on matches with the title or description of the connector item.
+
+## Microsoft Graph connectors known issues
+
+### Prompts to get items based on custom metadata aren't supported
+
+Prompts to get a list of items based on custom metadata, such as "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is custom metadata because it's not mapped to label properties of the connection schema, aren't supported.
+
+## API plugin known issues
+
+## Some OpenAPI features aren't supported
+
+The following OpenAPI features are not supported for API plugins:
+
+- Nested objects in API method request bodies or parameters
+- Polymorphic references (`oneOf`, `allOf`, `anyOf`)
+- Circular references
+- API keys in custom headers, query parameters, or cookies
+- [OAuth grant flows](https://oauth.net/2/grant-types) other than vanilla Authcode and PKCE Authcode
+- Dual authentication flows (OAuth/Entra SSO + HTTP Bearer token) for single API endpoint
+- Settings UI to reset always allow states
+    - Workaround: Uninstall the app to reset the allow state.
+- Settings UI to sign out
+    - Workaround: Uninstall the app to reset the allow state or implement a function that the user can invoke using natural language.
+- Multiple response semantics for a single function
+- **OpenURL** and **ToggleVisbility** adaptive card actions in response semantics
+- Task modules and stage views in response semantics
 
