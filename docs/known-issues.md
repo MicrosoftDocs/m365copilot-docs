@@ -29,7 +29,7 @@ Power Automate Flows as actions in declarative agents might not run reliably and
 
 ### Links are removed from Copilot responses
 
-Copilot responses don't show links in the response body. Links are replaced with the following message: `An external link was removed to protect your privacy`. 
+Copilot responses don't show links in the response body. Links are replaced with the following message: "An external link was removed to protect your privacy." 
 
 This issue applies to links from any content source, including SharePoint, Microsoft Graph connectors, and plugins.
 
@@ -38,6 +38,26 @@ This issue applies to links from any content source, including SharePoint, Micro
 Prompts to get a list of items based on custom metadata aren't supported. For example, the prompt "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is based on custom metadata, doesn't work because the metadata isn't mapped to connection schema label properties.
 
 **Workaround:** This issue doesn't currently have a workaround. You can get items based on matches with the title or description of the connector item.
+
+### SharePoint knowledge search is limited
+
+Currently when an agent searches a SharePoint site as a knowledge source, only files that are less than 512 MB are indexed and only the first 1000 characters are used.
+
+###  Sharing links to SharePoint pages don't work as knowledge sources
+
+When sharing links are references as a knowledge source in an agent, the agent doesn't return results from that knowledge source. The following is an example of a SharePoint sharing link:
+
+'https://contoso.sharepoint-df.com**/:p:/r/**personal/babak_microsoft_com/Documents/'
+
+### SharePoint files with special characters in the file name return no results
+
+If a SharePoint file used as a knowledge source contains special characters in the file name, the agent returns no results based on that knowledge source.
+
+### Pasting a link to a file in Copilot Studio and agent builder doesn't work
+
+Currently, users can select a file in Copilot Studio and Copilot Studio agent builder and the agent will search the file. However, if the user pastes the URL of the file in prompt, the search fails.
+
+**Workaround:** The user can select the file from the UI in Copilot Studio and Copilot Studio agent builder.
 
 ## Microsoft Graph connectors
 
@@ -56,11 +76,10 @@ The following known issues apply to API plugins.
 The following OpenAPI features aren't supported for API plugins:
 
 - Nested objects in API method request bodies or parameters.
-- Polymorphic references (`oneOf`, `allOf`, `anyOf`). As a workaround, use a flattened schema.
-- Circular references. As a workaround, use a flattened schema.
+- Polymorphic references (`oneOf`, `allOf`, `anyOf`) and circular references. As a workaround, use a flattened schema.
 - API keys in custom headers, query parameters, or cookies.
 - [OAuth grant flows](https://oauth.net/2/grant-types) other than vanilla Authcode and PKCE Authcode.
-- Dual authentication flows (OAuth/Entra SSO + HTTP Bearer token) for single API endpoint.
+- Dual authentication flows (OAuth/Entra SSO + HTTP Bearer token) for a single API endpoint.
 - Settings UI to reset always allow states. As a workaround, uninstall the app to reset the allow state.
 - Settings UI to sign out. As a workaround, uninstall the app to reset the allow state or implement a function that the user can invoke using natural language.
 - Multiple response semantics for a single function.
