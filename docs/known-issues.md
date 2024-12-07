@@ -57,7 +57,9 @@ The following OpenAPI features aren't supported for API plugins:
 
 - Nested objects in API method request bodies or parameters
 - Polymorphic references (`oneOf`, `allOf`, `anyOf`)
+    - Workaround: Use a flattened schema.
 - Circular references
+    - Workaround: Use a flattened schema.
 - API keys in custom headers, query parameters, or cookies
 - [OAuth grant flows](https://oauth.net/2/grant-types) other than vanilla Authcode and PKCE Authcode
 - Dual authentication flows (OAuth/Entra SSO + HTTP Bearer token) for single API endpoint
