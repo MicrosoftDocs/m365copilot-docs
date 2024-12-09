@@ -101,7 +101,6 @@ Plugins are available as *actions* for declarative agents to interact with other
 You can create the following types of plugins:
 
 - [API plugins](overview-api-plugins.md)
-- [Teams message extensions](overview-message-extension-bot.md)
 - [Copilot Studio actions](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context)
 
 ## Related content
