@@ -11,6 +11,49 @@ ms.date: 11/15/2024
 
 You can enhance the user experience of your declarative agent by adding capabilities. The **capabilities** element in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the user capabilities that you can add to your agents.
 
+## Code interpreter
+
+Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario, and accepts files as input for modifications and analysis.
+
+> [!NOTE]
+> Support for in-context agents that have code interpreter enabled varies by host.
+
+### Code interpreter examples
+
+#### Data graphing
+
+The user prompt "Graph the first 20 numbers in a Fibonacci sequence" generates both a line graph and, when the user clicks the `</> Code` button, provides the corresponding Python code.
+
+The following images show examples of the results of a data graphing request.
+
+:::image type="content" source="assets/images/code-interpreter-python-1.png" alt-text="Graph response to the user prompt":::
+
+:::image type="content" source="assets/images/code-interpreter-python-2.png" alt-text="Python code response to the user prompt":::
+
+#### Data visualization
+
+The user prompt "Create a word cloud of top pet names" generates a word cloud that includes the top names, as shown in the following example.
+
+:::image type="content" source="assets/images/code-interpreter-pet-word-cloud.png" alt-text="Word cloud response to the user prompt":::
+
+### Enable code interpreter
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest reference, as shown in the following example.
+
+```json
+{
+  "capabilities": [
+    {
+      "name": "CodeInterpreter"
+    }
+  ]
+}
+```
+
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Code interpreter**.
+
+:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of the agent builder":::
+
 ## Image generator
 
 The image generator capability enables declarative agents to generate images based on user prompts. Image generator uses the existing [Designer](https://designer.microsoft.com/) functionality to create visually appealing and contextually relevant graphics, and includes the following features:
@@ -21,7 +64,7 @@ The image generator capability enables declarative agents to generate images bas
 - **Feedback mechanism**: Users can provide feedback on the generated images by giving a thumbs up or thumbs down. This helps improve the quality of future image generations.
 - **Clipboard and sharing**: Users can copy the generated images to their clipboard to paste into other applications, or they can share the generated images directly from the interface.
  
-### Image generation examples
+### Image generator examples
 
 The following examples show what users can do with the image generation capability in your agent.
 
