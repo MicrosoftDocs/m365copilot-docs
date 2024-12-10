@@ -245,6 +245,8 @@
       displayName: response, response_semantics
     - name: Confirmation prompts
       href: api-plugin-confirmation-prompts.md
+    - name: Debug locally
+      href: api-plugin-debug-local.md
     - name: Best practices for writing OpenAPI specs
       href: openapi-document-guidance.md
     - name: API plugin manifest reference
