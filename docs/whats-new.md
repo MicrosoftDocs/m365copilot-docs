@@ -21,7 +21,7 @@ Add the code interpreter capability to your declarative agent by using the Copil
 
 ### Add image generator to your declarative agent
 
-Add the image generator capability to your declarative agen tby using the Copilot Studio agent builder or Teams Toolkit.. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
+Add the image generator capability to your declarative agent by using the Copilot Studio agent builder or Teams Toolkit.. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
 
 ### Declarative agent manifest version 1.2
 
