@@ -11,11 +11,17 @@ ms.topic: overview
 
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
+## December 2024
+
+## Add code interpreter to your declarative agent
+
+Add the code interpreter capability to your declarative agent by using the Copilot Studio agent builder or Teams Toolkit. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
+
 ## November 2024
 
-### Add capabilities to your declarative agent
+### Add image generator to your declarative agent
 
-Add new capabilities to your declarative agents, including a code interpreter and an image generator. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
+Add the image generator capability to your declarative agent by using the Copilot Studio agent builder or Teams Toolkit.. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
 
 ### Declarative agent manifest version 1.2
 
