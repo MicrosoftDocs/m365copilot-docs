@@ -64,7 +64,7 @@ The image generator capability enables declarative agents to generate images bas
 - **Feedback mechanism**: Users can provide feedback on the generated images by giving a thumbs up or thumbs down. This helps improve the quality of future image generations.
 - **Clipboard and sharing**: Users can copy the generated images to their clipboard to paste into other applications, or they can share the generated images directly from the interface.
  
-### Image generation examples
+### Image generator examples
 
 The following examples show what users can do with the image generation capability in your agent.
 
