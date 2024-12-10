@@ -11,6 +11,10 @@ ms.topic: overview
 
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
+## December 2024
+
+Add the code interpreter capability to your declarative agent by using the Copilot Studio agent builder or Teams Toolkit. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
+
 ## November 2024
 
 ### Add capabilities to your declarative agent
