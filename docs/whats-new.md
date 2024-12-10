@@ -13,7 +13,7 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 ## December 2024
 
-## Add code interpreter to your declarative agent
+### Add code interpreter to your declarative agent
 
 Add the code interpreter capability to your declarative agent by using the Copilot Studio agent builder or Teams Toolkit. To learn more, see [Add capabilities to your declarative agent](add-agent-capabilities.md).
 
