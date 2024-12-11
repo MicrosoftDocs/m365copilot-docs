@@ -53,6 +53,17 @@ body:
   attributes:
     label: Target publish date
 
+- type: dropdown
+  id: size
+  attributes:
+    label: Approximate size of the work item
+    multiple: false
+    options:
+    - Small - The request will take one day to complete.
+    - Medium - The request will take less than five days to complete.
+    - Large - The request will take less than two weeks to complete.
+    - X-large - The request will take more than two weeks to complete.
+
 - type: textarea
   id: additional_details
   attributes:
