@@ -9,12 +9,12 @@ ms.date: 12/11/2024
 
 # Responsible AI validation checks
 
-You can use declarative agents to customize Microsoft 365 Copilot to help you meet your unique business needs. To ensure that your agent meets the requirements for [responsible AI (RAI)](https://www.microsoft.com/en-us/ai/tools-practices), validation checks run on your agents at the following times:
+You can use declarative agents to customize Microsoft 365 Copilot to help you meet your unique business needs. To ensure that your agent meets the requirements for [Tesponsible AI (RAI)](https://www.microsoft.com/en-us/ai/tools-practices), validation checks run on your agents at the following times:
 
 - During manifest validation, when you sideload or publish your agent.
 - During the processing of a user prompt.
 
-This article provides information about the RAI manifest validation checks that run on your agent and provides details about the validation errors that can occur.
+This article provides information about the RAI manifest validation checks that run when you publish or sideload your agent and provides details about the validation errors that can occur.
 
 For information about the runtime validation checks, see [AI security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-ai-security).
 
@@ -35,15 +35,13 @@ Your agent might fail validation for one or more of the following reasons:
 **Reveals personal information** - Collects specific real-world age, date of birth, gender, race, ethnicity, religion, nationality, immigration status, refugee status, and so on of an individual to expose or reveal it to others or send it elsewhere.
 - **Expresses personal beliefs** - Shows or seeks to convince users of religious, philosophical, political, or other personal or controversial beliefs, opinions, or affiliations, such as religious organizations, political parties, and so on.
 - **Promotes political opinions** - Politically opinionated, encouraging political votes, elections, political campaigns, and so on.
- **Suggestive or explicit** - Talks about sexual orientation, sexual or gender identity, sex life, and so on.
+- **Suggestive or explicit** - Talks about sexual orientation, sexual or gender identity, sex life, and so on.
 - **Involves hiring or employment status** - Evaluates resumes or job applications to automate hiring decisions. Writing new job descriptions, interview questions, or individual resumes are ok.
 - **Uses facial recognition** - Recognizes faces, determines emotions from faces, and so on.
 - **Provokes arguments** - Has hostile or aggressive or dismissive content, stubborn in a belief, attempting to prove some opinions, intends to mislead or lie, and so on.
 - **Attempts to bypass guidelines or manipulate the model** - Leaking base prompts, ignoring or superseding guidelines, conspiracy theory revealing the hidden truth about topics such as government, school, climate change, chemtrails, COVID, and so on.
 - **Violates copyrights** - Copies or reproduces intellectual property protected by copyrights, such as copyrighted books, code, news, songs, and so on.
 - **Evaluates human performance** - Involves analyzing performance data, generating business-oriented detailed human evaluations, ensuring accuracy and relevance, focusing on constructive or negative feedback, acknowledging or disclaim efforts, and providing feedback to individual need.
-
-If you agent fails one of these validation checks, you'll be prompted to review your agent for violations. Review the name, description, and instructions for your agent and try to publish it again.
 
 ## Validation examples
 
@@ -85,6 +83,10 @@ Manager Reviewer Assists people managers in evaluating the performance of their 
 **Instructions:** You're a specialized Copilot designed to assist managers in evaluating the performance of their subordinates. Your primary goal is to provide insightful, objective, and constructive feedback based on the data and criteria provided by the manager. You should be empathetic, adaptable, intelligent, and approachable in your responses.
 
 **Validation message:** Your agent can't be created because it might evaluate human performance.
+
+## Resolve validation failures
+
+If your agent fails one of these validation checks, you'll be prompted to review your agent for violations. Review the name, description, and instructions for your agent and try to publish it again.
 
 ## Related content
 
