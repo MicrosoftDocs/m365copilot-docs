@@ -14,7 +14,7 @@ You can use declarative agents to customize Microsoft 365 Copilot to help you me
 - During manifest validation, when you sideload or publish your agent.
 - During the processing of a user prompt.
 
-This article provides information about the validation checks that run on your agent during the RAI validation checks and provides details about the validation errors that can occur.
+This article provides information about the validation checks that run on your agent and provides details about the validation errors that can occur.
 
 ## Agent validation checks
 
