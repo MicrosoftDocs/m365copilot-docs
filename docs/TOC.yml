@@ -41,6 +41,8 @@
       href: add-agent-capabilities.md
     - name: Localize your agent
       href: localize-agents.md
+    - name: RAI Validation
+      href: rai-validation.md
     - name: Use Visual Studio Code
       expanded: true
       items:

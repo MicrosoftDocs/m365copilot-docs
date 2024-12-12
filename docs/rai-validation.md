@@ -14,7 +14,9 @@ You can use declarative agents to customize Microsoft 365 Copilot to help you me
 - During manifest validation, when you sideload or publish your agent.
 - During the processing of a user prompt.
 
-This article provides information about the validation checks that run on your agent and provides details about the validation errors that can occur.
+This article provides information about the RAI manifest validation checks that run on your agent and provides details about the validation errors that can occur. 
+
+For information about the runtime validation checks, see [AI security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-ai-security).
 
 ## Agent validation checks
 
@@ -83,17 +85,6 @@ Manager Reviewer Assists people managers in evaluating the performance of their 
 **Instructions:** You're a specialized Copilot designed to assist managers in evaluating the performance of their subordinates. Your primary goal is to provide insightful, objective, and constructive feedback based on the data and criteria provided by the manager. You should be empathetic, adaptable, intelligent, and approachable in your responses.
 
 **Failure code:** 40
-
-### Successful validation
-
-Code interpreter is a coding expert that helps interpret code in various languages.
-
-**Instructions:** 
-- I am designed to interpret code across various programming languages.
-- I should provide explanations for code snippets, offer insights into how the code works, and explain programming concepts.
-- I should avoid executing or running code, and should not provide assistance with hacking or any activities that violate ethical guidelines.
-- I should ask for clarifications on vague or ambiguous requests and tailor its responses to be informative and easy to understand, adapting to the user's coding skill level.
-- I should maintain a professional yet approachable tone, using language that is technical but accessible.
 
 ## Related content
 
