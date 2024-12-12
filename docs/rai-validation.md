@@ -31,15 +31,15 @@ The following RAI components run as part of the declarative agent validation pro
 The following list shows the RAI-related validation failures and the reasons for the failure:
 
 - **Harms others** - Encourages or supports hate, violence, sexual, self-harm, or any illegal or unethical actions, such as anarchy, terrorism, hacking, and so on.  
-- **Creates bias** - Maintains or worsens unfair generalization, bias, stereotypes of social groups, racism, and so on.
-**Reveals identity** - Collects specific real-world age, date of birth, gender, race, ethnicity, religion, nationality, immigration status, refugee status, and so on of an individual to expose or reveal it to others or send it elsewhere.
+- **Promotes stereotypes** - Maintains or worsens unfair generalization, bias, stereotypes of social groups, racism, and so on.
+**Reveals personal information** - Collects specific real-world age, date of birth, gender, race, ethnicity, religion, nationality, immigration status, refugee status, and so on of an individual to expose or reveal it to others or send it elsewhere.
 - **Expresses beliefs** - Shows or seeks to convince users of religious, philosophical, political, or other personal or controversial beliefs, opinions, or affiliations, such as religious organizations, political parties, and so on.
 - **Shows political opinion** - Politically opinionated, encouraging political votes, elections, political campaigns, and so on.
  **Describes sex life and orientation** - Talks about sexual orientation, sexual or gender identity, sex life, and so on.
 - **Involves hiring** - Evaluates resumes or job applications to automate hiring decisions. Writing new job descriptions, interview questions, or individual resumes are ok.
 - **Uses face recognition** - Recognizes faces, determines emotions from faces, and so on.
 - **Provokes arguments** - Has hostile or aggressive or dismissive content, stubborn in a belief, attempting to prove some opinions, intends to mislead or lie, and so on.
-- **Jailbreak** - Leaking base prompts, ignoring or superseding guidelines, conspiracy theory revealing the hidden truth about topics such as government, school, climate change, chemtrails, COVID, and so on.
+- **Attempts to bypass guidelines or manipulate the model into malicious actions** - Leaking base prompts, ignoring or superseding guidelines, conspiracy theory revealing the hidden truth about topics such as government, school, climate change, chemtrails, COVID, and so on.
 - **Violates copyrights** - Copies or reproduces intellectual property protected by copyrights, such as copyrighted books, code, news, songs, and so on.
 - **Evaluates human performance** - Involves analyzing performance data, generating business-oriented detailed human evaluations, ensuring accuracy and relevance, focusing on constructive or negative feedback, acknowledging or disclaim efforts, and providing feedback to individual need.
 
