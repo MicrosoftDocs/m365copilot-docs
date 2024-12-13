@@ -40,6 +40,9 @@ The user prompt "Create a word cloud of top pet names" generates a word cloud th
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest reference, as shown in the following example.
 
+> [!NOTE]
+> You must be using [version 1.2](declarative-agent-manifest-1.2.md) of the manifest schema to add the `CodeInterpreter` capability.
+
 ```json
 {
   "capabilities": [
@@ -83,6 +86,10 @@ The following image shows the result.
 ### Enable image generator
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest reference, as shown in the following example.
+
+> [!NOTE]
+> You must be using [version 1.2](declarative-agent-manifest-1.2.md) of the manifest schema to add the `GraphicArt` capability.
+
 
 ```json
 {
