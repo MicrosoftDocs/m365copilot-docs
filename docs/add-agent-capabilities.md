@@ -4,7 +4,7 @@ description: Learn about capabilities that you can add to your declarative agent
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
-ms.date: 11/15/2024
+ms.date: 12/13/2024
 ---
 
 # Add capabilities to your declarative agent
