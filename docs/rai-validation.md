@@ -9,7 +9,7 @@ ms.date: 12/11/2024
 
 # Responsible AI validation checks
 
-You can use declarative agents to customize Microsoft 365 Copilot to help you meet your unique business needs. To ensure that your agent meets the requirements for [Tesponsible AI (RAI)](https://www.microsoft.com/en-us/ai/tools-practices), validation checks run on your agents at the following times:
+You can use declarative agents to customize Microsoft 365 Copilot to help you meet your unique business needs. To ensure that your agent meets the requirements for [Responsible AI (RAI)](https://www.microsoft.com/en-us/ai/responsible-ai), validation checks run on your agents at the following times:
 
 - During manifest validation, when you sideload or publish your agent.
 - During the processing of a user prompt.
