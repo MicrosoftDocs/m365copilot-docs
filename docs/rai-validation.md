@@ -28,7 +28,7 @@ The following RAI components run as part of the declarative agent validation pro
 
 ## RAI validation failures 
 
-Your agent might fail validation for one or more of the following reasons: 
+If your agent fails RAI validation, you won't be able to publish it until the failures are addressed. Your agent might fail validation for one or more of the following reasons: 
 
 - **Encourages harmful actions** - Encourages or supports hate, violence, sexual, self-harm, or any illegal or unethical actions, such as anarchy, terrorism, hacking, and so on.  
 - **Promotes stereotypes** - Maintains or worsens unfair generalization, bias, stereotypes of social groups, racism, and so on.
@@ -86,7 +86,7 @@ Manager Reviewer Assists people managers in evaluating the performance of their 
 
 ## Resolve validation failures
 
-If your agent fails one of these validation checks, you'll be prompted to review your agent for violations. Review the name, description, and instructions for your agent and try to publish it again.
+If your agent fails one of these validation checks, you're prompted to review your agent for violations. Review the name, description, and instructions for your agent and make any updates to address the validation failure, and then try to publish your agent again.
 
 ## Related content
 
