@@ -32,7 +32,7 @@ If your agent fails RAI validation, you won't be able to publish it until the fa
 
 - **Encourages harmful actions** - Encourages or supports hate, violence, sexual, self-harm, or any illegal or unethical actions, such as anarchy, terrorism, hacking, and so on.  
 - **Promotes stereotypes** - Maintains or worsens unfair generalization, bias, stereotypes of social groups, racism, and so on.
-**Reveals personal information** - Collects specific real-world age, date of birth, gender, race, ethnicity, religion, nationality, immigration status, refugee status, and so on of an individual to expose or reveal it to others or send it elsewhere.
+- **Reveals personal information** - Collects specific real-world age, date of birth, gender, race, ethnicity, religion, nationality, immigration status, refugee status, and so on of an individual to expose or reveal it to others or send it elsewhere.
 - **Expresses personal beliefs** - Shows or seeks to convince users of religious, philosophical, political, or other personal or controversial beliefs, opinions, or affiliations, such as religious organizations, political parties, and so on.
 - **Promotes political opinions** - Politically opinionated, encouraging political votes, elections, political campaigns, and so on.
 - **Suggestive or explicit** - Talks about sexual orientation, sexual or gender identity, sex life, and so on.
