@@ -26,7 +26,7 @@ ms.topic: how-to
 > [!TIP]
 > For the best results, make sure that your OpenAPI specification follows the guidelines detailed in [How to make an OpenAPI document effective in extending Copilot](openapi-document-guidance.md).
 
-To follow along with this guide, download the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin) and configure it to run on your local development machine. Build and run the sample at least once to generate the **openapi.yml** file for the API.
+To follow along with this guide, download the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin) and configure it to run on your local development machine. Build the sample at least once to generate the **BudgetTracker.json** file for the API.
 
 ## Enable plugin development in Teams Toolkit
 
@@ -69,7 +69,7 @@ The next steps differ depending on if you enabled Microsoft Kiota or not.
 
 ### [Teams Toolkit without Kiota](#tab/toolkit)
 
-1. Select **Browse** and browse to the location of the OpenAPI specification from the Budget Tracker sample, located at **./openapi/openapi.yml**.
+1. Select **Browse** and browse to the location of the OpenAPI specification from the Budget Tracker sample, located at **./openapi/BudgetTracker.json**.
 
 1. Select all the operations to enable for the plugin.
 
@@ -81,7 +81,7 @@ The next steps differ depending on if you enabled Microsoft Kiota or not.
 
 ### [Teams Toolkit with Kiota](#tab/kiota)
 
-1. Select **Browse path** and browse to the location of the OpenAPI specification from the Budget Tracker sample, located at **./openapi/openapi.yml**.
+1. Select **Browse path** and browse to the location of the OpenAPI specification from the Budget Tracker sample, located at **./openapi/BudgetTracker.json**.
 
 1. The side bar view changes to the Kiota API explorer. Use the **Add all** button to select all the operations to enable for the plugin.
 
