@@ -228,8 +228,6 @@
 - name: Add skills with plugins
   expanded: true
   items:
-  - name: Best practices for high-quality plugins
-    href: plugin-guidelines.md
   - name: API plugins
     items:
     - name: Overview
