@@ -21,6 +21,9 @@ After the agent is created successfully, select **Go to agent** to open a new ch
 
 You can share your agent with other users via a link after you create it. When you share an agent, the people you share the agent with can use it, but they can't edit it. You can change the sharing option at any time by choosing the **Share** button at the top right corner.
 
+> [!NOTE]
+> Users that you share your agent with must also have a Microsoft 365 license.
+
 ### Sharing options
 
 The following table lists the sharing options that are available.
