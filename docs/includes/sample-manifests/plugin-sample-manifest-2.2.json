@@ -71,8 +71,12 @@
           "instructions": [
             "If the user mentions a city in their question, only search in that city by using the city parameter.",
             "If the user asks for properties with things like parking space, heating, jacuzzi, or similar amenities, use the amenities parameter to filter the results.",
-            "Only use the list of amenities provided in the amenities parameter enum. If the user asked for an amenity that is not in the list, find the closest match from the list, or ignore it if no match can be found.",
-            "Determine if the response contains an error field.",
+            "Only use the list of amenities provided in the amenities parameter enum. If the user asked for an amenity that is not in the list, find the closest match from the list, or ignore it if no match can be found."
+          ]
+        },
+        "responding": {
+          "description": "`getListings` returns a list of real estate properties for sale based on the specified criteria.",
+          "instructions": ["Determine if the response contains an error field.",
             "If an error is present, provide the error code and error message from the JSON response to the user.",
             "If there is no error, extract and include as much relevant information as possible from the JSON response to meet the users needs."
           ]
