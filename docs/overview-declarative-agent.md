@@ -58,9 +58,14 @@ You can use your tool of choice to create a declarative agent app package. To ge
 | [Copilot Studio agent builder](copilot-studio-agent-builder.md) | Build declarative agents using the integrated builder in Microsoft 365 Copilot. |
 | [SharePoint](./build-declarative-agents.yml?tutorial-step=5) | Build declarative agents using grounding data from SharePoint files. |
 
+## Responsible AI
+
+Declarative agents must pass validation checks for Responsible AI (RAI). For information about RAI validation, see [Responsible AI validation checks](rai-validation.md).
+
 ## Related content
 
 - [Agents in the Microsoft 365 ecosystem](ecosystem.md)
 - [Agents are apps for Microsoft 365](agents-are-apps.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
 - [Add agent capabilities](add-agent-capabilities.md)
+- [RAI validation](rai-validation.md)
