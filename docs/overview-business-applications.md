@@ -8,7 +8,7 @@ ms.topic: overview
 ---
 
 
-# Use actions to extend Microsoft Copilot Studio
+# Use actions to extend Microsoft 365 Copilot
 
 Copilot Studio actions plug into Microsoft 365 Copilot to extend its skills. Actions make use of Microsoft business applications like Microsoft Dynamics 365 and Microsoft Power Platform - a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent.
 
