@@ -54,6 +54,8 @@ To submit your app package to the Microsoft 365 and Copilot program in Partner C
 
 When built with Copilot Studio, agents for Microsoft 365 Copilot can also be published to the organization from Copilot Studio. Distribution through Partner Center is not yet supported for agents created from Copilot Studio.
 
+Your agent must pass [Responsible AI validation checks](rai-validation.md) before you can publish or sideload it.
+
 ### Distribute an agent to your organization
 
 If you use Copilot Studio to create a declarative agent for Microsoft 365 Copilot, you can use [Copilot Studio to publish your agent](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#publishing-a-copilot-extension) for sharing and/or submit it for [publish to your organization's catalog](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps#publish-extensions-for-copilot) by an admin.
