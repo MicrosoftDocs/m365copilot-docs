@@ -9,7 +9,7 @@ ms.date: 11/04/2024
 
 # Localize your agent
 
-Agents are essentially apps for Microsoft 365. They share a common manifest schema, app packaging, and distribution and management process. Your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema?context=/microsoft-365-copilot/extensibility/context) references the definition file for your declarative agents in the `copilotAgents` object.
+Agents are essentially apps for Microsoft 365. They share a common manifest schema, app packaging, and distribution and management process. Your [app manifest](/microsoft-365/extensibility/schema) references the definition file for your declarative agents in the `copilotAgents` object.
 
 The way you localize an agent is slightly different than how you localize other capabilities (such as tabs, bots, and message extensions) in a Microsoft 365 app manifest.
 
@@ -92,7 +92,7 @@ For each language file, specify the following properties from the app localizati
 | `description.short`| Replaces the short description from the app manifest with value provided. | 80 characters | ✔️ |
 | `description.full` | Replaces the full description from the app manifest with value provided. | 4000 characters | ✔️ |
 | *Key/value pairs for localized strings in agents* | For agents, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DA_Name": "Agent de Communications"`| | |
-| *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`|
+| *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`| | |
 
 To learn more, see [Localize your app (Microsoft Teams)](/microsoftteams/platform/concepts/build-and-test/apps-localization) and the [Localization schema reference](/microsoftteams/platform/resources/schema/localization-schema).
 
@@ -117,9 +117,9 @@ The following fields are localizable within the API plugin manifest.
 |`name_for_human`| A short, human-readable name for the plugin. It must contain at least one non-whitespace character.| 20 characters |✔️|
 |`description_for_model`|  The description for the plugin that is provided to the model, including what the plugin is for, and in what circumstances its functions are relevant.| 2,048 characters| |
 |`description_for_human`| A human-readable description of the plugin.| 100 characters|✔️|
-|`logo_url`|A URL used to fetch a logo that may be used by the orchestrator. ||
-|`legal_info_url`|An absolute URL that locates a document containing the terms of service for the plugin.| |
-|`privacy_policy_url`|An absolute URL that locates a document containing the privacy policy for the plugin.||
+|`logo_url`|A URL used to fetch a logo that may be used by the orchestrator. | | |
+|`legal_info_url`|An absolute URL that locates a document containing the terms of service for the plugin.| | |
+|`privacy_policy_url`|An absolute URL that locates a document containing the privacy policy for the plugin.| | |
 
 To learn more, see [API plugin manifest reference](./api-plugin-manifest.md).
 
