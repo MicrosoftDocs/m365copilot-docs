@@ -1,6 +1,6 @@
 ---
 title: Localize Agents for Microsoft 365 Copilot
-description: Learn how to add support for additional languages to your agent.
+description: Learn how to add support for other languages to your agent.
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: concept-article
@@ -13,11 +13,11 @@ Agents are essentially apps for Microsoft 365. They share a common manifest sche
 
 The way you localize an agent is slightly different than how you localize other capabilities (such as tabs, bots, and message extensions) in a Microsoft 365 app manifest.
 
-You use the same localization file (per language) for both Teams app capabilities and agents. However, while all other app manifest fields are referenced using JSONPath expressions in the language files, agent-related fields are referenced using dictionary keys. Unlike classic Teams app capabilities, which use default language strings in the app manifest itself, localized agents require a language file for the default language as well as for each additional language.
+You use the same localization file (per language) for both Teams app capabilities and agents. However, while all other app manifest fields are referenced using JSONPath expressions in the language files, agent-related fields are referenced using dictionary keys. Unlike classic Teams app capabilities, which use default language strings in the app manifest itself, localized agents require a language file for the default language and for each extra language.
 
 :::image type="content" source="assets/images/loc-manifest.png" alt-text="Diagram showing the relationship between app manifest, declarative agent manifest, and a language file for the purposes of localizing an agent":::
 
-This article describes how to add support for additional languages (beyond the default language) to your agents.
+This article describes how to add support for other languages (beyond the default language) to your agents.
 
 ## 1. Update your agent manifests with tokenized keys
 
@@ -55,13 +55,13 @@ The following example shows the `localizationInfo` section in an app manifest.
 },
 ```
 
-If your agent doesn't support additional languages, the default language strings are represented within the app manifest file itself. Single language app packages don't require a separate language file for the default language.
+If your agent doesn't support other languages, the default language strings are represented within the app manifest file itself. Single language app packages don't require a separate language file for the default language.
 
-### 3. Create a localization file for each additional language
+### 3. Create a localization file for each extra language
 
-Create a localization file for each additional supported language with values for the tokenized keys, using the file names specified (for the `defaultLanguageFile` and `file` properties) in the app manifest in the previous step.
+Create a localization file for each supported language with values for the tokenized keys, using the file names specified (for the `defaultLanguageFile` and `file` properties) in the app manifest in the previous step.
 
-The following example show a language file, `fr.json`, with localized strings for both a agent and personal tabs.
+The following example shows a language file, `fr.json`, with localized strings for both an agent and personal tabs.
 
 ```json
 {
@@ -90,7 +90,7 @@ For each language file, specify the following properties from the app localizati
 | `name.short` | Replaces the short name from the app manifest with the value provided. | 30 characters | ✔️ |
 | `name.full` | Replaces the full name from the app manifest with value provided | 100 characters | ✔️ |
 | `description.short`| Replaces the short description from the app manifest with value provided. | 80 characters | ✔️ |
-| `description.full` | Replaces the full description from the app manifest with value provided. | 4000 characters | ✔️ |
+| `description.full` | Replaces the full description from the app manifest with value provided. | 4,000 characters | ✔️ |
 | *Key/value pairs for localized strings in agents* | For agents, use tokenized keys (as specified in app `manifest.json`, but without double square brackets) with their localized values. For example: `"DA_Name": "Agent de Communications"`| | |
 | *JSONPath/value pairs for localized strings of any other app components* | For all other (classic Teams) app components, use JSONPath expressions as keys for the localized values. For example: `"staticTabs[0].name": "Accueil"`| | |
 
@@ -102,9 +102,9 @@ The following fields are localizable within the declarative agent manifest.
 
 | Manifest field | Description | Max length| Required |
 |--|--|--|--|
-| `name`| The name of the declarative agent. Must contain at least one non-whitespace character.| 100 characters| ✔️|
-| `description`| The description of the declarative agent. Must contain at least one non-whitespace character.| 1,000 characters | ✔️|
-| `conversation_starters`| A list (array) of examples of questions that the declarative agent can answer, where each example is represented by an object with `title` and `text`, both of which are localizable.| 6 objects in the array||
+| `name`| The name of the declarative agent. Must contain at least one nonwhitespace character.| 100 characters| ✔️|
+| `description`| The description of the declarative agent. Must contain at least one nonwhitespace character.| 1,000 characters | ✔️|
+| `conversation_starters`| A list (array) of examples of questions that the declarative agent can answer, where each example is an object with `title` and `text`, both of which are localizable.| Six objects in the array| |
 
 To learn more, see [Declarative agent manifest reference](./declarative-agent-manifest-1.2.md).
 
@@ -114,7 +114,7 @@ The following fields are localizable within the API plugin manifest.
 
 | Manifest field | Description | Max length| Required |
 |--|--|--|--|
-|`name_for_human`| A short, human-readable name for the plugin. It must contain at least one non-whitespace character.| 20 characters |✔️|
+|`name_for_human`| A short, human-readable name for the plugin. It must contain at least one nonwhitespace character.| 20 characters |✔️|
 |`description_for_model`|  The description for the plugin that is provided to the model, including what the plugin is for, and in what circumstances its functions are relevant.| 2,048 characters| |
 |`description_for_human`| A human-readable description of the plugin.| 100 characters|✔️|
 |`logo_url`|A URL used to fetch a logo that may be used by the orchestrator. | | |
