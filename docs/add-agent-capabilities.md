@@ -17,6 +17,7 @@ Code interpreter is an advanced tool designed to solve complex tasks via Python 
 
 > [!NOTE]
 > Support for in-context agents that have code interpreter enabled varies by host.
+> The code interpreter capability is only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license. Agents that have this capability enabled aren't available to free Microsoft 365 Copilot Chat users.
 
 ### Code interpreter examples
 
@@ -66,6 +67,9 @@ The image generator capability enables declarative agents to generate images bas
 - **Image modification**: Users can follow up with subsequent prompts to modify the original images without losing context. For example, first prompt: "Create a photo of a happy puppy running around in a yard." Second prompt: "Include a tennis ball."
 - **Feedback mechanism**: Users can provide feedback on the generated images by giving a thumbs up or thumbs down. This helps improve the quality of future image generations.
 - **Clipboard and sharing**: Users can copy the generated images to their clipboard to paste into other applications, or they can share the generated images directly from the interface.
+
+> [!NOTE]
+> The image generator capability is only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license. Agents that have this capability enabled aren't available to free Microsoft 365 Copilot Chat users.
  
 ### Image generator examples
 

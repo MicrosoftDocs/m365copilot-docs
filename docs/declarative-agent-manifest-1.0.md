@@ -74,6 +74,9 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [OneDrive and SharePoint object](#onedrive-and-sharepoint-object)
 - [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
 
+> [!NOTE]
+> Declarative agents with the OneDrive and SharePoint or Microsoft Graph Connectors capability are not available to free Microsoft 365 Copilot Chat users.
+
 #### Example of capabilities
 
 ```json

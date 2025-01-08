@@ -81,6 +81,9 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
 - [Graphic art object](#graphic-art-object)
 - [Code interpreter object](#code-interpreter-object)
+ 
+> [!NOTE]
+> Declarative agents with the OneDrive and SharePoint, Microsoft Graph Connectors, graphic art, or code interpreter capability are not available to free Microsoft 365 Copilot Chat users.
 
 #### Example of capabilities
 
