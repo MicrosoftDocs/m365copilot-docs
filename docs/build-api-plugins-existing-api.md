@@ -51,7 +51,7 @@ API plugins are a ZIP file that contains the following files.
 
 - The OpenAPI specification for the REST API.
 - An [API plugin manifest](api-plugin-manifest.md) that references the included OpenAPI specification and describes the available operations, authentication method, and response formats.
-- A [Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema) (for example, `manifest.json`) with a `copilotExtensions` property that references the API plugin manifest.
+- A [Microsoft 365 app manifest](/microsoft-365/extensibility/schema) (for example, `manifest.json`) with a `copilotExtensions` property that references the API plugin manifest.
 
 1. Open Visual Studio Code. If Teams Toolkit isn't already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
 
