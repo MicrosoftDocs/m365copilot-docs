@@ -58,6 +58,10 @@ Your plugin or connector also runs outside of Copilot experiences. The following
 
 Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other Microsoft 365 apps and services are published and managed, both within your organization and within in-product app stores of Microsoft 365 products.
 
+## Agent capabilities in Microsoft 365 Copilot Chat
+
+
+
 ## Unified app model
 
 The Microsoft 365 ecosystem provides a unified app model for distributing and managing agents, Teams apps, Outlook Add-ins, SharePoint Framework solutions, and more. The app package for Microsoft 365 is a zip file that contains one or more configuration (manifest) files and your app icons.
@@ -98,6 +102,6 @@ Microsoft 365 Copilot [developer mode](./debugging-copilot-plugin.md) provides a
 
 ## Microsoft security, trust, and commitment to Responsible AI
 
-Microsoft 365 Copilot is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary.  Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more info, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
+Microsoft 365 Copilot is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary. Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more information, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
 
-To learn more as a developer of Copilot extensibility solutions, see [Data, Privacy, and Security considerations of extending Microsoft 365 Copilot](./data-privacy-security.md)
+For more information for Copilot extensibility solution developers, see [Data, Privacy, and Security considerations for extending Microsoft 365 Copilot](./data-privacy-security.md).
