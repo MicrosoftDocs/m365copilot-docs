@@ -10,9 +10,8 @@ ms.topic: overview
 
 # Use actions to extend Microsoft 365 Copilot
 
-Copilot Studio actions plug into Microsoft 365 Copilot to extend its skills. Actions make use of Microsoft business applications like Microsoft Dynamics 365 and Microsoft Power Platform - a suite of products and services that help you manage specific business functions, such as sales, customer service, finance, operations, and talent.
+Copilot Studio actions plug into Microsoft 365 Copilot to extend its skills. Actions make use of Microsoft business applications like Microsoft Power Platform.
 
-Dynamics 365 revolutionizes CRM and ERP by applying intelligence to all forms of data. It enables organizations to evolve from reactive business decisions to proactive insights that allow your employees to accelerate business results.
 
 Power Platform is a suite of business applications that centralizes all your business processes. It is a low-code platform designed for building customized end-to-end business solutions.
 
@@ -24,13 +23,8 @@ By using Dynamics 365 and Power Platform, you can create actions for Microsoft C
 
 ## Actions for Microsoft Copilot
 
-Actions for Microsoft Copilot in Power Platform use Dynamics 365 apps and Power Platform components such as Power Automate flows, certified connectors, or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot uses the appropriate action to address users' questions. The following built-in actions are available:
+Actions for Microsoft Copilot in Power Platform use Power Platform components such as Power Automate flows, certified connectors, or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot uses the appropriate action to address users' questions. The following built-in actions are available:
 
-- Microsoft Dynamics 365 apps
-  - [Dynamics 365 Sales](/dynamics365/sales/microsoft-365-copilot-for-sales) (preview)
-  - [Dynamics 365 Customer Service](/dynamics365/customer-service/use/copilot-chat-customer-service-data) (preview)
-  - [Dynamics 365 Field Service](/dynamics365/field-service/flw-m365-chat) (preview)
-  - [Dynamics 365 Supply Chain](/dynamics365/fin-ops-core/dev-itpro/m365-copilot/faq-for-chat-with-fno-data-on-m365copilot) (preview)
 - [Microsoft Power Platform connectors](/connectors/create-a-connector-ai-plugin#supported-queries-for-certified-connectors)
   - FreshDesk
   - GitHub
@@ -45,6 +39,9 @@ Actions for Microsoft Copilot in Power Platform use Dynamics 365 apps and Power 
   - List my pending approvals
 
 You can also create new actions by using Power Platform components in Microsoft Copilot Studio. For more information, see [Copilot connectors, actions, and extensions overview (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
+
+> [!NOTE]
+> Dynamics plugins were available for preview only and are no longer supported. We recommend that you create an agent and add actions as needed. For more information, see [Extend bot-based message extension as agents for Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/build-bot-based-agent?tabs=visual-studio-code) and [Extend Microsoft 365 Copilot with Copilot agents](https://learn.microsoft.com/en-us/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions).
 
 ## Get Microsoft 365 Copilot licenses to enable actions
 
@@ -62,39 +59,10 @@ To deploy an action, sign in to the Microsoft 365 admin center and locate the ac
 
 To find Power Automate flows, search for "Power Automate". For Power Platform connector actions, search for the respective connector name; for example, FreshDesk. For Copilot artifacts such as actions created in Microsoft Copilot Studio, search for "Copilot Studio".
 
-To find Dynamics 365 actions for Microsoft 365 Copilot, search for "Dynamics 365". The search results will show the available Dynamics 365 actions.
-
-|For                                   |  Select                           |
-|--------------------------------------|-----------------------------------|
-|Dynamics 365 Field Service plugin     | **Dynamics 365 FieldService**     |
-|Dynamics 365 Customer Service plugin  | **Dynamics 365 Service**          |
-|Dynamics 365 Sales plugin             | **Dynamics 365**                  |
-|Dynamics 365 Supply Chain plugin      | **Dynamics 365 Supply Chain**     |
 
 
 > [!NOTE]
 > The action must be enabled for your environment to appear in the Integrated Apps list.
-
-The following example describes how to deploy the Dynamics 365 Field Service action:
-
-1. Sign in to the Microsoft 365 admin center with your admin account.
-1. Expand **Settings** on the side navigation pane and select **Integrated apps**.
-1. Under the **Available apps** tab, search for the Dynamics 365 Field Service action by using the string "Dynamics 365". You might also try "field" or "service."
-
-    :::image type="content" source="assets/images/overview-business-applications/integrated-apps-dynamics365-field.png" alt-text="Screenshot showing Microsoft Dynamics 365 Field Service as an available integrated app in Microsoft 365 admin center.":::
-
-1. Select the integrated app that contains the action to deploy. In this example, select **Dynamics 365 FieldService**.
-
-1. Select **Next** to open the **Users** tab.
-
-1. Choose to deploy for all users, a specific set of users, or yourself.
-
-    :::image type="content" source="assets/images/overview-business-applications/microsoft-dynamics-365-field.png" alt-text="Screenshot showing the option to deploy an app to all users or to specific users.":::
-
-1. Select **Next** and complete the remaining steps to deploy the app. It might take up to four hours for the deployed app's action to show in Microsoft 365 Copilot.
-
-> [!NOTE]
-> The apps that appear under **Integrated apps** are sometimes referred to as "titles".
 
 ## Use the built-in actions in Microsoft 365 Copilot in Microsoft Teams
 
@@ -134,7 +102,7 @@ Use Microsoft Copilot Studio to create conversational actions that retrieve and 
 
 ## Related content
 
-- [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context)
+- [Create a custom prompt](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context)
 - [Create a connector action (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context)
-- [Create conversational actions (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context)
+- [Create conversational actions](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context)
 - [Use Power Automate flow actions (preview)](/power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context)
