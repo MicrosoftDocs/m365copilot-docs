@@ -42,6 +42,9 @@
     "globalMetadata": {
       "breadcrumb_path": "/microsoft-365-copilot/extensibility/breadcrumb/toc.json",
       "feedback_system": "Standard",
+      "feedback_product_url": "https://learn.microsoft.com/microsoft-365-copilot/extensibility/feedback#microsoft-365-copilot-feedback",
+      "feedback_help_link_url": "https://learn.microsoft.com/answers/tags/466/copilot-m365-development",
+      "feedback_help_link_type": "get-help-at-qna",
       "permissioned-type": "public",
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "ms.service": "microsoft-365-copilot",
