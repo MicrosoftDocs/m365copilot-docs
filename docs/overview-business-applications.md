@@ -51,7 +51,7 @@ Use the following steps to get Microsoft 365 Copilot licenses to enable actions:
 
 1. Get the appropriate number of [Microsoft 365 Copilot licenses](/microsoft-365-copilot/microsoft-365-copilot-setup#provision-copilot-for-microsoft-365-licenses).
 
-1. Consent to moving data across regions, as applicable. For details, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot) by .
+1. Consent to moving data across regions, as applicable. For details, see [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot).
 
 ## Deploy an action
 
