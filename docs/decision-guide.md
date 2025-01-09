@@ -96,6 +96,24 @@ How you build and which tools you use are up to you. Your choices are:
 
     [!INCLUDE [copilot-studio-agent-naming](includes/copilot-studio-agent-naming.md)]
 
+## Agent availability in Microsoft 365 Copilot Chat
+
+Some types of agents and agent capabilities are only available to licensed Microsoft 365 Copilot Chat users or users in tenants that allow metered usage. For details about agent availability in Microsoft 365 Copilot Chat, see the following table.
+
+| Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Copilot Chat (licensed) |
+|:--------------------------|:---------------------------|:-----------------------------|:------------------------|
+|**Declarative agents**     | 
+|Copilot Studio agent builder |:x: |:white_check_mark: | :white_check_mark: |
+|Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|Custom instructions and uploaded documents| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|Code interpreter | :x: |:white_check_mark: | :white_check_mark: |
+|Image generator| :x: |:white_check_mark: | :white_check_mark: |
+|Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|Microsoft 365 tenant data grounding (SharePoint)| :x: |:white_check_mark: | :white_check_mark: |
+|Microsoft Graph connector grounding | :x: |:white_check_mark: | :white_check_mark: |
+|Microsoft 365 personal data grounding | :x: |:x: | :white_check_mark: |
+|**Custom engine agents**| :x: |:white_check_mark: | :white_check_mark: |
+
 ## Related content
 
 - [Microsoft Graph connectors overview](overview-graph-connector.md)
