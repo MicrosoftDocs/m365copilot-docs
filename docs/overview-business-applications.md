@@ -3,7 +3,7 @@ title: Extend Microsoft 365 Copilot with Actions
 description: Extend Microsoft 365 Copilot by using Power Platform and Dynamics 365 to create actions.
 author: jhaskett-msft
 ms.author: jhaskett
-ms.date: 12/10/2024
+ms.date: 01/09/2025
 ms.topic: overview
 ---
 
@@ -41,7 +41,7 @@ Actions for Microsoft Copilot use Power Platform components such as Power Automa
 You can also create new actions by using Power Platform components in Microsoft Copilot Studio. For more information, see [Copilot connectors, actions, and extensions overview (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
 
 > [!NOTE]
-> Dynamics plugins were available for preview only and are no longer supported. We recommend that you create an agent and add actions as needed. For more information, see [Extend bot-based message extension as agents for Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/build-bot-based-agent?tabs=visual-studio-code) and [Extend Microsoft 365 Copilot with Copilot agents](https://learn.microsoft.com/en-us/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions).
+> Dynamics plugins were available for preview only and are no longer supported. We recommend that you create an agent and add actions as needed. For more information, see [Extend bot-based message extension as agents for Microsoft 365 Copilot](https://learn.microsoft.com/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions).
 
 ## Get Microsoft 365 Copilot licenses to enable actions
 
