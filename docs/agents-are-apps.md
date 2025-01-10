@@ -21,9 +21,9 @@ The app package for Microsoft 365, including agents, is a zip file that contains
 
 At minimum, an app package contains:
 
- - The **app manifest** (`manifest.json`), which describes app configuration, capabilities, required resources, and important attributes
- - A **large color icon** (`color.png`), a full-color 92x92 icon to display your agent in the Microsoft Copilot UI and store
- - A **small outline icon** (`outline.png`), a 32x32 icon with transparent background (not currently used in Copilot, but required to pass validation)
+- The **app manifest** (`manifest.json`), which describes app configuration, capabilities, required resources, and important attributes
+- A **large color icon** (`color.png`), a full-color 92x92 icon to display your agent in the Microsoft Copilot UI and store
+- A **small outline icon** (`outline.png`), a 32x32 icon with transparent background (not currently used in Copilot, but required to pass validation)
 
 The app package can also contain declarative agent and API plugin definitions, as well as localization files for other supported languages.
 
@@ -60,7 +60,6 @@ Your color icon:
 :::column-end:::
 :::row-end:::
 
-
 ### Outline icon
 
 The outline icon is used to represent pinned and/or active apps on the Teams app bar. It's not currently used for agents, but still required in order for the app package to pass validation.
@@ -92,14 +91,14 @@ Every app manifest must include the following fields.
 
 | Manifest field | Description |
 |--|--|
-| [version](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#version?context=/microsoft-365-copilot/extensibility/context)| The version number of the app, in the format of MAJOR.MINOR.PATCH ([semver](http://semver.org/) standard). |
-| [id](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#id?context=/microsoft-365-copilot/extensibility/context) | The unique generated identifier for this app from Microsoft Application Registration Portal ([apps.dev.microsoft.com](https://apps.dev.microsoft.com/)), in GUID form. |
-| [developer](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#developer?context=/microsoft-365-copilot/extensibility/context) | Information about the developer, including name, website, and links to privacy policy and terms of use. For apps submitted to AppSource, values must match the value provided in the Partner Center app submission form.
-| [name](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#name?context=/microsoft-365-copilot/extensibility/context) | The name of your app, as displayed to end-users within the application host.|
-| [description](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#description?context=/microsoft-365-copilot/extensibility/context) | Short and long descriptions of your app for users. For apps submitted to AppSource, these values must match the information in your AppSource entry.|
-| [icons](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#icons?context=/microsoft-365-copilot/extensibility/context) | Relative paths to color and outline icon files.|
-| [accentColor](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#accentColor?context=/microsoft-365-copilot/extensibility/context) | A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.|
-| *Definitions for specific app capabilities* | A definition for each app capability, such as personal tabs ([staticTabs](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#staticTabs?context=/microsoft-365-copilot/extensibility/context)), message extensions ([composeExtensions](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#composeExtensions?context=/microsoft-365-copilot/extensibility/context)), or [bots](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview#bots?context=/microsoft-365-copilot/extensibility/context). Declarative agents and API plugins are defined under the [copilotAgents](#copilotagents-definitions) node.
+| [version](/microsoft-365/extensibility/schema/root#version)| The version number of the app, in the format of MAJOR.MINOR.PATCH ([semver](http://semver.org/) standard). |
+| [id](/microsoft-365/extensibility/schema/root#id) | The unique generated identifier for this app from Microsoft Application Registration Portal ([apps.dev.microsoft.com](https://apps.dev.microsoft.com/)), in GUID form. |
+| [developer](/microsoft-365/extensibility/schema/root#developer) | Information about the developer, including name, website, and links to privacy policy and terms of use. For apps submitted to AppSource, values must match the value provided in the Partner Center app submission form. |
+| [name](/microsoft-365/extensibility/schema/root#name) | The name of your app, as displayed to end-users within the application host.|
+| [description](/microsoft-365/extensibility/schema/root#description) | Short and long descriptions of your app for users. For apps submitted to AppSource, these values must match the information in your AppSource entry.|
+| [icons](/microsoft-365/extensibility/schema/root#icons) | Relative paths to color and outline icon files.|
+| [accentColor](/microsoft-365/extensibility/schema/root#accentcolor) | A color to use with and as a background for your outline icons, in [RGB hex value](https://developer.mozilla.org/docs/Web/CSS/CSS_colors/Color_picker_tool), for example `#4464ee`.|
+| *Definitions for specific app capabilities* | A definition for each app capability, such as personal tabs ([staticTabs](/microsoft-365/extensibility/schema/root#statictabs)), message extensions ([composeExtensions](/microsoft-365/extensibility/schema/root#composeextensions)), or [bots](/microsoft-365/extensibility/schema/root#bots). Declarative agents and API plugins are defined under the [copilotAgents](#copilotagents-definitions) node. |
 
 The following example shows an app manifest with placeholder sections at the end for message extension and declarative agent app capabilities.
 
@@ -137,11 +136,11 @@ The following example shows an app manifest with placeholder sections at the end
 }
 ```
 
-To learn more, see [App manifest](/microsoftteams/platform/resources/schema/manifest-schema?context=/microsoft-365-copilot/extensibility/context).
+To learn more, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema).
 
 ### `copilotAgents` definitions
 
-Declarative agents and API plugins each have their own definition schemas. The definition file for a declarative agent is referenced from the `copilotAgents` object of the app manifest.
+Declarative agents and API plugins each have their own definition schemas. The definition file for a declarative agent is referenced from the [copilotAgents](/microsoft-365/extensibility/schema/root-copilot-agents) object of the app manifest.
 
 The following example shows how to reference a declarative agent:
 
@@ -183,3 +182,4 @@ To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-pl
 - [Localize your agent](localize-agents.md)
 - [Manage extensibility for Microsoft 365 Copilot](manage.md)
 - [Publish agents for Microsoft 365 Copilot](publish.md)
+- [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema)

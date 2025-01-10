@@ -29,7 +29,7 @@ Copilot Studio agent builder is available in the following geographies:
 - United Kingdom
 - United States
 
-Geographic availability is based on Copilot Studio’s [data locations](https://learn.microsoft.com/microsoft-copilot-studio/data-location).
+Geographic availability is based on Copilot Studio’s [data locations](/microsoft-copilot-studio/data-location).
 
 ## Agent languages
 

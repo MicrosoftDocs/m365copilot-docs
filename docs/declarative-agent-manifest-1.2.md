@@ -9,7 +9,7 @@ ms.topic: reference
 
 # Declarative agent schema 1.2 for Microsoft 365 Copilot
 
-This article describes the 1.2 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems.
+This article describes the 1.2 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
@@ -288,3 +288,4 @@ Here's an example of a declarative agent manifest file that uses most of the man
 ## Related content
 
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
+- [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema)
