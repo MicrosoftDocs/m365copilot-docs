@@ -129,6 +129,7 @@ The following table lists the Copilot agent types and agent capabilities that ar
 |**Custom engine agents**| :x: | :white_check_mark: | :white_check_mark: |
 
 \* Available with limited capabilities.
+
 \** Coming soon.
 
 ## Frequently asked questions
