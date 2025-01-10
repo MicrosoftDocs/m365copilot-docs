@@ -75,7 +75,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
 
 > [!NOTE]
-> Declarative agents with the OneDrive and SharePoint or Microsoft Graph Connectors capability are only available to licensed Microsoft 365 Copilot Chat users and Microsoft 365 Copilot Chat users in tenants that allow metered usage.
+> Declarative agents with the OneDrive and SharePoint or Microsoft Graph connectors capability are only available to licensed Microsoft 365 Copilot Chat users and Copilot Chat users in tenants that allow metered usage.
 
 #### Example of capabilities
 

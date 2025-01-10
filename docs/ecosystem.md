@@ -23,6 +23,9 @@ The agents, plugins, and connectors you build for Copilot are part of the larger
 
 The Copilot system uses data from a plugin in two stages: (1) it matches the user's prompt to the most relevant skill and parameters, and (2) it determines which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response for the user.
 
+> [!NOTE]
+> Some agent capabilities are only available to licensed Microsoft 365 Copilot Chat users or Copilot Chat users in organizations with metered usage. For details, see [Agent capabilities for licensed, metered, and unlicensed users](#agent-capabilities-for-licensed-metered-and-unlicensed-users).
+
 You can extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. As part of the broader Microsoft 365 ecosystem, your  agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and comprehensive development tools and support.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
@@ -57,10 +60,6 @@ Your plugin or connector also runs outside of Copilot experiences. The following
 |[Microsoft Graph connectors](./overview-graph-connector.md)|Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
 
 Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other Microsoft 365 apps and services are published and managed, both within your organization and within in-product app stores of Microsoft 365 products.
-
-## Agent capabilities in Microsoft 365 Copilot Chat
-
-
 
 ## Unified app model
 
