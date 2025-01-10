@@ -118,7 +118,7 @@ The following table lists the Copilot agent types and agent capabilities that ar
 | Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Copilot Chat (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
 |**Declarative agents**     |  :white_check_mark: * |  :white_check_mark:  * |  :white_check_mark:  |
-|Copilot Studio agent builder | :x: | :white_check_mark: | :white_check_mark: |
+|Copilot Studio agent builder | :x: **| :white_check_mark: | :white_check_mark: |
 |Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Custom instructions and uploaded documents| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Code interpreter | :x: | :white_check_mark: | :white_check_mark: |
@@ -128,7 +128,8 @@ The following table lists the Copilot agent types and agent capabilities that ar
 |Microsoft Graph connector grounding | :x: | :white_check_mark: | :white_check_mark: |
 |**Custom engine agents**| :x: | :white_check_mark: | :white_check_mark: |
 
-/* Available with limited capabilities.
+\* Available with limited capabilities.
+\** Coming soon.
 
 ## Frequently asked questions
 
