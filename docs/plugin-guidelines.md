@@ -71,7 +71,6 @@ The way you describe your plugin to the orchestrator depends on the type of plug
 | Copilot Studio actions | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)  |
 | Message extension plugins | App manifest   | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
 
-
 ## Plugin best practices
 
 This section describes best practices for building high-quality plugins.
@@ -84,7 +83,7 @@ This section describes best practices for building high-quality plugins.
 
 ### Support multi-parameter search queries
 
-To support complex prompts, expand the scope of your search support to handle three or more search query `parameters` simultaneously by enabling multi-parameter support in your plugin [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#composeextensionscommands).
+To support complex prompts, expand the scope of your search support to handle three or more search query `parameters` simultaneously by enabling multi-parameter support in your plugin [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands).
 
 Make sure that search parameters have good descriptions and explicit input types and output formats.
 
@@ -106,7 +105,7 @@ While Copilot provides basic capabilities in reasoning over the output of a plug
 
 ### Provide visually rich responses to user queries
 
-Respond to user input with structured, actionable, and visually rich [Adaptive Cards](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#adaptive-card-response). Make sure that your Adaptive Card responses provide rich information, and include at least one action button and two additional pieces of information (in addition to your app logo, title, thumbnail, and title of the information). It can be useful to provide the most frequently searched attributes, such as *status*, *date*, or *assigned to* fields.
+Respond to user input with structured, actionable, and visually rich [Adaptive Cards](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#adaptive-card-response). Make sure that your Adaptive Card responses provide rich information, and include at least one action button and two additional pieces of information (in addition to your app logo, title, thumbnail, and title of the information). It can be useful to provide the most frequently searched attributes, such as _status_, _date_, or _assigned to_ fields.
 
 ## Related content
 
