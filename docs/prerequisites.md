@@ -11,7 +11,7 @@ ms.date: 01/09/2025
 
 Microsoft 365 Copilot is available to all users in Microsoft 365 organizations. Microsoft 365 Copilot Chat is a broadly accessible, commercial AI chat interface for all Microsoft 365 users, and Copilot Chat users have access to agents that extend Microsoft 365 Copilot. In addition, users in tenants that have metering enabled and licensed users can access Copilot agents with enhanced capabilities.
 
-For information about license requirements for MIcrosoft 365 Copilot, see [License options](/copilot/microsoft-365/microsoft-365-copilot-licensing). 
+For information about license requirements for Microsoft 365 Copilot, see [License options](/copilot/microsoft-365/microsoft-365-copilot-licensing).
 
 This article describes how to set up your development environment to enable you to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work.
 
