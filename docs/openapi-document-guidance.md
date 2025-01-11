@@ -9,7 +9,7 @@ ms.date: 05/21/2024
 
 # How to make an OpenAPI document effective in extending Copilot
 
-Plugins let Microsoft Copilot work with web services and get real-time information. Copilot uses this information to extend its skills. With a plugin, a user can bring real-time data from their line of business (LOB) system on to the Copilot.
+Plugins let Microsoft 365 Copilot Chat work with web services and get real-time information. Copilot uses this information to extend its skills. With a plugin, a user can bring real-time data from their line of business (LOB) system on to the Copilot.
 
 A plugin is comprised of an API service, its OpenAPI description, and a manifest file. The plugin manifest informs Copilot about the API's capabilities. The plugin manifest includes an OpenAPI description for the API service. The OpenAPI description is important because it describes to Copilot how to connect to the API. For optimal plugin performance with Copilot, provide a clear and meaningful OpenAPI description. This document explains the elements that make an OpenAPI description effective for a plugin that extends Copilot.
 

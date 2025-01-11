@@ -74,7 +74,7 @@ In order for end-users in a tenant to use actions (plugins) created and publishe
 
 - Enable the [Microsoft 365 Copilot setting](/microsoft-copilot-studio/copilot-plugins-overview#enable-or-disable-copilot-for-microsoft-365-in-power-platform-admin-center-admin) in **Power Platform admin center** ([admin.powerplatform.com](https://admin.powerplatform.com))
 
-Tenant admins can also enable or disable different types of actions from working within Microsoft 365 Copilot. For more info, see [use actions in Microsoft Copilot](/microsoft-copilot-studio/copilot-plugins-overview#use-actions-in-microsoft-copilot).
+Tenant admins can also enable or disable different types of actions from working within Microsoft 365 Copilot. For more information, see [use actions in Microsoft Copilot](/microsoft-copilot-studio/copilot-plugins-overview#use-actions-in-microsoft-copilot).
 
 ### API plugins
 
