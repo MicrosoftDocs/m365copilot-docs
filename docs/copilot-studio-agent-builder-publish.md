@@ -15,7 +15,7 @@ This article describes how to create or publish agents built with Copilot Studio
 
 While you are [building your agent](copilot-studio-agent-builder.md), changes made to the agent are automatically saved in the agent builder. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
 
-After the agent is created successfully, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft 365 Copilot Chat.
+After the agent is created successfully, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft 365 Copilot.
 
 ## Share the agent
 
@@ -58,8 +58,8 @@ The shared link brings end users to the Microsoft 365 app store to view the deta
 
 To manage an existing agent, you can:
 
-- Select the ellipses (**...**) and **Edit** from a agent on the right rail in Microsoft 365 Copilot Chat.
-- Select **Create agents** from the right rail in Microsoft 365 Copilot Chat, and then select **View all agents** from the name dropdown menu.
+- Select the ellipses (**...**) and **Edit** from a agent on the right rail in Microsoft 365 Copilot.
+- Select **Create agents** from the right rail in Microsoft 365 Copilot, and then select **View all agents** from the name dropdown menu.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-last-accessed.png" alt-text="The View all agents options in the recently accessed agents menu":::
 
@@ -77,7 +77,7 @@ Changes made to agents are automatically saved in the agent builder. Shared user
 
 ### Delete your agent
 
-The agent author can delete their existing agents. After deletion, the agent will no longer be available to the author or shared users to use in Microsoft 365 Copilot Chat.
+The agent author can delete their existing agents. After deletion, the agent will no longer be available to the author or shared users to use in Microsoft 365 Copilot.
 
 >[!IMPORTANT]
 > Deleting a agent is permanent and cannot be reversed.

@@ -22,7 +22,7 @@ The app package for Microsoft 365, including agents, is a zip file that contains
 At minimum, an app package contains:
 
 - The **app manifest** (`manifest.json`), which describes app configuration, capabilities, required resources, and important attributes
-- A **large color icon** (`color.png`), a full-color 92x92 icon to display your agent in the Microsoft 365 Copilot Chat UI and store
+- A **large color icon** (`color.png`), a full-color 92x92 icon to display your agent in the Microsoft 365 Copilot UI and store
 - A **small outline icon** (`outline.png`), a 32x32 icon with transparent background (not currently used in Copilot, but required to pass validation)
 
 The app package can also contain declarative agent and API plugin definitions, as well as localization files for other supported languages.
@@ -40,7 +40,7 @@ For design guidance for color and outline icons for the Microsoft 365 app packag
 
 ### Color icon
 
-The color icon represents your agent within the Microsoft 365 Copilot Chat UI and in-product (Teams, Outlook, Microsoft 365) app stores.
+The color icon represents your agent within the Microsoft 365 Copilot UI and in-product (Teams, Outlook, Microsoft 365) app stores.
 
 :::row:::
 :::column:::

@@ -95,7 +95,7 @@ See the following table to learn about the differences between Copilot extensibi
 
 | Feature | Copilot extensibility | Azure AI services|
 |:--------|:----------------------|:-----------------|
-| Scope   |Focused on extending the capabilities of Microsoft 365 Copilot Chat within the Microsoft 365 ecosystem.| Provide a broad range of AI capabilities, including machine learning, cognitive services, and the Azure OpenAI Service.|
+| Scope   |Focused on extending the capabilities of Microsoft 365 Copilot within the Microsoft 365 ecosystem.| Provide a broad range of AI capabilities, including machine learning, cognitive services, and the Azure OpenAI Service.|
 | Customization| Allows for the creation of plugins, connectors, and declarative agents to enhance productivity tools like Word, Excel, and Teams.|Highly customizable, allowing you to build and deploy AI models tailored to specific business needs.|
 | Integration|Primarily integrates with Microsoft 365 applications, using organizational data and context.|Can be integrated into various applications and services beyond the Microsoft ecosystem.|
 

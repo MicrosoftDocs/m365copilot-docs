@@ -9,11 +9,11 @@ ms.date: 01/09/2025
 
 # Set up your development environment for Microsoft 365 Copilot
 
-Microsoft 365 Copilot is available to all users in Microsoft 365 organizations. Microsoft 365 Copilot Chat is a broadly accessible, commercial AI chat interface for all Microsoft 365 users, and Copilot Chat users have access to agents that extend Microsoft 365 Copilot. In addition, users in tenants that have metering enabled and licensed users can access Copilot agents with enhanced capabilities.
-
-For information about license requirements for Microsoft 365 Copilot, see [License options](/copilot/microsoft-365/microsoft-365-copilot-licensing).
-
 This article describes how to set up your development environment to enable you to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work.
+
+Microsoft 365 Copilot Chat is a broadly accessible, commercial AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend Microsoft 365 Copilot that are grounded on instructions or the web. Users in tenants that have metering enabled and licensed Microsoft 365 Copilot users have access to Copilot agents with enhanced capabilities.
+
+For Microsoft 365 Copilot license information, see [License options](/copilot/microsoft-365/microsoft-365-copilot-licensing).
 
 > [!NOTE]
 > [Microsoft Copilot Pro](https://www.microsoft.com/store/b/copilotpro) (Copilot for individuals) doesn't currently support extensibility.
@@ -22,7 +22,7 @@ This article describes how to set up your development environment to enable you 
 
 You have the following options for a Copilot development environment:
 
-- A Microsoft 365 Developer Program sandbox subscription with a Copilot license (available in limited preview through the [Microsoft 365 Developer TAP membership](#isv-partners-in-microsoft-365-developer-tap)).
+- A Microsoft 365 Developer Program sandbox subscription with a Microsoft 365 Copilot license (available in limited preview through the [Microsoft 365 Developer TAP membership](#isv-partners-in-microsoft-365-developer-tap)).
 
     > [!NOTE]
     > Microsoft 365 Copilot isn't included in [Microsoft 365 Developer Program subscriptions](https://developer.microsoft.com/microsoft-365/dev-program#Subscription). Sandbox subscription availability is currently limited to Independent Software Vendor (ISV) partners who are part of TAP.
@@ -31,6 +31,8 @@ You have the following options for a Copilot development environment:
 
     > [!NOTE]
     > When you build Copilot agents in production environments, you might encounter admin-imposed limitations. For example, administrators can block sideloading of custom apps or might not grant the necessary permissions required to build Microsoft Graph connectors. 
+
+- A Microsoft 365 subscription without a Copilot license, such as [Microsoft 365 Business Basic](https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-basic), if you want to build and test agents for Microsoft 365 Copilot Chat, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 You can also purchase a Microsoft 365 Copilot license and set up a development environment independent of your production environment where you can be your own administrator.
 
@@ -48,7 +50,7 @@ Contact your Microsoft representative to add Copilot to your Microsoft plan. Ent
 
 ### Organizations without Microsoft 365 Copilot licenses
 
-You can develop Copilot extensibility solutions for users in organizations without Copilot licenses or users in tenants that allow metered usage, with some limitations to your agent capabilities. For more information, see [Agent capabilities for licensed, metered, and unlicensed users](#agent-capabilities-for-licensed-metered-and-unlicensed-users).
+You can develop Copilot extensibility solutions for users in organizations without Copilot licenses or users in tenants that allow metered usage, with some limitations to your agent capabilities. For more information, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 ## Requirements for Copilot extensibility options
 
@@ -97,7 +99,7 @@ To use Copilot Studio to create agents and actions, you need the following:
 
 You can use *developer mode* in Copilot to test your test whether and how the orchestrator selects your plugin in response to a given prompt. 
 
-To enable developer mode, in Microsoft 365 Copilot Chat, type `-developer on`. To disable developer mode, type `-developer off`.
+To enable developer mode, in Copilot Chat, type `-developer on`. To disable developer mode, type `-developer off`.
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `Microsoft 365 Copilot` session where user has typed `-developer on` to successfully enable developer mode":::
 
@@ -107,15 +109,15 @@ Developer mode is only available within Microsoft 365 Copilot (Copilot for Work)
 
 Accounts used to test Copilot extensibility need a Microsoft 365 Copilot Developer license. Admins can manage Microsoft 365 Copilot Developer licenses in the Microsoft 365 admin center (under **Billing > Licenses**). You can also [use PowerShell to assign Microsoft 365 licenses to user accounts](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell).
 
-## Agent capabilities for Microsoft 365 Copilot users
+## Agent capabilities for Microsoft 365 users
 
-Microsoft 365 Copilot Chat is available to users in Microsoft 365 organizations via {list surface area information}. 
+Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents via the browser or the in-app experience in Teams and Outlook.
 
-Some types of agents and agent capabilities are only available to licensed Microsoft 365 Copilot Chat users or users in tenants that allow metered usage. 
+Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage.
 
 The following table lists the Copilot agent types and agent capabilities that are available to Microsoft 365 Copilot users based on licensing and metered usage configuration in the tenant. 
 
-| Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Copilot Chat (licensed) |
+| Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
 |**Declarative agents**     |  :white_check_mark: * |  :white_check_mark:  * |  :white_check_mark:  |
 |Copilot Studio agent builder | :x: **| :white_check_mark: | :white_check_mark: |

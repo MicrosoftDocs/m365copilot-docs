@@ -17,9 +17,9 @@ The following known issues apply to declarative agents.
 
 ### Newly installed Copilot agents might not show in the Teams client right away
 
-In some cases, a Copilot agent installed from the store doesn't immediately show up in Microsoft 365 Copilot Chat in the Teams client.
+In some cases, a Copilot agent installed from the store doesn't immediately show up in Copilot Chat in the Teams client.
 
-**Workaround:** The user can switch to another chat and then return to Microsoft 365 Copilot Chat.
+**Workaround:** The user can switch to another chat and then return to Copilot Chat.
 
 ### Power Automate Flows aren't fully supported as actions in declarative agents
 
