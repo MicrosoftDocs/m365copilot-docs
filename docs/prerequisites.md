@@ -11,7 +11,7 @@ ms.date: 01/09/2025
 
 You can build agents to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. This article describes how to set up your development environment to build Copilot extensibility solutions.
 
-Microsoft 365 Copilot Chat is a broadly accessible, commercial AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend Microsoft 365 Copilot that are grounded on instructions or the web. Users in tenants that have metering enabled and users with Microsoft 365 Copilot licenses have access to Copilot agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft Graph connectors.
+Microsoft 365 Copilot Chat is a broadly accessible AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend its capabilities and can be grounded on instructions or the web. Users in tenants that have metering enabled and users with Microsoft 365 Copilot licenses have access to agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft Graph connectors.
 
 For Microsoft 365 Copilot license information, see [License options](/copilot/microsoft-365/microsoft-365-copilot-licensing).
 
@@ -113,7 +113,7 @@ Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizati
 
 Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage.
 
-The following table lists the Copilot agent types and agent capabilities that are available to Microsoft 365 Copilot users based on licensing and metered usage configuration in the tenant. 
+The following table lists the Copilot agent types and agent capabilities that are available to Microsoft 365 Copilot users based on licensing and metered usage configuration in the tenant.
 
 | Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
