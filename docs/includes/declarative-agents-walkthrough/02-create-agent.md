@@ -30,7 +30,7 @@ Begin by creating a basic declarative agent.
 
 ## Test the agent
 
-1. Navigate to the Copilot application with the URL [https://www.microsoft365.com/chat](https://www.microsoft365.com/chat).
+1. Navigate to the Copilot application with the URL [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 
 1. Next to the **New Chat** button, select the conversation drawer icon.
 
