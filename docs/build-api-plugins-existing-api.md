@@ -17,7 +17,7 @@ ms.topic: how-to
 
 ## Prerequisites
 
-- Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md##requirements-for-copilot-extensibility-options)
+- Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - An existing REST API with an OpenAPI specification (this walkthrough uses the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin))
 - [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.9 or later
 - [Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit)

@@ -13,7 +13,7 @@ ms.topic: how-to
 
 [API plugins](overview-api-plugins.md) connect a REST API to Microsoft 365 Copilot. You can use the [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to quickly generate a plugin and a corresponding REST API that you can use as a starting point for your plugin development.
 
-- Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md##requirements-for-copilot-extensibility-options)
+- Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.9 or later
 - [Node.js](https://nodejs.org/) 18.x or 20.x
 
