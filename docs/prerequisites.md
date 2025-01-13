@@ -1,5 +1,5 @@
 ---
-title: Set up your development environment for Microsoft 365 Copilot
+title: Set Up Your Development Environment to Extend Microsoft 365 Copilot
 description: Learn the prerequisites for extending Microsoft 365 Copilot with agents, plugins, and connectors.
 author: maisarissi
 ms.author: maisarissi
@@ -9,9 +9,9 @@ ms.date: 01/09/2025
 
 # Set up your development environment for Microsoft 365 Copilot
 
-This article describes how to set up your development environment to enable you to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work.
+You can build agents to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. This article describes how to set up your development environment to build Copilot extensibility solutions.
 
-Microsoft 365 Copilot Chat is a broadly accessible, commercial AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend Microsoft 365 Copilot that are grounded on instructions or the web. Users in tenants that have metering enabled and licensed Microsoft 365 Copilot users have access to Copilot agents with enhanced capabilities.
+Microsoft 365 Copilot Chat is a broadly accessible, commercial AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend Microsoft 365 Copilot that are grounded on instructions or the web. Users in tenants that have metering enabled and users with Microsoft 365 Copilot licenses have access to Copilot agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft Graph connectors.
 
 For Microsoft 365 Copilot license information, see [License options](/copilot/microsoft-365/microsoft-365-copilot-licensing).
 
