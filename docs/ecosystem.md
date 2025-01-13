@@ -24,7 +24,7 @@ The agents, plugins, and connectors you build for Copilot are part of the larger
 The Copilot system uses data from a plugin in two stages: (1) it matches the user's prompt to the most relevant skill and parameters, and (2) it determines which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response for the user.
 
 > [!NOTE]
-> Some agent capabilities are only available to licensed Microsoft 365 Copilot users or Copilot Chat users in organizations with metered usage. For details, see [Agent capabilities for licensed, metered, and unlicensed users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+> Some agent capabilities are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
 You can extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. As part of the broader Microsoft 365 ecosystem, your  agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and comprehensive development tools and support.
 
@@ -34,7 +34,7 @@ You can extend, enrich, and customize Microsoft 365 Copilot for the unique way y
 
 When you build agents, you can tailor the user experience by providing *in context* and *immersive* experiences.
 
-- **In-context experience**: An in-app experience where users interact with Microsoft 365 Copilot in the context of an app, such as a Teams chat or a Word document. Users can `@`-mention the agent and interact with it directly within the app experience.
+- **In-context experience**: An in-app experience where users interact with Microsoft 365 Copilot Chat in the context of an app, such as a Teams chat or a Word document. Users can `@`-mention the agent and interact with it directly within the app experience.
 
   To build in-context experiences, you can use plugins and declarative agents. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems. 
 
