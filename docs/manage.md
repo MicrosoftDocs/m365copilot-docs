@@ -40,7 +40,7 @@ However, Copilot Studio and Teams Toolkit have different development prerequisit
 
 - For Copilot Studio, see [Prerequisites for creating agents with Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#prerequisites).
 
-- For Teams Toolkit, see [Prerequisites for building agents and plugins](./prerequisites.md#building-with-teams-toolkit).
+- For Teams Toolkit, see [Prerequisites for building agents and plugins](./prerequisites.md#teams-toolkit-requirements).
 
 ### Custom engine agents
 
@@ -48,7 +48,7 @@ However, Copilot Studio and Teams Toolkit have different development prerequisit
 
 Custom engine agents created with Teams Toolkit and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like declarative agents. As Teams bot apps, they can also be managed them through **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)).
 
-For required admin settings for developing custom engine agents, see [Prerequisites for building agents and plugins with Teams Toolkit and other IDEs](./prerequisites.md#building-with-teams-toolkit).
+For required admin settings for developing custom engine agents, see [Prerequisites for building agents and plugins with Teams Toolkit and other IDEs](./prerequisites.md#teams-toolkit-requirements).
 
 #### Custom engine agents created with Copilot Studio
 
@@ -64,7 +64,7 @@ For more on publishing custom engine agents in Copilot Studio, see [Key concepts
 
 Message extension plugins for Copilot can be built using Teams Toolkit and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like regular Teams message extension apps. As Teams  apps, they can also be managed them through **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)).
 
-For required admin settings for developing message extension plugins, see [Prerequisites for building agents and plugins with Teams Toolkit and other IDEs](./prerequisites.md#building-with-teams-toolkit).
+For required admin settings for developing message extension plugins, see [Prerequisites for building agents and plugins with Teams Toolkit and other IDEs](./prerequisites.md#teams-toolkit-requirements).
 
 ### Copilot Studio actions
 
@@ -88,7 +88,7 @@ Microsoft Graph connectors that are packaged as Microsoft 365 apps and published
 
 However, the Teams admin center ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) provides additional admin controls to enable or disable the Microsoft Graph connector within the app, as long as you implement a `graphConnector.notificationUrl` for your app to handle the enable / disable notifications. For more information, see [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context).
 
-For admin prerequisites for developing Microsoft Graph connectors, see [Requirements for developing Microsoft graph connectors](./prerequisites.md#requirements-for-developing-microsoft-graph-connector).
+For admin prerequisites for developing Microsoft Graph connectors, see [Requirements for developing Microsoft graph connectors](./prerequisites.md#requirements-for-microsoft-graph-connectors).
 
 ## Related content
 

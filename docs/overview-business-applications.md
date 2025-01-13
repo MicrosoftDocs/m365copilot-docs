@@ -41,7 +41,7 @@ Actions for Microsoft 365 Copilot use Power Platform components such as Power Au
 You can also create new actions by using Power Platform components in Microsoft Copilot Studio. For more information, see [Copilot connectors, actions, and extensions overview (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
 
 > [!NOTE]
-> Dynamics plugins were available for preview only and are no longer supported. We recommend that you create an agent and add actions as needed. For more information, see [Extend bot-based message extension as agents for Microsoft 365 Copilot](https://learn.microsoft.com/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions).
+> Dynamics plugins were available for preview only and are no longer supported. We recommend that you create an agent and add actions as needed. For more information, see [Extend bot-based message extension as agents for Microsoft 365 Copilot](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions).
 
 ## Get Microsoft 365 Copilot licenses to enable actions
 

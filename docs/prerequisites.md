@@ -22,12 +22,12 @@ For Microsoft 365 Copilot license information, see [License options](/copilot/mi
 
 You have the following options for a Copilot development environment:
 
-- A Microsoft 365 Developer Program sandbox subscription with a Microsoft 365 Copilot license (available in limited preview through the [Microsoft 365 Developer TAP membership](#isv-partners-in-microsoft-365-developer-tap)).
+- A Microsoft 365 Developer Program sandbox subscription with a Microsoft 365 Copilot license (available in limited preview through the [Microsoft 365 Developer TAP membership](#microsoft-365-developer-program-sandbox-subscription-for-isvs)).
 
     > [!NOTE]
     > Microsoft 365 Copilot isn't included in [Microsoft 365 Developer Program subscriptions](https://developer.microsoft.com/microsoft-365/dev-program#Subscription). Sandbox subscription availability is currently limited to Independent Software Vendor (ISV) partners who are part of TAP.
 
-- An eligible [Microsoft 365 or Office 365 production environment](#customers-with-existing-microsoft-365-and-copilot-licenses) with a Microsoft 365 Copilot license.
+- An eligible [Microsoft 365 or Office 365 production environment](#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
     > [!NOTE]
     > When you build Copilot agents in production environments, you might encounter admin-imposed limitations. For example, administrators can block sideloading of custom apps or might not grant the necessary permissions required to build Microsoft Graph connectors. 

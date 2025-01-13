@@ -21,7 +21,7 @@ Before you start, make sure that Microsoft 365 Copilot is available for your org
 The following options are available for your development environment:
 
 - A sandbox Microsoft 365 organization with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
-- An [eligible Microsoft 365 or Office 365 production environment](../../prerequisites.md#customers-with-existing-microsoft-365-and-copilot-licenses) with a Microsoft 365 Copilot license.
+- An [eligible Microsoft 365 or Office 365 production environment](../../prerequisites.md#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
 The following resources are required to complete the steps described in this article:
 
