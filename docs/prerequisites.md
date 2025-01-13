@@ -123,6 +123,7 @@ The following table lists the Copilot agent types and agent capabilities that ar
 |Copilot Studio agent builder | :x: **| :white_check_mark: | :white_check_mark: |
 |Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Custom instructions and uploaded documents| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Code interpreter | :x: | :white_check_mark: | :white_check_mark: |
 |Image generator| :x: | :white_check_mark: | :white_check_mark: |
 |Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
