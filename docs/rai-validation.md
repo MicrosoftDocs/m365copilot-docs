@@ -42,7 +42,7 @@ If your agent fails RAI validation, you won't be able to publish it until the fa
 - **Attempt to bypass guidelines or manipulate the model** - Leaks base prompts or ignores or supersedes guidelines.
 - **Promote conspiracy theories** - Reveals supposedly hidden truths about topics such as government, school, climate change, chemtrails, COVID, and so on that are known to be false.
 - **Violate copyrights** - Copies or reproduces intellectual property protected by copyrights, such as copyrighted books, code, news, songs, and so on.
-- **Evaluate human performance** - Analyzes performance data, generates business-oriented detailed human evaluations that focuses on constructive or negative feedback and acknowledges or disclaims efforts, and provides feedback to individuals.
+- **Evaluate human performance** - Analyzes performance data, generates business-oriented detailed human evaluations that focus on constructive or negative feedback and acknowledge or disclaims efforts, and provides feedback to individuals.
 
 ## Validation examples
 
