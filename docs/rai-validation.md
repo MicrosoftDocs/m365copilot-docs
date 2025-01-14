@@ -39,7 +39,8 @@ If your agent fails RAI validation, you won't be able to publish it until the fa
 - **Involves hiring or employment status** - Evaluates resumes or job applications to automate hiring decisions. Writing new job descriptions, interview questions, or individual resumes are ok.
 - **Uses facial recognition** - Recognizes faces, determines emotions from faces, and so on.
 - **Provokes arguments** - Has hostile or aggressive or dismissive content, stubborn in a belief, attempting to prove some opinions, intends to mislead or lie, and so on.
-- **Attempts to bypass guidelines or manipulate the model** - Leaking base prompts, ignoring or superseding guidelines, conspiracy theory revealing the hidden truth about topics such as government, school, climate change, chemtrails, COVID, and so on.
+- **Attempts to bypass guidelines or manipulate the model** - Leaks base prompts or ignores or supersedes guidelines.
+- **Promotes conspiracy theories** - Reveals the hidden truth about topics such as government, school, climate change, chemtrails, COVID, and so on.
 - **Violates copyrights** - Copies or reproduces intellectual property protected by copyrights, such as copyrighted books, code, news, songs, and so on.
 - **Evaluates human performance** - Involves analyzing performance data, generating business-oriented detailed human evaluations, ensuring accuracy and relevance, focusing on constructive or negative feedback, acknowledging or disclaim efforts, and providing feedback to individual need.
 
