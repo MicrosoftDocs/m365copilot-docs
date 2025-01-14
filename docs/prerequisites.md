@@ -113,7 +113,7 @@ Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizati
 
 Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage.
 
-The following table lists the Copilot agent types and agent capabilities that are available to Microsoft 365 Copilot users based on licensing and metered usage configuration in the tenant.
+The following table lists the agent types and agent capabilities that are available to Microsoft 365 Copilot users based on licensing and metered usage configuration in the tenant.
 
 | Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
