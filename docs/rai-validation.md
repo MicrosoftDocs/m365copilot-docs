@@ -28,20 +28,21 @@ The following RAI components run as part of the declarative agent validation pro
 
 ## RAI validation failures
 
-If your agent fails RAI validation, you won't be able to publish it until the failures are addressed. Your agent might fail validation for one or more of the following reasons:
+If your agent fails RAI validation, you won't be able to publish it until the failures are addressed. Your agent might fail validation if it attempts to:
 
-- **Encourages harmful actions** - Encourages or supports hate, violence, sexual, self-harm, or any illegal or unethical actions, such as anarchy, terrorism, hacking, and so on.
-- **Promotes stereotypes** - Maintains or worsens unfair generalization, bias, stereotypes of social groups, racism, and so on.
-- **Reveals personal information** - Collects specific real-world age, date of birth, gender, race, ethnicity, religion, nationality, immigration status, refugee status, and so on of an individual to expose or reveal it to others or send it elsewhere.
-- **Expresses personal beliefs** - Shows or seeks to convince users of religious, philosophical, political, or other personal or controversial beliefs, opinions, or affiliations, such as religious organizations, political parties, and so on.
-- **Promotes political opinions** - Politically opinionated, encouraging political votes, elections, political campaigns, and so on.
-- **Suggestive or explicit** - Talks about sex life, sexual preferences, or sexual or gender identity in a way that implies judgement or bias.
-- **Involves hiring or employment status** - Evaluates resumes or job applications to automate hiring decisions. Writing new job descriptions, interview questions, or individual resumes are ok.
-- **Uses facial recognition** - Recognizes faces, determines emotions from faces, and so on.
-- **Provokes arguments** - Has hostile or aggressive or dismissive content, stubborn in a belief, attempting to prove some opinions, intends to mislead or lie, and so on.
-- **Attempts to bypass guidelines or manipulate the model** - Leaking base prompts, ignoring or superseding guidelines, conspiracy theory revealing the hidden truth about topics such as government, school, climate change, chemtrails, COVID, and so on.
-- **Violates copyrights** - Copies or reproduces intellectual property protected by copyrights, such as copyrighted books, code, news, songs, and so on.
-- **Evaluates human performance** - Involves analyzing performance data, generating business-oriented detailed human evaluations, ensuring accuracy and relevance, focusing on constructive or negative feedback, acknowledging or disclaim efforts, and providing feedback to individual need.
+- **Encourage harmful actions** - Encourages or supports hate, violence, sexual, self-harm, or any illegal or unethical actions, such as anarchy, terrorism, hacking, and so on.
+- **Promote stereotypes** - Maintains or worsens unfair generalization, bias, stereotypes of social groups, racism, and so on.
+- **Reveal personal information** - Collects specific real-world age, date of birth, gender, race, ethnicity, religion, nationality, immigration status, refugee status, and so on of an individual to expose or reveal it to others or send it elsewhere.
+- **Express personal beliefs** - Shows or seeks to convince users of religious, philosophical, political, or other personal or controversial beliefs, opinions, or affiliations, such as religious organizations, political parties, and so on.
+- **Promote political opinions** - Expresses political opinions or encourages political votes, elections, political campaigns, and so on.
+- **Act with suggestive or explicit intent** - Talks about sex life, sexual preferences, or sexual or gender identity in a way that implies judgement or bias.
+- **Make hiring or employment status evaluations** - Evaluates resumes or job applications to automate hiring decisions. Agents can, however, write new job descriptions, interview questions, or individual resumes.
+- **Use facial recognition** - Recognizes faces, determines emotions from faces, and so on.
+- **Provoke arguments** - Has hostile, aggressive, or dismissive content, is stubborn in a belief, attempts to prove opinions, intends to mislead or lie, and so on.
+- **Attempt to bypass guidelines or manipulate the model** - Leaks base prompts or ignores or supersedes guidelines.
+- **Promote conspiracy theories** - Reveals supposedly hidden truths about topics such as government, school, climate change, chemtrails, COVID, and so on that are known to be false.
+- **Violate copyrights** - Copies or reproduces intellectual property protected by copyrights, such as copyrighted books, code, news, songs, and so on.
+- **Evaluate human performance** - Analyzes performance data, generates business-oriented detailed human evaluations that focus on constructive or negative feedback and acknowledge or disclaims efforts, and provides feedback to individuals.
 
 ## Validation examples
 
