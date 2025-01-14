@@ -9,7 +9,7 @@ ms.date: 01/09/2025
 
 # Set up your development environment for Microsoft 365 Copilot
 
-You can build agents to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. This article describes how to set up your development environment to build Copilot extensibility solutions.
+You can build agents to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. This article describes how to set up your development environment to extend Microsoft 365 Copilot.
 
 Microsoft 365 Copilot Chat is a broadly accessible AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend its capabilities and can be grounded on instructions or the web. Users in tenants that have metering enabled and users with Microsoft 365 Copilot licenses have access to agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft Graph connectors.
 
@@ -111,7 +111,7 @@ Accounts used to test Copilot extensibility need a Microsoft 365 Copilot Develop
 
 Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents via the browser or the in-app experience in Teams and Outlook.
 
-Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage.
+Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage. The agent experience in Word and PowerPoint is available only to licensed users.
 
 The following table lists the agent types and agent capabilities that are available to Microsoft 365 Copilot users based on licensing and metered usage configuration in the tenant.
 
@@ -120,7 +120,7 @@ The following table lists the agent types and agent capabilities that are availa
 |**Declarative agents**     |  :white_check_mark: * |  :white_check_mark:  * |  :white_check_mark:  |
 |Copilot Studio agent builder | :x: **| :white_check_mark: | :white_check_mark: |
 |Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|Custom instructions and uploaded documents| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Code interpreter | :x: | :white_check_mark: | :white_check_mark: |
 |Image generator| :x: | :white_check_mark: | :white_check_mark: |
