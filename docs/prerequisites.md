@@ -119,7 +119,7 @@ The following table lists the agent types and agent capabilities that are availa
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
 |**Declarative agents**     |  :white_check_mark: * |  :white_check_mark:  * |  :white_check_mark:  |
 |Copilot Studio |  :white_check_mark: * |  :white_check_mark:  * |  :white_check_mark:  |
-|Copilot Studio agent builder | :x: **| :white_check_mark: | :white_check_mark: |
+|Copilot Studio agent builder | :x: | :white_check_mark: | :white_check_mark: |
 |Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -131,8 +131,6 @@ The following table lists the agent types and agent capabilities that are availa
 |**Custom engine agents**| :x: | :white_check_mark: | :white_check_mark: |
 
 \* Available with limited capabilities.
-
-\** Coming soon.
 
 ## Frequently asked questions
 
