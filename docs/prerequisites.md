@@ -118,6 +118,7 @@ The following table lists the agent types and agent capabilities that are availa
 | Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
 |**Declarative agents**     |  :white_check_mark: * |  :white_check_mark:  * |  :white_check_mark:  |
+|Copilot Studio |  :white_check_mark: * |  :white_check_mark:  * |  :white_check_mark:  |
 |Copilot Studio agent builder | :x: **| :white_check_mark: | :white_check_mark: |
 |Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -145,11 +146,11 @@ No. Microsoft 365 Developer Program sandbox subscriptions don't support commerce
 
 #### Can Microsoft 365 Developer Program ISV sandbox subscriptions with Copilot be renewed when the licenses expire?
 
-Yes. If you continue to qualify for the ISV sandbox tenant (Microsoft 365 E5 Developer SKU V2), your development environment renews automatically.
+Yes. If you continue to qualify for the ISV sandbox tenant (Microsoft 365 E5 developer subscription), your development environment renews automatically.
 
 #### I'm not an ISV and I don't have a Microsoft 365 Copilot license. Can I get a Microsoft 365 Copilot development environment?
 
-Not at this time. Development environments that include Microsoft 365 Copilot are only available to ISVs currently through Microsoft 365 TAP.
+If you have a Microsoft 365 subscription, you can build and test agents in Microsoft 365 Copilot Chat, with limited capabilities. You need to purchase a Microsoft 365 Copilot license if you want to build agents that are grounded in organizational data. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 ## Security and privacy
 
