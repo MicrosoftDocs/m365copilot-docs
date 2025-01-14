@@ -27,9 +27,9 @@ Suggested prompts are designed to guide users toward the next best actions based
 
 ## Streaming responses
 
-Streaming responses are designed to enhance the user experience by providing real-time updates as the agent processes a request. This approach helps to prevent noticeable delays and makes interactions feel faster and more engaging.
+Streaming responses are designed to enhance the user experience by providing visual real-time updates as the agent processes a request. This approach helps to prevent noticeable delays and makes interactions feel faster and more engaging.
 
-:::image type="content" source="assets/images/agent-ux/streaming-response.gif" alt-text="A screenshot of " border="false":::
+:::image type="content" source="assets/images/agent-ux/streaming-response.png" alt-text="A screenshot of streaming response" border="false":::
 
 You can implement streaming responses using the Teams AI library. For more information, read [Streaming messages](/microsoftteams/platform/bots/streaming-ux?context=/microsoft-365-copilot/extensibility/context).
 
@@ -37,7 +37,7 @@ You can implement streaming responses using the Teams AI library. For more infor
 
 Citations are references to the sources of information used by the agent to generate its responses. These citations are crucial for ensuring transparency, credibility, and trustworthiness in the agent's interactions.
 
-:::image type="content" source="assets/images/agent-ux/citations.png" alt-text="A screenshot of " border="false":::
+:::image type="content" source="assets/images/agent-ux/citations.png" alt-text="A screenshot of citations" border="false":::
 
 ## AI labels and sensitivity labels
 
