@@ -11,7 +11,7 @@ ms.topic: overview
 
 Microsoft 365 Copilot is the user interface for AI. Custom engine agents are sophisticated conversational bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction. Agents act as automated helpers that users interact with to perform tasks grounded in organizational data.
 
-The agent user experience (UX) provides intuitive, efficient, and contextually relevant interactions to enhance user satisfaction and productivity. This article describes the UX features and best practices that you can apply to user interactions in your custom engine agents, including Zero prompt​, suggested prompts​, streaming responses​, and more.
+The agent user experience (UX) provides intuitive, efficient, and contextually relevant interactions to enhance user satisfaction and productivity. This article describes the UX features and best practices that you can apply to user interactions in your custom engine agents.
 
 ## Zero prompt
 
@@ -25,7 +25,7 @@ Suggested prompts are designed to guide users to the next best actions based on 
 
 :::image type="content" source="assets/images/agent-ux/suggested-prompts.png" alt-text="A screenshot of Suggested prompt" border="false":::
 
-## Streaming responses
+## Streaming responses (preview)
 
 Streaming responses are designed to enhance the user experience by providing visual real-time updates as the agent processes a request. This  helps to prevent noticeable delays and makes interactions feel faster and more engaging.
 
@@ -33,7 +33,7 @@ Streaming responses are designed to enhance the user experience by providing vis
 
 You can implement streaming responses by using the Teams AI library. For more information, see [Streaming messages](/microsoftteams/platform/bots/streaming-ux?context=/microsoft-365-copilot/extensibility/context).
 
-## Citations
+## Citations (preview)
 
 Citations are references to the sources of information used by the agent to generate its responses. These citations help to ensure transparency, credibility, and trustworthiness in agent interactions.
 
@@ -51,7 +51,7 @@ Sensitivity labels mark responses or content that contains confidential or sensi
 
 For more information, see [Enhance AI-generated messages](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?context=/microsoft-365-copilot/extensibility/context)
 
-## Feedback loop
+## Feedback loop (preview)
 
 Feedback loops are mechanisms that allow users to provide feedback on an agent's responses. This feedback helps refine and improve the agent's performance over time to help it become more accurate and useful.
 
