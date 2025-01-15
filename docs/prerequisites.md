@@ -121,9 +121,9 @@ The following table lists the agent types and agent capabilities that are availa
 
 | Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
-|**Declarative agents**     |  :white_check_mark: * |  :white_check_mark:  * |  :white_check_mark:  |
-|Copilot Studio |  :white_check_mark: * |  :white_check_mark:  * |  :white_check_mark:  |
-|Copilot Studio agent builder | :x: | :white_check_mark: | :white_check_mark: |
+|**Declarative agents**     |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
+|Copilot Studio |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
+|Copilot Studio agent builder | :white_check_mark: * | :white_check_mark: | :white_check_mark: |
 |Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
