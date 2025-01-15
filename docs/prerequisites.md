@@ -70,7 +70,7 @@ To build agents, you need to complete prerequisites depending on the tool that y
 
 #### Teams Toolkit requirements
 
-Teams Toolkit is available to all Microsoft 365 users. You can use Teams Toolkit to build agents. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Microsoft 365 Copilot license.
+You can use Teams Toolkit to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Microsoft 365 Copilot license.
 
 To build agents with Teams Toolkit and other IDEs, you must have your admin enable the ability to sideload a *custom app* to your tenant. 
 
@@ -116,8 +116,8 @@ The following table lists the agent types and agent capabilities that are availa
 
 | Capability | Copilot Chat (no metered usage)* | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
-|Copilot Studio agent builder | :white_check_mark: * | :white_check_mark: | :white_check_mark: |
-|Copilot Studio |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
+|Copilot Studio agent builder | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|Copilot Studio |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
 |[**Declarative agents**](overview-declarative-agent.md)     | |  |  |
 |Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
