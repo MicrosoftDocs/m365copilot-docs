@@ -15,15 +15,15 @@ The agent user experience (UX) provides intuitive, efficient, and contextually r
 
 ## Prompt starters
 
-Prompt starters, also known as conversation starters, is an agent feature that provides predefined prompts in a chat session to help users initiate interactions.
+Prompt starters, also known as conversation starters, provide predefined prompts in your agent to help users initiate interactions.
 
 :::image type="content" source="assets/images/agent-ux/zero-prompts.png" alt-text="A screenshot of zero prompt" border="false":::
 
-To enable prompt starters for your agents, you can either use **Developer Portal** or add them manually in the app manifest. For more information, see [Create prompt suggestions](/microsoftteams/platform/bots/how-to/conversations/prompt-suggestions?context=/microsoft-365-copilot/extensibility/context).
+You can use **Developer Portal** to add prompt starters or add them manually in the app manifest. For more information, see [Create prompt suggestions](/microsoftteams/platform/bots/how-to/conversations/prompt-suggestions?context=/microsoft-365-copilot/extensibility/context).
 
 ## Suggested prompts​
 
-Suggested prompts are designed to guide users to the next best actions based on the conversation context, user profiles, and organizational preferences. These prompts replace the existing functionality of dynamic suggested actions and can also be displayed within Adaptive Card responses.
+Suggested prompts guide users to the next best actions based on the conversation context, user profiles, and organizational preferences. These prompts replace the existing dynamic suggested actions functionality and can also be displayed within Adaptive Card responses.
 
 :::image type="content" source="assets/images/agent-ux/suggested-prompts.png" alt-text="A screenshot of Suggested prompt" border="false":::
 
