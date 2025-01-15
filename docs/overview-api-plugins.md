@@ -39,6 +39,34 @@ Content-Type: application/json
 
 Copilot responds to the user, using the information returned: "The charge of $500 for Megan's airline ticket has been successfully processed. The Contoso travel budget now has $4,500 remaining in available funds. If you need to make any more transactions or require further assistance with your budget, please let me know!"
 
+## How API plugins work
+
+:::image type="content" source="assets/images/api-plugins/api-plugin-data-flow.svg" alt-text="A sequence diagram showing how an API plugin works" lightbox="assets/images/api-plugins/api-plugin-data-flow.svg":::
+
+1. The user asks the agent "How much is left in the Fourth Coffee lobby renovation budget?"
+1. The agent identifies a budget-related plugin from its available plugins that has a function `GetBudget` to get budget details. It maps parts of the user's question to the parameters of the function: `budgetName=""`.
+1. The agent [asks the user](#confirming-actions) to allow it to send `Fourth Coffee lobby renovation` to the plugin.
+1. The user chooses to allow data to be shared with the plugin once, or chooses to always allow data to be shared for this function.
+1. If the plugin's API requires [authentication](api-plugin-authentication.md), the plugin requests a token or API key from the token store.
+1. The token store returns a token or key. If needed, the token store causes the agent to prompt the user to sign in.
+1. The agent sends a request to the plugin's API, which is hosted outside of Microsoft 365.
+
+    ```http
+    GET /budgets?budgetName=Fourth+Coffee+lobby+renovation
+    ```
+
+1. The API returns an API response in the format specified in it's OpenAPI specification.
+
+    ```json
+    {
+      "name": "Fourth Coffee lobby renovation",
+      "availableFunds": 5000.00
+    }
+    ```
+
+1. The agent generates a response based on the API response.
+1. The agent sends the response "The available funds left in the Fourth Coffee lobby renovation budget are $5000."
+
 ## Confirming actions
 
 Copilot asks the user before sending any data to an API plugin.
