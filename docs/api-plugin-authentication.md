@@ -1,15 +1,15 @@
 ---
-title: Configure Authentication for API plugins in Microsoft 365 Copilot agents
-description: Learn how to set up authentication for API plugins in Microsoft 365 Copilot agents.
+title: Configure Authentication for API plugins in Agents in Microsoft 365 Copilot
+description: Learn how to set up authentication for API plugins in agents running in Microsoft 365 Copilot.
 author: jasonjoh
 ms.author: jasonjoh
 ms.date: 01/03/2025
 ms.topic: conceptual
 ---
 
-# Configure Authentication for API plugins in Microsoft 365 Copilot agents
+# Configure authentication for API plugins in agents
 
-You can configure authentication for API plugins in Microsoft 365 Copilot agents using any of the four supported authentication schemes to seamlessly connect to their backend APIs.
+You can configure authentication for API plugins in agents running in Microsoft 365 Copilot by using any of the four supported authentication schemes to seamlessly connect to their backend APIs:
 
 - OAuth 2.0 authorization code flow
 - Microsoft Entra ID single-sign on (SSO) authentication
@@ -18,7 +18,7 @@ You can configure authentication for API plugins in Microsoft 365 Copilot agents
 
 ## OAuth 2.0 authorization code flow
 
-This authentication scheme allows a plugin to access an API using a bearer token obtained through the OAuth 2.0 authorization code flow, with optional Proof Key for Code Exchange (PKCE) support.
+A plugin can access an API using a bearer token obtained through the OAuth 2.0 authorization code flow, with optional Proof Key for Code Exchange (PKCE) support.
 
 Before you begin, you need to register with your OAuth 2.0 provider to get a client ID and secret. If your OAuth provider requires you to specify allowed redirect URIs during app registration, make sure to include `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` in the list.
 
@@ -47,9 +47,9 @@ To enable OAuth 2.0 authentication, you need to register an OAuth client in the 
 
 ### Register an OAuth client with Teams Toolkit
 
- Teams Toolkit registers your OAuth client and updates your app package for you when you [create a Copilot agent with API plugin from an existing OpenAPI document](build-api-plugins-existing-api.md). You must have the `securitySchemes` property defined in your OpenAPI document.
+ Teams Toolkit registers your OAuth client and updates your app package for you when you [create an agent with API plugin from an existing OpenAPI document](build-api-plugins-existing-api.md). You must have the `securitySchemes` property defined in your OpenAPI document.
 
-If your OAuth provider supports PKCE, uncomment the following line of code in teamsapp.yml in your Copilot agent project before provisioning the agent.
+If your OAuth provider supports PKCE, uncomment the following line of code in teamsapp.yml in your agent project before provisioning the agent.
 
 ```yml
 # isPKCEEnabled: true
@@ -199,7 +199,7 @@ To enable API key authentication, you need to register the API key in the Teams 
 
 #### Register an API key with Teams Toolkit
 
- Teams Toolkit registers your API key and updates your app package for you when you create a Copilot agent with API plugin from an existing OpenAPI document. You must have the `securitySchemes` property defined in your OpenAPI document.
+ Teams Toolkit registers your API key and updates your app package for you when you create an agent with API plugin from an existing OpenAPI document. You must have the `securitySchemes` property defined in your OpenAPI document.
 
 > [!NOTE]
 > Teams Toolkit only supports API keys as bearer tokens and can't create API plugins based on OpenAPI documents that use a custom header or query parameter. As a workaround, you can temporarily remove the `securitySchemes` and `security` properties from your OpenAPI to generate the plugin package, then add them back to the OpenAPI document in the plugin project before provisioning. You need to manually register the API key.

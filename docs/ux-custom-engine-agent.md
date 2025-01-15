@@ -29,7 +29,7 @@ Suggested prompts guide users to the next best actions based on the conversation
 
 For more information, see [Create prompt suggestions](/microsoftteams/platform/bots/how-to/conversations/prompt-suggestions?context=/microsoft-365-copilot/extensibility/context).
 
-## Streaming responses (preview)
+## Streaming responses (developer preview)
 
 Streaming responses are designed to enhance the user experience by providing visual real-time updates as the agent processes a request. This  helps to prevent noticeable delays and makes interactions feel faster and more engaging.
 
