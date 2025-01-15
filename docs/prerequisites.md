@@ -24,7 +24,7 @@ You have the following options for a Copilot development environment:
     > [!NOTE]
     > - Microsoft 365 Copilot isn't included in [Microsoft 365 Developer Program subscriptions](https://developer.microsoft.com/microsoft-365/dev-program#Subscription). Sandbox subscription availability is currently limited to Independent Software Vendor (ISV) partners who are part of TAP.
 
-- A Microsoft 365 Developer Program sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who qualify for a developer subscription can use their subscription to develop agents with limited capabilities. At this time the subscription doesn't support commerce so you can't enable metering or purchase a license to ground your agent on organizational data or add other capabilities.
+- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities. At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 - An eligible [Microsoft 365 or Office 365 production environment](#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
@@ -60,15 +60,6 @@ You can extend Microsoft 365 Copilot with the intelligence of external services 
 - By extending the knowledge in Copilot with [Microsoft Graph connectors](overview-graph-connector.md).
 
 To learn more and choose the best extensibility path for your users, see [Extensibility options for Copilot](decision-guide.md).
-
-### Requirements for Microsoft Graph connectors
-
-To build Microsoft Graph connectors, you must have a search administrator in your organization do the following:
-
-- [Register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for the required Microsoft Graph permissions in **Microsoft Entra admin center** ([entra.microsoft.com](https://entra.microsoft.com/)). 
-    - This might not be an option if you're working in a production environment. Any deployed Microsoft Graph connector is accessible tenant-wide unless the external items security is locked down.
-- Make sure that Microsoft Graph connections that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) via the **Search & intelligence** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
-
 
 ### Requirements for agents
 
@@ -108,7 +99,7 @@ Developer mode is only available within Microsoft 365 Copilot (Copilot for Work)
 
 ## Microsoft 365 Copilot developer licenses
 
-Accounts used to test agents that are grounded on organizational data or include enhanced capabilities need a Microsoft 365 Copilot Developer license. Admins can manage Microsoft 365 Copilot Developer licenses in the Microsoft 365 admin center (under **Billing > Licenses**). You can also [use PowerShell to assign Microsoft 365 licenses to user accounts](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell).
+Accounts used to test agents that are grounded on organizational data or that include enhanced capabilities need a Microsoft 365 Copilot Developer license. Admins can manage Microsoft 365 Copilot Developer licenses in the Microsoft 365 admin center (under **Billing > Licenses**). You can also [use PowerShell to assign Microsoft 365 licenses to user accounts](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell).
 
 ## Agent capabilities for Microsoft 365 users
 

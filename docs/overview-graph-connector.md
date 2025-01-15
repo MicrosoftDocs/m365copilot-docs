@@ -39,10 +39,17 @@ The [Microsoft Graph connectors gallery](https://www.microsoft.com/microsoft-sea
 
 With more than 100 connectors currently available, you can connect to popular Microsoft and non-Microsoft services such as Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and many more.
 
-
 ## Create your own custom Microsoft Graph connection
 
 You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph. You can use the Microsoft Graph connectors APIs to create and manage external Microsoft Graph connections, define, and register the schema of external data types, ingest external data items into Microsoft Graph, and sync external groups.
+
+## Requirements for Microsoft Graph connectors
+
+To build Microsoft Graph connectors, you must have a search administrator in your organization do the following:
+
+- [Register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for the required Microsoft Graph permissions in **Microsoft Entra admin center** ([entra.microsoft.com](https://entra.microsoft.com/)). 
+    - This might not be an option if you're working in a production environment. Any deployed Microsoft Graph connector is accessible tenant-wide unless the external items security is locked down.
+- Make sure that Microsoft Graph connections that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) via the **Search & intelligence** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
 ## Configuring your custom Microsoft Graph connection for Microsoft 365 Copilot
 
