@@ -1,5 +1,5 @@
 ---
-title: Custom engine agents user-experience
+title: User Experience for Custom Engine Agents in Microsoft 365 Copilot
 description: Custom engine agents are sophisticated conversational bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction.
 author: girliemac
 ms.author: timura
@@ -7,9 +7,9 @@ ms.date: 01/15/2025
 ms.topic: overview
 ---
 
-# Custom engine agents user-experience
+# Custom engine agents user experience
 
-Think of Copilot as the user interface for AI. And agents are what users interact with through the Copilot UI, allowing them to perform various tasks by accessing and utilizing organizational data sources, effectively acting as automated helpers within the Copilot platform.
+Microsoft 365 Copilot is the user interface for AI. Custom engine agents are extensions of Microsoft 365 Copilot that users interact with to access organizational data to perform various tasks. Agents act as automated helpers within the Copilot platform.
 
 The user experience (UX) in agents lies in its ability to provide intuitive, efficient, and contextually relevant interactions, enhancing user satisfaction and productivity. And the user interactions in custom engine agents include Zero prompts​, Suggested prompts​, Streaming responses​, and more. This article walks you through the UX features and the best practice that you should be aware when building agents.
 

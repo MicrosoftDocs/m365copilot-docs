@@ -73,7 +73,7 @@
     items:
     - name: Custom engine agent overview
       href: overview-custom-engine-agent.md
-    - name: Custom engine agent user-experience
+    - name: Custom engine agent user experience
       href: ux-custom-engine-agent.md
     - name: Use VS Code and Teams AI library
       items:
