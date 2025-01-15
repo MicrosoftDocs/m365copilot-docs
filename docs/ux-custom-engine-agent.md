@@ -43,7 +43,7 @@ Citations are references to the sources of information used by the agent to gene
 
 :::image type="content" source="assets/images/agent-ux/citations.png" alt-text="A screenshot of citations" border="false":::
 
-Citations are returned by the model, and you can interact them with Teams AI Library. See [the SDK reference](/javascript/api/%40microsoft/teams-ai/citation?context=/microsoft-365-copilot/extensibility/context&view=msteams-client-js-latest).
+Citations are returned by the model, and you can interact them with Teams AI Library. See [the SDK reference](/javascript/api/%40microsoft/teams-ai/citation?context=/microsoft-365-copilot/extensibility/context).
 
 ## AI labels and sensitivity labels
 
