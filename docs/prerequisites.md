@@ -30,7 +30,7 @@ You have the following options for a Copilot development environment:
 - An eligible [Microsoft 365 or Office 365 production environment](#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
     > [!NOTE]
-    > When you build Copilot agents in production environments, you might encounter admin-imposed limitations. For example, administrators can block sideloading of custom apps or might not grant the necessary permissions required to build Microsoft Graph connectors. 
+    > When you build agents in production environments, you might encounter admin-imposed limitations. For example, administrators can block sideloading of custom apps or might not grant the necessary permissions required to build Microsoft Graph connectors. 
 
 - A Microsoft 365 subscription without a Copilot license, such as [Microsoft 365 Business Basic](https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-basic), if you want to build and test agents for Microsoft 365 Copilot Chat, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
@@ -73,7 +73,7 @@ To build Microsoft Graph connectors, you must have a search administrator in you
 
 ### Requirements for agents
 
-To build Copilot agents, you need to complete prerequisites depending on the tool that you choose to use.
+To build agents, you need to complete prerequisites depending on the tool that you choose to use.
 
 > [!NOTE]
 > Some agent capabilities are only available to users in tenants with metered usage enabled or users with Microsoft 365 Copilot licenses. For example, if you want to build agents that are grounded in organizational data, you need to enable metering or purchase a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
@@ -124,7 +124,7 @@ The following table lists the agent types and agent capabilities that are availa
 
 | Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
-|**Declarative agents**     |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
+|[**Declarative agents**](overview-declarative-agent.md)     |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
 |Copilot Studio |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
 |Copilot Studio agent builder | :white_check_mark: * | :white_check_mark: | :white_check_mark: |
 |Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -135,7 +135,7 @@ The following table lists the agent types and agent capabilities that are availa
 |Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |SharePoint data grounding| :x: | :white_check_mark: | :white_check_mark: |
 |Microsoft Graph connector grounding | :x: | :white_check_mark: | :white_check_mark: |
-|**Custom engine agents**| :x: | :white_check_mark: | :white_check_mark: |
+|[**Custom engine agents**](overview-custom-engine-agent)| :x: | :white_check_mark: | :white_check_mark: |
 
 \* Available with limited capabilities.
 

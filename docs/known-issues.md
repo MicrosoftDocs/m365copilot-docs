@@ -15,9 +15,9 @@ This article provides information about known issues related to Microsoft 365 Co
 
 The following known issues apply to declarative agents.
 
-### Newly installed Copilot agents might not show in the Teams client right away
+### Newly installed agents might not show in the Teams client right away
 
-In some cases, a Copilot agent installed from the store doesn't immediately show up in Copilot Chat in the Teams client.
+In some cases, a agent installed from the store doesn't immediately show up in Copilot Chat in the Teams client.
 
 **Workaround:** The user can switch to another chat and then return to Copilot Chat.
 

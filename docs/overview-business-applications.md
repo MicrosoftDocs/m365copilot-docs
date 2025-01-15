@@ -72,7 +72,7 @@ You can use the built-in actions shipped by Microsoft in your Microsoft 365 Copi
 
 1. Open the Copilot app. If the Copilot app isn't in your sidebar, search in the Teams app store.
 
-1. In the right pane, choose **Get Copilot agents**.
+1. In the right pane, choose **Get agents**.
 
 1. Choose the app that you deployed from the **Apps** menu.
 
