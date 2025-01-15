@@ -70,6 +70,8 @@ To build agents, you need to complete prerequisites depending on the tool that y
 
 #### Teams Toolkit requirements
 
+Teams Toolkit is available to all Microsoft 365 users. You can use Teams Toolkit to build agents. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Microsoft 365 Copilot license.
+
 To build agents with Teams Toolkit and other IDEs, you must have your admin enable the ability to sideload a *custom app* to your tenant. 
 
 To enable sideloading, from Teams admin center, select **Teams apps** > **Setup policies** > **Global (Org-wide default)**, and switch the  **Upload custom apps** toggle to **On**.
@@ -117,30 +119,14 @@ The following table lists the agent types and agent capabilities that are availa
 |Copilot Studio agent builder | :white_check_mark: * | :white_check_mark: | :white_check_mark: |
 |Copilot Studio |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
 |[**Declarative agents**](overview-declarative-agent.md)     |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
-|- Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|- Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|- Code interpreter | :x: | :white_check_mark: | :white_check_mark: |
-|- Image generator| :x: | :white_check_mark: | :white_check_mark: |
-|- Custom knowledge: File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|- Custom knowledge: Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|- Custom knowledge: SharePoint data grounding| :x: | :white_check_mark: | :white_check_mark: |
-|- Custom knowledge: Microsoft Graph connector grounding | :x: | :white_check_mark: | :white_check_mark: |
-|[**Custom engine agents**](overview-custom-engine-agent)| :x: | :white_check_mark: | :white_check_mark: |
-
-
-| Capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
-|:--------------------------|:---------------------------|:-----------------------------|:------------------------|
-|Copilot Studio agent builder | :white_check_mark: * | :white_check_mark: | :white_check_mark: |
-|Copilot Studio |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
-|[**Declarative agents**](overview-declarative-agent.md)     |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
-|     Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|     Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|     Code interpreter | :x: | :white_check_mark: | :white_check_mark: |
-|     Image generator| :x: | :white_check_mark: | :white_check_mark: |
-|     Custom knowledge: File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|     Custom knowledge: Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|     Custom knowledge: SharePoint data grounding| :x: | :white_check_mark: | :white_check_mark: |
-|     Custom knowledge: Microsoft Graph connector grounding | :x: | :white_check_mark: | :white_check_mark: |
+|<ul><li>Custom actions</li>| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|<ul><li>Custom instructions</li> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|<ul><li>Code interpreter</li> | :x: | :white_check_mark: | :white_check_mark: |
+|<ul><li>Image generator</li>| :x: | :white_check_mark: | :white_check_mark: |
+|<ul><li>Custom knowledge: File upload</li> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|<ul><li>Custom knowledge: Web search</li> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|<ul><li>Custom knowledge: SharePoint data grounding</li>| :x: | :white_check_mark: | :white_check_mark: |
+|<ul><li>Custom knowledge: Microsoft Graph connector grounding</li> | :x: | :white_check_mark: | :white_check_mark: |
 |[**Custom engine agents**](overview-custom-engine-agent)| :x: | :white_check_mark: | :white_check_mark: |
 
 
