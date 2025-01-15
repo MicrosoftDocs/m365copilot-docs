@@ -3,7 +3,7 @@ title: Use the Copilot Studio Agent Builder to Build Agents
 description: Learn how to build agents by using Copilot Studio agent builder in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
-ms.date: 01/09/2025
+ms.date: 01/15/2025
 ms.topic: conceptual
 ---
 

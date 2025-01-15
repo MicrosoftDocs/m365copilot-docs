@@ -4,7 +4,7 @@ description: Learn the prerequisites for extending Microsoft 365 Copilot with ag
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
-ms.date: 01/09/2025
+ms.date: 01/15/2025
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -24,14 +24,14 @@ You have the following options for a Copilot development environment:
     > [!NOTE]
     > - Microsoft 365 Copilot isn't included in [Microsoft 365 Developer Program subscriptions](https://developer.microsoft.com/microsoft-365/dev-program#Subscription). Sandbox subscription availability is currently limited to Independent Software Vendor (ISV) partners who are part of TAP.
 
-- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities. At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
+- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities. At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 - An eligible [Microsoft 365 or Office 365 production environment](#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
     > [!NOTE]
     > When you build agents in production environments, you might encounter admin-imposed limitations. For example, administrators can block sideloading of custom apps or might not grant the necessary permissions required to build Microsoft Graph connectors. 
 
-- A Microsoft 365 subscription without a Copilot license, such as [Microsoft 365 Business Basic](https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-basic), if you want to build and test agents for Microsoft 365 Copilot Chat, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
+- A Microsoft 365 subscription without a Copilot license, such as [Microsoft 365 Business Basic](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-basic), if you want to build and test agents for Microsoft 365 Copilot Chat, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 You can also purchase a Microsoft 365 Copilot license and set up a development environment independent of your production environment where you can be your own administrator.
 
@@ -82,7 +82,7 @@ To manage your sideloaded custom apps, including agents, from the Teams client, 
 
 #### Copilot Studio requirements
 
-Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio and the Copilot Studio agent builder to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Enabling agents in Microsoft 365 Copilot Chat](https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/enabling-agents-in-microsoft-365-copilot-chat/).
+Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio and the Copilot Studio agent builder to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Enabling agents in Microsoft 365 Copilot Chat](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/enabling-agents-in-microsoft-365-copilot-chat/).
 
 The following steps are required for you to use Copilot Studio to build agents:
 
@@ -114,23 +114,7 @@ Some agent types and and agent capabilities are only available to licensed Micro
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and metered usage configuration in the tenant.
 
-| Capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
-|:--------------------------|:---------------------------|:-----------------------------|:------------------------|
-|Copilot Studio agent builder | :white_check_mark: * | :white_check_mark: | :white_check_mark: |
-|Copilot Studio |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
-|[**Declarative agents**](overview-declarative-agent.md)     |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
-|<ul><li>Custom actions</li>| :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|<ul><li>Custom instructions</li> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|<ul><li>Code interpreter</li> | :x: | :white_check_mark: | :white_check_mark: |
-|<ul><li>Image generator</li>| :x: | :white_check_mark: | :white_check_mark: |
-|<ul><li>Custom knowledge: File upload</li> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|<ul><li>Custom knowledge: Web search</li> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|<ul><li>Custom knowledge: SharePoint data grounding</li>| :x: | :white_check_mark: | :white_check_mark: |
-|<ul><li>Custom knowledge: Microsoft Graph connector grounding</li> | :x: | :white_check_mark: | :white_check_mark: |
-|[**Custom engine agents**](overview-custom-engine-agent)| :x: | :white_check_mark: | :white_check_mark: |
-
-
-| Capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
+| Capability | Copilot Chat (no metered usage)* | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
 |Copilot Studio agent builder | :white_check_mark: * | :white_check_mark: | :white_check_mark: |
 |Copilot Studio |  :white_check_mark: * |  :white_check_mark:   |  :white_check_mark:  |
@@ -143,10 +127,10 @@ The following table lists the agent types and agent capabilities that are availa
 |Custom knowledge: Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Custom knowledge: SharePoint data grounding| :x: | :white_check_mark: | :white_check_mark: |
 |Custom knowledge: Microsoft Graph connector grounding | :x: | :white_check_mark: | :white_check_mark: |
-|[**Custom engine agents**](overview-custom-engine-agent)| :x: | :white_check_mark: | :white_check_mark: |
+|[**Custom engine agents**](overview-custom-engine-agent.md)| :x: | :white_check_mark: | :white_check_mark: |
 
 
-\* Available with limited capabilities.
+\* Usage limits apply to all included features.
 
 ## Frequently asked questions
 

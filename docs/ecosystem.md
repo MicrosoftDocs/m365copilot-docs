@@ -4,7 +4,7 @@ description: Agents, plugins, and connectors run across the Microsoft 365 ecosys
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 01/09/2025
+ms.date: 01/15/2025
 ---
 
 # Copilot extensibility in the Microsoft 365 ecosystem
