@@ -73,7 +73,10 @@ To build Microsoft Graph connectors, you must have a search administrator in you
 
 ### Requirements for agents
 
-In addition to a Microsoft 365 Copilot license, to build Copilot agents, you need to complete prerequisites depending on the tool that you choose to use. 
+To build Copilot agents, you need to complete prerequisites depending on the tool that you choose to use.
+
+> [!NOTE]
+> Some agent capabilities are only available to users in tenants with metered usage enabled or users with Microsoft 365 Copilot licenses. For example, if you want to build agents that are grounded in organizational data, you need to enable metering or purchase a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 #### Teams Toolkit requirements
 
@@ -87,9 +90,10 @@ To manage your sideloaded custom apps, including agents, from the Teams client, 
 
 #### Copilot Studio requirements
 
-To use Copilot Studio to create agents and actions, you need the following:
+Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio and the Copilot Studio agent builder to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Enabling agents in Microsoft 365 Copilot Chat]().
 
-- A [Microsoft Copilot Studio license](/microsoft-copilot-studio/requirements-licensing-subscriptions) (or an existing Power Virtual Agents license).
+The following steps are required for you to use Copilot Studio to build agents:
+
 - Your Power Platform admin or Dynamics 365 admin must [enable Generative AI features](/power-platform/admin/geographical-availability-copilot) in Power Platform admin center.
 - Your Microsoft 365 tenant admin must [deploy the Copilot Studio app in the Microsoft 365 admin center](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-copilot-studio-app-in-microsoft-365-admin-center-admin).
 
@@ -109,7 +113,7 @@ Accounts used to test Copilot extensibility need a Microsoft 365 Copilot Develop
 
 ## Agent capabilities for Microsoft 365 users
 
-Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents via the browser or the in-app experience in Teams and Outlook.
+Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents via the browser or the in-app experience in Teams.
 
 Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage. The agent experience in Word and PowerPoint is available only to licensed users.
 
