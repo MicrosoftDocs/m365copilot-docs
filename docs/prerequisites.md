@@ -115,9 +115,12 @@ Accounts used to test Copilot extensibility need a Microsoft 365 Copilot Develop
 
 Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents via the browser or the in-app experience in Teams.
 
-Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage. The agent experience in Word and PowerPoint is available only to licensed users.
+> [!NOTE]
+> Copilot Chat and the agent experience in Word and PowerPoint is available only to users with a Microsoft 365 Copilot license.
 
-The following table lists the agent types and agent capabilities that are available to Microsoft 365 Copilot users based on licensing and metered usage configuration in the tenant.
+Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage. 
+
+The following table lists the agent types and agent capabilities that are available to users based on licensing and metered usage configuration in the tenant.
 
 | Agent type and capability | Copilot Chat (no metered usage) | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
@@ -142,9 +145,9 @@ The following table lists the agent types and agent capabilities that are availa
 
 Yes. If you have a Microsoft 365 Business Standard or Business Premium license, you can [purchase a license for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365) on a one-year or three-year term basis.
 
-#### Can I use my Microsoft 365 Developer Program instant sandbox to develop with Copilot?
+#### Can I use my Microsoft 365 Developer Program developer subscription to develop with Copilot?
 
-No. Microsoft 365 Developer Program sandbox subscriptions don't support commerce and you can't purchase Microsoft 365 Copilot for it.
+You can use your Microsoft 365 Developer Program subscription to build agents with limited capabilities that are grounded on web search. Because Microsoft 365 Developer Program subscriptions don't support commerce, you can't purchase Microsoft 365 Copilot licenses, so you can't use your subscription to build agents grounded on organizational data or add other capabilities.
 
 #### Can Microsoft 365 Developer Program ISV sandbox subscriptions with Copilot be renewed when the licenses expire?
 
