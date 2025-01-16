@@ -127,8 +127,8 @@ The following table lists the agent types and agent capabilities that are availa
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image generator| :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SharePoint data grounding| :x: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft Graph connector</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grounding | :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SharePoint data</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grounding| :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft Graph</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connector grounding | :x: | :white_check_mark: | :white_check_mark: |
 |[**Custom engine agents**](overview-custom-engine-agent.md)| :x: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
