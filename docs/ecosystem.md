@@ -4,7 +4,7 @@ description: Agents, plugins, and connectors run across the Microsoft 365 ecosys
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
-ms.date: 10/31/2024
+ms.date: 01/15/2025
 ---
 
 # Copilot extensibility in the Microsoft 365 ecosystem
@@ -23,6 +23,9 @@ The agents, plugins, and connectors you build for Copilot are part of the larger
 
 The Copilot system uses data from a plugin in two stages: (1) it matches the user's prompt to the most relevant skill and parameters, and (2) it determines which results from the plugin are the best response to the user's prompt. The first stage corresponds to steps 1-4 in the data flow diagram; the second stage happens as Copilot prepares a response for the user.
 
+> [!NOTE]
+> Some agent capabilities are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+
 You can extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. As part of the broader Microsoft 365 ecosystem, your  agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and comprehensive development tools and support.
 
 [!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
@@ -31,7 +34,7 @@ You can extend, enrich, and customize Microsoft 365 Copilot for the unique way y
 
 When you build agents, you can tailor the user experience by providing *in context* and *immersive* experiences.
 
-- **In-context experience**: An in-app experience where users interact Business Chat (BizChat) in the context of an app, such as a Teams chat or a Word document. Users can `@`-mention the agent and interact with it directly within the app experience.
+- **In-context experience**: An in-app experience where users interact with Microsoft 365 Copilot Chat in the context of an app, such as a Teams chat or a Word document. Users can `@`-mention the agent and interact with it directly within the app experience.
 
   To build in-context experiences, you can use plugins and declarative agents. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems. 
 
@@ -42,11 +45,11 @@ When you build agents, you can tailor the user experience by providing *in conte
 :::image type="content" source="assets/images/copilot-experiences.png" alt-text="This illustration shows two distinct copilot user experiences, in context and immersive" border="false":::
 
 > [!NOTE]
-> BizChat is the full-featured and secure chat experience for Microsoft 365 Copilot. BizChat is available on the web via the Microsoft 365 App and is integrated into Teams, Outlook, Word, and PowerPoint.​
+> Microsoft 365 Copilot Chat is the full-featured and secure chat experience for Microsoft 365 Copilot. Microsoft 365 Copilot Chat is available on the web via the Microsoft 365 Copilot app and is integrated into Teams and Outlook.​
 
 ## Plugin and connector availability in Microsoft 365 experiences
 
-Over 350 million users are active daily across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, PowerPoint, and the Microsoft 365 app. When you write a plugin or connector, it can reach all the apps that support Copilot extensibility across Microsoft 365.
+Over 350 million users are active daily across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, PowerPoint, and the Microsoft 365 Copilot app. When you write a plugin or connector, it can reach all the apps that support Copilot extensibility across Microsoft 365.
 
 Your plugin or connector also runs outside of Copilot experiences. The following table lists all the ways the skills and knowledge from your plugins and connectors are available to users within an organization.
 
@@ -54,7 +57,7 @@ Your plugin or connector also runs outside of Copilot experiences. The following
 |----------|-----------|------------|
 |[Teams message extension plugins](./overview-message-extension-bot.md)|Microsoft 365 Copilot, Teams, Outlook| [Agents are Microsoft 365 apps](./agents-are-apps.md) |
 |[Power Platform connector plugins](/connectors/connectors)|Microsoft 365 Copilot, Power Automate, Power apps, Azure Logic apps| [Connectors overview](/connectors/connectors)|
-|[Microsoft Graph connectors](./overview-graph-connector.md)|Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
+|[Microsoft Graph connectors](./overview-graph-connector.md)|Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 Copilot app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
 
 Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other Microsoft 365 apps and services are published and managed, both within your organization and within in-product app stores of Microsoft 365 products.
 
@@ -98,6 +101,6 @@ Microsoft 365 Copilot [developer mode](./debugging-copilot-plugin.md) provides a
 
 ## Microsoft security, trust, and commitment to Responsible AI
 
-Microsoft 365 Copilot is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary.  Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more info, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
+Microsoft 365 Copilot is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary. Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more information, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
 
-To learn more as a developer of Copilot extensibility solutions, see [Data, Privacy, and Security considerations of extending Microsoft 365 Copilot](./data-privacy-security.md)
+For more information for Copilot extensibility solution developers, see [Data, Privacy, and Security considerations for extending Microsoft 365 Copilot](./data-privacy-security.md).

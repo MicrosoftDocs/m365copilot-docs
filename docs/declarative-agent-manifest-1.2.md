@@ -3,7 +3,7 @@ title: Declarative agent schema 1.2 for Microsoft 365 Copilot
 description: Learn about the 1.2 schema for a manifest file for declarative agents in Microsoft 365 Copilot
 author: rimisra2
 ms.author: rimisra
-ms.date: 11/13/2024
+ms.date: 01/15/2025
 ms.topic: reference
 ---
 
@@ -81,6 +81,9 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
 - [Graphic art object](#graphic-art-object)
 - [Code interpreter object](#code-interpreter-object)
+ 
+> [!NOTE]
+> Declarative agents with the OneDrive and SharePoint, Microsoft Graph connectors, graphic art, or code interpreter capability are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
 
 #### Example of capabilities
 

@@ -73,18 +73,18 @@
     items:
     - name: Custom engine agent overview
       href: overview-custom-engine-agent.md
+    - name: Custom engine agent user experience
+      href: ux-custom-engine-agent.md
     - name: Use VS Code and Teams AI library
       items:
       - name: Teams AI library overview
         href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context
-      - name: Core capabilities of the Teams AI library
-        href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities?context=/microsoft-365-copilot/extensibility/context
-      - name: Build custom engine agent using Teams Toolkit
-        href: /microsoftteams/platform/teams-ai-library-tutorial
-      - name: Quick start sample for the Teams AI library
+      - name: Teams AI library quick start
         href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/conversation-ai-quick-start?context=/microsoft-365-copilot/extensibility/context
-      - name: How to use the Teams AI library
+      - name: Build with Teams AI library
         href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started?context=/microsoft-365-copilot/extensibility/context
+      - name: Build with Teams AI library and Teams Toolkit
+        href: /microsoftteams/platform/teams-ai-library-tutorial?context=/microsoft-365-copilot/extensibility/context
       - name: Teams AI library FAQs
         href: /microsoftteams/platform/teams-faq?context=/microsoft-365-copilot/extensibility/context#teams-ai-library
     - name: Use Microsoft Copilot Studio

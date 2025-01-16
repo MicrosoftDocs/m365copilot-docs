@@ -9,11 +9,11 @@ ms.date: 11/18/2024
 
 # Debug an agent with developer mode
 
-You can use *developer mode* while testing your agent to verify if and how the copilot orchestrator selected your plugins for use in response to given prompts.
+You can use *developer mode* while testing your agent to verify if and how the copilot orchestrator selects your plugins for use in response to given prompts.
 
-## Using copilot developer mode
+## Using Copilot developer mode
 
-From *copilot Chat*, you can enable developer mode by typing `-developer on` (or `off` to disable).
+To enable developer mode, in Microsoft 365 Copilot, type `-developer on`. To disable developer mode, type `developer off`.
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `copilot Chat` session where user has typed `-developer on` to successfully enable developer mode":::
 
@@ -27,9 +27,9 @@ While developer mode is enabled, a card with debug information returns whenever 
 :::image type="content" source="assets/images/developer-mode-debug-success-v2.1.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing the successful matching, selection, and function execution of an enabled plugin":::
 :::image type="content" source="assets/images/developer-mode-debug-success-v2.2.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing the successful selection, and function execution of an enabled plugin":::
 
-### Troubleshooting execution failures
+### Troubleshooting failures
 
-Here are some common failures you might encounter when debugging plugin execution, and possible causes.
+The following are common failures you might encounter when you debug plugin selection and possible causes for the failures.
 
 #### No debug card
 

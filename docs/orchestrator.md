@@ -1,6 +1,6 @@
 ---
 title: How the Microsoft 365 Copilot Orchestrator Chooses Plugins
-description: Learn how the Microsoft Copilot orchestrator determines which plugin skill to apply for a given user prompt.
+description: Learn how the Microsoft 365 Copilot orchestrator determines which plugin skill to apply for a given user prompt.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview

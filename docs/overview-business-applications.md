@@ -1,5 +1,5 @@
 ---
-title: Extend Microsoft 365 Copilot with Actions 
+title: Extend Microsoft 365 Copilot with Actions
 description: Extend Microsoft 365 Copilot by using Power Platform and Dynamics 365 to create actions.
 author: jhaskett-msft
 ms.author: jhaskett
@@ -12,18 +12,17 @@ ms.topic: overview
 
 Copilot Studio actions plug into Microsoft 365 Copilot to extend its skills. Actions make use of Microsoft business applications like Microsoft Power Platform.
 
-
 Power Platform is a suite of business applications that centralizes all your business processes. It is a low-code platform designed for building customized end-to-end business solutions.
 
-By using Power Platform, you can create actions for Microsoft Copilot that enhance its capabilities, enabling Copilot to interact with your data.
+By using Power Platform, you can create actions for Microsoft 365 Copilot that enhance its capabilities, enabling Copilot to interact with your data.
 
 > [!IMPORTANT]
 > Actions for Microsoft 365 Copilot are in public preview.
 > Production tenants must be licensed for Microsoft 365 Copilot.
 
-## Actions for Microsoft Copilot
+## Actions for Microsoft 365 Copilot
 
-Actions for Microsoft Copilot use Power Platform components such as Power Automate flows, certified connectors, or prompts to define a specific business behavior that you can add to Microsoft Copilot. Copilot uses the appropriate action to address users' questions. The following built-in actions are available:
+Actions for Microsoft 365 Copilot use Power Platform components such as Power Automate flows, certified connectors, or prompts to define a specific business behavior that you can add to Microsoft 365 Copilot. Copilot uses the appropriate action to address users' questions. The following built-in actions are available:
 
 - [Microsoft Power Platform connectors](/connectors/create-a-connector-ai-plugin#supported-queries-for-certified-connectors)
   - FreshDesk
@@ -41,7 +40,7 @@ Actions for Microsoft Copilot use Power Platform components such as Power Automa
 You can also create new actions by using Power Platform components in Microsoft Copilot Studio. For more information, see [Copilot connectors, actions, and extensions overview (preview)](/microsoft-copilot-studio/copilot-plugins-overview).
 
 > [!NOTE]
-> Dynamics plugins were available for preview only and are no longer supported. We recommend that you create an agent and add actions as needed. For more information, see [Extend bot-based message extension as agents for Microsoft 365 Copilot](https://learn.microsoft.com/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions).
+> Dynamics plugins were available for preview only and are no longer supported. We recommend that you create an agent and add actions as needed. For more information, see [Extend bot-based message extension as agents for Microsoft 365 Copilot](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions).
 
 ## Get Microsoft 365 Copilot licenses to enable actions
 
@@ -59,8 +58,6 @@ To deploy an action, sign in to the Microsoft 365 admin center and locate the ac
 
 To find Power Automate flows, search for "Power Automate". For Power Platform connector actions, search for the respective connector name; for example, FreshDesk. For Copilot artifacts such as actions created in Microsoft Copilot Studio, search for "Copilot Studio".
 
-
-
 > [!NOTE]
 > The action must be enabled for your environment to appear in the Integrated Apps list.
 
@@ -72,7 +69,7 @@ You can use the built-in actions shipped by Microsoft in your Microsoft 365 Copi
 
 1. Open the Copilot app. If the Copilot app isn't in your sidebar, search in the Teams app store.
 
-1. In the right pane, choose **Get Copilot agents**.
+1. In the right pane, choose **Get agents**.
 
 1. Choose the app that you deployed from the **Apps** menu.
 

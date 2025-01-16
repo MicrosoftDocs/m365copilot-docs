@@ -17,7 +17,7 @@ ms.topic: how-to
 
 ## Prerequisites
 
-- Requirements specified in [Requirements for plugin development](prerequisites.md#requirements-for-developing-agents-and-plugins)
+- Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - An existing REST API with an OpenAPI specification (this walkthrough uses the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin))
 - [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.9 or later
 - [Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit)
@@ -114,7 +114,7 @@ Once you complete these steps, Teams Toolkit generates the required files for th
 
 1. In the **Accounts** pane, select **Sign in to Microsoft 365**. (If you're already signed in continue to the next step).
 
-1. Confirm that both **Custom App Upload Enabled** and **Copilot Access Enabled** display under your Microsoft 365 account. If they don't, check with your organization admin. See [Requirements for plugin development](prerequisites.md#requirements-for-developing-agents-and-plugins) for details.
+1. Confirm that both **Custom App Upload Enabled** and **Copilot Access Enabled** display under your Microsoft 365 account. If they don't, check with your organization admin. See [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options) for details.
 
 1. In the **Lifecycle** pane, select **Provision**.
 
