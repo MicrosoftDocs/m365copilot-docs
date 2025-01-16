@@ -3,7 +3,7 @@ title: Declarative agent schema 1.0 for Microsoft 365 Copilot
 description: Learn about the 1.0 schema for a manifest file for declarative agents in Microsoft 365 Copilot
 author: rimisra2
 ms.author: rimisra
-ms.date: 11/13/2024
+ms.date: 01/15/2025
 ms.topic: reference
 ---
 
@@ -73,6 +73,9 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Web search object](#web-search-object)
 - [OneDrive and SharePoint object](#onedrive-and-sharepoint-object)
 - [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
+
+> [!NOTE]
+> Declarative agents with the OneDrive and SharePoint or Microsoft Graph connectors capability are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license.
 
 #### Example of capabilities
 

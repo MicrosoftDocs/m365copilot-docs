@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
-ms.date: 12/06/2024
+ms.date: 01/15/2025
 ---
 
 # Known issues
@@ -15,11 +15,11 @@ This article provides information about known issues related to Microsoft 365 Co
 
 The following known issues apply to declarative agents.
 
-### Newly installed Copilot agents might not show in the Teams client right away
+### Newly installed agents might not show in the Teams client right away
 
-In some cases, a Copilot agent installed from the store doesn't immediately show up in Business Chat (BizChat) in the Teams client.
+In some cases, a agent installed from the store doesn't immediately show up in Copilot Chat in the Teams client.
 
-**Workaround:** The user can switch to another chat and then return to BizChat.
+**Workaround:** The user can switch to another chat and then return to Copilot Chat.
 
 ### Power Automate Flows aren't fully supported as actions in declarative agents
 
