@@ -88,7 +88,7 @@ Microsoft Graph connectors that are packaged as Microsoft 365 apps and published
 
 However, the Teams admin center ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) provides additional admin controls to enable or disable the Microsoft Graph connector within the app, as long as you implement a `graphConnector.notificationUrl` for your app to handle the enable / disable notifications. For more information, see [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context).
 
-For admin prerequisites for developing Microsoft Graph connectors, see [Requirements for developing Microsoft graph connectors](./overview-graph-connectors.md#requirements-for-microsoft-graph-connectors).
+For admin prerequisites for developing Microsoft Graph connectors, see [Requirements for developing Microsoft graph connectors](overview-graph-connectors.md#requirements-for-microsoft-graph-connectors).
 
 ## Related content
 
