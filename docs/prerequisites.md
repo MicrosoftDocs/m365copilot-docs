@@ -11,7 +11,7 @@ ms.date: 01/15/2025
 
 You can build agents to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. This article describes how to set up your development environment to extend Microsoft 365 Copilot.
 
-Microsoft 365 Copilot Chat is a broadly accessible AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend its capabilities and can be grounded on instructions or the web. Users in tenants that have metering enabled and users with Microsoft 365 Copilot licenses have access to agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft Graph connectors.
+Microsoft 365 Copilot Chat is a broadly accessible AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend its capabilities and can be grounded on instructions or the web. Users in tenants that have [Copilot Studio metering enabled](copilot-studio-message-usage-limits) and users with Microsoft 365 Copilot licenses have access to agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft Graph connectors.
 
 For Microsoft 365 Copilot license information, see [License options](/copilot/microsoft-365/microsoft-365-copilot-licensing).
 
@@ -22,9 +22,11 @@ You have the following options for a Copilot development environment:
 - A Microsoft 365 Developer Program sandbox subscription with a Microsoft 365 Copilot license (available in limited preview through the [Microsoft 365 Developer TAP membership](#microsoft-365-developer-program-sandbox-subscription-for-isvs)).
 
     > [!NOTE]
-    > - Microsoft 365 Copilot isn't included in [Microsoft 365 Developer Program subscriptions](https://developer.microsoft.com/microsoft-365/dev-program#Subscription). Sandbox subscription availability is currently limited to Independent Software Vendor (ISV) partners who are part of TAP.
+    > Microsoft 365 Copilot isn't included in [Microsoft 365 Developer Program subscriptions](https://developer.microsoft.com/microsoft-365/dev-program#Subscription). Sandbox subscription availability is currently limited to Independent Software Vendor (ISV) partners who are part of TAP.
 
-- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities. At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
+- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities. 
+    
+    At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 - An eligible [Microsoft 365 or Office 365 production environment](#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
@@ -49,7 +51,7 @@ Contact your Microsoft representative to add Copilot to your Microsoft plan. Ent
 
 ### Organizations without Microsoft 365 Copilot licenses
 
-You can develop Copilot extensibility solutions for users in organizations without Copilot licenses or users in tenants that allow metered usage, with some limitations to your agent capabilities. For more information, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
+You can develop Copilot extensibility solutions for users in organizations without Copilot licenses, with some limitations to your agent capabilities. If you want to take advantage of agent capabilities such as grounding on organizational data, you can enable [Copilot Studio metering](copilot-studio-message-usage-limits). For more information, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 ## Requirements for Copilot extensibility options
 
@@ -66,7 +68,7 @@ To learn more and choose the best extensibility path for your users, see [Extens
 To build agents, you need to complete prerequisites depending on the tool that you choose to use.
 
 > [!NOTE]
-> Some agent capabilities are only available to users in tenants with metered usage enabled or users with Microsoft 365 Copilot licenses. For example, if you want to build agents that are grounded in organizational data, you need to enable metering or purchase a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
+> Some agent capabilities are only available to users in tenants with Copilot Studio metered usage enabled or users with Microsoft 365 Copilot licenses. For example, if you want to build agents that are grounded in organizational data, you need to enable metering or purchase a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 #### Teams Toolkit requirements
 
@@ -82,7 +84,7 @@ To manage your sideloaded custom apps, including agents, from the Teams client, 
 
 #### Copilot Studio requirements
 
-Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio and the Copilot Studio agent builder to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Enabling agents in Microsoft 365 Copilot Chat](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/enabling-agents-in-microsoft-365-copilot-chat/).
+Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio and the Copilot Studio agent builder to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Manage message capacity](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management).
 
 The following steps are required for you to use Copilot Studio to build agents:
 
@@ -129,8 +131,23 @@ The following table lists the agent types and agent capabilities that are availa
 |Custom knowledge: Microsoft Graph connector grounding | :x: | :white_check_mark: | :white_check_mark: |
 |[**Custom engine agents**](overview-custom-engine-agent.md)| :x: | :white_check_mark: | :white_check_mark: |
 
-
 \* Usage limits apply to all included features.
+
+### Copilot Studio message usage limits
+
+If you choose the metered pay-as-you-go option for Copilot Studio, utilization rates apply based on the agent type and the prompt. 
+
+Billing is based on message units. _Messages_ measures agent usage. The total cost is calculated based on the sum of the messages used by your organization. The number of messages consumed by an agent depends on the complexity of the agent, how often customers interact with it, and the features they use.
+
+The following table lists the utilization rates for Copilot Chat users and users with Microsoft 365 Copilot licenses.
+
+| Agent capability | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
+|:-----------------|:-----------------------------|:---------------------------------|
+|Web grounded answers| 0 | 0|
+|Predefined responses | 0 | 1 message |
+|Dynamically generated answers based on knowledge sources | 0 | 2 messages |
+|Organizational data responses based on Microsoft Graph connector grounding | 0 | 30 messages|
+|Autonomous actions via Power Platform connectors and Power Automate flows | 25 message | 25 messages |
 
 ## Frequently asked questions
 
