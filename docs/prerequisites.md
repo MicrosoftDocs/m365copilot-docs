@@ -135,7 +135,7 @@ The following table lists the agent types and agent capabilities that are availa
 
 ### Copilot Studio message usage rates
 
-If you choose the metered pay-as-you-go option for Copilot Studio, utilization rates apply based on the agent type and the prompt. 
+If you choose the metered pay-as-you-go option for Copilot Studio, utilization rates apply based on the type of agent and prompt. 
 
 Billing is based on message units. The total cost is calculated based on the sum of the messages used by your organization. The number of messages consumed by an agent depends on the complexity of the agent, how often customers interact with it, and the features they use.
 
