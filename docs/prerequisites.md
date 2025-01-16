@@ -107,10 +107,10 @@ Accounts used to test agents that are grounded on organizational data or that in
 
 ## Agent capabilities for Microsoft 365 users
 
-Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents via the browser or the in-app experience in Teams.
+Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents via the Microsoft 365 Copilot app, the browser, or the in-app experience in Teams. 
 
 > [!NOTE]
-> Copilot Chat and the agent experience in Word and PowerPoint is available only to users with a Microsoft 365 Copilot license.
+> Copilot Chat and the agent experience in Word and PowerPoint is available only to users with a Microsoft 365 Copilot license. The agent experience is currently not available in the Copilot Chat experience in Outlook.
 
 Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage. 
 
