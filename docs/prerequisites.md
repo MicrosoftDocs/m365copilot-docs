@@ -121,14 +121,14 @@ The following table lists the agent types and agent capabilities that are availa
 |Copilot Studio agent builder | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Copilot Studio |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
 |[**Declarative agents**](overview-declarative-agent.md)     | |  |  |
-|&nbsp;&nbsp;&nbsp;Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;Code interpreter | :x: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;Image generator| :x: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;Custom knowledge: File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;Custom knowledge: Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;Custom knowledge: SharePoint data grounding| :x: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;Custom knowledge: Microsoft Graph connector grounding | :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code interpreter | :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image generator| :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge: File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge: Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>SharePoint data grounding| :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>Microsoft Graph connector grounding | :x: | :white_check_mark: | :white_check_mark: |
 |[**Custom engine agents**](overview-custom-engine-agent.md)| :x: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
