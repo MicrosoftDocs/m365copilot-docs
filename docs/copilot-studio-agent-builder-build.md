@@ -13,6 +13,9 @@ The Copilot Studio agent builder provides a simple interface that you can use to
 
 To get started with the Copilot Studio agent builder, open the Microsoft 365 Copilot app, select **Work**, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
 
+> [!NOTE]
+> Copilot Studio agent builder isn't currently available to Microsoft 365 Copilot Chat users. It's available to users in tenants with metering enabled and users with Microsoft 365 Copilot licenses. For details, see [Agent capabilities for Microsoft 365 users](/prerequisites#agent-capabilities-for-microsoft-365-users).
+
 You can author your declarative agent in two ways:
 
 - Via the **Describe** tab, using natural language
