@@ -71,5 +71,5 @@ For Microsoft Graph connectors (packaged as Teams apps), submission to the Micro
 ## Related content
 
 - [Data, Privacy, and Security for Microsoft 365 Copilot (Microsoft 365 admin)](/copilot/microsoft-365/microsoft-365-copilot-privacy)
-- [Publish agents for Microsoft 365 Copilot](publish.md)
+- [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access)
 - [Microsoft commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai)
