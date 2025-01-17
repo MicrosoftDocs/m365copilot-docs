@@ -81,7 +81,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
 - [Graphic art object](#graphic-art-object)
 - [Code interpreter object](#code-interpreter-object)
- 
+
 > [!NOTE]
 > Declarative agents with the OneDrive and SharePoint, Microsoft Graph connectors, graphic art, or code interpreter capability are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
 
@@ -142,6 +142,9 @@ The web search object contains the following properties.
 | -------- | ------------------------------------ | ----------- |
 | `name`   | String                               | Required. Must be set to `WebSearch`. |
 | `sites`  | Array of [Site object](#site-object) | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. The array MUST NOT contain more than four items. |
+
+> [!NOTE]
+> For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
 
 ##### Site object
 
