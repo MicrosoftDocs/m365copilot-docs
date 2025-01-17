@@ -84,7 +84,10 @@ To manage your sideloaded custom apps, including agents, from the Teams client, 
 
 #### Copilot Studio requirements
 
-Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio and the Copilot Studio agent builder to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
+Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
+
+> [!NOTE]
+> Copilot Studio agent builder isn't currently available to Microsoft 365 Copilot Chat users.
 
 The following steps are required for you to use Copilot Studio to build agents:
 
@@ -118,7 +121,7 @@ The following table lists the agent types and agent capabilities that are availa
 
 | Capability | Copilot Chat (no metered usage)* | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
-|Copilot Studio agent builder | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|Copilot Studio agent builder |  :x: ** | :white_check_mark: | :white_check_mark: |
 |Copilot Studio |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
 |[**Declarative agents**](overview-declarative-agent.md)     | |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -132,6 +135,11 @@ The following table lists the agent types and agent capabilities that are availa
 |[**Custom engine agents**](overview-custom-engine-agent.md)| :x: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
+
+\** Coming soon.
+
+> [!NOTE]
+> For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
 
 ### Copilot Studio message usage rates
 
