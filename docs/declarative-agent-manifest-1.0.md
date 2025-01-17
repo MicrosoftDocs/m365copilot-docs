@@ -77,6 +77,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 > [!NOTE]
 > Declarative agents with the OneDrive and SharePoint or Microsoft Graph connectors capability are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license.
 
+
 #### Example of capabilities
 
 ```json
@@ -122,6 +123,9 @@ The web search object contains the following properties.
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `WebSearch`. |
+
+> [!NOTE]
+> For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
 
 #### OneDrive and SharePoint object
 
