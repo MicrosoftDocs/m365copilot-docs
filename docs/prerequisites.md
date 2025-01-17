@@ -146,9 +146,9 @@ Each message unit costs $0.01.
 | Agent capability | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:-----------------|:-----------------------------|:---------------------------------|
 |Web grounded answers| 0 | 0|
-|Predefined responses | 0 | 1 message/$0.01 |
-|Dynamically generated answers based on knowledge sources | 0 | 2 messages/$0.02 |
-|Organizational data responses based on Microsoft Graph connector grounding | 0 | 30 messages/$0.30|
+|Predefined responses | 1 message/$0.01 | 0 |
+|Dynamically generated answers based on knowledge sources | 2 messages/$0.02 | 0 |
+|Organizational data responses based on Microsoft Graph connector grounding | 30 messages/$0.30 | 0 |
 |Autonomous actions via Power Platform connectors and Power Automate flows | 25 messages/$0.25 | 25 messages/$0.25 |
 
 ## Frequently asked questions
