@@ -128,7 +128,7 @@ Microsoft Entra ID SSO authentication allows seamless single sign-on (SSO) integ
 
 1. Select **Expose an API** under **Manage**. Select **Add a client application** and add the client ID of Microsoft's enterprise token store, `ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b`.
 
-### Add the SSO registration ID the plugin manifest
+### Add the SSO registration ID to the plugin manifest
 
 Set the `type` property of the [runtime authentication object](api-plugin-manifest.md#runtime-authentication-object) to `OAuthPluginVault`, and set the `reference_id` to the **Microsoft Entra SSO registration ID** from the Teams developer portal.
 
