@@ -138,6 +138,9 @@ The following table lists the agent types and agent capabilities that are availa
 
 \** Coming soon.
 
+> [!NOTE]
+> For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
+
 ### Copilot Studio message usage rates
 
 If you choose the metered pay-as-you-go option for Copilot Studio, utilization rates apply based on the type of agent and prompt. 
