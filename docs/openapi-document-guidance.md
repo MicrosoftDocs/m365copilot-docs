@@ -1,5 +1,5 @@
 ---
-title: How to make an OpenAPI document effective in extending Copilot capabilities.
+title: How to make an OpenAPI document effective in extending Copilot capabilities
 description: Learn what makes an OpenAPI description most effective for extending Copilot skills
 author: erikadoyle
 ms.author: edoyle
@@ -9,11 +9,15 @@ ms.date: 05/21/2024
 
 # How to make an OpenAPI document effective in extending Copilot
 
-Plugins let Microsoft 365 Copilot work with web services and get real-time information. Copilot uses this information to extend its skills. With a plugin, a user can bring real-time data from their line of business (LOB) system on to the Copilot.
+Plugins let Microsoft 365 Copilot work with web services and get real-time information. Copilot uses this information to extend its skills. With a plugin, a user can bring real-time data from their line of business (LOB) system into Copilot. 
 
-A plugin is comprised of an API service, its OpenAPI description, and a manifest file. The plugin manifest informs Copilot about the API's capabilities. The plugin manifest includes an OpenAPI description for the API service. The OpenAPI description is important because it describes to Copilot how to connect to the API. For optimal plugin performance with Copilot, provide a clear and meaningful OpenAPI description. This document explains the elements that make an OpenAPI description effective for a plugin that extends Copilot.
+A plugin is comprised of an API service, its OpenAPI description, and a manifest file. The plugin manifest informs Copilot about the API's capabilities. The plugin manifest includes an OpenAPI description for the API service. The OpenAPI description is important because it describes to Copilot how to connect to the API. For optimal plugin performance with Copilot, provide a clear and meaningful OpenAPI description. 
 
-Here, we presume that you have an API and an OpenAPI description for it.
+This article describes the elements that make an OpenAPI description effective for a plugin that extends Copilot.
+
+## OpenAPI description elements
+
+This section describes the elements of an OpenAPI description and how to optimize them for Copilot.
 
 **OpenAPI Validation**: A good first step is to verify that your OpenAPI description follows the rules of the [OpenAPI Specification](https://swagger.io/resources/open-api/). You can use [Hidi](https://github.com/microsoft/OpenAPI.NET/blob/vnext/src/Microsoft.OpenApi.Hidi/readme.md), a command line tool that can validate OpenAPI descriptions among other use cases, or any other tool of choice. A valid OpenAPI description not only works well with Copilot but also makes sure that your OpenAPI description can work with other tools.
 
