@@ -9,14 +9,14 @@ ms.date: 01/21/2025
 
 # Optimize SharePoint content retrieval
 
-Declarative agents extend Microsoft 365 Copilot to customize the experience for users. When you build declarative agents, you can add SharePoint content as a knowledge source. This article describes the best practices that you can apply to optimize how your agents returns data from SharePoint knowledge sources.
+Declarative agents extend Microsoft 365 Copilot to customize the experience for users. When you build declarative agents, you can add SharePoint content as a knowledge source. This article describes the best practices to apply to optimize how your agents returns data from SharePoint knowledge sources.
 
 > [!NOTE]
 > Agents grounded in SharePoint data are only available to users in tenants that have Copilot Studio metering enabled or users who have Microsoft 365 Copilot licenses. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
 ## Limit the number of specific files you reference
 
-You can reference specific SharePoint files in your agent manifest via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.2.md), either by URL or by ID. As a best practice, specify no more than five specific files to ensure that Copilot searches the full contents of all files. Copilot has full access to all the content in all five files and is able to return the right contents to the user based on their query.
+You can reference specific SharePoint files in your agent manifest via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.2.md), either by URL or by ID. As a best practice, specify no more than five specific files to ensure that Copilot searches the full contents of all files. Copilot will have full access to all the content in all five files and is able to return the right contents to the user based on their query.
 
 When you specify more than five SharePoint files, Copilot chooses content from the most relevant five files, and as a result it might not return all relevant content to the user.
 
@@ -26,9 +26,10 @@ When you reference SharePoint sites, folders, or files in your agent, Copilot mi
 
 ## Remove special formatting
 
-Copilot is currently unable to parse tables and other special formatting in SharePoint content. To ensure that Copilot can consume your SharePoint content, remove tables or other special formatting from the content.
+Copilot is currently unable to parse tables and other special formatting in SharePoint content. To ensure that Copilot can consume your SharePoint content, remove tables or other special formatting from the content before you reference it in your agent manifest.
 
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
+- [Known issues](known-issues.md)
 
