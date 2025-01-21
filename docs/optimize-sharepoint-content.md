@@ -14,11 +14,13 @@ Declarative agents extend Microsoft 365 Copilot to customize the experience for 
 > [!NOTE]
 > Agents grounded in SharePoint data are only available to users in tenants that have Copilot Studio metering enabled or users who have Microsoft 365 Copilot licenses. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
-## Limit the number of specific files you reference
+## Reference specific SharePoint files
 
-You can reference specific SharePoint files in your agent manifest via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.2.md), either by URL or by ID. As a best practice, specify no more than five specific files to ensure that Copilot searches the full contents of all files. Copilot will have full access to all the content in all five files and is able to return the right contents to the user based on their query.
+You can reference specific SharePoint files in your agent manifest via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.2.md), either by URL or by ID. 
 
-When you specify more than five SharePoint files, Copilot chooses content from the most relevant five files, and as a result it might not return all relevant content to the user.
+When you specify up to five files, Copilot searches the full contents of all files. Copilot will have full access to all the file content and returns the appropriate content to the user based on their query. 
+
+If you specify more than five SharePoint files, Copilot chooses content from the most relevant five files, rather than searching all the files specified, and only returns content from those files.
 
 ## Limit SharePoint file size
 
