@@ -16,9 +16,9 @@ For the latest information, announcements, and news about preview and generally 
 
 ## December 2024
 
-### Build agents for Microsoft Copilot Chat
+### Build agents for Microsoft 365 Copilot Chat
 
-You can now build agents for Microsoft 365 users who don't have a Microsoft 365 Copilot license, grounded on the web and with some limitations to its capabilities. For more information, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+You can now build agents for Microsoft 365 users who don't have a Microsoft 365 Copilot license, grounded on the web and with limited capabilities. For more information, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
 ### Add code interpreter to your declarative agent
 
