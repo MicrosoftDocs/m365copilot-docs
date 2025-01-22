@@ -3,6 +3,7 @@ title: User Experience for Custom Engine Agents in Microsoft 365 Copilot
 description: Learn about the user experience components of custom engine agents in Microsoft 365 Copilot.
 author: girliemac
 ms.author: timura
+ms.localizationpriority: medium
 ms.date: 01/15/2025
 ms.topic: overview
 ---

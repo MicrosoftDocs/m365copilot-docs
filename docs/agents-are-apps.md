@@ -4,6 +4,7 @@ description: Learn how agents use the Microsoft 365 app package, including a uni
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: concept-article
+ms.localizationpriority: medium
 ms.date: 11/01/2024
 ---
 

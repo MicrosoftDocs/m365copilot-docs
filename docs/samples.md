@@ -4,6 +4,7 @@ description: Extend Microsoft 365 Copilot with plugins and Microsoft Graph conne
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 11/01/2024
 ---
 

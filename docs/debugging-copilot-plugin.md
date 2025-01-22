@@ -4,6 +4,7 @@ description: Learn how to test and debug how agents select and use plugins
 author: carolkigoonya
 ms.author: ckigoonya
 ms.topic: overview
+ms.localizationpriority: medium
 ms.date: 11/18/2024
 ---
 

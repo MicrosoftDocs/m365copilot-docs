@@ -4,6 +4,7 @@ description: Learn how to add support for other languages to your agent.
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: concept-article
+ms.localizationpriority: medium
 ms.date: 11/04/2024
 ---
 

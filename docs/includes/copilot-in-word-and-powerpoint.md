@@ -1,6 +1,7 @@
 ---
 author: lauragra
 ms.topic: include
+ms.localizationpriority: medium
 ---
 
 <!-- markdownlint-disable MD041 -->
