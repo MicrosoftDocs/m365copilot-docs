@@ -14,7 +14,7 @@ Declarative agents extend Microsoft 365 Copilot to customize the experience for 
 > [!NOTE]
 > Agents grounded in SharePoint data are only available to users in tenants that have Copilot Studio metering enabled or users who have Microsoft 365 Copilot licenses. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
-## Reference specific SharePoint files
+## Reference only relevant SharePoint files
 
 You can reference specific SharePoint files in your agent manifest via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.2.md), either by URL or by ID. 
 
@@ -22,9 +22,11 @@ When you specify up to five files, Copilot searches the full contents of all fil
 
 If you specify more than five SharePoint files, Copilot chooses content from the most relevant five files, rather than searching all the files specified, and only returns content from those files.
 
+To optimize the content that Copilot returns, choose the most relevant SharePoint files to specify in your manifest. For example, if a folder contains eight files and only five are relevant to the users' task, specify the five files individually instead of referencing the folder. 
+
 ## Limit SharePoint file size
 
-When you reference SharePoint sites, folders, or files in your agent, Copilot might have trouble identifying the right content to return to the user when the files are large. To reduce the risk that Copilot won't find the right content in the resources you reference, strive to keep your SharePoint sources to a maximum of 36,000 characters (approximately 15-20 pages). If your files are larger than 36,000 characters, consider breaking them up into separate shorter files to help Copilot scan the full contents.
+When you reference SharePoint sites, folders, or files in your agent manifest, Copilot might have trouble identifying the right content to return to the user when the files are large. To reduce the risk that Copilot won't find the right content in the resources you reference, strive to keep your SharePoint sources to a maximum of 36,000 characters (approximately 15-20 pages). If your files are larger than 36,000 characters, consider breaking them up into separate shorter files to help Copilot scan the full contents.
 
 ## Remove special formatting
 
