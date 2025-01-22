@@ -9,7 +9,7 @@ ms.date: 01/21/2025
 
 # Optimize SharePoint content retrieval
 
-Declarative agents extend Microsoft 365 Copilot to customize the experience for users. When you build declarative agents, you can add SharePoint content as a knowledge source. This article describes the best practices to apply to optimize how your agents returns data from SharePoint knowledge sources.
+Declarative agents extend Microsoft 365 Copilot to customize the experience for users. When you build declarative agents, you can add SharePoint content as a knowledge source. This article describes the best practices to apply to optimize how your agent returns data from SharePoint knowledge sources.
 
 > [!NOTE]
 > Agents grounded in SharePoint data are only available to users in tenants that have Copilot Studio metering enabled or users who have Microsoft 365 Copilot licenses. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
@@ -19,6 +19,9 @@ Declarative agents extend Microsoft 365 Copilot to customize the experience for 
 You can reference specific SharePoint files in your agent manifest via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object), either by URL or by ID. 
 
 When you specify up to five files, Copilot searches the full contents of all files. Copilot will have full access to all the file content and returns the appropriate content to the user based on their query. If you specify more than five SharePoint files, Copilot chooses content from the most relevant five files, rather than searching all the files specified, and only returns content from those files.
+
+> [!NOTE]
+> Support for searching the full contents of files specified by URL is currently rolling out and will be available globally by early February 2025.
 
 To optimize the content that Copilot returns, choose the most relevant SharePoint files to specify in your manifest. For example, if a folder contains eight files and only five are relevant to the users' task, specify the five files individually instead of referencing the folder. 
 
