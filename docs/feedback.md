@@ -4,6 +4,7 @@ description: Find resources for help and support for Microsoft 365 Copilot exten
 author: mobajemu
 ms.author: mobajemu
 ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 12/04/2024
 ---
 

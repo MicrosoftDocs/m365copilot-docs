@@ -4,6 +4,7 @@ description: Discover best practices for building plugins for Microsoft 365 Copi
 author: erikadoyle
 ms.author: edoyle
 ms.topic: best-practice
+ms.localizationpriority: medium
 ms.date: 11/01/2024
 ---
 

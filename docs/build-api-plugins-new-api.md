@@ -3,6 +3,7 @@ title: Build API plugins with a new API for Microsoft 365 Copilot
 description: Learn how to build API plugins with a new API for Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
+ms.localizationpriority: medium
 ms.date: 10/08/2024
 ms.topic: how-to
 ---

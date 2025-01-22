@@ -3,7 +3,8 @@ title: What's New for Microsoft 365 Copilot Developers
 description: Find out what's new in Microsoft 365 Copilot extensibility, including plugins, declarative agents, custom engine agents, connectors, and more.
 author: lauragra
 ms.author: lauragra
-ms.date: 11/18/2024
+ms.localizationpriority: medium
+ms.date: 01/15/2025
 ms.topic: overview
 ---
 
@@ -14,6 +15,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## December 2024
+
+### Build agents for Microsoft Copilot Chat
+
+You can now build agents for Microsoft 365 users who don't have a Microsoft 365 Copilot license, grounded on the web and with some limitations to its capabilities. For more information, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
 ### Add code interpreter to your declarative agent
 

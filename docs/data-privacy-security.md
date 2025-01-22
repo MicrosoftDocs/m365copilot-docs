@@ -4,6 +4,7 @@ description: Learn how to protect your customer's data when you extend Microsoft
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
+ms.localizationpriority: medium
 ms.date: 09/26/2024
 ---
 

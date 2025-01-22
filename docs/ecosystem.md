@@ -4,6 +4,7 @@ description: Agents, plugins, and connectors run across the Microsoft 365 ecosys
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
+ms.localizationpriority: medium
 ms.date: 01/15/2025
 ---
 

@@ -4,6 +4,7 @@ description: Learn about responsible AI validation checks that run on agents dur
 author: lauragra
 ms.author: lauragra
 ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 12/11/2024
 ---
 

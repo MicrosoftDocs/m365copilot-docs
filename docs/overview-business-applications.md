@@ -3,6 +3,7 @@ title: Extend Microsoft 365 Copilot with Actions
 description: Extend Microsoft 365 Copilot by using Power Platform and Dynamics 365 to create actions.
 author: jhaskett-msft
 ms.author: jhaskett
+ms.localizationpriority: medium
 ms.date: 01/09/2025
 ms.topic: overview
 ---
