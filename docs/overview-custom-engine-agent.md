@@ -11,7 +11,7 @@ ms.topic: overview
 
 # Custom engine agents for Microsoft 365 overview
 
-**Custom engine agents** are specialized chat experiences built on any large language model (LLM) and tailored for specific domain or workflows. They allow organizations to create their own agents using tools like the Teams Toolkit, Microsoft Copilot Studio, and the M365 Agents SDK. Custom engine agents allow you to use your custom orchestrators, foundation models, and custom logic.
+**Custom engine agents** are specialized chat experiences built on any large language model (LLM) and tailored for specific domain or workflows. They allow organizations to create their own agents using tools like the Teams Toolkit, Microsoft Copilot Studio, and the Microsoft 365 Agents SDK (preview). Custom engine agents allow you to use your custom orchestrators, foundation models, and custom logic.
 
 :::image type="content" source="assets/images/teams-ai-library.png" alt-text="A diagram that shows how a custom engine agent in Teams works" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
 
@@ -59,11 +59,11 @@ Microsoft Copilot Studio is a versatile platform that allows you to build and cu
 
 Microsoft 365 Agents SDK seamlessly integrates with AI services like Azure AI Foundry and orchestration layers such as Semantic Kernel. It offers interoperability with Copilot Studio, enabling you to enhance and extend existing agents with additional skills. This allows makers to delegate tasks to other agent functionalities. Additionally, you can connect to a Copilot Studio agent from code, gaining access to the full range of features within the Copilot Studio ecosystem. 
 
-Learn more: [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/) (Preview).
+For more information, see [Microsoft 365 Agents SDK (preview)](/microsoft-365/agents-sdk/).
 
 ## Related content
 
-- [Teams AI library Overview](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
+- [Teams AI library overview](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
 - [Get started with a Teams AI library tutorial](/microsoftteams/platform/teams-ai-library-tutorial)
 - [Get started with Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
 - [Your agent options for Microsoft 365](decision-guide.md)
