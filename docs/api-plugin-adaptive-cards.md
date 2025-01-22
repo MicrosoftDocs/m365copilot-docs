@@ -3,6 +3,7 @@ title: Adaptive Card response templates for API plugins for Microsoft 365 Copilo
 description: Learn how to use Adaptive Card response templates to customize API plugins responses in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
+ms.localizationpriority: medium
 ms.date: 10/24/2024
 ms.topic: conceptual
 ---

@@ -4,6 +4,7 @@ description: Learn how to write effective instructions for your declarative agen
 author: lauragra
 ms.author: jchudakova
 ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 10/17/2024
 ---
 

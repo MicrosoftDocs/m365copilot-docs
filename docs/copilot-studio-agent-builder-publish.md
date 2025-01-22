@@ -3,6 +3,7 @@ title: Publish and Manage Copilot Studio Agent Builder Agents
 description: Learn how to publish and manage agents built with Copilot Studio agent builder.
 author: jasonxian-msft
 ms.author: jasonxian
+ms.localizationpriority: medium
 ms.date: 11/06/2024
 ms.topic: conceptual
 ---

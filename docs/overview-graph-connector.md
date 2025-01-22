@@ -4,6 +4,7 @@ description: Extend Microsoft 365 Copilot with Microsoft Graph connectors
 author: muwagerikpe
 ms.author: muwagerikpe
 ms.topic: overview
+ms.localizationpriority: medium
 ms.date: 01/15/2025
 ---
 

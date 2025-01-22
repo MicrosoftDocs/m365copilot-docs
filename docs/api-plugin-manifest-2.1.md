@@ -3,6 +3,7 @@ title: API plugin manifest schema 2.1 for Microsoft 365 Copilot
 description: Learn about the 2.1 schema for a manifest file for an API plugin in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
+ms.localizationpriority: medium
 ms.date: 11/13/2024
 ms.topic: reference
 ---

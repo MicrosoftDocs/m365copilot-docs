@@ -4,6 +4,7 @@ description: Extend, enrich, and customize Microsoft 365 Copilot with agents, ex
 author: girliemac
 ms.author: timura
 ms.topic: overview
+ms.localizationpriority: medium
 ms.date: 11/05/2024
 ms.custom: [copilot-learning-hub]
 ---

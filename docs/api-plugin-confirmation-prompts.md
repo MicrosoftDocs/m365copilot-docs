@@ -3,6 +3,7 @@ title: Confirmation prompts for API plugins for Microsoft 365 Copilot
 description: Learn about confirmation prompts for API plugins and how to change default confirmation behavior for Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
+ms.localizationpriority: medium
 ms.date: 09/13/2024
 ms.topic: conceptual
 ---

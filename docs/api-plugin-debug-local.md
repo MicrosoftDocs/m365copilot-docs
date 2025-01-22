@@ -3,6 +3,7 @@ title: Debug API plugins locally
 description: Learn how to enable communication between Microsoft 365 Copilot and an API running locally
 author: jasonjoh
 ms.author: jasonjoh
+ms.localizationpriority: medium
 ms.date: 12/02/2024
 ms.topic: conceptual
 ---

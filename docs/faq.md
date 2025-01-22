@@ -4,6 +4,7 @@ description: Get answers to frequently asked questions related to Microsoft 365 
 author: girliemac
 ms.author: timura
 ms.topic: best-practice
+ms.localizationpriority: medium
 ms.date: 01/15/2024
 ---
 

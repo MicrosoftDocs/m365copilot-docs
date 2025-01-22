@@ -4,6 +4,7 @@ description: Learn the prerequisites for extending Microsoft 365 Copilot with ag
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
+ms.localizationpriority: medium
 ms.date: 01/15/2025
 ---
 

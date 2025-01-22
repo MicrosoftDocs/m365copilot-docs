@@ -4,6 +4,7 @@ description: Understand which Microsoft 365 Copilot extensibility option works b
 author: girliemac
 ms.author: timura
 ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 11/18/2024
 ms.custom: [copilot-learning-hub]
 ---

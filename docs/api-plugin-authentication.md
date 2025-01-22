@@ -3,6 +3,7 @@ title: Configure Authentication for API plugins in Agents in Microsoft 365 Copil
 description: Learn how to set up authentication for API plugins in agents running in Microsoft 365 Copilot.
 author: jasonjoh
 ms.author: jasonjoh
+ms.localizationpriority: medium
 ms.date: 01/03/2025
 ms.topic: conceptual
 ---

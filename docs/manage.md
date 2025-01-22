@@ -4,6 +4,7 @@ description: Learn about admin controls for Microsoft 365 Copilot extensibility.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 9/16/2024
 ---
 
