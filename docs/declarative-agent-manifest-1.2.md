@@ -168,6 +168,8 @@ The OneDrive and SharePoint object contains the following properties.
 | `items_by_sharepoint_ids` | Array of [Items by SharePoint IDs object](#items-by-sharepoint-ids-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If both the `items_by_sharepoint_ids` and the `items_by_url` properties are omitted, all OneDrive and Sharepoint sources in the organization are available to the declarative agent. |
 | `items_by_url`            | Array of [Items by URL object](#items-by-url-object)                       | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If both the `items_by_sharepoint_ids` and the `items_by_url` properties are omitted, all OneDrive and Sharepoint sources in the organization are available to the declarative agent. |
 
+For information about how to optimize SharePoint content for Copilot, see [Optimize SharePoint content retrieval](optimize-sharepoint-content.md).
+
 ##### Items by SharePoint IDs object
 
 The Items by SharePoint IDs object contains the following properties.
@@ -180,7 +182,7 @@ The Items by SharePoint IDs object contains the following properties.
 | `unique_id` | String | Optional. A unique GUID identifier used to represent a specific entity or resource. |
 
 > [!TIP]
-> For instructions on getting the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
 
 ##### Items by URL object
 
