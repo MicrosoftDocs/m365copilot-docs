@@ -4,6 +4,7 @@ description: Learn what makes an OpenAPI description most effective for extendin
 author: erikadoyle
 ms.author: edoyle
 ms.topic: how-to
+ms.localizationpriority: medium
 ms.date: 05/21/2024
 ---
 

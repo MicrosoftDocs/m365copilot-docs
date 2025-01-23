@@ -4,6 +4,7 @@ description: Introducing message extensions as plugins for Microsoft 365 Copilot
 author: girliemac
 ms.author: timura
 ms.topic: overview
+ms.localizationpriority: medium
 ms.date: 12/09/2024
 ---
 

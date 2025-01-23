@@ -4,6 +4,7 @@ description: Learn how the Microsoft 365 Copilot orchestrator determines which p
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
+ms.localizationpriority: medium
 ms.date: 11/18/2024
 ---
 

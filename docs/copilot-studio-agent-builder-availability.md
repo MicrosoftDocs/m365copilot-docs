@@ -3,6 +3,7 @@ title: Copilot Studio agent builder regional availability and language support
 description: Learn about the regional availability and supported languages for Copilot Studio agent builder.
 author: jasonxian-msft
 ms.author: jasonxian
+ms.localizationpriority: medium
 ms.date: 11/18/2024
 ms.topic: conceptual
 ---

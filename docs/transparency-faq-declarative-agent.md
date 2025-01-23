@@ -4,6 +4,7 @@ description: The transparency FAQ for declarative agents provides detailed infor
 author: simranajwani
 ms.author: simranajwani
 ms.topic: faq
+ms.localizationpriority: medium
 ms.date: 12/04/2024
 ---
 

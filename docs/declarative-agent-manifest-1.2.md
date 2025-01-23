@@ -3,6 +3,7 @@ title: Declarative agent schema 1.2 for Microsoft 365 Copilot
 description: Learn about the 1.2 schema for a manifest file for declarative agents in Microsoft 365 Copilot
 author: rimisra2
 ms.author: rimisra
+ms.localizationpriority: medium
 ms.date: 01/15/2025
 ms.topic: reference
 ---

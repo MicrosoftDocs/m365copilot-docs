@@ -4,6 +4,7 @@ description: Learn how to distribute agents, plugins, and Microsoft Graph connec
 author: erikadoyle
 ms.author: edoyle
 ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 9/16/2024
 ---
 # Publish agents for Microsoft 365 Copilot

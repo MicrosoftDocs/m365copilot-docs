@@ -1,6 +1,7 @@
 ---
 author: girliemac
 ms.topic: include
+ms.localizationpriority: medium
 ---
 
 <!-- markdownlint-disable MD041-->

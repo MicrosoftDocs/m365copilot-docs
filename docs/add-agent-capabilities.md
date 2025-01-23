@@ -4,6 +4,7 @@ description: Learn about capabilities that you can add to your declarative agent
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
+ms.localizationpriority: medium
 ms.date: 01/15/2025
 ---
 
