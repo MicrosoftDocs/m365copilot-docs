@@ -82,6 +82,20 @@ Copilot generates conversational responses using data from API responses. Plugin
 
 :::image type="content" source="assets/images/api-plugins/adaptive-card-citation.png" alt-text="A screenshot of an Adaptive Card response from an API plugin":::
 
+## Optimize your plugin for Copilot orchestrator
+
+Microsoft 365 Copilot can uniquely choose the right skill from the many skills in its repertoire. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
+
+The answer lies in how you describe your plugin, its skills, and the parameters for initiation of skills. Specify concise and accurate descriptions in your plugin manifest to best ensure that the Copilot orchestrator knows when and how to invoke your plugin.
+
+The way you describe your plugin to the orchestrator depends on the type of plugin you build, as described in the following table.
+
+| Plugin type  | Described by | Learn more|
+|----------|-----------|------------|
+|API plugins |  OpenAPI description | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md) |
+| Copilot Studio actions | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)  |
+| Message extension plugins | App manifest   | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
+
 ## Generating API plugin packages
 
 There are two tools developers can use to generate API plugin packages.
