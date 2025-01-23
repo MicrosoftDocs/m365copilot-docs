@@ -22,6 +22,9 @@ When you specify up to five files, Copilot searches the full contents of all fil
 
 To optimize the content that Copilot returns, choose the most relevant SharePoint files to specify in your manifest. For example, if a folder contains eight files and only five are relevant to the users' task, specify the five files individually instead of referencing the folder. 
 
+> [!NOTE]
+> Coming soon, the number of files that you can specify for Copilot to search all contents will change from 5 to 20.
+
 ## Limit SharePoint file size
 
 When you reference SharePoint sites or folders by URL in your [agent manifest](declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object), Copilot might have trouble identifying the right content to return to the user when the files included in the site or folder are large. To reduce the risk that Copilot won't find the right content in the sites or folders you reference, strive to keep your SharePoint files to a maximum of 36,000 characters (approximately 15-20 pages). If your files are larger than 36,000 characters, consider breaking them up into separate shorter files to help Copilot scan the full contents.
