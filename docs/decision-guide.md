@@ -26,9 +26,11 @@ However, with Microsoft 365 Copilot, you also have a choice of extending Copilot
 - You have an existing API that could be used as an [API plugin](overview-api-plugins.md) for read and write access to real-time data.
 - You have an existing [Teams message extension](overview-message-extension-bot.md) that you can use as a plugin.
 
-### When to build a custom agent
+### When to build a custom engine agent
 
-- You want to use specific models (LLM or small language model (SLM)) for your service.
+Custom engine agents are specialized agentic solutions that you can build on any LLM, toolchain, or orchestration tool and tailor for your  specific domain or tenant workflows. Build a custom engine agent when: 
+
+- You want to use specific LLM or small language model (SLM) for your service.
 - You need agentic AI support.
 - You want your service to be independent from Microsoft 365 Copilot, accessible to all Microsoft 365 users regardless of their Copilot licensing status.
 
