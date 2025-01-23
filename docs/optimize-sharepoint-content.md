@@ -22,8 +22,7 @@ When you specify up to five files, Copilot searches the full contents of all fil
 
 To optimize the content that Copilot returns, choose the most relevant SharePoint files to specify in your manifest. For example, if a folder contains eight files and only five are relevant to the users' task, specify the five files individually instead of referencing the folder. 
 
-> [!NOTE]
-> Coming soon: The number of files that you can specify for Copilot to search all contents will increase to 20.
+**Coming soon:** The number of files that you can specify for Copilot to search all contents will increase to 20.
 
 ## Limit SharePoint file size
 
