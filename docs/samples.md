@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 11/01/2024
+ms.date: 01/23/2025
 ---
 
 # Microsoft 365 Copilot extensibility samples
@@ -54,10 +54,6 @@ The following samples implement Microsoft Graph connectors that extend Microsoft
 | [Python GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-python) | This Python application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 Copilot app, and more. |
 | [TypeScript GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-typescript) | This TypeScript application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 Copilot app, and more. |
 
-### Microsoft Graph connector samples from the community
-
-You can find the latest list of Microsoft Graph connector samples from the community in the [Microsoft Adoption center](https://adoption.microsoft.com/sample-solution-gallery/?product=Microsoft+Graph+connectors&product=Microsoft+365+Copilot).
-
 ## Plugins for Microsoft 365 Copilot
 
 ### Teams message extension samples
@@ -76,7 +72,15 @@ The following samples implement Teams message extensions that extend Microsoft 3
 | [Compliance checker](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-ai-doc-compliance-checker) | Use Azure OpenAI to compare proposal documents against a guideline document and return whether the proposal complies and why/why not. |
 | [Expert finder](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-expert-finder-js) | This sample implements a Teams message extension that can be used to query a database of candidates based on their skills, location, and availability. The sample, when used with Microsoft 365 Copilot, demonstrates Single Sign-On (SSO), and Copilot's ability to perform multi-parameter search. |
 
-## Videos
+## Community samples
 
-- [Build your first customer Graph connector for Microsoft 365 Copilot](https://www.youtube.com/embed/2oQ_6wXrwDQ)
-- [Write a message extension for Teams and Microsoft 365 Copilot](https://www.youtube.com/embed/zK-L83cwJ8c)
+You can find the latest list of samples from the community in the [Microsoft Adoption center sample solution gallery](https://adoption.microsoft.com/en-us/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1):
+
+- [Microsoft 365 Copilot samples](https://adoption.microsoft.com/en-us/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Microsoft+365+Copilot)
+- [Microsoft Graph connector samples](https://adoption.microsoft.com/en-us/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Microsoft+Graph+connectors)
+
+
+## Related content
+
+- [Microsoft 365 Copilot developer videos](https://www.youtube.com/@Microsoft365Developer)
+- [Learn samples gallery](https://learn.microsoft.com/en-us/samples/browse/)

@@ -39,6 +39,8 @@
       href: declarative-agent-instructions.md
     - name: Add agent capabilities
       href: add-agent-capabilities.md
+    - name: Optimize SharePoint content retrieval
+      href: optimize-sharepoint-content.md
     - name: Localize your agent
       href: localize-agents.md
     - name: RAI validation
@@ -255,8 +257,6 @@
         href: api-plugin-manifest-2.2.md
       - name: Version 2.1
         href: api-plugin-manifest-2.1.md
-  - name: Teams message extension plugins
-    href: overview-message-extension-bot.md
   - name: Copilot Studio connectors and actions
     items:
     - name: Copilot connectors on Copilot Studio overview
