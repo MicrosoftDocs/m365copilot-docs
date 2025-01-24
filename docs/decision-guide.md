@@ -5,7 +5,7 @@ author: girliemac
 ms.author: timura
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 11/18/2024
+ms.date: 02/03/2025
 ms.custom: [copilot-learning-hub]
 ---
 
