@@ -16,7 +16,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ## January 2025
 
-### Copilot no longer redacts links
+### Links are no longer redacted in Copilot responses
 
 Links to organizational and web resources are no longer redacted from Copilot responses. Links that don't explicitly match grounding data or resources defined in the agent manifest continue to be redacted.
 
