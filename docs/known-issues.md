@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 01/24/2025
 ---
 
 # Known issues
@@ -27,10 +27,6 @@ In some cases, a agent installed from the store doesn't immediately show up in C
 Power Automate Flows as actions in declarative agents might not run reliably and might not return results.
 
 **Workaround:** Currently, no workaround for the issue that the flows might not return results is available. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
-
-### Links are removed from Copilot responses
-
-Copilot responses don't show links in the response body. Links are replaced with the following message: "An external link was removed to protect your privacy." 
 
 This issue applies to links from any content source, including SharePoint, Microsoft Graph connectors, and plugins.
 
