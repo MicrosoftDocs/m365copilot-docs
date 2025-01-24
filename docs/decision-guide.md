@@ -32,7 +32,11 @@ Custom engine agents are specialized agentic solutions that you can build on any
 
 - You want to use specific LLM or small language model (SLM) for your service.
 - You need agentic AI support.
+<!--
 - You want your service to be independent from Microsoft 365 Copilot, accessible to all Microsoft 365 users regardless of their Copilot licensing status.
+-->
+
+Custom engine agents are available to users with Microsoft 365 Copilot licenses via Copilot in Teams and the Microsoft 365 Copilot app (preview).
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 Copilot extensibility options are best for you." lightbox="assets/images/m365-extensibility-decisions.png" border="false" :::
 
