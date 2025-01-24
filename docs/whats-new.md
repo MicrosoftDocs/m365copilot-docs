@@ -14,6 +14,12 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## February 2025
+
+### New in preview
+
+Custom engine agents are now available to users who have Microsoft 365 Copilot licenses in the Microsoft 365 Copilot app, in addition to Teams.
+
 ## January 2025
 
 ### Build agents for Microsoft 365 Copilot Chat
