@@ -59,6 +59,9 @@ You can use your tool of choice to create a declarative agent app package. To ge
 | [Copilot Studio agent builder](copilot-studio-agent-builder.md) | Build declarative agents using the integrated builder in Microsoft 365 Copilot. |
 | [SharePoint](./build-declarative-agents.yml?tutorial-step=5) | Build declarative agents using grounding data from SharePoint files. |
 
+> [!NOTE]
+> If you have an existing Teams message extension, now you can convert it as a declarative agent. See [Extend bot-based message extension as agent for Microsoft 365 Copilot](/microsoftteams/platform/messaging-extensions/build-bot-based-agent) on Microsoft Teams developer documentation for more information.
+
 ## Responsible AI
 
 Declarative agents must pass validation checks for Responsible AI (RAI). For information about RAI validation, see [Responsible AI validation checks](rai-validation.md).
