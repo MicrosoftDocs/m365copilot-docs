@@ -4,7 +4,7 @@ description: Custom engine agents are specialized chat experiences built on any 
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 01/24/2025
 ms.topic: overview
 ---
 
@@ -25,23 +25,23 @@ There are two options for building custom engine agents. You can use the [Teams 
 
 ### Teams AI library and Teams Toolkit
 
-For enterprises seeking bot solutions that are precisely customized to user demands and scenarios, using the [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview) is a great choice. The Teams AI library utilizes LLMs that adhere to Microsoft's UX principles and that are compatible with Teams and Microsoft 365. Developing custom engine agents with the Teams AI Library can provide more natural, intuitive, and specialized user interaction experiences. This option is advantageous for developers wishing to customize model selection and orchestration, applying prior experience in Teams bot development, or aiming to ensure accessibility for all Microsoft 365 users.
+For enterprises seeking solutions that are precisely customized to user demands and scenarios, using the [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview) is a great choice. The Teams AI library utilizes LLMs that adhere to Microsoft's UX principles and that are compatible with Teams and Microsoft 365. Developing custom engine agents with the Teams AI Library can provide more natural, intuitive, and specialized user interaction experiences. This option is advantageous for developers who want to customize model selection and orchestration and apply prior experience with Teams bot development, or who want to ensure accessibility for all Microsoft 365 users.
 
 Developers can also utilize the [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to construct their projects. The Teams Toolkit includes prebuilt templates for a seamless project launch, offering an ideal solution for quick starts, easy debugging, and deployment.
 
 #### Explore templates to get started
 
-Kickstart building your custom engine agents using Teams AI library with the prebuilt templates available in Teams Toolkit:
+Kickstart your custom engine agent development by using Teams AI library with the prebuilt templates that are available in Teams Toolkit.
 
 | Template | Description |
 |:---------|:------------|
 | [Basic AI ChatBot](/microsoftteams/platform/toolkit/build-a-basic-ai-chatbot-in-teams) | Build a basic AI chatbot for Teams using Teams AI library. |
-| [AI Agent ChatBot](/microsoftteams/platform/toolkit/build-an-ai-agent-in-teams) | Build an AI agent chatbot for Teams that can make decisions and perform actions based on LLM reasoning. AI Agent template has options to start from scratch or use OpenAI Assistants API. |
+| [AI Agent](/microsoftteams/platform/toolkit/build-an-ai-agent-in-teams) | Build an AI agent chatbot for Teams that can make decisions and perform actions based on LLM reasoning. AI Agent template has options to start from scratch or use OpenAI Assistants API. |
 | [Chat with your data](/microsoftteams/platform/toolkit/build-a-rag-bot-in-teams) | Expand AI bot's knowledge with your content to get more accurate answers to your questions. *Chat with your data* supports Azure AI Search, Microsoft Graph Search with Microsoft 365 and SharePoint content, and custom OpenAPI and data ingestion options.|
 
 #### Take a tour of the sample scenarios
 
-Explore sample scenarios available in [Teams AI library GitHub repository](https://github.com/microsoft/teams-ai) to understand more about the capabilities you can add in your custom engine agents:
+Explore sample scenarios available in [Teams AI library GitHub repository](https://github.com/microsoft/teams-ai) to understand more about the capabilities you can add in your custom engine agents.
 
 | Sample      | Description | C# | JavaScript | Python |
 |:------------|:------------|:---|:-----------|:-------|

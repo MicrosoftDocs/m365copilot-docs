@@ -47,7 +47,7 @@ However, Copilot Studio and Teams Toolkit have different development prerequisit
 
 #### Custom engine agents built with Teams Toolkit
 
-Custom engine agents created with Teams Toolkit and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like declarative agents. As Teams bot apps, they can also be managed them through **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)).
+Custom engine agents created with Teams Toolkit and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like declarative agents. Custom engine agents can also be managed through **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)).
 
 For required admin settings for developing custom engine agents, see [Prerequisites for building agents and plugins with Teams Toolkit and other IDEs](./prerequisites.md#teams-toolkit-requirements).
 
