@@ -17,7 +17,7 @@ Custom engine agents are specialized chat experiences built on any large languag
 
 Custom engine agents utilize LLM technology that allows them to easily understand and respond to user queries, creating dynamic and immersive interactions. Custom engine agents also offer advanced functionalities such as task execution and content creation. These capabilities make custom engine agents indispensable tools for streamlining workflows and boosting productivity.
 
-Custom engine agents don't require a Microsoft 365 Copilot license to build, debug and deploy. They are available to users with Microsoft 365 Copilot licenses via Copilot in Teams and the Microsoft 365 Copilot app (preview).
+Custom engine agents don't require a Microsoft 365 Copilot license to build, debug and deploy. They are available to users with Microsoft 365 Copilot licenses via Copilot in Teams and the Microsoft 365 Copilot app (for preview).
 
 > [!NOTE]
 > The cost of a custom engine agent depends on the Azure services consumed in the app. To estimate the cost, visit the Azure Pricing Calculator.
@@ -60,6 +60,11 @@ Explore sample scenarios available in [Teams AI library GitHub repository](https
 ### Microsoft Copilot Studio
 
 Microsoft Copilot Studio is a versatile platform that allows you to build and customize agents using low-code and pro-code tools. It integrates with Azure AI services and offers over 1,000 connectors, enabling the creation of sophisticated, multi-channel conversational agents.
+
+For information about how to use Copilot Studio to build and publish custom engine agents, see the following articles:
+
+- [Create and delete agents](/microsoft-copilot-studio/authoring-first-bot)
+- [Connect and configure an agent for Teams and Microsoft 365](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams)
 
 ### Microsoft 365 Agents SDK
 

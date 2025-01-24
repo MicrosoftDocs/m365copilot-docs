@@ -16,9 +16,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ## February 2025
 
-### New in preview
-
-Custom engine agents are now available to users who have Microsoft 365 Copilot licenses in the Microsoft 365 Copilot app, in addition to Teams.
+Custom engine agents are now available to users who have Microsoft 365 Copilot licenses in the Microsoft 365 Copilot app (for preview), in addition to Teams.
 
 ## January 2025
 

@@ -33,7 +33,7 @@ Custom engine agents are specialized agentic solutions that you can build on any
 - You need agentic AI support.
 - You want to support proactive messages, which trigger agent behaviors without a need for user interaction; for example, notifications or scheduled messages.
 
-Custom engine agents are available to users with Microsoft 365 Copilot licenses via Copilot in Teams and the via the Microsoft 365 Copilot app (preview).
+Custom engine agents are available to users with Microsoft 365 Copilot licenses via Copilot in Teams and the via the Microsoft 365 Copilot app (for preview).
 
 :::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 Copilot extensibility options are best for you." lightbox="assets/images/m365-extensibility-decisions.png" border="false" :::
 
