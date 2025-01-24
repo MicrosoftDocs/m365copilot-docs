@@ -257,8 +257,6 @@
         href: api-plugin-manifest-2.2.md
       - name: Version 2.1
         href: api-plugin-manifest-2.1.md
-  - name: Teams message extension plugins
-    href: overview-message-extension-bot.md
   - name: Copilot Studio connectors and actions
     items:
     - name: Copilot connectors on Copilot Studio overview
