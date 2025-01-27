@@ -246,18 +246,18 @@ The code interpreter object contains the following properties.
 
 #### TeamsMessages object
 
-Indicates that the declarative agent can search through Teams chats (group and 1:1), channels and meeting chats.
+Indicates that the declarative agent can search through Teams channels, teams, meetings, 1:1 chats and group chats.
 
 The TeamsMessages object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `TeamsMessages`. |
-| `channels_by_url` | Array of [Url object](#url-object) | Optional, An array of objects that identify the url(s) of the Team channel(s), team(s) or meeting chat(s) available to the declarative agent. Omitting this property will allow an unscoped search through all of channels, teams, meetings, 1:1 chat, and group chats. |
+| `channels_by_url` | Array of [Url object](#url-object) | Optional, An array of objects that identify the url(s) of the Team channel(s), team(s) or meeting chat(s) available to the declarative agent. Omitting this property will allow an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
 
 ### Url object
 
-Identifies a Teams channel or meeting chat (join url).
+Identifies a Teams channel, team or meeting chat.
 The url object contains the following properties.
 
 | Property        | Type   | Description |
