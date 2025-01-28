@@ -43,7 +43,7 @@ The user prompt "Create a word cloud of top pet names" generates a word cloud th
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest reference, as shown in the following example.
 
 > [!NOTE]
-> You must be using [version 1.2](declarative-agent-manifest-1.2.md) of the declarative agent manifest schema to add the `CodeInterpreter` capability.
+> You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `CodeInterpreter` capability.
 
 ```json
 {
@@ -93,7 +93,7 @@ The following image shows the result.
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest reference, as shown in the following example.
 
 > [!NOTE]
-> You must be using [version 1.2](declarative-agent-manifest-1.2.md) of the declarative agent manifest schema to add the `GraphicArt` capability.
+> You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `GraphicArt` capability.
 
 
 ```json
@@ -112,6 +112,35 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 
 > [!NOTE]
 > The image generator doesn't currently work in the test pane in Copilot Studio agent builder.
+
+## Teams chat as knowledge
+
+The Teams chat as knowledge capability enables agents to use Teams channels, meeting chats, and teams as a knowledge source. You can choose to specify up to five URLs to a combination of teams, channels, or meeting chats in the `channels_by_url` value, or you can leave the value blank to allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as a knowledge source.
+
+To get the URL for a Teams team or channel, choose the three dots (...) next to the team or channel name and choose **Get link to team** or **Get link to channel**. 
+
+To get the URL for a Teams meeting, open the meeting, choose the arrow next to **Join**, and choose **Copy join link**.
+
+Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has the `OneDriveAndSharePoint` capability enabled, and the capability is [optimized for content retrieval](optimize-sharepoint-content.md).
+
+### Enable Teams chat as knowledge
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Teams chat as knowledge in your agent, add the `TeamsMessage` value to the **capabilities** property in your manifest reference, as shown in the following example.
+
+> [!NOTE]
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `TeamsMessage` capability.
+
+```json
+{
+  "capabilities": [
+    {
+      "name": "TeamsMessages",
+      "channels_by_url": [] 
+    }
+  ]
+}
+```
+
 
 ## Related content
 
