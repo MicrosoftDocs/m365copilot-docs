@@ -18,7 +18,7 @@ Declarative agents are valuable in understanding and generating human-like text,
 
 This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md).
 
-- The `TeamsMessages` capability is added to the list of `capabilities`. It supports an array of url objects in the `channels_by_url` field that has well formatted Teams urls to Team channel, team, or meeting chat.
+- The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `channels_by_url` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
 
 ## JSON schema
 
@@ -80,10 +80,10 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
 - [Graphic art object](#graphic-art-object)
 - [Code interpreter object](#code-interpreter-object)
-- [TeamsMessages object](#teamsmessages-object)
+- [Teams messages object](#teams-messages-object)
 
 > [!NOTE]
-> Declarative agents with the OneDrive and SharePoint, Microsoft Graph connectors, graphic art, or code interpreter capability are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
+> Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
 
 #### Example of capabilities
 
@@ -127,14 +127,14 @@ The capabilities object is the base type of objects in the `capabilities` proper
     },
     {
       "name": "CodeInterpreter"
-    }, 
+    },
     {
-            "name": "TeamsMessages",
-            "channels_by_url": [
-                {
-                    "url": "https://teams.microsoft.com/l/channel/19%3ApO0102YGEBRSH6RziXCxEgB4mtb7-5hIlDzAjtxs_dg1%40thread.tacv2/G%C3%A9n%C3%A9ral?groupId=2670cf94-acf5-48f4-96d4-c58dd8937afc&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47"
-                }
-            ]
+      "name": "TeamsMessages",
+      "channels_by_url": [
+        {
+          "url": "https://teams.microsoft.com/l/channel/19%3ApO0102YGEBRSH6RziXCxEgB4mtb7-5hIlDzAjtxs_dg1%40thread.tacv2/G%C3%A9n%C3%A9ral?groupId=2670cf94-acf5-48f4-96d4-c58dd8937afc&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+      ]
     }
   ]
 }
@@ -162,7 +162,7 @@ The site object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `url`    | String | Required. An absolute URL to a site to be searched for content. The URL MUST NOT contain more than 2 path segments (for example, `https://contoso.com/projects/mark-8` is valid, `https://contoso.com/projects/mark-8/beta-program` is not valid). The URL MUST NOT contain any query parameters. |
+| `url`    | String | Required. An absolute URL to a site to be searched for content. The URL MUST NOT contain more than two path segments (for example, `https://contoso.com/projects/mark-8` is valid, `https://contoso.com/projects/mark-8/beta-program` isn't valid). The URL MUST NOT contain any query parameters. |
 
 #### OneDrive and SharePoint object
 
@@ -244,21 +244,22 @@ The code interpreter object contains the following properties.
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `CodeInterpreter`. |
 
-#### TeamsMessages object
+#### Teams messages object
 
-Indicates that the declarative agent can search through Teams channels, teams, meetings, 1:1 chats and group chats.
+Indicates that the declarative agent can search through Teams channels, teams, meetings, 1:1 chats, and group chats.
 
-The TeamsMessages object contains the following properties.
+The Teams messages object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `TeamsMessages`. |
-| `channels_by_url` | Array of [Teams Url object](#teams-url-object) | Optional, An array of objects that identify the url(s) of the Team channel(s), team(s) or meeting chat(s) available to the declarative agent. Omitting this property will allow an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
+| `channels_by_url` | Array of [Teams URL object](#teams-url-object) | Optional, An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
 
-### Teams Url object
+### Teams URL object
 
-Identifies a Teams channel, team or meeting chat.
-The url object contains the following properties.
+Identifies a Teams channel, team, or meeting chat.
+
+The Teams URL object contains the following properties.
 
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
@@ -316,7 +317,7 @@ The action object contains the following properties.
 
 Here's an example of a declarative agent manifest file that uses most of the manifest properties described in this article.
 
-:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.2.json":::
+:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.3.json":::
 
 ## Related content
 
