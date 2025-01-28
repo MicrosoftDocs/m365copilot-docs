@@ -8,7 +8,7 @@ ms.date: 01/24/2025
 ms.topic: reference
 ---
 
-# Declarative agent schema 1.2 for Microsoft 365 Copilot
+# Declarative agent schema 1.3 for Microsoft 365 Copilot
 
 This article describes the 1.3 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
@@ -253,16 +253,16 @@ The TeamsMessages object contains the following properties.
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `TeamsMessages`. |
-| `channels_by_url` | Array of [Url object](#url-object) | Optional, An array of objects that identify the url(s) of the Team channel(s), team(s) or meeting chat(s) available to the declarative agent. Omitting this property will allow an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
+| `channels_by_url` | Array of [Teams Url object](#teams-url-object) | Optional, An array of objects that identify the url(s) of the Team channel(s), team(s) or meeting chat(s) available to the declarative agent. Omitting this property will allow an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
 
-### Url object
+### Teams Url object
 
 Identifies a Teams channel, team or meeting chat.
 The url object contains the following properties.
 
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
-| `url` | string | Required. A well formatted Teams URL that links to either a Team channel, team, or meeting chat. |
+| `url` | String | Required. A well formatted Teams URL that links to either a Team channel, team, or meeting chat. |
 
 ### Conversation starters object
 
