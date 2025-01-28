@@ -2,7 +2,7 @@
 title: Declarative agent schema 1.3 for Microsoft 365 Copilot
 description: Learn about the 1.3 schema for a manifest file for declarative agents in Microsoft 365 Copilot
 author: RachitMalik12
-ms.author: malikrachit
+ms.author: malikrachit, simranajwani
 ms.localizationpriority: medium
 ms.date: 01/24/2025
 ms.topic: reference
@@ -18,7 +18,7 @@ Declarative agents are valuable in understanding and generating human-like text,
 
 This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md).
 
-- The `TeamsMessages` capability is added to the list of `capabilities`. It supports an array of url objects in the `channels_by_url` field that contain links to either a Teams channel or Teams meeting join url. This scopes the Declarative Agent to the content in the channel or meeting chat.
+- The `TeamsMessages` capability is added to the list of `capabilities`. It supports an array of url objects in the `channels_by_url` field that has well formatted Teams urls to Team channel, team, or meeting chat.
 
 ## JSON schema
 
