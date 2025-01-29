@@ -141,6 +141,7 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 }
 ```
 
+## Web search and web scoping
 
 ## Related content
 
