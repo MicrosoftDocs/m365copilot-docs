@@ -20,7 +20,7 @@ You can reference specific SharePoint files in your agent manifest via the `OneD
 
 When you specify up to five files, Copilot searches the full contents of all files. Copilot will have full access to all the file content and returns the appropriate content to the user based on their query. If you specify more than five SharePoint files, Copilot chooses content from the most relevant five files, rather than searching all the files specified, and only returns content from those files.
 
-To optimize the content that Copilot returns, choose the most relevant SharePoint files to specify in your manifest. For example, if a folder contains eight files and only five are relevant to the users' task, specify the five files individually instead of referencing the folder. 
+To optimize the content that Copilot returns, choose the most relevant SharePoint files to specify in your manifest. For example, if a folder contains eight files and only five are relevant to the users' task, specify the five files individually instead of referencing the folder. As a best practice to ensure that Copilot searches the full file contents, strive to keep the relevant files that you specify no longer than 300 pages.
 
 > **Coming soon:** The number of files that you can specify for Copilot to search all contents will increase to 20.
 
