@@ -20,6 +20,10 @@ Custom engine agents are now available to users who have Microsoft 365 Copilot l
 
 ## January 2025
 
+### Links are no longer redacted in Copilot responses
+
+Links to organizational and web resources are no longer redacted from Copilot responses. Links that don't explicitly match grounding data or resources defined in the agent manifest continue to be redacted.
+
 ### Build agents for Microsoft 365 Copilot Chat
 
 You can now build agents for Microsoft 365 users who don't have a Microsoft 365 Copilot license, grounded on the web and with limited capabilities. For more information, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
