@@ -253,7 +253,7 @@ The Teams messages object contains the following properties.
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `TeamsMessages`. |
-| `channels_by_url` | Array of [Teams URL object](#teams-url-object) | Optional, An array of objects(maximum 5) that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
+| `channels_by_url` | Array of [Teams URL object](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
 
 ### Teams URL object
 
