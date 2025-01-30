@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for C
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/18/2024
+ms.date: 1/24/2025
 ms.topic: conceptual
 ---
 
@@ -24,7 +24,10 @@ Copilot Studio agent builder is available in the following geographies:
 - Germany
 - India
 - Japan
+- Norway
+- South Africa
 - South America
+- South Korea
 - Switzerland
 - United Arab Emirates
 - United Kingdom
