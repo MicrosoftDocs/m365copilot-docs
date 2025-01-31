@@ -4,7 +4,7 @@ description: Find best practices to optimize how your agent in Microsoft 365 Cop
 author: lauragra
 ms.author: lauragra
 ms.topic: best-practice
-ms.date: 01/29/2025
+ms.date: 01/31/2025
 ---
 
 # Optimize SharePoint content retrieval
