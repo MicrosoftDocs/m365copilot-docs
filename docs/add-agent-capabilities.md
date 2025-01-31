@@ -113,6 +113,22 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 > [!NOTE]
 > The image generator doesn't currently work in the test pane in Copilot Studio agent builder.
 
+## Microsoft Graph connectors as knowledge
+
+Microsoft Graph connectors enable you to add organizational data to your agent as grounding information. You can use Microsoft Graph connectors to ingest your line-of-business data into Microsoft Graph, enabling Copilot to reason over the content. For more information about Microsoft Graph connectors, see [Microsoft Graph connectors for Microsoft 365 Copilot](overview-graph-connector.md).
+
+For information about how to add Microsoft Graph connectors as knowledge to your agent manifest in Teams Toolkit, see [Microsoft Graph connectors object](declarative-agent-manifest-1.2.md#microsoft-graph-connectors-object).
+
+For information about how to add Microsoft Graph connectors to your agent in Copilot Studio agent builder, see [Microsoft Graph connectors](copilot-studio-agent-builder-build.md#microsoft-graph-connectors).
+
+## SharePoint and OneDrive as knowledge
+
+The OneDrive and SharePoint as knowledge capability enables agents to search SharePoint and OneDrive sites that a user has access to for grounding information.
+
+For information about how to add the OneDrive and SharePoint as knowledge capability to your agent manifest in Teams Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object).
+
+For information about how to enable the OneDrive and SharePoint as knowledge capability to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
+
 ## Teams chat as knowledge
 
 The Teams chat as knowledge capability enables agents to use Teams channels, meeting chats, and teams as a knowledge source. You can choose to specify up to five links to teams, channels, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
