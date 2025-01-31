@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 9/16/2024
+ms.date: 02/11/2025
 ---
 
 # Manage extensibility for Microsoft 365 Copilot

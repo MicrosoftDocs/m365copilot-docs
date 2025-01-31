@@ -4,7 +4,7 @@ description: Custom engine agents are specialized chat experiences built on any 
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 01/24/2025
+ms.date: 02/11/2025
 ms.topic: overview
 ---
 
@@ -17,7 +17,7 @@ Custom engine agents are specialized chat experiences built on any large languag
 
 Custom engine agents utilize LLM technology that allows them to easily understand and respond to user queries, creating dynamic and immersive interactions. Custom engine agents also offer advanced functionalities such as task execution and content creation. These capabilities make custom engine agents indispensable tools for streamlining workflows and boosting productivity.
 
-Custom engine agents don't require a Microsoft 365 Copilot license to build, debug, and deploy. They are available to users in Copilot Chat in Teams and to users with Microsoft 365 Copilot licenses in the Microsoft 365 Copilot app (public preview).
+Custom engine agents don't require a Microsoft 365 Copilot license to build, debug, and deploy. They are available to users with Microsoft 365 Copilot licenses or users in tenants with metering enabled via Copilot Chat in Teams and the Microsoft 365 Copilot app (for preview).
 
 > [!NOTE]
 > The cost of a custom engine agent depends on the Azure services consumed in the app. To estimate the cost, visit the Azure Pricing Calculator.
