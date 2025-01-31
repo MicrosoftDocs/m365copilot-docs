@@ -110,9 +110,9 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 > [!NOTE]
 > The image generator doesn't currently work in the test pane in Copilot Studio agent builder.
 
-## Microsoft Graph connectors as knowledge
+## Microsoft Graph connectors
 
-Microsoft Graph connectors enable you to add organizational data to your agent as grounding information. You can use Microsoft Graph connectors to ingest your line-of-business data into Microsoft Graph, enabling Copilot to reason over the content. For more information about Microsoft Graph connectors, see [Microsoft Graph connectors for Microsoft 365 Copilot](overview-graph-connector.md).
+Microsoft Graph connectors enable you to add organizational data to your agent as grounding information. You can use Microsoft Graph connectors to ingest your line-of-business data into Microsoft Graph and Copilot can reason over your data as grounding information in responses to user prompts. For more information about Microsoft Graph connectors, see [Microsoft Graph connectors for Microsoft 365 Copilot](overview-graph-connector.md).
 
 For information about how to add Microsoft Graph connectors as knowledge to your agent manifest in Teams Toolkit, see [Microsoft Graph connectors object](declarative-agent-manifest-1.2.md#microsoft-graph-connectors-object).
 
@@ -120,7 +120,7 @@ For information about how to add Microsoft Graph connectors to your agent in Cop
 
 ## SharePoint and OneDrive as knowledge
 
-The OneDrive and SharePoint as knowledge capability enables agents to search SharePoint and OneDrive sites that a user has access to for grounding information.
+When you configure your agent to use OneDrive and SharePoint content as knowledge, Copilot searches SharePoint and OneDrive sites that a user has access to for grounding information.
 
 For information about how to add the OneDrive and SharePoint as knowledge capability to your agent manifest in Teams Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object).
 
