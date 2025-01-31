@@ -394,9 +394,6 @@ The security info object contains the following properties.
 | `DataExport`          | Indicates that the function sends or writes data to a location outside of the function itself. | A function that saves data to a local or cloud file. |
 | `ResourceStateUpdate` | Indicates that the function affects a resource by initiating a transaction, changing a process in the real world, granting or denying permissions, or performing any other action that would require explicit user confirmation. | A function that books a hotel room or changes the state of a work item from `active` to `resolved`. |
 
-> [!NOTE]
-> Plugin manifests that use the `DataExport` value may fail validation when attempting to install the plugin. This is temporary and will be resolved soon.
-
 ### OpenAPI runtime object
 
 Describes how the plugin invokes OpenAPI functions.
