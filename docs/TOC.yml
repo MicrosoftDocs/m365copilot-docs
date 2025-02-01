@@ -101,6 +101,8 @@
   items:
   - name: Microsoft Graph connectors in Microsoft 365 Copilot
     href: overview-graph-connector.md
+  - name: Semantic indexing
+    href: connectors-semantic-index.md
   - name: Enhance Copilot discovery of Microsoft Graph connector content
     href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
   - name: Connector experiences
