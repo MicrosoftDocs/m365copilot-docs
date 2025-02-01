@@ -8,7 +8,7 @@ ms.date: 01/31/2025
 ms.topic: overview
 ---
 
-# Semantic indexing for Microsoft Graph connectors
+# Microsoft Graph connector semantic indexing
 
 Microsoft Graph connectors provide a way for you to to bring your external data into Microsoft 365 via Microsoft Graph to make it accessible to Microsoft 365 Copilot. Microsoft Graph connectors use semantic indexing to enable more efficient and meaningful data retrieval. This article provides an overview of semantic indexing for Microsoft Graph connectors and how it supports your data management and retrieval processes.
 
@@ -34,7 +34,7 @@ Semantic indexing doesn't benefit the following scenarios:
 - Queries that involve multiple parameters, such as an assignee and a topic.
 - Queries for a total number of results. The system currently only returns a maximum of 10 results in a semantic or lexical search. Relevance and synthesis can also reduce the number of results returned.
  
-## Microsoft Graph connector semantic indexing
+## Semantic indexing for Microsoft Graph connectors
 
 All Microsoft Graph connector content is semantically indexed. This enables better integration of data from different sources and facilitates data management and analysis.
 
