@@ -59,6 +59,10 @@ Agents created via agent builder are stored in Cosmos DB on the organization's t
 
 For information about data subject rights and responding to requests to rectify personal data, see [Personal data requests for Copilot Studio](/microsoft-copilot-studio/personal-data-summary).
 
+## Admin controls
+
+Administrators can control whether Copilot Studio agent builder is available to users in their organization. For information about agent and agent builder admin controls, see [Manage agents for Microsoft 365 Copilot in Integrated Apps](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
+
 ## Known limitations
 
 The following are current known limitations:
