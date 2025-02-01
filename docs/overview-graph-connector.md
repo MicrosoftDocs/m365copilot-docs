@@ -36,7 +36,7 @@ If users want to dive deeper into the referenced content, they can select one of
 
 ## Microsoft Graph connector semantic indexing
 
-Semantic indexing optimizes the way data is indexed and retrieved from various sources to help search experiences access data and return more relevant results. For organizations that rely on diverse data sources, semantic indexing provides a cohesive and efficient method to retrieve information by offering improved matching, enhanced search results, and better contextual understanding of complex queries. Microsoft Graph connectors use semantic indexing to enable more efficient and meaningful data retrieval. 
+Semantic indexing optimizes the way data is indexed and retrieved from various sources to help search experiences access data and return more relevant results. Microsoft Graph connectors use semantic indexing to enable more efficient and meaningful data retrieval. 
 
 Semantic indexing allows for:
 
