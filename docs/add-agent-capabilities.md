@@ -134,7 +134,7 @@ Agents can return links to files shared in Teams messages, but they can't return
 
 ### Enable Teams chat as knowledge
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Teams chat as knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **channels_by_url** property, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Teams chat as knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **url** property, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `TeamsMessage` capability.
@@ -144,7 +144,7 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
   "capabilities": [
     {
       "name": "TeamsMessages",
-      "channels_by_url": [] 
+      "url": [] 
     }
   ]
 }
