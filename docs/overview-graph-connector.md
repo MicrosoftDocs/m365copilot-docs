@@ -52,7 +52,7 @@ Currently, the following properties, which are common across all connectors, are
 Custom connectors are semantically indexed as well. To take full advantage of semantic indexing in your custom connectors, include the relevant content that you want to be indexed in the **title** and **content** properties.
 
 > [!NOTE]
-> Semantic labels are used for filtering results; they don't affect the semantic indexing of the property
+> [Semantic labels](/graph/connecting-external-content-manage-schema#semantic-labels) are used for filtering results; they don't affect the semantic indexing of the property
 
 The following search scenarios benefit from semantic indexing:
 
