@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 02/03/2025
 ms.topic: conceptual
 ---
 
@@ -98,13 +98,15 @@ The following table lists the supported file types and their respective limits.
 <!-- markdownlint-disable MD033 -->
 | File type               | File size limit |
 | ------------------- | ----------- |
-| .docx            | 512 MB |
 | .doc            | 150 MB |
-| .pdf     | 512 MB |
-| .txt    | 150 MB |
-| .pptx       | 512 MB |
-| .ppt | 150 MB |
+| .docx            | 512 MB |
 | .html | 150 MB |
+| .pdf     | 512 MB |
+| .ppt | 150 MB |
+| .pptx       | 512 MB |
+| .txt    | 150 MB |
+| .xls | 150 MB |
+| .xlsx | 150 MB |
 <!-- markdownlint-enable MD033 -->
 
 > [!IMPORTANT]
