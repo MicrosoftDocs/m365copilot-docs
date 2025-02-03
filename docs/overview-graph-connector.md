@@ -5,7 +5,7 @@ author: muwagerikpe
 ms.author: muwagerikpe
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 02/03/2025
 ---
 
 # Microsoft Graph connectors for Microsoft 365 Copilot
@@ -36,9 +36,9 @@ If users want to dive deeper into the referenced content, they can select one of
 
 ## Microsoft Graph connector semantic indexing
 
-Semantic indexing optimizes the way data is indexed and retrieved from various sources to help search experiences access data and return more relevant results. Microsoft Graph connectors use semantic indexing to enable more efficient and meaningful data retrieval. 
+Microsoft Graph connectors use semantic indexing to enable more efficient and meaningful data retrieval. Semantic indexing optimizes the way data is indexed and retrieved from various sources to help search experiences access data and return more relevant results.
 
-Semantic indexing allows for:
+Semantic indexing in Microsoft Graph connectors allows for:
 
 - Improved matching of search queries to content to provide more relevant search results than simple keyword (lexical) matches.
 - Enhanced search results that include both exact and approximate matches.
@@ -51,6 +51,9 @@ Currently, the following properties, which are common across all connectors, are
 
 Custom connectors are semantically indexed as well. To take full advantage of semantic indexing in your custom connectors, include the relevant content that you want to be indexed in the **title** and **content** properties.
 
+> [!NOTE]
+> Semantic labels are used for filtering results; they don't affect the semantic indexing of the property
+
 The following search scenarios benefit from semantic indexing:
 
 - Topic and keyword-based searches
@@ -62,9 +65,6 @@ Semantic indexing doesn't benefit the following scenarios:
 - Queries that don't include keywords or topics, such as "find bugs assigned to" or "Find items created by".
 - Queries that involve multiple parameters, such as an assignee and a topic.
 - Queries for a total number of results. The system currently only returns a maximum of 10 results in a semantic or lexical search. Relevance and synthesis can also reduce the number of results returned.
-
-> [!NOTE]
-> Semantic labels are used for filtering results; they don't affect the semantic indexing of the property
 
 ## Microsoft Graph connectors gallery
 
