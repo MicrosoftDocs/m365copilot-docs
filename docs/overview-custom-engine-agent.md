@@ -1,6 +1,6 @@
 ---
 title: Custom engine agents for Microsoft 365
-description: Custom engine agents are specialized chat experiences built on any large language model (LLM) and tailored for specific domain or workflows
+description: Custom engine agents are specialized chat experiences built on any language model (LLM) and tailored for specific domain or workflows
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ ms.topic: overview
 
 **Custom engine agents** are specialized chat experiences built on any large language model (LLM) and tailored for specific domain or workflows. They allow organizations to create their own agents using tools like the Teams Toolkit, Microsoft Copilot Studio, and the M365 Agents SDK. Custom engine agents allow you to use your custom orchestrators, foundation models, and custom logic.
 
-:::image type="content" source="assets/images/teams-ai-library.png" alt-text="A diagram that shows how a custom engine agent in Teams works" lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" border="false":::
+:::image type="content" source="assets/images/custom-engine-agent.png" alt-text="An illustration that shows how a custom engine agent in Teams works" lightbox="/microsoftteams/platform/assets/images/bots/custom-engine-agent.png" border="false":::
 
 Custom engine agents utilize LLM technology that allows them to easily understand and respond to user queries, creating dynamic and immersive interactions. Custom engine agents also offer advanced functionalities such as task execution and content creation. These capabilities make custom engine agents indispensable tools for streamlining workflows and boosting productivity.
 
