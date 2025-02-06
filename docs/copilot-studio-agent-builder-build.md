@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/03/2025
+ms.date: 02/05/2025
 ms.topic: conceptual
 ---
 
@@ -27,16 +27,28 @@ Both tabs work seamlessly to provide a rich authoring experience.
 > [!NOTE]
 > The availability of the **Describe** tab is based on [geographic availability and language support](copilot-studio-agent-builder-availability.md). The **Describe** tab supports the following languages:
 >
+> - Chinese (Simplified)
+> - Chinese (Traditional)
+> - Czech
 > - Danish
 > - Dutch
 > - English
+> - Finnish
 > - French
 > - German
+> - Hindi
+> - Indonesian
 > - Italian
 > - Japanese
+> - Korean
+> - Norwegian Bokmål
+> - Polish
 > - Portuguese
+> - Russian
 > - Spanish
-> - Simplified Chinese
+> - Swedish
+> - Thai
+> - Turkish
 >
 > You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your region or preferred language.
 
