@@ -37,7 +37,7 @@ The following table lists the sharing options that are available.
 
 ### Automatically share SharePoint files and folders
 
-When you share an agent, Copilot users might not have access to all the underlying knowledge sources. The agent respects the end user's information and sensitivity privileges. If the user doesn't have access to a knowledge source, the agent doesn't include content from it when generating a response. You can share Knowledge sources that you've added from SharePoint to others when the Share option is set to **Specific users in your organization**.
+When you share an agent, Copilot users might not have access to all the underlying knowledge sources. The agent respects the end user's information and sensitivity privileges. If the user doesn't have access to a knowledge source, the agent doesn't include content from it when generating a response. You can share SharePoint Knowledge sources with others when the **Share** option is set to **Specific users in your organization**.
 
 > [!NOTE]
 > Only files and folders added to the agent can be automatically shared. SharePoint sites aren't automatically shared. A site administrator must grant user permission via site settings.
