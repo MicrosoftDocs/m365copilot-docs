@@ -72,6 +72,10 @@ Microsoft 365 Agents SDK seamlessly integrates with AI services like Azure AI Fo
 
 For more information, see [Microsoft 365 Agents SDK (preview)](/microsoft-365/agents-sdk/).
 
+## Privacy and compliance
+
+Custom engine agent prompts and responses in Microsoft 365 Copilot Chat and Teams are stored in the Microsoft Intelligent Conversation and Communications Cloud (IC3) and is available for document search requests (DSRs). Copilot data can't leave the boundary of the tenant unless the tenant provides explicit access to the data.
+
 ## Related content
 
 - [Teams AI library overview](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
