@@ -46,9 +46,9 @@ Declarative agents allow you to configure Copilot for specific scenarios with cu
 
 **To develop a custom agent, consider leveraging:**
 
-- **Custom orchestration:** Take full control of workflows and integrate additional knowledge and external API calls. You can incorporate one or more language models to enhance functionality.
-- **Custom models**: Choose the most suitable model for your use case, whether foundation large language models, small language models, fine-tuned models, or industry-specific models.  
-- **Proactive agentic support**: Programmatically initiate workflows and actions.  
+- **Custom orchestration** to take full control of workflows and integrate additional knowledge and external API calls. You can incorporate one or more language models to enhance functionality.
+- **Custom models** to choose the most suitable model for your use case, whether foundation large language models, small language models, fine-tuned models, or industry-specific models.  
+- **Proactive agentic support** to programmatically initiate workflows and actions.  
 
 **Custom engine agents have the following characteristics:**
 
