@@ -33,7 +33,7 @@ The following table lists the sharing options that are available.
 | Only me                                                 | Only the author of the agent can use the agent. The sharing link can't be used by anyone else. This sharing option is selected by default. |
 
 > [!NOTE]
-> When the Share option is set to **Specific users in your organization**, your search may return results from [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups), which may cause the sharing to fail. This is a known issue and will be addressed soon.
+> When the Share option is set to **Specific users in your organization**, your search might return results from [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups), which can cause the sharing to fail. This is a known issue and will be addressed soon.
 
 ### Automatically share SharePoint files and folders
 
