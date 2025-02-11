@@ -1,17 +1,21 @@
 ---
 title: Microsoft 365 Copilot Extensibility Options
 description: Understand which Microsoft 365 Copilot extensibility option works best for you
-author: girliemac
-ms.author: timura
+author: jessicaaawu
+ms.author: wujessica
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 01/23/2025
+ms.date: 2/10/2025
 ms.custom: [copilot-learning-hub]
 ---
 
 # Your extensibility options for Microsoft 365 Copilot
 
-When it comes to deciding on your approach to AI agent development, there are numerous options to consider, including Microsoft 365 Copilot extensibility options and Azure AI solutions. This article helps you identify the Microsoft 365 extensibility option that is best aligned with your specific needs and goals.
+Microsoft 365 Copilot is an AI-powered productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, grounded in data from Microsoft Graph. While Copilot offers powerful capabilities, users may need to integrate additional knowledge, data sources, or applications to meet specific business needs.
+
+[Microsoft Graph connectors](overview-graph-connector.md) enable organizations to bring in external data, allowing Copilot and agents to access and reason over a broader range of enterprise content.
+
+Agents for Microsoft 365 Copilot are specialized assistants that are focused on a specific subject, powered by organizational knowledge and actions to automate business processes. This article focuses on two options for building agents: **declarative agents** and **custom engine agents**.  
 
 ## Extend Copilot's models or build a custom engine agent?
 
