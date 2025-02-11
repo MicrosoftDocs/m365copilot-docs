@@ -86,6 +86,8 @@ The following table summarizes the key differences between declarative agents an
 - You need to implement **custom business logic** (i.e.,specific rules for patient triage in a healthcare setting based on symptoms and medical history).
 - You have **complex decision-making** (i.e., Evaluating loan applications based on multiple factors like credit score, income, and employment history).
 
+:::image type="content" source="assets/images/cea-da-decision-guide.png" alt-text="A decision guide for choosing between declarative agents and custom engine agents." lightbox="assets/images/cea-da-decision-guide.png" border="false":::
+
 ## Next Steps
 
 - Learn more about [declarative agents](overview-declarative-agent.md)
