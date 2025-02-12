@@ -74,6 +74,10 @@ The following table summarizes the key differences between declarative agents an
 
 This section describes the features and scenarios for declarative and custom engine agents to help you decide which type of agent to build.
 
+The following flow chart summarizes the decision process for choosing what type of agent to build.
+
+:::image type="content" source="assets/images/cea-da-decision-guide.png" alt-text="A decision guide for choosing between declarative agents and custom engine agents." lightbox="assets/images/cea-da-decision-guide.png" border="false":::
+
 Build a declarative agent when:
 
 - You want your agent to work within Copilot's orchestration and language models to ensure consistency with security and compliance.
@@ -91,9 +95,6 @@ Build a custom engine agent when:
 - You need to implement custom business logic (such as specific rules for patient triage in a healthcare setting based on symptoms and medical history).
 - You have complex decision-making (for example, evaluating loan applications based on multiple factors like credit score, income, and employment history).
 
-The following flow chart summarizes the decision process for choosing what type of agent to build.
-
-:::image type="content" source="assets/images/cea-da-decision-guide.png" alt-text="A decision guide for choosing between declarative agents and custom engine agents." lightbox="assets/images/cea-da-decision-guide.png" border="false":::
 
 ## Related content
 
