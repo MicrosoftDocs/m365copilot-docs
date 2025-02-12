@@ -27,13 +27,13 @@ You can choose to extend Copilot by building one of the following types of agent
 
 ### Declarative agents
 
-Declarative agents want to configure Copilot for specific scenarios by adding custom instructions, additional knowledge, and actions to automate business processes. Because declarative agents use Copilot's AI infrastructure, model, and orchestrator, they adhere to the security, compliance, and responsible AI (RAI) requirements for Microsoft 365.
+Declarative agents enable you to configure Copilot for specific scenarios by adding custom instructions, additional knowledge, and actions to automate business processes. Because declarative agents use Copilot's AI infrastructure, model, and orchestrator, they adhere to the security, compliance, and responsible AI (RAI) requirements for Microsoft 365.
 
 To configure a declarative agent, you provide:
 
-- Custom instructions to shape Copilot's responses to your organization's specific needs or workflow.
-- Custom knowledge to connect Microsoft 365 data sources (such as SharePoint and OneDrive) or external data via Microsoft Graph connectors.
-- Custom actions to integrate with APIs to interact with external systems in real time.
+- **Custom instructions** to shape Copilot's responses to your organization's specific needs or workflow.
+- **Custom knowledge** to connect Microsoft 365 data sources (such as SharePoint and OneDrive) or external data via Microsoft Graph connectors.
+- **Custom actions** to integrate with APIs to interact with external systems in real time.
 
 Declarative agents have the following characteristics:
 
@@ -47,9 +47,9 @@ Custom engine agents are fully customized AI assistants. They're useful for scen
 
 To develop a custom engine agent, you need:
 
-- Custom orchestration to take full control of workflows and integrate additional knowledge and external API calls. You can incorporate one or more language models to enhance functionality.
-- Custom models to choose the most suitable model for your use case, whether foundation large language, small language, fine-tuned, or industry-specific models.  
-- Proactive agentic support to programmatically initiate workflows and actions.  
+- **Custom orchestration** to take full control of workflows and integrate additional knowledge and external API calls. You can incorporate one or more language models to enhance functionality.
+- **Custom models** to choose the most suitable model for your use case, whether foundation large language, small language, fine-tuned, or industry-specific models.  
+- **Proactive agentic** support to programmatically initiate workflows and actions.  
 
 Custom engine agents have the following characteristics:
 
