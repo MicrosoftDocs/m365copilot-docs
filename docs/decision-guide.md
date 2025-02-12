@@ -61,9 +61,9 @@ Custom engine agents have the following characteristics:
 
 The following table summarizes the key differences between declarative agents and custom engine agents to help you choose the right option for your use case.
 
-| Characteristic                 | Declarative agents                                    | Custom engine agents                                               |
+| Feature                 | Declarative agents                                    | Custom engine agents                                               |
 |------------------------|------------------------------------------------------|-------------------------------------------------------------------|
-| Use case          | Use Microsoft 365 Copilot for task-specific scenarios.     | Use complex workflows or custom AI. systems                           |
+| Use case          | Use Microsoft 365 Copilot for task-specific scenarios.     | Use complex workflows or custom AI systems.                           |
 | Customization     | Limited to Copilot's models and actions.              | Fully customizable, including choice of AI models and orchestration. |
 | Proactive interactions | Not supported; rely on user-initiated interactions. | Enable agents to trigger actions automatically, even without direct user input. |
 | Channels          | Integrated into Microsoft 365 apps.                    | Available for Microsoft 365 and external apps.                             |
@@ -72,17 +72,19 @@ The following table summarizes the key differences between declarative agents an
 
 ## Choose what type of agent to build
 
+This section describes the features and scenarios for declarative and custom engine agents to help you decide which type of agent to build.
+
 Build a declarative agent when:
 
-- You want your **agent to work within Copilot's orchestration and language models** to ensure consistency with security and compliance.
-- You want a **faster implementation** or want to develop an agent with no or low-code.
-- Your **user's workflow is within Microsoft 365 apps** (i.e., SharePoint, OneDrive, Teams) and wants to work within the context of these applications (via @mentions or in Teams business chats).
+- You want your agent to work within Copilot's orchestration and language models to ensure consistency with security and compliance.
+- You want a faster implementation or want to develop an agent with no or low-code.
+- Your user's workflow is within Microsoft 365 apps (SharePoint, OneDrive, Teams) and they want to work within the context of these applications (via @mentions or in Teams business chats).
 
 Build a custom engine agent when:
 
 - You've built an existing conversational assistant outside of Copilot and want to integrate it with Microsoft 365 and Copilot.
 - You want to use your own AI models or your agent might benefit from domain-specific models with specialized knowledge or multimodal models.  
-- You want advanced Teams integrations (such as with meetings, channels, and so on).  
+- You want advanced Teams integrations (such as with meetings and channels).  
 - You want to make your agent available outside of Microsoft 365 and Copilot.  
 - You want to support proactive messaging, which enables developers to define workflows and trigger agent behavior without the need for user interaction.
 - You need multiple system integration, such as managing logistics by integrating data from GPS, warehouse systems, and customer databases.
