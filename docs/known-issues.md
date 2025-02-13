@@ -56,6 +56,11 @@ Currently, users can select a file in Copilot Studio and Copilot Studio agent bu
 
 **Workaround:** The user can select the file from the UI in Copilot Studio and Copilot Studio agent builder.
 
+### Sharing agents in Copilot Studio agent builder can fail
+
+When you share an agent in agent builder using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+
+
 ## Microsoft Graph connectors
 
 The following known issues apply to Microsoft Graph connectors.
