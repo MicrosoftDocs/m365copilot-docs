@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 01/24/2025
+ms.date: 02/12/2025
 ---
 
 # Known issues
@@ -55,6 +55,11 @@ If a SharePoint file used as a knowledge source contains special characters in t
 Currently, users can select a file in Copilot Studio and Copilot Studio agent builder and the agent will search the file. However, if the user pastes the URL of the file in prompt, the search fails.
 
 **Workaround:** The user can select the file from the UI in Copilot Studio and Copilot Studio agent builder.
+
+### Sharing agents in Copilot Studio agent builder can fail
+
+When you share an agent in agent builder using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+
 
 ## Microsoft Graph connectors
 
