@@ -144,7 +144,7 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
   "capabilities": [
     {
       "name": "TeamsMessages",
-      "url": [] 
+      "urls": [] 
     }
   ]
 }
