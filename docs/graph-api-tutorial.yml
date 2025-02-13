@@ -14,21 +14,21 @@ metadata:
 items:
 - content: |
     [!INCLUDE [](./includes/graph-api-tutorial/01-intro.md)]
-- title: Introduction
-  content: |
-    [!INCLUDE [](./includes/graph-api-tutorial/02-register-app.md)]
 - title: Register the app in the portal
   content: |
+    [!INCLUDE [](./includes/graph-api-tutorial/02-register-app.md)]
+- title: Set up the project
+  content: |
     [!INCLUDE [](./includes/graph-api-tutorial/03-set-up-project.md)]
-- title: Add conversation starters
+- title: Run the agent
   content: |
     [!INCLUDE [](./includes/graph-api-tutorial/04-run-agent.md)]
-- title: Add web content
+- title: Run Clippy, your personal assistant
   content: |
     [!INCLUDE [](./includes/graph-api-tutorial/05-run-personal-assistant.md)]
-- title: Add OneDrive and SharePoint content
+- title: Make your agent a standalone app
   content: |
     [!INCLUDE [](./includes/graph-api-tutorial/06-make-standalone-app.md)]
-- title: Add Microsoft Graph connectors content
+- title: Congratulations!
   content: |
     [!INCLUDE [](./includes/graph-api-tutorial/07-completed.md)]
