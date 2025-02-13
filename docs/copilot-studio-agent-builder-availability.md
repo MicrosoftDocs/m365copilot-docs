@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for C
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 2/03/2025
+ms.date: 2/10/2025
 ms.topic: conceptual
 ---
 
@@ -36,20 +36,6 @@ Copilot Studio agent builder is available in the following geographies:
 
 Geographic availability is based on Copilot Studio’s [data locations](/microsoft-copilot-studio/data-location).
 
-## Agent languages
-
-A user can chat with an agent created using the Copilot Studio agent builder in the following languages:
-
-- English
-- French
-- German
-- Italian
-- Japanese
-- Portuguese
-- Spanish
-- Simplified Chinese
-
-You can create agents to engage with users in any of the supported languages.
 
 ## Authoring languages
 
@@ -57,26 +43,54 @@ The authoring language is the one in which the authoring UI is presented. By def
 
 The following authoring languages are supported:
 
-- `cs-CZ`
-- `da-DK`
-- `de-DE`
-- `el-GR`
-- `en-US`
-- `es-ES`
-- `fi-FI`
-- `fr-FR`
-- `hi-IN`
-- `id-ID`
-- `it-IT`
-- `ja-JP`
-- `ko-KR`
-- `nb-NO`
-- `nl-NL`
-- `pl-PL`
-- `pt-BR`
-- `ru-RU`
-- `sv-SE`
-- `th-TH`
-- `tr-TR`
-- `zh-CN`
-- `zh-TW`
+- Chinese (Simplified) (zh-CN)
+- Chinese (Traditional) (zh-TW)
+- Czech (cs-CZ)
+- Danish (da-DK)
+- Dutch (nl-NL)
+- English (United States) (en-US)
+- Finnish (fi-FI)
+- French (France) (fr-FR)
+- German (de-DE)
+- Greek (el-GR)
+- Hindi (hi-IN)
+- Indonesian (id-ID)
+- Italian (it-IT)
+- Japanese (ja-JP)
+- Korean (ko-KR)
+- Norwegian (Bokmål) (nb-NO)
+- Polish (pl-PL)
+- Portuguese (Brazil) (pt-BR)
+- Russian (ru-RU)
+- Spanish (Spain) (es-ES)
+- Swedish (sv-SE)
+- Thai (th-TH)
+- Turkish (tr-TR)
+
+## Agent languages
+
+The **Describe** tab supports the following languages:
+
+- Chinese (Simplified) (zh-CN)
+- Chinese (Traditional) (zh-TW)
+- Czech (cs-CZ)
+- Danish (da-DK)
+- Dutch (nl-NL)
+- English (United States) (en-US)
+- Finnish (fi-FI)
+- French (France) (fr-FR)
+- German (de-DE)
+- Greek (el-GR)
+- Hindi (hi-IN)
+- Indonesian (id-ID)
+- Italian (it-IT)
+- Japanese (ja-JP)
+- Korean (ko-KR)
+- Norwegian (Bokmål) (nb-NO)
+- Polish (pl-PL)
+- Portuguese (Brazil) (pt-BR)
+- Russian (ru-RU)
+- Spanish (Spain) (es-ES)
+- Swedish (sv-SE)
+- Thai (th-TH)
+- Turkish (tr-TR)
