@@ -1,98 +1,105 @@
 ---
 title: Microsoft 365 Copilot Extensibility Options
-description: Understand which Microsoft 365 Copilot extensibility option works best for you
-author: girliemac
-ms.author: timura
+description: Choose the type of Microsoft 365 Copilot agent that works best for your scenario.
+author: jessicaaawu
+ms.author: wujessica
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 01/23/2025
+ms.date: 2/10/2025
 ms.custom: [copilot-learning-hub]
 ---
 
 # Your extensibility options for Microsoft 365 Copilot
 
-When it comes to deciding on your approach to AI agent development, there are numerous options to consider, including Microsoft 365 Copilot extensibility options and Azure AI solutions. This article helps you identify the Microsoft 365 extensibility option that is best aligned with your specific needs and goals.
+Microsoft 365 Copilot is an AI-powered productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, grounded in data from Microsoft Graph. Although Copilot offers powerful capabilities, users might need to integrate additional knowledge, data sources, or applications into Copilot to meet specific business needs.
 
-## Extend Copilot's models or build a custom engine agent?
+Agents for Microsoft 365 Copilot are specialized assistants focused on a specific subject, powered by organizational knowledge and actions to automate business processes. You can build two types of agents for Copilot: _declarative agents_ and _custom engine agents_. This article describes the two types of agents how to choose the right one for your scenario. 
 
-When you're looking to create a fully customized end-to-end AI product to cater to your business needs, you typically choose language models and orchestration for your Retrieval-Augmented Generation (RAG) solutions.
+[Microsoft Graph connectors](overview-graph-connector.md) enable organizations to bring in external data, allowing Copilot and agents to access and reason over a broader range of enterprise content.
 
-However, with Microsoft 365 Copilot, you also have a choice of extending Copilot's private instances of Large Language Models (LLMs) and the Azure OpenAI service. Copilot's LLM is grounded in each tenant's Microsoft 365 content so it can work with the documents, messages, and other business content people use every day. When you extend Copilot, you provide specific knowledge sources and skills that Copilot's [orchestration layer](orchestrator.md) uses to generate responses.
 
-### When to build an agent by extending Copilot's model
+## Types of agents you can build
 
-- You want to take advantage of Copilot's model and orchestrator.
-- You have external data that you want to make available to Copilot to reason over via a [Microsoft Graph connector](overview-graph-connector.md).
-- You have an existing API that could be used as an [API plugin](overview-api-plugins.md) for read and write access to real-time data within an agent.
+You can choose to extend Copilot by building one of the following types of agents:
 
-### When to build a custom engine agent
-
-- You want to use specific models (LLM or small language model (SLM)) for your service.
-- You need proactive agentic AI support.
-- You want your service to be independent from Microsoft 365 Copilot, accessible to all Microsoft 365 users regardless of their Copilot licensing status.
-
-:::image type="content" source="assets/images/m365-extensibility-decisions.png" alt-text="A diagram that helps you to decide which Microsoft 365 Copilot extensibility options are best for you." lightbox="assets/images/m365-extensibility-decisions.png" border="false" :::
-
-## Extend Microsoft 365 Copilot
-
-You can customize Copilot by building [declarative agents](#declarative-agents), optionally add actions and knowledge to Copilot and agents with [plugins](#plugins) and [Microsoft Graph connectors](#microsoft-graph-connectors).
-
-> [!TIP]
-> Are you a business decision maker? Check out the [Microsoft Copilot Scenario Library](https://adoption.microsoft.com/copilot-scenario-library/).
+- **Declarative agents** allow you to configure Copilot for specific scenarios with custom instructions, additional knowledge, and actions to automate business processes.
+- **Custom engine agents** are ideal for advanced scenarios that require complex workflows, advanced orchestration, or specialized language models.
 
 ### Declarative agents
 
-[Declarative agents](overview-declarative-agent.md) are designed to enhance the user experience by allowing the creation of personalized chat experiences to provide tailored interactions and responses. Declarative agents have the same look-and-feel as Microsoft 365 Copilot. Declarative agents can be combined with plugins and connectors to add skills and knowledge.
+Declarative agents enable you to configure Copilot for specific scenarios by adding custom instructions, additional knowledge, and actions to automate business processes. Because declarative agents use Copilot's AI infrastructure, model, and orchestrator, they adhere to the security, compliance, and responsible AI (RAI) requirements for Microsoft 365.
 
-:::image type="content" source="assets/images/declarative-copilot-ui.png" alt-text="A fictional declarative agent UI." lightbox="assets/images/declarative-copilot-ui.png" border="false":::
+To configure a declarative agent, you provide:
 
-Declarative agents are a great choice for the following cases.
+- **Custom instructions** to shape Copilot's responses to your organization's specific needs or workflow.
+- **Custom knowledge** to connect Microsoft 365 data sources (such as SharePoint and OneDrive) or external data via Microsoft Graph connectors.
+- **Custom actions** to integrate with APIs to interact with external systems in real time.
 
-- You want to layer on top of the full capability ​of Microsoft 365 Copilot​.
-- Your scenario requires ​focus or specialization. For example, focusing knowledge on a specific set of documents or specializing in financial topics.
-- You want to target specific roles or areas in your organization, like Human Resources, Sales, or Finance.
-- You want to scope to specific data sources including domain knowledge​, Microsoft Graph connectors, and plugins.
-- You want to enable nuanced interpretation of data received from data sources via custom instructions.
+Declarative agents have the following characteristics:
 
-#### Plugins
+- **Hosting:** Use Copilot's orchestrator and foundation model. No additional hosting is required.
+- **Tooling:** Can be created using low-code tools such as Copilot Studio and pro-code tools like Visual Studio, Visual Studio Code, and Teams Toolkit.
+- **Publishing channels:** Can be used in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook.  
 
-Plugins add skills and actions to declarative agents.
+### Custom engine agents
 
-- [API plugins](overview-api-plugins.md) extend declarative agents by calling REST APIs that have an OpenAPI description.
-- [Actions in Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) connect Microsoft 365 Copilot and the Power Platform environment. Actions include **Prompts**, **Flows**, and **Connectors**. If you prefer developing without much coding, these options are for you.
-- [Power Platform connectors](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context) enable declarative agents created with Microsoft Copilot Studio to interact with external services and data sources in real-time.
+Custom engine agents are fully customized AI assistants. They're useful for scenarios that require complex workflows, orchestration, or specific language models. Building a custom engine agent might require you to provide additional hosting for models and orchestrators and to ensure that your custom agent is compliant, secure, and adheres to responsible AI (RAI) policies.
 
-#### Microsoft Graph connectors
+To develop a custom engine agent, you need:
 
-[Microsoft Graph connectors](overview-graph-connector.md) enable data ingestion from various sources to Microsoft Graph, facilitating unified data access and insights across Microsoft 365 and other services. Items ingested via a Microsoft Graph connector are available to Microsoft 365 Copilot as well as declarative agents.
+- **Custom orchestration** to take full control of workflows and integrate additional knowledge and external API calls. You can incorporate one or more language models to enhance functionality.
+- **Custom models** to choose the most suitable model for your use case, whether foundation large language, small language, fine-tuned, or industry-specific models.  
+- **Proactive agentic** support to programmatically initiate workflows and actions.  
 
-### Extend Microsoft 365 Copilot with pro-code or low-code
+Custom engine agents have the following characteristics:
 
-Your journey varies based on your desired outcomes and your coding expertise. Whether you're a seasoned coder or prefer low-code or no-code solutions, there's a suite of tools tailored to your development style.
+- **Hosting**: Requires additional hosting outside of Microsoft 365, typically with cloud services such as Azure or Copilot Studio, at an additional cost.  
+- **Tooling**: Orchestration can be built using low-code Copilot Studio or pro-code tools like Visual Studio, Visual Studio Code, and Teams Toolkit, using languages such as .NET, Python, and JavaScript, and frameworks like Semantic Kernel or LangChain.  
+- **Publishing channels**: Can be used in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook, as well as external apps and websites.  
 
-- Pro-code options are declarative agents, API plugins, and Microsoft Graph connectors. [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for Visual Studio Code allows you to develop and tailor your agents.
-- Low-code or no-code options are declarative agents built with the [Copilot Studio agent builder](copilot-studio-agent-builder.md), Copilot Studio actions, and Power Platform connectors. You can develop rapidly with a user-friendly interface in [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
+## Agent feature comparison
 
-## Build a custom engine agent
+The following table summarizes the key differences between declarative agents and custom engine agents to help you choose the right option for your use case.
 
-With Azure AI services, you can create a [custom engine agent](overview-custom-engine-agent.md). Custom engine agents are based on a bring your own model premise. With custom engine agents, your agent is independent of Microsoft 365 Copilot and its LLM and orchestrator, however, both declarative agents and custom engine agents now have very similar user experience to end-users when running on Microsoft 365 Copilot Chat.
+| Feature                 | Declarative agents                                    | Custom engine agents                                               |
+|------------------------|------------------------------------------------------|-------------------------------------------------------------------|
+| Use case          | Use Microsoft 365 Copilot for task-specific scenarios.     | Use complex workflows or custom AI systems.                           |
+| Customization     | Limited to Copilot's models and actions.              | Fully customizable, including choice of AI models and orchestration. |
+| Proactive interactions | Not supported; rely on user-initiated interactions. | Enable agents to trigger actions automatically, even without direct user input. |
+| Channels          | Integrated into Microsoft 365 apps.                    | Available for Microsoft 365 and external apps.                             |
+| Setup complexity  | Can be developed with low-code tools (Copilot Studio) and pro-code tools (Visual Studio Code/Teams Toolkit) | Varies from simple setups in Copilot Studio to advanced pro-code implementations using Visual Studio and Visual Studio Code. |
+| Engine hosting    | Hosted in Microsoft 365.                              | Hosted in Microsoft 365 with Copilot Studio or externally with custom solutions such as Azure AI. |
 
-Custom engine agents are a great choice for the following cases.
+## Choose what type of agent to build
 
-- Your scenario requires usage of specific LLMs or SLMs.
-- You need greater control over the UX or behavior of the agent.
-- You want to publish your agents to users who are not on Microsoft 365.
+This section describes the features and scenarios for declarative and custom engine agents to help you decide which type of agent to build.
 
-### Build a custom engine agent with pro-code or low-code
+The following flow chart summarizes the decision process for choosing what type of agent to build.
 
-How you build and which tools you use are up to you. Your choices are:
+:::image type="content" source="assets/images/cea-da-decision-guide.png" alt-text="A decision guide for choosing between declarative agents and custom engine agents." lightbox="assets/images/cea-da-decision-guide.png" border="false":::
 
-- The pro-code option allows for full customization. Develop with [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) for Visual Studio Code and start with either the [Teams AI Library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context), or [Azure OpenAI Studio](https://oai.azure.com/) to configure then export the generated code to Teams Toolkit.
-- For low-code or no-code, you can develop custom agents rapidly with a user-friendly interface in [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
+Build a declarative agent when:
+
+- You want your agent to work within Copilot's orchestration and language models to ensure consistency with security and compliance.
+- You want a faster implementation or want to develop an agent with no or low-code.
+- Your user's workflow is within Microsoft 365 apps (SharePoint, OneDrive, Teams) and they want to work within the context of these applications (via @mentions or in Teams business chats).
+
+Build a custom engine agent when:
+
+- You've built an existing conversational assistant outside of Copilot and want to integrate it with Microsoft 365 and Copilot.
+- You want to use your own AI models or your agent might benefit from domain-specific models with specialized knowledge or multimodal models.  
+- You want advanced Teams integrations (such as with meetings and channels).  
+- You want to make your agent available outside of Microsoft 365 and Copilot.  
+- You want to support proactive messaging, which enables developers to define workflows and trigger agent behavior without the need for user interaction.
+- You need multiple system integration, such as managing logistics by integrating data from GPS, warehouse systems, and customer databases.
+- You need to implement custom business logic (such as specific rules for patient triage in a healthcare setting based on symptoms and medical history).
+- You have complex decision-making (for example, evaluating loan applications based on multiple factors like credit score, income, and employment history).
+
 
 ## Related content
 
-- [Declarative agent overview](overview-declarative-agent.md)
+- [Declarative agents overview](overview-declarative-agent.md)
+- [Custom engine agents overview](overview-custom-engine-agent.md)
 - [API plugins overview](overview-api-plugins.md)
 - [Microsoft Graph connectors overview](overview-graph-connector.md)
-- [Custom engine agent overview](overview-custom-engine-agent.md)
+- [Samples collection](Samples.md)
