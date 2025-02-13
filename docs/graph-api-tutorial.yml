@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Build a LangChain agent with Microsoft Graph APIs
+metadata:
+  title: Build a LangChain agent with Microsoft Graph APIs
+  description: Learn how to build a custom engine agent that uses Microsoft Graph APIs.
+  audience: Developer
+  level: Beginner
+  displayType: one-column
+  ms.date: 02/12/2025
+  author: sakov-ms
+  ms.author: sakov
+  ms.topic: tutorial
+  scenarios: getting-started
+items:
+- content: |
+    [!INCLUDE [](./includes/graph-api-tutorial/01-intro.md)]
+- title: Introduction
+  content: |
+    [!INCLUDE [](./includes/graph-api-tutorial/02-register-app.md)]
+- title: Register the app in the portal
+  content: |
+    [!INCLUDE [](./includes/graph-api-tutorial/03-set-up-project.md)]
+- title: Add conversation starters
+  content: |
+    [!INCLUDE [](./includes/graph-api-tutorial/04-run-agent.md)]
+- title: Add web content
+  content: |
+    [!INCLUDE [](./includes/graph-api-tutorial/05-run-personal-assistant.md)]
+- title: Add OneDrive and SharePoint content
+  content: |
+    [!INCLUDE [](./includes/graph-api-tutorial/06-make-standalone-app.md)]
+- title: Add Microsoft Graph connectors content
+  content: |
+    [!INCLUDE [](./includes/graph-api-tutorial/07-completed.md)]
