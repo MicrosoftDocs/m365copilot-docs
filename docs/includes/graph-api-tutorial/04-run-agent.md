@@ -10,7 +10,7 @@ Next, run the agent.
 2. Type the following command: `jupyter notebook`. This opens a web page that contains all your scripts.
 3. To make sure your LangChain setup is working, start with a simple agent:
     1. Select the firstAgent script. It will open in a separate page.
-    2. Choose the **run** icon.
+    2. Click the **run** icon.
     3. You should see the following output on the line below.
 
 Congratulations! You have successfully created your first agent. You can change characters and text input fields and run the script to see what your agent does.
