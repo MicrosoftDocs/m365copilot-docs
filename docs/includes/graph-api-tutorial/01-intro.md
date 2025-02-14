@@ -4,7 +4,9 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-Custom engine agents are... . This tutorial shows you how to build a custom engine agent that serves as a personal assistant that can tell you about the weather or help you plan a work trip. 
+Custom engine agents are specialized chat experiences that can be built on any LLM, toolchain, or orchestration tool and tailored to the domain or tenant workflows.
+
+This tutorial shows you how to build a custom engine agent that serves as a personal assistant that can tell you about the weather or help you plan a work trip. 
 
 The following image shows an example of a chat with the personal assistant you'll build.
 
