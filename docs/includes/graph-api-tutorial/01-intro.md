@@ -8,7 +8,7 @@ Custom engine agents are... . This tutorial shows you how to build a custom engi
 
 The following image shows an example of a chat with the personal assistant you'll build.
 
-[image]
+:::image type="content" source="assets/images/clippy.png" alt-text="An image of the Clippy personal assistant showing a hello message and a response to a user query." border="false":::
 
 In this tutorial, you will:
 
