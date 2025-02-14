@@ -3,7 +3,7 @@ ms.localizationpriority: medium
 ---
 <!-- markdownlint-disable MD041 -->
 
-In this exercise you will register a new application in Azure Active Directory to enable [user authentication](/graph/auth-v2-user). You can register an application using the Microsoft Entra admin center, or by using the [Microsoft Graph PowerShell SDK](/graph/powershell/get-started).
+In this exercise, you register a new application in Microsoft Entra ID to enable [user authentication](/graph/auth-v2-user). You can register an application using the Microsoft Entra admin center, or by using the [Microsoft Graph PowerShell SDK](/graph/powershell/get-started).
 
 ## Register application for user authentication
 
@@ -28,7 +28,7 @@ In this section, you register an application that supports user authentication u
 
 5. Leave **Redirect URI** empty.
 
-6. Select **Register**. On the application's **Overview** page, copy the value of the **Application (client) ID** and save it; you will need it in the next step. If you chose **Accounts in this organizational directory only** for **Supported account types**, also copy the **Directory (tenant) ID** and save it.
+6. Select **Register**. On the application's **Overview** page, copy the value of the **Application (client) ID** and save it; you'll need it in the next step. If you chose **Accounts in this organizational directory only** for **Supported account types**, also copy the **Directory (tenant) ID** and save it.
 
 7. Select **Authentication** under **Manage**. Locate the **Advanced settings** section and change the **Allow public client flows** toggle to **Yes**, then choose **Save**.
 
