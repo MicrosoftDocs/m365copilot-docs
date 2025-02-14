@@ -4,11 +4,12 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-Next, run the agent.
+Next, run the agent:
 
 1. Open a command prompt and go to the folder where the repository is.
 2. Type the following command: `jupyter notebook`. This opens a web page that contains all your scripts.
 3. To make sure your LangChain setup is working, start with a simple agent:
+
     1. Select the **firstAgent** script. It will open in a separate page.
     2. Click the **run** icon. You should see the following output.
 
