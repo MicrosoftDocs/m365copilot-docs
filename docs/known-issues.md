@@ -42,9 +42,9 @@ When sharing links are references as a knowledge source in an agent, the agent d
 
 'https://contoso.sharepoint-df.com**/:p:/r/**personal/babak_microsoft_com/Documents/'
 
-### SharePoint files with special characters in the file name return no results
+### SharePoint files with null characters in the file name return no results
 
-If a SharePoint file used as a knowledge source contains special characters in the file name, the agent returns no results based on that knowledge source.
+If a SharePoint file used as a knowledge source contains null characters in the file name, the agent returns no results based on that knowledge source.
 
 ### Pasting a link to a file in Copilot Studio and agent builder doesn't work
 
