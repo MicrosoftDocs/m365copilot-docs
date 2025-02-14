@@ -2,6 +2,8 @@
 ms.localizationpriority: medium
 ---
 
+<!-- markdownlint-disable MD041 -->
+
 1. Open a command prompt and go to the folder where the repository is.
 2. Type the following command: `jupyter notebook`. This opens a web page that contains all your scripts.
 3. To make sure your LangChain setup is working, start with a simple agent:
