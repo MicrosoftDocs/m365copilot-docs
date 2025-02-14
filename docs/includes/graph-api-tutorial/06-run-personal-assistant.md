@@ -9,7 +9,12 @@ Now that your setup is working, you can run Clippy. Clippy is a personal assista
 1. On the Jupyter home page, choose the **Clippy2** script to open it in a separate page.
 2. Run the script. The output provides a Microsoft device code window that asks you to open a URL and provide a code.
 3. Copy the code, click the URL, and a new tab or window opens. Paste the code and sign in. You only need to do this for the first run; the access_token is saved and used for later runs.
+
+    :::image type="content" source="assets/images/enter-code.png" alt-text="An image of the CEnter code to allow access dialog box." border="false":::
+
 4. Close the window. Wait for a second for your agent to get the access_token required. You should then see a series of queries and responses.
+
+    :::image type="content" source="assets/images/clippy-response.png" alt-text="An image that shows a Clippy query and response." border="false":::
  
 The script does the following:
 

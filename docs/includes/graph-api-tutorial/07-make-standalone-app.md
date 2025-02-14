@@ -9,3 +9,5 @@ Now that your agent is up and running to help users with complex tasks, you can 
 1. Open a command prompt and go to the folder that contains **ClippywithUI.py**.
 2. Run the following command: `Chainlit run ClippywithUI.py -w`.
 3. Your agent will open in a browser and you should be able to ask it questions.
+
+    :::image type="content" source="assets/images/agent-in-browser.png" alt-text="An image of the Clippy personal assistant running in a browser." border="false":::

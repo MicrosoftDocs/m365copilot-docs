@@ -12,6 +12,8 @@ Next, run the agent.
     1. Select the **firstAgent** script. It will open in a separate page.
     2. Click the **run** icon. You should see the following output.
 
+        :::image type="content" source="assets/images/jupyter-output.png" alt-text="An image that shows the jupyter output." border="false":::
+
 The script does the following:
 
 - Sets the variables from the .env file.
