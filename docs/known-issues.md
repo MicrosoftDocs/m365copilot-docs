@@ -36,19 +36,15 @@ Prompts to get a list of items based on custom metadata aren't supported. For ex
 
 **Workaround:** This issue doesn't currently have a workaround. You can get items based on matches with the title or description of the connector item.
 
-### SharePoint knowledge search is limited
-
-Currently when an agent searches a SharePoint site as a knowledge source, only files that are less than 512 MB are indexed and only the first 1000 characters are used.
-
-###  Sharing links to SharePoint pages don't work as knowledge sources
+### Sharing links to SharePoint pages don't work as knowledge sources
 
 When sharing links are references as a knowledge source in an agent, the agent doesn't return results from that knowledge source. The following is an example of a SharePoint sharing link:
 
 'https://contoso.sharepoint-df.com**/:p:/r/**personal/babak_microsoft_com/Documents/'
 
-### SharePoint files with special characters in the file name return no results
+### SharePoint files with null characters in the file name return no results
 
-If a SharePoint file used as a knowledge source contains special characters in the file name, the agent returns no results based on that knowledge source.
+If a SharePoint file used as a knowledge source contains null characters in the file name, the agent returns no results based on that knowledge source.
 
 ### Pasting a link to a file in Copilot Studio and agent builder doesn't work
 
