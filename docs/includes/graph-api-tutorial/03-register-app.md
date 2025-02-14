@@ -32,6 +32,6 @@ In this section, you register an application that supports user authentication u
 
 7. Select **Authentication** under **Manage**. Locate the **Advanced settings** section and change the **Allow public client flows** toggle to **Yes**, then choose **Save**.
 
-    :::image type="content" source="assets/images/aad-default-client-type.png" alt-text="A screenshot of the Allow public client flows toggle":::
+    :::image type="content" source="../../assets/images/aad-default-client-type.png" alt-text="A screenshot of the Allow public client flows toggle":::
 
 8. Under **Manage**, go to **API Permissions** and choose **Add a Permission**. In **Microsoft APIs**, choose **Microsoft Graph**, and select **Delegated permissions**. From the list of permissions, select *Calendars.Read*, *Contacts.Read*, *Mail.Read*, *User.Read*, *Calendars.ReadBasic*, *Mail.ReadBasic*, and *User.ReadAll*.
