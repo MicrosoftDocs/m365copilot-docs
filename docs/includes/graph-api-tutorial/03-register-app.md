@@ -14,7 +14,7 @@ In this section, you register an application that supports user authentication u
 
 2. In the left navigation, select **Microsoft Entra ID**, expand **Identity**, expand **Applications**, and then select **App registrations**.
 
-    :::image type="content" source="../../images/entra-portal-app-registrations.png" alt-text="A screenshot of the App registrations":::
+    :::image type="content" source="assets/images/entra-portal-app-registrations.png" alt-text="A screenshot of the App registrations":::
 
 3. Select **New registration**. Enter a name for your application; for example, `Clippy`.
 
@@ -30,10 +30,8 @@ In this section, you register an application that supports user authentication u
 
 6. Select **Register**. On the application's **Overview** page, copy the value of the **Application (client) ID** and save it; you will need it in the next step. If you chose **Accounts in this organizational directory only** for **Supported account types**, also copy the **Directory (tenant) ID** and save it.
 
-    :::image type="content" source="../../images/aad-application-id.png" alt-text="A screenshot of the application ID of the new app registration":::
-
 7. Select **Authentication** under **Manage**. Locate the **Advanced settings** section and change the **Allow public client flows** toggle to **Yes**, then choose **Save**.
 
-    :::image type="content" source="../../images/aad-default-client-type.png" alt-text="A screenshot of the Allow public client flows toggle":::
+    :::image type="content" source="assets/images/aad-default-client-type.png" alt-text="A screenshot of the Allow public client flows toggle":::
 
 8. Under **Manage**, go to **API Permissions** and choose **Add a Permission**. In **Microsoft APIs**, choose **Microsoft Graph**, and select **Delegated permissions**. From the list of permissions, select *Calendars.Read*, *Contacts.Read*, *Mail.Read*, *User.Read*, *Calendars.ReadBasic*, *Mail.ReadBasic*, and *User.ReadAll*.
