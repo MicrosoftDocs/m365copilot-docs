@@ -8,7 +8,7 @@ Custom engine agents are specialized chat experiences that can be built on any L
 
 The following image shows an example of a chat with the personal assistant you'll build.
 
-:::image type="content" source="assets/images/clippy.png" alt-text="An image of the Clippy personal assistant showing a hello message and a response to a user query." border="false":::
+:::image type="content" source="../../assets/images/clippy.png" alt-text="An image of the Clippy personal assistant showing a hello message and a response to a user query." border="false":::
 
 In this tutorial, you will:
 
