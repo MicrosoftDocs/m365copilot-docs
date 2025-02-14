@@ -14,7 +14,7 @@ In this section, you register an application that supports user authentication u
 
 2. In the left navigation, select **Microsoft Entra ID**, expand **Identity**, expand **Applications**, and then select **App registrations**.
 
-    :::image type="content" source="assets/images/entra-portal-app-registrations.png" alt-text="A screenshot of the App registrations":::
+    :::image type="content" source="../../assets/images/entra-portal-app-registrations.png" alt-text="A screenshot of the App registrations":::
 
 3. Select **New registration**. Enter a name for your application; for example, `Clippy`.
 
