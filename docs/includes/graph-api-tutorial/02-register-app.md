@@ -9,7 +9,6 @@ In this exercise you will register a new application in Azure Active Directory t
 
 In this section, you register an application that supports user authentication using [device code flow](/azure/active-directory/develop/v2-oauth2-device-code).
 
-### [Microsoft Entra admin center](#tab/aad)
 
 1. Open a browser, go to the [Microsoft Entra admin center](https://entra.microsoft.com), and sign using a Global administrator account.
 

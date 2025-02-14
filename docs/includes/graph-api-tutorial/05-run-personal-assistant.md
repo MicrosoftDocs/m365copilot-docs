@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-Now that your setup is working, you can get Clippy running. Clippy is a personal assistant that can talk to Microsoft Graph APIs and Web search APIs.
+Now that your setup is working, you can run Clippy. Clippy is a personal assistant that can talk to Microsoft Graph APIs and web search APIs.
 
 1. On the Jupyter home page, choose the Clippy2 script to open it in a separate page.
 2. Run the script. The output provides a Microsoft device code window that asks you to open a URL and provide a code.
