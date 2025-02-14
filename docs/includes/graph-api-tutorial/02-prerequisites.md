@@ -9,7 +9,7 @@ To complete this tutorial, you should have some familiarity with Python. For an 
 > [!NOTE]
 > This tutorial uses Python version 3.10.4 and pip version 24.3.1. The steps haven't been tested with other versions.
 
-In addition, complete the following steps:
+## Prerequisites
 
 1. Install [Python](https://www.python.org/) and [pip](https://pip.pypa.io/en/stable/) on your development computer.
 2. Install [Jupyter](https://jupyter.org/install) to use Jupyter notebooks with this tutorial.
