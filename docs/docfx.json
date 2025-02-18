@@ -50,7 +50,8 @@
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "ms.service": "microsoft-365-copilot",
       "ms.subservice": "developer",
-      "ms.collection": "ce-skilling-ai-copilot"
+      "ms.collection": "ce-skilling-ai-copilot",
+      "uhfHeaderId": "MSDocsHeader-M365CopilotExt"
     },
     "fileMetadata": {},
     "template": [],

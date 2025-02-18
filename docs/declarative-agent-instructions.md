@@ -155,8 +155,9 @@ Closing instructions can be part of the general directions or a skill descriptio
 Developing instructions for declarative agents is often iterative and typically consists of the following steps:
 
 1.  **Create** instructions and conversation starters for your agent following the structure and format described in this article.
-2.  **Publish** your agent. Responsible AI practices are integrated into the validation process to ensure that agents uphold ethical standards. For more details, see:  
-    - [Responsible AI tools and practices](https://www.microsoft.com/ai/tools-practices)  
+2.  **Publish** your agent. Responsible AI (RAI) practices are integrated into the validation process to ensure that agents uphold ethical standards. For more details, see:  
+    - [RAI validation](rai-validation.md)
+    - [RAI tools and practices](https://www.microsoft.com/ai/tools-practices)  
     - [Apps powered by artificial intelligence](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#apps-powered-by-artificial-intelligence?context=/microsoft-365-copilot/extensibility/context)
 3.  **Test** your agent.
     1.  Compare a user prompt against Microsoft 365 Copilot to confirm that the agent brings additional value when answering.
