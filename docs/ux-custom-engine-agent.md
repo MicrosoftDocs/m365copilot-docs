@@ -10,7 +10,7 @@ ms.topic: overview
 
 # Custom engine agent user experience
 
-Microsoft 365 Copilot is the user interface for AI. Custom engine agents are specialized agentic solutions designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction. Agents act as automated helpers that users interact with to perform tasks grounded in organizational data.
+Microsoft 365 Copilot is the user interface for AI. Custom engine agents are specialized chat experiences designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction. Agents act as automated helpers that users interact with to perform tasks grounded in organizational data.
 
 The agent user experience (UX) provides intuitive, efficient, and contextually relevant interactions to enhance user satisfaction and productivity. This article describes the UX features and best practices that you can apply to user interactions in your custom engine agents.
 
