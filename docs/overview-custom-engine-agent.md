@@ -74,7 +74,7 @@ For more information, see [Microsoft 365 Agents SDK (preview)](/microsoft-365/ag
 
 ## Privacy and compliance
 
-Custom engine agent prompts and responses in Copilot Chat and Teams are stored in the Microsoft Intelligent Conversation and Communications Cloud (IC3) and the data is available for document search requests (DSRs). Copilot data can't leave the boundary of the tenant unless the tenant provides explicit access to that data.
+Custom engine agent prompts and responses in Copilot Chat and Teams are stored in compliance with Microsoft 365 product terms and conditions and are managed as per the customer's instructions, including leaving the Microsoft 365 environment. To view and manage this stored data, admins can use Content search or Microsoft Purview.
 
 ## Related content
 
