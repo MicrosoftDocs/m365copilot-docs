@@ -16,6 +16,11 @@ For the latest information, announcements, and news about preview and generally 
 
 ## February 2025
 
+### Copilot Studio agent builder available in Copilot Chat
+
+Microsoft 365 Copilot Chat users can now access Copilot Studio agent builder to build agents in the Microsoft 365 Copilot app and the Copilot app in Teams.
+
+### Custom engine agents available in Copilot app (preview)
 Custom engine agents are now available to users who have Microsoft 365 Copilot licenses or users in tenants with metering enabled in the Microsoft 365 Copilot app (for preview), in addition to Teams.
 
 ## January 2025
