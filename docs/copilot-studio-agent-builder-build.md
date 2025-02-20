@@ -94,7 +94,7 @@ The agent builder allows you to configure specific knowledge sources for the age
 
 ### Web content
 
-You can add specific public websites as agent knowledge souces to make your agent context-aware. When you reference websites as knowledge sources, the following limits apply:
+You can add specific public websites as agent knowledge sources to make your agent context-aware. When you reference websites as knowledge sources, the following limits apply:
 
 - Public website URLs must only be two levels; for example, `https://example.org/a/b/c` is an invalid URL because it's more than two levels.
 - URLs can't contain query parameters; for example, `https://example.org?test=1` is invalid.
