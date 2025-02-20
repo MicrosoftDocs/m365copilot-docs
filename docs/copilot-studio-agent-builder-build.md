@@ -94,9 +94,11 @@ The agent builder allows you to configure specific knowledge sources for the age
 
 ### Web content
 
-You can enable or disable web content when you author or edit your agent.
+You can add specific public websites as agent knowledge sources to make your agent context-aware. When you reference websites as knowledge sources, the following limits apply:
 
-When web content is enabled, the agent can use publicly available web information to augment its response to a prompt. Responses shown to the user are also shown with citations and labeled with an icon to represent web content use. When web content is disabled, the agent uses its pretrained knowledge and any knowledge sources you add.
+- Public website URLs must only be two levels; for example, `https://example.org/a/b/c` is an invalid URL because it's more than two levels.
+- URLs can't contain query parameters; for example, `https://example.org?test=1` is invalid.
+- You can add up to four URLs.
 
 ### SharePoint content
 
