@@ -20,6 +20,10 @@ For the latest information, announcements, and news about preview and generally 
 
 You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-build.md#web-content).
 
+### Custom engine agents available in Copilot app (preview)
+
+Custom engine agents are now available to users who have Microsoft 365 Copilot licenses or users in tenants with metering enabled in the Microsoft 365 Copilot app (for preview), in addition to Teams.
+
 ## January 2025
 
 ### Links are no longer redacted in Copilot responses

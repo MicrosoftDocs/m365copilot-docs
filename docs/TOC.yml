@@ -97,6 +97,8 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete agents
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
+    - name: Build with Microsoft Graph APIs
+      href: graph-api-tutorial.yml
 - name: Add knowledge with Microsoft Graph connectors
   items:
   - name: Microsoft Graph connectors in Microsoft 365 Copilot
