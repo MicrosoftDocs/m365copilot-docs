@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 01/24/2025
+ms.date: 02/18/2025
 ms.topic: overview
 ---
 
@@ -19,6 +19,10 @@ For the latest information, announcements, and news about preview and generally 
 ### Add websites as knowledge in agent builder
 
 You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-build.md#web-content).
+
+### Custom engine agents available in Copilot app (preview)
+
+Custom engine agents are now available to users who have Microsoft 365 Copilot licenses or users in tenants with metering enabled in the Microsoft 365 Copilot app (for preview), in addition to Teams.
 
 ## January 2025
 
