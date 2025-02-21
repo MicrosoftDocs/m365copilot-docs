@@ -126,34 +126,6 @@ For information about how to add the OneDrive and SharePoint as knowledge capabi
 
 For information about how to enable the OneDrive and SharePoint as knowledge capability to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
 
-## Teams chat as knowledge
-
-The Teams chat as knowledge capability enables agents to use Teams channels, meeting chats, and teams as a knowledge source. You can choose to specify up to five links to teams, channels, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
-
-Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has the `OneDriveAndSharePoint` capability enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
-
-### Enable Teams chat as knowledge
-
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Teams chat as knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **url** property, as shown in the following example.
-
-> [!NOTE]
-> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `TeamsMessage` capability.
-
-```json
-{
-  "capabilities": [
-    {
-      "name": "TeamsMessages",
-      "urls": [] 
-    }
-  ]
-}
-```
-
-To get the URL for a Teams team or channel, choose the three dots (...) next to the team or channel name and choose **Get link to team** or **Get link to channel**. 
-
-To get the URL for a Teams meeting, open the meeting, choose the arrow next to **Join**, and choose **Copy join link**.
-
 ## Web search and web scoping
 
 The web search capability enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, you can have your agent return any web data in its responses. You can also scope the web search to up to four public websites.
