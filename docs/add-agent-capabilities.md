@@ -180,6 +180,8 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 } 
 ```
 
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Knowledge**, list the website URLs that you want to reference.
+
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
