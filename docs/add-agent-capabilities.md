@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 02/17/2025
 ---
 
 # Add capabilities to your declarative agent
@@ -42,7 +42,7 @@ The user prompt "Create a word cloud of top pet names" generates a word cloud th
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest reference, as shown in the following example.
 
 > [!NOTE]
-> You must be using [version 1.2](declarative-agent-manifest-1.2.md) of the declarative agent manifest schema to add the `CodeInterpreter` capability.
+> You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `CodeInterpreter` capability.
 
 ```json
 {
@@ -90,7 +90,7 @@ The following image shows the result.
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest reference, as shown in the following example.
 
 > [!NOTE]
-> You must be using [version 1.2](declarative-agent-manifest-1.2.md) of the declarative agent manifest schema to add the `GraphicArt` capability.
+> You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `GraphicArt` capability.
 
 
 ```json
@@ -109,6 +109,50 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 
 > [!NOTE]
 > The image generator doesn't currently work in the test pane in Copilot Studio agent builder.
+
+## Microsoft Graph connectors
+
+Microsoft Graph connectors enable you to add organizational data to your agent as grounding information. You can use Microsoft Graph connectors to ingest your line-of-business data into Microsoft Graph and Copilot can reason over your data as grounding information in responses to user prompts. For more information, see [Microsoft Graph connectors for Microsoft 365 Copilot](overview-graph-connector.md).
+
+For information about how to add Microsoft Graph connectors as knowledge to your agent manifest in Teams Toolkit, see [Microsoft Graph connectors object](declarative-agent-manifest-1.2.md#microsoft-graph-connectors-object).
+
+For information about how to add Microsoft Graph connectors to your agent in Copilot Studio agent builder, see [Microsoft Graph connectors](copilot-studio-agent-builder-build.md#microsoft-graph-connectors).
+
+## SharePoint and OneDrive as knowledge
+
+When you configure your agent to use OneDrive and SharePoint content as knowledge, Copilot searches SharePoint and OneDrive sites that a user has access to for grounding information.
+
+For information about how to add the OneDrive and SharePoint as knowledge capability to your agent manifest in Teams Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object).
+
+For information about how to enable the OneDrive and SharePoint as knowledge capability to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
+
+## Web search and web scoping
+
+The web search capability enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, you can have your agent return any web data in its responses. You can also scope the web search to up to four public websites.
+
+> [!NOTE]
+> You must be using [version 1.2](declarative-agent-manifest-1.2.md) of the declarative agent manifest schema to add scoped web search to your agent.
+
+### Enable web search and web scoping
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest reference. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
+
+```json
+{
+    "capabilities": [ 
+        { 
+          "name": "WebSearch", 
+          "sites": [ 
+            { 
+              "url": "cnn.com" 
+            }, 
+          ] 
+        } 
+     ] 
+} 
+```
+
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Knowledge**, list the website URLs that you want to reference.
 
 ## Related content
 

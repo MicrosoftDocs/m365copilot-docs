@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for C
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 2/10/2025
+ms.date: 2/21/2025
 ms.topic: conceptual
 ---
 
@@ -37,9 +37,11 @@ Copilot Studio agent builder is available in the following geographies:
 Geographic availability is based on Copilot Studio’s [data locations](/microsoft-copilot-studio/data-location).
 
 
-## Authoring languages
+## Language support
 
-The authoring language is the one in which the authoring UI is presented. By default, this language is your Microsoft 365 language setting. You can change the authoring language by [changing your Microsoft 365 language setting](https://support.microsoft.com/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b).
+### Authoring canvas languages
+
+The authoring canvas language is the one in which the authoring UI is presented. By default, this language is your Microsoft 365 language setting. You can change the authoring language by [changing your Microsoft 365 language setting](https://support.microsoft.com/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b).
 
 The following authoring languages are supported:
 
@@ -67,7 +69,7 @@ The following authoring languages are supported:
 - Thai (th-TH)
 - Turkish (tr-TR)
 
-## Agent languages
+### Describe tab languages
 
 The **Describe** tab supports the following languages:
 
@@ -76,11 +78,10 @@ The **Describe** tab supports the following languages:
 - Czech (cs-CZ)
 - Danish (da-DK)
 - Dutch (nl-NL)
-- English (United States) (en-US)
+- English
 - Finnish (fi-FI)
-- French (France) (fr-FR)
+- French 
 - German (de-DE)
-- Greek (el-GR)
 - Hindi (hi-IN)
 - Indonesian (id-ID)
 - Italian (it-IT)
@@ -90,7 +91,7 @@ The **Describe** tab supports the following languages:
 - Polish (pl-PL)
 - Portuguese (Brazil) (pt-BR)
 - Russian (ru-RU)
-- Spanish (Spain) (es-ES)
+- Spanish 
 - Swedish (sv-SE)
 - Thai (th-TH)
 - Turkish (tr-TR)
