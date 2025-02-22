@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 10/17/2024
+ms.date: 02/19/2025
 ---
 
 # Write effective instructions for declarative agents
@@ -187,6 +187,8 @@ As you develop your instructions, apply the following best practices:
 - **Use examples**. Provide detailed examples and scenarios to illustrate the desired outcomes. The more precise the instructions, the better the agent can perform its tasks accurately and efficiently. **Few-shot prompting** involves providing the agent with a few solved examples before asking it to solve a new problem. **Chain-of-thought** techniques instruct the agent to provide a step-by-step solution.
 
 - **Use Do instead of Do Not**. Tell the agent what to do; avoid telling it what not to do. Telling the agent what to do provides more specificity.
+
+- **Avoid contrasting instructions**. Describe the expected behavior of the agent under valid or positive use cases only instead of giving both valid/positive and invalid/negative instructions. Such instructions create ambiguity and that can confuse the model. If you must instruct the agent with both valid and invalid use cases, clearly describe the queries that you want the agent to process and provide [interaction examples](#interaction-examples) to show the expected response to each query.
 
 - **Add knowledge**. If you add knowledge to the agent, describe what is represented by each knowledge source in your instructions.
 
