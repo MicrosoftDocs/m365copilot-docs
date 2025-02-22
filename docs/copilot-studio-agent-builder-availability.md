@@ -37,9 +37,9 @@ Copilot Studio agent builder is available in the following geographies:
 Geographic availability is based on Copilot Studio’s [data locations](/microsoft-copilot-studio/data-location).
 
 
-# Language support
+## Language support
 
-## Authoring canvas
+### Authoring canvas languages
 
 The authoring canvas language is the one in which the authoring UI is presented. By default, this language is your Microsoft 365 language setting. You can change the authoring language by [changing your Microsoft 365 language setting](https://support.microsoft.com/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b).
 
@@ -69,7 +69,7 @@ The following authoring languages are supported:
 - Thai (th-TH)
 - Turkish (tr-TR)
 
-## Describe tab
+### Describe tab languages
 
 The **Describe** tab supports the following languages:
 
