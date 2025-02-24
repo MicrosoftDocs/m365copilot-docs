@@ -4,7 +4,7 @@ description: Custom engine agents are specialized chat experiences built on any 
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 02/18/2025
+ms.date: 02/28/2025
 ms.topic: overview
 ---
 
@@ -17,7 +17,8 @@ Custom engine agents are specialized chat experiences built on any large languag
 
 Custom engine agents utilize LLM technology that allows them to easily understand and respond to user queries, creating dynamic and immersive interactions. Custom engine agents also offer advanced functionalities such as task execution and content creation. These capabilities make custom engine agents indispensable tools for streamlining workflows and boosting productivity.
 
-Custom engine agents don't require a Microsoft 365 Copilot license to build, debug, and deploy. They are available to users with Microsoft 365 Copilot licenses or users in tenants with metering enabled via Copilot Chat in Teams and the Microsoft 365 Copilot app (for preview).
+Custom engine agents don't require a Microsoft 365 Copilot license to build, debug, and deploy. They are available to users with Microsoft 365 Copilot licenses or users in tenants with metering enabled via Copilot Chat in Teams and the Microsoft 365, as well as Copilot app (for preview), where they look and feel the same way to declarative agents to end-users.
+
 
 > [!NOTE]
 > The cost of a custom engine agent depends on the Azure services consumed in the app. To estimate the cost, visit the Azure Pricing Calculator.
@@ -68,7 +69,7 @@ For information about how to use Copilot Studio to build and publish custom engi
 
 ### Microsoft 365 Agents SDK
 
-Microsoft 365 Agents SDK seamlessly integrates with AI services like Azure AI Foundry and orchestration layers such as Semantic Kernel. It offers interoperability with Copilot Studio, enabling you to enhance and extend existing agents with additional skills. This allows makers to delegate tasks to other agent functionalities. Additionally, you can connect to a Copilot Studio agent from code, gaining access to the full range of features within the Copilot Studio ecosystem. 
+Microsoft 365 Agents SDK seamlessly integrates with AI services like Azure AI Foundry and orchestration layers such as Semantic Kernel. It offers interoperability with Copilot Studio, enabling you to enhance and extend existing agents with additional skills. This allows makers to delegate tasks to other agent functionalities. Additionally, you can connect to a Copilot Studio agent from code, gaining access to the full range of features within the Copilot Studio ecosystem.
 
 For more information, see [Microsoft 365 Agents SDK (preview)](/microsoft-365/agents-sdk/).
 
