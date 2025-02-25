@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 02/20/2025
+ms.date: 02/25/2025
 ms.topic: overview
 ---
 
@@ -19,6 +19,10 @@ For the latest information, announcements, and news about preview and generally 
 ## Add Dataverse knowledge to declarative agents
 
 You can add Dataverse knowledge to agents that you build with Teams Toolkit. For details, see [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge).
+
+### Copilot Studio agent builder available in Copilot Chat
+
+Microsoft 365 Copilot Chat users can now access Copilot Studio agent builder to build agents in the Microsoft 365 Copilot app and the Copilot app in Teams.
 
 ### Add websites as knowledge in agent builder
 
