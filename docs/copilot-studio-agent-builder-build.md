@@ -126,11 +126,11 @@ The following table lists the supported file types and their respective limits.
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you won't be able to use SharePoint as a knowledge source.
 
-#### Entering a URL for a SharePoint site or folder or file
+#### Entering a URL for a SharePoint site, folder, or file
 
-You can enter a URL for a SharePoint site or folder or file. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
+You can enter a URL for a SharePoint site, folder, or file. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
-After providing the SharePoint URL, press **Enter** to add it as a knowledge source.
+After you provide the SharePoint URL, press **Enter** to add it as a knowledge source.
 
 #### Opening the SharePoint file picker
 
