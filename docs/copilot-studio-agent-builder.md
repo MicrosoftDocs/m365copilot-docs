@@ -4,7 +4,7 @@ description: Learn how to use Copilot Studio agent builder to build declarative 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/06/2024
+ms.date: 02/25/2025
 ms.topic: conceptual
 ---
 

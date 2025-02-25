@@ -4,7 +4,7 @@ description: Learn how to publish and manage agents built with Copilot Studio ag
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/10/2024
+ms.date: 02/25/2024
 ms.topic: conceptual
 ---
 
