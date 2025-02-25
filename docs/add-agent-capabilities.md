@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 02/17/2025
+ms.date: 02/25/2025
 ---
 
 # Add capabilities to your declarative agent
@@ -39,7 +39,7 @@ The user prompt "Create a word cloud of top pet names" generates a word cloud th
 
 ### Enable code interpreter
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest reference, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `CodeInterpreter` capability.
@@ -57,6 +57,42 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Code interpreter**.
 
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of the agent builder":::
+
+## Dataverse knowledge
+
+Dataverse knowledge enables agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. This capability allows you to add a Dataverse instance as a knowledge source and to add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
+
+### Enable Dataverse knowledge
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Dataverse knowledge, add the `Dataverse` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+
+> [!NOTE]
+> You must be using version 1.3 of the declarative agent manifest schema to add the `Dataverse` capability.
+
+
+```json
+{
+  "capabilities": [
+    {
+      "name": "Dataverse",
+      "knowledge_sources": [ 
+        { 
+          "host_name": "organization.crm.dynamics.com", 
+          "skill": "<skill name>",
+          "tables": [ 
+            { 
+                "table_name": "account" 
+            }, 
+            { 
+                "table_name": "opportunity" 
+            } 
+         ] 
+        } 
+      ] 
+    }
+  ]
+}
+```
 
 ## Image generator
 
@@ -87,7 +123,7 @@ The following image shows the result.
 
 ### Enable image generator
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest reference, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `GraphicArt` capability.
@@ -135,7 +171,7 @@ The web search capability enables agents to use the search index in Bing to resp
 
 ### Enable web search and web scoping
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest reference. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest file. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
 
 ```json
 {
