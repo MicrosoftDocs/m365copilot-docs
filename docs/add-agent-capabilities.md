@@ -62,6 +62,9 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 
 Dataverse knowledge enables agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. This capability allows you to add a Dataverse instance as a knowledge source and to add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
 
+> [!NOTE]
+> Dataverse knowledge is not currently available in Copilot Studio agent builder.
+
 ### Enable Dataverse knowledge
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Dataverse knowledge, add the `Dataverse` value to the **capabilities** property in your agent manifest file, as shown in the following example.
@@ -69,29 +72,28 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 > [!NOTE]
 > You must be using version 1.3 of the declarative agent manifest schema to add the `Dataverse` capability.
 
-
 ```json
-{
-  "capabilities": [
     {
-      "name": "Dataverse",
-      "knowledge_sources": [ 
-        { 
-          "host_name": "organization.crm.dynamics.com", 
-          "skill": "<skill name>",
-          "tables": [ 
+      "capabilities": [
+        {
+          "name": "Dataverse",
+          "knowledge_sources": [ 
             { 
-                "table_name": "account" 
-            }, 
-            { 
-                "table_name": "opportunity" 
+              "host_name": "organization.crm.dynamics.com", 
+              "skill": "<skill name>",
+              "tables": [ 
+                { 
+                    "table_name": "account" 
+                }, 
+                { 
+                    "table_name": "opportunity" 
+                } 
+             ] 
             } 
-         ] 
-        } 
-      ] 
+          ] 
+        }
+      ]
     }
-  ]
-}
 ```
 
 ## Image generator

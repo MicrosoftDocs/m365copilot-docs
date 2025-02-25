@@ -16,6 +16,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## February 2025
 
+## Add Dataverse knowledge to declarative agents
+
+You can add Dataverse knowledge to agents that you build with Teams Toolkit. For details, see [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge).
+
 ### Add websites as knowledge in agent builder
 
 You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-build.md#web-content).
