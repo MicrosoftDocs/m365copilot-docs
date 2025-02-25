@@ -70,7 +70,7 @@ For more information, see [Feedback buttons](/microsoftteams/platform/bots/how-t
 
 ## Asynchronous patterns
 
-Custom engine agents can can handle multiple tasks concurrently without blocking the main thread. So users can keep chatting with an agents while a task is in process, even when the task takes a few minutes or days. Once the task is completed, the agent sends a notification to the user. The asynchronous patterns include:
+Custom engine agents can handle multiple tasks concurrently without blocking the main thread. So users can keep chatting with an agent while a task is in process, even when the task takes a few minutes or days. Once the task is completed, the agent sends a notification to the user. The asynchronous patterns include:
 
 ### Follow-up messages
 
@@ -78,10 +78,10 @@ Follow-up messages on user-initiated workflows keep users informed about the sta
 
 ### Long-running task
 
-Long-running tasks are another type of user-initiated workflow where a process takes a long time to complete. For instance, a business document management agent might handle batch processing of multiple contract documents. While the process is still running, the user can continue chatting since the messages are non-blocking.
+Long-running tasks are another type of user-initiated workflow where a process takes a long time to complete. For instance, a business document management agent might handle batch processing of multiple contract documents. While the process is still running, the user can continue chatting since the messages are nonblocking.
 
 ### Proactive messages
 
-Proactive messages are agent-initiated messages based on pre-defined triggers. Examples of their usage include sending reminders and alerts. While this feature is supported on Teams, it is not yet available on Copilot chat.
+Proactive messages are agent-initiated messages based on predefined triggers. Examples of their usage include sending reminders and alerts. While this feature is supported on Teams, it isn't yet available on Copilot chat.
 
 For more information, see [Proactive messages](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?context=/microsoft-365-copilot/extensibility/context)
