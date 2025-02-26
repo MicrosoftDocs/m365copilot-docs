@@ -70,7 +70,7 @@ For more information, see [Feedback buttons](/microsoftteams/platform/bots/how-t
 
 ## Asynchronous patterns
 
-Custom engine agents can handle multiple tasks concurrently without blocking the main thread. So users can keep chatting with an agent while a task is in process, even when the task takes a few minutes or days. Once the task is completed, the agent sends a notification to the user. The asynchronous patterns include:
+Custom engine agents can handle multiple tasks concurrently without blocking the main thread. So users can keep chatting with an agent while a task is in process, even when the task takes a few minutes or days. Once the task is completed, the agent sends a notification to the user. These patterns may have been common scenario for Teams bots, and now landed on Copilot chat as well. The async scenarios include:
 
 ### Follow-up messages
 
@@ -78,7 +78,9 @@ Follow-up messages on user-initiated workflows keep users informed about the sta
 
 ### Long-running task
 
-Long-running tasks are another type of user-initiated workflow where a process takes a long time to complete. For instance, a business document management agent might handle batch processing of multiple contract documents. While the process is still running, the user can continue chatting since the messages are nonblocking.
+Long-running tasks are another type of user-initiated workflow where a process takes a long time to complete. For instance, a business document management agent might handle batch processing of multiple contract documents. While the process is still running, the user can continue chatting since the messages are non-blocking.
+
+To send a follow-up message or wait for a long-tunning rask, you can simply use the turn context object's `SendActivity` (or `SendActivityAsync` in C#) in the `async`/`await` pattern with [Teams AI Library](https://github.com/microsoft/teams-ai).
 
 ### Proactive messages
 
