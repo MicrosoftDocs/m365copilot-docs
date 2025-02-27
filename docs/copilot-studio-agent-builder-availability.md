@@ -14,7 +14,7 @@ This article provides information about Copilot Studio regional availability and
 
 ## Regional availability
 
-Copilot Studio agent builder is available if your [Power Platform default environment](https://learn.microsoft.com/power-platform/admin/environments-overview#default-environment) is in any of the following geos:   
+Copilot Studio agent builder is available if your [Power Platform default environment](https://learn.microsoft.com/power-platform/admin/environments-overview#default-environment) is in any of the following countries or regions:   
 
 - Asia Pacific
 - Australia
@@ -34,7 +34,7 @@ Copilot Studio agent builder is available if your [Power Platform default enviro
 - United Kingdom
 - United States
 
-The Power Platform default environment location is set automatically to the tenant home location. You can check your [Power Platform default environment’s location](https://learn.microsoft.com/power-platform/admin/environments-overview#environment-location) using the Power Platform Admin Center. 
+The Power Platform default environment location is automatically set to the location of the tenant. You can verify the location of your Power Platform default environment in the Power Platform Admin Center. For more information, see [Environment location](/power-platform/admin/environments-overview#environment-location). 
 
 ## Language support
 
