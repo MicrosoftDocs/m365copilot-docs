@@ -87,9 +87,6 @@ To manage your sideloaded custom apps, including agents, from the Teams client, 
 
 Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
 
-> [!NOTE]
-> Copilot Studio agent builder isn't currently available to Microsoft 365 Copilot Chat users.
-
 The following steps are required for you to use Copilot Studio to build agents:
 
 - Your Power Platform admin or Dynamics 365 admin must [enable Generative AI features](/power-platform/admin/geographical-availability-copilot) in Power Platform admin center.
