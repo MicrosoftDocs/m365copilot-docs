@@ -16,7 +16,7 @@ Declarative agents are valuable in understanding and generating human-like text,
 
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md).
+This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md):
 
 - The [Dataverse](#dataverse-object) capability is added to the list of `capabilities`. It supports an array of objects in the `knowledge_sources` field that contain Dataverse instances.
 
@@ -274,7 +274,7 @@ The `knowledge_sources` object contains the following properties.
 | --------------- | ------ | ----------- |
 | `host_name` | String | Required. A unique identifier for the host in Dataverse. |
 | `skill` | String | A unique identifier for the information returned from DataVerse tables. |
-| `tables` | Array of [Table name](#table-name) objects | An array of table names to scope the knowledge to. |
+| `tables` | Array of [table](#table-name) objects | An array of tables to scope the agent's knowledge. |
 
 #### Tables object
 
@@ -285,7 +285,6 @@ The `tables` object contains the following property.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `table` | String | Required. A unique identifier for the table. |
-
 
 ### Conversation starters object
 
