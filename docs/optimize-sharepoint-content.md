@@ -16,7 +16,7 @@ Declarative agents extend Microsoft 365 Copilot to customize the experience for 
 
 ## Reference only relevant SharePoint files
 
-You can reference specific SharePoint files in your agent manifest via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object), either by URL or by ID. 
+You can reference specific SharePoint files via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object), either by URL or by ID. 
 
 When you specify up to five files, Copilot searches the full contents of all files. Copilot will have full access to all the file content and returns the appropriate content to the user based on their query. If you specify more than five SharePoint files, Copilot chooses content from the most relevant five files, rather than searching all the files specified, and only returns content from those files.
 

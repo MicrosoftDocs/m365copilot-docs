@@ -16,7 +16,11 @@ For the latest information, announcements, and news about preview and generally 
 
 ## February 2025
 
-## Add Dataverse knowledge to declarative agents
+### Declarative agent manifest version 1.3
+
+A new version of the declarative agent manifest schema has been released. Version 1.3 adds support for Dataverse knowledge. To learn more, see [Declarative agent schema 1.3 for Microsoft 365 Copilot](declarative-agent-manifest-1.3.md).
+
+### Add Dataverse knowledge to declarative agents
 
 You can add Dataverse knowledge to agents that you build with Teams Toolkit. For details, see [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge).
 
