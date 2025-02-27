@@ -18,7 +18,7 @@ Declarative agents are valuable in understanding and generating human-like text,
 
 This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md).
 
-- The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `channels_by_url` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
+- The [Dataverse](#dataverse-object) capability is added to the list of `capabilities`. It supports an array of objects in the `knowledge_sources` field that contain Dataverse instances.
 
 ## JSON schema
 
@@ -127,6 +127,23 @@ The capabilities object is the base type of objects in the `capabilities` proper
     },
     {
       "name": "CodeInterpreter"
+    },
+    {
+      "name": "Dataverse",
+      "knowledge_sources": [ 
+        { 
+          "host_name": "organization.crm.dynamics.com", 
+          "skill": "<skill name>",
+          "tables": [ 
+            { 
+                "table_name": "account" 
+            }, 
+            { 
+                "table_name": "opportunity" 
+            } 
+         ] 
+        } 
+      ] 
     }
   ]
 }
