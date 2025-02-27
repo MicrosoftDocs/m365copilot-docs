@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for C
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 2/21/2025
+ms.date: 2/26/2025
 ms.topic: conceptual
 ---
 
@@ -14,28 +14,27 @@ This article provides information about Copilot Studio regional availability and
 
 ## Regional availability
 
-Copilot Studio agent builder is available in the following geographies:
+Copilot Studio agent builder is available if your [Power Platform default environment](https://learn.microsoft.com/power-platform/admin/environments-overview#default-environment) is in any of the following geos:   
 
 - Asia Pacific
 - Australia
+- Brazil
 - Canada
 - Europe
 - France
 - Germany
 - India
 - Japan
+- Korea
 - Norway
 - South Africa
-- South America
-- South Korea
 - Sweden
 - Switzerland
 - United Arab Emirates
 - United Kingdom
 - United States
 
-Geographic availability is based on Copilot Studio’s [data locations](/microsoft-copilot-studio/data-location).
-
+The Power Platform default environment location is set automatically to the tenant home location. You can check your [Power Platform default environment’s location](https://learn.microsoft.com/power-platform/admin/environments-overview#environment-location) using the Power Platform Admin Center. 
 
 ## Language support
 
