@@ -273,7 +273,7 @@ The `knowledge_sources` object contains the following properties.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `host_name` | String | Required. A unique identifier for the host in Dataverse. |
-| `skill` | String | A unique identifier for the information returned from DataVerse tables. |
+| `skill` | String | A unique configuration for your Dataverse knowledge. |
 | `tables` | Array of [table](#table-name) objects | An array of tables to scope the agent's knowledge. |
 
 #### Tables object
