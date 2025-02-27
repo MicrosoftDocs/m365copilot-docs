@@ -15,7 +15,9 @@ Custom engine agents are specialized chat experiences built on any large languag
 
 :::image type="content" source="assets/images/custom-engine-agent.png" alt-text="An illustration that shows how a custom engine agent in Teams works" lightbox="assets/images/custom-engine-agent.png" border="false":::
 
-Custom engine agents offer advanced functionalities such as task execution and content creation. These capabilities make custom engine agents indispensable tools for streamlining workflows and boosting productivity. They were initially supported on Teams platform only, but now integrated on Microsoft 365 Copilot Chat, where the agents look and feel seamless to declarative agents to end-users.
+Custom engine agents offer advanced functionalities such as task execution and content creation. These capabilities make custom engine agents indispensable tools for streamlining workflows and boosting productivity. They were initially supported on Teams platform only, but now integrated on [Microsoft 365 Copilot Chat](https://www.microsoft365.com/chat), where the agents look and feel seamless to declarative agents to end-users.
+
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer-cea.md)]
 
 Custom engine agents don't require a Microsoft 365 Copilot license to build, debug, and deploy. They're available to users with Microsoft 365 Copilot licenses or users in tenants with metering enabled via Copilot Chat.
 
