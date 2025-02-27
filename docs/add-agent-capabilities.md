@@ -70,7 +70,7 @@ Dataverse knowledge enables agents to respond in natural language to user querie
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Dataverse knowledge, add the `Dataverse` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
 > [!NOTE]
-> You must be using version 1.3 of the declarative agent manifest schema to add the `Dataverse` capability.
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `Dataverse` capability.
 
 ```json
     {
