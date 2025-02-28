@@ -276,7 +276,7 @@
     - name: Learning path
       href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
   - name: Debug with developer mode in Copilot
-    href: debugging-copilot-plugin.md
+    href: debugging-copilot-agent.md
 - name: Publish
   items:
   - name: Overview
