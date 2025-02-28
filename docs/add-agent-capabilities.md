@@ -80,7 +80,7 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
           "knowledge_sources": [ 
             { 
               "host_name": "organization.crm.dynamics.com", 
-              "skill": "<skill name>",
+              "skill": "DVCopilotSkillName",
               "tables": [ 
                 { 
                     "table_name": "account" 

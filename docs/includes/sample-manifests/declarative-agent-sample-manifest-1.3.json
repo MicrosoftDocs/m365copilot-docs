@@ -56,7 +56,7 @@
       "knowledge_sources": [ 
         { 
           "host_name": "organization.crm.dynamics.com", 
-          "skill": "<skill name>",
+          "skill": "DVCopilotSkillName",
           "tables": [ 
             { 
                 "table_name": "account" 

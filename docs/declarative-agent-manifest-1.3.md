@@ -133,7 +133,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
       "knowledge_sources": [ 
         { 
           "host_name": "organization.crm.dynamics.com", 
-          "skill": "<skill name>",
+          "skill": "DVCopilotSkillName",
           "tables": [ 
             { 
                 "table_name": "account" 
