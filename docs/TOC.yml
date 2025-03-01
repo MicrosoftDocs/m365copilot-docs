@@ -123,11 +123,11 @@
         href: /microsoftsearch/graph-connector-agent?context=/microsoft-365-copilot/extensibility/context
       - name: Connector agent release history
         href: /microsoftsearch/graph-connector-agent-releases?context=/microsoft-365-copilot/extensibility/context
-    - name: Map non-Azure AD Identities
+    - name: Map non-Azure AD identities
       href: /microsoftsearch/map-non-aad?context=/microsoft-365-copilot/extensibility/context
     - name: Map Microsoft Entra identities
       href: /microsoftsearch/map-aad?context=/microsoft-365-copilot/extensibility/context
-    - name: Microsoft Graph prebuilt connectors
+    - name: Prebuilt Microsoft Graph connectors
       href: /microsoftsearch/pre-built-connectors-overview?context=/microsoft-365-copilot/extensibility/context
       items:
       - name: Azure Data Lake Storage Gen2
