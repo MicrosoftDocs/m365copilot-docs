@@ -35,7 +35,7 @@ You can build custom engine agents in two ways:
 
 For enterprises seeking solutions that are precisely customized to user demands and scenarios, using the [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview) is a great choice. Teams AI Library is based on [Microsoft Bot Framework](https://dev.botframework.com/) so it comes with all functions that conventional bots can do, plus, it utilizes LLMs that adhere to Microsoft's UX principles.
 
-This option is advantageous for developers who want to customize model selection and orchestration and apply prior experience with Teams bot development, or who want to ensure accessibility for all Microsoft 365 users.
+This option is ideal for developers looking to tailor model selection and orchestration, apply their prior experience with Teams bot development, or make their agents available to all Microsoft 365 users.
 
 Developers can also take advantage of [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to construct their projects. The Teams Toolkit includes prebuilt templates for a seamless project launch, offering an ideal solution for quick starts, easy debugging, and deployment.
 
