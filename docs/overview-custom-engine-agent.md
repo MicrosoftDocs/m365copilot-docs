@@ -4,14 +4,14 @@ description: Custom engine agents are specialized chat experiences built on any 
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 02/28/2025
+ms.date: 03/05/2025
 ms.topic: overview
 ---
 
 
 # Custom engine agents for Microsoft 365 overview
 
-Custom engine agents are specialized chat experiences built on any large language model (LLM) and tailored for a specific domain or workflows. They allow organizations to create their own agents using tools like the Teams Toolkit, Microsoft Copilot Studio, and the Microsoft 365 Agents SDK (preview). Custom engine agents allow you to use your custom orchestrators, foundation models, and custom logic.
+Custom engine agents are specialized chat experiences built on any large language model (LLM) and tailored for a specific domain or workflows. They allow organizations to create their own agents using tools like the Teams Toolkit, and Microsoft Copilot Studio. Custom engine agents allow you to use your custom orchestrators, foundation models, and custom logic.
 
 :::image type="content" source="assets/images/custom-engine-agent.png" alt-text="An illustration that shows how a custom engine agent in Teams works" lightbox="assets/images/custom-engine-agent.png" border="false":::
 
@@ -28,8 +28,8 @@ Custom engine agents don't require a Microsoft 365 Copilot license to build, deb
 
 You can build custom engine agents in two ways:
 
-- You can use the [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview) and [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to build your agent with code.
-- You can use [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context) to build an agent with little to no code.
+- **Full-custom option:** You can use the [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview) and [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to build your agent with code.
+- **Low code option:** You can use [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context) to build an agent with little to no code.
 
 ### Teams AI library and Teams Toolkit
 
