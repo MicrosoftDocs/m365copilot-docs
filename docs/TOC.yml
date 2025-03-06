@@ -35,6 +35,8 @@
       href: overview-declarative-agent.md
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
+    - name: Choose your development tool
+      href: declarative-agent-tool-comparison.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
     - name: Add agent capabilities
