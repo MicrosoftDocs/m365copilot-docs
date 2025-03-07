@@ -65,4 +65,4 @@ You can find the latest list of samples from the community in the [Microsoft Ado
 ## Related content
 
 - [Microsoft 365 Copilot developer videos](https://www.youtube.com/@Microsoft365Developer)
-- [Learn samples gallery](https://learn.microsoft.com/en-us/samples/browse/)
+- [Learn samples gallery](/samples/browse/)
