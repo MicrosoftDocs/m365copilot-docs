@@ -54,24 +54,6 @@ The following samples implement Microsoft Graph connectors that extend Microsoft
 | [Python GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-python) | This Python application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 Copilot app, and more. |
 | [TypeScript GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-typescript) | This TypeScript application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 Copilot app, and more. |
 
-## Plugins for Microsoft 365 Copilot
-
-### Teams message extension samples
-
-The following samples implement Teams message extensions that extend Microsoft 365 Copilot.
-
-| Sample | Description |
-|--------|-------------|
-| [Northwind Inventory extension](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-northwind-inventory-ts) | This TypeScript sample implements a Teams message extension that allows users to query data from the Northwind sample database and take action on that data. |
-| [Azure AI search extension](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-doc-search-js) | This JavaScript sample implements a Teams message extension that uses Azure AI search to enable vector search of documents. |
-| [.NET Product support extension](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-product-support-sso-csharp) | This .NET sample implements a Teams message extension that allows users to query Products held in SharePoint Online team site via Microsoft Graph. |
-| [TypeScript Product support extension](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-product-support-sso-ts) | This TypeScript sample implements a Teams message extension that allows users to query Products held in SharePoint Online team site via Microsoft Graph. |
-| [.NET Multi Parameters](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-multiparam-csharp) | Plugin that demonstrates how to implement complex utterances and support deep retrieval |
-| [TypeScript Multi Parameters](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-multiparam-ts) | Plugin that demonstrates how to implement complex utterances and support deep retrieval |
-| [JavaScript Multi Parameters](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-multiparam-js) | Plugin that demonstrates how to implement complex utterances and support deep retrieval |
-| [Compliance checker](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-ai-doc-compliance-checker) | Use Azure OpenAI to compare proposal documents against a guideline document and return whether the proposal complies and why/why not. |
-| [Expert finder](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-expert-finder-js) | This sample implements a Teams message extension that can be used to query a database of candidates based on their skills, location, and availability. The sample, when used with Microsoft 365 Copilot, demonstrates Single Sign-On (SSO), and Copilot's ability to perform multi-parameter search. |
-
 ## Community samples
 
 You can find the latest list of samples from the community in the [Microsoft Adoption center sample solution gallery](https://adoption.microsoft.com/en-us/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1):
