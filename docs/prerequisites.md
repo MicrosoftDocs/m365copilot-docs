@@ -138,7 +138,6 @@ The following table lists the agent types and agent capabilities that are availa
 
 \* Usage limits apply to all included features.
 
-
 > [!NOTE]
 > For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
 
