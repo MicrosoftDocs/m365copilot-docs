@@ -27,7 +27,9 @@ Several tools are available to help you build declarative agents for Copilot. Th
 
 ## Teams Toolkit
 
-Teams Toolkit is the best choice for developers taking a pro-code approach where full control, scalability, and direct API integration are required.
+If your scenario involves the full control, scalability, and direct API integration of a pro-code approach, Teams Toolkit is the best tool to use to create your declarative agent.
+
+The following table lists the pros and cons for using Teams Toolkit.
 
 | **Pros** | **Cons** |
 |:------------|:------------|
