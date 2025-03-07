@@ -22,9 +22,6 @@ Several tools are available to help you build declarative agents for Copilot. Th
 | [Copilot Studio agent builder](copilot-studio-agent-builder.md) | No-code | Copilot Studio agent builder offers a simpler interface for building declarative agents. It allows users to create agents either by using natural language or by following a guided process. | Users with no coding experience who need basic declarative agent functionality. |
 | - [SharePoint](./build-declarative-agents.yml?tutorial-step=5)  **OR**  **[SharePoint](optimize-sharepoint-content) ?**| Mixed | SharePoint allows users to build declarative agents using data from specific SharePoint sites, document libraries, and files. It also provides a personalized user experience based on the content within SharePoint. | Business users who need agents that are grounded in specific SharePoint sites, document libraries, and files. |
 
-> [!NOTE]
-> If you have an existing Microsoft Teams message extension, you can use it as a declarative agent. For more information, see the article [Extend bot-based message extension as agent for Microsoft 365 Copilot](/microsoftteams/platform/messaging-extensions/build-bot-based-agent).
-
 ## Teams Toolkit
 
 If your scenario involves the full control, scalability, and direct API integration of a pro-code approach, Teams Toolkit is the best tool to use to create your declarative agent.
