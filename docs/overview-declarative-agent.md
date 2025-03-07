@@ -45,19 +45,19 @@ Users can select declarative agents from the right pane in Copilot. They can the
 
 The following are the core elements of a declarative agent app package:
 
-- [**App manifest**](/microsoftteams/platform/resources/schema/manifest-schema) - Describes how your app is configured, including its capabilities, required resources, and other important attributes.
-- **App icons** - The app package requires a color and outline icon for your declarative agents.
+- [**App manifest**](microsoftteams/platform/resources/schema/manifest-schema) - Describes how your app is configured, including its capabilities, required resources, and other important attributes.
+-[**App icons**](microsoft-365-copilot/extensibility/agents-are-apps#app-icons) - The app package requires a color and outline icon for your declarative agents.
 - [**Declarative agents manifest**](declarative-agent-manifest-1.2.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
-- **Plugin manifest (optional)** - Describes how your plugin is configured, including its required fields and capabilities.
+- [**Plugin manifest (optional)**](/microsoft-365-copilot/extensibility/overview-api-plugins) - Describes how your plugin is configured, including its required fields and capabilities.
 
-You can use your tool of choice to create a declarative agent app package. To get started, choose from the tools listed in the following table. For more information about the differences between them, see [Choose the right tool to build your declarative agent](declarative-agent-tool-comparison.md).
+You can use your tool of choice to create a declarative agent app package. To get started, choose from among the following tools:
 
-| **Tool** | **Summary** |
-| :------- | :------- |
-| [Teams Toolkit](./build-declarative-agents.yml) | Build declarative agents using Teams Toolkit. |
-| [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) | Build declarative agents using the builder integrated in Copilot Studio. |
-| [Copilot Studio agent builder](copilot-studio-agent-builder.md) | Build declarative agents using the integrated builder in Microsoft 365 Copilot. |
-| [SharePoint](./build-declarative-agents.yml?tutorial-step=5) | Build declarative agents using grounding data from SharePoint files. | 
+- [Teams Toolkit](./build-declarative-agents.yml)
+-  [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context)
+- [Copilot Studio agent builder](copilot-studio-agent-builder.md)
+- [SharePoint](./build-declarative-agents.yml?tutorial-step=5)
+
+For more information about how to choose the right tool for your scenarios, see [Choose the right tool to build your declarative agent](./declarative-agent-tool-comparison.md).
 
 ## Responsible AI
 
