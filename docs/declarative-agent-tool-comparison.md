@@ -13,7 +13,7 @@ ms.topic: conceptual
 Declarative agents enable you to extend Microsoft 365 Copilot to meet the unique needs of your users. You can build declarative agents using a pro-code, low-code, or even no-code approach. This article provides information about the tools that are available for building declarative agents and the pros and cons for each.
 
 ## Tools for building declarative agents
-Several tools are available to help you build Copilot agents. The following table lists the tools and the potential use cases for each to help you decide which tool is right for you.
+Several tools are available to help you build declarative agents for Copilot. The following table lists the tools and the potential use cases for each to help you decide which tool is right for you.
 
 | **Tool** | **Coding approach** |**Description** | **Recommended use case** |
 |:------------|:------------| :------------| :------------|
