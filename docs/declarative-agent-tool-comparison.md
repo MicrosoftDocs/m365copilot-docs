@@ -36,11 +36,11 @@ The following table lists the pros and cons for using Teams Toolkit.
 | **Pro-code flexibility:** Ideal for developers who prefer Visual Studio Code and want full control over their coding environment, source control, and APIs. | **No Power Platform connector support:** Unlike Copilot Studio agent builder, Teams Toolkit doesn't support drag-and-drop [Power Platform connectors](/training/modules/introduction-power-platform-developer-resources/) for quick API integration. |
 | **Custom API actions:** Enables integration with any API using OpenAPI specifications or custom-built REST APIs, providing flexibility beyond Power Platform connectors. | **No "No-code" UI:** Requires manual JSON editing for agent configuration, rather than a UI-driven toggle system. |
 | **Version control and collaboration:** Supports GitHub, pull requests, and CI/CD for better development practices and team collaboration. | **Limited composability for makers:** Agents built in Teams Toolkit can't be reused in low-code tools such as Copilot Studio and Copilot Studio agent builder. |
-| **Fast feature adoption:**  New capabilities (for example, code interpreter) are often available first in Teams Toolkit before being added to Copilot Studio. | **Steeper learning curve:** The Teams Toolkit is designed for professional developers, which can be less accessible for business users and information workers. |
-| **Advanced support for adaptive cards:** Enables custom UI rendering inside agents using [adaptive cards](/training/modules/copilot-declarative-agent-action-api-plugin-adaptive-cards-vsc/), which isn't available in Copilot Studio. |   |
+| **Fast feature adoption:**  New capabilities (for example, code interpreter) are often available first in Teams Toolkit before they're added to Copilot Studio and agent builder. | **Steeper learning curve:** The Teams Toolkit is designed for professional developers, which can be less accessible for business users and information workers. |
+| **Advanced support for Adaptive Cards:** Enables custom UI rendering inside agents using [Adaptive Cards](/training/modules/copilot-declarative-agent-action-api-plugin-adaptive-cards-vsc/), which isn't available in Copilot Studio. |   |
 | **Complex application bundling:** Allows integration of agents with Teams apps, personal tabs, messaging extensions, and other Microsoft 365 applications. |  |
 | **Experimentation support:** Developers can fork, test, and iterate on agent capabilities without affecting live deployments. | |
-| **Graph connectors and AI enhancements:** Supports richer integrations than Content Studio, including semantic search with [Graph Connectors](/graph/connecting-external-content-experiences) and more control over agent reasoning/responses.| 
+| **Microsoft Graph connectors and AI enhancements:** Supports rich integrations, including semantic search with [Microsoft Graph connectors](/graph/connecting-external-content-experiences) and more control over agent reasoning and responses.| 
 
 ## Copilot Studio
 Copilot Studio is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
@@ -48,21 +48,21 @@ Copilot Studio is designed for small-scale deployments, such as department-level
 | **Pros** | **Cons** |
 |:------------|:------------|
 | **Easy to use:** Copilot studio provides a low-code approach that enables business users and information workers to build and customize agents using a drag-and-drop interface without coding. | **Less developer control:** Limited ability to fine-tune API calls, actions, and response formatting. |
-| **Power platform connectors:** Enables quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** There isn't any built-in support for GitHub, pull requests, or automated deployments. |
-| **Great for personal and departmental use:** Fast setup for smaller, targeted, agents that don’t require large-scale enterprise governance. | **Limited support for adaptive cards:** You can't customize how responses are displayed beyond basic text formatting. |
-| **Pre-built governance and deployment:** Agents are deployed using Copilot Studio’s built-in management tools, reducing complexity for IT teams. | **Slower feature rollout:** Some advanced features arrive later than in Teams Toolkit due to UI development overhead. |
+| **Power platform connectors:** Enables quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for GitHub, pull requests, or automated deployments. |
+| **Great for personal and departmental use:** Fast setup for smaller, targeted agents that don’t require large-scale enterprise governance. | **Limited support for Adaptive Cards:** You can't customize how responses are displayed beyond basic text formatting. |
+| **Prebuilt governance and deployment:** Agents are deployed using Copilot Studio’s built-in management tools, reducing complexity for IT teams. | **Slower feature rollout:** Some advanced features are available in Teams Toolkit before they're available in Copilot Studio. |
 
 ## Copilot Studio agent builder
-Copilot Studio agent builder is an excellent choice for end-users with no coding experience who need a simple, guided process for building AI agents.
+Copilot Studio agent builder is a great option for users with no coding experience who need a simple, guided process for building declarative agents.
 
 | **Pros** | **Cons** |
 |:------------|:------------|
-| **Ease of use:** : Designed for end-users with no coding experience, using a natural language interface. | **Limited customizations:**  Offers fewer customization and control options than Copilot Studio. |
+| **Ease of use:** Designed for users with no coding experience, using a natural language interface. | **Limited customizations:** Offers fewer customization and control options than Copilot Studio. |
 | **Quick setup:** Provides a guided process for building agents. | **Complex workflows:** Doesn't support complex workflows and integrations. |
-| **Accessibility:** Suitable for creating simple AI agents without the need for coding.  | **Feature limitations:** Some advanced features aren't available. |
+| **Accessibility:** Suitable for creating simple agents without the need for coding.  | **Feature limitations:** Some advanced features aren't available. |
 
 ## SharePoint for building declarative agents
-This option is suitable for site owners or editors who want to create agents tailored to specific needs within the SharePoint environment.
+The SharePoint option is suitable for site owners or editors who want to create agents tailored to specific scenarios within the SharePoint environment.
 
 | **Pros** | **Cons** |
 |:------------|:------------|
