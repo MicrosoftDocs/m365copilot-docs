@@ -30,7 +30,8 @@ Copilot Studio agent builder is a great option for users with no coding experien
 |:------------|:------------|
 | **Ease of use:** Designed for users with no coding experience, using a natural language interface. |  **Complex workflows:** Doesn't support complex workflows and integrations. |
 | **Quick setup:** Provides a guided process for building agents. | **Feature limitations:** Some advanced features aren't available.  |
-| **Accessibility:** Suitable for creating simple agents without the need for coding.  |  |
+| **Accessibility:** Suitable for creating agents without having to write code.  |  |
+| **Straightforward agent testing**: The test pane allows users to test the end-user experience of agents directly within the tool. |  |
 
 ## Copilot Studio
 Copilot Studio is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
@@ -41,6 +42,7 @@ Copilot Studio is designed for small-scale deployments, such as department-level
 | **Power platform connectors:** Enables quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for GitHub, pull requests, or automated deployments. |
 | **Great for personal and departmental use:** Fast setup for smaller, targeted agents that don’t require large-scale enterprise governance. | **Limited support for Adaptive Cards:** You can't customize how responses are displayed beyond basic text formatting. |
 | **Prebuilt governance and deployment:** Agents are deployed using Copilot Studio’s built-in management tools, reducing complexity for IT teams. | **Slower feature rollout:** Some advanced features are available in Teams Toolkit before they're available in Copilot Studio. |
+| **Built-in test agent**: Copilot Studio comes with a built-in test agent that lets you test the agent in real-time. |  |
 
 ## Teams Toolkit
 
