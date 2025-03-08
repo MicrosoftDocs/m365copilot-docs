@@ -19,6 +19,7 @@ Declarative agents are valuable in understanding and generating human-like text,
 This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md):
 
 - The [Dataverse](#dataverse-object) capability is added to the list of `capabilities`. It supports an array of objects in the `knowledge_sources` field that contain Dataverse instances.
+- - The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `urls` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
 
 ## JSON schema
 
@@ -264,7 +265,7 @@ The Dataverse object contains the following properties.
 | `name`   | String | Required. Must be set to `Dataverse`. |
 | `knowledge_sources` | Array of [Knowledge sources](#knowledge-source-object) | Optional. An array of objects that contain the identifiers, skills, and table names for Dataverse instances to include as knowledge.|
 
-### Knowledge sources object
+##### Knowledge sources object
 
 Contains information about the Dataverse instances to include as knowledge.
 
@@ -276,7 +277,7 @@ The `knowledge_sources` object contains the following properties.
 | `skill` | String | A unique identifier that defines the configuration for how the agent interacts with Dataverse knowledge. |
 | `tables` | Array of [table](#table-name) objects | An array of tables to scope the agent's knowledge. |
 
-#### Tables object
+###### Tables object
 
 Contains the tables to scope the agent's knowledge.
 
@@ -285,6 +286,27 @@ The `tables` object contains the following property.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `table` | String | Required. A unique identifier for the table. |
+
+#### Teams messages object
+
+Indicates that the declarative agent can search through Teams channels, teams, meetings, 1:1 chats, and group chats.
+
+The Teams messages object contains the following properties.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `name`   | String | Required. Must be set to `TeamsMessages`. |
+| `urls` | Array of [Teams URL object](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
+
+##### Teams URL object
+
+Identifies a Teams channel, team, or meeting chat.
+
+The Teams URL object contains the following properties.
+
+| Property        | Type   | Description |
+| --------------- | ------ | ----------- |
+| `url` | String | Required. A well formatted Teams URL that links to either a Team channel, team, or meeting chat. |
 
 ### Conversation starters object
 

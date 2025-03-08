@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 02/25/2025
+ms.date: 03/11/2025
 ms.topic: overview
 ---
 
@@ -14,7 +14,7 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
-## February 2025
+## March 2025
 
 ### Declarative agent manifest version 1.3
 
@@ -22,7 +22,13 @@ A new version of the declarative agent manifest schema has been released. Versio
 
 ### Add Dataverse knowledge to declarative agents
 
-You can add Dataverse knowledge to agents that you build with Teams Toolkit. For details, see [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge).
+You can add Dataverse knowledge to declarative agents that you build with Teams Toolkit. For details, see [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge).
+
+### Add Teams chat as knowledge to declarative agents
+
+You can add Teams chats as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Teams chat as knowledge](add-agent-capabilities.md#teams-chat-as-knowledge).
+
+## February 2025
 
 ### Copilot Studio agent builder available in Copilot Chat
 

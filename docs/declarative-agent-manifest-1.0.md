@@ -78,7 +78,6 @@ The capabilities object is the base type of objects in the `capabilities` proper
 > [!NOTE]
 > Declarative agents with the OneDrive and SharePoint or Microsoft Graph connectors capability are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license.
 
-
 #### Example of capabilities
 
 ```json
