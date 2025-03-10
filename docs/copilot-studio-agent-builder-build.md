@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/05/2025
+ms.date: 02/25/2025
 ms.topic: conceptual
 ---
 
@@ -12,10 +12,10 @@ ms.topic: conceptual
 
 The Copilot Studio agent builder provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-To get started with the Copilot Studio agent builder, open the Microsoft 365 Copilot app, select **Work**, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
+To get started with the Copilot Studio agent builder, open the Microsoft 365 Copilot app, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
 
 > [!NOTE]
-> Copilot Studio agent builder isn't currently available to Microsoft 365 Copilot Chat users. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
+> Copilot Studio agent builder capabilities differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 
 You can author your declarative agent in two ways:
 
@@ -25,32 +25,7 @@ You can author your declarative agent in two ways:
 Both tabs work seamlessly to provide a rich authoring experience.
 
 > [!NOTE]
-> The availability of the **Describe** tab is based on [geographic availability and language support](copilot-studio-agent-builder-availability.md). The **Describe** tab supports the following languages:
->
-> - Chinese (Simplified)
-> - Chinese (Traditional)
-> - Czech
-> - Danish
-> - Dutch
-> - English
-> - Finnish
-> - French
-> - German
-> - Hindi
-> - Indonesian
-> - Italian
-> - Japanese
-> - Korean
-> - Norwegian Bokmål
-> - Polish
-> - Portuguese
-> - Russian
-> - Spanish
-> - Swedish
-> - Thai
-> - Turkish
->
-> You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your region or preferred language.
+> The  **Describe** tab is only available when your Microsoft 365 language is set to one of the [available languages](copilot-studio-agent-builder-availability.md). You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your preferred language.
 
 ## Describe your agent
 
@@ -126,18 +101,11 @@ The following table lists the supported file types and their respective limits.
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you won't be able to use SharePoint as a knowledge source.
 
-#### Entering a URL for a SharePoint site or folder
+#### Entering a URL for a SharePoint site, folder, or file
 
-You can enter a URL for a SharePoint site or folder, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
+You can enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
-> [!NOTE]
->
-> - Recognized SharePoint URLs are from the sharepoint.com domain and contain the path `{org}.sharepoint.com/sites/{site}`.
-> - SharePoint site URLs can't be more than two levels deep.
-> - Only modern pages are supported.
-> - Content from classic aspx pages on SharePoint aren't used to generate answers.
-
-After providing the SharePoint site URL, press **Enter** to add it as a knowledge source.
+After you provide the SharePoint URL, press **Enter** to add it as a knowledge source.
 
 #### Opening the SharePoint file picker
 
