@@ -31,4 +31,3 @@ For more information on how to build a declarative agent from within SharePoint,
 
 - [Microsoft Build 2024: Create custom copilots from SharePoint](https://techcommunity.microsoft.com/blog/spblog/microsoft-build-2024-create-custom-copilots-from-sharepoint/4146527)
 - [Optimize Sharepoint content retrieval](./optimize-sharepoint-content.md)
-- [TechWeb: SharePoint agents](https://www.microsoft.com/sites/CopilotInfo/SitePages/Custom-Copilots.aspx)
