@@ -76,7 +76,6 @@ The SharePoint option is suitable for site owners or editors who want to create 
 ## Related content
 
 - [Declarative agents for Microsoft 365 Copilot overview](./overview-declarative-agent.md)
+- [Create declarative agents using Teams Toolkit](./build-declarative-agents.yml)
 - [Use Copilot Studio Agent Builder to Build Agents](copilot-studio-agent-builder.md)
 - [Create and delete agents - Microsoft Copilot Studio](/microsoft-copilot-studio/authoring-first-bot?tabs=web)
-- [Create declarative agents using Teams Toolkit](./build-declarative-agents.yml)
-- [Build a declarative agent using SharePoint](./sharepoint-declarative-agent.md)
