@@ -61,7 +61,7 @@ The following table lists the pros and cons for using Teams Toolkit.
 | **Microsoft Graph connectors and AI enhancements:** Supports rich integrations, including semantic search with [Microsoft Graph connectors](/graph/connecting-external-content-experiences) and more control over agent reasoning and responses.|
 
 
-## SharePoint for building declarative agents
+## SharePoint
 
 The SharePoint option is suitable for site owners or editors who want to create agents tailored to specific scenarios within the SharePoint environment.
 
