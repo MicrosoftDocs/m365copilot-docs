@@ -10,7 +10,7 @@ ms.date: 03/15/2025
 
 # Build a declarative agent using SharePoint
 
-You can [use SharePoint](/sites/CopilotInfo/SitePages/Custom-Copilots.aspx) to build local declarative agents that are integrated into SharePoint. These agents pull information from the sites, libraries, and files that you specify to deliver the targeted information that employees need while preserving your existing security settings and permissions.
+You can [use SharePoint](https://www.microsoft.com/sites/CopilotInfo/SitePages/Custom-Copilots.aspx) to build local declarative agents that are integrated into SharePoint. These agents pull information from the sites, libraries, and files that you specify to deliver the targeted information that employees need while preserving your existing security settings and permissions.
 
 ## Roles and permissions for agents in SharePoint
 
@@ -29,8 +29,8 @@ For more information on how to build a declarative agent from within SharePoint,
 
 ## Related content
 
-- [Microsoft Build 2024: Create custom copilots from SharePoin](blog/spblog/microsoft-build-2024-create-custom-copilots-from-sharepoint/4146527)
-- [Deploy a custom copilot to SharePoint with a seamless single sign-on experience](microsoft-copilot/blog/copilot-studio/deploy-a-custom-copilot-to-sharepoint-with-a-seamless-single-sign-on-experience/)]
+- [Microsoft Build 2024: Create custom copilots from SharePoint](https://www.microsoft.com/blog/spblog/microsoft-build-2024-create-custom-copilots-from-sharepoint/4146527)
+- [Deploy a custom copilot to SharePoint with a seamless single sign-on experience](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/deploy-a-custom-copilot-to-sharepoint-with-a-seamless-single-sign-on-experience/?msockid=1feca610aa846b3030a2b3b0ab3e6a48)
 - [Deploy a Microsoft Copilot Studio copilot as a SharePoint component with single sign-on (SSO) enabled](https://github.com/microsoft/CopilotStudioSamples/blob/main/SharePointSSOComponent/SETUP.md)
-- [Optimize Sharepoint content retrieval](./optimize-sharepoint-content)
-- [TechWeb: SharePoint agents](/sites/CopilotInfo/SitePages/Custom-Copilots.aspx)
+- [Optimize Sharepoint content retrieval](./optimize-sharepoint-content.md)
+- [TechWeb: SharePoint agents](https://www.microsoft.com/sites/CopilotInfo/SitePages/Custom-Copilots.aspx)
