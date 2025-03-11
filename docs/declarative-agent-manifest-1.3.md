@@ -82,6 +82,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Graphic art object](#graphic-art-object)
 - [Code interpreter object](#code-interpreter-object)
 - [Dataverse object](#dataverse-object)
+- [Teams messages object](#teams-messages-object)
 
 > [!NOTE]
 > Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
@@ -145,6 +146,14 @@ The capabilities object is the base type of objects in the `capabilities` proper
          ] 
         } 
       ] 
+    },
+    {
+      "name": "TeamsMessages",
+      "urls": [
+        {
+          "url": "https://teams.microsoft.com/l/channel/19%3ApO0102YGEBRSH6RziXCxEgB4mtb7-5hIlDzAjtxs_dg1%40thread.tacv2/G%C3%A9n%C3%A9ral?groupId=2670cf94-acf5-48f4-96d4-c58dd8937afc&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+      ]
     }
   ]
 }
