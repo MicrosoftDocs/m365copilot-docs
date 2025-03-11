@@ -110,15 +110,15 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 > [!NOTE]
 > The image generator doesn't currently work in the test pane in Copilot Studio agent builder.
 
-## Teams chat as knowledge
+## Teams messages as knowledge
 
-The Teams chat as knowledge capability enables agents to use Teams channels, meeting chats, and teams as a knowledge source. You can choose to specify up to five links to teams, channels, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
+The Teams messages capability allows agents to use Teams channels, meeting chats, and teams as a knowledge source. You can choose to specify up to five links to teams, channels, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
 
 Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has the `OneDriveAndSharePoint` capability enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
-### Enable Teams chat as knowledge
+### Enable Teams messages
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Teams chat as knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **url** property, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable the Teams messages capability, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **url** property, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `TeamsMessage` capability.
