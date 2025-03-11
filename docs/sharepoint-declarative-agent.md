@@ -25,7 +25,7 @@ The following table summarizes the roles and permissions available for declarati
 | **Site Visitor** | Can access existing SharePoint agents and have read-only permissions for content in the document library. |
 | **Site Guests** | Can't create or use existing SharePoint agents. |
 
-For more information on how to build a declarative agent from within SharePoint, see [Anyone can create copilots from SharePoint in a few clicks](https://techcommunity.microsoft.com/blog/spblog/microsoft-build-2024-create-custom-copilots-from-sharepoint/4146527)
+For more information on how to build a declarative agent from within SharePoint, see [Anyone can create copilots from SharePoint in a few clicks](https://techcommunity.microsoft.com/blog/spblog/microsoft-build-2024-create-custom-copilots-from-sharepoint/4146527#:~:text=Anyone%20can%20create%20copilots%20from%20SharePoint%20in%20a%20few%20clicks)
 
 ## Related content
 
