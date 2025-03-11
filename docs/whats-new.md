@@ -26,11 +26,11 @@ You can add Dataverse knowledge to declarative agents that you build with Teams 
 
 ### Add Teams messages as knowledge to declarative agents
 
-You can add Teams messages as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Email knowledge](add-agent-capabilities.md#email-knowledge).
+You can add Teams messages as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Teams messages as knowledge](add-agent-capabilities.md#teams-messages-as-knowledge).
 
 ### Add email as knowledge to declarative agents
 
-You can add email content as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Teams chat as knowledge](add-agent-capabilities.md#teams-chat-as-knowledge).
+You can add email content as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Email knowledge](add-agent-capabilities.md#email-knowledge).
 
 ## February 2025
 

@@ -273,7 +273,7 @@ The Dataverse object contains the following properties.
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `Dataverse`. |
-| `knowledge_sources` | Array of [Knowledge sources](#knowledge-source-object) | Optional. An array of objects that contain the identifiers, skills, and table names for Dataverse instances to include as knowledge.|
+| `knowledge_sources` | Array of [Knowledge sources](#knowledge-sources-object) | Optional. An array of objects that contain the identifiers, skills, and table names for Dataverse instances to include as knowledge.|
 
 ##### Knowledge sources object
 
