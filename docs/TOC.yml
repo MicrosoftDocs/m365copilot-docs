@@ -59,8 +59,6 @@
         href: copilot-studio-agent-builder-availability.md
     - name: Use Microsoft Copilot Studio
       href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
-        - name: Use Microsoft Copilot Studio
-      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
     - name: Use Visual Studio Code
       expanded: true
       items:
