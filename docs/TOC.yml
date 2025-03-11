@@ -70,8 +70,8 @@
         href: copilot-studio-agent-builder-publish.md
       - name: Availability and language support
         href: copilot-studio-agent-builder-availability.md
-      - name: Build in Microsoft Copilot Studio
-        href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+    - name: Build a declarative agent with Microsoft Copilot Studio
+      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
     - name: Use SharePoint
       items:
         - name: Build a declarative agent using SharePoint
