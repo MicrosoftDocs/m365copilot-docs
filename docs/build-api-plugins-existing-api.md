@@ -20,7 +20,7 @@ ms.topic: how-to
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - An existing REST API with an OpenAPI specification (this walkthrough uses the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin))
-- [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.9 or later
+- [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.12 later
 - [Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit)
 - Optional: [Microsoft Kiota Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-graph.kiota)
 
@@ -30,6 +30,8 @@ ms.topic: how-to
 To follow along with this guide, download the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin) and configure it to run on your local development machine. Build the sample at least once to generate the **BudgetTracker.json** file for the API.
 
 ## Enable plugin development in Teams Toolkit
+
+[!INCLUDE [toolkit-version-note](includes/toolkit-version-note.md)]
 
 1. Open Visual Studio Code. If Teams Toolkit isn't already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
 

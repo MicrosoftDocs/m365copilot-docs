@@ -28,6 +28,8 @@ The following resources are required to complete the steps described in this art
 - [Teams Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-a-prerelease-version) version 5.10.0 or later
 - [Kiota Visual Studio Code extension](/openapi/kiota/install?tabs=bash#install-the-visual-studio-code-extension) version 1.19.100000002 or later
 
+[!INCLUDE [toolkit-version-note](../toolkit-version-note.md)]
+
 You should be familiar with the following standards and guidelines for declarative agents for Microsoft 365 Copilot:
 
 - Standards for compliance, performance, security, and user experience described in [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
