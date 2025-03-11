@@ -47,6 +47,20 @@
       href: localize-agents.md
     - name: RAI validation
       href: rai-validation.md
+    - name: Use Copilot Studio agent builder
+      items:
+      - name: Overview
+        href: copilot-studio-agent-builder.md
+      - name: Build agents
+        href: copilot-studio-agent-builder-build.md
+      - name: Publish agents
+        href: copilot-studio-agent-builder-publish.md
+      - name: Availability and language support
+        href: copilot-studio-agent-builder-availability.md
+    - name: Use Microsoft Copilot Studio
+      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+        - name: Use Microsoft Copilot Studio
+      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
     - name: Use Visual Studio Code
       expanded: true
       items:
@@ -60,24 +74,12 @@
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use Copilot Studio agent builder
-      items:
-      - name: Overview
-        href: copilot-studio-agent-builder.md
-      - name: Build agents
-        href: copilot-studio-agent-builder-build.md
-      - name: Publish agents
-        href: copilot-studio-agent-builder-publish.md
-      - name: Availability and language support
-        href: copilot-studio-agent-builder-availability.md
-    - name: Build a declarative agent with Microsoft Copilot Studio
-      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
     - name: Use SharePoint
       items:
-        - name: Build a declarative agent using SharePoint
-          href: sharepoint-declarative-agent.md
-        - name: Roles and permissions for agents in SharePoint
-          href: sharepoint-agent-roles-permissions.md
+      - name: Build a declarative agent using SharePoint
+        href: sharepoint-declarative-agent.md
+      - name: Roles and permissions for agents in SharePoint
+        href: sharepoint-agent-roles-permissions.md
   - name: Build a custom engine agent
     expanded: false
     items:
