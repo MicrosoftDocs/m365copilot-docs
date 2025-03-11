@@ -24,9 +24,13 @@ A new version of the declarative agent manifest schema has been released. Versio
 
 You can add Dataverse knowledge to declarative agents that you build with Teams Toolkit. For details, see [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge).
 
-### Add Teams chat as knowledge to declarative agents
+### Add Teams messages as knowledge to declarative agents
 
-You can add Teams chats as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Teams chat as knowledge](add-agent-capabilities.md#teams-chat-as-knowledge).
+You can add Teams messages as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Email knowledge](add-agent-capabilities.md#email-knowledge).
+
+### Add email as knowledge to declarative agents
+
+You can add email content as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Teams chat as knowledge](add-agent-capabilities.md#teams-chat-as-knowledge).
 
 ## February 2025
 

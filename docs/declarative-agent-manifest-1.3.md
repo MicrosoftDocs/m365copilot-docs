@@ -19,7 +19,8 @@ Declarative agents are valuable in understanding and generating human-like text,
 This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md):
 
 - The [Dataverse](#dataverse-object) capability is added to the list of `capabilities`. It supports an array of objects in the `knowledge_sources` field that contain Dataverse instances.
-- - The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `urls` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
+- The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `urls` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
+- The [Email](#email-object) capability is added to the list of `capabilities`. It supports a shared mailbox and an array of folder IDs for the agent to search.
 
 ## JSON schema
 
@@ -284,7 +285,7 @@ The `knowledge_sources` object contains the following properties.
 | --------------- | ------ | ----------- |
 | `host_name` | String | Required. A unique identifier for the host in Dataverse. |
 | `skill` | String | A unique identifier that defines the configuration for how the agent interacts with Dataverse knowledge. |
-| `tables` | Array of [table](#table-name) objects | An array of tables to scope the agent's knowledge. |
+| `tables` | Array of [table](#tables-object) objects | An array of tables to scope the agent's knowledge. |
 
 ###### Tables object
 
@@ -316,6 +317,28 @@ The Teams URL object contains the following properties.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `url` | String | Required. A well formatted Teams URL that links to either a Team channel, team, or meeting chat. |
+
+#### Email object
+
+Indicates that the declarative agent can search through email messages in the mailboxes that the user has access to.
+
+The Email object contains the following properties.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `name`   | String | Required. Must be set to `Email`. |
+| `shared_mailbox` | String | Optional. The SMTP address of a shared mailbox. |
+| `folders` | String | Optional. An array of [folder_id](#folders-object) objects. |
+
+##### Folders object
+
+Contains the folders to scope the agent's knowledge.
+
+The `folders` object contains the following property.
+
+| Property        | Type   | Description |
+| --------------- | ------ | ----------- |
+| `folder_id` | String | Required. The well-known folder name or folder ID of the folder to reference. |
 
 ### Conversation starters object
 
@@ -367,7 +390,7 @@ The action object contains the following properties.
 
 ## Declarative agent manifest example
 
-Here's an example of a declarative agent manifest file that uses most of the manifest properties described in this article.
+The following example shows a declarative agent manifest file that uses most of the manifest properties described in this article.
 
 :::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.3.json":::
 
