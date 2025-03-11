@@ -12,7 +12,7 @@ ms.date: 03/15/2025
 
 You can [use SharePoint](https://microsoft.sharepoint.com/sites/CopilotInfo/SitePages/Custom-Copilots.aspx) to build local declarative agents that are integrated into SharePoint. These agents pull information from the sites, libraries, and files that you specify to deliver the targeted information that employees need while preserving your existing security settings and permissions.
 
-For specific information on how to build a declarative agent from within SharePoint, see [Anyone can create copilots from SharePoint in a few clicks](https://techcommunity.microsoft.com/blog/spblog/microsoft-build-2024-create-custom-copilots-from-sharepoint/4146527#:~:text=Anyone%20can%20create%20copilots%20from%20SharePoint%20in%20a%20few%20clicks)
+For specific information on how to build a declarative agent from within SharePoint, see [Anyone can create copilots from SharePoint in a few clicks](https://techcommunity.microsoft.com/blog/spblog/microsoft-build-2024-create-custom-copilots-from-sharepoint/4146527#:%7E:text=Anyone%20can%20create%20copilots%20from%20SharePoint%20in%20a%20few%20clicks:~:text=Anyone%20can%20create%20copilots%20from%20SharePoint%20in%20a%20few%20clicks
 
 ## Related content
 
