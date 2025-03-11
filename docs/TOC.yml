@@ -50,7 +50,7 @@
     - name: Use Visual Studio Code
       expanded: true
       items:
-      - name: Build a declarative agent with Visual Studio Code
+      - name: Build a declarative agent with Teams Toolkit
         href: build-declarative-agents.yml
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
