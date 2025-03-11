@@ -72,6 +72,8 @@
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+    - name: Build a declarative agent using SharePoint
+      href: build-agent-sharepoint.md
   - name: Build a custom engine agent
     expanded: false
     items:
