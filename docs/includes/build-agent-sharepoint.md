@@ -25,9 +25,12 @@ The following table summarizes the roles and permissions available for declarati
 | **Site Visitor** | Can access existing SharePoint agents and have read-only permissions for content in the document library. |
 | **Site Guests** | Can neither create nor use existing SharePoint agents. |
 
+For more information on how to build a declarative agent from within SharePoint, see [Anyone can create copilots from SharePoint in a few clicks](https://techcommunity.microsoft.com/blog/spblog/microsoft-build-2024-create-custom-copilots-from-sharepoint/4146527)
+
 ## Related content
 
 - [Microsoft Build 2024: Create custom copilots from SharePoin](blog/spblog/microsoft-build-2024-create-custom-copilots-from-sharepoint/4146527)
-- [Deploy a custom copilot to SharePoint, with a seamless single sign-on experience(microsoft-copilot/blog/copilot-studio/deploy-a-custom-copilot-to-sharepoint-with-a-seamless-single-sign-on-experience/)]
-- - [Optimize Sharepoint content retrieval](./optimize-sharepoint-content)
-- - [TechWeb: SharePoint agents](/sites/CopilotInfo/SitePages/Custom-Copilots.aspx)
+- [Deploy a custom copilot to SharePoint with a seamless single sign-on experience](microsoft-copilot/blog/copilot-studio/deploy-a-custom-copilot-to-sharepoint-with-a-seamless-single-sign-on-experience/)]
+- [Deploy a Microsoft Copilot Studio copilot as a SharePoint component with single sign-on (SSO) enabled](https://github.com/microsoft/CopilotStudioSamples/blob/main/SharePointSSOComponent/SETUP.md)
+- [Optimize Sharepoint content retrieval](./optimize-sharepoint-content)
+- [TechWeb: SharePoint agents](/sites/CopilotInfo/SitePages/Custom-Copilots.aspx)
