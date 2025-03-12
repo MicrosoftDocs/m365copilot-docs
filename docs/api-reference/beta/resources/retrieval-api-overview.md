@@ -4,7 +4,7 @@ description: "Use the Microsoft Copilot Retrieval API to ground data for your ge
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
-ms.date: 11/03/2025
+ms.date: 03/11/2025
 ms.topic: overview
 ---
 # Overview of the M365 Copilot Retrieval API
