@@ -20,7 +20,7 @@ Several tools are available to help you build declarative agents for Copilot. Th
 | [Copilot Studio agent builder](copilot-studio-agent-builder.md) | No-code | Copilot Studio agent builder offers a simpler interface for building declarative agents. It allows users to create agents either by using natural language or by following a guided process. | Users with no coding experience. |
 | [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) | Low-code | Copilot Studio allows users to create AI agents using a drag-and-drop interface. It provides control over business logic and workflow automation and allows users to create declarative agents with advanced features, such as custom API actions, adaptive cards, and CI/CD integration. |  Information workers and business users who need a low-code, easy-to-use solution that includes [Power Platform integration](/power-platform/developer/get-started).  |
 | [Teams Toolkit](./build-declarative-agents.yml) | Pro-code | Teams Toolkit enables the creation of declarative agents with advanced features, such as custom API actions, adaptive cards, and CI/CD (Continuous Integration/Continuous Delivery) integration. | Developers who need full control over their coding environment, source control, and APIs. |
-| [SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sharepoint-agents-69e2faf9-2c1e-4baa-8305-23e625021bcf) | Mixed | SharePoint agents are declarative agents that run within SharePoint that perform tasks and provide responses based on the data available in an organization's SharePoint and OneDrive sites.
+| [SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sharepoint-agents-69e2faf9-2c1e-4baa-8305-23e625021bcf) | No code | SharePoint agents are declarative agents that run within SharePoint that perform tasks and provide responses based on the data available in an organization's SharePoint and OneDrive sites.
  | Business users who want to customize Copilot for a specific purpose or to specify specific sites, document libraries, and files for Copilot to search. | Business users who want to customize Copilot for a specific purpose or to specify specific sites, document libraries, and files for Copilot to search. |
 
 ## Copilot Studio agent builder
@@ -64,7 +64,7 @@ The following table lists the pros and cons for using Teams Toolkit.
 
 ## SharePoint
 
-The SharePoint option is suitable for site owners or editors who want to create agents tailored to specific scenarios within the SharePoint environment.
+The [SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sharepoint-agents-69e2faf9-2c1e-4baa-8305-23e625021bcf) option is suitable for site owners or editors who want to create agents tailored to specific scenarios within the SharePoint environment.
 
 | **Pros** | **Cons** |
 |:------------|:------------|
