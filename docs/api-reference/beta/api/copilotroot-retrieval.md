@@ -6,7 +6,6 @@ ms.author: lramosvea
 ms.topic: conceptual
 ms.date: 03/11/2025
 ms.localizationpriority: medium
-ms.subservice: "microsoft-365-copilot"
 doc_type: conceptualPageType
 ---
 
