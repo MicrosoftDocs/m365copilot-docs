@@ -72,10 +72,6 @@
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use SharePoint
-      items:
-      - name: Build a declarative agent using SharePoint
-        href: sharepoint-declarative-agent.md
   - name: Build a custom engine agent
     expanded: false
     items:
