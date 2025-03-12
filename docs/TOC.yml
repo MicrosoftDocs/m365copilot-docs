@@ -76,8 +76,6 @@
       items:
       - name: Build a declarative agent using SharePoint
         href: sharepoint-declarative-agent.md
-      - name: Roles and permissions for agents in SharePoint
-        href: sharepoint-agent-roles-permissions.md
   - name: Build a custom engine agent
     expanded: false
     items:
