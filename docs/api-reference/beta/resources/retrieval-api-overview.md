@@ -17,7 +17,7 @@ The Microsoft 365 Copilot retrieval API offers a streamlined solution for Retrie
 
 ## Why is Retrieval-Augmented Generation (RAG) important?
 
-Retrieval-Augmented Generation (RAG) is crucial when you are building generative AI solutions and want to use Microsoft 365 knowledge. By integrating RAG, your solutions can provide more accurate, contextually relevant responses grounded in the vast repository of organizational data within Microsoft 365. The Copilot retrieval API is instrumental in this process, as it enables the extraction of up-to-date, secure, and precise information from Microsoft 365. Using RAG ensures that the generative AI models generate plausible text, and are informed by the latest and most relevant data, enhancing their reliability and usefulness.
+Retrieval-Augmented Generation (RAG) is essential when you are building generative AI solutions and want to use Microsoft 365 knowledge. By integrating RAG, your solutions can provide more accurate, contextually relevant responses grounded in the vast repository of organizational data within Microsoft 365. The Copilot retrieval API is instrumental in this process, as it enables the extraction of up-to-date, secure, and precise information from Microsoft 365. Using RAG ensures that the generative AI models generate plausible text, and are informed by the latest and most relevant data, enhancing their reliability and usefulness.
 
 ## Why use the retrieval API?
 
