@@ -1,10 +1,12 @@
 ---
 title: "searchSensitivityLabelInfo resource type"
-description: "Describes the information protection label that details how to properly apply a sensitivity label to information."
-author: "lramosvea"
+description: Describes the information protection label that details how to properly apply a sensitivity label to information.
+author: lramosvea
+ms.author: lramosvea
+ms.topic: reference
 ms.date: 03/11/2025
 ms.localizationpriority: medium
-ms.subservice: "copilot"
+ms.subservice: microsoft-365-copilot
 doc_type: resourcePageType
 ---
 

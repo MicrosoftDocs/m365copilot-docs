@@ -1,11 +1,13 @@
 ---
 title: "retrievalResponse resource type"
-description: "Represents results from a retrieval query."
-author: "lramosvea"
+description: Represents results from a retrieval query.
+author: lramosvea
+ms.author: lramosvea
+ms.topic: reference
 ms.date: 03/11/2025
 ms.localizationpriority: medium
-ms.subservice: "copilot"
-doc_type: conceptualPageType
+ms.subservice: microsoft-365-copilot
+doc_type: resourcePageType
 ---
 
 # retrievalResponse resource type

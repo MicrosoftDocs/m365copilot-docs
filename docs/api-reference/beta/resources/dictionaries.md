@@ -1,10 +1,12 @@
 ---
 title: "dictionaries resource type"
-description: "Represents a dictionary type."
-author: "lramosvea"
+description: Represents a dictionary type.
+author: lramosvea
+ms.author: lramosvea
+ms.topic: reference
 ms.date: 03/11/2025
 ms.localizationpriority: medium
-ms.subservice: "copilot"
+ms.subservice: microsoft-365-copilot
 doc_type: resourcePageType
 ---
 

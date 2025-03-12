@@ -1,10 +1,12 @@
 ---
 title: "copilot: retrieval"
-description: "Using the retrieval API, generative AI solutions can ground data from SharePoint and Graph Connectors."
-author: "lramosvea"
+description: Using the retrieval API, generative AI solutions can ground data from SharePoint and Graph Connectors.
+author: lramosvea
+ms.author: lramosvea
+ms.topic: conceptual
 ms.date: 03/11/2025
 ms.localizationpriority: medium
-ms.subservice: "copilot"
+ms.subservice: "microsoft-365-copilot"
 doc_type: conceptualPageType
 ---
 
