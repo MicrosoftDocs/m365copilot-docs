@@ -47,7 +47,7 @@ The Microsoft 365 Copilot Retrieval API currently allows you to retrieve data fr
 
 As this API evolves through its development stages, it will integrate more features of the Microsoft 365 Copilot platform, thus expanding its support to more Microsoft 365 data sources.
 
-### Use national language query
+### Use natural language query
 
 The Microsoft 365 Copilot Retrieval API supports natural language queries, allowing you to interact with data conversationally. The API captures the meaning and intent of your query to precisely find relevant information.
 
