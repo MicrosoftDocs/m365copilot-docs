@@ -4,7 +4,7 @@ description: Learn how to build API plugins from an existing API for Microsoft 3
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 10/08/2024
+ms.date: 03/11/2025
 ms.topic: how-to
 ---
 
