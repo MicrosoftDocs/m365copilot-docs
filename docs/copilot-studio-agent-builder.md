@@ -4,7 +4,7 @@ description: Learn how to use Copilot Studio agent builder to build declarative 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/06/2024
+ms.date: 02/25/2025
 ms.topic: conceptual
 ---
 
@@ -15,7 +15,7 @@ The Copilot Studio agent builder in Microsoft 365 Copilot enables you to build a
 Copilot Studio agent builder offers an immediate, interactive AI development experience within Microsoft 365 Copilot, which is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use the full [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
 
 > [!NOTE]
-> Copilot Studio agent builder isn't currently available to Microsoft 365 Copilot Chat users. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
+> The capabilities available in Copilot Studio agent builder differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 
 Use Copilot Studio agent builder to create and customize agents that can be used with Microsoft 365 Copilot to cover scenario-specific uses cases, such as:
 
@@ -33,7 +33,7 @@ You can build agents from the following apps and sites:
 - Microsoft Teams Desktop and web client
 
 > [!NOTE]
-> Agent builder is only available under the Work section of the Microsoft 365 Copilot app. It is not available on mobile versions of these apps and sites, or for Microsoft 365 Copilot locations that are not listed in this article.
+> Agent builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It is not available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that are not listed in this article.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-entry.png" alt-text="Agent builder entry point in Microsoft 365 Copilot":::
 
@@ -59,11 +59,15 @@ Agents created via agent builder are stored in Cosmos DB on the organization's t
 
 For information about data subject rights and responding to requests to rectify personal data, see [Personal data requests for Copilot Studio](/microsoft-copilot-studio/personal-data-summary).
 
+## Admin controls
+
+Administrators can control whether Copilot Studio agent builder is available to users in their organization. For information about agent and agent builder admin controls, see [Manage agents for Microsoft 365 Copilot in Integrated Apps](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
+
 ## Known limitations
 
 The following are current known limitations:
 
-- Only general web browsing, Microsoft Graph connectors, SharePoint sites, folders, and files can be specified as knowledge sources. You can upload your local folders and files into SharePoint. Specifying a specific public URL as a knowledge source isn't supported.
+- Only web browsing, Microsoft Graph connectors, SharePoint sites, folders, and files can be specified as knowledge sources. You can upload your local folders and files into SharePoint.
 - Share with specific users in the organization only supports security groups and not individual users.
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
 - Agent builder doesn't currently support [Lockbox](/power-platform/admin/about-lockbox) or [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview).

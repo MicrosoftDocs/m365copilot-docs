@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/03/2025
+ms.date: 02/25/2025
 ms.topic: conceptual
 ---
 
@@ -12,10 +12,10 @@ ms.topic: conceptual
 
 The Copilot Studio agent builder provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-To get started with the Copilot Studio agent builder, open the Microsoft 365 Copilot app, select **Work**, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
+To get started with the Copilot Studio agent builder, open the Microsoft 365 Copilot app, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
 
 > [!NOTE]
-> Copilot Studio agent builder isn't currently available to Microsoft 365 Copilot Chat users. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
+> Copilot Studio agent builder capabilities differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 
 You can author your declarative agent in two ways:
 
@@ -27,16 +27,28 @@ Both tabs work seamlessly to provide a rich authoring experience.
 > [!NOTE]
 > The availability of the **Describe** tab is based on [geographic availability and language support](copilot-studio-agent-builder-availability.md). The **Describe** tab supports the following languages:
 >
+> - Chinese (Simplified)
+> - Chinese (Traditional)
+> - Czech
 > - Danish
 > - Dutch
 > - English
+> - Finnish
 > - French
 > - German
+> - Hindi
+> - Indonesian
 > - Italian
 > - Japanese
+> - Korean
+> - Norwegian Bokmål
+> - Polish
 > - Portuguese
+> - Russian
 > - Spanish
-> - Simplified Chinese
+> - Swedish
+> - Thai
+> - Turkish
 >
 > You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your region or preferred language.
 
@@ -82,9 +94,11 @@ The agent builder allows you to configure specific knowledge sources for the age
 
 ### Web content
 
-You can enable or disable web content when you author or edit your agent.
+You can add specific public websites as agent knowledge sources to make your agent context-aware. When you reference websites as knowledge sources, the following limits apply:
 
-When web content is enabled, the agent can use publicly available web information to augment its response to a prompt. Responses shown to the user are also shown with citations and labeled with an icon to represent web content use. When web content is disabled, the agent uses its pretrained knowledge and any knowledge sources you add.
+- Public website URLs must only be two levels; for example, `https://example.org/a/b/c` is an invalid URL because it's more than two levels.
+- URLs can't contain query parameters; for example, `https://example.org?test=1` is invalid.
+- You can add up to four URLs.
 
 ### SharePoint content
 

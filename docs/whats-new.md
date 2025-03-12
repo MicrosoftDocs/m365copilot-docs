@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 01/24/2025
+ms.date: 03/11/2025
 ms.topic: overview
 ---
 
@@ -13,6 +13,38 @@ ms.topic: overview
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
+
+## March 2025
+
+### Declarative agent manifest version 1.3
+
+A new version of the declarative agent manifest schema has been released. Version 1.3 adds support for Dataverse knowledge. To learn more, see [Declarative agent schema 1.3 for Microsoft 365 Copilot](declarative-agent-manifest-1.3.md).
+
+### Add Dataverse knowledge to declarative agents
+
+You can add Dataverse knowledge to declarative agents that you build with Teams Toolkit. For details, see [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge).
+
+### Add Teams messages as knowledge to declarative agents
+
+You can add Teams messages as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Teams messages as knowledge](add-agent-capabilities.md#teams-messages-as-knowledge).
+
+### Add email as knowledge to declarative agents
+
+You can add email content as knowledge to declarative agents that you build with Teams Toolkit. For details, see [Email knowledge](add-agent-capabilities.md#email-knowledge).
+
+## February 2025
+
+### Copilot Studio agent builder available in Copilot Chat
+
+Microsoft 365 Copilot Chat users can now access Copilot Studio agent builder to build agents in the Microsoft 365 Copilot app and the Copilot app in Teams.
+
+### Add websites as knowledge in agent builder
+
+You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-build.md#web-content).
+
+### Custom engine agents available in Copilot app (preview)
+
+Custom engine agents are now available to users who have Microsoft 365 Copilot licenses or users in tenants with metering enabled in the Microsoft 365 Copilot app (for preview), in addition to Teams.
 
 ## January 2025
 

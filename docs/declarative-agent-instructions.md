@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 10/17/2024
+ms.date: 02/19/2025
 ---
 
 # Write effective instructions for declarative agents
@@ -155,8 +155,9 @@ Closing instructions can be part of the general directions or a skill descriptio
 Developing instructions for declarative agents is often iterative and typically consists of the following steps:
 
 1.  **Create** instructions and conversation starters for your agent following the structure and format described in this article.
-2.  **Publish** your agent. Responsible AI practices are integrated into the validation process to ensure that agents uphold ethical standards. For more details, see:  
-    - [Responsible AI tools and practices](https://www.microsoft.com/ai/tools-practices)  
+2.  **Publish** your agent. Responsible AI (RAI) practices are integrated into the validation process to ensure that agents uphold ethical standards. For more details, see:  
+    - [RAI validation](rai-validation.md)
+    - [RAI tools and practices](https://www.microsoft.com/ai/tools-practices)  
     - [Apps powered by artificial intelligence](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#apps-powered-by-artificial-intelligence?context=/microsoft-365-copilot/extensibility/context)
 3.  **Test** your agent.
     1.  Compare a user prompt against Microsoft 365 Copilot to confirm that the agent brings additional value when answering.
@@ -186,6 +187,8 @@ As you develop your instructions, apply the following best practices:
 - **Use examples**. Provide detailed examples and scenarios to illustrate the desired outcomes. The more precise the instructions, the better the agent can perform its tasks accurately and efficiently. **Few-shot prompting** involves providing the agent with a few solved examples before asking it to solve a new problem. **Chain-of-thought** techniques instruct the agent to provide a step-by-step solution.
 
 - **Use Do instead of Do Not**. Tell the agent what to do; avoid telling it what not to do. Telling the agent what to do provides more specificity.
+
+- **Avoid contrasting instructions**. Describe the expected behavior of the agent under valid or positive use cases only instead of giving both valid/positive and invalid/negative instructions. Such instructions create ambiguity and that can confuse the model. If you must instruct the agent with both valid and invalid use cases, clearly describe the queries that you want the agent to process and provide [interaction examples](#interaction-examples) to show the expected response to each query.
 
 - **Add knowledge**. If you add knowledge to the agent, describe what is represented by each knowledge source in your instructions.
 

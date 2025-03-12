@@ -4,7 +4,7 @@ description: Learn about the 1.3 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 01/24/2025
+ms.date: 02/26/2025
 ms.topic: reference
 ---
 
@@ -16,9 +16,11 @@ Declarative agents are valuable in understanding and generating human-like text,
 
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md).
+This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md):
 
-- The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `channels_by_url` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
+- The [Dataverse](#dataverse-object) capability is added to the list of `capabilities`. It supports an array of objects in the `knowledge_sources` field that contain Dataverse instances.
+- The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `urls` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
+- The [Email](#email-object) capability is added to the list of `capabilities`. It supports a shared mailbox and an array of folder IDs for the agent to search.
 
 ## JSON schema
 
@@ -80,6 +82,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
 - [Graphic art object](#graphic-art-object)
 - [Code interpreter object](#code-interpreter-object)
+- [Dataverse object](#dataverse-object)
 - [Teams messages object](#teams-messages-object)
 
 > [!NOTE]
@@ -129,8 +132,25 @@ The capabilities object is the base type of objects in the `capabilities` proper
       "name": "CodeInterpreter"
     },
     {
+      "name": "Dataverse",
+      "knowledge_sources": [ 
+        { 
+          "host_name": "organization.crm.dynamics.com", 
+          "skill": "DVCopilotSkillName",
+          "tables": [ 
+            { 
+                "table_name": "account" 
+            }, 
+            { 
+                "table_name": "opportunity" 
+            } 
+         ] 
+        } 
+      ] 
+    },
+    {
       "name": "TeamsMessages",
-      "channels_by_url": [
+      "urls": [
         {
           "url": "https://teams.microsoft.com/l/channel/19%3ApO0102YGEBRSH6RziXCxEgB4mtb7-5hIlDzAjtxs_dg1%40thread.tacv2/G%C3%A9n%C3%A9ral?groupId=2670cf94-acf5-48f4-96d4-c58dd8937afc&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
@@ -244,6 +264,39 @@ The code interpreter object contains the following properties.
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `CodeInterpreter`. |
 
+#### Dataverse object
+
+Indicates that the declarative agent can search through data from tables in Microsoft Dataverse.
+
+The Dataverse object contains the following properties.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `name`   | String | Required. Must be set to `Dataverse`. |
+| `knowledge_sources` | Array of [Knowledge sources](#knowledge-sources-object) | Optional. An array of objects that contain the identifiers, skills, and table names for Dataverse instances to include as knowledge.|
+
+##### Knowledge sources object
+
+Contains information about the Dataverse instances to include as knowledge.
+
+The `knowledge_sources` object contains the following properties.
+
+| Property        | Type   | Description |
+| --------------- | ------ | ----------- |
+| `host_name` | String | Required. A unique identifier for the host in Dataverse. |
+| `skill` | String | A unique identifier that defines the configuration for how the agent interacts with Dataverse knowledge. |
+| `tables` | Array of [table](#tables-object) objects | An array of tables to scope the agent's knowledge. |
+
+###### Tables object
+
+Contains the tables to scope the agent's knowledge.
+
+The `tables` object contains the following property.
+
+| Property        | Type   | Description |
+| --------------- | ------ | ----------- |
+| `table` | String | Required. A unique identifier for the table. |
+
 #### Teams messages object
 
 Indicates that the declarative agent can search through Teams channels, teams, meetings, 1:1 chats, and group chats.
@@ -253,9 +306,9 @@ The Teams messages object contains the following properties.
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `TeamsMessages`. |
-| `channels_by_url` | Array of [Teams URL object](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
+| `urls` | Array of [Teams URL object](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
 
-### Teams URL object
+##### Teams URL object
 
 Identifies a Teams channel, team, or meeting chat.
 
@@ -264,6 +317,28 @@ The Teams URL object contains the following properties.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `url` | String | Required. A well formatted Teams URL that links to either a Team channel, team, or meeting chat. |
+
+#### Email object
+
+Indicates that the declarative agent can search through email messages in the mailboxes that the user has access to.
+
+The Email object contains the following properties.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `name`   | String | Required. Must be set to `Email`. |
+| `shared_mailbox` | String | Optional. The SMTP address of a shared mailbox. |
+| `folders` | String | Optional. An array of [folder_id](#folders-object) objects. |
+
+##### Folders object
+
+Contains the folders to scope the agent's knowledge.
+
+The `folders` object contains the following property.
+
+| Property        | Type   | Description |
+| --------------- | ------ | ----------- |
+| `folder_id` | String | Required. The well-known folder name or folder ID of the folder to reference. |
 
 ### Conversation starters object
 
@@ -315,7 +390,7 @@ The action object contains the following properties.
 
 ## Declarative agent manifest example
 
-Here's an example of a declarative agent manifest file that uses most of the manifest properties described in this article.
+The following example shows a declarative agent manifest file that uses most of the manifest properties described in this article.
 
 :::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.3.json":::
 

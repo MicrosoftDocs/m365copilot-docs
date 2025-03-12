@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 01/24/2025
+ms.date: 02/12/2025
 ---
 
 # Known issues
@@ -36,25 +36,26 @@ Prompts to get a list of items based on custom metadata aren't supported. For ex
 
 **Workaround:** This issue doesn't currently have a workaround. You can get items based on matches with the title or description of the connector item.
 
-### SharePoint knowledge search is limited
-
-Currently when an agent searches a SharePoint site as a knowledge source, only files that are less than 512 MB are indexed and only the first 1000 characters are used.
-
-###  Sharing links to SharePoint pages don't work as knowledge sources
+### Sharing links to SharePoint pages don't work as knowledge sources
 
 When sharing links are references as a knowledge source in an agent, the agent doesn't return results from that knowledge source. The following is an example of a SharePoint sharing link:
 
-'https://contoso.sharepoint-df.com**/:p:/r/**personal/babak_microsoft_com/Documents/'
+`https://contoso.sharepoint-df.com**/:p:/r/**personal/babak_microsoft_com/Documents/`
 
-### SharePoint files with special characters in the file name return no results
+### SharePoint files with null characters in the file name return no results
 
-If a SharePoint file used as a knowledge source contains special characters in the file name, the agent returns no results based on that knowledge source.
+If a SharePoint file used as a knowledge source contains null characters in the file name, the agent returns no results based on that knowledge source.
 
 ### Pasting a link to a file in Copilot Studio and agent builder doesn't work
 
 Currently, users can select a file in Copilot Studio and Copilot Studio agent builder and the agent will search the file. However, if the user pastes the URL of the file in prompt, the search fails.
 
 **Workaround:** The user can select the file from the UI in Copilot Studio and Copilot Studio agent builder.
+
+### Sharing agents in Copilot Studio agent builder can fail
+
+When you share an agent in agent builder using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+
 
 ## Microsoft Graph connectors
 
