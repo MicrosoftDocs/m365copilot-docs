@@ -53,9 +53,9 @@ The following table lists the parameters that are required when you call this ac
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|queryString|String|The query string used to retrieve relevant chunks|
-|filterExpression|String|KQL expression with queryable SharePoint attributes to scope the search before query execution. Optional.|
-|resourceMetadata|String collection|A list of metadata fields to be returned in the response. Optional.|
+|queryString|String|Natural language query string used to retrieve relevant text extracts.|
+|filterExpression|String|KQL expression with queryable Microsoft 365 attributes to scope the search before query execution. Optional.|
+|resourceMetadata|String collection|A list of metadata fields to be returned for each item in the response. Optional.|
 |maximumNumberOfResults|Int32|The maximum number of documents that are returned in the response. By default returns up to 10 results. Optional.|
 
 
@@ -64,7 +64,7 @@ The following table lists the parameters that are required when you call this ac
 
 If successful, this action returns a `200 OK` response code and a [retrievalResponse](../resources/retrievalresponse.md) in the response body.
 
-## Example 1: Retrieve data from files from SharePoint and Graph Connectors
+## Example 1: Retrieve data from SharePoint and Graph Connectors files
 
 The following example shows a request to retrieve data from files located in a specific SharePoint path or within the Graph Connectors. The filterExpression parameter, in the request, specifies the SharePoint path, and to retrieve data from Graph Connectors, the resourceType used is 'externalItem'. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of 10 documents
 
@@ -109,7 +109,7 @@ Content-Type: application/json
 {
   "retrievalHits": 
   {
-    "webUrl": "https://sharepoint.contoso.com/article1",
+    "webUrl": "https://contoso.sharepoint.com/sites/HR/article1",
     "extracts":[
       {
         "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
@@ -143,6 +143,93 @@ Content-Type: application/json
     "resourceType": "externalItem",
     "resourceMetadata": {
       "title": "Corporate VPN"
+    } 
+  }
+}
+```
+## Example 2: Retrieve data from SharePoint files
+
+The following example shows a request to retrieve data from docx files located in a specific SharePoint path, which have been last updated in a specific time period. The filterExpression parameter, in the request, specifies the SharePoint path, the filetype and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of 10 documents
+
+### Request
+
+The following example shows the request.
+<!-- {
+  "blockType": "request",
+  "name": "copilotrootthis.retrieval"
+}
+-->
+``` http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "filterExpression": "filetype:docx AND (LastModifiedTime>=2024-01-01 AND LastModifiedTime<=2024-12-31) AND path:\"https://contoso.sharepoint.com/sites/HR\"",
+  "resourceMetadata": [
+    "title",
+    "author",
+    "LastModifiedTime"
+  ],
+  "maximumNumberOfResults": "2"
+}
+```
+
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.substrateSearch.retrievalResponse"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": 
+  {
+    "webUrl": "https://contoso.sharepoint.com/sites/HR/article1.docx",
+    "extracts":[
+      {
+        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+      },
+      {
+        "text": "Speak with your manager if you are having trouble accessing the VPN.",
+      }
+
+    ],
+    "resourceType": "listItem",
+    "resourceMetadata": {  
+      "title": "VPN Access",
+      "author": "John Doe",
+      "LastModifiedTime": "2024-06-14T20:57:00Z"
+    },
+    "sensitivityLabel":{
+      "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+      "displayName": "Confidential\\Any User (No Protection)",
+      "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+      "priority":4,
+      "color":"#FF8C00",
+      "isEncrypted":false
+    },           
+  },
+  {
+    "webUrl": "https://contoso.sharepoint.com/sites/HR/article2.docx",
+    "extracts": [
+      {
+        "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials",
+      }
+    ],
+    "resourceType": "externalItem",
+    "resourceMetadata": {
+      "title": "Corporate VPN"
+      "author": "Elisa Mueller",
+      "LastModifiedTime": "2024-05-17T23:39:00Z"
     } 
   }
 }
