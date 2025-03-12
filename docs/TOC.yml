@@ -294,23 +294,23 @@
   - name: Retrieval API
     items:
     - name: Overview
-      href: /api-reference/beta/resources/retrieval-api-overview.md
+      href: api-reference/beta/resources/retrieval-api-overview.md
     - name: API reference
       items:
       - name: Retrieval data
-        href: /api-reference/beta/api/copilotroot-retrieval.md
+        href: api-reference/beta/api/copilotroot-retrieval.md
       - name: Retrieval response
-        href: /api-reference/beta/resources/retrievalresponse.md
+        href: api-reference/beta/resources/retrievalresponse.md
       - name: Retrieval hit
-        href: /api-reference/beta/resources/retrievalhit.md     
+        href: api-reference/beta/resources/retrievalhit.md     
       - name: Retrieval extract
-        href: /api-reference/beta/resources/retrievalextract.md 
+        href: api-reference/beta/resources/retrievalextract.md 
       - name: Search response metadata dictionary
-        href: /api-reference/beta/resources/searchresourcemetadatadictionary.md  
+        href: api-reference/beta/resources/searchresourcemetadatadictionary.md  
       - name: Dictionaries
-        href: /api-reference/beta/resources/dictionaries.md  
+        href: api-reference/beta/resources/dictionaries.md  
       - name: Search sensitivity label info
-        href: /api-reference/beta/resources/searchsensitivitylabelinfo.md
+        href: api-reference/beta/resources/searchsensitivitylabelinfo.md
 - name: FAQ
   href: faq.md
 - name: Known issues
