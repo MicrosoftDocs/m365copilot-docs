@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Grounds data for generative AI solutions. Allows the retrieval of relevant extracts from SharePoint and Graph Connectors content that the calling user has access to, while respecting the defined access controls within the tenant
+Grounds data for generative AI solutions. Allows the retrieval of relevant extracts from SharePoint and Graph Connectors content that the calling user has access to, while respecting the defined access controls within the tenant.
 
 ## Permissions
 
