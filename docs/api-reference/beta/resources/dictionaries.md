@@ -1,10 +1,10 @@
 ---
 title: "dictionaries resource type"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=Document-APIs/Guidelines/Metadata)**"
-ms.date: 03/04/2025
+description: "Represents a dictionary type."
+author: "lramosvea"
+ms.date: 03/11/2025
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=Document-APIs/Guidelines/Metadata)**"
+ms.subservice: "copilot"
 doc_type: resourcePageType
 ---
 

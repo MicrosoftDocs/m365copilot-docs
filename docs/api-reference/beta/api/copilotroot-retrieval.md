@@ -1,11 +1,11 @@
 ---
 title: "copilot: retrieval"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=Document-APIs/Guidelines/Metadata)**"
-ms.date: 03/04/2025
+description: "Using the retrieval API, generative AI solutions can ground data from SharePoint and Graph Connectors."
+author: "lramosvea"
+ms.date: 03/11/2025
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=Document-APIs/Guidelines/Metadata)**"
-doc_type: apiPageType
+ms.subservice: "copilot"
+doc_type: conceptualPageType
 ---
 
 # copilotRoot: retrieval
@@ -18,7 +18,7 @@ Grounds data for generative AI solutions. Allows the retrieval of relevant extra
 
 ## Permissions
 
-Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](https://learn.microsoft.com/en-us/graph/permissions-overview?tabs=http#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](https://learn.microsoft.com/en-us/graph/permissions-overview?tabs=http#permission-types). To learn more about these permissions, see the [permissions reference](https://learn.microsoft.com/en-us/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](https://learn.microsoft.com/graph/permissions-overview?tabs=http#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](https://learn.microsoft.com/graph/permissions-overview?tabs=http#permission-types). To learn more about these permissions, see the [permissions reference](https://learn.microsoft.com/graph/permissions-reference).
 
 <!-- {
   "blockType": "permissions",
@@ -41,7 +41,7 @@ POST /copilot/retrieval
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](https://learn.microsoft.com/en-us/graph/auth/auth-concepts).|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](https://learn.microsoft.com/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
