@@ -64,9 +64,9 @@ The following table lists the parameters that are required when you call this ac
 
 If successful, this action returns a `200 OK` response code and a [retrievalResponse](../resources/retrievalresponse.md) in the response body.
 
-## Example 1: Retrieve data from SharePoint and Graph Connectors files
+## Example 1: Retrieve data from SharePoint and Graph Connectors
 
-The following example shows a request to retrieve data from files located in a specific SharePoint path or within the Graph Connectors. The filterExpression parameter, in the request, specifies the SharePoint path, and to retrieve data from Graph Connectors, the resourceType used is 'externalItem'. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of 10 documents
+The following example shows a request to retrieve data from files located in a specific SharePoint path or within the Graph Connectors. The `filterExpression` parameter specifies the SharePoint path, and to retrieve data from Graph Connectors, the `resourceType` used is `externalItem`. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
 ### Request
 
@@ -147,9 +147,9 @@ Content-Type: application/json
   }
 }
 ```
-## Example 2: Retrieve data from SharePoint files
+## Example 2: Retrieve data from SharePoint Word files updated within a specific date range
 
-The following example shows a request to retrieve data from docx files located in a specific SharePoint path, which have been last updated in a specific time period. The filterExpression parameter, in the request, specifies the SharePoint path, the filetype and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of 10 documents
+The following example shows a request to retrieve data from Word documents located in a specific SharePoint path, which have been updated within a specific time period. The `filterExpression` parameter specifies the SharePoint path, file type and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of 2 documents
 
 ### Request
 
