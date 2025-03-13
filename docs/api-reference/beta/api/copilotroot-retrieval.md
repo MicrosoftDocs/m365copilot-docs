@@ -73,7 +73,7 @@ The following example shows a request to retrieve data from files located in a s
 The following example shows the request.
 <!-- {
   "blockType": "request",
-  "name": "copilotrootthis.retrieval"
+  "name": "retrieval_SP_connectors"
 }
 -->
 ``` http
@@ -109,15 +109,11 @@ Content-Type: application/json
 {
   "retrievalHits": 
   {
-    "webUrl": "https://contoso.sharepoint.com/sites/HR/article1",
+    "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
     "extracts":[
       {
-        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
-      },
-      {
-        "text": "Speak with your manager if you are having trouble accessing the VPN.",
+        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
       }
-
     ],
     "resourceType": "listItem",
     "resourceMetadata": {  
@@ -131,13 +127,13 @@ Content-Type: application/json
       "priority":4,
       "color":"#FF8C00",
       "isEncrypted":false
-    },           
+    }           
   },
   {
-    "webUrl": "https://servicenow.contoso.com/CorporateVPN",
+    "webUrl": "https://servicenow.contoso.com/CorporateVPN.pdf",
     "extracts": [
       {
-        "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials",
+        "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
       }
     ],
     "resourceType": "externalItem",
@@ -147,16 +143,173 @@ Content-Type: application/json
   }
 }
 ```
-## Example 2: Retrieve data from SharePoint Word files updated within a specific date range
+## Example 2: Retrieve data from multiple SharePoint sites
 
-The following example shows a request to retrieve data from Word documents located in a specific SharePoint path, which have been updated within a specific time period. The `filterExpression` parameter specifies the SharePoint path, file type and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of 2 documents
+The following example shows a request to retrieve data from multiple Sharepoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of 4 documents.
 
 ### Request
 
 The following example shows the request.
 <!-- {
   "blockType": "request",
-  "name": "copilotrootthis.retrieval"
+  "name": "retrieval_multiple_SP"
+}
+-->
+``` http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "filterExpression": "path:\"https://contoso.sharepoint.com/sites/HR1/\" OR path:\"https://contoso.sharepoint-df.com/sites/HR2\"",
+  "resourceMetadata": [
+    "title",
+    "author"
+  ],
+  "maximumNumberOfResults": "4"
+}
+```
+
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.substrateSearch.retrievalResponse"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": 
+  {
+    "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNAccess.docx",
+    "extracts":[
+      {
+        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+      }
+    ],
+    "resourceType": "listItem",
+    "resourceMetadata": {  
+      "title": "VPN Access",
+      "author": "John Doe"
+    },
+    "sensitivityLabel":{
+      "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+      "displayName": "Confidential\\Any User (No Protection)",
+      "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+      "priority":4,
+      "color":"#FF8C00",
+      "isEncrypted":false
+    }           
+  },
+  {
+    "webUrl": "https://contoso.sharepoint.com/sites/HR2/VPNConfig.docx",
+    "extracts": [
+      {
+        "text": "Have your VPN username and password ready prior to starting the configuration."
+      }
+    ],
+    "resourceType": "listItem",
+    "resourceMetadata": {
+      "title": "VPN Config",
+      "author": "Elisa Mueller"
+    },
+    "sensitivityLabel":{
+      "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+      "displayName": "Confidential\\Any User (No Protection)",
+      "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+      "priority":4,
+      "color":"#FF8C00",
+      "isEncrypted":false
+    }    
+  }
+}
+```
+## Example 3: Retrieve data from a specific Graph Connector
+
+The following example shows a request to retrieve data from a specific Graph Connector. The `filterExpression` parameter uses the Graph Connector connection ID as the content source. The request asks for the title metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of 4 documents.
+
+### Request
+
+The following example shows the request.
+<!-- {
+  "blockType": "request",
+  "name": "retrieval_connector"
+}
+-->
+``` http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "filterExpression": "(contentSource=snowKB1)",
+  "resourceMetadata": [
+    "title"
+  ],
+  "maximumNumberOfResults": "4"
+}
+```
+
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.substrateSearch.retrievalResponse"
+}
+-->
+``` http
+TTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": 
+  {
+    "webUrl": "https://servicenow.contoso.com/CorporateVPN.pdf",
+    "extracts":[
+      {
+        "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+      }
+    ],
+    "resourceType": "externalItem",
+    "resourceMetadata": {  
+      "title": "Corporate VPN"
+    }         
+  },
+  {
+    "webUrl": "https://servicenow.contoso.com/VPNInstructions.pdf",
+    "extracts": [
+      {
+        "text": "Ensure your VPN credentials are handy before starting the configuration process."
+      }
+    ],
+    "resourceType": "externalItem",
+    "resourceMetadata": {
+      "title": "VPN Instructions"
+    }  
+  }
+}
+```
+## Example 4: Retrieve data from SharePoint Word files updated within a specific date range
+
+The following example shows a request to retrieve data from Word documents located in a specific SharePoint path, which have been updated within a specific time period. The `filterExpression` parameter specifies the SharePoint path, file type and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of 2 documents.
+
+### Request
+
+The following example shows the request.
+<!-- {
+  "blockType": "request",
+  "name": "retrieval_docs_SP"
 }
 -->
 ``` http
@@ -193,15 +346,11 @@ Content-Type: application/json
 {
   "retrievalHits": 
   {
-    "webUrl": "https://contoso.sharepoint.com/sites/HR/article1.docx",
+    "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
     "extracts":[
       {
-        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
-      },
-      {
-        "text": "Speak with your manager if you are having trouble accessing the VPN.",
+        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
       }
-
     ],
     "resourceType": "listItem",
     "resourceMetadata": {  
@@ -216,21 +365,29 @@ Content-Type: application/json
       "priority":4,
       "color":"#FF8C00",
       "isEncrypted":false
-    },           
+    }          
   },
   {
-    "webUrl": "https://contoso.sharepoint.com/sites/HR/article2.docx",
+    "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNConfig.docx",
     "extracts": [
       {
-        "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials",
+        "text": "Have your VPN username and password ready prior to starting the configuration."
       }
     ],
     "resourceType": "externalItem",
     "resourceMetadata": {
-      "title": "Corporate VPN"
+      "title": "Corporate VPN",
       "author": "Elisa Mueller",
       "LastModifiedTime": "2024-05-17T23:39:00Z"
-    } 
+    },
+    "sensitivityLabel":{
+      "sensitivityLabelId": "079cd1b0-4b31-4f12-9c4a-12e6296c95a1",
+      "displayName": "Confidential\\Any User (No Protection)",
+      "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+      "priority":4,
+      "color":"#FF8C00",
+      "isEncrypted":false
+    }  
   }
 }
 ```
