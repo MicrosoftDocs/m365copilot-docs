@@ -33,7 +33,7 @@ To learn more, see [Manage agents for Copilot in Microsoft admin center](/micros
 
 ## Agents built with Teams Toolkit
 
-Both declarative agents and custom engine agents built with Teams Toolkit that are published to the organization or acquired from Microsoft Commercial Marketplace are managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
+Both [declarative agents](./build-declarative-agents.yml) and [custom engine agents](/microsoftteams/platform/teams-ai-library-tutorial?context=/microsoft-365-copilot/extensibility/context) built with Teams Toolkit that are published to the organization or acquired from Microsoft Commercial Marketplace are managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
 | Control | Core scenario | Related content |
 |--|--|--|
@@ -46,7 +46,7 @@ Both declarative agents and custom engine agents built with Teams Toolkit that a
 
 |Control | Core scenario | Related content|
 |--|--|--|
-Enable or disable Copilot extensibility | Enable or disable the agent builder entrypoint (**Create an agent**) in Microsoft 365 Copilot |  /microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#enable-or-disable-copilot-extensibility
+| Allow the following users access to Copilot agents | Enable or disable the agent builder entrypoint in Microsoft 365 Copilot (*Create an agent*) | [Enable or disable Copilot extensibility ](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#enable-or-disable-copilot-extensibility)
 Share | Manage access to your agent within your organization | [Publish and manage Copilot Studio agent builder agents](./copilot-studio-agent-builder-publish.md#share-the-agent)
 
 ## Agents built with Microsoft Copilot Studio
@@ -70,11 +70,11 @@ Billing | Understand SharePoint agents pricing | [Comparison of Copilot licenses
 Microsoft 365 Copilot license details | Control user access to *Microsoft 365 Copilot for SharePoint* | [Manage access to SharePoint agents](/sharepoint/manage-access-agents-in-sharepoint)
 Copilot admin | Enable users without Microsoft 365 Copilot licenses to use and build SharePoint agents during the promotional trial | [Manage trial access to SharePoint agents with PowerShel](/sharepoint/manage-trial-agents-sharepoint-powershell)
 Org settings | Set up pay-as-you-go billing for SharePoint agents in the Microsoft 365 admin center | [Use agents with pay-as-you-go billing](/sharepoint/sharepoint-agents-azure-billing)
-Use an PowerShell cmdlet to view status and details on all active and available Copilot agents | [Get-SPOCopilotAgentInsightsReport](/powershell/module/sharepoint-online/get-spocopilotagentinsightsreport)
+PowerShell cmdlet | View status and details on all active and available Copilot agents in the tenant | [Get-SPOCopilotAgentInsightsReport](/powershell/module/sharepoint-online/get-spocopilotagentinsightsreport)
 
 ## Microsoft Graph connectors
 
-Graph connectors can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Graph connectors are managed from Microsoft Entra admin center, Microsoft admin center, and Teams admin center.
+[Graph connectors](./overview-graph-connector.md) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Graph connectors are managed from Microsoft Entra admin center, Microsoft admin center, and Teams admin center.
 
 |Control | Core scenario | Related content|
 |--|--|--|
