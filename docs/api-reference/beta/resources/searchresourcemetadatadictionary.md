@@ -22,8 +22,7 @@ Inherits from [dictionaries](../resources/dictionaries.md).
 This resource is an open type.
 
 ## Properties
-|Property|Type|Description|
-|:---|:---|:---|
+None.
 
 ## Relationships
 None.

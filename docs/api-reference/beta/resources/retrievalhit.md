@@ -22,8 +22,8 @@ Represents a single result within the list of retrieval results.
 |Property|Type|Description|
 |:---|:---|:---|
 |extracts|[retrievalExtract](../resources/retrievalextract.md) collection|An array of text extracts extracted from the document for Retrieval-Augmented Generation|
-|resourceMetadata|[searchResourceMetadataDictionary](../resources/searchresourcemetadatadictionary.md)|The requested metadata from the request payload (empty if not applicable).|
-|resourceType|groundingEntityType|he resource type of the item.The possible values are: `site`, `list`, `listItem`, `drive`, `driveItem`, `unknownFutureValue`.|
+|resourceMetadata|[searchResourceMetadataDictionary](../resources/searchresourcemetadatadictionary.md)|The requested  [SharePoint](https://learn.microsoft.com/en-us/sharepoint/crawled-and-managed-properties-overview) and [Microsoft Graph Connectors](https://learn.microsoft.com/en-us/graph/connecting-external-content-manage-schema) metadata from the request payload (empty if not applicable).|
+|resourceType|groundingEntityType|The resource type of the item.The possible values are: `site`, `list`, `listItem`, `externalItem`, `drive`, `driveItem`, `unknownFutureValue`.|
 |sensitivityLabel|[searchSensitivityLabelInfo](../resources/searchsensitivitylabelinfo.md)|A JSON object with information about the document’s [sensitivity label](https://learn.microsoft.com/graph/api/resources/security-sensitivitylabel?view=graph-rest-beta#properties).|
 |webUrl|String|The URL of the item in which the extract was retrieved. |
 

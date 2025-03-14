@@ -9,8 +9,6 @@ ms.topic: overview
 ---
 # Overview of the Microsoft 365 Copilot retrieval API (preview)
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
 The Microsoft 365 Copilot APIs help you enhance your custom engine agents with Microsoft 365 Copilot capabilities by providing access to components that power Copilot experiences. The Microsoft 365 Copilot retrieval API allows you to ground your generative AI solutions with your Microsoft 365 and non-Microsoft knowledge. The API returns relevant text chunks from the hybrid index that powers Microsoft 365 Copilot.
 
 The Microsoft 365 Copilot retrieval API offers a streamlined solution for Retrieval Augmented Generation (RAG) without the need to replicate, index, and chunk your data and keep it secure in a separate index. The API understands the user's context and intent and performs query transformations to yield the most relevant results, which is more difficult to achieve with lexical or even basic RAG from alternate sources.
@@ -55,7 +53,7 @@ The Microsoft 365 Copilot Retrieval API supports natural language queries, allow
 
 By utilizing multiple available filters such as date ranges, file types, and specific metadata, you can significantly narrow down your retrieval scope. This ensures that the results are more precise and relevant to your needs.
 
-### Throttling and limits
+### Known limitations
 
 The following are the current throttling and other limits for the Microsoft 365 Copilot Retrieval API:
 - The **queryString** parameter is up to 1,500 characters
@@ -67,6 +65,8 @@ The following are the current throttling and other limits for the Microsoft 365 
 
 ### Licensing and metering
 
-You can get access to the Microsoft 365 Copilot Retrieval API at no extra cost if you have a Microsoft 365 Copilot license. This access includes both tenant-scoped and user-scoped data.
+You can get access to the Microsoft 365 Copilot Retrieval API if you have a Microsoft 365 Copilot license. This access includes both tenant-scoped and user-scoped data.
 
-If you do not possess a Microsoft 365 Copilot license, you can use the Copilot Studio pay-as-you-go meter to access the API for $0.30 per API call. This option only provide access to tenant-scoped data.
+### Next steps
+
+- [Use the retrieval API to ground your generative AI solution with SharePoint and Graph Connectors content](../api/copilotroot-retrieval.md)

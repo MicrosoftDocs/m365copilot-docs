@@ -54,7 +54,7 @@ The following table lists the parameters that are required when you call this ac
 |Parameter|Type|Description|
 |:---|:---|:---|
 |queryString|String|Natural language query string used to retrieve relevant text extracts.|
-|filterExpression|String|KQL expression with queryable Microsoft 365 attributes to scope the search before query execution. Optional.|
+|filterExpression|String|[KQL](https://learn.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable [SharePoint](https://learn.microsoft.com/sharepoint/crawled-and-managed-properties-overview) and [Microsoft Graph Connectors](https://learn.microsoft.com/graph/connecting-external-content-manage-schema) properties and attributes to scope the search before query execution. Optional.|
 |resourceMetadata|String collection|A list of metadata fields to be returned for each item in the response. Optional.|
 |maximumNumberOfResults|Int32|The maximum number of documents that are returned in the response. By default returns up to 10 results. Optional.|
 
@@ -130,7 +130,7 @@ Content-Type: application/json
     }           
   },
   {
-    "webUrl": "https://servicenow.contoso.com/CorporateVPN.pdf",
+    "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
     "extracts": [
       {
         "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
@@ -275,7 +275,7 @@ Content-Type: application/json
 {
   "retrievalHits": 
   {
-    "webUrl": "https://servicenow.contoso.com/CorporateVPN.pdf",
+    "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
     "extracts":[
       {
         "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
@@ -287,7 +287,7 @@ Content-Type: application/json
     }         
   },
   {
-    "webUrl": "https://servicenow.contoso.com/VPNInstructions.pdf",
+    "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=dd681gd",
     "extracts": [
       {
         "text": "Ensure your VPN credentials are handy before starting the configuration process."
@@ -392,3 +392,7 @@ Content-Type: application/json
 }
 ```
 
+
+### Related content
+
+- [Overview of the Microsoft 365 Copilot Retrieval API](../resources/retrieval-api-overview.md)

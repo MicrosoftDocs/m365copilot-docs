@@ -275,23 +275,10 @@
       href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
   - name: Debug with developer mode in Copilot
     href: debugging-copilot-plugin.md
-- name: Publish
-  items:
-  - name: Overview
-    href: publish.md
-  - name: Validation guidelines for agents
-    href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
-- name: Manage
+- name: Enhance AI solutions with M365 Copilot APIs
   expanded: false
   items:
-  - name: Overview
-    href: manage.md
-  - name: Manage agents in Microsoft 365 admin center
-    href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365-copilot/extensibility/context
-- name: M365 Copilot APIs (preview)
-  expanded: false
-  items:
-  - name: Retrieval API
+  - name: Retrieval API (preview)
     items:
     - name: Overview
       href: api-reference/beta/resources/retrieval-api-overview.md
@@ -311,6 +298,20 @@
         href: api-reference/beta/resources/dictionaries.md  
       - name: Search sensitivity label info
         href: api-reference/beta/resources/searchsensitivitylabelinfo.md
+- name: Publish
+  items:
+  - name: Overview
+    href: publish.md
+  - name: Validation guidelines for agents
+    href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
+- name: Manage
+  expanded: false
+  items:
+  - name: Overview
+    href: manage.md
+  - name: Manage agents in Microsoft 365 admin center
+    href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365-copilot/extensibility/context
+
 - name: FAQ
   href: faq.md
 - name: Known issues

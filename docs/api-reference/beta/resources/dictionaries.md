@@ -20,8 +20,7 @@ Represents a dictionary type.
 This resource is an open type.
 
 ## Properties
-|Property|Type|Description|
-|:---|:---|:---|
+None.
 
 ## Relationships
 None.
