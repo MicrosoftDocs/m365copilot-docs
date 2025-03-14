@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.date: 03/11/2025
 ms.topic: overview
 ---
-# Overview of the Microsoft 365 Copilot Retrieval API
+# Overview of the Microsoft 365 Copilot retrieval API (preview)
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
