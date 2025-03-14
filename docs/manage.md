@@ -74,7 +74,7 @@ PowerShell cmdlet | View status and details on all active and available Copilot 
 
 ## Microsoft Graph connectors
 
-[Graph connectors](./overview-graph-connector.md) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Graph connectors are managed from Microsoft Entra admin center, Microsoft admin center, and Teams admin center.
+[Microsoft Graph connectors](./overview-graph-connector.md) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Microsoft Graph connectors are managed from Microsoft Entra admin center, Microsoft admin center, and Teams admin center.
 
 |Control | Core scenario | Related content|
 |--|--|--|
