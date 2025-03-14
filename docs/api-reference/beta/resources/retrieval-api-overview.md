@@ -13,7 +13,7 @@ ms.topic: overview
 
 The Microsoft 365 Copilot APIs help you enhance your custom engine agents with Microsoft 365 Copilot capabilities by providing access to components that power Copilot experiences. The Microsoft 365 Copilot retrieval API allows you to ground your generative AI solutions with your Microsoft 365 and non-Microsoft knowledge. The API returns relevant text chunks from the hybrid index that powers Microsoft 365 Copilot.
 
-The Microsoft 365 Copilot retrieval API offers a streamlined solution for Retrieval Augmented Generation (RAG) without having to worry about replicating, indexing, chunking, and keeping your data secure in a separate index. The API knows the user context, intent, and perform query transformations to yield the most relevant results that are difficult to achieve with lexical or even basic RAG from alternate sources.
+The Microsoft 365 Copilot retrieval API offers a streamlined solution for Retrieval Augmented Generation (RAG) without the need to replicate, index, and chunk your data and keep it secure in a separate index. The API understands the user's context and intent and performs query transformations to yield the most relevant results, which is more difficult to achieve with lexical or even basic RAG from alternate sources.
 
 ## Why is Retrieval-Augmented Generation (RAG) important?
 
