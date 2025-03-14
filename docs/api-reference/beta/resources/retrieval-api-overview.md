@@ -1,6 +1,6 @@
 ---
 title: Microsoft Copilot Retrieval API Overview
-description: "Use the Microsoft Copilot Retrieval API to ground data for your generative AI solution. Retrieve relevant extracts from SharePoint and Graph Connectors content, while respecting the defined access controls within the tenant"
+description: "Use the Microsoft 365 Copilot retrieval API to ground data for your generative AI solution. Extract relevant content from SharePoint and Microsoft Graph connectors, while complying with the access controls defined for the tenant."
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
