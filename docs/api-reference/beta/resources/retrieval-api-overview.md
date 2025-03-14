@@ -37,36 +37,36 @@ The consulting firm can rely on the Microsoft 365 Copilot retrieval API to provi
 
 Using the Microsoft 365 Copilot retrieval API, the firm can eliminate the need to build a secure data export and indexing pipeline, which would otherwise incur significant costs. This API includes all necessary capabilities such as: search provider management, crawlers, data connectors, data storage, content parsers, indexing, and security. By using these built-in features, the firm can avoid these expenses and complexities, ensuring stringent access controls and compliance with Microsoft 365.
 
+
+
 ## Use the Microsoft 365 Copilot Retrieval API
 
-### Retrieve data from different sources
+### Retrieve data from your Microsoft 365 sources
 
 The Microsoft 365 Copilot Retrieval API currently allows you to retrieve data from the following data sources:
-- SharePoint (Files and Sites)
+- SharePoint Online
 - Graph Connectors
 
-As this API evolves through its development stages, it will integrate more features of the Microsoft 365 Copilot platform, thus expanding its support to more Microsoft 365 data sources.
+Support for additional Microsoft 365 data sources will come in the future.
 
-### Use natural language query
+### Support for natural language queries
 
-The Microsoft 365 Copilot Retrieval API supports natural language queries, allowing you to interact with data conversationally. The API captures the meaning and intent of your query to precisely find relevant information.
+The Microsoft 365 Copilot Retrieval API supports natural language queries and leverages the Microsoft 365 Copilot stack to retrieve relevant grounding context from the Microsoft 365 hybrid index.
 
-### Narrow search scope
+### Narrow retrieval scope
 
-By utilizing multiple available filters such as date ranges, file types, and specific metadata, you can significantly narrow down your retrieval scope. This ensures that the results are more precise and relevant to your needs.
+The Retrieval API allows you to scope your retrieval using KQL, so that you can retrieve from the most important content for your use case. With KQL, you can filter by URLs, date ranges, file types, specific metadata proprties, and more.
 
-### Throttling and limits
+### Known limitations
 
 The following are the current throttling and other limits for the Microsoft 365 Copilot Retrieval API:
-- The **queryString** parameter is up to 1,500 characters
-- The **maximumNumberOfResults** parameter has a maximum value of 10
-- Request limit of up to 12 requests per user per minute
+- The **queryString** request parameter has a limit of 1,500 characters
+- The **maximumNumberOfResults** request parameter has a maximum value of 10
 - Request limit of up to 200 requests per user per hour
-- Nontextual content, including tables, images, and charts, is not supported.
+- Non-textual content, including tables, images, and charts, is not supported.
 - Results from files with docx, pptx, and pdf extensions that are larger than 512 MB are not supported. Results from files with any other extension that are larger than 150 MB are not supported.
+- 
 
-### Licensing and metering
+### Licensing
 
-You can get access to the Microsoft 365 Copilot Retrieval API at no extra cost if you have a Microsoft 365 Copilot license. This access includes both tenant-scoped and user-scoped data.
-
-If you do not possess a Microsoft 365 Copilot license, you can use the Copilot Studio pay-as-you-go meter to access the API for $0.30 per API call. This option only provide access to tenant-scoped data.
+The Microsoft 365 Retrieval API is available at no addtional cost to users with a Microsoft 365 Copilot license. Support for users without a Microsoft 365 Copilot license will come in the future.
