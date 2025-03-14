@@ -21,7 +21,7 @@ RAG is essential when you're building generative AI solutions and want to use Mi
 
 ## Why use the retrieval API?
 
-The Microsoft 365 Copilot retrieval API offers a secure, and compliant way to retrieve relevant text chunks from all your data sources. This means you don’t need to egress data, break permissions, or compromise on security and compliance.
+The retrieval API offers a secure and compliant way to retrieve relevant text chunks from all your data sources, without the need to egress data, break permissions, or compromise on security and compliance.
 
 Imagine a consulting firm that specializes in providing tailored solutions for their clients, with a significant portion of their work focusing on data stored in SharePoint. The firm is currently developing a customer engine agent to assist their consultants in preparing for important client meetings. This engine must access and retrieve accurate and up-to-date information from SharePoint, ensuring consultants are well-prepared with the latest insights. However, the firm works with two major clients who are direct competitors in the market. This situation creates a critical need for maintaining rigorous security and compliance standards, ensuring that the documents and data of one client are never accessible to the other.
 
