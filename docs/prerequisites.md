@@ -5,7 +5,7 @@ author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 02/25/2025
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -122,7 +122,7 @@ The following table lists the agent types and agent capabilities that are availa
 
 | Capability | Copilot Chat (no metered usage)* | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
-|Copilot Studio agent builder |  :x: ** | :white_check_mark: | :white_check_mark: |
+|Copilot Studio agent builder |  :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |Copilot Studio |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
 |[**Declarative agents**](overview-declarative-agent.md)     | |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -131,13 +131,12 @@ The following table lists the agent types and agent capabilities that are availa
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image generator| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File upload | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SharePoint data</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grounding| :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scoped web search | :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft Graph</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connector grounding | :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SharePoint data</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grounding| :x: | :white_check_mark: | :white_check_mark: |
 |[**Custom engine agents**](overview-custom-engine-agent.md)| :x: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
-
-\** Coming soon.
 
 > [!NOTE]
 > For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
