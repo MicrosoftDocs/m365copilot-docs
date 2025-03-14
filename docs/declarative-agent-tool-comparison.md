@@ -23,7 +23,7 @@ Several tools are available to help you build declarative agents for Copilot. Th
 | [SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sharepoint-agents-69e2faf9-2c1e-4baa-8305-23e625021bcf) | No-code | SharePoint agents are declarative agents that run within SharePoint. They perform tasks and provide responses based on the data available in an organization's SharePoint and the user's OneDrive. | Business users who want to customize Copilot for a specific purpose or to specify specific sites, document libraries, and files for Copilot to search. |
 
 ## Copilot Studio agent builder
-Copilot Studio agent builder is a great option for users with no coding experience who need a guided process for building declarative agents.
+[Copilot Studio agent builder](/copilot/microsoft-365/microsoft-365-copilot-setup) is a great option for users with no coding experience who need a guided process for building declarative agents. You can access the agent builder using either the [Microsoft 365 Copilot Studio app](/copilot/microsoft-365/microsoft-365-copilot-setup) or through the **Create agent** option in Microsoft Teams.
 
 | **Pros** | **Cons** |
 |:------------|:------------|
@@ -33,7 +33,7 @@ Copilot Studio agent builder is a great option for users with no coding experien
 | **Straightforward agent testing**: The test pane allows users to test the end-user experience of agents directly within the tool. | |
 
 ## Copilot Studio
-Copilot Studio is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
+The [Microsoft 365 Copilot Studio app](/copilot/microsoft-365/microsoft-365-copilot-setup) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
 
 | **Pros** | **Cons** |
 |:------------|:------------|
@@ -76,5 +76,6 @@ The [SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sha
 
 - [Declarative agents for Microsoft 365 Copilot overview](./overview-declarative-agent.md)
 - [Create declarative agents using Teams Toolkit](./build-declarative-agents.yml)
+- [Set up Microsoft 365 Copilot - admin guide](/copilot/microsoft-365/microsoft-365-copilot-setup)
 - [Use Copilot Studio Agent Builder to Build Agents](copilot-studio-agent-builder.md)
 - [Create and delete agents - Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
