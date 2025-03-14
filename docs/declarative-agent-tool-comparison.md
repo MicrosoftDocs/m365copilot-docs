@@ -31,7 +31,7 @@ The following table describes the prerequisites for using each tool and where ag
 | Content Studio agent builder | Microsoft 365 subscription | Install [Copilot Studio](https://learn.microsoft.com//copilot/microsoft-365/microsoft-365-copilot-setup) <br><br> OR <br> <br> Select the  **Create agent** option in Microsoft Teams | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>|
 | Content Studio | <ul><li> Microsoft 365 subscription </li> <li> Copilot Studio license</li></ul> |  Install [Copilot Studio](https://learn.microsoft.com//copilot/microsoft-365/microsoft-365-copilot-setup)   |  <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> <li> Websites, mobile apps, messaging platforms </li> </ul>  |
 | Teams Toolkit | <ul><li> Microsoft 365 subscription (with sideloading enabled)</li> <li>Visual Studio Code or Visual Studio </li> <li> Azure subscription (optional)</li></ul> |  Install [Teams Toolkit](https://learn.microsoft.com/microsoftteams/platform/toolkit/install-teams-toolkit)   |  <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>   |
-| SharePoint | <ul><li> Microsoft 365 subscription </li> <li> Site admin or ower permissions </li></ul> |  Install [SharePoint](https://www.microsoft.com/microsoft-365/sharepoint/collaboration)   |  SharePoint sites |
+| SharePoint | <ul><li> Microsoft 365 subscription </li> <li> Site admin or owner permissions </li></ul> |  Install [SharePoint](https://www.microsoft.com/microsoft-365/sharepoint/collaboration)   |  SharePoint sites |
 
 ## Copilot Studio agent builder
 [Copilot Studio agent builder](/copilot/microsoft-365/microsoft-365-copilot-setup) is a great option for users with no coding experience who need a guided process for building declarative agents. You can access the agent builder using either the [Microsoft 365 Copilot Studio app](/copilot/microsoft-365/microsoft-365-copilot-setup) or through the **Create agent** option in Microsoft Teams.
@@ -49,7 +49,7 @@ The [Microsoft 365 Copilot Studio app](/copilot/microsoft-365/microsoft-365-copi
 | **Pros** | **Cons** |
 |:------------|:------------|
 | **Easy to use:** Copilot studio provides a no-code approach that enables business users and information workers to build and customize agents using a drag-and-drop interface without coding. | **Less developer control:** Limited ability to fine-tune API calls, actions, and response formatting. |
-| **Power platform connectors:** Enables quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for source control systems (Azure DevOps, GitHub, etc.) pull requests, or automated deployments. |
+| **Power platform connectors:** Enables quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for source control systems (such as Azure DevOps, GitHub, etc.) pull requests, or automated deployments. |
 | **Great for personal and departmental use:** Fast setup for smaller, targeted agents that don’t require large-scale enterprise governance. | **Limited support for Adaptive Cards:** You can't customize how responses are displayed beyond basic text formatting. |
 | **Prebuilt governance and deployment:** Agents are deployed using Copilot Studio’s built-in management tools, reducing complexity for IT teams. | **Slower feature rollout:** Some advanced features are available in Teams Toolkit before they're available in Copilot Studio. |
 | **Built-in test agent**: Copilot Studio comes with a built-in test agent that lets you test the agent in real-time. |  |
@@ -81,7 +81,7 @@ The [SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sha
 | **Defined sources:** Agents draw on context from specific SharePoint sites and document libraries. | **Content limitations:** If the agent can't find information in its defined knowledge sources, it might provide outdated internet content. |
 | **Ease of access:** Integrated directly into SharePoint, making it easy for users to access and interact with the agents.  | **Scalability:** Not suitable for large-scale or highly complex applications. |
 | **Personalized user experience:** Provides a personalized user experience based on the specific SharePoint content.  | **Dependency on SharePoint:** Agents are dependent on the SharePoint environment and its limitations. |
-| **Integration with SharePoint:**  Uses existing SharePoint features like document libraries and lists. | **Agent and visibility limitations:** Declarative agents build in SharePoint cannot integrate with or use other declarative agents and cannot see or use them in BizChat.  |
+| **Integration with SharePoint:**  Uses existing SharePoint features like document libraries and lists. | **Agent and visibility limitations:** Declarative agents build in SharePoint can't integrate with or use other declarative agents and can't see or use them in BizChat.  |
 
 ## Related content
 
