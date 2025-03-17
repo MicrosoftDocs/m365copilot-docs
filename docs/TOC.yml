@@ -70,6 +70,8 @@
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+    - name: Debug with developer mode in Copilot
+      href: debugging-copilot-agent.md
   - name: Build a custom engine agent
     expanded: false
     items:
@@ -275,8 +277,6 @@
       href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
     - name: Learning path
       href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
-  - name: Debug with developer mode in Copilot
-    href: debugging-copilot-agent.md
 - name: Publish
   items:
   - name: Overview
