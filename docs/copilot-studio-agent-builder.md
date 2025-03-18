@@ -73,20 +73,21 @@ The following are current known limitations:
 - Agents created via Copilot Studio agent builder can't be used in Teams Chat.
 - If a tenant has disabled web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in agent builder. However, the **Web content** toggle in the **Knowledge** pane is not disabled. This is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
 
-## Submit Feedback
+## Submit feedback
 
-You can submit feedback directly from within agent builder to help us make it a better product for you and for everyone else using it. Learn more about [providing feedback about Microsoft Copilot with Microsoft 365 apps](https://support.microsoft.com/en-us/topic/providing-feedback-about-microsoft-copilot-with-microsoft-365-apps-c481c26a-e01a-4be3-bdd0-aee0b0b2a423), including what data is collected, how it is handled and the specific purposes it is used for. 
+You can submit feedback from within agent builder to help contribute to product improvements for all users. Agent builder feedback is handled in the same way that Copilot feedback is handled. For more information about Copilot feedback, including what data is collected, how the data is handled, and what it's used for, see [Providing feedback about Microsoft Copilot with Microsoft 365 apps](https://support.microsoft.com/en-us/topic/providing-feedback-about-microsoft-copilot-with-microsoft-365-apps-c481c26a-e01a-4be3-bdd0-aee0b0b2a423).
 
-You can submit feedback in 3 ways: 
-1. In the test pane, using thumbs-up or thumbs-down on AI-generated responses 
-2. Using the “Send feedback” button if you encounter an RAI validation failure. Learn more about [Responsible AI validation checks](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/rai-validation) 
-3. Using "Send Feedback" under the top-right menu, at any time (shown below)
+You can submit feedback by using one of the following options:
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-feedback-general.png" alt-text="Submit feedback in agent builder":::
+- The thumbs-up or thumbs-down control on AI-generated responses in your agent test pane.
+- The **Send feedback**, button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
+- The **Send Feedback** option in the menu on the top right, as shown in the following image.
 
-Administrators can define a cloud policy to control whether feedback is collected on their tenant, and whether optional data such as log files and screenshots can be included in user-initiated feedback. Learn more about [Cloud Policy in Microsoft 365 Apps admin center](https://learn.microsoft.com/en-us/microsoft-365-apps/admin-center/overview-cloud-policy).
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-feedback-general.png" alt-text="Send feedback in agent builder":::
 
-Learn more about [Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/misc/feedback-user-control?view=o365-worldwide). 
+Administrators can define a cloud policy to control whether feedback is collected in their tenant, and whether optional data such as log files and screenshots can be included in user-initiated feedback. For more information, see [Cloud Policy in Microsoft 365 Apps admin center](/microsoft-365-apps/admin-center/overview-cloud-policy).
+
+For general information, see [Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/misc/feedback-user-control?view=o365-worldwide).
 
 ## Get support
 
