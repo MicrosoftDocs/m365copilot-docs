@@ -85,6 +85,8 @@ You can submit feedback by using one of the following options:
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-feedback-general.png" alt-text="Send feedback in agent builder":::
 
+In your feedback submission, specify that the issue is related to **Copilot Studio agent builder**.
+
 Administrators can define a cloud policy to control whether feedback is collected in their tenant, and whether optional data such as log files and screenshots can be included in user-initiated feedback. For more information, see [Cloud Policy in Microsoft 365 Apps admin center](/microsoft-365-apps/admin-center/overview-cloud-policy).
 
 For general information, see [Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/misc/feedback-user-control?view=o365-worldwide).
@@ -98,7 +100,8 @@ In your feedback ticket, provide details about the issue you're facing and inclu
 - Specify that the issue is related to Copilot Studio.
 - Provide the agent ID.
 - Provide the tenant ID.
-- Provide the session ID
+- Provide the environment ID.
+- Provide the session ID.
 - If the issue is related to the test pane or **Describe** tab, type "/debug" within the chat box and include the contents in your ticket.
 
 You can find and copy these details in the Copilot Studio agent builder within the **Get support** section of the **Help** dropdown menu.
