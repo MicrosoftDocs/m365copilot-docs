@@ -83,7 +83,7 @@ You can submit feedback in 3 ways:
 2. Using the “Send feedback” button if you encounter an RAI validation failure. Learn more about [Responsible AI validation checks](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/rai-validation) 
 3. Using "Send Feedback" under the top-right menu, at any time (shown below)
 
-![sendfeedback_general](https://github.com/user-attachments/assets/d95e0ceb-e169-4e97-bc82-a8e4b2c4b411)
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-feedback-general.png" alt-text="Submit feedback in agent builder":::
 
 Administrators can define a cloud policy to control whether feedback is collected on their tenant, and whether optional data such as log files and screenshots can be included in user-initiated feedback. Learn more about [Cloud Policy in Microsoft 365 Apps admin center](https://learn.microsoft.com/en-us/microsoft-365-apps/admin-center/overview-cloud-policy).
 
