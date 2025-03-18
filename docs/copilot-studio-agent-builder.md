@@ -74,6 +74,21 @@ The following are current known limitations:
 - Agents created via Copilot Studio agent builder can't be used in Teams Chat.
 - If a tenant has disabled web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in agent builder. However, the **Web content** toggle in the **Knowledge** pane is not disabled. This is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
 
+## Submit Feedback
+
+You can submit feedback directly from within agent builder to help us make it a better product for you and for everyone else using it. Learn more about [providing feedback about Microsoft Copilot with Microsoft 365 apps](https://support.microsoft.com/en-us/topic/providing-feedback-about-microsoft-copilot-with-microsoft-365-apps-c481c26a-e01a-4be3-bdd0-aee0b0b2a423), including what data is collected, how it is handled and the specific purposes it is used for. 
+
+You can submit feedback in 3 ways: 
+1. In the test pane, using thumbs-up or thumbs-down on AI-generated responses 
+2. Using the “Send feedback” button if you encounter an RAI validation failure. Learn more about [Responsible AI validation checks](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/rai-validation) 
+3. Using "Send Feedback" under the top-right menu, at any time (shown below)
+
+![sendfeedback_general](https://github.com/user-attachments/assets/d95e0ceb-e169-4e97-bc82-a8e4b2c4b411)
+
+Administrators can define a cloud policy to control whether feedback is collected on their tenant, and whether optional data such as log files and screenshots can be included in user-initiated feedback. Learn more about [Cloud Policy in Microsoft 365 Apps admin center](https://learn.microsoft.com/en-us/microsoft-365-apps/admin-center/overview-cloud-policy).
+
+Learn more about [Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/misc/feedback-user-control?view=o365-worldwide). 
+
 ## Get support
 
 To get support, select **Send feedback** in Microsoft 365 Copilot.
