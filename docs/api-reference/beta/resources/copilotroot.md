@@ -14,7 +14,7 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A top level object tha
+A top-level object that represents the Microsoft 365 Copilot endpoint.
 
 ## Methods
 |Method|Return type|Description|
@@ -22,8 +22,8 @@ A top level object tha
 |[retrieval](../api/copilotroot-retrieval.md)|[retrievalResponse](../resources/retrievalresponse.md)|Grounds data for generative AI solutions. Allows the retrieval of relevant extracts from SharePoint and Graph Connectors content that the calling user has access to, while respecting the defined access controls within the tenant|
 
 ## Properties
-|Property|Type|Description|
-|:---|:---|:---|
+
+None.
 
 ## Relationships
 None.
@@ -42,5 +42,3 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.copilotRoot"
 }
 ```
-
-t represents the Microsoft 365 Copilot endpoint.
