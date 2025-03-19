@@ -176,6 +176,8 @@
       href: api-reference/beta/resources/retrieval-api-overview.md
     - name: API reference
       items:
+      - name: Copilot root
+        href: api-reference/beta/resources/copilotroot.md   
       - name: Retrieve data
         href: api-reference/beta/api/copilotroot-retrieval.md
       - name: Retrieval response

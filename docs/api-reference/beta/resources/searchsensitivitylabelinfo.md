@@ -11,7 +11,6 @@ doc_type: resourcePageType
 
 # searchSensitivityLabelInfo resource type
 
-Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
