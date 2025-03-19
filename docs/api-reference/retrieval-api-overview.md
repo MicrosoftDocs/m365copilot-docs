@@ -19,19 +19,19 @@ RAG is essential when you're building generative AI solutions and want to use Mi
 
 The retrieval API offers a secure and compliant way to retrieve relevant text chunks from all your data sources, without the need to egress data, break permissions, or compromise on security and compliance.
 
-Imagine a consulting firm that specializes in providing tailored solutions for their clients, with a significant portion of their work focused on data stored in SharePoint. The firm is developing a customer engine agent to assist their consultants in preparing for important client meetings. This agent must access and retrieve accurate and up-to-date information from SharePoint. Because the firm works with two major clients who are direct competitors in the market, they have a critical need to maintain rigorous security and compliance standards to ensure that one client's documents and data are never accessible to the other. The retrieval API helps the firm manage compliance and safety risks and ensure the relevance and freshness of the data, and simplifies development effort to reduce costs.
+Imagine a consulting firm that specializes in providing tailored solutions for their clients, with a significant portion of their work focused on data stored in SharePoint. The firm is developing a customer engine agent to assist their consultants in preparing for important client meetings. This agent must access and retrieve accurate and up-to-date information from SharePoint. Because the firm works with two major clients who are direct competitors in the market, they have a critical need to maintain rigorous security and compliance standards to ensure that one client's documents and data are never accessible to the other. The retrieval API helps the firm manage compliance and safety risks and ensure the relevance and freshness of the data, and simplifies the overall development effort.
 
 ### Manage compliance and safety risks
 
-The retrieval API uses the built-in security and compliance features in Microsoft 365 to ensure that to data source permissions and compliance settings are applied. By indexing data in place, it prevents data leaks and ensures that sensitive information from one client is never accessible to another, which is essential for maintaining strict security and compliance standards. By using the retrieval API, the consulting firm can guarantee that only authorized information is accessed and viewed.
+The retrieval API uses the built-in security and compliance features in Microsoft 365 to ensure that data source permissions and compliance settings are preserved. By indexing data in place, it prevents data leaks and ensures that sensitive information from one client is never accessible to another, which is essential for maintaining strict security and compliance standards. 
 
 ### Solve for relevancy and freshness
 
-The Microsoft 365 Copilot retrieval API provides access to the most accurate and up-to-date information to ensure that the data retrieved is fresh and relevant and eliminate the need to maintain separate, costly data pipelines. This helps the consulting firm to guarantee that consultants are prepared with the latest insights for their client meetings.
+The Microsoft 365 Copilot retrieval API provides access to the most accurate and up-to-date information to ensure that the data retrieved is fresh and relevant and eliminate the need to maintain separate, costly data pipelines. 
 
 ### Lower cost of ownership and development effort
 
-Using the Microsoft 365 Copilot retrieval API, the firm can The retrieval API eliminates the need to build a secure data export and indexing pipeline that can incur significant costs for organizations. The API includes all the required capabilities, including:
+The retrieval API eliminates the need to build a secure data export and indexing pipeline that can incur significant costs for organizations. The API includes all the required capabilities, including:
 
 - Search provider management
 - Crawlers
@@ -68,4 +68,5 @@ The retrieval API is available at no additional cost to users with a Microsoft 3
 
 ## Next steps
 
-- [Use the retrieval API](../api/copilotroot-retrieval.md)
+> [!div class="nextstepaction"]
+> [Use the retrieval API](../api-reference/beta//api/copilotroot-retrieval.md)
