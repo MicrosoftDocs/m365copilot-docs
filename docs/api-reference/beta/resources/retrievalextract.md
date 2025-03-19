@@ -11,8 +11,6 @@ doc_type: resourcePageType
 
 # retrievalExtract resource type
 
-Namespace: microsoft.graph
-
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents a single extract within the list of retrieval extracts.
