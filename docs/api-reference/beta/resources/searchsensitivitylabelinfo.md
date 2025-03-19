@@ -14,7 +14,7 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Describes the information protection label that details how to properly apply a sensitivity label to information. 
+Describes the information protection label that details how to properly apply a sensitivity label to information.
 
 
 ## Properties

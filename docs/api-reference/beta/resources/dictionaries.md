@@ -11,7 +11,6 @@ doc_type: resourcePageType
 
 # dictionaries resource type
 
-
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents a dictionary type.
@@ -36,4 +35,3 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.dictionaries"
 }
 ```
-
