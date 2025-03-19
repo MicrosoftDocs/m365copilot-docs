@@ -122,7 +122,6 @@
   - name: API limits
     href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
 - name: Add skills with plugins
-  expanded: true
   items:
   - name: API plugins
     items:
@@ -167,14 +166,14 @@
       href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
   - name: Debug with developer mode in Copilot
     href: debugging-copilot-plugin.md
-- name: Enhance AI solutions with M365 Copilot APIs
+- name: Enhance AI solutions with Copilot APIs
   expanded: false
   items:
   - name: Retrieval API (preview)
     items:
     - name: Overview
-      href: api-reference/beta/resources/retrieval-api-overview.md
-    - name: API reference
+      href: api-reference/retrieval-api-overview.md
+    - name: API beta reference
       items:
       - name: Retrieve data
         href: api-reference/beta/api/copilotroot-retrieval.md
