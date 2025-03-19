@@ -11,11 +11,9 @@ doc_type: conceptualPageType
 
 # copilotRoot: retrieval
 
-Namespace: microsoft.graph 
-
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Grounds data for generative AI solutions. Allows the retrieval of relevant extracts from SharePoint and Graph Connectors content that the calling user has access to, while respecting the defined access controls within the tenant.
+Ground data for generative AI solutions. Allows the retrieval of relevant extracts from SharePoint and Microsoft Graph connectors content that the calling user has access to, while respecting the defined access controls within the tenant.
 
 ## Permissions
 
@@ -42,7 +40,7 @@ POST /copilot/retrieval
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](https://learn.microsoft.com/graph/auth/auth-concepts).|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
@@ -54,9 +52,9 @@ The following table lists the parameters that are required when you call this ac
 |Parameter|Type|Description|
 |:---|:---|:---|
 |queryString|String|Natural language query string used to retrieve relevant text extracts.|
-|filterExpression|String|[KQL](https://learn.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable [SharePoint](https://learn.microsoft.com/sharepoint/crawled-and-managed-properties-overview) and [Microsoft Graph Connectors](https://learn.microsoft.com/graph/connecting-external-content-manage-schema) properties and attributes to scope the search before query execution. Optional.|
+|filterExpression|String|[KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft Graph connectors](/graph/connecting-external-content-manage-schema) properties and attributes to scope the search before the query runs. Optional.|
 |resourceMetadata|String collection|A list of metadata fields to be returned for each item in the response. Optional.|
-|maximumNumberOfResults|Int32|The maximum number of documents that are returned in the response. By default returns up to 10 results. Optional.|
+|maximumNumberOfResults|Int32|The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional.|
 
 
 
@@ -64,11 +62,13 @@ The following table lists the parameters that are required when you call this ac
 
 If successful, this action returns a `200 OK` response code and a [retrievalResponse](../resources/retrievalresponse.md) in the response body.
 
-## Example 1: Retrieve data from SharePoint and Graph Connectors
+## Examples
 
-The following example shows a request to retrieve data from files located in a specific SharePoint path or within the Graph Connectors. The `filterExpression` parameter specifies the SharePoint path, and to retrieve data from Graph Connectors, the `resourceType` used is `externalItem`. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+### Example 1: Retrieve data from SharePoint and Microsoft Graph connectors
 
-### Request
+The following example shows a request to retrieve data from files located in a specific SharePoint path or within Microsoft Graph connectors. The `filterExpression` parameter specifies the SharePoint path, and to retrieve data from Microsoft Graph connectors, the `resourceType` used is `externalItem`. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+
+#### Request
 
 The following example shows the request.
 <!-- {
@@ -92,9 +92,9 @@ Content-Type: application/json
 ```
 
 
-### Response
+#### Response
 
-The following example shows the response. The first result is from SharePoint, and the second result is from Graph Connectors.
+The following example shows the response. The first result is from SharePoint, and the second result is from Microsoft Graph connectors.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -143,11 +143,11 @@ Content-Type: application/json
   }
 }
 ```
-## Example 2: Retrieve data from multiple SharePoint sites
+### Example 2: Retrieve data from multiple SharePoint sites
 
-The following example shows a request to retrieve data from multiple Sharepoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of 4 documents.
+The following example shows a request to retrieve data from multiple Sharepoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
-### Request
+#### Request
 
 The following example shows the request.
 <!-- {
@@ -171,7 +171,7 @@ Content-Type: application/json
 ```
 
 
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -231,11 +231,12 @@ Content-Type: application/json
   }
 }
 ```
-## Example 3: Retrieve data from a specific Graph Connector
 
-The following example shows a request to retrieve data from a specific Graph Connector. The `filterExpression` parameter uses the Graph Connector connection ID as the content source. The request asks for the title metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of 4 documents.
+### Example 3: Retrieve data from a specific Microsoft Graph connectors
 
-### Request
+The following example shows a request to retrieve data from a specific Microsoft Graph connectors. The `filterExpression` parameter uses the Microsoft Graph connectors connection ID as the content source. The request asks for the title metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of four documents.
+
+#### Request
 
 The following example shows the request.
 <!-- {
@@ -257,8 +258,7 @@ Content-Type: application/json
 }
 ```
 
-
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -300,11 +300,11 @@ Content-Type: application/json
   }
 }
 ```
-## Example 4: Retrieve data from SharePoint Word files updated within a specific date range
+### Example 4: Retrieve data from SharePoint Word files updated within a specific date range
 
-The following example shows a request to retrieve data from Word documents located in a specific SharePoint path, which have been updated within a specific time period. The `filterExpression` parameter specifies the SharePoint path, file type and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of 2 documents.
+The following example shows a request to retrieve data from Word documents located in a specific SharePoint path that have been updated within a specific time period. The `filterExpression` parameter specifies the SharePoint path, file type, and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of two documents.
 
-### Request
+#### Request
 
 The following example shows the request.
 <!-- {
@@ -329,7 +329,7 @@ Content-Type: application/json
 ```
 
 
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -392,7 +392,6 @@ Content-Type: application/json
 }
 ```
 
-
-### Related content
+## Related content
 
 - [Overview of the Microsoft 365 Copilot Retrieval API](../resources/retrieval-api-overview.md)
