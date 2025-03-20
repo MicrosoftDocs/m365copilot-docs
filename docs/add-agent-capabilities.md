@@ -10,7 +10,7 @@ ms.date: 02/17/2025
 
 # Add capabilities to your declarative agent
 
-You can enhance the user experience of your declarative agent by adding capabilities. The **capabilities** element in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the user capabilities that you can add to your agents.
+You can enhance the user experience of your declarative agent by adding capabilities. The [**capabilities** element](/microsoft-365/extensibility/schema/requirements-extension-element#capabilities) in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the user capabilities that you can add to your agents.
 
 ## Code interpreter
 

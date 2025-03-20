@@ -84,7 +84,7 @@ Your outline icon:
 
 ## App manifest
 
-The app manifest for Microsoft 365 is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package); however, starting with version 1.13, it supports apps that run across Microsoft 365 hosts, in addition to Teams.
+[The app manifest for Microsoft 365](/microsoft-365/extensibility/schema) is a JSON file that describes the functionality and characteristics of your app. At its core, the app manifest for Microsoft 365 is the schema for building [Teams apps](/microsoftteams/platform/concepts/build-and-test/apps-package); however, starting with version 1.13, it supports apps that run across Microsoft 365 hosts, in addition to Teams.
 
 If you're using Copilot Studio to build a declarative agent, the app manifest is generated for you based on the information you provide during the creation process.
 
