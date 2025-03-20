@@ -4,20 +4,22 @@ description: Custom engine agents are specialized chat experiences built on any 
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 02/18/2025
+ms.date: 03/05/2025
 ms.topic: overview
 ---
 
 
 # Custom engine agents for Microsoft 365 overview
 
-Custom engine agents are specialized chat experiences built on any large language model (LLM) and tailored for a specific domain or workflows. They allow organizations to create their own agents using tools like the Teams Toolkit, Microsoft Copilot Studio, and the Microsoft 365 Agents SDK (preview). Custom engine agents allow you to use your custom orchestrators, foundation models, and custom logic.
+Custom engine agents are specialized chat experiences built on any large language model (LLM) and tailored for a specific domain or workflows. They allow organizations to create their own agents using tools like the Teams Toolkit, and Microsoft Copilot Studio. Custom engine agents allow you to use your custom orchestrators, foundation models, and custom logic.
 
 :::image type="content" source="assets/images/custom-engine-agent.png" alt-text="An illustration that shows how a custom engine agent in Teams works" lightbox="assets/images/custom-engine-agent.png" border="false":::
 
-Custom engine agents utilize LLM technology that allows them to easily understand and respond to user queries, creating dynamic and immersive interactions. Custom engine agents also offer advanced functionalities such as task execution and content creation. These capabilities make custom engine agents indispensable tools for streamlining workflows and boosting productivity.
+Custom engine agents offer advanced functionalities such as task execution and content creation. These capabilities make custom engine agents indispensable tools for streamlining workflows and boosting productivity. They were initially supported on Teams platform only, but now integrated on [Microsoft 365 Copilot Chat](https://www.microsoft365.com/chat), where the agents look and feel seamless to declarative agents to end-users.
 
-Custom engine agents don't require a Microsoft 365 Copilot license to build, debug, and deploy. They are available to users with Microsoft 365 Copilot licenses or users in tenants with metering enabled via Copilot Chat in Teams and the Microsoft 365 Copilot app (for preview).
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer-cea.md)]
+
+Custom engine agents don't require a Microsoft 365 Copilot license to build, debug, and deploy. They're available to users with Microsoft 365 Copilot licenses or users in tenants with metering enabled via Copilot Chat.
 
 > [!NOTE]
 > The cost of a custom engine agent depends on the Azure services consumed in the app. To estimate the cost, visit the Azure Pricing Calculator.
@@ -26,14 +28,16 @@ Custom engine agents don't require a Microsoft 365 Copilot license to build, deb
 
 You can build custom engine agents in two ways:
 
-- You can use the [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview) and [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to build your agent with code.
-- You can use [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context) to build an agent with little to no code.
+- **Full-custom option:** You can use the [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview) and [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to build your agent with code.
+- **Low code option:** You can use [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context) to build an agent with little to no code.
 
 ### Teams AI library and Teams Toolkit
 
-For enterprises seeking solutions that are precisely customized to user demands and scenarios, using the [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview) is a great choice. The Teams AI library utilizes LLMs that adhere to Microsoft's UX principles and that are compatible with Teams and Microsoft 365. Developing custom engine agents with the Teams AI Library can provide more natural, intuitive, and specialized user interaction experiences. This option is advantageous for developers who want to customize model selection and orchestration and apply prior experience with Teams bot development, or who want to ensure accessibility for all Microsoft 365 users.
+For enterprises seeking solutions that are precisely customized to user demands and scenarios, using the [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview) is a great choice. Teams AI Library is based on [Microsoft Bot Framework](https://dev.botframework.com/) so it comes with all functions that conventional bots can do, plus, it utilizes LLMs that adhere to Microsoft's UX principles.
 
-Developers can also utilize the [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to construct their projects. The Teams Toolkit includes prebuilt templates for a seamless project launch, offering an ideal solution for quick starts, easy debugging, and deployment.
+This option is ideal for developers looking to tailor model selection and orchestration, apply their prior experience with Teams bot development, or make their agents available to all Microsoft 365 users.
+
+Developers can also take advantage of [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to construct their projects. The Teams Toolkit includes prebuilt templates for a seamless project launch, offering an ideal solution for quick starts, easy debugging, and deployment.
 
 #### Explore templates to get started
 
@@ -68,7 +72,7 @@ For information about how to use Copilot Studio to build and publish custom engi
 
 ### Microsoft 365 Agents SDK
 
-Microsoft 365 Agents SDK seamlessly integrates with AI services like Azure AI Foundry and orchestration layers such as Semantic Kernel. It offers interoperability with Copilot Studio, enabling you to enhance and extend existing agents with additional skills. This allows makers to delegate tasks to other agent functionalities. Additionally, you can connect to a Copilot Studio agent from code, gaining access to the full range of features within the Copilot Studio ecosystem. 
+Microsoft 365 Agents SDK seamlessly integrates with AI services like Azure AI Foundry and orchestration layers such as Semantic Kernel. It offers interoperability with Copilot Studio, enabling you to enhance and extend existing agents with additional skills. This allows makers to delegate tasks to other agent functionalities. Additionally, you can connect to a Copilot Studio agent from code, gaining access to the full range of features within the Copilot Studio ecosystem.
 
 For more information, see [Microsoft 365 Agents SDK (preview)](/microsoft-365/agents-sdk/).
 

@@ -25,32 +25,7 @@ You can author your declarative agent in two ways:
 Both tabs work seamlessly to provide a rich authoring experience.
 
 > [!NOTE]
-> The availability of the **Describe** tab is based on [geographic availability and language support](copilot-studio-agent-builder-availability.md). The **Describe** tab supports the following languages:
->
-> - Chinese (Simplified)
-> - Chinese (Traditional)
-> - Czech
-> - Danish
-> - Dutch
-> - English
-> - Finnish
-> - French
-> - German
-> - Hindi
-> - Indonesian
-> - Italian
-> - Japanese
-> - Korean
-> - Norwegian Bokmål
-> - Polish
-> - Portuguese
-> - Russian
-> - Spanish
-> - Swedish
-> - Thai
-> - Turkish
->
-> You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your region or preferred language.
+> The  **Describe** tab is only available when your Microsoft 365 language is set to one of the [available languages](copilot-studio-agent-builder-availability.md). You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your preferred language.
 
 ## Describe your agent
 
@@ -126,18 +101,11 @@ The following table lists the supported file types and their respective limits.
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you won't be able to use SharePoint as a knowledge source.
 
-#### Entering a URL for a SharePoint site or folder
+#### Entering a URL for a SharePoint site, folder, or file
 
-You can enter a URL for a SharePoint site or folder, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
+You can enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
-> [!NOTE]
->
-> - Recognized SharePoint URLs are from the sharepoint.com domain and contain the path `{org}.sharepoint.com/sites/{site}`.
-> - SharePoint site URLs can't be more than two levels deep.
-> - Only modern pages are supported.
-> - Content from classic aspx pages on SharePoint aren't used to generate answers.
-
-After providing the SharePoint site URL, press **Enter** to add it as a knowledge source.
+After you provide the SharePoint URL, press **Enter** to add it as a knowledge source.
 
 #### Opening the SharePoint file picker
 
