@@ -21,10 +21,11 @@ This schema version introduces the following changes from [version 1.2](declarat
 - The [Dataverse](#dataverse-object) capability is added to the list of `capabilities`. It supports an array of objects in the `knowledge_sources` field that contain Dataverse instances.
 - The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `urls` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
 - The [Email](#email-object) capability is added to the list of `capabilities`. It supports a shared mailbox and an array of folder IDs for the agent to search.
+- The [People](#people-object) capability is added to the list of `capabilities`. This capability is unscoped and allows agents to search for information about people in an organization.
 
 ## JSON schema
 
-The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/declarative-agent/v1.3/schema.json).
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.3/schema.json).
 
 ## Conventions
 
@@ -84,6 +85,8 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Code interpreter object](#code-interpreter-object)
 - [Dataverse object](#dataverse-object)
 - [Teams messages object](#teams-messages-object)
+- [Email object](#email-object)
+- [People object](#people-object)
 
 > [!NOTE]
 > Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
@@ -339,6 +342,16 @@ The `folders` object contains the following property.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `folder_id` | String | Required. The well-known folder name or folder ID of the folder to reference. |
+
+#### People object
+
+Indicates that the declarative agent can search for information about people in the organization.
+
+The People object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `name`   | String | Required. Must be set to `People`. |
 
 ### Conversation starters object
 

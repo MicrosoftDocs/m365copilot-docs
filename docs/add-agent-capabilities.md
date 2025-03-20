@@ -203,6 +203,9 @@ The email capability allows you to scope your agent to a personal or shared mail
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
+> [!NOTE]
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `Email` capability.
+
 ```json
     "capabilities": [
       {
@@ -226,6 +229,29 @@ In the **shared_mailbox** field, use the SMTP address of the shared mailbox.
 If you reference both a shared mailbox and a folder, the agent scopes responses to the folder within the shared mailbox. If you reference a folder only, the agent scopes responses to the contents of the folder within the personal mailbox.
 
 If you don't reference a shared mailbox or a folder, the agent search is not scoped to any folder or mailbox and it returns results from all email content, based on the user's query.
+
+## People knowledge
+
+The people capability allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This capability is not scoped.
+
+> [!NOTE]
+> People knowledge is not currently available in Copilot Studio agent builder.
+
+### Enable people knowledge
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable email knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+
+> [!NOTE]
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `People` capability.
+>
+```json
+    "capabilities": [
+        {
+            "name":"People"
+        }
+      ]
+```
+
 
 ## Related content
 
