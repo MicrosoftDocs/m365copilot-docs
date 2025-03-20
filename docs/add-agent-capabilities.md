@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 02/25/2025
+ms.date: 03/24/2025
 ---
 
 # Add capabilities to your declarative agent
