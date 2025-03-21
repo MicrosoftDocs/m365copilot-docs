@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Declarative agent manifest version 1.3
 
-A new version of the declarative agent manifest schema has been released. Version 1.3 adds support for the following capabilities:
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.3](declarative-agent-manifest-1.3.md) adds support for the following capabilities:
 
 - [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge)
 - [Teams messages as knowledge](add-agent-capabilities.md#teams-messages-as-knowledge)
