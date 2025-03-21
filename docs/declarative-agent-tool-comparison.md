@@ -28,7 +28,7 @@ The following table describes the prerequisites for using each tool and where ag
 
 | **Tool** | **Requirements** | **Tool access** | **Publishes agents to** |
 |:------------|:------------| :------------| :------------|
-| Copilot Studio agent builder | Microsoft 365 subscription | Install [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) <br><br> OR <br> <br> Select the  **Create agent** option in Microsoft Teams | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>|
+| Copilot Studio agent builder | Microsoft 365 subscription | Select the  **Create agent** option in M365 Copilot | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>|
 | SharePoint | <ul><li> Microsoft 365 subscription </li> <li> Site admin or owner permissions </li></ul> |  Install [SharePoint](https://www.microsoft.com/microsoft-365/sharepoint/collaboration)   |  SharePoint sites |
 | Copilot Studio | <ul><li> Microsoft 365 subscription </li> <li> Copilot Studio license</li></ul> |  Install [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> <li> Websites, mobile apps, messaging platforms </li> </ul>  |
 | Teams Toolkit | <ul><li> Microsoft 365 subscription (with sideloading enabled)</li> <li>Visual Studio Code or Visual Studio </li> <li> Azure subscription (optional)</li></ul> |  Install [Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit)   |  <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>   |
@@ -42,7 +42,7 @@ The following table describes the prerequisites for using each tool and where ag
 | **Quick setup:** Provides a guided process for building agents. | **Slower feature rollout:** Some advanced features are available in Teams Toolkit before they're available in Copilot Studio agent builder.  |
 | **Accessibility:** Suitable for creating persoanl and group productivity agents without having to write code.  |  |
 | **Straightforward agent testing**: The test pane allows users to test the end-user experience of agents directly within the tool. | |
-| **Variety of knowledge sources**: Easily add public web, SharePoint and Graph connector data and more as agent knowledge sources.| |
+| **Variety of knowledge sources**: Easily add public web, SharePoint, Graph connector data and more as agent knowledge sources.| |
 | **Generate rich content**: Enable image generation and code interpreter with one click.| |
 
 ## SharePoint
