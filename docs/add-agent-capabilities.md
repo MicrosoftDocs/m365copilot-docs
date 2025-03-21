@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 02/17/2025
+ms.date: 03/24/2025
 ---
 
 # Add capabilities to your declarative agent
@@ -39,7 +39,7 @@ The user prompt "Create a word cloud of top pet names" generates a word cloud th
 
 ### Enable code interpreter
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest reference, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `CodeInterpreter` capability.
@@ -87,7 +87,7 @@ The following image shows the result.
 
 ### Enable image generator
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest reference, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `GraphicArt` capability.
@@ -110,6 +110,147 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 > [!NOTE]
 > The image generator doesn't currently work in the test pane in Copilot Studio agent builder.
 
+## Microsoft Graph connectors
+
+Microsoft Graph connectors enable you to add organizational data to your agent as grounding information. You can use Microsoft Graph connectors to ingest your line-of-business data into Microsoft Graph and Copilot can reason over your data as grounding information in responses to user prompts. For more information, see [Microsoft Graph connectors for Microsoft 365 Copilot](overview-graph-connector.md).
+
+For information about how to add Microsoft Graph connectors as knowledge to your agent manifest in Teams Toolkit, see [Microsoft Graph connectors object](declarative-agent-manifest-1.3.md#microsoft-graph-connectors-object).
+
+For information about how to add Microsoft Graph connectors to your agent in Copilot Studio agent builder, see [Microsoft Graph connectors](copilot-studio-agent-builder-build.md#microsoft-graph-connectors).
+
+## SharePoint and OneDrive as knowledge
+
+When you configure your agent to use OneDrive and SharePoint content as knowledge, Copilot searches SharePoint and OneDrive sites that a user has access to for grounding information.
+
+For information about how to add the OneDrive and SharePoint as knowledge capability to your agent manifest in Teams Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.3.md#onedrive-and-sharepoint-object).
+
+For information about how to enable the OneDrive and SharePoint as knowledge capability to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
+
+## Web search and web scoping
+
+The web search capability enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, you can have your agent return any web data in its responses. You can also scope the web search to up to four public websites.
+
+> [!NOTE]
+> You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add scoped web search to your agent.
+
+### Enable web search and web scoping
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest file. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
+
+```json
+{
+    "capabilities": [ 
+        { 
+          "name": "WebSearch", 
+          "sites": [ 
+            { 
+              "url": "cnn.com" 
+            }, 
+          ] 
+        } 
+     ] 
+} 
+```
+
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Knowledge**, list the website URLs that you want to reference.
+
+## Dataverse knowledge
+
+Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. This capability allows you to add a Dataverse instance as a knowledge source and to add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
+
+> [!NOTE]
+> Dataverse knowledge is not currently available in Copilot Studio agent builder.
+
+### Enable Dataverse knowledge
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Dataverse knowledge, add the `Dataverse` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+
+> [!NOTE]
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `Dataverse` capability.
+
+```json
+    {
+      "capabilities": [
+        {
+          "name": "Dataverse",
+          "knowledge_sources": [ 
+            { 
+              "host_name": "organization.crm.dynamics.com", 
+              "skill": "DVCopilotSkillName",
+              "tables": [ 
+                { 
+                    "table_name": "account" 
+                }, 
+                { 
+                    "table_name": "opportunity" 
+                } 
+             ] 
+            } 
+          ] 
+        }
+      ]
+    }
+```
+
+## Email knowledge
+
+The email capability allows you to scope your agent to a personal or shared mailbox, and optionally, a specific mailbox folder. You can reference multiple mailbox folders but only one shared folder.
+
+> [!NOTE]
+> Email knowledge is not currently available in Copilot Studio agent builder.
+
+### Enable email knowledge
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+
+> [!NOTE]
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `Email` capability.
+
+```json
+    "capabilities": [
+      {
+        "name": "Email",
+        "shared_mailbox": "sample@service.microsoft.com",
+        "folders": [
+          {
+           "folder_id": "sentitems"
+          }
+       ]
+      }
+    ]
+```
+
+In the **folder_id** field, you can reference either well-known folder names or folder IDs. For a list of well-known folder names, see [mailFolder resource type](/graph/api/resources/mailfolder). To get a list of folder IDs, use the following query in [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer):
+
+`https://graph.microsoft.com/v1.0/me/mailFolders`
+
+In the **shared_mailbox** field, use the SMTP address of the shared mailbox.
+
+If you reference both a shared mailbox and a folder, the agent scopes responses to the folder within the shared mailbox. If you reference a folder only, the agent scopes responses to the contents of the folder within the personal mailbox.
+
+If you don't reference a shared mailbox or a folder, the agent search is not scoped to any folder or mailbox and it returns results from all email content, based on the user's query.
+
+## People knowledge
+
+The people capability allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This capability is not scoped.
+
+> [!NOTE]
+> People knowledge is not currently available in Copilot Studio agent builder.
+
+### Enable people knowledge
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable email knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+
+> [!NOTE]
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `People` capability.
+>
+```json
+    "capabilities": [
+        {
+            "name":"People"
+        }
+      ]
+```
 ## Teams messages as knowledge
 
 The Teams messages capability allows agents to use Teams channels, meeting chats, and teams as a knowledge source. You can choose to specify up to five links to teams, channels, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
@@ -138,52 +279,7 @@ To get the URL for a Teams team or channel, choose the three dots (...) next to 
 
 To get the URL for a Teams meeting, open the meeting, choose the arrow next to **Join**, and choose **Copy join link**.
 
-## Microsoft Graph connectors
-
-Microsoft Graph connectors enable you to add organizational data to your agent as grounding information. You can use Microsoft Graph connectors to ingest your line-of-business data into Microsoft Graph and Copilot can reason over your data as grounding information in responses to user prompts. For more information, see [Microsoft Graph connectors for Microsoft 365 Copilot](overview-graph-connector.md).
-
-For information about how to add Microsoft Graph connectors as knowledge to your agent manifest in Teams Toolkit, see [Microsoft Graph connectors object](declarative-agent-manifest-1.2.md#microsoft-graph-connectors-object).
-
-For information about how to add Microsoft Graph connectors to your agent in Copilot Studio agent builder, see [Microsoft Graph connectors](copilot-studio-agent-builder-build.md#microsoft-graph-connectors).
-
-## SharePoint and OneDrive as knowledge
-
-When you configure your agent to use OneDrive and SharePoint content as knowledge, Copilot searches SharePoint and OneDrive sites that a user has access to for grounding information.
-
-For information about how to add the OneDrive and SharePoint as knowledge capability to your agent manifest in Teams Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object).
-
-For information about how to enable the OneDrive and SharePoint as knowledge capability to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
-
-## Web search and web scoping
-
-The web search capability enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, you can have your agent return any web data in its responses. You can also scope the web search to up to four public websites.
-
-> [!NOTE]
-> You must be using [version 1.2](declarative-agent-manifest-1.2.md) of the declarative agent manifest schema to add scoped web search to your agent.
-
-### Enable web search and web scoping
-
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest reference. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
-
-```json
-{
-    "capabilities": [ 
-        { 
-          "name": "WebSearch", 
-          "sites": [ 
-            { 
-              "url": "cnn.com" 
-            }, 
-          ] 
-        } 
-     ] 
-} 
-```
-
-If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Knowledge**, list the website URLs that you want to reference.
-
-
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.3.md)
