@@ -16,10 +16,10 @@ The following table shows which capabilities and knowledge sources you can confi
 
 | Capability or knowledge source | Agent builder | Teams Toolkit | License or metered usage required? |
 |:-------------------------------|:--------------|:--------------|:-----------------------------------|
-| Code interpreter |:white_check_mark: |:white_check_mark: | No |
+| Code interpreter | :white_check_mark: | :white_check_mark: | No |
 | Image generator | :white_check_mark: | :white_check_mark: | No |
 | Microsoft Graph connectors | :white_check_mark: | :white_check_mark: | Yes |
-| SharePoint and OneDrive |:white_check_mark:| :white_check_mark: | Yes |
+| SharePoint and OneDrive | :white_check_mark:| :white_check_mark: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | Yes |
 | Dataverse | :x: | :white_check_mark: | Yes |
