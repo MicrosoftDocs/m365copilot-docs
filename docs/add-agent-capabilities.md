@@ -22,10 +22,12 @@ The following table shows which capabilities and knowledge sources you can confi
 | SharePoint and OneDrive | :white_check_mark:| :white_check_mark: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | Yes |
-| Dataverse | :x: | :white_check_mark:<br /><br />Option to scope by table. | Yes |
-| Email | :x: | :white_check_mark:<br /><br />Option to scope by folder. | Yes |
+| Dataverse | :x: | :white_check_mark:\* | Yes |
+| Email | :x: | :white_check_mark:\* | Yes |
 | People | :x: | :white_check_mark: | Yes |
-| Teams messages | :x: | :white_check_mark:<br /><br />Option to scope by channel, team, or meeting chat. | Yes |
+| Teams messages | :x: | :white_check_mark:\* | Yes |
+
+\* Option to scope the knowledge is available.
 
 ## Code interpreter
 
