@@ -1,5 +1,5 @@
 ---
-title: Capabilities for Agents in Microsoft 365 Copilot
+title: Knowledge and Capabilities for Agents in Microsoft 365 Copilot
 description: Learn about capabilities that you can add to your declarative agent and how to enable them.
 author: lauragra
 ms.author: lauragra
@@ -8,9 +8,23 @@ ms.localizationpriority: medium
 ms.date: 03/24/2025
 ---
 
-# Add capabilities to your declarative agent
+# Add capabilities and knowledge sources to your declarative agent
 
-You can enhance the user experience of your declarative agent by adding capabilities. The **capabilities** element in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the user capabilities that you can add to your agents.
+You can enhance the user experience of your declarative agent by adding capabilities. The **capabilities** element in the manifest reference and the **Capabilities** and **Knowledge** sections in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the capabilities and knowledge sources that you can add to your agents.
+
+The following table shows which capabilities and knowledge sources you can configure by using agent builder or Teams Toolkit and whether a your users require a Microsoft 365 Copilot license or metered usage to access the agent.
+
+| Capability or knowledge source | Agent builder | Teams Toolkit | License or metered usage required? |
+| Code interpreter |:white_check_mark: |:white_check_mark: | No |
+| Image generator | :white_check_mark: | :white_check_mark: | No |
+| Microsoft Graph connectors | :white_check_mark: | :white_check_mark: | Yes |
+| SharePoint and OneDrive |:white_check_mark:| :white_check_mark: | Yes |
+| Web search | :white_check_mark: | :white_check_mark: | No |
+| Scoped web search | :white_check_mark: | :white_check_mark: | Yes |
+| Dataverse | :x: | :white_check_mark: | Yes |
+| Email | :x: | :white_check_mark: | Yes |
+| People | :x: | :white_check_mark: | Yes |
+| Teams messages | :x: | :white_check_mark: | Yes |
 
 ## Code interpreter
 
@@ -126,14 +140,14 @@ For information about how to add the OneDrive and SharePoint as knowledge capabi
 
 For information about how to enable the OneDrive and SharePoint as knowledge capability to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
 
-## Web search and web scoping
+## Web and scoped web search
 
 The web search capability enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, you can have your agent return any web data in its responses. You can also scope the web search to up to four public websites.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add scoped web search to your agent.
 
-### Enable web search and web scoping
+### Enable web and scoped web search
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest file. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
 
