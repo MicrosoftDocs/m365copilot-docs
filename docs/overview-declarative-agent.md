@@ -47,7 +47,7 @@ The following are the core elements of a declarative agent app package:
 
 - [**App manifest**](/microsoftteams/platform/resources/schema/manifest-schema) - Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 - **App icons** - The app package requires a color and outline icon for your declarative agents.
-- [**Declarative agents manifest**](declarative-agent-manifest-1.2.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
+- [**Declarative agents manifest**](declarative-agent-manifest-1.3.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
 - **Plugin manifest (optional)** - Describes how your plugin is configured, including its required fields and capabilities.
 
 You can use your tool of choice to create a declarative agent app package. To get started, choose from the tools listed in the following table.

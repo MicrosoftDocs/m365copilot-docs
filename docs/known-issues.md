@@ -40,7 +40,7 @@ Prompts to get a list of items based on custom metadata aren't supported. For ex
 
 When sharing links are references as a knowledge source in an agent, the agent doesn't return results from that knowledge source. The following is an example of a SharePoint sharing link:
 
-'https://contoso.sharepoint-df.com**/:p:/r/**personal/babak_microsoft_com/Documents/'
+`https://contoso.sharepoint-df.com**/:p:/r/**personal/babak_microsoft_com/Documents/`
 
 ### SharePoint files with null characters in the file name return no results
 

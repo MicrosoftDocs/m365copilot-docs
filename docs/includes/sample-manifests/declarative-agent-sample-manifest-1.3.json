@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.3/schema.json",
+  "version": "v1.3",
+  "name": "Teams Toolkit declarative agent",
+  "description": "Declarative agent created with Teams Toolkit",
+  "instructions": "You are a repairs expert agent. With the response from the listRepairs function, you **must** create a poem out of the repairs listed and always include their title and the assigned person. The poem **must** not use the quote markdown and use regular text. If the user is asking to create a new repair, use the createRepair function and do not add poems.",
+  "conversation_starters": [
+    {
+      "title": "Getting Started",
+      "text": "How can I get started with Teams Toolkit?"
+    },
+    {
+      "title": "Getting Help",
+      "text": "How can I get help with Teams Toolkit?"
+    }
+  ],
+  "actions": [
+    {
+      "id": "repairsPlugin",
+      "file": "repairs-hub-api-plugin.json"
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "WebSearch",
+      "sites": [
+        {
+          "url": "https://contoso.com/projects/mark-8"
+        }
+      ]
+    },
+    {
+      "name": "OneDriveAndSharePoint",
+      "items_by_url": [
+        {
+          "url": "https://contoso.sharepoint.com/sites/ProductSupport"
+        }
+      ]
+    },
+    {
+      "name": "GraphConnectors",
+      "connections": [
+        {
+          "connection_id": "foodStore"
+        }
+      ]
+    },
+    {
+      "name": "GraphicArt"
+    },
+    {
+      "name": "CodeInterpreter"
+    },
+    {
+      "name": "Dataverse",
+      "knowledge_sources": [ 
+        { 
+          "host_name": "organization.crm.dynamics.com", 
+          "skill": "DVCopilotSkillName",
+          "tables": [ 
+            { 
+                "table_name": "account" 
+            }, 
+            { 
+                "table_name": "opportunity" 
+            } 
+         ] 
+        } 
+      ] 
+    },
+    {
+      "name": "TeamsMessages",
+      "urls": [
+        {
+          "url": "https://teams.microsoft.com/l/channel/19%3ApO0102YGEBRSH6RziXCxEgB4mtb7-5hIlDzAjtxs_dg1%40thread.tacv2/G%C3%A9n%C3%A9ral?groupId=2670cf94-acf5-48f4-96d4-c58dd8937afc&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+      ]
+    },
+    {
+      "name": "Email",
+      "shared_mailbox": "sample@service.microsoft.com",
+      "folders": [
+        {
+         "folder_id": "sentitems"
+        }
+     ]
+    },
+    {
+      "capabilities": [
+          {
+              "name":"People"
+          }
+        ]
+    }
+  ]
+}
