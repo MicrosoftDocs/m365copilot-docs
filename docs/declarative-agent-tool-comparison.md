@@ -28,13 +28,13 @@ The following table describes the prerequisites for using each tool and where ag
 
 | **Tool** | **Requirements** | **Tool access** | **Publishes agents to** |
 |:------------|:------------| :------------| :------------|
-| Copilot Studio agent builder | Microsoft 365 subscription | Select the  **Create agent** option in M365 Copilot | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>|
-| SharePoint | <ul><li> Microsoft 365 subscription </li> <li> Site admin or owner permissions </li></ul> |  Install [SharePoint](https://www.microsoft.com/microsoft-365/sharepoint/collaboration)   |  SharePoint sites |
-| Copilot Studio | <ul><li> Microsoft 365 subscription </li> <li> Copilot Studio license</li></ul> |  Install [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> <li> Mobile apps, messaging platforms </li> </ul>  |
-| Teams Toolkit | <ul><li> Microsoft 365 subscription (with sideloading enabled)</li> <li>Visual Studio Code or Visual Studio </li> <li> Azure subscription (optional)</li></ul> |  Install [Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit)   |  <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>   |
+| Copilot Studio agent builder | Microsoft 365 subscription | Select the  **Create agent** option in Microsoft 365 Copilot or Teams. | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>|
+| SharePoint | <ul><li> Microsoft 365 subscription </li> <li> Site admin or owner permissions </li></ul> |  Install [SharePoint](https://www.microsoft.com/microsoft-365/sharepoint/collaboration).   |  SharePoint sites |
+| Copilot Studio | <ul><li> Microsoft 365 subscription </li> <li> Copilot Studio license</li></ul> |  Install [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions). | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> <li> Mobile apps, messaging platforms </li> </ul>  |
+| Teams Toolkit | <ul><li> Microsoft 365 subscription (with sideloading enabled)</li> <li>Visual Studio Code or Visual Studio </li> <li> Azure subscription (optional)</li></ul> |  Install [Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit).  |  <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>   |
 
 ## Copilot Studio agent builder
-[Copilot Studio agent builder](/copilot/microsoft-365/microsoft-365-copilot-setup) is a great option for users with no coding experience who need a guided process for building declarative agents. You can access the agent builder through the **Create agent** option in M365 Copilot.
+[Copilot Studio agent builder](copilot-studio-agent-builder.md) is a great option for users with no coding experience who need a guided process for building declarative agents. You can access the agent builder through the **Create agent** option in Microsoft 365 Copilot.
 
 | **Pros** | **Cons** |
 |:------------|:------------|
@@ -55,23 +55,23 @@ The [SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sha
 | **Defined sources:** Agents draw on context from specific SharePoint sites and document libraries. | **Content limitations:** If the agent can't find information in its defined knowledge sources, it might provide outdated internet content. |
 | **Ease of access:** Integrated directly into SharePoint, making it easy for users to access and interact with the agents.  | **Scalability:** Not suitable for large-scale or highly complex applications. |
 | **Personalized user experience:** Provides a personalized user experience based on the specific SharePoint content.  | **Dependency on SharePoint:** Agents are dependent on the SharePoint environment and its limitations. |
-| **Integration with SharePoint:**  Uses existing SharePoint features like document libraries. | **Functionality and visibility limitations (SharePoint):** Declarative agents built in SharePoint can't integrate with or use other declarative agents and can't see or use them in BizChat.|
-| **Integration with Teams:**  Users can make a SharePoint agent available in Microsoft Teams by copying the link to the agent and pasting it in a Teams group or meeting chat. | **Functionality and visibility limitations (Teams):** Agents will ask the user before sharing a response to the group where the group does not have permissions to all the sources. |
+| **Integration with SharePoint:**  Uses existing SharePoint features like document libraries. | **Functionality and visibility limitations (SharePoint):** Declarative agents built in SharePoint can't integrate with or use declarative agents not build in SharePoint in Copilot Chat.|
+| **Integration with Teams:**  Users can make a SharePoint agent available in Microsoft Teams by copying the link to the agent and pasting it in a Teams group or meeting chat. | **Functionality and visibility limitations (Teams):** Agents will ask the user before sharing a response to the group when the group does not have permissions to all the sources. |
 
 ## Copilot Studio
-The [Microsoft 365 Copilot Studio app](/copilot/microsoft-365/microsoft-365-copilot-setup) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
+[Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
 
 | **Pros** | **Cons** |
 |:------------|:------------|
 | **Easy to use:** Copilot studio provides a no-code approach that enables business users and information workers to build and customize agents using a drag-and-drop interface without coding. | **Less developer control:** Limited ability to fine-tune API calls, actions, and response formatting. |
-| **Power platform connectors:** Enable quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for source control systems (Azure DevOps, GitHub, etc.) pulls requests, or automated deployments. |
+| **Power platform connectors:** Enable quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for source control systems (Azure DevOps, GitHub) pull requests, or automated deployments. |
 | **Great for personal and departmental use:** Fast setup for smaller, targeted agents that don’t require large-scale enterprise governance. | **Limited support for Adaptive Cards:** You can't customize how responses are displayed beyond basic text formatting. |
 | **Prebuilt governance and deployment:** Agents are deployed using Copilot Studio’s built-in management tools, reducing complexity for IT teams. | **Slower feature rollout:** Some advanced features are available in Teams Toolkit before they're available in Copilot Studio. |
 | **Built-in test agent**: Copilot Studio comes with a built-in test agent that lets you test the agent in real-time. |  |
 
 ## Teams Toolkit
 
-If your scenario involves the full control, scalability, and direct API integration of a pro-code approach, Teams Toolkit is the best tool to use to create your declarative agent.
+If your scenario involves the full control, scalability, and direct API integration of a pro-code approach, [Teams Toolkit](./build-declarative-agents.yml) is the best tool to use to create your declarative agent.
 
 The following table lists the pros and cons for using Teams Toolkit.
 
