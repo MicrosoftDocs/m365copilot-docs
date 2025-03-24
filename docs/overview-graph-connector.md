@@ -50,7 +50,7 @@ To build Microsoft Graph connectors, you must have a search administrator in you
 
 - [Register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for the required Microsoft Graph permissions in **Microsoft Entra admin center** ([entra.microsoft.com](https://entra.microsoft.com/)). 
     - This might not be an option if you're working in a production environment. Any deployed Microsoft Graph connector is accessible tenant-wide unless the external items security is locked down.
-- Make sure that Microsoft Graph connections that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) via the **Search & intelligence** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
+- Make sure that Microsoft Graph connections that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) via the **Search & intelligence** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
 ## Configuring your custom Microsoft Graph connection for Microsoft 365 Copilot
 
