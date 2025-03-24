@@ -34,4 +34,4 @@ For each capability that is supported in declarative agents, we conduct several 
 
 ## What are the limitations of declarative agents and how can users minimize the effects?
 
-Disclaimers with terms and privacy commitments for users appear on the home page for each declarative agent. For line-of-business developers and IT admins, Copilot extensibility solutions are managed in the Microsoft Admin Center. For more information about how Microsoft 365 Copilot uses, protects, and shares organizational information to power extensibility, see [Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy).
+Disclaimers with terms and privacy commitments for users appear on the home page for each declarative agent. For line-of-business developers and IT admins, Copilot extensibility solutions are managed in the Microsoft 365 admin center. For more information about how Microsoft 365 Copilot uses, protects, and shares organizational information to power extensibility, see [Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy).
