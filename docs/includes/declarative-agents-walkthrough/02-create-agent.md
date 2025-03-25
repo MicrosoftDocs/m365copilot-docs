@@ -12,13 +12,11 @@ Begin by creating a basic declarative agent.
 
     :::image type="content" source="../../assets/images/build-da/ttk/create-new-app.png" alt-text="A screenshot of the Create a New App button in the Teams Toolkit sidebar":::
 
-1. Select **Agent**.
+1. Select **Declarative Agent**.
 
     :::image type="content" source="../../assets/images/build-da/ttk/select-copilot-agent.png" alt-text="A screenshot of the New Project options with Agent selected":::
 
-1. Select **Declarative Agent**.
-
-1. Select **No plugin** to create a basic declarative agent.
+1. Select **No Action** to create a basic declarative agent.
 
 1. Select **Default folder** to store your project root folder in the default location.
 

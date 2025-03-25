@@ -61,7 +61,7 @@ Your agent must pass [Responsible AI validation checks](rai-validation.md) befor
 
 If you use Copilot Studio to create a declarative agent for Microsoft 365 Copilot, you can use [Copilot Studio to publish your agent](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#publishing-a-copilot-extension) for sharing and/or submit it for [publish to your organization's catalog](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps#publish-extensions-for-copilot) by an admin.
 
-If you use Teams Toolkit to build an agent for Microsoft 365 Copilot, [build your app package](/microsoftteams/platform/toolkit/publish#build-app-package) with Teams Toolkit and [upload it as a custom app package](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#upload-custom-teams-apps-that-work-on-outlook-and-the-microsoft-365-app) to the **Integrated Apps** section of Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)). From there, admins can manage access, configure default settings, and review and consent to requested data and permissions.
+If you use Teams Toolkit to build an agent for Microsoft 365 Copilot, [build your app package](/microsoftteams/platform/toolkit/publish#build-app-package) with Teams Toolkit and [upload it as a custom app package](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#upload-custom-teams-apps-that-work-on-outlook-and-the-microsoft-365-app) to the **Integrated Apps** section of Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.com)). From there, admins can manage access, configure default settings, and review and consent to requested data and permissions.
 
 ### Distribute your agent through Microsoft Partner Center
 
@@ -80,7 +80,7 @@ Teams message extension apps used as plugins for Copilot are packaged and distri
 
 ### Distribute a message extension plugin to your organization
 
-Follow these [instructions to upload your custom app package](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#upload-custom-teams-apps-that-work-on-outlook-and-the-microsoft-365-app) to the **Integrated Apps** section of Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)). From there, admins can manage access, configure default settings, and review and consent to the requested data and permissions for both your [app experience](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#how-to-manage-the-availability-of-an-app-in-your-organization) and [plugin experience](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps).
+Follow these [instructions to upload your custom app package](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#upload-custom-teams-apps-that-work-on-outlook-and-the-microsoft-365-app) to the **Integrated Apps** section of Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.com)). From there, admins can manage access, configure default settings, and review and consent to the requested data and permissions for both your [app experience](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#how-to-manage-the-availability-of-an-app-in-your-organization) and [plugin experience](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps).
 
 ### Distribute a message extension plugin through Microsoft Partner Center
 
@@ -104,7 +104,7 @@ Once published, an administrator must enable your connector action it before it 
 
 Ensure your app meets [Power Platform certification criteria](/connectors/custom-connectors/certification-submission) and Microsoft Commercial Marketplace policies for [Power Platform Connectors](/legal/marketplace/certification-policies#5000-power-platform-connectors), then submit your [app package](/connectors/custom-connectors/certification-submission#connector-and-plugin-packaging-guide) to [Microsoft Partner Center](https://partner.microsoft.com) through the **Microsoft 365 and Copilot program** as a **Power Platform Connector**.
 
-Once certified and published by Microsoft, your action is available for IT enablement in the Microsoft Admin Center, with *Copilot* listed as one of its *Host Products*. Once deployed, your action will appear as an installed plugin for Copilot.
+Once certified and published by Microsoft, your action is available for IT enablement in the Microsoft 365 admin center, with *Copilot* listed as one of its *Host Products*. Once deployed, your action will appear as an installed plugin for Copilot.
 
 For more info, see [Get your Power Platform connector and plugin certified](/connectors/custom-connectors/submit-certification).
 
@@ -114,7 +114,7 @@ Microsoft Graph connector publishing options depend on whether you have a standa
 
 ### Distribute a Microsoft Graph connector for Copilot to your organization
 
-You can distribute standalone Microsoft Graph connectors through the Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)). For details, see [Set up and manage Microsoft Graph connectors](/microsoftsearch/configure-connector).
+You can distribute standalone Microsoft Graph connectors through the Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.com)). For details, see [Set up and manage Microsoft Graph connectors](/microsoftsearch/configure-connector).
 
 You can distribute Microsoft Graph connectors within Teams apps via the Teams admin center. For details, see [Enable the simplified admin experience for your Microsoft Graph connector](/graph/connecting-external-content-deploy-teams).
 

@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 MD051 -->
 
-In this section, you add an API plugin to your agent. Plugins add new abilities to your agent by allowing your agent to interact with a REST API.
+In this section, you add an API plugin as an Action to your agent. API plugins add new abilities to your agent by allowing your agent to interact with a REST API.
 
 You can add a plugin to your agent with either Teams Toolkit or the Kiota Visual Studio Code extension.
 
@@ -12,7 +12,7 @@ Before you begin, create a file named `posts-api.yml` and add the code from the 
 
 ## [Teams Toolkit](#tab/ttk)
 
-1. Select **Add Plugin** in the **Development** pane of Teams Toolkit.
+1. Select **Add Action** in the **Development** pane of Teams Toolkit.
 
 1. Select **Start with an OpenAPI Description Document**.
 
