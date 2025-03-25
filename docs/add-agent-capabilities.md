@@ -10,7 +10,7 @@ ms.date: 03/24/2025
 
 # Add capabilities and knowledge sources to your declarative agent
 
-You can enhance the user experience of your declarative agent by adding capabilities. The **capabilities** element in the manifest reference and the **Capabilities** and **Knowledge** sections in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the capabilities and knowledge sources that you can add to your agents.
+You can enhance the user experience of your declarative agent by adding capabilities. The [**capabilities** element](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.3#capabilities-object) in the manifest reference and the **Capabilities** and **Knowledge** sections in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the capabilities and knowledge sources that you can add to your agents.
 
 The following table shows which capabilities and knowledge sources you can configure by using agent builder or Teams Toolkit and whether a your users require a Microsoft 365 Copilot license or metered usage to access the agent.
 
