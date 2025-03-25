@@ -1,5 +1,5 @@
 ---
-title: Create an agent to help users learn and grow in their careers
+title: Create a Career Coach agent from a template
 description: Learn how to create a declarative agent from the Career Coach template in Copilot Studio agent builder
 author: kmkoenen
 ms.author: v-koenenkaty

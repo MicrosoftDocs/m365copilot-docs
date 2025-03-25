@@ -13,6 +13,7 @@ ms.date: 04/01/2025
 ## Overview
 
 The Meeting Coach declarative agent template is designed to assist meeting organizers in creating and running effective meetings. It can help you:
+
 - set clear objectives
 - create structured agendas
 - assign meeting roles
