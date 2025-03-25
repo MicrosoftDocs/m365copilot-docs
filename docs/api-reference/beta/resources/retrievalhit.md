@@ -22,7 +22,7 @@ Represents a single result within the list of retrieval results.
 |extracts|[retrievalExtract](../resources/retrievalextract.md) collection|An array of text extracts extracted from the document for Retrieval-Augmented Generation. Currently, only one text snippet is extracted.|
 |resourceMetadata|[searchResourceMetadataDictionary](../resources/searchresourcemetadatadictionary.md)|The requested [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft Graph connectors](/graph/connecting-external-content-manage-schema) metadata from the request payload (empty if not applicable).|
 |resourceType|groundingEntityType|The resource type of the item.The possible values are: `site`, `list`, `listItem`, `externalItem`, `drive`, `driveItem`, `unknownFutureValue`.|
-|sensitivityLabel|[searchSensitivityLabelInfo](../resources/searchsensitivitylabelinfo.md)|A JSON object with information about the document’s [sensitivity label](/graph/api/resources/security-sensitivitylabel?view=graph-rest-beta#properties).|
+|sensitivityLabel|[searchSensitivityLabelInfo](../resources/searchsensitivitylabelinfo.md)|A JSON object with information about the document’s [sensitivity label](/graph/api/resources/security-sensitivitylabel?view=graph-rest-beta&preserve-view=true#properties).|
 |webUrl|String|The URL of the item in which the extract was retrieved. |
 
 ## Relationships
