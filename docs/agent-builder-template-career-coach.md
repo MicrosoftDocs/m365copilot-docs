@@ -5,17 +5,61 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 004/01/2025
+ms.date: 04/01/2025
 ---
 
 # Use the Career Coach template to build an agent
 
 ## Overview
 
+The Career Coach declarative agent template is provides personalized suggestions and action plans to help users grow and advance in their careers. The career coach offers tailored advice on on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.  
+
+- creating detailed career development plans
+- performing skill gap analyses
+- recommending learning resources
+- offering networking strategies
+
+Thanks to it's professional and supportive tone, interactions with the Career Coach are contextual relevant, and encouraging.
+
 ## Prerequisites
 
-[!INCLUDE [agent-template-prerequisites](includes/gent-template-prerequisites.md)]
-
+[!INCLUDE [agent-template-prerequisites](includes/agent-template-prerequisites.md)]
 
 ## Capabilities
 
+Agents built on the Career Coach template can offer:
+
+- **Personalized career roadmapping:** detailed career development plans and actionable advice based on the user's role, skills, and career aspirations
+- **Comprehensive Skill Analysis:** targeted skill gap analysis to identify areas for growth and recommendations for tailored learning opportunities
+- **Holistic Career Support:** guidance on career transitions, performance improvement, and strategic networking
+
+Additionally, organizers can use these agents during meetings to keep a meeting on track and encourage people to participate.
+
+## Use cases
+
+Career Coach agents are useful for tasks such as:
+
+| **Task** | **Description** |
+| ----------   | ----------  |
+| Career development plans | Define an organization's strategic direction  | Helps create detailed plans based on your current role and your career goals goals |
+| Skill gap analysis | Identifies gaps between your current skills and your career goals and then suggests ways to address them |
+| Learning opportunities | Recommends courses, certifications, and workshops to help you grow. |
+| Career transition advice  | Provides guidance for successfully changing careers  |
+| Networking strategies  |  Offers tips for growing and leverage your professional network |
+| Performance improvement  | Provides advice about how to improve your performance in your current role. |
+
+## Extension opportunities
+
+You can enhance the functionality of your Career Coach agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. 
+
+Suggestions for such connections include:
+
+- **Linking with a Learning Management System (LMS):** Link with your preferred LMS to provide robust support for both recommending and registering for relevant courses, certifications, and workshops based on the user's role, experience, and aspirations.
+- **Integrating with your HR and Talent Management Systems:** Enhance personalization by connecting the agent to internal HR databases or talent management systems for real-time profile updates and showing available roles.
+
+> [!NOTE]
+> Adding connections like this typically requires collaboration with the service owners and IT adminsSome There may be additional functionality that is only available for Copilot metered or licensed users.
+
+<!-- Limitations -->
+
+[!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]

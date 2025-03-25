@@ -5,14 +5,14 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 004/01/2025
+ms.date: 04/01/2025
 ---
 
 # Use the Meeting Coach template to build an agent
 
 ## Overview
 
-The Meeting Coach template is designed to assist meeting organizers in creating and running effective meetings. It can help you:
+The Meeting Coach declarative agent template is designed to assist meeting organizers in creating and running effective meetings. It can help you:
 - set clear objectives
 - create structured agendas
 - assign meeting roles
@@ -23,11 +23,9 @@ The Meeting Coach template is designed to assist meeting organizers in creating 
 
  Agents built from this template help ensure that meetings are productive, engaging, and well-organized. You can even customize the agent's knowledge base to fit your needs with internal knowledge sources and publicly available websites.
 
-Watch [this video](https://microsofteur.sharepoint.com/teams/OneCLS/Extensibility%20Quick%20Starts/Copilot%20for%20All%20Scenarios/Meeting%20Prep%20Agent/Videos/MeetingCoach_Build_ULUM_Rev.mp4) for an overview on how to use the Meeting Coach agent template:
-
 ## Prerequisites
 
-[!INCLUDE [agent-template-prerequisites](includes/gent-template-prerequisites.md)]
+[!INCLUDE [agent-template-prerequisites](includes/agent-template-prerequisites.md)]
 
 ## Capabilities
 
@@ -60,8 +58,6 @@ If you have a metered subscription or the appropriate license, you can enhance t
     - **Customer engagement:** By connecting SharePoint sites that include meeting materials (sales pitches, customer information, etc.) you can create an agent specialized for customer follow-up.
     - **Standardizing meetings across teams:** By connecting SharePoint sites that include template files (agendas, meeting minutes, etc.), you can standardize how meetings are organized. You can also standardize how action items and results are recorded and reported at the end of the meeting.
 
-## Limitations
+<!-- Limitations -->
 
-- **Interacting with the agent:** Agents created with the Meeting Coach template are designed to answer just one question at time. For best results, don't ask multiple or compound questions in a single prompt.
-- **Handling sensitive information:** When building agents with this template, it is your responsibility to ensure that any personal or sensitive information used in the agent is handled according to your organization's data privacy policies.
-- **Incorrect or harmful responses:** Although the agent is designed to prevent the output of incorrect and harmful content, it utilizes generative AI technology, which it can sometimes make mistakes. A disclaimer is included to remind users to verify accuracy before making decisions, especially financial decisions. Customers are responsible for conducting due diligence on AI-generated content. You can edit the disclaimer to align with your organization’s policies, but we don't recommend removing it. For more information, review the [supplemental terms](https://www.microsoft.com/en-us/business-applications/legal/supp-powerplatform-preview/).
+[!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]
