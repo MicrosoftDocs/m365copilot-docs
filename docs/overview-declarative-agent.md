@@ -12,7 +12,7 @@ ms.topic: overview
 
 Declarative agents enable you to customize Microsoft 365 Copilot to help you meet the unique business needs of your users. When you build a declarative agent, you provide the instructions, actions, and knowledge to tailor Copilot for your business scenarios. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft 365 Copilot. By building declarative agents, you can optimize collaboration, increase productivity, and streamline workflows in your organization.
 
-With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock additional functionality for your users.
+With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock more functionality for your users.
 
 ## Tailor declarative agents for your scenario
 
@@ -45,12 +45,10 @@ Users can select declarative agents from the right pane in Copilot. They can the
 
 The following are the core elements of a declarative agent app package:
 
-- [**App manifest**](/microsoftteams/platform/resources/schema/manifest-schema) - Describes how your app is configured, including its capabilities, required resources, and other important attributes.
+- [**App manifest**](/microsoft-365/extensibility/schema) - Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 - [**App icons**](/microsoft-365-copilot/extensibility/agents-are-apps#app-icons) - The app package requires a color and outline icon for your declarative agents.
-- [**Declarative agents manifest**](declarative-agent-manifest-1.2.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
-- [**Plugin manifest (optional)**](/microsoft-365-copilot/extensibility/overview-api-plugins) - Describes how your plugin is configured, including its required fields and capabilities.
 - [**Declarative agents manifest**](declarative-agent-manifest-1.3.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
-- **Plugin manifest (optional)** - Describes how your plugin is configured, including its required fields and capabilities.
+- [**Plugin manifest (optional)**](/microsoft-365-copilot/extensibility/overview-api-plugins) - Describes how your plugin is configured, including its required fields and capabilities.
 
 You can use your tool of choice to create a declarative agent app package. To get started, choose from among the following tools:
 

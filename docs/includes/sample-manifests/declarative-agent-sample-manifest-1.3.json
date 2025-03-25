@@ -77,15 +77,6 @@
       ]
     },
     {
-      "name": "Email",
-      "shared_mailbox": "sample@service.microsoft.com",
-      "folders": [
-        {
-         "folder_id": "sentitems"
-        }
-     ]
-    },
-    {
       "capabilities": [
           {
               "name":"People"
