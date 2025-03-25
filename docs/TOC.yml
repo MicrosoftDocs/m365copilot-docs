@@ -35,16 +35,8 @@
       href: overview-declarative-agent.md
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
-    - name: Write effective instructions
-      href: declarative-agent-instructions.md
-    - name: Add agent capabilities
-      href: add-agent-capabilities.md
-    - name: Optimize SharePoint content retrieval
-      href: optimize-sharepoint-content.md
-    - name: Localize your agent
-      href: localize-agents.md
-    - name: RAI validation
-      href: rai-validation.md
+    - name: Choose your development tool
+      href: declarative-agent-tool-comparison.md
     - name: Use Visual Studio Code
       expanded: true
       items:
@@ -54,6 +46,8 @@
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference
         items:
+        - name: Version 1.3
+          href: declarative-agent-manifest-1.3.md
         - name: Version 1.2
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
@@ -70,6 +64,16 @@
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+    - name: Write effective instructions
+      href: declarative-agent-instructions.md
+    - name: Add capabilities and knowledge sources
+      href: add-agent-capabilities.md
+    - name: Optimize SharePoint content retrieval
+      href: optimize-sharepoint-content.md
+    - name: Localize your agent
+      href: localize-agents.md
+    - name: RAI validation
+      href: rai-validation.md
   - name: Build a custom engine agent
     expanded: false
     items:
@@ -81,12 +85,10 @@
       items:
       - name: Teams AI library overview
         href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context
-      - name: Teams AI library quick start
-        href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/conversation-ai-quick-start?context=/microsoft-365-copilot/extensibility/context
-      - name: Build with Teams AI library
-        href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started?context=/microsoft-365-copilot/extensibility/context
-      - name: Build with Teams AI library and Teams Toolkit
+      - name: Build custom engine agent
         href: /microsoftteams/platform/teams-ai-library-tutorial?context=/microsoft-365-copilot/extensibility/context
+      - name: Teams AI library guide
+        href: /microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started?context=/microsoft-365-copilot/extensibility/context
       - name: Teams AI library FAQs
         href: /microsoftteams/platform/teams-faq?context=/microsoft-365-copilot/extensibility/context#teams-ai-library
     - name: Use Microsoft Copilot Studio
@@ -97,6 +99,8 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete agents
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
+    - name: Build with Microsoft Graph APIs
+      href: graph-api-tutorial.yml
 - name: Add knowledge with Microsoft Graph connectors
   items:
   - name: Microsoft Graph connectors in Microsoft 365 Copilot
@@ -105,114 +109,6 @@
     href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
   - name: Connector experiences
     href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
-  - name: Set up connectors
-    items:
-    - name: Overview
-      href: /microsoftsearch/configure-connector?context=/microsoft-365-copilot/extensibility/context
-    - name: Add staged rollout to connectors
-      href: /microsoftsearch/staged-rollout-for-graph-connectors?context=/microsoft-365-copilot/extensibility/context
-    - name: Microsoft Graph connectors in Microsoft 365 Copilot
-      items:
-    - name: On-prem connectors
-      items:
-      - name: Connector agent setup
-        href: /microsoftsearch/graph-connector-agent?context=/microsoft-365-copilot/extensibility/context
-      - name: Connector agent release history
-        href: /microsoftsearch/graph-connector-agent-releases?context=/microsoft-365-copilot/extensibility/context
-    - name: Map non-Azure AD Identities
-      href: /microsoftsearch/map-non-aad?context=/microsoft-365-copilot/extensibility/context
-    - name: Map Microsoft Entra identities
-      href: /microsoftsearch/map-aad?context=/microsoft-365-copilot/extensibility/context
-    - name: Microsoft Graph prebuilt connectors
-      href: /microsoftsearch/pre-built-connectors-overview?context=/microsoft-365-copilot/extensibility/context
-      items:
-      - name: Azure Data Lake Storage Gen2
-        items:
-        - name: Setup
-          href: /microsoftsearch/azure-data-lake-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Azure DevOps Work Items
-        items:
-        - name: Setup
-          href: /microsoftsearch/azure-devops-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-azure-devops-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Azure DevOps Wiki
-        items:
-        - name: Setup
-          href: /microsoftsearch/azure-devops-wiki-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-azure-devops-wiki-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Azure SQL and Microsoft SQL Server
-        items:
-        - name: Setup
-          href: /microsoftsearch/MSSQL-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-mssql-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Confluence Cloud
-        items:
-        - name: Setup
-          href: /microsoftsearch/confluence-cloud-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-confluence-cloud-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Confluence On-premises (preview)
-        items:
-        - name: Setup
-          href: /microsoftsearch/confluence-onpremises-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-confluence-onpremises-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: CSV
-        href: /microsoftsearch/csv-connector?context=/microsoft-365-copilot/extensibility/context
-        items:
-        - name: Setup
-          href: /microsoftsearch/csv-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Jira Cloud
-        items:
-        - name: Setup
-          href: /microsoftsearch/jira-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-jira-cloud-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Enterprise websites
-        items:
-        - name: Setup
-          href: /microsoftsearch/enterprise-web-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-enterprise-web-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: File Share
-        items:
-        - name: Setup
-          href: /microsoftsearch/fileshare-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: MediaWiki
-        items:
-        - name: Setup
-          href: /microsoftsearch/mediawiki-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Oracle SQL
-        items:
-        - name: Setup
-          href: /microsoftsearch/OracleSQL-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-oraclesql-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: Salesforce
-        items:
-        - name: Setup
-          href: /microsoftsearch/salesforce-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: ServiceNow Catalog
-        items:
-        - name: Setup
-          href: /microsoftsearch/servicenow-catalog-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-servicenow-catalog-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: ServiceNow Knowledge
-        items:
-        - name: Setup
-          href: /microsoftsearch/servicenow-knowledge-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-servicenow-knowledge-connector?context=/microsoft-365-copilot/extensibility/context
-      - name: ServiceNow Tickets
-        items:
-        - name: Setup
-          href: /microsoftsearch/servicenow-tickets-connector?context=/microsoft-365-copilot/extensibility/context
-        - name: Troubleshooting
-          href: /microsoftsearch/troubleshoot-servicenow-tickets-connector?context=/microsoft-365-copilot/extensibility/context
   - name: Connectors API
     href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/extensibility/context
   - name: Build your first connector

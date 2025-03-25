@@ -1,95 +1,86 @@
 ---
-title: Manage Agents, Plugins, and Connectors for Microsoft 365 Copilot
-description: Learn about admin controls for Microsoft 365 Copilot extensibility.
+title: Manage agents for Microsoft 365 Copilot
+description: Learn about admin controls for Microsoft 365 Copilot agents.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 9/16/2024
+ms.date: 03/14/2025
 ---
 
-# Manage extensibility for Microsoft 365 Copilot
+# Manage agents for Microsoft 365 Copilot
 
-This article describes the admin controls for managing different Microsoft 365 Copilot extensibility types.
+This article summarizes administrator controls for managing Microsoft 365 Copilot agents based on the different ways to build them.
 
-Agents, plugins, and connectors are packaged, distributed, and managed in the same way as other apps that run across the integrated Microsoft 365 platform. At its core, the integrated Microsoft 365 app platform extends the Teams app platform to provide a [unified app model](agents-are-apps.md) for extensibility within the Microsoft 365 ecosystem. App management controls for Microsoft 365 are also converging to the centralized Microsoft admin center. However, some necessary controls are accessible only from other admin centers.
+Agents are packaged, distributed, and managed in the same way as other apps that run across the integrated Microsoft 365 platform. At its core, the integrated Microsoft 365 platform extends the Teams app platform to provide a [unified app model](agents-are-apps.md) for extensibility within the Microsoft 365 ecosystem. App management controls for Microsoft 365 are also converging to the centralized Microsoft 365 admin center. However, some necessary controls for Microsoft 365 Copilot agents are accessible only from other admin centers.
 
-## Microsoft admin center
+## Microsoft 365 admin center
 
-All of the extensibility options for Microsoft 365 Copilot, including agents, plugins, and Graph connectors, can be [packaged and distributed as Microsoft 365 apps](./agents-are-apps.md) that are centrally managed from the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
+Agents for Microsoft 365 Copilot can be [packaged and distributed as Microsoft 365 apps](./agents-are-apps.md) that are centrally managed from the **Integrated Apps** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
-*Global Admin* and *Azure Application Admin* roles can deploy and uninstall apps, manage which apps are available to which users, and block apps in Microsoft admin center.
+*Global Admin* and *Azure Application Admin* roles can deploy and uninstall apps, manage which apps are available to which users, and block apps in Microsoft 365 admin center.
 
-:::image type="content" source="./assets/images/mac-integrated-apps.png" alt-text="Screenshot of the 'Integrated apps' section of Microsoft admin center":::
+:::image type="content" source="./assets/images/mac-integrated-apps.png" alt-text="Screenshot of the 'Integrated apps' section of Microsoft 365 admin center":::
 
-From Microsoft admin center, admins can:
+From Microsoft 365 admin center, admins can:
 
-- Enable/disable Copilot extensibility for the whole organization through Microsoft 365 admin center settings.
-- Make available agents to specific users or groups.
-- Install and uninstall agents for the whole organization or specific users or groups.
-- Block or unblock agents for the whole organization.
+- Enable/disable Copilot agents for the whole organization through Microsoft 365 admin center settings.
+- Deploy, make available, or block agents to the whole organization or specific users or groups.
+- Review and approve agents submitted to the organizational catalog.
+- Monitor and find information about agents that have been shared across the organization.
 
-To learn more about managing published agents and other extensibility types, see [Manage agents for Copilot in Microsoft admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context).
+To learn more, see [Manage agents for Copilot in Microsoft 365 admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context).
 
-## Agents
+## Agents built with Teams Toolkit
 
-### Declarative agents
+Both [declarative agents](./build-declarative-agents.yml) and [custom engine agents](/microsoftteams/platform/teams-ai-library-tutorial?context=/microsoft-365-copilot/extensibility/context) built with Teams Toolkit that are published to the organization or acquired from Microsoft Commercial Marketplace are managed through the **Integrated Apps** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
-Regardless if they are built with Copilot Studio or Teams Toolkit, declarative agents that are published to the organization or acquired from Microsoft Commercial Marketplace are managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
+| Control | Core scenario | Related content |
+|--|--|--|
+| Upload custom apps | Sideload custom apps to your tenant | [Teams Toolkit requirements for Microsoft 365 Copilot agents](/microsoft-365-copilot/extensibility/prerequisites#teams-toolkit-requirements) |
+| Integrated apps | Manage availability of Copilot agents in your tenant | [Manage agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#manage-agents-in-the-microsoft-365-admin-center) |
 
-However, Copilot Studio and Teams Toolkit have different development prerequisites that must be enabled by an admin before you can start building declarative agents:
+## Agents built with Copilot Studio agent builder in Microsoft 365 Copilot
 
-- For Copilot Studio, see [Prerequisites for creating agents with Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#prerequisites).
+[Declarative agents built with the built-in Copilot Studio agent builder](./copilot-studio-agent-builder.md) for Microsoft 365 Copilot can be shared to the organization or specific users and managed by the creator of the agent.
 
-- For Teams Toolkit, see [Prerequisites for building agents and plugins](./prerequisites.md#teams-toolkit-requirements).
+|Control | Core scenario | Related content|
+|--|--|--|
+| Allow the following users access to Copilot agents | Enable or disable the agent builder entrypoint in Microsoft 365 Copilot (*Create an agent*) | [Enable or disable Copilot extensibility ](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#enable-or-disable-copilot-extensibility)
+Share | Manage access to your agent within your organization | [Publish and manage Copilot Studio agent builder agents](./copilot-studio-agent-builder-publish.md#share-the-agent)
 
-### Custom engine agents
+## Agents built with Microsoft Copilot Studio
 
-#### Custom engine agents built with Teams Toolkit
+[Microsoft 365 Copilot agents built with Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) can be shared to specific users or submitted to the organizational catalog for approval by the tenant admin. In both cases, tenant admins can manage availability of the agent from *Integrated apps* in Microsoft 365 admin center.
 
-Custom engine agents created with Teams Toolkit and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like declarative agents. As Teams bot apps, they can also be managed them through **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)).
+|Control | Core scenario | Related content|
+|--|--|--|
+Copilot Studio User License | Enable users in your organization to create and manage agents with Microsoft Copilot Studio | [Assign licenses and manage access to Copilot Studio](/microsoft-copilot-studio/requirements-licensing)
+Manage access to Microsoft Power Platform apps| Enable an existing Copilot Studio agent for Microsoft 365 Copilot | [Connect and configure an agent for Teams and Microsoft 365](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#prerequisites)
+Integrated apps | Manage availability of Copilot agents in your tenant | [Manage agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#manage-agents-in-the-microsoft-365-admin-center)
+Security and governance (multiple controls) | Review the full list of Copilot Studio security and governance controls | https://aka.ms/CopilotStudioSecurity
 
-For required admin settings for developing custom engine agents, see [Prerequisites for building agents and plugins with Teams Toolkit and other IDEs](./prerequisites.md#teams-toolkit-requirements).
+## Agents built with SharePoint
 
-#### Custom engine agents created with Copilot Studio
+[Agents that are created for SharePoint](https://support.microsoft.com/office/create-and-edit-an-agent-d16c6ca1-a8e3-4096-af49-67e1cfdddd42) sites are represented as [`.agent` files](https://support.microsoft.com/office/create-and-edit-an-agent-d16c6ca1-a8e3-4096-af49-67e1cfdddd42#where-agent-file) in each site's *Site Assets* library. As such, permissions on the files govern who can access or edit the agents.
 
-You can publish custom engine agents (copilots) built with Copilot Studio to different [Power Platform environments](/microsoft-copilot-studio/environments-first-run-experience), which are managed from the **Power Platform admin center** ([admin.powerplatform.com](https://admin.powerplatform.com)).
-
-Once published, you can make your custom engine agent available in Teams to users in your organization. In order to do so, **Shared Power Apps** must be enabled for all (or a subset) of users in your organization in **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)). For more info, see [Manage Power Platform apps in Teams admin center](/microsoftteams/manage-power-platform-apps).
-
-For more on publishing custom engine agents in Copilot Studio, see [Key concepts - Publish and deploy your copilot](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
-
-## Plugins
-
-### Message extension plugins
-
-Message extension plugins for Copilot can be built using Teams Toolkit and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com)), just like regular Teams message extension apps. As Teams  apps, they can also be managed them through **Teams admin center** ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)).
-
-For required admin settings for developing message extension plugins, see [Prerequisites for building agents and plugins with Teams Toolkit and other IDEs](./prerequisites.md#teams-toolkit-requirements).
-
-### Copilot Studio actions
-
-In order for end-users in a tenant to use actions (plugins) created and published with Copilot Studio, the tenant admin needs to:
-
-- Deploy the **Copilot Studio** app through the **Integrated Apps** section of **Microsoft admin center** ([admin.microsoft.com](https://admin.microsoft.com))
-
-- Enable the [Microsoft 365 Copilot setting](/microsoft-copilot-studio/copilot-plugins-overview#enable-or-disable-copilot-for-microsoft-365-in-power-platform-admin-center-admin) in **Power Platform admin center** ([admin.powerplatform.com](https://admin.powerplatform.com))
-
-Tenant admins can also enable or disable different types of actions from working within Microsoft 365 Copilot. For more information, see [use actions in Microsoft Copilot](/microsoft-copilot-studio/copilot-plugins-overview#use-actions-in-microsoft-copilot).
-
-### API plugins
-
-[!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
-
-Refer to [Agents](#agents) for details on managing agents with API plugins.
+|Control | Core scenario | Related content|
+|--|--|--|
+Billing | Understand SharePoint agents pricing | [Comparison of Copilot licenses, pay-as-you-go billing, and the trial promotion](/sharepoint/get-started-sharepoint-agents#comparison-of-copilot-licenses-pay-as-you-go-billing-and-the-trial-promotion)
+Microsoft 365 Copilot license details | Control user access to SharePoint agents | [Manage access to SharePoint agents](/sharepoint/manage-access-agents-in-sharepoint)
+Global administrator / AI administrator | Enable users without Microsoft 365 Copilot licenses to use and build SharePoint agents during the promotional trial | [Manage trial access to SharePoint agents with PowerShel](/sharepoint/manage-trial-agents-sharepoint-powershell)
+Org settings | Set up pay-as-you-go billing for SharePoint agents in the Microsoft 365 admin center | [Use agents with pay-as-you-go billing](/sharepoint/sharepoint-agents-azure-billing)
+PowerShell cmdlet | View status and details on all active and available Copilot agents in the tenant | [Get-SPOCopilotAgentInsightsReport](/powershell/module/sharepoint-online/get-spocopilotagentinsightsreport)
 
 ## Microsoft Graph connectors
 
-Microsoft Graph connectors that are packaged as Microsoft 365 apps and published to an organization or acquired from Microsoft Commercial Marketplace are centrally managed through the **Integrated Apps** section of Microsoft admin center ([admin.microsoft.com](https://admin.microsoft.com)), just like other Teams apps extended across Microsoft 365.
+[Microsoft Graph connectors](./overview-graph-connector.md) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Microsoft Graph connectors are managed from Microsoft Entra admin center, Microsoft 365 admin center, and Teams admin center.
 
-However, the Teams admin center ([admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) provides additional admin controls to enable or disable the Microsoft Graph connector within the app, as long as you implement a `graphConnector.notificationUrl` for your app to handle the enable / disable notifications. For more information, see [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context).
-
-For admin prerequisites for developing Microsoft Graph connectors, see [Requirements for developing Microsoft graph connectors](overview-graph-connector.md#requirements-for-microsoft-graph-connectors).
+|Control | Core scenario | Related content|
+|--|--|--|
+App registrations | Register an application and grant admin consent for the required Microsoft Graph permissions | [Requirements for Microsoft Graph connectors](./overview-graph-connector.md#requirements-for-microsoft-graph-connectors)
+Search & intelligence | Ensure that Microsoft Graph connections that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for inline results | [Manage connector results in All vertical](/microsoftsearch/connectors-in-all-vertical)
+Graph Connector management| Enable or disable a Graph connector | [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context)
 
 ## Related content
 
