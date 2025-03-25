@@ -10,7 +10,7 @@ ms.topic: overview
 
 # Declarative agents for Microsoft 365 Copilot overview
 
-Declarative agents enable you to customize Microsoft 365 Copilot to help you meet the unique business needs of your users. When you build a declarative agent, you provide the instructions, actions, and knowledge to tailor Copilot for your business scenarios. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft 365 Copilot. By building declarative agents, you can optimize collaboration, increase productivity, and streamline workflows in your organization. 
+Declarative agents enable you to customize Microsoft 365 Copilot to help you meet the unique business needs of your users. When you build a declarative agent, you provide the instructions, actions, and knowledge to tailor Copilot for your business scenarios. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft 365 Copilot. By building declarative agents, you can optimize collaboration, increase productivity, and streamline workflows in your organization.
 
 With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock additional functionality for your users.
 
@@ -31,9 +31,9 @@ Some of the core benefits of using declarative agents as part of your business p
 - **Familiar UI** - Declarative agents use the same friendly UI within Microsoft 365 Copilot. Users can adopt and engage with agents tailored to their business scenarios that look and feel like Microsoft 365 Copilot.
 - **Enhanced enterprise knowledge** - Similar to Microsoft 365 Copilot, declarative agents can also use enterprise data from Microsoft Graph connectors and SharePoint files. By applying existing enterprise knowledge and the familiar Copilot interface, you can streamline workflows and make it easier for users to engage with data within the organization.
 - **Seamless integration with plugins** - Enterprises can extend declarative agents by using plugins to retrieve data and run tasks on external systems. Declarative agents can use multiple plugins at the same time.
-- **Prioritized security, privacy, and compliance** - Declarative agents are built on a secure foundation and inherit all data protections provided by Microsoft 365 Copilot. Enterprise admins have visibility into and control over the distribution of declarative agents within their tenant via the Microsoft Admin Center console.
+- **Prioritized security, privacy, and compliance** - Declarative agents are built on a secure foundation and inherit all data protections provided by Microsoft 365 Copilot. Enterprise admins have visibility into and control over the distribution of declarative agents within their tenant via the Microsoft 365 admin center console.
 
-Users engage with declarative agents within the Microsoft 365 Copilot UI or within the Copilot experiences in Teams, Word, and PowerPoint. 
+Users engage with declarative agents within the Microsoft 365 Copilot UI or within the Copilot experiences in Teams, Word, and PowerPoint.
 
 The following image shows the agent experience in Microsoft 365 Copilot.
 
@@ -46,21 +46,20 @@ Users can select declarative agents from the right pane in Copilot. They can the
 The following are the core elements of a declarative agent app package:
 
 - [**App manifest**](/microsoftteams/platform/resources/schema/manifest-schema) - Describes how your app is configured, including its capabilities, required resources, and other important attributes.
-- **App icons** - The app package requires a color and outline icon for your declarative agents.
+- [**App icons**](/microsoft-365-copilot/extensibility/agents-are-apps#app-icons) - The app package requires a color and outline icon for your declarative agents.
 - [**Declarative agents manifest**](declarative-agent-manifest-1.2.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
+- [**Plugin manifest (optional)**](/microsoft-365-copilot/extensibility/overview-api-plugins) - Describes how your plugin is configured, including its required fields and capabilities.
+- [**Declarative agents manifest**](declarative-agent-manifest-1.3.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
 - **Plugin manifest (optional)** - Describes how your plugin is configured, including its required fields and capabilities.
 
-You can use your tool of choice to create a declarative agent app package. To get started, choose from the tools listed in the following table.
+You can use your tool of choice to create a declarative agent app package. To get started, choose from among the following tools:
 
-| **Start with** | **Summary** |
-|:------------|:------------|
-| [Teams Toolkit](./build-declarative-agents.yml) | Build declarative agents using Teams Toolkit. |
-| [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) | Build declarative agents using the builder integrated in Copilot Studio. |
-| [Copilot Studio agent builder](copilot-studio-agent-builder.md) | Build declarative agents using the integrated builder in Microsoft 365 Copilot. |
-| [SharePoint](./build-declarative-agents.yml?tutorial-step=5) | Build declarative agents using grounding data from SharePoint files. |
+- [Teams Toolkit](./build-declarative-agents.yml)
+- [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context)
+- [Copilot Studio agent builder](copilot-studio-agent-builder.md)
+- [SharePoint](https://support.microsoft.com/office/get-started-with-sharepoint-agents-69e2faf9-2c1e-4baa-8305-23e625021bcf)
 
-> [!NOTE]
-> If you have an existing Teams message extension, now you can convert it as a declarative agent. See [Extend bot-based message extension as agent for Microsoft 365 Copilot](/microsoftteams/platform/messaging-extensions/build-bot-based-agent) on Microsoft Teams developer documentation for more information.
+For more information about how to choose the right tool for your scenarios, see [Choose the right tool to build your declarative agent](./declarative-agent-tool-comparison.md).
 
 ## Responsible AI
 

@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for C
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 2/03/2025
+ms.date: 2/26/2025
 ms.topic: conceptual
 ---
 
@@ -14,69 +14,83 @@ This article provides information about Copilot Studio regional availability and
 
 ## Regional availability
 
-Copilot Studio agent builder is available in the following geographies:
+Copilot Studio agent builder is available if your [Power Platform default environment](/power-platform/admin/environments-overview#default-environment) is in any of the following countries or regions:   
 
 - Asia Pacific
 - Australia
+- Brazil
 - Canada
 - Europe
 - France
 - Germany
 - India
 - Japan
+- Korea
 - Norway
 - South Africa
-- South America
-- South Korea
 - Sweden
 - Switzerland
 - United Arab Emirates
 - United Kingdom
 - United States
 
-Geographic availability is based on Copilot Studio’s [data locations](/microsoft-copilot-studio/data-location).
+The Power Platform default environment location is automatically set to the location of the tenant. You can verify the location of your Power Platform default environment in the Power Platform Admin Center. For more information, see [Environment location](/power-platform/admin/environments-overview#environment-location). 
 
-## Agent languages
+## Language support
 
-A user can chat with an agent created using the Copilot Studio agent builder in the following languages:
+### Authoring canvas languages
 
-- English
-- French
-- German
-- Italian
-- Japanese
-- Portuguese
-- Spanish
-- Simplified Chinese
-
-You can create agents to engage with users in any of the supported languages.
-
-## Authoring languages
-
-The authoring language is the one in which the authoring UI is presented. By default, this language is your Microsoft 365 language setting. You can change the authoring language by [changing your Microsoft 365 language setting](https://support.microsoft.com/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b).
+The authoring canvas language is the one in which the authoring UI is presented. By default, this language is your Microsoft 365 language setting. You can change the authoring language by [changing your Microsoft 365 language setting](https://support.microsoft.com/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b).
 
 The following authoring languages are supported:
 
-- `cs-CZ`
-- `da-DK`
-- `de-DE`
-- `el-GR`
-- `en-US`
-- `es-ES`
-- `fi-FI`
-- `fr-FR`
-- `hi-IN`
-- `id-ID`
-- `it-IT`
-- `ja-JP`
-- `ko-KR`
-- `nb-NO`
-- `nl-NL`
-- `pl-PL`
-- `pt-BR`
-- `ru-RU`
-- `sv-SE`
-- `th-TH`
-- `tr-TR`
-- `zh-CN`
-- `zh-TW`
+- Chinese (Simplified) (zh-CN)
+- Chinese (Traditional) (zh-TW)
+- Czech (cs-CZ)
+- Danish (da-DK)
+- Dutch (nl-NL)
+- English (United States) (en-US)
+- Finnish (fi-FI)
+- French (France) (fr-FR)
+- German (de-DE)
+- Greek (el-GR)
+- Hindi (hi-IN)
+- Indonesian (id-ID)
+- Italian (it-IT)
+- Japanese (ja-JP)
+- Korean (ko-KR)
+- Norwegian (Bokmål) (nb-NO)
+- Polish (pl-PL)
+- Portuguese (Brazil) (pt-BR)
+- Russian (ru-RU)
+- Spanish (Spain) (es-ES)
+- Swedish (sv-SE)
+- Thai (th-TH)
+- Turkish (tr-TR)
+
+### Describe tab languages
+
+The **Describe** tab supports the following languages:
+
+- Chinese (Simplified) (zh-CN)
+- Chinese (Traditional) (zh-TW)
+- Czech (cs-CZ)
+- Danish (da-DK)
+- Dutch (nl-NL)
+- English
+- Finnish (fi-FI)
+- French 
+- German (de-DE)
+- Hindi (hi-IN)
+- Indonesian (id-ID)
+- Italian (it-IT)
+- Japanese (ja-JP)
+- Korean (ko-KR)
+- Norwegian (Bokmål) (nb-NO)
+- Polish (pl-PL)
+- Portuguese (Brazil) (pt-BR)
+- Russian (ru-RU)
+- Spanish 
+- Swedish (sv-SE)
+- Thai (th-TH)
+- Turkish (tr-TR)

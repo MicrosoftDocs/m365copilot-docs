@@ -4,7 +4,7 @@ description: Learn how to publish and manage agents built with Copilot Studio ag
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/06/2024
+ms.date: 02/25/2024
 ms.topic: conceptual
 ---
 
@@ -22,9 +22,6 @@ After the agent is created successfully, select **Go to agent** to open a new ch
 
 You can share your agent with other users via a link after you create it. When you share an agent, the people you share the agent with can use it, but they can't edit it. You can change the sharing option at any time by choosing the **Share** button at the top right corner.
 
-> [!NOTE]
-> Users that you share your agent with must also have a Microsoft 365 license.
-
 ### Sharing options
 
 The following table lists the sharing options that are available.
@@ -32,15 +29,15 @@ The following table lists the sharing options that are available.
 | Sharing option                                          | Description |
 | ------------------------------------------------------- | ----------- |
 | Anyone in your organization                             | Anyone in your tenant can use the sharing link to use the agent. |
-| Specific users in your organization via security groups | Specific user groups can use the sharing link to use the agent. These user groups must be specified via [security groups](/microsoft-365/admin/email/create-edit-or-delete-a-security-group) in your tenant's Microsoft directory. |
+| Specific users in your organization | Specific user groups can use the sharing link to use the agent. These user groups must be specified via the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
 | Only me                                                 | Only the author of the agent can use the agent. The sharing link can't be used by anyone else. This sharing option is selected by default. |
 
 > [!NOTE]
-> Agents can only return information from knowledge sources that the shared users have access to. If your agent contains knowledge sources from SharePoint files and folders, we recommend that you share the agent with specific users in your organization via security groups. This automatically shares the files with users so the agent can return responses from those sources.
+> When the Share option is set to **Specific users in your organization**, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
 ### Automatically share SharePoint files and folders
 
-When you share an agent, Copilot users might not have access to all the underlying knowledge sources. The agent respects the end user's information and sensitivity privileges. If the user doesn't have access to a knowledge source, the agent doesn't include content from it when generating a response. You can automatically share the underlying Knowledge sources to security groups when the Share option is set to **Specific users in your organization via security groups**.
+When you share an agent, Copilot users might not have access to all the underlying knowledge sources. The agent respects the end user's information and sensitivity privileges. If the user doesn't have access to a knowledge source, the agent doesn't include content from it when generating a response. You can share SharePoint Knowledge sources with others when the **Share** option is set to **Specific users in your organization**.
 
 > [!NOTE]
 > Only files and folders added to the agent can be automatically shared. SharePoint sites aren't automatically shared. A site administrator must grant user permission via site settings.
@@ -54,6 +51,9 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 ### Agent acquisition
 
 The shared link brings end users to the Microsoft 365 app store to view the details of the agent before adding it to Microsoft 365 Copilot. After the user adds the agent, they can open it in Copilot with a new chat created. The user only needs to add the agent the first time they use it. Subsequently, they can return to Microsoft 365 Copilot to find the agent on the right rail.
+
+> [!NOTE]
+> Because agent capabilities differ based on a user's license, agent acquisition or usage is only possible when the user has the appropriate license based on the capabilities configured in the agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 
 ## Manage agents
 
