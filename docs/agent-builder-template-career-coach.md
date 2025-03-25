@@ -12,7 +12,7 @@ ms.date: 04/01/2025
 
 ## Overview
 
-The Career Coach declarative agent template is provides personalized suggestions and action plans to help users grow and advance in their careers. The career coach offers tailored advice on on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.  
+The Career Coach declarative agent template provides personalized suggestions and action plans to help users grow and advance in their careers. The career coach offers tailored advice on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.  
 
 - creating detailed career development plans
 - performing skill gap analyses
@@ -41,11 +41,11 @@ Career Coach agents are useful for tasks such as:
 
 | **Task** | **Description** |
 | ----------   | ----------  |
-| Career development plans | Define an organization's strategic direction  | Helps create detailed plans based on your current role and your career goals goals |
+| Career development plans | Helps create detailed plans based on your current role and your career goals goals |
 | Skill gap analysis | Identifies gaps between your current skills and your career goals and then suggests ways to address them |
 | Learning opportunities | Recommends courses, certifications, and workshops to help you grow. |
 | Career transition advice  | Provides guidance for successfully changing careers  |
-| Networking strategies  |  Offers tips for growing and leverage your professional network |
+| Networking strategies  |  Offers tips for growing and making the most of your professional network |
 | Performance improvement  | Provides advice about how to improve your performance in your current role. |
 
 ## Extension opportunities
@@ -55,10 +55,10 @@ You can enhance the functionality of your Career Coach agents by connecting to a
 Suggestions for such connections include:
 
 - **Linking with a Learning Management System (LMS):** Link with your preferred LMS to provide robust support for both recommending and registering for relevant courses, certifications, and workshops based on the user's role, experience, and aspirations.
-- **Integrating with your HR and Talent Management Systems:** Enhance personalization by connecting the agent to internal HR databases or talent management systems for real-time profile updates and showing available roles.
+- **Integrating with your HR and Talent Management Systems:** Provide more helpful and personalized responses by connecting the agent to internal HR databases or talent management systems.
 
 > [!NOTE]
-> Adding connections like this typically requires collaboration with the service owners and IT adminsSome There may be additional functionality that is only available for Copilot metered or licensed users.
+> Adding connections like this typically requires collaboration with the service owners and IT adminsSome There might be additional functionality that is only available for Copilot metered or licensed users.
 
 <!-- Limitations -->
 
