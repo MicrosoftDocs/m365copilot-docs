@@ -19,11 +19,11 @@ Before you start to build your Copilot extensibility solution, define the purpos
 
 ### Identify the problem
 
-Start by defining the specific challenge or productivity gap your solution addresses. Clearly articulate what inefficiencies, pain points or unmet needs exist. Once the problem is defined, you can explore how Copilot can provide value.
+Start by defining the specific challenge or productivity gap your solution addresses. Clearly articulate what inefficiencies, pain points, or unmet needs exist. Once the problem is defined, you can explore how Copilot can provide value.
 
 ### Identify your users
 
-Who experiences the problem you’ve defined above, and how will your solution help them? What is the persona or personas of your target user, and what outcomes will be achieved for the user and the organization? 
+Who experiences the problem that you defined above, and how will your solution help them? What is the persona or personas of your target user, and what outcomes will be achieved for the user and the organization?
 
 Consider:
 
@@ -32,10 +32,10 @@ Consider:
 
 ### Define your approach
 
-Identify how your solution will address the identified problem for your users. Specifically, what do your users need Copilot to do?
+Identify how your solution addresses the identified problem for your users. Specifically, what do your users need Copilot to do?
 
-- Improve decision-making, summarizations or recommendations? You might want to enhance Copilot’s reasoning abilities.
-- Integrate organizational knowledge from databases, documents or APIs? You might want to enable Copilot to access and use external data effectively.
+- Improve decision-making, summarizations, or recommendations? You might want to enhance Copilot’s reasoning abilities.
+- Integrate organizational knowledge from databases, documents, or APIs? You might want to enable Copilot to access and use external data effectively.
 - Reduce manual tasks by building automated flows? You might want to create automated workflows to streamline repetitive tasks.
 
 ### Define user prompts and interactions
@@ -51,7 +51,7 @@ Consider:
 
 Determine the requirements that your extensibility solution needs to meet.
 
-Consider the following:
+Consider the following factors:
 
 - **User experience requirements**
 Where will your users interact with Copilot? This might be within the context of Microsoft 365 apps (Copilot, Word, Excel, PowerPoint, Teams), or in third-party apps or websites.
@@ -74,7 +74,7 @@ Identify triggers, scheduled workflows, and automation needs.
 
 ## Define your solution
 
-Based on your assessment of your users’ needs and the technical requirements for your solution, identify what type or types of Copilot extensibility options you will build.
+Based on your assessment of your users’ needs and the technical requirements for your solution, identify what type or types of Copilot extensibility options you'll build.
 
 ### Microsoft Graph connectors
 
@@ -100,7 +100,7 @@ If you decide to build an agent to extend Copilot, you also need to decide the f
 | Custom Engine Agent| Copilot Studio                                        | • Visual Studio Code + Teams AI Library<br>• Visual Studio Code + Microsoft 365 Agent SDK (Preview)<br>• Visual Studio 2022<br>• (optionally Semantic Kernel) |
 
 - **Define your data sources**:  
-  Identify the data sources or plugins your agent needs. Data sources might be Microsoft 365 data (e.g., Teams messages, Mail, People, SharePoint sites or folders), Microsoft Graph connectors (prebuilt or custom), or plugins (for real-time data access or external actions). For more information, see the [Microsoft Graph connectors gallery](/microsoftsearch/connectors-gallery).
+  Identify the data sources or plugins your agent needs. Data sources might be Microsoft 365 data (e.g., Teams messages, Mail, People, SharePoint sites, or folders), Microsoft Graph connectors (prebuilt or custom), or plugins (for real-time data access or external actions). For more information, see the [Microsoft Graph connectors gallery](/microsoftsearch/connectors-gallery).
 
 - **Decide if you need a custom orchestrator**:  
   If your agent involves complex workflows, you might need a custom orchestrator. For information to help you design your solution, see [using Copilot Studio](/microsoft-copilot-studio/authoring-fundamentals), [Semantic Kernel](/semantic-kernel/overview/), or [LangChain](https://www.langchain.com/).
@@ -113,19 +113,19 @@ Consider the cost implications of your solution design, from both the user and t
 
 When designing an agent for Microsoft 365 Copilot, it's important to understand access and usage costs. Users can either access agents through a license or pay per use. Your agent will be available to users in one of three ways:
 
-- **M365 Copilot add-on user license** — Best for high-usage users (requires additional purchase).
-- **M365 Copilot Chat license** — Included at no extra cost for eligible Microsoft 365 users ([see eligibility](copilot/manage#microsoft-365--chat-eligibility)); ideal for occasional use.
-- **No license** — Available for guests or external users with metered consumption costs.
+- **M365 Copilot add-on user license:** Best for high-usage users (requires additional purchase).
+- **M365 Copilot Chat license:** Included at no extra cost for eligible Microsoft 365 users ([see eligibility](/copilot/manage#microsoft-365--chat-eligibility)); ideal for occasional use.
+- **No license:** Available for guests or external users with metered consumption costs.
 
-For more details, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing).
+For more information, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing).
 
 | License Type                | Cost                               | Best For                        | Agent Consumption Costs                                           |
 |-----------------------------|------------------------------------|---------------------------------|-------------------------------------------------------------------|
-| M365 Copilot User license   | Add-on license required            | Regular to high-usage users    | No additional costs                                                |
-| M365 Copilot Chat license   | No additional costs for [eligible Microsoft 365 users](/copilot/microsoft-365/microsoft-365-copilot-licensing) | Occasional users              | No cost for instruction/public website grounding; metered charges for shared tenant data (e.g., SharePoint, Microsoft Graph Connectors) |
+| Microsoft 365 Copilot User license   | Add-on license required            | Regular to high-usage users    | No additional costs                                                |
+| Microsoft 365 Copilot Chat license   | No additional costs for [eligible Microsoft 365 users](/copilot/microsoft-365/microsoft-365-copilot-licensing) | Occasional users              | No cost for instruction/public website grounding; metered charges for shared tenant data (e.g., SharePoint, Microsoft Graph Connectors) |
 | No license                  | Pay-per-use                        | Guest or external users        | Metered consumption charges                                       |
 
-For more information, see [Agents for Microsoft 365 Copilot Chat](/copilot/agents#enable-agents) and [Agent capabilities for Microsoft 365 users](https://prerequisites/#agent-capabilities-for-microsoft-365-users).
+For more information, see [Agents for Microsoft 365 Copilot Chat](/copilot/agents#enable-agents) and [Agent capabilities for Microsoft 365 users](prerequisites.md/#agent-capabilities-for-microsoft-365-users).
 
 #### Hosting Costs
 
@@ -133,14 +133,14 @@ Declarative agents are surfaced in Microsoft 365 at no additional cost. Hosting 
 
 ## Address AI and compliance considerations
 
-Whatever solution you choose, you’ll need to consider AI and compliance. Consider the following:
+Whatever solution you choose, you need to consider AI and compliance. Consider the following:
 
 - Does your Copilot extensibility solution require a specific LLM model or fine-tuning for specialized tasks, such as legal research or medical compliance? If so, for information about how to integrate the model with and optimize it for Copilot, see [How to Choose the Right Models for Your Apps | Azure AI](https://techcommunity.microsoft.com/blog/microsoftmechanicsblog/how-to-choose-the-right-models-for-your-apps--azure-ai/4271216?form=MG0AV3).
 - Make sure that your solution applies [Responsible AI (RAI) principles](https://www.microsoft.com/en-us/ai/responsible-ai), data governance, and store publishing (for ISVs) requirements.
 
 ## Outline your development approach
 
-After you choose your Copilot extensibility path, decide how you will structure your development process. Choose the appropriate development tools, such as Teams Toolkit, Copilot Studio, or Azure AI based on your use case.
+After you choose your Copilot extensibility path, decide how you'll structure your development process. Choose the appropriate development tools, such as Teams Toolkit, Copilot Studio, or Azure AI based on your use case.
 
 To build your solution, start with a minimum viable product (MVP), and then refine based on feedback and performance.
 The following table provides examples of extensibility solutions that use different Copilot extensibility options for various user scenarios.
