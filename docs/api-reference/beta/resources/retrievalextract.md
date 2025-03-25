@@ -16,14 +16,17 @@ doc_type: resourcePageType
 Represents a single extract within the list of retrieval extracts.
 
 ## Properties
+
 |Property|Type|Description|
 |:---|:---|:---|
 |text|String|The text extract received.|
 
 ## Relationships
+
 None.
 
 ## JSON representation
+
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
@@ -36,4 +39,3 @@ The following JSON representation shows the resource type.
   "text": "String"
 }
 ```
-

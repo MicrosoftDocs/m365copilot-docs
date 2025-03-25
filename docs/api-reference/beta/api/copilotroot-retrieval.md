@@ -9,6 +9,8 @@ ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---
 
+<!-- markdownlint-disable MD024 -->
+
 # copilotRoot: retrieval
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -17,7 +19,7 @@ Ground data for generative AI solutions. Allows the retrieval of relevant extrac
 
 ## Permissions
 
-Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](https://learn.microsoft.com/graph/permissions-overview?tabs=http#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](https://learn.microsoft.com/graph/permissions-overview?tabs=http#permission-types). To learn more about these permissions, see the [permissions reference](https://learn.microsoft.com/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- {
   "blockType": "permissions",
@@ -56,8 +58,6 @@ The following table lists the parameters that are required when you call this ac
 |resourceMetadata|String collection|A list of metadata fields to be returned for each item in the response. Optional.|
 |maximumNumberOfResults|Int32|The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional.|
 
-
-
 ## Response
 
 If successful, this action returns a `200 OK` response code and a [retrievalResponse](../resources/retrievalresponse.md) in the response body.
@@ -91,7 +91,6 @@ Content-Type: application/json
 }
 ```
 
-
 #### Response
 
 The following example shows the response. The first result is from SharePoint, and the second result is from Microsoft Graph connectors.
@@ -107,7 +106,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": 
+  "retrievalHits":
   {
     "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
     "extracts":[
@@ -116,7 +115,7 @@ Content-Type: application/json
       }
     ],
     "resourceType": "listItem",
-    "resourceMetadata": {  
+    "resourceMetadata": {
       "title": "VPN Access",
       "author": "John Doe"
     },
@@ -127,7 +126,7 @@ Content-Type: application/json
       "priority":4,
       "color":"#FF8C00",
       "isEncrypted":false
-    }           
+    }
   },
   {
     "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
@@ -139,10 +138,11 @@ Content-Type: application/json
     "resourceType": "externalItem",
     "resourceMetadata": {
       "title": "Corporate VPN"
-    } 
+    }
   }
 }
 ```
+
 ### Example 2: Retrieve data from multiple SharePoint sites
 
 The following example shows a request to retrieve data from multiple Sharepoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
@@ -170,7 +170,6 @@ Content-Type: application/json
 }
 ```
 
-
 #### Response
 
 The following example shows the response.
@@ -186,7 +185,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": 
+  "retrievalHits":
   {
     "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNAccess.docx",
     "extracts":[
@@ -195,7 +194,7 @@ Content-Type: application/json
       }
     ],
     "resourceType": "listItem",
-    "resourceMetadata": {  
+    "resourceMetadata": {
       "title": "VPN Access",
       "author": "John Doe"
     },
@@ -206,7 +205,7 @@ Content-Type: application/json
       "priority":4,
       "color":"#FF8C00",
       "isEncrypted":false
-    }           
+    }
   },
   {
     "webUrl": "https://contoso.sharepoint.com/sites/HR2/VPNConfig.docx",
@@ -227,7 +226,7 @@ Content-Type: application/json
       "priority":4,
       "color":"#FF8C00",
       "isEncrypted":false
-    }    
+    }
   }
 }
 ```
@@ -273,7 +272,7 @@ TTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": 
+  "retrievalHits":
   {
     "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
     "extracts":[
@@ -282,9 +281,9 @@ Content-Type: application/json
       }
     ],
     "resourceType": "externalItem",
-    "resourceMetadata": {  
+    "resourceMetadata": {
       "title": "Corporate VPN"
-    }         
+    }
   },
   {
     "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=dd681gd",
@@ -296,10 +295,11 @@ Content-Type: application/json
     "resourceType": "externalItem",
     "resourceMetadata": {
       "title": "VPN Instructions"
-    }  
+    }
   }
 }
 ```
+
 ### Example 4: Retrieve data from SharePoint Word files updated within a specific date range
 
 The following example shows a request to retrieve data from Word documents located in a specific SharePoint path that have been updated within a specific time period. The `filterExpression` parameter specifies the SharePoint path, file type, and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of two documents.
@@ -328,7 +328,6 @@ Content-Type: application/json
 }
 ```
 
-
 #### Response
 
 The following example shows the response.
@@ -344,7 +343,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": 
+  "retrievalHits":
   {
     "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
     "extracts":[
@@ -353,7 +352,7 @@ Content-Type: application/json
       }
     ],
     "resourceType": "listItem",
-    "resourceMetadata": {  
+    "resourceMetadata": {
       "title": "VPN Access",
       "author": "John Doe",
       "LastModifiedTime": "2024-06-14T20:57:00Z"
@@ -365,7 +364,7 @@ Content-Type: application/json
       "priority":4,
       "color":"#FF8C00",
       "isEncrypted":false
-    }          
+    }
   },
   {
     "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNConfig.docx",
@@ -387,11 +386,11 @@ Content-Type: application/json
       "priority":4,
       "color":"#FF8C00",
       "isEncrypted":false
-    }  
+    }
   }
 }
 ```
 
 ## Related content
 
-- [Overview of the Microsoft 365 Copilot Retrieval API](../resources/retrieval-api-overview.md)
+- [Overview of the Microsoft 365 Copilot Retrieval API](../../retrieval-api-overview.md)

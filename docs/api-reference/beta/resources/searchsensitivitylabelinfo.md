@@ -11,13 +11,12 @@ doc_type: resourcePageType
 
 # searchSensitivityLabelInfo resource type
 
-
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Describes the information protection label that details how to properly apply a sensitivity label to information.
 
-
 ## Properties
+
 |Property|Type|Description|
 |:---|:---|:---|
 |color|String|The color that the UI should display for the label, if configured.|
@@ -28,9 +27,11 @@ Describes the information protection label that details how to properly apply a 
 |tooltip|String|The tooltip that should be displayed for the label in a UI.|
 
 ## Relationships
+
 None.
 
 ## JSON representation
+
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
@@ -48,4 +49,3 @@ The following JSON representation shows the resource type.
   "isEncrypted": "Boolean"
 }
 ```
-

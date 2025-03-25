@@ -18,12 +18,15 @@ Represents a dictionary type.
 This resource is an open type.
 
 ## Properties
+
 None.
 
 ## Relationships
+
 None.
 
 ## JSON representation
+
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",

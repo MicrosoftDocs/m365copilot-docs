@@ -11,7 +11,6 @@ doc_type: resourcePageType
 
 # searchResourceMetadataDictionary resource type
 
-
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents a metadata dictionary type.
@@ -21,12 +20,15 @@ Inherits from [dictionaries](../resources/dictionaries.md).
 This resource is an open type.
 
 ## Properties
+
 None.
 
 ## Relationships
+
 None.
 
 ## JSON representation
+
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
@@ -38,4 +40,3 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.searchResourceMetadataDictionary"
 }
 ```
-

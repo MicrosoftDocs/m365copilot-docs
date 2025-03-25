@@ -11,20 +11,22 @@ doc_type: resourcePageType
 
 # retrievalResponse resource type
 
-
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents results from a retrieval query.
 
 ## Properties
+
 |Property|Type|Description|
 |:---|:---|:---|
 |retrievalHits|[retrievalHit](../resources/retrievalhit.md) collection|A collection of the retrieval results.|
 
 ## Relationships
+
 None.
 
 ## JSON representation
+
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
@@ -41,4 +43,3 @@ The following JSON representation shows the resource type.
   ]
 }
 ```
-

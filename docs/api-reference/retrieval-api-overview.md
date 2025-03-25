@@ -7,6 +7,7 @@ ms.localizationpriority: medium
 ms.date: 03/11/2025
 ms.topic: overview
 ---
+
 # Overview of the Microsoft 365 Copilot retrieval API (preview)
 
 The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences, unlocking the ability to enhance your custom engine agents with Microsoft 365 Copilot capabilities. The Microsoft 365 Copilot retrieval API allows you to ground your generative AI solutions with your Microsoft 365 and non-Microsoft knowledge, and returns relevant text chunks from the hybrid index that powers Microsoft 365 Copilot.
@@ -23,11 +24,11 @@ Imagine a consulting firm that specializes in providing tailored solutions for t
 
 ### Manage compliance and safety risks
 
-The retrieval API uses the built-in security and compliance features in Microsoft 365 to ensure that data source permissions and compliance settings are preserved. By indexing data in place, it prevents data leaks and ensures that sensitive information from one client is never accessible to another, which is essential for maintaining strict security and compliance standards. 
+The retrieval API uses the built-in security and compliance features in Microsoft 365 to ensure that data source permissions and compliance settings are preserved. By indexing data in place, it prevents data leaks and ensures that sensitive information from one client is never accessible to another, which is essential for maintaining strict security and compliance standards.
 
 ### Solve for relevancy and freshness
 
-The Microsoft 365 Copilot retrieval API provides access to the most accurate and up-to-date information to ensure that the data retrieved is fresh and relevant and eliminate the need to maintain separate, costly data pipelines. 
+The Microsoft 365 Copilot retrieval API provides access to the most accurate and up-to-date information to ensure that the data retrieved is fresh and relevant and eliminate the need to maintain separate, costly data pipelines.
 
 ### Lower cost of ownership and development effort
 
@@ -69,4 +70,4 @@ The retrieval API is available at no additional cost to users with a Microsoft 3
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Use the retrieval API](../api-reference/beta//api/copilotroot-retrieval.md)
+> [Use the retrieval API](../api-reference/beta/api/copilotroot-retrieval.md)
