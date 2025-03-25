@@ -20,7 +20,6 @@ This schema version introduces the following changes from [version 1.2](declarat
 
 - The [Dataverse](#dataverse-object) capability is added to the list of `capabilities`. It supports an array of objects in the `knowledge_sources` field that contain Dataverse instances.
 - The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `urls` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
-- The [Email](#email-object) capability is added to the list of `capabilities`. It supports a shared mailbox and an array of folder IDs for the agent to search.
 - The [People](#people-object) capability is added to the list of `capabilities`. This capability is unscoped and allows agents to search for information about people in an organization.
 
 ## JSON schema
@@ -85,7 +84,6 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Code interpreter object](#code-interpreter-object)
 - [Dataverse object](#dataverse-object)
 - [Teams messages object](#teams-messages-object)
-- [Email object](#email-object)
 - [People object](#people-object)
 
 > [!NOTE]
@@ -320,18 +318,6 @@ The Teams URL object contains the following properties.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `url` | String | Required. A well formatted Teams URL that links to either a Team channel, team, or meeting chat. |
-
-#### Email object
-
-Indicates that the declarative agent can search through email messages in the mailboxes that the user has access to.
-
-The Email object contains the following properties.
-
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `Email`. |
-| `shared_mailbox` | String | Optional. The SMTP address of a shared mailbox. |
-| `folders` | String | Optional. An array of [folder_id](#folders-object) objects. |
 
 ##### Folders object
 
