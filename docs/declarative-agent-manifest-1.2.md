@@ -12,13 +12,15 @@ ms.topic: reference
 
 This article describes the 1.2 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
+[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
+
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
 ## Changes from previous version
 
 This schema version introduces the following changes from [version 1.0](declarative-agent-manifest-1.0.md).
 
-- The `sites` property is added to the [web search object](#web-search-object). This allows the web search capability to be limited to allowed sites.
+- The `sites` property is added to the [web search object](#web-search-object). This property allows the web search capability to be limited to allowed sites.
 - The [graphic art](#graphic-art-object) capability was added. This capability allows the declarative agent to generate images and art based on user input.
 - The [code interpreter](#code-interpreter-object) capability was added. This capability allows the declarative agent to generate and execute Python code.
 
@@ -84,7 +86,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Code interpreter object](#code-interpreter-object)
 
 > [!NOTE]
-> Declarative agents with the OneDrive and SharePoint, Microsoft Graph connectors, graphic art, or code interpreter capability are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
+> Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
 
 #### Example of capabilities
 
@@ -155,7 +157,7 @@ The site object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `url`    | String | Required. An absolute URL to a site to be searched for content. The URL MUST NOT contain more than two path segments (for example, `https://contoso.com/projects/mark-8` is valid, `https://contoso.com/projects/mark-8/beta-program` is not valid). Search results will include data from additional path segments; however, scoping search to more than two path segments is not supported. The URL MUST NOT contain any query parameters. |
+| `url`    | String | Required. An absolute URL to a site to be searched for content. The URL MUST NOT contain more than two path segments (for example, `https://contoso.com/projects/mark-8` is valid, `https://contoso.com/projects/mark-8/beta-program` isn't valid). Search results include data from additional path segments; however, scoping search to more than two path segments isn't supported. The URL MUST NOT contain any query parameters. |
 
 #### OneDrive and SharePoint object
 
@@ -231,7 +233,7 @@ The graphic art object contains the following properties.
 
 Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more. For more information, see [Code interpreter](add-agent-capabilities.md#code-interpreter).
 
-The web search object contains the following properties.
+The code interpreter object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
