@@ -219,7 +219,7 @@ The people capability allows you to scope your agent to answer questions about i
 
 ### Enable people knowledge
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable email knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `People` capability.
