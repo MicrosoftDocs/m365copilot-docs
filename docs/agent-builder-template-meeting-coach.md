@@ -52,13 +52,16 @@ Meeting Coach agents are useful in scenarios that:
 
 ## Extension opportunities
 
-If you have a metered subscription or the appropriate license, you can enhance the functionality of your Meeting Coach agents by:
+You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. Here are some ideas:
 
 - **Connecting to your (CRM) solution:** Use a Power Platform Connector an API plugin to provide your agent access to details about your key account and customer contacts as well as to relevant products and projects. (Typically, CRM integration requires collaboration with your organizations service owners and IT department.)
 - **Connecting to SharePoint:** Connecting your agents is particularly useful for the following use cases:
     - **Customer engagement:** By connecting SharePoint sites that include meeting materials (sales pitches, customer information, etc.) you can create an agent specialized for customer follow-up.
     - **Standardizing meetings across teams:** By connecting SharePoint sites that include template files (agendas, meeting minutes, etc.), you can standardize how meetings are organized. You can also standardize how action items and results are recorded and reported at the end of the meeting.
 
-<!-- Limitations -->
+ <!-- Note about IT involvement -->
+[!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]
+
+## Limitations
 
 [!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]

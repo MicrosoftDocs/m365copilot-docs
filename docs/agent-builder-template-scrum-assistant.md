@@ -39,11 +39,11 @@ These agents are useful in scenarios such as:
 You can enhance the functionality of your Scrum Assistant agents by:
 
 - **Referencing company-specific Agile practices:** Add a SharePoint site or files containing company-specific Agile practices that are stored internally to align guidance with your organizational standards.
-- - **Linking with a Learning Management System (LMS):** Link with your preferred LMS to provide robust support for both recommending and registering for relevant courses, certifications, and workshops based on the user's role, experience, and aspirations. 
+- **Linking with your learning materials:** Consider Microsoft Graph Connectors or APIs to index Azure DevOps work items data. This way, you can allow your Scrum Assistant to provide more contextual advice and guidance.
 
 <!-- Note about IT involvement -->
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]
 
-<!-- Limitations -->
+## Limitations
 
 [!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]

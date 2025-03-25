@@ -43,16 +43,17 @@ These agents are useful for scenarios such as:
 
 ## Extension opportunities
 
-You can enhance the functionality of your Interview Question Assistant agents by 
+You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. Here are some ideas:
 
-Suggestions include:
-
-- **---:** 
-- **---:** 
+- **Scope your agent to a particular topic:** Connect a SharePoint site or files containing content relevant to the topic to create specialized Interview Assistant agents.
+- **Link to your interview training materials:** To expand your Interview Assistant's knowledge base and increase its usefulness, consider using Microsoft Graph Connectors or APIs to connect your Interview Assistant to your interview training tools.
 
 <!-- Note about IT involvement -->
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]
 
-<!-- Limitations -->
+## Limitations
 
 [!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]
+- This agent doesn't provide interview advice. The answers provided are based on configured knowledge sources or general knowledge and don't reflect the opinions of Microsoft.
+- While the agent can generate questions based on templates and job descriptions, it might not fully capture the unique nuances of every role. Customize questions as needed.
+- Ensure that the interview questions generated comply with local labor laws and regulations.

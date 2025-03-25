@@ -50,16 +50,16 @@ Career Coach agents are useful for tasks such as:
 
 ## Extension opportunities
 
-You can enhance the functionality of your Career Coach agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. 
+You can enhance the functionality of your Career Coach agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use.
 
 Suggestions for such connections include:
 
 - **Linking with a Learning Management System (LMS):** Link with your preferred LMS to provide robust support for both recommending and registering for relevant courses, certifications, and workshops based on the user's role, experience, and aspirations.
 - **Integrating with your HR and Talent Management Systems:** Provide more helpful and personalized responses by connecting the agent to internal HR databases or talent management systems.
 
-> [!NOTE]
-> Adding connections like this typically requires collaboration with the service owners and IT adminsSome There might be additional functionality that is only available for Copilot metered or licensed users.
+<!-- Note about IT involvement -->
+[!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]
 
-<!-- Limitations -->
+## Limitations
 
 [!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]
