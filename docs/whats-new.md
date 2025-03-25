@@ -22,7 +22,6 @@ A new version of the declarative agent manifest schema is available. [Declarativ
 
 - [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge)
 - [Teams messages as knowledge](add-agent-capabilities.md#teams-messages-as-knowledge)
-- [Email knowledge](add-agent-capabilities.md#email-knowledge)
 - [People knowledge](add-agent-capabilities.md#people-knowledge)
 
 ## February 2025
