@@ -125,7 +125,7 @@ For more information, see [License options for Microsoft 365 Copilot](/copilot/m
 | Microsoft 365 Copilot Chat license   | No additional costs for [eligible Microsoft 365 users](/copilot/microsoft-365/microsoft-365-copilot-licensing) | Occasional users              | No cost for instruction/public website grounding; metered charges for shared tenant data (e.g., SharePoint, Microsoft Graph Connectors) |
 | No license                  | Pay-per-use                        | Guest or external users        | Metered consumption charges                                       |
 
-For more information, see [Agents for Microsoft 365 Copilot Chat](/copilot/agents#enable-agents) and [Agent capabilities for Microsoft 365 users](prerequisites.md/#agent-capabilities-for-microsoft-365-users).
+For more information, see [Agents for Microsoft 365 Copilot Chat](/copilot/agents#enable-agents) and [Agent capabilities for Microsoft 365 users](/docs/prerequisites.md/#agent-capabilities-for-microsoft-365-users).
 
 #### Hosting Costs
 
