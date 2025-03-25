@@ -31,6 +31,7 @@ Scrum Assistant agents these agents support multiple languages and:
 These agents are useful in scenarios such as:
 
 | **Scenario** | **Description** |
+| -----------  | -----------  |
 | Improve operational efficiency   | Help reduce inefficiencies and support continuous improvement by streamlining Scrum ceremonies and improving sprint execution.   |
 | Boost productivity   | Fetch relevant Scrum insights automatically to enable teams to focus on their deliverables. |
 

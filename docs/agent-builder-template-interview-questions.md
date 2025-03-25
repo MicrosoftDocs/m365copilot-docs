@@ -34,6 +34,7 @@ The Interview Question Assistant support multiple languages and:can:
 These agents are useful for scenarios such as:
 
 | **Scenario** | **Description** |
+| -----------  | -----------  |
 | General interview preparation  | Offers guidance on what makes a good interview question and how to create them |
 | Role-specific interview preparation | Provides tailored interview questions and sample answers for specific roles, such as software developer positions or sales jobs  |
 | Template-based question generation   | Uses existing templates to create interview questions for a variety of roles |

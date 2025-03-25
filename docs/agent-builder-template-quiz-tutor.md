@@ -32,6 +32,7 @@ Quiz Tutor agents help users learn quickly. For instance, these agents support m
 These agents are useful for scenarios such as:
 
 | **Scenario** | **Use case** |
+| -----------  | -----------  |
 | Onboarding new employees   | Create interactive quizzes related to your organization's policies and key information |
 | Product training   | Test employee knowledge of new products and services  |
 | Compliance training | Create quizzes to cement employee knowledge of regulatory requirements and policies  |
