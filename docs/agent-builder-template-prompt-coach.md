@@ -20,9 +20,9 @@ The Prompt Coach declarative agent template is designed to help new Copilot user
 
 ## Capabilities
 
-Agents built on this template template provide:
+Agents built on this template provide:
 
-- Interactive prompt guidance to help users develop well-structured prompts through an iterative feedback process that assist in clarifying user goals, context, and expectations.
+- Interactive prompt guidance to help users develop well-structured prompts through an iterative feedback process that help clarify user goals, context, and expectations.
 - Detailed prompt analysis that evaluates and helps refine user prompts to ensure clarity, optimal phrasing, and compliance with Responsible AI guidelines.
 - Concrete prompt examples, with step-by-step explanations, to help users understand and apply AI prompt engineering best practices.
 
