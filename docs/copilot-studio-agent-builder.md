@@ -93,7 +93,7 @@ For general information, see [Microsoft feedback for your organization](https://
 
 ## Get support
 
-To get support, select **Send feedback** in Microsoft 365 Copilot.
+To get support, select **Send feedback** in Copilot Studio agent builder.
 
 In your feedback ticket, provide details about the issue you're facing and include the following pieces of information in the feedback dialog:
 
