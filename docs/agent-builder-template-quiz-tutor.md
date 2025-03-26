@@ -43,6 +43,7 @@ These agents are useful for scenarios such as:
 ## Extension opportunities
 
 You can enhance the functionality of your Quiz Tutor agents by
+
 - **Scoping your agent to a particular training or topic:** Add a SharePoint site or files that contain training materials for a specific topic to create an Agent specialized for a particular course. 
 - **Linking with a Learning Management System (LMS):** Link with your preferred LMS to provide robust support for both recommending and registering for relevant courses, certifications, and workshops based on the user's role, experience, and aspirations.
 

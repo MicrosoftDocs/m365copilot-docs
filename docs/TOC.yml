@@ -65,8 +65,12 @@
           href: agent-builder-template-career-coach.md
         - name: Customer Insight Assistant
           href: agent-builder-template-customer-insight.md
+        - name: Idea Coach
+          href: agent-builder-template-idea-coach.md
         - name: Interview Question Assistant
           href: agent-builder-template-interview-questions.md
+        - name: Learning Coach
+          href: agent-builder-template-learning-coach.md
         - name: Meeting Coach
           href: agent-builder-template-meeting-coach.md
         - name: Prompt Coach 
