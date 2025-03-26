@@ -47,12 +47,10 @@ Scenarios that a Customer Insight agent can be especially useful for include:
 
 ## Extension opportunities
 
-You can enhance the functionality of your --- agents by ---
+You can enhance the functionality of your Customer Insight agents in a number of ways. For example:
 
-Suggestions include:
-
-- **Targeting relevant enterprise data:** Connect the agent to a SharePoint document library that contains information on how to engage with customers and that provides best practices on how to move the relationship forward.
-- **Connecting to your (CRM) solution:** Use a Power Platform Connector an API plugin to provide your agent access to details about your key account and customer contacts as well as to relevant products and projects. (Typically, CRM integration requires collaboration with your organizations service owners and IT department.)
+- **Target relevant enterprise data:** Connect the agent to a SharePoint document library that contains information on how to engage with customers and that provides best practices on how to move the relationship forward.
+- **Connect to your (CRM) solution:** Use a Power Platform Connector an API plugin to provide your agent access to details about your key account and customer contacts as well as to relevant products and projects. (Typically, CRM integration requires collaboration with your organizations service owners and IT department.)
 - **Simplify creating customer materials:** Integrate the Customer Insight agent in Word and PowerPoint to help create targeted presentations, marketing materials, etc.
 
 <!-- Note about IT involvement -->

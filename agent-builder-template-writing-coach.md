@@ -35,7 +35,7 @@ These agents can provide helpful guidance in for things like:
 | Writing refinement | Provides a wide range of suggestions to help users refine their writing. Suggestions can include: ways to improve grammar, clarity, coherence, and key concepts and details to focus on.|
 | Targeting an audience | Suggests ways to tailor the voice and tone, and details of a document to your target audience. The agent provides examples of the suggested changes|
 | Writing for a global audience | Identifies wording that might be culturally sensitive and offers alternatives. |
-| Preparing instructions | Provides feature descriptions as well as clear and concise instructions for using products and services.   |
+| Preparing instructions | Provides feature descriptions as well as clear and concise instructions for using products and services.  |
 | Customer story writing | Asks for customer details and story goals, then provides suggestions for structuring the story with a clear beginning, middle, and end.  |
 | Creating whitepapers | Provides assistance in identifying the audience, generating topics, and structuring the document.  |
 
