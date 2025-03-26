@@ -1,6 +1,6 @@
 ---
 title: Create an Interview Question Assistant agent from a template
-description: Learn how to create a declarative agent from the *----*  template in Copilot Studio agent builder
+description: Learn how to create a declarative agent in Copilot Studio agent builder using the Interview Question Assistant template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
@@ -20,7 +20,7 @@ The Interview Question Assistant declarative agent template is designed to suppo
 
 ## Capabilities
 
-The Interview Question Assistant support multiple languages and:can:
+The Interview Question Assistant supports multiple languages and:can:
 
 - Help create effective and relevant interview questions that are:
     - tailored to specific roles and job descriptions

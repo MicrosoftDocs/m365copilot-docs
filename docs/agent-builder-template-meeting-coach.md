@@ -1,6 +1,6 @@
 ---
 title: Create an agent to help meeting organizers
-description: Learn how to create a declarative agent from the Meeting Coach template in Copilot Studio agent builder
+description: Learn how to create a declarative agent in Copilot Studio agent builder using the Meeting Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual

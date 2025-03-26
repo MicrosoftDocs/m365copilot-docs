@@ -1,6 +1,6 @@
 ---
 title: Create a Quiz Tutor agent to help users expand and cement their knowledge
-description: Learn how to create a declarative agent from the Quiz Tutor template in Copilot Studio agent builder
+description: Learn how to create a declarative agent in Copilot Studio agent builder using the Quiz Tutor template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual

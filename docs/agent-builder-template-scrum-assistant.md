@@ -1,6 +1,6 @@
 ---
 title: Create a Scrum Master Assistant agent to help Agile teams work effectively
-description: Learn how to create a declarative agent from the Scrum Assistant template in Copilot Studio agent builder
+description: Learn how to create a declarative agent in Copilot Studio agent builder using the Scrum Assistant template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
