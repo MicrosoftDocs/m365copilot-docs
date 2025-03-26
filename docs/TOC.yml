@@ -59,7 +59,6 @@
       - name: Build agents
         href: copilot-studio-agent-builder-build.md
       - name: Build from a template
-        expanded: false
         items:     
         - name: Career Coach 
           href: agent-builder-template-career-coach.md
