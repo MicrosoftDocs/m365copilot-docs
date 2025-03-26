@@ -68,9 +68,9 @@
         - name: Interview Question Assistant
           href: agent-builder-template-interview-questions.md
         - name: Meeting Coach
-         href: agent-builder-template-meeting-coach.md
+          href: agent-builder-template-meeting-coach.md
         - name: Prompt Coach 
-         href: agent-builder-template-prompt-coach.md
+          href: agent-builder-template-prompt-coach.md
         - name: Quiz Tutor
           href: agent-builder-template-quiz-tutor.md
         - name: Scrum Assistant
