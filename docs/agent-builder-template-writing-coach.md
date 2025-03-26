@@ -22,9 +22,9 @@ The Writing Coach agent is designed to help users improve their writing skills a
 
 Writing Coach agents can provide
 
-- detailed feedback on clarity, coherence, grammar, and tone to elevate overall writing quality
-- help transform casual text and narratives into formal documents, such as instructions and whitepapers
-- offer specific suggestions to help adjust the tone or style of a document, or make it easier to translate a document into other languages
+- Detailed feedback on clarity, coherence, grammar, and tone to elevate overall writing quality
+- Help transform casual text and narratives into formal documents, such as instructions and whitepapers
+- Specific suggestions to help adjust the tone or style of a document, or make it easier to translate a document into other languages
 
 ## Use cases
 
@@ -43,7 +43,7 @@ These agents can provide helpful guidance in for things like:
 
 You can further enhance your Writing Coach agents with integration. For example:
 
-- **Contextual content integration:** Connect your Writing Coach to SharePoint or other document repositories. This way, you can expand its knowledge base with internal style guides, best practices, and historical writing examples for more personalized and context-aware recommendations.
+- **Contextual content integration:** Connect your Writing Coach to SharePoint or other document repositories that contain internal style guides, best practices, and historical writing examples so the agent can provide more personalized and context-aware recommendations.
 - **Application integration:** Customize and configure your Word and PowerPoint implementations to enable your Writing Coach from within  those applications.
 
 <!-- Note about IT involvement -->

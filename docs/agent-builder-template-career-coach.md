@@ -29,9 +29,9 @@ Thanks to it's professional and supportive tone, interactions with the Career Co
 
 Agents built on the Career Coach template can offer:
 
-- **Personalized career roadmapping:** detailed career development plans and actionable advice based on the user's role, skills, and career aspirations
-- **Comprehensive Skill Analysis:** targeted skill gap analysis to identify areas for growth and recommendations for tailored learning opportunities
-- **Holistic Career Support:** guidance on career transitions, performance improvement, and strategic networking
+- Personalized career roadmapping that includes detailed career development plans and actionable advice based on the user's role, skills, and career aspirations
+- Comprehensive skill gap analysis to identify target areas for growth and recommendations for tailored learning opportunities
+- Holistic career support, including guidance on career transitions, performance improvement, and strategic networking
 
 Additionally, organizers can use these agents during meetings to keep a meeting on track and encourage people to participate.
 

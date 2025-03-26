@@ -20,7 +20,7 @@ The Scrum Master declarative agent is designed to support Scrum Masters and Agil
 
 ## Capabilities
 
-Scrum Assistant agents these agents support multiple languages and:
+Scrum Assistant agents these agents support multiple languages and can:
 
 - Provide real-time guidance on Scrum ceremonies, backlog management, and best practices for Agile development
 - Use trusted Scrum resources and team artifacts to offer data-driven recommendations
@@ -32,8 +32,8 @@ These agents are useful in scenarios such as:
 
 | **Scenario** | **Description** |
 | -----------  | -----------  |
-| Improve operational efficiency   | Help reduce inefficiencies and support continuous improvement by streamlining Scrum ceremonies and improving sprint execution.   |
-| Boost productivity   | Fetch relevant Scrum insights automatically to enable teams to focus on their deliverables. |
+| Improve operational efficiency | Helps reduce inefficiencies and support continuous improvement with suggestions for streamlining Scrum ceremonies and improving sprint execution.   |
+| Boost productivity   | Fetches relevant Scrum insights automatically to enable teams to focus on their deliverables. |
 
 ## Extension opportunities
 

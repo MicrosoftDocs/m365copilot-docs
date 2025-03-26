@@ -20,7 +20,7 @@ The Quiz Tutor template creates fun, bite-sized, and quizzes based on predefined
 
 ## Capabilities
 
-Quiz Tutor agents help users learn quickly. For instance, these agents support multiple languages and:
+Quiz Tutor agents help users learn quickly. For instance, these agents support multiple languages and can:
 
 - Create fun and engaging quizzes based on the associated training content
 - Provide coaching on answers, praise for correct answers, and offers to explain incorrect answers

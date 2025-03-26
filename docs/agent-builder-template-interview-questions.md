@@ -20,7 +20,7 @@ The Interview Question Assistant declarative agent template is designed to suppo
 
 ## Capabilities
 
-The Interview Question Assistant supports multiple languages and:can:
+The Interview Question Assistant supports multiple languages and can:
 
 - Help create effective and relevant interview questions that are:
     - tailored to specific roles and job descriptions
