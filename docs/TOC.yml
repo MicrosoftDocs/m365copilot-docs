@@ -47,7 +47,7 @@
       - name: Interview Question Assistant
         href: agent-builder-template-interview-questions.md
       - name: Meeting Coach
-        href: agent-builder-meeting-coach.md
+        href: agent-builder-template-meeting-coach.md
       - name: Prompt Coach 
         href: agent-builder-template-prompt-coach.md
       - name: Quiz Tutor
@@ -55,7 +55,7 @@
       - name: Scrum Assistant
         href: agent-builder-template-scrum-assistant.md
       - name: Writing Coach
-        href: agent-builder-writing-coach.md
+        href: agent-builder-template-writing-coach.md
     - name: Use Visual Studio Code
       expanded: true
       items:
