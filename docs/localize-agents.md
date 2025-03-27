@@ -66,7 +66,7 @@ The following example shows a language file, `fr.json`, with localized strings f
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json`",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json",
     "name.short": "Agent de Communications",
     "name.full": "Agent pour les Communications",
     "description.short": "Outils pour les professionnels de la communication",
