@@ -231,9 +231,10 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
         }
       ]
 ```
+
 ## Teams messages as knowledge
 
-The Teams messages capability allows agents to use Teams channels, meeting chats, and teams as a knowledge source. You can choose to specify up to five links to teams, channels, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
+The Teams messages capability allows agents to use Teams channels, meeting chats, group chats, 1:1 chats, and teams as a knowledge source. You can choose to specify up to five links to teams, channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
 
 Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has the `OneDriveAndSharePoint` capability enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
@@ -255,9 +256,26 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 }
 ```
 
-To get the URL for a Teams team or channel, choose the three dots (...) next to the team or channel name and choose **Get link to team** or **Get link to channel**. 
+#### Get the URL for team, channel, or meeting
+
+To get the URL for a Teams team or channel, choose the three dots (...) next to the team or channel name and choose **Get link to team** or **Get link to channel**.
 
 To get the URL for a Teams meeting, open the meeting, choose the arrow next to **Join**, and choose **Copy join link**.
+
+#### Get the URL for group or 1:1 chat
+
+To get the URL for a group or 1:1 chat, you need a deep link that includes the **chatId**. The deep link has the following format: `https://teams.microsoft.com/l/chat/<chatId>/conversations`. The **chatId** value is different for each chat.
+
+To get the **chatId** value for a group or 1:1 chat:
+
+1. In Microsoft Teams, go to any message in the chat.
+2. Hover over the message and choose the three dots (...).
+3. Select **Copy link**.  
+4. Paste the link into Notepad or a similar application. The link will look similar to the following: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces//1743033793614?context=%7B%22contextType%22%3A%22chat%22%7D`.
+5. Copy the segment of the URL that falls between `chat/` and the next `/`. The segment is generally prefaced with `19:`. This is the **chatId**. In the previous example, the **chatId** is `19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces`.  
+6. Add the **chatId** to the deep link. For example: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces/conversations`.
+
+For more information, see [Deep link to Teams chat](/microsoftteams/platform/concepts/build-and-test/deep-link-teams).
 
 ## Related content
 
