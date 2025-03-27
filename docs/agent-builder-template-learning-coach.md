@@ -12,8 +12,7 @@ ms.date: 04/01/2025
 
 ## Overview
 
-The Learning Coach declarative agent template agent is designed to help users understand complex topics by breaking them down into simple, intermediate, and detailed summaries. It creates structured learning plans, and helps users practice skills and prepare for tests. Theses agents provide tailored exercises, guide optimal learning processes, and offer interactive language practices. Key features include creating detailed learning plans, performing knowledge gap analyses, recommending educational resources, and offering study techniques.
-
+The Learning Coach declarative agent template is designed to help users understand complex topics by breaking them down into simple, intermediate, and detailed summaries. It creates structured learning plans, and helps users practice skills and prepare for tests. Theses agents provide tailored exercises, guide optimal learning processes, and offer interactive language practice.
 
 ## Prerequisites
 
@@ -37,8 +36,8 @@ These agents are useful in scenarios such as:
 | ----------   | ----------  |
 | Content comprehension | Helps learners comprehend complex topics by breaking them down into simpler chunks. |
 | Knowledge reinforcement | Guides learners through exercises on the skills and knowledge that they already have. |
-| Learning plan customization | Helps create a tailored learning plan to best fit the needs of the user by assessing the learner's existing knowledge and asking questions about their preferred approach to learning.  |
-| Test preparation | Helps learners prepare for academic or certification exams |
+| Learning plan customization | Helps create tailored learning plans to best fit the needs of the user by assessing the learner's existing knowledge and asking questions about their preferred approach to learning.  |
+| Test preparation | Helps learners prepare for academic and certification exams |
 | Language education | Facilitates learning new languages based on the user's current knowledge |
 
 ## Extension opportunities

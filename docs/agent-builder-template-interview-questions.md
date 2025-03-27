@@ -25,7 +25,7 @@ The Interview Question Assistant supports multiple languages and can:
 - Help create effective and relevant interview questions that are:
     - tailored to specific roles and job descriptions
     - clear, concise, and aligned to the given job requirements
-- Adapt the complexity of questions based on the level of the specified position
+- Adapt the complexity of suggested interview questions based on the level of the specified position
 - Generate both questions and sample answers based on the job descriptions the user provides
 - Provide guidance on best practices for interviewing, such as offering tips on how to frame questions to assess various competencies and skills
 
@@ -47,7 +47,7 @@ These agents are useful for scenarios such as:
 You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. Here are some ideas:
 
 - **Scope your agent to a particular topic:** Connect a SharePoint site or files containing content relevant to the topic to create specialized Interview Assistant agents.
-- **Link to your interview training materials:** To expand your Interview Assistant's knowledge base and increase its usefulness, consider using Microsoft Graph Connectors or APIs to connect your Interview Assistant to your interview training tools.
+- **Link to your interview training materials:** To expand your Interview Assistant's knowledge base and increase its usefulness, connect your Interview Assistant to your interview training tools.
 
 <!-- Note about IT involvement -->
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]
