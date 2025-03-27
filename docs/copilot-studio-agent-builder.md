@@ -89,11 +89,11 @@ In your feedback submission, specify that the issue is related to **Copilot Stud
 
 Administrators can define a cloud policy to control whether feedback is collected in their tenant, and whether optional data such as log files and screenshots can be included in user-initiated feedback. For more information, see [Cloud Policy in Microsoft 365 Apps admin center](/microsoft-365-apps/admin-center/overview-cloud-policy).
 
-For general information, see [Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/misc/feedback-user-control?view=o365-worldwide).
+For general information, see [Microsoft feedback for your organization](/microsoft-365/admin/misc/feedback-user-control?view=o365-worldwide).
 
 ## Get support
 
-To get support, select **Send feedback** in Microsoft 365 Copilot.
+To get support, select **Send feedback** in Copilot Studio agent builder.
 
 In your feedback ticket, provide details about the issue you're facing and include the following pieces of information in the feedback dialog:
 
