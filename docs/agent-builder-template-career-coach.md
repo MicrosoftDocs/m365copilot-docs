@@ -14,11 +14,6 @@ ms.date: 04/01/2025
 
 The Career Coach declarative agent template provides personalized suggestions and action plans to help users grow and advance in their careers. The career coach offers tailored advice on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.  
 
-- creating detailed career development plans
-- performing skill gap analyses
-- recommending learning resources
-- offering networking strategies
-
 Thanks to it's professional and supportive tone, interactions with the Career Coach are contextual relevant, and encouraging.
 
 ## Prerequisites
@@ -32,6 +27,7 @@ Agents built on the Career Coach template can offer:
 - Personalized career roadmapping that includes detailed career development plans and actionable advice based on the user's role, skills, and career aspirations
 - Comprehensive skill gap analysis to identify target areas for growth and recommendations for tailored learning opportunities
 - Holistic career support, including guidance on career transitions, performance improvement, and strategic networking
+- Recommended learning opportunities
 
 Additionally, organizers can use these agents during meetings to keep a meeting on track and encourage people to participate.
 
