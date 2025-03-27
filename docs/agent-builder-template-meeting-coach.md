@@ -31,15 +31,17 @@ The Meeting Coach declarative agent template is designed to assist meeting organ
 
 Agents built on the Meeting Coach template can help meeting organizers:
 
-- create an agenda
+- create agendas
+- prepare invite emails
 - assign meeting roles
 - prepare invite emails
+- taking meeting notes
 
 Additionally, organizers can use these agents during meetings to keep a meeting on track and encourage people to participate.
 
 ## Use cases
 
-Meeting Coach agents are useful in scenarios that:
+Meeting Coach agents are useful for many kinds of meetings, such as:
 
 | **Meeting type** | **Purpose** |
 | ----------   | ----------  |
@@ -53,10 +55,9 @@ Meeting Coach agents are useful in scenarios that:
 
 You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. Here are some ideas:
 
-- **Connecting to your (CRM) solution:** Use a Power Platform Connector an API plugin to provide your agent access to details about your key account and customer contacts as well as to relevant products and projects.
-- **Connecting to SharePoint:** Connecting your agents is particularly useful for the following use cases:
-    - **Customer engagement:** By connecting SharePoint sites that include meeting materials (sales pitches, customer information, etc.) you can create an agent specialized for customer follow-up.
-    - **Standardizing meetings across teams:** By connecting SharePoint sites that include template files (agendas, meeting minutes, etc.), you can standardize how meetings are organized. You can also standardize how action items and results are recorded and reported at the end of the meeting.
+- **Connect to your (CRM) solution:** Use a Power Platform Connector an API plugin to give your agent access to details about your key accounts and customer contacts as well as to relevant products and projects.
+- **Increase customer engagement:** Connect your agents to SharePoint sites that include meeting materials (sales pitches, customer information, etc.) you can create an agent specialized for customer follow-up.
+- **Standardize meetings across teams:** By connecting SharePoint sites that include template files (agendas, meeting minutes, etc.), you can standardize how meetings are organized. You can also standardize how action items and results are recorded and reported at the end of the meeting.
 
  <!-- Note about IT involvement -->
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]

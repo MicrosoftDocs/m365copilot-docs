@@ -12,7 +12,7 @@ ms.date: 04/01/2025
 
 ## Overview
 
-The Prompt Coach declarative agent template is designed to help new Copilot users create effective prompts. Acting as a supportive teacher, it guides users through prompt generation, analysis, and improvement. Key features include helping create well-structured prompts, providing feedback, ensuring compliance with Responsible AI guidelines, troubleshooting, and suggesting examples.
+The Prompt Coach declarative agent template is designed to help new Copilot users create effective prompts. Acting as a supportive teacher, these agents guide users through prompt generation, analysis, and improvement.
 
 ## Prerequisites
 
@@ -41,9 +41,9 @@ Prompt Coach agents are optimized for the following tasks:
 
 ## Extension opportunities
 
-You can further enhance your Writing Coach agents with integration. For example:
+You can further enhance your Prompt Coach agents with integrations including:
 
-- **Contextual resource integration:** Connect your Prompt Coach to SharePoint or other document repositories that contain domain information, prompt guidelines, and your organization's best practices for Responsible AI.
+- **Contextual resources:** Connect your Prompt Coach to SharePoint or other document repositories that contain domain information, prompt guidelines, and your organization's best practices for Responsible AI.
 - **Prompt libraries:** Add connectors to pull from  prompt repositories across your organization to enable and encourage prompt sharing and collaborative learning about how to write more effective prompts.
 
 <!-- Note about IT involvement -->
