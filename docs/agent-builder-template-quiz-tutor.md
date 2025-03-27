@@ -12,7 +12,7 @@ ms.date: 04/01/2025
 
 ## Overview
 
-The Quiz Tutor template creates fun, bite-sized, and quizzes based on predefined training content. These quizzes can even be interactive, making the learning process interactive and engaging. It aims to enhance the user's understanding and retention of the material through varied and interesting questions while providing coaching and feedback to support learning.
+The Quiz Tutor template creates fun, bite-sized quizzes based on predefined training content. These quizzes can even be interactive, making the learning process more engaging. The template is designed to enhance a user's understanding and retention of the material. To do this, it uses varied and interesting questions and provides coaching and feedback to support learning.
 
 ## Prerequisites
 
@@ -23,9 +23,9 @@ The Quiz Tutor template creates fun, bite-sized, and quizzes based on predefined
 Quiz Tutor agents help users learn quickly. For instance, these agents support multiple languages and can:
 
 - Create fun and engaging quizzes based on the associated training content
-- Provide coaching on answers, praise for correct answers, and offers to explain incorrect answers
-- Use clear language, not technical jargon
+- Provide coaching on answers, praise for correct answers, with offers to explain incorrect answers
 - Adapt the difficulty of the questions based on user performance
+- Use clear language, not technical jargon
 
 ## Use cases
 
@@ -36,15 +36,15 @@ These agents are useful for scenarios such as:
 | Onboarding new employees   | Create interactive quizzes related to your organization's policies and key information |
 | Product training   | Test employee knowledge of new products and services  |
 | Compliance training | Create quizzes to cement employee knowledge of regulatory requirements and policies  |
-| Skill development    | Help employees develop skills or improve existing ones |
+| Skill development    | Help employees develop and improve their skills |
 | Customer Service training | Quiz employees on best practices for various customer service scenarios |
 | Continuous learning   | Help employees learn about industry trends and new technologies.  |
 
 ## Extension opportunities
 
-You can enhance the functionality of your Quiz Tutor agents by
+You can enhance the functionality of your Quiz Tutor agents by:
 
-- **Scoping your agent to a particular training or topic:** Add a SharePoint site or files that contain training materials for a specific topic to create an Agent specialized for a particular course. 
+- **Scoping your agent to a particular training or topic:** Connect a SharePoint site or files that contain training materials for a specific topic to create a Quiz Tutor agent specialized for a particular course.
 - **Linking with a Learning Management System (LMS):** Link with your preferred LMS to provide robust support for both recommending and registering for relevant courses, certifications, and workshops based on the user's role, experience, and aspirations.
 
 <!-- Note about IT involvement -->
