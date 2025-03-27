@@ -87,7 +87,7 @@ For each language file, specify the following properties from the app localizati
 
 | Manifest field | Description | Max length| Required |
 |--|--|--|--|
-| `@schema` | The URL to the localization schema. For agents, use devPreview: `https://developer.microsoft.com/en-us/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
+| `$schema` | The URL to the localization schema. For agents, use devPreview: `https://developer.microsoft.com/en-us/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
 | `name.short` | Replaces the short name from the app manifest with the value provided. | 30 characters | ✔️ |
 | `name.full` | Replaces the full name from the app manifest with value provided | 100 characters | ✔️ |
 | `description.short`| Replaces the short description from the app manifest with value provided. | 80 characters | ✔️ |
