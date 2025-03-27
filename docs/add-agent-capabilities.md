@@ -271,7 +271,7 @@ To get the **chatId** value for a group or 1:1 chat:
 1. In Microsoft Teams, go to any message in the chat.
 2. Hover over the message and choose the three dots (...).
 3. Select **Copy link**.  
-4. Paste the link into Notepad or a similar application. The following example shows the format of a message link: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces//1743033793614?context=%7B%22contextType%22%3A%22chat%22%7D`.
+4. Paste the link into Notepad or a similar application. The link will look similar to the following: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces//1743033793614?context=%7B%22contextType%22%3A%22chat%22%7D`.
 5. Copy the segment of the URL that falls between `chat/` and the next `/`. The segment is generally prefaced with `19:`. This is the **chatId**. In the previous example, the **chatId** is `19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces`.  
 6. Add the **chatId** to the deep link. For example: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces/conversations`.
 
