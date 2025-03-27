@@ -52,7 +52,7 @@ You can enhance the functionality of your Interview Question Assistant agents by
 <!-- Note about IT involvement -->
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]
 
-## Limitations
+<!-- Limitations -->
 
 [!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]
 - This agent doesn't provide interview advice. The answers provided are based on configured knowledge sources or general knowledge and don't reflect the opinions of Microsoft.

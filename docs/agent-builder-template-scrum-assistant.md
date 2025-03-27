@@ -45,6 +45,5 @@ You can enhance the functionality of your Scrum Assistant agents by:
 <!-- Note about IT involvement -->
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]
 
-## Limitations
-
+<!-- Limitations -->
 [!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]

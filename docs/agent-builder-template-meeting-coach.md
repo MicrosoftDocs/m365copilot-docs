@@ -19,8 +19,7 @@ The Meeting Coach declarative agent template is designed to assist meeting organ
 - assign meeting roles
 - prepare meeting invitations
 - keep meetings on track
-- encouraging participation
-- assigning action items
+- encouraging participation- assigning action items
 
  Agents built from this template help ensure that meetings are productive, engaging, and well-organized. You can even customize the agent's knowledge base to fit your needs with internal knowledge sources and publicly available websites.
 
@@ -62,6 +61,5 @@ You can enhance the functionality of your Interview Question Assistant agents by
  <!-- Note about IT involvement -->
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]
 
-## Limitations
-
+<!-- Limitations -->
 [!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]
