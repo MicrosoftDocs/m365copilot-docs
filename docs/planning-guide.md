@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 Copilot Extensibility Planning Guide
-description: This guide helps developers plan their Copilot extensibility journey with key considerations and steps.
+description: Plan your Copilot extensibility journey by following the key steps and considerations.
 author: jessicaaawu
 ms.author: wujessica
 ms.topic: conceptual
@@ -9,26 +9,26 @@ ms.date: 3/24/2025
 ms.custom: [copilot-learning-hub]
 ---
 
-# Copilot extensibility planning guide
+# Microsoft 365 Copilot extensibility planning guide
 
-Microsoft 365 Copilot is an AI-powered productivity tool. You can build extensibility solutions that tailor and enhance the Copilot experience for your users to meet your organization's unique business needs. This article provides the key steps to follow to help you plan your Copilot extensibility solution.
+Microsoft 365 Copilot is an AI-powered productivity tool that combines knowledge and skills to assist users in the flow of their work. You can build extensibility solutions that tailor and enhance the Copilot experience for your users to meet your organization's unique business needs. Planning is an important first step in designing and building your extensibility solution. This article provides the key steps to follow to help you plan your Copilot extensibility solution.
 
 ## Define your objectives
 
-Before you start to build your Copilot extensibility solution, define the purpose and scope of your solution. To do this, identify the problem you're solving and who your target users are, and then map out relevant user scenarios.
+Before you design your Copilot extensibility solution, define the purpose and scope of your solution. This involves the following steps:
 
-## Identify the problem
+- Identify the problem you're solving.
+- Understand your target users.
+- Define how your solution can address the business problem.
 
 To start, define the specific challenge or productivity gap that you need to address. Identify the inefficiencies, pain points, or unmet needs that exist for your users. After you identify the problem that you need to solve, you can explore how to provide value by extending Copilot.
 
 Consider what you know about your target users, and how you can help them with their productivity needs. Identify the user persona or personas you're targeting, and the outcomes you want to achieve for the organization. Consider the following questions:
 
 - Will the number of potential users impact design choices, such as consumption costs?
-- Do your users have Copilot licenses? If not, what are the adoption or cost considerations? For details, see [cost considerations](#cost-considerations).
+- Do your users have Copilot licenses? If not, what are the adoption or cost considerations? For details, see [Cost considerations](#cost-considerations).
 
-### Define your approach
-
-After you define the problem or business need that you need to address, identify how you can extend Copilot to solve or mitigate the problem. TWhat do your users need Copilot to do? Use the information in the following table to guide your thinking.
+After you define the problem or business need that you need to address, identify how you can extend Copilot to solve or mitigate the problem. What do your users need Copilot to do? Use the information in the following table to guide your thinking.
 
 | Business need | Copilot extensibility approach |
 |:------------------|:---------|
@@ -55,9 +55,9 @@ Consider the following factors:
 
     Does Copilot or your solution require internal or external data, such as documents, applications, APIs, or databases? For example:
 
-      - Do you need to integrate external data into Microsoft 365 apps for contextually relevant responses?
-      - Do you need to interact with real-time data for business workflows?
-      - Do you need to interact with other applications to retrieve or update data, run commands, or trigger workflows?
+    - Do you need to integrate external data into Microsoft 365 apps for contextually relevant responses?
+    - Do you need to interact with real-time data for business workflows?
+    - Do you need to interact with other applications to retrieve or update data, run commands, or trigger workflows?
 
 - **Data source integration options**
 
@@ -88,8 +88,8 @@ If Microsoft Graph connectors alone don't meet your needs, you can build an agen
 
 If you decide to build an agent, you need to determine the following:
 
-- The type of agent to build. Depending on your scenario, you might build a declarative agent or a custom engine agent. For information to help you choose the right type of agent to build, see [Your extensibility options for Microsoft 365 Copilot](decision-guide.md).
-- Whether to use a low-code or a pro-code approach to building your agent.
+- The **type of agent** to build. Depending on your scenario, you might build a declarative agent or a custom engine agent. For information to help you choose the right type of agent to build, see [Your extensibility options for Microsoft 365 Copilot](decision-guide.md).
+- Whether to use a **low-code or pro-code** approach to building your agent.
 
 The following table lists the low-code and pro-code options that are available based on the type of agent you plan to build.
 
@@ -97,8 +97,6 @@ The following table lists the low-code and pro-code options that are available b
 |-------------------|--------------------------------------------------------|------------------------------------------------------------|
 | Declarative agent | • Copilot Studio agent builder<br>• Copilot Studio      | Visual Studio Code + Teams Toolkit                          |
 | Custom engine agent| Copilot Studio                                        | • Visual Studio Code + Teams AI Library<br>• Visual Studio Code + Microsoft 365 Agent SDK (Preview)<br>• Visual Studio 2022<br>• Semantic Kernel (optional) |
-
-For more information about development tools, see [Choose your development tool](declarative-agent-tool-comparison.md).
 
 Next, identify the data sources or plugins your agent needs. Data sources might be Microsoft 365 data (Teams messages, email, people, SharePoint sites or folders), Microsoft Graph connectors (prebuilt or custom), or plugins (for real-time data access or external actions).
 
@@ -118,7 +116,12 @@ When you design an agent for Microsoft 365 Copilot, it's important to understand
 | Microsoft 365 Copilot Chat license   | No additional costs for [eligible Microsoft 365 users](/copilot/microsoft-365/microsoft-365-copilot-licensing) | Occasional users              | No cost for instruction/public website grounding; metered charges for shared tenant data (SharePoint, Microsoft Graph connectors) |
 | No license                  | Pay-per-use                        | Guest or external users        | Metered consumption charges                                       |
 
-For more information about license options, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing). For more information about agent capabilities, see [Agents for Microsoft 365 Copilot Chat](/copilot/agents#enable-agents) and [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+For more information about license options, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing). 
+
+For more information about agent capabilities, see the following resources:
+
+- [Agents for Microsoft 365 Copilot Chat](/copilot/agents#enable-agents)
+- [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
 ### Hosting costs
 
@@ -137,9 +140,7 @@ After you choose your Copilot extensibility path, decide how you'll structure yo
 
 The following table provides examples of extensibility solutions that use different Copilot extensibility options for various user scenarios.
 
-The following table provides examples of extensibility solutions that use different Copilot extensibility options for various user scenarios.
-
-| Technology                         | Use case                        | Example                                                                 |
+| Extensibility type                         | Use case                        | Example                                                                 |
 |-------------------------------------|---------------------------------|-------------------------------------------------------------------------|
 | Microsoft Graph connector           | IT support assistant            | A global company integrates the ServiceNow connector to enhance IT support with Copilot. Employees use Copilot to search troubleshooting guides, check ticket statuses, and submit service requests. The connector pulls data from ServiceNow, enabling real-time access to knowledge base articles and IT tickets. This integration improves self-service capabilities, reduces resolution times, and enhances overall IT support efficiency. |
 | Microsoft Graph connector           | Customer information integration | A sales team uses the Salesforce Microsoft Graph connector to improve customer retention and streamline workflows within Microsoft 365. Sales representatives can now quickly search and retrieve up-to-date customer data, such as Opportunities, Leads, and Accounts, directly from Copilot. With AI-assisted insights and recommendations, they can better personalize interactions and make informed decisions, boosting sales performance and reducing time spent switching between platforms. |
@@ -153,3 +154,4 @@ The following table provides examples of extensibility solutions that use differ
 - [Agents overview](decision-guide.md)
 - [Microsoft Graph connectors overview](overview-graph-connector.md)
 - [Set up your dev environment](prerequisites.md)
+- [Choose your development tool](declarative-agent-tool-comparison.md)
