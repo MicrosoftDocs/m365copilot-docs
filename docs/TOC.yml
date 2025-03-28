@@ -35,16 +35,8 @@
       href: overview-declarative-agent.md
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
-    - name: Write effective instructions
-      href: declarative-agent-instructions.md
-    - name: Add agent capabilities
-      href: add-agent-capabilities.md
-    - name: Optimize SharePoint content retrieval
-      href: optimize-sharepoint-content.md
-    - name: Localize your agent
-      href: localize-agents.md
-    - name: RAI validation
-      href: rai-validation.md
+    - name: Choose your development tool
+      href: declarative-agent-tool-comparison.md
     - name: Use Visual Studio Code
       expanded: true
       items:
@@ -54,6 +46,8 @@
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference
         items:
+        - name: Version 1.3
+          href: declarative-agent-manifest-1.3.md
         - name: Version 1.2
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
@@ -70,6 +64,16 @@
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+    - name: Write effective instructions
+      href: declarative-agent-instructions.md
+    - name: Add capabilities and knowledge sources
+      href: add-agent-capabilities.md
+    - name: Optimize SharePoint content retrieval
+      href: optimize-sharepoint-content.md
+    - name: Localize your agent
+      href: localize-agents.md
+    - name: RAI validation
+      href: rai-validation.md
   - name: Build a custom engine agent
     expanded: false
     items:

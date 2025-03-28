@@ -20,7 +20,7 @@ ms.topic: how-to
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - An existing REST API with an OpenAPI specification (this walkthrough uses the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin))
-- [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.12 later
+- [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.14 later
 - [Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit)
 - Optional: [Microsoft Kiota Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-graph.kiota)
 
@@ -29,15 +29,13 @@ ms.topic: how-to
 
 To follow along with this guide, download the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin) and configure it to run on your local development machine. Build the sample at least once to generate the **BudgetTracker.json** file for the API.
 
-## Enable plugin development in Teams Toolkit
+## Optional: Enable Kiota for plugin development in Teams Toolkit
 
 [!INCLUDE [toolkit-version-note](includes/toolkit-version-note.md)]
 
 1. Open Visual Studio Code. If Teams Toolkit isn't already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
 
-1. Select **File** -> **Preferences** -> **Settings**. In the **Settings** window, search for `copilot` to locate the **Fx-extension: Develop Copilot Plugin** option. If not already enabled, enable the setting.
-
-1. In the **Settings** window, search for `kiota` to locate the **Fx-extension: Enable Microsoft Kiota** option. If you want to enable Kiota, enable this option. Otherwise, disable it. For details, see [Benefits of enabling Microsoft Kiota](#benefits-of-enabling-microsoft-kiota).
+1. Select **File** -> **Preferences** -> **Settings**. In the **Settings** window, search for `kiota` to locate the **Fx-extension: Enable Microsoft Kiota** option. If you want to enable Kiota, enable this option. Otherwise, disable it. For details, see [Benefits of enabling Microsoft Kiota](#benefits-of-enabling-microsoft-kiota).
 
 1. If you made any changes to settings, restart Visual Studio Code before proceeding.
 
@@ -64,9 +62,9 @@ API plugins are a ZIP file that contains the following files.
 
     :::image type="content" source="assets/images/api-plugins/create-plugin-ttk.png" alt-text="A screenshot of the Teams Toolkit interface":::
 
-1. Select **Agent**, then select **Declarative Agent**.
+1. Select **Declarative Agent**.
 
-1. Select **Add plugin**, then select **Start with an OpenAPI Description Document**.
+1. Select **Add an Action**, then select **Start with an OpenAPI Description Document**.
 
 The next steps differ depending on if you enabled Microsoft Kiota or not.
 

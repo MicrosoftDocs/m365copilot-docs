@@ -76,9 +76,9 @@ After your solution is purchased and deployed by an organization, your agent's p
 
 To learn more, see [Publish agents for Microsoft 365 Copilot](./publish.md).
 
-### Microsoft admin center
+### Microsoft 365 admin center
 
-Line-of-business developers and IT admins can publish agents and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions via the Microsoft Admin Center ([admin.microsoft.com](https://admin.microsoft.com)).
+Line-of-business developers and IT admins can publish agents and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions via the Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.com)).
 
 For more information about deploying agents, plugins, and Microsoft Graph connectors to your organization, see [Publish agents for Microsoft 365 Copilot](./publish.md).
 
