@@ -65,7 +65,7 @@ Determine the requirements that your extensibility solution needs to meet. Consi
 
     | Data source  | How do you want to use the data in Copilot?                                  | Data source integrations                |
     |--------------|----------------------------------------------------------------------------|------------------------------------------|
-    | Salesforce   | <ul><li>As a knowledge source when asking questions about a customer.</li><li>To update opportunity details.</li></ul>           | <ul><li>Microsoft Graph connector</li><li>API or Power Platform Plugin</li></ul> |
+    | Salesforce   |<ul><li>As a knowledge source when asking questions about a customer.</li><li>To update opportunity details.</li></ul>           |<ul><li>Microsoft Graph connector</li><li>API or Power Platform Plugin</li></ul> |
 
 - **Agentic and automation requirements**
 
@@ -98,8 +98,8 @@ The following table lists the low-code and pro-code options that are available b
 
 | Agent type        | Low-code tool options                                 | Pro-code tool options                                      |
 |-------------------|--------------------------------------------------------|------------------------------------------------------------|
-| Declarative agent | <ul><li>Copilot Studio agent builder</li<li>>Copilot Studio</li>/ul>      | Visual Studio Code + Teams Toolkit                          |
-| Custom engine agent| Copilot Studio                                        | <ul><li>Visual Studio Code + Teams AI Library</li><li>>Visual Studio Code + Microsoft 365 Agent SDK (Preview)</li><li>Visual Studio 2022</li><li>Semantic Kernel (optional)</li></ul> |
+| Declarative agent | <ul><li>Copilot Studio agent builder</li><li>>Copilot Studio</li></ul>      | Visual Studio Code + Teams Toolkit                          |
+| Custom engine agent| Copilot Studio                                        | <ul><li>Visual Studio Code + Teams AI Library</li><li>Visual Studio Code + Microsoft 365 Agent SDK (Preview)</li><li>Visual Studio 2022</li><li>Semantic Kernel (optional)</li></ul> |
 
 Next, identify the data sources or plugins your agent needs. Data sources might be Microsoft 365 data (Teams messages, email, people, SharePoint sites or folders), Microsoft Graph connectors (prebuilt or custom), or plugins (for real-time data access or external actions).
 
