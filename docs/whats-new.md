@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 02/25/2025
+ms.date: 03/24/2025
 ms.topic: overview
 ---
 
@@ -13,6 +13,16 @@ ms.topic: overview
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
+
+## March 2025
+
+### Declarative agent manifest version 1.3
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.3](declarative-agent-manifest-1.3.md) adds support for the following capabilities:
+
+- [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge)
+- [Teams messages as knowledge](add-agent-capabilities.md#teams-messages-as-knowledge)
+- [People knowledge](add-agent-capabilities.md#people-knowledge)
 
 ## February 2025
 

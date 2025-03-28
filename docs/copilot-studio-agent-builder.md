@@ -68,29 +68,47 @@ Administrators can control whether Copilot Studio agent builder is available to 
 The following are current known limitations:
 
 - Only web browsing, Microsoft Graph connectors, SharePoint sites, folders, and files can be specified as knowledge sources. You can upload your local folders and files into SharePoint.
-- Share with specific users in the organization only supports security groups and not individual users.
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
 - Agent builder doesn't currently support [Lockbox](/power-platform/admin/about-lockbox) or [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview).
 - Agents created via Copilot Studio agent builder can't be used in Teams Chat.
 - If a tenant has disabled web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in agent builder. However, the **Web content** toggle in the **Knowledge** pane is not disabled. This is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
 
+## Submit feedback
+
+You can submit feedback from within agent builder to help contribute to product improvements for all users. Agent builder feedback is handled in the same way that Copilot feedback is handled. For more information about Copilot feedback, including what data is collected, how the data is handled, and what it's used for, see [Providing feedback about Microsoft Copilot with Microsoft 365 apps](https://support.microsoft.com/en-us/topic/providing-feedback-about-microsoft-copilot-with-microsoft-365-apps-c481c26a-e01a-4be3-bdd0-aee0b0b2a423).
+
+You can submit feedback by using one of the following options:
+
+- The thumbs-up or thumbs-down control on AI-generated responses in your agent test pane.
+- The **Send feedback**, button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
+- The **Send Feedback** option in the menu on the top right, as shown in the following image.
+
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-feedback-general.png" alt-text="Send feedback in agent builder":::
+
+In your feedback submission, specify that the issue is related to **Copilot Studio agent builder**.
+
+Administrators can define a cloud policy to control whether feedback is collected in their tenant, and whether optional data such as log files and screenshots can be included in user-initiated feedback. For more information, see [Cloud Policy in Microsoft 365 Apps admin center](/microsoft-365-apps/admin-center/overview-cloud-policy).
+
+For general information, see [Microsoft feedback for your organization](/microsoft-365/admin/misc/feedback-user-control?view=o365-worldwide).
+
 ## Get support
 
-To get support, select **Send feedback** in Microsoft 365 Copilot.
+To get support, select **Send feedback** in Copilot Studio agent builder.
 
 In your feedback ticket, provide details about the issue you're facing and include the following pieces of information in the feedback dialog:
 
 - Specify that the issue is related to Copilot Studio.
 - Provide the agent ID.
 - Provide the tenant ID.
-- Provide the session ID
+- Provide the environment ID.
+- Provide the session ID.
 - If the issue is related to the test pane or **Describe** tab, type "/debug" within the chat box and include the contents in your ticket.
 
 You can find and copy these details in the Copilot Studio agent builder within the **Get support** section of the **Help** dropdown menu.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-1.png" alt-text="Find the support details in agent builder":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-1-updated.png" alt-text="Find the support details in agent builder":::
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-2.png" alt-text="Copy the support details in agent builder":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in agent builder":::
 
 ## Related content
 

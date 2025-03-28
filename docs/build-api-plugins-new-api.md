@@ -4,7 +4,7 @@ description: Learn how to build API plugins with a new API for Microsoft 365 Cop
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 10/08/2024
+ms.date: 03/11/2025
 ms.topic: how-to
 ---
 
@@ -15,10 +15,12 @@ ms.topic: how-to
 [API plugins](overview-api-plugins.md) connect a REST API to Microsoft 365 Copilot. You can use the [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals) to quickly generate a plugin and a corresponding REST API that you can use as a starting point for your plugin development.
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
-- [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.9 or later
+- [Visual Studio Code](https://code.visualstudio.com/) with Teams Toolkit version 5.14 or later
 - [Node.js](https://nodejs.org/) 18.x or 20.x
 
 ## Create the plugin and API
+
+[!INCLUDE [toolkit-version-note](includes/toolkit-version-note.md)]
 
 1. Open Visual Studio Code. If Teams Toolkit isn't already installed, see [Install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
 
@@ -28,9 +30,9 @@ ms.topic: how-to
 
     :::image type="content" source="assets/images/api-plugins/create-plugin-ttk.png" alt-text="A screenshot of the Teams Toolkit interface":::
 
-1. Select **Agent**, then select **Declarative Agent**.
+1. Select **Declarative Agent**.
 
-1. Select **Add plugin**, then select **Start with a new API**.
+1. Select **Add an Action**, then select **Start with a New API**.
 
 1. Select **OAuth** for the **Authentication Type**.
 
