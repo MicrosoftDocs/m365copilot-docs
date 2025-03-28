@@ -17,8 +17,8 @@
 - name: Get started
   expanded: true
   items:
-  - name: Copilot extensibility planning guide
-    href: copilot-extensibility-planning-guide.md
+  - name: Planning guide
+    href: planning-guide.md
   - name: Choose your extensibility path
     href: decision-guide.md
   - name: Set up your dev environment
