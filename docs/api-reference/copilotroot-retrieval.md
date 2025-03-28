@@ -1,5 +1,5 @@
 ---
-title: "copilot: retrieval"
+title: Retrieve grounding data
 description: Using the retrieval API, generative AI solutions can ground data from SharePoint and Graph Connectors.
 author: lramosvea
 ms.author: lramosvea
@@ -11,9 +11,9 @@ doc_type: conceptualPageType
 
 <!-- markdownlint-disable MD024 -->
 
-# copilotRoot: retrieval
+# Retrieve grounding data
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
 Ground data for generative AI solutions. Allows the retrieval of relevant extracts from SharePoint and Microsoft Graph connectors content that the calling user has access to, while respecting the defined access controls within the tenant.
 
@@ -21,29 +21,24 @@ Ground data for generative AI solutions. Allows the retrieval of relevant extrac
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "copilotroot-retrieval-permissions"
-}
--->
-[!INCLUDE [permissions-table](../includes/permissions/copilotroot-retrieval-permissions.md)]
+| Permission type                        | Least privileged permissions | Higher privileged permissions |
+|:---------------------------------------|:-----------------------------|:------------------------------|
+| Delegated (work or school account)     | Files.Read.All               | Sites.Read.All                |
+| Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
+| Application                            | Not supported.               | Not supported.                |
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
-``` http
-POST /copilot/retrieval
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
 ```
 
 ## Request headers
 
-|Name|Description|
-|:---|:---|
-|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
-|Content-Type|application/json. Required.|
+| Name          | Description                                                                                               |
+|:--------------|:----------------------------------------------------------------------------------------------------------|
+| Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| Content-Type  | application/json. Required.                                                                               |
 
 ## Request body
 
@@ -51,16 +46,16 @@ In the request body, supply a JSON representation of the parameters.
 
 The following table lists the parameters that are required when you call this action.
 
-|Parameter|Type|Description|
-|:---|:---|:---|
-|queryString|String|Natural language query string used to retrieve relevant text extracts.|
-|filterExpression|String|[KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft Graph connectors](/graph/connecting-external-content-manage-schema) properties and attributes to scope the search before the query runs. Optional.|
-|resourceMetadata|String collection|A list of metadata fields to be returned for each item in the response. Optional.|
-|maximumNumberOfResults|Int32|The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional.|
+| Parameter              | Type              | Description                    |
+|:-----------------------|:------------------|:-------------------------------|
+| queryString            | String            | Natural language query string used to retrieve relevant text extracts. |
+| filterExpression       | String            | [KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft Graph connectors](/graph/connecting-external-content-manage-schema) properties and attributes to scope the search before the query runs. Optional. |
+| resourceMetadata       | String collection | A list of metadata fields to be returned for each item in the response. |
+| maximumNumberOfResults | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
 
 ## Response
 
-If successful, this action returns a `200 OK` response code and a [retrievalResponse](../resources/retrievalresponse.md) in the response body.
+If successful, this action returns a `200 OK` response code and a [retrievalResponse](resources/retrievalresponse.md) in the response body.
 
 ## Examples
 
@@ -71,12 +66,8 @@ The following example shows a request to retrieve data from files located in a s
 #### Request
 
 The following example shows the request.
-<!-- {
-  "blockType": "request",
-  "name": "retrieval_SP_connectors"
-}
--->
-``` http
+
+```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
@@ -94,14 +85,8 @@ Content-Type: application/json
 #### Response
 
 The following example shows the response. The first result is from SharePoint, and the second result is from Microsoft Graph connectors.
->**Note:** The response object shown here might be shortened for readability.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.substrateSearch.retrievalResponse"
-}
--->
-``` http
+
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -150,12 +135,8 @@ The following example shows a request to retrieve data from multiple Sharepoint 
 #### Request
 
 The following example shows the request.
-<!-- {
-  "blockType": "request",
-  "name": "retrieval_multiple_SP"
-}
--->
-``` http
+
+```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
@@ -173,14 +154,8 @@ Content-Type: application/json
 #### Response
 
 The following example shows the response.
->**Note:** The response object shown here might be shortened for readability.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.substrateSearch.retrievalResponse"
-}
--->
-``` http
+
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -238,12 +213,8 @@ The following example shows a request to retrieve data from a specific Microsoft
 #### Request
 
 The following example shows the request.
-<!-- {
-  "blockType": "request",
-  "name": "retrieval_connector"
-}
--->
-``` http
+
+```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
@@ -260,14 +231,8 @@ Content-Type: application/json
 #### Response
 
 The following example shows the response.
->**Note:** The response object shown here might be shortened for readability.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.substrateSearch.retrievalResponse"
-}
--->
-``` http
+
+```http
 TTP/1.1 200 OK
 Content-Type: application/json
 
@@ -307,12 +272,8 @@ The following example shows a request to retrieve data from Word documents locat
 #### Request
 
 The following example shows the request.
-<!-- {
-  "blockType": "request",
-  "name": "retrieval_docs_SP"
-}
--->
-``` http
+
+```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
@@ -331,14 +292,8 @@ Content-Type: application/json
 #### Response
 
 The following example shows the response.
->**Note:** The response object shown here might be shortened for readability.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.substrateSearch.retrievalResponse"
-}
--->
-``` http
+
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -393,4 +348,4 @@ Content-Type: application/json
 
 ## Related content
 
-- [Overview of the Microsoft 365 Copilot Retrieval API](../../retrieval-api-overview.md)
+- [Overview of the Microsoft 365 Copilot Retrieval API](retrieval-api-overview.md)

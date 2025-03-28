@@ -70,4 +70,4 @@ The retrieval API is available at no additional cost to users with a Microsoft 3
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Use the retrieval API](../api-reference/beta/api/copilotroot-retrieval.md)
+> [Use the retrieval API](copilotroot-retrieval.md)
