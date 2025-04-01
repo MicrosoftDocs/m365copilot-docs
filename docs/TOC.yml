@@ -17,6 +17,8 @@
 - name: Get started
   expanded: true
   items:
+  - name: Planning guide
+    href: planning-guide.md
   - name: Choose your extensibility path
     href: decision-guide.md
   - name: Set up your dev environment
