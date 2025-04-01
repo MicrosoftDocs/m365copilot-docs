@@ -53,20 +53,20 @@
     },
     {
       "name": "Dataverse",
-      "knowledge_sources": [ 
-        { 
-          "host_name": "organization.crm.dynamics.com", 
+      "knowledge_sources": [
+        {
+          "host_name": "organization.crm.dynamics.com",
           "skill": "DVCopilotSkillName",
-          "tables": [ 
-            { 
-                "table_name": "account" 
-            }, 
-            { 
-                "table_name": "opportunity" 
-            } 
-         ] 
-        } 
-      ] 
+          "tables": [
+            {
+              "table_name": "account"
+            },
+            {
+              "table_name": "opportunity"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "TeamsMessages",
@@ -77,11 +77,7 @@
       ]
     },
     {
-      "capabilities": [
-          {
-              "name":"People"
-          }
-        ]
+      "name": "People"
     }
   ]
 }
