@@ -116,7 +116,7 @@ When you design an agent for Microsoft 365 Copilot, it's important to understand
 | License type                | Cost                               | Best for                        | Agent consumption costs                                           |
 |-----------------------------|------------------------------------|---------------------------------|-------------------------------------------------------------------|
 | Microsoft 365 Copilot license   | Add-on license required            | Regular to high-usage users    | No additional costs.                                                |
-| Microsoft 365 Copilot Chat license   | No additional costs for [eligible Microsoft 365 users](/copilot/microsoft-365/microsoft-365-copilot-licensing) | Occasional users              | No cost for instruction/public website grounding; metered charges for shared tenant data (SharePoint, Microsoft Graph connectors) |
+| Microsoft 365 license   | No additional costs for [eligible Microsoft 365 users](/copilot/microsoft-365/microsoft-365-copilot-licensing) | Occasional users              | No cost for instruction/public website grounding; metered charges for shared tenant data (SharePoint, Microsoft Graph connectors) |
 | No license                  | Pay-per-use                        | Guest or external users        | Metered consumption charges                                       |
 
 For more information about license options, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing).
