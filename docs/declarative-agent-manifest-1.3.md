@@ -134,20 +134,20 @@ The capabilities object is the base type of objects in the `capabilities` proper
     },
     {
       "name": "Dataverse",
-      "knowledge_sources": [ 
-        { 
-          "host_name": "organization.crm.dynamics.com", 
+      "knowledge_sources": [
+        {
+          "host_name": "organization.crm.dynamics.com",
           "skill": "DVCopilotSkillName",
-          "tables": [ 
-            { 
-                "table_name": "account" 
-            }, 
-            { 
-                "table_name": "opportunity" 
-            } 
-         ] 
-        } 
-      ] 
+          "tables": [
+            {
+              "table_name": "account"
+            },
+            {
+              "table_name": "opportunity"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "TeamsMessages",
@@ -157,12 +157,12 @@ The capabilities object is the base type of objects in the `capabilities` proper
         }
       ]
     },
-{
+    {
       "capabilities": [
-          {
-              "name":"People"
-          }
-        ]
+        {
+          "name": "People"
+        }
+      ]
     }
   ]
 }
@@ -210,12 +210,13 @@ For information about how to optimize SharePoint content for Copilot, see [Optim
 
 The Items by SharePoint IDs object contains the following properties.
 
-| Property    | Type   | Description |
-| ----------- | ------ | ----------- |
-| `site_id`   | String | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
-| `web_id`    | String | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
-| `list_id`   | String | Optional. A unique GUID identifier for a list within a SharePoint or OneDrive site. |
-| `unique_id` | String | Optional. A unique GUID identifier used to represent a specific entity or resource. |
+| Property                  | Type    | Description |
+| ------------------------- | ------- | ----------- |
+| `site_id`                 | String  | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
+| `web_id`                  | String  | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
+| `list_id`                 | String  | Optional. A unique GUID identifier for a list within a SharePoint or OneDrive site. |
+| `unique_id`               | String  | Optional. A unique GUID identifier used to represent a specific entity or resource. |
+| `search_associated_sites` | Boolean | Optional. Indicates whether to enable searching associated sites. This value is only applicable when the `site_id` value references a SharePoint HubSite. |
 
 > [!TIP]
 > For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
@@ -278,10 +279,10 @@ Indicates that the declarative agent can search through data from tables in Micr
 
 The Dataverse object contains the following properties.
 
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `Dataverse`. |
-| `knowledge_sources` | Array of [Knowledge sources](#knowledge-sources-object) | Optional. An array of objects that contain the identifiers, skills, and table names for Dataverse instances to include as knowledge.|
+| Property            | Type                                                    | Description |
+| ------------------- | ------------------------------------------------------- | ----------- |
+| `name`              | String                                                  | Required. Must be set to `Dataverse`. |
+| `knowledge_sources` | Array of [knowledge sources](#knowledge-sources-object) | Optional. An array of objects that contain the identifiers, skills, and table names for Dataverse instances to include as knowledge.|
 
 ##### Knowledge sources object
 
@@ -289,11 +290,11 @@ Contains information about the Dataverse instances to include as knowledge.
 
 The `knowledge_sources` object contains the following properties.
 
-| Property        | Type   | Description |
-| --------------- | ------ | ----------- |
-| `host_name` | String | Required. A unique identifier for the host in Dataverse. |
-| `skill` | String | A unique identifier that defines the configuration for how the agent interacts with Dataverse knowledge. |
-| `tables` | Array of [table](#tables-object) objects | An array of tables to scope the agent's knowledge. |
+| Property    | Type                              | Description |
+| ----------- | --------------------------------- | ----------- |
+| `host_name` | String                            | Required. A unique identifier for the host in Dataverse. |
+| `skill`     | String                            | A unique identifier that defines the configuration for how the agent interacts with Dataverse knowledge. |
+| `tables`    | Array of [tables](#tables-object) | An array of tables to scope the agent's knowledge. |
 
 ###### Tables object
 
@@ -301,9 +302,9 @@ Contains the tables to scope the agent's knowledge.
 
 The `tables` object contains the following property.
 
-| Property        | Type   | Description |
-| --------------- | ------ | ----------- |
-| `table` | String | Required. A unique identifier for the table. |
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `table`  | String | Required. A unique identifier for the table. |
 
 #### Teams messages object
 
@@ -311,10 +312,10 @@ Indicates that the declarative agent can search through Teams channels, teams, m
 
 The Teams messages object contains the following properties.
 
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `TeamsMessages`. |
-| `urls` | Array of [Teams URL object](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
+| Property | Type                                     | Description |
+| -------- | ---------------------------------------- | ----------- |
+| `name`   | String                                   | Required. Must be set to `TeamsMessages`. |
+| `urls`   | Array of [Teams URLs](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
 
 ##### Teams URL object
 
@@ -322,9 +323,9 @@ Identifies a Teams channel, team, or meeting chat.
 
 The Teams URL object contains the following properties.
 
-| Property        | Type   | Description |
-| --------------- | ------ | ----------- |
-| `url` | String | Required. A well formatted Teams URL that links to either a Team channel, team, or meeting chat. |
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `url`    | String | Required. A well-formatted Teams URL that links to either a Team channel, team, or meeting chat. |
 
 ##### Folders object
 
@@ -332,8 +333,8 @@ Contains the folders to scope the agent's knowledge.
 
 The `folders` object contains the following property.
 
-| Property        | Type   | Description |
-| --------------- | ------ | ----------- |
+| Property    | Type   | Description |
+| ----------- | ------ | ----------- |
 | `folder_id` | String | Required. The well-known folder name or folder ID of the folder to reference. |
 
 #### People object
