@@ -28,7 +28,7 @@ Together, these files define the agent's behavior and how it interacts with the 
 For more information about API plugins, see:
 
 - [API plugins for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-api-plugins)
-- [How to make an OpenAPI document effective in extending Copilot capabilities](/microsoft-365-copilot/extensibility/openapi-document-guidance) 
+- [How to make an OpenAPI document effective in extending Copilot capabilities](/microsoft-365-copilot/extensibility/openapi-document-guidance)
 
 ### Function mapping in the plugin manifest
 
@@ -79,7 +79,7 @@ The following example shows how to instruct a weather agent for multi-turn conve
 |------------------------|------------|
 |If user asks about the weather:</br></br>- Ask the user for location.</br>- Ask the user for forecast day.</br>- Ask the user for unit system.</br>- Only call **getWeather** when you collect all the values.|**User:** "What is the weather?"</br><**Agent:** "What is your location?"</br>**User**: "London"</br>**Agent**: "Do you prefer the weather information in Metric or Imperial units?"</br>**User**: "Metric"</br>**Agent**: "Do you need the weather for today or forecast for tomorrow?"</br>**User**: "Today"</br>**Agent**: "I will check the weather for London for today"</br>**Agent calls:** getWeather(location="London", forecast="today", system="Metric")|
 
-For general best practices for agent instructions, see [Write effective instructions](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-instructions).
+For general best practices for agent instructions, see [Write effective instructions](/microsoft-365-copilot/extensibility/declarative-agent-instructions).
 
 ### Chaining function calls in API plugins
 
@@ -103,7 +103,7 @@ In the following example, an agent deletes a to-do by name.
 
 | Instructions for agent | Agent flow |
 |------------------------|------------|
-|1. When the user asks to list all to-do, call **getTasks** to retrieve the list of to-dos with title and ID.</br>2. After listing the to-dos, if the user asks to delete a to-do, use the ID from the response to call **deleteTask**.|**User:** "Show all the to-dos in Tasks folder?"</br>**Agent:** alls *getTasks (folderId="Tasks)* and displays all the to-dos with IDs.</br>**User:** "Delete TaskMaster Pro to-do"</br>**Agent:** Uses the information from the conversation history to find the ID for the to-do and deletes the to-do by calling **deleteTask**.|
+|1. When the user asks to list all to-do, call **getTasks** to retrieve the list of to-dos with title and ID.</br>2. After listing the to-dos, if the user asks to delete a to-do, use the ID from the response to call **deleteTask**.|**User:** "Show all the to-dos in Tasks folder?"</br>**Agent:** alls *getTasks (folderId="Tasks")* and displays all the to-dos with IDs.</br>**User:** "Delete TaskMaster Pro to-do"</br>**Agent:** Uses the information from the conversation history to find the ID for the to-do and deletes the to-do by calling **deleteTask**.|
 
 #### Chaining with SharePoint knowledge
 
@@ -123,6 +123,6 @@ In the following example, an agent creates a chart based on the data in to-do ta
 
 | Instructions for agent | Agent flow |
 |------------------------|------------|
-|When the user asks to list all to-dos, call **getTasks** to retrieve the list of to-dos with title and ID, also plot the chart for the output.|**User:** "Retrieve all tasks in Tasks"</br>**Agent:** Calls the **getTasks** (folderId="Tasks) and displays all the to-dos with IDs.</br>**Agent:** Calls code Interpreter to initiate the chart generation based on the output of the first call.|
+|When the user asks to list all to-dos, call **getTasks** to retrieve the list of to-dos with title and ID, also plot the chart for the output.|**User:** "Retrieve all tasks in Tasks"</br>**Agent:** Calls the **getTasks** (folderId="Tasks") and displays all the to-dos with IDs.</br>**Agent:** Calls code Interpreter to initiate the chart generation based on the output of the first call.|
 
 This example also runs multiple actions at once. This is useful initiating a series of related actions that don't require multiple user inputs.  
