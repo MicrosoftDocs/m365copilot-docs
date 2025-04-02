@@ -51,12 +51,12 @@ The [SharePoint](https://support.microsoft.com/en-us/office/get-started-with-sha
 
 | **Pros** | **Cons** |
 |:------------|:------------|
-| **Customization:** Site owners, content owners, or editors can create agents tailored to specific needs. |  |
-| **Defined sources:** Agents draw on context from specific SharePoint sites and document libraries. | **Content limitations:** As with all agents, if the agent can't find information in its defined knowledge sources, it might provide outdated content from the internet. |
-| **Ease of access:** Integrated directly into SharePoint, making it easy for users to access and interact with the agents.  | **Scalability:** Not suitable for large-scale or highly complex applications. |
-| **Personalized user experience:** Provides a personalized user experience based on the specific SharePoint content.  |  |
-| **Integration with SharePoint:**  Uses existing SharePoint features like document libraries. | **Functionality and visibility limitations (SharePoint):** Declarative agents built in SharePoint can't integrate with or use declarative agents not build in SharePoint in Copilot Chat.|
-| **Integration with Teams:**  Users can make a SharePoint agent available in Microsoft Teams by copying the link to the agent and pasting it in a Teams group or meeting chat. | **Functionality and visibility limitations (Teams):** Chatting with agent in Teams 1:1 is done in immersive viewer from SharePoint. |
+| **Customization:** Site owners, content owners, or editors can create agents tailored to specific needs. | **Content limitations:** As with all agents, if the agent can't find information in its defined knowledge sources, it might provide outdated content from the internet. |
+| **Defined sources:** Agents draw on context from specific SharePoint sites and document libraries. | **Scalability:** Not suitable for large-scale or highly complex applications.  |
+| **Ease of access:** Integrated directly into SharePoint, making it easy for users to access and interact with the agents.  | **Functionality and visibility limitations (SharePoint):** Declarative agents built in SharePoint can't integrate with or use declarative agents not build in SharePoint in Copilot Chat. |
+| **Personalized user experience:** Provides a personalized user experience based on the specific SharePoint content.  | **Functionality and visibility limitations (Teams):** Chatting with agent in Teams 1:1 is done in immersive viewer from SharePoint. |
+| **Integration with SharePoint:**  Uses existing SharePoint features like document libraries. | |
+| **Integration with Teams:**  Users can make a SharePoint agent available in Microsoft Teams by copying the link to the agent and pasting it in a Teams group or meeting chat. |  |
 
 ## Copilot Studio
 [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
