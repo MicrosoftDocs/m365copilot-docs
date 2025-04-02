@@ -89,74 +89,40 @@ Chaining function calls allows declarative agents to combine multiple API action
 
 Use the result of one API call as an input for another. This is useful when the result of the first function is needed to perform the second function. This can work across plugins.
 
-**Example**: A declarative agent with Weather API and To-do API creates a to-do task with data from the weather forecast.
+In the following example, a declarative agent with Weather API and To-do API creates a to-do task with data from the weather forecast.
 
-**Instructions for agent**
-
-To get the weather, always use the **getWeather** action, then create a task with the title "temperature in", and add the location and temperature mentioned in the weather to the task title.
-
-**Agent flow**
-
-**User:** "Get the weather in Prague"
-
-**Agent:** calls *getWeather (location="Prague", forecast="today")*
-
-**Agent:** uses the data from the first call to create a to-do task *createTask (title ="{weather output}")*
+| Instructions for agent | Agent flow |
+|------------------------|------------|
+|To get the weather, always use the **getWeather** action, then create a task with the title "temperature in", and add the location and temperature mentioned in the weather to the task title. | **User:** "Get the weather in Prague"</br>**Agent:** Calls *getWeather (location="Prague", forecast="today")*</br>**Agent:** Uses the data from the first call to create a to-do task *createTask (title ="{weather output}")* |
 
 #### Chaining based on conversation history within one agent
 
 When you use chaining based on conversation history, the agent uses prior responses to handle follow-up actions. This approach uses the conversation history to maintain context.
 
-**Example:** An agent deletes a to-do by name.
+In the following example, an agent deletes a to-do by name.
 
-**Instructions for agent**
+| Instructions for agent | Agent flow |
+|------------------------|------------|
+|1. When the user asks to list all to-do, call **getTasks** to retrieve the list of to-dos with title and ID.</br>2. After listing the to-dos, if the user asks to delete a to-do, use the ID from the response to call **deleteTask**.|**User:** "Show all the to-dos in Tasks folder?"</br>**Agent:** alls *getTasks (folderId="Tasks)* and displays all the to-dos with IDs.</br>**User:** "Delete TaskMaster Pro to-do"</br>**Agent:** Uses the information from the conversation history to find the ID for the to-do and deletes the to-do by calling **deleteTask**.|
 
-1. When the user asks to list all to-do, call **getTasks** to retrieve the list of to-dos with title and ID.
-2. After listing the to-dos, if the user asks to delete a to-do, use the ID from the response to call **deleteTask**.
-
-**Agent flow**
-
-**User:** "Show all the to-dos in Tasks folder?"
-
-**Agent:** alls *getTasks (folderId="Tasks)* and displays all the to-dos with IDs.
-
-**User:** "Delete TaskMaster Pro to-do"
-
-**Agent:** Uses the information from the conversation history to find the ID for the to-do and deletes the to-do by calling **deleteTask**.
-
-#### Chaining with SharePoint knowledge 
+#### Chaining with SharePoint knowledge
 
 Chaining API calls allows an agent to combine knowledge sources and actions to design more complex workflows. 
 
-**Example**: An agent retrieves project status data from SharePoint, and creates corresponding tasks in Microsoft To-Do for tracking.
+In the following example, an agent retrieves project status data from SharePoint, and creates corresponding tasks in Microsoft To-Do for tracking.
 
-**Instructions for agent**
-
-- To get project statuses, use Sharepoint knowledge CPSDAProjectDeadlines. 
-- Always create a to-do for each project using status update for the title.
-
-**Agent flow**
-
-**User**: "Can you provide an update on the status of all projects?"
-
-**Agent:** Pulls project status data from SharePoint and then uses **createTask** to generate a to-do task for each project.
+| Instructions for agent | Agent flow |
+|------------------------|------------|
+|- To get project statuses, use Sharepoint knowledge CPSDAProjectDeadlines.</br>- Always create a to-do for each project using status update for the title.|**User**: "Can you provide an update on the status of all projects?"</br>**Agent:** Pulls project status data from SharePoint and then uses **createTask** to generate a to-do task for each project.|
 
   #### Chaining with code interpreter
 
 It is also possible to chain API calls and integrate additional capabilities, such as a code interpreter. This allows an agent to process API outputs dynamically to enable more advanced workflows.
 
-**Example**: An agent creates a chart based on the data in to-do tasks.
+In the following example, an agent creates a chart based on the data in to-do tasks.
 
-**Instructions for agent**
-
-When the user asks to list all to-dos, call **getTasks** to retrieve the list of to-dos with title and ID, also plot the chart for the output.
-
-**Agent flow**
-
-**User:** "Retrieve all tasks in Tasks"
-
-**Agent:** Calls the **getTasks** (folderId="Tasks) and displays all the to-dos with IDs.
-
-**Agent:** Calls code Interpreter to initiate the chart generation based on the output of the first call.
+| Instructions for agent | Agent flow |
+|------------------------|------------|
+|When the user asks to list all to-dos, call **getTasks** to retrieve the list of to-dos with title and ID, also plot the chart for the output.|**User:** "Retrieve all tasks in Tasks"</br>**Agent:** Calls the **getTasks** (folderId="Tasks) and displays all the to-dos with IDs.</br>**Agent:** Calls code Interpreter to initiate the chart generation based on the output of the first call.|
 
 This example also runs multiple actions at once. This is useful initiating a series of related actions that don't require multiple user inputs.  
