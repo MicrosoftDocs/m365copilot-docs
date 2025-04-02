@@ -77,7 +77,7 @@ The following example shows how to instruct a weather agent for multi-turn conve
 
 | Instructions for agent | Agent flow |
 |------------------------|------------|
-|If user asks about the weather:</br></br>Ask the user for location.</br>Ask the user for forecast day.</br>Ask the user for unit system.</br>Only call **getWeather** when you collect all the values.|**User:** "What is the weather?"</br></br>**Agent:** "What is your location?"</br></br>**User**: "London"</br></br>**Agent**: "Do you prefer the weather information in Metric or Imperial units?"</br></br>**User**: "Metric"</br></br>**Agent**: "Do you need the weather for today or forecast for tomorrow?"</br></br>**User**: "Today"</br></br>**Agent**: "I will check the weather for London for today"</br></br>**Agent calls:** getWeather(location="London", forecast="today", system="Metric")|
+|If user asks about the weather:</br></br>- Ask the user for location.</br>- Ask the user for forecast day.</br>- Ask the user for unit system.</br>- Only call **getWeather** when you collect all the values.|**User:** "What is the weather?"</br><**Agent:** "What is your location?"</br>**User**: "London"</br>**Agent**: "Do you prefer the weather information in Metric or Imperial units?"</br>**User**: "Metric"</br>**Agent**: "Do you need the weather for today or forecast for tomorrow?"</br>**User**: "Today"</br>**Agent**: "I will check the weather for London for today"</br>**Agent calls:** getWeather(location="London", forecast="today", system="Metric")|
 
 For general best practices for agent instructions, see [Write effective instructions](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-instructions).
 
