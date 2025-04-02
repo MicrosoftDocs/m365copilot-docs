@@ -66,6 +66,8 @@
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
     - name: Write effective instructions
       href: declarative-agent-instructions.md
+    - name: Write instructions for agents with API plugins
+      href: instructions-api-plugins.md
     - name: Add capabilities and knowledge sources
       href: add-agent-capabilities.md
     - name: Optimize SharePoint content retrieval
