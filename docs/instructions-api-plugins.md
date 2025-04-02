@@ -25,6 +25,8 @@ Declarative agents that call API plugins include several components that ensure 
 
 Together, these files define the agent's behavior and how it interacts with the underlying API.
 
+:::image type="content" source="assets/images/api-plugin-manifests.png" alt-text="Diagram showing the four manifest files that each reference the other" border="false":::
+
 For more information about API plugins, see:
 
 - [API plugins for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-api-plugins)
@@ -126,3 +128,8 @@ In the following example, an agent creates a chart based on the data in to-do ta
 |When the user asks to list all to-dos, call **getTasks** to retrieve the list of to-dos with title and ID, also plot the chart for the output.|**User:** "Retrieve all tasks in Tasks"</br>**Agent:** Calls the **getTasks** (folderId="Tasks") and displays all the to-dos with IDs.</br>**Agent:** Calls code Interpreter to initiate the chart generation based on the output of the first call.|
 
 This example also runs multiple actions at once. This is useful initiating a series of related actions that don't require multiple user inputs.  
+
+## Related content
+
+- [Build a declarative agent with Visual Studio Code](/microsoft-365-copilot/extensibility/build-declarative-agents?tabs=ttk)
+- [API plugins for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-api-plugins)
