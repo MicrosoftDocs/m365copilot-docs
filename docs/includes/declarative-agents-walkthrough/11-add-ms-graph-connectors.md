@@ -28,7 +28,16 @@ In this section, you add items ingested by a Microsoft Graph connector to the av
             "url": "https://teams.microsoft.com/l/team/..."
           }
         ]
-      }
+      },
+      {
+        "name": "People"
+      },
+      {
+        "name": "GraphicArt"
+      },
+      {
+        "name": "CodeInterpreter"
+      },
       {
         "name": "GraphConnectors",
         "connections": [

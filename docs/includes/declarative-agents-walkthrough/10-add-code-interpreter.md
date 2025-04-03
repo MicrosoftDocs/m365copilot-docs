@@ -30,6 +30,9 @@ In this section, you add the [code interpreter capability](../../add-agent-capab
         ]
       },
       {
+        "name": "People"
+      },
+      {
         "name": "GraphicArt"
       },
       {

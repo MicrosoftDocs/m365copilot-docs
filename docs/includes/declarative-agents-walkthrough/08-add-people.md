@@ -30,12 +30,6 @@ In this section, you add the [people capability](../../add-agent-capabilities.md
         ]
       },
       {
-        "name": "GraphicArt"
-      },
-      {
-        "name": "CodeInterpreter"
-      },
-      {
         "name": "People"
       }
     ]
