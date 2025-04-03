@@ -1,6 +1,6 @@
 ---
-title: Create an agent to help meeting organizers
-description: Learn how to create a declarative agent in Copilot Studio agent builder using the Meeting Coach template.
+title: Create a Meeting Coach agent from a template
+description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Meeting Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
@@ -10,18 +10,17 @@ ms.date: 04/01/2025
 
 # Use the Meeting Coach template to build an agent
 
-## Overview
+You can use the Meeting Coach template to create agents that help meeting organizers create and run effective meetings. Agents based on the Meeting Coach template can help users:
 
-The Meeting Coach declarative agent template is designed to assist meeting organizers in creating and running effective meetings. It can help you:
+- Set clear objectives
+- Create structured agendas
+- Assign meeting roles
+- Prepare meeting invitations
+- Keep meetings on track
+- Encourage participation
+- Assign action items
 
-- set clear objectives
-- create structured agendas
-- assign meeting roles
-- prepare meeting invitations
-- keep meetings on track
-- encouraging participation- assigning action items
-
- Agents built from this template help ensure that meetings are productive, engaging, and well-organized. You can even customize the agent's knowledge base to fit your needs with internal knowledge sources and publicly available websites.
+ Agents built from this template help ensure that meetings are productive, engaging, and well organized.
 
 ## Prerequisites
 
@@ -31,13 +30,13 @@ The Meeting Coach declarative agent template is designed to assist meeting organ
 
 Agents built on the Meeting Coach template can help meeting organizers:
 
-- create agendas
-- prepare invite emails
-- assign meeting roles
-- prepare invite emails
-- taking meeting notes
+- Create agendas
+- Prepare invite emails
+- Assign meeting roles
+- Prepare invite emails
+- Taking meeting notes
 
-Additionally, organizers can use these agents during meetings to keep a meeting on track and encourage people to participate.
+Organizers can also use these agents during meetings to keep them on track and encourage participation.
 
 ## Use cases
 
@@ -45,15 +44,15 @@ Meeting Coach agents are useful for many kinds of meetings, such as:
 
 | **Meeting type** | **Purpose** |
 | ----------   | ----------  |
-| Strategic planning   | Define an organization's strategic direction  |
-| Stakeholder engagement   | Gather stakeholder input and make critical organizational decisions  |
-| Innovation workshops   | Brainstorm new ideas and innovative strategies  |
-| Review sessions   | Ensure open and honest communication about successes and areas of improvement, even for challenging topics  |
-| Sales pitches   | Present an organization's products and services to make sales |
+| Strategic planning   | Define an organization's strategic direction.  |
+| Stakeholder engagement   | Gather stakeholder input and make critical organizational decisions.  |
+| Innovation workshops   | Brainstorm new ideas and innovative strategies.  |
+| Review sessions   | Ensure open and honest communication about successes and areas of improvement, even for challenging topics.  |
+| Sales pitches   | Present an organization's products and services to make sales. |
 
 ## Extension opportunities
 
-You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. Here are some ideas:
+You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. The following are some ideas:
 
 - **Connect to your (CRM) solution:** Use a Power Platform Connector an API plugin to give your agent access to details about your key accounts and customer contacts as well as to relevant products and projects.
 - **Increase customer engagement:** Connect your agents to SharePoint sites that include meeting materials (sales pitches, customer information, etc.) you can create an agent specialized for customer follow-up.

@@ -1,6 +1,6 @@
 ---
 title: Create an Interview Question Assistant agent from a template
-description: Learn how to create a declarative agent in Copilot Studio agent builder using the Interview Question Assistant template.
+description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Interview Question Assistant template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
@@ -10,9 +10,7 @@ ms.date: 04/01/2025
 
 # Use the Interview Question Assistant template to build an agent
 
-## Overview
-
-The Interview Question Assistant declarative agent template is designed to support hiring managers and interviewers by streamlining the process of drafting high-quality interview questions. The purpose of this agent is to help you quickly create effective interview questions.
+You can use the Interview Question Assistant template to build an agent that supports hiring managers and interviewers by streamlining the process of drafting high-quality interview questions. This agent helps you quickly create effective interview questions.
 
 ## Prerequisites
 
@@ -23,8 +21,8 @@ The Interview Question Assistant declarative agent template is designed to suppo
 The Interview Question Assistant supports multiple languages and can:
 
 - Help create effective and relevant interview questions that are:
-    - tailored to specific roles and job descriptions
-    - clear, concise, and aligned to the given job requirements
+    - Tailored to specific roles and job descriptions
+    - Clear, concise, and aligned to the given job requirements
 - Adapt the complexity of suggested interview questions based on the level of the specified position
 - Generate both questions and sample answers based on the job descriptions the user provides
 - Provide guidance on best practices for interviewing, such as offering tips on how to frame questions to assess various competencies and skills
@@ -44,7 +42,7 @@ These agents are useful for scenarios such as:
 
 ## Extension opportunities
 
-You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. Here are some ideas:
+You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. The following are some ideas:
 
 - **Scope your agent to a particular topic:** Connect a SharePoint site or files containing content relevant to the topic to create specialized Interview Assistant agents.
 - **Link to your interview training materials:** To expand your Interview Assistant's knowledge base and increase its usefulness, connect your Interview Assistant to your interview training tools.

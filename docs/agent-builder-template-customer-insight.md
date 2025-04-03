@@ -1,6 +1,6 @@
 ---
-title: Create a Customer Insights agent to improve customer engagement.
-description: Learn how to create a declarative agent in Copilot Studio agent builder using the Customer Insights template.
+title: Create a Customer Insights agent from a template
+description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Customer Insights template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
@@ -10,9 +10,7 @@ ms.date: 04/01/2025
 
 # Use the Customer Insight Assistant template to build an agent
 
-## Overview
-
-The Customer Insight Assistant template is designed to help teams understand their customers by providing relevant and in-depth information and insights.
+You can use the Customer Insight Assistant template to create agents that help teams understand their customers by providing relevant information and insights. Agents based on this template deliver detailed customer profiles, including the customer's main industry, top products or services, corporate ethos, key priorities, main business units, senior leadership, main competitors, and industry trends. If the customer is publicly traded, the agent provides the stock symbol and stock price over the past year.
 
 ## Prerequisites
 
@@ -47,7 +45,7 @@ Scenarios that a Customer Insight agent can be especially useful for include:
 
 ## Extension opportunities
 
-You can enhance the functionality of your Customer Insight agents in a number of ways. For example:
+You can enhance the functionality of your Customer Insights Assistant agents in a number of ways. For example, you can:
 
 - **Target relevant enterprise data:** Connect the agent to a SharePoint document library that contains information on how to engage with customers and that provides best practices on how to move the relationship forward.
 - **Connect to your (CRM) solution:** Use a Power Platform Connector an API plugin to provide your agent access to details about your key account and customer contacts as well as to relevant products and projects. (Typically, CRM integration requires collaboration with your organizations service owners and IT department.)

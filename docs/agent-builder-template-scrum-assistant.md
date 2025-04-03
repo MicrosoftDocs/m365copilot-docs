@@ -1,6 +1,6 @@
 ---
-title: Create a scrum Master Assistant agent to help Agile teams work effectively
-description: Learn how to create a declarative agent in Copilot Studio agent builder using the Scrum Assistant template.
+title: Create a Scrum Assistant agent from a template
+description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Scrum Assistant template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
@@ -10,9 +10,7 @@ ms.date: 04/01/2025
 
 # Use the Scrum Assistant template to build an agent
 
-## Overview
-
-The Scrum Assistant declarative agent is designed to support scrum masters and Agile teams by providing real-time guidance on scrum ceremonies, backlog management, and Agile best practices. The assistant leverages trusted scrum resources, analyzes team artifacts (e.g., sprint reports, retrospective notes, etc.), and offers data-driven recommendations to enhance team performance, collaboration, and operational efficiency.
+You can use the Scrum Assistant template to create agents that support scrum masters and Agile teams by providing real-time guidance on scrum ceremonies, backlog management, and Agile best practices. Agents based on this template apply trusted scrum resources, analyze team artifacts (sprint reports, retrospective notes), and offer data-driven recommendations to enhance team performance, collaboration, and operational efficiency.
 
 ## Prerequisites
 
@@ -24,7 +22,7 @@ Scrum Assistants support multiple languages and can:
 
 - Provide real-time guidance on scrum ceremonies, backlog management, and best practices for Agile development
 - Use trusted scrum resources and team artifacts to offer data-driven recommendations
-- Help teams improve performance, collaboration, and efficiency.
+- Help teams improve performance, collaboration, and efficiency
 
 ## Use cases
 

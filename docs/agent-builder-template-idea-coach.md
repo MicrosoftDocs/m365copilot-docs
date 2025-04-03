@@ -1,5 +1,5 @@
 ---
-title: Create an Idea Coach agent to help users brainstorm innovative ideas
+title: Create an Idea Coach agent from a template
 description: Learn how to create a declarative agent in Copilot Studio agent builder from the Idea Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
@@ -10,17 +10,15 @@ ms.date: 04/01/2025
 
 # Use the Idea Coach template to build an agent
 
-## Overview
+You can use the Idea Coach template to create an agent that helps users develop and refine their ideas and enhance their brainstorming sessions. The Idea Coach agent template uses a fun, collaborative tone to inspire creativity and ensure engaging and productive brainstorming interactions. Idea Coach agents gather user feedback to continuously improve the brainstorming experience.
 
-The Idea Coach declarative agent template is designed to help users develop and refine their ideas and enhance their brainstorming sessions. It uses a fun, collaborative tone to inspire creativity and ensure engaging and productive brainstorming interactions. It also gathers user feedback to continuously improve the brainstorming experience.
+By acting as a personal assistant, an agent based on the Idea Coach template can help users:
 
-Acting as a personal assistant the agent can help users:
-
-- generate ideas and topics
-- plan brainstorming sessions
-- find creative brainstorming exercises
-- organize ideas
-- improve their brainstorming skills
+- Generate ideas and topics
+- Plan brainstorming sessions
+- Find creative brainstorming exercises
+- Organize ideas
+- Improve their brainstorming skills
 
 ## Prerequisites
 

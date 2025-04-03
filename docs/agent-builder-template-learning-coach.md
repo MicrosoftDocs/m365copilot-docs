@@ -1,5 +1,5 @@
 ---
-title: Create an agent to help users learn complex topics 
+title: Create a Learning Coach agent from a template
 description: Learn how to create a declarative agent in Copilot Studio agent builder from the Learning Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
@@ -10,9 +10,7 @@ ms.date: 04/01/2025
 
 # Use the Learning Coach template to build an agent
 
-## Overview
-
-The Learning Coach declarative agent template is designed to help users understand complex topics by breaking them down into simple, intermediate, and detailed summaries. It creates structured learning plans, and helps users practice skills and prepare for tests. Theses agents provide tailored exercises, guide optimal learning processes, and offer interactive language practice.
+You can use the Learning Coach template to create an agent that helps users understand complex topics by breaking them down into simple, intermediate, and detailed summaries. Learning Coach agents create structured learning plans and help users practice skills and prepare for tests. Theses agents provide tailored exercises, guide optimal learning processes, and offer interactive language practice.
 
 ## Prerequisites
 
@@ -22,11 +20,9 @@ The Learning Coach declarative agent template is designed to help users understa
 
 Learning Coach agents empower users to achieve their learning goals through structured guidance and support. Key agent capabilities include:
 
-- Performing knowledge gap analyses
 - Crafting tailored learning plans and exercises based on individual knowledge gaps, study preferences, and learner goals
 - Breaking complex topics into digestible summaries at simple, intermediate, and detailed levels for enhanced learner comprehension
 - Providing targeted exam preparation guidance, recommendations for educational resources, and interactive language practice
-- Suggesting personalized study techniques
 
 ## Use cases
 
@@ -37,15 +33,16 @@ These agents are useful in scenarios such as:
 | Content comprehension | Helps learners comprehend complex topics by breaking them down into simpler chunks. |
 | Knowledge reinforcement | Guides learners through exercises on the skills and knowledge that they already have. |
 | Learning plan customization | Helps create tailored learning plans to best fit the needs of the user by assessing the learner's existing knowledge and asking questions about their preferred approach to learning.  |
-| Test preparation | Helps learners prepare for academic and certification exams |
-| Language education | Facilitates learning new languages based on the user's current knowledge |
+| Test preparation | Helps learners prepare for academic and certification exams. |
+| Language education | Facilitates learning new languages based on the user's current knowledge. |
+| Study techniques | Suggests personalized study techniques to the user. |
 
 ## Extension opportunities
 
-You can enhance the functionality of your Learning agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. Here are some ideas:
+You can enhance the functionality of your Learning Coach agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. The following are some ideas:
 
 - **Link with your Learning Management System (LMS):** Link with your preferred LMS or Massive Open Online Course (MOOC) platforms to source up-to-date content, track progress, and streamline certification pathways.
-- **Leverage internal knowledge repositories:** Connect your Learning Coach to a SharePoint document library that contains company training materials, research papers, or best practices. This allows the agent to provide contextualized learning recommendations based on your organization’s proprietary content.
+- **Leverage internal knowledge repositories:** Connect your Learning Coach to a SharePoint document library that contains company training materials, research papers, or best practices. This allows the agent to provide contextualized learning recommendations based on your organization's proprietary content.
 
 <!-- Note about IT involvement -->
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]

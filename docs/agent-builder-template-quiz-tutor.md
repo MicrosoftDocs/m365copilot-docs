@@ -1,6 +1,6 @@
 ---
-title: Create a Quiz Tutor agent to help users expand and cement their knowledge
-description: Learn how to create a declarative agent in Copilot Studio agent builder using the Quiz Tutor template.
+title: Create a Quiz Tutor agent from a template
+description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Quiz Tutor template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
@@ -10,9 +10,7 @@ ms.date: 04/01/2025
 
 # Use the Quiz Tutor template to build an agent
 
-## Overview
-
-The Quiz Tutor template creates fun, bite-sized quizzes based on predefined training content. These quizzes can even be interactive, making the learning process more engaging. The template is designed to enhance a user's understanding and retention of the material. To do this, it uses varied and interesting questions and provides coaching and feedback to support learning.
+You can use the Quiz Tutor template to create agents that provide fun, bite-sized quizzes based on predefined training content. These quizzes can even be interactive to make the learning process more engaging. The template is designed to enhance a user's understanding and retention of the material by using varied and interesting questions and providing coaching and feedback to support learning.
 
 ## Prerequisites
 
@@ -20,7 +18,7 @@ The Quiz Tutor template creates fun, bite-sized quizzes based on predefined trai
 
 ## Capabilities
 
-Quiz Tutor agents help users learn quickly. For instance, these agents support multiple languages and can:
+Quiz Tutor agents help users learn quickly. For example, these agents support multiple languages and can:
 
 - Create fun and engaging quizzes based on the associated training content
 - Provide coaching on answers, praise for correct answers, with offers to explain incorrect answers
