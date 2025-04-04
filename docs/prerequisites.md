@@ -87,9 +87,6 @@ To manage your sideloaded custom apps, including agents, from the Teams client, 
 
 Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
 
-> [!NOTE]
-> Copilot Studio agent builder isn't currently available to Microsoft 365 Copilot Chat users.
-
 The following steps are required for you to use Copilot Studio to build agents:
 
 - Your Power Platform admin or Dynamics 365 admin must [enable Generative AI features](/power-platform/admin/geographical-availability-copilot) in Power Platform admin center.
@@ -97,7 +94,7 @@ The following steps are required for you to use Copilot Studio to build agents:
 
 ### Enabling developer mode
 
-You can use *developer mode* in Copilot to test your test whether and how the orchestrator selects your plugin in response to a given prompt. 
+You can use *developer mode* in Copilot to test whether and how the orchestrator selects your plugin in response to a given prompt. 
 
 To enable developer mode, in Copilot Chat, type `-developer on`. To disable developer mode, type `-developer off`.
 
@@ -162,7 +159,7 @@ Each message unit costs $0.01.
 |Predefined responses | 1 message/$0.01 | 0 |
 |Dynamically generated answers based on knowledge sources | 2 messages/$0.02 | 0 |
 |Organizational data responses based on Microsoft Graph connector grounding | 10 messages/$0.10 | 0 |
-|Actions via triggers, topics, agent flows, text & generative AI tools, and Power Platform connectors | 5 messages/$0.05 | 0 (Autonomous use t message/$0.05) |
+|Actions via triggers, topics, agent flows, text & generative AI tools, and Power Platform connectors | 5 messages/$0.05 | 0 (Autonomous use message/$0.05) |
 | **Text and generative AI tools** (Message rate per 10 responses)| | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic| 1 message/$0.01 | 1 message/$0.01 |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard| 15 messages/$0.15 | 15 messages/$0.15 |
