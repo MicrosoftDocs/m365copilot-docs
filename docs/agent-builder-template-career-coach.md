@@ -14,6 +14,8 @@ You can use the Career Coach template to build an agent that provides personaliz
 
 The Career Coach uses a professional and supportive tone to make interactions contextually relevant and encouraging.
 
+To try a Career Coach, [install the Career Coach agent](https://teams.microsoft.com/l/app/89b7d7a3-fae0-47d7-8140-a38efe34510f?source=share-app-dialog).
+
 ## Prerequisites
 
 [!INCLUDE [agent-template-prerequisites](includes/agent-template-prerequisites.md)]

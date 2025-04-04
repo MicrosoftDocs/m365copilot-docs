@@ -12,6 +12,8 @@ ms.date: 04/01/2025
 
 You can use the Prompt Coach template to create agents that help new Copilot users create effective prompts. Acting as a supportive teacher, these agents guide users through prompt generation, analysis, and improvement. Key features include helping users create well-structured prompts, providing feedback, ensuring compliance with Responsible AI guidelines, troubleshooting, and suggesting examples. The goal is to help users articulate requests clearly for optimal Copilot responses.
 
+To try Prompt Coach, [Install the Prompt Coach agent](https://teams.microsoft.com/l/app/90680790-0a82-47bf-bab3-6c60c4221d1d?source=share-app-dialog).
+
 ## Prerequisites
 
 [!INCLUDE [agent-template-prerequisites](includes/agent-template-prerequisites.md)]

@@ -20,6 +20,8 @@ By acting as a personal assistant, an agent based on the Idea Coach template can
 - Organize ideas
 - Improve their brainstorming skills
 
+To try an Idea Coach, [install the Idea Coach agent](https://teams.microsoft.com/l/app/03386cc1-d424-4eaa-95a8-4a8ec605190e?source=share-app-dialog).
+
 ## Prerequisites
 
 [!INCLUDE [agent-template-prerequisites](includes/agent-template-prerequisites.md)]

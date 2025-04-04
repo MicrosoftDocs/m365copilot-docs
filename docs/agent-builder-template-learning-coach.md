@@ -12,6 +12,8 @@ ms.date: 04/01/2025
 
 You can use the Learning Coach template to create an agent that helps users understand complex topics by breaking them down into simple, intermediate, and detailed summaries. Learning Coach agents create structured learning plans and help users practice skills and prepare for tests. Theses agents provide tailored exercises, guide optimal learning processes, and offer interactive language practice.
 
+To try a Learning Coach, [install the Learning Coach agent](https://teams.microsoft.com/l/app/78079743-a11b-45d0-99cb-a69d37717373?source=share-app-dialog).
+
 ## Prerequisites
 
 [!INCLUDE [agent-template-prerequisites](includes/agent-template-prerequisites.md)]
