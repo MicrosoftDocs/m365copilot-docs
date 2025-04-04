@@ -152,7 +152,7 @@ If you choose the metered pay-as-you-go option for Copilot Studio, utilization r
 
 Billing is based on message units. The total cost is calculated based on the sum of the messages used by your organization. The number of messages consumed by an agent depends on the complexity of the agent, how often customers interact with it, and the features they use.
 
-The following table lists the utilization rates for different agent capabilities for Copilot Chat users and users with Microsoft 365 Copilot licenses. Note that interactions can use multiple usage rates; for example, an agent grounded in organizational data that provides generative answers uses 32 message units.
+The following table lists the utilization rates for different agent capabilities for Copilot Chat users and users with Microsoft 365 Copilot licenses. Note that interactions can use multiple usage rates; for example, an agent grounded in organizational data can use 12 messages (10 for organizational grounding and two for dynamic responses).
 
 Each message unit costs $0.01.
 
@@ -161,8 +161,13 @@ Each message unit costs $0.01.
 |Web grounded answers| 0 | 0|
 |Predefined responses | 1 message/$0.01 | 0 |
 |Dynamically generated answers based on knowledge sources | 2 messages/$0.02 | 0 |
-|Organizational data responses based on Microsoft Graph connector grounding | 30 messages/$0.30 | 0 |
-|Autonomous actions via Power Platform connectors and Power Automate flows | 25 messages/$0.25 | 25 messages/$0.25 |
+|Organizational data responses based on Microsoft Graph connector grounding | 10 messages/$0.10 | 0 |
+|Actions via triggers, topics, agent flows, text & generative AI tools, and Power Platform connectors | 5 messages/$0.05 | 0 (Autonomous use t message/$0.05) |
+| **Text and generative AI tools** (Message rate per 10 responses)| | |
+!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic| 1 message/$0.01 | 1 message/$0.01 |
+!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard| 15 messages/$0.15 | 15 messages/$0.15 |
+!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Premium| 100 messages/$1.00 | 100 messages/$1.00 |
+|Agent flow actions (Message rate per 100 actions) | 13 message/$0.13| 13 message/$0.13 |
 
 ## Frequently asked questions
 
