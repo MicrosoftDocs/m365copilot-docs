@@ -57,3 +57,9 @@ You can enhance the functionality of your Customer Insights Assistant agents in 
 <!-- Limitations -->
 
 [!INCLUDE [agent-template-limitations](includes/agent-template-limitations.md)]
+
+## Related content
+
+- [Copilot Studio agent builder](copilot-studio-agent-builder.md)
+- [Build agents with agent builder](copilot-studio-agent-builder-build.md)
+- [Publish agents](copilot-studio-agent-builder-publish.md)
