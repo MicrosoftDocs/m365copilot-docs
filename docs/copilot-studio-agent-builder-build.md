@@ -147,7 +147,7 @@ To add one or more capabilities to your agent, choose the toggle next to the cap
 
 ## Build from a template
 
-Copilot Studio agent builder includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or further customize them to tailor them to your specific needs, including adding knowledge sources and capabilities. To learn more, explore the templates in the **Build agents from template** section or choose one of the templates on the **Describe** tab in agent builder.
+Copilot Studio agent builder includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs, including adding knowledge sources and capabilities. To learn more, explore the templates in the **Build agents from template** section or choose one of the templates on the **Describe** tab in agent builder.
 
 ## Next step
 
