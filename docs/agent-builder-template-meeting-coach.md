@@ -30,17 +30,17 @@ You can use the Meeting Coach template to create agents that help meeting organi
 
 Agents built on the Meeting Coach template can help meeting organizers:
 
-- Create agendas
-- Prepare invite emails
-- Assign meeting roles
-- Prepare invite emails
-- Taking meeting notes
+- Create agendas.
+- Prepare invite emails.
+- Assign meeting roles.
+- Prepare invite emails.
+- Take meeting notes.
 
 Organizers can also use these agents during meetings to keep them on track and encourage participation.
 
 ## Use cases
 
-Meeting Coach agents are useful for many kinds of meetings, such as:
+Meeting Coach agents are useful for the following types of meetings.
 
 | **Meeting type** | **Purpose** |
 | ----------   | ----------  |

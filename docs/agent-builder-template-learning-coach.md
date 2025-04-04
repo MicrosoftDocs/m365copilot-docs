@@ -20,13 +20,13 @@ You can use the Learning Coach template to create an agent that helps users unde
 
 Learning Coach agents empower users to achieve their learning goals through structured guidance and support. Key agent capabilities include:
 
-- Crafting tailored learning plans and exercises based on individual knowledge gaps, study preferences, and learner goals
-- Breaking complex topics into digestible summaries at simple, intermediate, and detailed levels for enhanced learner comprehension
-- Providing targeted exam preparation guidance, recommendations for educational resources, and interactive language practice
+- Crafting tailored learning plans and exercises based on individual knowledge gaps, study preferences, and learner goals.
+- Breaking complex topics into digestible summaries at simple, intermediate, and detailed levels for enhanced learner comprehension.
+- Providing targeted exam preparation guidance, recommendations for educational resources, and interactive language practice.
 
 ## Use cases
 
-These agents are useful in scenarios such as:
+Learning Coach agents are useful in the following scenarios.
 
 | **Scenario** | **Description** |
 | ----------   | ----------  |

@@ -28,20 +28,20 @@ The Customer Insights agent is designed to provide the information you need to h
 - Senior leadership
 - Chief competitors
 - Industry trends
-- Stock symbol and stock price over the past year, as applicable
+- Stock symbol and stock price over the past year
 
 ## Use cases
 
-Scenarios that a Customer Insight agent can be especially useful for include:
+A Customer Insight agent can be useful for the following scenarios.
 
 | **Scenario** | **Description** |
 | ----------   | ----------  |
-| Customer insights   | Provides detailed insights about customers, including industry trends and competitive analysis  |
-| Customer initiatives   | Identifies a customer's key initiatives  |
-| Partnering   | Suggests ideas for engaging customers through partnership opportunities |
-| Regional insights    | Provides a breakdown of the number of employees a customer has in each region |
-| Customer feedback   | Compares how your customers feel about your company relative to your competitors  |
-| Customer support   | Offers suggestions on how to better support customers |
+| Customer insights   | Provides detailed insights about customers, including industry trends and competitive analysis.  |
+| Customer initiatives   | Identifies a customer's key initiatives.  |
+| Partnering   | Suggests ideas for engaging customers through partnership opportunities. |
+| Regional insights    | Provides a breakdown of the number of employees a customer has in each region. |
+| Customer feedback   | Compares how your customers feel about your company relative to your competitors.  |
+| Customer support   | Offers suggestions on how to better support customers. |
 
 ## Extension opportunities
 

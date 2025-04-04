@@ -28,22 +28,22 @@ By acting as a personal assistant, an agent based on the Idea Coach template can
 
 Agents built on this template can:
 
--  Provide AI-driven brainstorming through a guided dialogue and creative exercises to help users effectively develop and refine their ideas.
+- Provide AI-driven brainstorming through a guided dialogue and creative exercises to help users effectively develop and refine their ideas.
 - Customize agendas and exercises for brainstorming sessions based on user input to ensure engaging and productive brainstorming sessions.
 - Collect session insights and feedback to iteratively enhance brainstorming techniques and creative outcomes.
 
 ## Use cases
 
-An Idea Coach agent can help with scenarios such as:
+An Idea Coach agent can help with the following scenarios.
 
 | **Scenario** | **Description** |
 | ----------   | ----------  |
-| Brainstorming Assistance | Provides a question-based dialogue to help users brainstorm ideas |
-| Brainstorm Session Planning | Customizes brainstorming session agendas by gathering context and offering creative suggestions |
-| Creative Exercises | Proposes activities tailored to user goals and session details |
-| Idea organization | Provides unbiased tools for prioritizing ideas |
-| Feedback and Improvement | Collects session feedback and makes recommendations for improving the brainstorming session |
-| Training and Development | Helps users grow their brainstorming skills |
+| Brainstorming Assistance | Provides a question-based dialogue to help users brainstorm ideas. |
+| Brainstorm Session Planning | Customizes brainstorming session agendas by gathering context and offering creative suggestions. |
+| Creative Exercises | Proposes activities tailored to user goals and session details.|
+| Idea organization | Provides unbiased tools for prioritizing ideas. |
+| Feedback and Improvement | Collects session feedback and makes recommendations for improving the brainstorming session. |
+| Training and Development | Helps users grow their brainstorming skills. |
 
 ## Extension opportunities
 

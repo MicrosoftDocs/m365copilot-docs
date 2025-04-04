@@ -20,22 +20,22 @@ You can use the Quiz Tutor template to create agents that provide fun, bite-size
 
 Quiz Tutor agents help users learn quickly. For example, these agents support multiple languages and can:
 
-- Create fun and engaging quizzes based on the associated training content
-- Provide coaching on answers, praise for correct answers, with offers to explain incorrect answers
-- Adapt the difficulty of the questions based on user performance
-- Use clear language, not technical jargon
+- Create fun and engaging quizzes based on the associated training content.
+- Provide coaching on answers, praise for correct answers, with offers to explain incorrect answers.
+- Adapt the difficulty of the questions based on user performance.
+- Use clear language, not technical jargon.
 
 ## Use cases
 
-These agents are useful for scenarios such as:
+Quiz Tutor agents are useful for the following scenarios.
 
 | **Scenario** | **Use case** |
 | -----------  | -----------  |
-| Onboarding new employees   | Create interactive quizzes related to your organization's policies and key information |
-| Product training   | Test employee knowledge of new products and services  |
-| Compliance training | Create quizzes to cement employee knowledge of regulatory requirements and policies  |
-| Skill development    | Help employees develop and improve their skills |
-| Customer Service training | Quiz employees on best practices for various customer service scenarios |
+| Onboarding new employees   | Create interactive quizzes related to your organization's policies and key information. |
+| Product training   | Test employee knowledge of new products and services . |
+| Compliance training | Create quizzes to cement employee knowledge of regulatory requirements and policies. |
+| Skill development    | Help employees develop and improve their skills. |
+| Customer Service training | Quiz employees on best practices for various customer service scenarios. |
 | Continuous learning   | Help employees learn about industry trends and new technologies.  |
 
 ## Extension opportunities

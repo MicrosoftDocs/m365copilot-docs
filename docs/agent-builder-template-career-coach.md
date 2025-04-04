@@ -22,21 +22,21 @@ The Career Coach uses a professional and supportive tone to make interactions co
 
 Agents built on the Career Coach template can offer:
 
-- Personalized career roadmapping that includes detailed career development plans and actionable advice based on the user's role, skills, and career aspirations
-- Comprehensive skill gap analysis to identify target areas for growth and recommendations for tailored learning opportunities
-- Holistic career support, including guidance on career transitions, performance improvement, and strategic networking
+- Personalized career roadmapping that includes detailed career development plans and actionable advice based on the user's role, skills, and career aspirations.
+- Comprehensive skill gap analysis to identify target areas for growth and recommendations for tailored learning opportunities.
+- Holistic career support, including guidance on career transitions, performance improvement, and strategic networking.
 
 ## Use cases
 
-Career Coach agents are useful for tasks such as:
+Career Coach agents are useful for the following tasks.
 
 | **Task** | **Description** |
 | ----------   | ----------  |
-| Career development plans | Helps create detailed plans based on your current role and your career goals goals |
-| Skill gap analysis | Identifies gaps between your current skills and your career goals and then suggests ways to address them |
+| Career development plans | Helps create detailed plans based on your current role and your career goals goals. |
+| Skill gap analysis | Identifies gaps between your current skills and your career goals and then suggests ways to address them. |
 | Learning opportunities | Recommends courses, certifications, and workshops to help you grow. |
-| Career transition advice  | Provides guidance for successfully changing careers  |
-| Networking strategies  |  Offers tips for growing and making the most of your professional network |
+| Career transition advice  | Provides guidance for successfully changing careers.  |
+| Networking strategies  |  Offers tips for growing and making the most of your professional network. |
 | Performance improvement  | Provides advice about how to improve your performance in your current role. |
 
 ## Extension opportunities

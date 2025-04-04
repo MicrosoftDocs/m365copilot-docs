@@ -26,16 +26,16 @@ Agents built on this template provide:
 
 ## Use cases
 
-Prompt Coach agents are optimized for the following tasks:
+Prompt Coach agents are optimized for the following tasks.
 
 | **Task** | **Description** |
 | ----------   | ----------  |
-| Prompt creation | Helps users create effective prompts  |
-| Prompt analysis | Evaluates user prompts and offers detailed suggestions for improvement |
-| Prompt Compliance | Checks to determine whether prompts follow Responsible AI guidelines |
-| Prompt Correction | Analyzes and fixes problematic prompts, providing more context for better results |
-| Prompt Examples | Provides well-structured prompt examples and explains their purpose, context, sources, and expectations to help users learn to improve their own prompts |
-| Prompt Engineering | Helps tailor prompts to accomplish a particular task by iterating over a prompt and making incremental changes |
+| Prompt creation | Helps users create effective prompts.  |
+| Prompt analysis | Evaluates user prompts and offers detailed suggestions for improvement. |
+| Prompt Compliance | Checks to determine whether prompts follow Responsible AI guidelines. |
+| Prompt Correction | Analyzes and fixes problematic prompts, providing more context for better results. |
+| Prompt Examples | Provides well-structured prompt examples and explains their purpose, context, sources, and expectations to help users learn to improve their own prompts. |
+| Prompt Engineering | Helps tailor prompts to accomplish a particular task by iterating over a prompt and making incremental changes. |
 
 ## Extension opportunities
 

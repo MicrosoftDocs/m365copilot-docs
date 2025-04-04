@@ -20,13 +20,13 @@ You can use the Scrum Assistant template to create agents that support scrum mas
 
 Scrum Assistants support multiple languages and can:
 
-- Provide real-time guidance on scrum ceremonies, backlog management, and best practices for Agile development
-- Use trusted scrum resources and team artifacts to offer data-driven recommendations
-- Help teams improve performance, collaboration, and efficiency
+- Provide real-time guidance on scrum ceremonies, backlog management, and best practices for Agile development.
+- Use trusted scrum resources and team artifacts to offer data-driven recommendations.
+- Help teams improve performance, collaboration, and efficiency.
 
 ## Use cases
 
-These agents are useful in scenarios such as:
+Scrum Assistant agents are useful in the following scenarios.
 
 | **Scenario** | **Description** |
 | -----------  | -----------  |

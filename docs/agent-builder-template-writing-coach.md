@@ -20,18 +20,18 @@ You can use the Writing Coach template to create agents that help users improve 
 
 Writing Coach agents can:
 
-- Provide detailed feedback on clarity, coherence, grammar, and tone to elevate overall writing quality
-- Help transform casual text and narratives into formal documents, such as instructions and whitepapers
-- Offer specific suggestions to help adjust the tone or style of a document, or make it easier to translate a document into other languages
+- Provide detailed feedback on clarity, coherence, grammar, and tone to elevate overall writing quality.
+- Help transform casual text and narratives into formal documents, such as instructions and whitepapers.
+- Offer specific suggestions to help adjust the tone or style of a document, or make it easier to translate a document into other languages.
 
 ## Use cases
 
-These agents can provide helpful guidance for things like:
+Writing Coach agents can provide helpful guidance for the following types of tasks.
 
 | **Type of guidance** | **Description** |
 | ----------   | ----------  |
 | Writing refinement | Provides a wide range of suggestions to help users refine their writing. Suggestions can include: ways to improve grammar, clarity, coherence, and key concepts and details to focus on.|
-| Audience targeting | Suggests ways to tailor the voice and tone, and details of a document to your target audience. The agent provides examples of the suggested changes|
+| Audience targeting | Suggests ways to tailor the voice and tone, and details of a document to your target audience. The agent provides examples of the suggested changes.|
 | Writing for a global audience | Identifies wording that might be culturally sensitive and offers alternatives. |
 | Descriptive and procedural | Provides feature descriptions as well as clear and concise instructions for using products and services.  |
 | Customer story writing | Asks for customer details and story goals, then provides suggestions for structuring the story with a clear beginning, middle, and end.  |
