@@ -10,25 +10,25 @@ In this section, you add the contents of a SharePoint site to the available know
 
     ```json
     "capabilities": [
-        {
-            "name": "WebSearch"
-        },
-        {
-            "name": "OneDriveAndSharePoint",
-            "items_by_url": [
-                {
-                    "url": "https://contoso.sharepoint.com/sites/ProductSupport"
-                }
-            ]
-        }
+      {
+        "name": "WebSearch"
+      },
+      {
+        "name": "OneDriveAndSharePoint",
+        "items_by_url": [
+          {
+            "url": "https://contoso.sharepoint.com/sites/ProductSupport"
+          }
+        ]
+      }
     ]
     ```
 
-    For more information, see [OneDrive and SharePoint object](../../declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object).
+    For more information, see [OneDrive and SharePoint object](../../declarative-agent-manifest-1.3.md#onedrive-and-sharepoint-object).
 
     > [!NOTE]
     >
-    > - URLs should be full path to SharePoint items (site, document library, folder, or file). You can use the "Copy direct link" option in SharePoint to get the full path or files and folders. To achieve this, right-click on the file or folder and select **Details**. Navigate to **Path** and click on the copy icon.
+    > - URLs should be full path to SharePoint items (site, document library, folder, or file). You can use the "Copy direct link" option in SharePoint to get the full path or files and folders. Right-click on the file or folder and select **Details**. Navigate to **Path** and select the copy icon.
     > - Not specifying the `items_by_url` array (or the alternative `items_by_sharepoint_ids` array) causes all OneDrive and SharePoint content in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
