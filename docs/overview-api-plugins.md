@@ -114,3 +114,4 @@ To protect the user's privacy, Copilot redacts any URLs contained in API respons
 - [Build API plugins from an existing API for Microsoft 365 Copilot](build-api-plugins-existing-api.md)
 - [Build API plugins with a new API for Microsoft 365 Copilot](build-api-plugins-new-api.md)
 - [API plugin manifest schema for Microsoft 365 Copilot](./api-plugin-manifest.md)
+- [Write effective instructions for declarative agents with API plugins](instructions-api-plugins.md)

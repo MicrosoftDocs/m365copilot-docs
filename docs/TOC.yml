@@ -70,6 +70,8 @@
       href: debugging-copilot-agent.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
+    - name: Write instructions for agents with API plugins
+      href: instructions-api-plugins.md
     - name: Add capabilities and knowledge sources
       href: add-agent-capabilities.md
     - name: Optimize SharePoint content retrieval

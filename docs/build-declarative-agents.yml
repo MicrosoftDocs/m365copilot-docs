@@ -6,34 +6,58 @@ metadata:
   audience: Developer
   level: Beginner
   displayType: one-column
-  ms.date: 03/11/2025
+  ms.date: 04/03/2025
   author: sebastienlevert
   ms.author: slevert
   ms.topic: tutorial
   scenarios: getting-started
 items:
-- content: |
+- durationInMinutes: 1
+  content: |
     [!INCLUDE [](./includes/declarative-agents-walkthrough/01-intro.md)]
 - title: Create a declarative agent
+  durationInMinutes: 3
   content: |
     [!INCLUDE [](./includes/declarative-agents-walkthrough/02-create-agent.md)]
 - title: Add instructions
+  durationInMinutes: 3
   content: |
     [!INCLUDE [](./includes/declarative-agents-walkthrough/03-add-instructions.md)]
 - title: Add conversation starters
+  durationInMinutes: 3
   content: |
     [!INCLUDE [](./includes/declarative-agents-walkthrough/04-add-conversation-starters.md)]
 - title: Add web content
+  durationInMinutes: 3
   content: |
     [!INCLUDE [](./includes/declarative-agents-walkthrough/05-add-web-content.md)]
 - title: Add OneDrive and SharePoint content
+  durationInMinutes: 3
   content: |
     [!INCLUDE [](./includes/declarative-agents-walkthrough/06-add-onedrive-sharepoint.md)]
+- title: Add Teams messages
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/07-add-teams-messages.md)]
+- title: Add people knowledge
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/08-add-people.md)]
+- title: Add image generator
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/09-add-graphic-art.md)]
+- title: Add code interpreter
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/10-add-code-interpreter.md)]
 - title: Add Microsoft Graph connectors content
+  durationInMinutes: 3
   content: |
-    [!INCLUDE [](./includes/declarative-agents-walkthrough/07-add-ms-graph-connectors.md)]
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/11-add-ms-graph-connectors.md)]
 - title: Add API plugins
+  durationInMinutes: 5
   content: |
-    [!INCLUDE [](./includes/declarative-agents-walkthrough/08-add-plugins.md)]
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/12-add-plugins.md)]
 - content: |
-    [!INCLUDE [](./includes/declarative-agents-walkthrough/09-completed.md)]
+    [!INCLUDE [](./includes/declarative-agents-walkthrough/13-completed.md)]
