@@ -164,9 +164,9 @@ Each message unit costs $0.01.
 |Organizational data responses based on Microsoft Graph connector grounding | 10 messages/$0.10 | 0 |
 |Actions via triggers, topics, agent flows, text & generative AI tools, and Power Platform connectors | 5 messages/$0.05 | 0 (Autonomous use t message/$0.05) |
 | **Text and generative AI tools** (Message rate per 10 responses)| | |
-!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic| 1 message/$0.01 | 1 message/$0.01 |
-!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard| 15 messages/$0.15 | 15 messages/$0.15 |
-!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Premium| 100 messages/$1.00 | 100 messages/$1.00 |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic| 1 message/$0.01 | 1 message/$0.01 |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard| 15 messages/$0.15 | 15 messages/$0.15 |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Premium| 100 messages/$1.00 | 100 messages/$1.00 |
 |Agent flow actions (Message rate per 100 actions) | 13 message/$0.13| 13 message/$0.13 |
 
 ## Frequently asked questions
