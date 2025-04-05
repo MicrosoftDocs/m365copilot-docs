@@ -14,6 +14,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## April 2025
+
+Updated the usage rates for Copilot Studio messages. For more information, see [Copilot Studio message usage rates](prerequisites.md#copilot-studio-message-usage-rates)
+
 ## March 2025
 
 ### Declarative agent manifest version 1.3
