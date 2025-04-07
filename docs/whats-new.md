@@ -16,7 +16,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ## April 2025
 
-Use templates in agent builder to streamline your agent development process. For more information, see [Agent builder templates overview](agent-builder-templates.md).
+Use templates in [Copilot Studio agent builder](copilot-studio-agent-builder.md) to streamline your agent development process. For more information, see [Agent builder templates overview](agent-builder-templates.md).
 
 ## March 2025
 
