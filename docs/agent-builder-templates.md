@@ -1,6 +1,6 @@
 ---
 title: Copilot Studio Agent Builder Templates Overview
-description: Learn how agents use the Microsoft 365 app package, including a unified process for packaging, publishing, and management.
+description: Learn how to use the templates in Copilot Studio agent builder to quickly create a declarative agent for Microsoft 365 Copilot.
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
@@ -37,5 +37,5 @@ After the agent is created, choose **Go to agent** in Copilot to chat with the a
 ## Related content
 
 - [Build agents with Copilot Studio agent builder](copilot-studio-agent-builder-build.md)
-- [Declarative agents overview](overview-declarative-agents.md)
+- [Declarative agents overview](overview-declarative-agent.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
