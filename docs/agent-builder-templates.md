@@ -20,7 +20,7 @@ To create an agent from a template in agent builder:
 
 1. On the **Describe** tab in agent builder, select a template. You can test the agent in the right pane right away.
 2. Using natural language, provide additional information to update and enhance the agent, including the agent name, description, and instructions.
-3. On the **Configure** tab, add an icon, knowledge sources, and extra capabilities to your agent.
+3. On the **Configure** tab, add an icon, knowledge sources, and capabilities to your agent.
 
 You can also configure the agent directly on the **Configure** tab in agent builder:
 
