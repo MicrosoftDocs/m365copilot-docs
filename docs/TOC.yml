@@ -60,6 +60,8 @@
         href: copilot-studio-agent-builder-build.md
       - name: Build agents from template
         items:     
+        - name: Templates overview
+          href: agent-builder-templates-overview.md
         - name: Career Coach 
           href: agent-builder-template-career-coach.md
         - name: Customer Insight Assistant
