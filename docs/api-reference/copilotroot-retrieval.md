@@ -23,7 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 | Permission type                        | Least privileged permissions | Higher privileged permissions |
 |:---------------------------------------|:-----------------------------|:------------------------------|
-| Delegated (work or school account)     | Files.Read.All               | Sites.Read.All, ExtneralItem.Read.All                |
+| Delegated (work or school account)     | Files.Read.All               | Sites.Read.All, ExternalItem.Read.All                |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
 | Application                            | Not supported.               | Not supported.                |
 
@@ -173,10 +173,10 @@ Content-Type: application/json
     "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNAccess.docx",
     "extracts":[
       {
-        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+      },
       {
         "text": "You will need to sign in with 2FA to access the corporate VPN."
-      }
       }
     ],
     "resourceType": "listItem",
@@ -254,10 +254,10 @@ Content-Type: application/json
     "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNAccess.docx",
     "extracts":[
       {
-        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+      },
       {
         "text": "You will need to sign in with 2FA to access the corporate VPN."
-      }
       }
     ],
     "resourceType": "listItem",
