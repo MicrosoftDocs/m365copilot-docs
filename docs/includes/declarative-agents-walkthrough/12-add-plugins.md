@@ -50,14 +50,14 @@ Before you begin, create a file named `posts-api.yml` and add the code from the 
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `actions` array:
 
-```json
-"actions": [
-    {
+    ```json
+    "actions": [
+      {
         "id": "postsPlugin",
         "file": "postsapi-apiplugin.json"
-    }
-]
-```
+      }
+    ]
+    ```
 
 1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
 

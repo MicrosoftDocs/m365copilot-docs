@@ -1,0 +1,9 @@
+{
+    "redirections": [
+      {
+        "source_path_from_root": "/docs/debugging-copilot-plugin.md",
+        "redirect_url": "/microsoft-365-copilot/extensibility/debugging-copilot-agent",
+        "redirect_document_id": false
+      }
+    ]
+  }

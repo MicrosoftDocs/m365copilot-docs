@@ -66,7 +66,7 @@ The following example shows a language file, `fr.json`, with localized strings f
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json`",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json",
     "name.short": "Agent de Communications",
     "name.full": "Agent pour les Communications",
     "description.short": "Outils pour les professionnels de la communication",
@@ -87,7 +87,7 @@ For each language file, specify the following properties from the app localizati
 
 | Manifest field | Description | Max length| Required |
 |--|--|--|--|
-| `@schema` | The URL to the localization schema. For agents, use devPreview: `https://developer.microsoft.com/en-us/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
+| `$schema` | The URL to the localization schema. For agents, use devPreview: `https://developer.microsoft.com/en-us/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
 | `name.short` | Replaces the short name from the app manifest with the value provided. | 30 characters | ✔️ |
 | `name.full` | Replaces the full name from the app manifest with value provided | 100 characters | ✔️ |
 | `description.short`| Replaces the short description from the app manifest with value provided. | 80 characters | ✔️ |

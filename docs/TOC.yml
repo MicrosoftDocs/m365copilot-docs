@@ -17,6 +17,8 @@
 - name: Get started
   expanded: true
   items:
+  - name: Planning guide
+    href: planning-guide.md
   - name: Choose your extensibility path
     href: decision-guide.md
   - name: Set up your dev environment
@@ -64,8 +66,12 @@
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+    - name: Debug with developer mode in Copilot
+      href: debugging-copilot-agent.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
+    - name: Write instructions for agents with API plugins
+      href: instructions-api-plugins.md
     - name: Add capabilities and knowledge sources
       href: add-agent-capabilities.md
     - name: Optimize SharePoint content retrieval

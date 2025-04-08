@@ -13,10 +13,7 @@ ms.custom: [copilot-learning-hub]
 
 Microsoft 365 Copilot is an AI-powered productivity tool that keeps users in the flow of their work across Microsoft 365 applications like Outlook, Teams, and Word, grounded in data from Microsoft Graph. Although Copilot offers powerful capabilities, users might need to integrate additional knowledge, data sources, or applications into Copilot to meet specific business needs.
 
-Agents for Microsoft 365 Copilot are specialized assistants focused on a specific subject, powered by organizational knowledge and actions to automate business processes. You can build two types of agents for Copilot: _declarative agents_ and _custom engine agents_. This article describes the two types of agents how to choose the right one for your scenario. 
-
-[Microsoft Graph connectors](overview-graph-connector.md) enable organizations to bring in external data, allowing Copilot and agents to access and reason over a broader range of enterprise content.
-
+Agents for Microsoft 365 Copilot are specialized assistants focused on a specific subject, powered by organizational knowledge and actions to automate business processes. You can build two types of agents for Copilot: _declarative agents_ and _custom engine agents_. This article describes the two types of agents how to choose the right one for your scenario.
 
 ## Types of agents you can build
 
