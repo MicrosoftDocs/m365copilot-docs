@@ -20,7 +20,7 @@ Represents results from a retrieval query.
 
 | Property        | Type                                       | Description                            |
 |:----------------|:-------------------------------------------|:---------------------------------------|
-| `retrievalHits` | [retrievalHit](retrievalhit.md) collection | A collection of the retrieval results. |
+| `retrievalHits` | [retrievalHit](retrievalhit.md) collection | A collection of the retrieval results. If empty, no relevant results were found. |
 
 ## Relationships
 
