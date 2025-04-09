@@ -60,6 +60,30 @@
         href: copilot-studio-agent-builder.md
       - name: Build agents
         href: copilot-studio-agent-builder-build.md
+      - name: Build agents from template
+        items:     
+        - name: Templates overview
+          href: agent-builder-templates.md
+        - name: Career Coach 
+          href: agent-builder-template-career-coach.md
+        - name: Customer Insight Assistant
+          href: agent-builder-template-customer-insight.md
+        - name: Idea Coach
+          href: agent-builder-template-idea-coach.md
+        - name: Interview Question Assistant
+          href: agent-builder-template-interview-questions.md
+        - name: Learning Coach
+          href: agent-builder-template-learning-coach.md
+        - name: Meeting Coach
+          href: agent-builder-template-meeting-coach.md
+        - name: Prompt Coach 
+          href: agent-builder-template-prompt-coach.md
+        - name: Quiz Tutor
+          href: agent-builder-template-quiz-tutor.md
+        - name: Scrum Assistant
+          href: agent-builder-template-scrum-assistant.md
+        - name: Writing Coach
+          href: agent-builder-template-writing-coach.md
       - name: Publish agents
         href: copilot-studio-agent-builder-publish.md
       - name: Availability and language support
