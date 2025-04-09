@@ -7,7 +7,6 @@ ms.topic: reference
 ms.date: 03/11/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
-zone_pivot_groups: graph-api-versions
 ---
 
 # retrievalExtract resource type
