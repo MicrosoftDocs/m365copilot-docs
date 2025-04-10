@@ -16,7 +16,13 @@ For the latest information, announcements, and news about preview and generally 
 
 ## April 2025
 
+### Copilot Studio agent builder templates
+
 Use templates in [Copilot Studio agent builder](copilot-studio-agent-builder.md) to streamline your agent development process. For more information, see [Agent builder templates overview](agent-builder-templates.md).
+
+### Document interaction for declarative agents in Word
+
+Declarative agents in the Copilot experience in Word can [interact with the open document](declarative-agent-document-interaction.md). Users can provide the current selection to the agent and can insert images provided by the agent into the document.
 
 ## March 2025
 
