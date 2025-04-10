@@ -100,6 +100,8 @@
       href: add-agent-capabilities.md
     - name: Optimize SharePoint content retrieval
       href: optimize-sharepoint-content.md
+    - name: Document interaction
+      href: declarative-agent-document-interaction.md
     - name: Localize your agent
       href: localize-agents.md
     - name: RAI validation
