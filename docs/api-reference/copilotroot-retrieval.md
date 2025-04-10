@@ -50,7 +50,7 @@ The following table lists the parameters that are required when you call this ac
 |:-----------------------|:------------------|:-------------------------------|
 | queryString            | String            | Natural language query string used to retrieve relevant text extracts. Required. |
 | dataSources            | String collection | A list of Microsoft 365 data sources that should be included in the retrieval. Acceptable values are "SharePoint" and "External". By default, all supported data sources are included. Optional. |
-| filterExpression       | String            | [KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression supporting filtering on path for SharePoint content only, to scope the search before the query runs. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query will execute as if there is no filterExpression. Optional. |
+| filterExpression       | String            | [KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression supporting filtering exclusively on path for SharePoint content, allowing to scope the search before the query runs. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query will execute as if there is no filterExpression. Optional. |
 | resourceMetadata       | String collection | A list of metadata fields to be returned for each item in the response. By default, no metadata is returned. Optional. |
 | maximumNumberOfResults | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
 
