@@ -50,7 +50,7 @@ The following table lists the parameters that are required when you call this ac
 |:-----------------------|:------------------|:-------------------------------|
 | queryString            | String            | Natural language query string used to retrieve relevant text extracts. Required. |
 | dataSources            | String collection | A list of Microsoft 365 data sources that should be included in the retrieval. Acceptable values are "SharePoint" and "External". By default, all supported data sources are included. Optional. |
-| filterExpression       | String            | [KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft Graph connectors](/graph/connecting-external-content-manage-schema) properties and attributes to scope the search before the query runs. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query will execute as if there is no filterExpression. Optional. |
+| filterExpression       | String            | [KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression supporting filtering on path for SharePoint content only, to scope the search before the query runs. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query will execute as if there is no filterExpression. Optional. |
 | resourceMetadata       | String collection | A list of metadata fields to be returned for each item in the response. By default, no metadata is returned. Optional. |
 | maximumNumberOfResults | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
 
@@ -62,7 +62,7 @@ If successful, this action returns a `200 OK` response code and a [retrievalResp
 
 ### Example 1: Retrieve data from SharePoint and Microsoft Graph connectors
 
-The following example shows a request to retrieve data from both SharePoint and Microsoft Graph connectors. The `dataSources` parameter indicates that results should be retrieved from both SharePoint and Microsoft Graph connectors. The `filterExpression` parameter specifies the SharePoint path, and to retrieve data from Microsoft Graph connectors with a specific value for the `title` semantic label. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows a request to retrieve data from both SharePoint and Microsoft Graph connectors. The `dataSources` parameter indicates that results should be retrieved from both SharePoint and Microsoft Graph connectors. The `filterExpression` parameter specifies the SharePoint path. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
 #### Request
 
@@ -75,7 +75,7 @@ Content-Type: application/json
 {
   "queryString": "How to setup corporate VPN?",
   "dataSources": ["SharePoint", "External"],
-  "filterExpression": "(Label_Title:\"Corporate VPN\" OR path:\"https://contoso.sharepoint.com/sites/HR\")",
+  "filterExpression": "path:\"https://contoso.sharepoint.com/sites/HR\"",
   "resourceMetadata": [
     "title",
     "author"
@@ -355,87 +355,6 @@ Content-Type: application/json
     "resourceType": "externalItem",
     "resourceMetadata": {
       "title": "VPN Instructions"
-    }
-  }
-}
-```
-
-### Example 5: Retrieve data from SharePoint Word files updated within a specific date range
-
-The following example shows a request to retrieve data from Word documents located in a specific SharePoint path that have been updated within a specific time period. The `filterExpression` parameter specifies the SharePoint path, file type, and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of two documents.
-
-#### Request
-
-The following example shows the request.
-
-```http
-POST https://graph.microsoft.com/beta/copilot/retrieval
-Content-Type: application/json
-
-{
-  "queryString": "How to setup corporate VPN?",
-  "filterExpression": "filetype:docx AND (LastModifiedTime>=2024-01-01 AND LastModifiedTime<=2024-12-31) AND path:\"https://contoso.sharepoint.com/sites/HR\"",
-  "resourceMetadata": [
-    "title",
-    "author",
-    "LastModifiedTime"
-  ],
-  "maximumNumberOfResults": "2"
-}
-```
-
-#### Response
-
-The following example shows the response.
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "retrievalHits":
-  {
-    "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
-    "extracts":[
-      {
-        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
-      }
-    ],
-    "resourceType": "listItem",
-    "resourceMetadata": {
-      "title": "VPN Access",
-      "author": "John Doe",
-      "LastModifiedTime": "2024-06-14T20:57:00Z"
-    },
-    "sensitivityLabel":{
-      "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
-      "displayName": "Confidential\\Any User (No Protection)",
-      "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-      "priority":4,
-      "color":"#FF8C00",
-      "isEncrypted":false
-    }
-  },
-  {
-    "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNConfig.docx",
-    "extracts": [
-      {
-        "text": "Have your VPN username and password ready prior to starting the configuration."
-      }
-    ],
-    "resourceType": "externalItem",
-    "resourceMetadata": {
-      "title": "Corporate VPN",
-      "author": "Elisa Mueller",
-      "LastModifiedTime": "2024-05-17T23:39:00Z"
-    },
-    "sensitivityLabel":{
-      "sensitivityLabelId": "079cd1b0-4b31-4f12-9c4a-12e6296c95a1",
-      "displayName": "Confidential\\Any User (No Protection)",
-      "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-      "priority":4,
-      "color":"#FF8C00",
-      "isEncrypted":false
     }
   }
 }
