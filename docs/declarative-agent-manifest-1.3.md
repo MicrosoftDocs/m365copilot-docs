@@ -20,7 +20,7 @@ This schema version introduces the following changes from [version 1.2](declarat
 
 - The [Dataverse](#dataverse-object) capability is added to the list of `capabilities`. It supports an array of objects in the `knowledge_sources` field that contain Dataverse instances.
 - The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `urls` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
-- - The [Email](#email-object) capability is added to the list of `capabilities`. It supports a shared mailbox and an array of folder IDs for the agent to search.
+- The [Email](#email-object) capability is added to the list of `capabilities`. It supports a shared mailbox and an array of folder IDs for the agent to search.
 - The [People](#people-object) capability is added to the list of `capabilities`. This capability is unscoped and allows agents to search for information about people in an organization.
 
 ## JSON schema
