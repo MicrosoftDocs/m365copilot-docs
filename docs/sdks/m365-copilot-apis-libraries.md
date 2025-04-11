@@ -1,3 +1,12 @@
+---
+title: Microsoft 365 Copilot APIs client libraries (Preview)
+description: "The Microsoft 365 Copilot APIs client libraries are designed to facilitate the development of high-quality, efficient, and resilient AI solutions that access the Microsoft 365 Copilot APIs."
+author: lramosvea
+ms.author: lramosvea
+ms.localizationpriority: medium
+ms.date: 04/11/2025
+ms.topic: overview
+---
 
 # Microsoft 365 Copilot APIs client libraries
 
@@ -34,7 +43,7 @@ The Microsoft 365 Copilot APIs are included in the following NuGet packages:
 - [Microsoft.Agents.M365Copilot.Beta](https://github.com/microsoft/Agents-M365Copilot/tree/main/dotnet/src/Microsoft.Agents.M365Copilot.Beta): Contains the models and request builders for accessing the beta endpoint. Microsoft.Agents.M365Copilot.Beta has a dependency on Microsoft.Agents.M365Copilot.Core
 - Microsoft.Agents.M365Copilot.Core: The core library for making calls to Microsoft 365 Copilot APIs.
 
-To install the Microsoft.Agents.M365Copilot packages into your project, you can use the [dotnet CLI](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli), the [Package Manager UI in Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio) or the [Package Manager Console in Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio).
+To install the Microsoft.Agents.M365Copilot packages into your project, you can use the [dotnet CLI](https://learn.microsoft.com/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli), the [Package Manager UI in Visual Studio](https://learn.microsoft.com/nuget/quickstart/install-and-use-a-package-in-visual-studio) or the [Package Manager Console in Visual Studio](https://learn.microsoft.com/nuget/quickstart/install-and-use-a-package-in-visual-studio).
 
 ### dotnet CLI
 
