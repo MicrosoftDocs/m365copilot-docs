@@ -23,6 +23,7 @@ The following table shows which capabilities and knowledge sources you can confi
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | Yes |
 | Dataverse | :x: | :white_check_mark:\* | Yes |
+| Email | :x: | :white_check_mark:\* | Yes |
 | People | :x: | :white_check_mark: | Yes |
 | Teams messages | :x: | :white_check_mark:\* | Yes |
 
@@ -208,7 +209,42 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
     }
 ```
 
+## Email knowledge
 
+The email capability allows you to scope your agent to a personal or shared mailbox, and optionally, a specific mailbox folder. You can reference multiple mailbox folders but only one shared folder.
+
+> [!NOTE]
+> Email knowledge is not currently available in Copilot Studio agent builder.
+
+### Enable email knowledge
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+
+> [!NOTE]
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `Email` capability.
+```json
+    "capabilities": [
+      {
+        "name": "Email",
+        "shared_mailbox": "sample@service.microsoft.com",
+        "folders": [
+          {
+           "folder_id": "sentitems"
+          }
+       ]
+      }
+    ]
+```
+
+In the **folder_id** field, you can reference either well-known folder names or folder IDs. For a list of well-known folder names, see [mailFolder resource type](/graph/api/resources/mailfolder). To get a list of folder IDs, use the following query in [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer):
+
+`https://graph.microsoft.com/v1.0/me/mailFolders`
+
+In the **shared_mailbox** field, use the SMTP address of the shared mailbox.
+
+If you reference both a shared mailbox and a folder, the agent scopes responses to the folder within the shared mailbox. If you reference a folder only, the agent scopes responses to the contents of the folder within the personal mailbox.
+
+If you don't reference a shared mailbox or a folder, the agent search is not scoped to any folder or mailbox and it returns results from all email content, based on the user's query.
 
 ## People knowledge
 
