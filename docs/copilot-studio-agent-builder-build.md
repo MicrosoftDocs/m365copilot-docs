@@ -145,6 +145,10 @@ In the **Capabilities** section of the **Configure** tab, you can choose to add 
 
 To add one or more capabilities to your agent, choose the toggle next to the capability you want to enable.
 
+## Build from a template
+
+Copilot Studio agent builder includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs, including by adding knowledge sources and capabilities. For more information, see [Agent builder templates overview](agent-builder-templates.md) or choose one of the templates on the **Describe** or **Configure** tab in agent builder.
+
 ## Next step
 
 > [!div class="nextstepaction"]

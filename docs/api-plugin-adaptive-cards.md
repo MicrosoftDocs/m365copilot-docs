@@ -224,8 +224,7 @@ Adaptive cards must be designed to be responsive across various surface sizes. T
 
 - Avoid using multi-column layouts whenever possible. Single-column layouts tend to render well even at the narrowest viewport widths.
 - Refrain from placing text and image elements in the same row unless the image is a small icon or avatar.
-- Avoid assigning a fixed width to elements within the Adaptive Card; instead, allow them to resize according to the viewport width. You can, however, assign a fixed width to small images such as icons and avatars. 
-
+- Avoid assigning a fixed width to elements within the Adaptive Card; instead, allow them to resize according to the viewport width. You can, however, assign a fixed width to small images such as icons and avatars.
 
 ## Related content
 
