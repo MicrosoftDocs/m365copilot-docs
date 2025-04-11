@@ -16,7 +16,12 @@ For the latest information, announcements, and news about preview and generally 
 
 ## April 2025
 
-###
+
+### Copilot Studio message usage rates
+
+Updated the usage rates for Copilot Studio messages. For more information, see [Copilot Studio message usage rates](prerequisites.md#copilot-studio-message-usage-rates).
+
+### Email as knowledge
 
 Email is now available as a knowledge source for agents build with Teams Toolkit. For more information, see [Email knowledge](add-agent-capabilities.md#email-knowledge).
 
