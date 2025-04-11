@@ -16,6 +16,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## April 2025
 
+###
+
+Email is now available as a knowledge source for agents build with Teams Toolkit. For more information, see [Email knowledge](add-agent-capabilities.md#email-knowledge).
+
 ### Copilot Studio agent builder templates
 
 Use templates in [Copilot Studio agent builder](copilot-studio-agent-builder.md) to streamline your agent development process. For more information, see [Agent builder templates overview](agent-builder-templates.md).
