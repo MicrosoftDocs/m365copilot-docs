@@ -5,7 +5,7 @@ author: muwagerikpe
 ms.author: muwagerikpe
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 04/11/2025
 ---
 
 # Microsoft Graph connectors for Microsoft 365 Copilot
@@ -33,6 +33,38 @@ In addition, users can hover over in-text citations in Microsoft 365 Copilot res
 If users want to dive deeper into the referenced content, they can select one of the reference links at the bottom of the response.
 
 ![A screenshot of Graph connectors reference list in Microsoft 365 Copilot](assets/images/connectors-copilot-logo.png)
+
+## Microsoft Graph connector semantic indexing
+
+Microsoft Graph connectors use semantic indexing to enable more efficient and meaningful data retrieval. Semantic indexing optimizes the way data is indexed and retrieved from various sources to help search experiences access data and return more relevant results.
+
+Semantic indexing in Microsoft Graph connectors allows for:
+
+- Improved matching of search queries to content to provide more relevant search results than simple keyword (lexical) matches.
+- Enhanced search results that include both exact and approximate matches.
+- Contextual understanding to support complex queries that require an understanding of relationships between data.
+
+Currently, the following properties, which are common across all connectors, are indexed:
+
+- **Title** - The title of the item.
+- **Content** - The body of the item. This varies by connector.
+
+Custom connectors are semantically indexed as well. To take full advantage of semantic indexing in your custom connectors, include the relevant content that you want to be indexed in the **title** and **content** properties.
+
+> [!NOTE]
+> [Semantic labels](/graph/connecting-external-content-manage-schema#semantic-labels) are used for filtering results; they don't affect the semantic indexing of the property
+
+The following search scenarios benefit from semantic indexing:
+
+- Topic and keyword-based searches
+- Searches that require approximate matches
+- Searches that require the system to understand context and relationships
+
+Semantic indexing doesn't benefit the following scenarios:
+
+- Queries that don't include keywords or topics, such as "find bugs assigned to" or "Find items created by".
+- Queries that involve multiple parameters, such as an assignee and a topic.
+- Queries for a total number of results. Relevance and synthesis can reduce the number of results returned.
 
 ## Microsoft Graph connectors gallery
 
