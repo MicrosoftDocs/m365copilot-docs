@@ -5,7 +5,7 @@ author: muwagerikpe
 ms.author: muwagerikpe
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 02/03/2025
+ms.date: 04/11/2025
 ---
 
 # Microsoft Graph connectors for Microsoft 365 Copilot
@@ -64,7 +64,7 @@ Semantic indexing doesn't benefit the following scenarios:
 
 - Queries that don't include keywords or topics, such as "find bugs assigned to" or "Find items created by".
 - Queries that involve multiple parameters, such as an assignee and a topic.
-- Queries for a total number of results. The system currently only returns a maximum of 10 results in a semantic or lexical search. Relevance and synthesis can also reduce the number of results returned.
+- Queries for a total number of results. Relevance and synthesis can reduce the number of results returned.
 
 ## Microsoft Graph connectors gallery
 
