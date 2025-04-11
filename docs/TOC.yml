@@ -193,8 +193,6 @@
       href: overview-business-applications.md
     - name: Connector actions
       href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-    - name: Conversational actions
-      href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
     - name: Power Automate flow actions
       href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
     - name: Prompts
