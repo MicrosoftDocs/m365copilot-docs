@@ -198,7 +198,7 @@
       - name: Search sensitivity label info
         href: api-reference/resources/searchsensitivitylabelinfo.md
   - name: Use client libraries (preview)  
-    href: sdks/m365-copilot-apis-libraries.md
+    href: sdks/api-libraries.md
 - name: Publish
   items:
   - name: Overview

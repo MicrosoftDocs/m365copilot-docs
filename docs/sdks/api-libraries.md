@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Copilot APIs client libraries (Preview)
+title: Microsoft 365 Copilot API Client Libraries (Preview)
 description: "The Microsoft 365 Copilot APIs client libraries are designed to facilitate the development of high-quality, efficient, and resilient AI solutions that access the Microsoft 365 Copilot APIs."
 author: lramosvea
 ms.author: lramosvea
@@ -8,9 +8,9 @@ ms.date: 04/11/2025
 ms.topic: overview
 ---
 
-# Microsoft 365 Copilot APIs client libraries
+# Microsoft 365 Copilot API client libraries (preview)
 
-The Microsoft 365 Copilot APIs client libraries are designed to facilitate the development of high-quality, efficient, and resilient AI solutions that access the Microsoft 365 Copilot APIs. These libraries include service and core libraries.
+The Microsoft 365 Copilot API client libraries are designed to facilitate the development of high-quality, efficient, and resilient AI solutions that access the Microsoft 365 Copilot APIs. These libraries include service and core libraries.
 
 The service libraries offer models and request builders that provide a rich, strongly typed experience for working with Microsoft 365 Copilot APIs.
 
@@ -19,23 +19,24 @@ The core libraries offer advanced features to facilitate interactions with the M
 ## Supported languages
 
 The Microsoft 365 Copilot API client libraries are currently available for the following languages:
+
 - [C#](https://github.com/microsoft/Agents-M365Copilot/tree/main/dotnet)
 - [TypeScript](https://github.com/microsoft/Agents-M365Copilot/tree/main/typescript)
 - [Python](https://github.com/microsoft/Agents-M365Copilot/tree/main/python)
 
 ## Client libraries in preview status
 
-The Microsoft 365 Copilot APIs client libraries can be in preview status when initially released or after a significant update. A preview release may not always be promoted to generally available (GA) status.
+The Microsoft 365 Copilot API client libraries can be in preview status when initially released or after a significant update. A preview release might not be promoted to general availability (GA) status.
 
-Additionally, avoid using the preview release of these libraries in production solutions, regardless of whether it utilizes version 1.0 or the beta version of the Microsoft 365 Copilot API.
+Avoid using the preview release of these libraries in production solutions, regardless of whether your solution uses version 1.0 or the beta version of the Microsoft 365 Copilot APIs.
 
 ## Client libraries supportability
 
-The Microsoft 365 Copilot APIs libraries are open-source projects on GitHub. If you encounter an issue, submit it with the necessary details on the "issues" page. Contributors will review and release a fix as needed. While Microsoft Customer Service and Support doesn't officially support SDKs and libraries, it does support the HTTP requests for Microsoft 365 Copilot API calls.
+The Microsoft 365 Copilot API libraries are open-source projects on GitHub. If you encounter an issue, file an issue with the details on the [Issues](https://github.com/microsoft/Agents-M365Copilot/issues) tab. Contributors will review and release a fix as needed. Microsoft Customer Service and Support doesn't officially support SDKs and libraries; however, it does support the HTTP requests for Microsoft 365 Copilot API calls.
 
 ## Install the libraries
 
-The Microsoft 365 Copilot APIs client libraries are included as a module in the Microsoft 365 Agents SDK. These libraries can be included in your projects via GitHub and popular platform package managers.
+The Microsoft 365 Copilot API client libraries are included as a module in the Microsoft 365 Agents SDK. These libraries can be included in your projects via GitHub and popular platform package managers.
 
 ### Install the Microsoft 365 Copilot APIs .NET client libraries
 
@@ -76,7 +77,4 @@ pip install microsoft-agents-m365copilot-beta
 ## Related content
 
 - [Overview of the Microsoft 365 Copilot Retrieval API](../api-reference/retrieval-api-overview.md)
-- [Use the retrieval API](../api-reference/copilotroot-retrieval.md)
-
-
-
+- [Use the Retrieval API](../api-reference/copilotroot-retrieval.md)

@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 Copilot Retrieval API Overview (Preview)
-description: "Use the Microsoft 365 Copilot retrieval API to ground data for your generative AI solution. Extract relevant content from SharePoint and Microsoft Graph connectors, while complying with the access controls defined for the tenant."
+description: "Use the Microsoft 365 Copilot Retrieval API to ground data for your generative AI solution. Extract relevant content from SharePoint and Microsoft Graph connectors, while complying with the access controls defined for the tenant."
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
@@ -55,7 +55,7 @@ The API supports natural language queries and uses the Microsoft 365 Copilot sta
 
 ## Known limitations
 
-The following are the current throttling and other limitations to the retrieval API:
+The following are the current throttling and other limitations to the Retrieval API:
 
 - The **queryString** request parameter has a limit of 1,500 characters.
 - If the **filterExpression** request parameter has incorrect KQL syntax, the query will successfully execute with no scoping.
@@ -67,9 +67,13 @@ The following are the current throttling and other limitations to the retrieval 
 
 ## Licensing
 
-The retrieval API is available at no additional cost to users with a Microsoft 365 Copilot license. Support for users without a Microsoft 365 Copilot license is currently not available.
+The Retrieval API is available at no additional cost to users with a Microsoft 365 Copilot license. Support for users without a Microsoft 365 Copilot license is currently not available.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [Use the retrieval API](copilotroot-retrieval.md)
+> [Use the Retrieval API](copilotroot-retrieval.md)
+
+## Related content
+
+- [Microsoft 365 Copilot API client libraries (preview)](api-libraries.md)
