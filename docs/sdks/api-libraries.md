@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 Copilot API Client Libraries (Preview)
-description: "The Microsoft 365 Copilot APIs client libraries are designed to facilitate the development of high-quality, efficient, and resilient AI solutions that access the Microsoft 365 Copilot APIs."
+description: "Learn how the Microsoft 365 Copilot API client libraries simplify AI solution development with robust features like retry handling, secure redirects, and payload compression."
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
