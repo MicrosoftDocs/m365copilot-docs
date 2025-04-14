@@ -53,7 +53,7 @@ Copilot Studio capabilities for Microsoft 365 are processed by the Copilot Studi
 
 ## Data storage
 
-Agents created via agent builder are stored in Cosmos DB on the organization's tenant. Copilot Studio agent builder calls Power Platform APIs, but it doesn't store data in Dataverse or consume Dataverse storage capacity.
+Agents created via agent builder do not consume the tenant's Dataverse storage entitlement.
 
 ## Compliance
 
