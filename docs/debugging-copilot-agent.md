@@ -1,6 +1,6 @@
 ---
-title: Debug an agent with developer mode
-description: Learn how to test and debug how agents select and use capabilities and actions
+title: Test and Debug Agents in Microsoft 365 Copilot by Using Developer Mode
+description: Learn how to test and debug how agents select and use capabilities and actions by using developer mode in Microsoft 365 Copilot.
 author: carolkigoonya
 ms.author: ckigoonya
 ms.topic: overview
@@ -8,15 +8,15 @@ ms.localizationpriority: medium
 ms.date: 02/28/2025
 ---
 
-# Debug an agent with developer mode
+# Use developer mode to test and debug agents
 
-You can use *developer mode* while testing your agent to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
+Testing is an important part of the process of developing [declarative agents](overview-declarative-agent.md) for Microsoft 365 Copilot. You can use *developer mode* while testing your agent to verify whether and how the Copilot orchestrator selects your knowledge sources for use in response to given prompts.
 
-## Using Copilot developer mode
+## Use developer mode in Microsoft 365 Copilot
 
 To enable developer mode, in Microsoft 365 Copilot, type `-developer on`. To disable developer mode, type `developer off`.
 
-:::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `copilot Chat` session where user has typed `-developer on` to successfully enable developer mode":::
+:::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of Copilot chat session where user has typed `-developer on` to successfully enable developer mode":::
 
 While developer mode is enabled, a card with debug information returns whenever the orchestrator searches specifically within your enterprise knowledge (data), capabilities, or skills (actions or  plugins) within your agent to respond to a prompt. The debug info card includes the following fields:
 
@@ -31,7 +31,7 @@ While developer mode is enabled, a card with debug information returns whenever 
 
 ### Agent metadata section
 
-:::image type="content" source="assets/images/developer-mode-agent-metadata.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing the agent metadata":::
+:::image type="content" source="assets/images/developer-mode-agent-metadata.png" alt-text="Screenshot of Copilot chat session where Copilot has returned a card with debugging information showing the agent metadata":::
 
 The agent metadata provides key details about the agent and the current debugging session, including:
 
@@ -42,13 +42,13 @@ The agent metadata provides key details about the agent and the current debuggin
 
 ### Agent capabilities
 
-:::image type="content" source="assets/images/developer-mode-agent-capabilities.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing the configured agent capabilities":::
+:::image type="content" source="assets/images/developer-mode-agent-capabilities.png" alt-text="Screenshot of Copilot chat session where Copilot has returned a card with debugging information showing the configured agent capabilities":::
 
 The Agent Capabilities section displays the configured capabilities for the agent, defining the scope of its accessible knowledge sources.
 
 ### Agent actions
 
-:::image type="content" source="assets/images/developer-mode-agent-actions.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing the configured agent actions":::
+:::image type="content" source="assets/images/developer-mode-agent-actions.png" alt-text="Screenshot of Copilot chat session where Copilot has returned a card with debugging information showing the configured agent actions":::
 
 Agent actions display the action ID and version number, configured functions for the action, along with their matching and selection status.
 
@@ -66,21 +66,21 @@ The executed details sections shows whether and which of the configured capabili
 
 #### Capability Execution details
 
-:::image type="content" source="assets/images/developer-mode-agent-execution.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing executed capabilities":::
+:::image type="content" source="assets/images/developer-mode-agent-execution.png" alt-text="Screenshot of Copilot chat session where Copilot has returned a card with debugging information showing executed capabilities":::
 
 Capability execution details display the executed capability and its status. Each capability may have different execution details, such as the search text used, the capability's response, and/or the number of results returned.
 
 #### Action Execution details
 
-:::image type="content" source="assets/images/developer-mode-agent-executed-actions.png" alt-text="Screenshot of `copilot Chat` session where copilot has returned a card with debugging information showing the executed actions":::
+:::image type="content" source="assets/images/developer-mode-agent-executed-actions.png" alt-text="Screenshot of Copilot chat session where Copilot has returned a card with debugging information showing the executed actions":::
 
-Action execution details include the executed function and its status, along with latency, request information (request endpoint, HTTP method, request headers), and the response.
+Action execution details include the function and its status, along with latency, request information (request endpoint, HTTP method, request headers), and the response.
 
 #### Card with *No functions selected for execution*
 
 If no action function matched the search intent of the prompt, the debug info card reports *No functions selected for execution*. This is likely because the command description in the manifest isn't semantically related to the search intent of the given prompt.
 
-If copilot was previously matching and executing your functions successfully, this could be an indication of throttling.
+If Copilot previously matched and ran your functions successfully, this can be an indication of throttling.
 
 #### Card with empty or failed *No Function execution details*
 
@@ -88,7 +88,7 @@ For non-message extension plugins, if there are failed or no function execution 
 
 For message extension plugins, best practice is to optimize for responses under nine seconds. For more info, review the [technical requirements](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#technical-requirements) for message extension plugins.
 
- Currently the timeout limit for copilot execution of a plugin API is set at 10 seconds.
+ Currently the timeout limit for Copilot execution of a plugin API is set at 10 seconds.
 
 ### Troubleshooting failures
 
@@ -103,8 +103,15 @@ Debug cards are also not returned in cases of capacity throttling, where you'll 
 ### Reporting an issue
 
 Report any feedback or issues with your agent by using the thumbs up or thumbs down button. Include the #extensibility tag in your report.
-Select whether you thumbs up ('I like something') or thumbs down ('I don't like something') right after the copilot response
-:::image type="content" source="./assets/images/developer-mode-feedback.png" alt-text="Screenshot of `copilot Chat` thumbs up or thumbs down feedback options":::
 
-Then, enter a message including the #extensibility tag in the text box
-:::image type="content" source="./assets/images/developer-mode-feedback-message.png" alt-text="Screenshot of `copilot Chat` feedback in the text box":::
+:::image type="content" source="./assets/images/developer-mode-feedback.png" alt-text="Screenshot of Copilot chat thumbs up or thumbs down feedback options":::
+
+Enter a message, including the #extensibility tag, in the text box.
+
+:::image type="content" source="./assets/images/developer-mode-feedback-message.png" alt-text="Screenshot of Copilot chat feedback in the text box":::
+
+## Related content
+
+- [Build a declarative agent with Visual Studio Code](/microsoft-365-copilot/extensibility/build-declarative-agents)
+- [Build agents with Copilot Studio agent builder](copilot-studio-agent-builder-build.md)
+- [Add capabilities and knowledge sources to your agent](add-agent-capabilities.md)
