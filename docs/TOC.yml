@@ -90,7 +90,7 @@
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
-    - name: Debug with developer mode in Copilot
+    - name: Test and debug agents with developer mode
       href: debugging-copilot-agent.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
