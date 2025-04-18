@@ -4,7 +4,7 @@ description: Learn how to use Copilot Studio agent builder to build declarative 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/25/2025
+ms.date: 04/17/2025
 ms.topic: conceptual
 ---
 
@@ -36,12 +36,6 @@ You can build agents from the following apps and sites:
 > Agent builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It is not available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that are not listed in this article.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-entry.png" alt-text="Agent builder entry point in Microsoft 365 Copilot":::
-
-## Prerequisites
-
-You need a license for [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise) and a license for Microsoft 365. Admins can assign or unassign licenses for users in the [Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users).
-
-For information regarding regional availability and supported languages, see [Copilot Studio agent builder availability and language support](copilot-studio-agent-builder-availability.md).
 
 ## Governance
 
