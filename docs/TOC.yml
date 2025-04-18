@@ -17,6 +17,8 @@
 - name: Get started
   expanded: true
   items:
+  - name: Planning guide
+    href: planning-guide.md
   - name: Choose your extensibility path
     href: decision-guide.md
   - name: Set up your dev environment
@@ -35,16 +37,8 @@
       href: overview-declarative-agent.md
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
-    - name: Write effective instructions
-      href: declarative-agent-instructions.md
-    - name: Add agent capabilities
-      href: add-agent-capabilities.md
-    - name: Optimize SharePoint content retrieval
-      href: optimize-sharepoint-content.md
-    - name: Localize your agent
-      href: localize-agents.md
-    - name: RAI validation
-      href: rai-validation.md
+    - name: Choose your development tool
+      href: declarative-agent-tool-comparison.md
     - name: Use Visual Studio Code
       expanded: true
       items:
@@ -54,6 +48,8 @@
         href: declarative-agent-capabilities-ids.md
       - name: Declarative agent manifest reference
         items:
+        - name: Version 1.3
+          href: declarative-agent-manifest-1.3.md
         - name: Version 1.2
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
@@ -64,12 +60,52 @@
         href: copilot-studio-agent-builder.md
       - name: Build agents
         href: copilot-studio-agent-builder-build.md
+      - name: Build agents from template
+        items:     
+        - name: Templates overview
+          href: agent-builder-templates.md
+        - name: Career Coach 
+          href: agent-builder-template-career-coach.md
+        - name: Customer Insight Assistant
+          href: agent-builder-template-customer-insight.md
+        - name: Idea Coach
+          href: agent-builder-template-idea-coach.md
+        - name: Interview Question Assistant
+          href: agent-builder-template-interview-questions.md
+        - name: Learning Coach
+          href: agent-builder-template-learning-coach.md
+        - name: Meeting Coach
+          href: agent-builder-template-meeting-coach.md
+        - name: Prompt Coach 
+          href: agent-builder-template-prompt-coach.md
+        - name: Quiz Tutor
+          href: agent-builder-template-quiz-tutor.md
+        - name: Scrum Assistant
+          href: agent-builder-template-scrum-assistant.md
+        - name: Writing Coach
+          href: agent-builder-template-writing-coach.md
       - name: Publish agents
         href: copilot-studio-agent-builder-publish.md
       - name: Availability and language support
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+    - name: Write effective instructions
+      href: declarative-agent-instructions.md
+    - name: Write instructions for agents with API plugins
+      href: instructions-api-plugins.md
+    - name: Add capabilities and knowledge sources
+      href: add-agent-capabilities.md
+    - name: Optimize SharePoint content retrieval
+      href: optimize-sharepoint-content.md
+    - name: Document interaction
+      href: declarative-agent-document-interaction.md
+    - name: Localize your agent
+      href: localize-agents.md
+    - name: Test and debug agents
+      href: debugging-copilot-agent.md
+    - name: RAI validation
+      href: rai-validation.md
   - name: Build a custom engine agent
     expanded: false
     items:
@@ -157,16 +193,12 @@
       href: overview-business-applications.md
     - name: Connector actions
       href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-    - name: Conversational actions
-      href: /microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context
     - name: Power Automate flow actions
       href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
     - name: Prompts
       href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
     - name: Learning path
       href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
-  - name: Debug with developer mode in Copilot
-    href: debugging-copilot-plugin.md
 - name: Publish
   items:
   - name: Overview

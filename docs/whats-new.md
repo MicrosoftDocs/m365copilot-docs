@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 02/25/2025
+ms.date: 03/24/2025
 ms.topic: overview
 ---
 
@@ -13,6 +13,35 @@ ms.topic: overview
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
+
+## April 2025
+
+
+### Copilot Studio message usage rates
+
+Updated the usage rates for Copilot Studio messages. For more information, see [Copilot Studio message usage rates](prerequisites.md#copilot-studio-message-usage-rates).
+
+### Email as knowledge
+
+Email is now available as a knowledge source for agents build with Teams Toolkit. For more information, see [Email knowledge](add-agent-capabilities.md#email-knowledge).
+
+### Copilot Studio agent builder templates
+
+Use templates in [Copilot Studio agent builder](copilot-studio-agent-builder.md) to streamline your agent development process. For more information, see [Agent builder templates overview](agent-builder-templates.md).
+
+### Document interaction for declarative agents in Word
+
+Declarative agents in the Copilot experience in Word can [interact with the open document](declarative-agent-document-interaction.md). Users can provide the current selection to the agent and can insert images provided by the agent into the document.
+
+## March 2025
+
+### Declarative agent manifest version 1.3
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.3](declarative-agent-manifest-1.3.md) adds support for the following capabilities:
+
+- [Dataverse knowledge](add-agent-capabilities.md#dataverse-knowledge)
+- [Teams messages as knowledge](add-agent-capabilities.md#teams-messages-as-knowledge)
+- [People knowledge](add-agent-capabilities.md#people-knowledge)
 
 ## February 2025
 

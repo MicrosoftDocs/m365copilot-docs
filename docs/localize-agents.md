@@ -20,7 +20,7 @@ You use the same localization file (per language) for both Teams app capabilitie
 
 This article describes how to add support for other languages (beyond the default language) to your agents.
 
-## 1. Update your agent manifests with tokenized keys
+## Update your agent manifests with tokenized keys
 
 Update your declarative agent and/or API plugin manifests with tokenized keys (indicated with double square brackets, for example `[[PLUGIN_NAME]]`) for any field values you want to localize. Localization keys must match this regular expression: `^[a-zA-Z_][a-zA-Z0-9_]*$`
 
@@ -35,7 +35,7 @@ The following example shows a declarative agent manifest with tokenized values f
 }
 ```
 
-### 2. Add `localizationInfo` to your app manifest
+## Add `localizationInfo` to your app manifest
 
 Add the `localizationInfo` section to your app manifest, with [language tags](/globalization/locale/standard-locale-names) and relative paths to each supported language file within your app package.
 
@@ -58,7 +58,7 @@ The following example shows the `localizationInfo` section in an app manifest.
 
 If your agent doesn't support other languages, the default language strings are represented within the app manifest file itself. Single language app packages don't require a separate language file for the default language.
 
-### 3. Create a localization file for each extra language
+## Create a localization file for each extra language
 
 Create a localization file for each supported language with values for the tokenized keys, using the file names specified (for the `defaultLanguageFile` and `file` properties) in the app manifest in the previous step.
 
@@ -66,7 +66,7 @@ The following example shows a language file, `fr.json`, with localized strings f
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json`",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json",
     "name.short": "Agent de Communications",
     "name.full": "Agent pour les Communications",
     "description.short": "Outils pour les professionnels de la communication",
@@ -81,13 +81,13 @@ The following example shows a language file, `fr.json`, with localized strings f
 }
 ```
 
-#### Localizable fields in app manifest
+### Localizable fields in app manifest
 
 For each language file, specify the following properties from the app localization schema that are required to be localized.
 
 | Manifest field | Description | Max length| Required |
 |--|--|--|--|
-| `@schema` | The URL to the localization schema. For agents, use devPreview: `https://developer.microsoft.com/en-us/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
+| `$schema` | The URL to the localization schema. For agents, use devPreview: `https://developer.microsoft.com/en-us/json-schemas/teams/vDevPreview/MicrosoftTeams.Localization.schema.json`. Manifest schema version must be same for both app manifest and localization files. | | ✔️ |
 | `name.short` | Replaces the short name from the app manifest with the value provided. | 30 characters | ✔️ |
 | `name.full` | Replaces the full name from the app manifest with value provided | 100 characters | ✔️ |
 | `description.short`| Replaces the short description from the app manifest with value provided. | 80 characters | ✔️ |
@@ -97,7 +97,7 @@ For each language file, specify the following properties from the app localizati
 
 To learn more, see [Localize your app (Microsoft Teams)](/microsoftteams/platform/concepts/build-and-test/apps-localization) and the [Localization schema reference](/microsoftteams/platform/resources/schema/localization-schema).
 
-#### Localizable fields in declarative agent manifest
+### Localizable fields in declarative agent manifest
 
 The following fields are localizable within the declarative agent manifest.
 
@@ -109,7 +109,7 @@ The following fields are localizable within the declarative agent manifest.
 
 To learn more, see [Declarative agent manifest reference](./declarative-agent-manifest-1.2.md).
 
-#### Localizable fields in API plugin manifest
+### Localizable fields in API plugin manifest
 
 The following fields are localizable within the API plugin manifest.
 

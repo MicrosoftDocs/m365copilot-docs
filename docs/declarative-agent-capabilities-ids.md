@@ -12,11 +12,11 @@ ms.topic: conceptual
 
 # Retrieving capabilities IDs for declarative agent manifest
 
-This article describes methods for developers to retrieve the necessary IDs to include Graph connectors and SharePoint/OneDrive files within the `capabilities` section of their [declarative agent manifest](declarative-agent-manifest-1.2.md). Developers can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
+This article describes methods for developers to retrieve the necessary IDs to include Graph connectors and SharePoint/OneDrive files within the `capabilities` section of their [declarative agent manifest](declarative-agent-manifest-1.3.md). Developers can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
 ## Microsoft Graph connectors
 
-This section describes how developers can retrieve the value to set in the `connection_id` property of the [Connection object](declarative-agent-manifest-1.2.md#connection-object) in the [Microsoft Graph connectors object](declarative-agent-manifest-1.2.md#microsoft-graph-connectors-object) in the manifest.
+This section describes how developers can retrieve the value to set in the `connection_id` property of the [Connection object](declarative-agent-manifest-1.3.md#connection-object) in the [Microsoft Graph connectors object](declarative-agent-manifest-1.3.md#microsoft-graph-connectors-object) in the manifest.
 
 > [!IMPORTANT]
 > Querying for Microsoft Graph connectors requires an admin account.
@@ -88,7 +88,7 @@ This section describes how developers can retrieve the value to set in the `conn
 
 ## Retrieving SharePoint IDs
 
-This section describes how developers can retrieve the value to set in the following properties within the `items_by_sharepoint_ids` property of the [`OneDriveAndSharePoint` object](declarative-agent-manifest-1.2.md#onedrive-and-sharepoint-object):
+This section describes how developers can retrieve the value to set in the following properties within the `items_by_sharepoint_ids` property of the [`OneDriveAndSharePoint` object](declarative-agent-manifest-1.3.md#onedrive-and-sharepoint-object):
 
 - `site_id`
 - `list_id`

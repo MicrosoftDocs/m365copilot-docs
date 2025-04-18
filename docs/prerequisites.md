@@ -5,7 +5,7 @@ author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 02/25/2025
+ms.date: 03/24/2025
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -87,9 +87,6 @@ To manage your sideloaded custom apps, including agents, from the Teams client, 
 
 Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
 
-> [!NOTE]
-> Copilot Studio agent builder isn't currently available to Microsoft 365 Copilot Chat users.
-
 The following steps are required for you to use Copilot Studio to build agents:
 
 - Your Power Platform admin or Dynamics 365 admin must [enable Generative AI features](/power-platform/admin/geographical-availability-copilot) in Power Platform admin center.
@@ -97,13 +94,13 @@ The following steps are required for you to use Copilot Studio to build agents:
 
 ### Enabling developer mode
 
-You can use *developer mode* in Copilot to test your test whether and how the orchestrator selects your plugin in response to a given prompt. 
+You can use *developer mode* in Copilot to test whether and how the orchestrator selects your plugin in response to a given prompt. 
 
 To enable developer mode, in Copilot Chat, type `-developer on`. To disable developer mode, type `-developer off`.
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `Microsoft 365 Copilot` session where user has typed `-developer on` to successfully enable developer mode":::
 
-Developer mode is only available within Microsoft 365 Copilot (Copilot for Work) experiences. For more information, see [Debugging plugin selection](debugging-copilot-plugin.md).
+Developer mode is only available within Microsoft 365 Copilot (Copilot for Work) experiences. For more information, see [Debugging agents](debugging-copilot-agent.md).
 
 ## Microsoft 365 Copilot developer licenses
 
@@ -116,7 +113,7 @@ Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizati
 > [!NOTE]
 > Copilot Chat and the agent experience in Word and PowerPoint is available only to users with a Microsoft 365 Copilot license. The agent experience is currently not available in the Copilot Chat experience in Outlook.
 
-Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage. 
+Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage.
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and metered usage configuration in the tenant.
 
@@ -134,6 +131,12 @@ The following table lists the agent types and agent capabilities that are availa
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scoped web search | :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft Graph</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connector grounding | :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SharePoint data</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grounding| :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft Graph</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connectors</br> | :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SharePoint data</br>| :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dataverse | :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email | :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;People | :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teams messages | :x: | :white_check_mark: | :white_check_mark: |
 |[**Custom engine agents**](overview-custom-engine-agent.md)| :x: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
@@ -147,17 +150,22 @@ If you choose the metered pay-as-you-go option for Copilot Studio, utilization r
 
 Billing is based on message units. The total cost is calculated based on the sum of the messages used by your organization. The number of messages consumed by an agent depends on the complexity of the agent, how often customers interact with it, and the features they use.
 
-The following table lists the utilization rates for different agent capabilities for Copilot Chat users and users with Microsoft 365 Copilot licenses. Note that interactions can use multiple usage rates; for example, an agent grounded in organizational data that provides generative answers uses 32 message units.
+The following table lists the utilization rates for different agent capabilities for Copilot Chat users and users with Microsoft 365 Copilot licenses. Note that interactions can use multiple usage rates; for example, an agent grounded in organizational data can use 12 messages (10 for organizational grounding and two for dynamic responses).
 
 Each message unit costs $0.01.
 
 | Agent capability | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:-----------------|:-----------------------------|:---------------------------------|
-|Web grounded answers| 0 | 0|
-|Predefined responses | 1 message/$0.01 | 0 |
-|Dynamically generated answers based on knowledge sources | 2 messages/$0.02 | 0 |
-|Organizational data responses based on Microsoft Graph connector grounding | 30 messages/$0.30 | 0 |
-|Autonomous actions via Power Platform connectors and Power Automate flows | 25 messages/$0.25 | 25 messages/$0.25 |
+|Web-grounded answers| 0 | 0|
+|Classic answers | 1 message/$0.01 | 0 |
+|Generative answers based on knowledge sources | 2 messages/$0.02 | 0 |
+|Tenant data responses based on Microsoft Graph connector grounding | 10 messages/$0.10 | 0 |
+|Agent actions via triggers, topics, agent flows, text & generative AI tools, and Power Platform connectors | 5 messages/$0.05 | 0 (Autonomous use message/$0.05) |
+| **Text and generative AI tools** (Message rate per 10 responses)| | |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic| 1 message/$0.01 | 1 message/$0.01 |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard| 15 messages/$0.15 | 15 messages/$0.15 |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Premium| 100 messages/$1.00 | 100 messages/$1.00 |
+|Agent flow actions (Message rate per 100 actions) | 13 message/$0.13| 13 message/$0.13 |
 
 ## Frequently asked questions
 
