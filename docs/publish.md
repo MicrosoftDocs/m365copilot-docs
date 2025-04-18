@@ -26,15 +26,15 @@ Before submitting your agent to Partner Center, ensure it meets all applicable:
 - [Responsible AI validation checks](rai-validation.md)
 - (Optional) [Microsoft 365 App Compliance Program certification](/microsoft-365-app-certification/docs/certification)
 
-Once ready, submit your app package to Microsoft Partner Center through the **Microsoft 365 and Copilot program** as under the offer type *Apps and agents for Microsoft 365 and Copilot*.
+Once ready, [submit your app package](/partner-center/marketplace-offers/add-in-submission-guide#step-1-select-the-type-of-app-youre-submitting) to Microsoft Partner Center through the *Microsoft 365 and Copilot program* under the offer type **Apps and agents for Microsoft 365 and Copilot**.
 
-Once validated and approved by Microsoft, your agent is an active offer in the Microsoft Commercial Marketplace and ready for IT enablement. Once enabled by an IT administrator, it appears in the **Apps** store within Microsoft 365 Copilot and Microsoft Teams. Once deployed by an admin or acquired by a user, it will then appear as an installed agent for Microsoft 365 Copilot.
+Once validated and approved by Microsoft, your agent is made available in the Microsoft Commercial Marketplace and ready for IT enablement. Once enabled by an IT administrator, it appears in the **Apps** store within Microsoft 365 Copilot and Microsoft Teams. Once deployed by an admin or acquired by a user, it will then appear as an installed agent for Microsoft 365 Copilot.
 
 ## Declarative agents built with Teams Toolkit
 
 Teams Toolkit supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
 
-Note that [Responsible AI validation checks](./rai-validation.md) run on your declarative agent during manifest validation, when you sideload or publish your agent.
+Note that [Responsible AI validation checks](./rai-validation.md) run on your declarative agent during manifest validation, including when you sideload or publish your agent.
 
 | Distribution method | Support | Learn more |
 |--|--|--|
@@ -102,11 +102,11 @@ Custom agents built with Copilot Studio can be published to the [Microsoft 365 C
 
 ## Graph connectors
 
-Microsoft Graph connector publishing options depend on whether you have a standalone connector or a connector that's [packaged as a Team's app](/graph/connecting-external-content-deploy-teams). While both scenarios are supported for single-tenant distribution, submission to the Microsoft Partner Center Microsoft 365 and Copilot program is currently limited to Microsoft Graph connectors packaged within Teams apps.
+Microsoft Graph connector publishing options depend on whether you have a standalone connector or a connector that's packaged using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem. While both scenarios are supported for single-tenant distribution, submission to the Microsoft Partner Center Microsoft 365 and Copilot program is currently limited to Microsoft Graph connectors packaged as Microsoft 365 (Teams) apps.
 
 | Distribution method | Support | Learn more |
 |--|--|--|
 | Sideload for personal use | ❌ | |
 | Share with others | ❌ | |
 | Submit to organizational catalog | ✅ | |
-| Submit to Microsoft Commercial Marketplace | ✅* | [Make your Microsoft Graph connector available for other organizations](/graph/connecting-external-content-deploy-teams#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center)<br />*Connectors that are packaged as *Apps for Microsoft 365* can be submitted to Partner Center by verified publishers. Standalone connector submission (to connectors gallery) is not available. |
+| Submit to Microsoft Commercial Marketplace | ✅* | [Make your Microsoft Graph connector available for other organizations](/graph/connecting-external-content-deploy-teams#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center)<br /><br />*Connectors that are packaged as *Apps for Microsoft 365* can be submitted to Partner Center by verified publishers. Standalone connector submission (to connectors gallery) is not available. |
