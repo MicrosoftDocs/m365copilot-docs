@@ -90,8 +90,6 @@
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
-    - name: Test and debug agents
-      href: debugging-copilot-agent.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
@@ -104,6 +102,8 @@
       href: declarative-agent-document-interaction.md
     - name: Localize your agent
       href: localize-agents.md
+    - name: Test and debug agents
+      href: debugging-copilot-agent.md
     - name: RAI validation
       href: rai-validation.md
   - name: Build a custom engine agent
