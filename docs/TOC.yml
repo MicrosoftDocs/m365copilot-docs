@@ -157,7 +157,7 @@
     href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
   - name: API limits
     href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
-- name: Add skills with plugins
+- name: Add skills with actions
   expanded: true
   items:
   - name: API plugins

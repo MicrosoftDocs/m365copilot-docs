@@ -14,9 +14,9 @@ When you extend Microsoft 365 Copilot with agents, queries based on your prompts
 
 :::image type="content" source="assets/images/validation-principles.png" alt-text="Diagram key considerations for developing Copilot extensibility: Enterprise security and trust, Responsible AI, High-quality user experience, High-value functionality" border="false":::
 
-## Agents and plugins
+## Agents and actions
 
-Agents in Microsoft 365 Copilot are individually governed by their terms of use and privacy policies. As an agent and plugin developer, you're responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information. Admins and users can then view your [privacy policy](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [terms of use](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#terms-of-use) in the app store before choosing to add or use your agent.
+Agents in Microsoft 365 Copilot are individually governed by their terms of use and privacy policies. As an agent and actions (plugin) developer, you're responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information. Admins and users can then view your [privacy policy](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [terms of use](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#terms-of-use) in the app store before choosing to add or use your agent.
 
 When you integrate your business workflows as agents for Copilot, your external data stays within your app; it *doesn't* flow into Microsoft Graph and it isn't used to train Microsoft 365 Copilot LLMs. Copilot does, however, generate a search query to send to your agent on the user's behalf based on their prompt and conversation history with Copilot and data the user has access to in Microsoft 365.
 
