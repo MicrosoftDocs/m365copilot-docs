@@ -24,7 +24,7 @@ This article explains the logic behind Copilot's skill selection process and how
 
 ## Copilot orchestrator
 
-Between the user's natural language input and Copilot's natural language output, the Copilot orchestrator works behind the scenes to select and run the right skills from the right plugins for the user's task.
+Between the user's natural language input and Copilot's natural language output, the Copilot orchestrator works behind the scenes to select and run the right skills from the right plugins within your agent.
 
 The orchestration layer represents the interface between foundation Large Language Models (LLMs) and the many ways you can extend, enrich, and customize Copilot for the way your customers work.
 
