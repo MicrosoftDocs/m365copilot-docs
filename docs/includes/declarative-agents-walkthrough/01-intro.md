@@ -8,7 +8,7 @@ A declarative agent is a customized version of Microsoft 365 Copilot that allows
 
 The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](../../prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
-:::image type="content" source="../../assets/images/build-dc/ttk-copilot-dc-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
+:::image type="content" source="../../assets/images/build-da/ttk/agent-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
 
 For overview information, see [Declarative agents for Microsoft 365 Copilot](../../overview-declarative-agent.md).
 
@@ -25,7 +25,7 @@ The following options are available for your development environment:
 
 The following resources are required to complete the steps described in this article:
 
-- [Teams Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-a-prerelease-version) version 5.10.0 or later
+- [Teams Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-a-prerelease-version) version 5.14.0 or later
 - [Kiota Visual Studio Code extension](/openapi/kiota/install?tabs=bash#install-the-visual-studio-code-extension) version 1.19.100000002 or later
 
 [!INCLUDE [toolkit-version-note](../toolkit-version-note.md)]

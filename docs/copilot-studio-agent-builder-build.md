@@ -130,7 +130,7 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 ### Microsoft Graph connectors
 
-Microsoft Graph connectors allow agents to include knowledge from external repositories or systems such as customer accounts, incident tickets, and knowledge articles. Admins must enable and configure Microsoft Graph connectors in the [Microsoft Admin Center](/microsoftsearch/configure-connector). At first, the connectors may be collapsed in the **From your organization** section of the **Knowledge** sources.
+Microsoft Graph connectors allow agents to include knowledge from external repositories or systems such as customer accounts, incident tickets, and knowledge articles. Admins must enable and configure Microsoft Graph connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector). At first, the connectors may be collapsed in the **From your organization** section of the **Knowledge** sources.
 
 If at least one connector is enabled, you can add it to your agent. Your agent is able to answer questions related to that connector. The information retrieved from the connector is indexed and refreshed according to the way in which the connector was configured. The agent can cite relevant information from the indexed data and link the end user to the data source.
 
@@ -144,6 +144,10 @@ In the **Capabilities** section of the **Configure** tab, you can choose to add 
 - [Image generator](add-agent-capabilities.md#image-generator) - Generates images base on user prompts.
 
 To add one or more capabilities to your agent, choose the toggle next to the capability you want to enable.
+
+## Build from a template
+
+Copilot Studio agent builder includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs, including by adding knowledge sources and capabilities. For more information, see [Agent builder templates overview](agent-builder-templates.md) or choose one of the templates on the **Describe** or **Configure** tab in agent builder.
 
 ## Next step
 

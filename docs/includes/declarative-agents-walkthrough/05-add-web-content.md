@@ -10,13 +10,13 @@ In this section, you add the ability to search the web to the agent.
 
     ```json
     "capabilities": [
-        {
-            "name": "WebSearch"
-        }
+      {
+        "name": "WebSearch"
+      }
     ]
     ```
 
-    For more information, see [Web search object](../../declarative-agent-manifest-1.2.md#web-search-object).
+    For more information, see [Web search object](../../declarative-agent-manifest-1.3.md#web-search-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
 

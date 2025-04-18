@@ -92,3 +92,4 @@ Once validated and approved by Microsoft, your agent is an active offer in the M
 | Share with others | ❌ | |
 | Submit to organizational catalog | ✅ | |
 | Submit to Microsoft Commercial Marketplace | ✅* | [Make your Microsoft Graph connector available for other organizations](/graph/connecting-external-content-deploy-teams#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center) *Connectors that are packaged as *Apps for Microsoft 365* can be submitted to Partner Center by verified publishers. Standalone connector submission (to connectors gallery) is not available. |
+
