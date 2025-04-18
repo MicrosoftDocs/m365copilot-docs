@@ -86,7 +86,6 @@ Once validated and approved by Microsoft, your agent is an active offer in the M
 
 ## Graph connectors
 
-<<<<<<< HEAD
 | Distribution method | Support | Learn more |
 |--|--|--|
 | Sideload for personal use | ❌ | |
