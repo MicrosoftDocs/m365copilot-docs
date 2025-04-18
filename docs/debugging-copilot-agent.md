@@ -10,13 +10,13 @@ ms.date: 02/28/2025
 
 # Use developer mode to test and debug agents
 
-Testing is an important part of the process of developing [declarative agents](overview-declarative-agent.md) for Microsoft 365 Copilot. You can use *developer mode* while testing your agent to verify whether and how the Copilot orchestrator selects your knowledge sources for use in response to given prompts.
+Testing is an important part of the process of developing [declarative agents](overview-declarative-agent.md) for Microsoft 365 Copilot Chat. You can use *developer mode* while testing your agent to verify whether and how the Copilot orchestrator selects your knowledge sources for use in response to given prompts.
 
-## Use developer mode in Microsoft 365 Copilot Chat
+## Use developer mode in Copilot Chat
 
 To enable developer mode, in Microsoft 365 Copilot Chat, type `-developer on`. To disable developer mode, type `developer off`.
 
-:::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of Copilot chat session where user has typed `-developer on` to successfully enable developer mode":::
+:::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of Copilot Chat session where user has typed `-developer on` to successfully enable developer mode":::
 
 While developer mode is enabled, a card with debug information returns whenever the orchestrator searches specifically within your enterprise knowledge (data), capabilities, or skills (actions or  plugins) within your agent to respond to a prompt. The debug info card includes the following fields:
 
@@ -31,7 +31,7 @@ While developer mode is enabled, a card with debug information returns whenever 
 
 ### Agent metadata section
 
-:::image type="content" source="assets/images/developer-mode-agent-metadata.png" alt-text="Screenshot of Copilot chat session where Copilot has returned a card with debugging information showing the agent metadata":::
+:::image type="content" source="assets/images/developer-mode-agent-metadata.png" alt-text="Screenshot of Copilot Chat session where Copilot has returned a card with debugging information showing the agent metadata":::
 
 The agent metadata provides key details about the agent and the current debugging session, including:
 
@@ -64,15 +64,15 @@ If no matched functions were returned for the given prompt, this likely indicate
 
 The executed details sections shows whether and which of the configured capabilities or actions were executed for the prompt and the execution details and status.
 
-#### Capability Execution details
+#### Capability execution details
 
-:::image type="content" source="assets/images/developer-mode-agent-execution.png" alt-text="Screenshot of Copilot chat session where Copilot has returned a card with debugging information showing executed capabilities":::
+:::image type="content" source="assets/images/developer-mode-agent-execution.png" alt-text="Screenshot of Copilot Chat session where Copilot has returned a card with debugging information showing executed capabilities":::
 
 Capability execution details display the executed capability and its status. Each capability may have different execution details, such as the search text used, the capability's response, and/or the number of results returned.
 
-#### Action Execution details
+#### Action execution details
 
-:::image type="content" source="assets/images/developer-mode-agent-executed-actions.png" alt-text="Screenshot of Copilot chat session where Copilot has returned a card with debugging information showing the executed actions":::
+:::image type="content" source="assets/images/developer-mode-agent-executed-actions.png" alt-text="Screenshot of Copilot Chat session where Copilot has returned a card with debugging information showing the executed actions":::
 
 Action execution details include the function and its status, along with latency, request information (request endpoint, HTTP method, request headers), and the response.
 
@@ -90,25 +90,25 @@ For message extension plugins, best practice is to optimize for responses under 
 
  Currently the timeout limit for Copilot execution of a plugin API is set at 10 seconds.
 
-### Troubleshooting failures
+## Troubleshoot failures
 
 The following are common failures you might encounter when you debug your agent and possible causes for the failures.
 
-#### No debug card
+### No debug card
 
 If the orchestrator doesn't require your Microsoft 365 data or skills to respond to a prompt, no debug info card is returned.
 
 Debug cards are also not returned in cases of capacity throttling, where you'll typically see an error message to try again later.
 
-### Reporting an issue
+## Reporting an issue
 
 Report any feedback or issues with your agent by using the thumbs up or thumbs down button. Include the #extensibility tag in your report.
 
-:::image type="content" source="./assets/images/developer-mode-feedback.png" alt-text="Screenshot of Copilot chat thumbs up or thumbs down feedback options":::
+:::image type="content" source="./assets/images/developer-mode-feedback.png" alt-text="Screenshot of Copilot Chat thumbs up or thumbs down feedback options":::
 
 Enter a message, including the #extensibility tag, in the text box.
 
-:::image type="content" source="./assets/images/developer-mode-feedback-message.png" alt-text="Screenshot of Copilot chat feedback in the text box":::
+:::image type="content" source="./assets/images/developer-mode-feedback-message.png" alt-text="Screenshot of Copilot Chat feedback in the text box":::
 
 ## Related content
 
