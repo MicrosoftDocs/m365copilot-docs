@@ -203,7 +203,7 @@ paths:
       description: 'Get user by ID'
       operationId: GetUserById
       parameters:
-      - $ref: '#/components/parameters/post-id'
+      - $ref: '#/components/parameters/user-id'
       responses:
         '200':
           description: OK
