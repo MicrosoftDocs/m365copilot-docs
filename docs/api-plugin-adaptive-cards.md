@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 API plugins can use Adaptive Card response templates to enhance the response that Microsoft 365 Copilot generates based on the response received from the API. The Adaptive Card renders citations within the generated response.
 
-API plugins can define an Adaptive Card response template in two ways: as a static template defined in the [API plugin manifest](api-plugin-manifest.md), or as a dynamic template returned as part of the API response. Plugin developers defined templates using the [Adaptive Card schema](https://adaptivecards.io/explorer/) in combination with the [Adaptive Cards template language](/adaptive-cards/templating/language).
+API plugins can define an Adaptive Card response template in two ways: as a static template defined in the [API plugin manifest](api-plugin-manifest.md), or as a dynamic template returned as part of the API response. Plugin developers defined templates using the [Adaptive Card schema](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) in combination with the [Adaptive Cards template language](/adaptive-cards/templating/language).
 
 ## Static response templates
 
@@ -228,6 +228,6 @@ Adaptive cards must be designed to be responsive across various surface sizes. T
 
 ## Related content
 
-- [Adaptive Card designer](https://adaptivecards.io/designer/) to design and test Adaptive Cards in a visual tool.
+- [Adaptive Card designer](https://adaptivecards.microsoft.com/designer) to design and test Adaptive Cards in a visual tool.
 - [Adaptive Card documentation](/adaptive-cards)
 - [API plugin manifest reference](api-plugin-manifest.md)
