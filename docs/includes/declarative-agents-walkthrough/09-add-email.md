@@ -47,7 +47,7 @@ In this section, you add the [email capability](../../add-agent-capabilities.md#
 
     > [!NOTE]
     >
-    > - The above example will access the user of the agent's mailbox. To access a shared mailbox instead, add the optional `shared_mailbox` property set to the SMTP address of the shared mailbox.
+    > - This example accesses the user of the agent's mailbox. To access a shared mailbox instead, add the optional `shared_mailbox` property set to the email address of the shared mailbox.
     > - The `folders` array limits the mailbox access to specific folders. To access the entire mailbox, omit the `folders` array.
 
 1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
