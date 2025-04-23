@@ -284,7 +284,7 @@ The confirmation object contains the following properties.
 
 #### Response semantics object
 
-Contains information to identify semantics of response payload and enable rendering that information in a rich visual experience using [adaptive cards](https://adaptivecards.io/).
+Contains information to identify semantics of response payload and enable rendering that information in a rich visual experience using [Adaptive Cards](https://adaptivecards.microsoft.com).
 
 The response semantics object contains the following properties.
 
@@ -292,7 +292,7 @@ The response semantics object contains the following properties.
 | -------- | ---- | ----------- |
 | `data_path` | String | Required. A JSONPath [RFC9535][] query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
 | `properties` | [Response semantics properties object](#response-semantics-properties-object) | Optional. Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value. |
-| `static_template` | Object | Optional. A JSON object that conforms with the [Adaptive Card Schema](https://adaptivecards.io/schemas/adaptive-card.json) and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` isn't present or fails to resolve to an adaptive card. |
+| `static_template` | Object | Optional. A JSON object that conforms with the [Adaptive Card schema](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` isn't present or fails to resolve to an adaptive card. |
 | `oauth_card_path` | String | Optional. |
 
 ##### Static template example
