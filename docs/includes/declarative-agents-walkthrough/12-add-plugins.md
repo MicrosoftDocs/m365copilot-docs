@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 MD051 -->
 
-In this section, you add an API plugin as an Action to your agent. API plugins add new abilities to your agent by allowing your agent to interact with a REST API.
+In this section, you add an [API plugin](../../overview-api-plugins.md) as an action to your agent. API plugins add new abilities to your agent by allowing your agent to interact with a REST API.
 
 You can add a plugin to your agent with either Teams Toolkit or the Kiota Visual Studio Code extension.
 
