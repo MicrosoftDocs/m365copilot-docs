@@ -68,7 +68,7 @@ The following example shows a request to retrieve data from both SharePoint and 
 
 The following example shows the request.
 
-```http
+```msgraph-interactive
 POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
