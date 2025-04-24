@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 API plugins can use Adaptive Card response templates to enhance the response that Microsoft 365 Copilot generates based on the response received from the API. The Adaptive Card renders citations within the generated response.
 
-API plugins can define an Adaptive Card response template in two ways: as a static template defined in the [API plugin manifest](api-plugin-manifest.md), or as a dynamic template returned as part of the API response. Plugin developers defined templates using the [Adaptive Card schema](https://adaptivecards.io/explorer/) in combination with the [Adaptive Cards template language](/adaptive-cards/templating/language).
+API plugins can define an Adaptive Card response template in two ways: as a static template defined in the [API plugin manifest](api-plugin-manifest.md), or as a dynamic template returned as part of the API response. Plugin developers defined templates using the [Adaptive Card schema](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) in combination with the [Adaptive Cards template language](/adaptive-cards/templating/language).
 
 ## Static response templates
 
@@ -224,11 +224,10 @@ Adaptive cards must be designed to be responsive across various surface sizes. T
 
 - Avoid using multi-column layouts whenever possible. Single-column layouts tend to render well even at the narrowest viewport widths.
 - Refrain from placing text and image elements in the same row unless the image is a small icon or avatar.
-- Avoid assigning a fixed width to elements within the Adaptive Card; instead, allow them to resize according to the viewport width. You can, however, assign a fixed width to small images such as icons and avatars. 
-
+- Avoid assigning a fixed width to elements within the Adaptive Card; instead, allow them to resize according to the viewport width. You can, however, assign a fixed width to small images such as icons and avatars.
 
 ## Related content
 
-- [Adaptive Card designer](https://adaptivecards.io/designer/) to design and test Adaptive Cards in a visual tool.
+- [Adaptive Card designer](https://adaptivecards.microsoft.com/designer) to design and test Adaptive Cards in a visual tool.
 - [Adaptive Card documentation](/adaptive-cards)
 - [API plugin manifest reference](api-plugin-manifest.md)

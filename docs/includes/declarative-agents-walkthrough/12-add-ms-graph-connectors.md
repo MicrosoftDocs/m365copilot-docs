@@ -33,6 +33,14 @@ In this section, you add items ingested by a Microsoft Graph connector to the av
         "name": "People"
       },
       {
+        "name": "Email",
+        "folders": [
+          {
+            "folder_id": "inbox"
+          }
+        ]
+      },
+      {
         "name": "GraphicArt"
       },
       {

@@ -4,7 +4,7 @@ description: Learn how to use Copilot Studio agent builder to build declarative 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/25/2025
+ms.date: 04/17/2025
 ms.topic: conceptual
 ---
 
@@ -37,12 +37,6 @@ You can build agents from the following apps and sites:
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-entry.png" alt-text="Agent builder entry point in Microsoft 365 Copilot":::
 
-## Prerequisites
-
-You need a license for [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise) and a license for Microsoft 365. Admins can assign or unassign licenses for users in the [Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users).
-
-For information regarding regional availability and supported languages, see [Copilot Studio agent builder availability and language support](copilot-studio-agent-builder-availability.md).
-
 ## Governance
 
 Agents you build via Copilot Studio agent builder are included in your Microsoft 365 Copilot license. These agents feature functionality that is a subset of what Microsoft 365 Copilot supports. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise).
@@ -53,7 +47,7 @@ Copilot Studio capabilities for Microsoft 365 are processed by the Copilot Studi
 
 ## Data storage
 
-Agents created via agent builder are stored in Cosmos DB on the organization's tenant. Copilot Studio agent builder calls Power Platform APIs, but it doesn't store data in Dataverse or consume Dataverse storage capacity.
+Agents created via agent builder do not consume the tenant's Dataverse storage entitlement.
 
 ## Compliance
 

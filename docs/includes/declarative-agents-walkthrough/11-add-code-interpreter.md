@@ -33,6 +33,14 @@ In this section, you add the [code interpreter capability](../../add-agent-capab
         "name": "People"
       },
       {
+        "name": "Email",
+        "folders": [
+          {
+            "folder_id": "inbox"
+          }
+        ]
+      },
+      {
         "name": "GraphicArt"
       },
       {

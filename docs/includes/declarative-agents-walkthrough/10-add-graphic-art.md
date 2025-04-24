@@ -33,6 +33,14 @@ In this section, you add the [image generator capability](../../add-agent-capabi
         "name": "People"
       },
       {
+        "name": "Email",
+        "folders": [
+          {
+            "folder_id": "inbox"
+          }
+        ]
+      },
+      {
         "name": "GraphicArt"
       }
     ]
