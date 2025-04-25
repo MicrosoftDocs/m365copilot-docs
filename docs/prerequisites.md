@@ -25,14 +25,14 @@ You have the following options for a Copilot development environment:
     > [!NOTE]
     > Microsoft 365 Copilot isn't included in [Microsoft 365 Developer Program subscriptions](https://developer.microsoft.com/microsoft-365/dev-program#Subscription). Sandbox subscription availability is currently limited to Independent Software Vendor (ISV) partners who are part of TAP.
 
-- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities. 
-    
+- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities.
+
     At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
 - An eligible [Microsoft 365 or Office 365 production environment](#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
     > [!NOTE]
-    > When you build agents in production environments, you might encounter admin-imposed limitations. For example, administrators can block sideloading of custom apps or might not grant the necessary permissions required to build Microsoft Graph connectors. 
+    > When you build agents in production environments, you might encounter admin-imposed limitations. For example, administrators can block sideloading of custom apps or might not grant the necessary permissions required to build Microsoft Graph connectors.
 
 - A Microsoft 365 subscription without a Copilot license, such as [Microsoft 365 Business Basic](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-basic), if you want to build and test agents for Microsoft 365 Copilot Chat, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
@@ -40,7 +40,7 @@ You can also purchase a Microsoft 365 Copilot license and set up a development e
 
 ### Microsoft 365 Developer Program sandbox subscription for ISVs
 
-We recommend that ISV partners who build multi-tenant solutions acquire a new Microsoft 365 Developer Program sandbox subscription that includes Microsoft 365 Copilot. 
+We recommend that ISV partners who build multi-tenant solutions acquire a new Microsoft 365 Developer Program sandbox subscription that includes Microsoft 365 Copilot.
 
 To get a developer subscription, join the [Microsoft 365 Developer Technology Adoption Program (TAP)](https://aka.ms/m365devtap).
 
@@ -56,7 +56,7 @@ You can develop Copilot extensibility solutions for users in organizations witho
 
 ## Requirements for Copilot extensibility options
 
-You can extend Microsoft 365 Copilot with the intelligence of external services and data in several ways: 
+You can extend Microsoft 365 Copilot with the intelligence of external services and data in several ways:
 
 - By building agents to customize Copilot.
 - By adding skills with [Teams message extension plugins](overview-message-extension-bot.md) and [Copilot Studio actions](overview-business-applications.md).
@@ -75,7 +75,7 @@ To build agents, you need to complete prerequisites depending on the tool that y
 
 You can use Teams Toolkit to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Microsoft 365 Copilot license.
 
-To build agents with Teams Toolkit and other IDEs, you must have your admin enable the ability to sideload a *custom app* to your tenant. 
+To build agents with Teams Toolkit and other IDEs, you must have your admin enable the ability to sideload a *custom app* to your tenant.
 
 To enable sideloading, from Teams admin center, select **Teams apps** > **Setup policies** > **Global (Org-wide default)**, and switch the  **Upload custom apps** toggle to **On**.
 
@@ -94,7 +94,7 @@ The following steps are required for you to use Copilot Studio to build agents:
 
 ### Enabling developer mode
 
-You can use *developer mode* in Copilot to test whether and how the orchestrator selects your plugin in response to a given prompt. 
+You can use *developer mode* in Copilot to test whether and how the orchestrator selects your plugin in response to a given prompt.
 
 To enable developer mode, in Copilot Chat, type `-developer on`. To disable developer mode, type `-developer off`.
 
@@ -108,7 +108,7 @@ Accounts used to test agents that are grounded on organizational data or that in
 
 ## Agent capabilities for Microsoft 365 users
 
-Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents via the Microsoft 365 Copilot app, the browser, or the in-app experience in Teams. 
+Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents via the Microsoft 365 Copilot app, the browser, or the in-app experience in Teams.
 
 > [!NOTE]
 > Copilot Chat and the agent experience in Word and PowerPoint is available only to users with a Microsoft 365 Copilot license. The agent experience is currently not available in the Copilot Chat experience in Outlook.
@@ -116,6 +116,8 @@ Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizati
 Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage.
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and metered usage configuration in the tenant.
+
+[!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
 
 | Capability | Copilot Chat (no metered usage)* | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
@@ -146,7 +148,7 @@ The following table lists the agent types and agent capabilities that are availa
 
 ### Copilot Studio message usage rates
 
-If you choose the metered pay-as-you-go option for Copilot Studio, utilization rates apply based on the type of agent and prompt. 
+If you choose the metered pay-as-you-go option for Copilot Studio, utilization rates apply based on the type of agent and prompt.
 
 Billing is based on message units. The total cost is calculated based on the sum of the messages used by your organization. The number of messages consumed by an agent depends on the complexity of the agent, how often customers interact with it, and the features they use.
 
@@ -169,15 +171,15 @@ Each message unit costs $0.01.
 
 ## Frequently asked questions
 
-#### Can I use my Microsoft 365 Developer Program subscription to develop with Copilot?
+### Can I use my Microsoft 365 Developer Program subscription to develop with Copilot?
 
 You can use your Microsoft 365 Developer Program subscription to build agents with limited capabilities that are grounded on web search. Because Microsoft 365 Developer Program subscriptions don't support commerce, you can't purchase Microsoft 365 Copilot licenses or enable metering, so you can't use your subscription to build agents grounded on organizational data or add other capabilities.
 
-#### Can Microsoft 365 Developer Program ISV sandbox subscriptions with Copilot be renewed when the licenses expire?
+### Can Microsoft 365 Developer Program ISV sandbox subscriptions with Copilot be renewed when the licenses expire?
 
 Yes. If you continue to qualify for the ISV sandbox tenant (Microsoft 365 E5 developer subscription), your development environment renews automatically.
 
-#### I'm not an ISV and I don't have a Microsoft 365 Copilot license. Can I get a Microsoft 365 Copilot development environment?
+### I'm not an ISV and I don't have a Microsoft 365 Copilot license. Can I get a Microsoft 365 Copilot development environment?
 
 If you have a Microsoft 365 subscription, you can build and test agents in Microsoft 365 Copilot Chat, with limited capabilities. You need to enable metering in your tenant or purchase a Microsoft 365 Copilot license if you want to build agents that are grounded in organizational data. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
