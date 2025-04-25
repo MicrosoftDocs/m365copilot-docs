@@ -202,9 +202,6 @@ To enable API key authentication, you need to register the API key in the Teams 
 
  Teams Toolkit registers your API key and updates your app package for you when you create an agent with API plugin from an existing OpenAPI document. You must have the `securitySchemes` property defined in your OpenAPI document.
 
-> [!NOTE]
-> Teams Toolkit only supports API keys as bearer tokens and can't create API plugins based on OpenAPI documents that use a custom header or query parameter. As a workaround, you can temporarily remove the `securitySchemes` and `security` properties from your OpenAPI to generate the plugin package, then add them back to the OpenAPI document in the plugin project before provisioning. You need to manually register the API key.
-
 #### Register an API key in Teams developer portal
 
 1. Open [Teams developer portal](https://dev.teams.microsoft.com/tools). Select **Tools** -> **API key registration**
