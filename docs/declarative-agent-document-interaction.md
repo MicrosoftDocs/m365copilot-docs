@@ -54,7 +54,7 @@ You **MUST** pass the exact user's current selection without any modifications a
 ##### Summary/transformation example
 
 ```md
-You **MUST** pass the short, summarised version of the user's current selection as `prompt`
+You **MUST** pass the short, summarized version of the user's current selection as `prompt`
 instead of the entire selected document context.
 ```
 
