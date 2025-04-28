@@ -49,8 +49,7 @@ The following table lists the parameters that are required when you call this ac
 | Parameter              | Type              | Description                    |
 |:-----------------------|:------------------|:-------------------------------|
 | queryString            | String            | Natural language query string used to retrieve relevant text extracts. Required. |
-| dataSources            | String collection | A list of Microsoft 365 data sources that should be included in the retrieval. Acceptable values are "SharePoint" and "External". By default, all supported data sources are included. Optional. |
-| filterExpression       | String            | [KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression supporting filtering exclusively on path for SharePoint content, allowing to scope the search before the query runs. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query will execute as if there is no filterExpression. Optional. |
+| filterExpression       | String            | [KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Microsoft Graph connectors properties and attributes to scope the search before the query runs. Supported SharePoint properties for filtering are: AssignedTo, Author, Created, CreatedBy, FileExtension, Filename, FileType, informationProtectionLabelId, LastModifiedTime, ModifiedBy, Path, SiteID, and Title. Supported Graph connectors properties for filtering are those that have been marked queryable by an admin or developer. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query will execute as if there is no filterExpression. Optional. |
 | resourceMetadata       | String collection | A list of metadata fields to be returned for each item in the response. By default, no metadata is returned. Optional. |
 | maximumNumberOfResults | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
 
@@ -217,7 +216,102 @@ Content-Type: application/json
 }
 ```
 
-### Example 3: Retrieve data from only SharePoint
+## Example 3: Retrieve data from SharePoint Word files updated within a specific date range
+
+The following example shows a request to retrieve data from Word documents located in a specific SharePoint path, which have been updated within a specific time period. The `filterExpression` parameter specifies the SharePoint path, file type and time range. The request asks for the title, author, and last modified time metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of 2 documents.
+
+### Request
+
+The following example shows the request.
+<!-- {
+  "blockType": "request",
+  "name": "retrieval_docs_SP"
+}
+-->
+``` http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "filterExpression": "filetype:docx AND (LastModifiedTime>=2024-01-01 AND LastModifiedTime<=2024-12-31) AND path:\"https://contoso.sharepoint.com/sites/HR\"",
+  "resourceMetadata": [
+    "title",
+    "author",
+    "LastModifiedTime"
+  ],
+  "maximumNumberOfResults": "2"
+}
+```
+
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.substrateSearch.retrievalResponse"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": 
+  {
+    "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
+    "extracts":[
+      {
+        "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+      },
+      {
+        "text": "You will need to sign in with 2FA to access the corporate VPN."
+      }
+    ],
+    "resourceType": "listItem",
+    "resourceMetadata": {  
+      "title": "VPN Access",
+      "author": "John Doe",
+      "LastModifiedTime": "2024-06-14T20:57:00Z"
+    },
+    "sensitivityLabel":{
+      "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+      "displayName": "Confidential\\Any User (No Protection)",
+      "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+      "priority":4,
+      "color":"#FF8C00",
+      "isEncrypted":false
+    }          
+  },
+  {
+    "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNConfig.docx",
+    "extracts": [
+      {
+        "text": "Have your VPN username and password ready prior to starting the configuration."
+      }
+    ],
+    "resourceType": "externalItem",
+    "resourceMetadata": {
+      "title": "Corporate VPN",
+      "author": "Elisa Mueller",
+      "LastModifiedTime": "2024-05-17T23:39:00Z"
+    },
+    "sensitivityLabel":{
+      "sensitivityLabelId": "079cd1b0-4b31-4f12-9c4a-12e6296c95a1",
+      "displayName": "Confidential\\Any User (No Protection)",
+      "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+      "priority":4,
+      "color":"#FF8C00",
+      "isEncrypted":false
+    }  
+  }
+}
+```
+
+### Example 4: Retrieve data from only SharePoint
 
 The following example shows a request to retrieve data from only SharePoint. The `dataSources` field should indicate that only `SharePoint` should be included in the retrieval. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of four documents.
 
@@ -298,7 +392,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 4: Retrieve data from only Microsoft Graph connectors
+### Example 5: Retrieve data from only Microsoft Graph connectors
 
 The following example shows a request to retrieve data from only Microsoft Graph connectors. The `dataSources` field should indicate that only `External` should be included in the retrieval. The request asks for the title metadata to be returned for each item from which a text extract is retrieved. The response should includes a maximum of four documents.
 
