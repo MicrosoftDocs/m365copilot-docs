@@ -14,13 +14,13 @@ The Microsoft 365 Copilot APIs provide access to components that power Copilot e
 
 The Retrieval API offers a streamlined solution for Retrieval Augmented Generation (RAG) without the need to replicate, index, chunk, and secure your data in a separate index. The API understands the user's context and intent and performs query transformations to yield the most relevant results, which is more difficult to achieve with lexical search or even basic RAG from alternate sources.
 
-RAG is essential when you're building generative AI solutions and want to use Microsoft 365 knowledge. When you implement RAG, your solutions can provide more accurate, contextually relevant responses grounded in the vast repository of your organizational data. The Retrieval API accomplishes this by extracting up-to-date and relevant text snippets from SharePoint Online and Microsoft Graph connectors while keeping your data in place and upholding your access and governance controls. The Retrieval API ensures that synthesized responses are informed by the latest and most relevant data, which enhances the reliability and usefulness of your generative AI solutions.
+RAG is essential when you're building generative AI solutions and want to use Microsoft 365 knowledge. When you implement RAG, your solutions can provide more accurate, contextually relevant responses grounded in the vast repository of your organizational data. The Retrieval API accomplishes RAG by extracting up-to-date and relevant text snippets from SharePoint and Microsoft Graph connectors. The Retrieval API keeps your data in place and upholds your access and governance controls. The Retrieval API ensures that synthesized responses are informed by the latest and most relevant data. This process enhances the reliability and usefulness of your generative AI solutions.
 
 ## Why use the Retrieval API?
 
-The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint Online and Microsoft Graph connectors, without the need to egress data, break permissions, or compromise on security and compliance.
+The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint and Microsoft Graph connectors. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance.
 
-Imagine a consulting firm that specializes in providing tailored solutions for their clients, with a significant portion of their work focused on data stored in SharePoint. The firm is developing a custome engine agent to assist their consultants in preparing for important client meetings. This agent must access and retrieve accurate and up-to-date information from SharePoint. Because the firm works with two major clients who are direct competitors in the market, they have a critical need to maintain rigorous security and compliance standards to ensure that one client's documents and data are never accessible to the other. The Retrieval API helps the firm manage compliance and safety risks and ensure the relevance and freshness of the data and in turn, simplifies the overall development effort.
+Imagine a consulting firm that specializes in providing tailored solutions for their clients, with a significant portion of their work focused on data stored in SharePoint. The firm is developing a custom engine agent to assist their consultants in preparing for important client meetings. This agent must access and retrieve accurate and up-to-date information from SharePoint. The firm works with two major clients who are direct competitors in the market. Hence, the firm has a critical need to maintain rigorous security and compliance standards to ensure that one client's documents and data are never accessible to the other. The Retrieval API helps the firm manage compliance and safety risks and ensure the relevance and freshness of the data and in turn, simplifies the overall development effort.
 
 ### Manage compliance and safety risks
 
@@ -42,33 +42,33 @@ The Retrieval API eliminates the need to build a secure data export and indexing
 - Indexing
 - Security
 
-By using these built-in features, organizations can avoid expenses and complexities and maintain stringent access controls and compliance within Microsoft 365.
+Organizations can use these built-in features to avoid expenses and complexities, and maintain stringent access controls and compliance within Microsoft 365.
 
 ## Retrieval API capabilities
 
 The Retrieval API currently allows you to retrieve data from the following data sources:
 
-- SharePoint Online
+- SharePoint
 - Microsoft Graph connectors
 
-The API supports natural language queries and uses the Microsoft 365 Copilot stack to retrieve relevant grounding context from the Microsoft 365 hybrid index. You can use the API to scope your retrieval using KQL to retrieve from the most important content for your use case. With KQL, you can filter by URLs, date ranges, file types, and more.
+The API supports natural language queries and uses the Microsoft 365 Copilot stack to retrieve relevant grounding context from the Microsoft 365 hybrid index. You can use the API to scope your retrieval using Kusto Query Language (KQL) to retrieve from the most important content for your use case. With KQL, you can filter by URLs, date ranges, file types, and more.
 
 ## Known limitations
 
 The following are the current throttling and other limitations to the Retrieval API:
 
 - The **queryString** request parameter has a limit of 1,500 characters.
-- If the **filterExpression** request parameter has incorrect KQL syntax, the query will successfully execute with no scoping.
-- Not all SharePoint Online properties are supported in the **filterExpression**. Please refer to the [API reference](copilotroot-retrieval.md) to see the full list of supported properties.
+- If the **filterExpression** request parameter has incorrect KQL syntax, the query successfully executes with no scoping.
+- Not all SharePoint properties are supported in the **filterExpression**. Refer to the [API reference](copilotroot-retrieval.md) to see the full list of supported properties.
 - The **maximumNumberOfResults** request parameter has a maximum value of 10.
 - Up to 200 requests per user per hour are supported.
-- Retrieval from non-textual content, including tables, images, and charts, is not supported.
+- Retrieval from nontextual content, including tables, images, and charts, is not supported.
 - Results from files with .docx, .pptx, and .pdf extensions that are larger than 512 MB are not supported. Results from files with any other extension that are larger than 150 MB are not supported.
 - If **retrievalHits** in the response payload is empty, then no relevant results were found.
 
 ## Licensing
 
-The Retrieval API is available at no additional cost to users with a Microsoft 365 Copilot license. Support for users without a Microsoft 365 Copilot license is currently not available.
+The Retrieval API is available at no extra cost to users with a Microsoft 365 Copilot license. Support for users without a Microsoft 365 Copilot license is currently not available.
 
 ## Next step
 
