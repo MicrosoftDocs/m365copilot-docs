@@ -1,6 +1,6 @@
 ---
 title: Retrieve grounding data
-description: Using the Retrieval API, generative AI solutions can ground data from SharePoint and Graph Connectors.
+description: Use the Retrieval API to ground data from SharePoint and Graph Connectors in your generative AI solutions.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: conceptual
@@ -15,7 +15,7 @@ doc_type: conceptualPageType
 
 [!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
-Ground your generative AI solutions with Microsoft 365 data. Allows the retrieval of relevant text extracts from SharePoint Online and Microsoft Graph connectors content that the calling user has access to, while respecting the defined access controls within the tenant.
+Ground your generative AI solutions with Microsoft 365 data. Allows the retrieval of relevant text extracts from SharePoint and Microsoft Graph connectors content that the calling user has access to, while respecting the defined access controls within the tenant.
 
 ## Permissions
 
@@ -49,7 +49,7 @@ The following table lists the parameters that are required when you call this ac
 | Parameter              | Type              | Description                    |
 |:-----------------------|:------------------|:-------------------------------|
 | queryString            | String            | Natural language query string used to retrieve relevant text extracts. Required. |
-| filterExpression       | String            | [KQL](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Microsoft Graph connectors properties and attributes to scope the retrieval before the query runs. Supported SharePoint properties for filtering are: AssignedTo, Author, Created, CreatedBy, FileExtension, Filename, FileType, InformationProtectionLabelId, LastModifiedTime, ModifiedBy, Path, SiteID, and Title. Supported Graph connectors properties for filtering are those that have been marked queryable by an admin or developer. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query will execute as if there is no filterExpression. Optional. |
+| filterExpression       | String            | [Kusto Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Microsoft Graph connectors properties and attributes to scope the retrieval before the query runs. Supported SharePoint properties for filtering are: AssignedTo, Author, Created, CreatedBy, FileExtension, Filename, FileType, InformationProtectionLabelId, LastModifiedTime, ModifiedBy, Path, SiteID, and Title. When filtering on Microsoft Graph connectors content, you can use any property marked as [queryable in the Graph connector schema](https://learn.microsoft.com/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Microsoft Graph connector or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Graph connector. Microsoft will not resolve any issues with filtering on SharePoint and Microsoft Graph connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no filterExpression. Optional. |
 | resourceMetadata       | String collection | A list of metadata fields to be returned for each item in the response. By default, no metadata is returned. Optional. |
 | maximumNumberOfResults | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
 
@@ -57,33 +57,11 @@ The following table lists the parameters that are required when you call this ac
 
 If successful, this action returns a `200 OK` response code and a [retrievalResponse](resources/retrievalresponse.md) in the response body.
 
-## Supported Properties in filterExpression
-This list details the properties that are supported for use in the `filterExpression`. Any issues with filtering on properties that are not included in this list will not be resolved by Microsoft.
-
-### SharePoint Online
-These are the supported properties in SharePoint Online. Your SharePoint Online content may not have values for all of these properties.
-- AssingedTo
-- Author
-- Created
-- CreatedBy
-- FileExtension
-- Filename
-- FileType
-- InformationProtectionLabelId
-- LastModifiedTime
-- ModifiedBy
-- Path
-- SiteID
-- Title
-
-### Graph connectors
-When filtering on Graph connectors content, you can use any property marked as [queryable in the Graph connector schema](https://learn.microsoft.com/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Graph connector and/or you do not know which properties have been marked queryable, please reach out to the admin and/or developer who configured your desired Graph connector.
-
 ## Examples
 
-### Example 1: Retrieve data from SharePoint Online and Microsoft Graph connectors
+### Example 1: Retrieve data from SharePoint and Microsoft Graph connectors
 
-The following example shows a request to retrieve data from both SharePoint Online and Microsoft Graph connectors. By omitting the `filterExpression` parameter, the requests indicates retrieval should span all supported data sources. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows a request to retrieve data from both SharePoint and Microsoft Graph connectors. By omitting the `filterExpression` parameter, the requests indicate retrieval should span all supported data sources. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
 #### Request
 
@@ -352,7 +330,7 @@ Content-Type: application/json
 
 ### Example 4: Filtering on Microsoft Graph connectors content
 
-The following example shows a request to retrieve data while filtering on Microsoft Graph connectors properties. In this example, "Label_Title" is a queryable property in the ServiceNow Graph connector schema. The request asks for `Label_Title` to be returned for each item from which a text extract is retrieved. The response should includes a maximum of four documents.
+The following example shows a request to retrieve data while filtering on Microsoft Graph connectors properties. In this example, `Label_Title` is a queryable property in the ServiceNow Graph connector schema. The request asks for `Label_Title` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
 #### Request
 
