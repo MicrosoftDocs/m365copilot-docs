@@ -77,4 +77,4 @@ The Retrieval API is available at no extra cost to users with a Microsoft 365 Co
 
 ## Related content
 
-- [Microsoft 365 Copilot API client libraries (preview)](api-libraries.md)
+- [Microsoft 365 Copilot API client libraries (preview)](../sdks/api-libraries.md)
