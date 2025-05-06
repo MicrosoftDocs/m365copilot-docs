@@ -19,8 +19,8 @@
   items:
   - name: Planning guide
     href: planning-guide.md
-  - name: Choose your extensibility path
-    href: decision-guide.md
+  - name: Cost considerations
+    href: cost-considerations.md
   - name: Set up your dev environment
     href: prerequisites.md
   - name: Samples collection
@@ -30,6 +30,8 @@
 - name: Build an agent
   expanded: true
   items:
+  - name: Agents overview
+    href: agents-overview.md
   - name: Build a declarative agent
     expanded: true
     items:
@@ -141,6 +143,8 @@
     href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
   - name: Connector experiences
     href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
+  - name: Prebuilt connectors gallery
+    href: /microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext
   - name: Connectors API
     href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/extensibility/context
   - name: Build your first connector

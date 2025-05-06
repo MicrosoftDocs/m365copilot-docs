@@ -90,7 +90,7 @@ If you decide to build an agent, you need to determine the following:
 
 - The **type of agent** to build. Depending on your scenario, you might build a declarative agent or a custom engine agent.
 
-  For information to help you choose the right type of agent to build, see [Your extensibility options for Microsoft 365 Copilot](decision-guide.md).
+  For information to help you choose the right type of agent to build, see [Your extensibility options for Microsoft 365 Copilot](agent-overview.md).
 
 - Whether to use a **low-code or pro-code** approach to building your agent.
 
@@ -107,28 +107,7 @@ Finally, if your agent involves complex workflows, you might need a custom orche
 
 ## Consider costs
 
-Consider the cost implications of your solution design, from both the user and the hosting perspective.
-
-### User license and consumption costs
-
-When you design an agent for Microsoft 365 Copilot, it's important to understand access and usage costs. Users can either access agents through a license or via pay per use. Your agent will be available to users via one of the license types listed in the following table.
-
-| License type                | Cost                               | Best for                        | Agent consumption costs                                           |
-|-----------------------------|------------------------------------|---------------------------------|-------------------------------------------------------------------|
-| Microsoft 365 Copilot license   | Add-on license required            | Regular to high-usage users    | No additional costs.                                                |
-| Microsoft 365 license   | No additional costs for [eligible Microsoft 365 users](/copilot/microsoft-365/microsoft-365-copilot-licensing) | Occasional users              | No cost for instruction/public website grounding; metered charges for shared tenant data (SharePoint, Microsoft Graph connectors) |
-| No license                  | Pay-per-use                        | Guest or external users        | Metered consumption charges                                       |
-
-For more information about license options, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing).
-
-For more information about agent capabilities, see the following resources:
-
-- [Agents for Microsoft 365 Copilot Chat](/copilot/agents#enable-agents)
-- [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
-
-### Hosting costs
-
-Declarative agents are surfaced in Microsoft 365 at no additional cost. Hosting costs for custom engine agents depend on your architecture and your use of AI models and cloud services.
+Consider the cost implications of your solution design, from both the user and hosting perspectives. For more details, see [Cost considerations for Copilot Extensibility](copilot-extensibility-cost-considerations.md).
 
 ## Address RAI and compliance considerations
 
@@ -154,7 +133,7 @@ The following table provides examples of extensibility solutions that use differ
 
 ## Related content
 
-- [Agents overview](decision-guide.md)
+- [Agents overview](agent-overview.md)
 - [Microsoft Graph connectors overview](overview-graph-connector.md)
 - [Set up your dev environment](prerequisites.md)
 - [Choose your development tool](declarative-agent-tool-comparison.md)

@@ -20,7 +20,7 @@ Declarative agents are tools that enhance the Microsoft 365 Copilot experience. 
 
 Custom engine agents use custom foundation models and orchestrators and can be tailored to specific enterprise needs. Custom engine agents include agents built with Copilot Studio, Teams AI library, and Azure AI Foundry. Custom engine agents currently work as standalone and Teams apps. 
 
-For more information, see [Your extensibility options for Microsoft 365 Copilot](decision-guide.md).
+For more information, see [Agents for Microsoft 365](agent-overview.md).
 
 ### What's the difference between actions and plugins?
 
@@ -120,7 +120,7 @@ If you want to use Azure AI services, we recommend you to build custom engine ag
 
 If you choose to work with OpenAI models, such as GPT-4 turbo, you can take advantage of the web-based interface of [Azure OpenAI Studio](https://oai.azure.com/), which comes with the **Deploy to Teams** feature that generates a code template that you can modify, test, and deploy using Teams Toolkit.
 
-To learn more about the difference between custom engine agents and declarative agents, see [Your extensibility options for Microsoft 365 Copilot](decision-guide.md).
+To learn more about the difference between custom engine agents and declarative agents, see [Agents for Microsoft 365](agent-overview.md).
 
 ---
 
