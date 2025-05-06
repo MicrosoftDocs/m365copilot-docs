@@ -1,6 +1,6 @@
 ---
 title: Extend Microsoft 365 Copilot
-description: Extend, enrich, and customize Microsoft 365 Copilot with Microsoft Graph connectors, agents, external services, and data.
+description: Extend, enrich, and customize Microsoft 365 Copilot with Microsoft Graph connectors and agents.
 author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
@@ -13,7 +13,7 @@ ms.custom: [copilot-learning-hub]
 
 Microsoft 365 Copilot is an AI-powered productivity tool that integrates with Microsoft 365 apps to help users with business tasks in the flow of their work. With Copilot Chat, users can query data, gain insights, and streamline workflows in real time. You can extend Copilot to meet the needs of your users by integrating organizational knowledge and adding skills and workflows that are tailored to your business processes. This makes tasks like summarizing, content generation, and data retrieval more efficient and contextually relevant.
 
-There are several ways to extend Copilot. You can use [Microsoft Graph connectors](#enhance-knowledge-in-copilot-with-connectors) to ingest organizational data to enable Copilot to access and reason over a broader set of enterprise data. You can also build [agents](#extend-copilot-with-agents)—powerful AI assistants that can retrieve real-time insights and act on behalf of users—to tailor Copilot to automate specialized workflows and perform tasks.
+You can extend Copilot in several ways. You can use [Microsoft Graph connectors](#enhance-knowledge-in-copilot-with-connectors) to ingest organizational data to enable Copilot to access and reason over a broader set of enterprise data. You can also build [agents](#extend-copilot-with-agents)—powerful AI assistants that can retrieve real-time insights and act on behalf of users—to tailor Copilot to automate specialized workflows and perform tasks.
 
 :::image type="content" source="assets/images/copilot-extensibility-diagram.png" alt-text="Visual representation of the Microsoft 365 Copilot extensibility, connectors and agents" border="false":::
 
@@ -35,7 +35,7 @@ A number of [prebuilt Microsoft Graph connectors](/microsoftsearch/connectors-ga
 
 ### Build a custom Microsoft Graph Connector
 
-If an existing connector doesn't meet your needs, you can build a custom Microsoft Graph connector tailored to your specific business requirements. This allows you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see: [Build Microsoft Graph connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context).
+If an existing connector doesn't meet your needs, you can build a custom Microsoft Graph connector tailored to your specific business requirements. This allows you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see [Build Microsoft Graph connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context).
 
 ## Extend Copilot with agents
 
@@ -49,7 +49,7 @@ Agents can take real-time actions—such as updating databases or triggering wor
 
 ### Prebuilt agents you can integrate
 
-A wide range of agents built by Microsoft and Microsoft partners are available to support multiple business functions. These agents provide ready-to-use solutions for common tasks like: employee onboarding, IT helpdesk support, sales enablement, and customer service.
+A wide range of agents built by Microsoft and Microsoft partners are available to support multiple business functions. These agents provide ready-to-use solutions for common tasks like employee onboarding, IT helpdesk support, sales enablement, and customer service.
 
 For example, the new [Sales Agent for Copilot](https://www.microsoft.com/en-us/microsoft-365/blog/2025/03/05/new-sales-agents-accessible-in-microsoft-365-copilot-help-teams-close-more-deals-faster/?msockid=3be55ff297446b3b1fdd4a4e93446d12) can automate workflows like turning your contacts into Sales Leads in either Dynamics or Salesforce.
 
@@ -57,7 +57,7 @@ You can deploy these agents as-is or further customize them by incorporating you
 
 ### Build your own agent
 
-If a prebuilt agent doesn't meet your needs, you can build your own agent designed specifically for your workflows and business processes. Whether you need a highly specialized AI assistant or an advanced automation solution, you can develop agents using low-code or pro-code tools that match your preferred development environment and deployment needs. For more information, see: [Agents overview](agents-overview.md).
+If a prebuilt agent doesn't meet your needs, you can build your own agent designed specifically for your workflows and business processes. Whether you need a highly specialized AI assistant or an advanced automation solution, you can develop agents using low-code or pro-code tools that match your preferred development environment and deployment needs. For more information, see [Agents overview](agents-overview.md).
 
 The following table provides some examples of the types of agents you can develop for your organization.
 
