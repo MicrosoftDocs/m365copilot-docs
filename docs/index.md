@@ -73,6 +73,6 @@ Copilot extensibility offers organizations the ability to move beyond general-pu
 
 ## Related content
 
-- [Copilot extensibility planning guide](copilot-extensibility-planning-guide.md)
+- [Copilot extensibility planning guide](planning-guide.md)
 - [Agents overview](agents-overview.md)
 - [Microsoft Graph connectors overview](overview-graph-connector.md)

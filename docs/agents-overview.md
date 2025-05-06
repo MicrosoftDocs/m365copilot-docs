@@ -13,15 +13,15 @@ ms.custom: [copilot-learning-hub]
 
 Microsoft 365 Copilot is an AI-powered productivity tool that enhances workflows across Microsoft 365 applications like Copilot Chat, Outlook, Teams, and Word, leveraging enterprise data from Microsoft Graph. While Copilot provides powerful built-in capabilities, businesses often need to integrate additional knowledge, data sources, or applications to address specific use cases.
 
-Agents extend Copilot’s functionality by acting as specialized AI assistants tailored to specific domains. These agents apply organizational knowledge and automation to streamline business processes, enhance decision-making, and improve efficiency. Agents can retrieve information, summarize data, or even take actions like sending emails or updating records.  
+Agents extend Copilot's functionality by acting as specialized AI assistants tailored to specific domains. These agents apply organizational knowledge and automation to streamline business processes, enhance decision-making, and improve efficiency. Agents can retrieve information, summarize data, or even take actions like sending emails or updating records.  
 
 There are two approaches to build agents in Microsoft 365 Copilot—[declarative](#declarative-agents) and [custom engine](#custom-engine-agents). The sections below explain how they work and when to use each.
 
 ## Why build an agent?
 
-Microsoft 365 Copilot provides powerful AI-driven assistance, but Copilot alone might not fully address your organization’s unique workflows, data sources, or automation needs. Building agents lets you:
+Microsoft 365 Copilot provides powerful AI-driven assistance, but Copilot alone might not fully address your organization's unique workflows, data sources, or automation needs. Building agents lets you:
 
-- **Extend Copilot’s knowledge** by integrating third‑party systems and data sources.  
+- **Extend Copilot's knowledge** by integrating third‑party systems and data sources.  
 - **Automate complex, multi‑step workflows** across Microsoft 365 and external applications.  
 - **Deliver tailored user experiences** that surface where your users work—in Teams chats, Outlook, SharePoint, or custom apps.  
 
@@ -35,13 +35,13 @@ By developing agents for Microsoft 365 Copilot, organizations can securely leve
 
 Agents consist of 2 core components:
 
-- **Knowledge:** Tailor the agent’s responses by providing it with specialized instructions and data sources.
+- **Knowledge:** Tailor the agent's responses by providing it with specialized instructions and data sources.
 - **Actions:** Develop actions, triggers, and workflows that automate business processes.
 
-Beyond these core components, additional layers enhance an agent’s functionality:
+Beyond these core components, additional layers enhance an agent's functionality:
 
 - The **orchestrator** acts as the central engine managing how the agent interacts with knowledge, skills, and autonomy.
-- The **foundation models** power the agent’s reasoning, language understanding, and response generation, forming the intelligence layer behind every interaction.
+- The **foundation models** power the agent's reasoning, language understanding, and response generation, forming the intelligence layer behind every interaction.
 - The **user experience layer** ensures seamless interaction between users and agents by integrating agents into Microsoft 365 applications or external platforms for an intuitive and efficient workflow.
 
 By combining these elements, agents provide a powerful way to extend Microsoft 365 Copilot to automate tasks, integrate data, and deliver intelligent, context-aware assistance.
@@ -114,7 +114,7 @@ The following flow chart summarizes the decision process for choosing what type 
 #### Build a declarative agent when
 
 - You want your agent to work within Copilot's orchestration and language models to ensure consistency with security and compliance.
-- You want a faster implementation or want to develop an agent with no or low-code using tools like [Copilot Studio](/copilot-studio/) or you’re a developer who prefers a streamlined experience with pro-code options like [Visual Studio](https://visualstudio.microsoft.com/) or [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
+- You want a faster implementation or want to develop an agent with no or low-code using tools like [Copilot Studio](/microsoft-copilot-studio/) or you're a developer who prefers a streamlined experience with pro-code options like [Visual Studio](https://visualstudio.microsoft.com/) or [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
 - Your user's workflow is within Microsoft 365 apps (SharePoint, OneDrive, Teams) and they want to work within the context of these applications (via @mentions or in Teams business chats). For example, An IT helpdesk agent that responds to @mentions in Teams or a document summarization agent invoked in SharePoint._
 
 #### Build a custom engine agent when

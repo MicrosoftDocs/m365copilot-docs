@@ -24,7 +24,7 @@ Microsoft 365 Copilot is available with two different license options:
 
 Your license type determines access to Copilot capabilities and whether metered consumption charges apply when using extensibility options like Microsoft Graph connectors or agents.
 
-For more details on consumption costs, see [Billing rates and management](/copilot-studio/billing-rates). For more information on licensing, see [License options for Microsoft 365 Copilot](/microsoft-365-copilot/license-options) and [Decide which Copilot is right for you](/microsoft-365-copilot/which-copilot).
+For more details on consumption costs, see [Billing rates and management](/copilot-studio/requirements-messages-management). For more information on licensing, see [License options for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-licensing) and [Decide which Copilot is right for you](/microsoft-365-copilot//which-copilot-for-your-organization).
 
 | **License type**              | **Cost**                                 | **Best for**        | **Extensibility consumption costs**                                                                                                                                       |
 |-------------------------------------|------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ Microsoft Graph connectors allow you to enrich Copilot with external data to enh
 
 ### Index quota and licensing
 
-All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Microsoft Graph connectors. By default, each connection is capped at 5 million items. If you need a higher per-connection or overall quota, contact your Microsoft account manager or [submit this form](https://aka.ms/graphconnectorform). For details, see [Index quota for Microsoft Graph connectors](/microsoftsearch/index-quota-graph-connectors).
+All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Microsoft Graph connectors. By default, each connection is capped at 5 million items. If you need a higher per-connection or overall quota, contact your Microsoft account manager or [submit this form](https://aka.ms/graphconnectorform). For details, see [Index quota for Microsoft Graph connectors](/microsoftsearch/licensing).
 
 #### Eligible licenses
 
@@ -104,6 +104,6 @@ Custom engine agents are hosted **outside** of Microsoft 365 Copilot using your 
 
 ## Related content
 
-- [Copilot extensibility planning guide](copilot-extensibility-planning-guide.md)
+- [Copilot extensibility planning guide](planning-guide.md)
 - [Agents overview](agents-overview.md)
 - [Microsoft Graph connectors overview](overview-graph-connector.md)

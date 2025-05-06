@@ -90,7 +90,7 @@ If you decide to build an agent, you need to determine the following:
 
 - The **type of agent** to build. Depending on your scenario, you might build a declarative agent or a custom engine agent.
 
-  For information to help you choose the right type of agent to build, see [Your extensibility options for Microsoft 365 Copilot](agent-overview.md).
+  For information to help you choose the right type of agent to build, see [Your extensibility options for Microsoft 365 Copilot](agents-overview.md).
 
 - Whether to use a **low-code or pro-code** approach to building your agent.
 
@@ -107,7 +107,7 @@ Finally, if your agent involves complex workflows, you might need a custom orche
 
 ## Consider costs
 
-Consider the cost implications of your solution design, from both the user and hosting perspectives. For more details, see [Cost considerations for Copilot Extensibility](copilot-extensibility-cost-considerations.md).
+Consider the cost implications of your solution design, from both the user and hosting perspectives. For more details, see [Cost considerations for Copilot Extensibility](cost-considerations.md).
 
 ## Address RAI and compliance considerations
 
@@ -133,7 +133,7 @@ The following table provides examples of extensibility solutions that use differ
 
 ## Related content
 
-- [Agents overview](agent-overview.md)
+- [Agents overview](agents-overview.md)
 - [Microsoft Graph connectors overview](overview-graph-connector.md)
 - [Set up your dev environment](prerequisites.md)
 - [Choose your development tool](declarative-agent-tool-comparison.md)

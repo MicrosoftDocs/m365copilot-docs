@@ -107,11 +107,11 @@ Ensure your custom agent is compliant, secure, and aligned with [Responsible AI 
 
 When developing a custom engine agent, it's essential to consider licensing, consumption, and hosting costs.
 
-For more information, see [Cost considerations for Copilot extensibility](copilot-extensibility-cost-considerations.md).
+For more information, see [Cost considerations for Copilot extensibility](cost-considerations.md).
 
 ## Related content
 
 - [Custom engine agents with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
 - [Custom engine agents with Agent SDK (preview)](/microsoft-365/agents-sdk/)
 - [Custom engine agents with Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
-- [Copilot extensibility planning guide](copilot-extensibility-planning-guide.md)
+- [Copilot extensibility planning guide](planning-guide.md)
