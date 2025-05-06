@@ -33,7 +33,7 @@
   - name: Agents overview
     href: agents-overview.md
   - name: Build a declarative agent
-    expanded: true
+    expanded: false
     items:
     - name: Declarative agents overview
       href: overview-declarative-agent.md
