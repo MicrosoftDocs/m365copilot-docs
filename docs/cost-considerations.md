@@ -24,7 +24,7 @@ Microsoft 365 Copilot is available with two different license options:
 
 Your license type determines access to Copilot capabilities and whether metered consumption charges apply when using extensibility options like Microsoft Graph connectors or agents.
 
-For more details on consumption costs, see [Billing rates and management](/copilot-studio/requirements-messages-management). For more information on licensing, see [License options for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-licensing) and [Decide which Copilot is right for you](/microsoft-365-copilot//which-copilot-for-your-organization).
+For more details on consumption costs, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management). For more information on licensing, see [License options for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-licensing) and [Decide which Copilot is right for you](/microsoft-365-copilot//which-copilot-for-your-organization).
 
 | **License type**              | **Cost**                                 | **Best for**        | **Extensibility consumption costs**                                                                                                                                       |
 |-------------------------------------|------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
