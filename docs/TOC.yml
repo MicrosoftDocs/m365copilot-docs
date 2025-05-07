@@ -204,6 +204,8 @@
 - name: Enhance AI solutions with Copilot APIs
   expanded: false
   items:
+  - name: Microsoft 365 Copilot APIs overview
+    href: api-reference/copilot-apis-overview.md
   - name: Retrieval API (preview)
     items:
     - name: Overview
