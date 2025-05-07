@@ -26,6 +26,8 @@ You can choose to extend Copilot by building one of the following types of agent
 
 Declarative agents enable you to configure Copilot for specific scenarios by adding custom instructions, additional knowledge, and actions to automate business processes. Because declarative agents use Copilot's AI infrastructure, model, and orchestrator, they adhere to the security, compliance, and responsible AI (RAI) requirements for Microsoft 365.
 
+[!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
+
 To configure a declarative agent, you provide:
 
 - **Custom instructions** to shape Copilot's responses to your organization's specific needs or workflow.
@@ -36,7 +38,7 @@ Declarative agents have the following characteristics:
 
 - **Hosting:** Use Copilot's orchestrator and foundation model. No additional hosting is required.
 - **Tooling:** Can be created using low-code tools such as Copilot Studio and pro-code tools like Visual Studio, Visual Studio Code, and Teams Toolkit.
-- **Publishing channels:** Can be used in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook.  
+- **Publishing channels:** Can be used in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook.
 
 ### Custom engine agents
 
@@ -45,14 +47,14 @@ Custom engine agents are fully customized AI assistants. They're useful for scen
 To develop a custom engine agent, you need:
 
 - **Custom orchestration** to take full control of workflows and integrate additional knowledge and external API calls. You can incorporate one or more language models to enhance functionality.
-- **Custom models** to choose the most suitable model for your use case, whether foundation large language, small language, fine-tuned, or industry-specific models.  
-- **Proactive agentic** support to programmatically initiate workflows and actions.  
+- **Custom models** to choose the most suitable model for your use case, whether foundation large language, small language, fine-tuned, or industry-specific models.
+- **Proactive agentic** support to programmatically initiate workflows and actions.
 
 Custom engine agents have the following characteristics:
 
-- **Hosting**: Requires additional hosting outside of Microsoft 365, typically with cloud services such as Azure or Copilot Studio, at an additional cost.  
-- **Tooling**: Orchestration can be built using low-code Copilot Studio or pro-code tools like Visual Studio, Visual Studio Code, and Teams Toolkit, using languages such as .NET, Python, and JavaScript, and frameworks like Semantic Kernel or LangChain.  
-- **Publishing channels**: Can be used in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook, as well as external apps and websites.  
+- **Hosting**: Requires additional hosting outside of Microsoft 365, typically with cloud services such as Azure or Copilot Studio, at an additional cost.
+- **Tooling**: Orchestration can be built using low-code Copilot Studio or pro-code tools like Visual Studio, Visual Studio Code, and Teams Toolkit, using languages such as .NET, Python, and JavaScript, and frameworks like Semantic Kernel or LangChain.
+- **Publishing channels**: Can be used in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook, as well as external apps and websites.
 
 ## Agent feature comparison
 
@@ -84,14 +86,13 @@ Build a declarative agent when:
 Build a custom engine agent when:
 
 - You've built an existing conversational assistant outside of Copilot and want to integrate it with Microsoft 365 and Copilot.
-- You want to use your own AI models or your agent might benefit from domain-specific models with specialized knowledge or multimodal models.  
-- You want advanced Teams integrations (such as with meetings and channels).  
-- You want to make your agent available outside of Microsoft 365 and Copilot.  
+- You want to use your own AI models or your agent might benefit from domain-specific models with specialized knowledge or multimodal models.
+- You want advanced Teams integrations (such as with meetings and channels).
+- You want to make your agent available outside of Microsoft 365 and Copilot.
 - You want to support proactive messaging, which enables developers to define workflows and trigger agent behavior without the need for user interaction.
 - You need multiple system integration, such as managing logistics by integrating data from GPS, warehouse systems, and customer databases.
 - You need to implement custom business logic (such as specific rules for patient triage in a healthcare setting based on symptoms and medical history).
 - You have complex decision-making (for example, evaluating loan applications based on multiple factors like credit score, income, and employment history).
-
 
 ## Related content
 
