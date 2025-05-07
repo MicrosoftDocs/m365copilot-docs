@@ -41,37 +41,38 @@ The Microsoft 365 Copilot API client libraries are included as a module in the M
 ### Install the Microsoft 365 Copilot APIs .NET client libraries
 
 The Microsoft 365 Copilot APIs are included in the following NuGet packages:
+
 - [Microsoft.Agents.M365Copilot.Beta](https://github.com/microsoft/Agents-M365Copilot/tree/main/dotnet/src/Microsoft.Agents.M365Copilot.Beta): Contains the models and request builders for accessing the beta endpoint. Microsoft.Agents.M365Copilot.Beta has a dependency on Microsoft.Agents.M365Copilot.Core
 - Microsoft.Agents.M365Copilot.Core: The core library for making calls to Microsoft 365 Copilot APIs.
 
-To install the Microsoft.Agents.M365Copilot packages into your project, you can use the [dotnet CLI](https://learn.microsoft.com/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli), the [Package Manager UI in Visual Studio](https://learn.microsoft.com/nuget/quickstart/install-and-use-a-package-in-visual-studio) or the [Package Manager Console in Visual Studio](https://learn.microsoft.com/nuget/quickstart/install-and-use-a-package-in-visual-studio).
+To install the Microsoft.Agents.M365Copilot packages into your project, you can use the [dotnet CLI](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli), the [Package Manager UI in Visual Studio](/nuget/quickstart/install-and-use-a-package-in-visual-studio) or the [Package Manager Console in Visual Studio](/nuget/quickstart/install-and-use-a-package-in-visual-studio).
 
 ### dotnet CLI
 
 ```dotnetcli
-dotnet add package Microsoft.Agent.M365Copilot.Beta 
+dotnet add package Microsoft.Agent.M365Copilot.Beta
 ```
 
 ### Package Manager Console
 
 ```powershell
-Install-Package Microsoft.Agent.M365Copilot.Beta 
+Install-Package Microsoft.Agent.M365Copilot.Beta
 ```
 
 ### Install the Microsoft 365 Copilot APIs TypeScript client libraries
 
-The Microsoft 365 Copilot APIs TypeScript client libraries are available in npm. 
+The Microsoft 365 Copilot APIs TypeScript client libraries are available in npm.
 
 ```Shell
-npm install @microsoft/agents-m365copilot-beta –save 
+npm install @microsoft/agents-m365copilot-beta –save
 ```
 
 ### Install the Microsoft 365 Copilot APIs Python client libraries
 
-The Microsoft 365 Copilot APIs TypeScript client libraries are available in Pypi. 
+The Microsoft 365 Copilot APIs TypeScript client libraries are available in the Python Package Index.
 
 ```py
-pip install microsoft-agents-m365copilot-beta 
+pip install microsoft-agents-m365copilot-beta
 ```
 
 ## Related content

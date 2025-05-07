@@ -46,12 +46,12 @@ In the request body, supply a JSON representation of the parameters.
 
 The following table lists the parameters that are required when you call this action.
 
-| Parameter              | Type              | Description                    |
-|:-----------------------|:------------------|:-------------------------------|
-| queryString            | String            | Natural language query string used to retrieve relevant text extracts. Required. |
-| filterExpression       | String            | [Kusto Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Microsoft Graph connectors properties and attributes to scope the retrieval before the query runs. Supported SharePoint properties for filtering are: AssignedTo, Author, Created, CreatedBy, FileExtension, Filename, FileType, InformationProtectionLabelId, LastModifiedTime, ModifiedBy, Path, SiteID, and Title. When filtering on Microsoft Graph connectors content, you can use any property marked as [queryable in the Graph connector schema](https://learn.microsoft.com/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Microsoft Graph connector or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Graph connector. Microsoft will not resolve any issues with filtering on SharePoint and Microsoft Graph connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no filterExpression. Optional. |
-| resourceMetadata       | String collection | A list of metadata fields to be returned for each item in the response. By default, no metadata is returned. Optional. |
-| maximumNumberOfResults | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
+| Parameter                | Type              | Description                    |
+|:-------------------------|:------------------|:-------------------------------|
+| `queryString`            | String            | Natural language query string used to retrieve relevant text extracts. Required. |
+| `filterExpression`       | String            | [Kusto Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Microsoft Graph connectors properties and attributes to scope the retrieval before the query runs. Supported SharePoint properties for filtering are: `AssignedTo`, `Author`, `Created`, `CreatedBy`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. When filtering on Microsoft Graph connectors content, you can use any property marked as [queryable in the Graph connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Microsoft Graph connector or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Graph connector. Microsoft will not resolve any issues with filtering on SharePoint and Microsoft Graph connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no filterExpression. Optional. |
+| `resourceMetadata`       | String collection | A list of metadata fields to be returned for each item in the response. By default, no metadata is returned. Optional. |
+| `maximumNumberOfResults` | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
 
 ## Response
 
@@ -198,7 +198,7 @@ Content-Type: application/json
           "text": "Have your VPN username and password ready prior to starting the configuration."
         },
         {
-          "text": "There are multiple VPN options availalbe. Make sure to select the option that grants you access to your desired resources."
+          "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources."
         }
    
       ],
@@ -306,7 +306,7 @@ Content-Type: application/json
           "text": "Have your VPN username and password ready prior to starting the configuration."
         },
         {
-          "text": "There are multiple VPN options availalbe. Make sure to select the option that grants you access to your desired resources."
+          "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources."
         }
    
       ],
