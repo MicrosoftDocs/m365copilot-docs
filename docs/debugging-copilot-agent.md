@@ -14,7 +14,7 @@ Testing is an important part of the process of developing [declarative agents](o
 
 ## Use developer mode in Copilot Chat
 
-To enable developer mode, in Microsoft 365 Copilot Chat, type `-developer on`. To disable developer mode, type `developer off`.
+To enable developer mode, in Microsoft 365 Copilot Chat, type `-developer on`. To disable developer mode, type `-developer off`.
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of Copilot Chat session where user has typed `-developer on` to successfully enable developer mode":::
 
