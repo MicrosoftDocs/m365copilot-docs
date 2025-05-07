@@ -11,26 +11,26 @@ ms.custom: [copilot-learning-hub]
 
 # Licensing and cost considerations for Copilot extensibility options
 
-Before extending Microsoft 365 Copilot with custom capabilities—such as integrating external data sources or building intelligent agents—it's important to understand the associated licensing and consumption costs.
+Before you extend Microsoft 365 Copilot with custom capabilities—such as integrating external data sources or building intelligent agents—it's important to understand the associated licensing and consumption costs.
 
-Your Microsoft 365 Copilot license type determines access to extensibility features and whether additional usage charges apply. This article first outlines the available Copilot licensing options, then breaks down cost considerations for each extensibility path, including [Microsoft Graph connectors](#microsoft-graph-connectors) and [agents](#agents-in-copilot).
+Your Microsoft 365 Copilot license type determines access to extensibility features and whether additional usage charges apply. This article  outlines the available Copilot licensing options, and breaks down cost considerations for each extensibility path, including [Microsoft Graph connectors](#microsoft-graph-connectors) and [agents](#agents-in-copilot).
 
 ## Licensing options for Microsoft 365 Copilot
 
 Microsoft 365 Copilot is available with two different license options:
 
-- **Microsoft 365 Copilot Chat license** is included in your Microsoft 365 Subscription at no additional charge. It provides access to web-based Copilot Chat and optional [pay-as-you-go access](/copilot/microsoft-365/pay-as-you-go/overview) to work-based chat. Ideal for occasional users of Copilot and agents.
-- **Microsoft 365 Copilot add-on license** is available with an [eligible Microsoft 365 subscription](/copilot/microsoft-365/microsoft-365-copilot-licensing#microsoft-365-copilot-license). It includes both web-based and work-based Copilot Chat and unlocks embedded Copilot features in Word, Excel, Outlook, and Teams. This is ideal for frequent users of M365 Copilot and agents and those who want AI assistance integrated throughout their workflow.
+- **Microsoft 365 Copilot Chat license** is included in your Microsoft 365 subscription at no additional charge. It provides access to web-based Copilot Chat and optional [pay-as-you-go access](/copilot/microsoft-365/pay-as-you-go/overview) to work-based chat. This option is ideal for occasional users of Copilot and agents.
+- **Microsoft 365 Copilot add-on license** is available with an [eligible Microsoft 365 subscription](/copilot/microsoft-365/microsoft-365-copilot-licensing#microsoft-365-copilot-license). It includes both web-based and work-based Copilot Chat and unlocks embedded Copilot features in Word, Excel, Outlook, and Teams. This is ideal for frequent users of Copilot and agents and those who want AI assistance integrated throughout their workflow.
 
 Your license type determines access to Copilot capabilities and whether metered consumption charges apply when using extensibility options like Microsoft Graph connectors or agents.
 
-For more details on consumption costs, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management). For more information on licensing, see [License options for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-licensing) and [Decide which Copilot is right for you](/microsoft-365-copilot//which-copilot-for-your-organization).
+For more details about consumption costs, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management). For more information about licensing, see [License options for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-licensing) and [Decide which Copilot is right for you](/microsoft-365-copilot//which-copilot-for-your-organization).
 
 | **License type**              | **Cost**                                 | **Best for**        | **Extensibility consumption costs**                                                                                                                                       |
 |-------------------------------------|------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Microsoft 365 Copilot license**   | Add-on license required                   | Frequent users       | No additional charges for accessing or using extensibility features (e.g., Graph connectors, agents, plugins)                                                            |
-| **Microsoft 365 Copilot Chat license** | Included for eligible Microsoft 365 users | Occasional users     | No charges for lightweight extensibility (e.g., instruction-based agents or public site grounding).<br>Metered charges apply for shared tenant data (e.g., SharePoint, Microsoft Graph connectors), tracked via Copilot Studio meters |
-| **No Copilot license**              | N/A                                      | Not supported        | May be unable to access Copilot; extensibility features not guaranteed without a qualifying license                                                                      |
+| **Microsoft 365 Copilot license**   | Add-on license required                   | Frequent users       | No additional charges for accessing or using extensibility features (Microsoft Graph connectors, agents, plugins).                                                            |
+| **Microsoft 365 Copilot Chat license** | Included for eligible Microsoft 365 users | Occasional users     | No charges for lightweight extensibility (instruction-based agents or public site grounding).<br><br>Metered charges apply for shared tenant data (SharePoint, Microsoft Graph connectors), tracked via Copilot Studio meters. |
+| **No Copilot license**              | N/A                                      | Not supported        | May be unable to access Copilot; extensibility features not guaranteed without a qualifying license.                                                                      |
 
 ## Microsoft Graph connectors
 
@@ -64,43 +64,44 @@ Agents are AI assistants that automate tasks and answer queries across the Micro
 
 #### Usage Cost
 
-To use a declarative agent, users must have a Microsoft 365 Copilot add-on license or the M365 Copilot Chat add-on license with an eligible M365 license.  
-If a user does not have a Copilot license and metered usage is enabled in the tenant, using declarative agents may result in consumption charges or limited functionality—depending on how the agent is built.  
+To use a declarative agent, users must have a Microsoft 365 Copilot add-on license or the M365 Copilot Chat add-on license with an eligible Microsoft 365 license.  
 
-- Agents that rely on instructions or public website grounding do **not** incur extra costs.  
-- Agents that access shared tenant data (such as SharePoint or Microsoft Graph connectors) **will** generate metered consumption charges via Copilot Studio.
+If a user doesn't have a Copilot license and metered usage is enabled in the tenant, using declarative agents might result in consumption charges or limited functionality, depending on how the agent is built.
+
+- Agents that rely on instructions or public website grounding **do not** incur extra costs.  
+- Agents that access shared tenant data (such as SharePoint or Microsoft Graph connectors) **generate metered consumption charges** via Copilot Studio.
 
 #### Hosting Cost
 
-Declarative agents are hosted by Microsoft 365 Copilot and do **not** incur additional hosting costs.
+Declarative agents are hosted by Microsoft 365 Copilot and do not incur additional hosting costs.
 
 ### Custom engine agents
 
 #### Usage Cost
 
-Users do **not** need a Copilot license to access custom engine agents in Microsoft 365 Copilot Chat. However, usage costs vary based on the user's license:
+Users do not need a Copilot license to access custom engine agents in Microsoft 365 Copilot Chat. However, usage costs vary based on the user's license:
 
-- Users with a Microsoft 365 Copilot license incur **no** additional charges.
-- Users **without** a Copilot license may incur **metered consumption charges** if the agent interacts with shared tenant data (e.g., SharePoint or Microsoft Graph connectors), based on Copilot Studio meters.
+- Users with a Microsoft 365 Copilot license do not incur additional charges.
+- Users without a Microsoft 365 Copilot license might incur **metered consumption charges** if the agent interacts with shared tenant data (SharePoint or Microsoft Graph connectors), based on Copilot Studio meters.
 
 #### Hosting Cost
 
-Custom engine agents are hosted **outside** of Microsoft 365 Copilot using your own orchestrator and/or models. Hosting these agents may incur additional hosting costs, such as:
+Custom engine agents are hosted outside of Microsoft 365 Copilot using your own orchestrator and/or models. Hosting these agents might incur additional hosting costs, such as:
 
 - **Copilot Studio** – For users with the Copilot Studio in Microsoft 365 Copilot add-on license, agents built in Copilot Studio for Microsoft Teams, SharePoint, and Copilot Chat are included at no extra charge.  
 - **Azure AI Services** – For AI-powered processing and natural language understanding. See [Azure AI services pricing](https://azure.microsoft.com/pricing/details/cognitive-services/).  
 - **Azure App Service** – For hosting services and APIs that support your agent. See [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/).  
 - **Azure Bot Service** – For publishing agents across multiple channels. See [Azure AI Bot Service pricing](https://azure.microsoft.com/pricing/details/bot-services/).
 
-> Your total cost will vary based on the AI models, orchestration complexity, and cloud services you use to deploy and maintain your agent.
+> **Note:** Your total cost will vary based on the AI models, orchestration complexity, and cloud services you use to deploy and maintain your agent.
 
 ### Cost comparison: declarative agent vs custom engine agent
 
 | Feature           | Declarative agents                                                                                                  | Custom engine agents                                                                                                   |
 |-------------------|----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| **License requirements** | Requires Microsoft 365 Copilot add-on license or Copilot Chat with eligible Microsoft 365 license                | No additional license required                                                                                         |
-| **Hosting**       | Hosted by Microsoft 365 Copilot (no additional hosting costs)                                                       | Hosted externally (incurs hosting costs, e.g., Azure AI Foundry)                                                      |
-| **Usage cost**    | For users with Microsoft 365 Copilot add-on licenses, no additional charges. <br> For users without licenses:<br> - No charges for instruction-based or public site-grounded agents.<br> - Metered charges for shared tenant data usage (e.g., SharePoint, Microsoft Graph connectors). | Varies based on license:<br> - No charges with Copilot license.<br> - Metered charges without license if shared data is used. |
+| **License requirements** | Requires Microsoft 365 Copilot add-on license or Copilot Chat with eligible Microsoft 365 license.                | No additional license required.                                                                                         |
+| **Hosting**       | Hosted by Microsoft 365 Copilot (no additional hosting costs).                                                       | Hosted externally (incurs hosting costs, such as Azure AI Foundry).                                                      |
+| **Usage cost**    | For users with Microsoft 365 Copilot add-on licenses, no additional charges. <br><br>For users without licenses:<br> - No charges for instruction-based or public site-grounded agents.<br> - Metered charges for shared tenant data usage (e.g., SharePoint, Microsoft Graph connectors). | Varies based on license:<ul><li>>No charges with Copilot license.<.li><li>Metered charges without license if shared data is used.</li></ul> |
 
 ## Related content
 
