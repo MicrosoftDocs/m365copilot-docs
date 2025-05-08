@@ -1,6 +1,6 @@
 ---
 title: Retrieve grounding data
-description: Use the Retrieval API to ground data from SharePoint and Graph Connectors in your generative AI solutions.
+description: Use the Retrieval API to ground data from SharePoint and Copilot Connectors in your generative AI solutions.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: conceptual
@@ -15,7 +15,7 @@ doc_type: conceptualPageType
 
 [!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
-Ground your generative AI solutions with Microsoft 365 data. Allows the retrieval of relevant text extracts from SharePoint and Microsoft Graph connectors content that the calling user has access to, while respecting the defined access controls within the tenant.
+Ground your generative AI solutions with Microsoft 365 data. Allows the retrieval of relevant text extracts from SharePoint and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant.
 
 ## Permissions
 
@@ -49,7 +49,7 @@ The following table lists the parameters that are required when you call this ac
 | Parameter                | Type              | Description                    |
 |:-------------------------|:------------------|:-------------------------------|
 | `queryString`            | String            | Natural language query string used to retrieve relevant text extracts. Required. |
-| `filterExpression`       | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Microsoft Graph connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. As many of these properties also apply to Graph connectors content, it is possible to get results from Graph connectors when filtering using these properties. When filtering on Microsoft Graph connectors content, you can use any property marked as [queryable in the Graph connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Microsoft Graph connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Graph connector. Microsoft will not resolve any issues with filtering on SharePoint and Microsoft Graph connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Optional. |
+| `filterExpression`       | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. As many of these properties also apply to Copilot connectors content, it is possible to get results from Copilot connectors when filtering using these properties. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Copilot connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Copilot connector. Microsoft will not resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Optional. |
 | `resourceMetadata`       | String collection | A list of metadata fields to be returned for each item in the response. Only retrievable metadata properties can be included in this list. By default, no metadata is returned. Optional. |
 | `maximumNumberOfResults` | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
 
@@ -73,9 +73,9 @@ If you are issuing a query with a `filterExpression`, we recommend that you also
 
 ## Examples
 
-### Example 1: Retrieve data from SharePoint and Microsoft Graph connectors
+### Example 1: Retrieve data from SharePoint and Copilot connectors
 
-The following example shows a request to retrieve data from both SharePoint and Microsoft Graph connectors. By omitting the `filterExpression` parameter, the request indicates retrieval should span all supported data sources. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows a request to retrieve data from both SharePoint and Copilot connectors. By omitting the `filterExpression` parameter, the request indicates retrieval should span all supported data sources. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
 #### Request
 
@@ -97,7 +97,7 @@ Content-Type: application/json
 
 #### Response
 
-The following example shows the response. The first result is from SharePoint, and the second result is from Microsoft Graph connectors.
+The following example shows the response. The first result is from SharePoint, and the second result is from Copilot connectors.
 
 ```http
 HTTP/1.1 200 OK
@@ -342,9 +342,9 @@ Content-Type: application/json
 }
 ```
 
-### Example 4: Filtering on Microsoft Graph connectors content
+### Example 4: Filtering on Copilot connectors content
 
-The following example shows a request to retrieve data while filtering on Microsoft Graph connectors properties. In this example, `Label_Title` is a queryable property in the ServiceNow Graph connector schema. The request asks for `Label_Title` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
+The following example shows a request to retrieve data while filtering on Copilot connectors properties. In this example, `Label_Title` is a queryable property in the ServiceNow Copilot connector schema. The request asks for `Label_Title` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
 #### Request
 
@@ -683,7 +683,7 @@ Content-Type: application/json
 
 ### Example 9: Filtering using the `FileType` Property
 
-The following example shows a request to retrieve data while filtering using the `FileType` property. The query is filtering to Word documents, web pages indexed using an enterprise websites Graph connector, and Epics indexed using the Azure DevOps Graph connector. The request asks for `FileType` to be returned for each item from which a text extract is retrieved. The response should include a maximum of three documents.
+The following example shows a request to retrieve data while filtering using the `FileType` property. The query is filtering to Word documents, web pages indexed using an enterprise websites Copilot connector, and Epics indexed using the Azure DevOps Copilot connector. The request asks for `FileType` to be returned for each item from which a text extract is retrieved. The response should include a maximum of three documents.
 
 #### Request
 
