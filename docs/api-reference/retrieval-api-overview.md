@@ -28,7 +28,7 @@ The Retrieval API uses the built-in security and compliance features in Microsof
 
 ### Solve for relevancy and freshness
 
-Because the Microsoft 365 Copilot Retrieval API retrieves data directly from the Microsoft 365 hybrid index, its results are kept fresh and relevant, and it eliminates the need to maintain separate, costly data pipelines.
+Because the Retrieval API retrieves data directly from the Microsoft 365 hybrid index, its results are kept fresh and relevant, and it eliminates the need to maintain separate, costly data pipelines.
 
 ### Lower cost of ownership and development effort
 
@@ -51,7 +51,7 @@ The Retrieval API currently allows you to retrieve data from the following data 
 - SharePoint
 - Microsoft Graph connectors
 
-The API supports natural language queries and uses the Microsoft 365 Copilot stack to retrieve relevant grounding context from the Microsoft 365 hybrid index. You can use the API to scope your retrieval using Kusto Query Language (KQL) to retrieve from the most important content for your use case. With KQL, you can filter by URLs, date ranges, file types, and more.
+The API supports natural language queries and uses the Microsoft 365 Copilot stack to retrieve relevant grounding context from the Microsoft 365 hybrid index. You can use the API to scope your retrieval using Keyword Query Language (KQL) to retrieve from the most important content for your use case. With KQL, you can filter by URLs, date ranges, file types, and more.
 
 ## Known limitations
 
@@ -60,6 +60,7 @@ The following are the current throttling and other limitations to the Retrieval 
 - The **queryString** request parameter has a limit of 1,500 characters.
 - If the **filterExpression** request parameter has incorrect KQL syntax, the query successfully executes with no scoping.
 - Not all SharePoint properties are supported in the **filterExpression**. Refer to the [API reference](copilotroot-retrieval.md) to see the full list of supported properties.
+- It is highly recommended that you follow the best practices outline in the [API reference](copilotroot-retrieval.md).
 - The **maximumNumberOfResults** request parameter has a maximum value of 10.
 - Up to 200 requests per user per hour are supported.
 - Retrieval from nontextual content, including tables, images, and charts, is not supported.
