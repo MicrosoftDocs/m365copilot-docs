@@ -1,6 +1,6 @@
 ---
 title: Add knowledge sources to your declarative agent
-description: Learn about the code interpreter capability and how to can add to your declarative agents.
+description: Learn how to add knowledge sources to your declarative agents.
 author: kmkoenen   
 ms.author: v-koenenkaty
 ms.topic: concept-article

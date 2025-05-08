@@ -1,6 +1,6 @@
 ---
 title: Add the code interpreter capability to your declarative agent
-description: Learn about the code interpreter capability and how to can add to your declarative agents.
+description: Learn about the code interpreter capability and how to add it to your declarative agents.
 author: kmkoenen   
 ms.author: v-koenenkaty
 ms.topic: concept-article
@@ -10,7 +10,7 @@ ms.date: 5/14/2025
 
 # Add the code interpreter capability to your agent
 
-You can enhance the user experience of your declarative agent by adding the code interpreter and image generator capabilities. The [**capabilities** element](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.3#capabilities-object) in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the code interpreter capability and how to add it to your declarative agents. For information about the image generator capability, see [Add the image generator capability to your agent](capability-image-generator.md).
+You can enhance the user experience of your declarative agent by adding the code interpreter and image generator capabilities. The [**capabilities** element](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.3#capabilities-object) in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the code interpreter capability and how to add it to your declarative agents. For information about the image generator capability, see [Add the image generator capability to your agent](add-capability-image-generator.md).
 
 The following table shows the Microsoft 365 Copilot license or metered usage requirements for accessing agents that use the code interpreter capability.
 
@@ -65,5 +65,5 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Declarative agent manifest reference](declarative-agent-manifest-1.3.md)
 - [Add the image generator capability to your agent](add-capability-image-generator.md)
-- [Add knowledge sources to your declarative agent](add-knowledge-sources.mg)
+- [Add knowledge sources to your declarative agent](add-knowledge-sources.md)
 

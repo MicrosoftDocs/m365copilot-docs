@@ -41,9 +41,9 @@
       expanded: true
       items:
         - name: Add code interpreter
-          href: add-code-interpreter.md
+          href: add-capability-code-interpreter.md
         - name: Add image generator
-          href: add-image-generator.md          
+          href: add-capability-image-generator.md          
     - name: Add knowledge sources
       href: add-knowledge-sources.md    
     - name: Choose your development tool

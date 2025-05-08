@@ -1,6 +1,6 @@
 ---
 title: Add the image generator capability to your declarative agent
-description: Learn about the image generator capability and how to can add to your declarative agents.
+description: Learn about the image generator capability and how to add it to your declarative agents.
 author: kmkoenen   
 ms.author: v-koenenkaty
 ms.topic: concept-article

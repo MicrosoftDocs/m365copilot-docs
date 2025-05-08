@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-In this section, you add the [code interpreter capability](../../add-agent-capabilities.md#code-interpreter) to the declarative agent. Code interpreter is an advanced tool designed to solve complex tasks via Python code.
+In this section, you add the [code interpreter capability](../../add-capability-code-interpreter.md) to the declarative agent. Code interpreter is an advanced tool designed to solve complex tasks via Python code.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `CodeInterpreter` entry to the `capabilities` array.
 

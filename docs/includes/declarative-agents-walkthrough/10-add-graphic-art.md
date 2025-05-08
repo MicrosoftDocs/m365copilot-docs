@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-In this section, you add the [image generator capability](../../add-agent-capabilities.md#image-generator) to the declarative agent.
+In this section, you add the [image generator capability](../../add-capability-image-generator.md) to the declarative agent.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `GraphicArt` entry to the `capabilities` array.
 
