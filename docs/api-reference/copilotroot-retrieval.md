@@ -49,19 +49,33 @@ The following table lists the parameters that are required when you call this ac
 | Parameter                | Type              | Description                    |
 |:-------------------------|:------------------|:-------------------------------|
 | `queryString`            | String            | Natural language query string used to retrieve relevant text extracts. Required. |
-| `filterExpression`       | String            | [Kusto Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Microsoft Graph connectors properties and attributes to scope the retrieval before the query runs. Supported SharePoint properties for filtering are: `AssignedTo`, `Author`, `Created`, `CreatedBy`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. When filtering on Microsoft Graph connectors content, you can use any property marked as [queryable in the Graph connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Microsoft Graph connector or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Graph connector. Microsoft will not resolve any issues with filtering on SharePoint and Microsoft Graph connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no filterExpression. Optional. |
-| `resourceMetadata`       | String collection | A list of metadata fields to be returned for each item in the response. By default, no metadata is returned. Optional. |
+| `filterExpression`       | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Microsoft Graph connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. As many of these properties also apply to Graph connectors content, it is possible to get results from Graph connectors when filtering using these properties. When filtering on Microsoft Graph connectors content, you can use any property marked as [queryable in the Graph connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Microsoft Graph connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Graph connector. Microsoft will not resolve any issues with filtering on SharePoint and Microsoft Graph connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Optional. |
+| `resourceMetadata`       | String collection | A list of metadata fields to be returned for each item in the response. Only retrievable metadata properties can be included in this list. By default, no metadata is returned. Optional. |
 | `maximumNumberOfResults` | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
 
 ## Response
 
 If successful, this action returns a `200 OK` response code and a [retrievalResponse](resources/retrievalresponse.md) in the response body.
 
+## Best Practices
+
+### General
+These are the best practices that are applicable to both unfiltered queries (queries without a `filterExpression`) and filtered queries (queries with a `filterExpression`):
+
+- The results and extracts returned by the Retrieval API are unordered. Consquently, it is recommended that you do not limit the `maximumNumberOfResults` unless you have stringent requirements on how many tokens your LLM can consume.
+- Send all extracts returned by the Retrieval API to your LLM/orchestrator for answer generation.
+- Avoid queries that are simply generic keywords that could be applicable to a plethora of content.
+- Provide as much context in the query as possible.
+
+### Filtered Queries
+If you are issuing a query with a `filterExpression`, we recommend that you also follow this best practice:
+- If you want to filter using the `path` parameter in SharePoint, do not use a sharing link or copy the URL from the address bar. Instead, navigate to the location of the folder or file in SharePoint and click on the three dots that indicate “More Actions”. Scroll down on the pane and click “Details”. From there, you can scroll down the right rail to find the path, which you can copy to your clipboard.
+
 ## Examples
 
 ### Example 1: Retrieve data from SharePoint and Microsoft Graph connectors
 
-The following example shows a request to retrieve data from both SharePoint and Microsoft Graph connectors. By omitting the `filterExpression` parameter, the requests indicate retrieval should span all supported data sources. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows a request to retrieve data from both SharePoint and Microsoft Graph connectors. By omitting the `filterExpression` parameter, the request indicates retrieval should span all supported data sources. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
 #### Request
 
@@ -136,7 +150,7 @@ Content-Type: application/json
 
 ### Example 2: Retrieve data from a specific SharePoint site
 
-The following example shows a request to retrieve data from a specific Sharepoint site. The `filterExpression` parameter specifies the path to the site. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
+The following example shows a request to retrieve data from a specific Sharepoint site. The `filterExpression` parameter specifies the path to the site. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
 #### Request
 
@@ -222,7 +236,7 @@ Content-Type: application/json
 
 ### Example 3: Retrieve data from multiple SharePoint sites
 
-The following example shows a request to retrieve data from multiple Sharepoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the title and author metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
+The following example shows a request to retrieve data from multiple Sharepoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
 #### Request
 
@@ -355,7 +369,7 @@ Content-Type: application/json
 The following example shows the response.
 
 ```http
-TTP/1.1 200 OK
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
@@ -373,6 +387,685 @@ Content-Type: application/json
       "resourceType": "externalItem",
       "resourceMetadata": {
         "title": "Corporate VPN"
+      }
+    }
+  ]
+}
+```
+
+### Example 5: Filtering on the `Author` Property
+
+The following example shows a request to retrieve data while filtering on the `Author` property. The request asks for `Author` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+    "queryString": "What is the vacation policy?",
+    "filterExpression": "Author:\"John Doe\"",
+    "resourceMetadata": ["Author"],
+    "maximumNumberOfResults": 4
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/Vacation_Policy.docx",
+      "extracts": [
+        {
+          "text": "Entry level hires start with 15 vacations day per year."
+        },
+        {
+          "text": "Employees earn an additional 5 vacation days for every two years of service."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "Author": "John Doe;Jane Doe"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    }
+  ]
+}
+```
+
+### Example 6: Filtering on a specific Date Range using the `LastModifiedTime` Property
+
+The following example shows a request to retrieve data while filtering on a specific date range using the `LastModifiedTime` property. The request asks for `LastModifiedTime` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+    "queryString": "What is the reimbursement policy for business expenses?",
+    "filterExpression": "LastModifiedTime >= 2024-07-22 AND LastModifiedTime <= 2025-01-08",
+    "resourceMetadata": ["LastModifiedTime"],
+    "maximumNumberOfResults": 4
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/Reimbursements_Policy.docx",
+      "extracts": [
+        {
+          "text": "You will need to have all receipts related to business expenses ready to receive reimbursement."
+        },
+        {
+          "text": "Receipts must be submitted within 90 days of the business expense to be eligible for reimbursement."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "LastModifiedTime": "2024-09-06T19:52:37Z"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    },
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR2/Corporate_Card.docx",
+      "extracts": [
+        {
+          "text": "If you frequently have business expenses, it is recommended that you apply for a corporate card."
+        },
+        {
+          "text": "You will not be reimbursed for any personal expenses made on your corporate card."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "LastModifiedTime": "2025-01-07T19:15:16Z"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    }
+  ]
+}
+```
+
+### Example 7: Filtering using the `FileExtension` Property
+
+The following example shows a request to retrieve data while filtering using the `FileExtension` property. In this example, the request is being filtered to docx, pdf, and pptx files. The request asks for `FileExtension` to be returned for each item from which a text extract is retrieved. The response should include a maximum of three documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+    "queryString": "What is the sick time policy?",
+    "filterExpression": "FileExtension:\"docx\" OR FileExtension:\"pdf\" OR FileExtension:\"pptx\"",
+    "resourceMetadata": ["FileExtension"],
+    "maximumNumberOfResults": 3
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/Sick_Time.docx",
+      "extracts": [
+        {
+          "text": "Employees receive 10 sick days per year."
+        },
+        {
+          "text": "In addition to 10 sick days per year, employees also receive 5 wellness days per year."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "FileExtension": "docx"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    },
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR2/Benefits.pptx",
+      "extracts": [
+        {
+          "text": "You are entitled to 10 sick days and 5 wellness days per year. Please reach out to your manager if you have any questions."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "FileExtension": "pptx"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    },
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR2/Wellness_Days.pdf",
+      "extracts": [
+        {
+          "text": "Your mental health is just as important as your physical health. Take advantage of the 5 wellness days you receive per year."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "FileExtension": "pdf"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    }
+  ]
+}
+```
+
+### Example 8: Filtering using the `Filename` Property
+
+The following example shows a request to retrieve data while filtering using the `Filename` property. The request asks for `Filename` to be returned for each item from which a text extract is retrieved. The response should include a maximum of one document.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+    "queryString": "What is Contoso's mission statement?",
+    "filterExpression": "Filename:\"Contoso Mission Statement.docx\"",
+    "resourceMetadata": ["Filename"],
+    "maximumNumberOfResults": 1
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/Contoso Mission Statement.docx",
+      "extracts": [
+        {
+          "text": "Contoso's mission statement is to deliver delightful products and services to people around the world."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "Filename": "Contoso Mission Statement.docx"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    }
+  ]
+}
+```
+
+### Example 9: Filtering using the `FileType` Property
+
+The following example shows a request to retrieve data while filtering using the `FileType` property. The query is filtering to Word documents, web pages indexed using an enterprise websites Graph connector, and Epics indexed using the Azure DevOps Graph connector. The request asks for `FileType` to be returned for each item from which a text extract is retrieved. The response should include a maximum of three documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+    "queryString": "What are the remaining work items to launch Contoso's marketing campaign?",
+    "filterExpression": "FileType:\"html\" OR FileType:\"Epic\" OR FileType:\"docx\"",
+    "resourceMetadata": ["FileType"],
+    "maximumNumberOfResults": 3
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://dev.azure.com/ContosoMarketing/6f2884d1-2732-4ebc-95e7-4763204b623b/_workitems/edit/6732954",
+      "extracts": [
+        {
+          "text": "This is tracking the remaining work items for the new Contoso Marketing campaign. Updates on open work items are expected on Mondays."
+        }
+      ],
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "FileType": "Epic"
+      }
+    },
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/marketing/Remaining Work Items.docx",
+      "extracts": [
+        {
+          "text": "The advertising team needs to complete the social media campaign and book the billboard."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "FileType": "docx"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    },
+    {
+      "webUrl": "https://contoso.com/product_launch",
+      "extracts": [
+        {
+          "text": "The new product launches in 14 days! Let us know your reactions to the marketing campaign on social media."
+        },
+        {
+          "text": "Click the link below to pre-register to purchase the new product."
+        }
+      ],
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "FileType": "html"
+      }
+    }
+  ]
+}
+```
+
+### Example 10: Determine the sensitivity of results by filtering using the `InformationProtectionLabelId` Property
+
+The following example shows a request to retrieve data while filtering using the `InformationProtectionLabelId` property. The `InformationProtectionLabelId` is equivalent to the `sensitivityLabelId` you receive in the `sensitivityLabel` object in the response payload. The request asks for `InformationProtectionLabelId` to be returned for each item from which a text extract is retrieved. The response should include a maximum of three documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+    "queryString": "What is the sick time policy?",
+    "filterExpression": "InformationProtectionLabelId:\"f0ddcc93-d3c0-4993-b5cc-76b0a283e252\"",
+    "resourceMetadata": ["InformationProtectionLabelId"],
+    "maximumNumberOfResults": 3
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/Sick_Time.docx",
+      "extracts": [
+        {
+          "text": "Employees receive 10 sick days per year."
+        },
+        {
+          "text": "In addition to 10 sick days per year, employees also receive 5 wellness days per year."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "InformationProtectionLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    },
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR2/Benefits.pptx",
+      "extracts": [
+        {
+          "text": "You are entitled to 10 sick days and 5 wellness days per year. Please reach out to your manager if you have any questions."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "InformationProtectionLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    },
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR2/Wellness_Days.pdf",
+      "extracts": [
+        {
+          "text": "Your mental health is just as important as your physical health. Take advantage of the 5 wellness days you receive per year."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "InformationProtectionLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    }
+  ]
+}
+```
+
+### Example 11: Filter using the `ModifiedBy` Property
+
+The following example shows a request to retrieve data while filtering using the `ModifiedBy` property. The request asks for `ModifiedBy` to be returned for each item from which a text extract is retrieved. The response should include a maximum of two documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+    "queryString": "What are the remaining work items to launch Contoso's marketing campaign?",
+    "filterExpression": "ModifiedBy:\"Jane Doe\"",
+    "resourceMetadata": ["ModifiedBy"],
+    "maximumNumberOfResults": 2
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://dev.azure.com/ContosoMarketing/6f2884d1-2732-4ebc-95e7-4763204b623b/_workitems/edit/6732954",
+      "extracts": [
+        {
+          "text": "This is tracking the remaining work items for the new Contoso Marketing campaign. Updates on open work items are expected on Mondays."
+        }
+      ],
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "ModifiedBy": "Jane Doe"
+      }
+    },
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/marketing/Remaining Work Items.docx",
+      "extracts": [
+        {
+          "text": "The advertising team needs to complete the social media campaign and book the billboard."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "ModifiedBy": "Jane Doe"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    }
+  ]
+}
+```
+
+### Example 12: Filter using the `SiteID` Property
+
+The following example shows a request to retrieve data while filtering using the `SiteID` property. The request asks for `SiteID` to be returned for each item from which a text extract is retrieved. The response should include a maximum of two documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+    "queryString": "How to setup corporate VPN?",
+    "filterExpression": "SiteID:\"e2cf7e40-d689-41de-99ee-a423811a253c\"",
+    "resourceMetadata": ["SiteID"],
+    "maximumNumberOfResults": 2
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNAccess.docx",
+      "extracts": [
+        {
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+        },
+        {
+          "text": "You will need to sign in with 2FA to access the corporate VPN."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "SiteID": "e2cf7e40-d689-41de-99ee-a423811a253c"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    },
+    {
+    "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
+    "extracts": [
+        {
+          "text": "Have your VPN username and password ready prior to starting the configuration."
+        },
+        {
+          "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources."
+        }
+   
+      ],
+    "resourceType": "listItem",
+    "resourceMetadata": {
+        "SiteID": "e2cf7e40-d689-41de-99ee-a423811a253c"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    }
+  ]
+}
+```
+
+### Example 13: Filter using the `Title` Property
+
+The following example shows a request to retrieve data while filtering using the `Title` property. The request asks for `Title` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+    "queryString": "How do I refresh my refresh Windows 10 device?",
+    "filterExpression": "Title:\"Windows 10 Device\"",
+    "resourceMetadata": ["Title"],
+    "maximumNumberOfResults": 4
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR/Refreshing_Windows10_Device.docx",
+      "extracts": [
+        {
+          "text": "Click the Start icon and then the Settings icon. In the left pane, select Recovery."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "Title": "Refreshing your Windows 10 Device"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    },
+    {
+    "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=c886d14",
+    "extracts": [
+        {
+          "text": "When you get your new Windows 10 device, make sure to install all required software."
+        }
+      ],
+    "resourceType": "externalItem",
+    "resourceMetadata": {
+        "title": "Learn When to Reset or Refresh a Windows 10 Device"
       }
     }
   ]
