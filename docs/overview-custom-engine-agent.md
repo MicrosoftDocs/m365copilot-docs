@@ -98,7 +98,7 @@ As you prepare to build and deploy your custom engine agent, consider the key fa
 
 Custom engine agents can utilize various AI models depending on the complexity of tasks and domain-specific requirements. Whether your agent needs a specific foundation model, a small language model, or a fine-tuned model for your scenario, selecting the right model is critical.
 
-For more information, see [How to choose the right models for your apps](/azure/ai-services/openai/how-to/select-model).
+For more information, see [How to choose the right models for your apps]([/azure/ai-services/openai/how-to/select-model](https://techcommunity.microsoft.com/blog/microsoftmechanicsblog/how-to-choose-the-right-models-for-your-apps--azure-ai/4271216)).
 
 ### Responsible AI
 
@@ -113,6 +113,6 @@ For more information, see [Cost considerations for Copilot extensibility](cost-c
 ## Related content
 
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
-- [Microsoft 365 Agents SDK (preview)](/microsoft-365/agents-sdk/)
+- [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/)
 - [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
 - [Copilot extensibility planning guide](planning-guide.md)
