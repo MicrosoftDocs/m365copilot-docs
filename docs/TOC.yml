@@ -37,6 +37,15 @@
       href: overview-declarative-agent.md
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
+    - name: Add capabilities
+      expanded: true
+      items:
+        - name: Add code interpreter
+          href: add-code-interpreter.md
+        - name: Add image generator
+          href: add-image-generator.md          
+    - name: Add knowledge sources
+      href: add-knowledge-sources.md    
     - name: Choose your development tool
       href: declarative-agent-tool-comparison.md
     - name: Use Visual Studio Code
@@ -94,8 +103,6 @@
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
       href: instructions-api-plugins.md
-    - name: Add capabilities and knowledge sources
-      href: add-agent-capabilities.md
     - name: Optimize SharePoint content retrieval
       href: optimize-sharepoint-content.md
     - name: Document interaction
