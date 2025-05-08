@@ -1075,3 +1075,4 @@ Content-Type: application/json
 ## Related content
 
 - [Overview of the Microsoft 365 Copilot Retrieval API](retrieval-api-overview.md)
+- [Try with Graph explorer](https://aka.ms/try_copilot_retrieval_API_reference)
