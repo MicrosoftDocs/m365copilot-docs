@@ -38,7 +38,7 @@ Microsoft Graph connectors allow you to enrich Copilot with external data to enh
 
 ### Index quota and licensing
 
-All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Microsoft Graph connectors. By default, each connection is capped at 5 million items. If you need a higher per-connection or overall quota, contact your Microsoft account manager or [submit this form](https://aka.ms/graphconnectorform). For details, see [Index quota for Microsoft Graph connectors](/microsoftsearch/licensing).
+All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Microsoft Graph connectors. By default, each connection is capped at 5 million items. If you need a higher per-connection or overall quota, contact your Microsoft account manager or [submit this form](https://aka.ms/GraphConnectorsHigherCapacity). For details, see [Index quota for Microsoft Graph connectors](/microsoftsearch/licensing).
 
 #### Eligible licenses
 
