@@ -52,9 +52,9 @@ The following licenses qualify for the 50 million item quota:
 
 ### Access and usage
 
-Users with a valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license can access data from Microsoft Graph connectors in Copilot Chat and Microsoft Search.
+Users with a valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license can access data from Microsoft Graph connectors in Copilot Chat, Copilot Search, and Microsoft Search.
 
-If you build a connector, licensed users in your organization will automatically be able to retrieve its data through Copilot Chat.
+If you build a connector and your admin configures it in the admin center, licensed users in your organization will automatically be able to retrieve its data through Copilot Chat.
 
 ## Agents in Copilot
 
