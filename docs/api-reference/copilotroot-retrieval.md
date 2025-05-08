@@ -67,6 +67,7 @@ These are the best practices that are applicable to both unfiltered queries (que
 - Avoid queries that are simply generic keywords that could be applicable to a plethora of content.
 - Provide as much context in the query as possible.
 - Your `queryString` should be a single sentence.
+- Avoid spelling errors in context-rich keywords when constructing your `queryString`.
 
 ### Filtered Queries
 If you are issuing a query with a `filterExpression`, we recommend that you also follow this best practice:
