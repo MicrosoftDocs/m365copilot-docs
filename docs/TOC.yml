@@ -111,7 +111,7 @@
       href: localize-agents.md
     - name: Test and debug agents
       href: debugging-copilot-agent.md
-    - name: RAI validation
+    - name: Responsible AI validation
       href: rai-validation.md
   - name: Build a custom engine agent
     expanded: false

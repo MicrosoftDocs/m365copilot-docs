@@ -141,7 +141,7 @@ If at least one connector is enabled, you can add it to your agent. Your agent i
 In the **Capabilities** section of the **Configure** tab, you can choose to add the following capabilities to your agent:
 
 - [Code interpreter](add-capability-code-interpreter.md) - Uses Python code to solve complex math problems, analyze data, and generate visualizations.
-- [Image generator](add-image-generator-capability.md) - Generates images base on user prompts.
+- [Image generator](add-capability-image-generator-capability.md) - Generates images base on user prompts.
 
 To add one or more capabilities to your agent, choose the toggle next to the capability you want to enable.
 
