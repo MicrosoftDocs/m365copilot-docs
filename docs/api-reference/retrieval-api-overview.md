@@ -16,6 +16,8 @@ The Retrieval API offers a streamlined solution for Retrieval Augmented Generati
 
 RAG is essential when you're building generative AI solutions and want to use Microsoft 365 knowledge. When you implement RAG, your solutions can provide more accurate, contextually relevant responses grounded in the vast repository of your organizational data. The Retrieval API accomplishes RAG by extracting up-to-date and relevant text snippets from SharePoint and Copilot connectors. The Retrieval API keeps your data in place and upholds your access and governance controls. The Retrieval API ensures that synthesized responses are informed by the latest and most relevant data. This process enhances the reliability and usefulness of your generative AI solutions.
 
+[Try issuing your first query to the Retrieval API](https://aka.ms/try_copilot_retrieval_API_overview).
+
 ## Why use the Retrieval API?
 
 The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint and Copilot connectors. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance.
@@ -79,3 +81,4 @@ The Retrieval API is available at no extra cost to users with a Microsoft 365 Co
 ## Related content
 
 - [Microsoft 365 Copilot API client libraries (preview)](../sdks/api-libraries.md)
+- [Try with Graph explorer](https://aka.ms/try_copilot_retrieval_API_overview)
