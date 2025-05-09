@@ -101,6 +101,22 @@ The following table lists the supported file types and their respective limits.
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you won't be able to use SharePoint as a knowledge source.
 
+### Microsoft Teams chat messages
+
+Your agent can be grounded in daily chat messages from channels, group chats and meeting chats in Microsoft Teams. To add Teams chat messages, clicking the search bar under 'Knowledge' section.
+
+If you don't want to scope to specific chat sources, you can also select "My Teams chats from group chat, channels, and meetings". That will search all the chat messages you have the access to.
+
+>[!IMPORTANT]
+> You can add up to 5 chat sources from Teams.
+
+### Microsoft Outlook emails
+
+The agent can also be grounded in emails from Microsoft Outlook. Click the search bar under "Knowledge" section, then select "My emails" to enable this capability.
+
+>[!IMPORTANT]
+>Scoping is not available for emails. The agent will be grounded in all emails in your mailbox.
+
 #### Entering a URL for a SharePoint site, folder, or file
 
 You can enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
