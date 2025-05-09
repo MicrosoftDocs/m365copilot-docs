@@ -49,29 +49,13 @@ The following table lists the parameters that are required when you call this ac
 | Parameter                | Type              | Description                    |
 |:-------------------------|:------------------|:-------------------------------|
 | `queryString`            | String            | Natural language query string used to retrieve relevant text extracts. Required. |
-| `filterExpression`       | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. As many of these properties also apply to Copilot connectors content, it is possible to get results from Copilot connectors when filtering using these properties. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Copilot connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Copilot connector. Microsoft will not resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Optional. |
+| `filterExpression`       | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. As many of these properties also apply to Copilot connectors content, it is possible to get results from Copilot connectors when filtering using these properties. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Copilot connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Copilot connector. Microsoft will not resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Follow these [best practices](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api-reference/copilotroot-retrieval#best-practices) for your filtered queries. Optional. |
 | `resourceMetadata`       | String collection | A list of metadata fields to be returned for each item in the response. Only retrievable metadata properties can be included in this list. By default, no metadata is returned. Optional. |
 | `maximumNumberOfResults` | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 10 results. Optional. |
 
 ## Response
 
 If successful, this action returns a `200 OK` response code and a [retrievalResponse](resources/retrievalresponse.md) in the response body.
-
-## Best Practices
-
-### General
-These are the best practices that are applicable to both unfiltered queries (queries without a `filterExpression`) and filtered queries (queries with a `filterExpression`):
-
-- The results and extracts returned by the Retrieval API are unordered. Consquently, it is recommended that you do not limit the `maximumNumberOfResults` unless you have stringent requirements on how many tokens your LLM can consume.
-- Send all extracts returned by the Retrieval API to your LLM/orchestrator for answer generation.
-- Avoid queries that are simply generic keywords that could be applicable to a plethora of content.
-- Provide as much context in the query as possible.
-- Your `queryString` should be a single sentence.
-- Avoid spelling errors in context-rich keywords when constructing your `queryString`.
-
-### Filtered Queries
-If you are issuing a query with a `filterExpression`, we recommend that you also follow this best practice:
-- If you want to filter using the `path` parameter in SharePoint, do not use a sharing link or copy the URL from the address bar. Instead, navigate to the location of the folder or file in SharePoint and click on the three dots that indicate “More Actions”. Scroll down on the pane and click “Details”. From there, you can scroll down the right rail to find the path, which you can copy to your clipboard.
 
 ## Examples
 

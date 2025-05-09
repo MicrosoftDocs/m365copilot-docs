@@ -29,9 +29,9 @@ The Copilot APIs provide you with the following essential capabilities:
 
 | API | Description | URL |
 |-----|-------------|-----|
-| **Retrieval API** |This API offers a streamlined solution for Retrieval Augmented Generation (RAG) in a secure and compliant way.|[https://graph.microsoft.com/beta/copilot/retrieval](https://graph.microsoft.com/beta/copilot/retrieval)|
-| **Activity Export API** |This API allows you to export Copilot interactions data which includes the user prompt to Copilot and the Copilot response back to the user.|[https://graph.microsoft.com/beta/copilot/interactionHistory](https://graph.microsoft.com/beta/copilot/interactionHistory)|
-| **AI Meeting Insights API** |This API provides insights at par with the Intelligent Recap feature in the Teams client, including AI Notes, action items, and Topics.|[https://graph.microsoft.com/beta/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights](https://graph.microsoft.com/beta/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights)|
+| [**Retrieval API**](https://learn.microsoft.com/microsoft-365-copilot/extensibility/api-reference/copilotroot-retrieval) |This API offers a streamlined solution for Retrieval Augmented Generation (RAG) in a secure and compliant way.|[https://graph.microsoft.com/beta/copilot/retrieval](https://graph.microsoft.com/beta/copilot/retrieval)|
+| [**Activity Export API**](https://learn.microsoft.com/graph/api/aiinteractionhistory-getallenterpriseinteractions?view=graph-rest-beta&tabs=http) |This API allows you to export Copilot interactions data which includes the user prompt to Copilot and the Copilot response back to the user.|[https://graph.microsoft.com/beta/copilot/interactionHistory](https://graph.microsoft.com/beta/copilot/interactionHistory)|
+| [**AI Meeting Insights API**](https://learn.microsoft.com/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta) |This API provides insights at par with the Intelligent Recap feature in the Teams client, including AI Notes, action items, and Topics.|[https://graph.microsoft.com/beta/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights](https://graph.microsoft.com/beta/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights)|
 
 ## How Copilot APIs differ from Microsoft Graph APIs
 
@@ -57,6 +57,6 @@ The Copilot APIs are available at no extra cost to users with a Microsoft 365 Co
 - [Find out how to get an auth token in your app. in your app](https://learn.microsoft.com/graph/auth/auth-concepts)
 - [Overview of the Microsoft 365 Copilot Retrieval API (preview)](https://learn.microsoft.com/microsoft-365-copilot/extensibility/api-reference/retrieval-api-overview)
 - [Microsoft 365 Copilot Interactions & Microsoft 365 Chat (Preview)](https://learn.microsoft.com/microsoftteams/export-teams-content#microsoft-365-copilot-interactions--microsoft-365-chat-preview) 
-- [Fetch Meeting Transcripts & Recordings - Teams](https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts)
+- [Fetch Meeting Transcripts & Recordings - Teams](https://learn.microsoft.com/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts)
 
 

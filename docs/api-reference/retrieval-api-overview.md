@@ -73,6 +73,22 @@ The following are the current throttling and other limitations to the Retrieval 
 
 The Retrieval API is available at no extra cost to users with a Microsoft 365 Copilot license. Support for users without a Microsoft 365 Copilot license is currently not available.
 
+## Best Practices
+
+### General
+These are the best practices that are applicable to both unfiltered queries (queries without a **filterExpression**) and filtered queries (queries with a **filterExpression**):
+
+- The results and extracts returned by the Retrieval API are unordered. Consquently, it is recommended that you do not limit the **maximumNumberOfResults** unless you have stringent requirements on how many tokens your LLM can consume.
+- Send all extracts returned by the Retrieval API to your LLM/orchestrator for answer generation.
+- Avoid queries that are simply generic keywords that could be applicable to a plethora of content.
+- Provide as much context in the query as possible.
+- Your **queryString** should be a single sentence.
+- Avoid spelling errors in context-rich keywords when constructing your **queryString**.
+
+### Filtered Queries
+If you are issuing a query with a **filterExpression**, we recommend that you also follow this best practice:
+- If you want to filter using the **path** parameter in SharePoint, do not use a sharing link or copy the URL from the address bar. Instead, navigate to the location of the folder or file in SharePoint and click on the three dots that indicate “More Actions”. Scroll down on the pane and click “Details”. From there, you can scroll down the right rail to find the path, which you can copy to your clipboard.
+
 ## Next step
 
 > [!div class="nextstepaction"]
