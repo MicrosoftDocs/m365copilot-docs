@@ -37,22 +37,22 @@ For information about how to add Microsoft Graph connectors to your agent in Cop
 
 ## SharePoint and OneDrive as knowledge
 
-When you configure your agent to use OneDrive and SharePoint content as knowledge, Copilot searches SharePoint and OneDrive sites that a user has access to for grounding information.
+When you configure your agent to use OneDrive and SharePoint content as knowledge, Copilot searches SharePoint and OneDrive files, folders, or sites that a user has access to for grounding information.
 
-For information about how to add the OneDrive and SharePoint as knowledge capability to your agent manifest in Teams Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.3.md#onedrive-and-sharepoint-object).
+For information about how to add OneDrive and SharePoint knowledge to your agent manifest in Teams Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.3.md#onedrive-and-sharepoint-object).
 
-For information about how to enable the OneDrive and SharePoint as knowledge capability to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
+For information about how to enable OneDrive and SharePoint knowledge to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
 
 ## Web and scoped web search
 
-The web search capability enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, you can have your agent return any web data in its responses. You can also scope the web search to up to four public websites.
+Web search enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, you can have your agent return any web data in its responses. You can also scope the web search to up to four public websites.
+
+### Add web and scoped web search
+
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest file. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add scoped web search to your agent.
-
-### Enable web and scoped web search
-
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest file. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
 
 ```json
 {
@@ -73,17 +73,17 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 
 ## Dataverse knowledge
 
-Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. This capability allows you to add a Dataverse instance as a knowledge source and to add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
+Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
 
 > [!NOTE]
 > Dataverse knowledge is not currently available in Copilot Studio agent builder.
 
-### Enable Dataverse knowledge
+### Add Dataverse knowledge
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Dataverse knowledge, add the `Dataverse` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
 > [!NOTE]
-> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `Dataverse` capability.
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add `Dataverse` knowledge.
 
 ```json
     {
@@ -111,17 +111,18 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 
 ## Email knowledge
 
-The email capability allows you to scope your agent to a personal or shared mailbox, and optionally, a specific mailbox folder. You can reference multiple mailbox folders but only one shared folder.
+Email knowledge allows you to scope your agent to a personal or shared mailbox, and optionally, a specific mailbox folder.
 
 > [!NOTE]
 > Email knowledge is not currently available in Copilot Studio agent builder.
 
-### Enable email knowledge
+### Add email knowledge
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to add email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example. You can reference multiple mailbox folders and only one shared folder.
 
 > [!NOTE]
-> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `Email` capability.
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to the `Email` knowledge.
+
 ```json
     "capabilities": [
       {
@@ -148,17 +149,17 @@ If you don't reference a shared mailbox or a folder, the agent search is not sco
 
 ## People knowledge
 
-The people capability allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This capability is not scoped.
+People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This knowledge source is not scoped.
 
 > [!NOTE]
 > People knowledge is not currently available in Copilot Studio agent builder.
 
-### Enable people knowledge
+### Add people knowledge
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
 > [!NOTE]
-> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `People` capability.
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `People` knowledge source.
 >
 ```json
     "capabilities": [
@@ -168,18 +169,18 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
       ]
 ```
 
-## Teams messages as knowledge
+## Teams messages
 
-The Teams messages capability allows agents to use Teams channels, meeting chats, group chats, 1:1 chats, and teams as a knowledge source. You can choose to specify up to five links to teams, channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
+You can configure agents to use Teams channels, meeting chats, group chats, 1:1 chats, and teams as knowledge sources. You can choose to specify up to five links to teams, channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
 
-Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has the `OneDriveAndSharePoint` capability enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
+Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has `OneDriveAndSharePoint` enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
-### Enable Teams messages
+### Add Teams messages as knowledge
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable the Teams messages capability, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
+If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Teams messages knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
 
 > [!NOTE]
-> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `TeamsMessage` capability.
+> You must be using [version 1.3](declarative-agent-manifest-1.3.md) of the declarative agent manifest schema to add the `TeamsMessage` knowledge source.
 
 ```json
 {
