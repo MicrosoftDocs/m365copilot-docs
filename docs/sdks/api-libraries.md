@@ -12,9 +12,9 @@ ms.topic: overview
 
 The Microsoft 365 Copilot API client libraries are designed to facilitate the development of high-quality, efficient, and resilient AI solutions that access the Microsoft 365 Copilot APIs. These libraries include service and core libraries.
 
-The service libraries offer models and request builders that provide a rich, strongly typed experience for working with Microsoft 365 Copilot APIs.
+The service libraries offer models and request builders that provide a rich, typed experience for working with Microsoft 365 Copilot APIs.
 
-The core libraries offer advanced features to facilitate interactions with the Microsoft 365 Copilot APIs. These features include embedded support for retry handling, secure redirects, transparent authentication, and payload compression, all of which enhance the quality of your AI solution's communications with the Microsoft 365 Copilot APIs without adding complexity. Additionally, the core libraries simplify routine tasks such as paging through collections and creating batch requests.
+The core libraries offer advanced features to facilitate interactions with the Microsoft 365 Copilot APIs. These features include embedded support for retry handling, secure redirects, transparent authentication, and payload compression. These capabilities help you enhance the quality of your AI solution's communications with the Microsoft 365 Copilot APIs without adding complexity. Additionally, the core libraries simplify routine tasks such as paging through collections and creating batch requests.
 
 ## Supported languages
 
@@ -26,13 +26,11 @@ The Microsoft 365 Copilot API client libraries are currently available for the f
 
 ## Client libraries in preview status
 
-The Microsoft 365 Copilot API client libraries can be in preview status when initially released or after a significant update. A preview release might not be promoted to general availability (GA) status.
-
-Avoid using the preview release of these libraries in production solutions, regardless of whether your solution uses version 1.0 or the beta version of the Microsoft 365 Copilot APIs.
+The Microsoft 365 Copilot API client libraries can be in preview status when initially released or after a significant update. Avoid using the preview release of these libraries in production solutions, regardless of whether your solution uses version 1.0 or the beta version of the Microsoft 365 Copilot APIs.
 
 ## Client libraries supportability
 
-The Microsoft 365 Copilot API libraries are open-source projects on GitHub. If you encounter an issue, file an issue with the details on the [Issues](https://github.com/microsoft/Agents-M365Copilot/issues) tab. Contributors will review and release a fix as needed. Microsoft Customer Service and Support doesn't officially support SDKs and libraries; however, it does support the HTTP requests for Microsoft 365 Copilot API calls.
+The Microsoft 365 Copilot API libraries are open-source projects on GitHub. If you encounter an issue, file an issue with the details on the [Issues](https://github.com/microsoft/Agents-M365Copilot/issues) tab. Contributors will review and release a fix as needed.
 
 ## Install the libraries
 
@@ -42,7 +40,7 @@ The Microsoft 365 Copilot API client libraries are included as a module in the M
 
 The Microsoft 365 Copilot APIs are included in the following NuGet packages:
 
-- [Microsoft.Agents.M365Copilot.Beta](https://github.com/microsoft/Agents-M365Copilot/tree/main/dotnet/src/Microsoft.Agents.M365Copilot.Beta): Contains the models and request builders for accessing the beta endpoint. Microsoft.Agents.M365Copilot.Beta has a dependency on Microsoft.Agents.M365Copilot.Core
+- [Microsoft.Agents.M365Copilot.Beta](https://github.com/microsoft/Agents-M365Copilot/tree/main/dotnet/src/Microsoft.Agents.M365Copilot.Beta): Contains the models and request builders for accessing the beta endpoint. Microsoft.Agents.M365Copilot.Beta has a dependency on Microsoft.Agents.M365Copilot.Core. The same dependency structure applies to both the TypeScript and Python libraries as well.
 - Microsoft.Agents.M365Copilot.Core: The core library for making calls to Microsoft 365 Copilot APIs.
 
 To install the Microsoft.Agents.M365Copilot packages into your project, you can use the [dotnet CLI](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli), the [Package Manager UI in Visual Studio](/nuget/quickstart/install-and-use-a-package-in-visual-studio) or the [Package Manager Console in Visual Studio](/nuget/quickstart/install-and-use-a-package-in-visual-studio).
