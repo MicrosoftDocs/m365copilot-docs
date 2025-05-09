@@ -103,7 +103,7 @@
           href: add-capability-image-generator.md          
         - name: Knowledge sources
           href: add-knowledge-sources.md    
-     - name: Optimize SharePoint content retrieval
+    - name: Optimize SharePoint content retrieval
       href: optimize-sharepoint-content.md
     - name: Document interaction
       href: declarative-agent-document-interaction.md
