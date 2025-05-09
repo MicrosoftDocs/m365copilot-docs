@@ -12,7 +12,7 @@ ms.date: 5/14/2025
 
 Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario, and accepts files as input for modifications and analysis.
 
-You can enhance the user experience of your declarative agent for Microsoft 365 Copilot by adding the code interpreter and image generator capabilities. The [**capabilities** element](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.3#capabilities-object) in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the code interpreter capability and how to add it to your declarative agents. 
+You can enhance the user experience of your declarative agent for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.3#capabilities-object) in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the code interpreter capability and how to add it to your declarative agents.
 
 The code interpreter capability is available to Copilot Chat users with no metered usage or Microsoft 365 Copilot license.
 

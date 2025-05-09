@@ -18,7 +18,7 @@ The image generator capability enables declarative agents for Microsoft 365 Copi
 - **Feedback mechanism**: Users can provide feedback on the generated images by giving a thumbs up or thumbs down. This feedback helps improve the quality of future image generations.
 - **Clipboard and sharing**: Users can copy the generated images to their clipboard to paste into other applications, or they can share the generated images directly from the interface.
 
- the image gen capability is available to Copilot Chat users with no metered usage or Microsoft 365 Copilot license.  
+ The image generator capability is available to Copilot Chat users with no metered usage or Microsoft 365 Copilot license.  
 
 ## Image generator examples
 
