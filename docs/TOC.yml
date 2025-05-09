@@ -95,14 +95,14 @@
     - name: Write instructions for agents with API plugins
       href: instructions-api-plugins.md
     - name: Add capabilities and knowledge sources
-      expanded: true
+      expanded: false
       items:
         - name: Code interpreter
-          href: add-capability-code-interpreter.md
+          href: code-interpreter.md
         - name: Image generator
-          href: add-capability-image-generator.md          
+          href: image-generator.md          
         - name: Knowledge sources
-          href: add-knowledge-sources.md    
+          href: knowledge-sources.md    
     - name: Optimize SharePoint content retrieval
       href: optimize-sharepoint-content.md
     - name: Document interaction
