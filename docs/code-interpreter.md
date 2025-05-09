@@ -64,6 +64,6 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Declarative agent manifest reference](declarative-agent-manifest-1.3.md)
-- [Add the image generator capability to your agent](add-capability-image-generator.md)
-- [Add knowledge sources to your declarative agent](add-knowledge-sources.md)
+- [Add the image generator capability to your agent](image-generator.md)
+- [Add knowledge sources to your declarative agent](knowledge-sources.md)
 

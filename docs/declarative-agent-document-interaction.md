@@ -23,7 +23,7 @@ For example, a user is working on a job description document, and wants to add a
 
 :::image type="content" source="assets/images/declarative-agents/add-document-selection.png" alt-text="A screenshot of Copilot in Word showing the Add selection option" lightbox="assets/images/declarative-agents/add-document-selection.png":::
 
-The user selects **Add selection** then asks the agent to [generate an image](add-capability-image-generator.md) based on the selection.
+The user selects **Add selection** then asks the agent to [generate an image](image-generator.md) based on the selection.
 
 :::image type="content" source="assets/images/declarative-agents/document-selection-prompt.png" alt-text="A screenshot of Copilot in Word showing the user prompt including the document selection" lightbox="assets/images/declarative-agents/document-selection-prompt.png":::
 

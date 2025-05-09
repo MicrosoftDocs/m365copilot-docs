@@ -217,5 +217,5 @@ For more information, see [Deep link to Teams chat](/microsoftteams/platform/con
 
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Declarative agent manifest reference](declarative-agent-manifest-1.3.md)
-- [Add the code interpreter capability to your agent](add-capability-code-interpreter.md)
-- [Add the image generator capability to your agent](add-capability-code-interpreter.md)
+- [Add the code interpreter capability to your agent](code-interpreter.md)
+- [Add the image generator capability to your agent](image-generator.md)
