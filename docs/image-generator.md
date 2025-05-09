@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 5/14/2025
+ms.date: 5/09/2025
 ---
 
 # Add the image generator capability to your agent
