@@ -14,7 +14,7 @@ You can enhance the user experience of your declarative agent by adding capabili
 
 The following table lists the capabilities and knowledge sources you can configure by using agent builder or Teams Toolkit and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
 
-| Knowledge source | Agent builder | Teams Toolkit | License or metered usage required? |
+| Capability or knowledge source | Agent builder | Teams Toolkit | License or metered usage required? |
 |:-------------------------------|:--------------|:--------------|:-----------------------------------|
 | Code interpreter | :white_check_mark: | :white_check_mark: | No |
 | Image generator | :white_check_mark: | :white_check_mark: | No |
