@@ -114,4 +114,3 @@ Enter a message, including the #extensibility tag, in the text box.
 
 - [Build a declarative agent with Visual Studio Code](/microsoft-365-copilot/extensibility/build-declarative-agents)
 - [Build agents with Copilot Studio agent builder](copilot-studio-agent-builder-build.md)
-- [Add capabilities and knowledge sources to your agent](add-agent-capabilities.md)
