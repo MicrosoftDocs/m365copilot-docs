@@ -73,7 +73,7 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 
 If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Knowledge**, list the website URLs that you want to reference.
 
-## Dataverse knowledge
+## Dataverse
 
 Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
 
@@ -111,14 +111,14 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
     }
 ```
 
-## Email knowledge
+## Email
 
 Email knowledge allows you to scope your agent to a personal or shared mailbox, and optionally, a specific mailbox folder.
 
 > [!NOTE]
 > Email knowledge is not currently available in Copilot Studio agent builder.
 
-### Add email knowledge
+### Add email knowledge sources
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to add email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example. You can reference multiple mailbox folders and only one shared folder.
 
@@ -149,14 +149,14 @@ If you reference both a shared mailbox and a folder, the agent scopes responses 
 
 If you don't reference a shared mailbox or a folder, the agent search is not scoped to any folder or mailbox and it returns results from all email content, based on the user's query.
 
-## People knowledge
+## People
 
 People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This knowledge source is not scoped.
 
 > [!NOTE]
 > People knowledge is not currently available in Copilot Studio agent builder.
 
-### Add people knowledge
+### Add people knowledge source
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
@@ -177,7 +177,7 @@ You can configure agents to use Teams channels, meeting chats, group chats, 1:1 
 
 Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has `OneDriveAndSharePoint` enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
-### Add Teams messages as knowledge
+### Add Teams messages knowledge sources
 
 If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Teams messages knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
 
