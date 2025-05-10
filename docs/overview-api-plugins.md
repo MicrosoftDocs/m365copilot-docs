@@ -4,7 +4,7 @@ description: Learn about API plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 10/08/2024
+ms.date: 05/19/2025
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -12,6 +12,9 @@ ms.custom: [copilot-learning-hub]
 # API plugins for Microsoft 365 Copilot
 
 API plugins enable declarative agents in Microsoft 365 Copilot to interact with REST APIs that have an [OpenAPI description](https://www.openapis.org/what-is-openapi). With an API plugin, users can ask a declarative agent to not only query a REST API for information, but to create, update, and delete data and objects. Anything the REST API can do is accessible via natural language prompts.
+
+> [!NOTE]
+> In addition to calling REST APIs, there is a preview feature that enables a plugin to call APIs in a local library. We encourage you to experiment with this feature, but it should not be used in a production plugin. For more information, see [Build API plugins for Microsoft 365 Copilot with the Office JavaScript Library](build-api-plugins-local-office-api.md).
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
