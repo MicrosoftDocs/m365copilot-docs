@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/add-agent-capabilities.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/knowledge-sources",
+      "redirect_document_id": false
+    }
+  ]
+}

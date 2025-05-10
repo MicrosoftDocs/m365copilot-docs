@@ -10,12 +10,14 @@ ms.date: 5/14/2025
 
 # Add knowledge sources to your declarative agent
 
-You can enhance the user experience of your declarative agent by adding knowledge sources. The [**knowledge sources** object](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.3#knowledge-sources-object) in the manifest reference and the **Knowledge** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the capabilities and knowledge sources that you can add to your agents.
+You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [**capabilitiess** object](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.3#capabilities-object) in the manifest reference and the **Knowledge** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the  knowledge sources that you can add to your agents.
 
-The following table shows which knowledge sources you can configure by using agent builder or Teams Toolkit and whether a your users require a Microsoft 365 Copilot license or metered usage to access the agent.
+The following table lists the capabilities and knowledge sources you can configure by using agent builder or Teams Toolkit and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
 
 | Knowledge source | Agent builder | Teams Toolkit | License or metered usage required? |
 |:-------------------------------|:--------------|:--------------|:-----------------------------------|
+| Code interpreter | :white_check_mark: | :white_check_mark: | No |
+| Image generator | :white_check_mark: | :white_check_mark: | No |
 | Microsoft Graph connectors | :white_check_mark: | :white_check_mark: | Yes |
 | SharePoint and OneDrive | :white_check_mark:| :white_check_mark: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
@@ -35,7 +37,7 @@ For information about how to add Microsoft Graph connectors as knowledge to your
 
 For information about how to add Microsoft Graph connectors to your agent in Copilot Studio agent builder, see [Microsoft Graph connectors](copilot-studio-agent-builder-build.md#microsoft-graph-connectors).
 
-## SharePoint and OneDrive as knowledge
+## SharePoint and OneDrive
 
 When you configure your agent to use OneDrive and SharePoint content as knowledge, Copilot searches SharePoint and OneDrive files, folders, or sites that a user has access to for grounding information.
 
