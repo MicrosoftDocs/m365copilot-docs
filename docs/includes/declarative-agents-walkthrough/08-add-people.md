@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-In this section, you add the [people capability](../../add-knowledge-sources.md#people-knowledge) to the declarative agent. The people capability allows you to scope your agent to answer questions about individuals in an organization.
+In this section, you add the [people capability](../../knowledge-sources.md#people-knowledge) to the declarative agent. The people capability allows you to scope your agent to answer questions about individuals in an organization.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `People` entry to the `capabilities` array.
 

@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 5/14/2025
+ms.date: 5/09/2025
 ---
 
 # Add knowledge sources to your declarative agent
@@ -220,5 +220,5 @@ For more information, see [Deep link to Teams chat](/microsoftteams/platform/con
 
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Declarative agent manifest reference](declarative-agent-manifest-1.3.md)
-- [Add the code interpreter capability to your agent](add-capability-code-interpreter.md)
-- [Add the image generator capability to your agent](add-capability-code-interpreter.md)
+- [Add the code interpreter capability to your agent](code-interpreter.md)
+- [Add the image generator capability to your agent](image-generator.md)
