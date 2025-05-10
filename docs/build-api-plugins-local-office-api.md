@@ -63,7 +63,10 @@ The following are the major steps for creating an API plugin for a Copilot agent
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) (formerly Teams Toolkit) version 5.14 or later
+- [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) extension for Visual Studio Code.
+
+   > [!NOTE]
+   > Microsoft 365 Agents Toolkit is an evolution of Teams Toolkit. Some pages that are linked to from this article may use the term "Teams Toolkit".
 
 ### Create the project
 
@@ -71,21 +74,23 @@ Begin by creating a basic declarative agent.
 
 1. Open **Visual Studio Code**.
 
-1. Select **Teams Toolkit > Create a New App**.
+1. Select **Microsoft 365 Agents Toolkit > Create a New Agent/App**.
 
-    :::image type="content" source="../../assets/images/build-da/ttk/create-new-app.png" alt-text="A screenshot of the Create a New App button in the Teams Toolkit sidebar":::
+    :::image type="content" source="../../assets/images/build-da/atk/create-new-app-agent.png" alt-text="A screenshot of the Create a New Agent/App button in the Microsoft 365 Agents Toolkit sidebar":::
 
 1. Select **Declarative Agent**.
 
-    :::image type="content" source="../../assets/images/build-da/ttk/select-copilot-agent.png" alt-text="A screenshot of the New Project options with Agent selected":::
+    :::image type="content" source="../../assets/images/build-da/atk/select-copilot-agent-atk.png" alt-text="A screenshot of the New Project options with Declarative Agent at the top.":::
 
 1. Select **No Action** to create a basic declarative agent.
 
 1. Select **Default folder** to store your project root folder in the default location.
 
-1. Enter `My Agent` as the **Application Name** and press **Enter**.
+1. Enter `Excel Agent` as the **Application Name** and press **Enter**.
 
 1. In the new Visual Studio Code window that opens,
+
+
 
 ### Configure the manifest
 
@@ -285,6 +290,9 @@ After your functions are created,
 
 
 
+1. In the new Visual Studio Code window that opens, select **Teams Toolkit**, then select **Provision** in the **Lifecycle** pane.
+
+    :::image type="content" source="../../assets/images/build-da/atk/provision-agent-atk.png" alt-text="A screenshot of the Provision option in the Lifecycle pane of Microsoft 365 Agents Toolkit":::
 
 
 
