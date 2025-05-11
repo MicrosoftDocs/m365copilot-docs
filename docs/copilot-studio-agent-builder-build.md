@@ -65,7 +65,18 @@ The test pane initially appears with suggested starter prompts, which when click
 
 ## Add knowledge sources
 
-The agent builder allows you to configure specific knowledge sources for the agent to reference. This feature helps the agent provide more relevant answers based on specific files, folders, and sites from SharePoint and [Microsoft Graph connectors](/graph/connecting-external-content-connectors-overview).
+The agent builder allows you to configure specific knowledge sources for the agent to reference. To build context aware agents, you can reference to Microsoft SharePoint items, any public websites. If you are a paid user, your agents can be grounded even in  personal work information such as chat messages from Microsoft Teams, emails content from Microsoft Outlook, or use the 3P data sources (Graph Connectors) setup by your tenant admin.
+
+### Getting Started
+
+There are multiple ways to add knowledge sources.
+
+1. Search an item in the search bar.
+:::image type="content" source="assets/images/knowledge-picker-agent-builder.png" border="false":::
+
+2. Paste or type an URL in the search bar.
+3. Use the picker button to explore what's available (only support SharePoint for now)
+:::image type="content" source="assets/images/knowledge-picker-agent-builder2.png" border="false":::
 
 ### Web content
 
@@ -106,6 +117,8 @@ The following table lists the supported file types and their respective limits.
 Your agent can be grounded in daily chat messages from channels, group chats and meeting chats in Microsoft Teams. To add Teams chat messages, clicking the search bar under 'Knowledge' section.
 
 If you don't want to scope to specific chat sources, you can also select "My Teams chats from group chat, channels, and meetings". That will search all the chat messages you have the access to.
+
+:::image type="content" source="assets/images/capabilities-teamsChat-emails.png" border="false":::
 
 >[!IMPORTANT]
 > You can add up to 5 chat sources from Teams.
