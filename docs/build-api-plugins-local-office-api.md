@@ -11,10 +11,10 @@ ms.topic: how-to
 # Build API plugins for Microsoft 365 Copilot with the Office JavaScript Library (preview)
 
 > [!NOTE]
-> The development feature described in this article is in preview. We encourage you to experiment with this feature, but it should not be used in a production plugin. The following are the limitations during the initial preview:
+> The development feature described in this article is in preview. We encourage you to experiment with this feature, but it shouldn't be used in a production plugin. The following are the limitations during the initial preview:
 >
-> - The feature is only enabled for Office on Windows and Office on the web. We are working to bring support to Office on Mac.
-> - The feature is only enabled for Excel, PowerPoint, or Word. We are working to bring support to Outlook.
+> - The feature is only enabled for Office on Windows and Office on the web. We're working to bring support to Office on Mac.
+> - The feature is only enabled for Excel, PowerPoint, or Word. We're working to bring support to Outlook.
 
 A plugin for a declarative agent can call the APIs in the [Office JavaScript Library](../develop/understanding-the-javascript-api-for-office.md) to perform read and write operations on the content and metadata of an Office document that is currently open in an Office application. This ability enables Copilot to work Office documents in precise and error-free ways that would otherwise require an Office Add-in.
 
@@ -59,6 +59,7 @@ The following are the major steps for creating an API plugin for a Copilot agent
 - [Create the JavaScript functions](#create-the-javascript-functions)
 - [Copy project configuration files](#copy-project-configuration-files)
 - [Test the agent and plugin](#test-the-agent-and-plugin)
+- [Make changes in the agent](#make-changes-in-the-agent)
 
 ### Prerequisites
 
@@ -74,9 +75,7 @@ The following are the major steps for creating an API plugin for a Copilot agent
 Begin by creating a basic declarative agent.
 
 1. Open **Visual Studio Code**.
-
 1. Select **Microsoft 365 Agents Toolkit** on the app bar.
-
 1. Select **Create a New Agent/App**.
 
     :::image type="content" source="../../assets/images/build-da/atk/create-new-app-agent.png" alt-text="A screenshot of the Create a New Agent/App button in the Microsoft 365 Agents Toolkit app bar":::
@@ -86,11 +85,8 @@ Begin by creating a basic declarative agent.
     :::image type="content" source="../../assets/images/build-da/atk/select-copilot-agent-atk.png" alt-text="A screenshot of the New Project options with Declarative Agent at the top.":::
 
 1. Select **No Action** to create a basic declarative agent.
-
 1. In the **Workspace Folder** list, either select **Default folder** to store your project root folder in the default location or browse to a folder where you want to put the new agent project.
-
 1. Enter `Excel Agent` as the **Application Name** and press **Enter**.
-
 1. The project opens in a new Visual Studio Code window. Close the original Visual Studio Code window.
 
 ### Configure the manifest
@@ -98,15 +94,15 @@ Begin by creating a basic declarative agent.
 The following steps configure the manifest.
 
 1. Open the **manifest.json** file in the **appPackage** folder.
-
 1. You need to use the preview version of the manifest schema, so replace the `$schema` and `manifestVersion` properties with the following. 
 
     ```json
     "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-    "manifestVersion": "DevPreview",
+    "manifestVersion": "devPreview",
     ```
 
-1. Set the [copilotAgents.declarativeAgents.id](/microsoft-365/extensibility/schema/declarative-agent-ref#id) property to "ContosoCopilotAgent". The following is what you should have when you are done. Note that the [file](/microsoft-365/extensibility/schema/declarative-agent-ref#file) property is the relative URL of the declarative agent configuration file.
+1. The [name.short](/microsoft-365/extensibility/schema/root-name) value has a placeholder appended to the end of it. Delete the placeholder so that the value is simply "Excel Agent".
+1. Set the [copilotAgents.declarativeAgents.id](/microsoft-365/extensibility/schema/declarative-agent-ref#id) property to "ContosoCopilotAgent". The following is what you should have when you're done. Note that the [file](/microsoft-365/extensibility/schema/declarative-agent-ref#file) property is the relative URL of the declarative agent configuration file.
 
     ```json
     "copilotAgents": {
@@ -119,23 +115,46 @@ The following steps configure the manifest.
     }
     ```
 
+1. At the root of the manifest add the following [authorization](/microsoft-365/extensibility/schema/root-authorization) property. This property gives your agent permission to read and write to Office documents.
+
+    ```json
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "Document.ReadWrite.User",
+                    "type": "Delegated"
+                }
+            ]
+        }
+    },
+    ```
+
 1. At the root of the manifest add the following [extensions](/microsoft-365/extensibility/schema/element-extensions) property. About this code, note the following. 
 
+    - The [requirements.scopes](/microsoft-365/extensibility/schema/requirements-extension-element) property ensures that the agent is only available in Excel, not other Office applications.
     - The [runtimes](/microsoft-365/extensibility/schema/extension-runtimes-array) array includes a runtime object that configures the JavaScript runtime that Office will use to run the Office JavaScript Library APIs that your agent invodes. 
     - The runtime object includes an [actions](/microsoft-365/extensibility/schema/extension-runtimes-actions-item) array that includes an action object
-    - The [code.page](/microsoft-365/extensibility/schema/extension-runtime-code) property specifies the URL of a web page that contains an embedded `<script>` tag that, in turn, specifies the URL of the JavaScript file where the function is defined. That same file contains an invocation of the [Office.actions.associate](/javascript/api/office/office.actions#office-office-actions-associate-member(1)) method to map the function to an action ID. You create the HTML and JavaScript files in later steps.
+    - The [code.script](/microsoft-365/extensibility/schema/extension-runtime-script) property specifies the URL of a JavaScript file that contains the functions that call the Office JavaScript Library APIs. That same file contains an invocation of the [Office.actions.associate](/javascript/api/office/office.actions#office-office-actions-associate-member(1)) method to map the function to an action ID. You create this file in a later step.
+    - The [code.page](/microsoft-365/extensibility/schema/extension-runtime-code) property specifies the URL of a web page that contains an embedded `<script>` tag that loads the file that is reference in the `code.page` property.  You create this file in later steps.
     - The [actions.id](/microsoft-365/extensibility/schema/extension-runtimes-actions-item#id) property in the manifest is the same action ID that is passed to the call of `associate`.
     - The [actions.type](/microsoft-365/extensibility/schema/extension-runtimes-actions-item#type) property is set to "executeDataFunction", which is the type that can accept parameters and can be invoked by Copilot.
 
     ```json
     "extensions": [
         {
+            "requirements": {
+                "scopes": [
+                    "workbook"
+                ]
+            },       
             "runtimes": [
                 {
                     "id": "ContosoAgentRuntime",
                     "type": "general",
                     "code": {
-                        "page": "https://localhost:3000/commands.html"
+                        "page": "https://localhost:3000/commands.html",
+                        "script": "https://localhost:3000/commands.js"
                     },
                     "lifetime": "short",
                     "actions": [
@@ -260,7 +279,7 @@ The reference documentation for API plug-ins is at [API plugin manifest schema 2
 ## Create the JavaScript functions
 
 1. In the root of the project, create folder named **src**, and then create a subfolder under it named **commands**.
-1. In the **commands** folder, create a file named named **commands.js** and give it the following content. Note the following about this code.
+1. In the **commands** folder, create a file named named **commands.ts** and give it the following content. Note the following about this code.
 
     - The `fillColor` function sets the background color of the specified cell in Excel to the specified color. It calls objects and methods from the Office JavaScript Library, which is loaded into the JavaScript runtime by a file that you create in a later step.
     - The first parameter of the `associate` method must match both the `extensions.runtimes.actions.id` property in the manifest and the `functions.name` property in the API plugins JSON.
@@ -276,14 +295,14 @@ The reference documentation for API plug-ins is at [API plugin manifest schema 2
 
     Office.onReady((info) => {
         Office.actions.associate("FillColor", async (message) => {
-            const {cell, color} = JSON.parse(message);
+            const {Cell: cell, Color: color} = JSON.parse(message);
             await fillColor(cell, color);
             return "Cell color changed.";
-        });
+        })
     });
     ```
 
-1. In the **commands** folder, create a file named **commands.html** and give it the following content. This file is needed because JavaScript files cannot be directly loaded into the type of runtime that Office uses for Copilot API plugins. Instead, JavaScript is loaded by `<script>` elements in an HTML file. Note the following about this file.
+1. In the **commands** folder, create a file named **commands.html** and give it the following content. This file is needed because JavaScript files can't be directly loaded into the type of runtime that Office uses for Copilot API plugins. Instead, JavaScript is loaded by `<script>` elements in an HTML file. Note the following about this file.
 
     - Since the file's only purpose is to load other files, the `<body>` element is empty. The file has no UI and is never seen by users.
     - It loads the file **office.js**, which is the Office JavaScript Library, from a Microsoft CDN.
@@ -310,28 +329,148 @@ The reference documentation for API plug-ins is at [API plugin manifest schema 2
 
 ### Copy project configuration files
 
-Office uses much of the infrastructure of Office Add-ins to run API plugins for the Office JavaScript library. For this reason, some files used by Agent Toolkit for the development of Office Add-ins need to be added to the project. The fastest way to do this is to create an add-in project, copy the files from the add-in projec to this agent project, and then make a few light edits.
+Office uses the infrastructure of Office Add-ins to run API plugins for the Office JavaScript library. During the initial preview period for local Office API plugins, there isn't an Agents Toolkit template for this type of project. For this reason, some files used by Agents Toolkit for the development of Office Add-ins need to be added to the project. The fastest way to do this is to create an add-in project, copy the needed files from the add-in project to this agent project, and then make a few light edits.
 
 1. Open a new **Visual Studio Code** window.
 1. Select **Microsoft 365 Agents Toolkit** on the app bar.
 1. Select **Create a New Agent/App**.
 1. Select **Office Add-in**.
+1. Select **Task pane**. 
+1. In the **Workspace Folder** list, either select **Default folder** to store your project root folder in the default location or browse to a folder where you want to put the new agent project.
+1. Enter any string as the **Application Name** and press **Enter**.
+1. The project opens in a new Visual Studio Code window. Close both the new Visual Studio Code window and the one from which you created the project. 
+1. In Windows **File Explorer**, copy the following files from the root of the add-in project that you just created to the root of API plugin project. After you've made the copy, delete the add-in project folder.
 
-webpack 
-package.json
+    ```console
+    babel.config.json
+    package.json
+    tsconfig.json
+    webpack.config.js
+    ```
 
+    > [!NOTE]
+    > Some of the content of these files isn't needed for your API plugin project. In the remaining steps in this section, you make only the minimmal changes to these files that are needed to ensure that plugin sideloads and runs properly. We're working hard to develop an Agents Toolkit project template for plugins that call Office JavaScript Library APIs.  
+
+1. In Visual Studio Code, open the **webpack.config.js** file.
+1. Find the definition of the `entry` object, and then delete the `taskpane` property from it. When you're done, the `entry` property should look like the following.
+
+    ```javascript
+    entry: {
+      polyfill: ["core-js/stable", "regenerator-runtime/runtime"],
+      commands: "./src/commands/commands.ts",
+    },
+    ```
+
+1. Find the definition of the `plugins` array. Near the top is a call of `new HtmlWebpackPlugin` for an add-in task pane. Delete this call of `new HtmlWebpackPlugin`. When you're done the entire `plugins` array should look like the following.
+
+    ```javascript
+    plugins: [
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: "appPackage/assets/*",
+            to: "assets/[name][ext][query]",
+          },
+          {
+            from: "appPackage/manifest*.json",
+            to: "[name]" + "[ext]",
+            transform(content) {
+              if (dev) {
+                return content;
+              } else {
+                return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
+              }
+            },
+          },
+        ],
+      }),
+      new HtmlWebpackPlugin({
+        filename: "commands.html",
+        template: "./src/commands/commands.html",
+        chunks: ["polyfill", "commands"],
+      }),
+    ],
+    ```
+
+1. In the **appPackage** folder there are two image files; **color.png** and **outline.png**. To work with the add-in tooling infastructure, these need to be moved. Create a subfolder named **assets** in the **appPackage** folder and move the two files into it.
+1. Open the manifest file, and change the values of the [icons]() `color` and `outline` properties to match their new locations. When youa'e done the `icons` property should look similar to the following.
+
+    ```json
+    "icons": {
+        "outline": "assets/outline.png",
+        "color": "assets/color.png"
+    },
+    ```
 
 ### Test the agent and plugin
 
-npm install
+1. In a command prompt, bash shell, or Visual Studio Code **TERMINAL**, navigate to the root of the API plugin project, and then run `npm install`. Wait for the installation to complete. 
+1. Close all Office applications.
+1. In Visual Studio Code, select **Microsoft 365 Agents Toolkit** on the app bar, and then in the **ACCOUNTS** pane, ensure that you're logged into a Microsoft 365 account in which support is enabled for Copilot and for uploading custom apps.
 
-1. In the new Visual Studio Code window that opens, select **Teams Toolkit**, then select **Provision** in the **Lifecycle** pane.
+    :::image type="content" source="../../assets/images/build-da/atk/atk-account-pane.png" alt-text="A screenshot of the Account pane in Agents Toolkit with checkmarks by the phrases 'Custom App Upload Enabled' and "Copilot Access Enabled".":::
 
-    :::image type="content" source="../../assets/images/build-da/atk/provision-agent-atk.png" alt-text="A screenshot of the Provision option in the Lifecycle pane of Microsoft 365 Agents Toolkit":::
+1. Select **Provision** in the **LIFECYCLE** pane.
 
+    :::image type="content" source="../../assets/images/build-da/atk/provision-agent-atk.png" alt-text="A screenshot of the Provision option in the Lifecycle pane of Agents Toolkit":::
 
+    Among other things, provisioning creates a **build** folder inside the **appPackage** folder with the package zip file. The file contains the manifest and JSON files for the agent and plug-in.
 
+1. In a command prompt, bash shell, or Visual Studio Code **TERMINAL** in the root of the project, run `npm run dev-server` to start the server on localhost. 
+    
+    > [!NOTE]
+    > If you have never developed and Office Add-in on your computer, or haven't done so in ovver a month, you may be prompted to delete an old certificate and/or to install a new one. Agree to both prompts.
 
-## Combine an Office Add-in with the API agent
+    Wait until you see a line in the server window similar to the following that indicates that the app compiled successfully. This means the server is running and serving the files.
+
+    ```console
+    webpack 5.99.8 compiled successfully in 1090 ms
+    ```
+
+1. The first step in testing depends on the platform.
+
+   - To test in Office on Windows, open Excel, and then open (or create) a workbook.
+   - To test in Office on the web, in a browser, navigate to `https://excel.cloud.microsoft.com/`, and then open (or create) a workbook.
+ 
+1. Open **Copilot** from the ribbon and select the hamburger control in the **Copilot** pane. **Excel Agent** should be in the list of agents. (You may need to select **See more** to ensure that all agents are listed.) If the agent isn't listed, try the following actions.
+
+   - With Copilot open to the list of agents, click the cursor on the Copilot window and press <kbd>Ctrl</kbd>+<kbd>R</kbd>.
+   - Wait a few minutes and reload Copilot.
+
+   :::image type="content" source="../../assets/images/build-da/atk/copilot-agent-list.png" alt-text="A screenshot of the agent list in the Copilot pane in an Office application":::
+
+1. When the agent is listed, select it. The **Excel Agent** pane opens.
+1. Select the **Change cell color** conversation starter, and then press the **Send** control in the conversation box at the bottom of the pane. In a few seconds, you should see a confirmation prompt similar to the following.
+
+    :::image type="content" source="../../assets/images/build-da/atk/excel-agent-copilot-confirmation.png" alt-text="A screenshot of the Excel agent saying 'OK, I'll connect to the Excel Agent and process your query. FillColor changes a single cell location to a specific color.' Below that is a box titled 'Data to be shared with Excel Agent'. The box has a parameter named '$0' with the value B2, and a second parameter named '$1' with the value '#FFA500', which is the color hex code for orange. Below the box are buttons labelled Confirm and Cancel.":::
+
+1. Select **Confirm** in response to the confirmation prompt. The cell's color should change.
+
+    :::image type="content" source="../../assets/images/build-da/atk/excel-agent-pane-success.png" alt-text="A screenshot of an Excel workbook with the B2 cell colored orange. On the right the Excel agent in the Copilot pane says 'This is Excel Agent. The color of cell B2 has been successfully changed to orange. If you need any further assistance, feel free to ask!'. There is a footnote numbered 1 after the word orange. Below the message the number 1 appears with a link labelled 'external'. Below this are buttons labelled 'Undo' and 'dev'.":::
+
+   > [!TIP]
+   > If Copilot reports an error, repeat your prompt but add the following sentence to the prompt: "If you get an error, report the complete text of the error to me."
+
+1. Try entering other combinations of cell and color in the conversation box, such as "Set cell G5 to the color of the sky".
+
+## Make changes in the agent
+
+Live reloading and hot reloading for an Office API plugin isn't supported in the preview period. To make changes, first shut down the server and uninstall the agent with these steps.
+
+1. Shutting down the server depends on what window it's running in.
+
+   - If the web server is running in the same command prompt or Visual Studio Code **TERMINAL** where you ran `npm run dev-server`, give the window focus and press <kbd>Ctrl</kbd>+<kbd>C</kbd>. Choose "Y" in response to the prompt to end the process. 
+   - If the web server is running in a separate window, then in a command prompt, bash shell, or Visual Studio Code **TERMINAL** in the root of the project, run `npm run stop`.
+
+1. Clear the Office cache following the instructions at [Manually clear the cache](../testing/clear-cache.md#manually-clear-the-cache).
+1. Open Teams and select **Apps** from the app bar, then select **Manage your apps** at the bottom of the **Apps** pane.
+1. Find **Excel Agent** in the list of apps.
+1. Select the arrow head to the left of the name to expand its row.
+
+    :::image type="content" source="../../assets/images/build-da/atk/excel-agent-teams-app-list.png" alt-text="A screenshot of the row for the Excel Agent app in the Teams apps page. There is a trash can icon on the right end of the row.":::
+
+1. Select the trash can icon near the right end of the row, and then select **Remove** in the prompt.
+
+Make your changes and then repeat the steps in [Test the agent and plugin](#test-the-agent-and-plugin).
 
 
