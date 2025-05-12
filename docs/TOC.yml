@@ -115,51 +115,51 @@
       href: ux-custom-engine-agent.md
     - name: Build with Microsoft 365 Agents SDK
       items:
-      - names: M365 Agents SDK overview 
+      - name: M365 Agents SDK overview 
         href: /microsoft-365/agents-sdk/agents-sdk-overview?context=/microsoft-365-copilot/extensibility/context
       - name: Choose the right agent solution
         href: /microsoft-365/agents-sdk/choose-agent-solution.md?context=/microsoft-365-copilot/extensibility/context
-      - names: Quickstart with Agents SDK 
+      - name: Quickstart with Agents SDK 
         href: /microsoft-365/agents-sdk/create-test-basic-agent?context=/microsoft-365-copilot/extensibility/context
-      - names: Build with Microsoft 365 Agents Toolkit 
+      - name: Build with Microsoft 365 Agents Toolkit 
         items:
-        - names: Build using .NET with Visual Studio 
+        - name: Build using .NET with Visual Studio 
           href: /microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=/microsoft-365-copilot/extensibility/context
-        - names: Build using JavaScript with Visual Studio Code 
+        - name: Build using JavaScript with Visual Studio Code 
           href: /microsoft-365/agents-sdk/create-new-toolkit-project-vsc?context=/microsoft-365-copilot/extensibility/context
-        - names: Code samples
+        - name: Code samples
           items: 
-          - names: .NET and JavaScript 
+          - name: .NET and JavaScript 
             href: https://github.com/microsoft/Agents/tree/main/samples
-          - names: Python 
+          - name: Python 
             href: https://github.com/microsoft/Agents-for-python/tree/main/test_samples
-      - names: Key concepts
+      - name: Key concepts
         items:
-        - names: Build agents
+        - name: Build agents
           href: /microsoft-365/agents-sdk/building-agents?context=/microsoft-365-copilot/extensibility/context
-        - names: Manage turns
+        - name: Manage turns
           href: /microsoft-365/agents-sdk/managing-turns?context=/microsoft-365-copilot/extensibility/context
-        - names: Use activities
+        - name: Use activities
           href: /microsoft-365/agents-sdk/using-activities?context=/microsoft-365-copilot/extensibility/context
-        - names: Create messages
+        - name: Create messages
           href: /microsoft-365/agents-sdk/creating-messages?context=/microsoft-365-copilot/extensibility/context
-      - names: Add AI services and orchestration 
+      - name: Add AI services and orchestration 
         href: /microsoft-365/agents-sdk/adding-ai-services?context=/microsoft-365-copilot/extensibility/context
-      - names: Publish your agent
+      - name: Publish your agent
         items: 
-        - names: Debug and deploy
+        - name: Debug and deploy
           href: /microsoft-365/agents-sdk/publish-agent?context=/microsoft-365-copilot/extensibility/context
-        - names: Test your agent locally
+        - name: Test your agent locally
           href: /microsoft-365/agents-sdk/test-with-toolkit-project?context=/microsoft-365-copilot/extensibility/context
-        - names: Deploy to Azure
+        - name: Deploy to Azure
           href: /microsoft-365/agents-sdk/deploy-azure-bot-service-manually?context=/microsoft-365-copilot/extensibility/context
-      - names: SDK reference
+      - name: SDK reference
         items: 
-        - names: .NET SDK 
+        - name: .NET SDK 
           href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
-        - names: JavaScript SDK
+        - name: JavaScript SDK
           href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
-        - names: Python SDK
+        - name: Python SDK
           href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
     - name: Build with Teams AI library
       items:
@@ -173,7 +173,7 @@
         href: /microsoftteams/platform/teams-ai-library/getting-started/running-in-teams?context=/microsoft-365-copilot/extensibility/context
       - name: Code samples
         href: https://github.com/microsoft/teams.ts/tree/main/samples
-      - names: Essentials
+      - name: Essentials
         items: 
         - name: Overview
           href: /microsoftteams/platform/teams-ai-library/essentials/overview?context=/microsoft-365-copilot/extensibility/context
