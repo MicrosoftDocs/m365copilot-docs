@@ -59,6 +59,7 @@ The API supports natural language queries and uses the Microsoft 365 Copilot sta
 
 The following are the current throttling and other limitations to the Retrieval API:
 
+- You need **Files.Read.All**, **Sites.Read.All**, and **ExternalItem.Read.All** permissions to call the Retrieval API.
 - The **queryString** request parameter has a limit of 1,500 characters.
 - If the **filterExpression** request parameter has incorrect KQL syntax, the query successfully executes with no scoping.
 - Not all SharePoint properties are supported in the **filterExpression**. Refer to the [API reference](copilotroot-retrieval.md) to see the full list of supported properties.
