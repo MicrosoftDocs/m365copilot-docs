@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-In this section, you add the [email capability](../../add-agent-capabilities.md#email-knowledge) to the declarative agent. The email capability allows you to scope your agent to use email from the user's mailbox or a shared mailbox as a knowledge source.
+In this section, you add the [email capability](../../knowledge-sources.md#email-knowledge) to the declarative agent. The email capability allows you to scope your agent to use email from the user's mailbox or a shared mailbox as a knowledge source.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `Email` entry to the `capabilities` array.
 
