@@ -48,6 +48,33 @@
         href: build-declarative-agents.yml
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
+      - name: Add actions with API plugins
+        items:
+        - name: API plugins
+          items:
+          - name: Overview
+            href: overview-api-plugins.md
+          - name: Build an API plugin with a new API
+            href: build-api-plugins-new-api.md
+          - name: Build an API plugin from an existing API
+            href: build-api-plugins-existing-api.md
+          - name: Authentication
+            href: api-plugin-authentication.md
+          - name: Adaptive Card responses
+            href: api-plugin-adaptive-cards.md
+            displayName: response, response_semantics
+          - name: Confirmation prompts
+            href: api-plugin-confirmation-prompts.md
+          - name: Debug locally
+            href: api-plugin-debug-local.md
+          - name: Best practices for writing OpenAPI specs
+            href: openapi-document-guidance.md
+          - name: API plugin manifest reference
+            items:
+            - name: Version 2.2
+              href: api-plugin-manifest-2.2.md
+            - name: Version 2.1
+              href: api-plugin-manifest-2.1.md
       - name: Declarative agent manifest reference
         items:
         - name: Version 1.3
@@ -92,22 +119,37 @@
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
-    - name: Write effective instructions
-      href: declarative-agent-instructions.md
-    - name: Write instructions for agents with API plugins
-      href: instructions-api-plugins.md
-    - name: Add capabilities and knowledge sources
-      href: add-agent-capabilities.md
-    - name: Optimize SharePoint content retrieval
-      href: optimize-sharepoint-content.md
-    - name: Document interaction
-      href: declarative-agent-document-interaction.md
-    - name: Localize your agent
-      href: localize-agents.md
-    - name: Test and debug agents
-      href: debugging-copilot-agent.md
-    - name: RAI validation
-      href: rai-validation.md
+        items:
+        - name: Add actions with Copilot Studio
+          items:
+          - name: Copilot connectors on Copilot Studio overview
+            href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
+          - name: Copilot Studio actions
+            href: overview-business-applications.md
+          - name: Connector actions
+            href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
+          - name: Power Automate flow actions
+            href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
+          - name: Prompts
+            href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+          - name: Learning path
+            href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
+          - name: Write effective instructions
+            href: declarative-agent-instructions.md
+          - name: Write instructions for agents with API plugins
+            href: instructions-api-plugins.md
+          - name: Add capabilities and knowledge sources
+            href: add-agent-capabilities.md
+          - name: Optimize SharePoint content retrieval
+            href: optimize-sharepoint-content.md
+          - name: Document interaction
+            href: declarative-agent-document-interaction.md
+          - name: Localize your agent
+            href: localize-agents.md
+          - name: Test and debug agents
+            href: debugging-copilot-agent.md
+          - name: RAI validation
+            href: rai-validation.md
   - name: Build a custom engine agent
     expanded: false
     items:
@@ -161,48 +203,6 @@
     href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
   - name: API limits
     href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
-- name: Add skills with actions
-  expanded: true
-  items:
-  - name: API plugins
-    items:
-    - name: Overview
-      href: overview-api-plugins.md
-    - name: Build an API plugin with a new API
-      href: build-api-plugins-new-api.md
-    - name: Build an API plugin from an existing API
-      href: build-api-plugins-existing-api.md
-    - name: Authentication
-      href: api-plugin-authentication.md
-    - name: Adaptive Card responses
-      href: api-plugin-adaptive-cards.md
-      displayName: response, response_semantics
-    - name: Confirmation prompts
-      href: api-plugin-confirmation-prompts.md
-    - name: Debug locally
-      href: api-plugin-debug-local.md
-    - name: Best practices for writing OpenAPI specs
-      href: openapi-document-guidance.md
-    - name: API plugin manifest reference
-      items:
-      - name: Version 2.2
-        href: api-plugin-manifest-2.2.md
-      - name: Version 2.1
-        href: api-plugin-manifest-2.1.md
-  - name: Copilot Studio connectors and actions
-    items:
-    - name: Copilot connectors on Copilot Studio overview
-      href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
-    - name: Copilot Studio actions
-      href: overview-business-applications.md
-    - name: Connector actions
-      href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-    - name: Power Automate flow actions
-      href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
-    - name: Prompts
-      href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
-    - name: Learning path
-      href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
 - name: Publish
   items:
   - name: Overview
