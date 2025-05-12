@@ -103,8 +103,8 @@ Content-Type: application/json
       ],
       "resourceType": "listItem",
       "resourceMetadata": {
-        "title": "VPN Access",
-        "author": "John Doe"
+        "title": "VPN Access",
+        "author": "John Doe"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
@@ -116,8 +116,8 @@ Content-Type: application/json
       }
     },
     {
-    "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
-    "extracts": [
+      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
+      "extracts": [
         {
           "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
         },
@@ -125,8 +125,8 @@ Content-Type: application/json
           "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
         }
       ],
-    "resourceType": "externalItem",
-    "resourceMetadata": {
+      "resourceType": "externalItem",
+      "resourceMetadata": {
         "title": "Corporate VPN"
       }
     }
@@ -177,10 +177,10 @@ Content-Type: application/json
           "text": "You will need to sign in with 2FA to access the corporate VPN."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "title": "VPN Access",
-        "author": "John Doe"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "title": "VPN Access",
+        "author": "John Doe"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
@@ -192,20 +192,19 @@ Content-Type: application/json
       }
     },
     {
-    "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
-    "extracts": [
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
+      "extracts": [
         {
           "text": "Have your VPN username and password ready prior to starting the configuration."
         },
         {
           "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources."
         }
-   
       ],
-    "resourceType": "listItem",
-    "resourceMetadata": {
+      "resourceType": "listItem",
+      "resourceMetadata": {
         "title": "VPN Instructions",
-        "author": "Elisa Mueller"
+        "author": "Elisa Mueller"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -263,10 +262,10 @@ Content-Type: application/json
           "text": "You will need to sign in with 2FA to access the corporate VPN."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "title": "VPN Access",
-        "author": "John Doe"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "title": "VPN Access",
+        "author": "John Doe"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
@@ -278,17 +277,16 @@ Content-Type: application/json
       }
     },
     {
-    "webUrl": "https://contoso.sharepoint.com/sites/HR2/VPNConfig.docx",
-    "extracts": [
+      "webUrl": "https://contoso.sharepoint.com/sites/HR2/VPNConfig.docx",
+      "extracts": [
         {
           "text": "Have your VPN username and password ready prior to starting the configuration."
         }
-   
       ],
-    "resourceType": "listItem",
-    "resourceMetadata": {
+      "resourceType": "listItem",
+      "resourceMetadata": {
         "title": "VPN Config",
-        "author": "Elisa Mueller"
+        "author": "Elisa Mueller"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -300,20 +298,19 @@ Content-Type: application/json
       }
     },
     {
-    "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
-    "extracts": [
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
+      "extracts": [
         {
           "text": "Have your VPN username and password ready prior to starting the configuration."
         },
         {
           "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources."
         }
-   
       ],
-    "resourceType": "listItem",
-    "resourceMetadata": {
+      "resourceType": "listItem",
+      "resourceMetadata": {
         "title": "VPN Instructions",
-        "author": "Elisa Mueller"
+        "author": "Elisa Mueller"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -370,9 +367,9 @@ Content-Type: application/json
           "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
         }
       ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "title": "Corporate VPN"
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "title": "Corporate VPN"
       }
     }
   ]
@@ -392,10 +389,12 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
 {
-    "queryString": "What is the vacation policy?",
-    "filterExpression": "Author:\"John Doe\"",
-    "resourceMetadata": ["Author"],
-    "maximumNumberOfResults": 4
+  "queryString": "What is the vacation policy?",
+  "filterExpression": "Author:\"John Doe\"",
+  "resourceMetadata": [
+    "Author"
+  ],
+  "maximumNumberOfResults": 4
 }
 ```
 
@@ -419,9 +418,9 @@ Content-Type: application/json
           "text": "Employees earn an additional 5 vacation days for every two years of service."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "Author": "John Doe;Jane Doe"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "Author": "John Doe;Jane Doe"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -449,10 +448,12 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
 {
-    "queryString": "What is the reimbursement policy for business expenses?",
-    "filterExpression": "LastModifiedTime >= 2024-07-22 AND LastModifiedTime <= 2025-01-08",
-    "resourceMetadata": ["LastModifiedTime"],
-    "maximumNumberOfResults": 4
+  "queryString": "What is the reimbursement policy for business expenses?",
+  "filterExpression": "LastModifiedTime >= 2024-07-22 AND LastModifiedTime <= 2025-01-08",
+  "resourceMetadata": [
+    "LastModifiedTime"
+  ],
+  "maximumNumberOfResults": 4
 }
 ```
 
@@ -476,9 +477,9 @@ Content-Type: application/json
           "text": "Receipts must be submitted within 90 days of the business expense to be eligible for reimbursement."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "LastModifiedTime": "2024-09-06T19:52:37Z"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "LastModifiedTime": "2024-09-06T19:52:37Z"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -499,9 +500,9 @@ Content-Type: application/json
           "text": "You will not be reimbursed for any personal expenses made on your corporate card."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "LastModifiedTime": "2025-01-07T19:15:16Z"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "LastModifiedTime": "2025-01-07T19:15:16Z"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -529,10 +530,12 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
 {
-    "queryString": "What is the sick time policy?",
-    "filterExpression": "FileExtension:\"docx\" OR FileExtension:\"pdf\" OR FileExtension:\"pptx\"",
-    "resourceMetadata": ["FileExtension"],
-    "maximumNumberOfResults": 3
+  "queryString": "What is the sick time policy?",
+  "filterExpression": "FileExtension:\"docx\" OR FileExtension:\"pdf\" OR FileExtension:\"pptx\"",
+  "resourceMetadata": [
+    "FileExtension"
+  ],
+  "maximumNumberOfResults": 3
 }
 ```
 
@@ -556,9 +559,9 @@ Content-Type: application/json
           "text": "In addition to 10 sick days per year, employees also receive 5 wellness days per year."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "FileExtension": "docx"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "FileExtension": "docx"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -576,9 +579,9 @@ Content-Type: application/json
           "text": "You are entitled to 10 sick days and 5 wellness days per year. Please reach out to your manager if you have any questions."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "FileExtension": "pptx"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "FileExtension": "pptx"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -596,9 +599,9 @@ Content-Type: application/json
           "text": "Your mental health is just as important as your physical health. Take advantage of the 5 wellness days you receive per year."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "FileExtension": "pdf"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "FileExtension": "pdf"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -626,10 +629,12 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
 {
-    "queryString": "What is Contoso's mission statement?",
-    "filterExpression": "Filename:\"Contoso Mission Statement.docx\"",
-    "resourceMetadata": ["Filename"],
-    "maximumNumberOfResults": 1
+  "queryString": "What is Contoso's mission statement?",
+  "filterExpression": "Filename:\"Contoso Mission Statement.docx\"",
+  "resourceMetadata": [
+    "Filename"
+  ],
+  "maximumNumberOfResults": 1
 }
 ```
 
@@ -650,9 +655,9 @@ Content-Type: application/json
           "text": "Contoso's mission statement is to deliver delightful products and services to people around the world."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "Filename": "Contoso Mission Statement.docx"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "Filename": "Contoso Mission Statement.docx"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -680,10 +685,12 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
 {
-    "queryString": "What are the remaining work items to launch Contoso's marketing campaign?",
-    "filterExpression": "FileType:\"html\" OR FileType:\"Epic\" OR FileType:\"docx\"",
-    "resourceMetadata": ["FileType"],
-    "maximumNumberOfResults": 3
+  "queryString": "What are the remaining work items to launch Contoso's marketing campaign?",
+  "filterExpression": "FileType:\"html\" OR FileType:\"Epic\" OR FileType:\"docx\"",
+  "resourceMetadata": [
+    "FileType"
+  ],
+  "maximumNumberOfResults": 3
 }
 ```
 
@@ -704,9 +711,9 @@ Content-Type: application/json
           "text": "This is tracking the remaining work items for the new Contoso Marketing campaign. Updates on open work items are expected on Mondays."
         }
       ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "FileType": "Epic"
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "FileType": "Epic"
       }
     },
     {
@@ -716,9 +723,9 @@ Content-Type: application/json
           "text": "The advertising team needs to complete the social media campaign and book the billboard."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "FileType": "docx"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "FileType": "docx"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -739,9 +746,9 @@ Content-Type: application/json
           "text": "Click the link below to pre-register to purchase the new product."
         }
       ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "FileType": "html"
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "FileType": "html"
       }
     }
   ]
@@ -761,10 +768,12 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
 {
-    "queryString": "What is the sick time policy?",
-    "filterExpression": "InformationProtectionLabelId:\"f0ddcc93-d3c0-4993-b5cc-76b0a283e252\"",
-    "resourceMetadata": ["InformationProtectionLabelId"],
-    "maximumNumberOfResults": 3
+  "queryString": "What is the sick time policy?",
+  "filterExpression": "InformationProtectionLabelId:\"f0ddcc93-d3c0-4993-b5cc-76b0a283e252\"",
+  "resourceMetadata": [
+    "InformationProtectionLabelId"
+  ],
+  "maximumNumberOfResults": 3
 }
 ```
 
@@ -788,9 +797,9 @@ Content-Type: application/json
           "text": "In addition to 10 sick days per year, employees also receive 5 wellness days per year."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "InformationProtectionLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "InformationProtectionLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -808,9 +817,9 @@ Content-Type: application/json
           "text": "You are entitled to 10 sick days and 5 wellness days per year. Please reach out to your manager if you have any questions."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "InformationProtectionLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "InformationProtectionLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -828,9 +837,9 @@ Content-Type: application/json
           "text": "Your mental health is just as important as your physical health. Take advantage of the 5 wellness days you receive per year."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "InformationProtectionLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "InformationProtectionLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -858,10 +867,12 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
 {
-    "queryString": "What are the remaining work items to launch Contoso's marketing campaign?",
-    "filterExpression": "ModifiedBy:\"Jane Doe\"",
-    "resourceMetadata": ["ModifiedBy"],
-    "maximumNumberOfResults": 2
+  "queryString": "What are the remaining work items to launch Contoso's marketing campaign?",
+  "filterExpression": "ModifiedBy:\"Jane Doe\"",
+  "resourceMetadata": [
+    "ModifiedBy"
+  ],
+  "maximumNumberOfResults": 2
 }
 ```
 
@@ -882,9 +893,9 @@ Content-Type: application/json
           "text": "This is tracking the remaining work items for the new Contoso Marketing campaign. Updates on open work items are expected on Mondays."
         }
       ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "ModifiedBy": "Jane Doe"
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "ModifiedBy": "Jane Doe"
       }
     },
     {
@@ -894,9 +905,9 @@ Content-Type: application/json
           "text": "The advertising team needs to complete the social media campaign and book the billboard."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "ModifiedBy": "Jane Doe"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "ModifiedBy": "Jane Doe"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -924,10 +935,12 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
 {
-    "queryString": "How to setup corporate VPN?",
-    "filterExpression": "SiteID:\"e2cf7e40-d689-41de-99ee-a423811a253c\"",
-    "resourceMetadata": ["SiteID"],
-    "maximumNumberOfResults": 2
+  "queryString": "How to setup corporate VPN?",
+  "filterExpression": "SiteID:\"e2cf7e40-d689-41de-99ee-a423811a253c\"",
+  "resourceMetadata": [
+    "SiteID"
+  ],
+  "maximumNumberOfResults": 2
 }
 ```
 
@@ -951,9 +964,9 @@ Content-Type: application/json
           "text": "You will need to sign in with 2FA to access the corporate VPN."
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "SiteID": "e2cf7e40-d689-41de-99ee-a423811a253c"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "SiteID": "e2cf7e40-d689-41de-99ee-a423811a253c"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
@@ -965,19 +978,18 @@ Content-Type: application/json
       }
     },
     {
-    "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
-    "extracts": [
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
+      "extracts": [
         {
           "text": "Have your VPN username and password ready prior to starting the configuration."
         },
         {
           "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources."
         }
-   
       ],
-    "resourceType": "listItem",
-    "resourceMetadata": {
-        "SiteID": "e2cf7e40-d689-41de-99ee-a423811a253c"
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "SiteID": "e2cf7e40-d689-41de-99ee-a423811a253c"
       },
       "sensitivityLabel": {
         "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
@@ -1005,10 +1017,12 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
 
 {
-    "queryString": "How do I refresh my refresh Windows 10 device?",
-    "filterExpression": "Title:\"Windows 10 Device\"",
-    "resourceMetadata": ["Title"],
-    "maximumNumberOfResults": 4
+  "queryString": "How do I refresh my refresh Windows 10 device?",
+  "filterExpression": "Title:\"Windows 10 Device\"",
+  "resourceMetadata": [
+    "Title"
+  ],
+  "maximumNumberOfResults": 4
 }
 ```
 
@@ -1043,14 +1057,14 @@ Content-Type: application/json
       }
     },
     {
-    "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=c886d14",
-    "extracts": [
+      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=c886d14",
+      "extracts": [
         {
           "text": "When you get your new Windows 10 device, make sure to install all required software."
         }
       ],
-    "resourceType": "externalItem",
-    "resourceMetadata": {
+      "resourceType": "externalItem",
+      "resourceMetadata": {
         "title": "Learn When to Reset or Refresh a Windows 10 Device"
       }
     }
