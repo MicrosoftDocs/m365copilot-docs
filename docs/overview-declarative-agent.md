@@ -70,5 +70,4 @@ Declarative agents must pass validation checks for Responsible AI (RAI). For inf
 - [Agents in the Microsoft 365 ecosystem](ecosystem.md)
 - [Agents are apps for Microsoft 365](agents-are-apps.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
-- [Add agent capabilities](add-agent-capabilities.md)
-- [RAI validation](rai-validation.md)
+- [Responsible AI validation](rai-validation.md)
