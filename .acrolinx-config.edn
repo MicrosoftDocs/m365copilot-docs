@@ -1,5 +1,5 @@
 {
-  :allowed-branchname-matches ["main" "live"]
+  :allowed-branchname-matches ["main" "live" "build.*"]
   :allowed-filename-matches ["(?i)(?!(^.*/p|^p)osts-api\\.yml$|(^.*/r|^r)eadme\\.md$)^docs/.*$"] ;; Can be overridden in repo-specific edn file. This is an allow list that identifies which folders contain the files Acrolinx will check. Separate multiple folders as follows ["folder/" "folder2"]
 
   :use-gh-statuses true
