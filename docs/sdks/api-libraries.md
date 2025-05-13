@@ -87,12 +87,11 @@ The client ID is the app registration ID that is generated when you [register yo
 
 # [Python](#tab/python)
 
-[!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_python.md)]
+[!INCLUDE [sample-code](../api-reference/includes/snippets/python/create_client_python.md)]
 
 # [TypeScript](#tab/typescript)
 
-[!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_typescript.md)]
-> Include import statements for DeviceCodeCredential from @azure/identity,  AgentsM365CopilotBetaServiceClient from @microsoft/agents-m365copilot-beta, and AzureIdentityAuthenticationProvider from @microsoft/kiota-authentication-azure to run this code.
+[!INCLUDE [sample-code](../api-reference/includes/snippets/typescript/create_client_typescript.md)]
 
 ---
 
