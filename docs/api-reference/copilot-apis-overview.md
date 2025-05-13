@@ -70,7 +70,11 @@ The Copilot APIs require specific licensing for both access and underlying data:
 - **Microsoft 365 Copilot license:** Required for each user who will access Microsoft 365 Copilot functionality via these APIs. This license provides access to the AI capabilities that power the APIs. Support for users without a Microsoft 365 Copilot license is currently not available.
 - **Microsoft 365 subscription:** An E3 or E5 subscription (or equivalent) is required as the foundation for Microsoft 365 Copilot. This subscription provides access to the Microsoft 365 services and data that Copilot builds upon.
 
-## Security framework
+## Security and compliance 
+
+The Copilot APIs inherit the robust security and compliance infrastructure of the Microsoft 365 platform, ensuring that your AI-enhanced applications maintain enterprise standards for data protection. 
+
+### Security framework
 
 The security model for the Copilot APIs is built on these key pillars:
 - **Identity-based access:** All API requests are authenticated using Microsoft identity platform tokens, ensuring strong identity verification.
@@ -91,7 +95,7 @@ The permissions required for each API are scoped to the specific capabilities ne
 
 This security framework ensures that Copilot APIs maintain the same high standards for data protection, access control, and compliance as the rest of the Microsoft 365 ecosystem. Thus you can be confident that your AI applications meet enterprise security requirements.
 
-## Compliance capabilities
+### Compliance capabilities
 
 Microsoft 365 Copilot APIs maintain compliance with regulatory requirements through:
 - **Comprehensive audit logging:** All API operations are logged in the Microsoft Purview audit log, providing visibility into who accessed what information and when.
