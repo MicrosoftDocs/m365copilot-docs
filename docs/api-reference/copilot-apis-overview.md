@@ -41,7 +41,7 @@ The Copilot APIs provide you with the following essential capabilities:
 
 While the Microsoft Graph APIs generally provide CRUD operations on Microsoft 365 data, the Copilot APIs deliver AI-powered capabilities built on that data. The Microsoft Graph APIs are used when you need data access and manipulation, whereas the Copilot APIs are used when you need AI reasoning over that data. This fundamental difference is reflected in the licensing model: the Microsoft Graph APIs are available under standard Microsoft 365 license terms, while the Copilot APIs require Microsoft 365 Copilot licenses. This licensing model delivers higher-value AI capabilities beyond standard data access.
 
-## Usage Scenarios
+## Usage scenarios
 
 With Microsoft 365 Copilot APIs, you can create powerful enterprise applications that combine the intelligence of AI with the security and familiarity of Microsoft 365. Here are some of the possibilities:
 
@@ -53,7 +53,6 @@ With Microsoft 365 Copilot APIs, you can create powerful enterprise applications
 
 ## Accessing the Copilot APIs
 
-
 The Copilot APIs are accessible through the following integration paths to accommodate different development environments and preferences.
 
 ### REST API integration
@@ -64,14 +63,14 @@ The Copilot APIs are available as standard REST APIs in the `https://graph.micro
 
 The Microsoft 365 Agents SDK provides a dedicated module for the Copilot APIs, featuring support for C#, Python, and TypeScript in the `Microsoft.Agents.M365Copilot` namespace. This SDK simplifies the development of enterprise-grade, scalable, multi-channel agents. With this SDK, you can enable your agents to interact seamlessly with the Copilot APIs, benefiting from built-in features such as authentication and paging to promote efficiency and reliability.
 
-## Eligible Licenses
+## Eligible licenses
 
 The Copilot APIs require specific licensing for both access and underlying data:
 
 - **Microsoft 365 Copilot license:** Required for each user who will access Microsoft 365 Copilot functionality via these APIs. This license provides access to the AI capabilities that power the APIs. Support for users without a Microsoft 365 Copilot license is currently not available.
 - **Microsoft 365 subscription:** An E3 or E5 subscription (or equivalent) is required as the foundation for Microsoft 365 Copilot. This subscription provides access to the Microsoft 365 services and data that Copilot builds upon.
 
-### Security Framework
+## Security framework
 
 The security model for the Copilot APIs is built on these key pillars:
 - **Identity-based access:** All API requests are authenticated using Microsoft identity platform tokens, ensuring strong identity verification.
@@ -79,19 +78,6 @@ The security model for the Copilot APIs is built on these key pillars:
 - **Conditional Access integration:** Support for Conditional Access policies allows organizations to enforce additional security requirements for API access based on user, device, network, and risk signals.
 - **Sensitivity label enforcement:** All Copilot APIs respect sensitivity labels applied to content, ensuring that protected information maintains its protection even when accessed through APIs.
 - **Tenant boundaries:** API access is strictly limited within tenant boundaries, preventing cross-tenant data exposure.
-
-### Compliance Capabilities
-
-Microsoft 365 Copilot APIs maintain compliance with regulatory requirements through:
-- **Comprehensive audit logging:** All API operations are logged in the Microsoft Purview audit log, providing visibility into who accessed what information and when.
-- **eDiscovery support:** Content retrieved or generated through Microsoft 365 Copilot APIs is subject to eDiscovery and legal hold requirements.
-- **Data residency controls:** APIs respect configured data residence settings, maintaining geographical boundaries for sensitive information.
-- **Information barriers:** Copilot APIs honor information barrier policies, preventing unauthorized information sharing between segregated groups.
-- **Retention policy enforcement:** Content access respects configured retention policies, ensuring compliance with data lifecycle requirements.
-
-## Authentication, Permissions and Security Framework
-
-All Copilot APIs use a consistent delegated permissions model built on the Microsoft identity platform. This ensures that API access is always aligned with user permissions and organizational policies.
 
 **Key Security Features:**
 
@@ -105,11 +91,20 @@ The permissions required for each API are scoped to the specific capabilities ne
 
 This security framework ensures that Copilot APIs maintain the same high standards for data protection, access control, and compliance as the rest of the Microsoft 365 ecosystem. Thus you can be confident that your AI applications meet enterprise security requirements.
 
-## Error Handling and Resilience Strategies
+## Compliance capabilities
+
+Microsoft 365 Copilot APIs maintain compliance with regulatory requirements through:
+- **Comprehensive audit logging:** All API operations are logged in the Microsoft Purview audit log, providing visibility into who accessed what information and when.
+- **eDiscovery support:** Content retrieved or generated through Microsoft 365 Copilot APIs is subject to eDiscovery and legal hold requirements.
+- **Data residency controls:** APIs respect configured data residence settings, maintaining geographical boundaries for sensitive information.
+- **Information barriers:** Copilot APIs honor information barrier policies, preventing unauthorized information sharing between segregated groups.
+- **Retention policy enforcement:** Content access respects configured retention policies, ensuring compliance with data lifecycle requirements.
+
+## Error handling and resilience strategies
 
 The Copilot APIs follow standard HTTP status codes and provide detailed error information in responses, enabling your application to respond appropriately to different failure scenarios.
 
-### Common Error Scenarios
+### Common error scenarios
 
 Your application should be prepared to handle different types of errors that the Copilot APIs may return:
 
@@ -125,4 +120,4 @@ Your application should be prepared to handle different types of errors that the
 - [Find out how to get an auth token in your app. in your app](/graph/auth/auth-concepts)
 - [Overview of the Microsoft 365 Copilot Retrieval API (preview)](retrieval-api-overview.md)
 - [Microsoft 365 Copilot Interactions & Microsoft 365 Chat (Preview)](/microsoftteams/export-teams-content#microsoft-365-copilot-interactions--microsoft-365-chat-preview)
-- [Fetch Meeting Transcripts & Recordings - Teams](/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts)
+- [Get meeting AI summaries with Meeting AI Insights API](/microsoftteams/platform/graph-api/meeting-transcripts/meeting-insights)
