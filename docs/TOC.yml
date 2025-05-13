@@ -50,31 +50,29 @@
         href: declarative-agent-capabilities-ids.md
       - name: Add actions with API plugins
         items:
-        - name: API plugins
+        - name: Overview
+          href: overview-api-plugins.md
+        - name: Build an API plugin with a new API
+          href: build-api-plugins-new-api.md
+        - name: Build an API plugin from an existing API
+          href: build-api-plugins-existing-api.md
+        - name: Authentication
+          href: api-plugin-authentication.md
+        - name: Adaptive Card responses
+          href: api-plugin-adaptive-cards.md
+          displayName: response, response_semantics
+        - name: Confirmation prompts
+          href: api-plugin-confirmation-prompts.md
+        - name: Debug locally
+          href: api-plugin-debug-local.md
+        - name: Best practices for writing OpenAPI specs
+          href: openapi-document-guidance.md
+        - name: API plugin manifest reference
           items:
-          - name: Overview
-            href: overview-api-plugins.md
-          - name: Build an API plugin with a new API
-            href: build-api-plugins-new-api.md
-          - name: Build an API plugin from an existing API
-            href: build-api-plugins-existing-api.md
-          - name: Authentication
-            href: api-plugin-authentication.md
-          - name: Adaptive Card responses
-            href: api-plugin-adaptive-cards.md
-            displayName: response, response_semantics
-          - name: Confirmation prompts
-            href: api-plugin-confirmation-prompts.md
-          - name: Debug locally
-            href: api-plugin-debug-local.md
-          - name: Best practices for writing OpenAPI specs
-            href: openapi-document-guidance.md
-          - name: API plugin manifest reference
-            items:
-            - name: Version 2.2
-              href: api-plugin-manifest-2.2.md
-            - name: Version 2.1
-              href: api-plugin-manifest-2.1.md
+          - name: Version 2.2
+            href: api-plugin-manifest-2.2.md
+          - name: Version 2.1
+            href: api-plugin-manifest-2.1.md
       - name: Declarative agent manifest reference
         items:
         - name: Version 1.3
