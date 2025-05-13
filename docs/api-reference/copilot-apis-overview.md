@@ -100,7 +100,7 @@ Microsoft 365 Copilot APIs maintain compliance with regulatory requirements thro
 - **Information barriers:** Copilot APIs honor information barrier policies, preventing unauthorized information sharing between segregated groups.
 - **Retention policy enforcement:** Content access respects configured retention policies, ensuring compliance with data lifecycle requirements.
 
-## Error handling and resilience strategies
+## Error handling
 
 The Copilot APIs follow standard HTTP status codes and provide detailed error information in responses, enabling your application to respond appropriately to different failure scenarios.
 
