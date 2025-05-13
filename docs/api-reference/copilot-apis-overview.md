@@ -61,7 +61,7 @@ The Copilot APIs are available as standard REST APIs in the `https://graph.micro
 
 ### SDK and libraries integration
 
-The Microsoft 365 Agents SDK provides a dedicated module for the Copilot APIs, featuring support for C#, Python, and TypeScript in the `Microsoft.Agents.M365Copilot` namespace. This SDK simplifies the development of enterprise-grade, scalable, multi-channel agents. With this SDK, you can enable your agents to interact seamlessly with the Copilot APIs, benefiting from built-in features such as authentication and paging to promote efficiency and reliability.
+The Microsoft 365 Agents SDK provides a dedicated module for the Copilot APIs, featuring support for C#, Python, and TypeScript in the `Microsoft.Agents.M365Copilot` namespace. This SDK simplifies the development of enterprise-grade, scalable, multi-channel agents. With this SDK, you can enable your agents to interact seamlessly with the Copilot APIs, benefiting from built-in features such as authentication and paging to promote efficiency and reliability. For more information about the Copilot APIs client libraries, see [Use client libraries](../sdks/api-libraries.md).
 
 ## Eligible licenses
 
