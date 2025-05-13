@@ -100,7 +100,7 @@ The client ID is the app registration ID that is generated when you [register yo
 
 ## Make API calls
 
-The Copilot APIs client libraries provide a client class to use as the starting point for creating all API requests. To retrieve relevant text extracts from SharePoint calling the Retrieval API, you first need to create a request object and then run the POST method on the request.
+The Copilot APIs client libraries provide a client class to use as the starting point for creating all API requests. For instance, to retrieve relevant text extracts from SharePoint calling the Retrieval API, you first need to create a request object and then run the POST method on the request.
 
 # [C#](#tab/csharp)
 
