@@ -257,7 +257,7 @@ The connection object contains the following properties.
 
 #### Graphic art object
 
-Indicates that the declarative agent can create images and art based on the text input from the user. For more information, see [Image generator](add-agent-capabilities.md#image-generator).
+Indicates that the declarative agent can create images and art based on the text input from the user. For more information, see [Image generator](image-generator.md).
 
 The graphic art object contains the following properties.
 
@@ -267,7 +267,7 @@ The graphic art object contains the following properties.
 
 #### Code interpreter object
 
-Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more. For more information, see [Code interpreter](add-agent-capabilities.md#code-interpreter).
+Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more. For more information, see [Code interpreter](code-interpreter.md).
 
 The code interpreter object contains the following properties.
 

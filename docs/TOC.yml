@@ -134,22 +134,29 @@
             href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
           - name: Learning path
             href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
-          - name: Write effective instructions
-            href: declarative-agent-instructions.md
-          - name: Write instructions for agents with API plugins
-            href: instructions-api-plugins.md
-          - name: Add capabilities and knowledge sources
-            href: add-agent-capabilities.md
-          - name: Optimize SharePoint content retrieval
-            href: optimize-sharepoint-content.md
-          - name: Document interaction
-            href: declarative-agent-document-interaction.md
-          - name: Localize your agent
-            href: localize-agents.md
-          - name: Test and debug agents
-            href: debugging-copilot-agent.md
-          - name: RAI validation
-            href: rai-validation.md
+    - name: Write effective instructions
+      href: declarative-agent-instructions.md
+    - name: Write instructions for agents with API plugins
+      href: instructions-api-plugins.md
+    - name: Add capabilities and knowledge sources
+      expanded: false
+      items:
+        - name: Code interpreter
+          href: code-interpreter.md
+        - name: Image generator
+          href: image-generator.md          
+        - name: Knowledge sources
+          href: knowledge-sources.md    
+    - name: Optimize SharePoint content retrieval
+      href: optimize-sharepoint-content.md
+    - name: Document interaction
+      href: declarative-agent-document-interaction.md
+    - name: Localize your agent
+      href: localize-agents.md
+    - name: Test and debug agents
+      href: debugging-copilot-agent.md
+    - name: Responsible AI validation
+      href: rai-validation.md
   - name: Build a custom engine agent
     expanded: false
     items:
