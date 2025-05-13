@@ -57,24 +57,6 @@ The following table lists the parameters that are required when you call this ac
 
 If successful, this action returns a `200 OK` response code and a [retrievalResponse](resources/retrievalresponse.md) in the response body.
 
-## Supported Metadata Properties in `filterExpression`
-
-The following lists detail the supported metadata properties that can be used when constructing your `filterExpression`. Microsoft will not resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here.
-
-### SharePoint
-
-These are the supported metadata properties for filtering your retrievals on SharePoint content. As many of these properties also apply to Copilot connectors content, it is possible to get results from Copilot connectors when filtering using these properties. Any issues with filtering on properties that are not included in this list will not be supported by Microsoft.
-- `Author`
-- `FileExtension`
-- `Filename`
-- `FileType`
-- `InformationProtectionLabelId`
-- `LastModifiedTime`
-- `ModifiedBy`
-- `Path`
-- `SiteID`
-- `Title`
-
 ### Copilot connectors
 
  When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Copilot connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Copilot connector.

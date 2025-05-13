@@ -22,6 +22,12 @@ RAG is essential when you're building generative AI solutions and want to use Mi
 
 The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint and Copilot connectors. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance.
 
+Custom knowledge applications can use the Retrieval API to ground responses on organization-specific information stored in SharePoint. Rather than building and maintaining separate vector indexes, these applications can leverage Microsoft 365's existing semantic search capabilities to find relevant content for Large Language Model (LLM) prompts. 
+
+Finance and legal applications that require high precision in information retrieval can use the API's filtering capabilities to scope searches to specific document libraries or content types, ensuring responses only include approved sources while respecting information barriers and access controls. 
+
+Multi-source applications can combine SharePoint content with information from Graph connectors, creating a unified knowledge base that spans both Microsoft 365 and third-party repositories while maintaining consistent security and compliance controls. 
+
 Imagine a consulting firm that specializes in providing tailored solutions for their clients, with a significant portion of their work focused on data stored in SharePoint. The firm is developing a custom engine agent to assist their consultants in preparing for important client meetings. This agent must access and retrieve accurate and up-to-date information from SharePoint. The firm works with two major clients who are direct competitors in the market. Hence, the firm has a critical need to maintain rigorous security and compliance standards to ensure that one client's documents and data are never accessible to the other. The Retrieval API helps the firm manage compliance and safety risks and ensure the relevance and freshness of the data and in turn, simplifies the overall development effort.
 
 ### Manage compliance and safety risks

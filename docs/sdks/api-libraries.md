@@ -73,6 +73,26 @@ The Microsoft 365 Copilot APIs TypeScript client libraries are available in the 
 pip install microsoft-agents-m365copilot-beta
 ```
 
+# Create a Microsoft 365 Copilot client
+
+The Microsoft 365 Copilot client is designed to make it simple to make calls to the Copilot APIs. The following code examples show how to create an instance of a Microsoft 365 Copilot client with an authentication provider in the supported languages. The authentication provider handles acquiring access tokens for the application.
+
+Many different authentication providers are available for each language and platform. The different authentication providers support different client scenarios. For details about which provider and options are appropriate for your scenario, see [Choose an Authentication Provider](https://learn.microsoft.com/graph/sdks/choose-authentication-providers). 
+
+The client ID is the app registration ID that is generated when you [register your app in the Azure portal](https://learn.microsoft.com/graph/auth-register-app-v2).
+
+# [C#](#tab/csharp)
+
+> Include `using` statements for `Azure.Identity` and `Microsoft.Graph` to run this code.
+
+# [Python](#tab/python)
+
+> TBP
+
+# [TypeScript](#tab/typescript)
+
+> TBP
+
 ## Related content
 
 - [Overview of the Microsoft 365 Copilot Retrieval API](../api-reference/retrieval-api-overview.md)
