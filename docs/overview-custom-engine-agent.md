@@ -98,7 +98,7 @@ As you prepare to build and deploy your custom engine agent, consider the key fa
 
 Custom engine agents can utilize various AI models depending on the complexity of tasks and domain-specific requirements. Whether your agent needs a specific foundation model, a small language model, or a fine-tuned model for your scenario, selecting the right model is critical.
 
-For more information, see [How to choose the right models for your apps]([/azure/ai-services/openai/how-to/select-model](https://techcommunity.microsoft.com/blog/microsoftmechanicsblog/how-to-choose-the-right-models-for-your-apps--azure-ai/4271216)).
+For more information, see [How to choose the right models for your apps](https://techcommunity.microsoft.com/blog/microsoftmechanicsblog/how-to-choose-the-right-models-for-your-apps--azure-ai/4271216).
 
 ### Responsible AI
 
