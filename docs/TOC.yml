@@ -128,7 +128,7 @@
         href: /microsoft-365/agents-sdk/choose-agent-solution.md?context=/microsoft-365-copilot/extensibility/context
       - name: Quickstart with Agents SDK 
         href: /microsoft-365/agents-sdk/create-test-basic-agent?context=/microsoft-365-copilot/extensibility/context
-      - name: Build with Microsoft 365 Agents Toolkit 
+      - name: Use Microsoft 365 Agents Toolkit 
         items:
         - name: Build using .NET with Visual Studio 
           href: /microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=/microsoft-365-copilot/extensibility/context
@@ -168,7 +168,7 @@
           href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
         - name: Python SDK
           href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
-    - name: Build with Teams AI library
+    - name: Use Teams AI library
       items:
       - name: Overview
         href: /microsoftteams/platform/teams-ai-library/welcome/overview?context=/microsoft-365-copilot/extensibility/context
