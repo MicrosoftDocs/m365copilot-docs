@@ -73,25 +73,25 @@ The Copilot APIs TypeScript client libraries are available in npm.
 npm install @microsoft/agents-m365copilot-beta –save
 ```
 
-## Create a Microsoft 365 Copilot APIs client
+## Create a Copilot APIs client
 
-The Microsoft 365 Copilot APIs client is designed to make it simple to make calls to the Copilot APIs. The following code examples show how to create an instance of a Microsoft 365 Copilot APIs client with an authentication provider in the supported languages. The authentication provider handles acquiring access tokens for the application.
+The Copilot APIs client is designed to make it simple to make calls to the Copilot APIs. The following code examples show how to create an instance of a Microsoft 365 Copilot APIs client with an authentication provider in the supported languages. The authentication provider handles acquiring access tokens for the application.
 
 Many different authentication providers are available for each language and platform. The different authentication providers support different client scenarios. For details about which provider and options are appropriate for your scenario, see [Choose an Authentication Provider](/graph/sdks/choose-authentication-providers). 
 
 The client ID is the app registration ID that is generated when you [register your app in the Azure portal](/graph/auth-register-app-v2).
 
-## [C#](#tab/csharp)
+### [C#](#tab/csharp)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_csharp.md)]
 > Include `using` statements for `Azure.Identity` and `Microsoft.Graph` to run this code.
 
-## [Python](#tab/python)
+### [Python](#tab/python)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_python.md)]
 > Include import statements for DeviceCodeCredential from azure.identity and MicrosoftAgentsM365CopilotServiceClient from microsoft_agents_m365copilot_beta to run this code.
 
-## [TypeScript](#tab/typescript)
+### [TypeScript](#tab/typescript)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_typescript.md)]
 > Include import statements for DeviceCodeCredential from @azure/identity,  AgentsM365CopilotBetaServiceClient from @microsoft/agents-m365copilot-beta, and AzureIdentityAuthenticationProvider from @microsoft/kiota-authentication-azure to run this code.
@@ -100,15 +100,15 @@ The client ID is the app registration ID that is generated when you [register yo
 
 The Copilot APIs client libraries provide a client class to use as the starting point for creating all API requests. To retrieve relevant text extracts from SharePoint calling the Retrieval API, you first need to create a request object and then run the POST method on the request.
 
-## [C#](#tab/csharp)
+### [C#](#tab/csharp)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_requests_csharp.md)]
 
-## [Python](#tab/python)
+### [Python](#tab/python)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_requests_python.md)]
 
-## [TypeScript](#tab/typescript)
+### [TypeScript](#tab/typescript)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_requests_typescript.md)]
 
