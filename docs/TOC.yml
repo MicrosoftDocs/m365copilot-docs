@@ -27,305 +27,302 @@
     href: samples.md
   - name: Learning resources
     href: /collections/p11pb18wmq6xqq
-- name: Build an agent
+- name: Build a declarative agent
   expanded: true
   items:
-  - name: Build a declarative agent
+  - name: Declarative agents overview
+    href: overview-declarative-agent.md
+  - name: Declarative agents FAQ
+    href: transparency-faq-declarative-agent.md
+  - name: Choose your development tool
+    href: declarative-agent-tool-comparison.md
+  - name: Use Visual Studio Code
     expanded: true
     items:
-    - name: Declarative agents overview
-      href: overview-declarative-agent.md
-    - name: Declarative agents FAQ
-      href: transparency-faq-declarative-agent.md
-    - name: Choose your development tool
-      href: declarative-agent-tool-comparison.md
-    - name: Use Visual Studio Code
-      expanded: true
+    - name: Build a declarative agent with Visual Studio Code
+      href: build-declarative-agents.yml
+    - name: Retrieve capabilities IDs
+      href: declarative-agent-capabilities-ids.md
+    - name: Declarative agent manifest reference
       items:
-      - name: Build a declarative agent with Visual Studio Code
-        href: build-declarative-agents.yml
-      - name: Retrieve capabilities IDs
-        href: declarative-agent-capabilities-ids.md
-      - name: Declarative agent manifest reference
-        items:
-        - name: Version 1.3
-          href: declarative-agent-manifest-1.3.md
-        - name: Version 1.2
-          href: declarative-agent-manifest-1.2.md
-        - name: Version 1.0
-          href: declarative-agent-manifest-1.0.md
-    - name: Use Copilot Studio agent builder
-      items:
-      - name: Overview
-        href: copilot-studio-agent-builder.md
-      - name: Build agents
-        href: copilot-studio-agent-builder-build.md
-      - name: Build agents from template
-        items:     
-        - name: Templates overview
-          href: agent-builder-templates.md
-        - name: Career Coach 
-          href: agent-builder-template-career-coach.md
-        - name: Customer Insight Assistant
-          href: agent-builder-template-customer-insight.md
-        - name: Idea Coach
-          href: agent-builder-template-idea-coach.md
-        - name: Interview Question Assistant
-          href: agent-builder-template-interview-questions.md
-        - name: Learning Coach
-          href: agent-builder-template-learning-coach.md
-        - name: Meeting Coach
-          href: agent-builder-template-meeting-coach.md
-        - name: Prompt Coach 
-          href: agent-builder-template-prompt-coach.md
-        - name: Quiz Tutor
-          href: agent-builder-template-quiz-tutor.md
-        - name: Scrum Assistant
-          href: agent-builder-template-scrum-assistant.md
-        - name: Writing Coach
-          href: agent-builder-template-writing-coach.md
-      - name: Publish agents
-        href: copilot-studio-agent-builder-publish.md
-      - name: Availability and language support
-        href: copilot-studio-agent-builder-availability.md
-      - name: Build in Microsoft Copilot Studio
-        href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
-    - name: Write effective instructions
-      href: declarative-agent-instructions.md
-    - name: Write instructions for agents with API plugins
-      href: instructions-api-plugins.md
-    - name: Add capabilities and knowledge sources
-      expanded: false
-      items:
-        - name: Code interpreter
-          href: code-interpreter.md
-        - name: Image generator
-          href: image-generator.md          
-        - name: Knowledge sources
-          href: knowledge-sources.md    
-    - name: Optimize SharePoint content retrieval
-      href: optimize-sharepoint-content.md
-    - name: Document interaction
-      href: declarative-agent-document-interaction.md
-    - name: Localize your agent
-      href: localize-agents.md
-    - name: Test and debug agents
-      href: debugging-copilot-agent.md
-    - name: Responsible AI validation
-      href: rai-validation.md
-  - name: Build a custom engine agent
+      - name: Version 1.3
+        href: declarative-agent-manifest-1.3.md
+      - name: Version 1.2
+        href: declarative-agent-manifest-1.2.md
+      - name: Version 1.0
+        href: declarative-agent-manifest-1.0.md
+  - name: Use Copilot Studio agent builder
+    items:
+    - name: Overview
+      href: copilot-studio-agent-builder.md
+    - name: Build agents
+      href: copilot-studio-agent-builder-build.md
+    - name: Build agents from template
+      items:     
+      - name: Templates overview
+        href: agent-builder-templates.md
+      - name: Career Coach 
+        href: agent-builder-template-career-coach.md
+      - name: Customer Insight Assistant
+        href: agent-builder-template-customer-insight.md
+      - name: Idea Coach
+        href: agent-builder-template-idea-coach.md
+      - name: Interview Question Assistant
+        href: agent-builder-template-interview-questions.md
+      - name: Learning Coach
+        href: agent-builder-template-learning-coach.md
+      - name: Meeting Coach
+        href: agent-builder-template-meeting-coach.md
+      - name: Prompt Coach 
+        href: agent-builder-template-prompt-coach.md
+      - name: Quiz Tutor
+        href: agent-builder-template-quiz-tutor.md
+      - name: Scrum Assistant
+        href: agent-builder-template-scrum-assistant.md
+      - name: Writing Coach
+        href: agent-builder-template-writing-coach.md
+    - name: Publish agents
+      href: copilot-studio-agent-builder-publish.md
+    - name: Availability and language support
+      href: copilot-studio-agent-builder-availability.md
+    - name: Build in Microsoft Copilot Studio
+      href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+  - name: Write effective instructions
+    href: declarative-agent-instructions.md
+  - name: Write instructions for agents with API plugins
+    href: instructions-api-plugins.md
+  - name: Add capabilities and knowledge sources
     expanded: false
     items:
-    - name: Custom engine agent overview
-      href: overview-custom-engine-agent.md
-    - name: Custom engine agent user experience
-      href: ux-custom-engine-agent.md
-    - name: Build with Microsoft 365 Agents SDK
+      - name: Code interpreter
+        href: code-interpreter.md
+      - name: Image generator
+        href: image-generator.md          
+      - name: Knowledge sources
+        href: knowledge-sources.md    
+  - name: Optimize SharePoint content retrieval
+    href: optimize-sharepoint-content.md
+  - name: Document interaction
+    href: declarative-agent-document-interaction.md
+  - name: Localize your agent
+    href: localize-agents.md
+  - name: Test and debug agents
+    href: debugging-copilot-agent.md
+  - name: Responsible AI validation
+    href: rai-validation.md
+- name: Build a custom engine agent
+  expanded: true
+  items:
+  - name: Custom engine agent overview
+    href: overview-custom-engine-agent.md
+  - name: Custom engine agent user experience
+    href: ux-custom-engine-agent.md
+  - name: Build with Microsoft 365 Agents SDK
+    items:
+    - name: M365 Agents SDK overview 
+      href: /microsoft-365/agents-sdk/agents-sdk-overview?context=/microsoft-365-copilot/extensibility/context
+    - name: Choose the right agent solution
+      href: /microsoft-365/agents-sdk/choose-agent-solution.md?context=/microsoft-365-copilot/extensibility/context
+    - name: Quickstart with Agents SDK 
+      href: /microsoft-365/agents-sdk/create-test-basic-agent?context=/microsoft-365-copilot/extensibility/context
+    - name: Use Microsoft 365 Agents Toolkit 
       items:
-      - name: M365 Agents SDK overview 
-        href: /microsoft-365/agents-sdk/agents-sdk-overview?context=/microsoft-365-copilot/extensibility/context
-      - name: Choose the right agent solution
-        href: /microsoft-365/agents-sdk/choose-agent-solution.md?context=/microsoft-365-copilot/extensibility/context
-      - name: Quickstart with Agents SDK 
-        href: /microsoft-365/agents-sdk/create-test-basic-agent?context=/microsoft-365-copilot/extensibility/context
-      - name: Build with Microsoft 365 Agents Toolkit 
-        items:
-        - name: Build using .NET with Visual Studio 
-          href: /microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=/microsoft-365-copilot/extensibility/context
-        - name: Build using JavaScript with Visual Studio Code 
-          href: /microsoft-365/agents-sdk/create-new-toolkit-project-vsc?context=/microsoft-365-copilot/extensibility/context
-        - name: Code samples
-          items: 
-          - name: .NET and JavaScript 
-            href: https://github.com/microsoft/Agents/tree/main/samples
-          - name: Python 
-            href: https://github.com/microsoft/Agents-for-python/tree/main/test_samples
-      - name: Key concepts
-        items:
-        - name: Build agents
-          href: /microsoft-365/agents-sdk/building-agents?context=/microsoft-365-copilot/extensibility/context
-        - name: Manage turns
-          href: /microsoft-365/agents-sdk/managing-turns?context=/microsoft-365-copilot/extensibility/context
-        - name: Use activities
-          href: /microsoft-365/agents-sdk/using-activities?context=/microsoft-365-copilot/extensibility/context
-        - name: Create messages
-          href: /microsoft-365/agents-sdk/creating-messages?context=/microsoft-365-copilot/extensibility/context
-      - name: Add AI services and orchestration 
-        href: /microsoft-365/agents-sdk/adding-ai-services?context=/microsoft-365-copilot/extensibility/context
-      - name: Publish your agent
-        items: 
-        - name: Debug and deploy
-          href: /microsoft-365/agents-sdk/publish-agent?context=/microsoft-365-copilot/extensibility/context
-        - name: Test your agent locally
-          href: /microsoft-365/agents-sdk/test-with-toolkit-project?context=/microsoft-365-copilot/extensibility/context
-        - name: Deploy to Azure
-          href: /microsoft-365/agents-sdk/deploy-azure-bot-service-manually?context=/microsoft-365-copilot/extensibility/context
-      - name: SDK reference
-        items: 
-        - name: .NET SDK 
-          href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
-        - name: JavaScript SDK
-          href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
-        - name: Python SDK
-          href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
-    - name: Build with Teams AI library
+      - name: Build using .NET with Visual Studio 
+        href: /microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=/microsoft-365-copilot/extensibility/context
+      - name: Build using JavaScript with Visual Studio Code 
+        href: /microsoft-365/agents-sdk/create-new-toolkit-project-vsc?context=/microsoft-365-copilot/extensibility/context
+    - name: Code samples
+      items: 
+      - name: .NET and JavaScript 
+        href: https://github.com/microsoft/Agents/tree/main/samples
+      - name: Python 
+        href: https://github.com/microsoft/Agents-for-python/tree/main/test_samples
+    - name: Key concepts
       items:
+      - name: Build agents
+        href: /microsoft-365/agents-sdk/building-agents?context=/microsoft-365-copilot/extensibility/context
+      - name: Manage turns
+        href: /microsoft-365/agents-sdk/managing-turns?context=/microsoft-365-copilot/extensibility/context
+      - name: Use activities
+        href: /microsoft-365/agents-sdk/using-activities?context=/microsoft-365-copilot/extensibility/context
+      - name: Create messages
+        href: /microsoft-365/agents-sdk/creating-messages?context=/microsoft-365-copilot/extensibility/context
+    - name: Add AI services and orchestration 
+      href: /microsoft-365/agents-sdk/adding-ai-services?context=/microsoft-365-copilot/extensibility/context
+    - name: Publish your agent
+      items: 
+      - name: Debug and deploy
+        href: /microsoft-365/agents-sdk/publish-agent?context=/microsoft-365-copilot/extensibility/context
+      - name: Test your agent locally
+        href: /microsoft-365/agents-sdk/test-with-toolkit-project?context=/microsoft-365-copilot/extensibility/context
+      - name: Deploy to Azure
+        href: /microsoft-365/agents-sdk/deploy-azure-bot-service-manually?context=/microsoft-365-copilot/extensibility/context
+    - name: SDK reference
+      items: 
+      - name: .NET SDK 
+        href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
+      - name: JavaScript SDK
+        href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
+      - name: Python SDK
+        href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
+  - name: Use Teams AI library
+    items:
+    - name: Overview
+      href: /microsoftteams/platform/teams-ai-library/welcome/overview?context=/microsoft-365-copilot/extensibility/context
+    - name: Quickstart with Teams AI Library v2
+      href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?context=/microsoft-365-copilot/extensibility/context
+    - name: Anatomy of an app
+      href: /microsoftteams/platform/teams-ai-library/getting-started/code-basics?context=/microsoft-365-copilot/extensibility/context
+    - name: Run in Teams
+      href: /microsoftteams/platform/teams-ai-library/getting-started/running-in-teams?context=/microsoft-365-copilot/extensibility/context
+    - name: Code samples
+      href: https://github.com/microsoft/teams.ts/tree/main/samples
+    - name: Essentials
+      items: 
       - name: Overview
-        href: /microsoftteams/platform/teams-ai-library/welcome/overview?context=/microsoft-365-copilot/extensibility/context
-      - name: Quickstart with Teams AI Library v2
-        href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?context=/microsoft-365-copilot/extensibility/context
-      - name: Anatomy of an app
-        href: /microsoftteams/platform/teams-ai-library/getting-started/code-basics?context=/microsoft-365-copilot/extensibility/context
-      - name: Run in Teams
-        href: /microsoftteams/platform/teams-ai-library/getting-started/running-in-teams?context=/microsoft-365-copilot/extensibility/context
-      - name: Code samples
-        href: https://github.com/microsoft/teams.ts/tree/main/samples
-      - name: Essentials
-        items: 
-        - name: Overview
-          href: /microsoftteams/platform/teams-ai-library/essentials/overview?context=/microsoft-365-copilot/extensibility/context
-        - name: App basics
-          href: /microsoftteams/platform/teams-ai-library/essentials/app-class?context=/microsoft-365-copilot/extensibility/context
-        - name: Listen to events
-          href: /microsoftteams/platform/teams-ai-library/essentials/on-event?context=/microsoft-365-copilot/extensibility/context
-        - name: Listen to activities
-          href: /microsoftteams/platform/teams-ai-library/essentials/on-activity?context=/microsoft-365-copilot/extensibility/context
-        - name: Activity references
-          href: /microsoftteams/platform/teams-ai-library/essentials/activity-ref?context=/microsoft-365-copilot/extensibility/context
-        - name: Sending Messages
-          href: /microsoftteams/platform/teams-ai-library/essentials/sending-messages?context=/microsoft-365-copilot/extensibility/context
-        - name: Proactive Messages
-          href: /microsoftteams/platform/teams-ai-library/essentials/proactive-messaging?context=/microsoft-365-copilot/extensibility/context
-        - name: Use API client
-          href: /microsoftteams/platform/teams-ai-library/essentials/api?context=/microsoft-365-copilot/extensibility/context
-      - name: Teams
-        items:
-          - name: Overview
-            href: /microsoftteams/platform/teams-ai-library/teams/overview.md?context=/microsoft-365-copilot/extensibility/context
-          - name: Core Concepts
-            href: /microsoftteams/platform/teams-ai-library/teams/core-concepts.md?context=/microsoft-365-copilot/extensibility/context
-          - name: Teams Manifest
-            href: /microsoftteams/platform/teams-ai-library/teams/manifest.md?context=/microsoft-365-copilot/extensibility/context
-          - name: Teams Toolkit
-            href: /microsoftteams/platform/teams-ai-library/teams/m365-toolkit.md?context=/microsoft-365-copilot/extensibility/context
-      - name: In-Depth Guides
-        items:
-          - name: Adaptive Cards
-            items:
-              - name: Overview
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/cards/overview.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Building Adaptive Cards
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/cards/building-adaptive-cards.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Executing Actions
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/cards/executing-actions.md?context=/microsoft-365-copilot/extensibility/context
-          - name: Dialogs (Task Modules)
-            items:
-              - name: Overview
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/dialogs/overview.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Creating Dialogs
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/dialogs/creating-dialogs.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Handling Submissions
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/dialogs/handling-dialog-submissions.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Multi-Step Forms
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/dialogs/handling-multi-step-forms.md?context=/microsoft-365-copilot/extensibility/context
-          - name: Message Extensions
-            items:
-              - name: Overview
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/message-extensions/overview.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Action Commands
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/message-extensions/action-commands.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Search Commands
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/message-extensions/search-commands.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Link Unfurling
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/message-extensions/link-unfurling.md?context=/microsoft-365-copilot/extensibility/context
-          - name: User Authentication
-            items:
-              - name: Overview
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/overview.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Quickstart
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/quickstart.md?context=/microsoft-365-copilot/extensibility/context
-              - name: How Auth Works
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/auth-sso.md?context=/microsoft-365-copilot/extensibility/context
-              - name: App Setup
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/setup.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Initiating Signing In
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/signin.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Signout
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/signout.md?context=/microsoft-365-copilot/extensibility/context
-          - name: AI
-            items:
-              - name: Overview
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/overview.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Setup & Prerequisites
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/setup-and-prereqs.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Chat Generation
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/chat.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Functions
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/function-calling.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Keeping State
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/keeping-state.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Best Practices
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/best-practices.md?context=/microsoft-365-copilot/extensibility/context
-              - name: MCP
-                items:
-                  - name: Overview
-                    href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/mcp/overview.md?context=/microsoft-365-copilot/extensibility/context
-                  - name: MCP Server
-                    href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/mcp/mcp-server.md?context=/microsoft-365-copilot/extensibility/context
-                  - name: MCP Client
-                    href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/mcp/mcp-client.md?context=/microsoft-365-copilot/extensibility/context
-          - name: Tabs
-            items:
-              - name: Overview
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/overview.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Getting started
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/getting-started.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Using the app
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/using-the-app.md?context=/microsoft-365-copilot/extensibility/context
-              - name: App options
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/app-options.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Functions
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/function-calling.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Graph
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/graph.md?context=/microsoft-365-copilot/extensibility/context
-          - name: Feedback
-            href: /microsoftteams/platform/teams-ai-library/in-depth-guides/feedback.md?context=/microsoft-365-copilot/extensibility/context
-          - name: Observability
-            items:
-              - name: Overview
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/observability/overview.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Middleware
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/observability/middleware.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Logging
-                href: /microsoftteams/platform/teams-ai-library/in-depth-guides/observability/logging.md?context=/microsoft-365-copilot/extensibility/context
-      - name: Developer Tools
-        items:
-          - name: Overview
-            href: /microsoftteams/platform/teams-ai-library/developer-tools/overview.md?context=/microsoft-365-copilot/extensibility/context
-          - name: CLI
-            href: /microsoftteams/platform/teams-ai-library/developer-tools/cli/overview.md?context=/microsoft-365-copilot/extensibility/context
-          - name: Dev Tools
-            items:
-              - name: Chat
-                href: /microsoftteams/platform/teams-ai-library/developer-tools/devtools/chat.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Inspect
-                href: /microsoftteams/platform/teams-ai-library/developer-tools/devtools/inspect.md?context=/microsoft-365-copilot/extensibility/context
-              - name: Cards
-                href: /microsoftteams/platform/teams-ai-library/developer-tools/devtools/cards.md?context=/microsoft-365-copilot/extensibility/context
-      - name: SDK reference
-        items: 
-        - name: TypeScript SDK
-          href: /javascript/api/teams-sdk-typescript?context=/microsoft-365-copilot/extensibility/context
-    - name: Use Microsoft Copilot Studio
+        href: /microsoftteams/platform/teams-ai-library/essentials/overview?context=/microsoft-365-copilot/extensibility/context
+      - name: App basics
+        href: /microsoftteams/platform/teams-ai-library/essentials/app-class?context=/microsoft-365-copilot/extensibility/context
+      - name: Listen to events
+        href: /microsoftteams/platform/teams-ai-library/essentials/on-event?context=/microsoft-365-copilot/extensibility/context
+      - name: Listen to activities
+        href: /microsoftteams/platform/teams-ai-library/essentials/on-activity?context=/microsoft-365-copilot/extensibility/context
+      - name: Activity references
+        href: /microsoftteams/platform/teams-ai-library/essentials/activity-ref?context=/microsoft-365-copilot/extensibility/context
+      - name: Sending Messages
+        href: /microsoftteams/platform/teams-ai-library/essentials/sending-messages?context=/microsoft-365-copilot/extensibility/context
+      - name: Proactive Messages
+        href: /microsoftteams/platform/teams-ai-library/essentials/proactive-messaging?context=/microsoft-365-copilot/extensibility/context
+      - name: Use API client
+        href: /microsoftteams/platform/teams-ai-library/essentials/api?context=/microsoft-365-copilot/extensibility/context
+    - name: Teams
       items:
-      - name: Quickstart
-        href: /microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context
-      - name: Key concepts
-        href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
-      - name: Create and delete agents
-        href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
-    - name: Build with Microsoft Graph APIs
-      href: graph-api-tutorial.yml
+        - name: Overview
+          href: /microsoftteams/platform/teams-ai-library/teams/overview.md?context=/microsoft-365-copilot/extensibility/context
+        - name: Core Concepts
+          href: /microsoftteams/platform/teams-ai-library/teams/core-concepts.md?context=/microsoft-365-copilot/extensibility/context
+        - name: Teams Manifest
+          href: /microsoftteams/platform/teams-ai-library/teams/manifest.md?context=/microsoft-365-copilot/extensibility/context
+        - name: Teams Toolkit
+          href: /microsoftteams/platform/teams-ai-library/teams/m365-toolkit.md?context=/microsoft-365-copilot/extensibility/context
+    - name: In-Depth Guides
+      items:
+        - name: Adaptive Cards
+          items:
+            - name: Overview
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/cards/overview.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Building Adaptive Cards
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/cards/building-adaptive-cards.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Executing Actions
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/cards/executing-actions.md?context=/microsoft-365-copilot/extensibility/context
+        - name: Dialogs (Task Modules)
+          items:
+            - name: Overview
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/dialogs/overview.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Creating Dialogs
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/dialogs/creating-dialogs.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Handling Submissions
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/dialogs/handling-dialog-submissions.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Multi-Step Forms
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/dialogs/handling-multi-step-forms.md?context=/microsoft-365-copilot/extensibility/context
+        - name: Message Extensions
+          items:
+            - name: Overview
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/message-extensions/overview.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Action Commands
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/message-extensions/action-commands.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Search Commands
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/message-extensions/search-commands.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Link Unfurling
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/message-extensions/link-unfurling.md?context=/microsoft-365-copilot/extensibility/context
+        - name: User Authentication
+          items:
+            - name: Overview
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/overview.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Quickstart
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/quickstart.md?context=/microsoft-365-copilot/extensibility/context
+            - name: How Auth Works
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/auth-sso.md?context=/microsoft-365-copilot/extensibility/context
+            - name: App Setup
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/setup.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Initiating Signing In
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/signin.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Signout
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/auth/signout.md?context=/microsoft-365-copilot/extensibility/context
+        - name: AI
+          items:
+            - name: Overview
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/overview.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Setup & Prerequisites
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/setup-and-prereqs.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Chat Generation
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/chat.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Functions
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/function-calling.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Keeping State
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/keeping-state.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Best Practices
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/best-practices.md?context=/microsoft-365-copilot/extensibility/context
+            - name: MCP
+              items:
+                - name: Overview
+                  href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/mcp/overview.md?context=/microsoft-365-copilot/extensibility/context
+                - name: MCP Server
+                  href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/mcp/mcp-server.md?context=/microsoft-365-copilot/extensibility/context
+                - name: MCP Client
+                  href: /microsoftteams/platform/teams-ai-library/in-depth-guides/ai/mcp/mcp-client.md?context=/microsoft-365-copilot/extensibility/context
+        - name: Tabs
+          items:
+            - name: Overview
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/overview.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Getting started
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/getting-started.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Using the app
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/using-the-app.md?context=/microsoft-365-copilot/extensibility/context
+            - name: App options
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/app-options.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Functions
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/function-calling.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Graph
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/tabs/graph.md?context=/microsoft-365-copilot/extensibility/context
+        - name: Feedback
+          href: /microsoftteams/platform/teams-ai-library/in-depth-guides/feedback.md?context=/microsoft-365-copilot/extensibility/context
+        - name: Observability
+          items:
+            - name: Overview
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/observability/overview.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Middleware
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/observability/middleware.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Logging
+              href: /microsoftteams/platform/teams-ai-library/in-depth-guides/observability/logging.md?context=/microsoft-365-copilot/extensibility/context
+    - name: Developer Tools
+      items:
+        - name: Overview
+          href: /microsoftteams/platform/teams-ai-library/developer-tools/overview.md?context=/microsoft-365-copilot/extensibility/context
+        - name: CLI
+          href: /microsoftteams/platform/teams-ai-library/developer-tools/cli/overview.md?context=/microsoft-365-copilot/extensibility/context
+        - name: Dev Tools
+          items:
+            - name: Chat
+              href: /microsoftteams/platform/teams-ai-library/developer-tools/devtools/chat.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Inspect
+              href: /microsoftteams/platform/teams-ai-library/developer-tools/devtools/inspect.md?context=/microsoft-365-copilot/extensibility/context
+            - name: Cards
+              href: /microsoftteams/platform/teams-ai-library/developer-tools/devtools/cards.md?context=/microsoft-365-copilot/extensibility/context
+    - name: SDK reference
+      items: 
+      - name: TypeScript SDK
+        href: /javascript/api/teams-sdk-typescript?context=/microsoft-365-copilot/extensibility/context
+  - name: Use Microsoft Copilot Studio
+    items:
+    - name: Quickstart
+      href: /microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context
+    - name: Key concepts
+      href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
+    - name: Create and delete agents
+      href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
+  - name: Build with Microsoft Graph APIs
+    href: graph-api-tutorial.yml
 - name: Add knowledge with Microsoft Graph connectors
   items:
   - name: Microsoft Graph connectors in Microsoft 365 Copilot
