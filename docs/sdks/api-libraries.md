@@ -81,36 +81,40 @@ Many different authentication providers are available for each language and plat
 
 The client ID is the app registration ID that is generated when you [register your app in the Azure portal](/graph/auth-register-app-v2).
 
-### [C#](#tab/csharp)
+# [C#](#tab/csharp)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_csharp.md)]
 > Include `using` statements for `Azure.Identity` and `Microsoft.Graph` to run this code.
 
-### [Python](#tab/python)
+# [Python](#tab/python)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_python.md)]
 > Include import statements for DeviceCodeCredential from azure.identity and MicrosoftAgentsM365CopilotServiceClient from microsoft_agents_m365copilot_beta to run this code.
 
-### [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_typescript.md)]
 > Include import statements for DeviceCodeCredential from @azure/identity,  AgentsM365CopilotBetaServiceClient from @microsoft/agents-m365copilot-beta, and AzureIdentityAuthenticationProvider from @microsoft/kiota-authentication-azure to run this code.
+
+---
 
 ## Make API calls
 
 The Copilot APIs client libraries provide a client class to use as the starting point for creating all API requests. To retrieve relevant text extracts from SharePoint calling the Retrieval API, you first need to create a request object and then run the POST method on the request.
 
-### [C#](#tab/csharp)
+# [C#](#tab/csharp)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_requests_csharp.md)]
 
-### [Python](#tab/python)
+# [Python](#tab/python)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_requests_python.md)]
 
-### [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_requests_typescript.md)]
+
+---
 
 ## Related content
 
