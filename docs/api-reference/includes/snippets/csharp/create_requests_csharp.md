@@ -6,8 +6,8 @@ description: "Create CSharp Request"
 
 var requestBody = new RetrievalPostRequestBody
 {
-    QueryString = "what is the DTO policy?",
-    MaximumNumberOfResults = 2
+    QueryString = "What is the latest in my organization?",
+    MaximumNumberOfResults = 10
 };
 
 

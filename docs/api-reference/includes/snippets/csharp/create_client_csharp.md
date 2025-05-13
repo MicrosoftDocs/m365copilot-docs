@@ -4,6 +4,10 @@ description: "Create CSharp Client"
 
 ```csharp
 
+using Azure.Identity;
+using Microsoft.Agents.M365Copilot.Beta;
+using Microsoft.Agents.M365Copilot.Beta.Copilot.Retrieval;
+
 var scopes = new[] {"Files.Read.All", "Sites.Read.All"}; 
  
 // Multi-tenant apps can use "common", 
@@ -33,8 +37,16 @@ var deviceCodeCredential = new DeviceCodeCredential(deviceCodeCredentialOptions)
  
 
 //Create the client with explicit base URL 
-
 var baseURL = “https://graph.microsoft.com/beta”; 
-AgentsCopilotServiceClient client = new AgentsCopilotServiceClient (deviceCodeCredential, scopes, baseURL); 
+AgentsCopilotBetaServiceClient client = new AgentsCopilotBetaServiceClient (deviceCodeCredential, scopes, baseURL); 
+
+var requestBody = new RetrievalPostRequestBody
+{
+    QueryString = "What is the latest in my organization?",
+    MaximumNumberOfResults = 10
+};
+
+
+var result = await client.Copilot.Retrieval.PostAsync(requestBody);
  
 ```

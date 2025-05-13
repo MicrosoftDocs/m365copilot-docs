@@ -34,7 +34,7 @@ The Copilot APIs provide you with the following essential capabilities:
 | --- | ----------- | ---------------- |
 | [Retrieval API](copilotroot-retrieval.md)                                           | Offers a streamlined solution for Retrieval Augmented Generation (RAG) in a secure and compliant way. | Ground Large Language Model (LLM) responses in your organization's SharePoint documents and wikis, and Graph Connector data. |
 | [Activity Export API](/graph/api/aiinteractionhistory-getallenterpriseinteractions) | Allows you to export Copilot interactions data which includes the user prompt to Copilot and the Copilot response back to the user. | Maintain records of AI interactions for regulated industries. |
-| [AI Meeting Insights API](/graph/api/onlinemeeting-list-aiinsights) | Provides insights equivalent to the Intelligent Recap feature in the Teams client, including AI Notes, action items, and Topics. | Automatically capture action items and notes from sales calls. |
+| [Meeting Insights API](/graph/api/onlinemeeting-list-aiinsights) | Provides insights equivalent to the Intelligent Recap feature in the Teams client, including AI Notes, action items, and Topics. | Automatically capture action items and notes from sales calls. |
 
 
 ## How Copilot APIs differ from Microsoft Graph APIs
