@@ -57,13 +57,13 @@ In this section, you add items ingested by a Microsoft Graph connector to the av
     ]
     ```
 
-    For more information, see [Microsoft Graph connectors object](../../declarative-agent-manifest-1.3.md#microsoft-graph-connectors-object).
+    For more information, see [Microsoft Graph connectors object](../../declarative-agent-manifest-1.4.md#microsoft-graph-connectors-object).
 
     > [!NOTE]
     >
     > - Not specifying the `connections` array causes all Microsoft Graph connectors content in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have access to Microsoft Graph connectors content to generate its answers after you reload the page.
 

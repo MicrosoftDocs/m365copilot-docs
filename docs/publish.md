@@ -28,15 +28,15 @@ Once ready, [submit your app package](/partner-center/marketplace-offers/add-in-
 
 Once validated and approved by Microsoft, your agent is made available in the Microsoft Commercial Marketplace and ready for IT enablement. Once enabled by an IT administrator, it appears in the **Apps** store within Microsoft 365 Copilot and Microsoft Teams. Once deployed by an admin or acquired by a user, it will then appear as an installed agent for Microsoft 365 Copilot.
 
-## Declarative agents built with Teams Toolkit
+## Declarative agents built with Microsoft 365 Agents Toolkit
 
-Teams Toolkit supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
+Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
 
 Note that [Responsible AI validation checks](./rai-validation.md) run on your declarative agent during manifest validation, including when you sideload or publish your agent.
 
 | Distribution method | Support | Learn more |
 |--|--|--|
-| Sideload for personal use | ✅ | [Create declarative agents using Teams Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents?tabs=ttk&tutorial-step=1) |
+| Sideload for personal use | ✅ | [Create declarative agents using Agents Toolkit](build-declarative-agents.yml) |
 | Share with others | ❌ | |
 | Submit to organizational catalog | ✅ | [Upload a custom app using Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings#upload-a-custom-app-using-teams-admin-center?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) |
 | Submit to Microsoft Commercial Marketplace | ✅ | [Publish your app to the Teams Store](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish) |
@@ -74,9 +74,9 @@ Custom-built [SharePoint agents](https://support.microsoft.com/office/get-starte
 | Submit to organizational catalog | ❌* | *Ready-made and Custom-built agents for SharePoint are a configurable part of each SharePoint site; they are not published directly to an organizational catalog. Organizational access is scoped to users with permissions to the SharePoint site. |
 | Submit to Microsoft Commercial Marketplace | ❌ | |
 
-## Custom engine agent built with Teams Toolkit
+## Custom engine agent built with Agents Toolkit
 
-Teams Toolkit supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
+Agents Toolkit supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
 
 Note that [store submission requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context) include a number of [custom engine agent UX](./ux-custom-engine-agent.md) best practices to ensure the best possible user experience.
 
@@ -84,7 +84,7 @@ Note that [store submission requirements](/microsoftteams/platform/concepts/depl
 |--|--|--|
 | Sideload for personal use | ✅ | [Publish to individual scope](/microsoftteams/platform/toolkit/publish#publish-to-individual-scope-or-custom-app-upload-permission) |
 | Share with others | ❌ | |
-| Submit to organizational catalog | ✅ | [Publish apps using Teams Toolkit](/microsoftteams/platform/toolkit/publish) |
+| Submit to organizational catalog | ✅ | [Publish apps using Agents Toolkit](/microsoftteams/platform/toolkit/publish) |
 | Submit to Microsoft Commercial Marketplace | ✅ | [Publish your app to the Teams Store](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish) |
 
 ## Custom agents built with Copilot Studio

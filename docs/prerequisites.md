@@ -62,7 +62,7 @@ You can extend Microsoft 365 Copilot with the intelligence of external services 
 - By adding skills with [Teams message extension plugins](overview-message-extension-bot.md) and [Copilot Studio actions](overview-business-applications.md).
 - By extending the knowledge in Copilot with [Microsoft Graph connectors](overview-graph-connector.md).
 
-To learn more and choose the best extensibility path for your users, see [Extensibility options for Copilot](decision-guide.md).
+To learn more and choose the best extensibility path for your users, see [Copilot extensibility planning guide](planning-guide.md) and [Agents overview](agents-overview.md).
 
 ### Requirements for agents
 
@@ -71,11 +71,11 @@ To build agents, you need to complete prerequisites depending on the tool that y
 > [!NOTE]
 > Some agent capabilities are only available to users in tenants with Copilot Studio metered usage enabled or users with Microsoft 365 Copilot licenses. For example, if you want to build agents that are grounded in organizational data, you need to enable metering or purchase a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
-#### Teams Toolkit requirements
+#### Microsoft 365 Agents Toolkit requirements
 
-You can use Teams Toolkit to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Microsoft 365 Copilot license.
+You can use Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data via SharePoint or Microsoft Graph connectors, you need to either set up billing in your tenant or purchase a Microsoft 365 Copilot license.
 
-To build agents with Teams Toolkit and other IDEs, you must have your admin enable the ability to sideload a *custom app* to your tenant.
+To build agents with Agents Toolkit and other IDEs, you must have your admin enable the ability to sideload a *custom app* to your tenant.
 
 To enable sideloading, from Teams admin center, select **Teams apps** > **Setup policies** > **Global (Org-wide default)**, and switch the  **Upload custom apps** toggle to **On**.
 

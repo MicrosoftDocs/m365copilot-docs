@@ -19,7 +19,7 @@ The following article describes the 2.2 schema used by API plugin manifest files
 This schema version introduces the following changes from [version 2.1](api-plugin-manifest-2.1.md).
 
 - Added the `security_info` property to the [Function capabilities object](#function-capabilities-object). This property allows you to attest to the behavior of the plugin in order to assess the risks of calling the function.
-- Removed the deprecated `localization` property from the [plugin capabilities object](#plugin-capabilities-object). Manifests generated with Teams Toolkit using the 2.1 schema included the deprecated `localization` property. Manifests using the 2.2 schema fail validation if this property is included.
+- Removed the deprecated `localization` property from the [plugin capabilities object](#plugin-capabilities-object). Manifests generated with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) using the 2.1 schema included the deprecated `localization` property. Manifests using the 2.2 schema fail validation if this property is included.
 
 ## JSON schema
 

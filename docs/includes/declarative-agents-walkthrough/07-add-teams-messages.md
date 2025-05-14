@@ -32,7 +32,7 @@ In this section, you provide the declarative agent with Teams channels, team, an
     ]
     ```
 
-    For more information, see [Teams messages object](../../declarative-agent-manifest-1.3.md#teams-messages-object).
+    For more information, see [Teams messages object](../../declarative-agent-manifest-1.4.md#teams-messages-object).
 
     > [!NOTE]
     > - The url in the url object must be well formed links to a Teams chat, team, or meeting chat.

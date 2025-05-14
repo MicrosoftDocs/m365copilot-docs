@@ -1,12 +1,12 @@
 ### YamlMime:Tutorial
-title: Create declarative agents using Teams Toolkit
+title: Create declarative agents using Microsoft 365 Agents Toolkit
 metadata:
-  title: Create declarative agents using Teams Toolkit
-  description: Learn how to build a declarative agent for Microsoft 365 Copilot using Teams Toolkit.
+  title: Create declarative agents using Microsoft 365 Agents Toolkit
+  description: Learn how to build a declarative agent for Microsoft 365 Copilot using Microsoft 365 Agents Toolkit.
   audience: Developer
   level: Beginner
   displayType: one-column
-  ms.date: 04/03/2025
+  ms.date: 05/19/2025
   author: sebastienlevert
   ms.author: slevert
   ms.topic: tutorial
