@@ -88,7 +88,7 @@ Users do not need a Copilot license to access custom engine agents in Microsoft 
 
 Custom engine agents are hosted outside of Microsoft 365 Copilot using your own orchestrator and/or models. Hosting these agents might incur additional hosting costs, such as:
 
-- **Copilot Studio** – For users with the Microsoft 365 Copilot add-on license, which includes Copilot Studio, agents built in Copilot Studio for Microsoft Teams, SharePoint, and Copilot Chat are included at no extra charge. For users without a Microsoft 365 Copilot add-on license, users might need to purchase a Copilot Studio license as a standalone SKU or part of a Power Platform plan. Usage might be metered or subject to Power Platform capacity limits.
+- **Copilot Studio** – For users with the Microsoft 365 Copilot add-on license, agents built in Copilot Studio for Microsoft Teams, SharePoint, and Copilot Chat are included at no extra charge. Users without a Microsoft 365 Copilot license might need to purchase a Copilot Studio license or Power Platform plan. Usage might be metered or subject to Power Platform capacity limits.
 - **Azure AI Services** – For AI-powered processing and natural language understanding. See [Azure AI services pricing](https://azure.microsoft.com/pricing/details/cognitive-services/).  
 - **Azure App Service** – For hosting services and APIs that support your agent. See [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/).  
 - **Azure Bot Service** – For publishing agents across multiple channels. See [Azure AI Bot Service pricing](https://azure.microsoft.com/pricing/details/bot-services/).
