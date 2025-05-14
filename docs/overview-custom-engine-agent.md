@@ -45,9 +45,9 @@ For pro-code development, you can use Visual Studio or Visual Studio Code with t
 
 When building gents with the toolkit, you can choose between two SDKs depending on your needs.
 
-#### Microsoft 365 Agents SDK (preview)
+#### Microsoft 365 Agents SDK
 
-The [Microsoft 365 Agents SDK (preview)](/microsoft-365/agents-sdk/) is a framework designed for building full-stack, multi-channel agents that can operate across Microsoft 365 Copilot, Teams, third-party platforms, custom applications, and websites.
+The [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/) is a framework designed for building full-stack, multi-channel agents that can operate across Microsoft 365 Copilot, Teams, third-party platforms, custom applications, and websites.
 
 It's ideal for use cases that require custom orchestration using frameworks like Semantic Kernel or LangChain, and supports integration with any AI models or services. This SDK is best suited for organizations or ISVs that need highly tailored agents with advanced capabilities and the ability to operate across multiple channels.
 
@@ -64,10 +64,10 @@ The following table provides a quick comparison of the available approaches.
 |       **Feature**              | **Copilot Studio**                                         | **Teams AI**                                              | **Agents SDK**                                               |
 |---------------------|------------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------|
 | Development aproach        | Low-code                                                   | Pro-code                                                   | Pro-code                                                    |
-| Toolin        | Copilot Studio UI                                          | Visual Studio Code/Visual Studio with Teams AI Library              | Visual Studio Code/Visual Studio with Microsoft 365 Agents Toolkit            |
-| Publishing      | My organization</ br>ISV/store                                 | My organization</ br>ISV/store                                 | My organization</ br>ISV/store                                  |
+| Tooling        | Copilot Studio UI                                          | Visual Studio Code/Visual Studio with Teams AI Library              | Visual Studio Code/Visual Studio with Microsoft 365 Agents Toolkit            |
+| Publishing      | My organization<br>ISV/store                                 | My organization<br>ISV/store                                 | My organization<br>ISV/store<br>10+ channels                                  |
 | Channels        | Microsoft 365 Copilot, Teams, third-party apps, mobile apps, and custom websites | Microsoft 365 Copilot, Teams                          | Microsoft 365 Copilot, Teams, third-party apps, mobile apps, and custom websites |
-| Productivity    | Individual                                                 | Group                                                      | Individual                                                  |
+| Productivity    | Individual                                                 | Group                                                      | Group                                                  |
 | Orchestrator    | Copilot Studio                                             | Teams AI Action Planner                                    | Bring your own (for example, Semantic Kernel, LangChain)          |
 | AI Models       | Copilot Studio                                             | Any model of your choice                                   | Any model of your choice                                    |
 | Supported programming languages | Not applicable (low-code)                            | C#, TypeScript, JavaScript, Python                          | C#, JavaScript, Python                                      |
