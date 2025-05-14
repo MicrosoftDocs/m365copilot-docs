@@ -48,19 +48,18 @@ The following samples implement Microsoft Graph connectors that extend Microsoft
 
 | Sample | Description |
 |--------|-------------|
-| [TypeScript policies connector](https://adoption.microsoft.com/en-us/sample-solution-gallery/sample/pnp-graph-connector-nodejs-typescript-policies/) | This sample contains a Microsoft Graph connector that shows how to ingest local policies into Microsoft 365. For each file, it extracts the metadata from front matter, maps them to the external connection's schema, and ingests the content, retaining the content and metadata. The ingested content is set to be visible to everyone in the organization. |
-| [.NET Microsoft Graph docs connector](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-graph-connector-dotnet-csharp-graphdocs-ttk/) | This sample .NET project shows you how to build a Microsoft Graph connector to ingest unstructured data to Microsoft 365 and make it available to Microsoft 365 Copilot. The project uses Teams Toolkit for Visual Studio to package the connector as a Microsoft Teams app and simplify its deployment in the organization. |
+| [TypeScript policies connector](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-graph-connector-nodejs-typescript-policies/) | This sample contains a Microsoft Graph connector that shows how to ingest local policies into Microsoft 365. For each file, it extracts the metadata from front matter, maps them to the external connection's schema, and ingests the content, retaining the content and metadata. The ingested content is set to be visible to everyone in the organization. |
+| [.NET Microsoft Graph docs connector](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-graph-connector-dotnet-csharp-graphdocs-ttk/) | This sample .NET project shows you how to build a Microsoft Graph connector to ingest unstructured data to Microsoft 365 and make it available to Microsoft 365 Copilot. The project uses Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) for Visual Studio to package the connector as a Microsoft Teams app and simplify its deployment in the organization. |
 | [.NET GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-dotnet) | This .NET application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 Copilot app, and more. |
 | [Python GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-python) | This Python application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 Copilot app, and more. |
 | [TypeScript GitHub connector](https://github.com/microsoftgraph/msgraph-sample-github-connector-typescript) | This TypeScript application shows you how to use the Microsoft Graph connector API to create a custom connector that indexes issues and repositories from GitHub. This connector sample powers experiences such as Microsoft Search, Copilot in Teams, the Microsoft 365 Copilot app, and more. |
 
 ## Community samples
 
-You can find the latest list of samples from the community in the [Microsoft Adoption center sample solution gallery](https://adoption.microsoft.com/en-us/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1):
+You can find the latest list of samples from the community in the [Microsoft Adoption center sample solution gallery](https://adoption.microsoft.com/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1):
 
-- [Microsoft 365 Copilot samples](https://adoption.microsoft.com/en-us/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Microsoft+365+Copilot)
-- [Microsoft Graph connector samples](https://adoption.microsoft.com/en-us/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Microsoft+Graph+connectors)
-
+- [Microsoft 365 Copilot samples](https://adoption.microsoft.com/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Microsoft+365+Copilot)
+- [Microsoft Graph connector samples](https://adoption.microsoft.com/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Microsoft+Graph+connectors)
 
 ## Related content
 

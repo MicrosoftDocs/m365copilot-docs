@@ -103,7 +103,7 @@ The way you describe your plugin to the orchestrator depends on the type of plug
 
 There are two tools developers can use to generate API plugin packages.
 
-- The [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) in [Visual Studio](https://visualstudio.microsoft.com/) or [Visual Studio Code](https://code.visualstudio.com/) can create plugin packages based on an existing OpenAPI description. If you don't have an existing API, Teams Toolkit also has starter projects with an example API and corresponding plugin package.
+- The Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) in [Visual Studio](https://visualstudio.microsoft.com/) or [Visual Studio Code](https://code.visualstudio.com/) can create plugin packages based on an existing OpenAPI description. If you don't have an existing API, Agents Toolkit also has starter projects with an example API and corresponding plugin package.
 - [Kiota](/openapi/kiota/overview) is a command line tool and a Visual Studio Code extension that can generate plugin packages based on an existing OpenAPI description.
 
 ## Limitations

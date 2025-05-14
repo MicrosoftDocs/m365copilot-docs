@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-In this section, you add the [people capability](../../knowledge-sources.md#people-knowledge) to the declarative agent. The people capability allows you to scope your agent to answer questions about individuals in an organization.
+In this section, you add the [people capability](../../knowledge-sources.md#people) to the declarative agent. The people capability allows you to scope your agent to answer questions about individuals in an organization.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `People` entry to the `capabilities` array.
 
@@ -35,7 +35,7 @@ In this section, you add the [people capability](../../knowledge-sources.md#peop
     ]
     ```
 
-    For more information, see [People object](../../declarative-agent-manifest-1.3.md#people-object).
+    For more information, see [People object](../../declarative-agent-manifest-1.4.md#people-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
 

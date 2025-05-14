@@ -98,7 +98,7 @@ The following table lists the low-code and pro-code options that are available b
 
 | Agent type        | Low-code tool options                                 | Pro-code tool options                                      |
 |-------------------|--------------------------------------------------------|------------------------------------------------------------|
-| Declarative agent | <ul><li>Copilot Studio agent builder</li><li>>Copilot Studio</li></ul>      | Visual Studio Code + Teams Toolkit                          |
+| Declarative agent | <ul><li>Copilot Studio agent builder</li><li>>Copilot Studio</li></ul>      | Visual Studio Code + Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit))                          |
 | Custom engine agent| Copilot Studio                                        | <ul><li>Visual Studio Code + Teams AI Library</li><li>Visual Studio Code + Microsoft 365 Agent SDK (Preview)</li><li>Visual Studio 2022</li><li>Semantic Kernel (optional)</li></ul> |
 
 Next, identify the data sources or plugins your agent needs. Data sources might be Microsoft 365 data (Teams messages, email, people, SharePoint sites or folders), Microsoft Graph connectors (prebuilt or custom), or plugins (for real-time data access or external actions).
@@ -114,7 +114,7 @@ Consider the cost implications of your solution design, from both the user and h
 Regardless of the solution you choose, you need to be sure that it meets RAI and compliance requirements. Consider the following:
 
 - Does your Copilot extensibility solution require a specific LLM model or fine-tuning for specialized tasks, such as legal research or medical compliance? If so, for information about how to integrate the model with and optimize it for Copilot, see [How to Choose the Right Models for Your Apps | Azure AI](https://techcommunity.microsoft.com/blog/microsoftmechanicsblog/how-to-choose-the-right-models-for-your-apps--azure-ai/4271216?form=MG0AV3).
-- Make sure that your solution applies [Responsible AI (RAI) principles](https://www.microsoft.com/en-us/ai/responsible-ai), data governance, and store publishing (for ISVs) requirements.
+- Make sure that your solution applies [Responsible AI (RAI) principles](https://www.microsoft.com/ai/responsible-ai), data governance, and store publishing (for ISVs) requirements.
 
 ## Outline your development approach
 

@@ -8,10 +8,9 @@ ms.date: 05/05/2025
 ms.topic: overview
 ---
 
-
 # Custom engine agents for Microsoft 365 overview
 
-Custom engine agents expand the capabilities of Microsoft 365 Copilot by allowing organizations to build AI-powered assistants tailored to their specific needs. Unlike standard Copilot experiences, custom engine agents provide full control over orchestration, AI models, and data integrations, enabling businesses to create advanced workflows that align with their unique requirements.  
+Custom engine agents expand the capabilities of Microsoft 365 Copilot by allowing organizations to build AI-powered assistants tailored to their specific needs. Unlike standard Copilot experiences, custom engine agents provide full control over orchestration, AI models, and data integrations, enabling businesses to create advanced workflows that align with their unique requirements.
 
 This article guides you through capabilities and options for building a custom engine agent.
 
@@ -41,7 +40,7 @@ This approach is ideal for organizations looking to build and scale custom engin
 
 ### Pro-code approach
 
-For pro-code development, you can use Visual Studio or Visual Studio Code with the Microsoft 365 Agents Toolkit (an evolution of Teams Toolkit) extension. This toolkit streamlines agent development by providing prebuilt templates, easy debugging, and streamlined deployment workflows—ideal for developers who want a fully customized experience.
+For pro-code development, you can use Visual Studio or Visual Studio Code with the Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) extension. This toolkit streamlines agent development by providing prebuilt templates, easy debugging, and streamlined deployment workflows—ideal for developers who want a fully customized experience.
 
 When building gents with the toolkit, you can choose between two SDKs depending on your needs.
 
@@ -61,23 +60,23 @@ This option is ideal for organizations looking to build collaborative agents tha
 
 The following table provides a quick comparison of the available approaches.
 
-|       **Feature**              | **Copilot Studio**                                         | **Teams AI**                                              | **Agents SDK**                                               |
-|---------------------|------------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------|
-| Development aproach        | Low-code                                                   | Pro-code                                                   | Pro-code                                                    |
-| Tooling        | Copilot Studio UI                                          | Visual Studio Code/Visual Studio with Teams AI Library              | Visual Studio Code/Visual Studio with Microsoft 365 Agents Toolkit            |
-| Publishing      | My organization<br>ISV/store                                 | My organization<br>ISV/store                                 | My organization<br>ISV/store<br>10+ channels                                  |
-| Channels        | Microsoft 365 Copilot, Teams, third-party apps, mobile apps, and custom websites | Microsoft 365 Copilot, Teams                          | Microsoft 365 Copilot, Teams, third-party apps, mobile apps, and custom websites |
-| Productivity    | Individual                                                 | Group                                                      | Group                                                  |
-| Orchestrator    | Copilot Studio                                             | Teams AI Action Planner                                    | Bring your own (for example, Semantic Kernel, LangChain)          |
-| AI Models       | Copilot Studio                                             | Any model of your choice                                   | Any model of your choice                                    |
-| Supported programming languages | Not applicable (low-code)                            | C#, TypeScript, JavaScript, Python                          | C#, JavaScript, Python                                      |
+| Feature                         | Copilot Studio | Teams AI | Agents SDK |
+|---------------------------------|----------------|----------|------------|
+| Development approach            | Low-code | Pro-code | Pro-code |
+| Tooling                         | Copilot Studio UI | Visual Studio Code/Visual Studio with Teams AI Library | Visual Studio Code/Visual Studio with Microsoft 365 Agents Toolkit |
+| Publishing                      | My organization<br>ISV/store | My organization<br>ISV/store | My organization<br>ISV/store<br>10+ channels |
+| Channels                        | Microsoft 365 Copilot, Teams, third-party apps, mobile apps, and custom websites | Microsoft 365 Copilot, Teams | Microsoft 365 Copilot, Teams, third-party apps, mobile apps, and custom websites |
+| Productivity                    | Individual | Group | Group |
+| Orchestrator                    | Copilot Studio | Teams AI Action Planner | Bring your own (for example, Semantic Kernel, LangChain) |
+| AI Models                       | Copilot Studio | Any model of your choice | Any model of your choice |
+| Supported programming languages | Not applicable (low-code) | C#, TypeScript, JavaScript, Python | C#, JavaScript, Python |
 
 ### Key considerations
 
 The following considerations apply to choosing your development tool:
 
 - **Publishing scope** - Only agents built with the Teams AI Library or Microsoft 365 Agents SDK can be published to the Microsoft Commercial Store with the Agents Toolkit.
-- **Group productivity** - For multiuser scenarios, especially in Teams, consider the Teams AI Library for its built-in support for collaborative channels and meetings.
+- **Group productivity** - For multi-user scenarios, especially in Teams, consider the Teams AI Library for its built-in support for collaborative channels and meetings.
 - **Customization needs** - If you need full control over AI models or orchestration, opt for a pro-code approach with Microsoft 365 Agents SDK.
 - **Knowledge source access** - Copilot Studio agents have native access to Microsoft 365 and Microsoft Graph connector content. Agents built with a pro-code approach can access the same data via Microsoft Graph APIs.
 
@@ -85,9 +84,9 @@ The following considerations apply to choosing your development tool:
 
 The following table provides scenario examples and the recommended development approach for each.
 
-| **Scenario**                  | **Description**                                                                                                                                                                                                                                                                                                      | **Recommended approach**                                                                                                                                                                                                                                                                                    |
-|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Legal case analysis**      | A law firm creates a standalone AI agent using Azure AI Foundry. The agent uses a custom-trained LLM for case law analysis and integrates with external legal databases. The agent is used in the firm's case management system but should also be accessible within Microsoft 365 Copilot and have access to documents in SharePoint. | Because the agent runs in both the law firm's internal case management system (a custom-built app) and Microsoft 365, use the **Microsoft 365 Agent SDK** for multi-channel publishing and integration with a custom trained LLM.                                     |
+| Scenario                            | Description | Recommended approach |
+|-------------------------------------|-------------|----------------------|
+| **Legal case analysis**             | A law firm creates a standalone AI agent using Azure AI Foundry. The agent uses a custom-trained LLM for case law analysis and integrates with external legal databases. The agent is used in the firm's case management system but should also be accessible within Microsoft 365 Copilot and have access to documents in SharePoint. | Because the agent runs in both the law firm's internal case management system (a custom-built app) and Microsoft 365, use the **Microsoft 365 Agent SDK** for multi-channel publishing and integration with a custom trained LLM. |
 | **Surgical planning in healthcare** | A hospital builds an agent for surgical teams to plan and schedule surgeries. The agent collaborates with doctors, nurses, and administrative staff and integrates with Patient Information and scheduling systems. The agent facilitates collaboration with all members of the team to plan, create appointments, resolve conflicts, and set reminders and notifications. | Because the agent will be used in a team setting across multiple users, publishing this agent within a Teams channel or meeting will facilitate collaboration across all users. <br>This agent will be built with the **Teams AI Library** and can connect to the patient information and scheduling systems. |
 
 ## Design and deployment considerations
