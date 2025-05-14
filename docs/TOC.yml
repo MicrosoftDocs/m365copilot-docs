@@ -19,8 +19,8 @@
   items:
   - name: Planning guide
     href: planning-guide.md
-  - name: Choose your extensibility path
-    href: decision-guide.md
+  - name: Cost considerations
+    href: cost-considerations.md
   - name: Set up your dev environment
     href: prerequisites.md
   - name: Samples collection
@@ -30,8 +30,10 @@
 - name: Build an agent
   expanded: true
   items:
+  - name: Agents overview
+    href: agents-overview.md
   - name: Build a declarative agent
-    expanded: true
+    expanded: false
     items:
     - name: Declarative agents overview
       href: overview-declarative-agent.md
@@ -46,6 +48,33 @@
         href: build-declarative-agents.yml
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
+      - name: Add actions with API plugins
+        items:
+        - name: Overview
+          href: overview-api-plugins.md
+        - name: Build an API plugin with a new API
+          href: build-api-plugins-new-api.md
+        - name: Build an API plugin from an existing API
+          href: build-api-plugins-existing-api.md
+        - name: Build an API plugin with an Office JavaScript Library API
+          href: build-api-plugins-local-office-api.md
+        - name: Authentication
+          href: api-plugin-authentication.md
+        - name: Adaptive Card responses
+          href: api-plugin-adaptive-cards.md
+          displayName: response, response_semantics
+        - name: Confirmation prompts
+          href: api-plugin-confirmation-prompts.md
+        - name: Debug locally
+          href: api-plugin-debug-local.md
+        - name: Best practices for writing OpenAPI specs
+          href: openapi-document-guidance.md
+        - name: API plugin manifest reference
+          items:
+          - name: Version 2.2
+            href: api-plugin-manifest-2.2.md
+          - name: Version 2.1
+            href: api-plugin-manifest-2.1.md
       - name: Declarative agent manifest reference
         items:
         - name: Version 1.3
@@ -90,6 +119,21 @@
         href: copilot-studio-agent-builder-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
+        items:
+        - name: Add actions with Copilot Studio
+          items:
+          - name: Copilot connectors on Copilot Studio overview
+            href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
+          - name: Copilot Studio actions
+            href: overview-business-applications.md
+          - name: Connector actions
+            href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
+          - name: Power Automate flow actions
+            href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
+          - name: Prompts
+            href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+          - name: Learning path
+            href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
     - name: Write effective instructions
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
@@ -334,6 +378,8 @@
     href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
   - name: Connector experiences
     href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
+  - name: Prebuilt connectors gallery
+    href: /microsoftsearch/connectors-gallery?context=/microsoft-365-copilot/extensibility/context
   - name: Connectors API
     href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/extensibility/context
   - name: Build your first connector
@@ -350,50 +396,6 @@
     href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
   - name: API limits
     href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
-- name: Add skills with actions
-  expanded: true
-  items:
-  - name: API plugins
-    items:
-    - name: Overview
-      href: overview-api-plugins.md
-    - name: Build an API plugin with a new API
-      href: build-api-plugins-new-api.md
-    - name: Build an API plugin from an existing API
-      href: build-api-plugins-existing-api.md
-    - name: Build an API plugin with an Office JavaScript Library API
-      href: build-api-plugins-local-office-api.md
-    - name: Authentication
-      href: api-plugin-authentication.md
-    - name: Adaptive Card responses
-      href: api-plugin-adaptive-cards.md
-      displayName: response, response_semantics
-    - name: Confirmation prompts
-      href: api-plugin-confirmation-prompts.md
-    - name: Debug locally
-      href: api-plugin-debug-local.md
-    - name: Best practices for writing OpenAPI specs
-      href: openapi-document-guidance.md
-    - name: API plugin manifest reference
-      items:
-      - name: Version 2.2
-        href: api-plugin-manifest-2.2.md
-      - name: Version 2.1
-        href: api-plugin-manifest-2.1.md
-  - name: Copilot Studio connectors and actions
-    items:
-    - name: Copilot connectors on Copilot Studio overview
-      href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
-    - name: Copilot Studio actions
-      href: overview-business-applications.md
-    - name: Connector actions
-      href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-    - name: Power Automate flow actions
-      href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
-    - name: Prompts
-      href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
-    - name: Learning path
-      href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
 - name: Publish
   items:
   - name: Overview
