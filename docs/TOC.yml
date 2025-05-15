@@ -139,7 +139,6 @@
     - name: Write instructions for agents with API plugins
       href: instructions-api-plugins.md
     - name: Add capabilities and knowledge sources
-      expanded: false
       items:
       - name: Code interpreter
         href: code-interpreter.md

@@ -14,6 +14,16 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## May 2025
+
+### Declarative agent manifest version 1.4
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.4](declarative-agent-manifest-1.4.md) adds the following.
+
+- Added the `sensitivity_label`, `disclaimer`, and `behavior_overrides` properties to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object).
+- Added the `part_type` and `part_id` properties to the [Items by SharePoint IDs object](declarative-agent-manifest-1.4.md#items-by-sharepoint-ids-object).
+- Added the [Scenario models](declarative-agent-manifest-1.4.md#scenario-models-object) capability.
+
 ## April 2025
 
 ### Copilot Studio message usage rates

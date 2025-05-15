@@ -55,7 +55,7 @@ The declarative agent manifest object contains the following properties.
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than six objects in the array. |
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
 
-### Example of declarative agent manifest object
+### Declarative agent manifest object example
 
 The following JSON is an example of required fields within a declarative agent manifest.
 
@@ -78,7 +78,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 > [!NOTE]
 > Declarative agents with the OneDrive and SharePoint or Microsoft Graph connectors capability are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license.
 
-#### Example of capabilities
+#### Capabilities object example
 
 ```json
 {
@@ -143,7 +143,7 @@ For information about how to optimize SharePoint content for Copilot, see [Optim
 
 ##### Items by SharePoint IDs object
 
-The Items by SharePoint IDs object contains the following properties.
+The items by SharePoint IDs object contains the following properties.
 
 | Property    | Type   | Description |
 | ----------- | ------ | ----------- |
@@ -157,7 +157,7 @@ The Items by SharePoint IDs object contains the following properties.
 
 ##### Items by URL object
 
-The Items by URL object contains the following properties.
+The items by URL object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
@@ -198,7 +198,7 @@ The conversation starter object contains the following properties:
 | `text`   | String | Required. Localizable. A suggestion that the user can use to obtain the desired result from the declarative agent. It MUST contain at least one nonwhitespace character. |
 | `title`  | String | Optional. Localizable. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
 
-### Conversation starters object example
+#### Conversation starters object example
 
 ```json
 {
