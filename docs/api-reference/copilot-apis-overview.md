@@ -43,9 +43,13 @@ Start integrating and unlocking the full potential of the Copilot APIs in your a
 
 ### Prerequisites
 
-Ensure you have access to a Microsoft 365 tenant (E3 or E5 recommended) and that a Microsoft 365 Copilot license is assigned to your user account within that tenant. These APIs are only available for Microsoft 365 Copilot licensed users.
+Ensure you have access to the following:
 
-### Explore the Copilot APIs using REST
+- Microsoft 365 Copilot license: Required for each user who will access Microsoft 365 Copilot functionality via these APIs. This license provides access to the AI capabilities that power the APIs. 
+
+- Microsoft 365 subscription: An E3 or E5 subscription (or equivalent) is required as the foundation for Microsoft 365 Copilot. This subscription provides access to the Microsoft 365 services and data that Copilot builds upon. 
+
+### REST API integration
 
 The Copilot APIs are available as standard REST APIs in the `https://graph.microsoft.com/copilot` endpoint in Microsoft Graph API. This integration makes the APIs accessible from any programming language or platform that supports HTTP requests. They use the same [authentication and authorization](/graph/auth/) process as other Microsoft Graph APIs. All Copilot APIs respect your organization’s existing policies. This includes identity access, Conditional Access, sensitivity labels and permission trimming, by default.
 
