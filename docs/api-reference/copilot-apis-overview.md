@@ -63,4 +63,3 @@ While the Microsoft Graph APIs generally provide CRUD operations on Microsoft 36
 - [Find out how to get an auth token in your app.](/graph/auth/auth-concepts)
 - [Get all enterprise interactions](/graph/api/aiinteractionhistory-getallenterpriseinteractions?view=graph-rest-beta&tabs=http)
 - [Call AI insight](graph/api/resources/callaiinsight)
-
