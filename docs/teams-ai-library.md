@@ -1,0 +1,31 @@
+---
+title: Build custom engine agents with Teams AI Library
+description: Introduction of Teams AI Library v2 SDK to build custom engine agents
+author: girliemac
+ms.author: timura
+ms.localizationpriority: medium
+ms.date: 05/19/2025
+ms.topic: overview
+---
+
+# Build custom engine agents with Teams AI Library
+
+[Teams AI library](/microsoftteams/platform/teams-ai-library/welcome/overview) is a Teams-centric interface for integrating GPT-based language models and user intent engines. It includes a built-in action planner orchestrator and simplifies the development process by reducing the need to write and maintain complex conversational bot logic.
+
+:::image type="content" source="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response." lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png":::
+
+Now with the new v2 SDK, it reduces boilerplate code and dependencies while providing native AI and Teams abstractions.
+
+## When to use Teams AI Library v2
+
+- You are looking to tailor model selection, but want to use an orchestrator provided by SDK.
+- You want to apply your prior experience with Teams bot development.
+- You want to make your agents available to all Microsoft 365 users.
+- You want your agents interact in real time with users in a collaborative team-based environment.
+
+## Next step
+
+Ready to build your first agent with the Teams AI Library v2? Let's get started now!
+
+> [!div class="nextstepaction"]
+> [Teams AI Library v2 documentation (preview)](/microsoft-365/agents-sdk/agents-sdk-overview)
