@@ -71,6 +71,8 @@
           href: openapi-document-guidance.md
         - name: API plugin manifest reference
           items:
+          - name: Version 2.3
+            href: api-plugin-manifest-2.3.md
           - name: Version 2.2
             href: api-plugin-manifest-2.2.md
           - name: Version 2.1

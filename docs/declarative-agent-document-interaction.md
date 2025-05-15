@@ -40,7 +40,7 @@ Declarative agents have access to document selection by default. No changes are 
 If your agent includes [API plugins](overview-api-plugins.md) as custom actions, the agent can provide the document selection to the API. The agent translates the document selection based on your API specification. You should ensure that the selection is translated appropriately for your API.
 
 1. Begin by testing your agent without adding any special instructions to your agent. In most cases, the agent should translate the selection appropriately for your API without any extra configuration.
-1. If your agent doesn't translate appropriately for your API, add instructions in the plugin manifest's `reasoning` [state object](api-plugin-manifest-2.2.md#state-object) to instruct the agent on which form to choose.
+1. If your agent doesn't translate appropriately for your API, add instructions in the plugin manifest's `reasoning` [state object](api-plugin-manifest-2.3.md#state-object) to instruct the agent on which form to choose.
 1. Test various selections to verify your agent handles different types and lengths of selection appropriately.
 
 Here are some examples of instructions to influence how the agent translates the document selection. The actual instructions needed to get the desired result depend on your agent and your API.
@@ -102,6 +102,6 @@ Enabling image insertion in a declarative agent requires an API plugin that uses
 ## Related content
 
 - [API plugins for Microsoft 365 Copilot](overview-api-plugins.md)
-- [API plugin manifest schema 2.2 for Microsoft 365 Copilot](api-plugin-manifest-2.2.md)
+- [API plugin manifest schema 2.2 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md)
 - [Adaptive Card response templates for API plugins for Microsoft 365 Copilot](api-plugin-adaptive-cards.md)
 - [Adaptive Card documentation](https://adaptivecards.microsoft.com)

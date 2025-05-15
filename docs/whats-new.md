@@ -16,6 +16,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## May 2025
 
+### API plugin manifest version 2.3
+
+A new version of the API plugin manifest schema is available. [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md) adds support [calling functions in an Office Add-in](build-api-plugins-local-office-api.md).
+
 ### Declarative agent manifest version 1.4
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.4](declarative-agent-manifest-1.4.md) adds the following.

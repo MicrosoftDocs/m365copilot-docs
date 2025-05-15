@@ -1,5 +1,5 @@
 {
-  "schema_version": "v2.2",
+  "schema_version": "v2.3",
   "name_for_human": "Contoso Real Estate",
   "description_for_human": "Find up-to-date, detailed real estate properties for sale on the market",
   "description_for_model": "Plugin for finding properties for sale. Use it whenever a user asks about real estate properties for sale on the market. This plugin can be used to search for properties in a particular city, and with a given number of bedrooms, bathrooms, and amenities.",
@@ -158,6 +158,43 @@
           ]
         }
       }
+    },
+    {
+      "name": "FillColor",
+      "description": "FillColor changes a single cell location to a specific color.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "Cell": {
+            "type": "string",
+            "description": "A cell location in the format of A1, B2, etc.",
+            "default": "B2"
+          },
+          "Color": {
+            "type": "string",
+            "description": "A color in hex format, e.g., #30d5c8",
+            "default": "#30d5c8"
+          }
+        },
+        "required": [
+          "Cell",
+          "Color"
+        ]
+      },
+      "returns": {
+        "type": "string",
+        "description": "A string indicating the result of the action."
+      },
+      "states": {
+        "reasoning": {
+          "description": "`FillColor` changes the color of a single cell based on the grid location and a color value.",
+          "instructions": "The user will pass ask for a color that isn't in the hex format needed in most cases, make sure to convert to the closest approximation in the right format."
+        },
+        "responding": {
+          "description": "`FillColor` changes the color of a single cell based on the grid location and a color value.",
+          "instructions": "If there is no error present, tell the user the cell location and color that was set."
+        }
+      }
     }
   ],
   "runtimes": [
@@ -173,6 +210,15 @@
       ],
       "spec": {
         "url": "http://contoso.com/openapi.yaml"
+      }
+    },
+    {
+      "type": "LocalPlugin",
+      "run_for_functions": [
+        "FillColor"
+      ],
+      "spec": {
+        "local_endpoint": "Microsoft.Office.Addin"
       }
     }
   ],
