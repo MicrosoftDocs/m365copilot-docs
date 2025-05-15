@@ -1,31 +1,32 @@
 ---
-title: API plugin manifest schema 2.2 for Microsoft 365 Copilot
-description: Learn about the 2.2 schema for a manifest file for an API plugin in Microsoft 365 Copilot
+title: API plugin manifest schema 2.3 for Microsoft 365 Copilot
+description: Learn about the 2.3 schema for a manifest file for an API plugin in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/13/2024
+ms.date: 05/19/2025
 ms.topic: reference
 ---
 
-# API plugin manifest schema 2.2 for Microsoft 365 Copilot
+# API plugin manifest schema 2.3 for Microsoft 365 Copilot
 
 API plugins enable Microsoft 365 Copilot to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
 
-The following article describes the 2.2 schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
-
-[!INCLUDE [latest-plugin-manifest](includes/latest-plugin-manifest.md)]
+The following article describes the 2.3 schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
 
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 2.1](api-plugin-manifest-2.1.md).
+This schema version introduces the following changes from [version 2.2](api-plugin-manifest-2.2.md).
 
-- Added the `security_info` property to the [Function capabilities object](#function-capabilities-object). This property allows you to attest to the behavior of the plugin in order to assess the risks of calling the function.
-- Removed the deprecated `localization` property from the [plugin capabilities object](#plugin-capabilities-object). Manifests generated with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) using the 2.1 schema included the deprecated `localization` property. Manifests using the 2.2 schema fail validation if this property is included.
+- Added support for [calling functions in an Office Add-in](build-api-plugins-local-office-api.md).
+  - Renamed the OpenAPI runtime object to [Runtime object](#runtime-object) and made the following changes.
+    - Added a new value for the `type` property: `LocalPlugin`.
+    - Change the type of the `spec` property to [OpenAPI specification object](#openapi-specification-object) or [Local endpoint specification object](#local-endpoint-specification-object).
+  - Added the [Local endpoint specification object](#local-endpoint-specification-object)
 
 ## JSON schema
 
-The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/plugin/v2.2/schema.json).
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/plugin/v2.3/schema.json).
 
 ## Conventions
 
@@ -49,7 +50,7 @@ Localizable strings can use a localization key instead of a literal value. The s
 
 ```json
 {
-    "schema_version": "v2.2",
+    "schema_version": "v2.3",
     "name_for_human": "[[plugin_name]]",
     "description_for_human": "[[plugin_description]]"
 }
@@ -63,7 +64,7 @@ The plugin manifest object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.2`. |
+| `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.3`. |
 | `name_for_human` | String | Required. A short, human-readable name for the plugin. It MUST contain at least one nonwhitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
 | `namespace` | String | Deprecated. Optional. |
 | `description_for_model` | String | Optional. The description for the plugin that is provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
@@ -73,7 +74,7 @@ The plugin manifest object contains the following properties.
 | `legal_info_url` | String | Optional. An absolute URL that locates a document containing the terms of service for the plugin. This property is localizable. |
 | `privacy_policy_url` | String | Optional. An absolute URL that locates a document containing the privacy policy for the plugin. This property is localizable. |
 | `functions` | Array of [Function object](#function-object) | Optional. A set of function objects describing the functions available to the plugin. Each function object name MUST be unique within the array. The order of the array isn't significant. If the `functions` property isn't present and there's an OpenAPI runtime, the functions are inferred from the OpenAPI operations. |
-| `runtimes` | Array of [OpenAPI runtime object](#openapi-runtime-object) | Optional. A set of runtime objects describing the runtimes used by the plugin. |
+| `runtimes` | Array of [Runtime object](#runtime-object) | Optional. A set of runtime objects describing the runtimes used by the plugin. |
 | `capabilities` | [Plugin capabilities object](#plugin-capabilities-object) | Optional. Describes capabilities of the plugin. |
 
 ### Function object
@@ -396,7 +397,7 @@ The security info object contains the following properties.
 | `DataExport`          | Indicates that the function sends or writes data to a location outside of the function itself. | A function that saves data to a local or cloud file. |
 | `ResourceStateUpdate` | Indicates that the function affects a resource by initiating a transaction, changing a process in the real world, granting or denying permissions, or performing any other action that would require explicit user confirmation. | A function that books a hotel room or changes the state of a work item from `active` to `resolved`. |
 
-### OpenAPI runtime object
+### Runtime object
 
 Describes how the plugin invokes OpenAPI functions.
 
@@ -404,10 +405,10 @@ The OpenAPI runtime object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `type` | String | Required. Identifies this runtime as an OpenAPI runtime. Must be set to `OpenApi`. |
+| `type` | String | Required. Identifies the type of runtime. Valid values are `OpenApi` and `LocalPlugin`. |
 | `auth` | [Runtime authentication object](#runtime-authentication-object) | Required. Authentication information required to invoke the runtime. |
 | `run_for_functions` | Array of String | Optional. The names of the functions that are available in this runtime. If this property is omitted, all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
-| `spec` | [OpenAPI specification object](#openapi-specification-object) | Required. Contains the OpenAPI information required to invoke the runtime. |
+| `spec` | [OpenAPI specification object](#openapi-specification-object) or [Local endpoint specification object](#local-endpoint-specification-object) | Required. Contains the OpenAPI information required to invoke the runtime. |
 
 #### OpenAPI specification object
 
@@ -439,6 +440,17 @@ The OpenAPI specification object contains the following properties.
   ]
 }  
 ```
+
+#### Local endpoint specification object
+
+Contains local endpoint information required to invoke the runtime.
+
+The local endpoint specification object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `local_endpoint` | String | Required. MUST be set to `Microsoft.Office.Addin`. |
+| `allowed_host` | Array of  String | Optional. Specifies the host apps the plugin can run in. Valid values are `document`, `mail`, `presentation`, and `workbook`. |
 
 #### Runtime authentication object
 
@@ -498,7 +510,7 @@ The conversation starter object contains the following properties.
 
 Here's an example of a plugin manifest file that uses most of the manifest properties and object properties described in the article:
 
-:::code language="json" source="includes/sample-manifests/plugin-sample-manifest-2.2.json":::
+:::code language="json" source="includes/sample-manifests/plugin-sample-manifest-2.3.json":::
 
 ## Related content
 

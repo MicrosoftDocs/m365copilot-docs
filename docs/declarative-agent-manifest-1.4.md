@@ -1,31 +1,31 @@
 ---
-title: Declarative agent schema 1.3 for Microsoft 365 Copilot
-description: Learn about the 1.3 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
+title: Declarative agent schema 1.4 for Microsoft 365 Copilot
+description: Learn about the 1.4 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 03/24/2025
+ms.date: 05/19/2025
 ms.topic: reference
 ---
 
-# Declarative agent schema 1.3 for Microsoft 365 Copilot
+# Declarative agent schema 1.4 for Microsoft 365 Copilot
 
-This article describes the 1.3 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
+This article describes the 1.4 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 1.2](declarative-agent-manifest-1.2.md):
+This schema version introduces the following changes from [version 1.3](declarative-agent-manifest-1.3.md):
 
-- The [Dataverse](#dataverse-object) capability is added to the list of `capabilities`. It supports an array of objects in the `knowledge_sources` field that contain Dataverse instances.
-- The [Teams messages](#teams-messages-object) capability is added to the list of `capabilities`. It supports an array of objects in the `urls` field that contain well-formatted Teams URLs to Team channel, team, or meeting chat.
-- The [Email](#email-object) capability is added to the list of `capabilities`. It supports a shared mailbox and an array of folder IDs for the agent to search.
-- The [People](#people-object) capability is added to the list of `capabilities`. This capability is unscoped and allows agents to search for information about people in an organization.
+- Added the `sensitivity_label`, `disclaimer`, and `behavior_overrides` properties to the [declarative agent manifest object](#declarative-agent-manifest-object).
+- Added the `part_type` and `part_id` properties to the [items by SharePoint IDs object](#items-by-sharepoint-ids-object).
+- Added additional properties to the [Connection object](#connection-object), allowing scoping of Microsoft Graph connector content.
+- Added the [scenario models](#scenario-models-object) capability to the list of `capabilities`, which allows agents to use task-specific models.
 
 ## JSON schema
 
-The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.3/schema.json).
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.4/schema.json).
 
 ## Conventions
 
@@ -53,7 +53,7 @@ The declarative agent manifest object contains the following properties.
 
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
-| `version`               | String                                                                | Required. The schema version. Must be set to `v1.3`. |
+| `version`               | String                                                                | Required. The schema version. Must be set to `v1.4`. |
 | `id`                    | String                                                                | Optional.   |
 | `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
 | `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
@@ -61,6 +61,9 @@ The declarative agent manifest object contains the following properties.
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. There MUST NOT be more than one of each derived type of [Capabilities object](#capabilities-object) in the array. |
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than six objects in the array. |
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
+| `sensitivity_label`     | [Sensitivity label object](#sensitivity-label-object)                 | Optional. Assigns a Microsoft Purview sensitivity label to the declarative agent. |
+| `disclaimer`            | [Disclaimer object](#disclaimer-object)                               | Optional. Disclaimer text that is displayed to the user at the start of a conversation. |
+| `behavior_overrides`    | [Behavior overrides object](#behavior-overrides-object)               | Optional. Contains configuration settings that modify the behavior of the agent. |
 
 ### Declarative agent manifest object example
 
@@ -87,6 +90,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Teams messages object](#teams-messages-object)
 - [Email object](#email-object)
 - [People object](#people-object)
+- [Scenario models object](#scenario-models-object)
 
 > [!NOTE]
 > Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
@@ -161,6 +165,14 @@ The capabilities object is the base type of objects in the `capabilities` proper
     },
     {
       "name": "People"
+    },
+    {
+      "name": "ScenarioModels",
+      "models": [
+        {
+          "id": "model_id"
+        }
+      ]
     }
   ]
 }
@@ -215,6 +227,8 @@ The items by SharePoint IDs object contains the following properties.
 | `list_id`                 | String  | Optional. A unique GUID identifier for a list within a SharePoint or OneDrive site. |
 | `unique_id`               | String  | Optional. A unique GUID identifier used to represent a specific entity or resource. |
 | `search_associated_sites` | Boolean | Optional. Indicates whether to enable searching associated sites. This value is only applicable when the `site_id` value references a SharePoint HubSite. |
+| `part_type`               | String  | Optional. Indicates the type of part `part_id` refers to. This value is only applicable when the `part_id` value is present. Possible values are: `OneNotePart`. |
+| `part_id`                 | String  | Optional. A unique GUID identifier used to represent part of a SharePoint item such as a OneNote page. |
 
 > [!TIP]
 > For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
@@ -247,9 +261,54 @@ The connection object contains the following properties.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `connection_id` | String | Required. The unique identifier of the Microsoft Graph connector. |
+| `additional_search_terms` | String | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
+| `items_by_external_id` | Array of [Item identifier object](#item-identifier-object) | Optional. Specifies specific items by ID in the Microsoft Graph connector that are available to the agent. |
+| `items_by_path` | Array of [Path object](#path-object) | Optional. Filters the items available to the agent by item paths (the `itemPath` [semantic label](/graph/connecting-external-content-manage-schema#semantic-labels) on items). |
+| `items_by_container_name` | Array of [Container name object](#container-name-object) | Optional. Filters the items available to the agent by container name (the `containerName` semantic label on items). |
+| `items_by_container_url` | Array of [Container URL object](#container-url-object) | Optional. Filters the items available to the agent by container URL (the `containerUrl` semantic label on items). |
 
 > [!TIP]
 > For instructions on getting the unique identifier for a Microsoft Graph connector, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
+
+###### Item identifier object
+
+Identifies an external item by it's ID.
+
+The item identifier object contains the following properties.
+
+| Property        | Type   | Description |
+| --------------- | ------ | ----------- |
+| `item_id`       | String | Required. The unique identifier of the external item. |
+
+###### Path object
+
+Identifies an external item by it's path.
+
+The path object contains the following properties.
+
+| Property        | Type   | Description |
+| --------------- | ------ | ----------- |
+| `path`          | String | Required. The path (`itemPath` semantic label value) of the external item. |
+
+###### Container name object
+
+Identifies a container by it's name.
+
+The container name object contains the following properties.
+
+| Property         | Type   | Description |
+| ---------------- | ------ | ----------- |
+| `container_name` | String | Required. The name of the container (`containerName` semantic label value) of the external item. |
+
+###### Container URL object
+
+Identifies a container by it's URL.
+
+The container URL object contains the following properties.
+
+| Property        | Type   | Description |
+| --------------- | ------ | ----------- |
+| `container_url` | String | Required. The URL of the container (`containerUrl` semantic label value) of the external item. |
 
 #### Graphic art object
 
@@ -357,6 +416,27 @@ The people object contains the following property.
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `People`. |
 
+#### Scenario models object
+
+Indicates that the declarative agent can use task-specific models.
+
+The scenario models object contains the following properties.
+
+| Property   | Type                                   | Description |
+| ---------- | -------------------------------------- | ----------- |
+| `name`     | String                                 | Required. Must be set to `ScenarioModels`. |
+| `models`   | Array of [Model object](#model-object) | Required. An array of objects that identifies the task-specific models available to the declarative agent. |
+
+##### Model object
+
+Identifies a task-specific model.
+
+The model object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `id`     | String | Required. The unique identifier for the model. |
+
 ### Conversation starters object
 
 The conversation starters object is optional in the manifest. It contains hints that are displayed to the user to demonstrate how they can get started using the declarative agent.
@@ -405,11 +485,62 @@ The action object contains the following properties.
 }
 ```
 
+### Sensitivity label object
+
+A sensitivity label is an optional JSON object in the manifest that assigns a Microsoft Purview sensitivity label to the declarative agent. This label should be at least as restrictive as the most restrictive label on any knowledge files included in the agent. For more information about sensitivity labels, see [Learn about sensitivity labels](/purview/sensitivity-labels).
+
+The sensitivity label object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `id`     | String | Required. The unique identifier for the sensitivity label. |
+
+### Disclaimer object
+
+A disclaimer is an optional JSON object in the manifest that specifies disclaimer text that is displayed to the user at the start of a conversation.
+
+The disclaimer object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `text`   | String | Required. The disclaimer text. The value MUST contain at least one non-whitespace character and SHOULD NOT exceed 500 characters. |
+
+### Behavior overrides object
+
+An optional JSON object that contains configuration settings that override the agent's behavior.
+
+The behavior overrides object contains the following properties.
+
+| Property               | Type                                                        | Description |
+| ---------------------- | ----------------------------------------------------------- | ----------- |
+| `suggestions`          | [Suggestions object](#suggestions-object)                   | Optional. Contains configuration settings for the suggestions feature. |
+| `special_instructions` | [Special instructions object](#special-instructions-object) | Optional. Contains settings for injecting special instructions into the prompt. |
+
+#### Suggestions object
+
+An optional JSON object that contains configuration settings for the suggestions feature.
+
+The suggestions object contains the following property.
+
+| Property   | Type    | Description |
+| ---------- | ------- | ----------- |
+| `disabled` | Boolean | Required. If set to `true`, the suggestions feature will be disabled. The default value is `false`. |
+
+#### Special instructions object
+
+An optional JSON object that contains settings for injecting special instructions into the prompt.
+
+The disclaimer object contains the following property.
+
+| Property                     | Type    | Description |
+| ---------------------------- | ------- | ----------- |
+| `discourage_model_knowledge` | Boolean | Required. If set to `true`, the agent is discouraged from using model knowledge when generating responses. The default value is `false`. |
+
 ## Declarative agent manifest example
 
 The following example shows a declarative agent manifest file that uses most of the manifest properties described in this article.
 
-:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.3.json":::
+:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.4.json":::
 
 ## Related content
 

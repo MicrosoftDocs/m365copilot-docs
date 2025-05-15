@@ -1,7 +1,7 @@
 ---
 title: Code Interpreter Capability for Declarative Agents for Microsoft 365 Copilot.
 description: Learn about the code interpreter capability and how to add it to your declarative agents.
-author: kmkoenen   
+author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -10,7 +10,7 @@ ms.date: 5/09/2025
 
 # Add the code interpreter capability to your agent
 
-You can enhance the user experience of your declarative agent for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.3#capabilities-object) in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the code interpreter capability and how to add it to your declarative agents.
+You can enhance the user experience of your declarative agent for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](declarative-agent-manifest-1.4.md#capabilities-object) in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the code interpreter capability and how to add it to your declarative agents.
 
 Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario, and accepts files as input for modifications and analysis.
 
@@ -39,7 +39,8 @@ The user prompt "Create a word cloud of top pet names" generates a word cloud th
 
 ### Enable code interpreter
 
-**Agents Toolkit**
+#### Microsoft 365 Agents Toolkit
+
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest file, as shown in the following example.
 
 > [!NOTE]
@@ -55,7 +56,8 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-**Copilot Studio agent builder**
+#### Copilot Studio agent builder
+
 If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Code interpreter**.
 
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of the agent builder":::
@@ -63,7 +65,6 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.3.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.4.md)
 - [Add the image generator capability to your agent](image-generator.md)
 - [Add knowledge sources to your declarative agent](knowledge-sources.md)
-
