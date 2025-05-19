@@ -772,7 +772,8 @@ Content-Type: application/json
 
 {
   "queryString": "What are the remaining work items to launch Contoso's marketing campaign?",
-  "filterExpression": "FileType:\"html\" OR FileType:\"Epic\" OR FileType:\"docx\"",
+  "dataSource": "sharePoint",
+  "filterExpression": "FileType:\"pdf\" OR FileType:\"pptx\" OR FileType:\"docx\"",
   "resourceMetadata": [
     "FileType"
   ],
@@ -789,55 +790,71 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": [
-    {
-      "webUrl": "https://dev.azure.com/ContosoMarketing/6f2884d1-2732-4ebc-95e7-4763204b623b/_workitems/edit/6732954",
-      "extracts": [
+    "retrievalHits": [
         {
-          "text": "This is tracking the remaining work items for the new Contoso Marketing campaign. Updates on open work items are expected on Mondays."
-        }
-      ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "FileType": "Epic"
-      }
-    },
-    {
-      "webUrl": "https://contoso.sharepoint.com/sites/marketing/Remaining Work Items.docx",
-      "extracts": [
-        {
-          "text": "The advertising team needs to complete the social media campaign and book the billboard."
-        }
-      ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "FileType": "docx"
-      },
-      "sensitivityLabel": {
-        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
-        "displayName": "Confidential\\Any User (No Protection)",
-        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-        "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
-      }
-    },
-    {
-      "webUrl": "https://contoso.com/product_launch",
-      "extracts": [
-        {
-          "text": "The new product launches in 14 days! Let us know your reactions to the marketing campaign on social media."
+            "webUrl": "https://contoso.sharepoint.com/sites/marketing/Marketing Standup.pptx",
+            "extracts": [
+                {
+                    "text": "This is tracking the remaining work items for the new Contoso Marketing campaign. Updates on open work items are expected on Mondays."
+                }
+            ],
+            "resourceType": "listItem",
+            "resourceMetadata": {
+                "FileType": "pptx"
+            },
+            "sensitivityLabel": {
+                "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+                "displayName": "Confidential\\Any User (No Protection)",
+                "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+                "priority": 4,
+                "color": "#FF8C00",
+                "isEncrypted": false
+            }
         },
         {
-          "text": "Click the link below to pre-register to purchase the new product."
+            "webUrl": "https://contoso.sharepoint.com/sites/marketing/Remaining Work Items.docx",
+            "extracts": [
+                {
+                    "text": "The advertising team needs to complete the social media campaign and book the billboard."
+                }
+            ],
+            "resourceType": "listItem",
+            "resourceMetadata": {
+                "FileType": "docx"
+            },
+            "sensitivityLabel": {
+                "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+                "displayName": "Confidential\\Any User (No Protection)",
+                "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+                "priority": 4,
+                "color": "#FF8C00",
+                "isEncrypted": false
+            }
+        },
+        {
+            "webUrl": "https://contoso.sharepoint.com/sites/marketing/Product Launch Copy.pdf",
+            "extracts": [
+                {
+                    "text": "The new product launches in 14 days! Let us know your reactions to the marketing campaign on social media."
+                },
+                {
+                    "text": "Click the link below to pre-register to purchase the new product."
+                }
+            ],
+            "resourceType": "listItem",
+            "resourceMetadata": {
+                "FileType": "pdf"
+            },
+            "sensitivityLabel": {
+                "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+                "displayName": "Confidential\\Any User (No Protection)",
+                "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+                "priority": 4,
+                "color": "#FF8C00",
+                "isEncrypted": false
+            }
         }
-      ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "FileType": "html"
-      }
-    }
-  ]
+    ]
 }
 ```
 
@@ -855,6 +872,7 @@ Content-Type: application/json
 
 {
   "queryString": "What is the sick time policy?",
+  "dataSource": "sharePoint",
   "filterExpression": "InformationProtectionLabelId:\"f0ddcc93-d3c0-4993-b5cc-76b0a283e252\"",
   "resourceMetadata": [
     "InformationProtectionLabelId"
@@ -954,6 +972,7 @@ Content-Type: application/json
 
 {
   "queryString": "What are the remaining work items to launch Contoso's marketing campaign?",
+  "dataSource": "sharePoint",
   "filterExpression": "ModifiedBy:\"Jane Doe\"",
   "resourceMetadata": [
     "ModifiedBy"
@@ -971,40 +990,48 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": [
-    {
-      "webUrl": "https://dev.azure.com/ContosoMarketing/6f2884d1-2732-4ebc-95e7-4763204b623b/_workitems/edit/6732954",
-      "extracts": [
+    "retrievalHits": [
         {
-          "text": "This is tracking the remaining work items for the new Contoso Marketing campaign. Updates on open work items are expected on Mondays."
-        }
-      ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "ModifiedBy": "Jane Doe"
-      }
-    },
-    {
-      "webUrl": "https://contoso.sharepoint.com/sites/marketing/Remaining Work Items.docx",
-      "extracts": [
+            "webUrl": "https://contoso.sharepoint.com/sites/marketing/Marketing Standup.pptx",
+            "extracts": [
+                {
+                    "text": "This is tracking the remaining work items for the new Contoso Marketing campaign. Updates on open work items are expected on Mondays."
+                }
+            ],
+            "resourceType": "listItem",
+            "resourceMetadata": {
+                "ModifiedBy": "Jane Doe"
+            },
+            "sensitivityLabel": {
+                "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+                "displayName": "Confidential\\Any User (No Protection)",
+                "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+                "priority": 4,
+                "color": "#FF8C00",
+                "isEncrypted": false
+            }
+        },
         {
-          "text": "The advertising team needs to complete the social media campaign and book the billboard."
+            "webUrl": "https://contoso.sharepoint.com/sites/marketing/Remaining Work Items.docx",
+            "extracts": [
+                {
+                    "text": "The advertising team needs to complete the social media campaign and book the billboard."
+                }
+            ],
+            "resourceType": "listItem",
+            "resourceMetadata": {
+                "ModifiedBy": "Jane Doe"
+            },
+            "sensitivityLabel": {
+                "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+                "displayName": "Confidential\\Any User (No Protection)",
+                "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+                "priority": 4,
+                "color": "#FF8C00",
+                "isEncrypted": false
+            }
         }
-      ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "ModifiedBy": "Jane Doe"
-      },
-      "sensitivityLabel": {
-        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
-        "displayName": "Confidential\\Any User (No Protection)",
-        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-        "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
-      }
-    }
-  ]
+    ]
 }
 ```
 
@@ -1022,6 +1049,7 @@ Content-Type: application/json
 
 {
   "queryString": "How to setup corporate VPN?",
+  "dataSource": "sharePoint",
   "filterExpression": "SiteID:\"e2cf7e40-d689-41de-99ee-a423811a253c\"",
   "resourceMetadata": [
     "SiteID"
