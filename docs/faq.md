@@ -38,13 +38,13 @@ Both Power Platform connectors and API plugins allow for the calling of a standa
 
 The orchestrator and connector mechanisms in Copilot Studio differ from API-based plugins. To connect an API with Copilot Studio, you need to create a custom connector that uses OpenAPI V2 swagger and add an AI description. This approach allows you to integrate various APIs seamlessly and apply the AI capabilities of Copilot Studio for enhanced functionality.
 
-### What are the differences between Microsoft Graph connectors and Power Platform connectors?
+### What are the differences between Copilot connectors and Power Platform connectors?
 
-Microsoft Graph connectors enable you to bring additional information into Microsoft Graph to make it discoverable across various Microsoft 365 experiences, including Microsoft 365 Copilot. The connection is synchronous to data-providing services; it replicates data into Microsoft 365 for use in Copilot and other scenarios.
+Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) enable you to bring additional information into Microsoft Graph to make it discoverable across various Microsoft 365 experiences, including Microsoft 365 Copilot. The connection is synchronous to data-providing services; it replicates data into Microsoft 365 for use in Copilot and other scenarios.
 
 Power Platform connectors enable agents to interact with other systems to retrieve information in near real-time (for example, "Get ticket #1234") and to establish read/write actions (for example, "Create a ticket").
 
-For Microsoft Graph connectors, any valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license allows you to view data from connectors in your search results. However, you need sufficient index quota to ingest content from those connectors.
+For Copilot connectors, any valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license allows you to view data from connectors in your search results. However, you need sufficient index quota to ingest content from those connectors.
 
 For Power Platform connectors, the licensing requirements can vary depending on the specific connectors and the actions you want to perform. Some connectors might require premium licenses, which aren't included in the standard Microsoft 365 licenses.
 
@@ -62,7 +62,7 @@ For information about data retention in Copilot, see [Learn about retention for 
 
 ### What licenses do I need to purchase to develop declarative agents or custom engine agents?
 
-You can build declarative agents grounded on web search with limited capabilities without a Microsoft 365 Copilot license. If you have a [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing), you don't need additional licenses to build declarative agents with additional capabilities, including Microsoft Graph connectors and plugins. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+You can build declarative agents grounded on web search with limited capabilities without a Microsoft 365 Copilot license. If you have a [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing), you don't need additional licenses to build declarative agents with additional capabilities, including Copilot connectors and plugins. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
 You don't need a [Copilot Studio license](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) to build agents; however, if you want to ground your agent in organizational data, you either need a license or you need to set up consumption metering in your tenant. For details, see [Copilot Studio requirements](prerequisites.md#copilot-studio-requirements) and [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
 

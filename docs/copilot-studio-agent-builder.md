@@ -24,7 +24,7 @@ Use Copilot Studio agent builder to create and customize agents that can be used
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-starter.png" alt-text="Copilot Studio agent builder initial screen":::
 
-You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft Graph connectors. You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
+You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors). You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
 
 You can build agents from the following apps and sites:
 
@@ -61,7 +61,7 @@ Administrators can control whether Copilot Studio agent builder is available to 
 
 The following are current known limitations:
 
-- Only web browsing, Microsoft Graph connectors, SharePoint sites, folders, and files can be specified as knowledge sources. You can upload your local folders and files into SharePoint.
+- Only web browsing, Copilot connectors, SharePoint sites, folders, and files can be specified as knowledge sources. You can upload your local folders and files into SharePoint.
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
 - Agent builder doesn't currently support [Lockbox](/power-platform/admin/about-lockbox) or [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview).
 - Agents created via Copilot Studio agent builder can't be used in Teams Chat.
@@ -83,7 +83,7 @@ In your feedback submission, specify that the issue is related to **Copilot Stud
 
 Administrators can define a cloud policy to control whether feedback is collected in their tenant, and whether optional data such as log files and screenshots can be included in user-initiated feedback. For more information, see [Cloud Policy in Microsoft 365 Apps admin center](/microsoft-365-apps/admin-center/overview-cloud-policy).
 
-For general information, see [Microsoft feedback for your organization](/microsoft-365/admin/misc/feedback-user-control?view=o365-worldwide).
+For general information, see [Microsoft feedback for your organization](/microsoft-365/admin/misc/feedback-user-control).
 
 ## Get support
 

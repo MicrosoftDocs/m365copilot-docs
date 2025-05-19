@@ -149,7 +149,7 @@ Developing instructions for declarative agents is often iterative and typically 
     1. Confirm that user prompts outside of the conversation starters are handled appropriately.
 1. **Iterate** on instructions to explore whether you can further improve the output.
     - Modify instructions to change the behavior of the agent.
-    - Try adding knowledge like web search, OneDrive/SharePoint, or Microsoft Graph connectors, if needed using Agents Toolkit or Copilot Studio.
+    - Try adding knowledge like web search, OneDrive/SharePoint, or Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), if needed using Agents Toolkit or Copilot Studio.
 
 The following diagram illustrates the iterative process for creating and refining declarative agent instructions.
 

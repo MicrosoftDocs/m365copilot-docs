@@ -98,13 +98,13 @@ Custom agents built with Copilot Studio can be published to the [Microsoft 365 C
 | Submit to organizational catalog | ✅ | [Show an agent to the organization](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#show-to-the-organization) |
 | Submit to Microsoft Commercial Marketplace | ❌ | |
 
-## Graph connectors
+## Copilot connectors
 
-Microsoft Graph connector publishing options depend on whether you have a standalone connector or a connector that's packaged using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem. While both scenarios are supported for single-tenant distribution, submission to the Microsoft Partner Center Microsoft 365 and Copilot program is currently limited to Microsoft Graph connectors packaged as Microsoft 365 (Teams) apps.
+Microsoft 365 Copilot connector (formerly Microsoft Graph connectors) publishing options depend on whether you have a standalone connector or a connector that's packaged using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem. While both scenarios are supported for single-tenant distribution, submission to the Microsoft Partner Center Microsoft 365 and Copilot program is currently limited to Copilot connectors packaged as Microsoft 365 (Teams) apps.
 
 | Distribution method | Support | Learn more |
 |--|--|--|
 | Sideload for personal use | ❌ | |
 | Share with others | ❌ | |
 | Submit to organizational catalog | ✅ | |
-| Submit to Microsoft Commercial Marketplace | ✅* | [Make your Microsoft Graph connector available for other organizations](/graph/connecting-external-content-deploy-teams#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center)<br /><br />*Connectors that are packaged as *Apps for Microsoft 365* can be submitted to Partner Center by verified publishers. Standalone connector submission (to connectors gallery) is not available. |
+| Submit to Microsoft Commercial Marketplace | ✅* | [Make your Copilot connector available for other organizations](/graph/connecting-external-content-deploy-teams#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center)<br /><br />*Connectors that are packaged as *Apps for Microsoft 365* can be submitted to Partner Center by verified publishers. Standalone connector submission (to connectors gallery) is not available. |

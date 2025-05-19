@@ -44,7 +44,9 @@
     - name: Use Visual Studio Code
       expanded: true
       items:
-      - name: Build a declarative agent with Visual Studio Code
+      - name: Build with TypeSpec
+        href: build-declarative-agents-typespec.md
+      - name: Build with JSON
         href: build-declarative-agents.yml
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
@@ -52,6 +54,8 @@
         items:
         - name: Overview
           href: overview-api-plugins.md
+        - name: Build an API plugin with TypeSpec
+          href: build-api-plugins-typespec.md
         - name: Build an API plugin with a new API
           href: build-api-plugins-new-api.md
         - name: Build an API plugin from an existing API
@@ -169,6 +173,12 @@
       items:
       - name: Overview
         href: m365-agents-sdk.md
+      - name: Create and deploy agents with the SDK
+        href: create-deploy-agents-sdk.md
+      - name: Start with the Agents Toolkit for Visual Studio
+        href: /microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=/microsoft-365-copilot/extensibility/context
+      - name: Start with the Agents Toolkit for Visual Studio Code
+        href: /microsoft-365/agents-sdk/create-new-toolkit-project-vsc?context=/microsoft-365-copilot/extensibility/context
       - name: SDK reference
         items:
         - name: .NET SDK
@@ -195,81 +205,38 @@
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
     - name: Build with Microsoft Graph APIs
       href: graph-api-tutorial.yml
-- name: Add knowledge with Microsoft Graph connectors
+    - name: Bring agents to Copilot
+      href: bring-agents-to-copilot.md
+    - name: Invoke actions with Semantic Kernel
+      href: graph-actions-semantic-kernel.md
+- name: Add knowledge with Copilot connectors
   items:
-  - name: Microsoft Graph connectors in Microsoft 365 Copilot
+  - name: Copilot connectors in Microsoft 365 Copilot
     href: overview-graph-connector.md
-  - name: Enhance Copilot discovery of Microsoft Graph connector content
-    href: /microsoftsearch/enhancing-microsoft-copilot-discovery-with-graph-connector-content?context=/microsoft-365-copilot/extensibility/context
-  - name: Connector experiences
-    href: /graph/connecting-external-content-experiences?context=/microsoft-365-copilot/extensibility/context
   - name: Prebuilt connectors gallery
     href: /microsoftsearch/connectors-gallery?context=/microsoft-365-copilot/extensibility/context
-  - name: Connectors API
-    href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/extensibility/context
   - name: Build your first connector
-    href: /graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context
-  - name: Simplify connector deployment
-    href: /graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context
-  - name: Manage connections
-    href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/extensibility/context
-  - name: Manage schema
-    href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/extensibility/context
-  - name: Manage items
-    href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/extensibility/context
-  - name: Use external groups
-    href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
-  - name: API limits
-    href: /graph/connecting-external-content-api-limits?context=/microsoft-365-copilot/extensibility/context
-- name: Add skills with actions
-  expanded: true
-  items:
-  - name: API plugins
+    items:
+    - name: Build with Agents Toolkit
+      href: build-your-first-connector.md
+    - name: Build with SDK
+      href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/extensibility/context
+  - name: Connectors API
     items:
     - name: Overview
-      href: overview-api-plugins.md
-    - name: Build an API plugin with a new API
-      href: build-api-plugins-new-api.md
-    - name: Build an API plugin from an existing API
-      href: build-api-plugins-existing-api.md
-    - name: Authentication
-      href: api-plugin-authentication.md
-    - name: Adaptive Card responses
-      href: api-plugin-adaptive-cards.md
-      displayName: response, response_semantics
-    - name: Confirmation prompts
-      href: api-plugin-confirmation-prompts.md
-    - name: Debug locally
-      href: api-plugin-debug-local.md
-    - name: Best practices for writing OpenAPI specs
-      href: openapi-document-guidance.md
-    - name: API plugin manifest reference
-      items:
-      - name: Version 2.2
-        href: api-plugin-manifest-2.2.md
-      - name: Version 2.1
-        href: api-plugin-manifest-2.1.md
-  - name: Copilot Studio connectors and actions
-    items:
-    - name: Copilot connectors on Copilot Studio overview
-      href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
-    - name: Copilot Studio actions
-      href: overview-business-applications.md
-    - name: Connector actions
-      href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-    - name: Power Automate flow actions
-      href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
-    - name: Prompts
-      href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
-    - name: Learning path
-      href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
-  - name: Debug with developer mode in Copilot
-    href: debugging-copilot-plugin.md
+      href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365-copilot/extensibility/context
+    - name: Manage connections
+      href: /graph/connecting-external-content-manage-connections?context=/microsoft-365-copilot/extensibility/context
+    - name: Manage schema
+      href: /graph/connecting-external-content-manage-schema?context=/microsoft-365-copilot/extensibility/context
+    - name: Manage items
+      href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/extensibility/context
+    - name: Use external groups
+      href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
 - name: Enhance AI solutions with Copilot APIs
-  expanded: false
   items:
-  - name: Microsoft 365 Copilot APIs overview
-    href: api-reference/copilot-apis-overview.md
+  - name: Overview
+    href: copilot-apis-overview.md
   - name: Retrieval API (preview)
     items:
     - name: Overview

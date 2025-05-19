@@ -46,7 +46,7 @@ When building gents with the toolkit, you can choose between two SDKs depending 
 
 #### Microsoft 365 Agents SDK
 
-The [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/) is a framework designed for building full-stack, multi-channel agents that can operate across Microsoft 365 Copilot, Teams, third-party platforms, custom applications, and websites.
+The [Microsoft 365 Agents SDK](create-deploy-agents-sdk.md) is a framework designed for building full-stack, multi-channel agents that can operate across Microsoft 365 Copilot, Teams, third-party platforms, custom applications, and websites.
 
 It's ideal for use cases that require custom orchestration using frameworks like Semantic Kernel or LangChain, and supports integration with any AI models or services. This SDK is best suited for organizations or ISVs that need highly tailored agents with advanced capabilities and the ability to operate across multiple channels.
 
@@ -112,6 +112,6 @@ For more information, see [Cost considerations for Copilot extensibility](cost-c
 ## Related content
 
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
-- [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/)
+- [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
 - [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
 - [Copilot extensibility planning guide](planning-guide.md)

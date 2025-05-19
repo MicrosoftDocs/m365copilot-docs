@@ -12,9 +12,9 @@ ms.topic: overview
 
 **Teams AI library** is a Teams-centric interface for integrating GPT-based language models and user intent engines. It includes a built-in action planner orchestrator and simplifies the development process by reducing the need to write and maintain complex conversational bot logic.
 
-:::image type="content" source="/microsoftteams/platform/assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response." lightbox="/microsoftteams/platform/assets/images/bots/teams-ai-library.png":::
+:::image type="content" source="assets/images/build-with-teams-ai-library.png" alt-text="Visual representation of a user input and a bot response." lightbox="assets/images/build-with-teams-ai-library.png":::
 
-Now with the new v2 SDK, it reduces boilerplate code and dependencies while providing native AI and Teams abstractions.
+Now with the new v2 SDK, it supports Agent2Agent (A2A) for multi-agent collaboration and Model Context Protocol (MCP) for shared memory and tools.
 
 ## When to use Teams AI Library v2
 

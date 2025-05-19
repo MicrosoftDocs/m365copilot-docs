@@ -72,15 +72,15 @@ Both [declarative agents](./build-declarative-agents.yml) and [custom engine age
 | Org settings | Set up pay-as-you-go billing for SharePoint agents in the Microsoft 365 admin center | [Use agents with pay-as-you-go billing](/sharepoint/sharepoint-agents-azure-billing) |
 | PowerShell cmdlet | View status and details on all active and available Copilot agents in the tenant | [Get-SPOCopilotAgentInsightsReport](/powershell/module/sharepoint-online/get-spocopilotagentinsightsreport) |
 
-## Microsoft Graph connectors
+## Copilot connectors
 
-[Microsoft Graph connectors](./overview-graph-connector.md) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Microsoft Graph connectors are managed from Microsoft Entra admin center, Microsoft 365 admin center, and Teams admin center.
+[Microsoft 365 Copilot connectors](./overview-copilot-connector.md) (formerly Microsoft Graph connectors) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Copilot connectors are managed from Microsoft Entra admin center, Microsoft 365 admin center, and Teams admin center.
 
-|Control | Core scenario | Related content|
+| Control | Core scenario | Related content |
 |--|--|--|
-| App registrations | Register an application and grant admin consent for the required Microsoft Graph permissions | [Requirements for Microsoft Graph connectors](./overview-graph-connector.md#requirements-for-microsoft-graph-connectors) |
-| Search & intelligence | Ensure that Microsoft Graph connections that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for inline results | [Manage connector results in All vertical](/microsoftsearch/connectors-in-all-vertical) |
-| Graph Connector management| Enable or disable a Graph connector | [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context) |
+| App registrations | Register an application and grant admin consent for the required Microsoft Graph permissions | [Requirements for Copilot connectors](./overview-copilot-connector.md#requirements-for-copilot-connectors) |
+| Search & intelligence | Ensure that Copilot connectors that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for inline results | [Manage connector results in All vertical](/microsoftsearch/connectors-in-all-vertical) |
+| Copilot Connector management | Enable or disable a Copilot connector | [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context) |
 
 ## Related content
 

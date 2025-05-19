@@ -20,7 +20,7 @@ This schema version introduces the following changes from [version 1.3](declarat
 
 - Added the `sensitivity_label`, `disclaimer`, and `behavior_overrides` properties to the [declarative agent manifest object](#declarative-agent-manifest-object).
 - Added the `part_type` and `part_id` properties to the [items by SharePoint IDs object](#items-by-sharepoint-ids-object).
-- Added additional properties to the [Connection object](#connection-object), allowing scoping of Microsoft Graph connector content.
+- Added additional properties to the [Connection object](#connection-object), allowing scoping of Copilot connector content.
 - Added the [scenario models](#scenario-models-object) capability to the list of `capabilities`, which allows agents to use task-specific models.
 
 ## JSON schema
@@ -83,7 +83,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 
 - [Web search object](#web-search-object)
 - [OneDrive and SharePoint object](#onedrive-and-sharepoint-object)
-- [Microsoft Graph Connectors object](#microsoft-graph-connectors-object)
+- [Copilot connectors object](#copilot-connectors-object)
 - [Graphic art object](#graphic-art-object)
 - [Code interpreter object](#code-interpreter-object)
 - [Dataverse object](#dataverse-object)
@@ -241,34 +241,34 @@ The items by URL object contains the following properties.
 | -------- | ------ | ----------- |
 | `url`    | String | Optional. An absolute URL to a SharePoint or OneDrive resource. |
 
-#### Microsoft Graph connectors object
+#### Copilot connectors object
 
-Indicates that the declarative agent can search selected Microsoft Graph connectors for grounding information.
+Indicates that the declarative agent can search selected Copilot connectors for grounding information.
 
-The Microsoft Graph connectors object contains the following properties.
+The Copilot connectors object contains the following properties.
 
 | Property      | Type                                             | Description |
 | ------------- | ------------------------------------------------ | ----------- |
 | `name`        | String                                           | Required. Must be set to `GraphConnectors`. |
-| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Microsoft Graph connectors available to the declarative agent. If this property is omitted, all Microsoft Graph connectors in the organization are available to the declarative agent. |
+| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Copilot connectors available to the declarative agent. If this property is omitted, all Copilot connectors in the organization are available to the declarative agent. |
 
 ##### Connection object
 
-Identifies a Microsoft Graph connector.
+Identifies a Copilot connector.
 
 The connection object contains the following properties.
 
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
-| `connection_id` | String | Required. The unique identifier of the Microsoft Graph connector. |
+| `connection_id` | String | Required. The unique identifier of the Copilot connector. |
 | `additional_search_terms` | String | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
-| `items_by_external_id` | Array of [Item identifier object](#item-identifier-object) | Optional. Specifies specific items by ID in the Microsoft Graph connector that are available to the agent. |
+| `items_by_external_id` | Array of [Item identifier object](#item-identifier-object) | Optional. Specifies specific items by ID in the Copilot connector that are available to the agent. |
 | `items_by_path` | Array of [Path object](#path-object) | Optional. Filters the items available to the agent by item paths (the `itemPath` [semantic label](/graph/connecting-external-content-manage-schema#semantic-labels) on items). |
 | `items_by_container_name` | Array of [Container name object](#container-name-object) | Optional. Filters the items available to the agent by container name (the `containerName` semantic label on items). |
 | `items_by_container_url` | Array of [Container URL object](#container-url-object) | Optional. Filters the items available to the agent by container URL (the `containerUrl` semantic label on items). |
 
 > [!TIP]
-> For instructions on getting the unique identifier for a Microsoft Graph connector, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For instructions on getting the unique identifier for a Copilot connector, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
 
 ###### Item identifier object
 
