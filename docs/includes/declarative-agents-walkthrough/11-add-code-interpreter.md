@@ -49,9 +49,9 @@ In this section, you add the [code interpreter capability](../../code-interprete
     ]
     ```
 
-    For more information, see [Code interpreter object](../../declarative-agent-manifest-1.3.md#code-interpreter-object).
+    For more information, see [Code interpreter object](../../declarative-agent-manifest-1.4.md#code-interpreter-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have the code interpreter capability after you reload the page.
 

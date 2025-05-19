@@ -7,4 +7,4 @@ ms.localizationpriority: medium
 <!-- markdownlint-disable MD041-->
 
 > [!NOTE]
-> The screenshots and references to user interface of the Teams Toolkit in this document were generated using the latest **Release** version, 5.14.0. Pre-Release versions of Teams Toolkit may differ from the user interface in this document.
+> The screenshots and references to user interface of the Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) in this document were generated using the latest **Release** version, 6.0. Pre-Release versions of Agents Toolkit may differ from the user interface in this document.

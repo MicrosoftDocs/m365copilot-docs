@@ -10,7 +10,7 @@ ms.date: 04/02/2025
 
 # Write effective instructions for declarative agents with API plugins
 
-Declarative agents tailor Microsoft 365 Copilot to meet the specific needs of an organization. When you build declarative agents with Teams Toolkit, you can add skills to your agent via API plugins. API plugins enable your agent to query and interact with an organization's data via APIs.
+Declarative agents tailor Microsoft 365 Copilot to meet the specific needs of an organization. When you build declarative agents with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)), you can add skills to your agent via API plugins. API plugins enable your agent to query and interact with an organization's data via APIs.
 
 This article describes the agent architecture and provides best practices for writing instructions for declarative agents that include API plugins.
 
@@ -21,7 +21,7 @@ Declarative agents that call API plugins include several components that ensure 
 - **Application manifest** - Describes how your app is configured and references declarative agent manifest.
 - **Declarative agent manifest** -  Defines the agent's configuration, including instructions, capabilities, conversation starters, and actions. References the plugin manifest.
 - **Plugin manifest** -  Describes the plugin configuration, including available functions and a reference to the OpenAPI specification.
-- **OpenAPI specification** -  Provides detailed definitions of API endpoints, including paths, parameters, request and response formats, and authentication.  
+- **OpenAPI specification** -  Provides detailed definitions of API endpoints, including paths, parameters, request and response formats, and authentication.
 
 Together, these files define the agent's behavior and how it interacts with the underlying API.
 
@@ -44,7 +44,7 @@ The following examples show the mapping in the plugin manifest and the mapped fu
     "name": "createTask",
     "description": "Creates a new task in the specified task list."
   }
-] 
+]
 ```
 
 ```yaml
@@ -66,7 +66,7 @@ Apply the following best practices when writing instructions for declarative age
 - **Avoid ambiguous or negative instructions.** Contrasting or negative instructions can introduce ambiguity and confuse the model. Focus on defining valid use cases with positive examples. If it's important to distinguish between valid and invalid queries, provide clear criteria and examples that define the expected agent response for each.
 - **Use examples** Provide clear examples to guide agent behavior. For example:
 
-*User input*: What's the weather in Prague? *Agent call*: getWeather(location="Prague")  
+*User input*: What's the weather in Prague? *Agent call*: getWeather(location="Prague")
 *User input*: "Do I need an umbrella tomorrow?" *Agent call*: getWeather(location=user_location, forecast="tomorrow")
 
 - **Review and test the instructions**. Test instructions in various scenarios to verify that the agent makes the correct function calls. If in testing you find that the agent invokes functions unexpectedly, revise the function description in the OpenAPI specification and clarify the agent instructions to improve intent mapping.
@@ -109,15 +109,15 @@ In the following example, an agent deletes a to-do by name.
 
 #### Chaining with SharePoint knowledge
 
-Chaining API calls allows an agent to combine knowledge sources and actions to design more complex workflows. 
+Chaining API calls allows an agent to combine knowledge sources and actions to design more complex workflows.
 
 In the following example, an agent retrieves project status data from SharePoint, and creates corresponding tasks in Microsoft To-Do for tracking.
 
 | Instructions for agent | Agent flow |
 |------------------------|------------|
-|- To get project statuses, use Sharepoint knowledge CPSDAProjectDeadlines.</br>- Always create a to-do for each project using status update for the title.|**User**: "Can you provide an update on the status of all projects?"</br>**Agent:** Pulls project status data from SharePoint and then uses **createTask** to generate a to-do task for each project.|
+|- To get project statuses, use Sharepoint knowledge ProjectDeadlines.</br>- Always create a to-do for each project using status update for the title.|**User**: "Can you provide an update on the status of all projects?"</br>**Agent:** Pulls project status data from SharePoint and then uses **createTask** to generate a to-do task for each project.|
 
-  #### Chaining with code interpreter
+#### Chaining with code interpreter
 
 It is also possible to chain API calls and integrate additional capabilities, such as a code interpreter. This allows an agent to process API outputs dynamically to enable more advanced workflows.
 
@@ -127,7 +127,7 @@ In the following example, an agent creates a chart based on the data in to-do ta
 |------------------------|------------|
 |When the user asks to list all to-dos, call **getTasks** to retrieve the list of to-dos with title and ID, also plot the chart for the output.|**User:** "Retrieve all tasks in Tasks"</br>**Agent:** Calls the **getTasks** (folderId="Tasks") and displays all the to-dos with IDs.</br>**Agent:** Calls code Interpreter to initiate the chart generation based on the output of the first call.|
 
-This example also runs multiple actions at once. This is useful initiating a series of related actions that don't require multiple user inputs.  
+This example also runs multiple actions at once. This is useful initiating a series of related actions that don't require multiple user inputs.
 
 ## Related content
 

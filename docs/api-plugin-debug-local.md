@@ -15,7 +15,7 @@ API plugins enable declarative agents in Microsoft 365 Copilot to call REST APIs
 This article shows you how to use the `devtunnel` tool to enable local debugging for your API.
 
 > [!NOTE]
-> Your debugging tools may already provide a reverse proxy solution. We recommend checking the documentation for your developer tools to confirm. For example, if you [created a new API](build-api-plugins-new-api.md) using Teams Toolkit, the toolkit handles configuring reverse proxy for you.
+> Your debugging tools may already provide a reverse proxy solution. We recommend checking the documentation for your developer tools to confirm. For example, if you [created a new API](build-api-plugins-new-api.md) using Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)), the toolkit handles configuring reverse proxy for you.
 
 ## Prerequisites
 
@@ -67,7 +67,7 @@ servers:
   - url: <your-dev-tunnel-url>
 ```
 
-If you're using Teams Toolkit in Visual Studio Code to manage your declarative agent, you can add an environment variable to the **/env/.env.dev.user** file named `OPENAPI_SERVER_URL` and update your OpenAPI specification to use that environment variable. Use the **Provision** step in the **Lifecycle** pane to sideload your agent.
+If you're using Agents Toolkit in Visual Studio Code to manage your declarative agent, you can add an environment variable to the **/env/.env.dev.user** file named `OPENAPI_SERVER_URL` and update your OpenAPI specification to use that environment variable. Use the **Provision** step in the **Lifecycle** pane to sideload your agent.
 
 In your OpenAPI spec, add:
 
@@ -82,4 +82,4 @@ In your **/env/.env.dev.user** file, add:
 OPENAPI_SERVER_URL=<your-dev-tunnel-url>
 ```
 
-If you're not using Teams Toolkit, you can generate a new app package ZIP file and [upload your agent](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
+If you're not using Agents Toolkit, you can generate a new app package ZIP file and [upload your agent](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).

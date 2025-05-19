@@ -14,8 +14,21 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
-## April 2025
+## May 2025
 
+### API plugin manifest version 2.3
+
+A new version of the API plugin manifest schema is available. [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md) adds support [calling functions in an Office Add-in](build-api-plugins-local-office-api.md).
+
+### Declarative agent manifest version 1.4
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.4](declarative-agent-manifest-1.4.md) adds the following.
+
+- Added the `sensitivity_label`, `disclaimer`, and `behavior_overrides` properties to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object).
+- Added the `part_type` and `part_id` properties to the [Items by SharePoint IDs object](declarative-agent-manifest-1.4.md#items-by-sharepoint-ids-object).
+- Added the [Scenario models](declarative-agent-manifest-1.4.md#scenario-models-object) capability.
+
+## April 2025
 
 ### Copilot Studio message usage rates
 
@@ -23,7 +36,7 @@ Updated the usage rates for Copilot Studio messages. For more information, see [
 
 ### Email as knowledge
 
-Email is now available as a knowledge source for agents build with Teams Toolkit. For more information, see [Email knowledge](knowledge-sources.md#email-knowledge).
+Email is now available as a knowledge source for agents build with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)). For more information, see [Email knowledge](knowledge-sources.md#email).
 
 ### Copilot Studio agent builder templates
 
@@ -39,9 +52,9 @@ Declarative agents in the Copilot experience in Word can [interact with the open
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.3](declarative-agent-manifest-1.3.md) adds support for the following capabilities:
 
-- [Dataverse knowledge](knowledge-sources.md#dataverse-knowledge)
-- [Teams messages as knowledge](knowledge-sources.md#add-teams-messages-as-knowledge)
-- [People knowledge](knowledge-sources.md#people-knowledge)
+- [Dataverse knowledge](knowledge-sources.md#dataverse)
+- [Teams messages as knowledge](knowledge-sources.md#teams-messages)
+- [People knowledge](knowledge-sources.md#people)
 
 ## February 2025
 
@@ -71,13 +84,13 @@ You can now build agents for Microsoft 365 users who don't have a Microsoft 365 
 
 ### Add code interpreter to your declarative agent
 
-Add the code interpreter capability to your declarative agent by using the Copilot Studio agent builder or Teams Toolkit. To learn more, see [Add capabilities to your declarative agent](code-interpreter.md).
+Add the code interpreter capability to your declarative agent by using the Copilot Studio agent builder or Agents Toolkit. To learn more, see [Add capabilities to your declarative agent](code-interpreter.md).
 
 ## November 2024
 
 ### Add image generator to your declarative agent
 
-Add the image generator capability to your declarative agent by using the Copilot Studio agent builder or Teams Toolkit.. To learn more, see [Add capabilities to your declarative agent](image-generator.md).
+Add the image generator capability to your declarative agent by using the Copilot Studio agent builder or Agents Toolkit.. To learn more, see [Add capabilities to your declarative agent](image-generator.md).
 
 ### Declarative agent manifest version 1.2
 
