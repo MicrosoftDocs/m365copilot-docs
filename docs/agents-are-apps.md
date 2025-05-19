@@ -164,13 +164,13 @@ Note the following:
 
 - Currently only one declarative agent definition is supported per app manifest.
 
-- When you use Copilot Studio to build agents, a unique `id` is generated for each, as part of the overall app manifest generation. When building agents with Teams Toolkit or your own IDE, you assign the `id` yourself, according to your own conventions or friendly name.
+- When you use Copilot Studio to build agents, a unique `id` is generated for each, as part of the overall app manifest generation. When building agents with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) or your own IDE, you assign the `id` yourself, according to your own conventions or friendly name.
 
 ## Declarative agent manifest
 
 The declarative agent manifest includes instructions for Copilot responses, conversation starter sample prompts, data sources used for grounding, and a list of actions (API plugin skills) the agent is able to perform.
 
-To learn more, see [Declarative agent manifest schema for Microsoft 365 Copilot](declarative-agent-manifest-1.3.md).
+To learn more, see [Declarative agent manifest schema for Microsoft 365 Copilot](declarative-agent-manifest-1.4.md).
 
 ## API plugin manifest
 

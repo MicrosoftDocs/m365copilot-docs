@@ -1,30 +1,26 @@
 ---
-title: Build Microsoft Graph Connectors for Microsoft 365 Copilot
-description: Extend Microsoft 365 Copilot with Microsoft Graph connectors
+title: Microsoft 365 Copilot Connectors Overview
+description: Extend the knowledge in Microsoft 365 Copilot with Copilot connectors.
 author: muwagerikpe
 ms.author: muwagerikpe
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 04/11/2025
+ms.date: 05/19/2025
 ---
 
-# Microsoft Graph connectors for Microsoft 365 Copilot
+# Microsoft 365 Copilot connectors overview
 
-Microsoft Graph connectors provide a platform for you to ingest your unstructured, line-of-business data into Microsoft Graph, so that Microsoft 365 Copilot can reason over the entirety of your enterprise content. Content ingested through Microsoft Graph connectors is added to Microsoft Graph; this unlocks semantic understanding of your users' prompts in Microsoft 365 Copilot. However, Microsoft Graph connectors are not limited to Microsoft 365 Copilot. Microsoft Graph connector content powers other Microsoft 365 intelligent experiences like Microsoft Search, Context IQ, and the Microsoft 365 Copilot app.
+Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) provide a platform for you to ingest your unstructured, line-of-business data into Microsoft Graph, so that Microsoft 365 Copilot can reason over the entirety of your enterprise content. Content ingested through Copilot connectors is added to Microsoft Graph; this unlocks semantic understanding of your users' prompts in Microsoft 365 Copilot. However, Copilot connectors are not limited to Microsoft 365 Copilot. Copilot connector content powers other Microsoft 365 intelligent experiences like Microsoft Search, Context IQ, and the Microsoft 365 Copilot app.
 
 > [!NOTE]
 >
-> To learn more about pre-built Microsoft Graph connectors, see [Pre-built Microsoft Graph connectors](/microsoftsearch/pre-built-connectors-overview).
+> To learn more about pre-built Copilot connectors, see [Pre-built Copilot connectors](/microsoftsearch/pre-built-connectors-overview).
 
-This article describes how Microsoft Graph connector contents are part of Microsoft 365 Copilot and how you can configure your custom Microsoft Graph connections for Microsoft 365 Copilot.
+This article describes how Copilot connector contents are part of Microsoft 365 Copilot and how you can configure your custom Microsoft Graph connections for Microsoft 365 Copilot.
 
-For a summary of how Microsoft Graph connectors make your data available to Microsoft 365 intelligent experiences, see the [infographic](https://cdn.graph.office.net/prod/media/graph/connectors/Teams-Copilot_Graph-connectors-infographic_110623.pdf).
+## How Copilot connector content surfaces in Microsoft 365 Copilot
 
-## How Microsoft Graph connector content surfaces in Microsoft 365 Copilot
-
-When you use Microsoft Graph connectors to ingest your external content into Microsoft Graph, your users can find, summarize, and learn from your line-of-business data through natural language prompts in Microsoft 365 Copilot.
-
-:::image type="content" source="assets/images/connectors-copilot-response.png" alt-text="A screenshot of Microsoft Graph connectors in Microsoft 365 Copilot" lightbox="assets/images/connectors-copilot-response.png":::
+When you use Copilot connectors to ingest your external content into Microsoft Graph, your users can find, summarize, and learn from your line-of-business data through natural language prompts in Microsoft 365 Copilot.
 
 In addition, users can hover over in-text citations in Microsoft 365 Copilot responses to get a preview of the external item referenced.
 
@@ -34,11 +30,11 @@ If users want to dive deeper into the referenced content, they can select one of
 
 ![A screenshot of Graph connectors reference list in Microsoft 365 Copilot](assets/images/connectors-copilot-logo.png)
 
-## Microsoft Graph connector semantic indexing
+## Copilot connector semantic indexing
 
-Microsoft Graph connectors use semantic indexing to enable more efficient and meaningful data retrieval. Semantic indexing optimizes the way data is indexed and retrieved from various sources to help search experiences access data and return more relevant results.
+Copilot connectors use semantic indexing to enable more efficient and meaningful data retrieval. Semantic indexing optimizes the way data is indexed and retrieved from various sources to help search experiences access data and return more relevant results.
 
-Semantic indexing in Microsoft Graph connectors allows for:
+Semantic indexing in Copilot connectors allows for:
 
 - Improved matching of search queries to content to provide more relevant search results than simple keyword (lexical) matches.
 - Enhanced search results that include both exact and approximate matches.
@@ -66,25 +62,25 @@ Semantic indexing doesn't benefit the following scenarios:
 - Queries that involve multiple parameters, such as an assignee and a topic.
 - Queries for a total number of results. Relevance and synthesis can reduce the number of results returned.
 
-## Microsoft Graph connectors gallery
+## Copilot connectors gallery
 
-The [Microsoft Graph connectors gallery](https://www.microsoft.com/microsoft-search/connectors) includes a brief description of each of the connectors created by Microsoft and our partners, and a link to each partner's website.
+The [Copilot connectors gallery](https://www.microsoft.com/microsoft-search/connectors) includes a brief description of each of the connectors created by Microsoft and our partners, and a link to each partner's website.
 
 With more than 100 connectors currently available, you can connect to popular Microsoft and non-Microsoft services such as Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and many more.
 
-## Create your own custom Microsoft Graph connection
+## Create your own Copilot connector
 
-You can use the [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Microsoft Graph connections that index content from line-of-business data sources into Microsoft Graph. You can use the Microsoft Graph connectors APIs to create and manage external Microsoft Graph connections, define, and register the schema of external data types, ingest external data items into Microsoft Graph, and sync external groups.
+You can use the [Copilot connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Copilot connectors that index content from line-of-business data sources into Microsoft Graph. You can use the Copilot connector APIs to create and manage external connections; define, and register external data type schemas; ingest external data items into Microsoft Graph; and sync external groups.
 
-## Requirements for Microsoft Graph connectors
+## Requirements for Copilot connectors
 
-To build Microsoft Graph connectors, you must have a search administrator in your organization do the following:
+To build Copilot connectors, you must have a search administrator in your organization do the following:
 
-- [Register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for the required Microsoft Graph permissions in **Microsoft Entra admin center** ([entra.microsoft.com](https://entra.microsoft.com/)). 
-    - This might not be an option if you're working in a production environment. Any deployed Microsoft Graph connector is accessible tenant-wide unless the external items security is locked down.
+- [Register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for the required Microsoft Graph permissions in **Microsoft Entra admin center** ([entra.microsoft.com](https://entra.microsoft.com/)).
+    - This might not be an option if you're working in a production environment. Any deployed Copilot connector is accessible tenant-wide unless the external items security is locked down.
 - Make sure that Microsoft Graph connections that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) via the **Search & intelligence** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
-## Configuring your custom Microsoft Graph connection for Microsoft 365 Copilot
+## Configuring your custom Copilot connector for Microsoft 365 Copilot
 
 To make sure that Microsoft 365 Copilot uses your content effectively:
 
@@ -94,7 +90,7 @@ To make sure that Microsoft 365 Copilot uses your content effectively:
 - Add [user activities](/graph/api/externalconnectors-externalitem-addactivities) on your items. For a list of supported activity types, see [externalActivity](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in importance.
 - Provide meaningful descriptions in the `description` property when [creating connections](/graph/api/externalconnectors-external-post-connections). Rich descriptions improve the likelihood of displaying content in Copilot.
 
-In addition, search administrators must ensure that your Microsoft Graph connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) by using the following steps:
+In addition, search administrators must ensure that your Copilot connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) by using the following steps:
 
 - In the [Admin Center](https://admin.microsoft.com/), go to **Search & intelligence** > **Customizations** > **Verticals** and select **All**.
 
@@ -102,5 +98,6 @@ In addition, search administrators must ensure that your Microsoft Graph connect
 
 ## Related content
 
-- [Microsoft Graph connectors overview video](https://www.youtube.com/embed/17rAOh9313g)
-- [Microsoft Graph connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)
+- [Build your first Copilot connector](build-your-first-connector.md)
+- [Copilot connectors overview video](https://www.youtube.com/embed/17rAOh9313g)
+- [Copilot connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)

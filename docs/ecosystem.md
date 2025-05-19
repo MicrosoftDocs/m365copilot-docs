@@ -55,7 +55,7 @@ Your connector also runs outside of Copilot experiences. The following table lis
 |Copilot extensibility type|Microsoft 365 product availability|Learn more|
 |----------|-----------|------------|
 |[Copilot connectors](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context)|Microsoft 365 Copilot, Power Automate, Power apps, Azure Logic apps| [Extend agent capabilities with Copilot connectors](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio)|
-|[Microsoft Graph connectors](./overview-graph-connector.md)|Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 Copilot app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
+|[Microsoft 365 Copilot connectors](./overview-graph-connector.md) (formerly Microsoft Graph connectors)|Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 Copilot app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
 
 Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other Microsoft 365 apps and services are published and managed, both within your organization and within in-product app stores of Microsoft 365 products.
 
@@ -77,7 +77,7 @@ To learn more, see [Publish agents for Microsoft 365 Copilot](./publish.md).
 
 Line-of-business developers and IT admins can publish agents and manage both custom and store-bought Microsoft 365 and Copilot extensibility solutions via the Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.com)).
 
-For more information about deploying agents, actions, and Microsoft Graph connectors to your organization, see [Publish agents for Microsoft 365 Copilot](./publish.md).
+For more information about deploying agents, actions, and Copilot connectors to your organization, see [Publish agents for Microsoft 365 Copilot](./publish.md).
 
 To learn more about managing agents, see [Manage extensibility for Microsoft 365 Copilot](manage.md).
 
@@ -85,13 +85,13 @@ To learn more about managing agents, see [Manage extensibility for Microsoft 365
 
 Microsoft 365 provides a rich set of developer resources for extending Microsoft 365 Copilot, Teams, and other Microsoft 365 experiences.
 
-### Teams Toolkit
+### Microsoft 365 Agents Toolkit
 
-[Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)  is the *pro-code* option for building and debugging agents and actions (plugins). It provides support for all major Microsoft 365 platform extensibility surfaces, including agents, tabs, bots, message extensions, and Outlook Add-ins. Teams Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
+Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) is the *pro-code* option for building and debugging agents and actions (plugins). It provides support for all major Microsoft 365 platform extensibility surfaces, including agents, tabs, bots, message extensions, and Outlook Add-ins. Agents Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
 
 ### Copilot Studio
 
-[Microsoft Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) is the graphical *low-code* option for copilot extensibility, including Microsoft 365 agents, custom agents, and actions (plugins). Copilot Studio (previously known as *Power Virtual Agents*) is available as a standalone web app [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com/) and also as an [app for Microsoft Teams](https://aka.ms/PVATeamsApp?azure-portal=true).
+[Microsoft Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) is the graphical *low-code* option for copilot extensibility, including Microsoft 365 agents, custom agents, and actions (plugins). Copilot Studio (previously known as *Power Virtual Agents*) is available as a standalone web app [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com/) and also as an [app for Microsoft Teams](https://aka.ms/PVATeamsApp?azure-portal=true).
 
 ### Copilot developer mode
 

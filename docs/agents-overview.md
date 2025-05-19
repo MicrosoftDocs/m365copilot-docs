@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 05/05/2025
+ms.date: 05/19/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -55,7 +55,7 @@ Declarative agents enable you to configure Copilot for specific scenarios by add
 To configure a declarative agent, you provide:
 
 - **Custom instructions** to shape Copilot's responses to your organization's specific needs or workflow.
-- **Custom knowledge** to connect Microsoft 365 data sources (such as Teams messages, Microsoft Graph connectors, SharePoint, and OneDrive) or external data via Microsoft Graph connectors.
+- **Custom knowledge** to connect Microsoft 365 data sources (such as Teams messages, Copilot connectors, SharePoint, and OneDrive) or external data via Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors).
 - **Custom actions** to integrate with APIs to interact with external systems in real-time.
 
 Declarative agents have the following characteristics:

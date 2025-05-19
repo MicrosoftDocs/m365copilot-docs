@@ -12,16 +12,16 @@ In this section, you add conversation starters to your agent. Conversation start
     "conversation_starters": [
       {
         "title": "Getting Started",
-        "text": "How can I get started with Teams Toolkit?"
+        "text": "How can I get started with Agents Toolkit?"
       },
       {
         "title": "Getting Help",
-        "text": "How can I get help with Teams Toolkit?"
+        "text": "How can I get help with Agents Toolkit?"
       }
     ]
     ```
 
-    For more information, see [Conversation starters object](../../declarative-agent-manifest-1.3.md#conversation-starters-object).
+    For more information, see [Conversation starters object](../../declarative-agent-manifest-1.4.md#conversation-starters-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
 

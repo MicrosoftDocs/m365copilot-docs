@@ -1,7 +1,7 @@
 ---
 title: Image Generator Capability for Declarative Agents for Microsoft 365 Copilot
 description: Learn about the image generator capability and how to add it to your declarative agents.
-author: kmkoenen   
+author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -10,7 +10,7 @@ ms.date: 5/09/2025
 
 # Add the image generator capability to your agent
 
-The image generator capability enables declarative agents for Microsoft 365 Copilot to generate images based on user prompts. Image generator uses the existing [Designer](https://designer.microsoft.com/) functionality to create visually appealing and contextually relevant graphics, and includes the following features: 
+The image generator capability enables declarative agents for Microsoft 365 Copilot to generate images based on user prompts. Image generator uses the existing [Designer](https://designer.microsoft.com/) functionality to create visually appealing and contextually relevant graphics, and includes the following features:
 
 - **Multiple image generation**: For each user prompt, the agent generates four images.
 - **Interactive image options**: Users can select each generated image to view it in full size. They can download, copy, or view content credentials for the full-size image. They can also select the side arrow to scroll through the four images.
@@ -18,7 +18,7 @@ The image generator capability enables declarative agents for Microsoft 365 Copi
 - **Feedback mechanism**: Users can provide feedback on the generated images by giving a thumbs up or thumbs down. This feedback helps improve the quality of future image generations.
 - **Clipboard and sharing**: Users can copy the generated images to their clipboard to paste into other applications, or they can share the generated images directly from the interface.
 
- The image generator capability is available to Copilot Chat users with no metered usage or Microsoft 365 Copilot license.  
+The image generator capability is available to Copilot Chat users with no metered usage or Microsoft 365 Copilot license.
 
 ## Image generator examples
 
@@ -38,11 +38,12 @@ The following image shows the result.
 
 ## Enable image generator
 
-If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest file, as shown in the following example.
+### Agents Toolkit
+
+If you're using Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `GraphicArt` capability.
-
 
 ```json
 {
@@ -54,6 +55,8 @@ If you're using [Teams Toolkit and Visual Studio Code](build-declarative-agents.
 }
 ```
 
+### Copilot Studio agent builder
+
 If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Image generator**.
 
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of the agent builder":::
@@ -64,6 +67,6 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.3.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.4.md)
 - [Add the code interpreter capability to your agent](code-interpreter.md)
 - [Add knowledge sources to your declarative agent](knowledge-sources.md)

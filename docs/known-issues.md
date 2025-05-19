@@ -28,7 +28,7 @@ Power Automate Flows as actions in declarative agents might not run reliably and
 
 **Workaround:** Currently, no workaround for the issue that the flows might not return results is available. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
 
-This issue applies to links from any content source, including SharePoint, Microsoft Graph connectors, and plugins.
+This issue applies to links from any content source, including SharePoint, Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), and plugins.
 
 ### Prompts to get a list based on custom metadata aren't supported 
 
@@ -57,9 +57,9 @@ Currently, users can select a file in Copilot Studio and Copilot Studio agent bu
 When you share an agent in agent builder using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
 
-## Microsoft Graph connectors
+## Copilot connectors
 
-The following known issues apply to Microsoft Graph connectors.
+The following known issues apply to Copilot connectors.
 
 ### Prompts to get items based on custom metadata aren't supported
 
