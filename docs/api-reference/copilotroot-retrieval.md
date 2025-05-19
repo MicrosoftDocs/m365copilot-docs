@@ -313,6 +313,7 @@ Content-Type: application/json
 
 {
   "queryString": "How to setup corporate VPN?",
+  "dataSource": "sharePoint",
   "filterExpression": "path:\"https://contoso.sharepoint.com/sites/HR1/\" OR path:\"https://contoso.sharepoint-df.com/sites/HR2\"",
   "resourceMetadata": [
     "title",
@@ -419,6 +420,7 @@ Content-Type: application/json
 
 {
   "queryString": "How to setup corporate VPN?",
+  "dataSource": "externalItem",
   "filterExpression": "Label_Title:\"Corporate VPN\"",
   "resourceMetadata": [
     "Label_Title"
@@ -470,6 +472,7 @@ Content-Type: application/json
 
 {
   "queryString": "What is the vacation policy?",
+  "dataSource": "sharePoint",
   "filterExpression": "Author:\"John Doe\"",
   "resourceMetadata": [
     "Author"
@@ -529,6 +532,7 @@ Content-Type: application/json
 
 {
   "queryString": "What is the reimbursement policy for business expenses?",
+  "dataSource": "sharePoint",
   "filterExpression": "LastModifiedTime >= 2024-07-22 AND LastModifiedTime <= 2025-01-08",
   "resourceMetadata": [
     "LastModifiedTime"
@@ -611,6 +615,7 @@ Content-Type: application/json
 
 {
   "queryString": "What is the sick time policy?",
+  "dataSource": "sharePoint",
   "filterExpression": "FileExtension:\"docx\" OR FileExtension:\"pdf\" OR FileExtension:\"pptx\"",
   "resourceMetadata": [
     "FileExtension"
@@ -710,6 +715,7 @@ Content-Type: application/json
 
 {
   "queryString": "What is Contoso's mission statement?",
+  "dataSource": "sharePoint",
   "filterExpression": "Filename:\"Contoso Mission Statement.docx\"",
   "resourceMetadata": [
     "Filename"
