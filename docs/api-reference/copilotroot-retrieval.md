@@ -1132,6 +1132,7 @@ Content-Type: application/json
 
 {
   "queryString": "How do I refresh my refresh Windows 10 device?",
+  "dataSource": "sharePoint",
   "filterExpression": "Title:\"Windows 10 Device\"",
   "resourceMetadata": [
     "Title"
@@ -1171,15 +1172,23 @@ Content-Type: application/json
       }
     },
     {
-      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=c886d14",
+      "webUrl": "https://contoso.sharepoint.com/sites/HR/Learn about Device Refreshes.pdf",
       "extracts": [
         {
           "text": "When you get your new Windows 10 device, make sure to install all required software."
         }
       ],
-      "resourceType": "externalItem",
+      "resourceType": "listItem",
       "resourceMetadata": {
         "title": "Learn When to Reset or Refresh a Windows 10 Device"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
       }
     }
   ]
