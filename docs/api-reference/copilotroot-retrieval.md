@@ -49,7 +49,7 @@ The following table lists the parameters that are required when you call this ac
 | Parameter                | Type              | Description                    |
 |:-------------------------|:------------------|:-------------------------------|
 | `queryString`            | String            | Natural language query string used to retrieve relevant text extracts. This parameter has a limit of 1,500 characters. Your `queryString` should be a single sentence, and you should avoid spelling errors in context-rich keywords. Required. |
-| `dataSource`            | String            | String indicating if extracts should be retrieved from SharePoint or Copilot connectors. Acceptable values are "sharePoint" and "externalItems". Required. |
+| `dataSource`            | String            | String indicating if extracts should be retrieved from SharePoint or Copilot connectors. Acceptable values are "sharePoint" and "externalItem". Required. |
 | `filterExpression`       | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Copilot connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Copilot connector. Microsoft will not resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. By default, no scoping is applied. Ensure that this parameter is correct before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Follow these [best practices](https://learn.microsoft.com/microsoft-365-copilot/extensibility/api-reference/copilotroot-retrieval#best-practices) for your filtered queries. Optional. |
 | `resourceMetadata`       | String collection | A list of metadata fields to be returned for each item in the response. Only retrievable metadata properties can be included in this list. By default, no metadata is returned. Optional. |
 | `maximumNumberOfResults` | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 25 results. Optional. |
@@ -60,7 +60,7 @@ If successful, this action returns a `200 OK` response code and a [retrievalResp
 
 ## Examples
 
-### Example 1: Retrieve data from SharePoint and Copilot connectors
+### Example 1: Retrieve data from SharePoint
 
 The following example shows a request to retrieve data from both SharePoint and Copilot connectors. By omitting the `filterExpression` parameter, the request indicates retrieval should span all supported data sources. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
@@ -74,6 +74,7 @@ Content-Type: application/json
 
 {
   "queryString": "How to setup corporate VPN?",
+  "dataSource": "sharePoint",
   "resourceMetadata": [
     "title",
     "author"
@@ -117,6 +118,83 @@ Content-Type: application/json
       }
     },
     {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR/Corporate_VPN.docx",
+      "extracts": [
+        {
+          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+        },
+        {
+          "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN."
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "title": "Corporate VPN",
+        "author": "Jane Doe"
+      },
+        "sensitivityLabel": {
+        "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00",
+        "isEncrypted": false
+      }
+    }
+  ]
+}
+```
+
+### Example 2: Retrieve data from Copilot connectors
+
+The following example shows a request to retrieve data from both SharePoint and Copilot connectors. By omitting the `filterExpression` parameter, the request indicates retrieval should span all supported data sources. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "dataSource": "externalItem",
+  "resourceMetadata": [
+    "title",
+    "author"
+  ],
+  "maximumNumberOfResults": "10"
+}
+```
+
+#### Response
+
+The following example shows the response. The first result is from SharePoint, and the second result is from Copilot connectors.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
+      "extracts": [
+        {
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+        },
+        {
+          "text": "You will need to sign in with 2FA to access the corporate VPN."
+        }
+      ],
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "title": "VPN Access",
+        "author": "John Doe"
+      }
+    },
+    {
       "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
       "extracts": [
         {
@@ -135,7 +213,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 2: Retrieve data from a specific SharePoint site
+### Example 3: Retrieve data from a specific SharePoint site
 
 The following example shows a request to retrieve data from a specific Sharepoint site. The `filterExpression` parameter specifies the path to the site. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
@@ -149,6 +227,7 @@ Content-Type: application/json
 
 {
   "queryString": "How to setup corporate VPN?",
+  "dataSource": "sharePoint",
   "filterExpression": "path:\"https://contoso.sharepoint.com/sites/HR1/\"",
   "resourceMetadata": [
     "title",
@@ -220,7 +299,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 3: Retrieve data from multiple SharePoint sites
+### Example 4: Retrieve data from multiple SharePoint sites
 
 The following example shows a request to retrieve data from multiple Sharepoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
@@ -326,7 +405,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 4: Filtering on Copilot connectors content
+### Example 5: Filtering on Copilot connectors content
 
 The following example shows a request to retrieve data while filtering on Copilot connectors properties. In this example, `Label_Title` is a queryable property in the ServiceNow Copilot connector schema. The request asks for `Label_Title` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
@@ -377,7 +456,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 5: Filtering on the `Author` Property
+### Example 6: Filtering SharePoint results on the `Author` Property
 
 The following example shows a request to retrieve data while filtering on the `Author` property. The request asks for `Author` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
@@ -436,7 +515,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 6: Filtering on a specific Date Range using the `LastModifiedTime` Property
+### Example 7: Filtering SharePoint results on a specific Date Range using the `LastModifiedTime` Property
 
 The following example shows a request to retrieve data while filtering on a specific date range using the `LastModifiedTime` property. The request asks for `LastModifiedTime` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
@@ -518,7 +597,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 7: Filtering using the `FileExtension` Property
+### Example 8: Filtering SharePoint results using the `FileExtension` Property
 
 The following example shows a request to retrieve data while filtering using the `FileExtension` property. In this example, the request is being filtered to docx, pdf, and pptx files. The request asks for `FileExtension` to be returned for each item from which a text extract is retrieved. The response should include a maximum of three documents.
 
@@ -617,7 +696,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 8: Filtering using the `Filename` Property
+### Example 9: Filtering SharePoint results using the `Filename` Property
 
 The following example shows a request to retrieve data while filtering using the `Filename` property. The request asks for `Filename` to be returned for each item from which a text extract is retrieved. The response should include a maximum of one document.
 
@@ -673,7 +752,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 9: Filtering using the `FileType` Property
+### Example 10: Filtering SharePoint results using the `FileType` Property
 
 The following example shows a request to retrieve data while filtering using the `FileType` property. The query is filtering to Word documents, web pages indexed using an enterprise websites Copilot connector, and Epics indexed using the Azure DevOps Copilot connector. The request asks for `FileType` to be returned for each item from which a text extract is retrieved. The response should include a maximum of three documents.
 
@@ -756,7 +835,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 10: Determine the sensitivity of results by filtering using the `InformationProtectionLabelId` Property
+### Example 11: Determine the sensitivity of SharePoint results by filtering using the `InformationProtectionLabelId` Property
 
 The following example shows a request to retrieve data while filtering using the `InformationProtectionLabelId` property. The `InformationProtectionLabelId` is equivalent to the `sensitivityLabelId` you receive in the `sensitivityLabel` object in the response payload. The request asks for `InformationProtectionLabelId` to be returned for each item from which a text extract is retrieved. The response should include a maximum of three documents.
 
@@ -855,7 +934,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 11: Filter using the `ModifiedBy` Property
+### Example 12: Filter SharePoint results using the `ModifiedBy` Property
 
 The following example shows a request to retrieve data while filtering using the `ModifiedBy` property. The request asks for `ModifiedBy` to be returned for each item from which a text extract is retrieved. The response should include a maximum of two documents.
 
@@ -923,7 +1002,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 12: Filter using the `SiteID` Property
+### Example 13: Filter SharePoint results using the `SiteID` Property
 
 The following example shows a request to retrieve data while filtering using the `SiteID` property. The request asks for `SiteID` to be returned for each item from which a text extract is retrieved. The response should include a maximum of two documents.
 
@@ -1005,7 +1084,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 13: Filter using the `Title` Property
+### Example 14: Filter SharePoint results using the `Title` Property
 
 The following example shows a request to retrieve data while filtering using the `Title` property. The request asks for `Title` to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
