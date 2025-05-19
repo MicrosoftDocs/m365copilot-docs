@@ -65,12 +65,13 @@ The API supports natural language queries and uses the Microsoft 365 Copilot sta
 
 The following are the current throttling and other limitations to the Retrieval API:
 
-- You need **Files.Read.All**, **Sites.Read.All**, and **ExternalItem.Read.All** permissions to call the Retrieval API.
+- You need the **Files.Read.All** and **Sites.Read.All** permissions to retrieve SharePoint content using the Retrieval API.
+- You need the **ExternalItem.Read.All** permission to retrieve Copilot connectors content using the Retrieval API.
 - The **queryString** request parameter has a limit of 1,500 characters.
+- You must retrieve from one data source at a time using the **dataSource** request parameter. Interleaved results are not supported.
 - If the **filterExpression** request parameter has incorrect KQL syntax, the query successfully executes with no scoping.
 - Not all SharePoint properties are supported in the **filterExpression**. Refer to the [API reference](copilotroot-retrieval.md) to see the full list of supported properties.
-- It is highly recommended that you follow the best practices outline in the [API reference](copilotroot-retrieval.md).
-- The **maximumNumberOfResults** request parameter has a maximum value of 10.
+- The **maximumNumberOfResults** request parameter has a maximum value of 25.
 - Up to 200 requests per user per hour are supported.
 - Retrieval from nontextual content, including tables, images, and charts, is not supported.
 - Results from files with .docx, .pptx, and .pdf extensions that are larger than 512 MB are not supported. Results from files with any other extension that are larger than 150 MB are not supported.
@@ -85,7 +86,7 @@ The Retrieval API is available at no extra cost to users with a Microsoft 365 Co
 ### General
 These are the best practices that are applicable to both unfiltered queries (queries without a **filterExpression**) and filtered queries (queries with a **filterExpression**):
 
-- The results and extracts returned by the Retrieval API are unordered. Consquently, it is recommended that you do not limit the **maximumNumberOfResults** unless you have stringent requirements on how many tokens your LLM can consume.
+- The results and extracts returned by the Retrieval API are unordered. Consequently, it is recommended that you do not limit the **maximumNumberOfResults** unless you have stringent requirements on how many tokens your LLM can consume.
 - Send all extracts returned by the Retrieval API to your LLM/orchestrator for answer generation.
 - Avoid queries that are simply generic keywords that could be applicable to a plethora of content.
 - Provide as much context in the query as possible.
