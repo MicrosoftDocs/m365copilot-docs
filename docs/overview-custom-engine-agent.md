@@ -114,4 +114,5 @@ For more information, see [Cost considerations for Copilot extensibility](cost-c
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
 - [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
 - [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
+- [Bots overview](/microsoftteams/platform/bots/overview)
 - [Copilot extensibility planning guide](planning-guide.md)
