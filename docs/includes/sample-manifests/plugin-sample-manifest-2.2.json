@@ -76,7 +76,8 @@
         },
         "responding": {
           "description": "`getListings` returns a list of real estate properties for sale based on the specified criteria.",
-          "instructions": ["Determine if the response contains an error field.",
+          "instructions": [
+            "Determine if the response contains an error field.",
             "If an error is present, provide the error code and error message from the JSON response to the user.",
             "If there is no error, extract and include as much relevant information as possible from the JSON response to meet the users needs."
           ]

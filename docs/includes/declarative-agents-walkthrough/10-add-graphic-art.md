@@ -46,9 +46,9 @@ In this section, you add the [image generator capability](../../image-generator.
     ]
     ```
 
-    For more information, see [Graphic art object](../../declarative-agent-manifest-1.3.md#graphic-art-object).
+    For more information, see [Graphic art object](../../declarative-agent-manifest-1.4.md#graphic-art-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have the ability to generate images after you reload the page.
 

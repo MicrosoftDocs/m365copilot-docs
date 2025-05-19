@@ -43,7 +43,7 @@ Career Coach agents are useful for the following tasks.
 
 ## Extension opportunities
 
-You can enhance the functionality of your Career Coach agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use.
+You can enhance the functionality of your Career Coach agents by connecting to additional resources via Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), Power Platform connectors, or API plugins, depending on the source system in use.
 
 Suggestions for such connections include:
 

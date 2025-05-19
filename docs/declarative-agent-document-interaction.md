@@ -10,10 +10,30 @@ ms.topic: conceptual
 
 # Interact with documents in Microsoft 365 apps with a declarative agent
 
-When declarative agents are used in the Copilot experience in Microsoft 365 apps, they're able to interact with the open document. Users can provide a selected section of the open document to the agent, and agents can insert images into the open document.
+When declarative agents are used in the Copilot experience in Microsoft 365 apps, they're able to interact with the open document. By default, agents can read the entire pen document. Users can provide just a selected section of the open document to the agent, and agents can insert images into the open document.
 
 > [!NOTE]
-> [Accessing the document selection](#access-document-selection) is only supported in Word. [Inserting images](#inserting-images) is supported in Word and PowerPoint.
+> [Accessing the document selection](#access-document-selection) is only supported in Word. [Accessing the entire open document](#access-the-entire-open-document) and [inserting images](#inserting-images) is supported in Word and PowerPoint.
+
+## Access the entire open document
+
+When the user references the open document in their prompt, the contents of the document are automatically added to the prompt, allowing the agent to access it without further user action. For example, the user could prompt the agent with "Summarize this document" or "Find any action items in this file."
+
+### Document format
+
+The format of the information provided to the agent varies depending on the type of file.
+
+For Word documents, the context provided to the agent consists entirely of plain text content, including headings, body paragraphs, and list elements. The document's logical flow is preserved through sequential chunking, allowing the agent to infer the document structure based on textual patterns. Non-textual elements like tables, charts, images, page formatting, and styling aren't captured. Mentions of such visual objects along with adjoining metadata is available as part of context, but the agent doesn't have access to their actual content.
+
+For PowerPoint presentations, the context provided to the agent includes all visible slide titles, body text, and flattened descriptions of tables and images where available. The slide flow and logical narrative are maintained through sequential indexing. Non-textual elements such as images, complex charts, background designs, transitions, hyperlinks, and detailed speaker notes aren't captured. As a result, while the agent can reason over the textual content and high-level descriptions of visual elements, it doesn't have access to rich media, detailed visual layouts, and structured graphical data.
+
+### Using the open document in your agent
+
+Declarative agents have access to the open document by default. No changes are required to your agent to enable support for this feature.
+
+### Using the open document in API plugins
+
+If your agent includes [API plugins](overview-api-plugins.md) as custom actions, the agent decides how much of the open document to send to the API based on your API description and the instructions given to the agent. For more information, see [API plugin considerations for document contents](#api-plugin-considerations-for-document-contents).
 
 ## Access document selection
 
@@ -35,15 +55,19 @@ The agent generates images and responds to the user.
 
 Declarative agents have access to document selection by default. No changes are required to your agent to enable support for this feature.
 
-#### Using document selection in API plugins
+### Using document selection in API plugins
 
-If your agent includes [API plugins](overview-api-plugins.md) as custom actions, the agent can provide the document selection to the API. The agent translates the document selection based on your API specification. You should ensure that the selection is translated appropriately for your API.
+If your agent includes [API plugins](overview-api-plugins.md) as custom actions, the agent can provide the document selection to the API. The agent translates the document selection based on your API specification.
 
-1. Begin by testing your agent without adding any special instructions to your agent. In most cases, the agent should translate the selection appropriately for your API without any extra configuration.
-1. If your agent doesn't translate appropriately for your API, add instructions in the plugin manifest's `reasoning` [state object](api-plugin-manifest-2.2.md#state-object) to instruct the agent on which form to choose.
-1. Test various selections to verify your agent handles different types and lengths of selection appropriately.
+#### API plugin considerations for document contents
 
-Here are some examples of instructions to influence how the agent translates the document selection. The actual instructions needed to get the desired result depend on your agent and your API.
+For the entire document or user selection, the agent decides how to best pass the data to an API plugin. You should ensure that the document or user selection is translated appropriately for your API.
+
+1. Begin by testing your agent without adding any special instructions to your agent. In most cases, the agent should translate the document contents or user selection appropriately for your API without any extra configuration.
+1. If your agent doesn't translate appropriately for your API, add instructions in the plugin manifest's `reasoning` [state object](api-plugin-manifest-2.3.md#state-object) to instruct the agent on which form to choose.
+1. Test various selections to verify your agent handles different types and lengths of content appropriately.
+
+Here are some examples of instructions to influence how the agent translates the document contents or user selection. The actual instructions needed to get the desired result depend on your agent and your API.
 
 ##### Verbatim pass-through example
 
@@ -102,6 +126,6 @@ Enabling image insertion in a declarative agent requires an API plugin that uses
 ## Related content
 
 - [API plugins for Microsoft 365 Copilot](overview-api-plugins.md)
-- [API plugin manifest schema 2.2 for Microsoft 365 Copilot](api-plugin-manifest-2.2.md)
+- [API plugin manifest schema 2.2 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md)
 - [Adaptive Card response templates for API plugins for Microsoft 365 Copilot](api-plugin-adaptive-cards.md)
 - [Adaptive Card documentation](https://adaptivecards.microsoft.com)
