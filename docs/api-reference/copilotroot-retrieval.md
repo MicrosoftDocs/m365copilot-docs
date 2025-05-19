@@ -62,7 +62,7 @@ If successful, this action returns a `200 OK` response code and a [retrievalResp
 
 ### Example 1: Retrieve data from SharePoint
 
-The following example shows a request to retrieve data from both SharePoint and Copilot connectors. By omitting the `filterExpression` parameter, the request indicates retrieval should span all supported data sources. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows a request to retrieve data from SharePoint. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
 #### Request
 
@@ -85,7 +85,7 @@ Content-Type: application/json
 
 #### Response
 
-The following example shows the response. The first result is from SharePoint, and the second result is from Copilot connectors.
+The following example shows the response.
 
 ```http
 HTTP/1.1 200 OK
@@ -147,7 +147,7 @@ Content-Type: application/json
 
 ### Example 2: Retrieve data from Copilot connectors
 
-The following example shows a request to retrieve data from both SharePoint and Copilot connectors. By omitting the `filterExpression` parameter, the request indicates retrieval should span all supported data sources. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows a request to retrieve data from Copilot connectors. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
 #### Request
 
@@ -170,7 +170,7 @@ Content-Type: application/json
 
 #### Response
 
-The following example shows the response. The first result is from SharePoint, and the second result is from Copilot connectors.
+The following example shows the response.
 
 ```http
 HTTP/1.1 200 OK
@@ -314,7 +314,7 @@ Content-Type: application/json
 {
   "queryString": "How to setup corporate VPN?",
   "dataSource": "sharePoint",
-  "filterExpression": "path:\"https://contoso.sharepoint.com/sites/HR1/\" OR path:\"https://contoso.sharepoint-df.com/sites/HR2\"",
+  "filterExpression": "path:\"https://contoso.sharepoint.com/sites/HR1/\" OR path:\"https://contoso.sharepoint.com/sites/HR2\"",
   "resourceMetadata": [
     "title",
     "author"
