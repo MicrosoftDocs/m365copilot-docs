@@ -37,7 +37,7 @@ After you define the problem or business need that you need to address, identify
 | Improve decision-making, summarizations, or recommendations | Enhance Copilot's reasoning abilities. |
 | Integrate organizational knowledge from databases, documents, or APIs | Enable Copilot to access and use external data. |
 | Reduce manual tasks by building automated flows | Create automated workflows to streamline repetitive tasks. |
-| Provide secure access to Copilot’s capabilities within your own applications or custom agents | Access Copilot via Microsoft 365 Copilot APIs to ensure compliance and enterprise-grade security |
+| Provide secure access to Copilot's capabilities within your own applications or custom agents | Access Copilot via Microsoft 365 Copilot APIs to ensure compliance and enterprise-grade security |
 
 Also consider:
 
