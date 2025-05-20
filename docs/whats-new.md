@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Microsoft 365 Agents Toolkit
 
-Use Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](aka.ms/M365AgentsToolkit)) to [Build declarative agents](build-declarative-agents.md) and [Build Copilot connectors](build-your-first-connector.md).
+Use Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to [Build declarative agents](/microsoft-365-copilot/extensibility/build-declarative-agents) and [Build Copilot connectors](build-your-first-connector.md).
 
 ### Microsoft 365 Copilot APIs
 
