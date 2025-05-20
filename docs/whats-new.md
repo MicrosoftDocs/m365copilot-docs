@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 03/24/2025
+ms.date: 05/19/2025
 ms.topic: overview
 ---
 
@@ -15,6 +15,14 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## May 2025
+
+### Microsoft 365 Agents Toolkit
+
+Use Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to [Build declarative agents](/microsoft-365-copilot/extensibility/build-declarative-agents) and [Build Copilot connectors](build-your-first-connector.md).
+
+### Microsoft 365 Copilot APIs
+
+The Microsoft 365 Copilot APIs provide a comprehensive set of capabilities that enable you to build AI-powered applications grounded in enterprise data. For more information, see [Microsoft 365 Copilot APIs overview](copilot-apis-overview.md).
 
 ### API plugin manifest version 2.3
 
