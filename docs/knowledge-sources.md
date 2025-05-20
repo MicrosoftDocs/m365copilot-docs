@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 5/09/2025
+ms.date: 5/20/2025
 ---
 
 # Add knowledge sources to your declarative agent
@@ -20,6 +20,7 @@ The following table lists the capabilities and knowledge sources you can configu
 | Image generator | :white_check_mark: | :white_check_mark: | No |
 | Copilot connectors | :white_check_mark: | :white_check_mark: | Yes |
 | SharePoint and OneDrive | :white_check_mark:| :white_check_mark: | Yes |
+| Uploaded files | :white_check_mark:| :x: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
 | Dataverse | :x: | :white_check_mark:\* | Yes |
