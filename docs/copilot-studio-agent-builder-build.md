@@ -131,6 +131,14 @@ For information about size limits for uploaded files, see [File size limits](#fi
 
 Uploaded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed.
 
+The following file types aren't supported:
+
+- Files with sensitivity labels with double key encryption, extract rights disabled, or user-defined permissions.
+- Files from another tenant that has encryption enabled.
+- Password protected files.
+
+For information about sensitivity labels applied to files used as knowledge, see [Sensitivity labels](#sensitivity-labels).
+
 > [!CAUTION]
 > When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. The agent doesn't honor permissions that are applied to files.
 

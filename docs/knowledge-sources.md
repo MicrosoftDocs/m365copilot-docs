@@ -74,6 +74,15 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Knowledge**, list the website URLs that you want to reference.
 
+## Uploaded files
+
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build) to build your agent, you can upload files directly from your device or the cloud for your agent to use as knowledge sources. The files that you upload as knowledge are stored in [SharePoint Embedded](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview) and these files count against the OneDrive and SharePoint capacity in your tenant.
+
+> [!NOTE]
+> The file upload feature is available to users with metered consumption enabled or with Microsoft 365 Copilot licenses.
+>
+For more information about uploaded files, see [Uploaded files in agent builder](copilot-studio-agent-builder-build.md#uploaded-files).
+
 ## Dataverse
 
 Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
