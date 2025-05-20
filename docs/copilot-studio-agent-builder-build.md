@@ -25,7 +25,7 @@ You can author your declarative agent in two ways:
 Both tabs work seamlessly to provide a rich authoring experience.
 
 > [!NOTE]
-> The **Describe** tab is only available when your Microsoft 365 language is set to one of the [available languages](copilot-studio-agent-builder-availability.md). You can build your agent via the **Configure** tab if the **Describe** tab is not supported in your preferred language.
+> The **Describe** tab is only available when your Microsoft 365 language is set to one of the [available languages](copilot-studio-agent-builder-availability.md). You can build your agent via the **Configure** tab if the **Describe** tab isn't supported in your preferred language.
 
 ## Describe your agent
 
@@ -80,7 +80,7 @@ You can add specific public websites as agent knowledge sources to make your age
 - URLs can't contain query parameters; for example, `https://example.org?test=1` is invalid.
 - You can add up to four URLs.
 
-To configure your agent to use any web data as knowledge, on the **Configure** tab, click the **Knowledge** box and choose **All websites**.
+To configure your agent to use any web data as knowledge, on the **Configure** tab, click the **Knowledge** box, and choose **All websites**.
 
 ### SharePoint content
 
@@ -106,7 +106,7 @@ The following table lists the supported file types and their respective limits.
 <!-- markdownlint-enable MD033 -->
 
 > [!IMPORTANT]
-> If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you won't be able to use SharePoint as a knowledge source.
+> If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
 
 #### Entering a URL for a SharePoint site, folder, or file
 
@@ -125,11 +125,11 @@ After you select a site, you can select several files and folders. Doing so adds
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-sharepoint-picker-folders.png" alt-text="SharePoint file picker":::
 
-You can also upload files into SharePoint by using the picker. The file appears in the same folder after it's finished uploading and is ready for use in agent builder.
+You can also upload files into SharePoint by using the picker. The file appears in the same folder after it finishes uploading and is ready for use in agent builder.
 
 #### File readiness
 
-When new files are uploaded to SharePoint, they can take up to several minutes to be ready for the agent to include in its response. You can still test your agent in the test pane if sources aren't ready. However, responses won't include information from the newly uploaded file until it's ready.
+When new files are uploaded to SharePoint, they can take up to several minutes to be ready for the agent to include in its response. You can still test your agent in the test pane if sources aren't ready. However, responses don't information from the newly uploaded file until it's ready.
 
 You can check the file readiness by looking in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When the underlying file uploaded to SharePoint is renamed or deleted, the agent picks up the changes. You can also select the reload button on top of the **Knowledge** section to manually reload the state.
 
@@ -141,7 +141,7 @@ You can upload files directly from your device as knowledge for your agent. You 
 
 You can add up to 20 files as knowledge sources, included individually uploaded files and SharePoint sites, folders, and files. You can't use this feature to upload folders from your device. The size limit for files added via file upload is 30 MB.
 
-Uploaded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and will appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed.
+Uploaded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed.
 
 > [!CAUTION]
 > When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. The agent doesn't honor permissions that are applied to files.
@@ -150,23 +150,23 @@ Uploaded files are displayed on the **Configure** tab under **Uploaded files**. 
 
 Agents protect content that is restricted by [sensitivity labels](/purview/sensitivity-labels). If a knowledge source is restricted via a sensitivity label, users who don't have access permissions to that knowledge source can't use the agent. In tenants that have sensitivity labeling enabled, the label shows next to the file under **Uploaded files**.
 
-For information about how to enable sensitivity labels in your tenant, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files) and [Enable co-authoring for files encrypted with sensitivity labels](/purview/sensitivity-labels-coauthoring).
+For information about how to enable sensitivity labels in your tenant, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files) and [Enable coauthoring for files encrypted with sensitivity labels](/purview/sensitivity-labels-coauthoring).
 
 #### Sharing an agent with uploaded files
 
-When you share an agent that has uploaded files as knowledge sources, the files are also shared, and agent users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with uploaded files as knowledge:
+When you share an agent with uploaded files, the files are also shared, and agent users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with uploaded files as knowledge:
 
 - Anyone in your organization
 - Specific users in your organization
 - Only you
 
-Sharing an agent with uploaded files to groups is not currently supported.
+Sharing an agent with uploaded files to groups isn't currently supported.
 
 When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are enabled, a label that represents the highest sensitivity label applied to any uploaded files or the default sensitivity label of the tenant (whichever is highest) is displayed on the **Share** screen.
 
 ### Copilot connectors
 
-Copilot connectors allow agents to include knowledge from external repositories or systems such as customer accounts, incident tickets, and knowledge articles. Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector). At first, the connectors may be collapsed in the **From your organization** section of the **Knowledge** sources.
+Copilot connectors allow agents to include knowledge from external repositories or systems such as customer accounts, incident tickets, and knowledge articles. Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector). At first, the connectors might be collapsed in the **From your organization** section of the **Knowledge** sources.
 
 If at least one connector is enabled, you can add it to your agent. Your agent is able to answer questions related to that connector. The information retrieved from the connector is indexed and refreshed according to the way in which the connector was configured. The agent can cite relevant information from the indexed data and link the end user to the data source.
 
