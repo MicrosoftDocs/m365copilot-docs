@@ -89,21 +89,7 @@ You can reference specific SharePoint sites, files, and folders as agent knowled
 - A total of 20 knowledge sources (including SharePoint sites, folders, and files and [files uploaded from the device](#uploaded-files)) can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
 
-The following table lists the supported file types and their respective limits.
-
-<!-- markdownlint-disable MD033 -->
-| File type               | File size limit |
-| ------------------- | ----------- |
-| .doc            | 150 MB |
-| .docx            | 512 MB |
-| .html | 150 MB |
-| .pdf     | 512 MB |
-| .ppt | 150 MB |
-| .pptx       | 512 MB |
-| .txt    | 150 MB |
-| .xls | 150 MB |
-| .xlsx | 150 MB |
-<!-- markdownlint-enable MD033 -->
+For information about SharePoint knowledge file size limits, see [File size limits](#file-size-limits).
 
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
@@ -139,7 +125,9 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 You can upload files directly from your device as knowledge for your agent. You can simply drag-and-drop files from your device into the **Describe** tab or the **Knowledge** box on the **Configure** tab. On the **Configure** tab, you can also choose the arrow icon to upload files from your device or choose the cloud icon to upload files from SharePoint.
 
-You can add up to 20 files as knowledge sources, included individually uploaded files and SharePoint sites, folders, and files. You can't use this feature to upload folders from your device. The size limit for files added via file upload is 30 MB.
+You can add up to 20 files as knowledge sources, included individually uploaded files and SharePoint sites, folders, and files. You can't use this feature to upload folders from your device. 
+
+For information about size limits for uploaded files, see [File size limits](#file-size-limits).
 
 Uploaded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed.
 
@@ -163,6 +151,22 @@ When you share an agent with uploaded files, the files are also shared, and agen
 Sharing an agent with uploaded files to groups isn't currently supported.
 
 When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are enabled, a label that represents the highest sensitivity label applied to any uploaded files or the default sensitivity label of the tenant (whichever is highest) is displayed on the **Share** screen.
+
+### File size limits
+
+The following table lists the file types that you can add as knowledge to your agent and the size limits for each file type, whether you're adding the files from SharePoint or uploading from your device.
+
+| File type | SharePoint Online limit | Uploaded file limit |
+| ----------| ----------------------- | ------------------- |
+| .doc      | 150 MB                  | 30 MB |
+| .docx     | 512 MB                  | 30 MB |
+| .html     | 150 MB                  | NA    |
+| .pdf      | 512 MB                  | 30 MB |
+| .ppt      | 150 MB                  | 30 MB |
+| .pptx     | 512 MB                  | 30 MB |
+| .txt      | 150 MB                  | 30 MB |
+| .xls      | 150 MB                  | 30 MB |
+| .xlsx     | 150 MB                  | 30 MB |
 
 ### Copilot connectors
 
