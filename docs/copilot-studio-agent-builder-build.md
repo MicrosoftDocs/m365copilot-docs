@@ -144,15 +144,13 @@ For information about sensitivity labels applied to files used as knowledge, see
 
 #### Sensitivity labels
 
-Agents protect content that is restricted by [sensitivity labels](/purview/sensitivity-labels). In tenants that have sensitivity labeling enabled, the label shows next to the file under **Uploaded files**. If a knowledge source is restricted via a sensitivity label, users who don't have access permissions to that knowledge source can't use the agent. The user can see the agent title and description in the Agent Store, but they can't access or use the agent.
+Agents protect content that is restricted by [sensitivity labels](/purview/sensitivity-labels). In tenants that have sensitivity labels enabled, the label shows next to the file under **Uploaded files**. If a knowledge source is restricted via a sensitivity label, users who don't have access permissions to that knowledge source can't use the agent. The user can see the agent title and description in the Agent Store, but they can't access or use the agent. Currently, sensitivity labels don't appear on the Agent Store listing.
 
 Agent responses from embedded files with a sensitivity label applied show the sensitivity label beside the Copilot icon in Copilot Chat.
 
-If embedded files have sensitivity labels applied, the most restrictive sensitivity label applied appears on the agent. For example, if a file with a General label and a file with a Confidential label are embedded in the agent, the agent the shows the Confidential sensitivity label. This label reflects the level of sensitivity of the embedded files; currently, agent builders can't set sensitivity labels on agents.
+If embedded files have sensitivity labels applied, the most restrictive sensitivity label applied appears on the top right corner of the agent. For example, if a file with a General label and a file with a Confidential label are embedded in the agent, the agent the shows the Confidential sensitivity label. This label reflects the level of sensitivity of the embedded files; currently, agent builders can't set a sensitivity label on an agent.
 
-If the embedded files don't have sensitivity labels applied, the default label for the tenant shows on the agent. If the tenant doesn't have a default sensitivity label, no label is shown.
-
-The embedded file sensitivity label appears on the top right corner of the agent. Currently, sensitivity labels don't appear on the Agent Store listing. If a user doesn't have permission to an embedded knowledge source, they can't add the agent from the store.
+If the embedded files don't have sensitivity labels applied, the default label for the tenant shows on the agent. If the tenant doesn't have a default sensitivity label, the agent doesn't show a label.
 
 For information about how to enable sensitivity labels in your tenant, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files) and [Enable coauthoring for files encrypted with sensitivity labels](/purview/sensitivity-labels-coauthoring).
 
