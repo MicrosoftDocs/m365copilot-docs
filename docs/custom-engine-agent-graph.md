@@ -135,7 +135,7 @@ Congratulations! Your personal assistant is set up and is answering complex ques
 
 ## Make the agent a standalone app
 
-Now that your agent is up and running, you can give it a UI and host it so that you can access it in a browser similar to ChatGPT. You use the Chainlit Python package to do this.
+Now that your agent is up and running, you can give it a UI and host it so that you can access it in a browser. You use the Chainlit Python package to do this.
 
 1. Open a command prompt and go to the folder that contains **ClippywithUI.py**.
 1. Run the following command: `Chainlit run ClippywithUI.py -w`.
