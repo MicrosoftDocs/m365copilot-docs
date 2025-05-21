@@ -15,7 +15,7 @@ doc_type: conceptualPageType
 
 [!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
-Ground your generative AI solutions with Microsoft 365 data. Allows the retrieval of relevant text extracts from SharePoint and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Retrieval API](https://aka.ms/try_copilot_retrieval_API_reference).
+Ground your generative AI solutions with Microsoft 365 data while optimizing for context recall. Allows the retrieval of relevant text extracts from SharePoint and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Retrieval API](https://aka.ms/try_copilot_retrieval_API_reference).
 
 ## Permissions
 
