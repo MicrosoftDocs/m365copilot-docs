@@ -123,13 +123,13 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 ### Embedded files
 
-You can upload files directly from your device for your agent to use as embedded knowledge. You can simply drag-and-drop files from your device into the **Describe** tab or the **Knowledge** box on the **Configure** tab. On the **Configure** tab, you can also choose the arrow icon to upload files from your device or choose the cloud icon to upload files from SharePoint.
+You can upload files directly from your device for your agent to use as embedded knowledge. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Knowledge** box on the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device or choose the cloud icon to upload files from SharePoint. You can upload individual files from your device, but not file folders.
 
-You can add up to 20 files as knowledge sources, including files uploaded from your device and SharePoint sites, folders, and files. You can't use this feature to upload folders from your device. To a remove a file you uploaded, choose the X next to the file, and choose **Remove**.
+You can add up to 20 files as knowledge sources, including files uploaded from your device and SharePoint sites, folders, and files.
 
-For information about size limits for uploaded files, see [File size limits](#file-size-limits).
+Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-size-limits).
 
-Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed.
+To a remove a file you uploaded, choose the X next to the file, and choose **Remove**.
 
 The following file types aren't supported:
 
