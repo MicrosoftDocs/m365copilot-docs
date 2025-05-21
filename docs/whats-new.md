@@ -16,9 +16,9 @@ For the latest information, announcements, and news about preview and generally 
 
 ## May 2025
 
-### Upload files as knowledge
+### Embedded files as knowledge
 
-Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Uploaded files](copilot-studio-agent-builder-build.md#uploaded-files).
+Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded files](copilot-studio-agent-builder-build.md#embedded-files).
 
 ### Microsoft 365 Agents Toolkit
 
