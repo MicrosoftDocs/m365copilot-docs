@@ -20,7 +20,7 @@ RAG is essential when you're building generative AI solutions and want to use Mi
 
 ## Why use the Retrieval API?
 
-The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint and Copilot connectors. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance.
+The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint and Copilot connectors while optimizing for context recall. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance.
 
 Custom knowledge applications can use the Retrieval API to ground responses on organization-specific information stored in SharePoint. Rather than building and maintaining separate vector indexes, these applications can leverage Microsoft 365's existing semantic search capabilities to find relevant content for Large Language Model (LLM) prompts. 
 
@@ -67,6 +67,7 @@ The following are the current throttling and other limitations to the Retrieval 
 
 - You need the **Files.Read.All** and **Sites.Read.All** permissions to retrieve SharePoint content using the Retrieval API.
 - You need the **ExternalItem.Read.All** permission to retrieve Copilot connectors content using the Retrieval API.
+- The Retrieval API is optimized for context recall.
 - The **queryString** request parameter has a limit of 1,500 characters.
 - You must retrieve from one data source at a time using the **dataSource** request parameter. Interleaved results are not supported.
 - If the **filterExpression** request parameter has incorrect KQL syntax, the query successfully executes with no scoping.
