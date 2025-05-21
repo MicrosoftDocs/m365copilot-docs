@@ -125,7 +125,7 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 You can upload files directly from your device for your agent to use as embedded knowledge. You can simply drag-and-drop files from your device into the **Describe** tab or the **Knowledge** box on the **Configure** tab. On the **Configure** tab, you can also choose the arrow icon to upload files from your device or choose the cloud icon to upload files from SharePoint.
 
-You can add up to 20 files as knowledge sources, included files uploaded from your device and SharePoint sites, folders, and files. You can't use this feature to upload folders from your device.
+You can add up to 20 files as knowledge sources, including files uploaded from your device and SharePoint sites, folders, and files. You can't use this feature to upload folders from your device. To a remove a file you uploaded, choose the X next to the file, and choose **Remove**.
 
 For information about size limits for uploaded files, see [File size limits](#file-size-limits).
 
@@ -146,27 +146,27 @@ For information about sensitivity labels applied to files used as knowledge, see
 
 Agents protect content that is restricted by [sensitivity labels](/purview/sensitivity-labels). In tenants that have sensitivity labeling enabled, the label shows next to the file under **Uploaded files**. If a knowledge source is restricted via a sensitivity label, users who don't have access permissions to that knowledge source can't use the agent. The user can see the agent title and description in the Agent Store, but they can't access or use the agent.
 
+Agent responses from embedded files with a sensitivity label applied show the sensitivity label beside the Copilot icon in Copilot Chat.
+
+If embedded files have sensitivity labels applied, the most restrictive sensitivity label applied appears on the agent. For example, if a file with a General label and a file with a Confidential label are embedded in the agent, the agent the shows the Confidential sensitivity label. This label reflects the level of sensitivity of the embedded files; currently, agent builders can't set sensitivity labels on agents.
+
+If the embedded files don't have sensitivity labels applied, the default label for the tenant shows on the agent. If the tenant doesn't have a default sensitivity label, no label is shown.
+
+The embedded file sensitivity label appears on the top right corner of the agent. Currently, sensitivity labels don't appear on the Agent Store listing. If a user doesn't have permission to an embedded knowledge source, they can't add the agent from the store.
+
 For information about how to enable sensitivity labels in your tenant, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files) and [Enable coauthoring for files encrypted with sensitivity labels](/purview/sensitivity-labels-coauthoring).
 
-#### Agent sensitivity labels
+#### Sharing an agent with embedded files
 
-If embedded files have sensitivity labels applied, a sensitivity label is also applied to the agent. The label reflects the most restrictive sensitivity label applied to the embedded files. For example, if a file with a General label and a file with a Confidential label are uploaded, the sensitivity label applied to the agent is Confidential. This label reflects the level of sensitivity of the files embedded in the agent; currently, agent builders can't set or change sensitivity labels that are applied to agents.
-
-If the embedded files don't have sensitivity labels applied, the default label for the tenant is applied to the agent. If the tenant doesn't have a default sensitivity label, no label is applied to the agent.
-
-The sensitivity label appears on the top right corner of the agent after the user adds it. Currently, sensitivity labels don't appear on the Agent Store listing. If a user doesn't have permission to an embedded knowledge source, they can't add the agent from the store.
-
-#### Sharing an agent with uploaded files
-
-When you share an agent with uploaded files, the files are also shared, and agent users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with uploaded files as knowledge:
+When you share an agent with embedded files, the files are also shared, and agent users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with embedded files as knowledge:
 
 - Anyone in your organization
 - Specific users in your organization
 - Only you
 
-Sharing an agent with uploaded files to groups isn't currently supported.
+Sharing an agent with embedded files to groups isn't currently supported.
 
-When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are enabled, a label that represents the highest sensitivity label applied to any uploaded files or the default sensitivity label of the tenant (whichever is highest) is displayed on the **Share** screen.
+When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are enabled, a label that represents the highest sensitivity label applied to any embedded files or the default sensitivity label of the tenant (whichever is highest) is displayed on the **Share** screen.
 
 ### File size limits
 
