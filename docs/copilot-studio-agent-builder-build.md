@@ -86,7 +86,7 @@ To configure your agent to use any web data as knowledge, on the **Configure** t
 
 You can reference specific SharePoint sites, files, and folders as agent knowledge sources. When you reference sources from SharePoint, consider the following limits:
 
-- A total of 20 knowledge sources (including SharePoint sites, folders, and files and [files uploaded from the device](#uploaded-files)) can be selected for each agent.
+- A total of 20 knowledge sources (including SharePoint sites, folders, and files and [embedded files uploaded from the device](#embedded-files)) can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
 
 For information about SharePoint knowledge file size limits, see [File size limits](#file-size-limits).

@@ -76,12 +76,12 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 
 ## Uploaded files
 
-If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build) to build your agent, you can upload files directly from your device or the cloud for your agent to use as knowledge sources. The files that you upload as knowledge are stored in [SharePoint Embedded](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview) and these files count against the OneDrive and SharePoint capacity in your tenant.
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to build your agent, you can upload files directly from your device or the cloud for your agent to use as knowledge sources. The files that you upload as knowledge are stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview) and these files count against the OneDrive and SharePoint capacity in your tenant.
 
 > [!NOTE]
 > The file upload feature is available to users with metered consumption enabled or with Microsoft 365 Copilot license
 
-For more information about uploaded files, see [Uploaded files in agent builder](copilot-studio-agent-builder-build.md#uploaded-files).
+For more information about uploaded files, see [Uploaded files in agent builder](copilot-studio-agent-builder-build.md#embedded-files).
 
 ## Dataverse
 
