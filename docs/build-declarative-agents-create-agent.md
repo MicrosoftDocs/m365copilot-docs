@@ -46,5 +46,7 @@ Begin by creating a basic declarative agent.
 
     :::image type="content" source="assets/images/build-da/ttk/agent-answer.png" alt-text="A screenshot of an answer from the declarative agent in Microsoft 365 Copilot":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add instructions](build-declarative-agents-instructions.md)

@@ -28,5 +28,7 @@ The declarative agent will use your updated instructions after you reload the pa
 
 :::image type="content" source="assets/images/build-da/ttk/updated-instructions.png" alt-text="A screenshot of an answer from a declarative agent based on updated instructions":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add conversation starters](build-declarative-agents-conversation-starters.md)

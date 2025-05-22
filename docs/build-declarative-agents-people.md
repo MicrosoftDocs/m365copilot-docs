@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.localizationpriority: medium
 ---
 
-# Step 7: Add people knowledge
+# Step 7: Add people knowledge to the agent
 
 In this section, you add the [people knowledge source](knowledge-sources.md#people) to the [agent](build-declarative-agents-create-agent.md). The people knowledge source allows you to scope your agent to answer questions about individuals in an organization.
 
@@ -49,5 +49,7 @@ The declarative agent will have access to people knowledge after you reload the 
 
 :::image type="content" source="assets/images/build-da/ttk/people-content.png" alt-text="A screenshot showing a response from the declarative agent that contains people knowledge":::
 
+## Next step
+
 > [!div class="nextstepaction"]
-> [Add email](build-declarative-agents-email.md)
+> [Add email knowledge](build-declarative-agents-email.md)

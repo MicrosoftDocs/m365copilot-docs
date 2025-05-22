@@ -75,5 +75,7 @@ The declarative agent will have access to Copilot connectors content to generate
 
 :::image type="content" source="assets/images/build-da/ttk/graph-connector-content.png" alt-text="A screenshot showing a response from the declarative agent that contains Copilot connector content":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add API plugins as custom actions](build-declarative-agents-plugins.md)

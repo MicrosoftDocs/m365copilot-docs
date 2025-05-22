@@ -60,5 +60,7 @@ The declarative agent will have the ability to generate images after you reload 
 
 :::image type="content" source="assets/images/build-da/ttk/graphic-art-content.png" alt-text="A screenshot showing a response from the declarative agent that contains generated graphic art":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add code interpreter](build-declarative-agents-code-interpreter.md)

@@ -40,5 +40,7 @@ You should be familiar with the following standards and guidelines for declarati
 
 - Standards for compliance, performance, security, and user experience described in [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Create a declarative agent](build-declarative-agents-create-agent.md)

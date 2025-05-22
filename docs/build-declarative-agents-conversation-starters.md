@@ -35,5 +35,7 @@ The updated conversation starters will be available in your declarative agent af
 
 :::image type="content" source="assets/images/build-da/ttk/conversation-starters.png" alt-text="A screenshot showing the conversation starters from the declarative agent in Microsoft 365 Copilot":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add web search capability](build-declarative-agents-web-search.md)

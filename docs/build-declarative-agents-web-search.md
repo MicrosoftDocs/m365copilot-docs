@@ -30,5 +30,7 @@ The declarative agent will have access to web content to generate its answers af
 
 :::image type="content" source="assets/images/build-da/ttk/web-content.png" alt-text="A screenshot showing a response from the declarative agent that contains web content":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add OneDrive and SharePoint content](build-declarative-agents-sharepoint.md)

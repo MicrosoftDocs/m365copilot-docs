@@ -62,5 +62,7 @@ The declarative agent will have access to email knowledge after you reload the p
 
 :::image type="content" source="assets/images/build-da/ttk/email-content.png" alt-text="A screenshot showing a response from the declarative agent that contains email knowledge":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add image generator](build-declarative-agents-image-generator.md)

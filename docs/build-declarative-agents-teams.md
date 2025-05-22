@@ -50,5 +50,7 @@ The declarative agent will have access to Teams data to generate its answers aft
 
 :::image type="content" source="assets/images/build-da/ttk/teams-content.png" alt-text="A screenshot showing a response from the declarative agent that contains Teams content":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add people knowledge](build-declarative-agents-people.md)

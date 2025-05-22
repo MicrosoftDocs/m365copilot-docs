@@ -43,5 +43,7 @@ The declarative agent will have access to OneDrive and SharePoint content to gen
 
 :::image type="content" source="assets/images/build-da/ttk/sharepoint-onedrive-content.png" alt-text="A screenshot showing a response from the declarative agent that contains SharePoint and OneDrive content":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add Teams messages](build-declarative-agents-teams.md)

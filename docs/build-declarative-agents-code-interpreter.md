@@ -65,5 +65,7 @@ The declarative agent will have the code interpreter capability after you reload
 
 :::image type="content" source="assets/images/build-da/ttk/code-interpreter-python-content.png" alt-text="A screenshot showing the Python code used to generate the requested graph":::
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Add Microsoft 365 Copilot connectors](build-declarative-agents-copilot-connectors.md)
