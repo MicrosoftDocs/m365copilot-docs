@@ -2,9 +2,9 @@
 ms.localizationpriority: medium
 ---
 
-<!-- markdownlint-disable MD041 -->
+# Step 8: Add email to the agent
 
-In this section, you add the [email capability](../../knowledge-sources.md#email) to the declarative agent. The email capability allows you to scope your agent to use email from the user's mailbox or a shared mailbox as a knowledge source.
+In this section, you add the [email knowledge source](knowledge-sources.md#email) to the [agent](build-declarative-agents-create-agent.md). The email knowledge source allows you to scope your agent to use email from the user's mailbox or a shared mailbox to answer queries.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `Email` entry to the `capabilities` array.
 
@@ -43,7 +43,7 @@ In this section, you add the [email capability](../../knowledge-sources.md#email
     ]
     ```
 
-    For more information, see [Email object](../../declarative-agent-manifest-1.4.md#email-object).
+    For more information, see [Email object](declarative-agent-manifest-1.4.md#email-object).
 
     > [!NOTE]
     >
@@ -54,4 +54,7 @@ In this section, you add the [email capability](../../knowledge-sources.md#email
 
 The declarative agent will have access to email knowledge after you reload the page.
 
-:::image type="content" source="../../assets/images/build-da/ttk/email-content.png" alt-text="A screenshot showing a response from the declarative agent that contains email knowledge":::
+:::image type="content" source="assets/images/build-da/ttk/email-content.png" alt-text="A screenshot showing a response from the declarative agent that contains email knowledge":::
+
+> [!div class="nextstepaction"]
+> [Add image generator](build-declarative-agents-image-generator.md)

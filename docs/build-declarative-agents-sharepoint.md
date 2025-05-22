@@ -1,10 +1,16 @@
 ---
+title: Add OneDrive and SharePoint to a declarative agent created with Microsoft 365 Agents Toolkit
+description: Learn how to add OneDrive and SharePoint to a declarative agent as a step in building your first agent with Microsoft 365 Agents Toolkit.
+ms.date: 05/19/2025
+author: sebastienlevert
+ms.author: slevert
+ms.topic: tutorial
 ms.localizationpriority: medium
 ---
 
-<!-- markdownlint-disable MD041 -->
+# Step 5: Add OneDrive and SharePoint to the agent
 
-In this section, you add the contents of a SharePoint site to the available knowledge for the agent.
+In this section, you add the contents of a SharePoint site to the available knowledge for the [agent](build-declarative-agents-create-agent.md).
 
 1. Open the `appPackage/declarativeAgent.json` file and update the `capabilities` array to the following value, replacing `https://contoso.sharepoint.com/sites/ProductSupport` with a SharePoint site URL in your Microsoft 365 organization.
 
@@ -24,7 +30,7 @@ In this section, you add the contents of a SharePoint site to the available know
     ]
     ```
 
-    For more information, see [OneDrive and SharePoint object](../../declarative-agent-manifest-1.4.md#onedrive-and-sharepoint-object).
+    For more information, see [OneDrive and SharePoint object](declarative-agent-manifest-1.4.md#onedrive-and-sharepoint-object).
 
     > [!NOTE]
     >
@@ -35,4 +41,7 @@ In this section, you add the contents of a SharePoint site to the available know
 
 The declarative agent will have access to OneDrive and SharePoint content to generate its answers after you reload the page.
 
-:::image type="content" source="../../assets/images/build-da/ttk/sharepoint-onedrive-content.png" alt-text="A screenshot showing a response from the declarative agent that contains SharePoint and OneDrive content":::
+:::image type="content" source="assets/images/build-da/ttk/sharepoint-onedrive-content.png" alt-text="A screenshot showing a response from the declarative agent that contains SharePoint and OneDrive content":::
+
+> [!div class="nextstepaction"]
+> [Add Teams messages](build-declarative-agents-teams.md)

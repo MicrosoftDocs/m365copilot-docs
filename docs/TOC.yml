@@ -47,7 +47,33 @@
       - name: Build with TypeSpec
         href: build-declarative-agents-typespec.md
       - name: Build with JSON
-        href: build-declarative-agents.yml
+        items:
+        - name: Introduction
+          href: build-declarative-agents.md
+        - name: Create the agent
+          href: build-declarative-agents-create-agent.md
+        - name: Add instructions
+          href: build-declarative-agents-instructions.md
+        - name: Add conversation starters
+          href: build-declarative-agents-conversation-starters.md
+        - name: Add web search
+          href: build-declarative-agents-web-search.md
+        - name: Add OneDrive and SharePoint
+          href: build-declarative-agents-sharepoint.md
+        - name: Add Teams messages
+          href: build-declarative-agents-teams.md
+        - name: Add people knowledge
+          href: build-declarative-agents-people.md
+        - name: Add email knowledge
+          href: build-declarative-agents-email.md
+        - name: Add image generator
+          href: build-declarative-agents-image-generator.md
+        - name: Add code interpreter
+          href: build-declarative-agents-code-interpreter.md
+        - name: Add Copilot connectors
+          href: build-declarative-agents-copilot-connectors.md
+        - name: Add API plugins
+          href: build-declarative-agents-plugins.md
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
       - name: Add actions with API plugins

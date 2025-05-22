@@ -1,10 +1,16 @@
 ---
+title: Add Teams messages to a declarative agent created with Microsoft 365 Agents Toolkit
+description: Learn how to add Teams messages to a declarative agent as a step in building your first agent with Microsoft 365 Agents Toolkit.
+ms.date: 05/19/2025
+author: sebastienlevert
+ms.author: slevert
+ms.topic: tutorial
 ms.localizationpriority: medium
 ---
 
-<!-- markdownlint-disable MD041 -->
+# Step 6: Add Teams messages to the agent
 
-In this section, you provide the declarative agent with Teams channels, team, and meeting chat grounding information.
+In this section, you provide the [agent](build-declarative-agents-create-agent.md) with Teams channels, team, and meeting chat grounding information.
 
 1. Open the `appPackage/declarativeAgent.json` file and update the `capabilities` array to the following value, replacing `https://teams.microsoft.com/l/team/...` with a Teams channel or team url from your organization.
 
@@ -32,7 +38,7 @@ In this section, you provide the declarative agent with Teams channels, team, an
     ]
     ```
 
-    For more information, see [Teams messages object](../../declarative-agent-manifest-1.4.md#teams-messages-object).
+    For more information, see [Teams messages object](declarative-agent-manifest-1.4.md#teams-messages-object).
 
     > [!NOTE]
     > - The url in the url object must be well formed links to a Teams chat, team, or meeting chat.
@@ -42,4 +48,7 @@ In this section, you provide the declarative agent with Teams channels, team, an
 
 The declarative agent will have access to Teams data to generate its answers after you reload the page.
 
-:::image type="content" source="../../assets/images/build-da/ttk/teams-content.png" alt-text="A screenshot showing a response from the declarative agent that contains Teams content":::
+:::image type="content" source="assets/images/build-da/ttk/teams-content.png" alt-text="A screenshot showing a response from the declarative agent that contains Teams content":::
+
+> [!div class="nextstepaction"]
+> [Add people knowledge](build-declarative-agents-people.md)
