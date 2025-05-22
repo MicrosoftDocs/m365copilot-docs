@@ -16,7 +16,7 @@ The agent that you build in this tutorial targets licensed Microsoft 365 Copilot
 
 :::image type="content" source="assets/images/build-da/ttk/agent-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
 
-For overview information, see [Declarative agents for Microsoft 365 Copilot](../../overview-declarative-agent.md).
+For overview information, see [Declarative agents for Microsoft 365 Copilot](overview-declarative-agent.md).
 
 [!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
 

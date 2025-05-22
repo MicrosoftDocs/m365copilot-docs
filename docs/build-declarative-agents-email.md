@@ -1,4 +1,10 @@
 ---
+title: Add email knowledge to a declarative agent created with Microsoft 365 Agents Toolkit
+description: Learn how to add email knowledge to a declarative agent as a step in building your first agent with Microsoft 365 Agents Toolkit.
+ms.date: 05/19/2025
+author: sebastienlevert
+ms.author: slevert
+ms.topic: tutorial
 ms.localizationpriority: medium
 ---
 
