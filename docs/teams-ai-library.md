@@ -14,7 +14,7 @@ ms.topic: overview
 
 :::image type="content" source="assets/images/build-with-teams-ai-library.png" alt-text="Visual representation of a user input and a bot response." lightbox="assets/images/build-with-teams-ai-library.png":::
 
-Now with the new v2 SDK, it supports Agent2Agent (A2A) for multi-agent collaboration and Model Context Protocol (MCP) for shared memory and tools. 
+Now with the new v2 SDK, it supports Agent2Agent (A2A) for multi-agent collaboration and Model Context Protocol (MCP) for shared memory and tools.
 
 ## When to use Teams AI Library v2
 
@@ -28,4 +28,4 @@ Now with the new v2 SDK, it supports Agent2Agent (A2A) for multi-agent collabora
 Ready to build your first agent with the Teams AI Library v2? Let's get started now!
 
 > [!div class="nextstepaction"]
-> [Teams AI Library v2 documentation (preview)](/microsoftteams/platform/teams-ai-library/welcome/overview)
+> [Teams AI Library v2 documentation (preview)](/microsoftteams/platform/teams-ai-library/welcome)
