@@ -52,7 +52,7 @@ Meeting Coach agents are useful for the following types of meetings.
 
 ## Extension opportunities
 
-You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft Graph connectors, Power Platform connectors, or API plugins, depending on the source system in use. The following are some ideas:
+You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), Power Platform connectors, or API plugins, depending on the source system in use. The following are some ideas:
 
 - **Connect to your (CRM) solution:** Use a Power Platform Connector an API plugin to give your agent access to details about your key accounts and customer contacts as well as to relevant products and projects.
 - **Increase customer engagement:** Connect your agents to SharePoint sites that include meeting materials (sales pitches, customer information, etc.) you can create an agent specialized for customer follow-up.

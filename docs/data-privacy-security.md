@@ -10,7 +10,7 @@ ms.date: 09/26/2024
 
 # Data, privacy, and security considerations for extending Microsoft 365 Copilot 
 
-When you extend Microsoft 365 Copilot with agents, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the agent to generate a response or complete a command. When you extend Microsoft 365 Copilot with Microsoft Graph connectors, your external data is ingested into Microsoft Graph and remains in your tenant. This article outlines data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
+When you extend Microsoft 365 Copilot with agents, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the agent to generate a response or complete a command. When you extend Microsoft 365 Copilot with Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), your external data is ingested into Microsoft Graph and remains in your tenant. This article outlines data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
 
 :::image type="content" source="assets/images/validation-principles.png" alt-text="Diagram key considerations for developing Copilot extensibility: Enterprise security and trust, Responsible AI, High-quality user experience, High-value functionality" border="false":::
 
@@ -22,11 +22,11 @@ When you integrate your business workflows as agents for Copilot, your external 
 
 [!INCLUDE [security-note](includes/security-on-das-note.md)]
 
-## Microsoft Graph connectors
+## Copilot connectors
 
-Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. Microsoft Graph honors the user identity-based access boundary so that the Copilot grounding process only accesses content that the current user is authorized to access. This is also true of external data within Microsoft Graph ingested from a Microsoft Graph connector.
+Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. Microsoft Graph honors the user identity-based access boundary so that the Copilot grounding process only accesses content that the current user is authorized to access. This is also true of external data within Microsoft Graph ingested from a Copilot connector.
 
-When you connect your external data to Copilot with a Microsoft Graph connector, your data flows into Microsoft Graph. You can manage permissions to view external items by associating an [access control list](/graph/connecting-external-content-manage-items?branch=main#access-control-list) (ACL) with a Microsoft Entra user and group ID or an [external group](/graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context).
+When you connect your external data to Copilot with a Copilot connector, your data flows into Microsoft Graph. You can manage permissions to view external items by associating an [access control list](/graph/connecting-external-content-manage-items?branch=main#access-control-list) (ACL) with a Microsoft Entra user and group ID or an [external group](/graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context).
 
 Prompts, responses, and data accessed through Microsoft Graph aren't used to train foundation LLMs, including those used by Microsoft 365 Copilot.
 
@@ -39,7 +39,7 @@ Microsoft 365 Copilot only shares data with and searches in agents or connectors
 - [Zero Trust principles for Microsoft 365 Copilot](/security/zero-trust/zero-trust-tech-illus#zero-trust-for-microsoft-365-copilot) deployment plan for applying Zero Trust principles to Microsoft 365 Copilot
 - Microsoft 365 admin center procedures:
   - [Managing agents for Copilot](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps)
-  - [Managing Microsoft Graph connectors](/microsoftsearch/connectors-overview).
+  - [Managing Copilot connectors](/microsoftsearch/connectors-overview).
 
 ## Considerations for independent software publishers
 

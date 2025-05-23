@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-In this section, you add the [code interpreter capability](../../add-agent-capabilities.md#code-interpreter) to the declarative agent. Code interpreter is an advanced tool designed to solve complex tasks via Python code.
+In this section, you add the [code interpreter capability](../../code-interpreter.md) to the declarative agent. Code interpreter is an advanced tool designed to solve complex tasks via Python code.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `CodeInterpreter` entry to the `capabilities` array.
 
@@ -49,9 +49,9 @@ In this section, you add the [code interpreter capability](../../add-agent-capab
     ]
     ```
 
-    For more information, see [Code interpreter object](../../declarative-agent-manifest-1.3.md#code-interpreter-object).
+    For more information, see [Code interpreter object](../../declarative-agent-manifest-1.4.md#code-interpreter-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have the code interpreter capability after you reload the page.
 

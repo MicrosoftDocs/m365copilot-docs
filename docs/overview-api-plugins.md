@@ -4,7 +4,7 @@ description: Learn about API plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 10/08/2024
+ms.date: 05/19/2025
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -12,6 +12,9 @@ ms.custom: [copilot-learning-hub]
 # API plugins for Microsoft 365 Copilot
 
 API plugins enable declarative agents in Microsoft 365 Copilot to interact with REST APIs that have an [OpenAPI description](https://www.openapis.org/what-is-openapi). With an API plugin, users can ask a declarative agent to not only query a REST API for information, but to create, update, and delete data and objects. Anything the REST API can do is accessible via natural language prompts.
+
+> [!NOTE]
+> In addition to calling REST APIs, there's a preview feature that enables a plugin to call APIs in a local library. We encourage you to experiment with this feature, but it shouldn't be used in a production plugin. For more information, see [Build API plugins for Microsoft 365 Copilot with the Office JavaScript Library](build-api-plugins-local-office-api.md).
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
@@ -56,7 +59,7 @@ Copilot responds to the user, using the information returned: "The charge of $50
     GET /budgets?budgetName=Fourth+Coffee+lobby+renovation
     ```
 
-1. The API returns an API response in the format specified in it's OpenAPI specification.
+1. The API returns an API response in the format specified in its OpenAPI specification.
 
     ```json
     {
@@ -66,7 +69,7 @@ Copilot responds to the user, using the information returned: "The charge of $50
     ```
 
 1. The agent generates a response based on the API response.
-1. The agent sends the response "The available funds left in the Fourth Coffee lobby renovation budget are $5000."
+1. The agent sends the response "The available funds left in the Fourth Coffee lobby renovation budget are $5,000."
 
 ## Confirming actions
 
@@ -84,7 +87,7 @@ Copilot generates conversational responses using data from API responses. Plugin
 
 ## Optimize your plugin for Copilot orchestrator
 
-Microsoft 365 Copilot can uniquely choose the right skill from the many skills in its repertoire. But how can you make sure Copilot will choose _your plugin_ to provide the right skill?
+Microsoft 365 Copilot can uniquely choose the right skill from the many skills in its repertoire. But how can you make sure Copilot chooses _your plugin_ to provide the right skill?
 
 The answer lies in how you describe your plugin, its skills, and the parameters for initiation of skills. Specify concise and accurate descriptions in your plugin manifest to best ensure that the Copilot orchestrator knows when and how to invoke your plugin.
 
@@ -100,7 +103,7 @@ The way you describe your plugin to the orchestrator depends on the type of plug
 
 There are two tools developers can use to generate API plugin packages.
 
-- The [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) in [Visual Studio](https://visualstudio.microsoft.com/) or [Visual Studio Code](https://code.visualstudio.com/) can create plugin packages based on an existing OpenAPI description. If you don't have an existing API, Teams Toolkit also has starter projects with an example API and corresponding plugin package.
+- The Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) in [Visual Studio](https://visualstudio.microsoft.com/) or [Visual Studio Code](https://code.visualstudio.com/) can create plugin packages based on an existing OpenAPI description. If you don't have an existing API, Agents Toolkit also has starter projects with an example API and corresponding plugin package.
 - [Kiota](/openapi/kiota/overview) is a command line tool and a Visual Studio Code extension that can generate plugin packages based on an existing OpenAPI description.
 
 ## Limitations

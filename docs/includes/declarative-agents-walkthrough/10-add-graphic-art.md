@@ -4,7 +4,7 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-In this section, you add the [image generator capability](../../add-agent-capabilities.md#image-generator) to the declarative agent.
+In this section, you add the [image generator capability](../../image-generator.md) to the declarative agent.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `GraphicArt` entry to the `capabilities` array.
 
@@ -46,9 +46,9 @@ In this section, you add the [image generator capability](../../add-agent-capabi
     ]
     ```
 
-    For more information, see [Graphic art object](../../declarative-agent-manifest-1.3.md#graphic-art-object).
+    For more information, see [Graphic art object](../../declarative-agent-manifest-1.4.md#graphic-art-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have the ability to generate images after you reload the page.
 

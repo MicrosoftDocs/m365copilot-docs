@@ -4,7 +4,7 @@ description: Learn how to set up authentication for API plugins in agents runnin
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 01/03/2025
+ms.date: 05/19/2025
 ms.topic: conceptual
 ---
 
@@ -44,13 +44,13 @@ securitySchemes:
           scope: description
 ```
 
-To enable OAuth 2.0 authentication, you need to register an OAuth client in the Teams developer portal. You can register an OAuth client with Teams Toolkit in Visual Studio Code or by manually registering in the Teams developer portal.
+To enable OAuth 2.0 authentication, you need to register an OAuth client in the Teams developer portal. You can register an OAuth client with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) in Visual Studio Code or by manually registering in the Teams developer portal.
 
-### Register an OAuth client with Teams Toolkit
+### Register an OAuth client with Agents Toolkit
 
- Teams Toolkit registers your OAuth client and updates your app package for you when you [create an agent with API plugin from an existing OpenAPI document](build-api-plugins-existing-api.md). You must have the `securitySchemes` property defined in your OpenAPI document.
+ Agents Toolkit registers your OAuth client and updates your app package for you when you [create an agent with API plugin from an existing OpenAPI document](build-api-plugins-existing-api.md). You must have the `securitySchemes` property defined in your OpenAPI document.
 
-If your OAuth provider supports PKCE, uncomment the following line of code in teamsapp.yml in your agent project before provisioning the agent.
+If your OAuth provider supports PKCE, uncomment the following line of code in m365agents.yml in your agent project before provisioning the agent.
 
 ```yml
 # isPKCEEnabled: true
@@ -196,11 +196,11 @@ securitySchemes:
 
 ### Register an API key
 
-To enable API key authentication, you need to register the API key in the Teams developer portal. You can register the API key with Teams Toolkit in Visual Studio Code or by manually registering in the Teams developer portal.
+To enable API key authentication, you need to register the API key in the Teams developer portal. You can register the API key with Agents Toolkit in Visual Studio Code or by manually registering in the Teams developer portal.
 
-#### Register an API key with Teams Toolkit
+#### Register an API key with Agents Toolkit
 
- Teams Toolkit registers your API key and updates your app package for you when you create an agent with API plugin from an existing OpenAPI document. You must have the `securitySchemes` property defined in your OpenAPI document.
+ Agents Toolkit registers your API key and updates your app package for you when you create an agent with API plugin from an existing OpenAPI document. You must have the `securitySchemes` property defined in your OpenAPI document.
 
 #### Register an API key in Teams developer portal
 
