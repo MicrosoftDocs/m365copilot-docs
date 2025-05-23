@@ -4,10 +4,6 @@ description: "Create TypeScript Client"
 
 ```typescript
 
-import DeviceCodeCrential from '@azure/identity';
-import {AgentsM365CopilotBetaServiceClient, AgentsM365CopilotBetaRequestAdapter} from '@microsoft/agents-m365copilot-beta';
-import AzureIdentityAuthenticationProvider from '@microsoft/kiota-authentication-azure';
-
 import { createBaseAgentsM365CopilotBetaServiceClient } from '@microsoft/agents-m365copilot-beta';
 import { DeviceCodeCredential } from '@azure/identity';
 import { FetchRequestAdapter } from '@microsoft/kiota-http-fetchlibrary';
