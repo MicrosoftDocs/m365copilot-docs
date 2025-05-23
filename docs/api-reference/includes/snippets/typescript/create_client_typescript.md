@@ -8,24 +8,36 @@ import DeviceCodeCrential from '@azure/identity';
 import {AgentsM365CopilotBetaServiceClient, AgentsM365CopilotBetaRequestAdapter} from '@microsoft/agents-m365copilot-beta';
 import AzureIdentityAuthenticationProvider from '@microsoft/kiota-authentication-azure';
 
-const credential = new DeviceCodeCredential({
-  tenantId: 'YOUR_TENANT_ID',
-  clientId: 'YOUR_CLIENT_ID',
-  userPromptCallback: (info) => {
-    console.log(info.message);
-  },
-});
+import { createBaseAgentsM365CopilotBetaServiceClient } from '@microsoft/agents-m365copilot-beta';
+import { DeviceCodeCredential } from '@azure/identity';
+import { FetchRequestAdapter } from '@microsoft/kiota-http-fetchlibrary';
 
-const authProvider = new AzureIdentityAuthenticationProvider(credential, ["Files.Read.All", "Sites.Read.All"]);
+async function main() {
+    // Initialize authentication with Device Code flow
+    const credential = new DeviceCodeCredential({
+        tenantId: process.env.TENANT_ID,
+        clientId: process.env.CLIENT_ID,
+        userPromptCallback: (info) => {
+          console.log(info.message);
+        }
+    });
+    // Create request adapter with auth
+    const adapter = new FetchRequestAdapter(credential, {
+        scopes: ["Files.Read.All", "Sites.Read.All"]
+    });
+    adapter.baseUrl = "https://graph.microsoft.com/beta";
 
-const requestAdapter = new AgentsM365CopilotBetaRequestAdapter(authProvider);
-const client = AgentsM365CopilotBetaServiceClient(requestAdapter);
+    // Create client instance
+    const client = createBaseAgentsM365CopilotBetaServiceClient(adapter);
 
-const requestBody: RetrievalPostRequestBody = {
-  queryString: 'What is the latest in my organization',
-  maximumNumberOfResults: 2
-};
 
-const retrieval = await graphClient.api('/copilot/retrieval').post(requestBody);
+    // Create the retrieval request body
+    const retrievalBody = {
+        queryString: "What is the latest in my organization?"
+    };
+
+    // Make the API call
+    const retrieval = await client.copilot.retrieval.post(retrievalBody);
+}    
 
 ```

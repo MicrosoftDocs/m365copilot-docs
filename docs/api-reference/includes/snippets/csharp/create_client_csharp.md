@@ -38,7 +38,7 @@ var deviceCodeCredential = new DeviceCodeCredential(deviceCodeCredentialOptions)
 
 //Create the client with explicit base URL 
 var baseURL = “https://graph.microsoft.com/beta”; 
-AgentsCopilotBetaServiceClient client = new AgentsCopilotBetaServiceClient (deviceCodeCredential, scopes, baseURL); 
+BaseAgentsCopilotBetaServiceClient client = new BaseAgentsCopilotBetaServiceClient (deviceCodeCredential, scopes, baseURL); 
 
 var requestBody = new RetrievalPostRequestBody
 {

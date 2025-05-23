@@ -5,7 +5,7 @@ description: "Create CSharp Client"
 ```python
 
 from azure.identity import DeviceCodeCredential
-from microsoft_agents_m365copilot_beta import AgentsM365CopilotBetaServiceClient
+from microsoft_agents_m365copilot_beta import BaseAgentsM365CopilotBetaServiceClient
 from microsoft_agents_m365copilot_beta.generated.copilot.retrieval.retrieval_post_request_body import (
     RetrievalPostRequestBody,
 )
@@ -22,7 +22,7 @@ credential = DeviceCodeCredential(
     tenant_id=tenant_id,
     client_id=client_id)
 
-client = AgentsM365CopilotBetaServiceClient(credential, scopes)
+client = BaseAgentsM365CopilotBetaServiceClient(credential, scopes)
 
 # Make sure the base URL is set to beta
 client.request_adapter.base_url = "https://graph.microsoft.com/beta"
