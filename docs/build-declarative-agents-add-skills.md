@@ -22,41 +22,9 @@ The image generator capability enables agents to generate images based on user p
 1. Open the `appPackage/declarativeAgent.json` file and add the `GraphicArt` entry to the `capabilities` array.
 
     ```json
-    "capabilities": [
-      {
-        "name": "WebSearch"
-      },
-      {
-        "name": "OneDriveAndSharePoint",
-        "items_by_url": [
-          {
-            "url": "https://contoso.sharepoint.com/sites/ProductSupport"
-          }
-        ]
-      },
-      {
-        "name": "TeamsMessages",
-        "urls": [
-          {
-            "url": "https://teams.microsoft.com/l/team/..."
-          }
-        ]
-      },
-      {
-        "name": "People"
-      },
-      {
-        "name": "Email",
-        "folders": [
-          {
-            "folder_id": "inbox"
-          }
-        ]
-      },
-      {
-        "name": "GraphicArt"
-      }
-    ]
+    {
+      "name": "GraphicArt"
+    }
     ```
 
     For more information, see [Graphic art object](declarative-agent-manifest-1.4.md#graphic-art-object).
@@ -74,44 +42,9 @@ Code interpreter is an advanced tool designed to solve complex tasks via Python 
 1. Open the `appPackage/declarativeAgent.json` file and add the `CodeInterpreter` entry to the `capabilities` array.
 
     ```json
-    "capabilities": [
-      {
-        "name": "WebSearch"
-      },
-      {
-        "name": "OneDriveAndSharePoint",
-        "items_by_url": [
-          {
-            "url": "https://contoso.sharepoint.com/sites/ProductSupport"
-          }
-        ]
-      },
-      {
-        "name": "TeamsMessages",
-        "urls": [
-          {
-            "url": "https://teams.microsoft.com/l/team/..."
-          }
-        ]
-      },
-      {
-        "name": "People"
-      },
-      {
-        "name": "Email",
-        "folders": [
-          {
-            "folder_id": "inbox"
-          }
-        ]
-      },
-      {
-        "name": "GraphicArt"
-      },
-      {
-        "name": "CodeInterpreter"
-      }
-    ]
+    {
+      "name": "CodeInterpreter"
+    }
     ```
 
     For more information, see [Code interpreter object](declarative-agent-manifest-1.4.md#code-interpreter-object).
