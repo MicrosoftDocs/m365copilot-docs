@@ -14,6 +14,8 @@ Custom engine agents expand the capabilities of Microsoft 365 Copilot by allowin
 
 This article guides you through capabilities and options for building a custom engine agent.
 
+[!INCLUDE [preview-disclaimer](includes/preview-disclaimer-cea.md)]
+
 ## What is a custom engine agent?
 
 Custom engine agents are specialized Copilot agents designed to meet specific enterprise scenarios. Unlike declarative agents, they give developers the flexibility to bring their own orchestration and AI services. This allows full control over workflows, AI models, and integrations, enabling organizations to create advanced solutions.
@@ -108,6 +110,10 @@ Ensure that your custom agent is compliant, secure, and aligned with [Responsibl
 Consider licensing, consumption, and hosting costs associated with your custom engine agent.
 
 For more information, see [Cost considerations for Copilot extensibility](cost-considerations.md).
+
+## Privacy and compliance
+
+Custom engine agent prompts and responses in Copilot Chat and Teams are stored in compliance with Microsoft 365 product terms and conditions and are managed as per the customer's instructions. To view and manage this stored data, admins can use Content Search or Microsoft Purview.
 
 ## Related content
 
