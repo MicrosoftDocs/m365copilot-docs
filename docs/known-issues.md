@@ -90,8 +90,8 @@ The following table lists features that aren't currently supported for custom en
 
 | Feature | Issue |
 | ------- | ----- |
-| Foldback | User feedback on agent responses isn't shared with the developer. |
-| Response message | HTML is'nt supported in agent response messages. |
+| Feedback | User feedback on agent responses isn't shared with the developer. |
+| Response message | HTML isn't supported in agent response messages. |
 | File attachments | File upload and file download aren't supported. |
  |Messages | Edit and delete messages isn't supported. |
  | Azure AI Foundry | You can't currently deploy a custom engine agent built using Azure AI Foundry.
