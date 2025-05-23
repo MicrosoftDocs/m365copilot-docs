@@ -4,7 +4,7 @@ description: Learn about the user experience components of custom engine agents 
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 03/05/2025
+ms.date: 05/23/2025
 ms.topic: overview
 ---
 
@@ -54,12 +54,6 @@ AI labels are automatically added to all agents' messages to indicate that a res
 
 :::image type="content" source="assets/images/agent-ux/ai-labels.png" alt-text="A screenshot of AI labels" border="false":::
 
-## Sensitivity labels
-
-Sensitivity labels mark responses or content that contains confidential or sensitive information. This helps maintain proper data handling and helps to ensure that sensitive information is protected. Labels can be customized to reflect different levels of confidentiality, such as Confidential or Highly Confidential, and are important for compliance and security.
-
-:::image type="content" source="assets/images/agent-ux/sensitivity-labels.png" alt-text="A screenshot of sensitivity labels" border="false":::
-
 For more information, see [Enhance AI-generated messages](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content#sensitivity-label?context=/microsoft-365-copilot/extensibility/context).
 
 ## Feedback loop
@@ -72,11 +66,14 @@ For more information, see [Feedback buttons](/microsoftteams/platform/bots/how-t
 
 ## Asynchronous patterns
 
-Custom engine agents can handle multiple tasks concurrently without blocking the main thread. So users can keep chatting with an agent while a task is in process, even when the task takes a few minutes or days. Once the task is completed, the agent sends a notification to the user. These patterns may have been common scenario for Teams bots, and now landed on Copilot chat as well. The async scenarios include:
+Custom engine agents can handle multiple tasks concurrently without blocking the main thread. Users can keep chatting with an agent while a task is in process, even when the task takes a few minutes or days. After the task is completed, the agent sends a notification to the user. These patterns may have been common scenario for Teams bots, and now landed on Copilot chat as well.
 
 ### Follow-up messages
 
 Follow-up messages on user-initiated workflows keep users informed about the status of their requests or jobs. For example, an IT agent updates the user once a new laptop purchase request is approved.
+
+> [!NOTE]
+> Aysnchronous messages are not supported for agents built in Copilot Studio.
 
 ### Long-running task
 
@@ -90,5 +87,3 @@ Proactive messages are agent-initiated messages based on predefined triggers. Ex
 
 For more information, see [Proactive messages](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?context=/microsoft-365-copilot/extensibility/context)
 
-> [!NOTE]
-> While proactive messages are supported on Teams, the feature isn't yet available on Copilot chat.
