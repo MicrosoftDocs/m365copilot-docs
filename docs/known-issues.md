@@ -95,7 +95,7 @@ The following table lists features that aren't currently supported for custom en
 | File attachments | File upload and file download aren't supported. |
  |Messages | Edit and delete messages isn't supported. |
  | Azure AI Foundry | You can't currently deploy a custom engine agent built using Azure AI Foundry.
- | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li><li>Adaptive card</li></ul> |
+ | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li><li>Adaptive card</li></ul> |
  | Notifications | Proactive notifications aren't supported. |
  | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
  | [Nonstandard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event) | Nonstandard elements aren't supported. |
