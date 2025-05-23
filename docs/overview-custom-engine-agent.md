@@ -24,7 +24,7 @@ Custom engine agents are specialized Copilot agents designed to meet specific en
 
 Custom engine agents have the following characteristics:
 
-- **Custom orchestration** – Define tailored workflows and connect to external systems to incorporate additional knowledge or invoke actions.
+- **Custom orchestration** – Define tailored workflows and connect to external systems to incorporate more knowledge or invoke actions.
 - **Flexible AI models** – Choose from foundation models, fine-tuned models, or industry-specific AI to suit your use case.
 - **Proactive automation** – Programmatically trigger workflows and take actions across enterprise applications.
 
@@ -34,7 +34,7 @@ You can use a low-code approach to build custom engine agents with Copilot Studi
 
 ### Low-code approach
 
-[Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context) is a fully managed SaaS platform that simplifies building custom engine agents—so you can focus on crafting effective agent experiences without worrying about infrastructure, hosting, or governance. It offers built-in compliance via Power Platform, along with prebuilt templates and connectors for Microsoft 365 and third-party services. While it supports low-code development, the real value lies in its streamlined deployment and management.
+[Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context) is a fully managed SaaS platform that simplifies building custom engine agents—so you can focus on crafting effective agent experiences without worrying about infrastructure, hosting, or governance. It offers built-in compliance via Power Platform, along with prebuilt templates and connectors for Microsoft 365 and partner services. While it supports low-code development, the real value lies in its streamlined deployment and management.
 
 This approach is ideal for organizations looking to build and scale custom engine agents quickly, without relying heavily on development resources.
 
@@ -46,7 +46,7 @@ When building gents with the toolkit, you can choose between two SDKs depending 
 
 #### Microsoft 365 Agents SDK
 
-The [Microsoft 365 Agents SDK](create-deploy-agents-sdk.md) is a framework designed for building full-stack, multi-channel agents that can operate across Microsoft 365 Copilot, Teams, third-party platforms, custom applications, and websites.
+The [Microsoft 365 Agents SDK](create-deploy-agents-sdk.md) is a framework designed for building full-stack, multi-channel agents that can operate across Microsoft 365 Copilot, Teams, partner platforms, custom applications, and websites.
 
 It's ideal for use cases that require custom orchestration using frameworks like Semantic Kernel or LangChain, and supports integration with any AI models or services. This SDK is best suited for organizations or ISVs that need highly tailored agents with advanced capabilities and the ability to operate across multiple channels.
 
@@ -65,7 +65,7 @@ The following table provides a quick comparison of the available approaches.
 | Development approach            | Low-code | Pro-code | Pro-code |
 | Tooling                         | Copilot Studio UI | Visual Studio Code/Visual Studio with Teams AI Library | Visual Studio Code/Visual Studio with Microsoft 365 Agents Toolkit |
 | Publishing                      | My organization<br>ISV/store | My organization<br>ISV/store | My organization<br>ISV/store<br>10+ channels |
-| Channels                        | Microsoft 365 Copilot, Teams, third-party apps, mobile apps, and custom websites | Microsoft 365 Copilot, Teams | Microsoft 365 Copilot, Teams, third-party apps, mobile apps, and custom websites |
+| Channels                        | Microsoft 365 Copilot, Teams, partner apps, mobile apps, and custom websites | Microsoft 365 Copilot, Teams | Microsoft 365 Copilot, Teams, partner apps, mobile apps, and custom websites |
 | Productivity                    | Individual | Group | Group |
 | Orchestrator                    | Copilot Studio | Teams AI Action Planner | Bring your own (for example, Semantic Kernel, LangChain) |
 | AI Models                       | Copilot Studio | Any model of your choice | Any model of your choice |
