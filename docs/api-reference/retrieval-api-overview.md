@@ -98,9 +98,6 @@ These are the best practices that are applicable to both unfiltered queries (que
 If you are issuing a query with a **filterExpression**, we recommend that you also follow this best practice:
 - If you want to filter using the **path** parameter in SharePoint, do not use a sharing link or copy the URL from the address bar. Instead, navigate to the location of the folder or file in SharePoint and click on the three dots that indicate “More Actions”. Scroll down on the pane and click “Details”. From there, you can scroll down the right rail to find the path, which you can copy to your clipboard.
 
-## Feedback
-If you have questions, feedback, or feature requests, please use the [microsoft-graph-api tag on StackOverflow](https://stackoverflow.com/questions/tagged/microsoft-graph-api), or please reach out to your Microsoft account team.
-
 ## Next step
 
 > [!div class="nextstepaction"]
