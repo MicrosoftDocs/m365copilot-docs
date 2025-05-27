@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/25/2025
+ms.date: 05/27/2025
 ms.topic: conceptual
 ---
 
@@ -69,11 +69,13 @@ The agent builder allows you to configure specific knowledge sources for the age
 
 To add knowledge sources, on the **Configure** tab in the agent builder:
 - Search for an item in the search bar.
-:::image type="content" source="assets/images/knowledge-picker-agent-builder.png" border="false":::
+  
+:::image type="content" source="assets/images/knowledge-picker-agent-builder.png" border="false" alt-text="Screenshot of the knowledge picker with the search box highlighted":::
 
 - Paste or type an URL in the search bar.
 - Use the picker to select items (currently only supports SharePoint content).
-:::image type="content" source="assets/images/knowledge-picker-agent-builder2.png" border="false":::
+
+:::image type="content" source="assets/images/knowledge-picker-agent-builder2.png" border="false" alt-text="Screenshot of the knowledge picker with the cloud button highlighted":::
 
 ### Web content
 
@@ -115,7 +117,7 @@ Your agent can be grounded in daily chat messages from channels, group chats and
 
 If you don't want to scope to specific chat sources, you can also select "My Teams chats from group chat, channels, and meetings". That will search all the chat messages you have the access to.
 
-:::image type="content" source="assets/images/capabilities-teamsChat-emails.png" border="false":::
+:::image type="content" source="assets/images/capabilities-teamsChat-emails.png" border="false" alt-text="Screenshot of the knowledge picker with My Teams chats from groups, channels, and meetings highlighted":::
 
 >[!IMPORTANT]
 > You can add up to 5 chat sources from Teams.
