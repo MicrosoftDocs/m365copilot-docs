@@ -86,15 +86,15 @@ The following OpenAPI features aren't supported for API plugins:
 
 ## Custom engine agents
 
-The following table lists features that aren't currently supported for custom engine agents.
+The following table lists features that aren't currently supported for custom engine agents that run in Microsoft 365 Copilot. These issues apply to custom engine agents built using the Microsoft 365 Agents Toolkit and the Microsoft 365 Agents SDK.
 
 | Feature | Issue |
 | ------- | ----- |
 | Feedback | User feedback on agent responses isn't shared with the developer. |
 | Response message | HTML isn't supported in agent response messages. |
-| File attachments | File upload and file download aren't supported. |
- |Messages | Edit and delete messages isn't supported. |
- | Azure AI Foundry | You can't currently deploy a custom engine agent built using Azure AI Foundry.
+| File attachments | Users can't upload files in agent chats and the agent can't return files for download. |
+ |Messages | Users can't edit messages sent to or from the agent. |
+ | Azure AI Foundry | You can't currently deploy a custom engine agent built using Azure AI Foundry. |
  | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li><li>Adaptive card</li></ul> |
  | Notifications | Proactive notifications aren't supported. |
  | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
