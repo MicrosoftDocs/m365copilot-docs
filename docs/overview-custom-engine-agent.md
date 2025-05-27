@@ -42,7 +42,7 @@ This approach is ideal for organizations looking to build and scale custom engin
 
 For pro-code development, you can use Visual Studio or Visual Studio Code with the Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) extension. This toolkit streamlines agent development by providing prebuilt templates, easy debugging, and streamlined deployment workflows—ideal for developers who want a fully customized experience.
 
-When building gents with the toolkit, you can choose between two SDKs depending on your needs.
+When building agents with the toolkit, you can choose between two SDKs depending on your needs.
 
 #### Microsoft 365 Agents SDK
 
