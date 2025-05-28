@@ -158,15 +158,14 @@ For example, if a file with a General label and a file with a Confidential label
 > [!NOTE]
 > The sensitivity label applies only to the embedded content; it doesn't apply to other knowledge sources that the agent references, such as SharePoint files or Copilot connector content.
 
-Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. The sensitivity label for the embedded content shows on the top right of the agent. The label doesn't currently appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent from the Agent Store.
+Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. The sensitivity label for the embedded content shows on the top right of the agent. The label doesn't currently appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent.
 
 A sensitivity label is also applied to agent responses. This label is the higher priority of the following labels:
 
 - The sensitivity label of the embedded content
 - The sensitivity label of any other agent knowledge sources, such as SharePoint and OneDrive files.
 
-> [!NOTE]
-> Currently, agent builders can't set a sensitivity label on an agent.
+Currently, agent builders can't set a sensitivity label on an agent.
 
 ##### Unsupported sensitivity label scenarios
 
@@ -189,7 +188,8 @@ When you share an agent with embedded files, the files are also shared, and agen
 - Specific users in your organization
 - Only you
 
-Sharing an agent with embedded files to groups isn't currently supported.
+> [!NOTE]
+> Sharing an agent with embedded files to groups isn't currently supported.
 
 When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are enabled, the sensitivity label applied to the agent embedded content is displayed on the **Share** screen.
 
