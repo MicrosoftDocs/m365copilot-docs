@@ -129,7 +129,7 @@ You can add up to 20 files as knowledge sources, including files uploaded from y
 
 Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-size-limits).
 
-To a remove a file you uploaded, choose the X next to the file, and choose **Remove**.
+To remove a file you uploaded, choose the X next to the file, and choose **Remove**.
 
 The following file types aren't supported:
 
@@ -140,24 +140,24 @@ The following file types aren't supported:
 > [!CAUTION]
 > When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. The agent doesn't honor permissions that are applied to files.
 
-Copilot indexes th {first 1000 chunks} of each embedded file. To optimize embaeded content for Copilot retrieval, upload files that are no larger than....
+Copilot indexes th {first 1,000 chunks} of each embedded file. To optimize embeded content for Copilot retrieval, upload files that are no larger than....
 
 #### Sensitivity labels for agent embedded content
 
 In organizations that have [sensitivity labels](/purview/sensitivity-labels) enabled, a sensitivity label is applied to and enforced on agent  embedded files. This ensures that the agent is compliant with the organization's Microsoft Purview policies.
 
-The sensitivity label applied to the agent embedded content is the higher priority of the following:
+The sensitivity label applied to the agent embedded content is the higher priority of the following labels:
 
 - The highest priority sensitivity label applied to any embedded file.
-- The default sensitivity label policy applied by the organization. For more information, see [Default sensitivity label policy](/default-sensitivity-labels-policies#default-sensitivity-label-policy).
+- The default sensitivity label policy applied by the organization. For more information, see [Default sensitivity label policy](/purview//default-sensitivity-labels-policies#default-sensitivity-label-policy).
 
 For example, if a file with a General label and a file with a Confidential label are embedded in the agent, the Confidential sensitivity label is applied to the agent embedded content.
 
 The sensitivity label applies only to the embedded content; it doesn't apply to other knowledge sources that the agent references, such as SharePoint files or Copilot connector content.
 
-Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. The sensitivity label for the embedded content shows on the top right of the agent. The label doesn't currently appear on the Agent Store listing; however, who don't have extract right permissions to the embedded content can't install and use the agent from the Agent Store.
+Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. The sensitivity label for the embedded content shows on the top right of the agent. The label doesn't currently appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent from the Agent Store.
 
-A sensitivity label is also applied to agent responses. This label is the higher priority of the following:
+A sensitivity label is also applied to agent responses. This label is the higher priority of the following labels:
 
 - The sensitivity label of the embedded content
 - The sensitivity label of any other agent knowledge sources, such as SharePoint and OneDrive files.
@@ -195,7 +195,7 @@ When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-a
 
 ### File size limits
 
-The following table lists the file types that you can add as knowledge to your agent and the size limits for each file type, whether you're adding the files from SharePoint or uploading from your device.
+The following table lists the file types that you can add as knowledge to your agent and the size limits for each file type.
 
 | File type | SharePoint Online limit | Embedded file limit |
 | ----------| ----------------------- | ------------------- |
