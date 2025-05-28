@@ -111,24 +111,6 @@ The following table lists the supported file types and their respective limits.
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you won't be able to use SharePoint as a knowledge source.
 
-### Microsoft Teams chat messages
-
-Your agent can be grounded in daily chat messages from channels, group chats and meeting chats in Microsoft Teams. To add Teams chat messages, clicking the search bar under 'Knowledge' section.
-
-If you don't want to scope to specific chat sources, you can also select "My Teams chats from group chat, channels, and meetings". That will search all the chat messages you have the access to.
-
-:::image type="content" source="assets/images/capabilities-teamsChat-emails.png" border="false" alt-text="Screenshot of the knowledge picker with My Teams chats from groups, channels, and meetings highlighted":::
-
->[!IMPORTANT]
-> You can add up to 5 chat sources from Teams.
-
-### Microsoft Outlook emails
-
-The agent can also be grounded in emails from Microsoft Outlook. Click the search bar under "Knowledge" section, then select "My emails" to enable this capability.
-
->[!IMPORTANT]
->Scoping is not available for emails. The agent will be grounded in all emails in your mailbox.
-
 #### Entering a URL for a SharePoint site, folder, or file
 
 You can enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
@@ -155,6 +137,24 @@ When new files are uploaded to SharePoint, they can take up to several minutes t
 You can check the file readiness by looking in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When the underlying file uploaded to SharePoint is renamed or deleted, the agent picks up the changes. You can also select the reload button on top of the **Knowledge** section to manually reload the state.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-knowledge-preparing.png" alt-text="Knowledge sources preparing state":::
+
+### Teams chat messages
+
+You can ground your agent in Teams channel, group, and meeting chat messages. To add Teams chat messages, on the **Configure** tab, in the **Knowledge** section, click the search bar. On the **Chats** tab, you can include specific chats that you want to add as knowledge.
+
+> [!IMPORTANT]
+> You can add up to five chat sources.
+
+If you don't want to scope the agent's knowledge to specific chats, under **Teams chats**, choose **My Teams chats from group chat, channels, and meetings** to use all chat messages you have the access to as knowledge.
+
+:::image type="content" source="assets/images/capabilities-teamsChat-emails.png" border="false" alt-text="Screenshot of the knowledge picker with My Teams chats from groups, channels, and meetings highlighted":::
+
+### Outlook email
+
+You can ground your agent in Outlook email. To add email as a knowledge source, on the **Configure** tab, in the **Knowledge** section, under **Email**, choose **My emails**.
+
+> [!NOTE]
+> You can't scope email knowledge. When you add email, the agent uses all email in your mailbox as knowledge.
 
 ### Copilot connectors
 
