@@ -137,19 +137,21 @@ The following file types aren't supported:
 - Files from another tenant that has encryption enabled.
 - Password protected files.
 
+For details, see [Unsupported sensitivity label scenarios](#unsupported-sensitivity-label-scenarios).
+
 > [!CAUTION]
 > When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. The agent doesn't honor permissions that are applied to files.
 
-Copilot indexes th {first 1,000 chunks} of each embedded file. To optimize embeded content for Copilot retrieval, upload files that are no larger than....
+Copilot indexes the {first 1,000 chunks} of each embedded file. To optimize embedded content for Copilot retrieval, upload files that are no larger than....
 
 #### Sensitivity labels for agent embedded content
 
 In organizations that have [sensitivity labels](/purview/sensitivity-labels) enabled, a sensitivity label is applied to and enforced on agent  embedded files. This ensures that the agent is compliant with the organization's Microsoft Purview policies.
 
-The sensitivity label applied to the agent embedded content is the higher priority of the following labels:
+The sensitivity label applied to the embedded content is the higher priority of the following labels:
 
 - The highest priority sensitivity label applied to any embedded file.
-- The default sensitivity label policy applied by the organization. For more information, see [Default sensitivity label policy](/purview//default-sensitivity-labels-policies#default-sensitivity-label-policy).
+- The [default sensitivity label policy](/purview/default-sensitivity-labels-policies#default-sensitivity-label-policy) applied by the organization.
 
 For example, if a file with a General label and a file with a Confidential label are embedded in the agent, the Confidential sensitivity label is applied to the agent embedded content.
 
@@ -162,23 +164,20 @@ A sensitivity label is also applied to agent responses. This label is the higher
 - The sensitivity label of the embedded content
 - The sensitivity label of any other agent knowledge sources, such as SharePoint and OneDrive files.
 
+> [!NOTE]
+> Currently, agent builders can't set a sensitivity label on an agent.
+
+##### Unsupported sensitivity label scenarios
+
 The following table lists sensitivity label scenarios that aren't currently supported and describes the behavior when the file is uploaded to the agent.
 
-| Scenario | Behavior |
+| Scenario | Agent behavior |
 | -------- | -------- |
 | Sensitivity labels with Double Key Encryption (DKE) enabled | The file is embedded in the agent but isn't used as knowledge. The builder doesn't see an error message when they upload the file. |
 | Sensitivity labels with user-defined permissions enabled | The file is embedded but isn't used as knowledge. Agent creation fails without an error message. |
 | Sensitivity labels with extract rights enabled for the user | The file is uploaded but isn't used as knowledge. The builder sees an error message next to the uploaded file. If the builder doesn't remove the file, agent creation fails without an error message. |
 | Files with sensitivity labels from another tenant that has encryption enabled | The file is embedded in the agent but isn't used as knowledge. |
 | Password-protected files |  |
-
-> [!NOTE]
-> Currently, agent builders can't set a sensitivity label on an agent.
-
-For information about how to enable sensitivity labels in your tenant, see:
-
-- [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files)
-- [Enable coauthoring for files encrypted with sensitivity labels](/purview/sensitivity-labels-coauthoring).
 
 
 #### Sharing an agent with embedded files
