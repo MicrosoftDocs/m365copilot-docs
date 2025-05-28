@@ -146,16 +146,17 @@ Copilot indexes the {first 1,000 chunks} of each embedded file. To optimize embe
 
 #### Sensitivity labels for agent embedded content
 
-In organizations that have [sensitivity labels](/purview/sensitivity-labels) enabled, a sensitivity label is applied to and enforced on agent  embedded files. This ensures that the agent is compliant with the organization's Microsoft Purview policies.
+In organizations that have [sensitivity labels](/purview/sensitivity-labels) enabled, a sensitivity label is applied to and enforced on agent  embedded content. This ensures that the agent is compliant with the organization's Microsoft Purview policies.
 
 The sensitivity label applied to the embedded content is the higher priority of the following labels:
 
 - The highest priority sensitivity label applied to any embedded file.
 - The [default sensitivity label policy](/purview/default-sensitivity-labels-policies#default-sensitivity-label-policy) applied by the organization.
 
-For example, if a file with a General label and a file with a Confidential label are embedded in the agent, the Confidential sensitivity label is applied to the agent embedded content.
+For example, if a file with a General label and a file with a Confidential label are embedded in the agent, the Confidential sensitivity label is applied to the embedded content.
 
-The sensitivity label applies only to the embedded content; it doesn't apply to other knowledge sources that the agent references, such as SharePoint files or Copilot connector content.
+> [!NOTE]
+> The sensitivity label applies only to the embedded content; it doesn't apply to other knowledge sources that the agent references, such as SharePoint files or Copilot connector content.
 
 Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. The sensitivity label for the embedded content shows on the top right of the agent. The label doesn't currently appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent from the Agent Store.
 
@@ -169,13 +170,13 @@ A sensitivity label is also applied to agent responses. This label is the higher
 
 ##### Unsupported sensitivity label scenarios
 
-The following table lists sensitivity label scenarios that aren't currently supported and describes the behavior when the file is uploaded to the agent.
+The following table lists sensitivity label scenarios that aren't currently supported and describes the behavior when a builder uploads the file to the agent.
 
 | Scenario | Agent behavior |
 | -------- | -------- |
-| Sensitivity labels with Double Key Encryption (DKE) enabled | The file is embedded in the agent but isn't used as knowledge. The builder doesn't see an error message when they upload the file. |
-| Sensitivity labels with user-defined permissions enabled | The file is embedded but isn't used as knowledge. Agent creation fails without an error message. |
-| Sensitivity labels with extract rights enabled for the user | The file is uploaded but isn't used as knowledge. The builder sees an error message next to the uploaded file. If the builder doesn't remove the file, agent creation fails without an error message. |
+| Sensitivity label with Double Key Encryption (DKE) enabled | The file is embedded but isn't used as knowledge. The builder doesn't see an error message when they upload the file. |
+| Sensitivity label with user-defined permissions enabled | The file is uploaded but agent creation fails without an error message. |
+| Sensitivity label with extract rights enabled for the user | The file is uploaded and the builder sees an error message next to the uploaded file. If the builder doesn't remove the file, agent creation fails without an error message. |
 | Files with sensitivity labels from another tenant that has encryption enabled | The file is embedded in the agent but isn't used as knowledge. |
 | Password-protected files |  |
 
@@ -190,7 +191,7 @@ When you share an agent with embedded files, the files are also shared, and agen
 
 Sharing an agent with embedded files to groups isn't currently supported.
 
-When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are enabled, a label that represents the highest sensitivity label applied to any embedded files or the default sensitivity label of the tenant (whichever is highest) is displayed on the **Share** screen.
+When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are enabled, the sensitivity label applied to the agent embedded content is displayed on the **Share** screen.
 
 ### File size limits
 
