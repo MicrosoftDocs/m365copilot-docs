@@ -20,7 +20,7 @@ Represents a single result within the list of retrieval results.
 | Property           | Type                                                                    | Description |
 |:-------------------|:------------------------------------------------------------------------|:------------|
 | `extracts`         | [retrievalExtract](retrievalextract.md) collection                      | An array of text extracts extracted from the document for Retrieval-Augmented Generation. Currently, only one text snippet is extracted. |
-| `resourceMetadata` | [searchResourceMetadataDictionary](searchresourcemetadatadictionary.md) | The requested [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft Graph connectors](/graph/connecting-external-content-manage-schema) metadata from the request payload (empty if not applicable). |
+| `resourceMetadata` | [searchResourceMetadataDictionary](searchresourcemetadatadictionary.md) | The requested [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft 365 Copilot connectors](/graph/connecting-external-content-manage-schema) metadata from the request payload (empty if not applicable). |
 | `resourceType`     | [retrievalEntityType](#retrievalentitytype-enumeration)                 | The resource type of the item. |
 | `sensitivityLabel` | [searchSensitivityLabelInfo](searchsensitivitylabelinfo.md)             | A JSON object with information about the document's sensitivity label. |
 | `webUrl`           | String                                                                  | The URL of the item in which the extract was retrieved. |
