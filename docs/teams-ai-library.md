@@ -28,4 +28,4 @@ Now with the new v2 SDK, it supports Agent2Agent (A2A) for multi-agent collabora
 Ready to build your first agent with the Teams AI Library v2? Let's get started now!
 
 > [!div class="nextstepaction"]
-> [Teams AI Library v2 documentation (preview)](/microsoftteams/platform/teams-ai-library/welcome/overview)
+> [Teams AI Library v2 documentation (preview)](/microsoftteams/platform/teams-ai-library/welcome)
