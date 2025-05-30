@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 5/20/2025
+ms.date: 5/30/2025
 ---
 
 # Add knowledge sources to your declarative agent
@@ -76,10 +76,10 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 
 ## Embedded files
 
-If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to build your agent, you can upload files directly from your device or the cloud for your agent to use as knowledge sources. The files that you upload as knowledge are stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview) and these files count against the OneDrive and SharePoint capacity in your tenant.
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to build your agent, you can upload files directly from your device or the cloud for your agent to use as knowledge sources. The embedded file content is stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview). These files count against the OneDrive and SharePoint capacity in your tenant.
 
 > [!NOTE]
-> The file upload feature is available to users with metered consumption enabled or with Microsoft 365 Copilot license.
+> The file upload feature is available to users with metered consumption enabled or with a Microsoft 365 Copilot license.
 
 For more information about embedded files, see [Embedded files in agent builder](copilot-studio-agent-builder-build.md#embedded-files).
 
