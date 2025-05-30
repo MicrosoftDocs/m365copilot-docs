@@ -82,21 +82,20 @@ The following are the current throttling and other limitations to the Retrieval 
 
 The Retrieval API is available at no extra cost to users with a Microsoft 365 Copilot license. Support for users without a Microsoft 365 Copilot license is currently not available.
 
-## Best Practices
+## Best practices
 
-### General
-These are the best practices that are applicable to both unfiltered queries (queries without a **filterExpression**) and filtered queries (queries with a **filterExpression**):
+The following best practices are applicable to both unfiltered queries (queries without a **filterExpression**) and filtered queries (queries with a **filterExpression**):
 
-- The results and extracts returned by the Retrieval API are unordered. Consequently, it is recommended that you do not limit the **maximumNumberOfResults** unless you have stringent requirements on how many tokens your LLM can consume.
+- The results and extracts returned by the Retrieval API are unordered. For this reason, we recommend that you don't limit the **maximumNumberOfResults** unless you have strict requirements for how many tokens your LLM can consume.
 - Send all extracts returned by the Retrieval API to your LLM/orchestrator for answer generation.
-- Avoid queries that are simply generic keywords that could be applicable to a plethora of content.
+- Avoid generic queries that might apply to a wide variety of content.
 - Provide as much context in the query as possible.
 - Your **queryString** should be a single sentence.
-- Avoid spelling errors in context-rich keywords when constructing your **queryString**.
+- Avoid spelling errors in context-rich keywords when you construct your **queryString**.
 
-### Filtered Queries
-If you are issuing a query with a **filterExpression**, we recommend that you also follow this best practice:
-- If you want to filter using the **path** parameter in SharePoint, do not use a sharing link or copy the URL from the address bar. Instead, navigate to the location of the folder or file in SharePoint and click on the three dots that indicate “More Actions”. Scroll down on the pane and click “Details”. From there, you can scroll down the right rail to find the path, which you can copy to your clipboard.
+Apply the following best practice to filtered queries (queries with a **filterExpression**):
+
+- If you want to filter using the **path** parameter in SharePoint, don't use a sharing link or copy the URL from the address bar. Instead, go to the location of the folder or file in SharePoint and choose the three dots to open **More Actions**. Scroll down in the pane and choose **Details**. From there, you can scroll down the right rail to find the and copy the path.
 
 ## Next step
 
