@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 05/23/2025
+ms.date: 06/02/2025
 ---
 
 # Known issues
@@ -91,10 +91,14 @@ The following table lists features that aren't currently supported for custom en
 | Feature | Issue |
 | ------- | ----- |
 | Feedback | User feedback regarding agent responses isn't shared with the developer. |
+| Conversation context | Custom engine agents can't access Copilot conversation history that occurred before the user @mentions the agent. |
 | Chat messages | Users can't edit chat messages sent to or returned by the agent.<br /><br />HTML isn't supported in agent response messages. |
 | File attachments | Users can't upload files in agent chats and the agent can't return files for download. |
 | Azure AI Foundry | You can't currently deploy a custom engine agent built using Azure AI Foundry. |
 | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li><li>Adaptive card</li></ul> |
 | Proactive messages | Proactive notifications aren't supported. |
 | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
-| [Nonstandard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event) | Nonstandard elements aren't supported. |
+
+## Related content
+
+- [Microsoft 365 Copilot Q&A](/answers/tags/466/copilot-m365-development)
