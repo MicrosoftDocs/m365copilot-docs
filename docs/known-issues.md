@@ -91,7 +91,7 @@ The following table lists features that aren't currently supported for custom en
 | Feature | Issue |
 | ------- | ----- |
 | Feedback | User feedback regarding agent responses isn't shared with the developer. |
-| Conversation context | Custom engine agents can't access Copilot conversation history that occurred before the user @mentions the agent. |
+| Conversation context | Custom engine agents can't access Copilot conversation history that occurred before the user accesses the agent via `@mention`. |
 | Chat messages | Users can't edit chat messages sent to or returned by the agent.<br /><br />HTML isn't supported in agent response messages. |
 | File attachments | Users can't upload files in agent chats and the agent can't return files for download. |
 | Azure AI Foundry | You can't currently deploy a custom engine agent built using Azure AI Foundry. |
