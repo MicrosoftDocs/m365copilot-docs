@@ -47,7 +47,15 @@
       - name: Build with TypeSpec
         href: build-declarative-agents-typespec.md
       - name: Build with JSON
-        href: build-declarative-agents.yml
+        items:
+        - name: Create the agent
+          href: build-declarative-agents.md
+        - name: Customize agent behavior
+          href: build-declarative-agents-customize-behavior.md
+        - name: Add knowledge sources
+          href: build-declarative-agents-add-knowledge.md
+        - name: Add skills
+          href: build-declarative-agents-add-skills.md
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
       - name: Add actions with API plugins
