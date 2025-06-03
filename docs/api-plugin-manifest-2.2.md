@@ -65,7 +65,7 @@ The plugin manifest object contains the following properties.
 | -------- | ---- | ----------- |
 | `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.2`. |
 | `name_for_human` | String | Required. A short, human-readable name for the plugin. It MUST contain at least one nonwhitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
-| `namespace` | String | Required. Contains an identifier used to prevent name conflicts between function names from different plugins. The value MUST match the regex `^[A-Za-z0-9_]+`. |
+| `namespace` | String | Required. Contains an identifier used to prevent name conflicts between function names from different plugins. The value MUST match the regex `^[A-Za-z0-9]+`. |
 | `description_for_model` | String | Optional. The description for the plugin that is provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
 | `description_for_human` | String | Required. A human-readable description of the plugin. Characters beyond 100 MAY be ignored. This property is localizable. |
 | `logo_url` | String | Optional. A URL used to fetch a logo that MAY be used by the orchestrator. Implementations MAY provide alternative methods to provide logos that meet their visual requirements. This property is localizable. |
