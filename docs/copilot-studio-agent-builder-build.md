@@ -151,7 +151,7 @@ If you don't want to scope the agent's knowledge to specific chats, under **Team
 
 ### Outlook email
 
-You can ground your agent in Outlook email. To add email as a knowledge source, on the **Configure** tab, in the **Knowledge** section, under **Email**, choose **My emails**.
+You can ground your agent in Outlook email. To add email as a knowledge source, on the **Configure** tab, in the **Knowledge** section, click the search bar, and choose **My emails**.
 
 > [!NOTE]
 > You can't scope email knowledge. When you add email, the agent uses all email in your mailbox as knowledge.
