@@ -8,7 +8,7 @@ ms.date: 06/03/2025
 ms.topic: overview
 ---
 
-# What's new archive
+# What's new history for Microsoft 365 Copilot extensibility
 
 Find historical information about additions and updates to Microsoft 365 Copilot extensibility options.
 
