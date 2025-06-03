@@ -93,6 +93,7 @@ The following OpenAPI description is for the [JSONPlaceHolder API](https://jsonp
 
 You've completed the declarative agent guide for Microsoft 365 Copilot. Now that you're familiar with the capabilities of a declarative agent, you can learn more about declarative agents in the following articles.
 
+- Learn how to [build declarative agents with TypeSpec](build-declarative-agents-typespec.md).
 - Learn how to [write effective instructions](declarative-agent-instructions.md) for your agent.
 - Test your agent with [Copilot developer mode](debugging-copilot-agent.md) to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
 - Get answers to [frequently asked questions](transparency-faq-declarative-agent.md).

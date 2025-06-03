@@ -176,4 +176,4 @@ The declarative agent will have access to Copilot connectors content to generate
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Add capabilities and custom actions](build-declarative-agents-add-skills.md)
+> [Add skills](build-declarative-agents-add-skills.md)
