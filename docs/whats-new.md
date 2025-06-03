@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Outlook email and Teams chats knowledge in agent builder
 
-Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Copilot Studio agent builder to build for agent. For more information, see [Add knowledge sources](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-build).
+Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Copilot Studio agent builder to build your agent. For more information, see [Add knowledge sources](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-build).
 
 ## May 2025
 
