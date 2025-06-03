@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 5/09/2025
+ms.date: 06/03/2025
 ---
 
 # Add knowledge sources to your declarative agent
