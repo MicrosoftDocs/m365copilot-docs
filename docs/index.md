@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 05/27/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -92,48 +92,6 @@ You can integrate the following Copilot APIs:
 - **[Copilot Interaction Export API](/microsoftteams/export-teams-content)** - Export user interactions with Copilot, including prompts and responses. This API enables you to build data governance and protection solutions, as well as analyze Copilot usage in your application to optimize adoption.
 
 - **[Copilot AI Meeting Insights API](/microsoftteams/platform/graph-api/meeting-transcripts/meeting-insights)** - Access insights from the Microsoft Teams Intelligent Recap feature—including AI-generated notes, action items, and @mentions. This API is ideal for building apps that extract and apply insights from meetings to drive follow-ups and decisions, such as in HR interviews, project management, sales, or customer engagement workflows.
-
-## Unlock the full potential of Microsoft 365 Copilot
-
-Copilot connectors are building blocks that enable you to add custom knowledge and custom skills to agents. You can extend your agents via the following types of Copilot connectors:
-
-- Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors)
-- Power Platform connectors
-
-IT Admins can configure appropriate Copilot connectors in [Microsoft 365 Admin Center](https://admin.microsoft.com) and [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) to expand the knowledge available to all users ​in their tenant, while respecting data access limitations from the knowledge ​source itself.
-
-### Copilot connectors
-
-Copilot connectors enable you to extend Microsoft 365 Copilot by integrating external data sources into [Microsoft Graph](/graph/overview), enhancing Copilot's ability to reason over your enterprise content and provide more comprehensive responses. This integration allows Copilot to access and utilize a broader range of organizational knowledge.
-
-With Copilot connectors, you can:
-
-- Make the most of your external data by giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights.
-- Use Copilot as a research aid to find, summarize, and perform Q&A natively by using the dataset of your choice.
-- Surface the intelligence of Copilot in Microsoft Search, ContextIQ, and more to enhance the ways your users are already searching for answers.
-
-For more information, see [Copilot connectors overview](overview-graph-connector.md).
-
-### Power Platform connectors
-
-Power Platform connectors are essential components that enable [Power Platform applications](https://www.microsoft.com/power-platform#products), such as Power Automate, Power Apps, and Logic Apps, to interact with external services and data sources. They also enhance the capabilities of Microsoft 365 Copilot by enabling it to integrate with a wide range of external services and data sources, perform custom actions, and access a broader range of data types.
-
-Unlike Copilot connectors, Power Platform connectors provide real-time data retrieval with read/write actions. For example, you can create a connector that allows your users to track an issue in real time and create actions, such as creating a ticket for the tracker.
-
-For more information, see [Copilot connectors and actions](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context).
-
-### Plugins
-
-Plugins are available as *actions* for declarative agents to interact with other systems to read or write information in near real-time. Use plugins to:
-
-- Access real-time information such as the latest news coverage for a product launch.
-- Retrieve relational data such as reporting on service tickets assigned to a given team member.
-- Perform actions across apps such as creating a new task in your organization's work tracking system.
-
-You can create the following types of plugins:
-
-- [API plugins](overview-api-plugins.md)
-- [Copilot Studio actions](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context)
 
 ## Related content
 

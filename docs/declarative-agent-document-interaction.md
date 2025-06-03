@@ -126,6 +126,6 @@ Enabling image insertion in a declarative agent requires an API plugin that uses
 ## Related content
 
 - [API plugins for Microsoft 365 Copilot](overview-api-plugins.md)
-- [API plugin manifest schema 2.2 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md)
+- [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md)
 - [Adaptive Card response templates for API plugins for Microsoft 365 Copilot](api-plugin-adaptive-cards.md)
 - [Adaptive Card documentation](https://adaptivecards.microsoft.com)
