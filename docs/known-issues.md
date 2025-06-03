@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 06/02/2025
+ms.date: 06/03/2025
 ---
 
 # Known issues
@@ -99,6 +99,8 @@ The following table lists features that aren't currently supported for custom en
 | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li></ul> |
 | Proactive messages | Proactive notifications aren't supported. |
 | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
+| Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements]()</li><li>Media</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>People picker</li><li>@mention</li><li>Password control</li></ul> |
+| Sensitivity labels | Sensitivity labels aren't supported. |
 
 ## Related content
 
