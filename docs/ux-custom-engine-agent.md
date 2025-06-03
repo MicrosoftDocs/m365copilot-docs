@@ -87,3 +87,5 @@ Proactive messages are agent-initiated messages based on predefined triggers. Ex
 
 For more information, see [Proactive messages](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?context=/microsoft-365-copilot/extensibility/context)
 
+> [!NOTE]
+> Proactive notifications aren't currently supported.
