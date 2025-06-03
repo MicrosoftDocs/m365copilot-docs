@@ -14,6 +14,12 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## June 2025
+
+### Outlook email and Teams chats knowledge in agent builder
+
+Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Copilot Studio agent builder to build for agent. For more information, see [Add knowledge sources](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-build).
+
 ## May 2025
 
 ### Microsoft 365 Agents Toolkit

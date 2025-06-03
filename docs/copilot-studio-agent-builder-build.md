@@ -70,12 +70,12 @@ The agent builder allows you to configure specific knowledge sources for the age
 To add knowledge sources, on the **Configure** tab in the agent builder:
 - Search for an item in the search bar.
   
-:::image type="content" source="assets/images/knowledge-picker-agent-builder.png" border="false" alt-text="Screenshot of the knowledge picker with the search box highlighted":::
+    :::image type="content" source="assets/images/knowledge-picker-agent-builder.png" border="false" alt-text="Screenshot of the knowledge picker with the search box highlighted":::
 
-- Paste or type an URL in the search bar.
+- Paste or type a URL in the search bar.
 - Use the picker to select items (currently only supports SharePoint content).
 
-:::image type="content" source="assets/images/knowledge-picker-agent-builder2.png" border="false" alt-text="Screenshot of the knowledge picker with the cloud button highlighted":::
+    :::image type="content" source="assets/images/knowledge-picker-agent-builder2.png" border="false" alt-text="Screenshot of the knowledge picker with the cloud button highlighted":::
 
 ### Web content
 
@@ -162,7 +162,7 @@ Copilot connectors allow agents to include knowledge from external repositories 
 
 If at least one connector is enabled, you can add it to your agent. Your agent is able to answer questions related to that connector. The information retrieved from the connector is indexed and refreshed according to the way in which the connector was configured. The agent can cite relevant information from the indexed data and link the end user to the data source.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-graph-connectors.png" alt-text="Graph connectors in hte Knowledge sources":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-copilot-connectors.png" alt-text="Copilot connectors in the Knowledge sources":::
 
 ## Add capabilities
 

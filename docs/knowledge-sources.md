@@ -23,9 +23,9 @@ The following table lists the capabilities and knowledge sources you can configu
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
 | Dataverse | :x: | :white_check_mark:\* | Yes |
-| Email | :x: | :white_check_mark:\* | Yes |
+| Email | :white_check_mark: | :white_check_mark:\* | Yes |
 | People | :x: | :white_check_mark: | Yes |
-| Teams messages | :x: | :white_check_mark:\* | Yes |
+| Teams messages | :white_check_mark: | :white_check_mark:\* | Yes |
 
 \* Option to scope the knowledge is available.
 
@@ -115,10 +115,12 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 Email knowledge allows you to scope your agent to a personal or shared mailbox, and optionally, a specific mailbox folder.
 
-> [!NOTE]
-> Email knowledge is not currently available in Copilot Studio agent builder.
-
 ### Add email knowledge sources
+
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to create your agent, in the **Knowledge** section on the **Configure** tab, choose **My emails**.
+
+> [!NOTE]
+> You can't currently scope your emails to a specific folder or shared mailbox when you use agent builder.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to add email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example. You can reference multiple mailbox folders and only one shared folder.
 
@@ -182,6 +184,8 @@ You can configure agents to use Teams channels, meeting chats, group chats, 1:1 
 Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has `OneDriveAndSharePoint` enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
 ### Add Teams messages knowledge sources
+
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, choose **My Teams chats from groups, channels, and meetings.** To scope your agent to specific channel, meeting, or group chats, click the search bar, and on the **Chats** tab, select the chats that you want to add as knowledge.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Teams messages knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
 
