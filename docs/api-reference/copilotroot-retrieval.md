@@ -215,7 +215,7 @@ Content-Type: application/json
 
 ### Example 3: Bacth requests to the Retrieval API
 
-The following example shows how to [batch requests to the Retrieval API](https://learn.microsoft.com/graph/json-batching?tabs=http). The Retrieval API supports up 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
+The following example shows how to [batch requests to the Retrieval API](https://learn.microsoft.com/graph/json-batching?tabs=http). The Retrieval API supports up to 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
 
 #### Request
 
