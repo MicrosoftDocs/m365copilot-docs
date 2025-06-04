@@ -215,7 +215,7 @@ Content-Type: application/json
 
 ### Example 3: Bacth requests to the Retrieval API
 
-The following example shows how to batch requests to the Retrieval API. The Retrieval API supports up 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
+The following example shows how to [batch requests to the Retrieval API](https://learn.microsoft.com/graph/json-batching?tabs=http). The Retrieval API supports up 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
 
 #### Request
 
@@ -265,36 +265,95 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": [
+  "responses": [
     {
-      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
-      "extracts": [
-        {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
-        },
-        {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
-        }
-      ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "title": "VPN Access",
-        "author": "John Doe"
+      "id": "1",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "body": {
+        "retrievalHits": [
+          {
+            "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
+            "extracts": [
+              {
+                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+              },
+              {
+                "text": "You will need to sign in with 2FA to access the corporate VPN."
+              }
+            ],
+            "resourceType": "listItem",
+            "resourceMetadata": {},
+            "sensitivityLabel": {
+              "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+              "displayName": "Confidential\\Any User (No Protection)",
+              "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+              "priority": 4,
+              "color": "#FF8C00",
+              "isEncrypted": false
+            }
+          },
+          {
+            "webUrl": "https://contoso.sharepoint.com/sites/HR/Corporate_VPN.docx",
+            "extracts": [
+              {
+                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+              },
+              {
+                "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN."
+              }
+            ],
+            "resourceType": "listItem",
+            "resourceMetadata": {},
+            "sensitivityLabel": {
+              "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+              "displayName": "Confidential\\Any User (No Protection)",
+              "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+              "priority": 4,
+              "color": "#FF8C00",
+              "isEncrypted": false
+            }
+          }
+        ]
       }
     },
     {
-      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
-      "extracts": [
-        {
-          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
-        },
-        {
-          "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
-        }
-      ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "title": "Corporate VPN"
+      "id": "2",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "body": {
+        "retrievalHits": [
+          {
+            "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
+            "extracts": [
+              {
+                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+              },
+              {
+                "text": "You will need to sign in with 2FA to access the corporate VPN."
+              }
+            ],
+            "resourceType": "externalItem",
+            "resourceMetadata": {}
+          },
+          {
+            "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
+            "extracts": [
+              {
+                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+              },
+              {
+                "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
+              }
+            ],
+            "resourceType": "externalItem",
+            "resourceMetadata": {}
+          }
+        ]
       }
     }
   ]
