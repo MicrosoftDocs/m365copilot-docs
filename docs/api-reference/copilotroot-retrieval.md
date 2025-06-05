@@ -15,7 +15,7 @@ doc_type: conceptualPageType
 
 [!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
-Ground your generative AI solutions with Microsoft 365 data while optimizing for context recall. Allows the retrieval of relevant text extracts from SharePoint and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Retrieval API](https://aka.ms/try_copilot_retrieval_API_reference). Learn how you can [batch up to 20 requests to the Retrieval API](https://learn.microsoft.com/graph/json-batching?tabs=http).
+Ground your generative AI solutions with Microsoft 365 data while optimizing for context recall. Allows the retrieval of relevant text extracts from SharePoint and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Retrieval API](https://aka.ms/try_copilot_retrieval_API_reference). Learn how you can [batch up to 20 requests to the Retrieval API](/graph/json-batching?tabs=http).
 
 ## Permissions
 
@@ -215,7 +215,7 @@ Content-Type: application/json
 
 ### Example 3: Bacth requests to the Retrieval API
 
-The following example shows how to [batch requests to the Retrieval API](https://learn.microsoft.com/graph/json-batching?tabs=http). The Retrieval API supports up to 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
+The following example shows how to [batch requests to the Retrieval API](/graph/json-batching?tabs=http). The Retrieval API supports up to 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
 
 #### Request
 
