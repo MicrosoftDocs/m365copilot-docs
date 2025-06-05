@@ -240,6 +240,8 @@
   items:
   - name: Overview
     href: copilot-apis-overview.md
+  - name: Use client libraries (preview)
+    href: sdks/api-libraries.md
 - name: Publish
   items:
   - name: Overview
