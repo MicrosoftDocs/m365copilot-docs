@@ -237,7 +237,7 @@
       href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
 - name: Enhance AI solutions with Copilot APIs
   items:
-  - name: Overview
+  - name: Microsoft 365 Copilot APIs overview
     href: copilot-apis-overview.md
   - name: Retrieval API (preview)
     items:
