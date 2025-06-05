@@ -104,5 +104,4 @@ The following are the current throttling and other limitations to the Retrieval 
 
 ## Related content
 
-- [Microsoft 365 Copilot API client libraries (preview)](../sdks/api-libraries.md)
 - [Try with Graph explorer](https://aka.ms/try_copilot_retrieval_API_overview)
