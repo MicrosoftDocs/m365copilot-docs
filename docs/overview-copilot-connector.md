@@ -12,11 +12,11 @@ ms.date: 05/19/2025
 
 Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) provide a platform for you to ingest your unstructured, line-of-business data into Microsoft Graph, so that Microsoft 365 Copilot can reason over the entirety of your enterprise content. Content ingested through Copilot connectors is added to Microsoft Graph; this unlocks semantic understanding of your users' prompts in Microsoft 365 Copilot. However, Copilot connectors are not limited to Microsoft 365 Copilot. Copilot connector content powers other Microsoft 365 intelligent experiences like Microsoft Search, Context IQ, and the Microsoft 365 Copilot app.
 
+This article describes how Copilot connector contents are part of Microsoft 365 Copilot and how you can configure your custom Microsoft Graph connections for Microsoft 365 Copilot.
+
 > [!NOTE]
 >
-> To learn more about pre-built Copilot connectors, see [Pre-built Copilot connectors](/microsoftsearch/pre-built-connectors-overview).
-
-This article describes how Copilot connector contents are part of Microsoft 365 Copilot and how you can configure your custom Microsoft Graph connections for Microsoft 365 Copilot.
+> Copilot connectors are available in the global service and in Government Community Cloud (GCC) and Government Community Cloud High (GCCH) environments. They are not available in Department of Defense (DoD) environments.
 
 ## How Copilot connector content surfaces in Microsoft 365 Copilot
 
@@ -100,4 +100,5 @@ In addition, search administrators must ensure that your Copilot connector conne
 
 - [Build your first Copilot connector](build-your-first-connector.md)
 - [Copilot connectors overview video](https://www.youtube.com/embed/17rAOh9313g)
-- [Copilot connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)
+- [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)
+- [Pre-built Copilot connectors](/microsoftsearch/pre-built-connectors-overview)
