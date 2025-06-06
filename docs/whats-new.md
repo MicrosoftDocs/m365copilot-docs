@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Use the Retrieval API (preview) to retrieve data
 
-The Microsoft 365 Copilot Retrieval API (preview) allows you to retrieve relevant content from SharePoint and Copilot connectors. For more information, see [Overview of the Retrieval API](../api-reference/retrieval-api-overview.md).
+The Microsoft 365 Copilot Retrieval API (preview) allows you to retrieve relevant content from SharePoint and Copilot connectors. For more information, see [Overview of the Retrieval API](/microsoft-365-copilot/extensibility/api-reference/retrieval-api-overview).
 
 ### Outlook email and Teams chats knowledge in agent builder
 
