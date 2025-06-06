@@ -71,7 +71,7 @@ To add knowledge sources, on the **Configure** tab in the agent builder:
 
 - Search for an item in the search bar.
 - Paste or type a URL in the search bar.
-- Use the picker to select items (currently only supports SharePoint content).
+- Click the search bar and use the picker to select items.
 
 ### Web content
 
