@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 06/03/2025
+ms.date: 06/09/2025
 ms.topic: overview
 ---
 
@@ -15,6 +15,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## June 2025
+
+### Microsoft 365 Copilot API client libraries
+
+Use the Copilot API libraries to work with Microsoft 365 Copilot APIs. For more information, see [Microsoft 365 Copilot APIs (preview)](/sdks/api-libraries.md).
 
 ### Outlook email and Teams chats knowledge in agent builder
 
