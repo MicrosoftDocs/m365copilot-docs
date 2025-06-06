@@ -51,13 +51,19 @@ For schema reference information, see [Action.OpenUrlDialog]( https://adaptiveca
 
 ## Configure dialog box size
 
-Use the dialogHeight and dialogWidth properties to set the height and width of the dialog box. These values adjust dynamically based on the user’s screen resolution and the size of the window.
+Use the **dialogHeight** and **dialogWidth** properties to set the height and width of the dialog box. These values adjust dynamically based on the user's screen resolution and the size of the window.
+
 You can specify:
-Predefined sizes - small, medium, or large.
-Custom pixel values – for example, 400px, 600px.
-Tip: Use pixel values for precise control. Predefined sizes are relative to the available screen space.
+
+- Predefined sizes - `small`, `medium`, or `large`.
+- Custom pixel values - for example, `400px`, `600px`.
+
+> [!TIP]
+> Use pixel values for precise control. Predefined sizes are relative to the available screen space.
 
 The following image shows an example of a dialog box invoked from an Adaptive Card button returned by an agent.
+
+[image]
 
 ## Configure authentication
 
@@ -77,67 +83,83 @@ Use another identity provider and register your app in Entra ID.
 Configure single sign-on (SSO) to allow users to access APIs without having to sign in multiple times. 
 
 To enable SSO:
-Update the Microsoft Entra ID application.
-Configure the application ID URI.
-Configure scopes and consent settings.
-Preauthorize trusted client applications to avoid repeated consent prompts.
-Implement token retrieval and validation logic.:
-Use the getAuthToken() method from the TeamsJS library to retrieve an access token.
-Send the token to your server in the Authorization header.
-Validate the token server-side.
-Update the app manifest.
-Add the webApplicationInfo property to the app manifest to enable SSO.
-Add the domain of the dialog box content to the validDomains section of the app manifest.
+
+1. Update the Microsoft Entra ID application.
+   - Configure the application ID URI.
+   - Configure scopes and consent settings.
+   - Preauthorize trusted client applications to avoid repeated consent prompts.
+2. Implement token retrieval and validation logic.
+     - Use the `getAuthToken()` method from the TeamsJS library to retrieve an access token.
+     - Send the token to your server in the Authorization header.
+      - Validate the token server-side.
+3. Update the app manifest.
+     - Add the **webApplicationInfo** property to the app manifest to enable SSO.
+     - Add the domain of the dialog box content to the `validDomains` section of the app manifest.
 
 #### Update Microsoft Entra ID application
 
 To configure scopes and authorize trusted client applications, update your Microsoft Entra ID application as follows:
-Add an API URI to the identifierUris section of the app manifest. Use the following format for the URI: api://fully-qualified-domain-name.com/{AppID}.
-Define the scope for the API and who can consent to the scope.
-In the Scopes defined by this API section of the Microsoft Entra admin center, select + Add a scope.
-Enter the scope name. This field is required.
-Select the user who can give consent for this scope. The default option is Admins only.
-Enter the Admin consent display name. This field is required.
-Enter the description for admin consent. This field is required.
-Enter the User consent display name.
-Enter the description for user consent description.
-In the State field, select the Enabled option for state.
-Select Add scope.
-Create authorized client IDs for applications that you want to preauthorize. This allows the app user to access the app scopes (permissions) you configured without requiring additional consent. Because app users won't have the opportunity to decline consent, preauthorize only client applications that you trust .
-In the Authorized client application section of the Microsoft Entra admin center, select + Add a client application.
-Enter the Microsoft 365 client ID for the applications that you want to authorize.
+
+1. Add an API URI to the identifierUris section of the app manifest. Use the following format for the URI: `api://fully-qualified-domain-name.com/{AppID}`.
+    [image]
+2. Define the scope for the API and who can consent to the scope.
+    In the**Scopes defined by this API** section of the Microsoft Entra admin center, select **+ Add a scope**.
+    [image]
+   1. Enter the scope name. This field is required.
+   2. Select the user who can give consent for this scope. The default option is **Admins only**.
+   3. Enter the **Admin consent display name**. This field is required.
+   4. Enter the description for admin consent. This field is required.
+   5. Enter the **User consent display name**.
+   6. Enter the description for user consent description.
+   7. In the **State** field, select the **Enabled** option for state.
+   8. Select **Add scope**.
+3. Create authorized client IDs for applications that you want to preauthorize. This allows the app user to access the app scopes (permissions) you configured without requiring additional consent. Because app users won't have the opportunity to decline consent, preauthorize only client applications that you trust.
+   1. In the **Authorized client application** section of the Microsoft Entra admin center, select **+ Add a client application**.
+   2. Enter the Microsoft 365 client ID for the applications that you want to authorize.
 
 #### Implement token retrieval and validation logic
 
 Add code to handle the access token, send the token to your app's server code in the Authorization header, and validate the access token when it's received.
-To get app access for the current app user, your client-side code must make a call to Teams to get an access token. Update your client-side code to use getAuthToken() to initiate the validation process, as shown in the following example.
 
-1. // 1. Get auth token
-2. // Ask Teams to get us a token from AAD
-3. function getClientSideToken() {
-4.     return new Promise((resolve, reject) => {
-5.         display("1. Get auth token from Microsoft Teams");
-6.
-7.         microsoftTeams.authentication.getAuthToken().then((result) => {
-8.             display(result);
-9.             resolve(result);
-10.         }).catch((error) => {
-11.             reject("Error getting token: " + error);
-12.         });
-13.     });
-14. }
-15.
-When Teams receives the access token, it cache the token to be reused as needed. The token is used when getAuthToken() is called without the need to make another call to Microsoft Entra ID, until the token expires.
-User consent to the dialog box
-When you call getAuthToken() and the user's consent is required for user-level permissions, the signed-in user sees a Microsoft Entra dialog box, and the user must give initial consent one time.
+To get app access for the current app user, your client-side code must make a call to Teams to get an access token. Update your client-side code to use `getAuthToken() to initiate the validation process, as shown in the following example.
+
+```javascript
+// Get auth token
+// Ask Teams to get us a token from AAD
+function getClientSideToken() {
+     return new Promise((resolve, reject) => {
+         display("1. Get auth token from Microsoft Teams");
+
+         microsoftTeams.authentication.getAuthToken().then((result) => {
+             display(result);
+             resolve(result);
+         }).catch((error) => {
+             reject("Error getting token: " + error);
+         });
+     });
+ }
+```
+
+When Teams receives the access token, it caches the token to be reused as needed. The token is used when `getAuthToken()` is called without the need to make another call to Microsoft Entra ID, until the token expires.
+
+##### User consent to the dialog box
+
+When you call `getAuthToken()` and the user's consent is required for user-level permissions, the signed-in user sees a Microsoft Entra dialog box, and the user must give initial consent one time.
+
 After the user consents, they can access the dialog box webpage. The following points apply to user consent:
-If the admin granted consent on behalf of the tenant, app users don't need to be prompted for consent. This means that the app users don't see the consent dialog box and can access the app seamlessly.
-If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
-Because users must provide consent for API access, and consent is required only once per user, no additional consent is needed for dialog boxes.
+
+- If the admin granted consent on behalf of the tenant, app users don't need to be prompted for consent. This means that the app users don't see the consent dialog box and can access the app seamlessly.
+- If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
+- Because users must provide consent for API access, and consent is required only once per user, no additional consent is needed for dialog boxes.
 
 #### Update the app manifest
 
-Configure the webApplicationInfo property in the app manifest file to enable SSO. This helps agent users access your agent seamlessly.
+Configure the **webApplicationInfo** property in the app manifest file to enable SSO. This helps agent users access your agent seamlessly.
+
+| Element | Description |
+| ------- | ----------- |
+| id      | Enter the app ID (GUID) that you created in Microsoft Entra ID. |
+| resource | Enter your app's subdomain URI and the application ID URI that you created in Microsoft Entra ID when creating scope. |
 
 ```json
 "webApplicationInfo": {
@@ -146,7 +168,7 @@ Configure the webApplicationInfo property in the app manifest file to enable SSO
  }
 ```
 
-Specify the domain of the URL that you want to render in the dialog box in the validDomains section of the app manifest, as shown in the following example.
+Specify the domain of the URL that you want to render in the dialog box in the `validDomains` section of the app manifest, as shown in the following example.
 
 ```json
 "validDomains": [
@@ -157,76 +179,82 @@ Specify the domain of the URL that you want to render in the dialog box in the v
 ```
 
 ### OAuth 2.0 setup (preview)
-For agents that use OAuth 2.0 with Microsoft Entra ID or other identity providers, use the authentication.authenticate() function in the TeamsJS library to launch the authentication flow. 
 
+For agents that use OAuth 2.0 with Microsoft Entra ID or other identity providers, use the `authentication.authenticate()` function in the TeamsJS library to launch the authentication flow.
 
 To enable OAuth 2.0 authorization for API plugin dialog boxes:
-Configure your app to use Microsoft Entra ID as an identity provider.
-Make code changes to nitiate authentication flow and handle token.
+
+- Configure your app to use Microsoft Entra ID as an identity provider.
+- Make code changes to start the authentication flow and handle the token.
 
 #### Configure your app to use Microsoft Entra ID as an identity provider
 
 To configure your app to use Microsoft Entra ID:
 
 - In the Azure portal, go to your app registration.
-- Under Authentication, in the Redirect URI section, add the redirect URL to your authentication endpoint. Use the following format for the redirect URL: `https://<hostname>/auth/simple-start`.
+- Under **Authentication**, in the **Redirect URI** section, add the redirect URL to your authentication endpoint. Use the following format for the redirect URL: `https://<hostname>/auth/simple-start`.
 
+[image]
 
 #### Initiate the authentication flow and handle the token
 
-Most identity providers don'’'t allow content to be placed in an iframe. This means that you need a page to host the identity provider that Copilot displays inside a pop-up window. Use the authentication.authenticate() function of the TeamsJS library to launch this page when the Adaptive Card button is selected.
-Notes:
-The URL you pass to authenticate() is the start page of the authentication flow. It should match what you registered in the Azure portal.
-The authentication flow must start on a page in your domain. Be sure to list this domain in the validDomains property in the manifest.
+Most identity providers don't allow content to be placed in an iframe. This means that you need a page to host the identity provider that Copilot displays inside a pop-up window. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the Adaptive Card button is selected.
 
-1. import { authentication } from "@microsoft/teams-js";
-2.
-3. authentication.authenticate({
-4.     url: window.location.origin + "/auth/simple-start",
-5.     width: 600,
-6.     height: 535
-7. })
-8. .then((result) => {
-9.     console.log("Login succeeded: " + result);
-10.     let data = localStorage.getItem(result);
-11.     localStorage.removeItem(result);
-12.     let tokenResult = JSON.parse(data);
-13.     showIdTokenAndClaims(tokenResult.idToken);
-14.     getUserProfile(tokenResult.accessToken);
-15. })
-16. .catch((reason) => {
-17.     console.log("Login failed: " + reason);
-18.     handleAuthError(reason);
-19. });
+> [!NOTE]
+> The URL you pass to `authenticate()` is the start page of the authentication flow. It should match what you registered in the Azure portal.
+The authentication flow must start on a page in your domain. Be sure to list this domain in the **validDomains** property in the manifest.
+
+```javascript
+import { authentication } from "@microsoft/teams-js";
+
+authentication.authenticate({
+     url: window.location.origin + "/auth/simple-start",
+     width: 600,
+     height: 535
+ })
+.then((result) => {
+     console.log("Login succeeded: " + result);
+     let data = localStorage.getItem(result);
+     localStorage.removeItem(result);
+     let tokenResult = JSON.parse(data);
+     showIdTokenAndClaims(tokenResult.idToken);
+     getUserProfile(tokenResult.accessToken);
+ })
+.catch((reason) => {
+     console.log("Login failed: " + reason);
+     handleAuthError(reason);
+ });
+```
 
 The popup page redirects to the identity provider so the user can signin. The agent calls the Microsoft Entra authorization service and passes in user and app information so the user can authenticate to Entra ID. Entra ID then calls the callback page that you provided.
 
-1. app.getContext().then((context) => {
-2.     // Generate random state string and store it, so we can verify it in the callback
-3.     let state = _guid(); // _guid() is a helper function in the sample
-4.     localStorage.setItem("simple.state", state);
-5.     localStorage.removeItem("simple.error");
-6.
-7.     // Go to the Azure AD authorization endpoint
-8.     let queryParams = {
-9.         client_id: "{{appId}}",
-10.         response_type: "id_token token",
-11.         response_mode: "fragment",
-12.         scope: "https://graph.microsoft.com/User.Read openid",
-13.         redirect_uri: window.location.origin + "/auth/simple-end",
-14.         nonce: _guid(),
-15.         state: state,
-16.         // The context object is populated by Teams; the loginHint attribute
-17.         // is used as hinting information
-18.         login_hint: context.user.loginHint,
-19.     };
-20.
-21.     let authorizeEndpoint = `https://login.microsoftonline.com/${context.user.tenant.id}/oauth2/v2.0/authorize?${toQueryString(queryParams)}`;
-22.     window.location.assign(authorizeEndpoint);
-23. });
+```javascript
+app.getContext().then((context) => {
+// Generate random state string and store it, so we can verify it in the callback
+     let state = _guid(); // _guid() is a helper function in the sample
+     localStorage.setItem("simple.state", state);
+     localStorage.removeItem("simple.error");
 
+     // Go to the Azure AD authorization endpoint
+     let queryParams = {
+         client_id: "{{appId}}",
+         response_type: "id_token token",
+         response_mode: "fragment",
+         scope: "https://graph.microsoft.com/User.Read openid",
+         redirect_uri: window.location.origin + "/auth/simple-end",
+         nonce: _guid(),
+         state: state,
+         // The context object is populated by Teams; the loginHint attribute
+         // is used as hinting information
+         login_hint: context.user.loginHint,
+     };
 
-Determine success or failure of the authentication request based on the information returned by Entra ID and call either authentication.notifySuccess() or authentication.notifyFailure(). If the sign in was successful, access to service resources.
+     let authorizeEndpoint = `https://login.microsoftonline.com/${context.user.tenant.id}/oauth2/v2.0/authorize?${toQueryString(queryParams)}`;
+     window.location.assign(authorizeEndpoint);
+ });
+```
+
+Determine success or failure of the authentication request based on the information returned by Entra ID and call either `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the sign in was successful, the user has access to the service resources.
 
 ## Related content
 
