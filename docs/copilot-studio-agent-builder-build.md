@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/25/2025
+ms.date: 06/03/2025
 ms.topic: conceptual
 ---
 
@@ -65,7 +65,13 @@ The test pane initially appears with suggested starter prompts, which when click
 
 ## Add knowledge sources
 
-The agent builder allows you to configure specific knowledge sources for the agent to reference. This feature helps the agent provide more relevant answers based on specific files, folders, and sites from SharePoint and [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) (formerly Microsoft Graph connectors).
+The agent builder allows you to configure specific knowledge sources for the agent to reference. To build context-aware agents, you can reference SharePoint items or any public websites. If your users have a Microsoft 365 Copilot add-on license, you can also ground your agents in personal work information such as Teams chat messages and Outlook emails, or use prebuilt [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) (formerly Microsoft Graph connectors) that are enabled in your tenant.
+
+To add knowledge sources, on the **Configure** tab in the agent builder:
+
+- Search for an item in the search bar.
+- Paste or type a URL in the search bar.
+- Click the search bar and use the picker to select items.
 
 ### Web content
 
@@ -128,13 +134,32 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-knowledge-preparing.png" alt-text="Knowledge sources preparing state":::
 
+### Teams chat messages
+
+You can ground your agent in Teams channel, group, and meeting chat messages. To add Teams chat messages, on the **Configure** tab, in the **Knowledge** section, click the search bar. On the **Chats** tab, you can include specific chats that you want to add as knowledge.
+
+> [!IMPORTANT]
+> You can add up to five chat sources.
+
+If you don't want to scope the agent's knowledge to specific chats, under **Teams chats**, choose **My Teams chats from group chat, channels, and meetings** to use all chat messages you have the access to as knowledge.
+
+:::image type="content" source="assets/images/capabilities-teamsChat-emails.png" border="false" alt-text="Screenshot of the knowledge picker with My Teams chats from groups, channels, and meetings highlighted":::
+
+### Outlook email
+
+You can ground your agent in Outlook email. To add email as a knowledge source, on the **Configure** tab, in the **Knowledge** section, click the search bar, and choose **My emails**.
+
+> [!NOTE]
+> - You can't scope email knowledge. When you add email, the agent uses all email in your mailbox as knowledge.
+> - Users that you share the agent with don't have access to your email as knowledge.
+
 ### Copilot connectors
 
 Copilot connectors allow agents to include knowledge from external repositories or systems such as customer accounts, incident tickets, and knowledge articles. Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector). At first, the connectors may be collapsed in the **From your organization** section of the **Knowledge** sources.
 
 If at least one connector is enabled, you can add it to your agent. Your agent is able to answer questions related to that connector. The information retrieved from the connector is indexed and refreshed according to the way in which the connector was configured. The agent can cite relevant information from the indexed data and link the end user to the data source.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-graph-connectors.png" alt-text="Graph connectors in hte Knowledge sources":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-copilot-connectors.png" alt-text="Copilot connectors in the Knowledge sources":::
 
 ## Add capabilities
 
