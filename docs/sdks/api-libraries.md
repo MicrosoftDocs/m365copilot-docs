@@ -30,7 +30,7 @@ The Copilot APIs client libraries can be in preview status when initially releas
 
 ## Client libraries support
 
-The Copilot API libraries are open-source projects on GitHub. If you encounter an issue, file an issue with the details on the [Issues](https://github.com/microsoft/Agents-M365Copilot/issues) tab. Contributors will review and release a fix as needed.
+The Copilot API libraries are open-source projects on GitHub. If you encounter a bug, file an issue with the details on the [Issues](https://github.com/microsoft/Agents-M365Copilot/issues) tab. Contributors review and release fixes as needed.
 
 ## Install the libraries
 
@@ -77,7 +77,7 @@ npm install @microsoft/agents-m365copilot-beta –save
 
 The following code example shows how to create an instance of a Microsoft 365 Copilot APIs client with an authentication provider in the supported languages. The authentication provider handles acquiring access tokens for the application. Many different authentication providers are available for each language and platform. The different authentication providers support different client scenarios. For details about which provider and options are appropriate for your scenario, see [Choose an Authentication Provider](/graph/sdks/choose-authentication-providers). 
 
-The example also shows how to make a call to the Retrieval API. To call this API, you first need to create a request object and then run the POST method on the request.
+The example also shows how to make a call to the Retrieval API. To call this API, you first need to create a request object, and then run the POST method on the request.
 
 The client ID is the app registration ID that is generated when you [register your app in the Azure portal](/graph/auth-register-app-v2).
 
