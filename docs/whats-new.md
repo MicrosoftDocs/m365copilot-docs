@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Microsoft 365 Copilot API client libraries
 
-Use the Copilot API libraries to work with Microsoft 365 Copilot APIs. For more information, see [Microsoft 365 Copilot APIs (preview)](/microsoft-365-copilot/extensibility/sdks/api-libraries.md).
+Use the Copilot API libraries to work with Microsoft 365 Copilot APIs. For more information, see [Microsoft 365 Copilot APIs (preview)](/microsoft-365-copilot/extensibility/sdks/api-libraries).
 
 ### Outlook email and Teams chats knowledge in agent builder
 
