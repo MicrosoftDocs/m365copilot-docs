@@ -4,7 +4,7 @@ description: "Use the Microsoft 365 Copilot Retrieval API to ground your AI solu
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
-ms.date: 03/11/2025
+ms.date: 06/09/2025
 ms.topic: overview
 ---
 
@@ -22,7 +22,7 @@ RAG is essential when you're building generative AI solutions and want to use Mi
 
 The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint and Copilot connectors while optimizing for context recall. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance.
 
-Custom knowledge applications can use the Retrieval API to ground responses on organization-specific information stored in SharePoint and Copilot connectors. Rather than building and maintaining separate vector indexes, these applications can instead retrieve relevant context from Microsoft 365 data sources to ground Large Language Model (LLM) responses in the same manner as Microsoft 365 Copilot.
+Custom knowledge applications can use the Retrieval API to ground responses on organization-specific information stored in SharePoint and Copilot connectors. Rather than building and maintaining separate vector indexes, these applications can instead retrieve relevant context from Microsoft 365 data sources to ground large language model (LLM) responses the same way that Microsoft 365 Copilot does.
 
 Finance and legal applications that require high precision in information retrieval can use the API's filtering capabilities to scope searches to specific document libraries or content types, ensuring responses only include approved sources while respecting information barriers and access controls.
 

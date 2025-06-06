@@ -4,7 +4,7 @@ description: Use the Retrieval API to ground data from SharePoint and Copilot Co
 author: lramosvea
 ms.author: lramosvea
 ms.topic: conceptual
-ms.date: 03/11/2025
+ms.date: 06/09/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---
