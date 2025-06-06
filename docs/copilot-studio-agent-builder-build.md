@@ -68,14 +68,10 @@ The test pane initially appears with suggested starter prompts, which when click
 The agent builder allows you to configure specific knowledge sources for the agent to reference. To build contex-aware agents, you can reference SharePoint items or any public websites. If your users have a Microsoft 365 Copilot add-on license, you can also ground your agents in personal work information such as Teams chat messages and Outlook emails, or use prebuilt [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) (formerly Microsoft Graph connectors) that are enabled in your tenant.
 
 To add knowledge sources, on the **Configure** tab in the agent builder:
-- Search for an item in the search bar.
-  
-    :::image type="content" source="assets/images/knowledge-picker-agent-builder.png" border="false" alt-text="Screenshot of the knowledge picker with the search box highlighted":::
 
+- Search for an item in the search bar.
 - Paste or type a URL in the search bar.
 - Use the picker to select items (currently only supports SharePoint content).
-
-    :::image type="content" source="assets/images/knowledge-picker-agent-builder2.png" border="false" alt-text="Screenshot of the knowledge picker with the cloud button highlighted":::
 
 ### Web content
 
