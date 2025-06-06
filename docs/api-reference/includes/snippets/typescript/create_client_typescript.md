@@ -11,10 +11,12 @@ import { FetchRequestAdapter } from '@microsoft/kiota-http-fetchlibrary';
 async function main() {
     // Initialize authentication with Device Code flow
     const credential = new DeviceCodeCredential({
-        tenantId: process.env.TENANT_ID,
-        clientId: process.env.CLIENT_ID,
+        tenantId: "YOUR_TENANT_ID",
+        clientId: "YOUR_CLIENT_ID",
         userPromptCallback: (info) => {
-          console.log(info.message);
+            console.log(`\nTo sign in, use a web browser to open the page ${info.verificationUri}`);
+            console.log(`Enter the code ${info.userCode} to authenticate.`);
+            console.log(`The code will expire at ${info.expiresOn}`);          
         }
     });
     // Create request adapter with auth
@@ -26,15 +28,32 @@ async function main() {
     // Create client instance
     const client = createBaseAgentsM365CopilotBetaServiceClient(adapter);
 
+    try {
+        console.log(`Using API base URL: ${adapter.baseUrl}\n`);
 
-    // Create the retrieval request body
-    const retrievalBody = {
-        dataSource: RetrievalDataSourceObject.SharePoint,
-        queryString: "What is the latest in my organization?"
-    };
+        // Create the retrieval request body
+        const retrievalBody = {
+            queryString: "What is the latest in my organization?"
+        };
 
-    // Make the API call
-    const retrieval = await client.copilot.retrieval.post(retrievalBody);
-}    
+        // Make the API call
+        console.log("Making retrieval API request...");
+        const retrieval = await client.copilot.retrieval.post(retrievalBody);
+
+        // Process the results
+        if (retrieval?.retrievalHits) {
+            console.log(`\nReceived ${retrieval.retrievalHits.length} hits`);
+            for (const hit of retrieval.retrievalHits) {
+                console.log(`\nWeb URL: ${hit.webUrl}`);
+                for (const extract of hit.extracts || []) {
+                    console.log(`Text:\n${extract.text}\n`);
+                }
+            }
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        throw error;
+    }
+}   
 
 ```
