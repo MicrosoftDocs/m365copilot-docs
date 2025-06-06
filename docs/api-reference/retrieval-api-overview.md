@@ -22,7 +22,7 @@ RAG is essential when you're building generative AI solutions and want to use Mi
 
 The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint and Copilot connectors while optimizing for context recall. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance.
 
-Custom knowledge applications can use the Retrieval API to ground responses on organization-specific information stored in SharePoint. Rather than building and maintaining separate vector indexes, these applications can leverage Microsoft 365's existing semantic search capabilities to find relevant content for Large Language Model (LLM) prompts.
+Custom knowledge applications can use the Retrieval API to ground responses on organization-specific information stored in SharePoint and Copilot connectors. Rather than building and maintaining separate vector indexes, these applications can instead retrieve relevant context from Microsoft 365 data sources to ground Large Language Model (LLM) responses in the same manner as Microsoft 365 Copilot.
 
 Finance and legal applications that require high precision in information retrieval can use the API's filtering capabilities to scope searches to specific document libraries or content types, ensuring responses only include approved sources while respecting information barriers and access controls.
 
@@ -36,7 +36,7 @@ The Retrieval API uses the built-in security and compliance features in Microsof
 
 ### Solve for relevancy and freshness
 
-Because the Retrieval API retrieves data directly from the Microsoft 365 hybrid index, its results are kept fresh and relevant, and it eliminates the need to maintain separate, costly data pipelines.
+Because the Retrieval API retrieves relevant context without data duplication, its results are kept fresh and relevant, and it eliminates the need to maintain separate, costly data pipelines.
 
 ### Lower cost of ownership and development effort
 
@@ -59,7 +59,7 @@ The Retrieval API currently allows you to retrieve data from the following data 
 - SharePoint
 - Copilot connectors
 
-The API supports natural language queries and uses the Microsoft 365 Copilot stack to retrieve relevant grounding context from the Microsoft 365 hybrid index. You can use the API to scope your retrieval using Keyword Query Language (KQL) to retrieve from the most important content for your use case. With KQL, you can filter by URLs, date ranges, file types, and more.
+The API supports natural language queries and uses the Microsoft 365 Copilot stack to retrieve relevant grounding context within the Microsoft 365 trust boundary. You can use the API to scope your retrieval using Keyword Query Language (KQL) to retrieve from the most important content for your use case. With KQL, you can filter by URLs, date ranges, file types, and more.
 
 ## Licensing
 
