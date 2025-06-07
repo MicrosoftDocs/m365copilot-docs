@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 06/05/2025
 ---
 
-# Add a modal dialog box to Adaptive Card responses (preview)
+# Add a dialog box to Adaptive Cards (preview)
 
 You can enhance Adaptive Card responses in declarative agents for Microsoft 365 Copilot by adding modal dialog boxes. These popup dialog boxes can host custom HTML/JavaScript or display iframe-based widgets - such as web pages, YouTube videos, or Microsoft Stream content - within a focused, interactive experience.
 
@@ -32,7 +32,7 @@ To use the modal dialog box action:
 - Add the [Adaptive Card template](/microsoft-365-copilot/extensibility/api-plugin-adaptive-cards) to your [API plugin manifest]( /microsoft-365-copilot/extensibility/api-plugin-manifest-2.3).
 - Include the `Action.OpenUrlDialog` schema in the Adaptive Card definition.
 
-The following example shows the schema for Action.OpenUrlDialog.
+The following example shows the schema for `Action.OpenUrlDialog`.
 
 ```json
 "actions": [
@@ -63,7 +63,7 @@ You can specify:
 
 The following image shows an example of a dialog box invoked from an Adaptive Card button returned by an agent.
 
-[image]
+:::image type="content" source="assets/images/dialog-box-example.png" alt-text="An image of a dialog box for users to input customer information":::
 
 ## Configure authentication
 
@@ -75,12 +75,13 @@ To allow secure access to APIs from within the dialog box, configure authenticat
 ### Microsoft Entra ID setup
 
 To use Entra ID authentication for API authentication, use one of the following approaches:
-Configure Entra ID, OAuth 2.0, or API Key-based authentication using Microsoft as the identity provider .
-Use another identity provider and register your app in Entra ID.
+
+- Configure Entra ID, OAuth 2.0, or API Key-based authentication using Microsoft as the identity provider.
+- Use another identity provider and register your app in Entra ID.
 
 ### Configure SSO-based authentication
 
-Configure single sign-on (SSO) to allow users to access APIs without having to sign in multiple times. 
+Configure single sign-on (SSO) to allow users to access APIs without having to sign in multiple times.
 
 To enable SSO:
 
@@ -91,20 +92,21 @@ To enable SSO:
 2. Implement token retrieval and validation logic.
      - Use the `getAuthToken()` method from the TeamsJS library to retrieve an access token.
      - Send the token to your server in the Authorization header.
-      - Validate the token server-side.
+     - Validate the token server-side.
 3. Update the app manifest.
      - Add the **webApplicationInfo** property to the app manifest to enable SSO.
-     - Add the domain of the dialog box content to the `validDomains` section of the app manifest.
+     - Add the domain of the dialog box content to the `**validDomains** property of the app manifest.
 
-#### Update Microsoft Entra ID application
+#### Update the Microsoft Entra ID application
 
 To configure scopes and authorize trusted client applications, update your Microsoft Entra ID application as follows:
 
 1. Add an API URI to the identifierUris section of the app manifest. Use the following format for the URI: `api://fully-qualified-domain-name.com/{AppID}`.
-    [image]
 2. Define the scope for the API and who can consent to the scope.
     In the**Scopes defined by this API** section of the Microsoft Entra admin center, select **+ Add a scope**.
-    [image]
+
+    :::image type="content" source="assets/images/edit-scope.png" alt-text="A screenshot of the fields to add a scope":::
+
    1. Enter the scope name. This field is required.
    2. Select the user who can give consent for this scope. The default option is **Admins only**.
    3. Enter the **Admin consent display name**. This field is required.
@@ -115,13 +117,16 @@ To configure scopes and authorize trusted client applications, update your Micro
    8. Select **Add scope**.
 3. Create authorized client IDs for applications that you want to preauthorize. This allows the app user to access the app scopes (permissions) you configured without requiring additional consent. Because app users won't have the opportunity to decline consent, preauthorize only client applications that you trust.
    1. In the **Authorized client application** section of the Microsoft Entra admin center, select **+ Add a client application**.
+
+        :::image type="content" source="assets/images/add-client-app.png" alt-text="Screenshot with the Add a client application button highlighted":::
+
    2. Enter the Microsoft 365 client ID for the applications that you want to authorize.
 
 #### Implement token retrieval and validation logic
 
 Add code to handle the access token, send the token to your app's server code in the Authorization header, and validate the access token when it's received.
 
-To get app access for the current app user, your client-side code must make a call to Teams to get an access token. Update your client-side code to use `getAuthToken() to initiate the validation process, as shown in the following example.
+To get app access for the current app user, your client-side code must make a call to Teams to get an access token. Update your client-side code to use `getAuthToken()` to initiate the validation process, as shown in the following example.
 
 ```javascript
 // Get auth token
@@ -154,12 +159,12 @@ After the user consents, they can access the dialog box webpage. The following p
 
 #### Update the app manifest
 
-Configure the **webApplicationInfo** property in the app manifest file to enable SSO. This helps agent users access your agent seamlessly.
+Configure the **webApplicationInfo** property in the app manifest file to enable SSO. This helps agent users access your agent seamlessly. The following table lists the properties of the **webApplicationInfo** property.
 
-| Element | Description |
+| Property | Description |
 | ------- | ----------- |
 | id      | Enter the app ID (GUID) that you created in Microsoft Entra ID. |
-| resource | Enter your app's subdomain URI and the application ID URI that you created in Microsoft Entra ID when creating scope. |
+| resource | Enter your app's subdomain URI and the application ID URI that you created in Microsoft Entra ID when you created the scope. |
 
 ```json
 "webApplicationInfo": {
@@ -168,7 +173,7 @@ Configure the **webApplicationInfo** property in the app manifest file to enable
  }
 ```
 
-Specify the domain of the URL that you want to render in the dialog box in the `validDomains` section of the app manifest, as shown in the following example.
+Specify the domain of the URL that you want to render in the dialog box in the **validDomains** property of the app manifest, as shown in the following example.
 
 ```json
 "validDomains": [
@@ -193,8 +198,6 @@ To configure your app to use Microsoft Entra ID:
 
 - In the Azure portal, go to your app registration.
 - Under **Authentication**, in the **Redirect URI** section, add the redirect URL to your authentication endpoint. Use the following format for the redirect URL: `https://<hostname>/auth/simple-start`.
-
-[image]
 
 #### Initiate the authentication flow and handle the token
 
@@ -226,7 +229,7 @@ authentication.authenticate({
  });
 ```
 
-The popup page redirects to the identity provider so the user can signin. The agent calls the Microsoft Entra authorization service and passes in user and app information so the user can authenticate to Entra ID. Entra ID then calls the callback page that you provided.
+The popup page redirects to the identity provider so the user can sign in. The agent calls the Microsoft Entra authorization service and passes in user and app information so the user can authenticate to Entra ID. Entra ID then calls the callback page that you provided.
 
 ```javascript
 app.getContext().then((context) => {
