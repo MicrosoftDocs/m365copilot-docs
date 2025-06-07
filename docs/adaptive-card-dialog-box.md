@@ -101,7 +101,7 @@ To enable SSO:
 
 To configure scopes and authorize trusted client applications, update your Microsoft Entra ID application as follows:
 
-1. Add an API URI to the identifierUris section of the app manifest. Use the following format for the URI: `api://fully-qualified-domain-name.com/{AppID}`.
+1. Add an API URI to the **identifierUris** property of the app manifest. Use the following format for the URI: `api://fully-qualified-domain-name.com/{AppID}`.
 2. Define the scope for the API and who can consent to the scope.
     In the**Scopes defined by this API** section of the Microsoft Entra admin center, select **+ Add a scope**.
 
