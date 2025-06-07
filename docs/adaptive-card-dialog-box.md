@@ -1,5 +1,5 @@
 ---
-title: Add a Dialog Box to Your Declarative Agent Adaptive Card Response (preview)
+title: Add a Dialog Box to Your Declarative Agent Adaptive Card Template (preview)
 description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Career Coach template.
 author: lauragra
 ms.author: isrumnon
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 06/05/2025
 ---
 
-# Add a dialog box to Adaptive Cards (preview)
+# Add a dialog box to Adaptive Card templates (preview)
 
 You can enhance Adaptive Card responses in declarative agents for Microsoft 365 Copilot by adding modal dialog boxes. These popup dialog boxes can host custom HTML/JavaScript or display iframe-based widgets - such as web pages, YouTube videos, or Microsoft Stream content - within a focused, interactive experience.
 
