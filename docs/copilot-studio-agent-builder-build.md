@@ -132,8 +132,6 @@ When new files are uploaded to SharePoint, they can take up to several minutes t
 
 You can check the file readiness by looking in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When the underlying file uploaded to SharePoint is renamed or deleted, the agent picks up the changes. You can also select the reload button on top of the **Knowledge** section to manually reload the state.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-knowledge-preparing.png" alt-text="Knowledge sources preparing state":::
-
 ### Teams chat messages
 
 You can ground your agent in Teams channel, group, and meeting chat messages. To add Teams chat messages, on the **Configure** tab, in the **Knowledge** section, click the search bar. On the **Chats** tab, you can include specific chats that you want to add as knowledge.
