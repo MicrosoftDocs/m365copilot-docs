@@ -138,7 +138,6 @@ Update the imports so it matches the following:
 using System.CommandLine;
 using System.Text.Json;
 using Azure.Identity;
-using ContosoHrConnector.Graph;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Graph;
 using Microsoft.Graph.Beta;
