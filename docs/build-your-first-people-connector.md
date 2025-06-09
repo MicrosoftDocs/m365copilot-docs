@@ -2,7 +2,7 @@
 title: Build People Connector for Microsoft 365 Copilot (preview)
 description: Learn how to build your first Microsoft 365 Copilot connector for people data using the Microsoft Graph SDK (preview).
 author: wictorwilen
-ms.author: wictor.wilen
+ms.author: wictorwilen
 ms.localizationpriority: medium
 ms.date: 06/09/2025
 ms.topic: how-to
