@@ -413,15 +413,29 @@ To run this sync type the following command into your terminal window: `dotnet r
 - All ingested data is considered organizational public data.
 - The ACL must be set exactly as shown in the code example above.
 - The schema requires that `connectionId`, `externalId`, `oid` and `accounts`, as described above, must be present.
-- Only the following profile entities are supported for enrichment, and must follow the JSON schema for the entities:
-  - Skills
-  - TODO
+- Only the following profile entities are supported for enrichment, and must follow the JSON schema for the entities.
+  - [`accounts`](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta). Max 1, see above for minimum schema requirements.
+  - [`positions`](https://learn.microsoft.com/en-us/graph/api/resources/workposition?view=graph-rest-beta). Max 1 position.
+  - [`names`](https://learn.microsoft.com/en-us/graph/api/resources/personname?view=graph-rest-beta). Max 1 name.
+  - [`notes`](https://learn.microsoft.com/en-us/graph/api/resources/personannotation?view=graph-rest-beta). Max 1 note.
+  - [`emails`](https://learn.microsoft.com/en-us/graph/api/resources/itememail?view=graph-rest-beta). Max 3 e-mails.
+  - [`addresses`](https://learn.microsoft.com/en-us/graph/api/resources/itemaddress?view=graph-rest-beta). Max 3, one of each of Home, Work and Other.
+  - [`anniversaries`](https://learn.microsoft.com/en-us/graph/api/resources/personanniversary?view=graph-rest-beta). One of each wedding, birthday and work.
+  - [`phones`](https://learn.microsoft.com/en-us/graph/api/resources/itemphone?view=graph-rest-beta)
+  - [`webAccounts`](https://learn.microsoft.com/en-us/graph/api/resources/webaccount?view=graph-rest-beta)
+  - [`webSites`](https://learn.microsoft.com/en-us/graph/api/resources/personwebsite?view=graph-rest-beta). Max 1 web site.
+  - [`skills`](https://learn.microsoft.com/en-us/graph/api/resources/skillproficiency?view=graph-rest-beta)
+  - [`projects`](https://learn.microsoft.com/en-us/graph/api/resources/projectparticipation?view=graph-rest-beta)
+  - [`awards`](https://learn.microsoft.com/en-us/graph/api/resources/personaward?view=graph-rest-beta)
+  - [`certifications`](https://learn.microsoft.com/en-us/graph/api/resources/personcertification?view=graph-rest-beta)
 - Profile entities must be valid string encoded JSON object. Invalid values are ignored.
+- Profile entities must always be an array of entities.
 - Any other property are considered a custom property.
 - Custom properties might show up in profile cards as notes.
-- People data without matching UPN or OID will be discarded. 
+- People data without matching UPN or OID will be discarded.
 - It might take up to 48 hours after ingesting data about a person until available in people experiences or Copilot.
-- **Add something about the MAC experience weirdness**
+- Connections with people data does not support staged connections.
+- Indexed items in connections with people data will only appear in people search.
 
 ## Related content
 
