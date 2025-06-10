@@ -10,7 +10,7 @@ ms.topic: how-to
 
 # Build your first custom Copilot connector for people data using the Microsoft Graph SDK (preview)
 
-[Microsoft 365 Copilot connectors for people data](overview-copilot-connector.md) (formerly Microsoft Graph connectors) enable you to ingest people data and knowledge from your source systems (for example HR, talent management or other people systems) into Microsoft Graph to make it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When your data is ingested, Copilot can reason over the data and use it to respond to user prompts.
+[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors) (formerly Microsoft Graph connectors) enable you to ingest people data and knowledge from your source systems (for example HR, talent management or other people systems) into Microsoft Graph to make it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When your data is ingested, Copilot can reason over the data and use it to respond to user prompts.
 
 > [!IMPORTANT]
 > Microsoft 365 Copilot connectors for people data built using the Microsoft Graph API are currently in public preview with limited functionality. See additional notes and limitations.
@@ -74,7 +74,7 @@ Use the following steps to create a new Entra ID app registration for your peopl
 1. Take a note of the **Secret** value and store it in a safe location.
 1. Click on **Overview** and note down the *Application (client) ID* and *Directory (tenant) ID*.
 
-> [!NOTE]
+> [!TIP]
 > For production scenarios it is highly recommended to create two different applications - one to create the connection, schema and do the profile source registration, and one second for the actual ingestion.
 
 ### Connection application
@@ -85,6 +85,9 @@ To create the console application for the people connector follow these instruct
 1. Navigate to the newly created folder with `cd ContosoHrConnector`.
 1. In the console type the following to add the required packages: `dotnet add package Azure.Identity`, `dotnet add package Microsoft.Extensions.Configuration.Binder`, `dotnet add package Microsoft.Extensions.Configuration.UserSecrets`, `dotnet add package Microsoft.Graph.Beta --prerelease` and `System.CommandLine --prerelease`.
 1. Open Visual Studio Code with `vscode .`.
+
+> [!NOTE]
+> For this sample application to work during the preview, pre-release (beta) packages for Microsoft.Graph and System.CommandLine are used.
 
 In *Program.cs* replace all code with the following, which will create a simple CLI experience with a *setup* command for setting up the connection, a *register* command for registering the connection as a profile source, and a *sync* command to ingest people data.
 
@@ -335,6 +338,9 @@ var people = new[]
 
 Replace the code in the `syncCommand.SetHandler` method with the following code. This code will iterate through the list of users and one by one add or update them in the connection. Note how the `accounts` and `positions` properties are serialized as JSON strings.
 
+> [!TIP]
+> It is recommended to use a serializer to ensure proper formatting of the profile entity properties, instead of manually creating the JSON strings, as any malformed property will be discarded.
+
 ``` csharp
 syncCommand.SetHandler(async () =>
 {
@@ -413,7 +419,8 @@ To run this sync type the following command into your terminal window: `dotnet r
 - All ingested data is considered organizational public data.
 - The ACL must be set exactly as shown in the code example above.
 - The schema requires that `connectionId`, `externalId`, `oid` and `accounts`, as described above, must be present.
-- Only the following profile entities are supported for enrichment, and must follow the JSON schema for the entities.
+- People data without matching `userPrincipalName` and `externalDirectoryObjectId`, in the `accounts` entity collection, will be discarded.
+- Only the following reserved profile entities are supported for enrichment, and must follow the JSON schema for the entities.
   - [`accounts`](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta). Max 1, see above for minimum schema requirements.
   - [`positions`](https://learn.microsoft.com/en-us/graph/api/resources/workposition?view=graph-rest-beta). Max 1 position.
   - [`names`](https://learn.microsoft.com/en-us/graph/api/resources/personname?view=graph-rest-beta). Max 1 name.
@@ -430,9 +437,8 @@ To run this sync type the following command into your terminal window: `dotnet r
   - [`certifications`](https://learn.microsoft.com/en-us/graph/api/resources/personcertification?view=graph-rest-beta)
 - Profile entities must be valid string encoded JSON object. Invalid values are ignored.
 - Profile entities must always be an array of entities.
-- Any other property are considered a custom property.
-- Custom properties might show up in profile cards as notes.
-- People data without matching UPN or OID will be discarded.
+- Any other properties, besides the reserved profile entities above in the connection schema, are considered a custom property.
+- Custom properties will show up in profile cards as notes during the preview, but will removed before or at general availability.
 - It might take up to 48 hours after ingesting data about a person until available in people experiences or Copilot.
 - Connections with people data does not support staged connections.
 - Indexed items in connections with people data will only appear in people search.
