@@ -36,8 +36,6 @@ Microsoft 365 Copilot connectors for people data uses are built in the same way 
 In order to be recognized as a connection with people data the schema must have the following properties:
 
 - `connectionId` of type `string` representing the Id of the connection (this requirement is expected to be removed before GA).
-- `externalId` of type `string` representing the Id of the person being enriched in the external system (this requirement is expected to be removed before GA).
-- `oid` of type `string` representing the object Id of the user being enriched (this requirement is expected to be removed before GA).
 - `accounts` of type `string` representing the account of the user being enriched. The value of this must be a string encoded JSON object of the profile [userAccountInformation](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta) entity with the `userPrincipalName` and `externalDirectoryObjectId` properties set to values representing the person to be enriched.
 
 > [!NOTE]
@@ -195,14 +193,6 @@ setupCommand.SetHandler(async () =>
                 new() {
                      Name = "connectionId",
                      Type = Microsoft.Graph.Beta.Models.ExternalConnectors.PropertyType.String
-                },
-                new() {
-                     Name = "externalId",
-                     Type = Microsoft.Graph.Beta.Models.ExternalConnectors.PropertyType.String,
-                },
-                new() {
-                     Name = "oid",
-                     Type = Microsoft.Graph.Beta.Models.ExternalConnectors.PropertyType.String,
                 },
                 new() {
                      Name = "accounts",
@@ -374,8 +364,6 @@ syncCommand.SetHandler(async () =>
                 AdditionalData = new Dictionary<string, object>
                 {
                     { "connectionId", CONNECTOR_ID },
-                    { "externalId", personIdentifier },
-                    { "oid", oid },
                     { "accounts", JsonSerializer.Serialize(new[]
                         {
                             new {
@@ -418,7 +406,7 @@ To run this sync type the following command into your terminal window: `dotnet r
 
 - All ingested data is considered organizational public data.
 - The ACL must be set exactly as shown in the code example above.
-- The schema requires that `connectionId`, `externalId`, `oid` and `accounts`, as described above, must be present.
+- The schema requires that `connectionId` and `accounts`, as described above, must be present.
 - People data without matching `userPrincipalName` and `externalDirectoryObjectId`, in the `accounts` entity collection, will be discarded.
 - Only the following reserved profile entities are supported for enrichment, and must follow the JSON schema for the entities.
   - [`accounts`](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta). Max 1, see above for minimum schema requirements.
