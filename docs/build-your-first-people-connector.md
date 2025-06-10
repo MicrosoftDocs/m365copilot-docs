@@ -10,7 +10,7 @@ ms.topic: how-to
 
 # Build your first custom Copilot connector for people data using the Microsoft Graph SDK (preview)
 
-[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors) (formerly Microsoft Graph connectors) enable you to ingest people data and knowledge from your source systems (for example HR, talent management or other people systems) into Microsoft Graph to make it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When your data is ingested, Copilot can reason over the data and use it to respond to user prompts.
+[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors) enable you to ingest people data and knowledge from your source systems (for example HR, talent management or other people systems) into Microsoft Graph to make it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When your data is ingested, Copilot can reason over the data and use it to respond to user prompts.
 
 > [!IMPORTANT]
 > Microsoft 365 Copilot connectors for people data built using the Microsoft Graph API are currently in public preview with limited functionality. See additional notes and limitations.
@@ -21,7 +21,7 @@ This article provides a walkthrough of the steps to build your first Copilot con
 
 The following prerequisites are required to complete the steps in this article:
 
-- A Microsoft 365 developer tenant (If you don't have a developer tenant, you might qualify for one through the [Microsoft 365 Developer Program]
+- A Microsoft 365 developer tenant (If you don't have a developer tenant, you might qualify for one through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program))
 - [.NET SDK](https://dotnet.microsoft.com/en-us/download)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - You must have the ability to admin consent in Microsoft Entra admin center. You must be or complete this step as a Global administrator. See [Grant tenant-wide admin consent to an application](/entra/identity/enterprise-apps/grant-admin-consent#prerequisites) for the required roles.
