@@ -400,6 +400,9 @@ syncCommand.SetHandler(async () =>
 });
 ```
 
+> [!NOTE]
+> During the public preview the externalObjectId is required in the accounts property. This is done via a lookup of the user in Microsoft Graph. The intent is to remove this extra property and Microsoft Graph call prior to general availability.
+
 To run this sync type the following command into your terminal window: `dotnet run sync`.
 
 ## Notes and limitations
@@ -434,7 +437,5 @@ To run this sync type the following command into your terminal window: `dotnet r
 ## Related content
 
 - [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
-- [Microsoft 365 Agents Toolkit overview](https://aka.ms/M365AgentsToolkit)
-- [Create declarative agents using Microsoft 365 Agents Toolkit](build-declarative-agents.yml)
 - [Copilot connector samples](samples.md#copilot-connector-samples)
 - [Community samples](https://github.com/pnp/graph-connectors-samples)
