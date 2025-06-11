@@ -38,7 +38,7 @@ In order to be recognized as a connection with people data the schema must have 
 - `connectionId` of type `string` representing the Id of the connection (this requirement is expected to be removed before GA).
 - `accounts` of type `string` representing the account of the user being enriched. The value of this must be a string encoded JSON object of the profile [userAccountInformation](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta) entity with the `userPrincipalName` and `externalDirectoryObjectId` properties set to values representing the person to be enriched.
 
-> [!NOTE]
+> [!IMPORTANT]
 > We expect changes during the public preview and ahead of general availability of this core schema configuration. Please regurarly check this page for updates.
 
 ### Registering the connection as a profile source
@@ -73,16 +73,16 @@ Use the following steps to create a new Entra ID app registration for your peopl
 1. Click on **Overview** and note down the *Application (client) ID* and *Directory (tenant) ID*.
 
 > [!TIP]
-> For production scenarios it is highly recommended to create two different applications - one to create the connection, schema and do the profile source registration, and one second for the actual ingestion.
+> For production scenarios it is highly recommended to create two different applications - one to create the connection, schema and do the profile source registration, and one second for the actual ingestion. It is also recommended to use Managed Identities for credentials, rather than storing client secrets.
 
 ### Connection application
 
 To create the console application for the people connector follow these instructions:
 
-1. On a machine where you have installed the .NET SDK open up a terminal window and type the following to create a new console application: `dotnet new console --name ContosoHrConnector`.
+1. On a machine where you have installed the [.NET SDK](https://dotnet.microsoft.com/en-us/download) open up a terminal window and type the following to create a new console application: `dotnet new console --name ContosoHrConnector`.
 1. Navigate to the newly created folder with `cd ContosoHrConnector`.
 1. In the console type the following to add the required packages: `dotnet add package Azure.Identity`, `dotnet add package Microsoft.Extensions.Configuration.Binder`, `dotnet add package Microsoft.Extensions.Configuration.UserSecrets`, `dotnet add package Microsoft.Graph.Beta --prerelease` and `System.CommandLine --prerelease`.
-1. Open Visual Studio Code with `vscode .`.
+1. Open Visual Studio Code with `code .`.
 
 > [!NOTE]
 > For this sample application to work during the preview, pre-release (beta) packages for Microsoft.Graph and System.CommandLine are used.
@@ -149,15 +149,13 @@ using Microsoft.Kiota.Authentication.Azure;
 Then update *Program.cs*  by adding the following code just before the `setupCommand.SetHandler` row:
 
 ``` csharp
-GraphServiceClient? graphClient;
 var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
 var credential = new ClientSecretCredential(
     config["settings:tenantId"], config["settings:clientId"], config["settings:clientSecret"]);
-var handlers = GraphClientFactory.CreateDefaultHandlers();
-var httpClient = GraphClientFactory.Create(handlers);
+var httpClient = GraphClientFactory.Create();
 var authProvider = new AzureIdentityAuthenticationProvider(
     credential, scopes: ["https://graph.microsoft.com/.default"]);
-graphClient = new GraphServiceClient(httpClient, authProvider, "https://graph.microsoft.com/beta");
+var graphClient = new GraphServiceClient(authProvider, "https://graph.microsoft.com/beta");
 ```
 
 ### Creating the connection and schema
@@ -170,7 +168,7 @@ setupCommand.SetHandler(async () =>
 {
     Console.WriteLine("Setting up the Contoso HR Connector...");
 
-    var newConnectionParameters = new Microsoft.Graph.Beta.Models.ExternalConnectors.ExternalConnection
+    var newConnectionParameters = new ExternalConnection
     {
         Id = CONNECTOR_ID,
         Name = "Contoso HR Connector",
@@ -209,6 +207,8 @@ setupCommand.SetHandler(async () =>
            ]
     });
 
+    // We will poll for the operation to complete, so the request
+    // is customized to include a header that says we want an async response
     var requestMessage = await graphClient.RequestAdapter.ConvertToNativeRequestAsync<HttpRequestMessage>(requestInfo);
     _ = requestMessage ?? throw new Exception("Could not create native HTTP request");
     requestMessage.Method = HttpMethod.Patch;
@@ -237,8 +237,8 @@ setupCommand.SetHandler(async () =>
             {
                 throw new ServiceException($"Schema operation failed: {operation?.Error?.Code} {operation?.Error?.Message}");
             }
-            // Wait 5 seconds and check again
-            await Task.Delay(5000);
+            // Wait 1 minute and then try again
+            await Task.Delay(60000);
         } while (true);
     }
     else
@@ -253,7 +253,7 @@ You can now run the console application in your terminal window with the followi
 
 ### Registering the connection as a profile source
 
-For Microsoft 365 to correctly propagate the people data in the connection into each users profile, the connection as to be registered as a profile source and be added to the profile source prioritization list. This is done via two operation in Microsoft Graph.
+For Microsoft 365 to correctly propagate the people data in the connection into each user's profile, the connection as to be registered as a profile source and be added to the profile source prioritization list. This is done via two operations in Microsoft Graph.  
 
 Replace the code in the `registerCommand.SetHandler` method with the code below to implement this in the console app.
 
@@ -265,7 +265,7 @@ The second operation will read the current list of prioritized profile sources a
 registerCommand.SetHandler(async () =>
 {
     Console.WriteLine("Registering the Contoso HR Connector...");
-    var addResponse = await graphClient.Admin.People.ProfileSources
+    _ = await graphClient.Admin.People.ProfileSources
         .PostAsync(new Microsoft.Graph.Beta.Models.ProfileSource
         {
             SourceId = CONNECTOR_ID,
@@ -273,31 +273,29 @@ registerCommand.SetHandler(async () =>
             WebUrl = "https://hr.contoso.com"
         }) ?? throw new ServiceException("Failed to register the Contoso HR Connector");
 
-     var propertySettings = await graphClient.Admin.People.ProfilePropertySettings.GetAsync() ?? throw new ServiceException("No response returned from API");
+    var propertySettings = await graphClient.Admin.People.ProfilePropertySettings.GetAsync() ?? throw new ServiceException("No response returned from API");
 
-        var globalSettings = (propertySettings.Value != null
-           ? propertySettings.Value.SingleOrDefault(x => x.Name == null)
-           : null) ?? throw new ServiceException("No response returned from API");
+    var globalSettings = propertySettings.Value?.SingleOrDefault(x => x.Name is null) ?? throw new ServiceException("No response returned from API");`  
 
-        var sources = globalSettings.PrioritizedSourceUrls;
-        var sourceId = globalSettings.Id;
+    var sources = globalSettings.PrioritizedSourceUrls;
+    var sourceId = globalSettings.Id;
 
-        if (sources == null || sources.Count == 0)
-        {
-            sources = new List<string>([$"https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='{CONNECTOR_ID}')"]);
-        }
-        else
-        {
-            sources.Insert(0, $"https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='{CONNECTOR_ID}')");
-        }
+    if (sources == null || sources.Count == 0)
+    {
+        sources = new List<string>([$"https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='{CONNECTOR_ID}')"]);
+    }
+    else
+    {
+        sources.Insert(0, $"https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='{CONNECTOR_ID}')");
+    }
 
-        var newPropertySetting = new Microsoft.Graph.Beta.Models.ProfilePropertySetting
-        {
-            PrioritizedSourceUrls = sources
-        };
+    var newPropertySetting = new Microsoft.Graph.Beta.Models.ProfilePropertySetting
+    {
+        PrioritizedSourceUrls = sources
+    };
 
-        var responseMessage = await graphClient.Admin.People.ProfilePropertySettings[sourceId]
-            .PatchAsync(newPropertySetting) ?? throw new ServiceException("No response returned from API");
+    var responseMessage = await graphClient.Admin.People.ProfilePropertySettings[sourceId]
+        .PatchAsync(newPropertySetting) ?? throw new ServiceException("No response returned from API");
 });
 ```
 
@@ -306,7 +304,7 @@ Save your file and run the following command in the terminal window to register 
 > [!NOTE]
 > If you are removing the connection you must also remove the connection from the list of prioritized urls as well as from the list of profile sources.
 
-### Synchronizing people
+### Synchronizing people profiles
 
 The final step of creating this connection is to ingest data about people into Microsoft 365.
 
