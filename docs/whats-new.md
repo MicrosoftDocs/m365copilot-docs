@@ -14,11 +14,13 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## June 2025
+
+### Embedded content as knowledge
+
+Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded content](copilot-studio-agent-builder-build.md#embedded-content).
+
 ## May 2025
-
-### Embedded files as knowledge
-
-Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded files](copilot-studio-agent-builder-build.md#embedded-files).
 
 ### Microsoft 365 Agents Toolkit
 

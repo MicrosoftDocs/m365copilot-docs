@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 05/20/2025
+ms.date: 06/17/2025
 ms.topic: conceptual
 ---
 
@@ -121,9 +121,9 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-knowledge-preparing.png" alt-text="Knowledge sources preparing state":::
 
-### Embedded files
+### Embedded content
 
-You can upload files directly from your device for your agent to use as embedded knowledge. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Knowledge** box on the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device or choose the cloud icon to upload files from SharePoint. You can upload individual files from your device, but not file folders.
+You can upload files directly from your device for your agent to use as knowledge. The files that you upload become embedded content in the agent. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Knowledge** box on the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device or choose the cloud icon to upload files from SharePoint. You can upload individual files from your device, but not file folders.
 
 You can add up to 20 files as knowledge sources, including files uploaded from your device and SharePoint sites, folders, and files.
 
@@ -133,16 +133,18 @@ To remove a file you uploaded, choose the X next to the file, and choose **Remov
 
 The following file types aren't supported:
 
-- Files with sensitivity labels with double key encryption, extract rights disabled, or user-defined permissions.
+- Files with sensitivity labels with double key encryption.
+- Files with user-defined permissions. If you upload a file with user-defined permissions, agent creation fails.
+- Files with extract rights permission disabled. If you upload files for which you don't have extract rights, agent creation fails. If an agent user doesn't have extract rights to an embedded file, the user can't access the agent.
 - Files from another tenant that has encryption enabled.
 - Password protected files.
 
 For details, see [Unsupported sensitivity label scenarios](#unsupported-sensitivity-label-scenarios).
 
 > [!CAUTION]
-> When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. The agent doesn't honor permissions that are applied to files.
+> When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. The agent doesn't honor access permissions that are applied to the sensitivity labels.
 
-Copilot indexes the {first 1,000 chunks} of each embedded file. To optimize embedded content for Copilot retrieval, upload files that are no larger than....
+Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file. To optimize embedded content for Copilot retrieval, upload files that are no larger than 750-1,000 pages.
 
 #### Sensitivity labels for agent embedded content
 
@@ -158,7 +160,7 @@ For example, if a file with a General label and a file with a Confidential label
 > [!NOTE]
 > The sensitivity label applies only to the embedded content; it doesn't apply to other knowledge sources that the agent references, such as SharePoint files or Copilot connector content.
 
-Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. The sensitivity label for the embedded content shows on the top right of the agent. The label doesn't currently appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent.
+Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. The sensitivity label for the embedded content shows on the top right of the agent in Copilot Chat. The label doesn't currently appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent.
 
 A sensitivity label is also applied to agent responses. This label is the higher priority of the following labels:
 
