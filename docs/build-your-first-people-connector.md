@@ -10,56 +10,56 @@ ms.topic: how-to
 
 # Build your first custom Copilot connector for people data using the Microsoft Graph SDK (preview)
 
-[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors) enable you to ingest people data and knowledge from your source systems (for example HR, talent management or other people systems) into Microsoft Graph to make it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When your data is ingested, Copilot can reason over the data and use it to respond to user prompts.
+[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors) enable you to ingest people data and knowledge from your source systems (for example HR, talent management or other people systems) into Microsoft Graph to make it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When you ingest your data, Copilot can reason over the data and use it to respond to user prompts.
 
 > [!IMPORTANT]
 > Microsoft 365 Copilot connectors for people data built using the Microsoft Graph API are currently in public preview with limited functionality. See additional notes and limitations.
 
-This article provides a walkthrough of the steps to build your first Copilot connector by using the Microsoft Graph SDK in Visual Studio Code.
+This article walks you through the steps to build your first Copilot connector by using the Microsoft Graph SDK in Visual Studio Code.
 
 ## Prerequisites
 
-The following prerequisites are required to complete the steps in this article:
+You need the following prerequisites to complete the steps in this article:
 
 - A Microsoft 365 developer tenant (If you don't have a developer tenant, you might qualify for one through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program))
 - [.NET SDK](https://dotnet.microsoft.com/en-us/download)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- You must have the ability to admin consent in Microsoft Entra admin center. You must be or complete this step as a Global administrator. See [Grant tenant-wide admin consent to an application](/entra/identity/enterprise-apps/grant-admin-consent#prerequisites) for the required roles.
+- The ability to admin consent in Microsoft Entra admin center. You must be or complete this step as a Global administrator. See [Grant tenant-wide admin consent to an application](/entra/identity/enterprise-apps/grant-admin-consent#prerequisites) for the required roles.
 - Your user must have the role Search Administrator, Cloud Application Developer to see the connector in the Microsoft 365 admin center.
 
 ## Overview of Microsoft 365 Copilot connectors for people data
 
-Microsoft 365 Copilot connectors for people data uses are built in the same way as other Copilot connectors using the Microsoft Graph external connections APIs. In order to be recognized as a connection with people there are certain requirements on the schema and an additional step in registering the connection as a source of profile data.
+You build Microsoft 365 Copilot connectors for people data in the same way as other Copilot connectors using the Microsoft Graph external connections APIs. To ensure Microsoft 365 recognizes your connection as containing people data, you must follow certain schema requirements and register the connection as a source of profile data.
 
 ### Connection schema requirements
 
-In order to be recognized as a connection with people data the schema must have the following properties:
+To ensure Microsoft 365 recognizes your connection as containing people data, your schema must have the following properties:
 
 - `connectionId` of type `string` representing the Id of the connection (this requirement is expected to be removed before GA).
 - `accounts` of type `string` representing the account of the user being enriched. The value of this must be a string encoded JSON object of the profile [userAccountInformation](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta) entity with the `userPrincipalName` and `externalDirectoryObjectId` properties set to values representing the person to be enriched.
 
 > [!IMPORTANT]
-> We expect changes during the public preview and ahead of general availability of this core schema configuration. Please regurarly check this page for updates.
+> We expect changes during the public preview and ahead of general availability of this core schema configuration. Please regularly check this page for updates.
 
 ### Registering the connection as a profile source
 
-Once a connection is created, and following the schema requirements above, the connection must be registered as a source of profile data and added to the list of prioritized sources.
+After you create the connection and follow the schema requirements above, you must register the connection as a source of profile data and add it to the list of prioritized sources.
 
-The registration of the connection of a profile source is done using the [Profile source API](https://learn.microsoft.com/en-us/graph/api/peopleadminsettings-post-profilesources?view=graph-rest-beta&tabs=http) with `sourceId` set to the connection ID of the connection and the `webUrl` property with a HTTPS link to either the external system or a page with additional information about the source.
+You register the connection as a profile source by using the [Profile source API](https://learn.microsoft.com/en-us/graph/api/peopleadminsettings-post-profilesources?view=graph-rest-beta&tabs=http) with `sourceId` set to the connection ID and the `webUrl` property set to a HTTPS link to either the external system or a page with additional information about the source.
 
-Following the registration the connection has to be added to the list of prioritized profile sources using the [Profile property settings API](https://learn.microsoft.com/en-us/graph/api/profilepropertysetting-update?view=graph-rest-beta&tabs=http). The url to the profile source, in the format of `https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='connectionId')` where `connectionId` is the unique id of the connection, must be added to the `prioritizedSourceUrls` array of sources. This array represents the order in which the view of a person is being composed. If you want your connection to be the highest prioritized source it is added as the first item in the array.
+After registration, you must add the connection to the list of prioritized profile sources using the [Profile property settings API](https://learn.microsoft.com/en-us/graph/api/profilepropertysetting-update?view=graph-rest-beta&tabs=http). Add the URL to the profile source, in the format of `https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='connectionId')` where `connectionId` is the unique id of the connection, to the `prioritizedSourceUrls` array. This array represents the order in which Microsoft 365 composes the view of a person. If you want your connection to be the highest prioritized source, add it as the first item in the array.
 
 ## Build your first custom connector
 
-The following walkthrough takes you through the minimal steps to create a custom Microsoft 365 Copilot connector for people data. A more elaborate example can be found here at [Github: ContosoHrConnector](TODO)
+The following walkthrough guides you through the minimal steps to create a custom Microsoft 365 Copilot connector for people data. You can find a more elaborate example here: [Github: ContosoHrConnector](TODO)
 
 ### Entra ID app registration
 
-Use the following steps to create a new Entra ID app registration for your people connector.
+Follow these steps to create a new Entra ID app registration for your people connector.
 
 1. Log in to the [Azure Entra ID portal](https://aad.portal.azure.com) using a global administrator role.
 1. Select **Applications > App registrations** and click on **+ New registration**.
-1. Type in the name of your application in the **Name** text box. Ex *ContosoHrConnector*.
+1. Type the name of your application in the **Name** text box. Ex *ContosoHrConnector*.
 1. Click **Register** to complete the registration.
 1. Select **API Permissions** and choose **+ Add a permission** to add permissions to the app.
 1. Choose **Microsoft Graph** and then **Application permissions** and select the following permission scopes:
@@ -67,27 +67,27 @@ Use the following steps to create a new Entra ID app registration for your peopl
     1. **ExternalItem.ReadWrite.All** (required to ingest people data)
     1. **PeopleSettings.ReadWrite.All** (required to add the connection as a profile source)
     1. **Users.Read.All** (preview requirement for this walkthrough)
-1. Click **Add Permissions** and then grant the application these permissions by clicking **Grant admin consent for Contoso** (where Contoso is replaced with the name of your organization). Select **Yes** to complete the grant.
-1. Select **Certificats & secrets** and choose to create a new secret with **+ New client secret**. Give it an appropriate description and expiry length and click **Add**.
-1. Take a note of the **Secret** value and store it in a safe location.
-1. Click on **Overview** and note down the *Application (client) ID* and *Directory (tenant) ID*.
+1. Click **Add Permissions** and then click **Grant admin consent for Contoso** (replace Contoso with your organization’s name) to grant these permissions to the application. Select **Yes** to complete the grant.
+1. Select **Certificates & secrets** and create a new secret with **+ New client secret**. Give it an appropriate description and expiry length and click **Add**.
+1. Note the **Secret** value and store it in a safe location.
+1. Click **Overview** and record the *Application (client) ID* and *Directory (tenant) ID*.
 
 > [!TIP]
-> For production scenarios it is highly recommended to create two different applications - one to create the connection, schema and do the profile source registration, and one second for the actual ingestion. It is also recommended to use Managed Identities for credentials, rather than storing client secrets.
+> For production scenarios, create two different applications—one to create the connection, schema, and perform the profile source registration, and another for the actual ingestion. Use Managed Identities for credentials instead of storing client secrets.
 
 ### Connection application
 
-To create the console application for the people connector follow these instructions:
+Follow these instructions to create the console application for the people connector:
 
-1. On a machine where you have installed the [.NET SDK](https://dotnet.microsoft.com/en-us/download) open up a terminal window and type the following to create a new console application: `dotnet new console --name ContosoHrConnector`.
+1. On a machine where you have installed the [.NET SDK](https://dotnet.microsoft.com/en-us/download), open a terminal window and type the following to create a new console application: `dotnet new console --name ContosoHrConnector`.
 1. Navigate to the newly created folder with `cd ContosoHrConnector`.
-1. In the console type the following to add the required packages: `dotnet add package Azure.Identity`, `dotnet add package Microsoft.Extensions.Configuration.Binder`, `dotnet add package Microsoft.Extensions.Configuration.UserSecrets`, `dotnet add package Microsoft.Graph.Beta --prerelease` and `System.CommandLine --prerelease`.
+1. In the console, type the following to add the required packages: `dotnet add package Azure.Identity`, `dotnet add package Microsoft.Extensions.Configuration.Binder`, `dotnet add package Microsoft.Extensions.Configuration.UserSecrets`, `dotnet add package Microsoft.Graph.Beta --prerelease` and `System.CommandLine --prerelease`.
 1. Open Visual Studio Code with `code .`.
 
 > [!NOTE]
-> For this sample application to work during the preview, pre-release (beta) packages for Microsoft.Graph and System.CommandLine are used.
+> This sample application uses pre-release (beta) packages for Microsoft.Graph and System.CommandLine during the preview.
 
-In *Program.cs* replace all code with the following, which will create a simple CLI experience with a *setup* command for setting up the connection, a *register* command for registering the connection as a profile source, and a *sync* command to ingest people data.
+In *Program.cs*, replace all code with the following. This code creates a simple CLI experience with a *setup* command to set up the connection, a *register* command to register the connection as a profile source, and a sync command to ingest people data.
 
 ```csharp
 using System.CommandLine;
@@ -124,7 +124,7 @@ await rootCommand.InvokeAsync(args);
 
 ### Set up authorization to Microsoft Graph
 
-To connect the application to Microsoft Graph using the Entra ID app registration run the following commands in the terminal window, in the directory of the console application. Replace the client ID, tenant ID and client secret with the values you stored in a safe location.
+To connect the application to Microsoft Graph using the Entra ID app registration, run the following commands in the terminal window, in the directory of the console application. Replace the client ID, tenant ID, and client secret with the values you stored in a safe location.
 
 ``` bash
 dotnet user-secrets init
@@ -133,7 +133,7 @@ dotnet user-secrets set settings:tenantId <tenant-id>
 dotnet user-secrets set settings:clientSecret <client-secret>
 ```
 
-Update the imports so it matches the following:
+Update the imports so they match the following:
 
 ``` csharp
 using System.CommandLine;
@@ -146,7 +146,7 @@ using Microsoft.Graph.Beta.Models.ExternalConnectors;
 using Microsoft.Kiota.Authentication.Azure;
 ```
 
-Then update *Program.cs*  by adding the following code just before the `setupCommand.SetHandler` row:
+Then update *Program.cs* by adding the following code just before the `setupCommand.SetHandler` row:
 
 ``` csharp
 var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
@@ -160,7 +160,7 @@ var graphClient = new GraphServiceClient(authProvider, "https://graph.microsoft.
 
 ### Creating the connection and schema
 
-To add the connection and schema creation replace the `setupCommand.SetHandler` logic with the following code. This will first register the connection with an Id and a name and then create the schema. The schema contains the required properties as well as the *positions* out of the box entity and a custom property called *favoriteColor*. Since the creation of the schema takes a few minutes the code will poll every five seconds to verify that the operation is complete.
+To add the connection and schema creation, replace the `setupCommand.SetHandler` logic with the following code. This code first registers the connection with an Id and a name and then creates the schema. The schema contains the required properties as well as the *positions* out-of-the-box entity and a custom property called *favoriteColor*. Since creating the schema takes a few minutes, the code polls every five seconds to verify that the operation is complete.
 
 ``` csharp
 var CONNECTOR_ID = "contosohrconnector1";
@@ -249,17 +249,17 @@ setupCommand.SetHandler(async () =>
 });
 ```
 
-You can now run the console application in your terminal window with the following: `dotnet run setup`. Once the app is complete your connection and schema is correctly created in your tenant.
+You can now run the console application in your terminal window with the following: `dotnet run setup`. After the app completes, you have correctly created your connection and schema in your tenant.
 
 ### Registering the connection as a profile source
 
-For Microsoft 365 to correctly propagate the people data in the connection into each user's profile, the connection as to be registered as a profile source and be added to the profile source prioritization list. This is done via two operations in Microsoft Graph.  
+To ensure Microsoft 365 correctly propagates the people data in the connection into each user's profile, you must register the connection as a profile source and add it to the profile source prioritization list. You do this via two operations in Microsoft Graph.
 
 Replace the code in the `registerCommand.SetHandler` method with the code below to implement this in the console app.
 
-The first operation will add the connection using the connection id, a display name and a web url.
+The first operation adds the connection using the connection id, a display name, and a web url.
 
-The second operation will read the current list of prioritized profile sources and add this new one on the top of the list, making it the most prioritized source of profile data.
+The second operation reads the current list of prioritized profile sources and adds this new one on the top of the list, making it the most prioritized source of profile data.
 
 ``` csharp
 registerCommand.SetHandler(async () =>
@@ -302,13 +302,13 @@ registerCommand.SetHandler(async () =>
 Save your file and run the following command in the terminal window to register the connection as a profile source: `dotnet run register`.
 
 > [!NOTE]
-> If you are removing the connection you must also remove the connection from the list of prioritized urls as well as from the list of profile sources.
+> If you remove the connection, you must also remove the connection from the list of prioritized urls as well as from the list of profile sources.
 
 ### Synchronizing people profiles
 
 The final step of creating this connection is to ingest data about people into Microsoft 365.
 
-For this sample we use a fixed set of people data, that you should replace with your own logic to connect to your source systems. Add the following code just before the `syncCommand.SetHandler` method. Replace the UPN value with correct values for your tenant and the users you want to enrich.
+For this sample, you use a fixed set of people data, which you should replace with your own logic to connect to your source systems. Add the following code just before the `syncCommand.SetHandler` method. Replace the UPN value with correct values for your tenant and the users you want to enrich.
 
 ``` csharp
 var people = new[]
@@ -324,10 +324,10 @@ var people = new[]
 };
 ```
 
-Replace the code in the `syncCommand.SetHandler` method with the following code. This code will iterate through the list of users and one by one add or update them in the connection. Note how the `accounts` and `positions` properties are serialized as JSON strings.
+Replace the code in the `syncCommand.SetHandler` method with the following code. This code iterates through the list of users and adds or updates them in the connection one by one. Note how the `accounts` and `positions` properties are serialized as JSON strings.
 
 > [!TIP]
-> It is recommended to use a serializer to ensure proper formatting of the profile entity properties, instead of manually creating the JSON strings, as any malformed property will be discarded.
+> Use a serializer to ensure proper formatting of the profile entity properties, instead of manually creating the JSON strings, as Microsoft Graph discards any malformed property.
 
 ``` csharp
 syncCommand.SetHandler(async () =>
@@ -399,17 +399,17 @@ syncCommand.SetHandler(async () =>
 ```
 
 > [!NOTE]
-> During the public preview the externalObjectId is required in the accounts property. This is done via a lookup of the user in Microsoft Graph. The intent is to remove this extra property and Microsoft Graph call prior to general availability.
+> During the public preview, the externalObjectId is required in the accounts property. This is done via a lookup of the user in Microsoft Graph. Microsoft intends to remove this extra property and Microsoft Graph call prior to general availability.
 
-To run this sync type the following command into your terminal window: `dotnet run sync`.
+To run this sync, type the following command into your terminal window: `dotnet run sync`.
 
 ## Notes and limitations
 
-- All ingested data is considered organizational public data.
-- The ACL must be set exactly as shown in the code example above.
+- Microsoft 365 treats all ingested data as organizational public data.
+- You must set the ACL exactly as shown in the code example above.
 - The schema requires that `connectionId` and `accounts`, as described above, must be present.
-- People data without matching `userPrincipalName` and `externalDirectoryObjectId`, in the `accounts` entity collection, will be discarded.
-- Only the following reserved profile entities are supported for enrichment, and must follow the JSON schema for the entities.
+- Microsoft Graph discards people data without matching `userPrincipalName` and `externalDirectoryObjectId` in the `accounts` entity collection.
+- Microsoft 365 only supports the following reserved profile entities for enrichment, and you must follow the JSON schema for the entities.
   - [`accounts`](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta). Max 1, see above for minimum schema requirements.
   - [`positions`](https://learn.microsoft.com/en-us/graph/api/resources/workposition?view=graph-rest-beta). Max 1 position.
   - [`names`](https://learn.microsoft.com/en-us/graph/api/resources/personname?view=graph-rest-beta). Max 1 name.
@@ -424,13 +424,13 @@ To run this sync type the following command into your terminal window: `dotnet r
   - [`projects`](https://learn.microsoft.com/en-us/graph/api/resources/projectparticipation?view=graph-rest-beta)
   - [`awards`](https://learn.microsoft.com/en-us/graph/api/resources/personaward?view=graph-rest-beta)
   - [`certifications`](https://learn.microsoft.com/en-us/graph/api/resources/personcertification?view=graph-rest-beta)
-- Profile entities must be valid string encoded JSON object. Invalid values are ignored.
-- Profile entities must always be an array of entities.
-- Any other properties, besides the reserved profile entities above in the connection schema, are considered a custom property.
-- Custom properties will show up in profile cards as notes during the preview, but will removed before or at general availability.
-- It might take up to 48 hours after ingesting data about a person until available in people experiences or Copilot.
-- Connections with people data does not support staged connections.
-- Indexed items in connections with people data will only appear in people search.
+- You must provide valid string encoded JSON objects for profile entities. Microsoft Graph ignores invalid values.
+- You must always provide profile entities as an array of entities.
+- Microsoft Graph treats any other properties, besides the reserved profile entities above in the connection schema, as a custom property.
+- Custom properties show up in profile cards as notes during the preview, but Microsoft will remove them before or at general availability.
+- Microsoft 365 might take up to 48 hours after you ingest data about a person before it becomes available in people experiences or Copilot.
+- Connections with people data do not support staged connections.
+- Indexed items in connections with people data only appear in people search.
 
 ## Related content
 
