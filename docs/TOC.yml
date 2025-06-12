@@ -223,6 +223,8 @@
       href: build-your-first-connector.md
     - name: Build with SDK
       href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/extensibility/context
+  - name: Build your first connector for people data (preview)
+    href: build-your-first-people-connector.md
   - name: Connectors API
     items:
     - name: Overview
