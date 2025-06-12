@@ -111,7 +111,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 
 #### Capabilities object example
 
-##### [json](#tab/json)
+##### [JSON](#tab/json)
 
 ```json
 {

@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 02/12/2025
+ms.date: 06/03/2025
 ---
 
 # Known issues
@@ -18,7 +18,7 @@ The following known issues apply to declarative agents.
 
 ### Newly installed agents might not show in the Teams client right away
 
-In some cases, a agent installed from the store doesn't immediately show up in Copilot Chat in the Teams client.
+In some cases, an agent installed from the store doesn't immediately show up in Copilot Chat in the Teams client.
 
 **Workaround:** The user can switch to another chat and then return to Copilot Chat.
 
@@ -38,7 +38,7 @@ Prompts to get a list of items based on custom metadata aren't supported. For ex
 
 ### Sharing links to SharePoint pages don't work as knowledge sources
 
-When sharing links are references as a knowledge source in an agent, the agent doesn't return results from that knowledge source. The following is an example of a SharePoint sharing link:
+When sharing links are references as a knowledge source in an agent, the agent doesn't return results from that knowledge source. The following link is an example of a SharePoint sharing link:
 
 `https://contoso.sharepoint-df.com**/:p:/r/**personal/babak_microsoft_com/Documents/`
 
@@ -48,7 +48,7 @@ If a SharePoint file used as a knowledge source contains null characters in the 
 
 ### Pasting a link to a file in Copilot Studio and agent builder doesn't work
 
-Currently, users can select a file in Copilot Studio and Copilot Studio agent builder and the agent will search the file. However, if the user pastes the URL of the file in prompt, the search fails.
+Currently, users can select a file in Copilot Studio and Copilot Studio agent builder and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
 
 **Workaround:** The user can select the file from the UI in Copilot Studio and Copilot Studio agent builder.
 
@@ -63,7 +63,7 @@ The following known issues apply to Copilot connectors.
 
 ### Prompts to get items based on custom metadata aren't supported
 
-Prompts to get a list of items based on custom metadata, such as "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is custom metadata because it's not mapped to label properties of the connection schema, aren't supported.
+Prompts to get a list of items based on custom metadata, such as "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is custom metadata because the field isn't mapped to label properties of the connection schema, aren't supported.
 
 ## API plugins
 
@@ -84,3 +84,24 @@ The following OpenAPI features aren't supported for API plugins:
 - **OpenURL** and **ToggleVisbility** adaptive card actions in response semantics.
 - Task modules and stage views in response semantics.
 
+## Custom engine agents
+
+The following table lists features that aren't currently supported for custom engine agents that run in Microsoft 365 Copilot. These issues apply to custom engine agents built using the Microsoft 365 Agents Toolkit and the Microsoft 365 Agents SDK.
+
+| Feature | Issue |
+| ------- | ----- |
+| Feedback | User feedback regarding agent responses isn't shared with the developer. |
+| Conversation context | Custom engine agents can't access Copilot conversation history that occurred before the user accesses the agent via `@mention`. |
+| Chat messages | Users can't edit chat messages sent to or returned by the agent. |
+| Chat messages | HTML isn't supported in agent response messages. |
+| File attachments | Users can't upload files in agent chats and the agent can't return files for download. |
+| Azure AI Foundry | You can't currently deploy a custom engine agent built using Azure AI Foundry. |
+| [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li></ul> |
+| Proactive messages | Proactive notifications aren't supported. |
+| [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
+| Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>[Media](https://adaptivecards.microsoft.com/?topic=Media)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>People picker</li><li>@mention</li><li>Password control</li></ul> |
+| Sensitivity labels | Sensitivity labels aren't supported. |
+
+## Related content
+
+- [Microsoft 365 Copilot Q&A](/answers/tags/466/copilot-m365-development)
