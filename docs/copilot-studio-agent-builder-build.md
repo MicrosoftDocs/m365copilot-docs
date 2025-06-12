@@ -160,7 +160,7 @@ For example, if a file with a General label and a file with a Confidential label
 > [!NOTE]
 > The sensitivity label applies only to the embedded content; it doesn't apply to other knowledge sources that the agent references, such as SharePoint files or Copilot connector content.
 
-Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. The sensitivity label for the embedded content shows on the top right of the agent in Copilot Chat. The label doesn't currently appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent.
+Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. For users who add the agent, he sensitivity label for the embedded content is visible on the top right of the agent in Copilot Chat. The label doesn't currently appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent.
 
 A sensitivity label is also applied to agent responses. This label is the higher priority of the following labels:
 
