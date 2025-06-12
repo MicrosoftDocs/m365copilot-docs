@@ -148,7 +148,7 @@ Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embed
 
 #### Sensitivity labels for agent embedded content
 
-In organizations that have [sensitivity labels](/purview/sensitivity-labels) enabled, a sensitivity label is applied to and enforced on agent  embedded content. This ensures that the agent is compliant with the organization's Microsoft Purview policies.
+In organizations that have default [sensitivity label](/purview/sensitivity-labels) policies enabled for the documents entity, a sensitivity label is applied to and enforced on agent embedded content. This ensures that the agent is compliant with the organization's Microsoft Purview policies.
 
 The sensitivity label applied to the embedded content is the higher priority of the following labels:
 
@@ -177,7 +177,7 @@ The following table lists sensitivity label scenarios that aren't currently supp
 | -------- | -------- |
 | Sensitivity label with Double Key Encryption (DKE) enabled | The file is embedded but isn't used as knowledge. The builder doesn't see an error message when they upload the file. |
 | Sensitivity label with user-defined permissions enabled | The file is uploaded but agent creation fails without an error message. |
-| Sensitivity label with extract rights enabled for the user | The file is uploaded and the builder sees an error message next to the uploaded file. If the builder doesn't remove the file, agent creation fails without an error message. |
+| Sensitivity label with extract rights enabled for the user | The file is uploaded and the builder sees an error message next to the uploaded file. If the builder doesn't remove the file, agent creation fails but agent builder doesn't provide an error message. |
 | Files with sensitivity labels from another tenant that has encryption enabled | The file is embedded in the agent but isn't used as knowledge. |
 | Password-protected files |  |
 
