@@ -202,7 +202,7 @@ The following table lists sensitivity label scenarios that aren't currently supp
 | Sensitivity label with user-defined permissions enabled | The file is uploaded but agent creation fails without an error message. |
 | Sensitivity label with extract rights enabled for the user | The file is uploaded and the builder sees an error message next to the uploaded file. If the builder doesn't remove the file, agent creation fails but agent builder doesn't provide an error message. |
 | Files with sensitivity labels from another tenant that has encryption enabled | The file is embedded in the agent but isn't used as knowledge. |
-| Password-protected files |  |
+| Password-protected files | The file is uploaded and the builder sees an error message next to the uploaded file. |
 
 
 #### Sharing an agent with embedded files
