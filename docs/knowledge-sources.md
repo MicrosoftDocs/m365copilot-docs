@@ -51,7 +51,7 @@ Web search enables agents to use the search index in Bing to respond to user pro
 
 ### Add web and scoped web search
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest file. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest file. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add scoped web search to your agent.
@@ -82,7 +82,7 @@ Dataverse knowledge allows agents to respond in natural language to user queries
 
 ### Add Dataverse knowledge
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Dataverse knowledge, add the `Dataverse` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable Dataverse knowledge, add the `Dataverse` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema to add `Dataverse` knowledge.
@@ -122,7 +122,7 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-buil
 > [!NOTE]
 > You can't currently scope your emails to a specific folder or shared mailbox when you use agent builder.
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to add email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example. You can reference multiple mailbox folders and only one shared folder.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to add email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example. You can reference multiple mailbox folders and only one shared folder.
 
 > [!NOTE]
 > You must be using [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema to add `Email` knowledge.
@@ -162,7 +162,7 @@ People knowledge allows you to scope your agent to answer questions about indivi
 
 ### Add people knowledge source
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema to add the `People` knowledge source.
@@ -187,7 +187,7 @@ Agents can return links to files shared in Teams messages, but they can't return
 
 If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, click the search bar and choose **My Teams chats from groups, channels, and meetings.** To scope your agent to specific channel, meeting, or group chats, on the **Chats** tab, select the chats that you want to add as knowledge.
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.yml) to create your agent, to enable Teams messages knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable Teams messages knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema to add the `TeamsMessage` knowledge source.

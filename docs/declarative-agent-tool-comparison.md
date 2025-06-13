@@ -76,7 +76,7 @@ The [SharePoint](https://support.microsoft.com/office/get-started-with-sharepoin
 
 ## Agents Toolkit
 
-If your scenario involves the full control, scalability, and direct API integration of a pro-code approach, [Agents Toolkit](./build-declarative-agents.yml) is the best tool to use to create your declarative agent.
+If your scenario involves the full control, scalability, and direct API integration of a pro-code approach, [Agents Toolkit](./build-declarative-agents.md) is the best tool to use to create your declarative agent.
 
 The following table lists the pros and cons for using Agents Toolkit.
 
@@ -94,7 +94,7 @@ The following table lists the pros and cons for using Agents Toolkit.
 ## Related content
 
 - [Declarative agents for Microsoft 365 Copilot overview](./overview-declarative-agent.md)
-- [Create declarative agents using Agents Toolkit](./build-declarative-agents.yml)
+- [Create declarative agents using Agents Toolkit](./build-declarative-agents.md)
 - [Set up Microsoft 365 Copilot - admin guide](/copilot/microsoft-365/microsoft-365-copilot-setup)
 - [Use Copilot Studio Agent Builder to Build Agents](copilot-studio-agent-builder.md)
 - [Create and delete agents - Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
