@@ -92,7 +92,7 @@ To configure your agent to use any web data as knowledge, on the **Configure** t
 
 You can reference specific SharePoint sites, files, and folders as agent knowledge sources. When you reference sources from SharePoint, consider the following limits:
 
-- A total of 20 knowledge sources (including SharePoint sites, folders, and files and [embedded files uploaded from the device](#embedded-content)) can be selected for each agent.
+- A total of 20 knowledge sources (including sites, folders, and files) can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
 
 For information about SharePoint knowledge file size limits, see [File size limits](#file-size-limits).
@@ -167,7 +167,7 @@ For details, see [Unsupported sensitivity label scenarios](#unsupported-sensitiv
 > [!CAUTION]
 > When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. The agent doesn't honor access permissions that are applied to the sensitivity labels.
 
-Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file. To optimize embedded content for Copilot retrieval, upload files that are no larger than 750-1,000 pages.
+For information about embedded content indexing and retrieval, see [Optimize content retrieval](optimize-content-retrieval.md).
 
 #### Sensitivity labels for agent embedded content
 

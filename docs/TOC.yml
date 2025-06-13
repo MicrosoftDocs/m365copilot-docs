@@ -154,8 +154,8 @@
         href: image-generator.md
       - name: Knowledge sources
         href: knowledge-sources.md
-    - name: Optimize SharePoint content retrieval
-      href: optimize-sharepoint-content.md
+    - name: Optimize content retrieval
+      href: optimize-content-retrieval.md
     - name: Document interaction
       href: declarative-agent-document-interaction.md
     - name: Localize your agent
