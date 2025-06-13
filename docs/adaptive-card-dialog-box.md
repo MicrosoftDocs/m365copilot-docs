@@ -1,11 +1,11 @@
 ---
 title: Add a Dialog Box to Your Declarative Agent Adaptive Card Template (preview)
-description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Career Coach template.
+description: Learn how to add a dialog box that calls APIs to the Adaptive Card response template in your declarative agent.
 author: lauragra
 ms.author: isrumnon
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 06/05/2025
+ms.date: 06/13/2025
 ---
 
 # Add a dialog box to Adaptive Card templates (preview)
