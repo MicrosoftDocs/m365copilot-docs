@@ -81,7 +81,7 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-buil
 > [!NOTE]
 > The file upload feature is available to users with metered consumption enabled or with a Microsoft 365 Copilot license.
 
-For more information about embedded files, see [Embedded files in agent builder](copilot-studio-agent-builder-build.md#embedded-files).
+For more information about embedded files, see [Embedded content in agent builder](copilot-studio-agent-builder-build.md#embedded-content).
 
 ## Dataverse
 
