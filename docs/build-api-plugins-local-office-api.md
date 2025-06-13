@@ -165,8 +165,8 @@ The reference documentation for the manifest JSON is at [Microsoft 365 app manif
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.3/schema.json",
-      "version": "v1.3",
+      "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.4/schema.json",
+      "version": "v1.4",
       "name": "Excel Agent",
       "description": "Agent for working with Excel cells.",
       "instructions": "You are an agent for working with an add-in. You can work with any cells, not just a well-formatted table.",
