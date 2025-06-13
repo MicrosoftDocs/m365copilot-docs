@@ -33,6 +33,7 @@ async function main() {
 
         // Create the retrieval request body
         const retrievalBody = {
+            dataSource: RetrievalDataSourceObject.SharePoint,
             queryString: "What is the latest in my organization?"
         };
 
