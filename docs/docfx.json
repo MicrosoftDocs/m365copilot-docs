@@ -14,7 +14,7 @@
           "_themes.pdf/**",
           "**/docfx.json",
           "_repo.en-us/**",
-          "README.md",
+          "**/README.md",
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices.md",
@@ -53,7 +53,11 @@
       "ms.collection": "ce-skilling-ai-copilot",
       "uhfHeaderId": "MSDocsHeader-M365CopilotExt"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "zone_pivot_group_filename": {
+        "api-reference/**/*.md": "extensibility/api-reference/zone-pivot-groups.json"
+      }
+    },
     "template": [],
     "dest": "m365copilot-docs"
   }

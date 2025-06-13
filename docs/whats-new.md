@@ -1,10 +1,10 @@
 ---
 title: What's New for Microsoft 365 Copilot Developers
-description: Find out what's new in Microsoft 365 Copilot extensibility, including plugins, declarative agents, custom engine agents, connectors, and more.
+description: Find out what's new in Microsoft 365 Copilot extensibility, including declarative agents, custom engine agents, connectors, Copilot APIs, and more.
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 06/03/2025
 ms.topic: overview
 ---
 
@@ -13,6 +13,16 @@ ms.topic: overview
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
+
+## June 2025
+
+### Use the Retrieval API (preview) to retrieve data
+
+The Microsoft 365 Copilot Retrieval API (preview) allows you to retrieve relevant content from SharePoint and Copilot connectors. For more information, see [Overview of the Retrieval API](/microsoft-365-copilot/extensibility/api-reference/retrieval-api-overview).
+
+### Outlook email and Teams chats knowledge in agent builder
+
+Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Copilot Studio agent builder to build your agent. For more information, see [Add knowledge sources](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-build).
 
 ## May 2025
 
@@ -88,39 +98,7 @@ Links to organizational and web resources are no longer redacted from Copilot re
 
 You can now build agents for Microsoft 365 users who don't have a Microsoft 365 Copilot license, grounded on the web and with limited capabilities. For more information, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
-## December 2024
+## Related content
 
-### Add code interpreter to your declarative agent
-
-Add the code interpreter capability to your declarative agent by using the Copilot Studio agent builder or Agents Toolkit. To learn more, see [Add capabilities to your declarative agent](code-interpreter.md).
-
-## November 2024
-
-### Add image generator to your declarative agent
-
-Add the image generator capability to your declarative agent by using the Copilot Studio agent builder or Agents Toolkit.. To learn more, see [Add capabilities to your declarative agent](image-generator.md).
-
-### Declarative agent manifest version 1.2
-
-A new version of the declarative agent manifest schema has been released. Version 1.2 adds support for scoped web search and the new code interpreter and image generator capabilities. To learn more, see [Declarative agent schema 1.2 for Microsoft 365 Copilot](declarative-agent-manifest-1.2.md).
-
-### API plugin manifest version 2.2
-
-A new version of the API plugin manifest schema has been released. Version 2.2 adds support for data handling attestation. To learn more, see [API plugin manifest schema 2.2 for Microsoft 365 Copilot](api-plugin-manifest-2.2.md).
-
-## October 2024
-
-### Use the Copilot Studio agent builder to build declarative agents
-
-Use the Copilot Studio agent builder to create and customize agents for your specific scenarios. With the agent builder, you can use natural language to describe your agent, or you can build it manually via a rich authoring experience. To learn more, see [Overview of Copilot Studio agent builder](copilot-studio-agent-builder.md).
-
-## September 2024
-
-### Build your own agent
-
-You can build your own agents to focus on your specific use cases. Provide custom instructions to tailor responses, ground agents in your organization's data, and add more skills with actions.
-
-You can build agents in two ways:
-
-- [Build declarative agents](overview-declarative-agent.md) by using the Microsoft 365 Copilot orchestrator and foundation models. You can use Visual Studio Code or the Copilot Studio agent builder.
-- [Build custom engine agents](overview-custom-engine-agent.md) with your custom orchestrator and foundation models by using Azure AI Foundry and Visual Studio Code.
+- [Microsoft 365 Copilot extensibility overview](/microsoft-365-copilot/extensibility/)
+- [What's new history](whats-new-history.md)
