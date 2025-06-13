@@ -108,7 +108,7 @@ After you provide the SharePoint URL, press **Enter** to add it as a knowledge s
 
 #### SharePoint file picker
 
-You can also select files or folders from the SharePoint file picker. The left pane displays your recently accessed SharePoint sites. To view more SharePoint sites, select **More places**. If you recently created a site, it will appear after several minutes.
+You can also select files or folders from the SharePoint file picker by choosing the cloud icon in the **Knowledge** section. The left pane on the picker displays your recently accessed SharePoint sites. To view more SharePoint sites, select **More places**. If you recently created a site, it will appear after several minutes.
 
 > [!NOTE]
 > The SharePoint picker might not show all the [communication sites](/microsoft-365/community/team-site-or-communication-site) that you have access to. Communication sites only show up in the **Quick Access** and **Recent** sections of the SharePoint picker.
@@ -146,9 +146,9 @@ You can ground your agent in Outlook email. To add email as a knowledge source, 
 
 ### Embedded content
 
-You can upload files directly from your device for your agent to use as knowledge. The files that you upload become embedded content in the agent. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Knowledge** box on the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device or choose the cloud icon to upload files from SharePoint. You can upload individual files from your device, but not file folders.
+You can upload files directly from your device for your agent to use as knowledge. The files that you upload become embedded content in the agent. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device. You can upload individual files from your device, but not file folders.
 
-You can add up to 20 files as knowledge sources, including files uploaded from your device and SharePoint sites, folders, and files.
+You can add up to 20 files as knowledge sources.
 
 Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-size-limits).
 
@@ -156,11 +156,11 @@ To remove a file you uploaded, choose the X next to the file, and choose **Remov
 
 The following file types aren't supported:
 
-- Files with sensitivity labels with double key encryption.
-- Files with user-defined permissions. If you upload a file with user-defined permissions, agent creation fails.
-- Files with extract rights permission disabled. If you upload files for which you don't have extract rights, agent creation fails. If an agent user doesn't have extract rights to an embedded file, the user can't access the agent.
+- Files with double key encryption.
+- Files with sensitivity labels that have user-defined permissions. If you upload a file with user-defined permissions, agent creation fails.
+- Files with sensitivity labels that have extract rights permission disabled. If you upload these files, agent creation fails. If an agent user doesn't have extract rights to an embedded file, the user can't access the agent.
 - Files from another tenant that has encryption enabled.
-- Password protected files.
+- Files with password protection.
 
 For details, see [Unsupported sensitivity label scenarios](#unsupported-sensitivity-label-scenarios).
 
