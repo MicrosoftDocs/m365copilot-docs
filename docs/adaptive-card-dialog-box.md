@@ -270,4 +270,4 @@ Determine success or failure of the authentication request based on the informat
 
 ## Related content
 
-- [API plugin manifest schema](https://learn.microsoft.com/microsoft-365-copilot/extensibility/api-plugin-manifest-2.3)
+- [API plugin manifest schema](/microsoft-365-copilot/extensibility/api-plugin-manifest-2.3)
