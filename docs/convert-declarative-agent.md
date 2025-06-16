@@ -1,0 +1,154 @@
+---
+title: Convert Your Declarative Agent for Microsoft 365 Copilot to a Custom Engine Agent
+description: Use the Microsoft 365 Agents SDK to build a custom engine agent and deploy it to Microsoft 365 Copilot.
+author: lauragra
+ms.author: lauragra
+ms.reviewer: vermaanimesh
+ms.topic: conceptual
+ms.localizationpriority: medium
+ms.date: 06/17/2025
+ms.custom: [copilot-learning-hub]
+---
+
+# Convert your declarative agent to a custom engine agent
+
+Microsoft 365 Copilot provides a migration capability that allows you to convert declarative agents, including message extension agents,  to custom engine agents.  
+
+When you convert your declarative agent to a custom engine agent, you have full control of the orchestration, AI models, and data integrations and can take advantage of advanced functionality to create more sophisticated workflows.  This allows organizations to better meet their unique requirements.
+
+> [!NOTE]
+> Custom engine agents for Microsoft 365 Copilot are currently in public preview.
+
+## Prerequisites
+
+The steps in this article require you to have the following:
+
+- An existing declarative agent built with the Microsoft 365 Agents Toolkit.
+
+    **Note:** Agents built with Copilot Studio agent builder aren't currently supported.
+
+- A custom bot and the bot ID. For information about how to create a custom bot, see [Bots and agents](/microsoftteams/platform/bots/build-a-bot).
+- Visual Studio Code with the Microsoft 365 Agents Toolkit extension installed. 
+- The Microsoft 365 Agents SDK or Teams AI library, if you want to implement Copilot-specific features like streaming or citations. 
+- Permissions to upload app manifests in your environment.
+
+## Convert your declarative agent
+
+To convert your existing declarative agent to a custom engine agent, you make updates to your app manifest and your app package.
+
+### Update your app manifest
+
+To update your app manifest: 
+
+1. In Visual Studio Code, open the app manifest file for your declarative agent.
+1. Add a **bots** node and include your bot ID in the **id** field. The following example shows the schema for the **bots** node.
+
+    ```json
+        "bots": [ 
+            { 
+                "botId": "${{BOT_ID}}", 
+                "scopes": [ 
+                    "copilot", 
+                    "personal", 
+                    "team" 
+                ], 
+                "supportsFiles": false, 
+                "isNotificationOnly": false, 
+                "commandLists": [ 
+                    { 
+                        "scopes": [ 
+                            "copilot", 
+                            "personal" 
+                        ], 
+                        "commands": [ 
+                            { 
+                                "title": "How can you help me?", 
+                                "description": "How can you help me?" 
+                            } 
+                        ] 
+                    } 
+                ] 
+            } 
+        ], 
+    ```
+
+    For more information about the schema for the bots node, see bots object. 
+    
+    > [!NOTE]
+    > Use app manifest schema version 1.21. The Agents Toolkit currently doesn't support schema version 1.22.
+
+1. In the **copilotAgents** object, change the **declarativeAgents** node to the **customEngineAgents** node, as shown in the following examples.
+    
+    **Declarative agents node**
+
+    ```json
+    "copilotAgents": { 
+        "declarativeAgents": [             
+            { 
+                "id": "declarativeAgent", 
+                "file": "declarativeAgent.json" 
+            } 
+        ] 
+    }, 
+    ```
+
+    **Replace with custom engine agent node**
+
+    "copilotAgents": {
+        "customEngineAgents": [
+            {
+                "type": "bot",
+                "id": "${{BOT_ID}}"
+            }
+        ]
+    },
+    "bots": [
+        { 
+          "botId": "${{BOT_ID}}",
+            "scopes": [
+                "copilot",
+                "personal",
+                "team"
+            ], 
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "copilot",
+                        "personal"
+                    ],
+                    "commands": [
+                        {
+                            "title": "How can you help me?",
+                            "description": "How can you help me?"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    ```
+
+    For schema reference information, see [copilotAgents object](/microsoft-365/extensibility/schema/root-copilot-agents?view=m365-app-1.21&tabs=syntax). 
+
+    > [!NOTE]
+    > Your app manifest can include either a declarative agent node or a custom engine agent node, but not both. 
+
+1. Update the app version number for your app in the **version** property.
+
+### Update and submit your app package 
+
+After you update your agent manifest, repackage your app:
+
+1. Add your updated agent manifest, app icon, and any other assets to a new .zip file.
+1. Submit the new package to update your existing app:
+    1. If your agent is internal to your organization, use the Microsoft 365 admin center (requires tenant admin permissions).
+    2. If your agent is published to the Agent Store, use the [Developer Portal](https://dev.teams.microsoft.com/home) to manage and update your app listing. Users need to consent to the app update using manage apps in Teams.
+
+If your agent is published to the Agent Store, use the Developer Portal to manage and update your app listing. This will require the users to consent to the app update via **Manage your apps** in Teams.
+
+## Related content
+
+- [Upgrade your bot to a custom engine agent ](/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started)
+- [App manifest](/microsoftteams/platform/resources/schema/manifest-schema)
