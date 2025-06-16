@@ -4,7 +4,7 @@ description: "Learn how the Microsoft 365 Copilot API client libraries simplify 
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
-ms.date: 06/09/2025
+ms.date: 06/17/2025
 ms.topic: overview
 ---
 
