@@ -267,6 +267,8 @@
         href: api-reference/resources/searchresourcemetadatadictionary.md
       - name: Search sensitivity label info
         href: api-reference/resources/searchsensitivitylabelinfo.md
+  - name: Use client libraries (preview)
+    href: sdks/api-libraries.md
 - name: Publish
   items:
   - name: Overview
