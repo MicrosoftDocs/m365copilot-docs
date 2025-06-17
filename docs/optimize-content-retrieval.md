@@ -35,7 +35,7 @@ Copilot is currently unable to parse tables and other special formatting in Shar
 
 ## Optimize embedded content retrieval
 
-For agents that include [embedded content](), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file. To optimize embedded content for Copilot retrieval, upload files that are no larger than 750-1,000 pages.
+For agents that include [embedded content](copilot-studio-agent-builder-build.md#embedded-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file. To optimize embedded content for Copilot retrieval, upload files that are no larger than 750-1,000 pages.
 
 ## Related content
 
