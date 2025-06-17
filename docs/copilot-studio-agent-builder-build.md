@@ -159,7 +159,7 @@ Files with any of the following characteristics aren't supported:
 - Double key encryption.
 - Sensitivity labels that have user-defined permissions. If you upload a file with user-defined permissions, agent creation fails.
 - Sensitivity labels that have extract rights permission disabled. If you upload these files, agent creation fails. If an agent user doesn't have extract rights to an embedded file, the user can't access the agent.
-- Files from another tenant that has encryption enabled.
+- Files from another tenant that have encryption enabled.
 - Password protection.
 
 For details, see [Unsupported sensitivity label scenarios](#unsupported-sensitivity-label-scenarios).
@@ -171,7 +171,7 @@ For information about embedded content indexing and retrieval, see [Optimize con
 
 #### Sensitivity labels for agent embedded content
 
-In organizations that have default [sensitivity label](/purview/sensitivity-labels) policies enabled for the documents entity, a sensitivity label is applied to and enforced on agent embedded content. This ensures that the agent is compliant with the organization's Microsoft Purview policies.
+A sensitivity label is applied to the agent embedded content if any of the files uploaded have a sensitivity label on them, or if the tenant has a default [sensitivity labeling](/purview/sensitivity-labels) policy. The sensitivity label applied to the agent embedded content ensures that the agent is compliant wth the organization's Microsoft Purview policies.
 
 The sensitivity label applied to the embedded content is the higher priority of the following labels:
 
