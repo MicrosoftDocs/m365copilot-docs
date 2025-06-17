@@ -33,9 +33,8 @@ You build Microsoft 365 Copilot connectors for people data in the same way as ot
 
 ### Connection schema requirements
 
-To ensure Microsoft 365 recognizes your connection as containing people data, your schema must have the following properties:
+To ensure Microsoft 365 recognizes your connection as containing people data, your schema must at least have the following property:
 
-- `connectionId` of type `string` representing the Id of the connection (this requirement is expected to be removed before GA).
 - `accounts` of type `string` representing the account of the user being enriched. The value of this must be a string encoded JSON object of the profile [userAccountInformation](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta) entity with the `userPrincipalName` and `externalDirectoryObjectId` properties set to values representing the person to be enriched.
 
 > [!IMPORTANT]
@@ -188,10 +187,6 @@ setupCommand.SetHandler(async () =>
         BaseType = "microsoft.graph.externalItem",
         Properties =
            [
-                new() {
-                     Name = "connectionId",
-                     Type = Microsoft.Graph.Beta.Models.ExternalConnectors.PropertyType.String
-                },
                 new() {
                      Name = "accounts",
                      Type = Microsoft.Graph.Beta.Models.ExternalConnectors.PropertyType.String
@@ -361,7 +356,6 @@ syncCommand.SetHandler(async () =>
             {
                 AdditionalData = new Dictionary<string, object>
                 {
-                    { "connectionId", CONNECTOR_ID },
                     { "accounts", JsonSerializer.Serialize(new[]
                         {
                             new {
@@ -407,7 +401,7 @@ To run this sync, type the following command into your terminal window: `dotnet 
 
 - Microsoft 365 treats all ingested data as organizational public data.
 - You must set the ACL exactly as shown in the code example above.
-- The schema requires that `connectionId` and `accounts`, as described above, must be present.
+- The schema requires that `accounts` property is present to identify the user to be enriched, as described above.
 - Microsoft Graph discards people data without matching `userPrincipalName` and `externalDirectoryObjectId` in the `accounts` entity collection.
 - Microsoft 365 only supports the following reserved profile entities for enrichment, and you must follow the JSON schema for the entities.
   - [`accounts`](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta). Max 1, see above for minimum schema requirements.
