@@ -154,18 +154,18 @@ Embedded files are displayed on the **Configure** tab under **Uploaded files**. 
 
 To remove a file you uploaded, choose the X next to the file, and choose **Remove**.
 
-The following file types aren't supported:
+Files with any of the following characteristics aren't supported:
 
-- Files with double key encryption.
-- Files with sensitivity labels that have user-defined permissions. If you upload a file with user-defined permissions, agent creation fails.
-- Files with sensitivity labels that have extract rights permission disabled. If you upload these files, agent creation fails. If an agent user doesn't have extract rights to an embedded file, the user can't access the agent.
+- Double key encryption.
+- Sensitivity labels that have user-defined permissions. If you upload a file with user-defined permissions, agent creation fails.
+- Sensitivity labels that have extract rights permission disabled. If you upload these files, agent creation fails. If an agent user doesn't have extract rights to an embedded file, the user can't access the agent.
 - Files from another tenant that has encryption enabled.
-- Files with password protection.
+- Password protection.
 
 For details, see [Unsupported sensitivity label scenarios](#unsupported-sensitivity-label-scenarios).
 
 > [!CAUTION]
-> When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. The agent doesn't honor access permissions that are applied to the sensitivity labels.
+> When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. Access to the agent is restricted if a user doesn't have extract rights access permissions to any sensitivity label on the files.
 
 For information about embedded content indexing and retrieval, see [Optimize content retrieval](optimize-content-retrieval.md).
 
@@ -183,7 +183,7 @@ For example, if a file with a General label and a file with a Confidential label
 > [!NOTE]
 > The sensitivity label applies only to the embedded content; it doesn't apply to other knowledge sources that the agent references, such as SharePoint files or Copilot connector content.
 
-Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. For users who add the agent, he sensitivity label for the embedded content is visible on the top right of the agent in Copilot Chat. The label doesn't currently appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent.
+Only users who have extract right permissions to the sensitivity label applied to the embedded content can access and use the agent. The label doesn't appear on the Agent Store listing. However, users who don't have extract right permissions to the embedded content can't install and use the agent.
 
 A sensitivity label is also applied to agent responses. This label is the higher priority of the following labels:
 
@@ -216,7 +216,7 @@ When you share an agent with embedded files, the files are also shared, and agen
 > [!NOTE]
 > Sharing an agent with embedded files to groups isn't currently supported.
 
-When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are enabled, the sensitivity label applied to the agent embedded content is displayed on the **Share** screen.
+When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are set on the embedded content, the sensitivity label is displayed on the **Share** screen.
 
 ### File size limits
 
