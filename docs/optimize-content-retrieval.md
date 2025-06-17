@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: best-practice
 ms.localizationpriority: medium
-ms.date: 06/172025
+ms.date: 06/17/2025
 ---
 
 # Optimize content retrieval
