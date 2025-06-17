@@ -132,7 +132,7 @@ The following table lists the agent types and agent capabilities that are availa
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scoped web search | :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copilot connectors</br> | :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SharePoint data</br>| :x: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embedded content</br>| :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embedded file content</br>| :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dataverse | :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email | :x: | :x: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;People | :x: | :x: | :white_check_mark: |

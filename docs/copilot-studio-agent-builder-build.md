@@ -144,7 +144,7 @@ You can ground your agent in Outlook email. To add email as a knowledge source, 
 > - You can't scope email knowledge. When you add email, the agent uses all email in your mailbox as knowledge.
 > - Users that you share the agent with don't have access to your email as knowledge.
 
-### Embedded content
+### Embedded file content
 
 You can upload files directly from your device for your agent to use as knowledge. The files that you upload become embedded content in the agent. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device. You can upload individual files from your device, but not file folders.
 
@@ -167,7 +167,7 @@ For details, see [Unsupported sensitivity label scenarios](#unsupported-sensitiv
 > [!CAUTION]
 > When you upload files as knowledge sources for your agent, any user who has access to the agent has access to the information in the file. Access to the agent is restricted if a user doesn't have extract rights access permissions to any sensitivity label on the files.
 
-For information about embedded content indexing and retrieval, see [Optimize content retrieval](optimize-content-retrieval.md).
+For information about embedded file content indexing and retrieval, see [Optimize content retrieval](optimize-content-retrieval.md).
 
 #### Sensitivity labels for agent embedded content
 
