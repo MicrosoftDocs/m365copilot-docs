@@ -1,6 +1,6 @@
 ---
 title: Convert Your Declarative Agent for Microsoft 365 Copilot to a Custom Engine Agent
-description: Use the Microsoft 365 Agents SDK to build a custom engine agent and deploy it to Microsoft 365 Copilot.
+description: Find out how you can convert your declarative agent for Microsoft 365 Copilot to a custom engine agent to take advantage of your own orchestration and advanced functionality.
 author: lauragra
 ms.author: lauragra
 ms.reviewer: vermaanimesh
@@ -131,7 +131,7 @@ To update your app manifest:
     ],
     ```
 
-    For schema reference information, see [copilotAgents object](/microsoft-365/extensibility/schema/root-copilot-agents?view=m365-app-1.21&tabs=syntax). 
+    For schema reference information, see [copilotAgents object](/microsoft-365/extensibility/schema/root-copilot-agents).
 
     > [!NOTE]
     > Your app manifest can include either a declarative agent node or a custom engine agent node, but not both. 
