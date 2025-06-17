@@ -33,9 +33,9 @@ Alternatively, you can reference specific SharePoint files by ID. Copilot will s
 
 Copilot is currently unable to parse tables and other special formatting in SharePoint content. To ensure that Copilot can consume your SharePoint content, remove tables or other special formatting from the content before you reference it in your agent manifest.
 
-## Optimize embedded content retrieval
+## Optimize embedded file content retrieval
 
-For agents that include [embedded content](copilot-studio-agent-builder-build.md#embedded-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file. To optimize embedded content for Copilot retrieval, upload files that are no larger than 750-1,000 pages.
+For agents that include [embedded file content](copilot-studio-agent-builder-build.md#embedded-file-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file. To optimize embedded file content for Copilot retrieval, upload files that are no larger than 750-1,000 pages.
 
 ## Related content
 

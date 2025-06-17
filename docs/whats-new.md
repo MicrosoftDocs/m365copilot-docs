@@ -16,9 +16,9 @@ For the latest information, announcements, and news about preview and generally 
 
 ## June 2025
 
-### Embedded content as knowledge
+### Embedded file content as knowledge
 
-Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded content](copilot-studio-agent-builder-build.md#embedded-content).
+Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded file content](copilot-studio-agent-builder-build.md#embedded-file-content).
 
 ### Use the Retrieval API (preview) to retrieve data
 
