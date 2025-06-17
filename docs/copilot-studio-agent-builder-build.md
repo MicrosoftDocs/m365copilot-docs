@@ -194,15 +194,15 @@ Currently, agent builders can't set a sensitivity label on an agent.
 
 ##### Unsupported sensitivity label scenarios
 
-The following table lists sensitivity label scenarios that aren't currently supported and describes the behavior when a builder uploads the file to the agent.
+The following table lists sensitivity label scenarios that aren't currently supported, describes the behavior when a builder uploads the file to the agent, and provides the recommended action for the builder.
 
-| Scenario | Agent behavior |
+| Scenario | Behavior | Action |
 | -------- | -------- |
-| Sensitivity label with Double Key Encryption (DKE) enabled | The file is embedded but isn't used as knowledge. The builder doesn't see an error message when they upload the file. |
-| Sensitivity label with user-defined permissions enabled | The file is uploaded but agent creation fails without an error message. |
-| Sensitivity label with extract rights enabled for the user | The file is uploaded and the builder sees an error message next to the uploaded file. If the builder doesn't remove the file, agent creation fails but agent builder doesn't provide an error message. |
-| Files with sensitivity labels from another tenant that has encryption enabled | The file is embedded in the agent but isn't used as knowledge. |
-| Password-protected files | The file is uploaded and the builder sees an error message next to the uploaded file. |
+| Sensitivity label with Double Key Encryption (DKE) enabled | The file is embedded but isn't used as knowledge. The builder doesn't see an error message when they upload the file. | We recommend that you avoid uploading files with DKE because they can't be used as knowledge. |
+| Sensitivity label with user-defined permissions enabled | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with user-defined permissions. |
+| Sensitivity label with extract rights enabled for the user | The file is uploaded and the builder sees an error message next to the uploaded file. If the builder doesn't remove the file, agent creation fails but agent builder doesn't provide an error message. | Remove any uploaded files with extract rights enabled. |
+| Files with sensitivity labels from another tenant that has encryption enabled | The file is embedded in the agent but isn't used as knowledge. | We recommend that you avoid uploading files with sensitivity labels from tenants with encryption enabled because they can't be used as knowledge. |
+| Files with password protection | The file is uploaded and the builder sees an error message next to the uploaded file. | Remove any uploaded files with password protection. |
 
 
 #### Sharing an agent with embedded files
