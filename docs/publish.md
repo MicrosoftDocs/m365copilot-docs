@@ -36,7 +36,7 @@ Note that [Responsible AI validation checks](./rai-validation.md) run on your de
 
 | Distribution method | Support | Learn more |
 |--|--|--|
-| Sideload for personal use | ✅ | [Create declarative agents using Agents Toolkit](build-declarative-agents.yml) |
+| Sideload for personal use | ✅ | [Create declarative agents using Agents Toolkit](build-declarative-agents.md) |
 | Share with others | ❌ | |
 | Submit to organizational catalog | ✅ | [Upload a custom app using Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings#upload-a-custom-app-using-teams-admin-center?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) |
 | Submit to Microsoft Commercial Marketplace | ✅ | [Publish your app to the Teams Store](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish) |
