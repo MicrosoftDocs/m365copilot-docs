@@ -14,14 +14,14 @@ ms.custom: [copilot-learning-hub]
 
 Microsoft 365 Copilot provides a migration capability that allows you to convert declarative agents, including message extension agents,  to custom engine agents.  
 
-When you convert your declarative agent to a custom engine agent, you have full control of the orchestration, AI models, and data integrations and can take advantage of advanced functionality to create more sophisticated workflows.  This allows organizations to better meet their unique requirements.
+When you convert your declarative agent to a custom engine agent, you have full control of the orchestration, AI models, and data integrations and can take advantage of advanced functionality to create more sophisticated workflows.  This control allows organizations to better meet their unique requirements.
 
 > [!NOTE]
 > Custom engine agents for Microsoft 365 Copilot are currently in public preview.
 
 ## Prerequisites
 
-The steps in this article require you to have the following:
+The steps in this article require you to have the following prerequisites:
 
 - An existing declarative agent built with the Microsoft 365 Agents Toolkit.
 
@@ -94,6 +94,7 @@ To update your app manifest:
 
     **Replace with custom engine agent node**
 
+    ```json  
     "copilotAgents": {
         "customEngineAgents": [
             {
@@ -145,8 +146,6 @@ After you update your agent manifest, repackage your app:
 1. Submit the new package to update your existing app:
     1. If your agent is internal to your organization, use the Microsoft 365 admin center (requires tenant admin permissions).
     2. If your agent is published to the Agent Store, use the [Developer Portal](https://dev.teams.microsoft.com/home) to manage and update your app listing. Users need to consent to the app update using manage apps in Teams.
-
-If your agent is published to the Agent Store, use the Developer Portal to manage and update your app listing. This will require the users to consent to the app update via **Manage your apps** in Teams.
 
 ## Related content
 
