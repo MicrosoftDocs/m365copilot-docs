@@ -18,7 +18,7 @@ Declarative agents are valuable in understanding and generating human-like text,
 
 This schema version introduces the following changes from [version 1.3](declarative-agent-manifest-1.3.md):
 
-- Added the `disclaimer` and `behavior_overrides` properties to the [declarative agent manifest object](#declarative-agent-manifest-object).
+- Added the `behavior_overrides` property to the [declarative agent manifest object](#declarative-agent-manifest-object).
 - Added the `part_type` and `part_id` properties to the [items by SharePoint IDs object](#items-by-sharepoint-ids-object).
 - Added additional properties to the [Connection object](#connection-object), allowing scoping of Copilot connector content.
 - Added the [scenario models](#scenario-models-object) capability to the list of `capabilities`, which allows agents to use task-specific models.
@@ -61,7 +61,6 @@ The declarative agent manifest object contains the following properties.
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. There MUST NOT be more than one of each derived type of [Capabilities object](#capabilities-object) in the array. |
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than six objects in the array. |
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
-| `disclaimer`            | [Disclaimer object](#disclaimer-object)                               | Optional. Disclaimer text that is displayed to the user at the start of a conversation. |
 | `behavior_overrides`    | [Behavior overrides object](#behavior-overrides-object)               | Optional. Contains configuration settings that modify the behavior of the agent. |
 
 ### Declarative agent manifest object example
@@ -483,16 +482,6 @@ The action object contains the following properties.
   ]
 }
 ```
-
-### Disclaimer object
-
-A disclaimer is an optional JSON object in the manifest that specifies disclaimer text that is displayed to the user at the start of a conversation.
-
-The disclaimer object contains the following property.
-
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `text`   | String | Required. The disclaimer text. The value MUST contain at least one non-whitespace character and SHOULD NOT exceed 500 characters. |
 
 ### Behavior overrides object
 
