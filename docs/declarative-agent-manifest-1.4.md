@@ -18,6 +18,7 @@ Declarative agents are valuable in understanding and generating human-like text,
 
 This schema version introduces the following changes from [version 1.3](declarative-agent-manifest-1.3.md):
 
+- Added the `disclaimer` and `behavior_overrides` properties to the [declarative agent manifest object](#declarative-agent-manifest-object).
 - Added the `part_type` and `part_id` properties to the [items by SharePoint IDs object](#items-by-sharepoint-ids-object).
 - Added additional properties to the [Connection object](#connection-object), allowing scoping of Copilot connector content.
 - Added the [scenario models](#scenario-models-object) capability to the list of `capabilities`, which allows agents to use task-specific models.
