@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 06/03/2025
+ms.date: 06/09/2025
 ms.topic: overview
 ---
 
@@ -19,6 +19,10 @@ For the latest information, announcements, and news about preview and generally 
 ### Use the Retrieval API (preview) to retrieve data
 
 The Microsoft 365 Copilot Retrieval API (preview) allows you to retrieve relevant content from SharePoint and Copilot connectors. For more information, see [Overview of the Retrieval API](/microsoft-365-copilot/extensibility/api-reference/retrieval-api-overview).
+
+### Microsoft 365 Copilot API client libraries
+
+Use the Copilot API libraries to work with Microsoft 365 Copilot APIs. For more information, see [Microsoft 365 Copilot APIs (preview)](/microsoft-365-copilot/extensibility/sdks/api-libraries).
 
 ### Outlook email and Teams chats knowledge in agent builder
 
@@ -42,7 +46,7 @@ A new version of the API plugin manifest schema is available. [API plugin manife
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.4](declarative-agent-manifest-1.4.md) adds the following.
 
-- Added the `sensitivity_label`, `disclaimer`, and `behavior_overrides` properties to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object).
+- Added the `behavior_overrides` property to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object).
 - Added the `part_type` and `part_id` properties to the [Items by SharePoint IDs object](declarative-agent-manifest-1.4.md#items-by-sharepoint-ids-object).
 - Added the [Scenario models](declarative-agent-manifest-1.4.md#scenario-models-object) capability.
 

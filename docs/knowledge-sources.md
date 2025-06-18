@@ -23,9 +23,9 @@ The following table lists the capabilities and knowledge sources you can configu
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
 | Dataverse | :x: | :white_check_mark:\* | Yes |
-| Email | :white_check_mark: | :white_check_mark:\* | Yes |
-| People | :x: | :white_check_mark: | Yes |
-| Teams messages | :white_check_mark: | :white_check_mark:\* | Yes |
+| Email | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
+| People | :x: | :white_check_mark: | Yes (license only) |
+| Teams messages | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
 
 \* Option to scope the knowledge is available.
 
