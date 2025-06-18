@@ -2,15 +2,22 @@
 title: Write effective instructions for declarative agents
 description: Learn how to write effective instructions for your declarative agent.
 author: lauragra
-ms.author: jchudakova
+ms.author: jchudakova,avalluri,sumalle
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 02/19/2025
 ---
 
-# Write effective instructions for declarative agents
+# Overview
 
-Declarative agents are customized versions of Microsoft 365 Copilot that help you to create personalized experiences by declaring specific instructions, actions, and knowledge. This article provides guidance for writing effective instructions for a declarative agent. Use this guidance to help to ensure that your declarative agent responds appropriately to user requests, handles data accurately, and maintains a consistent workflow.
+Declarative agents are customized versions of Microsoft 365 Copilot that help you to create personalized experiences by declaring specific instructions, actions, and knowledge. To fully embrace the power of instructions in Declarative Agents, take a step back and think of the following aspects to include in your Declarative Agent’s instructions:
+1.	What is the goal your agent must accomplish?
+2.	What Workflows do you envision your end users going through:
+  a.	Is there any Business logic you would like to incorporate?
+  b.	Is there any desired end user experience you would like to incorporate?
+3.	For each workflow listed above, you may include detailed step by step instructions detailing what the agent must do.
+
+If your Declarative Agent also has Actions (API Plugins), then also read [How to make an OpenAPI document effective in extending Copilot capabilities | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/openapi-document-guidance). OpenAPI spec helps the Agent understand ‘how’ to execute any instruction involving executing an API.
 
 This guidance applies to developers and makers who are using Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
 
@@ -35,7 +42,7 @@ The following diagram shows the primary components of declarative agent instruct
 
 :::image type="content" source="assets/images/instruction-components.png" alt-text="Diagram of the components of agent instructions, including purpose, guidelines, and skills" border="false":::
 
-### Purpose
+<!-- ### Purpose
 
 Clearly define the role and the area of expertise of the agent, including the primary function it serves.
 
@@ -132,9 +139,54 @@ Closing instructions can be part of the general directions or a skill descriptio
 - After providing a suggestion, ask me if it meets my needs or if adjustments are needed.
 - At the end of each interaction with me on a specific topic, ask me how you did and ask me to use the thumbs up and down.
 ```
+-->
+## Use Clear, Actionable Language
+- **Focus on what Copilot should do**—not what to avoid.
+- Use precise, specific verbs: **ask, search, send, check, use.**
+- Supplement with examples to minimize ambiguity.
+- Define any specific terms that are non-standard or unique to the organization in the instructions.
+
+## Build Step-by-Step Workflows with Transitions
+Break workflows into modular, unambiguous, and non-conflicting steps. Each step should include:
+- **Goal**: The purpose of the step.
+- **Action**: What the agent should do and which tool(s) to use.
+- **Transition**: Clear criteria for moving to the next step or ending the workflow.
+
+## Structure instructions in Markdown
+To provide emphasis and clarity on order of steps, use markdown:
+- Use #, ##, and ### for section headers.
+- Use - for bullet points and 1. for numbered lists. Prefer to use bullet points unless the order of steps is important in which case use numbered lists. Also nest lists properly, that is, use indentations (two spaces or a tab) for sub points under a main bullet.
+- Highlight tool or system names (e.g., `Jira`, `ServiceNow`, `Teams`) using backticks.
+- **Bold** critical instructions
+
+## Explicitly reference the capabilities, knowledge and actions
+Clearly call out the names of the actions, capabilities, or knowledge sources involved at each step:
+- **Actions**: e.g., Use `Jira` to fetch tickets.
+- **Graph Connector Knowledge**: e.g., Use `ServiceNow KB` for help articles.
+- **SharePoint Knowledge**: e.g., Reference SharePoint or OneDrive internal documents.
+- **Email Messages**: e.g., Check user emails for relevant information.
+- **Teams Messages**: e.g., Search Teams chat history.
+- **Code Interpreter**: e.g., Use code interpreter to generate bar or pie charts.
+- **People Capability**: e.g., Use people capability to fetch user email or UPN.
+
+## Provide examples
+Sometimes the instructions might be hard to understand- and examples work well here:
+- For simple scenarios, you do not need to give examples.
+- For complex scenarios, Declarative agents work best with _few shot prompting_. That is, give more than one example to illustrate different aspects or edge cases.
+
+## Common Prompt Failure Modes
+Be aware of these pitfalls and their solutions:
+- **Over-eager tool use**:
+-   _Problem_: The model may call tools without needed inputs.
+-   _Solution_: Instruct: “Only call the tool if required inputs are available; otherwise, ask the user.”
+- **Repetitive phrasing**:
+-   _Problem_: The model reuses example phrasing verbatim.
+-   _Solution_: Encourage varied responses and natural language. Also consider adding more than one example instead of just one (_few shot prompting_). Or experiment with altogether removing the example to save on tokens.
+- **Verbose explanations**:
+-   _Problem_: The model may over-explain or provide excessive formatting.
+-   _Solution_: Add constraints and concise examples to limit verbosity.
 
 ## Iterate on your instructions
-
 Developing instructions for declarative agents is often iterative and typically consists of the following steps:
 
 1. **Create** instructions and conversation starters for your agent following the structure and format described in this article.
@@ -154,7 +206,7 @@ Developing instructions for declarative agents is often iterative and typically 
 The following diagram illustrates the iterative process for creating and refining declarative agent instructions.
 
 :::image type="content" source="assets/images/instruction-process.png" alt-text="Diagram showing the iterative steps to create and refine agent instructions" border="false":::
-
+<!--
 ## Best practices for agent instructions
 
 In summary, it's important to keep your agent instructions structured and follow an iterative process of to test and improve your instructions until the agent provides satisfying results.
@@ -173,7 +225,97 @@ As you develop your instructions, apply the following best practices:
 
 - **Avoid contrasting instructions**. Describe the expected behavior of the agent under valid or positive use cases only instead of giving both valid/positive and invalid/negative instructions. Such instructions create ambiguity and that can confuse the model. If you must instruct the agent with both valid and invalid use cases, clearly describe the queries that you want the agent to process and provide [interaction examples](#interaction-examples) to show the expected response to each query.
 
-- **Add knowledge**. If you add knowledge to the agent, describe what is represented by each knowledge source in your instructions.
+- **Add knowledge**. If you add knowledge to the agent, describe what is represented by each knowledge source in your instructions. -->
+
+## Example Instruction Template
+Below is sample instructions for an Agent which can help resolving common IT issues.
+
+```md
+# OBJECTIVE
+Guide users through issue resolution by gathering information, checking outages, narrowing down solutions, and creating tickets if needed. Ensure the interaction is focused, friendly, and efficient.
+
+# RESPONSE RULES
+- Ask one clarifying question at a time, only when needed.
+- Present information as concise bullet points or tables.
+- Avoid overwhelming users with details or options.
+- Always confirm before moving to the next step or ending.
+- Use tools only if data is sufficient; otherwise, ask for missing info.
+
+# WORKFLOW
+
+## Step 1: Gather Basic Details
+- **Goal:** Identify the user’s issue.
+- **Action:**
+  - Proceed if the description is clear.
+  - If unclear, ask a single, focused clarifying question.
+    - Example:
+      User: “Issue accessing a portal.”
+      Assistant: “Which portal?”
+- **Transition:** Once clear, proceed to Step 2.
+
+## Step 2: Check for Ongoing Outages
+- **Goal:** Rule out known outages.
+- **Action:**
+  - Query `ServiceNow` for current outages.
+  - If an outage is found:
+    - Share details and ETA.
+    - Ask: “Is your issue unrelated? If yes, I can help further.”
+    - If yes, go to Step 3. If no/no response, end politely.
+  - If none, inform the user and go to Step 3.
+
+## Step 3: Narrow Down Resolution
+- **Goal:** Find best-fit solutions from the knowledge base.
+- **Action:**
+  - Search `ServiceNow KB` for related articles.
+  - **Iterative narrowing:** Don’t list all results. Instead:
+    - Ask clarifying questions based on article differences.
+    - Eliminate irrelevant options with user responses.
+    - Repeat until the best solution is found.
+  - Provide step-by-step fix instructions.
+  - Confirm: “Did this help? If not, I can go deeper or create a ticket.”
+    - If more info is provided, repeat this step.
+    - If ticket needed, go to Step 4.
+    - If resolved/no response, end politely.
+
+## Step 4: Create Support Ticket
+- **Goal:** Log unresolved issues.
+- **Action:**
+  1. Map **category** and **subcategory** from the `sys_choice` SharePoint file.
+     - Use only valid pairs. Leave blank if not clear.
+  2. Fetch user’s UPN (email) with the people capability.
+  3. Fill the ticket with:
+     - Caller ID (email)
+     - Category, Subcategory (if mapped)
+     - Description, attempted steps, error codes, metadata
+- **Transition:** Confirm ticket creation and next steps.
+
+# OUTPUT FORMATTING RULES
+- Use bullets for actions, lists, next steps.
+- Use tables for structured data where UI allows.
+- Avoid long paragraphs; keep responses skimmable.
+- Always confirm before ending or submitting tickets.
+
+# EXAMPLES
+
+## Valid Example
+**User:** “I can’t connect to VPN.”
+**Assistant:**
+- “Are you seeing a specific error?”
+  (User: “DNS server not responding.”)
+- “Let me check for outages.”
+  (No outage.)
+- “No outages. Searching knowledge base…”
+  (Finds articles. Asks: “Are you on office Wi-Fi or home?”)
+  (User: “Home.”)
+- “Try resetting your DNS settings. Here’s how…”
+- “Did this help? If not, I can create a support ticket.”
+
+## Invalid Example
+- “Here are 15 articles I found…” *(Overwhelms the user)*
+- “I’m raising a ticket” *(without confirming details)*
+
+
+```
 
 ## Related content
 
