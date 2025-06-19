@@ -157,5 +157,7 @@ If users pinned the agent, they need to pin the agent again after you publish th
 
 ## Related content
 
+- [Custom engine agent overview](overview-custom-engine-agent.md)
+- [Agents overview](agents-overview.md)
 - [Upgrade your bot to a custom engine agent ](/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started)
 - [App manifest](/microsoftteams/platform/resources/schema/manifest-schema)
