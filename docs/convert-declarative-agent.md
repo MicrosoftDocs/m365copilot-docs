@@ -12,7 +12,7 @@ ms.custom: [copilot-learning-hub]
 
 # Convert your declarative agent to a custom engine agent
 
-Microsoft 365 Copilot provides a migration capability that allows you to convert declarative agents, including message extension agents,  to custom engine agents.  
+Microsoft 365 Copilot provides a migration capability that allows you to convert declarative agents to custom engine agents.  
 
 When you convert your declarative agent to a custom engine agent, you have full control of the orchestration, AI models, and data integrations and can take advantage of advanced functionality to create more sophisticated workflows.  This control allows organizations to better meet their unique requirements.
 
@@ -138,8 +138,9 @@ To update your app manifest:
     > Your app manifest can include either a declarative agent node or a custom engine agent node, but not both. 
 
 1. Update the app version number for your app in the **version** property.
+1. Make sure that the **id** property uses the same ID that you used in the app manifest for the declarative agent. 
 
-### Update and submit your app package 
+### Update and submit your app package
 
 After you update your agent manifest, repackage your app:
 
