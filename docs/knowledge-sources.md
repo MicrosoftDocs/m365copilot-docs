@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 06/03/2025
+ms.date: 06/17/2025
 ---
 
 # Add knowledge sources to your declarative agent
@@ -20,6 +20,7 @@ The following table lists the capabilities and knowledge sources you can configu
 | Image generator | :white_check_mark: | :white_check_mark: | No |
 | Copilot connectors | :white_check_mark: | :white_check_mark: | Yes |
 | SharePoint and OneDrive | :white_check_mark:| :white_check_mark: | Yes |
+| Embedded file content | :white_check_mark:| :x: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
 | Dataverse | :x: | :white_check_mark:\* | Yes |
@@ -72,6 +73,15 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 ```
 
 If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Knowledge**, list the website URLs that you want to reference.
+
+## Embedded file content
+
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to build your agent, you can upload files directly from your device or the cloud to embed the content for your agent to use as knowledge. The embedded file content is stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview). These files count against the OneDrive and SharePoint capacity in your tenant.
+
+> [!NOTE]
+> The file upload feature is available to users with metered consumption enabled or with a Microsoft 365 Copilot license.
+
+For more information about embedded files, see [Embedded file content in agent builder](copilot-studio-agent-builder-build.md#embedded-file-content).
 
 ## Dataverse
 
