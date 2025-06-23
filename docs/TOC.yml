@@ -196,11 +196,11 @@
       - name: SDK reference
         items:
         - name: .NET SDK
-          href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
+          href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true
         - name: JavaScript SDK
-          href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
+          href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true
         - name: Python SDK
-          href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
+          href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true
     - name: Use Teams AI library
       items:
       - name: Overview
@@ -208,7 +208,7 @@
       - name: SDK reference
         items:
         - name: TypeScript SDK
-          href: /javascript/api/teams-sdk-typescript?context=/microsoft-365-copilot/extensibility/context
+          href: /javascript/api/teams-sdk-typescript
     - name: Use Microsoft Copilot Studio
       items:
       - name: Quickstart
@@ -217,8 +217,6 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete agents
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
-    - name: Build with Microsoft Graph APIs
-      href: graph-api-tutorial.yml
     - name: Bring agents to Copilot
       href: bring-agents-to-copilot.md
     - name: Invoke actions with Semantic Kernel
