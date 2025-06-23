@@ -246,7 +246,7 @@ setupCommand.SetHandler(async () =>
 
 You can now run the console application in your terminal window with the following: `dotnet run setup`. After the app completes, you have correctly created your connection and schema in your tenant.
 
-### Registering the connection as a profile source
+### Adding the profile source and prioritize the connection
 
 To ensure Microsoft 365 correctly propagates the people data in the connection into each user's profile, you must register the connection as a profile source and add it to the profile source prioritization list. You do this via two operations in Microsoft Graph.
 
