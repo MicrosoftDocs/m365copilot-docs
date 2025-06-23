@@ -10,7 +10,7 @@ ms.topic: how-to
 
 # Build your first custom Copilot connector for people data using the Microsoft Graph SDK (preview)
 
-[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors) enable you to ingest people data and knowledge from your source systems (for example HR, talent management or other people systems) into Microsoft Graph to make it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When you ingest your data, Copilot can reason over the data and use it to respond to user prompts.
+[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/graph/peopleconnectors) enable you to ingest people data and knowledge from your source systems (for example HR, talent management or other people systems) into Microsoft Graph to make it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When you ingest your data, Copilot can reason over the data and use it to respond to user prompts.
 
 > [!IMPORTANT]
 > Microsoft 365 Copilot connectors for people data built using the Microsoft Graph API are currently in public preview with limited functionality. See additional notes and limitations.
@@ -22,7 +22,7 @@ This article walks you through the steps to build your first Copilot connector b
 You need the following prerequisites to complete the steps in this article:
 
 - A Microsoft 365 developer tenant (If you don't have a developer tenant, you might qualify for one through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program))
-- [.NET SDK](https://dotnet.microsoft.com/en-us/download)
+- [.NET SDK](https://dotnet.microsoft.com/download)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - The ability to admin consent in Microsoft Entra admin center. You must be or complete this step as a Global administrator. See [Grant tenant-wide admin consent to an application](/entra/identity/enterprise-apps/grant-admin-consent#prerequisites) for the required roles.
 - Your user must have the role Search Administrator, Cloud Application Developer to see the connector in the Microsoft 365 admin center.
@@ -35,7 +35,7 @@ You build Microsoft 365 Copilot connectors for people data in the same way as ot
 
 To ensure Microsoft 365 recognizes your connection as containing people data, your schema must at least have the following property:
 
-- `accounts` of type `string` representing the account of the user being enriched. The value of this must be a string encoded JSON object of the profile [userAccountInformation](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta) entity with the `userPrincipalName` and `externalDirectoryObjectId` properties set to values representing the person to be enriched.
+- `accounts` of type `string` representing the account of the user being enriched. The value of this must be a string encoded JSON object of the profile [userAccountInformation](https://learn.microsoft.com/graph/api/resources/useraccountinformation?view=graph-rest-beta) entity with the `userPrincipalName` and `externalDirectoryObjectId` properties set to values representing the person to be enriched.
 
 > [!IMPORTANT]
 > We expect changes during the public preview and ahead of general availability of this core schema configuration. Please regularly check this page for updates.
@@ -44,9 +44,9 @@ To ensure Microsoft 365 recognizes your connection as containing people data, yo
 
 After you create the connection and follow the schema requirements above, you must register the connection as a source of profile data and add it to the list of prioritized sources.
 
-You register the connection as a profile source by using the [Profile source API](https://learn.microsoft.com/en-us/graph/api/peopleadminsettings-post-profilesources?view=graph-rest-beta&tabs=http) with `sourceId` set to the connection ID and the `webUrl` property set to a HTTPS link to either the external system or a page with additional information about the source.
+You register the connection as a profile source by using the [Profile source API](https://learn.microsoft.com/graph/api/peopleadminsettings-post-profilesources?view=graph-rest-beta&tabs=http) with `sourceId` set to the connection ID and the `webUrl` property set to a HTTPS link to either the external system or a page with additional information about the source.
 
-After registration, you must add the connection to the list of prioritized profile sources using the [Profile property settings API](https://learn.microsoft.com/en-us/graph/api/profilepropertysetting-update?view=graph-rest-beta&tabs=http). Add the URL to the profile source, in the format of `https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='connectionId')` where `connectionId` is the unique id of the connection, to the `prioritizedSourceUrls` array. This array represents the order in which Microsoft 365 composes the view of a person. If you want your connection to be the highest prioritized source, add it as the first item in the array.
+After registration, you must add the connection to the list of prioritized profile sources using the [Profile property settings API](https://learn.microsoft.com/graph/api/profilepropertysetting-update?view=graph-rest-beta&tabs=http). Add the URL to the profile source, in the format of `https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='connectionId')` where `connectionId` is the unique id of the connection, to the `prioritizedSourceUrls` array. This array represents the order in which Microsoft 365 composes the view of a person. If you want your connection to be the highest prioritized source, add it as the first item in the array.
 
 ## Build your first custom connector
 
@@ -78,7 +78,7 @@ Follow these steps to create a new Entra ID app registration for your people con
 
 Follow these instructions to create the console application for the people connector:
 
-1. On a machine where you have installed the [.NET SDK](https://dotnet.microsoft.com/en-us/download), open a terminal window and type the following to create a new console application: `dotnet new console --name ContosoHrConnector`.
+1. On a machine where you have installed the [.NET SDK](https://dotnet.microsoft.com/download), open a terminal window and type the following to create a new console application: `dotnet new console --name ContosoHrConnector`.
 1. Navigate to the newly created folder with `cd ContosoHrConnector`.
 1. In the console, type the following to add the required packages: `dotnet add package Azure.Identity`, `dotnet add package Microsoft.Extensions.Configuration.Binder`, `dotnet add package Microsoft.Extensions.Configuration.UserSecrets`, `dotnet add package Microsoft.Graph.Beta --prerelease` and `System.CommandLine --prerelease`.
 1. Open Visual Studio Code with `code .`.
@@ -404,20 +404,20 @@ To run this sync, type the following command into your terminal window: `dotnet 
 - The schema requires that `accounts` property is present to identify the user to be enriched, as described above.
 - Microsoft Graph discards people data without matching `userPrincipalName` and `externalDirectoryObjectId` in the `accounts` entity collection.
 - Microsoft 365 only supports the following reserved profile entities for enrichment, and you must follow the JSON schema for the entities.
-  - [`accounts`](https://learn.microsoft.com/en-us/graph/api/resources/useraccountinformation?view=graph-rest-beta). Max 1, see above for minimum schema requirements.
-  - [`positions`](https://learn.microsoft.com/en-us/graph/api/resources/workposition?view=graph-rest-beta). Max 1 position.
-  - [`names`](https://learn.microsoft.com/en-us/graph/api/resources/personname?view=graph-rest-beta). Max 1 name.
-  - [`notes`](https://learn.microsoft.com/en-us/graph/api/resources/personannotation?view=graph-rest-beta). Max 1 note.
-  - [`emails`](https://learn.microsoft.com/en-us/graph/api/resources/itememail?view=graph-rest-beta). Max 3 e-mails.
-  - [`addresses`](https://learn.microsoft.com/en-us/graph/api/resources/itemaddress?view=graph-rest-beta). Max 3, one of each of Home, Work and Other.
-  - [`anniversaries`](https://learn.microsoft.com/en-us/graph/api/resources/personanniversary?view=graph-rest-beta). One of each wedding, birthday and work.
-  - [`phones`](https://learn.microsoft.com/en-us/graph/api/resources/itemphone?view=graph-rest-beta)
-  - [`webAccounts`](https://learn.microsoft.com/en-us/graph/api/resources/webaccount?view=graph-rest-beta)
-  - [`webSites`](https://learn.microsoft.com/en-us/graph/api/resources/personwebsite?view=graph-rest-beta). Max 1 web site.
-  - [`skills`](https://learn.microsoft.com/en-us/graph/api/resources/skillproficiency?view=graph-rest-beta)
-  - [`projects`](https://learn.microsoft.com/en-us/graph/api/resources/projectparticipation?view=graph-rest-beta)
-  - [`awards`](https://learn.microsoft.com/en-us/graph/api/resources/personaward?view=graph-rest-beta)
-  - [`certifications`](https://learn.microsoft.com/en-us/graph/api/resources/personcertification?view=graph-rest-beta)
+  - [`accounts`](https://learn.microsoft.com/graph/api/resources/useraccountinformation?view=graph-rest-beta). Max 1, see above for minimum schema requirements.
+  - [`positions`](https://learn.microsoft.com/graph/api/resources/workposition?view=graph-rest-beta). Max 1 position.
+  - [`names`](https://learn.microsoft.com/graph/api/resources/personname?view=graph-rest-beta). Max 1 name.
+  - [`notes`](https://learn.microsoft.com/graph/api/resources/personannotation?view=graph-rest-beta). Max 1 note.
+  - [`emails`](https://learn.microsoft.com/graph/api/resources/itememail?view=graph-rest-beta). Max 3 e-mails.
+  - [`addresses`](https://learn.microsoft.com/graph/api/resources/itemaddress?view=graph-rest-beta). Max 3, one of each of Home, Work and Other.
+  - [`anniversaries`](https://learn.microsoft.com/graph/api/resources/personanniversary?view=graph-rest-beta). One of each wedding, birthday and work.
+  - [`phones`](https://learn.microsoft.com/graph/api/resources/itemphone?view=graph-rest-beta)
+  - [`webAccounts`](https://learn.microsoft.com/graph/api/resources/webaccount?view=graph-rest-beta)
+  - [`webSites`](https://learn.microsoft.com/graph/api/resources/personwebsite?view=graph-rest-beta). Max 1 web site.
+  - [`skills`](https://learn.microsoft.com/graph/api/resources/skillproficiency?view=graph-rest-beta)
+  - [`projects`](https://learn.microsoft.com/graph/api/resources/projectparticipation?view=graph-rest-beta)
+  - [`awards`](https://learn.microsoft.com/graph/api/resources/personaward?view=graph-rest-beta)
+  - [`certifications`](https://learn.microsoft.com/graph/api/resources/personcertification?view=graph-rest-beta)
 - You must provide valid string encoded JSON objects for profile entities. Microsoft Graph ignores invalid values.
 - You must always provide profile entities as an array of entities.
 - Microsoft Graph treats any other properties, besides the reserved profile entities above in the connection schema, as a custom property.
