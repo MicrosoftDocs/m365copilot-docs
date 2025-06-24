@@ -62,10 +62,10 @@ Follow these steps to create a new Entra ID app registration for your people con
 1. Click **Register** to complete the registration.
 1. Select **API Permissions** and choose **+ Add a permission** to add permissions to the app.
 1. Choose **Microsoft Graph** and then **Application permissions** and select the following permission scopes:
-    1. **ExternalConnection.ReadWrite.All** (required to create the connection and schema)
-    1. **ExternalItem.ReadWrite.All** (required to ingest people data)
+    1. **ExternalConnection.ReadWrite.OwnedBy** (required to create the connection and schema)
+    1. **ExternalItem.ReadWrite.OwnedBy** (required to ingest people data)
     1. **PeopleSettings.ReadWrite.All** (required to add the connection as a profile source)
-    1. **Users.Read.All** (preview requirement for this walkthrough)
+    1. **Users.ReadBasic.All** (preview requirement for this walkthrough)
 1. Click **Add Permissions** and then click **Grant admin consent for Contoso** (replace Contoso with your organization’s name) to grant these permissions to the application. Select **Yes** to complete the grant.
 1. Select **Certificates & secrets** and create a new secret with **+ New client secret**. Give it an appropriate description and expiry length and click **Add**.
 1. Note the **Secret** value and store it in a safe location.
@@ -399,7 +399,7 @@ To run this sync, type the following command into your terminal window: `dotnet 
 
 ## Notes and limitations
 
-- Microsoft 365 treats all ingested data as organizational public data.
+- All people data provided via a Copilot connector is visible to all users in the tenant. This connector data is stored in the user’s Microsoft 365 profile. See [Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/graph/peopleconnectors#compliance-privacy-and-data-usage) for more information.
 - You must set the ACL exactly as shown in the code example above.
 - The schema requires that `accounts` property is present to identify the user to be enriched, as described above.
 - Microsoft Graph discards people data without matching `userPrincipalName` and `externalDirectoryObjectId` in the `accounts` entity collection.
@@ -422,12 +422,11 @@ To run this sync, type the following command into your terminal window: `dotnet 
 - You must always provide profile entities as an array of entities.
 - Microsoft Graph treats any other properties, besides the reserved profile entities above in the connection schema, as a custom property.
 - Custom properties show up in profile cards as notes during the preview, but Microsoft will remove them before or at general availability.
-- Microsoft 365 might take up to 48 hours after you ingest data about a person before it becomes available in people experiences or Copilot.
-- Connections with people data do not support staged connections.
+- Microsoft 365 might take up to 48 hours after you ingest data about a person before it becomes available in search, people experiences or Copilot.
+- Connections with people data do not support [staged connections](https://learn.microsoft.com/microsoftsearch/staged-rollout-for-graph-connectors).
 - Indexed items in connections with people data only appear in people search.
 
 ## Related content
 
 - [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
-- [Copilot connector samples](samples.md#copilot-connector-samples)
 - [Community samples](https://github.com/pnp/graph-connectors-samples)
