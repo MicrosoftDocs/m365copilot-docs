@@ -57,22 +57,6 @@ dotnet add package Microsoft.Agent.M365Copilot.Beta
 Install-Package Microsoft.Agent.M365Copilot.Beta
 ```
 
-### Install the Copilot APIs Python client libraries
-
-The Copilot APIs Python client libraries are available in the Python Package Index.
-
-```py
-pip install microsoft-agents-m365copilot-beta
-```
-
-### Install the Copilot APIs TypeScript client libraries
-
-The Copilot APIs TypeScript client libraries are available in npm.
-
-```Shell
-npm install @microsoft/agents-m365copilot-beta –save
-```
-
 ## Create a Copilot APIs client and make an API call
 
 The following code example shows how to create an instance of a Microsoft 365 Copilot APIs client with an authentication provider in the supported languages. The authentication provider handles acquiring access tokens for the application. Many different authentication providers are available for each language and platform. The different authentication providers support different client scenarios. For details about which provider and options are appropriate for your scenario, see [Choose an Authentication Provider](/graph/sdks/choose-authentication-providers). 
@@ -84,14 +68,6 @@ The client ID is the app registration ID that is generated when you [register yo
 # [C#](#tab/csharp)
 
 [!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_csharp.md)]
-
-# [Python](#tab/python)
-
-[!INCLUDE [sample-code](../api-reference/includes/snippets/python/create_client_python.md)]
-
-# [TypeScript](#tab/typescript)
-
-[!INCLUDE [sample-code](../api-reference/includes/snippets/typescript/create_client_typescript.md)]
 
 ---
 

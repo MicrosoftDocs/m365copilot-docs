@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/optimize-sharepoint-content.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/optimize-content-retrieval",
+      "redirect_document_id": false
+    }
+  ]
+}
