@@ -19,27 +19,20 @@ The code interpreter capability is available to Copilot Chat users with no meter
 > [!NOTE]
 > Support for in-context agents that have code interpreter enabled varies by host.
 
-## Code interpreter examples
+## Code interpreter capabilities
 
-### Data graphing
+Adding code interpreter to your agents offers your users a broad range of functionality, including:
 
-The user prompt "Graph the first 20 numbers in a Fibonacci sequence" generates both a line graph and, when the user clicks the `</> Code` button, provides the corresponding Python code.
+- Data graphing
+- Data visualizations
+- Creating files containing synthetic data
+- Creating QR codes
+- Solving complex math problems
+- Modifying uploaded images
 
-The following images show examples of the results of a data graphing request.
+Copilot can also provide copyable and downloadable versions of the code it generates when running these tasks.
 
-:::image type="content" source="assets/images/code-interpreter-python-1.png" alt-text="Graph response to the user prompt":::
-
-:::image type="content" source="assets/images/code-interpreter-python-2.png" alt-text="Python code response to the user prompt":::
-
-### Data visualization
-
-The user prompt "Create a word cloud of top pet names" generates a word cloud that includes the top names, as shown in the following example.
-
-:::image type="content" source="assets/images/code-interpreter-pet-word-cloud.png" alt-text="Word cloud response to the user prompt":::
-
-### Enable code interpreter
-
-#### Microsoft 365 Agents Toolkit
+## Enable code interpreter in Microsoft 365 Agents Toolkit
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest file, as shown in the following example.
 
@@ -56,7 +49,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-#### Copilot Studio agent builder
+### Enable code interpreter in Copilot Studio agent builder
 
 If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Code interpreter**.
 
@@ -64,6 +57,7 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 
 ## Related content
 
+- [Code interpreter examples](code-interpreter-examples.md)
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Declarative agent manifest reference](declarative-agent-manifest-1.4.md)
 - [Add the image generator capability to your agent](image-generator.md)
