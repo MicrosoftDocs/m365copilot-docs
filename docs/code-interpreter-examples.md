@@ -32,11 +32,11 @@ When the user clicks the `</> Code` button, the agent provides the corresponding
 
 Users can also upload various types of data files to generate graphs and charts so they can visualize their data. For example, a user could upload a file with sales data and request a bar chart or line graph of the data. For example, the user prompt: *Create a bar chart and line graph of my uploaded sales data.* returns the following:
 
-:::image type="content" source="docs\assets\images\code-interpreter-examples\code-interpreter-sales-data-bar-chart.png":::
+:::image type="content" source="docs\assets\images\code-interpreter-examples\code-interpreter-sales-data-bar-chart.png" alt-text="Bar chart of sample sales data"::::::
 
 and
 
-:::image type="content" source="docs\assets\images\code-interpreter-examples\code-interpreter-sales-data-bar-line-graph.png":::
+:::image type="content" source="docs\assets\images\code-interpreter-examples\code-interpreter-sales-data-line-graph.png" alt-text="Line graph of sample sales data":::
 
 ## Create data visualizations and QR Codes
 
