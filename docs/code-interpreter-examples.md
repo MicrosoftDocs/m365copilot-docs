@@ -24,19 +24,19 @@ With code interpreter, you can allow your users to:
 
 This versatile capability can be used in a variety of ways. For example, users can prompt the agent to "Graph the first 20 numbers in a Fibonacci sequence", which produces a line graph like this:
 
-:::image type="content" source="docs\assets\images\code-interpreter-examples\code-interpreter-fibonacci-graph.png" alt-text="Screenshot of a line graph showing the first 20 numbers of a Fibonacci sequence.":::
+:::image type="content" source="docs\assets\images\code-interpreter-examples\code-interpreter-fibonacci-line-graph.png" alt-text="Screenshot of a line graph showing the first 20 numbers of a Fibonacci sequence.":::
 
 When the user clicks the `</> Code` button, the agent provides the corresponding Python code:
 
-:::image type="content" "source"="docs\assets\images\code-interpreter-examples\code-interpreter-fibonacci-python.png" alt-text="Screenshot of the Python code for graphing the first 20 numbers of a Fibonacci sequence.":::
+:::image type="content" source="docs\assets\images\code-interpreter-examples\code-interpreter-fibonacci-python.png" alt-text="Screenshot of the Python code for graphing the first 20 numbers of a Fibonacci sequence.":::
 
 Users can also upload various types of data files to generate graphs and charts so they can visualize their data. For example, a user could upload a file with sales data and request a bar chart or line graph of the data. For example, the user prompt: *Create a bar chart and line graph of my uploaded sales data.* returns the following:
 
-:::image type="content" "source"="docs\assets\images\code-interpreter-examples\code-interpreter-sales-data-bar-chart.png":::
+:::image type="content" source="docs\assets\images\code-interpreter-examples\code-interpreter-sales-data-bar-chart.png":::
 
 and
 
-:::image type="content" "source"="docs\assets\images\code-interpreter-examples\code-interpreter-sales-data-bar-line-graph.png":::
+:::image type="content" source="docs\assets\images\code-interpreter-examples\code-interpreter-sales-data-bar-line-graph.png":::
 
 ## Create data visualizations and QR Codes
 
