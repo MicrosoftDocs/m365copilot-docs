@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 06/09/2025
+ms.date: 06/17/2025
 ms.topic: overview
 ---
 
@@ -15,6 +15,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## June 2025
+
+### Embedded file content as knowledge
+
+Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded file content](copilot-studio-agent-builder-build.md#embedded-file-content).
 
 ### Use the Retrieval API (preview) to retrieve data
 
@@ -46,7 +50,7 @@ A new version of the API plugin manifest schema is available. [API plugin manife
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.4](declarative-agent-manifest-1.4.md) adds the following.
 
-- Added the `sensitivity_label`, `disclaimer`, and `behavior_overrides` properties to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object).
+- Added the `behavior_overrides` property to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object).
 - Added the `part_type` and `part_id` properties to the [Items by SharePoint IDs object](declarative-agent-manifest-1.4.md#items-by-sharepoint-ids-object).
 - Added the [Scenario models](declarative-agent-manifest-1.4.md#scenario-models-object) capability.
 
@@ -86,7 +90,7 @@ Microsoft 365 Copilot Chat users can now access Copilot Studio agent builder to 
 
 ### Add websites as knowledge in agent builder
 
-You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-build.md#web-content).
+You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-build.md#websites).
 
 ### Custom engine agents available in Copilot app (preview)
 

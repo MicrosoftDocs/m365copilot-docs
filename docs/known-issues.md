@@ -24,7 +24,7 @@ In some cases, an agent installed from the store doesn't immediately show up in 
 
 ### Power Automate Flows aren't fully supported as actions in declarative agents
 
-Power Automate Flows as actions in declarative agents might not run reliably and might not return results.
+Power Automate Flows as actions in declarative agents might not run reliably and might not return results. In some cases, newly created flows may not appear in the Add Action interface within Copilot Studio, even if the action counter reflects their presence.
 
 **Workaround:** Currently, no workaround for the issue that the flows might not return results is available. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
 
