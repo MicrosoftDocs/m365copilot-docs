@@ -42,7 +42,7 @@ and
 
 The user prompt "Create a word cloud of top pet names" generates a word cloud that includes the top names, as shown in the following example.
 
-:::image type="content" "source"="docs\assets\images\code-interpreter-examples\code-interpreter-pet-word-cloud.png" alt-text="Word cloud response to the user prompt":::
+:::image type="content" source"="docs\assets\images\code-interpreter-examples\code-interpreter-pet-word-cloud.png" alt-text="Word cloud response to the user prompt":::
 
 ## Create Synthetic data
 
