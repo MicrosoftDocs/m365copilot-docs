@@ -10,7 +10,7 @@ ms.date: 07/15/2025
 
 # Code interpreter examples
 
-The code interpreter capability allows declarative agents to write and run Python code in a sandboxed environment. This capability enables agents to solve complex tasks iteratively, such as data analysis, generating visualizations, and solving mathematical problems. It uses the reasoning model to write and run Python code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the generated code. It can also produce images or files based on the scenario and accepts files as input for modifications and analysis.
+The code interpreter capability allows declarative agents to write and run Python code in a sandboxed environment. This capability enables agents to solve complex tasks iteratively, such as data analysis, generate visualizations, and solve mathematical problems. It uses the reasoning model to write and run Python code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the generated code. It can also produce images or files based on the scenario and accepts files as input for modifications and analysis.
 
 With code interpreter, you can allow your users to:
 
@@ -22,15 +22,15 @@ With code interpreter, you can allow your users to:
 
 ## Create graphs and charts
 
-This versatile capability can be used in a variety of ways. For example, users can prompt the agent to "Graph the first 20 numbers in a Fibonacci sequence", which produces a line graph like this:
+This versatile capability can be used in various ways. For example, users can prompt the agent to "Graph the first 20 numbers in a Fibonacci sequence", which produces a line graph like this:
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-fibonacci-line-graph.png" alt-text="Screenshot of a line graph showing the first 20 numbers of a Fibonacci sequence.":::
 
-When the user clicks the `</> Code` button, the agent provides the corresponding Python code:
+When the user selects the `</> Code` button, the agent provides the corresponding Python code:
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-fibonacci-python.png" alt-text="Screenshot of the Python code for graphing the first 20 numbers of a Fibonacci sequence.":::
 
-Users can also upload various types of data files to generate graphs and charts so they can visualize their data. For example, a user could upload a file with sales data and request a bar chart or line graph of the data. For example, the user prompt: "Create a bar chart and line graph of my uploaded sales data." returns the following:
+Users can also upload various types of data files to generate graphs and charts so they can visualize their data. For example, a user could upload a file with sales data and request a bar chart or line graph of the data. For example, the user prompt: "Create a bar chart and line graph of my uploaded sales data." returns the following response:
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-sales-data-bar-chart.png" alt-text="Bar chart of sample sales data":::
 
@@ -50,7 +50,7 @@ For a word cloud, the prompt "Create a word cloud of top pet names" generates an
 
 ## Create Synthetic data
 
-When a user needs sample data to work with, integrating code interpreter allows them to create synthetic data for a variety of purposes in a number of formats. Here are a couple of examples:
+When a user needs sample data to work with, integrating code interpreter allows them to create synthetic data for a variety of purposes in several formats. Here are a couple of examples:
 
 **User prompt:** "Create a table of 10 fake financial transactions including date, amount, merchant, and category."
 
@@ -60,13 +60,13 @@ When a user needs sample data to work with, integrating code interpreter allows 
 **User prompt:** "Generate 20 synthetic customer support chat transcripts about billing issues."
 
 **Response:**
-:::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-synthetic-chats.png" alt-text="Table of synthetic financial transactions.":::
+:::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-synthetic-chats.png" alt-text="Table of synthetic customer support chats.":::
 
 ## Solve complex math problems
 
-With code intgerpreter enabled, users can also have your agent solve complex math problems. For example, users can have your agent solve complex math problems, such as this calculus example:
+With code interpreter enabled, users can also have your agent solve complex math problems. For example, users can have your agent solve complex math problems, such as this calculus example:
 
-**User prompt:** Provide the integral the area under the curve for the function \( f(x) = x^3 - 4x^2 + 6x - 2 \) from \( x = 0 \) to \( x = 3 \).
+**User prompt:** Provide the integral of the area under the curve for the function \( f(x) = x^3 - 4x^2 + 6x - 2 \) from \( x = 0 \) to \( x = 3 \).
 
 **Response:**
 
