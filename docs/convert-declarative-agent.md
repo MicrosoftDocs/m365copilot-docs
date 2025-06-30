@@ -145,9 +145,10 @@ To update your app manifest:
 After you update your agent manifest, repackage your app:
 
 1. Add your updated agent manifest, app icon, and any other assets to a new .zip file.
-1. Submit the new package to update your existing app:
-    1. If your agent is internal to your organization, use the Microsoft 365 admin center (requires tenant admin permissions).
-    2. If your agent is published to the Agent Store, use the [Developer Portal](https://dev.teams.microsoft.com/home) to manage and update your app listing. Users need to consent to the app update via **Manage your apps** in Teams.
+1. Submit the new package to update your existing app. If your agent is internal to your organization, use the Microsoft 365 admin center (requires tenant admin permissions).
+
+    > [!NOTE]
+    > Submission of your app package to the commerical marketplace via Partner Center isn't currently supported.
 
 ## User experience
 
