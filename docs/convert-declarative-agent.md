@@ -135,10 +135,10 @@ To update your app manifest:
     For schema reference information, see [copilotAgents object](/microsoft-365/extensibility/schema/root-copilot-agents).
 
     > [!NOTE]
-    > Your app manifest can include either a declarative agent node or a custom engine agent node, but not both. 
+    > Your app manifest can include either a declarative agent node or a custom engine agent node, but not both.
 
 3. Update the app version number for your app in the **version** property.
-4. Make sure that the **id** property uses the same ID that you used in the app manifest for the declarative agent. 
+4. Make sure that the **id** property uses the same ID that you used in the app manifest for the declarative agent.
 
 ### Update and submit your app package
 
