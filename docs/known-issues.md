@@ -101,7 +101,6 @@ The following table lists features that aren't currently supported for custom en
 | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
 | Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>[Media](https://adaptivecards.microsoft.com/?topic=Media)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>People picker</li><li>@mention</li><li>Password control</li></ul> |
 | Sensitivity labels | Sensitivity labels aren't supported. |
-| Localization | Localization isn't currently supported. |
 
 ## Related content
 
