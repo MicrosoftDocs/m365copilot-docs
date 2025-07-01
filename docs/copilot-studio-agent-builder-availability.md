@@ -54,6 +54,7 @@ The following authoring languages are supported:
 - French (France) (fr-FR)
 - German (de-DE)
 - Greek (el-GR)
+- Hebrew (he-IL)
 - Hindi (hi-IN)
 - Indonesian (id-ID)
 - Italian (it-IT)
@@ -81,6 +82,7 @@ The **Describe** tab supports the following languages:
 - Finnish (fi-FI)
 - French 
 - German (de-DE)
+- Hebrew (he-IL)
 - Hindi (hi-IN)
 - Indonesian (id-ID)
 - Italian (it-IT)
