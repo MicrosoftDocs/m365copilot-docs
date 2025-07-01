@@ -16,6 +16,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## June 2025
 
+### Maximum number of conversation starters for declarative agents
+
+You can now add up to 12 conversation starters to your declarative agent when you use the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents) to create your agent.
+
 ### Embedded file content as knowledge
 
 Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded file content](copilot-studio-agent-builder-build.md#embedded-file-content).
