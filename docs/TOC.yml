@@ -224,7 +224,7 @@
 - name: Add knowledge with Copilot connectors
   items:
   - name: Copilot connectors in Microsoft 365 Copilot
-    href: overview-graph-connector.md
+    href: overview-copilot-connector.md
   - name: Prebuilt connectors gallery
     href: /microsoftsearch/connectors-gallery?context=/microsoft-365-copilot/extensibility/context
   - name: Build your first connector
