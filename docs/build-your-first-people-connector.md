@@ -410,7 +410,6 @@ To run this sync, type the following command into your terminal window: `dotnet 
   - [`notes`](https://learn.microsoft.com/graph/api/resources/personannotation?view=graph-rest-beta). Max 1 note.
   - [`emails`](https://learn.microsoft.com/graph/api/resources/itememail?view=graph-rest-beta). Max 3 e-mails.
   - [`addresses`](https://learn.microsoft.com/graph/api/resources/itemaddress?view=graph-rest-beta). Max 3, one of each of Home, Work and Other.
-  - [`anniversaries`](https://learn.microsoft.com/graph/api/resources/personanniversary?view=graph-rest-beta). One of each wedding, birthday and work.
   - [`phones`](https://learn.microsoft.com/graph/api/resources/itemphone?view=graph-rest-beta)
   - [`webAccounts`](https://learn.microsoft.com/graph/api/resources/webaccount?view=graph-rest-beta)
   - [`webSites`](https://learn.microsoft.com/graph/api/resources/personwebsite?view=graph-rest-beta). Max 1 web site.
