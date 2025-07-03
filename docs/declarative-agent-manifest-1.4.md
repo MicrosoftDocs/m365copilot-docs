@@ -8,6 +8,8 @@ ms.date: 06/12/2025
 ms.topic: reference
 ---
 
+<!-- markdownlint-disable MD024 MD059 -->
+
 # Declarative agent schema 1.4 for Microsoft 365 Copilot
 
 This article describes the 1.4 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
@@ -65,7 +67,9 @@ The declarative agent manifest object contains the following properties.
 
 ### Declarative agent manifest object example
 
-The following JSON is an example of required fields within a declarative agent manifest.
+The following code is an example of required fields within a declarative agent manifest.
+
+#### [JSON](#tab/json)
 
 ```json
 {
@@ -74,6 +78,23 @@ The following JSON is an example of required fields within a declarative agent m
   "instructions": "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
 }
 ```
+
+#### [TypeSpec](#tab/tsp)
+
+```typescript
+@agent(
+  "Repairs agent",
+  "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
+)
+@instructions(
+  "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
+)
+namespace MyAgent {
+
+}
+```
+
+---
 
 ### Capabilities object
 
@@ -94,6 +115,8 @@ The capabilities object is the base type of objects in the `capabilities` proper
 > Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
 
 #### Capabilities object example
+
+##### [JSON](#tab/json)
 
 ```json
 {
@@ -175,6 +198,54 @@ The capabilities object is the base type of objects in the `capabilities` proper
   ]
 }
 ```
+
+##### [TypeSpec](#tab/tsp)
+
+```typescript
+namespace MyAgent {
+  op webSearch is AgentCapabilities.WebSearch<TSites = [
+    {
+        url: "https://contoso.com"
+    }
+  ]>;
+
+  op od_sp is AgentCapabilities.OneDriveAndSharePoint<
+    TItemsBySharePointIds = [
+      {
+        site_id: "bc54a8cc-8c2e-4e62-99cf-660b3594bbfd";
+        web_id: "a5377427-f041-49b5-a2e9-0d58f4343939";
+        list_id: "78A4158C-D2E0-4708-A07D-EE751111E462";
+        unique_id: "304fcfdf-8842-434d-a56f-44a1e54fbed2";
+      }
+    ],
+    TItemsByUrl = [
+      {
+        url: "https://contoso.sharepoint.com/teams/admins/Documents/Folders1"
+      }
+    ]
+  >;
+
+  op graphConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
+    {
+        connection_id: "jiraTickets"
+    }
+  ]>;
+
+  op graphicArt is AgentCapabilities.GraphicArt;
+
+  op codeInterpreter is AgentCapabilities.CodeInterpreter;
+
+  op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
+    {
+        url: "https://teams.microsoft.com/l/channel/19%3ApO0102YGEBRSH6RziXCxEgB4mtb7-5hIlDzAjtxs_dg1%40thread.tacv2/G%C3%A9n%C3%A9ral?groupId=2670cf94-acf5-48f4-96d4-c58dd8937afc&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47"
+    }
+  ]>;
+
+  op people is AgentCapabilities.People;
+}
+```
+
+---
 
 #### Web search object
 
@@ -370,7 +441,7 @@ The Teams messages object contains the following properties.
 | Property | Type                                     | Description |
 | -------- | ---------------------------------------- | ----------- |
 | `name`   | String                                   | Required. Must be set to `TeamsMessages`. |
-| `urls`   | Array of [Teams URLs](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
+| `urls`   | Array of [Teams URLs](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
 
 ##### Teams URL object
 
@@ -380,7 +451,7 @@ The Teams URL object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `url`    | String | Required. A well-formatted Teams URL that links to either a Team channel, team, or meeting chat. |
+| `url`    | String | Required. A well-formatted Teams URL that links to either a Teams channel, meeting chat, group chat, or 1:1 chat. |
 
 #### Email object
 
@@ -448,6 +519,8 @@ The conversation starter object contains the following properties:
 
 #### Conversation starters object example
 
+#### [JSON](#tab/json)
+
 ```json
 {
   "conversation_starters": [
@@ -458,6 +531,17 @@ The conversation starter object contains the following properties:
   ]
 }
 ```
+
+#### [TypeSpec](#tab/tsp)
+
+```typescript
+@conversationStarter(#{
+  title: "My Open Repairs",
+  text: "What open repairs are assigned to me?"
+)}
+```
+
+---
 
 ### Actions object
 
@@ -472,6 +556,8 @@ The action object contains the following properties.
 
 #### Actions object example
 
+##### [JSON](#tab/json)
+
 ``` json
 {
   "actions": [
@@ -482,6 +568,23 @@ The action object contains the following properties.
   ]
 }
 ```
+
+##### [TypeSpec](#tab/tsp)
+
+```typescript
+@service
+@server("https://jsonplaceholder.typicode.com")
+@actions(#{
+  nameForHuman: "Posts APIs",
+  descriptionForHuman: "Manage blog post items on JSON Placeholder APIs.",
+  descriptionForModel: "Read, create, update and delete blog post items on the JSON Placeholder APIs."
+})
+namespace PostsAPI {
+  // All operations from the actions
+}
+```
+
+---
 
 ### Behavior overrides object
 
