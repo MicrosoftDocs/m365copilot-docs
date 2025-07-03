@@ -14,8 +14,6 @@ Microsoft 365 Copilot is the user interface for AI. Custom engine agents are spe
 
 The agent user experience (UX) provides intuitive, efficient, and contextually relevant interactions to enhance user satisfaction and productivity. This article describes the native UX features on Copilot chat and Teams platform that you can apply and customize in your custom engine agents to enhance user interactions.
 
-[!INCLUDE [preview-disclaimer](includes/preview-disclaimer-cea.md)]
-
 ## Prompt starters
 
 Prompt starters, also known as conversation starters, provide predefined prompts in your agent to help users initiate interactions. You can define the initial conversation messages in the latest `manifest.json`.
