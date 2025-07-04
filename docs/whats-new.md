@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 06/17/2025
+ms.date: 07/03/2025
 ms.topic: overview
 ---
 
@@ -13,6 +13,12 @@ ms.topic: overview
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
+
+## July 2025
+
+### Prioritize knowledge sources in agent builder
+
+When you use Copilot Studio agent builder to build your agent, you can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, see [Prioritize your knowledge sources](copilot-studio-agent-builder-build.md#prioritize-your-knowledge-sources-over-general-knowledge).
 
 ## June 2025
 
