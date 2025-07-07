@@ -255,7 +255,7 @@
     items:
     - name: Overview
       href: api-reference/retrieval-api-overview.md
-    - name: Retrieve data
+    - name: API Reference
       href: api-reference/copilotroot-retrieval.md
     - name: Complex types
       items:
