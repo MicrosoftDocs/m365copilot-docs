@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 07/03/2025
+ms.date: 07/08/2025
 ms.topic: conceptual
 ---
 
@@ -244,7 +244,9 @@ If at least one connector is enabled, you can add it to your agent. Your agent i
 
 ## Prioritize your knowledge sources over general knowledge
 
-You can configure your agent to prioritize the knowledge sources you provide—such as SharePoint content or embedded files—over general AI knowledge. This helps to ensure that the agent's answers are accurate and grounded in knowledge sources. To prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**. When this setting is turned on, the agent answers questions using the knowledge sources you added. If it can't find relevant information in the knowledge sources, it responds with a fallback message instead of responding with general AI knowledge.
+You can configure your agent to prioritize the knowledge sources you provide — such as SharePoint content or embedded files — for responses that requires knowledge-based searches. This ensures that the agent's answers are grounded in your knowledge sources. The agent will answer simple questions that don't require searching based on its general knowledge, but will use your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that indicates that it can't find the information.
+
+To prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**. 
 
 ## Add capabilities
 
