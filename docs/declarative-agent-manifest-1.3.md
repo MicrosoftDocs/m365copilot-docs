@@ -8,7 +8,7 @@ ms.date: 03/24/2025
 ms.topic: reference
 ---
 
-<!-- markdownlint-disable MD024 MD051 -->
+<!-- markdownlint-disable MD024 MD059 -->
 
 # Declarative agent schema 1.3 for Microsoft 365 Copilot
 
@@ -68,7 +68,7 @@ The declarative agent manifest object contains the following properties.
 
 ### Declarative agent manifest object example
 
-The following JSON is an example of required fields within a declarative agent manifest.
+The following code is an example of required fields within a declarative agent manifest.
 
 #### [JSON](#tab/json)
 
@@ -217,7 +217,7 @@ namespace MyAgent {
     ]
   >;
 
-  op graphConnectors is AgentCapabilities.GraphConnectors<TConnections = [
+  op graphConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
     {
         connection_id: "jiraTickets"
     }
@@ -386,7 +386,7 @@ The Teams messages object contains the following properties.
 | Property | Type                                     | Description |
 | -------- | ---------------------------------------- | ----------- |
 | `name`   | String                                   | Required. Must be set to `TeamsMessages`. |
-| `urls`   | Array of [Teams URLs](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
+| `urls`   | Array of [Teams URLs](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
 
 ##### Teams URL object
 
@@ -396,7 +396,7 @@ The Teams URL object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `url`    | String | Required. A well-formatted Teams URL that links to either a Team channel, team, or meeting chat. |
+| `url`    | String | Required. A well-formatted Teams URL that links to either a Teams channel, meeting chat, group chat, or 1:1 chat.  |
 
 #### Email object
 

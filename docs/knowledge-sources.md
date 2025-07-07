@@ -189,7 +189,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 ## Teams messages
 
-You can configure agents to use Teams channels, meeting chats, group chats, 1:1 chats, and teams as knowledge sources. You can choose to specify up to five links to teams, channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
+You can configure agents to use Teams channels, meeting chats, group chats, and 1:1 chats as knowledge sources. You can choose to specify up to five links to channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, meetings, and individual and group chats, as knowledge sources.
 
 Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has `OneDriveAndSharePoint` enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
@@ -213,13 +213,13 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-#### Get the URL for team, channel, or meeting
+#### Get the URL for a channel or meeting
 
-To get the URL for a Teams team or channel, choose the three dots (...) next to the team or channel name and choose **Get link to team** or **Get link to channel**.
+To get the URL for a Teams channel, choose the three dots (...) next to the channel name and choose **Get link to channel**.
 
 To get the URL for a Teams meeting, open the meeting, choose the arrow next to **Join**, and choose **Copy join link**.
 
-#### Get the URL for group or 1:1 chat
+#### Get the URL for a group or 1:1 chat
 
 To get the URL for a group or 1:1 chat, you need a deep link that includes the **chatId**. The deep link has the following format: `https://teams.microsoft.com/l/chat/<chatId>/conversations`. The **chatId** value is different for each chat.
 
