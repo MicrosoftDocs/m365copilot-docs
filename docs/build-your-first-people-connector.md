@@ -28,19 +28,19 @@ Microsoft 365 supports the following properties for enriching people data. To en
 
 | Property | Description |
 | -------- | ----------- |
-| [`accounts`](/graph/api/resources/useraccountinformation) | Max 1, see above for minimum schema requirements. |
-| [`addresses`](/graph/api/resources/itemaddress) | Max 3, one of each of Home, Work and Other. |
-| [`awards`](/graph/api/resources/personaward) | |
-| [`certifications`](/graph/api/resources/personcertification) | |
-| [`emails`](/graph/api/resources/itememail) | Max 3 e-mails. |
-| [`names`](/graph/api/resources/personname) | Max 1 name. |
-| [`notes`](/graph/api/resources/personannotation) | Max 1 note. |
-| [`phones`](/graph/api/resources/itemphone) | |
-| [`positions`](/graph/api/resources/workposition) | Max 1 position. |
-| [`projects`](/graph/api/resources/projectparticipation) | |
-| [`skills`](/graph/api/resources/skillproficiency) | |
-| [`webAccounts`](/graph/api/resources/webaccount) | |
-| [`webSites`](/graph/api/resources/personwebsite) | Max 1 web site. |
+| [`accounts`](/graph/api/resources/useraccountinformation) | Max 1. Indicates the Azure Active Directory user the item extends. |
+| [`addresses`](/graph/api/resources/itemaddress) | Max 3, one each of `Home`, `Work` and `Other`. Adds addresses to the user. |
+| [`awards`](/graph/api/resources/personaward) | Describes awards the user has earned. |
+| [`certifications`](/graph/api/resources/personcertification) | Describes certifications the user has earned. |
+| [`emails`](/graph/api/resources/itememail) | Max 3. Adds email addresses to the user. |
+| [`names`](/graph/api/resources/personname) | Max 1. Adds names to the user. |
+| [`notes`](/graph/api/resources/personannotation) | Max 1. Adds notes to the user. |
+| [`phones`](/graph/api/resources/itemphone) | Adds phone numbers to the user. |
+| [`positions`](/graph/api/resources/workposition) | Max 1. Adds work positions to the user. |
+| [`projects`](/graph/api/resources/projectparticipation) | Describes projects the user has participated in. |
+| [`skills`](/graph/api/resources/skillproficiency) | Describes skills the user is proficient in. |
+| [`webAccounts`](/graph/api/resources/webaccount) | Describes external web accounts the user has. |
+| [`webSites`](/graph/api/resources/personwebsite) | Max 1. Describes a website for the user. |
 
 > [!IMPORTANT]
 > We expect changes during the public preview and ahead of general availability of this core schema configuration. Please regularly check this page for updates.
