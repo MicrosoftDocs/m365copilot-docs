@@ -244,7 +244,7 @@ If at least one connector is enabled, you can add it to your agent. Your agent i
 
 ## Prioritize your knowledge sources over general knowledge
 
-You can configure your agent to prioritize the knowledge sources you provide — such as SharePoint content or embedded files — when it responds to queries that require knowledge-based searches. This ensures that the agent's answers are grounded in your knowledge sources. The agent will answer simple questions that don't require searching based on its general knowledge, but will use your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that indicates that it can't find the information.
+You can configure your agent to prioritize the knowledge sources you provide — such as SharePoint content or embedded files — when it responds to queries that require knowledge-based searches. This ensures that the agent's answers are grounded in your knowledge sources. The agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
 
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
 
