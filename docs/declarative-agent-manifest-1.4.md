@@ -590,11 +590,12 @@ namespace PostsAPI {
 
 An optional JSON object that contains configuration settings that override the agent's behavior.
 
-The behavior overrides object contains the following property.
+The behavior overrides object contains the following properties.
 
 | Property               | Type                                                        | Description |
 | ---------------------- | ----------------------------------------------------------- | ----------- |
 | `suggestions`          | [Suggestions object](#suggestions-object)                   | Optional. Contains configuration settings for the suggestions feature. |
+| `special_instructions` | [Special instructions object](#special-instructions-object) | Optional. Contains settings for injecting special instructions into the prompt. |
 
 #### Suggestions object
 
@@ -605,6 +606,16 @@ The suggestions object contains the following property.
 | Property   | Type    | Description |
 | ---------- | ------- | ----------- |
 | `disabled` | Boolean | Required. If set to `true`, the suggestions feature will be disabled. The default value is `false`. |
+
+#### Special instructions object
+
+An optional JSON object that contains settings for injecting special instructions into the prompt.
+
+The disclaimer object contains the following property.
+
+| Property                     | Type    | Description |
+| ---------------------------- | ------- | ----------- |
+| `discourage_model_knowledge` | Boolean | Required. If set to `true`, the agent is discouraged from using model knowledge when generating responses. The default value is `false`. |
 
 ## Declarative agent manifest example
 
