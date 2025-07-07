@@ -16,9 +16,9 @@ For the latest information, announcements, and news about preview and generally 
 
 ## July 2025
 
-### Prioritize knowledge sources in agent builder
+### Prioritize declarative agent knowledge sources
 
-When you use Copilot Studio agent builder to build your agent, you can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, see [Prioritize your knowledge sources](copilot-studio-agent-builder-build.md#prioritize-your-knowledge-sources-over-general-knowledge).
+You can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, for Copilot Studio agent builder, see [Prioritize your knowledge sources](copilot-studio-agent-builder-build.md#prioritize-your-knowledge-sources-over-general-knowledge); for Microsoft 365 Agents Toolkit, see [Special instructions object](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.4#special-instructions-object).
 
 ## June 2025
 
