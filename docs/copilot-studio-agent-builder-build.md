@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 06/17/2025
+ms.date: 07/08/2025
 ms.topic: conceptual
 ---
 
@@ -241,6 +241,12 @@ Copilot connectors allow agents to include knowledge from external repositories 
 If at least one connector is enabled, you can add it to your agent. Your agent is able to answer questions related to that connector. The information retrieved from the connector is indexed and refreshed according to the way in which the connector was configured. The agent can cite relevant information from the indexed data and link the end user to the data source.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-copilot-connectors.png" alt-text="Copilot connectors in the Knowledge sources":::
+
+## Prioritize your knowledge sources over general knowledge
+
+You can configure your agent to prioritize the knowledge sources you provide — such as SharePoint content or embedded files — when it responds to queries that require knowledge-based searches. This helps to ensure that the agent's answers are grounded in your knowledge sources. The agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
+
+To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
 
 ## Add capabilities
 

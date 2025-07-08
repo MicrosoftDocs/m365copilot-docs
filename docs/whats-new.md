@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 06/17/2025
+ms.date: 07/08/2025
 ms.topic: overview
 ---
 
@@ -15,6 +15,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## July 2025
+
+### Prioritize declarative agent knowledge sources
+
+You can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, for Copilot Studio agent builder, see [Prioritize your knowledge sources](copilot-studio-agent-builder-build.md#prioritize-your-knowledge-sources-over-general-knowledge); for Microsoft 365 Agents Toolkit, see [Special instructions object](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.4#special-instructions-object).
 
 ### Custom engine agents generally available
 
