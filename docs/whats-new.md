@@ -16,6 +16,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## July 2025
 
+### Asynchronous and proactive messages in custom engine agents
+
+You can implement asynchronous and proactive message flows in your custom engine agents. For more information, see [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-async-flow.md).
+
 ### Prioritize declarative agent knowledge sources
 
 You can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, for Copilot Studio agent builder, see [Prioritize your knowledge sources](copilot-studio-agent-builder-build.md#prioritize-your-knowledge-sources-over-general-knowledge); for Microsoft 365 Agents Toolkit, see [Special instructions object](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.4#special-instructions-object).

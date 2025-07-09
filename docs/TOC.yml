@@ -221,6 +221,8 @@
       href: bring-agents-to-copilot.md
     - name: Invoke actions with Semantic Kernel
       href: graph-actions-semantic-kernel.md
+    - name: Asynchronous and proactive messages
+      href: custom-engine-agent-async-flow.md
 - name: Add knowledge with Copilot connectors
   items:
   - name: Copilot connectors in Microsoft 365 Copilot
