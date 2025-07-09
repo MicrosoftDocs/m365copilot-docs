@@ -54,7 +54,7 @@ app.message(
   ); 
 ```
 
-The following table summarizes the asyncrhonous message process.
+The following table summarizes the asynchronous message process.
 
 | Task | Description |
 |------|-------------|
