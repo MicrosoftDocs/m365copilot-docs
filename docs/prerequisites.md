@@ -126,10 +126,9 @@ The following table lists the agent types and agent capabilities that are availa
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email | :x: | :x: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;People | :x: | :x: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teams messages | :x: | :x: | :white_check_mark: |
-|[**Custom engine agents**](overview-custom-engine-agent.md)| :white_check_mark:** | :white_check_mark: | :white_check_mark: |
+|[**Custom engine agents**](overview-custom-engine-agent.md)| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
-\** Agents built with Copilot Studio.
 
 > [!NOTE]
 > For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
