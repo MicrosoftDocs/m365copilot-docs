@@ -12,9 +12,9 @@ ms.date: 5/09/2025
 
 You can enhance the user experience of your declarative agent for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](declarative-agent-manifest-1.4.md#capabilities-object) in the manifest reference and the **Capabilities** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the code interpreter capability and how to add it to your declarative agents.
 
-Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and generated code. It can also produce images or files based on the scenario, and accepts files as input for modifications and analysis.
+Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the related code that it generates. It can also produce images or files based on the scenario, and accepts files as input for modification and analysis.
 
-The code interpreter capability is available to Copilot Chat users with no metered usage or Microsoft 365 Copilot license.
+The code interpreter capability is available to Copilot Chat users with a Microsoft 365 Copilot  license or a license that doesn't include metered usage.
 
 > [!NOTE]
 > Support for in-context agents that have code interpreter enabled varies by host.
@@ -38,13 +38,13 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 ## Enable code interpreter in Copilot Studio agent builder
 
-If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Code interpreter**.
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, open the **Configure** tab and then, under **Capabilities**, choose the toggle next to **Code interpreter**.
 
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of the agent builder":::
 
 ## Code interpreter capability examples
 
-The code interpreter capability allows declarative agents to write and run Python code in a sandboxed environment. This capability enables agents to solve complex tasks iteratively, such as data analysis, generate visualizations, and solve mathematical problems. It uses the reasoning model to write and run Python code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the generated code. It can also produce images or files based on the scenario and accepts files as input for modifications and analysis.
+The code interpreter capability allows declarative agents to write and run Python code in a sandboxed environment. This capability uses the reasoning model to write and run Python code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the generated code. It can also produce images or files based on the scenario and accepts files as input for modification and analysis.
 
 Adding code interpreter to your agents offers your users a broad range of functionality, including:
 
@@ -58,7 +58,7 @@ Copilot can also provide copyable and downloadable versions of the code it gener
 
 ### Create graphs and charts
 
-Users can use agents with code interpreter enabled to create graphs and charts. For example, in response to the prompt "Graph the first 20 numbers in a Fibonacci sequence", Copilot produces the following line graph.
+Users can employ agents that have code interpreter enabled to create graphs and charts. For example, in response to the prompt "Graph the first 20 numbers in a Fibonacci sequence", Copilot produces the following line graph.
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-fibonacci-line-graph.png" alt-text="Screenshot of a line graph showing the first 20 numbers of a Fibonacci sequence.":::
 
@@ -84,34 +84,31 @@ For a word cloud, the prompt "Create a word cloud of top pet names" generates an
 
 ### Create Synthetic data
 
-When a user needs sample data to work with, integrating code interpreter allows them to create synthetic data for a variety of purposes, outputting the data as Word, Excel, PowerPoint, or PDF files. Following are example prompts and responses:
+When a user needs sample data to work with, by integrating code interpreter you make it possible for them to create synthetic data for a variety of purposes. The agent can then output the synthetic data as Word, Excel, PowerPoint, or PDF files. Following are example prompts and responses.
 
-**Prompt:** "Create a table of 10 fake financial transactions including date, amount, merchant, and category."
+**Prompt:** *Create a table of 10 fake financial transactions including date, amount, merchant, and category.*
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-synthetic-financials.png" alt-text="Table of synthetic financial transactions.":::
 
-**Prompt:**
- "Generate 20 synthetic customer support chat transcripts about billing issues."
+**Prompt:** *Generate 20 synthetic customer support chat transcripts about billing issues.*
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-synthetic-chats.png" alt-text="Table of synthetic customer support chats.":::
 
 ### Solve complex math problems
 
-With code interpreter enabled, users can use your agent to solve complex math problems, as shown in the following example.
+When you add code interpreter to your agent, users can prompt your agent to solve complex math problems, as shown in the following example.
 
-**Prompt:**
-
- Provide the integral of the area under the curve for the function \( f(x) = x^3 - 4x^2 + 6x - 2 \) from \( x = 0 \) to \( x = 3 \).
+**Prompt:** *Provide the integral of the area under the curve for the function \( f(x) = x^3 - 4x^2 + 6x - 2 \) from \( x = 0 \) to \( x = 3 \).*
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-integral-calc-and-graph.png" alt-text="Integral calculation for the area under a curve.":::
 
 ### Modify uploaded images
 
-Code interpreter allows users to modify uploaded images. It can add banners and captions, as well as generate black and white images from color images. The following image was generated by Copilot.
+Integrating code interpreter also allows users to modify uploaded images. Agent with this capability can add banners and captions, as well as generate black and white images from color images. The following image was generated by Copilot.
 
 :::image type="content" source="assets/images/code-interpreter-examples/1934-bentley-copilot-image.png" alt-text="Image generated by Copilot of a 1934 Bentely 4 car.":::
 
-The user can enter the prompt "Give me a black and white version of the attached image. Add a banner that says "1934 Bentley 4" and a caption that says "Image generated by Copilot." The agent provides the following result.
+To modify that image, the user can enter the prompt *Give me a black and white version of the attached image. Add a banner that says "1934 Bentley 4" and a caption that says "Image generated by Copilot."* The agent provides the following result.
 
 :::image type="content" source="assets/images/code-interpreter-examples/1934-bentley-monochrome-result.png" alt-text="Black and white image of a 1934 Bentley 4 car, modified by Copilot.":::
 
