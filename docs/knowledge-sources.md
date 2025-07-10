@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 06/17/2025
+ms.date: 07/09/2025
 ---
 
 # Add knowledge sources to your declarative agent
@@ -19,7 +19,8 @@ The following table lists the capabilities and knowledge sources you can configu
 | Code interpreter | :white_check_mark: | :white_check_mark: | No |
 | Image generator | :white_check_mark: | :white_check_mark: | No |
 | Copilot connectors | :white_check_mark: | :white_check_mark: | Yes |
-| SharePoint and OneDrive | :white_check_mark:| :white_check_mark: | Yes |
+| SharePoint | :white_check_mark:| :white_check_mark: | Yes |
+| OneDrive | :x: | :white_check_mark: | Yes |
 | Embedded file content | :white_check_mark:| :x: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
