@@ -6,7 +6,7 @@ ms.author: lauragra
 ms.reviewer: vermaanimesh
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 07/08/2025
+ms.date: 07/10/2025
 ms.custom: [copilot-learning-hub]
 ---
 
