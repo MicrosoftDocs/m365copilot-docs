@@ -21,7 +21,7 @@ The code interpreter capability is available to Copilot Chat users with a Micros
 
 ## Enable code interpreter in Microsoft 365 Agents Toolkit
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest file, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent and want to enable code interpreter, add the `CodeInterpreter` value to the **capabilities** property in your manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `CodeInterpreter` capability.
@@ -38,13 +38,13 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 ## Enable code interpreter in Copilot Studio agent builder
 
-If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent, open the **Configure** tab and then, under **Capabilities**, choose the toggle next to **Code interpreter**.
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) to create your agent and want to enable code interpreter, open the **Configure** tab and then, under **Capabilities**, choose the toggle next to **Code interpreter**.
 
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of the agent builder":::
 
 ## Code interpreter capability examples
 
-The code interpreter capability allows declarative agents to write and run Python code in a sandboxed environment. This capability uses the reasoning model to write and run Python code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the generated code. It can also produce images or files based on the scenario and accepts files as input for modification and analysis.
+The code interpreter capability allows uses the reasoning model to allow declarative agents to write and run Python code in a sandboxed environment. This capability lets users solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the generated code. It can also produce images and other files based on the scenario and accepts files as input for modification and analysis.
 
 Adding code interpreter to your agents offers your users a broad range of functionality, including:
 
@@ -58,7 +58,7 @@ Copilot can also provide copyable and downloadable versions of the code it gener
 
 ### Create graphs and charts
 
-Users can employ agents that have code interpreter enabled to create graphs and charts. For example, in response to the prompt "Graph the first 20 numbers in a Fibonacci sequence", Copilot produces the following line graph.
+Users can employ agents that have code interpreter enabled to create graphs and charts. For example, in response to the prompt *Graph the first 20 numbers in a Fibonacci sequence*, Copilot produces the following line graph.
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-fibonacci-line-graph.png" alt-text="Screenshot of a line graph showing the first 20 numbers of a Fibonacci sequence.":::
 
@@ -66,7 +66,7 @@ When the user selects the `</> Code` button, the agent provides the correspondin
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-fibonacci-python.png" alt-text="Screenshot of the Python code for graphing the first 20 numbers of a Fibonacci sequence.":::
 
-Users can also upload data files to generate graphs and charts so they can visualize their data. The supported file formats are Word, Excel, PowerPoint, PDF, CSV/TSV, and TXT/UTF8. For example, a user can upload an Excel file with sales data and enter the following prompt:  "Create a bar chart and line graph of my uploaded sales data." The agent returns the following response.
+Users can also upload data files to generate graphs and charts so they can visualize their data. The supported file formats are Word, Excel, PowerPoint, PDF, CSV/TSV, and TXT/UTF8. For example, a user can upload an Excel file with sales data and enter the following prompt:  *Create a bar chart and line graph of my uploaded sales data.* The agent returns the following response.
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-sales-data-bar-chart.png" alt-text="Bar chart of sample sales data":::
 
@@ -74,11 +74,11 @@ Users can also upload data files to generate graphs and charts so they can visua
 
 ### Create data visualizations and QR Codes
 
-With code interpreter enabled, users can create a variety of data visualizations such as QR codes and word clouds. For example, in response to the user prompt "Create a QR code for Microsoft's corporate website", the agent presents both the corresponding URL and matching QR code.
+With code interpreter enabled, users can create a variety of data visualizations such as QR codes and word clouds. For example, in response to the user prompt *Create a QR code for Microsoft's corporate website*, the agent presents both the corresponding URL and matching QR code.
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-generated-qr-code.png" alt-text="QR code for Microsoft generated by Copilot":::
 
-For a word cloud, the prompt "Create a word cloud of top pet names" generates an image that includes the top names, as shown in the following example.
+For a word cloud, the prompt *Create a word cloud of top pet names* generates an image that includes the most common names, as shown in the following example.
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-pet-word-cloud.png" alt-text="Word cloud response to the user prompt":::
 
