@@ -104,7 +104,7 @@ Microsoft 365 Copilot Chat users can now access Copilot Studio agent builder to 
 
 ### Add websites as knowledge in agent builder
 
-You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-knowledge.md#websites).
+You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-knowledge.md#public-websites).
 
 ### Custom engine agents available in Copilot app (preview)
 
