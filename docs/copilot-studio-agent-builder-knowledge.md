@@ -162,7 +162,7 @@ The following table lists sensitivity label scenarios that aren't currently supp
 
 ### Sharing an agent with embedded files
 
-When you share an agent with embedded files, the files are also shared, and agent users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with embedded files as knowledge:
+When you share an agent with embedded files, the files are only shared with users when they have acquired the agent. Once acquired, agent users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with embedded files as knowledge:
 
 - Anyone in your organization
 - Specific users in your organization
