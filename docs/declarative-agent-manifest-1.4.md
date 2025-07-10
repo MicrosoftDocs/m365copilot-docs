@@ -4,9 +4,11 @@ description: Learn about the 1.4 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 06/12/2025
+ms.date: 07/08/2025
 ms.topic: reference
 ---
+
+<!-- markdownlint-disable MD024 MD059 -->
 
 # Declarative agent schema 1.4 for Microsoft 365 Copilot
 
@@ -18,9 +20,7 @@ Declarative agents are valuable in understanding and generating human-like text,
 
 This schema version introduces the following changes from [version 1.3](declarative-agent-manifest-1.3.md):
 
-- Added the `sensitivity_label`, `disclaimer`, and `behavior_overrides` properties to the [declarative agent manifest object](#declarative-agent-manifest-object).
-    > [!NOTE]
-    > The `sensitivity_label` property isn't currently supported for agents built with the Microsoft 365 Agents Toolkit and for agents published to the organization via the Microsoft 365 admin center. This property doesn't apply for ISV scenarios.
+- Added the `behavior_overrides` property to the [declarative agent manifest object](#declarative-agent-manifest-object).
 - Added the `part_type` and `part_id` properties to the [items by SharePoint IDs object](#items-by-sharepoint-ids-object).
 - Added additional properties to the [Connection object](#connection-object), allowing scoping of Copilot connector content.
 - Added the [scenario models](#scenario-models-object) capability to the list of `capabilities`, which allows agents to use task-specific models.
@@ -61,15 +61,15 @@ The declarative agent manifest object contains the following properties.
 | `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
 | `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. There MUST NOT be more than one of each derived type of [Capabilities object](#capabilities-object) in the array. |
-| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than six objects in the array. |
+| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than 12 objects in the array. |
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
-| `sensitivity_label`     | [Sensitivity label object](#sensitivity-label-object)                 | Optional. Assigns a Microsoft Purview sensitivity label to the declarative agent.<br />**Note:** This property isn't currently supported for agents built with the Microsoft 365 Agents Toolkit. |
-| `disclaimer`            | [Disclaimer object](#disclaimer-object)                               | Optional. Disclaimer text that is displayed to the user at the start of a conversation. |
 | `behavior_overrides`    | [Behavior overrides object](#behavior-overrides-object)               | Optional. Contains configuration settings that modify the behavior of the agent. |
 
 ### Declarative agent manifest object example
 
-The following JSON is an example of required fields within a declarative agent manifest.
+The following code is an example of required fields within a declarative agent manifest.
+
+#### [JSON](#tab/json)
 
 ```json
 {
@@ -78,6 +78,23 @@ The following JSON is an example of required fields within a declarative agent m
   "instructions": "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
 }
 ```
+
+#### [TypeSpec](#tab/tsp)
+
+```typescript
+@agent(
+  "Repairs agent",
+  "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
+)
+@instructions(
+  "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
+)
+namespace MyAgent {
+
+}
+```
+
+---
 
 ### Capabilities object
 
@@ -98,6 +115,8 @@ The capabilities object is the base type of objects in the `capabilities` proper
 > Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
 
 #### Capabilities object example
+
+##### [JSON](#tab/json)
 
 ```json
 {
@@ -179,6 +198,54 @@ The capabilities object is the base type of objects in the `capabilities` proper
   ]
 }
 ```
+
+##### [TypeSpec](#tab/tsp)
+
+```typescript
+namespace MyAgent {
+  op webSearch is AgentCapabilities.WebSearch<TSites = [
+    {
+        url: "https://contoso.com"
+    }
+  ]>;
+
+  op od_sp is AgentCapabilities.OneDriveAndSharePoint<
+    TItemsBySharePointIds = [
+      {
+        site_id: "bc54a8cc-8c2e-4e62-99cf-660b3594bbfd";
+        web_id: "a5377427-f041-49b5-a2e9-0d58f4343939";
+        list_id: "78A4158C-D2E0-4708-A07D-EE751111E462";
+        unique_id: "304fcfdf-8842-434d-a56f-44a1e54fbed2";
+      }
+    ],
+    TItemsByUrl = [
+      {
+        url: "https://contoso.sharepoint.com/teams/admins/Documents/Folders1"
+      }
+    ]
+  >;
+
+  op graphConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
+    {
+        connection_id: "jiraTickets"
+    }
+  ]>;
+
+  op graphicArt is AgentCapabilities.GraphicArt;
+
+  op codeInterpreter is AgentCapabilities.CodeInterpreter;
+
+  op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
+    {
+        url: "https://teams.microsoft.com/l/channel/19%3ApO0102YGEBRSH6RziXCxEgB4mtb7-5hIlDzAjtxs_dg1%40thread.tacv2/G%C3%A9n%C3%A9ral?groupId=2670cf94-acf5-48f4-96d4-c58dd8937afc&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47"
+    }
+  ]>;
+
+  op people is AgentCapabilities.People;
+}
+```
+
+---
 
 #### Web search object
 
@@ -374,7 +441,7 @@ The Teams messages object contains the following properties.
 | Property | Type                                     | Description |
 | -------- | ---------------------------------------- | ----------- |
 | `name`   | String                                   | Required. Must be set to `TeamsMessages`. |
-| `urls`   | Array of [Teams URLs](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, teams, or meeting chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, teams, meetings, 1:1 chats, and group chats. |
+| `urls`   | Array of [Teams URLs](#teams-url-object) | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. There MUST NOT be more than five objects in the array. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
 
 ##### Teams URL object
 
@@ -384,7 +451,7 @@ The Teams URL object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `url`    | String | Required. A well-formatted Teams URL that links to either a Team channel, team, or meeting chat. |
+| `url`    | String | Required. A well-formatted Teams URL that links to either a Teams channel, meeting chat, group chat, or 1:1 chat. |
 
 #### Email object
 
@@ -452,6 +519,8 @@ The conversation starter object contains the following properties:
 
 #### Conversation starters object example
 
+#### [JSON](#tab/json)
+
 ```json
 {
   "conversation_starters": [
@@ -462,6 +531,17 @@ The conversation starter object contains the following properties:
   ]
 }
 ```
+
+#### [TypeSpec](#tab/tsp)
+
+```typescript
+@conversationStarter(#{
+  title: "My Open Repairs",
+  text: "What open repairs are assigned to me?"
+)}
+```
+
+---
 
 ### Actions object
 
@@ -476,6 +556,8 @@ The action object contains the following properties.
 
 #### Actions object example
 
+##### [JSON](#tab/json)
+
 ``` json
 {
   "actions": [
@@ -487,38 +569,33 @@ The action object contains the following properties.
 }
 ```
 
-### Sensitivity label object
+##### [TypeSpec](#tab/tsp)
 
-> [!NOTE]
-> The `sensitivity_label` property isn't currently supported for agents built with the Microsoft 365 Agents Toolkit and for agents published to the organization via the Microsoft 365 admin center. This property doesn't apply for ISV scenarios.
+```typescript
+@service
+@server("https://jsonplaceholder.typicode.com")
+@actions(#{
+  nameForHuman: "Posts APIs",
+  descriptionForHuman: "Manage blog post items on JSON Placeholder APIs.",
+  descriptionForModel: "Read, create, update and delete blog post items on the JSON Placeholder APIs."
+})
+namespace PostsAPI {
+  // All operations from the actions
+}
+```
 
-A sensitivity label is an optional JSON object in the manifest that assigns a Microsoft Purview sensitivity label to the declarative agent. This label should be at least as restrictive as the most restrictive label on any knowledge files included in the agent. For more information about sensitivity labels, see [Learn about sensitivity labels](/purview/sensitivity-labels).
-
-The sensitivity label object contains the following property.
-
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `id`     | String | Required. The unique identifier for the sensitivity label. |
-
-### Disclaimer object
-
-A disclaimer is an optional JSON object in the manifest that specifies disclaimer text that is displayed to the user at the start of a conversation.
-
-The disclaimer object contains the following property.
-
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `text`   | String | Required. The disclaimer text. The value MUST contain at least one non-whitespace character and SHOULD NOT exceed 500 characters. |
+---
 
 ### Behavior overrides object
 
 An optional JSON object that contains configuration settings that override the agent's behavior.
 
-The behavior overrides object contains the following property.
+The behavior overrides object contains the following properties.
 
 | Property               | Type                                                        | Description |
 | ---------------------- | ----------------------------------------------------------- | ----------- |
 | `suggestions`          | [Suggestions object](#suggestions-object)                   | Optional. Contains configuration settings for the suggestions feature. |
+| `special_instructions` | [Special instructions object](#special-instructions-object) | Optional. Contains settings for injecting special instructions into the prompt. |
 
 #### Suggestions object
 
@@ -529,6 +606,16 @@ The suggestions object contains the following property.
 | Property   | Type    | Description |
 | ---------- | ------- | ----------- |
 | `disabled` | Boolean | Required. If set to `true`, the suggestions feature will be disabled. The default value is `false`. |
+
+#### Special instructions object
+
+An optional JSON object that contains settings for injecting special instructions into the prompt.
+
+The disclaimer object contains the following property.
+
+| Property                     | Type    | Description |
+| ---------------------------- | ------- | ----------- |
+| `discourage_model_knowledge` | Boolean | Required. If set to `true`, the agent is discouraged from using model knowledge when generating responses. The default value is `false`. |
 
 ## Declarative agent manifest example
 

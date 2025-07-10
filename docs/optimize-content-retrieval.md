@@ -1,18 +1,19 @@
 ---
-title: Optimize SharePoint Content Retrieval in Your Agent
-description: Find best practices to optimize how your agent in Microsoft 365 Copilot retrieves content from SharePoint.
+title: Optimize Content Retrieval in Your Agent
+description: Find best practices to optimize how your agent in Microsoft 365 Copilot retrieves content from SharePoint and embedded content.
 author: lauragra
 ms.author: lauragra
 ms.topic: best-practice
-ms.date: 01/31/2025
+ms.localizationpriority: medium
+ms.date: 06/17/2025
 ---
 
-# Optimize SharePoint content retrieval
+# Optimize content retrieval
 
-Declarative agents extend Microsoft 365 Copilot to customize the experience for users. When you build declarative agents, you can add SharePoint content as a knowledge source. This article describes the best practices to apply to optimize how your agent returns data from SharePoint knowledge sources.
+Declarative agents extend Microsoft 365 Copilot to customize the experience for users. When you build declarative agents, you can add SharePoint content and upload files as knowledge sources. This article describes the best practices to apply to optimize how your agent returns data from SharePoint and embedded content knowledge sources.
 
 > [!NOTE]
-> Agents grounded in SharePoint data are only available to users in tenants that have Copilot Studio metering enabled or users who have Microsoft 365 Copilot licenses. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+> Agents grounded in SharePoint data and embedded files are only available to users in tenants that have Copilot Studio metering enabled or users who have Microsoft 365 Copilot licenses. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
 ## Reference only relevant SharePoint files
 
@@ -31,6 +32,10 @@ Alternatively, you can reference specific SharePoint files by ID. Copilot will s
 ## Remove special formatting
 
 Copilot is currently unable to parse tables and other special formatting in SharePoint content. To ensure that Copilot can consume your SharePoint content, remove tables or other special formatting from the content before you reference it in your agent manifest.
+
+## Optimize embedded file content retrieval
+
+For agents that include [embedded file content](copilot-studio-agent-builder-knowledge.md#embedded-file-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file. To optimize embedded file content for Copilot retrieval, upload files that are no larger than 750-1,000 pages.
 
 ## Related content
 
