@@ -10,7 +10,7 @@ ms.date: 07/09/2025
 
 # Add knowledge sources to your declarative agent by using agent builder
 
-The Copilot Studio agent builder experience provides a simple interface for you to integrate a variety of knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
+The Copilot Studio agent builder experience provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
 This article describes the supported knowledge sources and the steps to configure them in agent builder. For general information about how to use agent builder, see [Build agents with Copilot Studio agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-build).
 
@@ -32,7 +32,7 @@ To add knowledge sources to your agent:
    * Embedded files uploaded from your device.
    * Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
   
-  :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-select-knowledge.png" alt-text="Add Knowledge sources":::
+  :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-select-knowledge.png" alt-text="A screenshot of the Knowledge section of the Configure tab with the Picker UI showing.":::
 
 ## Public websites
 
@@ -191,28 +191,26 @@ The following table lists the file types that you can add as knowledge to your a
 
 ## Copilot connectors
 
-Copilot connectors enable agents to access and leverage knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. With Agent Builder, you can integrate enterprise data from your workspace directly into your agents, empowering them with domain-specific knowledge.
+Copilot connectors allow agents to access and apply knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. With agent builder, you can integrate enterprise data from your workspace directly into your agents, empowering them with domain-specific knowledge.
 
-To enhance the accuracy and relevance of agent responses, agents can be grounded not only in broad organizational data but also in specific scoped items. For example, when using the ADO connector, you can scope the agent to a particular Area Path. This is easily done by searching the keyword of the area paths under each connection and selecting the ones most relevant to your scenario—ensuring the agent focuses only on the most pertinent work items.
+> [!NOTE]
+> Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
 
->[!NOTE]
->Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
+To enhance the accuracy and relevance of agent responses, agents can be grounded not only in broad organizational data but also in specific scoped items. For example, when you use the Azure DevOps Work Items connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
 
-### Scoping to ADO area path
+To scope the Azure DevOps area path:
 
-*More connector scoping options coming soon!*:
+1. Under **Choose other data sources**, select **Azure DevOps Work Items**.
+2. Choose the **Add** button next to the connections that are relevant to your tasks.
+3. Choose the arrow to return to the **Knowledge** section.
+4. Choose **Select an area path** and search for or type the area path name.
+5. Select the area path to add it.
 
-1. Under **Choose other data sources**, select the "ADO Work Items" tile
-2. In the sub-card, **Add** connections relevant to your tasks
-3. Go back to **Knowledge** main menu
-4. **Select an area path** and search or type by the area path name
-5. Add the area path from the search results
-
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-copilot-connectors.png" alt-text="Copilot connectors in the Knowledge sources":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
 
 ## Prioritize your knowledge sources over general knowledge
 
-You can configure your agent to prioritize the knowledge sources you provide — such as SharePoint content or embedded files — when it responds to queries that require knowledge-based searches. This helps to ensure that the agent's answers are grounded in your knowledge sources. The agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
+You can configure your agent to prioritize the knowledge sources you provide—such as SharePoint content or embedded files—when it responds to queries that require knowledge-based searches. This helps to ensure that the agent's answers are grounded in your knowledge sources. The agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
 
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
 
