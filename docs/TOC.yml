@@ -225,6 +225,8 @@
   items:
   - name: Copilot connectors in Microsoft 365 Copilot
     href: overview-copilot-connector.md
+  - name: Delegate connector administration
+    href: connector-admin-delegation.md
   - name: Prebuilt connectors gallery
     href: /microsoftsearch/connectors-gallery?context=/microsoft-365-copilot/extensibility/context
   - name: Build your first connector

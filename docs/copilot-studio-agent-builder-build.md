@@ -4,7 +4,7 @@ description: Learn how to build agents by using Copilot Studio agent builder in 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 06/17/2025
+ms.date: 07/08/2025
 ms.topic: conceptual
 ---
 
