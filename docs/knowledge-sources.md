@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 06/17/2025
+ms.date: 07/09/2025
 ---
 
 # Add knowledge sources to your declarative agent
@@ -19,7 +19,8 @@ The following table lists the capabilities and knowledge sources you can configu
 | Code interpreter | :white_check_mark: | :white_check_mark: | No |
 | Image generator | :white_check_mark: | :white_check_mark: | No |
 | Copilot connectors | :white_check_mark: | :white_check_mark: | Yes |
-| SharePoint and OneDrive | :white_check_mark:| :white_check_mark: | Yes |
+| SharePoint | :white_check_mark:| :white_check_mark: | Yes |
+| OneDrive | :x: | :white_check_mark: | Yes |
 | Embedded file content | :white_check_mark:| :x: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
@@ -36,7 +37,7 @@ Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) enable yo
 
 For information about how to add Copilot connectors as knowledge to your agent manifest in Agents Toolkit, see [Copilot connectors object](declarative-agent-manifest-1.4.md#copilot-connectors-object).
 
-For information about how to add Copilot connectors to your agent in Copilot Studio agent builder, see [Copilot connectors](copilot-studio-agent-builder-build.md#copilot-connectors).
+For information about how to add Copilot connectors to your agent in Copilot Studio agent builder, see [Copilot connectors](copilot-studio-agent-builder-knowledge.md#copilot-connectors).
 
 ## SharePoint and OneDrive
 
@@ -44,7 +45,7 @@ When you configure your agent to use OneDrive and SharePoint content as knowledg
 
 For information about how to add OneDrive and SharePoint knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.4.md#onedrive-and-sharepoint-object).
 
-For information about how to enable OneDrive and SharePoint knowledge to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
+For information about how to add SharePoint knowledge to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-knowledge.md#sharepoint-content).
 
 ## Web and scoped web search
 
@@ -81,14 +82,14 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-buil
 > [!NOTE]
 > The file upload feature is available to users with metered consumption enabled or with a Microsoft 365 Copilot license.
 
-For more information about embedded files, see [Embedded file content in agent builder](copilot-studio-agent-builder-build.md#embedded-file-content).
+For more information about embedded files, see [Embedded file content in agent builder](copilot-studio-agent-builder-knowledge.md#embedded-file-content).
 
 ## Dataverse
 
 Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
 
 > [!NOTE]
-> Dataverse knowledge is not currently available in Copilot Studio agent builder.
+> Dataverse knowledge isn't currently available in Copilot Studio agent builder.
 
 ### Add Dataverse knowledge
 
@@ -161,14 +162,14 @@ In the **shared_mailbox** field, use the SMTP address of the shared mailbox.
 
 If you reference both a shared mailbox and a folder, the agent scopes responses to the folder within the shared mailbox. If you reference a folder only, the agent scopes responses to the contents of the folder within the personal mailbox.
 
-If you don't reference a shared mailbox or a folder, the agent search is not scoped to any folder or mailbox and it returns results from all email content, based on the user's query.
+If you don't reference a shared mailbox or a folder, the agent search isn't scoped to any folder or mailbox and it returns results from all email content, based on the user's query.
 
 ## People
 
-People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This knowledge source is not scoped.
+People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This knowledge source isn't scoped.
 
 > [!NOTE]
-> People knowledge is not currently available in Copilot Studio agent builder.
+> People knowledge isn't currently available in Copilot Studio agent builder.
 
 ### Add people knowledge source
 
@@ -189,13 +190,13 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 ## Teams messages
 
-You can configure agents to use Teams channels, meeting chats, group chats, 1:1 chats, and teams as knowledge sources. You can choose to specify up to five links to teams, channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, teams, meetings, and individual and group chats, as knowledge sources.
+You can configure agents to use Teams channels, meeting chats, group chats, and 1:1 chats as knowledge sources. You can choose to specify up to five links to channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, meetings, and individual and group chats, as knowledge sources.
 
 Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has `OneDriveAndSharePoint` enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
 ### Add Teams messages knowledge sources
 
-If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, click the search bar and choose **My Teams chats from groups, channels, and meetings.** To scope your agent to specific channel, meeting, or group chats, on the **Chats** tab, select the chats that you want to add as knowledge.
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings.** To scope your agent to specific channel, meeting, or group chats, on the **Chats** tab, select the chats that you want to add as knowledge.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable Teams messages knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
 
@@ -213,13 +214,13 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-#### Get the URL for team, channel, or meeting
+#### Get the URL for a channel or meeting
 
-To get the URL for a Teams team or channel, choose the three dots (...) next to the team or channel name and choose **Get link to team** or **Get link to channel**.
+To get the URL for a Teams channel, choose the three dots (...) next to the channel name and choose **Get link to channel**.
 
 To get the URL for a Teams meeting, open the meeting, choose the arrow next to **Join**, and choose **Copy join link**.
 
-#### Get the URL for group or 1:1 chat
+#### Get the URL for a group or 1:1 chat
 
 To get the URL for a group or 1:1 chat, you need a deep link that includes the **chatId**. The deep link has the following format: `https://teams.microsoft.com/l/chat/<chatId>/conversations`. The **chatId** value is different for each chat.
 
@@ -228,7 +229,7 @@ To get the **chatId** value for a group or 1:1 chat:
 1. In Microsoft Teams, go to any message in the chat.
 2. Hover over the message and choose the three dots (...).
 3. Select **Copy link**.
-4. Paste the link into Notepad or a similar application. The link will look similar to the following: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces//1743033793614?context=%7B%22contextType%22%3A%22chat%22%7D`.
+4. Paste the link into Notepad or a similar application. The link will look similar to the following URL: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces//1743033793614?context=%7B%22contextType%22%3A%22chat%22%7D`.
 5. Copy the segment of the URL that falls between `chat/` and the next `/`. The segment is generally prefaced with `19:`. This is the **chatId**. In the previous example, the **chatId** is `19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces`.
 6. Add the **chatId** to the deep link. For example: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces/conversations`.
 

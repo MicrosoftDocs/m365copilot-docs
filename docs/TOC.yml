@@ -133,6 +133,8 @@
           href: agent-builder-template-writing-coach.md
       - name: Build agents with fine-tuned models (preview)
         href: copilot-studio-agent-builder-tuned-models.md
+      - name: Add knowledge sources
+        href: copilot-studio-agent-builder-knowledge.md
       - name: Publish agents
         href: copilot-studio-agent-builder-publish.md
       - name: Availability and language support
@@ -224,7 +226,9 @@
 - name: Add knowledge with Copilot connectors
   items:
   - name: Copilot connectors in Microsoft 365 Copilot
-    href: overview-graph-connector.md
+    href: overview-copilot-connector.md
+  - name: Delegate connector administration
+    href: connector-admin-delegation.md
   - name: Prebuilt connectors gallery
     href: /microsoftsearch/connectors-gallery?context=/microsoft-365-copilot/extensibility/context
   - name: Build your first connector
