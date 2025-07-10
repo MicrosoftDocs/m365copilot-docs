@@ -37,7 +37,7 @@ Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) enable yo
 
 For information about how to add Copilot connectors as knowledge to your agent manifest in Agents Toolkit, see [Copilot connectors object](declarative-agent-manifest-1.4.md#copilot-connectors-object).
 
-For information about how to add Copilot connectors to your agent in Copilot Studio agent builder, see [Copilot connectors](copilot-studio-agent-builder-build.md#copilot-connectors).
+For information about how to add Copilot connectors to your agent in Copilot Studio agent builder, see [Copilot connectors](copilot-studio-agent-builder-knowledge.md#copilot-connectors).
 
 ## SharePoint and OneDrive
 
@@ -45,7 +45,7 @@ When you configure your agent to use OneDrive and SharePoint content as knowledg
 
 For information about how to add OneDrive and SharePoint knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.4.md#onedrive-and-sharepoint-object).
 
-For information about how to enable OneDrive and SharePoint knowledge to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-build.md#add-knowledge-sources).
+For information about how to enable OneDrive and SharePoint knowledge to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-knowledge.md#add-knowledge-sources).
 
 ## Web and scoped web search
 
@@ -82,7 +82,7 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-buil
 > [!NOTE]
 > The file upload feature is available to users with metered consumption enabled or with a Microsoft 365 Copilot license.
 
-For more information about embedded files, see [Embedded file content in agent builder](copilot-studio-agent-builder-build.md#embedded-file-content).
+For more information about embedded files, see [Embedded file content in agent builder](copilot-studio-agent-builder-knowledge.md#embedded-file-content).
 
 ## Dataverse
 
