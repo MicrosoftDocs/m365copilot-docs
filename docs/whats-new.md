@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 07/08/2025
+ms.date: 07/10/2025
 ms.topic: overview
 ---
 
@@ -15,6 +15,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## July 2025
+
+### Convert declarative agents to custom engine agents
+
+You can convert your declarative agent to a custom engine agent to take advantage of advanced functionality and workflows. For more information, see [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md).
 
 ### Prioritize declarative agent knowledge sources
 
