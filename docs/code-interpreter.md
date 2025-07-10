@@ -44,7 +44,7 @@ If you're using [Copilot Studio agent builder](copilot-studio-agent-builder.md) 
 
 ## Code interpreter capability examples
 
-The code interpreter capability allows uses the reasoning model to allow declarative agents to write and run Python code in a sandboxed environment. This capability lets users solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the generated code. It can also produce images and other files based on the scenario and accepts files as input for modification and analysis.
+The code interpreter capability uses the reasoning model to allow declarative agents to write and run Python code in a sandboxed environment. This capability lets users solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the generated code. It can also produce images and other files based on the scenario and accepts files as input for modification and analysis.
 
 Adding code interpreter to your agents offers your users a broad range of functionality, including:
 
@@ -66,7 +66,7 @@ When the user selects the `</> Code` button, the agent provides the correspondin
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-fibonacci-python.png" alt-text="Screenshot of the Python code for graphing the first 20 numbers of a Fibonacci sequence.":::
 
-Users can also upload data files to generate graphs and charts so they can visualize their data. The supported file formats are Word, Excel, PowerPoint, PDF, CSV/TSV, and TXT/UTF8. For example, a user can upload an Excel file with sales data and enter the following prompt:  *Create a bar chart and line graph of my uploaded sales data.* The agent returns the following response.
+Users can also upload data files to generate graphs and charts so they can visualize their data. The supported file formats are Word, Excel, PowerPoint, PDF, CSV/TSV, and TXT/UTF8. For example, a user can upload an Excel file with sales data and enter the prompt: *Create a bar chart and line graph of my uploaded sales data.* The agent returns the following response.
 
 :::image type="content" source="assets/images/code-interpreter-examples/code-interpreter-sales-data-bar-chart.png" alt-text="Bar chart of sample sales data":::
 
@@ -84,7 +84,7 @@ For a word cloud, the prompt *Create a word cloud of top pet names* generates an
 
 ### Create Synthetic data
 
-When a user needs sample data to work with, by integrating code interpreter you make it possible for them to create synthetic data for a variety of purposes. The agent can then output the synthetic data as Word, Excel, PowerPoint, or PDF files. Following are example prompts and responses.
+When a user needs sample data to work with, by integrating code interpreter you make it possible for them to create synthetic data for a variety of purposes. The agent can generated the requested synthetic data and then output it as Word, Excel, PowerPoint, or PDF files. Following are example prompts and responses.
 
 **Prompt:** *Create a table of 10 fake financial transactions including date, amount, merchant, and category.*
 
