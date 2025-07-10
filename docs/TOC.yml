@@ -107,6 +107,8 @@
         href: copilot-studio-agent-builder.md
       - name: Build agents
         href: copilot-studio-agent-builder-build.md
+      - name: Add knowledge sources
+        href: copilot-studio-agent-builder-knowledge.md
       - name: Build agents from template
         items:
         - name: Templates overview
