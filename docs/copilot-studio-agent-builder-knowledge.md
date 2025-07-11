@@ -210,7 +210,7 @@ To scope the Azure DevOps area path:
 
 ## Prioritize your knowledge sources over general knowledge
 
-You can configure your agent to prioritize the knowledge sources you provide—such as SharePoint content or embedded files—when it responds to queries that require knowledge-based searches. This helps to ensure that the agent's answers are grounded in your knowledge sources. Knowledge-based searches are user requests to look up specific information; for example:
+You can configure your agent to prioritize the knowledge sources you provide—such as SharePoint content or embedded files—when it responds to queries that require knowledge-based searches. Knowledge-based searches are user requests to look up specific information; for example:
 
 - Who is the current company CEO?
 - When is the next business conference?
