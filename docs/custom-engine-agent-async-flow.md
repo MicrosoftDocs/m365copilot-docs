@@ -168,4 +168,5 @@ The following table summarizes the proactive message process.
 
 ## Related content
 
+- [Custom engine agent user experience features](/extensibility/ux-custom-engine-agent)
 - [Custom engine agent overview](/microsoft-365-copilot/extensibility/overview-custom-engine-agent)
