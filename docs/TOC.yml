@@ -133,6 +133,8 @@
           href: agent-builder-template-writing-coach.md
       - name: Build agents with fine-tuned models (preview)
         href: copilot-studio-agent-builder-tuned-models.md
+      - name: Add knowledge sources
+        href: copilot-studio-agent-builder-knowledge.md
       - name: Publish agents
         href: copilot-studio-agent-builder-publish.md
       - name: Availability and language support
@@ -174,6 +176,8 @@
       href: localize-agents.md
     - name: Test and debug agents
       href: debugging-copilot-agent.md
+    - name: Convert to custom engine agent
+      href: convert-declarative-agent.md 
     - name: Responsible AI validation
       href: rai-validation.md
   - name: Build a custom engine agent
