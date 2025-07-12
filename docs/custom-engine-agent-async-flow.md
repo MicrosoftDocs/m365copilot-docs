@@ -66,7 +66,7 @@ The following table summarizes the asynchronous message process.
 
 Proactive messages are initiated by the system, not the user. These messages are sent via a dedicated conversation thread.
 
-For example, your agent can send a notification to a user about an event or update without a user query. The following example shows how to use the [createConversation API](/graph/api/group-post-conversations?view=graph-rest-1.0) to fetch the conversation information and send proactive messages via a dedicated thread.
+For example, your agent can send a notification to a user about an event or update without a user query. The following example shows how to use the [createConversation API](/graph/api/group-post-conversations) to fetch the conversation information and send proactive messages via a dedicated thread.
 
 ```javascript
 export async function getToken() { 
@@ -168,5 +168,5 @@ The following table summarizes the proactive message process.
 
 ## Related content
 
-- [Custom engine agent user experience features](/extensibility/ux-custom-engine-agent)
+- [Custom engine agent user experience features](/microsoft-365-copilot/extensibility/ux-custom-engine-agent)
 - [Custom engine agent overview](/microsoft-365-copilot/extensibility/overview-custom-engine-agent)
