@@ -66,7 +66,7 @@ For more information, see [Feedback buttons](/microsoftteams/platform/bots/how-t
 
 Custom engine agents can handle multiple tasks concurrently without blocking the main thread. Users can keep chatting with an agent while a task is in process, even when the task takes a few minutes or days. After the task is completed, the agent sends a notification to the user. These patterns are common scenarios for Teams bots, and are available in Copilot chat as well.
 
-For more information, see [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-async-flow.md).
+For more information, see [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-asynchronous-flow.md).
 
 ### Follow-up messages
 
@@ -87,5 +87,5 @@ Proactive messages are agent-initiated messages based on predefined triggers; fo
 
 ## Related content
 
-- [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-async-flow.md)
+- [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-asynchronous-flow.md)
 - [Custom engine agent overview](/microsoft-365-copilot/extensibility/overview-custom-engine-agent)
