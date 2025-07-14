@@ -6,7 +6,7 @@ ms.author: lauragra
 ms.reviewer: vermaanimesh
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 07/10/2025
+ms.date: 07/11/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -137,6 +137,10 @@ To update your app manifest:
 3. Update the app version number for your app in the **version** property.
 4. Make sure that the **id** property uses the same ID that you used in the app manifest for the declarative agent.
 
+## Customize your agent UX
+
+Define your agent experience for users. You can add conversation starters and suggested prompts, implement streaming responses and citations, and more. For more information, see [Custom engine agent user experience features](ux-custom-engine-agent.md).
+
 ### Update and submit your app package
 
 After you update your agent manifest, repackage your app:
@@ -145,7 +149,7 @@ After you update your agent manifest, repackage your app:
 1. Submit the new package to update your existing app. If your agent is internal to your organization, use the Microsoft 365 admin center (requires tenant admin permissions).
 
     > [!NOTE]
-    > Submission of your app package to the commerical marketplace via Partner Center isn't currently supported.
+    > Submission of your app package to the commercial marketplace via Partner Center isn't currently supported.
 
 ## User experience
 
@@ -157,5 +161,5 @@ If users pinned the agent, they need to pin the agent again after you publish th
 
 - [Custom engine agent overview](overview-custom-engine-agent.md)
 - [Agents overview](agents-overview.md)
-- [Upgrade your bot to a custom engine agent ](/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started)
+- [Upgrade your bot to a custom engine agent](/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started)
 - [App manifest](/microsoftteams/platform/resources/schema/manifest-schema)
