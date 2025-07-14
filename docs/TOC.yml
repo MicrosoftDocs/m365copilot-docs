@@ -185,8 +185,6 @@
     items:
     - name: Custom engine agent overview
       href: overview-custom-engine-agent.md
-    - name: Custom engine agent user experience
-      href: ux-custom-engine-agent.md
     - name: Build with Microsoft 365 Agents SDK
       items:
       - name: Overview
@@ -221,6 +219,12 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete agents
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
+    - name: User experience
+      items:
+      - name: User experience features
+        href: ux-custom-engine-agent.md
+      - name: Asynchronous and proactive messaging
+        href: custom-engine-agent-asynchronous-flow.md
     - name: Bring agents to Copilot
       href: bring-agents-to-copilot.md
     - name: Invoke actions with Semantic Kernel

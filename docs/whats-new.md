@@ -16,6 +16,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## July 2025
 
+### Asynchronous and proactive messages in custom engine agents
+
+You can implement asynchronous and proactive message flows in your custom engine agents. For more information, see [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-asynchronous-flow.md).
+
 ### Convert declarative agents to custom engine agents
 
 You can convert your declarative agent to a custom engine agent to take advantage of advanced functionality and workflows. For more information, see [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md).
