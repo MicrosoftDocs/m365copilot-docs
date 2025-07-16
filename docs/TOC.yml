@@ -251,26 +251,28 @@
   items:
   - name: Microsoft 365 Copilot APIs overview
     href: copilot-apis-overview.md
-  - name: Retrieval API (preview)
-    items:
-    - name: Overview
-      href: api-reference/retrieval-api-overview.md
-    - name: API Reference
-      href: api-reference/copilotroot-retrieval.md
-    - name: Complex types
-      items:
-      - name: Retrieval response
-        href: api-reference/resources/retrievalresponse.md
-      - name: Retrieval hit
-        href: api-reference/resources/retrievalhit.md
-      - name: Retrieval extract
-        href: api-reference/resources/retrievalextract.md
-      - name: Search response metadata dictionary
-        href: api-reference/resources/searchresourcemetadatadictionary.md
-      - name: Search sensitivity label info
-        href: api-reference/resources/searchsensitivitylabelinfo.md
   - name: Use client libraries (preview)
     href: sdks/api-libraries.md
+  - name: API reference
+    items:
+    - name: Retrieval API (preview)
+      items:
+      - name: Overview
+        href: api-reference/retrieval-api-overview.md
+      - name: Retrieve data
+        href: api-reference/copilotroot-retrieval.md
+      - name: Complex types
+        items:
+        - name: Retrieval response
+          href: api-reference/resources/retrievalresponse.md
+        - name: Retrieval hit
+          href: api-reference/resources/retrievalhit.md
+        - name: Retrieval extract
+          href: api-reference/resources/retrievalextract.md
+        - name: Search response metadata dictionary
+          href: api-reference/resources/searchresourcemetadatadictionary.md
+        - name: Search sensitivity label info
+          href: api-reference/resources/searchsensitivitylabelinfo.md
 - name: Publish
   items:
   - name: Overview
