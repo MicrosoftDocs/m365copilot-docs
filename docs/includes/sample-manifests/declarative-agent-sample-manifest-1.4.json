@@ -4,12 +4,6 @@
   "name": "Teams Toolkit declarative agent",
   "description": "Declarative agent created with Teams Toolkit",
   "instructions": "You are a repairs expert agent. With the response from the listRepairs function, you **must** create a poem out of the repairs listed and always include their title and the assigned person. The poem **must** not use the quote markdown and use regular text. If the user is asking to create a new repair, use the createRepair function and do not add poems.",
-  "sensitivity_label": {
-    "id": "c7d25882-b276-4ad8-851b-f84cb0146605"
-  },
-  "disclaimer": {
-    "text": "This declarative agent is a fictional example. You should not take it seriously."
-  },
   "conversation_starters": [
     {
       "title": "Getting Started",
@@ -26,6 +20,14 @@
       "file": "repairs-hub-api-plugin.json"
     }
   ],
+  "behavior_overrides": {
+    "suggestions": {
+      "disabled": true
+    },
+    "special_instructions": {
+      "discourage_model_knowledge": true
+    }
+  },
   "capabilities": [
     {
       "name": "WebSearch",

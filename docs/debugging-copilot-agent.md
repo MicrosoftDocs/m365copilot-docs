@@ -46,6 +46,9 @@ The agent metadata provides key details about the agent and the current debuggin
 
 The Agent Capabilities section displays the configured capabilities for the agent, defining the scope of its accessible knowledge sources.
 
+> [!IMPORTANT]
+> If the Agent Capabilities section indicates that **WebSearch** is enabled, this only means that the agent has enabled the capability. It doesn't reflect the `Allow web search in Copilot` cloud policy setting that administrators can use to disable web search for their organization. For more information, see [Manage Microsoft 365 Copilot scenarios in the Microsoft 365 admin center](/copilot/microsoft-365/microsoft-365-copilot-page#web-search-for-microsoft-365-copilot-and-microsoft-copilot).
+
 ### Agent actions
 
 :::image type="content" source="assets/images/developer-mode-agent-actions.png" alt-text="Screenshot of Copilot chat session where Copilot has returned a card with debugging information showing the configured agent actions":::

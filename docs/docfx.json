@@ -9,11 +9,12 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**",
+          "assets/snippets/**",
           "_themes/**",
           "_themes.pdf/**",
           "**/docfx.json",
           "_repo.en-us/**",
-          "README.md",
+          "**/README.md",
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices.md",
@@ -47,13 +48,17 @@
       "feedback_help_link_url": "https://learn.microsoft.com/answers/tags/466/copilot-m365-development",
       "feedback_help_link_type": "get-help-at-qna",
       "permissioned-type": "public",
-      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "ms.service": "microsoft-365-copilot",
       "ms.subservice": "developer",
       "ms.collection": "ce-skilling-ai-copilot",
+      "ms.update-cycle": "180-days",
       "uhfHeaderId": "MSDocsHeader-M365CopilotExt"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "zone_pivot_group_filename": {
+        "api-reference/**/*.md": "extensibility/api-reference/zone-pivot-groups.json"
+      }
+    },
     "template": [],
     "dest": "m365copilot-docs"
   }

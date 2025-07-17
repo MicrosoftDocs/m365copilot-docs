@@ -47,7 +47,15 @@
       - name: Build with TypeSpec
         href: build-declarative-agents-typespec.md
       - name: Build with JSON
-        href: build-declarative-agents.yml
+        items:
+        - name: Create the agent
+          href: build-declarative-agents.md
+        - name: Customize agent behavior
+          href: build-declarative-agents-customize-behavior.md
+        - name: Add knowledge sources
+          href: build-declarative-agents-add-knowledge.md
+        - name: Add skills
+          href: build-declarative-agents-add-skills.md
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
       - name: Add actions with API plugins
@@ -67,6 +75,8 @@
         - name: Adaptive Card responses
           href: api-plugin-adaptive-cards.md
           displayName: response, response_semantics
+        - name: Dialog boxes
+          href: adaptive-card-dialog-box.md
         - name: Confirmation prompts
           href: api-plugin-confirmation-prompts.md
         - name: Debug locally
@@ -121,6 +131,10 @@
           href: agent-builder-template-scrum-assistant.md
         - name: Writing Coach
           href: agent-builder-template-writing-coach.md
+      - name: Build agents with fine-tuned models (preview)
+        href: copilot-studio-agent-builder-tuned-models.md
+      - name: Add knowledge sources
+        href: copilot-studio-agent-builder-knowledge.md
       - name: Publish agents
         href: copilot-studio-agent-builder-publish.md
       - name: Availability and language support
@@ -154,14 +168,16 @@
         href: image-generator.md
       - name: Knowledge sources
         href: knowledge-sources.md
-    - name: Optimize SharePoint content retrieval
-      href: optimize-sharepoint-content.md
+    - name: Optimize content retrieval
+      href: optimize-content-retrieval.md
     - name: Document interaction
       href: declarative-agent-document-interaction.md
     - name: Localize your agent
       href: localize-agents.md
     - name: Test and debug agents
       href: debugging-copilot-agent.md
+    - name: Convert to custom engine agent
+      href: convert-declarative-agent.md 
     - name: Responsible AI validation
       href: rai-validation.md
   - name: Build a custom engine agent
@@ -169,8 +185,6 @@
     items:
     - name: Custom engine agent overview
       href: overview-custom-engine-agent.md
-    - name: Custom engine agent user experience
-      href: ux-custom-engine-agent.md
     - name: Build with Microsoft 365 Agents SDK
       items:
       - name: Overview
@@ -184,11 +198,11 @@
       - name: SDK reference
         items:
         - name: .NET SDK
-          href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
+          href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true
         - name: JavaScript SDK
-          href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
+          href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true
         - name: Python SDK
-          href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true&context=/microsoft-365-copilot/extensibility/context
+          href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true
     - name: Use Teams AI library
       items:
       - name: Overview
@@ -196,7 +210,7 @@
       - name: SDK reference
         items:
         - name: TypeScript SDK
-          href: /javascript/api/teams-sdk-typescript?context=/microsoft-365-copilot/extensibility/context
+          href: /javascript/api/teams-sdk-typescript
     - name: Use Microsoft Copilot Studio
       items:
       - name: Quickstart
@@ -205,8 +219,12 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete agents
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
-    - name: Build with Microsoft Graph APIs
-      href: graph-api-tutorial.yml
+    - name: User experience
+      items:
+      - name: User experience features
+        href: ux-custom-engine-agent.md
+      - name: Asynchronous and proactive messaging
+        href: custom-engine-agent-asynchronous-flow.md
     - name: Bring agents to Copilot
       href: bring-agents-to-copilot.md
     - name: Invoke actions with Semantic Kernel
@@ -214,7 +232,9 @@
 - name: Add knowledge with Copilot connectors
   items:
   - name: Copilot connectors in Microsoft 365 Copilot
-    href: overview-graph-connector.md
+    href: overview-copilot-connector.md
+  - name: Delegate connector administration
+    href: connector-admin-delegation.md
   - name: Prebuilt connectors gallery
     href: /microsoftsearch/connectors-gallery?context=/microsoft-365-copilot/extensibility/context
   - name: Build your first connector
@@ -238,10 +258,31 @@
     - name: Use external groups
       href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
 - name: Enhance AI solutions with Copilot APIs
-  expanded: false
   items:
-  - name: Overview
+  - name: Microsoft 365 Copilot APIs overview
     href: copilot-apis-overview.md
+  - name: Use client libraries (preview)
+    href: sdks/api-libraries.md
+  - name: API reference
+    items:
+    - name: Retrieval API (preview)
+      items:
+      - name: Overview
+        href: api-reference/retrieval-api-overview.md
+      - name: Retrieve data
+        href: api-reference/copilotroot-retrieval.md
+      - name: Complex types
+        items:
+        - name: Retrieval response
+          href: api-reference/resources/retrievalresponse.md
+        - name: Retrieval hit
+          href: api-reference/resources/retrievalhit.md
+        - name: Retrieval extract
+          href: api-reference/resources/retrievalextract.md
+        - name: Search response metadata dictionary
+          href: api-reference/resources/searchresourcemetadatadictionary.md
+        - name: Search sensitivity label info
+          href: api-reference/resources/searchsensitivitylabelinfo.md
 - name: Publish
   items:
   - name: Overview

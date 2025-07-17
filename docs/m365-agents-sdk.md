@@ -10,7 +10,7 @@ ms.topic: overview
 
 # Build custom engine agents with Microsoft 365 Agents SDK
 
-**Microsoft 365 Agents SDK** is a comprehensive framework for building full-stack, multi-channel agents that operate seamlessly across Microsoft 365 Copilot, Teams, third-party platforms, custom applications, and websites. It integrates effortlessly with AI services like Azure AI Foundry and orchestration layers such as Semantic Kernel. 
+**Microsoft 365 Agents SDK** is a comprehensive framework for building full-stack, multi-channel agents that operate seamlessly across Microsoft 365 Copilot, Teams, third-party platforms, custom applications, and websites. It integrates effortlessly with AI services like Azure AI Foundry and orchestration layers such as Semantic Kernel.
 
 :::image type="content" source="assets/images/build-with-agents-sdk.png" alt-text="Visual representation of a user input and a bot response." lightbox="assets/images/build-with-agents-sdk.png":::
 
