@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 07/10/2025
+ms.date: 07/30/2025
 ms.topic: overview
 ---
 
@@ -15,6 +15,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## July 2025
+
+### Scope Copilot connector data sources
+
+You can now scope Copilot connectors to specific data attributes when you use Copilot Studio agent builder to create your agent. For more information, see [Scope Copilot connector data sources](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-knowledge).
 
 ### Asynchronous and proactive messages in custom engine agents
 

@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/11/2025
+ms.date: 07/30/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -206,11 +206,12 @@ To enhance the accuracy and relevance of agent responses, agents can be grounded
 1. On the card for that connector, add the connections that are relevant to your scenario.
 1. Choose the arrow to go back to the **Knowledge** section.
 1. Expand the connector that you added and select that attribute that you want to scope the knowledge to (for example, project, space, folder), and search for or type the attribute name.
-1. Select the attribute from the list to add it. Your agent's knowledge is scoped to the data associated with the scoped attribute. 
+1. Select the attribute from the list to add it. 
+1. Your agent's knowledge is now scoped to the data associated with the scoped attribute.
 
 For example, when you use the **Azure DevOps Work Items** connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
 
-To scope the Azure DevOps area path:
+To scope the **Azure DevOps Work Items** area path:
 
 1. Under **Choose other data sources**, select **Azure DevOps Work Items**.
 2. Choose the **Add** button next to the connections that are relevant to your tasks.
@@ -220,11 +221,11 @@ To scope the Azure DevOps area path:
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
 
-The following table lists the Copilot connector data sources that support scoping and the attributes that you can use to scope the data.
+The following table lists the Copilot connectors that support scoping and the attributes that you can use to scope the data.
 
-| Data source | Scoping attribute |
+| Connector | Scoping attribute |
 | ----------- | ----------------- |
-|Azure DevOps Work Items | Area path |
+| Azure DevOps Work Items | Area path |
 | Azure DevOps Wiki | Project |
 | Confluence | Space |
 | Google Drive | Folder |
@@ -234,6 +235,8 @@ The following table lists the Copilot connector data sources that support scopin
 | ServiceNow Knowledge | Knowledge base |
 | ServiceNow Catalog | Catalog |
 | ServiceNow Tickets | Entity type (Sys_class_name/ Category/ Subcategory) |
+
+For more information about the Copilot connectors that are availlable, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext). 
 
 ## Prioritize your knowledge sources over general knowledge
 
