@@ -231,6 +231,7 @@ The following table lists the Copilot connectors that support scoping and the at
 | Google Drive | Folder |
 | GitHub Cloud Pull Requests | Repository |
 | GitHub Cloud Issues | Repository |
+| GitHub Cloud Knowledge | Repository |
 | Jira | Project |
 | ServiceNow Knowledge | Knowledge base |
 | ServiceNow Catalog | Catalog |
