@@ -38,6 +38,13 @@ Both Power Platform connectors and API plugins allow for the calling of a standa
 
 The orchestrator and connector mechanisms in Copilot Studio differ from API-based plugins. To connect an API with Copilot Studio, you need to create a custom connector that uses OpenAPI V2 swagger and add an AI description. This approach allows you to integrate various APIs seamlessly and apply the AI capabilities of Copilot Studio for enhanced functionality.
 
+### What are the differences between Microsoft Graph connectors and Copilot connectors?
+
+Microsoft 365 Copilot connectors are the evolution of Microsoft Graph connectors. Copilot connectors provide semanticindexing, enhanced AI integration, improved search capabilities, and an enhanced user experience. The core functionality, however, remains largely the same. Copilot connectors allow developers to create Copilot agents that ingest external data and make external content discoverable across Microsoft 365 experiences. They also support the same API structure that Microsoft Graph connectors used, and they use the same security and compliance framework.For more information, see:
+- [Microsoft 365 Copilot extensibility overview](https://learn.microsoft.com/microsoft-365-copilot/extensibility/)
+- [Microsoft 365 Copilot Connectors Overview](overview-copilot-connector.md)
+- [Microsoft 365 Copilot connectors overview for Microsoft Search](..\microsoftsearch\connectors-overview)
+
 ### What are the differences between Copilot connectors and Power Platform connectors?
 
 Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) enable you to bring additional information into Microsoft Graph to make it discoverable across various Microsoft 365 experiences, including Microsoft 365 Copilot. The connection is synchronous to data-providing services; it replicates data into Microsoft 365 for use in Copilot and other scenarios.
