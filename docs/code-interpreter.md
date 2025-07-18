@@ -1,20 +1,20 @@
 ---
-title: Code Interpreter Capability for Declarative Agents for Microsoft 365 Copilot.
-description: Learn about the code interpreter capability and how to add it to your declarative agents.
+title: Code Interpreter Capability for Declarative Agents for Microsoft 365 Copilot
+description: Find example that show you how to use the code interpreter capability and learn how to enable it in your declarative agents.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 5/09/2025
+ms.date: 07/18/2025
 ---
 
 # Add the code interpreter capability to your agent
 
-You can enhance the user experience of your declarative agents for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](declarative-agent-manifest-1.4.md#capabilities-object) in the manifest reference, and in the **Capabilities** section of the Copilot Studio agent builder, provide several options for you to unlock features for your users. This article describes the code interpreter capability and how to add it to your declarative agents.
+You can enhance the user experience of your declarative agents for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](declarative-agent-manifest-1.4.md#capabilities-object) in the manifest reference, and in the **Capabilities** section in Copilot Studio agent builder, provide several options for you to unlock features for your users. 
 
 Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the related code that it generates. It can also produce images or files based on the scenario, and accepts files as input for modification and analysis.
 
-The code interpreter capability is available to Copilot Chat users with a Microsoft 365 Copilot  license or a license that doesn't include metered usage.
+The code interpreter capability is available to users with a Microsoft 365 Copilot license and Copilot Chat users without metered usage enabled.
 
 > [!NOTE]
 > Support for in-context agents that have code interpreter enabled varies by host.
