@@ -57,7 +57,7 @@ For information about SharePoint knowledge file size limits, see [File size limi
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
 
 > [!NOTE]
-> Users who are configured with a pay-as-you-go plan in the Microsoft 365 admin center don't have access to this knowledge source.
+> If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
 ### Entering a URL for a SharePoint site, folder, or file
 
@@ -110,7 +110,7 @@ You can upload files directly from your device for your agent to use as knowledg
 You can add up to 20 files as knowledge sources.
 
 > [!NOTE]
-> Users who are configured with a pay-as-you-go plan in the Microsoft 365 admin center don't have access to this knowledge source.
+> Users who are configured with a pay-as-you-go plan in the Microsoft 365 admin center might not have access to this knowledge source.
 
 Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-size-limits).
 
@@ -201,7 +201,7 @@ Copilot connectors allow agents to access and apply knowledge from external syst
 
 > [!NOTE]
 > - Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
-> - Users who are configured with a pay-as-you-go plan in the Microsoft 365 admin center don't have access to this knowledge source.
+> - If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
 To enhance the accuracy and relevance of agent responses, agents can be grounded not only in broad organizational data but also in specific scoped items. For example, when you use the Azure DevOps Work Items connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
 
