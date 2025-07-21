@@ -5,7 +5,7 @@ author: muwagerikpe
 ms.author: muwagerikpe
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 07/21/2025
 ---
 
 # Microsoft 365 Copilot connectors overview
