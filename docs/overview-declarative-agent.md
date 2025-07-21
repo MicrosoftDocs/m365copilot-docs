@@ -4,7 +4,7 @@ description: Learn how you can use declarative agents to meet business needs. De
 author: aycabas
 ms.author: aycabas
 ms.localizationpriority: medium
-ms.date: 12/04/2024
+ms.date: 07/21/2025
 ms.topic: overview
 ---
 
