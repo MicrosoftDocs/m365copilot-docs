@@ -20,6 +20,14 @@
       "file": "repairs-hub-api-plugin.json"
     }
   ],
+  "behavior_overrides": {
+    "suggestions": {
+      "disabled": true
+    },
+    "special_instructions": {
+      "discourage_model_knowledge": true
+    }
+  },
   "capabilities": [
     {
       "name": "WebSearch",

@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 06/17/2025
+ms.date: 07/10/2025
 ms.topic: overview
 ---
 
@@ -14,11 +14,33 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## July 2025
+
+### Asynchronous and proactive messages in custom engine agents
+
+You can implement asynchronous and proactive message flows in your custom engine agents. For more information, see [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-asynchronous-flow.md).
+
+### Convert declarative agents to custom engine agents
+
+You can convert your declarative agent to a custom engine agent to take advantage of advanced functionality and workflows. For more information, see [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md).
+
+### Prioritize declarative agent knowledge sources
+
+You can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, for Copilot Studio agent builder, see [Prioritize your knowledge sources](copilot-studio-agent-builder-knowledge.md#prioritize-your-knowledge-sources-over-general-knowledge); for Microsoft 365 Agents Toolkit, see [Special instructions object](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.4#special-instructions-object).
+
+### Custom engine agents generally available
+
+Custom engine agents for Microsoft 365 Copilot are now generally available (GA). For more information, see [Custom engine agent overview](overview-custom-engine-agent.md).
+
 ## June 2025
+
+### Maximum number of conversation starters for declarative agents
+
+You can now add up to 12 conversation starters to your declarative agent when you use the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents) to create your agent.
 
 ### Embedded file content as knowledge
 
-Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded file content](copilot-studio-agent-builder-build.md#embedded-file-content).
+Use the file upload feature in Copilot Studio agent builder to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded file content](copilot-studio-agent-builder-knowledge.md#embedded-file-content).
 
 ### Use the Retrieval API (preview) to retrieve data
 
@@ -90,7 +112,7 @@ Microsoft 365 Copilot Chat users can now access Copilot Studio agent builder to 
 
 ### Add websites as knowledge in agent builder
 
-You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-build.md#websites).
+You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-agent-builder-knowledge.md#public-websites).
 
 ### Custom engine agents available in Copilot app (preview)
 
