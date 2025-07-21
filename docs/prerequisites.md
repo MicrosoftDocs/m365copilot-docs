@@ -117,8 +117,6 @@ Some agent types and and agent capabilities are only available to licensed Micro
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and metered usage configuration in the tenant.
 
-[!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
-
 | Capability | Copilot Chat (no metered usage)* | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
 |Copilot Studio agent builder |  :white_check_mark: | :white_check_mark: | :white_check_mark: |

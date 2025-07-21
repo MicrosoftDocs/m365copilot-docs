@@ -14,6 +14,13 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## July 2025
+
+### Support for Microsoft 365 Government Clouds
+
+Limited support for declarative agents is available for [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants. Support is now available for Government Community Cloud Moderate (GCCM) tenants.
+
+
 ## June 2025
 
 ### Embedded file content as knowledge
