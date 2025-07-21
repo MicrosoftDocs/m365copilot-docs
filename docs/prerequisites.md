@@ -20,11 +20,6 @@ For Microsoft 365 Copilot license information, see [License options](/copilot/mi
 
 You have the following options for a Copilot development environment:
 
-- A Microsoft 365 Developer Program sandbox subscription with a Microsoft 365 Copilot license (available in limited preview through the [Microsoft 365 Developer TAP membership](#microsoft-365-developer-program-sandbox-subscription-for-isvs)).
-
-    > [!NOTE]
-    > Microsoft 365 Copilot isn't included in [Microsoft 365 Developer Program subscriptions](https://developer.microsoft.com/microsoft-365/dev-program#Subscription). Sandbox subscription availability is currently limited to Independent Software Vendor (ISV) partners who are part of TAP.
-
 - A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities.
 
     At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
@@ -36,13 +31,7 @@ You have the following options for a Copilot development environment:
 
 - A Microsoft 365 subscription without a Copilot license, such as [Microsoft 365 Business Basic](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-basic), if you want to build and test agents for Microsoft 365 Copilot Chat, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](#agent-capabilities-for-microsoft-365-users).
 
-You can also purchase a Microsoft 365 Copilot license and set up a development environment independent of your production environment where you can be your own administrator.
-
-### Microsoft 365 Developer Program sandbox subscription for ISVs
-
-We recommend that ISV partners who build multi-tenant solutions acquire a new Microsoft 365 Developer Program sandbox subscription that includes Microsoft 365 Copilot.
-
-To get a developer subscription, join the [Microsoft 365 Developer Technology Adoption Program (TAP)](https://aka.ms/m365devtap).
+You can also purchase a Microsoft 365 Copilot license and set up a development environment independent of your production environment, where you can be your own administrator.
 
 ### Organizations with Microsoft 365 Copilot licenses
 
@@ -127,7 +116,7 @@ The following table lists the agent types and agent capabilities that are availa
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code interpreter | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image generator| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scoped web search | :x: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scoped web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copilot connectors</br> | :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SharePoint data</br>| :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embedded file content</br>| :x: | :white_check_mark: | :white_check_mark: |
@@ -135,10 +124,9 @@ The following table lists the agent types and agent capabilities that are availa
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email | :x: | :x: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;People | :x: | :x: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teams messages | :x: | :x: | :white_check_mark: |
-|[**Custom engine agents**](overview-custom-engine-agent.md)| :white_check_mark:** | :white_check_mark: | :white_check_mark: |
+|[**Custom engine agents**](overview-custom-engine-agent.md)| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
-\** Agents built with Copilot Studio.
 
 > [!NOTE]
 > For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
@@ -171,10 +159,6 @@ Each message unit costs $0.01.
 ### Can I use my Microsoft 365 Developer Program subscription to develop with Copilot?
 
 You can use your Microsoft 365 Developer Program subscription to build agents with limited capabilities that are grounded on web search. Because Microsoft 365 Developer Program subscriptions don't support commerce, you can't purchase Microsoft 365 Copilot licenses or enable metering, so you can't use your subscription to build agents grounded on organizational data or add other capabilities.
-
-### Can Microsoft 365 Developer Program ISV sandbox subscriptions with Copilot be renewed when the licenses expire?
-
-Yes. If you continue to qualify for the ISV sandbox tenant (Microsoft 365 E5 developer subscription), your development environment renews automatically.
 
 ### I'm not an ISV and I don't have a Microsoft 365 Copilot license. Can I get a Microsoft 365 Copilot development environment?
 

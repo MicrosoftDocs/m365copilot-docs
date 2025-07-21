@@ -51,6 +51,7 @@
       "ms.service": "microsoft-365-copilot",
       "ms.subservice": "developer",
       "ms.collection": "ce-skilling-ai-copilot",
+      "ms.update-cycle": "180-days",
       "uhfHeaderId": "MSDocsHeader-M365CopilotExt"
     },
     "fileMetadata": {
