@@ -1,7 +1,7 @@
 ---
 title: Create declarative agents using Microsoft 365 Agents Toolkit
 description: Learn how to build a declarative agent for Microsoft 365 Copilot using Microsoft 365 Agents Toolkit.
-ms.date: 05/19/2025
+ms.date: 07/21/2025
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -13,6 +13,9 @@ ms.localizationpriority: medium
 A declarative agent is a customized version of Microsoft 365 Copilot that allows users to create personalized experiences by declaring specific instructions, actions, and knowledge. This guide provides information about how to build a declarative agent by using Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)).
 
 The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+
+> [!NOTE]
+> Publishing agents via the Microsoft 365 Agents Toolkit isn't supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants.
 
 :::image type="content" source="assets/images/build-da/ttk/agent-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
 

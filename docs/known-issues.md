@@ -63,6 +63,7 @@ The following capabilities aren't currently supported in [Microsoft 365 Governme
 - [Copilot Studio agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder).
 - [Authenticated custom actions](/microsoft-365-copilot/extensibility/overview-api-plugins).
 - Support for metered billing for extensibility features. For details about features that require metered billing, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
+- Support for publishing agents via the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents).
 
 ## Copilot connectors
 
