@@ -28,7 +28,7 @@ For more information about how you can tailor your declarative agents, see [Decl
 
 ## Are declarative agents available for Microsoft 365 Government tenants?
 
-Limited support for declarative agents is available for [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants. Support is available for Government Community Cloud Moderate (GCCM) tenants and is coming soon for Government Community Cloud High (GCCH) and Department of Defense (DoD) tenants.
+[!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
 
 ## How were declarative agents evaluated? What metrics are used to measure performance?
 
