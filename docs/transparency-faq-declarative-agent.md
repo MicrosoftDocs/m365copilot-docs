@@ -5,7 +5,7 @@ author: simranajwani
 ms.author: simranajwani
 ms.topic: faq
 ms.localizationpriority: medium
-ms.date: 12/04/2024
+ms.date: 07/21/2025
 ---
 
 # Declarative agents FAQ
@@ -25,6 +25,10 @@ Declarative agents provide a custom chat experience without a need to write impe
 Declarative agents provide a custom chat experience based on the power of Microsoft 365 Copilot. Users are familiar with the idea of asking an expert; equipped with appropriate instructions, connectors, and actions, declarative agents can become experts with a minimum of development effort.
 
 For more information about how you can tailor your declarative agents, see [Declarative agents for Microsoft 365](overview-declarative-agent.md#tailor-declarative-agents-for-your-scenario).
+
+## Are declarative agents available for Microsoft 365 Government tenants?
+
+[!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
 
 ## How were declarative agents evaluated? What metrics are used to measure performance?
 

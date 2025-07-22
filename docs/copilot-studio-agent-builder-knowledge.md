@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/09/2025
+ms.date: 07/11/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -162,7 +162,7 @@ The following table lists sensitivity label scenarios that aren't currently supp
 
 ### Sharing an agent with embedded files
 
-When you share an agent with embedded files, the files are also shared, and agent users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with embedded files as knowledge:
+When you share an agent with embedded files, the files are only shared with users when they have acquired the agent. After they acquire the agent, users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with embedded files as knowledge:
 
 - Anyone in your organization
 - Specific users in your organization
@@ -210,7 +210,18 @@ To scope the Azure DevOps area path:
 
 ## Prioritize your knowledge sources over general knowledge
 
-You can configure your agent to prioritize the knowledge sources you provide—such as SharePoint content or embedded files—when it responds to queries that require knowledge-based searches. This helps to ensure that the agent's answers are grounded in your knowledge sources. The agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
+You can configure your agent to prioritize the knowledge sources you provide—such as SharePoint content or embedded files—when it responds to queries that require knowledge-based searches. Knowledge-based searches are user requests to look up specific information; for example:
+
+- Who is the current company CEO?
+- When is the next business conference?
+- What's the most recent update related to a feature?
+
+Some user requests don't require knowledge-based searches; the agent can respond based on general AI knowledge. For example:
+
+- Translate this phrase into Spanish: "Hello, how are you?"
+- What is 1+1?
+
+When you enable this feature, the agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
 
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
 

@@ -4,7 +4,7 @@ description: Introduction of Microsoft 365 Agents SDK to build custom engine age
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 07/21/2025
 ms.topic: overview
 ---
 
@@ -21,6 +21,9 @@ This SDK is best suited if you need highly tailored agents with advanced capabil
 - You need fine-grained control over model and orchestrator selection.
 - You want to leverage your prior experience with the Bot Framework.
 - You’re familiar with orchestration frameworks like [Semantic Kernel](/semantic-kernel/overview/) or [Langchain](https://www.langchain.com/).
+
+> [!NOTE]
+> Publishing agents via the Microsoft 365 Agents Toolkit isn't supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants.
 
 ## Next step
 

@@ -4,7 +4,7 @@ description: Learn about the user experience components of custom engine agents 
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 05/23/2025
+ms.date: 07/11/2025
 ms.topic: overview
 ---
 
@@ -66,12 +66,14 @@ For more information, see [Feedback buttons](/microsoftteams/platform/bots/how-t
 
 Custom engine agents can handle multiple tasks concurrently without blocking the main thread. Users can keep chatting with an agent while a task is in process, even when the task takes a few minutes or days. After the task is completed, the agent sends a notification to the user. These patterns are common scenarios for Teams bots, and are available in Copilot chat as well.
 
+For more information, see [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-asynchronous-flow.md).
+
 ### Follow-up messages
 
 Follow-up messages on user-initiated workflows keep users informed about the status of their requests or jobs. For example, an IT agent updates the user when a new laptop purchase request is approved.
 
 > [!NOTE]
-> Asynchronous messages aren't supported for agents built in Copilot Studio.
+> Custom engine agents build with Copilot Studio don't support asynchronous messages.
 
 ### Long-running task
 
@@ -83,7 +85,7 @@ To send a follow-up message or wait for a long-tunning task, you can use the tur
 
 Proactive messages are agent-initiated messages based on predefined triggers; for example, sending reminders and alerts.
 
-For more information, see [Proactive messages](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?context=/microsoft-365-copilot/extensibility/context).
+## Related content
 
-> [!NOTE]
-> [Proactive notifications](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages#notification-messages?context=/microsoft-365-copilot/extensibility/context) aren't currently supported.
+- [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-asynchronous-flow.md)
+- [Custom engine agent overview](/microsoft-365-copilot/extensibility/overview-custom-engine-agent)
