@@ -4,7 +4,7 @@ description: Find information about custom engine agents, which are specialized 
 author: jessicaaawu
 ms.author: wujessica
 ms.localizationpriority: medium
-ms.date: 05/05/2025
+ms.date: 07/22/2025
 ms.topic: overview
 ---
 
@@ -64,7 +64,7 @@ The following table provides a quick comparison of the available approaches.
 |---------------------------------|----------------|----------|------------|
 | Development approach            | Low-code | Pro-code | Pro-code |
 | Tooling                         | Copilot Studio UI | Visual Studio Code/Visual Studio with Teams AI Library | Visual Studio Code/Visual Studio with Microsoft 365 Agents Toolkit |
-| Publishing                      | My organization<br>ISV/store | My organization<br>ISV/store | My organization<br>ISV/store<br>10+ channels |
+| Publishing                      | My organization | My organization<br>ISV/store | My organization<br>ISV/store<br>10+ channels |
 | Channels                        | Microsoft 365 Copilot, Teams, partner apps, mobile apps, and custom websites | Microsoft 365 Copilot, Teams | Microsoft 365 Copilot, Teams, partner apps, mobile apps, and custom websites |
 | Productivity                    | Individual | Group | Group |
 | Orchestrator                    | Copilot Studio | Teams AI Action Planner | Bring your own (for example, Semantic Kernel, LangChain) |

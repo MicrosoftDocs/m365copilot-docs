@@ -80,6 +80,8 @@ To build Copilot connectors, you must have a search administrator in your organi
     - This might not be an option if you're working in a production environment. Any deployed Copilot connector is accessible tenant-wide unless the external items security is locked down.
 - Make sure that Copilot connectors that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) via the **Agents and connectors** section under **Copilot** in the Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.com)). For more information, see [Manage connector results](/microsoftsearch/connectors-in-all-vertical).
 
+To ensure that users can access Copilot connector functionality in agents for Microsoft 365 Copilot, Copilot admins must remove the **Microsoft 365 App Catalog Services** service principal from the organization's Conditional Access policies. For more information, see [What is Conditional Access?](/entra/identity/conditional-access/overview).
+
 ## Configuring your custom Copilot connector for Microsoft 365 Copilot
 
 To make sure that Microsoft 365 Copilot uses your content effectively:
