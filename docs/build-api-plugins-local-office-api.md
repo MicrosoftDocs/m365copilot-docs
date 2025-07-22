@@ -411,13 +411,13 @@ Office uses the infrastructure of Office Add-ins to run API plugins for the Offi
     - To test in Office on Windows, open Excel, and then open (or create) a workbook.
     - To test in Office on the web, in a browser, navigate to `https://excel.cloud.microsoft`, and then open (or create) a workbook.
 
-1. The process of opening your agent depends on the UI for Copilot in Office applications which is in transition.
+1. The process of opening your agent depends on the UI for Copilot in Office applications, which is in transition.
 
-   - If there is a **Copilot** *button* on the ribbon (not a drop down menu), select the **Copilot** button to open the **Copilot** pane.   
-   - If there is a **Copilot** drop down menu, open the menu and select **App Skills** from the drop down list to open the **Copilot** pane.
+   - If you see a **Copilot** *button* on the ribbon (not a drop down menu), select the **Copilot** button to open the **Copilot** pane.   
+   - If you see a **Copilot** drop down menu, open the menu and select **App Skills** from the drop down list to open the **Copilot** pane.
 
 1. Select the hamburger control in the **Copilot** pane. 
-1. In the pane, **Excel Agent** should be in the list of agents. You may need to select **See more** to ensure that all agents are listed. If the agent isn't listed, try one or both of the following actions.
+1. In the pane, **Excel Agent** should be in the list of agents. You might need to select **See more** to see a list of all agents. If the agent isn't listed, try one or both of the following actions.
     <!-- markdownlint-disable MD033 -->
     - Wait a few minutes and reload Copilot.
     - With Copilot open to the list of agents, place the cursor in the Copilot pane and press <kbd>Ctrl</kbd>+<kbd>R</kbd>.
