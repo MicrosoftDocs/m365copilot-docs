@@ -4,7 +4,7 @@ description: Learn how you can use declarative agents to meet business needs. De
 author: aycabas
 ms.author: aycabas
 ms.localizationpriority: medium
-ms.date: 12/04/2024
+ms.date: 07/21/2025
 ms.topic: overview
 ---
 
@@ -14,7 +14,8 @@ Declarative agents enable you to customize Microsoft 365 Copilot to help you mee
 
 With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock more functionality for your users.
 
-[!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
+> [!NOTE]
+> [!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
 
 ## Tailor declarative agents for your scenario
 
