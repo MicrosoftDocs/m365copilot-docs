@@ -16,9 +16,9 @@ For the latest information, announcements, and news about preview and generally 
 
 ## July 2025
 
-### Support for Microsoft 365 Government Clouds
+### Agents supported in Microsoft 365 Government cClouds
 
-Limited support for declarative agents is available for [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants. Support is now available for Government Community Cloud Moderate (GCCM) tenants.
+Limited support for declarative agents is available for [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants. Support is now available for Government Community Cloud (GCC) tenants.
 
 ### Asynchronous and proactive messages in custom engine agents
 
