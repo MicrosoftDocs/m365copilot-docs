@@ -5,5 +5,4 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041 -->
 
-> [!NOTE]
-> Declarative agents are currently not available in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants.
+Limited support for declarative agents is available for [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants. Support is currently available for Government Community Cloud (GCM) tenants.

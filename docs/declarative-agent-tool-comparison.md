@@ -4,7 +4,7 @@ description: Learn which tools are most suited for different use cases when crea
 ms.author: v-koenenkaty
 author: kmkoenen
 ms.localizationpriority: medium
-ms.date: 03/07/2025
+ms.date: 07/21/2025
 ms.topic: conceptual
 ---
 
@@ -79,6 +79,9 @@ The [SharePoint](https://support.microsoft.com/office/get-started-with-sharepoin
 If your scenario involves the full control, scalability, and direct API integration of a pro-code approach, [Agents Toolkit](./build-declarative-agents.md) is the best tool to use to create your declarative agent.
 
 The following table lists the pros and cons for using Agents Toolkit.
+
+> [!NOTE]
+> Publishing agents via the Microsoft 365 Agents Toolkit isn't supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants.
 
 | **Pros** | **Cons** |
 |:------------|:------------|
