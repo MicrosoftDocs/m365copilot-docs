@@ -35,7 +35,7 @@ Your users can do much more than just search queries. With the integration of me
 
 There are a few ways to build [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), but to extend the capabilities for Copilot, you need to build your extension with [Bot Framework](https://dev.botframework.com/) SDK, which is used to create various bots, including Teams bots.
 
-For development, you can use Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) for Visual Studio Code to build your message extensions. The toolkit helps you to create a project by scaffolding a template that suits your needs.
+For development, you can use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) for Visual Studio Code to build your message extensions. The toolkit helps you to create a project by scaffolding a template that suits your needs.
 
 ## Related content
 

@@ -20,7 +20,7 @@ Declarative agents are customized versions of Microsoft 365 Copilot that help yo
 
 If your declarative agent also has API plugins as actions, the OpenAPI document for your plugin helps the agent understand any instructions referring to the API. For more information, see [How to make an OpenAPI document effective in extending Copilot](openapi-document-guidance.md).
 
-This guidance applies to developers and makers who are using Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
+This guidance applies to developers and makers who are using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
 
 ## Instruction components
 

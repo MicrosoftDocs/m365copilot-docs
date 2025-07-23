@@ -33,7 +33,7 @@ To learn more, see [Manage agents for Copilot in Microsoft 365 admin center](/mi
 
 ## Agents built with Microsoft 365 Agents Toolkit
 
-Both [declarative agents](./build-declarative-agents.md) and [custom engine agents](/microsoftteams/platform/teams-ai-library-tutorial?context=/microsoft-365-copilot/extensibility/context) built with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) that are published to the organization or acquired from Microsoft Commercial Marketplace are managed through the **Integrated Apps** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
+Both [declarative agents](./build-declarative-agents.md) and [custom engine agents](/microsoftteams/platform/teams-ai-library-tutorial?context=/microsoft-365-copilot/extensibility/context) built with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) that are published to the organization or acquired from Microsoft Commercial Marketplace are managed through the **Integrated Apps** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
 | Control | Core scenario | Related content |
 |--|--|--|

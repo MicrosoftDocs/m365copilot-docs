@@ -12,7 +12,7 @@ ms.date: 05/19/2025
 
 Testing is an important part of the process of developing [declarative agents](overview-declarative-agent.md) for Microsoft 365 Copilot Chat. You can use [developer mode](debugging-copilot-agent.md) while testing your agent to verify whether and how the Copilot orchestrator selects your knowledge sources for use in response to given prompts.
 
-Additionally, you can use the **Preview your app (F5)** feature in the Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to test your agents in a local development environment. This feature provides an interactive way to validate behavior and troubleshoot issues directly from the development interface.
+Additionally, you can use the **Preview your app (F5)** feature in the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to test your agents in a local development environment. This feature provides an interactive way to validate behavior and troubleshoot issues directly from the development interface.
 
 ## Use developer mode in Copilot Chat and Agents Toolkit
 

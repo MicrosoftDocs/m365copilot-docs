@@ -66,7 +66,7 @@ Add Outlook email and Teams group, channel, and meeting chats as knowledge when 
 
 ### Microsoft 365 Agents Toolkit
 
-Use Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to [Build declarative agents](/microsoft-365-copilot/extensibility/build-declarative-agents) and [Build Copilot connectors](build-your-first-connector.md).
+Use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to [Build declarative agents](/microsoft-365-copilot/extensibility/build-declarative-agents) and [Build Copilot connectors](build-your-first-connector.md).
 
 ### Microsoft 365 Copilot APIs
 
@@ -92,7 +92,7 @@ Updated the usage rates for Copilot Studio messages. For more information, see [
 
 ### Email as knowledge
 
-Email is now available as a knowledge source for agents build with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)). For more information, see [Email knowledge](knowledge-sources.md#email).
+Email is now available as a knowledge source for agents build with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](knowledge-sources.md#email).
 
 ### Copilot Studio agent builder templates
 
