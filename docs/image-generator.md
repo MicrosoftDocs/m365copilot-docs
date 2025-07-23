@@ -40,7 +40,7 @@ The following image shows the result.
 
 ### Agents Toolkit
 
-If you're using Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest file, as shown in the following example.
+If you're using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to create your agent, to enable image generator in your agent, add the `GraphicArt` value to the **capabilities** property in your manifest file, as shown in the following example.
 
 > [!NOTE]
 > You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add the `GraphicArt` capability.

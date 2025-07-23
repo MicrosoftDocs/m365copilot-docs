@@ -62,7 +62,7 @@ To build agents, you need to complete prerequisites depending on the tool that y
 
 #### Microsoft 365 Agents Toolkit requirements
 
-You can use Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data via SharePoint or Copilot connectors, you need to either set up billing in your tenant or purchase a Microsoft 365 Copilot license.
+You can use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data via SharePoint or Copilot connectors, you need to either set up billing in your tenant or purchase a Microsoft 365 Copilot license.
 
 To build agents with Agents Toolkit and other IDEs, you must have your admin enable the ability to sideload a *custom app* to your tenant.
 

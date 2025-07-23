@@ -14,7 +14,7 @@ ms.topic: how-to
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-[API plugins](overview-api-plugins.md) connect your existing REST API to Microsoft 365 Copilot. You can use the Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi).
+[API plugins](overview-api-plugins.md) connect your existing REST API to Microsoft 365 Copilot. You can use the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi).
 
 ## Prerequisites
 

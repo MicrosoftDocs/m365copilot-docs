@@ -66,7 +66,7 @@ The following are the major steps for creating an API plugin for a Copilot agent
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org) 18, 20, or 22
-- Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit))
+- [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
 
 ### Create the project
 

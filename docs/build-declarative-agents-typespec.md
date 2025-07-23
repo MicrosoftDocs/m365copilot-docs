@@ -10,7 +10,7 @@ ms.date: 05/19/2025
 
 # Create declarative agents using Microsoft 365 Agents Toolkit and TypeSpec
 
-A [declarative agent](overview-declarative-agent.md) is a customized version of Microsoft 365 Copilot that allows users to create personalized experiences by declaring specific instructions, actions, and knowledge. This guide demonstrates how to build a declarative agent by using [TypeSpec](https://typespec.io/) and the Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)).
+A [declarative agent](overview-declarative-agent.md) is a customized version of Microsoft 365 Copilot that allows users to create personalized experiences by declaring specific instructions, actions, and knowledge. This guide demonstrates how to build a declarative agent by using [TypeSpec](https://typespec.io/) and the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 
 > [!NOTE]
 > The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
