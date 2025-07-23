@@ -87,7 +87,7 @@ Microsoft 365 provides a rich set of developer resources for extending Microsoft
 
 ### Microsoft 365 Agents Toolkit
 
-Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) is the *pro-code* option for building and debugging agents and actions (plugins). It provides support for all major Microsoft 365 platform extensibility surfaces, including agents, tabs, bots, message extensions, and Outlook Add-ins. Agents Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
+[Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) is the *pro-code* option for building and debugging agents and actions (plugins). It provides support for all major Microsoft 365 platform extensibility surfaces, including agents, tabs, bots, message extensions, and Outlook Add-ins. Agents Toolkit is available as an extension for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs).
 
 ### Copilot Studio
 

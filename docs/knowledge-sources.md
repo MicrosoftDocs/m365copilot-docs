@@ -12,7 +12,7 @@ ms.date: 07/09/2025
 
 You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.4.md#capabilities-object) in the manifest reference and the **Knowledge** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the  knowledge sources that you can add to your agents.
 
-The following table lists the capabilities and knowledge sources you can configure by using agent builder or Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
+The following table lists the capabilities and knowledge sources you can configure by using agent builder or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
 
 | Capability or knowledge source | Agent builder | Agents Toolkit | License or metered usage required? |
 |:-------------------------------|:--------------|:--------------|:-----------------------------------|
