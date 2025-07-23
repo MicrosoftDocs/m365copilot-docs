@@ -4,7 +4,7 @@ description: Learn how to build your first Microsoft 365 Copilot connector for p
 author: wictorwilen
 ms.author: wictorwilen
 ms.localizationpriority: medium
-ms.date: 07/08/2025
+ms.date: 07/23/2025
 ms.topic: how-to
 ---
 
@@ -77,7 +77,7 @@ After registration, you must add the connection to the list of prioritized profi
 - Microsoft Graph treats any other properties, besides the [reserved profile properties](#connection-schema-requirements) in the connection schema, as a custom property.
 - Custom properties show up in profile cards as notes during the preview, but Microsoft will remove them before or at general availability.
 - Microsoft 365 might take up to 48 hours after you ingest data about a person before it becomes available in search, people experiences, or Copilot.
-- Connections with people data don't support [staged connections](microsoftsearch/staged-rollout-for-graph-connectors).
+- Connections with people data don't support [staged connections](/microsoftsearch/staged-rollout-for-graph-connectors).
 - Indexed items in connections with people data only appear in people search.
 
 ## Related content
