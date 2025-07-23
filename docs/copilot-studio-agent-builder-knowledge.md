@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/11/2025
+ms.date: 07/18/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -56,6 +56,9 @@ For information about SharePoint knowledge file size limits, see [File size limi
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
 
+> [!NOTE]
+> If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
+
 ### Entering a URL for a SharePoint site, folder, or file
 
 You can enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
@@ -105,6 +108,9 @@ You can ground your agent in Outlook email. To add email as a knowledge source, 
 You can upload files directly from your device for your agent to use as knowledge. The files that you upload become embedded content in the agent. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device. You can upload individual files from your device, but not file folders.
 
 You can add up to 20 files as knowledge sources.
+
+> [!NOTE]
+> If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
 Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-size-limits).
 
@@ -194,7 +200,8 @@ The following table lists the file types that you can add as knowledge to your a
 Copilot connectors allow agents to access and apply knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. With agent builder, you can integrate enterprise data from your workspace directly into your agents, empowering them with domain-specific knowledge.
 
 > [!NOTE]
-> Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
+> - Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
+> - If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
 To enhance the accuracy and relevance of agent responses, agents can be grounded not only in broad organizational data but also in specific scoped items. For example, when you use the Azure DevOps Work Items connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
 
