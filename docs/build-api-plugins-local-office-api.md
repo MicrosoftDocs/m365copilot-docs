@@ -4,7 +4,7 @@ description: Learn how to build API plugins for Microsoft 365 Copilot with the O
 author: rickki
 ms.author: rickki
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 07/23/2025
 ms.topic: how-to
 ---
 
@@ -65,7 +65,7 @@ The following are the major steps for creating an API plugin for a Copilot agent
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Node.js](https://nodejs.org) 18, 20, or 22
+- [Node.js](https://nodejs.org) 18, 20, 22, or 24
 - Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit))
 
 ### Create the project
@@ -411,10 +411,16 @@ Office uses the infrastructure of Office Add-ins to run API plugins for the Offi
     - To test in Office on Windows, open Excel, and then open (or create) a workbook.
     - To test in Office on the web, in a browser, navigate to `https://excel.cloud.microsoft`, and then open (or create) a workbook.
 
-1. Open **Copilot** from the ribbon and select the hamburger control in the **Copilot** pane. **Excel Agent** should be in the list of agents. (You might need to select **See more** to ensure that all agents are listed.) If the agent isn't listed, try one or both of the following actions.
+1. The process of opening your agent depends on the UI for Copilot in Office applications, which is in transition.
+
+   - If you see a **Copilot** *button* on the ribbon (not a drop down menu), select the **Copilot** button to open the **Copilot** pane.   
+   - If you see a **Copilot** drop down menu, open the menu and select **App Skills** from the drop down list to open the **Copilot** pane.
+
+1. Select the hamburger control in the **Copilot** pane. 
+1. In the pane, **Excel Agent** should be in the list of agents. You might need to select **See more** to see a list of all agents. If the agent isn't listed, try one or both of the following actions.
     <!-- markdownlint-disable MD033 -->
     - Wait a few minutes and reload Copilot.
-    - With Copilot open to the list of agents, place the cursor on the Copilot window and press <kbd>Ctrl</kbd>+<kbd>R</kbd>.
+    - With Copilot open to the list of agents, place the cursor in the Copilot pane and press <kbd>Ctrl</kbd>+<kbd>R</kbd>.
     <!-- markdownlint-enable MD033 -->
     :::image type="content" source="assets/images/build-da/atk/copilot-agent-list.png" alt-text="A screenshot of the agent list in the Copilot pane in an Office application":::
 
