@@ -49,8 +49,9 @@ The following table lists the parameters that are required when you call this ac
 | Parameter                | Type              | Description                    |
 |:-------------------------|:------------------|:-------------------------------|
 | `queryString`            | String            | Natural language query string used to retrieve relevant text extracts. This parameter has a limit of 1,500 characters. Your `queryString` should be a single sentence, and you should avoid spelling errors in context-rich keywords. Required. |
-| `dataSource`             | String            | String indicating if extracts should be retrieved from SharePoint or Copilot connectors. Acceptable values are "sharePoint" and "externalItem". Required. |
-| `filterExpression`       | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint and Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Copilot connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Copilot connector. Microsoft will not resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. You can use multiple properties and operators when constructing your `filterExpression`. By default, no scoping is applied. Ensure that this parameter has correct KQL syntax before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Follow these [best practices](retrieval-api-overview.md#best-practices) for your filtered queries. Optional. |
+| `dataSource`             | String            | String indicating if extracts should be retrieved from SharePoint, OneDrive, or Copilot connectors. Acceptable values are "sharePoint", "oneDriveBusiness", and "externalItem". Required. |
+| `dataSourceConfiguration`             | Object            | Object outlining additional configuration for applicable data sources. `dataSourceConfiguration` includes an object called `externalItem` where you can configure Copilot connectors retrieval. In `externalItem`, there is an array of objects called `connections` that allows you to specify the connection IDs that should be included in the retrieval. Each object in `connections` has a single parameter `connectionId`, which is a String indicating the connection ID of a Copilot connection that should be included in the retrieval. Optional. |
+| `filterExpression`       | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint, OneDrive, or Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint and OneDrive properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Copilot connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Copilot connector. Microsoft will not resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. You can use multiple properties and operators when constructing your `filterExpression`. By default, no scoping is applied. Ensure that this parameter has correct KQL syntax before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Follow these [best practices](retrieval-api-overview.md#best-practices) for your filtered queries. Optional. |
 | `resourceMetadata`       | String collection | A list of metadata fields to be returned for each item in the response. Only retrievable metadata properties can be included in this list. By default, no metadata is returned. Optional. |
 | `maximumNumberOfResults` | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 25 results. Optional. |
 
@@ -553,7 +554,87 @@ Content-Type: application/json
 }
 ```
 
-### Example 6: Using filter expressions
+### Example 6: Retrieve data from Copilot connectors using specific connection IDs
+
+The following example shows a request that restricts Copilot connectors retrieval to specific connection IDs. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+
+#### Request
+
+The following example shows the request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "dataSource": "externalItem",
+  "dataSourceConfiguration": {
+    "externalItem": {
+      "connections": [
+        {
+          "connectionId": "ContosoITServiceNowKB"
+        },
+        {
+          "connectionId": "ContosoHRServiceNowKB"
+        }
+      ]
+    }
+  },
+  "resourceMetadata": [
+    "title",
+    "author"
+  ],
+  "maximumNumberOfResults": "10"
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
+      "extracts": [
+        {
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+        },
+        {
+          "text": "You will need to sign in with 2FA to access the corporate VPN."
+        }
+      ],
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "title": "VPN Access",
+        "author": "John Doe"
+      }
+    },
+    {
+      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
+      "extracts": [
+        {
+          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+        },
+        {
+          "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
+        }
+      ],
+      "resourceType": "externalItem",
+      "resourceMetadata": {
+        "title": "Corporate VPN"
+      }
+    }
+  ]
+}
+```
+
+### Example 7: Using filter expressions
 
 The following are examples of KQL expressions that can be used in the `filterExpression` property for specific scenarios.
 
