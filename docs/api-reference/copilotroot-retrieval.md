@@ -1,21 +1,21 @@
 ---
-title: Retrieve grounding data
-description: Use the Retrieval API to ground data from SharePoint and Copilot Connectors in your generative AI solutions.
+title: Use the Microsoft 365 Copilot Retrieval API to Retrieve Grounding Data
+description: Use the Retrieval API to ground data from SharePoint and Microsoft 365 Copilot connectors in your generative AI solutions.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: conceptual
-ms.date: 06/09/2025
+ms.date: 08/04/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---
 
 <!-- markdownlint-disable MD024 -->
 
-# Retrieve grounding data using the Microsoft 365 Copilot Retrieval API
+# Retrieve grounding data
 
 [!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
-Ground your generative AI solutions with Microsoft 365 data while optimizing for context recall. Allows the retrieval of relevant text extracts from SharePoint and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Retrieval API](https://aka.ms/try_copilot_retrieval_API_reference). Learn how you can [batch up to 20 requests to the Retrieval API](/graph/json-batching?tabs=http).
+The Microsoft 365 Copilot Retrieval API allows for the retrieval of relevant text extracts from SharePoint and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Use the Retrieval API to ground your generative AI solutions with Microsoft 365 data while optimizing for context recall. 
 
 ## Permissions
 
@@ -30,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ## HTTP request
 
 ```http
-POST https://graph.microsoft.com/beta/copilot/retrieval
+POST /copilot/retrieval
 ```
 
 ## Request headers
@@ -49,8 +49,8 @@ The following table lists the parameters that are required when you call this ac
 | Parameter                | Type              | Description                    |
 |:-------------------------|:------------------|:-------------------------------|
 | `queryString`            | String            | Natural language query string used to retrieve relevant text extracts. This parameter has a limit of 1,500 characters. Your `queryString` should be a single sentence, and you should avoid spelling errors in context-rich keywords. Required. |
-| `dataSource`             | String            | String indicating if extracts should be retrieved from SharePoint, OneDrive, or Copilot connectors. Acceptable values are "sharePoint", "oneDriveBusiness", and "externalItem". Required. |
-| `dataSourceConfiguration`             | Object            | Object outlining additional configuration for applicable data sources. `dataSourceConfiguration` includes an object called `externalItem` where you can configure Copilot connectors retrieval. In `externalItem`, there is an array of objects called `connections` that allows you to specify the connection IDs that should be included in the retrieval. Each object in `connections` has a single parameter `connectionId`, which is a String indicating the connection ID of a Copilot connection that should be included in the retrieval. Optional. |
+| `dataSource`             | String            | Indicates whether extracts should be retrieved from SharePoint, OneDrive, or Copilot connectors. Acceptable values are `sharePoint`, `oneDriveBusiness`, and `externalItem`. Required. |
+| `dataSourceConfiguration`             | Object            | Contains additional configuration information for applicable data sources. `dataSourceConfiguration` includes an object called `externalItem`, where you can configure Copilot connectors retrieval. In `externalItem`, there is an array of objects called `connections` that allows you to specify the connection IDs that should be included in the retrieval. Each object in `connections` has a single parameter `connectionId`, which is a String that indicates the connection ID of a Copilot connection that should be included in the retrieval. Optional. |
 | `filterExpression`       | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint, OneDrive, or Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint and OneDrive properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Copilot connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Copilot connector. Microsoft will not resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. You can use multiple properties and operators when constructing your `filterExpression`. By default, no scoping is applied. Ensure that this parameter has correct KQL syntax before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Follow these [best practices](retrieval-api-overview.md#best-practices) for your filtered queries. Optional. |
 | `resourceMetadata`       | String collection | A list of metadata fields to be returned for each item in the response. Only retrievable metadata properties can be included in this list. By default, no metadata is returned. Optional. |
 | `maximumNumberOfResults` | Int32             | The maximum number of documents that are returned in the response. By default, returns up to 25 results. Optional. |
@@ -720,5 +720,6 @@ In this example, the query is filtered on items with `Windows 10 Device` in the 
 
 ## Related content
 
-- [Overview of the Microsoft 365 Copilot Retrieval API](retrieval-api-overview.md)
+- [Overview of the Retrieval API](retrieval-api-overview.md)
 - [Try with Graph explorer](https://aka.ms/try_copilot_retrieval_API_reference)
+- [Batch requests](/graph/json-batching)
