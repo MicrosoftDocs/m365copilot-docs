@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 07/23/2025
+ms.date: 07/24/2025
 ms.topic: overview
 ---
 
@@ -15,6 +15,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## July 2025
+
+### Embedded file content file size limit is now 100 MB
+
+You can now upload files up to 100 MBs in size when you embed file content as knowledge in Copilot Studio agent builder. For more information, see [File size limits](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-knowledge#file-size-limits).
 
 ### Build Microsoft 365 Copilot connectors for people data (preview)
 
