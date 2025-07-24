@@ -4,7 +4,7 @@ description: "Use the Microsoft 365 Copilot Retrieval API to ground your AI solu
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
-ms.date: 06/09/2025
+ms.date: 08/04/2025
 ms.topic: overview
 ---
 
@@ -16,7 +16,7 @@ The Retrieval API offers a streamlined solution for Retrieval Augmented Generati
 
 RAG is essential when you're building generative AI solutions and want to use Microsoft 365 knowledge. When you implement RAG, your solutions can provide more accurate, contextually relevant responses grounded in the vast repository of your organizational data. The Retrieval API accomplishes RAG by extracting up-to-date and relevant text snippets from SharePoint, OneDrive, and Copilot connectors. The Retrieval API keeps your data in place and upholds your access and governance controls. The Retrieval API ensures that synthesized responses are informed by the latest and most relevant data. This process enhances the reliability and usefulness of your generative AI solutions.
 
-[Try your first Retrieval API query in Graph Explorer](https://aka.ms/try_copilot_retrieval_API_overview).
+To explore the API, [try a query in Graph Explorer](https://aka.ms/try_copilot_retrieval_API_overview).
 
 ## Why use the Retrieval API?
 
@@ -32,7 +32,7 @@ Imagine a consulting firm that specializes in providing tailored solutions for t
 
 ### Manage compliance and safety risks
 
-The Retrieval API uses the built-in security and compliance features in Microsoft 365 to ensure that data source permissions and compliance settings are preserved. By retrieving data in place, it prevents data leaks and ensures that sensitive information from one client is never accessible to another, which is essential for maintaining strict security and compliance standards. Within an organization, Microsoft 365's permissions model ensures individuals can only get results from the content they are allowed to access.
+The Retrieval API uses the built-in security and compliance features in Microsoft 365 to ensure that data source permissions and compliance settings are preserved. By retrieving data in place, it prevents data leaks and ensures that sensitive information from one client is never accessible to another, which is essential for maintaining strict security and compliance standards. Within an organization, the permissions model in Microsoft 365 ensures that individuals can only get results from the content they are allowed to access.
 
 ### Solve for relevancy and freshness
 
@@ -40,7 +40,7 @@ Because the Retrieval API retrieves relevant context without data duplication, i
 
 ### Lower cost of ownership and development effort
 
-The Retrieval API eliminates the need to build a secure data export and indexing pipeline that can incur significant costs for organizations. The API includes all the required capabilities, including:
+The Retrieval API eliminates the need to build a secure data export and indexing pipeline that can incur significant costs for organizations. The API supports the following required capabilities:
 
 - Search provider management
 - Crawlers
@@ -54,7 +54,7 @@ Organizations can use these built-in features to avoid expenses and complexities
 
 ## Retrieval API capabilities
 
-The Retrieval API currently allows you to retrieve data from the following data sources:
+The Retrieval API allows you to retrieve data from the following data sources:
 
 - SharePoint
 - OneDrive
@@ -64,7 +64,7 @@ The API supports natural language queries and uses the Microsoft 365 Copilot sta
 
 ## Licensing
 
-The Retrieval API is available at no extra cost to users with a Microsoft 365 Copilot license. Support for users without a Microsoft 365 Copilot license is currently not available.
+The Retrieval API is available at no extra cost to users with a Microsoft 365 Copilot add-on license. Support for users without a Microsoft 365 Copilot add-on license isn't currently available.
 
 ## Best practices
 
@@ -92,7 +92,7 @@ The following are the current throttling and other limitations to the Retrieval 
 - The **queryString** request parameter has a limit of 1,500 characters.
 - You must retrieve from one data source at a time using the **dataSource** request parameter. Interleaved results are not supported.
 - If the **filterExpression** request parameter has incorrect KQL syntax, the query successfully executes with no scoping.
-- Not all SharePoint and OneDrive properties are supported in the **filterExpression**. Refer to the [API reference](copilotroot-retrieval.md) to see the full list of supported properties.
+- Not all SharePoint and OneDrive properties are supported in the **filterExpression**. For a list of supported properties, see the  [API reference](copilotroot-retrieval.md).
 - The **maximumNumberOfResults** request parameter has a maximum value of 25.
 - Up to 200 requests per user per hour are supported.
 - Retrieval from nontextual content, including tables, images, and charts, is not supported.
@@ -102,8 +102,4 @@ The following are the current throttling and other limitations to the Retrieval 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Use the Retrieval API](copilotroot-retrieval.md)
-
-## Related content
-
-- [Try with Graph explorer](https://aka.ms/try_copilot_retrieval_API_overview)
+> [Retrieve data](copilotroot-retrieval.md)
