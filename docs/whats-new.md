@@ -20,7 +20,7 @@ For the latest information, announcements, and news about preview and generally 
 
 Build connectors to ingest people data from your source systems into Microsoft Graph for Microsoft 365 Copilot. For more information, see [Build Microsoft 365 Copilot connectors for people data (preview)](build-connectors-with-people-data.md).
 
-### Agents supported in Microsoft 365 Government cClouds
+### Agents supported in Microsoft 365 Government clouds
 
 Limited support for declarative agents is available for [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants. Support is now available for Government Community Cloud (GCC) tenants.
 
