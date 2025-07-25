@@ -69,7 +69,7 @@ Both options show the **My agents** list. You can select the existing agent that
 > [!NOTE]
 > Only agents created by you show in the **My agents** list. Shared agents from other users aren't in the list.
 
-### Manual deployment via ZIP package
+### Manually deploy agents via a ZIP package
 
 Copilot Studio Agent Builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the necessary files to sideload your agent into Microsoft Teams.
 
