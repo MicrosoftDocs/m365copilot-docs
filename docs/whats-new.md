@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 07/23/2025
+ms.date: 07/25/2025
 ms.topic: overview
 ---
 
@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Increased SharePoint file limit for agents
 
-You can now add up to 100 SharePoint files as knowledge sources for each agent, increased from the previous limit of 20 files. This improvement allows you to include more comprehensive SharePoint content to make your agents more knowledgeable and context-aware. For more information, see [SharePoint content](copilot-studio-agent-builder-knowledge.md#sharepoint-content).
+The SharePoint file limit for agents has increased from 20 to 100 files per agent, allowing more comprehensive knowledge sources. For more information, see [SharePoint content](copilot-studio-agent-builder-knowledge.md#sharepoint-content).
 
 ### Build Microsoft 365 Copilot connectors for people data (preview)
 
