@@ -611,7 +611,7 @@ The suggestions object contains the following property.
 
 An optional JSON object that contains settings for injecting special instructions into the prompt.
 
-The disclaimer object contains the following property.
+The special instructions object contains the following property.
 
 | Property                     | Type    | Description |
 | ---------------------------- | ------- | ----------- |
