@@ -75,7 +75,7 @@ Copilot Studio Agent Builder provides an option to download a ZIP package for ma
 
 > **Note:** The ZIP package does not include manifest properties related to embedded knowledge in the Declarative Agent  manifest. Uploading the ZIP file is not supported on macOS.
 
-To deploy the agent manually:
+To deploy an agent manually:
 - Download the ZIP package from Copilot Studio agent builder.
 - Share the ZIP with your Teams administrator for sideloading.
 - Coordinate with your admin to publish the agent if needed.
