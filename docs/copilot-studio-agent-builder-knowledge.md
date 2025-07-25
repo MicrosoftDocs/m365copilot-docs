@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/18/2025
+ms.date: 07/24/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
