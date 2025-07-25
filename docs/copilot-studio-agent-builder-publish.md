@@ -77,7 +77,7 @@ Copilot Studio Agent Builder provides an option to download a ZIP package for ma
 
 To deploy an agent manually:
 - Download the ZIP package from Copilot Studio agent builder.
-- Share the ZIP with your Teams administrator for sideloading.
+- Share the ZIP file with your Teams administrator for sideloading.
 - Coordinate with your admin to publish the agent if needed.
 
 ### Update your agent
