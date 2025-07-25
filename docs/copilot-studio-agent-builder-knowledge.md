@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/18/2025
+ms.date: 07/24/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -48,7 +48,7 @@ To configure your agent to use any web data as knowledge, on the **Configure** t
 
 You can reference specific SharePoint sites, files, and folders as agent knowledge sources. When you reference sources from SharePoint, consider the following limits:
 
-- A total of 20 knowledge sources (including sites, folders, and files) can be selected for each agent.
+- A total of 100 SharePoint files can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
 
 For information about SharePoint knowledge file size limits, see [File size limits](#file-size-limits).

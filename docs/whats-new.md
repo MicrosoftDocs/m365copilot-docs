@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 07/23/2025
+ms.date: 07/25/2025
 ms.topic: overview
 ---
 
@@ -15,6 +15,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## July 2025
+
+### Increased SharePoint file limit for agents
+
+You can specify up to 100 SharePoint files as knowledge when you use Copilot Studio agent builder, up from a limit of 20 files. For more information, see [SharePoint content](copilot-studio-agent-builder-knowledge.md#sharepoint-content).
 
 ### Build Microsoft 365 Copilot connectors for people data (preview)
 
