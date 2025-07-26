@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.date: 07/24/2025
 ---
 
-# Grant administrative rights to AI Administrators to manage Microsoft 365 Copilot connectors
+# Grant administrative rights to AI Administrators to manage connectors
 
-Microsoft 365 Copilot connectors enable organizations to build tailored integrations to enhance their AI systems and services. Generally, AI Administrators are responsible for setting up and managing Copilot connectors. However, certain tasks like application registration and consenting to specific Microsoft Graph API permissions often require a Global Administrator. Delegating administrative rights to AI Administrators can reduce dependencies and allow AI Administrators to set up Copilot connectors independently. This article describes how to grant administrative rights while maintaining organizational control.
+Microsoft 365 Copilot connectors enable organizations to build tailored integrations to enhance their AI systems and services. Generally, AI Administrators are responsible for setting up and managing Copilot connectors. However, certain tasks like application registration and consenting to specific Microsoft Graph API permissions often require a Global Administrator. Delegating administrative rights to AI Administrators can reduce dependencies and allow AI Administrators to set up Copilot connectors independently. This article describes how to delegate administrative rights while maintaining organizational control.
 
 > [!NOTE]
 > Delegating administrative rights to AI Administrators is an optional step for Copilot connector management.
@@ -21,7 +21,7 @@ To enable AI Administrators to independently manage the setup and operation of c
 
 - Application registration permission - Granting this permission allows AI Administrators to register applications from the Microsoft Entra admin center to set up custom connectors. Application registration permissions are enabled by default for all users in an organization. Grant this permission only if the permission is disabled for the organization.
 
-- Consent privileges - Granting this privilege allows AI Administrators to grant consent for connector-related [Microsoft Graph API permissions](/graph/permissions-reference) such as `ExternalItem.ReadWrite.OwnedBy` and `ExternalConnection.ReadWrite.OwnedBy`, which are specific to creating connections and ingesting items.
+- Consent privileges - Granting this privilege allows AI Administrators to grant consent for connector-related [Microsoft Graph API permissions](/graph/permissions-reference) such as ExternalItem.ReadWrite.OwnedBy and ExternalConnection.ReadWrite.OwnedBy, which are specific to creating connections and ingesting items.
 
 ## Grant application registration permissions
 
@@ -31,7 +31,7 @@ If application registration permissions are enabled for all users within the org
 
 To grant consent privileges to AI Administrators, create a custom policy and role tailored to the required permissions:
 
-1. Define a policy that specifically grants permissions for `ExternalItem.\*` and `ExternalConnection.\*`.
+1. Define a policy that specifically grants permissions for ExternalItem.\* and ExternalConnection.\*.
 1. Create a custom role and assign the newly created consent policy to this role.
 1. Assign the custom role to users with the AI Administrator role to enable them to manage consent for the specified permissions.
 
@@ -41,7 +41,7 @@ You can use a [PowerShell script](https://www.powershellgallery.com/packages/Con
 
 - Grants application registration permissions to users who are currently assigned the **AI Administrator** role.
 - Grants consent privileges by:
-  - Creating a custom consent policy named **Grant Consent Permissions To AI Admins** that the users to consent to `ExternalItem.\*` and `ExternalConnection.\*`.
+  - Creating a custom consent policy named **Grant Consent Permissions To AI Admins** that allows the users to consent to ExternalItem.\* and ExternalConnection.\*.
   - Establishing a custom role named **Custom Connector Management for Copilot** and assigning the consent policy to this role.
   - Assigning the custom role to existing AI Administrators.
 
@@ -64,7 +64,7 @@ To use the PowerShell script:
 
 1. Sign in as a Global Administrator and approve the requested permissions.
 
-When the script runs without error, existing users with the **AI Administrator** role have administrative rights to set up and manage Copilot connectors.
+After the script runs, existing users with the **AI Administrator** role have administrative rights to set up and manage Copilot connectors.
 
 ## Confirm results
 
@@ -72,7 +72,7 @@ To ensure that administrative rights were granted successfully:
 
 1. Sign in to the Microsoft Entra admin center as an AI Administrator.
 1. Go to the **App registrations** section and create a new application.
-1. Add `ExternalItem.ReadWrite.OwnedBy` and `ExternalConnection.ReadWrite.OwnedBy` permissions to the application.
+1. Add ExternalItem.ReadWrite.OwnedBy and ExternalConnection.ReadWrite.OwnedBy permissions to the application.
 1. Consent to these permissions directly within the portal.
 
 If successful, the configuration is complete.
@@ -81,7 +81,7 @@ If successful, the configuration is complete.
 
 ### Does the PowerShell script grant consent to all Microsoft Graph API permissions?
 
-No, the script limits consent privileges to `ExternalItem.\*` and `ExternalConnection.\*`. This ensures minimal required permissions are granted without risking broader access.
+No, the script limits consent privileges to ExternalItem.\* and ExternalConnection.\*. This ensures minimal required permissions are granted without risking broader access.
 
 ### What if the connector application requires permissions beyond ExternalItem.\* and ExternalConnection.\*?
 
