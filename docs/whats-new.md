@@ -76,6 +76,10 @@ Use the file upload feature in Copilot Studio agent builder to upload files from
 
 The Microsoft 365 Copilot Retrieval API (preview) allows you to retrieve relevant content from SharePoint and Copilot connectors. For more information, see [Overview of the Retrieval API](/microsoft-365-copilot/extensibility/api-reference/retrieval-api-overview).
 
+### Use the Search API (preview) to perform semantic search
+
+The Microsoft 365 Copilot Search API (preview) enables developers to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results. For more information, see [Overview of the Search API](/microsoft-365-copilot/extensibility/api-reference/search-api-overview).
+
 ### Microsoft 365 Copilot API client libraries
 
 Use the Copilot API libraries to work with Microsoft 365 Copilot APIs. For more information, see [Microsoft 365 Copilot APIs (preview)](/microsoft-365-copilot/extensibility/sdks/api-libraries).
