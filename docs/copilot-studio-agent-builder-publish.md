@@ -71,7 +71,7 @@ Both options show the **My agents** list. You can select the existing agent that
 
 ### Deploy agents via ZIP package
 
-Copilot Studio agent builder provides an option to download a ZIP package to manually deploy your agent. Once you are finished creating and configuring your agent:
+Copilot Studio agent builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the necessary files to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 1. In Copilot Studio agent builder, open the **Publish** tab.
 
