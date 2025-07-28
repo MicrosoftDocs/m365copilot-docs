@@ -69,16 +69,15 @@ Both options show the **My agents** list. You can select the existing agent that
 > [!NOTE]
 > Only agents created by you show in the **My agents** list. Shared agents from other users aren't in the list.
 
-### Manually deploy agents via a ZIP package
+### Deploy agents via ZIP package
 
-Copilot Studio Agent Builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the necessary files to sideload your agent into Microsoft Teams.
+Copilot Studio agent builder provides an option to download a ZIP package to manually deploy your agent. Once you are finished creating and configuring your agent:
 
-> **Note:** The ZIP package does not include manifest properties related to embedded knowledge in the Declarative Agent  manifest. Uploading the ZIP file is not supported on macOS.
+1. In Copilot Studio agent builder, open the **Publish** tab.
 
-To deploy an agent manually:
-- Download the ZIP package from Copilot Studio agent builder.
-- Share the ZIP file with your Teams administrator for sideloading.
-- Coordinate with your admin to publish the agent if needed.
+> [!NOTE]
+> - The ZIP package doesn't include embedded file content.
+> - Sideloading agents in Teams isn't supported on MacOS.
 
 ### Update your agent
 
