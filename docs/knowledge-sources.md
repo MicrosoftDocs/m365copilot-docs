@@ -28,6 +28,7 @@ The following table lists the capabilities and knowledge sources you can configu
 | Email | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
 | People | :x: | :white_check_mark: | Yes (license only) |
 | Teams messages | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
+| Meetings | :x: | :white_check_mark: | Yes (license only) |
 
 \* Option to scope the knowledge is available.
 
@@ -237,6 +238,30 @@ To get the **chatId** value for a group or 1:1 chat:
 6. Add the **chatId** to the deep link. For example: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces/conversations`.
 
 For more information, see [Deep link to Teams chat](/microsoftteams/platform/concepts/build-and-test/deep-link-teams).
+
+## Meetings
+
+People knowledge allows you to scope your agent to answer questions about meetings. For example, your agent can respond to queries such as "Recap yesterday's meetings and list action items" or "What meetings do I have tomorrow?". This knowledge source isn't scoped.
+
+> [!NOTE]
+> Meetings knowledge isn't currently available in Copilot Studio agent builder.
+
+### Add meetings knowledge source
+
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable meetings knowledge, add the `Meetings` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+
+> [!NOTE]
+> You must be using [version 1.5](declarative-agent-manifest-1.5.md) or later of the declarative agent manifest schema to add the `Meetings` knowledge source.
+>
+```json
+{
+  "capabilities": [
+    {
+      "name":"Meetings"
+    }
+  ]
+}
+```
 
 ## Related content
 
