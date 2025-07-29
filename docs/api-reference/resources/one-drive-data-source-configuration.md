@@ -19,7 +19,7 @@ OneDrive-specific search configuration including filtering and metadata options.
 
 | Property                    | Type              | Description                                                                                    |
 |:----------------------------|:------------------|:-----------------------------------------------------------------------------------------------|
-| `filterExpression`          | String            | [KQL](https://learn.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression for filtering OneDrive content. Currently only supports `path:` expressions.   |
+| `filterExpression`          | String            | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression for filtering OneDrive content. Currently only supports `path:` expressions.   |
 | `resourceMetadataNames`     | String collection | Resource metadata fields to return in results. Supported fields: `path`, `author`, `lastModifiedTime`, `fileType`, `title`, `filename`, `siteID`, `listItemID`, `modifiedBy`, `created`, `id`, `driveID`.                     |
 
 ## Relationships
