@@ -52,7 +52,7 @@ The following table lists the parameters that are required when you call this ac
 | `pageSize`               | Int32             | Number of results to return per page (1-100). Default: 25. Optional. |
 | `dataSources`            | Object            | Configuration for data sources to include in the search. Optional. |
 | `dataSources.oneDrive`   | Object            | OneDrive-specific search configuration (currently the only supported data source). Optional. |
-| `dataSources.oneDrive.filterExpression` | String | KQL expression for filtering OneDrive content. Currently only supports `path:` expressions. Optional. |
+| `dataSources.oneDrive.filterExpression` | String | [KQL](https://learn.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression for filtering OneDrive content. Currently only supports `path:` expressions. Optional. |
 | `dataSources.oneDrive.resourceMetadataNames` | String collection | Resource metadata fields to return in results (e.g., "title", "author"). Optional. |
 
 ## Response
@@ -166,7 +166,7 @@ Content-Type: application/json
 
 ### Example 3: Search with path-based filtering
 
-The following example shows how to search within specific OneDrive paths using KQL path expressions.
+The following example shows how to search within specific OneDrive paths using [KQL](https://learn.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) path expressions.
 
 #### Request
 

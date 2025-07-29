@@ -57,7 +57,7 @@ The Search API currently allows you to search data from the following data sourc
 
 - OneDrive content (SharePoint and other data sources will be added in future releases)
 
-The API supports natural language queries and uses semantic understanding to search through OneDrive content within the Microsoft 365 trust boundary. You can use the API to scope your search using KQL path expressions to search within the most important folders for your use case. With path filtering, you can restrict searches to specific OneDrive locations while maintaining semantic search capabilities.
+The API supports natural language queries and uses semantic understanding to search through OneDrive content within the Microsoft 365 trust boundary. You can use the API to scope your search using [KQL](https://learn.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) path expressions to search within the most important folders for your use case. With path filtering, you can restrict searches to specific OneDrive locations while maintaining semantic search capabilities.
 
 ## Licensing
 
@@ -86,7 +86,7 @@ The following are the current throttling and other limitations to the Search API
 - The Search API is optimized for semantic document discovery.
 - The **query** request parameter has a limit of 1,500 characters.
 - Currently only OneDrive is supported as a data source. SharePoint, external connectors, and other sources will be added in future releases.
-- Only **path** expressions are supported in **filterExpression**. Additional KQL properties will be supported in future releases.
+- Only **path** expressions are supported in **filterExpression**. Additional [KQL](https://learn.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) properties will be supported in future releases.
 - The **pageSize** request parameter has a maximum value of 100.
 - Up to 4 requests per second per user are supported.
 - Up to 200 requests per user per hour are supported.
