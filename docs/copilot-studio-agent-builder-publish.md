@@ -35,6 +35,17 @@ The following table lists the sharing options that are available.
 > [!NOTE]
 > When the Share option is set to **Specific users in your organization**, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
+### Deploy agents via ZIP package
+
+Copilot Studio agent builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the necessary files to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
+
+1. Configure your agent in  Copilot Studio agent builder.
+1. 
+
+> [!NOTE]
+> - The ZIP package doesn't include embedded file content.
+> - Sideloading agents in Teams isn't supported on MacOS.
+
 ### Automatically share SharePoint files and folders
 
 When you share an agent, Copilot users might not have access to all the underlying knowledge sources. The agent respects the end user's information and sensitivity privileges. If the user doesn't have access to a knowledge source, the agent doesn't include content from it when generating a response. You can share SharePoint Knowledge sources with others when the **Share** option is set to **Specific users in your organization**.
@@ -68,16 +79,6 @@ Both options show the **My agents** list. You can select the existing agent that
 
 > [!NOTE]
 > Only agents created by you show in the **My agents** list. Shared agents from other users aren't in the list.
-
-### Deploy agents via ZIP package
-
-Copilot Studio agent builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the necessary files to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
-
-1. In Copilot Studio agent builder, open the **Publish** tab.
-
-> [!NOTE]
-> - The ZIP package doesn't include embedded file content.
-> - Sideloading agents in Teams isn't supported on MacOS.
 
 ### Update your agent
 
