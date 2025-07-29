@@ -22,7 +22,7 @@ Represents a single search result from a semantic search query.
 | `webUrl`            | String                                                                    | Direct URL to access the search result.                                |
 | `preview`           | String                                                                    | Short text excerpt providing context for the result.                   |
 | `resourceType`      | String                                                                    | Type of the resource (e.g., "driveItem", "listItem").                  |
-| `resourceMetadata`  | [copilotSearchResourceMetadataDictionary](copilot-search-resource-metadata-dictionary.md) | Requested metadata fields (only included if specified in request).     |
+| `resourceMetadata`  | [copilotSearchResourceMetadataDictionary](search-resource-metadata-dictionary.md) | Requested metadata fields (only included if specified in request).     |
 
 ## Relationships
 
