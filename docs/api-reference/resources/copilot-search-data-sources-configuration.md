@@ -1,8 +1,8 @@
 ---
 title: copilotSearchDataSourcesConfiguration resource type
 description: Configuration for data sources to include in the search.
-author: swapnilsapar
-ms.author: swapnilsapar
+author: apiarya
+ms.author: apiarya
 ms.topic: reference
 ms.date: 7/28/2025
 ms.localizationpriority: medium

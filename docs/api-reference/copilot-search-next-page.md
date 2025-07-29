@@ -1,8 +1,8 @@
 ---
 title: Retrieve next page of search results
 description: Use the Search API to retrieve the next page of search results using pagination tokens.
-author: swapnilsapar
-ms.author: swapnilsapar
+author: apiarya
+ms.author: apiarya
 ms.topic: reference
 ms.date: 7/28/2025
 ms.localizationpriority: medium

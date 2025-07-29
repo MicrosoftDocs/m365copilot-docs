@@ -1,8 +1,8 @@
 ---
 title: Perform semantic search
 description: Use the Search API to perform semantic search across OneDrive content with natural language understanding and contextual results.
-author: swapnilsapar
-ms.author: swapnilsapar
+author: apiarya
+ms.author: apiarya
 ms.topic: reference
 ms.date: 7/28/2025
 ms.localizationpriority: medium

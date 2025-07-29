@@ -1,8 +1,8 @@
 ---
 title: Microsoft 365 Copilot Search API Overview (Preview)
 description: "Use the Microsoft 365 Copilot Search API to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results."
-author: swapnilsapar
-ms.author: swapnilsapar
+author: apiarya
+ms.author: apiarya
 ms.localizationpriority: medium
 ms.date: 7/28/2025
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences, unlocking the ability to enhance your custom engine agents and generative AI solutions with Microsoft 365 Copilot capabilities. The Microsoft 365 Copilot Search API enables developers to perform semantic search across OneDrive content using natural language queries that understand context and intent, returning relevant documents and files with intelligent excerpts.
 
-The Search API offers a streamlined solution for semantic document discovery without the need to replicate, index, or manage your data in a separate search infrastructure. The API leverages natural language processing to understand query intent and performs intelligent result ranking to yield the most relevant documents, which is more difficult to achieve with traditional keyword-based search approaches.
+The Search API offers a streamlined solution for semantic document discovery without the need to replicate, index, or manage your data in a separate search infrastructure. The API applies natural language processing to understand query intent and performs intelligent result ranking to yield the most relevant documents, which is more difficult to achieve with traditional keyword-based search approaches.
 
 Semantic search is essential when you're building knowledge discovery solutions and want to surface Microsoft 365 content. When you implement semantic search, your solutions can provide more accurate, contextually relevant document discovery grounded in the vast repository of your organizational data. The Search API accomplishes this by extracting relevant document excerpts and metadata from OneDrive content. The Search API keeps your data in place and upholds your access and governance controls. The Search API ensures that search results are informed by the latest and most relevant content. This process enhances the discoverability and usefulness of your document-centric applications.
 

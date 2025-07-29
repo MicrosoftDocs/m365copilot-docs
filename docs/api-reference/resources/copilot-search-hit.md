@@ -1,8 +1,8 @@
 ---
 title: copilotSearchHit resource type
 description: Represents a single search result from a semantic search query.
-author: swapnilsapar
-ms.author: swapnilsapar
+author: apiarya
+ms.author: apiarya
 ms.topic: reference
 ms.date: 7/28/2025
 ms.localizationpriority: medium

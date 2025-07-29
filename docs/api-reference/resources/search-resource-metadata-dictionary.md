@@ -1,8 +1,8 @@
 ---
 title: copilotSearchResourceMetadataDictionary resource type
 description: Represents a dictionary of metadata properties for a search result.
-author: swapnilsapar
-ms.author: swapnilsapar
+author: apiarya
+ms.author: apiarya
 ms.topic: reference
 ms.date: 7/28/2025
 ms.localizationpriority: medium
