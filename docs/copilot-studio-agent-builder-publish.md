@@ -44,7 +44,7 @@ Copilot Studio agent builder provides an option to download a ZIP package for ma
 1. Update the **Sharing** settings as appropriate.
 1. Select the three dots in the upper right corner for more options and then select **Download .zip file**.
 
-Once you have downloaded your agent, you can upload it to a [solution](https://learn.microsoft.com/power-platform/alm/solution-concepts-alm) in Power Platform. From there, you can deploy the agent across multiple [environments](https://learn.microsoft.com/power-platform/admin/environments-overview). For more information, see [Export and import agents using solutions](https://learn.microsoft.commicrosoft-copilot-studio/authoring-solutions-import-export)
+Once you have downloaded your agent, you can upload it to a [solution](https://learn.microsoft.com/power-platform/alm/solution-concepts-alm) in Power Platform. From there, you can deploy the agent across multiple [environments](/power-platform/admin/environments-overview). For more information, see [Export and import agents using solutions](/microsoft-copilot-studio/authoring-solutions-import-export)
 
 > [!NOTE]
 > - The ZIP package doesn't include embedded file content.
