@@ -20,7 +20,7 @@ For the latest information, announcements, and news about preview and generally 
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.5](declarative-agent-manifest-1.5.md) adds the following.
 
-- Added the [meetings](#meetings-object) capability to the list of `capabilities`, which allows agents to search meetings in the organization.
+- Added the [meetings](declarative-agent-manifest-1.5.md#meetings-object) capability to the list of `capabilities`, which allows agents to search meetings in the organization.
 
 ### Disclaimers in declarative agents
 
