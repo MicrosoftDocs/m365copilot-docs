@@ -16,6 +16,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## July 2025
 
+### Disclaimers in declarative agents
+
+Added the `disclaimers` property to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object) in schema version 1.4.
+
 ### Increased SharePoint file limit for agents
 
 You can specify up to 100 SharePoint files as knowledge when you use Copilot Studio agent builder, up from a limit of 20 files. For more information, see [SharePoint content](copilot-studio-agent-builder-knowledge.md#sharepoint-content).
