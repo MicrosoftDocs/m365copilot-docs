@@ -30,7 +30,7 @@ The following table lists the sharing options that are available.
 | ------------------------------------------------------- | ----------- |
 | Anyone in your organization                             | Anyone in your tenant can use the sharing link to use the agent. |
 | Specific users in your organization | Specific user groups can use the sharing link to use the agent. These user groups must be specified via the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
-| Only me                                                 | Only the author of the agent can use the agent. The sharing link can't be used by anyone else. This sharing option is selected by default. |
+| Only me                                                 | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
 
 > [!NOTE]
 > When the Share option is set to **Specific users in your organization**, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
@@ -40,11 +40,15 @@ The following table lists the sharing options that are available.
 Copilot Studio agent builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the necessary files to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 1. Configure your agent in  Copilot Studio agent builder.
-1. 
+1. Choose **Create** in the upper right corner.
+1. Update the **Sharing** settings as appropriate.
+1. Select the three dots in the upper right corner for more options and then select **Download .zip file**.
+
+Once you have downloaded your agent, you can upload it to a [solution](https://learn.microsoft.com/power-platform/alm/solution-concepts-alm) in Power Platform. From there, you can deploy the agent across multiple [environments](https://learn.microsoft.com/power-platform/admin/environments-overview). For more information, see [Export and import agents using solutions](https://learn.microsoft.commicrosoft-copilot-studio/authoring-solutions-import-export)
 
 > [!NOTE]
 > - The ZIP package doesn't include embedded file content.
-> - Sideloading agents in Teams isn't supported on MacOS.
+> - Sideloading agents in Teams isn't supported on macOS.
 
 ### Automatically share SharePoint files and folders
 
@@ -61,7 +65,7 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ### Agent acquisition
 
-The shared link brings end users to the Microsoft 365 app store to view the details of the agent before adding it to Microsoft 365 Copilot. After the user adds the agent, they can open it in Copilot with a new chat created. The user only needs to add the agent the first time they use it. Subsequently, they can return to Microsoft 365 Copilot to find the agent on the right rail.
+The shared link brings end users to the Microsoft 365 app store to view the details of the agent before adding it to Microsoft 365 Copilot. After the user adds the agent, they can open it in Copilot with a new chat created. The user only needs to add the agent the first time they use it. Later, they can return to Microsoft 365 Copilot to find the agent on the right rail.
 
 > [!NOTE]
 > Because agent capabilities differ based on a user's license, agent acquisition or usage is only possible when the user has the appropriate license based on the capabilities configured in the agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
@@ -82,10 +86,10 @@ Both options show the **My agents** list. You can select the existing agent that
 
 ### Update your agent
 
-Changes made to agents are automatically saved in the agent builder. Shared users of the agent don't see the latest changes until the agent is updated. To update a previously created agent, select **Update** on the top right corner. Your changes may take several minutes to become available for end users.
+Changes made to agents are automatically saved in the agent builder. Shared users of the agent don't see the latest changes until the agent is updated. To update a previously created agent, select **Update** on the top right corner. Your changes might take several minutes to become available for end users.
 
 > [!NOTE]
-> We recommend that you reshare your agent with the same group of users when the agent has a SharePoint file and folder knowledge source and was shared with specific users in the organization. This automatically shares the files and folders with the users again to ensure a consistent agent experience.
+> After updating an agent that has a SharePoint file and folder knowledge source and has been shared with specific users in your organization, we recommend that you reshare the agent with the same group of users. Doing so automatically shares the files and folders with the users again to ensure a consistent agent experience.
 
 ### Delete your agent
 
@@ -97,7 +101,7 @@ The agent author can delete their existing agents. After deletion, the agent wil
 To delete an agent, you can:
 
 - Select the ellipses (**...**) and **Delete** in the **My agents** list.
-- From the authoring experience of a agent, select the ellipses (**...**) and **Delete** from the top right corner.
+- From the authoring experience of an agent, select the ellipses (**...**) and **Delete** from the top right corner.
 
 ## Troubleshooting
 
