@@ -241,7 +241,7 @@ For more information, see [Deep link to Teams chat](/microsoftteams/platform/con
 
 ## Meetings
 
-People knowledge allows you to scope your agent to answer questions about meetings. For example, your agent can respond to queries such as "Recap yesterday's meetings and list action items" or "What meetings do I have tomorrow?". This knowledge source isn't scoped.
+Meetings capability allows you to scope your agent to answer questions about meetings. For example, your agent can respond to queries such as "Recap yesterday's meetings and list action items" or "What meetings do I have tomorrow?". This knowledge source isn't scoped.
 
 > [!NOTE]
 > Meetings knowledge isn't currently available in Copilot Studio agent builder.
