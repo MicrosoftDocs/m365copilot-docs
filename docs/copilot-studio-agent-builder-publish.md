@@ -35,7 +35,7 @@ The following table lists the sharing options that are available.
 > [!NOTE]
 > When the Share option is set to **Specific users in your organization**, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
-### Deploy agents via ZIP package
+### Deploy agents via a ZIP package
 
 Copilot Studio agent builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the necessary files to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
