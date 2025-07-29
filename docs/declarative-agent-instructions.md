@@ -215,6 +215,6 @@ Guide users through issue resolution by gathering information, checking outages,
 
 ## Related content
 
-- For a sample manifest file for a declarative agent created with Agents Toolkit, see [Declarative agent manifest example](declarative-agent-manifest-1.4.md#declarative-agent-manifest-example).
+- For a sample manifest file for a declarative agent created with Agents Toolkit, see [Declarative agent manifest example](declarative-agent-manifest-1.5.md#declarative-agent-manifest-example).
 - For information about how to use Copilot Studio to create declarative agents, see [Extend with agents](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
 - For information about validation requirements for declarative agents, see [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context).

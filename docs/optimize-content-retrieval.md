@@ -17,7 +17,7 @@ Declarative agents extend Microsoft 365 Copilot to customize the experience for 
 
 ## Reference only relevant SharePoint files
 
-You can reference specific SharePoint files via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.4.md#onedrive-and-sharepoint-object), either by URL or by ID.
+You can reference specific SharePoint files via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.5.md#onedrive-and-sharepoint-object), either by URL or by ID.
 
 When you specify up to 20 files, Copilot searches the full contents of all files. Copilot will have full access to all the file content and returns the appropriate content to the user based on their query. If you specify more than 20 SharePoint files, Copilot chooses content from the most relevant 20 files, rather than searching all the files specified, and only returns content from those files.
 
@@ -25,7 +25,7 @@ To optimize the content that Copilot returns, choose the most relevant SharePoin
 
 ## Limit SharePoint file size
 
-When you reference SharePoint sites or folders by URL in your [agent manifest](declarative-agent-manifest-1.4.md#onedrive-and-sharepoint-object), Copilot might have trouble identifying the right content to return to the user when the files included in the site or folder are large. To reduce the risk that Copilot won't find the right content in the sites or folders you reference, strive to keep your SharePoint files to a maximum of 36,000 characters (approximately 15-20 pages). If your files are larger than 36,000 characters, consider breaking them up into separate shorter files to help Copilot scan the full contents.
+When you reference SharePoint sites or folders by URL in your [agent manifest](declarative-agent-manifest-1.5.md#onedrive-and-sharepoint-object), Copilot might have trouble identifying the right content to return to the user when the files included in the site or folder are large. To reduce the risk that Copilot won't find the right content in the sites or folders you reference, strive to keep your SharePoint files to a maximum of 36,000 characters (approximately 15-20 pages). If your files are larger than 36,000 characters, consider breaking them up into separate shorter files to help Copilot scan the full contents.
 
 Alternatively, you can reference specific SharePoint files by ID. Copilot will search the full contents if you specify five or fewer files, or it will search the five most relevant files if you specify more than five files.
 
@@ -35,7 +35,7 @@ Copilot is currently unable to parse tables and other special formatting in Shar
 
 ## Optimize embedded file content retrieval
 
-For agents that include [embedded file content](copilot-studio-agent-builder-knowledge.md#embedded-file-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file. 
+For agents that include [embedded file content](copilot-studio-agent-builder-knowledge.md#embedded-file-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file.
 
 To optimize embedded file content for Copilot retrieval, upload files that are no larger than 750-1,000 pages. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 
@@ -45,4 +45,3 @@ To optimize Excel content for Copilot retrieval, store all the data in one sheet
 
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Known issues](known-issues.md)
-

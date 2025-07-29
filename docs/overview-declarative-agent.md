@@ -50,7 +50,7 @@ The following are the core elements of a declarative agent app package:
 
 - [**App manifest**](/microsoft-365/extensibility/schema) - Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 - [**App icons**](/microsoft-365-copilot/extensibility/agents-are-apps#app-icons) - The app package requires a color and outline icon for your declarative agents.
-- [**Declarative agents manifest**](declarative-agent-manifest-1.4.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
+- [**Declarative agents manifest**](declarative-agent-manifest-1.5.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
 - [**Plugin manifest (optional)**](/microsoft-365-copilot/extensibility/overview-api-plugins) - Describes how your plugin is configured, including its required fields and capabilities.
 
 You can use your tool of choice to create a declarative agent app package. To get started, choose from among the following tools:
