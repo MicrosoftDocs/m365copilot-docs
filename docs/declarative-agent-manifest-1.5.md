@@ -193,6 +193,9 @@ The capabilities object is the base type of objects in the `capabilities` proper
           "id": "model_id"
         }
       ]
+    },
+    {
+      "name": "Meetings"
     }
   ]
 }
