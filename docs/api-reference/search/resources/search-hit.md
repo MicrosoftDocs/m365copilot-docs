@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 # copilotSearchHit resource type
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents a single search result from a semantic search query.
 
@@ -22,7 +22,7 @@ Represents a single search result from a semantic search query.
 | `webUrl`            | String                                                                    | Direct URL to access the search result.                                |
 | `preview`           | String                                                                    | Short text excerpt providing context for the result.                   |
 | `resourceType`      | String                                                                    | Type of the resource (e.g., "driveItem", "listItem").                  |
-| `resourceMetadata`  | [copilotSearchResourceMetadataDictionary](search-resource-metadata-dictionary.md) | Requested metadata fields (only included if specified in request).     |
+| `resourceMetadata`  | [copilotSearchResourceMetadataDictionary](resource-metadata-dictionary.md) | Requested metadata fields (only included if specified in request).     |
 
 ## Relationships
 

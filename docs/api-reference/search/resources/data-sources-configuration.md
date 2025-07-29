@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 # copilotSearchDataSourcesConfiguration resource type
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Configuration for data sources to include in the search.
 

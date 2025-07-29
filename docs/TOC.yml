@@ -288,19 +288,19 @@
     - name: Search API (preview)
       items:
       - name: Overview
-        href: api-reference/search-api-overview.md
+        href: api-reference/search/overview.md
       - name: Perform semantic search
-        href: api-reference/copilot-search.md
+        href: api-reference/search/operation-search.md
       - name: Get next page of search results
-        href: api-reference/copilot-search-next-page.md
+        href: api-reference/search/operation-next-page.md
       - name: Complex types
         items:
         - name: Search response
-          href: api-reference/resources/copilot-search-response.md
+          href: api-reference/search/resources/response.md
         - name: Search hit
-          href: api-reference/resources/copilot-search-hit.md
+          href: api-reference/search/resources/search-hit.md
         - name: Search resource metadata dictionary
-          href: api-reference/resources/search-resource-metadata-dictionary.md
+          href: api-reference/search/resources/resource-metadata-dictionary.md
 - name: Publish
   items:
   - name: Overview

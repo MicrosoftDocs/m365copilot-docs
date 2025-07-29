@@ -11,7 +11,7 @@ doc_type: conceptualPageType
 
 # Retrieve next page of search results using the Microsoft 365 Copilot Search API
 
-[!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Retrieve the next page of search results from a previous search query using pagination tokens. This endpoint allows you to navigate through large result sets efficiently without re-executing the original search query.
 
@@ -45,7 +45,7 @@ GET https://graph.microsoft.com/beta/copilot/searchNextPage?$skipToken={token}
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a [copilotSearchResponse](resources/copilot-search-response.md) in the response body.
+If successful, this method returns a `200 OK` response code and a [copilotSearchResponse](resources/response.md) in the response body.
 
 ## Example
 
@@ -95,6 +95,6 @@ Content-Type: application/json
 
 ## Related content
 
-- [Overview of the Microsoft 365 Copilot Search API](search-api-overview.md)
-- [Perform semantic search](copilot-search.md)
+- [Overview of the Microsoft 365 Copilot Search API](overview.md)
+- [Perform semantic search](operation-search.md)
 - [Try with Graph explorer](https://aka.ms/try_copilot_search_API_reference)

@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 # oneDriveDataSourceConfiguration resource type
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 OneDrive-specific search configuration including filtering and metadata options.
 

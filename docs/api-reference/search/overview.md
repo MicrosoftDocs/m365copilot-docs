@@ -97,7 +97,7 @@ The following are the current throttling and other limitations to the Search API
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Use the Search API](copilot-search.md)
+> [Use the Search API](operation-search.md)
 
 ## Related content
 

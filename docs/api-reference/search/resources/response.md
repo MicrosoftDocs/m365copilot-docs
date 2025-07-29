@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 # copilotSearchResponse resource type
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents results from a semantic search query.
 
@@ -21,7 +21,7 @@ Represents results from a semantic search query.
 |:----------------|:-------------------------------------------|:---------------------------------------|
 | `@odata.nextLink` | String | URL to retrieve the next page of results (only present when more results are available). |
 | `totalCount`    | Int32                                      | Total number of search results available for the query. |
-| `searchHits`    | [copilotSearchHit](copilot-search-hit.md) collection | Array of search result objects ordered by relevance. If empty, no relevant results were found. |
+| `searchHits`    | [copilotSearchHit](search-hit.md) collection | Array of search result objects ordered by relevance. If empty, no relevant results were found. |
 
 ## Relationships
 

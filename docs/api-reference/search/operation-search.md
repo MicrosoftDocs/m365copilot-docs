@@ -13,7 +13,7 @@ doc_type: conceptualPageType
 
 # Perform semantic search using the Microsoft 365 Copilot Search API
 
-[!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Perform semantic search across OneDrive content using natural language queries with contextual understanding. Allows the discovery of relevant documents and files that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Search API](https://aka.ms/try_copilot_search_API_reference). Learn how you can [batch up to 20 requests to the Search API](/graph/json-batching?tabs=http).
 
@@ -57,7 +57,7 @@ The following table lists the parameters that are required when you call this ac
 
 ## Response
 
-If successful, this action returns a `200 OK` response code and a [copilotSearchResponse](resources/copilot-search-response.md) in the response body.
+If successful, this action returns a `200 OK` response code and a [copilotSearchResponse](resources/response.md) in the response body.
 
 ## Examples
 
@@ -315,6 +315,6 @@ Content-Type: application/json
 
 ## Related content
 
-- [Overview of the Microsoft 365 Copilot Search API](search-api-overview.md)
-- [Pagination for Search API results](copilot-search-next-page.md)
+- [Overview of the Microsoft 365 Copilot Search API](overview.md)
+- [Pagination for Search API results](operation-next-page.md)
 - [Try with Graph explorer](https://aka.ms/try_copilot_search_API_reference)
