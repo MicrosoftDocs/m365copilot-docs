@@ -285,6 +285,27 @@
           href: api-reference/resources/searchresourcemetadatadictionary.md
         - name: Search sensitivity label info
           href: api-reference/resources/searchsensitivitylabelinfo.md
+          href: api-reference/resources/searchsensitivitylabelinfo.md
+    - name: Search API (preview)
+      items:
+      - name: Overview
+        href: api-reference/search-api-overview.md
+      - name: Perform semantic search
+        href: api-reference/copilotroot-search.md
+      - name: Get next page of search results
+        href: api-reference/copilotroot-searchnextpage.md
+      - name: Complex types
+        items:
+        - name: Search response
+          href: api-reference/resources/copilotsearchresponse.md
+        - name: Search hit
+          href: api-reference/resources/copilotsearchhit.md
+        - name: Search resource metadata dictionary
+          href: api-reference/resources/copilotsearchresourcemetadatadictionary.md
+        - name: Search data sources configuration
+          href: api-reference/resources/copilotsearchdatasourcesconfiguration.md
+        - name: OneDrive data source configuration
+          href: api-reference/resources/onedrivedatasourceconfiguration.md
 - name: Publish
   items:
   - name: Overview
