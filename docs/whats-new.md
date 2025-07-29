@@ -14,6 +14,12 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## August 2025
+
+### Use the Search API (preview) to perform semantic search
+
+The Microsoft 365 Copilot Search API (preview) enables developers to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results. For more information, see [Overview of the Search API](/microsoft-365-copilot/extensibility/api-reference/search-api-overview).
+
 ## July 2025
 
 ### Scope Copilot connector data sources
@@ -75,10 +81,6 @@ Use the file upload feature in Copilot Studio agent builder to upload files from
 ### Use the Retrieval API (preview) to retrieve data
 
 The Microsoft 365 Copilot Retrieval API (preview) allows you to retrieve relevant content from SharePoint and Copilot connectors. For more information, see [Overview of the Retrieval API](/microsoft-365-copilot/extensibility/api-reference/retrieval-api-overview).
-
-### Use the Search API (preview) to perform semantic search
-
-The Microsoft 365 Copilot Search API (preview) enables developers to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results. For more information, see [Overview of the Search API](/microsoft-365-copilot/extensibility/api-reference/search-api-overview).
 
 ### Microsoft 365 Copilot API client libraries
 
