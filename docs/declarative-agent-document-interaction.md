@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Interact with documents in Microsoft 365 apps with a declarative agent
 
-When declarative agents are used in the Copilot experience in Microsoft 365 apps, they're able to interact with the open document. By default, agents can read the entire pen document. Users can provide just a selected section of the open document to the agent, and agents can insert images into the open document.
+When declarative agents are used in the Copilot experience in Microsoft 365 apps, they're able to interact with the open document. By default, agents can read the entire open document. Users can provide just a selected section of the open document to the agent, and agents can insert images into the open document.
 
 > [!NOTE]
 > [Accessing the document selection](#access-document-selection) is only supported in Word. [Accessing the entire open document](#access-the-entire-open-document) and [inserting images](#inserting-images) is supported in Word and PowerPoint.
