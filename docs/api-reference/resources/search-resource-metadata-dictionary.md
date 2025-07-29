@@ -19,6 +19,8 @@ Represents a dictionary of metadata properties for a search result.
 
 This resource is a dictionary with string keys and string values. The property names in the dictionary correspond to the list of metadata fields requested in the `resourceMetadataNames` parameter to the [search API](../copilot-search.md). The property values are string representations of the value of the corresponding metadata fields.
 
+Supported field names include: `path`, `author`, `lastModifiedTime`, `fileType`, `title`, `filename`, `siteID`, `listItemID`, `modifiedBy`, `created`, `id`, `driveID`.
+
 ## Relationships
 
 None.
@@ -30,6 +32,8 @@ The following JSON representation shows the resource type.
 ```json
 {
   "title": "String",
-  "author": "String"
+  "author": "String",
+  "lastModifiedTime": "String",
+  "fileType": "String"
 }
 ```
