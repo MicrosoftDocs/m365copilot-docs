@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/24/2025
+ms.date: 07/29/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -185,15 +185,19 @@ The following table lists the file types that you can add as knowledge to your a
 
 | File type | SharePoint Online limit | Embedded file limit |
 | ----------| ----------------------- | ------------------- |
-| .doc      | 150 MB                  | 30 MB |
-| .docx     | 512 MB                  | 30 MB |
+| .doc      | 150 MB                  | 100 MB |
+| .docx     | 512 MB                  | 100 MB |
 | .html     | 150 MB                  | NA    |
-| .pdf      | 512 MB                  | 30 MB |
-| .ppt      | 150 MB                  | 30 MB |
-| .pptx     | 512 MB                  | 30 MB |
-| .txt      | 150 MB                  | 30 MB |
-| .xls      | 150 MB                  | 30 MB |
-| .xlsx     | 150 MB                  | 30 MB |
+| .pdf      | 512 MB                  | 100 MB |
+| .ppt      | 150 MB                  | 100 MB |
+| .pptx     | 512 MB                  | 100 MB |
+| .txt      | 150 MB                  | 100 MB |
+| .xls      | 150 MB                  | 100 MB |
+| .xlsx     | 150 MB                  | 100 MB |
+
+> [!NOTE]
+> - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
+> - To optimize for Copilot, we recommend that you keep the contents of files that you upload concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 
 ## Copilot connectors
 
