@@ -10,7 +10,7 @@ ms.date: 07/09/2025
 
 # Add knowledge sources to your declarative agent
 
-You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.4.md#capabilities-object) in the manifest reference and the **Knowledge** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the  knowledge sources that you can add to your agents.
+You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.5.md#capabilities-object) in the manifest reference and the **Knowledge** section in the Copilot Studio agent builder provide several options for you to unlock features for your users. This article describes the  knowledge sources that you can add to your agents.
 
 The following table lists the capabilities and knowledge sources you can configure by using agent builder or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
 
@@ -35,7 +35,7 @@ The following table lists the capabilities and knowledge sources you can configu
 
 Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) enable you to add organizational data to your agent as grounding information. You can use Copilot connectors to ingest your line-of-business data into Microsoft Graph and Copilot can reason over your data as grounding information in responses to user prompts. For more information, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 
-For information about how to add Copilot connectors as knowledge to your agent manifest in Agents Toolkit, see [Copilot connectors object](declarative-agent-manifest-1.4.md#copilot-connectors-object).
+For information about how to add Copilot connectors as knowledge to your agent manifest in Agents Toolkit, see [Copilot connectors object](declarative-agent-manifest-1.5.md#copilot-connectors-object).
 
 For information about how to add Copilot connectors to your agent in Copilot Studio agent builder, see [Copilot connectors](copilot-studio-agent-builder-knowledge.md#copilot-connectors).
 
@@ -43,7 +43,7 @@ For information about how to add Copilot connectors to your agent in Copilot Stu
 
 When you configure your agent to use OneDrive and SharePoint content as knowledge, Copilot searches SharePoint and OneDrive files, folders, or sites that a user has access to for grounding information.
 
-For information about how to add OneDrive and SharePoint knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.4.md#onedrive-and-sharepoint-object).
+For information about how to add OneDrive and SharePoint knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.5.md#onedrive-and-sharepoint-object).
 
 For information about how to add SharePoint knowledge to your agent in Copilot Studio agent builder, see [Add knowledge sources](copilot-studio-agent-builder-knowledge.md#sharepoint-content).
 
@@ -241,6 +241,6 @@ For more information, see [Deep link to Teams chat](/microsoftteams/platform/con
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.4.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.5.md)
 - [Add the code interpreter capability to your agent](code-interpreter.md)
 - [Add the image generator capability to your agent](image-generator.md)
