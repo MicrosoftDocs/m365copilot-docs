@@ -20,7 +20,7 @@ Declarative agents are valuable in understanding and generating human-like text,
 
 This schema version introduces the following changes from [version 1.3](declarative-agent-manifest-1.3.md):
 
-- Added the `behavior_overrides` property to the [declarative agent manifest object](#declarative-agent-manifest-object).
+- Added the `behavior_overrides` and `disclaimer` properties to the [declarative agent manifest object](#declarative-agent-manifest-object).
 - Added the `part_type` and `part_id` properties to the [items by SharePoint IDs object](#items-by-sharepoint-ids-object).
 - Added additional properties to the [Connection object](#connection-object), allowing scoping of Copilot connector content.
 - Added the [scenario models](#scenario-models-object) capability to the list of `capabilities`, which allows agents to use task-specific models.
@@ -64,6 +64,7 @@ The declarative agent manifest object contains the following properties.
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than 12 objects in the array. |
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
 | `behavior_overrides`    | [Behavior overrides object](#behavior-overrides-object)               | Optional. Contains configuration settings that modify the behavior of the agent. |
+| `disclaimer`            | [Disclaimer object](#disclaimer-object)                               | Optional. Disclaimer text that is displayed to the user at the start of a conversation. |
 
 ### Declarative agent manifest object example
 
@@ -616,6 +617,16 @@ The special instructions object contains the following property.
 | Property                     | Type    | Description |
 | ---------------------------- | ------- | ----------- |
 | `discourage_model_knowledge` | Boolean | Required. If set to `true`, the agent is discouraged from using model knowledge when generating responses. The default value is `false`. |
+
+### Disclaimer object
+
+A disclaimer is an optional JSON object in the manifest that specifies disclaimer text that is displayed to the user at the start of a conversation.
+
+The disclaimer object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `text`   | String | Required. The disclaimer text. The value MUST contain at least one non-whitespace character and SHOULD NOT exceed 500 characters. |
 
 ## Declarative agent manifest example
 
