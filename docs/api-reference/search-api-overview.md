@@ -2,7 +2,7 @@
 title: Microsoft 365 Copilot Search API Overview (Preview)
 description: "Use the Microsoft 365 Copilot Search API to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results."
 author: apiarya
-ms.author: apiarya
+ms.author: swapnilsapar
 ms.localizationpriority: medium
 ms.date: 7/28/2025
 ms.topic: conceptual

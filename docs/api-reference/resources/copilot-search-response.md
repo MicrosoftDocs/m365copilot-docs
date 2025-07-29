@@ -2,7 +2,7 @@
 title: copilotSearchResponse resource type
 description: Represents results from a semantic search query.
 author: apiarya
-ms.author: apiarya
+ms.author: swapnilsapar
 ms.topic: reference
 ms.date: 7/28/2025
 ms.localizationpriority: medium

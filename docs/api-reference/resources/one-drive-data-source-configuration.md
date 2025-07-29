@@ -2,7 +2,7 @@
 title: oneDriveDataSourceConfiguration resource type
 description: OneDrive-specific search configuration including filtering and metadata options.
 author: apiarya
-ms.author: apiarya
+ms.author: swapnilsapar
 ms.topic: reference
 ms.date: 7/28/2025
 ms.localizationpriority: medium
