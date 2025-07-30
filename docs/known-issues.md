@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 06/12/2025
+ms.date: 07/22/2025
 ---
 
 # Known issues
@@ -56,6 +56,14 @@ Currently, users can select a file in Copilot Studio and Copilot Studio agent bu
 
 When you share an agent in agent builder using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
+### Capabilities aren't supported in Microsoft 365 Government tenants
+
+The following capabilities aren't currently supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants:
+
+- [Copilot Studio agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder).
+- [Authenticated custom actions](/microsoft-365-copilot/extensibility/overview-api-plugins).
+- Support for metered billing for extensibility features. For details about features that require metered billing, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
+- Support for publishing agents via the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents).
 
 ## Copilot connectors
 
@@ -101,6 +109,7 @@ The following table lists features that aren't currently supported for custom en
 | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
 | Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>[Media](https://adaptivecards.microsoft.com/?topic=Media)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>People picker</li><li>@mention</li><li>Password control</li></ul> |
 | Sensitivity labels | Sensitivity labels aren't supported. |
+| Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Edge browser. |
 
 ## Related content
 

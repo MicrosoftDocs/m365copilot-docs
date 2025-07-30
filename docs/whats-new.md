@@ -20,6 +20,32 @@ For the latest information, announcements, and news about preview and generally 
 
 You can now scope Copilot connectors to specific data attributes when you use Copilot Studio agent builder to create your agent. For more information, see [Scope Copilot connector data sources](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-knowledge).
 
+### Declarative agent manifest version 1.5
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.5](declarative-agent-manifest-1.5.md) adds the following:
+
+- Added the [meetings](declarative-agent-manifest-1.5.md#meetings-object) capability to the list of `capabilities`, which allows agents to search meetings in the organization.
+
+### Disclaimers in declarative agents
+
+Added the `disclaimers` property to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object) in schema version 1.4.
+
+### Embedded file content file size limit increase
+
+You can now upload files up to 100 MBs in size when you embed file content as knowledge in Copilot Studio agent builder. For more information, see [File size limits](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-knowledge#file-size-limits).
+
+### Increased SharePoint file limit for agents
+
+You can now specify up to 100 SharePoint files as knowledge when you use Copilot Studio agent builder, up from a limit of 20 files. For more information, see [SharePoint content](copilot-studio-agent-builder-knowledge.md#sharepoint-content).
+
+### Build Microsoft 365 Copilot connectors for people data (preview)
+
+Build connectors to ingest people data from your source systems into Microsoft Graph for Microsoft 365 Copilot. For more information, see [Build Microsoft 365 Copilot connectors for people data (preview)](build-connectors-with-people-data.md).
+
+### Agents supported in Microsoft 365 Government clouds
+
+Limited support for declarative agents is available for [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants. Support is now available for Government Community Cloud (GCC) tenants.
+
 ### Asynchronous and proactive messages in custom engine agents
 
 You can implement asynchronous and proactive message flows in your custom engine agents. For more information, see [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-asynchronous-flow.md).
@@ -62,7 +88,7 @@ Add Outlook email and Teams group, channel, and meeting chats as knowledge when 
 
 ### Microsoft 365 Agents Toolkit
 
-Use Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) to [Build declarative agents](/microsoft-365-copilot/extensibility/build-declarative-agents) and [Build Copilot connectors](build-your-first-connector.md).
+Use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to [Build declarative agents](/microsoft-365-copilot/extensibility/build-declarative-agents) and [Build Copilot connectors](build-your-first-connector.md).
 
 ### Microsoft 365 Copilot APIs
 
@@ -88,7 +114,7 @@ Updated the usage rates for Copilot Studio messages. For more information, see [
 
 ### Email as knowledge
 
-Email is now available as a knowledge source for agents build with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)). For more information, see [Email knowledge](knowledge-sources.md#email).
+Email is now available as a knowledge source for agents build with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](knowledge-sources.md#email).
 
 ### Copilot Studio agent builder templates
 
