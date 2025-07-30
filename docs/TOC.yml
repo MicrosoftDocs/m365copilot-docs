@@ -1,3 +1,6 @@
+# cSpell:ignoreRegExp aiinteraction.*?
+# cSpell:ignoreRegExp .*?aiinsight.*?
+# cSpell:ignore aiuser
 - name: Microsoft 365 Copilot extensibility
   href: index.md
 - name: Explore
@@ -177,7 +180,7 @@
     - name: Test and debug agents
       href: debugging-copilot-agent.md
     - name: Convert to custom engine agent
-      href: convert-declarative-agent.md 
+      href: convert-declarative-agent.md
     - name: Responsible AI validation
       href: rai-validation.md
   - name: Build a custom engine agent
@@ -265,6 +268,48 @@
     href: sdks/api-libraries.md
   - name: API reference
     items:
+    - name: Change notifications API (preview)
+      items:
+      - name: Change notifications for AI interactions
+        href: api-reference/aiinteraction-changenotifications.md
+    - name: Interaction export API
+      items:
+      - name: AI interaction history
+        items:
+        - name: AI interaction history
+          href: api-reference/resources/aiinteractionhistory.md
+        - name: Get all enterprise interactions
+          href: api-reference/aiinteractionhistory-getallenterpriseinteractions.md
+      - name: Complex types
+        items:
+        - name: AI interaction
+          href: api-reference/resources/aiinteraction.md
+        - name: AI interaction attachment
+          href: api-reference/resources/aiinteractionattachment.md
+        - name: AI interaction context
+          href: api-reference/resources/aiinteractioncontext.md
+        - name: AI interaction link
+          href: api-reference/resources/aiinteractionlink.md
+        - name: AI interaction mention
+          href: api-reference/resources/aiinteractionmention.md
+        - name: AI interaction mentioned identity set
+          href: api-reference/resources/aiinteractionmentionedidentityset.md
+    - name: Meeting insights API (preview)
+      items:
+      - name: Call AI insight
+        items:
+        - name: Call AI insight
+          href: callaiinsight.md
+        - name: List
+          href: onlinemeeting-list-aiinsights.md
+        - name: Get
+          href: callaiinsight-get.md
+      - name: Complex types
+        items:
+        - name: Call AI insight viewpoint
+          href: callaiinsightviewpoint.md
+        - name: Mention event
+          href: mentionevent.md
     - name: Retrieval API (preview)
       items:
       - name: Overview
@@ -283,6 +328,12 @@
           href: api-reference/resources/searchresourcemetadatadictionary.md
         - name: Search sensitivity label info
           href: api-reference/resources/searchsensitivitylabelinfo.md
+    - name: Complex types
+      items:
+      - name: AI user
+        href: aiuser.md
+      - name: Copilot root
+        href: copilotroot.md
 - name: Publish
   items:
   - name: Overview

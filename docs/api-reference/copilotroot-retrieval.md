@@ -35,10 +35,10 @@ POST https://graph.microsoft.com/beta/copilot/retrieval
 
 ## Request headers
 
-| Name          | Description                                                                                               |
-|:--------------|:----------------------------------------------------------------------------------------------------------|
-| Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| Content-Type  | application/json. Required.                                                                               |
+| Name            | Description                                                                                                |
+|:----------------|:-----------------------------------------------------------------------------------------------------------|
+| `Authorization` |`Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| `Content-Type`  | `application/json.` Required.                                                                              |
 
 ## Request body
 
