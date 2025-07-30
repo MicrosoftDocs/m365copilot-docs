@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 07/28/2025
+ms.date: 07/30/2025
 ms.topic: overview
 ---
 
@@ -16,6 +16,20 @@ For the latest information, announcements, and news about preview and generally 
 
 ## July 2025
 
+### Scope Copilot connector data sources
+
+You can now scope Copilot connectors to specific data attributes when you use Copilot Studio agent builder to create your agent. For more information, see [Scope Copilot connector data sources](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-knowledge).
+
+### Declarative agent manifest version 1.5
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.5](declarative-agent-manifest-1.5.md) adds the following:
+
+- Added the [meetings](declarative-agent-manifest-1.5.md#meetings-object) capability to the list of `capabilities`, which allows agents to search meetings in the organization.
+
+### Disclaimers in declarative agents
+
+Added the `disclaimers` property to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object) in schema version 1.4.
+
 ### Embedded file content file size limit increase
 
 You can now upload files up to 100 MBs in size when you embed file content as knowledge in Copilot Studio agent builder. For more information, see [File size limits](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-knowledge#file-size-limits).
@@ -23,7 +37,6 @@ You can now upload files up to 100 MBs in size when you embed file content as kn
 ### Increased SharePoint file limit for agents
 
 You can now specify up to 100 SharePoint files as knowledge when you use Copilot Studio agent builder, up from a limit of 20 files. For more information, see [SharePoint content](copilot-studio-agent-builder-knowledge.md#sharepoint-content).
-
 
 ### Build Microsoft 365 Copilot connectors for people data (preview)
 

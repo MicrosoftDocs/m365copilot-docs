@@ -1,6 +1,6 @@
 ---
-title: Declarative agent schema 1.4 for Microsoft 365 Copilot
-description: Learn about the 1.4 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
+title: Declarative agent schema 1.5 for Microsoft 365 Copilot
+description: Learn about the 1.5 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
@@ -10,26 +10,21 @@ ms.topic: reference
 
 <!-- markdownlint-disable MD024 MD059 -->
 
-# Declarative agent schema 1.4 for Microsoft 365 Copilot
+# Declarative agent schema 1.5 for Microsoft 365 Copilot
 
-This article describes the 1.4 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
-
-[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
+This article describes the 1.5 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 1.3](declarative-agent-manifest-1.3.md):
+This schema version introduces the following changes from [version 1.4](declarative-agent-manifest-1.4.md):
 
-- Added the `behavior_overrides` and `disclaimer` properties to the [declarative agent manifest object](#declarative-agent-manifest-object).
-- Added the `part_type` and `part_id` properties to the [items by SharePoint IDs object](#items-by-sharepoint-ids-object).
-- Added additional properties to the [Connection object](#connection-object), allowing scoping of Copilot connector content.
-- Added the [scenario models](#scenario-models-object) capability to the list of `capabilities`, which allows agents to use task-specific models.
+- Added the [meetings](#meetings-object) capability to the list of `capabilities`, which allows agents to search meetings in the organization.
 
 ## JSON schema
 
-The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.4/schema.json).
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json).
 
 ## Conventions
 
@@ -57,7 +52,7 @@ The declarative agent manifest object contains the following properties.
 
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
-| `version`               | String                                                                | Required. The schema version. Must be set to `v1.4`. |
+| `version`               | String                                                                | Required. The schema version. Must be set to `v1.5`. |
 | `id`                    | String                                                                | Optional.   |
 | `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
 | `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
@@ -113,6 +108,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Email object](#email-object)
 - [People object](#people-object)
 - [Scenario models object](#scenario-models-object)
+- [Meetings object](#meetings-object)
 
 > [!NOTE]
 > Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
@@ -197,6 +193,9 @@ The capabilities object is the base type of objects in the `capabilities` proper
           "id": "model_id"
         }
       ]
+    },
+    {
+      "name": "Meetings"
     }
   ]
 }
@@ -245,6 +244,8 @@ namespace MyAgent {
   ]>;
 
   op people is AgentCapabilities.People;
+
+  op meetings is AgentCapabilities.Meetings;
 }
 ```
 
@@ -509,6 +510,16 @@ The model object contains the following property.
 | -------- | ------ | ----------- |
 | `id`     | String | Required. The unique identifier for the model. |
 
+#### Meetings object
+
+Indicates that the declarative agent can search for information about meetings in the organization.
+
+The meetings object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `name`   | String | Required. Must be set to `Meetings`. |
+
 ### Conversation starters object
 
 The conversation starters object is optional in the manifest. It contains hints that are displayed to the user to demonstrate how they can get started using the declarative agent.
@@ -634,7 +645,7 @@ The disclaimer object contains the following property.
 
 The following example shows a declarative agent manifest file that uses most of the manifest properties described in this article.
 
-:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.4.json":::
+:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.5.json":::
 
 ## Related content
 
