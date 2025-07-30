@@ -5,6 +5,7 @@ author: gautamjain14
 ms.author: gajain
 ms.localizationpriority: medium
 doc_type: resourcePageType
+ms.topic: reference
 ms.date: 07/29/2025
 zone_pivot_groups: graph-api-versions
 ---
@@ -12,6 +13,8 @@ zone_pivot_groups: graph-api-versions
 # copilotRoot resource type
 
 <!-- cSpell:ignore gautamjain14 gajain -->
+:::zone pivot="graph-v1"
+:::zone-end
 
 :::zone pivot="graph-beta"
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]

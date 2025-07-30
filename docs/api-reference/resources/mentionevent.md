@@ -3,9 +3,10 @@ title: mentionEvent resource type
 description: Represents a mention event associated with a callAiInsightViewPoint.
 author: Anjali-Patle
 ms.author: anjalipatle
-ms.date: 04/29/2025
+ms.date: 07/29/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
+ms.topic: reference
 ---
 
 # mentionEvent resource type

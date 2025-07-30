@@ -5,6 +5,7 @@ author: eddie-lee-msft
 ms.author: edle
 ms.localizationpriority: high
 ms.date: 07/29/2025
+ms.topic: reference
 ---
 
 # Get change notifications for Copilot AI interactions using Microsoft Graph
@@ -12,7 +13,7 @@ ms.date: 07/29/2025
 <!-- markdownlint-disable MD024 -->
 <!-- cSpell:ignore edle -->
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
 Change notifications enable you to subscribe to Copilot [aiInteractions](resources/aiinteraction.md) across Microsoft 365. You can get notified whenever a new user query to Copilot happens or when Copilot responds to the user. You can also get the resource data in the notifications, which allows you to avoid calling the API to get the payload.
 

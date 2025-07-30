@@ -6,6 +6,7 @@ author: bkeerthivasa
 ms.author: bkeerthivasa
 ms.localizationpriority: high
 doc_type: apiPageType
+ms.topic: reference
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -13,6 +14,10 @@ zone_pivot_groups: graph-api-versions
 
 <!-- markdownlint-disable MD024 -->
 <!-- cSpell:ignore bkeerthivasa orgid -->
+
+:::zone pivot="graph-beta"
+[!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
+:::zone-end
 
 Get all Microsoft 365 Copilot interaction data, including user prompts to Copilot and Copilot responses. This API captures the user intent, the resources accessed by Copilot, and the response to the user for Microsoft 365 apps such as Teams, Word, and Outlook.
 
@@ -39,7 +44,6 @@ GET https://graph.microsoft.com/v1.0/copilot/users/{id}/interactionHistory/getAl
 :::zone-end
 
 :::zone pivot="graph-beta"
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 ```http
 GET https://graph.microsoft.com/beta/copilot/users/{id}/interactionHistory/getAllEnterpriseInteractions

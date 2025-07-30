@@ -6,6 +6,7 @@ ms.author: anjalipatle
 ms.date: 07/29/2025
 ms.localizationpriority: medium
 doc_type: apiPageType
+ms.topic: reference
 ---
 
 # List aiInsights
@@ -13,9 +14,9 @@ doc_type: apiPageType
 <!-- markdownlint-disable MD024 -->
 <!-- cSpell:ignore Anjali-Patle anjalipatle -->
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
-Get the list of [callAiInsight](callaiinsight.md) objects associated with an [onlineMeeting](/graph/api/resources/onlinemeeting).
+Get the list of [callAiInsight](resources/callaiinsight.md) objects associated with an [onlineMeeting](/graph/api/resources/onlinemeeting).
 
 > [!NOTE]
 >
@@ -57,7 +58,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [callAiInsight](callaiinsight.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [callAiInsight](resources/callaiinsight.md) objects in the response body.
 
 ## Example
 

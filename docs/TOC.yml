@@ -299,17 +299,17 @@
       - name: Call AI insight
         items:
         - name: Call AI insight
-          href: callaiinsight.md
+          href: api-reference/resources/callaiinsight.md
         - name: List
-          href: onlinemeeting-list-aiinsights.md
+          href: api-reference/onlinemeeting-list-aiinsights.md
         - name: Get
-          href: callaiinsight-get.md
+          href: api-reference/callaiinsight-get.md
       - name: Complex types
         items:
         - name: Call AI insight viewpoint
-          href: callaiinsightviewpoint.md
+          href: api-reference/resources/callaiinsightviewpoint.md
         - name: Mention event
-          href: mentionevent.md
+          href: api-reference/resources/mentionevent.md
     - name: Retrieval API (preview)
       items:
       - name: Overview
@@ -331,9 +331,9 @@
     - name: Complex types
       items:
       - name: AI user
-        href: aiuser.md
+        href: api-reference/resources/aiuser.md
       - name: Copilot root
-        href: copilotroot.md
+        href: api-reference/resources/copilotroot.md
 - name: Publish
   items:
   - name: Overview

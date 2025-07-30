@@ -6,6 +6,7 @@ ms.author: anjalipatle
 ms.date: 07/29/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
+ms.topic: reference
 ---
 
 # callAiInsightViewPoint resource type

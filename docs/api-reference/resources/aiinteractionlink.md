@@ -3,6 +3,7 @@ title: aiInteractionLink resource type
 description: Represents the links that appear in an AI interaction.
 ms.date: 07/29/2025
 doc_type: resourcePageType
+ms.topic: reference
 ms.localizationpriority: medium
 author: bkeerthivasa
 ms.author: bkeerthivasa
@@ -12,6 +13,8 @@ zone_pivot_groups: graph-api-versions
 # aiInteractionLink resource type
 
 <!-- cSpell:ignore bkeerthivasa -->
+:::zone pivot="graph-v1"
+:::zone-end
 
 :::zone pivot="graph-beta"
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
