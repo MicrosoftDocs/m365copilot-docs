@@ -7,7 +7,6 @@ ms.topic: reference
 ms.date: 06/09/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
-ms.topic: reference
 ---
 
 <!-- markdownlint-disable MD024 -->

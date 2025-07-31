@@ -1,6 +1,6 @@
 # cSpell:ignoreRegExp aiinteraction.*?
 # cSpell:ignoreRegExp .*?aiinsight.*?
-# cSpell:ignore aiuser
+# cSpell:ignore aiuser aionlinemeeting
 - name: Microsoft 365 Copilot extensibility
   href: index.md
 - name: Explore
@@ -306,8 +306,16 @@
           href: api-reference/callaiinsight-get.md
       - name: Complex types
         items:
+        - name: Action item
+          href: api-reference/resources/actionitem.md
+        - name: AI online meeting
+          href: api-reference/resources/aionlinemeeting.md
         - name: Call AI insight viewpoint
           href: api-reference/resources/callaiinsightviewpoint.md
+        - name: Meeting note
+          href: api-reference/resources/meetingnote.md
+        - name: Meeting note subpoint
+          href: api-reference/resources/meetingnotesubpoint.md
         - name: Mention event
           href: api-reference/resources/mentionevent.md
     - name: Retrieval API (preview)
