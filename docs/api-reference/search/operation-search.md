@@ -53,7 +53,7 @@ The following table lists the parameters that are required when you call this ac
 | `dataSources`            | Object            | Configuration for data sources to include in the search. Optional. |
 | `dataSources.oneDrive`   | Object            | OneDrive-specific search configuration (currently the only supported data source). Optional. |
 | `dataSources.oneDrive.filterExpression` | String | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression for filtering OneDrive content. Currently only supports `path:` expressions. Optional. |
-| `dataSources.oneDrive.resourceMetadataNames` | String collection | Resource metadata fields to return in results. Supported fields: `path`, `author`, `lastModifiedTime`, `fileType`, `title`, `fileName`, `siteId`, `listId`, `modifiedBy`, `created`, `id`, `driveId`. Optional. |
+| `dataSources.oneDrive.resourceMetadataNames` | String collection | Resource metadata fields to return in results. Supported fields: `path`, `author`, `fileName`, `fileType`, `title`, `id`, `driveId`, `siteId`, `listId`, `created`, `lastModifiedTime`, `modifiedBy`. Optional. |
 
 ## Response
 
