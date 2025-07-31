@@ -91,7 +91,7 @@ The following are the current throttling and other limitations to the Search API
 - Up to 4 requests per second per user are supported.
 - Up to 200 requests per user per hour are supported.
 - Search from non-textual content, including embedded images and charts, is not supported.
-- Results from files larger than 512 MB (.docx, .pptx, .pdf) or 150 MB (other extensions) are not supported.
+- Results from files larger than 150 MB are not supported.
 - If **searchHits** in the response payload is empty, then no relevant results were found.
 
 ## Next step
