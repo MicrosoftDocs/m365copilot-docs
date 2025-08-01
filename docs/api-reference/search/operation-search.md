@@ -15,7 +15,7 @@ doc_type: conceptualPageType
 
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
-Perform semantic search across OneDrive content using natural language queries with contextual understanding. Allows the discovery of relevant documents and files that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Search API](https://aka.ms/try_copilot_search_API_reference). Learn how you can [batch up to 20 requests to the Search API](/graph/json-batching?tabs=http).
+Perform semantic search across OneDrive content using natural language queries with contextual understanding. Allows the discovery of relevant documents and files that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Search API](https://aka.ms/try_copilot_search_API_example_basic). Learn how you can [batch up to 20 requests to the Search API](/graph/json-batching?tabs=http).
 
 ## Permissions
 
@@ -109,7 +109,7 @@ The following example shows a request with specific OneDrive path filtering and 
 
 #### Request
 
-The following example shows the request.
+The following example shows the request. Try this example with [Graph Explorer](https://aka.ms/try_copilot_search_API_example_filter_metadata).
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/search
@@ -170,7 +170,7 @@ The following example shows how to search within specific OneDrive paths using [
 
 #### Request
 
-The following example shows the request.
+The following example shows the request. Try this example with [Graph Explorer](https://aka.ms/try_copilot_search_API_example_path_filter).
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/search
@@ -230,7 +230,7 @@ The following example shows how to [batch requests to the Search API](/graph/jso
 
 #### Request
 
-The following example shows the request.
+The following example shows the request. Try this example with [Graph Explorer](https://aka.ms/try_copilot_search_API_example_batch).
 
 ```http
 POST https://graph.microsoft.com/beta/$batch
@@ -317,4 +317,4 @@ Content-Type: application/json
 
 - [Overview of the Microsoft 365 Copilot Search API](overview.md)
 - [Pagination for Search API results](operation-next-page.md)
-- [Try with Graph explorer](https://aka.ms/try_copilot_search_API_reference)
+- [Try with Graph explorer](https://aka.ms/try_copilot_search_API_example_basic)

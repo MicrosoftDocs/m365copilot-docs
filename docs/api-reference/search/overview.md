@@ -16,7 +16,7 @@ The Search API offers a streamlined solution for semantic document discovery wit
 
 Semantic search is essential when you're building knowledge discovery solutions and want to surface Microsoft 365 content. When you implement semantic search, your solutions can provide more accurate, contextually relevant document discovery grounded in the vast repository of your organizational data. The Search API accomplishes this by providing relevant document previews and metadata from OneDrive content. The Search API keeps your data in place and upholds your access and governance controls. The Search API ensures that search results are informed by the latest and most relevant content. This process enhances the discoverability and usefulness of your document-centric applications.
 
-[Try your first Search API query in Graph Explorer](https://aka.ms/try_copilot_search_API_overview).
+[Try your first Search API query in Graph Explorer](https://aka.ms/try_copilot_search_API_example_basic).
 
 ## Why use the Search API?
 
@@ -101,4 +101,4 @@ The following are the current throttling and other limitations to the Search API
 
 ## Related content
 
-- [Try with Graph explorer](https://aka.ms/try_copilot_search_API_overview)
+- [Try with Graph explorer](https://aka.ms/try_copilot_search_API_example_basic)

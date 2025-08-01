@@ -97,4 +97,4 @@ Content-Type: application/json
 
 - [Overview of the Microsoft 365 Copilot Search API](overview.md)
 - [Perform semantic search](operation-search.md)
-- [Try with Graph explorer](https://aka.ms/try_copilot_search_API_reference)
+- [Try with Graph explorer](https://aka.ms/try_copilot_search_API_example_basic)
