@@ -243,22 +243,18 @@ Content-Type: application/json
       "id": "1",
       "method": "POST",
       "url": "/copilot/search",
+      "headers": {"Content-Type": "application/json"},
       "body": {
         "query": "quarterly budget reports"
-      },
-      "headers": {
-        "Content-Type": "application/json"
       }
     },
     {
       "id": "2",
       "method": "POST",
       "url": "/copilot/search",
+      "headers": {"Content-Type": "application/json"},
       "body": {
         "query": "project planning documents"
-      },
-      "headers": {
-        "Content-Type": "application/json"
       }
     }
   ]
