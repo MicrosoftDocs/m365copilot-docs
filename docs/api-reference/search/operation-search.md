@@ -67,7 +67,7 @@ The following example shows a simple request to search across all accessible One
 
 #### Request
 
-The following example shows the request.
+The following example shows the request. Try this example with [Graph Explorer](https://aka.ms/try_copilot_search_API_example_basic).
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/search
