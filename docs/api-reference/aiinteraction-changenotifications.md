@@ -13,14 +13,12 @@ ms.topic: reference
 <!-- markdownlint-disable MD024 -->
 <!-- cSpell:ignore edle -->
 
-[!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
-
 Change notifications enable you to subscribe to Copilot [aiInteractions](resources/aiinteraction.md) across Microsoft 365. You can get notified whenever a new user query to Copilot happens or when Copilot responds to the user. You can also get the resource data in the notifications, which allows you to avoid calling the API to get the payload.
 
 > [!NOTE]
-> If you request a subscription **expirationDateTime** that is more than one hour in the future, you must subscribe to lifecycle notifications by including a **lifecycleNotificationUrl** property in your subscription request; otherwise, your subscription request fails with the following error message: `lifecycleNotificationUrl is a required property for subscription creation on this resource when the expirationDateTime value is set to greater than 1 hour`.
+> If you request a subscription `expirationDateTime` that is more than one hour in the future, you must subscribe to lifecycle notifications by including a `lifecycleNotificationUrl` property in your subscription request; otherwise, your subscription request fails with the following error message: `lifecycleNotificationUrl is a required property for subscription creation on this resource when the expirationDateTime value is set to greater than 1 hour`.
 
-## Subscribe to Copilot AI interactions for a particular user (preview)
+## Subscribe to Copilot AI interactions for a particular user
 
 To get change notifications for Copilot AI interactions that a particular user is part of, subscribe to `/copilot/users/{user-id}/interactionHistory/getAllEnterpriseInteractions`. This resource supports [including resource data](/graph/change-notifications-with-resource-data) in the notification.
 
@@ -37,19 +35,14 @@ To get change notifications for Copilot AI interactions that a particular user i
 
 ### Licensing requirements
 
-To access this change notification resource, the user in the resource path must have all of the following Copilot service plan IDs enabled:
+To access this change notification resource, the user in the resource path must have the following Copilot service plan ID enabled:
 
-- **Microsoft 365 Copilot connectors in Microsoft 365 Copilot**: 82d30987-df9b-4486-b146-198b21d164c7
-- **Intelligent search**: 931e4a88-a67f-48b5-814f-16a5f1e6028d
-- **Microsoft 365 Copilot in Microsoft Teams**: b95945de-b3bd-46db-8437-f2beb6ea2347
-- **Microsoft 365 Copilot in productivity apps**: a62f8878-de10-42f3-b68f-6149a25ceb97
 - **Microsoft 365 Copilot Chat**: 3f30311c-6b1e-48a4-ab79-725b469da960
-- **Power Platform connectors in Microsoft 365 Copilot**: 89f1c4c8-0878-40f7-804d-869c9128ab5d
 
 ### Example: Subscribe to Copilot AI interactions for a particular user
 
 ```http
-POST https://graph.microsoft.com/beta/subscriptions
+POST https://graph.microsoft.com/v1.0/subscriptions
 Content-Type: application/json
 
 {
@@ -64,17 +57,17 @@ Content-Type: application/json
 }
 ```
 
-## Subscribe to Copilot AI interactions across the tenant (preview)
+## Subscribe to Copilot AI interactions across the tenant
 
 To get change notifications for Copilot AI interactions across the tenant, subscribe to `/copilot/interactionHistory/getAllEnterpriseInteractions`. This resource supports [including resource data](/graph/change-notifications-with-resource-data) in the notification.
 
 ### Permissions
 
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Not supported. |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | AiEnterpriseInteraction.Read.All   |
+| Permission type                        | Permissions (from least to most privileged) |
+|:---------------------------------------|:--------------------------------------------|
+| Delegated (work or school account)     | Not supported.                              |
+| Delegated (personal Microsoft account) | Not supported.                              |
+| Application                            | AiEnterpriseInteraction.Read.All            |
 
 ### Licensing requirements
 
@@ -90,7 +83,7 @@ To access this change notification resource, the tenant must have all of the fol
 ### Example: Subscribe to Copilot AI interactions across the tenant
 
 ```http
-POST https://graph.microsoft.com/beta/subscriptions
+POST https://graph.microsoft.com/v1.0/subscriptions
 Content-Type: application/json
 
 {
@@ -119,7 +112,7 @@ You can use the `$filter` OData query parameter to filter out Copilot AI interac
 The following example shows how to to subscribe to Copilot AI interactions for only a particular Microsoft 365 application, such as Microsoft Teams.
 
 ```http
-POST https://graph.microsoft.com/beta/subscriptions
+POST https://graph.microsoft.com/v1.0/subscriptions
 Content-Type: application/json
 
 {
@@ -139,7 +132,7 @@ Content-Type: application/json
 The following example shows how to subscribe to all AI interactions where the **conversationType** isn't `bizchat`.
 
 ```http
-POST https://graph.microsoft.com/beta/subscriptions
+POST https://graph.microsoft.com/v1.0/subscriptions
 Content-Type: application/json
 
 {
