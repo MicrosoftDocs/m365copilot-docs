@@ -30,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ## HTTP request
 
 ```http
-POST /copilot/retrieval
+POST https://graph.microsoft.com/beta/copilot/retrieval
 ```
 
 ## Request headers
