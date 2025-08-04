@@ -10,7 +10,7 @@ ms.date: 05/19/2025
 
 # Create declarative agents using Microsoft 365 Agents Toolkit and TypeSpec
 
-A [declarative agent](overview-declarative-agent.md) is a customized version of Microsoft 365 Copilot that allows users to create personalized experiences by declaring specific instructions, actions, and knowledge. This guide demonstrates how to build a declarative agent by using [TypeSpec](https://typespec.io/) and the Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)).
+A [declarative agent](overview-declarative-agent.md) is a customized version of Microsoft 365 Copilot that allows users to create personalized experiences by declaring specific instructions, actions, and knowledge. This guide demonstrates how to build a declarative agent by using [TypeSpec](https://typespec.io/) and the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 
 > [!NOTE]
 > The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
@@ -86,7 +86,7 @@ Instructions change how an agent behaves.
     """)
     ```
 
-    The contents of this decorator are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object).
+    The contents of this decorator are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.5.md#declarative-agent-manifest-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -112,7 +112,7 @@ Conversation starters are hints that are displayed to the user to demonstrate ho
     })
     ```
 
-    For more information, see [Conversation starters object](declarative-agent-manifest-1.4.md#conversation-starters-object).
+    For more information, see [Conversation starters object](declarative-agent-manifest-1.5.md#conversation-starters-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -136,7 +136,7 @@ The [web search capability](knowledge-sources.md#web-and-scoped-web-search) enab
     }
     ```
 
-    For more information, see [Web search object](declarative-agent-manifest-1.4.md#web-search-object).
+    For more information, see [Web search object](declarative-agent-manifest-1.5.md#web-search-object).
 
     > [!NOTE]
     > Not specifying the `TSites` array causes all web content to be available to the agent.
@@ -165,7 +165,7 @@ The [OneDrive and SharePoint capability](knowledge-sources.md#sharepoint-and-one
     }
     ```
 
-    For more information, see [OneDrive and SharePoint object](declarative-agent-manifest-1.4.md#onedrive-and-sharepoint-object).
+    For more information, see [OneDrive and SharePoint object](declarative-agent-manifest-1.5.md#onedrive-and-sharepoint-object).
 
     > [!NOTE]
     >
@@ -196,7 +196,7 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
     }
     ```
 
-    For more information, see [Teams messages object](declarative-agent-manifest-1.4.md#teams-messages-object).
+    For more information, see [Teams messages object](declarative-agent-manifest-1.5.md#teams-messages-object).
 
     > [!NOTE]
     > - The URL in the `url` property must be well formed links to a Teams chat, team, or meeting chat.
@@ -222,7 +222,7 @@ The [people capability](knowledge-sources.md#people) allows you to scope your ag
     }
     ```
 
-    For more information, see [People object](declarative-agent-manifest-1.4.md#people-object).
+    For more information, see [People object](declarative-agent-manifest-1.5.md#people-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -248,7 +248,7 @@ The [email capability](knowledge-sources.md#email) allows you to scope your agen
     }
     ```
 
-    For more information, see [Email object](declarative-agent-manifest-1.4.md#email-object).
+    For more information, see [Email object](declarative-agent-manifest-1.5.md#email-object).
 
     > [!NOTE]
     >
@@ -275,7 +275,7 @@ The [image generator capability](image-generator.md) enables agents to generate 
     }
     ```
 
-    For more information, see [Graphic art object](declarative-agent-manifest-1.4.md#graphic-art-object).
+    For more information, see [Graphic art object](declarative-agent-manifest-1.5.md#graphic-art-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -297,7 +297,7 @@ The [code interpreter capability](code-interpreter.md) is an advanced tool desig
     }
     ```
 
-    For more information, see [Code interpreter object](declarative-agent-manifest-1.4.md#code-interpreter-object).
+    For more information, see [Code interpreter object](declarative-agent-manifest-1.5.md#code-interpreter-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -325,7 +325,7 @@ You can add items ingested by a Copilot connector to the available knowledge for
     }
     ```
 
-    For more information, see [Copilot connectors object](declarative-agent-manifest-1.4.md#copilot-connectors-object).
+    For more information, see [Copilot connectors object](declarative-agent-manifest-1.5.md#copilot-connectors-object).
 
     > [!NOTE]
     > Not specifying the `TConnections` array causes content from all Copilot connectors in your Microsoft 365 organization that are available to the logged in user to be available to the agent.

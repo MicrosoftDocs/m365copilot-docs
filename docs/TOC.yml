@@ -93,6 +93,8 @@
             href: api-plugin-manifest-2.1.md
       - name: Declarative agent manifest reference
         items:
+        - name: Version 1.5
+          href: declarative-agent-manifest-1.5.md
         - name: Version 1.4
           href: declarative-agent-manifest-1.4.md
         - name: Version 1.3
@@ -177,7 +179,7 @@
     - name: Test and debug agents
       href: debugging-copilot-agent.md
     - name: Convert to custom engine agent
-      href: convert-declarative-agent.md 
+      href: convert-declarative-agent.md
     - name: Responsible AI validation
       href: rai-validation.md
   - name: Build a custom engine agent
@@ -243,6 +245,8 @@
       href: build-your-first-connector.md
     - name: Build with SDK
       href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/extensibility/context
+  - name: Build connectors for people data (preview)
+    href: build-connectors-with-people-data.md
   - name: Connectors API
     items:
     - name: Overview
