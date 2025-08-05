@@ -67,7 +67,7 @@ The client ID is the app registration ID that is generated when you [register yo
 
 # [C#](#tab/csharp)
 
-[!INCLUDE [sample-code](../api-reference/includes/snippets/csharp/create_client_csharp.md)]
+[!INCLUDE [sample-code](../api/includes/snippets/csharp/create_client_csharp.md)]
 
 ---
 
