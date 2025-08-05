@@ -4,7 +4,7 @@ description: "Use the Microsoft 365 Copilot Search API to perform semantic searc
 author: apiarya
 ms.author: swapnilsapar
 ms.localizationpriority: medium
-ms.date: 7/28/2025
+ms.date: 8/15/2025
 ms.topic: conceptual
 ---
 

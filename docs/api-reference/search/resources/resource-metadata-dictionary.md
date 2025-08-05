@@ -4,7 +4,7 @@ description: Represents a dictionary of metadata properties for a search result.
 author: apiarya
 ms.author: swapnilsapar
 ms.topic: reference
-ms.date: 7/28/2025
+ms.date: 8/15/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
