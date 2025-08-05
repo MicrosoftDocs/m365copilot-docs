@@ -1,0 +1,17 @@
+items:
+- name: Overview
+  href: /retrieval-api-overview.md
+- name: Retrieve data
+  href: copilotroot-retrieval.md
+- name: Complex types
+  items:
+  - name: Retrieval response
+    href: resources/retrievalresponse.md
+  - name: Retrieval hit
+    href: resources/retrievalhit.md
+  - name: Retrieval extract
+    href: resources/retrievalextract.md
+  - name: Search response metadata dictionary
+    href: resources/searchresourcemetadatadictionary.md
+  - name: Search sensitivity label info
+    href: resources/searchsensitivitylabelinfo.md

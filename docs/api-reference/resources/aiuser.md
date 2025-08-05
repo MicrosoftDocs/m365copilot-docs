@@ -36,18 +36,18 @@ None.
 
 :::zone pivot="graph-v1"
 
-| Relationship         | Type                                                               | Description                                                 |
-|:---------------------|:-------------------------------------------------------------------|:------------------------------------------------------------|
-| `interactionHistory` | [aiInteractionHistory](aiinteractionhistory.md)                    | The history of interactions between AI agents and users.    |
+| Relationship         | Type                                                                            | Description                                              |
+|:---------------------|:--------------------------------------------------------------------------------|:---------------------------------------------------------|
+| `interactionHistory` | [aiInteractionHistory](../interaction-export/resources/aiinteractionhistory.md) | The history of interactions between AI agents and users. |
 
 :::zone-end
 
 :::zone pivot="graph-beta"
 
-| Relationship         | Type                                                               | Description                                                 |
-|:---------------------|:-------------------------------------------------------------------|:------------------------------------------------------------|
-| `interactionHistory` | [aiInteractionHistory](aiinteractionhistory.md)                    | The history of interactions between AI agents and users.    |
-| `onlineMeetings`     | [aiOnlineMeeting](/graph/api/resources/aionlinemeeting) collection | Information about an online meeting, including AI insights. |
+| Relationship         | Type                                                                            | Description                                                 |
+|:---------------------|:--------------------------------------------------------------------------------|:------------------------------------------------------------|
+| `interactionHistory` | [aiInteractionHistory](../interaction-export/resources/aiinteractionhistory.md) | The history of interactions between AI agents and users.    |
+| `onlineMeetings`     | [aiOnlineMeeting](/graph/api/resources/aionlinemeeting) collection              | Information about an online meeting, including AI insights. |
 
 :::zone-end
 

@@ -1,0 +1,18 @@
+# cSpell:ignore aiuser
+items:
+- name: Change notifications API (preview)
+  href: change-notifications/toc.yml
+- name: Interaction export API
+  href: interaction-export/toc.yml
+- name: Meeting insights API (preview)
+  href: meeting-insights/toc.yml
+- name: Retrieval API (preview)
+  href: retrieval/toc.yml
+- name: Settings APIs
+  href: admin-settings/toc.yml
+- name: Complex types
+  items:
+  - name: AI user
+    href: api-reference/resources/aiuser.md
+  - name: Copilot root
+    href: api-reference/resources/copilotroot.md
