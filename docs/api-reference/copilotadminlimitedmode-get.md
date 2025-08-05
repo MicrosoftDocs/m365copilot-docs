@@ -4,7 +4,7 @@ description: Read the properties and relationships of a copilotAdminLimitedMode 
 author: gautamjain14
 ms.author: gajain
 ms.localizationpriority: medium
-doc_type: resourcePageType
+doc_type: apiPageType
 ms.topic: reference
 ms.date: 05/08/2025
 zone_pivot_groups: graph-api-versions
@@ -49,6 +49,8 @@ GET https://graph.microsoft.com/v1.0/copilot/admin/settings/limitedMode
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/settings/limitedMode
 ```
+
+:::zone-end
 
 ## Request headers
 
