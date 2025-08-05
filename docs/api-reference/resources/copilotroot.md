@@ -28,11 +28,11 @@ None.
 
 ## Relationships
 
-| Relationship         | Type                                                         | Description                                                                                  |
-|:---------------------|:-------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
-| `admin`              | [copilotAdmin](/graph/api/resources/copilotadmin)                 | The Microsoft 365 Copilot admin who can add or modify Copilot settings. Read-only. Nullable. |
-| `interactionHistory` | [aiInteractionHistory](../resources/aiinteractionhistory.md) | The history of interactions between AI agents and users.                                     |
-| `users`              | [aiUser](../resources/aiuser.md) collection                  | The list of AI users or agents. Read-only. Nullable.                                         |
+| Relationship         | Type                                            | Description                                                                                  |
+|:---------------------|:------------------------------------------------|:---------------------------------------------------------------------------------------------|
+| `admin`              | [copilotAdmin](copilotadmin.md)                 | The Microsoft 365 Copilot admin who can add or modify Copilot settings. Read-only. Nullable. |
+| `interactionHistory` | [aiInteractionHistory](aiinteractionhistory.md) | The history of interactions between AI agents and users.                                     |
+| `users`              | [aiUser](aiuser.md) collection                  | The list of AI users or agents. Read-only. Nullable.                                         |
 
 ## JSON representation
 
