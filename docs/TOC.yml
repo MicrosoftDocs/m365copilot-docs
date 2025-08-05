@@ -265,7 +265,7 @@ items:
   - name: Use client libraries (preview)
     href: sdks/api-libraries.md
   - name: API reference
-    href: api-reference/toc.yml
+    href: api/toc.yml
 - name: Publish
   items:
   - name: Overview
