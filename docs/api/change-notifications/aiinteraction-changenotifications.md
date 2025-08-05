@@ -13,7 +13,7 @@ ms.topic: reference
 <!-- markdownlint-disable MD024 -->
 <!-- cSpell:ignore edle -->
 
-Change notifications enable you to subscribe to Copilot [aiInteractions](resources/aiinteraction.md) across Microsoft 365. You can get notified whenever a new user query to Copilot happens or when Copilot responds to the user. You can also get the resource data in the notifications, which allows you to avoid calling the API to get the payload.
+Change notifications enable you to subscribe to Copilot [aiInteractions](../interaction-export/resources/aiinteraction.md) across Microsoft 365. You can get notified whenever a new user query to Copilot happens or when Copilot responds to the user. You can also get the resource data in the notifications, which allows you to avoid calling the API to get the payload.
 
 > [!NOTE]
 > If you request a subscription `expirationDateTime` that is more than one hour in the future, you must subscribe to lifecycle notifications by including a `lifecycleNotificationUrl` property in your subscription request; otherwise, your subscription request fails with the following error message: `lifecycleNotificationUrl is a required property for subscription creation on this resource when the expirationDateTime value is set to greater than 1 hour`.
@@ -103,7 +103,7 @@ Content-Type: application/json
 You can use the `$filter` OData query parameter to filter out Copilot AI interactions that aren't needed. For example, to subscribe to Copilot AI interactions for only a particular Microsoft 365 application, such as Microsoft Teams, append `?$filter=appClass eq 'IPM.SkypeTeams.Message.Copilot.Teams'` to the end of the resource string. To subscribe to all AI interactions where the **conversationType** isn't Microsoft BizChat, append `?$filter=conversationType ne 'bizchat'`.
 
 > [!NOTE]
-> Currently, the `$filter` parameter can only be used on the top-level properties of the [aiInteraction](resources/aiinteraction.md) resource. Filter on nested properties isn't supported; for example, `?$filter=from/user/id eq '48902e20-56dc-48cf-ab15-0b65e15dda67'` isn't currently supported.
+> Currently, the `$filter` parameter can only be used on the top-level properties of the [aiInteraction](../interaction-export/resources/aiinteraction.md) resource. Filter on nested properties isn't supported; for example, `?$filter=from/user/id eq '48902e20-56dc-48cf-ab15-0b65e15dda67'` isn't currently supported.
 
 ### Examples
 
@@ -182,7 +182,7 @@ For notifications with resource data, the payload looks like the following.
 
 For details about how to validate tokens and decrypt the payload, see [Set up change notifications that include resource data](/graph/change-notifications-with-resource-data).
 
-The decrypted notification payload looks like the following. The payload conforms to the [aiInteraction](resources/aiinteraction.md) schema.
+The decrypted notification payload looks like the following. The payload conforms to the [aiInteraction](../interaction-export/resources/aiinteraction.md) schema.
 
 ```json
 {

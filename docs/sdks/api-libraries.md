@@ -59,7 +59,7 @@ Install-Package Microsoft.Agent.M365Copilot.Beta
 
 ## Create a Copilot APIs client and make an API call
 
-The following code example shows how to create an instance of a Microsoft 365 Copilot APIs client with an authentication provider in the supported languages. The authentication provider handles acquiring access tokens for the application. Many different authentication providers are available for each language and platform. The different authentication providers support different client scenarios. For details about which provider and options are appropriate for your scenario, see [Choose an Authentication Provider](/graph/sdks/choose-authentication-providers). 
+The following code example shows how to create an instance of a Microsoft 365 Copilot APIs client with an authentication provider in the supported languages. The authentication provider handles acquiring access tokens for the application. Many different authentication providers are available for each language and platform. The different authentication providers support different client scenarios. For details about which provider and options are appropriate for your scenario, see [Choose an Authentication Provider](/graph/sdks/choose-authentication-providers).
 
 The example also shows how to make a call to the Retrieval API. To call this API, you first need to create a request object, and then run the POST method on the request.
 
@@ -73,5 +73,5 @@ The client ID is the app registration ID that is generated when you [register yo
 
 ## Related content
 
-- [Overview of the Microsoft 365 Copilot Retrieval API](../api-reference/retrieval-api-overview.md)
-- [Use the Retrieval API](../api-reference/copilotroot-retrieval.md)
+- [Overview of the Microsoft 365 Copilot Retrieval API](../api/retrieval/overview.md)
+- [Use the Retrieval API](../api/retrieval/copilotroot-retrieval.md)

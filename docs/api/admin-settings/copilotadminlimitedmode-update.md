@@ -19,7 +19,7 @@ zone_pivot_groups: graph-api-versions
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 :::zone-end
 
-Update the properties of a [copilotAdminLimitedMode](../resources/copilotadminlimitedmode.md) object.
+Update the properties of a [copilotAdminLimitedMode](resources/copilotadminlimitedmode.md) object.
 
 ## Permissions
 
@@ -69,7 +69,7 @@ PATCH https://graph.microsoft.com/beta/copilot/admin/settings/limitedMode
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an updated [copilotAdminLimitedMode](./resources/copilotadminlimitedmode.md) object in the response body.
+If successful, this method returns a `200 OK` response code and an updated [copilotAdminLimitedMode](resources/copilotadminlimitedmode.md) object in the response body.
 
 This API can also return more HTTP status codes, such as `403 Forbidden`, `500 Internal Server Error`, and `429 Too Many Requests`.
 

@@ -13,6 +13,6 @@ items:
 - name: Complex types
   items:
   - name: AI user
-    href: api-reference/resources/aiuser.md
+    href: resources/aiuser.md
   - name: Copilot root
-    href: api-reference/resources/copilotroot.md
+    href: resources/copilotroot.md

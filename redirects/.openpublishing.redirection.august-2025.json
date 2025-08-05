@@ -6,8 +6,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path_from_root": "/docs/api-reference/copilot-retrieval.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/api/retrieval/copilot-retrieval",
+      "source_path_from_root": "/docs/api-reference/copilotroot-retrieval.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api/retrieval/copilotroot-retrieval",
       "redirect_document_id": true
     },
     {

@@ -1,6 +1,6 @@
 items:
 - name: Overview
-  href: /retrieval-api-overview.md
+  href: overview.md
 - name: Retrieve data
   href: copilotroot-retrieval.md
 - name: Complex types
