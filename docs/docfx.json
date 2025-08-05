@@ -56,7 +56,7 @@
     },
     "fileMetadata": {
       "zone_pivot_group_filename": {
-        "api-reference/**/*.md": "extensibility/api-reference/zone-pivot-groups.json"
+        "api/**/*.md": "extensibility/api/zone-pivot-groups.json"
       }
     },
     "template": [],
