@@ -220,6 +220,13 @@ To enhance the accuracy and relevance of agent responses, agents can be grounded
 1. Select the attribute from the list to add it. 
 1. Your agent's knowledge is now scoped to the data associated with the scoped attribute.
 
+> [!NOTE]
+> If you don't see your results in the search bar for your connector that you're scoping, it could be for the following reasons:
+>
+> * The content of the scope wasn't added by your IT admin in Copilot Knowledge source.
+> * You don't have permission to access that content.
+> * You aren't typing valid scoping content.
+
 For example, when you use the **Azure DevOps Work Items** connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
 
 To scope the **Azure DevOps Work Items** area path:
