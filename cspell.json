@@ -123,7 +123,12 @@
         "Typeof",
         "typespec",
         "vscodeversion",
-        "wujessica"
+        "wujessica",
+        "pwsh",
+        "acrolinx",
+        "Acrolinx",
+        "openpublishing",
+        "localizationpriority"
     ],
     "ignoreWords": [],
     "flagWords": [
