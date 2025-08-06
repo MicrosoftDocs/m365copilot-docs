@@ -21,7 +21,7 @@ You can reference specific SharePoint files via the `OneDriveAndSharePoint` obje
 
 When you specify up to 20 files, Copilot searches the full contents of all files. Copilot has full access to all the file content and returns the appropriate content to the user based on their query. If you specify more than five SharePoint files, Copilot will search the full content of the five most relevant files and then only return content from those files.
 
-To optimize the content that Copilot returns, choose the most relevant SharePoint files to specify in your manifest. For example, if a folder contains eight files and only five are relevant to the user's task, specify the five files individually instead of referencing the folder. To ensure that Copilot searches the full file contents, best practice is to limit the total page count of the relevant files that you specify to no more than 300 pages.
+To optimize the content that Copilot returns, choose the most relevant SharePoint files to specify in your manifest. For example, if a folder contains eight files and only five are relevant to the user's task, specify the five files individually instead of referencing the folder. To ensure that Copilot searches the full file contents, the best practice is to limit the total page count of the relevant files that you specify to no more than 300 pages.
 
 ## Limit SharePoint file size
 
