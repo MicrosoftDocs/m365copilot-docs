@@ -4,7 +4,7 @@ description: Learn how to publish and manage agents built with Copilot Studio ag
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/25/2024
+ms.date: 08/06/2025
 ms.topic: conceptual
 ---
 
@@ -35,16 +35,15 @@ The following table lists the sharing options that are available.
 > [!NOTE]
 > When the Share option is set to **Specific users in your organization**, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
-### Deploy agents via a ZIP package
+### Deploy agents via ZIP package
 
-Copilot Studio agent builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the necessary files to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
+Copilot Studio agent builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
-1. Configure your agent in  Copilot Studio agent builder.
-1. Choose **Create** in the upper right corner.
-1. Update the **Sharing** settings as appropriate.
-1. Select the three dots in the upper right corner for more options and then select **Download .zip file**.
+To deploy an agent manually:
 
-Once you have downloaded your agent, you can upload it to a [solution](/power-platform/alm/solution-concepts-alm) in Power Platform. From there, you can deploy the agent across multiple [environments](/power-platform/admin/environments-overview). For more information, see [Export and import agents using solutions](/microsoft-copilot-studio/authoring-solutions-import-export)
+1. In Copilot Studio agent builder, open your agent and select the **More options (...) menu.
+2. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
+3. Submit your app for publishing to your tenant via the **Integrated Apps** section of the Microsoft 365 admin center. You can also import your package and publish your agent via the [Developer Portal](https://dev.teams.microsoft.com/home).
 
 > [!NOTE]
 > - The ZIP package doesn't include embedded file content.
