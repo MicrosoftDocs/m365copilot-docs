@@ -19,7 +19,7 @@ This article describes methods for developers to retrieve the necessary IDs to i
 This section describes how developers can retrieve the value to set in the `connection_id` property of the [Connection object](declarative-agent-manifest-1.5.md#connection-object) in the [Copilot connectors object](declarative-agent-manifest-1.5.md#copilot-connectors-object) in the manifest.
 
 > [!IMPORTANT]
-> Querying for Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) requires an admin account.
+> Querying for Microsoft 365 Copilot connectors requires an admin account.
 
 ### [Graph Explorer](#tab/explorer)
 

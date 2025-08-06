@@ -28,7 +28,7 @@ Power Automate Flows as actions in declarative agents might not run reliably and
 
 **Workaround:** Currently, no workaround for the issue that the flows might not return results is available. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
 
-This issue applies to links from any content source, including SharePoint, Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), and plugins.
+This issue applies to links from any content source, including SharePoint, Microsoft 365 Copilot connectors, and plugins.
 
 ### Prompts to get a list based on custom metadata aren't supported 
 
