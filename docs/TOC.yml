@@ -94,6 +94,8 @@ items:
             href: api-plugin-manifest-2.1.md
       - name: Declarative agent manifest reference
         items:
+        - name: Version 1.5
+          href: declarative-agent-manifest-1.5.md
         - name: Version 1.4
           href: declarative-agent-manifest-1.4.md
         - name: Version 1.3
