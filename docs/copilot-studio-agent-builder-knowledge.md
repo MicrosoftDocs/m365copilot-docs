@@ -221,11 +221,11 @@ To enhance the accuracy and relevance of agent responses, agents can be grounded
 1. Your agent's knowledge is now scoped to the data associated with the scoped attribute.
 
 > [!NOTE]
-> If search results do not appear for your connector when scoping, this might occur for the following reasons:
+> If search results don't appear for your connector when scoping, this might occur for the following reasons:
 >
-> * The scoped content has not been configured by your administrator in the Copilot Knowledge source.
-> * You do not have the required permissions to access the content.
-> * The scoping input is not valid for the selected connector.
+> * The scoped content hasn't been configured by your administrator in the Copilot Knowledge source.
+> * You don't have the required permissions to access the content.
+> * The scoping input isn't valid for the selected connector.
 
 For example, when you use the **Azure DevOps Work Items** connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
 
