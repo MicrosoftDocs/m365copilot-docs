@@ -15,7 +15,7 @@ zone_pivot_groups: graph-api-versions
 <!-- markdownlint-disable MD024 -->
 <!-- cSpell:ignore bkeerthivasa orgid -->
 
-:::zone pivot="graph-beta"
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 :::zone-end
 
@@ -43,7 +43,7 @@ GET https://graph.microsoft.com/v1.0/copilot/users/{id}/interactionHistory/getAl
 
 :::zone-end
 
-:::zone pivot="graph-beta"
+:::zone pivot="graph-preview"
 
 ```http
 GET https://graph.microsoft.com/beta/copilot/users/{id}/interactionHistory/getAllEnterpriseInteractions
@@ -90,7 +90,7 @@ GET https://graph.microsoft.com/v1.0/copilot/users/9fcefe95-9677-483e-a3c1-22c5d
 
 :::zone-end
 
-:::zone pivot="graph-beta"
+:::zone pivot="graph-preview"
 
 ```http
 GET https://graph.microsoft.com/beta/copilot/users/9fcefe95-9677-483e-a3c1-22c5d501d737/interactionHistory/getAllEnterpriseInteractions
@@ -172,7 +172,7 @@ GET https://graph.microsoft.com/v1.0/copilot/users/4db02e4b-d144-400e-b194-53253
 
 :::zone-end
 
-:::zone pivot="graph-beta"
+:::zone pivot="graph-preview"
 
 ```http
 GET https://graph.microsoft.com/beta/copilot/users/4db02e4b-d144-400e-b194-53253a34c5be/interactionHistory/getAllEnterpriseInteractions?$filter=appClass eq 'IPM.SkypeTeams.Message.Copilot.BizChat'

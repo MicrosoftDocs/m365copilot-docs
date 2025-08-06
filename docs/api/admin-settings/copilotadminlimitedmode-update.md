@@ -15,7 +15,7 @@ zone_pivot_groups: graph-api-versions
 <!-- markdownlint-disable MD024 -->
 <!-- cSpell:ignore gautamjain14 gajain -->
 
-:::zone pivot="graph-beta"
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 :::zone-end
 
@@ -45,7 +45,7 @@ PATCH https://graph.microsoft.com/v1.0/copilot/admin/settings/limitedMode
 
 :::zone-end
 
-:::zone pivot="graph-beta"
+:::zone pivot="graph-preview"
 
 ```http
 PATCH https://graph.microsoft.com/beta/copilot/admin/settings/limitedMode
@@ -94,7 +94,7 @@ Content-Type: application/json
 
 :::zone-end
 
-:::zone pivot="graph-beta"
+:::zone pivot="graph-preview"
 
 ```http
 PATCH https://graph.microsoft.com/beta/copilot/admin/settings/limitedMode
