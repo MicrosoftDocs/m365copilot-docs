@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 # Retrieving capabilities IDs for declarative agent manifest
 
-This article describes methods for developers to retrieve the necessary IDs to include Graph connectors and SharePoint/OneDrive files within the `capabilities` section of their [declarative agent manifest](declarative-agent-manifest-1.5.md). Developers can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
+This article describes methods for developers to retrieve the necessary IDs to include Copilot connectors and SharePoint/OneDrive files within the `capabilities` section of their [declarative agent manifest](declarative-agent-manifest-1.5.md). Developers can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
 ## Microsoft 365 Copilot connectors
 

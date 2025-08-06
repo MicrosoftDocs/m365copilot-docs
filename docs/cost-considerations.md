@@ -111,5 +111,5 @@ The [Microsoft 365 Copilot APIs](copilot-apis-overview.md) are available at no a
 
 - [Copilot extensibility planning guide](planning-guide.md)
 - [Agents overview](agents-overview.md)
-- [Microsoft Graph connectors overview](overview-copilot-connector.md)
+- [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md)
 - [Microsoft 365 Copilot APIs overview](copilot-apis-overview.md)
