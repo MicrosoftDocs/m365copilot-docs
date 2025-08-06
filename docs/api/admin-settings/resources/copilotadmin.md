@@ -21,7 +21,7 @@ zone_pivot_groups: graph-api-versions
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 :::zone-end
 
-Represents a Microsoft 365 admin who can add or modify Microsoft 365 Copilot settings.
+Represents a container for Microsoft 365 Copilot admin settings.
 
 ## Properties
 
