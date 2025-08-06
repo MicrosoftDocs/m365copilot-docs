@@ -5,6 +5,12 @@ items:
   href: copilotroot-retrieval.md
 - name: Complex types
   items:
+  - name: Connection item
+    href: resources/connectionitem.md
+  - name: Data source configuration
+    href: resources/datasourceconfiguration.md
+  - name: External item configuration
+    href: externalitemconfiguration.md
   - name: Retrieval response
     href: resources/retrievalresponse.md
   - name: Retrieval hit
