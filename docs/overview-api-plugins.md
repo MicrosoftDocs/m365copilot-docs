@@ -4,7 +4,7 @@ description: Learn about API plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 08/06/2025
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
