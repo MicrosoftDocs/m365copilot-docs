@@ -10,7 +10,7 @@ items:
   - name: Data source configuration
     href: resources/datasourceconfiguration.md
   - name: External item configuration
-    href: externalitemconfiguration.md
+    href: resources/externalitemconfiguration.md
   - name: Retrieval response
     href: resources/retrievalresponse.md
   - name: Retrieval hit
