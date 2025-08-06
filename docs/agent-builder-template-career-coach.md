@@ -32,9 +32,9 @@ Agents built on the Career Coach template can offer:
 
 Career Coach agents are useful for the following tasks.
 
-| **Task** | **Description** |
-| ----------   | ----------  |
-| Career development plans | Helps create detailed plans based on your current role and your career goals goals. |
+| Task |Description |
+|:----------   |:----------  |
+| Career development plans | Helps create detailed plans based on your current role and your career goals. |
 | Skill gap analysis | Identifies gaps between your current skills and your career goals and then suggests ways to address them. |
 | Learning opportunities | Recommends courses, certifications, and workshops to help you grow. |
 | Career transition advice  | Provides guidance for successfully changing careers.  |

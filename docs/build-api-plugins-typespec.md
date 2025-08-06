@@ -12,7 +12,7 @@ ms.topic: how-to
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-[API plugins](overview-api-plugins.md) are custom actions for declarative agents that connect a REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi) to Microsoft 365 Copilot. This guide demonstrates how to add an API plugin to a declarative agent by using [TypeSpec](https://typespec.io/) and the Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)).
+[API plugins](overview-api-plugins.md) are custom actions for declarative agents that connect a REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi) to Microsoft 365 Copilot. This guide demonstrates how to add an API plugin to a declarative agent by using [TypeSpec](https://typespec.io/) and the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 
 ## Prerequisites
 

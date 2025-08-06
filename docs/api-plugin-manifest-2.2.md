@@ -21,7 +21,7 @@ The following article describes the 2.2 schema used by API plugin manifest files
 This schema version introduces the following changes from [version 2.1](api-plugin-manifest-2.1.md).
 
 - Added the `security_info` property to the [Function capabilities object](#function-capabilities-object). This property allows you to attest to the behavior of the plugin in order to assess the risks of calling the function.
-- Removed the deprecated `localization` property from the [plugin capabilities object](#plugin-capabilities-object). Manifests generated with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) using the 2.1 schema included the deprecated `localization` property. Manifests using the 2.2 schema fail validation if this property is included.
+- Removed the deprecated `localization` property from the [plugin capabilities object](#plugin-capabilities-object). Manifests generated with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) using the 2.1 schema included the deprecated `localization` property. Manifests using the 2.2 schema fail validation if this property is included.
 
 ## JSON schema
 
@@ -448,7 +448,7 @@ The runtime authentication object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `type` | String | Optional. Specifies the type of authentication required to invoke a function. Possible values are: `None`, `OAuthPluginVault`, `ApiKeyPluginVault`. |
+| `type` | String | Required. Specifies the type of authentication required to invoke a function. Possible values are: `None`, `OAuthPluginVault`, `ApiKeyPluginVault`. |
 | `reference_id` | String | Optional. A value used when `type` is `OAuthPluginVault` or `ApiKeyPluginVault`. The `reference_id` value is acquired independently when providing the necessary authentication configuration values. This mechanism exists to prevent the need for storing secret values in the plugin manifest. |
 
 ##### Runtime authentication object example

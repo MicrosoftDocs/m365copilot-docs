@@ -20,6 +20,17 @@
       "file": "repairs-hub-api-plugin.json"
     }
   ],
+  "behavior_overrides": {
+    "suggestions": {
+      "disabled": true
+    },
+    "special_instructions": {
+      "discourage_model_knowledge": true
+    }
+  },
+  "disclaimer": {
+    "text": "This declarative agent is a fictional example. You should not take it seriously."
+  },
   "capabilities": [
     {
       "name": "WebSearch",

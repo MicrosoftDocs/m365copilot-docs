@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: best-practice
 ms.localizationpriority: medium
-ms.date: 06/17/2025
+ms.date: 07/24/2025
 ---
 
 # Optimize content retrieval
@@ -17,7 +17,7 @@ Declarative agents extend Microsoft 365 Copilot to customize the experience for 
 
 ## Reference only relevant SharePoint files
 
-You can reference specific SharePoint files via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.4.md#onedrive-and-sharepoint-object), either by URL or by ID.
+You can reference specific SharePoint files via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.5.md#onedrive-and-sharepoint-object), either by URL or by ID.
 
 When you specify up to 20 files, Copilot searches the full contents of all files. Copilot will have full access to all the file content and will return the appropriate content to the user based on their query. If you specify more than five SharePoint files, Copilot will search the full content of the five most relevant files and then only return content from those files.
 
@@ -35,10 +35,13 @@ Copilot is currently unable to parse tables and other special formatting in Shar
 
 ## Optimize embedded file content retrieval
 
-For agents that include [embedded file content](copilot-studio-agent-builder-build.md#embedded-file-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file. To optimize embedded file content for Copilot retrieval, upload files that are no larger than 750-1,000 pages.
+For agents that include [embedded file content](copilot-studio-agent-builder-knowledge.md#embedded-file-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file.
+
+To optimize embedded file content for Copilot retrieval, upload files that are no larger than 750-1,000 pages. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
+
+To optimize Excel content for Copilot retrieval, store all the data in one sheet within a workbook.
 
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Known issues](known-issues.md)
-

@@ -93,6 +93,8 @@
             href: api-plugin-manifest-2.1.md
       - name: Declarative agent manifest reference
         items:
+        - name: Version 1.5
+          href: declarative-agent-manifest-1.5.md
         - name: Version 1.4
           href: declarative-agent-manifest-1.4.md
         - name: Version 1.3
@@ -133,6 +135,8 @@
           href: agent-builder-template-writing-coach.md
       - name: Build agents with fine-tuned models (preview)
         href: copilot-studio-agent-builder-tuned-models.md
+      - name: Add knowledge sources
+        href: copilot-studio-agent-builder-knowledge.md
       - name: Publish agents
         href: copilot-studio-agent-builder-publish.md
       - name: Availability and language support
@@ -174,6 +178,8 @@
       href: localize-agents.md
     - name: Test and debug agents
       href: debugging-copilot-agent.md
+    - name: Convert to custom engine agent
+      href: convert-declarative-agent.md
     - name: Responsible AI validation
       href: rai-validation.md
   - name: Build a custom engine agent
@@ -181,8 +187,6 @@
     items:
     - name: Custom engine agent overview
       href: overview-custom-engine-agent.md
-    - name: Custom engine agent user experience
-      href: ux-custom-engine-agent.md
     - name: Build with Microsoft 365 Agents SDK
       items:
       - name: Overview
@@ -217,6 +221,12 @@
         href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365-copilot/extensibility/context
       - name: Create and delete agents
         href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365-copilot/extensibility/context
+    - name: User experience
+      items:
+      - name: User experience features
+        href: ux-custom-engine-agent.md
+      - name: Asynchronous and proactive messaging
+        href: custom-engine-agent-asynchronous-flow.md
     - name: Bring agents to Copilot
       href: bring-agents-to-copilot.md
     - name: Invoke actions with Semantic Kernel
@@ -224,7 +234,9 @@
 - name: Add knowledge with Copilot connectors
   items:
   - name: Copilot connectors in Microsoft 365 Copilot
-    href: overview-graph-connector.md
+    href: overview-copilot-connector.md
+  - name: Delegate connector administration
+    href: connector-admin-delegation.md
   - name: Prebuilt connectors gallery
     href: /microsoftsearch/connectors-gallery?context=/microsoft-365-copilot/extensibility/context
   - name: Build your first connector
@@ -233,6 +245,8 @@
       href: build-your-first-connector.md
     - name: Build with SDK
       href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365-copilot/extensibility/context
+  - name: Build connectors for people data (preview)
+    href: build-connectors-with-people-data.md
   - name: Connectors API
     items:
     - name: Overview
@@ -249,26 +263,28 @@
   items:
   - name: Microsoft 365 Copilot APIs overview
     href: copilot-apis-overview.md
-  - name: Retrieval API (preview)
-    items:
-    - name: Overview
-      href: api-reference/retrieval-api-overview.md
-    - name: Retrieve data
-      href: api-reference/copilotroot-retrieval.md
-    - name: Complex types
-      items:
-      - name: Retrieval response
-        href: api-reference/resources/retrievalresponse.md
-      - name: Retrieval hit
-        href: api-reference/resources/retrievalhit.md
-      - name: Retrieval extract
-        href: api-reference/resources/retrievalextract.md
-      - name: Search response metadata dictionary
-        href: api-reference/resources/searchresourcemetadatadictionary.md
-      - name: Search sensitivity label info
-        href: api-reference/resources/searchsensitivitylabelinfo.md
   - name: Use client libraries (preview)
     href: sdks/api-libraries.md
+  - name: API reference
+    items:
+    - name: Retrieval API (preview)
+      items:
+      - name: Overview
+        href: api-reference/retrieval-api-overview.md
+      - name: Retrieve data
+        href: api-reference/copilotroot-retrieval.md
+      - name: Complex types
+        items:
+        - name: Retrieval response
+          href: api-reference/resources/retrievalresponse.md
+        - name: Retrieval hit
+          href: api-reference/resources/retrievalhit.md
+        - name: Retrieval extract
+          href: api-reference/resources/retrievalextract.md
+        - name: Search response metadata dictionary
+          href: api-reference/resources/searchresourcemetadatadictionary.md
+        - name: Search sensitivity label info
+          href: api-reference/resources/searchsensitivitylabelinfo.md
 - name: Publish
   items:
   - name: Overview
