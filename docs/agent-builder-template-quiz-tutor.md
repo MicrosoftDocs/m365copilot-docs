@@ -32,7 +32,7 @@ Quiz Tutor agents are useful for the following scenarios.
 | **Scenario** | **Use case** |
 | -----------  | -----------  |
 | Onboarding new employees   | Create interactive quizzes related to your organization's policies and key information. |
-| Product training   | Test employee knowledge of new products and services . |
+| Product training   | Test employee knowledge of new products and services. |
 | Compliance training | Create quizzes to cement employee knowledge of regulatory requirements and policies. |
 | Skill development    | Help employees develop and improve their skills. |
 | Customer Service training | Quiz employees on best practices for various customer service scenarios. |

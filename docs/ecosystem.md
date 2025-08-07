@@ -55,7 +55,7 @@ Your connector also runs outside of Copilot experiences. The following table lis
 |Copilot extensibility type|Microsoft 365 product availability|Learn more|
 |----------|-----------|------------|
 |[Copilot connectors](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context)|Microsoft 365 Copilot, Power Automate, Power apps, Azure Logic apps| [Extend agent capabilities with Copilot connectors](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio)|
-|[Microsoft 365 Copilot connectors](./overview-graph-connector.md)|Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 Copilot app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
+|[Microsoft 365 Copilot connectors](./overview-graph-connector.md) |Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 Copilot app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
 
 Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other Microsoft 365 apps and services are published and managed, both within your organization and within in-product app stores of Microsoft 365 products.
 
