@@ -92,6 +92,13 @@ Always reference these instructions first and fallback to search or bash command
 4. Add any new images to `docs/assets/images/` with descriptive names
 5. Run validation: `markdownlint docs --config .markdownlint.json && cspell --config cspell.json "docs/**/*.md"`
 
+### Updating existing documentation
+
+1. When updating technical information in articles, update the `ms.date` value in YAML front matter to the current date
+2. This helps track when content was last revised and ensures accurate metadata
+3. Use the format: `ms.date: MM/dd/yyyy` (e.g., `ms.date: 01/15/2024`)
+4. Run validation after updates: `markdownlint docs --config .markdownlint.json && cspell --config cspell.json "docs/**/*.md"`
+
 ### Updating sample manifests
 
 1. Edit JSON files in `docs/includes/sample-manifests/`
