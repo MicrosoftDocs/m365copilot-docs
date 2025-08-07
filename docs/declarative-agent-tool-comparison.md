@@ -46,7 +46,7 @@ The following table describes the prerequisites for using each tool and where ag
 | **Quick setup:** Provides a guided process for building agents. | **Slower feature rollout:** Some advanced features are available in Agents Toolkit before they're available in Copilot Studio agent builder.  |
 | **Accessibility:** Suitable for creating personal and group productivity agents without having to write code.  |  |
 | **Straightforward agent testing**: The test pane allows users to test the end-user experience of agents directly within the tool. | |
-| **Variety of knowledge sources**: Easily add public web, SharePoint, Graph connector data and more as agent knowledge sources.| |
+| **Variety of knowledge sources**: Easily add public web, SharePoint, Copilot connector data and more as agent knowledge sources.| |
 | **Generate rich content**: Enable image generation and code interpreter with one click.| |
 
 ## SharePoint

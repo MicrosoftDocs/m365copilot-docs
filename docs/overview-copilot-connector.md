@@ -24,11 +24,11 @@ When you use Copilot connectors to ingest your external content into Microsoft G
 
 In addition, users can hover over in-text citations in Microsoft 365 Copilot responses to get a preview of the external item referenced.
 
-![A screenshot of hovering over a Graph connectors response in Microsoft 365 Copilot](assets/images/connectors-copilot-hover.png)
+![A screenshot of hovering over a Copilot connectors response in Microsoft 365 Copilot](assets/images/connectors-copilot-hover.png)
 
 If users want to dive deeper into the referenced content, they can select one of the reference links at the bottom of the response.
 
-![A screenshot of Graph connectors reference list in Microsoft 365 Copilot](assets/images/connectors-copilot-logo.png)
+![A screenshot of Copilot connectors reference list in Microsoft 365 Copilot](assets/images/connectors-copilot-logo.png)
 
 ## Copilot connector semantic indexing
 
