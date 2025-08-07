@@ -78,7 +78,7 @@ The following considerations apply to choosing your development tool:
 - **Publishing scope** - Only agents built with the Teams AI Library or Microsoft 365 Agents SDK can be published to the Microsoft Commercial Store with the Agents Toolkit.
 - **Group productivity** - For multi-user scenarios, especially in Teams, consider the Teams AI Library for its built-in support for collaborative channels and meetings.
 - **Customization needs** - If you need full control over AI models or orchestration, opt for a pro-code approach with Microsoft 365 Agents SDK.
-- **Knowledge source access** - Copilot Studio agents have native access to Microsoft 365 and Microsoft Graph connector content. Agents built with a pro-code approach can access the same data via Microsoft Graph APIs.
+- **Knowledge source access** - Copilot Studio agents have native access to Microsoft 365 and Copilot connector content. Agents built with a pro-code approach can access the same data via Microsoft Graph APIs.
 
 ### Scenario examples
 

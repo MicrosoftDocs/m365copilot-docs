@@ -41,7 +41,7 @@ Learning Coach agents are useful in the following scenarios.
 
 ## Extension opportunities
 
-You can enhance the functionality of your Learning Coach agents by connecting to additional resources via Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), Power Platform connectors, or API plugins, depending on the source system in use. The following are some ideas:
+You can enhance the functionality of your Learning Coach agents by connecting to additional resources via Microsoft 365 Copilot connectors, Power Platform connectors, or API plugins, depending on the source system in use. The following are some ideas:
 
 - **Link with your Learning Management System (LMS):** Link with your preferred LMS or Massive Open Online Course (MOOC) platforms to source up-to-date content, track progress, and streamline certification pathways.
 - **Leverage internal knowledge repositories:** Connect your Learning Coach to a SharePoint document library that contains company training materials, research papers, or best practices. This allows the agent to provide contextualized learning recommendations based on your organization's proprietary content.
