@@ -13,15 +13,15 @@ ms.topic: reference
 
 <!-- cSpell:ignore Anjali-Patle anjalipatle -->
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Represents user-specific properties of a [call AI insight](callaiinsight.md). These properties might differ based on who calls the API.
 
 ## Properties
 
-|Property|Type|Description|
-|:---|:---|:---|
-|`mentionEvents`|[mentionEvent](../resources/mentionevent.md) collection|The collection of AI-generated mention events.|
+| Property        | Type                                       | Description                                    |
+|:----------------|:-------------------------------------------|:-----------------------------------------------|
+| `mentionEvents` | [mentionEvent](mentionevent.md) collection | The collection of AI-generated mention events. |
 
 ## Relationships
 
