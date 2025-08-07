@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/30/2025
+ms.date: 08/06/2025
 ---
 
 # Known issues
@@ -28,9 +28,9 @@ Power Automate Flows as actions in declarative agents might not run reliably and
 
 **Workaround:** Currently, no workaround for the issue that the flows might not return results is available. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
 
-This issue applies to links from any content source, including SharePoint, Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), and plugins.
+This issue applies to links from any content source, including SharePoint, Microsoft 365 Copilot connectors, and plugins.
 
-### Prompts to get a list based on custom metadata aren't supported 
+### Prompts to get a list based on custom metadata aren't supported
 
 Prompts to get a list of items based on custom metadata aren't supported. For example, the prompt "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is based on custom metadata, doesn't work because the metadata isn't mapped to connection schema label properties.
 
@@ -56,11 +56,10 @@ Currently, users can select a file in Copilot Studio and Copilot Studio agent bu
 
 When you share an agent in agent builder using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
-### Capabilities aren't supported in Microsoft 365 Government tenants
+### Some features aren't supported in Microsoft 365 Government tenants
 
-The following capabilities aren't currently supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants:
+The following features aren't currently supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants:
 
-- [Copilot Studio agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder).
 - [Authenticated custom actions](/microsoft-365-copilot/extensibility/overview-api-plugins).
 - Support for metered billing for extensibility features. For details about features that require metered billing, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 - Support for publishing agents via the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents).

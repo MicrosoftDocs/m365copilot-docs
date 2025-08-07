@@ -62,7 +62,7 @@ Determine the requirements that your extensibility solution needs to meet. Consi
 
 - **Data source integration options**
 
-    For each data source you need to integrate with Copilot, identify whether a Microsoft 365 Copilot connector (formerly Microsoft Graph connectors), [Power Platform plugin](/connectors/connector-reference/connector-reference-powerapps-connectors), or REST API is available. If an existing data source integration isn't available, decide whether you want to build a Copilot connector or an API to enable the integration. The following table provides an example.
+    For each data source you need to integrate with Copilot, identify whether a Microsoft 365 Copilot connector, [Power Platform plugin](/connectors/connector-reference/connector-reference-powerapps-connectors), or REST API is available. If an existing data source integration isn't available, decide whether you want to build a Copilot connector or an API to enable the integration. The following table provides an example.
 
     | Data source  | How do you want to use the data in Copilot?                                  | Data source integrations                |
     |--------------|----------------------------------------------------------------------------|------------------------------------------|

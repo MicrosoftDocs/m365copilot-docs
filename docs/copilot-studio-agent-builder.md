@@ -24,7 +24,7 @@ Use Copilot Studio agent builder to create and customize agents that can be used
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-starter.png" alt-text="Copilot Studio agent builder initial screen":::
 
-You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors). You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
+You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors. You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
 
 You can build agents from the following apps and sites:
 
