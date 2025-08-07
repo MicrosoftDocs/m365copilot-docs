@@ -228,8 +228,6 @@ To enhance the accuracy and relevance of agent responses, agents can be grounded
 1. Select the attribute from the list to add it. 
 1. Your agent's knowledge is now scoped to the data associated with the scoped attribute.
 
-
-
 For example, when you use the **Azure DevOps Work Items** connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
 
 To scope the **Azure DevOps Work Items** area path:
