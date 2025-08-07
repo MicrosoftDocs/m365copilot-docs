@@ -112,7 +112,7 @@ There are two tools developers can use to generate API plugin packages.
 
 When a declarative agent that includes up to five plugins defined in the [declarative agent manifest](declarative-agent-manifest-1.5.md), the plugins are always injected into the prompt. When more than five plugins are defined, the agent uses semantic matching. Semantic matching is based on the plugin's description, not on any of the individual functions within the plugin itself.
 
-There is no limit on the number of functions that can be included within  plugin. All functions are returned, even if only one function is matched. However, the quality of the responses might degrade if more than 10 functions are included due to token window limits.
+A plugin can include an unlimited number of functions. All functions are returned, even if only one function is matched. However, due to token window limits, the quality of the responses might degrade if more than 10 functions are included.
 
 ### URLs in API responses are redacted
 
