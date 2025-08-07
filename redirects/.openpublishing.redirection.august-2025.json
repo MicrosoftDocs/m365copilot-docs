@@ -2,37 +2,37 @@
   "redirections": [
     {
       "source_path_from_root": "/docs/api-reference/retrieval-api-overview.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/api/retrieval/overview",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview",
       "redirect_document_id": true
     },
     {
       "source_path_from_root": "/docs/api-reference/copilotroot-retrieval.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/api/retrieval/copilotroot-retrieval",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval",
       "redirect_document_id": true
     },
     {
       "source_path_from_root": "/docs/api-reference/resources/retrievalresponse.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/api/retrieval/resources/retrievalresponse",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api/ai-services/retrieval/resources/retrievalresponse",
       "redirect_document_id": true
     },
     {
       "source_path_from_root": "/docs/api-reference/resources/retrievalhit.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/api/retrieval/resources/retrievalhit",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api/ai-services/retrieval/resources/retrievalhit",
       "redirect_document_id": true
     },
     {
       "source_path_from_root": "/docs/api-reference/resources/retrievalextract.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/api/retrieval/resources/retrievalextract",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api/ai-services/retrieval/resources/retrievalextract",
       "redirect_document_id": true
     },
     {
       "source_path_from_root": "/docs/api-reference/resources/searchresourcemetadatadictionary.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/api/retrieval/resources/searchresourcemetadatadictionary",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api/ai-services/retrieval/resources/searchresourcemetadatadictionary",
       "redirect_document_id": true
     },
     {
       "source_path_from_root": "/docs/api-reference/resources/searchsensitivitylabelinfo.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/api/retrieval/resources/searchsensitivitylabelinfo",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api/ai-services/retrieval/resources/searchsensitivitylabelinfo",
       "redirect_document_id": true
     }
   ]

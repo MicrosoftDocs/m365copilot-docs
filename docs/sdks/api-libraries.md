@@ -73,5 +73,5 @@ The client ID is the app registration ID that is generated when you [register yo
 
 ## Related content
 
-- [Overview of the Microsoft 365 Copilot Retrieval API](../api/retrieval/overview.md)
-- [Use the Retrieval API](../api/retrieval/copilotroot-retrieval.md)
+- [Overview of the Microsoft 365 Copilot Retrieval API](../api/ai-services/retrieval/overview.md)
+- [Use the Retrieval API](../api/ai-services/retrieval/copilotroot-retrieval.md)
