@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 # retrievalHit resource type
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Represents a single result within the list of retrieval results.
 

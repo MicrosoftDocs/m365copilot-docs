@@ -6,5 +6,5 @@ groups:
   pivots:
   - id: graph-v1
     title: "1.0"
-  - id: graph-beta
+  - id: graph-preview
     title: Beta
