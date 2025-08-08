@@ -156,7 +156,7 @@ Links to organizational and web resources are no longer redacted from Copilot re
 
 ### Build agents for Microsoft 365 Copilot Chat
 
-You can now build agents for Microsoft 365 users who don't have a Microsoft 365 Copilot license, grounded on the web and with limited capabilities. For more information, see [Agent capabilities across Microsoft 365 apps and surfaces](#agent-capabilities-across-microsoft-365-apps-and-surfaces).
+You can now build agents for Microsoft 365 users who don't have a Microsoft 365 Copilot license, grounded on the web and with limited capabilities. For more information, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
 
 ## Related content
 
