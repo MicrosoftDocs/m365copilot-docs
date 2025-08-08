@@ -4,7 +4,7 @@ description: Learn how to get change notifications for any changes (create, upda
 author: eddie-lee-msft
 ms.author: edle
 ms.localizationpriority: high
-ms.date: 07/29/2025
+ms.date: 08/08/2025
 ms.topic: reference
 ---
 

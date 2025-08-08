@@ -6,7 +6,7 @@ ms.author: gajain
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.topic: reference
-ms.date: 05/08/2025
+ms.date: 08/08/2025
 zone_pivot_groups: graph-api-versions
 ---
 

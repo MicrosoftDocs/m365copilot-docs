@@ -3,7 +3,7 @@ title: aiOnlineMeeting resource type
 description: Represents an AI online meeting.
 author: kanchm
 ms.author: kanchm
-ms.date: 07/29/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: resourcePageType

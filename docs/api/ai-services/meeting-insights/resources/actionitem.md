@@ -3,7 +3,7 @@ title: actionItem resource type
 description: Represents an action item associated with a callAiInsight.
 author: Anjali-Patle
 ms.author: anjalipatle
-ms.date: 07/29/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: resourcePageType

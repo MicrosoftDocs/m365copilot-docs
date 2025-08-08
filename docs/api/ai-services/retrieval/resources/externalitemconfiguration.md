@@ -4,7 +4,7 @@ description: Represents configuration options for retrieving data from Copilot c
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 08/06/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---

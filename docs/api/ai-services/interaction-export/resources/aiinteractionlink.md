@@ -1,7 +1,7 @@
 ---
 title: aiInteractionLink resource type
 description: Represents the links that appear in an AI interaction.
-ms.date: 07/29/2025
+ms.date: 08/08/2025
 doc_type: resourcePageType
 ms.topic: reference
 ms.localizationpriority: medium
