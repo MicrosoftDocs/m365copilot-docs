@@ -20,7 +20,7 @@ When you customize Microsoft 365 Copilot with agents and use actions and connect
 
 The agents, actions, and connectors you build for Copilot are part of the larger Microsoft 365 Copilot system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through different native components and agents of the Copilot system.
 
-:::image type="content" source="assets/images/copilot-diagram-expanded.png" alt-text="Diagram that shows the flow of data across components of the Microsoft 365 Copilot ecosystem" lightbox="assets/images/copilot-experiences.png":::
+:::image type="content" source="assets/images/copilot-diagram-expanded.png" alt-text="Diagram that shows the flow of data across components of the Microsoft 365 Copilot ecosystem" border="false":::
 
 > [!NOTE]
 > Some agent capabilities are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
