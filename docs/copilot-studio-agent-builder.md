@@ -4,7 +4,7 @@ description: Learn how to use Copilot Studio agent builder to build declarative 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 04/17/2025
+ms.date: 07/18/2025
 ms.topic: conceptual
 ---
 
@@ -24,7 +24,7 @@ Use Copilot Studio agent builder to create and customize agents that can be used
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-starter.png" alt-text="Copilot Studio agent builder initial screen":::
 
-You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors). You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
+You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors. You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
 
 You can build agents from the following apps and sites:
 
@@ -61,7 +61,7 @@ Administrators can control whether Copilot Studio agent builder is available to 
 
 The following are current known limitations:
 
-- Only web browsing, Copilot connectors, SharePoint sites, folders, and files can be specified as knowledge sources. You can upload your local folders and files into SharePoint.
+- Users who are configured with a pay-as-you-go plan in the Microsoft 365 admin center might not have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use Copilot Studio agent builder to create agents.
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
 - Agent builder doesn't currently support [Lockbox](/power-platform/admin/about-lockbox) or [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview).
 - Agents created via Copilot Studio agent builder can't be used in Teams Chat.

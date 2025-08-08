@@ -44,7 +44,7 @@ securitySchemes:
           scope: description
 ```
 
-To enable OAuth 2.0 authentication, you need to register an OAuth client in the Teams developer portal. You can register an OAuth client with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) in Visual Studio Code or by manually registering in the Teams developer portal.
+To enable OAuth 2.0 authentication, you need to register an OAuth client in the Teams developer portal. You can register an OAuth client with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) in Visual Studio Code or by manually registering in the Teams developer portal.
 
 ### Register an OAuth client with Agents Toolkit
 

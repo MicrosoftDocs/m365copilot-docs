@@ -55,13 +55,13 @@ Declarative agents enable you to configure Copilot for specific scenarios by add
 To configure a declarative agent, you provide:
 
 - **Custom instructions** to shape Copilot's responses to your organization's specific needs or workflow.
-- **Custom knowledge** to connect Microsoft 365 data sources (such as Teams messages, Copilot connectors, SharePoint, and OneDrive) or external data via Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors).
+- **Custom knowledge** to connect Microsoft 365 data sources (such as Teams messages, Copilot connectors, SharePoint, and OneDrive) or external data via Microsoft 365 Copilot connectors.
 - **Custom actions** to integrate with APIs to interact with external systems in real-time.
 
 Declarative agents have the following characteristics:
 
 - **Hosting:** Use Copilot's orchestrator and foundation model. No additional hosting is required.
-- **Tooling:** Build agents using low-code tools such as [Copilot Studio agent builder](https://www.microsoft.com) or pro-code tools like Visual Studio or Visual Studio Code and Teams Toolkit.
+- **Tooling:** Build agents using low-code tools such as [Copilot Studio agent builder](https://www.microsoft.com) or pro-code tools like Visual Studio or Visual Studio Code and Microsoft 365 Agents Toolkit.
 - **Channels:** Run in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook.
 
 ## Custom engine agents

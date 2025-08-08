@@ -15,7 +15,7 @@ API plugins enable declarative agents in Microsoft 365 Copilot to call REST APIs
 This article shows you how to use the `devtunnel` tool to enable local debugging for your API.
 
 > [!NOTE]
-> Your debugging tools may already provide a reverse proxy solution. We recommend checking the documentation for your developer tools to confirm. For example, if you [created a new API](build-api-plugins-new-api.md) using Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)), the toolkit handles configuring reverse proxy for you.
+> Your debugging tools may already provide a reverse proxy solution. We recommend checking the documentation for your developer tools to confirm. For example, if you [created a new API](build-api-plugins-new-api.md) using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit), the toolkit handles configuring reverse proxy for you.
 
 ## Prerequisites
 

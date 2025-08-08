@@ -10,7 +10,7 @@ ms.date: 04/02/2025
 
 # Write effective instructions for declarative agents with API plugins
 
-Declarative agents tailor Microsoft 365 Copilot to meet the specific needs of an organization. When you build declarative agents with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)), you can add skills to your agent via API plugins. API plugins enable your agent to query and interact with an organization's data via APIs.
+Declarative agents tailor Microsoft 365 Copilot to meet the specific needs of an organization. When you build declarative agents with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit), you can add skills to your agent via API plugins. API plugins enable your agent to query and interact with an organization's data via APIs.
 
 This article describes the agent architecture and provides best practices for writing instructions for declarative agents that include API plugins.
 

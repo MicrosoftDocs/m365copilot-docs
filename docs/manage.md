@@ -33,7 +33,7 @@ To learn more, see [Manage agents for Copilot in Microsoft 365 admin center](/mi
 
 ## Agents built with Microsoft 365 Agents Toolkit
 
-Both [declarative agents](./build-declarative-agents.md) and [custom engine agents](/microsoftteams/platform/teams-ai-library-tutorial?context=/microsoft-365-copilot/extensibility/context) built with Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) that are published to the organization or acquired from Microsoft Commercial Marketplace are managed through the **Integrated Apps** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
+Both [declarative agents](./build-declarative-agents.md) and [custom engine agents](/microsoftteams/platform/teams-ai-library-tutorial?context=/microsoft-365-copilot/extensibility/context) built with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) that are published to the organization or acquired from Microsoft Commercial Marketplace are managed through the **Integrated Apps** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
 | Control | Core scenario | Related content |
 |--|--|--|
@@ -74,7 +74,7 @@ Both [declarative agents](./build-declarative-agents.md) and [custom engine agen
 
 ## Copilot connectors
 
-[Microsoft 365 Copilot connectors](./overview-copilot-connector.md) (formerly Microsoft Graph connectors) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Copilot connectors are managed from Microsoft Entra admin center, Microsoft 365 admin center, and Teams admin center.
+[Microsoft 365 Copilot connectors](./overview-copilot-connector.md) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Copilot connectors are managed from Microsoft Entra admin center, Microsoft 365 admin center, and Teams admin center.
 
 | Control | Core scenario | Related content |
 |--|--|--|

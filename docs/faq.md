@@ -26,7 +26,7 @@ For more information, see [Agents for Microsoft 365](agents-overview.md).
 
 Although *actions* and *plugins* are sometimes used interchangeably, an action is actually a single API call from a plugin (For example, "Close ticket #1234"), and a plugin is a set of functions (such as close, create, resolve.).
 
-In general, actions are the functionality that provides skills to Copilot within declarative agents. You can use Copilot Studio to build actions from Power Platform connectors, or you can create conversational, prompt, or flow connectors by using the Copilot Studio design canvas. You can use Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)), or any technology stack that supports standard REST APIs, to build actions as API plugins.
+In general, actions are the functionality that provides skills to Copilot within declarative agents. You can use Copilot Studio to build actions from Power Platform connectors, or you can create conversational, prompt, or flow connectors by using the Copilot Studio design canvas. You can use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit), or any technology stack that supports standard REST APIs, to build actions as API plugins.
 
 With actions, you can light up agents that work *in-context* of Microsoft 365 Copilot, or you can use them to provide skills to agents that work in *immersive* experiences, such as declarative agents.
 

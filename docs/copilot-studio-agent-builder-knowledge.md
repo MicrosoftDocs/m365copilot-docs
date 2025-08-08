@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/11/2025
+ms.date: 07/30/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -48,13 +48,16 @@ To configure your agent to use any web data as knowledge, on the **Configure** t
 
 You can reference specific SharePoint sites, files, and folders as agent knowledge sources. When you reference sources from SharePoint, consider the following limits:
 
-- A total of 20 knowledge sources (including sites, folders, and files) can be selected for each agent.
+- A total of 100 SharePoint files can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
 
 For information about SharePoint knowledge file size limits, see [File size limits](#file-size-limits).
 
 > [!IMPORTANT]
 > If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
+
+> [!NOTE]
+> If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
 ### Entering a URL for a SharePoint site, folder, or file
 
@@ -105,6 +108,9 @@ You can ground your agent in Outlook email. To add email as a knowledge source, 
 You can upload files directly from your device for your agent to use as knowledge. The files that you upload become embedded content in the agent. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device. You can upload individual files from your device, but not file folders.
 
 You can add up to 20 files as knowledge sources.
+
+> [!NOTE]
+> If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
 Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-size-limits).
 
@@ -179,26 +185,44 @@ The following table lists the file types that you can add as knowledge to your a
 
 | File type | SharePoint Online limit | Embedded file limit |
 | ----------| ----------------------- | ------------------- |
-| .doc      | 150 MB                  | 30 MB |
-| .docx     | 512 MB                  | 30 MB |
+| .doc      | 150 MB                  | 100 MB |
+| .docx     | 512 MB                  | 100 MB |
 | .html     | 150 MB                  | NA    |
-| .pdf      | 512 MB                  | 30 MB |
-| .ppt      | 150 MB                  | 30 MB |
-| .pptx     | 512 MB                  | 30 MB |
-| .txt      | 150 MB                  | 30 MB |
-| .xls      | 150 MB                  | 30 MB |
-| .xlsx     | 150 MB                  | 30 MB |
+| .pdf      | 512 MB                  | 100 MB |
+| .ppt      | 150 MB                  | 100 MB |
+| .pptx     | 512 MB                  | 100 MB |
+| .txt      | 150 MB                  | 100 MB |
+| .xls      | 150 MB                  | 100 MB |
+| .xlsx     | 150 MB                  | 100 MB |
+
+> [!NOTE]
+> - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
+> - To optimize for Copilot, we recommend that you keep the contents of files that you upload concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 
 ## Copilot connectors
 
 Copilot connectors allow agents to access and apply knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. With agent builder, you can integrate enterprise data from your workspace directly into your agents, empowering them with domain-specific knowledge.
 
 > [!NOTE]
-> Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
+> - Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
+> - If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
-To enhance the accuracy and relevance of agent responses, agents can be grounded not only in broad organizational data but also in specific scoped items. For example, when you use the Azure DevOps Work Items connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
+For more information about Copilot connectors, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 
-To scope the Azure DevOps area path:
+### Scope Copilot connector data sources
+
+To enhance the accuracy and relevance of agent responses, agents can be grounded not only in broad organizational data but also in specific scoped data. To scope connector data in your agent to a specific attribute:
+
+1. On the **Configure** tab, under **Choose other data sources**, choose the connector for your data source.
+1. On the card for that connector, add the connections that are relevant to your scenario.
+1. Choose the arrow to go back to the **Knowledge** section.
+1. Expand the connector that you added and select that attribute that you want to scope the knowledge to (for example, project, space, folder), and search for or type the attribute name.
+1. Select the attribute from the list to add it. 
+1. Your agent's knowledge is now scoped to the data associated with the scoped attribute.
+
+For example, when you use the **Azure DevOps Work Items** connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
+
+To scope the **Azure DevOps Work Items** area path:
 
 1. Under **Choose other data sources**, select **Azure DevOps Work Items**.
 2. Choose the **Add** button next to the connections that are relevant to your tasks.
@@ -207,6 +231,24 @@ To scope the Azure DevOps area path:
 5. Select the area path to add it.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
+
+The following table lists the Copilot connectors that support scoping and the attributes that you can use to scope the data.
+
+| Connector | Scoping attribute |
+| ----------- | ----------------- |
+| Azure DevOps Work Items | Area path |
+| Azure DevOps Wiki | Project |
+| Confluence | Space |
+| Google Drive | Folder |
+| GitHub Cloud Pull Requests | Repository |
+| GitHub Cloud Issues | Repository |
+| GitHub Cloud Knowledge | Repository |
+| Jira | Project |
+| ServiceNow Knowledge | Knowledge base |
+| ServiceNow Catalog | Catalog |
+| ServiceNow Tickets | Entity type (Sys_class_name/ Category/ Subcategory) |
+
+For more information about the Copilot connectors that are availlable, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext). 
 
 ## Prioritize your knowledge sources over general knowledge
 

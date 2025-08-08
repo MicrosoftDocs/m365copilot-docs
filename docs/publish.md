@@ -30,7 +30,7 @@ When Microsoft validates and approves your app package, your agent is made avail
 
 ## Declarative agents built with Microsoft 365 Agents Toolkit
 
-Microsoft 365 Agents Toolkit ([an evolution of Teams Toolkit](https://aka.ms/M365AgentsToolkit)) supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
+[Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
 
 [Responsible AI validation checks](./rai-validation.md) run on your declarative agent during manifest validation, including when you sideload or publish your agent.
 
@@ -100,7 +100,7 @@ Custom agents built with Copilot Studio can be published to the [Microsoft 365 C
 
 ## Copilot connectors
 
-Microsoft 365 Copilot connector (formerly Microsoft Graph connectors) publishing options depend on whether you have a standalone connector or a connector that's packaged using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem. While both scenarios are supported for single-tenant distribution, submission to the Microsoft Partner Center Microsoft 365 and Copilot program is currently limited to Copilot connectors packaged as Microsoft 365 (Teams) apps.
+Microsoft 365 Copilot connector publishing options depend on whether you have a standalone connector or a connector that's packaged using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem. While both scenarios are supported for single-tenant distribution, submission to the Microsoft Partner Center Microsoft 365 and Copilot program is currently limited to Copilot connectors packaged as Microsoft 365 (Teams) apps.
 
 | Distribution method | Support | Learn more |
 |--|--|--|
