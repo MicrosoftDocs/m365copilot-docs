@@ -4,7 +4,7 @@ description: Learn about API plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 08/06/2025
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -107,6 +107,12 @@ There are two tools developers can use to generate API plugin packages.
 - [Kiota](/openapi/kiota/overview) is a command line tool and a Visual Studio Code extension that can generate plugin packages based on an existing OpenAPI description.
 
 ## Limitations
+
+### Declarative agent plugins
+
+When a declarative agent includes up to five plugins defined in the [declarative agent manifest](declarative-agent-manifest-1.5.md), the plugins are always injected into the prompt. When more than five plugins are defined, the agent uses semantic matching. Semantic matching is based on the plugin's description, not on any of the individual functions within the plugin itself.
+
+A plugin can include an unlimited number of functions. All functions are returned, even if only one function is matched. However, due to token window limits, the quality of the responses might degrade if more than 10 functions are included.
 
 ### URLs in API responses are redacted
 
