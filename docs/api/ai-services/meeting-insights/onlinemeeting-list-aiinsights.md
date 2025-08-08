@@ -3,7 +3,7 @@ title: List aiInsights
 description: Get the list of callAiInsight objects associated with an onlineMeeting.
 author: Anjali-Patle
 ms.author: anjalipatle
-ms.date: 07/29/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.topic: reference

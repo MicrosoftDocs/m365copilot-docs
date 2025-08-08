@@ -4,7 +4,7 @@ description: Represents a single extract within the list of retrieval extracts.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 06/09/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
