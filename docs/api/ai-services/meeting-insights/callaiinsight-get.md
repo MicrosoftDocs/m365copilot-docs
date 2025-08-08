@@ -3,7 +3,7 @@ title: Get callAiInsight
 description: Get a callAiInsight object associated with an onlineMeeting.
 author: Anjali-Patle
 ms.author: anjalipatle
-ms.date: 07/29/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.topic: reference

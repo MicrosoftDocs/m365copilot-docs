@@ -3,7 +3,7 @@ title: callAiInsightViewPoint resource type
 description: Represents user-specific properties of a callAiInsight.
 author: Anjali-Patle
 ms.author: anjalipatle
-ms.date: 07/29/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.topic: reference

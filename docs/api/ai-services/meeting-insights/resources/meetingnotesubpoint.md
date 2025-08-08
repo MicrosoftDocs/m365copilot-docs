@@ -3,7 +3,7 @@ title: meetingNoteSubpoint resource type
 description: Represents a meeting note subpoint associated with a meetingNote.
 author: Anjali-Patle
 ms.author: anjalipatle
-ms.date: 07/29/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: resourcePageType
