@@ -1,0 +1,15 @@
+items:
+- name: Copilot admin limited mode
+  items:
+  - name: Copilot admin limited mode
+    href: resources/copilotadminlimitedmode.md
+  - name: Get
+    href: copilotadminlimitedmode-get.md
+  - name: Update
+    href: copilotadminlimitedmode-update.md
+- name: Complex types
+  items:
+  - name: Copilot admin
+    href: resources/copilotadmin.md
+  - name: Copilot admin setting
+    href: resources/copilotadminsetting.md

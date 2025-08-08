@@ -14,7 +14,7 @@ To add this to a file:
 1. Add beta-specific content with the following syntax:
 
     ```md
-    :::zone pivot="graph-beta"
+    :::zone pivot="graph-preview"
     [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
     :::zone-end
     ```
