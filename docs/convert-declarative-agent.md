@@ -73,7 +73,7 @@ To update your app manifest:
     For more information about the schema for the bots node, see [bots object](/microsoft-365/extensibility/schema/root-bots).
     
     > [!NOTE]
-    > Use app manifest schema version 1.21. The Agents Toolkit currently doesn't support schema version 1.22.
+    > Use app manifest schema version 1.21 or later. Custom engine agents are supported in manifest version 1.21 and later versions.
 
 2. In the **copilotAgents** object, change the **declarativeAgents** node to a **customEngineAgents** node, as shown in the following examples.
     

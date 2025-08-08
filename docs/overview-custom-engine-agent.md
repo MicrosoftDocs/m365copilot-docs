@@ -93,6 +93,9 @@ The following table provides scenario examples and the recommended development a
 
 As you prepare to build and deploy your custom engine agent, consider the key factors described in this section to ensure performance, compliance, and sustainability.
 
+> [!NOTE]
+> Custom engine agents are supported in app manifest version 1.21 and later versions.
+
 ### AI model selection
 
 Custom engine agents can utilize various AI models depending on the complexity of tasks and domain-specific requirements. Whether your agent needs a specific foundation model, a small language model, or a fine-tuned model for your scenario, selecting the right model is critical.
@@ -117,6 +120,7 @@ Custom engine agent prompts and responses in Copilot Chat and Teams are stored i
 
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
 - [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
+- [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md)
 - [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
 - [Bots overview](/microsoftteams/platform/bots/overview)
 - [Copilot extensibility planning guide](planning-guide.md)
