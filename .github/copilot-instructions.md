@@ -8,9 +8,9 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Bootstrap the environment
 
-* Install required validation tools: `npm install -g markdownlint-cli cspell`
 * Verify PowerShell Core is available: `pwsh --version`
 * Verify Node.js is available: `node --version && npm --version`
+* Install required validation tools: `npm install -g markdownlint-cli cspell`
 
 ### Essential validation workflow
 
@@ -48,7 +48,7 @@ Always reference these instructions first and fallback to search or bash command
 
 * MD047: Add single newline at end of file
 * MD009: Remove trailing spaces
-* MD004: Use asterisk (*) instead of dash (-) for unordered lists
+* MD004: Use dash (-) instead of asterisk (*) for unordered lists
 * MD033: Avoid inline HTML unless specifically allowed in .markdownlint.json
 * MD032: Add blank lines around lists
 
@@ -115,10 +115,9 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Handling spell check issues
 
-1. Right-click unknown words in VS Code Problems window
-2. Select "Spelling" -> "Add Words to CSpell Configuration"
-3. Alternatively, manually add words to the "words" array in `cspell.json`
-4. Commit cspell.json changes with your content updates
+1. Check any unknown words for spelling errors. If the word is spelled incorrectly, correct it
+2. If the word is spelled correctly but is unknown, add the word to the "words" array in `cspell.json`
+3. Commit cspell.json changes with your content updates
 
 ### Working with includes
 
@@ -141,7 +140,7 @@ Always reference these instructions first and fallback to search or bash command
 ### Common issues and solutions
 
 * **"Unknown word" in cspell**: Add to cspell.json or fix spelling
-* **MD004 lint error**: Use asterisk (*) instead of dash (-) for lists
+* **MD004 lint error**: Use dash (-) instead of asterisk (*) for lists
 * **Missing newline**: Add single blank line at end of file
 * **Hard tabs detected**: Replace tabs with spaces (VS Code: View -> Command Palette -> "Convert Indentation to Spaces")
 * **Acrolinx score below 80**: Review scorecard feedback and improve writing quality
