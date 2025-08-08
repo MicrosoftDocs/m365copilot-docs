@@ -13,7 +13,7 @@ doc_type: conceptualPageType
 
 # Perform semantic search using the Microsoft 365 Copilot Search API
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Perform semantic search across OneDrive content using natural language queries with contextual understanding. Allows the discovery of relevant documents and files that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Search API](https://aka.ms/try_copilot_search_API_example_basic). Learn how you can [batch up to 20 requests to the Search API](/graph/json-batching?tabs=http).
 
@@ -46,18 +46,15 @@ In the request body, supply a JSON representation of the parameters.
 
 The following table lists the parameters that are required when you call this action.
 
-| Parameter                | Type              | Description                    |
-|:-------------------------|:------------------|:-------------------------------|
-| `query`                  | String            | Natural language query to search for relevant files. Maximum 1500 characters. Required. |
-| `pageSize`               | Int32             | Number of results to return per page (1-100). Default: 25. Optional. |
-| `dataSources`            | Object            | Configuration for data sources to include in the search. Optional. |
-| `dataSources.oneDrive`   | Object            | OneDrive-specific search configuration (currently the only supported data source). Optional. |
-| `dataSources.oneDrive.filterExpression` | String | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression for filtering OneDrive content. Currently only supports `path:` expressions. Optional. |
-| `dataSources.oneDrive.resourceMetadataNames` | String collection | Resource metadata fields to return in results. Supported fields: `path`, `author`, `fileName`, `fileType`, `title`, `id`, `driveId`, `siteId`, `listId`, `createdBy`, `lastModifiedTime`, `modifiedBy`. Optional. |
+| Parameter     | Type                                                                                          | Description                                                                             |
+|:--------------|:----------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|
+| `query`       | String                                                                                        | Natural language query to search for relevant files. Maximum 1500 characters. Required. |
+| `pageSize`    | Int32                                                                                         | Number of results to return per page (1-100). Default: 25. Optional.                    |
+| `dataSources` | [copilotSearchDataSourcesConfiguration](resources/copilotsearchdatasourcesconfiguration.md) | Configuration for data sources to include in the search. Optional.                      |
 
 ## Response
 
-If successful, this action returns a `200 OK` response code and a [copilotSearchResponse](resources/response.md) in the response body.
+If successful, this action returns a `200 OK` response code and a [copilotSearchResponse](resources/copilotsearchresponse.md) in the response body.
 
 ## Examples
 
@@ -312,5 +309,5 @@ Content-Type: application/json
 ## Related content
 
 - [Overview of the Microsoft 365 Copilot Search API](overview.md)
-- [Pagination for Search API results](operation-next-page.md)
+- [Pagination for Search API results](copilotroot-searchnextpage.md)
 - [Try with Graph explorer](https://aka.ms/try_copilot_search_API_example_basic)

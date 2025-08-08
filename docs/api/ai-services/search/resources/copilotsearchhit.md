@@ -11,18 +11,18 @@ doc_type: resourcePageType
 
 # copilotSearchHit resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Represents a single search result from a semantic search query.
 
 ## Properties
 
-| Property            | Type                                                                      | Description                                                             |
-|:--------------------|:--------------------------------------------------------------------------|:------------------------------------------------------------------------|
-| `webUrl`            | String                                                                    | Direct URL to access the search result.                                |
-| `preview`           | String                                                                    | Short text preview providing context for the result.                   |
-| `resourceType`      | String                                                                    | Type of the resource (e.g., "driveItem", "listItem").                  |
-| `resourceMetadata`  | [copilotSearchResourceMetadataDictionary](resource-metadata-dictionary.md) | Requested metadata fields (only included if specified in request).     |
+| Property           | Type                                                                                    | Description                                                        |
+|:-------------------|:----------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
+| `webUrl`           | String                                                                                  | Direct URL to access the search result.                            |
+| `preview`          | String                                                                                  | Short text preview providing context for the result.               |
+| `resourceType`     | String                                                                                  | Type of the resource (for example, `driveItem`, `listItem`).       |
+| `resourceMetadata` | [copilotSearchResourceMetadataDictionary](./copilotsearchresourcemetadatadictionary.md) | Requested metadata fields (only included if specified in request). |
 
 ## Relationships
 

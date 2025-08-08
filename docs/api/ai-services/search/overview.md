@@ -8,7 +8,7 @@ ms.date: 8/15/2025
 ms.topic: conceptual
 ---
 
-# Overview of the Microsoft 365 Copilot Search API (available for public preview soon)
+# Overview of the Microsoft 365 Copilot Search API (preview)
 
 The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences, unlocking the ability to enhance your custom engine agents and generative AI solutions with Microsoft 365 Copilot capabilities. The Microsoft 365 Copilot Search API enables developers to perform semantic search across OneDrive content using natural language queries that understand context and intent, returning relevant documents and files.
 
@@ -97,7 +97,7 @@ The following are the current throttling and other limitations to the Search API
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Use the Search API](operation-search.md)
+> [Use the Search API](copilotroot-search.md)
 
 ## Related content
 

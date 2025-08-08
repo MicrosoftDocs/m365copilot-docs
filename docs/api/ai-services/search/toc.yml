@@ -4,7 +4,7 @@ items:
 - name: Perform semantic search
   href: copilotroot-search.md
 - name: Get next page of search results
-  href: copilotroot-nextpage.md
+  href: copilotroot-searchnextpage.md
 - name: Complex types
   items:
   - name: Search response

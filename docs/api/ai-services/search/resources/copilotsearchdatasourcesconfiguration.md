@@ -11,15 +11,15 @@ doc_type: resourcePageType
 
 # copilotSearchDataSourcesConfiguration resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Configuration for data sources to include in the search.
 
 ## Properties
 
-| Property     | Type                                                                                | Description                                                           |
-|:-------------|:------------------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| `oneDrive`   | [oneDriveDataSourceConfiguration](one-drive-data-source-configuration.md)          | OneDrive-specific search configuration (currently the only supported data source). |
+| Property     | Type                                                                  | Description                                                           |
+|:-------------|:----------------------------------------------------------------------|:----------------------------------------------------------------------|
+| `oneDrive`   | [oneDriveDataSourceConfiguration](onedrivedatasourceconfiguration.md) | OneDrive-specific search configuration (currently the only supported data source). |
 
 ## Relationships
 
