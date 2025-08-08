@@ -1,6 +1,6 @@
 # cSpell:ignore aiuser
 items:
-- name: Services APIs
+- name: AI Services APIs
   href: ai-services/toc.yml
 - name: Admin APIs
   href: admin-settings/toc.yml
