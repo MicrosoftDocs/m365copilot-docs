@@ -28,9 +28,9 @@ Power Automate Flows as actions in declarative agents might not run reliably and
 
 **Workaround:** Currently, no workaround for the issue that the flows might not return results is available. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
 
-This issue applies to links from any content source, including SharePoint, Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), and plugins.
+This issue applies to links from any content source, including SharePoint, Microsoft 365 Copilot connectors, and plugins.
 
-### Prompts to get a list based on custom metadata aren't supported 
+### Prompts to get a list based on custom metadata aren't supported
 
 Prompts to get a list of items based on custom metadata aren't supported. For example, the prompt "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is based on custom metadata, doesn't work because the metadata isn't mapped to connection schema label properties.
 
