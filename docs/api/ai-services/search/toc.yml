@@ -1,0 +1,19 @@
+items:
+- name: Overview
+  href: overview.md
+- name: Perform semantic search
+  href: copilotroot-search.md
+- name: Get next page of search results
+  href: copilotroot-nextpage.md
+- name: Complex types
+  items:
+  - name: Search response
+    href: resources/copilotsearchresponse.md
+  - name: Search hit
+    href: resources/copilotsearchhit.md
+  - name: Search data sources configuration
+    href: resources/copilotsearchdatasourcesconfiguration.md
+  - name: OneDrive data source configuration
+    href: resources/onedrivedatasourceconfiguration.md
+  - name: Search resource metadata dictionary
+    href: resources/copilotsearchresourcemetadatadictionary.md
