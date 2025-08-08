@@ -4,7 +4,7 @@ description: Find information about custom engine agents, which are specialized 
 author: jessicaaawu
 ms.author: wujessica
 ms.localizationpriority: medium
-ms.date: 07/22/2025
+ms.date: 08/07/2025
 ms.topic: overview
 ---
 
@@ -123,4 +123,3 @@ Custom engine agent prompts and responses in Copilot Chat and Teams are stored i
 - [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md)
 - [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
 - [Bots overview](/microsoftteams/platform/bots/overview)
-- [Copilot extensibility planning guide](planning-guide.md)
