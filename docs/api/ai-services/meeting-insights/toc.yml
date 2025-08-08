@@ -1,0 +1,25 @@
+# cSpell:ignoreRegExp .*?aiinsight.*?
+# cSpell:ignore aionlinemeeting
+items:
+- name: Call AI insight
+  items:
+  - name: Call AI insight
+    href: resources/callaiinsight.md
+  - name: List
+    href: onlinemeeting-list-aiinsights.md
+  - name: Get
+    href: callaiinsight-get.md
+- name: Complex types
+  items:
+  - name: Action item
+    href: resources/actionitem.md
+  - name: AI online meeting
+    href: resources/aionlinemeeting.md
+  - name: Call AI insight viewpoint
+    href: resources/callaiinsightviewpoint.md
+  - name: Meeting note
+    href: resources/meetingnote.md
+  - name: Meeting note subpoint
+    href: resources/meetingnotesubpoint.md
+  - name: Mention event
+    href: resources/mentionevent.md
