@@ -24,7 +24,7 @@ Always reference these instructions first and fallback to search or bash command
 * Use Visual Studio Code with the Learn Authoring Pack extension for real-time validation
 * Follow the [Microsoft Writing Style Guide](https://learn.microsoft.com/style-guide/welcome/)
 * All content files use YAML front matter with required metadata fields
-* Use asterisk (*) for unordered lists, not dashes (-) to avoid MD004 lint errors
+* Use dashes (-) for unordered lists, not asterisks (*) to avoid MD004 lint errors
 
 ## Validation
 
