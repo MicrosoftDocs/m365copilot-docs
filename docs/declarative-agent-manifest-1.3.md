@@ -302,7 +302,7 @@ The items by URL object contains the following properties.
 
 #### Copilot connectors object
 
-Indicates that the declarative agent can search selected Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) for grounding information.
+Indicates that the declarative agent can search selected Microsoft 365 Copilot connectors for grounding information.
 
 The Copilot connectors object contains the following properties.
 

@@ -14,7 +14,7 @@ This FAQ answers common questions about what declarative agents for Microsoft 36
 
 ## What are declarative agents?
 
-Declarative agents are customized versions of Microsoft 365 Copilot that enable customers to create personalized experiences that run in Microsoft 365 Copilot. This feature builds on the Microsoft 365 Copilot system. Users can build declarative agents with capabilities and instructions that define the agent's purpose and behavior. Users can also add the option to access enterprise knowledge (including SharePoint and Microsoft 365 Copilot connectors - formerly Microsoft Graph connectors). To learn more, see [Declarative agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-declarative-agent). 
+Declarative agents are customized versions of Microsoft 365 Copilot that enable customers to create personalized experiences that run in Microsoft 365 Copilot. This feature builds on the Microsoft 365 Copilot system. Users can build declarative agents with capabilities and instructions that define the agent's purpose and behavior. Users can also add the option to access enterprise knowledge (including SharePoint and Microsoft 365 Copilot connectors). To learn more, see [Declarative agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-declarative-agent). 
 
 ## What can declarative agents do?
 
