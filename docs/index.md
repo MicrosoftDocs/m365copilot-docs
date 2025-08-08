@@ -15,7 +15,7 @@ Microsoft 365 Copilot is an AI-powered productivity tool that integrates with Mi
 
 You can extend Copilot in several ways:
 
-- Use [Microsoft 365 Copilot connectors](#enhance-knowledge-in-copilot-with-connectors) (formerly Microsoft Graph connectors) to ingest organizational data, enabling Copilot to access and reason over a broader set of enterprise information.
+- Use [Microsoft 365 Copilot connectors](#enhance-knowledge-in-copilot-with-connectors) to ingest organizational data, enabling Copilot to access and reason over a broader set of enterprise information.
 
 - Build [agents](#extend-copilot-with-agents) — powerful AI assistants that retrieve real-time insights and act on behalf of users—to tailor Copilot for automating specialized workflows and performing tasks.
 

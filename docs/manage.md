@@ -74,7 +74,7 @@ Both [declarative agents](./build-declarative-agents.md) and [custom engine agen
 
 ## Copilot connectors
 
-[Microsoft 365 Copilot connectors](./overview-copilot-connector.md) (formerly Microsoft Graph connectors) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Copilot connectors are managed from Microsoft Entra admin center, Microsoft 365 admin center, and Teams admin center.
+[Microsoft 365 Copilot connectors](./overview-copilot-connector.md) can be connected directly to your organizational Microsoft 365 Copilot experience with the Microsoft Graph API, or packaged as part of a Microsoft 365 app for publish to your organization or submission to Microsoft Commercial Marketplace. Depending on the control, Copilot connectors are managed from Microsoft Entra admin center, Microsoft 365 admin center, and Teams admin center.
 
 | Control | Core scenario | Related content |
 |--|--|--|

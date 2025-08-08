@@ -1,3 +1,4 @@
+items:
 - name: Microsoft 365 Copilot extensibility
   href: index.md
 - name: Explore
@@ -266,41 +267,7 @@
   - name: Use client libraries (preview)
     href: sdks/api-libraries.md
   - name: API reference
-    items:
-    - name: Retrieval API (preview)
-      items:
-      - name: Overview
-        href: api-reference/retrieval-api-overview.md
-      - name: Retrieve data
-        href: api-reference/copilotroot-retrieval.md
-      - name: Complex types
-        items:
-        - name: Retrieval response
-          href: api-reference/resources/retrievalresponse.md
-        - name: Retrieval hit
-          href: api-reference/resources/retrievalhit.md
-        - name: Retrieval extract
-          href: api-reference/resources/retrievalextract.md
-        - name: Search response metadata dictionary
-          href: api-reference/resources/searchresourcemetadatadictionary.md
-        - name: Search sensitivity label info
-          href: api-reference/resources/searchsensitivitylabelinfo.md
-    - name: Search API (preview)
-      items:
-      - name: Overview
-        href: api-reference/search/overview.md
-      - name: Perform semantic search
-        href: api-reference/search/operation-search.md
-      - name: Get next page of search results
-        href: api-reference/search/operation-next-page.md
-      - name: Complex types
-        items:
-        - name: Search response
-          href: api-reference/search/resources/response.md
-        - name: Search hit
-          href: api-reference/search/resources/search-hit.md
-        - name: Search resource metadata dictionary
-          href: api-reference/search/resources/resource-metadata-dictionary.md
+    href: api/toc.yml
 - name: Publish
   items:
   - name: Overview

@@ -4,7 +4,7 @@ description: Find information about custom engine agents, which are specialized 
 author: jessicaaawu
 ms.author: wujessica
 ms.localizationpriority: medium
-ms.date: 07/22/2025
+ms.date: 08/07/2025
 ms.topic: overview
 ---
 
@@ -78,7 +78,7 @@ The following considerations apply to choosing your development tool:
 - **Publishing scope** - Only agents built with the Teams AI Library or Microsoft 365 Agents SDK can be published to the Microsoft Commercial Store with the Agents Toolkit.
 - **Group productivity** - For multi-user scenarios, especially in Teams, consider the Teams AI Library for its built-in support for collaborative channels and meetings.
 - **Customization needs** - If you need full control over AI models or orchestration, opt for a pro-code approach with Microsoft 365 Agents SDK.
-- **Knowledge source access** - Copilot Studio agents have native access to Microsoft 365 and Microsoft Graph connector content. Agents built with a pro-code approach can access the same data via Microsoft Graph APIs.
+- **Knowledge source access** - Copilot Studio agents have native access to Microsoft 365 and Copilot connector content. Agents built with a pro-code approach can access the same data via Microsoft Graph APIs.
 
 ### Scenario examples
 
@@ -92,6 +92,9 @@ The following table provides scenario examples and the recommended development a
 ## Design and deployment considerations
 
 As you prepare to build and deploy your custom engine agent, consider the key factors described in this section to ensure performance, compliance, and sustainability.
+
+> [!NOTE]
+> Custom engine agents are supported in app manifest version 1.21 and later versions.
 
 ### AI model selection
 
@@ -117,6 +120,6 @@ Custom engine agent prompts and responses in Copilot Chat and Teams are stored i
 
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
 - [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
+- [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md)
 - [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
 - [Bots overview](/microsoftteams/platform/bots/overview)
-- [Copilot extensibility planning guide](planning-guide.md)

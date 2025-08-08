@@ -4,14 +4,14 @@ description: Represents a metadata dictionary type.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 06/09/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
 
 # searchResourceMetadataDictionary resource type
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Represents a metadata dictionary in a [retrievalHit](retrievalhit.md). This resource is an open type. For more information on open types, see [Open Type](https://www.odata.org/getting-started/advanced-tutorial/#openType).
 

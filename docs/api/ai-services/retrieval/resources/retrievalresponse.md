@@ -4,14 +4,14 @@ description: Represents results from a retrieval query.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 06/09/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
 
 # retrievalResponse resource type
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Represents results from a retrieval query.
 

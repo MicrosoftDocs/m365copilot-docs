@@ -46,7 +46,7 @@ The following table describes the prerequisites for using each tool and where ag
 | **Quick setup:** Provides a guided process for building agents. | **Slower feature rollout:** Some advanced features are available in Agents Toolkit before they're available in Copilot Studio agent builder.  |
 | **Accessibility:** Suitable for creating personal and group productivity agents without having to write code.  |  |
 | **Straightforward agent testing**: The test pane allows users to test the end-user experience of agents directly within the tool. | |
-| **Variety of knowledge sources**: Easily add public web, SharePoint, Graph connector data and more as agent knowledge sources.| |
+| **Variety of knowledge sources**: Easily add public web, SharePoint, Copilot connector data and more as agent knowledge sources.| |
 | **Generate rich content**: Enable image generation and code interpreter with one click.| |
 
 ## SharePoint
@@ -92,7 +92,7 @@ The following table lists the pros and cons for using Agents Toolkit.
 | **Advanced support for Adaptive Cards:** Enables custom UI rendering inside agents using [Adaptive Cards](/training/modules/copilot-declarative-agent-action-api-plugin-adaptive-cards-vsc/), which isn't available in Copilot Studio. |   |
 | **Complex application bundling:** Allows integration of agents with Teams apps, personal tabs, messaging extensions, and other Microsoft 365 applications. |  |
 | **Experimentation support:** Developers can fork, test, and iterate on agent capabilities without affecting live deployments. | |
-| **Copilot connectors and AI enhancements:** Supports rich integrations, including semantic search with [Microsoft 365 Copilot connectors](/graph/connecting-external-content-experiences) (formerly Microsoft Graph connectors) and more control over agent reasoning and responses. | |
+| **Copilot connectors and AI enhancements:** Supports rich integrations, including semantic search with [Microsoft 365 Copilot connectors](/graph/connecting-external-content-experiences) and more control over agent reasoning and responses. | |
 
 ## Related content
 

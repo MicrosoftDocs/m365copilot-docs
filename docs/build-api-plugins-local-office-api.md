@@ -4,7 +4,7 @@ description: Learn how to build API plugins for Microsoft 365 Copilot with the O
 author: rickki
 ms.author: rickki
 ms.localizationpriority: medium
-ms.date: 07/23/2025
+ms.date: 07/30/2025
 ms.topic: how-to
 ---
 
@@ -256,6 +256,9 @@ The reference documentation for declarative agents is at [Declarative agent sche
       ]
     }
     ```
+	
+	> [!NOTE]
+  > You might get a validation error from the plugin JSON that says you need an **auth** property. You can ignore this error. Your agent will work fine without that property.
 
 The reference documentation for API plugins is at [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md).
 

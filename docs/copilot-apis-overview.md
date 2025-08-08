@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 Copilot APIs Overview
-description: "Use the Copilot APIs to securely access Microsoft 365 Copilot capabilities in your own applications and custom engine agents, while aligning with the compliance standards built in to Microsoft 365."
+description: Use the Copilot APIs to securely access Microsoft 365 Copilot capabilities in your own applications and custom engine agents, while aligning with the compliance standards built in to Microsoft 365.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: conceptual
@@ -15,19 +15,18 @@ The Microsoft 365 Copilot APIs enable you to securely access Microsoft 365 Copil
 
 Enterprise developers face a critical challenge today: how to harness the power of AI while maintaining secure access to organizational knowledge, without compromising compliance or governance. Traditional approaches force you to build complex AI systems from scratch and extract sensitive data into external sources. The Microsoft 365 Copilot APIs offer access to production-ready AI capabilities that work directly with your Microsoft 365 data.
 
-
 ## Copilot API capabilities
 
-The Copilot APIs provide a comprehensive set of capabilities that enable you to build AI-powered applications grounded in enterprise data. 
+The Copilot APIs provide a comprehensive set of capabilities that enable you to build AI-powered applications grounded in enterprise data.
 
 The following table lists the APIs and describes their capabilities and scenarios.
 
-| API | Use it to  | Example scenario |
+| API | Use it to   | Example scenario |
 | --- | ----------- | ---------------- |
-| [Retrieval API (preview)](/microsoft-365-copilot/extensibility/api-reference/retrieval-api-overview) | Retrieve relevant information from Microsoft 365 content in a secure and compliant way. | Connect your own AI models to Microsoft 365 content without data extraction. Build specialized assistants that respond based on your organization's up-to-date documentation, policies, and knowledge bases. These applications can provide contextually relevant information to employees across departments while respecting document access controls and sensitivity labels. |
+| [Retrieval API (preview)](api/ai-services/retrieval/overview.md) | Retrieve relevant information from Microsoft 365 content in a secure and compliant way. | Connect your own AI models to Microsoft 365 content without data extraction. Build specialized assistants that respond based on your organization's up-to-date documentation, policies, and knowledge bases. These applications can provide contextually relevant information to users across departments while respecting document access controls and sensitivity labels. |
 | [Search API (available for public preview soon)](/microsoft-365-copilot/extensibility/api-reference/search/overview) | Perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results. | Build applications that help users discover relevant documents and files using natural language descriptions rather than exact keyword matches. Create intelligent document discovery experiences that understand user intent and surface the most relevant content from OneDrive libraries while maintaining security and compliance. |
 | [Interaction Export API](/microsoftteams/export-teams-content#microsoft-365-copilot-interactions--microsoft-365-chat-preview) | Enable compliance solutions to capture and archive user interactions with Copilot across Microsoft 365 applications. | Develop systems that maintain comprehensive records of AI interactions, enable monitoring of AI usage, and ensure compliance with organizational policies and regulatory requirements. These solutions are valuable for regulated industries where documenting and reviewing AI-assisted content generation is necessary. |
-| [Change Notifications API (preview)](/graph/aiinteraction-changenotifications-overview) | Subscribe to change notifications for Copilot interactions across Microsoft 365. | Build applications that monitor and log AI interactions in real time, enabling proactive compliance checks, anomaly detection, and auditing. |
+| [Change Notifications API (preview)](api/ai-services/change-notifications/aiinteraction-changenotifications.md) | Subscribe to change notifications for Copilot interactions across Microsoft 365. | Build applications that monitor and log AI interactions in real time, enabling proactive compliance checks, anomaly detection, and auditing. |
 | [Meeting Insights API (preview)](/microsoftteams/platform/graph-api/meeting-transcripts/meeting-insights) | Extract AI-generated meeting notes, action items, and discussion topics for Teams meetings. | Create applications that automatically extract and organize action items, decisions, and summaries from Teams meetings. Link these with project management tools, CRM systems, or custom workflows. These systems can transform meetings from time spent to value created by capturing, organizing, and activating meeting outcomes automatically. |
 | Chat API (available for public preview soon) | Enable conversational experiences powered by Microsoft 365 Copilot in your custom applications. | Integrate Microsoft 365 Copilot into your enterprise applications that can answer questions, perform tasks, and provide guidance based on Microsoft 365 data and user context. These interfaces can improve user productivity by bringing AI capabilities directly into the tools they use every day, from custom portals to mobile apps. |
 
@@ -59,7 +58,7 @@ Microsoft Graph APIs generally provide CRUD operations on Microsoft 365 data. Th
 
 - [Try with Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
 - [Find out how to get an auth token in your app](/graph/auth/auth-concepts)
-- [Get all enterprise interactions](/graph/api/aiinteractionhistory-getallenterpriseinteractions)
-- [Call AI insight](/graph/api/resources/callaiinsight)
-- [Custom engine agents for Microsoft 365](/microsoft-365-copilot/extensibility/overview-custom-engine-agent)
-- [Licensing and cost considerations for Copilot extensibility options](/microsoft-365-copilot/extensibility/cost-considerations)
+- [Get all enterprise interactions](api/ai-services/interaction-export/aiinteractionhistory-getallenterpriseinteractions.md)
+- [Call AI insight](api/ai-services/meeting-insights/resources/callaiinsight.md)
+- [Custom engine agents for Microsoft 365](overview-custom-engine-agent.md)
+- [Licensing and cost considerations for Copilot extensibility options](cost-considerations.md)

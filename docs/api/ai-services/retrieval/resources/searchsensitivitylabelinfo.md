@@ -4,14 +4,14 @@ description: Describes the information protection label that details how to prop
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 06/09/2025
+ms.date: 08/08/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
 
 # searchSensitivityLabelInfo resource type
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Describes the information protection label that details how to properly apply a sensitivity label to information.
 
