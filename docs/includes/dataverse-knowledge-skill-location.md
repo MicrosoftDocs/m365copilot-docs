@@ -10,7 +10,7 @@ To find the unique `skill` identifier for the Dataverse knowledge sources you wa
 1. In Copilot Studio, follow the instructions in [Add a Dataverse knowledge source](https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse) to create a new declarative agent with Dataverse knowledge.
 1. Select **Publish** and then download the .zip file.
 1. Unzip and open the declarativeAgent.json file.
-1. The `skill` value is found under `"knowledge_sources"`, as shown in the following example.
+1. The `skill` value is included in the `knowledge_sources` section, as shown in the following example.
 
 ```json
 {
