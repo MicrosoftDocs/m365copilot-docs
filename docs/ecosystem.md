@@ -105,4 +105,4 @@ For more information for Copilot extensibility solution developers, see [Data, P
 
 ## Related content
 
-- [Extensibility guide for ISVs](/microsoft-cloud/dev/copilot/isv/isv-extensibility-story?context=/microsoft-365-copilot/extensibility/context)
+- [Extensibility guide for ISVs](/microsoft-cloud/dev/copilot/isv/isv-extensibility-story)
