@@ -4,7 +4,7 @@ description: Learn about the 1.4 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 07/29/2025
+ms.date: 08/15/2025
 ms.topic: reference
 ---
 
