@@ -4,7 +4,7 @@ description: Learn about the 1.0 schema for a manifest file for declarative agen
 author: rimisra2
 ms.author: rimisra
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 08/12/2025
 ms.topic: reference
 ---
 
@@ -204,7 +204,7 @@ The items by SharePoint IDs object contains the following properties.
 | ----------- | ------ | ----------- |
 | `site_id`   | String | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
 | `web_id`    | String | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
-| `list_id`   | String | Optional. A unique GUID identifier for a list within a SharePoint or OneDrive site. |
+| `list_id`   | String | Optional. A unique GUID identifier for a list within a SharePoint site.<br /><br />**Note:** For the `list_id` property, lists associated with document libraries, sites, folders, or files are supported. |
 | `unique_id` | String | Optional. A unique GUID identifier used to represent a specific entity or resource. |
 
 > [!TIP]
