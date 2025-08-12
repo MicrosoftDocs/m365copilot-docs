@@ -64,7 +64,7 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ### Agent acquisition
 
-The shared link brings end users to the Microsoft 365 app store to view the details of the agent before adding it to Microsoft 365 Copilot. After the user adds the agent, they can open it in Copilot with a new chat created. The user only needs to add the agent the first time they use it. Later, they can return to Microsoft 365 Copilot to find the agent on the right rail.
+The shared link brings end users to the Microsoft 365 app store to view the details of the agent before adding it to Microsoft 365 Copilot. After the user adds the agent, they can open it in Copilot with a new chat created. The user only needs to add the agent the first time they use it. Later, they can return to Microsoft 365 Copilot to find the agent on the left rail.
 
 > [!NOTE]
 > Because agent capabilities differ based on a user's license, agent acquisition or usage is only possible when the user has the appropriate license based on the capabilities configured in the agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
