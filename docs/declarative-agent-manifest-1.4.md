@@ -425,6 +425,8 @@ The knowledge sources object contains the following properties.
 | `skill`     | String                            | A unique identifier that defines the configuration for how the agent interacts with Dataverse knowledge. |
 | `tables`    | Array of [tables](#tables-object) | An array of tables to scope the agent's knowledge. |
 
+[!INCLUDE [dataverse-knowledge-skill-location](includes/dataverse-knowledge-skill-location.md)]
+
 ###### Tables object
 
 Contains the tables to scope the agent's knowledge.
