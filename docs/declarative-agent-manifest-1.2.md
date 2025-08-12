@@ -244,7 +244,7 @@ The items by SharePoint IDs object contains the following properties.
 | ----------- | ------ | ----------- |
 | `site_id`   | String | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
 | `web_id`    | String | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
-| `list_id`   | String | Optional. A unique GUID identifier for a list within a SharePoint site.<br /><br />**Note:** For the `list_id` property, lists associated with document libraries, sites, folders, or files are supported. |
+| `list_id`   | String | Optional. A unique GUID identifier for a list within a SharePoint site.<br /><br />**Note:** Only lists associated with document libraries, sites, folders, or files are supported. |
 | `unique_id` | String | Optional. A unique GUID identifier used to represent a specific entity or resource. |
 
 > [!TIP]
