@@ -32,9 +32,9 @@ Agents built on the Career Coach template can offer:
 
 Career Coach agents are useful for the following tasks.
 
-| **Task** | **Description** |
-| ----------   | ----------  |
-| Career development plans | Helps create detailed plans based on your current role and your career goals goals. |
+| Task |Description |
+|:----------   |:----------  |
+| Career development plans | Helps create detailed plans based on your current role and your career goals. |
 | Skill gap analysis | Identifies gaps between your current skills and your career goals and then suggests ways to address them. |
 | Learning opportunities | Recommends courses, certifications, and workshops to help you grow. |
 | Career transition advice  | Provides guidance for successfully changing careers.  |
@@ -43,7 +43,7 @@ Career Coach agents are useful for the following tasks.
 
 ## Extension opportunities
 
-You can enhance the functionality of your Career Coach agents by connecting to additional resources via Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), Power Platform connectors, or API plugins, depending on the source system in use.
+You can enhance the functionality of your Career Coach agents by connecting to additional resources via Microsoft 365 Copilot connectors, Power Platform connectors, or API plugins, depending on the source system in use.
 
 Suggestions for such connections include:
 

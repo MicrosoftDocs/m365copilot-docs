@@ -118,7 +118,7 @@ Developing instructions for declarative agents is often iterative and typically 
     1. Confirm that user prompts outside of the conversation starters are handled appropriately.
 1. **Iterate** on instructions to explore whether you can further improve the output.
     - Modify instructions to change the behavior of the agent.
-    - Try adding knowledge like web search, OneDrive/SharePoint, or Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), if needed using Agents Toolkit or Copilot Studio.
+    - Try adding knowledge like web search, OneDrive/SharePoint, or Microsoft 365 Copilot connectors, if needed using Agents Toolkit or Copilot Studio.
 
 The following diagram illustrates the iterative process for creating and refining declarative agent instructions.
 
@@ -215,6 +215,6 @@ Guide users through issue resolution by gathering information, checking outages,
 
 ## Related content
 
-- For a sample manifest file for a declarative agent created with Agents Toolkit, see [Declarative agent manifest example](declarative-agent-manifest-1.4.md#declarative-agent-manifest-example).
+- For a sample manifest file for a declarative agent created with Agents Toolkit, see [Declarative agent manifest example](declarative-agent-manifest-1.5.md#declarative-agent-manifest-example).
 - For information about how to use Copilot Studio to create declarative agents, see [Extend with agents](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
 - For information about validation requirements for declarative agents, see [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context).

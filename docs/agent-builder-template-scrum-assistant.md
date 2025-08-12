@@ -38,7 +38,7 @@ Scrum Assistant agents are useful in the following scenarios.
 You can enhance the functionality of your Scrum Assistant agents by:
 
 - **Referencing company-specific Agile practices:** Connect a SharePoint site or files that contain company-specific Agile practices that are stored internally to align guidance with your organizational standards.
-- **Linking with your learning materials:** Use Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) or APIs to index data about your team's Azure DevOps work items. This way, you can allow your Scrum Assistant to provide more contextual advice and guidance.
+- **Linking with your learning materials:** Use Microsoft 365 Copilot connectors or APIs to index data about your team's Azure DevOps work items. This way, you can allow your Scrum Assistant to provide more contextual advice and guidance.
 
 <!-- Note about IT involvement -->
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]

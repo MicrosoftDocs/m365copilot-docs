@@ -42,7 +42,7 @@ Interview Question Assistant agents are useful for the following scenarios.
 
 ## Extension opportunities
 
-You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors), Power Platform connectors, or API plugins, depending on the source system in use. The following are some ideas:
+You can enhance the functionality of your Interview Question Assistant agents by connecting to additional resources via Microsoft 365 Copilot connectors, Power Platform connectors, or API plugins, depending on the source system in use. The following are some ideas:
 
 - **Scope your agent to a particular topic:** Connect a SharePoint site or files containing content relevant to the topic to create specialized Interview Assistant agents.
 - **Link to your interview training materials:** To expand your Interview Assistant's knowledge base and increase its usefulness, connect your Interview Assistant to your interview training tools.

@@ -1,3 +1,4 @@
+items:
 - name: Microsoft 365 Copilot extensibility
   href: index.md
 - name: Explore
@@ -10,8 +11,6 @@
     href: orchestrator.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
-  - name: Extensibility guide for ISVs
-    href: /microsoft-cloud/dev/copilot/isv/isv-extensibility-story?context=/microsoft-365-copilot/extensibility/context
 - name: What's new
   href: whats-new.md
 - name: Get started
@@ -93,6 +92,8 @@
             href: api-plugin-manifest-2.1.md
       - name: Declarative agent manifest reference
         items:
+        - name: Version 1.5
+          href: declarative-agent-manifest-1.5.md
         - name: Version 1.4
           href: declarative-agent-manifest-1.4.md
         - name: Version 1.3
@@ -177,7 +178,7 @@
     - name: Test and debug agents
       href: debugging-copilot-agent.md
     - name: Convert to custom engine agent
-      href: convert-declarative-agent.md 
+      href: convert-declarative-agent.md
     - name: Responsible AI validation
       href: rai-validation.md
   - name: Build a custom engine agent
@@ -264,25 +265,7 @@
   - name: Use client libraries (preview)
     href: sdks/api-libraries.md
   - name: API reference
-    items:
-    - name: Retrieval API (preview)
-      items:
-      - name: Overview
-        href: api-reference/retrieval-api-overview.md
-      - name: Retrieve data
-        href: api-reference/copilotroot-retrieval.md
-      - name: Complex types
-        items:
-        - name: Retrieval response
-          href: api-reference/resources/retrievalresponse.md
-        - name: Retrieval hit
-          href: api-reference/resources/retrievalhit.md
-        - name: Retrieval extract
-          href: api-reference/resources/retrievalextract.md
-        - name: Search response metadata dictionary
-          href: api-reference/resources/searchresourcemetadatadictionary.md
-        - name: Search sensitivity label info
-          href: api-reference/resources/searchsensitivitylabelinfo.md
+    href: api/toc.yml
 - name: Publish
   items:
   - name: Overview

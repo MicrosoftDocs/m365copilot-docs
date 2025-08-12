@@ -4,7 +4,7 @@ description: Learn how to build API plugins for Microsoft 365 Copilot with the O
 author: rickki
 ms.author: rickki
 ms.localizationpriority: medium
-ms.date: 07/23/2025
+ms.date: 07/30/2025
 ms.topic: how-to
 ---
 
@@ -185,7 +185,7 @@ The reference documentation for the manifest JSON is at [Microsoft 365 app manif
     }
     ```
 
-The reference documentation for declarative agents is at [Declarative agent schema 1.4 for Microsoft 365 Copilot](declarative-agent-manifest-1.4.md).
+The reference documentation for declarative agents is at [Declarative agent schema 1.4 for Microsoft 365 Copilot](declarative-agent-manifest-1.5.md).
 
 ### Configure the plugin
 
@@ -256,6 +256,9 @@ The reference documentation for declarative agents is at [Declarative agent sche
       ]
     }
     ```
+	
+	> [!NOTE]
+  > You might get a validation error from the plugin JSON that says you need an **auth** property. You can ignore this error. Your agent will work fine without that property.
 
 The reference documentation for API plugins is at [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md).
 
@@ -413,10 +416,10 @@ Office uses the infrastructure of Office Add-ins to run API plugins for the Offi
 
 1. The process of opening your agent depends on the UI for Copilot in Office applications, which is in transition.
 
-   - If you see a **Copilot** *button* on the ribbon (not a drop down menu), select the **Copilot** button to open the **Copilot** pane.   
+   - If you see a **Copilot** *button* on the ribbon (not a drop down menu), select the **Copilot** button to open the **Copilot** pane.
    - If you see a **Copilot** drop down menu, open the menu and select **App Skills** from the drop down list to open the **Copilot** pane.
 
-1. Select the hamburger control in the **Copilot** pane. 
+1. Select the hamburger control in the **Copilot** pane.
 1. In the pane, **Excel Agent** should be in the list of agents. You might need to select **See more** to see a list of all agents. If the agent isn't listed, try one or both of the following actions.
     <!-- markdownlint-disable MD033 -->
     - Wait a few minutes and reload Copilot.

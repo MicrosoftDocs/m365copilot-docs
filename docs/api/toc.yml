@@ -1,0 +1,12 @@
+# cSpell:ignore aiuser
+items:
+- name: AI Services APIs
+  href: ai-services/toc.yml
+- name: Admin APIs
+  href: admin-settings/toc.yml
+- name: Complex types
+  items:
+  - name: AI user
+    href: resources/aiuser.md
+  - name: Copilot root
+    href: resources/copilotroot.md

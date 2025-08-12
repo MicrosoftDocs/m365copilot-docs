@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/29/2025
+ms.date: 08/06/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -207,9 +207,30 @@ Copilot connectors allow agents to access and apply knowledge from external syst
 > - Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
 > - If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
-To enhance the accuracy and relevance of agent responses, agents can be grounded not only in broad organizational data but also in specific scoped items. For example, when you use the Azure DevOps Work Items connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
+For more information about Copilot connectors, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 
-To scope the Azure DevOps area path:
+### Scope Copilot connector data sources
+
+To enhance the accuracy and relevance of agent responses, agents can be grounded not only in broad organizational data but also in specific scoped data. To scope connector data in your agent to a specific attribute:
+
+1. On the **Configure** tab, under **Choose other data sources**, choose the connector for your data source.
+1. On the card for that connector, add the connections that are relevant to your scenario.
+1. Choose the arrow to go back to the **Knowledge** section.
+1. Expand the connector that you added and select the attribute that you want to scope the knowledge to (for example, project, space, folder), and search for or type the attribute name.
+
+   > [!NOTE]
+   > If the attribute doesn't appear in the search results, it might be because:
+   >
+   > * The scoped content hasn't been configured by your administrator.
+   > * You don't have the required permissions to access the content.
+   > * The scope isn't valid for the selected connector.
+
+1. Select the attribute from the list to add it. 
+1. Your agent's knowledge is now scoped to the data associated with the scoped attribute.
+
+For example, when you use the **Azure DevOps Work Items** connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
+
+To scope the **Azure DevOps Work Items** area path:
 
 1. Under **Choose other data sources**, select **Azure DevOps Work Items**.
 2. Choose the **Add** button next to the connections that are relevant to your tasks.
@@ -218,6 +239,24 @@ To scope the Azure DevOps area path:
 5. Select the area path to add it.
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
+
+The following table lists the Copilot connectors that support scoping and the attributes that you can use to scope the data.
+
+| Connector | Scoping attribute |
+| ----------- | ----------------- |
+| Azure DevOps Work Items | Area path |
+| Azure DevOps Wiki | Project |
+| Confluence | Space |
+| Google Drive | Folder |
+| GitHub Cloud Pull Requests | Repository |
+| GitHub Cloud Issues | Repository |
+| GitHub Cloud Knowledge | Repository |
+| Jira | Project |
+| ServiceNow Knowledge | Knowledge base |
+| ServiceNow Catalog | Catalog |
+| ServiceNow Tickets | Entity type (Sys_class_name/ Category/ Subcategory) |
+
+For more information about the Copilot connectors that are availlable, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext). 
 
 ## Prioritize your knowledge sources over general knowledge
 

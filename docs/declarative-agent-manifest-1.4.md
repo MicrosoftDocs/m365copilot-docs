@@ -4,7 +4,7 @@ description: Learn about the 1.4 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 07/08/2025
+ms.date: 08/12/2025
 ms.topic: reference
 ---
 
@@ -13,6 +13,8 @@ ms.topic: reference
 # Declarative agent schema 1.4 for Microsoft 365 Copilot
 
 This article describes the 1.4 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
+
+[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
@@ -422,6 +424,8 @@ The knowledge sources object contains the following properties.
 | `host_name` | String                            | Required. A unique identifier for the host in Dataverse. |
 | `skill`     | String                            | A unique identifier that defines the configuration for how the agent interacts with Dataverse knowledge. |
 | `tables`    | Array of [tables](#tables-object) | An array of tables to scope the agent's knowledge. |
+
+[!INCLUDE [dataverse-knowledge-skill-location](includes/dataverse-knowledge-skill-location.md)]
 
 ###### Tables object
 
