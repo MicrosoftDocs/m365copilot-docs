@@ -4,7 +4,7 @@ description: Learn about the 1.4 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 07/29/2025
+ms.date: 08/12/2025
 ms.topic: reference
 ---
 
@@ -424,6 +424,8 @@ The knowledge sources object contains the following properties.
 | `host_name` | String                            | Required. A unique identifier for the host in Dataverse. |
 | `skill`     | String                            | A unique identifier that defines the configuration for how the agent interacts with Dataverse knowledge. |
 | `tables`    | Array of [tables](#tables-object) | An array of tables to scope the agent's knowledge. |
+
+[!INCLUDE [dataverse-knowledge-skill-location](includes/dataverse-knowledge-skill-location.md)]
 
 ###### Tables object
 
