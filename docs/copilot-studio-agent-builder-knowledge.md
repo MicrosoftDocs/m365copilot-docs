@@ -174,9 +174,6 @@ When you share an agent with embedded files, the files are only shared with user
 - Specific users in your organization
 - Only you
 
-> [!NOTE]
-> Sharing an agent with embedded files to groups isn't currently supported.
-
 When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are set on the embedded content, the sensitivity label is displayed on the **Share** screen.
 
 ### File size limits
