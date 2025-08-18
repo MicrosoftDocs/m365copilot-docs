@@ -4,7 +4,7 @@ description: Learn about the 1.2 schema for a manifest file for declarative agen
 author: rimisra2
 ms.author: rimisra
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 08/18/2025
 ms.topic: reference
 ---
 
@@ -245,7 +245,7 @@ The items by SharePoint IDs object contains the following properties.
 | `site_id`   | String | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
 | `web_id`    | String | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
 | `list_id`   | String | Optional. A unique GUID identifier for a list within a SharePoint site.<br /><br />**Note:** Only lists associated with document libraries are supported. |
-| `unique_id` | String | Optional. A unique GUID identifier used to scope a folder or file in the document library specified by the list_id property. |
+| `unique_id` | String | Optional. A unique GUID identifier used to scope a folder or file in the document library specified by the `list_id` property. |
 
 > [!TIP]
 > For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
