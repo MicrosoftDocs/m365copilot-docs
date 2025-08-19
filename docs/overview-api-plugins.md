@@ -114,9 +114,7 @@ When a declarative agent includes up to five plugins defined in the [declarative
 
 A plugin can include an unlimited number of functions. All functions are returned, even if only one function is matched. However, due to token window limits, the quality of the responses might degrade if more than 10 functions are included.
 
-### URLs in API responses are redacted
-
-To protect the user's privacy, Copilot redacts any URLs contained in API responses. The sole exception to this behavior is any URL in a property specified by the `url` property in the [Response semantics properties object](api-plugin-manifest.md#response-semantics-properties-object).
+The token window for inputs to and outputs from a plugin will truncate large content. The functional limit is subject to change as models improve and depending on any system overhead. Developers should optimize for small token lengths or opt for extensibility options that allow for streaming large content if that is needed. 
 
 ## Related content
 
