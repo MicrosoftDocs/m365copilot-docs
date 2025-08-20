@@ -16,9 +16,9 @@ For the latest information, announcements, and news about preview and generally 
 
 ## August 2025
 
-### Teams meeting chats availability clarified in documentation
+### Use Teams meetings as a knowledge source in Copilot Studio agent builder
 
-Updated documentation to clarify that Teams meeting chats are available as a knowledge source in Copilot Studio agent builder. For more information, see [Teams meetings](knowledge-sources.md#teams-meetings).
+Teams meetings are now available as a knowledge source when you use Copilot Studio agent builder to create agents. For more information, see [Add knowledge sources to your declarative agent](knowledge-sources.md).
 
 ## July 2025
 
