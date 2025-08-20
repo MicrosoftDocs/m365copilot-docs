@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/29/2025
+ms.date: 08/20/2025
 ---
 
 # Add knowledge sources to your declarative agent
@@ -28,7 +28,7 @@ The following table lists the capabilities and knowledge sources you can configu
 | Email | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
 | People | :x: | :white_check_mark: | Yes (license only) |
 | Teams messages | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
-| Meetings | :x: | :white_check_mark: | Yes (license only) |
+| Teams meetings | :white_check_mark: | :white_check_mark: | Yes (license only) |
 
 \* Option to scope the knowledge is available.
 
@@ -196,8 +196,6 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 You can configure agents to use Teams channels, meeting chats, group chats, and 1:1 chats as knowledge sources. You can choose to specify up to five links to channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, meetings, and individual and group chats, as knowledge sources.
 
-Teams meeting chats are available as a knowledge source in both Copilot Studio agent builder and Agents Toolkit.
-
 Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has `OneDriveAndSharePoint` enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
 ### Add Teams messages knowledge sources
@@ -241,14 +239,13 @@ To get the **chatId** value for a group or 1:1 chat:
 
 For more information, see [Deep link to Teams chat](/microsoftteams/platform/concepts/build-and-test/deep-link-teams).
 
-## Meetings
+## Teams meetings
 
-Meetings knowledge allows you to scope your agent to answer questions about meetings. For example, your agent can respond to queries such as "Recap yesterday's meetings and list action items" or "What meetings do I have tomorrow?". This knowledge source isn't scoped.
-
-> [!NOTE]
-> Meetings knowledge isn't currently available in Copilot Studio agent builder.
+Teams meetings knowledge allows you to scope your agent to answer questions about meetings. For example, your agent can respond to queries such as "Recap yesterday's meetings and list action items" or "What meetings do I have tomorrow?". This knowledge source isn't scoped.
 
 ### Add meetings knowledge source
+
+If you're using [Copilot Studio agent builder](copilot-studio-agent-builder-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings.** 
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable meetings knowledge, add the `Meetings` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
