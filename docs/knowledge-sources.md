@@ -196,6 +196,8 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 You can configure agents to use Teams channels, meeting chats, group chats, and 1:1 chats as knowledge sources. You can choose to specify up to five links to channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, meetings, and individual and group chats, as knowledge sources.
 
+Teams meeting chats are available as a knowledge source in both Copilot Studio agent builder and Agents Toolkit.
+
 Agents can return links to files shared in Teams messages, but they can't return links to files stored in a Teams channel, unless the agent also has `OneDriveAndSharePoint` enabled. For information about how to optimize SharePoint content for Copilot, see [optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
 ### Add Teams messages knowledge sources
