@@ -71,3 +71,55 @@ Developers can specify the confirmation text by setting the `body` property in t
   }
 }
 ```
+
+## Enabling localization of confirmation text
+
+To enable confirmation test to be localized, take the following steps.
+
+**Step 1: Use Localization Keys in the Plugin Manifest**
+In your plugin manifest (for example, plugin.json), replace literal strings with localization keys using the format:
+
+    ```json
+    {
+      "schema_version": "v2.3",
+      "name_for_human": "[[plugin_name]]",
+      "description_for_human": "[[plugin_description]]"
+    }
+    ```
+
+These keys (for example, plugin_name, plugin_description) must match entries in your localization file and conform to the regex ^[a-zA-Z_][a-zA-Z0-9_]*.
+
+**Step 2: Create Localization Files**
+Localization files should be in JSON format and include a localizationKeys object mapping each key to its translated string. For example:
+
+```json
+    {
+  "localizationKeys": {
+    "plugin_name": "Weather Assistant",
+    "plugin_description": "Provides weather updates and forecasts."
+      }
+    }
+```
+
+You can create multiple localization files for different languages (for example, en.json, fr.json, de.json) and reference them in your plugin configuration.
+
+**Step 3: Add `localizationInfo` to the App Manifest**
+
+Include a localizationInfo section in your app manifest that references the localization files. For example,
+
+```json
+    "localizationInfo": {
+      "defaultLanguageTag": "en",
+      "defaultLanguageFile": "en.json",
+      "additionalLanguages": [
+        {
+          "languageTag": "fr",
+          "file": "fr.json"
+        }
+      ]
+    }
+```
+
+**Step 4: Test Localization Behavior**
+
+ To test your plugin in different language environments, use tools like the Microsoft 365 Agents Toolkit or Copilot Studio.
