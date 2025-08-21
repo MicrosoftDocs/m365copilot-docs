@@ -40,7 +40,7 @@ post:
     required: true
 ```
 
-Now imagine a related API that retrieves existing reminders: `GET /reminders`. Since it's a GET, Microsoft 365 Copilot shows the user the **Always allow** option.
+Now, imagine a related API that retrieves existing reminders: `GET /reminders`. Since it's a GET, Microsoft 365 Copilot shows the user the **Always allow** option.
 
 :::image type="content" source="assets/images/api-plugins/get-always-allow.png" alt-text="Copilot confirmation dialog for a GET operation.":::
 
@@ -56,7 +56,7 @@ get:
 
 ## Customizing confirmation text
 
-Developers can specify the confirmation text by setting the `body` property in the [Confirmation object](api-plugin-manifest.md#confirmation-object) in the function's [Function capabilities object](api-plugin-manifest.md#function-capabilities-object) in the plugin manifest. The value of `body` should be indicative of what the function does. If this property isn't present in the manifest, the `description` property in the [Function object](api-plugin-manifest.md#function-object) is used instead.
+Developers can specify the confirmation text by setting the `body` property in the [Confirmation object](api-plugin-manifest-2.3.md#confirmation-object) in the function's [Function capabilities object](api-plugin-manifest-2.3.md#function-capabilities-object) in the plugin manifest. The value of `body` should be indicative of what the function does. If this property isn't present in the manifest, the `description` property in the [Function object](api-plugin-manifest-2.3.md#function-object) is used instead.
 
 ```json
 {
@@ -74,9 +74,9 @@ Developers can specify the confirmation text by setting the `body` property in t
 
 ## Localizing confirmation text
 
-Developers can configure confirmation prompts so that they can be localized by following these steps:
+Developers can configure [localizable strings](api-plugin-manifest-2.3#string-localization) to be used as confirmation prompts by following these steps:
 
-**Step 1: Use Localization Keys in the Plugin Manifest**
+**Step 1: Use localization keys in the Plugin Manifest**
 
 In your plugin manifest (for example, plugin.json), replace literal strings with localization keys using the format:
 
@@ -92,7 +92,7 @@ These keys (for example, `plugin_name` and `plugin_description`,) must match ent
 
 **Step 2: Create Localization Files**
 
-Created your localization files in JSON format and include a `localizationKeys` object that maps each key to its translated string. For example:
+Created your localization files in JSON format and include a `localizationKeys` property that maps each key to its translated string. For example:
 
 ```json
     {
