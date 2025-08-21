@@ -71,3 +71,59 @@ Developers can specify the confirmation text by setting the `body` property in t
   }
 }
 ```
+
+## Enabling localization of confirmation text
+
+To enable confirmation test to be localized, take the following steps.
+
+**Step 1: Use Localization Keys in the Plugin Manifest**
+In your plugin manifest (e.g., plugin.json), replace literal strings with localization keys using the format:
+
+    ```json
+    {
+      "schema_version": "v2.3",
+      "name_for_human": "[[plugin_name]]",
+      "description_for_human": "[[plugin_description]]"
+    }
+    ```
+
+These keys (e.g., plugin_name, plugin_description) must match entries in your localization file and conform to the regex ^[a-zA-Z_][a-zA-Z0-9_]*.
+
+**Step 2: Create Localization Files**
+Localization files should be in JSON format and include a localizationKeys object mapping each key to its translated string. For example:
+
+```json
+    {
+  "localizationKeys": {
+    "plugin_name": "Weather Assistant",
+    "plugin_description": "Provides weather updates and forecasts."
+      }
+    }
+```
+
+You can create multiple localization files for different languages (e.g., en.json, fr.json, de.json) and reference them in your plugin configuration.
+
+**Step 3: Add `localizationInfo` to the App Manifest**
+
+Include a localizationInfo section in your app manifest to reference the localization files. For example,
+
+```json
+    "localizationInfo": {
+      "defaultLanguageTag": "en",
+      "defaultLanguageFile": "en.json",
+      "additionalLanguages": [
+        {
+          "languageTag": "fr",
+          "file": "fr.json"
+        }
+      ]
+    }
+```
+
+**Step 4: Test Localization Behavior**
+
+Use tools like the Microsoft 365 Agents Toolkit or Copilot Studio to test your plugin in different language environments. You can:
+
+- Upload localization files.
+- Switch languages in the Copilot interface.
+- Validate that localized strings appear correctly in conversation starters, descriptions, and UI elements. [Build API...65 Copilot], [Copilot St...l Copilots]
