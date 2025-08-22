@@ -4,7 +4,7 @@ description: Learn how to publish and manage agents built with Copilot Studio ag
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 08/15/2025
+ms.date: 08/22/2025
 ms.topic: conceptual
 ---
 
@@ -43,6 +43,7 @@ To deploy an agent manually:
 
 1. In Copilot Studio agent builder, open your agent and select the **More options (...) menu.
 2. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
+3. Sideload your agent into Teams.
 
 > [!NOTE]
 > - The ZIP package must not include embedded files.
