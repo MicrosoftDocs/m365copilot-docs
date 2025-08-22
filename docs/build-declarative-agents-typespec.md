@@ -336,6 +336,12 @@ The declarative agent has access to Copilot connectors content to generate its a
 
 :::image type="content" source="assets/images/build-da/ttk/graph-connector-content.png" alt-text="A screenshot showing a response from the declarative agent that contains Copilot connector content":::
 
+## Enable feedback for your agent
+
+You can help improve the performance an accuracy of your agents by enabling the feedback settings across all Microsoft 365 apps. When you do so, users can rate the responses your agents generate and provide logs, screenshots, and contact email addresses when submitting their feedback.
+
+The [TechExcel: Elevate your Copilot for M365 Technical Proficiency](https://microsoft.github.io/TechExcel-Elevate-your-Copilot-for-M365-technical-proficiency/) tutorial provides detailed instructions and practice labs for a wide range of Copilot development use cases. For specific instructions on enabling feedback for your agents, see [Lab 2, Exercise 3: Enable feedback settings for the Microsoft 365 apps](https://microsoft.github.io/TechExcel-Elevate-your-Copilot-for-M365-technical-proficiency/docs/L2Ex03/Ex03.html). 
+
 ## Completed
 
 You completed the declarative agent guide for Microsoft 365 Copilot. Now that you're familiar with using TypeSpec to build a declarative agent, you can learn more in the following articles.
