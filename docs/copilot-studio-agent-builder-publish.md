@@ -46,7 +46,7 @@ To deploy an agent manually:
 3. Sideload your agent into Teams.
 
 > [!NOTE]
-> - The ZIP package must not include embedded files.
+> - The ZIP package can't include embedded files. Remove any embedded file content from the ZIP package.
 > - Sideloading agents in Teams isn't supported on macOS.
 
 ### Automatically share SharePoint files and folders
