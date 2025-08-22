@@ -43,10 +43,9 @@ To deploy an agent manually:
 
 1. In Copilot Studio agent builder, open your agent and select the **More options (...) menu.
 2. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
-3. Submit your app for publishing to your tenant via the **Integrated Apps** section of the Microsoft 365 admin center. You can also import your package and publish your agent via the [Developer Portal](https://dev.teams.microsoft.com/home).
 
 > [!NOTE]
-> - The ZIP package doesn't include embedded file content.
+> - The ZIP package must not include embedded files.
 > - Sideloading agents in Teams isn't supported on macOS.
 
 ### Automatically share SharePoint files and folders
