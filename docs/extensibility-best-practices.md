@@ -63,9 +63,10 @@ Connectors ground Copilot responses in enterprise data. Follow governance and co
 
 **Best practices:**
 
-- [**Use Microsoft Copilot connectors**](connectors-overview.md) to ingest external data.
-- [**Ensure connectors meet compliance requirements**](security-compliance.md), including [Responsible AI](rai-validation.md) (RAI), [data loss prevention](https://learn.microsoft.com/purview/dlp-learn-about-dlp) (DLP), and access control policies.
-- [**Use filters and scopes**](connectors-overview.md#filtering-and-scoping). Apply filters and scoping rules to ensure that only relevant data is indexed and exposed to Copilot. Applying filters helps reduce noise, improve performance, and minimize the risk of overexposing sensitive information.
+- [**Use Microsoft Copilot connectors**](overview-copilot-connector.md) to ingest external data.
+- [**Ensure connectors meet compliance requirements**](https://learn.microsoft.com/microsoft-copilot-studio/admin-certification), including [Responsible AI](rai-validation.md) (RAI), [data loss prevention](https://learn.microsoft.com/purview/dlp-learn-about-dlp) (DLP), and access control policies.
+- [**Use filters and scopes**](
+https://learn.microsoft.com/microsoft-365-copilot/connectors-overview#filtering-and-scoping). Apply filters and scoping rules to ensure that only relevant data is indexed and exposed to Copilot. Applying filters helps reduce noise, improve performance, and minimize the risk of overexposing sensitive information.
 
 ## Step 5: Configure agent capabilities
 
