@@ -48,6 +48,7 @@ In Microsoft 365 Copilot extensibility, agents are powered by two [core componen
 Orchestration layers define how our agent processes user input, selects knowledge or capabilities, and returns a response. Microsoft supports two orchestration models:
 
 | Orchestration model | Description | Use case |
+| ----- | ----- | ----- |
 | Declarative orchestration | Built-in orchestration in Copilot Studio or Agents Toolkit. Uses topics, triggers, and generative answers. | You want a low-code, guided experience with built-in orchestration. |
 | Custom orchestration | Bring your own orchestrator and models. Gives you control over logic and flow. | You need advanced logic, multi-agent workflows, or integration with external AI. |
 
