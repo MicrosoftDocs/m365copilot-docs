@@ -34,7 +34,7 @@ Design modular, reusable components to build scalable and maintainable extensibi
 In Microsoft 365 Copilot extensibility, agents are powered by two [core components](agents-overview.md#agent-core-components):
 
 - [**Knowledge sources**](knowledge-sources.md) provide the grounding data that agents use to generate accurate, context-aware responses.
-- **Capabilities** define what the agent can do—such as retrieving real-time data, performing calculations, or interacting with external systems.
+- [**Capabilities**](declarative-agent-capabilities-ids.md) define what the agent can do—such as retrieving real-time data, performing calculations, or interacting with external systems.
 
 **Best practices:**
 
@@ -67,7 +67,7 @@ Connectors ground Copilot responses in enterprise data. Follow governance and co
 - [**Use Microsoft Copilot connectors**](overview-copilot-connector.md) to ingest external data.
 - [**Ensure connectors meet compliance requirements**](https://learn.microsoft.com/microsoft-copilot-studio/admin-certification), including [Responsible AI](rai-validation.md) (RAI), [data loss prevention](https://learn.microsoft.com/purview/dlp-learn-about-dlp) (DLP), and access control policies.
 - [**Use filters and scopes**](
-https://learn.microsoft.com/microsoft-365-copilot/connectors-overview#filtering-and-scoping). Apply filters and scoping rules to ensure that only relevant data is indexed and exposed to Copilot. Applying filters helps reduce noise, improve performance, and minimize the risk of overexposing sensitive information.
+build-declarative-agents-add-knowledge.md). Apply filters and scoping rules to ensure that only relevant data is indexed and exposed to Copilot. Applying filters helps reduce noise, improve performance, and minimize the risk of overexposing sensitive information.
 
 ## Step 5: Configure agent capabilities
 
