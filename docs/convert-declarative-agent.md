@@ -6,7 +6,7 @@ ms.author: lauragra
 ms.reviewer: vermaanimesh
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 08/07/2025
+ms.date: 08/26/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -139,7 +139,9 @@ To update your app manifest:
 
 ## Customize your agent UX
 
-Define your agent experience for users. You can add conversation starters and suggested prompts, implement streaming responses and citations, and more. For more information, see [Custom engine agent user experience features](ux-custom-engine-agent.md).
+Define your agent experience for users. You can add conversation starters and suggested prompts, implement streaming responses and citations, and more. Note that you need to define and test your custom engine agent capabilities.
+
+For more information, see [Custom engine agent user experience features](ux-custom-engine-agent.md). 
 
 ### Update and submit your app package
 
