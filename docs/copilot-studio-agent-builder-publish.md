@@ -4,7 +4,7 @@ description: Learn how to publish and manage agents built with Copilot Studio ag
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 08/22/2025
+ms.date: 08/26/2025
 ms.topic: conceptual
 ---
 
@@ -29,7 +29,7 @@ The following table lists the sharing options that are available.
 | Sharing option                                          | Description |
 | ------------------------------------------------------- | ----------- |
 | Anyone in your organization                             | Anyone in your tenant can use the sharing link to use the agent. |
-| Specific users in your organization | Specific user groups can use the sharing link to use the agent. These user groups must be specified via the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/share-app#share-an-app-with-microsoft-365-groups) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
+| Specific users in your organization | Specific users or groups can use the sharing link to use the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
 | Only me                                                 | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
 
 > [!NOTE]
