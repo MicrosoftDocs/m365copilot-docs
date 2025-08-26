@@ -86,13 +86,12 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 ## Microsoft Teams data
 
-You can ground your agent in Microsoft Teams data, including Teams chat messages and meetings information. To use all chat messages, meetings transcripts, and calendars that you have access to as knowledge, in Copilot Studio agent builder, choose **My Teams chats and meetings**.
+You can ground your agent in Microsoft Teams data, including Teams chat messages and meeting information. To use all chat messages, meetings transcripts, and calendars that you have access to as knowledge, in Copilot Studio agent builder, choose **My Teams chats and meetings**.
 
-You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. To add specific chats as knowledge, on the **Configure** tab, in the **Knowledge** section, click the search bar. On the **Chats** tab, select the specific chats to add. Scoping knowledge to specific chats improves the accuracy and relevancy of agents responses.
+You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, click the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
 
 > [!IMPORTANT]
-> - This knowledge source is only avaialble to users with a Microsoft 365 Copilot add-on license.
-> - You can add up to five chat sources.
+> - Teams knowledge is only available to users with a Microsoft 365 Copilot add-on license.
 > - You can't scope to individual meetings. When you select **My Teams chats and meetings**, agents will search all meeting transcripts and the whole calendar.
 > - Agents might not have the access to all meeting transcripts, depending on the size of past transcripts.
 
