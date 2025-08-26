@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 08/13/2025
+ms.date: 08/25/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -86,15 +86,15 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 ## Mcirosoft Teams data
 
-You can ground your agent in Microsoft Teams data including Teams chat messages and meetings information. You can choose **My Teams Meeting and Chats** to use all chat messages, meetings transcripts, calendars you have the access to as knowledge.
+You can ground your agent in Microsoft Teams data, including Teams chat messages and meetings information. To use all chat messages, meetings transcripts, and calendars that you have access to as knowledge, in Copilot Studio agent builder, choose **My Teams chats and meetings**.
 
-Additionally, you can scope your agents to the specific chat channels including Teams team channel, group chats or meetings chat. To add specific Teams chat channels, on the **Configure** tab, in the **Knowledge** section, click the search bar. On the **Chats** tab, you can include specific chats that you want to add as knowledge. Scoping to the specific chat channels will improve the accuracy and relevancy of your agents' responses.
+You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. To add specific chats as knowledge, on the **Configure** tab, in the **Knowledge** section, click the search bar. On the **Chats** tab, select the specific chats to add. Scoping knowledge to specific chats improves the accuracy and relevancy of agents responses.
 
 > [!IMPORTANT]
-> This capability is only avaialble for M365 Copilot licensed users.
-> You can add up to five chat sources.
-> You can't scope to individual meeting yet. When you select **My Teams Meeting and Chats**, agents will search all the meetings with the transcripts and the whole calendars. Scoping feature will come in the future release.
-> Agents may not have the access to all the historical meetings' transcripts. It depends one the size of the past transcripts.
+> - This knowledge source is only avaialble to users with a Microsoft 365 Copilot add-on license.
+> - You can add up to five chat sources.
+> - You can't scope to individual meetings. When you select **My Teams chats and meetings**, agents will search all meeting transcripts and the whole calendar.
+> - Agents might not have the access to all meeting transcripts, depending on the size of past transcripts.
 
 :::image type="content" source="assets/images/capabilities-teamsChat-emails.png" border="false" alt-text="Screenshot of the knowledge picker with My Teams chats from groups, channels, and meetings highlighted":::
 
