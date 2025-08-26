@@ -20,7 +20,7 @@ When you customize Microsoft 365 Copilot with agents and use actions and connect
 
 The agents, actions, and connectors you build for Copilot are part of the larger Microsoft 365 Copilot system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through different native components and agents of the Copilot system.
 
-:::image type="content" source="assets/images/copilot-architecture.png" alt-text="Diagram that shows the flow of data across components of the Microsoft 365 Copilot ecosystem" lightbox="assets/images/copilot-architecture.png":::
+:::image type="content" source="assets/images/copilot-diagram-expanded.png" alt-text="Diagram that shows the flow of data across components of the Microsoft 365 Copilot ecosystem" border="false":::
 
 > [!NOTE]
 > Some agent capabilities are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license. For details, see [Agent capabilities across Microsoft 365 apps and surfaces](prerequisites.md#agent-capabilities-across-microsoft-365-apps-and-surfaces).
@@ -102,3 +102,7 @@ Microsoft 365 Copilot [developer mode](./debugging-copilot-agent.md) provides a 
 Microsoft 365 Copilot is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary. Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more information, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
 
 For more information for Copilot extensibility solution developers, see [Data, Privacy, and Security considerations for extending Microsoft 365 Copilot](./data-privacy-security.md).
+
+## Related content
+
+- [Extensibility guide for ISVs](/microsoft-cloud/dev/copilot/isv/isv-extensibility-story)

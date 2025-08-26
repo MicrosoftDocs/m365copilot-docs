@@ -1,0 +1,10 @@
+# YamlMime:ZonePivotGroups
+groups:
+- id: graph-api-versions
+  title: Microsoft Graph API versions
+  prompt: Choose an API version
+  pivots:
+  - id: graph-v1
+    title: "1.0"
+  - id: graph-preview
+    title: Beta

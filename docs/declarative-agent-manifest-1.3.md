@@ -4,7 +4,7 @@ description: Learn about the 1.3 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 03/24/2025
+ms.date: 08/18/2025
 ms.topic: reference
 ---
 
@@ -285,8 +285,8 @@ The items by SharePoint IDs object contains the following properties.
 | ------------------------- | ------- | ----------- |
 | `site_id`                 | String  | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
 | `web_id`                  | String  | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
-| `list_id`                 | String  | Optional. A unique GUID identifier for a list within a SharePoint or OneDrive site. |
-| `unique_id`               | String  | Optional. A unique GUID identifier used to represent a specific entity or resource. |
+| `list_id`                 | String  | Optional. A unique GUID identifier for a document library within a SharePoint site. |
+| `unique_id`               | String  | Optional. A unique GUID identifier used to scope a folder or file in the document library specified by the `list_id` property. |
 | `search_associated_sites` | Boolean | Optional. Indicates whether to enable searching associated sites. This value is only applicable when the `site_id` value references a SharePoint HubSite. |
 
 > [!TIP]
@@ -366,6 +366,8 @@ The knowledge sources object contains the following properties.
 | `host_name` | String                            | Required. A unique identifier for the host in Dataverse. |
 | `skill`     | String                            | A unique identifier that defines the configuration for how the agent interacts with Dataverse knowledge. |
 | `tables`    | Array of [tables](#tables-object) | An array of tables to scope the agent's knowledge. |
+
+[!INCLUDE [dataverse-knowledge-skill-location](includes/dataverse-knowledge-skill-location.md)]
 
 ###### Tables object
 

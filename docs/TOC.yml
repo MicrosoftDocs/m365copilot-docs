@@ -1,3 +1,4 @@
+items:
 - name: Microsoft 365 Copilot extensibility
   href: index.md
 - name: Explore
@@ -10,8 +11,6 @@
     href: orchestrator.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
-  - name: Extensibility guide for ISVs
-    href: /microsoft-cloud/dev/copilot/isv/isv-extensibility-story?context=/microsoft-365-copilot/extensibility/context
 - name: What's new
   href: whats-new.md
 - name: Get started
@@ -259,32 +258,14 @@
       href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/extensibility/context
     - name: Use external groups
       href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
-- name: Enhance AI solutions with Copilot APIs
+- name: Enhance AI solutions with Microsoft 365 Copilot APIs
   items:
-  - name: Microsoft 365 Copilot APIs overview
+  - name: Overview
     href: copilot-apis-overview.md
   - name: Use client libraries (preview)
     href: sdks/api-libraries.md
   - name: API reference
-    items:
-    - name: Retrieval API (preview)
-      items:
-      - name: Overview
-        href: api-reference/retrieval-api-overview.md
-      - name: Retrieve data
-        href: api-reference/copilotroot-retrieval.md
-      - name: Complex types
-        items:
-        - name: Retrieval response
-          href: api-reference/resources/retrievalresponse.md
-        - name: Retrieval hit
-          href: api-reference/resources/retrievalhit.md
-        - name: Retrieval extract
-          href: api-reference/resources/retrievalextract.md
-        - name: Search response metadata dictionary
-          href: api-reference/resources/searchresourcemetadatadictionary.md
-        - name: Search sensitivity label info
-          href: api-reference/resources/searchsensitivitylabelinfo.md
+    href: api/toc.yml
 - name: Publish
   items:
   - name: Overview
