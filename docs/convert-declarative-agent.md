@@ -139,9 +139,7 @@ To update your app manifest:
 
 ## Customize your agent UX
 
-Define your agent experience for users. You can add conversation starters and suggested prompts, implement streaming responses and citations, and more. For more information, see [Custom engine agent user experience features](ux-custom-engine-agent.md).
-
-Any capabilities that need to be in your custom engine agent needs to be defined and tested by you.
+Define your agent experience for users. You can add conversation starters and suggested prompts, implement streaming responses and citations, and more. For more information, see [Custom engine agent user experience features](ux-custom-engine-agent.md). Note that you need to define and test your custom engine agent capabilities.
 
 ### Update and submit your app package
 
