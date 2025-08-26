@@ -94,7 +94,7 @@ Developer mode is only available within Microsoft 365 Copilot (Copilot for Work)
 
 Accounts used to test agents that are grounded on organizational data or that include enhanced capabilities need a Microsoft 365 Copilot Developer license. Admins can manage Microsoft 365 Copilot Developer licenses in the Microsoft 365 admin center (under **Billing > Licenses**). You can also [use PowerShell to assign Microsoft 365 licenses to user accounts](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell).
 
-## Agent capabilities across Microsoft 365 apps and surfaces
+## User access to agents across Microsoft 365 apps and surfaces
 
 As a developer or maker building agents with Microsoft Copilot Studio, it's essential to understand where your agents can be accessed across Microsoft 365 apps and surfaces, how users interact with them across form factors (desktop, web, mobile), and what licensing or metered-usage models apply.
 
