@@ -84,7 +84,7 @@ When new files are uploaded to SharePoint, they can take up to several minutes t
 
 You can check the file readiness by looking in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When the underlying file uploaded to SharePoint is renamed or deleted, the agent picks up the changes. You can also select the reload button on top of the **Knowledge** section to manually reload the state.
 
-## Mcirosoft Teams data
+## Microsoft Teams data
 
 You can ground your agent in Microsoft Teams data, including Teams chat messages and meetings information. To use all chat messages, meetings transcripts, and calendars that you have access to as knowledge, in Copilot Studio agent builder, choose **My Teams chats and meetings**.
 
