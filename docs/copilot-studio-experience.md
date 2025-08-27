@@ -78,4 +78,6 @@ IT administrators use the Power Platform admin center to manage:
 
 ## Related content
 
-
+- [Choose the right tool to build your declarative agent](declarative-agent-tool-comparison.md)
+- [Overview of the Copilot Studio lite experience](copilot-studio-agent-builder.md)
+- [Use the Copilot Studio full experience to build agents](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
