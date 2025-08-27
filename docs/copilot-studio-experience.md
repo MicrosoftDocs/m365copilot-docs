@@ -39,6 +39,43 @@ Both the lite and full Copilot Studio experiences are included with a Microsoft�
 
 You can also use the lite experience for free to build web-only agents.
 
+## Lite experience governance principles
+
+The lite experience, embedded within Microsoft 365 Copilot, allows users to create agents that act as reusable templates. These agents help retrieve insights from Microsoft Graph by packaging repeatable prompts and content connections. They operate within existing enterprise boundaries and respect Microsoft 365 controls.
+
+The lite experience applies the following key governance principles:
+
+- No new privileges - Agents respect existing Microsoft 365 permissions. If a user does haven't access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.  
+- Microsoft 365 document sharing model - Agents follow the same Microsoft 365 sharing controls used for files and sites. Sharing can be scoped to individuals, groups, or teams.
+- Built-in visibility and auditing capabilities - Agents are surfaced within Microsoft 365. Standard audit logs, activity reports, and DLP/retention policies apply.
+
+IT administrators manage agent visibility, sharing, and lifecycle policies via **Copilot** > **Agents** in the Microsoft 365 admin center. Admins can:
+
+- View agent inventory and agent metadata  
+- Enable, disable, assign, block, or remove agents to align with organizational policies
+- Manage agent sharing controls
+- Configure pay-as-you-go billing and review agent usage and metered consumption
+- Enforce compliance using Microsoft Purview (sensitivity labels, audit logs)
+
+## Full experience governance principles
+
+The full experience supports the creation of more sophisticated agents, often by makers or developers. These can integrate external data sources, call APIs, orchestrate complex workflows, and connect to systems beyond Microsoft 365 — ideal for departmental or enterprise-wide solutions.
+
+The full experience applies the following key governance principles:
+
+- Structured development - Application Lifecycle Management (ALM) enables development across dev, test, and production environments.
+- Connector governance - Admins control which systems agents can connect to, reducing risk of unauthorized access.
+- Environment-level policies - Data loss prevention (DLP), role-based access, and auditing are enforced at the environment level.
+- Flexible deployment - Agents can be published across Teams, websites, and custom endpoints with granular access controls.
+- Secure collaboration - Agents support view/edit rights for cross-functional teamwork with oversight.
+
+IT administrators use the Power Platform admin center to manage:
+
+- Agent environments and connectors.
+- Lifecycle policies and publishing workflows.
+- Compliance via Microsoft Purview (e.g., sensitivity labels, audit logs, retention).
+- Telemetry and usage analytics to monitor agent behavior and ensure policy alignment.
+
 ## Related content
 
 
