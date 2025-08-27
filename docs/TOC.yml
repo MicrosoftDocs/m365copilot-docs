@@ -258,9 +258,9 @@ items:
       href: /graph/connecting-external-content-manage-items?context=/microsoft-365-copilot/extensibility/context
     - name: Use external groups
       href: /graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context
-- name: Enhance AI solutions with Copilot APIs
+- name: Enhance AI solutions with Microsoft 365 Copilot APIs
   items:
-  - name: Microsoft 365 Copilot APIs overview
+  - name: Overview
     href: copilot-apis-overview.md
   - name: Use client libraries (preview)
     href: sdks/api-libraries.md
