@@ -27,7 +27,7 @@ The following decision tree helps you map your scenario to the right experience.
 
 In summary:
 
-- **Choose the lite experience** if you want to quickly create an agent for yourself or a small team, using natural language and existing content (for example, a bot that answers questions from your team’s SharePoint files or emails). The lite version is simple, accessible, and integrated with the Microsoft 365 Copilot experience, so you can build agents in context without any code.
+- **Choose the lite experience** (formerly agent builder) if you want to quickly create an agent for yourself or a small team, using natural language and existing content (for example, a bot that answers questions from your team’s SharePoint files or emails). The lite version is simple, accessible, and integrated with the Microsoft 365 Copilot experience, so you can build agents in context without any code.
 
 - **Choose the full experience** if you need an agent for a broader audience (such as your whole department, organization, or external customers) or if the agent requires advanced capabilities like multi-step workflows or custom integrations, or you need more control over deployment and management. The full version of Copilot Studio is a standalone web portal with a rich set of tools for complex or scalable solutions.
 
@@ -35,7 +35,7 @@ The following table provides a more detailed feature comparison.
 
 | Feature | Lite experience | Full experience |
 | ------- | --------------- | --------------- |
-| Access point | Microsoft 365 Copilot app | Web app |
+| Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Web app](https://copilotstudio.microsoft.com) |
 | Agent target audience | Individuals or small teams. | Department, organization, or external customers. |
 | Agent type | Lightweight Q&A agents with organizational knowledge. | Agents with complex scenarios like multi-step workflows or business system integration, and that require enterprise governance and robust controls. |
 | Key capabilities | <ul><li>Natural language authoring</li><li>Content-focused Q&A scenarios based on organization context from Microsoft Graph</li><li>Respects user permissions to Microsoft 365 data</li><li>Uses the Microsoft 365 Copilot orchestrator, foundation models, and services</li></ul> | <ul><li>Broad and external publishing</li><li>Supports multistep logic, approvals, and branching workflows</li><li>Supports advanced AI models and integration with Azure AI services</li><li>Provides access to prebuilt and custom connectors to connect with data sources beyond Microsoft 365</li><li>Autonomous capabilities</li><li>Lifecycle management tools including versioning; development, test, and production environments; role-based access controls; and telemetry and analytics.</li></ul>  |
