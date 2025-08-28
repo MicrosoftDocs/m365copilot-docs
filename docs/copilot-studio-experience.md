@@ -1,5 +1,5 @@
 ---
-title: Choose the Right Copilot Studio Experience to Build Your Agent
+title: Choose the Right Copilot Studio Experience for Building Your Agent
 description: Find information about current known issues related to Microsoft 365 Copilot extensibility and the recommended workarounds.
 author: lauragra
 ms.author: lauragra
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 08/25/2025
 ---
 
-# Choose the right Copilot Studio experience to build your agent
+# Choose the right Copilot Studio experience
 
 Microsoft Copilot Studio is a powerful platform for building secure, scalable, and intelligent agents that work across Microsoft 365 and line-of-business systems. Copilot Studio offers two ways to build AI agents: a lite experience (integrated into the Microsoft 365 Copilot app) and a full experience (a standalone Copilot Studio application). Both experiences enable you to create powerful agents, but they serve different needs. This article describes the differences between the lite and full experiences to help you choose the right Copilot Studio experience for your scenario.
 
@@ -64,12 +64,12 @@ IT administrators manage agent visibility, sharing, and lifecycle policies in th
 - View agent inventory and agent metadata.  
 - Enable, disable, assign, block, or remove agents to align with organizational policies.
 - Manage agent sharing controls.
-- Configure pay-as-you-go billing and review agent usage and metered consumption.
+- Configure pay-as-you-go billing and review agent usage and consumption.
 - Enforce compliance using Microsoft Purview (sensitivity labels, audit logs).
 
 ## Full experience governance principles
 
-The full experience supports the creation of more sophisticated agents, often by makers or developers. These can integrate external data sources, call APIs, orchestrate complex workflows, and connect to systems beyond Microsoft 365 — ideal for departmental or enterprise-wide solutions.
+The full experience supports the creation of more sophisticated agents, often by makers or developers. These agents can integrate external data sources, call APIs, orchestrate complex workflows, and connect to systems beyond Microsoft 365—ideal for departmental or enterprise-wide solutions.
 
 The full experience applies the following key governance principles:
 
