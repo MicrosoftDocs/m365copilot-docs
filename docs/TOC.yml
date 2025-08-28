@@ -42,7 +42,7 @@ items:
       items:
       - name: Tools overview
         href: declarative-agent-tool-comparison.md
-      - name: Copilot Studio lite and full experiences
+      - name: Copilot Studio experiences
         href: copilot-studio-experience.md
     - name: Use Visual Studio Code
       expanded: true
