@@ -25,15 +25,15 @@ The following table provides a more detailed feature comparison.
 | Feature | Lite experience | Full experience |
 | ------- | --------------- | --------------- |
 | Access point | Microsoft 365 Copilot app or Teams chat | Web app or Teams app |
-| Agent target audience | Individuals or small teams. Suited for individual productivity or specific team projects. | Department, organization, or external customers. Suited for agents that are available across a company or for customers or partners outside the organization. |
-| Agent type | Simple Q&A agents with organizational knowledge. | Agents with complex scenarios like multi-step workflows and database or business system integration, and that require enterprise governance and robust controls. |
-| Key capabilities | <ul><li>Natural language authoring</li><li>Supports content-focused Q&A scenarios based on organization context</li><li>Permissions-aware - agents only surface data users have permission to access</li><li>Uses the Copilot orchestrator</li></ul> | <ul><li>Workflow automation - Supports multistep logic, approvals, and branching workflows</li><li>Supports advanced AI models and integration with Azure AI services</li><li>Prebuilt connectors connect with data sources beyond Microsoft 365</li><li>Autonomous capabilities - agents can run automatically in the background</li><li>Lifecycle management tools including versioning; development, test, and production environments; role-based access controls; and telemetry and analytics.</li></ul>  |
-| Use cases | Use the lite experience to build:<ul><li>Project FAQ bots that answers common questions based on project documentation.</li><li>Product documentation assistants that help employees find information from internal product manuals or wikis.</li><li>Onboarding bots that help new team members get answers from internal knowledge bases.</li></ul> |  Use the full experience to build:<ul><li>Customer support agents that create support tickets and escalates issues to a human.</li><li>IT help desk triage agents that handle employee IT requests and routes them to the right support team.</li><li>Sales assistants for CRM that retrieve sales data, makes notes, or kicks off an approval workflow.</li></ul> |
-| Management and governance | Managed through the Microsoft 365 admin center. Agents are shared with specific people or groups, and admins can enable or disable agent creation and usage for the organization. Microsoft 365 compliance policies are applied. | Managed through the Power Platform admin center with finer-grained controls for enterprise scenarios. Agnes can be applied to various channels (Teams, web, custom apps) with appropriate access controls. |
+| Agent target audience | Individuals or small teams. | Department, organization, or external customers. |
+| Agent type | Simple Q&A agents with organizational knowledge. | Agents with complex scenarios like multi-step workflows or business system integration, and that require enterprise governance and robust controls. |
+| Key capabilities | <ul><li>Natural language authoring</li><li>Content-focused Q&A scenarios based on organization context</li><li>Respects user permissions to Microsoft 365 data</li><li>Uses the Copilot orchestrator</li></ul> | <ul><li>Supports multistep logic, approvals, and branching workflows</li><li>Supports advanced AI models and integration with Azure AI services</li><li>Provides access to prebuilt connectors to connect with data sources beyond Microsoft 365</li><li>Autonomous capabilities</li><li>Lifecycle management tools including versioning; development, test, and production environments; role-based access controls; and telemetry and analytics.</li></ul>  |
+| Use cases | Use the lite experience to build:<br /><ul><li>Project FAQ bots that answers common questions based on project documentation.</li><li>Product documentation assistants that help employees find information from internal product manuals or wikis.</li><li>Onboarding bots that help new team members get answers from internal knowledge bases.</li></ul> |  Use the full experience to build:<br /><ul><li>Customer support agents that create support tickets and escalates issues to a human.</li><li>IT help desk triage agents that handle employee IT requests and routes them to the right support team.</li><li>Sales assistants for CRM that retrieve sales data, makes notes, or kicks off an approval workflow.</li></ul> |
+| Management and governance | Managed through the Microsoft 365 admin center. | Managed through the Power Platform admin center with finer-grained controls for enterprise scenarios. |
 
 [Placeholder for flow chart image]
 
-## Licensing
+## Licensing requirements
 
 Both the lite and full Copilot Studio experiences are included with a Microsoft 365 Copilot add-on license. If you don’t have a Copilot license, you can use Copilot Studio message packs or a pay-as-you-go plan to access either experience.
 
@@ -41,21 +41,21 @@ You can also use the lite experience for free to build web-only agents.
 
 ## Lite experience governance principles
 
-The lite experience, embedded within Microsoft 365 Copilot, allows users to create agents that act as reusable templates. These agents help retrieve insights from Microsoft Graph by packaging repeatable prompts and content connections. They operate within existing enterprise boundaries and respect Microsoft 365 controls.
+The lite experience, embedded within Microsoft 365 Copilot and Microsoft 365 apps, allows users to create agents that act as reusable templates. These agents help retrieve insights from Microsoft Graph by packaging repeatable prompts and content connections. They operate within existing enterprise boundaries and respect Microsoft 365 controls.
 
 The lite experience applies the following key governance principles:
 
-- No new privileges - Agents respect existing Microsoft 365 permissions. If a user does haven't access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.  
-- Microsoft 365 document sharing model - Agents follow the same Microsoft 365 sharing controls used for files and sites. Sharing can be scoped to individuals, groups, or teams.
-- Built-in visibility and auditing capabilities - Agents are surfaced within Microsoft 365. Standard audit logs, activity reports, and DLP/retention policies apply.
+- **No new privileges** - Agents respect existing Microsoft 365 permissions. If a user does haven't access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.  
+- **Microsoft 365 document sharing model** - Agents follow the same Microsoft 365 sharing controls used for files and sites. Sharing can be scoped to individuals, groups, or teams.
+- **Built-in visibility and auditing capabilities** - Agents are surfaced within Microsoft 365. Standard audit logs, activity reports, and DLP/retention policies apply.
 
-IT administrators manage agent visibility, sharing, and lifecycle policies via **Copilot** > **Agents** in the Microsoft 365 admin center. Admins can:
+IT administrators manage agent visibility, sharing, and lifecycle policies in the Microsoft 365 admin center via the **Copilot** > **Agents** page. Admins can:
 
-- View agent inventory and agent metadata  
-- Enable, disable, assign, block, or remove agents to align with organizational policies
-- Manage agent sharing controls
-- Configure pay-as-you-go billing and review agent usage and metered consumption
-- Enforce compliance using Microsoft Purview (sensitivity labels, audit logs)
+- View agent inventory and agent metadata.  
+- Enable, disable, assign, block, or remove agents to align with organizational policies.
+- Manage agent sharing controls.
+- Configure pay-as-you-go billing and review agent usage and metered consumption.
+- Enforce compliance using Microsoft Purview (sensitivity labels, audit logs).
 
 ## Full experience governance principles
 
@@ -63,17 +63,17 @@ The full experience supports the creation of more sophisticated agents, ofte
 
 The full experience applies the following key governance principles:
 
-- Structured development - Application Lifecycle Management (ALM) enables development across dev, test, and production environments.
-- Connector governance - Admins control which systems agents can connect to, reducing risk of unauthorized access.
-- Environment-level policies - Data loss prevention (DLP), role-based access, and auditing are enforced at the environment level.
-- Flexible deployment - Agents can be published across Teams, websites, and custom endpoints with granular access controls.
-- Secure collaboration - Agents support view/edit rights for cross-functional teamwork with oversight.
+- **Structured development** - Application Lifecycle Management (ALM) enables development across dev, test, and production environments.
+- **Connector governance** - Admins control which systems agents can connect to, reducing risk of unauthorized access.
+- **Environment-level policies** - Data loss prevention (DLP), role-based access, and auditing are enforced at the environment level.
+- **Flexible deployment** - Agents can be published across Teams, websites, and custom endpoints with granular access controls.
+- **Secure collaboration** - Agents support view/edit rights for cross-functional teamwork with oversight.
 
 IT administrators use the Power Platform admin center to manage:
 
 - Agent environments and connectors.
 - Lifecycle policies and publishing workflows.
-- Compliance via Microsoft Purview (e.g., sensitivity labels, audit logs, retention).
+- Compliance via Microsoft Purview (sensitivity labels, audit logs, retention).
 - Telemetry and usage analytics to monitor agent behavior and ensure policy alignment.
 
 ## Related content
