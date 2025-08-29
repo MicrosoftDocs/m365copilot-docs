@@ -1,16 +1,16 @@
 ---
 title: Create declarative agents with task-specific large language models tuned with Microsoft 365 Copilot Tuning (preview)
-description: Learn how to build declarative agents using Copilot Studio agent builder that use task-specific large language models tuned with Microsoft 365 Copilot tuning
+description: Learn how to build declarative agents using Copilot Studio lite that use task-specific large language models (LLMs) tuned with Microsoft 365 Copilot tuning
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 06/17/2025
+ms.date: 09/30/2025
 ---
 
 # Create declarative agents with Microsoft 365 Copilot Tuning models (preview)
 
-[Microsoft 365 Copilot Tuning](/copilot/microsoft-365/copilot-tuning-overview) allows organizations to fine-tune large language models (LLMs) by using their own tenant data. These fine-tuned models power agents that can perform domain-specific tasks based on the organization's unique knowledge. This article explains how to create declarative agents in Copilot Studio agent builder that use those fine-tuned models.
+[Microsoft 365 Copilot Tuning](/copilot/microsoft-365/copilot-tuning-overview) allows organizations to fine-tune large language models (LLMs) by using their own tenant data. These fine-tuned models power agents that can perform domain-specific tasks based on the organization's unique knowledge. This article explains how to create declarative agents in the Copilot Studio lite experience that use those fine-tuned models.
 
 > [!NOTE]
 > Copilot Tuning is currently available for Early Access Preview (EAP). For details about requirements and how to enroll, see the [admin guide](/copilot/microsoft-365/copilot-tuning-admin-guide).
@@ -26,7 +26,7 @@ To create a declarative agent based on a fine-tuned model, you need:
 
 To create the agent:
 
-1. In Microsoft 365 Copilot Chat, select **Create agent** in the left-hand navigation to open Copilot Studio agent builder.
+1. In Microsoft 365 Copilot Chat, select **Create agent** in the left-hand navigation to open Copilot Studio lite.
 
 1. In the **What is the purpose of your agent?** dialog box, select **Task-specific**, and then choose **Continue**.
 
@@ -35,7 +35,7 @@ To create the agent:
 
 1. In the next dialog box, select a fine-tuned model from the list of models, then select **Done**.
 
-1. Finish customizing your agent by filling in the remaining fields. For more information, see [Build agents with Copilot Studio agent builder](copilot-studio-agent-builder-build.md).
+1. Finish customizing your agent by filling in the remaining fields. For more information, see [Build agents with Copilot Studio lite](build-with-copilot-studio-lite-experience.md).
 
 ## Add knowledge sources
 
@@ -46,4 +46,4 @@ Agents that use a model tuned for [document generation](/copilot/microsoft-365/c
 ## Related content
 
 - [Microsoft 365 Copilot Tuning overview](/copilot/microsoft-365/copilot-tuning-overview)
-- [Build agents with Copilot Studio agent builder](copilot-studio-agent-builder-build.md)
+- [Build agents with Copilot Studio lite](build-with-copilot-studio-lite-experience.md)
