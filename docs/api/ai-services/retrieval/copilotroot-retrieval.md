@@ -7,13 +7,16 @@ ms.topic: reference
 ms.date: 08/18/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
+zone_pivot_groups: graph-api-versions
 ---
 
 <!-- markdownlint-disable MD024 -->
 
 # Retrieve grounding data
 
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
 The Microsoft 365 Copilot Retrieval API allows for the retrieval of relevant text extracts from SharePoint and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Use the Retrieval API to ground your generative AI solutions with Microsoft 365 data while optimizing for context recall.
 
@@ -31,9 +34,17 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
+:::zone pivot="graph-preview"
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
 ```
+:::zone-end
+
+:::zone pivot="graph-v1"
+```http
+POST https://graph.microsoft.com/v1.0/copilot/retrieval
+```
+:::zone-end
 
 ## Request headers
 
