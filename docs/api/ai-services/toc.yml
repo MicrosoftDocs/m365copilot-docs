@@ -1,5 +1,5 @@
 items:
-- name: Retrieval API (preview)
+- name: Retrieval API
   href: retrieval/toc.yml
 - name: Meeting insights API (preview)
   href: meeting-insights/toc.yml
