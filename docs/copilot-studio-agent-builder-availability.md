@@ -1,6 +1,6 @@
 ---
-title: Copilot Studio agent builder regional availability and language support
-description: Learn about the regional availability and supported languages for Copilot Studio agent builder.
+title: Copilot Studio lite experience regional availability and language support
+description: Learn about the regional availability and supported languages for the Copilot Studiolite experience.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
@@ -8,13 +8,13 @@ ms.date: 2/26/2025
 ms.topic: conceptual
 ---
 
-# Agent builder regional availability and language support
+# Regional availability and language support
 
 This article provides information about Copilot Studio regional availability and the agent and authoring languages that Copilot Studio supports.
 
 ## Regional availability
 
-Copilot Studio agent builder is available if your [Power Platform default environment](/power-platform/admin/environments-overview#default-environment) is in any of the following countries or regions:
+The lite experience of Copilot Studio is available if your [Power Platform default environment](/power-platform/admin/environments-overview#default-environment) is in any of the following countries or regions:
 
 - Asia Pacific
 - Australia
@@ -34,7 +34,7 @@ Copilot Studio agent builder is available if your [Power Platform default enviro
 - United Kingdom
 - United States
 
-The Power Platform default environment location is automatically set to the location of the tenant. You can verify the location of your Power Platform default environment in the Power Platform Admin Center. For more information, see [Environment location](/power-platform/admin/environments-overview#environment-location). 
+The Power Platform default environment location is automatically set to the location of the tenant. You can verify the location of your Power Platform default environment in the Power Platform Admin Center. For more information, see [Environment location](/power-platform/admin/environments-overview#environment-location).
 
 ## Language support
 

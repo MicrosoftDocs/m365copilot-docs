@@ -4,7 +4,7 @@ description: Learn which tools are most suited for different use cases when crea
 ms.author: v-koenenkaty
 author: kmkoenen
 ms.localizationpriority: medium
-ms.date: 07/21/2025
+ms.date: 09/15/2025
 ms.topic: conceptual
 ---
 
@@ -38,11 +38,14 @@ The following table describes the prerequisites for using each tool and where ag
 
 ## Copilot Studio agent builder
 
-[Copilot Studio agent builder](copilot-studio-agent-builder.md) is a great option for users with no coding experience who need a guided process for building declarative agents. You can access the agent builder through the **Create agent** option in Microsoft 365 Copilot.
+[Copilot Studio lite](copilot-studio-lite-experience.md) (formerly agent builder) is a great option for users with no coding experience who need a guided process for building declarative agents. You can access the lite experience via the following apps and paths:
+
+ - **Microsoft 365 Copilot app:** Select the **Create agent** option
+ - **Microsoft Teams:** Select the **Microsoft 365 Copilot** tab and then choose **Create agents**.
 
 | **Pros** | **Cons** |
 |:------------|:------------|
-| **Ease of use:** Designed for users to build agents right inside of M365 Copilot with no coding experience, using a natural language interface. |  **Complex workflows:** Doesn't support complex workflows and integrations. |
+| **Ease of use:** Designed for users to build agents right inside of M365 Copilot with no coding experience, using a natural language interface.  |  **Complex workflows:** Doesn't support complex workflows and integrations. |
 | **Quick setup:** Provides a guided process for building agents. | **Slower feature rollout:** Some advanced features are available in Agents Toolkit before they're available in Copilot Studio agent builder.  |
 | **Accessibility:** Suitable for creating personal and group productivity agents without having to write code.  |  |
 | **Straightforward agent testing**: The test pane allows users to test the end-user experience of agents directly within the tool. | |
