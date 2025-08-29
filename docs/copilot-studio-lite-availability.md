@@ -1,5 +1,5 @@
 ---
-title: Copilot Studio lite experience regional availability and language support
+title: Regional availability and language support for Copilot Studio lite
 description: Learn about the regional availability and supported languages for the Copilot Studiolite experience.
 author: jasonxian-msft
 ms.author: jasonxian

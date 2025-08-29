@@ -55,6 +55,6 @@ You can further enhance your Writing Coach agents with integration. For example:
 
 ## Related content
 
-- [Copilot Studio agent builder](copilot-studio-agent-builder.md)
-- [Build agents with agent builder](copilot-studio-agent-builder-build.md)
+- [Overview of Copilot Studio lite](copilot-studio-lite-experience.md)
+- [Build agents with Copilot Studio lite](docs\build-with-copilot-studio-lite-experience.md)
 - [Publish agents](copilot-studio-agent-builder-publish.md)

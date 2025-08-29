@@ -56,8 +56,9 @@ You can enhance the functionality of your Interview Question Assistant agents by
 - This agent doesn't provide interview advice. The answers provided are based on configured knowledge sources or general knowledge and don't reflect the opinions of Microsoft.
 - While the agent can generate questions based on templates and job descriptions, it might not fully capture the unique nuances of every role. Customize questions as needed.
 - Ensure that the interview questions generated comply with local labor laws and regulations.
+
 ## Related content
 
-- [Copilot Studio agent builder](copilot-studio-agent-builder.md)
-- [Build agents with agent builder](copilot-studio-agent-builder-build.md)
+- [Overview of Copilot Studio lite](copilot-studio-lite-experience.md)
+- [Build agents with Copilot Studio lite](docs\build-with-copilot-studio-lite-experience.md)
 - [Publish agents](copilot-studio-agent-builder-publish.md)

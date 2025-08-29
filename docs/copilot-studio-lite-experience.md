@@ -1,16 +1,16 @@
 ---
-title: Use Copilot Studio lite experience to build agents
-description: Learn how to use Copilot Studio agent builder to build declarative agents.
+title: Use Copilot Studio lite to agents
+description: Learn how to use Copilot Studio lite  to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 07/18/2025
+ms.date: 09/30/2025
 ms.topic: conceptual
 ---
 
-# Overview of Copilot Studio light experience
+# Overview of Copilot Studio lite
 
-The Copilot Studio lite experience (formerly agent builder) in Microsoft 365 Copilot enables you to build agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly.
+Copilot Studio lite (formerly agent builder) in Microsoft 365 Copilot enables you to build agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly.
 
 Copilot Studio lite experience offers an immediate, interactive AI development experience within Microsoft 365 Copilot, which is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use the full [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
 
@@ -22,7 +22,7 @@ Use Copilot Studio lite to create and customize agents that can be used with Mic
 - An agent that provides writing or presentation coaching that is tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-starter.png" alt-text="Copilot Studio agent builder initial screen":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-starter.png" alt-text="Copilot Studio lite initial screen":::
 
 You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors. You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
 
@@ -47,7 +47,7 @@ Copilot Studio capabilities for Microsoft 365 are processed by the Copilot Studi
 
 ## Data storage
 
-Agents created via agent builder do not consume the tenant's Dataverse storage entitlement.
+Agents created via Copilot Studio lite do not consume the tenant's Dataverse storage entitlement.
 
 ## Compliance
 
@@ -102,10 +102,10 @@ You can find and copy these details in the Copilot Studio within the **Get suppo
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-1-updated.png" alt-text="Find the support details in the Copilot Studio lite experience":::
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in agent builder":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in Copilot studio lite":::
 
 ## Related content
 
-- [Build agents with Copilot Studio agent builder](copilot-studio-agent-builder-build.md)
-- [Publish and manage Copilot Studio agent builder agents](copilot-studio-agent-builder-publish.md)
-- [Copilot Studio agent builder availability and language support](copilot-studio-agent-builder-availability.md)
+- [Overview of Copilot Studio lite](copilot-studio-lite-experience.md)
+- [Publish and manage Copilot Studio agents](copilot-studio-lite-publish.md)
+- [Regional availability and language support for Copilot Studio lite](copilot-studio-lite-availability.md)

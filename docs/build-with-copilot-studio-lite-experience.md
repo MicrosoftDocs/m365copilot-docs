@@ -8,7 +8,7 @@ ms.date: 07/09/2025
 ms.topic: conceptual
 ---
 
-# Build agents with Copilot Studio agent builder
+# Build agents with Copilot Studio lite
 
 The Copilot Studio agent builder provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
