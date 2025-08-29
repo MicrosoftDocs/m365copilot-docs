@@ -1,22 +1,22 @@
 ---
-title: Add Knowledge Sources to your Declarative Agent for Microsoft 365 by Using Copilot Studio Agent Builder
-description: Learn about the different types of knowledge sources that you can add to your declarative agent when you use Copilot Studio agent builder.
+title: Add knowledge sources to your declarative agent for Microsoft 365 by using Copilot Studio lite
+description: Learn about the different types of knowledge sources that you can add to your declarative agent when you use Copilot Studio lite.
 author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 08/25/2025
+ms.date: 09/30/2025
 ---
 
 # Add knowledge sources to your declarative agent in the Copilot Studio lite experience
 
 The Copilot Studio lite experience provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
-This article describes the supported knowledge sources and the steps to configure them in agent builder. For general information about how to use agent builder, see [Build agents with Copilot Studio lite experience](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-build).
+This article describes the *supported knowledge sources and the steps to configure them* in the Copilot Studio lite experience. For general information about how to use the Copilot Studio lite experience, see [Build agents with Copilot Studio lite](copilot-studio-lite-experience.md).
 
 For more information about supported knowledge sources and licensing requirements, see [Knowledge sources](/microsoft-365-copilot/extensibility/knowledge-sources).
 
-## Add knowledge sources in agent builder
+## Add knowledge sources
 
 To add knowledge sources to your agent:
 
@@ -76,7 +76,7 @@ After you select a site, you can select several files and folders. Doing so adds
 
 :::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-sharepoint-picker-folders.png" alt-text="SharePoint file picker":::
 
-You can also upload files into SharePoint by using the picker. The file appears in the same folder after it finishes uploading and is ready for use in agent builder.
+You can also upload files into SharePoint by using the picker. The file appears in the same folder after it finishes uploading and is ready for use in Copilot Studio lite.
 
 ### File readiness
 
@@ -86,7 +86,7 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 ## Microsoft Teams data
 
-You can ground your agent in Microsoft Teams data, including Teams chat messages and meeting information. To use all chat messages, meeting transcripts, and calendars that you have access to as knowledge, in Copilot Studio agent builder, choose **My Teams chats and meetings**.
+You can ground your agent in Microsoft Teams data, including Teams chat messages and meeting information. To use all chat messages, meeting transcripts, and calendars that you have access to as knowledge, in Copilot Studio lite, choose **My Teams chats and meetings**.
 
 You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, click the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
 
@@ -153,7 +153,7 @@ A sensitivity label is also applied to agent responses. This label is the higher
 - The sensitivity label of the embedded content
 - The sensitivity label of any other agent knowledge sources, such as SharePoint and OneDrive files.
 
-Currently, agent builders can't set a sensitivity label on an agent.
+Currently, Copilot Studio lite can't set a sensitivity label on an agent.
 
 #### Unsupported sensitivity label scenarios
 
@@ -199,7 +199,7 @@ The following table lists the file types that you can add as knowledge to your a
 
 ## Copilot connectors
 
-Copilot connectors allow agents to access and apply knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. With agent builder, you can integrate enterprise data from your workspace directly into your agents, empowering them with domain-specific knowledge.
+Copilot connectors allow agents to access and apply knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. With the Copilot Studio lite, you can integrate enterprise data from your workspace directly into your agents, empowering them with domain-specific knowledge.
 
 > [!NOTE]
 > Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
@@ -275,5 +275,5 @@ To configure your agent to prioritize your knowledge sources, on the **Configure
 
 ## Related content
 
-- [Overview of Copilot Studio agent builder](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder)
-- [Build agents from template](/microsoft-365-copilot/extensibility/agent-builder-templates)
+- [Overview of Copilot Studio lite](copilot-studio-lite-experience.md)
+- [Build an agent from a template](agent-builder-templates)

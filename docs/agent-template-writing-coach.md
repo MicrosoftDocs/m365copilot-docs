@@ -1,11 +1,11 @@
 ---
 title: Create a Writing Coach agent from a template
-description: Learn how to create a declarative agent from the Writing Coach template in Copilot Studio agent builder.
+description: Learn how to create a declarative agent from the Writing Coach template in Copilot Studiolite.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/01/2025
+ms.date: 09/30/2025
 ---
 
 # Use the Writing Coach template to build an agent

@@ -1,21 +1,21 @@
 ---
-title: Use the Copilot Studio Agent Builder to Build Agents
-description: Learn how to build agents by using Copilot Studio agent builder in Microsoft 365 Copilot.
+title: Use Copilot Studio lite to build agents
+description: Learn how to build agents by using the Microsoft 365 Copilot Studio lite experience
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 07/09/2025
+ms.date: 09/30/2025
 ms.topic: conceptual
 ---
 
 # Build agents with Copilot Studio lite
 
-The Copilot Studio agent builder provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
+The Copilot Studio lite experience provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-To get started with the Copilot Studio agent builder, open the Microsoft 365 Copilot app, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
+To get started with Copilot Studio lite, open the Microsoft 365 Copilot app, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
 
 > [!NOTE]
-> Copilot Studio agent builder capabilities differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
+> The capabilities of the Copilot Studio lite experience differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 
 You can author your declarative agent in two ways:
 
@@ -31,7 +31,7 @@ Both tabs work seamlessly to provide a rich authoring experience.
 
 The **Describe** tab allows you to create an agent using plain language. As you provide information conversationally, the agent's name, description, and instructions update continuously to refine the agent's behavior. This experience provides a rich yet simple natural language way to create a customized agent. After you create an agent, you can return to the agent and use the **Describe** tab to update it using natural language.
 
-You build agents in plain language by answering the questions the agent builder asks. The builder progressively updates the agent in each turn of the conversation, and changes are saved automatically. You can make updates to the agent in any turn of the conversation. Changes to the agent's name, description, and instructions update automatically. However, you can't add an icon or knowledge sources directly from the **Describe** tab. Use the **Configure** tab to add an icon, knowledge sources, or capabilities.
+You build agents in plain language by answering the questions Copilot Studio asks. The builder progressively updates the agent in each turn of the conversation, and changes are saved automatically. You can make updates to the agent in any turn of the conversation. Changes to the agent's name, description, and instructions update automatically. However, you can't add an icon or knowledge sources directly from the **Describe** tab. Use the **Configure** tab to add an icon, knowledge sources, or capabilities.
 
 ## Configure your agent
 
@@ -65,7 +65,7 @@ The test pane initially appears with suggested starter prompts, which when click
 
 ## Add knowledge sources
 
-The agent builder allows you to configure specific knowledge sources for the agent to reference. To build context-aware agents, you can reference SharePoint items or any public websites. If your users have a Microsoft 365 Copilot add-on license, you can also ground your agents in personal work information such as Teams chat messages and Outlook emails, or use prebuilt [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) that are enabled in your tenant.
+Copilot Studio allows you to configure specific knowledge sources for the agent to reference. To build context-aware agents, you can reference SharePoint items or any public websites. If your users have a Microsoft 365 Copilot add-on license, you can also ground your agents in personal work information such as Teams chat messages and Outlook emails, or use prebuilt [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) that are enabled in your tenant.
 
 For more information, see [Add knowledge sources](copilot-studio-agent-builder-knowledge.md).
 
@@ -80,9 +80,9 @@ To add one or more capabilities to your agent, choose the toggle next to the cap
 
 ## Build from a template
 
-Copilot Studio agent builder includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs, including by adding knowledge sources and capabilities. For more information, see [Agent builder templates overview](agent-builder-templates.md) or choose one of the templates on the **Describe** or **Configure** tab in agent builder.
+The Copilot Studio lite experience includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs, including by adding knowledge sources and capabilities. For more information, see [Copilot Studio agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Publish and manage Copilot Studio agent builder agents](copilot-studio-agent-builder-publish.md)
+> [Publish and manage Copilot Studio agents](copilot-studio-agent-builder-publish.md)

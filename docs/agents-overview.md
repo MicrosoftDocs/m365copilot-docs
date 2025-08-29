@@ -61,7 +61,7 @@ To configure a declarative agent, you provide:
 Declarative agents have the following characteristics:
 
 - **Hosting:** Use Copilot's orchestrator and foundation model. No additional hosting is required.
-- **Tooling:** Build agents using low-code tools such as [Copilot Studio agent builder](https://www.microsoft.com) or pro-code tools like Visual Studio or Visual Studio Code and Microsoft 365 Agents Toolkit.
+- **Tooling:** Build agents using low-code tools such as [Copilot Studio lite](https://www.microsoft.com) or pro-code tools like Visual Studio or Visual Studio Code and Microsoft 365 Agents Toolkit.
 - **Channels:** Run in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook.
 
 ## Custom engine agents

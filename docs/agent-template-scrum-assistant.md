@@ -1,11 +1,11 @@
 ---
 title: Create a Scrum Assistant agent from a template
-description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Scrum Assistant template.
+description: Learn how to create a declarative agent in Copilot Studio lite by using the Scrum Assistant template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/01/2025
+ms.date: 09/30/2025
 ---
 
 # Use the Scrum Assistant template to build an agent
