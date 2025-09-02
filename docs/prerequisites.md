@@ -102,9 +102,9 @@ Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizati
 > [!NOTE]
 > Copilot Chat and the agent experience in Word and PowerPoint is available only to users with a Microsoft 365 Copilot license. The agent experience is currently not available in the Copilot Chat experience in Outlook.
 
-Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow usage billing. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
+Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow usage billing. 
 
-The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant.
+The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
 | Capability | Copilot Chat (no usage billing)* | Copilot Chat (usage billing) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
