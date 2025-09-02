@@ -102,10 +102,10 @@ items:
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use Copilot Studio agent builder
+    - name: Use Copilot Studio lite
       items:
       - name: Overview
-        href: copilot-studio-agent-builder.md
+        href: copilot-studio-lite-experience.md
       - name: Build agents
         href: copilot-studio-agent-builder-build.md
       - name: Build agents from template
