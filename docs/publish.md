@@ -41,9 +41,9 @@ When Microsoft validates and approves your app package, your agent is made avail
 | Submit to organizational catalog | ✅ | [Upload a custom app using Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings#upload-a-custom-app-using-teams-admin-center?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) |
 | Submit to Microsoft Commercial Marketplace | ✅ | [Publish your app to the Teams Store](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish) |
 
-## Declarative agents built with Copilot Studio agent builder
+## Declarative agents built with Copilot Studio lite
 
-The [Copilot Studio agent builder](./copilot-studio-agent-builder.md) within Microsoft 365 Copilot enables you to build and  declarative agents for Microsoft 365 Copilot quickly, and easily share and distribute them within your organization.
+The [Copilot Studio lite experience](copilot-studio-lite-experience.md) within Microsoft 365 Copilot enables you to build and  declarative agents for Microsoft 365 Copilot quickly, and easily share and distribute them within your organization.
 
 | Distribution method | Support | Learn more |
 |--|--|--|
