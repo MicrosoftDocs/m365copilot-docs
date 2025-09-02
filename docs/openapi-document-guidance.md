@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 08/22/2025
+ms.date: 09/05/2025
 ---
 
 # Create effective OpenAPI descriptions for extending Microsoft 365 Copilot
