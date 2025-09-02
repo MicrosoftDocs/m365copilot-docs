@@ -95,7 +95,7 @@ The following are the current throttling and other limitations to the Retrieval 
 - Not all SharePoint and OneDrive properties are supported in the **filterExpression**. For a list of supported properties, see the  [API reference](copilotroot-retrieval.md).
 - The **maximumNumberOfResults** request parameter has a maximum value of 25.
 - The **relevanceScore** in the response payload measures the cosine similarity between the **queryString** and the extract, normalized to the 0-1 range.
-- It is possible for an extract to be returned without a **relevanceScore**.
+- It is possible for an extract to be returned without a **relevanceScore** when retrieving from Copilot connectors.
 - Up to 200 requests per user per hour are supported.
 - Retrieval from nontextual content, including tables, images, and charts, is not supported.
 - Results from files with .docx, .pptx, and .pdf extensions that are larger than 512 MB are not supported. Results from files with any other extension that are larger than 150 MB are not supported.
