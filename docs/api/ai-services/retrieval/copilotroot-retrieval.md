@@ -246,10 +246,12 @@ Content-Type: application/json
       "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
       "extracts": [
         {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+          "relevanceScore": 0.874
         },
         {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
+          "text": "You will need to sign in with 2FA to access the corporate VPN.",
+          "relevanceScore": 0.801
         }
       ],
       "resourceType": "externalItem",
@@ -262,10 +264,13 @@ Content-Type: application/json
       "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
       "extracts": [
         {
-          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials.",
+          "relevanceScore": 0.772
+
         },
         {
-          "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
+          "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN.",
+          "relevanceScore": 0.655
         }
       ],
       "resourceType": "externalItem",
@@ -385,10 +390,12 @@ Content-Type: application/json
             "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
             "extracts": [
               {
-                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+                "relevanceScore": 0.8374363553387588
               },
               {
-                "text": "You will need to sign in with 2FA to access the corporate VPN."
+                "text": "You will need to sign in with 2FA to access the corporate VPN.",
+                "relevanceScore": 0.7465472642498679
               }
             ],
             "resourceType": "listItem",
@@ -406,10 +413,12 @@ Content-Type: application/json
             "webUrl": "https://contoso.sharepoint.com/sites/HR/Corporate_VPN.docx",
             "extracts": [
               {
-                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials.",
+                "relevanceScore": 0.7588038775683956
               },
               {
-                "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN."
+                "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN.",
+                "relevanceScore": 0.6696818957446697
               }
             ],
             "resourceType": "listItem",
@@ -438,10 +447,12 @@ Content-Type: application/json
             "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
             "extracts": [
               {
-                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+                "relevanceScore": 0.874
               },
               {
-                "text": "You will need to sign in with 2FA to access the corporate VPN."
+                "text": "You will need to sign in with 2FA to access the corporate VPN.",
+                "relevanceScore": 0.801
               }
             ],
             "resourceType": "externalItem",
@@ -451,10 +462,12 @@ Content-Type: application/json
             "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
             "extracts": [
               {
-                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials.",
+                "relevanceScore": 0.772
               },
               {
-                "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
+                "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN.",
+                "relevanceScore": 0.655
               }
             ],
             "resourceType": "externalItem",
