@@ -22,7 +22,7 @@ To ask general questions about Microsoft 365 Copilot and Copilot samples, use th
 | General questions about Microsoft 365 Copilot | If you have general questions about Microsoft 365 Copilot, submit your questions to [Microsoft Q&A](/answers/tags/466/copilot-m365-development). |
 | Developer community help | [Microsoft Q&A](/answers/) is the site for technical questions and answers for Microsoft products. Use the [Microsoft 365 Copilot Development](/answers/tags/466/copilot-m365-development.html) tag to ask questions, connect with other developers, and submit answers. |
 | Extensibility samples | Submit issues and ask general questions related to samples in the respective Microsoft 365 Copilot [extensibility samples](samples.md) GitHub repositories. |
-| Partner Center support | For issues related to Partner Center (such as environment setup, licensing, or publishing workflows), use the [Partner Center AI Assistant](/partner-center/support/report-problems-with-partner-center#contact-support-using-partner-center-ai-assistant) to report problems or contact support. |
+| Partner Center support | For issues related to Partner Center (such as environment setup, licensing, or publishing workflows), use the [Partner Center AI Assistant](/partner-center/support/report-problems-with-partner-center#contact-support-using-partner-center-ai-assistant). |
 
 ## Documentation feedback
 
