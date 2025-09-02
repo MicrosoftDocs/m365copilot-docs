@@ -36,6 +36,7 @@ The following table provides a more detailed feature comparison.
 | Feature | Lite experience | Full experience |
 | ------- | --------------- | --------------- |
 | Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Web app](https://copilotstudio.microsoft.com) |
+| User type | Information workers | Makers and developers |
 | Agent target audience | Individuals or small teams. | Department, organization, or external customers. |
 | Agent type | Lightweight Q&A agents with organizational knowledge. | Agents with complex scenarios like multi-step workflows or business system integration, and that require enterprise governance and robust controls. |
 | Key capabilities | <ul><li>Natural language authoring</li><li>Content-focused Q&A scenarios based on organization context from Microsoft Graph</li><li>Respects user permissions to Microsoft 365 data</li><li>Uses the Microsoft 365 Copilot orchestrator, foundation models, and services</li></ul> | <ul><li>Broad and external publishing</li><li>Supports multistep logic, approvals, and branching workflows</li><li>Supports advanced AI models and integration with Azure AI services</li><li>Provides access to prebuilt and custom connectors to connect with data sources beyond Microsoft 365</li><li>Autonomous capabilities</li><li>Lifecycle management tools including versioning; development, test, and production environments; role-based access controls; and telemetry and analytics.</li></ul>  |
@@ -56,7 +57,6 @@ The lite experience, embedded within Microsoft 365 Copilot allows users to cre
 The lite experience applies the following key governance principles:
 
 - **No new privileges** - Agents respect existing Microsoft 365 permissions. If a user does haven't access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.  
-- **Microsoft 365 document sharing model** - Agents follow the same Microsoft 365 sharing controls used for files and sites. Sharing can be scoped to individuals, groups, or teams.
 - **Built-in visibility and auditing capabilities** - Agents are surfaced within Microsoft 365. Standard audit logs, activity reports, and DLP/retention policies apply.
 
 IT administrators manage agent visibility, sharing, and lifecycle policies in the Microsoft 365 admin center via the **Copilot** > **Agents** page. Admins can:
@@ -78,6 +78,7 @@ The full experience applies the following key governance principles:
 - **Environment-level policies** - Data loss prevention (DLP), role-based access, and auditing are enforced at the environment level.
 - **Flexible deployment** - Agents can be published across Teams, websites, and custom endpoints with granular access controls.
 - **Secure collaboration** - Agents support view/edit rights for cross-functional teamwork with oversight.
+- **Development and publishing oversight** - Application Lifecycle Management (ALM) supports dev/test/prod environments, and publishing to an organization’s app catalog requires admin approval. This ensures visibility and control over what becomes broadly available.
 
 IT administrators use the Power Platform admin center to manage:
 
