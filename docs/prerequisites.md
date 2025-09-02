@@ -5,7 +5,7 @@ author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 08/25/2025
+ms.date: 09/02/2025
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -102,11 +102,11 @@ Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizati
 > [!NOTE]
 > Copilot Chat and the agent experience in Word and PowerPoint is available only to users with a Microsoft 365 Copilot license. The agent experience is currently not available in the Copilot Chat experience in Outlook.
 
-Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow metered usage.
+Some agent types and and agent capabilities are only available to licensed Microsoft 365 Copilot users or users in tenants that allow usage billing. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
-The following table lists the agent types and agent capabilities that are available to users based on licensing and metered usage configuration in the tenant.
+The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant.
 
-| Capability | Copilot Chat (no metered usage)* | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
+| Capability | Copilot Chat (no usage billing)* | Copilot Chat (usage billing) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
 |Copilot Studio agent builder |  :white_check_mark: | :white_check_mark:\** | :white_check_mark: |
 |Copilot Studio |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
@@ -128,6 +128,7 @@ The following table lists the agent types and agent capabilities that are availa
 |[**Custom engine agents**](overview-custom-engine-agent.md)| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
+
 \** Users who are configured with a pay-as-you-go plan in the Microsoft 365 admin center don't have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use Copilot Studio agent builder to create agents.
 
 > [!NOTE]
