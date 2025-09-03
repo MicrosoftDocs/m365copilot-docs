@@ -23,7 +23,7 @@ To choose between the lite and full experiences of Copilot Studio to build your 
 
 The following decision tree helps you map your scenario to the right experience.
 
-[Placeholder for flow chart image]
+:::image type="content" source="assets/images/copilot-studio-agent-builder/copilot-studio-decision-flow.png" alt-text="A flow chart that shows the decision points for choosing the full and lite experiences of Copilot Studio.":::
 
 In summary:
 
