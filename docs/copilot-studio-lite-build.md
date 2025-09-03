@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 The Copilot Studio lite experience provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-To get started with Copilot Studio lite, open the Microsoft 365 Copilot app, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
+To get started with the lite experience, open the Microsoft 365 Copilot app, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
 
 > [!NOTE]
 > The capabilities of the Copilot Studio lite experience differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).

@@ -1,6 +1,6 @@
 ---
-title: Use Copilot Studio lite to agents
-description: Learn how to use Copilot Studio lite  to build declarative agents.
+title: Build agents using the Copilot Studio lite experience
+description: Learn how to use the Copilot Studio lite experience to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
@@ -8,11 +8,11 @@ ms.date: 09/30/2025
 ms.topic: conceptual
 ---
 
-# Overview of Copilot Studio lite
+# Overview of the Copilot Studio lite experience
 
-Copilot Studio lite (formerly agent builder) in Microsoft 365 Copilot enables you to build agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly.
+The Copilot Studio lite experience (formerly agent builder) in Microsoft 365 Copilot enables you to build agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly.
 
-Copilot Studio lite experience offers an immediate, interactive AI development experience within Microsoft 365 Copilot, which is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use the full [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
+The Copilot Studio lite experience offers an immediate, interactive AI development experience within Microsoft 365 Copilot, which is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use the full [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
 
 > [!NOTE]
 > The capabilities available in Copilot Studio lite differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).

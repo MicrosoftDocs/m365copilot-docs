@@ -1,11 +1,11 @@
 ---
 title: Create a Learning Coach agent from a template
-description: Learn how to create a declarative agent in Copilot Studio lite from the Learning Coach template.
+description: Learn how to create a declarative agent in the Copilot Studio lite experience from the Learning Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/01/2025
+ms.date: 09/30/2025
 ---
 
 # Use the Learning Coach template to build an agent
@@ -55,6 +55,6 @@ You can enhance the functionality of your Learning Coach agents by connecting to
 
 ## Related content
 
-- [Overview of Copilot Studio lite](copilot-studio-lite-experience.md)
-- [Build agents with Copilot Studio lite](docs\build-with-copilot-studio-lite-experience.md)
-- [Publish agents](copilot-studio-agent-builder-publish.md)
+- [Overview of the Copilot Studio lite experience](copilot-studio-lite-experience.md)
+- [Build agents with the Copilot Studio lite experience](docs\build-with-copilot-studio-lite-experience.md)
+- [Publish agents via the Copilot Studio lite experience](copilot-studio-lite-publish.md)

@@ -40,7 +40,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 If you're using the [Copilot Studio lite experience](copilot-studio-lite-experience.md) to create your agent and want to enable code interpreter, open the **Configure** tab and then, under **Capabilities**, choose the toggle next to **Code interpreter**.
 
-:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of Copilot Studio lite":::
+:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of Copilot Studio lite experience":::
 
 ## Code interpreter capability examples
 

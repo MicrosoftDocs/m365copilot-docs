@@ -1,6 +1,6 @@
 ---
 title: Copilot Studio agent templates overview
-description: Learn how to use templates to quickly create declarative agents for Microsoft 365 Copilot in Copilot Studio lite to create a declarative agent.
+description: Learn how to use templates to quickly create declarative agents for Microsoft 365 Copilot in the Copilot Studio lite experience to create a declarative agent.
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
@@ -12,7 +12,7 @@ ms.date: 09/30/2025
 
 The Copilot Studio lite experience includes various templates that you can use to create declarative agents for Microsoft 365 Copilot. The templates apply design guidelines and industry best practices to help you get started quickly. This enables you to spend more time customizing the logic and functionality to meet your business requirements. The agent templates accelerate the agent development process to help organizations improve overall operational efficiency.
 
-This article provides information about how to create your own agents with Copilot Studio lite by using natural language as input .
+This article provides information about how to create your own agents using the Copilot Studio lite experience by using natural language as input .
 
 ## Use templates to create an agent
 
@@ -36,6 +36,7 @@ After the agent is created, choose **Go to agent** in Copilot to chat with the a
 
 ## Related content
 
-- [Build agents with Copilot Studio lite](docs\build-with-copilot-studio-lite-experience.md)
 - [Declarative agents overview](overview-declarative-agent.md)
+- [Overview of the Copilot Studio lite experience](copilot-studio-lite-experience.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
+- [Build agents with the Copilot Studio lite experience](docs\build-with-copilot-studio-lite-experience.md)
