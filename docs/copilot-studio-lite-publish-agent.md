@@ -8,13 +8,13 @@ ms.date: 09/30/2025
 ms.topic: conceptual
 ---
 
-# Publish and manage Copilot Studio agents 
+# Publish and manage Copilot Studio agents
 
-This article describes how to create or publish agents built with Copilot Studio lite and how to update or delete agents.
+This article describes how to create or publish agents built with the lite experience within Copilot Studio and how to update or delete agents.
 
 ## Create the agent
 
-While you're [building your agent](build-with-copilot-studio-lite-experience.md), in the Copilot Studio lite experience, the changes you make are saved automatically. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
+While you're [building your agent](copilot-studio-lite-build.md), in the Copilot Studio lite experience, the changes you make are saved automatically. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
 
 After the agent has been successfully created, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft 365 Copilot.
 
@@ -37,7 +37,7 @@ The following table lists the sharing options that are available.
 
 ### Deploy agents via ZIP package
 
-Copilot Studio lite provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
+The Copilot Studio lite experience provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 To deploy an agent manually:
 
@@ -85,7 +85,6 @@ Both options show the **My agents** list. You can select the existing agent that
 
 ### Update your agent
 
-When updating an agent in the Copilot Studio lite experience, the changes you make are saved automatically.
 However, your changes won't be visible to users until your updates are published. To update a previously created agent, select **Update** on the top right corner. Your changes might take several minutes to become available for end users.
 
 > [!NOTE]

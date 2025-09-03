@@ -8,7 +8,7 @@ ms.date: 09/30/2025
 ms.topic: conceptual
 ---
 
-# Build agents with Copilot Studio lite
+# Build agents using the Copilot Studio lite experience
 
 The Copilot Studio lite experience provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
