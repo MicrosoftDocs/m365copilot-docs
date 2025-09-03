@@ -5,7 +5,7 @@ author: JoshuaPartlow
 ms.author: joshuapa
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/01/2024
+ms.date: 09/02/2025
 ---
 
 # Agents are apps for Microsoft 365
@@ -46,7 +46,7 @@ The color icon represents your agent within the Microsoft 365 Copilot UI and in-
 :::row:::
 :::column:::
 
-:::image type="content" source="assets/images/color-icon.png" alt-text="Sample image of an app color icon, showing 192x192 pixels as total icon size with background included, with a central 96x96 pixel space showing the 'Safe region' for the app symbol":::
+:::image type="content" source="assets/images/color-icon.png" alt-text="Sample image of an app color icon, showing 192x192 pixels as total icon size with background included, with a central 120x120 pixel space showing the 'Safe region' for the app symbol":::
 
 :::column-end:::
 :::column span="2":::
@@ -55,7 +55,7 @@ Your color icon:
 
 - Can be any color
 - Must be 192 x 192 pixels in size
-- Should contain a symbol of 96 x 96 pixels (to allow 48 pixels of padding for [host scenarios where it is cropped](/microsoftteams/platform/concepts/build-and-test/apps-package#color-icon))
+- Should contain a symbol within 120 x 120 pixels (to allow 36 pixels of padding for [host scenarios where it is cropped](/microsoftteams/platform/concepts/build-and-test/apps-package#color-icon))
 - Must sit atop a fully solid or fully transparent square background
 
 :::column-end:::
