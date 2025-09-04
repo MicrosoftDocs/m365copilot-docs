@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Overview of Copilot extensibility
+          - text: Overview
             url: /microsoft-365-copilot/extensibility/overview
           - text: Planning guide
             url: /microsoft-365-copilot/extensibility/planning-guide
@@ -31,8 +31,6 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Agents Overview
-            url: /microsoft-365-copilot/extensibility/agents-overview
           - text: Build a declarative agent
             url: /microsoft-365-copilot/extensibility/overview-declarative-agent
           - text: Build a custom engine agent
@@ -51,7 +49,7 @@ landingContent:
           - text: Build a custom Copilot connector
             url: /microsoft-365-copilot/extensibility/build-your-first-connector
 
-  - title: Developer tools
+  - title: Use developer tools
     linkLists:
       - linkListType: reference
         links:
