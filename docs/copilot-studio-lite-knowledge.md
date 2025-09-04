@@ -278,4 +278,4 @@ To configure your agent to prioritize your knowledge sources, on the **Configure
 - [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md)
 - [Build an agent from a template](agent-templates-overview.md)
-- [Publish agents](copilot-studio-lite-publish.md)
+- [Publish and manage Copilot Studio agents](copilot-studio-lite-publish.md)
