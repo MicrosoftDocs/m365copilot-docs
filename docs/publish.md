@@ -41,20 +41,20 @@ When Microsoft validates and approves your app package, your agent is made avail
 | Submit to organizational catalog | ✅ | [Upload a custom app using Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings#upload-a-custom-app-using-teams-admin-center?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) |
 | Submit to Microsoft Commercial Marketplace | ✅ | [Publish your app to the Teams Store](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish) |
 
-## Declarative agents built with Copilot Studio lite
+## Declarative agents built with the Copilot Studio lite experience
 
-The [Copilot Studio lite experience](copilot-studio-lite.md) within Microsoft 365 Copilot enables you to build and  declarative agents for Microsoft 365 Copilot quickly, and easily share and distribute them within your organization.
+The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) enables you to build and declarative agents for Microsoft 365 Copilot quickly, and easily share and distribute them within your organization.
 
 | Distribution method | Support | Learn more |
 |--|--|--|
-| Sideload for personal use | ✅ | [Create an agent with Copilot Studio lite](copilot-studio-lite-publish.md#create-the-agent) |
-| Share with others | ✅ | [Share an agent via Copilot Studio lite](copilot-studio-lite-publish.md#create-the-agent) |
-| Submit to organizational catalog | ✅ | [Share an agent via Copilot Studio lite](copilot-studio-lite-publish.md#create-the-agent) |
+| Sideload for personal use | ✅ | [Create an agent with Copilot Studio](copilot-studio-lite-publish.md#create-the-agent) |
+| Share with others | ✅ | [Share an agent via Copilot Studio](copilot-studio-lite-publish.md#create-the-agent) |
+| Submit to organizational catalog | ✅ | [Share an agent via Copilot Studio](copilot-studio-lite-publish.md#create-the-agent) |
 | Submit to Microsoft Commercial Marketplace | ❌ | |
 
 ## Copilot agents built with Copilot Studio
 
-A Copilot agent built with Copilot Studio is more customizable and feature-rich version of a declarative agent created with [Copilot Studio lite](#declarative-agents-built-with-copilot-studio-lite). Unlike a standalone Copilot Studio agent, a Copilot agent isn't automatically deployed to Microsoft 365 Copilot and Teams when published. Rather, you need to set its [availability options](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?branch=main#set-availability-options) to distribute the agent to share among individuals, groups, or to be published to the organization's catalog by an admin.
+A Copilot agent built with Copilot Studio is more customizable and feature-rich version of a declarative agent created with the [lite experience of Copilot Studio](#declarative-agents-built-with-copilot-studio-lite). Unlike standalone Copilot agents, agents built with Copilot Studio aren't automatically deployed to Microsoft 365 Copilot and Teams when published. Rather, you need to set its [availability options](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?branch=main#set-availability-options) to distribute the agent to share among individuals, groups, or to be published to the organization's catalog by an admin.
 
 | Distribution method | Support | Learn more |
 |--|--|--|

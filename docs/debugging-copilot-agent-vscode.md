@@ -112,4 +112,4 @@ Report any feedback or issues with your agent by using the thumbs-up or thumbs-d
 ## Related content
 
 - [Build a declarative agent with Visual Studio Code](build-declarative-agents.md)
-- [Build agents with Copilot Studio lite](copilot-studio-lite-experince.md)
+- [Build agents using Copilot Studio](copilot-studio-lite-build.md)

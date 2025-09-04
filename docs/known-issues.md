@@ -3,9 +3,9 @@ title: Known Issues in Microsoft 365 Copilot Extensibility
 description: Find information about current known issues related to Microsoft 365 Copilot extensibility and the recommended workarounds.
 author: lauragra
 ms.author: lauragra
-ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: Copilot St09/09/2025udio":::
+ms.date: 09/09/2025
+ms.topic: conceptual
 ---
 
 # Known issues
@@ -48,9 +48,9 @@ If a SharePoint file used as a knowledge source contains null characters in the 
 
 ### Pasting a link to a file in Copilot Studio that doesn't work
 
-Currently, users can select a file in Copilot Studio and Copilot Studio lite, and  then the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
+Currently, users can select a file in Copilot Studio, and  then the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
 
-**Workaround:** The user can select the file from the UI in Copilot Studio and Copilot Studio lite.
+**Workaround:** The user can select the file from the UI in Copilot Studio.
 
 ### Sharing agents from within the Copilot Studio lite experience can fail
 

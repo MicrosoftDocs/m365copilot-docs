@@ -3,9 +3,9 @@ title: Manage agents for Microsoft 365 Copilot
 description: Learn about admin controls for Microsoft 365 Copilot agents.
 author: erikadoyle
 ms.author: edoyle
-ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 03/14/2025
+ms.date: 09/09/2025
+ms.topic: conceptual
 ---
 
 # Manage agents for Microsoft 365 Copilot
@@ -40,14 +40,14 @@ Both [declarative agents](./build-declarative-agents.md) and [custom engine agen
 | Upload custom apps | Sideload custom apps to your tenant | [Microsoft 365 Agents Toolkit requirements for Microsoft 365 Copilot agents](/microsoft-365-copilot/extensibility/prerequisites#teams-toolkit-requirements) |
 | Integrated apps | Manage availability of Copilot agents in your tenant | [Manage agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#manage-agents-in-the-microsoft-365-admin-center) |
 
-## Agents built with Copilot Studio lite in Microsoft 365 Copilot
+## Agents built with Copilot Studio in Microsoft 365 Copilot
 
-Declarative agents for Microsoft 365 Copilot that are built within the [Copilot Studio lite](./copilot-studio-agent-builder.md) experience can be shared with the organization as a whole, or with specific users. These agents and the users they are shared with can be and managed by the person who created the agent.
+Declarative agents for Microsoft 365 Copilot that are built using [Copilot Studio](copilot-studio-lite.md) can be shared with the organization as a whole, or with specific users. These agents and the users they are shared with can be and managed by the person who created the agent.
 
 |Control | Core scenario | Related content|
 |--|--|--|
-| Allow the following users access to Copilot agents | Enable or disable the entry point for the Copilot Studio lite experience in Microsoft 365 Copilot (*Create an agent*) | [Enable or disable Copilot extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#enable-or-disable-copilot-extensibility) |
-| Share | Manage access to your agent within your organization | [Publish and manage Copilot Studio agents](./copilot-studio-lite-publish-agent'.md#share-the-agent) |
+| Allow the following users access to Copilot agents | Enable or disable the entry point for Copilot Studio in Microsoft 365 Copilot (*Create an agent*) | [Enable or disable Copilot extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#enable-or-disable-copilot-extensibility) |
+| Share | Manage access to your agent within your organization | [Publish and manage Copilot Studio agents](copilot-studio-lite-publish.md#share-the-agent) |
 
 ## Agents built with Microsoft Copilot Studio
 

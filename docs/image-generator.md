@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 5/09/2025
+ms.date: 09/09/2025
 ---
 
 # Add the image generator capability to your agent
@@ -55,11 +55,11 @@ If you're using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
 }
 ```
 
-### Copilot Studio lite
+### Copilot Studio
 
-If you're using [Copilot Studio lite](copilot-studio-lite.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Image generator**.
+If you're using [Copilot Studio](copilot-studio-lite.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Image generator**.
 
-:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section in Copilot Studio lite":::
+:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section in Copilot Studio":::
 
 > [!NOTE]
 > The image generator doesn't currently work in the test pane within the Copilot Studio lite experience.
