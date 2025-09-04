@@ -3,7 +3,6 @@ description: "Create TypeScript Client"
 ---
 
 ```typescript
-
 import { createBaseAgentsM365CopilotBetaServiceClient, RetrievalDataSourceObject } from '@microsoft/agents-m365copilot-beta';
 import { DeviceCodeCredential } from '@azure/identity';
 import { FetchRequestAdapter } from '@microsoft/kiota-http-fetchlibrary';
@@ -55,7 +54,7 @@ async function main() {
         throw error;
     }
 }  
- 
+
 main().catch((error) => {
     console.error('An error occurred:', error);
 });
