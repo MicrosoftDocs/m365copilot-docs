@@ -8,9 +8,9 @@ ms.date: 09/30/2025
 ms.topic: conceptual
 ---
 
-# Regional availability and language support
+# Copilot Studio regional availability and language support
 
-This article provides information about Copilot Studio regional availability and the agent and authoring languages that Copilot Studio supports.
+This article provides information about the regional availability of the lite experience of Copilot Studio in Microsoft 365 Copilot and the agent and authoring languages that Copilot Studio supports.
 
 ## Regional availability
 
