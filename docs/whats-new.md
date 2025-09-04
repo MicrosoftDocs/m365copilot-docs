@@ -14,6 +14,12 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## September 2025
+
+### Rebranding of Copilot Studio agent builder
+
+To clarify that Copilot Studio is a single tool with both a full agent building experience and a lighter weight experience, the documentation has been updated. References to **Copilot Studio agent builder** have been updated to **the lite experience in Copilot Studio**.
+
 ## August 2025
 
 ### Use Teams meetings as a knowledge source in Copilot Studio agent builder
@@ -38,7 +44,7 @@ Added the `disclaimers` property to the [Declarative agent manifest object](decl
 
 ### Embedded file content file size limit increase
 
-You can now upload files up to 100 MBs in size when you embed file content as knowledge in Copilot Studio agent builder. For more information, see [File size limits](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-knowledge#file-size-limits).
+You can now upload files up to 100 MBs in size when you embed file content as knowledge in Copilot Studio agent builder. For more information, see [File size limits](/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge#file-size-limits).
 
 ### Increased SharePoint file limit for agents
 
@@ -88,7 +94,7 @@ Use the Copilot API libraries to work with Microsoft 365 Copilot APIs. For more 
 
 ### Outlook email and Teams chats knowledge in agent builder
 
-Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Copilot Studio agent builder to build your agent. For more information, see [Add knowledge sources](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-build).
+Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Copilot Studio agent builder to build your agent. For more information, see [Add knowledge sources](/microsoft-365-copilot/extensibility/copilot-studio-lite-build).
 
 ## May 2025
 
@@ -120,7 +126,7 @@ Email is now available as a knowledge source for agents build with [Microsoft 36
 
 ### Copilot Studio agent builder templates
 
-Use templates in [Copilot Studio agent builder](copilot-studio-agent-builder.md) to streamline your agent development process. For more information, see [Agent builder templates overview](agent-builder-templates.md).
+Use templates in [Copilot Studio agent builder](copilot-studio-lite.md) to streamline your agent development process. For more information, see [Agent templates overview](agent-templates-overview.md).
 
 ### Document interaction for declarative agents in Word
 
