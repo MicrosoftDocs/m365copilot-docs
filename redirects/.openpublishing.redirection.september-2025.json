@@ -6,25 +6,79 @@
       "redirect_document_id": true
     },
     {
-      "source_path_from_root": "/docs/ttk-declarative-copilot-getting-started.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/build-declarative-agents",
+      "source_path_from_root": "docs/agent-builder-template-customer-insight.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-customer-insight",
       "redirect_document_id": true
     },
     {
-      "source_path_from_root": "/docs/overview-declarative-copilot.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/overview-declarative-agent",
+      "source_path_from_root": "/docs/agent-builder-template-idea-coach.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-idea-coach.md",
       "redirect_document_id": true
     },
     {
-      "source_path_from_root": "/docs/overview-custom-engine-copilot.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/overview-custom-engine-agent",
+      "source_path_from_root": "docs/agent-builder-template-interview-questions.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-interview-questions",
       "redirect_document_id": true
-    }
-    ,
+    },
     {
-      "source_path_from_root": "/docs/build-or-extend.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/agents-overview",
+      "source_path_from_root": "/docs/agent-builder-template-learning-coach.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-learning-coach",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-template-meeting-coach.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-meeting-coach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-template-prompt-coach.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-prompt-coach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-template-quiz-tutor.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-quiz-tutor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-template-scrum-assistant.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-scrum-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-template-writing-coach.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-writing-coach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-templates.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-templates-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-agent-builder-availability.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-availability",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-agent-builder-knowledge.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-agent-builder-publish.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-publish-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-agent-builder-tuned-models.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-tuned-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-agent-builder.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite",
+      "redirect_document_id": false
+    },
   ]
 }
