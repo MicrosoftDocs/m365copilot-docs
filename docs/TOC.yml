@@ -102,7 +102,7 @@ items:
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use Copilot Studio lite
+    - name: Use Copilot Studio
       items:
       - name: Overview
         href: copilot-studio-lite.md
