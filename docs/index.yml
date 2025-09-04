@@ -1,0 +1,72 @@
+### YamlMime:Landing
+
+title: Extend Microsoft 365 Copilot
+summary: Learn how to build, deploy, and manage custom Copilot experiences using Microsoft 365 extensibility options like plugins, connectors, and agents.
+
+metadata:
+  title: Extend Microsoft 365 Copilot
+  description: Explore extensibility options for Microsoft 365 Copilot, including plugins, connectors, and custom agents. Learn how to build, deploy, and manage Copilot solutions.
+  author: lauragra
+  ms.author: lauragra
+  ms.date: 09/04/2025
+  ms.topic: landing-page
+  ms.custom:
+    - copilot-extensibility
+    - bap-template
+  ms.collection: m365-copilot-extensibility
+
+landingContent:
+  - title: Get started with Copilot extensibility
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Overview of Copilot extensibility
+            url: /microsoft-365-copilot/extensibility/overview
+          - text: Planning guide
+            url: /microsoft-365-copilot/extensibility/planning-guide
+          - text: Licensing and deployment considerations
+            url: /microsoft-365-copilot/extensibility/licensing-deployment
+
+  - title: Build with plugins and connectors
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Add a plugin to a declarative agent
+            url: /microsoft-365-copilot/extensibility/add-plugin
+          - text: Use Microsoft Graph connectors
+            url: /microsoft-365-copilot/extensibility/graph-connectors
+          - text: Build a custom connector
+            url: /microsoft-365-copilot/extensibility/custom-connectors
+
+  - title: Create and manage agents
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Build a declarative agent
+            url: /microsoft-365-copilot/extensibility/build-declarative-agent
+          - text: Use agent builder templates
+            url: /microsoft-365-copilot/extensibility/agent-builder-templates
+          - text: Manage agent lifecycle
+            url: /microsoft-365-copilot/extensibility/agent-lifecycle
+
+  - title: Admin and governance
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Agent governance deployment guide
+            url: /microsoft-365-copilot/extensibility/agent-governance
+          - text: Manage plugin approvals
+            url: /microsoft-365-copilot/extensibility/plugin-approvals
+          - text: Security and compliance
+            url: /microsoft-365-copilot/extensibility/security-compliance
+
+  - title: Developer tools and resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Copilot extensibility APIs
+            url: /microsoft-365-copilot/extensibility/apis
+          - text: GitHub sample templates
+            url: https://github.com/microsoft/copilot-extensibility-samples
+          - text: Copilot Studio documentation
+            url: /microsoft-copilot-studio/
