@@ -46,7 +46,7 @@ When you configure your agent to use OneDrive and SharePoint content as knowledg
 
 For information about how to add OneDrive and SharePoint knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.5.md#onedrive-and-sharepoint-object).
 
-For information about how to add SharePoint knowledge to your agent in Copilot Studio, see [Add knowledge sources](copilot-studio-agent-builder-knowledge.md#sharepoint-content).
+For information about how to add SharePoint knowledge to your agent in Copilot Studio, see [Add knowledge sources](copilot-studio-lite-knowledge.md#sharepoint-content).
 
 ## Web and scoped web search
 

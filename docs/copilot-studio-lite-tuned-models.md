@@ -46,4 +46,4 @@ Agents that use a model tuned for [document generation](/copilot/microsoft-365/c
 ## Related content
 
 - [Microsoft 365 Copilot Tuning overview](/copilot/microsoft-365/copilot-tuning-overview)
-- [Build agents using Copilot Studio](build-with-copilot-studio-lite.md)
+- [Build agents using Copilot Studio](copilot-studio-lite-build.md)
