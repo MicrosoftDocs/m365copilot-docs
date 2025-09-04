@@ -44,7 +44,7 @@ Added the `disclaimers` property to the [Declarative agent manifest object](decl
 
 ### Embedded file content file size limit increase
 
-You can now upload files up to 100 MBs in size when you embed file content as knowledge in Copilot Studio agent builder. For more information, see [File size limits](/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge#file-size-limits).
+You can now upload files up to 100 MBs in size when you embed file content as knowledge in Copilot Studio agent builder. For more information, see [File size limits](/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge).
 
 ### Increased SharePoint file limit for agents
 

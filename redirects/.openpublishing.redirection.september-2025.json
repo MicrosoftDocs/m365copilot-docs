@@ -12,7 +12,7 @@
     },
     {
       "source_path_from_root": "/docs/agent-builder-template-idea-coach.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-idea-coach.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-idea-coach",
       "redirect_document_id": true
     },
     {
@@ -78,6 +78,11 @@
     {
       "source_path_from_root": "/docs/copilot-studio-agent-builder.md",
       "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-agent-builder-build.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-build",
       "redirect_document_id": false
     },
   ]
