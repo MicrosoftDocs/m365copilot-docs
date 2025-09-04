@@ -107,39 +107,39 @@ items:
       - name: Overview
         href: copilot-studio-lite.md
       - name: Build agents
-        href: copilot-studio-agent-builder-build.md
+        href: copilot-studio-lite-build.md
       - name: Build agents from template
         items:
         - name: Templates overview
-          href: agent-builder-templates.md
+          href: lite-templates.md
         - name: Career Coach
-          href: agent-builder-template-career-coach.md
+          href: lite-template-career-coach.md
         - name: Customer Insight Assistant
-          href: agent-builder-template-customer-insight.md
+          href: lite-template-customer-insight.md
         - name: Idea Coach
-          href: agent-builder-template-idea-coach.md
+          href: lite-template-idea-coach.md
         - name: Interview Question Assistant
-          href: agent-builder-template-interview-questions.md
+          href: lite-template-interview-questions.md
         - name: Learning Coach
-          href: agent-builder-template-learning-coach.md
+          href: lite-template-learning-coach.md
         - name: Meeting Coach
-          href: agent-builder-template-meeting-coach.md
+          href: lite-template-meeting-coach.md
         - name: Prompt Coach
-          href: agent-builder-template-prompt-coach.md
+          href: lite-template-prompt-coach.md
         - name: Quiz Tutor
-          href: agent-builder-template-quiz-tutor.md
+          href: lite-template-quiz-tutor.md
         - name: Scrum Assistant
-          href: agent-builder-template-scrum-assistant.md
+          href: lite-template-scrum-assistant.md
         - name: Writing Coach
-          href: agent-builder-template-writing-coach.md
+          href: lite-template-writing-coach.md
       - name: Build agents with fine-tuned models (preview)
-        href: copilot-studio-agent-builder-tuned-models.md
+        href: copilot-studio-lite-tuned-models.md
       - name: Add knowledge sources
-        href: copilot-studio-agent-builder-knowledge.md
+        href: copilot-studio-lite-knowledge.md
       - name: Publish agents
-        href: copilot-studio-agent-builder-publish.md
+        href: copilot-studio-lite-publish.md
       - name: Availability and language support
-        href: copilot-studio-agent-builder-availability.md
+        href: copilot-studio-lite-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
