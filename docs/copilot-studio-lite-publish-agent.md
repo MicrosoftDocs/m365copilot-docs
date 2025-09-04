@@ -1,6 +1,6 @@
 ---
 title: Publish and manage Copilot Studio agents
-description: Learn how to publish and manage agents built with Copilot Studio Copilot Studio lite.
+description: Learn how to publish and manage agents built with Copilot Studio.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
@@ -10,11 +10,11 @@ ms.topic: conceptual
 
 # Publish and manage Copilot Studio agents
 
-This article describes how to create or publish agents built with the lite experience within Copilot Studio and how to update or delete agents.
+This article describes how to create or publish agents built with Copilot Studio and how to update or delete agents.
 
 ## Create the agent
 
-While you're [building your agent](copilot-studio-lite-build.md), in the Copilot Studio lite experience, the changes you make are saved automatically. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
+While you're [building your agent](copilot-studio-lite-build.md), in Copilot Studio, the changes you make are saved automatically. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
 
 After the agent has been successfully created, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft 365 Copilot.
 
@@ -37,11 +37,11 @@ The following table lists the sharing options that are available.
 
 ### Deploy agents via ZIP package
 
-The Copilot Studio lite experience provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
+Copilot Studio provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 To deploy an agent manually:
 
-1. Via the Copilot Studio lite experience, open your agent and select the **More options (...)** menu.
+1. In Copilot Studio, open your agent and select the **More options (...)** menu.
 2. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
 3. Sideload your agent into Microsoft Teams.
 

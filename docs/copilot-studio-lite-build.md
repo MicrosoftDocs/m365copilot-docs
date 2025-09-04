@@ -8,9 +8,9 @@ ms.date: 09/09/2025
 ms.topic: conceptual
 ---
 
-# Build agents using the Copilot Studio lite experience
+# Build agents using the Copilot Studio
 
-The Copilot Studio lite experience (formerly agent builder) provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
+The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
 To get started with the lite experience, open the Microsoft 365 Copilot app, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
 
@@ -80,7 +80,7 @@ To add one or more capabilities to your agent, choose the toggle next to the cap
 
 ## Build from a template
 
-The Copilot Studio lite experience includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs, including by adding knowledge sources and capabilities. For more information, see [Copilot Studio agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
+Copilot Studio includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs, including by adding knowledge sources and capabilities. For more information, see [Copilot Studio agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
 
 ## Next step
 

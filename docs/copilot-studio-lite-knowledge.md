@@ -10,7 +10,7 @@ ms.date: 09/09/2025
 
 # Add knowledge sources to your declarative agent in Copilot Studio
 
-The Copilot Studio lite experience (formerly Copilot Studio agent builder) provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
+The lite experience in Microsoft 365 Copilot (formerly Copilot Studio agent builder) provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
 This article describes the *supported knowledge sources and the steps to configure them* in Copilot Studio. For general information about how to use the Copilot Studio, see [Build agents using the Copilot Studio lite experience](copilot-studio-lite-build.md).
 

@@ -5,7 +5,7 @@ author: carolkigoonya
 ms.author: ckigoonya
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 02/28/2025
+ms.date: 09/09/2025
 ---
 
 # Use developer mode to test and debug agents
@@ -116,4 +116,4 @@ Enter a message, including the #extensibility tag, in the text box.
 ## Related content
 
 - [Build a declarative agent with Visual Studio Code](/microsoft-365-copilot/extensibility/build-declarative-agents)
-- [Build agents with Copilot Studio lite](copilot-studio-lite-experince.md)
+- [Build agents using Copilot Studio](copilot-studio-lite-build.md)
