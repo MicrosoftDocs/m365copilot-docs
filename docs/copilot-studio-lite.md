@@ -1,14 +1,14 @@
 ---
-title: Build agents using the Copilot Studio lite experience
+title: Use Copilot Studio
 description: Learn how to use the Copilot Studio lite experience to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/30/2025
+ms.date: 09/10/2025
 ms.topic: conceptual
 ---
 
-# Overview of the Copilot Studio lite experience
+# Use Copilot Studio
 
 The Copilot Studio lite experience (formerly agent builder) in Microsoft 365 Copilot enables you to build agents (also known as [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) easily and quickly.
 
@@ -77,7 +77,7 @@ You can submit feedback by using one of the following options:
 - The **Send feedback**, button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
 - The **Send Feedback** option in the menu on the top right, as shown in the following image.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-feedback-general.png" alt-text="Send feedback in the Copilot Studio lite experience":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-feedback-general.png" alt-text="Send feedback in the Copilot Studio":::
 
 In your feedback submission, specify that the issue is related to **the Copilot Studio lite experience**.
 
@@ -100,9 +100,9 @@ In your feedback ticket, provide details about the issue you're facing and inclu
 
 You can find and copy these details in the Copilot Studio within the **Get support** section of the **Help** dropdown menu.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-1-updated.png" alt-text="Find the support details in the Copilot Studio lite experience":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-1-updated.png" alt-text="Find the support details in the Copilot Studio":::
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in the Copilot studio lite experience":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in the Copilot Studio":::
 
 ## Related content
 

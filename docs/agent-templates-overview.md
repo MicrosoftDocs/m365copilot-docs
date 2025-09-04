@@ -1,18 +1,18 @@
 ---
 title: Copilot Studio agent templates overview
-description: Learn how to use templates to quickly create declarative agents for Microsoft 365 Copilot in the Copilot Studio lite experience to create a declarative agent.
+description: Learn how to use templates to quickly create declarative agents for Microsoft 365 Copilot in Copilot Studio to create a declarative agent.
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/30/2025
+ms.date: 09/10/2025
 ---
 
 # Overview: Copilot Studio agent templates
 
-The Copilot Studio lite experience includes various templates that you can use to create declarative agents for Microsoft 365 Copilot. The templates apply design guidelines and industry best practices to help you get started quickly. This enables you to spend more time customizing the logic and functionality to meet your business requirements. The agent templates accelerate the agent development process to help organizations improve overall operational efficiency.
+The Copilot Studio lite experience (formerly agent builder) includes various templates that you can use to create declarative agents for Microsoft 365 Copilot. The templates apply design guidelines and industry best practices to help you get started quickly. This enables you to spend more time customizing the logic and functionality to meet your business requirements. The agent templates accelerate the agent development process to help organizations improve overall operational efficiency.
 
-This article provides information about how to create your own agents using the Copilot Studio lite experience by using natural language as input .
+This article provides information about how to create your own agents using natural language as input .
 
 ## Use templates to create an agent
 
@@ -36,7 +36,8 @@ After the agent is created, choose **Go to agent** in Copilot to chat with the a
 
 ## Related content
 
+- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite-experience.md)
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Overview of the Copilot Studio lite experience](copilot-studio-lite-experience.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
-- [Build agents with the Copilot Studio lite experience](docs\build-with-copilot-studio-lite-experience.md)
+- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Publish agents](copilot-studio-lite-publish.md)

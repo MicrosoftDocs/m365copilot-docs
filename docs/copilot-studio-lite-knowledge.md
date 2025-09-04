@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/30/2025
+ms.date: 09/10/2025
 ---
 
 # Add knowledge sources to your declarative agent in the Copilot Studio lite experience

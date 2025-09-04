@@ -105,7 +105,7 @@ items:
     - name: Use Copilot Studio lite
       items:
       - name: Overview
-        href: copilot-studio-lite-experience.md
+        href: copilot-studio-lite.md
       - name: Build agents
         href: copilot-studio-agent-builder-build.md
       - name: Build agents from template
