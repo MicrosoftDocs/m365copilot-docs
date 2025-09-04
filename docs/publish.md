@@ -54,7 +54,7 @@ The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot
 
 ## Copilot agents built with Copilot Studio
 
-A Copilot agent built with Copilot Studio is more customizable and feature-rich version of a declarative agent created with the [lite experience of Copilot Studio](#declarative-agents-built-with-copilot-studio-lite). Unlike standalone Copilot agents, agents built with Copilot Studio aren't automatically deployed to Microsoft 365 Copilot and Teams when published. Rather, you need to set its [availability options](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?branch=main#set-availability-options) to distribute the agent to share among individuals, groups, or to be published to the organization's catalog by an admin.
+A Copilot agent built with Copilot Studio is more customizable and feature-rich version of a declarative agent created with the [lite experience of Copilot Studio](copilot-studio-lite.md). Unlike standalone Copilot agents, agents built with Copilot Studio aren't automatically deployed to Microsoft 365 Copilot and Teams when published. Rather, you need to set its [availability options](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?branch=main#set-availability-options) to distribute the agent to share among individuals, groups, or to be published to the organization's catalog by an admin.
 
 | Distribution method | Support | Learn more |
 |--|--|--|

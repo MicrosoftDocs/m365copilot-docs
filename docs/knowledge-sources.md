@@ -132,7 +132,7 @@ Email knowledge allows you to scope your agent to a personal or shared mailbox, 
 
 ### Add email knowledge sources
 
-If you're using [Copilot Studio](copilot-studio--lite.md) experience to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
+If you're using [Copilot Studio](copilot-studio-lite.md) experience to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
 
 > [!NOTE]
 > You can't currently scope your emails to a specific folder or shared mailbox when you use the Copilot Studio lite experience.

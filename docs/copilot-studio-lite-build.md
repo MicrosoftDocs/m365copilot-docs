@@ -85,4 +85,4 @@ Copilot Studio includes templates that you can use to build agents for specific 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Publish and manage Copilot Studio agents](copilot-studio-agent-builder-publish.md)
+> [Publish and manage Copilot Studio agents](copilot-studio-lite-publish-agents.md)
