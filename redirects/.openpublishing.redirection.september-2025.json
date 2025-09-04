@@ -1,12 +1,12 @@
 {
   "redirections": [
     {
-      "source_path_from_root": " docs/agent-builder-template-career-coach.md",
+      "source_path_from_root": "/docs/agent-builder-template-career-coach.md",
       "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-career-coach",
       "redirect_document_id": true
     },
     {
-      "source_path_from_root": "docs/agent-builder-template-customer-insight.md",
+      "source_path_from_root": "/docs/agent-builder-template-customer-insight.md",
       "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-customer-insight",
       "redirect_document_id": true
     },
@@ -16,7 +16,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path_from_root": "docs/agent-builder-template-interview-questions.md",
+      "source_path_from_root": "/docs/agent-builder-template-interview-questions.md",
       "redirect_url": "/microsoft-365-copilot/extensibility/agent-template-interview-questions",
       "redirect_document_id": true
     },
