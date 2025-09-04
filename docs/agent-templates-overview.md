@@ -40,4 +40,4 @@ After the agent is created, choose **Go to agent** in Copilot to chat with the a
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage Copilot Studio agents](copilot-studio-lite-publish.md)
+- [Publish and manage Copilot Studio agents](copilot-studio-lite-publish-agent.md)

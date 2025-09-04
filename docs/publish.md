@@ -47,9 +47,9 @@ The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot
 
 | Distribution method | Support | Learn more |
 |--|--|--|
-| Sideload for personal use | ✅ | [Create an agent with Copilot Studio](copilot-studio-lite-publish.md#create-the-agent) |
-| Share with others | ✅ | [Share an agent via Copilot Studio](copilot-studio-lite-publish.md#create-the-agent) |
-| Submit to organizational catalog | ✅ | [Share an agent via Copilot Studio](copilot-studio-lite-publish.md#create-the-agent) |
+| Sideload for personal use | ✅ | [Create an agent with Copilot Studio](copilot-studio-lite-publish-agent.md#create-the-agent) |
+| Share with others | ✅ | [Share an agent via Copilot Studio](copilot-studio-lite-publish-agent.md#create-the-agent) |
+| Submit to organizational catalog | ✅ | [Share an agent via Copilot Studio](copilot-studio-lite-publish-agent.md#create-the-agent) |
 | Submit to Microsoft Commercial Marketplace | ❌ | |
 
 ## Copilot agents built with Copilot Studio

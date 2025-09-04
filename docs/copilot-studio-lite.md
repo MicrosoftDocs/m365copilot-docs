@@ -108,5 +108,5 @@ You can find and copy these details in the Copilot Studio within the **Get suppo
 
 - [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md) 
-- [Publish and manage Copilot Studio agents](copilot-studio-lite-publish.md)
+- [Publish and manage Copilot Studio agents](copilot-studio-lite-publish-agent.md)
 - [Regional availability and language support for agents built with the Copilot Studio lite experience](copilot-studio-lite-availability.md)

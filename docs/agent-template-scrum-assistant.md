@@ -50,4 +50,4 @@ You can enhance the functionality of your Scrum Assistant agents by:
 
 - [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage Copilot Studio agents](copilot-studio-lite-publish.md)
+- [Publish and manage Copilot Studio agents](copilot-studio-lite-publish-agent.md)
