@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 09/10/2025
+ms.date: 09/09/2025
 ---
 
 # Use the Idea Coach template to build an agent
@@ -65,6 +65,6 @@ You can further enhance your Idea Coach agents through integration and added int
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite-experience.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md)
 - [Publish agents](copilot-studio-lite-publish.md)

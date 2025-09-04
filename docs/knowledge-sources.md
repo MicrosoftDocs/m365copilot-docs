@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/10/2025
+ms.date: Copilot St09/09/2025udio":::
 ---
 
 # Add knowledge sources to your declarative agent
@@ -200,7 +200,7 @@ Agents can return links to files shared in Teams messages, but they can't return
 
 ### Add Teams messages knowledge sources
 
-If you're using the [Copilot Studio lite](copilot-studio-lite-experience.md) experience to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings.** To scope your agent to specific channel, meeting, or group chats, on the **Chats** tab, select the chats that you want to add as knowledge.
+If you're using the [Copilot Studio lite](copilot-studio-lite.md) experience to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings.** To scope your agent to specific channel, meeting, or group chats, on the **Chats** tab, select the chats that you want to add as knowledge.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable Teams messages knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
 

@@ -4,7 +4,7 @@ description: Learn how to publish and manage agents built with Copilot Studio Co
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/10/2025
+ms.date: 09/09/2025
 ms.topic: conceptual
 ---
 
@@ -60,7 +60,7 @@ You can select which folder or files to share. Sharing only works when the autho
 
 When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Use file permission management in SharePoint to manage user's access to the files and folders.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
+:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
 
 ### Agent acquisition
 
@@ -76,7 +76,7 @@ To manage an existing agent, you can:
 - Select the ellipses (**...**) and **Edit** from an agent on the right rail in Microsoft 365 Copilot.
 - Select **Create agents** from the right rail in Microsoft 365 Copilot, and then select **View all agents** from the name dropdown menu.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-last-accessed.png" alt-text="The View all agents options in the recently accessed agents menu":::
+:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-last-accessed.png" alt-text="The View all agents options in the recently accessed agents menu":::
 
 Both options show the **My agents** list. You can select the existing agent that you want to change or update.
 

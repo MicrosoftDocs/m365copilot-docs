@@ -4,13 +4,13 @@ description: Learn how to build agents by using the Microsoft 365 Copilot Studio
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/10/2025
+ms.date: 09/09/2025
 ms.topic: conceptual
 ---
 
 # Build agents using the Copilot Studio lite experience
 
-The Copilot Studio lite experience provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
+The Copilot Studio lite experience (formerly agent builder) provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
 To get started with the lite experience, open the Microsoft 365 Copilot app, and in the right rail, choose **Create agents**. You can also choose **Create agents** from Microsoft 365 Copilot in Teams.
 
@@ -39,7 +39,7 @@ In addition to using the **Describe** tab, you can also directly configure the a
 
 The **Configure** tab provides you with the ability to view and edit information about the agent, giving you more control and more precision. The **Describe** and **Configure** tabs are in sync. The fields in the **Configure** tab update to reflect the latest changes from the **Describe** tab. You can switch between the tabs to use the experience that is most comfortable to you to author the agent.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-configure.png" alt-text="The Configure tab lets users manually edit the agent":::
+:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-configure.png" alt-text="The Configure tab lets users manually edit the agent":::
 
 The following table describes the fields that make up the agent.
 

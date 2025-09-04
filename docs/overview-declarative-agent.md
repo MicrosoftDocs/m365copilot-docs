@@ -4,7 +4,7 @@ description: Learn how you can use declarative agents to meet business needs. De
 author: aycabas
 ms.author: aycabas
 ms.localizationpriority: medium
-ms.date: 09/10/2025
+ms.date: Copilot St09/09/2025udio":::
 ms.topic: overview
 ---
 
@@ -57,7 +57,7 @@ You can use your tool of choice to create a declarative agent app package. To ge
 
 - [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
 - [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context)
-- [Copilot Studio lite experience](copilot-studio-lite-experience.md)
+- [Copilot Studio lite experience](copilot-studio-lite.md)
 - [SharePoint](/sharepoint/get-started-sharepoint-agents)
 
 For more information about how to choose the right tool for your scenarios, see [Choose the right tool to build your declarative agent](./declarative-agent-tool-comparison.md).

@@ -6,7 +6,7 @@ ms.author: lauragra
 ms.reviewer: vermaanimesh
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 08/26/2025
+ms.date: 09/09/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -23,7 +23,7 @@ The steps in this article require you to have the following prerequisites:
 - An existing declarative agent built with the [Microsoft 365 Agents Toolkit](build-declarative-agents.md).
 
     > [!Note]
-    > Agents built with [Copilot Studio lite](copilot-studio-lite-experience.md) aren't currently supported.
+    > Agents built with [Copilot Studio lite](copilot-studio-lite.md) aren't currently supported.
 
 - A custom bot and the bot ID. For information about how to create a custom bot, see [Bots and agents](/microsoftteams/platform/bots/build-a-bot).
 - Visual Studio Code with the Microsoft 365 Agents Toolkit extension installed.
