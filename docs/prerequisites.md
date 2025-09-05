@@ -5,7 +5,7 @@ author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/02/2025
+ms.date: 09/05/2025
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
