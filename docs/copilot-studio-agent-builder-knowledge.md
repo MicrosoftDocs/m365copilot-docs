@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 08/13/2025
+ms.date: 09/05/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -84,24 +84,25 @@ When new files are uploaded to SharePoint, they can take up to several minutes t
 
 You can check the file readiness by looking in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When the underlying file uploaded to SharePoint is renamed or deleted, the agent picks up the changes. You can also select the reload button on top of the **Knowledge** section to manually reload the state.
 
-## Teams chat messages
+## Microsoft Teams data
 
-You can ground your agent in Teams channel, group, and meeting chat messages. To add Teams chat messages, on the **Configure** tab, in the **Knowledge** section, click the search bar. On the **Chats** tab, you can include specific chats that you want to add as knowledge.
+You can ground your agent in Microsoft Teams data, including Teams chat messages and meeting information. To use all chat messages, meeting transcripts, and calendars that you have access to as knowledge, in Copilot Studio agent builder, choose **My Teams chats and meetings**.
+
+You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, click the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
 
 > [!IMPORTANT]
-> You can add up to five chat sources.
-
-If you don't want to scope the agent's knowledge to specific chats, under **Teams chats**, choose **My Teams chats from group chat, channels, and meetings** to use all chat messages you have the access to as knowledge.
-
-:::image type="content" source="assets/images/capabilities-teamsChat-emails.png" border="false" alt-text="Screenshot of the knowledge picker with My Teams chats from groups, channels, and meetings highlighted":::
+> - Teams knowledge is only available to users with a Microsoft 365 Copilot add-on license.
+> - You can't scope to individual meetings. When you select **My Teams chats and meetings**, agents will search all meeting transcripts and the whole calendar.
+> - Agents might not have the access to all meeting transcripts, depending on the size of past transcripts.
 
 ## Outlook emails
 
 You can ground your agent in Outlook email. To add email as a knowledge source, on the **Configure** tab, in the **Knowledge** section, click the search bar, and choose **My emails**.
 
 > [!NOTE]
-> - You can't scope email knowledge. When you add email, the agent uses all email in your mailbox as knowledge.
-> - Users that you share the agent with don't have access to your email as knowledge.
+> You can't scope email knowledge. When you add email, the agent uses all email in your mailbox as knowledge.
+> Users that you share the agent with don't have access to your email as knowledge.
+> This capability is only avaialble for M365 Copilot licensed users.
 
 ## Embedded file content
 
@@ -201,8 +202,8 @@ The following table lists the file types that you can add as knowledge to your a
 Copilot connectors allow agents to access and apply knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. With agent builder, you can integrate enterprise data from your workspace directly into your agents, empowering them with domain-specific knowledge.
 
 > [!NOTE]
-> - Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
-> - If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
+> Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
+> If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
 For more information about Copilot connectors, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 

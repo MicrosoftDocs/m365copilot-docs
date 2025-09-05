@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 08/22/2025
+ms.date: 09/05/2025
 ---
 
 # Data, privacy, and security considerations for extending Microsoft 365 Copilot
