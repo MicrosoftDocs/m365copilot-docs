@@ -1,6 +1,6 @@
 ---
 title: Create an Idea Coach agent from a template
-description: Learn how to create a declarative agent in the Copilot Studiofrom the Idea Coach template.
+description: Learn how to create a declarative agent in the Copilot Studio from the Idea Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual

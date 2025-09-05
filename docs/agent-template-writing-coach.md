@@ -10,7 +10,7 @@ ms.date: 09/09/2025
 
 # Use the Writing Coach template to build an agent
 
-You can use the Writing Coach template to create agents that help users improve their writing skills and complete various writing tasks. Acting as a supportive coach, agents based on the Writing Coach template provide detailed feedback on clarity, coherence, grammar, and tone. These agents help users modify the nuance and tone of messages, translate text, and guide users through writing instructions, stories, and whitepapers.
+Using the lite experience within Microsoft 365 Copilot Studio, you can  use the Writing Coach template to create agents that help users improve their writing skills and complete various writing tasks. Acting as a supportive coach, agents based on the Writing Coach template provide detailed feedback on clarity, coherence, grammar, and tone. These agents help users modify the nuance and tone of messages, translate text, and guide users through writing instructions, stories, and whitepapers.
 
 To try a Writing Coach, [install the Writing Coach agent](https://teams.microsoft.com/l/app/f72d7797-c6ee-4fd3-9454-028d0095068b?source=share-app-dialog).
 
