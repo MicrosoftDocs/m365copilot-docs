@@ -9,18 +9,6 @@ This template is used to document two manifest schemas.
 - Declarative agent manifest schema (example: [Schema version 1.5](/docs/declarative-agent-manifest-1.5.md))
 - API plugin manifest schema (example: [Schema version 2.3](/docs/api-plugin-manifest-2.3.md))
 
-## Checklist for documenting new version of an existing schema
-
-- Start by making a copy of the previous version's reference document and updating the version number both in the document and in the file name.
-- Make a copy of the previous version's sample manifest and update the version number in the sample and the file name.
-- Make any changes and additions to the new version document.
-- Update the sample manifest with any new properties.
-- Update the latest version include file to indicate the new version.
-  - [Declarative agent latest version include](/docs/includes/latest-declarative-agent-manifest.md)
-  - [API plugin latest version include](/docs/includes/latest-plugin-manifest.md)
-- Add the latest version include to the previous version document.
-- Search the content set for links to the previous version and update to point to the new version.
-
 ## Template
 
 The following Markdown code block defines the template structure.
