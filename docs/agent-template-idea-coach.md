@@ -10,7 +10,7 @@ ms.date: 09/09/2025
 
 # Use the Idea Coach template to build an agent
 
-You can use the Idea Coach template to create an agent that helps users develop and refine their ideas and enhance their brainstorming sessions. The Idea Coach agent template uses a fun, collaborative tone to inspire creativity and ensure engaging and productive brainstorming interactions. Idea Coach agents gather user feedback to continuously improve the brainstorming experience.
+Using the lite experience within Microsoft 365 Copilot Studio, you can use the Idea Coach template to create an agent that helps users develop and refine their ideas and enhance their brainstorming sessions. The Idea Coach agent template uses a fun, collaborative tone to inspire creativity and ensure engaging and productive brainstorming interactions. Idea Coach agents gather user feedback to continuously improve the brainstorming experience.
 
 By acting as a personal assistant, an agent based on the Idea Coach template can help users:
 

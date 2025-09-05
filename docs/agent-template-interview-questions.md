@@ -10,7 +10,7 @@ ms.date: 09/09/2025
 
 # Use the Interview Question Assistant template to build an agent
 
-You can use the Interview Question Assistant template to build an agent that supports hiring managers and interviewers by streamlining the process of drafting high-quality interview questions. This agent helps you quickly create effective interview questions.
+Using the lite experience within Microsoft 365 Copilot Studio, you can use the Interview Question Assistant template to build an agent that supports hiring managers and interviewers by streamlining the process of drafting high-quality interview questions. This agent helps you quickly create effective interview questions.
 
 ## Prerequisites
 

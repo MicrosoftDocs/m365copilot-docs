@@ -10,7 +10,7 @@ ms.date: 09/09/2025
 
 # Use the Quiz Tutor template to build an agent
 
-You can use the Quiz Tutor template to create agents that provide fun, bite-sized quizzes based on predefined training content. These quizzes can even be interactive to make the learning process more engaging. The template is designed to enhance a user's understanding and retention of the material by using varied and interesting questions and providing coaching and feedback to support learning.
+Using the lite experience within Microsoft 365 Copilot Studio, you can use the Quiz Tutor template to create agents that provide fun, bite-sized quizzes based on predefined training content. These quizzes can even be interactive to make the learning process more engaging. The template is designed to enhance a user's understanding and retention of the material by using varied and interesting questions and providing coaching and feedback to support learning.
 
 ## Prerequisites
 
