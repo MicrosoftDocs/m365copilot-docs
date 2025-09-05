@@ -92,7 +92,7 @@ These keys (for example, `plugin_name` and `plugin_description`,) must match ent
 
 **Step 2: Create localization files**
 
-Created your localization files in JSON format and include a `localizationKeys` property that maps each key to its translated string. For example:
+Create your localization files in JSON format and include a `localizationKeys` property that maps each key to its translated string, as shown in the following example.
 
 ```json
     {
