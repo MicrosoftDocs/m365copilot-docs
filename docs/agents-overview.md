@@ -66,7 +66,7 @@ Declarative agents have the following characteristics:
 
 ## Enable feedback for your agent
 
-You can help improve the performance an accuracy of your declarative agents by enabling the feedback settings across all Microsoft 365 apps. When you do so, users can rate the responses your agents generate and provide logs, screenshots, and contact email addresses when submitting their feedback.
+You can help improve the performance an accuracy of your declarative agents by enabling the feedback settings across all Microsoft 365 apps. When you do so, users can rate the responses your agents generate and provide logs, screenshots, and contact email addresses when they submit their feedback.
 
 The [TechExcel: Elevate your Copilot for M365 Technical Proficiency](https://microsoft.github.io/TechExcel-Elevate-your-Copilot-for-M365-technical-proficiency/) tutorial provides detailed instructions and practice labs for a wide range of Copilot development use cases. For information about how to enable feedback for your agents, see [Lab 2, Exercise 3: Enable feedback settings for the Microsoft 365 apps](https://microsoft.github.io/TechExcel-Elevate-your-Copilot-for-M365-technical-proficiency/docs/L2Ex03/Ex03.html). 
 
