@@ -50,14 +50,13 @@ You can reference specific SharePoint sites, files, and folders as agent knowled
 
 - A total of 100 SharePoint files can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
-
-For information about SharePoint knowledge file size limits, see [File size limits](#file-size-limits).
-
-> [!IMPORTANT]
-> If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
+- Although there isn't a direct file size limit on the knowledge files you select, the agent can only reason over specific [file types](#file-types-and-size-limits).
 
 > [!NOTE]
-> If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
+> - If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
+> - If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
+> - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
+> - To optimize for Copilot, we recommend that you keep the contents of files that you select concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 
 ### Entering a URL for a SharePoint site, folder, or file
 
@@ -113,7 +112,7 @@ You can add up to 20 files as knowledge sources.
 > [!NOTE]
 > If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
-Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-size-limits).
+Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-types-and-size-limits).
 
 To remove a file you uploaded, choose the X next to the file, and choose **Remove**.
 
@@ -177,21 +176,23 @@ When you share an agent with embedded files, the files are only shared with user
 
 When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are set on the embedded content, the sensitivity label is displayed on the **Share** screen.
 
-### File size limits
+### File types and size limits
 
-The following table lists the file types that you can add as knowledge to your agent and the size limits for each file type.
+The following table lists the file types that you can add as knowledge to your agent and the embedded file size limits for each file type.
 
-| File type | SharePoint Online limit | Embedded file limit |
-| ----------| ----------------------- | ------------------- |
-| .doc      | 150 MB                  | 100 MB |
-| .docx     | 512 MB                  | 100 MB |
-| .html     | 150 MB                  | NA    |
-| .pdf      | 512 MB                  | 100 MB |
-| .ppt      | 150 MB                  | 100 MB |
-| .pptx     | 512 MB                  | 100 MB |
-| .txt      | 150 MB                  | 100 MB |
-| .xls      | 150 MB                  | 100 MB |
-| .xlsx     | 150 MB                  | 100 MB |
+| File type | Embedded file limit |
+| ----------| ------------------- |
+| .doc      | 100 MB |
+| .docx     | 100 MB |
+| .html\*   |  NA    |
+| .pdf      | 100 MB |
+| .ppt      | 100 MB |
+| .pptx     | 100 MB |
+| .txt      | 100 MB |
+| .xls      | 30 MB |
+| .xlsx     | 30 MB |
+
+\* Only supported for SharePoint Online.
 
 > [!NOTE]
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.

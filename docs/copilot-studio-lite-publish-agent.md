@@ -73,8 +73,8 @@ The shared link brings end users to the Microsoft 365 app store to view the deta
 
 To manage an existing agent, you can:
 
-- Select the ellipses (**...**) and **Edit** from an agent on the right rail in Microsoft 365 Copilot.
-- Select **Create agents** from the right rail in Microsoft 365 Copilot, and then select **View all agents** from the name dropdown menu.
+- Select the ellipses (**...**) and **Edit** from an agent on the rail in Microsoft 365 Copilot.
+- Select **Create agents** from the rail in Microsoft 365 Copilot, and then select **My agents** or **View all agents** from the name dropdown menu.
 
 :::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-last-accessed.png" alt-text="The View all agents options in the recently accessed agents menu":::
 
