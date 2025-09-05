@@ -3,7 +3,6 @@ title: Publish and Manage Copilot Studio Agent Builder Agents
 description: Learn how to publish and manage agents built with Copilot Studio agent builder.
 author: jasonxian-msft
 ms.author: jasonxian
-ms.localizationpriority: medium
 ms.date: 09/05/2025
 ms.topic: conceptual
 ---
@@ -29,7 +28,7 @@ The following table lists the sharing options that are available.
 | Sharing option                                          | Description |
 | ------------------------------------------------------- | ----------- |
 | Anyone in your organization                             | Anyone in your tenant can use the sharing link to use the agent. |
-| Specific users in your organization | Specific user groups can use the sharing link to use the agent. These user groups must be specified via the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
+| Specific users in your organization | Specific users or groups can use the sharing link to use the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
 | Only me                                                 | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
 
 > [!NOTE]
@@ -73,10 +72,10 @@ The shared link brings end users to the Microsoft 365 app store to view the deta
 
 To manage an existing agent, you can:
 
-- Select the ellipses (**...**) and **Edit** from an agent on the right rail in Microsoft 365 Copilot.
-- Select **Create agents** from the right rail in Microsoft 365 Copilot, and then select **View all agents** from the name dropdown menu.
+- Select the ellipses (**...**) and **Edit** from an agent on the rail in Microsoft 365 Copilot.
+- Select **Create agents** from the rail in Microsoft 365 Copilot, and then select **My agents** or **View all agents** from the name dropdown menu.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-last-accessed.png" alt-text="The View all agents options in the recently accessed agents menu":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/agent-builder-my-agents.png" alt-text="The View all agents options in the recently accessed agents menu":::
 
 Both options show the **My agents** list. You can select the existing agent that you want to change or update.
 
