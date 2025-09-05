@@ -90,7 +90,7 @@ In your plugin manifest (for example, plugin.json), replace literal strings with
 
 These keys (for example, `plugin_name` and `plugin_description`,) must match entries in your localization file and conform to the regex ^[a-zA-Z_][a-zA-Z0-9_]*.
 
-**Step 2: Create Localization Files**
+**Step 2: Create localization files**
 
 Created your localization files in JSON format and include a `localizationKeys` property that maps each key to its translated string. For example:
 
