@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 09/09/2025
 ---
 
-# Overview: Copilot Studio agent templates
+# Copilot Studio agent templates
 
 The Copilot Studio lite experience (formerly agent builder) includes various templates that you can use to create declarative agents for Microsoft 365 Copilot. The templates apply design guidelines and industry best practices to help you get started quickly. This enables you to spend more time customizing the logic and functionality to meet your business requirements. The agent templates accelerate the agent development process to help organizations improve overall operational efficiency.
 
