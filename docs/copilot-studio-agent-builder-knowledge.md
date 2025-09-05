@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/04/2025
+ms.date: 09/05/2025
 ---
 
 # Add knowledge sources to your declarative agent by using agent builder
@@ -50,7 +50,7 @@ You can reference specific SharePoint sites, files, and folders as agent knowled
 
 - A total of 100 SharePoint files can be selected for each agent.
 - Files already uploaded to SharePoint might have existing permissions and [sensitivity labels](/purview/sensitivity-labels), which are respected when the agent is generating a response.
-- Although there isn't a direct file size limit on the knowledge files you select, the agent can only reason over specific [file types](#file-size-limits).
+- Although there isn't a direct file size limit on the knowledge files you select, the agent can only reason over specific [file types](#file-types-and-size-limits).
 
 > [!NOTE]
 > - If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
@@ -176,21 +176,23 @@ When you share an agent with embedded files, the files are only shared with user
 
 When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), if sensitivity labels are set on the embedded content, the sensitivity label is displayed on the **Share** screen.
 
-### File size limits
+### File types and size limits
 
-The following table lists the file types that you can add as knowledge to your agent and the size limits for each file type.
+The following table lists the file types that you can add as knowledge to your agent and the embedded file size limits for each file type.
 
-| File type | SharePoint Online limit | Embedded file limit |
-| ----------| ----------------------- | ------------------- |
-| .doc      | Supported                  | 100 MB |
-| .docx     | Supported               | 100 MB |
-| .html     | Supported                | NA    |
-| .pdf      | Supported               | 100 MB |
-| .ppt      | Supported               | 100 MB |
-| .pptx     | Supported               | 100 MB |
-| .txt      | Supported               | 100 MB |
-| .xls      | Supported               | 30 MB |
-| .xlsx     | Supported               | 30 MB |
+| File type | Embedded file limit |
+| ----------| ------------------- |
+| .doc      | 100 MB |
+| .docx     | 100 MB |
+| .html\*   |  NA    |
+| .pdf      | 100 MB |
+| .ppt      | 100 MB |
+| .pptx     | 100 MB |
+| .txt      | 100 MB |
+| .xls      | 30 MB |
+| .xlsx     | 30 MB |
+
+\* Only supported for SharePoint Online.
 
 > [!NOTE]
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
