@@ -23,9 +23,9 @@ You can extend Copilot in several ways:
 
 ## Enhance knowledge in Copilot with connectors
 
-[Copilot connectors](overview-copilot-connector.md) allow you to ingest and index data from multiple sources to add knowledge to Copilot. The data that Copilot accesses powers its intelligence. By using Copilot connectors, you can bring additional enterprise data into Microsoft Graph.
+[Copilot connectors](overview-copilot-connector.md) allow you to ingest and index data from multiple sources to add knowledge to Copilot. The data that Copilot can access powers its intelligence. By using Copilot connectors, you can bring additional enterprise data into Microsoft Graph.
 
-This enables Copilot to integrate and reason over a wider variety of data sources to deliver more contextually relevant responses, tailored to the needs and data access permissions of the user. Access to data remains secure and compliant: users can only retrieve information they're authorized to view to ensure that sensitive data remains protected.
+This enables Copilot to integrate and reason over a wider variety of data sources. This allows it to deliver more contextually relevant responses; responses tailored to the needs and data access permissions of the user. Access to data remains secure and compliant: users can only retrieve information they're authorized to view to ensure that sensitive data remains protected.
 
 By using Copilot connectors, you can:
 
@@ -43,7 +43,7 @@ If an existing connector doesn't meet your needs, you can build a custom Copilot
 
 ## Extend Copilot with agents
 
-Agents extend the built-in capabilities of Copilot with knowledge, skills, and automated workflows to address your unique business needs.
+Agents extend the built-in capabilities of Copilot by adding knowledge, skills, and automated workflows to address your unique business needs.
 
 ### What are agents?
 
@@ -61,7 +61,7 @@ You can deploy these agents as-is or further customize them by incorporating you
 
 ### Build your own agent
 
-If a prebuilt agent doesn't meet your needs, you can build your own agent designed specifically for your workflows and business processes. Whether you need a highly specialized AI assistant or an advanced automation solution, you can develop agents using low-code or pro-code tools that match your preferred development environment and deployment needs. For more information, see [Agents overview](agents-overview.md).
+If a prebuilt agent doesn't meet your needs, you can build your own agent [from a template](aegnt-templates-overview.md) or design something from scratch specifically for your workflows and business processes. Whether you need a highly specialized AI assistant or an advanced automation solution, you can develop agents using low-code or pro-code tools that match your preferred development environment and deployment needs. For more information, see [Agents overview](agents-overview.md).
 
 The following table provides some examples of the types of agents you can develop for your organization.
 
