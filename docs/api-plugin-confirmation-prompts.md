@@ -76,7 +76,7 @@ Developers can specify the confirmation text by setting the `body` property in t
 
 You can configure [localizable strings](api-plugin-manifest-2.3.md#string-localization) to be used as confirmation prompts. The following steps describe the process.
 
-**Step 1: Use localization keys in the Plugin Manifest**
+**Step 1: Use localization keys in the plugin manifest**
 
 In your plugin manifest (for example, plugin.json), replace literal strings with localization keys using the format:
 
