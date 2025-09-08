@@ -185,7 +185,7 @@ The reference documentation for the manifest JSON is at [Microsoft 365 app manif
     }
     ```
 
-The reference documentation for declarative agents is at [Declarative agent schema 1.4 for Microsoft 365 Copilot](declarative-agent-manifest-1.5.md).
+The reference documentation for declarative agents is at [Declarative agent schema 1.6 for Microsoft 365 Copilot](declarative-agent-manifest-1.6.md).
 
 ### Configure the plugin
 
@@ -256,9 +256,9 @@ The reference documentation for declarative agents is at [Declarative agent sche
       ]
     }
     ```
-	
-	> [!NOTE]
-  > You might get a validation error from the plugin JSON that says you need an **auth** property. You can ignore this error. Your agent will work fine without that property.
+
+    > [!NOTE]
+    > You might get a validation error from the plugin JSON that says you need an **auth** property. You can ignore this error. Your agent will work fine without that property.
 
 The reference documentation for API plugins is at [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md).
 

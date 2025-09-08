@@ -1,32 +1,33 @@
 ---
-title: Declarative agent schema 1.5 for Microsoft 365 Copilot
-description: Learn about the 1.5 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
+title: Declarative agent schema 1.6 for Microsoft 365 Copilot
+description: Learn about the 1.6 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 08/18/2025
+ms.date: 09/05/2025
 ms.topic: reference
 ---
 
 <!-- markdownlint-disable MD024 MD059 -->
 
-# Declarative agent schema 1.5 for Microsoft 365 Copilot
+# Declarative agent schema 1.6 for Microsoft 365 Copilot
 
-This article describes the 1.5 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
-
-[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
+This article describes the 1.6 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 1.4](declarative-agent-manifest-1.4.md):
+This schema version introduces the following changes from [version 1.5](declarative-agent-manifest-1.5.md):
 
-- Added the [meetings](#meetings-object) capability to the list of `capabilities`, which allows agents to search meetings in the organization.
+- Added the optional `sensitivity_label` property to specify Purview sensitivity labels for the agent.
+- Added the [embedded knowledge](#embedded-knowledge-object) capability, allowing agents to use local files or external resource snapshots as knowledge sources.
+- Updated the maximum number of items in `conversation_starters` to 6 (was 12).
+- Updated the `actions` array to require 1-10 items.
 
 ## JSON schema
 
-The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json).
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.6/schema.json).
 
 ## Conventions
 
@@ -54,16 +55,17 @@ The declarative agent manifest object contains the following properties.
 
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
-| `version`               | String                                                                | Required. The schema version. Must be set to `v1.5`. |
-| `id`                    | String                                                                | Optional.   |
+| `version`               | String                                                                | Required. The schema version. Must be set to `v1.6`. |
+| `id`                    | String                                                                | Optional. An identifier for the manifest. |
 | `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
 | `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
 | `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. There MUST NOT be more than one of each derived type of [Capabilities object](#capabilities-object) in the array. |
-| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than 12 objects in the array. |
-| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
+| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than 6 objects in the array. |
+| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of 1-10 objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
 | `behavior_overrides`    | [Behavior overrides object](#behavior-overrides-object)               | Optional. Contains configuration settings that modify the behavior of the agent. |
 | `disclaimer`            | [Disclaimer object](#disclaimer-object)                               | Optional. Disclaimer text that is displayed to the user at the start of a conversation. |
+| `sensitivity_label`     | [Sensitivity label object](#sensitivity-label-object)                  | Optional. Specifies a Purview sensitivity label for the agent. |
 
 ### Declarative agent manifest object example
 
@@ -73,7 +75,8 @@ The following code is an example of required fields within a declarative agent m
 
 ```json
 {
-  "name" : "Repairs agent",
+  "version": "v1.6",
+  "name": "Repairs agent",
   "description": "This declarative agent is meant to help track any tickets and repairs",
   "instructions": "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
 }
@@ -111,6 +114,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [People object](#people-object)
 - [Scenario models object](#scenario-models-object)
 - [Meetings object](#meetings-object)
+- [Embedded knowledge object](#embedded-knowledge-object)
 
 > [!NOTE]
 > Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
@@ -524,6 +528,36 @@ The meetings object contains the following property.
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `Meetings`. |
 
+### Embedded knowledge object
+
+Indicates that the declarative agent can use files locally in the app package or external resource snapshots as knowledge sources.
+
+The embedded knowledge object contains the following properties:
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `name` | String | Required. Must be set to `EmbeddedKnowledge`. |
+| `files` | Array of [File object](#file-object) | Optional. List of objects identifying files that contain knowledge the agent can use for grounding. |
+| `embedded_resource_snapshot_id` | String | Optional. Identifier provisioned by an external file container storage service to locate embedded knowledge files. |
+
+#### EmbeddedKnowledge object example
+
+```json
+{
+  "name": "EmbeddedKnowledge",
+  "files": [
+    { "file": "file1.docx" },
+    { "file": "file2.csv" }
+  ]
+}
+```
+
+#### File object
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `file` | String | Required. The file relative path for the embedded file. |
+
 ### Conversation starters object
 
 The conversation starters object is optional in the manifest. It contains hints that are displayed to the user to demonstrate how they can get started using the declarative agent.
@@ -534,6 +568,9 @@ The conversation starter object contains the following properties:
 | -------- | ------ | ----------- |
 | `text`   | String | Required. Localizable. A suggestion that the user can use to obtain the desired result from the declarative agent. It MUST contain at least one nonwhitespace character. |
 | `title`  | String | Optional. Localizable. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
+
+> [!NOTE]
+> There MUST NOT be more than 6 objects in the array.
 
 #### Conversation starters object example
 
@@ -571,6 +608,9 @@ The action object contains the following properties.
 | -------- | ------ | ----------- |
 | `id`     | String | Required. A unique identifier for the action. It MAY be a GUID. |
 | `file`   | String | Required. A path to the API plugin manifest for this action. |
+
+> [!NOTE]
+> There MUST be at least 1 and no more than 10 objects in the array.
 
 #### Actions object example
 
@@ -645,11 +685,29 @@ The disclaimer object contains the following property.
 | -------- | ------ | ----------- |
 | `text`   | String | Required. The disclaimer text. The value MUST contain at least one non-whitespace character and SHOULD NOT exceed 500 characters. |
 
+### Sensitivity label object
+
+An optional JSON object that specifies the Purview sensitivity label for the agent.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `id`     | String | The GUID of the sensitivity label from Purview. |
+
+#### Sensitivity label object example
+
+```json
+{
+  "sensitivity_label": {
+    "id": "<guid>"
+  }
+}
+```
+
 ## Declarative agent manifest example
 
 The following example shows a declarative agent manifest file that uses most of the manifest properties described in this article.
 
-:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.5.json":::
+:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.6.json":::
 
 ## Related content
 
