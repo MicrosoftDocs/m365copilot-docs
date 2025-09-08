@@ -4,7 +4,7 @@ description: Learn the prerequisites for extending Microsoft 365 Copilot with ag
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
-ms.date: 08/25/2025
+ms.date: 09/12/2025
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -21,14 +21,14 @@ You have the following options for a Copilot development environment:
 
 - A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities.
 
-    At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities. For details, see [Agent capabilities across Microsoft 365 apps and surfaces](#agent-capabilities-across-microsoft-365-apps-and-surfaces).
+    At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities. For details, see [User access to agents across Microsoft 365 apps](prerequisites.md#user-access-to-agents-across-Microsoft-365-apps).
 
 - An eligible [Microsoft 365 or Office 365 production environment](#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
     > [!NOTE]
     > When you build agents in production environments, you might encounter admin-imposed limitations. For example, administrators can block sideloading of custom apps or might not grant the necessary permissions required to build Copilot connectors.
 
-- A Microsoft 365 subscription without a Copilot license, such as [Microsoft 365 Business Basic](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-basic), if you want to build and test agents for Microsoft 365 Copilot Chat, with limited capabilities. For details, see [Agent capabilities across Microsoft 365 apps and surfaces](#agent-capabilities-across-microsoft-365-apps-and-surfaces).
+- A Microsoft 365 subscription without a Copilot license, such as [Microsoft 365 Business Basic](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-basic), if you want to build and test agents for Microsoft 365 Copilot Chat, with limited capabilities. For details, see [User access to agents across Microsoft 365 apps](prerequisites.md#user-access-to-agents-across-Microsoft-365-apps).
 
 You can also purchase a Microsoft 365 Copilot license and set up a development environment independent of your production environment, where you can be your own administrator.
 
@@ -57,7 +57,7 @@ To learn more and choose the best extensibility path for your users, see [Copilo
 To build agents, you need to complete prerequisites depending on the tool that you choose to use.
 
 > [!NOTE]
-> Some agent capabilities are only available to users in tenants with Copilot Studio metered usage enabled or users with Microsoft 365 Copilot licenses. For example, if you want to build agents that are grounded in organizational data, you need to enable metering or purchase a Microsoft 365 Copilot license. For details, see [Agent capabilities across Microsoft 365 apps and surfaces](#agent-capabilities-across-microsoft-365-apps-and-surfaces).
+> Some agent capabilities are only available to users in tenants with Copilot Studio metered usage enabled or users with Microsoft 365 Copilot licenses. For example, if you want to build agents that are grounded in organizational data, you need to enable metering or purchase a Microsoft 365 Copilot license. For details, see [User access to agents across Microsoft 365 apps](prerequisites.md#user-access-to-agents-across-Microsoft-365-apps).
 
 #### Microsoft 365 Agents Toolkit requirements
 
@@ -94,7 +94,7 @@ Developer mode is only available within Microsoft 365 Copilot (Copilot for Work)
 
 Accounts used to test agents that are grounded on organizational data or that include enhanced capabilities need a Microsoft 365 Copilot Developer license. Admins can manage Microsoft 365 Copilot Developer licenses in the Microsoft 365 admin center (under **Billing > Licenses**). You can also [use PowerShell to assign Microsoft 365 licenses to user accounts](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell).
 
-## User access to agents across Microsoft 365 apps and surfaces
+## User access to agents across Microsoft 365 apps
 
 As a developer or maker building agents with Microsoft Copilot Studio, it's essential to understand where your agents can be accessed across Microsoft 365 apps and surfaces, how users interact with them across form factors (desktop, web, mobile), and what licensing or metered-usage models apply.
 
@@ -122,7 +122,6 @@ Microsoft Copilot agents are accessible through multiple licensing models, each 
 | **Licensed users**                                     | Have both a Microsoft 365 subscription and the Copilot add-on license. They receive full access to Copilot Chat and agent experiences across supported apps and platforms. This license also enables usage of agents grounded in tenant data (e.g., SharePoint, Graph) and is required for authoring agents in Copilot Studio unless using a trial or developer license. |
 | **Pay-as-you-go users (PAYGO)**                              | Belong to tenants with usage-based billing enabled. They can access Copilot Chat and agents without a full Copilot license. PAYGO billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features—such as agent interactions or grounding—may require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. |
 | **Microsoft 365 subscribers without the Copilot add-on** | May see Copilot Chat entry points in some apps, but access is limited or disabled depending on tenant configuration and rollout status. These users do not have access to agent authoring or advanced agent experiences. |
-
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and metered usage configuration in the tenant.
 
@@ -184,7 +183,7 @@ You can use your Microsoft 365 Developer Program subscription to build agents wi
 
 ### I'm not an ISV and I don't have a Microsoft 365 Copilot license. Can I get a Microsoft 365 Copilot development environment?
 
-If you have a Microsoft 365 subscription, you can build and test agents in Microsoft 365 Copilot Chat, with limited capabilities. You need to enable metering in your tenant or purchase a Microsoft 365 Copilot license if you want to build agents that are grounded in organizational data. For details, [Agent capabilities across Microsoft 365 apps and surfaces](#agent-capabilities-across-microsoft-365-apps-and-surfaces).
+If you have a Microsoft 365 subscription, you can build and test agents in Microsoft 365 Copilot Chat, with limited capabilities. You need to enable metering in your tenant or purchase a Microsoft 365 Copilot license if you want to build agents that are grounded in organizational data. For details, see [User access to agents across Microsoft 365 apps](prerequisites.md#user-access-to-agents-across-Microsoft-365-apps).
 
 ## Security and privacy
 

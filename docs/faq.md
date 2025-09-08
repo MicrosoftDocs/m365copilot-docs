@@ -62,7 +62,7 @@ For information about data retention in Copilot, see [Learn about retention for 
 
 ### What licenses do I need to purchase to develop declarative agents or custom engine agents?
 
-You can build declarative agents grounded on web search with limited capabilities without a Microsoft 365 Copilot license. If you have a [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing), you don't need additional licenses to build declarative agents with additional capabilities, including Copilot connectors and plugins. For details, see [Agent capabilities across Microsoft 365 apps and surfaces](prerequisites.md#agent-capabilities-across-microsoft-365-apps-and-surfaces).
+You can build declarative agents grounded on web search with limited capabilities without a Microsoft 365 Copilot license. If you have a [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing), you don't need additional licenses to build declarative agents with additional capabilities, including Copilot connectors and plugins. For details, see [User access to agents across Microsoft 365 apps](prerequisites.md#user-access-to-agents-across-Microsoft-365-apps).
 
 You don't need a [Copilot Studio license](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) to build agents; however, if you want to ground your agent in organizational data, you either need a license or you need to set up consumption metering in your tenant. For details, see [Copilot Studio requirements](prerequisites.md#copilot-studio-requirements) and [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
 
