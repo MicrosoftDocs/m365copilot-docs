@@ -61,7 +61,7 @@ You can deploy these agents as-is or further customize them by incorporating you
 
 ### Build your own agent
 
-If a prebuilt agent doesn't meet your needs, you can build your own agent [from a template](aegnt-templates-overview.md) or design something from scratch specifically for your workflows and business processes. Whether you need a highly specialized AI assistant or an advanced automation solution, you can develop agents using low-code or pro-code tools that match your preferred development environment and deployment needs. For more information, see [Agents overview](agents-overview.md).
+If a prebuilt agent doesn't meet your needs, you can build your own agent [from a template](agent-builder-templates.md) or design something from scratch specifically for your workflows and business processes. Whether you need a highly specialized AI assistant or an advanced automation solution, you can develop agents using low-code or pro-code tools that match your preferred development environment and deployment needs. For more information, see [Agents overview](agents-overview.md).
 
 The following table provides some examples of the types of agents you can develop for your organization.
 
