@@ -96,29 +96,34 @@ Accounts used to test agents that are grounded on organizational data or that in
 
 ## User access to agents across Microsoft 365 apps and surfaces
 
-As a developer or maker building agents with Microsoft Copilot Studio, it's essential to understand where your agents can be accessed across Microsoft 365 apps and surfaces, how users interact with them across form factors (desktop, web, mobile), and what licensing or metered-usage models apply.
+As a developer, it's helpful to understand where users can access your agents across Microsoft 365 apps and surface areas (desktop, web, mobile).
 
-Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents in the following Microsoft 365 experiences:
+The following table shows agent availability across Microsoft 365 apps and surface areas.
 
-| App/Surface | Desktop | Web  | Mobile | Notes |
+| App | Desktop | Web  | Mobile | Notes |
 |------|---------|------|--------|-----|
-| Microsoft Teams             | ✅  | ✅ | ✅ | Agents can be pinned in Copilot Chat or embedded in Teams apps.   |
+| Microsoft Teams             | ✅  | ✅ | ✅ | Agents can be pinned in Copilot Chat.   |
 | Outlook                     | ✅  | ✅ | ✅ | Access via Copilot Chat or embedded experiences.                  |
 | Word, Excel, PowerPoint     | ✅  | ✅ | ✅ | Declarative agents can be invoked via Copilot prompts.            |
 | SharePoint                  | ❌  | ✅ | ❌ | Agents can be embedded in pages or surfaced via SharePoint extensions.|
-| Microsoft 365 Copilot Chat  | ✅  | ✅ | ✅ | Primary surface for agent interaction.                            |
+| Microsoft 365 Copilot  | ✅  | ✅ | ✅ | Primary app for agent interaction.                            |
 | Microsoft 365 App (Harmony) | ✅  | ✅ | ✅ | Agents appear in the Copilot Chat pane.                           |
-| Microsoft Edge              | ❌  | ✅ | ❌ | Copilot Chat accessible via browser; agents available if pinned.  |
+| Microsoft Edge              | ❌  | ✅ | ❌ | Agents are available in Copilot Chat if pinned.  |
 
 ### Licensing requirements
 
-Microsoft Copilot agents are accessible through multiple licensing models, each offering varying levels of functionality. Users with a Microsoft 365 subscription and the Copilot add-on license receive full access to agent experiences across supported apps and platforms. Tenants with usage-based billing (pay-as-you-go) can enable agent access without a full license, though advanced features may require additional configuration. Microsoft 365 subscribers without the Copilot add-on may see Copilot Chat entry points in some apps, but their access to agent experiences is limited or disabled depending on tenant settings. Unlicensed users do not have access to Copilot agents.
+Agents for Copilot are available through multiple licensing models, each offering different levels of functionality:
 
-| User Type                                              | Description |
+- **Microsoft 365 with Copilot add-on license** - Users with a Microsoft 365 subscription and a Copilot add-on license have full access to Copilot agent experiences across supported apps and platforms.
+- **Usage-based billing (pay-as-you-go)** - Tenants can enable agent access without a full license, with some limitations to agent configuration options.
+- **Microsoft 365 without a Copilot add-on license** - Users might see Copilot Chat entry points in some apps, but access to agent experiences is limited or disabled based on tenant settings.
+Unlicensed users: Users without a license don’t have access to Copilot agents.
+
+| Licensing model                                              | Agent access |
 |--------------------------------------------------------|-------------|
-| **Licensed users**                                     | Have both a Microsoft 365 subscription and the Copilot add-on license. They receive full access to Copilot Chat and agent experiences across supported apps and platforms. This license also enables usage of agents grounded in tenant data (e.g., SharePoint, Graph) and is required for authoring agents in Copilot Studio unless using a trial or developer license. |
-| **Pay-as-you-go users (PAYGO)**                              | Belong to tenants with usage-based billing enabled. They can access Copilot Chat and agents without a full Copilot license. PAYGO billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features—such as agent interactions or grounding—may require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. |
-| **Microsoft 365 subscribers without the Copilot add-on** | May see Copilot Chat entry points in some apps, but access is limited or disabled depending on tenant configuration and rollout status. These users do not have access to agent authoring or advanced agent experiences. |
+| **Microsoft 365 Copilot add-on license**                                     | Full access to Copilot Chat and agent experiences across supported apps and platforms. Users can use agents grounded in tenant data and have access to Copilot Studio (unless they have a trial or developer license). |
+| **Usage-based billing (pay-as-you-go)**                              | Users have access to Copilot Chat and agents without a full Copilot license. Usage rates apply to agents grounded in tenant data; agents grounded in public data or instructions are free to use. Some features—such as agent interactions or grounding data—might not be available. Requires an Azure subscription and billing policy setup in the Microsoft 365 admin center. |
+| **Microsoft 365 subscription without a Copilot add-on license** | Users see Copilot Chat entry points in some apps, but access is limited or disabled depending on tenant configuration and rollout status. Users don't have access to agent authoring experiences or agents grounded in tenant data. |
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
