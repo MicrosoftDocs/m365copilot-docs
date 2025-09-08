@@ -11,7 +11,7 @@ ms.date: 09/12/2025
 
 You can build agents to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. This article describes how to set up your development environment to extend Microsoft 365 Copilot.
 
-Microsoft 365 Copilot Chat is a broadly accessible AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend its capabilities and can be grounded on instructions or the web. Users in tenants that have [Copilot Studio metering enabled](#copilot-studio-message-usage-rates) and users with Microsoft 365 Copilot licenses have access to agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft 365 Copilot connectors.
+Microsoft 365 Copilot Chat is a broadly accessible AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend its capabilities and can be grounded on instructions or the web. Users in tenants that have Copilot Studio metering enabled and users with Microsoft 365 Copilot licenses have access to agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft 365 Copilot connectors.
 
 For Microsoft 365 Copilot license information, see [License options](/copilot/microsoft-365/microsoft-365-copilot-licensing).
 
@@ -96,36 +96,38 @@ Accounts used to test agents that are grounded on organizational data or that in
 
 ## User access to agents across Microsoft 365 apps
 
-As a developer or maker building agents with Microsoft Copilot Studio, it's essential to understand where your agents can be accessed across Microsoft 365 apps and surfaces, how users interact with them across form factors (desktop, web, mobile), and what licensing or metered-usage models apply.
+As a developer, it's helpful to understand where users can access your agents across Microsoft 365 apps and surface areas (desktop, web, mobile).
 
-Microsoft 365 Copilot Chat is available to all users in Microsoft 365 organizations. Copilot Chat users can access and use agents in the following Microsoft 365 experiences:
+The following table shows agent availability across Microsoft 365 apps and surface areas.
 
-| App/Surface | Desktop | Web  | Mobile | Notes |
+| App | Desktop | Web  | Mobile | Notes |
 |------|---------|------|--------|-----|
-| Microsoft Teams             | ✅  | ✅ | ✅ | Agents can be pinned in Copilot Chat or embedded in Teams apps.   |
+| Microsoft Teams             | ✅  | ✅ | ✅ | Agents can be pinned in Copilot Chat.   |
 | Outlook                     | ✅  | ✅ | ✅ | Access via Copilot Chat or embedded experiences.                  |
 | Word, Excel, PowerPoint     | ✅  | ✅ | ✅ | Declarative agents can be invoked via Copilot prompts.            |
 | SharePoint                  | ❌  | ✅ | ❌ | Agents can be embedded in pages or surfaced via SharePoint extensions.|
-| Microsoft 365 Copilot Chat  | ✅  | ✅ | ✅ | Primary surface for agent interaction.                            |
+| Microsoft 365 Copilot  | ✅  | ✅ | ✅ | Primary app for agent interaction.                            |
 | Microsoft 365 App (Harmony) | ✅  | ✅ | ✅ | Agents appear in the Copilot Chat pane.                           |
-| Microsoft Edge              | ❌  | ✅ | ❌ | Copilot Chat accessible via browser; agents available if pinned.  |
-
-> [!NOTE]
-> Copilot Chat and the agent experience in Word and PowerPoint is available only to users with a Microsoft 365 Copilot license. The agent experience is currently not available in the Copilot Chat experience in Outlook.
+| Microsoft Edge              | ❌  | ✅ | ❌ | Agents are available in Copilot Chat if pinned.  |
 
 ### Licensing requirements
 
-Microsoft Copilot agents are accessible through multiple licensing models, each offering varying levels of functionality. Users with a Microsoft 365 subscription and the Copilot add-on license receive full access to agent experiences across supported apps and platforms. Tenants with usage-based billing (pay-as-you-go) can enable agent access without a full license, though advanced features may require additional configuration. Microsoft 365 subscribers without the Copilot add-on may see Copilot Chat entry points in some apps, but their access to agent experiences is limited or disabled depending on tenant settings. Unlicensed users do not have access to Copilot agents.
+Agents for Copilot are available through multiple licensing models, each offering different levels of functionality:
 
-| User Type                                              | Description |
+- **Microsoft 365 with Copilot add-on license** - Users with a Microsoft 365 subscription and a Copilot add-on license have full access to Copilot agent experiences across supported apps and platforms.
+- **Usage-based billing (pay-as-you-go)** - Tenants can enable agent access without a full license, with some limitations to agent configuration options.
+- **Microsoft 365 without a Copilot add-on license** - Users might see Copilot Chat entry points in some apps, but access to agent experiences is limited or disabled based on tenant settings.
+Unlicensed users: Users without a license don’t have access to Copilot agents.
+
+| Licensing model                                              | Agent access |
 |--------------------------------------------------------|-------------|
 | **Licensed users**                                     | Have both a Microsoft 365 subscription and the Copilot add-on license. They receive full access to Copilot Chat and agent experiences across supported apps and platforms. This license also enables usage of agents grounded in tenant data (e.g., SharePoint, Graph) and is required for authoring agents in Copilot Studio unless using a trial or developer license. |
 | **Pay-as-you-go users (PAYGO)**                              | Belong to tenants with usage-based billing enabled. They can access Copilot Chat and agents without a full Copilot license. PAYGO billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features—such as agent interactions or grounding—may require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. |
 | **Microsoft 365 subscribers without the Copilot add-on** | May see Copilot Chat entry points in some apps, but access is limited or disabled depending on tenant configuration and rollout status. These users do not have access to agent authoring or advanced agent experiences. |
 
-The following table lists the agent types and agent capabilities that are available to users based on licensing and metered usage configuration in the tenant.
+The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
-| Capability | Copilot Chat (no metered usage)* | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
+| Capability | Copilot Chat (no usage billing)* | Copilot Chat (usage billing) | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
 |Copilot Studio agent builder |  :white_check_mark: | :white_check_mark:\** | :white_check_mark: |
 |Copilot Studio |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
@@ -147,33 +149,11 @@ The following table lists the agent types and agent capabilities that are availa
 |[**Custom engine agents**](overview-custom-engine-agent.md)| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
-\** Users who are configured with a pay-as-you-go plan in the Microsoft 365 admin center don't have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use Copilot Studio agent builder to create agents. 
+
+\** Users who are configured with a pay-as-you-go plan in the Microsoft 365 admin center don't have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use Copilot Studio agent builder to create agents.
 
 > [!NOTE]
 > For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
-
-### Copilot Studio message usage rates
-
-If you choose the metered pay-as-you-go option for Copilot Studio, utilization rates apply based on the type of agent and prompt.
-
-Billing is based on message units. The total cost is calculated based on the sum of the messages used by your organization. The number of messages consumed by an agent depends on the complexity of the agent, how often customers interact with it, and the features they use.
-
-The following table lists the utilization rates for different agent capabilities for Copilot Chat users and users with Microsoft 365 Copilot licenses. Note that interactions can use multiple usage rates; for example, an agent grounded in organizational data can use 12 messages (10 for organizational grounding and two for dynamic responses).
-
-Each message unit costs $0.01.
-
-| Agent capability | Copilot Chat (metered usage) | Microsoft 365 Copilot (licensed) |
-|:-----------------|:-----------------------------|:---------------------------------|
-|Web-grounded answers| 0 | 0|
-|Classic answers | 1 message/$0.01 | 0 |
-|Generative answers based on knowledge sources | 2 messages/$0.02 | 0 |
-|Tenant data responses based on Copilot connector grounding | 10 messages/$0.10 | 0 |
-|Agent actions via triggers, topics, agent flows, text & generative AI tools, and Power Platform connectors | 5 messages/$0.05 | 0 (Autonomous use message/$0.05) |
-| **Text and generative AI tools** (Message rate per 10 responses)| | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic| 1 message/$0.01 | 1 message/$0.01 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard| 15 messages/$0.15 | 15 messages/$0.15 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Premium| 100 messages/$1.00 | 100 messages/$1.00 |
-|Agent flow actions (Message rate per 100 actions) | 13 message/$0.13| 13 message/$0.13 |
 
 ## Frequently asked questions
 
