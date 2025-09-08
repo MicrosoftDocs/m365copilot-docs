@@ -406,11 +406,11 @@ Indicates that the declarative agent can search through email messages in the ma
 
 The email object contains the following properties.
 
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `Email`. |
-| `shared_mailbox` | String | Optional. The SMTP address of a shared mailbox. |
-| `folders` | String | Optional. An array of [folder_id](#folders-object) objects. |
+| Property         | Type                                | Description |
+| ---------------- | ----------------------------------- | ----------- |
+| `name`           | String                              | Required. Must be set to `Email`. |
+| `shared_mailbox` | String                              | Optional. The SMTP address of a shared mailbox. |
+| `folders`        | Array of [Folders](#folders-object) | Optional. If present, only email in the specified folders are available to the agent. |
 
 ##### Folders object
 
