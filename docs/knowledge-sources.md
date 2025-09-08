@@ -245,7 +245,7 @@ Teams meetings knowledge allows you to scope your agent to answer questions abou
 
 ### Add meetings knowledge source
 
-If you're using [Copilot Studio](copilot-studio-lite-build.md) experience to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings**.
+If you're using the lite experience within [Copilot Studio](copilot-studio-lite-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings**.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable meetings knowledge, add the `Meetings` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
