@@ -61,7 +61,7 @@ To configure a declarative agent, you provide:
 Declarative agents have the following characteristics:
 
 - **Hosting:** Use Copilot's orchestrator and foundation model. No additional hosting is required.
-- **Tooling:** Build agents using low-code tools such as [Copilot Studio lite](https://www.microsoft.com) or pro-code tools like Visual Studio or Visual Studio Code and Microsoft 365 Agents Toolkit.
+- **Tooling:** Build agents using low-code tools such as [Copilot Studio agent builder](https://www.microsoft.com) or pro-code tools like Visual Studio or Visual Studio Code and Microsoft 365 Agents Toolkit.
 - **Channels:** Run in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook.
 
 ## Custom engine agents
@@ -105,13 +105,13 @@ The following flow chart summarizes the decision process for choosing what type 
 
 :::image type="content" source="assets/images/cea-da-decision-guide.png" alt-text="A decision guide for choosing between declarative agents and custom engine agents." lightbox="assets/images/cea-da-decision-guide.png" border="false":::
 
-Build a declarative agent when:
+**Build a declarative agent when:**
 
 - You want your agent to work within Copilot's orchestration and language models to ensure consistency with security and compliance.
 - You want a faster implementation or want to develop an agent with no or low-code using tools like [Copilot Studio](/microsoft-copilot-studio/) or you're a developer who prefers a streamlined experience with pro-code options like [Visual Studio](https://visualstudio.microsoft.com/) or [Teams Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
 - Your user's workflow is within Microsoft 365 apps (SharePoint, OneDrive, Teams) and they want to work within the context of these applications (via @mentions or in Teams business chats). For example, An IT helpdesk agent that responds to @mentions in Teams or a document summarization agent invoked in SharePoint.
 
-Build a custom engine agent when:
+**Build a custom engine agent when:**
 
 - Your agent requires custom orchestration to handle complex workflows, specific business logic, precise decision-making rules, or multiple system integrations. For example, a financial loan approval agent may have specific business rules, precise data gathering requirements, and multiple credit check systems to evaluate a candidate's application.
 - You want to use your own AI models or your agent might benefit from domain-specific models with specialized knowledge or multimodal models.
