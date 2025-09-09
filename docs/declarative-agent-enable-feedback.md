@@ -10,7 +10,7 @@ ms.date: 09/15/2025
 
 # Enable feedback for your agent
 
-You can help improve the performance an accuracy of your declarative agents by enabling the feedback settings across all Microsoft 365 apps. When you do so, users can rate the responses your agents generate and provide logs, screenshots, and contact email addresses when they submit their feedback. 
+You can help improve the performance and accuracy of your declarative agents by enabling the feedback settings across all Microsoft 365 apps. When you do so, users can rate the responses your agents generate and provide logs, screenshots, and contact email addresses when they submit their feedback. 
 
 This article explains how to configure the feedback settings for Microsoft 365 apps, how to review and setting policies to manage how users submit and interact with feedback, and how to send diagnostic logs for Copilot issues on behalf of users.
 
@@ -48,3 +48,7 @@ To send diagnostic logs for Copilot for Microsoft 365 on behalf of individual us
 1. in the **Copilot for Microsoft 365 diagnostic logs** pane, review the information and then select **Start**.
 1. On the **Collect data** pane, review the information and enter your email into the **Search for and select the user you want to submit Copilot feedback logs for** box and select **Next**
 1. On the **Review and send Copilot feedback to Microsoft** pane, enter a comment, and then select **Submit**.
+
+## Related content
+
+For information about configuring feedback to Microsoft from your organization overall, see [Manage Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-feedback-ms-org?view=o365-worldwide)
