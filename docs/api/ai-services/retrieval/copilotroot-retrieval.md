@@ -21,11 +21,13 @@ The Microsoft 365 Copilot Retrieval API allows for the retrieval of relevant tex
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-| Permission type                        | Least privileged permissions | Higher privileged permissions |
-|:---------------------------------------|:-----------------------------|:------------------------------|
-| Delegated (work or school account)     | Files.Read.All               | Sites.Read.All, ExternalItem.Read.All                |
+| Permission type                        | Least privileged permissions    | Higher privileged permissions |
+|:---------------------------------------|:---------------------------------------------|:------------------------------|
+| Delegated (work or school account)     | Files.Read.All, Sites.Read.All\*               | ExternalItem.Read.All         |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
 | Application                            | Not supported.               | Not supported.                |
+
+\* You need both Files.Read.All and Sites.Read.All permissions to retrieve SharePoint and OneDrive content.
 
 ## HTTP request
 
