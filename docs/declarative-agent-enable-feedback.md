@@ -1,18 +1,18 @@
 ---
 title: Enable feedback for your declarative agents for Microsoft 365 Copilot
-description: Learn how to configure your declarative agent to enable user feedback
+description: Learn how to configure your declarative agent to enable user feedback.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/15/2025
+ms.date: 09/09/2025
 ---
 
 # Enable feedback for your agent
 
 You can help improve the performance and accuracy of your declarative agents by enabling the feedback settings across all Microsoft 365 apps. When you do so, users can rate the responses your agents generate and provide logs, screenshots, and contact email addresses when they submit their feedback. 
 
-This article explains how to configure the feedback settings for Microsoft 365 apps, how to review and setting policies to manage how users submit and interact with feedback, and how to send diagnostic logs for Copilot issues on behalf of users.
+This article explains how to configure the feedback settings for Microsoft 365 apps, how to review and set policies to manage how users submit and interact with feedback, and how to send diagnostic logs for Copilot issues on behalf of users.
 
 ## Review specific policies you can configure
 
@@ -32,23 +32,24 @@ The following table identifies the relevant feedback policies you can configure.
 >
 > The **Allow users to access the feedback portal** policy isn’t defined in the Administrative Template (.ADMX) files used in Windows environments to define Group Policy settings and doesn’t have a corresponding registry key available to set the policy. To improve security, you should create a cloud policy to enforce it.
 
-## Send diagnostic logs for Copilot for Microsoft 365
+## Send diagnostic logs for Mirosoft 365 Copilot
 
-To send diagnostic logs for Copilot for Microsoft 365 on behalf of individual users who are having issues, take the following steps:
+To send diagnostic logs for Copilot on behalf of individual users who are having issues, an admin must:
 
 1. Sign in to the Microsoft 365 admin center as a Global Admin.
-1. On the left navigation, select **Copilot**.
+1. On the left pane, select **Copilot**.
 1. Review the information on the **Overview** page.
-    - Assess the active users and identify which apps are using Copilot for Microsoft 365.
+    - Assess the active users and identify which apps are using Copilot.
     - Review the assigned licenses and message center information.
 1. Select the **Settings** tab.
-1. Review the settings names and descriptions.
+1. Review the setting names and descriptions.
 1. Select **Copilot diagnostic logs**.
     :::image type="content" source="assets/images/copilot-diagnostic-logs.jpg" alt-text="Screenshot of the Copilot diagnostic logs setting in the Microsoft 365 admin center.":::
-1. in the **Copilot for Microsoft 365 diagnostic logs** pane, review the information and then select **Start**.
-1. On the **Collect data** pane, review the information and enter your email into the **Search for and select the user you want to submit Copilot feedback logs for** box and select **Next**
+1. In the **Copilot for Microsoft 365 diagnostic logs** pane, review the information and then select **Start**.
+1. On the **Collect data** pane, review the information and enter your email into the **Search for and select the user you want to submit Copilot feedback logs for** box and select **Next**.
 1. On the **Review and send Copilot feedback to Microsoft** pane, enter a comment, and then select **Submit**.
 
 ## Related content
 
-For information about configuring feedback to Microsoft from your organization overall, see [Manage Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-feedback-ms-org?view=o365-worldwide)
+- [Manage Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-feedback-ms-org?view=o365-worldwide)
+- [Declarative agents overview](overview-declarative-agent.md)
