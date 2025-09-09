@@ -14,12 +14,6 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
-## September 2025
-
-### Rebranding of Copilot Studio agent builder
-
-To clarify that Copilot Studio is a single tool with both a full agent building experience and a lighter weight experience, the documentation has been updated. References to **Copilot Studio agent builder** have been updated to **the lite experience in Copilot Studio**.
-
 ## August 2025
 
 ### Use Teams meetings as a knowledge source in Copilot Studio
