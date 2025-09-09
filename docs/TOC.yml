@@ -169,6 +169,8 @@ items:
         href: image-generator.md
       - name: Knowledge sources
         href: knowledge-sources.md
+    - name: Enable user feedback for your agent
+      href: declarative-agent-enable-feedback.md
     - name: Optimize content retrieval
       href: optimize-content-retrieval.md
     - name: Document interaction
