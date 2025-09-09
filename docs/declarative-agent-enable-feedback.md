@@ -1,0 +1,50 @@
+---
+title: Enable feedback for for your declarative agents for Microsoft 365 Copilot
+description: Learn how configure your declarative agent to enable user feedback
+author: kmkoenen
+ms.author: v-koenenkaty
+ms.topic: concept-article
+ms.localizationpriority: medium
+ms.date: 09/19/2025
+---
+
+# Enable feedback for your agent
+
+You can help improve the performance an accuracy of your declarative agents by enabling the feedback settings across all Microsoft 365 apps. When you do so, users can rate the responses your agents generate and provide logs, screenshots, and contact email addresses when they submit their feedback. 
+
+This article explains how to configure the feedback settings for Microsoft 365 apps, reviewing and setting policies to manage how users submit and interact with feedback, and then send diagnostic logs for Copilot issues on behalf of users.
+
+## Review specific policies you can configure
+
+The following table identifies the relevant feedback policies you can configure.
+
+| Policy name | Default state | Control summary |
+| ----------- | ------------- | --------------- |
+| Allow users access to feedback portal  | On | Manage user access to the feedback portal where users can follow-up on their feedback and participate in community feedback. |
+| Allow users to submit feedback to Microsoft | On | Controls feedback entry points across applications. |
+| Allow users to receive and respond to in-product surveys from Microsoft | On | Controls survey prompts within product. |
+| Allow users to include screenshots and attachments when they submit feedback to Microsoft | On | Allows users to choose relevant files, screen recordings and screenshots to help Microsoft better understand and troubleshoot their feedback. |
+| Allow Microsoft to follow up on feedback submitted by users | On | Determines if user can share contact info with feedback/survey for follow up by Microsoft. Also allows users to get notified of feedback status changes. Users can manage communications settings in the feedback portal. |
+| Allow users to include log files and content samples when feedback is submitted to Microsoft | On | Allows users to include Microsoft generated files such as additional log files and content samples when relevant to feedback they are submitting. Examples may include Microsoft 365 Copilot prompt and response interactions. |
+
+> [!IMPORTANT]
+> The **Allow users to access the feedback portal** policy is a cloud policy: the feedback portal is a web application that makes a call to the cloud policy service, (which is also a web application), requesting the policies for the person who signs in. If this policy is configured, the feedback portal will receive the configured policy value in the response from the cloud policy service.
+>
+> This policy isn’t defined in the Administrative Template (.ADMX) files used in Windows environments to define Group Policy settings and doesn’t have a corresponding registry key available to set the policy. To improve security, you should create a cloud policy to enforce it.
+
+## Send diagnostic logs for Copilot for Microsoft 365
+
+To send diagnostic logs for Copilot for Microsoft 365 on behalf of individual users who are having issues, take the following steps:
+
+1. Log in to the Microsoft 365 admin center as a Global Admin.
+1. On the left navigation, select **Copilot**.
+1. Review the information on the **Overview** page.
+    - Assess the active users and identify which apps are leveraging Copilot for Microsoft 365.
+    - Review the assigned licenses and message center information.
+1. Select the **Settings** tab.
+1. Review the settings names and descriptions.
+1. Select **Copilot diagnostic logs**.
+    :::image type="content" source="assets/images/copilot-diagnostic-logs.jpg" alt-text="Screenshot of the Copilot diagnostic logs setting in the Microsoft 365 admin center.":::
+1. in the **Copilot for Microsoft 365 diagnostic logs** pane, review the information and then select **Start**.
+1. On the **Collect data** pane, review the information and enter your email into the **Search for and select the user you want to submit Copilot feedback logs for** box and select **Next**
+1. On the **Review and send Copilot feedback to Microsoft** pane, enter a comment and then select **Submit**.

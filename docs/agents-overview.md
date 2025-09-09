@@ -64,13 +64,6 @@ Declarative agents have the following characteristics:
 - **Tooling:** Build agents using low-code tools such as [Copilot Studio agent builder](https://www.microsoft.com) or pro-code tools like Visual Studio or Visual Studio Code and Microsoft 365 Agents Toolkit.
 - **Channels:** Run in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook.
 
-## Enable feedback for your agent
-
-You can help improve the performance an accuracy of your declarative agents by enabling the feedback settings across all Microsoft 365 apps. When you do so, users can rate the responses your agents generate and provide logs, screenshots, and contact email addresses when they submit their feedback.
-
-The [TechExcel: Elevate your Copilot for M365 Technical Proficiency](https://microsoft.github.io/TechExcel-Elevate-your-Copilot-for-M365-technical-proficiency/) tutorial provides detailed instructions and practice labs for a wide range of Copilot development use cases. For information about how to enable feedback for your agents, see [Lab 2, Exercise 3: Enable feedback settings for the Microsoft 365 apps](https://microsoft.github.io/TechExcel-Elevate-your-Copilot-for-M365-technical-proficiency/docs/L2Ex03/Ex03.html). 
-
-
 ## Custom engine agents
 
 Custom engine agents are fully customized AI assistants. They're useful for scenarios that require complex workflows, orchestration, or specific language models. Building a custom engine agent might require you to provide additional hosting for models and orchestrators and to ensure that your custom agent is compliant, secure, and adheres to [responsible AI (RAI) policies](/azure/well-architected/ai/responsible-ai). The following image shows the basic the anatomy of a custom engine agent.
