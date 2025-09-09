@@ -40,7 +40,7 @@ Contact your Microsoft representative to add Copilot to your Microsoft plan. Ent
 
 ### Organizations without Microsoft 365 Copilot licenses
 
-You can develop Copilot extensibility solutions for users in organizations without Copilot licenses, with some limitations to your agent capabilities. If you want to take advantage of agent capabilities such as grounding on organizational data, you can enable [Copilot Studio metering](#copilot-studio-message-usage-rates). For more information, see [Agent capabilities across Microsoft 365 apps and surfaces](#agent-capabilities-across-microsoft-365-apps-and-surfaces).
+You can develop Copilot extensibility solutions for users in organizations without Copilot licenses, with some limitations to your agent capabilities. If you want to take advantage of agent capabilities such as grounding on organizational data, you can enable Copilot Studio metering. For more information, see [User access to agents across Microsoft 365 apps](#user-access-to-agents-across-microsoft-365-apps).
 
 ## Requirements for Copilot extensibility options
 
