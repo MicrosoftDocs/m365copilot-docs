@@ -56,7 +56,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Microsoft 365 Agents Toolkit
-            url: /microsoft-365/developer/overview-m365-agents-toolkit
+            url: /microsoft-365/developer/overview-m365-agents-toolkit?context=/microsoft-365-copilot/extensibility/context
           - text: Microsoft 365 Agents SDK
             url: /microsoft-365-copilot/extensibility/m365-agents-sdk
           - text: Microsoft 365 Copilot APIs
