@@ -1,5 +1,5 @@
 ---
-title: Use Copilot Studio
+title: Use Copilot Studio to Build Declarative Agents for Microsoft 365
 description: Learn how to use the Copilot Studio lite experience to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
