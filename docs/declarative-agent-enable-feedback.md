@@ -51,5 +51,5 @@ To send diagnostic logs for Copilot on behalf of individual users who are having
 
 ## Related content
 
-- [Manage Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-feedback-ms-org?view=o365-worldwide)
+- [Manage Microsoft feedback for your organization](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-feedback-ms-org?view=o365-worldwide&preserve-view=true)
 - [Declarative agents overview](overview-declarative-agent.md)
