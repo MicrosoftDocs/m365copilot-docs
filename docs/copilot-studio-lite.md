@@ -8,7 +8,7 @@ ms.date: 09/09/2025
 ms.topic: conceptual
 ---
 
-# Use Copilot Studio
+# Use Copilot Studio to build declarative agents
 
 The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) enables you to build [declarative agents](overview-declarative-agent.md)) for [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) quickly and easily.
 
@@ -109,4 +109,4 @@ You can find and copy these details in the Copilot Studio within the **Get suppo
 - [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md) 
 - [Publish and manage agents built with Copilot Studio](copilot-studio-lite-publish-agent.md)
-- [Regional availability and language support for agents built with the Copilot Studio lite experience](copilot-studio-lite-availability.md)
+- [Regional availability and language support](copilot-studio-lite-availability.md)

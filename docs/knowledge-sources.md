@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Add knowledge sources to your declarative agent
 
-You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.5.md#capabilities-object) in the manifest reference and the **Knowledge** section in Copilot Studio provide several options for you to unlock features for your users. This article describes the knowledge sources that you can add to your agents.
+You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.5.md#capabilities-object) in the manifest reference and the **Knowledge** section in the Copilot Studio lite experience provide several options for you to unlock features for your users. This article describes the knowledge sources that you can add to your agents.
 
 The following table lists the capabilities and knowledge sources you can configure by within Copilot Studio or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
 
@@ -38,7 +38,7 @@ Microsoft 365 Copilot connectors enable you to add organizational data to your a
 
 For information about how to add Copilot connectors as knowledge to your agent manifest in Agents Toolkit, see [Copilot connectors object](declarative-agent-manifest-1.5.md#copilot-connectors-object).
 
-For information about how to add Copilot connectors to your agent within Copilot Studio, see [Copilot connectors](copilot-studio-lite-knowledge.md#copilot-connectors).
+For information about how to add Copilot connectors to your agent in Copilot Studio, see [Copilot connectors](copilot-studio-lite-knowledge.md#copilot-connectors).
 
 ## SharePoint and OneDrive
 
@@ -81,7 +81,7 @@ If you're using [Copilot Studio](copilot-studio-lite-build.md) to create your ag
 
 ## Embedded file content
 
-When building your agent using [Copilot Studio](copilot-studio-lite-build.md), you can upload files directly from your device or the cloud to embed the content for your agent to use as knowledge. The embedded file content is stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview). These files count against the OneDrive and SharePoint capacity in your tenant.
+If you're using [Copilot Studio](copilot-studio-lite-build.md) to build your agent, you can upload files directly from your device or the cloud to embed the content for your agent to use as knowledge. The embedded file content is stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview). These files count against the OneDrive and SharePoint capacity in your tenant.
 
 > [!NOTE]
 > The file upload feature is available to users with metered consumption enabled or with a Microsoft 365 Copilot license.
@@ -93,7 +93,7 @@ For more information about embedded files, see [Embedded file content](copilot-s
 Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
 
 > [!NOTE]
-> Dataverse knowledge isn't currently available in the lite experience of Copilot Studio.
+> Dataverse knowledge isn't currently available in Copilot Studio.
 
 ### Add Dataverse knowledge
 
@@ -135,7 +135,7 @@ Email knowledge allows you to scope your agent to a personal or shared mailbox, 
 If you're using [Copilot Studio](copilot-studio-lite.md) experience to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
 
 > [!NOTE]
-> You can't currently scope your emails to a specific folder or shared mailbox when you use the Copilot Studio lite experience.
+> You can't currently scope your emails to a specific folder or shared mailbox when you use Copilot Studio.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to add email knowledge, add the `Email` value to the **capabilities** property in your agent manifest file, as shown in the following example. You can reference multiple mailbox folders and only one shared folder.
 
@@ -173,7 +173,7 @@ If you don't reference a shared mailbox or a folder, the agent search isn't scop
 People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This knowledge source isn't scoped.
 
 > [!NOTE]
-> People knowledge isn't currently available in the lite experience of Copilot Studio.
+> People knowledge isn't currently available in Copilot Studio.
 
 ### Add people knowledge source
 
@@ -245,7 +245,7 @@ Teams meetings knowledge allows you to scope your agent to answer questions abou
 
 ### Add meetings knowledge source
 
-If you're using the lite experience within [Copilot Studio](copilot-studio-lite-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings**.
+If you're using [Copilot Studio](copilot-studio-lite-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings**.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable meetings knowledge, add the `Meetings` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
