@@ -22,8 +22,6 @@ This schema version introduces the following changes from [version 1.5](declarat
 
 - Added the optional `sensitivity_label` property to specify Purview sensitivity labels for the agent.
 - Added the [embedded knowledge](#embedded-knowledge-object) capability, allowing agents to use local files or external resource snapshots as knowledge sources.
-- Updated the maximum number of items in `conversation_starters` to 6 (was 12).
-- Updated the `actions` array to require 1-10 items.
 
 ## JSON schema
 
@@ -532,13 +530,21 @@ The meetings object contains the following property.
 
 Indicates that the declarative agent can use files locally in the app package or external resource snapshots as knowledge sources.
 
+Embedded knowledge files have a maximum file size of 1MB and must be one of the following document types:
+
+- Microsoft Word document (.doc, .docx)
+- Microsoft PowerPoint presentation (.ppt, .pptx)
+- Microsoft Excel workbook (.xls, .xlsx)
+- Plain text (.txt)
+- Portable Document Format (.pdf)
+
 The embedded knowledge object contains the following properties:
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `name` | String | Required. Must be set to `EmbeddedKnowledge`. |
-| `files` | Array of [File object](#file-object) | Optional. List of objects identifying files that contain knowledge the agent can use for grounding. |
-| `embedded_resource_snapshot_id` | String | Optional. Identifier provisioned by an external file container storage service to locate embedded knowledge files. |
+| `files` | Array of [File object](#file-object) | Optional. List of objects identifying files that contain knowledge the agent can use for grounding. Maximum size of the array is 10. |
+| `embedded_resource_snapshot_id` | String | Optional. For internal use only. |
 
 #### EmbeddedKnowledge object example
 
