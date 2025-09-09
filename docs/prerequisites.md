@@ -163,7 +163,7 @@ You can use your Microsoft 365 Developer Program subscription to build agents wi
 
 ### I'm not an ISV and I don't have a Microsoft 365 Copilot license. Can I get a Microsoft 365 Copilot development environment?
 
-If you have a Microsoft 365 subscription, you can build and test agents in Microsoft 365 Copilot Chat, with limited capabilities. You need to enable metering in your tenant or purchase a Microsoft 365 Copilot license if you want to build agents that are grounded in organizational data. For details, see [User access to agents across Microsoft 365 apps](#user-access-to-agents-across-Microsoft-365-apps).
+If you have a Microsoft 365 subscription, you can build and test agents in Microsoft 365 Copilot Chat, with limited capabilities. You need to enable metering in your tenant or purchase a Microsoft 365 Copilot license if you want to build agents that are grounded in organizational data. For details, see [User access to agents across Microsoft 365 apps](#user-access-to-agents-across-microsoft-365-apps).
 
 ## Security and privacy
 
