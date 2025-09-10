@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Best practices for building extensibility solutions
 
-You can extend Microsoft 365 Copilot to meet your organization’s unique needs by building agents, connectors, and plugins (also called actions) that integrate enterprise data, automate workflows, and deliver tailored user experiences. This guide outlines best practices to help developers build secure, scalable, and maintainable extensibility solutions—starting from design through deployment.
+You can extend Microsoft 365 Copilot to meet your organization’s unique needs by building agents, connectors, and API plugins that integrate enterprise data, automate workflows, and deliver tailored user experiences. This article provides best practices to help you build secure, scalable, and maintainable extensibility solutions.
 
 ## Best practices for building declarative agents
 
