@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 09/09/2025
+ms.date: 09/11/2025
 ms.topic: conceptual
 ---
 

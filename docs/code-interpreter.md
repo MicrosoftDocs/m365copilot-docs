@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/09/2025
+ms.date: 09/11/2025
 ---
 
 # Add the code interpreter capability to your agent

@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/09/2025
+ms.date: 09/11/2025
 ---
 
 # Copilot Studio agent templates

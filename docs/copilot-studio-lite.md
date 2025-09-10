@@ -4,7 +4,7 @@ description: Learn how to use the Copilot Studio lite experience to build declar
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/09/2025
+ms.date: 09/11/2025
 ms.topic: conceptual
 ---
 

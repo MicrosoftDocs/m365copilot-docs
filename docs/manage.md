@@ -4,7 +4,7 @@ description: Learn about admin controls for Microsoft 365 Copilot agents.
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 09/09/2025
+ms.date: 09/11/2025
 ms.topic: conceptual
 ---
 
