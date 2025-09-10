@@ -1,5 +1,5 @@
 ---
-title: Best practices for building Copilot extensibility solutions
+title: Best Practices for Building Declarative Agents in Microsoft 365 Copilot
 description: Learn the best practices for building extensibility solutions for Microsoft 365 Copilot.
 ms.date: 08/30/2025
 author: kmkoenen
@@ -8,39 +8,38 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Best practices for building extensibility solutions
+# Best Practices for Building Declarative Agents in Microsoft 365 Copilot
 
-You can extend Microsoft 365 Copilot to meet your organization’s unique needs by building agents, connectors, and API plugins that integrate enterprise data, automate workflows, and deliver tailored user experiences. This article provides best practices to help you build secure, scalable, and maintainable extensibility solutions.
-
-## Best practices for building declarative agents
+Microsoft 365 Copilot empowers organizations to automate workflows, deliver tailored user experiences, and integrate enterprise data through extensibility solutions. Declarative agents—built in Copilot Studio—are a powerful way to create conversational AI that is modular, maintainable, and secure. This article provides detailed best practices for designing, building, testing, and managing declarative agents.
 
 ## Define the business scenario and requirements
 
-First, **identify the business scenario**. Who will use your agent and why? Declarative agents are ideal for automating repeatable tasks, answering domain-specific questions, or providing guided workflows. Examples include HR policy Q&A, project management assistants, or IT help desk bots.
+Start with clarity:
 
-Next, **define clear goals for your agent**. hat problem does the agent solve? What workflows should it support? Document expected user journeys and outcomes before creating your agent.
+- Identify the business problem or workflow your agent will address (e.g., HR policy Q&A, IT help desk automation).
+- Document user journeys, expected outcomes, and key tasks the agent should support.
+- Engage stakeholders early to validate requirements and success criteria.
 
-### Design agents for modularity and reuse
+## Design agents for modularity and reuse
 
-When building declarative agents in Copilot Studio, break your solution into smaller, well-defined pieces—so you can mix, match, and reuse them in other agents or scenarios. Each agent should address a single task or question (for example, "Check PTO balance" or "Submit a leave request")  rather than trying to solve everything with a single agent.
+Break down your agent into reusable components:
 
-Take knowledge sources & capabilities, for example. **Knowledge sources** are where your agent gets its information (e.g., SharePoint sites, Dataverse tables, uploaded documents). **Capabilities** are what your agent can do (e.g., call an API, trigger a Power Automate flow, perform a calculation).
+- **Topics:** Each topic should handle a single task or question (e.g., “Submit a leave request,” “Check PTO balance”). Avoid monolithic flows.
+- **Triggers:** Define clear triggers for each topic, mapping user intents to actions.
+- **Capabilities:** Implement business logic as Power Automate flows or APIs. Expose these capabilities for reuse across agents and topics.
 
-Suppose you’re building an HR agent:
+> [!TIP]:
+> If you build a “Submit PTO request” capability, make it available to HR, Payroll, and Manager Assistant agents.
 
-- You connect a SharePoint site with HR policies as a knowledge source.
-- You add a capability that lets the agent trigger a Power Automate flow to submit a PTO request.
+## Connect and Manage Knowledge Sources
 
-If you later build a Payroll agent, you can reuse the PTO request capability without duplicating it.
+**Ground your agent in authoritative enterprise data:**
 
-#### Design reusable topics and triggers
+Use SharePoint sites, Dataverse tables, uploaded documents, or Copilot connectors as knowledge sources.
+Apply filters and scopes to index only relevant data, reducing noise and minimizing risk of exposing sensitive information.
+Keep knowledge sources current—schedule regular reviews and updates.
 
-In Copilot Studio, you define topics (conversation flows) and triggers (how the agent knows what the user wants). Make topics modular: Each topic should handle a specific task or question. For example:
-
-- One topic answers “What is our vacation policy?”
-- Another topic helps users “Submit a leave request.”
-
-Both topics can use the same knowledge source or capability, but are independent and reusable.
+Avoid: Embedding business logic in documents or tables. Keep logic in capabilities or topics for easier updates and reuse. use the same knowledge source or capability, but are independent and reusable.
 
 #### Expose capabilities as APIs or flows
 
