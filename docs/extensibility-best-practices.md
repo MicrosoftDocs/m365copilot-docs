@@ -8,68 +8,61 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Best practices for building extensibility solutions (agents, connectors, actions)
+# Best practices for building extensibility solutions
 
 You can extend Microsoft 365 Copilot to meet your organization’s unique needs by building agents, connectors, and plugins (also called actions) that integrate enterprise data, automate workflows, and deliver tailored user experiences. This guide outlines best practices to help developers build secure, scalable, and maintainable extensibility solutions—starting from design through deployment.
 
-## Step 1: Choose the right extensibility path
+## Best practices for building declarative agents
 
-Start by selecting the appropriate extensibility model based on your scenario:
+### Design agents for modularity and reuse
 
-| Extensibility option | Description |
-| ------ | ------ |
-| Declarative agents | Built using Copilot Studio or Teams Toolkit. Ideal for low-code scenarios with built-in orchestration. |
-| Custom engine agents | Bring your own orchestrator and models. Suitable for advanced use cases requiring full control. |
-| Copilot connectors | Ingest and index enterprise data into Microsoft Graph to ground Copilot responses. |
-| Plugins (actions)  | Extend Copilot with real-time capabilities to trigger workflows or retrieve data from external systems.  |
+When building declarative agents in Copilot Studio, modularity and reuse help you create agents that are easier to maintain, update, and extend. Instead of building a single, monolithic agent that tries to do everything, break your solution into smaller, well-defined pieces—so you can mix, match, and reuse them in other agents or scenarios.
 
-Use the [Copilot extensibility decision guide](https://learn.microsoft.com/microsoft-365-copilot/extensibility/decision-guide) to determine the best fit.
+Take knowledge sources & capabilities, for example. **Knowledge sources** are where your agent gets its information (e.g., SharePoint sites, Dataverse tables, uploaded documents). **Capabilities** are what your agent can do (e.g., call an API, trigger a Power Automate flow, perform a calculation).
 
-## Step 2: Design for modularity and reuse
+Suppose you’re building an HR agent:
 
-Design modular, reusable components to build scalable and maintainable extensibility solutions. Whether you're developing agents, connectors, or plugins, modularity enables you to separate concerns, reduce duplication, and accelerate development across multiple use cases.
+- You connect a SharePoint site with HR policies as a knowledge source.
+- You add a capability that lets the agent trigger a Power Automate flow to submit a PTO request.
 
-### Separate knowledge and capabilities
+If you later build a Payroll agent, you can reuse the PTO request capability without duplicating it.
 
-In Microsoft 365 Copilot extensibility, agents are powered by two [core components](agents-overview.md#agent-core-components):
+#### Design reusable topics and triggers
 
-- [**Knowledge sources**](knowledge-sources.md) provide the grounding data that agents use to generate accurate, context-aware responses.
-- [**Capabilities**](declarative-agent-capabilities-ids.md) define what the agent can do—such as retrieving real-time data, performing calculations, or interacting with external systems.
+In Copilot Studio, you define topics (conversation flows) and triggers (how the agent knows what the user wants). Make topics modular: Each topic should handle a specific task or question. For example:
 
-**Best practices:**
+- One topic answers “What is our vacation policy?”
+- Another topic helps users “Submit a leave request.”
 
-- Keep knowledge sources and capabilities loosely coupled.
-- Use knowledge sources for grounding only—not for logic or decision-making.
-- Design capabilities to be stateless and parameterized.
-- Expose capabilities as OpenAPI endpoints or Power Automate flows for reuse.
+Both topics can use the same knowledge source or capability, but are independent and reusable.
 
-## Step 3: Use orchestration layers
+#### Expose capabilities as APIs or flows
 
-Orchestration layers define how our agent processes user input, selects knowledge or capabilities, and returns a response. Microsoft supports two orchestration models:
+If you build a custom capability (like checking PTO balance), expose it as an API or Power Automate flow. This lets you reuse the capability in multiple agents or topics. For example, if you create a Power Automate flow called “Get PTO Balance” and expose it as a Power Automate flow, you can call the flow using different agents, such as an HR agent, a Payroll agent, and a Manager Assistant agent.
 
-| Orchestration model | Description | Use case |
-| ----- | ----- | ----- |
-| Declarative orchestration | Built-in orchestration in Copilot Studio or Agents Toolkit. Uses topics, triggers, and generative answers. | You want a low-code, guided experience with built-in orchestration. |
-| Custom orchestration | Bring your own orchestrator and models. Gives you control over logic and flow. | You need advanced logic, multi-agent workflows, or integration with external AI. |
+#### Avoid embedding business logic in knowledge sources
 
-**Best practices:**
+Don’t put calculations or decision logic in your SharePoint documents or Dataverse tables. Instead, keep logic in capabilities or topics so it’s easier to update and reuse. For example, the SharePoint site for your HR department should simply contain your HR policies. Your HR agent is responsible for determining whether or not an employee is eligible for PTO based on those policies.
 
-- Use **Generative answers** in Copilot Studio to ground responses.
-- Define structured flows with topics and triggers.
-- Implement fallback behaviors, error handling, and multi-turn logic.
+### Optimize your agent's orchestration layers
 
-## Step 4: Build secure and compliant connectors
+Orchestration layers in Copilot agents are the logic and structure that determine how user input is processed, which topics or capabilities are activated, and how responses are generated. They act as the “brain” of the agent, coordinating conversation flow and tool selection.
 
-Connectors ground Copilot responses in enterprise data. Follow governance and compliance best practices.
+Orchestration layers:
+
+- enable agents to handle complex, multi-step interactions
+- ensure the right knowledge source or capability is used for each user request
+- support fallback, error handling, and dynamic topic selection, which makes your agents more robust and user-friendly.
 
 **Best practices:**
 
-- [**Use Microsoft Copilot connectors**](overview-copilot-connector.md) to ingest external data.
-- [**Ensure connectors meet compliance requirements**](https://learn.microsoft.com/microsoft-copilot-studio/admin-certification), including [Responsible AI](rai-validation.md) (RAI), [data loss prevention](https://learn.microsoft.com/purview/dlp-learn-about-dlp) (DLP), and access control policies.
-- [**Use filters and scopes**](
-build-declarative-agents-add-knowledge.md). Apply filters and scoping rules to ensure that only relevant data is indexed and exposed to Copilot. Applying filters helps reduce noise, improve performance, and minimize the risk of overexposing sensitive information.
+- **Use generative orchestration** for dynamic, multi-turn conversations—let the agent select topics and actions based on user intent.
+- **Keep topics modular** so each handles a specific task and can be reused.
+- **Write clear agent instructions** that guide the orchestration logic step by step.
+- **Test and refine** your orchestration layer implementation to ensure the agent responds accurately and efficiently.
 
-## Step 5: Configure agent capabilities
+
+## Optimize agent capabilities
 
 Capabilities enable agents to take action, perform reasoning, or access tools and services.
 
@@ -79,7 +72,7 @@ Capabilities enable agents to take action, perform reasoning, or access tools an
 - Design capabilities to be stateless and reusable.
 - Validate inputs and handle errors gracefully.
 
-## Step 6: Test and debug with developer tools
+## Test and debug with developer tools
 
 Use Copilot developer mode to test and debug your extensibility solution.
 
@@ -89,7 +82,7 @@ Use Copilot developer mode to test and debug your extensibility solution.
 - Validate orchestration and action selection.
 - Use test flows and sample inputs to simulate real-world scenarios.
 
-## Step 7: Understand surface availability
+## Understand surface availability
 
 Know where your agents and actions appear across Microsoft 365 apps.
 
@@ -102,7 +95,7 @@ Know where your agents and actions appear across Microsoft 365 apps.
 | Web     |  :white_check_mark: |  :white_check_mark: |  
 | Mobile  |  :white_check_mark: |  :white_check_mark: |  
 
-## Step 8: Plan for publishing and lifecycle management
+## Plan for publishing and lifecycle management
 
 Publishing paths vary by extensibility type.
 
@@ -113,3 +106,18 @@ Publishing paths vary by extensibility type.
 - **Plugins/actions:** Must be certified before being used in Copilot.
 - Use **Power Platform Pipelines or GitHub** for application lifecycle management.
 - Apply **DLP and access control policies** before publishing.
+
+
+
+## Copilot connector best practices
+
+### Build secure and compliant connectors
+
+Connectors ground Copilot responses in enterprise data. Follow governance and compliance best practices.
+
+**Best practices:**
+
+- [**Use Microsoft Copilot connectors**](overview-copilot-connector.md) to ingest external data.
+- [**Ensure connectors meet compliance requirements**](https://learn.microsoft.com/microsoft-copilot-studio/admin-certification), including [Responsible AI](rai-validation.md) (RAI), [data loss prevention](https://learn.microsoft.com/purview/dlp-learn-about-dlp) (DLP), and access control policies.
+- [**Use filters and scopes**](
+build-declarative-agents-add-knowledge.md). Apply filters and scoping rules to ensure that only relevant data is indexed and exposed to Copilot. Applying filters helps reduce noise, improve performance, and minimize the risk of overexposing sensitive information.
