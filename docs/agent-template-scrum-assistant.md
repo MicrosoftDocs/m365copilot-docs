@@ -10,7 +10,7 @@ ms.date: 09/11/2025
 
 # Use the Scrum Assistant template to build an agent
 
-Using the lite experience within Microsoft 365 Copilot Studio, you can use the Scrum Assistant template to create agents that support scrum masters and Agile teams by providing real-time guidance on scrum ceremonies, backlog management, and Agile best practices. Agents based on this template apply trusted scrum resources, analyze team artifacts (sprint reports, retrospective notes), and offer data-driven recommendations to enhance team performance, collaboration, and operational efficiency.
+You can use the Scrum Assistant template in the lite experience of Copilot Studio to build agents that support scrum masters and Agile teams by providing real-time guidance on scrum ceremonies, backlog management, and Agile best practices. Agents based on this template apply trusted scrum resources, analyze team artifacts (sprint reports, retrospective notes), and offer data-driven recommendations to enhance team performance, collaboration, and operational efficiency.
 
 ## Prerequisites
 

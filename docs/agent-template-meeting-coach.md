@@ -10,7 +10,7 @@ ms.date: 09/11/2025
 
 # Use the Meeting Coach template to build an agent
 
-Using the lite experience within Microsoft 365 Copilot Studio, you can  use the Meeting Coach template to create agents that help meeting organizers create and run effective meetings. Agents based on the Meeting Coach template can help users:
+You can use the Meeting Coach template in the lite experience of Copilot Studio to buildagents that help meeting organizers create and run effective meetings. Agents based on the Meeting Coach template can help users:
 
 - Set clear objectives
 - Create structured agendas
