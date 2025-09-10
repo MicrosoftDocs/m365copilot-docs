@@ -10,7 +10,7 @@ ms.date: 09/11/2025
 
 # Use the Career Coach template to build an agent
 
-Using the lite experience within Microsoft 365 Copilot Studio, you can use the Career Coach template to build an agent that provides personalized suggestions and action plans to help users advance in their careers. The career coach offers tailored advice on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.  
+You can use the Career Coach template in the lite experience of Copilot Studio to build an agent that provides personalized suggestions and action plans to help users advance in their careers. The career coach offers tailored advice on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.  
 
 The Career Coach uses a professional and supportive tone to make interactions contextually relevant and encouraging.
 
