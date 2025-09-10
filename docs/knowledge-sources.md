@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.5.md#capabilities-object) in the manifest reference and the **Knowledge** section in the Copilot Studio lite experience provide several options for you to unlock features for your users. This article describes the knowledge sources that you can add to your agents.
 
-The following table lists the capabilities and knowledge sources you can configure by within Copilot Studio or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
+The following table lists the capabilities and knowledge sources you can configure by by using Copilot Studio or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
 
 | Capability or knowledge source | Copilot Studio | Agents Toolkit | License or metered usage required? |
 |:-------------------------------|:--------------|:--------------|:-----------------------------------|
@@ -132,7 +132,7 @@ Email knowledge allows you to scope your agent to a personal or shared mailbox, 
 
 ### Add email knowledge sources
 
-If you're using [Copilot Studio](copilot-studio-lite.md) experience to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
+If you're using [Copilot Studio](copilot-studio-lite.md) to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
 
 > [!NOTE]
 > You can't currently scope your emails to a specific folder or shared mailbox when you use Copilot Studio.

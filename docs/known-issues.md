@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
 ms.date: 09/11/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Known issues
@@ -46,7 +46,7 @@ When sharing links are references as a knowledge source in an agent, the agent d
 
 If a SharePoint file used as a knowledge source contains null characters in the file name, the agent returns no results based on that knowledge source.
 
-### Pasting a link to a file in Copilot Studio that doesn't work
+### Pasting a link to a file in Copilot Studio doesn't work
 
 Currently, users can select a file in Copilot Studio, and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
 
