@@ -1,6 +1,6 @@
 ---
 title: Create a Customer Insights agent from a template
-description: Learn how to use the Insight Assistant template template in the Copilot Studio lite experience to create a declarative agent.
+description: Learn how to use the Insight Assistant template in the Copilot Studio lite experience to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
