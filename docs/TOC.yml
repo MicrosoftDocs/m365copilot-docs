@@ -1,6 +1,8 @@
 items:
 - name: Microsoft 365 Copilot extensibility
-  href: index.md
+  href: index.yml
+- name: Overview
+  href: overview.md
 - name: Explore
   items:
   - name: Agents in the Microsoft 365 ecosystem
