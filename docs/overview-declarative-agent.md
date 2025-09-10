@@ -56,7 +56,7 @@ The following are the core elements of a declarative agent app package:
 You can use your tool of choice to create a declarative agent app package. To get started, choose from among the following tools:
 
 - [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
-- [Copilot Studio] full experience(/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context)
+- [Copilot Studio full experience](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context)
 - [Copilot Studio lite experience](copilot-studio-lite.md)
 - [SharePoint](/sharepoint/get-started-sharepoint-agents)
 
