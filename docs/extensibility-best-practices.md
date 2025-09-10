@@ -3,7 +3,7 @@ title: Best Practices for Building Declarative Agents in Microsoft 365 Copilot
 description: Learn the best practices for building extensibility solutions for Microsoft 365 Copilot.
 author: kmkoenen
 ms.author: v-koenenkaty
-ms.topic: conceptual-article
+ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 09/19/2025
 ---
@@ -57,7 +57,7 @@ Ground your agent in authoritative enterprise data:
 - Apply filters and scopes to index only relevant data, reducing noise and minimizing risk of exposing sensitive information.
 - Keep knowledge sources current—schedule regular reviews and updates.
 
-> [!TIP]:
+> [!TIP]
 > **Avoid embedding business logic in knowledge sources:** Don’t put calculations or decision logic in your SharePoint documents or Dataverse tables. Instead, keep logic in capabilities or topics so it’s easier to update and reuse. For example, the SharePoint site for your HR department should simply contain your HR policies. Your HR agent is responsible for determining whether or not an employee is eligible for PTO based on those policies.
 
 For more information about knowledge sources, see [Add Knowledge Sources to your Declarative Agent](knowledge-sources.md).
