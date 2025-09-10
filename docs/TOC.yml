@@ -1,6 +1,8 @@
 items:
 - name: Microsoft 365 Copilot extensibility
-  href: index.md
+  href: index.yml
+- name: Overview
+  href: overview.md
 - name: Explore
   items:
   - name: Agents in the Microsoft 365 ecosystem
@@ -39,7 +41,11 @@ items:
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
     - name: Choose your development tool
-      href: declarative-agent-tool-comparison.md
+      items:
+      - name: Tools overview
+        href: declarative-agent-tool-comparison.md
+      - name: Copilot Studio experiences
+        href: copilot-studio-experience.md
     - name: Use Visual Studio Code
       expanded: true
       items:
@@ -171,6 +177,8 @@ items:
         href: image-generator.md
       - name: Knowledge sources
         href: knowledge-sources.md
+    - name: Enable user feedback for your agent
+      href: declarative-agent-enable-feedback.md
     - name: Optimize content retrieval
       href: optimize-content-retrieval.md
     - name: Document interaction
