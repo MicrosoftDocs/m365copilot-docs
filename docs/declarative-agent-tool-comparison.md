@@ -65,9 +65,9 @@ The [SharePoint](https://support.microsoft.com/office/get-started-with-sharepoin
 | **Integration with SharePoint:**  Uses existing SharePoint features like document libraries. | |
 | **Integration with Teams:**  Users can make a SharePoint agent available in Microsoft Teams by copying the link to the agent and pasting it in a Teams group or meeting chat. |  |
 
-## Copilot Studio
+## Copilot Studio full experience
 
-[Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
+The full experience in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
 
 | **Pros** | **Cons** |
 |:------------|:------------|
