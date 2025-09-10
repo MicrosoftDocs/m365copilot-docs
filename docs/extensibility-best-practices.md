@@ -14,9 +14,15 @@ You can extend Microsoft 365 Copilot to meet your organization’s unique needs 
 
 ## Best practices for building declarative agents
 
+## Define the business scenario and requirements
+
+First, **identify the business scenario**. Who will use your agent and why? Declarative agents are ideal for automating repeatable tasks, answering domain-specific questions, or providing guided workflows. Examples include HR policy Q&A, project management assistants, or IT help desk bots.
+
+Next, **define clear goals for your agent**. hat problem does the agent solve? What workflows should it support? Document expected user journeys and outcomes before creating your agent.
+
 ### Design agents for modularity and reuse
 
-When building declarative agents in Copilot Studio, modularity and reuse help you create agents that are easier to maintain, update, and extend. Instead of building a single, monolithic agent that tries to do everything, break your solution into smaller, well-defined pieces—so you can mix, match, and reuse them in other agents or scenarios.
+When building declarative agents in Copilot Studio, break your solution into smaller, well-defined pieces—so you can mix, match, and reuse them in other agents or scenarios. Each agent should address a single task or question (for example, "Check PTO balance" or "Submit a leave request")  rather than trying to solve everything with a single agent.
 
 Take knowledge sources & capabilities, for example. **Knowledge sources** are where your agent gets its information (e.g., SharePoint sites, Dataverse tables, uploaded documents). **Capabilities** are what your agent can do (e.g., call an API, trigger a Power Automate flow, perform a calculation).
 
@@ -60,7 +66,6 @@ Orchestration layers:
 - **Keep topics modular** so each handles a specific task and can be reused.
 - **Write clear agent instructions** that guide the orchestration logic step by step.
 - **Test and refine** your orchestration layer implementation to ensure the agent responds accurately and efficiently.
-
 
 ## Optimize agent capabilities
 
