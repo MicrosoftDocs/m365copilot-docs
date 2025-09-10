@@ -1,5 +1,5 @@
 ---
-title: Regional availability and language support for the Copilot Studio lite experience
+title: Learn about the regional availability and language support for the Copilot Studio lite experience
 description: Learn about the regional availability and supported languages for the Copilot Studio lite experience.
 author: jasonxian-msft
 ms.author: jasonxian
@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Copilot Studio regional availability and language support
 
-This article provides information about the regional availability of the lite experience of Copilot Studio in Microsoft 365 Copilot. It also addressed the agent and authoring languages that Copilot Studio supports
+This article provides information about the regional availability of the lite experience of Copilot Studio and the agent and authoring languages that Copilot Studio supports.
 
 ## Regional availability
 

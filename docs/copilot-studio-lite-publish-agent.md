@@ -1,5 +1,5 @@
 ---
-title: Publish and manage Copilot Studio agents
+title: Publish and manage agents built with Copilot Studio
 description: Learn how to publish and manage agents built with Copilot Studio.
 author: jasonxian-msft
 ms.author: jasonxian
@@ -8,7 +8,7 @@ ms.date: 09/11/2025
 ms.topic: conceptual
 ---
 
-# Publish and manage Copilot Studio agents
+# Publish and manage agents built with Copilot Studio
 
 This article describes how to create or publish agents built with Copilot Studio and how to update or delete agents.
 
@@ -16,7 +16,7 @@ This article describes how to create or publish agents built with Copilot Studio
 
 While you're [building your agent](copilot-studio-lite-build.md), in Copilot Studio, the changes you make are saved automatically. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
 
-After the agent has been successfully created, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft 365 Copilot.
+After the agent is created, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft 365 Copilot.
 
 ## Share the agent
 
@@ -85,7 +85,7 @@ Both options show the **My agents** list. You can select the existing agent that
 
 ### Update your agent
 
-However, your changes won't be visible to users until your updates are published. To update a previously created agent, select **Update** on the top right corner. Your changes might take several minutes to become available for end users.
+Changes made to agents are automatically saved in Copilot Studio. However, your changes won't be visible to users until your updates are published. To update a previously created agent, select **Update** on the top right corner. Your changes might take several minutes to become available for end users.
 
 > [!NOTE]
 > After updating an agent that has a SharePoint file and folder knowledge source and has been shared with specific users in your organization, we recommend that you reshare the agent with the same group of users. Doing so automatically shares the files and folders with the users again to ensure a consistent agent experience.

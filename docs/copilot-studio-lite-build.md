@@ -8,7 +8,7 @@ ms.date: 09/11/2025
 ms.topic: conceptual
 ---
 
-# Build agents using the Copilot Studio
+# Build agents using Copilot Studio
 
 The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 

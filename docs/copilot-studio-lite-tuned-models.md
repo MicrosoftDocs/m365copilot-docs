@@ -1,6 +1,6 @@
 ---
 title: Create declarative agents with task-specific large language models tuned with Microsoft 365 Copilot Tuning (preview)
-description: Learn how use Copilot Studio to create declarative agents that use task-specific large language models (LLMs) tuned with Microsoft 365.
+description: Learn how use Copilot Studio to create declarative agents that use task-specific large language models (LLMs) tuned with Microsoft 365 Copilot Tuning.
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to

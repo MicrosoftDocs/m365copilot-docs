@@ -48,7 +48,7 @@ If a SharePoint file used as a knowledge source contains null characters in the 
 
 ### Pasting a link to a file in Copilot Studio that doesn't work
 
-Currently, users can select a file in Copilot Studio, and  then the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
+Currently, users can select a file in Copilot Studio, and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
 
 **Workaround:** The user can select the file from the UI in Copilot Studio.
 

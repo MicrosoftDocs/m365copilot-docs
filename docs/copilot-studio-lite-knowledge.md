@@ -1,6 +1,6 @@
 ---
 title: Add knowledge sources to your declarative agent for Microsoft 365 Copilot
-description: Learn about the different types of knowledge sources that you can add to your declarative agent with Copilot Studio.
+description: Learn about the different types of knowledge sources that you can add to your declarative agent when you build with Copilot Studio.
 author: xwen
 ms.author: xwen
 ms.topic: concept-article
@@ -12,7 +12,7 @@ ms.date: 09/11/2025
 
 The lite experience in Microsoft 365 Copilot (formerly Copilot Studio agent builder) provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
-This article describes the *supported knowledge sources and the steps to configure them* in Copilot Studio. For general information about how to use the Copilot Studio, see [Build agents using the Copilot Studio lite experience](copilot-studio-lite-build.md).
+This article describes the supported knowledge sources and the steps to configure them in Copilot Studio. For general information about how to use Copilot Studio, see [Build agents using the Copilot Studio lite experience](copilot-studio-lite-build.md).
 
 For more information about supported knowledge sources and licensing requirements, see [Knowledge sources](/microsoft-365-copilot/extensibility/knowledge-sources).
 
@@ -75,7 +75,7 @@ After you select a site, you can select several files and folders. Doing so adds
 
 :::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-sharepoint-picker-folders.png" alt-text="SharePoint file picker":::
 
-You can also upload files into SharePoint by using the picker. The file appears in the same folder after it finishes uploading and is ready for use in the Copilot Studio.
+You can also upload files into SharePoint by using the picker. The file appears in the same folder after it finishes uploading and is ready for use.
 
 ### File readiness
 
@@ -152,7 +152,7 @@ A sensitivity label is also applied to agent responses. This label is the higher
 - The sensitivity label of the embedded content
 - The sensitivity label of any other agent knowledge sources, such as SharePoint and OneDrive files.
 
-Currently, the lite experience within Copilot Studio can't set a sensitivity label on an agent.
+Currently, you can't set a sensitivity label on an agent.
 
 #### Unsupported sensitivity label scenarios
 
@@ -279,4 +279,4 @@ To configure your agent to prioritize your knowledge sources, on the **Configure
 - [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md)
 - [Build an agent from a template](agent-templates-overview.md)
-- [Publish and manage Copilot Studio agents](copilot-studio-lite-publish-agent.md)
+- [Publish and manage agents built with Copilot Studio](copilot-studio-lite-publish-agent.md)
