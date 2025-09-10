@@ -35,13 +35,13 @@ Break down your agent into reusable components:
 
 **Ground your agent in authoritative enterprise data:**
 
-Use SharePoint sites, Dataverse tables, uploaded documents, or Copilot connectors as knowledge sources.
-Apply filters and scopes to index only relevant data, reducing noise and minimizing risk of exposing sensitive information.
-Keep knowledge sources current—schedule regular reviews and updates.
+- Use SharePoint sites, Dataverse tables, uploaded documents, or Copilot connectors as [knowledge sources](knowledge-sources.md).
+- Apply filters and scopes to index only relevant data, reducing noise and minimizing risk of exposing sensitive information.
+- Keep knowledge sources current—schedule regular reviews and updates.
 
-Avoid: Embedding business logic in documents or tables. Keep logic in capabilities or topics for easier updates and reuse. use the same knowledge source or capability, but are independent and reusable.
+Avoid embedding business logic in documents or tables. Keep logic in agent capabilities or topics so that they are easier to update and reuse.
 
-#### Expose capabilities as APIs or flows
+## Write effective agent instructions
 
 If you build a custom capability (like checking PTO balance), expose it as an API or Power Automate flow. This lets you reuse the capability in multiple agents or topics. For example, if you create a Power Automate flow called “Get PTO Balance” and expose it as a Power Automate flow, you can call the flow using different agents, such as an HR agent, a Payroll agent, and a Manager Assistant agent.
 
