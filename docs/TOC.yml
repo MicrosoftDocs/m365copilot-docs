@@ -1,6 +1,8 @@
 items:
 - name: Microsoft 365 Copilot extensibility
-  href: index.md
+  href: index.yml
+- name: Overview
+  href: overview.md
 - name: Explore
   items:
   - name: Agents in the Microsoft 365 ecosystem
@@ -39,7 +41,11 @@ items:
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
     - name: Choose your development tool
-      href: declarative-agent-tool-comparison.md
+      items:
+      - name: Tools overview
+        href: declarative-agent-tool-comparison.md
+      - name: Copilot Studio experiences
+        href: copilot-studio-experience.md
     - name: Use Visual Studio Code
       expanded: true
       items:
@@ -102,44 +108,44 @@ items:
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use Copilot Studio agent builder
+    - name: Use Copilot Studio
       items:
       - name: Overview
-        href: copilot-studio-agent-builder.md
+        href: copilot-studio-lite.md
       - name: Build agents
-        href: copilot-studio-agent-builder-build.md
+        href: copilot-studio-lite-build.md
       - name: Build agents from template
         items:
         - name: Templates overview
-          href: agent-builder-templates.md
+          href: agent-templates-overview.md
         - name: Career Coach
-          href: agent-builder-template-career-coach.md
+          href: agent-template-career-coach.md
         - name: Customer Insight Assistant
-          href: agent-builder-template-customer-insight.md
+          href: agent-template-customer-insight.md
         - name: Idea Coach
-          href: agent-builder-template-idea-coach.md
+          href: agent-template-idea-coach.md
         - name: Interview Question Assistant
-          href: agent-builder-template-interview-questions.md
+          href: agent-template-interview-questions.md
         - name: Learning Coach
-          href: agent-builder-template-learning-coach.md
+          href: agent-template-learning-coach.md
         - name: Meeting Coach
-          href: agent-builder-template-meeting-coach.md
+          href: agent-template-meeting-coach.md
         - name: Prompt Coach
-          href: agent-builder-template-prompt-coach.md
+          href: agent-template-prompt-coach.md
         - name: Quiz Tutor
-          href: agent-builder-template-quiz-tutor.md
+          href: agent-template-quiz-tutor.md
         - name: Scrum Assistant
-          href: agent-builder-template-scrum-assistant.md
+          href: agent-template-scrum-assistant.md
         - name: Writing Coach
-          href: agent-builder-template-writing-coach.md
+          href: agent-template-writing-coach.md
       - name: Build agents with fine-tuned models (preview)
-        href: copilot-studio-agent-builder-tuned-models.md
+        href: copilot-studio-lite-tuned-models.md
       - name: Add knowledge sources
-        href: copilot-studio-agent-builder-knowledge.md
+        href: copilot-studio-lite-knowledge.md
       - name: Publish agents
-        href: copilot-studio-agent-builder-publish.md
+        href: copilot-studio-lite-publish-agent.md
       - name: Availability and language support
-        href: copilot-studio-agent-builder-availability.md
+        href: copilot-studio-lite-availability.md
       - name: Build in Microsoft Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
@@ -169,6 +175,8 @@ items:
         href: image-generator.md
       - name: Knowledge sources
         href: knowledge-sources.md
+    - name: Enable user feedback for your agent
+      href: declarative-agent-enable-feedback.md
     - name: Optimize content retrieval
       href: optimize-content-retrieval.md
     - name: Document interaction
