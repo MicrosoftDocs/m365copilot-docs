@@ -1,16 +1,16 @@
 ---
 title: Create a Meeting Coach agent from a template
-description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Meeting Coach template.
+description: Learn how to create a declarative agent in Copilot Studio with the Meeting Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/01/2025
+ms.date: 09/11/2025
 ---
 
 # Use the Meeting Coach template to build an agent
 
-You can use the Meeting Coach template to create agents that help meeting organizers create and run effective meetings. Agents based on the Meeting Coach template can help users:
+You can use the Meeting Coach template in the lite experience of Copilot Studio to buildagents that help meeting organizers create and run effective meetings. Agents based on the Meeting Coach template can help users:
 
 - Set clear objectives
 - Create structured agendas
@@ -66,6 +66,6 @@ You can enhance the functionality of your Interview Question Assistant agents by
 
 ## Related content
 
-- [Copilot Studio agent builder](copilot-studio-agent-builder.md)
-- [Build agents with agent builder](copilot-studio-agent-builder-build.md)
-- [Publish agents](copilot-studio-agent-builder-publish.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
+- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Publish and manage agents](copilot-studio-lite-publish-agent.md)
