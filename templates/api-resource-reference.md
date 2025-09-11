@@ -23,6 +23,8 @@ Any text surrounded by curly braces (`{}`) is a variable and should be replaced 
 | `resource-name` | The camelCase name of the resource. |
 | `resource-description` | A description of the resource. Typically structured as `Represents a...`. MUST end with a period. |
 
+The file name should be an all-lowercase version of the resource name with `.md` file extension.
+
 ~~~md
 ---
 title: {resource-name} resource type
@@ -40,6 +42,27 @@ doc_type: resourcePageType
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 {resource-description}
+
+## Methods
+
+<!--
+List supported methods for this resource in table format. Always start with the supported CRUD operations in this specific order, followed by any other supported methods:
+
+List (a GET operation that gets a collection of this resource)
+Create (a POST operation that creates a new instance)
+Get (a GET operation that gets a single instance)
+Update (a PATCH or PUT operation that updates an existing instance)
+Delete (a DELETE operation that deletes an instance)
+
+Note that a resource may not support all of the above operations.
+-->
+| Method                         | Return type                  | Description |
+|:-------------------------------|:-----------------------------|:------------|
+| [List](link-to-api-topic.md)   | `{resource-name}` collection | Get a list of `{resource-name}` objects. |
+| [Create](link-to-api-topic.md) | `{resource-name}`            | Create a new `{resource-name}` object. |
+| [Get](link-to-api-topic.md)    | `{resource-name}`            | Retrieve the properties and relationships of a `{resource-name}` object. |
+| [Update](link-to-api-topic.md) | `{resource-name}`            | Update `{resource-name}` object. |
+| [Delete](link-to-api-topic.md) | None                         | Delete `{resource-name}` object. |
 
 ## Properties
 
