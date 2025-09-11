@@ -1,6 +1,6 @@
 ---
 title: Choose the Right Copilot Studio Experience for Building Your Agent
-description: Find information about current known issues related to Microsoft 365 Copilot extensibility and the recommended workarounds.
+description: Learn hot to determine the best Copilot Studio experience for building your agent.
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
