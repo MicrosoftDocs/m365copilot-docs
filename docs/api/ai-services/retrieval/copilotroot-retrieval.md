@@ -265,8 +265,6 @@ Content-Type: application/json
       "extracts": [
         {
           "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials.",
-          "relevanceScore": 0.772
-
         },
         {
           "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN.",
