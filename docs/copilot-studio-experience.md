@@ -38,7 +38,7 @@ The following table provides a more detailed feature comparison.
 
 | Feature | Lite experience | Full experience |
 | ------- | --------------- | --------------- |
-| Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Web app](https://copilotstudio.microsoft.com) |
+| Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Microsoft 365 Copilot Studio app](https://copilotstudio.microsoft.com) |
 | User type | Information workers | Makers and developers |
 | Agent target audience | Individuals or small teams. | Department, organization, or external customers. |
 | Agent type | Lightweight Q&A agents with organizational knowledge. | Agents with complex scenarios like multi-step workflows or business system integration, and that require enterprise governance and robust controls. |
