@@ -23,7 +23,7 @@ The agents, actions, and connectors you build for Copilot are part of the larger
 :::image type="content" source="assets/images/copilot-diagram-expanded.png" alt-text="Diagram that shows the flow of data across components of the Microsoft 365 Copilot ecosystem" border="false":::
 
 > [!NOTE]
-> Some agent capabilities are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+> Some agent capabilities are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
 
 You can extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. As part of the broader Microsoft 365 ecosystem, your  agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and comprehensive development tools and support.
 
