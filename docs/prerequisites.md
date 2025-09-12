@@ -94,13 +94,14 @@ Developer mode is only available within Microsoft 365 Copilot (Copilot for Work)
 
 Accounts used to test agents that are grounded on organizational data or that include enhanced capabilities need a Microsoft 365 Copilot Developer license. Admins can manage Microsoft 365 Copilot Developer licenses in the Microsoft 365 admin center (under **Billing > Licenses**). You can also [use PowerShell to assign Microsoft 365 licenses to user accounts](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell).
 
-### Agent capabilities and licensing models
+## Agent capabilities and licensing models
 
 Agents for Copilot are available through multiple licensing models, each offering different levels of functionality:
 
 - **Microsoft 365 with a Microsoft 365 Copilot add-on license** - Users with a Microsoft 365 subscription and a Copilot add-on license have full access to Copilot agent experiences across supported apps and platforms.
 - **Usage-based billing (pay-as-you-go)** - Tenants can enable agent access without a full license, with some limitations to agent configuration options.
-- **Microsoft 365 without a Copilot add-on license** - Users might see Copilot Chat entry points in some 
+- **Microsoft 365 without a Copilot add-on license** - Users might see Copilot Chat entry points in some apps, but access to agent experiences is limited or disabled based on tenant settings.
+Unlicensed users: Users without a license don’t have access to Copilot agents. The following table summarizes agent access based on user licensing type.
 
 The following table summarizes agent access based on user licensing type.
 
@@ -134,7 +135,8 @@ The following table lists the agent types and agent capabilities that are availa
 |[**Custom engine agents**](overview-custom-engine-agent.md)| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 \* Usage limits apply to all included features.
-\** Users who are configured with usage billing in the Microsoft 365 admin center don't have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
+
+\* Users who are configured with usage billing in the Microsoft 365 admin center don't have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
 
 > [!NOTE]
 > For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
