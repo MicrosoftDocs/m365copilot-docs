@@ -4,7 +4,7 @@ description: Introduction of Teams AI Library v2 SDK to build custom engine agen
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 09/12/2025
 ms.topic: overview
 ---
 
