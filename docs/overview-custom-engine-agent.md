@@ -52,7 +52,7 @@ It's ideal for use cases that require custom orchestration using frameworks like
 
 #### Teams AI Library
 
-The [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context) is a framework tailored specifically for Microsoft Teams. It includes a built-in action planner orchestrator and supports GPT-based language models from Azure and OpenAI.
+The [Teams AI Library](/microsoftteams/platform/teams-ai-library) is a framework tailored specifically for Microsoft Teams. It includes a built-in action planner orchestrator and supports GPT-based language models from Azure and OpenAI.
 
 This option is ideal for organizations looking to build collaborative agents that operate within Teams channels and meetings. It's useful when building agents that interact in real time with users in a collaborative, team-based environment.
 
@@ -121,5 +121,5 @@ Custom engine agent prompts and responses in Copilot Chat and Teams are stored i
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
 - [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
 - [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md)
-- [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
+- [Teams AI Library](/microsoftteams/platform/teams-ai-library/)
 - [Bots overview](/microsoftteams/platform/bots/overview)
