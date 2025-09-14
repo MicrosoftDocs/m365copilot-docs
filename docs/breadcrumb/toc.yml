@@ -1,7 +1,7 @@
 items:
 - name: Microsoft 365 Copilot
-  tocHref: /microsoft-365-copilot/
-  topicHref: /microsoft-365-copilot/index
+  tocHref: /copilot/microsoft-365/
+  topicHref: /copilot/microsoft-365/index
   items:
   - name: Extensibility
     tocHref: /microsoft-365-copilot/extensibility

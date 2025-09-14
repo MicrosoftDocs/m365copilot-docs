@@ -216,10 +216,16 @@ items:
       items:
       - name: Overview
         href: teams-ai-library.md
+      - name: Create an agent with Teams CLI
+        href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/quickstart?context=/microsoft-365-copilot/extensibility/context
+      - name: Understand the code structure of agents
+        href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/code-basics?context=/microsoft-365-copilot/extensibility/context
       - name: SDK reference
         items:
         - name: TypeScript SDK
           href: /javascript/api/teams-sdk-typescript
+        - name: .NET SDK
+          href: /dotnet/api/?view=msteams-sdk-dotnet-latest&preserve-view=true
     - name: Use Microsoft Copilot Studio
       items:
       - name: Quickstart
