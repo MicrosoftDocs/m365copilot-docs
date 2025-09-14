@@ -6,7 +6,7 @@ ms.author: lauragra
 ms.reviewer: vermaanimesh
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 09/12/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -27,7 +27,7 @@ The steps in this article require you to have the following prerequisites:
 
 - A custom bot and the bot ID. For information about how to create a custom bot, see [Bots and agents](/microsoftteams/platform/bots/build-a-bot).
 - Visual Studio Code with the Microsoft 365 Agents Toolkit extension installed.
-- The [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/) or [Teams AI library](/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview), if you want to implement Copilot-specific features like streaming or citations.
+- The [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/) or [Teams AI library](/microsoftteams/platform/teams-ai-library/), if you want to implement Copilot-specific features like streaming or citations.
 - Permissions to upload app manifests in your environment.
 
 ## Convert your declarative agent
