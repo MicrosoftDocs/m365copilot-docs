@@ -225,7 +225,7 @@ items:
         - name: TypeScript SDK
           href: /javascript/api/teams-sdk-typescript
         - name: .NET SDK
-          href: /dotnet/api/
+          href: /dotnet/api/?view=msteams-sdk-dotnet-latest&preserve-view=true
     - name: Use Microsoft Copilot Studio
       items:
       - name: Quickstart
