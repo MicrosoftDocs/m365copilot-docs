@@ -108,7 +108,7 @@ The following flow chart summarizes the decision process for choosing what type 
 **Build a declarative agent when:**
 
 - You want your agent to work within Copilot's orchestration and language models to ensure consistency with security and compliance.
-- You want a faster implementation or want to develop an agent with no or low-code using tools like [Copilot Studio](/microsoft-copilot-studio/) or you're a developer who prefers a streamlined experience with pro-code options like [Visual Studio](https://visualstudio.microsoft.com/) or [Agents Toolkit](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals).
+- You want a faster implementation or want to develop an agent with no or low-code using tools like [Copilot Studio](/microsoft-copilot-studio/) or you're a developer who prefers a streamlined experience with pro-code options like [Visual Studio](https://visualstudio.microsoft.com/) or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 - Your user's workflow is within Microsoft 365 apps (SharePoint, OneDrive, Teams) and they want to work within the context of these applications (via @mentions or in Teams business chats). For example, An IT helpdesk agent that responds to @mentions in Teams or a document summarization agent invoked in SharePoint.
 
 **Build a custom engine agent when:**
