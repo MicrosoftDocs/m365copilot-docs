@@ -129,7 +129,7 @@ Regardless of the solution you choose, you need to be sure that it meets RAI and
 
 ## Outline your development approach
 
-After you choose your Copilot extensibility path, decide how you'll structure your development process. Choose the appropriate development tools, such as Teams Toolkit, Copilot Studio, Microsoft 365 Agents SDK or Azure AI based on your use case. To build your solution, start with a minimum viable product (MVP), and then refine based on feedback and performance.
+After you choose your Copilot extensibility path, decide how you'll structure your development process. Choose the appropriate development tools, such as Agents Toolkit, Copilot Studio, Microsoft 365 Agents SDK or Azure AI based on your use case. To build your solution, start with a minimum viable product (MVP), and then refine based on feedback and performance.
 
 The following table provides examples of extensibility solutions that use different Copilot extensibility options for various user scenarios.
 
