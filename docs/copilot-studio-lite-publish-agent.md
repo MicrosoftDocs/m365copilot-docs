@@ -1,5 +1,5 @@
 ---
-title: Publish and manage agents built with Copilot Studio
+title: Share, publish and manage agents built with Copilot Studio
 description: Learn how to publish and manage agents built with Copilot Studio.
 author: jasonxian-msft
 ms.author: jasonxian
@@ -8,22 +8,18 @@ ms.date: 09/22/2025
 ms.topic: conceptual
 ---
 
-# Publish and manage agents built with Copilot Studio
+# Share, publish and manage agents built with Copilot Studio
 
-This article describes how to share, publish, and manage agents built with Copilot Studio.
-
-## Sharing and publishing agents in Copilot Studio
-
-You can choose to publish or the agents you create. However, there are important distinctions between these options:
+You can choose to share or publish the agents you create. However, there are important distinctions between these options. This article describes how to share, publish, and manage agents built with Copilot Studio.
 
 - **Sharing** is intended for limited, direct access—ideal for collaboration or feedback, but not for formal deployment or integration.
 - **Publishing** is for making an agent broadly available and managed, with full lifecycle and governance controls.
 
-
 The following table highlights the key differences between publishing and sharing your declarative agents.
 
-| Aspect    | Sharing | Publishing |
-| **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. Formal deployment for broad use, integration, and scale across organization or channels (e.g., Teams, Copilot). |
+| Aspect  | Sharing | Publishing |
+| ------- | ------- | ------- |
+| **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. | Formal deployment for broad use, integration, and scale across organization or channels (e.g., Teams, Copilot). |
 | **Mechanism** | Owner/co-owners use “Manage Sharing” to specify up to 98 users by name or email. Shared users receive direct access but agent remains private and not broadly discoverable. | Owner/co-owners select “Publish” in Copilot Studio, choose target channel (Teams, Copilot, etc.), and complete any required approval flows. Agent becomes discoverable and accessible to intended audience. |
 | **Audience** | Up to 98 named users (individuals or groups). | Organization-wide or channel-specific. |
 | **Discoverabiity** | Private; only visible to specified recipients. | Public within chosen scope; appears in agent store or channels. |
@@ -31,22 +27,24 @@ The following table highlights the key differences between publishing and sharin
 | **Permissions** | Shared users can interact, but not manage or publish. | Owner/co-owners manage publishing, updates, and lifecycle. |
 | **Integration** | Not integrated; sharing is for direct access only. | Can be integrated into Teams, Copilot, or other Microsoft 365 surfaces. |
 
+## Share an agent from within the lite experience of Copilot Studio
 
+Sharing your agent is the last step in [building your agent](copilot-studio-lite-build.md) within the lite experience of Copilot Studio. Once you have built and tested your agent, choose **Create**. A pop-up window displays a sharable link for your agent. By default, the link displayed only works for the person who created the agent. To share the agent with others, select **Change sharing settings**:
 
+ :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
 
-### Share your agent
+The following table lists the sharing options that are available:
 
-To publ
-The following table lists the sharing options that are available.
-
-| Sharing option                                          | Description |
-| ------------------------------------------------------- | ----------- |
-| Anyone in your organization                             | Anyone in your tenant can use the sharing link to use the agent. |
+| Sharing option   | Description |
+| ---------------- | ----------- |
+| Anyone in your organization    | Anyone in your tenant can use the sharing link to use the agent. |
 | Specific users in your organization | Specific users or groups can use the sharing link to use the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
-| Only me                                                 | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
+| Only you   | Only the author of the agent can use it. No one else can use the sharing link. (This sharing option is selected by default.) |
+
+:::image type="content" source="assets/images/share-agent-setting-options.png" alt-text="A screenshot of the available options for sharing an agent":::
 
 > [!NOTE]
-> When the Share option is set to **Specific users in your organization**, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+> When the sharing option is set to **Specific users in your organization**, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
 ### Deploy agents via ZIP package
 
