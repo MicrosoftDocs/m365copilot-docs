@@ -4,26 +4,39 @@ description: Learn how to publish and manage agents built with Copilot Studio.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 09/22/2025
 ms.topic: conceptual
 ---
 
 # Publish and manage agents built with Copilot Studio
 
-This article describes how to create or publish agents built with Copilot Studio and how to update or delete agents.
+This article describes how to share, publish, and manage agents built with Copilot Studio.
 
-## Create the agent
+## Sharing and publishing agents in Copilot Studio
 
-While you're [building your agent](copilot-studio-lite-build.md), in Copilot Studio, the changes you make are saved automatically. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
+You can choose to publish or the agents you create. However, there are important distinctions between these options:
 
-After the agent is created, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft 365 Copilot.
+- **Sharing** is intended for limited, direct access—ideal for collaboration or feedback, but not for formal deployment or integration.
+- **Publishing** is for making an agent broadly available and managed, with full lifecycle and governance controls.
 
-## Share the agent
 
-You can share your agent with other users via a link after you create it. When you share an agent, the people you share the agent with can use it, but they can't edit it. You can change the sharing option at any time by choosing the **Share** button at the top right corner.
+The following table highlights the key differences between publishing and sharing your declarative agents.
 
-### Sharing options
+| Aspect    | Sharing | Publishing |
+| **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. Formal deployment for broad use, integration, and scale across organization or channels (e.g., Teams, Copilot). |
+| **Mechanism** | Owner/co-owners use “Manage Sharing” to specify up to 98 users by name or email. Shared users receive direct access but agent remains private and not broadly discoverable. | Owner/co-owners select “Publish” in Copilot Studio, choose target channel (Teams, Copilot, etc.), and complete any required approval flows. Agent becomes discoverable and accessible to intended audience. |
+| **Audience** | Up to 98 named users (individuals or groups). | Organization-wide or channel-specific. |
+| **Discoverabiity** | Private; only visible to specified recipients. | Public within chosen scope; appears in agent store or channels. |
+| **Governance** | Minimal governance; no approval flows. | Might require approval flows, versioning, and lifecycle management. |
+| **Permissions** | Shared users can interact, but not manage or publish. | Owner/co-owners manage publishing, updates, and lifecycle. |
+| **Integration** | Not integrated; sharing is for direct access only. | Can be integrated into Teams, Copilot, or other Microsoft 365 surfaces. |
 
+
+
+
+### Share your agent
+
+To publ
 The following table lists the sharing options that are available.
 
 | Sharing option                                          | Description |
