@@ -1,14 +1,16 @@
 ---
-title: Share, publish and manage agents built with Copilot Studio
-description: Learn how to publish and manage agents built with Copilot Studio.
+title: Share and manage agents built with the lite experience in Copilot Studio
+description: Learn how to share and manage agents built with Copilot Studio.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/22/2025
+ms.date: 09/30/2025
 ms.topic: conceptual
 ---
 
-# Share, publish and manage agents built with Copilot Studio
+# Share and manage agents
+
+You can share the agents you create using the lite experience of Copilot Studio in Microsoft 365 Copilot. To *publish* an agent, you must use the [Copilot Studio full experience](https://learn.microsoft.com/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
 You can choose to share or publish the agents you create. However, there are important distinctions between these options. This article describes how to share, publish, and manage agents built with Copilot Studio.
 
@@ -33,19 +35,13 @@ Sharing your agent is the last step in [building your agent](copilot-studio-lite
 
  :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
 
-The following table lists the sharing options that are available:
 
-| Sharing option   | Description |
-| ---------------- | ----------- |
-| Anyone in your organization    | Anyone in your tenant can use the sharing link to use the agent. |
 | Specific users in your organization | Specific users or groups can use the sharing link to use the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
-| Only you   | Only the author of the agent can use it. No one else can use the sharing link. (This sharing option is selected by default.) |
 
-:::image type="content" source="assets/images/share-agent-setting-options.png" alt-text="A screenshot of the available options for sharing an agent":::
 
 > [!NOTE]
-> When the sharing option is set to **Specific users in your organization**, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
+<!--
 ### Deploy agents via ZIP package
 
 Copilot Studio provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
@@ -59,6 +55,7 @@ To deploy an agent manually:
 > [!NOTE]
 > - The ZIP package can't include embedded files. Remove any embedded file content from the ZIP package.
 > - Sideloading agents in Teams isn't supported on macOS.
+-->
 
 ### Automatically share SharePoint files and folders
 
