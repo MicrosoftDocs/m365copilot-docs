@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 01/17/2025
+ms.date: 09/17/2025
 ---
 
 # Choose the right Copilot Studio experience
