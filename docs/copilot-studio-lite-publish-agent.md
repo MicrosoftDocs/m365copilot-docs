@@ -42,7 +42,7 @@ Sharing your agent is the last step in [building your agent](copilot-studio-lite
 When users open the link to an agent you have shared with them, the agent opens in a browser window and is ready to use.
 
 > [!NOTE]
-> Because agent capabilities differ based on a user's license, users can only add agents shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in the agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites#agent-capabilities-and-licensing-models).
+> Because agent capabilities differ based on a user's license, users can only add agents shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in the agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-and-licensing-models).
 
 ### Deploy an agent via ZIP package
 
@@ -52,7 +52,7 @@ To deploy an agent manually:
 
 1. In the lite experience of Copilot Studio, open the left navigation pane and select **Create gent**.
 1. At the top of the central pane, choose **My agents**.
-:::image type="content" source="assets/images/copilot-studio-lite/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
+:::image type="content" source="assets/images/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
 1. Highlight the agent you want to download and choose the ellipses.
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
 1. Sideload your agent into Microsoft Teams.
