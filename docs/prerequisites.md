@@ -112,7 +112,7 @@ The following table summarizes agent access based on user licensing type.
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
-| Capability | Copilot Chat (no usage-based billing)* | Copilot Chat (usage-based billing) | Microsoft 365 Copilot (licensed) |
+| Capability | Copilot Chat (no usage-based billing)* | Copilot Chat (usage-based billing)** | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
 |Copilot Studio lite experience |  :white_check_mark: | :white_check_mark:\** | :white_check_mark: |
 |Copilot Studio full experience |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
@@ -135,7 +135,9 @@ The following table lists the agent types and agent capabilities that are availa
 
 \* Usage limits apply to all included features.
 
-\** Users who are configured with usage billing in the Microsoft 365 admin center don't have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
+\** No costs are incurred by users on a usage-based billing model for access to knowledge sources freely available to those with no usage based billing.
+
+\*** Users who are configured with usage billing in the Microsoft 365 admin center don't have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
 
 > [!NOTE]
 > For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
