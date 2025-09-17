@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 You can share the agents you create using the lite experience of Copilot Studio in Microsoft 365 Copilot. This article describes how to share, and manage agents built using the lite experience within Copilot Studio. For information about how to *publish* an agent, you must use the [Copilot Studio full experience](https://learn.microsoft.com/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
-> [!NOTE] 
+> [!NOTE]
 > **Sharing** an agent is intended for limited, direct access to it. This approach is ideal for collaborating or getting feedback as you create your agent, but can't be used for formal deployment or integration.
 
 The following table highlights the key differences between publishing and sharing your declarative agents.
@@ -39,22 +39,27 @@ Sharing your agent is the last step in [building your agent](copilot-studio-lite
 | Specific users in your organization | Specific users or groups can use the sharing link to use the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
 | Only you | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
 
-<!-- NOT Possible through the lite experience ---
+When users open the link to an agent you have shared with them, the agent opens in a browser window and is ready to use.
 
-### Deploy agents via ZIP package
+> [!NOTE]
+> Because agent capabilities differ based on a user's license, users can only add agents shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in the agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites#agent-capabilities-and-licensing-models).
+
+### Deploy an agent via ZIP package
 
 Copilot Studio provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 To deploy an agent manually:
 
-1. In Copilot Studio, open your agent and select the **More options (...)** menu.
-2. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
-3. Sideload your agent into Microsoft Teams.
+1. In the lite experience of Copilot Studio, open the left navigation pane and select **Create gent**.
+1. At the top of the central pane, choose **My agents**.
+:::image type="content" source="assets/images/copilot-studio-lite/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
+1. Highlight the agent you want to download and choose the ellipses.
+1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
+1. Sideload your agent into Microsoft Teams.
 
 > [!NOTE]
 > - The ZIP package can't include embedded files. Remove any embedded file content from the ZIP package.
 > - Sideloading agents in Teams isn't supported on macOS.
--->
 
 ### Automatically share SharePoint files and folders
 
@@ -65,20 +70,13 @@ You can select which SharePoint folders and files to share. Sharing only works w
 > [!NOTE]
 > Only the files and folders you specifically add to the agent can be shared automatically. Full access to SharePoint sites isn't automatically available to people you share your agent with. A site administrator must grant users permission via the site settings.
 
-When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Use file permission management in SharePoint to manage user's access to the files and folders.
+When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Manage user permissions to access file and folders directly through SharePoint.
 
 :::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
 
-### Adding a shared agent to Copilot
-
-When you share an agent, the link brings end users to the Microsoft 365 app store to view the agent details before adding it to Microsoft 365 Copilot. After the user adds the agent, they can open it in Copilot by starting a new chat. The user only needs to add the agent the first time they use it. Later, they can return to Microsoft 365 Copilot to find the agent in the left navigation pane.
-
-> [!NOTE]
-> Because agent capabilities differ based on a user's license, users can only add agents shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in the agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites#agent-capabilities-for-microsoft-365-users).
-
 ## Manage agents
 
-To manage an existing agent, you can:
+There are two methods for managing 
 
 - Select the ellipses (**...**) and **Edit** from an agent on the rail in Microsoft 365 Copilot.
 - Select **Create agents** from the rail in Microsoft 365 Copilot, and then select **My agents** or **View all agents** from the name dropdown menu.
