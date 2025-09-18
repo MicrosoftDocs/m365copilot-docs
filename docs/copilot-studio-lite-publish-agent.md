@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Share and manage agents
 
-You can share the agents you create using the lite experience of Copilot Studio in Microsoft 365 Copilot. This article describes how to share, and manage agents built using the lite experience within Copilot Studio. For information about how to *publish* an agent, you must use the [Copilot Studio full experience](https://learn.microsoft.com/microsoft-copilot-studio/publication-fundamentals-publish-channels).
+You can share the agents you create using the lite experience of Copilot Studio in Microsoft 365 Copilot. This article describes how to share, and manage agents built using the lite experience within Copilot Studio. For information about how to *publish* an agent, you must use the [Copilot Studio full experience](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
 > [!NOTE]
 > **Sharing** an agent is intended for limited, direct access to it. This approach is ideal for collaborating or getting feedback as you create your agent, but can't be used for formal deployment or integration.
