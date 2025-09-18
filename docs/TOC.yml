@@ -50,7 +50,12 @@ items:
       expanded: true
       items:
       - name: Build with TypeSpec
-        href: build-declarative-agents-typespec.md
+        expanded: false
+        items:
+        - name: Overview
+          href: typespec-overview.md
+        - name: Get started
+          href: build-declarative-agents-typespec.md
       - name: Build with JSON
         items:
         - name: Create the agent

@@ -23,24 +23,25 @@ Defines the instructions that define the behavior of an agent.
 `Namespace`
 
 ### Parameters
+
 | Name | Type | Description |
 |------|------|-------------|
-| instructions | [valueof `string`](#string) | Not localizable. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
+| instructions | valueof `string` | Not localizable. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
 
 ### Examples
 
-```tsp
+```typespec
 @instructions("Always respond with a positive energy.")
 ```
 
-```tsp
+```typespec
 @instructions("""
   You are a customer support agent specializing in technical troubleshooting.
   Always provide step-by-step solutions and ask clarifying questions when needed.
 """)
 ```
 
-```tsp
+```typespec
 @instructions("""
   You are a financial advisor assistant. Provide general financial information
   but always remind users to consult with qualified professionals for specific advice.
@@ -63,20 +64,20 @@ Indicates that a namespace represents an agent.
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| name | [valueof `string`](#string) | Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
-| description | [valueof `string`](#string) | Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
+| name | valueof `string` | Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
+| description | valueof `string` | Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
 
 ### Examples
 
-```tsp
+```typespec
 @agent("IT Support Assistant", "An AI agent that helps with technical support and troubleshooting")
 ```
 
-```tsp
+```typespec
 @agent("Project Manager", "A helpful assistant for project management tasks and coordination")
 ```
 
-```tsp
+```typespec
 @agent("Data Analytics Helper", "An agent specialized in data analysis and reporting tasks")
 ```
 
@@ -95,23 +96,23 @@ An optional object containing a disclaimer message that, if provided, will be di
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| disclaimer | [valueof `Disclaimer`](#disclaimer) | The disclaimer information that will be shown to users. |
+| disclaimer | valueof `Disclaimer` | The disclaimer information that will be shown to users. |
 
 ### Examples
 
-```tsp
+```typespec
 @disclaimer(#{
   text: "This agent provides general information only and should not be considered professional advice."
 })
 ```
 
-```tsp
+```typespec
 @disclaimer(#{
   text: "All financial information provided is for educational purposes. Please consult with a qualified financial advisor before making investment decisions."
 })
 ```
 
-```tsp
+```typespec
 @disclaimer(#{
   text: "This technical support agent provides general guidance. For critical systems, please contact your IT department directly."
 })
@@ -132,25 +133,25 @@ Indicates that a namespace contains a conversation starter.
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| conversationStarter | [valueof `ConversationStarter`](#conversationstarter) | The conversation starter information including title and text. |
+| conversationStarter | valueof `ConversationStarter` | The conversation starter information including title and text. |
 
 ### Examples
 
-```tsp
+```typespec
 @conversationStarter(#{
   title: "Get Started",
   text: "How can I help you today?"
 })
 ```
 
-```tsp
+```typespec
 @conversationStarter(#{
   title: "Check Status",
   text: "What's the status of my recent requests?"
 })
 ```
 
-```tsp
+```typespec
 @conversationStarter(#{
   title: "Report Issue",
   text: "I need to report a technical problem"
@@ -172,24 +173,24 @@ Define settings that modify the behavior of the DA orchestration.
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| behaviorOverrides | [valueof `BehaviorOverrides`](#behavioroverrides) | Settings that modify the behavior of the declarative agent orchestration. |
+| behaviorOverrides | valueof `BehaviorOverrides` | Settings that modify the behavior of the declarative agent orchestration. |
 
 ### Examples
 
-```tsp
+```typespec
 @behaviorOverrides(#{
   discourageModelKnowledge: true,
   disableSuggestions: false
 })
 ```
 
-```tsp
+```typespec
 @behaviorOverrides(#{
   disableSuggestions: true
 })
 ```
 
-```tsp
+```typespec
 @behaviorOverrides(#{
   discourageModelKnowledge: false,
   disableSuggestions: false
@@ -211,11 +212,11 @@ Defines the action that can be defined on an info object in an OpenAPI specifica
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| data | [valueof `ActionMetadata`](#actionmetadata) | The action metadata including human-readable names, descriptions, and URLs. |
+| data | valueof `ActionMetadata` | The action metadata including human-readable names, descriptions, and URLs. |
 
 ### Examples
 
-```tsp
+```typespec
 @actions(#{
   nameForHuman: "Customer Support API",
   descriptionForModel: "Provides customer support ticket management",
@@ -226,7 +227,7 @@ Defines the action that can be defined on an info object in an OpenAPI specifica
 })
 ```
 
-```tsp
+```typespec
 @actions(#{
   nameForHuman: "Project Management Suite",
   descriptionForModel: "Comprehensive project management tools",
@@ -238,7 +239,7 @@ Defines the action that can be defined on an info object in an OpenAPI specifica
 })
 ```
 
-```tsp
+```typespec
 @actions(#{
   nameForHuman: "Analytics Dashboard",
   descriptionForHuman: "Real-time analytics and reporting platform",
@@ -263,25 +264,25 @@ Defines the reasoning instructions of a function within an action.
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| value | [valueof `string`](#string) | The reasoning instructions for the operation. |
+| value | valueof `string` | The reasoning instructions for the operation. |
 
 ### Examples
 
-```tsp
+```typespec
 @reasoning("""
   When searching for tickets, prioritize by severity level and creation date.
   Always include ticket ID and status in the response.
 """)
 ```
 
-```tsp
+```typespec
 @reasoning("""
   For project queries, consider the user's role and project permissions.
   Filter results based on team membership and access levels.
 """)
 ```
 
-```tsp
+```typespec
 @reasoning("""
   When processing analytics requests, validate date ranges and ensure
   the requested metrics are available for the specified time period.
@@ -303,25 +304,25 @@ Defines the responding instructions of a function within an action.
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| value | [valueof `string`](#string) | The responding instructions for the operation. |
+| value | valueof `string` | The responding instructions for the operation. |
 
 ### Examples
 
-```tsp
+```typespec
 @responding("""
   Present support tickets in a clear table format with columns: ID, Title, Priority, Status, Created Date.
   Include summary statistics at the end showing total tickets by status.
 """)
 ```
 
-```tsp
+```typespec
 @responding("""
   Display project information using bullet points for easy reading.
   Always include project timeline and current phase information.
 """)
 ```
 
-```tsp
+```typespec
 @responding("""
   Format analytics results as charts when possible. For numerical data,
   include percentage changes from previous periods where applicable.
@@ -343,11 +344,11 @@ Support an action function's capabilities object as defined in the API Plugin ma
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| capabilities | [valueof `FunctionCapabilitiesMetadata`](#functioncapabilitiesmetadata) | The capabilities metadata including confirmation, response semantics, and security info. |
+| capabilities | valueof `FunctionCapabilitiesMetadata` | The capabilities metadata including confirmation, response semantics, and security info. |
 
 ### Examples
 
-```tsp
+```typespec
 @capabilities(#{
   confirmation: #{
     type: "AdaptiveCard",
@@ -357,7 +358,7 @@ Support an action function's capabilities object as defined in the API Plugin ma
 })
 ```
 
-```tsp
+```typespec
 @capabilities(#{
   confirmation: #{
     type: "modal",
@@ -388,7 +389,7 @@ Support an action function's capabilities object as defined in the API Plugin ma
 })
 ```
 
-```tsp
+```typespec
 @capabilities(#{
   responseSemantics: #{
     dataPath: "$.analytics",
@@ -420,11 +421,11 @@ Defines the adaptive card reference for a function.
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| cardPath | [valueof `CardMetadata`](#cardmetadata) | The adaptive card metadata including file path, title, and data path. |
+| cardPath | valueof `CardMetadata` | The adaptive card metadata including file path, title, and data path. |
 
 ### Examples
 
-```tsp
+```typespec
 @card(#{
   dataPath: "$.tickets",
   file: "ticketCard.json",
@@ -432,7 +433,7 @@ Defines the adaptive card reference for a function.
 })
 ```
 
-```tsp
+```typespec
 @card(#{
   dataPath: "$.projects", 
   title: "$.name", 
@@ -441,7 +442,7 @@ Defines the adaptive card reference for a function.
 })
 ```
 
-```tsp
+```typespec
 @card(#{
   dataPath: "$.reports", 
   file: "./analytics/reportCard.json",
@@ -465,18 +466,18 @@ Defines the authentication reference id for the authentication type.
 ### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| value | [valueof `string`](#string) | The vault reference id for the authentication type. |
+| value | valueof `string` | The vault reference id for the authentication type. |
 
 ### Examples
 
-```tsp
+```typespec
 @authReferenceId("corporate-sso")
 ```
 
-```tsp
+```typespec
 @authReferenceId("azure-ad-integration")
 ```
 
-```tsp
+```typespec
 @authReferenceId("api-key-auth-v2")
 ```
