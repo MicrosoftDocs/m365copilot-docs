@@ -135,7 +135,7 @@ The following table lists the agent types and agent capabilities that are availa
 
 \* Usage limits apply to all included features.
 
-\** No costs are incurred by users on a usage-based billing model for access to knowledge sources freely available to those with no usage based billing.
+\** No costs are incurred by users on a usage-based billing model for access to knowledge sources freely available to those with no usage-based billing.
 
 \*** Users who are configured with usage billing in the Microsoft 365 admin center don't have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
 
