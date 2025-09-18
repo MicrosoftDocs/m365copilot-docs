@@ -60,4 +60,4 @@ Suggestions for such connections include:
 
 - [Use Copilot Studio to build declarative agents](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents built with Copilot Studio](copilot-studio-lite-publish-agent.md)
+- [Publish and manage agents built with Copilot Studio](copilot-studio-lite-share-manage-agent.md)

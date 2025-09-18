@@ -43,7 +43,7 @@ When Microsoft validates and approves your app package, your agent is made avail
 
 ## Declarative agents built with the Copilot Studio lite experience
 
-The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) enables you to build declarative agents for Microsoft 365 Copilot quickly, and easily share them within your organization. For more information on shareing agents via the lite experience, see [Share an agent via Copilot Studio](copilot-studio-lite-publish-agent.md#share-an-agent).
+The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) enables you to build declarative agents for Microsoft 365 Copilot quickly, and easily share them within your organization. For more information on shareing agents via the lite experience, see [Share an agent via Copilot Studio](copilot-studio-lite-share-manage-agent.md#share-an-agent).
 
 ## Declarative agents built with the Copilot Studio full experience
 

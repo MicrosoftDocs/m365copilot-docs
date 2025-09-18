@@ -85,5 +85,10 @@
       "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-build",
       "redirect_document_id": false
     },
+        {
+      "source_path_from_root": "/docs/copilot-studio-lite-publish.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-share-manage",
+      "redirect_document_id": false
+    },
   ]
 }

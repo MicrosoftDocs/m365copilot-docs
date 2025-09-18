@@ -143,7 +143,7 @@ items:
       - name: Add knowledge sources
         href: copilot-studio-lite-knowledge.md
       - name: Publish agents
-        href: copilot-studio-lite-publish-agent.md
+        href: copilot-studio-lite-share-manage-agent.md
       - name: Availability and language support
         href: copilot-studio-lite-availability.md
       - name: Build in Microsoft Copilot Studio
