@@ -142,7 +142,7 @@ items:
         href: copilot-studio-lite-tuned-models.md
       - name: Add knowledge sources
         href: copilot-studio-lite-knowledge.md
-      - name: Publish agents
+      - name: Share and manage agents
         href: copilot-studio-lite-share-manage-agent.md
       - name: Availability and language support
         href: copilot-studio-lite-availability.md
