@@ -29,7 +29,7 @@ The following table highlights the key differences between publishing and sharin
 
 ## Share an agent
 
-Sharing your agent is the last step in [building your agent](copilot-studio-lite-build.md) within the lite experience of Copilot Studio. Once you have built and tested your agent, choose **Create**. A pop-up window displays a sharable link for your agent. By default, the link displayed only works for the person who created the agent. To share the agent with others, select **Change sharing settings** and specify who should have access:
+Sharing is the last step in [building your agent](copilot-studio-lite-build.md) within the lite experience of Copilot Studio. Once you have built and tested your agent, choose **Create**. A pop-up window displays a sharable link for your agent. By default, the link displayed only works for the person who created the agent. To share the agent with others, select **Change sharing settings** and specify who should have access:
 
  :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
 
@@ -55,7 +55,7 @@ To deploy an agent manually:
 :::image type="content" source="assets/images/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
 1. Highlight the agent you want to download and choose the ellipses.
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
-1. Sideload your agent into Microsoft Teams.
+1. [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 > [!NOTE]
 > - The ZIP package can't include embedded files. Remove any embedded file content from the ZIP package.
@@ -76,35 +76,46 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ## Manage agents
 
-There are two methods for managing 
+There are three methods for accessing the agent management features in the lite experience of Copilot Studio for Microsoft 365.
 
-- Select the ellipses (**...**) and **Edit** from an agent on the rail in Microsoft 365 Copilot.
-- Select **Create agents** from the rail in Microsoft 365 Copilot, and then select **My agents** or **View all agents** from the name dropdown menu.
+**To manage an agent you've recently accessed**, select the **More options** ellipses (**...**) in the left navigation pane next to the name of the agent you want to manage.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-last-accessed.png" alt-text="The View all agents options in the recently accessed agents menu":::
+**To manage an agent that you haven't accessed recently, either:**
 
-Both options show the **My agents** list. You can select the existing agent that you want to change or update.
+- Select **All agents** in the left navigation pane.
+- In the **Agent Store**, under **Your agents**, choose **See more** and then select the ellipses (**...**) next to the name of the agent you want to manage.
+
+:::image type="content" source="assets/images/manage-agent-agent-store-see-more.png" alt-text="Screenshot of Agent Store":::
+
+**OR:**
+
+- Select **Create agents** in the left navigation pane and then select the **My agents** tab.
+- On the **My agents** tab, select the **More options** ellipses (**...**) next to the name of the agent you want to manage.
+
+:::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of the lite experience in Copilot Studio for Microsoft 365 Copilot.":::
 
 > [!NOTE]
 > Only agents created by you show in the **My agents** list. Shared agents from other users aren't in the list.
 
-### Update your agent
+### Edit an agent
 
-Changes made to agents are automatically saved in Copilot Studio. However, your changes won't be visible to users until your updates are published. To update a previously created agent, select **Update** on the top right corner. Your changes might take several minutes to become available for end users.
+To edit an agent, choose the pencil icon (**Edit**) from the **More options** menu. From there, you can use either the **Describe** tab to enter the changes you'd like to make using natural language, or use the **Configure** tab for more fine-tuned control in editing your agent's functionality and knowledge sources.
+
+Changes made to agents are saved automatically. However, your changes won't be visible to users until you make them available to users. To make changes to an existing agent available, choose **Update** in the top right corner. Your changes might take several minutes to become available for end users.
 
 > [!NOTE]
 > After updating an agent that has a SharePoint file and folder knowledge source and has been shared with specific users in your organization, we recommend that you reshare the agent with the same group of users. Doing so automatically shares the files and folders with the users again to ensure a consistent agent experience.
 
 ### Delete your agent
 
-The agent author can delete their existing agents. After deletion, the agent will no longer be available to the author or shared users to use in Microsoft 365 Copilot.
+If needed, you can delete agents you have created. Once deleted, you will no longer be able to use it and it will no longer be available the users you shared it with.
 
 >[!IMPORTANT]
 > Deleting an agent is permanent and can't be reversed.
 
-To delete an agent, you can:
+**To delete an agent:**
 
-- Select the ellipses (**...**) and **Delete** in the **My agents** list.
+- Access the list of your agents using one of the methods described in (copilot-studio-lite-share-manage-agent.md#manage-agents)
 - From the authoring experience of an agent, select the ellipses (**...**) and **Delete** from the top right corner.
 
 ## Troubleshooting
