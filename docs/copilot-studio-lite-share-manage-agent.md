@@ -19,10 +19,10 @@ The following table highlights the key differences between publishing and sharin
 
 | Feature  | Sharing | Publishing |
 | ------- | ------- | ------- |
-| **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. | Formal deployment for broad use, integration, and scale across organization or channels (e.g., Teams, Copilot). |
+| **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. | Formal deployment for broad use, integration, and scale across organization or channels (for example, Teams, Copilot). |
 | **Mechanism** | Owner/co-owners use **Manage Sharing** to specify up to 98 users by name or email. Shared users receive direct access but agent remains private and not broadly discoverable. | Owner/co-owners select **Publish** in Copilot Studio, choose target channel (Teams, Copilot, and more), and complete any required approval flows. Agent becomes discoverable and accessible to intended audience. |
 | **Audience** | Up to 98 named users (individuals or groups). | Organization-wide or channel-specific. |
-| **Discoverabiity** | Private; only visible to specified recipients. | Public within chosen scope; appears in agent store or channels. |
+| **Discoverability** | Private; only visible to specified recipients. | Public within chosen scope; appears in agent store or channels. |
 | **Governance** | Minimal governance; no approval flows. | Might require approval flows, versioning, and lifecycle management. |
 | **Permissions** | Shared users can interact, but not manage or publish. | Owner/co-owners manage publishing, updates, and lifecycle. |
 | **Integration** | Not integrated; sharing is for direct access only. | Can be integrated into Teams, Copilot, or other Microsoft 365 surfaces. |
@@ -42,7 +42,7 @@ Sharing is the last step in [building your agent](copilot-studio-lite-build.md) 
 When users open the link to an agent you have shared with them, the agent opens in a browser window and is ready to use.
 
 > [!NOTE]
-> Because agent capabilities differ based on a user's license, users can only add agents shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in the agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-and-licensing-models).
+> Agent capabilities differ based on a user's license. Users can only add agents shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in the agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-and-licensing-models).
 
 ### Deploy an agent via ZIP package
 
@@ -99,24 +99,33 @@ There are three methods for accessing the agent management features in the lite 
 
 ### Edit an agent
 
-To edit an agent, choose the pencil icon (**Edit**) from the **More options** menu. From there, you can use either the **Describe** tab to enter the changes you'd like to make using natural language, or use the **Configure** tab for more fine-tuned control in editing your agent's functionality and knowledge sources.
+To edit an agent:
+
+- Access the list of your agents using one of the methods described in [Manage agents](#manage-agents).
+- Choose **Edit** (the pencil icon) from the **More options** menu. 
+
+From there, you can use either the **Describe** tab to enter the changes you'd like to make using natural language, or use the **Configure** tab for more fine-tuned control in editing your agent's functionality and knowledge sources.
 
 Changes made to agents are saved automatically. However, your changes won't be visible to users until you make them available to users. To make changes to an existing agent available, choose **Update** in the top right corner. Your changes might take several minutes to become available for end users.
 
 > [!NOTE]
-> After updating an agent that has a SharePoint file and folder knowledge source and has been shared with specific users in your organization, we recommend that you reshare the agent with the same group of users. Doing so automatically shares the files and folders with the users again to ensure a consistent agent experience.
+> If you update a previously shared agent that has a SharePoint file and folder knowledge source, reshare it with the same users. Doing so automatically shares the files and folders with the users again to ensure a consistent agent experience.
 
 ### Delete your agent
 
-If needed, you can delete agents you have created. Once deleted, you will no longer be able to use it and it will no longer be available the users you shared it with.
+You can delete agents you create. Once deleted, you won't be able to use it, and it won't be available the users you shared it with. Only the user who created an agent can delete it.
 
 >[!IMPORTANT]
 > Deleting an agent is permanent and can't be reversed.
 
 **To delete an agent:**
 
-- Access the list of your agents using one of the methods described in (copilot-studio-lite-share-manage-agent.md#manage-agents)
-- From the authoring experience of an agent, select the ellipses (**...**) and **Delete** from the top right corner.
+- Access the list of your agents using one of the methods described in [Manage agents](#manage-agents).
+- Select the ellipses (**...**) and then choose **Delete** (the garbage can icon).
+
+### Reassign ownership of an agent
+
+The lite experience in Copilot Studio for Microsoft 365 Copilot doesn't support transferring ownership of declarative agents to another user. For information about transferring ownership, see [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell).
 
 ## Troubleshooting
 
@@ -129,4 +138,4 @@ When sharing an agent and its knowledge sources, you might encounter the errors 
 | Couldn't share       | Insufficient privileges to update the sharing permissions on certain files. The error lists the files that were unable to be shared. The agent owner should go into SharePoint to try updating these permissions manually. For more information, see: <ul><li>[Share a document](https://support.microsoft.com/office/share-a-document-using-sharepoint-or-onedrive-807de6cf-1ece-41b9-a2b3-250d9a48f1e8) to learn how to share files.</li><li>[Sharing errors in SharePoint and OneDrive](/sharepoint/sharepoint-onedrive-error-message) for an error code reference.</li></ul> |
 <!-- markdownlint-enable MD033 -->
 
-If sharing failed, users who don't have access to the folder and files don't receive responses generated from those knowledge sources. Checking the box shares the underlying knowledge sources via SharePoint. Files can only be shared to valid individuals or security groups in your directory.
+If sharing an agent fails, users who don't have access to the folder and files don't receive responses generated from those knowledge sources. Checking the box shares the underlying knowledge sources via SharePoint. Files can only be shared to valid individuals or security groups in your directory.
