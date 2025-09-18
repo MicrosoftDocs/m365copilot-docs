@@ -1,1 +1,23 @@
-
+items:
+- name: Overview
+  href: overview.md
+- name: Retrieve data
+  href: copilotroot-retrieval.md
+- name: Complex types
+  items:
+  - name: Connection item
+    href: resources/connectionitem.md
+  - name: Data source configuration
+    href: resources/datasourceconfiguration.md
+  - name: External item configuration
+    href: resources/externalitemconfiguration.md
+  - name: Retrieval response
+    href: resources/retrievalresponse.md
+  - name: Retrieval hit
+    href: resources/retrievalhit.md
+  - name: Retrieval extract
+    href: resources/retrievalextract.md
+  - name: Search response metadata dictionary
+    href: resources/searchresourcemetadatadictionary.md
+  - name: Search sensitivity label info
+    href: resources/searchsensitivitylabelinfo.md
