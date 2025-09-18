@@ -8,7 +8,7 @@ ms.date: 09/18/2025
 ms.topic: reference
 ---
 
-# TypeSpec for Microsoft 365 Copilot
+# Decorators for TypeSpec for Microsoft 365 Copilot
 
 ## `@instructions`
 

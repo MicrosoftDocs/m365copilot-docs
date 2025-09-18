@@ -53,7 +53,14 @@ items:
         expanded: false
         items:
         - name: Overview
-          href: typespec-overview.md
+          href: overview-typespec.md
+        - name: TypeSpec reference
+          expanded: false
+          items:
+            - name: Decorators
+              href: typespec-decorators.md
+            - name: Capabilities
+              href: typespec-capabilities.md
         - name: Get started
           href: build-declarative-agents-typespec.md
       - name: Build with JSON
