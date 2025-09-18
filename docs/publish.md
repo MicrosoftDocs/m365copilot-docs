@@ -43,11 +43,11 @@ When Microsoft validates and approves your app package, your agent is made avail
 
 ## Declarative agents built with the Copilot Studio lite experience
 
-The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) enables you to build declarative agents for Microsoft 365 Copilot quickly, and easily share them within your organization. For more information on shareing agents via the lite experience, see [Share an agent via Copilot Studio](copilot-studio-lite-publish-agent.md#share-the-agent).
+The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) enables you to build declarative agents for Microsoft 365 Copilot quickly, and easily share them within your organization. For more information on shareing agents via the lite experience, see [Share an agent via Copilot Studio](copilot-studio-lite-publish-agent.md#share-an-agent).
 
 ## Declarative agents built with the Copilot Studio full experience
 
-Declarative agents built with the full Copilot Studio experience are more customizable and feature-rich than agents created with the [Copilot Studio lite experience](copilot-studio-lite.md). Unlike standalone agents, an agent built with Copilot Studio isn't automatically deployed to Microsoft 365 Copilot and Teams when published. Rather, you need to set its [availability options](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions.md#set-availability-options) to distribute the agent to share among individuals, groups, or to be published to the organization's catalog by an admin.
+Declarative agents built with the full Copilot Studio experience are more customizable and feature-rich than agents created with the [Copilot Studio lite experience](copilot-studio-lite.md). Unlike standalone agents, an agent built with Copilot Studio isn't automatically deployed to Microsoft 365 Copilot and Teams when published. Rather, you need to set its [availability options](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?branch=main#set-availability-options) to distribute the agent to share among individuals, groups, or to be published to the organization's catalog by an admin.
 
 | Distribution method | Support | Learn more |
 |--|--|--|
