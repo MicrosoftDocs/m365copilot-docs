@@ -82,7 +82,7 @@ Indicates that a namespace represents an agent.
 
 ## `@disclaimer`
 
-An optional JSON object containing a disclaimer message that, if provided, will be displayed to users at the start of a conversation to satisfy legal or compliance requirements.
+An optional object containing a disclaimer message that, if provided, will be displayed to users at the start of a conversation to satisfy legal or compliance requirements.
 
 ```typespec
 @disclaimer(disclaimer: valueof Disclaimer)
