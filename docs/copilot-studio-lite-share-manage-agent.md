@@ -55,7 +55,7 @@ To deploy an agent manually:
 :::image type="content" source="assets/images/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
 1. Highlight the agent you want to download and choose the ellipses.
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
-1. [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
+1. [Sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 > [!NOTE]
 > - The ZIP package can't include embedded files. Remove any embedded file content from the ZIP package.
@@ -113,7 +113,7 @@ Changes made to agents are saved automatically. However, your changes won't be v
 
 ### Delete your agent
 
-You can delete agents you create. Once deleted, you won't be able to use it, and it won't be available the users you shared it with. Only the user who created an agent can delete it.
+You can delete agents you create. Once you delete an agent, you won't be able to use it, and it won't be available the users you shared it with. Only the user who created an agent can delete it.
 
 >[!IMPORTANT]
 > Deleting an agent is permanent and can't be reversed.
@@ -139,3 +139,11 @@ When sharing an agent and its knowledge sources, you might encounter the errors 
 <!-- markdownlint-enable MD033 -->
 
 If sharing an agent fails, users who don't have access to the folder and files don't receive responses generated from those knowledge sources. Checking the box shares the underlying knowledge sources via SharePoint. Files can only be shared to valid individuals or security groups in your directory.
+
+
+## Related content
+
+- [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)
+- [Upload into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
+- [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell)
+- 
