@@ -1,10 +1,10 @@
 ---
-title: Microsoft 365 Copilot Retrieval API Overview (Preview)
-description: "Use the Microsoft 365 Copilot Retrieval API to ground your AI solutions with accurate, secure, and contextually relevant data from SharePoint, OneDrive, and Copilot connectors."
-author: lramosvea
-ms.author: lramosvea
+title: Microsoft 365 Copilot Chat API Overview (Preview)
+description: "Use the Microsoft 365 Copilot Chat API to programmatically start and continue conversations with Microsoft 365 Copilot."
+author: muwagerikpe
+ms.author: muwagerikpe
 ms.localizationpriority: medium
-ms.date: 08/08/2025
+ms.date: 09/18/2025
 ms.topic: overview
 ---
 
