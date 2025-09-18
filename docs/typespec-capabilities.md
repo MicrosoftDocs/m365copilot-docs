@@ -1,16 +1,11 @@
 ---
-title: "Built-in Capabilities for TypeSpec for Microsoft 365 Copilot"
-description: "Built-in Capabilities for TypeSpec for Microsoft 365 Copilot"
+title: "Declarative agent capabilities using TypeSpec for Microsoft 365 Copilot"
+description: "Learn how to define capabilities for declarative agents using TypeSpec, including web search, OneDrive/SharePoint integration, Teams messages, email, Copilot connectors, and more."
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
 ms.date: 09/18/2025
 ms.topic: reference
----
-
----
-title: "Declarative agent capabilities using TypeSpec for Microsoft 365 Copilot"
-description: "Learn how to define capabilities for declarative agents using TypeSpec, including web search, OneDrive/SharePoint integration, Teams messages, email, Copilot connectors, and more."
 ---
 
 # Capabilities of TypeSpec for Microsoft 365 Copilot
