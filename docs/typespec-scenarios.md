@@ -42,6 +42,11 @@ namespace BasicHelperAgent {
 }
 ```
 
+### [actions.tsp](#tab/actions)
+```typespec
+// No `actions.tsp` file required in this scenario
+```
+
 ---
 
 ## Agent with Multiple Capabilities
@@ -92,6 +97,11 @@ namespace KnowledgeWorkerAgent {
   // People search for finding colleagues
   op people is AgentCapabilities.People;
 }
+```
+
+### [actions.tsp](#tab/actions)
+```typespec
+// No `actions.tsp` file required in this scenario
 ```
 
 ---
@@ -364,53 +374,6 @@ namespace RepairsHub {
 
   @authReferenceId("${{REPAIRSHUBAPIKEYAUTH_REFERENCE_ID}}")
   model RepairsHubApiKeyAuth is ApiKeyAuth<ApiKeyLocation.query, "code">;
-}
-```
-
-### [appPackage/cards/repair.json](#tab/card)
-```json
-{
-  "type": "AdaptiveCard",
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.5",
-  "body": [
-    {
-      "type": "Container",
-      "$data": "${$root}",
-      "items": [
-        {
-          "type": "TextBlock",
-          "text": "id: ${if(id, id, 'N/A')}",
-          "wrap": true
-        },
-        {
-          "type": "TextBlock",
-          "text": "title: ${if(title, title, 'N/A')}",
-          "wrap": true
-        },
-        {
-          "type": "TextBlock",
-          "text": "description: ${if(description, description, 'N/A')}",
-          "wrap": true
-        },
-        {
-          "type": "TextBlock",
-          "text": "assignedTo: ${if(assignedTo, assignedTo, 'N/A')}",
-          "wrap": true
-        },
-        {
-          "type": "TextBlock",
-          "text": "date: ${if(date, date, 'N/A')}",
-          "wrap": true
-        },
-        {
-          "type": "Image",
-          "url": "${image}",
-          "$when": "${image != null}"
-        }
-      ]
-    }
-  ]
 }
 ```
 
