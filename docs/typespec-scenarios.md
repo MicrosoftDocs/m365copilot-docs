@@ -18,7 +18,7 @@ This guide provides complete examples of creating TypeSpec agents for Microsoft 
 
 **What it does**: This agent can answer simple questions, provide general information, and have basic conversations. It doesn't need to access external APIs, search the web, or use any Microsoft 365 services.
 
-### [main.tsp](#tab/main.tsp)
+### [main.tsp](#tab/main)
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -50,7 +50,7 @@ namespace BasicHelperAgent {
 
 **What it does**: This agent helps knowledge workers by combining web search for external information, file access for document retrieval, and people search for finding colleagues and their contact information. Perfect for research tasks and collaboration scenarios.
 
-### [main.tsp](#tab/main.tsp)
+### [main.tsp](#tab/main)
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -102,7 +102,7 @@ namespace KnowledgeWorkerAgent {
 
 **What it does**: This agent allows employees to report facility issues (broken equipment, lighting problems, HVAC issues) and check the status of existing repair requests. The repairs API is publicly accessible and doesn't require authentication, making it easy for anyone to report issues.
 
-### [main.tsp](#tab/main.tsp)
+### [main.tsp](#tab/main.)
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -133,7 +133,7 @@ namespace FacilitiesRepairAgent {
 }
 ```
 
-### [actions.tsp](#tab/actions.tsp)
+### [actions.tsp](#tab/actions)
 ```typespec
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
@@ -214,7 +214,7 @@ namespace RepairsAPI {
 
 **What it does**: This agent provides comprehensive repair management capabilities for maintenance teams. It can list, create, update, and delete repair tasks, filter repairs by assignee or description, and provide rich card-based responses with images. The API key authentication ensures controlled access to the repair management system while demonstrating real-world API integration patterns.
 
-### [main.tsp](#tab/main.tsp)
+### [main.tsp](#tab/main)
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -265,7 +265,7 @@ namespace RepairsAgent {
 }
 ```
 
-### [actions.tsp](#tab/actions.tsp)
+### [actions.tsp](#tab/actions)
 ```typespec
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
@@ -375,7 +375,7 @@ namespace RepairsHub {
 
 **What it does**: This sophisticated agent serves as a project management assistant that integrates with GitHub to help development teams streamline their workflows. It can create and manage issues, review and merge pull requests, track project milestones, and provide insights about repository activity. The OAuth2 authentication ensures secure access to GitHub repositories with appropriate permissions, allowing teams to manage their projects efficiently through natural language interactions.
 
-### [main.tsp](#tab/main.tsp)
+### [main.tsp](#tab/main)
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -413,7 +413,7 @@ namespace GitHubProjectManager {
 }
 ```
 
-### [actions.tsp](#tab/actions.tsp)
+### [actions.tsp](#tab/actions)
 ```typespec
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
