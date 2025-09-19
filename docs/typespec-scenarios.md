@@ -13,7 +13,14 @@ This guide provides complete examples of creating TypeSpec agents for Microsoft 
 
 **What it does**: This agent can answer simple questions, provide general information, and have basic conversations. It doesn't need to access external APIs, search the web, or use any Microsoft 365 services.
 
+#### [main.tsp](#tab/main.tsp)
+
 ```typespec
+import "@typespec/http";
+import "@typespec/openapi3";
+import "@microsoft/typespec-m365-copilot";
+
+using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
 
 @agent({
@@ -37,7 +44,14 @@ namespace BasicHelperAgent {
 
 **What it does**: This agent helps knowledge workers by combining web search for external information, file access for document retrieval, and people search for finding colleagues and their contact information. Perfect for research tasks and collaboration scenarios.
 
+#### [main.tsp](#tab/main.tsp)
+
 ```typespec
+import "@typespec/http";
+import "@typespec/openapi3";
+import "@microsoft/typespec-m365-copilot";
+
+using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
 
 @agent({
@@ -81,7 +95,7 @@ namespace KnowledgeWorkerAgent {
 
 **What it does**: This agent allows employees to report facility issues (broken equipment, lighting problems, HVAC issues) and check the status of existing repair requests. The repairs API is publicly accessible and doesn't require authentication, making it easy for anyone to report issues.
 
-##### [actions.tsp](#tab/main.tsp)
+##### [main.tsp](#tab/main.tsp)
 
 ```typespec
 import "@typespec/http";
@@ -193,8 +207,17 @@ namespace RepairsAPI {
 
 **What it does**: This agent provides advanced facilities management capabilities for authorized personnel. Supervisors can create detailed work orders, assign specific technicians, update repair priorities, access cost information, and generate facility maintenance reports. The API key authentication ensures only authorized staff can perform these administrative functions.
 
+##### [main.tsp](#tab/main.tsp)
+
 ```typespec
+import "@typespec/http";
+import "@typespec/openapi3";
+import "@microsoft/typespec-m365-copilot";
+import "./actions.tsp";
+
+using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
+using TypeSpec.M365.Copilot.Actions;
 
 @agent({
   name: "Facilities Management Pro Agent",
@@ -211,55 +234,69 @@ using TypeSpec.M365.Copilot.Agents;
   complete details for proper execution.
 """)
 namespace FacilitiesManagementAgent {
-  // Advanced Repairs API with API key authentication
-  @service
-  @actions(#{
-      nameForHuman: "Advanced Facilities Management API",
-      descriptionForModel: "Comprehensive facilities management API for supervisors with work order management, technician assignment, and detailed reporting",
-      descriptionForHuman: "Use this API to manage work orders, assign technicians, and generate facility reports"
-  })
-  @server("https://repairs-pro.contoso.com", "Advanced Facilities API")
-  @useAuth(ApiKeyAuth<ApiKeyLocation.header, "X-Facilities-API-Key">)
-  namespace RepairsAPI {
-    @route("/work-orders")
-    @post
-    @action
-    op createWorkOrder(
-      @body workOrder: WorkOrderRequest
-    ): WorkOrderResponse;
+  op createWorkOrder is AdvancedRepairsAPI.createWorkOrder;
+  op assignTechnician is AdvancedRepairsAPI.assignTechnician;
+  op updateWorkOrder is AdvancedRepairsAPI.updateWorkOrder;
+  op getFacilityStatusReport is AdvancedRepairsAPI.getFacilityStatusReport;
+  op getAvailableTechnicians is AdvancedRepairsAPI.getAvailableTechnicians;
+}
+```
 
-    @route("/work-orders/{orderId}/assign")
-    @post
-    @action
-    op assignTechnician(
-      @path orderId: string,
-      @body assignment: TechnicianAssignment
-    ): AssignmentResponse;
+##### [actions.tsp](#tab/actions.tsp)
 
-    @route("/work-orders/{orderId}")
-    @patch
-    @action
-    op updateWorkOrder(
-      @path orderId: string,
-      @body update: WorkOrderUpdate
-    ): WorkOrderResponse;
+```typespec
+import "@typespec/http";
+import "@microsoft/typespec-m365-copilot";
 
-    @route("/reports/facility-status")
-    @get
-    @action
-    op getFacilityStatusReport(
-      @query location?: string,
-      @query dateRange?: string
-    ): FacilityStatusReport;
+using TypeSpec.Http;
+using TypeSpec.M365.Copilot.Actions;
 
-    @route("/technicians")
-    @get
-    @action
-    op getAvailableTechnicians(
-      @query specialty?: string,
-      @query shift?: "day" | "evening" | "night"
-    ): TechnicianListResponse;
-  }
+@service
+@actions(#{
+    nameForHuman: "Advanced Facilities Management API",
+    descriptionForModel: "Comprehensive facilities management API for supervisors with work order management, technician assignment, and detailed reporting",
+    descriptionForHuman: "Use this API to manage work orders, assign technicians, and generate facility reports"
+})
+@server("https://repairs-pro.contoso.com", "Advanced Facilities API")
+@useAuth(ApiKeyAuth<ApiKeyLocation.header, "X-Facilities-API-Key">)
+namespace AdvancedRepairsAPI {
+  @route("/work-orders")
+  @post
+  @action
+  op createWorkOrder(
+    @body workOrder: WorkOrderRequest
+  ): WorkOrderResponse;
+
+  @route("/work-orders/{orderId}/assign")
+  @post
+  @action
+  op assignTechnician(
+    @path orderId: string,
+    @body assignment: TechnicianAssignment
+  ): AssignmentResponse;
+
+  @route("/work-orders/{orderId}")
+  @patch
+  op updateWorkOrder(
+    @path orderId: string,
+    @body update: WorkOrderUpdate
+  ): WorkOrderResponse;
+
+  @route("/reports/facility-status")
+  @get
+  @action
+  op getFacilityStatusReport(
+    @query location?: string,
+    @query dateRange?: string
+  ): FacilityStatusReport;
+
+  @route("/technicians")
+  @get
+  @action
+  op getAvailableTechnicians(
+    @query specialty?: string,
+    @query shift?: "day" | "evening" | "night"
+  ): TechnicianListResponse;
 
   model WorkOrderRequest {
     title: string;
@@ -342,8 +379,17 @@ namespace FacilitiesManagementAgent {
 
 **What it does**: This sophisticated agent serves as a digital executive assistant that can manage complex workflows across Microsoft 365. It can read and analyze emails to identify action items, schedule meetings with conflict resolution, access and summarize documents from SharePoint and OneDrive, coordinate with Teams for project collaboration, and provide insights about organizational relationships. The OAuth2 authentication ensures secure access to user data with appropriate permissions.
 
+##### [main.tsp](#tab/main.tsp)
+
 ```typespec
+import "@typespec/http";
+import "@typespec/openapi3";
+import "@microsoft/typespec-m365-copilot";
+import "./actions.tsp";
+
+using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
+using TypeSpec.M365.Copilot.Actions;
 
 @agent({
   name: "Executive Assistant Pro",
@@ -379,57 +425,109 @@ namespace ExecutiveAssistantAgent {
   op teamsMessages is AgentCapabilities.TeamsMessages;
   op people is AgentCapabilities.People;
 
-  // Advanced Microsoft Graph integration with OAuth2
-  @service
-  @actions(#{
-      nameForHuman: "Microsoft Graph Executive Services",
-      descriptionForModel: "Advanced Microsoft Graph integration for executive-level productivity, calendar management, email analysis, and collaboration insights",
-      descriptionForHuman: "Use this API for advanced email management, intelligent calendar scheduling, and executive productivity insights"
-  })
-  @server("https://graph.microsoft.com", "Microsoft Graph API")
-  @useAuth(OAuth2Auth<[
-    OAuthFlow<AuthorizationCodeFlow> & {
-      authorizationUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
-      tokenUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/token";
-      scopes: {
-        "https://graph.microsoft.com/User.Read": "Read user profile";
-        "https://graph.microsoft.com/Mail.ReadWrite": "Read and manage email";
-        "https://graph.microsoft.com/Calendars.ReadWrite": "Manage calendar and meetings";
-        "https://graph.microsoft.com/Contacts.ReadWrite": "Access and manage contacts";
-        "https://graph.microsoft.com/Files.ReadWrite.All": "Access all files";
-        "https://graph.microsoft.com/Sites.ReadWrite.All": "Access SharePoint sites";
-        "https://graph.microsoft.com/People.Read.All": "Read organization directory";
-        "https://graph.microsoft.com/Reports.Read.All": "Read usage reports";
-        "https://graph.microsoft.com/TeamworkTag.ReadWrite": "Manage Teams tags";
-      };
-    }
-  ]>)
-  namespace MicrosoftGraphExecutive {
-    // Email Management and Analysis
-    @route("/me/messages/insights")
-    @get
-    @action
-    op getEmailInsights(
-      @query timeRange?: "today" | "week" | "month",
-      @query priority?: "high" | "medium" | "low"
-    ): EmailInsightsResponse;
+  // Microsoft Graph API operations
+  op getEmailInsights is MicrosoftGraphExecutive.getEmailInsights;
+  op extractActionItems is MicrosoftGraphExecutive.extractActionItems;
+  op categorizeEmails is MicrosoftGraphExecutive.categorizeEmails;
+  op findOptimalMeetingTime is MicrosoftGraphExecutive.findOptimalMeetingTime;
+  op resolveMeetingConflicts is MicrosoftGraphExecutive.resolveMeetingConflicts;
+  op getMeetingPreparationBriefs is MicrosoftGraphExecutive.getMeetingPreparationBriefs;
+  op getCollaborationInsights is MicrosoftGraphExecutive.getCollaborationInsights;
+  op getManagerInsights is MicrosoftGraphExecutive.getManagerInsights;
+  op generateDocumentSummary is MicrosoftGraphExecutive.generateDocumentSummary;
+  op getTrendingDocuments is MicrosoftGraphExecutive.getTrendingDocuments;
+}
+```
 
-    @route("/me/messages/action-items")
-    @get
-    @action
-    op extractActionItems(
-      @query folderId?: string,
-      @query daysBack?: int32
-    ): ActionItemsResponse;
+##### [actions.tsp](#tab/actions.tsp)
 
-    @route("/me/messages/bulk-categorize")
-    @post
-    @action
-    op categorizeEmails(
-      @body request: EmailCategorizationRequest
-    ): EmailCategorizationResponse;
+```typespec
+import "@typespec/http";
+import "@microsoft/typespec-m365-copilot";
 
-    // Advanced Calendar Management
+using TypeSpec.Http;
+using TypeSpec.M365.Copilot.Actions;
+
+@service
+@actions(#{
+    nameForHuman: "Microsoft Graph Executive Services",
+    descriptionForModel: "Advanced Microsoft Graph integration for executive-level productivity, calendar management, email analysis, and collaboration insights",
+    descriptionForHuman: "Use this API for advanced email management, intelligent calendar scheduling, and executive productivity insights"
+})
+@server("https://graph.microsoft.com", "Microsoft Graph API")
+@useAuth(OAuth2Auth<[
+  OAuthFlow<AuthorizationCodeFlow> & {
+    authorizationUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
+    tokenUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/token";
+    scopes: {
+      "https://graph.microsoft.com/User.Read": "Read user profile";
+      "https://graph.microsoft.com/Mail.ReadWrite": "Read and manage email";
+      "https://graph.microsoft.com/Calendars.ReadWrite": "Manage calendar and meetings";
+      "https://graph.microsoft.com/Contacts.ReadWrite": "Access and manage contacts";
+      "https://graph.microsoft.com/Files.ReadWrite.All": "Access all files";
+      "https://graph.microsoft.com/Sites.ReadWrite.All": "Access SharePoint sites";
+      "https://graph.microsoft.com/People.Read.All": "Read organization directory";
+      "https://graph.microsoft.com/Reports.Read.All": "Read usage reports";
+      "https://graph.microsoft.com/TeamworkTag.ReadWrite": "Manage Teams tags";
+    };
+  }
+]>)
+namespace MicrosoftGraphExecutive {
+  // Email Management and Analysis
+  @route("/me/messages/insights")
+  @get
+  @action
+  op getEmailInsights(
+    @query timeRange?: "today" | "week" | "month",
+    @query priority?: "high" | "medium" | "low"
+  ): EmailInsightsResponse;
+
+  @route("/me/messages/action-items")
+  @get
+  @action
+  op extractActionItems(
+    @query folderId?: string,
+    @query daysBack?: int32
+  ): ActionItemsResponse;
+
+  @route("/me/messages/bulk-categorize")
+  @post
+  @action
+  op categorizeEmails(
+    @body request: EmailCategorizationRequest
+  ): EmailCategorizationResponse;
+
+  // Advanced Calendar Management
+  @route("/me/calendar/intelligent-scheduling")
+  @post
+  @action
+  op suggestMeetingTimes(
+    @body request: IntelligentSchedulingRequest
+  ): MeetingTimeResponse;
+
+  @route("/me/calendar/conflict-resolution")
+  @post
+  @action
+  op resolveScheduleConflicts(
+    @body request: ConflictResolutionRequest
+  ): ConflictResolutionResponse;
+
+  @route("/me/calendar/meeting-briefs")
+  @get
+  @action
+  op getMeetingBriefs(
+    @query timeRange: "today" | "tomorrow" | "week",
+    @query includePreparation?: boolean
+  ): MeetingBriefsResponse;
+
+  // Collaboration and Team Insights
+  @route("/me/collaboration-insights")
+  @get
+  @action
+  op getCollaborationInsights(
+    @query analysisDepth?: "basic" | "detailed",
+    @query timeRange?: "month" | "quarter"
+  ): CollaborationInsightsResponse;
     @route("/me/calendar/intelligent-scheduling")
     @post
     @action
@@ -460,27 +558,32 @@ namespace ExecutiveAssistantAgent {
       @query timeRange?: "week" | "month" | "quarter"
     ): CollaborationInsightsResponse;
 
-    @route("/me/manager-insights")
-    @get
-    @action
-    op getManagerInsights(): ManagerInsightsResponse;
+  @route("/me/manager-insights")
+  @get
+  @action
+  op getManagerInsights(): ManagerInsightsResponse;
 
-    // Document and Content Management
-    @route("/me/documents/executive-summary")
-    @post
-    @action
-    op generateDocumentSummary(
-      @body request: DocumentSummaryRequest
-    ): DocumentSummaryResponse;
+  // Document and Content Management
+  @route("/me/documents/executive-summary")
+  @post
+  @action
+  op generateDocumentSummary(
+    @body request: DocumentSummaryRequest
+  ): DocumentSummaryResponse;
 
-    @route("/me/files/trending")
-    @get
-    @action
-    op getTrendingDocuments(
-      @query timeRange?: "week" | "month",
-      @query includeShared?: boolean
-    ): TrendingDocumentsResponse;
-  }
+  @route("/me/files/trending")
+  @get
+  @action
+  op getTrendingDocuments(
+    @query timeRange?: "week" | "month",
+    @query includeShared?: boolean
+  @route("/me/files/trending")
+  @get
+  @action
+  op getTrendingDocuments(
+    @query timeRange?: "week" | "month",
+    @query includeShared?: boolean
+  ): TrendingDocumentsResponse;
 
   // Response Models
   model EmailInsightsResponse {
