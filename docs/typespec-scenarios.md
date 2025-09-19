@@ -14,7 +14,6 @@ This guide provides complete examples of creating TypeSpec agents for Microsoft 
 **What it does**: This agent can answer simple questions, provide general information, and have basic conversations. It doesn't need to access external APIs, search the web, or use any Microsoft 365 services.
 
 ### [main.tsp](#tab/main.tsp)
-
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -47,7 +46,6 @@ namespace BasicHelperAgent {
 **What it does**: This agent helps knowledge workers by combining web search for external information, file access for document retrieval, and people search for finding colleagues and their contact information. Perfect for research tasks and collaboration scenarios.
 
 ### [main.tsp](#tab/main.tsp)
-
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -100,7 +98,6 @@ namespace KnowledgeWorkerAgent {
 **What it does**: This agent allows employees to report facility issues (broken equipment, lighting problems, HVAC issues) and check the status of existing repair requests. The repairs API is publicly accessible and doesn't require authentication, making it easy for anyone to report issues.
 
 ### [main.tsp](#tab/main.tsp)
-
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -132,7 +129,6 @@ namespace FacilitiesRepairAgent {
 ```
 
 ### [actions.tsp](#tab/actions.tsp)
-
 ```typespec
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
@@ -209,12 +205,11 @@ namespace RepairsAPI {
 
 ## 4. Advanced Agent with API Key Authentication
 
-**Use Case**: A facilities management agent for supervisors and facility managers who need advanced access to the repairs system including creating work orders, assigning technicians, and accessing detailed reports.
+**Use Case**: A repairs management agent that helps teams track and manage facility maintenance tasks using a publicly available demo API with API key authentication.
 
-**What it does**: This agent provides advanced facilities management capabilities for authorized personnel. Supervisors can create detailed work orders, assign specific technicians, update repair priorities, access cost information, and generate facility maintenance reports. The API key authentication ensures only authorized staff can perform these administrative functions.
+**What it does**: This agent provides comprehensive repair management capabilities for maintenance teams. It can list, create, update, and delete repair tasks, filter repairs by assignee or description, and provide rich card-based responses with images. The API key authentication ensures controlled access to the repair management system while demonstrating real-world API integration patterns.
 
 ### [main.tsp](#tab/main.tsp)
-
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -226,30 +221,46 @@ using TypeSpec.M365.Copilot.Agents;
 using TypeSpec.M365.Copilot.Actions;
 
 @agent({
-  name: "Facilities Management Pro Agent",
-  description: "Advanced facilities management for supervisors with work order creation, technician assignment, and reporting capabilities"
+  name: "Repairs Hub Agent",
+  description: "Smart repair management agent for tracking and coordinating facility maintenance tasks"
 })
 @instructions("""
-  You are an advanced facilities management assistant designed for supervisors 
-  and facility managers. You have access to comprehensive work order management 
-  capabilities including creating detailed work orders, assigning technicians 
-  based on expertise and availability, updating priorities based on business 
-  impact, and generating detailed facility reports. Always prioritize safety-critical 
-  issues, consider resource allocation efficiently, and provide data-driven 
-  insights for facility maintenance planning. Ensure all work orders include 
-  complete details for proper execution.
+  You are a specialized repairs management assistant that helps teams efficiently track, 
+  organize, and coordinate facility maintenance tasks. You excel at managing repair 
+  workflows including creating detailed repair tickets, assigning tasks to team members, 
+  tracking progress, and providing status updates. You can filter repairs by various 
+  criteria such as assignee, keywords in descriptions, or completion status. Always 
+  provide clear, organized information using tables and cards when displaying repair 
+  data. When creating repairs, gather all necessary details and confirm the information 
+  before submission. Help prioritize urgent repairs and ensure proper task assignment 
+  for optimal team productivity.
 """)
-namespace FacilitiesManagementAgent {
-  op createWorkOrder is AdvancedRepairsAPI.createWorkOrder;
-  op assignTechnician is AdvancedRepairsAPI.assignTechnician;
-  op updateWorkOrder is AdvancedRepairsAPI.updateWorkOrder;
-  op getFacilityStatusReport is AdvancedRepairsAPI.getFacilityStatusReport;
-  op getAvailableTechnicians is AdvancedRepairsAPI.getAvailableTechnicians;
+@conversationStarter(#{
+  title: "List repairs",
+  text: "List all repairs"
+})
+@conversationStarter(#{
+  title: "List Karin's repairs",
+  text: "List all repairs assigned to Karin"
+})
+@conversationStarter(#{
+  title: "Find oil repairs",
+  text: "List all repairs that are about oil"
+})
+@conversationStarter(#{
+  title: "Create repair",
+  text: "Create a new repair and assign it to me"
+})
+namespace RepairsAgent {
+  // Repair management operations
+  op listRepairs is RepairsHub.listRepairs;
+  op createRepair is RepairsHub.createRepair;
+  op updateRepair is RepairsHub.updateRepair;
+  op deleteRepair is RepairsHub.deleteRepair;
 }
 ```
 
 ### [actions.tsp](#tab/actions.tsp)
-
 ```typespec
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
@@ -259,136 +270,107 @@ using TypeSpec.M365.Copilot.Actions;
 
 @service
 @actions(#{
-    nameForHuman: "Advanced Facilities Management API",
-    descriptionForModel: "Comprehensive facilities management API for supervisors with work order management, technician assignment, and detailed reporting",
-    descriptionForHuman: "Use this API to manage work orders, assign technicians, and generate facility reports"
+    nameForHuman: "Repairs Hub API",
+    descriptionForModel: "Comprehensive repair management system for tracking maintenance tasks, assignments, and progress",
+    descriptionForHuman: "Use this API to manage facility repairs, track assignments, and coordinate maintenance activities"
 })
-@server("https://repairs-pro.contoso.com", "Advanced Facilities API")
-@useAuth(ApiKeyAuth<ApiKeyLocation.header, "X-Facilities-API-Key">)
-namespace AdvancedRepairsAPI {
-  @route("/work-orders")
+@server("https://repairshub-apikey.contoso.com", "Repairs Hub API")
+@useAuth(RepairsHubApiKeyAuth)
+namespace RepairsHub {
+  @route("/repairs")
+  @get
+  @action
+  @card(#{
+    dataPath: "$",
+    title: "$.title",
+    url: "$.image",
+    file: "cards/repair.json"
+  })
+  op listRepairs(
+    @query assignedTo?: string
+  ): string;
+
+  @route("/repairs")
   @post
   @action
-  op createWorkOrder(
-    @body workOrder: WorkOrderRequest
-  ): WorkOrderResponse;
+  @capabilities(#{
+    confirmation: #{
+      type: "AdaptiveCard",
+      title: "Create a new repair",
+      body: """   
+      Creating a new repair with the following details:       
+        * **Title**: {{ function.parameters.title }}
+        * **Description**: {{ function.parameters.description }}
+        * **Assigned To**: {{ function.parameters.assignedTo }}
+      """
+    }
+  })
+  op createRepair(
+    @body repair: Repair
+  ): Repair;
 
-  @route("/work-orders/{orderId}/assign")
-  @post
-  @action
-  op assignTechnician(
-    @path orderId: string,
-    @body assignment: TechnicianAssignment
-  ): AssignmentResponse;
-
-  @route("/work-orders/{orderId}")
+  @route("/repairs")
   @patch
-  op updateWorkOrder(
-    @path orderId: string,
-    @body update: WorkOrderUpdate
-  ): WorkOrderResponse;
-
-  @route("/reports/facility-status")
-  @get
   @action
-  op getFacilityStatusReport(
-    @query location?: string,
-    @query dateRange?: string
-  ): FacilityStatusReport;
+  @capabilities(#{
+    confirmation: #{
+      type: "AdaptiveCard",
+      title: "Update repair",
+      body: """   
+      Updating a repair with the following details:       
+        * **ID**: {{ function.parameters.id }}      
+        * **Title**: {{ function.parameters.title }}
+        * **Description**: {{ function.parameters.description }}
+        * **Assigned To**: {{ function.parameters.assignedTo }}
+      """
+    }
+  })
+  op updateRepair(
+    @body repair: Repair
+  ): Repair;
 
-  @route("/technicians")
-  @get
+  @route("/repairs")
+  @delete
   @action
-  op getAvailableTechnicians(
-    @query specialty?: string,
-    @query shift?: "day" | "evening" | "night"
-  ): TechnicianListResponse;
+  @capabilities(#{
+    confirmation: #{
+      type: "AdaptiveCard",
+      title: "Delete a repair",
+      body: """   
+      Deleting a repair with the following details:       
+        * **ID**: {{ function.parameters.id }}
+      """
+    }
+  })
+  op deleteRepair(
+    @body repair: Repair
+  ): Repair;
 
-  model WorkOrderRequest {
+  model Repair {
+    id?: string;
     title: string;
-    description: string;
-    location: string;
-    category: "electrical" | "plumbing" | "hvac" | "security" | "cleaning" | "structural" | "landscaping";
-    priority: "low" | "medium" | "high" | "urgent" | "emergency";
-    requestedBy: string;
-    budgetCode?: string;
-    requiredSkills?: string[];
-    estimatedHours?: int32;
-    scheduledDate?: string;
+    description?: string;
+    assignedTo?: string;
+    @format("date-time")
+    date?: string;
+    @format("uri")
+    image?: string;
   }
 
-  model WorkOrderResponse {
-    orderId: string;
-    status: "created" | "assigned" | "in-progress" | "on-hold" | "completed" | "cancelled";
-    assignedTechnician?: string;
-    estimatedCost?: float64;
-    actualCost?: float64;
-    createdDate: string;
-    completionDate?: string;
-  }
-
-  model TechnicianAssignment {
-    technicianId: string;
-    scheduledStart: string;
-    estimatedDuration: int32;
-    notes?: string;
-  }
-
-  model AssignmentResponse {
-    assignmentId: string;
-    technicianName: string;
-    scheduledStart: string;
-    status: "assigned" | "confirmed" | "in-progress";
-  }
-
-  model WorkOrderUpdate {
-    status?: "in-progress" | "on-hold" | "completed" | "cancelled";
-    priority?: "low" | "medium" | "high" | "urgent" | "emergency";
-    notes?: string;
-    actualCost?: float64;
-    completionNotes?: string;
-  }
-
-  model FacilityStatusReport {
-    location: string;
-    totalWorkOrders: int32;
-    completedWorkOrders: int32;
-    pendingWorkOrders: int32;
-    averageCompletionTime: float64;
-    totalCost: float64;
-    topIssueCategories: CategoryCount[];
-  }
-
-  model CategoryCount {
-    category: string;
-    count: int32;
-  }
-
-  model TechnicianListResponse {
-    technicians: TechnicianInfo[];
-  }
-
-  model TechnicianInfo {
-    technicianId: string;
-    name: string;
-    specialties: string[];
-    currentShift: "day" | "evening" | "night";
-    availabilityStatus: "available" | "busy" | "off-duty";
-    currentWorkOrders: int32;
-  }
+  @authReferenceId("${{REPAIRSHUBAPIKEYAUTH_REFERENCE_ID}}")
+  model RepairsHubApiKeyAuth is ApiKeyAuth<ApiKeyLocation.query, "code">;
 }
 ```
 
 ---
 
-## 5. Complex Agent with OAuth2 and Multiple Microsoft Graph Capabilities
+## 5. Complex Agent with OAuth2 and GitHub API Integration
 
-**Use Case**: An executive assistant agent that provides comprehensive productivity and collaboration support by integrating deeply with Microsoft 365 services including email management, calendar scheduling, team collaboration, and document management.
+**Use Case**: A project management agent that helps development teams manage their GitHub repositories, track issues, manage pull requests, and coordinate project activities using GitHub's comprehensive API.
 
-**What it does**: This sophisticated agent serves as a digital executive assistant that can manage complex workflows across Microsoft 365. It can read and analyze emails to identify action items, schedule meetings with conflict resolution, access and summarize documents from SharePoint and OneDrive, coordinate with Teams for project collaboration, and provide insights about organizational relationships. The OAuth2 authentication ensures secure access to user data with appropriate permissions.
+**What it does**: This sophisticated agent serves as a project management assistant that integrates with GitHub to help development teams streamline their workflows. It can create and manage issues, review and merge pull requests, track project milestones, and provide insights about repository activity. The OAuth2 authentication ensures secure access to GitHub repositories with appropriate permissions, allowing teams to manage their projects efficiently through natural language interactions.
 
 ### [main.tsp](#tab/main.tsp)
-
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
@@ -400,55 +382,33 @@ using TypeSpec.M365.Copilot.Agents;
 using TypeSpec.M365.Copilot.Actions;
 
 @agent({
-  name: "Executive Assistant Pro",
-  description: "Comprehensive executive assistant with advanced Microsoft 365 integration for email management, calendar coordination, team collaboration, and document insights"
+  name: "GitHub Project Manager",
+  description: "Smart project management agent with GitHub integration for issue tracking, pull request management, and project coordination"
 })
 @instructions("""
-  You are a sophisticated executive assistant with comprehensive access to Microsoft 365 
-  services. You excel at managing complex executive workflows including email triage 
-  and analysis, intelligent calendar management with conflict resolution, document 
-  summarization and insights, and cross-team collaboration coordination. You can 
-  identify action items from emails, suggest optimal meeting times, provide executive 
-  briefings from document analysis, and facilitate team communications. Always maintain 
-  confidentiality, prioritize based on business impact and executive preferences, and 
-  provide proactive insights to optimize productivity and decision-making.
+  You are an intelligent project management assistant specialized in GitHub workflows 
+  and development team coordination. You excel at managing GitHub repositories including 
+  creating and tracking issues, reviewing pull requests, coordinating project milestones, 
+  and providing insights about development activity. You can help prioritize work, 
+  track progress, manage code reviews, and facilitate team collaboration through GitHub's 
+  project management features. Always consider development best practices, help maintain 
+  code quality through proper review processes, and provide actionable insights to 
+  improve team productivity and project delivery.
 """)
-namespace ExecutiveAssistantAgent {
-  // Microsoft 365 capabilities for collaboration
-  op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
-    ItemsByUrl = [
-      { url: "https://contoso.sharepoint.com/sites/ExecutiveTeam" },
-      { url: "https://contoso.sharepoint.com/sites/BoardMaterials" }
-    ]
-  >;
-
-  op email is AgentCapabilities.Email<
-    Folders = [
-      { folderId: "Inbox" },
-      { folderId: "VIP" },
-      { folderId: "Board-Communications" }
-    ]
-  >;
-
-  op teamsMessages is AgentCapabilities.TeamsMessages;
-  op people is AgentCapabilities.People;
-
-  // Microsoft Graph API operations
-  op getEmailInsights is MicrosoftGraphExecutive.getEmailInsights;
-  op extractActionItems is MicrosoftGraphExecutive.extractActionItems;
-  op categorizeEmails is MicrosoftGraphExecutive.categorizeEmails;
-  op findOptimalMeetingTime is MicrosoftGraphExecutive.findOptimalMeetingTime;
-  op resolveMeetingConflicts is MicrosoftGraphExecutive.resolveMeetingConflicts;
-  op getMeetingPreparationBriefs is MicrosoftGraphExecutive.getMeetingPreparationBriefs;
-  op getCollaborationInsights is MicrosoftGraphExecutive.getCollaborationInsights;
-  op getManagerInsights is MicrosoftGraphExecutive.getManagerInsights;
-  op generateDocumentSummary is MicrosoftGraphExecutive.generateDocumentSummary;
-  op getTrendingDocuments is MicrosoftGraphExecutive.getTrendingDocuments;
+namespace GitHubProjectManager {
+  // GitHub API operations for project management
+  op createIssue is GitHubAPI.createIssue;
+  op getIssues is GitHubAPI.getIssues;
+  op updateIssue is GitHubAPI.updateIssue;
+  op getPullRequests is GitHubAPI.getPullRequests;
+  op createPullRequest is GitHubAPI.createPullRequest;
+  op mergePullRequest is GitHubAPI.mergePullRequest;
+  op getProjectInsights is GitHubAPI.getProjectInsights;
+}
 }
 ```
 
 ### [actions.tsp](#tab/actions.tsp)
-
 ```typespec
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
@@ -458,428 +418,249 @@ using TypeSpec.M365.Copilot.Actions;
 
 @service
 @actions(#{
-    nameForHuman: "Microsoft Graph Executive Services",
-    descriptionForModel: "Advanced Microsoft Graph integration for executive-level productivity, calendar management, email analysis, and collaboration insights",
-    descriptionForHuman: "Use this API for advanced email management, intelligent calendar scheduling, and executive productivity insights"
+    nameForHuman: "GitHub Project Management API",
+    descriptionForModel: "GitHub API integration for project management including issue tracking, pull request management, and project insights",
+    descriptionForHuman: "Use this API to manage GitHub repositories, track issues, and coordinate development projects"
 })
-@server("https://graph.microsoft.com", "Microsoft Graph API")
+@server("https://api.github.com", "GitHub API")
 @useAuth(OAuth2Auth<[
   OAuthFlow<AuthorizationCodeFlow> & {
-    authorizationUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
-    tokenUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/token";
+    authorizationUrl: "https://github.com/login/oauth/authorize";
+    tokenUrl: "https://github.com/login/oauth/access_token";
     scopes: {
-      "https://graph.microsoft.com/User.Read": "Read user profile";
-      "https://graph.microsoft.com/Mail.ReadWrite": "Read and manage email";
-      "https://graph.microsoft.com/Calendars.ReadWrite": "Manage calendar and meetings";
-      "https://graph.microsoft.com/Contacts.ReadWrite": "Access and manage contacts";
-      "https://graph.microsoft.com/Files.ReadWrite.All": "Access all files";
-      "https://graph.microsoft.com/Sites.ReadWrite.All": "Access SharePoint sites";
-      "https://graph.microsoft.com/People.Read.All": "Read organization directory";
-      "https://graph.microsoft.com/Reports.Read.All": "Read usage reports";
-      "https://graph.microsoft.com/TeamworkTag.ReadWrite": "Manage Teams tags";
+      "repo": "Full control of private repositories";
+      "issues": "Read and write repository issues";
+      "pull_requests": "Read and write pull requests";
+      "project": "Read and write project data";
     };
   }
 ]>)
-namespace MicrosoftGraphExecutive {
-  // Email Management and Analysis
-  @route("/me/messages/insights")
-  @get
-  @action
-  op getEmailInsights(
-    @query timeRange?: "today" | "week" | "month",
-    @query priority?: "high" | "medium" | "low"
-  ): EmailInsightsResponse;
-
-  @route("/me/messages/action-items")
-  @get
-  @action
-  op extractActionItems(
-    @query folderId?: string,
-    @query daysBack?: int32
-  ): ActionItemsResponse;
-
-  @route("/me/messages/bulk-categorize")
+namespace GitHubAPI {
+  // Issue Management
+  @route("/repos/{owner}/{repo}/issues")
   @post
   @action
-  op categorizeEmails(
-    @body request: EmailCategorizationRequest
-  ): EmailCategorizationResponse;
+  op createIssue(
+    @path owner: string,
+    @path repo: string,
+    @body issue: IssueCreateRequest
+  ): IssueResponse;
 
-  // Advanced Calendar Management
-  @route("/me/calendar/intelligent-scheduling")
+  @route("/repos/{owner}/{repo}/issues")
+  @get
+  @action
+  op getIssues(
+    @path owner: string,
+    @path repo: string,
+    @query state?: "open" | "closed" | "all",
+    @query labels?: string,
+    @query assignee?: string,
+    @query milestone?: string,
+    @query since?: string
+  ): IssueListResponse;
+
+  @route("/repos/{owner}/{repo}/issues/{issue_number}")
+  @patch
+  @action
+  op updateIssue(
+    @path owner: string,
+    @path repo: string,
+    @path issue_number: int32,
+    @body update: IssueUpdateRequest
+  ): IssueResponse;
+
+  // Pull Request Management
+  @route("/repos/{owner}/{repo}/pulls")
+  @get
+  @action
+  op getPullRequests(
+    @path owner: string,
+    @path repo: string,
+    @query state?: "open" | "closed" | "all",
+    @query head?: string,
+    @query base?: string,
+    @query sort?: "created" | "updated" | "popularity"
+  ): PullRequestListResponse;
+
+  @route("/repos/{owner}/{repo}/pulls")
   @post
   @action
-  op suggestMeetingTimes(
-    @body request: IntelligentSchedulingRequest
-  ): MeetingTimeResponse;
+  op createPullRequest(
+    @path owner: string,
+    @path repo: string,
+    @body pullRequest: PullRequestCreateRequest
+  ): PullRequestResponse;
 
-  @route("/me/calendar/conflict-resolution")
-  @post
+  @route("/repos/{owner}/{repo}/pulls/{pull_number}/merge")
+  @put
   @action
-  op resolveScheduleConflicts(
-    @body request: ConflictResolutionRequest
-  ): ConflictResolutionResponse;
+  op mergePullRequest(
+    @path owner: string,
+    @path repo: string,
+    @path pull_number: int32,
+    @body merge: MergeRequest
+  ): MergeResponse;
 
-  @route("/me/calendar/meeting-briefs")
+  // Project Insights
+  @route("/repos/{owner}/{repo}/stats/contributors")
   @get
   @action
-  op getMeetingBriefs(
-    @query timeRange: "today" | "tomorrow" | "week",
-    @query includePreparation?: boolean
-  ): MeetingBriefsResponse;
+  op getProjectInsights(
+    @path owner: string,
+    @path repo: string
+  ): ProjectInsightsResponse;
 
-  // Collaboration and Team Insights
-  @route("/me/collaboration-insights")
-  @get
-  @action
-  op getCollaborationInsights(
-    @query analysisDepth?: "basic" | "detailed",
-    @query timeRange?: "month" | "quarter"
-  ): CollaborationInsightsResponse;
-    @route("/me/calendar/intelligent-scheduling")
-    @post
-    @action
-    op findOptimalMeetingTime(
-      @body request: IntelligentSchedulingRequest
-    ): MeetingTimeResponse;
-
-    @route("/me/calendar/conflicts/resolve")
-    @post
-    @action
-    op resolveMeetingConflicts(
-      @body request: ConflictResolutionRequest
-    ): ConflictResolutionResponse;
-
-    @route("/me/calendar/preparation-briefs")
-    @get
-    @action
-    op getMeetingPreparationBriefs(
-      @query upcomingDays?: int32
-    ): MeetingBriefsResponse;
-
-    // People and Relationship Insights
-    @route("/me/people/collaboration-insights")
-    @get
-    @action
-    op getCollaborationInsights(
-      @query personId?: string,
-      @query timeRange?: "week" | "month" | "quarter"
-    ): CollaborationInsightsResponse;
-
-  @route("/me/manager-insights")
-  @get
-  @action
-  op getManagerInsights(): ManagerInsightsResponse;
-
-  // Document and Content Management
-  @route("/me/documents/executive-summary")
-  @post
-  @action
-  op generateDocumentSummary(
-    @body request: DocumentSummaryRequest
-  ): DocumentSummaryResponse;
-
-  @route("/me/files/trending")
-  @get
-  @action
-  op getTrendingDocuments(
-    @query timeRange?: "week" | "month",
-    @query includeShared?: boolean
-  @route("/me/files/trending")
-  @get
-  @action
-  op getTrendingDocuments(
-    @query timeRange?: "week" | "month",
-    @query includeShared?: boolean
-  ): TrendingDocumentsResponse;
-
-  // Response Models
-  model EmailInsightsResponse {
-    totalEmails: int32;
-    unreadCount: int32;
-    highPriorityCount: int32;
-    averageResponseTime: float64;
-    topSenders: SenderInsight[];
-    sentimentAnalysis: SentimentSummary;
-    actionItemsCount: int32;
-  }
-
-  model SenderInsight {
-    senderEmail: string;
-    senderName: string;
-    emailCount: int32;
-    averagePriority: string;
-  }
-
-  model SentimentSummary {
-    positive: int32;
-    neutral: int32;
-    negative: int32;
-    urgent: int32;
-  }
-
-  model ActionItemsResponse {
-    actionItems: ActionItem[];
-    totalCount: int32;
-  }
-
-  model ActionItem {
-    emailId: string;
-    subject: string;
-    sender: string;
-    extractedAction: string;
-    dueDate?: string;
-    priority: "high" | "medium" | "low";
-    category: "meeting" | "review" | "approval" | "response" | "task";
-  }
-
-  model EmailCategorizationRequest {
-    messageIds: string[];
-    autoApplyRules: boolean;
-  }
-
-  model EmailCategorizationResponse {
-    categorizedEmails: CategorizedEmail[];
-    newRulesCreated: EmailRule[];
-  }
-
-  model CategorizedEmail {
-    messageId: string;
-    suggestedCategory: string;
-    confidence: float64;
-    appliedActions: string[];
-  }
-
-  model EmailRule {
-    ruleId: string;
-    name: string;
-    criteria: string;
-    actions: string[];
-  }
-
-  model IntelligentSchedulingRequest {
-    attendeeEmails: string[];
-    meetingDuration: int32;
-    preferredTimeSlots: string[];
-    meetingType: "in-person" | "virtual" | "hybrid";
-    urgency: "immediate" | "this-week" | "next-week" | "flexible";
-  }
-
-  model MeetingTimeResponse {
-    suggestedTimes: MeetingTimeSuggestion[];
-    conflictAnalysis: ConflictAnalysis;
-    attendeeAvailability: AttendeeAvailability[];
-  }
-
-  model MeetingTimeSuggestion {
-    startTime: string;
-    endTime: string;
-    confidence: float64;
-    availableAttendees: int32;
-    conflictingAttendees: int32;
-    roomSuggestions?: RoomSuggestion[];
-  }
-
-  model ConflictAnalysis {
-    totalConflicts: int32;
-    conflictsByAttendee: AttendeeConflict[];
-    alternativeOptions: int32;
-  }
-
-  model AttendeeConflict {
-    attendeeEmail: string;
-    conflictingMeetings: string[];
-    flexibilityScore: float64;
-  }
-
-  model AttendeeAvailability {
-    attendeeEmail: string;
-    attendeeName: string;
-    availability: "available" | "busy" | "tentative" | "out-of-office";
-    nextAvailableSlot?: string;
-  }
-
-  model RoomSuggestion {
-    roomEmail: string;
-    roomName: string;
-    capacity: int32;
-    location: string;
-    amenities: string[];
-  }
-
-  model ConflictResolutionRequest {
-    conflictingMeetingIds: string[];
-    resolutionStrategy: "reschedule" | "decline" | "delegate" | "shorten";
-    priorityMeetingId?: string;
-  }
-
-  model ConflictResolutionResponse {
-    resolutionActions: ResolutionAction[];
-    updatedMeetings: MeetingUpdate[];
-    notificationsSent: string[];
-  }
-
-  model ResolutionAction {
-    meetingId: string;
-    action: "rescheduled" | "declined" | "delegated" | "shortened";
-    newTime?: string;
-    delegatedTo?: string;
-    reasonCode: string;
-  }
-
-  model MeetingUpdate {
-    meetingId: string;
-    originalTime: string;
-    newTime?: string;
-    status: "confirmed" | "pending" | "cancelled";
-  }
-
-  model MeetingBriefsResponse {
-    upcomingMeetings: MeetingBrief[];
-    totalMeetings: int32;
-  }
-
-  model MeetingBrief {
-    meetingId: string;
-    subject: string;
-    startTime: string;
-    attendees: string[];
-    preparationItems: PreparationItem[];
-    relatedDocuments: DocumentReference[];
-    backgroundContext: string;
-  }
-
-  model PreparationItem {
-    type: "review-document" | "prepare-presentation" | "gather-data" | "follow-up";
-    description: string;
-    priority: "high" | "medium" | "low";
-    estimatedTime: int32;
-  }
-
-  model DocumentReference {
-    documentId: string;
+  // Request/Response Models
+  model IssueCreateRequest {
     title: string;
-    url: string;
-    lastModified: string;
-    relevanceScore: float64;
+    body?: string;
+    assignees?: string[];
+    milestone?: int32;
+    labels?: string[];
   }
 
-  model CollaborationInsightsResponse {
-    collaborationScore: float64;
-    frequentCollaborators: CollaboratorInsight[];
-    projectInvolvement: ProjectInvolvement[];
-    communicationPatterns: CommunicationPattern[];
+  model IssueUpdateRequest {
+    title?: string;
+    body?: string;
+    state?: "open" | "closed";
+    assignees?: string[];
+    milestone?: int32;
+    labels?: string[];
   }
 
-  model CollaboratorInsight {
-    personId: string;
-    name: string;
-    email: string;
-    collaborationFrequency: int32;
-    lastInteraction: string;
-    relationshipStrength: "strong" | "moderate" | "weak";
-    sharedProjects: string[];
-  }
-
-  model ProjectInvolvement {
-    projectName: string;
-    role: string;
-    involvementLevel: "lead" | "contributor" | "reviewer";
-    lastActivity: string;
-    teamMembers: string[];
-  }
-
-  model CommunicationPattern {
-    channel: "email" | "teams" | "meetings";
-    frequency: int32;
-    averageResponseTime: float64;
-    peakHours: string[];
-  }
-
-  model ManagerInsightsResponse {
-    teamSize: int32;
-    directReports: TeamMemberInsight[];
-    teamProductivity: ProductivityMetrics;
-    upcomingReviews: ReviewSchedule[];
-    teamMeetingInsights: TeamMeetingInsights;
-  }
-
-  model TeamMemberInsight {
-    employeeId: string;
-    name: string;
-    position: string;
-    workloadScore: float64;
-    lastOneOnOne: string;
-    nextReviewDate: string;
-    recentAchievements: string[];
-  }
-
-  model ProductivityMetrics {
-    averageEmailResponseTime: float64;
-    meetingEfficiencyScore: float64;
-    collaborationIndex: float64;
-    documentSharing: int32;
-    overallTeamHealth: "excellent" | "good" | "needs-attention";
-  }
-
-  model ReviewSchedule {
-    employeeId: string;
-    employeeName: string;
-    reviewType: "annual" | "quarterly" | "probationary" | "promotion";
-    scheduledDate: string;
-    preparationStatus: "not-started" | "in-progress" | "completed";
-  }
-
-  model TeamMeetingInsights {
-    averageMeetingDuration: float64;
-    meetingFrequency: int32;
-    attendanceRate: float64;
-    actionItemCompletion: float64;
-    recommendedOptimizations: string[];
-  }
-
-  model DocumentSummaryRequest {
-    documentIds: string[];
-    summaryType: "executive" | "technical" | "brief";
-    focusAreas?: string[];
-  }
-
-  model DocumentSummaryResponse {
-    summaries: DocumentSummary[];
-    keyInsights: string[];
-    actionItems: string[];
-    relatedDocuments: DocumentReference[];
-  }
-
-  model DocumentSummary {
-    documentId: string;
+  model IssueResponse {
+    id: int32;
+    number: int32;
     title: string;
-    summary: string;
-    keyPoints: string[];
-    lastModified: string;
-    relevanceScore: float64;
+    body?: string;
+    state: "open" | "closed";
+    assignees: User[];
+    milestone?: Milestone;
+    labels: Label[];
+    created_at: string;
+    updated_at: string;
+    closed_at?: string;
+    html_url: string;
   }
 
-  model TrendingDocumentsResponse {
-    trendingDocuments: TrendingDocument[];
-    categories: TrendingCategory[];
+  model IssueListResponse {
+    issues: IssueResponse[];
+    total_count: int32;
   }
 
-  model TrendingDocument {
-    documentId: string;
+  model PullRequestCreateRequest {
     title: string;
-    url: string;
-    viewCount: int32;
-    shareCount: int32;
-    lastModified: string;
-    trendingScore: float64;
-    category: string;
+    head: string;
+    base: string;
+    body?: string;
+    draft?: boolean;
   }
 
-  model TrendingCategory {
-    categoryName: string;
-    documentCount: int32;
-    growthRate: float64;
+  model PullRequestResponse {
+    id: int32;
+    number: int32;
+    title: string;
+    body?: string;
+    state: "open" | "closed";
+    head: BranchInfo;
+    base: BranchInfo;
+    user: User;
+    assignees: User[];
+    reviewers: User[];
+    created_at: string;
+    updated_at: string;
+    merged_at?: string;
+    html_url: string;
+    draft: boolean;
+  }
+
+  model PullRequestListResponse {
+    pull_requests: PullRequestResponse[];
+    total_count: int32;
+  }
+
+  model MergeRequest {
+    commit_title?: string;
+    commit_message?: string;
+    merge_method?: "merge" | "squash" | "rebase";
+  }
+
+  model MergeResponse {
+    sha: string;
+    merged: boolean;
+    message: string;
+  }
+
+  model ProjectInsightsResponse {
+    total_commits: int32;
+    contributors: ContributorStats[];
+    top_languages: LanguageStats[];
+    recent_activity: ActivitySummary;
+  }
+
+  model User {
+    id: int32;
+    login: string;
+    avatar_url: string;
+    html_url: string;
+  }
+
+  model Milestone {
+    id: int32;
+    number: int32;
+    title: string;
+    description?: string;
+    state: "open" | "closed";
+    due_on?: string;
+  }
+
+  model Label {
+    id: int32;
+    name: string;
+    description?: string;
+    color: string;
+  }
+
+  model BranchInfo {
+    label: string;
+    ref: string;
+    sha: string;
+    repo: RepositoryInfo;
+  }
+
+  model RepositoryInfo {
+    id: int32;
+    name: string;
+    full_name: string;
+    owner: User;
+    html_url: string;
+  }
+
+  model ContributorStats {
+    author: User;
+    total_commits: int32;
+    weeks: WeeklyStats[];
+  }
+
+  model WeeklyStats {
+    week: string;
+    additions: int32;
+    deletions: int32;
+    commits: int32;
+  }
+
+  model LanguageStats {
+    language: string;
+    bytes: int32;
+    percentage: float64;
+  }
+
+  model ActivitySummary {
+    commits_last_week: int32;
+    issues_opened: int32;
+    issues_closed: int32;
+    pull_requests_opened: int32;
+    pull_requests_merged: int32;
   }
 }
 ```
@@ -894,6 +675,6 @@ These examples demonstrate the progression from simple to complex TypeSpec agent
 2. **Multi-Capability Agent**: Combines web search, file access, and people search
 3. **Simple API Integration**: Anonymous access to external services
 4. **Authenticated API Integration**: Secure access with API keys
-5. **Complex Microsoft 365 Integration**: Advanced OAuth2 with comprehensive Graph API access
+5. **Complex GitHub Integration**: Advanced OAuth2 with comprehensive GitHub API access for project management
 
 Each example builds upon the previous ones, showing how to add capabilities, authentication, and custom actions to create increasingly sophisticated agents for real-world scenarios.
