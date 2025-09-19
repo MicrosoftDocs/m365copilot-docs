@@ -8,6 +8,8 @@ ms.date: 09/18/2025
 ms.topic: overview
 ---
 
+[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
+
 # TypeSpec for Microsoft 365 Copilot overview
 
 TypeSpec for Microsoft 365 Copilot is a powerful domain-specific language (DSL) that enables developers to create declarative agents and API plugins using a clean, expressive syntax. Built on the foundation of [TypeSpec](https://typespec.io/), this specialized language provides Microsoft 365-specific decorators and capabilities that streamline the development process for extending Microsoft 365 Copilot. TypeSpec serves as an alternative to manually authoring JSON manifest files, offering a more developer-friendly approach with enhanced productivity and maintainability.

@@ -10,6 +10,8 @@ ms.topic: reference
 
 <!-- markdownlint-disable MD024 MD059 -->
 
+[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
+
 # Capabilities of TypeSpec for Microsoft 365 Copilot
 
 ## `AgentCapabilities.CodeInterpreter`
