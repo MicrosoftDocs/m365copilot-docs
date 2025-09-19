@@ -10,11 +10,11 @@ ms.topic: reference
 
 <!-- markdownlint-disable MD024 MD059 -->
 
-[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
-
 # How to create TypeSpec agents for Microsoft 365 Copilot
 
 This guide provides complete examples of creating TypeSpec agents for Microsoft 365 Copilot, from simple basic agents to complex implementations with multiple capabilities and authentication methods.
+
+[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
 
 ## Basic Agent with No Capabilities
 

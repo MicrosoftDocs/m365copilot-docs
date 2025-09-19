@@ -10,9 +10,11 @@ ms.topic: reference
 
 <!-- markdownlint-disable MD024 MD059 -->
 
-[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
-
 # Authentication support in TypeSpec for Microsoft 365 Copilot
+
+TypeSpec for Microsoft 365 Copilot supports multiple authentication methods to secure API plugins and integrate with external services. The supported authentication types include **No Authentication** for public endpoints, **API Key Authentication** for simple token-based access, **OAuth2 Authorization Code Flow** for secure third-party integrations, and **Entra ID SSO Authentication** for seamless Microsoft 365 identity integration.
+
+[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
 
 > **Note**: This documentation covers Microsoft 365 Copilot-specific authentication scenarios. For comprehensive TypeSpec authentication documentation, including all native authentication decorators and patterns, please refer to the [official TypeSpec documentation on Authentication](https://typespec.io/docs/libraries/http/authentication).
 

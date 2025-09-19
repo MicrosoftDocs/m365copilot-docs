@@ -10,11 +10,12 @@ ms.topic: reference
 
 <!-- markdownlint-disable MD024 MD059 -->
 
-[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
 
 # Decorators for TypeSpec for Microsoft 365 Copilot
 
 This reference covers the built-in decorators available in TypeSpec for Microsoft 365 Copilot, organized by their primary use case.
+
+[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
 
 > [!NOTE]
 > This decorator reference focuses specifically on the @microsoft/typespec-m365-copilot decorators, but you can leverage all decorators defined on the official TypeSpec site including [built-in decorators](https://typespec.io/docs/standard-library/built-in-decorators/) and [OpenAPI decorators](https://typespec.io/docs/libraries/openapi/reference/decorators/).

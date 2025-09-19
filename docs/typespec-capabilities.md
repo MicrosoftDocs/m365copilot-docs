@@ -10,9 +10,11 @@ ms.topic: reference
 
 <!-- markdownlint-disable MD024 MD059 -->
 
-[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
-
 # Capabilities of TypeSpec for Microsoft 365 Copilot
+
+TypeSpec for Microsoft 365 Copilot provides built-in capabilities that enable declarative agents to access Microsoft 365 services and external resources. Available capabilities include **CodeInterpreter**, **CopilotConnectors**, **Email**, **GraphicArt**, **OneDriveAndSharePoint**, **People**, **ScenarioModels**, **TeamsMessages**, and **WebSearch**. Each capability can be configured with specific parameters to control scope.
+
+[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
 
 ## `AgentCapabilities.CodeInterpreter`
 
