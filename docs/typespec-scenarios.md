@@ -47,7 +47,10 @@ namespace BasicHelperAgent {
 // No `actions.tsp` file required in this scenario
 ```
 
-### [appPackage/cards/repair.json](#tab/card)
+### [card.json](#tab/card)
+```json
+// No `card.json` file required in this scenario
+```
 
 ---
 
@@ -106,7 +109,10 @@ namespace KnowledgeWorkerAgent {
 // No `actions.tsp` file required in this scenario
 ```
 
-### [appPackage/cards/card.json](#tab/card)
+### [card.json](#tab/card)
+```json
+// No `card.json` file required in this scenario
+```
 
 ---
 
@@ -220,7 +226,10 @@ namespace RepairsAPI {
 }
 ```
 
-### [appPackage/cards/card.json](#tab/card)
+### [card.json](#tab/card)
+```json
+// No `card.json` file required in this scenario
+```
 
 ---
 
@@ -383,8 +392,10 @@ namespace RepairsHub {
 }
 ```
 
-### [appPackage/cards/card.json](#tab/card)
+### [card.json](#tab/card)
 ```json
+// The card.json file needs to located in the appPackage/cards folder
+
 {
   "type": "AdaptiveCard",
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -693,7 +704,10 @@ namespace GitHubAPI {
 }
 ```
 
-### [appPackage/cards/card.json](#tab/card)
+### [card.json](#tab/card)
+```json
+// No `card.json` file required in this scenario
+```
 
 ---
 
