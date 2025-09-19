@@ -117,8 +117,5 @@ Ready to start building with TypeSpec for Microsoft 365 Copilot? Follow these st
 
 ## Related content
 
-- [TypeSpec for Microsoft 365 Copilot reference](typespec-reference.md) - Complete reference for all decorators and language features
-- [Declarative agents overview](overview-declarative-agent.md) - Understanding declarative agents and their capabilities
-- [API plugins overview](overview-api-plugins.md) - Learn about API plugins and their role in Microsoft 365 Copilot
-- [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) - The official development toolkit for building Copilot extensions
+- [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) - The official development toolkit for building Copilot agents
 - [TypeSpec language documentation](https://typespec.io/) - Official TypeSpec language specification and guides

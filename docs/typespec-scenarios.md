@@ -1,6 +1,11 @@
 ---
 title: "TypeSpec agents for Microsoft 365 Copilot scenarios"
 description: "End-to-end scenarios using TypeSpec from basic to advanced scenarios, including capabilities, authentication, and real-world examples."
+author: slevert
+ms.author: slevert
+ms.localizationpriority: medium
+ms.date: 09/18/2025
+ms.topic: reference
 ---
 
 # How to create TypeSpec agents for Microsoft 365 Copilot

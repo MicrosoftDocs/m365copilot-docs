@@ -223,3 +223,4 @@ namespace Microsoft365Productivity {
   @get
   op getUserCalendarEvents(): CalendarEventsResponse;
 }
+```
