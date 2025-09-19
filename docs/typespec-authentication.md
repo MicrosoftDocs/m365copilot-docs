@@ -21,209 +21,97 @@ TypeSpec for Microsoft 365 Copilot supports multiple authentication methods to s
 
 ## No Authentication (Anonymous)
 
-Public endpoints that don't require any authentication credentials.
+Public endpoints that don't require any authentication credentials. Nothing specific is required and without `@useAuth` decorators, all APIs are considered anonymous.
 
 ### Examples
 
 ```typespec
 @service
-@actions(#{
-    nameForHuman: "GitHub APIs",
-    descriptionForModel: "Access to public repositories and content that doesn't require authentication",
-    descriptionForHuman: "Use this API to access public GitHub repositories and Microsoft Learn content"
-})
-@server("https://api.github.com", "GitHub Public API")
-namespace GitHubAPI {
-  // GitHub public repository information
-  @route("/repos/{owner}/{repo}")
-  @get
-  op getGitHubPublicRepo(
-    @path owner: string,
-    @path repo: string
-  ): GitHubPublicRepoResponse;
-
-  // GitHub public user profile
-  @route("/users/{username}")
-  @get
-  op getGitHubPublicProfile(
-    @path username: string
-  ): GitHubPublicProfileResponse;
+@actions(ACTIONS_METADATA)
+@server(SERVER_URL, API_NAME)
+namespace API {
+  // Endpoints 
 }
 ```
 
 ## API Key Authentication
 
-Authentication using API keys or Personal Access Tokens applied to entire namespaces.
+Authentication using API keys or Personal Access Tokens applied to entire namespaces. Use the native [`ApiKeyAuth`](https://typespec.io/docs/libraries/http/authentication/#apikeyauthtlocation-extends-apikeylocation-tname-extends-string) from TypeSpec.
 
 ### Examples
 
 ```typespec
-// GitHub API with Personal Access Token
 @service
-@actions(#{
-    nameForHuman: "GitHub Private API",
-    descriptionForModel: "Access to private GitHub repositories and user data using Personal Access Token",
-    descriptionForHuman: "Use this API to manage your private GitHub repositories and starred repos"
-})
-@server("https://api.github.com", "GitHub API")
-@useAuth(ApiKeyAuth<ApiKeyLocation.header, "X-GitHub-Token">)
-namespace GitHubAPI {
-  @route("/user/repos")
-  @get
-  op getPrivateRepos(
-    @query org?: string
-  ): GitHubReposResponse;
-
-  @route("/repos/{owner}/{repo}/issues")
-  @post
-  op createIssue(
-    @path owner: string,
-    @path repo: string,
-    @body issue: GitHubIssueRequest
-  ): GitHubIssueResponse;
-}
-
-// Azure Cognitive Services with subscription key
-@service
-@actions(#{
-    nameForHuman: "Azure Cognitive Services",
-    descriptionForModel: "AI-powered content analysis and translation services from Microsoft Azure",
-    descriptionForHuman: "Use this API to analyze text content and translate between languages"
-})
-@server("https://cognitiveservices.azure.com", "Azure Cognitive Services")
-@useAuth(ApiKeyAuth<ApiKeyLocation.query, "subscription-key">)
-namespace AzureCognitiveServices {
-  @route("/cognitive/analyze")
-  @post
-  op analyzeContent(
-    @body content: CognitiveAnalysisRequest
-  ): CognitiveAnalysisResponse;
-
-  @route("/cognitive/translate")
-  @post
-  op translateText(
-    @body translation: TranslationRequest
-  ): TranslationResponse;
+@actions(ACTIONS_METADATA)
+@server(SERVER_URL, API_NAME)
+@useAuth(ApiKeyAuth<ApiKeyLocation.header, "X-Your-Key">)
+namespace API {
+  // Endpoints 
 }
 ```
 
 ## OAuth2 Authorization Code Flow
 
-User-delegated permissions for accessing user data in Microsoft Graph and GitHub.
+User-delegated permissions for accessing user data an OAuth2 protected service. Use the native [`OAuth2Auth`](https://typespec.io/docs/libraries/http/authentication/#oauth2authtflows-extends-oauth2flow) from TypeSpec. Update the `authorizationUrl`, `tokenUrl`, `refreshUrl` and `scopes` based on the specific API you are integrating with.
 
 ### Microsoft Graph Examples
 
 ```typespec
-// Microsoft Graph with OAuth2
 @service
-@actions(#{
-    nameForHuman: "Microsoft Graph",
-    descriptionForModel: "Access to user's Microsoft 365 profile, emails, and calendar with OAuth2 authentication",
-    descriptionForHuman: "Use this API to access your Microsoft 365 profile, read emails, and manage calendar events"
-})
-@server("https://graph.microsoft.com/v1.0", "Microsoft Graph API")
+@actions(ACTIONS_METADATA)
+@server(SERVER_URL, API_NAME)
 @useAuth(OAuth2Auth<[{
   type: OAuth2FlowType.authorizationCode;
-  authorizationUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
-  tokenUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/token";
-  refreshUrl: "https://login.microsoftonline.com/organizations/oauth2/v2.0/token";
-  scopes: ["User.Read", "Mail.Read", "Calendars.ReadWrite"];
+  authorizationUrl: "https://contoso.com/oauth2/v2.0/authorize";
+  tokenUrl: "https://contoso.com/oauth2/v2.0/token";
+  refreshUrl: "https://contoso.com/oauth2/v2.0/token";
+  scopes: ["scope-1", "scope-2"];
 }]>)
-namespace MicrosoftGraph {
-  @route("/me")
-  @get
-  op getUserProfile(): GraphUserResponse;
-
-  @route("/me/messages")
-  @get
-  op getUserEmails(
-    @query unreadOnly?: boolean
-  ): OutlookEmailsResponse;
-
-  @route("/me/events")
-  @post
-  op createCalendarEvent(
-    @body event: CalendarEventRequest
-  ): CalendarEventResponse;
-}
-```
-
-### GitHub OAuth Examples
-
-```typespec
-// GitHub OAuth for Repository Management
-@service
-@actions(#{
-    nameForHuman: "GitHub APIs",
-    descriptionForModel: "Access to GitHub repositories, issues, and user data with OAuth2 authentication",
-    descriptionForHuman: "Use this API to manage your GitHub repositories and create issues"
-})
-@server("https://api.github.com", "GitHub API")
-@useAuth(OAuth2Auth<[{
-  type: OAuth2FlowType.authorizationCode;
-  authorizationUrl: "https://github.com/login/oauth/authorize";
-  tokenUrl: "https://github.com/login/oauth/access_token";
-  refreshUrl: "https://github.com/login/oauth/access_token";
-  scopes: ["repo", "read:org", "user:email"];
-}]>)
-namespace GitHubAPI {
-  @route("/user/repos")
-  @get
-  op getUserRepos(): GitHubReposResponse;
-
-  @route("/repos/{owner}/{repo}")
-  @get
-  op getRepository(
-    @path owner: string,
-    @path repo: string
-  ): GitHubRepoResponse;
-
-  @route("/repos/{owner}/{repo}/issues")
-  @post
-  op createIssue(
-    @path owner: string,
-    @path repo: string,
-    @body issue: GitHubIssueRequest
-  ): GitHubIssueResponse;
+namespace API {
+  // Endpoints 
 }
 ```
 
 ## Entra ID SSO Authentication
 
-Seamless authentication leveraging the user's existing Microsoft 365 session for native integration scenarios. [Manual steps](api-plugin-authentication.md#update-the-microsoft-entra-app-registration) are required to complete the SSO registration.
+Seamless authentication leveraging the user's existing Microsoft 365 session for native integration scenarios. Use the regular [`OAuth2Auth`](https://typespec.io/docs/libraries/http/authentication/#oauth2authtflows-extends-oauth2flow) from TypeSpec and perform the [manual steps](api-plugin-authentication.md#update-the-microsoft-entra-app-registration) to complete the SSO registration.
+
+## Using Registered Authentication Configurations
+
+For production scenarios, authentication credentials are typically registered and managed through the Microsoft Teams Developer Portal rather than embedded directly in TypeSpec code. The `@authReferenceId` decorator allows you to reference pre-registered authentication configurations by their unique identifiers, providing a secure way to handle credentials without exposing sensitive information in your codebase.
+
+When using `@authReferenceId`, you specify the registration ID from either OAuth client registrations or API key registrations configured in the Developer Portal. This approach separates authentication configuration from code, enabling better security practices and easier credential management across different environments.
 
 ### Examples
 
 ```typespec
-// Microsoft 365 SSO for core productivity features
+// Reference to OAuth2 client registration
 @service
-@actions(#{
-    nameForHuman: "Microsoft Graph",
-    descriptionForModel: "Access to Microsoft GRaph productivity features using seamless SSO authentication",
-    descriptionForHuman: "Use this API to access your Microsoft 365 profile, emails, and calendar events"
-})
-@server("https://graph.microsoft.com/v1.0", "Microsoft Graph API")
-@useAuth(OAuth2Auth<[{
-  type: OAuth2FlowType.authorizationCode;
-  authorizationUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
-  tokenUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/token";
-  refreshUrl: "https://login.microsoftonline.com/organizations/oauth2/v2.0/token";
-  scopes: ["User.Read", "Mail.Read", "Calendars.Read"];
-}]>)
-namespace Microsoft365Productivity {
-  @route("/me")
-  @get
-  op getCurrentUserProfile(): GraphCurrentUserResponse;
-
-  @route("/me/messages")
-  @get
-  op getUserEmails(
-    @query folderId?: string,
-    @query unreadOnly?: boolean
-  ): OutlookEmailsResponse;
-
-  @route("/me/events")
-  @get
-  op getUserCalendarEvents(): CalendarEventsResponse;
+@actions(ACTIONS_METADATA)
+@server(SERVER_URL, API_NAME)
+@useAuth(Auth)
+namespace API {
+  // Endpoints 
 }
+
+@authReferenceId("NzFmOTg4YmYtODZmMS00MWFmLTkxYWItMmQ3Y2QwMTFkYjQ3IyM5NzQ5Njc3Yi04NDk2LTRlODYtOTdmZS1kNDUzODllZjUxYjM=")
+model Auth is OAuth2Auth<[{
+  type: OAuth2FlowType.authorizationCode;
+  authorizationUrl: "https://contoso.com/oauth2/v2.0/authorize";
+  tokenUrl: "https://contoso.com/oauth2/v2.0/token";
+  refreshUrl: "https://contoso.com/oauth2/v2.0/token";
+  scopes: ["scope-1", "scope-2"];
+}]>
+
+// Reference to API key registration  
+@service
+@actions(ACTIONS_METADATA)
+@server(SERVER_URL, API_NAME)
+@useAuth(Auth)
+namespace API {
+  // Endpoints 
+}
+
+@authReferenceId("5f701b3e-bf18-40fb-badd-9ad0b60b31c0")
+model Auth is ApiKeyAuth<ApiKeyLocation.header, "X-Your-Key">
 ```
