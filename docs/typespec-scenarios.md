@@ -38,6 +38,8 @@ namespace BasicHelperAgent {
 }
 ```
 
+---
+
 ## 2. Agent with Multiple Capabilities
 
 **Use Case**: A knowledge worker assistant that can search the web for information, access an organization's SharePoint content, and find information about colleagues in the organization.
@@ -88,6 +90,8 @@ namespace KnowledgeWorkerAgent {
   op people is AgentCapabilities.People;
 }
 ```
+
+---
 
 ## 3. Simple Agent with Anonymous API Action
 
@@ -200,6 +204,8 @@ namespace RepairsAPI {
   }
 }
 ```
+
+---
 
 ## 4. Advanced Agent with API Key Authentication
 
@@ -372,6 +378,8 @@ namespace AdvancedRepairsAPI {
   }
 }
 ```
+
+---
 
 ## 5. Complex Agent with OAuth2 and Multiple Microsoft Graph Capabilities
 
@@ -875,6 +883,8 @@ namespace MicrosoftGraphExecutive {
   }
 }
 ```
+
+---
 
 ## Summary
 
