@@ -8,6 +8,8 @@ ms.date: 09/18/2025
 ms.topic: reference
 ---
 
+<!-- markdownlint-disable MD024 MD059 -->
+
 # Capabilities of TypeSpec for Microsoft 365 Copilot
 
 ## `AgentCapabilities.WebSearch`

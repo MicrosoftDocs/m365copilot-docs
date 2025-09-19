@@ -8,7 +8,7 @@ ms.date: 09/18/2025
 ms.topic: reference
 ---
 
-
+<!-- markdownlint-disable MD024 MD059 -->
 
 # Authentication support in TypeSpec for Microsoft 365 Copilot
 
