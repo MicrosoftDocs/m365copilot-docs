@@ -64,6 +64,12 @@ namespace CustomerSupportAgent {
 ### Agent with capabilities
 
 ```typespec
+import "@typespec/http";
+import "@microsoft/typespec-m365-copilot";
+
+using TypeSpec.Http;
+using TypeSpec.M365.Copilot.Agents;
+
 @agent(
   "Multi-Capability Assistant",
   "An AI agent that can search the web, access SharePoint content, and execute Python code"
@@ -95,6 +101,21 @@ namespace MyAgent {
 ### API plugin with operations
 
 ```typespec
+import "@typespec/http";
+import "@microsoft/typespec-m365-copilot";
+
+using TypeSpec.Http;
+using Microsoft.M365Copilot;
+
+@agent(
+  "Project Management Assistant",
+  "An AI agent that helps manage projects and tasks through API operations"
+)
+@instructions("""
+  You are a project management assistant that helps users create, track, and manage projects.
+  Use the available API operations to list projects, get project details, and create new projects.
+  Always provide clear status updates and help users organize their work effectively.
+""")
 @service
 @server("https://api.contoso.com")
 @actions(#{
