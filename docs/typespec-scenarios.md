@@ -12,11 +12,11 @@ ms.topic: reference
 
 This guide provides complete examples of creating TypeSpec agents for Microsoft 365 Copilot, from simple basic agents to complex implementations with multiple capabilities and authentication methods.
 
-## 1. Basic Agent with No Capabilities
+## Basic Agent with No Capabilities
 
 **Use Case**: A simple agent that provides basic information and greetings without any external integrations or special capabilities.
 
-**What it does**: This agent can answer simple questions, provide general information, and have basic conversations. It doesn't need to access external APIs, search the web, or use any Microsoft 365 services.
+**What it does**: This agent can answer simple questions, provide general information, and have basic conversations. It doesn't need to access external APIs, search the web, or access any Microsoft 365 data.
 
 ### [main.tsp](#tab/main)
 ```typespec
@@ -44,7 +44,7 @@ namespace BasicHelperAgent {
 
 ---
 
-## 2. Agent with Multiple Capabilities
+## Agent with Multiple Capabilities
 
 **Use Case**: A knowledge worker assistant that can search the web for information, access an organization's SharePoint content, and find information about colleagues in the organization.
 
@@ -78,7 +78,7 @@ namespace KnowledgeWorkerAgent {
       url: "https://learn.microsoft.com";
     },
     {
-      url: "https://docs.microsoft.com";
+      url: "https://www.microsoft.com";
     }
   ]>;
 
@@ -96,7 +96,7 @@ namespace KnowledgeWorkerAgent {
 
 ---
 
-## 3. Simple Agent with Anonymous API Action
+## Simple Agent with Anonymous API Action
 
 **Use Case**: A facilities management agent that helps employees report and track maintenance issues using a public repairs API.
 
@@ -208,9 +208,9 @@ namespace RepairsAPI {
 
 ---
 
-## 4. Advanced Agent with API Key Authentication
+## Advanced Agent with API Key Authentication
 
-**Use Case**: A repairs management agent that helps teams track and manage facility maintenance tasks using a publicly available demo API with API key authentication.
+**Use Case**: A repairs management agent that helps teams track and manage facility maintenance tasks using a publicly available API with API key authentication.
 
 **What it does**: This agent provides comprehensive repair management capabilities for maintenance teams. It can list, create, update, and delete repair tasks, filter repairs by assignee or description, and provide rich card-based responses with images. The API key authentication ensures controlled access to the repair management system while demonstrating real-world API integration patterns.
 
@@ -367,9 +367,56 @@ namespace RepairsHub {
 }
 ```
 
+### [appPackage/cards/repair.json](#tab/card)
+```json
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Container",
+      "$data": "${$root}",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "id: ${if(id, id, 'N/A')}",
+          "wrap": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "title: ${if(title, title, 'N/A')}",
+          "wrap": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "description: ${if(description, description, 'N/A')}",
+          "wrap": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "assignedTo: ${if(assignedTo, assignedTo, 'N/A')}",
+          "wrap": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "date: ${if(date, date, 'N/A')}",
+          "wrap": true
+        },
+        {
+          "type": "Image",
+          "url": "${image}",
+          "$when": "${image != null}"
+        }
+      ]
+    }
+  ]
+}
+```
+
 ---
 
-## 5. Complex Agent with OAuth2 and GitHub API Integration
+## Complex Agent with OAuth2 and GitHub API Integration
 
 **Use Case**: A project management agent that helps development teams manage their GitHub repositories, track issues, manage pull requests, and coordinate project activities using GitHub's comprehensive API.
 
@@ -409,7 +456,6 @@ namespace GitHubProjectManager {
   op createPullRequest is GitHubAPI.createPullRequest;
   op mergePullRequest is GitHubAPI.mergePullRequest;
   op getProjectInsights is GitHubAPI.getProjectInsights;
-}
 }
 ```
 
@@ -487,25 +533,6 @@ namespace GitHubAPI {
     @query sort?: "created" | "updated" | "popularity"
   ): PullRequestListResponse;
 
-  @route("/repos/{owner}/{repo}/pulls")
-  @post
-  @action
-  op createPullRequest(
-    @path owner: string,
-    @path repo: string,
-    @body pullRequest: PullRequestCreateRequest
-  ): PullRequestResponse;
-
-  @route("/repos/{owner}/{repo}/pulls/{pull_number}/merge")
-  @put
-  @action
-  op mergePullRequest(
-    @path owner: string,
-    @path repo: string,
-    @path pull_number: int32,
-    @body merge: MergeRequest
-  ): MergeResponse;
-
   // Project Insights
   @route("/repos/{owner}/{repo}/stats/contributors")
   @get
@@ -553,14 +580,6 @@ namespace GitHubAPI {
     total_count: int32;
   }
 
-  model PullRequestCreateRequest {
-    title: string;
-    head: string;
-    base: string;
-    body?: string;
-    draft?: boolean;
-  }
-
   model PullRequestResponse {
     id: int32;
     number: int32;
@@ -582,18 +601,6 @@ namespace GitHubAPI {
   model PullRequestListResponse {
     pull_requests: PullRequestResponse[];
     total_count: int32;
-  }
-
-  model MergeRequest {
-    commit_title?: string;
-    commit_message?: string;
-    merge_method?: "merge" | "squash" | "rebase";
-  }
-
-  model MergeResponse {
-    sha: string;
-    merged: boolean;
-    message: string;
   }
 
   model ProjectInsightsResponse {
