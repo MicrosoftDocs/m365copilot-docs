@@ -56,8 +56,10 @@ items:
           href: overview-typespec.md
         - name: Get started
           href: build-declarative-agents-typespec.md
+        - name: Scenarios
+          href: typespec-scenarios.md
         - name: Authentication
-          hred: typespec-authentication.md
+          href: typespec-authentication.md
         - name: TypeSpec reference
           expanded: false
           items:
