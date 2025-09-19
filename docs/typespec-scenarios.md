@@ -20,6 +20,12 @@ using TypeSpec.M365.Copilot.Agents;
   name: "Basic Helper Agent",
   description: "A simple agent that provides basic information and assistance"
 })
+@instructions("""
+  You are a helpful assistant that provides basic information and support. 
+  Be friendly, professional, and helpful in all interactions. Provide clear, 
+  concise answers to user questions. If you don't know something, be honest 
+  about your limitations and suggest alternative ways to find the information.
+""")
 namespace BasicHelperAgent {
   // No capabilities defined - agent relies only on built-in conversational abilities
 }
@@ -38,6 +44,14 @@ using TypeSpec.M365.Copilot.Agents;
   name: "Knowledge Worker Assistant",
   description: "An intelligent assistant that helps with research, file management, and finding colleagues"
 })
+@instructions("""
+  You are a knowledgeable research assistant specialized in helping knowledge workers 
+  find information efficiently. You can search the web for external research, access 
+  SharePoint documents for organizational content, and help locate colleagues within 
+  the organization. Always provide comprehensive research results, cite your sources, 
+  and suggest additional resources when relevant. When searching for people, respect 
+  privacy and only share publicly available organizational information.
+""")
 namespace KnowledgeWorkerAgent {
   // Web search capability for external research
   op webSearch is AgentCapabilities.WebSearch<Sites = [
@@ -67,45 +81,76 @@ namespace KnowledgeWorkerAgent {
 
 **What it does**: This agent allows employees to report facility issues (broken equipment, lighting problems, HVAC issues) and check the status of existing repair requests. The repairs API is publicly accessible and doesn't require authentication, making it easy for anyone to report issues.
 
+##### [actions.tsp](#tab/main.tsp)
+
 ```typespec
+import "@typespec/http";
+import "@typespec/openapi3";
+import "@microsoft/typespec-m365-copilot";
+import "./actions.tsp";
+
+using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
+using TypeSpec.M365.Copilot.Actions;
 
 @agent({
   name: "Facilities Repair Agent",
   description: "Report and track facility maintenance issues and repair requests"
 })
+@instructions("""
+  You are a facilities management assistant that helps employees report and track 
+  maintenance issues. You can help users submit new repair requests by gathering 
+  all necessary details (description, location, category, priority) and submit 
+  them to the facilities team. You can also check the status of existing repair 
+  tickets and provide updates on progress. Always be helpful in categorizing 
+  issues correctly and setting appropriate priority levels based on safety and 
+  business impact.
+""")
 namespace FacilitiesRepairAgent {
-  // Public Repairs API - no authentication required
-  @service
-  @actions(#{
-      nameForHuman: "Facilities Repair API",
-      descriptionForModel: "API for reporting and tracking facility maintenance issues and repairs",
-      descriptionForHuman: "Use this API to report facility issues and check repair status"
-  })
-  @server("https://repairs.contoso.com", "Facilities Repair API")
-  namespace RepairsAPI {
-    @route("/repairs")
-    @post
-    @action
-    op reportIssue(
-      @body issue: RepairIssueRequest
-    ): RepairIssueResponse;
+  op reportIssue is RepairsAPI.reportIssue;
+  op getRepairStatus is RepairsAPI.getRepairStatus;
+  op getOpenRepairs is RepairsAPI.getOpenRepairs;
+}
+```
 
-    @route("/repairs/{ticketId}")
-    @get
-    @action
-    op getRepairStatus(
-      @path ticketId: string
-    ): RepairStatusResponse;
+##### [actions.tsp](#tab/actions.tsp)
 
-    @route("/repairs")
-    @get
-    @action
-    op getOpenRepairs(
-      @query location?: string,
-      @query priority?: "low" | "medium" | "high" | "urgent"
-    ): RepairListResponse;
-  }
+```typespec
+import "@typespec/http";
+import "@microsoft/typespec-m365-copilot";
+
+using TypeSpec.Http;
+using TypeSpec.M365.Copilot.Actions;
+
+@service
+@actions(#{
+    nameForHuman: "Facilities Repair API",
+    descriptionForModel: "API for reporting and tracking facility maintenance issues and repairs",
+    descriptionForHuman: "Use this API to report facility issues and check repair status"
+})
+@server("https://repairs.contoso.com", "Facilities Repair API")
+namespace RepairsAPI {
+  @route("/repairs")
+  @post
+  @action
+  op reportIssue(
+    @body issue: RepairIssueRequest
+  ): RepairIssueResponse;
+
+  @route("/repairs/{ticketId}")
+  @get
+  @action
+  op getRepairStatus(
+    @path ticketId: string
+  ): RepairStatusResponse;
+
+  @route("/repairs")
+  @get
+  @action
+  op getOpenRepairs(
+    @query location?: string,
+    @query priority?: "low" | "medium" | "high" | "urgent"
+  ): RepairListResponse;
 
   model RepairIssueRequest {
     title: string;
@@ -155,6 +200,16 @@ using TypeSpec.M365.Copilot.Agents;
   name: "Facilities Management Pro Agent",
   description: "Advanced facilities management for supervisors with work order creation, technician assignment, and reporting capabilities"
 })
+@instructions("""
+  You are an advanced facilities management assistant designed for supervisors 
+  and facility managers. You have access to comprehensive work order management 
+  capabilities including creating detailed work orders, assigning technicians 
+  based on expertise and availability, updating priorities based on business 
+  impact, and generating detailed facility reports. Always prioritize safety-critical 
+  issues, consider resource allocation efficiently, and provide data-driven 
+  insights for facility maintenance planning. Ensure all work orders include 
+  complete details for proper execution.
+""")
 namespace FacilitiesManagementAgent {
   // Advanced Repairs API with API key authentication
   @service
@@ -165,7 +220,7 @@ namespace FacilitiesManagementAgent {
   })
   @server("https://repairs-pro.contoso.com", "Advanced Facilities API")
   @useAuth(ApiKeyAuth<ApiKeyLocation.header, "X-Facilities-API-Key">)
-  namespace AdvancedRepairsAPI {
+  namespace RepairsAPI {
     @route("/work-orders")
     @post
     @action
@@ -294,6 +349,16 @@ using TypeSpec.M365.Copilot.Agents;
   name: "Executive Assistant Pro",
   description: "Comprehensive executive assistant with advanced Microsoft 365 integration for email management, calendar coordination, team collaboration, and document insights"
 })
+@instructions("""
+  You are a sophisticated executive assistant with comprehensive access to Microsoft 365 
+  services. You excel at managing complex executive workflows including email triage 
+  and analysis, intelligent calendar management with conflict resolution, document 
+  summarization and insights, and cross-team collaboration coordination. You can 
+  identify action items from emails, suggest optimal meeting times, provide executive 
+  briefings from document analysis, and facilitate team communications. Always maintain 
+  confidentiality, prioritize based on business impact and executive preferences, and 
+  provide proactive insights to optimize productivity and decision-making.
+""")
 namespace ExecutiveAssistantAgent {
   // Microsoft 365 capabilities for collaboration
   op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
