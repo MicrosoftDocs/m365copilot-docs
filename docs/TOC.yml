@@ -54,6 +54,10 @@ items:
         items:
         - name: Overview
           href: overview-typespec.md
+        - name: Get started
+          href: build-declarative-agents-typespec.md
+        - name: Authentication
+          hred: typespec-authentication.md
         - name: TypeSpec reference
           expanded: false
           items:
@@ -61,8 +65,6 @@ items:
               href: typespec-decorators.md
             - name: Capabilities
               href: typespec-capabilities.md
-        - name: Get started
-          href: build-declarative-agents-typespec.md
       - name: Build with JSON
         items:
         - name: Create the agent
