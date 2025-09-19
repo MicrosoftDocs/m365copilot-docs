@@ -116,18 +116,14 @@ User-delegated permissions for accessing user data in Microsoft Graph and GitHub
     descriptionForModel: "Access to user's Microsoft 365 profile, emails, and calendar with OAuth2 authentication",
     descriptionForHuman: "Use this API to access your Microsoft 365 profile, read emails, and manage calendar events"
 })
-@server("https://graph.microsoft.com", "Microsoft Graph API")
-@useAuth(OAuth2Auth<[
-  OAuthFlow<AuthorizationCodeFlow> & {
-    authorizationUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
-    tokenUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/token";
-    scopes: {
-      "https://graph.microsoft.com/User.Read": "Read user profile";
-      "https://graph.microsoft.com/Mail.Read": "Read user mail";
-      "https://graph.microsoft.com/Calendars.ReadWrite": "Read and write calendar events";
-    };
-  }
-]>)
+@server("https://graph.microsoft.com/v1.0", "Microsoft Graph API")
+@useAuth(OAuth2Auth<[{
+  type: OAuth2FlowType.authorizationCode;
+  authorizationUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
+  tokenUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/token";
+  refreshUrl: "https://login.microsoftonline.com/organizations/oauth2/v2.0/token";
+  scopes: ["User.Read", "Mail.Read", "Calendars.ReadWrite"];
+}]>)
 namespace MicrosoftGraph {
   @route("/me")
   @get
@@ -158,17 +154,13 @@ namespace MicrosoftGraph {
     descriptionForHuman: "Use this API to manage your GitHub repositories and create issues"
 })
 @server("https://api.github.com", "GitHub API")
-@useAuth(OAuth2Auth<[
-  OAuthFlow<AuthorizationCodeFlow> & {
-    authorizationUrl: "https://github.com/login/oauth/authorize";
-    tokenUrl: "https://github.com/login/oauth/access_token";
-    scopes: {
-      "repo": "Repository access";
-      "read:org": "Read organization membership";
-      "user:email": "Access user email addresses";
-    };
-  }
-]>)
+@useAuth(OAuth2Auth<[{
+  type: OAuth2FlowType.authorizationCode;
+  authorizationUrl: "https://github.com/login/oauth/authorize";
+  tokenUrl: "https://github.com/login/oauth/access_token";
+  refreshUrl: "https://github.com/login/oauth/access_token";
+  scopes: ["repo", "read:org", "user:email"];
+}]>)
 namespace GitHubAPI {
   @route("/user/repos")
   @get
@@ -193,7 +185,7 @@ namespace GitHubAPI {
 
 ## Entra ID SSO Authentication
 
-Seamless authentication leveraging the user's existing Microsoft 365 session for native integration scenarios.
+Seamless authentication leveraging the user's existing Microsoft 365 session for native integration scenarios. [Manual steps](api-plugin-authentication.md#update-the-microsoft-entra-app-registration) are required to complete the SSO registration.
 
 ### Examples
 
@@ -205,8 +197,14 @@ Seamless authentication leveraging the user's existing Microsoft 365 session for
     descriptionForModel: "Access to Microsoft GRaph productivity features using seamless SSO authentication",
     descriptionForHuman: "Use this API to access your Microsoft 365 profile, emails, and calendar events"
 })
-@server("https://graph.microsoft.com", "Microsoft Graph API")
-@useAuth(AuthenticationReference<"microsoft-365-sso">)
+@server("https://graph.microsoft.com/v1.0", "Microsoft Graph API")
+@useAuth(OAuth2Auth<[{
+  type: OAuth2FlowType.authorizationCode;
+  authorizationUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
+  tokenUrl: "https://login.microsoftonline.com/common/oauth2/v2.0/token";
+  refreshUrl: "https://login.microsoftonline.com/organizations/oauth2/v2.0/token";
+  scopes: ["User.Read", "Mail.Read", "Calendars.Read"];
+}]>)
 namespace Microsoft365Productivity {
   @route("/me")
   @get
