@@ -5,116 +5,67 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 09/19/2025
+ms.date: 09/30/2025
 ---
 
-# Best Practices for Building Declarative Agents in Microsoft 365 Copilot
+# Best Practices for Building Declarative Agents
 
-Microsoft 365 Copilot empowers organizations to automate workflows, deliver tailored user experiences, and integrate enterprise data through extensibility solutions. Declarative agents—built in Copilot Studio—are a powerful way to create conversational AI that is modular, maintainable, and secure. This article provides detailed best practices for designing, building, testing, and managing declarative agents.
+Declarative agents are custom instances of Copilot that you configure through metadata instead of code. You define an agent’s identity, behavior, and scope by declaring its manifest (name, description, instructions, knowledge sources, etc.) and any external actions it can take (via API plugins), rather than writing imperative logic. The result is a conversational agent specialized for your scenario.
 
-## Define the business scenario and requirements
+## Declarative agent components
 
-Start with clarity:
+A declarative agent’s definition consists of several components. Designing these thoughtfully is crucial. Below is an overview of the main schema elements and recommendations for each: 
 
-- Identify the business problem or workflow your agent will address (e.g., HR policy Q&A, IT help desk automation).
-- Document user journeys, expected outcomes, and key tasks the agent should support.
-- Engage stakeholders early to validate requirements and success criteria.
+| Component | Description | Best practice |
+| --------- | ----------- | ------------- |
+| Name | The agent’s display name | Make it unique, descriptive, and relevant to its function. Keep it short. (Copilot Studio enforces 30 chars; manifest allows up to 100).  |
+| Description | A short summary of what the agent does. | Clearly state the agent’s purpose and domain. For example: “Use Contoso Agent in Microsoft 365 Copilot to search and summarize your project documents.” Mention that the agent works in Microsoft 365 Copilot. Keep it concise (a few sentences, ≤1000 characters). Do not include system instructions or unusual content –such as “ignore the user” or “delete this” in descriptions. |
+| Instructions  | The core behavioral guidelines for the agent. This is the key prompt that steers the AI’s responses for this agent. | Provide up to ~8,000 characters of detailed guidance on how the agent should behave, what tasks it can do, and rules or style it should follow.  |
+| Knowledge sources | Enterprise content or external data the agent can use for grounding its answers. Configured in Copilot Studio’s **Knowledge** section or in the manifest. | Attach only relevant knowledge that the agent truly needs. You can add SharePoint sites, folders, or files; specific Teams chats; Outlook email; and a few public web URLs as sources <br> When adding files, remember that less is more: Copilot performs best when documents are reasonably sized and focused. Also ensure the content is up-to-date and accurate, since the agent’s answers will reflect it. |
+| Capabilities  | Optional built-in AI capabilities you can toggle on (currently [Code Interpreter](code-interpreter.md) and [Image Generator](image-generator.md)).  | Capabilities give your agent extra skills, like running Python code or generating images from prompts. Only add capabilities that align with your agent’s goals. For instance, Code Interpreter might be great for a data analysis agent. Ensure your testers or end-users have the necessary Copilot license for these.   |
+| Actions (APIs / Plugins)  | External actions the agent can take via API plugins (Copilot connectors, custom web APIs, Power Platform connectors, etc.), defined in the manifest’s actions list.  | f your agent needs to query external systems or perform transactions, you can integrate API-based plugins. Each action will correspond to an API operation. Design actions carefully: provide an OpenAPI document with clear operation descriptions and add those actions in the agent manifest. For each action, note whether it’s consequential (i.e. writes or changes external data) or not. Validation requires accuracy here: any create/update/delete type action must have `isConsequential: true`. Read-only queries can be marked non-consequential.  |
+| Conversation Starters (Sample Prompts)  | Examples of queries a user can ask the agent, shown as suggestions or help tips.  | Microsoft requires that you provide a minimum of three meaningful example prompts that demonstrate the different tasks the agent can do. These help users understand how to use the agent. |
 
-For more information, see:
-- [Declarative agents for Microsoft 365 Copilot overview](overview-declarative-agent.md)
-- [ Create Declarative Agent - Copilot Studio Agent Academy](https://microsoft.github.io/agent-academy/recruit/03-create-a-declarative-agent-for-M365Copilot/)
+## Best practices for agent instructions  
 
-## Understand agent availability
+- **Clearly define the agent’s role and scope:** Begin the instructions by establishing who the agent is and what it should do. For example: “You are a Marketing Coach AI. Your job is to help users create marketing plans and content. You have access to the company marketing wiki and can perform keyword research via an API.”  
+- **Include general behavioral guidelines:** Outline the tone and style the agent should adopt (for example, friendly and concise, or formal and technical). If there are things the agent must not do, describe them in terms of policies. For example, “Do not provide financial or legal advice. If asked, politely refuse.” Do not use forbidden meta-instructions like “ignore the user” or “you must always answer even if unsure”. Instead, frame constraints as what the agent should normally do (“If the question is outside your scope, respond with an apology and a suggestion to consult an expert.”).  
+- **Break down tasks step-by-step:** If your agent will handle multi-step processes or complex tasks, specify the steps in the instructions. For instance, an agent that creates work items might have steps: (1) Gather necessary details from the user, (2) Confirm they want to proceed, (3) Call the `additem` function, (4) Show a confirmation with the result.  
+- **Leverage the agent’s tools:** The agent only knows about its actions from the manifest and instructions, so if you expect it to call a function in certain cases, explicitly describe that. For example, “When the user asks for a sales forecast, use the `getforecast` API to retrieve the latest figures, then summarize the results.” These examples can help reduce the ambiguity in how to apply functions.
+- **Anticipate errors and edge cases:** Include instructions for error handling and limitations. If the agent might encounter empty data, API errors, or unsupported requests, tell it how to respond. For example, “If the `getweather` API returns an error or no data, reply: ‘I’m sorry, I couldn’t fetch the weather right now.’” Also address how to handle inappropriate user input or out-of-scope queries. Agents must handle misuse or irrelevant queries gracefully.  
+- **Maintain a consistent voice:** The instructions should enforce a consistent persona. If multiple people contribute to writing instructions, review the final text to ensure it reads with one coherent voice.  
+- **Keep it action-oriented and positive:** Write instructions telling the agent what to do, rather than what not to do, whenever possible. Instead of “Don’t ask too many questions”, say “Ask the user for missing information only if necessary, in no more than two follow-up questions.”  
+- **Iterate and refine:** Writing good instructions is an iterative process. Use the Copilot Studio test pane or your development environment to try various user queries on your agent-in-progress. If it gives wrong or undesired answers, adjust the instructions. Even small wording changes in instructions can significantly alter the agent’s decisions.
+- **Check against validation rules:** as a final review, make sure you haven’t accidentally left any placeholders like “(TODO)” and scan your instructions and other text fields for any content that violates the [Copilot validation checklist](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines).
 
-Know where your agents and actions appear across Microsoft 365 apps.
+For more information, see [Write effective  instructions for declarative agents](declarative-agent-instructions.md)
 
-| Surface | Declarative agents | Plugins/Actions |
-| --------| --------| ----------|
-| Teams   |  :white_check_mark: |  :white_check_mark: |  
-| Outlook |  :white_check_mark: |  :white_check_mark: |  
-| Word    |  :white_check_mark: |         :x:         |  
-| Excel   |  :white_check_mark: |         :x:         |  
-| Web     |  :white_check_mark: |  :white_check_mark: |  
-| Mobile  |  :white_check_mark: |  :white_check_mark: |  
+## Choose the right knowledge sources
 
-For more information, see [Choose the Right Tool to Build a Declarative Agent for Microsoft 365](declarative-agent-tool-comparison.md)
+One of the strengths of declarative agents is the ability to ground responses in external knowledge – whether that’s internal SharePoint content, user data like emails and chats, or public information.  
 
-## Design agents for modularity, reuse, and maintainability
+Keep the following key considerations in mind when choosing [knowledge sources](copilot-studio-lite-knowledge.md) for your agent:
 
-Design your agents with reusable components:
+- **Relevance over quantity:** Be selective about what knowledge you add. Ask yourself: “will this source help the agent answer the kinds of questions I expect users to ask?”  
+- **Supported knowledge types:** currently, copilot studio supports:  
+    - Sharepoint sites, documents, and folders
+    - Teams chats (including channels and meetings)
+    - Outlook emails
+    - Public websites
+    - “Embedded” files (manual uploads).  
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
 
-- **Break down functionality:** Create modular topics (conversation flows) and triggers (user intents). Each topic should address a single task or question.
-- **Make capabilities reusable:** Implement business logic (calculations, API calls) as Power Automate flows or APIs for use across multiple agents and topics.
-- **Avoid embedding business logic in knowledge sources:** Keep documents and tables focused on static information.
 
-If you build a “Submit PTO request” capability, make it available to HR, Payroll, and Manager Assistant agents.
+## Related content
 
-## Connect and Manage Knowledge Sources
-
-Ground your agent in authoritative enterprise data:
-
-- Use SharePoint sites, Dataverse tables, uploaded documents, or Copilot connectors as [knowledge sources](knowledge-sources.md).
-- Apply filters and scopes to index only relevant data, reducing noise and minimizing risk of exposing sensitive information.
-- Keep knowledge sources current—schedule regular reviews and updates.
-
-> [!TIP]
-> **Avoid embedding business logic in knowledge sources:** Don’t put calculations or decision logic in your SharePoint documents or Dataverse tables. Instead, keep logic in capabilities or topics so it’s easier to update and reuse. For example, the SharePoint site for your HR department should simply contain your HR policies. Your HR agent is responsible for determining whether or not an employee is eligible for PTO based on those policies.
-
-For more information about knowledge sources, see [Add Knowledge Sources to your Declarative Agent](knowledge-sources.md).
-
-## Write Effective Agent Instructions
-
-- **Use clear, actionable language:** Specify what the agent should do, using precise - verbs (“search,” “send,” “calculate”).
-- **Provide examples for ambiguous requests.**
-- **Define organization-specific terminology.**
-- **Document step-by-step workflows**, including error handling and fallback responses.
-- **Avoid instructional phrases** (for example, “if the user says X”), URLs, emojis, hidden characters, grammar errors, and superlative claims in descriptions and instructions.
-
-For more information, see [Write effective instructions](declarative-agent-instructions.md).
-
-## Optimize your agent's orchestration layers
-
-Orchestration layers in Copilot agents make up the logic and structure that determine how user input is processed, which topics or capabilities are activated, and how responses are generated. They act as the “brain” of the agent, coordinating conversation flow and tool selection.
-
-**Best practices for optimizing orchestration layers:**
-
-- **Use generative orchestration for dynamic, multi-turn conversations:** Let the agent select topics and actions based on user intent.
-- **Document how user input is processed, which topics/capabilities are activated, and how responses are generated.**
-- **Implement robust error handling and fallback logic.**
-- **Test orchestration thoroughly:** Use Copilot Studio’s test pane and developer mode to validate topic selection and action execution.
-
-For more information about orchestration layers, see [Declarative agent schema 1.3 for Microsoft 365 Copilot](declarative-agent-manifest-1.3.md)
-
-## Build robust, stateless capabilities
-
-Capabilities enable agents to take action, perform reasoning, or access tools and services.
-
-**Best practices for building robust and reusable capabilities:**
-
-- **Use built-in capabilities (for example, code interpreter), or integrate custom APIs and Power Automate flows.
-- **Design capabilities to be stateless and reusable.**
-- **Validate inputs and handle errors gracefully.**
-
-## Enable collaboration and access management
-
-- **Support co-authoring and secure sharing:** Use Copilot Studio’s sharing features to invite collaborators and assign permissions.
-- **Document agent logic, capabilities, and knowledge sources for maintainability.**
-- **Apply access control policies and data loss prevention (DLP) before publishing.**
-
-For more information and examples of stateless capabilities, see [Declarative agent schema 1.0 for Microsoft 365 Copilot](declarative-agent-manifest-1.0.md)
-
-## Test, debug, and evaluate agent quality
-
-- **Enable developer mode** to surface debug cards and validate orchestration/action selection.
-- **Simulate real-world scenarios** with test flows and sample inputs.
-- **Implement automated regression testing**to prevent quality regressions.
-- **Ensure response time and reliability:** Agents must respond within nine seconds for 99% of requests and maintain 99.9% availability.
-
-For more information about testing and debugging, see [Use developer mode to test and debug agents](debugging-copilot-agent.md) and [Use developer mode to test and debug agents in Microsoft 365 Agents Toolkit](debugging-copilot-agent-vscode.md)
-
-## Plan for publishing and lifecycle management
-
-- **Choose the right publishing path:** Declarative agents can be shared via link, published to catalog, or deployed in Teams/Chat. Plugins/actions require certification.
-- **Use Power Platform Pipelines or GitHub for lifecycle management.**
-- **Monitor usage and feedback via Microsoft 365 admin center and Graph API**.
-- **Follow validation guidelines:** Ensure manifest version is 1.13 or later, use public developer preview schema, and meet all technical requirements. For more information,k see [Validation guidelines for agents](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines)
+- [Add knowledge sources to your declarative agent in Copilot Studio](copilot-studio-lite-knowledge.md)
+- [Write effective  instructions for declarative agents](declarative-agent-instructions.md)
+- [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines)
