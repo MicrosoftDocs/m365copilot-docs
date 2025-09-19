@@ -13,7 +13,7 @@ This guide provides complete examples of creating TypeSpec agents for Microsoft 
 
 **What it does**: This agent can answer simple questions, provide general information, and have basic conversations. It doesn't need to access external APIs, search the web, or use any Microsoft 365 services.
 
-#### [main.tsp](#tab/main.tsp)
+### [main.tsp](#tab/main.tsp)
 
 ```typespec
 import "@typespec/http";
@@ -46,7 +46,7 @@ namespace BasicHelperAgent {
 
 **What it does**: This agent helps knowledge workers by combining web search for external information, file access for document retrieval, and people search for finding colleagues and their contact information. Perfect for research tasks and collaboration scenarios.
 
-#### [main.tsp](#tab/main.tsp)
+### [main.tsp](#tab/main.tsp)
 
 ```typespec
 import "@typespec/http";
@@ -99,7 +99,7 @@ namespace KnowledgeWorkerAgent {
 
 **What it does**: This agent allows employees to report facility issues (broken equipment, lighting problems, HVAC issues) and check the status of existing repair requests. The repairs API is publicly accessible and doesn't require authentication, making it easy for anyone to report issues.
 
-##### [main.tsp](#tab/main.tsp)
+#### [main.tsp](#tab/main.tsp)
 
 ```typespec
 import "@typespec/http";
@@ -131,7 +131,7 @@ namespace FacilitiesRepairAgent {
 }
 ```
 
-##### [actions.tsp](#tab/actions.tsp)
+#### [actions.tsp](#tab/actions.tsp)
 
 ```typespec
 import "@typespec/http";
@@ -213,7 +213,7 @@ namespace RepairsAPI {
 
 **What it does**: This agent provides advanced facilities management capabilities for authorized personnel. Supervisors can create detailed work orders, assign specific technicians, update repair priorities, access cost information, and generate facility maintenance reports. The API key authentication ensures only authorized staff can perform these administrative functions.
 
-##### [main.tsp](#tab/main.tsp)
+#### [main.tsp](#tab/main.tsp)
 
 ```typespec
 import "@typespec/http";
@@ -248,7 +248,7 @@ namespace FacilitiesManagementAgent {
 }
 ```
 
-##### [actions.tsp](#tab/actions.tsp)
+#### [actions.tsp](#tab/actions.tsp)
 
 ```typespec
 import "@typespec/http";
@@ -387,7 +387,7 @@ namespace AdvancedRepairsAPI {
 
 **What it does**: This sophisticated agent serves as a digital executive assistant that can manage complex workflows across Microsoft 365. It can read and analyze emails to identify action items, schedule meetings with conflict resolution, access and summarize documents from SharePoint and OneDrive, coordinate with Teams for project collaboration, and provide insights about organizational relationships. The OAuth2 authentication ensures secure access to user data with appropriate permissions.
 
-##### [main.tsp](#tab/main.tsp)
+#### [main.tsp](#tab/main.tsp)
 
 ```typespec
 import "@typespec/http";
@@ -447,7 +447,7 @@ namespace ExecutiveAssistantAgent {
 }
 ```
 
-##### [actions.tsp](#tab/actions.tsp)
+#### [actions.tsp](#tab/actions.tsp)
 
 ```typespec
 import "@typespec/http";

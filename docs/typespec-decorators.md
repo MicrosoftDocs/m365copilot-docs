@@ -10,46 +10,13 @@ ms.topic: reference
 
 # Decorators for TypeSpec for Microsoft 365 Copilot
 
-## `@instructions`
+This reference covers the built-in decorators available in TypeSpec for Microsoft 365 Copilot, organized by their primary use case.
 
-Defines the instructions that define the behavior of an agent.
+## Declarative Agent Decorators
 
-```typespec
-@instructions(instructions: valueof string)
-```
+These decorators are used when building declarative agents to define agent behavior, conversation flow, and user experience.
 
-### Target
-
-`Namespace`
-
-### Parameters
-
-| Name | Type | Description |
-|------|------|-------------|
-| instructions | valueof `string` | Not localizable. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
-
-### Examples
-
-```typespec
-@instructions("Always respond with a positive energy.")
-```
-
-```typespec
-@instructions("""
-  You are a customer support agent specializing in technical troubleshooting.
-  Always provide step-by-step solutions and ask clarifying questions when needed.
-""")
-```
-
-```typespec
-@instructions("""
-  You are a financial advisor assistant. Provide general financial information
-  but always remind users to consult with qualified professionals for specific advice.
-  Never provide specific investment recommendations.
-""")
-```
-
-## `@agent`
+### `@agent`
 
 Indicates that a namespace represents an agent.
 
@@ -57,17 +24,17 @@ Indicates that a namespace represents an agent.
 @agent(name: valueof string, description: valueof string)
 ```
 
-### Target
+#### Target
 
 `Namespace`
 
-### Parameters
+#### Parameters
 | Name | Type | Description |
 |------|------|-------------|
 | name | valueof `string` | Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
 | description | valueof `string` | Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
 
-### Examples
+#### Examples
 
 ```typespec
 @agent("IT Support Assistant", "An AI agent that helps with technical support and troubleshooting")
@@ -81,44 +48,46 @@ Indicates that a namespace represents an agent.
 @agent("Data Analytics Helper", "An agent specialized in data analysis and reporting tasks")
 ```
 
-## `@disclaimer`
+### `@behaviorOverrides`
 
-An optional object containing a disclaimer message that, if provided, will be displayed to users at the start of a conversation to satisfy legal or compliance requirements.
+Define settings that modify the behavior of the DA orchestration.
 
 ```typespec
-@disclaimer(disclaimer: valueof Disclaimer)
+@behaviorOverrides(behaviorOverrides: valueof BehaviorOverrides)
 ```
 
-### Target
+#### Target
 
 `Namespace`
 
-### Parameters
+#### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| disclaimer | valueof `Disclaimer` | The disclaimer information that will be shown to users. |
+| behaviorOverrides | valueof `BehaviorOverrides` | Settings that modify the behavior of the declarative agent orchestration. |
 
-### Examples
+#### Examples
 
 ```typespec
-@disclaimer(#{
-  text: "This agent provides general information only and should not be considered professional advice."
+@behaviorOverrides(#{
+  discourageModelKnowledge: true,
+  disableSuggestions: false
 })
 ```
 
 ```typespec
-@disclaimer(#{
-  text: "All financial information provided is for educational purposes. Please consult with a qualified financial advisor before making investment decisions."
+@behaviorOverrides(#{
+  disableSuggestions: true
 })
 ```
 
 ```typespec
-@disclaimer(#{
-  text: "This technical support agent provides general guidance. For critical systems, please contact your IT department directly."
+@behaviorOverrides(#{
+  discourageModelKnowledge: false,
+  disableSuggestions: false
 })
 ```
 
-## `@conversationStarter`
+### `@conversationStarter`
 
 Indicates that a namespace contains a conversation starter.
 
@@ -126,16 +95,16 @@ Indicates that a namespace contains a conversation starter.
 @conversationStarter(conversationStarter: valueof ConversationStarter)
 ```
 
-### Target
+#### Target
 
 `Namespace`
 
-### Parameters
+#### Parameters
 | Name | Type | Description |
 |------|------|-------------|
 | conversationStarter | valueof `ConversationStarter` | The conversation starter information including title and text. |
 
-### Examples
+#### Examples
 
 ```typespec
 @conversationStarter(#{
@@ -158,46 +127,89 @@ Indicates that a namespace contains a conversation starter.
 })
 ```
 
-## `@behaviorOverrides`
+### `@disclaimer`
 
-Define settings that modify the behavior of the DA orchestration.
+An optional object containing a disclaimer message that, if provided, will be displayed to users at the start of a conversation to satisfy legal or compliance requirements.
 
 ```typespec
-@behaviorOverrides(behaviorOverrides: valueof BehaviorOverrides)
+@disclaimer(disclaimer: valueof Disclaimer)
 ```
 
-### Target
+#### Target
 
 `Namespace`
 
-### Parameters
+#### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| behaviorOverrides | valueof `BehaviorOverrides` | Settings that modify the behavior of the declarative agent orchestration. |
+| disclaimer | valueof `Disclaimer` | The disclaimer information that will be shown to users. |
 
-### Examples
+#### Examples
 
 ```typespec
-@behaviorOverrides(#{
-  discourageModelKnowledge: true,
-  disableSuggestions: false
+@disclaimer(#{
+  text: "This agent provides general information only and should not be considered professional advice."
 })
 ```
 
 ```typespec
-@behaviorOverrides(#{
-  disableSuggestions: true
+@disclaimer(#{
+  text: "All financial information provided is for educational purposes. Please consult with a qualified financial advisor before making investment decisions."
 })
 ```
 
 ```typespec
-@behaviorOverrides(#{
-  discourageModelKnowledge: false,
-  disableSuggestions: false
+@disclaimer(#{
+  text: "This technical support agent provides general guidance. For critical systems, please contact your IT department directly."
 })
 ```
 
-## `@actions`
+### `@instructions`
+
+### `@instructions`
+
+Defines the instructions that define the behavior of an agent.
+
+```typespec
+@instructions(instructions: valueof string)
+```
+
+#### Target
+
+`Namespace`
+
+#### Parameters
+
+| Name | Type | Description |
+|------|------|-------------|
+| instructions | valueof `string` | Not localizable. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
+
+#### Examples
+
+```typespec
+@instructions("Always respond with a positive energy.")
+```
+
+```typespec
+@instructions("""
+  You are a customer support agent specializing in technical troubleshooting.
+  Always provide step-by-step solutions and ask clarifying questions when needed.
+""")
+```
+
+```typespec
+@instructions("""
+  You are a financial advisor assistant. Provide general financial information
+  but always remind users to consult with qualified professionals for specific advice.
+  Never provide specific investment recommendations.
+""")
+```
+
+## API Plugin Decorators
+
+These decorators are used when building API plugins to define API operations, authentication, and response handling.
+
+### `@actions`
 
 Defines the action that can be defined on an info object in an OpenAPI specification.
 
@@ -205,16 +217,16 @@ Defines the action that can be defined on an info object in an OpenAPI specifica
 @actions(data: valueof ActionMetadata)
 ```
 
-### Target
+#### Target
 
 `Namespace`
 
-### Parameters
+#### Parameters
 | Name | Type | Description |
 |------|------|-------------|
 | data | valueof `ActionMetadata` | The action metadata including human-readable names, descriptions, and URLs. |
 
-### Examples
+#### Examples
 
 ```typespec
 @actions(#{
@@ -249,87 +261,40 @@ Defines the action that can be defined on an info object in an OpenAPI specifica
 })
 ```
 
-## `@reasoning`
+### `@authReferenceId`
 
-Defines the reasoning instructions of a function within an action.
+Defines the authentication reference id for the authentication type.
 
 ```typespec
-@reasoning(value: valueof string)
+@authReferenceId(value: valueof string)
 ```
 
-### Target
+#### Target
 
-`Operation`
+`Model`
 
-### Parameters
+#### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| value | valueof `string` | The reasoning instructions for the operation. |
+| value | valueof `string` | The vault reference id for the authentication type. |
 
-### Examples
+#### Examples
 
 ```typespec
-@reasoning("""
-  When searching for tickets, prioritize by severity level and creation date.
-  Always include ticket ID and status in the response.
-""")
+@authReferenceId("corporate-sso")
 ```
 
 ```typespec
-@reasoning("""
-  For project queries, consider the user's role and project permissions.
-  Filter results based on team membership and access levels.
-""")
+@authReferenceId("azure-ad-integration")
 ```
 
 ```typespec
-@reasoning("""
-  When processing analytics requests, validate date ranges and ensure
-  the requested metrics are available for the specified time period.
-""")
+@authReferenceId("api-key-auth-v2")
 ```
 
-## `@responding`
+### `@capabilities`
 
-Defines the responding instructions of a function within an action.
-
-```typespec
-@responding(value: valueof string)
-```
-
-### Target
-
-`Operation`
-
-### Parameters
-| Name | Type | Description |
-|------|------|-------------|
-| value | valueof `string` | The responding instructions for the operation. |
-
-### Examples
-
-```typespec
-@responding("""
-  Present support tickets in a clear table format with columns: ID, Title, Priority, Status, Created Date.
-  Include summary statistics at the end showing total tickets by status.
-""")
-```
-
-```typespec
-@responding("""
-  Display project information using bullet points for easy reading.
-  Always include project timeline and current phase information.
-""")
-```
-
-```typespec
-@responding("""
-  Format analytics results as charts when possible. For numerical data,
-  include percentage changes from previous periods where applicable.
-""")
-```
-
-## `@capabilities`
+### `@capabilities`
 
 Support an action function's capabilities object as defined in the API Plugin manifest object. You can use this decorator to define simple adaptive cards with small definitions like `confirmation`. For more complex adaptive cards, you can use the `@card` decorator.
 
@@ -337,16 +302,16 @@ Support an action function's capabilities object as defined in the API Plugin ma
 @capabilities(capabilities: valueof FunctionCapabilitiesMetadata)
 ```
 
-### Target
+#### Target
 
 `Operation`
 
-### Parameters
+#### Parameters
 | Name | Type | Description |
 |------|------|-------------|
 | capabilities | valueof `FunctionCapabilitiesMetadata` | The capabilities metadata including confirmation, response semantics, and security info. |
 
-### Examples
+#### Examples
 
 ```typespec
 @capabilities(#{
@@ -406,7 +371,7 @@ Support an action function's capabilities object as defined in the API Plugin ma
 })
 ```
 
-## `@card`
+### `@card`
 
 Defines the adaptive card reference for a function.
 
@@ -414,16 +379,16 @@ Defines the adaptive card reference for a function.
 @card(cardPath: valueof CardMetadata)
 ```
 
-### Target
+#### Target
 
 `Operation`
 
-### Parameters
+#### Parameters
 | Name | Type | Description |
 |------|------|-------------|
 | cardPath | valueof `CardMetadata` | The adaptive card metadata including file path, title, and data path. |
 
-### Examples
+#### Examples
 
 ```typespec
 @card(#{
@@ -451,33 +416,82 @@ Defines the adaptive card reference for a function.
 })
 ```
 
-## `@authReferenceId`
+### `@reasoning`
 
-Defines the authentication reference id for the authentication type.
+Defines the reasoning instructions of a function within an action.
 
 ```typespec
-@authReferenceId(value: valueof string)
+@reasoning(value: valueof string)
 ```
 
-### Target
+#### Target
 
-`Model`
+`Operation`
 
-### Parameters
+#### Parameters
 | Name | Type | Description |
 |------|------|-------------|
-| value | valueof `string` | The vault reference id for the authentication type. |
+| value | valueof `string` | The reasoning instructions for the operation. |
 
-### Examples
+#### Examples
 
 ```typespec
-@authReferenceId("corporate-sso")
+@reasoning("""
+  When searching for tickets, prioritize by severity level and creation date.
+  Always include ticket ID and status in the response.
+""")
 ```
 
 ```typespec
-@authReferenceId("azure-ad-integration")
+@reasoning("""
+  For project queries, consider the user's role and project permissions.
+  Filter results based on team membership and access levels.
+""")
 ```
 
 ```typespec
-@authReferenceId("api-key-auth-v2")
+@reasoning("""
+  When processing analytics requests, validate date ranges and ensure
+  the requested metrics are available for the specified time period.
+""")
+```
+
+### `@responding`
+
+Defines the responding instructions of a function within an action.
+
+```typespec
+@responding(value: valueof string)
+```
+
+#### Target
+
+`Operation`
+
+#### Parameters
+| Name | Type | Description |
+|------|------|-------------|
+| value | valueof `string` | The responding instructions for the operation. |
+
+#### Examples
+
+```typespec
+@responding("""
+  Present support tickets in a clear table format with columns: ID, Title, Priority, Status, Created Date.
+  Include summary statistics at the end showing total tickets by status.
+""")
+```
+
+```typespec
+@responding("""
+  Display project information using bullet points for easy reading.
+  Always include project timeline and current phase information.
+""")
+```
+
+```typespec
+@responding("""
+  Format analytics results as charts when possible. For numerical data,
+  include percentage changes from previous periods where applicable.
+""")
 ```
