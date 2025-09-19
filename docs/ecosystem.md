@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 01/15/2025
+ms.date: 09/12/2025
 ---
 
 # Copilot extensibility in the Microsoft 365 ecosystem
@@ -20,10 +20,10 @@ When you customize Microsoft 365 Copilot with agents and use actions and connect
 
 The agents, actions, and connectors you build for Copilot are part of the larger Microsoft 365 Copilot system. The following diagram illustrates how a user's prompt is interpreted, rationalized, and processed into natural language results through different native components and agents of the Copilot system.
 
-:::image type="content" source="assets/images/copilot-diagram-expanded.png" alt-text="Diagram that shows the flow of data across components of the Microsoft 365 Copilot ecosystem" border="false":::
+:::image type="content" source="/copilot/microsoft-365/media/microsoft-365-copilot-architecture/copilot-query-flow.svg" lightbox="/copilot/microsoft-365/media/microsoft-365-copilot-architecture/copilot-query-flow.svg" alt-text="Diagram that shows the flow of data across components of the Microsoft 365 Copilot ecosystem" border="false":::
 
 > [!NOTE]
-> Some agent capabilities are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+> Some agent capabilities are only available to users in tenants that allow metered usage or users that have a Microsoft 365 Copilot license. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
 
 You can extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. As part of the broader Microsoft 365 ecosystem, your  agents benefit from enhanced discoverability and potential audience reach, centralized and trustworthy distribution and management, and comprehensive development tools and support.
 

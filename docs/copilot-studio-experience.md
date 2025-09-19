@@ -1,11 +1,11 @@
 ---
 title: Choose the Right Copilot Studio Experience for Building Your Agent
-description: Find information about current known issues related to Microsoft 365 Copilot extensibility and the recommended workarounds.
+description: Learn hot to determine the best Copilot Studio experience for building your agent.
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 08/25/2025
+ms.date: 09/17/2025
 ---
 
 # Choose the right Copilot Studio experience
@@ -38,7 +38,7 @@ The following table provides a more detailed feature comparison.
 
 | Feature | Lite experience | Full experience |
 | ------- | --------------- | --------------- |
-| Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Web app](https://copilotstudio.microsoft.com) |
+| Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Microsoft 365 Copilot Studio app](https://copilotstudio.microsoft.com) |
 | User type | Information workers | Makers and developers |
 | Agent target audience | Individuals or small teams. | Department, organization, or external customers. |
 | Agent type | Lightweight Q&A agents with organizational knowledge. | Agents with complex scenarios like multi-step workflows or business system integration, and that require enterprise governance and robust controls. |
@@ -49,7 +49,7 @@ The following table provides a more detailed feature comparison.
 
 ## Licensing requirements
 
-Both Copilot Studio experiences are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Studio message packs or a pay-as-you-go plan to access either experience.
+Both Copilot Studio experiences are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Credits or a pay-as-you-go plan to access either experience.
 
 You can also use the lite experience for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
 

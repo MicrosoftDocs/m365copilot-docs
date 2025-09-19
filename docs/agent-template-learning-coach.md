@@ -1,16 +1,16 @@
 ---
 title: Create a Learning Coach agent from a template
-description: Learn how to create a declarative agent in Copilot Studio agent builder from the Learning Coach template.
+description: Learn how to create a declarative agent in the Copilot Studio using the Learning Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/01/2025
+ms.date: 09/11/2025
 ---
 
 # Use the Learning Coach template to build an agent
 
-You can use the Learning Coach template to create an agent that helps users understand complex topics by breaking them down into simple, intermediate, and detailed summaries. Learning Coach agents create structured learning plans and help users practice skills and prepare for tests. Theses agents provide tailored exercises, guide optimal learning processes, and offer interactive language practice.
+You can use the Learning Coach template in the lite experience of Copilot Studio to build an agent that helps users understand complex topics by breaking them down into simple, intermediate, and detailed summaries. Learning Coach agents create structured learning plans and help users practice skills and prepare for tests. Theses agents provide tailored exercises, guide optimal learning processes, and offer interactive language practice.
 
 To try a Learning Coach, [install the Learning Coach agent](https://teams.microsoft.com/l/app/78079743-a11b-45d0-99cb-a69d37717373?source=share-app-dialog).
 
@@ -55,6 +55,6 @@ You can enhance the functionality of your Learning Coach agents by connecting to
 
 ## Related content
 
-- [Copilot Studio agent builder](copilot-studio-agent-builder.md)
-- [Build agents with agent builder](copilot-studio-agent-builder-build.md)
-- [Publish agents](copilot-studio-agent-builder-publish.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
+- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Publish and manage agents](copilot-studio-lite-publish-agent.md)

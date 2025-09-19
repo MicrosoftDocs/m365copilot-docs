@@ -1,21 +1,22 @@
 ---
-title: Publish and Manage Copilot Studio Agent Builder Agents
-description: Learn how to publish and manage agents built with Copilot Studio agent builder.
+title: Publish and manage agents built with Copilot Studio
+description: Learn how to publish and manage agents built with Copilot Studio.
 author: jasonxian-msft
 ms.author: jasonxian
-ms.date: 09/05/2025
+ms.localizationpriority: medium
+ms.date: 09/11/2025
 ms.topic: conceptual
 ---
 
-# Publish and manage Copilot Studio agent builder agents
+# Publish and manage agents built with Copilot Studio
 
-This article describes how to create or publish agents built with Copilot Studio agent builder, and how to update or delete agents.
+This article describes how to create or publish agents built with Copilot Studio and how to update or delete agents.
 
 ## Create the agent
 
-While you're [building your agent](copilot-studio-agent-builder.md), changes made to the agent are automatically saved in the agent builder. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
+While you're [building your agent](copilot-studio-lite-build.md), in Copilot Studio, the changes you make are saved automatically. When you're satisfied with its behavior and content, you can create the agent to use it in Microsoft 365 Copilot by selecting **Create** on the top right corner.
 
-After the agent is created successfully, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft 365 Copilot.
+After the agent is created, select **Go to agent** to open a new chat with the agent in Microsoft 365 Copilot. You can easily return to chats with your agents from the right rail of Microsoft 365 Copilot.
 
 ## Share the agent
 
@@ -36,13 +37,13 @@ The following table lists the sharing options that are available.
 
 ### Deploy agents via ZIP package
 
-Copilot Studio agent builder provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
+Copilot Studio provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 To deploy an agent manually:
 
-1. In Copilot Studio agent builder, open your agent and select the **More options (...) menu.
+1. In Copilot Studio, open your agent and select the **More options (...)** menu.
 2. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
-3. Sideload your agent into Teams.
+3. Sideload your agent into Microsoft Teams.
 
 > [!NOTE]
 > - The ZIP package can't include embedded files. Remove any embedded file content from the ZIP package.
@@ -59,7 +60,7 @@ You can select which folder or files to share. Sharing only works when the autho
 
 When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Use file permission management in SharePoint to manage user's access to the files and folders.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
+:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
 
 ### Agent acquisition
 
@@ -75,7 +76,7 @@ To manage an existing agent, you can:
 - Select the ellipses (**...**) and **Edit** from an agent on the rail in Microsoft 365 Copilot.
 - Select **Create agents** from the rail in Microsoft 365 Copilot, and then select **My agents** or **View all agents** from the name dropdown menu.
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/agent-builder-my-agents.png" alt-text="The View all agents options in the recently accessed agents menu":::
+:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-last-accessed.png" alt-text="The View all agents options in the recently accessed agents menu":::
 
 Both options show the **My agents** list. You can select the existing agent that you want to change or update.
 
@@ -84,7 +85,7 @@ Both options show the **My agents** list. You can select the existing agent that
 
 ### Update your agent
 
-Changes made to agents are automatically saved in the agent builder. Shared users of the agent don't see the latest changes until the agent is updated. To update a previously created agent, select **Update** on the top right corner. Your changes might take several minutes to become available for end users.
+Changes made to agents are automatically saved in Copilot Studio. However, your changes won't be visible to users until your updates are published. To update a previously created agent, select **Update** on the top right corner. Your changes might take several minutes to become available for end users.
 
 > [!NOTE]
 > After updating an agent that has a SharePoint file and folder knowledge source and has been shared with specific users in your organization, we recommend that you reshare the agent with the same group of users. Doing so automatically shares the files and folders with the users again to ensure a consistent agent experience.
