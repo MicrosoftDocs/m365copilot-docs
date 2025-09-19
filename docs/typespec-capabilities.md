@@ -38,7 +38,7 @@ op copilotConnectors is AgentCapabilities.CopilotConnectors;
 
 | Name | Type | Description |
 |------|------|-------------|
-| connections | Connections | Optional. An array of objects that identify the Copilot connectors available to the declarative agent. If this property is omitted, all Copilot connectors in the organization are available to the declarative agent. |
+| connections | TConnections | Optional. An array of objects that identify the Copilot connectors available to the declarative agent. If this property is omitted, all Copilot connectors in the organization are available to the declarative agent. |
 
 ### Models
 
@@ -104,7 +104,7 @@ Identifies a container by its URL.
 op copilotConnectors is AgentCapabilities.CopilotConnectors;
 
 // Specific connectors
-op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
+op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
   {
     connectionId: "ticketsconnector123";
   },
@@ -114,7 +114,7 @@ op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
 ]>;
 
 // Specific connector with KQL filtering
-op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
+op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
   {
     connectionId: "ticketsconnector123";
     additionalSearchTerms: "CreatedDate>=2024-01-01 AND Priority:High";
@@ -122,7 +122,7 @@ op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
 ]>;
 
 // Multiple connectors with different filtering approaches
-op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
+op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
   {
     connectionId: "ticketsconnector456";
     itemsByPath: [
@@ -165,8 +165,8 @@ op email is AgentCapabilities.Email;
 
 | Name | Type | Description |
 |------|------|-------------|
-| folderIds | Folders | Optional. An array of folders objects. |
-| sharedMailbox | SharedMailbox | Optional. The SMTP address of a shared mailbox. |
+| folderIds | TFolders | Optional. An array of folders objects. |
+| sharedMailbox | TSharedMailbox | Optional. The SMTP address of a shared mailbox. |
 
 ### Models
 
@@ -186,7 +186,7 @@ op email is AgentCapabilities.Email;
 
 // Email search with specific well-known folders
 op email is AgentCapabilities.Email<
-  Folders = [
+  TFolders = [
     { folderId: "Inbox" },
     { folderId: "SentItems" },
     { folderId: "Archive" }
@@ -195,15 +195,15 @@ op email is AgentCapabilities.Email<
 
 // Email search with shared mailbox access
 op email is AgentCapabilities.Email<
-  SharedMailbox = "support@contoso.com"
+  TSharedMailbox = "support@contoso.com"
 >;
 
 // Email search with custom folders and shared mailbox
 op email is AgentCapabilities.Email<
-  Folders = [
+  TFolders = [
     { folderId: "Inbox" }
   ],
-  SharedMailbox = "legal@contoso.com"
+  TSharedMailbox = "legal@contoso.com"
 >;
 ```
 
@@ -233,8 +233,8 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint;
 
 | Name | Type | Description |
 |------|------|-------------|
-| itemsBySharePointIds | ItemsBySharePointIds | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If both the itemsBySharePointIds and the itemsByUrl properties are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
-| itemsByUrl | ItemsByUrl | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If both the itemsBySharePointIds and the itemsByUrl properties are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
+| itemsBySharePointIds | TItemsBySharePointIds | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If both the itemsBySharePointIds and the itemsByUrl properties are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
+| itemsByUrl | TItemsByUrl | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If both the itemsBySharePointIds and the itemsByUrl properties are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
 
 ### Models
 
@@ -250,11 +250,8 @@ Contains one or more object identifiers that identify a SharePoint or OneDrive r
 | webId | string | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
 | listId | string | Optional. A unique GUID identifier for a document library within a SharePoint site. |
 | itemId | string | Optional. A unique GUID identifier used to scope a folder or file in the document library specified by the listId property. |
-| searchAssociatedSites | boolean | Optional. Indicates whether to enable searching associated sites. This value is only applicable when the siteId value references a SharePoint HubSite. |
-| partType | string | Optional. Indicates the type of part partId refers to. This value is only applicable when the partId value is present. Possible values are: OneNotePart. |
-| partId | string | Optional. A unique GUID identifier used to represent part of a SharePoint item such as a OneNote page. |
 
-#### SharePointUrl
+#### SharePointUrl 
 
 Represents the URL of a SharePoint or OneDrive resource.
 
@@ -272,8 +269,8 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint;
 
 // URL-based filtering for specific sites
 op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
-  ItemsBySharePointIds = [],
-  ItemsByUrl = [
+  TItemsBySharePointIds = [],
+  TItemsByUrl = [
     { url: "https://contoso.sharepoint.com/sites/Engineering" },
     { url: "https://contoso.sharepoint.com/sites/ProductManagement" },
     { url: "https://contoso-my.sharepoint.com/personal/john_contoso_com" }
@@ -282,7 +279,7 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
 
 // ID-based filtering with comprehensive site and document library scoping
 op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
-  ItemsBySharePointIds = [
+  TItemsBySharePointIds = [
     {
       siteId: "12345678-1234-1234-1234-123456789012";
       searchAssociatedSites: true;
@@ -299,7 +296,7 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
       itemId: "12121212-3434-5656-7878-909090909090";
     }
   ],
-  ItemsByUrl = [
+  TItemsByUrl = [
     { url: "https://contoso.sharepoint.com/sites/Engineering" }
   ]
 >;
@@ -324,7 +321,7 @@ op people is AgentCapabilities.People;
 Indicates that the declarative agent can use task-specific models.
 
 ```typespec
-op scenarioModels is AgentCapabilities.ScenarioModels<Models = [
+op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
   { id: "model-id" }
 ]>;
 ```
@@ -333,7 +330,7 @@ op scenarioModels is AgentCapabilities.ScenarioModels<Models = [
 
 | Name | Type | Description |
 |------|------|-------------|
-| models | Models | Required. An array of objects that identifies the task-specific models available to the declarative agent. |
+| models | TModelsById | Required. An array of objects that identifies the task-specific models available to the declarative agent. |
 
 ### Models
 
@@ -351,12 +348,12 @@ Identifies a task-specific model.
 
 ```typespec
 // Single specialized model for analytics
-op scenarioModels is AgentCapabilities.ScenarioModels<Models = [
+op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
   { id: "financial-forecasting-model-v3" }
 ]>;
 
 // Multiple models for different business scenarios
-op scenarioModels is AgentCapabilities.ScenarioModels<Models = [
+op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
   { id: "sentiment-analysis-model" },
   { id: "document-classification-model" },
   { id: "risk-assessment-model" }
@@ -375,7 +372,7 @@ op teamsMessages is AgentCapabilities.TeamsMessages;
 
 | Name | Type | Description |
 |------|------|-------------|
-| urls | TeamsMessagesByUrl | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
+| urls | TUrls | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
 
 ### Models
 
@@ -396,14 +393,14 @@ Identifies a Teams channel, team, or meeting chat.
 op teamsMessages is AgentCapabilities.TeamsMessages;
 
 // Teams messages limited to specific channels and chats
-op teamsMessages is AgentCapabilities.TeamsMessages<TeamsMessagesByUrl = [
+op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
   { url: "https://teams.microsoft.com/l/channel/19%3a123abc...%40thread.skype/General?groupId=12345&tenantId=67890" },
   { url: "https://teams.microsoft.com/l/chat/19%3ameeting_abc123...%40thread.v2/0?context=%7b%22Tid%22%3a%22...%22%7d" },
   { url: "https://teams.microsoft.com/l/channel/19%3a456def...%40thread.tacv2/Engineering?groupId=54321&tenantId=09876" }
 ]>;
 
 // Teams messages for project-specific channels
-op teamsMessages is AgentCapabilities.TeamsMessages<TeamsMessagesByUrl = [
+op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
   { url: "https://teams.microsoft.com/l/channel/19%3aprojectA...%40thread.tacv2/Development?groupId=11111&tenantId=22222" },
   { url: "https://teams.microsoft.com/l/channel/19%3aprojectA...%40thread.tacv2/Testing?groupId=11111&tenantId=22222" },
   { url: "https://teams.microsoft.com/l/chat/19%3astandup_daily...%40thread.v2/0?context=%7b%22Tid%22%3a%22...%22%7d" }
@@ -422,7 +419,7 @@ op webSearch is AgentCapabilities.WebSearch;
 
 | Name | Type | Description |
 |------|------|-------------|
-| sites | Sites | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. |
+| sites | TSites | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. |
 
 ### Models
 
@@ -443,7 +440,7 @@ Indicates a site that a declarative agent can search for content.
 op webSearch is AgentCapabilities.WebSearch;
 
 // Web search limited to specific documentation sites
-op webSearch is AgentCapabilities.WebSearch<Sites = [
+op webSearch is AgentCapabilities.WebSearch<TSites = [
   {
     url: "https://learn.microsoft.com";
   },
@@ -456,7 +453,7 @@ op webSearch is AgentCapabilities.WebSearch<Sites = [
 ]>;
 
 // Web search for company-specific resources
-op webSearch is AgentCapabilities.WebSearch<Sites = [
+op webSearch is AgentCapabilities.WebSearch<TSites = [
   {
     url: "https://company.com/knowledge-base";
   },
