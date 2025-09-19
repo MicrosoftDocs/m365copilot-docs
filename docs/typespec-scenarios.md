@@ -102,7 +102,7 @@ namespace KnowledgeWorkerAgent {
 
 **What it does**: This agent allows employees to report facility issues (broken equipment, lighting problems, HVAC issues) and check the status of existing repair requests. The repairs API is publicly accessible and doesn't require authentication, making it easy for anyone to report issues.
 
-### [main.tsp](#tab/main.)
+### [main.tsp](#tab/main)
 ```typespec
 import "@typespec/http";
 import "@typespec/openapi3";
