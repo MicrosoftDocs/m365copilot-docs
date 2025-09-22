@@ -53,6 +53,10 @@ If you prefer not to use the Agents Toolkit, you can clone a sample in GitHub or
 
 To get started, see the [Agents SDK quickstart](/microsoft-365/agents-sdk/create-test-basic-agent?tabs=csharp).
 
+## Deploy your agent
+
+Deploying your agent is dependent on your choice of platform. For example, to deploy to Azure, you can follow the steps in [Deploy your agent to Azure manually](/microsoft-365/agents-sdk/deploy-azure-bot-service-manually). For other platforms, see the platform documentation for deploying web apps.
+
 ## Related content
 
 - [Managing Turns in the Agents SDK](/microsoft-365/agents-sdk/managing-turns)
