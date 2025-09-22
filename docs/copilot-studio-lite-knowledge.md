@@ -274,6 +274,9 @@ When you enable this feature, the agent answers simple questions that don't requ
 
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
 
+> [!NOTE]
+> The lite experience in Copilot Studio for Microsoft 365 does not support blocking general AI knowledge from your agent. For stricter control over knowledge sources, you must use the full experience in Copilot. For more information, see [Orchestrate agent behavior with generative AI](microsoft-copilot-studio/advanced-generative-actions).
+
 ## Related content
 
 - [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
