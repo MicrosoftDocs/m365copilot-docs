@@ -42,7 +42,7 @@ Here are practical examples demonstrating TypeSpec for Microsoft 365 Copilot syn
 
 ### Basic declarative agent
 
-```typespec
+```typescript
 @agent(
   "Customer Support Assistant",
   "An AI agent that helps with customer support inquiries and ticket management"
@@ -63,7 +63,7 @@ namespace CustomerSupportAgent {
 
 ### Agent with capabilities
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
 
@@ -100,7 +100,7 @@ namespace MyAgent {
 
 ### API plugin with operations
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
 

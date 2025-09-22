@@ -85,6 +85,7 @@ Unlike the low-code solution that uses a Power Platform connector to connect an 
 The choice between JSON manifests and TypeSpec depends on your development preferences and project complexity:
 
 **Use TypeSpec when:**
+
 - You prefer a code-first approach with strong typing and IntelliSense support
 - Your API surfaces are complex with many endpoints, nested schemas, or intricate authentication patterns
 - You want automatic validation and manifest generation to reduce configuration errors
@@ -92,6 +93,7 @@ The choice between JSON manifests and TypeSpec depends on your development prefe
 - You value maintainable, readable code over raw JSON configurations
 
 **Use JSON manifests when:**
+
 - You prefer direct control over the exact manifest structure
 - You're working with simple agents that have minimal capabilities
 - You're migrating existing JSON-based configurations

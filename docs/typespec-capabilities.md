@@ -1,6 +1,6 @@
 ---
-title: "Declarative agent capabilities using TypeSpec for Microsoft 365 Copilot"
-description: "Learn how to define capabilities for declarative agents using TypeSpec, including web search, OneDrive/SharePoint integration, Teams messages, email, Copilot connectors, and more."
+title: Declarative agent capabilities using TypeSpec for Microsoft 365 Copilot
+description: Learn how to define capabilities for declarative agents using TypeSpec, including web search, OneDrive/SharePoint integration, Teams messages, email, Copilot connectors, and more.
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
@@ -8,9 +8,9 @@ ms.date: 09/18/2025
 ms.topic: reference
 ---
 
-<!-- markdownlint-disable MD024 MD059 -->
+<!-- markdownlint-disable MD024 -->
 
-# Capabilities of TypeSpec for Microsoft 365 Copilot
+# Declarative agent capabilities in TypeSpec for Microsoft 365 Copilot
 
 TypeSpec for Microsoft 365 Copilot provides built-in capabilities that enable declarative agents to access Microsoft 365 services and external resources. Available capabilities include **CodeInterpreter**, **CopilotConnectors**, **Email**, **GraphicArt**, **OneDriveAndSharePoint**, **People**, **ScenarioModels**, **TeamsMessages**, and **WebSearch**. Each capability can be configured with specific parameters to control scope.
 
@@ -20,13 +20,13 @@ TypeSpec for Microsoft 365 Copilot provides built-in capabilities that enable de
 
 Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more.
 
-```typespec
+```typescript
 op codeInterpreter is AgentCapabilities.CodeInterpreter;
 ```
 
-### Examples
+### Example
 
-```typespec
+```typescript
 op codeInterpreter is AgentCapabilities.CodeInterpreter;
 ```
 
@@ -34,7 +34,7 @@ op codeInterpreter is AgentCapabilities.CodeInterpreter;
 
 Indicates that the declarative agent can search selected Copilot connectors for grounding information.
 
-```typespec
+```typescript
 op copilotConnectors is AgentCapabilities.CopilotConnectors;
 ```
 
@@ -42,7 +42,7 @@ op copilotConnectors is AgentCapabilities.CopilotConnectors;
 
 | Name | Type | Description |
 |------|------|-------------|
-| connections | TConnections | Optional. An array of objects that identify the Copilot connectors available to the declarative agent. If this property is omitted, all Copilot connectors in the organization are available to the declarative agent. |
+| `TConnections` | Array of [Connection](#connection) | Optional. An array of objects that identify the Copilot connectors available to the declarative agent. If this property is omitted, all Copilot connectors in the organization are available to the declarative agent. |
 
 ### Models
 
@@ -54,12 +54,12 @@ Identifies a Copilot connector.
 
 | Name | Type | Description |
 |------|------|-------------|
-| connectionId | string | Required. The unique identifier of the Copilot connector. |
-| additionalSearchTerms | string | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
-| itemsByExternalId | ExternalIdItem[] | Optional. Specifies specific items by ID in the Copilot connector that are available to the agent. |
-| itemsByPath | PathItem[] | Optional. Filters the items available to the agent by item paths (the itemPath semantic label on items). |
-| itemsByContainerName | ContainerNameItem[] | Optional. Filters the items available to the agent by container name (the containerName semantic label on items). |
-| itemsByContainerUrl | ContainerUrlItem[] | Optional. Filters the items available to the agent by container URL (the containerUrl semantic label on items). |
+| `connectionId` | string | Required. The unique identifier of the Copilot connector. |
+| `additionalSearchTerms` | string | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
+| `itemsByExternalId` | Array of [ExternalIdItem](#externaliditem) | Optional. Specifies specific items by ID in the Copilot connector that are available to the agent. |
+| `itemsByPath` | Array of [PathItem](#pathitem) | Optional. Filters the items available to the agent by item paths (the `itemPath` semantic label on items). |
+| `itemsByContainerName` | Array of [ContainerNameItem](#containernameitem) | Optional. Filters the items available to the agent by container name (the `containerName` semantic label on items). |
+| `itemsByContainerUrl` | Array of [ContainerUrlItem](#containerurlitem) | Optional. Filters the items available to the agent by container URL (the `containerUrl` semantic label on items). |
 
 #### ExternalIdItem
 
@@ -69,7 +69,7 @@ Identifies an external item by its ID.
 
 | Name | Type | Description |
 |------|------|-------------|
-| externalId | string | Required. The unique identifier of the external item. |
+| `externalId` | string | Required. The unique identifier of the external item. |
 
 #### PathItem
 
@@ -79,7 +79,7 @@ Identifies an external item by its path.
 
 | Name | Type | Description |
 |------|------|-------------|
-| path | string | Required. The path (itemPath semantic label value) of the external item. |
+| `path` | string | Required. The path (`itemPath` semantic label value) of the external item. |
 
 #### ContainerNameItem
 
@@ -89,7 +89,7 @@ Identifies a container by its name.
 
 | Name | Type | Description |
 |------|------|-------------|
-| containerName | string | Required. The name of the container (containerName semantic label value) of the external item. |
+| `containerName` | string | Required. The name of the container (`containerName` semantic label value) of the external item. |
 
 #### ContainerUrlItem
 
@@ -99,11 +99,11 @@ Identifies a container by its URL.
 
 | Name | Type | Description |
 |------|------|-------------|
-| containerUrl | string | Required. The URL of the container (containerUrl semantic label value) of the external item. |
+| `containerUrl` | string | Required. The URL of the container (`containerUrl` semantic label value) of the external item. |
 
-### Examples
+### Example
 
-```typespec
+```typescript
 // Basic Copilot connectors with no restrictions
 op copilotConnectors is AgentCapabilities.CopilotConnectors;
 
@@ -161,7 +161,7 @@ op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
 
 Indicates that the declarative agent can search through email messages in the mailboxes that the user has access to.
 
-```typespec
+```typescript
 op email is AgentCapabilities.Email;
 ```
 
@@ -169,8 +169,8 @@ op email is AgentCapabilities.Email;
 
 | Name | Type | Description |
 |------|------|-------------|
-| folderIds | TFolders | Optional. An array of folders objects. |
-| sharedMailbox | TSharedMailbox | Optional. The SMTP address of a shared mailbox. |
+| `TFolders` | Array of [Folder](#folder) | Optional. An array of folders objects. |
+| `TSharedMailbox` | string | Optional. The SMTP address of a shared mailbox. |
 
 ### Models
 
@@ -180,11 +180,11 @@ op email is AgentCapabilities.Email;
 
 | Name | Type | Description |
 |------|------|-------------|
-| folderId | string | Required. The well-known folder name or folder ID of the folder to reference. |
+| `folderId` | string | Required. The well-known folder name or folder ID of the folder to reference. |
 
-### Examples
+### Example
 
-```typespec
+```typescript
 // Basic email search with no restrictions
 op email is AgentCapabilities.Email;
 
@@ -215,13 +215,13 @@ op email is AgentCapabilities.Email<
 
 Indicates that the declarative agent can create images and art based on the text input from the user.
 
-```typespec
+```typescript
 op graphicArt is AgentCapabilities.GraphicArt;
 ```
 
-### Examples
+### Example
 
-```typespec
+```typescript
 op graphicArt is AgentCapabilities.GraphicArt;
 ```
 
@@ -229,7 +229,7 @@ op graphicArt is AgentCapabilities.GraphicArt;
 
 Indicates that the declarative agent can search a user's SharePoint and OneDrive for grounding information.
 
-```typespec
+```typescript
 op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint;
 ```
 
@@ -237,8 +237,8 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint;
 
 | Name | Type | Description |
 |------|------|-------------|
-| itemsBySharePointIds | TItemsBySharePointIds | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If both the itemsBySharePointIds and the itemsByUrl properties are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
-| itemsByUrl | TItemsByUrl | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If both the itemsBySharePointIds and the itemsByUrl properties are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
+| `TItemsBySharePointIds` | Array of [SharePointIds](#sharepointids) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If both the `TItemsBySharePointIds` and the `TItemsByUrl` parameters are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
+| `TItemsByUrl` | Array of [SharePointUrl](#sharepointurl) | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If both the `TItemsBySharePointIds` and the `TItemsByUrl` parameters are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
 
 ### Models
 
@@ -250,12 +250,12 @@ Contains one or more object identifiers that identify a SharePoint or OneDrive r
 
 | Name | Type | Description |
 |------|------|-------------|
-| siteId | string | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
-| webId | string | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
-| listId | string | Optional. A unique GUID identifier for a document library within a SharePoint site. |
-| itemId | string | Optional. A unique GUID identifier used to scope a folder or file in the document library specified by the listId property. |
+| `siteId` | string | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
+| `webId` | string | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
+| `listId` | string | Optional. A unique GUID identifier for a document library within a SharePoint site. |
+| `itemId` | string | Optional. A unique GUID identifier used to scope a folder or file in the document library specified by the listId property. |
 
-#### SharePointUrl 
+#### SharePointUrl
 
 Represents the URL of a SharePoint or OneDrive resource.
 
@@ -263,11 +263,11 @@ Represents the URL of a SharePoint or OneDrive resource.
 
 | Name | Type | Description |
 |------|------|-------------|
-| url | url | Required. An absolute URL to a SharePoint or OneDrive resource. |
+| `url` | string | Required. An absolute URL to a SharePoint or OneDrive resource. |
 
-### Examples
+### Example
 
-```typespec
+```typescript
 // Basic OneDrive and SharePoint with no restrictions
 op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint;
 
@@ -310,13 +310,13 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
 
 Indicates that the declarative agent can search for information about people in the organization.
 
-```typespec
+```typescript
 op people is AgentCapabilities.People;
 ```
 
-### Examples
+### Example
 
-```typespec
+```typescript
 op people is AgentCapabilities.People;
 ```
 
@@ -324,7 +324,7 @@ op people is AgentCapabilities.People;
 
 Indicates that the declarative agent can use task-specific models.
 
-```typespec
+```typescript
 op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
   { id: "model-id" }
 ]>;
@@ -334,7 +334,7 @@ op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
 
 | Name | Type | Description |
 |------|------|-------------|
-| models | TModelsById | Required. An array of objects that identifies the task-specific models available to the declarative agent. |
+| `TModelsById` | Array of [ScenarioModel](#scenariomodel) | Required. An array of objects that identifies the task-specific models available to the declarative agent. |
 
 ### Models
 
@@ -346,11 +346,11 @@ Identifies a task-specific model.
 
 | Name | Type | Description |
 |------|------|-------------|
-| id | string | Required. The unique identifier for the model. |
+| `id` | string | Required. The unique identifier for the model. |
 
-### Examples
+### Example
 
-```typespec
+```typescript
 // Single specialized model for analytics
 op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
   { id: "financial-forecasting-model-v3" }
@@ -368,7 +368,7 @@ op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
 
 Indicates that the declarative agent can search through Teams channels, teams, meetings, 1:1 chats, and group chats.
 
-```typespec
+```typescript
 op teamsMessages is AgentCapabilities.TeamsMessages;
 ```
 
@@ -376,7 +376,7 @@ op teamsMessages is AgentCapabilities.TeamsMessages;
 
 | Name | Type | Description |
 |------|------|-------------|
-| urls | TUrls | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
+| `TUrls` | Array of [TeamsMessagesUrl](#teamsmessagesurl) | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
 
 ### Models
 
@@ -388,11 +388,11 @@ Identifies a Teams channel, team, or meeting chat.
 
 | Name | Type | Description |
 |------|------|-------------|
-| url | url | Required. A well-formatted Teams URL that links to either a Teams channel, meeting chat, group chat, or 1:1 chat. |
+| `url` | string | Required. A well-formatted Teams URL that links to either a Teams channel, meeting chat, group chat, or 1:1 chat. |
 
-### Examples
+### Example
 
-```typespec
+```typescript
 // Basic Teams messages with no restrictions
 op teamsMessages is AgentCapabilities.TeamsMessages;
 
@@ -415,7 +415,7 @@ op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
 
 Indicates that the declarative agent can search the web for grounding information.
 
-```typespec
+```typescript
 op webSearch is AgentCapabilities.WebSearch;
 ```
 
@@ -423,7 +423,7 @@ op webSearch is AgentCapabilities.WebSearch;
 
 | Name | Type | Description |
 |------|------|-------------|
-| sites | TSites | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. |
+| `TSites` | Array of [SiteUrl](#siteurl) | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. |
 
 ### Models
 
@@ -435,11 +435,11 @@ Indicates a site that a declarative agent can search for content.
 
 | Name | Type | Description |
 |------|------|-------------|
-| url | url | Required. An absolute URL to a site to be searched for content. |
+| `url` | string | Required. An absolute URL to a site to be searched for content. |
 
-### Examples
+### Example
 
-```typespec
+```typescript
 // Basic web search with no restrictions
 op webSearch is AgentCapabilities.WebSearch;
 

@@ -1,6 +1,6 @@
 ---
-title: "TypeSpec agents for Microsoft 365 Copilot scenarios"
-description: "End-to-end scenarios using TypeSpec from basic to advanced scenarios, including capabilities, authentication, and real-world examples."
+title: TypeSpec agents for Microsoft 365 Copilot scenarios
+description: End-to-end scenarios using TypeSpec from basic to advanced scenarios, including capabilities, authentication, and real-world examples.
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
@@ -8,15 +8,15 @@ ms.date: 09/18/2025
 ms.topic: reference
 ---
 
-<!-- markdownlint-disable MD024 MD059 -->
+<!-- markdownlint-disable MD024 -->
 
-# How to create TypeSpec agents for Microsoft 365 Copilot
+# TypeSpec agent scenarios for Microsoft 365 Copilot
 
 This guide provides complete examples of creating TypeSpec agents for Microsoft 365 Copilot, from simple basic agents to complex implementations with multiple capabilities and authentication methods.
 
 [!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
 
-## Basic Agent with No Capabilities
+## Basic agent with no capabilities
 
 **Use Case**: A simple agent that provides basic information and greetings without any external integrations or special capabilities.
 
@@ -24,7 +24,7 @@ This guide provides complete examples of creating TypeSpec agents for Microsoft 
 
 ### [main.tsp](#tab/main)
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@typespec/openapi3";
 import "@microsoft/typespec-m365-copilot";
@@ -37,9 +37,9 @@ using TypeSpec.M365.Copilot.Agents;
   description: "A simple agent that provides basic information and assistance"
 })
 @instructions("""
-  You are a helpful assistant that provides basic information and support. 
-  Be friendly, professional, and helpful in all interactions. Provide clear, 
-  concise answers to user questions. If you don't know something, be honest 
+  You are a helpful assistant that provides basic information and support.
+  Be friendly, professional, and helpful in all interactions. Provide clear,
+  concise answers to user questions. If you don't know something, be honest
   about your limitations and suggest alternative ways to find the information.
 """)
 namespace BasicHelperAgent {
@@ -49,19 +49,15 @@ namespace BasicHelperAgent {
 
 ### [actions.tsp](#tab/actions)
 
-```typespec
-// No `actions.tsp` file required in this scenario
-```
+No **actions.tsp** file is required in this scenario.
 
 ### [card.json](#tab/card)
 
-```json
-// No `card.json` file required in this scenario
-```
+No **card.json** file is required in this scenario.
 
 ---
 
-## Agent with Multiple Capabilities
+## Agent with multiple capabilities
 
 **Use Case**: A knowledge worker assistant that can search the web for information, access an organization's SharePoint content, and find information about colleagues in the organization.
 
@@ -69,7 +65,7 @@ namespace BasicHelperAgent {
 
 ### [main.tsp](#tab/main)
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@typespec/openapi3";
 import "@microsoft/typespec-m365-copilot";
@@ -82,11 +78,11 @@ using TypeSpec.M365.Copilot.Agents;
   description: "An intelligent assistant that helps with research, file management, and finding colleagues"
 })
 @instructions("""
-  You are a knowledgeable research assistant specialized in helping knowledge workers 
-  find information efficiently. You can search the web for external research, access 
-  SharePoint documents for organizational content, and help locate colleagues within 
-  the organization. Always provide comprehensive research results, cite your sources, 
-  and suggest additional resources when relevant. When searching for people, respect 
+  You are a knowledgeable research assistant specialized in helping knowledge workers
+  find information efficiently. You can search the web for external research, access
+  SharePoint documents for organizational content, and help locate colleagues within
+  the organization. Always provide comprehensive research results, cite your sources,
+  and suggest additional resources when relevant. When searching for people, respect
   privacy and only share publicly available organizational information.
 """)
 namespace KnowledgeWorkerAgent {
@@ -114,27 +110,23 @@ namespace KnowledgeWorkerAgent {
 
 ### [actions.tsp](#tab/actions)
 
-```typespec
-// No `actions.tsp` file required in this scenario
-```
+No **actions.tsp** file is required in this scenario.
 
 ### [card.json](#tab/card)
 
-```json
-// No `card.json` file required in this scenario
-```
+No **card.json** file is required in this scenario.
 
 ---
 
-## Simple Agent with Anonymous API Action
+## Simple agent with anonymous API action
 
-**Use Case**: A facilities management agent that helps employees report and track maintenance issues using a public repairs API.
+**Use Case**: A facilities management agent that helps users report and track maintenance issues using a public repairs API.
 
-**What it does**: This agent allows employees to report facility issues (broken equipment, lighting problems, HVAC issues) and check the status of existing repair requests. The repairs API is publicly accessible and doesn't require authentication, making it easy for anyone to report issues.
+**What it does**: This agent allows users to report facility issues (broken equipment, lighting problems, etc.) and check the status of existing repair requests. The repairs API is publicly accessible and doesn't require authentication, making it easy for anyone to report issues.
 
 ### [main.tsp](#tab/main)
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@typespec/openapi3";
 import "@microsoft/typespec-m365-copilot";
@@ -149,12 +141,12 @@ using TypeSpec.M365.Copilot.Actions;
   description: "Report and track facility maintenance issues and repair requests"
 })
 @instructions("""
-  You are a facilities management assistant that helps employees report and track 
-  maintenance issues. You can help users submit new repair requests by gathering 
-  all necessary details (description, location, category, priority) and submit 
-  them to the facilities team. You can also check the status of existing repair 
-  tickets and provide updates on progress. Always be helpful in categorizing 
-  issues correctly and setting appropriate priority levels based on safety and 
+  You are a facilities management assistant that helps employees report and track
+  maintenance issues. You can help users submit new repair requests by gathering
+  all necessary details (description, location, category, priority) and submit
+  them to the facilities team. You can also check the status of existing repair
+  tickets and provide updates on progress. Always be helpful in categorizing
+  issues correctly and setting appropriate priority levels based on safety and
   business impact.
 """)
 namespace FacilitiesRepairAgent {
@@ -166,7 +158,7 @@ namespace FacilitiesRepairAgent {
 
 ### [actions.tsp](#tab/actions)
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
 
@@ -240,13 +232,11 @@ namespace RepairsAPI {
 
 ### [card.json](#tab/card)
 
-```json
-// No `card.json` file required in this scenario
-```
+No **card.json** file is required in this scenario.
 
 ---
 
-## Advanced Agent with API Key Authentication
+## Advanced agent with API key authentication
 
 **Use Case**: A repairs management agent that helps teams track and manage facility maintenance tasks using a publicly available API with API key authentication.
 
@@ -254,7 +244,7 @@ namespace RepairsAPI {
 
 ### [main.tsp](#tab/main)
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@typespec/openapi3";
 import "@microsoft/typespec-m365-copilot";
@@ -269,14 +259,14 @@ using TypeSpec.M365.Copilot.Actions;
   description: "Smart repair management agent for tracking and coordinating facility maintenance tasks"
 })
 @instructions("""
-  You are a specialized repairs management assistant that helps teams efficiently track, 
-  organize, and coordinate facility maintenance tasks. You excel at managing repair 
-  workflows including creating detailed repair tickets, assigning tasks to team members, 
-  tracking progress, and providing status updates. You can filter repairs by various 
-  criteria such as assignee, keywords in descriptions, or completion status. Always 
-  provide clear, organized information using tables and cards when displaying repair 
-  data. When creating repairs, gather all necessary details and confirm the information 
-  before submission. Help prioritize urgent repairs and ensure proper task assignment 
+  You are a specialized repairs management assistant that helps teams efficiently track,
+  organize, and coordinate facility maintenance tasks. You excel at managing repair
+  workflows including creating detailed repair tickets, assigning tasks to team members,
+  tracking progress, and providing status updates. You can filter repairs by various
+  criteria such as assignee, keywords in descriptions, or completion status. Always
+  provide clear, organized information using tables and cards when displaying repair
+  data. When creating repairs, gather all necessary details and confirm the information
+  before submission. Help prioritize urgent repairs and ensure proper task assignment
   for optimal team productivity.
 """)
 @conversationStarter(#{
@@ -306,7 +296,7 @@ namespace RepairsAgent {
 
 ### [actions.tsp](#tab/actions)
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
 
@@ -342,8 +332,8 @@ namespace RepairsHub {
     confirmation: #{
       type: "AdaptiveCard",
       title: "Create a new repair",
-      body: """   
-      Creating a new repair with the following details:       
+      body: """
+      Creating a new repair with the following details:
         * **Title**: {{ function.parameters.title }}
         * **Description**: {{ function.parameters.description }}
         * **Assigned To**: {{ function.parameters.assignedTo }}
@@ -361,9 +351,9 @@ namespace RepairsHub {
     confirmation: #{
       type: "AdaptiveCard",
       title: "Update repair",
-      body: """   
-      Updating a repair with the following details:       
-        * **ID**: {{ function.parameters.id }}      
+      body: """
+      Updating a repair with the following details:
+        * **ID**: {{ function.parameters.id }}
         * **Title**: {{ function.parameters.title }}
         * **Description**: {{ function.parameters.description }}
         * **Assigned To**: {{ function.parameters.assignedTo }}
@@ -381,8 +371,8 @@ namespace RepairsHub {
     confirmation: #{
       type: "AdaptiveCard",
       title: "Delete a repair",
-      body: """   
-      Deleting a repair with the following details:       
+      body: """
+      Deleting a repair with the following details:
         * **ID**: {{ function.parameters.id }}
       """
     }
@@ -409,9 +399,9 @@ namespace RepairsHub {
 
 ### [card.json](#tab/card)
 
-```json
-// The card.json file needs to located in the appPackage/cards folder
+The **card.json** file needs to located in the **appPackage/cards** folder.
 
+```json
 {
   "type": "AdaptiveCard",
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -459,7 +449,7 @@ namespace RepairsHub {
 
 ---
 
-## Complex Agent with OAuth2 and GitHub API Integration
+## Complex agent with OAuth2 and GitHub API integration
 
 **Use Case**: A project management agent that helps development teams manage their GitHub repositories, track issues, manage pull requests, and coordinate project activities using GitHub's comprehensive API.
 
@@ -467,7 +457,7 @@ namespace RepairsHub {
 
 ### [main.tsp](#tab/main)
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@typespec/openapi3";
 import "@microsoft/typespec-m365-copilot";
@@ -482,13 +472,13 @@ using TypeSpec.M365.Copilot.Actions;
   description: "Smart project management agent with GitHub integration for issue tracking, pull request management, and project coordination"
 })
 @instructions("""
-  You are an intelligent project management assistant specialized in GitHub workflows 
-  and development team coordination. You excel at managing GitHub repositories including 
-  creating and tracking issues, reviewing pull requests, coordinating project milestones, 
-  and providing insights about development activity. You can help prioritize work, 
-  track progress, manage code reviews, and facilitate team collaboration through GitHub's 
-  project management features. Always consider development best practices, help maintain 
-  code quality through proper review processes, and provide actionable insights to 
+  You are an intelligent project management assistant specialized in GitHub workflows
+  and development team coordination. You excel at managing GitHub repositories including
+  creating and tracking issues, reviewing pull requests, coordinating project milestones,
+  and providing insights about development activity. You can help prioritize work,
+  track progress, manage code reviews, and facilitate team collaboration through GitHub's
+  project management features. Always consider development best practices, help maintain
+  code quality through proper review processes, and provide actionable insights to
   improve team productivity and project delivery.
 """)
 namespace GitHubProjectManager {
@@ -505,7 +495,7 @@ namespace GitHubProjectManager {
 
 ### [actions.tsp](#tab/actions)
 
-```typespec
+```typescript
 import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
 
@@ -724,9 +714,7 @@ namespace GitHubAPI {
 
 ### [card.json](#tab/card)
 
-```json
-// No `card.json` file required in this scenario
-```
+No **card.json** file is required in this scenario.
 
 ---
 
@@ -734,10 +722,10 @@ namespace GitHubAPI {
 
 These examples demonstrate the progression from simple to complex TypeSpec agents:
 
-1. **Basic Agent**: No capabilities, pure conversational AI
-2. **Multi-Capability Agent**: Combines web search, file access, and people search
-3. **Simple API Integration**: Anonymous access to external services
-4. **Authenticated API Integration**: Secure access with API keys
-5. **Complex GitHub Integration**: Advanced OAuth2 with comprehensive GitHub API access for project management
+- [Basic agent](#basic-agent-with-no-capabilities): No capabilities, pure conversational AI
+- [Multi-capability agent](#agent-with-multiple-capabilities): Combines web search, file access, and people search
+- [Simple API integration](#simple-agent-with-anonymous-api-action): Anonymous access to external services
+- [Authenticated API integration](#advanced-agent-with-api-key-authentication): Secure access with API keys
+- [Complex GitHub integration](#complex-agent-with-oauth2-and-github-api-integration): Advanced OAuth2 with comprehensive GitHub API access for project management
 
 Each example builds upon the previous ones, showing how to add capabilities, authentication, and custom actions to create increasingly sophisticated agents for real-world scenarios.
