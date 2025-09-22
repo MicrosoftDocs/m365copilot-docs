@@ -32,7 +32,7 @@ The **Describe** and **Configure** tabs are in sync. You can switch between both
 
 Changes that you make to the agent are saved automatically. When you're satisfied with your agent's behavior and content, choose **Create** on the top right corner of the tool to create your agent.
 
-After the agent is created, choose **Go to agent** in Copilot to chat with the agent. You can return to your agent from the right rail in Copilot.
+After the agent is created, choose **Go to agent** in Copilot to chat with the agent. You can return to your agent from the left navigation pane in Copilot.
 
 ## Related content
 
