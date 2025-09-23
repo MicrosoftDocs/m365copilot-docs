@@ -95,7 +95,7 @@ Microsoft 365 provides a rich set of developer resources for extending Microsoft
 
 ### Copilot developer mode
 
-Microsoft 365 Copilot [developer mode](./debugging-agents-copilot-studio) provides a way to test if and when the orchestrator uses your capabilities or selects your action with different prompts. When you enable developer mode from the Copilot chat prompt, a card with debug information is returned whenever the orchestrator searches specifically within your capabilities or actions to respond to a prompt.
+Microsoft 365 Copilot [developer mode](debugging-agents-copilot-studio.md) provides a way to test if and when the orchestrator uses your capabilities or selects your action with different prompts. When you enable developer mode from the Copilot chat prompt, a card with debug information is returned whenever the orchestrator searches specifically within your capabilities or actions to respond to a prompt.
 
 ## Microsoft security, trust, and commitment to Responsible AI
 

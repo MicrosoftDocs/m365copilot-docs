@@ -104,4 +104,4 @@ Use Microsoft Copilot Studio to create conversational actions that retrieve and 
 - [Create a connector action (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context)
 - [Create conversational actions](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context)
 - [Use Power Automate flow actions (preview)](/power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context)
-- [Test your agent with Copilot developer mode](./debugging-agents-copilot-studio) to verify if and how the copilot orchestrator selects your actions for use in response to given prompts.
+- [Test your agent with Copilot developer mode](debugging-agents-copilot-studio.md) to verify if and how the copilot orchestrator selects your actions for use in response to given prompts.

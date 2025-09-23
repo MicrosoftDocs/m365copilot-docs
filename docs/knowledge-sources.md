@@ -53,7 +53,7 @@ For information about how to add SharePoint knowledge to your agent in Copilot S
 Web search enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, you can have your agent return any web data in its responses. You can also scope the web search to up to four public websites.
 
 > [!IMPORTANT]
-> Organization administrators can disable web search for Copilot and all agents inside their organization. If your administrators disable web search, agents with web search enabled don't report an error and don't include web searches in their knowledge. [Developer mode debug cards](debugging-agents-copilot-studio) indicate that web search is enabled if the agent has enabled it, even if your administrators disabled it. For more information, see [Manage Microsoft 365 Copilot scenarios in the Microsoft 365 admin center](/copilot/microsoft-365/microsoft-365-copilot-page#web-search-for-microsoft-365-copilot-and-microsoft-copilot).
+> Organization administrators can disable web search for Copilot and all agents inside their organization. If your administrators disable web search, agents with web search enabled don't report an error and don't include web searches in their knowledge. [Developer mode debug cards](debugging-agents-copilot-studio.md) indicate that web search is enabled if the agent has enabled it, even if your administrators disabled it. For more information, see [Manage Microsoft 365 Copilot scenarios in the Microsoft 365 admin center](/copilot/microsoft-365/microsoft-365-copilot-page#web-search-for-microsoft-365-copilot-and-microsoft-copilot).
 
 ### Add web and scoped web search
 

@@ -341,7 +341,7 @@ The declarative agent has access to Copilot connectors content to generate its a
 You completed the declarative agent guide for Microsoft 365 Copilot. Now that you're familiar with using TypeSpec to build a declarative agent, you can learn more in the following articles.
 
 - Learn how to [write effective instructions](declarative-agent-instructions.md) for your agent.
-- Test your agent with [Copilot developer mode](debugging-agents-copilot-studio) to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
+- Test your agent with [Copilot developer mode](debugging-agents-copilot-studio.md) to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
 - Get answers to [frequently asked questions](transparency-faq-declarative-agent.md).
 - Learn about an alternative method of building declarative agents with [Copilot Studio](copilot-studio-lite.md).
 
