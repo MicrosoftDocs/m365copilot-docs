@@ -14,12 +14,13 @@ You can share the agents you create using the Copilot Studio lite experience in 
 
 This article describes how to share and manage agents you build with Copilot Studio. To publish an agent across multiple channels, you need to use the Copilot Studio full experience. For more information, see [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
-> [!NOTE]
-> **Sharing** an agent is intended for limited, direct access to it. This approach is ideal for collaborating or getting feedback as you create your agent, but can't be used for formal deployment or integration.
+## Differences between sharing and publishing agents
+
+Sharing an agent is intended for limited, direct access to it. This approach is ideal for collaborating or getting feedback as you create your agent, but can't be used for formal deployment or integration.
 
 The following table highlights the key differences between publishing and sharing your declarative agents.
 
-| Feature  | Sharing | Publishing |
+| Aspect  | Sharing | Publishing |
 | ------- | ------- | ------- |
 | **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. | Formal deployment for broad use, integration, and scale across organization or channels (for example, Teams, Copilot). |
 | **Mechanism** | Owner/co-owners use **Manage Sharing** to specify up to 98 users by name or email. Shared users receive direct access but agent remains private and not broadly discoverable. | Owner/co-owners select **Publish** in Copilot Studio, choose target channel (Teams, Copilot, and more), and complete any required approval flows. Agent becomes discoverable and accessible to intended audience. |
@@ -34,6 +35,8 @@ The following table highlights the key differences between publishing and sharin
 To share your agent, after you [build and test](copilot-studio-lite-build.md) it in the Copilot Studio lite experience, choose **Create**. A pop-up window displays a sharable link for your agent. By default, the link displayed only works for the person who created the agent. To share the agent with others, select **Change sharing settings** and specify who should have access.
 
  :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
+
+The following table describes the available sharing options.
 
 | Sharing option | Description |
 | -------------- |------------ |
