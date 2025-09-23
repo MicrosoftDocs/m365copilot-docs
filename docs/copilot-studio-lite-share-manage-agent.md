@@ -1,6 +1,6 @@
 ---
-title: Share and manage agents built with the lite experience in Copilot Studio
-description: Learn how to share and manage agents built with Copilot Studio.
+title: Share and manage agents built with the Copilot Studio lite experience
+description: Learn how to share and manage agents built with lite experience of Copilot Studio in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
@@ -10,7 +10,9 @@ ms.topic: conceptual
 
 # Share and manage agents
 
-You can share the agents you create using the lite experience of Copilot Studio in Microsoft 365 Copilot. This article describes how to share, and manage agents built using the lite experience within Copilot Studio. For information about how to *publish* an agent, you must use the [Copilot Studio full experience](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
+You can share the agents you create using the Copilot Studio lite experience in Microsoft 365 Copilot with users in your organization. Sharing an agent provides a limited direct access to it for set of users, which is ideal for team collaboration, but doesn't allow for deployment across the organization or integration with other channels.
+
+This article describes how to share and manage agents you build with Copilot Studio. To publish an agent across multiple channels, you need to use the Copilot Studio full experience. For more information, see [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
 > [!NOTE]
 > **Sharing** an agent is intended for limited, direct access to it. This approach is ideal for collaborating or getting feedback as you create your agent, but can't be used for formal deployment or integration.
@@ -29,13 +31,13 @@ The following table highlights the key differences between publishing and sharin
 
 ## Share an agent
 
-Sharing is the last step in [building your agent](copilot-studio-lite-build.md) within the lite experience of Copilot Studio. Once you have built and tested your agent, choose **Create**. A pop-up window displays a sharable link for your agent. By default, the link displayed only works for the person who created the agent. To share the agent with others, select **Change sharing settings** and specify who should have access:
+To share your agent, after you [build and test](copilot-studio-lite-build.md) it in the Copilot Studio lite experience, choose **Create**. A pop-up window displays a sharable link for your agent. By default, the link displayed only works for the person who created the agent. To share the agent with others, select **Change sharing settings** and specify who should have access.
 
  :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
 
 | Sharing option | Description |
 | -------------- |------------ |
-| Anyone in your organization | Anyone in your tenant can use the sharing link to use the agent |
+| Anyone in your organization | Anyone in your tenant can use the sharing link to use the agent. |
 | Specific users in your organization | Specific users or groups can use the sharing link to use the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
 | Only you | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
 
