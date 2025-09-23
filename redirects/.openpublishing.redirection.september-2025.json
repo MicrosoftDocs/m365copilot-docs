@@ -90,5 +90,10 @@
       "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-share-manage",
       "redirect_document_id": false
     },
+    {
+      "source_path_from_root": "/docs/debugging-copilot-agent-vscode.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/debugging-agents-vscode",
+      "redirect_document_id": false
+    }
   ]
 }

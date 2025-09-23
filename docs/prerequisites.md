@@ -4,7 +4,7 @@ description: Learn the prerequisites for extending Microsoft 365 Copilot with ag
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
-ms.date: 09/12/2025
+ms.date: 09/18/2025
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -88,7 +88,7 @@ To enable developer mode, in Copilot Chat, type `-developer on`. To disable deve
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `Microsoft 365 Copilot` session where user has typed `-developer on` to successfully enable developer mode":::
 
-Developer mode is only available within Microsoft 365 Copilot (Copilot for Work) experiences. For more information, see [Debugging agents](debugging-copilot-agent.md).
+Developer mode is only available within Microsoft 365 Copilot (Copilot for Work) experiences. For more information, see [Debugging agents](debugging-agents-copilot-studio.md).
 
 ## Microsoft 365 Copilot developer licenses
 
@@ -135,7 +135,7 @@ The following table lists the agent types and agent capabilities that are availa
 
 \* Usage limits apply to all included features.
 
-\** No costs are incurred by users on a usage-based billing model for access to knowledge sources freely available to those with no usage-based billing.
+\** No costs are incurred for access to knowledge sources that are available to users without usage-based billing.
 
 \*** Users who are configured with usage billing in the Microsoft 365 admin center don't have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
 

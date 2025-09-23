@@ -22,7 +22,7 @@ This section describes the elements of an OpenAPI description and how to optimiz
 
 **OpenAPI Validation**: A good first step is to verify that your OpenAPI description follows the rules of the [OpenAPI Specification](https://swagger.io/resources/open-api/). You can use [Hidi](https://github.com/microsoft/OpenAPI.NET/tree/main/src/Microsoft.OpenApi.Hidi), a command line tool that can validate OpenAPI descriptions among other use cases, or any other tool of choice. A valid OpenAPI description not only works well with Copilot but also makes sure that your OpenAPI description can work with other tools.
 
-**The info section**: The description field is optional in the OpenAPI specification, but it's essential for an OpenAPI description that is meant to extend Copilot skills. Copilot needs the description field to know what the API does and when to use the plugin. When generating a plugin manifest from an OpenAPI document, the description in the info section is used as the description for the plugin manifest. It's thus important to always have a description field that is brief and clear. For example, here's an info section of a repairs shop OpenAPI description.
+**The info section**: The description field is optional in the OpenAPI specification, but it's essential for an OpenAPI description that is meant to extend Copilot skills. Copilot needs the description field to know what the API does and when to use the plugin. When generating a plugin manifest from an OpenAPI document, the description in the info section is used as the description for the plugin manifest. Therefore, it's important to always have a description field that is brief and clear. For example, here's an info section of a repairs shop OpenAPI description.
 
 ```yaml
 info:

@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 09/22/2025
 ---
 
 # Add knowledge sources to your declarative agent in Copilot Studio
@@ -22,15 +22,15 @@ To add knowledge sources to your agent:
 
 1. In Microsoft 365 Copilot, choose **Create agent**, and go to the **Configure** tab.
 2. In the **Knowledge** section, use one of the following methods to add knowledge sources:
-   * **Search bar** - Type keywords to search for SharePoint items.
-   * **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
-   * **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
+   - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
+   - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
+   - **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
 3. Select the items to include. You can add:
-   * Up to four public website URLs.
-   * SharePoint files, folders, or sites.
-   * Up to five Teams chat URLs.
-   * Embedded files uploaded from your device.
-   * Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
+   - Up to four public website URLs.
+   - SharePoint files, folders, or sites.
+   - Up to five Teams chat URLs.
+   - Embedded files uploaded from your device.
+   - Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
   
   :::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-select-knowledge.png" alt-text="A screenshot of the Knowledge section of the Configure tab with the Picker UI showing.":::
 
@@ -273,6 +273,9 @@ Some user requests don't require knowledge-based searches; the agent can respond
 When you enable this feature, the agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
 
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
+
+> [!NOTE]
+> The lite experience in Copilot Studio for Microsoft 365 doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use the full experience in Copilot. For more information, see [Orchestrate agent behavior with generative AI](https://learn.microsoft.com/microsoft-copilot-studio/advanced-generative-actions).
 
 ## Related content
 
