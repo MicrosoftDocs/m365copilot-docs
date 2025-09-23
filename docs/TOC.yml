@@ -197,7 +197,11 @@ items:
     - name: Localize your agent
       href: localize-agents.md
     - name: Test and debug agents
-      href: debugging-copilot-agent.md
+      items:
+          - name: Test agents with Copilot Studio
+            href: debugging-agents-copilot-studio.md
+          - name: Test agents with Agents Toolkit
+            href: debugging-agents-vscode.md
     - name: Convert to custom engine agent
       href: convert-declarative-agent.md
     - name: Responsible AI validation
