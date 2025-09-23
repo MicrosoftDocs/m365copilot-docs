@@ -88,7 +88,7 @@ To enable developer mode, in Copilot Chat, type `-developer on`. To disable deve
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `Microsoft 365 Copilot` session where user has typed `-developer on` to successfully enable developer mode":::
 
-Developer mode is only available within Microsoft 365 Copilot (Copilot for Work) experiences. For more information, see [Debugging agents](debugging-copilot-agent.md).
+Developer mode is only available within Microsoft 365 Copilot (Copilot for Work) experiences. For more information, see [Debugging agents](debugging-agents-copilot-studio).
 
 ## Microsoft 365 Copilot developer licenses
 
