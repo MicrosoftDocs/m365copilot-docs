@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 09/26/2025
 ---
 
-# Use developer mode to test and debug agents
+# Use developer mode in Copilot Studio to test and debug agents
 
 Testing is an important part of the process of developing [declarative agents](overview-declarative-agent.md) for Microsoft 365 Copilot. You can use *developer mode* in the full experience of Copilot Studio wto test your agent and verify whether and how the Copilot orchestrator selects your knowledge sources for use in response to given prompts.
 
