@@ -82,20 +82,20 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ## Manage agents
 
-There are three methods for accessing the agent management features in the lite experience of Copilot Studio for Microsoft 365.
+You can access the agent management features in the Copilot Studio lite experience in three ways.
 
-**To manage an agent you've recently accessed**, select the **More options** ellipses (**...**) in the left navigation pane next to the name of the agent you want to manage.
+To manage an agent you recently accessed, select the **More options** ellipses (**...**) in the left pane next to the name of the agent you want to manage.
 
-**To manage an agent that you haven't accessed recently, either:**
+To manage an agent that you haven't accessed recently, either:
 
-- Select **All agents** in the left navigation pane.
+- Select **All agents** in the left pane.
 - In the **Agent Store**, under **Your agents**, choose **See more** and then select the ellipses (**...**), next to the name of the agent you want to manage.
 
 :::image type="content" source="assets/images/manage-agent-agent-store-see-more.png" alt-text="Screenshot of Agent Store":::
 
-**OR:**
+Or:*
 
-- Select **Create agents** in the left navigation pane and then select the **My agents** tab.
+- Select **Create agents** in the left pane and then select the **My agents** tab.
 - On the **My agents** tab, select the **More options** ellipses (**...**) next to the name of the agent you want to manage.
 
 :::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of the lite experience in Copilot Studio for Microsoft 365 Copilot.":::
@@ -124,14 +124,14 @@ You can delete agents you create. Once you delete an agent, however, you won't b
 >[!IMPORTANT]
 > Deleting an agent is permanent and can't be reversed.
 
-**To delete an agent:**
+To delete an agent:
 
 - Access the list of your agents using one of the methods described in [Manage agents](#manage-agents).
 - Select the ellipses (**...**) and then choose **Delete** (the garbage can icon).
 
 ### Reassign ownership of an agent
 
-The lite experience in Copilot Studio for Microsoft 365 Copilot doesn't support transferring ownership of declarative agents to another user. For information about transferring ownership, see [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell).
+The Copilot Studio lite experience doesn't support transferring ownership of declarative agents to another user. For information about transferring ownership, see [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell).
 
 ## Troubleshooting
 
