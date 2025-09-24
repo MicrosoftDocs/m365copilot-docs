@@ -159,17 +159,15 @@ items:
         href: copilot-studio-lite-publish-agent.md
       - name: Availability and language support
         href: copilot-studio-lite-availability.md
-      - name: Build with Copilot Studio full experience
+      - name: Use the Copilot Studio full experience
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
-        - name: Add actions
-          items:
-          - name: Copilot Studio actions
-            href: overview-business-applications.md
-          - name: Power Automate flow actions
-            href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
-          - name: Prompts
-            href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+        - name: Copilot Studio actions
+          href: overview-business-applications.md
+        - name: Power Automate flow actions
+          href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
+        - name: Prompts
+          href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
     - name: Write effective instructions
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
