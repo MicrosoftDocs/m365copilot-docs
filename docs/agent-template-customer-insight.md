@@ -62,4 +62,4 @@ You can enhance the functionality of your Customer Insights Assistant agents in 
 
 - [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents](copilot-studio-lite-publish-agent.md)
+- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
