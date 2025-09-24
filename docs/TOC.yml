@@ -33,6 +33,8 @@ items:
   items:
   - name: Agents overview
     href: agents-overview.md
+  - name: Best practices for building agents
+    href: declarative-agent-best-practices.md
   - name: Build a declarative agent
     items:
     - name: Declarative agents overview
