@@ -26,9 +26,7 @@ If your agent fails RAI validation, you can't publish it until the failures are 
 - **Encourage harmful actions** - Encourages or supports hate, violence, sexual, self-harm, or any illegal or unethical actions, such as anarchy, terrorism, hacking, and so on.
 - **Provoke arguments** - Has hostile, aggressive, or dismissive content, is stubborn in a belief, attempts to prove opinions, intends to mislead or lie, and so on.
 - **Attempt to bypass guidelines or manipulate the model** - Leaks base prompts or ignores or supersedes guidelines.
-- **Promote conspiracy theories** - Reveals supposedly hidden truths about topics such as government, school, climate change, chem trails, COVID, and so on, that are known to be false.
 - **Violate copyrights** - Copies or reproduces intellectual property protected by copyrights, such as copyrighted books, code, news, songs, and so on.
-- **Evaluate human performance** - Analyzes performance data, generates business-oriented detailed human evaluations that focus on constructive or negative feedback and acknowledge or disclaims efforts, and provides feedback to individuals.
 
 ## Validation example
 
