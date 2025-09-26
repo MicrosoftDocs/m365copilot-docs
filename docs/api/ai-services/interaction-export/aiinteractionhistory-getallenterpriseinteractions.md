@@ -1,7 +1,7 @@
 ---
 title: "aiInteractionHistory: getAllEnterpriseInteractions"
 description: Get all Microsoft 365 Copilot interaction data, including user prompts to Copilot and Copilot responses.
-ms.date: 08/08/2025
+ms.date: 09/26/2025
 author: bkeerthivasa
 ms.author: bkeerthivasa
 ms.localizationpriority: high
@@ -24,8 +24,8 @@ Get all Microsoft 365 Copilot interaction data, including user prompts to Copilo
 To learn more about how to use the Microsoft Teams export APIs to export content, see [Export content with the Microsoft Teams export APIs](/microsoftteams/export-teams-content).
 
 > [!NOTE]
-> It is not possible to extract interactions for users that engage with the free Copilot Chat offerings via this API.
-> There are no programmatic methods for exporting these interactions, with the only alternative being an eDiscovery search.
+> - You can't use this API to extract interactions for users who engage with Copilot Chat offerings without usage billing enabled or a Microsoft 365 Copilot license.
+> - You can't export Copilot interactions programmatically. The only alternative is an eDiscovery search.
 
 ## Permissions
 
