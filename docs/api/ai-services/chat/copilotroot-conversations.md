@@ -23,11 +23,11 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 | Permission type                        | Least privileged permissions    | Higher privileged permissions |
 |:---------------------------------------|:---------------------------------------------|:------------------------------|
-| Delegated (work or school account)     | Files.Read.All, Sites.Read.All\*               | ExternalItem.Read.All         |
+| Delegated (work or school account)     | Sites.Read.All, Mail.Read, People.Read.All, OnlineMeetingTranscript.Read.All, Chat.Read, ChannelMessage.Read.All, ExternalItem.Read.All\*               | Not supported.         |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
 | Application                            | Not supported.               | Not supported.                |
 
-\* You need both Files.Read.All and Sites.Read.All permissions to retrieve SharePoint and OneDrive content.
+\* You need all of these Microsoft Graph permissions to successfully call the Microsoft 365 Copilot Chat API.
 
 ## HTTP request
 
