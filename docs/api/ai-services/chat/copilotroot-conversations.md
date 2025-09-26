@@ -77,7 +77,13 @@ The following table lists the optional and required parameters that you can use 
 
 ## Response
 
-If successful, this action returns a `200 OK` response code and a [retrievalResponse](resources/retrievalresponse.md) in the response body.
+### Creating a conversation with the Microsoft 365 Copilot Chat API
+
+If successful, this action returns a `201 Created` response code and a [copilotConversation](todo.md) in the response body.
+
+### Continuing a synchronous or streamed conversation with the Microsoft 365 Copilot Chat API
+
+If successful, this action returns a `200 OK` response code and a [copilotConversation](todo.md) in the response body.
 
 ## Examples
 
