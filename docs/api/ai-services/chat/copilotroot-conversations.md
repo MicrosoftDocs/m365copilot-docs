@@ -31,8 +31,22 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
+To create conversations with the Chat API, you will make the following HTTP request.
+
 ```http
-POST https://graph.microsoft.com/beta/copilot/retrieval
+POST https://graph.microsoft.com/beta/copilot/conversations
+```
+
+To continue synchronous conversations with the Chat API, you will make the following HTTP request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/conversations/{conversationId}/chat
+```
+
+To continue streamed conversations with the Chat API, you will make the following HTTP request.
+
+```http
+POST https://graph.microsoft.com/beta/copilot/conversations/{conversationId}/chatOverStream
 ```
 
 ## Request headers
