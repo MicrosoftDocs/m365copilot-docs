@@ -31,22 +31,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-To create conversations with the Chat API, you will make the following HTTP request.
-
 ```http
 POST https://graph.microsoft.com/beta/copilot/conversations
-```
-
-To continue synchronous conversations with the Chat API, you will make the following HTTP request.
-
-```http
-POST https://graph.microsoft.com/beta/copilot/conversations/{conversationId}/chat
-```
-
-To continue streamed conversations with the Chat API, you will make the following HTTP request.
-
-```http
-POST https://graph.microsoft.com/beta/copilot/conversations/{conversationId}/chatOverStream
 ```
 
 ## Request headers
@@ -62,28 +48,9 @@ POST https://graph.microsoft.com/beta/copilot/conversations/{conversationId}/cha
 
 In the request body, supply an empty JSON body.
 
-### Continuing a synchronous or streamed conversation with the Microsoft 365 Copilot Chat API
-
-In the request body, supply a JSON representation of the parameters.
-
-The following table lists the optional and required parameters that you can use when you call this action.
-
-| Parameter                 | Type                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|:--------------------------|:----------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `message`             | [copilotConversationRequestMessage](todo.md)                                                          | The chat message being sent into the Copilot conversation. Required.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `additionalContext`              | List<[copilotContextMessage](todo.md)>                                                          | Extra context for the Copilot conversation. This should be used for additional grounding. Optional.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `locationHint` | [copilotConversationLocation](todo.md) | User location information. Required.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `contextualResources`        | [copilotContextualResources](todo.md)                                                          | This can be used to provide OneDrive and SharePoint files that should be used as context, and/or toggling web search grounding Optional. |
-
 ## Response
 
-### Creating a conversation with the Microsoft 365 Copilot Chat API
-
 If successful, this action returns a `201 Created` response code and a [copilotConversation](todo.md) in the response body.
-
-### Continuing a synchronous or streamed conversation with the Microsoft 365 Copilot Chat API
-
-If successful, this action returns a `200 OK` response code and a [copilotConversation](todo.md) in the response body.
 
 ## Examples
 
