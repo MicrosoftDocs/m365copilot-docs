@@ -5,6 +5,8 @@ items:
   href: copilotroot-conversations.md
 - name: Continue synchronous conversations
   href: copilotroot-conversationschat.md
+- name: Continue streamed conversations
+  href: copilotroot-conversationschatOverStream.md
 - name: Complex types
   items:
   - name: Connection item
