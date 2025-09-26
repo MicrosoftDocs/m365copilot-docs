@@ -62,7 +62,7 @@ POST https://graph.microsoft.com/beta/copilot/conversations/{conversationId}/cha
 
 In the request body, supply an empty JSON body.
 
-### Continue a synchronous or streamed conversation with the Microsoft 365 Copilot Chat API
+### Continuing a synchronous or streamed conversation with the Microsoft 365 Copilot Chat API
 
 In the request body, supply a JSON representation of the parameters.
 
