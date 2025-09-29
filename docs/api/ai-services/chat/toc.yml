@@ -19,6 +19,10 @@ items:
     href: resources/copilotconversationlocation.md
   - name: Copilot contextual resources
     href: resources/copilotcontextualresources.md
+  - name: Copilot file
+    href: resources/copilotfile.md
+  - name: Copilot web context
+    href: resources/copilotwebcontext.md
   - name: Copilot conversation message
     href: resources/copilotconversationmessage.md
   - name: Copilot conversation attribution
