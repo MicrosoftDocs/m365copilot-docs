@@ -19,8 +19,8 @@ Optional contexual resources being sent into a Copilot conversation through the 
 
 | Property       | Type   | Description                                                    |
 |:---------------|:-------|:---------------------------------------------------------------|
-| `files` | [copilotFile](todo.md) collection | A collection of OneDrive and SharePoint file URIs that should be used as context when responding to the chat message. |
-| `webContext` | [copilotWebContext](todo.md) | Determines if web search grounding can be used to respond to the chat message. |
+| `files` | [copilotFile](copilotfile.md) collection | A collection of OneDrive and SharePoint file URIs that should be used as context when responding to the chat message. |
+| `webContext` | [copilotWebContext](copilotwebcontext.md) | Determines if web search grounding can be used to respond to the chat message. |
 
 ## Relationships
 
