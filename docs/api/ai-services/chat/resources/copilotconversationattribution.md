@@ -21,7 +21,7 @@ Describes an attribution in a chat message from the Microsoft 365 Copilot Chat A
 |:---------------------|:--------|:-------------------------------------------------------------------|
 | `attributionType`              | [copilotConversationAttributionType](#copilotconversationattributiontype-enumeration)  | The attribution type (either citation or annotation). |
 | `providerDisplayName`        | String  | Display text for the provider of the attribution.                         |
-| `attributionSource`        | String | [copilotConversationAttributionSource](#copilotconversationattributionsource-enumeration)    |
+| `attributionSource`        | [copilotConversationAttributionSource](#copilotconversationattributionsource-enumeration) | The attribution source (either grounding or model).    |
 | `seeMoreWebUrl`           | String   | The URL for the attribution.            |
 | `imageWebUrl` | String  | The URL for the attribution image, if included.                                   |
 | `imageFavIcon`            | String  | The base64-encoded favicon image URL for the attribution.        |
