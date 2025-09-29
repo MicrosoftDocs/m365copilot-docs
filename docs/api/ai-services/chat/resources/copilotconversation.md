@@ -24,7 +24,7 @@ Represents a Copilot conversation being created or continued through the [Micros
 | `displayName` | String | The display name for the Copilot conversation. |
 | `state` | [copilotConversationState](todo.md) | The Copilot conversation state. |
 | `turnCount` | Int32 | The latest turn count in the conversation when the last message was added. |
-| `messages` | [copilotConversationResponseMessage](todo.md) collection | The latest turn count in the conversation when the last message was added. |
+| `messages` | [copilotConversationeMessage](todo.md) collection | The latest turn count in the conversation when the last message was added. |
 
 ## Relationships
 
@@ -46,7 +46,7 @@ The following JSON representation shows the resource type.
   "turnCount": "Int32",
   "messages": [
     {
-      "@odata.type": "#microsoft.graph.copilotConversaionResponseMessage"
+      "@odata.type": "#microsoft.graph.copilotConversationMessage"
     }
   ]
 }
