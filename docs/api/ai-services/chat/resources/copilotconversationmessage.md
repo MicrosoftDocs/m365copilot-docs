@@ -36,7 +36,7 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-  "@odata.type": "#microsoft.graph.copilotConversaionMessage",
+  "@odata.type": "#microsoft.graph.copilotConversationMessage",
   "id": "String",
   "text": "String",
   "createdDateTime": "DateTimeOffset",
@@ -47,7 +47,7 @@ The following JSON representation shows the resource type.
   ],
   "attributions": [
     {
-      "@odata.type": "#microsoft.graph.copilotConversaionAttribution"
+      "@odata.type": "#microsoft.graph.copilotConversationAttribution"
     }
   ],
   "sensitivityLabel": {
