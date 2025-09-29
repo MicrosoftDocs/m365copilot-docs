@@ -1,6 +1,6 @@
 ---
-title: copilotConversationState resource type
-description: Represents the state of a Copilot conversation being created or continued through the Microsoft 365 Copilot Chat API.
+title: copilotConversationMessage resource type
+description: Represents a message in a Copilot conversation being continued through the Microsoft 365 Copilot Chat API.
 author: muwagerikpe
 ms.author: muwagerikpe
 ms.topic: reference
@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
 
-# copilotConversation resource type
+# copilotConversationMessage resource type
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Represents the state of a Copilot conversation being created or continued through the [Microsoft 365 Copilot Chat API](../copilotroot-conversations.md).
+Represents a message in a Copilot conversation being continued through the [Microsoft 365 Copilot Chat API](../copilotroot-conversations.md).
 
 ## Properties
 
