@@ -31,7 +31,7 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-  "@odata.type": "#microsoft.graph.copilotConversaionRequestMessageParameter",
+  "@odata.type": "#microsoft.graph.copilotConversationRequestMessageParameter",
   "text": "String"
 }
 ```
