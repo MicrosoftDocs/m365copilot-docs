@@ -11,10 +11,10 @@ items:
   items:
   - name: Copilot conversation
     href: resources/copilotconversation.md
+  - name: Copilot conversation request message parameter
+    href: resources/copilotconversationrequestmessageparameter.md
   - name: Copilot conversation message
     href: resources/copilotconversationmessage.md
-  - name: External item configuration
-    href: resources/externalitemconfiguration.md
   - name: Retrieval response
     href: resources/retrievalresponse.md
   - name: Retrieval hit
