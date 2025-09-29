@@ -19,7 +19,8 @@ Optional contexual resources being sent into a Copilot conversation through the 
 
 | Property       | Type   | Description                                                    |
 |:---------------|:-------|:---------------------------------------------------------------|
-| `text` | String | The text of the chat message. Required. |
+| `files` | [copilotFile](todo.md) collection | A collection of OneDrive and SharePoint file URIs that should be used as context when responding to the chat message. |
+| `webContext` | [copilotWebContext](todo.md) | Determines if web search grounding can be used to respond to the chat message. |
 
 ## Relationships
 
@@ -31,7 +32,14 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-  "@odata.type": "#microsoft.graph.copilotConversaionRequestMessageParameter",
-  "text": "String"
+  "@odata.type": "#microsoft.graph.copilotContextualResources",
+  "files": [
+    {
+      "@odata.type": "#microsoft.graph.copilotFile"
+    }
+  ],
+  "webContext": {
+    "@odata.type": "#microsoft.graph.copilotWebContext"
+  }
 }
 ```
