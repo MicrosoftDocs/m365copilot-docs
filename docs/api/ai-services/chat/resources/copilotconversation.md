@@ -45,7 +45,7 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-  "@odata.type": "#microsoft.graph.copilotConversaion",
+  "@odata.type": "#microsoft.graph.copilotConversation",
   "id": "String",
   "createdDateTime": "DateTimeOffset",
   "displayName": "String",
