@@ -59,7 +59,7 @@ The following table lists the optional and required parameters that you can use 
 
 ## Response
 
-If successful, this method returns a stream of server sent events (SSE) with a status of `200 OK` and Content-Type of “text/event-stream”. Each SSE will contain a [copilotConversation](todo.md).
+If successful, this method returns a stream of server sent events (SSE) with a status of `200 OK` and Content-Type of “text/event-stream”. Each SSE will contain a [copilotConversation](resources/copilotconversation.md).
 
 ## Examples
 
