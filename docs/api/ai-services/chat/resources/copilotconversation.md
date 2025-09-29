@@ -53,7 +53,7 @@ The following JSON representation shows the resource type.
   "turnCount": "Int32",
   "messages": [
     {
-      "@odata.type": "#microsoft.graph.copilotConversaionResponseMessage"
+      "@odata.type": "#microsoft.graph.copilotConversationMessage"
     }
   ]
 }
