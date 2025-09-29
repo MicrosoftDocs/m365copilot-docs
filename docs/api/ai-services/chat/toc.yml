@@ -21,7 +21,7 @@ items:
     href: resources/retrievalhit.md
   - name: Retrieval extract
     href: resources/retrievalextract.md
-  - name: Search response metadata dictionary
-    href: resources/searchresourcemetadatadictionary.md
+  - name: Copilot conversation attribution
+    href: resources/copilotconversationattribution.md
   - name: Search sensitivity label info
     href: resources/searchsensitivitylabelinfo.md
