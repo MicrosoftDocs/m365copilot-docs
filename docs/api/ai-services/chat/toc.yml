@@ -13,10 +13,10 @@ items:
     href: resources/copilotconversation.md
   - name: Copilot conversation request message parameter
     href: resources/copilotconversationrequestmessageparameter.md
+  - name: Copilot context message
+    href: resources/copilotcontextmessage.md
   - name: Copilot conversation message
     href: resources/copilotconversationmessage.md
-  - name: Retrieval response
-    href: resources/retrievalresponse.md
   - name: Retrieval hit
     href: resources/retrievalhit.md
   - name: Retrieval extract
