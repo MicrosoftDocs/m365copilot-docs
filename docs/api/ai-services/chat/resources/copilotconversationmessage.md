@@ -19,12 +19,12 @@ Represents a message in a Copilot conversation being continued through the [Micr
 
 | Property       | Type   | Description                                                    |
 |:---------------|:-------|:---------------------------------------------------------------|
-| `id` | String | The identifier for a Copilot conversation. This is used as a path parameter when continuing a synchronous or streamed conversation. |
-| `createdDateTime` | DateTimeOffset | The timestamp when the Copilot conversation was created. |
-| `displayName` | String | The display name for the Copilot conversation. |
-| `state` | [copilotConversationState](copilotconversationstate.md) | The Copilot conversation state. |
-| `turnCount` | Int32 | The latest turn count in the conversation when the last message was added. |
-| `messages` | [copilotConversationMessage](todo.md) collection | The latest turn count in the conversation when the last message was added. |
+| `id` | String | The identifier for the Copilot conversation. This is used as a path parameter when continuing a synchronous or streamed conversation. |
+| `text` | String | The chat message text. This either recaps the submitted prompt or articulates the Microsoft 365 Copilot Chat API's response. |
+| `createdDateTime` | DateTimeOffset | The timestamp when the chat message was created. |
+| `adaptiveCards` | Edm.Untyped collection | List of raw JSON representations of adaptive cards. This property may be empty. |
+| `attributions` | [copilotConversationAttribution](todo.md) collection | The list of attributions (either citations or annotations) included in the chat message response. |
+| `sensitivityLabel` | [searchSensitivityLabelInfo][todo.md] | Defines the highest sensitivity (most restricted) resource used to create the chat message. |
 
 ## Relationships
 
@@ -36,18 +36,22 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-  "@odata.type": "#microsoft.graph.copilotConversaion",
+  "@odata.type": "#microsoft.graph.copilotConversaionMessage",
   "id": "String",
+  "text": "String",
   "createdDateTime": "DateTimeOffset",
-  "displayName": "String",
-  "state": {
-    "@odata.type": "#microsoft.graph.copilotConversaionState"
-  },
-  "turnCount": "Int32",
-  "messages": [
+  "adaptiveCards": [
     {
-      "@odata.type": "#microsoft.graph.copilotConversationMessage"
+      "@odata.type": "#microsoft.graph.Edm.Untyped"
     }
-  ]
+  ],
+  "attributions": [
+    {
+      "@odata.type": "#microsoft.graph.copilotConversaionAttribution"
+    }
+  ],
+  "sensitivityLabel": {
+    "@odata.type": "#microsoft.graph.searchSensitivityLabelInfo"
+  }
 }
 ```
