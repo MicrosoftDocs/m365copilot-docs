@@ -17,10 +17,10 @@ items:
     href: resources/copilotcontextmessage.md
   - name: Copilot conversation location
     href: resources/copilotconversationlocation.md
+  - name: Copilot contextual resources
+    href: resources/copilotcontextualresources.md
   - name: Copilot conversation message
     href: resources/copilotconversationmessage.md
-  - name: Retrieval extract
-    href: resources/retrievalextract.md
   - name: Copilot conversation attribution
     href: resources/copilotconversationattribution.md
   - name: Search sensitivity label info
