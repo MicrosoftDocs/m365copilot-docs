@@ -36,7 +36,18 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-  "@odata.type": "#microsoft.graph.connectionItem",
-  "connectionId": "string"
+  "@odata.type": "#microsoft.graph.copilotConversaion",
+  "id": "String",
+  "createdDateTime": "DateTimeOffset",
+  "displayName": "String",
+  "state": {
+    "@odata.type": "#microsoft.graph.copilotConversaionState"
+  },
+  "turnCount": "Int32",
+  "messages": [
+    {
+      "@odata.type": "#microsoft.graph.copilotConversaionResponseMessage"
+    }
+  ]
 }
 ```
