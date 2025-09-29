@@ -50,7 +50,7 @@ In the request body, supply an empty JSON body.
 
 ## Response
 
-If successful, this action returns a `201 Created` response code and a [copilotConversation](todo.md) in the response body.
+If successful, this action returns a `201 Created` response code and a [copilotConversation](resources/copilotconversation.md) in the response body.
 
 ## Examples
 
