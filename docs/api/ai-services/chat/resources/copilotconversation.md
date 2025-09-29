@@ -22,7 +22,7 @@ Represents a Copilot conversation being created or continued through the [Micros
 | `id` | String | The identifier for a Copilot conversation. This is used as a path parameter when continuing a synchronous or streamed conversation. |
 | `createdDateTime` | DateTimeOffset | The timestamp when the Copilot conversation was created. |
 | `displayName` | String | The display name for the Copilot conversation. |
-| `state` | [copilotConversationState](#copilotConversationState enumeration) | The Copilot conversation state. |
+| `state` | [copilotConversationState](#copilotconversationstate-enumeration) | The Copilot conversation state. |
 | `turnCount` | Int32 | The latest turn count in the conversation when the last message was added. |
 | `messages` | [copilotConversationMessage](todo.md) collection | The latest turn count in the conversation when the last message was added. |
 
@@ -49,13 +49,11 @@ The following JSON representation shows the resource type.
   "id": "String",
   "createdDateTime": "DateTimeOffset",
   "displayName": "String",
-  "state": {
-    "@odata.type": "#microsoft.graph.copilotConversaionState"
-  },
+  "state": "String",
   "turnCount": "Int32",
   "messages": [
     {
-      "@odata.type": "#microsoft.graph.copilotConversationMessage"
+      "@odata.type": "#microsoft.graph.copilotConversaionResponseMessage"
     }
   ]
 }
