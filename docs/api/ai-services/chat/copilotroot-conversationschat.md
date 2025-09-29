@@ -59,7 +59,7 @@ The following table lists the optional and required parameters that you can use 
 
 ## Response
 
-If successful, this action returns a `200 OK` response code and a [copilotConversation](todo.md) in the response body.
+If successful, this action returns a `200 OK` response code and a [copilotConversation](copilotcontextualresources.md) in the response body.
 
 ## Examples
 
