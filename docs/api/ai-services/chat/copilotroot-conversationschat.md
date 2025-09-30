@@ -278,44 +278,28 @@ Content-Type: application/json
 
 ### Example 3: Toggling off web search grounding when sending a chat message to the Microsoft 365 Copilot Chat API
 
-The following example shows how to [batch requests to the Retrieval API](/graph/json-batching?tabs=http). The Retrieval API supports up to 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
+The following example shows how to toggle off web search grounding when sending a chat message to the Chat API. If web search grounding is toggling off, only enterprise search grounding is used to answer a chat message. Toggling web search grounding is a single-turn action.
 
 #### Request
 
 The following example shows the request.
 
 ```http
-POST https://graph.microsoft.com/beta/$batch
-Accept: application/json
+POST https://graph.microsoft.com/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
 Content-Type: application/json
 
 {
-  "requests": [
-    {
-      "id": "1",
-      "method": "POST",
-      "url": "/copilot/retrieval",
-      "body": {
-        "queryString": "How to setup corporate VPN?",
-        "dataSource": "sharePoint"
-      },
-      "headers": {
-        "Content-Type": "application/json"
-      }
-    },
-    {
-      "id": "2",
-      "method": "POST",
-      "url": "/copilot/retrieval",
-      "body": {
-        "queryString": "How to setup corporate VPN?",
-        "dataSource": "externalItem"
-      },
-      "headers": {
-        "Content-Type": "application/json"
-      }
+  "message": {
+    "text": "What is the highest grossing movie at the global box office this year?"
+  },
+  "locationHint": {
+    "timeZone": "America/New_York"
+  },
+  "contextualResources": {
+    "webContext": {
+      "isWebEnabled": false
     }
-  ]
+  }
 }
 ```
 
@@ -328,95 +312,45 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "responses": [
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.copilotConversation",
+  "id": "0d110e7e-2b7e-4270-a899-fd2af6fde333",
+  "createdDateTime": "2025-09-30T20:54:38.6856711Z",
+  "displayName": "What meeting do I have at 9 AM tomorrow morning?",
+  "state": "active",
+  "turnCount": 3,
+  "messages": [
     {
-      "id": "1",
-      "status": 200,
-      "headers": {
-        "Content-Type": "application/json; charset=utf-8"
-      },
-      "body": {
-        "retrievalHits": [
-          {
-            "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
-            "extracts": [
-              {
-                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
-              },
-              {
-                "text": "You will need to sign in with 2FA to access the corporate VPN."
-              }
-            ],
-            "resourceType": "listItem",
-            "resourceMetadata": {},
-            "sensitivityLabel": {
-              "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
-              "displayName": "Confidential\\Any User (No Protection)",
-              "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-              "priority": 4,
-              "color": "#FF8C00",
-              "isEncrypted": false
-            }
-          },
-          {
-            "webUrl": "https://contoso.sharepoint.com/sites/HR/Corporate_VPN.docx",
-            "extracts": [
-              {
-                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
-              },
-              {
-                "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN."
-              }
-            ],
-            "resourceType": "listItem",
-            "resourceMetadata": {},
-            "sensitivityLabel": {
-              "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
-              "displayName": "Confidential\\Any User (No Protection)",
-              "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-              "priority": 4,
-              "color": "#FF8C00",
-              "isEncrypted": false
-            }
-          }
-        ]
+      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
+      "id": "40ec0e9f-d46a-0d57-a3c4-7342d86929d9",
+      "text": "What is the highest grossing movie at the global box office this year?",
+      "createdDateTime": "2025-09-30T20:54:38.6856711Z",
+      "adaptiveCards": [],
+      "attributions": [],
+      "sensitivityLabel": {
+        "sensitivityLabelId": null,
+        "displayName": null,
+        "tooltip": null,
+        "priority": null,
+        "color": null,
+        "isEncrypted": null
       }
     },
     {
-      "id": "2",
-      "status": 200,
-      "headers": {
-        "Content-Type": "application/json; charset=utf-8"
-      },
-      "body": {
-        "retrievalHits": [
-          {
-            "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
-            "extracts": [
-              {
-                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
-              },
-              {
-                "text": "You will need to sign in with 2FA to access the corporate VPN."
-              }
-            ],
-            "resourceType": "externalItem",
-            "resourceMetadata": {}
-          },
-          {
-            "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
-            "extracts": [
-              {
-                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
-              },
-              {
-                "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
-              }
-            ],
-            "resourceType": "externalItem",
-            "resourceMetadata": {}
-          }
-        ]
+      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
+      "id": "9c0a96b9-ccf1-4a50-82ca-1ef7c2776c54",
+      "text": "You asked: **What is the highest grossing movie at the global box office this year?**\n\nCurrently, I do not have access to real-time web search or external box office databases, and there are no internal enterprise documents or files provided that contain this information. As a result, I cannot provide the latest global box office data for this year.\n\n**How you can find this information:**\n- The most reliable sources for up-to-date box office rankings are websites like Source1, Source2, or Source3. These sites regularly update global box office statistics and highlight the top-grossing films of the year.\n\nIf you have a specific internal report or file related to box office performance, please let me know where to find it, and I’ll be happy to summarize the relevant details for you! Would you like tips on how to track box office trends or insights into recent movie industry performance?",
+      "createdDateTime": "2025-09-30T20:54:45.2785423Z",
+      "adaptiveCards": [
+        {}
+      ],
+      "attributions": [],
+      "sensitivityLabel": {
+        "sensitivityLabelId": null,
+        "displayName": null,
+        "tooltip": null,
+        "priority": null,
+        "color": null,
+        "isEncrypted": null
       }
     }
   ]
