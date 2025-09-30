@@ -23,8 +23,8 @@ items:
     href: resources/copilotfile.md
   - name: Copilot web context
     href: resources/copilotwebcontext.md
-  - name: Copilot conversation message
-    href: resources/copilotconversationmessage.md
+  - name: Copilot conversation response message
+    href: resources/copilotconversationresponsemessage.md
   - name: Copilot conversation attribution
     href: resources/copilotconversationattribution.md
   - name: Search sensitivity label info
