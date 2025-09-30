@@ -79,7 +79,7 @@ Content-Type: application/json
 
 {
   "message": {
-    "text": "What meeting do I have at 9 AM tomorrow morning?",
+    "text": "What meeting do I have at 9 AM tomorrow morning?"
   },
   "locationHint": {
     "timeZone": "America/New_York"
@@ -174,14 +174,14 @@ Content-Type: application/json
 
 ### Example 2: Using a OneDrive or SharePoint file as context in a chat message to the Microsoft 365 Copilot Chat API
 
-The following example shows a request to retrieve data from Copilot connectors. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows how to use a OneDrive or SharePoint file as context when sending a message to the Chat API.
 
 #### Request
 
 The following example shows the request.
 
 ```http
-POST https://graph.microsoft.com/beta/copilot/retrieval
+POST https://graph.microsoft.com/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
 Content-Type: application/json
 
 {
