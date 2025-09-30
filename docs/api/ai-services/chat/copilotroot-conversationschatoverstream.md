@@ -235,52 +235,37 @@ The following example shows the response.
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/json
+Content-Type: event/stream
 
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.copilotConversation",
-  "id": "0d110e7e-2b7e-4270-a899-fd2af6fde333",
-  "createdDateTime": "2025-09-30T20:54:38.6856711Z",
-  "displayName": "What meeting do I have at 9 AM tomorrow morning?",
-  "state": "active",
-  "turnCount": 3,
-  "messages": [
+data: {"@odata.context":"https://prod-s01-034-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T23:27:21.29512Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:1 
+
+data: {"@odata.context":"https://prod-s01-034-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T23:27:21.4011462Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:2
+
+data: {"@odata.context":"https://prod-s01-034-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T23:28:08.0226573Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[{"@odata.type":"#microsoft.graph.copilotConversationResponseMessage","id":"f1ed80bd-033a-412a-a228-02c68dd6f4cf","text":"You asked: **What is the highest grossing movie at the global box office this year?**\n\nI do not have access to real-time web search or external box office databases, and there are no internal enterprise resources or files provided that contain up-to-date box office data for movies released this year. The uploaded document, **<File>Business-Model.docx</File>**, does not contain information about movies or box office statistics.\n\n**To find the most current and accurate answer**, I recommend checking reputable entertainment industry sources such as:\n- https://www.source1.com/\n- https://www.source2.com/\n- https://source3.com/\n- https://source4.com/\n\nIf you have a specific internal report or file related to box office performance, please upload it or provide more details, and I\u2019ll be happy to summarize or analyze it for you!","createdDateTime":"2025-09-30T23:27:24.5020727Z","adaptiveCards":[{"type":"AdaptiveCard","version":"1.0","body":[{"type":"TextBlock","text":"You asked: **What is the highest grossing movie at the global box office this year?**\n\nI do not have access to real-time web search or external box office databases, and there are no internal enterprise resources or files provided that contain up-to-date box office data for movies released this year. The uploaded document, **[Business-Model.docx](https://contoso.sharepoint.com/sites/Engineering/_layouts/15/Doc.aspx?sourcedoc=%7B8148C99B-78BD-4969-ABD5-A46862073990%7D&file=Business-Model.docx&action=default&mobileredirect=true&EntityRepresentationId=ce9ee99a-786c-44f5-a809-f6a8166a8502)**, does not contain information about movies or box office statistics.\n\n**To find the most current and accurate answer**, I recommend checking reputable entertainment industry sources such as:\n- https://www.source1.com/\n- https://www.source2.com/\n- https://source3.com/\n- https://source4.com/\n\nIf you have a specific internal report or file related to box office performance, please upload it or provide more details, and I’ll be happy to summarize or analyze it for you!","wrap":true}]}],"attributions":[{"attributionType":"annotation","providerDisplayName":"","attributionSource":"model","seeMoreWebUrl":"https://contoso.sharepoint.com/sites/Engineering/_layouts/15/Doc.aspx?sourcedoc=%7B8148C99B-78BD-4969-ABD5-A46862073990%7D&file=Business-Model.docx&action=default&mobileredirect=true&EntityRepresentationId=ce9ee99a-786c-44f5-a809-f6a8166a8502","imageWebUrl":"","imageFavIcon":"","imageWidth":0,"imageHeight":0}],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}}]}
+id:207 
+
+data: {"@odata.context":"https://prod-s01-034-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T23:28:08.3343182Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:208 
+
+data: {"@odata.context":"https://prod-s01-034-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T23:28:09.270304Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:209 
+
+data: {"@odata.context":"https://prod-s01-034-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T23:27:21.1084028Z","displayName":"What meeting do I have at 9 AM tomorrow morning?","state":"active","turnCount":3,"messages":[{"@odata.type":"#microsoft.graph.copilotConversationResponseMessage","id":"d6471430-d4f8-4283-83a2-22a5d9d967a8","text":"What is the highest grossing movie at the global box office this year?","createdDateTime":"2025-09-30T23:27:21.1084028Z","adaptiveCards":[],"attributions":[],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}},{"@odata.type":"#microsoft.graph.copilotConversationResponseMessage","id":"f1ed80bd-033a-412a-a228-02c68dd6f4cf","text":"You asked: **What is the highest grossing movie at the global box office this year?**\n\nI do not have access to real-time web search or external box office databases, and there are no internal enterprise resources or files provided that contain up-to-date box office data for movies released this year. The uploaded document, **<File>Business-Model.docx</File>**, does not contain information about movies or box office statistics.\n\n**To find the most current and accurate answer**, I recommend checking reputable entertainment industry sources such as:\n- https://www.source1.com/\n- https://www.source2.com/\n- https://source3.com/\n- https://source4.com/\n\nIf you have a specific internal report or file related to box office performance, please upload it or provide more details, and I\u2019ll be happy to summarize or analyze it for you!","createdDateTime":"2025-09-30T23:27:24.5020727Z","adaptiveCards":[{
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
     {
-      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
-      "id": "40ec0e9f-d46a-0d57-a3c4-7342d86929d9",
-      "text": "What is the highest grossing movie at the global box office this year?",
-      "createdDateTime": "2025-09-30T20:54:38.6856711Z",
-      "adaptiveCards": [],
-      "attributions": [],
-      "sensitivityLabel": {
-        "sensitivityLabelId": null,
-        "displayName": null,
-        "tooltip": null,
-        "priority": null,
-        "color": null,
-        "isEncrypted": null
-      }
-    },
-    {
-      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
-      "id": "9c0a96b9-ccf1-4a50-82ca-1ef7c2776c54",
-      "text": "You asked: **What is the highest grossing movie at the global box office this year?**\n\nCurrently, I do not have access to real-time web search or external box office databases, and there are no internal enterprise documents or files provided that contain this information. As a result, I cannot provide the latest global box office data for this year.\n\n**How you can find this information:**\n- The most reliable sources for up-to-date box office rankings are websites like Source1, Source2, or Source3. These sites regularly update global box office statistics and highlight the top-grossing films of the year.\n\nIf you have a specific internal report or file related to box office performance, please let me know where to find it, and I’ll be happy to summarize the relevant details for you! Would you like tips on how to track box office trends or insights into recent movie industry performance?",
-      "createdDateTime": "2025-09-30T20:54:45.2785423Z",
-      "adaptiveCards": [
-        {}
-      ],
-      "attributions": [],
-      "sensitivityLabel": {
-        "sensitivityLabelId": null,
-        "displayName": null,
-        "tooltip": null,
-        "priority": null,
-        "color": null,
-        "isEncrypted": null
-      }
+      "type": "TextBlock",
+      "text": "You asked: **What is the highest grossing movie at the global box office this year?**\n\nI do not have access to real-time web search or external box office databases, and there are no internal enterprise resources or files provided that contain up-to-date box office data for movies released this year. The uploaded document, **[Business-Model.docx](https://contoso.sharepoint.com/sites/Engineering/_layouts/15/Doc.aspx?sourcedoc=%7B8148C99B-78BD-4969-ABD5-A46862073990%7D&file=Business-Model.docx&action=default&mobileredirect=true&EntityRepresentationId=ce9ee99a-786c-44f5-a809-f6a8166a8502)**, does not contain information about movies or box office statistics.\n\n**To find the most current and accurate answer**, I recommend checking reputable entertainment industry sources such as:\n- https://www.source1.com/\n- https://www.source2.com/\n- https://source3.com/\n- https://source4.com/\n\nIf you have a specific internal report or file related to box office performance, please upload it or provide more details, and I’ll be happy to summarize or analyze it for you!",
+      "wrap": true
     }
   ]
-}
+}],"attributions":[{"attributionType":"annotation","providerDisplayName":"","attributionSource":"model","seeMoreWebUrl":"https://contoso.sharepoint.com/sites/Engineering/_layouts/15/Doc.aspx?sourcedoc=%7B8148C99B-78BD-4969-ABD5-A46862073990%7D&file=Business-Model.docx&action=default&mobileredirect=true&EntityRepresentationId=ce9ee99a-786c-44f5-a809-f6a8166a8502","imageWebUrl":"","imageFavIcon":"","imageWidth":0,"imageHeight":0}],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}}]}
+id:210 
+
+
 ```
 
 ### Example 4: Sending additional context with a chat message to the Microsoft 365 Copilot Chat API
