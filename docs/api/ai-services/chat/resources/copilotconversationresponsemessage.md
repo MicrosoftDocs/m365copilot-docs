@@ -1,5 +1,5 @@
 ---
-title: copilotConversationMessage resource type
+title: copilotConversationResponseMessage resource type
 description: Represents a message in a Copilot conversation being continued through the Microsoft 365 Copilot Chat API.
 author: muwagerikpe
 ms.author: muwagerikpe
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
 
-# copilotConversationMessage resource type
+# copilotConversationResponseMessage resource type
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
@@ -36,7 +36,7 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-  "@odata.type": "#microsoft.graph.copilotConversationMessage",
+  "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
   "id": "String",
   "text": "String",
   "createdDateTime": "DateTimeOffset",
