@@ -54,27 +54,19 @@ If successful, this action returns a `201 Created` response code and a [copilotC
 
 ## Examples
 
-### Example 1: Retrieve data from SharePoint
+### Example 1: Create a Copilot conversation
 
-The following example shows a request to retrieve data from SharePoint. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows how to create a Copilot conversation through the Microsoft 365 Copilot Chat API. Once the conversation is created, the `id` in the response body is used as a path parameter for continuing the conversation, using either the synchronous endpoint or the streamed endpoint.
 
 #### Request
 
 The following example shows the request.
 
 ```http
-POST https://graph.microsoft.com/beta/copilot/retrieval
+POST https://graph.microsoft.com/beta/copilot/conversations
 Content-Type: application/json
 
-{
-  "queryString": "How to setup corporate VPN?",
-  "dataSource": "sharePoint",
-  "resourceMetadata": [
-    "title",
-    "author"
-  ],
-  "maximumNumberOfResults": "10"
-}
+{}
 ```
 
 #### Response
