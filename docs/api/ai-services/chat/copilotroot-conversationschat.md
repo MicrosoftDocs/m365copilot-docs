@@ -359,25 +359,28 @@ Content-Type: application/json
 
 ### Example 4: Sending additional context with a chat message to the Microsoft 365 Copilot Chat API
 
-The following example shows a request to retrieve data from a specific Sharepoint site. The `filterExpression` parameter specifies the path to the site. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
+The following example shows how to send additional context with a chat message to the Chat API. Additional context is meant to provide additional grounding for the Chat API to reason over, like excerpts from documents, articles, or websites.
 
 #### Request
 
 The following example shows the request.
 
 ```http
-POST https://graph.microsoft.com/beta/copilot/retrieval
+POST https://graph.microsoft.com/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
 Content-Type: application/json
 
 {
-  "queryString": "How to setup corporate VPN?",
-  "dataSource": "sharePoint",
-  "filterExpression": "path:\"https://contoso.sharepoint.com/sites/HR1/\"",
-  "resourceMetadata": [
-    "title",
-    "author"
+  "message": {
+    "text": "What is the birthday of my best friend, John Doe?"
+  },
+  "additionalContext": [
+    {
+      "text": "John Doe's birthday is on January 1st."
+    }
   ],
-  "maximumNumberOfResults": "4"
+  "locationHint": {
+    "timeZone": "America/New_York"
+  }
 }
 ```
 
@@ -390,53 +393,45 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": [
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.copilotConversation",
+  "id": "0d110e7e-2b7e-4270-a899-fd2af6fde333",
+  "createdDateTime": "2025-09-30T21:00:22.9880382Z",
+  "displayName": "What meeting do I have at 9 AM tomorrow morning?",
+  "state": "active",
+  "turnCount": 4,
+  "messages": [
     {
-      "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNAccess.docx",
-      "extracts": [
-        {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
-        },
-        {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
-        }
-      ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "title": "VPN Access",
-        "author": "John Doe"
-      },
+      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
+      "id": "70894d7b-94b2-d65a-f4ed-7f7b10f63737",
+      "text": "What is the birthday of my best friend, John Doe?",
+      "createdDateTime": "2025-09-30T21:00:22.9880382Z",
+      "adaptiveCards": [],
+      "attributions": [],
       "sensitivityLabel": {
-        "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
-        "displayName": "Confidential\\Any User (No Protection)",
-        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-        "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "sensitivityLabelId": null,
+        "displayName": null,
+        "tooltip": null,
+        "priority": null,
+        "color": null,
+        "isEncrypted": null
       }
     },
     {
-      "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
-      "extracts": [
-        {
-          "text": "Have your VPN username and password ready prior to starting the configuration."
-        },
-        {
-          "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources."
-        }
+      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
+      "id": "65b34190-40d2-4933-9539-8324684aca5a",
+      "text": "You asked for the birthday of your best friend, <Person>John Doe</Person>.\n\nBased on the information available, <Person>John Doe</Person>'s birthday is on **January 1st**. If you need this added to your calendar or want a reminder set up, just let me know!",
+      "createdDateTime": "2025-09-30T21:00:26.9371633Z",
+      "adaptiveCards": [
+        {}
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "title": "VPN Instructions",
-        "author": "Elisa Mueller"
-      },
+      "attributions": [],
       "sensitivityLabel": {
-        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
-        "displayName": "Confidential\\Any User (No Protection)",
-        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-        "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "sensitivityLabelId": null,
+        "displayName": null,
+        "tooltip": null,
+        "priority": null,
+        "color": null,
+        "isEncrypted": null
       }
     }
   ]
