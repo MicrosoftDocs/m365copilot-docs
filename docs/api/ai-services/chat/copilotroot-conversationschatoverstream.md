@@ -74,7 +74,7 @@ The following example shows of sending a prompt to the Chat API using the synchr
 The following example shows the request.
 
 ```http
-POST https://graph.microsoft.com/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
+POST https://graph.microsoft.com/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
@@ -89,87 +89,45 @@ Content-Type: application/json
 
 #### Response
 
-The following example shows the response.
+The following example shows the response. Most event streams have been redacted from the example for brevity.
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/json
+Content-Type: event/stream
 
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.copilotConversation",
-  "id": "0d110e7e-2b7e-4270-a899-fd2af6fde333",
-  "createdDateTime": "2025-09-30T15:55:53.4711746Z",
-  "displayName": "What meeting do I have at 9 AM tomorrow morning?",
-  "state": "active",
-  "turnCount": 1,
-  "messages": [
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:00:45.1392713Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:1 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:00:48.14175Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":1,"messages":[]}
+id:2
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:01:20.9535583Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[{"@odata.type":"#microsoft.graph.copilotConversationResponseMessage","id":"65781ab5-79ce-4159-950f-edc04c51e909","text":"You asked about your meeting scheduled for **9 AM tomorrow**, and I found **1 meeting** on your calendar.\n\n### \ud83d\uddd3\ufe0f Scheduled Meeting\n- **Title**: <Event>Contoso Engineering Standup</Event>\n- **Time**: Tomorrow from **9:00 AM to 9:30 AM**\n- **Organizer**: <Person>John Doe</Person>[^1^]\n- **Location**: Microsoft Teams Meeting\n- **Invitee Status**: No one has accepted the meeting invite yet[^1^]\n\nLet me know if you'd like help preparing for this meeting or checking who else was invited.","createdDateTime":"2025-09-30T22:00:49.7881529Z","adaptiveCards":[{"type":"AdaptiveCard","version":"1.0","body":[{"type":"TextBlock","text":"You asked about your meeting scheduled for **9 AM tomorrow**, and I found **1 meeting** on your calendar.\n\n### \uD83D\uDDD3️ Scheduled Meeting\n- **Title**: [Contoso Engineering Standup](https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d&EntityRepresentationId=8c968792-ca7a-42d6-8b44-9e5212b2d240)\n- **Time**: Tomorrow from **9:00 AM to 9:30 AM**\n- **Organizer**: [John Doe](https://www.office.com/search?q=John+Doe&EntityRepresentationId=55cdb988-cbf5-44db-b75d-a431ca839c70) [1](https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d)\n- **Location**: Microsoft Teams Meeting\n- **Invitee Status**: No one has accepted the meeting invite yet [1](https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d)\n\nLet me know if you'd like help preparing for this meeting or checking who else was invited.","wrap":true}]}],"attributions":[{"attributionType":"annotation","providerDisplayName":"","attributionSource":"model","seeMoreWebUrl":"https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d&EntityRepresentationId=8c968792-ca7a-42d6-8b44-9e5212b2d240","imageWebUrl":"","imageFavIcon":"","imageWidth":0,"imageHeight":0},{"attributionType":"annotation","providerDisplayName":"","attributionSource":"model","seeMoreWebUrl":"https://www.office.com/search?q=John+Doe&EntityRepresentationId=55cdb988-cbf5-44db-b75d-a431ca839c70","imageWebUrl":"","imageFavIcon":"","imageWidth":0,"imageHeight":0},{"attributionType":"citation","providerDisplayName":"Contoso Engineering Standup","attributionSource":"model","seeMoreWebUrl":"https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d","imageWebUrl":"","imageFavIcon":"","imageWidth":0,"imageHeight":0}],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}}]}
+id:137 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:01:21.2572577Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:138 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:01:21.2583928Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:139 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:01:22.9017213Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:140 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:01:22.9022796Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:141 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:00:44.7918493Z","displayName":"What meeting do I have at 9 AM tomorrow morning?","state":"active","turnCount":1,"messages":[{"@odata.type":"#microsoft.graph.copilotConversationResponseMessage","id":"8c74f6a7-ae3c-4ac6-845e-01e5008c6d87","text":"What meeting do I have at 9 AM tomorrow morning?","createdDateTime":"2025-09-30T22:00:44.7918493Z","adaptiveCards":[],"attributions":[],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}},{"@odata.type":"#microsoft.graph.copilotConversationResponseMessage","id":"65781ab5-79ce-4159-950f-edc04c51e909","text":"You asked about your meeting scheduled for **9 AM tomorrow**, and I found **1 meeting** on your calendar.\n\n### \ud83d\uddd3\ufe0f Scheduled Meeting\n- **Title**: <Event>Contoso Engineering Standup</Event>\n- **Time**: Tomorrow from **9:00 AM to 9:30 AM**\n- **Organizer**: <Person>John Doe</Person>[^1^]\n- **Location**: Microsoft Teams Meeting\n- **Invitee Status**: No one has accepted the meeting invite yet[^1^]\n\nLet me know if you'd like help preparing for this meeting or checking who else was invited.","createdDateTime":"2025-09-30T22:00:49.7881529Z","adaptiveCards":[{
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
     {
-      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
-      "id": "cc211f56-1a5e-0af0-fec2-c354ce468b95",
-      "text": "What meeting do I have at 9 AM tomorrow morning?",
-      "createdDateTime": "2025-09-30T15:55:53.4711746Z",
-      "adaptiveCards": [],
-      "attributions": [],
-      "sensitivityLabel": {
-        "sensitivityLabelId": null,
-        "displayName": null,
-        "tooltip": null,
-        "priority": null,
-        "color": null,
-        "isEncrypted": null
-      }
-    },
-    {
-      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
-      "id": "3fe6b260-c682-4f8e-a201-022ccb300742",
-      "text": "You asked about your meeting scheduled for **9 AM tomorrow**, and I found **1 meeting** on your calendar.\n\n### 📅 Tomorrow at 9 AM\n- **Meeting**: <Event>Contoso Engineering Standup</Event>\n- **Organizer**: <Person>John Doe</Person>[^1^]\n- **Time**: 9:00 AM – 9:30 AM\n- **Location**: Microsoft Teams Meeting\n- **Status**: No one has accepted the invite yet[^1^]\n\nLet me know if you'd like help preparing for this meeting or checking who else was invited.",
-      "createdDateTime": "2025-09-30T15:55:58.9856658Z",
-      "adaptiveCards": [
-        {}
-      ],
-      "attributions": [
-        {
-          "attributionType": "annotation",
-          "providerDisplayName": "",
-          "attributionSource": "model",
-          "seeMoreWebUrl": "https://teams.microsoft.com/l/meeting/details?eventId=BBMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d&EntityRepresentationId=988db526-6e9b-46ec-906e-3fba32438e5d",
-          "imageWebUrl": "",
-          "imageFavIcon": "",
-          "imageWidth": 0,
-          "imageHeight": 0
-        },
-        {
-          "attributionType": "annotation",
-          "providerDisplayName": "",
-          "attributionSource": "model",
-          "seeMoreWebUrl": "https://www.office.com/search?q=John+Doe&EntityRepresentationId=g38b20af-0d21-47fd-8e45-fd9d55215cb3",
-          "imageWebUrl": "",
-          "imageFavIcon": "",
-          "imageWidth": 0,
-          "imageHeight": 0
-        },
-        {
-          "attributionType": "citation",
-          "providerDisplayName": "Contoso Engineering Standup",
-          "attributionSource": "model",
-          "seeMoreWebUrl": "https://teams.microsoft.com/l/meeting/details?eventId=BBMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d",
-          "imageWebUrl": "",
-          "imageFavIcon": "",
-          "imageWidth": 0,
-          "imageHeight": 0
-        }
-      ],
-      "sensitivityLabel": {
-        "sensitivityLabelId": null,
-        "displayName": null,
-        "tooltip": null,
-        "priority": null,
-        "color": null,
-        "isEncrypted": null
-      }
+      "type": "TextBlock",
+      "text": "You asked about your meeting scheduled for **9 AM tomorrow**, and I found **1 meeting** on your calendar.\n\n### 🗓️ Scheduled Meeting\n- **Title**: [Contoso Engineering Standup](https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d&EntityRepresentationId=8c968792-ca7a-42d6-8b44-9e5212b2d240)\n- **Time**: Tomorrow from **9:00 AM to 9:30 AM**\n- **Organizer**: [John Doe](https://www.office.com/search?q=John+Doe&EntityRepresentationId=55cdb988-cbf5-44db-b75d-a431ca839c70) [1](https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d)\n- **Location**: Microsoft Teams Meeting\n- **Invitee Status**: No one has accepted the meeting invite yet [1](https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d)\n\nLet me know if you'd like help preparing for this meeting or checking who else was invited.",
+      "wrap": true
     }
   ]
-}
+}],"attributions":[{"attributionType":"annotation","providerDisplayName":"","attributionSource":"model","seeMoreWebUrl":"https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d&EntityRepresentationId=8c968792-ca7a-42d6-8b44-9e5212b2d240","imageWebUrl":"","imageFavIcon":"","imageWidth":0,"imageHeight":0},{"attributionType":"annotation","providerDisplayName":"","attributionSource":"model","seeMoreWebUrl":"https://www.office.com/search?q=John+Doe&EntityRepresentationId=55cdb988-cbf5-44db-b75d-a431ca839c70","imageWebUrl":"","imageFavIcon":"","imageWidth":0,"imageHeight":0},{"attributionType":"citation","providerDisplayName":"Contoso Engineering Standup","attributionSource":"model","seeMoreWebUrl":"https://teams.microsoft.com/l/meeting/details?eventId=AAMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d","imageWebUrl":"","imageFavIcon":"","imageWidth":0,"imageHeight":0}],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}}]}
+id:142 
 ```
 
 ### Example 2: Using a OneDrive or SharePoint file as context in a chat message to the Microsoft 365 Copilot Chat API
