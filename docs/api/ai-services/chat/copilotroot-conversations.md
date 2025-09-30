@@ -16,6 +16,7 @@ doc_type: conceptualPageType
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 The Microsoft 365 Copilot Chat API allows you to create and continue multi-turn conversations with Microsoft 365 Copilot, while respecting the defined access controls within the tenant. Use the Chat API to integrate Microsoft 365 Copilot into your generative AI solutions.
+
 This documentation covers creating Copilot conversations using the Chat API. Learn how to continue [synchronous conversations](copilotroot-conversationschat.md) or [streamed conversations](copilotroot-conversationschatoverstream.md) with the Chat API.
 
 ## Permissions
