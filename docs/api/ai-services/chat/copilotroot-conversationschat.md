@@ -67,7 +67,7 @@ If successful, this action returns a `200 OK` response code and a [copilotConver
 
 ### Example 1: Sending a chat message to the Microsoft 365 Copilot Chat API
 
-The following example shows a request to retrieve data from SharePoint. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows of sending a prompt to the Chat API using the synchronous endpoint.
 
 #### Request
 
@@ -96,53 +96,76 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": [
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.copilotConversation",
+  "id": "0d110e7e-2b7e-4270-a899-fd2af6fde333",
+  "createdDateTime": "2025-09-30T15:55:53.4711746Z",
+  "displayName": "What meeting do I have at 9 AM tomorrow morning?",
+  "state": "active",
+  "turnCount": 1,
+  "messages": [
     {
-      "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
-      "extracts": [
-        {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
-        },
-        {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
-        }
-      ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "title": "VPN Access",
-        "author": "John Doe"
-      },
+      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
+      "id": "cc211f56-1a5e-0af0-fec2-c354ce468b95",
+      "text": "What meeting do I have at 9 AM tomorrow morning?",
+      "createdDateTime": "2025-09-30T15:55:53.4711746Z",
+      "adaptiveCards": [],
+      "attributions": [],
       "sensitivityLabel": {
-        "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
-        "displayName": "Confidential\\Any User (No Protection)",
-        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-        "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "sensitivityLabelId": null,
+        "displayName": null,
+        "tooltip": null,
+        "priority": null,
+        "color": null,
+        "isEncrypted": null
       }
     },
     {
-      "webUrl": "https://contoso.sharepoint.com/sites/HR/Corporate_VPN.docx",
-      "extracts": [
+      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
+      "id": "3fe6b260-c682-4f8e-a201-022ccb300742",
+      "text": "You asked about your meeting scheduled for **9 AM tomorrow**, and I found **1 meeting** on your calendar.\n\n### 📅 Tomorrow at 9 AM\n- **Meeting**: <Event>Contoso Engineering Standup</Event>\n- **Organizer**: <Person>John Doe</Person>[^1^]\n- **Time**: 9:00 AM – 9:30 AM\n- **Location**: Microsoft Teams Meeting\n- **Status**: No one has accepted the invite yet[^1^]\n\nLet me know if you'd like help preparing for this meeting or checking who else was invited.",
+      "createdDateTime": "2025-09-30T15:55:58.9856658Z",
+      "adaptiveCards": [
+        {}
+      ],
+      "attributions": [
         {
-          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+          "attributionType": "annotation",
+          "providerDisplayName": "",
+          "attributionSource": "model",
+          "seeMoreWebUrl": "https://teams.microsoft.com/l/meeting/details?eventId=BBMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d&EntityRepresentationId=988db526-6e9b-46ec-906e-3fba32438e5d",
+          "imageWebUrl": "",
+          "imageFavIcon": "",
+          "imageWidth": 0,
+          "imageHeight": 0
         },
         {
-          "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN."
+          "attributionType": "annotation",
+          "providerDisplayName": "",
+          "attributionSource": "model",
+          "seeMoreWebUrl": "https://www.office.com/search?q=John+Doe&EntityRepresentationId=g38b20af-0d21-47fd-8e45-fd9d55215cb3",
+          "imageWebUrl": "",
+          "imageFavIcon": "",
+          "imageWidth": 0,
+          "imageHeight": 0
+        },
+        {
+          "attributionType": "citation",
+          "providerDisplayName": "Contoso Engineering Standup",
+          "attributionSource": "model",
+          "seeMoreWebUrl": "https://teams.microsoft.com/l/meeting/details?eventId=BBMkADg5ZjdjZGNiLWRiMzItNDA3MC1iNDNlLTdlMGY4ZDc0ZjdlZgBGAAAAAACm2kxZvrUtTa-iv1uzeNCxBwA4nsl0tFf4R7qmHdVqpNbsAAAAAAENAAA4nsl0tFf4R7qmHdVqpNbsAAAVa4BBAAA%3d",
+          "imageWebUrl": "",
+          "imageFavIcon": "",
+          "imageWidth": 0,
+          "imageHeight": 0
         }
       ],
-      "resourceType": "listItem",
-      "resourceMetadata": {
-        "title": "Corporate VPN",
-        "author": "Jane Doe"
-      },
-        "sensitivityLabel": {
-        "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
-        "displayName": "Confidential\\Any User (No Protection)",
-        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
-        "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+      "sensitivityLabel": {
+        "sensitivityLabelId": null,
+        "displayName": null,
+        "tooltip": null,
+        "priority": null,
+        "color": null,
+        "isEncrypted": null
       }
     }
   ]
