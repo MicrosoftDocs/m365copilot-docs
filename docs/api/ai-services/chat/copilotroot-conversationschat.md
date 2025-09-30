@@ -174,7 +174,7 @@ Content-Type: application/json
 
 ### Example 2: Using a OneDrive or SharePoint file as context in a chat message to the Microsoft 365 Copilot Chat API
 
-The following example shows how to use a OneDrive or SharePoint file as context when sending a message to the Chat API.
+The following example shows how to use a OneDrive or SharePoint file as context when sending a message to the Chat API. Multiple OneDrive and SharePoint files can be used as context when sending a chat message.
 
 #### Request
 
@@ -185,13 +185,19 @@ POST https://graph.microsoft.com/beta/copilot/conversations/0d110e7e-2b7e-4270-a
 Content-Type: application/json
 
 {
-  "queryString": "How to setup corporate VPN?",
-  "dataSource": "externalItem",
-  "resourceMetadata": [
-    "title",
-    "author"
-  ],
-  "maximumNumberOfResults": "10"
+  "message": {
+    "text": "Summarize this document for me."
+  },
+  "locationHint": {
+    "timeZone": "America/New_York"
+  },
+  "contextualResources": {
+    "files": [
+      {
+        "uri": "https://contoso.sharepoint.com/sites/Engineering/Shared%20Documents/Specs/Business-Model.docx"
+      }
+    ]
+  }
 }
 ```
 
@@ -204,36 +210,66 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "retrievalHits": [
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.copilotConversation",
+  "id": "0d110e7e-2b7e-4270-a899-fd2af6fde333",
+  "createdDateTime": "2025-09-30T16:15:13.0889735Z",
+  "displayName": "What meeting do I have at 9 AM tomorrow morning?",
+  "state": "active",
+  "turnCount": 2,
+  "messages": [
     {
-      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
-      "extracts": [
-        {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
-        },
-        {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
-        }
-      ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "title": "VPN Access",
-        "author": "John Doe"
+      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
+      "id": "7b9f74b6-673a-7077-d29e-5ef8a6c6968c",
+      "text": "Summarize this document for me.",
+      "createdDateTime": "2025-09-30T16:15:13.0889735Z",
+      "adaptiveCards": [],
+      "attributions": [],
+      "sensitivityLabel": {
+        "sensitivityLabelId": null,
+        "displayName": null,
+        "tooltip": null,
+        "priority": null,
+        "color": null,
+        "isEncrypted": null
       }
     },
     {
-      "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
-      "extracts": [
+      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
+      "id": "85e25e6e-4218-40fb-91a3-897d555d18d0",
+      "text": "You asked for a summary of the document \"<File>Business-Model.docx</File>\". Here’s a concise overview based on its content:\n\n---\n\n## **Summary: What Is a Business Model?**\n\n### **Definition & Importance**\n- A business model is a holistic framework for creating, delivering, and capturing value. It’s not just about monetization, but about how an organization systematically unlocks long-term value for itself and its customers.\n- Business models are essential for startups and established companies alike, as they guide value creation, customer engagement, and sustainable growth.\n\n### **Key Concepts**\n- **Business Model vs. Business Plan:** A business model is about experimentation and testing assumptions in the real world, while a business plan is a static document with projections that are often untested.\n- **Business Model vs. Revenue Strategy:** Monetization is just one part of a business model. A true business model also covers operations, customer acquisition, retention, supply chain, and more.\n\n### **Design & Innovation**\n- Business model design is about building a sustainable value chain, starting with a clear value proposition and focusing on key stakeholders.\n- Innovation in business models can be more disruptive than technological innovation. Companies like Company1, Company2, and Company3 succeeded by innovating their business models, not just their technology.\n- Competitive advantages (or \"moats\") are often built around innovative business models, especially in the digital era.\n\n### **Experimentation**\n- Business modeling is an iterative process, much like scientific experimentation. Entrepreneurs must test, adapt, and refine their models to find what works in the marketplace.\n\n### **Frameworks**\n- **Business Model Canvas:** A popular tool that breaks down a business model into key partners, activities, value propositions, customer relationships, segments, resources, channels, cost structure, and revenue streams.\n- **Lean Startup Canvas:** Focuses on experimentation, customer feedback, and iterative design, especially for startups.\n\n### **Components (FourWeekMBA Perspective)**\n- **People Dimension:** Value proposition, brand positioning, and ambitious goal setting.\n- **Financial Dimension:** Customer segments, distribution channels, and profit formula.\n\n### **Types of Business Models**\nThe document details 30+ business model types, including:\n- Asymmetric (hidden revenue, e.g., Company1, Company4)\n- One-for-one (e.g., Company5)\n- Razor and blade (e.g., Company6)\n- Peer-to-peer (e.g., Company7)\n- Multi-sided platforms (e.g., Company8)\n- Freemium, subscription, affiliate, consulting, agency, vertically integrated, e-commerce marketplace, discount, attention merchant, privacy-focused, franchising, on-demand, user-generated content, educational niche, chain/franchise mix, instant news, blockchain-based, multi-brand, family-owned, humanist enterprise, direct-to-consumer, enterprise/complex sales, distribution-based, and more.\n\n### **Key Takeaways**\n- There is no single best business model; success depends on context, timing, and market conditions.\n- Business models must evolve with changing technologies and market needs.\n- Experimentation, adaptability, and a clear value proposition are critical for long-term success.\n\n---\n\nIf you’d like a deeper dive into any specific section or business model type from the document, just let me know!",
+      "createdDateTime": "2025-09-30T16:15:25.509337Z",
+      "adaptiveCards": [
+        {}
+      ],
+      "attributions": [
         {
-          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+          "attributionType": "annotation",
+          "providerDisplayName": "",
+          "attributionSource": "model",
+          "seeMoreWebUrl": "https://contoso.sharepoint.com/sites/Engineering/Shared%20Documents/Specs/Business-Model.docx",
+          "imageWebUrl": "",
+          "imageFavIcon": "",
+          "imageWidth": 0,
+          "imageHeight": 0
         },
         {
-          "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
+          "attributionType": "citation",
+          "providerDisplayName": "529425287-What-Is-a-Business-Model",
+          "attributionSource": "grounding",
+          "seeMoreWebUrl": "https://contoso.sharepoint.com/sites/Engineering/Shared%20Documents/Specs/Business-Model.docx",
+          "imageWebUrl": "",
+          "imageFavIcon": "",
+          "imageWidth": 0,
+          "imageHeight": 0
         }
       ],
-      "resourceType": "externalItem",
-      "resourceMetadata": {
-        "title": "Corporate VPN"
+      "sensitivityLabel": {
+        "sensitivityLabelId": null,
+        "displayName": null,
+        "tooltip": null,
+        "priority": null,
+        "color": null,
+        "isEncrypted": null
       }
     }
   ]
