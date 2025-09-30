@@ -74,17 +74,16 @@ The following example shows a request to retrieve data from SharePoint. The requ
 The following example shows the request.
 
 ```http
-POST https://graph.microsoft.com/beta/copilot/retrieval
+POST https://graph.microsoft.com/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
 Content-Type: application/json
 
 {
-  "queryString": "How to setup corporate VPN?",
-  "dataSource": "sharePoint",
-  "resourceMetadata": [
-    "title",
-    "author"
-  ],
-  "maximumNumberOfResults": "10"
+  "message": {
+    "text": "What meeting do I have at 9 AM tomorrow morning?",
+  },
+  "locationHint": {
+    "timeZone": "America/New_York"
+  }
 }
 ```
 
