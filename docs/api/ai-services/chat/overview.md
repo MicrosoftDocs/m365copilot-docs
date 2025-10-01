@@ -10,11 +10,11 @@ ms.topic: overview
 
 # Overview of the Microsoft 365 Copilot Chat API (preview)
 
-The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences, unlocking the ability to enhance your custom engine agents and generative AI solutions with Microsoft 365 Copilot capabilities. The Microsoft 365 Copilot Chat API allows you to programmatically engage in multi-turn conversation with Microsoft 365 Copilot while leveraging enterprise grounding and web grounding.
+The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences, unlocking the ability to enhance your custom engine agents and generative AI solutions with Microsoft 365 Copilot capabilities. The Microsoft 365 Copilot Chat API allows you to programmatically engage in multi-turn conversations with Microsoft 365 Copilot while leveraging enterprise search grounding and web search grounding.
 
 ## Why use the Chat API?
 
-The Chat API offers a secure and compliant way to integrate Microsoft 365 Copilot in your custom generative AI solutions. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance. Rather than building and maintaining separate vector indexes, LLMs, and orchestration layers, custom applications can hand off prompts to the Chat API and receive fully synthesized answers grounded in web and work data.
+The Chat API offers a secure and compliant way to integrate Microsoft 365 Copilot in your custom generative AI solutions. Thus, you don't need to egress data, break permissions, or compromise on security and compliance. Rather than building and maintaining separate vector indexes, LLMs, and orchestration layers, custom applications can hand off prompts to the Chat API and receive fully synthesized answers grounded in web and work data.
 
 ### Manage compliance and safety risks
 
@@ -22,7 +22,7 @@ The Chat API uses the built-in security and compliance features in Microsoft 365
 
 ### Solve for relevancy and freshness
 
-Because the Chat API leverages enterprise grounding in place, its answers are always fresh and relevant, and it eliminates the need to maintain separate, costly data pipelines or orchestrators that do not fully understand Microsoft 365 context and signals.
+Because the Chat API leverages enterprise search grounding in place, its answers are always fresh and relevant, and it eliminates the need to maintain separate, costly data pipelines or orchestrators that do not fully understand Microsoft 365 context and signals.
 
 ### Lower cost of ownership and development effort
 
