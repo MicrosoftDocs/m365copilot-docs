@@ -93,7 +93,7 @@ The following example shows the response. Most event streams have been redacted 
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: event/stream
+Content-Type: text/event-stream
 
 data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:00:45.1392713Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
 id:1 
@@ -165,7 +165,7 @@ The following example shows the response. Most event streams have been redacted 
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: event/stream
+Content-Type: text/event-stream
 
 data: {"@odata.context":"https://prod-s01-034-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T22:18:32.4167563Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
 id:1 
@@ -235,7 +235,7 @@ The following example shows the response.  Most event streams have been redacted
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: event/stream
+Content-Type: text/event-stream
 
 data: {"@odata.context":"https://prod-s01-034-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-09-30T23:27:21.29512Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
 id:1 
@@ -299,7 +299,7 @@ The following example shows the response.  Most event streams have been redacted
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: event/stream
+Content-Type: text/event-stream
 
 data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-10-01T00:10:57.3164096Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
 id:1 
