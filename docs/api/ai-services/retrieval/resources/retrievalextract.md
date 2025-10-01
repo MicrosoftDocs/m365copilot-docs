@@ -14,9 +14,13 @@ zone_pivot_groups: graph-api-versions
 
 :::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
-:::zone-end
 
 Represents a single extract within the list of retrieval extracts.
+:::zone-end
+
+:::zone pivot="graph-v1"
+Represents a single extract within the list of retrieval extracts.
+:::zone-end
 
 ## Properties
 
