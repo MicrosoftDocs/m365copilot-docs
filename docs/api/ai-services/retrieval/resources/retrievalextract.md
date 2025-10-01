@@ -11,7 +11,9 @@ doc_type: resourcePageType
 
 # retrievalExtract resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+:::zone pivot="graph-preview"
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Represents a single extract within the list of retrieval extracts.
 
