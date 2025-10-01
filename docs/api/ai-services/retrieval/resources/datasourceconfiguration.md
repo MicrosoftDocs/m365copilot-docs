@@ -11,7 +11,9 @@ doc_type: resourcePageType
 
 # dataSourceConfiguration resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+:::zone pivot="graph-preview"
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Represents the data source configuration used in the [retrieval API](../copilotroot-retrieval.md).
 
