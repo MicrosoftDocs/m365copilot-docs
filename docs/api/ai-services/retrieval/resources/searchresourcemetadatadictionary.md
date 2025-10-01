@@ -14,11 +14,17 @@ zone_pivot_groups: graph-api-versions
 
 :::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
-:::zone-end
 
 Represents a metadata dictionary in a [retrievalHit](retrievalhit.md). This resource is an open type. For more information on open types, see [Open Type](https://www.odata.org/getting-started/advanced-tutorial/#openType).
 
 The property names in the dictionary correspond to the list of metadata fields requested in the `resourceMetadata` parameter to the [retrieval API](../copilotroot-retrieval.md). The property values are string representations of the value of the corresponding metadata fields.
+:::zone-end
+
+:::zone pivot="graph-v1"
+Represents a metadata dictionary in a [retrievalHit](retrievalhit.md). This resource is an open type. For more information on open types, see [Open Type](https://www.odata.org/getting-started/advanced-tutorial/#openType).
+
+The property names in the dictionary correspond to the list of metadata fields requested in the `resourceMetadata` parameter to the [retrieval API](../copilotroot-retrieval.md). The property values are string representations of the value of the corresponding metadata fields.
+:::zone-end
 
 ## JSON representation
 
