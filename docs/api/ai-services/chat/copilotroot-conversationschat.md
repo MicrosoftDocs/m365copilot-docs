@@ -67,7 +67,7 @@ If successful, this action returns a `200 OK` response code and a [copilotConver
 
 ### Example 1: Sending a chat message to the Microsoft 365 Copilot Chat API
 
-The following example shows of sending a prompt to the Chat API using the synchronous endpoint.
+The following example shows how to send a prompt to the Chat API using the synchronous endpoint.
 
 #### Request
 
@@ -278,7 +278,7 @@ Content-Type: application/json
 
 ### Example 3: Toggling off web search grounding when sending a chat message to the Microsoft 365 Copilot Chat API
 
-The following example shows how to toggle off web search grounding when sending a chat message to the Chat API. If web search grounding is toggling off, only enterprise search grounding is used to answer a chat message. Toggling web search grounding is a single-turn action.
+The following example shows how to toggle off web search grounding when sending a chat message to the Chat API. If web search grounding is toggled off, only enterprise search grounding is used to answer a chat message. Toggling web search grounding is a single-turn action.
 
 #### Request
 
