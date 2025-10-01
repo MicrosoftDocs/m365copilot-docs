@@ -49,8 +49,9 @@ The following are the known limitations to the Chat API:
 - The Chat API will only respond with textual responses.
 - The Chat API does not support tools such as code interpreter and graphic art.
 - The Chat API is subject to all limitations of the [Microsoft 365 Copilot semantic index](/microsoftsearch/semantic-index-for-copilot).
+- Graph explorer does not support streamed conversations with the Chat API.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Retrieve data](copilotroot-retrieval.md)
+> [Chat with Microsoft 365 Copilot](copilotroot-conversations.md)
