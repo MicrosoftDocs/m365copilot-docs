@@ -4,7 +4,7 @@ description: Find information about custom engine agents, which are specialized 
 author: jessicaaawu
 ms.author: wujessica
 ms.localizationpriority: medium
-ms.date: 08/07/2025
+ms.date: 09/12/2025
 ms.topic: overview
 ---
 
@@ -48,11 +48,11 @@ When building agents with the toolkit, you can choose between two SDKs depending
 
 The [Microsoft 365 Agents SDK](create-deploy-agents-sdk.md) is a framework designed for building full-stack, multi-channel agents that can operate across Microsoft 365 Copilot, Teams, partner platforms, custom applications, and websites.
 
-It's ideal for use cases that require custom orchestration using frameworks like Semantic Kernel or LangChain, and supports integration with any AI models or services. This SDK is best suited for organizations or ISVs that need highly tailored agents with advanced capabilities and the ability to operate across multiple channels.
+its IDeal for use cases that require custom orchestration using frameworks like Semantic Kernel or LangChain, and supports integration with any AI models or services. This SDK is best suited for organizations or ISVs that need highly tailored agents with advanced capabilities and the ability to operate across multiple channels.
 
 #### Teams AI Library
 
-The [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context) is a framework tailored specifically for Microsoft Teams. It includes a built-in action planner orchestrator and supports GPT-based language models from Azure and OpenAI.
+The [Teams AI Library](/microsoftteams/platform/teams-ai-library) is a framework tailored specifically for Microsoft Teams. It includes a built-in action planner orchestrator and supports GPT-based language models from Azure and OpenAI.
 
 This option is ideal for organizations looking to build collaborative agents that operate within Teams channels and meetings. It's useful when building agents that interact in real time with users in a collaborative, team-based environment.
 
@@ -121,5 +121,5 @@ Custom engine agent prompts and responses in Copilot Chat and Teams are stored i
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
 - [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
 - [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md)
-- [Teams AI Library](/microsoftteams/platform/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview?context=/microsoft-365-copilot/extensibility/context)
+- [Teams AI Library](/microsoftteams/platform/teams-ai-library/)
 - [Bots overview](/microsoftteams/platform/bots/overview)

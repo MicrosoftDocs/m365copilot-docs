@@ -31,7 +31,7 @@ Adding web search to your agent allows it to search the web to generate answers.
 
     For more information, see [Web search object](declarative-agent-manifest-1.5.md#web-search-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have access to web content to generate its answers after you reload the page.
 
@@ -61,7 +61,7 @@ You can add files in OneDrive or the contents of SharePoint sites as a knowledge
     > - URLs should be full path to SharePoint items (site, document library, folder, or file). You can use the "Copy direct link" option in SharePoint to get the full path or files and folders. Right-click on the file or folder and select **Details**. Navigate to **Path** and select the copy icon.
     > - Not specifying the `items_by_url` array (or the alternative `items_by_sharepoint_ids` array) causes all OneDrive and SharePoint content in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have access to OneDrive and SharePoint content to generate its answers after you reload the page.
 
@@ -88,7 +88,7 @@ The declarative agent will have access to OneDrive and SharePoint content to gen
     > - The url in the url object must be well formed links to a Teams chat, team, or meeting chat.
     > - Not specifying the `urls` array causes all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have access to Teams data to generate its answers after you reload the page.
 
@@ -108,7 +108,7 @@ The people knowledge source allows you to scope your agent to answer questions a
 
     For more information, see [People object](declarative-agent-manifest-1.5.md#people-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have access to people knowledge after you reload the page.
 
@@ -138,7 +138,7 @@ The email knowledge source allows you to scope your agent to use email from the 
     > - This example accesses the user of the agent's mailbox. To access a shared mailbox instead, add the optional `shared_mailbox` property set to the email address of the shared mailbox.
     > - The `folders` array limits the mailbox access to specific folders. To access the entire mailbox, omit the `folders` array.
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The declarative agent will have access to email knowledge after you reload the page.
 

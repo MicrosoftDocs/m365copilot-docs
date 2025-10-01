@@ -62,7 +62,7 @@ For information about data retention in Copilot, see [Learn about retention for 
 
 ### What licenses do I need to purchase to develop declarative agents or custom engine agents?
 
-You can build declarative agents grounded on web search with limited capabilities without a Microsoft 365 Copilot license. If you have a [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing), you don't need additional licenses to build declarative agents with additional capabilities, including Copilot connectors and plugins. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+You can build declarative agents grounded on web search with limited capabilities without a Microsoft 365 Copilot license. If you have a [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing), you don't need additional licenses to build declarative agents with additional capabilities, including Copilot connectors and plugins. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
 
 You don't need a [Copilot Studio license](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) to build agents; however, if you want to ground your agent in organizational data, you either need a license or you need to set up consumption metering in your tenant. For details, see [Copilot Studio requirements](prerequisites.md#copilot-studio-requirements) and [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
 
@@ -79,6 +79,27 @@ If you're already a Visual Studio Code user, Agents Toolkit runs on Visual Studi
 ### What do I need to connect to an API?
 
 Unlike the low-code solution that uses a Power Platform connector to connect an API, Agents Toolkit lets you build an application package so Copilot can directly access a REST API without any intermediate layer. You just need to include an OpenAPI definition. It's important to add detailed descriptions to the OpenAPI definition so Copilot knows how to use the API. In some cases, you might need to simplify large or complex APIs.
+
+### Should I use JSON manifests or TypeSpec for building agents and plugins?
+
+The choice between JSON manifests and TypeSpec depends on your development preferences and project complexity:
+
+**Use TypeSpec when:**
+
+- You prefer a code-first approach with strong typing and IntelliSense support
+- Your API surfaces are complex with many endpoints, nested schemas, or intricate authentication patterns
+- You want automatic validation and manifest generation to reduce configuration errors
+- You're building multiple agents or plugins and want consistency across projects
+- You value maintainable, readable code over raw JSON configurations
+
+**Use JSON manifests when:**
+
+- You prefer direct control over the exact manifest structure
+- You're working with simple agents that have minimal capabilities
+- You're migrating existing JSON-based configurations
+- You want to understand the underlying manifest format in detail
+
+For most developers, TypeSpec provides a better development experience with type safety, automatic generation, and reduced boilerplate code. For more information, see [TypeSpec for Microsoft 365 Copilot overview](overview-typespec.md).
 
 ## Azure AI questions
 

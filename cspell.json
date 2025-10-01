@@ -4,6 +4,8 @@
     "dictionaries": [],
     "words": [
         "Accueil",
+        "acrolinx",
+        "Acrolinx",
         "Addin",
         "Agentdev",
         "agentic",
@@ -51,7 +53,9 @@
         "LANGCHAIN",
         "lauragra",
         "lightbox",
+        "lite",
         "localizable",
+        "localizationpriority",
         "lramosvea",
         "maisarissi",
         "Malik",
@@ -74,6 +78,7 @@
         "onpremises",
         "openai",
         "openapi",
+        "openpublishing",
         "oraclesql",
         "Outils",
         "partlow",
@@ -89,6 +94,7 @@
         "professionnels",
         "propos",
         "publiques",
+        "pwsh",
         "quickstart",
         "Rachit",
         "redirections",
@@ -123,12 +129,7 @@
         "Typeof",
         "typespec",
         "vscodeversion",
-        "wujessica",
-        "pwsh",
-        "acrolinx",
-        "Acrolinx",
-        "openpublishing",
-        "localizationpriority"
+        "wujessica"
     ],
     "ignoreWords": [],
     "flagWords": [

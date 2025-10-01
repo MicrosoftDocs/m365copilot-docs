@@ -79,7 +79,7 @@ The following best practices are applicable to both unfiltered queries (queries 
 
 Apply the following best practice to filtered queries (queries with a **filterExpression**):
 
-- If you want to filter using the **path** parameter in SharePoint or OneDrive, don't use a sharing link or copy the URL from the address bar. Instead, go to the location of the folder or file in SharePoint or OneDrive online and choose the three dots to open **More Actions**. Scroll down in the pane and choose **Details**. From there, you can scroll down the right rail to find the and copy the path.
+- If you want to filter using the **path** parameter in SharePoint or OneDrive, don't use a sharing link or copy the URL from the address bar. Instead, go to the location of the folder or file in SharePoint or OneDrive online and choose the three dots to open **More Actions**. Scroll down in the pane and choose **Details**. From there, you can scroll down the left navigation pane to find and copy the path.
 
 ## Known limitations
 
