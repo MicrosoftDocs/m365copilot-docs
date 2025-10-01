@@ -231,7 +231,7 @@ Content-Type: application/json
 
 #### Response
 
-The following example shows the response.
+The following example shows the response.  Most event streams have been redacted from the example for brevity.
 
 ```http
 HTTP/1.1 200 OK
@@ -264,8 +264,6 @@ data: {"@odata.context":"https://prod-s01-034-nam-centralus.substrate.cosmic.off
   ]
 }],"attributions":[{"attributionType":"annotation","providerDisplayName":"","attributionSource":"model","seeMoreWebUrl":"https://contoso.sharepoint.com/sites/Engineering/_layouts/15/Doc.aspx?sourcedoc=%7B8148C99B-78BD-4969-ABD5-A46862073990%7D&file=Business-Model.docx&action=default&mobileredirect=true&EntityRepresentationId=ce9ee99a-786c-44f5-a809-f6a8166a8502","imageWebUrl":"","imageFavIcon":"","imageWidth":0,"imageHeight":0}],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}}]}
 id:210 
-
-
 ```
 
 ### Example 4: Sending additional context with a chat message to the Microsoft 365 Copilot Chat API
@@ -277,7 +275,7 @@ The following example shows how to send additional context with a chat message t
 The following example shows the request.
 
 ```http
-POST https://graph.microsoft.com/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
+POST https://graph.microsoft.com/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
@@ -297,56 +295,39 @@ Content-Type: application/json
 
 #### Response
 
-The following example shows the response.
+The following example shows the response.  Most event streams have been redacted from the example for brevity.
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/json
+Content-Type: event/stream
 
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.copilotConversation",
-  "id": "0d110e7e-2b7e-4270-a899-fd2af6fde333",
-  "createdDateTime": "2025-09-30T21:00:22.9880382Z",
-  "displayName": "What meeting do I have at 9 AM tomorrow morning?",
-  "state": "active",
-  "turnCount": 4,
-  "messages": [
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-10-01T00:10:57.3164096Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:1 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-10-01T00:10:57.4665587Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:2
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-10-01T00:11:19.747816Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[{"@odata.type":"#microsoft.graph.copilotConversationResponseMessage","id":"ab9e1ebc-925c-4d96-900e-d85fb9cb1181","text":"You asked: **\"What is the birthday of my best friend, John Doe?\"**\n\nBased on the information available, **John Doe's birthday is on January 1st**[^external^].\n\nIf you need this recorded for future reference or want to add more details about John Doe, just let me know!","createdDateTime":"2025-10-01T00:10:59.3842333Z","adaptiveCards":[{"type":"AdaptiveCard","version":"1.0","body":[{"type":"TextBlock","text":"You asked: **\"What is the birthday of my best friend, John Doe?\"**\n\nBased on the information available, **John Doe's birthday is on January 1st**[^external^].\n\nIf you need this recorded for future reference or want to add more details about John Doe, just let me know!","wrap":true}]}],"attributions":[],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}}]}
+id:68 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-10-01T00:11:20.1166385Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:69 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-10-01T00:11:20.8974283Z","displayName":"Intermediate Conversation Update","state":"active","turnCount":0,"messages":[]}
+id:70 
+
+data: {"@odata.context":"https://prod-s01-000-nam-centralus.substrate.cosmic.office.net/api/beta/copilot/conversations('d0f6bffa-49d4-43c6-b93b-e7183f92b765')/microsoft.graph.copilot.chatOverStream/$metadata#Edm.Stream/$entity","id":"d0f6bffa-49d4-43c6-b93b-e7183f92b765","agentId":null,"createdDateTime":"2025-10-01T00:10:56.6481261Z","displayName":"What meeting do I have at 9 AM tomorrow morning?","state":"active","turnCount":4,"messages":[{"@odata.type":"#microsoft.graph.copilotConversationResponseMessage","id":"18bedd46-2de8-4dc7-86ec-5798215832d4","text":"What is the birthday of my best friend, John Doe?","createdDateTime":"2025-10-01T00:10:56.6481261Z","adaptiveCards":[],"attributions":[],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}},{"@odata.type":"#microsoft.graph.copilotConversationResponseMessage","id":"ab9e1ebc-925c-4d96-900e-d85fb9cb1181","text":"You asked: **\"What is the birthday of my best friend, John Doe?\"**\n\nBased on the information available, **John Doe's birthday is on January 1st**[^external^].\n\nIf you need this recorded for future reference or want to add more details about John Doe, just let me know!","createdDateTime":"2025-10-01T00:10:59.3842333Z","adaptiveCards":[{
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
     {
-      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
-      "id": "70894d7b-94b2-d65a-f4ed-7f7b10f63737",
-      "text": "What is the birthday of my best friend, John Doe?",
-      "createdDateTime": "2025-09-30T21:00:22.9880382Z",
-      "adaptiveCards": [],
-      "attributions": [],
-      "sensitivityLabel": {
-        "sensitivityLabelId": null,
-        "displayName": null,
-        "tooltip": null,
-        "priority": null,
-        "color": null,
-        "isEncrypted": null
-      }
-    },
-    {
-      "@odata.type": "#microsoft.graph.copilotConversationResponseMessage",
-      "id": "65b34190-40d2-4933-9539-8324684aca5a",
-      "text": "You asked for the birthday of your best friend, <Person>John Doe</Person>.\n\nBased on the information available, <Person>John Doe</Person>'s birthday is on **January 1st**. If you need this added to your calendar or want a reminder set up, just let me know!",
-      "createdDateTime": "2025-09-30T21:00:26.9371633Z",
-      "adaptiveCards": [
-        {}
-      ],
-      "attributions": [],
-      "sensitivityLabel": {
-        "sensitivityLabelId": null,
-        "displayName": null,
-        "tooltip": null,
-        "priority": null,
-        "color": null,
-        "isEncrypted": null
-      }
+      "type": "TextBlock",
+      "text": "You asked: **\"What is the birthday of my best friend, John Doe?\"**\n\nBased on the information available, **John Doe's birthday is on January 1st**[^external^].\n\nIf you need this recorded for future reference or want to add more details about John Doe, just let me know!",
+      "wrap": true
     }
   ]
-}
+}],"attributions":[],"sensitivityLabel":{"sensitivityLabelId":null,"displayName":null,"tooltip":null,"priority":null,"color":null,"isEncrypted":null}}]}
+id:71 
 ```
 
 ## Related content
