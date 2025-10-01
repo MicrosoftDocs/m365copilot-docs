@@ -11,7 +11,9 @@ doc_type: resourcePageType
 
 # connectionItem resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+:::zone pivot="graph-preview"
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Represents a Copilot connector to include in retrieval operations in the [retrieval API](../copilotroot-retrieval.md).
 
