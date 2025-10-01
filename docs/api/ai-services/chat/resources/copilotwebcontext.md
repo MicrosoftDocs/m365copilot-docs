@@ -19,7 +19,7 @@ Determines how web search grounding is used in a Copilot conversation through th
 
 | Property       | Type   | Description                                                    |
 |:---------------|:-------|:---------------------------------------------------------------|
-| `isWebEnabled` | Boolean | Determines if web search grounding is enabled or not when responding to the chat message. |
+| `isWebEnabled` | Boolean | Determines if web search grounding is enabled or not when responding to the current chat message. By default, web search grounding is enabled. |
 
 ## Relationships
 
