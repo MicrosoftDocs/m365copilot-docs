@@ -48,6 +48,8 @@ The following are the known limitations to the Chat API:
 - The Chat API does not support action or content generation skills like creating files, sending emails, or scheduling meetings.
 - The Chat API will only respond with textual responses.
 - The Chat API does not support tools such as code interpreter and graphic art.
+- The Chat API leverages both enterprise search grounding and web search grounding by default.
+- Toggling off web search grounding is a single-turn action; this means that web search grounding much be toggled off for each chat message where it is not required.
 - The Chat API is subject to all limitations of the [Microsoft 365 Copilot semantic index](/microsoftsearch/semantic-index-for-copilot).
 - Graph explorer does not support streamed conversations with the Chat API.
 
