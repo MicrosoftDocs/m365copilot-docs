@@ -11,7 +11,9 @@ doc_type: resourcePageType
 
 # searchResourceMetadataDictionary resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+:::zone pivot="graph-preview"
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Represents a metadata dictionary in a [retrievalHit](retrievalhit.md). This resource is an open type. For more information on open types, see [Open Type](https://www.odata.org/getting-started/advanced-tutorial/#openType).
 
