@@ -97,7 +97,8 @@ The following are the current throttling and other limitations to the Retrieval 
 - The **relevanceScore** in the response payload measures the cosine similarity between the **queryString** and the extract, normalized to the 0-1 range.
 - It is possible for an extract to be returned without a **relevanceScore** when retrieving from Copilot connectors.
 - Up to 200 requests per user per hour are supported.
-- Retrieval from nontextual content, including tables, images, and charts, is not supported.
+- Retrieval from text in tables is limited to **.doc, .docx, and .pptx** files in OneDrive and SharePoint.
+- Retrieval from nontextual content, including images and charts, is not supported.
 - Results from files with .docx, .pptx, and .pdf extensions that are larger than 512 MB are not supported. Results from files with any other extension that are larger than 150 MB are not supported.
 - If retrieving from SharePoint or OneDrive, semantic retrieval and hybrid retrieval is only supported for **.doc, .docx, .pptx, .pdf, .aspx, and .one** file extensions. All other file extensions only support lexical retrieval.
 - The Retrieval API is subject to all limitations of the [Microsoft 365 Copilot semantic index](/microsoftsearch/semantic-index-for-copilot).
