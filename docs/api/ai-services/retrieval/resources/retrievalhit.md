@@ -12,7 +12,7 @@ doc_type: resourcePageType
 # retrievalHit resource type
 
 :::zone pivot="graph-preview"
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 :::zone-end
 
 Represents a single result within the list of retrieval results.
