@@ -12,7 +12,7 @@ doc_type: resourcePageType
 # searchSensitivityLabelInfo resource type
 
 :::zone pivot="graph-preview"
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 :::zone-end
 
 Describes the information protection label that details how to properly apply a sensitivity label to information.
