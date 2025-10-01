@@ -33,8 +33,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-To continue streamed conversations with the Chat API, you will make the following HTTP request.
-
 ```http
 POST https://graph.microsoft.com/beta/copilot/conversations/{conversationId}/chatOverStream
 ```
