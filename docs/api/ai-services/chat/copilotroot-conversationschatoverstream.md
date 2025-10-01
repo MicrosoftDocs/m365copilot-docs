@@ -67,7 +67,7 @@ If successful, this method returns a stream of server sent events (SSE) with a s
 
 ### Example 1: Sending a chat message to the Microsoft 365 Copilot Chat API
 
-The following example shows of sending a prompt to the Chat API using the synchronous endpoint.
+The following example shows how to send a prompt to the Chat API using the streamed endpoint.
 
 #### Request
 
@@ -204,7 +204,7 @@ id:755
 
 ### Example 3: Toggling off web search grounding when sending a chat message to the Microsoft 365 Copilot Chat API
 
-The following example shows how to toggle off web search grounding when sending a chat message to the Chat API. If web search grounding is toggling off, only enterprise search grounding is used to answer a chat message. Toggling web search grounding is a single-turn action.
+The following example shows how to toggle off web search grounding when sending a chat message to the Chat API. If web search grounding is toggled off, only enterprise search grounding is used to answer a chat message. Toggling web search grounding is a single-turn action.
 
 #### Request
 
