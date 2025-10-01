@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 08/25/2025
+ms.date: 09/17/2025
 ---
 
 # Choose the right Copilot Studio experience
@@ -49,7 +49,7 @@ The following table provides a more detailed feature comparison.
 
 ## Licensing requirements
 
-Both Copilot Studio experiences are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Studio message packs or a pay-as-you-go plan to access either experience.
+Both Copilot Studio experiences are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Credits or a pay-as-you-go plan to access either experience.
 
 You can also use the lite experience for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
 
@@ -94,4 +94,4 @@ IT administrators use the Power Platform admin center to manage:
 
 - [Choose the right tool to build your declarative agent](declarative-agent-tool-comparison.md)
 - [Overview of the Copilot Studio lite experience](copilot-studio-agent-builder.md)
-- [Use the Copilot Studio full experience to build agents](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
+- [Use the Copilot Studio full experience to build agents](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions)

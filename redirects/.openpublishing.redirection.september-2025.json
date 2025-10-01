@@ -67,7 +67,7 @@
     },
     {
       "source_path_from_root": "/docs/copilot-studio-agent-builder-publish.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-publish-agent",
+      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-share-manage-agent",
       "redirect_document_id": false
     },
     {
@@ -85,5 +85,15 @@
       "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-build",
       "redirect_document_id": false
     },
+        {
+      "source_path_from_root": "/docs/copilot-studio-lite-publish-agent.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/copilot-studio-lite-share-manage-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/debugging-copilot-agent-vscode.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/debugging-agents-vscode",
+      "redirect_document_id": false
+    }
   ]
 }

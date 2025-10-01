@@ -67,6 +67,10 @@ Begin by creating a basic declarative agent.
 
     :::image type="content" source="assets/images/build-da/ttk/provision-agent.png" alt-text="A screenshot of the Provision option in the Lifecycle pane of Agents Toolkit":::
 
+> [!NOTE]
+> If you prefer to create an agent based on an existing sample, select **View Samples** in Step 2, rather than **Create a New Agent/App**.
+
+
 ## Test the agent
 
 1. Navigate to the Copilot application with the URL [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).

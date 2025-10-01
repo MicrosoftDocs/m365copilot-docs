@@ -34,7 +34,6 @@ items:
   - name: Agents overview
     href: agents-overview.md
   - name: Build a declarative agent
-    expanded: false
     items:
     - name: Declarative agents overview
       href: overview-declarative-agent.md
@@ -50,7 +49,21 @@ items:
       expanded: true
       items:
       - name: Build with TypeSpec
-        href: build-declarative-agents-typespec.md
+        items:
+        - name: Overview
+          href: overview-typespec.md
+        - name: Get started
+          href: build-declarative-agents-typespec.md
+        - name: Scenarios
+          href: typespec-scenarios.md
+        - name: Authentication
+          href: typespec-authentication.md
+        - name: TypeSpec reference
+          items:
+            - name: Decorators
+              href: typespec-decorators.md
+            - name: Capabilities
+              href: typespec-capabilities.md
       - name: Build with JSON
         items:
         - name: Create the agent
@@ -142,27 +155,19 @@ items:
         href: copilot-studio-lite-tuned-models.md
       - name: Add knowledge sources
         href: copilot-studio-lite-knowledge.md
-      - name: Publish agents
-        href: copilot-studio-lite-publish-agent.md
+      - name: Share and manage agents
+        href: copilot-studio-lite-share-manage-agent.md
       - name: Availability and language support
         href: copilot-studio-lite-availability.md
-      - name: Build in Microsoft Copilot Studio
+      - name: Use the Copilot Studio full experience
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
-        - name: Add actions with Copilot Studio
-          items:
-          - name: Copilot connectors on Copilot Studio overview
-            href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
-          - name: Copilot Studio actions
-            href: overview-business-applications.md
-          - name: Connector actions
-            href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-          - name: Power Automate flow actions
-            href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
-          - name: Prompts
-            href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
-          - name: Learning path
-            href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
+        - name: Copilot Studio actions
+          href: overview-business-applications.md
+        - name: Power Automate flow actions
+          href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
+        - name: Prompts
+          href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
     - name: Write effective instructions
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
@@ -184,13 +189,16 @@ items:
     - name: Localize your agent
       href: localize-agents.md
     - name: Test and debug agents
-      href: debugging-copilot-agent.md
+      items:
+          - name: Test agents using Copilot Studio
+            href: debugging-agents-copilot-studio.md
+          - name: Test agents using Agents Toolkit
+            href: debugging-agents-vscode.md
     - name: Convert to custom engine agent
       href: convert-declarative-agent.md
     - name: Responsible AI validation
       href: rai-validation.md
   - name: Build a custom engine agent
-    expanded: false
     items:
     - name: Custom engine agent overview
       href: overview-custom-engine-agent.md
@@ -287,7 +295,6 @@ items:
   - name: Validation guidelines for agents
     href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
 - name: Manage
-  expanded: false
   items:
   - name: Overview
     href: manage.md
