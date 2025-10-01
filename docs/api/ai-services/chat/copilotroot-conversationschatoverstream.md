@@ -211,7 +211,7 @@ The following example shows how to toggle off web search grounding when sending 
 The following example shows the request.
 
 ```http
-POST https://graph.microsoft.com/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
+POST https://graph.microsoft.com/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
