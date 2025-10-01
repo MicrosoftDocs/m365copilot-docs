@@ -11,7 +11,9 @@ doc_type: resourcePageType
 
 # externalItemConfiguration resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+:::zone pivot="graph-preview"
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Represents configuration options for retrieving data from Copilot connectors in the [retrieval API](../copilotroot-retrieval.md).
 
