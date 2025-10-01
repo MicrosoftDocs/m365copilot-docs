@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
 
-# copilotConversationRequestMessageParameter resource type
+# copilotFile resource type
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
