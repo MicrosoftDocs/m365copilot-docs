@@ -35,15 +35,19 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ## HTTP request
 
 :::zone pivot="graph-preview"
+
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
 ```
+
 :::zone-end
 
 :::zone pivot="graph-v1"
+
 ```http
 POST https://graph.microsoft.com/v1.0/copilot/retrieval
 ```
+
 :::zone-end
 
 ## Request headers
@@ -78,10 +82,11 @@ If successful, this action returns a `200 OK` response code and a [retrievalResp
 
 The following example shows a request to retrieve data from SharePoint. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
-:::zone pivot="graph-preview"
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
@@ -97,12 +102,10 @@ Content-Type: application/json
   "maximumNumberOfResults": "10"
 }
 ```
+
 :::zone-end
 
 :::zone pivot="graph-v1"
-#### Request
-
-The following example shows the request.
 
 ```http
 POST https://graph.microsoft.com/v1.0/copilot/retrieval
@@ -118,6 +121,7 @@ Content-Type: application/json
   "maximumNumberOfResults": "10"
 }
 ```
+
 :::zone-end
 
 #### Response
@@ -190,10 +194,11 @@ Content-Type: application/json
 
 The following example shows a request to retrieve data from Copilot connectors. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
-:::zone pivot="graph-preview"
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
@@ -209,12 +214,10 @@ Content-Type: application/json
   "maximumNumberOfResults": "10"
 }
 ```
+
 :::zone-end
 
 :::zone pivot="graph-v1"
-#### Request
-
-The following example shows the request.
 
 ```http
 POST https://graph.microsoft.com/v1.0/copilot/retrieval
@@ -230,6 +233,7 @@ Content-Type: application/json
   "maximumNumberOfResults": "10"
 }
 ```
+
 :::zone-end
 
 #### Response
@@ -284,10 +288,11 @@ Content-Type: application/json
 
 The following example shows how to [batch requests to the Retrieval API](/graph/json-batching?tabs=http). The Retrieval API supports up to 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
 
-:::zone pivot="graph-preview"
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/$batch
@@ -323,12 +328,10 @@ Content-Type: application/json
   ]
 }
 ```
+
 :::zone-end
 
 :::zone pivot="graph-v1"
-#### Request
-
-The following example shows the request.
 
 ```http
 POST https://graph.microsoft.com/v1.0/$batch
@@ -364,6 +367,7 @@ Content-Type: application/json
   ]
 }
 ```
+
 :::zone-end
 
 #### Response
@@ -482,10 +486,11 @@ Content-Type: application/json
 
 The following example shows a request to retrieve data from a specific Sharepoint site. The `filterExpression` parameter specifies the path to the site. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
-:::zone pivot="graph-preview"
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
@@ -502,12 +507,10 @@ Content-Type: application/json
   "maximumNumberOfResults": "4"
 }
 ```
+
 :::zone-end
 
 :::zone pivot="graph-v1"
-#### Request
-
-The following example shows the request.
 
 ```http
 POST https://graph.microsoft.com/v1.0/copilot/retrieval
@@ -524,6 +527,7 @@ Content-Type: application/json
   "maximumNumberOfResults": "4"
 }
 ```
+
 :::zone-end
 
 #### Response
@@ -596,10 +600,11 @@ Content-Type: application/json
 
 The following example shows a request to retrieve data from multiple Sharepoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
-:::zone pivot="graph-preview"
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
@@ -616,12 +621,10 @@ Content-Type: application/json
   "maximumNumberOfResults": "4"
 }
 ```
+
 :::zone-end
 
 :::zone pivot="graph-v1"
-#### Request
-
-The following example shows the request.
 
 ```http
 POST https://graph.microsoft.com/v1.0/copilot/retrieval
@@ -638,6 +641,7 @@ Content-Type: application/json
   "maximumNumberOfResults": "4"
 }
 ```
+
 :::zone-end
 
 #### Response
@@ -732,10 +736,11 @@ Content-Type: application/json
 
 The following example shows a request that restricts Copilot connectors retrieval to specific connection IDs. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
 
-:::zone pivot="graph-preview"
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
@@ -763,12 +768,10 @@ Content-Type: application/json
   "maximumNumberOfResults": "10"
 }
 ```
+
 :::zone-end
 
 :::zone pivot="graph-v1"
-#### Request
-
-The following example shows the request.
 
 ```http
 POST https://graph.microsoft.com/v1.0/copilot/retrieval
@@ -796,6 +799,7 @@ Content-Type: application/json
   "maximumNumberOfResults": "10"
 }
 ```
+
 :::zone-end
 
 #### Response
