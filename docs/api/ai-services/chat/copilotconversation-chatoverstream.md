@@ -1,5 +1,5 @@
 ---
-title: Continue streamed conversations.
+title: "copilotConversation: chatOverStream"
 description: Continue streamed conversations with the Microsoft 365 Copilot Chat API.
 author: muwagerikpe
 ms.author: muwagerikpe
@@ -11,7 +11,7 @@ doc_type: conceptualPageType
 
 <!-- markdownlint-disable MD024 -->
 
-# Continue streamed conversations with Microsoft 365 Copilot using the Microsoft 365 Copilot Chat API
+# copilotConversation: chatOverStream
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 

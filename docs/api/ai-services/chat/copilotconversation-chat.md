@@ -1,5 +1,5 @@
 ---
-title: Continue synchronous conversations.
+title: "copilotConversation: chat"
 description: Continue synchronous conversations with the Microsoft 365 Copilot Chat API.
 author: muwagerikpe
 ms.author: muwagerikpe
@@ -11,7 +11,7 @@ doc_type: conceptualPageType
 
 <!-- markdownlint-disable MD024 -->
 
-# Continue synchronous conversations with Microsoft 365 Copilot using the Microsoft 365 Copilot Chat API
+# copilotConversation: chat
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 

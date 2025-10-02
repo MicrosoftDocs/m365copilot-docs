@@ -11,7 +11,7 @@ doc_type: conceptualPageType
 
 <!-- markdownlint-disable MD024 -->
 
-# Chat with Microsoft 365 Copilot
+# Create copilotConversation
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
@@ -46,8 +46,6 @@ POST https://graph.microsoft.com/beta/copilot/conversations
 
 ## Request body
 
-### Creating a conversation with the Microsoft 365 Copilot Chat API
-
 In the request body, supply an empty JSON body.
 
 ## Response
@@ -78,7 +76,6 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/conversations/$entity",
   "id": "0d110e7e-2b7e-4270-a899-fd2af6fde333",
   "createdDateTime": "2025-09-30T15:28:46.1560062Z",
   "displayName": "",
