@@ -4,7 +4,7 @@ description: Use the Retrieval API to ground data from SharePoint, OneDrive, and
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 08/18/2025
+ms.date: 10/10/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 zone_pivot_groups: graph-api-versions

@@ -4,7 +4,7 @@ description: "Use the Microsoft 365 Copilot Retrieval API to ground your AI solu
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
-ms.date: 08/08/2025
+ms.date: 10/10/2025
 ms.topic: overview
 ---
 

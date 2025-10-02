@@ -4,7 +4,7 @@ description: Represents results from a retrieval query.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 08/08/2025
+ms.date: 10/10/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 zone_pivot_groups: graph-api-versions
