@@ -25,7 +25,7 @@ Represents configuration options for retrieving data from Copilot connectors in 
 
 | Property      | Type                                           | Description                                                                                                       |
 |:--------------|:-----------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
-| `connections` | [connectionItem](connectionitem.md) collection | An array of connection objects specifying the Copilot connector connection IDs to include in retrieval. Required. |
+| `connections` | [connectionItem](connectionitem.md) collection | An array of connection objects specifying the Copilot connector connection identifiers to include in retrieval. Required. |
 
 ## Relationships
 
