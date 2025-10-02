@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Describes an attribution in a chat message from the [Microsoft 365 Copilot Chat API](../copilotroot-conversations.md).
+Describes an attribution in a chat message from the [Microsoft 365 Copilot Chat API](../copilotroot-post-conversations.md).
 
 ## Properties
 

@@ -58,4 +58,4 @@ The following are the known limitations to the Chat API:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Chat with Microsoft 365 Copilot](copilotroot-conversations.md)
+> [Chat with Microsoft 365 Copilot](copilotroot-post-conversations.md)

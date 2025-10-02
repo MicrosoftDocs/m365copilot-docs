@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Determines how web search grounding is used in a Copilot conversation through the [Microsoft 365 Copilot Chat API](../copilotroot-conversations.md).
+Determines how web search grounding is used in a Copilot conversation through the [Microsoft 365 Copilot Chat API](../copilotroot-post-conversations.md).
 
 ## Properties
 

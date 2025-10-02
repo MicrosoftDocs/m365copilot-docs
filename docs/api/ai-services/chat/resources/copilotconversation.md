@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Represents a Copilot conversation being created or continued through the [Microsoft 365 Copilot Chat API](../copilotroot-conversations.md).
+Represents a Copilot conversation being created or continued through the [Microsoft 365 Copilot Chat API](../copilotroot-post-conversations.md).
 
 ## Properties
 
