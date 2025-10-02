@@ -17,10 +17,10 @@ Represents extra context for a Copilot conversation through the [Microsoft 365 C
 
 ## Properties
 
-| Property       | Type   | Description                                                    |
-|:---------------|:-------|:---------------------------------------------------------------|
-| `text` | String | The text of the additional context. |
+| Property      | Type   | Description                                |
+|:--------------|:-------|:-------------------------------------------|
 | `description` | String | The description of the additional context. |
+| `text`        | String | The text of the additional context.        |
 
 ## Relationships
 

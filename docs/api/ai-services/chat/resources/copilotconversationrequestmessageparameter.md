@@ -17,9 +17,9 @@ Represents a chat message being sent into a Copilot conversation through the [Mi
 
 ## Properties
 
-| Property       | Type   | Description                                                    |
-|:---------------|:-------|:---------------------------------------------------------------|
-| `text` | String | The text of the chat message. Required. |
+| Property | Type   | Description                             |
+|:---------|:-------|:----------------------------------------|
+| `text`   | String | The text of the chat message. Required. |
 
 ## Relationships
 

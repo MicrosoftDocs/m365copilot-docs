@@ -17,14 +17,14 @@ Represents a message in a Copilot conversation being continued through the [Micr
 
 ## Properties
 
-| Property       | Type   | Description                                                    |
-|:---------------|:-------|:---------------------------------------------------------------|
-| `id` | String | The identifier for the Copilot conversation. This is used as a path parameter when continuing a synchronous or streamed conversation. |
-| `text` | String | The chat message text. This either recaps the submitted prompt or articulates the Microsoft 365 Copilot Chat API's response. |
-| `createdDateTime` | DateTimeOffset | The timestamp when the chat message was created. |
-| `adaptiveCards` | Edm.Untyped collection | List of raw JSON representations of adaptive cards. This property may be empty. |
-| `attributions` | [copilotConversationAttribution](copilotconversationattribution.md) collection | The list of attributions (either citations or annotations) included in the chat message response. |
-| `sensitivityLabel` | [searchSensitivityLabelInfo](../../resources/searchsensitivitylabelinfo.md) | Defines the highest sensitivity (most restricted) resource used to create the chat message. |
+| Property           | Type                                                                           | Description                                                                                                                           |
+|:-------------------|:-------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
+| `adaptiveCards`    | Edm.Untyped collection                                                         | List of raw JSON representations of adaptive cards. This property may be empty.                                                       |
+| `attributions`     | [copilotConversationAttribution](copilotconversationattribution.md) collection | The list of attributions (either citations or annotations) included in the chat message response.                                     |
+| `createdDateTime`  | DateTimeOffset                                                                 | The timestamp when the chat message was created.                                                                                      |
+| `id`               | String                                                                         | The identifier for the Copilot conversation. This is used as a path parameter when continuing a synchronous or streamed conversation. |
+| `sensitivityLabel` | [searchSensitivityLabelInfo](../../resources/searchsensitivitylabelinfo.md)    | Defines the highest sensitivity (most restricted) resource used to create the chat message.                                           |
+| `text`             | String                                                                         | The chat message text. This either recaps the submitted prompt or articulates the Microsoft 365 Copilot Chat API's response.          |
 
 ## Relationships
 

@@ -17,9 +17,9 @@ OneDrive or SharePoint file being sent as context into a Copilot conversation th
 
 ## Properties
 
-| Property       | Type   | Description                                                    |
-|:---------------|:-------|:---------------------------------------------------------------|
-| `uri` | String | The URI of the OneDrive or SharePoint file. |
+| Property | Type   | Description                                 |
+|:---------|:-------|:--------------------------------------------|
+| `uri`    | String | The URI of the OneDrive or SharePoint file. |
 
 ## Relationships
 

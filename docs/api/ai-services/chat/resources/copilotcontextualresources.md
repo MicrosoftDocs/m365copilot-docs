@@ -1,6 +1,6 @@
 ---
 title: copilotContextualResources resource type
-description: Optional contexual resources being sent into a Copilot conversation through the Microsoft 365 Copilot Chat API.
+description: Optional contextual resources being sent into a Copilot conversation through the Microsoft 365 Copilot Chat API.
 author: muwagerikpe
 ms.author: muwagerikpe
 ms.topic: reference
@@ -13,14 +13,14 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Optional contexual resources being sent into a Copilot conversation through the [Microsoft 365 Copilot Chat API](../copilotroot-post-conversations.md).
+Optional contextual resources being sent into a Copilot conversation through the [Microsoft 365 Copilot Chat API](../copilotroot-post-conversations.md).
 
 ## Properties
 
-| Property       | Type   | Description                                                    |
-|:---------------|:-------|:---------------------------------------------------------------|
-| `files` | [copilotFile](copilotfile.md) collection | A collection of OneDrive and SharePoint file URIs that should be used as context when responding to the chat message. |
-| `webContext` | [copilotWebContext](copilotwebcontext.md) | Determines if web search grounding can be used to respond to the chat message. |
+| Property     | Type                                      | Description                                                                                                           |
+|:-------------|:------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
+| `files`      | [copilotFile](copilotfile.md) collection  | A collection of OneDrive and SharePoint file URIs that should be used as context when responding to the chat message. |
+| `webContext` | [copilotWebContext](copilotwebcontext.md) | Determines if web search grounding can be used to respond to the chat message.                                        |
 
 ## Relationships
 

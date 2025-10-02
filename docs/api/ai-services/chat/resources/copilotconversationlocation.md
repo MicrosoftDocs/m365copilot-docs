@@ -17,13 +17,13 @@ Represents user location information during a Copilot conversation through the [
 
 ## Properties
 
-| Property       | Type   | Description                                                    |
-|:---------------|:-------|:---------------------------------------------------------------|
-| `latitude` | Float | Latitude of user location. |
-| `longitude` | Float | Longitude of user location. |
-| `timeZone` | String | Time zone of user location in [IANA format](https://aka.ms/Copilot-APIs/Chat/IANA_Format). Required. |
-| `countryOrRegion` | String | The country or region of the location. |
-| `countryOrRegionConfidence` | Float | The confidence level of the country or region location. |
+| Property                    | Type   | Description                                                                                          |
+|:----------------------------|:-------|:-----------------------------------------------------------------------------------------------------|
+| `countryOrRegion`           | String | The country or region of the location.                                                               |
+| `countryOrRegionConfidence` | Float  | The confidence level of the country or region location.                                              |
+| `latitude`                  | Float  | Latitude of user location.                                                                           |
+| `longitude`                 | Float  | Longitude of user location.                                                                          |
+| `timeZone`                  | String | Time zone of user location in [IANA format](https://aka.ms/Copilot-APIs/Chat/IANA_Format). Required. |
 
 ## Relationships
 
