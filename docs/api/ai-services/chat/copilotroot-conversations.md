@@ -15,7 +15,7 @@ doc_type: conceptualPageType
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-The Microsoft 365 Copilot Chat API allows you to create and continue multi-turn conversations with Microsoft 365 Copilot, while respecting the defined access controls within the tenant. Use the Chat API to integrate Microsoft 365 Copilot into your generative AI solutions.
+The Microsoft 365 Copilot Chat API allows you to create and continue multi-turn conversations with Microsoft 365 Copilot, while respecting the defined access controls within the organization. Use the Chat API to integrate Microsoft 365 Copilot into your generative AI solutions.
 
 This documentation covers creating Copilot conversations using the Chat API. Learn how to continue [synchronous conversations](copilotroot-conversationschat.md) or [streamed conversations](copilotroot-conversationschatoverstream.md) with the Chat API.
 
@@ -24,10 +24,10 @@ This documentation covers creating Copilot conversations using the Chat API. Lea
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 | Permission type                        | Least privileged permissions    | Higher privileged permissions |
-|:---------------------------------------|:---------------------------------------------|:------------------------------|
-| Delegated (work or school account)     | Sites.Read.All, Mail.Read, People.Read.All, OnlineMeetingTranscript.Read.All, Chat.Read, ChannelMessage.Read.All, ExternalItem.Read.All\*               | Not supported.         |
-| Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
-| Application                            | Not supported.               | Not supported.                |
+|:---------------------------------------|:--------------------------------|:------------------------------|
+| Delegated (work or school account)     | Sites.Read.All, Mail.Read, People.Read.All, OnlineMeetingTranscript.Read.All, Chat.Read, ChannelMessage.Read.All, ExternalItem.Read.All\* | Not supported. |
+| Delegated (personal Microsoft account) | Not supported.                  | Not supported.                |
+| Application                            | Not supported.                  | Not supported.                |
 
 \* You need all of these Microsoft Graph permissions to successfully call the Microsoft 365 Copilot Chat API.
 
@@ -39,10 +39,10 @@ POST https://graph.microsoft.com/beta/copilot/conversations
 
 ## Request headers
 
-| Name            | Description                                                                                                |
-|:----------------|:-----------------------------------------------------------------------------------------------------------|
-| `Authorization` |`Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| `Content-Type`  | `application/json.` Required.                                                                              |
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| `Content-Type`  | `application/json.` Required.                                                                               |
 
 ## Request body
 
@@ -58,7 +58,7 @@ If successful, this action returns a `201 Created` response code and a [copilotC
 
 The following example shows how to create a Copilot conversation through the Microsoft 365 Copilot Chat API. Once the conversation is created, the `id` in the response body is used as a path parameter for continuing the conversation, using either the synchronous endpoint or the streamed endpoint.
 
-#### Request
+### Request
 
 The following example shows the request.
 
@@ -69,7 +69,7 @@ Content-Type: application/json
 {}
 ```
 
-#### Response
+### Response
 
 The following example shows the response.
 
