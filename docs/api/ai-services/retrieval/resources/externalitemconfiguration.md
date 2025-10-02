@@ -14,13 +14,12 @@ zone_pivot_groups: graph-api-versions
 
 :::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
-
-Represents configuration options for retrieving data from Copilot connectors in the [retrieval API](../copilotroot-retrieval.md).
 :::zone-end
 
 :::zone pivot="graph-v1"
-Represents configuration options for retrieving data from Copilot connectors in the [retrieval API](../copilotroot-retrieval.md).
 :::zone-end
+
+Represents configuration options for retrieving data from Copilot connectors in the [retrieval API](../copilotroot-retrieval.md).
 
 ## Properties
 

@@ -14,13 +14,12 @@ zone_pivot_groups: graph-api-versions
 
 :::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
-
-Represents results from a retrieval query.
 :::zone-end
 
 :::zone pivot="graph-v1"
-Represents results from a retrieval query.
 :::zone-end
+
+Represents results from a retrieval query.
 
 ## Properties
 

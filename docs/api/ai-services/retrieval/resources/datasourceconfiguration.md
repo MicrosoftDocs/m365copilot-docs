@@ -14,13 +14,12 @@ zone_pivot_groups: graph-api-versions
 
 :::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
-
-Represents the data source configuration used in the [retrieval API](../copilotroot-retrieval.md).
 :::zone-end
 
 :::zone pivot="graph-v1"
-Represents the data source configuration used in the [retrieval API](../copilotroot-retrieval.md).
 :::zone-end
+
+Represents the data source configuration used in the [retrieval API](../copilotroot-retrieval.md).
 
 ## Properties
 

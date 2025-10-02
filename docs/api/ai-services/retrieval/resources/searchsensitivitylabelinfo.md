@@ -14,13 +14,12 @@ zone_pivot_groups: graph-api-versions
 
 :::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
-
-Describes the information protection label that details how to properly apply a sensitivity label to information.
 :::zone-end
 
 :::zone pivot="graph-v1"
-Describes the information protection label that details how to properly apply a sensitivity label to information.
 :::zone-end
+
+Describes the information protection label that details how to properly apply a sensitivity label to information.
 
 ## Properties
 

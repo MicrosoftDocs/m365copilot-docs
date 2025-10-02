@@ -14,20 +14,19 @@ zone_pivot_groups: graph-api-versions
 
 :::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
-
-Represents a single extract within the list of retrieval extracts.
 :::zone-end
 
 :::zone pivot="graph-v1"
-Represents a single extract within the list of retrieval extracts.
 :::zone-end
+
+Represents a single extract within the list of retrieval extracts.
 
 ## Properties
 
-| Property | Type   | Description                |
-|:---------|:-------|:---------------------------|
-| `text`   | String | The text extract received. |
-| `relevanceScore`   | Float | The cosine similarity between the text extract and the queryString, normalized to the 0-1 range. It is possible for a retrievalExtract to be returned without a relevance score. |
+| Property           | Type   | Description                |
+|:-------------------|:-------|:---------------------------|
+| `text`             | String | The text extract received. |
+| `relevanceScore`   | Float | The cosine similarity between the text extract and the `queryString`, normalized to the 0-1 range. It is possible for a `retrievalExtract` to be returned without a relevance score. |
 
 ## Relationships
 
