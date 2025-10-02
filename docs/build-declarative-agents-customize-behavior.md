@@ -61,7 +61,7 @@ Next, add some conversation starters to the agent.
 
   For more information, see [Conversation starters object](declarative-agent-manifest-1.6.md#conversation-starters-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Teams Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
 The updated conversation starters will be available in your declarative agent after you refresh the page.
 

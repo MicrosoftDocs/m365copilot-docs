@@ -344,7 +344,7 @@ The connection object contains the following properties.
 
 ###### Item identifier object
 
-Identifies an external item by it's ID.
+Identifies an external item by its ID.
 
 The item identifier object contains the following properties.
 
@@ -354,7 +354,7 @@ The item identifier object contains the following properties.
 
 ###### Path object
 
-Identifies an external item by it's path.
+Identifies an external item by its path.
 
 The path object contains the following properties.
 
@@ -364,7 +364,7 @@ The path object contains the following properties.
 
 ###### Container name object
 
-Identifies a container by it's name.
+Identifies a container by its name.
 
 The container name object contains the following properties.
 
@@ -374,7 +374,7 @@ The container name object contains the following properties.
 
 ###### Container URL object
 
-Identifies a container by it's URL.
+Identifies a container by its URL.
 
 The container URL object contains the following properties.
 

@@ -1,16 +1,16 @@
 ---
 title: Create an Interview Question Assistant agent from a template
-description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Interview Question Assistant template.
+description: Learn how to create a declarative agent in the Copilot Studio lite experience by using the Interview Question Assistant template.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/01/2025
+ms.date: 09/11/2025
 ---
 
 # Use the Interview Question Assistant template to build an agent
 
-You can use the Interview Question Assistant template to build an agent that supports hiring managers and interviewers by streamlining the process of drafting high-quality interview questions. This agent helps you quickly create effective interview questions.
+You can use the Interview Question Assistant template in the lite experience of Copilot Studio to build an agent that supports hiring managers and interviewers by streamlining the process of drafting high-quality interview questions. This agent helps you quickly create effective interview questions.
 
 ## Prerequisites
 
@@ -56,8 +56,9 @@ You can enhance the functionality of your Interview Question Assistant agents by
 - This agent doesn't provide interview advice. The answers provided are based on configured knowledge sources or general knowledge and don't reflect the opinions of Microsoft.
 - While the agent can generate questions based on templates and job descriptions, it might not fully capture the unique nuances of every role. Customize questions as needed.
 - Ensure that the interview questions generated comply with local labor laws and regulations.
+
 ## Related content
 
-- [Copilot Studio agent builder](copilot-studio-agent-builder.md)
-- [Build agents with agent builder](copilot-studio-agent-builder-build.md)
-- [Publish agents](copilot-studio-agent-builder-publish.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
+- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)

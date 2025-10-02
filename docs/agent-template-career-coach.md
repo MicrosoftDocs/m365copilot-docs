@@ -1,16 +1,16 @@
 ---
 title: Create a Career Coach agent from a template
-description: Learn how to create a declarative agent in Copilot Studio agent builder by using the Career Coach template.
+description: Learn how to use the Career Coach template in the Copilot Studio lite experience to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/01/2025
+ms.date: 09/11/2025
 ---
 
 # Use the Career Coach template to build an agent
 
-You can use the Career Coach template to build an agent that provides personalized suggestions and action plans to help users advance in their careers. The career coach offers tailored advice on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.  
+You can use the Career Coach template in the lite experience of Copilot Studio to build an agent that provides personalized suggestions and action plans to help users advance in their careers. The career coach offers tailored advice on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.  
 
 The Career Coach uses a professional and supportive tone to make interactions contextually relevant and encouraging.
 
@@ -58,6 +58,6 @@ Suggestions for such connections include:
 
 ## Related content
 
-- [Copilot Studio agent builder](copilot-studio-agent-builder.md)
-- [Build agents with agent builder](copilot-studio-agent-builder-build.md)
-- [Publish agents](copilot-studio-agent-builder-publish.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
+- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)

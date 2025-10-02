@@ -347,7 +347,7 @@ The connection object contains the following properties.
 
 ###### Item identifier object
 
-Identifies an external item by it's ID.
+Identifies an external item by its ID.
 
 The item identifier object contains the following properties.
 

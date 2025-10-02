@@ -34,7 +34,6 @@ items:
   - name: Agents overview
     href: agents-overview.md
   - name: Build a declarative agent
-    expanded: false
     items:
     - name: Declarative agents overview
       href: overview-declarative-agent.md
@@ -50,7 +49,21 @@ items:
       expanded: true
       items:
       - name: Build with TypeSpec
-        href: build-declarative-agents-typespec.md
+        items:
+        - name: Overview
+          href: overview-typespec.md
+        - name: Get started
+          href: build-declarative-agents-typespec.md
+        - name: Scenarios
+          href: typespec-scenarios.md
+        - name: Authentication
+          href: typespec-authentication.md
+        - name: TypeSpec reference
+          items:
+            - name: Decorators
+              href: typespec-decorators.md
+            - name: Capabilities
+              href: typespec-capabilities.md
       - name: Build with JSON
         items:
         - name: Create the agent
@@ -110,61 +123,53 @@ items:
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use Copilot Studio agent builder
+    - name: Use Copilot Studio
       items:
       - name: Overview
-        href: copilot-studio-agent-builder.md
+        href: copilot-studio-lite.md
       - name: Build agents
-        href: copilot-studio-agent-builder-build.md
+        href: copilot-studio-lite-build.md
       - name: Build agents from template
         items:
         - name: Templates overview
-          href: agent-builder-templates.md
+          href: agent-templates-overview.md
         - name: Career Coach
-          href: agent-builder-template-career-coach.md
+          href: agent-template-career-coach.md
         - name: Customer Insight Assistant
-          href: agent-builder-template-customer-insight.md
+          href: agent-template-customer-insight.md
         - name: Idea Coach
-          href: agent-builder-template-idea-coach.md
+          href: agent-template-idea-coach.md
         - name: Interview Question Assistant
-          href: agent-builder-template-interview-questions.md
+          href: agent-template-interview-questions.md
         - name: Learning Coach
-          href: agent-builder-template-learning-coach.md
+          href: agent-template-learning-coach.md
         - name: Meeting Coach
-          href: agent-builder-template-meeting-coach.md
+          href: agent-template-meeting-coach.md
         - name: Prompt Coach
-          href: agent-builder-template-prompt-coach.md
+          href: agent-template-prompt-coach.md
         - name: Quiz Tutor
-          href: agent-builder-template-quiz-tutor.md
+          href: agent-template-quiz-tutor.md
         - name: Scrum Assistant
-          href: agent-builder-template-scrum-assistant.md
+          href: agent-template-scrum-assistant.md
         - name: Writing Coach
-          href: agent-builder-template-writing-coach.md
+          href: agent-template-writing-coach.md
       - name: Build agents with fine-tuned models (preview)
-        href: copilot-studio-agent-builder-tuned-models.md
+        href: copilot-studio-lite-tuned-models.md
       - name: Add knowledge sources
-        href: copilot-studio-agent-builder-knowledge.md
-      - name: Publish agents
-        href: copilot-studio-agent-builder-publish.md
+        href: copilot-studio-lite-knowledge.md
+      - name: Share and manage agents
+        href: copilot-studio-lite-share-manage-agent.md
       - name: Availability and language support
-        href: copilot-studio-agent-builder-availability.md
-      - name: Build in Microsoft Copilot Studio
+        href: copilot-studio-lite-availability.md
+      - name: Use the Copilot Studio full experience
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
-        - name: Add actions with Copilot Studio
-          items:
-          - name: Copilot connectors on Copilot Studio overview
-            href: /microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365-copilot/extensibility/context
-          - name: Copilot Studio actions
-            href: overview-business-applications.md
-          - name: Connector actions
-            href: /connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context
-          - name: Power Automate flow actions
-            href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
-          - name: Prompts
-            href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
-          - name: Learning path
-            href: /training/paths/build-plugins-connectors-microsoft-copilot-microsoft-365/
+        - name: Copilot Studio actions
+          href: overview-business-applications.md
+        - name: Power Automate flow actions
+          href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
+        - name: Prompts
+          href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
     - name: Write effective instructions
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
@@ -186,13 +191,16 @@ items:
     - name: Localize your agent
       href: localize-agents.md
     - name: Test and debug agents
-      href: debugging-copilot-agent.md
+      items:
+          - name: Test agents using Copilot Studio
+            href: debugging-agents-copilot-studio.md
+          - name: Test agents using Agents Toolkit
+            href: debugging-agents-vscode.md
     - name: Convert to custom engine agent
       href: convert-declarative-agent.md
     - name: Responsible AI validation
       href: rai-validation.md
   - name: Build a custom engine agent
-    expanded: false
     items:
     - name: Custom engine agent overview
       href: overview-custom-engine-agent.md
@@ -218,10 +226,16 @@ items:
       items:
       - name: Overview
         href: teams-ai-library.md
+      - name: Create an agent with Teams CLI
+        href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/quickstart?context=/microsoft-365-copilot/extensibility/context
+      - name: Understand the code structure of agents
+        href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/code-basics?context=/microsoft-365-copilot/extensibility/context
       - name: SDK reference
         items:
         - name: TypeScript SDK
           href: /javascript/api/teams-sdk-typescript
+        - name: .NET SDK
+          href: /dotnet/api/?view=msteams-sdk-dotnet-latest&preserve-view=true
     - name: Use Microsoft Copilot Studio
       items:
       - name: Quickstart
@@ -283,7 +297,6 @@ items:
   - name: Validation guidelines for agents
     href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
 - name: Manage
-  expanded: false
   items:
   - name: Overview
     href: manage.md

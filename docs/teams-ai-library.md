@@ -4,7 +4,7 @@ description: Introduction of Teams AI Library v2 SDK to build custom engine agen
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 09/12/2025
 ms.topic: overview
 ---
 
@@ -28,4 +28,4 @@ Now with the new v2 SDK, it supports Agent2Agent (A2A) for multi-agent collabora
 Ready to build your first agent with the Teams AI Library v2? Let's get started now!
 
 > [!div class="nextstepaction"]
-> [Teams AI Library v2 documentation (preview)](/microsoftteams/platform/teams-ai-library/welcome)
+> [Teams AI Library v2 documentation](/microsoftteams/platform/teams-ai-library/welcome)
