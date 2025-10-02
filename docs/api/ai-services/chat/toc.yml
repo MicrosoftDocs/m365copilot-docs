@@ -1,16 +1,18 @@
 items:
 - name: Overview
   href: overview.md
-- name: Chat with Microsoft 365 Copilot
-  href: copilotroot-conversations.md
-- name: Continue synchronous conversations
-  href: copilotroot-conversationschat.md
-- name: Continue streamed conversations
-  href: copilotroot-conversationschatoverstream.md
+- name: Copilot conversation
+  items:
+  - name: Copilot converstation
+    href: resources/copilotconversation.md
+  - name: Create
+    href: copilotroot-post-conversations.md
+  - name: Chat
+    href: copilotconversation-chat.md
+  - name: Chat over stream
+    href: copilotconversation-chatoverstream.md
 - name: Complex types
   items:
-  - name: Copilot conversation
-    href: resources/copilotconversation.md
   - name: Copilot conversation request message parameter
     href: resources/copilotconversationrequestmessageparameter.md
   - name: Copilot context message
