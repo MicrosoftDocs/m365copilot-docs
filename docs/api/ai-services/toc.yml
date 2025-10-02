@@ -9,3 +9,5 @@ items:
   href: interaction-export/toc.yml
 - name: Chat API
   href: chat/toc.yml
+- name: Complex types
+  href: resources/toc.yml
