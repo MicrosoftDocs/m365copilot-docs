@@ -34,10 +34,10 @@ The following table highlights the key differences between publishing and sharin
 
 To share your agent, after you [build and test](copilot-studio-lite-build.md) it in the Copilot Studio lite experience, choose **Create**. A pop-up window displays a sharable link for your agent. By default, the link displayed only works for the person who created the agent. To share the agent with others, select **Change sharing settings** and specify who should have access.
 
+ :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
+
 > [!NOTE]
 > Your admin may restrict certain agent sharing options through a policy. This governance change is forward-looking and does not revoke existing agent access permissions. You should change your agent's sharing option to be compliant with the new policy before updating your agent further.
-
- :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
 
 The following table describes the available sharing options.
 
