@@ -34,6 +34,9 @@ The following table highlights the key differences between publishing and sharin
 
 To share your agent, after you [build and test](copilot-studio-lite-build.md) it in the Copilot Studio lite experience, choose **Create**. A pop-up window displays a sharable link for your agent. By default, the link displayed only works for the person who created the agent. To share the agent with others, select **Change sharing settings** and specify who should have access.
 
+> [!NOTE]
+> Your admin may restrict certain agent sharing options through a policy. This governance change is forward-looking and does not revoke existing agent access permissions. You should change your agent's sharing option to be compliant with the new policy before updating your agent further.
+
  :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
 
 The following table describes the available sharing options.
@@ -142,10 +145,10 @@ When sharing an agent and its knowledge sources, you might encounter the errors 
 | -------------------- | ----------- |
 | Something went wrong | An internal service error message. Contact support if this error continues to occur. |
 | Couldn't share       | Insufficient privileges to update the sharing permissions on certain files. The error lists the files that were unable to be shared. The agent owner should go into SharePoint to try updating these permissions manually. For more information, see: <ul><li>[Share a document](https://support.microsoft.com/office/share-a-document-using-sharepoint-or-onedrive-807de6cf-1ece-41b9-a2b3-250d9a48f1e8) to learn how to share files.</li><li>[Sharing errors in SharePoint and OneDrive](/sharepoint/sharepoint-onedrive-error-message) for an error code reference.</li></ul> |
+| Can no longer update agent | This occurs when your agent’s current sharing option is no longer compliant with new admin policies. Agent owners must change the sharing setting to a compliant option before updating their agent further. A banner will guide you to make this change. |
 <!-- markdownlint-enable MD033 -->
 
-If sharing an agent fails, users who don't have access to the folder and files won't receive responses generated from those knowledge sources. Checking the box shares the underlying knowledge sources via SharePoint. Files can only be shared with validated individuals or security groups in your directory.
-
+- If sharing an agent fails, users who don't have access to the folder and files won't receive responses generated from those knowledge sources. Checking the box shares the underlying knowledge sources via SharePoint. Files can only be shared with validated individuals or security groups in your directory.
 
 ## Related content
 
