@@ -33,8 +33,6 @@ items:
   items:
   - name: Agents overview
     href: agents-overview.md
-  - name: Best practices for building agents
-    href: declarative-agent-best-practices.md
   - name: Build a declarative agent
     items:
     - name: Declarative agents overview
@@ -170,6 +168,8 @@ items:
           href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
         - name: Prompts
           href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+    - name: Best practices for building agents
+      href: declarative-agent-best-practices.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
