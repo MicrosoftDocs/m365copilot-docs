@@ -37,7 +37,7 @@ To share your agent, after you [build and test](copilot-studio-lite-build.md) it
  :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
 
 > [!NOTE]
-> Your admin may restrict certain agent sharing options through a policy. This governance change is forward-looking and does not revoke existing agent access permissions. You should change your agent's sharing option to be compliant with the new policy before updating your agent further.
+> Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
 
 The following table describes the available sharing options.
 
