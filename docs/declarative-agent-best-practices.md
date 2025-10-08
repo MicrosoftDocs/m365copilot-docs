@@ -65,7 +65,7 @@ Keep the following key considerations in mind when choosing [knowledge sources](
 
 Even after following all the design best practices and guidelines, thoroughly test your agent to verify that it works as intended. Apply the following best practices to test and iterate on your agent:
 
-- **Use the built-in test chat:** - **Use the built-in test chat:** In Copilot Studio’s right navigation pane, you can chat with a live preview of your agent while building it. Do this frequently. Try all your conversation starters and sample prompts. Also, test edge questions, long questions, irrelevant questions, and so on, to see how the agent responds. If something odd happens, refine your instructions or knowledge sources and test again.  
+- **Use the built-in test chat:** In Copilot Studio’s right navigation pane, you can chat with a live preview of your agent while building it. Do this frequently. Try all your conversation starters and sample prompts. Also, test edge questions, long questions, irrelevant questions, and so on, to see how the agent responds. If something odd happens, refine your instructions or knowledge sources and test again.  
 
 - **Test in multiple apps:** If you have access to the Microsoft 365 Copilot experience in Microsoft 365 apps, such as Word, Excel, Teams, and Outlook, add your agent in each of those places to see how it behaves outside of the authoring environment. You might notice that in Word, for example, certain responses, such as suggested actions, behave differently than in Teams. Catch those discrepancies early. Your agent must be functional across all Microsoft 365 apps.  
 
@@ -81,6 +81,6 @@ Even after following all the design best practices and guidelines, thoroughly te
 
 - [Build agents with Copilot Studio](copilot-studio-lite-build.md)
 - [Build agents with Agents Toolkit](declarative-agent-tool-comparison.md#agents-toolkit)
-- [Add knowledge sources to your declarative agent in Copilot Studio](copilot-studio-lite-knowledge.md)
 - [Write effective  instructions for declarative agents](declarative-agent-instructions.md)
+- [Add knowledge sources to your declarative agent in Copilot Studio](copilot-studio-lite-knowledge.md)
 - [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines)
