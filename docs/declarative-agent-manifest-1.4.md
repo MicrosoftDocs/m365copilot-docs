@@ -435,7 +435,7 @@ The tables object contains the following property.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `table`  | String | Required. A unique identifier for the table. |
+| `table_name`  | String | Required. A unique identifier for the table. |
 
 #### Teams messages object
 
