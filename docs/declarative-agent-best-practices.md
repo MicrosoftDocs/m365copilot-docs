@@ -32,11 +32,11 @@ The instructions you provide determine your agent's behavior and help it to deli
 
 | Focus Area | Guidance | Purpose|
 | ----- | ----- | ----- |
-| **Instruction Strategy** | Clearly define the agent’s role and goals. Plan for common and edge-case scenarios. Give the agent enough flexibility to act, but set boundaries to guide behavior | Helps agents respond appropriately and consistently across different situations. |
-| **Contextual Intelligence**| Adjust instructions based on where and how the agent will be used—such as in Word, Teams, or Outlook. Consider user roles and time-sensitive needs. | Ensures instructions remain relevant and effective in the apps where they are used. |
-| **Collaborative Iteration**| Work with cross-functional teammates—such as product managers, writers, and engineers—to review and improve instructions. Test how instructions behave in different apps and keep a record of changes. | Improves instruction quality through teamwork and helps maintain consistency over time. |
-| **Instruction Diagnostics**| To understand how instructions perform, use tools like logs and user feedback. Look for patterns where agent responses aren't helpful and revise the instructions to improve the responses. | Helps you improve instructions based on real usage and user experience. |
-| **Instruction Architecture**| Break instructions into smaller, reusable parts. Use tags and templates to stay organized and apply consistent patterns across agents.  | Makes it easier to manage instructions and reuse them across multiple agents and scenarios. |
+| **Instruction strategy** | Clearly define the agent’s role and goals. Plan for common and edge-case scenarios. Give the agent enough flexibility to act, but set boundaries to guide behavior | Helps agents respond appropriately and consistently across different situations. |
+| **Contextual intelligence**| Adjust instructions based on where and how the agent will be used—such as in Word, Teams, or Outlook. Consider user roles and time-sensitive needs. | Ensures instructions remain relevant and effective in the apps where they are used. |
+| **Collaborative iteration**| Work with cross-functional teammates—such as product managers, writers, and engineers—to review and improve instructions. Test how instructions behave in different apps and keep a record of changes. | Improves instruction quality through teamwork and helps maintain consistency over time. |
+| **Instruction diagnostics**| To understand how instructions perform, use tools like logs and user feedback. Look for patterns where agent responses aren't helpful and revise the instructions to improve the responses. | Helps you improve instructions based on real usage and user experience. |
+| **Instruction architecture**| Break instructions into smaller, reusable parts. Use tags and templates to stay organized and apply consistent patterns across agents.  | Makes it easier to manage instructions and reuse them across multiple agents and scenarios. |
 
 
 For more information and specific guidance for creating agent instructions, see [Write effective  instructions for declarative agents](declarative-agent-instructions.md).
