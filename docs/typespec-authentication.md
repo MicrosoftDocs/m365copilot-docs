@@ -45,6 +45,18 @@ Authentication using API keys or personal access tokens applied to entire namesp
 
 ### Example
 
+```yaml
+# m365agents.yml
+# After the typespec/compile step
+- uses: apiKey/register
+  with:
+    name: ApiKeyAuth
+    appId: ${{TEAMS_APP_ID}}
+    apiSpecPath: ./appPackage/.generated/api-openapi.yml
+  writeToEnvironmentFile:
+    registrationId: APIKEYAUTH_REGISTRATION_ID
+```
+
 ```typescript
 @service
 @actions(ACTIONS_METADATA)
@@ -55,11 +67,30 @@ namespace API {
 }
 ```
 
+This [sample](https://adoption.microsoft.com/en-us/sample-solution-gallery/sample/pnp-copilot-pro-dev-da-typespec-repairs-apikey/) highlights the use of API key authentication.
+
 ## OAuth2 authorization code flow
 
 User-delegated permissions for accessing user data an OAuth2 protected service. Use the native [`OAuth2Auth`](https://typespec.io/docs/libraries/http/authentication/#oauth2authtflows-extends-oauth2flow) from TypeSpec. Update the `authorizationUrl`, `tokenUrl`, `refreshUrl`, and `scopes` based on the specific API you're integrating with.
 
+Learn how to automatically [create the Entra ID app using Agents Toolkit](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Microsoft-365-Agents-Toolkit#aadappcreate) and [update the Entra ID app](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Microsoft-365-Agents-Toolkit#aadappupdate) once the registration is completed.
+
 ### Example
+
+```yaml
+# m365agents.yml
+# After the typespec/compile step
+- uses: oauth/register
+  with:
+    name: OAuth2Auth
+    appId: ${{TEAMS_APP_ID}}
+    clientId: ${{AAD_APP_CLIENT_ID}}
+    clientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
+    apiSpecPath: ./appPackage/.generated/api-openapi.yml
+    flow: authorizationCode
+  writeToEnvironmentFile:
+    configurationId: OAUTH2AUTH_REGISTRATION_ID
+```
 
 ```typescript
 @service
@@ -77,9 +108,11 @@ namespace API {
 }
 ```
 
+This [sample](https://adoption.microsoft.com/en-us/sample-solution-gallery/sample/pnp-copilot-pro-dev-da-typespec-todo/) highlights the use of OAuth2 with authorization code flow.
+
 ## Entra ID SSO authentication
 
-Seamless authentication applying the user's existing Microsoft 365 session for native integration scenarios. To complete the SSO registration, use the regular [`OAuth2Auth`](https://typespec.io/docs/libraries/http/authentication/#oauth2authtflows-extends-oauth2flow) from TypeSpec and perform the [manual steps](api-plugin-authentication.md#update-the-microsoft-entra-app-registration).
+Seamless authentication applying the user's existing Microsoft 365 session for native integration scenarios. To complete the SSO registration, use the regular [`OAuth2Auth`](#oauth2-authorization-code-flow) flow and perform the [manual steps](api-plugin-authentication.md#update-the-microsoft-entra-app-registration).
 
 ## Using registered authentication configurations
 
