@@ -141,6 +141,7 @@
         "cspell.json",
         "LICENSE",
         "sharepoint-id-query-response.json",
-        "posts-api.yml"
+        "posts-api.yml",
+        "docs/api/snippets/typescript/node_modules/**"
     ]
 }
