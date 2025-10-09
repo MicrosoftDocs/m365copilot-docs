@@ -162,6 +162,8 @@ items:
       - name: Use the Copilot Studio full experience
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
+        - name: Copy your agent to Copilot Studio
+          href: copy-agent-to-copilot-studio.md
         - name: Copilot Studio actions
           href: overview-business-applications.md
         - name: Power Automate flow actions
