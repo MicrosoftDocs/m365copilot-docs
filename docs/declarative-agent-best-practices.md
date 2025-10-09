@@ -5,8 +5,9 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 09/24/2025
+ms.date: 10/09/2025
 ---
+
 
 # Best practices for building declarative agents
 
@@ -18,13 +19,13 @@ A declarative agent consists of several components. It's important to apply best
 
 | Component | Description | Best practice |
 | --------- | ----------- | ------------- |
-| Name | The agent’s display name. | Make sure that your display name conveys the purpose for your agent for user discovery in the Agent Store. The name should meet the character limits based on the development tool:<br><br><ul><li>Copilot Studio lite experience - 30 characters</li><li>Microsoft 365 Agents Toolkit - 100 characters</li></ul><br><br>For information about app name requirements, see the [Teams Store validation requirements](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#app-name).|
+| Name | The agent’s display name. | Make sure that your display name conveys the purpose for your agent for user discovery in the Agent Store. The name should meet the character limits based on the development tool:<br><ul><li>Copilot Studio lite experience - 30 characters</li><li>Microsoft 365 Agents Toolkit - 100 characters</li></ul><br>For information about app name requirements, see the [Teams Store validation requirements](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#app-name).|
 | Description | A short summary of what the agent does. | Clearly state the agent’s purpose and domain. For example: "Use the Project Agent in Microsoft 365 Copilot to search and summarize your project documents." Mention that the agent works in Microsoft 365 Copilot. Keep it concise (a few sentences, ≤1,000 characters), and limit the instructions to what the agent *should* do, rather than what it should *not* do.|
 | Instructions  | The core behavioral guidelines for the agent. The instructions are the key prompt that steers the agent's responses. | Provide up to 8,000 characters of detailed guidance for how the agent should behave, what tasks it can do, and rules or styles it should follow. For more information, see [Write effective instructions](declarative-agent-instructions.md). |
 | Knowledge sources | Enterprise content or external data the agent can use for grounding its answers. Configured in Copilot Studio’s **Knowledge** section or in the manifest. | Add only relevant knowledge that the agent needs. You can add SharePoint sites, folders, or files; specific Teams chats; Outlook email; and public web URLs as sources. <br><br> When adding files, less is more: Copilot performs best when documents are reasonably sized and focused. Also ensure the content is up-to-date and accurate because the agent uses content in its knowledge sources in its responses. |
 | Capabilities  | Optional built-in AI capabilities (such as [Code Interpreter](code-interpreter.md) and [Image Generator](image-generator.md)).  | Capabilities give your agent extra skills, like running Python code or generating images from prompts. Only add capabilities that align with your agent’s goals. For example, Code Interpreter might be great for a data analysis agent. |
 | Actions (APIs/plugins)  | External actions the agent can take via API plugins (Copilot connectors, custom web APIs, and Power Platform connectors), defined in the agent manifest.  | If your agent needs to query external systems or perform transactions, you can integrate API-based plugins. Each action corresponds to an API operation.<br><br>Design actions carefully: provide an OpenAPI document with clear operation descriptions and add those actions in the agent manifest.<br><br>For each action, note whether it’s consequential (that is, writes or changes external data). Any create/update/delete type action must have `isConsequential: true`. Read-only queries can be marked nonconsequential.  |
-| Conversation starters (sample prompts)  | Examples of queries a user can ask the agent, shown as suggestions or help tips.  | Include a minimum of three sample prompts that reflect the core capabilities of your agent. These help users understand how to use the agent. For example: <br><br> - Draft an email to **person** about **subject**. <br><br>- Compare and contrast the proposals in **file** and **file**.<br><br> -  Create a line graph to show sales trends over the last six months.<br><br> |
+| Conversation starters (sample prompts)  | Examples of queries a user can ask the agent, shown as suggestions or help tips.  | Include a minimum of three sample prompts that reflect the core capabilities of your agent. These help users understand how to use the agent. For example: <br><ul><li> Draft an email to **person** about **subject**. </li> <li> Compare and contrast the proposals in **file** and **file**.<br><br></li> <li>Create a line graph to show sales trends over the last six months.</li></ul> |
 
 ## Best practices for agent instructions
 
