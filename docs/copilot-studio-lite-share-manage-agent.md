@@ -147,7 +147,6 @@ When sharing an agent and its knowledge sources, you might encounter the errors 
 
 If sharing an agent fails, users who don't have access to the folder and files won't receive responses generated from those knowledge sources. Checking the box shares the underlying knowledge sources via SharePoint. Files can only be shared with validated individuals or security groups in your directory.
 
-
 ## Related content
 
 - [Publish agents for Microsoft 365 Copilot](publish.md)
