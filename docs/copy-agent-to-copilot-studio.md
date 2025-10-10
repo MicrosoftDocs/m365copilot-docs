@@ -66,7 +66,7 @@ The following table lists the configurations that aren't copied and how to handl
 | Embedded files | Upload the files again in the full experience. |
 | Teams chats and meetings added as knowledge | Add the Power Platform connector for Teams in the full experience. |
 | Emails added as knowledge | Add the Power Platform connector for Outlook in the full experience. |
-| Code Interpreter toggle | Enable Code Interprester via agent settings in the full experience. |
+| Code interpreter toggle | Enable code interpreter via agent settings in the full experience. |
 | Image generation from prompts | Not currently supported in the full experience. Basic charts and graphs are part of Code Interpreter capability. |
 
 After you copy your agent:
