@@ -32,7 +32,7 @@ In summary:
 - **Choose the full experience** if you need an agent for a broader audience (such as your whole department, organization, or external customers) or if the agent requires advanced capabilities like multi-step workflows or custom integrations, or you need more control over deployment and management. The full version of Copilot Studio is a standalone web portal with a rich set of tools for complex or scalable solutions.
 
 > [!NOTE]
-> Currently, a direct upgrade path from the lite experience of Copilot Studio to the full experience isn't available. We recommend that you review your agent’s intended audience, scope, functionality, and governance needs to select the best starting point for your agent.
+> If you choose to use the Copilot Studio lite experience to create your agent and you later want to ake advantage of the features available in the full experience, you can [copy your agent to the Copilot Studio full experience](#copy-agents-from-the-lite-experience-to-the-full-experience).
 
 The following table provides a more detailed feature comparison.
 
@@ -46,6 +46,16 @@ The following table provides a more detailed feature comparison.
 | Use cases | Use the lite experience to build:<br /><ul><li>Project FAQ bots that answers common questions based on project documentation.</li><li>Product documentation assistants that help employees find information from internal product manuals or wikis.</li><li>Onboarding agents that help new team members get answers from internal knowledge bases.</li></ul> |  Use the full experience to build:<br /><ul><li>Customer support agents that create support tickets and escalates issues to a human.</li><li>IT help desk triage agents that handle employee IT requests and routes them to the right support team.</li><li>Sales assistants for CRM that retrieve sales data, makes notes, or kicks off an approval workflow.</li></ul> |
 | Management and governance | Managed primarily through the Microsoft 365 admin center. | Managed through the Power Platform admin center with finer-grained controls for enterprise scenarios. |
 
+## Copy agents from lite to full experience
+
+You can copy an agent created in the Copilot Studio lite experience to the full Copilot Studio experience when you need advanced capabilities or broader integration options. This process ensures that work done in the lite experience is not lost and can be extended in the full experience without having to start over.
+
+Transitioning to the full experience unlocks additional features such as richer customization, expanded connectors, and governance controls. When you copy your agent, the agent’s core configuration and instructions are preserved, and you can enhance them with advanced settings available only in the full experience.
+
+Consider copying an agent to the full experience when:
+
+- You need enterprise-grade deployment options.
+- You want to integrate with more data sources or apply advanced security policies.
 
 ## Licensing requirements
 
