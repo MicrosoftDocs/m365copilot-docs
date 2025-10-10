@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 ### Relative references in URLs
 
-Unless specified otherwise, all properties that are URLs can be relative references. Relative references in the manifest document are relative the location of the manifest document.
+Unless specified otherwise, all properties that are URLs can be relative references. Relative references in the manifest document are relative to the location of the manifest document.
 
 ### String length
 
