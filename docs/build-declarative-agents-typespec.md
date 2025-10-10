@@ -196,7 +196,7 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
     }
     ```
 
-    For more information, see [Teams messages object](declarative-agent-manifest-1.5.md#teams-messages-object).
+    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.5.md#microsoft-teams-messages-object).
 
     > [!NOTE]
     > - The URL in the `url` property must be well formed links to a Teams chat, team, or meeting chat.
