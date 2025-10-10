@@ -13,7 +13,7 @@ Unless specified otherwise, all properties that are URLs can be relative referen
 
 ### String length
 
-Unless specified otherwise, limit all string properties to 4,000 characters. This string length doesn't set an acceptable size for the entire document. Implementations can set their own practical limits on manifest length.
+Unless specified otherwise, limit all string properties to 4,000 characters. This string length doesn't set an acceptable size for all string properties in the document. Implementations can set their own practical limits on manifest length.
 
 ### Unrecognized properties
 
