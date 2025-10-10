@@ -1,6 +1,6 @@
 ---
-title: Copy your agent to the Copilot Studio full experience
-description: Learn about how to copy your declarative agent from the lite experience to the full experience of Copilot Studio to take advantage of complex features and workflows.
+title: Copy an agent to the Copilot Studio full experience
+description: Learn how to copy your declarative agent from the lite experience to the Copilot Studio full experience to take advantage of complex features and workflows.
 #customer intent: At a developer, I can copy my declaractive agent to the Copilot Studio full experience.
 author: Lauragra
 ms.author: lauragra
@@ -8,9 +8,9 @@ ms.reviewer: lauragra
 ms.date: 10/09/2025
 ms.topic: concept-article
 ---
-# Copy your agent to the Copilot Studio full experience
+# Copy an agent to the Copilot Studio full experience
 
-This article explains how to use the **Copy to full experience** feature in the Copilot Studio lite experience to copy a declarative agent to the full Copilot Studio experience. When you copy your agent to the full Copilot Studio experience, you can take advantage of Copilot Studio's advanced lifecycle management, analytics, and governance controls.
+This article explains how to use the **Copy to full experience** feature in the Copilot Studio lite experience to copy a declarative agent to the Copilot Studio full experience. When you copy your agent to the full experience, you can take advantage of advanced lifecycle management, analytics, and governance controls.
 
 ## Why use the full experience?
 
@@ -22,7 +22,7 @@ Copilot Studio provides two ways to build AI agents:
 
 For more information and a comparison of each experience, see [Choose the right Copilot Studio experience](/microsoft-365-copilot/extensibility/copilot-studio-experience).
 
-Copying an agent to the full Copilot Studio experience unlocks advanced capabilities beyond what's available in the lite experience, including:
+Copying an agent to the full experience unlocks advanced capabilities beyond what's available in the lite experience, including:
 
 - **Enhanced lifecycle management:** Gain full control over the agent’s lifecycle, including versioning, staged deployments, rollback options, and structured release processes. This control ensures better stability and predictability as your agent evolves.
 
@@ -30,17 +30,17 @@ Copying an agent to the full Copilot Studio experience unlocks advanced capabili
 
 - **Governance controls:** Apply enterprise-grade governance policies such as role-based access, approval workflows, and compliance checks. These controls help maintain security and consistency across large-scale deployments.
 
-Beyond the core benefits, the full Copilot Studio experience provides:
+Beyond the core benefits, the full experience provides:
 
-- **Advanced customization:** Extend agent capabilities with richer prompts, conditional logic, and integration with external APIs or enterprise systems.
+- **Advanced customization:** Extended agent capabilities with richer prompts, conditional logic, and integration with external APIs or enterprise systems.
 
 - **Environment management:** Support for multiple environments (development, test, production) to streamline testing and controlled rollouts.
 
-- **Connector and data integration:** Broader integration options with Microsoft 365 services and Copilot connectors, enabling deeper data access and richer responses.
+- **Connector and data integration:** Broader integration options with Microsoft 365 services and Copilot connectors, providing deeper data access and richer responses.
 
 - **Audit and compliance features:** Built-in audit trails and compliance reporting to meet organizational and regulatory requirements.
 
-For example, agents copied to the full experience can be published to the Teams app store for admin review and organization-wide pinning. Admins can also apply [Data policies](/power-platform/admin/wp-data-loss-prevention) and [Advanced connector policies](/power-platform/admin/advanced-connector-policies?tabs=new) from the Power Platform admin center.
+For example, agents copied to the full experience can be published to the Teams app store for admin review and organization-wide pinning. Admins can also apply [data policies](/power-platform/admin/wp-data-loss-prevention) and [advanced connector policies](/power-platform/admin/advanced-connector-policies?tabs=new) from the Power Platform admin center.
 
 ## Copy your agent
 
@@ -48,7 +48,7 @@ If you start building an agent in the Copilot Studio lite experience and want to
 
 The following agent configurations are copied to the full experience:
 
-- Static text fields for the agent’s definition
+- Static text fields for the agent's definition
 - Name
 - Description
 - Instructions
@@ -57,21 +57,21 @@ The following agent configurations are copied to the full experience:
 - SharePoint files, folders, and sites added as knowledge
 - Websites added as knowledge
 
-The following lists the configurations that aren't copied and how to handle them.
+The following table lists the configurations that aren't copied and how to handle them.
 
 | Configuration | Action |
 | ------------- | ------ |
 | Enterprise knowledge (Copilot connectors) | Set up connectors after you copy your agent. |
 | Scoped Copilot connectors | Not currently supported in the full experience. |
-| Embedded files | Reupload the files in the full experience. |
+| Embedded files | Upload the files again in the full experience. |
 | Teams chats and meetings added as knowledge | Add the Power Platform connector for Teams in the full experience. |
 | Emails added as knowledge | Add the Power Platform connector for Outlook in the full experience. |
-| Code Interpreter toggle | Enable Code Interprester via agent settings in the full experience. |
+| Code interpreter toggle | Enable code interprester via agent settings in the full experience. |
 | Image generation from prompts | Not currently supported in the full experience. Basic charts and graphs are part of Code Interpreter capability. |
 
 After you copy your agent:
 
-- The original agent in the lite experience remains available for users you updated the copied version in Copilot Studio.
+- The original agent in the lite experience remains available for users.
 - A snapshot of the agent is taken at the time of copy and used to populate the agent’s definition in the full experience. You must save the agent for the data to be stored.
 - Updates to the original agent don't affect the copied version.
 - If another copy operation is underway, wait a few seconds before starting a new copy for the same agent.
