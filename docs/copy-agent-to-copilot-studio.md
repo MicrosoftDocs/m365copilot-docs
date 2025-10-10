@@ -1,7 +1,7 @@
 ---
 title: Copy an agent to the Copilot Studio full experience
 description: Learn how to copy your declarative agent from the lite experience to the Copilot Studio full experience to take advantage of complex features and workflows.
-#customer intent: At a developer, I can copy my declaractive agent to the Copilot Studio full experience.
+#customer intent: As a developer, I can copy my declaractive agent to the Copilot Studio full experience.
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
@@ -66,12 +66,12 @@ The following table lists the configurations that aren't copied and how to handl
 | Embedded files | Upload the files again in the full experience. |
 | Teams chats and meetings added as knowledge | Add the Power Platform connector for Teams in the full experience. |
 | Emails added as knowledge | Add the Power Platform connector for Outlook in the full experience. |
-| Code interpreter toggle | Enable code interprester via agent settings in the full experience. |
+| Code Interpreter toggle | Enable Code Interprester via agent settings in the full experience. |
 | Image generation from prompts | Not currently supported in the full experience. Basic charts and graphs are part of Code Interpreter capability. |
 
 After you copy your agent:
 
-- The original agent in the lite experience remains available for users.
+- The original agent in the lite experience remains available for users you updated the copied version in Copilot Studio.
 - A snapshot of the agent is taken at the time of copy and used to populate the agent’s definition in the full experience. You must save the agent for the data to be stored.
 - Updates to the original agent don't affect the copied version.
 - If another copy operation is underway, wait a few seconds before starting a new copy for the same agent.
