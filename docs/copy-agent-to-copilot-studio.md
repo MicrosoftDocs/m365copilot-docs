@@ -1,7 +1,7 @@
 ---
 title: Copy your agent to the Copilot Studio full experience
 description: Learn about how to copy your declarative agent from the lite experience to the full experience of Copilot Studio to take advantage of complex features and workflows.
-#customer intent: At a developer, I can copy my declaractive agent to the Copilot Studio full experience.
+#customer intent: As a developer, I can copy my declaractive agent to the Copilot Studio full experience.
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
