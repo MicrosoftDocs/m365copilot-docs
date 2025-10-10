@@ -10,18 +10,19 @@ ms.topic: concept-article
 ---
 # Copy your agent to the Copilot Studio full experience
 
-This article explains how to use the **Copy to full experience** feature in the Copilot Studio lite experience to copy a declarative agent to the Copilot Studio full experience. When you copy your agent to the Copilot Studio full experience, you can take advantage of Copilot Studio's advanced lifecycle management, analytics, and governance controls.
+This article explains how to use the **Copy to full experience** feature in the Copilot Studio lite experience to copy a declarative agent to the full Copilot Studio experience. When you copy your agent to the full Copilot Studio experience, you can take advantage of Copilot Studio's advanced lifecycle management, analytics, and governance controls.
 
 ## Why use the full experience?
 
 Copilot Studio provides two ways to build AI agents:
 
-- **Lite experience:** This option is embedded within the Microsoft 365 Copilot app and is ideal for quick, lightweight agent creation within the familiar Microsoft 365 environment. The lite experience is designed for users who want to add simple automation or conversational capabilities to enhance productivity without managing a separate tool.
+- **Lite experience:** This option is embedded within the Microsoft 365 Copilot app and is ideal for quick, lightweight agent creation within the Microsoft 365 environment. The lite experience is designed for users who want to add simple automation or conversational capabilities to enhance productivity.
+
 - **Full experience:** A dedicated, standalone application that offers advanced capabilities for building, customizing, and managing agents at scale. The full experience provides richer configuration options, integration with enterprise systems, and governance features that are suitable for complex scenarios or organizational deployments.
 
 For more information and a comparison of each experience, see [Choose the right Copilot Studio experience](/microsoft-365-copilot/extensibility/copilot-studio-experience).
 
-Copying an agent to the full experience Copilot Studio unlocks advanced capabilities beyond what's available in the lite experience, including:
+Copying an agent to the full Copilot Studio experience unlocks advanced capabilities beyond what's available in the lite experience, including:
 
 - **Enhanced lifecycle management:** Gain full control over the agent’s lifecycle, including versioning, staged deployments, rollback options, and structured release processes. This control ensures better stability and predictability as your agent evolves.
 
@@ -43,7 +44,7 @@ For example, agents copied to the full experience can be published to the Teams 
 
 ## Copy your agent
 
-If you start building an agent in the Copilot Studio lite experience and want to add more capabilities that are only available in the full experience, use the **Copy to full experience** button in the More options (…) menu. This option copies your agent to Copilot Studio full experience without the need to recreate it.
+If you start building an agent in the Copilot Studio lite experience and want to add more capabilities that are only available in the full experience, use the **Copy to full experience** button in the More options (…) menu. This option copies your agent to the full experience without a need to recreate it.
 
 The following agent configurations are copied to the full experience:
 
@@ -53,18 +54,20 @@ The following agent configurations are copied to the full experience:
 - Instructions
 - Suggested prompts
 - Agent icon
-- SharePoint files, folders, and sites added as Knowledge
+- SharePoint files, folders, and sites added as knowledge
 - Websites added as knowledge
 
-The following configurations aren't copied:
+The following lists the configurations that aren't copied and how to handle them.
 
-- Enterprise knowledge (Copilot connectors) — You can set up connectors after you copy your agent.
-- Scoped Copilot connectors — Scoped connectors aren't currently supported in the full experience.
-- Embedded files — Reupload the files in the full experience.
-- Teams chats and meetings added as knowledge — Add the Power Platform connector for Teams in the full experience.
-- Emails added as knowledge — Add the Power Platform connector for Outlook in the full experience.
-- Code Interpreter toggle — Enable Code Interprester via agent settings in the full experience.
-- Image generation from prompts — This feature isn't currently supported in the full experience. Basic charts and graphs are part of Code Interpreter capability.
+| Configuration | Action |
+| ------------- | ------ |
+| Enterprise knowledge (Copilot connectors) | Set up connectors after you copy your agent. |
+| Scoped Copilot connectors | Not currently supported in the full experience. |
+| Embedded files | Reupload the files in the full experience. |
+| Teams chats and meetings added as knowledge | Add the Power Platform connector for Teams in the full experience. |
+| Emails added as knowledge | Add the Power Platform connector for Outlook in the full experience. |
+| Code Interpreter toggle | Enable Code Interprester via agent settings in the full experience. |
+| Image generation from prompts | Not currently supported in the full experience. Basic charts and graphs are part of Code Interpreter capability. |
 
 After you copy your agent:
 
@@ -76,7 +79,13 @@ After you copy your agent:
 - Test your agent in the full experience before you publish it. After you publish, decide whether to delete the original agent and communicate migration steps to users.
 
 > [!NOTE]
-> Agents can only be copied one at a time.
+> You can only copy one agent at a time.
+
+## Licensing requirements
+
+Before you copy an agent, you must have a [Copilot Studio license](/microsoft-copilot-studio/billing-licensing). If you have a Microsoft 365 Copilot license, you might already be entitled to Copilot Studio. Check your eligibility in the [Copilot Studio app](https://copilotstudio.microsoft.com) or ask your admin.
+
+If you don't have a Copilot Studio license, you're prompted to go to [Copilot Studio](https://copilotstudio.microsoft.com) to get access. You might be eligible for a [Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial), depending on the admin settings in your organization. Admins can [block unauthorized sign-ups](/microsoft-copilot-studio/admin-block-viral-signups). Trial licenses allow for testing agents but not publishing agents outside personal use.
 
 ## Copilot Studio environment requirements
 
@@ -86,11 +95,11 @@ For you to copy an agent to the full experience:
 
 - The Copilot Studio environment must have applicable [Dataverse database storage](/power-platform/admin/create-database?tabs=new).
 - The environment must be located in a [supported data location](/microsoft-copilot-studio/data-location).
-- You must have the [**agent author**](/microsoft-copilot-studio/environments-first-run-experience#create-an-agent-in-an-existing-environment-where-you-dont-have-access) role in the environment.
+- You must have the [agent author](/microsoft-copilot-studio/environments-first-run-experience#create-an-agent-in-an-existing-environment-where-you-dont-have-access) role in the environment.
 
 After you select an environment, the system checks for:
 
-- [Data policies](/power-platform/admin/wp-data-loss-prevention) for the **Microsoft Teams + M365** channel in Copilot Studio and shows an error message for that environment.
+- [Data policies](/power-platform/admin/wp-data-loss-prevention) for the **Microsoft Teams + M365** channel in Copilot Studio and shows an error message for that environment if applied.
 - [Sharing limits](/microsoft-copilot-studio/admin-sharing-controls-limits) placed on the environment, and shows a nonblocking warning to alert the user about other restrictions.
 
 The following policies and limits are set up in the Power Platform admin center:
@@ -118,12 +127,6 @@ The following table lists common errors that can occur when you select an enviro
 | You can’t use this environment. | Verify that the environment meets the [environment requirements](#copilot-studio-environment-requirements). |
 | This environment is blocked from publishing to Microsoft 365 and Teams. | Have the admin check whether there's a [connector policy](/power-platform/admin/advanced-connector-policies) for **Microsoft Teams + M365 channel in Copilot Studio**. |
 | The environment was turned off due to inactivity. | Environment routing is enabled and the user hasn't used the agent in a certain period of time. Check the [automatic cleanup](/power-platform/admin/automatic-environment-cleanup#developer-environments) policy to determine whether the admin or the user can recover the environment. |
-
-## Licensing requirements
-
-Before you copy an agent, you must have a [Copilot Studio license](/microsoft-copilot-studio/billing-licensing). If you have a Microsoft 365 Copilot license, you might already be entitled to Copilot Studio. Check your eligibility in the [Copilot Studio app](https://copilotstudio.microsoft.com) or ask your admin.
-
-If you don't have a Copilot Studio license, you're prompted to go to [Copilot Studio](https://copilotstudio.microsoft.com) to get access. You might be eligible for a [Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial), depending on the admin settings in your organization. Admins can [block unauthorized sign-ups](/microsoft-copilot-studio/admin-block-viral-signups). Trial licenses allow for testing agents but not publishing agents outside personal use.
 
 ## Admin management and data storage
 
