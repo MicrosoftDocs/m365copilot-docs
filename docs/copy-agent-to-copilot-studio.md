@@ -71,7 +71,7 @@ The following lists the configurations that aren't copied and how to handle them
 
 After you copy your agent:
 
-- The original agent in the lite experience remains available for users you updated the copied version in Copilot Studio.
+- The original agent in the lite experience remains available for users until you update the copied version in Copilot Studio.
 - A snapshot of the agent is taken at the time of copy and used to populate the agent’s definition in the full experience. You must save the agent for the data to be stored.
 - Updates to the original agent don't affect the copied version.
 - If another copy operation is underway, wait a few seconds before starting a new copy for the same agent.
