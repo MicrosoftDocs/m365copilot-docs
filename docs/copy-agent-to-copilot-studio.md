@@ -91,14 +91,14 @@ For you to copy an agent to the full experience:
 
 After you select an environment, the system checks for:
 
-- [Data policies](https://learn.microsoft.com/power-platform/admin/wp-data-loss-prevention) for the **Microsoft Teams + M365** channel in Copilot Studio and shows an error message for that environment.
+- [Data policies](/power-platform/admin/wp-data-loss-prevention) for the **Microsoft Teams + M365** channel in Copilot Studio and shows an error message for that environment.
 - Sharing limits placed on the environment, and shows a nonblocking warning to alert the user about other restrictions.
 
 The following policies and limits are set up in the Power Platform admin center:
 
-- [Data policies](https://learn.microsoft.com/power-platform/admin/wp-data-loss-prevention)
+- [Data policies](/power-platform/admin/wp-data-loss-prevention)
 - [Connector policies](/power-platform/admin/advanced-connector-policies)
-- [Sharing limits](microsoft-copilot-studio/admin-sharing-controls-limits)
+- [Sharing limits](/microsoft-copilot-studio/admin-sharing-controls-limits)
 
 > [!IMPORTANT]
 > The sharing limit control in the Microsoft 365 admin center isn't the same as the sharing limit control in the Power Platform admin center.
