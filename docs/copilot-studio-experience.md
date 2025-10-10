@@ -32,7 +32,7 @@ In summary:
 - **Choose the full experience** if you need an agent for a broader audience (such as your whole department, organization, or external customers) or if the agent requires advanced capabilities like multi-step workflows or custom integrations, or you need more control over deployment and management. The full version of Copilot Studio is a standalone web portal with a rich set of tools for complex or scalable solutions.
 
 > [!NOTE]
-> If you choose to use the Copilot Studio lite experience to create your agent and you later want to ake advantage of the features available in the full experience, you can [copy your agent to the Copilot Studio full experience](#copy-agents-from-the-lite-experience-to-the-full-experience).
+> If you choose to use the Copilot Studio lite experience to create your agent and you later want to ake advantage of the features available in the full experience, you can [copy your agent to the Copilot Studio full experience](#copy-agents-from-lite-to-full-experience).
 
 The following table provides a more detailed feature comparison.
 
