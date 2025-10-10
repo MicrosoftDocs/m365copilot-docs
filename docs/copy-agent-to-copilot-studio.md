@@ -1,6 +1,6 @@
 ---
-title: Copy your agent to Copilot Studio full experience
-description: Learn about how you can copy your agent from the lite experience to the full experience of Copilot Studio to take advantage of complex features and workflows.
+title: Copy your agent to the Copilot Studio full experience
+description: Learn about how to copy your agent from the lite experience to the full experience of Copilot Studio to take advantage of complex features and workflows.
 #customer intent: At a developer, I can copy my declaractive agent to the Copilot Studio full experience.
 author: Lauragra
 ms.author: lauragra
@@ -10,9 +10,9 @@ ms.topic: concept-article
 ---
 # Copy an agent to the full experience of Copilot Studio
 
-This article explains how to use the **Copy to full version** feature in the Copilot Studio lite experience to move an agent to the Copilot Studio full experience. Copying your agent to the Copilot Studio full experience enables you to take advantage of the advanced lifecycle management, analytics, and governance controls that are available.
+This article explains how to use the **Copy to full version** feature in the Copilot Studio lite experience to copy an agent to the Copilot Studio full experience. When you copy your agent to the Copilot Studio full experience, you can take advantage of the advanced lifecycle management, analytics, and governance controls that are available.
 
-## Why copy your agent to Copilot Studio?
+## Why copy your agent to the full experience?
 
 Copilot Studio provides two ways to build AI agents:
 
@@ -22,7 +22,7 @@ Copilot Studio provides two ways to build AI agents:
 
 Both experiences allow you to create powerful agents, but they serve different needs. For more information and a comparison of each experience, see [Choose the right Copilot Studio experience](/microsoft-365-copilot/extensibility/copilot-studio-experience).
 
-Copying an agent to the full version of Copilot Studio unlocks advanced capabilities beyond what's available in the lite experience, including:
+Copying an agent to the full experience Copilot Studio unlocks advanced capabilities beyond what's available in the lite experience, including:
 
 - **Enhanced lifecycle management:** Gain full control over the agent’s lifecycle, including versioning, staged deployments, rollback options, and structured release processes. This control ensures better stability and predictability as your agent evolves.
 

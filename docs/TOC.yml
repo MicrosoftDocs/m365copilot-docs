@@ -121,7 +121,7 @@ items:
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use Copilot Studio
+    - name: Use the Copilot Studio lite experience
       items:
       - name: Overview
         href: copilot-studio-lite.md
@@ -159,11 +159,11 @@ items:
         href: copilot-studio-lite-share-manage-agent.md
       - name: Availability and language support
         href: copilot-studio-lite-availability.md
+      - name: Copy your agent to the Copilot Studio full experience
+        href: copy-agent-to-copilot-studio.md
       - name: Use the Copilot Studio full experience
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
-        - name: Copy your agent to Copilot Studio
-          href: copy-agent-to-copilot-studio.md
         - name: Copilot Studio actions
           href: overview-business-applications.md
         - name: Power Automate flow actions
