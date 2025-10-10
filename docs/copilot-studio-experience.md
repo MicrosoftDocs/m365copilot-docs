@@ -48,7 +48,7 @@ The following table provides a more detailed feature comparison.
 
 ## Copy agents from lite to full experience
 
-You can copy an agent created in the Copilot Studio lite experience to the full Copilot Studio experience when you need advanced capabilities or broader integration options. This process ensures that work done in the lite experience is not lost and can be extended in the full experience without a need to to start over.
+You can copy an agent created in the Copilot Studio lite experience to the full Copilot Studio experience when you need advanced capabilities or broader integration options. This process ensures that work done in the lite experience is not lost and can be extended in the full experience without a need to start over.
 
 Transitioning to the full experience unlocks additional features such as richer customization, expanded connectors, and governance controls. When you copy your agent, the agent’s core configuration and instructions are preserved, and you can enhance them with the advanced settings available only in the full experience.
 
