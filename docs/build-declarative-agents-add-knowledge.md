@@ -82,7 +82,7 @@ The declarative agent will have access to OneDrive and SharePoint content to gen
     }
     ```
 
-    For more information, see [Teams messages object](declarative-agent-manifest-1.6.md#teams-messages-object).
+    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.6.md#microsoft-teams-messages-object).
 
     > [!NOTE]
     > - The url in the url object must be well formed links to a Teams chat, team, or meeting chat.
