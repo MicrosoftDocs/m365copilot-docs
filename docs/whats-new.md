@@ -20,7 +20,7 @@ For the latest information, announcements, and news about preview and generally 
 
 You can copy your declarative agent from the Copilot Studio lite experience to the full experience by using the **Copy to full experience** feature. This unlocks advanced lifecycle management, analytics, governance controls, and deeper enterprise integration options.
 
-For details, see [Copy an agent to the Copilot Studio full experience](copy-to-copilot-studio.md).
+For details, see [Copy an agent to the Copilot Studio full experience](/microsoft-365-copilot/extensibility/copy-to-copilot-studio).
 
 ## August 2025
 
