@@ -71,11 +71,11 @@ The following table lists the configurations that aren't copied and how to handl
 
 After you copy your agent:
 
-- The original agent in the lite experience remains available for users you updated the copied version in Copilot Studio.
+- The original agent in the lite experience remains available for users.
 - A snapshot of the agent is taken at the time of copy and used to populate the agent’s definition in the full experience. You must save the agent for the data to be stored.
 - Updates to the original agent don't affect the copied version.
 - If another copy operation is underway, wait a few seconds before starting a new copy for the same agent.
-- The original agent remains accessible through Microsoft 365, while the copy becomes a Copilot Studio agent that can be published to multiple channels.
+- The original agent remains accessible through Microsoft 365, while the copy becomes a Copilot Studio agent that you can publish to multiple channels.
 - Test your agent in the full experience before you publish it. After you publish, decide whether to delete the original agent and communicate migration steps to users.
 
 > [!NOTE]
