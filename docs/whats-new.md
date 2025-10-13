@@ -14,6 +14,14 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## October 2025
+
+### Copy an agent to the Copilot Studio full experience
+
+You can copy your declarative agent from the Copilot Studio lite experience to the full experience by using the **Copy to full experience** feature. This unlocks advanced lifecycle management, analytics, governance controls, and deeper enterprise integration options.
+
+For details, see [Copy an agent to the Copilot Studio full experience](copy-to-copilot-studio.md).
+
 ## August 2025
 
 ### Use Teams meetings as a knowledge source in Copilot Studio
