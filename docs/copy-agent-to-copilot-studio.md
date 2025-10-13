@@ -83,7 +83,7 @@ After you copy your agent:
 
 ## Licensing requirements
 
-Before you copy an agent, you must have a [Copilot Studio license](/microsoft-copilot-studio/billing-licensing). If you have a Microsoft 365 Copilot license, you might already be entitled to Copilot Studio. Check your eligibility in the [Copilot Studio app](https://copilotstudio.microsoft.com) or ask your admin.
+To copy an agent to the full experience, you must have a [Copilot Studio license](/microsoft-copilot-studio/billing-licensing). If you have a Microsoft 365 Copilot license, you might already be entitled to Copilot Studio. Check your eligibility in the [Copilot Studio app](https://copilotstudio.microsoft.com) or ask your admin.
 
 If you don't have a Copilot Studio license, you're prompted to go to [Copilot Studio](https://copilotstudio.microsoft.com) to get access. You might be eligible for a [Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial), depending on the admin settings in your organization. Admins can [block unauthorized sign-ups](/microsoft-copilot-studio/admin-block-viral-signups). Trial licenses allow for testing agents but not publishing agents outside personal use.
 
