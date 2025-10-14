@@ -4,7 +4,7 @@ description: Learn how to share and manage agents built with lite experience of 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/30/2025
+ms.date: 10/21/2025 
 ms.topic: conceptual
 ---
 
@@ -141,8 +141,8 @@ The Copilot Studio lite experience doesn't support transferring ownership of dec
 When sharing an agent and its knowledge sources, you might encounter the errors listed in the following table.
 
 <!-- markdownlint-disable MD033 -->
-| Error message        | Description |
-| -------------------- | ----------- |
+| Message        | Description |
+| -------------- | ----------- |
 | Something went wrong | An internal service error message. Contact support if this error continues to occur. |
 | Couldn't share       | Insufficient privileges to update the sharing permissions on certain files. The error lists the files that were unable to be shared. The agent owner should go into SharePoint to try updating these permissions manually. For more information, see: <ul><li>[Share a document](https://support.microsoft.com/office/share-a-document-using-sharepoint-or-onedrive-807de6cf-1ece-41b9-a2b3-250d9a48f1e8) to learn how to share files.</li><li>[Sharing errors in SharePoint and OneDrive](/sharepoint/sharepoint-onedrive-error-message) for an error code reference.</li></ul> |
 | Agent sharing failed, knowledge access not granted | If agent sharing fails, the underlying knowledge sources may not be shared with the intended users or groups. As a result, users without access to those files won’t receive generated responses based on them. To resolve this, ensure all individuals and groups you're sharing your agent with exist in your organization, then re-share the knowledge sources by selecting them in the sharing settings to grant user access to them. |
