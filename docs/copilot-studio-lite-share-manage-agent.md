@@ -85,7 +85,7 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ## Manage agents
 
-You can access the agent management features in the Copilot Studio lite experience in three ways.
+You can access the agent management features in the lite experience of Microsoft 365 Copilot for in three ways.
 
 To manage an agent you recently accessed, select the **More options** ellipses (**...**) in the left pane next to the name of the agent you want to manage.
 
