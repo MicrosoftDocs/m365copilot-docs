@@ -3,8 +3,6 @@ items:
   href: overview.md
 - name: Perform semantic search
   href: copilotroot-search.md
-- name: Get next page of search results
-  href: copilotroot-searchnextpage.md
 - name: Complex types
   items:
   - name: Search response
