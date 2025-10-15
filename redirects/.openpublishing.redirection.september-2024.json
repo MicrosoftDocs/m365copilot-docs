@@ -19,11 +19,15 @@
       "source_path_from_root": "/docs/overview-custom-engine-copilot.md",
       "redirect_url": "/microsoft-365-copilot/extensibility/overview-custom-engine-agent",
       "redirect_document_id": true
-    }
-    ,
+    },
     {
       "source_path_from_root": "/docs/build-or-extend.md",
       "redirect_url": "/microsoft-365-copilot/extensibility/agents-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/debugging-copilot-agent.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/debugging-agents-copilot-studio",
       "redirect_document_id": false
     }
   ]

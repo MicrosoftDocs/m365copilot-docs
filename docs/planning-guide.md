@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 09/11/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -97,10 +97,10 @@ If you decide to build an agent, you need to determine the following:
 
 The following table lists the low-code and pro-code options that are available based on the type of agent you plan to build.
 
-| Agent type        | Low-code tool options                                 | Pro-code tool options                                      |
-|-------------------|--------------------------------------------------------|------------------------------------------------------------|
-| Declarative agent | <ul><li>Copilot Studio agent builder</li><li>Copilot Studio</li></ul>      | Visual Studio Code + [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)                          |
-| Custom engine agent| Copilot Studio                                        | <ul><li>Visual Studio Code + Teams AI Library</li><li>Visual Studio Code + Microsoft 365 Agent SDK (Preview)</li><li>Visual Studio 2022</li><li>Semantic Kernel (optional)</li></ul> |
+| Agent type   | Low-code tool options  | Pro-code tool options  |
+|--------| -------- |--------|
+| Declarative agent | <ul><li>Copilot Studio lite experience</li><li>Copilot Studio full experience</li></ul> | Visual Studio Code + [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)  |
+| Custom engine agent| Copilot Studio full experience | <ul><li>Visual Studio Code + Teams AI Library</li><li>Visual Studio Code + Microsoft 365 Agent SDK (Preview)</li><li>Visual Studio 2022</li><li>Semantic Kernel (optional)</li></ul> |
 
 Next, identify the data sources or plugins your agent needs. Data sources might be Microsoft 365 data (Teams messages, email, people, SharePoint sites or folders), Copilot connectors (prebuilt or custom), or plugins (for real-time data access or external actions).
 
@@ -129,7 +129,7 @@ Regardless of the solution you choose, you need to be sure that it meets RAI and
 
 ## Outline your development approach
 
-After you choose your Copilot extensibility path, decide how you'll structure your development process. Choose the appropriate development tools, such as Teams Toolkit, Copilot Studio, Microsoft 365 Agents SDK or Azure AI based on your use case. To build your solution, start with a minimum viable product (MVP), and then refine based on feedback and performance.
+After you choose your Copilot extensibility path, decide how you'll structure your development process. Choose the appropriate development tools, such as Agents Toolkit, Copilot Studio, Microsoft 365 Agents SDK or Azure AI based on your use case. To build your solution, start with a minimum viable product (MVP), and then refine based on feedback and performance.
 
 The following table provides examples of extensibility solutions that use different Copilot extensibility options for various user scenarios.
 

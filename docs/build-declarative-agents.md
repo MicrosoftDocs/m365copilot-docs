@@ -8,14 +8,14 @@ ms.topic: tutorial
 ms.localizationpriority: medium
 ---
 
-# Tutorial: Create declarative agents using Microsoft 365 Agents Toolkit
+# Tutorial: Create declarative agents by using Microsoft 365 Agents Toolkit
 
-A declarative agent is a customized version of Microsoft 365 Copilot that allows users to create personalized experiences by declaring specific instructions, actions, and knowledge. This guide provides information about how to build a declarative agent by using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
+A declarative agent is a customized version of Microsoft 365 Copilot that you can use to create personalized experiences by declaring specific instructions, actions, and knowledge. This guide provides information about how to build a declarative agent by using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 
-The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
 
 > [!NOTE]
-> Publishing agents via the Microsoft 365 Agents Toolkit isn't supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants.
+> [Microsoft 365 Government tenants](https://www.microsoft.com/microsoft-365/government) don't support publishing agents through the Microsoft 365 Agents Toolkit.
 
 :::image type="content" source="assets/images/build-da/ttk/agent-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
 
@@ -41,13 +41,13 @@ The following resources are required to complete the steps described in this art
 
 You should be familiar with the following standards and guidelines for declarative agents for Microsoft 365 Copilot:
 
-- Standards for compliance, performance, security, and user experience described in [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
+- Standards for compliance, performance, security, and user experience described in [Microsoft Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
 
 ## Create a declarative agent
 
-Begin by creating a basic declarative agent.
+Start by creating a basic declarative agent.
 
-1. Open **Visual Studio Code**.
+1. Open Visual Studio Code.
 
 1. Select **Microsoft 365 Agents Toolkit > Create a New Agent/App**.
 
@@ -67,9 +67,13 @@ Begin by creating a basic declarative agent.
 
     :::image type="content" source="assets/images/build-da/ttk/provision-agent.png" alt-text="A screenshot of the Provision option in the Lifecycle pane of Agents Toolkit":::
 
+> [!NOTE]
+> If you prefer to create an agent based on an existing sample, select **View Samples** in Step 2, rather than **Create a New Agent/App**.
+
+
 ## Test the agent
 
-1. Navigate to the Copilot application with the URL [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
+1. Go to the Copilot application at [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 
 1. Next to the **New Chat** button, select the conversation drawer icon.
 
@@ -77,7 +81,7 @@ Begin by creating a basic declarative agent.
 
     :::image type="content" source="assets/images/build-da/ttk/select-agent.png" alt-text="A screenshot of the declarative agent in Copilot":::
 
-1. Enter a question for your declarative agent and ensure that it replies with "Thanks for using Microsoft 365 Agents Toolkit to create your declarative agent!"
+1. Enter a question for your declarative agent and make sure it replies with "Thanks for using Microsoft 365 Agents Toolkit to create your declarative agent!"
 
     :::image type="content" source="assets/images/build-da/ttk/agent-answer.png" alt-text="A screenshot of an answer from the declarative agent in Microsoft 365 Copilot":::
 

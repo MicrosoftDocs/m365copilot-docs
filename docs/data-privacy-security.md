@@ -5,10 +5,10 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 09/26/2024
+ms.date: 09/05/2025
 ---
 
-# Data, privacy, and security considerations for extending Microsoft 365 Copilot 
+# Data, privacy, and security considerations for extending Microsoft 365 Copilot
 
 When you extend Microsoft 365 Copilot with agents, queries based on your prompts, conversation history, and Microsoft 365 data can be shared with the agent to generate a response or complete a command. When you extend Microsoft 365 Copilot with Microsoft 365 Copilot connectors, your external data is ingested into Microsoft Graph and remains in your tenant. This article outlines data privacy and security considerations for developing different Copilot extensibility solutions, both in-house and as a commercial developer.
 
@@ -16,9 +16,9 @@ When you extend Microsoft 365 Copilot with agents, queries based on your prompts
 
 ## Agents and actions
 
-Agents in Microsoft 365 Copilot are individually governed by their terms of use and privacy policies. As an agent and actions (plugin) developer, you're responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information. Admins and users can then view your [privacy policy](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [terms of use](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#terms-of-use) in the app store before choosing to add or use your agent.
+Agents in Microsoft 365 Copilot are individually governed by their terms of use and privacy policies. As a developer of agents and actions (API plugins), you're responsible for securing your customer's data within the bounds of your service and providing information on your policies regarding users' personal information. Admins and users can then view your [privacy policy](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#privacy-policy) and [terms of use](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#terms-of-use) in the app store before choosing to add or use your agent.
 
-When you integrate your business workflows as agents for Copilot, your external data stays within your app; it *doesn't* flow into Microsoft Graph and it isn't used to train Microsoft 365 Copilot LLMs. Copilot does, however, generate a search query to send to your agent on the user's behalf based on their prompt and conversation history with Copilot and data the user has access to in Microsoft 365.
+When you integrate your business workflows as agents for Copilot, your external data stays within your app; it *doesn't* flow into Microsoft Graph and it isn't used to train Microsoft 365 Copilot LLMs. Copilot does, however, generate a search query to send to your agent on the user's behalf based on their prompt and conversation history with Copilot and data the user has access to in Microsoft 365. For more info, see [Data stored about user interactions with Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy#data-stored-about-user-interactions-with-microsoft-365-copilot) in the Microsoft 365 Copilot admin documentation.
 
 [!INCLUDE [security-note](includes/security-on-das-note.md)]
 
