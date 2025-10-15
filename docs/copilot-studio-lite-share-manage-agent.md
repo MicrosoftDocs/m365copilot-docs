@@ -51,7 +51,7 @@ When users open the link to an agent you have shared with them, the agent opens 
 
 ### Governance and admin controls
 
-Tenant admins can manage who can share agents org-wide. These controls help maintain compliance and prevent oversharing.
+Tenant admins can manage who can share agents at the organizational level. These controls help maintain compliance and prevent oversharing.
 
 Admins can configure one of the following options in the Microsoft 365 admin center:
 
