@@ -19,11 +19,11 @@ Perform semantic search across OneDrive content using natural language queries w
 
 ## Permissions
 
-Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference). To access data from OneDrive data source, you need Files.Read.All or Files.ReadWrite.All, and you need Sites.Read.All or Sites.ReadWrite.All.
 
 | Permission type                        | Least privileged permissions | Higher privileged permissions |
 |:---------------------------------------|:-----------------------------|:------------------------------|
-| Delegated (work or school account)     | Files.Read.All               | Sites.Read.All                |
+| Delegated (work or school account)     | Files.Read.All, Sites.Read.All               | Files.ReadWrite.All, Sites.ReadWrite.All                |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
 | Application                            | Not supported.               | Not supported.                |
 
@@ -114,7 +114,7 @@ Content-Type: application/json
 
 {
   "query": "quarterly budget analysis",
-  "pageSize": 5,
+  "pageSize": 2,
   "dataSources": {
     "oneDrive": {
       "filterExpression": "path:\"https://contoso-my.sharepoint.com/personal/megan_contoso_com/Documents/Finance/\" OR path:\"https://contoso-my.sharepoint.com/personal/megan_contoso_com/Documents/Budget\"",
@@ -175,7 +175,7 @@ Content-Type: application/json
 
 {
   "query": "project timeline milestones",
-  "pageSize": 3,
+  "pageSize": 2,
   "dataSources": {
     "oneDrive": {
       "filterExpression": "path:\"https://contoso-my.sharepoint.com/personal/john_contoso_com/Documents/Projects/\"",
@@ -200,11 +200,11 @@ Content-Type: application/json
   "totalCount": 12,
   "searchHits": [
     {
-      "webUrl": "https://contoso-my.sharepoint.com/personal/john_contoso_com/Documents/Projects/Project_Timeline_2025.docx",
+      "webUrl": "https://contoso-my.sharepoint.com/personal/john_contoso_com/Documents/Projects/Project_Timeline_2026.docx",
       "preview": "The project timeline outlines key milestones for Q1 and Q2, including deliverable dates and resource requirements...",
       "resourceType": "driveItem",
       "resourceMetadata": {
-        "title": "Project Timeline 2025",
+        "title": "Project Timeline 2026",
         "author": "John Doe"
       }
     },
@@ -309,5 +309,4 @@ Content-Type: application/json
 ## Related content
 
 - [Overview of the Microsoft 365 Copilot Search API](overview.md)
-- [Pagination for Search API results](copilotroot-searchnextpage.md)
 - [Try with Graph explorer](https://aka.ms/try_copilot_search_API_example_basic)

@@ -19,7 +19,6 @@ Represents results from a semantic search query.
 
 | Property          | Type                                               | Description                                                                                    |
 |:------------------|:---------------------------------------------------|:-----------------------------------------------------------------------------------------------|
-| `@odata.nextLink` | String                                             | URL to retrieve the next page of results (only present when more results are available).       |
 | `totalCount`      | Int32                                              | Total number of search results available for the query.                                        |
 | `searchHits`      | [copilotSearchHit](copilotsearchhit.md) collection | Array of search result objects ordered by relevance. If empty, no relevant results were found. |
 
@@ -34,7 +33,6 @@ The following JSON representation shows the resource type.
 ```json
 {
   "@odata.type": "#microsoft.graph.copilotSearchResponse",
-  "@odata.nextLink": "String",
   "totalCount": "Int32",
   "searchHits": [
     {

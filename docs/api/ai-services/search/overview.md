@@ -14,7 +14,7 @@ The Microsoft 365 Copilot APIs provide access to components that power Copilot e
 
 The Search API offers a streamlined solution for semantic document discovery without the need to replicate, index, or manage your data in a separate search infrastructure. The API applies natural language processing to understand query intent and performs intelligent result ranking to yield the most relevant documents, which is more difficult to achieve with traditional keyword-based search approaches.
 
-Semantic search is essential when you're building knowledge discovery solutions and want to surface Microsoft 365 content. When you implement semantic search, your solutions can provide more accurate, contextually relevant document discovery grounded in the vast repository of your organizational data. The Search API accomplishes this by providing relevant document previews and metadata from OneDrive content. The Search API keeps your data in place and upholds your access and governance controls. The Search API ensures that search results are informed by the latest and most relevant content. This process enhances the discoverability and usefulness of your document-centric applications.
+Semantic search is essential when you're building intelligent knowledge discovery solutions and want to surface Microsoft 365 content. When you implement semantic search, your solutions can provide more accurate, contextually relevant document discovery grounded in the vast repository of your organizational data. The Search API accomplishes this by providing relevant files, file previews, and file metadata from OneDrive content. The Search API keeps your data in place and upholds your access and governance controls. The Search API ensures that search results are informed by the latest and most relevant content. This process enhances the reliability and usefulness of your custom AI-powered search applications.
 
 [Try your first Search API query in Graph Explorer](https://aka.ms/try_copilot_search_API_example_basic).
 
@@ -22,9 +22,9 @@ Semantic search is essential when you're building knowledge discovery solutions 
 
 The Search API offers a secure and compliant way to perform semantic search across OneDrive content while optimizing for contextual relevance and user intent understanding. Thus, you don't need to egress data, break permissions, or compromise on security and compliance.
 
-Custom knowledge applications can use the Search API to discover organization-specific documents stored in OneDrive. Rather than building and maintaining separate search indexes, these applications can instead leverage semantic search capabilities from Microsoft 365 data sources to surface relevant content the same way that Microsoft 365 Copilot does.
+Custom AI-powered search applications can use the Search API to discover documents stored in OneDrive. Rather than building and maintaining separate search indexes, these applications can instead leverage semantic search capabilities from Microsoft 365 data sources to surface relevant content the same way that Microsoft 365 Copilot Search does.
 
-Enterprise knowledge applications that require intelligent document discovery can use the API's filtering capabilities to scope searches to specific OneDrive paths or content types, ensuring results only include approved sources while respecting information barriers and access controls.
+Enterprise knowledge applications that require intelligent document discovery can use the API's filtering capabilities to scope searches to specific OneDrive paths or folders, ensuring results only include approved sources while respecting information barriers and access controls.
 
 Document-centric applications can combine semantic understanding with path-based filtering to create intuitive search experiences that help users find the right documents quickly based on natural language descriptions rather than exact keyword matches.
 
@@ -34,40 +34,40 @@ Imagine a financial services firm that stores critical client documents and rese
 
 The Search API uses the built-in security and compliance features in Microsoft 365 to ensure that data source permissions and compliance settings are preserved. By searching data in place, it prevents data leaks and ensures that sensitive information is only accessible to authorized users, which is essential for maintaining strict security and compliance standards. Within an organization, Microsoft 365's permissions model ensures individuals can only get results from the content they are allowed to access.
 
-### Solve for relevancy and intelligence
+### Solve for relevancy and freshness
 
-Because the Search API performs semantic search directly on OneDrive content without data duplication, its results are kept fresh and relevant, and it eliminates the need to maintain separate, costly search infrastructures. The API's natural language processing capabilities understand user intent beyond simple keyword matching.
+Because the Search API performs semantic search directly on OneDrive content without data duplication, its results are kept fresh and relevant, and it eliminates the need to maintain separate, costly search infrastructures.
 
 ### Lower cost of ownership and development effort
 
-The Search API eliminates the need to build a secure data export and search indexing pipeline that can incur significant costs for organizations. The API includes all the required capabilities, including:
+The Search API eliminates the need to build a secure data export and search indexing pipeline that can incur significant costs for organizations. The API supports the following required capabilities, including:
 
 - Semantic search capabilities
 - Natural language processing
 - Content indexing
+- Data storage
 - Path-based filtering
-- Pagination support
 - Security and compliance
 
 Organizations can use these built-in features to avoid expenses and complexities, and maintain stringent access controls and compliance within Microsoft 365.
 
 ## Search API capabilities
 
-The Search API currently allows you to search data from the following data sources:
+The Search API allows you to search data from the following data sources:
 
-- OneDrive content (SharePoint and other data sources will be added in future releases)
+- OneDrive content (SharePoint, Copilot Connectors, and other data sources will be added in future releases)
 
 The API supports natural language queries and uses semantic understanding to search through OneDrive content within the Microsoft 365 trust boundary. You can use the API to scope your search using [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) path expressions to search within the most important folders for your use case. With path filtering, you can restrict searches to specific OneDrive locations while maintaining semantic search capabilities.
 
 ## Licensing
 
-The Search API is available at no extra cost to users with a Microsoft 365 Copilot license. Support for users without a Microsoft 365 Copilot license is currently not available.
+The Search API is available at no extra cost to users with a Microsoft 365 Copilot license add-on. Support for users without a Microsoft 365 Copilot add-on license is currently not available.
 
 ## Best practices
 
 The following best practices are applicable to both unfiltered queries (queries without a **filterExpression**) and filtered queries (queries with a **filterExpression**):
 
-- The results returned by the Search API are ordered by relevance. Consider the **totalCount** when deciding how many results to process.
+- The results returned by the Search API are ordered by relevance.
 - Use all search results returned by the Search API for comprehensive document discovery.
 - Avoid overly generic queries that might apply to a wide variety of content.
 - Provide as much context in the query as possible for better semantic understanding.
@@ -76,22 +76,21 @@ The following best practices are applicable to both unfiltered queries (queries 
 
 Apply the following best practice to filtered queries (queries with a **filterExpression**):
 
-- If you want to filter using the **path** parameter in OneDrive, use the complete OneDrive URL path including the user's personal folder structure.
+- If you want to filter using the **path** parameter in OneDrive, use the complete OneDrive URL path including the user's personal folder structure. If you want to filter using the path parameter in OneDrive, don't use a sharing link or copy the URL from the address bar. Instead, go to the location of the folder or file in OneDrive online and choose the three dots to open More Actions. Scroll down in the pane and choose Details. From there, you can scroll down the right navigation pane to find and copy the path.
 
 ## Known limitations
 
 The following are the current throttling and other limitations to the Search API:
 
-- You need the **Files.Read.All** and **Sites.Read.All** permissions to search OneDrive content using the Search API.
 - The Search API is optimized for semantic document discovery.
 - The **query** request parameter has a limit of 1,500 characters.
-- Currently only OneDrive is supported as a data source. SharePoint, external connectors, and other sources will be added in future releases.
-- Only **path** expressions are supported in **filterExpression**. Additional [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) properties will be supported in future releases.
+- Currently only OneDrive is supported as a data source. SharePoint, Copilot Connectors, and other data sources will be added in future releases.
+- Only **path** expressions are supported in **filterExpression**. Additional [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) properties may be supported in future releases.
 - The **pageSize** request parameter has a maximum value of 100.
-- Up to 4 requests per second per user are supported.
 - Up to 200 requests per user per hour are supported.
-- Search from non-textual content, including embedded images and charts, is not supported.
-- Results from files larger than 150 MB are not supported.
+- Semantic search from non-textual content, including tables, images, and charts, is not supported.
+- Results from files with .docx, .pptx, and .pdf extensions that are larger than 512 MB are not supported. Results from files with any other extension that are larger than 150 MB are not supported.
+- The Search API is subject to all limitations of the [Microsoft 365 Copilot semantic index](/microsoftsearch/semantic-index-for-copilot).
 - If **searchHits** in the response payload is empty, then no relevant results were found.
 
 ## Next step

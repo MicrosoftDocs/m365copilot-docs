@@ -20,7 +20,7 @@ Represents a single search result from a semantic search query.
 | Property           | Type                                                                                    | Description                                                        |
 |:-------------------|:----------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
 | `webUrl`           | String                                                                                  | Direct URL to access the search result.                            |
-| `preview`          | String                                                                                  | Short text preview providing context for the result.               |
+| `preview`          | String                                                                                  | Short, verbatim text snippet from the file, providing a preview of the search result               |
 | `resourceType`     | String                                                                                  | Type of the resource (for example, `driveItem`, `listItem`).       |
 | `resourceMetadata` | [copilotSearchResourceMetadataDictionary](./copilotsearchresourcemetadatadictionary.md) | Requested metadata fields (only included if specified in request). |
 
