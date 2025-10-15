@@ -46,7 +46,6 @@ The following table provides a more detailed feature comparison.
 | Use cases | Use the lite experience to build:<br /><ul><li>Project FAQ bots that answers common questions based on project documentation.</li><li>Product documentation assistants that help employees find information from internal product manuals or wikis.</li><li>Onboarding agents that help new team members get answers from internal knowledge bases.</li></ul> |  Use the full experience to build:<br /><ul><li>Customer support agents that create support tickets and escalates issues to a human.</li><li>IT help desk triage agents that handle employee IT requests and routes them to the right support team.</li><li>Sales assistants for CRM that retrieve sales data, makes notes, or kicks off an approval workflow.</li></ul> |
 | Management and governance | Managed primarily through the Microsoft 365 admin center. | Managed through the Power Platform admin center with finer-grained controls for enterprise scenarios. |
 
-
 ## Licensing requirements
 
 Both Copilot Studio experiences are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Credits or a pay-as-you-go plan to access either experience.
