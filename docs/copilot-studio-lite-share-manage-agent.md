@@ -4,7 +4,7 @@ description: Learn how to share and manage agents built with lite experience of 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/30/2025
+ms.date: 10/15/2025
 ms.topic: conceptual
 ---
 
@@ -48,6 +48,21 @@ When users open the link to an agent you have shared with them, the agent opens 
 
 > [!NOTE]
 > Agent capabilities differ based on a user's license. Users can only add agents that have been shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in that agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-and-licensing-models).
+
+### Governance and admin controls
+
+Tenant admins can manage who can share agents org-wide. These controls help maintain compliance and prevent oversharing.
+
+Admins can configure one of the following options in the Microsoft 365 admin center:
+
+- **All users (default):** Everyone can share agents with the organization.
+- **Specific users or groups:** Limit sharing permissions to selected users or groups.
+- **No users:** Disable org-wide sharing completely.
+
+> [!Note]
+> Changes to admin controls apply only to new sharing actions. Existing shared agents remain accessible unless you manually update the sharing option.
+
+When org-wide sharing is disabled, the **Anyone in your organization** option appears grayed out with a tooltip that explains the restriction.
 
 ### Deploy an agent via ZIP package
 
