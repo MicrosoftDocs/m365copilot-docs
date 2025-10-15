@@ -59,7 +59,7 @@ Admins can configure one of the following options in the Microsoft 365 admin cen
 - **Specific users or groups:** Limit sharing permissions to selected users or groups.
 - **No users:** Disable org-wide sharing completely.
 
-> [!Note]
+> [!NOTE]
 > Changes to admin controls apply only to new sharing actions. Existing shared agents remain accessible unless you manually update the sharing option.
 
 When org-wide sharing is disabled, the **Anyone in your organization** option appears grayed out with a tooltip that explains the restriction.
