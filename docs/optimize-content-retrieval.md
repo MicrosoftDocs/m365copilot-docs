@@ -13,7 +13,7 @@ ms.date: 08/07/2025
 Declarative agents extend Microsoft 365 Copilot to customize the experience for users. When you build declarative agents, you can add SharePoint content and upload files as knowledge sources. This article describes the best practices to apply to optimize how your agent returns data from SharePoint and embedded content knowledge sources.
 
 > [!NOTE]
-> Agents grounded in SharePoint data and embedded files are only available to users in tenants that have Copilot Studio metering enabled or users who have Microsoft 365 Copilot licenses. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+> Agents grounded in SharePoint data and embedded files are only available to users in tenants that have Copilot Studio metering enabled or users who have Microsoft 365 Copilot licenses. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
 
 ## Reference only relevant SharePoint files
 
@@ -35,7 +35,7 @@ Copilot is currently unable to parse tables and other special formatting in Shar
 
 ## Optimize embedded file content retrieval
 
-For agents that include [embedded file content](copilot-studio-agent-builder-knowledge.md#embedded-file-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file.
+For agents that include [embedded file content](copilot-studio-lite-knowledge.md#embedded-file-content), Copilot indexes the first 750-1,000 pages (1.8 million characters) of each embedded file.
 
 To optimize embedded file content for Copilot retrieval, upload files that are no larger than 750-1,000 pages. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 

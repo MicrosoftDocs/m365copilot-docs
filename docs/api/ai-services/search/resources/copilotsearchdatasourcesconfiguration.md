@@ -4,7 +4,7 @@ description: Configuration for data sources to include in the search.
 author: apiarya
 ms.author: swapnilsapar
 ms.topic: reference
-ms.date: 8/15/2025
+ms.date: 10/16/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
