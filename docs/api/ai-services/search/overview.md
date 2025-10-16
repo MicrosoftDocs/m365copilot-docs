@@ -1,10 +1,6 @@
 ---
 title: Microsoft 365 Copilot Search API Overview (Preview)
-<<<<<<< HEAD
 description: "Use the Microsoft 365 Copilot Search API to perform hybrid search (semantic and lexical) across OneDrive for Business content using natural language queries with contextual understanding and intelligent results."
-=======
-description: Use the Microsoft 365 Copilot Search API to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results.
->>>>>>> 52df5f596c23013daf97b0aef586d559239de928
 author: apiarya
 ms.author: swapnilsapar
 ms.localizationpriority: medium
@@ -14,11 +10,7 @@ ms.topic: conceptual
 
 # Overview of the Microsoft 365 Copilot Search API (preview)
 
-<<<<<<< HEAD
-The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences, unlocking the ability to enhance your custom engine agents and generative AI solutions with Microsoft 365 Copilot capabilities. The Microsoft 365 Copilot Search API enables developers to perform hybrid search (lexical and semantic) across OneDrive for Business content using natural language queries that understand context and intent, returning relevant documents and files. Other data sources such as SharePoint, Copilot Connectors, and more are not currently supported by the Search API, but will be added in future releases.
-=======
-The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences. With these APIs, you can enhance your custom engine agents and generative AI solutions with Copilot capabilities. The Copilot Search API enables developers to perform semantic search across OneDrive content by using natural language queries that understand context and intent. It returns relevant documents and files.
->>>>>>> 52df5f596c23013daf97b0aef586d559239de928
+The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences. With these APIs, you can enhance your custom engine agents and generative AI solutions with Copilot capabilities. The Copilot Search API enables developers to perform hybrid search (semantic and lexical) across OneDrive for Business content using natural language queries that understand context and intent. It returns relevant documents and files. Other data sources such as SharePoint, Copilot Connectors, and more are not currently supported by the Search API, but will be added in future releases.
 
 The Search API offers a streamlined solution for semantic document discovery without the need to replicate, index, or manage your data in a separate search infrastructure. The API applies natural language processing to understand query intent and performs intelligent result ranking to yield the most relevant documents. Achieving this relevancy is more difficult with traditional keyword-based search approaches.
 
@@ -30,11 +22,7 @@ Semantic search is essential when you're building intelligent knowledge discover
 
 The Search API offers a secure and compliant way to perform hybrid search (semantic and lexical) across OneDrive for Business content while optimizing for contextual relevance and user intent understanding. Thus, you don't need to egress data, break permissions, or compromise on security and compliance.
 
-<<<<<<< HEAD
-Custom AI-powered search applications can use the Search API to discover documents stored in OneDrive. Rather than building and maintaining separate search indexes, these applications can instead leverage hybrid search capabilities from Microsoft 365 data sources to surface relevant content the same way that Microsoft 365 Copilot Search does.
-=======
-Custom AI-powered search applications can use the Search API to discover documents stored in OneDrive. Rather than building and maintaining separate search indexes, these applications can instead apply semantic search capabilities from Microsoft 365 data sources to surface relevant content the same way that Microsoft 365 Copilot Search does.
->>>>>>> 52df5f596c23013daf97b0aef586d559239de928
+Custom AI-powered search applications can use the Search API to discover documents stored in OneDrive. Rather than building and maintaining separate search indexes, these applications can instead apply hybrid search capabilities to OneDrive for Business content to surface relevant content the same way that Microsoft 365 Copilot Search does.
 
 Enterprise knowledge applications that require intelligent document discovery can use the API's filtering capabilities to scope searches to specific OneDrive paths or folders. This approach ensures results only include approved sources while respecting information barriers and access controls.
 
@@ -48,11 +36,7 @@ The Search API uses the built-in security and compliance features in Microsoft 3
 
 ### Solve for relevancy and freshness
 
-<<<<<<< HEAD
-Because the Search API performs hybrid search directly on OneDrive for Business content without data duplication, its results are kept fresh and relevant, and it eliminates the need to maintain separate, costly search infrastructures.
-=======
-Because the Search API performs semantic search directly on OneDrive content without data duplication, its results are kept fresh and relevant. It eliminates the need to maintain separate, costly search infrastructures.
->>>>>>> 52df5f596c23013daf97b0aef586d559239de928
+Because the Search API performs hybrid search directly on OneDrive for Business content without data duplication, its results are kept fresh and relevant. It eliminates the need to maintain separate, costly search infrastructures.
 
 ### Lower cost of ownership and development effort
 
