@@ -15,7 +15,7 @@ doc_type: conceptualPageType
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Perform semantic search across OneDrive content by using natural language queries with contextual understanding. Discover relevant documents and files that you have access to, while respecting the defined access controls within the organization. Try issuing your [first query to the Microsoft 365 Copilot Search API](https://aka.ms/try_copilot_search_API_example_basic). Learn how you can [batch up to 20 requests to the Search API](/graph/json-batching?tabs=http).
+Perform hybrid (semantic and lexical) search across OneDrive for work or school content by using natural language queries with contextual understanding. Discover relevant documents and files that you have access to, while respecting the defined access controls within the organization. Try issuing your [first query to the Microsoft 365 Copilot Search API](https://aka.ms/try_copilot_search_API_example_basic). Learn how you can [batch up to 20 requests to the Search API](/graph/json-batching?tabs=http).
 
 ## Permissions
 
