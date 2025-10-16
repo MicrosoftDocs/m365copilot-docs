@@ -76,7 +76,7 @@ The following best practices apply to both unfiltered queries (queries without a
 
 Apply the following best practice to filtered queries (queries with a `filterExpression`):
 
-- For the `path` parameter, use the full OneDrive path as shown in the file or folder's details pane (not a sharing link or browser address). For example: `/personal/username_domain_com/Documents/Project/Report.docx`.
+- For the `path` parameter, use the full OneDrive path as shown in the file or folder's details pane (not a sharing link or browser address). For example: `https://contoso-my.sharepoint.com/personal/username_domain_com/Documents/Project/Report.docx`.
 
 ## Known limitations
 
