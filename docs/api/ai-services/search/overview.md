@@ -30,8 +30,6 @@ Enterprise knowledge applications that require intelligent document discovery ca
 
 Document-centric applications can combine semantic understanding with path-based filtering to create intuitive search experiences that help users find the right documents quickly based on natural language descriptions rather than exact keyword matches.
 
-Imagine a financial services firm that stores critical client documents and research reports in OneDrive. The firm is developing a custom application to help their analysts quickly find relevant documents when preparing client presentations. This application must access and search through thousands of documents stored across different OneDrive folders. The firm works with multiple clients in similar market segments, making it crucial to find the most relevant documents quickly while maintaining strict security and compliance standards. The Search API helps the firm build intelligent search capabilities that understand context and intent while ensuring secure, compliant access to organizational knowledge.
-
 ### Manage compliance and safety risks
 
 The Search API uses the built-in security and compliance features in Microsoft 365 to ensure that data source permissions and compliance settings are preserved. By searching data in place, it prevents data leaks and ensures that sensitive information is only accessible to authorized users. This capability is essential for maintaining strict security and compliance standards. Within an organization, Microsoft 365's permissions model ensures individuals can only get results from the content they're allowed to access.
@@ -82,10 +80,10 @@ Apply the following best practice to filtered queries (queries with a `filterExp
 
 ## Current scope and restrictions
 
-The following limitations currently apply to the Search API:
+The following restrictions currently apply to the Search API:
 
 - The `query` request parameter has a limit of 1,500 characters.
-- Currently only OneDrive for work or school is supported as a data source.
+- Only OneDrive for work or school is supported as a data source.
 - Only `path` expressions are supported in `filterExpression`. More [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) properties might be supported in future releases.
 - The `pageSize` request parameter has a maximum value of 100.
 - Up to 200 requests per user per hour are supported.
