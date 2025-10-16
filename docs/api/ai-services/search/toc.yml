@@ -1,7 +1,7 @@
 items:
 - name: Overview
   href: overview.md
-- name: Perform semantic search
+- name: Perform search
   href: copilotroot-search.md
 - name: Complex types
   items:

@@ -1,6 +1,6 @@
 ---
-title: Perform semantic search
-description: Use the Search API to perform semantic search across OneDrive content with natural language understanding and contextual results.
+title: Perform search
+description: Use the Search API to perform hybrid search (semantic and lexical) across OneDrive content with natural language understanding and contextual results.
 author: apiarya
 ms.author: swapnilsapar
 ms.topic: reference
@@ -11,7 +11,7 @@ doc_type: conceptualPageType
 
 <!-- markdownlint-disable MD024 -->
 
-# Perform semantic search using the Microsoft 365 Copilot Search API
+# Perform search using the Microsoft 365 Copilot Search API
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
