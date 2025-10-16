@@ -76,7 +76,7 @@ The following best practices apply to both unfiltered queries (queries without a
 
 Apply the following best practice to filtered queries (queries with a `filterExpression`):
 
-- To filter using the `path` parameter in OneDrive, use the complete OneDrive URL path including the user's personal folder structure. Don't use a sharing link or copy the URL from the address bar. Instead, go to the location of the folder or file in OneDrive online and choose the three dots to open **More Actions**. Scroll down in the pane and choose **Details**. From there, you can scroll down the right navigation pane to find and copy the path.
+- For the `path` parameter, use the full OneDrive path as shown in the file or folder's details pane (not a sharing link or browser address). For example: `/personal/username_domain_com/Documents/Project/Report.docx`.
 
 ## Known limitations
 
