@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Represents a single search result from a semantic search query.
+Represents a single search result from a search query.
 
 ## Properties
 
