@@ -4,7 +4,7 @@ description: Use the Search API to perform semantic search across OneDrive conte
 author: apiarya
 ms.author: swapnilsapar
 ms.topic: reference
-ms.date: 8/15/2025
+ms.date: 10/16/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---
@@ -15,7 +15,7 @@ doc_type: conceptualPageType
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Perform semantic search across OneDrive content using natural language queries with contextual understanding. Allows the discovery of relevant documents and files that the calling user has access to, while respecting the defined access controls within the tenant. Try issuing your [first query to the Microsoft 365 Copilot Search API](https://aka.ms/try_copilot_search_API_example_basic). Learn how you can [batch up to 20 requests to the Search API](/graph/json-batching?tabs=http).
+Perform semantic search across OneDrive content by using natural language queries with contextual understanding. Discover relevant documents and files that you have access to, while respecting the defined access controls within the organization. Try issuing your [first query to the Microsoft 365 Copilot Search API](https://aka.ms/try_copilot_search_API_example_basic). Learn how you can [batch up to 20 requests to the Search API](/graph/json-batching?tabs=http).
 
 ## Permissions
 
@@ -48,7 +48,7 @@ The following table lists the parameters that are required when you call this ac
 
 | Parameter     | Type                                                                                          | Description                                                                             |
 |:--------------|:----------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|
-| `query`       | String                                                                                        | Natural language query to search for relevant files. Maximum 1500 characters. Required. |
+| `query`       | String                                                                                        | Natural language query to search for relevant files. Maximum 1,500 characters. Required. |
 | `pageSize`    | Int32                                                                                         | Number of results to return per page (1-100). Default: 25. Optional.                    |
 | `dataSources` | [copilotSearchDataSourcesConfiguration](resources/copilotsearchdatasourcesconfiguration.md) | Configuration for data sources to include in the search. Optional.                      |
 
@@ -60,7 +60,7 @@ If successful, this action returns a `200 OK` response code and a [copilotSearch
 
 ### Example 1: Basic search request
 
-The following example shows a simple request to search across all accessible OneDrive content. This demonstrates the minimum required parameters to perform a semantic search.
+The following example shows the minimum required parameters to perform a semantic search across all accessible OneDrive content.
 
 #### Request
 
@@ -163,7 +163,7 @@ Content-Type: application/json
 
 ### Example 3: Search with path-based filtering
 
-The following example shows how to search within specific OneDrive paths using [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) path expressions.
+The following example shows how to search within specific OneDrive paths by using [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) path expressions.
 
 #### Request
 
@@ -223,7 +223,7 @@ Content-Type: application/json
 
 ### Example 4: Batch requests to the Search API
 
-The following example shows how to [batch requests to the Search API](/graph/json-batching?tabs=http). The Search API supports up to 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
+The following example shows how to [batch requests to the Search API](/graph/json-batching?tabs=http). The Search API supports up to 20 requests per batch. The `id` in the request payload must be a string that uniquely identifies each request in the batch.
 
 #### Request
 
