@@ -10,7 +10,9 @@ ms.topic: conceptual
 
 # Overview of the Microsoft 365 Copilot Search API (preview)
 
-The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences. With these APIs, you can enhance your custom engine agents and generative AI solutions with Copilot capabilities. The Copilot Search API enables developers to perform hybrid search (semantic and lexical) across OneDrive for work or school content using natural language queries that understand context and intent to return relevant documents and files. Other data sources such as SharePoint, Copilot Connectors, and more are not currently supported by the Search API, but will be added in future releases.
+The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences. With these APIs, you can enhance your custom engine agents and generative AI solutions with Copilot capabilities. The Copilot Search API enables developers to perform hybrid search (semantic and lexical) across OneDrive for work or school content using natural language queries that understand context and intent to return relevant documents and files. Other data sources such as SharePoint, Copilot Connectors, and more are not currently supported by the Search API, but will be added in future releases. For additional details on semantic indexing, please see [Microsoft 365 Copilot semantic index](/microsoftsearch/semantic-index-for-copilot).
+
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 The Search API offers a streamlined solution for semantic document discovery without the need to replicate, index, or manage your data in a separate search infrastructure. The API applies natural language processing to understand query intent and performs intelligent result ranking to yield the most relevant documents. Achieving this relevancy is more difficult with traditional keyword-based search approaches.
 
@@ -78,7 +80,7 @@ Apply the following best practice to filtered queries (queries with a `filterExp
 
 - For the `path` parameter, use the full OneDrive path as shown in the file or folder's details pane (not a sharing link or browser address). For example: `https://contoso-my.sharepoint.com/personal/username_domain_com/Documents/Project/Report.docx`.
 
-## Known limitations
+## Current scope and restrictions
 
 The following limitations currently apply to the Search API:
 
@@ -87,8 +89,10 @@ The following limitations currently apply to the Search API:
 - Only `path` expressions are supported in `filterExpression`. More [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) properties might be supported in future releases.
 - The `pageSize` request parameter has a maximum value of 100.
 - Up to 200 requests per user per hour are supported.
-- Semantic search from nontextual content, including tables, images, and charts, isn't supported.
-- Results from files with .docx, .pptx, and .pdf extensions that are larger than 512 MB aren't supported. Results from files with any other extension that are larger than 150 MB aren't supported.
+- Semantic search on nontextual content, including tables, images, and charts, is not supported.
+- Semantic search on files with .docx, .pptx, and .pdf extensions that are larger than 512 MB is not supported. Semantic search on files with any other extension that is larger than 150 MB is not supported
+- Semantic search is available on a personalized working set of data for OneDrive content, which does not include all content in the user's OneDrive
+- Semantic search is available only on the following file extensions: .aspx, .docx, .pptx, .pdf, .onepart, .doc, .html, .eml, .mp4, .loop, .one, .fluid, .png, .jpg, .json, .csv, .xml, .ppt
 - The Search API is subject to all limitations of the [Microsoft 365 Copilot semantic index](/microsoftsearch/semantic-index-for-copilot).
 - If `searchHits` in the response payload is empty, then no relevant results were found.
 
