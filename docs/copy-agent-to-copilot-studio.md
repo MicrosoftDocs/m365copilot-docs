@@ -85,7 +85,7 @@ After you copy your agent:
 
 To copy an agent to the full experience, you must have a [Copilot Studio license](/microsoft-copilot-studio/billing-licensing). If you have a Microsoft 365 Copilot license, you might already be entitled to Copilot Studio. Check your eligibility in [Copilot Studio ](https://copilotstudio.microsoft.com) or ask your admin.
 
-If you don't have a Copilot Studio license, you're prompted to go to [Copilot Studio](https://copilotstudio.microsoft.com) to get access. You might be eligible for a [Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial), depending on the admin settings in your organization. Admins can [block unauthorized sign-ups](/microsoft-copilot-studio/admin-block-viral-signups). Trial licenses allow for testing agents but not publishing agents outside personal use.
+If you don't have a Copilot Studio license, you might be eligible for a [Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial), depending on the admin settings in your organization. Admins can [block unauthorized sign-ups](/microsoft-copilot-studio/admin-block-viral-signups). Trial licenses allow for testing agents but not publishing agents outside personal use.
 
 ## Copilot Studio environment requirements
 
@@ -100,7 +100,7 @@ For you to copy an agent to the full experience:
 After you select an environment, the system checks for:
 
 - [Data policies](/power-platform/admin/wp-data-loss-prevention) for the **Microsoft Teams + M365** channel in Copilot Studio and shows an error message for that environment if applied.
-- [Sharing limits](/microsoft-copilot-studio/admin-sharing-controls-limits) placed on the environment, and shows a nonblocking warning to alert the user about other restrictions.
+- [Sharing limits](/microsoft-copilot-studio/admin-sharing-controls-limits) placed on the environment, and shows a nonblocking warning to alert you about other restrictions.
 
 The following policies and limits are set up in the Power Platform admin center:
 
@@ -125,7 +125,7 @@ The following table lists common errors that can occur when you select an enviro
 | Error | Resolution |
 | ----- | ---------- |
 | You can't use this environment. | Verify that the environment meets the [environment requirements](#copilot-studio-environment-requirements). |
-| This environment is blocked from publishing to Microsoft 365 and Teams. | Have the admin check whether there's a [connector policy](/power-platform/admin/advanced-connector-policies) for **Microsoft Teams + M365 Channel in Copilot Studio**. |
+| This environment is blocked from publishing to Microsoft 365 and Teams. | Have the admin check whether there's a [connector policy](/power-platform/admin/advanced-connector-policies) for **Microsoft Teams + M365** channel in Copilot Studio. |
 | The environment was turned off due to inactivity. | Environment routing is enabled and the user hasn't used the agent in a certain period of time. Check the [automatic cleanup](/power-platform/admin/automatic-environment-cleanup#developer-environments) policy to determine whether the admin or the user can recover the environment. |
 
 ## Admin management and data storage
