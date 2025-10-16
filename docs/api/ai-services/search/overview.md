@@ -82,7 +82,6 @@ Apply the following best practice to filtered queries (queries with a `filterExp
 
 The following limitations currently apply to the Search API:
 
-- The Search API is optimized for semantic document discovery.
 - The `query` request parameter has a limit of 1,500 characters.
 - Currently only OneDrive for Business is supported as a data source.
 - Only `path` expressions are supported in `filterExpression`. More [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) properties might be supported in future releases.
