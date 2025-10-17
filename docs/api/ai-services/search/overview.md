@@ -42,22 +42,14 @@ Because the Search API performs hybrid search directly on OneDrive content witho
 
 The Search API eliminates the need to build a secure data export and search indexing pipeline that can incur significant costs for organizations. The API supports the following required capabilities, including:
 
-- Hybrid (semantic and lexical) search capabilities
+- Hybrid (semantic and lexical) search 
 - Natural language processing
 - Content indexing
 - Data storage
-- Path-based filtering
+- Path-based filtering using [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
 - Security and compliance
 
 Use these built-in features to avoid expenses and complexities, and maintain stringent access controls and compliance within Microsoft 365.
-
-## Search API capabilities
-
-The Search API allows you to search data from the following data sources:
-
-- OneDrive for work or school
-
-The API supports natural language queries and uses semantic understanding to search through OneDrive content within the Microsoft 365 trust boundary. You can use the API to scope your search using [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) path expressions to search within the most important folders for your use case. With path filtering, you can restrict searches to specific OneDrive locations while maintaining hybrid search capabilities.
 
 ## Licensing
 
@@ -89,8 +81,8 @@ The following restrictions currently apply to the Search API:
 - Up to 200 requests per user per hour are supported.
 - Semantic search on nontextual content, including tables, images, and charts, is not supported.
 - Semantic search on files with .docx, .pptx, and .pdf extensions that are larger than 512 MB is not supported. Semantic search on files with any other extension that is larger than 150 MB is not supported
-- Semantic search is available on a personalized working set of data for OneDrive content, which does not include all content in the user's OneDrive
-- Semantic search is available only on the following file extensions: .aspx, .docx, .pptx, .pdf, .onepart, .doc, .html, .eml, .mp4, .loop, .one, .fluid, .png, .jpg, .json, .csv, .xml, .ppt
+- Semantic search is available on a personalized working set of data for OneDrive content, which does not include all content in the user's OneDrive.
+- Semantic search is available only on the following file extensions: .aspx, .docx, .pptx, .pdf, .onepart, .doc, .html, .eml, .mp4, .loop, .one, .fluid, .png, .jpg, .json, .csv, .xml, .ppt.
 - The Search API is subject to all limitations of the [Microsoft 365 Copilot semantic index](/microsoftsearch/semantic-index-for-copilot).
 - If `searchHits` in the response payload is empty, then no relevant results were found.
 
