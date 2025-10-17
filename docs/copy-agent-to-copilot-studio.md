@@ -99,8 +99,8 @@ For you to copy an agent to the full experience:
 
 After you select an environment, the system checks for:
 
-- [Data policies](/power-platform/admin/wp-data-loss-prevention) for the **Microsoft Teams + M365** channel in Copilot Studio and shows an error message for that environment if applied.
-- [Sharing limits](/microsoft-copilot-studio/admin-sharing-controls-limits) placed on the environment, and shows a nonblocking warning to alert you about other restrictions.
+- [Data policies](/power-platform/admin/wp-data-loss-prevention) that prevent publishing agents to the **Teams and Microsoft 365 Copilot** channels.
+- [Sharing limits](/microsoft-copilot-studio/admin-sharing-controls-limits) placed on the environment.
 
 The following policies and limits are set up in the Power Platform admin center:
 
