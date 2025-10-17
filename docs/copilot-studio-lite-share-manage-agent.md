@@ -1,6 +1,6 @@
 ---
 title: Share and manage agents built with the Copilot Studio lite experience
-description: Learn how to share and manage agents built with lite experience of Copilot Studio in Microsoft 365 Copilot.
+description: Learn how to share and manage agents built with the Copilot Studio lite experience in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
@@ -58,7 +58,7 @@ Copilot Studio provides an option to download a ZIP package for manual deploymen
 
 To deploy an agent manually:
 
-1. In the lite experience of Copilot Studio, open the left navigation pane and select **Create agent**.
+1. In the Copilot Studio lite experience, open the left navigation pane and select **Create agent**.
 1. At the top of the central pane, choose **My agents**.
 :::image type="content" source="assets/images/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
 1. Highlight the agent you want to download and choose the ellipses.
@@ -85,7 +85,7 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ## Manage agents
 
-You can access the agent management features in the lite experience of Microsoft 365 Copilot for in three ways.
+You can access the agent management features in the Copilot Studio lite experience in three ways.
 
 To manage an agent you recently accessed, select the **More options** ellipses (**...**) in the left pane next to the name of the agent you want to manage.
 
@@ -101,7 +101,7 @@ Or:*
 - Select **Create agents** in the left pane and then select the **My agents** tab.
 - On the **My agents** tab, select the **More options** ellipses (**...**) next to the name of the agent you want to manage.
 
-:::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of the lite experience in Copilot Studio for Microsoft 365 Copilot.":::
+:::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of the Copilot Studio lite experience in Microsoft 365 Copilot.":::
 
 > [!NOTE]
 > Only the agents you've created show in the **My agents** list. Shared agents from other users aren't listed.
