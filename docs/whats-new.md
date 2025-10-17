@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 08/20/2025
+ms.date: 10/17/2025
 ms.topic: overview
 ---
 
@@ -21,6 +21,10 @@ For the latest information, announcements, and news about preview and generally 
 You can copy your declarative agent from the Copilot Studio lite experience to the full experience by using the **Copy to full experience** feature. This unlocks advanced lifecycle management, analytics, governance controls, and deeper enterprise integration options.
 
 For details, see [Copy an agent to the Copilot Studio full experience](copy-to-copilot-studio.md).
+
+### Microsoft 365 Copilot Chat API (preview)
+
+The Microsoft 365 Copilot Chat API (preview) enables you to programmatically engage in multi-turn conversations with Microsoft 365 Copilot, grounded in enterprise search and web search. For more information, see [Overview of the Microsoft 365 Copilot Chat API (preview)](api/ai-services/chat/overview.md).
 
 ## August 2025
 
