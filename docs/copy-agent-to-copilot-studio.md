@@ -28,7 +28,7 @@ Copying an agent to the full experience unlocks advanced capabilities beyond wha
 
 - **Usage monitoring and analytics:** Access detailed insights into agent performance, user engagement, and query trends. Built-in dashboards and reporting tools help you identify optimization opportunities and measure return on investment.
 
-- **Governance controls:** Apply enterprise-grade governance policies such as role-based access, approval workflows, and compliance checks. These controls help maintain security and consistency across large-scale deployments.
+- **Governance controls:** Apply enterprise-grade governance policies such as role-based access, data access policies, and compliance checks. These controls help maintain security and consistency across large-scale deployments.
 
 Beyond the core benefits, the full experience provides:
 
@@ -72,7 +72,7 @@ The following table lists the configurations that aren't copied and how to handl
 After you copy your agent:
 
 - The original agent in the lite experience remains available.
-- A snapshot of the agent is taken at the time of copy and used to populate the agent's definition in the full experience. You must save the agent for the data to be stored.
+- Copilot Studio creates a snapshot of the agent and uses it to define the agent in the full experience. Save the agent to ensure that the data is stored.
 - Updates to the original agent don't affect the copied version.
 - If another copy operation is underway, wait a few seconds before starting a new copy for the same agent.
 - The original agent remains accessible through Microsoft 365, while the copy becomes a Copilot Studio agent that you can publish to multiple channels.
