@@ -10,13 +10,13 @@ ms.topic: concept-article
 ---
 # Copy an agent to the Copilot Studio full experience
 
-This article explains how to use the **Copy to full experience** feature in the Copilot Studio lite experience to copy a declarative agent to the Copilot Studio full experience. When you copy your agent to the full experience, you can take advantage of advanced lifecycle management, analytics, and governance controls.
+This article explains how to use the **Copy to full experience** feature in the Copilot Studio lite experience to copy an agent to the Copilot Studio full experience. When you copy your agent to the full experience, you can take advantage of advanced lifecycle management, analytics, and governance controls.
 
 ## Why use the full experience?
 
 Copilot Studio provides two ways to build AI agents:
 
-- **Lite experience:** This option is embedded within the Microsoft 365 Copilot app and is ideal for quick, lightweight agent creation within the Microsoft 365 environment. The lite experience is designed for users who want to add simple automation or conversational capabilities to enhance productivity.
+- **Lite experience:** This option is embedded within the Microsoft 365 Copilot app and is ideal for quick, lightweight agent creation within the Microsoft 365 environment. The lite experience is designed for users who want to add conversational capabilities to enhance productivity.
 
 - **Full experience:** A dedicated, standalone application that offers advanced capabilities for building, customizing, and managing agents at scale. The full experience provides richer configuration options, integration with enterprise systems, and governance features that are suitable for complex scenarios or organizational deployments.
 
@@ -67,7 +67,7 @@ The following table lists the configurations that aren't copied and how to handl
 | Teams chats and meetings added as knowledge | Add the Power Platform connector for Teams in the full experience. |
 | Emails added as knowledge | Add the Power Platform connector for Outlook in the full experience. |
 | Code interpreter toggle | Add code interpreter via agent settings in the full experience. |
-| Image generation from prompts | Not currently supported in the full experience. Basic charts and graphs are part of Code Interpreter capability. |
+| Image generation from prompts | Not currently supported in the full experience. Basic charts and graphs are part of the Code Interpreter capability. |
 
 After you copy your agent:
 
@@ -77,9 +77,6 @@ After you copy your agent:
 - If another copy operation is underway, wait a few seconds before starting a new copy for the same agent.
 - The original agent remains accessible through Microsoft 365, while the copy becomes a Copilot Studio agent that you can publish to multiple channels.
 - Test your agent in the full experience before you publish it. After you publish, decide whether to delete the original agent and communicate migration steps to users you shared the agent with.
-
-> [!NOTE]
-> You can only copy one agent at a time.
 
 ## Licensing requirements
 
