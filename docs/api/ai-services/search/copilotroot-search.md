@@ -60,7 +60,7 @@ If successful, this action returns a `200 OK` response code and a [copilotSearch
 
 ### Example 1: Basic search request
 
-The following example shows the minimum required parameters to perform a hybrid search (semantic and lexical) across all accessible OneDrive content.
+The following example shows the minimum required parameters to perform a hybrid search (semantic and lexical) across OneDrive for work or school content.
 
 #### Request
 
