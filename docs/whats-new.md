@@ -26,6 +26,10 @@ For details, see [Copy an agent to the Copilot Studio full experience](copy-agen
 
 The Microsoft 365 Copilot Search API (preview) enables developers to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results. For more information, see [Overview of the Search API](api/ai-services/search/overview.md).
 
+### Users with usage billing have access to additional knowledge sources in the Copilot Studio lite experience
+
+Users who are configured with usage billing in the Microsoft 365 admin center now have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
+
 ### Microsoft 365 Copilot Chat API (preview)
 
 The Microsoft 365 Copilot Chat API (preview) enables you to programmatically engage in multi-turn conversations with Microsoft 365 Copilot, grounded in enterprise search and web search. For more information, see [Overview of the Microsoft 365 Copilot Chat API (preview)](api/ai-services/chat/overview.md).
