@@ -4,7 +4,7 @@ description: Use the Copilot APIs to securely access Microsoft 365 Copilot capab
 author: lramosvea
 ms.author: lramosvea
 ms.topic: conceptual
-ms.date: 06/09/2025
+ms.date: 10/20/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---
@@ -24,6 +24,7 @@ The following table lists the APIs and describes their capabilities and scenario
 | API | Use it to   | Example scenario |
 | --- | ----------- | ---------------- |
 | [Retrieval API (preview)](api/ai-services/retrieval/overview.md) | Retrieve relevant information from Microsoft 365 content in a secure and compliant way. | Connect your own AI models to Microsoft 365 content without data extraction. Build specialized assistants that respond based on your organization's up-to-date documentation, policies, and knowledge bases. These applications can provide contextually relevant information to users across departments while respecting document access controls and sensitivity labels. |
+| [Search API (preview)](api/ai-services/search/overview.md) | Perform hybrid search (semantic and lexical) across OneDrive for work or school content using natural language queries with contextual understanding and intelligent results. | Build AI-powered search applications that help users discover relevant documents and files using natural language queries rather than exact keyword matches, while maintaining security and compliance. |
 | [Interaction Export API](/microsoftteams/export-teams-content#microsoft-365-copilot-interactions--microsoft-365-chat-preview) | Enable compliance solutions to capture and archive user interactions with Copilot across Microsoft 365 applications. | Develop systems that maintain comprehensive records of AI interactions, enable monitoring of AI usage, and ensure compliance with organizational policies and regulatory requirements. These solutions are valuable for regulated industries where documenting and reviewing AI-assisted content generation is necessary. |
 | [Change Notifications API (preview)](api/ai-services/change-notifications/aiinteraction-changenotifications.md) | Subscribe to change notifications for Copilot interactions across Microsoft 365. | Build applications that monitor and log AI interactions in real time, enabling proactive compliance checks, anomaly detection, and auditing. |
 | [Meeting Insights API (preview)](/microsoftteams/platform/graph-api/meeting-transcripts/meeting-insights) | Extract AI-generated meeting notes, action items, and discussion topics for Teams meetings. | Create applications that automatically extract and organize action items, decisions, and summaries from Teams meetings. Link these with project management tools, CRM systems, or custom workflows. These systems can transform meetings from time spent to value created by capturing, organizing, and activating meeting outcomes automatically. |
