@@ -28,7 +28,7 @@ Copying an agent to the full experience unlocks advanced capabilities beyond wha
 
 - **Usage monitoring and analytics:** Access detailed insights into agent performance, user engagement, and query trends. Built-in dashboards and reporting tools help you identify optimization opportunities and measure return on investment.
 
-- **Governance controls:** Apply enterprise-grade governance policies such as role-based access, data access policies, and compliance checks. These controls help maintain security and consistency across large-scale deployments.
+- **Governance controls:** Apply enterprise-grade governance policies such as role-based access, data policies, and compliance checks. These controls help maintain security and consistency across large-scale deployments.
 
 Beyond the core benefits, the full experience provides:
 
@@ -67,14 +67,15 @@ The following table lists the configurations that aren't copied and how to handl
 | Teams chats and meetings added as knowledge | Add the Power Platform connector for Teams in the full experience. |
 | Emails added as knowledge | Add the Power Platform connector for Outlook in the full experience. |
 | Code interpreter toggle | Add code interpreter via agent settings in the full experience. |
-| Image generation from prompts | Not currently supported in the full experience. Basic charts and graphs are part of the Code Interpreter capability. |
+| Image generation from prompts | Not currently supported in the full experience. Basic charts and graphs are part of the code interpreter capability. |
 
 After you copy your agent:
 
 - The original agent in the lite experience remains available.
 - Copilot Studio creates a snapshot of the agent and uses it to define the agent in the full experience. Save the agent to ensure that the data is stored.
 - Updates to the original agent don't affect the copied version.
-- If another copy operation is underway, wait a few seconds before starting a new copy for the same agent.
+- If another copy operation is underway, wait a few seconds before you start a new copy for the same agent. Every copy operation creates a new agent in Copilot Studio.
+- If this is the first time you created an agent in the Copilot Studio full experience, the **Create Agents** screen appears after the first-run experience.
 - The original agent remains accessible through Microsoft 365, while the copy becomes a Copilot Studio agent that you can publish to multiple channels.
 - Test your agent in the full experience before you publish it. After you publish, decide whether to delete the original agent and communicate migration steps to users you shared the agent with.
 
@@ -92,7 +93,7 @@ For you to copy an agent to the full experience:
 
 - The environment must have applicable Dataverse data store.
 - The environment must be located in a [supported data location](/microsoft-copilot-studio/data-location).
-- You must have the [agent author](/microsoft-copilot-studio/environments-first-run-experience#create-an-agent-in-an-existing-environment-where-you-dont-have-access) role in the environment.
+- You must have the [Bot Author](/microsoft-copilot-studio/environments-first-run-experience#create-an-agent-in-an-existing-environment-where-you-dont-have-access) role in the environment.
 
 After you select an environment, the system checks for:
 
