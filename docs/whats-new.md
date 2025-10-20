@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 10/16/2025
+ms.date: 10/20/2025
 ms.topic: overview
 ---
 
@@ -19,6 +19,10 @@ For the latest information, announcements, and news about preview and generally 
 ### Use the Search API (preview) to perform semantic search
 
 The Microsoft 365 Copilot Search API (preview) enables developers to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results. For more information, see [Overview of the Search API](api/ai-services/search/overview.md).
+
+### Microsoft 365 Copilot Chat API (preview)
+
+The Microsoft 365 Copilot Chat API (preview) enables you to programmatically engage in multi-turn conversations with Microsoft 365 Copilot, grounded in enterprise search and web search. For more information, see [Overview of the Microsoft 365 Copilot Chat API (preview)](api/ai-services/chat/overview.md).
 
 ## August 2025
 
