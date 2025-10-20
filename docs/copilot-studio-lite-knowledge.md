@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/22/2025
+ms.date: 10/20/2025
 ---
 
 # Add knowledge sources to your declarative agent in Copilot Studio
@@ -53,7 +53,6 @@ You can reference specific SharePoint sites, files, and folders as agent knowled
 - Although there isn't a direct file size limit on the knowledge files you select, the agent can only reason over specific [file types](#file-types-and-size-limits).
 
 > [!NOTE]
-> - If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 > - If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
 > - To optimize for Copilot, we recommend that you keep the contents of files that you select concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
@@ -108,9 +107,6 @@ You can ground your agent in Outlook email. To add email as a knowledge source, 
 You can upload files directly from your device for your agent to use as knowledge. The files that you upload become embedded content in the agent. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device. You can upload individual files from your device, but not file folders.
 
 You can add up to 20 files as knowledge sources.
-
-> [!NOTE]
-> If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
 Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-types-and-size-limits).
 
@@ -204,7 +200,6 @@ Copilot connectors allow agents to access and apply knowledge from external syst
 
 > [!NOTE]
 > Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).
-> If you're configured with a pay-as-you-go plan in the Microsoft 365 admin center, you might not have access to this knowledge source.
 
 For more information about Copilot connectors, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 
@@ -275,7 +270,7 @@ When you enable this feature, the agent answers simple questions that don't requ
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
 
 > [!NOTE]
-> The lite experience in Copilot Studio for Microsoft 365 doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use the full experience in Copilot. For more information, see [Orchestrate agent behavior with generative AI](https://learn.microsoft.com/microsoft-copilot-studio/advanced-generative-actions).
+> The lite experience in Copilot Studio for Microsoft 365 doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use the full experience in Copilot. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## Related content
 
