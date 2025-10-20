@@ -16,6 +16,12 @@ For the latest information, announcements, and news about preview and generally 
 
 ## October 2025
 
+### Copy an agent to the Copilot Studio full experience
+
+You can copy your declarative agent from the Copilot Studio lite experience to the full experience by using the **Copy to full experience** feature. This unlocks advanced lifecycle management, analytics, governance controls, and deeper enterprise integration options.
+
+For details, see [Copy an agent to the Copilot Studio full experience](copy-agent-to-copilot-studio.md).
+
 ### Use the Search API (preview) to perform semantic search
 
 The Microsoft 365 Copilot Search API (preview) enables developers to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results. For more information, see [Overview of the Search API](api/ai-services/search/overview.md).
