@@ -16,6 +16,12 @@ For the latest information, announcements, and news about preview and generally 
 
 ## October 2025
 
+### Copy an agent to the Copilot Studio full experience
+
+You can copy your declarative agent from the Copilot Studio lite experience to the full experience by using the **Copy to full experience** feature. This unlocks advanced lifecycle management, analytics, governance controls, and deeper enterprise integration options.
+
+For details, see [Copy an agent to the Copilot Studio full experience](copy-agent-to-copilot-studio.md).
+
 ### Users with usage billing have access to additional knowledge sources in the Copilot Studio lite experience
 
 Users who are configured with usage billing in the Microsoft 365 admin center now have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
