@@ -4,7 +4,7 @@ description: OneDrive-specific search configuration including filtering and meta
 author: apiarya
 ms.author: swapnilsapar
 ms.topic: reference
-ms.date: 10/16/2025
+ms.date: 10/20/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---

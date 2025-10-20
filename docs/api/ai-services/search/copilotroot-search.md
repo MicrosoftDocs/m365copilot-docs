@@ -4,7 +4,7 @@ description: Use the Search API to perform hybrid search (semantic and lexical) 
 author: apiarya
 ms.author: swapnilsapar
 ms.topic: reference
-ms.date: 10/16/2025
+ms.date: 10/20/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---

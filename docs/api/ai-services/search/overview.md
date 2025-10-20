@@ -4,7 +4,7 @@ description: "Use the Microsoft 365 Copilot Search API to perform hybrid search 
 author: apiarya
 ms.author: swapnilsapar
 ms.localizationpriority: medium
-ms.date: 10/16/2025
+ms.date: 10/20/2025
 ms.topic: conceptual
 ---
 
@@ -42,7 +42,7 @@ Because the Search API performs hybrid search directly on OneDrive content witho
 
 The Search API eliminates the need to build a secure data export and search indexing pipeline that can incur significant costs for organizations. The API supports the following required capabilities, including:
 
-- Hybrid (semantic and lexical) search 
+- Hybrid (semantic and lexical) search
 - Natural language processing
 - Content indexing
 - Data storage

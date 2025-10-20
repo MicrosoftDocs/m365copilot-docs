@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 10/16/2025
+ms.date: 10/20/2025
 ms.custom: [copilot-learning-hub]
 ---
 
