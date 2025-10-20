@@ -93,7 +93,7 @@ For you to copy an agent to the full experience:
 
 - The environment must have applicable Dataverse data store.
 - The environment must be located in a [supported data location](/microsoft-copilot-studio/data-location).
-- You must have the [Bot Author](/microsoft-copilot-studio/environments-first-run-experience#create-an-agent-in-an-existing-environment-where-you-dont-have-access) role in the environment.
+- You must have the appropriate [security roles](/microsoft-copilot-studio/admin-share-bots#share-an-agent-for-chat) in the environment.
 
 After you select an environment, the system checks for:
 
