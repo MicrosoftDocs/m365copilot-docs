@@ -68,7 +68,7 @@ The following features aren't currently supported in [Microsoft 365 Government](
 
 Code interpreter runs on files you upload in your agent or that the user explicitly attaches in the interaction. Files that Copilot finds via enterprise search aren't passed to the code interpreter runtime.
 
-As a result, when a user asks an agent to analyze or chart a file it found in search, the agent summarizes the document text but doesn't run Python over that file.
+As a result, depending on the query (for example, when a user asks an agent to analyze or chart a file it found in search), the agent's response might be less descriptive because code interpreter doesn't run Python code.
 
 **Workaround:**
 
