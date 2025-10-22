@@ -26,7 +26,7 @@ TypeSpec for Microsoft 365 Copilot supports multiple authentication methods to s
 
 ## No authentication (anonymous)
 
-Public endpoints that don't require any authentication credentials. Nothing specific is required and without `@useAuth` decorators, all APIs are considered anonymous.
+Public endpoints that don't require any authentication credentials. The API doesn't require anything specific. Without `@useAuth` decorators, all APIs are considered anonymous.
 
 ### Example
 
@@ -120,9 +120,9 @@ Seamless authentication applying the user's existing Microsoft 365 session for n
 
 ## Using registered authentication configurations
 
-For production scenarios, authentication credentials are typically registered and managed through the Microsoft Teams Developer Portal rather than embedded directly in TypeSpec code. The `@authReferenceId` decorator allows you to reference preregistered authentication configurations by their unique identifiers, providing a secure way to handle credentials without exposing sensitive information in your codebase.
+For production scenarios, register and manage authentication credentials through the Microsoft Teams Developer Portal instead of embedding them directly in TypeSpec code. Use the `@authReferenceId` decorator to reference preregistered authentication configurations by their unique identifiers. This approach provides a secure way to handle credentials without exposing sensitive information in your codebase.
 
-When using `@authReferenceId`, you specify the registration ID from either OAuth client registrations or API key registrations configured in the Developer Portal. This approach separates authentication configuration from code, enabling better security practices and easier credential management across different environments.
+When you use `@authReferenceId`, specify the registration ID from either OAuth client registrations or API key registrations configured in the Developer Portal. This approach separates authentication configuration from code, enabling better security practices and easier credential management across different environments.
 
 ### Example
 
