@@ -156,8 +156,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     },
     {
@@ -182,8 +181,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     }
   ]
@@ -407,8 +405,7 @@ Content-Type: application/json
               "displayName": "Confidential\\Any User (No Protection)",
               "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
               "priority": 4,
-              "color": "#FF8C00",
-              "isEncrypted": false
+              "color": "#FF8C00"
             }
           },
           {
@@ -430,8 +427,7 @@ Content-Type: application/json
               "displayName": "Confidential\\Any User (No Protection)",
               "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
               "priority": 4,
-              "color": "#FF8C00",
-              "isEncrypted": false
+              "color": "#FF8C00"
             }
           }
         ]
@@ -562,8 +558,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     },
     {
@@ -588,8 +583,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     }
   ]
@@ -676,8 +670,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     },
     {
@@ -698,8 +691,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     },
     {
@@ -724,8 +716,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     }
   ]
