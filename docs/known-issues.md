@@ -64,15 +64,17 @@ The following features aren't currently supported in [Microsoft 365 Government](
 - Support for metered billing for extensibility features. For details about features that require metered billing, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 - Support for publishing agents via the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents).
 
-### Files found via enterprise search aren't passed to Code Interpreter
+### Files found via enterprise search aren't passed to code interpreter
 
-In Copilot and Agents, Code Interpreter runs on files you directly upload or that are explicitly attached in the interaction. Files that Copilot finds via enterprise search aren't yet passed into the Code Interpreter runtime.
+Code interpreter runs on files you upload in your agent or that the user explicitly attaches in the interaction. Files that Copilot finds via enterprise search aren't passed to the code interpreter runtime.
 
-**Impact:** When you ask Copilot or Agent to "analyze" or "chart" a file it found in search, it may summarize the document text but won't run Python over that file.
+As a result, when a user asks an agent to analyze or chart a file it found in search, the agent summarizes the document text but doesn't run Python over that file.
 
 **Workaround:**
 
-- Upload the file in the chat before asking for analysis, or
+You can work around the issue in two ways:
+
+- Upload the file in the chat before asking for analysis.
 - Share a direct file link and ask Copilot to open it.
 
 ## Copilot connectors
