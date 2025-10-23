@@ -29,7 +29,7 @@ These decorators are used when building declarative agents to define agent behav
 Indicates that a namespace represents an agent.
 
 ```typescript
-@agent(name: valueof string, description: valueof string)
+@agent(name: valueof string, description: valueof string, id?: valueof string)
 ```
 
 #### Target
@@ -42,6 +42,7 @@ Indicates that a namespace represents an agent.
 |------|------|-------------|
 | `name` | valueof `string` | Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
 | `description` | valueof `string` | Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
+| `id` | valueof `string` | Optional. The unique identifier of the agent. |
 
 #### Examples
 
@@ -56,8 +57,8 @@ Indicates that a namespace represents an agent.
 ```
 
 ```typescript
-// Specialized domain agent for data analysis
-@agent("Data Analytics Helper", "An agent specialized in data analysis and reporting tasks")
+// Agent with explicit ID for tracking and versioning
+@agent("Data Analytics Helper", "An agent specialized in data analysis and reporting tasks", "data-analytics-v1")
 ```
 
 ### `@behaviorOverrides`
@@ -165,6 +166,48 @@ Configuration object that defines a conversation starter for users.
 // Issue reporting prompt for technical support scenarios
 @conversationStarter(#{
   text: "I need to report a technical problem"
+})
+```
+
+### `@customExtension`
+
+Indicates that a namespace contains a custom extension with a key-value pair for extensibility.
+
+```typescript
+@customExtension(key: valueof string, value: valueof unknown)
+```
+
+#### Target
+
+`Namespace`
+
+#### Parameters
+
+| Name | Type | Description |
+|------|------|-------------|
+| `key` | valueof `string` | The key for the custom extension. |
+| `value` | valueof `unknown` | The value for the custom extension. Can be any valid TypeSpec value. |
+
+#### Examples
+
+```typescript
+// Adding a custom feature flag to an agent
+@customExtension("featureFlag", "experimentalMode")
+```
+
+```typescript
+// Adding custom metadata with a structured value
+@customExtension("metadata", #{
+  version: "1.0",
+  environment: "production"
+})
+```
+
+```typescript
+// Adding a custom configuration setting
+@customExtension("customConfig", #{
+  maxRetries: 3,
+  timeout: 30000
 })
 ```
 

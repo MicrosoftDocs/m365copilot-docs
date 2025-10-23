@@ -12,7 +12,7 @@ ms.topic: reference
 
 # Declarative agent capabilities in TypeSpec for Microsoft 365 Copilot
 
-TypeSpec for Microsoft 365 Copilot provides built-in capabilities that enable declarative agents to access Microsoft 365 services and external resources. Available capabilities include **CodeInterpreter**, **CopilotConnectors**, **Email**, **GraphicArt**, **OneDriveAndSharePoint**, **People**, **ScenarioModels**, **TeamsMessages**, and **WebSearch**. Each capability can be configured with specific parameters to control scope.
+TypeSpec for Microsoft 365 Copilot provides built-in capabilities that enable declarative agents to access Microsoft 365 services and external resources. Available capabilities include **CodeInterpreter**, **Dataverse**, **Email**, **CopilotConnectors**, **GraphicArt**, **Meetings**, **OneDriveAndSharePoint**, **People**, **ScenarioModels**, **TeamsMessages**, and **WebSearch**. Each capability can be configured with specific parameters to control scope.
 
 [!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
 
@@ -56,10 +56,21 @@ Identifies a Copilot connector.
 |------|------|-------------|
 | `connectionId` | string | Required. The unique identifier of the Copilot connector. |
 | `additionalSearchTerms` | string | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
+| `itemsByExternalUrl` | Array of [ExternalUrlItem](#externalurlitem) | Optional. Specifies specific items by external URL in the Copilot connector that are available to the agent. |
 | `itemsByExternalId` | Array of [ExternalIdItem](#externaliditem) | Optional. Specifies specific items by ID in the Copilot connector that are available to the agent. |
 | `itemsByPath` | Array of [PathItem](#pathitem) | Optional. Filters the items available to the agent by item paths (the `itemPath` semantic label on items). |
 | `itemsByContainerName` | Array of [ContainerNameItem](#containernameitem) | Optional. Filters the items available to the agent by container name (the `containerName` semantic label on items). |
 | `itemsByContainerUrl` | Array of [ContainerUrlItem](#containerurlitem) | Optional. Filters the items available to the agent by container URL (the `containerUrl` semantic label on items). |
+
+#### ExternalUrlItem
+
+Identifies an external item by its URL.
+
+##### Properties
+
+| Name | Type | Description |
+|------|------|-------------|
+| `url` | string | Required. The URL of the external item. |
 
 #### ExternalIdItem
 
@@ -157,6 +168,82 @@ op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
 ]>;
 ```
 
+## `AgentCapabilities.Dataverse`
+
+Indicates that the declarative agent can search for information in Microsoft Dataverse.
+
+```typescript
+op dataverse is AgentCapabilities.Dataverse;
+```
+
+### Parameters
+
+| Name | Type | Description |
+|------|------|-------------|
+| `TKnowledgeSources` | Array of [DataverseKnowledgeSource](#dataverseknowledgesource) | Optional. An array of objects that identify the Dataverse knowledge sources available to the declarative agent. If this property is omitted, all accessible Dataverse environments are available to the declarative agent. |
+
+### Models
+
+#### DataverseKnowledgeSource
+
+Represents a Dataverse knowledge source.
+
+##### Properties
+
+| Name | Type | Description |
+|------|------|-------------|
+| `hostName` | string | Required. The hostname of the Dataverse environment. |
+| `skill` | string | Optional. The skill identifier for the knowledge source. |
+| `tables` | Array of [DataverseTable](#dataversetable) | Optional. An array of tables that the declarative agent can access. If this property is omitted, all accessible tables in the environment are available to the declarative agent. |
+
+#### DataverseTable
+
+Represents a Dataverse table.
+
+##### Properties
+
+| Name | Type | Description |
+|------|------|-------------|
+| `tableName` | string | Required. The logical name of the table. |
+
+### Example
+
+```typescript
+// Basic Dataverse with no restrictions
+op dataverse is AgentCapabilities.Dataverse;
+
+// Dataverse with specific environment
+op dataverse is AgentCapabilities.Dataverse<TKnowledgeSources = [
+  {
+    hostName: "contoso.crm.dynamics.com";
+  }
+]>;
+
+// Dataverse with specific tables
+op dataverse is AgentCapabilities.Dataverse<TKnowledgeSources = [
+  {
+    hostName: "contoso.crm.dynamics.com";
+    tables: [
+      { tableName: "account" },
+      { tableName: "contact" },
+      { tableName: "opportunity" }
+    ];
+  }
+]>;
+
+// Dataverse with skill and tables
+op dataverse is AgentCapabilities.Dataverse<TKnowledgeSources = [
+  {
+    hostName: "contoso.crm.dynamics.com";
+    skill: "sales-assistant";
+    tables: [
+      { tableName: "account" },
+      { tableName: "lead" }
+    ];
+  }
+]>;
+```
+
 ## `AgentCapabilities.Email`
 
 Indicates that the declarative agent can search through email messages in the mailboxes that the user has access to.
@@ -223,6 +310,20 @@ op graphicArt is AgentCapabilities.GraphicArt;
 
 ```typescript
 op graphicArt is AgentCapabilities.GraphicArt;
+```
+
+## `AgentCapabilities.Meetings`
+
+Indicates that the declarative agent can search meeting content.
+
+```typescript
+op meetings is AgentCapabilities.Meetings;
+```
+
+### Example
+
+```typescript
+op meetings is AgentCapabilities.Meetings;
 ```
 
 ## `AgentCapabilities.OneDriveAndSharePoint`
