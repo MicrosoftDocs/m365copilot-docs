@@ -44,6 +44,7 @@ The authoring canvas language is the one in which the authoring UI is presented.
 
 The following authoring languages are supported:
 
+- Arabic (ar)
 - Chinese (Simplified) (zh-CN)
 - Chinese (Traditional) (zh-TW)
 - Czech (cs-CZ)

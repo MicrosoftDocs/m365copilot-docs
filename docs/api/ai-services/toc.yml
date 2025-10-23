@@ -1,9 +1,15 @@
 items:
 - name: Retrieval API (preview)
   href: retrieval/toc.yml
+- name: Search API (preview)
+  href: search/toc.yml
 - name: Meeting insights API (preview)
   href: meeting-insights/toc.yml
 - name: Change notifications API (preview)
   href: change-notifications/toc.yml
 - name: Interaction export API
   href: interaction-export/toc.yml
+- name: Chat API
+  href: chat/toc.yml
+- name: Complex types
+  href: resources/toc.yml
