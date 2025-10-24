@@ -4,7 +4,7 @@ description: Use the Copilot APIs to securely access Microsoft 365 Copilot capab
 author: lramosvea
 ms.author: lramosvea
 ms.topic: conceptual
-ms.date: 10/20/2025
+ms.date: 10/24/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---

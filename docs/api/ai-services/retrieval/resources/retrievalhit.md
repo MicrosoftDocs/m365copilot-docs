@@ -4,7 +4,7 @@ description: Represents a single result within the list of retrieval results.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 10/10/2025
+ms.date: 10/24/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
 zone_pivot_groups: graph-api-versions
