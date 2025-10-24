@@ -13,7 +13,7 @@ zone_pivot_groups: graph-api-versions
 # searchSensitivityLabelInfo resource type
 
 :::zone pivot="graph-preview"
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 :::zone-end
 
 :::zone pivot="graph-v1"
