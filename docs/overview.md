@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/27/2025
+ms.date: 10/20/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -79,10 +79,12 @@ Whether you're developing a custom engine agent for Microsoft 365 Copilot with y
 
 You can integrate the following Copilot APIs:
 
-- **Copilot Retrieval API** - Retrieve relevant information from Microsoft 365's semantic and lexical indexes. Whether you're building agents with Copilot's orchestration or your own models and orchestrators, this API lets you ground your solution in enterprise data—from SharePoint to external systems—via [Copilot connectors](/microsoftsearch/connectors-overview). It respects user and tenant-level governance, ensuring secure, compliant access to organizational knowledge.
+- **[Copilot Retrieval API](api/ai-services/retrieval/overview.md)** - Retrieve relevant information from Microsoft 365's semantic and lexical indexes. Whether you're building agents with Copilot's orchestration or your own models and orchestrators, this API lets you ground your solution in enterprise data—from SharePoint to external systems—via [Copilot connectors](/microsoftsearch/connectors-overview). It respects user and tenant-level governance, ensuring secure, compliant access to organizational knowledge.
 
     > [!NOTE]
     > The Copilot Retrieval API is currently in prerelease status and will be available for public preview soon.
+
+- **[Copilot Search API (preview)](api/ai-services/search/overview.md)** - Perform hybrid search (semantic and lexical) across OneDrive for work or school content using natural language queries with contextual understanding and intelligent results. This API enables applications to discover relevant documents and files using natural language descriptions rather than exact keyword matches, creating intuitive search experiences that understand user intent and surface the most relevant content.
 
 - **Copilot Chat API** - Send prompts directly to Copilot and receive responses so you can embed Copilot-powered conversation experiences within your own applications. This API brings Copilot to your users wherever they work.
 

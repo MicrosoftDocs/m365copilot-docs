@@ -128,7 +128,7 @@ The [web search capability](knowledge-sources.md#web-and-scoped-web-search) enab
 
     ```typescript
     namespace MyAgent {
-      op webSearch is AgentCapabilities.WebSearch<TSites = [
+      op webSearch is AgentCapabilities.WebSearch<Sites = [
         {
           url: "https://learn.microsoft.com",
         },
@@ -139,7 +139,7 @@ The [web search capability](knowledge-sources.md#web-and-scoped-web-search) enab
     For more information, see [Web search object](declarative-agent-manifest-1.5.md#web-search-object).
 
     > [!NOTE]
-    > Not specifying the `TSites` array causes all web content to be available to the agent.
+    > Not specifying the `Sites` array causes all web content to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -156,7 +156,7 @@ The [OneDrive and SharePoint capability](knowledge-sources.md#sharepoint-and-one
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op od_sp is AgentCapabilities.OneDriveAndSharePoint<TItemsByUrl = [
+      op od_sp is AgentCapabilities.OneDriveAndSharePoint<ItemsByUrl = [
         {
           url: "https://contoso.sharepoint.com/sites/ProductSupport"
         }
@@ -170,7 +170,7 @@ The [OneDrive and SharePoint capability](knowledge-sources.md#sharepoint-and-one
     > [!NOTE]
     >
     > - URLs should be full path to SharePoint items (site, document library, folder, or file). You can use the "Copy direct link" option in SharePoint to get the full path or files and folders. Right-click on the file or folder and select **Details**. Navigate to **Path** and select the copy icon.
-    > - Not specifying the `TItemsByUrl` array (or the alternative `TItemsBySharePointIds` array) causes all OneDrive and SharePoint content in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
+    > - Not specifying the `ItemsByUrl` array (or the alternative `ItemsBySharePointIds` array) causes all OneDrive and SharePoint content in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -187,7 +187,7 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
+      op teamsMessages is AgentCapabilities.TeamsMessages<Urls = [
         {
           url: "https://teams.microsoft.com/l/team/...",
         }
@@ -196,11 +196,11 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
     }
     ```
 
-    For more information, see [Teams messages object](declarative-agent-manifest-1.5.md#teams-messages-object).
+    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.5.md#microsoft-teams-messages-object).
 
     > [!NOTE]
     > - The URL in the `url` property must be well formed links to a Teams chat, team, or meeting chat.
-    > - Not specifying the `TUrls` array causes all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
+    > - Not specifying the `Urls` array causes all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -239,7 +239,7 @@ The [email capability](knowledge-sources.md#email) allows you to scope your agen
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op email is AgentCapabilities.Email<TFolders = [
+      op email is AgentCapabilities.Email<Folders = [
         {
           folder_id: "Inbox",
         }
@@ -253,7 +253,7 @@ The [email capability](knowledge-sources.md#email) allows you to scope your agen
     > [!NOTE]
     >
     > - This example accesses the user of the agent's mailbox. To access a shared mailbox instead, add the optional `shared_mailbox` property set to the email address of the shared mailbox.
-    > - The `TFolders` array limits the mailbox access to specific folders. To access the entire mailbox, omit the `folders` array.
+    > - The `Folders` array limits the mailbox access to specific folders. To access the entire mailbox, omit the `folders` array.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -316,7 +316,7 @@ You can add items ingested by a Copilot connector to the available knowledge for
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op copilotConnectors is AgentCapabilities.GraphConnectors<TConnections = [
+      op copilotConnectors is AgentCapabilities.GraphConnectors<Connections = [
         {
           connectionId: "policieslocal",
         }
@@ -328,7 +328,7 @@ You can add items ingested by a Copilot connector to the available knowledge for
     For more information, see [Copilot connectors object](declarative-agent-manifest-1.5.md#copilot-connectors-object).
 
     > [!NOTE]
-    > Not specifying the `TConnections` array causes content from all Copilot connectors in your Microsoft 365 organization that are available to the logged in user to be available to the agent.
+    > Not specifying the `Connections` array causes content from all Copilot connectors in your Microsoft 365 organization that are available to the logged in user to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 

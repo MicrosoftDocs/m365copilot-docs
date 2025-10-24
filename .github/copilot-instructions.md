@@ -14,7 +14,7 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Essential validation workflow
 
-* Run markdown linting: `markdownlint docs --config .markdownlint.json` — takes ~3 seconds. Always fix lint errors before committing.
+* Run markdown linting: `markdownlint docs --config .markdownlint.json --ignore **\node_modules\**` — takes ~3 seconds. Always fix lint errors before committing.
 * Run spell checking: `cspell --config cspell.json "docs/**/*.md"` — takes ~3 seconds. Add unknown but valid words to cspell.json.
 * Clean unused images: `pwsh scripts/CleanupUnusedImages.ps1` — takes ~45-50 seconds. NEVER CANCEL this operation.
 * ALWAYS run all validation steps before creating a pull request.
@@ -60,7 +60,7 @@ Always reference these instructions first and fallback to search or bash command
 * `docs/includes/` — Reusable content snippets and shared manifests
 * `docs/assets/images/` — All documentation images
 * `docs/assets/scripts/` — PowerShell utility scripts
-* `docs/api-reference/` — API documentation with zone pivots
+* `docs/api/` — API documentation with zone pivots
 * `.github/workflows/` — GitHub Actions (EOL blocker validation)
 * `scripts/` — Repository maintenance scripts
 

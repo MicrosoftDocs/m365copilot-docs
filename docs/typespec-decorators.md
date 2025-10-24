@@ -29,7 +29,7 @@ These decorators are used when building declarative agents to define agent behav
 Indicates that a namespace represents an agent.
 
 ```typescript
-@agent(name: valueof string, description: valueof string)
+@agent(name: valueof string, description: valueof string, id?: valueof string)
 ```
 
 #### Target
@@ -38,10 +38,11 @@ Indicates that a namespace represents an agent.
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
-| `name` | valueof `string` | Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
+| Name          | Type             | Description |
+|---------------|------------------|-------------|
 | `description` | valueof `string` | Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
+| `id`          | valueof `string` | Optional. The unique identifier of the agent. |
+| `name`        | valueof `string` | Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
 
 #### Examples
 
@@ -56,8 +57,8 @@ Indicates that a namespace represents an agent.
 ```
 
 ```typescript
-// Specialized domain agent for data analysis
-@agent("Data Analytics Helper", "An agent specialized in data analysis and reporting tasks")
+// Agent with explicit ID for tracking and versioning
+@agent("Data Analytics Helper", "An agent specialized in data analysis and reporting tasks", "data-analytics-v1")
 ```
 
 ### `@behaviorOverrides`
@@ -74,8 +75,8 @@ Define settings that modify the behavior of the agent orchestration.
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name                | Type                                            | Description |
+|---------------------|-------------------------------------------------|-------------|
 | `behaviorOverrides` | valueof [BehaviorOverrides](#behavioroverrides) | Define settings that modify the behavior of the agent orchestration. |
 
 #### Models
@@ -84,10 +85,10 @@ Define settings that modify the behavior of the agent orchestration.
 
 Define settings that modify the behavior of the agent orchestration
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name                       | Type      | Description |
+|----------------------------|-----------|-------------|
 | `discourageModelKnowledge` | `boolean` | A boolean value that indicates whether the declarative agent should be discouraged from using model knowledge when generating responses. |
-| `disableSuggestions` | `boolean` | A boolean value that indicates whether the suggestions feature is disabled. |
+| `disableSuggestions`       | `boolean` | A boolean value that indicates whether the suggestions feature is disabled. |
 
 #### Examples
 
@@ -128,8 +129,8 @@ Indicates that a namespace contains a conversation starter.
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name                  | Type                                                | Description                           |
+|-----------------------|-----------------------------------------------------|---------------------------------------|
 | `conversationStarter` | valueof [ConversationStarter](#conversationstarter) | The conversation starter information. |
 
 #### Models
@@ -138,10 +139,10 @@ Indicates that a namespace contains a conversation starter.
 
 Configuration object that defines a conversation starter for users.
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name    | Type     | Description |
+|---------|----------|-------------|
+| `text`  | `string` | Localizable. A suggestion that the user can use to obtain the desired result from the DC. It MUST contain at least one nonwhitespace character. |
 | `title` | `string` | Localizable. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
-| `text` | `string` | Localizable. A suggestion that the user can use to obtain the desired result from the DC. It MUST contain at least one nonwhitespace character. |
 
 #### Examples
 
@@ -168,6 +169,48 @@ Configuration object that defines a conversation starter for users.
 })
 ```
 
+### `@customExtension`
+
+Indicates that a namespace contains a custom extension with a key-value pair for extensibility.
+
+```typescript
+@customExtension(key: valueof string, value: valueof unknown)
+```
+
+#### Target
+
+`Namespace`
+
+#### Parameters
+
+| Name    | Type              | Description                                                          |
+|---------|-------------------|----------------------------------------------------------------------|
+| `key`   | valueof `string`  | The key for the custom extension.                                    |
+| `value` | valueof `unknown` | The value for the custom extension. Can be any valid TypeSpec value. |
+
+#### Examples
+
+```typescript
+// Adding a custom feature flag to an agent
+@customExtension("featureFlag", "experimentalMode")
+```
+
+```typescript
+// Adding custom metadata with a structured value
+@customExtension("metadata", #{
+  version: "1.0",
+  environment: "production"
+})
+```
+
+```typescript
+// Adding a custom configuration setting
+@customExtension("customConfig", #{
+  maxRetries: 3,
+  timeout: 30000
+})
+```
+
 ### `@disclaimer`
 
 An optional object containing a disclaimer message that, if provided, is displayed to users at the start of a conversation to satisfy legal or compliance requirements.
@@ -182,8 +225,8 @@ An optional object containing a disclaimer message that, if provided, is display
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name         | Type                              | Description                                        |
+|--------------|-----------------------------------|----------------------------------------------------|
 | `disclaimer` | valueof [Disclaimer](#disclaimer) | The disclaimer information that is shown to users. |
 
 #### Models
@@ -192,8 +235,8 @@ An optional object containing a disclaimer message that, if provided, is display
 
 The disclaimer information that is shown to users.
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name   | Type     | Description |
+|--------|----------|-------------|
 | `text` | `string` | A string that contains the disclaimer message. It MUST contain at least one nonwhitespace character. Characters beyond 500 MAY be ignored. |
 
 #### Examples
@@ -233,8 +276,8 @@ Defines the instructions that define the behavior of an agent.
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name           | Type             | Description |
+|----------------|------------------|-------------|
 | `instructions` | valueof `string` | Not localizable. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
 
 #### Examples
@@ -279,8 +322,8 @@ Defines the action that can be defined on an info object in an OpenAPI specifica
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name   | Type                                      | Description                                                                 |
+|--------|-------------------------------------------|-----------------------------------------------------------------------------|
 | `data` | valueof [ActionMetadata](#actionmetadata) | The action metadata including human-readable names, descriptions, and URLs. |
 
 #### Models
@@ -289,15 +332,15 @@ Defines the action that can be defined on an info object in an OpenAPI specifica
 
 The action metadata including human-readable names, descriptions, and URLs.
 
-| Name | Type | Description |
-|------|------|-------------|
-| `nameForHuman` | `string` | Required. A short, human-readable name for the plugin. It MUST contain at least one nonwhitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
-| `descriptionForModel` | `string` | Optional. The description for the plugin that is provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
+| Name                  | Type     | Description |
+|-----------------------|----------|-------------|
 | `descriptionForHuman` | `string` | Required. A human-readable description of the plugin. Characters beyond 100 MAY be ignored. This property is localizable. |
-| `privacyPolicyUrl` | `string` | Optional. An absolute URL that locates a document containing the privacy policy for the plugin. This property is localizable. |
-| `legalInfoUrl` | `string` | Optional. An absolute URL that locates a document containing the terms of service for the plugin. This property is localizable. |
-| `contactEmail` | `string` | Optional. An email address of a contact for safety/moderation, support, and deactivation. |
-| `logoUrl` | `string` | Optional. A URL used to fetch a logo that MAY be used by the orchestrator. Implementations MAY provide alternative methods to provide logos that meet their visual requirements. This property is localizable. |
+| `nameForHuman`        | `string` | Required. A short, human-readable name for the plugin. It MUST contain at least one nonwhitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
+| `contactEmail`        | `string` | Optional. An email address of a contact for safety/moderation, support, and deactivation. |
+| `descriptionForModel` | `string` | Optional. The description for the plugin that is provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
+| `legalInfoUrl`        | `string` | Optional. An absolute URL that locates a document containing the terms of service for the plugin. This property is localizable. |
+| `logoUrl`             | `string` | Optional. A URL used to fetch a logo that MAY be used by the orchestrator. Implementations MAY provide alternative methods to provide logos that meet their visual requirements. This property is localizable. |
+| `privacyPolicyUrl`    | `string` | Optional. An absolute URL that locates a document containing the privacy policy for the plugin. This property is localizable. |
 
 #### Examples
 
@@ -349,8 +392,8 @@ Defines the authentication reference ID for the authentication type.
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name    | Type             | Description                                         |
+|---------|------------------|-----------------------------------------------------|
 | `value` | valueof `string` | The vault reference ID for the authentication type. |
 
 #### Examples
@@ -377,8 +420,8 @@ Support an action function's capabilities object as defined in the [API plugin m
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name           | Type                                                                  | Description |
+|----------------|-----------------------------------------------------------------------|-------------|
 | `capabilities` | valueof [FunctionCapabilitiesMetadata](#functioncapabilitiesmetadata) | Contains a collection of data used to configure optional capabilities of the orchestrator while invoking the function. |
 
 #### Models
@@ -387,52 +430,52 @@ Support an action function's capabilities object as defined in the [API plugin m
 
 Contains a collection of data used to configure optional capabilities of the orchestrator while invoking the function.
 
-| Name | Type | Description |
-|------|------|-------------|
-| `confirmation` | [Confirmation](#confirmation) | Optional. Describes a confirmation dialog that SHOULD be presented to the user before invoking the function. |
+| Name                | Type                                    | Description |
+|---------------------|-----------------------------------------|-------------|
+| `confirmation`      | [Confirmation](#confirmation)           | Optional. Describes a confirmation dialog that SHOULD be presented to the user before invoking the function. |
 | `responseSemantics` | [ResponseSemantics](#responsesemantics) | Optional. Describes how the orchestrator can interpret the response payload and provide a visual rendering. |
-| `securityInfo` | [SecurityInfo](#securityinfo) | Optional. Contains attestations about the behavior of the plugin in order to assess the risks of calling the function. If this property is omitted, the function is unable to interact with other plugins or capabilities of the containing agent. |
+| `securityInfo`      | [SecurityInfo](#securityinfo)           | Optional. Contains attestations about the behavior of the plugin in order to assess the risks of calling the function. If this property is omitted, the function is unable to interact with other plugins or capabilities of the containing agent. |
 
 ##### Confirmation
 
 Describes how the orchestrator asks the user to confirm before calling a function.
 
-| Name | Type | Description |
-|------|------|-------------|
-| `type` | `string` | Optional. Specifies the type of confirmation. Possible values are: None, AdaptiveCard. |
-| `title` | `string` | Optional. The title of the confirmation dialog. This property is localizable. |
-| `body` | `string` | Optional. The text of the confirmation dialog. This property is localizable. |
+| Name    | Type     | Description                                                                            |
+|---------|----------|----------------------------------------------------------------------------------------|
+| `body`  | `string` | Optional. The text of the confirmation dialog. This property is localizable.           |
+| `title` | `string` | Optional. The title of the confirmation dialog. This property is localizable.          |
+| `type`  | `string` | Optional. Specifies the type of confirmation. Possible values are: None, AdaptiveCard. |
 
 ##### ResponseSemantics
 
 Contains information to identify semantics of response payload and enable rendering that information in a rich visual experience using Adaptive Cards.
 
-| Name | Type | Description |
-|------|------|-------------|
-| `dataPath` | `string` | Required. A JSONPath RFC9535 query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
-| `staticTemplate` | `Record<unknown>` | Optional. A JSON object that conforms with the Adaptive Card schema and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the templateSelector isn't present or fails to resolve to an adaptive card. |
-| `properties` | [ResponseSemanticsProperties](#responsesemanticsproperties) | Optional. Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value. |
-| `oauthCardPath` | `string` | Optional. |
+| Name             | Type                                                        | Description |
+|------------------|-------------------------------------------------------------|-------------|
+| `dataPath`       | `string`                                                    | Required. A JSONPath RFC9535 query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
+| `oauthCardPath`  | `string`                                                    | Optional. |
+| `properties`     | [ResponseSemanticsProperties](#responsesemanticsproperties) | Optional. Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value. |
+| `staticTemplate` | `Record<unknown>`                                           | Optional. A JSON object that conforms with the Adaptive Card schema and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the templateSelector isn't present or fails to resolve to an adaptive card. |
 
 ##### ResponseSemanticsProperties
 
 Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value.
 
-| Name | Type | Description |
-|------|------|-------------|
-| `title` | `string` | Optional. Title of a citation for the result. |
-| `subTitle` | `string` | Optional. Subtitle of a citation for the result. |
-| `url` | `string` | Optional. URL of a citation for the result. |
-| `thumbnailUrl` | `string` | Optional. URL of a thumbnail image for the result. |
+| Name                         | Type     | Description |
+|------------------------------|----------|-------------|
 | `informationProtectionLabel` | `string` | Optional. Data sensitivity indicator of the result contents. |
-| `templateSelector` | `string` | Optional. A JSONPath expression to an Adaptive Card instance to be used for rendering the result. |
+| `subTitle`                   | `string` | Optional. Subtitle of a citation for the result. |
+| `templateSelector`           | `string` | Optional. A JSONPath expression to an Adaptive Card instance to be used for rendering the result. |
+| `title`                      | `string` | Optional. Title of a citation for the result. |
+| `thumbnailUrl`               | `string` | Optional. URL of a thumbnail image for the result. |
+| `url`                        | `string` | Optional. URL of a citation for the result. |
 
 ##### SecurityInfo
 
 Contains information use to determine the relative risk of invoking the function.
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name           | Type       | Description |
+|----------------|------------|-------------|
 | `dataHandling` | `string[]` | Required. An array of strings that describe the data handling behavior of the function. Valid values are `GetPublicData`, `GetPrivateData`, `DataTransform`, `DataExport`, and `ResourceStateUpdate`. |
 
 #### Examples
@@ -469,7 +512,7 @@ Contains information use to determine the relative risk of invoking the function
       url: "$.projectUrl",
       thumbnailUrl: "$.teamLogo"
     },
-    staticTempalte: #{file: "adaptiveCards/dish.json"}
+    staticTemplate: #{file: "adaptiveCards/dish.json"}
   }
 })
 ```
@@ -488,8 +531,8 @@ Defines the adaptive card reference for a function.
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name       | Type                                  | Description |
+|------------|---------------------------------------|-------------|
 | `cardPath` | valueof [CardMetadata](#cardmetadata) | Defines the adaptive card reference for a function. Simplified version of `responseSemantics`. |
 
 #### Models
@@ -498,12 +541,12 @@ Defines the adaptive card reference for a function.
 
 Simplified responseSemantics focused on the adaptive card.
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name       | Type     | Description |
+|------------|----------|-------------|
 | `dataPath` | `string` | Required. A JSONPath RFC9535 query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
-| `file` | `string` | Required. Path to the adaptive card template. Relative to the appPackage directory. |
-| `title` | `string` | Required. Title of a citation for the result. |
-| `url` | `string` | Optional. URL of a citation for the result. |
+| `file`     | `string` | Required. Path to the adaptive card template. Relative to the appPackage directory. |
+| `title`    | `string` | Required. Title of a citation for the result. |
+| `url`      | `string` | Optional. URL of a citation for the result. |
 
 #### Examples
 
@@ -540,8 +583,8 @@ Defines the reasoning instructions of a function within an action.
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name    | Type             | Description                                   |
+|---------|------------------|-----------------------------------------------|
 | `value` | valueof `string` | The reasoning instructions for the operation. |
 
 #### Examples
@@ -584,8 +627,8 @@ Defines the responding instructions of a function within an action.
 
 #### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name    | Type             | Description                                    |
+|---------|------------------|------------------------------------------------|
 | `value` | valueof `string` | The responding instructions for the operation. |
 
 #### Examples

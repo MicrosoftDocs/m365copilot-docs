@@ -1,8 +1,8 @@
 ---
 title: Declarative agent schema 1.2 for Microsoft 365 Copilot
 description: Learn about the 1.2 schema for a manifest file for declarative agents in Microsoft 365 Copilot
-author: rimisra2
-ms.author: rimisra
+author: RachitMalik12
+ms.author: malikrachit
 ms.localizationpriority: medium
 ms.date: 08/18/2025
 ms.topic: reference
@@ -12,11 +12,11 @@ ms.topic: reference
 
 # Declarative agent schema 1.2 for Microsoft 365 Copilot
 
-This article describes the 1.2 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Declarative agent manifests are referenced by the Microsoft 365 app manifest inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
+This article describes the 1.2 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Microsoft 365 app manifest references declarative agent manifests inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
 [!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
 
-Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification is focused on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
+Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification focuses on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
 ## Changes from previous version
 
@@ -28,25 +28,9 @@ This schema version introduces the following changes from [version 1.0](declarat
 
 ## JSON schema
 
-The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/declarative-agent/v1.2/schema.json).
+You can find the schema described in this document in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/declarative-agent/v1.2/schema.json).
 
-## Conventions
-
-### Relative references in URLs
-
-Unless specified otherwise, all properties that are URLs MAY be relative references. Relative references in the manifest document are relative the location of the manifest document.
-
-### String length
-
-Unless specified otherwise, all string properties SHOULD be limited to 4K characters. This string length doesn't confer any acceptable size for the entire document. Implementations are free to impose their own practical limits on manifest length.
-
-### Unrecognized properties
-
-JSON objects defined in this document support only the described properties. Unrecognized or extraneous properties in any JSON object SHOULD make the entire document invalid.
-
-### String localization
-
-Localizable strings can use a localization key instead of a literal value. The syntax is `[[key_name]]`, where `key_name` is the key name in the `localizationKeys` property in your localization files. For details on localization, see [Localize your agent](localize-agents.md).
+[!INCLUDE [declarative-agent-manifest-conventions](includes/declarative-agent-manifest-conventions.md)]
 
 ## Declarative agent manifest object
 
@@ -56,18 +40,18 @@ The declarative agent manifest object contains the following properties.
 
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
-| `version`               | String                                                                | Required. The schema version. Must be set to `v1.2`. |
+| `version`               | String                                                                | Required. The schema version. Set to `v1.2`. |
 | `id`                    | String                                                                | Optional.   |
-| `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 100 characters or less. |
-| `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It MUST contain at least one nonwhitespace character and MUST be 1,000 characters or less. |
-| `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It MUST contain at least one nonwhitespace character and MUST be 8,000 characters or less. |
-| `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. There MUST NOT be more than one of each derived type of [Capabilities object](#capabilities-object) in the array. |
-| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. There MUST NOT be more than 12 objects in the array. |
+| `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It must contain at least one nonwhitespace character and be 100 characters or less. |
+| `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It must contain at least one nonwhitespace character and be 1,000 characters or less. |
+| `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It must contain at least one nonwhitespace character and be 8,000 characters or less. |
+| `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. The array can't contain more than one of each derived type of [Capabilities object](#capabilities-object). |
+| `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. The array can't contain more than 12 objects. |
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
 
 ### Declarative agent manifest object example
 
-The following JSON is an example of required fields within a declarative agent manifest.
+The following code shows an example of the required fields in a declarative agent manifest.
 
 #### [JSON](#tab/json)
 
@@ -98,7 +82,7 @@ namespace MyAgent {
 
 ### Capabilities object
 
-The capabilities object is the base type of objects in the `capabilities` property in the declarative agent manifest object. The possible object types are:
+The capabilities object is the base type for objects in the `capabilities` property of the declarative agent manifest object. The possible object types are:
 
 - [Web search object](#web-search-object)
 - [OneDrive and SharePoint object](#onedrive-and-sharepoint-object)
@@ -106,8 +90,7 @@ The capabilities object is the base type of objects in the `capabilities` proper
 - [Graphic art object](#graphic-art-object)
 - [Code interpreter object](#code-interpreter-object)
 
-> [!NOTE]
-> Declarative agents with any capabilities other than Web search are only available to users in tenants that allow metered usage or tenants that have a Microsoft 365 Copilot license.
+[!INCLUDE [declarative-agent-capabilities-license-requirement](includes/declarative-agent-capabilities-license-requirement.md)]
 
 #### Capabilities object example
 
@@ -162,31 +145,31 @@ The capabilities object is the base type of objects in the `capabilities` proper
 
 ```typescript
 namespace MyAgent {
-  op webSearch is AgentCapabilities.WebSearch<TSites = [
+  op webSearch is AgentCapabilities.WebSearch<Sites = [
     {
         url: "https://contoso.com"
     }
   ]>;
 
   op od_sp is AgentCapabilities.OneDriveAndSharePoint<
-    TItemsBySharePointIds = [
+    ItemsBySharePointIds = [
       {
-        site_id: "bc54a8cc-8c2e-4e62-99cf-660b3594bbfd";
-        web_id: "a5377427-f041-49b5-a2e9-0d58f4343939";
-        list_id: "78A4158C-D2E0-4708-A07D-EE751111E462";
-        unique_id: "304fcfdf-8842-434d-a56f-44a1e54fbed2";
+        siteId: "bc54a8cc-8c2e-4e62-99cf-660b3594bbfd";
+        webId: "a5377427-f041-49b5-a2e9-0d58f4343939";
+        listId: "78A4158C-D2E0-4708-A07D-EE751111E462";
+        itemId: "304fcfdf-8842-434d-a56f-44a1e54fbed2";
       }
     ],
-    TItemsByUrl = [
+    ItemsByUrl = [
       {
         url: "https://contoso.sharepoint.com/teams/admins/Documents/Folders1"
       }
     ]
   >;
 
-  op graphConnectors is AgentCapabilities.GraphConnectors<TConnections = [
+  op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
     {
-        connection_id: "jiraTickets"
+        connectionId: "jiraTickets"
     }
   ]>;
 
@@ -207,7 +190,7 @@ The web search object contains the following properties.
 | Property | Type                                 | Description |
 | -------- | ------------------------------------ | ----------- |
 | `name`   | String                               | Required. Must be set to `WebSearch`. |
-| `sites`  | Array of [Site object](#site-object) | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. The array MUST NOT contain more than four items. |
+| `sites`  | Array of [Site object](#site-object) | Optional. An array of objects that identify sites the agent is allowed to search. If you omit this property, the agent can search all sites. The array can't contain more than four items. |
 
 > [!NOTE]
 > For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
@@ -216,11 +199,11 @@ The web search object contains the following properties.
 
 Indicates a site that a declarative agent can search for content.
 
-The site object contains the following properties.
+The site object contains the following property.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `url`    | String | Required. An absolute URL to a site to be searched for content. The URL MUST NOT contain more than two path segments (for example, `https://contoso.com/projects/mark-8` is valid, `https://contoso.com/projects/mark-8/beta-program` isn't valid). Search results include data from additional path segments; however, scoping search to more than two path segments isn't supported. The URL MUST NOT contain any query parameters. |
+| `url`    | String | Required. An absolute URL to a site to be searched for content. The URL can't contain more than two path segments (for example, `https://contoso.com/projects/mark-8` is valid, but `https://contoso.com/projects/mark-8/beta-program` isn't valid). Search results include data from additional path segments; however, scoping search to more than two path segments isn't supported. The URL can't contain any query parameters. |
 
 #### OneDrive and SharePoint object
 
@@ -231,8 +214,8 @@ The OneDrive and SharePoint object contains the following properties.
 | Property                  | Type                                                                       | Description |
 | ------------------------- | -------------------------------------------------------------------------- | ----------- |
 | `name`                    | String                                                                     | Required. Must be set to `OneDriveAndSharePoint`. |
-| `items_by_sharepoint_ids` | Array of [Items by SharePoint IDs object](#items-by-sharepoint-ids-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If both the `items_by_sharepoint_ids` and the `items_by_url` properties are omitted, all OneDrive and Sharepoint sources in the organization are available to the declarative agent. |
-| `items_by_url`            | Array of [Items by URL object](#items-by-url-object)                       | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If both the `items_by_sharepoint_ids` and the `items_by_url` properties are omitted, all OneDrive and Sharepoint sources in the organization are available to the declarative agent. |
+| `items_by_sharepoint_ids` | Array of [Items by SharePoint IDs object](#items-by-sharepoint-ids-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If you omit both the `items_by_sharepoint_ids` and the `items_by_url` properties, the declarative agent can access all OneDrive and SharePoint sources in the organization. |
+| `items_by_url`            | Array of [Items by URL object](#items-by-url-object)                       | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If you omit both the `items_by_sharepoint_ids` and the `items_by_url` properties, the declarative agent can access all OneDrive and SharePoint sources in the organization. |
 
 For information about how to optimize SharePoint content for Copilot, see [Optimize SharePoint content retrieval](optimize-sharepoint-content.md).
 
@@ -252,7 +235,7 @@ The items by SharePoint IDs object contains the following properties.
 
 ##### Items by URL object
 
-The items by URL object contains the following properties.
+The items by URL object contains the following property.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
@@ -260,20 +243,20 @@ The items by URL object contains the following properties.
 
 #### Copilot connectors object
 
-Indicates that the declarative agent can search selected Microsoft 365 Copilot connectors for grounding information.
+Indicates that the declarative agent can search selected Copilot connectors for grounding information.
 
 The Copilot connectors object contains the following properties.
 
 | Property      | Type                                             | Description |
 | ------------- | ------------------------------------------------ | ----------- |
 | `name`        | String                                           | Required. Must be set to `GraphConnectors`. |
-| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Copilot connectors available to the declarative agent. If this property is omitted, all Copilot connectors in the organization are available to the declarative agent. |
+| `connections` | Array of [Connection object](#connection-object) | Optional. An array of objects that identify the Copilot connectors available to the declarative agent. If you omit this property, the declarative agent can access all Copilot connectors in the organization. |
 
 ##### Connection object
 
 Identifies a Copilot connector.
 
-The connection object contains the following properties.
+The connection object contains the following property.
 
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
@@ -286,32 +269,32 @@ The connection object contains the following properties.
 
 Indicates that the declarative agent can create images and art based on the text input from the user. For more information, see [Image generator](image-generator.md).
 
-The graphic art object contains the following properties.
+The graphic art object contains the following property.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `GraphicArt`. |
+| `name`   | String | Required. Set to `GraphicArt`. |
 
 #### Code interpreter object
 
 Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more. For more information, see [Code interpreter](code-interpreter.md).
 
-The code interpreter object contains the following properties.
+The code interpreter object contains the following property.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `CodeInterpreter`. |
+| `name`   | String | Required. Set to `CodeInterpreter`. |
 
 ### Conversation starters object
 
-The conversation starters object is optional in the manifest. It contains hints that are displayed to the user to demonstrate how they can get started using the declarative agent.
+The conversation starters object is optional in the manifest. It contains hints that the agent displays to the user to show how they can get started with the declarative agent.
 
 The conversation starter object contains the following properties:
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `text`   | String | Required. Localizable. A suggestion that the user can use to obtain the desired result from the declarative agent. It MUST contain at least one nonwhitespace character. |
-| `title`  | String | Optional. Localizable. A unique title for the conversation starter. It MUST contain at least one nonwhitespace character. |
+| `text`   | String | Required. Localizable. A suggestion that the user can use to get the desired result from the declarative agent. It must contain at least one nonwhitespace character. |
+| `title`  | String | Optional. Localizable. A unique title for the conversation starter. It must contain at least one nonwhitespace character. |
 
 #### Conversation starters object example
 
@@ -341,13 +324,13 @@ The conversation starter object contains the following properties:
 
 ### Actions object
 
-Actions are an optional JSON object in the manifest. It acts as a developer input and can be considered as plugins.
+Actions are an optional JSON object in the manifest. They act as developer input and can be considered as plugins.
 
 The action object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `id`     | String | Required. A unique identifier for the action. It MAY be a GUID. |
+| `id`     | String | Required. A unique identifier for the action. It can be a GUID. |
 | `file`   | String | Required. A path to the API plugin manifest for this action. |
 
 #### Actions object example
@@ -384,7 +367,7 @@ namespace PostsAPI {
 
 ## Declarative agent manifest example
 
-Here's an example of a declarative agent manifest file that uses most of the manifest properties described in this article.
+The following example shows a declarative agent manifest file that uses most of the manifest properties described in this article.
 
 :::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.2.json":::
 

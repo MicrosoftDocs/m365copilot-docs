@@ -1,0 +1,31 @@
+items:
+- name: Overview
+  href: overview.md
+- name: Copilot conversation
+  items:
+  - name: Copilot converstation
+    href: resources/copilotconversation.md
+  - name: Create
+    href: copilotroot-post-conversations.md
+  - name: Chat
+    href: copilotconversation-chat.md
+  - name: Chat over stream
+    href: copilotconversation-chatoverstream.md
+- name: Complex types
+  items:
+  - name: Copilot conversation request message parameter
+    href: resources/copilotconversationrequestmessageparameter.md
+  - name: Copilot context message
+    href: resources/copilotcontextmessage.md
+  - name: Copilot conversation location
+    href: resources/copilotconversationlocation.md
+  - name: Copilot contextual resources
+    href: resources/copilotcontextualresources.md
+  - name: Copilot file
+    href: resources/copilotfile.md
+  - name: Copilot web context
+    href: resources/copilotwebcontext.md
+  - name: Copilot conversation response message
+    href: resources/copilotconversationresponsemessage.md
+  - name: Copilot conversation attribution
+    href: resources/copilotconversationattribution.md
