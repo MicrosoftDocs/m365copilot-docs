@@ -56,7 +56,7 @@ Identifies a Copilot connector.
 |------|------|-------------|
 | `connectionId` | string | Required. The unique identifier of the Copilot connector. |
 | `additionalSearchTerms` | string | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
-| `itemsByExternalUrl` | Array of [ExternalUrlItem](#externalurlitem) | Optional. Specifies specific items by external URL in the Copilot connector that are available to the agent. |
+| `itemsByExternalUrl` | Array of [ExternalUrlItem](#externalurlitem) | Optional. Specifies items by external URL in the Copilot connector that are available to the agent. |
 | `itemsByExternalId` | Array of [ExternalIdItem](#externaliditem) | Optional. Specifies specific items by ID in the Copilot connector that are available to the agent. |
 | `itemsByPath` | Array of [PathItem](#pathitem) | Optional. Filters the items available to the agent by item paths (the `itemPath` semantic label on items). |
 | `itemsByContainerName` | Array of [ContainerNameItem](#containernameitem) | Optional. Filters the items available to the agent by container name (the `containerName` semantic label on items). |
