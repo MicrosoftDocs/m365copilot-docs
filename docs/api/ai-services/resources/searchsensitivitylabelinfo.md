@@ -4,14 +4,20 @@ description: Describes the information protection label that details how to prop
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 08/08/2025
+ms.date: 10/24/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
+zone_pivot_groups: graph-api-versions
 ---
 
 # searchSensitivityLabelInfo resource type
 
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
+
+:::zone pivot="graph-v1"
+:::zone-end
 
 Describes the information protection label that details how to properly apply a sensitivity label to information.
 
@@ -21,7 +27,6 @@ Describes the information protection label that details how to properly apply a 
 |:---------------------|:--------|:-------------------------------------------------------------------|
 | `color`              | String  | The color that the UI should display for the label, if configured. |
 | `displayName`        | String  | The display name for the sensitivity label                         |
-| `isEncrypted`        | Boolean | Indicates whether the sensitivity label enforces encryption.       |
 | `priority`           | Int32   | The priority in which the sensitivity label is applied.            |
 | `sensitivityLabelId` | String  | The ID of the sensitivity label.                                   |
 | `tooltip`            | String  | The tooltip that should be displayed for the label in a UI.        |
@@ -41,7 +46,6 @@ The following JSON representation shows the resource type.
   "displayName": "String",
   "tooltip": "String",
   "priority": "Integer",
-  "color": "String",
-  "isEncrypted": "Boolean"
+  "color": "String"
 }
 ```

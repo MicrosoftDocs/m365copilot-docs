@@ -1,10 +1,10 @@
 ---
 title: Share and manage agents built with the Copilot Studio lite experience
-description: Learn how to share and manage agents built with lite experience of Copilot Studio in Microsoft 365 Copilot.
+description: Learn how to share and manage agents built with the Copilot Studio lite experience in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/30/2025
+ms.date: 10/21/2025 
 ms.topic: conceptual
 ---
 
@@ -28,13 +28,14 @@ The following table highlights the key differences between publishing and sharin
 | **Discoverability** | Private; only visible to specified recipients. | Public (within the chosen scope); appears in the Agent Store and specified channels. |
 | **Governance** | Minimal governance; no approval flows. | Might require approval flows, versioning, and lifecycle management. |
 | **Permissions** | Specified users can interact with, but not manage or publish, the agent. | Owner/co-owners manage publishing, updates, and lifecycle. |
-| **Integration** | Not integrated; sharing is only availabile via direct access. | Can be integrated into Teams, Copilot, or other Microsoft 365 surfaces. |
+| **Integration** | Not integrated; sharing is only available via direct access. | Can be integrated into Teams, Copilot, or other Microsoft 365 surfaces. |
 
 ## Share an agent
 
-To share your agent, after you [build and test](copilot-studio-lite-build.md) it in the Copilot Studio lite experience, choose **Create**. A pop-up window displays a sharable link for your agent. By default, the link displayed only works for the person who created the agent. To share the agent with others, select **Change sharing settings** and specify who should have access.
+To share your agent, after you [build and test](copilot-studio-lite-build.md) it in the Copilot Studio lite experience, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
- :::image type="content" source="assets/images/share-agent-change-settings.png" alt-text="A screenshot of the initial pop-up window for sharing an agent":::
+> [!NOTE]
+> Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
 
 The following table describes the available sharing options.
 
@@ -55,7 +56,7 @@ Copilot Studio provides an option to download a ZIP package for manual deploymen
 
 To deploy an agent manually:
 
-1. In the lite experience of Copilot Studio, open the left navigation pane and select **Create agent**.
+1. In the Copilot Studio lite experience, open the left navigation pane and select **Create agent**.
 1. At the top of the central pane, choose **My agents**.
 :::image type="content" source="assets/images/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
 1. Highlight the agent you want to download and choose the ellipses.
@@ -98,7 +99,7 @@ Or:*
 - Select **Create agents** in the left pane and then select the **My agents** tab.
 - On the **My agents** tab, select the **More options** ellipses (**...**) next to the name of the agent you want to manage.
 
-:::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of the lite experience in Copilot Studio for Microsoft 365 Copilot.":::
+:::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of the Copilot Studio lite experience in Microsoft 365 Copilot.":::
 
 > [!NOTE]
 > Only the agents you've created show in the **My agents** list. Shared agents from other users aren't listed.
@@ -137,15 +138,12 @@ The Copilot Studio lite experience doesn't support transferring ownership of dec
 
 When sharing an agent and its knowledge sources, you might encounter the errors listed in the following table.
 
-| Error message        | Description |
-| -------------------- | ----------- |
-| Something went wrong. | An internal service error message. Contact support if this error continues to occur. |
-| Couldn't share.       | Insufficient privileges to update the sharing permissions on certain files. The error lists the files that were unable to be shared. The agent owner should go into SharePoint to try updating these permissions manually. For more information, see: <ul><li>[Share a document](https://support.microsoft.com/office/share-a-document-using-sharepoint-or-onedrive-807de6cf-1ece-41b9-a2b3-250d9a48f1e8) to learn how to share files.</li><li>[Sharing errors in SharePoint and OneDrive](/sharepoint/sharepoint-onedrive-error-message) for an error code reference.</li></ul> |
-| We are unable to create this agent due to an error. | Occurs when the system is having trouble publishing an agent. Please try again in a few minutes. |
-| This agent includes at least one file with an unsupported sensitivity label. Please check your uploaded files and remove them. | Occurs when you upload a file with a sensitivity label that isn't supported. Check the shield icon next to your uploaded files and remove the ones that have a red error icon. For more information, see [Unsupported sensitivity label scenarios](/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge#unsupported-sensitivity-label-scenarios).
-|Your agent can't be updated because it may encourage harmful actions. | Occurs when the system detects harmful content. Review your agent's name, description, and instructions and remove any harmful content, and try to update your agent again. For more information. see [Responsible AI validation](rai-validation.md). |
-
-If sharing an agent fails, users who don't have access to the folder and files won't receive responses generated from those knowledge sources. Checking the box shares the underlying knowledge sources via SharePoint. Files can only be shared with validated individuals or security groups in your directory.
+| Issue        | Description |
+| -------------- | ----------- |
+| Something went wrong | An internal service error has occurred. Contact support if this error continues to occur. |
+| Couldn't share       | The user has insufficient privileges to update the sharing permissions on certain files. The error lists the files that were unable to be shared. The agent owner should go into SharePoint to try updating these permissions manually. For more information, see: <ul><li>[Share a document](https://support.microsoft.com/office/share-a-document-using-sharepoint-or-onedrive-807de6cf-1ece-41b9-a2b3-250d9a48f1e8) to learn how to share files.</li><li>[Sharing errors in SharePoint and OneDrive](/sharepoint/sharepoint-onedrive-error-message) for an error code reference.</li></ul> |
+| Agent sharing failed, knowledge access not granted | If agent sharing fails, the underlying knowledge sources might not be shared with the intended users or groups. As a result, users without access to those files won’t receive generated responses based on them. To resolve this, ensure all individuals and groups you're sharing your agent with exist in your organization, then reshare the knowledge sources by selecting them in the sharing settings to grant user access to them. |
+| Can no longer update agent | This occurs when your agent’s current sharing option is no longer compliant with new admin policies. Agent owners must change the sharing setting to a compliant option before updating their agent further. A banner guides you to make this change. |
 
 ## Related content
 

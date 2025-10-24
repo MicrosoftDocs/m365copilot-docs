@@ -80,14 +80,14 @@ using TypeSpec.M365.Copilot.Agents;
   Always provide clear explanations of your findings and methodology.
 """)
 namespace MyAgent {
-  op webSearch is AgentCapabilities.WebSearch<TSites = [
+  op webSearch is AgentCapabilities.WebSearch<Sites = [
     {
       url: "https://learn.microsoft.com"
     }
   ]>;
 
   op oneDriveSearch is AgentCapabilities.OneDriveAndSharePoint<
-    TItemsByUrl = [
+   ItemsByUrl = [
       {
         url: "https://contoso.sharepoint.com/sites/projects"
       }
