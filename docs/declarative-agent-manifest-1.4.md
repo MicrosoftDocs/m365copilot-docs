@@ -189,7 +189,7 @@ The capabilities object is the base type for objects in the `capabilities` prope
 
 ```typescript
 namespace MyAgent {
-  op webSearch is AgentCapabilities.WebSearch<TSites = [
+  op webSearch is AgentCapabilities.WebSearch<Sites = [
     {
         url: "https://contoso.com"
     }

@@ -40,9 +40,9 @@ op copilotConnectors is AgentCapabilities.CopilotConnectors;
 
 ### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
-| `TConnections` | Array of [Connection](#connection) | Optional. An array of objects that identify the Copilot connectors available to the declarative agent. If this property is omitted, all Copilot connectors in the organization are available to the declarative agent. |
+| Name          | Type                               | Description |
+|---------------|------------------------------------|-------------|
+| `Connections` | Array of [Connection](#connection) | Optional. An array of objects that identify the Copilot connectors available to the declarative agent. If this property is omitted, all Copilot connectors in the organization are available to the declarative agent. |
 
 ### Models
 
@@ -52,45 +52,15 @@ Identifies a Copilot connector.
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
-| `connectionId` | string | Required. The unique identifier of the Copilot connector. |
-| `additionalSearchTerms` | string | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
-| `itemsByExternalUrl` | Array of [ExternalUrlItem](#externalurlitem) | Optional. Specifies items by external URL in the Copilot connector that are available to the agent. |
-| `itemsByExternalId` | Array of [ExternalIdItem](#externaliditem) | Optional. Specifies specific items by ID in the Copilot connector that are available to the agent. |
-| `itemsByPath` | Array of [PathItem](#pathitem) | Optional. Filters the items available to the agent by item paths (the `itemPath` semantic label on items). |
-| `itemsByContainerName` | Array of [ContainerNameItem](#containernameitem) | Optional. Filters the items available to the agent by container name (the `containerName` semantic label on items). |
-| `itemsByContainerUrl` | Array of [ContainerUrlItem](#containerurlitem) | Optional. Filters the items available to the agent by container URL (the `containerUrl` semantic label on items). |
-
-#### ExternalUrlItem
-
-Identifies an external item by its URL.
-
-##### Properties
-
-| Name | Type | Description |
-|------|------|-------------|
-| `url` | string | Required. The URL of the external item. |
-
-#### ExternalIdItem
-
-Identifies an external item by its ID.
-
-##### Properties
-
-| Name | Type | Description |
-|------|------|-------------|
-| `externalId` | string | Required. The unique identifier of the external item. |
-
-#### PathItem
-
-Identifies an external item by its path.
-
-##### Properties
-
-| Name | Type | Description |
-|------|------|-------------|
-| `path` | string | Required. The path (`itemPath` semantic label value) of the external item. |
+| Name                    | Type                                             | Description |
+|-------------------------|--------------------------------------------------|-------------|
+| `connectionId`          | string                                           | Required. The unique identifier of the Copilot connector. |
+| `additionalSearchTerms` | string                                           | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
+| `itemsByContainerName`  | Array of [ContainerNameItem](#containernameitem) | Optional. Filters the items available to the agent by container name (the `containerName` semantic label on items). |
+| `itemsByContainerUrl`   | Array of [ContainerUrlItem](#containerurlitem)   | Optional. Filters the items available to the agent by container URL (the `containerUrl` semantic label on items). |
+| `itemsByExternalId`     | Array of [ExternalIdItem](#externaliditem)       | Optional. Specifies specific items by ID in the Copilot connector that are available to the agent. |
+| `itemsByExternalUrl`    | Array of [ExternalUrlItem](#externalurlitem)     | Optional. Specifies items by external URL in the Copilot connector that are available to the agent. |
+| `itemsByPath`           | Array of [PathItem](#pathitem)                   | Optional. Filters the items available to the agent by item paths (the `itemPath` semantic label on items). |
 
 #### ContainerNameItem
 
@@ -98,8 +68,8 @@ Identifies a container by its name.
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name            | Type   | Description |
+|-----------------|--------|-------------|
 | `containerName` | string | Required. The name of the container (`containerName` semantic label value) of the external item. |
 
 #### ContainerUrlItem
@@ -108,9 +78,39 @@ Identifies a container by its URL.
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name           | Type   | Description |
+|----------------|--------|-------------|
 | `containerUrl` | string | Required. The URL of the container (`containerUrl` semantic label value) of the external item. |
+
+#### ExternalIdItem
+
+Identifies an external item by its ID.
+
+##### Properties
+
+| Name         | Type   | Description |
+|--------------|--------|-------------|
+| `externalId` | string | Required. The unique identifier of the external item. |
+
+#### ExternalUrlItem
+
+Identifies an external item by its URL.
+
+##### Properties
+
+| Name  | Type   | Description |
+|-------|--------|-------------|
+| `url` | string | Required. The URL of the external item. |
+
+#### PathItem
+
+Identifies an external item by its path.
+
+##### Properties
+
+| Name   | Type   | Description |
+|--------|--------|-------------|
+| `path` | string | Required. The path (`itemPath` semantic label value) of the external item. |
 
 ### Example
 
@@ -119,7 +119,7 @@ Identifies a container by its URL.
 op copilotConnectors is AgentCapabilities.CopilotConnectors;
 
 // Specific connectors
-op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
+op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
   {
     connectionId: "ticketsconnector123";
   },
@@ -129,7 +129,7 @@ op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
 ]>;
 
 // Specific connector with KQL filtering
-op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
+op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
   {
     connectionId: "ticketsconnector123";
     additionalSearchTerms: "CreatedDate>=2024-01-01 AND Priority:High";
@@ -137,7 +137,7 @@ op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
 ]>;
 
 // Multiple connectors with different filtering approaches
-op copilotConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
+op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
   {
     connectionId: "ticketsconnector456";
     itemsByPath: [
@@ -178,9 +178,9 @@ op dataverse is AgentCapabilities.Dataverse;
 
 ### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
-| `TKnowledgeSources` | Array of [DataverseKnowledgeSource](#dataverseknowledgesource) | Optional. An array of objects that identify the Dataverse knowledge sources available to the declarative agent. If this property is omitted, all accessible Dataverse environments are available to the declarative agent. |
+| Name               | Type                                                           | Description |
+|--------------------|----------------------------------------------------------------|-------------|
+| `KnowledgeSources` | Array of [DataverseKnowledgeSource](#dataverseknowledgesource) | Optional. An array of objects that identify the Dataverse knowledge sources available to the declarative agent. If this property is omitted, all accessible Dataverse environments are available to the declarative agent. |
 
 ### Models
 
@@ -190,11 +190,11 @@ Represents a Dataverse knowledge source.
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
-| `hostName` | string | Required. The hostname of the Dataverse environment. |
-| `skill` | string | Optional. The skill identifier for the knowledge source. |
-| `tables` | Array of [DataverseTable](#dataversetable) | Optional. An array of tables that the declarative agent can access. If this property is omitted, all accessible tables in the environment are available to the declarative agent. |
+| Name       | Type                                       | Description |
+|------------|--------------------------------------------|-------------|
+| `hostName` | string                                     | Required. The hostname of the Dataverse environment. |
+| `skill`    | string                                     | Optional. The skill identifier for the knowledge source. |
+| `tables`   | Array of [DataverseTable](#dataversetable) | Optional. An array of tables that the declarative agent can access. If this property is omitted, all accessible tables in the environment are available to the declarative agent. |
 
 #### DataverseTable
 
@@ -202,8 +202,8 @@ Represents a Dataverse table.
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name        | Type   | Description                              |
+|-------------|--------|------------------------------------------|
 | `tableName` | string | Required. The logical name of the table. |
 
 ### Example
@@ -213,14 +213,14 @@ Represents a Dataverse table.
 op dataverse is AgentCapabilities.Dataverse;
 
 // Dataverse with specific environment
-op dataverse is AgentCapabilities.Dataverse<TKnowledgeSources = [
+op dataverse is AgentCapabilities.Dataverse<KnowledgeSources = [
   {
     hostName: "contoso.crm.dynamics.com";
   }
 ]>;
 
 // Dataverse with specific tables
-op dataverse is AgentCapabilities.Dataverse<TKnowledgeSources = [
+op dataverse is AgentCapabilities.Dataverse<KnowledgeSources = [
   {
     hostName: "contoso.crm.dynamics.com";
     tables: [
@@ -232,7 +232,7 @@ op dataverse is AgentCapabilities.Dataverse<TKnowledgeSources = [
 ]>;
 
 // Dataverse with skill and tables
-op dataverse is AgentCapabilities.Dataverse<TKnowledgeSources = [
+op dataverse is AgentCapabilities.Dataverse<KnowledgeSources = [
   {
     hostName: "contoso.crm.dynamics.com";
     skill: "sales-assistant";
@@ -254,10 +254,10 @@ op email is AgentCapabilities.Email;
 
 ### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
-| `TFolders` | Array of [Folder](#folder) | Optional. An array of folders objects. |
-| `TSharedMailbox` | string | Optional. The SMTP address of a shared mailbox. |
+| Name            | Type                       | Description                                     |
+|-----------------|----------------------------|-------------------------------------------------|
+| `Folders`       | Array of [Folder](#folder) | Optional. An array of folders objects.          |
+| `SharedMailbox` | string                     | Optional. The SMTP address of a shared mailbox. |
 
 ### Models
 
@@ -265,8 +265,8 @@ op email is AgentCapabilities.Email;
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name       | Type   | Description                                                                   |
+|------------|--------|-------------------------------------------------------------------------------|
 | `folderId` | string | Required. The well-known folder name or folder ID of the folder to reference. |
 
 ### Example
@@ -277,7 +277,7 @@ op email is AgentCapabilities.Email;
 
 // Email search with specific well-known folders
 op email is AgentCapabilities.Email<
-  TFolders = [
+  Folders = [
     { folderId: "Inbox" },
     { folderId: "SentItems" },
     { folderId: "Archive" }
@@ -286,15 +286,15 @@ op email is AgentCapabilities.Email<
 
 // Email search with shared mailbox access
 op email is AgentCapabilities.Email<
-  TSharedMailbox = "support@contoso.com"
+  SharedMailbox = "support@contoso.com"
 >;
 
 // Email search with custom folders and shared mailbox
 op email is AgentCapabilities.Email<
-  TFolders = [
+  Folders = [
     { folderId: "Inbox" }
   ],
-  TSharedMailbox = "legal@contoso.com"
+  SharedMailbox = "legal@contoso.com"
 >;
 ```
 
@@ -336,10 +336,10 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint;
 
 ### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
-| `TItemsBySharePointIds` | Array of [SharePointIds](#sharepointids) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If both the `TItemsBySharePointIds` and the `TItemsByUrl` parameters are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
-| `TItemsByUrl` | Array of [SharePointUrl](#sharepointurl) | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If both the `TItemsBySharePointIds` and the `TItemsByUrl` parameters are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
+| Name                   | Type                                     | Description |
+|------------------------|------------------------------------------|-------------|
+| `ItemsBySharePointIds` | Array of [SharePointIds](#sharepointids) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If both the `ItemsBySharePointIds` and the `ItemsByUrl` parameters are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
+| `ItemsByUrl`           | Array of [SharePointUrl](#sharepointurl) | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If both the `ItemsBySharePointIds` and the `ItemsByUrl` parameters are omitted, all OneDrive and SharePoint sources in the organization are available to the declarative agent. |
 
 ### Models
 
@@ -349,12 +349,12 @@ Contains one or more object identifiers that identify a SharePoint or OneDrive r
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
-| `siteId` | string | Optional. A unique GUID identifier for a SharePoint or OneDrive site. |
-| `webId` | string | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site. |
-| `listId` | string | Optional. A unique GUID identifier for a document library within a SharePoint site. |
+| Name     | Type   | Description                                                                                                                 |
+|----------|--------|-----------------------------------------------------------------------------------------------------------------------------|
 | `itemId` | string | Optional. A unique GUID identifier used to scope a folder or file in the document library specified by the listId property. |
+| `listId` | string | Optional. A unique GUID identifier for a document library within a SharePoint site.                                         |
+| `siteId` | string | Optional. A unique GUID identifier for a SharePoint or OneDrive site.                                                       |
+| `webId`  | string | Optional. A unique GUID identifier for a specific web within a SharePoint or OneDrive site.                                 |
 
 #### SharePointUrl
 
@@ -362,8 +362,8 @@ Represents the URL of a SharePoint or OneDrive resource.
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name  | Type   | Description                                                     |
+|-------|--------|-----------------------------------------------------------------|
 | `url` | string | Required. An absolute URL to a SharePoint or OneDrive resource. |
 
 ### Example
@@ -374,8 +374,8 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint;
 
 // URL-based filtering for specific sites
 op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
-  TItemsBySharePointIds = [],
-  TItemsByUrl = [
+  ItemsBySharePointIds = [],
+  ItemsByUrl = [
     { url: "https://contoso.sharepoint.com/sites/Engineering" },
     { url: "https://contoso.sharepoint.com/sites/ProductManagement" },
     { url: "https://contoso-my.sharepoint.com/personal/john_contoso_com" }
@@ -384,7 +384,7 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
 
 // ID-based filtering with comprehensive site and document library scoping
 op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
-  TItemsBySharePointIds = [
+  ItemsBySharePointIds = [
     {
       siteId: "12345678-1234-1234-1234-123456789012";
       searchAssociatedSites: true;
@@ -401,7 +401,7 @@ op oneDriveAndSharePoint is AgentCapabilities.OneDriveAndSharePoint<
       itemId: "12121212-3434-5656-7878-909090909090";
     }
   ],
-  TItemsByUrl = [
+  ItemsByUrl = [
     { url: "https://contoso.sharepoint.com/sites/Engineering" }
   ]
 >;
@@ -426,16 +426,16 @@ op people is AgentCapabilities.People;
 Indicates that the declarative agent can use task-specific models.
 
 ```typescript
-op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
+op scenarioModels is AgentCapabilities.ScenarioModels<ModelsById = [
   { id: "model-id" }
 ]>;
 ```
 
 ### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
-| `TModelsById` | Array of [ScenarioModel](#scenariomodel) | Required. An array of objects that identifies the task-specific models available to the declarative agent. |
+| Name         | Type                                     | Description |
+|--------------|------------------------------------------|-------------|
+| `ModelsById` | Array of [ScenarioModel](#scenariomodel) | Required. An array of objects that identifies the task-specific models available to the declarative agent. |
 
 ### Models
 
@@ -445,20 +445,20 @@ Identifies a task-specific model.
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name | Type   | Description                                    |
+|------|--------|------------------------------------------------|
 | `id` | string | Required. The unique identifier for the model. |
 
 ### Example
 
 ```typescript
 // Single specialized model for analytics
-op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
+op scenarioModels is AgentCapabilities.ScenarioModels<ModelsById = [
   { id: "financial-forecasting-model-v3" }
 ]>;
 
 // Multiple models for different business scenarios
-op scenarioModels is AgentCapabilities.ScenarioModels<TModelsById = [
+op scenarioModels is AgentCapabilities.ScenarioModels<ModelsById = [
   { id: "sentiment-analysis-model" },
   { id: "document-classification-model" },
   { id: "risk-assessment-model" }
@@ -475,9 +475,9 @@ op teamsMessages is AgentCapabilities.TeamsMessages;
 
 ### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
-| `TUrls` | Array of [TeamsMessagesUrl](#teamsmessagesurl) | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
+| Name   | Type                                           | Description |
+|--------|------------------------------------------------|-------------|
+| `Urls` | Array of [TeamsMessagesUrl](#teamsmessagesurl) | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
 
 ### Models
 
@@ -487,8 +487,8 @@ Identifies a Teams channel, team, or meeting chat.
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name  | Type   | Description                                                                                                       |
+|-------|--------|-------------------------------------------------------------------------------------------------------------------|
 | `url` | string | Required. A well-formatted Teams URL that links to either a Teams channel, meeting chat, group chat, or 1:1 chat. |
 
 ### Example
@@ -498,14 +498,14 @@ Identifies a Teams channel, team, or meeting chat.
 op teamsMessages is AgentCapabilities.TeamsMessages;
 
 // Teams messages limited to specific channels and chats
-op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
+op teamsMessages is AgentCapabilities.TeamsMessages<Urls = [
   { url: "https://teams.microsoft.com/l/channel/19%3a123abc...%40thread.skype/General?groupId=12345&tenantId=67890" },
   { url: "https://teams.microsoft.com/l/chat/19%3ameeting_abc123...%40thread.v2/0?context=%7b%22Tid%22%3a%22...%22%7d" },
   { url: "https://teams.microsoft.com/l/channel/19%3a456def...%40thread.tacv2/Engineering?groupId=54321&tenantId=09876" }
 ]>;
 
 // Teams messages for project-specific channels
-op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
+op teamsMessages is AgentCapabilities.TeamsMessages<Urls = [
   { url: "https://teams.microsoft.com/l/channel/19%3aprojectA...%40thread.tacv2/Development?groupId=11111&tenantId=22222" },
   { url: "https://teams.microsoft.com/l/channel/19%3aprojectA...%40thread.tacv2/Testing?groupId=11111&tenantId=22222" },
   { url: "https://teams.microsoft.com/l/chat/19%3astandup_daily...%40thread.v2/0?context=%7b%22Tid%22%3a%22...%22%7d" }
@@ -522,9 +522,9 @@ op webSearch is AgentCapabilities.WebSearch;
 
 ### Parameters
 
-| Name | Type | Description |
-|------|------|-------------|
-| `TSites` | Array of [SiteUrl](#siteurl) | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. |
+| Name    | Type                         | Description |
+|---------|------------------------------|-------------|
+| `Sites` | Array of [SiteUrl](#siteurl) | Optional. An array of objects that identify sites the agent is allowed to search. If this property is omitted, all the agent is allowed to search all sites. |
 
 ### Models
 
@@ -534,8 +534,8 @@ Indicates a site that a declarative agent can search for content.
 
 ##### Properties
 
-| Name | Type | Description |
-|------|------|-------------|
+| Name  | Type   | Description                                                     |
+|-------|--------|-----------------------------------------------------------------|
 | `url` | string | Required. An absolute URL to a site to be searched for content. |
 
 ### Example
@@ -545,7 +545,7 @@ Indicates a site that a declarative agent can search for content.
 op webSearch is AgentCapabilities.WebSearch;
 
 // Web search limited to specific documentation sites
-op webSearch is AgentCapabilities.WebSearch<TSites = [
+op webSearch is AgentCapabilities.WebSearch<Sites = [
   {
     url: "https://learn.microsoft.com";
   },
@@ -558,7 +558,7 @@ op webSearch is AgentCapabilities.WebSearch<TSites = [
 ]>;
 
 // Web search for company-specific resources
-op webSearch is AgentCapabilities.WebSearch<TSites = [
+op webSearch is AgentCapabilities.WebSearch<Sites = [
   {
     url: "https://company.com/knowledge-base";
   },
