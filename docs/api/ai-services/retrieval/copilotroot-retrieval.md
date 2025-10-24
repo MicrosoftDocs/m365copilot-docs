@@ -1,21 +1,24 @@
 ---
 title: Use the Microsoft 365 Copilot Retrieval API to Retrieve Grounding Data
-description: Use the Retrieval API to ground data from SharePoint and Microsoft 365 Copilot connectors in your generative AI solutions.
+description: Use the Retrieval API to ground data from SharePoint, OneDrive, and Microsoft 365 Copilot connectors in your generative AI solutions.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 08/18/2025
+ms.date: 10/24/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
+zone_pivot_groups: graph-api-versions
 ---
 
 <!-- markdownlint-disable MD024 -->
 
 # Retrieve grounding data
 
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
-The Microsoft 365 Copilot Retrieval API allows for the retrieval of relevant text extracts from SharePoint and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Use the Retrieval API to ground your generative AI solutions with Microsoft 365 data while optimizing for context recall.
+The Microsoft 365 Copilot Retrieval API allows for the retrieval of relevant text extracts from SharePoint, OneDrive, and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Use the Retrieval API to ground your generative AI solutions with Microsoft 365 data while optimizing for context recall.
 
 ## Permissions
 
@@ -31,9 +34,21 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
+:::zone pivot="graph-preview"
+
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
 ```
+
+:::zone-end
+
+:::zone pivot="graph-v1"
+
+```http
+POST https://graph.microsoft.com/v1.0/copilot/retrieval
+```
+
+:::zone-end
 
 ## Request headers
 
@@ -71,6 +86,8 @@ The following example shows a request to retrieve data from SharePoint. The requ
 
 The following example shows the request.
 
+:::zone pivot="graph-preview"
+
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
@@ -86,6 +103,27 @@ Content-Type: application/json
 }
 ```
 
+:::zone-end
+
+:::zone pivot="graph-v1"
+
+```http
+POST https://graph.microsoft.com/v1.0/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "dataSource": "sharePoint",
+  "resourceMetadata": [
+    "title",
+    "author"
+  ],
+  "maximumNumberOfResults": "10"
+}
+```
+
+:::zone-end
+
 #### Response
 
 The following example shows the response.
@@ -100,10 +138,12 @@ Content-Type: application/json
       "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
       "extracts": [
         {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+          "relevanceScore": 0.8374363553387588
         },
         {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
+          "text": "You will need to sign in with 2FA to access the corporate VPN.",
+          "relevanceScore": 0.7465472642498679
         }
       ],
       "resourceType": "listItem",
@@ -116,18 +156,19 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     },
     {
       "webUrl": "https://contoso.sharepoint.com/sites/HR/Corporate_VPN.docx",
       "extracts": [
         {
-          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials.",
+          "relevanceScore": 0.7588038775683956
         },
         {
-          "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN."
+          "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN.",
+          "relevanceScore": 0.6696818957446697
         }
       ],
       "resourceType": "listItem",
@@ -140,8 +181,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     }
   ]
@@ -155,6 +195,8 @@ The following example shows a request to retrieve data from Copilot connectors. 
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
@@ -171,6 +213,27 @@ Content-Type: application/json
 }
 ```
 
+:::zone-end
+
+:::zone pivot="graph-v1"
+
+```http
+POST https://graph.microsoft.com/v1.0/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "dataSource": "externalItem",
+  "resourceMetadata": [
+    "title",
+    "author"
+  ],
+  "maximumNumberOfResults": "10"
+}
+```
+
+:::zone-end
+
 #### Response
 
 The following example shows the response.
@@ -185,10 +248,12 @@ Content-Type: application/json
       "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
       "extracts": [
         {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+          "relevanceScore": 0.874
         },
         {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
+          "text": "You will need to sign in with 2FA to access the corporate VPN.",
+          "relevanceScore": 0.801
         }
       ],
       "resourceType": "externalItem",
@@ -201,10 +266,11 @@ Content-Type: application/json
       "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
       "extracts": [
         {
-          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials.",
         },
         {
-          "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
+          "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN.",
+          "relevanceScore": 0.655
         }
       ],
       "resourceType": "externalItem",
@@ -223,6 +289,8 @@ The following example shows how to [batch requests to the Retrieval API](/graph/
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/$batch
@@ -259,6 +327,47 @@ Content-Type: application/json
 }
 ```
 
+:::zone-end
+
+:::zone pivot="graph-v1"
+
+```http
+POST https://graph.microsoft.com/v1.0/$batch
+Accept: application/json
+Content-Type: application/json
+
+{
+  "requests": [
+    {
+      "id": "1",
+      "method": "POST",
+      "url": "/copilot/retrieval",
+      "body": {
+        "queryString": "How to setup corporate VPN?",
+        "dataSource": "sharePoint"
+      },
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "id": "2",
+      "method": "POST",
+      "url": "/copilot/retrieval",
+      "body": {
+        "queryString": "How to setup corporate VPN?",
+        "dataSource": "externalItem"
+      },
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  ]
+}
+```
+
+:::zone-end
+
 #### Response
 
 The following example shows the response.
@@ -281,10 +390,12 @@ Content-Type: application/json
             "webUrl": "https://contoso.sharepoint.com/sites/HR/VPNAccess.docx",
             "extracts": [
               {
-                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+                "relevanceScore": 0.8374363553387588
               },
               {
-                "text": "You will need to sign in with 2FA to access the corporate VPN."
+                "text": "You will need to sign in with 2FA to access the corporate VPN.",
+                "relevanceScore": 0.7465472642498679
               }
             ],
             "resourceType": "listItem",
@@ -294,18 +405,19 @@ Content-Type: application/json
               "displayName": "Confidential\\Any User (No Protection)",
               "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
               "priority": 4,
-              "color": "#FF8C00",
-              "isEncrypted": false
+              "color": "#FF8C00"
             }
           },
           {
             "webUrl": "https://contoso.sharepoint.com/sites/HR/Corporate_VPN.docx",
             "extracts": [
               {
-                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials.",
+                "relevanceScore": 0.7588038775683956
               },
               {
-                "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN."
+                "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN.",
+                "relevanceScore": 0.6696818957446697
               }
             ],
             "resourceType": "listItem",
@@ -315,8 +427,7 @@ Content-Type: application/json
               "displayName": "Confidential\\Any User (No Protection)",
               "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
               "priority": 4,
-              "color": "#FF8C00",
-              "isEncrypted": false
+              "color": "#FF8C00"
             }
           }
         ]
@@ -334,10 +445,12 @@ Content-Type: application/json
             "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
             "extracts": [
               {
-                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+                "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+                "relevanceScore": 0.874
               },
               {
-                "text": "You will need to sign in with 2FA to access the corporate VPN."
+                "text": "You will need to sign in with 2FA to access the corporate VPN.",
+                "relevanceScore": 0.801
               }
             ],
             "resourceType": "externalItem",
@@ -347,10 +460,12 @@ Content-Type: application/json
             "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
             "extracts": [
               {
-                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+                "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials.",
+                "relevanceScore": 0.772
               },
               {
-                "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
+                "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN.",
+                "relevanceScore": 0.655
               }
             ],
             "resourceType": "externalItem",
@@ -371,6 +486,8 @@ The following example shows a request to retrieve data from a specific Sharepoin
 
 The following example shows the request.
 
+:::zone pivot="graph-preview"
+
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
 Content-Type: application/json
@@ -387,6 +504,28 @@ Content-Type: application/json
 }
 ```
 
+:::zone-end
+
+:::zone pivot="graph-v1"
+
+```http
+POST https://graph.microsoft.com/v1.0/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "dataSource": "sharePoint",
+  "filterExpression": "path:\"https://contoso.sharepoint.com/sites/HR1/\"",
+  "resourceMetadata": [
+    "title",
+    "author"
+  ],
+  "maximumNumberOfResults": "4"
+}
+```
+
+:::zone-end
+
 #### Response
 
 The following example shows the response.
@@ -401,10 +540,12 @@ Content-Type: application/json
       "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNAccess.docx",
       "extracts": [
         {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+          "relevanceScore": 0.8374363553387588
         },
         {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
+          "text": "You will need to sign in with 2FA to access the corporate VPN.",
+          "relevanceScore": 0.7465472642498679
         }
       ],
       "resourceType": "listItem",
@@ -417,18 +558,19 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     },
     {
       "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
       "extracts": [
         {
-          "text": "Have your VPN username and password ready prior to starting the configuration."
+          "text": "Have your VPN username and password ready prior to starting the configuration.",
+          "relevanceScore": 0.6465472642498679
         },
         {
-          "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources."
+          "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources.",
+          "relevanceScore": 0.7374363553387588
         }
       ],
       "resourceType": "listItem",
@@ -441,8 +583,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     }
   ]
@@ -456,6 +597,8 @@ The following example shows a request to retrieve data from multiple Sharepoint 
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
@@ -473,6 +616,28 @@ Content-Type: application/json
 }
 ```
 
+:::zone-end
+
+:::zone pivot="graph-v1"
+
+```http
+POST https://graph.microsoft.com/v1.0/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "dataSource": "sharePoint",
+  "filterExpression": "path:\"https://contoso.sharepoint.com/sites/HR1/\" OR path:\"https://contoso.sharepoint.com/sites/HR2\"",
+  "resourceMetadata": [
+    "title",
+    "author"
+  ],
+  "maximumNumberOfResults": "4"
+}
+```
+
+:::zone-end
+
 #### Response
 
 The following example shows the response.
@@ -487,10 +652,12 @@ Content-Type: application/json
       "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNAccess.docx",
       "extracts": [
         {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+          "relevanceScore": 0.8374363553387588
         },
         {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
+          "text": "You will need to sign in with 2FA to access the corporate VPN.",
+          "relevanceScore": 0.7465472642498679
         }
       ],
       "resourceType": "listItem",
@@ -503,15 +670,15 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     },
     {
       "webUrl": "https://contoso.sharepoint.com/sites/HR2/VPNConfig.docx",
       "extracts": [
         {
-          "text": "Have your VPN username and password ready prior to starting the configuration."
+          "text": "Have your VPN username and password ready prior to starting the configuration.",
+          "relevanceScore": 0.6465472642498679
         }
       ],
       "resourceType": "listItem",
@@ -524,18 +691,19 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     },
     {
       "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNInstructions.docx",
       "extracts": [
         {
-          "text": "Have your VPN username and password ready prior to starting the configuration."
+          "text": "Have your VPN username and password ready prior to starting the configuration.",
+          "relevanceScore": 0.6465472642498679
         },
         {
-          "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources."
+          "text": "There are multiple VPN options available. Make sure to select the option that grants you access to your desired resources.",
+          "relevanceScore": 0.7374363553387588
         }
       ],
       "resourceType": "listItem",
@@ -548,8 +716,7 @@ Content-Type: application/json
         "displayName": "Confidential\\Any User (No Protection)",
         "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
         "priority": 4,
-        "color": "#FF8C00",
-        "isEncrypted": false
+        "color": "#FF8C00"
       }
     }
   ]
@@ -563,6 +730,8 @@ The following example shows a request that restricts Copilot connectors retrieva
 #### Request
 
 The following example shows the request.
+
+:::zone pivot="graph-preview"
 
 ```http
 POST https://graph.microsoft.com/beta/copilot/retrieval
@@ -591,6 +760,39 @@ Content-Type: application/json
 }
 ```
 
+:::zone-end
+
+:::zone pivot="graph-v1"
+
+```http
+POST https://graph.microsoft.com/v1.0/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "dataSource": "externalItem",
+  "dataSourceConfiguration": {
+    "externalItem": {
+      "connections": [
+        {
+          "connectionId": "ContosoITServiceNowKB"
+        },
+        {
+          "connectionId": "ContosoHRServiceNowKB"
+        }
+      ]
+    }
+  },
+  "resourceMetadata": [
+    "title",
+    "author"
+  ],
+  "maximumNumberOfResults": "10"
+}
+```
+
+:::zone-end
+
 #### Response
 
 The following example shows the response.
@@ -605,10 +807,12 @@ Content-Type: application/json
       "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=2gge30c",
       "extracts": [
         {
-          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option."
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+          "relevanceScore": 0.874
         },
         {
-          "text": "You will need to sign in with 2FA to access the corporate VPN."
+          "text": "You will need to sign in with 2FA to access the corporate VPN.",
+          "relevanceScore": 0.801
         }
       ],
       "resourceType": "externalItem",
@@ -621,10 +825,12 @@ Content-Type: application/json
       "webUrl": "https://contoso.service-now.com/sp?id=kb_article&sys_id=b775c03",
       "extracts": [
         {
-          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials."
+          "text": "Once you have selected Corporate VPN under the VPN options, log in with your corporate credentials.",
+          "relevanceScore": 0.772
         },
         {
-          "text": "Please contact your IT admin if you are continuing to struggle with acessing the VPN."
+          "text": "Please contact your IT admin if you are continuing to struggle with accessing the VPN.",
+          "relevanceScore": 0.655
         }
       ],
       "resourceType": "externalItem",

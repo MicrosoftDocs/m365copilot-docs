@@ -4,14 +4,20 @@ description: Represents configuration options for retrieving data from Copilot c
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 08/08/2025
+ms.date: 10/24/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
+zone_pivot_groups: graph-api-versions
 ---
 
 # externalItemConfiguration resource type
 
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+:::zone-end
+
+:::zone pivot="graph-v1"
+:::zone-end
 
 Represents configuration options for retrieving data from Copilot connectors in the [retrieval API](../copilotroot-retrieval.md).
 
@@ -19,7 +25,7 @@ Represents configuration options for retrieving data from Copilot connectors in 
 
 | Property      | Type                                           | Description                                                                                                       |
 |:--------------|:-----------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
-| `connections` | [connectionItem](connectionitem.md) collection | An array of connection objects specifying the Copilot connector connection IDs to include in retrieval. Required. |
+| `connections` | [connectionItem](connectionitem.md) collection | An array of connection objects specifying the Copilot connector connection identifiers to include in retrieval. Required. |
 
 ## Relationships
 

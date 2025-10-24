@@ -4,11 +4,11 @@ description: "Use the Microsoft 365 Copilot Retrieval API to ground your AI solu
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
-ms.date: 08/08/2025
+ms.date: 10/24/2025
 ms.topic: overview
 ---
 
-# Overview of the Microsoft 365 Copilot Retrieval API (preview)
+# Overview of the Microsoft 365 Copilot Retrieval API
 
 The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences, unlocking the ability to enhance your custom engine agents and generative AI solutions with Microsoft 365 Copilot capabilities. The Microsoft 365 Copilot Retrieval API allows you to ground your generative AI solutions with your Microsoft 365 and non-Microsoft knowledge by returning relevant text chunks from the hybrid index that powers Microsoft 365 Copilot.
 
@@ -94,8 +94,11 @@ The following are the current throttling and other limitations to the Retrieval 
 - If the **filterExpression** request parameter has incorrect KQL syntax, the query successfully executes with no scoping.
 - Not all SharePoint and OneDrive properties are supported in the **filterExpression**. For a list of supported properties, see the  [API reference](copilotroot-retrieval.md).
 - The **maximumNumberOfResults** request parameter has a maximum value of 25.
+- The **relevanceScore** in the response payload measures the cosine similarity between the **queryString** and the extract, normalized to the 0-1 range.
+- It is possible for an extract to be returned without a **relevanceScore** when retrieving from Copilot connectors.
 - Up to 200 requests per user per hour are supported.
-- Retrieval from nontextual content, including tables, images, and charts, is not supported.
+- Retrieval from text in tables is limited to **.doc, .docx, and .pptx** files in OneDrive and SharePoint.
+- Retrieval from nontextual content, including images and charts, is not supported.
 - Results from files with .docx, .pptx, and .pdf extensions that are larger than 512 MB are not supported. Results from files with any other extension that are larger than 150 MB are not supported.
 - If retrieving from SharePoint or OneDrive, semantic retrieval and hybrid retrieval is only supported for **.doc, .docx, .pptx, .pdf, .aspx, and .one** file extensions. All other file extensions only support lexical retrieval.
 - The Retrieval API is subject to all limitations of the [Microsoft 365 Copilot semantic index](/microsoftsearch/semantic-index-for-copilot).
