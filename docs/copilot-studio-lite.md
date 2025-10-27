@@ -4,7 +4,7 @@ description: Learn how to use the Copilot Studio lite experience to build declar
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 10/20/2025
 ms.topic: conceptual
 ---
 
@@ -61,7 +61,6 @@ Administrators can control whether Copilot Studio is available to users in their
 
 The following are current known limitations:
 
-- Users who are configured with a pay-as-you-go plan in the Microsoft 365 admin center might not have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
 - The lite experience in Copilot Studio doesn't currently support [Lockbox](/power-platform/admin/about-lockbox) or [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview).
 - Agents created with the lite experience can't be used in Teams Chat.

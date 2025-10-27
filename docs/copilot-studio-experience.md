@@ -5,14 +5,14 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 10/15/2025
+ms.date: 10/16/2025
 ---
 
 # Choose the right Copilot Studio experience
 
 Microsoft Copilot Studio is a powerful platform for building secure, scalable, and intelligent agents that work across Microsoft 365 and line-of-business systems. Copilot Studio offers two ways to build AI agents: a lite experience (integrated into the Microsoft 365 Copilot app) and a full experience (a standalone Copilot Studio application). Both experiences enable you to create powerful agents, but they serve different needs. This article describes the differences between the lite and full experiences to help you choose the right Copilot Studio experience for your scenario.
 
-## Comparing Copilot Studio experiences
+## Compare Copilot Studio experiences
 
 To choose between the lite and full experiences of Copilot Studio to build your agent, consider the following factors:
 
@@ -32,19 +32,32 @@ In summary:
 - **Choose the full experience** if you need an agent for a broader audience (such as your whole department, organization, or external customers) or if the agent requires advanced capabilities like multi-step workflows or custom integrations, or you need more control over deployment and management. The full version of Copilot Studio is a standalone web portal with a rich set of tools for complex or scalable solutions.
 
 > [!NOTE]
-> Currently, a direct upgrade path from the lite experience of Copilot Studio to the full experience isn't available. We recommend that you review your agent’s intended audience, scope, functionality, and governance needs to select the best starting point for your agent.
+> If you choose to use the Copilot Studio lite experience to create your agent and you later want to take advantage of the features available in the full experience, you can [copy your agent to the Copilot Studio full experience](#copy-agents-from-lite-to-full-experience).
 
 The following table provides a more detailed feature comparison.
 
 | Feature | Lite experience | Full experience |
 | ------- | --------------- | --------------- |
-| Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Microsoft 365 Copilot Studio app](https://copilotstudio.microsoft.com) |
+| Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Copilot Studio](https://copilotstudio.microsoft.com) |
 | User type | Information workers | Makers and developers |
 | Agent target audience | Individuals or small teams. | Department, organization, or external customers. |
 | Agent type | Lightweight Q&A agents with organizational knowledge. | Agents with complex scenarios like multi-step workflows or business system integration, and that require enterprise governance and robust controls. |
 | Key capabilities | <ul><li>Natural language authoring</li><li>Content-focused Q&A scenarios based on organization context from Microsoft Graph</li><li>Respects user permissions to Microsoft 365 data</li><li>Uses the Microsoft 365 Copilot orchestrator, foundation models, and services</li></ul> | <ul><li>Broad and external publishing</li><li>Supports multistep logic, approvals, and branching workflows</li><li>Supports advanced AI models and integration with Azure AI services</li><li>Provides access to prebuilt and custom connectors to connect with data sources beyond Microsoft 365</li><li>Autonomous capabilities</li><li>Lifecycle management tools including versioning; development, test, and production environments; role-based access controls; and telemetry and analytics.</li></ul>  |
 | Use cases | Use the lite experience to build:<br /><ul><li>Project FAQ bots that answers common questions based on project documentation.</li><li>Product documentation assistants that help employees find information from internal product manuals or wikis.</li><li>Onboarding agents that help new team members get answers from internal knowledge bases.</li></ul> |  Use the full experience to build:<br /><ul><li>Customer support agents that create support tickets and escalates issues to a human.</li><li>IT help desk triage agents that handle employee IT requests and routes them to the right support team.</li><li>Sales assistants for CRM that retrieve sales data, makes notes, or kicks off an approval workflow.</li></ul> |
 | Management and governance | Managed primarily through the Microsoft 365 admin center. | Managed through the Power Platform admin center with finer-grained controls for enterprise scenarios. |
+
+## Copy agents from lite to full experience
+
+You can copy an agent created in the Copilot Studio lite experience to the full experience when you need advanced capabilities or broader integration options. This process ensures that work done in the lite experience is not lost and can be extended in the full experience without a need to to start over.
+
+Transitioning to the full experience unlocks additional features such as richer customization, expanded connectors, and governance controls. When you copy your agent, the agent's core configuration and instructions are preserved, and you can enhance them with the advanced settings available only in the full experience.
+
+Consider copying an agent to the full experience when:
+
+- You need enterprise-grade deployment options.
+- You want to integrate with more data sources or apply advanced security policies.
+
+For more information, see [Copy an agent to the Copilot Studio full experience](copy-agent-to-copilot-studio.md).
 
 ## Licensing requirements
 

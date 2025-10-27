@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/api/ai-services/retrieval/resources/searchsensitivitylabelinfo.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/api/ai-services/resources/searchsensitivitylabelinfo",
+      "redirect_document_id": true
+    }
+  ]
+}
