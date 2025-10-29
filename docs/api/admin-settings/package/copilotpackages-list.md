@@ -70,13 +70,13 @@ Content-Type: application/json
     {
       "id": "P_19ae1zz1-56bc-505a-3d42-156df75a4xxy",
       "displayName": "Diligent Teams Document Uploader",
-      "type": 1,
+      "type": "external",
       "shortDescription": "Allows direct upload of documents from Microsoft Office into Diligent Teams for sharing",
       "isBlocked": false,
       "supportedHosts": ["Teams", "SharePoint"],
       "lastModifiedDateTime": "2025-10-06T00:07:20.1467852Z",
-      "availableTo": 2,
-      "deployedTo": 2
+      "availableTo": "all",
+      "deployedTo": "all"
     }
   ]
 }
