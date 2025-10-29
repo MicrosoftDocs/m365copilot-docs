@@ -159,8 +159,6 @@ items:
         href: copilot-studio-lite-share-manage-agent.md
       - name: Availability and language support
         href: copilot-studio-lite-availability.md
-      - name: Copy your agent to the full experience
-        href: copy-agent-to-copilot-studio.md
       - name: Use the Copilot Studio full experience
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
