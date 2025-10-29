@@ -66,21 +66,63 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/catalog/packages/$entity",
-  "id": "abc",
-  "displayName": "Contoso Agent",
-  "type": 1,
-  "shortDescription": "Short description for package abc",
   "longDescription": "This is a detailed description for package abc. It provides comprehensive information about the package functionality, features, and usage scenarios.",
   "version": "1.2.3",
-  "categories": ["Development", "Tools"],
+  "categories": [
+    "Development",
+    "Productivity",
+    "Tools"
+  ],
+  "type": "custom",
   "manifestVersion": "2.0",
+  "id": "abc",
+  "shortDescription": "Short description for package abc",
   "isBlocked": false,
-  "supportedHosts": ["Teams", "SharePoint"],
+  "supportedHosts": [
+    "Teams",
+    "Outlook",
+    "SharePoint"
+  ],
   "lastModifiedDateTime": "2025-10-06T00:07:20.1467852Z",
-  "availableTo": 2,
-  "deployedTo": 2,
-  "allowedUsersAndGroups": [/* ... */],
-  "elementDetails": [/* ... */]
+  "availableTo": "all",
+  "deployedTo": "all",
+  "allowedUsersAndGroups": [
+    {
+      "resourceId": "user-123",
+      "resourceType": "user"
+    },
+    {
+      "resourceId": "group-456",
+      "resourceType": "group"
+    }
+  ],
+  "elementDetails": [
+    {
+      "elementType": "Bot",
+      "elements": [
+        {
+          "id": "bot-001",
+          "definition": "{\\n\\\"botId\\\":\\\"303e399a-cecc-4511-ad38-82970baa288b\\\",\\n\\\"scopes\\\":[\\n\\\"personal\\\"\\n],\\n\\\"isNotificationOnly\\\":true,\\n\\\"supportsCalling\\\":false,\\n\\\"supportsVideo\\\":false,\\n\\\"supportsFiles\\\":false\\n}"
+        },
+        {
+          "id": "bot-002",
+          "definition": "{\\n\\\"botId\\\":\\\"203e399a-cecc-4511-ad38-82970baa288b\\\",\\n\\\"scopes\\\":[\\n\\\"personal\\\"\\n],\\n\\\"isNotificationOnly\\\":true,\\n\\\"supportsCalling\\\":false,\\n\\\"supportsVideo\\\":false,\\n\\\"supportsFiles\\\":false\\n}"
+        }
+      ]
+    },
+    {
+      "elementType": "DeclarativeCopilots",
+      "elements": [
+        {
+          "id": "dcp-001",
+          "definition": "dcp1 json definition as string"
+        },
+        {
+          "id": "dcp-002",
+          "definition": "dcp2 json definition as string"
+        }
+      ]
+    }
+  ]
 }
 ```
