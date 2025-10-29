@@ -84,8 +84,8 @@ Content-Type: application/json
     "SharePoint"
   ],
   "lastModifiedDateTime": "2025-10-06T00:07:20.1467852Z",
-  "availableTo": "all",
-  "deployedTo": "all",
+  "availableTo": 2,
+  "deployedTo": 2,
   "allowedUsersAndGroups": [
     {
       "resourceId": "user-123",
