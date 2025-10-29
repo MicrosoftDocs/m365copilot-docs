@@ -6,7 +6,7 @@ items:
     - name: Copilot package detail
       href: resources/copilotpackagedetail.md
     - name: List
-      href: copilotadmincatalog-list-copilotpackages.md
+      href: copilotpackages-list.md
     - name: Get
       href: copilotpackagedetail-get.md
 - name: Complex types
