@@ -18,10 +18,10 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 
 ## Methods
 
-| Method                                                 | Return type                       | Description                                                               |
-|--------------------------------------------------------|-----------------------------------|---------------------------------------------------------------------------|
-| [List](../copilotadmincatalog-list-copilotpackages.md) | `copilotPackageDetail` collection | Get the available Copilot packages.                                       |
-| [Get](../copilotpackagedetail-get.md)                  | `copilotPackageDetail`            | Read the properties and relationships of a `copilotPackageDetail` object. |
+| Method                                | Return type                       | Description                                                               |
+|---------------------------------------|-----------------------------------|---------------------------------------------------------------------------|
+| [List](../copilotpackages-list.md)    | `copilotPackageDetail` collection | Get the available Copilot packages.                                       |
+| [Get](../copilotpackagedetail-get.md) | `copilotPackageDetail`            | Read the properties and relationships of a `copilotPackageDetail` object. |
 
 ## Properties
 
