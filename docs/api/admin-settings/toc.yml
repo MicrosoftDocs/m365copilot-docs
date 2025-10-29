@@ -7,6 +7,8 @@ items:
     href: copilotadminlimitedmode-get.md
   - name: Update
     href: copilotadminlimitedmode-update.md
+- name: Package management API (preview)
+  href: package/toc.yml
 - name: Complex types
   items:
   - name: Copilot admin

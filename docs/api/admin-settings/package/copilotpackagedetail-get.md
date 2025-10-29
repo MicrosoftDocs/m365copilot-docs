@@ -1,6 +1,6 @@
 ---
 title: Get Copilot package details
-description: Get details of a specific copilot package using the Copilot Package Management API.
+description: Get details of a specific Copilot package using the Copilot Package Management API.
 author: pomuth
 ms.author: pomuth
 ms.topic: reference
@@ -45,7 +45,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a [copilotPackageDetail](resources/copilotpackagedetail.md) object in the response body.
+If successful, this method returns a `200 OK` response code and a [copilotPackage](resources/copilotpackage.md) object in the response body.
 
 ### Example
 

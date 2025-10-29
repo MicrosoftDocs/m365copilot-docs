@@ -12,7 +12,7 @@ ms.date: 10/28/2025
 
 # Package Management API (preview) overview
 
-A package represents either an Agent or MetaOS app in the tenant catalog. The Package Management API enables IT administrators to view and manage packages across Microsoft 365. This API provides endpoints to list all packages, retrieve detailed information about an individual package including metadata and detailed package elements.
+A package represents either an agent or Microsoft 365 app in the tenant catalog. The Package Management API enables IT administrators to view and manage packages across Microsoft 365. This API provides endpoints to list all packages, retrieve detailed information about an individual package including metadata and detailed package elements.
 
 ## Key capabilities
 
@@ -23,7 +23,7 @@ A package represents either an Agent or MetaOS app in the tenant catalog. The Pa
 
 ## Example scenarios
 
-- Tenant admin retrieves the inventory of all Copilot Agents and MetaOS Apps.
+- Tenant admin retrieves the inventory of all Copilot agents and Microsoft 365 apps.
 - Admin reviews package details, including availability and deployment status.
 - Admin reviews agent details, including declarativeAgent or customEngineAgent element object.
 
@@ -31,14 +31,14 @@ A package represents either an Agent or MetaOS app in the tenant catalog. The Pa
 
 | Operation | HTTP Method | Description |
 |------------|--------------|-------------|
-| [List packages](packages-list.md) | GET `/copilot/admin/catalog/packages` | Get all apps and agents in the tenant |
-| [Get package details](packagedetail-get.md) | GET `/copilot/admin/catalog/packages/{id}` | Get detailed metadata for a specific app or agent |
+| [List packages](copilotpackages-list.md) | GET `/copilot/admin/catalog/packages` | Get all apps and agents in the tenant |
+| [Get package details](copilotpackagedetail-get.md) | GET `/copilot/admin/catalog/packages/{id}` | Get detailed metadata for a specific app or agent |
 
-## Resources and operations
+## Resources
 
-- [copilotPackage resource](resources/copilotPackage.md)
-- [copilotPackageDetail resource](resources/copilotPackageDetail.md)
-- [List packages](packages-list.md)
-- [Get package details](packagedetail-get.md)
+- [copilotPackage resource](resources/copilotpackage.md)
+- [copilotPackageDetail resource](resources/copilotpackagedetail.md)
 
-For more information, see the API reference and conceptual documentation.
+## Related content
+
+- [Microsoft 365 app manifest schema reference](/microsoft-365/extensibility/schema)

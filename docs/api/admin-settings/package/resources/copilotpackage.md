@@ -20,7 +20,7 @@ Entity that represents a Copilot package available within a tenant, containing b
 
 | Property               | Type                                        | Description                                                  |
 |------------------------|---------------------------------------------|--------------------------------------------------------------|
-| `availableTo`          | [packageStatus](#packagestatus-enumeration) | Availability status of the pacakge.                          |
+| `availableTo`          | [packageStatus](#packagestatus-enumeration) | Availability status of the package.                          |
 | `deployedTo`           | [packageStatus](#packagestatus-enumeration) | Deployment status of the package                             |
 | `displayName`          | String                                      | Display name of the package.                                 |
 | `elementTypes`         | String collection                           | Element types contained within this package.                 |
@@ -47,8 +47,8 @@ Entity that represents a Copilot package available within a tenant, containing b
 |----------------------|-------------------------------|
 | `microsoft`          | Built by Microsoft            |
 | `external`           | Built by partners             |
-| `shared`             | Shared in the org             |
-| `custom`             | Built by your org             |
+| `shared`             | Shared in your organization   |
+| `custom`             | Built by your organization    |
 | `unknownFutureValue` | [Evolvable sentinel value](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations) |
 
 ## Relationships
