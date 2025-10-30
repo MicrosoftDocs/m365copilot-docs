@@ -29,9 +29,9 @@ Code interpreter VMs enforce strict network controls. They don't allow any inbou
 
 ## Security and governance
 
-### RAI governance
+### Responsible AI (RAI) governance
 
-Code interpreter adheres to the Microsoft Responsible AI (RAI) policies. These policies require rigorous threat modeling, continuous monitoring, and proactive risk mitigation. Regular security reviews and updates help safeguard against emerging threats and vulnerabilities.
+Code interpreter adheres to the Microsoft RAI policies. These policies require rigorous threat modeling, continuous monitoring, and proactive risk mitigation. Regular security reviews and updates help safeguard against emerging threats and vulnerabilities.
 
 ### Data residency and privacy protections
 
