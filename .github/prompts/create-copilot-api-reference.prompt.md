@@ -26,7 +26,7 @@ After gathering all information, generate documentation following these requirem
   - If it is not an admin API, create organized folder structure under `${workspaceFolder}/docs/api/ai-services/{api-name}/`.
 - Create files in the newly created folder:
   - All file names MUST be all lower case.
-  - Main API operations in root (e.g., `{resource-name}-get.md`, `{resource-name}-update.md`)
+  - API method files in root (e.g., `{resource-name}-get.md`, `{resource-name}-update.md`)
   - Overview file (`overview.md`)
   - Resource types (including complex types) in `/resources/` subfolder (e.g., `{resource-name}.md`)
   - Create a `toc.yml` file according to the instructions in the "Create toc.yml" section.
@@ -36,18 +36,16 @@ After gathering all information, generate documentation following these requirem
 
 # When generating API resource reference files:
 
-- You MUST use the structure and formatting from `api-resource-reference.md` exactly.
+- You MUST use the structure, section order, and formatting from `api-resource-reference.md` exactly. Do not add, omit, or rearrange sections. Every required section must be present and in the correct order. If you deviate from the template, you must revise the file until it is correct.
 - Only include methods in the Methods table that are supported by the resource (for example, do not add Update/Delete unless they exist).
 - Format all property names and all enum values with backticks (`) in tables and lists.
 - For enumerations, use a dedicated table and format each value with backticks.
-- Do not add or omit sections from the template; every required section must be present and in the correct order.
 - Validate that all links, headings, and code blocks match the template style.
-- If you deviate from the template or miss any formatting, you must revise the file until it is correct.
 
 # When generating API method reference files:
 
-- File name rules:
-  - Always start the file name with the all-lowercase version of the resource name, followed by a hyphen (`-`).
+- You MUST name the method reference file according to these rules:
+  - Always start the file name with the all-lowercase version of the resource name, where the resource is the returned resource, NOT the request path, followed by a hyphen (`-`).
   - After the hyphen, use the verb that matches the operation:
     - For a GET that returns a collection, use `list`
     - For a GET that returns a single resource, use `get`
@@ -55,10 +53,8 @@ After gathering all information, generate documentation following these requirem
     - For a POST that does not create an item, use the action or function name.
     - For a PATCH, use `update`
     - For a DELETE, use `delete`
-- You MUST use the structure and formatting from `api-method-reference.md` exactly.
-- Do not add or omit sections from the template; every required section must be present and in the correct order.
+- You MUST use the structure, section order, and formatting from `api-method-reference.md` exactly. Do not add, omit, or rearrange sections. Every required section must be present and in the correct order. If you deviate from the template, you must revise the file until it is correct.
 - Validate that all links, headings, and code blocks match the template style.
-- If you deviate from the template or miss any formatting, you must revise the file until it is correct.
 
 ## Create toc.yml
 
@@ -90,7 +86,7 @@ items:
 
 ## Update Copilot API overview
 
-If the API is NOT an admin API, add a row to the table in `${workspaceFolder}/docs/copilot-apis-overview.md` for the new API.
+If the API is NOT an admin API, add a row to the table in `${workspaceFolder}/docs/copilot-apis-overview.md` for the new API. You MUST NOT add a row the table if this is an admin API.
 
 ## Update whats-new.md
 
