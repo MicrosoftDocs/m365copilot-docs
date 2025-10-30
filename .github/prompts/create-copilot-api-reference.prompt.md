@@ -33,11 +33,14 @@ After gathering all information, generate documentation following these requirem
   - Update `toc.yml` in the `admin-settings` or `ai-services` folder (whichever one contains your new files) to include the newly created `toc.yml`.
 - For each resource defined by the API, use the API resource template at `${workspaceFolder}/templates/api-resource-reference.md`.
 - For each method defined by the API, use the API method template at `${workspaceFolder}/templates/api-method-reference.md`.
+- Enumerations MUST be documented in the consuming resource's reference file, NOT in a separate file.
 
 # When generating API resource reference files:
 
+- You MUST name the file `{resource-name}.md`, where `{resource-name}` is the all-lowercase name of the resource without any spaces or hyphens.
 - You MUST use the structure, section order, and formatting from `api-resource-reference.md` exactly. Do not add, omit, or rearrange sections. Every required section must be present and in the correct order. If you deviate from the template, you must revise the file until it is correct.
 - Only include methods in the Methods table that are supported by the resource (for example, do not add Update/Delete unless they exist).
+- Always sort the Properties and Relationships tables alphabetically by property or relationship name.
 - Format all property names and all enum values with backticks (`) in tables and lists.
 - For enumerations, use a dedicated table and format each value with backticks.
 - Validate that all links, headings, and code blocks match the template style.
