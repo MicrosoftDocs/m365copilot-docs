@@ -34,6 +34,10 @@ After gathering all information, generate documentation following these requirem
 - For each resource defined by the API, use the API resource template at `${workspaceFolder}/templates/api-resource-reference.md`.
 - For each method defined by the API, use the API method template at `${workspaceFolder}/templates/api-method-reference.md`.
 - Enumerations MUST be documented in the consuming resource's reference file, NOT in a separate file.
+- When generating resource or method reference files, you MUST use the exact structure, section order, headings, and formatting from the corresponding template in `/templates`.
+  - For resources: `api-resource-reference.md`
+  - For methods: `api-method-reference.md`
+- Do not add, omit, or rearrange sections. Do not change heading levels, table formats, or JSON examples. If you deviate from the template, you must revise the file until it is correct.
 
 # When generating API resource reference files:
 
@@ -44,6 +48,7 @@ After gathering all information, generate documentation following these requirem
 - Format all property names and all enum values with backticks (`) in tables and lists.
 - For enumerations, use a dedicated table and format each value with backticks.
 - Validate that all links, headings, and code blocks match the template style.
+- If you encounter errors or ambiguity, always default to the template's structure and formatting. Do not improvise or add undocumented sections.
 
 # When generating API method reference files:
 
@@ -58,6 +63,7 @@ After gathering all information, generate documentation following these requirem
     - For a DELETE, use `delete`
 - You MUST use the structure, section order, and formatting from `api-method-reference.md` exactly. Do not add, omit, or rearrange sections. Every required section must be present and in the correct order. If you deviate from the template, you must revise the file until it is correct.
 - Validate that all links, headings, and code blocks match the template style.
+- If you encounter errors or ambiguity, always default to the template's structure and formatting. Do not improvise or add undocumented sections.
 
 ## Create toc.yml
 
@@ -99,6 +105,12 @@ Following the style of other entries in that file, add an entry to `${workspaceF
 
 After generating the files, review the content according to these guidelines and fix any issues.
 
+- Before marking a file complete, verify:
+  - All required sections are present and in the correct order
+  - All headings match the template
+  - All tables match the template format
+  - All code blocks (JSON, etc.) match the template
+  - No extra, missing, or rearranged content
 - Use correct relative paths for includes based on folder structure
 - Ensure all file links point to existing files
 - Check the **Problems** window for any markdown lint errors in the Markdown file and correct them. Repeat until you have removed all issues. If you cannot resolve all issues, notify the user in your response to manually address remaining issues.
