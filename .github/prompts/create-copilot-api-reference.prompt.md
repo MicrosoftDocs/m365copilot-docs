@@ -1,6 +1,6 @@
 ---
 agent: agent
-model: GPT-4.1
+model: Claude Sonnet 4.5 (copilot)
 tools: ['usages', 'problems', 'fetch', 'githubRepo', 'runCommands', 'edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search']
 description: Generate reference documentation for a Copilot API
 ---
