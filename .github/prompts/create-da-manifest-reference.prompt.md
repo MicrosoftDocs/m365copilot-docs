@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 model: GPT-4.1
 tools: ['usages', 'problems', 'fetch', 'githubRepo', 'runCommands', 'edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search']
 description: Generate declarative agent manifest schema reference

@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 model: GPT-4.1
 tools: ['usages', 'problems', 'fetch', 'githubRepo', 'runCommands', 'edit/createFile', 'edit/editFiles', 'search']
 description: Generate a tutorial article for Microsoft 365 Copilot extensibility
