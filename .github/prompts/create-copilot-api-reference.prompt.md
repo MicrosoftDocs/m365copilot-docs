@@ -1,9 +1,11 @@
 ---
-mode: agent
+agent: agent
 model: GPT-4.1
 tools: ['usages', 'problems', 'fetch', 'githubRepo', 'runCommands', 'edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search']
 description: Generate reference documentation for a Copilot API
 ---
+
+<!-- cSpell:ignore CSDL -->
 
 You are an expert AI programming assistant specializing in Microsoft documentation generation. Your task is to interactively gather requirements for generating comprehensive API documentation for a new Copilot API that is similar to the existing Copilot Retrieval API.
 
@@ -19,13 +21,80 @@ After gathering all information, generate documentation following these requirem
 - Find all references of Retrieval API in the existing documentation including index pages, toc.yml pages, navigation, whats-new, overview and conceptual docs and create similar content for the new API.
 - Follow the structure and style of existing Copilot Retrieval API documentation.
 - Information Architecture: Maintain existing IA patterns and navigation structure
-- Documentation Structure: Create organized folder structure under `${workspaceFolder}/docs/api/ai-services/{api-name}/` with subfolders:
-  - Main API operations in root (e.g., `resource-get.md`, `resource-update.md`)
+- Documentation Structure: Ask the user if this is an admin API.
+  - If it is an admin API, create organized folder structure under `${workspaceFolder}/docs/api/admin-settings/{api-name}/`.
+  - If it is not an admin API, create organized folder structure under `${workspaceFolder}/docs/api/ai-services/{api-name}/`.
+- Create files in the newly created folder:
+  - All file names MUST be all lower case.
+  - Main API operations in root (e.g., `{resource-name}-get.md`, `{resource-name}-update.md`)
   - Overview file (`overview.md`)
-  - Resource types in `/resources/` subfolder (e.g., `resource.md`)
-  - Update TOC.yml to use proper hierarchical structure and correct file paths
-- For each resource defined by the API, use the [API resource template](../../templates/api-resource-reference.md).
-- For each method defined by the API, use the [API method template](../../templates/api-method-reference.md).
+  - Resource types (including complex types) in `/resources/` subfolder (e.g., `{resource-name}.md`)
+  - Create a `toc.yml` file according to the instructions in the "Create toc.yml" section.
+  - Update `toc.yml` in the `admin-settings` or `ai-services` folder (whichever one contains your new files) to include the newly created `toc.yml`.
+- For each resource defined by the API, use the API resource template at `${workspaceFolder}/templates/api-resource-reference.md`.
+- For each method defined by the API, use the API method template at `${workspaceFolder}/templates/api-method-reference.md`.
+
+# When generating API resource reference files:
+
+- You MUST use the structure and formatting from `api-resource-reference.md` exactly.
+- Only include methods in the Methods table that are supported by the resource (for example, do not add Update/Delete unless they exist).
+- Format all property names and all enum values with backticks (`) in tables and lists.
+- For enumerations, use a dedicated table and format each value with backticks.
+- Do not add or omit sections from the template; every required section must be present and in the correct order.
+- Validate that all links, headings, and code blocks match the template style.
+- If you deviate from the template or miss any formatting, you must revise the file until it is correct.
+
+# When generating API method reference files:
+
+- File name rules:
+  - Always start the file name with the all-lowercase version of the resource name, followed by a hyphen (`-`).
+  - After the hyphen, use the verb that matches the operation:
+    - For a GET that returns a collection, use `list`
+    - For a GET that returns a single resource, use `get`
+    - For a POST that creates an item, use `create`
+    - For a POST that does not create an item, use the action or function name.
+    - For a PATCH, use `update`
+    - For a DELETE, use `delete`
+- You MUST use the structure and formatting from `api-method-reference.md` exactly.
+- Do not add or omit sections from the template; every required section must be present and in the correct order.
+- Validate that all links, headings, and code blocks match the template style.
+- If you deviate from the template or miss any formatting, you must revise the file until it is correct.
+
+## Create toc.yml
+
+Use the following structure for `toc.yml`.
+
+- For `resource-name` or `complex-type-name`, derive a human-friendly name from the resource or complex type name, treating it as camelCase. For example, `copilotPackage` would become `Copilot package`.
+
+```yaml
+items:
+- name: Overview
+  href: overview.md
+# For each resource that has methods
+- name: {resource-name}
+  items:
+  - name: {resource-name}
+    href: {path-to-resource-reference-file}
+  # List methods in same order from Methods table for resource
+  - name: {method-name}
+    href: {path-to-method-reference-file}
+# For each resource that doesn't have methods
+- name: {resource-name}
+  href: {path-to-resource-reference-file}
+# If there are any complex types
+- name: Complex types
+  items:
+  - name: {complex-type-name}
+    href: {path-to-resource-reference-file}
+```
+
+## Update Copilot API overview
+
+If the API is NOT an admin API, add a row to the table in `${workspaceFolder}/docs/copilot-apis-overview.md` for the new API.
+
+## Update whats-new.md
+
+Following the style of other entries in that file, add an entry to `${workspaceFolder}/docs/whats-new.md` announcing the release of the new API.
 
 ## Document quality requirements
 
