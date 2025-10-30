@@ -15,15 +15,17 @@ Code interpreter is an advanced feature in Microsoft 365 Copilot and agents that
 
 This article describes the comprehensive security and governance framework that code interpreter uses to protect customer data and infrastructure from malicious code.
 
-## Isolated environment
+## Architecture and isolation
+
+### Isolated environment
 
 Code interpreter in Copilot and agents runs within isolated virtual machines (VMs) hosted on Microsoft Azure. Each session is separated from other sessions and from core Copilot services. This separation minimizes the risk of cross-session contamination or unauthorized data access.
 
-## Session lifecycle management
+### Session lifecycle management
 
 Every time code interpreter runs code, it starts with a fresh VM. The system destroys the VM after the session ends. This design prevents persistent storage of code or data to reduce the risk of data leakage.
 
-## Network and resource controls
+### Network and resource controls
 
 Code interpreter VMs enforce strict network controls. They don't allow any inbound or outbound traffic. This restriction prevents code from communicating with external servers and prevents the exfiltration of data. Resource quotas limit time, CPU, memory, and disk usage to mitigate denial-of-service (DoS) risks and ensure fair resource allocation.
 
