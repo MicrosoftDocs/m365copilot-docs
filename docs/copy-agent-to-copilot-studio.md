@@ -10,6 +10,9 @@ ms.topic: concept-article
 ---
 # Copy an agent to the Copilot Studio full experience
 
+> [!IMPORTANT]
+> This feature is not yet available for all users. Rollout is expected to complete by mid-November 2025. This document is intended to serve as educational content to prepare for this feature.
+
 This article explains how to use the **Copy to full experience** feature in the Copilot Studio lite experience to copy an agent to the Copilot Studio full experience. When you copy your agent to the full experience, you can take advantage of advanced lifecycle management, analytics, and governance controls.
 
 ## Why use the full experience?
@@ -81,7 +84,7 @@ After you copy your agent:
 
 ## Licensing requirements
 
-To copy an agent to the full experience, you must have a [Copilot Studio license](/microsoft-copilot-studio/billing-licensing). If you have a Microsoft 365 Copilot license, you might already be entitled to Copilot Studio. Check your eligibility in [Copilot Studio ](https://copilotstudio.microsoft.com) or ask your admin.
+To copy an agent to the full experience, you must have a [Copilot Studio license](/microsoft-copilot-studio/billing-licensing) or [Microsoft 365 Copilot license](/microsoft-copilot-studio/billing-licensing#microsoft-365-copilot). Check your eligibility in [Copilot Studio](https://copilotstudio.microsoft.com) or ask your admin.
 
 If you don't have a Copilot Studio license, you might be eligible for a [Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial), depending on the admin settings in your organization. Admins can [block unauthorized sign-ups](/microsoft-copilot-studio/admin-block-viral-signups). Trial licenses allow for testing agents but not publishing agents outside personal use.
 
@@ -111,7 +114,7 @@ The following policies and limits are set up in the Power Platform admin center:
 
 ### Environment routing
 
-Admins can turn on [Environment routing](/power-platform/admin/default-environment-routing) to help makers select environments. When environment routing is turned on, the routed environment is preselected. 
+Admins can turn on [Environment routing](/power-platform/admin/default-environment-routing) to help makers select environments. When environment routing is turned on, the routed environment is preselected.
 
 >[!IMPORTANT]
 > Developer environments might have [automatic cleanup](/power-platform/admin/automatic-environment-cleanup#developer-environments) applied. To retain access, sign in to your Copilot Studio environment periodically.
