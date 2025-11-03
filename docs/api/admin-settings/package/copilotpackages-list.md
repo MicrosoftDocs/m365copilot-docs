@@ -57,6 +57,15 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages
 ```
 
+### Optional Query Parameters
+
+| Parameter             | Type     | Description                                                             |
+| --------------------- | -------- | ----------------------------------------------------------------------- |
+| `type`                | string   | Filter by package type (`1P`, `3P`, `LOB`, `Shared`)                    |
+| `supportedHost`       | string   | Filter by supported host (`Copilot`, `Outlook`, `Teams`, `M365`)        |
+| `elementTypes`        | string   | Filter by element type (`Bot`, `DeclarativeAgent`, `CustomEngineAgent`) |
+| `lastUpdatedDateTime` | datetime | Filter by last updated date/time                                        |
+
 ### Response
 
 The following example shows the response. The response object shown here might be shortened for readability.
