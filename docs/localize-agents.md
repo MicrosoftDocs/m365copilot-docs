@@ -1,11 +1,11 @@
 ---
 title: Localize Agents for Microsoft 365 Copilot
 description: Learn how to add support for other languages to your agent.
-author: JoshuaPartlow
-ms.author: joshuapa
+author: erikadoyle
+ms.author: edoyle
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/04/2024
+ms.date: 11/04/2025
 ---
 
 # Localize your agent
@@ -105,7 +105,7 @@ The following fields are localizable within the declarative agent manifest.
 |--|--|--|--|
 | `name`| The name of the declarative agent. Must contain at least one nonwhitespace character.| 100 characters| ✔️|
 | `description`| The description of the declarative agent. Must contain at least one nonwhitespace character.| 1,000 characters | ✔️|
-| `conversation_starters`| A list (array) of examples of questions that the declarative agent can answer, where each example is an object with `title` and `text`, both of which are localizable.| Six objects in the array| |
+| `conversation_starters`| A list (array) of examples of questions that the declarative agent can answer, where each example is an object with `title` and `text`, both of which are localizable.| 12 objects in the array| |
 
 To learn more, see [Declarative agent manifest reference](./declarative-agent-manifest-1.2.md).
 
@@ -121,6 +121,7 @@ The following fields are localizable within the API plugin manifest.
 |`logo_url`|A URL used to fetch a logo that may be used by the orchestrator. | | |
 |`legal_info_url`|An absolute URL that locates a document containing the terms of service for the plugin.| | |
 |`privacy_policy_url`|An absolute URL that locates a document containing the privacy policy for the plugin.| | |
+| `conversation_starter`| A list (array) of examples of questions that the plugin can answer, where each example is an object with `title` and `text`, both of which are localizable.| | |
 
 To learn more, see [API plugin manifest reference](./api-plugin-manifest.md).
 
