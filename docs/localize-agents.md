@@ -121,7 +121,7 @@ The following fields are localizable within the API plugin manifest.
 |`logo_url`|A URL used to fetch a logo that may be used by the orchestrator. | | |
 |`legal_info_url`|An absolute URL that locates a document containing the terms of service for the plugin.| | |
 |`privacy_policy_url`|An absolute URL that locates a document containing the privacy policy for the plugin.| | |
-| `conversation_starter`| A list (array) of examples of questions that the plugin can answer, where each example is an object with `title` and `text`, both of which are localizable.| | |
+| `conversation_starters`| A list (array) of examples of questions that the plugin can answer, where each example is an object with `title` and `text`, both of which are localizable.| | |
 
 To learn more, see [API plugin manifest reference](./api-plugin-manifest.md).
 
