@@ -31,7 +31,7 @@ If you want to report an issue with the documentation or you'd like to make a co
 
 | **Feedback type** | **Instructions** |
 |:------------|:------------|
-| Submit documentation updates | Select **Edit** at the top right of the article you want to update and submit a pull request to the [Microsoft 365 Copilot Extensibility GitHub](https://github.com/MicrosoftDocs/m365copilot-docs) repository. |
+| Submit documentation updates | Select **Edit** from the *More actions* (vertical elipses) menu of an article to view source on GitHub, create a fork of the `m365copilot-docs` repo, and submit a pull request. |
 | Report documentation issues | [Open an issue](https://github.com/MicrosoftDocs/m365copilot-docs/issues) in the Microsoft 365 Copilot extensibility docs repository on GitHub. Alternately, you can select **Edit** from the *More actions* (vertical elipses) menu of an article to view source, create a fork of the `m365copilot-docs` repo, and submit a pull request. |
 
 ## Microsoft 365 Copilot feedback
