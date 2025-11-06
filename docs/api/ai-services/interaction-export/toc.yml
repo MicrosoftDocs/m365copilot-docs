@@ -2,6 +2,8 @@
 items:
 - name: AI interaction history
   items:
+  - name: AI interaction history (Overview)
+    href: resources/aiinteractionhistory-overview.md
   - name: AI interaction history
     href: resources/aiinteractionhistory.md
   - name: Get all enterprise interactions
@@ -20,3 +22,4 @@ items:
     href: resources/aiinteractionmention.md
   - name: AI interaction mentioned identity set
     href: resources/aiinteractionmentionedidentityset.md
+
