@@ -58,7 +58,7 @@ When you share an agent via the Copilot Studio lite experience using the **Speci
 
 ### Agents built with the Copilot Studio lite experience don't generate files
 
-When users ask an agent build with the [Copilot Studio lite experience](copilot-studio-lite.md), the agent fails to generate the file. This applies to all file types (.docx, .pdf, and so on).
+When users ask an agent built with the [Copilot Studio lite experience](copilot-studio-lite.md) to generate a file, the agent fails to generate the file. This applies to all file types (.docx, .pdf, and so on).
 
 ### Some features aren't supported in Microsoft 365 Government tenants
 
