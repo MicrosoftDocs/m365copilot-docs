@@ -18,8 +18,7 @@ Agents are packaged, distributed, and managed in the same way as other apps that
 
 Agents for Microsoft 365 Copilot can be [packaged and distributed as Microsoft 365 apps](./agents-are-apps.md) that are centrally managed from the **Copilot** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
-
-:::image type="content" source="./assets/images/mac-agents.png" alt-text="Screenshot of the 'Agents' section of Microsoft 365 admin center":::
+:::image type="content" source="./assets/images/mac-agents.png" alt-text="Screenshot of the 'Agents' section of Microsoft 365 admin center." lightbox="./assets/images/mac-agents.png":::
 
 From Microsoft 365 admin center, admins can:
 

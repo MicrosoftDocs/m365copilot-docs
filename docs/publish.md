@@ -15,7 +15,7 @@ This article summarizes the distribution options and procedures for Microsoft 36
 
 As an independent software publisher, you can distribute your Copilot app package through the  [Microsoft 365 and Copilot](/partner-center/marketplace/why-publish) program of Microsoft Partner Center.
 
-:::image type="content" source="assets/images/microsoft-365-and-copilot-program.png" alt-text="Screenshot of Microsoft Partner Center opened to 'Account settings | Programs' and the 'Microsoft 365 and Copilot' program listed as an option.":::
+:::image type="content" source="assets/images/microsoft-365-and-copilot-program.png" alt-text="Screenshot of Microsoft Partner Center opened to 'Account settings | Programs' and the 'Microsoft 365 and Copilot' program listed as an option." lightbox="assets/images/microsoft-365-and-copilot-program.png":::
 
 Before submitting your agent to Partner Center, ensure it meets all applicable:
 
