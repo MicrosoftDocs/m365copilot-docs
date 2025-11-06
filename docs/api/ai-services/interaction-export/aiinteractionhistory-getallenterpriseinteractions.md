@@ -24,8 +24,7 @@ Get all Microsoft 365 Copilot interaction data, including user prompts to Copilo
 To learn more about how to use the Microsoft Teams export APIs to export content, see [Export content with the Microsoft Teams export APIs](/microsoftteams/export-teams-content).
 
 > [!NOTE]
-> - You can't use this API to extract interactions for users who engage with Copilot Chat offerings without usage billing enabled or a Microsoft 365 Copilot license.
-> - You can't export Copilot interactions programmatically. The only alternative is an eDiscovery search.
+> - A valid M365 Copilot license is required for this API.
 
 ## Permissions
 
