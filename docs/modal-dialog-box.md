@@ -162,7 +162,7 @@ The following example shows the schema for Action.Execute.
 
 ## Request and response examples
 
-The following request and response examples show what happens When a user takes an action that causes the `Action.Execute` function to run in the client.
+The following request and response examples show what happens when a user takes an action that causes the `Action.Execute` function to run in the client.
 
 ### Request
 
