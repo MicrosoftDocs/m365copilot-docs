@@ -4,7 +4,7 @@ items:
   items:
   - name: AI interaction history (Overview)
     href: aiinteractionhistory-overview.md
-  - name: AI interaction history
+  - name: AI interaction history (Resource type)
     href: resources/aiinteractionhistory.md
   - name: Get all enterprise interactions
     href: aiinteractionhistory-getallenterpriseinteractions.md
