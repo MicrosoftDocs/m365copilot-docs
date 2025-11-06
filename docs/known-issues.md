@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 10/22/2025
+ms.date: 11/06/2025
 ms.topic: concept-article
 ---
 
@@ -55,6 +55,10 @@ Currently, users can select a file in Copilot Studio, and the agent searches the
 ### Sharing agents from within the Copilot Studio lite experience can fail
 
 When you share an agent via the Copilot Studio lite experience using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+
+### Agents built with the Copilot Studio lite experience don't generate files
+
+When users ask an agent build with the [Copilot Studio lite experience](copilot-studio-lite.md), the agent fails to generate the file. This applies to all file types (.docx, .pdf, and so on).
 
 ### Some features aren't supported in Microsoft 365 Government tenants
 
