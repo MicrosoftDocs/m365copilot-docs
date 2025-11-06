@@ -1,7 +1,7 @@
 ---
 title: "Overview of aiInteractionHistory"
-description: Get all Microsoft 365 Copilot interaction data, including user prompts to Copilot and Copilot responses.
-ms.date: 09/26/2025
+description: Overview of the Microsoft 365 Copilot Interaction History API.
+ms.date: 11/14/2025
 author: bkeerthivasa
 ms.author: v-koenenkaty
 ms.localizationpriority: high
@@ -14,9 +14,6 @@ zone_pivot_groups: graph-api-versions
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-:::zone pivot="graph-v1"
-:::zone-end
-
 The Microsoft 365 Copilot Interaction History API enables organizations to retrieve AI interaction records across Microsoft 365 Copilot experiences, Copilot Chat, and third-party AI services integrated via Microsoft Purview. These records provide visibility into how AI is used within your enterprise for compliance, analytics, and governance scenarios.
 
 Get all Microsoft 365 Copilot interaction data, including user prompts to Copilot and Copilot responses. This API captures the user intent, the resources accessed by Copilot, and the response to the user for Microsoft 365 apps such as Teams, Word, and Outlook.
@@ -25,7 +22,7 @@ Get all Microsoft 365 Copilot interaction data, including user prompts to Copilo
 
 The API is built on two key concepts:
 
-- **[`aiInteractionHistory`](../resources/aiinteractionhistory.md) (resource type)**  
+- **[`aiInteractionHistory`](./resources/aiinteractionhistory.md) (resource type)**  
   Defines the schema for an AI interaction record, including properties such as:
   - `interactionId`
   - `interactionType` (Copilot, CopilotChat, ThirdPartyAI)
@@ -101,7 +98,7 @@ You can use OData query parameters to filter and shape the response. For example
 - `$filter`
 - `$select`
 
-For more information, see [OData query parameters](https://learn.microsoft.com/graph/query-parameters).
+For more information, see [OData query parameters](../graph/query-parameters.md).
 
 ### Request headers
 
@@ -116,7 +113,7 @@ This method does not require a request body.
 
 ## Response
 
-Returns a collection of [aiInteractionHistory](../resources/aiinteractionhistory.md) objects.
+Returns a collection of [aiInteractionHistory](./resources/aiinteractionhistory.md) objects.
 
 ### Properties of aiInteractionHistory
 
@@ -180,5 +177,5 @@ Common error responses:
 ## Related content
 
 - [Export content with the Microsoft Teams Export APIs](/microsoftteams/export-teams-content)
-- [Microsoft Graph permissions reference](https://learn.microsoft.com/graph/permissions-reference)
-- [Microsoft 365 Copilot documentation](https://learn.microsoft.com/microsoft-365/copilot/)
+- [Microsoft Graph permissions reference](../graph/permissions-reference)
+- [Microsoft 365 Copilot documentation](../copilot/microsoft-365/microsoft-365-copilot-overview.md)
