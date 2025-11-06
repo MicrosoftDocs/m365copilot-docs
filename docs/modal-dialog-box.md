@@ -1,12 +1,12 @@
 ---
 title: Add modal dialog box to Microsoft 365 Copilot agent Adaptive Card responses
 description: "Learn how to add modal dialog boxes to Microsoft 365 Copilot agent Adaptive Card responses."
-#customer intent: As a developer, I want to enhance Copilot agent responses by returning a modal dialog box.
 author: Lauragra
 ms.author: lauragra
-ms.reviewer: lauragra
+ms.reviewer: isrumnon
 ms.date: 10/31/2025
 ms.topic: concept-article
+ms.localizationpriority: medium
 ---
 
 # Add a modal dialog box to Adaptive Card responses (preview)
@@ -23,7 +23,7 @@ This article describes how to use the `Action.Execute` function (available start
 To use the modal dialog box action:
 
 - Add the [Adaptive Card template](/microsoft-365-copilot/extensibility/api-plugin-adaptive-cards) to your [API plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest-2.3).
-- Include the `Action.Excute` schema in the Adaptive Card definition.
+- Include the `Action.Execute` schema in the Adaptive Card definition.
 
 The following example shows the schema for Action.Execute.
 
@@ -210,7 +210,7 @@ The following request and response examples show what happens when a user takes 
   "messageId": "649112bc-7fe2-40bd-990d-928364fb173c", 
   "requestId": "3058aa09-c9b6-3425-b0ef-49ef2ad4b9a5", 
   "offense": "Unknown", 
-  "spokenText": "Mohit custom text", 
+  "spokenText": "Ticket updated successfully", 
   "turnCount": 1 
 } 
 ```
