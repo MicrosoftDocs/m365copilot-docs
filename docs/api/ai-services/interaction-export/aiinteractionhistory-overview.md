@@ -98,7 +98,7 @@ You can use OData query parameters to filter and shape the response. For example
 - `$filter`
 - `$select`
 
-For more information, see [OData query parameters](/graph/query-parameters?view=graph-rest-1.0).
+For more information, see [OData query parameters](/graph/query-parameters).
 
 ### Request headers
 
@@ -178,4 +178,4 @@ Common error responses:
 
 - [Export content with the Microsoft Teams Export APIs](/microsoftteams/export-teams-content)
 - [Microsoft Graph permissions reference](/graph/permissions-reference)
-- [Microsoft 365 Copilot documentation](/microsoft-365/microsoft-365-copilot-overview)
+- [Microsoft 365 Copilot documentation](/copilot/microsoft-365/microsoft-365-copilot-overview)
