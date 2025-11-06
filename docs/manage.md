@@ -23,8 +23,7 @@ Agents for Microsoft 365 Copilot can be [packaged and distributed as Microsoft 3
 
 From Microsoft 365 admin center, admins can:
 
-- Enable/disable Copilot agents for the whole organization through Microsoft 365 admin center settings.
-- Deploy, make available, or block agents to the whole organization or specific users or groups.
+- Manage access to Copilot and Copilot agents for the whole organization or specific users or groups.
 - Review and approve agents submitted to the organizational catalog.
 - Monitor and find information about agents that have been shared across the organization.
 
