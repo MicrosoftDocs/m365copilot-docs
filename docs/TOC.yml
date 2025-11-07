@@ -95,7 +95,7 @@ items:
           displayName: response, response_semantics
         - name: Dialog boxes
           href: adaptive-card-dialog-box.md
-        - name: Add modal dialog box (preview)
+        - name: Allow dialog box inline edits (preview)
           href: modal-dialog-box.md
         - name: Confirmation prompts
           href: api-plugin-confirmation-prompts.md
