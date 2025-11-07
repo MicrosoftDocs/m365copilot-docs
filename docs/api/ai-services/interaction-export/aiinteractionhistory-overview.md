@@ -7,7 +7,6 @@ ms.author: v-koenenkaty
 ms.localizationpriority: high
 doc_type: apiPageType
 ms.topic: reference
-zone_pivot_groups: graph-api-versions
 ---
 
 # Overview of the Microsoft 365 Copilot Interaction History API
