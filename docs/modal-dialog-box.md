@@ -1,24 +1,24 @@
 ---
-title: Add modal dialog box to Microsoft 365 Copilot agent Adaptive Card responses
-description: "Learn how to add modal dialog boxes to Microsoft 365 Copilot agent Adaptive Card responses."
+title: Allow inline editing of modal dialog boxes in Adaptive Card responses in agents for Microsoft 365 Copilot
+description: "Learn how to allow users to edit modal dialog boxes in Adaptive Card responses in agents for Microsoft 365 Copilot."
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: isrumnon
-ms.date: 10/31/2025
+ms.date: 11/07/2025
 ms.topic: concept-article
 ms.localizationpriority: medium
 ---
 
-# Add a modal dialog box to Adaptive Card responses (preview)
+# Allow inline editing of modal dialog boxes in Adaptive Card responses (preview)
 
-You can enhance Adaptive Card responses in declarative agents for Microsoft 365 Copilot by adding modal dialog boxes that allow inline editing. This approach allows the card to collect input data, send structured payloads to your app, and dynamically update the card based on returned responses - creating a seamless, stateful interaction without leaving the agent surface.
+You can enhance Adaptive Card responses in declarative agents for Microsoft 365 Copilot by allowing inline editing. This approach allows the card to collect input data, send structured payloads to your app, and dynamically update the card based on returned responses - creating a seamless, stateful interaction without leaving the agent surface.
 
 This article describes how to use the `Action.Execute` function (available starting with Adaptive Card schema version 1.5) to add modal dialog boxes to your Copilot agent responses. These dialog boxes allow users to edit and submit information via the Adaptive Card.
 
 > [!NOTE]
 > The `Action.Execute` function is currently in preview.
 
-## Define the Adaptive Card template
+## Adaptive Card editing
 
 To use the modal dialog box action:
 
@@ -214,7 +214,6 @@ The following request and response examples show what happens when a user takes 
   "turnCount": 1 
 } 
 ```
-
 
 ## Related content
 
