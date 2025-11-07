@@ -11,8 +11,6 @@ ms.topic: reference
 
 # Overview of the Microsoft 365 Copilot Interaction History API
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
 The Microsoft 365 Copilot Interaction History API enables organizations to retrieve AI interaction records across Microsoft 365 Copilot experiences, Copilot Chat, and third-party AI services integrated via Microsoft Purview. These records provide visibility into how AI is used within your enterprise for compliance, analytics, and governance scenarios.
 
 Get all Microsoft 365 Copilot interaction data, including user prompts to Copilot and Copilot responses. This API captures the user intent, the resources accessed by Copilot, and the response to the user for Microsoft 365 apps such as Teams, Word, and Outlook.
