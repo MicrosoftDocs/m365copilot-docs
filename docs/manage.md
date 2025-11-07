@@ -4,7 +4,7 @@ description: Learn about admin controls for Microsoft 365 Copilot agents.
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/06/2025
 ms.topic: conceptual
 ---
 
@@ -16,16 +16,13 @@ Agents are packaged, distributed, and managed in the same way as other apps that
 
 ## Microsoft 365 admin center
 
-Agents for Microsoft 365 Copilot can be [packaged and distributed as Microsoft 365 apps](./agents-are-apps.md) that are centrally managed from the **Integrated Apps** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
+Agents for Microsoft 365 Copilot can be [packaged and distributed as Microsoft 365 apps](./agents-are-apps.md) that are centrally managed from the **Copilot** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
-*Global Admin* and *Azure Application Admin* roles can deploy and uninstall apps, manage which apps are available to which users, and block apps in Microsoft 365 admin center.
-
-:::image type="content" source="./assets/images/mac-integrated-apps.png" alt-text="Screenshot of the 'Integrated apps' section of Microsoft 365 admin center":::
+:::image type="content" source="./assets/images/mac-agents.png" alt-text="Screenshot of the 'Agents' section of Microsoft 365 admin center." lightbox="./assets/images/mac-agents.png":::
 
 From Microsoft 365 admin center, admins can:
 
-- Enable/disable Copilot agents for the whole organization through Microsoft 365 admin center settings.
-- Deploy, make available, or block agents to the whole organization or specific users or groups.
+- Manage access to Copilot and Copilot agents for the whole organization or specific users or groups.
 - Review and approve agents submitted to the organizational catalog.
 - Monitor and find information about agents that have been shared across the organization.
 
