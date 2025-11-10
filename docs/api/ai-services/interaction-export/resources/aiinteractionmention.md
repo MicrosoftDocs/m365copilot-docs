@@ -22,6 +22,9 @@ zone_pivot_groups: graph-api-versions
 
 Represents a mention of an entity in an AI interaction.
 
+> [!NOTE]
+> For information about the AI interactions that are included with this API and the relevant licensing requirements, see **[Licensing and prerequisites](./aiinteractionhistory.md#licensing-and-prerequisites)** and **[Data coverage](./aiinteractionhistory.md#data-coverage-what-interactions-are-returned)** on `aiinteractionhistory`.
+
 ## Properties
 
 | Property      | Type                                                                      | Description                          |
