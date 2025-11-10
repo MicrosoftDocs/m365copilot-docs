@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.date: 11/11/2025
 ---
 
-# Use the Corporate Comms Crafter template to build an agent
+# Use the Corporate Communications Crafter template to build an agent
 
-Use the **Corporate Comms Crafter** template in the Microsoft 365 Copilot Studio.
+Use the **Corporate Communications Crafter** template in the Microsoft 365 Copilot Studio.
 
 You can use the **Corporate Comms Crafter** streamlines the process of writing internal and external messages—such as company announcements, newsletters, executive updates, and press releases, while ensuring that all content adheres to your organization’s tone, visual identity, and strategic communication principles. It's especially useful for roles like internal communications leads, brand/marketing specialists, and executive assistants, helping them create effective messages quickly and consistently across the company.
 
