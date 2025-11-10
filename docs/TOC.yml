@@ -148,7 +148,8 @@ items:
         - name: Meeting Coach
           href: agent-template-meeting-coach.md
         - name: Prompt Coach
-          href: Request for Proposal Assistant
+          href: agent-template-prompt-coach.md
+        - name: Request for Proposal Assistant
           href: agent-template-rfp-assistant.md
         - name: Quiz Tutor
           href: agent-template-quiz-tutor.md        
