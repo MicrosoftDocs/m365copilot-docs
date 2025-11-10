@@ -155,7 +155,7 @@ items:
         - name: Scrum Assistant
           href: agent-template-scrum-assistant.md        
         - name: Text Translator Assistant
-          href: agent-template-scrum-assistant.md
+          href: agent-template-text-translator.md
         - name: Writing Coach
           href: agent-template-writing-coach.md
       - name: Build agents with fine-tuned models (preview)
