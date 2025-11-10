@@ -22,8 +22,7 @@ zone_pivot_groups: graph-api-versions
 
 Represents all contexts associated with an interaction.
 
-> [!NOTE]
-> For information about the AI interactions that are included with this API and the relevant licensing requirements, see **[Licensing and prerequisites](./aiinteractionhistory.md#licensing-and-prerequisites)** and **[Data coverage](./aiinteractionhistory.md#data-coverage-what-interactions-are-returned)** on `aiinteractionhistory`.
+[!INCLUDE [aiinteractions-license-requirements](../../../includes/aiinteractions-license-requirements.md)]
 
 ## Properties
 
