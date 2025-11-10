@@ -135,6 +135,8 @@ items:
           href: agent-templates-overview.md
         - name: Career Coach
           href: agent-template-career-coach.md
+        - name: Corporate Communications Crafter
+          href: agent-template-corporate-communications.md        
         - name: Customer Insight Assistant
           href: agent-template-customer-insight.md
         - name: Idea Coach
@@ -146,10 +148,13 @@ items:
         - name: Meeting Coach
           href: agent-template-meeting-coach.md
         - name: Prompt Coach
-          href: agent-template-prompt-coach.md
+          href: Request for Proposal Assistant
+          href: agent-template-rfp-assistant.md
         - name: Quiz Tutor
-          href: agent-template-quiz-tutor.md
+          href: agent-template-quiz-tutor.md        
         - name: Scrum Assistant
+          href: agent-template-scrum-assistant.md        
+        - name: Text Translator Assistant
           href: agent-template-scrum-assistant.md
         - name: Writing Coach
           href: agent-template-writing-coach.md
