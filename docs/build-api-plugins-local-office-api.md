@@ -251,14 +251,14 @@ The reference documentation for declarative agents is at [Declarative agent sche
           },
           "run_for_functions": [
             "FillColor"
-          ]
+          ],
+		  "auth": {
+            "type": "None"
+		  }
         }
       ]
     }
     ```
-	
-	> [!NOTE]
-  > You might get a validation error from the plugin JSON that says you need an **auth** property. You can ignore this error. Your agent will work fine without that property.
 
 The reference documentation for API plugins is at [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md).
 
