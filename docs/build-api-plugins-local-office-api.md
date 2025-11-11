@@ -252,9 +252,9 @@ The reference documentation for declarative agents is at [Declarative agent sche
           "run_for_functions": [
             "FillColor"
           ],
-		  "auth": {
+          "auth": {
             "type": "None"
-		  }
+          }
         }
       ]
     }
