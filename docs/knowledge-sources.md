@@ -241,22 +241,31 @@ For more information, see [Deep link to Teams chat](/microsoftteams/platform/con
 
 ## Teams meetings
 
-Teams meetings knowledge allows you to scope your agent to answer questions about meetings. For example, your agent can respond to queries such as "Recap yesterday's meetings and list action items" or "What meetings do I have tomorrow?". This knowledge source isn't scoped.
+Teams meetings knowledge allows you to scope your agent to answer questions about meetings, including single meetings or meeting series. For example, your agent can respond to queries such as "Recap yesterday's meetings and list action items" or "What was said about Project X in my meetings?". This knowledge source can optionally be scoped to up to five specific meetings. This knowledge source gives the agent access to meeting metadata (subject, organizer, attendees, and title), transcript content, and meeting chats.
+
+> [!NOTE]
+> Referencing a meeting series is limited to the last 4 instances of the series.
 
 ### Add meetings knowledge source
 
-If you're using [Copilot Studio](copilot-studio-lite-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings**.
+If you're using [Copilot Studio](copilot-studio-lite-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats from groups, channels, and meetings**. If you want to scope the agent to specific meetings, select meeting instances or series.
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable meetings knowledge, add the `Meetings` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable meetings knowledge, add the `Meetings` value to the **capabilities** property in your agent manifest file, as shown in the following example. If you want to scope the agent to specific meetings, add the meeting's UID to the `items_by_id` property. For instructions on finding the ID of a meeting, see [Get the ID of a meeting](/troubleshoot/exchange/calendars/cdl/get-meeting-id).
 
 > [!NOTE]
-> You must be using [version 1.6](declarative-agent-manifest-1.6.md) or later of the declarative agent manifest schema to add the `Meetings` knowledge source.
->
+> You must be using [version 1.5](declarative-agent-manifest-1.5.md) or later of the declarative agent manifest schema to add the `Meetings` knowledge source. To scope the `Meetings` knowledge source to specific meetings, you must be using [version 1.6](declarative-agent-manifest-1.6.md) or later.
+
 ```json
 {
   "capabilities": [
     {
-      "name":"Meetings"
+      "name":"Meetings",
+      "items_by_id": [
+        {
+          "id": "010000002300A00045B6C7890D12E0030000000040056F7GH890IJ01000000000000000020000000J3L45M6A7NO8PQ9R0S12TUV340XY5Z00",
+          "is_series": true
+        }
+      ]
     }
   ]
 }

@@ -111,7 +111,13 @@
       ]
     },
     {
-      "name": "Meetings"
+      "name": "Meetings",
+      "items_by_id": [
+        {
+          "id": "010000002300A00045B6C7890D12E0030000000040056F7GH890IJ01000000000000000020000000J3L45M6A7NO8PQ9R0S12TUV340XY5Z00",
+          "is_series": true
+        }
+      ]
     },
     {
       "name": "EmbeddedKnowledge",

@@ -22,6 +22,7 @@ This schema version introduces the following changes from [version 1.5](declarat
 
 - Added the optional `sensitivity_label` property to specify Purview sensitivity labels for the agent.
 - Added the [embedded knowledge](#embedded-knowledge-object) capability, allowing agents to use local files or external resource snapshots as knowledge sources.
+- Added the `items_by_id` property to the [meetings object](#meetings-object), allowing agent creators to limit the meetings available to the agent.
 
 ## JSON schema
 
@@ -182,7 +183,13 @@ The capabilities object is the base type for objects in the `capabilities` prope
       ]
     },
     {
-      "name": "Meetings"
+      "name": "Meetings",
+      "items_by_id": [
+        {
+          "id": "010000002300A00045B6C7890D12E0030000000040056F7GH890IJ01000000000000000020000000J3L45M6A7NO8PQ9R0S12TUV340XY5Z00",
+          "is_series": true
+        }
+      ]
     }
   ]
 }
@@ -503,11 +510,23 @@ The model object contains the following property.
 
 Indicates that the declarative agent can search for information about meetings in the organization.
 
-The meetings object contains the following property.
+The meetings object contains the following properties.
 
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `Meetings`. |
+| Property      | Type                                                             | Description |
+| ------------- | ---------------------------------------------------------------- | ----------- |
+| `name`        | String                                                           | Required. Must be set to `Meetings`. |
+| `items_by_id` | Array of [Meeting identifier object](#meeting-identifier-object) | Optional. An array of objects that identify the meetings available to the declarative agent. The array can't contain more than five objects. If you omit this property, the declarative agent can search through all meetings. |
+
+##### Meeting identifier object
+
+Identifies a meeting.
+
+The meeting identifier object contains the following properties.
+
+| Property    | Type    | Description |
+| ----------- | ------- | ----------- |
+| `id`        | String  | Required. The unique identifier for the meeting. For instructions on finding the ID of a meeting, see [Get the ID of a meeting](/troubleshoot/exchange/calendars/cdl/get-meeting-id). |
+| `is_series` | Boolean | Required. Indicates whether the meeting is a series. |
 
 ### Embedded knowledge object
 
