@@ -14,8 +14,6 @@ ms.topic: reference
 
 TypeSpec for Microsoft 365 Copilot provides built-in capabilities that enable declarative agents to access Microsoft 365 services and external resources. Available capabilities include **CodeInterpreter**, **CopilotConnectors**, **Dataverse**, **Email**, **GraphicArt**, **Meetings**, **OneDriveAndSharePoint**, **People**, **ScenarioModels**, **TeamsMessages**, and **WebSearch**. Each capability can be configured with specific parameters to control scope.
 
-[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
-
 ## `AgentCapabilities.CodeInterpreter`
 
 Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more.

@@ -14,8 +14,6 @@ ms.topic: reference
 
 This guide provides complete examples of creating TypeSpec agents for Microsoft 365 Copilot, from simple basic agents to complex implementations with multiple capabilities and authentication methods.
 
-[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
-
 ## Basic agent with no capabilities
 
 **Use Case**: A simple agent that provides basic information and greetings without any external integrations or special capabilities.
