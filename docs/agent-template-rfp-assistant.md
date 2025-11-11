@@ -5,12 +5,12 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/11/2025
 ---
 
 # Use the RFP Proposal Generator template to build an agent
 
-Use the **RFP Proposal Generator** template in the Microsoft, tailored responses to Requests for Proposals (RFPs).
+Use the **RFP Proposal Generator** template in the Microsoft 365 Copilot Studio lite experience to build an agent that helps create comprehensive, tailored responses to Requests for Proposals (RFPs).
 
 This agent is designed to streamline the RFP response process by drawing on your organization’s existing proposal content and templates. It ensures that first drafts of proposals are consistent with company standards and closely aligned to each prospective client’s needs.
 

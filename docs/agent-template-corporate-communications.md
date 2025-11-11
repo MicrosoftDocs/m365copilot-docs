@@ -12,7 +12,7 @@ ms.date: 11/11/2025
 
 Use the **Corporate Communications Crafter** template in the Microsoft 365 Copilot Studio.
 
-You can use the **Corporate Comms Crafter** streamlines the process of writing internal and external messages—such as company announcements, newsletters, executive updates, and press releases, while ensuring that all content adheres to your organization’s tone, visual identity, and strategic communication principles. It's especially useful for roles like internal communications leads, brand/marketing specialists, and executive assistants, helping them create effective messages quickly and consistently across the company.
+The **Corporate Comms Crafter** streamlines the process of writing internal and external messages—such as company announcements, newsletters, executive updates, and press releases—while ensuring that all content adheres to your organization’s tone, visual identity, and strategic communication principles. It's especially useful for roles like internal communications leads, brand/marketing specialists, and executive assistants, helping them create effective messages quickly and consistently across the company.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ Corporate Comms Crafter agents are useful for a variety of corporate communicati
 
 You can enhance the functionality of your Corporate Comms Crafter agent by connecting it to additional resources or services (using Microsoft 365 Copilot connectors, Power Platform connectors, or relevant APIs). This can expand the agent’s knowledge and ensure it has access to the latest company-specific information. Consider these ideas:
 
-- **Incorporate brand guidelines and assets:** Connect a SharePoint site or upload documents containing your company’s brand guidelines, tone of voice documents, and visual identity assets. By grounding the your agent with this content, it will have direct reference to the approved standards and can enforce them even more accurately in every response.
+- **Incorporate brand guidelines and assets:** Connect a SharePoint site or upload documents containing your company’s brand guidelines, tone of voice documents, and visual identity assets. By grounding the agent with this content, it will have direct reference to the approved standards and can enforce them even more accurately in every response.
 - **Leverage internal communication archives:** Integrate the agent with internal knowledge sources like your organization’s Teams channels or Outlook emails (via Microsoft Graph connectors). This allows the agent to draw on real examples of past communications or current project discussions. For instance, it could use details from recent team updates or pull context from a previous company announcement to ensure consistency and relevance.
 - **Use additional connectors or plugins:** Depending on your systems, you might connect the agent to third-party services or databases. For example, plugging into an HR system or corporate intranet could let the agent fetch up-to-date facts (like employee stats for an announcement). Microsoft 365 and Power Platform connectors provide many options to link databases, compliance tools, or analytics sources that can enrich the agent’s responses.
 
