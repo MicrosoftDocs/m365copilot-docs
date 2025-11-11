@@ -21,8 +21,11 @@ Declarative agents are valuable in understanding and generating human-like text,
 This schema version introduces the following changes from [version 1.5](declarative-agent-manifest-1.5.md):
 
 - Added the optional `sensitivity_label` property to specify Purview sensitivity labels for the agent.
+- Added the optional `worker_agents` property to specify other declarative agents that can be used by this agent.
+- Added the optional `user_overrides` property to specify configured capabilities that the user can modify.
 - Added the [embedded knowledge](#embedded-knowledge-object) capability, allowing agents to use local files or external resource snapshots as knowledge sources.
 - Added the `items_by_id` property to the [meetings object](#meetings-object), allowing agent creators to limit the meetings available to the agent.
+- Added the `include_related_content` property to the [people object](#people-object), allowing agent creators to choose to include related documents, emails, and Teams messages when searching people content.
 
 ## JSON schema
 
@@ -48,7 +51,9 @@ The declarative agent manifest object contains the following properties.
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of 1-10 objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
 | `behavior_overrides`    | [Behavior overrides object](#behavior-overrides-object)               | Optional. Contains configuration settings that modify the behavior of the agent. |
 | `disclaimer`            | [Disclaimer object](#disclaimer-object)                               | Optional. Disclaimer text that is displayed to the user at the start of a conversation. |
-| `sensitivity_label`     | [Sensitivity label object](#sensitivity-label-object)                  | Optional. Specifies a Microsoft Purview sensitivity label for the agent. |
+| `sensitivity_label`     | [Sensitivity label object](#sensitivity-label-object)                 | Optional. Specifies a Microsoft Purview sensitivity label for the agent. |
+| `worker_agents`         | Array of [Worker agent object](#worker-agent-object)                  | Optional. Specifies other declarative agents that can be used by this agent. |
+| `user_overrides`        | Array of [User override object](#user-override-object)                | Optional. Specifies capabilities in the `capabilities` property that the user can modify. |
 
 ### Declarative agent manifest object example
 
@@ -479,11 +484,12 @@ The folders object contains the following property.
 
 Indicates that the declarative agent can search for information about people in the organization.
 
-The people object contains the following property.
+The people object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `People`. |
+| `include_related_content` | Boolean | Optional. Indicates whether to include related content when searching people data. When set to true, the DA will include related documents, emails, and Teams messages that the people in your organization have worked on. When set to false or omitted, only basic organizational information such as org charts, names, email addresses, and skills will be included. The default value is false. |
 
 #### Scenario models object
 
@@ -710,6 +716,30 @@ An optional JSON object that specifies the Microsoft Purview sensitivity label f
   }
 }
 ```
+
+### Worker agent object
+
+Identifies a declarative agent that can be used by this agent.
+
+> [!IMPORTANT]
+> This feature is not yet available.
+
+The worker agent object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `id`     | String | Required. The title ID of the application that contains the declarative agent.  This is returned when publishing the application with the Microsoft 365 Agents Toolkit or may be found in the [agent metadata section of the developer mode card](debugging-agents-vscode.md#agent-metadata-section). |
+
+### User override object
+
+Identifies capabilities in the agent that the user can modify.
+
+The user override object contains the following properties.
+
+| Property          | Type            | Description |
+| ----------------- | --------------- | ----------- |
+| `path`            | String          | Required. A JSONPath expression identifying the capability that users can modify. The JSONPath expression allows targeting specific capabilities by name only. |
+| `allowed_actions` | Array of String | Required. Specifies that actions can be taken for the specified capabilities. The only supported action is `remove`. |
 
 ## Declarative agent manifest example
 

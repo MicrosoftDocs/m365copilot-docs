@@ -34,6 +34,19 @@
   "disclaimer": {
     "text": "This declarative agent is a fictional example. You should not take it seriously."
   },
+  "worker_agents": [
+    {
+      "id": "P_2c27ae89-1f78-4ef7-824c-7d83f77eda28"
+    }
+  ],
+  "user_overrides": [
+    {
+      "path": "$.capabilities[?(@.name == 'OneDriveAndSharePoint')]",
+      "allowed_actions": [
+        "remove"
+      ]
+    }
+  ],
   "capabilities": [
     {
       "name": "WebSearch",
