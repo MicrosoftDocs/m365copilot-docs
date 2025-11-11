@@ -4,7 +4,7 @@ description: Learn how to build API plugins for Microsoft 365 Copilot with the O
 author: rickki
 ms.author: rickki
 ms.localizationpriority: medium
-ms.date: 07/30/2025
+ms.date: 11/11/2025
 ms.topic: how-to
 ---
 
@@ -165,8 +165,8 @@ The reference documentation for the manifest JSON is at [Microsoft 365 app manif
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.4/schema.json",
-      "version": "v1.4",
+      "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json",
+      "version": "v1.5",
       "name": "Excel Agent",
       "description": "Agent for working with Excel cells.",
       "instructions": "You are an agent for working with an add-in. You can work with any cells, not just a well-formatted table.",
@@ -185,7 +185,7 @@ The reference documentation for the manifest JSON is at [Microsoft 365 app manif
     }
     ```
 
-The reference documentation for declarative agents is at [Declarative agent schema 1.4 for Microsoft 365 Copilot](declarative-agent-manifest-1.5.md).
+The reference documentation for declarative agents is at [Declarative agent schema 1.5 for Microsoft 365 Copilot](declarative-agent-manifest-1.5.md).
 
 ### Configure the plugin
 
