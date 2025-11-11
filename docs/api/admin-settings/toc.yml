@@ -7,6 +7,16 @@ items:
     href: copilotadminlimitedmode-get.md
   - name: Update
     href: copilotadminlimitedmode-update.md
+- name: Copilot usage reports
+  items:
+  - name: Copilot report root
+    href: resources/copilotreportroot.md
+  - name: Get Microsoft 365 Copilot user count summary
+    href: copilotreportroot-getmicrosoft365copilotusercountsummary.md
+  - name: Get Microsoft 365 Copilot user count trend
+    href: copilotreportroot-getmicrosoft365copilotusercounttrend.md
+  - name: Get Microsoft 365 Copilot usage user detail
+    href: copilotreportroot-getmicrosoft365copilotusageuserdetail.md    
 - name: Complex types
   items:
   - name: Copilot admin
