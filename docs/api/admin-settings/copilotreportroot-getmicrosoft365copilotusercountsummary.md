@@ -2,9 +2,10 @@
 title: "copilotReportRoot: getMicrosoft365CopilotUserCountSummary"
 description: Aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period
 author: mestew
+ms.author: mstewart
 ms.date: 11/11/2025
 ms.localizationpriority: medium
-ms.subservice: microsoft-365-copilot
+ms.topic: reference
 doc_type: apiPageType
 ---
 
@@ -27,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "name": "copilotreportroot-getmicrosoft365copilotusercountsummary-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/copilotreportroot-getmicrosoft365copilotusercountsummary-permissions.md)]
+[!INCLUDE [permissions-table](./includes/permissions/copilotreportroot-getmicrosoft365copilotusercountsummary-permissions.md)]
 
 ## HTTP request
 

@@ -2,9 +2,10 @@
 title: "copilotReportRoot: getMicrosoft365CopilotUserCountTrend"
 description: Get the trend in the daily number of active and enabled users of Microsoft 365 Copilot for a specified time period.
 author: mestew
+ms.author: mstewart
 ms.date: 11/11/2025
 ms.localizationpriority: medium
-ms.subservice: microsoft-365-copilot
+ms.topic: reference
 doc_type: apiPageType
 ---
 

@@ -2,9 +2,10 @@
 title: "copilotReportRoot resource type"
 description: Container for Microsoft 365 Copilot reporting resources
 author: mestew
+ms.author: mstewart
 ms.date: 11/11/2025
 ms.localizationpriority: medium
-ms.subservice: microsoft-365-copilot
+ms.topic: reference
 doc_type: resourcePageType
 ---
 

@@ -2,9 +2,10 @@
 title: "copilotReportRoot: getMicrosoft365CopilotUsageUserDetail"
 description: Recent activity data for enabled users of Microsoft 365 Copilot apps
 author: mestew
+ms.author: mstewart
 ms.date: 11/11/2025
 ms.localizationpriority: medium
-ms.subservice: microsoft-365-copilot
+ms.topic: reference
 doc_type: apiPageType
 ---
 
