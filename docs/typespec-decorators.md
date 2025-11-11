@@ -13,8 +13,6 @@ ms.topic: reference
 
 # Decorators for TypeSpec for Microsoft 365 Copilot
 
-[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
-
 This reference covers the built-in decorators available in TypeSpec for Microsoft 365 Copilot, organized by their primary use case.
 
 > [!NOTE]
