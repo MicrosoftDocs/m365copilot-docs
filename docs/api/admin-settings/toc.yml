@@ -11,11 +11,11 @@ items:
   items:
   - name: Copilot report root
     href: resources/copilotreportroot.md
-  - name: Get Microsoft 365 Copilot user count summary
+  - name: Get Copilot user count summary
     href: copilotreportroot-getmicrosoft365copilotusercountsummary.md
-  - name: Get Microsoft 365 Copilot user count trend
+  - name: Get Copilot user count trend
     href: copilotreportroot-getmicrosoft365copilotusercounttrend.md
-  - name: Get Microsoft 365 Copilot usage user detail
+  - name: Get Copilot usage user detail
     href: copilotreportroot-getmicrosoft365copilotusageuserdetail.md    
 - name: Complex types
   items:
