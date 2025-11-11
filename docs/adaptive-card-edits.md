@@ -22,7 +22,7 @@ This article describes how to use the `Action.Execute` function (available start
 
 To use the modal dialog box action:
 
-- Add the [Adaptive Card template](/microsoft-365-copilot/extensibility/api-plugin-adaptive-cards) to your [API plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest-2.3).
+- Add the [Adaptive Card template](api-plugin-adaptive-cards.md) to your [API plugin manifest](api-plugin-manifest-2.4.md).
 - Include the `Action.Execute` schema in the Adaptive Card definition.
 
 The following example shows the schema for Action.Execute.
@@ -167,52 +167,52 @@ The following request and response examples show what happens when a user takes 
 ### Request
 
 ```json
-{ 
-  "clientInfo": { 
-    "clientPlatform": "chat-web", 
-    "clientAppName": "Office", 
-    "clientEntrypoint": "chat-officeweb", 
-    "clientSessionId": "d8bc8369-277e-c48c-2faf-3c894945abe0" 
-  }, 
-  "message": { 
-    "text": "Card action execute", 
-    "messageType": "ExecuteActionRequest", 
-    "actionId": "jiraclouddev_searchForIssuesUsingJql(jql=\"assignee=currentUser() AND type=Task AND created >= -30d\", startAt=0, maxResults=10)", 
-    "author": "user", 
-    "executeActionData": { 
-      "gptId": "gpt_ud", 
-      "gptActionId": "plugin_1", 
-      "titleId": "U_e80ce190-4f5a-ee50-ce95-dcbabd8cd2ec", 
-      "verb": "updateTickets", 
-      "data": { 
-        "ticketId": 1, 
-        "title": "Bug Fix", 
-        "description": "Fix login issues", 
-        "severity": "3", 
-        "dueDate": "2025-06-20", 
-        "completionPercentage": "97" 
-      } 
-    } 
-  } 
+{
+  "clientInfo": {
+    "clientPlatform": "chat-web",
+    "clientAppName": "Office",
+    "clientEntrypoint": "chat-officeweb",
+    "clientSessionId": "d8bc8369-277e-c48c-2faf-3c894945abe0"
+  },
+  "message": {
+    "text": "Card action execute",
+    "messageType": "ExecuteActionRequest",
+    "actionId": "jiraclouddev_searchForIssuesUsingJql(jql=\"assignee=currentUser() AND type=Task AND created >= -30d\", startAt=0, maxResults=10)",
+    "author": "user",
+    "executeActionData": {
+      "gptId": "gpt_ud",
+      "gptActionId": "plugin_1",
+      "titleId": "U_e80ce190-4f5a-ee50-ce95-dcbabd8cd2ec",
+      "verb": "updateTickets",
+      "data": {
+        "ticketId": 1,
+        "title": "Bug Fix",
+        "description": "Fix login issues",
+        "severity": "3",
+        "dueDate": "2025-06-20",
+        "completionPercentage": "97"
+      }
+    }
+  }
 }
 ```
 
 ### Response
 
 ```json
-{ 
-  "text": "Mohit custom text", 
-  "executeActionData": "{\"type\":\"AdaptiveCard\",\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.5\",\"body\":[{\"type\":\"Container\",\"style\":\"good\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"✅ Ticket updated successfully\",\"color\":\"default\",\"weight\":\"bolder\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"1\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"Bug Fix\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"Fix login issues\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"3\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"2025-06-20\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"97\",\"wrap\":true}]}]}", 
-  "messageType": "ExecuteActionResponse", 
-  "author": "bot", 
-  "createdAt": "2025-04-30T11:07:44.9557335+00:00", 
-  "timestamp": "2025-04-30T11:07:44.9557335+00:00", 
-  "messageId": "649112bc-7fe2-40bd-990d-928364fb173c", 
-  "requestId": "3058aa09-c9b6-3425-b0ef-49ef2ad4b9a5", 
-  "offense": "Unknown", 
-  "spokenText": "Ticket updated successfully", 
-  "turnCount": 1 
-} 
+{
+  "text": "Mohit custom text",
+  "executeActionData": "{\"type\":\"AdaptiveCard\",\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.5\",\"body\":[{\"type\":\"Container\",\"style\":\"good\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"✅ Ticket updated successfully\",\"color\":\"default\",\"weight\":\"bolder\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"1\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"Bug Fix\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"Fix login issues\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"3\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"2025-06-20\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"97\",\"wrap\":true}]}]}",
+  "messageType": "ExecuteActionResponse",
+  "author": "bot",
+  "createdAt": "2025-04-30T11:07:44.9557335+00:00",
+  "timestamp": "2025-04-30T11:07:44.9557335+00:00",
+  "messageId": "649112bc-7fe2-40bd-990d-928364fb173c",
+  "requestId": "3058aa09-c9b6-3425-b0ef-49ef2ad4b9a5",
+  "offense": "Unknown",
+  "spokenText": "Ticket updated successfully",
+  "turnCount": 1
+}
 ```
 
 ## Related content

@@ -256,11 +256,11 @@ The reference documentation for declarative agents is at [Declarative agent sche
       ]
     }
     ```
-	
-	> [!NOTE]
+
+    > [!NOTE]
   > You might get a validation error from the plugin JSON that says you need an **auth** property. You can ignore this error. Your agent will work fine without that property.
 
-The reference documentation for API plugins is at [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md).
+The reference documentation for API plugins is at [API plugin manifest schema 2.4 for Microsoft 365 Copilot](api-plugin-manifest-2.4.md).
 
 ## Create the JavaScript functions
 

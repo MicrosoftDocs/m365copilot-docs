@@ -29,7 +29,7 @@ To use `Action.OpenUrlDialog`, you need the following prerequisites:
 
 To use the modal dialog box action:
 
-- Add the [Adaptive Card template](/microsoft-365-copilot/extensibility/api-plugin-adaptive-cards) to your [API plugin manifest]( /microsoft-365-copilot/extensibility/api-plugin-manifest-2.3).
+- Add the [Adaptive Card template](api-plugin-adaptive-cards.md) to your [API plugin manifest](api-plugin-manifest-2.4.md).
 - Include the `Action.OpenUrlDialog` schema in the Adaptive Card definition.
 
 The following example shows the schema for `Action.OpenUrlDialog`.
@@ -270,4 +270,4 @@ Determine success or failure of the authentication request based on the informat
 
 ## Related content
 
-- [API plugin manifest schema](/microsoft-365-copilot/extensibility/api-plugin-manifest-2.3)
+- [API plugin manifest schema](api-plugin-manifest-2.4.md)
