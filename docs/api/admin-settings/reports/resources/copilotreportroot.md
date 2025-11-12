@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 # copilotReportRoot resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Represents a container for Microsoft 365 Copilot reporting resources. For more information about report views and names, see [Microsoft 365 reports - Microsoft 365 Copilot usage](/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage).
 
