@@ -48,7 +48,7 @@ When building agents with the toolkit, you can choose between two SDKs depending
 
 The [Microsoft 365 Agents SDK](create-deploy-agents-sdk.md) is a framework designed for building full-stack, multi-channel agents that can operate across Microsoft 365 Copilot, Teams, partner platforms, custom applications, and websites.
 
-its IDeal for use cases that require custom orchestration using frameworks like Semantic Kernel or LangChain, and supports integration with any AI models or services. This SDK is best suited for organizations or ISVs that need highly tailored agents with advanced capabilities and the ability to operate across multiple channels.
+It's ideal for use cases that require custom orchestration using frameworks like Semantic Kernel or LangChain, and supports integration with any AI models or services. This SDK is best suited for organizations or ISVs that need highly tailored agents with advanced capabilities and the ability to operate across multiple channels.
 
 #### Teams AI Library
 

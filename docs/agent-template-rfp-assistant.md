@@ -25,7 +25,7 @@ Before you begin working with the RFP Proposal Generator template, make sure you
 
 ## Capabilities
 
-RFP Proposal Generator agents are especially useful in sales and proposal development scenarios. The following table highlights  common use cases and how the agent adds value in each situation:
+RFP Proposal Generator agents are especially useful in sales and proposal development scenarios. The following table highlights common use cases and how the agent adds value in each situation.
 
 | Scenario | Description |
 |---|---|
@@ -35,9 +35,9 @@ RFP Proposal Generator agents are especially useful in sales and proposal develo
 | **Accelerating internal review workflows** | Streamlining the process of getting input and approval from different stakeholders. The agent can highlight areas where specific team input is needed and route those issues to the appropriate team for review. For example, it can flag that legal should review the terms section, or that engineering should validate a technical description. By structuring the draft clearly and even tagging sections by owner, the agent makes it easier for each reviewer to do their part. Some organizations might instruct the agent to include placeholders like "`<insert pricing>`" in pricing sections if human review is required. This organized first pass means less back-and-forth emails and clarifications during review, as everyone knows where their attention is needed. |
 | **Enhancing proposal quality with prefilled content** | Improving the overall quality of the proposal by using the agent to prefill content with high-quality material. For instance, the agent can automatically insert the latest customer success stories or relevant case studies from your library whenever it sees an opportunity to strengthen a response. It might also populate tables, such as feature comparison matrices, with up-to-date data from your product specs. When you seed the proposal with rich, relevant content from the get-go, it helps the agent avoid generic or shallow responses. The sales team then only needs to refine this content, rather than create it from scratch, resulting in a more polished final proposal. |
 
-## Extension Opportunities
+## Extension opportunities
 
-You can further enhance the RFP Proposal Generator agent by integrating other data and functionality. Here are some ways to extend the agent’s capabilities beyond its out-of-the-box setup:
+You can further enhance the RFP Proposal Generator agent by integrating additional data and functionality. The following examples list some ways to extend the agent’s capabilities beyond its default setup:
 
 - **Upload example files for context:** Users can attach RFP documents or appendices during interactions. The agent can reference these files to provide more targeted responses—for example, locating and answering a specific question directly from the uploaded RFP. This ensures outputs are tailored to the actual document. (See Microsoft’s guidance on file upload.)
 - **Connect to past proposal repositories (SharePoint):** Linking a SharePoint folder of previous RFP responses allows the agent to reuse proven content. If a new RFP asks about a familiar topic—like sustainability—the agent can retrieve and adapt a strong answer from past proposals, saving time and maintaining consistency. (Refer to Copilot Studio documentation for setup.)

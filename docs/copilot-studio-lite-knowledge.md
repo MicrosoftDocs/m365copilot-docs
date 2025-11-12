@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 10/20/2025
+ms.date: 11/11/2025
 ---
 
 # Add knowledge sources to your declarative agent in Copilot Studio
@@ -178,13 +178,13 @@ The following table lists the file types that you can add as knowledge to your a
 
 | File type | Embedded file limit |
 | ----------| ------------------- |
-| .doc      | 100 MB |
-| .docx     | 100 MB |
+| .doc      | 512 MB |
+| .docx     | 512 MB |
 | .html\*   |  NA    |
-| .pdf      | 100 MB |
-| .ppt      | 100 MB |
-| .pptx     | 100 MB |
-| .txt      | 100 MB |
+| .pdf      | 512 MB |
+| .ppt      | 512 MB |
+| .pptx     | 512 MB |
+| .txt      | 512 MB |
 | .xls      | 30 MB |
 | .xlsx     | 30 MB |
 
