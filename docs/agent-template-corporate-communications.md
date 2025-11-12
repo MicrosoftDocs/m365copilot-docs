@@ -12,7 +12,7 @@ ms.date: 11/11/2025
 
 Use the **Corporate Communications Crafter** template in the Microsoft 365 Copilot Studio.
 
-The **Corporate Comms Crafter** streamlines the process of writing internal and external messages—such as company announcements, newsletters, executive updates, and press releases—while ensuring that all content adheres to your organization’s tone, visual identity, and strategic communication principles. It's especially useful for roles like internal communications leads, brand/marketing specialists, and executive assistants, helping them create effective messages quickly and consistently across the company.
+The **Corporate Comms Crafter** template streamlines the process of writing internal and external messages—such as company announcements, newsletters, executive updates, and press releases—while ensuring that all content adheres to your organization’s tone, visual identity, and strategic communication principles. It's especially useful for roles like internal communications leads, brand/marketing specialists, and executive assistants, helping them create effective messages quickly and consistently across the company.
 
 ## Prerequisites
 
