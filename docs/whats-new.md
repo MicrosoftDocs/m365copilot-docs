@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Embedded file content file size limit increase
 
-You can now upload files up to 512 MB in size when you embed file content as knowledge in Copilot Studio. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
+You can now upload files up to 512 MB in size when you embed file content as knowledge in the Copilot Studio lite experience. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
 
 ## October 2025
 
