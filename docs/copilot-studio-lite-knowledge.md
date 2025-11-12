@@ -20,7 +20,7 @@ For more information about supported knowledge sources and licensing requirement
 
 To add knowledge sources to your agent:
 
-1. In Microsoft 365 Copilot, choose **Create agent**, and go to the **Configure** tab.
+1. In Microsoft 365 Copilot, choose **New agent**, and and choose **Configure new agent**.
 2. In the **Knowledge** section, use one of the following methods to add knowledge sources:
    - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
    - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
@@ -194,7 +194,7 @@ The following table lists the file types that you can add as knowledge to your a
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
 > - To optimize for Copilot, we recommend that you keep the contents of files that you upload concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 
-### People data
+## People data
 
 You can ground your agent in People data to deliver more personalized and context-aware responses. People data combines public information about individuals (such as name, position, skills, and organizational relationships) with a personal view of the user’s connections, collaborators, and relevant insights. This knowledge source enables agents to:
 
@@ -203,10 +203,14 @@ You can ground your agent in People data to deliver more personalized and contex
 - Personalize responses based on the user’s relationships, past interactions, and preferences.
 - Provide recommendations and communication tips tailored to specific teams or individuals.
 
-When enabled, People data is automatically integrated for agents created by users with a Microsoft 365 Copilot license. Makers can disable this capability in the agent configuration UI. People data respects existing permissions and privacy controls, and inherits the sharing user’s access rights when agents are shared. This feature is available only to licensed users.
+People data is enabled by default for agents created by users with a Microsoft 365 Copilot license. You can disable this capability in the agent configuration UI. To disable People data:
+
+- On the **Configure** tab in Copilot Studio, select the toggle next to **Reference people in organization**.
+
+People data respects existing permissions and privacy controls, and inherits the sharing user's access rights when agents are shared. This feature is available only to licensed users.
 
 > [!NOTE]
-> People data acts as a personalization layer, enriching agent responses with context from Microsoft 365. It does not introduce new privacy risks, but provides transparency and control for users and administrators.
+> People data acts as a personalization layer, enriching agent responses with context from Microsoft 365. It doesn't introduce new privacy risks, but provides transparency and control for users and administrators.
 
 ## Copilot connectors
 
@@ -281,10 +285,10 @@ Some user requests don't require knowledge-based searches; the agent can respond
 
 When you enable this feature, the agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
 
-To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
+To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Only use specified sources**.
 
 > [!NOTE]
-> The lite experience in Copilot Studio for Microsoft 365 doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use the full experience in Copilot. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
+> The Copilot Studio lite experience doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you use the Copilot Studio full experience. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## Related content
 

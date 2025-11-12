@@ -4,7 +4,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/12/2025
 ms.topic: conceptual
 ---
 
@@ -12,9 +12,9 @@ ms.topic: conceptual
 
 You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.5.md#capabilities-object) in the manifest reference and the **Knowledge** section in the Copilot Studio lite experience provide several options for you to unlock features for your users. This article describes the knowledge sources that you can add to your agents.
 
-The following table lists the capabilities and knowledge sources you can configure by by using Copilot Studio or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
+The following table lists the capabilities and knowledge sources you can configure by using the [Copilot Studio lite experience](copilot-studio-lite.md) or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
 
-| Capability or knowledge source | Copilot Studio | Agents Toolkit | License or metered usage required? |
+| Capability or knowledge source | Copilot Studio lite experience | Agents Toolkit | License or metered usage required? |
 |:-------------------------------|:--------------|:--------------|:-----------------------------------|
 | Code interpreter | :white_check_mark: | :white_check_mark: | No |
 | Image generator | :white_check_mark: | :white_check_mark: | No |
@@ -26,7 +26,7 @@ The following table lists the capabilities and knowledge sources you can configu
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
 | Dataverse | :x: | :white_check_mark:\* | Yes |
 | Email | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
-| People | :x: | :white_check_mark: | Yes (license only) |
+| People | :white_check_mark: | :white_check_mark: | Yes (license only) |
 | Teams messages | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
 | Teams meetings | :white_check_mark: | :white_check_mark: | Yes (license only) |
 
@@ -172,10 +172,9 @@ If you don't reference a shared mailbox or a folder, the agent search isn't scop
 
 People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This knowledge source isn't scoped.
 
-> [!NOTE]
-> People knowledge isn't currently available in Copilot Studio.
-
 ### Add people knowledge source
+
+If you're using [Copilot Studio](copilot-studio-lite.md) to create your agent, the People knowledge source is enabled by default for users with a Microsoft 365 Copilot license. 
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
 
