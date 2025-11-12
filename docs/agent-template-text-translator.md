@@ -32,7 +32,7 @@ Text Translator agents are useful in a wide range of scenarios where language or
 | **Language games for learning** | Making language practice fun and relevant. A user could take a simple sentence (“The cat is on the mat.”) and ask the agent to turn it into a learning game. The agent might create a fill-in-the-blank exercise (“The ___ is on the ___.”) or ask a question (“What is on the mat?”) to prompt the user to respond in the target language. This scenario is great for language learners who want to practice in a low-stakes setting, or for team-building activities in a multilingual team where colleagues challenge each other to mini language quizzes. |
 | **Document analysis for style and syntax** | Offering a comprehensive review of a longer document’s language quality. In this scenario, a user can attach or paste a portion of a document (such as an executive summary or a draft blog post) and have the agent provide feedback on grammar, syntax, and style. The Text Translator goes through the text and highlight things like run-on sentences, inconsistent tone, or complex jargon, giving suggestions to improve clarity and flow. This functions like an advanced proof-reader, ensuring that important documents are polished and reader-friendly. |
 
-## Extension Opportunities
+## Extension opportunities
 
 You can extend the Text Translator agent’s functionality by connecting it to more resources or services. These enhancements can provide the agent with more context, adhere to specific organizational guidelines, or introduce new interactive features:
 
