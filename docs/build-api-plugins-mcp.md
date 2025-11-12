@@ -15,16 +15,9 @@ This guide walks you through the process of integrating your MCP server with Mic
 ## Prerequisites
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
-- An existing REST API with an OpenAPI specification (this walkthrough uses the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin))
+- A GitHub account
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
-
-- Visual Studio Code
-- Microsoft 365 Agents Toolkit extension for VS Code
-- Working GitHub account with sample data
-- Teams VS Code extension ([ms-teams-vscode-extension-6.0.3.vsix](https://microsoft.sharepoint.com/:u:/t/ActionPlatform/Ee9pZdVWbshBkeTSQhLxJPYBidmUEzRfHzQfBZIqyzcBOw?e=vnrZes))
-- Enable Copilot variants: `EnableMcpServers`, `EnableMcpServerDynamicTools`, `UseGeneratedPluginNamespace`, `cdxflux_v3_disable_spoofing_plugin_response`
-- MCP server with a /discover endpoint and valid authentication credentials (OAuth2.1 or API key)
 
 ## Create the agent
 
@@ -37,9 +30,8 @@ This guide walks you through the process of integrating your MCP server with Mic
 1. Select **Declarative Agent**.
 
 1. Select **Add an Action**, then select **Start with an MCP Server**.
-   - Select "Start with MCP server" to initiate integration.
 
-1. Enter your MCP server URL. For example, `https://api.githubcopilot.com/mcp/`.
+1. Enter the GitHub MCP server URL `https://api.githubcopilot.com/mcp/`.
 
 1. Choose a location for the API plugin project.
 
