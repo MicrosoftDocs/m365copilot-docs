@@ -24,9 +24,11 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 | Permission type                        | Least privileged permissions | Higher privileged permissions |
 |:---------------------------------------|:-----------------------------|:------------------------------|
-| Delegated (work or school account)     | Not supported.               | Not supported.                |
+| Delegated (work or school account)     | Reports.Read.All             | Not available.                |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
-| Application                            | Not supported.               | Not supported.                |
+| Application                            | Reports.Read.All             | Not available.                |
+
+[!INCLUDE [rbac-copilot-usage-apis](../../includes/rbac-copilot-usage-apis.md)]
 
 ## HTTP request
 
