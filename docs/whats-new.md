@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 11/12/2025
 ms.topic: overview
 ---
 
@@ -16,7 +16,11 @@ For the latest information, announcements, and news about preview and generally 
 
 ## November 2025
 
-### Embedded file content file size limit increase
+### People knowledge source in Copilot Studio lite experience
+
+The People knowledge source is now available in the Copilot Studio lite experience, allowing agents to answer questions about individuals in your organization and deliver more personalized, context-aware responses. For more information, see [People data](copilot-studio-lite-knowledge.md#people-data) and [Add knowledge sources to your declarative agent](knowledge-sources.md#people).
+
+### Embedded file content file size limit increase to 512 MB
 
 You can now upload files up to 512 MB in size when you embed file content as knowledge in the Copilot Studio lite experience. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
 
