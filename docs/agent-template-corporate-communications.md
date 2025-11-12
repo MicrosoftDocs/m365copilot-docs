@@ -23,7 +23,7 @@ Before you begin working with the Corporate Comms Crafter template, make sure yo
 
 ## Capabilities
 
-Corporate Comms Crafter agents are useful for a variety of corporate communication scenarios. The following table shows some key use cases and how the agent adds value in each scenario:
+Corporate Comms Crafter agents are useful for a variety of corporate communication scenarios. The following table shows some key use cases and how the agent adds value in each scenario.
 
 | Scenario | Description |
 |---|---|
