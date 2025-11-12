@@ -75,8 +75,37 @@ The following example shows the response. The response object shown here might b
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
+Content-Length: 10747
 
 {
-  "value": "Stream"
+    "value": [
+        {
+            "reportRefreshDate": "2025-08-20",
+            "reportPeriod": 7,
+            "adoptionByDate": [
+                {
+                    "reportDate": "2025-08-20",
+                    "anyAppEnabledUsers": 357584,
+                    "anyAppActiveUsers": 94745,
+                    "microsoftTeamsEnabledUsers": 357451,
+                    "microsoftTeamsActiveUsers": 72272,
+                    "wordEnabledUsers": 357451,
+                    "wordActiveUsers": 6602,
+                    "powerPointEnabledUsers": 357451,
+                    "powerPointActiveUsers": 2231,
+                    "outlookEnabledUsers": 357451,
+                    "outlookActiveUsers": 11786,
+                    "excelEnabledUsers": 357451,
+                    "excelActiveUsers": 1712,
+                    "oneNoteEnabledUsers": 357451,
+                    "oneNoteActiveUsers": 492,
+                    "loopEnabledUsers": 357451,
+                    "loopActiveUsers": 340,
+                    "copilotChatEnabledUsers": 357451,
+                    "copilotChatActiveUsers": 26609
+                },
+            ]
+        }
+    ]
 }
 ```
