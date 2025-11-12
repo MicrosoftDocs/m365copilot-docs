@@ -20,8 +20,7 @@ This schema version introduces the following changes from [version 2.3](api-plug
 
 - Added support for Model Context Protocol (MCP) servers.
   - Added a new value for the `type` property in [Runtime object](#runtime-object): `RemoteMCPServer`.
-  - Added the [MCP execution spec object](#mcp-execution-spec-object) to describe how to connect to an MCP server.
-  - The `spec` property in [Runtime object](#runtime-object) can now be an [OpenAPI specification object](#openapi-specification-object), [Local endpoint specification object](#local-endpoint-specification-object), or [MCP execution spec object](#mcp-execution-spec-object).
+  - Added the [MCP server spec object](#mcp-server-spec-object) to describe how to connect to an MCP server.
 - Enhanced [Response semantics object](#response-semantics-object) to support file references for static templates.
   - The `static_template` property can now reference an external file using a `file` property.
 - Updated [Confirmation object](#confirmation-object) `isNonConsequential` property behavior for OpenAPI GET actions.
@@ -433,7 +432,7 @@ The OpenAPI runtime object contains the following properties.
 | `type` | String | Required. Identifies the type of runtime. Valid values are `OpenApi`, `LocalPlugin`, and `RemoteMCPServer`. |
 | `auth` | [Runtime authentication object](#runtime-authentication-object) | Required. Authentication information required to invoke the runtime. |
 | `run_for_functions` | Array of String | Optional. The names of the functions that are available in this runtime. If this property is omitted, all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
-| `spec` | [OpenAPI specification object](#openapi-specification-object), [Local endpoint specification object](#local-endpoint-specification-object), or [MCP execution spec object](#mcp-execution-spec-object) | Required. Contains the runtime-specific information required to invoke the runtime. |
+| `spec` | [OpenAPI specification object](#openapi-specification-object), [Local endpoint specification object](#local-endpoint-specification-object), or [MCP server spec object](#mcp-server-spec-object) | Required. Contains the runtime-specific information required to invoke the runtime. |
 
 #### OpenAPI specification object
 

@@ -55,7 +55,7 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
 1. Select the **ATK: Fetch action from MCP** button in the file editor, then select **ai-plugin.json**.
 
-    :::image type="content" source="assets/images/api-plugins/fetch-mcp-actions.png" alt-text="A screenshot of the "ATK: Fetch action from MCP" and "Start" buttons in mcp.json":::
+    :::image type="content" source="assets/images/api-plugins/fetch-mcp-actions.png" alt-text="A screenshot of the 'ATK: Fetch action from MCP' and 'Start' buttons in mcp.json":::
 
 1. Select operations for the agent to use. For this exercise, choose **search_repositories**.
 
