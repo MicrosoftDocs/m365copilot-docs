@@ -82,6 +82,8 @@ items:
           href: overview-api-plugins.md
         - name: Build an API plugin with TypeSpec
           href: build-api-plugins-typespec.md
+        - name: Build an API plugin with an MCP server
+          href: build-api-plugins-mcp.md
         - name: Build an API plugin with a new API
           href: build-api-plugins-new-api.md
         - name: Build an API plugin from an existing API
