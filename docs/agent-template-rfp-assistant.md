@@ -25,7 +25,7 @@ Before you begin working with the RFP Proposal Generator template, make sure you
 
 ## Capabilities
 
-RFP Proposal Generator agents are especially useful in sales and proposal development scenarios. The following table highlights  common use cases and how the agent adds value in each situation:
+RFP Proposal Generator agents are especially useful in sales and proposal development scenarios. The following table highlights common use cases and how the agent adds value in each situation.
 
 | Scenario | Description |
 |---|---|
