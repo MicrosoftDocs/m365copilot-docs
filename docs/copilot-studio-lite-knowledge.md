@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 11/12/2025
 ---
 
 # Add knowledge sources to your declarative agent in Copilot Studio
@@ -193,6 +193,20 @@ The following table lists the file types that you can add as knowledge to your a
 > [!NOTE]
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
 > - To optimize for Copilot, we recommend that you keep the contents of files that you upload concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
+
+### People data
+
+You can ground your agent in People data to deliver more personalized and context-aware responses. People data combines public information about individuals (such as name, position, skills, and organizational relationships) with a personal view of the user’s connections, collaborators, and relevant insights. This knowledge source enables agents to:
+
+- Look up user and colleague profiles, including reporting structure and contact details.
+- Identify domain experts and key collaborators within the organization.
+- Personalize responses based on the user’s relationships, past interactions, and preferences.
+- Provide recommendations and communication tips tailored to specific teams or individuals.
+
+When enabled, People data is automatically integrated for agents created by users with a Microsoft 365 Copilot license. Makers can disable this capability in the agent configuration UI. People data respects existing permissions and privacy controls, and inherits the sharing user’s access rights when agents are shared. This feature is available only to licensed users.
+
+> [!NOTE]
+> People data acts as a personalization layer, enriching agent responses with context from Microsoft 365. It does not introduce new privacy risks, but provides transparency and control for users and administrators.
 
 ## Copilot connectors
 
