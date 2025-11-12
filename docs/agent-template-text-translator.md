@@ -21,7 +21,7 @@ Before you begin working with the Text Translator template, make sure you have:
 
 ## Capabilities
 
-Text Translator agents are useful in a wide range of scenarios where language or tone is a factor. The table below outlines key use cases and how the agent adds value in each:
+Text Translator agents are useful in a wide range of scenarios where language or tone is a factor. The following table outlines key use cases and how the agent adds value in each.
 
 | Scenario | Description |
 |---|---|
