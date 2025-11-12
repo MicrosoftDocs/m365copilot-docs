@@ -37,7 +37,7 @@ RFP Proposal Generator agents are especially useful in sales and proposal develo
 
 ## Extension opportunities
 
-You can further enhance the RFP Proposal Generator agent by integrating additional data and functionality. Here are some ways to extend the agent’s capabilities beyond its out-of-the-box setup:
+You can further enhance the RFP Proposal Generator agent by integrating additional data and functionality. The following examples list some ways to extend the agent’s capabilities beyond its default setup:
 
 - **Upload example files for context:** Users can attach RFP documents or appendices during interactions. The agent can reference these files to provide more targeted responses—for example, locating and answering a specific question directly from the uploaded RFP. This ensures outputs are tailored to the actual document. (See Microsoft’s guidance on file upload.)
 - **Connect to past proposal repositories (SharePoint):** Linking a SharePoint folder of previous RFP responses allows the agent to reuse proven content. If a new RFP asks about a familiar topic—like sustainability—the agent can retrieve and adapt a strong answer from past proposals, saving time and maintaining consistency. (Refer to Copilot Studio documentation for setup.)
