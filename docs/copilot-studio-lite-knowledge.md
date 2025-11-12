@@ -288,7 +288,7 @@ When you enable this feature, the agent answers simple questions that don't requ
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Only use specified sources**.
 
 > [!NOTE]
-> The Copilot Studio lite experience doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you use the Copilot Studio full experience. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
+> The Copilot Studio lite experience doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use the Copilot Studio full experience. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## Related content
 
