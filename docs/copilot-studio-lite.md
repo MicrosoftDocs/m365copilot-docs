@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-/ms.date: 11/17/2025
+ms.date: 11/17/2025
 ms.topic: conceptual
 ---
 
