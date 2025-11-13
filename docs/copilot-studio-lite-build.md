@@ -73,7 +73,7 @@ For more information, see [Add knowledge sources](copilot-studio-lite-knowledge.
 
 In the **Capabilities** section of the **Configure** tab, you can choose to add the following capabilities to your agent:
 
-- [Code interpreter](code-interpreter.md) - Uses Python code to solve complex math problems, analyze data, and generate visualizations. To add this capability, select the toggle next to **Create documents, charts, and code**.
+- [Code interpreter](code-interpreter.md) - Solves complex math problems, analyze data, and generate visualizations. To add this capability, select the toggle next to **Create documents, charts, and code**.
 - [Image generator](image-generator.md) - Generates images based on user prompts. To add this capability, select the toggle next to **Create images**.
 
 ## Build from a template
