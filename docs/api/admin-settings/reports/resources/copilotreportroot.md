@@ -7,13 +7,19 @@ ms.date: 11/11/2025
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: resourcePageType
+zone_pivot_groups: graph-api-versions
 ---
 
 <!-- cSpell:ignore mestew mstewart -->
 
 # copilotReportRoot resource type
 
+:::zone pivot="graph-v1"
+:::zone-end
+
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Represents a container for Microsoft 365 Copilot reporting resources. For more information about report views and names, see [Microsoft 365 reports - Microsoft 365 Copilot usage](/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage).
 

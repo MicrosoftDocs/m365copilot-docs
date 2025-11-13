@@ -7,6 +7,7 @@ ms.date: 11/11/2025
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: apiPageType
+zone_pivot_groups: graph-api-versions
 ---
 
 # copilotReportRoot: getMicrosoft365CopilotUsageUserDetail
@@ -14,7 +15,9 @@ doc_type: apiPageType
 <!-- cSpell:ignore mestew mstewart -->
 <!-- markdownlint-disable MD024 -->
 
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.
 
@@ -32,9 +35,21 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
+:::zone pivot="graph-v1"
+
+``` http
+GET https://graph.microsoft.com/v1.0/copilot/reports/getMicrosoft365CopilotUsageUserDetail
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
 ``` http
 GET https://graph.microsoft.com/beta/copilot/reports/getMicrosoft365CopilotUsageUserDetail
 ```
+
+:::zone-end
 
 ## Function parameters
 
@@ -64,15 +79,27 @@ If successful, this function returns a `200 OK` response code and a Stream in th
 
 The following example shows a request.
 
+:::zone pivot="graph-v1"
+
 ``` http
-GET https://graph.microsoft.com/beta/copilot/reports/getMicrosoft365CopilotUsageUserDetail(period='D7')
+GET https://graph.microsoft.com/v1.0/copilot/reports/getMicrosoft365CopilotUsageUserDetail(period='D7')?$format=application/json
 ```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
+``` http
+GET https://graph.microsoft.com/beta/copilot/reports/getMicrosoft365CopilotUsageUserDetail(period='D7')?$format=application/json
+```
+
+:::zone-end
 
 ### Response
 
 The following example shows the response. The response object shown here might be shortened for readability.
 
-``` http
+``` json
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 10747
