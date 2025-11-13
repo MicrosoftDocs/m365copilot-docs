@@ -4,7 +4,7 @@ description: Learn how to build agents by using the lite experience of Microsoft
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/12/2025
 ms.topic: conceptual
 ---
 

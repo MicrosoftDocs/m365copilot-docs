@@ -5,7 +5,7 @@ description: Learn how to copy your declarative agent from the lite experience t
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
-ms.date: 10/09/2025
+ms.date: 11/12/2025
 ms.topic: concept-article
 ---
 # Copy an agent to the Copilot Studio full experience
