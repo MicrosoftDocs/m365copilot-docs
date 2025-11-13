@@ -64,7 +64,7 @@ This approach is ideal for developers or organizations that already maintain AI 
 
 The following table shows the two integration approaches for Foundry agents.
 
-|  Feature      | [One-click publish from Foundry](https://ai.azure.com/?cid=learnDocs) | [Integrate with Microsoft 365 using Agents Toolkit](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/main/) |
+|  Feature      | One-click publish from Foundry | Integrate with Microsoft 365 using Agents Toolkit |
 |------------------|-------------------------------------|--------------------------------------------------------|
 | Description  | Publish your Foundry agent directly to Microsoft 365 Copilot and Teams with minimal setup. Automatically provisions Azure Bot Service and Entra ID and packages your agent for distribution. | Connect an existing Foundry agent to Microsoft 365 Copilot via a proxy app built with the Microsoft 365 Agents Toolkit. Enables [Retrieval API](/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview) grounding for Microsoft 365 data, plus advanced customization, debugging, and multi-environment deployment. |
 | Tooling      | Foundry portal                      | Visual Studio Code/Visual Studio with Microsoft 365 Agents Toolkit |
