@@ -95,6 +95,8 @@ items:
           displayName: response, response_semantics
         - name: Dialog boxes
           href: adaptive-card-dialog-box.md
+        - name: Allow Adaptive Card edits (preview)
+          href: adaptive-card-edits.md
         - name: Confirmation prompts
           href: api-plugin-confirmation-prompts.md
         - name: Debug locally
@@ -123,7 +125,7 @@ items:
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use Copilot Studio
+    - name: Use the Copilot Studio lite experience
       items:
       - name: Overview
         href: copilot-studio-lite.md
@@ -170,6 +172,8 @@ items:
           href: /power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context
         - name: Prompts
           href: /ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context
+    - name: Best practices for building agents
+      href: declarative-agent-best-practices.md
     - name: Write effective instructions
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins

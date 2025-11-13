@@ -4,7 +4,7 @@ description: Learn how to build API plugins for Microsoft 365 Copilot with the O
 author: rickki
 ms.author: rickki
 ms.localizationpriority: medium
-ms.date: 07/30/2025
+ms.date: 11/11/2025
 ms.topic: how-to
 ---
 
@@ -165,8 +165,8 @@ The reference documentation for the manifest JSON is at [Microsoft 365 app manif
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.4/schema.json",
-      "version": "v1.4",
+      "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json",
+      "version": "v1.5",
       "name": "Excel Agent",
       "description": "Agent for working with Excel cells.",
       "instructions": "You are an agent for working with an add-in. You can work with any cells, not just a well-formatted table.",
@@ -251,14 +251,14 @@ The reference documentation for declarative agents is at [Declarative agent sche
           },
           "run_for_functions": [
             "FillColor"
-          ]
+          ],
+          "auth": {
+            "type": "None"
+          }
         }
       ]
     }
     ```
-
-    > [!NOTE]
-    > You might get a validation error from the plugin JSON that says you need an **auth** property. You can ignore this error. Your agent will work fine without that property.
 
 The reference documentation for API plugins is at [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md).
 

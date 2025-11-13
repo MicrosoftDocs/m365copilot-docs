@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 08/20/2025
+ms.date: 11/11/2025
 ms.topic: overview
 ---
 
@@ -13,6 +13,40 @@ ms.topic: overview
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
+
+## November 2025
+
+### Copilot Studio lite experience is available in GCCM
+
+The Copilot Studio lite experience is now available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) environment.
+
+### Embedded file content file size limit increase
+
+You can now upload files up to 512 MB in size when you embed file content as knowledge in the Copilot Studio lite experience. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
+
+## October 2025
+
+### New admin controls for agent sharing
+
+Tenant administrators can now govern who is allowed to share agents created in the Copilot Studio lite experience. These controls help organizations maintain compliance and prevent oversharing of agents. For more information, see [Share an agent](copilot-studio-lite-share-manage-agent.md#share-an-agent).
+
+### Copy an agent to the Copilot Studio full experience
+
+You can copy your declarative agent from the Copilot Studio lite experience to the full experience by using the **Copy to full experience** feature. This unlocks advanced lifecycle management, analytics, governance controls, and deeper enterprise integration options.
+
+For details, see [Copy an agent to the Copilot Studio full experience](copy-agent-to-copilot-studio.md).
+
+### Use the Search API (preview) to perform semantic search
+
+The Microsoft 365 Copilot Search API (preview) enables developers to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results. For more information, see [Overview of the Search API](api/ai-services/search/overview.md).
+
+### Users with usage billing have access to additional knowledge sources in the Copilot Studio lite experience
+
+Users who are configured with usage billing in the Microsoft 365 admin center now have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Copilot Studio lite experience to create agents.
+
+### Microsoft 365 Copilot Chat API (preview)
+
+The Microsoft 365 Copilot Chat API (preview) enables you to programmatically engage in multi-turn conversations with Microsoft 365 Copilot, grounded in enterprise search and web search. For more information, see [Overview of the Microsoft 365 Copilot Chat API (preview)](api/ai-services/chat/overview.md).
 
 ## August 2025
 
@@ -24,7 +58,7 @@ Teams meetings are now available as a knowledge source when you use Copilot Stud
 
 ### Scope Copilot connector data sources
 
-You can now scope Copilot connectors to specific data attributes when you use Copilot Studio to create your agent. For more information, see [Scope Copilot connector data sources](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-knowledge).
+You can now scope Copilot connectors to specific data attributes when you use Copilot Studio to create your agent. For more information, see [Scope Copilot connector data sources](copilot-studio-agent-builder-knowledge.md).
 
 ### Declarative agent manifest version 1.5
 
@@ -38,7 +72,7 @@ Added the `disclaimers` property to the [Declarative agent manifest object](decl
 
 ### Embedded file content file size limit increase
 
-You can now upload files up to 100 MBs in size when you embed file content as knowledge in Copilot Studio. For more information, see [File size limits](/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge).
+You can now upload files up to 100 MBs in size when you embed file content as knowledge in Copilot Studio. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
 
 ### Increased SharePoint file limit for agents
 

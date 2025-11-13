@@ -19,5 +19,3 @@ items:
     href: resources/retrievalextract.md
   - name: Search response metadata dictionary
     href: resources/searchresourcemetadatadictionary.md
-  - name: Search sensitivity label info
-    href: resources/searchsensitivitylabelinfo.md

@@ -1,5 +1,7 @@
 # API resource reference template
 
+<!-- cSpell:ignore CSDL -->
+
 This template is used for documenting API resources (also known as entities). Resources are the "objects" in a REST API, defined by `EntityType` or `ComplexType` definitions in a CSDL.
 
 ## Usage
@@ -67,7 +69,7 @@ Note that a resource may not support all of the above operations.
 ## Properties
 
 <!--
-List properties in table format. Properties are defined as `Property` types in CSDL. If a property type is another resource type, link to that resource's reference topic.
+List properties in table format, sorted alphabetically by property name. Properties are defined as `Property` types in CSDL. If a property type is another resource type, link to that resource's reference topic.
 -->
 
 | Property    | Type                                 | Description |
@@ -92,7 +94,7 @@ An [evolvable enumeration](/graph/best-practices-concept#handling-future-members
 ## Relationships
 
 <!--
-List relationships in table format. Relationships are defined as `NavigationProperty` types in CSDL. If a property type is another resource type, link to that resource's reference topic. If this resource has no relationships, do not add a table. Add a single line: `None.`
+List relationships in table format, sorted alphabetically by relationship name. Relationships are defined as `NavigationProperty` types in CSDL. If a property type is another resource type, link to that resource's reference topic. If this resource has no relationships, do not add a table. Add a single line: `None.`
 -->
 
 | Relationship    | Type                                 | Description |

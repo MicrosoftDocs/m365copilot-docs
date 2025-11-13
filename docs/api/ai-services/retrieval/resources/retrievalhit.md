@@ -4,14 +4,20 @@ description: Represents a single result within the list of retrieval results.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 08/08/2025
+ms.date: 10/24/2025
 ms.localizationpriority: medium
 doc_type: resourcePageType
+zone_pivot_groups: graph-api-versions
 ---
 
 # retrievalHit resource type
 
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+:::zone-end
+
+:::zone pivot="graph-v1"
+:::zone-end
 
 Represents a single result within the list of retrieval results.
 
@@ -22,7 +28,7 @@ Represents a single result within the list of retrieval results.
 | `extracts`         | [retrievalExtract](retrievalextract.md) collection                      | An array of text extracts extracted from the document for Retrieval-Augmented Generation. Currently, only one text snippet is extracted. |
 | `resourceMetadata` | [searchResourceMetadataDictionary](searchresourcemetadatadictionary.md) | The requested [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft 365 Copilot connectors](/graph/connecting-external-content-manage-schema) metadata from the request payload (empty if not applicable). |
 | `resourceType`     | [retrievalEntityType](#retrievalentitytype-enumeration)                 | The resource type of the item. |
-| `sensitivityLabel` | [searchSensitivityLabelInfo](searchsensitivitylabelinfo.md)             | A JSON object with information about the document's sensitivity label. |
+| `sensitivityLabel` | [searchSensitivityLabelInfo](../../resources/searchsensitivitylabelinfo.md)             | A JSON object with information about the document's sensitivity label. |
 | `webUrl`           | String                                                                  | The URL of the item in which the extract was retrieved. |
 
 ### retrievalEntityType enumeration

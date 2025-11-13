@@ -79,11 +79,11 @@ Choose the permission or permissions marked as least privileged for this API. Us
 List permissions required by the method. If a permission type is not supported for the method, use the text `Not supported.`
 -->
 
-| Permission type                        | Least privileged permissions | Higher privileged permissions |
-|:---------------------------------------|:-----------------------------|:------------------------------|
-| Delegated (work or school account)     | | |
-| Delegated (personal Microsoft account) | | |
-| Application                            | | |
+| Permission type                        | Least privileged permissions                    | Higher privileged permissions         |
+|----------------------------------------|-------------------------------------------------|---------------------------------------|
+| Delegated (work or school account)     | TODO: Add least privileged delegated permission | TODO: Add other delegated permissions |
+| Delegated (personal Microsoft account) | TODO: Add least privileged delegated permission | TODO: Add other delegated permissions |
+| Application                            | TODO: Add least privileged app-only permission  | TODO: Add other app-only permissions  |
 
 ## HTTP request
 

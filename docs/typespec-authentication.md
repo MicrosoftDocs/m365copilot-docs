@@ -12,8 +12,6 @@ ms.topic: reference
 
 # Authentication support in TypeSpec for Microsoft 365 Copilot
 
-[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
-
 TypeSpec for Microsoft 365 Copilot supports multiple authentication methods to secure API plugins and integrate with external services. The supported authentication types include:
 
 - [No authentication](#no-authentication-anonymous) for public endpoints
@@ -26,7 +24,7 @@ TypeSpec for Microsoft 365 Copilot supports multiple authentication methods to s
 
 ## No authentication (anonymous)
 
-Public endpoints that don't require any authentication credentials. Nothing specific is required and without `@useAuth` decorators, all APIs are considered anonymous.
+Public endpoints that don't require any authentication credentials. The API doesn't require anything specific. Without `@useAuth` decorators, all APIs are considered anonymous.
 
 ### Example
 
@@ -55,9 +53,27 @@ namespace API {
 }
 ```
 
+The Microsoft 365 Agents Toolkit can automatically register your API key. Add the `apiKey/register` action to **m365agents.yml** in your Agents Toolkit project.
+
+```yaml
+# m365agents.yml
+# After the typespec/compile step
+- uses: apiKey/register
+  with:
+    name: ApiKeyAuth
+    appId: ${{TEAMS_APP_ID}}
+    apiSpecPath: ./appPackage/.generated/api-openapi.yml
+  writeToEnvironmentFile:
+    registrationId: APIKEYAUTH_REGISTRATION_ID
+```
+
+The [Manage repairs using Microsoft 365 Copilot sample](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-copilot-pro-dev-da-typespec-repairs-apikey/) highlights the use of API key authentication.
+
 ## OAuth2 authorization code flow
 
 User-delegated permissions for accessing user data an OAuth2 protected service. Use the native [`OAuth2Auth`](https://typespec.io/docs/libraries/http/authentication/#oauth2authtflows-extends-oauth2flow) from TypeSpec. Update the `authorizationUrl`, `tokenUrl`, `refreshUrl`, and `scopes` based on the specific API you're integrating with.
+
+Learn how to automatically [create the Entra ID app using Agents Toolkit](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Microsoft-365-Agents-Toolkit#aadappcreate) and [update the Entra ID app](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Microsoft-365-Agents-Toolkit#aadappupdate) once the registration is completed.
 
 ### Example
 
@@ -77,15 +93,34 @@ namespace API {
 }
 ```
 
+The Microsoft 365 Agents Toolkit can automatically register your OAuth2 configuration. Add the `oauth/register` action to **m365agents.yml** in your Agents Toolkit project.
+
+```yaml
+# m365agents.yml
+# After the typespec/compile step
+- uses: oauth/register
+  with:
+    name: OAuth2Auth
+    appId: ${{TEAMS_APP_ID}}
+    clientId: ${{AAD_APP_CLIENT_ID}}
+    clientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
+    apiSpecPath: ./appPackage/.generated/api-openapi.yml
+    flow: authorizationCode
+  writeToEnvironmentFile:
+    configurationId: OAUTH2AUTH_REGISTRATION_ID
+```
+
+The [Tasks Agent using TypeSpec for Microsoft 365 Copilot that connects to the Microsoft Graph APIs sample](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-copilot-pro-dev-da-typespec-todo/) highlights the use of OAuth2 with authorization code flow.
+
 ## Entra ID SSO authentication
 
-Seamless authentication applying the user's existing Microsoft 365 session for native integration scenarios. To complete the SSO registration, use the regular [`OAuth2Auth`](https://typespec.io/docs/libraries/http/authentication/#oauth2authtflows-extends-oauth2flow) from TypeSpec and perform the [manual steps](api-plugin-authentication.md#update-the-microsoft-entra-app-registration).
+Seamless authentication applying the user's existing Microsoft 365 session for native integration scenarios. To complete the SSO registration, use the regular [`OAuth2Auth`](#oauth2-authorization-code-flow) flow and perform the [manual steps](api-plugin-authentication.md#update-the-microsoft-entra-app-registration).
 
 ## Using registered authentication configurations
 
-For production scenarios, authentication credentials are typically registered and managed through the Microsoft Teams Developer Portal rather than embedded directly in TypeSpec code. The `@authReferenceId` decorator allows you to reference preregistered authentication configurations by their unique identifiers, providing a secure way to handle credentials without exposing sensitive information in your codebase.
+For production scenarios, register and manage authentication credentials through the Microsoft Teams Developer Portal instead of embedding them directly in TypeSpec code. Use the `@authReferenceId` decorator to reference preregistered authentication configurations by their unique identifiers. This approach provides a secure way to handle credentials without exposing sensitive information in your codebase.
 
-When using `@authReferenceId`, you specify the registration ID from either OAuth client registrations or API key registrations configured in the Developer Portal. This approach separates authentication configuration from code, enabling better security practices and easier credential management across different environments.
+When you use `@authReferenceId`, specify the registration ID from either OAuth client registrations or API key registrations configured in the Developer Portal. This approach separates authentication configuration from code, enabling better security practices and easier credential management across different environments.
 
 ### Example
 

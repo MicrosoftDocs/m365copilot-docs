@@ -1,8 +1,8 @@
 ---
 title: Microsoft 365 App Model for Agents
 description: Learn how agents use the Microsoft 365 app package, including a unified process for packaging, publishing, and management.
-author: JoshuaPartlow
-ms.author: joshuapa
+author: erikadoyle
+ms.author: edoyle
 ms.topic: concept-article
 ms.localizationpriority: medium
 ms.date: 09/02/2025
