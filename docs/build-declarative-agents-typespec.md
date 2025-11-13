@@ -5,7 +5,7 @@ author: slevert
 ms.author: slevert
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 09/11/2025
 ---
 
 # Create declarative agents using Microsoft 365 Agents Toolkit and TypeSpec
@@ -13,7 +13,7 @@ ms.date: 05/19/2025
 A [declarative agent](overview-declarative-agent.md) is a customized version of Microsoft 365 Copilot that allows users to create personalized experiences by declaring specific instructions, actions, and knowledge. This guide demonstrates how to build a declarative agent by using [TypeSpec](https://typespec.io/) and the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 
 > [!NOTE]
-> The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+> The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
 
 [!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
 
@@ -128,7 +128,7 @@ The [web search capability](knowledge-sources.md#web-and-scoped-web-search) enab
 
     ```typescript
     namespace MyAgent {
-      op webSearch is AgentCapabilities.WebSearch<TSites = [
+      op webSearch is AgentCapabilities.WebSearch<Sites = [
         {
           url: "https://learn.microsoft.com",
         },
@@ -139,7 +139,7 @@ The [web search capability](knowledge-sources.md#web-and-scoped-web-search) enab
     For more information, see [Web search object](declarative-agent-manifest-1.5.md#web-search-object).
 
     > [!NOTE]
-    > Not specifying the `TSites` array causes all web content to be available to the agent.
+    > Not specifying the `Sites` array causes all web content to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -156,7 +156,7 @@ The [OneDrive and SharePoint capability](knowledge-sources.md#sharepoint-and-one
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op od_sp is AgentCapabilities.OneDriveAndSharePoint<TItemsByUrl = [
+      op od_sp is AgentCapabilities.OneDriveAndSharePoint<ItemsByUrl = [
         {
           url: "https://contoso.sharepoint.com/sites/ProductSupport"
         }
@@ -170,7 +170,7 @@ The [OneDrive and SharePoint capability](knowledge-sources.md#sharepoint-and-one
     > [!NOTE]
     >
     > - URLs should be full path to SharePoint items (site, document library, folder, or file). You can use the "Copy direct link" option in SharePoint to get the full path or files and folders. Right-click on the file or folder and select **Details**. Navigate to **Path** and select the copy icon.
-    > - Not specifying the `TItemsByUrl` array (or the alternative `TItemsBySharePointIds` array) causes all OneDrive and SharePoint content in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
+    > - Not specifying the `ItemsByUrl` array (or the alternative `ItemsBySharePointIds` array) causes all OneDrive and SharePoint content in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -187,7 +187,7 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
+      op teamsMessages is AgentCapabilities.TeamsMessages<Urls = [
         {
           url: "https://teams.microsoft.com/l/team/...",
         }
@@ -196,11 +196,11 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
     }
     ```
 
-    For more information, see [Teams messages object](declarative-agent-manifest-1.5.md#teams-messages-object).
+    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.5.md#microsoft-teams-messages-object).
 
     > [!NOTE]
     > - The URL in the `url` property must be well formed links to a Teams chat, team, or meeting chat.
-    > - Not specifying the `TUrls` array causes all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
+    > - Not specifying the `Urls` array causes all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -239,7 +239,7 @@ The [email capability](knowledge-sources.md#email) allows you to scope your agen
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op email is AgentCapabilities.Email<TFolders = [
+      op email is AgentCapabilities.Email<Folders = [
         {
           folder_id: "Inbox",
         }
@@ -253,7 +253,7 @@ The [email capability](knowledge-sources.md#email) allows you to scope your agen
     > [!NOTE]
     >
     > - This example accesses the user of the agent's mailbox. To access a shared mailbox instead, add the optional `shared_mailbox` property set to the email address of the shared mailbox.
-    > - The `TFolders` array limits the mailbox access to specific folders. To access the entire mailbox, omit the `folders` array.
+    > - The `Folders` array limits the mailbox access to specific folders. To access the entire mailbox, omit the `folders` array.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -316,7 +316,7 @@ You can add items ingested by a Copilot connector to the available knowledge for
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op copilotConnectors is AgentCapabilities.GraphConnectors<TConnections = [
+      op copilotConnectors is AgentCapabilities.GraphConnectors<Connections = [
         {
           connectionId: "policieslocal",
         }
@@ -328,7 +328,7 @@ You can add items ingested by a Copilot connector to the available knowledge for
     For more information, see [Copilot connectors object](declarative-agent-manifest-1.5.md#copilot-connectors-object).
 
     > [!NOTE]
-    > Not specifying the `TConnections` array causes content from all Copilot connectors in your Microsoft 365 organization that are available to the logged in user to be available to the agent.
+    > Not specifying the `Connections` array causes content from all Copilot connectors in your Microsoft 365 organization that are available to the logged in user to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -341,9 +341,9 @@ The declarative agent has access to Copilot connectors content to generate its a
 You completed the declarative agent guide for Microsoft 365 Copilot. Now that you're familiar with using TypeSpec to build a declarative agent, you can learn more in the following articles.
 
 - Learn how to [write effective instructions](declarative-agent-instructions.md) for your agent.
-- Test your agent with [Copilot developer mode](debugging-copilot-agent.md) to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
+- Test your agent with [Copilot developer mode](debugging-agents-copilot-studio.md) to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
 - Get answers to [frequently asked questions](transparency-faq-declarative-agent.md).
-- Learn about an alternative method of building declarative agents with [Copilot Studio agent builder](copilot-studio-agent-builder.md).
+- Learn about an alternative method of building declarative agents with [Copilot Studio](copilot-studio-lite.md).
 
 ## Next steps
 

@@ -4,6 +4,8 @@
     "dictionaries": [],
     "words": [
         "Accueil",
+        "acrolinx",
+        "Acrolinx",
         "Addin",
         "Agentdev",
         "agentic",
@@ -30,6 +32,7 @@
         "erikadoyle",
         "fileshare",
         "galerie",
+        "GCCM",
         "girliemac",
         "githubrepos",
         "Hidi",
@@ -51,7 +54,9 @@
         "LANGCHAIN",
         "lauragra",
         "lightbox",
+        "lite",
         "localizable",
+        "localizationpriority",
         "lramosvea",
         "maisarissi",
         "Malik",
@@ -74,6 +79,7 @@
         "onpremises",
         "openai",
         "openapi",
+        "openpublishing",
         "oraclesql",
         "Outils",
         "partlow",
@@ -89,6 +95,7 @@
         "professionnels",
         "propos",
         "publiques",
+        "pwsh",
         "quickstart",
         "Rachit",
         "redirections",
@@ -111,6 +118,7 @@
         "slevert",
         "struct",
         "subpaths",
+        "swapnilsapar",
         "tapanm",
         "taskpane",
         "Tavily",
@@ -123,12 +131,7 @@
         "Typeof",
         "typespec",
         "vscodeversion",
-        "wujessica",
-        "pwsh",
-        "acrolinx",
-        "Acrolinx",
-        "openpublishing",
-        "localizationpriority"
+        "wujessica"
     ],
     "ignoreWords": [],
     "flagWords": [
@@ -140,6 +143,7 @@
         "cspell.json",
         "LICENSE",
         "sharepoint-id-query-response.json",
-        "posts-api.yml"
+        "posts-api.yml",
+        "docs/api/snippets/typescript/node_modules/**"
     ]
 }

@@ -3,9 +3,9 @@ title: Known Issues in Microsoft 365 Copilot Extensibility
 description: Find information about current known issues related to Microsoft 365 Copilot extensibility and the recommended workarounds.
 author: lauragra
 ms.author: lauragra
-ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 08/06/2025
+ms.date: 11/06/2025
+ms.topic: concept-article
 ---
 
 # Known issues
@@ -46,15 +46,19 @@ When sharing links are references as a knowledge source in an agent, the agent d
 
 If a SharePoint file used as a knowledge source contains null characters in the file name, the agent returns no results based on that knowledge source.
 
-### Pasting a link to a file in Copilot Studio and agent builder doesn't work
+### Pasting a link to a file in Copilot Studio doesn't work
 
-Currently, users can select a file in Copilot Studio and Copilot Studio agent builder and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
+Currently, users can select a file in Copilot Studio, and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
 
-**Workaround:** The user can select the file from the UI in Copilot Studio and Copilot Studio agent builder.
+**Workaround:** The user can select the file from the UI in Copilot Studio.
 
-### Sharing agents in Copilot Studio agent builder can fail
+### Sharing agents from within the Copilot Studio lite experience can fail
 
-When you share an agent in agent builder using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+When you share an agent via the Copilot Studio lite experience using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+
+### Agents built with the Copilot Studio lite experience don't generate files
+
+When users ask an agent built with the [Copilot Studio lite experience](copilot-studio-lite.md) to generate files, the agent fails to generate the files. This applies to all file types (.docx, .pdf, and so on).
 
 ### Some features aren't supported in Microsoft 365 Government tenants
 
@@ -63,6 +67,19 @@ The following features aren't currently supported in [Microsoft 365 Government](
 - [Authenticated custom actions](/microsoft-365-copilot/extensibility/overview-api-plugins).
 - Support for metered billing for extensibility features. For details about features that require metered billing, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 - Support for publishing agents via the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents).
+
+### Files found via enterprise search aren't passed to code interpreter
+
+Code interpreter runs on files you upload in your agent or that the user explicitly attaches in the interaction. Files that Copilot finds via enterprise search aren't passed to the code interpreter runtime.
+
+As a result, depending on the query (for example, when a user asks an agent to analyze or chart a file it found in search), the agent's response might be less descriptive because code interpreter doesn't run Python code.
+
+**Workaround:**
+
+You can work around the issue in two ways:
+
+- Upload the file in the chat before asking for analysis.
+- Share a direct file link and ask Copilot to open it.
 
 ## Copilot connectors
 
@@ -105,7 +122,7 @@ The following table lists features that aren't currently supported for custom en
 | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li></ul> |
 | Proactive notifications | Proactive notifications aren't supported. |
 | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
-| Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>[Media](https://adaptivecards.microsoft.com/?topic=Media)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>People picker</li><li>@mention</li><li>Password control</li></ul> |
+| Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul> |
 | Sensitivity labels | Sensitivity labels aren't supported. |
 | Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Edge browser. |
 
