@@ -5,12 +5,14 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 10/16/2025
+ms.date: 11/17/2025
 ---
 
-# Choose the right Copilot Studio experience
+# Choose the right building
 
-Microsoft Copilot Studio is a powerful platform for building secure, scalable, and intelligent agents that work across Microsoft 365 and line-of-business systems. Copilot Studio offers two ways to build AI agents: a lite experience (integrated into the Microsoft 365 Copilot app) and a full experience (a standalone Copilot Studio application). Both experiences enable you to create powerful agents, but they serve different needs. This article describes the differences between the lite and full experiences to help you choose the right Copilot Studio experience for your scenario.
+Microsoft Copilot Studio is a powerful platform for building secure, scalable, and intelligent agents that work across Microsoft 365 and line-of-business systems. 
+
+Copilot Studio offers two ways to build AI agents: a lite experience (integrated into the Microsoft 365 Copilot app) and a full experience (a standalone Copilot Studio application). Both experiences enable you to create powerful agents, but they serve different needs. This article describes the differences between the lite and full experiences to help you choose the right Copilot Studio experience for your scenario.
 
 ## Compare Copilot Studio experiences
 
@@ -36,7 +38,7 @@ In summary:
 
 The following table provides a more detailed feature comparison.
 
-| Feature | Lite experience | Full experience |
+| Feature | Microsoft 365 Copilot | Copilot Studio |
 | ------- | --------------- | --------------- |
 | Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Copilot Studio](https://copilotstudio.microsoft.com) |
 | User type | Information workers | Makers and developers |
