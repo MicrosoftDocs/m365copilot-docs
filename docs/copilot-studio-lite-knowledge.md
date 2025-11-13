@@ -250,7 +250,7 @@ The following table lists the Copilot connectors that support scoping and the at
 | ServiceNow Catalog | Catalog |
 | ServiceNow Tickets | Entity type (Sys_class_name/ Category/ Subcategory) |
 
-For more information about the Copilot connectors that are availlable, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext). 
+For more information about the Copilot connectors that are availlable, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
 
 ## Prioritize your knowledge sources over general knowledge
 
@@ -267,7 +267,7 @@ Some user requests don't require knowledge-based searches; the agent can respond
 
 When you enable this feature, the agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
 
-To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
+To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Only use specified sources**.
 
 > [!NOTE]
 > The lite experience in Copilot Studio for Microsoft 365 doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use the full experience in Copilot. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
