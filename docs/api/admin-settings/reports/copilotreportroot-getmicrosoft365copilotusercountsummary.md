@@ -87,7 +87,7 @@ GET https://graph.microsoft.com/v1.0/copilot/reports/getMicrosoft365CopilotUserC
 
 :::zone-end
 
-::zone pivot="graph-preview"
+:::zone pivot="graph-preview"
 
 ``` http
 GET https://graph.microsoft.com/beta/copilot/reports/getMicrosoft365CopilotUserCountSummary(period='D7')?$format=application/json
