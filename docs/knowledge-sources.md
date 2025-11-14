@@ -170,10 +170,10 @@ If you don't reference a shared mailbox or a folder, the agent search isn't scop
 
 ## People
 
-People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". The data that will be returned by the base capability is everything that is available in the [profile card](https://learn.microsoft.com/en-us/graph/api/resources/profile?view=graph-rest-beta)
+People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". The data that will be returned by the base capability is everything that is available in the [profile card](https://learn.microsoft.com/en-us/graph/api/resources/profile?view=graph-rest-beta) and the org. chart. 
 
 > [!NOTE]
-> People knowledge will be available in Copilot Studio Lite by December 2025
+> People knowledge will be available in Copilot Studio Lite by December 2025.
 
 ### Add people knowledge source
 
