@@ -26,6 +26,7 @@ This schema version introduces the following changes from [version 1.5](declarat
 - Added the [embedded knowledge](#embedded-knowledge-object) capability, allowing agents to use local files or external resource snapshots as knowledge sources.
 - Added the `items_by_id` property to the [meetings object](#meetings-object), allowing agent creators to limit the meetings available to the agent.
 - Added the `include_related_content` property to the [people object](#people-object), allowing agent creators to choose to include related documents, emails, and Teams messages when searching people content.
+- Added the `group_mailboxes` property to the [email object](#email-object).
 
 ## JSON schema
 
@@ -464,12 +465,12 @@ Indicates that the declarative agent can search through email messages in the ma
 
 The email object contains the following properties.
 
-| Property         | Type                                | Description |
-| ---------------- | ----------------------------------- | ----------- |
-| `name`           | String                              | Required. Must be set to `Email`. |
-| `shared_mailbox` | String                              | Optional. The SMTP address of a shared mailbox. |
-| `group_mailboxes` | Array of String                         | Optional. An array of SMTP address of modern group mailboxes. A maximum of 25 mailboxes are supported |
-| `folders`        | Array of [Folders](#folders-object) | Optional. If present, only email in the specified folders are available to the agent. |
+| Property          | Type                                | Description |
+| ----------------- | ----------------------------------- | ----------- |
+| `name`            | String                              | Required. Must be set to `Email`. |
+| `shared_mailbox`  | String                              | Optional. The SMTP address of a shared mailbox. |
+| `group_mailboxes` | Array of String                     | Optional. An array of SMTP address of modern group mailboxes. A maximum of 25 mailboxes are supported. |
+| `folders`         | Array of [Folders](#folders-object) | Optional. If present, only email in the specified folders are available to the agent. |
 
 ##### Folders object
 
@@ -483,7 +484,7 @@ The folders object contains the following property.
 
 #### People object
 
-Indicates that the declarative agent can search for information about people in the organization. Refer to [People knowledge](knowledge-sources.md#people) for more details on the data returned by base People capability. 
+Indicates that the declarative agent can search for information about people in the organization. Refer to [People knowledge](knowledge-sources.md#people) for more details on the data returned by base People capability.
 
 The people object contains the following properties.
 
@@ -540,7 +541,7 @@ The meeting identifier object contains the following properties.
 Indicates that the declarative agent can use files locally in the app package or external resource snapshots as knowledge sources.
 
 > [!IMPORTANT]
-> This feature is not yet available. 
+> This feature is not yet available.
 
 Embedded knowledge files have a maximum file size of 1 MB and must be one of the following document types:
 
