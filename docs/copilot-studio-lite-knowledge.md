@@ -207,7 +207,7 @@ People data is enabled by default for agents created by users with a Microsoft 3
 
 - On the **Configure** tab in Copilot Studio, select the toggle next to **Reference people in organization**.
 
-People data respects existing permissions and privacy controls, and inherits the sharing user's access rights when agents are shared. This feature is available only to licensed users.
+People data respects existing permissions and privacy controls, and inherits the user's access rights when the agent creator shares the agent. This feature is available only to licensed users.
 
 > [!NOTE]
 > People data acts as a personalization layer, enriching agent responses with context from Microsoft 365. It doesn't introduce new privacy risks, but provides transparency and control for users and administrators.
