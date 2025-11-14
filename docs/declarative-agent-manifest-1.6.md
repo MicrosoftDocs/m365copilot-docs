@@ -469,7 +469,7 @@ The email object contains the following properties.
 | ----------------- | ----------------------------------- | ----------- |
 | `name`            | String                              | Required. Must be set to `Email`. |
 | `shared_mailbox`  | String                              | Optional. The SMTP address of a shared mailbox. |
-| `group_mailboxes` | Array of String                     | Optional. An array of SMTP address of modern group mailboxes. A maximum of 25 mailboxes are supported. |
+| `group_mailboxes` | Array of String                     | Optional. An array of SMTP address of Microsoft 365 Groups or shared mailboxes. A maximum of 25 mailboxes are supported. |
 | `folders`         | Array of [Folders](#folders-object) | Optional. If present, only email in the specified folders are available to the agent. |
 
 ##### Folders object
