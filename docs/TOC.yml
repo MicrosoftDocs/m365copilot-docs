@@ -40,11 +40,7 @@ items:
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
     - name: Choose your development tool
-      items:
-      - name: Tools overview
-        href: declarative-agent-tool-comparison.md
-      - name: Copilot Studio experiences
-        href: copilot-studio-experience.md
+      href: declarative-agent-tool-comparison.md
     - name: Use Visual Studio Code
       expanded: true
       items:
@@ -123,7 +119,7 @@ items:
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use the Copilot Studio lite experience
+    - name: Use Microsoft 365 Copilot
       items:
       - name: Overview
         href: copilot-studio-lite.md
@@ -161,7 +157,7 @@ items:
         href: copilot-studio-lite-share-manage-agent.md
       - name: Availability and language support
         href: copilot-studio-lite-availability.md
-      - name: Use the Copilot Studio full experience
+      - name: Use Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
         - name: Copilot Studio actions

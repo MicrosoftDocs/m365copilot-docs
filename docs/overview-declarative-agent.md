@@ -4,11 +4,11 @@ description: Learn how you can use declarative agents to meet business needs. De
 author: aycabas
 ms.author: aycabas
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/17/2025
 ms.topic: overview
 ---
 
-# Declarative agents for Microsoft 365 Copilot overview
+# Declarative agents for Microsoft 365 Copilot
 
 Declarative agents enable you to customize Microsoft 365 Copilot to help you meet the unique business needs of your users. When you build a declarative agent, you provide the instructions, actions, and knowledge to tailor Copilot for your business scenarios. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft 365 Copilot. By building declarative agents, you can optimize collaboration, increase productivity, and streamline workflows in your organization.
 

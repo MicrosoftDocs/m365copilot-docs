@@ -1,18 +1,18 @@
 ---
-title: Share and manage agents built with the Copilot Studio lite experience
-description: Learn how to share and manage agents built with the Copilot Studio lite experience in Microsoft 365 Copilot.
+title: Share and manage agents built with Microsoft 365 Copilot
+description: Learn how to share and manage agents built using Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 10/21/2025 
+ms.date: 11/17/2025 
 ms.topic: conceptual
 ---
 
 # Share and manage agents
 
-You can share the agents you create using the Copilot Studio lite experience in Microsoft 365 Copilot with users in your organization. Sharing an agent provides limited direct access to it for a specified set of users. While ideal for team collaboration, sharing an agent doesn't allow for deployment across the organization or integration with other channels.
+You can share the agents you create using Microsoft 365 Copilot with users in your organization. Sharing an agent provides limited direct access to it for a specified set of users. While ideal for team collaboration, sharing an agent doesn't allow for deployment across the organization or integration with other channels.
 
-This article describes how to share and manage the agents you build using Copilot Studio. To publish an agent across multiple channels, you need to use the Copilot Studio full experience. For more information, see [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
+This article describes how to share and manage the agents you build using the Agent Builder feature in  Microsoft 365 Copilot. To publish an agent across multiple channels, you need to use Copilot Studio. For more information, see [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
 ## Differences between sharing and publishing agents
 
@@ -32,7 +32,7 @@ The following table highlights the key differences between publishing and sharin
 
 ## Share an agent
 
-To share your agent, after you [build and test](copilot-studio-lite-build.md) it in the Copilot Studio lite experience, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
+To share your agent, after you [build and test](copilot-studio-lite-build.md) it using the Agent Builder feature in Microsoft 365 Copilot, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
 > [!NOTE]
 > Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
@@ -71,7 +71,7 @@ Copilot Studio provides an option to download a ZIP package for manual deploymen
 
 To deploy an agent manually:
 
-1. In the Copilot Studio lite experience, open the left navigation pane and select **Create agent**.
+1. In the Microsoft 365 Copilot, open the left navigation pane and select **Create agent**.
 1. At the top of the central pane, choose **My agents**.
 :::image type="content" source="assets/images/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
 1. Highlight the agent you want to download and choose the ellipses.
@@ -98,7 +98,7 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ## Manage agents
 
-You can access the agent management features in the Copilot Studio lite experience in three ways.
+You can access the agent management features in the Microsoft 365 Copilot in three ways.
 
 To manage an agent you recently accessed, select the **More options** ellipses (**...**) in the left pane next to the name of the agent you want to manage.
 
@@ -114,7 +114,7 @@ Or:*
 - Select **Create agents** in the left pane and then select the **My agents** tab.
 - On the **My agents** tab, select the **More options** ellipses (**...**) next to the name of the agent you want to manage.
 
-:::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of the Copilot Studio lite experience in Microsoft 365 Copilot.":::
+:::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of Microsoft 365 Copilot.":::
 
 > [!NOTE]
 > Only the agents you've created show in the **My agents** list. Shared agents from other users aren't listed.
@@ -147,7 +147,7 @@ To delete an agent:
 
 ### Reassign ownership of an agent
 
-The Copilot Studio lite experience doesn't support transferring ownership of declarative agents to another user. For information about transferring ownership, see [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell).
+Microsoft 365 Copilot doesn't support transferring ownership of declarative agents to another user. For information about transferring ownership, see [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell).
 
 ## Troubleshooting
 

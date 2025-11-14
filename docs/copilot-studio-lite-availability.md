@@ -1,6 +1,6 @@
 ---
 title: Copilot Studio regional availability and language support
-description: Learn about the regional availability and supported languages for the Copilot Studio lite experience.
+description: Learn about the regional availability and supported languages for Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
@@ -10,11 +10,11 @@ ms.topic: conceptual
 
 # Copilot Studio regional availability and language support
 
-This article provides information about the regional availability of the lite experience of Copilot Studio and the agent and authoring languages that Copilot Studio supports.
+This article provides information about the regional availability of Microsoft 365 Copilot and the agent and authoring languages supported.
 
 ## Regional availability
 
-The lite experience of Copilot Studio is available if your [Power Platform default environment](/power-platform/admin/environments-overview#default-environment) is in any of the following countries or regions:
+Microsoft 365 Copilot is available if your [Power Platform default environment](/power-platform/admin/environments-overview#default-environment) is in any of the following countries or regions:
 
 - Asia Pacific
 - Australia
@@ -38,7 +38,7 @@ The Power Platform default environment location is automatically set to the loca
 
 ## National cloud availability
 
-The Copilot Studio lite experience is available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) national cloud environment.
+Microsoft 365 Copilot is available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) national cloud environment.
 
 ## Language support
 

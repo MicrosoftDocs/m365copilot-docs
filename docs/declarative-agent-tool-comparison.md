@@ -57,21 +57,7 @@ The following table lists the pros and cons for using Agents Toolkit.
 | **Experimentation support:** Developers can fork, test, and iterate on agent capabilities without affecting live deployments. | |
 | **Copilot connectors and AI enhancements:** Supports rich integrations, including semantic search with [Microsoft 365 Copilot connectors](/graph/connecting-external-content-experiences) and more control over agent reasoning and responses. | |
 
-## Copilot Studio and Microsoft 365 Copilot
-
-### Copilot Studio
-
-[Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that's easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
-
-| **Pros** | **Cons** |
-|:------------|:------------|
-| **Easy to use:** Copilot Studio provides a no-code approach that enables business users and information workers to build and customize agents using a drag-and-drop interface without coding. | **Less developer control:** Limited ability to fine-tune API calls, actions, and response formatting. |
-| **Power platform connectors:** Enable quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for source control systems (Azure DevOps, GitHub) pull requests, or automated deployments. |
-| **Great for personal and departmental use:** Fast setup for smaller, targeted agents that don’t require large-scale enterprise governance. | **Limited support for Adaptive Cards:** You can't customize how responses are displayed beyond basic text formatting. |
-| **Prebuilt governance and deployment:** Agents are deployed using Copilot Studio’s built-in management tools, reducing complexity for IT teams. | **Slower feature rollout:** Some advanced features are available in Agents Toolkit before they're available in Copilot Studio. |
-| **Built-in test agent**: Copilot Studio comes with a built-in test agent that lets you test the agent in real-time. |  |
-
-### Microsoft 365 Copilot
+## Microsoft 365 Copilot
 
 Microsoft 365 Copilot is a great option for users with no coding experience who need a guided process for building declarative agents. You can access Microsoft 365 Copilot through the following apps and paths:
 
@@ -87,7 +73,19 @@ Microsoft 365 Copilot is a great option for users with no coding experience who 
 | **Variety of knowledge sources**: Easily add public web, SharePoint, Copilot connector data and more as agent knowledge sources.| |
 | **Generate rich content**: Enable image generation and code interpreter with just one click.| |
 
-### Feature comparison: Microsoft 365 Copilot and Copilot Studio
+## Copilot Studio
+
+[Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that's easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
+
+| **Pros** | **Cons** |
+|:------------|:------------|
+| **Easy to use:** Copilot Studio provides a no-code approach that enables business users and information workers to build and customize agents using a drag-and-drop interface without coding. | **Less developer control:** Limited ability to fine-tune API calls, actions, and response formatting. |
+| **Power platform connectors:** Enable quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for source control systems (Azure DevOps, GitHub) pull requests, or automated deployments. |
+| **Great for personal and departmental use:** Fast setup for smaller, targeted agents that don’t require large-scale enterprise governance. | **Limited support for Adaptive Cards:** You can't customize how responses are displayed beyond basic text formatting. |
+| **Prebuilt governance and deployment:** Agents are deployed using Copilot Studio’s built-in management tools, reducing complexity for IT teams. | **Slower feature rollout:** Some advanced features are available in Agents Toolkit before they're available in Copilot Studio. |
+| **Built-in test agent**: Copilot Studio comes with a built-in test agent that lets you test the agent in real-time. |  |
+
+## Feature comparison: Microsoft 365 Copilot and Copilot Studio
 
 To choose between the lite and full experiences of Copilot Studio to build your agent, consider the following factors:
 
@@ -118,7 +116,7 @@ The following table provides a more detailed feature comparison.
 | Use cases | Use the lite experience to build:<br /><ul><li>Project FAQ bots that answers common questions based on project documentation.</li><li>Product documentation assistants that help employees find information from internal product manuals or wikis.</li><li>Onboarding agents that help new team members get answers from internal knowledge bases.</li></ul> |  Use the full experience to build:<br /><ul><li>Customer support agents that create support tickets and escalates issues to a human.</li><li>IT help desk triage agents that handle employee IT requests and routes them to the right support team.</li><li>Sales assistants for CRM that retrieve sales data, makes notes, or kicks off an approval workflow.</li></ul> |
 | Management and governance | Managed primarily through the Microsoft 365 admin center. | Managed through the Power Platform admin center with finer-grained controls for enterprise scenarios. |
 
-## Copy agents from Microsoft 365 Copilot to Copilot Studio
+### Copy agents from Microsoft 365 Copilot to Copilot Studio
 
 You can copy an agent created in Microsoft 365 Copilot to Copilot Studio when you need advanced capabilities or broader integration options. This process ensures that work done in the lite experience is not lost and can be extended in the full experience without a need to to start over.
 
@@ -131,13 +129,13 @@ Consider copying an agent to Copilot Studio when:
 
 For more information, see [Copy an agent to Copilot Studio](copy-agent-to-copilot-studio.md).
 
-## Licensing requirements
+### Licensing requirements
 
 Both Microsoft 365 Copilot and Copilot Studio are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Credits or a pay-as-you-go plan to access either experience.
 
 You can also use Microsoft 365 Copilot for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
 
-## Microsoft 365 Copilot governance principles
+### Microsoft 365 Copilot governance principles
 
 Microsoft 365 Copilot allows users to create agents that act as reusable templates. These agents help retrieve insights from Microsoft Graph by packaging repeatable prompts and content connections. They operate within existing enterprise boundaries and respect Microsoft 365 controls.
 
@@ -155,7 +153,7 @@ IT administrators manage agent visibility, sharing, and lifecycle policies in th
 
 Admins can also manage agent sharing controls via the **Microsoft 365 Admin Center** > **Copilot** > **Settings** > **Data access** > **Agents** page. For more information, see [Share an agent](copilot-studio-lite-share-manage-agent.md#share-an-agent).
 
-## Copilot Studio governance principles
+### Copilot Studio governance principles
 
 Copilot Studio supports the creation of more sophisticated agents, often by makers or developers. These agents can integrate external data sources, call APIs, orchestrate complex workflows, and connect to systems beyond Microsoft 365—ideal for departmental or enterprise-wide solutions.
 
@@ -174,8 +172,6 @@ IT administrators use the Power Platform admin center to manage:
 - Lifecycle policies and publishing workflows.
 - Compliance via Microsoft Purview (sensitivity labels, audit logs, retention).
 - Telemetry and usage analytics to monitor agent behavior and ensure policy alignment.
-
-
 
 ## SharePoint
 

@@ -8,11 +8,11 @@ ms.localizationpriority: medium
 ms.date: 11/11/2025
 ---
 
-# Add knowledge sources to your declarative agent in Copilot Studio
+# Add knowledge sources to your declarative agent in Microsoft 365 Copilot
 
-The lite experience in Microsoft 365 Copilot (formerly Copilot Studio agent builder) provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
+The Microsoft 365 Copilot Agent Builder provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
-This article describes the supported knowledge sources and the steps to configure them in Copilot Studio. For general information about how to use Copilot Studio, see [Build agents using the Copilot Studio lite experience](copilot-studio-lite-build.md).
+This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents using Microsoft 365 Copilot](copilot-studio-lite-build.md).
 
 For more information about supported knowledge sources and licensing requirements, see [Knowledge sources](/microsoft-365-copilot/extensibility/knowledge-sources).
 
@@ -270,11 +270,11 @@ When you enable this feature, the agent answers simple questions that don't requ
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
 
 > [!NOTE]
-> The lite experience in Copilot Studio for Microsoft 365 doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use the full experience in Copilot. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
+> The Agent Builder feature in Microsoft 365 Copilot doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use the full experience in Copilot. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Overview of Microsoft 365 Copilot](copilot-studio-lite.md)
+- [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md)
 - [Build an agent from a template](agent-templates-overview.md)
-- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Share and manage agents](copilot-studio-lite-share-manage-agent.md)
