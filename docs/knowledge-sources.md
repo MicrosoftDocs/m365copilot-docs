@@ -164,16 +164,23 @@ In the **folder_id** field, you can reference either well-known folder names or 
 
 In the **shared_mailbox** field, use the SMTP address of the shared mailbox.
 
+In the **group_mailboxes** field, you may specific an `array` of strings (up to 25) containing the SMTP addresses of the shared mailboxes or Microsoft 365 groups you want your agent to be scoped to.  
+
 If you reference both a shared mailbox and a folder, the agent scopes responses to the folder within the shared mailbox. If you reference a folder only, the agent scopes responses to the contents of the folder within the personal mailbox.
 
 If you don't reference a shared mailbox or a folder, the agent search isn't scoped to any folder or mailbox and it returns results from all email content, based on the user's query.
 
 ## People
+ 
+You can ground your agent in People data to deliver more personalized and context-aware responses. People data combines public information about individuals (such as name, position, skills, and organizational relationships) with a personal view of the user’s connections, collaborators, and relevant insights. This knowledge source enables agents to: 
 
-People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". The data that will be returned by the base capability is everything that is available in the [profile card](/graph/api/resources/profile) and the organization chart.
+- Look up user and colleague profiles, including reporting structure and contact details. 
 
-> [!NOTE]
-> People knowledge will be available in Copilot Studio Lite by December 2025.
+- Identify domain experts and key collaborators within the organization. 
+
+- Personalize responses based on the user’s relationships, past interactions, and preferences. 
+
+- Provide recommendations and communication tips tailored to specific teams or individuals. 
 
 ### Add people knowledge source
 
