@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 The Agent Builder feature in Microsoft 365 Copilot provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-To get started, open the Microsoft 365 Copilot app. In the left navigation pane, choose **Create agent**. You can also choose **Create agent** in the left navigation pane from within Microsoft 365 Copilot in Teams.
+To get started, open the Microsoft 365 Copilot app. In the left navigation pane, choose **Create agent**.
 
 > [!NOTE]
 > The capabilities of Copilot agents differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
@@ -65,7 +65,7 @@ The test pane initially appears with suggested starter prompts, which when click
 
 ## Add knowledge sources
 
-Microsoft 365 Copilot allows you to configure specific knowledge sources for the agent to reference. To build context-aware agents, you can reference SharePoint items or any public websites. If your users have a Microsoft 365 Copilot add-on license, you can also:
+To build context-aware agents, you can reference SharePoint items or any public websites. If your users have a Microsoft 365 Copilot add-on license, you can also:
 - ground your agents in personal work information, such as Teams chat messages and Outlook emails
 - use prebuilt [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) that are enabled in your tenant.
 
