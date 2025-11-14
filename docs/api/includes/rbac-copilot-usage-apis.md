@@ -13,6 +13,7 @@ ms.localizationpriority: medium
 > For delegated permissions to allow apps to read service usage reports on behalf of a user, the tenant administrator must have assigned the user one of the following Microsoft Entra ID limited administrator roles:
 >
 > - Company Administrator
+> - AI Administrator
 > - Exchange Administrator
 > - SharePoint Administrator
 > - Lync Administrator
