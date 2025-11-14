@@ -22,8 +22,8 @@ This schema version introduces the following changes from [version 1.5](declarat
 
 - Added the optional `sensitivity_label` property to specify Purview sensitivity labels for the agent, **only when the agent has embedded files**.
 - Added the optional `worker_agents` property to specify other declarative agents that can be used by this agent.
-- Added the optional `user_overrides` property to specify configured capabilities that the user can modify.
-- Added the [embedded knowledge](#embedded-knowledge-object) capability, allowing agents to use local files or external resource snapshots as knowledge sources.
+- Added the optional `user_overrides` property to specify configured capabilities that the agent user can modify.
+- Added the [embedded knowledge](#embedded-knowledge-object) capability, allowing agents to use local files as knowledge.
 - Added the `items_by_id` property to the [meetings object](#meetings-object), allowing agent creators to limit the meetings available to the agent.
 - Added the `include_related_content` property to the [people object](#people-object), allowing agent creators to choose to include related documents, emails, and Teams messages when searching people content.
 - Added the `group_mailboxes` property to the [email object](#email-object).
@@ -538,7 +538,7 @@ The meeting identifier object contains the following properties.
 
 ### Embedded knowledge object
 
-Indicates that the declarative agent can use files locally in the app package or external resource snapshots as knowledge sources.
+Indicates that the declarative agent can use files locally in the app package.
 
 > [!IMPORTANT]
 > This feature is not yet available.
@@ -557,7 +557,6 @@ The embedded knowledge object contains the following properties:
 | -------- | ---- | ----------- |
 | `name` | String | Required. Must be set to `EmbeddedKnowledge`. |
 | `files` | Array of [File object](#file-object) | Optional. List of objects identifying files that contain knowledge the agent can use for grounding. Maximum size of the array is 10. |
-| `embedded_resource_snapshot_id` | String | Optional. For internal use only. |
 
 #### EmbeddedKnowledge object example
 
