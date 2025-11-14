@@ -164,23 +164,20 @@ In the **folder_id** field, you can reference either well-known folder names or 
 
 In the **shared_mailbox** field, use the SMTP address of the shared mailbox.
 
-In the **group_mailboxes** field, you may specific an `array` of strings (up to 25) containing the SMTP addresses of the shared mailboxes or Microsoft 365 groups you want your agent to be scoped to.  
+In the **group_mailboxes** field, you may specific an `array` of strings (up to 25) containing the SMTP addresses of the shared mailboxes or Microsoft 365 groups you want your agent to be scoped to.
 
 If you reference both a shared mailbox and a folder, the agent scopes responses to the folder within the shared mailbox. If you reference a folder only, the agent scopes responses to the contents of the folder within the personal mailbox.
 
 If you don't reference a shared mailbox or a folder, the agent search isn't scoped to any folder or mailbox and it returns results from all email content, based on the user's query.
 
 ## People
- 
-You can ground your agent in People data to deliver more personalized and context-aware responses. People data combines public information about individuals (such as name, position, skills, and organizational relationships) with a personal view of the user’s connections, collaborators, and relevant insights. This knowledge source enables agents to: 
 
-- Look up user and colleague profiles, including reporting structure and contact details. 
+You can ground your agent in People data to deliver more personalized and context-aware responses. People data combines public information about individuals (such as name, position, skills, and organizational relationships) with a personal view of the user's connections, collaborators, and relevant insights. This knowledge source enables agents to:
 
-- Identify domain experts and key collaborators within the organization. 
-
-- Personalize responses based on the user’s relationships, past interactions, and preferences. 
-
-- Provide recommendations and communication tips tailored to specific teams or individuals. 
+- Look up user and colleague profiles, including reporting structure and contact details.
+- Identify domain experts and key collaborators within the organization.
+- Personalize responses based on the user's relationships, past interactions, and preferences.
+- Provide recommendations and communication tips tailored to specific teams or individuals.
 
 ### Add people knowledge source
 

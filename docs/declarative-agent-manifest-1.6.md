@@ -704,11 +704,12 @@ The disclaimer object contains the following property.
 | `text`   | String | Required. The disclaimer text. The value must contain at least one non-whitespace character and shouldn't exceed 500 characters. |
 
 ### Sensitivity label object
-> [!NOTE]
-> Sensitvity labels are only applied to the agent, when the agent has Embedded Files. 
-> This property is not enabled yet, since Embedded Files are not enabled yet. 
 
-An optional JSON object that specifies the Microsoft Purview sensitivity label for the embedded files within the agent. It contains the highest protection amongst all the files that are embedded to the agents in [Embedded Knowledge property](#Embedded-knowledge-object)
+> [!NOTE]
+> Sensitivity labels are only applied to the agent, when the agent has Embedded Files.
+> This property is not enabled yet, since Embedded Files are not enabled yet.
+
+An optional JSON object that specifies the Microsoft Purview sensitivity label for the embedded files within the agent. It contains the highest protection amongst all the files that are embedded to the agents in [Embedded Knowledge property](#embedded-knowledge-object)
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
