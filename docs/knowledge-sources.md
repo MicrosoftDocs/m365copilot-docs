@@ -170,17 +170,17 @@ If you don't reference a shared mailbox or a folder, the agent search isn't scop
 
 ## People
 
-People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". This knowledge source isn't scoped.
+People knowledge allows you to scope your agent to answer questions about individuals in an organization. For example, your agent can respond to queries such as "How do I contact \<person\>" or "List the direct reports of \<person\>". The data that will be returned by the base capability is everything that is available in the [profile card](https://learn.microsoft.com/en-us/graph/api/resources/profile?view=graph-rest-beta)
 
 > [!NOTE]
-> People knowledge isn't currently available in Copilot Studio.
+> People knowledge will be available in Copilot Studio Lite by December 2025
 
 ### Add people knowledge source
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example. Declaring only the base `People` capability will allow the agent to reason on **only basic organization data** such as those available in the [profile card](https://learn.microsoft.com/en-us/graph/api/resources/profile?view=graph-rest-beta). If you would like to include content such as related teams messages, emails, and files with a given person in the organization refer to the [version 1.6](declartive-agent-manifest-1.6.md) to use the `include_related_content` property. 
 
 > [!NOTE]
-> You must be using [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema to add the `People` knowledge source.
+> You must be using [version 1.6](declarative-agent-manifest-1.6.md) or later of the declarative agent manifest schema to add the `People` knowledge source.
 >
 ```json
 {
@@ -191,7 +191,17 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
   ]
 }
 ```
-
+In case you need your agent to reason over related content with people in your organization, such as related teams messages, emails and files you may leverage the `include_related_content`. The default value is `false`.
+```json
+{
+  "capabilities": [
+    {
+      "name":"People", 
+      "include_related_content": true
+    }
+  ]
+}
+```
 ## Teams messages
 
 You can configure agents to use Teams channels, meeting chats, group chats, and 1:1 chats as knowledge sources. You can choose to specify up to five links to channels, group, 1:1, or meeting chats to scope Copilot search, or you can allow your agent to use all the user's Teams content, including channels, meetings, and individual and group chats, as knowledge sources.
