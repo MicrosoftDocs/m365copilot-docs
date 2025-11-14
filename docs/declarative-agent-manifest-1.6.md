@@ -741,6 +741,7 @@ The worker agent object contains the following property.
 ### User override object
 > [!IMPORTANT]
 > This feature is not yet available.
+
 Identifies capabilities in the agent that the agent end user can modify via a UI control in Microsoft 365 Copilot.
 
 The user override object contains the following properties.
