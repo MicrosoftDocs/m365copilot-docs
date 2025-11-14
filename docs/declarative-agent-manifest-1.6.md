@@ -468,6 +468,7 @@ The email object contains the following properties.
 | ---------------- | ----------------------------------- | ----------- |
 | `name`           | String                              | Required. Must be set to `Email`. |
 | `shared_mailbox` | String                              | Optional. The SMTP address of a shared mailbox. |
+| `group_mailboxes` | Array of String                         | Optional. An array of SMTP address of modern group mailboxes. A maximum of 25 mailboxes are supported |
 | `folders`        | Array of [Folders](#folders-object) | Optional. If present, only email in the specified folders are available to the agent. |
 
 ##### Folders object
@@ -482,7 +483,7 @@ The folders object contains the following property.
 
 #### People object
 
-Indicates that the declarative agent can search for information about people in the organization.
+Indicates that the declarative agent can search for information about people in the organization. Refer to [People knowledge](knowledge-sources.md) for more details on the data returned by base People capability. 
 
 The people object contains the following properties.
 
@@ -539,7 +540,7 @@ The meeting identifier object contains the following properties.
 Indicates that the declarative agent can use files locally in the app package or external resource snapshots as knowledge sources.
 
 > [!IMPORTANT]
-> This feature is not yet available.
+> This feature is not yet available. 
 
 Embedded knowledge files have a maximum file size of 1 MB and must be one of the following document types:
 
