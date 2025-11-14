@@ -40,7 +40,11 @@ items:
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
     - name: Choose your development tool
-      href: declarative-agent-tool-comparison.md
+      items:
+      - name: Tools overview
+        href: declarative-agent-tool-comparison.md
+      - name: Choose between Agent Builder and Copilot Studio
+        href: copilot-studio-experience.md
     - name: Use Visual Studio Code
       expanded: true
       items:

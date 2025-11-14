@@ -8,7 +8,7 @@ ms.date: 09/11/2025
 ms.topic: conceptual
 ---
 
-# Build agents using Microsoft 365 Copilot
+# Build agents using Agent Builder in Microsoft 365 Copilot
 
 The Agent Builder feature in Microsoft 365 Copilot provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 

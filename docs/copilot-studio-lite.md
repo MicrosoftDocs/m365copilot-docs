@@ -1,6 +1,6 @@
 ---
-title: Use Microsoft 365 Copilot to build declarative agents
-description: Learn how to use Microsoft 365 Copilot to build declarative agents.
+title: Use Microsoft 365 Copilot Agent Builder to build declarative agents
+description: Learn how to use Microsoft 365 Copilot Agent Builder to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
@@ -8,14 +8,14 @@ ms.date: 11/17/2025
 ms.topic: conceptual
 ---
 
-# Use Microsoft 365 Copilot to build declarative agents
+# Build a declarative agent with Microsoft 365 Copilot Agent Builder
 
 The easiest way to build your own [declarative agents](overview-declarative-agent.md) is to use the Agent Builder feature in Microsoft 365 Copilot. It offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
 
 > [!NOTE]
 > The capabilities available for Copilot agents differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 
-Use Microsoft 365 Copilot to create and customize agents that can be implemented for scenario-specific uses cases, such as:
+Use Agent Builder to create and customize agents that can be implemented for scenario-specific uses cases, such as:
 
 - An agent that provides writing or presentation coaching that is tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
@@ -33,11 +33,11 @@ You can build agents from the following apps and sites:
 > [!NOTE]
 > Microsoft 365 Copilot is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It is not available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that are not listed in this article.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-entry.png" alt-text="Copilot studio entry point in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-entry.png" alt-text="Agent Builder entry point in Microsoft 365 Copilot":::
 
 ## Governance
 
-Agents you build with Microsoft 365 Copilot are included in your Microsoft 365 Copilot license. These agents feature functionality that is a subset of what Microsoft 365 Copilot supports. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise).
+Agents you build with the Agent Builder feature in Microsoft 365 Copilot are included in your Microsoft 365 Copilot license. These agents feature functionality that is a subset of what Microsoft 365 Copilot supports. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise).
 
 ## Data processing
 
@@ -45,7 +45,7 @@ Microsoft 365 Copilot capabilities are processed by the Copilot Studio service a
 
 ## Data storage
 
-Agents created with Microsoft 365 Copilot do not consume the tenant's Dataverse storage entitlement.
+Agents created with the Agent Builder feature do not consume the tenant's Dataverse storage entitlement.
 
 ## Compliance
 
@@ -66,7 +66,7 @@ The following are current known limitations:
 
 ## Submit feedback
 
-You can submit feedback from within Microsoft 365 Copilot to help contribute to product improvements for all users. Feedback from within Microsoft 365 Copilot is handled in the same way that feedback is handled for Copilot Studio. For more information about Copilot feedback, including what data is collected, how the data is handled, and what it's used for, see [Providing feedback about Microsoft Copilot with Microsoft 365 apps](https://support.microsoft.com/en-us/topic/providing-feedback-about-microsoft-copilot-with-microsoft-365-apps-c481c26a-e01a-4be3-bdd0-aee0b0b2a423).
+You can submit feedback from within the Microsoft 365 Copilot Agent Builder feature to help contribute to product improvements for all users. Feedback from within Microsoft 365 Copilot is handled in the same way that feedback is handled for Copilot Studio. For more information about Copilot feedback, including what data is collected, how the data is handled, and what it's used for, see [Providing feedback about Microsoft Copilot with Microsoft 365 apps](https://support.microsoft.com/en-us/topic/providing-feedback-about-microsoft-copilot-with-microsoft-365-apps-c481c26a-e01a-4be3-bdd0-aee0b0b2a423).
 
 You can submit feedback by using one of the following options:
 
@@ -103,6 +103,6 @@ You can find and copy these details in the Copilot Studio within the **Get suppo
 
 ## Related content
 
-- [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md) 
-- [Publish and manage agents built with Microsoft 365 Copilot](copilot-studio-lite-share-manage-agent.md)
+- [Build agents using Agent Builder in Microsoft 365 Copilot](copilot-studio-lite-build.md) 
+- [Share and manage agents built with Microsoft 365 Copilot](copilot-studio-lite-share-manage-agent.md)
 - [Regional availability and language support](copilot-studio-lite-availability.md)
