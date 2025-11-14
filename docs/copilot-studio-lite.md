@@ -60,7 +60,7 @@ Administrators can control whether Microsoft 365 Copilot is available to users i
 The following are current known limitations:
 
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
-- [Lockbox](/power-platform/admin/about-lockbox) and [Customer ManMicrosoft 365 Copilot doesn't currently support aged Keys](/azure/storage/common/customer-managed-keys-overview) are not currently supported for agents created using Microsoft 365 Copilot.
+- [Lockbox](/power-platform/admin/about-lockbox) and [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview) are not currently supported for agents created using Microsoft 365 Copilot.
 - Agents created using Microsoft 365 Copilot can't be used in Teams Chat.
 - If a tenant has disabled web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in Microsoft 365 Copilot. However, the **Web content** toggle in the **Knowledge** pane is **not** disabled. This is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
 
