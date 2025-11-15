@@ -12,10 +12,10 @@ ms.topic: conceptual
 
 The Agent Builder feature in Microsoft 365 Copilot provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-To get started, open the Microsoft 365 Copilot app. In the left navigation pane, choose **Create agent**.
+To get started, open the Microsoft 365 Copilot app. In the left navigation pane, choose **New agent**.
 
 > [!NOTE]
-> The capabilities of Copilot agents differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
+> The capabilities of agents differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 
 You can author your declarative agent in two ways:
 
@@ -31,7 +31,7 @@ Both tabs work seamlessly to provide a rich authoring experience.
 
 The **Describe** tab allows you to create an agent using plain language. As you provide information conversationally, the agent's name, description, and instructions update continuously to refine the agent's behavior. This experience provides a rich yet simple natural language way to create a customized agent. After you create an agent, you can return to the agent and use the **Describe** tab to update it using natural language.
 
-You build agents in plain language by answering the questions Microsoft 365 Copilot asks. The builder progressively updates the agent in each turn of the conversation, and changes are saved automatically. You can make updates to the agent in any turn of the conversation. Changes to the agent's name, description, and instructions update automatically. However, you can't add an icon or knowledge sources directly from the **Describe** tab. Use the **Configure** tab to add an icon, knowledge sources, or capabilities.
+You build agents in plain language by answering questions in the tool. The builder progressively updates the agent in each turn of the conversation, and changes are saved automatically. You can make updates to the agent in any turn of the conversation. Changes to the agent's name, description, and instructions update automatically. However, you can't add an icon or knowledge sources directly from the **Describe** tab. Use the **Configure** tab to add an icon, knowledge sources, or capabilities.
 
 ## Configure your agent
 
@@ -66,8 +66,8 @@ The test pane initially appears with suggested starter prompts, which when click
 ## Add knowledge sources
 
 To build context-aware agents, you can reference SharePoint items or any public websites. If your users have a Microsoft 365 Copilot add-on license, you can also:
-- ground your agents in personal work information, such as Teams chat messages and Outlook emails
-- use prebuilt [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) that are enabled in your tenant.
+- Ground your agents in personal work information, such as Teams chat messages and Outlook emails
+- Use prebuilt [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) that are enabled in your tenant.
 
 For more information, see [Add knowledge sources](copilot-studio-lite-knowledge.md).
 

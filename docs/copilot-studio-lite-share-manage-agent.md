@@ -1,6 +1,6 @@
 ---
 title: Share and manage agents built with Microsoft 365 Copilot
-description: Learn how to share and manage agents built using Microsoft 365 Copilot.
+description: Learn how to share and manage agents built with Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
@@ -32,7 +32,7 @@ The following table highlights the key differences between publishing and sharin
 
 ## Share an agent
 
-To share your agent, after you [build and test](copilot-studio-lite-build.md) it using the Agent Builder feature in Microsoft 365 Copilot, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
+To share your agent, after you [build and test](copilot-studio-lite-build.md) it in Microsoft 365 Copilot, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
 > [!NOTE]
 > Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
@@ -71,7 +71,7 @@ Copilot Studio provides an option to download a ZIP package for manual deploymen
 
 To deploy an agent manually:
 
-1. In the Microsoft 365 Copilot, open the left navigation pane and select **Create agent**.
+1. In Microsoft 365 Copilot, open the left navigation pane and select **Create agent**.
 1. At the top of the central pane, choose **My agents**.
 :::image type="content" source="assets/images/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
 1. Highlight the agent you want to download and choose the ellipses.
@@ -98,7 +98,7 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ## Manage agents
 
-You can access the agent management features in the Microsoft 365 Copilot in three ways.
+You can access the agent management features in Microsoft 365 Copilot in three ways.
 
 To manage an agent you recently accessed, select the **More options** ellipses (**...**) in the left pane next to the name of the agent you want to manage.
 

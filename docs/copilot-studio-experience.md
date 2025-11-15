@@ -30,7 +30,7 @@ In summary:
 - **Choose Copilot Studio** if you need an agent for a broader audience (such as your whole department, organization, or external customers) or if the agent requires advanced capabilities like multi-step workflows or custom integrations, or you need more control over deployment and management. The full version of Copilot Studio is a standalone web portal with a rich set of tools for complex or scalable solutions.
 
 > [!NOTE]
-> If you choose to use Agent Builder to create your agent and you later want to take advantage of the features available in Copilot Studio, you can [copy your agent to Copilot Studio](#copy-agents-from-agent-builder-to-copilot-studio).
+> If you choose to use Microsoft 365 Copilot to create your agent and you later want to take advantage of the features available in Copilot Studio, you can [copy your agent to Copilot Studio](#copy-agents-from-agent-builder-to-copilot-studio).
 
 The following table provides a more detailed feature comparison.
 
@@ -44,7 +44,7 @@ The following table provides a more detailed feature comparison.
 | Use cases | Use the lite experience to build:<br /><ul><li>Project FAQ bots that answers common questions based on project documentation.</li><li>Product documentation assistants that help employees find information from internal product manuals or wikis.</li><li>Onboarding agents that help new team members get answers from internal knowledge bases.</li></ul> |  Use the full experience to build:<br /><ul><li>Customer support agents that create support tickets and escalates issues to a human.</li><li>IT help desk triage agents that handle employee IT requests and routes them to the right support team.</li><li>Sales assistants for CRM that retrieve sales data, makes notes, or kicks off an approval workflow.</li></ul> |
 | Management and governance | Managed primarily through the Microsoft 365 admin center. | Managed through the Power Platform admin center with finer-grained controls for enterprise scenarios. |
 
-## Copy agents from Agent Builder to Copilot Studio
+## Copy agents from Microsoft 365 Copilot to Copilot Studio
 
 You can copy an agent created in Agent Builder to Copilot Studio when you need advanced capabilities or broader integration options. This process ensures that work done in Agent Buildere isn't lost and can be extended in the full experience without a need to to start over.
 
@@ -104,5 +104,5 @@ IT administrators use the Power Platform admin center to manage:
 ## Related content
 
 - [Choose the right tool to build your declarative agent](declarative-agent-tool-comparison.md)
-- [Overview of Microsoft 365 Copilot Agent Builder](copilot-studio-agent-builder.md)
+- [Overview of Agent Builder in Microsoft 365 Copilot](copilot-studio-agent-builder.md)
 - [Use Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions)

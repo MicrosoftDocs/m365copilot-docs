@@ -57,7 +57,7 @@ You can use your tool of choice to create a declarative agent app package. To ge
 
 - [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
 - [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context)
-- [Microsoft 365 Copilot](copilot-studio-lite.md) (using the Agent Builder feature)
+- [Microsoft 365 Copilot](copilot-studio-lite.md)
 - [SharePoint](/sharepoint/get-started-sharepoint-agents)
 
 For more information about how to choose the right tool for your scenarios, see [Choose the right tool to build your declarative agent](./declarative-agent-tool-comparison.md).
