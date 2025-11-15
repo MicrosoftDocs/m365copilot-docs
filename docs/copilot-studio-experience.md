@@ -10,7 +10,7 @@ ms.date: 11/17/2025
 
 # Choose between Agent Builder and Copilot Studio to build your agent
 
-Microsoft 365 Copilot Agent Builder and Copilot Studio are powerful tools for building secure, scalable, and intelligent agents that work across Microsoft 365 and line-of-business systems. Both tools enable you to create powerful agents, but they serve different needs. This article describes the differences between the two to help you choose the best one for your scenario.
+Agent Builder in Microsoft 365 Copilo and Copilot Studio are powerful tools for building secure, scalable, and intelligent agents that work across Microsoft 365 and line-of-business systems. Both tools enable you to create powerful agents, but they serve different needs. This article describes the differences between the two to help you choose the best one for your scenario.
 
 In selecting which tool to use, consider the following factors:
 
@@ -25,7 +25,7 @@ The following decision tree helps you map your scenario to the right tool.
 
 In summary:
 
-- **Choose Agent Builder** if you want to quickly create an agent for yourself or a small team, using natural language and existing content (for example, a bot that answers questions from your team’s SharePoint files or emails). The lite version is simple, accessible, and integrated with the Microsoft 365 Copilot experience, so you can build agents in context without any code.
+- **Choose Microsoft 365 Copilot**  and use the Agent Builder feature if you want to quickly create an agent for yourself or a small team, using natural language and existing content (for example, a bot that answers questions from your team’s SharePoint files or emails). The lite version is simple, accessible, and integrated with the Microsoft 365 Copilot experience, so you can build agents in context without any code.
 
 - **Choose Copilot Studio** if you need an agent for a broader audience (such as your whole department, organization, or external customers) or if the agent requires advanced capabilities like multi-step workflows or custom integrations, or you need more control over deployment and management. The full version of Copilot Studio is a standalone web portal with a rich set of tools for complex or scalable solutions.
 
