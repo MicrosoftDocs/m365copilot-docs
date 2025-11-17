@@ -28,19 +28,14 @@ Corporate Comms Crafter agents are useful for various corporate communication sc
 | Scenario | Description |
 |---|---|
 | **Internal announcements** | Crafting clear and engaging company-wide announcements or news updates for employees. This agent helps ensure that these internal communications are informative, aligned with company tone, and easy to understand. Example uses include announcing policy changes, new initiatives, or organizational updates. |
-| **Executive messaging** | Drafting high-stakes communications from leadership (CEO, directors, etc.). The agent helps produce polished emails and memos for executives, helping to mainatain a professional and authoritative tone for things like:
-
-- CEO announcements
-- board updates
-- leadership blog posts
-
+| **Executive messaging** | Drafting high-stakes communications from leadership (CEO, directors, and so on). The agent helps produce polished emails and memos for executives, helping to mainatain a professional and authoritative tone for things like:<ul><li>CEO announcements</li><li>Board updates</li><li>Leadership blog posts</li><li></ul>
 In this way, the template helps ensure that they remain on-message and are aligned with the organization's brand. |
 | **Crisis communication** | Preparing timely and appropriate communications during urgent situations (such as service outages, PR crises, or emergencies). The agent can quickly formulate a first draft of an email to address a crisis or statements that are empathetic and transparent about issues, while making sure that it's consistent with the company’s crisis communication guidelines, which help communication teams respond more quickly under pressure. |
 | **Brand and marketing content** | Creating external-facing content that must adhere to brand standards, such as press releases, marketing campaign copy, or blog articles. The agent helps ensure that all such content reflects the company’s voice and messaging strategy. It balances creativity with compliance, generating drafts that marketing teams can refine knowing the basics (tone, style, key points) are already aligned with brand guidelines. |
 | **Change management communications** | Supporting communications around organizational changes or major initiatives. For example, drafting messages about restructurings, mergers, or new strategy rollouts in a way that's transparent and reassuring. The agent emphasizes empathy and clarity, helping managers convey changes along with next steps and available support, which can improve understanding and acceptance among employees. |
 | **Quarterly business updates** | Summarizing business performance and milestones for periodic internal updates, such as quarterly or monthly newsletters. The agent can compile a narrative from provided data (financial results, major wins, project highlights) and frame it in an employee-friendly newsletter format, including an optional message from an executive (like a CFO’s note). This ensures regular updates are comprehensive yet consistent in tone and style. |
 
-## Extension Opportunities
+## Extension opportunities
 
 You can enhance the functionality of your Corporate Comms Crafter agent by connecting it to other resources or services (using Microsoft 365 Copilot connectors, Power Platform connectors, or relevant APIs). Adding more resources and services can expand the agent’s knowledge and ensure it has access to the latest company-specific information. Consider these ideas:
 
