@@ -58,7 +58,7 @@ This option is ideal for organizations looking to build collaborative agents tha
 
 ### Integrate Microsoft Foundry agents
 
-[Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry?context=/microsoft-365-copilot/extensibility/context) provides a platform for building, testing, and publishing intelligent agents using the Agent Framework SDK (formerly Semantic Kernel). These agents can be integrated into Microsoft 365 Copilot and Teams either via Foundry one-click publishing or the [Microsoft 365 Agents Toolkit](/microsoft-365/agents-sdk/create-new-toolkit-project-vsc?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
+[Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry?context=/microsoft-365-copilot/extensibility/context) provides a platform for building, testing, and publishing intelligent agents using the Agent Framework SDK (formerly Semantic Kernel). These agents can be integrated into Microsoft 365 Copilot and Teams either via Foundry one-click publishing or the [Microsoft 365 Agents Toolkit](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/main/ProxyAgent-CSharp).
 
 This approach is ideal for developers or organizations that already maintain AI logic and orchestration in Foundry and want to make those capabilities directly available in Microsoft 365.
 
@@ -66,7 +66,7 @@ The following table shows the two integration approaches for Foundry agents.
 
 |  Feature      | One-click publish from Foundry | Integrate with Microsoft 365 using Agents Toolkit |
 |------------------|-------------------------------------|--------------------------------------------------------|
-| Description  | Publish your Foundry agent directly to Microsoft 365 Copilot and Teams with minimal setup. Automatically provisions Azure Bot Service and Entra ID and packages your agent for distribution. | Connect an existing Foundry agent to Microsoft 365 Copilot via a proxy app built with the Microsoft 365 Agents Toolkit. Enables [Retrieval API](/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview) grounding for Microsoft 365 data, plus advanced customization, debugging, and multi-environment deployment. |
+| Description  | Publish your Foundry agent directly to Microsoft 365 Copilot and Teams with minimal setup. Automatically provisions Azure Bot Service and Entra ID and packages your agent for distribution. | Connect an existing Foundry agent to Microsoft 365 Copilot via a proxy app built with the [Microsoft 365 Agents Toolkit](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/main/ProxyAgent-CSharp). Enables [Retrieval API](/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview) grounding for Microsoft 365 data, plus advanced customization, debugging, and multi-environment deployment. |
 | Tooling      | Foundry portal                      | Visual Studio Code/Visual Studio with Microsoft 365 Agents Toolkit |
 | Ideal for    | Rapid deployment and testing with minimal code changes | Scenarios requiring Microsoft 365 data grounding, custom logic, SSO, or managed infrastructure |
 
