@@ -739,12 +739,14 @@ The worker agent object contains the following property.
 | `id`     | String | Required. The title ID of the application that contains the declarative agent.  This is returned when publishing the application with the Microsoft 365 Agents Toolkit or may be found in the [agent metadata section of the developer mode card](debugging-agents-vscode.md#agent-metadata-section). |
 
 ### User override object
+
 > [!IMPORTANT]
 > This feature is not yet available.
 
 Identifies capabilities in the agent that the agent end user can modify via a UI control in Microsoft 365 Copilot.
+
 > [!NOTE]
-> When you declare GraphConnectors in the `path`, the system buckets and displays Microsoft provided connectors using a friendly name, and Custom connectors using the connector name (e.g., CB Insights). This behavior ensures end users can easily identify and manage connector sources when configuring their agent session. For more information on connectors and publishers, see [Microsoft 365 Copilot Connectors Gallery](https://learn.microsoft.com/en-us/microsoftsearch/connectors-gallery). 
+> When you declare `GraphConnectors` in the `path`, the system buckets and displays Microsoft provided connectors using a friendly name, and custom connectors using the connector name (e.g., CB Insights). This behavior ensures end users can easily identify and manage connector sources when configuring their agent session. For more information on connectors and publishers, see [Microsoft 365 Copilot Connectors Gallery](/microsoftsearch/connectors-gallery).
 
 The user override object contains the following properties.
 
