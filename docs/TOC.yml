@@ -95,6 +95,8 @@ items:
           displayName: response, response_semantics
         - name: Dialog boxes
           href: adaptive-card-dialog-box.md
+        - name: Allow Adaptive Card edits (preview)
+          href: adaptive-card-edits.md
         - name: Confirmation prompts
           href: api-plugin-confirmation-prompts.md
         - name: Debug locally
