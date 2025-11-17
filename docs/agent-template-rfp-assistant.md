@@ -12,7 +12,7 @@ ms.date: 11/11/2025
 
 Use the **RFP Proposal Generator** template in the Microsoft 365 Copilot Studio lite experience to build an agent that helps create comprehensive, tailored responses to Requests for Proposals (RFPs).
 
-This agent is designed to streamline the RFP response process by drawing on your organization’s existing proposal content and templates. It ensures that first drafts of proposals are consistent with company standards and closely aligned to each prospective client’s needs.
+Agents built with the RFP Proposal Generator template are designed to streamline the RFP response process by drawing on your organization’s existing proposal content and templates. They ensure that first drafts of proposals are consistent with company standards and closely aligned to each prospective client’s needs.
 
 The RFP Proposal Generator automates much of the initial writing and pulling in relevant information from past successful proposals. This automation significantly reduces the time required to produce a strong draft. The result is a more efficient proposal workflow: faster turnaround on RFPs, more accurate and compelling content in every response, and ultimately a higher win rate for new deals.
 
@@ -48,7 +48,7 @@ You can further enhance the RFP Proposal Generator agent by integrating addition
 
 ## Limitations
 
-While the RFP Proposal Generator agent is a powerful tool, it’s important to understand its boundaries and apply it responsibly:
+While the RFP Proposal Generator agent is a powerful tool, it’s important to understand the template's boundaries and apply the template responsibly:
 
 - **One interaction at a time:** The agent performs best when handling a single prompt or task. Avoid combining multiple requests in one query—for example, asking it to draft an answer, identify missing information, and summarize the RFP all at once. Breaking multiple questions into separate steps ensures more accurate and focused responses.
 - **Handling sensitive information:** RFPs often contain confidential company data—such as pricing, strategy, or client references. Any content you input or generate must comply with your organization’s data governance policies. The agent might draw from past proposals or templates, so it’s your responsibility to ensure no sensitive or client-specific information is inadvertently reused. Always review outputs for compliance and anonymize where necessary.
