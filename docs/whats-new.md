@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 10/21/2025
+ms.date: 11/11/2025
 ms.topic: overview
 ---
 
@@ -13,6 +13,16 @@ ms.topic: overview
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
+
+## November 2025
+
+### Copilot Studio lite experience is available in GCCM
+
+The Copilot Studio lite experience is now available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) environment.
+
+### Embedded file content file size limit increase
+
+You can now upload files up to 512 MB in size when you embed file content as knowledge in the Copilot Studio lite experience. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
 
 ## October 2025
 

@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for t
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/11/2025
 ms.topic: conceptual
 ---
 
@@ -35,6 +35,10 @@ The lite experience of Copilot Studio is available if your [Power Platform defau
 - United States
 
 The Power Platform default environment location is automatically set to the location of the tenant. You can verify the location of your Power Platform default environment in the Power Platform Admin Center. For more information, see [Environment location](/power-platform/admin/environments-overview#environment-location).
+
+## National cloud availability
+
+The Copilot Studio lite experience is available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) national cloud environment.
 
 ## Language support
 
