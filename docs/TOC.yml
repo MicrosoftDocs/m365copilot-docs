@@ -299,7 +299,7 @@ items:
   - name: Validation guidelines for agents
     href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
   - name: Design icons for agent acquisition and management
-    href: microsoft-365-extension-management-icons.md
+    href: agent-icon-management.md
 - name: Manage
   items:
   - name: Overview
