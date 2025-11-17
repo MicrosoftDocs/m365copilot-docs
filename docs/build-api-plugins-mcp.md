@@ -77,10 +77,22 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
 1. When asked to **Enter client secret for OAuth registration...**, enter your client secret.
 
+1. When asked for scopes, press **Enter** to continue.
+
 1. Read the message in the dialog and select **Confirm** to continue.
 
 1. Wait for the toolkit to report that is finished provisioning.
 
 ## Use the plugin
 
-TODO
+1. In your browser, go to [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
+
+1. In the **Agents** section of the sidebar, locate your agent. It is listed as the name you gave in the [Create the agent](#create-the-agent) section, with `dev` appended at the end. Select the agent.
+
+1. Ask the agent to find a repository or user. For example, `can you find a repo for kiota?`.
+
+1. When prompted, select **Sign in to {agent-name}**. In the pop-up window, login with your GitHub account and authorize the agent.
+
+1. When the pop-up window closes, the agent returns a response.
+
+    :::image type="content" source="assets/images/api-plugins/github-mcp-plugin-response.png" alt-text="A screenshot of the agent's response to a query for repositories":::
