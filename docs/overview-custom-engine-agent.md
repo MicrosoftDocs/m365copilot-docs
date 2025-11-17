@@ -58,13 +58,13 @@ This option is ideal for organizations looking to build collaborative agents tha
 
 ### Integrate Microsoft Foundry agents
 
-[Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry?context=/microsoft-365-copilot/extensibility/context) provides a platform for building, testing, and publishing intelligent agents using the Agent Framework SDK (formerly Semantic Kernel). These agents can be integrated into Microsoft 365 Copilot and Teams either via Foundry one-click publishing or the [Microsoft 365 Agents Toolkit](https://aka.ms/aif2m365-procode).
+[Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry?context=/microsoft-365-copilot/extensibility/context) provides a platform for building, testing, and publishing intelligent agents using the Agent Framework SDK (formerly Semantic Kernel). These agents can be integrated into Microsoft 365 Copilot and Teams either via Foundry portal or the [Microsoft 365 Agents Toolkit](https://aka.ms/aif2m365-procode).
 
 This approach is ideal for developers or organizations that already maintain AI logic and orchestration in Foundry and want to make those capabilities directly available in Microsoft 365.
 
 The following table shows the two integration approaches for Foundry agents.
 
-|  Feature      | One-click publish from Foundry | Integrate with Microsoft 365 using Agents Toolkit |
+|  Feature      | Publish from Foundry to Microsoft 365 | Integrate with Microsoft 365 using Agents Toolkit |
 |------------------|-------------------------------------|--------------------------------------------------------|
 | Description  | Publish your Foundry agent directly to Microsoft 365 Copilot and Teams with minimal setup. Automatically provisions Azure Bot Service and Entra ID and packages your agent for distribution. | Connect an existing Foundry agent to Microsoft 365 Copilot via a [proxy app built with the Microsoft 365 Agents Toolkit](https://aka.ms/aif2m365-procode). Enables [Retrieval API](/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview) grounding for Microsoft 365 data, plus advanced customization, debugging, and multi-environment deployment. |
 | Tooling      | Foundry portal                      | Visual Studio Code/Visual Studio with Microsoft 365 Agents Toolkit |
@@ -102,7 +102,7 @@ The following table provides scenario examples and the recommended development a
 
 | Scenario                            | Description | Recommended approach |
 |-------------------------------------|-------------|----------------------|
-| **Legal case analysis**             | A law firm creates a standalone AI agent using Foundry. The agent uses a custom-trained LLM for case law analysis and integrates with external legal databases. The agent is used in the firm's case management system but should also be accessible within Microsoft 365 Copilot and have access to documents in SharePoint. | Use **Foundry** because it allows the firm to maintain custom AI logic and orchestration while making the agent accessible in Microsoft 365. Agents can be published via one-click publish for minimal setup or integrated through the Microsoft 365 Agents Toolkit to enable Retrieval API grounding, custom logic, and multi-environment deployment. |
+| **Legal case analysis**             | A law firm creates a standalone AI agent using Foundry. The agent uses a custom-trained LLM for case law analysis and integrates with external legal databases. The agent is used in the firm's case management system but should also be accessible within Microsoft 365 Copilot and have access to documents in SharePoint. | Use **Foundry** because it allows the firm to maintain custom AI logic and orchestration while making the agent accessible in Microsoft 365. Agents can be published via Foundry portal or integrated through the Microsoft 365 Agents Toolkit to enable Retrieval API grounding, custom logic, and multi-environment deployment. |
 | **Surgical planning in healthcare** | A hospital builds an agent for surgical teams to plan and schedule surgeries. The agent collaborates with doctors, nurses, and administrative staff and integrates with Patient Information and scheduling systems. The agent facilitates collaboration with all members of the team to plan, create appointments, resolve conflicts, and set reminders and notifications. | Use the **Teams AI Library** because the agent operates in a multi-user, collaborative environment. Publishing within Teams channels or meetings allows seamless interaction, while the built-in Action Planner orchestrator connects to scheduling and patient information systems. |
 | **Employee onboarding assistant**   | A company wants to provide a lightweight AI assistant for new employees to answer HR FAQs, guide them through document completion, and point them to internal resources. The agent will mostly handle standard processes and documentation that are already available in Microsoft 365. | Use **Copilot Studio** because it enables rapid, low-code development and deployment. The agent can use built-in Microsoft 365 knowledge and connectors, making it ideal for straightforward workflows that don’t require custom AI models or multi-channel orchestration. |
 
@@ -138,7 +138,6 @@ Custom engine agent prompts and responses in Copilot Chat and Teams are stored i
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
 - [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
 - [Integrate your Foundry agent with Microsoft Agent Toolkit](https://aka.ms/aif2m365-procode)
-- [Microsoft Foundry one-click publishing to Microsoft 365](/azure/ai-foundry/what-is-azure-ai-foundry)
 - [Create an agent using Microsoft 365 Agent Toolkit](/microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
 - [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md)
 - [Teams AI Library](/microsoftteams/platform/teams-ai-library/)
