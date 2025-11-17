@@ -140,5 +140,6 @@ Custom engine agent prompts and responses in Copilot Chat and Teams are stored i
 - [Integrate your Foundry agent with Microsoft Agent Toolkit](https://aka.ms/aif2m365-procode)
 - [Create an agent using Microsoft 365 Agent Toolkit](/microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
 - [Convert your declarative agent to a custom engine agent](convert-declarative-agent.md)
+- [Custom engine agent sample with Retrieval API grounding](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/main/travel-agent)
 - [Teams AI Library](/microsoftteams/platform/teams-ai-library/)
 - [Bots overview](/microsoftteams/platform/bots/overview)
