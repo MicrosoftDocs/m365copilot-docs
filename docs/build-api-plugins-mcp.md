@@ -8,16 +8,19 @@ ms.localizationpriority: medium
 ms.date: 11/11/2025
 ---
 
-# Build API plugins from an MCP server for Microsoft 365 Copilot
+# Build API plugins from an MCP server for Microsoft 365 Copilot (preview)
 
-This guide walks you through the process of integrating your MCP server with Microsoft 365 Copilot by adding an action (API plugin) to a declarative agent using the Microsoft 365 Agents Toolkit. By following these steps, you'll enable conversational, AI-powered access to your MCP-exposed services for business users.
+This guide walks you through the process of integrating your service with Microsoft 365 Copilot by adding an MCP server to a declarative agent using the Microsoft 365 Agents Toolkit. By following these steps, you'll enable conversational, AI-powered access to your MCP-exposed services for business users.
+
+> [!IMPORTANT]
+> This feature is currently in public preview.
 
 ## Prerequisites
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - A GitHub account
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
+- [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) version 6.3.x or later
 
 ## Create the agent
 
@@ -39,7 +42,7 @@ This guide walks you through the process of integrating your MCP server with Mic
 
 Once you complete these steps, Agents Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded.
 
-## Add actions or tools from the MCP server
+## Add tools from the MCP server
 
 1. Open the **.vscode/mcp.json** file. Select the **Start** button in the file editor.
 
@@ -49,7 +52,12 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
     :::image type="content" source="assets/images/api-plugins/fetch-mcp-actions.png" alt-text="A screenshot of the 'ATK: Fetch action from MCP' and 'Start' buttons in mcp.json":::
 
-1. Select operations for the agent to use. For this exercise, choose **search_repositories**.
+1. Select operations for the agent to use. For this exercise, choose **search_repositories** and **search_users**.
+
+    :::image type="content" source="assets/images/api-plugins/mcp-tool-selection.png" alt-text="A screenshot of the tool selection interface in VS Code":::
+
+    > [!IMPORTANT]
+    > Only tools from MCP servers are supported.
 
 1. Select **OAuth (with static registration)** as the authentication type.
 
@@ -82,6 +90,14 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 1. Read the message in the dialog and select **Confirm** to continue.
 
 1. Wait for the toolkit to report that is finished provisioning.
+
+> [!IMPORTANT]
+> While this feature is in public preview, manifest validation may fail for function parameters in the following cases.
+>
+> - Nested objects in the `properties` member
+> - Properties in the `properties` member with the `minimum`, `maximum`, or `default` members present
+>
+> If the `teamsApp/validateAppPackage` step fails during provisioning, remove the unsupported members and retry the provisioning step.
 
 ## Use the plugin
 
