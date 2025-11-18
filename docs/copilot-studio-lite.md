@@ -10,7 +10,9 @@ ms.topic: conceptual
 
 # Build a declarative agent with Agent Builder in Microsoft 365 Copilot
 
-The easiest way to build your own [declarative agents](overview-declarative-agent.md) is to use the Agent Builder feature in Microsoft 365 Copilot. It offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects. If you need more advanced capabilities like Actions to integrate external services, we recommend that you use [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
+The easiest way to build your own [declarative agents](overview-declarative-agent.md) is to use the Agent Builder feature in Microsoft 365 Copilot. It offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects. 
+
+If you need more advanced capabilities like Actions to integrate external services, we recommend that you use [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
 
 > [!NOTE]
 > The capabilities available for agents differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
