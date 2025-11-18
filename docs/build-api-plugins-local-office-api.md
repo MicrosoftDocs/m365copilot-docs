@@ -185,7 +185,7 @@ The reference documentation for the manifest JSON is at [Microsoft 365 app manif
     }
     ```
 
-The reference documentation for declarative agents is at [Declarative agent schema 1.5 for Microsoft 365 Copilot](declarative-agent-manifest-1.5.md).
+The reference documentation for declarative agents is at [Declarative agent schema 1.6 for Microsoft 365 Copilot](declarative-agent-manifest-1.6.md).
 
 ### Configure the plugin
 

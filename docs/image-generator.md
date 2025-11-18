@@ -67,6 +67,6 @@ If you're the using [Microsoft 365 Copilot](copilot-studio-lite.md) to create yo
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.5.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.6.md)
 - [Add the code interpreter capability to your agent](code-interpreter.md)
 - [Add knowledge sources to your declarative agent](knowledge-sources.md)
