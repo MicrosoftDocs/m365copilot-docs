@@ -79,7 +79,7 @@ Follow-up messages on user-initiated workflows keep users informed about the sta
 
 Long-running tasks are another type of user-initiated workflow where a process takes a long time to complete. For instance, a business document management agent might handle batch processing of multiple contract documents. While the process is still running, the user can continue chatting since the messages are nonblocking.
 
-To send a follow-up message or wait for a long-tunning task, you can use the turn context object's `SendActivity` (or `SendActivityAsync` in C#) in the `async`/`await` pattern with [Teams SDK](/microsoftteams/platform/teams-ai-library/).
+To send a follow-up message or wait for a long-running task, you can use the turn context object's `SendActivity` (or `SendActivityAsync` in C#) in the `async`/`await` pattern with [Teams SDK](/microsoftteams/platform/teams-ai-library/).
 
 ### Proactive messages
 
