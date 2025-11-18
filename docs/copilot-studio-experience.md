@@ -46,7 +46,7 @@ The following table provides a more detailed feature comparison.
 
 ## Copy agents from Microsoft 365 Copilot to Copilot Studio
 
-You can copy an agent created in Microsoft 365 Copilot to Copilot Studio when you need advanced capabilities or broader integration options. This process ensures that work done in Microsoft 365 Copilot isn't lost and can be extended in the full experience without a need to to start over.
+You can copy an agent created in Microsoft 365 Copilot to Copilot Studio when you need advanced capabilities or broader integration options. This process ensures that work done in Microsoft 365 Copilot isn't lost and can be extended in the full experience without a need to start over.
 
 Transitioning to Copilot Studio unlocks additional features, such as richer customization, governance controls, and expanded connectors. When you copy your agent, the agent's core configuration and instructions are preserved, and you can enhance them with the advanced settings available only in Copilot Studio.
 
