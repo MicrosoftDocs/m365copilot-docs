@@ -74,7 +74,7 @@ The following table lists the configurations that aren't copied and how to handl
 
 After you copy your agent:
 
-- The original agent in built in Microsoft 365 Copilot remains available.
+- The original agent built in Microsoft 365 Copilot remains available.
 - Copilot Studio creates a snapshot of the agent and uses it to define the agent in Copilot Studio. Save the agent to ensure that the data is stored.
 - Updates to the original agent don't affect the copied version.
 - If another copy operation is underway, wait a few seconds before you start a new copy for the same agent. Every copy operation creates a new agent in Copilot Studio.
