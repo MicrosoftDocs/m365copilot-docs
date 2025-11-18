@@ -198,9 +198,9 @@ The following table lists the file types that you can add as knowledge to your a
 
 You can ground your agent in People data to deliver more personalized and context-aware responses. People data provides public information about individuals, such as name, position, skills, and organizational relationships. This allows agents to look up user and colleague profiles, including reporting structure and contact details.
 
-People data is enabled by default for agents created by users with a Microsoft 365 Copilot license. You can disable this capability in the agent configuration UI. To disable People data:
+People data is enabled by default for agents created by users with a Microsoft 365 Copilot license. You can disable or re-enable this capability in the agent configuration UI. To disable or enable People data:
 
-- On the **Configure** tab in Agent Builder in Microsoft 365 Copilot, select the toggle next to **Reference people in organization**.
+- On the **Configure** tab in Agent Builder in Microsoft 365 Copilot, select the toggle next to **Reference people in organization** to turn People data off or on.
 
 This feature is available only to users with a Microsoft 365 Copilot add-on license.
 
