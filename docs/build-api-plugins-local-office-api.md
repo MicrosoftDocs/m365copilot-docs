@@ -260,7 +260,7 @@ The reference documentation for declarative agents is at [Declarative agent sche
     }
     ```
 
-The reference documentation for API plugins is at [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md).
+The reference documentation for API plugins is at [API plugin manifest schema 2.4 for Microsoft 365 Copilot](api-plugin-manifest-2.4.md).
 
 ## Create the JavaScript functions
 
