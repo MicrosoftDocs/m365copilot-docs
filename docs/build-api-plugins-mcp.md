@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 11/18/2025
 ---
 
 # Build API plugins from an MCP server for Microsoft 365 Copilot (preview)

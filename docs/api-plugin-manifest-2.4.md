@@ -4,7 +4,7 @@ description: Learn about the 2.4 schema for a manifest file for an API plugin in
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 11/18/2025
 ms.topic: reference
 ---
 
