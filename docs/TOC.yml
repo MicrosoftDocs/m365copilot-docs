@@ -292,6 +292,8 @@ items:
     href: sdks/api-libraries.md
   - name: API reference
     href: api/toc.yml
+- name: Extend agents at scale with Agent 365 (early access preview)
+  href: /microsoft-agent-365/overview?context=/microsoft-365-copilot/extensibility/context
 - name: Publish
   items:
   - name: Overview

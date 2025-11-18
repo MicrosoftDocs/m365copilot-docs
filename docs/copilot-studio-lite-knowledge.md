@@ -42,7 +42,7 @@ You can add specific public websites as agent knowledge sources to make your age
 - URLs can't contain query parameters; for example, `https://example.org?test=1` is invalid.
 - You can add up to four URLs.
 
-To configure your agent to use any web data as knowledge, on the **Configure** tab, click the **Knowledge** box, and choose **All websites**.
+To configure your agent to use any web data as knowledge, on the **Configure** tab, under **Knowledge**, choose the toggle next to **Search all websites**.
 
 ## SharePoint content
 
@@ -86,21 +86,21 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 You can ground your agent in Microsoft Teams data, including Teams chat messages and meeting information. To use all chat messages, meeting transcripts, and calendars that you have access to as knowledge, choose **My Teams chats and meetings**.
 
-You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, click the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
+You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, select the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
 
 > [!IMPORTANT]
 > - Teams knowledge is only available to users with a Microsoft 365 Copilot add-on license.
-> - You can't scope to individual meetings. When you select **My Teams chats and meetings**, agents will search all meeting transcripts and the whole calendar.
+> - You can't scope to individual meetings. When you select **My Teams chats and meetings**, agents search all meeting transcripts and the whole calendar.
 > - Agents might not have the access to all meeting transcripts, depending on the size of past transcripts.
 
 ## Outlook emails
 
-You can ground your agent in Outlook email. To add email as a knowledge source, on the **Configure** tab, in the **Knowledge** section, click the search bar, and choose **My emails**.
+You can ground your agent in Outlook email. To add email as a knowledge source, on the **Configure** tab, in the **Knowledge** section, select the search bar, and choose **My emails**.
 
 > [!NOTE]
 > You can't scope email knowledge. When you add email, the agent uses all email in your mailbox as knowledge.
 > Users that you share the agent with don't have access to your email as knowledge.
-> This capability is only avaialble for M365 Copilot licensed users.
+> This capability is only available to users with a Microsoft 365 Copilot add-on license.
 
 ## Embedded file content
 
@@ -164,7 +164,7 @@ The following table lists sensitivity label scenarios that aren't currently supp
 
 ### Sharing an agent with embedded files
 
-When you share an agent with embedded files, the files are only shared with users when they have acquired the agent. After they acquire the agent, users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with embedded files as knowledge:
+When you share an agent with embedded files, the files are only shared with users when they acquire the agent. After they acquire the agent, users can get responses from Copilot based on those knowledge sources. You have the following options for sharing an agent with embedded files as knowledge:
 
 - Anyone in your organization
 - Specific users in your organization
@@ -194,6 +194,19 @@ The following table lists the file types that you can add as knowledge to your a
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
 > - To optimize for Copilot, we recommend that you keep the contents of files that you upload concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 
+## People data
+
+You can ground your agent in People data to deliver more personalized and context-aware responses. People data provides public information about individuals, such as name, position, skills, and organizational relationships. This allows agents to look up user and colleague profiles, including reporting structure and contact details.
+
+People data is enabled by default for agents created by users with a Microsoft 365 Copilot license. You can disable or re-enable this capability in the agent configuration UI. To disable or enable People data:
+
+- On the **Configure** tab in Agent Builder in Microsoft 365 Copilot, select the toggle next to **Reference people in organization** to turn People data off or on.
+
+This feature is available only to users with a Microsoft 365 Copilot add-on license.
+
+> [!NOTE]
+> People data acts as a personalization layer, enriching agent responses with context from Microsoft 365. It doesn't introduce new privacy risks, but provides transparency and control for users and administrators.
+
 ## Copilot connectors
 
 Copilot connectors allow agents to access and apply knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. You can use Copilot connectors to integrate enterprise data into your agents, empowering them with domain-specific knowledge.
@@ -215,7 +228,7 @@ To enhance the accuracy and relevance of agent responses, agents can be grounded
    > [!NOTE]
    > If the attribute doesn't appear in the search results, it might be because:
    >
-   > * The scoped content hasn't been configured by your administrator.
+   > * Your administrator didn't configure the scoped content.
    > * You don't have the required permissions to access the content.
    > * The scope isn't valid for the selected connector.
 
@@ -250,7 +263,7 @@ The following table lists the Copilot connectors that support scoping and the at
 | ServiceNow Catalog | Catalog |
 | ServiceNow Tickets | Entity type (Sys_class_name/ Category/ Subcategory) |
 
-For more information about the Copilot connectors that are availlable, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext). 
+For more information about the Copilot connectors that are available, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext). 
 
 ## Prioritize your knowledge sources over general knowledge
 
@@ -267,10 +280,10 @@ Some user requests don't require knowledge-based searches; the agent can respond
 
 When you enable this feature, the agent answers simple questions that don't require searching based on its general knowledge, but uses your knowledge sources only to answer any search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states that it can't find the information.
 
-To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Prioritize the knowledge source you added over general agent knowledge**.
+To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Only use specified sources**.
 
 > [!NOTE]
-> The Agent Builder feature in Microsoft 365 Copilot doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use Copilot Studio. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
+> Agent Builder in Microsoft 365 Copilot doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, use Copilot Studio. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## Related content
 

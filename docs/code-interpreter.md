@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/12/2025
 ---
 
 # Add the code interpreter capability to your agent
@@ -38,7 +38,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 ## Enable code interpreter in Microsoft 365 Copilot
 
-If you're using the [Microsoft 365 Copilot](copilot-studio-lite.md) to create your agent and want to enable code interpreter, open the **Configure** tab and then, under **Capabilities**, choose the toggle next to **Code interpreter**.
+If you're using the [Microsoft 365 Copilot](copilot-studio-lite.md) to create your agent and want to enable code interpreter, open the **Configure** tab and then, under **Capabilities**, choose the toggle next to **Create documents, charts, and code**.
 
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section in Agent Builder in Microsoft 365 Copilot":::
 

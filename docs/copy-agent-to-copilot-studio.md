@@ -69,8 +69,8 @@ The following table lists the configurations that aren't copied and how to handl
 | Embedded files | Upload the files again in Copilot Studio. |
 | Teams chats and meetings added as knowledge | Add the Power Platform connector for Teams in Copilot Studio. |
 | Emails added as knowledge | Add the Power Platform connector for Outlook in Copilot Studio. |
-| Code interpreter toggle | Add code interpreter via agent settings in Copilot Studio. |
-| Image generation from prompts | Not currently supported in Copilot Studio. Basic charts and graphs are part of the code interpreter capability. |
+| Create documents, charts, and code  | Add code interpreter via agent settings in Copilot Studio. |
+| Create images from prompts | Not currently supported in Copilot Studio. Basic charts and graphs are part of the code interpreter capability. |
 
 After you copy your agent:
 
