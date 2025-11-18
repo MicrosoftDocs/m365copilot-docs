@@ -1,18 +1,18 @@
 ---
-title: Build Agents with Copilot Studio in Microsoft 365 Copilot
-description: Learn how to build agents by using the lite experience of Microsoft Copilot Studio.
+title: Build Agents with Microsoft 365 Copilot
+description: Learn how to build agents by using the Agent Builder feature in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/17/2025
 ms.topic: conceptual
 ---
 
-# Build agents using Agent Builder in Microsoft 365 Copilot
+# Build agents with Microsoft 365 Copilot
 
 The Agent Builder feature in Microsoft 365 Copilot provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-To get started, open the Microsoft 365 Copilot app. In the left navigation pane, choose **New agent**.
+To get started, open the Microsoft 365 Copilot app. In the left pane, choose **Create agent**.
 
 > [!NOTE]
 > The capabilities of agents differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
@@ -82,7 +82,7 @@ To add one or more capabilities to your agent, choose the toggle next to the cap
 
 ## Build from a template
 
-Microsoft 365 Copilot includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs, for example, you can add more knowledge sources and capabilities. For more information, see [Copilot Studio agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
+The Agent Builder feature in Microsoft 365 Copilot includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs; for example, you can add more knowledge sources and capabilities. For more information, see [Agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
 
 ## Next step
 

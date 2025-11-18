@@ -20,7 +20,7 @@ Use Microsoft 365 Copilot to create and customize agents that can be implemented
 - An agent that provides writing or presentation coaching that is tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-starter.png" alt-text="Copilot Studio initial screen":::
+:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-starter.png" alt-text="Agent Builder initial screen":::
 
 You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors. You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
 
@@ -61,7 +61,7 @@ The following are current known limitations:
 
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
 - [Lockbox](/power-platform/admin/about-lockbox) and [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview) are not currently supported for agents created using Microsoft 365 Copilot.
-- Agents created using Microsoft 365 Copilot can't be used in Teams Chat.
+- Agents created with Microsoft 365 Copilot can't be used in Teams Chat.
 - If a tenant has disabled web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in Microsoft 365 Copilot. However, the **Web content** toggle in the **Knowledge** pane is **not** disabled. This is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
 
 ## Submit feedback
@@ -74,7 +74,7 @@ You can submit feedback by using one of the following options:
 - The **Send feedback**, button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
 - The **Send Feedback** option in the menu on the top right, as shown in the following image.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-feedback-general.png" alt-text="Send feedback in the Copilot Studio":::
+:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-feedback-general.png" alt-text="Send feedback in Agent Builder":::
 
 In your feedback submission, specify that the issue is related to **Agent Builder in Microsoft 365 Copilot**.
 
@@ -103,6 +103,6 @@ You can find and copy these details in the Copilot Studio within the **Get suppo
 
 ## Related content
 
-- [Build agents using Agent Builder in Microsoft 365 Copilot](copilot-studio-lite-build.md) 
+- [Build agents with Agent Builder in Microsoft 365 Copilot](copilot-studio-lite-build.md) 
 - [Share and manage agents built with Microsoft 365 Copilot](copilot-studio-lite-share-manage-agent.md)
 - [Regional availability and language support](copilot-studio-lite-availability.md)

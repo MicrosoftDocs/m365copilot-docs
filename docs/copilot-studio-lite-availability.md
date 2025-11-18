@@ -1,10 +1,10 @@
 ---
 title: Agent Builder in Microsoft 365 Copilot regional availability and language support
-description: Learn about the regional availability and supported languages for Microsoft 365 Copilot.
+description: Learn about the regional availability and supported languages for the Agent Builder feature in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 11/17/2025
 ms.topic: conceptual
 ---
 

@@ -1,18 +1,18 @@
 ---
-title: Add knowledge sources to your declarative agent for Microsoft 365 Copilot
-description: Learn about the different types of knowledge sources that you can add to your declarative agent when you build with Copilot Studio.
+title: Add knowledge sources to your declarative agent in Microsoft 365 Copilot
+description: Learn about the different types of knowledge sources that you can add to your declarative agent when you build your agent with the Agent Builder feature in Microsoft 365 Copilot.
 author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 11/17/2025
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
 
-The Microsoft 365 Copilot Agent Builder provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
+The Agent Builder feature in Microsoft 365 Copilot provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
-This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents using Microsoft 365 Copilot](copilot-studio-lite-build.md).
+This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md).
 
 For more information about supported knowledge sources and licensing requirements, see [Knowledge sources](/microsoft-365-copilot/extensibility/knowledge-sources).
 
@@ -84,7 +84,7 @@ You can check the file readiness by looking in the **Knowledge** section in the 
 
 ## Microsoft Teams data
 
-You can ground your agent in Microsoft Teams data, including Teams chat messages and meeting information. To use all chat messages, meeting transcripts, and calendars that you have access to as knowledge, in Copilot Studio, choose **My Teams chats and meetings**.
+You can ground your agent in Microsoft Teams data, including Teams chat messages and meeting information. To use all chat messages, meeting transcripts, and calendars that you have access to as knowledge, choose **My Teams chats and meetings**.
 
 You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, click the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
 
@@ -196,7 +196,7 @@ The following table lists the file types that you can add as knowledge to your a
 
 ## Copilot connectors
 
-Copilot connectors allow agents to access and apply knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. You can integrate enterprise data from your Copilot Studio workspace directly into your agents, empowering them with domain-specific knowledge.
+Copilot connectors allow agents to access and apply knowledge from external systems such as customer accounts, incident tickets, code repositories, and knowledge articles. You can use Copilot connectors to integrate enterprise data into your agents, empowering them with domain-specific knowledge.
 
 > [!NOTE]
 > Admins must enable and configure Copilot connectors in the [Microsoft 365 admin center](/microsoftsearch/configure-connector).

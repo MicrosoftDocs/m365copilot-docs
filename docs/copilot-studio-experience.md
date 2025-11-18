@@ -8,11 +8,11 @@ ms.localizationpriority: medium
 ms.date: 11/17/2025
 ---
 
-# Choose between Agent Builder and Copilot Studio to build your agent
+# Choose between Microsoft 365 Copilot and Copilot Studio to build your agent
 
-Agent Builder in Microsoft 365 Copilo and Copilot Studio are powerful tools for building secure, scalable, and intelligent agents that work across Microsoft 365 and line-of-business systems. Both tools enable you to create powerful agents, but they serve different needs. This article describes the differences between the two to help you choose the best one for your scenario.
+The Agent Builder feature in Microsoft 365 Copilot and Copilot Studio are powerful tools for building secure, scalable, and intelligent agents that work across Microsoft 365 and line-of-business systems. Both tools allow you to create agents, but they serve different needs. This article describes the differences between the two to help you choose the best one for your scenario.
 
-In selecting which tool to use, consider the following factors:
+When choosing which tool to use, consider the following factors:
 
 - **Audience** – Who will use the agent?
 - **Deployment scope** – How widely do you plan to share the agent?
@@ -25,7 +25,7 @@ The following decision tree helps you map your scenario to the right tool.
 
 In summary:
 
-- **Choose Microsoft 365 Copilot**  and use the Agent Builder feature if you want to quickly create an agent for yourself or a small team, using natural language and existing content (for example, a bot that answers questions from your team’s SharePoint files or emails). The lite version is simple, accessible, and integrated with the Microsoft 365 Copilot experience, so you can build agents in context without any code.
+- **Choose Microsoft 365 Copilot** and use the Agent Builder feature if you want to quickly create an agent for yourself or a small team, using natural language and existing content (for example, a bot that answers questions from your team’s SharePoint files or emails). The lite version is simple, accessible, and integrated with the Microsoft 365 Copilot experience, so you can build agents in context without any code.
 
 - **Choose Copilot Studio** if you need an agent for a broader audience (such as your whole department, organization, or external customers) or if the agent requires advanced capabilities like multi-step workflows or custom integrations, or you need more control over deployment and management. The full version of Copilot Studio is a standalone web portal with a rich set of tools for complex or scalable solutions.
 
@@ -46,7 +46,7 @@ The following table provides a more detailed feature comparison.
 
 ## Copy agents from Microsoft 365 Copilot to Copilot Studio
 
-You can copy an agent created in Agent Builder to Copilot Studio when you need advanced capabilities or broader integration options. This process ensures that work done in Agent Buildere isn't lost and can be extended in the full experience without a need to to start over.
+You can copy an agent created in Microsoft 365 Copilot to Copilot Studio when you need advanced capabilities or broader integration options. This process ensures that work done in Microsoft 365 Copilot isn't lost and can be extended in the full experience without a need to to start over.
 
 Transitioning to Copilot Studio unlocks additional features, such as richer customization, governance controls, and expanded connectors. When you copy your agent, the agent's core configuration and instructions are preserved, and you can enhance them with the advanced settings available only in Copilot Studio.
 
@@ -59,9 +59,9 @@ For more information, see [Copy an agent to Copilot Studio](copy-agent-to-copilo
 
 ## Licensing requirements
 
-Both CAgent Builder and Copilot Studio are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Credits or a pay-as-you-go plan to access either experience.
+Both Agent Builder in Microsoft 365 Copilot and Copilot Studio are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Credits or a pay-as-you-go plan to access either experience.
 
-You can also use Agent Builder for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
+You can also use the Agent Builder feature in Copilot for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
 
 ## Agent Builder governance principles
 
