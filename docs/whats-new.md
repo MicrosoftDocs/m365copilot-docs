@@ -42,7 +42,7 @@ The Microsoft 365 Copilot Search API (preview) enables developers to perform sem
 
 ### Users with usage billing have access to additional knowledge sources in Microsoft 365 Copilot
 
-Users who are configured with usage billing in the Microsoft 365 admin center now have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use the Microsoft 365 Copilot to create agents.
+Users who are configured with usage billing in the Microsoft 365 admin center now have access to embedded file content, SharePoint data, and Microsoft 365 Copilot connectors custom knowledge sources when they use Microsoft 365 Copilot to create agents.
 
 ### Microsoft 365 Copilot Chat API (preview)
 
