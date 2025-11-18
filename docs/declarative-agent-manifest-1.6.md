@@ -491,7 +491,7 @@ The people object contains the following properties.
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `People`. |
-| `` | Boolean | Optional. Indicates whether to include related content when searching people data. When set to true, the DA will include related documents, emails, and Teams messages between the agent user and the referenced people (i.e. what they have in common). When set to false or omitted, only basic organizational information such as org charts, names, email addresses, and skills will be included. The default value is false. |
+| `include_related_content` | Boolean | Optional. Indicates whether to include related content when searching people data. When set to true, the DA will include related documents, emails, and Teams messages between the agent user and the referenced people (i.e. what they have in common). When set to false or omitted, only basic organizational information such as org charts, names, email addresses, and skills will be included. The default value is false. |
 
 #### Scenario models object
 
