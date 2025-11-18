@@ -16,13 +16,13 @@ For the latest information, announcements, and news about preview and generally 
 
 ## November 2025
 
-### Copilot Studio lite experience is available in GCCM
+### Agent Builder in Microsoft 365 Copilot is available in GCCM
 
-The Copilot Studio lite experience is now available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) environment.
+The Agent Builder feature in Microsoft 365 Copilot is now available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) environment.
 
 ### Embedded file content file size limit increase
 
-You can now upload files up to 512 MB in size when you embed file content as knowledge in the Copilot Studio lite experience. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
+You can now upload files up to 512 MB in size when you embed file content as knowledge in Agent Builder in Microsoft 365 Copilot. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
 
 ## October 2025
 
