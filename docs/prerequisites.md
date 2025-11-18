@@ -4,7 +4,7 @@ description: Learn the prerequisites for extending Microsoft 365 Copilot with ag
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
-ms.date: 10/20/2025
+ms.date: 11/17/2025
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -114,8 +114,8 @@ The following table lists the agent types and agent capabilities that are availa
 
 | Capability | Copilot Chat (no usage-based billing)* | Copilot Chat (usage-based billing)** | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
-|Copilot Studio lite experience |  :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|Copilot Studio full experience |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
+|Microsoft 365 Copilot |  :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|Copilot Studio |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
 |[**Declarative agents**](overview-declarative-agent.md)     | |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
