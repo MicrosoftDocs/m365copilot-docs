@@ -43,7 +43,7 @@ items:
       items:
       - name: Tools overview
         href: declarative-agent-tool-comparison.md
-      - name: Choose between Agent Builder and Copilot Studio
+      - name: Choose between Microsoft 365 Copilot and Copilot Studio
         href: copilot-studio-experience.md
     - name: Use Visual Studio Code
       expanded: true

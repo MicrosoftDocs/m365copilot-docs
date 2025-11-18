@@ -46,7 +46,7 @@ The following table provides a more detailed feature comparison.
 
 ## Copy agents from Microsoft 365 Copilot to Copilot Studio
 
-You can copy an agent created in Microsoft 365 Copilot to Copilot Studio when you need advanced capabilities or broader integration options. This process ensures that work done in Microsoft 365 Copilot isn't lost and can be extended in the full experience without a need to to start over.
+You can copy an agent created in Microsoft 365 Copilot to Copilot Studio when you need advanced capabilities or broader integration options. This process ensures that work done in Microsoft 365 Copilot isn't lost and can be extended in the full experience without a need to start over.
 
 Transitioning to Copilot Studio unlocks additional features, such as richer customization, governance controls, and expanded connectors. When you copy your agent, the agent's core configuration and instructions are preserved, and you can enhance them with the advanced settings available only in Copilot Studio.
 
@@ -61,7 +61,7 @@ For more information, see [Copy an agent to Copilot Studio](copy-agent-to-copilo
 
 Both Agent Builder in Microsoft 365 Copilot and Copilot Studio are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Credits or a pay-as-you-go plan to access either experience.
 
-You can also use the Agent Builder feature in Copilot for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
+You can also use Agent Builder in Microsoft 365 Copilot for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
 
 ## Agent Builder governance principles
 
@@ -69,7 +69,7 @@ The Agent Builder feature in Microsoft 365 Copilot allows users to create agents
 
 Agent Builder applies the following key governance principles:
 
-- **No new privileges** - Agents respect existing Microsoft 365 permissions. If a user does haven't access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.  
+- **No new privileges** - Agents respect existing Microsoft 365 permissions. If a user doesn't have access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.  
 - **Built-in visibility and auditing capabilities** - Agents are surfaced within Microsoft 365. Standard audit logs, activity reports, and DLP/retention policies apply.
 
 IT administrators manage agent visibility, sharing, and lifecycle policies in the Microsoft 365 admin center via the **Copilot** > **Agents** page. Admins can:
