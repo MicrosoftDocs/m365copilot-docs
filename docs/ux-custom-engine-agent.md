@@ -4,7 +4,7 @@ description: Learn about the user experience components of custom engine agents 
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 09/12/2025
+ms.date: 11/18/2025
 ms.topic: overview
 ---
 
@@ -36,7 +36,7 @@ Streaming responses are designed to enhance the user experience by providing vis
 
 :::image type="content" source="assets/images/agent-ux/streaming-response.png" alt-text="A screenshot of streaming response" border="false":::
 
-You can implement streaming responses by using the Teams AI library. For more information, see [Streaming messages](/microsoftteams/platform/bots/streaming-ux?context=/microsoft-365-copilot/extensibility/context).
+You can implement streaming responses by using the Teams SDK. For more information, see [Streaming messages](/microsoftteams/platform/bots/streaming-ux?context=/microsoft-365-copilot/extensibility/context).
 
 ## Citations
 
@@ -44,11 +44,11 @@ Citations are references to the sources of information used by the agent to gene
 
 :::image type="content" source="assets/images/agent-ux/citations.png" alt-text="A screenshot of citations" border="false":::
 
-Citations are returned by the model, and you can interact them with Teams AI Library. For more information, see [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content#citations).
+Citations are returned by the model, and you can interact them with Teams SDK. For more information, see [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content#citations).
 
 ## AI labels
 
-AI labels are automatically added to all agents' messages to indicate that Ai generated a response. This transparency helps users distinguish between AI-generated and human-generated content and fosters trust in agent responses. These labels are automatically added to AI-generated messages when you use the Teams AI library.
+AI labels are automatically added to all agents' messages to indicate that Ai generated a response. This transparency helps users distinguish between AI-generated and human-generated content and fosters trust in agent responses. These labels are automatically added to AI-generated messages when you use the Teams SDK.
 
 :::image type="content" source="assets/images/agent-ux/ai-labels.png" alt-text="A screenshot of AI labels" border="false":::
 
@@ -79,7 +79,7 @@ Follow-up messages on user-initiated workflows keep users informed about the sta
 
 Long-running tasks are another type of user-initiated workflow where a process takes a long time to complete. For instance, a business document management agent might handle batch processing of multiple contract documents. While the process is still running, the user can continue chatting since the messages are nonblocking.
 
-To send a follow-up message or wait for a long-tunning task, you can use the turn context object's `SendActivity` (or `SendActivityAsync` in C#) in the `async`/`await` pattern with [Teams AI Library](/microsoftteams/platform/teams-ai-library/).
+To send a follow-up message or wait for a long-tunning task, you can use the turn context object's `SendActivity` (or `SendActivityAsync` in C#) in the `async`/`await` pattern with [Teams SDK](/microsoftteams/platform/teams-ai-library/).
 
 ### Proactive messages
 
