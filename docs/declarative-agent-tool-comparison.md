@@ -4,7 +4,7 @@ description: Learn which tools are most suited for different use cases when crea
 ms.author: v-koenenkaty
 author: kmkoenen
 ms.localizationpriority: medium
-ms.date: 09/17/2025
+ms.date: 11/17/2025
 ms.topic: conceptual
 ---
 
@@ -19,8 +19,8 @@ Several tools are available to help you build declarative agents for Copilot. Th
 | **Tool** | **Coding approach** |**Description** | **Recommended use case** |
 |:------------|:------------| :------------| :------------|
 | [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) | Pro-code | Agents Toolkit enables the creation of declarative agents with advanced features, such as custom API actions, adaptive cards, and CI/CD (Continuous Integration/Continuous Delivery) integration. | Developers who need full control over their coding environment, source | 
-| [Copilot Studio full experience](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) | Low-code | The full experience of Copilot Studio allows users to create declarative agents using a drag-and-drop interface. It provides control over business logic and workflow automation and allows users to create declarative agents with advanced features, such as custom API actions, adaptive cards, and CI/CD integration. |  Information workers and business users who need a low-code, easy-to-use solution that includes [Power Platform integration](/power-platform/developer/get-started). |
-| [Copilot Studio lite experience](copilot-studio-lite.md) | No-code | The lite experience of Copilot Studio offers a simple interface for business users to build declarative agents. Users just need to describe what the agent should do or author an agent with simple configuration experience. | Business users with no coding experience that want to customize Copilot to increase personal and group productivity. From writer coach to onboarding buddy, users can easily create and share agents that answer questions from knowledge sources, generate image, process data, solve math problem and more. |
+| [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) | Low-code | Copilot Studio allows users to create declarative agents using a drag-and-drop interface. It provides control over business logic and workflow automation and allows users to create declarative agents with advanced features, such as custom API actions, adaptive cards, and CI/CD integration. |  Information workers and business users who need a low-code, easy-to-use solution that includes [Power Platform integration](/power-platform/developer/get-started). |
+| [Microsoft 365 Copilot](copilot-studio-lite.md) | No-code | Microsoft 365 Copilot offers a simple interface for business users to build declarative agents. Users just need to describe what the agent should do or author an agent with simple configuration experience. | Business users with no coding experience that want to customize Copilot to increase personal and group productivity. From writer coach to onboarding buddy, users can easily create and share agents that answer questions from knowledge sources, generate image, process data, solve math problem and more. |
 | [SharePoint](/sharepoint/get-started-sharepoint-agents) | No-code | SharePoint agents are declarative agents that run within SharePoint and Teams. They provide responses based on the data available in an organization's SharePoint implementation. | Business users who want to customize Copilot for a specific purpose or to specify specific sites, document libraries, and files for Copilot to search. |
 
 ## Tool requirements and access
@@ -31,8 +31,8 @@ The following table describes the prerequisites for using each tool and where ag
 | **Tool** | **Requirements** | **Tool access** | **Publishes agents to** |
 |:------------|:------------| :------------| :------------|
 | Agents Toolkit | <ul><li> Microsoft 365 subscription (with sideloading enabled)</li> <li>Visual Studio Code or Visual Studio </li> <li> Azure subscription (optional)</li></ul> |  Install [Agents Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit).  |  <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>   |
-| Copilot Studio full experience| <ul><li> Microsoft 365 subscription </li> <li> Copilot Studio license</li></ul> |  Install [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions). | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> <li> Mobile apps, messaging platforms </li> </ul>  |
-| Copilot Studio lite experience | Microsoft 365 subscription | Select the  **Create agent** option in Microsoft 365 Copilot or Teams. | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>|
+| Copilot Studio| <ul><li> Microsoft 365 subscription </li> <li> Copilot Studio license</li></ul> |  Install [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions). | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> <li> Mobile apps, messaging platforms </li> </ul>  |
+| Microsoft 365 Copilot | Microsoft 365 subscription | Select the  **Create agent** option in Microsoft 365 Copilot or Teams. | <ul><li> Users with Microsoft 365 subscriptions (with limited capabilities)</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>|
 | SharePoint | <ul><li> Microsoft 365 subscription </li> <li> Site admin or owner permissions </li></ul> |  Install [SharePoint](https://www.microsoft.com/microsoft-365/sharepoint/collaboration).   |  SharePoint sites |
 
 <!-- markdownlint-enable MD033 -->
@@ -57,21 +57,9 @@ The following table lists the pros and cons for using Agents Toolkit.
 | **Experimentation support:** Developers can fork, test, and iterate on agent capabilities without affecting live deployments. | |
 | **Copilot connectors and AI enhancements:** Supports rich integrations, including semantic search with [Microsoft 365 Copilot connectors](/graph/connecting-external-content-experiences) and more control over agent reasoning and responses. | |
 
-## Copilot Studio full experience
+## Microsoft 365 Copilot
 
-The full experience in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that is easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
-
-| **Pros** | **Cons** |
-|:------------|:------------|
-| **Easy to use:** Copilot Studio provides a no-code approach that enables business users and information workers to build and customize agents using a drag-and-drop interface without coding. | **Less developer control:** Limited ability to fine-tune API calls, actions, and response formatting. |
-| **Power platform connectors:** Enable quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for source control systems (Azure DevOps, GitHub) pull requests, or automated deployments. |
-| **Great for personal and departmental use:** Fast setup for smaller, targeted agents that don’t require large-scale enterprise governance. | **Limited support for Adaptive Cards:** You can't customize how responses are displayed beyond basic text formatting. |
-| **Prebuilt governance and deployment:** Agents are deployed using Copilot Studio’s built-in management tools, reducing complexity for IT teams. | **Slower feature rollout:** Some advanced features are available in Agents Toolkit before they're available in Copilot Studio. |
-| **Built-in test agent**: Copilot Studio comes with a built-in test agent that lets you test the agent in real-time. |  |
-
-## Copilot Studio lite experience
-
-The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) is a great option for users with no coding experience who need a guided process for building declarative agents. You can access the lite experience within Copilot Studio via the following apps and paths:
+Microsoft 365 Copilot is a great option for users with no coding experience who need a guided process for building declarative agents. You can access Microsoft 365 Copilot through the following apps and paths:
 
  - **Microsoft 365 Copilot app:** Select the **Create agent** option
  - **Microsoft Teams:** Select the **Microsoft 365 Copilot** tab and then choose **Create agents**.
@@ -84,6 +72,18 @@ The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot
 | **Straightforward agent testing**: The test pane allows users to test the end-user experience of agents directly within the tool. | |
 | **Variety of knowledge sources**: Easily add public web, SharePoint, Copilot connector data and more as agent knowledge sources.| |
 | **Generate rich content**: Enable image generation and code interpreter with just one click.| |
+
+## Copilot Studio
+
+[Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) is designed for small-scale deployments, such as department-level solutions. It's a great alternative for people who need a low-code tool that's easy to use and that integrates with [Microsoft Power Platform](/power-platform/developer/get-started).
+
+| **Pros** | **Cons** |
+|:------------|:------------|
+| **Easy to use:** Copilot Studio provides a no-code approach that enables business users and information workers to build and customize agents using a drag-and-drop interface without coding. | **Less developer control:** Limited ability to fine-tune API calls, actions, and response formatting. |
+| **Power platform connectors:** Enable quick plug-and-play API integration using hundreds of prebuilt connectors. | **No support for source control or CI/CD:** No built-in support for source control systems (Azure DevOps, GitHub) pull requests, or automated deployments. |
+| **Great for personal and departmental use:** Fast setup for smaller, targeted agents that don’t require large-scale enterprise governance. | **Limited support for Adaptive Cards:** You can't customize how responses are displayed beyond basic text formatting. |
+| **Prebuilt governance and deployment:** Agents are deployed using Copilot Studio’s built-in management tools, reducing complexity for IT teams. | **Slower feature rollout:** Some advanced features are available in Agents Toolkit before they're available in Copilot Studio. |
+| **Built-in test agent**: Copilot Studio comes with a built-in test agent that lets you test the agent in real-time. |  |
 
 ## SharePoint
 
@@ -103,6 +103,6 @@ The [SharePoint](https://support.microsoft.com/office/get-started-with-sharepoin
 - [Declarative agents for Microsoft 365 Copilot overview](./overview-declarative-agent.md)
 - [Create declarative agents using Agents Toolkit](./build-declarative-agents.md)
 - [Set up Microsoft 365 Copilot - admin guide](/copilot/microsoft-365/microsoft-365-copilot-setup)
-- [Build agents using the Copilot Studio lite experience](copilot-studio-lite-build.md)
-- [Create and delete agents using the Copilot Studio full experience](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
+- [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md)
+- [Create and delete agents using Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
 - [Get started with SharePoint agents](/sharepoint/get-started-sharepoint-agents)

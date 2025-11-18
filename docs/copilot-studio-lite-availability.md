@@ -1,20 +1,20 @@
 ---
-title: Copilot Studio regional availability and language support
-description: Learn about the regional availability and supported languages for the Copilot Studio lite experience.
+title: Agent Builder in Microsoft 365 Copilot regional availability and language support
+description: Learn about the regional availability and supported languages for the Agent Builder feature in Microsoft 365 Copilot.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/17/2025
 ms.topic: conceptual
 ---
 
-# Copilot Studio regional availability and language support
+# Agent Builder in Microsoft 365 Copilot regional availability and language support
 
-This article provides information about the regional availability of the lite experience of Copilot Studio and the agent and authoring languages that Copilot Studio supports.
+This article provides information about the regional availability of Agent Builder in Microsoft 365 Copilot and the agent and authoring languages supported.
 
 ## Regional availability
 
-The lite experience of Copilot Studio is available if your [Power Platform default environment](/power-platform/admin/environments-overview#default-environment) is in any of the following countries or regions:
+Agent Builder in Microsoft 365 Copilot is available if your [Power Platform default environment](/power-platform/admin/environments-overview#default-environment) is in any of the following countries or regions:
 
 - Asia Pacific
 - Australia
@@ -35,6 +35,10 @@ The lite experience of Copilot Studio is available if your [Power Platform defau
 - United States
 
 The Power Platform default environment location is automatically set to the location of the tenant. You can verify the location of your Power Platform default environment in the Power Platform Admin Center. For more information, see [Environment location](/power-platform/admin/environments-overview#environment-location).
+
+## National cloud availability
+
+Agent Builder in Microsoft 365 Copilot is available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) national cloud environment.
 
 ## Language support
 
