@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### People knowledge source in Copilot Studio lite experience
 
-The People knowledge source is now available in the Copilot Studio lite experience, allowing agents to answer questions about individuals in your organization and deliver more personalized, context-aware responses. For more information, see [People data](copilot-studio-lite-knowledge.md#people-data) and [Add knowledge sources to your declarative agent](knowledge-sources.md#people).
+The People knowledge source is now available in the Copilot Studio lite experience, allowing agents to answer questions about individuals in your organization. For more information, see [People data](copilot-studio-lite-knowledge.md#people-data) and [Add knowledge sources to your declarative agent](knowledge-sources.md#people).
 
 ### Copilot Studio lite experience is available in GCCM
 

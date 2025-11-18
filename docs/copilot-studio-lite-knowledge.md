@@ -20,7 +20,7 @@ For more information about supported knowledge sources and licensing requirement
 
 To add knowledge sources to your agent:
 
-1. In Microsoft 365 Copilot, choose **New agent**, and choose **Configure new agent**.
+1. In Microsoft 365 Copilot, choose **Create agent**, and go to the **Configure** tab.
 2. In the **Knowledge** section, use one of the following methods to add knowledge sources:
    - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
    - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
@@ -42,7 +42,7 @@ You can add specific public websites as agent knowledge sources to make your age
 - URLs can't contain query parameters; for example, `https://example.org?test=1` is invalid.
 - You can add up to four URLs.
 
-To configure your agent to use any web data as knowledge, on the **Configure** tab, select the **Knowledge** box, and choose **All websites**.
+To configure your agent to use any web data as knowledge, on the **Configure** tab, under **Knowledge**, and choose the toggle next to **Search all websites**.
 
 ## SharePoint content
 
@@ -196,18 +196,13 @@ The following table lists the file types that you can add as knowledge to your a
 
 ## People data
 
-You can ground your agent in People data to deliver more personalized and context-aware responses. People data combines public information about individuals (such as name, position, skills, and organizational relationships) with a personal view of the user’s connections, collaborators, and relevant insights. This knowledge source enables agents to:
-
-- Look up user and colleague profiles, including reporting structure and contact details.
-- Identify domain experts and key collaborators within the organization.
-- Personalize responses based on the user’s relationships, past interactions, and preferences.
-- Provide recommendations and communication tips tailored to specific teams or individuals.
+You can ground your agent in People data to deliver more personalized and context-aware responses. People data provides public information about individuals, such as name, position, skills, and organizational relationships. This allows agents to look up user and colleague profiles, including reporting structure and contact details.
 
 People data is enabled by default for agents created by users with a Microsoft 365 Copilot license. You can disable this capability in the agent configuration UI. To disable People data:
 
-- On the **Configure** tab in Copilot Studio, select the toggle next to **Reference people in organization**.
+- On the **Configure** tab in Agent Builder in Microsoft 365 Copilot, select the toggle next to **Reference people in organization**.
 
-People data respects existing permissions and privacy controls, and inherits the user's access rights when the agent creator shares the agent. This feature is available only to licensed users.
+This feature is available only to users with a Microsoft 365 Copilot add-on license.
 
 > [!NOTE]
 > People data acts as a personalization layer, enriching agent responses with context from Microsoft 365. It doesn't introduce new privacy risks, but provides transparency and control for users and administrators.
