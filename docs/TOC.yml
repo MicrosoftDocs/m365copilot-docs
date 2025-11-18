@@ -43,7 +43,7 @@ items:
       items:
       - name: Tools overview
         href: declarative-agent-tool-comparison.md
-      - name: Copilot Studio experiences
+      - name: Choose between Microsoft 365 Copilot and Copilot Studio
         href: copilot-studio-experience.md
     - name: Use Visual Studio Code
       expanded: true
@@ -82,6 +82,8 @@ items:
           href: overview-api-plugins.md
         - name: Build an API plugin with TypeSpec
           href: build-api-plugins-typespec.md
+        - name: Build an API plugin with an MCP server
+          href: build-api-plugins-mcp.md
         - name: Build an API plugin with a new API
           href: build-api-plugins-new-api.md
         - name: Build an API plugin from an existing API
@@ -105,6 +107,8 @@ items:
           href: openapi-document-guidance.md
         - name: API plugin manifest reference
           items:
+          - name: Version 2.4
+            href: api-plugin-manifest-2.4.md
           - name: Version 2.3
             href: api-plugin-manifest-2.3.md
           - name: Version 2.2
@@ -113,6 +117,8 @@ items:
             href: api-plugin-manifest-2.1.md
       - name: Declarative agent manifest reference
         items:
+        - name: Version 1.6
+          href: declarative-agent-manifest-1.6.md
         - name: Version 1.5
           href: declarative-agent-manifest-1.5.md
         - name: Version 1.4
@@ -123,7 +129,7 @@ items:
           href: declarative-agent-manifest-1.2.md
         - name: Version 1.0
           href: declarative-agent-manifest-1.0.md
-    - name: Use the Copilot Studio lite experience
+    - name: Use Microsoft 365 Copilot
       items:
       - name: Overview
         href: copilot-studio-lite.md
@@ -161,7 +167,7 @@ items:
         href: copilot-studio-lite-share-manage-agent.md
       - name: Availability and language support
         href: copilot-studio-lite-availability.md
-      - name: Use the Copilot Studio full experience
+      - name: Use Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
         - name: Copilot Studio actions
@@ -292,6 +298,8 @@ items:
     href: sdks/api-libraries.md
   - name: API reference
     href: api/toc.yml
+- name: Extend agents at scale with Agent 365 (early access preview)
+  href: /microsoft-agent-365/overview?context=/microsoft-365-copilot/extensibility/context
 - name: Publish
   items:
   - name: Overview
