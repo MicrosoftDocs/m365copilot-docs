@@ -61,7 +61,7 @@ For more information, see [Copy an agent to Copilot Studio](copy-agent-to-copilo
 
 Both Agent Builder in Microsoft 365 Copilot and Copilot Studio are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Credits or a pay-as-you-go plan to access either experience.
 
-You can also use the Agent Builder feature in Copilot for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
+You can also use Agent Builder in Microsoft 365 Copilot for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
 
 ## Agent Builder governance principles
 
