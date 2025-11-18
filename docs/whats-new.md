@@ -140,7 +140,7 @@ The Microsoft 365 Copilot APIs provide a comprehensive set of capabilities that 
 
 ### API plugin manifest version 2.3
 
-A new version of the API plugin manifest schema is available. [API plugin manifest schema 2.3 for Microsoft 365 Copilot](api-plugin-manifest-2.3.md) adds support [calling functions in an Office Add-in](build-api-plugins-local-office-api.md).
+A new version of the API plugin manifest schema is available. [API plugin manifest schema 2.4 for Microsoft 365 Copilot](api-plugin-manifest-2.4.md) adds support for [Model Context Protocol (MCP) servers](https://modelcontextprotocol.io/), enhanced response semantics with file references, and improved confirmation handling.
 
 ### Declarative agent manifest version 1.4
 

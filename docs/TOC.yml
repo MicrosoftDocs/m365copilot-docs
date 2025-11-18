@@ -82,6 +82,8 @@ items:
           href: overview-api-plugins.md
         - name: Build an API plugin with TypeSpec
           href: build-api-plugins-typespec.md
+        - name: Build an API plugin with an MCP server
+          href: build-api-plugins-mcp.md
         - name: Build an API plugin with a new API
           href: build-api-plugins-new-api.md
         - name: Build an API plugin from an existing API
@@ -105,6 +107,8 @@ items:
           href: openapi-document-guidance.md
         - name: API plugin manifest reference
           items:
+          - name: Version 2.4
+            href: api-plugin-manifest-2.4.md
           - name: Version 2.3
             href: api-plugin-manifest-2.3.md
           - name: Version 2.2
