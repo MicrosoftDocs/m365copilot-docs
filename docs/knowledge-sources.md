@@ -181,7 +181,7 @@ You can ground your agent in People data to deliver more personalized and contex
 
 ### Add people knowledge source
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example. Declaring only the base `People` capability will allow the agent to reason on **only basic organization data** such as those available in the [profile card](/graph/api/resources/profile). If you would like to include content such as related teams messages, emails, and files with a given person in the organization refer to the [version 1.6](declarative-agent-manifest-1.6.md) to use the `include_related_content` property.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example. Declaring only the base `People` capability will allow the agent to reason on **only basic organization data** such as those available in the [profile card](/graph/api/resources/profile). If you would like to include content such as related teams messages, emails, and files between the agent user and the referenced people in the organization refer to the [version 1.6](declarative-agent-manifest-1.6.md) to use the `include_related_content` property.
 
 > [!NOTE]
 > You must be using [version 1.6](declarative-agent-manifest-1.6.md) or later of the declarative agent manifest schema to add the `People` knowledge source.
@@ -196,7 +196,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-In case you need your agent to reason over related content with people in your organization, such as related teams messages, emails and files you may leverage the `include_related_content`. The default value is `false`.
+In case you need your agent to reason over related content (between the agent user and the referenced people), such as related teams messages, emails and files you may leverage the `include_related_content`. The default value is `false`.
 
 ```json
 {
