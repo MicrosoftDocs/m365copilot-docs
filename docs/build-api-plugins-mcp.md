@@ -36,6 +36,8 @@ This guide walks you through the process of integrating your service with Micros
 
 1. Enter the GitHub MCP server URL `https://api.githubcopilot.com/mcp/`.
 
+    :::image type="content" source="assets/images/api-plugins/mcp-server-url.png" alt-text="A screenshot of the prompt to enter the MCP server URL":::
+
 1. Choose a location for the API plugin project.
 
 1. Enter a name for the plugin.
@@ -60,6 +62,8 @@ Once you complete these steps, Agents Toolkit generates the required files for t
     > Only tools from MCP servers are supported.
 
 1. Select **OAuth (with static registration)** as the authentication type.
+
+    :::image type="content" source="assets/images/api-plugins/mcp-select-authentication-type.png" alt-text="A screenshot of the prompt to choose the authentication type":::
 
 ## Register an OAuth app with GitHub
 
