@@ -42,7 +42,7 @@ You can add specific public websites as agent knowledge sources to make your age
 - URLs can't contain query parameters; for example, `https://example.org?test=1` is invalid.
 - You can add up to four URLs.
 
-To configure your agent to use any web data as knowledge, on the **Configure** tab, under **Knowledge**, and choose the toggle next to **Search all websites**.
+To configure your agent to use any web data as knowledge, on the **Configure** tab, under **Knowledge**, choose the toggle next to **Search all websites**.
 
 ## SharePoint content
 
@@ -100,7 +100,7 @@ You can ground your agent in Outlook email. To add email as a knowledge source, 
 > [!NOTE]
 > You can't scope email knowledge. When you add email, the agent uses all email in your mailbox as knowledge.
 > Users that you share the agent with don't have access to your email as knowledge.
-> This capability is only available for Microsoft 365 Copilot licensed users.
+> This capability is only available to users with a Microsoft 365 Copilot add-on license.
 
 ## Embedded file content
 
@@ -283,7 +283,7 @@ When you enable this feature, the agent answers simple questions that don't requ
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, choose the toggle next to **Only use specified sources**.
 
 > [!NOTE]
-> The Copilot Studio lite experience doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, you must use the Copilot Studio full experience. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
+> Agent Builder in Microsoft 365 Copilot doesn't support blocking general AI knowledge from your agent's responses. For stricter control over knowledge sources, use Copilot Studio. For more information, see [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## Related content
 
