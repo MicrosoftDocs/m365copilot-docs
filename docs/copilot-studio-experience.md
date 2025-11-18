@@ -21,7 +21,7 @@ When choosing which tool to use, consider the following factors:
 
 The following decision tree helps you map your scenario to the right tool.
 
-:::image type="content" source="assets/images/copilot-studio-decision-flow.png" alt-text="A flow chart that shows the decision points for choosing Microsoft 365 Copilot and Copilot Studio.":::
+:::image type="content" source="assets/images/copilot-studio-agent-builder/copilot-studio-decision-flow.png" alt-text="A flow chart that shows the decision points for choosing Microsoft 365 Copilot and Copilot Studio.":::
 
 In summary:
 
