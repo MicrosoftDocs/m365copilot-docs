@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/18/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -100,7 +100,7 @@ The following table lists the low-code and pro-code options that are available b
 | Agent type   | Low-code tool options  | Pro-code tool options  |
 |--------| -------- |--------|
 | Declarative agent | <ul><li>Microsoft 365 Copilot</li><li>Copilot Studio</li></ul> | Visual Studio Code + [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)  |
-| Custom engine agent| Copilot Studio | <ul><li>Visual Studio Code + Teams AI Library</li><li>Visual Studio Code + Microsoft 365 Agent SDK (Preview)</li><li>Visual Studio 2022</li><li>Semantic Kernel (optional)</li></ul> |
+| Custom engine agent| Copilot Studio | <ul><li>Visual Studio Code + Teams SDK</li><li>Visual Studio Code + Microsoft 365 Agent SDK (Preview)</li><li>Visual Studio 2022</li><li>Semantic Kernel (optional)</li></ul> |
 
 Next, identify the data sources or plugins your agent needs. Data sources might be Microsoft 365 data (Teams messages, email, people, SharePoint sites or folders), Copilot connectors (prebuilt or custom), or plugins (for real-time data access or external actions).
 

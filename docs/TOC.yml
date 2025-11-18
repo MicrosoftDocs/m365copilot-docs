@@ -230,7 +230,7 @@ items:
           href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true
         - name: Python SDK
           href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true
-    - name: Use Teams AI library
+    - name: Use Teams SDK
       items:
       - name: Overview
         href: teams-ai-library.md
