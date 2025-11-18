@@ -131,7 +131,7 @@ The following table lists common errors that can occur when you select an enviro
 
 ## Admin management and data storage
 
-Admins manage the Copilot Studio lite experience through the Microsoft 365 admin center. Copilot Studio is managed through the [Power Platform admin center](/power-platform/admin/admin-documentation).
+Admins manage Agent Builder in Microsoft 365 Copilot through the Microsoft 365 admin center. Copilot Studio is managed through the [Power Platform admin center](/power-platform/admin/admin-documentation).
 
 Agents copied to Copilot Studio are stored in [Microsoft Dataverse](/power-apps/maker/data-platform/data-platform-intro) and managed via a [Power Platform solution](/microsoft-copilot-studio/authoring-solutions-overview). Admins can set up [security roles](/power-platform/admin/database-security) for custom environments.
 
