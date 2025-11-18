@@ -69,7 +69,7 @@ The Agent Builder feature in Microsoft 365 Copilot allows users to create agents
 
 Agent Builder applies the following key governance principles:
 
-- **No new privileges** - Agents respect existing Microsoft 365 permissions. If a user does haven't access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.  
+- **No new privileges** - Agents respect existing Microsoft 365 permissions. If a user doesn't have access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.  
 - **Built-in visibility and auditing capabilities** - Agents are surfaced within Microsoft 365. Standard audit logs, activity reports, and DLP/retention policies apply.
 
 IT administrators manage agent visibility, sharing, and lifecycle policies in the Microsoft 365 admin center via the **Copilot** > **Agents** page. Admins can:
