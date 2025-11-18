@@ -4,7 +4,7 @@ description: Learn how to build agents by using the lite experience of Microsoft
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/12/2025
 ms.topic: conceptual
 ---
 
@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 The lite experience of Copilot Studio in Microsoft 365 Copilot (formerly Copilot Studio agent builder) provides a simple interface that you can use to quickly and easily build declarative agents, either by using natural language or manually.
 
-To get started with Copilot Studio, open the Microsoft 365 Copilot app; in the left navigation pane, choose **Create agent**. You can also choose **Create agent** in the left navigation pane from within Microsoft 365 Copilot in Teams.
+To get started with Copilot Studio, open the Microsoft 365 Copilot app, and in the left pane, choose **Create agent**.
 
 > [!NOTE]
 > The capabilities of Copilot Studio differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
@@ -73,10 +73,8 @@ For more information, see [Add knowledge sources](copilot-studio-lite-knowledge.
 
 In the **Capabilities** section of the **Configure** tab, you can choose to add the following capabilities to your agent:
 
-- [Code interpreter](code-interpreter.md) - Uses Python code to solve complex math problems, analyze data, and generate visualizations.
-- [Image generator](image-generator.md) - Generates images base on user prompts.
-
-To add one or more capabilities to your agent, choose the toggle next to the capability you want to enable.
+- [Code interpreter](code-interpreter.md) - Solves complex math problems, analyze data, and generate visualizations. To add this capability, select the toggle next to **Create documents, charts, and code**.
+- [Image generator](image-generator.md) - Generates images based on user prompts. To add this capability, select the toggle next to **Create images**.
 
 ## Build from a template
 
