@@ -8,7 +8,7 @@ ms.date: 09/03/2025
 ms.topic: overview
 ---
 
-# Microsoft 365 Copilot APIs client libraries (preview)
+# Microsoft 365 Copilot APIs client libraries
 
 The Microsoft 365 Copilot APIs client libraries are designed to facilitate the development of high-quality, efficient, and resilient AI solutions that access the Copilot APIs. These libraries include service and core libraries.
 
@@ -40,6 +40,7 @@ The Copilot API client libraries are included as a module in the Microsoft 365 A
 
 The Copilot APIs .NET client libraries are available in the following NuGet packages:
 
+- [Microsoft.Agents.M365Copilot](https://github.com/microsoft/Agents-M365Copilot/tree/main/dotnet/src/Microsoft.Agents.M365Copilot) -  Contains the models and request builders for accessing the v1.0 endpoint. Microsoft.Agents.M365Copilot has a dependency on Microsoft.Agents.M365Copilot.Core. The same dependency structure applies to both the TypeScript and Python libraries as well.
 - [Microsoft.Agents.M365Copilot.Beta](https://github.com/microsoft/Agents-M365Copilot/tree/main/dotnet/src/Microsoft.Agents.M365Copilot.Beta) -  Contains the models and request builders for accessing the beta endpoint. Microsoft.Agents.M365Copilot.Beta has a dependency on Microsoft.Agents.M365Copilot.Core. The same dependency structure applies to both the TypeScript and Python libraries as well.
 - [Microsoft.Agents.M365Copilot.Core](https://github.com/microsoft/Agents-M365Copilot/tree/main/dotnet/src/Microsoft.Agents.M365Copilot.Core) - The core library for making calls to the Copilot APIs.
 
@@ -47,11 +48,27 @@ To install the Microsoft.Agents.M365Copilot packages into your project, use the 
 
 ### dotnet CLI
 
+For the v1.0 endpoint:
+
+```dotnetcli
+dotnet add package Microsoft.Agent.M365Copilot
+```
+
+For the beta endpoint:
+
 ```dotnetcli
 dotnet add package Microsoft.Agent.M365Copilot.Beta
 ```
 
 ### Package Manager Console
+
+For the v1.0 endpoint:
+
+```powershell
+Install-Package Microsoft.Agent.M365Copilot
+```
+
+For the beta endpoint:
 
 ```powershell
 Install-Package Microsoft.Agent.M365Copilot.Beta
@@ -61,6 +78,14 @@ Install-Package Microsoft.Agent.M365Copilot.Beta
 
 The Copilot APIs Python client libraries are available in the Python Package Index.
 
+For the v1.0 endpoint:
+
+```py
+pip install microsoft-agents-m365copilot
+```
+
+For the beta endpoint:
+
 ```py
 pip install microsoft-agents-m365copilot-beta
 ```
@@ -68,6 +93,14 @@ pip install microsoft-agents-m365copilot-beta
 ### Install the Copilot APIs TypeScript client libraries
 
 The Copilot APIs TypeScript client libraries are available in npm.
+
+For the v1.0 endpoint:
+
+```Shell
+npm install @microsoft/agents-m365copilot –save
+```
+
+For the beta endpoint:
 
 ```Shell
 npm install @microsoft/agents-m365copilot-beta –save
