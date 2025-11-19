@@ -5,13 +5,16 @@ description: Learn about the security architecture for the code interpreter capa
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
-ms.date: 10/30/2025
+ms.date: 11/19/2025
 ms.topic: concept-article
 ---
 
 # Code interpreter security architecture
 
-Code interpreter is an advanced feature in Microsoft 365 Copilot and agents that solves complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. Large language models (LLMs) generate all code, and the system runs it in a secure, isolated environment.
+Code interpreter is an advanced feature available in Microsoft 365 Copilot and agents built with Microsoft 365 Copilot that solves complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. Large language models (LLMs) generate all code, and the system runs it in a secure, isolated environment.
+
+> [!NOTE]
+> Microsoft doesn't train foundation models on customer data. For more information, see [Privacy and protections](/copilot/privacy-and-protections).
 
 This article describes the comprehensive security and governance framework that code interpreter uses to protect customer data and infrastructure from malicious code.
 
@@ -23,7 +26,7 @@ Code interpreter in Copilot and agents runs within isolated virtual machines (VM
 
 ### Session lifecycle management
 
-Every time code interpreter runs code, it starts with a fresh VM. The system destroys the VM after the session ends. This design prevents persistent storage of code or data to reduce the risk of data leakage.
+Every time code interpreter runs code, it starts with a fresh VM. The system destroys the VM after the session ends. The container is deleted and no data is persisted or stored. This design prevents persistent storage of code or data to reduce the risk of data leakage.
 
 ### Network and resource controls
 
@@ -37,7 +40,9 @@ Code interpreter adheres to the Microsoft RAI policies. These policies require r
 
 ### Data residency and privacy protections
 
-The environments in which code interpreter runs code comply with the Microsoft data residency commitments. Customer data remains within specified geographic boundaries, as governed by Microsoft Azure data residency policies. This compliance ensures regulatory adherence and enhances privacy.
+The environments in which code interpreter runs code comply with the Microsoft data residency commitments. Customer data remains within specified geographic boundaries, as governed by Microsoft Azure data residency policies, and follows the Microsoft 365 data residency terms. This compliance ensures regulatory adherence and enhances privacy.
+
+For more information, see [Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy) and [Data, privacy, and security for web search in Microsoft 365 Copilot and Microsoft 365 Copilot Chat](/copilot/microsoft-365/manage-public-web-access).
 
 ### Microsoft Azure infrastructure security
 
