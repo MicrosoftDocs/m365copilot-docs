@@ -11,10 +11,7 @@ ms.topic: concept-article
 
 # Code interpreter security architecture
 
-Code interpreter is an advanced feature available in Microsoft 365 Copilot and agents built with Microsoft 365 Copilot that solves complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. Large language models (LLMs) generate all code, and the system runs it in a secure, isolated environment.
-
-> [!NOTE]
-> Microsoft doesn't train foundation models on customer data. For more information, see [Privacy and protections](/copilot/privacy-and-protections).
+Code interpreter is an advanced feature available in Microsoft 365 Copilot and agents built with Microsoft 365 Copilot that solves complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. Large language models (LLMs) generate all code, and the system runs it in a secure, isolated environment. Microsoft doesn't train foundation models on customer data. For more information, see [Privacy and protections](/copilot/privacy-and-protections).
 
 This article describes the comprehensive security and governance framework that code interpreter uses to protect customer data and infrastructure from malicious code.
 
