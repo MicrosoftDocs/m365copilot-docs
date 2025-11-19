@@ -5,13 +5,13 @@ description: Learn how to copy your declarative agent from Microsoft 365 Copilot
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
-ms.date: 11/17/2025
+ms.date: 11/18/2025
 ms.topic: concept-article
 ---
 # Copy an agent to Copilot Studio
 
 > [!IMPORTANT]
-> This feature is not yet available for all users. Rollout is expected to complete by mid-November 2025. This document is intended to serve as educational content to prepare for this feature.
+> This feature is not yet available for all users. Rollout is expected to complete in December 2025. This document is intended to serve as educational content to prepare for this feature.
 
 This article explains how to use the **Copy to Copilot Studio** feature in Microsoft 365 Copilot to copy an agent built in Copilot to Copilot Studio. When you copy your agent to Copilot Studio, you can take advantage of advanced lifecycle management, analytics, and governance controls.
 
@@ -98,10 +98,7 @@ For you to copy an agent to Copilot Studio:
 - The environment must be located in a [supported data location](/microsoft-copilot-studio/data-location).
 - You must have the appropriate [security roles](/microsoft-copilot-studio/admin-share-bots#share-an-agent-for-chat) in the environment.
 
-After you select an environment, the system checks for:
-
-- [Data policies](/power-platform/admin/wp-data-loss-prevention) that prevent publishing agents to the **Teams and Microsoft 365 Copilot** channels.
-- [Sharing limits](/microsoft-copilot-studio/admin-sharing-controls-limits) placed on the environment.
+After you select an environment, the system checks for [sharing limits](/microsoft-copilot-studio/admin-sharing-controls-limits) placed on the environment.
 
 The following policies and limits are set up in the Power Platform admin center:
 
