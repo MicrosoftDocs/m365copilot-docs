@@ -10,7 +10,7 @@ ms.topic: overview
 
 # Custom engine agents for Microsoft 365 overview
 
-Custom engine agents expand the capabilities of Microsoft 365 Copilot by allowing organizations to build AI-powered assistants tailored to their specific needs. Unlike standard Copilot experiences, custom engine agents provide full control over orchestration, AI models, and data integrations, enabling businesses to create advanced workflows that align with their unique requirements. These agents can be created using [Copilot Studio](#low-code-approach), the [Microsoft 365 Agents SDK](#microsoft-365-agents-sdk), [Teams SDK](#teams-ai-library) or [Microsoft Foundry](#integrate-microsoft-foundry-agents), depending on your preferred development approach and hosting environment.
+Custom engine agents expand the capabilities of Microsoft 365 Copilot by allowing organizations to build AI-powered assistants tailored to their specific needs. Unlike standard Copilot experiences, custom engine agents provide full control over orchestration, AI models, and data integrations, enabling businesses to create advanced workflows that align with their unique requirements. These agents can be created using [Copilot Studio](#low-code-approach), the [Microsoft 365 Agents SDK](#microsoft-365-agents-sdk), [Teams SDK](#teams-sdk) or [Microsoft Foundry](#integrate-microsoft-foundry-agents), depending on your preferred development approach and hosting environment.
 
 This article guides you through capabilities and options for building a custom engine agent.
 
