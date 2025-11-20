@@ -48,7 +48,7 @@ You can enhance the functionality of your Corporate Comms Crafter agent by conne
 
 ## Limitations
 
-When using the Corporate Comms Crafter template, keep in mind the following limitations and responsibilities:
+When using the Corporate Communications Crafter template, keep in mind the following limitations and responsibilities:
 
 - **One prompt at a time:** Agents built from this template are designed to address one request at a time. Users should avoid asking multiple questions in a single prompt. Asking multiple questions in a single prompt can confuse the agent. Instead, ask questions or give instructions one at a time and allow the agent to respond before moving to the next.
 - **Handling sensitive information:** If the communications a user is creating include personal data or sensitive corporate information, the user is responsible for ensuring compliance with their organization’s privacy and data handling policies. The agent adds all provided input to its general knowledge, so don't provide information that shouldn’t be used in AI-generated content. Always review outputs to make sure no confidential details are inappropriately revealed.
