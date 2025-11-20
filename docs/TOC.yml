@@ -294,7 +294,7 @@ items:
   items:
   - name: Overview
     href: copilot-apis-overview.md
-  - name: Use client libraries (preview)
+  - name: Use client libraries
     href: sdks/api-libraries.md
   - name: API reference
     href: api/toc.yml
