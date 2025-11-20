@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 # Code interpreter security architecture
 
-Code interpreter is an advanced feature available in Microsoft 365 Copilot and agents built with Microsoft 365 Copilot that solves complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. Large language models (LLMs) generate all code, and the system runs it in a secure, isolated environment. Microsoft doesn't train foundation models on customer data. For more information, see [Privacy and protections](/copilot/privacy-and-protections).
+Code interpreter is an advanced feature available in Microsoft 365 Copilot and agents built with Microsoft 365 Copilot that solves complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. Large language models (LLMs) generate all code, and the system runs it in a secure, isolated environment. Microsoft doesn't train foundation models on customer data. For more information, see [Privacy and protections](/copilot/microsoft-365/microsoft-365-copilot-privacy).
 
 This article describes the comprehensive security and governance framework that code interpreter uses to protect customer data and infrastructure from malicious code.
 
@@ -37,9 +37,9 @@ Code interpreter adheres to the Microsoft RAI policies. These policies require r
 
 ### Data residency and privacy protections
 
-The environments in which code interpreter runs code comply with the Microsoft data residency commitments. Customer data remains within specified geographic boundaries, as governed by Microsoft Azure data residency policies, and follows the Microsoft 365 data residency terms. This compliance ensures regulatory adherence and enhances privacy.
+The environments in which code interpreter runs code comply with the Microsoft data residency commitments. Customer data remains within specified geographic boundaries, as governed by Microsoft 365 data residency policies, and follows the Microsoft 365 data residency terms. This compliance ensures regulatory adherence and enhances privacy.
 
-For more information, see [Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy) and [Data, privacy, and security for web search in Microsoft 365 Copilot and Microsoft 365 Copilot Chat](/copilot/microsoft-365/manage-public-web-access).
+For more information about privacy protections, see [Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy).
 
 ### Microsoft Azure infrastructure security
 
