@@ -23,7 +23,7 @@ Code interpreter in Copilot and agents runs within isolated virtual machines (VM
 
 ### Session lifecycle management
 
-Every time code interpreter runs code, it starts with a fresh VM. The system destroys the VM after the session ends. The container is deleted and no data is persisted or stored. This design prevents persistent storage of code or data to reduce the risk of data leakage.
+Every time code interpreter runs code, it starts with a fresh VM. The system destroys the VM after the session ends. The VM is deleted and no data is persisted or stored. This design prevents persistent storage of code or data to reduce the risk of data leakage.
 
 ### Network and resource controls
 
