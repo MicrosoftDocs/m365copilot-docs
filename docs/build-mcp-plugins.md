@@ -1,5 +1,5 @@
 ---
-title: Build API plugins from an MCP server for Microsoft 365 Copilot
+title: Build plugins from an MCP server for Microsoft 365 Copilot
 description: Learn how to use the Microsoft 365 Agents Toolkit to wrap your MCP server as an action in a declarative agent.
 author: jasonjoh
 ms.author: jasonjoh
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 11/18/2025
 ---
 
-# Build API plugins from an MCP server for Microsoft 365 Copilot (preview)
+# Build plugins from an MCP server for Microsoft 365 Copilot (preview)
 
 This guide walks you through the process of integrating your service with Microsoft 365 Copilot by adding an MCP server to a declarative agent using the Microsoft 365 Agents Toolkit. By following these steps, you'll enable conversational, AI-powered access to your MCP-exposed services for business users.
 
@@ -38,11 +38,11 @@ This guide walks you through the process of integrating your service with Micros
 
     :::image type="content" source="assets/images/api-plugins/mcp-server-url.png" alt-text="A screenshot of the prompt to enter the MCP server URL":::
 
-1. Choose a location for the API plugin project.
+1. Choose a location for the agent project.
 
-1. Enter a name for the plugin.
+1. Enter a name for the agent.
 
-Once you complete these steps, Agents Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded.
+Once you complete these steps, Agents Toolkit generates the required files for the agent and opens a new Visual Studio Code window with the agent project loaded.
 
 ## Add tools from the MCP server
 
@@ -75,7 +75,7 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
 ## Package and sideload the agent
 
-1. Open the plugin project in Visual Studio Code.
+1. Open the agent project in Visual Studio Code.
 
 1. Select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
 
@@ -103,7 +103,7 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 >
 > If the `teamsApp/validateAppPackage` step fails during provisioning, remove the unsupported members and retry the provisioning step.
 
-## Use the plugin
+## Use the agent
 
 1. In your browser, go to [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 
