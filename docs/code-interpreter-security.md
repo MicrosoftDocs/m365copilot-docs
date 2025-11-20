@@ -35,9 +35,9 @@ Code interpreter VMs enforce strict network controls. They don't allow any inbou
 
 Code interpreter adheres to the Microsoft RAI policies. These policies require rigorous threat modeling, continuous monitoring, and proactive risk mitigation. Regular security reviews and updates help safeguard against emerging threats and vulnerabilities.
 
-### Data residency and privacy protections
+### Data residency and privacy
 
-The environments in which code interpreter runs code comply with the Microsoft data residency commitments. Customer data remains within specified geographic boundaries, as governed by Microsoft 365 data residency policies, and follows the Microsoft 365 data residency terms. This compliance ensures regulatory adherence and enhances privacy.
+The environments in which code interpreter runs code comply with the Microsoft data residency commitments. Customer data remains within specified geographic boundaries, as governed by Microsoft 365 data residency policies, and follows the Microsoft 365 data residency terms. This compliance ensures regulatory adherence.
 
 For more information about privacy protections, see [Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy).
 
