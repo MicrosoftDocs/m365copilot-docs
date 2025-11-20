@@ -294,7 +294,7 @@ items:
   items:
   - name: Overview
     href: copilot-apis-overview.md
-  - name: Use client libraries (preview)
+  - name: Use client libraries
     href: sdks/api-libraries.md
   - name: API reference
     href: api/toc.yml
@@ -306,6 +306,8 @@ items:
     href: publish.md
   - name: Validation guidelines for agents
     href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
+  - name: Design icons for agent acquisition and management
+    href: agent-icon-management.md
 - name: Manage
   items:
   - name: Overview
