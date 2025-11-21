@@ -27,7 +27,7 @@ The image generator capability enables agents to generate images based on user p
     }
     ```
 
-    For more information, see [Graphic art object](declarative-agent-manifest-1.5.md#graphic-art-object).
+  For more information, see [Graphic art object](declarative-agent-manifest-1.6.md#graphic-art-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
@@ -47,7 +47,7 @@ Code interpreter is an advanced tool designed to solve complex tasks via Python 
     }
     ```
 
-    For more information, see [Code interpreter object](declarative-agent-manifest-1.5.md#code-interpreter-object).
+  For more information, see [Code interpreter object](declarative-agent-manifest-1.6.md#code-interpreter-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 

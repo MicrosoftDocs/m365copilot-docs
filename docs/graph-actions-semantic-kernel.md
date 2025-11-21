@@ -1,5 +1,5 @@
 ---
-title: Invoke Microsoft Graph Actions with Semantic Kernel 
+title: Invoke Microsoft Graph Actions with Semantic Kernel
 description: Learn how to build Semantic Kernel plugins by using Visual Studio Code and Kiota Copilot agent plugins.
 author: fabianwilliams
 ms.author: fwilliams
@@ -16,7 +16,7 @@ Microsoft 365 Copilot agent plugins allow custom engine agents built with [Seman
 
 Copilot agent plugins are custom-built, AI-powered extensions that enable natural language interactions with Microsoft 365 data by exposing functions through the Semantic Kernel and Microsoft Graph APIs. Copilot agent plugins include an OpenAPI description for an API (such as Microsoft Graph) and a plugin manifest. Semantic Kernel, powered by your choice of language model, analyzes the user's intent and determines which plugin and API operation to invoke. This enables seamless and intelligent orchestration of Microsoft 365 data.
 
-You can generate Copilot agent plugins by using Kiota, a command-line tool that simplifies plugin creation. For more information about plugin manifests, see the [API plugin manifest schema for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/api-plugin-manifest-2.3).
+You can generate Copilot agent plugins by using Kiota, a command-line tool that simplifies plugin creation. For more information about plugin manifests, see the [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest-2.4.md).
 
 ## How Copilot agent plugins work
 
@@ -25,7 +25,7 @@ To load or install Copilot agent plugins in Semantic Kernel, use the `ImportPlug
 The method requires the following inputs:
 
 - Plugin name
-- Path to the plugin directory  
+- Path to the plugin directory
 - Parameter filters – These filters help identify and load the correct plugin based on its unique parameters, structure, and the specific Microsoft 365 service it targets.
 
 The following example shows the `ImportPluginFromCopilotAgentPluginAsync` method.
@@ -162,21 +162,21 @@ dotnet run demo --debug
 
 Follow the prompts to authenticate, choose the LLM, select plugins, and run queries.
 
-#### Option 2: Integrate into your own app  
+#### Option 2: Integrate into your own app
 
 If you're integrating Copilot agent plugin functionality into your own .NET application, you need to configure your project with the appropriate libraries. This includes assemblies for configuration, authentication, logging, and support for Microsoft Graph and Semantic Kernel plugins. To ensure that your project builds successfully and has access to all required features, add the following required NuGet packages.
 
 
 ```bash
 dotnet add package Microsoft.Extensions.Configuration
-dotnet add package Microsoft.Extensions.Configuration.Json 
-dotnet add package Microsoft.Identity.Client 
-dotnet add package Microsoft.Extensions.Logging 
-dotnet add package Microsoft.SemanticKernel 
-dotnet add package Microsoft.SemanticKernel.Plugins.Core 
-dotnet add package Microsoft.SemanticKernel.Plugins.OpenApi 
-dotnet add package Microsoft.SemanticKernel.Planners.OpenAI 
-dotnet add package Microsoft.SemanticKernel.Plugins.MSGraph 
+dotnet add package Microsoft.Extensions.Configuration.Json
+dotnet add package Microsoft.Identity.Client
+dotnet add package Microsoft.Extensions.Logging
+dotnet add package Microsoft.SemanticKernel
+dotnet add package Microsoft.SemanticKernel.Plugins.Core
+dotnet add package Microsoft.SemanticKernel.Plugins.OpenApi
+dotnet add package Microsoft.SemanticKernel.Planners.OpenAI
+dotnet add package Microsoft.SemanticKernel.Plugins.MSGraph
 dotnet add package Microsoft.SemanticKernel.Plugins.OpenApi.Extensions
 ```
 

@@ -6,9 +6,9 @@ description: "Create CSharp Client"
 
 ```csharp
 using Azure.Identity;
-using Microsoft.Agents.M365Copilot.Beta;
-using Microsoft.Agents.M365Copilot.Beta.Models;
-using Microsoft.Agents.M365Copilot.Beta.Copilot.Retrieval;
+using Microsoft.Agents.M365Copilot;
+using Microsoft.Agents.M365Copilot.Models;
+using Microsoft.Agents.M365Copilot.Copilot.Retrieval;
 
 var scopes = new[] {"Files.Read.All", "Sites.Read.All"};
 
@@ -38,9 +38,8 @@ var deviceCodeCredentialOptions = new DeviceCodeCredentialOptions
 var deviceCodeCredential = new DeviceCodeCredential(deviceCodeCredentialOptions);
 
 
-//Create the client with explicit base URL
-var baseURL = "https://graph.microsoft.com/beta";
-AgentsM365CopilotBetaServiceClient client = new AgentsM365CopilotBetaServiceClient (deviceCodeCredential, scopes, baseURL);
+//Create the client
+AgentsM365CopilotServiceClient client = new AgentsM365CopilotServiceClient (deviceCodeCredential, scopes, baseURL);
 
 try
 {
