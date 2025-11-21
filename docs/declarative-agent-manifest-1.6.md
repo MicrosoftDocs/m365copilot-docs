@@ -1,32 +1,36 @@
 ---
-title: Declarative agent schema 1.5 for Microsoft 365 Copilot
-description: Learn about the 1.5 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
+title: Declarative agent schema 1.6 for Microsoft 365 Copilot
+description: Learn about the 1.6 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 08/18/2025
+ms.date: 11/18/2025
 ms.topic: reference
 ---
 
 <!-- markdownlint-disable MD024 MD059 -->
 
-# Declarative agent schema 1.5 for Microsoft 365 Copilot
+# Declarative agent schema 1.6 for Microsoft 365 Copilot
 
-This article describes the 1.5 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Microsoft 365 app manifest references declarative agent manifests inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
-
-[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
+This article describes the 1.6 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Microsoft 365 app manifest references declarative agent manifests inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification focuses on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 1.4](declarative-agent-manifest-1.4.md):
+This schema version introduces the following changes from [version 1.5](declarative-agent-manifest-1.5.md):
 
-- Added the [meetings](#meetings-object) capability to the list of `capabilities`, which allows agents to search meetings in the organization.
+- Added the optional `sensitivity_label` property to specify Purview sensitivity labels for the agent, **only when the agent has embedded files**.
+- Added the optional `worker_agents` property to specify other declarative agents that can be used by this agent.
+- Added the optional `user_overrides` property to specify configured capabilities that the agent user can modify.
+- Added the [embedded knowledge](#embedded-knowledge-object) capability, allowing agents to use local files as knowledge.
+- Added the `items_by_id` property to the [meetings object](#meetings-object), allowing agent creators to limit the meetings available to the agent.
+- Added the `include_related_content` property to the [people object](#people-object), allowing agent creators to choose to include related documents, emails, and Teams messages when searching people content.
+- Added the `group_mailboxes` property to the [email object](#email-object).
 
 ## JSON schema
 
-You can find the schema described in this document in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.5/schema.json).
+You can find the schema described in this document in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.6/schema.json).
 
 [!INCLUDE [declarative-agent-manifest-conventions](includes/declarative-agent-manifest-conventions.md)]
 
@@ -38,16 +42,19 @@ The declarative agent manifest object contains the following properties.
 
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
-| `version`               | String                                                                | Required. The schema version. Set to `v1.5`. |
-| `id`                    | String                                                                | Optional.   |
+| `version`               | String                                                                | Required. The schema version. Set to `v1.6`. |
+| `id`                    | String                                                                | Optional. An identifier for the manifest. |
 | `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It must contain at least one nonwhitespace character and be 100 characters or less. |
 | `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It must contain at least one nonwhitespace character and be 1,000 characters or less. |
 | `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It must contain at least one nonwhitespace character and be 8,000 characters or less. |
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. The array can't contain more than one of each derived type of [Capabilities object](#capabilities-object). |
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. The array can't contain more than 12 objects. |
-| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
+| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of 1-10 objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
 | `behavior_overrides`    | [Behavior overrides object](#behavior-overrides-object)               | Optional. Contains configuration settings that modify the behavior of the agent. |
 | `disclaimer`            | [Disclaimer object](#disclaimer-object)                               | Optional. Disclaimer text that is displayed to the user at the start of a conversation. |
+| `sensitivity_label`     | [Sensitivity label object](#sensitivity-label-object)                 | Optional. Specifies a Microsoft Purview sensitivity label for the agent. |
+| `worker_agents`         | Array of [Worker agent object](#worker-agent-object)                  | Optional. Specifies other declarative agents that can be used by this agent. |
+| `user_overrides`        | Array of [User override object](#user-override-object)                | Optional. Specifies capabilities in the `capabilities` property that the user can modify. |
 
 ### Declarative agent manifest object example
 
@@ -57,7 +64,8 @@ The following code shows an example of the required fields in a declarative agen
 
 ```json
 {
-  "name" : "Repairs agent",
+  "version": "v1.6",
+  "name": "Repairs agent",
   "description": "This declarative agent is meant to help track any tickets and repairs",
   "instructions": "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
 }
@@ -68,7 +76,7 @@ The following code shows an example of the required fields in a declarative agen
 ```typescript
 @agent(
   "Repairs agent",
-  "This declarative agent is meant to help track any tickets and repairs"
+  "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
 )
 @instructions(
   "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
@@ -95,6 +103,7 @@ The capabilities object is the base type for objects in the `capabilities` prope
 - [People object](#people-object)
 - [Scenario models object](#scenario-models-object)
 - [Meetings object](#meetings-object)
+- [Embedded knowledge object](#embedded-knowledge-object)
 
 [!INCLUDE [declarative-agent-capabilities-license-requirement](includes/declarative-agent-capabilities-license-requirement.md)]
 
@@ -180,7 +189,13 @@ The capabilities object is the base type for objects in the `capabilities` prope
       ]
     },
     {
-      "name": "Meetings"
+      "name": "Meetings",
+      "items_by_id": [
+        {
+          "id": "010000002300A00045B6C7890D12E0030000000040056F7GH890IJ01000000000000000020000000J3L45M6A7NO8PQ9R0S12TUV340XY5Z00",
+          "is_series": true
+        }
+      ]
     }
   ]
 }
@@ -190,31 +205,31 @@ The capabilities object is the base type for objects in the `capabilities` prope
 
 ```typescript
 namespace MyAgent {
-  op webSearch is AgentCapabilities.WebSearch<Sites = [
+  op webSearch is AgentCapabilities.WebSearch<TSites = [
     {
         url: "https://contoso.com"
     }
   ]>;
 
   op od_sp is AgentCapabilities.OneDriveAndSharePoint<
-    ItemsBySharePointIds = [
+    TItemsBySharePointIds = [
       {
-        siteId: "bc54a8cc-8c2e-4e62-99cf-660b3594bbfd";
-        webId: "a5377427-f041-49b5-a2e9-0d58f4343939";
-        listId: "78A4158C-D2E0-4708-A07D-EE751111E462";
-        itemId: "304fcfdf-8842-434d-a56f-44a1e54fbed2";
+        site_id: "bc54a8cc-8c2e-4e62-99cf-660b3594bbfd";
+        web_id: "a5377427-f041-49b5-a2e9-0d58f4343939";
+        list_id: "78A4158C-D2E0-4708-A07D-EE751111E462";
+        unique_id: "304fcfdf-8842-434d-a56f-44a1e54fbed2";
       }
     ],
-    ItemsByUrl = [
+    TItemsByUrl = [
       {
         url: "https://contoso.sharepoint.com/teams/admins/Documents/Folders1"
       }
     ]
   >;
 
-  op copilotConnectors is AgentCapabilities.CopilotConnectors<Connections = [
+  op graphConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
     {
-        connectionId: "jiraTickets"
+        connection_id: "jiraTickets"
     }
   ]>;
 
@@ -222,28 +237,13 @@ namespace MyAgent {
 
   op codeInterpreter is AgentCapabilities.CodeInterpreter;
 
-  op dataverse is AgentCapabilities.Dataverse<KnowledgeSources = [
-    {
-      hostName: "organization.crm.dynamics.com";
-      skill: "DVCopilotSkillName";
-      tables: [
-        { tableName: "account" },
-        { tableName: "opportunity" }
-      ];
-    }
-  ]>;
-
-  op teamsMessages is AgentCapabilities.TeamsMessages<TeamsMessagesByUrl = [
+  op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
     {
         url: "https://teams.microsoft.com/l/channel/19%3ApO0102YGEBRSH6RziXCxEgB4mtb7-5hIlDzAjtxs_dg1%40thread.tacv2/G%C3%A9n%C3%A9ral?groupId=2670cf94-acf5-48f4-96d4-c58dd8937afc&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47"
     }
   ]>;
 
   op people is AgentCapabilities.People;
-
-  op scenarioModels is AgentCapabilities.ScenarioModels<Models = [
-    { id: "model_id" }
-  ]>;
 
   op meetings is AgentCapabilities.Meetings;
 }
@@ -411,7 +411,7 @@ The Dataverse object contains the following properties.
 
 | Property            | Type                                                    | Description |
 | ------------------- | ------------------------------------------------------- | ----------- |
-| `name`              | String                                                  | Required. Must be set to `Dataverse`. |
+| `name`              | String                                                  | Required. Set to `Dataverse`. |
 | `knowledge_sources` | Array of [knowledge sources](#knowledge-sources-object) | Optional. An array of objects that contain the identifiers, skills, and table names for Dataverse instances to include as knowledge.|
 
 ##### Knowledge sources object
@@ -434,8 +434,8 @@ Contains the tables to scope the agent's knowledge.
 
 The tables object contains the following property.
 
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
+| Property      | Type   | Description |
+| ------------- | ------ | ----------- |
 | `table_name`  | String | Required. A unique identifier for the table. |
 
 #### Microsoft Teams messages object
@@ -446,8 +446,8 @@ The Microsoft Teams messages object contains the following properties.
 
 | Property | Type                                     | Description |
 | -------- | ---------------------------------------- | ----------- |
-| `name`   | String                                   | Required. Must be set to `TeamsMessages`. |
-| `urls`   | Array of [Microsoft Teams URLs](#microsoft-teams-url-object) | Optional. An array of objects that identify the URLs of the Microsoft Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. The array can't contain more than five objects. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
+| `name`   | String                                   | Required. Set to `TeamsMessages`. |
+| `urls`   | Array of [Microsoft Teams URLs](#microsoft-teams-url-object) | Optional. An array of objects that identify the URLs of the Microsoft Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. The array can't contain more than five objects. If you omit this property, the declarative agent can search through all channels, meetings, 1:1 chats, and group chats. |
 
 ##### Microsoft Teams URL object
 
@@ -465,11 +465,12 @@ Indicates that the declarative agent can search through email messages in the ma
 
 The email object contains the following properties.
 
-| Property         | Type                                | Description |
-| ---------------- | ----------------------------------- | ----------- |
-| `name`           | String                              | Required. Must be set to `Email`. |
-| `shared_mailbox` | String                              | Optional. The SMTP address of a shared mailbox. |
-| `folders`        | Array of [Folders](#folders-object) | Optional. If present, only email in the specified folders are available to the agent. |
+| Property          | Type                                | Description |
+| ----------------- | ----------------------------------- | ----------- |
+| `name`            | String                              | Required. Must be set to `Email`. |
+| `shared_mailbox`  | String                              | Optional. The SMTP address of a shared mailbox. |
+| `group_mailboxes` | Array of String                     | Optional. An array of SMTP address of Microsoft 365 Groups or shared mailboxes. A maximum of 25 mailboxes are supported. |
+| `folders`         | Array of [Folders](#folders-object) | Optional. If present, only email in the specified folders are available to the agent. |
 
 ##### Folders object
 
@@ -483,13 +484,14 @@ The folders object contains the following property.
 
 #### People object
 
-Indicates that the declarative agent can search for information about people in the organization.
+Indicates that the declarative agent can search for information about people in the organization. Refer to [People knowledge](knowledge-sources.md#people) for more details on the data returned by base People capability.
 
-The people object contains the following property.
+The people object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `name`   | String | Required. Must be set to `People`. |
+| `include_related_content` | Boolean | Optional. Indicates whether to include related content when searching people data. When set to true, the DA will include related documents, emails, and Teams messages between the agent user and the referenced people (i.e. what they have in common). When set to false or omitted, only basic organizational information such as org charts, names, email addresses, and skills will be included. The default value is false. |
 
 #### Scenario models object
 
@@ -516,11 +518,63 @@ The model object contains the following property.
 
 Indicates that the declarative agent can search for information about meetings in the organization.
 
-The meetings object contains the following property.
+The meetings object contains the following properties.
 
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `Meetings`. |
+| Property      | Type                                                             | Description |
+| ------------- | ---------------------------------------------------------------- | ----------- |
+| `name`        | String                                                           | Required. Must be set to `Meetings`. |
+| `items_by_id` | Array of [Meeting identifier object](#meeting-identifier-object) | Optional. An array of objects that identify the meetings available to the declarative agent. The array can't contain more than five objects. If you omit this property, the declarative agent can search through all meetings. |
+
+##### Meeting identifier object
+
+Identifies a meeting.
+
+The meeting identifier object contains the following properties.
+
+| Property    | Type    | Description |
+| ----------- | ------- | ----------- |
+| `id`        | String  | Required. The unique identifier for the meeting. For instructions on finding the ID of a meeting, see [Get the ID of a meeting](/troubleshoot/exchange/calendars/cdl/get-meeting-id). |
+| `is_series` | Boolean | Required. Indicates whether the meeting is a series. |
+
+### Embedded knowledge object
+
+Indicates that the declarative agent can use files locally in the app package.
+
+> [!IMPORTANT]
+> This feature is not yet available.
+
+Embedded knowledge files have a maximum file size of 1 MB and must be one of the following document types:
+
+- Word document (.doc, .docx)
+- PowerPoint presentation (.ppt, .pptx)
+- Excel workbook (.xls, .xlsx)
+- Plain text (.txt)
+- Portable Document Format (.pdf)
+
+The embedded knowledge object contains the following properties:
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `name` | String | Required. Must be set to `EmbeddedKnowledge`. |
+| `files` | Array of [File object](#file-object) | Optional. List of objects identifying files that contain knowledge the agent can use for grounding. Maximum size of the array is 10. |
+
+#### EmbeddedKnowledge object example
+
+```json
+{
+  "name": "EmbeddedKnowledge",
+  "files": [
+    { "file": "file1.docx" },
+    { "file": "file2.csv" }
+  ]
+}
+```
+
+#### File object
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `file` | String | Required. The file relative path for the embedded file. |
 
 ### Conversation starters object
 
@@ -532,6 +586,9 @@ The conversation starter object contains the following properties:
 | -------- | ------ | ----------- |
 | `text`   | String | Required. Localizable. A suggestion that the user can use to get the desired result from the declarative agent. It must contain at least one nonwhitespace character. |
 | `title`  | String | Optional. Localizable. A unique title for the conversation starter. It must contain at least one nonwhitespace character. |
+
+> [!NOTE]
+> The array can't contain more than six objects.
 
 #### Conversation starters object example
 
@@ -569,6 +626,9 @@ The action object contains the following properties.
 | -------- | ------ | ----------- |
 | `id`     | String | Required. A unique identifier for the action. It can be a GUID. |
 | `file`   | String | Required. A path to the API plugin manifest for this action. |
+
+> [!NOTE]
+> The array must contain at least one and no more than 10 objects.
 
 #### Actions object example
 
@@ -643,11 +703,63 @@ The disclaimer object contains the following property.
 | -------- | ------ | ----------- |
 | `text`   | String | Required. The disclaimer text. The value must contain at least one non-whitespace character and shouldn't exceed 500 characters. |
 
+### Sensitivity label object
+
+> [!NOTE]
+> Sensitivity labels are only applied to the agent, when the agent has Embedded Files.
+> This property is not enabled yet, since Embedded Files are not enabled yet.
+
+An optional JSON object that specifies the Microsoft Purview sensitivity label for the embedded files within the agent. It contains the highest protection amongst all the files that are embedded to the agents in [Embedded Knowledge property](#embedded-knowledge-object)
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `id`     | String | The GUID of the sensitivity label from Microsoft Purview. |
+
+#### Sensitivity label object example
+
+```json
+{
+  "sensitivity_label": {
+    "id": "<guid>"
+  }
+}
+```
+
+### Worker agent object
+
+Identifies a declarative agent that can be used by this agent.
+
+> [!IMPORTANT]
+> This feature is not yet available.
+
+The worker agent object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `id`     | String | Required. The title ID of the application that contains the declarative agent.  This is returned when publishing the application with the Microsoft 365 Agents Toolkit or may be found in the [agent metadata section of the developer mode card](debugging-agents-vscode.md#agent-metadata-section). |
+
+### User override object
+
+> [!IMPORTANT]
+> This feature is not yet available.
+
+Identifies capabilities in the agent that the agent end user can modify via a UI control in Microsoft 365 Copilot.
+
+> [!NOTE]
+> When you declare `GraphConnectors` in the `path`, the system buckets and displays Microsoft provided connectors using a friendly name, and custom connectors using the connector name (e.g., CB Insights). This behavior ensures end users can easily identify and manage connector sources when configuring their agent session. For more information on connectors and publishers, see [Microsoft 365 Copilot Connectors Gallery](/microsoftsearch/connectors-gallery).
+
+The user override object contains the following properties.
+
+| Property          | Type            | Description |
+| ----------------- | --------------- | ----------- |
+| `path`            | String          | Required. A JSONPath expression identifying the capability that users can modify. The JSONPath expression allows targeting specific capabilities by name only. |
+| `allowed_actions` | Array of String | Required. Specifies that actions can be taken for the specified capabilities. The only supported action is `remove`. |
+
 ## Declarative agent manifest example
 
 The following example shows a declarative agent manifest file that uses most of the manifest properties described in this article.
 
-:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.5.json":::
+:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.6.json":::
 
 ## Related content
 

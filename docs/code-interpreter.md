@@ -5,12 +5,12 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/12/2025
 ---
 
 # Add the code interpreter capability to your agent
 
-You can enhance the user experience of your declarative agents for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](declarative-agent-manifest-1.5.md#capabilities-object) in the manifest reference, and the **Capabilities** section in Copilot Studio in Microsoft 365 Copilot, provide several options for you to unlock features for your users.
+You can enhance the user experience of your declarative agents for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](declarative-agent-manifest-1.6.md#capabilities-object) in the manifest reference, and the **Capabilities** section in Microsoft 365 Copilot, provide several options for you to unlock features for your users.
 
 Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the related code that it generates. It can also produce images or files based on the scenario, and accepts files as input for modification and analysis.
 
@@ -36,11 +36,11 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-## Enable code interpreter in Copilot Studio
+## Enable code interpreter in Microsoft 365 Copilot
 
-If you're using the [Copilot Studio lite experience](copilot-studio-lite.md) to create your agent and want to enable code interpreter, open the **Configure** tab and then, under **Capabilities**, choose the toggle next to **Code interpreter**.
+If you're using the [Microsoft 365 Copilot](copilot-studio-lite.md) to create your agent and want to enable code interpreter, open the **Configure** tab and then, under **Capabilities**, choose the toggle next to **Create documents, charts, and code**.
 
-:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section of Copilot Studio":::
+:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section in Agent Builder in Microsoft 365 Copilot":::
 
 ## Code interpreter capability examples
 
@@ -115,6 +115,6 @@ To modify that image, the user can enter the prompt *Give me a black and white v
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.5.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.6.md)
 - [Add the image generator capability to your agent](image-generator.md)
 - [Add knowledge sources to your declarative agent](knowledge-sources.md)

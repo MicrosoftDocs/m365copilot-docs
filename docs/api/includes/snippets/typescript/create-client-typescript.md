@@ -3,7 +3,7 @@ description: "Create TypeScript Client"
 ---
 
 ```typescript
-import { createBaseAgentsM365CopilotBetaServiceClient, RetrievalDataSourceObject } from '@microsoft/agents-m365copilot-beta';
+import { createBaseAgentsM365CopilotServiceClient, RetrievalDataSourceObject } from '@microsoft/agents-m365copilot';
 import { DeviceCodeCredential } from '@azure/identity';
 import { FetchRequestAdapter } from '@microsoft/kiota-http-fetchlibrary';
 import { AzureIdentityAuthenticationProvider } from '@microsoft/kiota-authentication-azure';
@@ -22,10 +22,9 @@ async function main() {
     // Create request adapter with auth
     const authProvider = new AzureIdentityAuthenticationProvider(credential, ["Files.Read.All", "Sites.Read.All"]);
     const adapter = new FetchRequestAdapter(authProvider);
-    adapter.baseUrl = "https://graph.microsoft.com/beta";
 
     // Create client instance
-    const client = createBaseAgentsM365CopilotBetaServiceClient(adapter);
+    const client = createBaseAgentsM365CopilotServiceClient(adapter);
 
     try {
         console.log(`Using API base URL: ${adapter.baseUrl}\n`);

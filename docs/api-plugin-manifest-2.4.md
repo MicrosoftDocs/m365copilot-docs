@@ -1,34 +1,33 @@
 ---
-title: API plugin manifest schema 2.3 for Microsoft 365 Copilot
-description: Learn about the 2.3 schema for a manifest file for an API plugin in Microsoft 365 Copilot
+title: API plugin manifest schema 2.4 for Microsoft 365 Copilot
+description: Learn about the 2.4 schema for a manifest file for an API plugin in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 11/18/2025
 ms.topic: reference
 ---
 
-# API plugin manifest schema 2.3 for Microsoft 365 Copilot
+# API plugin manifest schema 2.4 for Microsoft 365 Copilot
 
 API plugins enable Microsoft 365 Copilot to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
 
-The following article describes the 2.3 schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
-
-[!INCLUDE [latest-plugin-manifest](includes/latest-plugin-manifest.md)]
+The following article describes the 2.4 schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
 
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 2.2](api-plugin-manifest-2.2.md).
+This schema version introduces the following changes from [version 2.3](api-plugin-manifest-2.3.md).
 
-- Added support for [calling functions in an Office Add-in](build-api-plugins-local-office-api.md).
-  - Renamed the OpenAPI runtime object to [Runtime object](#runtime-object) and made the following changes.
-    - Added a new value for the `type` property: `LocalPlugin`.
-    - Change the type of the `spec` property to [OpenAPI specification object](#openapi-specification-object) or [Local endpoint specification object](#local-endpoint-specification-object).
-  - Added the [Local endpoint specification object](#local-endpoint-specification-object)
+- Added support for Model Context Protocol (MCP) servers.
+  - Added a new value for the `type` property in [Runtime object](#runtime-object): `RemoteMCPServer`.
+  - Added the [MCP server spec object](#mcp-server-spec-object) to describe how to connect to an MCP server.
+- Enhanced [Response semantics object](#response-semantics-object) to support file references for static templates.
+  - The `static_template` property can now reference an external file using a `file` property.
+- Updated [Confirmation object](#confirmation-object) `isNonConsequential` property behavior for OpenAPI GET actions.
 
 ## JSON schema
 
-The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/plugin/v2.3/schema.json).
+The schema described in this document can be found at [https://aka.ms/json-schemas/copilot/plugin/v2.4/schema.json](https://aka.ms/json-schemas/copilot/plugin/v2.4/schema.json) in [JSON Schema](https://json-schema.org/) format.
 
 ## Conventions
 
@@ -66,7 +65,7 @@ The plugin manifest object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `schema_version` | String | Required. The schema version. Previous versions are `v1` and `v2`. Must be set to `v2.3`. |
+| `schema_version` | String | Required. The schema version. Previous versions are `v1`, `v2`, `v2.1`, `v2.2`, and `v2.3`. Must be set to `v2.4`. |
 | `name_for_human` | String | Required. A short, human-readable name for the plugin. It MUST contain at least one nonwhitespace character. Characters beyond 20 MAY be ignored. This property is localizable. |
 | `namespace` | String | Required. Contains an identifier used to prevent name conflicts between function names from different plugins. The value MUST match the regex `^[A-Za-z0-9]+`. |
 | `description_for_model` | String | Optional. The description for the plugin that is provided to the model. This description should describe what the plugin is for, and in what circumstances its functions are relevant. Characters beyond 2048 MAY be ignored. This property is localizable. |
@@ -286,6 +285,7 @@ The confirmation object contains the following properties.
 | `type` | String | Optional. Specifies the type of confirmation. Possible values are: `None`, `AdaptiveCard`. |
 | `title` | String | Optional. The title of the confirmation dialog. This property is localizable. |
 | `body` | String | Optional. The text of the confirmation dialog. This property is localizable. |
+| `isNonConsequential` | Boolean | Optional. Indicates whether the function is non-consequential. When set to `true`, the function is considered non-consequential, allowing users to use the "Always Allow" option during confirmation. The default value is `false`. For OpenAPI actions: If the OpenAPI action isn't GET, this property has no effect. If the OpenAPI action is GET and `x-oai-isConsequential` is defined in the OpenAPI specification, this property has no effect. If the OpenAPI action is GET and `x-oai-isConsequential` isn't defined in the OpenAPI specification, this property can set the action as non-consequential. |
 
 #### Response semantics object
 
@@ -297,7 +297,7 @@ The response semantics object contains the following properties.
 | -------- | ---- | ----------- |
 | `data_path` | String | Required. A JSONPath [RFC9535][] query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
 | `properties` | [Response semantics properties object](#response-semantics-properties-object) | Optional. Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value. |
-| `static_template` | Object | Optional. A JSON object that conforms with the [Adaptive Card schema](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) and templating language. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` isn't present or fails to resolve to an adaptive card. |
+| `static_template` | Object | Optional. A JSON object that either conforms with the [Adaptive Card schema](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) and templating language, or contains a `file` property that references a file containing the Adaptive Card schema. This Adaptive Card instance is used to render a result from the plugin response. This value is used if the `template_selector` isn't present or fails to resolve to an adaptive card. If using the file reference option, the value of `file` MUST be a relative path to a JSON file containing a valid Adaptive Card schema. The path is relative to the location of the manifest document. |
 | `oauth_card_path` | String | Optional. |
 
 ##### Static template example
@@ -364,6 +364,28 @@ The response semantics object contains the following properties.
 }
 ```
 
+##### File reference static template example
+
+```json
+{
+  "functions": {
+    "capabilities": {
+      "response_semantics": {
+        "data_path": "$.resources",
+        "properties": {
+          "title": "$.name",
+          "subtitle": "$.location",
+          "url": "$.href"
+        },
+        "static_template": {
+          "file": "./adaptive-cards/card.json"
+        }
+      }
+    }
+  }
+}
+```
+
 #### Response semantics properties object
 
 Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value.
@@ -407,10 +429,10 @@ The OpenAPI runtime object contains the following properties.
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `type` | String | Required. Identifies the type of runtime. Valid values are `OpenApi` and `LocalPlugin`. |
+| `type` | String | Required. Identifies the type of runtime. Valid values are `OpenApi`, `LocalPlugin`, and `RemoteMCPServer`. |
 | `auth` | [Runtime authentication object](#runtime-authentication-object) | Required. Authentication information required to invoke the runtime. |
 | `run_for_functions` | Array of String | Optional. The names of the functions that are available in this runtime. If this property is omitted, all functions described by the runtime are available. Provided string values can contain wildcards. More than one runtime MUST NOT declare support for the same function either implicitly or explicitly. |
-| `spec` | [OpenAPI specification object](#openapi-specification-object) or [Local endpoint specification object](#local-endpoint-specification-object) | Required. Contains the OpenAPI information required to invoke the runtime. |
+| `spec` | [OpenAPI specification object](#openapi-specification-object), [Local endpoint specification object](#local-endpoint-specification-object), or [MCP server spec object](#mcp-server-spec-object) | Required. Contains the runtime-specific information required to invoke the runtime. |
 
 #### OpenAPI specification object
 
@@ -453,6 +475,94 @@ The local endpoint specification object contains the following properties.
 | -------- | ---- | ----------- |
 | `local_endpoint` | String | Required. MUST be set to `Microsoft.Office.Addin`. |
 | `allowed_host` | Array of  String | Optional. Specifies the host apps the plugin can run in. Valid values are `document`, `mail`, `presentation`, and `workbook`. |
+
+#### MCP server spec object
+
+Contains Model Context Protocol (MCP) server connection information required to invoke the runtime.
+
+The MCP server spec object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `url` | String | Required. The URL of the MCP server. MUST be a valid absolute URL. |
+| `mcp_tool_description` | [MCP tool description object](#mcp-tool-description-object) | Optional. Contains either a reference to an external MCP tool description file or inline tool definitions. When present, static tool definitions are used instead of dynamic discovery. When absent, the runtime MUST use dynamic tool discovery by calling the MCP server's `tools/list` method. |
+
+##### MCP tool description object
+
+Contains tool descriptions for an MCP server.
+
+The MCP tool description object contains the following properties.
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `file` | String | Optional. A relative path to the MCP tool description file within the app package. The file MUST be valid JSON containing tool descriptions matching the format returned by the MCP server's `tools/list` method. The path is relative to the location of the manifest document. MUST NOT be present if `tools` is present. |
+| `tools` | Array of Object | Optional. An array of tool definitions. The structure MUST match the format returned by the MCP server's `tools/list` method. Each tool object MUST contain `name`, `description`, and `inputSchema` properties. MUST NOT be present if `file` is present. |
+
+##### MCP execution spec object example (file reference)
+
+```json
+{
+  "runtimes": [
+    {
+      "type": "RemoteMCPServer",
+      "spec": {
+        "url": "https://mcp.example.org/",
+        "mcp_tool_description": {
+          "file": "mcp-tools.json"
+        }
+      }
+    }
+  ]
+}
+```
+
+##### MCP execution spec object example (inline)
+
+```json
+{
+  "runtimes": [
+    {
+      "type": "RemoteMCPServer",
+      "spec": {
+        "url": "https://mcp.example.org/",
+        "mcp_tool_description": {
+          "tools": [
+            {
+              "name": "get_weather",
+              "description": "Get current weather for a location",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "location": {
+                    "type": "string",
+                    "description": "The city and state/country"
+                  }
+                },
+                "required": ["location"]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+```
+
+##### MCP execution spec object example (dynamic discovery)
+
+```json
+{
+  "runtimes": [
+    {
+      "type": "RemoteMCPServer",
+      "spec": {
+        "url": "https://mcp.example.org/"
+      }
+    }
+  ]
+}
+```
 
 #### Runtime authentication object
 
@@ -512,7 +622,7 @@ The conversation starter object contains the following properties.
 
 Here's an example of a plugin manifest file that uses most of the manifest properties and object properties described in the article:
 
-:::code language="json" source="includes/sample-manifests/plugin-sample-manifest-2.3.json":::
+:::code language="json" source="includes/sample-manifests/plugin-sample-manifest-2.4.json":::
 
 ## Related content
 

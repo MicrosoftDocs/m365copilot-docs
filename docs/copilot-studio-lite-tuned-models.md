@@ -1,16 +1,16 @@
 ---
 title: Create declarative agents with task-specific large language models tuned with Microsoft 365 Copilot Tuning (preview)
-description: Learn how use Copilot Studio to create declarative agents that use task-specific large language models (LLMs) tuned with Microsoft 365 Copilot Tuning.
+description: Learn how use the Agent Builder feature in Microsoft 365 Copilot to create declarative agents that use task-specific large language models (LLMs) tuned with Microsoft 365 Copilot Tuning.
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/17/2025
 ---
 
 # Create declarative agents with Microsoft 365 Copilot Tuning models (preview)
 
-[Microsoft 365 Copilot Tuning](/copilot/microsoft-365/copilot-tuning-overview) allows organizations to fine-tune large language models (LLMs) by using their own tenant data. These fine-tuned models power agents that can perform domain-specific tasks based on the organization's unique knowledge. This article explains how to use Copilot Studio to create declarative agents that use those fine-tuned models.
+[Microsoft 365 Copilot Tuning](/copilot/microsoft-365/copilot-tuning-overview) allows organizations to fine-tune large language models (LLMs) by using their own tenant data. These fine-tuned models power agents that can perform domain-specific tasks based on the organization's unique knowledge. This article explains how to use Microsoft 365 Copilot to create declarative agents that use those fine-tuned models.
 
 > [!NOTE]
 > Copilot Tuning is currently available through the **Early Access Preview (EAP)** program. For details about requirements and how to enroll, see the [Microsoft 365 Copilot Tuning admin guide](/copilot/microsoft-365/copilot-tuning-admin-guide).
@@ -35,7 +35,7 @@ To create the agent:
 
 1. In the next dialog box, select a fine-tuned model from the list of models, then select **Done**.
 
-1. Finish customizing your agent by filling in the remaining fields. For more information, see [Build agents using Copilot Studio](copilot-studio-lite-build.md).
+1. Finish customizing your agent by filling in the remaining fields. For more information, see [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md).
 
 ## Add knowledge sources
 
@@ -52,4 +52,4 @@ The following table shows the supported knowledge sources for each tuning type.
 ## Related content
 
 - [Microsoft 365 Copilot Tuning overview](/copilot/microsoft-365/copilot-tuning-overview)
-- [Build agents using Copilot Studio](copilot-studio-lite-build.md)
+- [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md)
