@@ -10,7 +10,7 @@ ms.date: 11/11/2025
 
 # Use the Text Translator template to build an agent
 
-Use the **Text Translator template** in the Microsoft 365 Copilot Studio lite experience to build an agent that helps users break language barriers by translating text between languages and improving overall writing quality. The Text Translator agent can even support language learning by explaining idioms or suggesting synonyms, making it a versatile tool for educational and practical translation needs.
+Use the **Text Translator template, available in Microsoft 365 Copilot when you use the Agent Builder feature, to build an agent that helps users break language barriers by translating text between languages and improving overall writing quality. The Text Translator agent can even support language learning by explaining idioms or suggesting synonyms, making it a versatile tool for educational and practical translation needs.
 
 ## Prerequisites
 
