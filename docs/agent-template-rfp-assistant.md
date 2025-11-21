@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 11/20/2025
 ---
 
 # Use the RFP Proposal Generator template to build an agent
