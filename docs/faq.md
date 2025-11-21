@@ -5,7 +5,7 @@ author: girliemac
 ms.author: timura
 ms.topic: best-practice
 ms.localizationpriority: medium
-ms.date: 08/11/2025
+ms.date: 11/18/2025
 ---
 
 # Frequently asked questions for Microsoft 365 Copilot extensibility
@@ -18,7 +18,7 @@ This article provides answers to the frequently asked questions (FAQs) about Mic
 
 Declarative agents are tools that enhance the Microsoft 365 Copilot experience. They combine custom knowledge and skills (like actions, triggers, and workflows) to create a rich conversational experience. These agents can be integrated into Microsoft 365 and use connectors for advanced features. They can also include other features like API plugins and app functionalities for Teams and Microsoft 365.
 
-Custom engine agents use custom foundation models and orchestrators and can be tailored to specific enterprise needs. Custom engine agents include agents built with Copilot Studio, Teams AI library, and Azure AI Foundry. Custom engine agents currently work as standalone and Teams apps.
+Custom engine agents use custom foundation models and orchestrators and can be tailored to specific enterprise needs. Custom engine agents include agents built with Copilot Studio, Teams SDK, and Azure AI Foundry. Custom engine agents currently work as standalone and Teams apps.
 
 For more information, see [Agents for Microsoft 365](agents-overview.md).
 
@@ -68,7 +68,7 @@ You don't need a [Copilot Studio license](https://www.microsoft.com/microsoft-co
 
 If you build AI solutions other than agents, a Copilot Studio license is required.
 
-You don't need a Microsoft 365 Copilot license to build custom engine agents by using Teams AI Library. Instead, the cost depends on the Azure services consumed in the app. For details, see the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).
+You don't need a Microsoft 365 Copilot license to build custom engine agents by using Teams SDK. Instead, the cost depends on the Azure services consumed in the app. For details, see the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
 ## Agents Toolkit questions
 

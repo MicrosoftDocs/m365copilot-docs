@@ -37,11 +37,11 @@ Your app package must include both a color and outline version of your app icon,
 > [!NOTE]
 > Currently only the color icon is used to represent agents to users (both as its store listing and within the Microsoft 365 Copilot UI), but an outline icon is still required when you submit the app package to Microsoft AppSource.
 
-For design guidance for color and outline icons for the Microsoft 365 app package, see [App icons for Teams Store and app bar](/microsoftteams/platform/concepts/design/design-teams-app-icon-store-appbar).
+For detailed design guidance for color and outline icons for the Microsoft 365 app package, see [Design icons for agent acquisition and management](agent-icon-management.md).
 
 ### Color icon
 
-The color icon represents your agent within the Microsoft 365 Copilot UI and in-product (Teams, Outlook, Microsoft 365) app stores.
+The color icon represents your agent within the Microsoft 365 Copilot UI and in-product (Teams, Office, Outlook, Microsoft 365) app stores.
 
 :::row:::
 :::column:::
@@ -170,7 +170,7 @@ Note the following:
 
 The declarative agent manifest includes instructions for Copilot responses, conversation starter sample prompts, data sources used for grounding, and a list of actions (API plugin skills) the agent is able to perform.
 
-To learn more, see [Declarative agent manifest schema for Microsoft 365 Copilot](declarative-agent-manifest-1.5.md).
+To learn more, see [Declarative agent manifest schema for Microsoft 365 Copilot](declarative-agent-manifest-1.6.md).
 
 ## API plugin manifest
 
