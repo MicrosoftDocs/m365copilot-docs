@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 11/21/2025
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
