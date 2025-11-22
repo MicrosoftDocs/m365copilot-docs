@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 11/21/2025
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -158,7 +158,7 @@ The following table lists sensitivity label scenarios that aren't currently supp
 | -------- | -------- |
 | Sensitivity label with Double Key Encryption (DKE) enabled | The file is embedded but isn't used as knowledge. The builder doesn't see an error message when they upload the file. | We recommend that you avoid uploading files with DKE because they can't be used as knowledge. |
 | Sensitivity label with user-defined permissions enabled | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with user-defined permissions. |
-| Sensitivity label with extract rights enabled for the user | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with extract rights enabled. |
+| Sensitivity label with extract rights disabled for the user | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with extract rights disabled. |
 | Files with sensitivity labels from another tenant that has encryption enabled | The file is embedded in the agent but isn't used as knowledge. | We recommend that you avoid uploading files with sensitivity labels from tenants with encryption enabled because they can't be used as knowledge. |
 | Files with password protection | The file is uploaded and the builder sees an error message next to the uploaded file. | Remove any uploaded files with password protection. |
 
