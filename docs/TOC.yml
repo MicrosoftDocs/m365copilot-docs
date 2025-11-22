@@ -160,7 +160,7 @@ items:
         - name: Quiz Tutor
           href: agent-template-quiz-tutor.md
         - name: Scrum Assistant
-          href: agent-template-scrum-assistant.md        
+          href: agent-template-scrum-assistant.md
         - name: Text Translator Assistant
           href: agent-template-text-translator.md
         - name: Writing Coach
