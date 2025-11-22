@@ -158,7 +158,7 @@ items:
         - name: Request for Proposal Assistant
           href: agent-template-rfp-assistant.md
         - name: Quiz Tutor
-          href: agent-template-quiz-tutor.md        
+          href: agent-template-quiz-tutor.md
         - name: Scrum Assistant
           href: agent-template-scrum-assistant.md        
         - name: Text Translator Assistant
