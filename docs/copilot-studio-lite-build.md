@@ -4,7 +4,7 @@ description: Learn how to build agents by using the Agent Builder feature in Mic
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 11/23/2025
 ms.topic: conceptual
 ---
 
@@ -16,16 +16,16 @@ To get started, open the Microsoft 365 Copilot app. In the left pane, choose **N
 
 ## Use natural language to create your agent
 
-Microsoft 365 Copilot allows you to create an agent using plain language. As you provide information conversationally, the agent's name, description, and instructions update to refine the agent's behavior. This experience provides a rich yet simple natural language way to create a customized agent. After you create an agent, you can return to the agent and use the **Describe** tab to update it using natural language.
+Microsoft 365 Copilot allows you to create an agent using natural language. As you provide information conversationally, the agent's name, description, and instructions update to refine the agent's behavior. This experience provides a rich yet simple natural language way to create a customized agent. The natural language option saves time and helps you create more effective agents.
 
-You build agents in plain language and by choosing options for refinement that the tool presents. The builder progressively updates the agent in each turn of the conversation, and changes are saved automatically. You can make updates to the agent in any turn of the conversation. Changes to the agent's name, description, and instructions update automatically.
-
-The builder also provides suggested refinements for your agent. For example, if you ask the builder to "Include email attachments in summaries", it might present the following suggested refinements:
+Provide a description of your agent in the chat window. Agent Builder automatically configures the agent for you based on your description. It also presents options for refinement and incorporates the refinements based on the options you select. For example, if you ask Agent Builder to include email attachments in summaries, it might present the following suggested refinements:
 
 - Show only attachments from unread messages
 - Summarize attachments by file type
 
-The Agent Builder feature selects knowledge sources for you based on your description and responses to prompts. For example, if you build an agent that summarizes your daily emails, Agent Builder adds **My emails** as a knowledge source. You can also choose **Add content** in the chat box and search for or select [knowledge sources](copilot-studio-lite-knowledge.md) for your agent. You can also ask the builder to [add capabilities](#add-capabilities) to your agent.
+You can converse with Agent Builder to update and refine your agent; the tool progressively updates the agent in each turn of the conversation, and saves changes to the agent's name, description, and instructions automatically.
+
+Agent Builder also selects knowledge sources for you based on your description and responses to prompts. For example, if you build an agent that summarizes your daily emails, Agent Builder adds **My emails** as a knowledge source. You can also choose **Add content** in the chat box and search for or select [knowledge sources](copilot-studio-lite-knowledge.md) for your agent, and you can ask the tool to [add capabilities](#add-capabilities) to your agent.
 
 When you're finished providing a natural language description of your agent's behavior and adding knowledge sources, you can view the agent's configuration on the **Configure** tab. The tool prepopulates the agent details for you, including:
 
@@ -35,13 +35,19 @@ When you're finished providing a natural language description of your agent's be
 - Knowledge sources preselected based on your agent description
 - Suggested prompts
 
-The natural language option saves time and helps you create more effective agents.
+After you create an agent, you can return to the agent and use the **Describe** tab to update it using natural language.
 
-## Use the Configure tab to create your agent manually
+## Configure your agent manually
 
-If you don't want to use natural language and let Agent Builder configure your agent for you, you can configure the agent's behavior by using the **Configure** tab.
+If you don't want to use natural language and let Agent Builder configure your agent for you, you can configure your agent's behavior manually in Agent Builder.
 
-The **Configure** tab provides you with the ability to view and edit information about the agent, giving you more control. The **Describe** and **Configure** tabs are in sync. The fields in the **Configure** tab update to reflect the latest changes from the **Describe** tab. You can switch between the tabs to use the experience that is most comfortable to you to author the agent.
+To configure your agent manually:
+
+1. In Microsoft 365 Copilot, choose **New agent**.
+1. On the New agent page, choose **Configure new agent**.
+1. Agent Builder opens the **Configure** tab, where you can specify your agent's name, description, instructions, knowledge, and prompts.
+
+The **Configure** tab provides the ability to view and edit information about the agent, giving you more control. 
 
 :::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-configure.png" alt-text="The Configure tab lets users manually edit the agent":::
 
@@ -59,17 +65,26 @@ The following table describes the fields that make up the agent.
 | **Starter Prompts** | Starter prompts help other users understand commonly supported scenarios by your agent. Each starter prompt comes with a name and description. There's no minimum number of starter prompts. |
 <!-- markdownlint-enable MD033 -->
 
+## Build from a template
+
+Agent Builder in Microsoft 365 Copilot includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs; for example, you can add more knowledge sources and capabilities. 
+
+To use a template to build your agent, in Microsoft 365 Copilot, select **New agent**, and on the New agent page, under ""Start with a template**, choose the template you want to use. The agent is created for you automatically. You can further refine your agent and add knowledge sources by using natural language on the **Describe tab**, or add your refinements manually on the **Configure** tab.
+
+For more information, see [Agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
+
 ## Try your agent
 
-The agent in the right pane is an ephemeral instance of the agent that shows up as a side-by-side screen within the authoring experience. You can use it to test the agent while you're creating or making updates to it. You can test your agent in the test pane to experience it in a similar way to end users. The test pane is enabled after the agent has name, description, and instructions. It behaves according to those instructions like a fully fledged agent, including the ability to respond to complex queries within its realm of specified knowledge. The agent updates during each turn of the conversation as new information is added in the **Describe** or **Configure** tab.
+The agent in the right pane is an ephemeral instance of the agent that shows up as a side-by-side screen within the authoring experience. You can use it to test the agent while you're creating or making updates to it. You can test your agent in the test pane to experience it in a similar way to end users. The test pane is enabled after the agent has name, description, and instructions. It behaves according to those instructions like a fully fledged agent, including the ability to respond to complex queries within its realm of specified knowledge. The agent updates during each turn of the conversation as you add new information by using natural language on the **Describe** or manually on the **Configure** tab in Agent Builder.
 
-The agent you see in the test pane isn't created yet, so some features aren't available. For example, you can't use it to share prompts, provide feedback, or @mention other agents in the Microsoft 365 Copilot app. These features become available after you create the agent.
+The agent you see in the test pane isn't created yet, so some features aren't available. For example, you can't use it to share prompts, provide feedback, or @mention other agents in the Microsoft 365 Copilot app. These features are available after you create the agent.
 
-The test pane initially appears with suggested starter prompts, which when clicked invokes the prompt and starts the conversation. You can select **New Chat** to start a new conversation with the agent to view the starter prompts again.
+The test pane initially appears with suggested starter prompts, which when selected invoke the prompt and start the conversation. You can select **New Chat** to start a new conversation with the agent to view the starter prompts again.
 
 ## Add knowledge sources
 
 To build context-aware agents, you can reference SharePoint items or any public websites. If your users have a Microsoft 365 Copilot add-on license, you can also:
+
 - Ground your agents in personal work information, such as Teams chat messages and Outlook emails
 - Use prebuilt [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) that are enabled in your tenant.
 
@@ -84,10 +99,6 @@ In the **Capabilities** section of the **Configure** tab, you can choose to add 
 
 - [Code interpreter](code-interpreter.md) - Solves complex math problems, analyze data, and generate visualizations. To add this capability, select the toggle next to **Create documents, charts, and code**.
 - [Image generator](image-generator.md) - Generates images based on user prompts. To add this capability, select the toggle next to **Create images**.
-
-## Build from a template
-
-The Agent Builder feature in Microsoft 365 Copilot includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs; for example, you can add more knowledge sources and capabilities. For more information, see [Agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
 
 ## Next step
 
