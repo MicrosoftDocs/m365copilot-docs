@@ -10,9 +10,9 @@ ms.topic: conceptual
 
 # Build a declarative agent with Agent Builder in Microsoft 365 Copilot
 
-An easy way to build your own [declarative agents](overview-declarative-agent.md) is to use the Agent Builder feature in Microsoft 365 Copilot. Microsoft 365 Copilot offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects.
+An easy way to build [declarative agents](overview-declarative-agent.md) for Microsoft 365 is to use the Agent Builder feature in Microsoft 365 Copilot. Microsoft 365 Copilot offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects.
 
-If you need more advanced capabilities like Actions to integrate external services, we recommend that you use [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
+
 
 Use Microsoft 365 Copilot to create and customize agents that can be implemented for scenario-specific uses cases, such as:
 
@@ -29,19 +29,22 @@ You can build agents from the following apps and sites:
 - office.com/chat
 - Microsoft Teams Desktop and web client
 
-> [!NOTE]
-> Agent Builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It is not available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that are not listed in this article.
+Agent Builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It isn't available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that are not listed in this article.
 
 <!--
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-entry.png" alt-text="Agent Builder entry point in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-tabs.png" alt-text="Agent Builder entry point in Microsoft 365 Copilot":::
 -->
+
+> [!NOTE]
+> If you need more advanced capabilities like Actions to integrate external services, we recommend that you use [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
+
 ## Governance
 
-Agents you build with the Agent Builder feature in Microsoft 365 Copilot are included in your Microsoft 365 Copilot license. These agents feature functionality that is a subset of what Microsoft 365 Copilot supports. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise).
+Agents you build with  Agent Builder in Microsoft 365 Copilot are included in your Microsoft 365 Copilot license. These agents feature functionality that is a subset of what Microsoft 365 Copilot supports. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise).
 
 ## Data processing
 
-Agent builder capabilities are processed by the Copilot Studio service and can enable data flow both to and from Microsoft 365 and Copilot Studio. This data can include Microsoft 365 data, prompts, instructions, configurations, and output content. Use of the integrated Copilot Studio and Microsoft 365 services is governed by the respective [product terms](https://go.microsoft.com/fwlink/?linkid=2173816) and compliance commitments.
+Agent Builder capabilities are processed by the Copilot Studio service and can enable data flow both to and from Microsoft 365 and Copilot Studio. This data can include Microsoft 365 data, prompts, instructions, configurations, and output content. Use of the integrated Copilot Studio and Microsoft 365 services is governed by the respective [product terms](https://go.microsoft.com/fwlink/?linkid=2173816) and compliance commitments.
 
 ## Data storage
 

@@ -76,7 +76,7 @@ To build context-aware agents, you can reference SharePoint items or any public 
 For more information, see [Add knowledge sources](copilot-studio-lite-knowledge.md).
 
 > [!NOTE]
-> The capabilities of agents differ based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
+> The availability of knowledge sources and capabilities differs based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 
 ## Add capabilities
 
