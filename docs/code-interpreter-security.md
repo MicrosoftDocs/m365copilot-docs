@@ -1,5 +1,5 @@
 ---
-title: Code Interpreter security architecture in Microsoft 365 Copilot
+title: Code Interpreter Security Architecture in Microsoft 365 Copilot
 description: Learn about the security architecture for the code interpreter capability in Microsoft 365 Copilot and agents.
 #customer intent: As a developer, I want to understand the security and governance features for code interpreter.
 author: Lauragra
