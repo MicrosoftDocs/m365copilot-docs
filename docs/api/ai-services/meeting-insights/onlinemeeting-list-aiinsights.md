@@ -14,7 +14,9 @@ ms.topic: reference
 <!-- markdownlint-disable MD024 -->
 <!-- cSpell:ignore Anjali-Patle anjalipatle -->
 
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Get the list of [callAiInsight](resources/callaiinsight.md) objects associated with an [onlineMeeting](/graph/api/resources/onlinemeeting).
 
