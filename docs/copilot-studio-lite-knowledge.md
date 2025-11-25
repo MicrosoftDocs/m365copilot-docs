@@ -18,21 +18,34 @@ For more information about supported knowledge sources and licensing requirement
 
 ## Add knowledge sources
 
-To add knowledge sources to your agent:
+If you're using natural language to create your agent, you can add knowledge sources from the chat box on the **Describe** tab in Agent Builder:
 
-1. In Microsoft 365 Copilot, choose **Create agent**, and go to the **Configure** tab.
+1. In Microsoft 365 Copilot, choose **New agent** on the left pane, and provide a natural language description for your agent.
+2. Choose the **Add content** link in the chat box. use one of the following methods to add knowledge sources:
+   - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
+   - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
+   - **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
+
+> [!NOTE]
+> The file upload feature is only available on the **Configure** tab.
+
+If you're configuring your agent manually, to add knowledge sources to your agent:
+
+1. In Microsoft 365 Copilot, choose **New agent** from the left pane, and go to the **Configure** tab.
 2. In the **Knowledge** section, use one of the following methods to add knowledge sources:
    - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
    - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
    - **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
-3. Select the items to include. You can add:
-   - Up to four public website URLs.
-   - SharePoint files, folders, or sites.
-   - Up to five Teams chat URLs.
-   - Embedded files uploaded from your device.
-   - Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
-  
-  :::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-select-knowledge.png" alt-text="A screenshot of the Knowledge section of the Configure tab with the Picker UI showing.":::
+   - **Upload** - Upload files directly from your device.
+
+:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-knowledge-configure.png" alt-text="A screenshot of the Knowledge section of the Configure tab.":::
+
+You can add:
+- Up to four public website URLs.
+- SharePoint files, folders, or sites.
+- Up to five Teams chat URLs.
+- Embedded files uploaded from your device (on the **Configure** tab only).
+- Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
 
 ## Public websites
 

@@ -4,7 +4,7 @@ description: Learn how to build agents by using the Agent Builder feature in Mic
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/23/2025
+ms.date: 11/24/2025
 ms.topic: conceptual
 ---
 
@@ -49,7 +49,7 @@ To configure your agent manually:
 
 The **Configure** tab provides the ability to view and edit information about the agent, giving you more control. 
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-configure.png" alt-text="The Configure tab lets users manually edit the agent":::
+:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-configure.png" alt-text="Screenshot of the Configure tab where users can manually configure their agent":::
 
 The following table describes the fields that make up the agent.
 
@@ -69,7 +69,12 @@ The following table describes the fields that make up the agent.
 
 Agent Builder in Microsoft 365 Copilot includes templates that you can use to build agents for specific use cases. The templates are preconfigured with a description, instructions, and prompts. You can use the templates as-is or customize them for your specific needs; for example, you can add more knowledge sources and capabilities. 
 
-To use a template to build your agent, in Microsoft 365 Copilot, select **New agent**, and on the New agent page, under ""Start with a template**, choose the template you want to use. The agent is created for you automatically. You can further refine your agent and add knowledge sources by using natural language on the **Describe tab**, or add your refinements manually on the **Configure** tab.
+To use a template to build your agent:
+
+1. In Microsoft 365 Copilot, select **New agent**.
+2. On the New agent page, under **Start with a template**, choose the template you want to use. The agent is created for you automatically.
+ 
+You can further refine your agent and add knowledge sources by using natural language on the **Describe tab**, or add your refinements manually on the **Configure** tab.
 
 For more information, see [Agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
 
@@ -88,7 +93,9 @@ To build context-aware agents, you can reference SharePoint items or any public 
 - Ground your agents in personal work information, such as Teams chat messages and Outlook emails
 - Use prebuilt [Microsoft 365 Copilot connectors](/graph/connecting-external-content-connectors-overview) that are enabled in your tenant.
 
-For more information, see [Add knowledge sources](copilot-studio-lite-knowledge.md).
+You can choose knowledge sources to add to your agent in the chat box on the **Describe** tab if you're using natural language to create your agent, or you can select knowledge sources on the **Configure** tab.
+
+For more information about the knowledge sources that are available, see [Add knowledge sources](copilot-studio-lite-knowledge.md).
 
 > [!NOTE]
 > The availability of knowledge sources and capabilities differs based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).

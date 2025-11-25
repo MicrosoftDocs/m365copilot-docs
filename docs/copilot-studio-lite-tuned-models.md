@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 11/24/2025
 ---
 
 # Create declarative agents with Microsoft 365 Copilot Tuning models (preview)
@@ -26,14 +26,14 @@ To create a declarative agent based on a fine-tuned model, you need:
 
 To create the agent:
 
-1. Open **Microsoft 365 Copilot Chat** and select **Create agent** from the left-hand navigation.
+1. Open **Microsoft 365 Copilot** and select **New agent** from the left pane.
 
 1. In the **What is the purpose of your agent?** dialog box, select **Task-specific**, and then choose **Continue**.
 
     > [!NOTE]
     > If this dialog doesn’t appear,  Copilot Tuning might not be enabled in your organization, or you might not have access to any fine-tuned models. Check with your organization's administrators.
 
-1. In the next dialog box, select a fine-tuned model from the list of models, then select **Done**.
+1. In the next dialog box, select a fine-tuned model from the list of models, and select **Done**.
 
 1. Finish customizing your agent by filling in the remaining fields. For more information, see [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md).
 
