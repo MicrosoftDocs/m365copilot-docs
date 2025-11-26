@@ -7,6 +7,7 @@ ms.date: 11/26/2025
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.topic: reference
+zone_pivot_groups: graph-api-versions
 ---
 
 # Get callAiInsight
