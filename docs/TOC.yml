@@ -186,6 +186,9 @@ items:
       items:
       - name: Code interpreter
         href: code-interpreter.md
+        items:
+        - name: Code interpreter security architecture
+          href: code-interpreter-security.md
       - name: Image generator
         href: image-generator.md
       - name: Knowledge sources
