@@ -38,7 +38,7 @@ Agent Builder is available on both the Work and Web options on the Microsoft 365
 
 ## Governance
 
-Agents you build with  Agent Builder in Microsoft 365 Copilot are included in your Microsoft 365 Copilot license. These agents feature functionality that is a subset of what Microsoft 365 Copilot supports. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise).
+Agents you build with Agent Builder in Microsoft 365 Copilot are included in your Microsoft 365 Copilot license. These agents feature functionality that is a subset of what Microsoft 365 Copilot supports. To learn more about the Microsoft 365 Copilot license, see [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise).
 
 ## Data processing
 
