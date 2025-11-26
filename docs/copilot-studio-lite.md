@@ -10,16 +10,14 @@ ms.topic: article
 
 # Build a declarative agent with Agent Builder in Microsoft 365 Copilot
 
-An easy way to build [declarative agents](overview-declarative-agent.md) for Microsoft 365 is to use the Agent Builder feature in Microsoft 365 Copilot. Microsoft 365 Copilot offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects.
-
-
+Agent Builder in Microsoft 365 Copilot provides an easy way to build [declarative agents](overview-declarative-agent.md) for Microsoft 365. Agent Builder offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects.
 
 Use Microsoft 365 Copilot to create and customize agents that can be implemented for scenario-specific uses cases, such as:
 
 - An agent that provides writing or presentation coaching that is tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-starter.png" alt-text="Agent Builder initial screen":::
+:::image type="content" source="assets/images/copilot-studio-lite/new-agent-screen.png" alt-text="New agent screen in Agent Builder":::
 
 You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors. You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
 
@@ -87,7 +85,7 @@ For general information, see [Microsoft feedback for your organization](/microso
 
 ## Get support
 
-To get support, select **Send feedback** from within Copilot Studio.
+To get support, select **Send feedback** from within Microsoft 365 Copilot.
 
 In your feedback ticket, provide details about the issue you're facing and include the following pieces of information in the feedback dialog:
 
@@ -96,11 +94,11 @@ In your feedback ticket, provide details about the issue you're facing and inclu
 - Provide the tenant ID.
 - Provide the environment ID.
 - Provide the session ID.
-- If the issue is related to the test pane or **Describe** tab, type "/debug" within the chat box and include the contents in your ticket.
+- If the issue is related to the **Agent preview** pane or **Describe** tab, type "/debug" within the chat box and include the contents in your ticket.
 
-You can find and copy these details in the Copilot Studio within the **Get support** section of the **Help** dropdown menu.
+You can find and copy these details in Agent Builder in the **Get support** section of the **Help** dropdown menu.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-get-support-1-updated.png" alt-text="Find the support details in the Copilot Studio":::
+:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-get-support.png" alt-text="Find the support details in the Copilot Studio":::
 
 :::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in the Copilot Studio":::
 
