@@ -24,7 +24,7 @@ You can create your agent in one of three ways:
 
 You can use Agent Builder in Microsoft 365 Copilot to create an agent using natural language. As you provide information conversationally on the **Describe** tab, the agent’s name, description, and instructions update automatically to refine its behavior. This approach:
 
-- Captures how natural language understands intent.
+- Understands a user's intent through natural language.
 - Provides suggestions, guidance, and next-best prompts.
 - Generates optimized agent instructions to build accurate, high-quality agents.
 
@@ -39,7 +39,7 @@ Using natural language saves time and helps you create effective agents without 
 
 You can also choose **Add content** in the chat box to search for or select knowledge sources.
 
-When you finish describing your agent and adding knowledge sources, view its configuration on the Configure tab. The tool prepopulates:
+When you finish describing your agent and adding knowledge sources, view the configuration on the **Configure** tab. The tool prepopulates:
 
 - Name
 - Description
@@ -49,7 +49,7 @@ When you finish describing your agent and adding knowledge sources, view its con
 
 :::image type="content" source="assets/images/copilot-studio-lite/agent-configuration.png" alt-text="Screenshot of the Configure tab showing the agent configuration when created using natural language":::
 
-After you create your agent, [test it](#test-your-agent) in the **Agent preview** pane. You can continue to refine it by using natural language on the **Describe** tab. If you want to change the starter prompt or intent, just say it in natural language - for example: "Update the agent to summarize Teams chats instead of emails."
+After you create your agent, [test it](#test-your-agent) in the **Agent preview** pane. You can continue to refine it by using natural language. If you want to change the starter prompt or intent, just say it in natural language - for example: "Update the agent to summarize Teams chats instead of emails."
 
 > [!NOTE]
 > The **Describe** tab is only available when your Microsoft 365 language is set to one of the [available languages](copilot-studio-lite-availability.md). You can build your agent via the **Configure** tab if the **Describe** tab isn't supported in your preferred language.
@@ -63,8 +63,6 @@ To configure your agent manually:
 1. In Microsoft 365 Copilot, choose **New agent**.
 1. On the New agent page, choose **Configure new agent**.
 1. Agent Builder opens the **Configure** tab, where you can specify your agent's name, description, instructions, knowledge, and prompts.
-
-:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-configure.png" alt-text="Screenshot of the Configure tab where users can manually configure their agent":::
 
 The following table describes the fields that make up the agent.
 
@@ -92,6 +90,8 @@ To use a template to build your agent:
 2. On the New agent page, under **Start with a template**, choose the template you want to use. The agent is created for you automatically.
  
 You can further refine your agent and add knowledge sources by using natural language on the **Describe** tab, or add your refinements manually on the **Configure** tab.
+
+:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-configure.png" alt-text="Screenshot of the Configure tab where users can manually configure their agent":::
 
 For more information, see [Agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
 
