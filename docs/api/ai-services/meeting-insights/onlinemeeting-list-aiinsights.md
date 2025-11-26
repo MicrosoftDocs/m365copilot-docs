@@ -3,7 +3,7 @@ title: List aiInsights
 description: Get the list of callAiInsight objects associated with an onlineMeeting.
 author: Anjali-Patle
 ms.author: anjalipatle
-ms.date: 08/08/2025
+ms.date: 11/26/2025
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.topic: reference
@@ -42,13 +42,25 @@ To use application permissions for this API, tenant administrators must create a
 
 ## HTTP request
 
+:::zone pivot="graph-v1"
+
+``` http
+GET https://graph.microsoft.com/v1.0/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
 ``` http
 GET https://graph.microsoft.com/beta/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
 ```
 
+:::zone-end
+
 ## Optional query parameters
 
-This method supports the `$select` and `$filter` [OData query parameters](/graph/query-parameters) to customize the response.
+This method supports the `$select` [OData query parameters](/graph/query-parameters) to customize the response.
 
 ## Request headers
 
@@ -64,19 +76,59 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a collection of [callAiInsight](resources/callaiinsight.md) objects in the response body.
 
+> [!NOTE]
+> The list API output has a default limit of 20 items. However, some meetings may include more AI insights. To retrieve all available data for these meetings, you can keep calling the API using the @odata.nextLink property found in response, and continue to call the API until this property is no longer provided. For more details on the @odata.nextLink property, please see the paging documentation.
+
 ## Example
 
 ### Request
 
 The following example shows a request.
 
+:::zone pivot="graph-v1"
+
+``` http
+GET https://graph.microsoft.com/v1.0/copilot/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/YTc3OTFhNWQtNTgwZC00OGZjLWJhYjQtOTFmNTUzMmU4MzEyqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/aiInsights
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
 ``` http
 GET https://graph.microsoft.com/beta/copilot/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/YTc3OTFhNWQtNTgwZC00OGZjLWJhYjQtOTFmNTUzMmU4MzEyqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/aiInsights
 ```
 
+:::zone-end
+
 ### Response
 
 The following example shows the response. The response object shown here might be shortened for readability.
+
+:::zone pivot="graph-v1"
+
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3O...')/aiInsights",
+  "@odata.count": 1,
+  "value": [
+    {
+      "id": "VjEj...",
+      "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
+      "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
+      "createdDateTime": "2024-05-27T08:17:10.7261294Z",
+      "endDateTime": "2024-05-27T08:17:10.7261294Z"
+    }
+  ]
+}
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
 
 ``` http
 HTTP/1.1 200 OK
@@ -96,3 +148,5 @@ Content-Type: application/json
   ]
 }
 ```
+
+:::zone-end
