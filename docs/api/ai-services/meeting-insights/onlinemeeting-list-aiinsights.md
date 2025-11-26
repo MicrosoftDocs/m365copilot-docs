@@ -35,6 +35,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 | Delegated (personal Microsoft account) | Not supported.                  | Not supported.                |
 | Application                            | Not supported.                  | Not supported.                |
 
+To use application permissions for this API, tenant administrators must create an application access policy and grant it to a user. It authorizes the app configured in the policy to fetch online meetings or online meeting artifacts on behalf of that user (with the user ID specified in the request path). For more information, see [Allow applications to access online meetings on behalf of a user](/graph/cloud-communication-online-meeting-application-access-policy)
+
 > [!NOTE]
 > This API works only for a meeting that hasn't expired. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams#meeting-expiration).
 
