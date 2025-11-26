@@ -130,7 +130,7 @@ Changes made to agents are saved automatically. However, your changes won't be v
 
 ### Delete your agent
 
-You can delete agents you create. After you delete an agent, however, you won't be able to use it and it won't be available the users you shared it with. Only the user who created an agent can delete it.
+You can delete agents you create. After you delete an agent, however, you won't be able to use it and it won't be available to the users you shared it with. Only the user who created an agent can delete it.
 
 > [!IMPORTANT]
 > Deleting an agent is permanent and can't be reversed.
