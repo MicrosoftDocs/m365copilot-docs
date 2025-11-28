@@ -27,6 +27,14 @@ Declarative agents are powered by Microsoft 365 Copilot. They use the same scala
 
 :::image type="content" source="assets/images/declarative-agent-scenarios.png" alt-text="A diagram that shows two scenarios of declarative agents mentioned in the article." lightbox="assets/images/declarative-agent-scenarios.png" :::
 
+> [!NOTE]
+> Microsoft Learn treats declarative agents as a single class, which you customize by combining:
+> - Instructions
+> - Knowledge sources
+> - Capabilities
+> - Actions/plugins
+> There are no officially named “sub-types.” Variations come from how you combine these components.
+
 ## Explore the benefits of declarative agents
 
 Some of the core benefits of using declarative agents as part of your business processes include:
