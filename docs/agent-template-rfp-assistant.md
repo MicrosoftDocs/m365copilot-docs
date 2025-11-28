@@ -1,11 +1,11 @@
 ---
-title: Create a Request for Proposal agent from a template
+title: Create a Request for Proposal generator agent from a template
 description: Learn how to use the RFP Proposal Generator template in the Copilot Studio lite experience to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 11/20/2025
+ms.date: 12/01/2025
 ---
 
 # Use the Request for Proposal Generator template to build an agent
