@@ -23,7 +23,7 @@ Declarative agents are powered by Microsoft 365 Copilot. They use the same scala
 
 - **Employee IT self-help with enhanced knowledge** - Imagine a world where your employees can resolve their technical issues without relying on the internal IT help desk. You can streamline and simplify IT workflows by building a declarative agent to expedite resolution of common issues. This specialized agent draws from internal knowledge stored in SharePoint sites to provide employees fast and effective assistance, while reducing costs for the organization.
 
-- **Real-time customer support with seamless system integrations** - Assume having a support team dedicated to providing customer support while also monitoring customers' live order status. You can increase the support team's productivity by enhancing your existing process with a declarative agent that seamlessly integrates with a plugin for the order management system to access and provide real-time order updates to customers.
+- **Real-time customer support with seamless system integrations** - Assume having a support team dedicated to providing customer support while also monitoring customers' live order status. To increase the support team's productivity, add a declarative agent that integrates with a plugin for your order management system. The agent can then access and provide real-time order updates to customers.
 
 :::image type="content" source="assets/images/declarative-agent-scenarios.png" alt-text="A diagram that shows two scenarios of declarative agents mentioned in the article." lightbox="assets/images/declarative-agent-scenarios.png" :::
 
@@ -33,7 +33,7 @@ Declarative agents are powered by Microsoft 365 Copilot. They use the same scala
 > - Knowledge sources
 > - Capabilities
 > - Actions/plugins
-> There are no officially named “sub-types.” Variations come from how you combine these components.
+> There are no officially named “subtypes.” Variations come from how you combine these components.
 
 ## Explore the benefits of declarative agents
 
