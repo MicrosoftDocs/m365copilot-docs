@@ -158,7 +158,7 @@ Email is now available as a knowledge source for agents build with [Microsoft 36
 
 ### Copilot Studio agent templates
 
-Use templates in [Copilot Studio](agent-builder-introduction.md) to streamline your agent development process. For more information, see [Agent templates overview](agent-templates-overview.md).
+Use templates in [Copilot Studio](agent-builder.md) to streamline your agent development process. For more information, see [Agent templates overview](agent-templates-overview.md).
 
 ### Document interaction for declarative agents in Word
 

@@ -38,7 +38,7 @@ A new version of the API plugin manifest schema has been released. Version 2.2 a
 
 ### Use the Copilot Studio agent builder to build declarative agents
 
-Use the Copilot Studio agent builder to create and customize agents for your specific scenarios. With the agent builder, you can use natural language to describe your agent, or you can build it manually via a rich authoring experience. To learn more, see [Overview of Copilot Studio agent builder](agent-builder-introduction.md).
+Use the Copilot Studio agent builder to create and customize agents for your specific scenarios. With the agent builder, you can use natural language to describe your agent, or you can build it manually via a rich authoring experience. To learn more, see [Overview of Copilot Studio agent builder](agent-builder.md).
 
 ## September 2024
 

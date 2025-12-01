@@ -58,7 +58,7 @@ When you share an agent via the Microsoft 365 Copilot using the **Specific users
 
 ### Agents built with the Microsoft 365 Copilot don't generate files
 
-When users ask an agent built with the [Microsoft 365 Copilot](agent-builder-introduction.md) to generate files, the agent fails to generate the files. This applies to all file types (.docx, .pdf, and so on).
+When users ask an agent built with the [Microsoft 365 Copilot](agent-builder.md) to generate files, the agent fails to generate the files. This applies to all file types (.docx, .pdf, and so on).
 
 ### Some features aren't supported in Microsoft 365 Government tenants
 

@@ -132,7 +132,7 @@ items:
     - name: Use Microsoft 365 Copilot
       items:
       - name: Overview
-        href: agent-builder-introduction.md
+        href: agent-builder.md
       - name: Build agents
         href: agent-builder-build-agents.md
       - name: Build agents from template
