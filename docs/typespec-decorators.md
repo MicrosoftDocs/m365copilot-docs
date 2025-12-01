@@ -27,7 +27,7 @@ This reference covers the built-in decorators available in TypeSpec for Microsof
 | [@disclaimer](#disclaimer) | Agent | Display legal or compliance disclaimers to users. |
 | [@instructions](#instructions) | Agent | Define behavioral instructions and guidelines for the agent. |
 | [@actions](#actions) | Plugin | Define action metadata including names, descriptions, and URLs. |
-| [@authReferenceId](#authreferenceId) | Plugin | Specify authentication reference ID for API access. |
+| [@authReferenceId](#authreferenceid) | Plugin | Specify authentication reference ID for API access. |
 | [@capabilities](#capabilities) | Plugin | Configure function capabilities like confirmations and response formatting. |
 | [@card](#card) | Plugin | Define adaptive card templates for function responses. |
 | [@reasoning](#reasoning) | Plugin | Provide reasoning instructions for function invocation. |
