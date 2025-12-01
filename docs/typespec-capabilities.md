@@ -14,6 +14,20 @@ ms.topic: reference
 
 TypeSpec for Microsoft 365 Copilot provides built-in capabilities that enable declarative agents to access Microsoft 365 services and external resources. Available capabilities include **CodeInterpreter**, **CopilotConnectors**, **Dataverse**, **Email**, **GraphicArt**, **Meetings**, **OneDriveAndSharePoint**, **People**, **ScenarioModels**, **TeamsMessages**, and **WebSearch**. Each capability can be configured with specific parameters to control scope.
 
+| Capability | Description |
+|------------|-------------|
+| [CodeInterpreter](#agentcapabilitiescodeinterpreter) | Generate and execute Python code to solve math problems, analyze data, and create visualizations. |
+| [CopilotConnectors](#agentcapabilitiescopilotconnectors) | Search selected Copilot connectors for grounding information. |
+| [Dataverse](#agentcapabilitiesdataverse) | Search for information in Microsoft Dataverse environments and tables. |
+| [Email](#agentcapabilitiesemail) | Search through email messages in accessible mailboxes. |
+| [GraphicArt](#agentcapabilitiesgraphicart) | Create images and art based on text input. |
+| [Meetings](#agentcapabilitiesmeetings) | Search meeting content. |
+| [OneDriveAndSharePoint](#agentcapabilitiesonedriveandsharepoint) | Search SharePoint sites and OneDrive for grounding information. |
+| [People](#agentcapabilitiespeople) | Search for information about people in the organization. |
+| [ScenarioModels](#agentcapabilitiesscenariomodels) | Use task-specific models for specialized scenarios. |
+| [TeamsMessages](#agentcapabilitiesteamsmessages) | Search through Teams channels, meetings, and chats. |
+| [WebSearch](#agentcapabilitieswebsearch) | Search the web for grounding information. |
+
 ## `AgentCapabilities.CodeInterpreter`
 
 Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more.

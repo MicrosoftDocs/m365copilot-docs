@@ -18,6 +18,21 @@ This reference covers the built-in decorators available in TypeSpec for Microsof
 > [!NOTE]
 > This decorator reference focuses specifically on the `@microsoft/typespec-m365-copilot` decorators, but you can use all decorators defined in TypeSpec, including [built-in decorators](https://typespec.io/docs/standard-library/built-in-decorators/) and [OpenAPI decorators](https://typespec.io/docs/libraries/openapi/reference/decorators/).
 
+| Decorator | Target | Description |
+|-----------|--------|-------------|
+| [@agent](#agent) | Agent | Define an agent with name, description, and optional ID. |
+| [@behaviorOverrides](#behavioroverrides) | Agent | Modify agent orchestration behavior settings. |
+| [@conversationStarter](#conversationstarter) | Agent | Define conversation starter prompts for users. |
+| [@customExtension](#customextension) | Agent | Add custom key-value pairs for extensibility. |
+| [@disclaimer](#disclaimer) | Agent | Display legal or compliance disclaimers to users. |
+| [@instructions](#instructions) | Agent | Define behavioral instructions and guidelines for the agent. |
+| [@actions](#actions) | Plugin | Define action metadata including names, descriptions, and URLs. |
+| [@authReferenceId](#authreferenceId) | Plugin | Specify authentication reference ID for API access. |
+| [@capabilities](#capabilities) | Plugin | Configure function capabilities like confirmations and response formatting. |
+| [@card](#card) | Plugin | Define adaptive card templates for function responses. |
+| [@reasoning](#reasoning) | Plugin | Provide reasoning instructions for function invocation. |
+| [@responding](#responding) | Plugin | Define response formatting instructions for functions. |
+
 ## Declarative agent decorators
 
 These decorators are used when building declarative agents to define agent behavior, conversation flow, and user experience.
