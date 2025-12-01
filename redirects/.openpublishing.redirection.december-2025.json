@@ -1,0 +1,34 @@
+{
+  "redirections": [
+        {
+      "source_path_from_root": "/docs/copilot-studio-lite-availability.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-builder-regional-availability",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-lite-build.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-builder-build-agents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-lite-knowledge.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-builder-add-knowledge",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-lite-share-manage-agent.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-builder-share-manage-agents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-lite-tuned-models.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-builder-tuned-models",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-lite.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-builder-introduction",
+      "redirect_document_id": true
+    }
+  ]
+}
