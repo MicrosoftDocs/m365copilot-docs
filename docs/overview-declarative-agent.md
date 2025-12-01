@@ -4,7 +4,7 @@ description: Learn how you can use declarative agents to meet business needs. De
 author: aycabas
 ms.author: aycabas
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 12/01/2025
 ms.topic: overview
 ---
 
@@ -15,7 +15,7 @@ Declarative agents enable you to customize Microsoft 365 Copilot to help you mee
 With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock more functionality for your users.
 
 > [!NOTE]
-> [!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
+> For information about the two approaches to building agents for Microsoft 365 Copilot, see [Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agents-overview).
 
 ## Tailor declarative agents for your scenario
 
@@ -23,7 +23,7 @@ Declarative agents are powered by Microsoft 365 Copilot. They use the same scala
 
 - **Employee IT self-help with enhanced knowledge** - Imagine a world where your employees can resolve their technical issues without relying on the internal IT help desk. You can streamline and simplify IT workflows by building a declarative agent to expedite resolution of common issues. This specialized agent draws from internal knowledge stored in SharePoint sites to provide employees fast and effective assistance, while reducing costs for the organization.
 
-- **Real-time customer support with seamless system integrations** - Assume having a support team dedicated to providing customer support while also monitoring customers' live order status. You can increase the support team's productivity by enhancing your existing process with a declarative agent that seamlessly integrates with a plugin for the order management system to access and provide real-time order updates to customers.
+- **Real-time customer support with seamless system integrations** - Assume having a support team dedicated to providing customer support while also monitoring customers' live order status. To increase the support team's productivity, add a declarative agent that integrates with a plugin for your order management system. The agent can then access and provide real-time order updates to customers.
 
 :::image type="content" source="assets/images/declarative-agent-scenarios.png" alt-text="A diagram that shows two scenarios of declarative agents mentioned in the article." lightbox="assets/images/declarative-agent-scenarios.png" :::
 
@@ -65,6 +65,10 @@ For more information about how to choose the right tool for your scenarios, see 
 ## Responsible AI
 
 Declarative agents must pass validation checks for Responsible AI (RAI). For information about RAI validation, see [Responsible AI validation checks](rai-validation.md).
+
+## National cloud support
+
+[!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
 
 ## Related content
 
