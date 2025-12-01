@@ -132,7 +132,7 @@ Email knowledge allows you to scope your agent to a personal or shared mailbox, 
 
 ### Add email knowledge sources
 
-If you're using [Microsoft 365 Copilot](agent-builde.md) to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
+If you're using [Microsoft 365 Copilot](agent-builder.md) to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
 
 > [!NOTE]
 > You can't currently scope your emails to a specific folder or shared mailbox when you use Microsoft 365 Copilot.
@@ -181,7 +181,7 @@ You can ground your agent in People data to deliver more personalized and contex
 
 ### Add people knowledge source
 
-If you're using [Copilot Studio](agent-builde.md) to create your agent, the People knowledge source is enabled by default for users with a Microsoft 365 Copilot license.
+If you're using [Copilot Studio](agent-builder.md) to create your agent, the People knowledge source is enabled by default for users with a Microsoft 365 Copilot license.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example. Declaring only the base `People` capability will allow the agent to reason on **only basic organization data** such as those available in the [profile card](/graph/api/resources/profile). If you would like to include content such as related teams messages, emails, and files between the agent user and the referenced people in the organization refer to the [version 1.6](declarative-agent-manifest-1.6.md) to use the `include_related_content` property.
 

@@ -23,7 +23,7 @@ The steps in this article require you to have the following prerequisites:
 - An existing declarative agent built with the [Microsoft 365 Agents Toolkit](build-declarative-agents.md).
 
     > [!Note]
-    > Agents built using [Microsoft 365 Copilot](agent-builde.md) aren't currently supported.
+    > Agents built using [Microsoft 365 Copilot](agent-builder.md) aren't currently supported.
 
 - A custom bot and the bot ID. For information about how to create a custom bot, see [Bots and agents](/microsoftteams/platform/bots/build-a-bot).
 - Visual Studio Code with the Microsoft 365 Agents Toolkit extension installed.
