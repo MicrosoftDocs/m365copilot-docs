@@ -15,7 +15,7 @@ Declarative agents enable you to customize Microsoft 365 Copilot to help you mee
 With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock more functionality for your users.
 
 > [!NOTE]
-> [!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
+> For information about the two approaches to building agents for Microsoft 365 Copilot, see [Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agents-overview).
 
 ## Tailor declarative agents for your scenario
 
@@ -65,6 +65,10 @@ For more information about how to choose the right tool for your scenarios, see 
 ## Responsible AI
 
 Declarative agents must pass validation checks for Responsible AI (RAI). For information about RAI validation, see [Responsible AI validation checks](rai-validation.md).
+
+## National cloud support
+
+[!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
 
 ## Related content
 
