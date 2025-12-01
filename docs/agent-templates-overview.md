@@ -36,8 +36,8 @@ After the agent is created, choose **Go to agent** in Copilot to chat with the a
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](agent-builder-introduction.md)
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Build agents with Copilot Studio](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)

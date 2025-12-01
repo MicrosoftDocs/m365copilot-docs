@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 11/25/2025
+ms.date: 05/19/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -38,7 +38,7 @@ Copilot connectors allow you to enrich Copilot with external data to enhance the
 
 ### Index quota and licensing
 
-All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Copilot connectors.
+All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Copilot connectors. By default, each connection is capped at 5 million items. If you need a higher per-connection or overall quota, contact your Microsoft account manager or [submit this form](https://aka.ms/GraphConnectorsHigherCapacity). For details, see [Index quota for Copilot connectors](/microsoftsearch/licensing).
 
 #### Eligible licenses
 

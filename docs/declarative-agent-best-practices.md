@@ -48,7 +48,7 @@ For more information and specific guidance for creating agent instructions, see 
 
 You can ground your declarative agents in public and organizational knowledge – such as SharePoint content, user data like emails and chats, and public websites.  
 
-Keep the following key considerations in mind when choosing [knowledge sources](copilot-studio-lite-knowledge.md) for your agent:
+Keep the following key considerations in mind when choosing [knowledge sources](agent-builder-add-knowledge.md) for your agent:
 
 - **Relevance over quantity:** Be selective about what knowledge you add. Consider whether the source will help the agent answer the kinds of questions you expect users to ask.
 
@@ -82,8 +82,8 @@ Even after following all the design best practices and guidelines, thoroughly te
 
 ## Related content
 
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Build agents with Copilot Studio](agent-builder-build-agents.md)
 - [Build agents with Agents Toolkit](declarative-agent-tool-comparison.md#agents-toolkit)
 - [Write effective  instructions for declarative agents](declarative-agent-instructions.md)
-- [Add knowledge sources to your declarative agent in Copilot Studio](copilot-studio-lite-knowledge.md)
+- [Add knowledge sources to your declarative agent in Copilot Studio](agent-builder-add-knowledge.md)
 - [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines)

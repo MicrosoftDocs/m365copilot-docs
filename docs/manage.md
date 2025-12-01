@@ -39,12 +39,12 @@ Both [declarative agents](./build-declarative-agents.md) and [custom engine agen
 
 ## Agents built with Copilot Studio in Microsoft 365 Copilot
 
-Declarative agents for Microsoft 365 Copilot that are built using [Copilot Studio](copilot-studio-lite.md) can be shared with the organization as a whole, or with specific users. These agents and the users they are shared with can be and managed by the person who created the agent.
+Declarative agents for Microsoft 365 Copilot that are built using [Copilot Studio](agent-builder-introduction.md) can be shared with the organization as a whole, or with specific users. These agents and the users they are shared with can be and managed by the person who created the agent.
 
 |Control | Core scenario | Related content|
 |--|--|--|
 | Allow the following users access to Copilot agents | Enable or disable the entry point for Copilot Studio in Microsoft 365 Copilot (*Create an agent*) | [Enable or disable Copilot extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#enable-or-disable-copilot-extensibility) |
-| Share | Manage access to your agent within your organization | [Publish and manage agents](copilot-studio-lite-share-manage-agent.md#share-an-agent) |
+| Share | Manage access to your agent within your organization | [Publish and manage agents](agent-builder-share-manage-agents.md#share-an-agent) |
 
 ## Agents built with Microsoft Copilot Studio
 

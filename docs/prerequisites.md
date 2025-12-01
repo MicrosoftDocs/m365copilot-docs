@@ -48,7 +48,7 @@ You can extend Microsoft 365 Copilot with the intelligence of external services 
 
 - By building agents to customize Copilot.
 - By adding skills with [Teams message extension plugins](overview-message-extension-bot.md) and [Copilot Studio actions](overview-business-applications.md).
-- By extending the knowledge in Copilot with [Microsoft 365 Copilot connectors](overview-copilot-connector.md).
+- By extending the knowledge in Copilot with [Copilot connectors](overview-copilot-connector.md).
 
 To learn more and choose the best extensibility path for your users, see [Copilot extensibility planning guide](planning-guide.md) and [Agents overview](agents-overview.md).
 

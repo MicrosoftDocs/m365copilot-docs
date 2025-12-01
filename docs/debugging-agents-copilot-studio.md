@@ -115,6 +115,6 @@ Enter a message, including the #extensibility tag, in the text box.
 
 ## Related content
 
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Build agents with Copilot Studio](agent-builder-build-agents.md)
 - [Build agents with Visual Studio Code](build-declarative-agents.md)
 - [Test and debug agents in Microsoft 365 Agents Toolkit](debugging-agents-vscode.md)

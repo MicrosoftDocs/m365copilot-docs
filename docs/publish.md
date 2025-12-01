@@ -52,11 +52,11 @@ The Agent Builder feature in Microsoft 365 Copilot allows you to build declarati
 | Submit to organizational catalog | ✅ | [Share an agent via Microsoft 365 Copilot](copilot-studio-lite-publish-agent.md#create-the-agent) |
 | Submit to Microsoft Commercial Marketplace | ❌ | |
 
-For more information about sharing agents, see [Share an agent via Microsoft 365 Copilot](copilot-studio-lite-share-manage-agent.md#share-an-agent).
+For more information about sharing agents, see [Share an agent via Microsoft 365 Copilot](agent-builder-share-manage-agents.md#share-an-agent).
 
 ## Declarative agents built with Copilot Studio
 
-Declarative agents built with Copilot Studio are more customizable and feature-rich than agents created with the [Microsoft 365 Copilot](copilot-studio-lite.md). Unlike standalone agents, an agent built with Copilot Studio isn't automatically deployed to Microsoft 365 Copilot and Teams when published. Rather, you need to set its [availability options](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?branch=main#set-availability-options) to distribute the agent to share among individuals, groups, or to be published to the organization's catalog by an admin.
+Declarative agents built with Copilot Studio are more customizable and feature-rich than agents created with the [Microsoft 365 Copilot](agent-builder-introduction.md). Unlike standalone agents, an agent built with Copilot Studio isn't automatically deployed to Microsoft 365 Copilot and Teams when published. Rather, you need to set its [availability options](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?branch=main#set-availability-options) to distribute the agent to share among individuals, groups, or to be published to the organization's catalog by an admin.
 
 | Distribution method | Support | Learn more |
 |--|--|--|
