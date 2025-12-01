@@ -27,7 +27,7 @@
     },
     {
       "source_path_from_root": "/docs/copilot-studio-lite.md",
-      "redirect_url": "/microsoft-365-copilot/extensibility/agent-builder-introduction",
+      "redirect_url": "/microsoft-365-copilot/extensibility/agent-builder",
       "redirect_document_id": true
     }
   ]
