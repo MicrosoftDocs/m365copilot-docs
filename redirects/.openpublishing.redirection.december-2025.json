@@ -1,6 +1,6 @@
 {
   "redirections": [
-        {
+    {
       "source_path_from_root": "/docs/copilot-studio-lite-availability.md",
       "redirect_url": "/microsoft-365-copilot/extensibility/agent-builder-regional-availability",
       "redirect_document_id": true
