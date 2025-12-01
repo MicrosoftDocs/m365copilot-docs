@@ -27,7 +27,7 @@ Your license type determines access to Copilot capabilities and whether metered 
 For more details about consumption costs, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management). For more information about licensing, see [License options for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-licensing) and [Decide which Copilot is right for you](/microsoft-365-copilot//which-copilot-for-your-organization).
 
 | **License type**              | **Cost**                                 | **Best for**        | **Extensibility consumption costs**                                                                                                                                       |
-|-------------------------------------|------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------- | -------  | -------  | ------- |
 | Microsoft 365 Copilot   | Add-on license required                   | Frequent users       | No additional charges for accessing or using extensibility features (Copilot connectors, agents, plugins).                                                            |
 | Microsoft 365 Copilot Chat | Included for eligible Microsoft 365 users | Occasional users     | No charges for lightweight extensibility (instruction-based agents or public site grounding).<br><br>Metered charges apply for shared tenant data (SharePoint, Copilot connectors), tracked via Copilot Studio meters. |
 | No Copilot license or Microsoft 365 subscription              | N/A                                      | Not supported        | May be unable to access Copilot; extensibility features not guaranteed without a qualifying license.                                                                      |
@@ -38,7 +38,7 @@ Copilot connectors allow you to enrich Copilot with external data to enhance the
 
 ### Index quota and licensing
 
-All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Copilot connectors. By default, each connection is capped at 5 million items. If you need a higher per-connection or overall quota, contact your Microsoft account manager or [submit this form](https://aka.ms/GraphConnectorsHigherCapacity). For details, see [Index quota for Copilot connectors](/microsoftsearch/licensing).
+All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Copilot connectors. 
 
 #### Eligible licenses
 
