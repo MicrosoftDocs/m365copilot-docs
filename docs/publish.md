@@ -3,7 +3,7 @@ title: Publish Agents for Microsoft 365 Copilot
 description: Learn how to distribute agents for Microsoft 365 Copilot to your organization or the Microsoft Commercial Marketplace.
 author: erikadoyle
 ms.author: edoyle
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 11/17/2025
 ---

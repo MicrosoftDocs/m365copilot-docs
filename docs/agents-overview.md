@@ -3,7 +3,7 @@ title: Agents for Microsoft 365 Copilot
 description: Choose the type of Microsoft 365 Copilot agent that works best for your scenario.
 author: jessicaaawu
 ms.author: wujessica
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 11/17/2025
 ms.custom: [copilot-learning-hub]

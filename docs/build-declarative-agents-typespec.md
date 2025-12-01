@@ -3,7 +3,7 @@ title: Create declarative agents using Microsoft 365 Agents Toolkit and TypeSpec
 description: Learn how to build declarative agents using Microsoft 365 Agents Toolkit and TypeSpec for Microsoft 365 Copilot.
 author: slevert
 ms.author: slevert
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ---

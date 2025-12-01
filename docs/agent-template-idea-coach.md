@@ -3,7 +3,7 @@ title: Create an Idea Coach agent from a template
 description: Learn how to create a declarative agent in the Copilot Studio lite experience rom the Idea Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ---

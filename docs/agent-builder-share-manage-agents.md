@@ -5,7 +5,7 @@ author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
 ms.date: 12/01/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Share and manage agents

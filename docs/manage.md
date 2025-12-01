@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
 ms.date: 11/06/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Manage agents for Microsoft 365 Copilot

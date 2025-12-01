@@ -5,7 +5,7 @@ ms.author: v-koenenkaty
 author: kmkoenen
 ms.localizationpriority: medium
 ms.date: 11/17/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Choose the right tool to build your declarative agent

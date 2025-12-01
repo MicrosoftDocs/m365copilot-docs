@@ -4,7 +4,7 @@ description: Find out how you can convert your declarative agent for Microsoft 3
 author: lauragra
 ms.author: lauragra
 ms.reviewer: vermaanimesh
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 11/18/2025
 ms.custom: [copilot-learning-hub]
