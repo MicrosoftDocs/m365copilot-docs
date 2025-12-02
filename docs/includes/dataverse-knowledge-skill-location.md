@@ -7,10 +7,10 @@ ms.localizationpriority: medium
 
 To find the unique `skill` identifier for the Dataverse knowledge sources you want to include:
 
-1. In Copilot Studio, navigate to Agents on the left hand navigation and find the Agent named "Copilot for Microsoft 365" then open this agent.
-2. Create a new agent to use to generate the knowledge source section.
-3. Follow the instructions in [Add a Dataverse knowledge source](https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse) to create a new declarative agent with Dataverse knowledge.
-4. Select **Publish** and then download the .zip file.
+1. In Copilot Studio, in the left pane, choose **Agents**, and open the **Copilot for Microsoft 365**.
+2. Create a new agent.
+3. Follow the instructions in [Add a Dataverse knowledge source](https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse) to add Dataverse knowledge.
+4. Select **Publish**, and then download the .zip file.
 5. Unzip and open the declarativeAgent.json file.
 6. The `skill` value is included in the `knowledge_sources` section, as shown in the following example.
 
