@@ -29,7 +29,7 @@ Represents a list of messages that are exchanged and involve AI.
 > For more information, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing) and [Set up Microsoft 365 Copilot and assign licenses](/copilot/microsoft-365/microsoft-365-copilot-setup).
 
 > [!NOTE]
-> This API also requires appropriate **app permissions** and **admin consent**. For more information, see [Permissions](/./docs/./api/ai-services/interaction-export/aiinteractionhistory-getallenterpriseinteractions.md#permissions)
+> This API also requires appropriate **app permissions** and **admin consent**. For more information, see [Permissions](./docs/./api/ai-services/interaction-export/aiinteractionhistory-getallenterpriseinteractions.md#permissions)
 
 ## Interactions returned
 
