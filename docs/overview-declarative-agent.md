@@ -4,7 +4,7 @@ description: Learn how you can use declarative agents to meet business needs. De
 author: aycabas
 ms.author: aycabas
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 12/01/2025
 ms.topic: overview
 ---
 
@@ -15,7 +15,7 @@ Declarative agents enable you to customize Microsoft 365 Copilot to help you mee
 With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock more functionality for your users.
 
 > [!NOTE]
-> [!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
+> For information about the two approaches to building agents for Microsoft 365 Copilot, see [Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agents-overview).
 
 ## Tailor declarative agents for your scenario
 
@@ -57,7 +57,7 @@ You can use your tool of choice to create a declarative agent app package. To ge
 
 - [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
 - [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context)
-- [Microsoft 365 Copilot](copilot-studio-lite.md)
+- [Microsoft 365 Copilot](agent-builder.md)
 - [SharePoint](/sharepoint/get-started-sharepoint-agents)
 
 For more information about how to choose the right tool for your scenarios, see [Choose the right tool to build your declarative agent](./declarative-agent-tool-comparison.md).
@@ -65,6 +65,10 @@ For more information about how to choose the right tool for your scenarios, see 
 ## Responsible AI
 
 Declarative agents must pass validation checks for Responsible AI (RAI). For information about RAI validation, see [Responsible AI validation checks](rai-validation.md).
+
+## National cloud support
+
+[!INCLUDE [declarative-agents-gov](includes/declarative-agents-gov.md)]
 
 ## Related content
 

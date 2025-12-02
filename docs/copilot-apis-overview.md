@@ -3,7 +3,7 @@ title: Microsoft 365 Copilot APIs Overview
 description: Use the Copilot APIs to securely access Microsoft 365 Copilot capabilities in your own applications and custom engine agents, while aligning with the compliance standards built in to Microsoft 365.
 author: lramosvea
 ms.author: lramosvea
-ms.topic: conceptual
+ms.topic: article
 ms.date: 10/24/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType

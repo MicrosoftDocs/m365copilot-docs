@@ -3,7 +3,7 @@ title: Best practices for building declarative agents in Microsoft 365 Copilot
 description: Learn the best practices for building extensibility solutions for Microsoft 365 Copilot.
 author: kmkoenen
 ms.author: v-koenenkaty
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 10/09/2025
 ---
@@ -19,7 +19,7 @@ A declarative agent consists of several components. It's important to apply best
 
 | Component | Description | Best practice |
 | --------- | ----------- | ------------- |
-| Name | The agent’s display name. | Make sure that your display name conveys the purpose for your agent for user discovery in the Agent Store. The name should meet the character limits based on the development tool:<br><ul><li>Microsoft 365 Copilot - 30 characters</li><li>Microsoft 365 Agents Toolkit - 100 characters</li></ul> For information about app name requirements, see the [Teams Store validation requirements](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#app-name).|
+| Name | The agent’s display name. | Make sure that your display name conveys the purpose for your agent for user discovery in the Agent Store. The name should meet the character limits based on the development tool:<br><ul><li>Microsoft 365 Copilot - 30 characters</li><li>Microsoft 365 Agents Toolkit - 100 characters</li></ul> For information about app name requirements, see the [Teams Store validation requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#app-name).|
 | Description | A short summary of what the agent does. | Clearly state the agent’s purpose and domain. For example: "Use the Project Agent in Microsoft 365 Copilot to search and summarize your project documents." Mention that the agent works in Microsoft 365 Copilot. Keep it concise (a few sentences, ≤1,000 characters), and limit the instructions to what the agent *should* do, rather than what it should *not* do.|
 | Instructions  | The core behavioral guidelines for the agent. The instructions are the key prompt that steers the agent's responses. | Provide up to 8,000 characters of detailed guidance for how the agent should behave, what tasks it can do, and rules or styles it should follow. For more information, see [Write effective instructions](declarative-agent-instructions.md). |
 | Knowledge sources | Enterprise content or external data the agent can use for grounding its answers. Configured in the **Knowledge** section in Microsoft 365 Copilot or in the manifest. | Add only relevant knowledge that the agent needs. You can add SharePoint sites, folders, or files; specific Teams chats; Outlook email; and public web URLs as sources. <br><br> When adding files, less is more: Copilot performs best when documents are reasonably sized and focused. Also ensure the content is up-to-date and accurate because the agent uses content in its knowledge sources in its responses. |
@@ -48,7 +48,7 @@ For more information and specific guidance for creating agent instructions, see 
 
 You can ground your declarative agents in public and organizational knowledge – such as SharePoint content, user data like emails and chats, and public websites.  
 
-Keep the following key considerations in mind when choosing [knowledge sources](copilot-studio-lite-knowledge.md) for your agent:
+Keep the following key considerations in mind when choosing [knowledge sources](agent-builder-add-knowledge.md) for your agent:
 
 - **Relevance over quantity:** Be selective about what knowledge you add. Consider whether the source will help the agent answer the kinds of questions you expect users to ask.
 
@@ -82,8 +82,8 @@ Even after following all the design best practices and guidelines, thoroughly te
 
 ## Related content
 
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Build agents with Copilot Studio](agent-builder-build-agents.md)
 - [Build agents with Agents Toolkit](declarative-agent-tool-comparison.md#agents-toolkit)
 - [Write effective  instructions for declarative agents](declarative-agent-instructions.md)
-- [Add knowledge sources to your declarative agent in Copilot Studio](copilot-studio-lite-knowledge.md)
+- [Add knowledge sources to your declarative agent in Copilot Studio](agent-builder-add-knowledge.md)
 - [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines)

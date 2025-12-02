@@ -1,16 +1,16 @@
 ---
 title: Create a Scrum Assistant agent from a template
-description: Learn how to create a declarative agent in Copilot Studio with the Scrum Assistant template.
+description: Learn how to use the Scrum Assistant template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ---
 
 # Use the Scrum Assistant template to build an agent
 
-You can use the Scrum Assistant template in the lite experience of Copilot Studio to build agents that support scrum masters and Agile teams by providing real-time guidance on scrum ceremonies, backlog management, and Agile best practices. Agents based on this template apply trusted scrum resources, analyze team artifacts (sprint reports, retrospective notes), and offer data-driven recommendations to enhance team performance, collaboration, and operational efficiency.
+You can use the Scrum Assistant template in Microsoft 365 Copilot to build agents that support scrum masters and Agile teams by providing real-time guidance on scrum ceremonies, backlog management, and Agile best practices. Agents based on this template apply trusted scrum resources, analyze team artifacts (sprint reports, retrospective notes), and offer data-driven recommendations to enhance team performance, collaboration, and operational efficiency.
 
 ## Prerequisites
 
@@ -48,6 +48,6 @@ You can enhance the functionality of your Scrum Assistant agents by:
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Copilot Studio](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)
