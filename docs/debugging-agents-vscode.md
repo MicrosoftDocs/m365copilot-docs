@@ -2,7 +2,7 @@
 title: Test and debug agents in Microsoft 365 Agents Toolkit by using developer mode
 description: Learn how to test and debug how agents select and use capabilities and actions by using developer mode in Microsoft 365 Agents Toolkit.
 author: carolkigoonya
-ms.author: ckigoonya
+ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/19/2025
