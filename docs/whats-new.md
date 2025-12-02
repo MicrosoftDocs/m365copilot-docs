@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### People knowledge source in Copilot Studio lite experience
 
-The People knowledge source is now available in the Copilot Studio lite experience, allowing agents to answer questions about individuals in your organization. For more information, see [People data](copilot-studio-lite-knowledge.md#people-data) and [Add knowledge sources to your declarative agent](knowledge-sources.md#people).
+The People knowledge source is now available in the Copilot Studio lite experience, allowing agents to answer questions about individuals in your organization. For more information, see [People data](agent-builder-add-knowledge.md#people-data) and [Add knowledge sources to your declarative agent](knowledge-sources.md#people).
 
 ### Agent Builder in Microsoft 365 Copilot is available in GCCM
 
@@ -32,7 +32,7 @@ You can now upload files up to 512 MB in size when you embed file content as kno
 
 ### New admin controls for agent sharing
 
-Tenant administrators can now govern who is allowed to share agents created in Microsoft 365 Copilot. These controls help organizations maintain compliance and prevent oversharing of agents. For more information, see [Share an agent](copilot-studio-lite-share-manage-agent.md#share-an-agent).
+Tenant administrators can now govern who is allowed to share agents created in Microsoft 365 Copilot. These controls help organizations maintain compliance and prevent oversharing of agents. For more information, see [Share an agent](agent-builder-share-manage-agents.md#share-an-agent).
 
 ### Copy an agent to Copilot Studio
 
@@ -80,7 +80,7 @@ You can now upload files up to 100 MBs in size when you embed file content as kn
 
 ### Increased SharePoint file limit for agents
 
-You can now specify up to 100 SharePoint files as knowledge when you use Microsoft 365 Copilot, up from a limit of 20 files. For more information, see [SharePoint content](copilot-studio-lite-knowledge.md#sharepoint-content).
+You can now specify up to 100 SharePoint files as knowledge when you use Microsoft 365 Copilot, up from a limit of 20 files. For more information, see [SharePoint content](agent-builder-add-knowledge.md#sharepoint-content).
 
 ### Build Microsoft 365 Copilot connectors for people data (preview)
 
@@ -100,7 +100,7 @@ You can convert your declarative agent to a custom engine agent to take advantag
 
 ### Prioritize declarative agent knowledge sources
 
-You can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, for Microsoft 365 Copilot, see [Prioritize your knowledge sources](copilot-studio-lite-knowledge.md#prioritize-your-knowledge-sources-over-general-knowledge); for Microsoft 365 Agents Toolkit, see [Special instructions object](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.4#special-instructions-object).
+You can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, for Microsoft 365 Copilot, see [Prioritize your knowledge sources](agent-builder-add-knowledge.md#prioritize-your-knowledge-sources-over-general-knowledge); for Microsoft 365 Agents Toolkit, see [Special instructions object](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.4#special-instructions-object).
 
 ### Custom engine agents generally available
 
@@ -114,7 +114,7 @@ You can now add up to 12 conversation starters to your declarative agent when yo
 
 ### Embedded file content as knowledge
 
-Use the file upload feature in Microsoft 365 Copilot to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded file content](copilot-studio-lite-knowledge.md#embedded-file-content).
+Use the file upload feature in Microsoft 365 Copilot to upload files from your device or the cloud to use as knowledge for your agent. For more information, see [Embedded file content](agent-builder-add-knowledge.md#embedded-file-content).
 
 ### Use the Retrieval API (preview) to retrieve data
 
@@ -158,7 +158,7 @@ Email is now available as a knowledge source for agents build with [Microsoft 36
 
 ### Copilot Studio agent templates
 
-Use templates in [Copilot Studio](copilot-studio-lite.md) to streamline your agent development process. For more information, see [Agent templates overview](agent-templates-overview.md).
+Use templates in [Copilot Studio](agent-builder.md) to streamline your agent development process. For more information, see [Agent templates overview](agent-templates-overview.md).
 
 ### Document interaction for declarative agents in Word
 
@@ -182,7 +182,7 @@ Microsoft 365 Copilot Chat users can now access Copilot Studio to build agents i
 
 ### Add websites as knowledge in Copilot Studio
 
-You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](copilot-studio-lite-knowledge.md#public-websites).
+You can add specific public websites as agent knowledge sources to make your agent context-aware. For details, see [Web content](agent-builder-add-knowledge.md#public-websites).
 
 ### Custom engine agents available in Copilot app (preview)
 

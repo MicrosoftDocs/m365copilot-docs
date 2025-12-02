@@ -4,8 +4,8 @@ description: Learn how to use Microsoft 365 Copilot Agent Builder to build decla
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/17/2025
-ms.topic: conceptual
+ms.date: 12/01/2025
+ms.topic: article
 ---
 
 # Build a declarative agent with Agent Builder in Microsoft 365 Copilot
@@ -105,6 +105,6 @@ You can find and copy these details in the Copilot Studio within the **Get suppo
 
 ## Related content
 
-- [Build agents with Agent Builder in Microsoft 365 Copilot](copilot-studio-lite-build.md) 
-- [Share and manage agents built with Microsoft 365 Copilot](copilot-studio-lite-share-manage-agent.md)
-- [Regional availability and language support](copilot-studio-lite-availability.md)
+- [Build agents with Agent Builder in Microsoft 365 Copilot](agent-builder-build-agents.md) 
+- [Share and manage agents built with Microsoft 365 Copilot](agent-builder-share-manage-agents.md)
+- [Regional availability and language support](agent-builder-regional-availability.md)

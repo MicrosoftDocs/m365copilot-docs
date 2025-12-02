@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.localizationpriority: medium
 ms.date: 11/18/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Add knowledge sources to your declarative agent
@@ -38,7 +38,7 @@ Microsoft 365 Copilot connectors enable you to add organizational data to your a
 
 For information about how to add Copilot connectors as knowledge to your agent manifest in Agents Toolkit, see [Copilot connectors object](declarative-agent-manifest-1.6.md#copilot-connectors-object).
 
-For information about how to add Copilot connectors to your agent in Microsoft 365 Copilot, see [Copilot connectors](copilot-studio-lite-knowledge.md#copilot-connectors).
+For information about how to add Copilot connectors to your agent in Microsoft 365 Copilot, see [Copilot connectors](agent-builder-add-knowledge.md#copilot-connectors).
 
 ## SharePoint and OneDrive
 
@@ -46,7 +46,7 @@ When you configure your agent to use OneDrive and SharePoint content as knowledg
 
 For information about how to add OneDrive and SharePoint knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.6.md#onedrive-and-sharepoint-object).
 
-For information about how to add SharePoint knowledge to your agent in Microsoft 365 Copilot, see [Add knowledge sources](copilot-studio-lite-knowledge.md#sharepoint-content).
+For information about how to add SharePoint knowledge to your agent in Microsoft 365 Copilot, see [Add knowledge sources](agent-builder-add-knowledge.md#sharepoint-content).
 
 ## Web and scoped web search
 
@@ -77,16 +77,16 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-If you're using [Microsoft 365 Copilot](copilot-studio-lite-build.md) to create your agent, on the **Configure** tab, under **Knowledge**, list the website URLs that you want to reference.
+If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to create your agent, on the **Configure** tab, under **Knowledge**, list the website URLs that you want to reference.
 
 ## Embedded file content
 
-If you're using [Microsoft 365 Copilot](copilot-studio-lite-build.md) to build your agent, you can upload files directly from your device or the cloud to embed the content for your agent to use as knowledge. The embedded file content is stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview). These files count against the OneDrive and SharePoint capacity in your tenant.
+If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to build your agent, you can upload files directly from your device or the cloud to embed the content for your agent to use as knowledge. The embedded file content is stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview). These files count against the OneDrive and SharePoint capacity in your tenant.
 
 > [!NOTE]
 > The file upload feature is available to users with usage billing enabled or with a Microsoft 365 Copilot license.
 
-For more information about embedded files, see [Embedded file content](copilot-studio-lite-knowledge.md#embedded-file-content).
+For more information about embedded files, see [Embedded file content](agent-builder-add-knowledge.md#embedded-file-content).
 
 ## Dataverse
 
@@ -132,7 +132,7 @@ Email knowledge allows you to scope your agent to a personal or shared mailbox, 
 
 ### Add email knowledge sources
 
-If you're using [Microsoft 365 Copilot](copilot-studio-lite.md) to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
+If you're using [Microsoft 365 Copilot](agent-builder.md) to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
 
 > [!NOTE]
 > You can't currently scope your emails to a specific folder or shared mailbox when you use Microsoft 365 Copilot.
@@ -181,7 +181,7 @@ You can ground your agent in People data to deliver more personalized and contex
 
 ### Add people knowledge source
 
-If you're using [Copilot Studio](copilot-studio-lite.md) to create your agent, the People knowledge source is enabled by default for users with a Microsoft 365 Copilot license.
+If you're using [Copilot Studio](agent-builder.md) to create your agent, the People knowledge source is enabled by default for users with a Microsoft 365 Copilot license.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example. Declaring only the base `People` capability will allow the agent to reason on **only basic organization data** such as those available in the [profile card](/graph/api/resources/profile). If you would like to include content such as related teams messages, emails, and files between the agent user and the referenced people in the organization refer to the [version 1.6](declarative-agent-manifest-1.6.md) to use the `include_related_content` property.
 
@@ -219,7 +219,7 @@ Agents can return links to files shared in Teams messages, but they can't return
 
 ### Add Teams messages knowledge sources
 
-If you're using [Microsoft 365 Copilot](copilot-studio-lite.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats and meetings.** To scope your agent to specific channel, meeting, or group chats, on the **Chats** tab, select the chats that you want to add as knowledge.
+If you're using [Microsoft 365 Copilot](agent-builder.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats and meetings.** To scope your agent to specific channel, meeting, or group chats, on the **Chats** tab, select the chats that you want to add as knowledge.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable Teams messages knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
 
@@ -267,7 +267,7 @@ Teams meetings knowledge allows you to scope your agent to answer questions abou
 
 ### Add meetings knowledge source
 
-If you're using [Microsoft 365 Copilot](copilot-studio-lite-build.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats and meetings**. The ability to scope to Meetings is coming soon in Microsoft 365 Copilot.
+If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats and meetings**. The ability to scope to Meetings is coming soon in Microsoft 365 Copilot.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable meetings knowledge, add the `Meetings` value to the **capabilities** property in your agent manifest file, as shown in the following example. If you want to scope the agent to specific meetings, add the meeting's UID to the `items_by_id` property. For instructions on finding the ID of a meeting, see [Get the ID of a meeting](/troubleshoot/exchange/calendars/cdl/get-meeting-id).
 
