@@ -24,8 +24,7 @@ Represents a list of messages that are exchanged and involve AI.
 
 ## Licensing and prerequisites
 
-> [!IMPORTANT]
-> Access to AI interaction export data may require **Microsoft 365 Copilot licensing** depending on your tenant configuration and the interaction sources you intend to export. Ensure your tenant has the necessary Copilot licenses assigned to users whose interactions you are querying, and that any required admin settings are enabled.  
+Access to AI interaction export data may require **Microsoft 365 Copilot licensing** depending on your tenant configuration and the interaction sources you intend to export. Ensure your tenant has the necessary Copilot licenses assigned to users whose interactions you are querying, and that any required admin settings are enabled.  
 > See **[License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing)** and **[Set up Microsoft 365 Copilot and assign licenses](/copilot/microsoft-365/microsoft-365-copilot-setup)**.
 
 > [!NOTE]
@@ -48,8 +47,8 @@ The **Interaction Export API** returns interactions recorded by Microsoft 365 AI
 
 ## Methods
 
-| Method                                                                                     | Return Type                                  | Description                                                                                              |
-|:-------------------------------------------------------------------------------------------|:---------------------------------------------|:---------------------------------------------------------------------------------------------------------|
+| Method | Return Type | Description |
+|:----------|:---------|:---------|
 | [Get all enterprise interactions](../aiinteractionhistory-getallenterpriseinteractions.md) | [aiInteraction](aiinteraction.md) collection | Get all Microsoft 365 Copilot interaction data, including user prompts to Copilot and Copilot responses. |
 
 ## Properties
