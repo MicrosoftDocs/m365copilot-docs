@@ -5,14 +5,14 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/21/2025
+ms.date: 12/01/2025
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
 
 The Agent Builder feature in Microsoft 365 Copilot provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
-This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md).
+This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md).
 
 For more information about supported knowledge sources and licensing requirements, see [Knowledge sources](/microsoft-365-copilot/extensibility/knowledge-sources).
 
@@ -287,7 +287,7 @@ To configure your agent to prioritize your knowledge sources, on the **Configure
 
 ## Related content
 
-- [Overview of Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md)
+- [Overview of Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md)
 - [Build an agent from a template](agent-templates-overview.md)
-- [Share and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Share and manage agents](agent-builder-share-manage-agents.md)

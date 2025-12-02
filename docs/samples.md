@@ -3,7 +3,7 @@ title: Microsoft 365 Copilot extensibility samples
 description: Extend Microsoft 365 Copilot with plugins and Copilot connectors.
 author: jasonjoh
 ms.author: jasonjoh
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 01/23/2025
 ---

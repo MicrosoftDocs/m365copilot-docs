@@ -3,7 +3,7 @@ title: Create a Career Coach agent from a template
 description: Learn how to create a declarative agent in Copilot Studio by using the Career Coach template.
 author: kmkoenen
 ms.author: v-koenenkaty
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 04/01/2025
 ---

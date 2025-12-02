@@ -3,7 +3,7 @@ title: Microsoft 365 Copilot Extensibility Planning Guide
 description: Plan your Copilot extensibility journey by following the key steps and considerations.
 author: jessicaaawu
 ms.author: wujessica
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 11/18/2025
 ms.custom: [copilot-learning-hub]

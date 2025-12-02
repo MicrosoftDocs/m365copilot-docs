@@ -4,8 +4,8 @@ description: Learn how to share and manage agents built with Microsoft 365 Copil
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/17/2025 
-ms.topic: conceptual
+ms.date: 12/01/2025
+ms.topic: article
 ---
 
 # Share and manage agents
@@ -32,7 +32,7 @@ The following table highlights the key differences between publishing and sharin
 
 ## Share an agent
 
-To share your agent, after you [build and test](copilot-studio-lite-build.md) it in Microsoft 365 Copilot, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
+To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
 > [!NOTE]
 > Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
