@@ -24,8 +24,9 @@ Represents a list of messages that are exchanged and involve AI.
 
 ## Licensing and prerequisites
 
-Access to AI interaction export data may require **Microsoft 365 Copilot licensing** depending on your tenant configuration and the interaction sources you intend to export. Ensure your tenant has the necessary Copilot licenses assigned to users whose interactions you are querying, and that any required admin settings are enabled.  
-> See **[License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing)** and **[Set up Microsoft 365 Copilot and assign licenses](/copilot/microsoft-365/microsoft-365-copilot-setup)**.
+> [!IMPORTANT]
+> Access to AI interaction export data might require a Microsoft 365 Copilot add-on license, depending on your tenant configuration and the interaction sources you intend to export. Make sure that the users in your tenant whose interactions you're querying have the necessary Copilot licenses assigned, and that any required admin settings are enabled.  
+> For more information, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing) and [Set up Microsoft 365 Copilot and assign licenses](/copilot/microsoft-365/microsoft-365-copilot-setup).
 
 > [!NOTE]
 > This API also requires appropriate **app permissions** and **admin consent**. See the **Permissions** section below for the exact scopes.
