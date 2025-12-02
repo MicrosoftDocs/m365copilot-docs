@@ -132,9 +132,9 @@ items:
     - name: Use Microsoft 365 Copilot
       items:
       - name: Overview
-        href: copilot-studio-lite.md
+        href: agent-builder.md
       - name: Build agents
-        href: copilot-studio-lite-build.md
+        href: agent-builder-build-agents.md
       - name: Build agents from template
         items:
         - name: Templates overview
@@ -160,13 +160,13 @@ items:
         - name: Writing Coach
           href: agent-template-writing-coach.md
       - name: Build agents with fine-tuned models (preview)
-        href: copilot-studio-lite-tuned-models.md
+        href: agent-builder-tuned-models.md
       - name: Add knowledge sources
-        href: copilot-studio-lite-knowledge.md
+        href: agent-builder-add-knowledge.md
       - name: Share and manage agents
-        href: copilot-studio-lite-share-manage-agent.md
+        href: agent-builder-share-manage-agents.md
       - name: Availability and language support
-        href: copilot-studio-lite-availability.md
+        href: agent-builder-regional-availability.md
       - name: Use Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
@@ -185,10 +185,11 @@ items:
     - name: Add capabilities and knowledge sources
       items:
       - name: Code interpreter
-        href: code-interpreter.md
         items:
+        - name: Code interpreter
+          href: code-interpreter.md
         - name: Code interpreter security architecture
-          href: code-interpreter-security.md
+          href: code-interpreter-security.md        
       - name: Image generator
         href: image-generator.md
       - name: Knowledge sources

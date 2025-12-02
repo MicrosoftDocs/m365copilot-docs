@@ -5,7 +5,7 @@ author: fabianwilliams
 ms.author: fwilliams
 ms.localizationpriority: medium
 ms.date: 07/23/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Invoke Microsoft Graph actions with Semantic Kernel
