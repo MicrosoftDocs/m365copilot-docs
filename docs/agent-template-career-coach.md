@@ -58,6 +58,6 @@ Suggestions for such connections include:
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Copilot Studio](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)

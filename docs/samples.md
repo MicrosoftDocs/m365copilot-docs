@@ -3,7 +3,7 @@ title: Microsoft 365 Copilot extensibility samples
 description: Extend Microsoft 365 Copilot with plugins and Copilot connectors.
 author: jasonjoh
 ms.author: jasonjoh
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 01/23/2025
 ---
@@ -42,9 +42,9 @@ The following samples implement custom engine agents using custom orchestration 
 | [Meeting Helper with Azure OpenAI](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-ai-meeting-helper) | This example demonstrates how Azure OpenAI extracts action items from meeting transcriptions for all participants who subscribed to a meeting. It then sends these action items to each individual user in a 1:1 chat after the meeting concludes. |
 | [Virtual assistant bot](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-virtual-assistant) | This sample application demonstrates a root bot that routes inputs to skill bots for tailored responses. |
 
-## Copilot connector samples
+## Microsoft 365 Copilot connector samples
 
-The following samples implement Copilot connectors that extend Microsoft 365 Copilot.
+The following samples implement Microsoft 365 Copilot connectors that extend Microsoft 365 Copilot.
 
 | Sample | Description |
 |--------|-------------|

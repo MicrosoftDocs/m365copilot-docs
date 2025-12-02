@@ -3,7 +3,7 @@ title: Responsible AI Validation Checks for Declarative Agents
 description: Learn about responsible AI validation checks that run on agents during manifest validation and user prompt processing.
 author: lauragra
 ms.author: lauragra
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/25/2025
 ---
