@@ -1,5 +1,5 @@
 items:
-- name: Retrieval API
+- name: Retrieval API FOO
   href: retrieval/toc.yml
 - name: Search API (preview)
   href: search/toc.yml
@@ -13,4 +13,3 @@ items:
   href: chat/toc.yml
 - name: Complex types
   href: resources/toc.yml
-
