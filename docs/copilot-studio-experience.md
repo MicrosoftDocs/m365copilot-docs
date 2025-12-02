@@ -79,7 +79,7 @@ IT administrators manage agent visibility, sharing, and lifecycle policies in th
 - Configure pay-as-you-go billing and review agent usage and consumption.
 - Enforce compliance using Microsoft Purview (sensitivity labels, audit logs).
 
-Admins can also manage agent sharing controls via the **Microsoft 365 Admin Center** > **Copilot** > **Settings** > **Data access** > **Agents** page. For more information, see [Share an agent](copilot-studio-lite-share-manage-agent.md#share-an-agent).
+Admins can also manage agent sharing controls via the **Microsoft 365 Admin Center** > **Copilot** > **Settings** > **Data access** > **Agents** page. For more information, see [Share an agent](agent-builder-share-manage-agents.md#share-an-agent).
 
 ## Copilot Studio governance principles
 

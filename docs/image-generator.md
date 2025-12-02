@@ -57,7 +57,7 @@ If you're using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
 
 ### Copilot Studio
 
-If you're the using [Microsoft 365 Copilot](copilot-studio-lite.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Create images**.
+If you're the using [Microsoft 365 Copilot](agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Create images**.
 
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section in Agent Builder in Microsoft 365 Copilot.":::
 

@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 11/13/2024
-ms.topic: conceptual
+ms.topic: article
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->

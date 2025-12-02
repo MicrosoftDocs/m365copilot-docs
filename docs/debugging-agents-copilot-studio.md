@@ -2,7 +2,7 @@
 title: Test and debug agents in Microsoft 365 Copilot using Developer Mode
 description: Learn how to test and debug how agents select and use capabilities and actions by using developer mode in Microsoft 365 Copilot.
 author: carolkigoonya
-ms.author: ckigoonya
+ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
 ms.date: 11/17/2025
@@ -115,6 +115,6 @@ Enter a message, including the #extensibility tag, in the text box.
 
 ## Related content
 
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
+- [Build agents with Copilot Studio](agent-builder-build-agents.md)
 - [Build agents with Visual Studio Code](build-declarative-agents.md)
 - [Test and debug agents in Microsoft 365 Agents Toolkit](debugging-agents-vscode.md)

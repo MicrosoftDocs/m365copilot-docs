@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 04/09/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Interact with documents in Microsoft 365 apps with a declarative agent

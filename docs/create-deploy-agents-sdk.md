@@ -3,7 +3,7 @@ title: Create and Deploy a Custom Engine Agent with Microsoft 365 Agents SDK
 description: Use the Microsoft 365 Agents SDK to build a custom engine agent and deploy it to Microsoft 365 Copilot.
 author: jessicaaawu
 ms.author: scritchley
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 05/15/2025
 ms.custom: [copilot-learning-hub]

@@ -104,6 +104,6 @@ You can find and copy these details in Agent Builder in the **Get support** sect
 
 ## Related content
 
-- [Build agents with Agent Builder in Microsoft 365 Copilot](copilot-studio-lite-build.md) 
-- [Share and manage agents built with Microsoft 365 Copilot](copilot-studio-lite-share-manage-agent.md)
-- [Regional availability and language support](copilot-studio-lite-availability.md)
+- [Build agents with Agent Builder in Microsoft 365 Copilot](agent-builder-build-agents.md) 
+- [Share and manage agents built with Microsoft 365 Copilot](agent-builder-share-manage-agents.md)
+- [Regional availability and language support](agent-builder-regional-availability.md)

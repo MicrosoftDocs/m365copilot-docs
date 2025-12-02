@@ -5,14 +5,14 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 12/01/2025
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
 
 The Agent Builder feature in Microsoft 365 Copilot provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
-This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot.
+This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md).
 
 You can add:
 - Up to four public website URLs.
@@ -170,7 +170,7 @@ The following table lists sensitivity label scenarios that aren't currently supp
 | -------- | -------- |
 | Sensitivity label with Double Key Encryption (DKE) enabled | The file is embedded but isn't used as knowledge. The builder doesn't see an error message when they upload the file. | We recommend that you avoid uploading files with DKE because they can't be used as knowledge. |
 | Sensitivity label with user-defined permissions enabled | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with user-defined permissions. |
-| Sensitivity label with extract rights enabled for the user | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with extract rights enabled. |
+| Sensitivity label with extract rights disabled for the user | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with extract rights disabled. |
 | Files with sensitivity labels from another tenant that has encryption enabled | The file is embedded in the agent but isn't used as knowledge. | We recommend that you avoid uploading files with sensitivity labels from tenants with encryption enabled because they can't be used as knowledge. |
 | Files with password protection | The file is uploaded and the builder sees an error message next to the uploaded file. | Remove any uploaded files with password protection. |
 
@@ -299,7 +299,7 @@ To configure your agent to prioritize your knowledge sources, on the **Configure
 
 ## Related content
 
-- [Overview of Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md)
+- [Overview of Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md)
 - [Build an agent from a template](agent-templates-overview.md)
-- [Share and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Share and manage agents](agent-builder-share-manage-agents.md)

@@ -4,7 +4,7 @@ description: Lear how to use asynchronous and proactive messaging patterns in yo
 author: lauragra
 ms.author: lauragra
 ms.reviewer: vermaanimesh
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 07/11/2025
 ms.custom: [copilot-learning-hub]

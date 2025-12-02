@@ -3,7 +3,7 @@ title: Write Instructions for Declarative Agents with API plugins
 description: Learn how to write effective instructions declarative agents that use API plugins.
 author: lauragra
 ms.author: jchudakova
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 04/02/2025
 ---

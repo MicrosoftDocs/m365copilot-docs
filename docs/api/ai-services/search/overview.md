@@ -5,7 +5,7 @@ author: apiarya
 ms.author: swapnilsapar
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Overview of the Microsoft 365 Copilot Search API (preview)
