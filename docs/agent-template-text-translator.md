@@ -1,6 +1,6 @@
 ---
 title: Create a Text Translator agent from a template
-description: Learn how to use the Text Translator template in the Copilot Studio lite experience to create a declarative agent.
+description: Learn how to use the Text Translator template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: article
@@ -10,7 +10,7 @@ ms.date: 12/01/2025
 
 # Use the Text Translator template to build an agent
 
-Use the **Text Translator template**, available in Microsoft 365 Copilot when you use the Agent Builder feature, to build an agent that helps users break language barriers by translating text between languages and improving overall writing quality. The Text Translator agent can even support language learning by explaining idioms or suggesting synonyms, making it a versatile tool for educational and practical translation needs.
+You can use the **Text Translator template** in Microsoft 365 Copilot to build an agent that helps users break language barriers by translating text between languages and improving overall writing quality. The Text Translator agent can even support language learning by explaining idioms or suggesting synonyms, making it a versatile tool for educational and practical translation needs.
 
 ## Prerequisites
 

@@ -1,6 +1,6 @@
 ---
 title: Create an Interview Question Assistant agent from a template
-description: Learn how to create a declarative agent in the Copilot Studio lite experience by using the Interview Question Assistant template.
+description: Learn how to use the Interview Question Assistant template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: article
@@ -10,7 +10,7 @@ ms.date: 09/11/2025
 
 # Use the Interview Question Assistant template to build an agent
 
-You can use the Interview Question Assistant template, available in Microsoft 365 Copilot when you use the Agent Builder feature, to build an agent that supports hiring managers and interviewers by streamlining the process of drafting high-quality interview questions. This agent helps you quickly create effective interview questions.
+You can use the Interview Question Assistant template in Microsoft 365 Copilot to build an agent that supports hiring managers and interviewers by streamlining the process of drafting high-quality interview questions. This agent helps you quickly create effective interview questions.
 
 ## Prerequisites
 

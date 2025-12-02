@@ -1,6 +1,6 @@
 ---
 title: Create a Corporate Communications agent from a template
-description: Learn how to use the Corporate Communications Crafter template in the Copilot Studio lite experience to create a declarative agent.
+description: Learn how to use the Corporate Communications Crafter template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: article
@@ -10,7 +10,7 @@ ms.date: 12/01/2025
 
 # Use the Corporate Communications Crafter template to build an agent
 
-You can use the **Corporate Communications Crafter** template, available in Microsoft 365 Copilot when you use the Agent Builder feature, to build agents that help create consistent, on-brand corporate communications. These agents assist with drafting internal and external messages—such as announcements, newsletters, executive updates, and press releases—while ensuring alignment with your organization’s tone and communication standards.
+You can use the **Corporate Communications Crafter** template in Microsoft 365 Copilot to build agents that help create consistent, on-brand corporate communications. These agents assist with drafting internal and external messages—such as announcements, newsletters, executive updates, and press releases—while ensuring alignment with your organization’s tone and communication standards.
 
 ## Prerequisites
 
