@@ -29,22 +29,26 @@ Represents a list of messages that are exchanged and involve AI.
 > For more information, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing) and [Set up Microsoft 365 Copilot and assign licenses](/copilot/microsoft-365/microsoft-365-copilot-setup).
 
 > [!NOTE]
-> This API also requires appropriate **app permissions** and **admin consent**. See the **Permissions** section below for the exact scopes.
+> This API also requires appropriate **app permissions** and **admin consent**. For more information, see [Permissions](/././docs/api/ai-services/interaction-export/aiinteractionhistory-getallenterpriseinteractions.md#permissions).
 
-## Data coverage (what interactions are returned)
+## Interactions returned
 
-The **Interaction Export API** returns interactions recorded by Microsoft 365 AI experiences that write to the interaction history service. The following guidance clarifies **which interaction types are included**:
+The **AI interaction history API** returns interactions recorded by Microsoft 365 AI experiences that write to the interaction history service. Here’s what you can expect:
 
-- **Included (tenant-dependent):**
-  - **Microsoft 365 Copilot experiences** that persist interactions to the interaction history service, such as Copilot in Microsoft 365 apps and **Copilot chat** in Microsoft 365, when enabled for the user and tenant.
+**Included**
+  These interactions are returned when Microsoft 365 Copilot features are enabled for your organization and the user:
+
+  - **Microsoft 365 Copilot experiences** Microsoft 365 Copilot experiences that save interaction data to the interaction history service, such as Copilot in Microsoft 365 apps and the Microsoft 365 Copilot app, when enabled for the user and tenant.
   - Interactions where Copilot surfaces **enterprise data** the user is authorized to access (for example, content governed by Microsoft Purview) and that are recorded as AI interactions.
 
-- **May be included or excluded depending on configuration:**
-  - **Third‑party or line‑of‑business AI experiences** integrated via connectors, plugins, or extensions **only if** they write interactions to the interaction history service and your tenant has enabled their export.
+**Might be included or excluded**
+  - **Partner or line‑of‑business AI experiences** can be included if they are integrated through connectors, plugins, or extensions and write interactions to the interaction history service. Your organization must also enable export for these experiences.
 
-- **Not included:**
-  - Interactions from AI experiences that **do not** persist to the interaction history service.
-  - Consumer or personal Microsoft accounts.
+**Not included**
+These interactions are never returned by the API:
+
+  - Interactions from AI experiences that do not save data to the interaction history service.
+  - Interactions from consumer or personal Microsoft accounts.
 
 ## Methods
 
