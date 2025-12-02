@@ -1,5 +1,5 @@
 items:
-- name: Retrieval API FOO
+- name: Retrieval API
   href: retrieval/toc.yml
 - name: Search API (preview)
   href: search/toc.yml

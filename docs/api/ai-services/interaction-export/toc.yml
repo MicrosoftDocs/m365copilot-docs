@@ -1,6 +1,6 @@
 # cSpell:ignoreRegExp aiinteraction.*?
 items:
-- name: AI interaction history FOO
+- name: AI interaction history
   items:
   - name: AI interaction history
     href: resources/aiinteractionhistory.md
