@@ -1,6 +1,6 @@
 ---
 title: Create a Request for Proposal generator agent from a template
-description: Learn how to use the RFP Generator template in Microsoft 365 Copilot to create a declarative agent..
+description: Learn how to use the RFP Generator template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: article
