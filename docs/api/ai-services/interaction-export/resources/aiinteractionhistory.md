@@ -45,7 +45,7 @@ The following interactions might be included or excluded:
 The following interactions are never returned by the API:
 
   - Interactions from AI experiences that don't save data to the interaction history service.
-  - Interactions from consumer or personal Microsoft accounts.
+- Interactions from consumer or personal Microsoft accounts.
 
 ## Methods
 
