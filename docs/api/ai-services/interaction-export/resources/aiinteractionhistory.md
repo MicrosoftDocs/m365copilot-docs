@@ -49,8 +49,8 @@ The following interactions are never returned by the API:
 
 ## Methods
 
-| Method | Return Type | Description |
-|:----------|:---------|:---------|
+| Method                                                                                     | Return Type                                  | Description                                                                                              |
+|:-------------------------------------------------------------------------------------------|:---------------------------------------------|:---------------------------------------------------------------------------------------------------------|
 | [Get all enterprise interactions](../aiinteractionhistory-getallenterpriseinteractions.md) | [aiInteraction](aiinteraction.md) collection | Get all Microsoft 365 Copilot interaction data, including user prompts to Copilot and Copilot responses. |
 
 ## Properties
