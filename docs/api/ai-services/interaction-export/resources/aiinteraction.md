@@ -31,8 +31,8 @@ None.
 
 ## Properties
 
-| Property     | Type      | Description    |
-|:------------ |:------------ | :------------ |
+| Property           | Type                                                             | Description                                                                                                                                |
+|:-------------------|:-----------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
 | `appClass`         | String                                                           | The data source for Copilot data. For example, `IPM.SkypeTeams.Message.Copilot.Excel` or `IPM.SkypeTeams.Message.Copilot.Loop`.            |
 | `attachments`      | [aiInteractionAttachment](aiinteractionattachment.md) collection | The collection of documents attached to the interaction, such as cards and images.                                                         |
 | `body`             | [itemBody](/graph/api/resources/itembody)                        | The body of the message, including the text of the body and its body type.                                                                 |
