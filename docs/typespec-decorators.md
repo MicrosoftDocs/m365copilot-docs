@@ -4,7 +4,7 @@ description: Learn about the built-in decorators for building agents and API plu
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/18/2025
+ms.date: 12/03/2025
 ms.topic: reference
 ---
 
@@ -29,7 +29,7 @@ This reference covers the built-in decorators available in TypeSpec for Microsof
 | [@actions](#actions) | Plugin | Define action metadata including names, descriptions, and URLs. |
 | [@authReferenceId](#authreferenceid) | Plugin | Specify authentication reference ID for API access. |
 | [@capabilities](#capabilities) | Plugin | Configure function capabilities like confirmations and response formatting. |
-| [@card](#card) | Plugin | Define adaptive card templates for function responses. |
+| [@card](#card) | Plugin | Define Adaptive Card templates for function responses. |
 | [@reasoning](#reasoning) | Plugin | Provide reasoning instructions for function invocation. |
 | [@responding](#responding) | Plugin | Define response formatting instructions for functions. |
 
