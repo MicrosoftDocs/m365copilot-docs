@@ -22,6 +22,13 @@ zone_pivot_groups: graph-api-versions
 
 Represents a list of messages that are exchanged and involve AI.
 
+> [!IMPORTANT]
+> Access to AI interaction export data might require a Microsoft 365 Copilot add-on license, depending on your tenant configuration and the interaction sources you want to export. Make sure that the users in your tenant for whom you're querying interactions have Copilot licenses assigned, and that any required admin settings are enabled. For more information, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing) and [Set up Microsoft 365 Copilot and assign licenses](/copilot/microsoft-365/microsoft-365-copilot-setup).
+>
+> This API also requires appropriate **app permissions** and **admin consent**. For more information, see [Permissions](/microsoft-365-copilot/extensibility/api/ai-services/interaction-export/aiinteractionhistory-getallenterpriseinteractions?pivots=graph-preview#permissions).
+
+### AI interactions returned
+
 The AI interaction history API returns interactions recorded by Microsoft 365 AI experiences that write to the interaction history service.
 
 The following interactions are returned when Microsoft 365 Copilot features are enabled for your organization and the user:
@@ -37,12 +44,6 @@ The following interactions are never returned by the API:
 
   - Interactions from AI experiences that don't save data to the interaction history service.
   - Interactions from consumer or personal Microsoft accounts.
-
-> [!IMPORTANT]
-> Access to AI interaction export data might require a Microsoft 365 Copilot add-on license, depending on your tenant configuration and the interaction sources you intend to export. Make sure that the users in your tenant for whom you're querying interactions have the necessary Copilot licenses assigned, and that any required admin settings are enabled. For more information, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing) and [Set up Microsoft 365 Copilot and assign licenses](/copilot/microsoft-365/microsoft-365-copilot-setup).
-
-> [!NOTE]
-> This API also requires appropriate **app permissions** and **admin consent**. For more information, see [Permissions](/microsoft-365-copilot/extensibility/api/ai-services/interaction-export/aiinteractionhistory-getallenterpriseinteractions?pivots=graph-preview#permissions)
 
 ## Methods
 
