@@ -34,7 +34,7 @@ To add knowledge sources to your agent:
    - Embedded files uploaded from your device.
    - Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
   
-  :::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-select-knowledge.png" alt-text="A screenshot of the Knowledge section of the Configure tab with the Picker UI showing.":::
+  :::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-select-knowledge.png" alt-text="A screenshot of the Knowledge section of the Configure tab with the Picker UI showing.":::
 
 ## Public websites
 
@@ -74,7 +74,7 @@ You can also select files or folders from the SharePoint file picker by choosing
 
 After you select a site, you can select several files and folders. Doing so adds the SharePoint file or folder to the agent's knowledge sources. When the same site includes multiple folders, select the button next to the folder name to view other folders.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-sharepoint-picker-folders.png" alt-text="SharePoint file picker":::
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-sharepoint-picker-folders.png" alt-text="SharePoint file picker":::
 
 You can also upload files into SharePoint by using the picker. The file appears in the same folder after it finishes uploading and is ready for use.
 
@@ -247,7 +247,7 @@ To scope the **Azure DevOps Work Items** area path:
 4. Choose **Select an area path** and search for or type the area path name.
 5. Select the area path to add it.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
 
 The following table lists the Copilot connectors that support scoping and the attributes that you can use to scope the data.
 

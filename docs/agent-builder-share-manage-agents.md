@@ -94,7 +94,7 @@ You can select which SharePoint folders and files to share. Sharing only works w
 
 When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Manage user permissions to access file and folders directly through SharePoint.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
 
 ## Manage agents
 
