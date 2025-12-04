@@ -71,11 +71,11 @@ Microsoft 365 Copilot provides an option to download a ZIP package for manual de
 
 To deploy an agent manually:
 
-1. In Microsoft 365 Copilot, open the left navigation pane and select **Create agent**.
-1. At the top of the central pane, choose **My agents**.
-:::image type="content" source="assets/images/my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
+1. In Microsoft 365 Copilot, open the left navigation pane and select **New agent**.
+1. At the top of the central pane, choose **Copilot Studio** and then select **View my agents**.
+:::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-1-view-agents" alt-text="Screenshot of the *My agents* option":::
 1. Highlight the agent you want to download and choose the ellipses.
-:::image type="content" source="assets/images/copilot-studio-lite-more-options.png" alt-text="Screenshot of the *More options* ellipses for the highlighted agent.":::
+:::image type="content" source="assets/images/my-agents-more-options.png" alt-text="Screenshot of the *More options* ellipses for the highlighted agent.":::
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
 1. [Sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
