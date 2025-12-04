@@ -4,7 +4,7 @@ description: Learn how to define capabilities for declarative agents using TypeS
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/18/2025
+ms.date: 12/03/2025
 ms.topic: reference
 ---
 
@@ -16,8 +16,8 @@ TypeSpec for Microsoft 365 Copilot provides built-in capabilities that enable de
 
 | Capability | Description |
 |------------|-------------|
-| [CodeInterpreter](#agentcapabilitiescodeinterpreter) | Generate and execute Python code to solve math problems, analyze data, and create visualizations. |
-| [CopilotConnectors](#agentcapabilitiescopilotconnectors) | Search selected Copilot connectors for grounding information. |
+| [CodeInterpreter](#agentcapabilitiescodeinterpreter) | Generate and run Python code to solve math problems, analyze data, and create visualizations. |
+| [CopilotConnectors](#agentcapabilitiescopilotconnectors) | Search selected Microsoft 365 Copilot connectors for grounding information. |
 | [Dataverse](#agentcapabilitiesdataverse) | Search for information in Microsoft Dataverse environments and tables. |
 | [Email](#agentcapabilitiesemail) | Search through email messages in accessible mailboxes. |
 | [GraphicArt](#agentcapabilitiesgraphicart) | Create images and art based on text input. |
