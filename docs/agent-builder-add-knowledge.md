@@ -74,10 +74,6 @@ You can also select files or folders from the SharePoint file picker by choosing
 
 After you select a site, you can select several files and folders. Doing so adds the SharePoint file or folder to the agent's knowledge sources. When the same site includes multiple folders, select the button next to the folder name to view other folders.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-sharepoint-picker-folders.png" alt-text="SharePoint file picker":::
-
-You can also upload files into SharePoint by using the picker. The file appears in the same folder after it finishes uploading and is ready for use.
-
 ### File readiness
 
 When new files are uploaded to SharePoint, they can take up to several minutes to be ready for the agent to include in its response. You can still test your agent in the test pane if sources aren't ready. However, responses don't include information from the newly uploaded file until it's ready.
