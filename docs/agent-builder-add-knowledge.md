@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 12/01/2025
+ms.date: 12/04/2025
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -21,11 +21,13 @@ For more information about supported knowledge sources and licensing requirement
 To add knowledge sources to your agent:
 
 1. In Microsoft 365 Copilot, choose **Create agent**, and go to the **Configure** tab.
-2. In the **Knowledge** section, use one of the following methods to add knowledge sources:
-   - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
-   - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
-   - **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
-3. Select the items to include. You can add:
+
+1. In the **Knowledge** section, use one of the following methods to add knowledge sources:
+   - **Search bar** - Click the search bar and browse to select files, sites, chats, or meetings.
+   - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters) in the search box.
+   - **Upload file** - Choose the arrow icon to select files from your device or the cloud icon to add files from SharePoint sites.
+
+1. Select the items to include. You can add:
    - Up to four public website URLs.
    - SharePoint files, folders, or sites.
    - Up to five Teams chat URLs.
