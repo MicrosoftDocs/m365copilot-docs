@@ -22,9 +22,11 @@ zone_pivot_groups: graph-api-versions
 
 Represents a list of messages that are exchanged and involve AI.
 
-> [!IMPORTANT]
-> Access to AI interaction export data might require a Microsoft 365 Copilot add-on license, depending on your tenant configuration and the interaction sources you want to export. Make sure that the users in your tenant for whom you're querying interactions have Copilot licenses assigned, and that any required admin settings are enabled. For more information, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing) and [Set up Microsoft 365 Copilot and assign licenses](/copilot/microsoft-365/microsoft-365-copilot-setup).
->
+### Licensing and prerequisites
+
+Access to AI interaction export data might require a Microsoft 365 Copilot add-on license, depending on your tenant configuration and the interaction sources you want to export. Make sure that the users in your tenant for whom you're querying interactions have Copilot licenses assigned, and that any required admin settings are enabled. For more information, see [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing) and [Set up Microsoft 365 Copilot and assign licenses](/copilot/microsoft-365/microsoft-365-copilot-setup).
+
+> [!NOTE]
 > This API also requires appropriate **app permissions** and **admin consent**. For more information, see [Permissions](/microsoft-365-copilot/extensibility/api/ai-services/interaction-export/aiinteractionhistory-getallenterpriseinteractions?pivots=graph-preview#permissions).
 
 ### AI interactions returned
