@@ -1,6 +1,6 @@
 ---
 title: Create a Request for Proposal generator agent from a template
-description: Learn how to use the RFP Generator template in Microsoft 365 Copilot to create a declarative agent..
+description: Learn how to use the RFP Generator template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: article
@@ -12,20 +12,20 @@ ms.date: 12/01/2025
 
 You can use the Request for Proposal Generator (RFP Generator) template in Microsoft 365 Copilot to build an agent that helps create comprehensive, tailored responses to Requests for Proposals (RFPs).
 
-Agents built with the RFP Proposal Generator template are designed to streamline the RFP response process by drawing on your organization’s existing proposal content and templates. They ensure that first drafts of proposals are consistent with company standards and closely aligned to each prospective client’s needs.
+Agents built with the RFP Generator template are designed to streamline the RFP response process by drawing on your organization’s existing proposal content and templates. They ensure that first drafts of proposals are consistent with company standards and closely aligned to each prospective client’s needs.
 
-The RFP Proposal Generator automates much of the initial writing and pulling in relevant information from past successful proposals. This automation significantly reduces the time required to produce a strong draft. The result is a more efficient proposal workflow: faster turnaround on RFPs, more accurate and compelling content in every response, and ultimately a higher win rate for new deals.
+The RFP Generator automates much of the initial writing and pulling in relevant information from past successful proposals. This automation significantly reduces the time required to produce a strong draft. The result is a more efficient proposal workflow: faster turnaround on RFPs, more accurate and compelling content in every response, and ultimately a higher win rate for new deals.
 
 ## Prerequisites
 
-Before you begin working with the RFP Proposal Generator template, make sure you have:
+Before you begin working with the RFP Generator template, make sure you have:
 
 - A working knowledge of how to [build agents with Microsoft 365 Copilot](agent-builder-build-agents.md).
 - An understanding of how to [write effective instructions for declarative agents](declarative-agent-instructions.md).
 
 ## Capabilities
 
-RFP Proposal Generator agents are especially useful in sales and proposal development scenarios. The following table highlights common use cases and how the agent adds value in each situation.
+RFP Generator agents are especially useful in sales and proposal development scenarios. The following table highlights common use cases and how the agent adds value in each situation.
 
 | Scenario | Description |
 |---|---|
@@ -37,7 +37,7 @@ RFP Proposal Generator agents are especially useful in sales and proposal develo
 
 ## Extension opportunities
 
-You can further enhance the RFP Proposal Generator agent by integrating additional data and functionality. The following examples list some ways to extend the agent’s capabilities beyond its default setup:
+You can further enhance the RFP Generator agent by integrating additional data and functionality. The following examples list some ways to extend the agent’s capabilities beyond its default setup:
 
 - **Upload example files for context:** Users can attach RFP documents or appendices during interactions. The agent can reference these files to provide more targeted responses—for example, locating and answering a specific question directly from the uploaded RFP. This ensures outputs are tailored to the actual document. (See Microsoft’s guidance on file upload.)
 - **Connect to past proposal repositories (SharePoint):** Linking a SharePoint folder of previous RFP responses allows the agent to reuse proven content. If a new RFP asks about a familiar topic—like sustainability—the agent can retrieve and adapt a strong answer from past proposals, saving time and maintaining consistency. (Refer to Copilot Studio documentation for setup.)
@@ -48,7 +48,7 @@ You can further enhance the RFP Proposal Generator agent by integrating addition
 
 ## Limitations
 
-While the RFP Proposal Generator agent is a powerful tool, it’s important to understand the template's boundaries and apply the template responsibly:
+While the RFP Generator agent is a powerful tool, it’s important to understand the template's boundaries and apply the template responsibly:
 
 - **One interaction at a time:** The agent performs best when handling a single prompt or task. Avoid combining multiple requests in one query—for example, asking it to draft an answer, identify missing information, and summarize the RFP all at once. Breaking multiple questions into separate steps ensures more accurate and focused responses.
 - **Handling sensitive information:** RFPs often contain confidential company data—such as pricing, strategy, or client references. Any content you input or generate must comply with your organization’s data governance policies. The agent might draw from past proposals or templates, so it’s your responsibility to ensure no sensitive or client-specific information is inadvertently reused. Always review outputs for compliance and anonymize where necessary.
