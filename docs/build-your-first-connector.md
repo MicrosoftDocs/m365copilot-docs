@@ -77,7 +77,7 @@ Use the following steps to build your first connector.
         :::image type="content" source="assets/images/atk-copilot-connectors/include-connector-results.png" alt-text="The Include connector results button in the Microsoft 365 admin center":::
 
         > [!NOTE]
-        > To complete this step, you must be a Search Admin. This step enables results from the connector to be used by Microsoft 365 Copilot Chat. If you are only going to use this connector as a [knowledge source for a declarative agent](knowledge-sources.md#copilot-connectors), this step isn't necessary.
+        > To complete this step, you must be a Search Admin. This step enables results from the connector to be used by Microsoft 365 Copilot Chat. If you are only going to use this connector as a [knowledge source for a declarative agent](agent-builder-add-knowledge.md#copilot-connectors), this step isn't necessary.
 
 1. To verify that the items were indexed, choose the relevant connector name. Check the **Items indexed** field to see how many issues were indexed.
 

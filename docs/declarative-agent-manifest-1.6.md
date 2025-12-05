@@ -484,7 +484,7 @@ The folders object contains the following property.
 
 #### People object
 
-Indicates that the declarative agent can search for information about people in the organization. Refer to [People knowledge](knowledge-sources.md#people) for more details on the data returned by base People capability.
+Indicates that the declarative agent can search for information about people in the organization. Refer to [People knowledge](agent-builder-add-knowledge.md#people) for more details on the data returned by base People capability.
 
 The people object contains the following properties.
 

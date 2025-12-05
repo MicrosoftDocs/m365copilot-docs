@@ -99,9 +99,9 @@ In your feedback ticket, provide details about the issue you're facing and inclu
 
 You can find and copy these details in the Copilot Studio within the **Get support** section of the **Help** dropdown menu.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-get-support-1-updated.png" alt-text="Find the support details in the Copilot Studio":::
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-get-support-1.png" alt-text="Find the support details in the Copilot Studio":::
 
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in the Copilot Studio":::
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-get-support-2.png" alt-text="Copy the support details in the Copilot Studio":::
 
 ## Related content
 

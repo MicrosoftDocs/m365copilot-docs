@@ -199,7 +199,7 @@ items:
       - name: Image generator
         href: image-generator.md
       - name: Knowledge sources
-        href: knowledge-sources.md
+        href: agent-builder-knowledge.md
     - name: Enable user feedback for your agent
       href: declarative-agent-enable-feedback.md
     - name: Optimize content retrieval

@@ -117,4 +117,4 @@ To modify that image, the user can enter the prompt *Give me a black and white v
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Declarative agent manifest reference](declarative-agent-manifest-1.6.md)
 - [Add the image generator capability to your agent](image-generator.md)
-- [Add knowledge sources to your declarative agent](knowledge-sources.md)
+- [Add knowledge sources to your declarative agent](agent-builder-add-knowledge.md)

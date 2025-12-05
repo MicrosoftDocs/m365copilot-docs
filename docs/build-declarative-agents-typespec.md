@@ -122,7 +122,7 @@ The updated conversation starters will be available in your declarative agent af
 
 ## Add web content
 
-The [web search capability](knowledge-sources.md#web-and-scoped-web-search) enables agents to use the search index in Bing to respond to user prompts.
+The [web search capability](agent-builder-add-knowledge.md#web-and-scoped-web-search) enables agents to use the search index in Bing to respond to user prompts.
 
 1. Open the `main.tsp` file and add the `WebSearch` capability in the `MyAgent` namespace with the following content.
 
@@ -149,7 +149,7 @@ The declarative agent has access to web content to generate its answers after yo
 
 ## Add OneDrive and SharePoint content
 
-The [OneDrive and SharePoint capability](knowledge-sources.md#sharepoint-and-onedrive) enables the agent to use OneDrive and SharePoint content as knowledge.
+The [OneDrive and SharePoint capability](agent-builder-add-knowledge.md#sharepoint-and-onedrive) enables the agent to use OneDrive and SharePoint content as knowledge.
 
 1. Open the `main.tsp` file and add the `OneDriveAndSharePoint` capability in the `MyAgent` namespace with the following value, replacing `https://contoso.sharepoint.com/sites/ProductSupport` with a SharePoint site URL in your Microsoft 365 organization.
 
@@ -180,7 +180,7 @@ The declarative agent has access to OneDrive and SharePoint content to generate 
 
 ## Add Teams messages
 
-The [Teams messages capability](knowledge-sources.md#teams-messages) allows the  agent to use Teams channels, team, and meeting chat as knowledge.
+The [Teams messages capability](agent-builder-add-knowledge.mdteams-messages) allows the  agent to use Teams channels, team, and meeting chat as knowledge.
 
 1. Open the `main.tsp` file and add the `TeamsMessages` capability in the `MyAgent` namespace with the following value, replacing `https://teams.microsoft.com/l/team/...` with a Teams channel or team url from your organization.
 
@@ -210,7 +210,7 @@ The declarative agent has access to Teams data to generate its answers after you
 
 ## Add people knowledge
 
-The [people capability](knowledge-sources.md#people) allows you to scope your agent to answer questions about individuals in an organization.
+The [people capability](agent-builder-add-knowledge.md#people) allows you to scope your agent to answer questions about individuals in an organization.
 
 1. Open the `main.tsp` file and add the `People` capability in the `MyAgent` namespace with the following content.
 
@@ -232,7 +232,7 @@ The declarative agent has access to people knowledge after you reload the page.
 
 ## Add email knowledge
 
-The [email capability](knowledge-sources.md#email) allows you to scope your agent to use email from the user's mailbox or a shared mailbox as a knowledge source.
+The [email capability](kagent-builder-add-knowledge.md#email) allows you to scope your agent to use email from the user's mailbox or a shared mailbox as a knowledge source.
 
 1. Open the `main.tsp` file and add the `Email` capability in the `MyAgent` namespace with the following content.
 
