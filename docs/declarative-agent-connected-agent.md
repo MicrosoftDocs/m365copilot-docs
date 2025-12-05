@@ -13,7 +13,7 @@ ms.topic: article
 When users interact with a declarative agent in Microsoft 365 Copilot Chat, it can connect to other agents to retrieve additional information or perform actions. Users are informed of the agent-to-agent interaction but don't need to select connected agents themselves. Declarative agents must specify the other agents they can connect to their manifest definition.
 
 > [!NOTE]
-> Users must install each connected agent before they can be used. Consider [Deploying connected agents to users in the organization](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/agent-registry?view=o365-worldwide).
+> Users must install each connected agent before they can be used. Consider [Deploying connected agents to users in the organization](https://learn.microsoft.com/microsoft-365/admin/manage/agent-registry?view=o365-worldwide).
 
 ## When to use connected agents
 
