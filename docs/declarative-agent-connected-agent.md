@@ -2,7 +2,7 @@
 title: Connect to other agents from a declarative agent
 description: Learn how to connect to other declarative agents in Microsoft 365 apps with a declarative agent
 author: ajacks-msft
-ms.author: ajacks-msft
+ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 12/05/2025
 ms.topic: article
@@ -10,10 +10,10 @@ ms.topic: article
 
 # Connect to other agents from a declarative agent
 
-When users interact with a declarative agent in Microsoft 365 Copilot Chat, it can connect to other agents to retrieve additional information or perform actions. Users are informed of the agent-to-agent interaction but don't need to select connected agents themselves. Declarative agents must specify the other agents they can connect to their manifest definition.
+When users interact with a declarative agent in Microsoft 365 Copilot Chat, it can connect to other agents to retrieve additional information or perform actions. Users are informed of the agent-to-agent interaction but don't need to select connected agents themselves. Declarative agents must specify the other agents they can connect to in their manifest definition.
 
 > [!NOTE]
-> Users must install each connected agent before they can be used. Consider [Deploying connected agents to users in the organization](https://learn.microsoft.com/microsoft-365/admin/manage/agent-registry?view=o365-worldwide).
+> Users must install each connected agent before they can be used. Consider [Deploying connected agents to users in the organization](https://learn.microsoft.com/microsoft-365/admin/manage/agent-registry).
 
 ## When to use connected agents
 
@@ -29,13 +29,13 @@ Declarative Agents can make it easier to work with other development teams. Each
 
 ### Share agent capabilities to multiple scenarios
 
-An agent may be able to work with a set of documents and actions well, but still be difficult for users. Consider an agent that understands the tables and data of a relational database of customers and sales. This agent may be useful for both store supervisors to manage inventory and business analysts to report to executives. If this agent could be connected to an agent tailored to store supervisors with conversation starters and instructions, and also be connected to an agent tailored to business analysts. Both types of users may get more value out of using agents tailored to their scenario.
+An agent may be able to work with a set of documents and actions well, but still be difficult for users. Consider an agent that understands the tables and data of a relational database of customers and sales. This agent may be useful for both store supervisors to manage inventory and business analysts to report to executives. If this agent could be connected to an agent tailored to store supervisors with conversation starters and instructions, and also to an agent tailored to business analysts. Both types of users may get more value out of using agents tailored to their scenario.
 
 ## Enabling connected agents
 
-Connect to other declarative agents by including the agents' Title IDs in the existing [Declarative Agent's manifest](docs/declarative-agent-manifest-1.6.md).
+Connect to other declarative agents by including the agents' Title IDs in the existing [Declarative Agent's manifest](declarative-agent-manifest-1.6.md).
 
-First, obtain the Title ID of the agent to connect. The Title ID of a Declarative Agent is a string of a single letter, an underscore, and a GUID. It's available in the output of the Provisioning command in Agents Toolkit or in [developer mode](debugging-agents-copilot-studio.md).
+First, obtain the Title ID of the agent to connect. The Title ID of a Declarative Agent is a string of a single letter, an underscore, and a GUID. It's available in the output of the `Provision` command in the Microsoft 365 Agents Toolkit or in [developer mode](debugging-agents-copilot-studio.md).
 
 :::image type="content" source="assets/images/declarative-agents/developer-mode-title-id.png" alt-text="Screenshot of Microsoft 365 Copilot session where Copilot has returned a card with debugging information showing the Title ID":::
 
@@ -44,7 +44,7 @@ Add the Title ID to the [worker_agents](declarative-agent-manifest-1.6.md) prope
 ## Best practices
 
 Declarative agents choose what agents to connect to based on the connected agent's *name*, *description*, and *conversation_starters* in the manifest. The description should describe to both humans and agents what the agent can do. For example, consider this description for an agent that works with structured data about video game sales.
-``` text
+```text
 A comprehensive video game sales analytics agent that provides detailed insights into gaming industry data across multiple dimensions.
 Analyze top-performing games, consoles, genres, and publishers with regional breakdowns for North America, Europe, Japan, and global markets.
 Discover best-selling titles of all time, platform-specific performance metrics, genre popularity trends, and yearly sales patterns.
@@ -52,7 +52,7 @@ Compare sales figures across different publishers, identify market leaders by re
 Whether you need to understand which games dominated specific platforms, analyze publisher market share through visualizations like histograms, or track sales performance across different years and regions, this agent delivers comprehensive gaming market intelligence with precise data-driven answers.
 ```
 
-Conversation starters should inform both users and agents the types of prompts the agent can handle. Because users may use different terms for the same concept, consider varying the phrasing of conversation starters. For example when working with legal cases, good conversation starters may also use "matter," "case," "customer," and "issue" terms. Only the *text* field is used for connected agents.
+Conversation starters should inform both users and agents the types of prompts the agent can handle. Because users may use different terms for the same concept, consider varying the phrasing of conversation starters. For example, when working with legal cases, good conversation starters may also use "matter," "case," "customer," and "issue" terms. Only the *text* field is used for connected agents.
 
 ## Limitations
 
