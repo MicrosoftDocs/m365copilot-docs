@@ -114,7 +114,7 @@ You can access the agent management features in Microsoft 365 Copilot:
 To edit an agent:
 
 - Access the list of your agents as described in [Manage agents](#manage-agents).
-- Choose **Edit** (the pencil icon) from the **More options** menu.
+- Choose **Edit** from the **More options** menu.
 
 From there, you can use either the **Describe** tab to enter the changes you'd like to make using natural language, or use the **Configure** tab for more fine-tuned control in editing your agent's functionality and knowledge sources.
 
@@ -125,15 +125,17 @@ Changes made to agents are saved automatically. However, your changes won't be v
 
 ### Delete your agent
 
-You can delete agents you create. Once you delete an agent, however, you won't be able to use it and it won't be available the users you shared it with. Only the user who created an agent can delete it.
+You can delete any agent that you create. However, only the user who created an agent can delete it.
 
 >[!IMPORTANT]
-> Deleting an agent is permanent and can't be reversed.
+> Deleting an agent is permanent and can't be reversed. Once you delete an agent, you won't be able to use it and it won't be available the users you shared it with.
 
-To delete an agent:
+**To delete an agent:**
 
-- Access the list of your agents using one of the methods described in [Manage agents](#manage-agents).
-- Select the ellipses (**...**) and then choose **Delete** (the garbage can icon).
+- Access the list of your agents as described in [Manage agents](#manage-agents).
+- Choose **Edit** from the **More options** menu.
+- Select the **More options** menu in the upper-right corner, and then select **Delete** from the context menu.
+    :::image type="content" source="assets/images/agent-builder-screenshots/delete-agent.png" alt-text="Screenshot of delete agent option.":::
 
 ### Reassign ownership of an agent
 
