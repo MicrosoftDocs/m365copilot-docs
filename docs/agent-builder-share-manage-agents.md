@@ -99,23 +99,12 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ## Manage agents
 
-You can access the agent management features in Microsoft 365 Copilot in three ways.
+You can access the agent management features in Microsoft 365 Copilot: 
 
-To manage an agent you recently accessed, select the **More options** ellipses (**...**) in the left pane next to the name of the agent you want to manage.
-
-To manage an agent that you haven't accessed recently, either:
-
-- Select **All agents** in the left pane.
-- In the **Agent Store**, under **Your agents**, choose **See more** and then select the ellipses (**...**), next to the name of the agent you want to manage.
-
-:::image type="content" source="assets/images/manage-agent-agent-store-see-more.png" alt-text="Screenshot of Agent Store":::
-
-Or:*
-
-- Select **Create agents** in the left pane and then select the **My agents** tab.
-- On the **My agents** tab, select the **More options** ellipses (**...**) next to the name of the agent you want to manage.
-
-:::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of Microsoft 365 Copilot.":::
+   1. Expand the left navigation pane and select **All agents**.
+   1. Hover over the agent you want to manage and right-click the **More options** ellipses (**...**). If you don't see the agent you want to update, select **See more** to expand the list.
+   1. Select the appropriate option from the context menu menu.
+    :::image type="content" source="assets/images/agent-builder-screenshots/manage-agent-teams-more-options.png" alt-text="Screenshot of Agent Store":::
 
 > [!NOTE]
 > Only the agents you've created show in the **My agents** list. Shared agents from other users aren't listed.
