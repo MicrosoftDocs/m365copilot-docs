@@ -77,6 +77,7 @@ To deploy an agent manually:
 1. Highlight the agent you want to download and choose the ellipses.
 :::image type="content" source="assets/images/my-agents-more-options.png" alt-text="Screenshot of the *More options* ellipses for the highlighted agent.":::
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
+:::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-2-download.png" alt-text="Screenshot of the *Download .zip file* option":::
 1. [Sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 > [!NOTE]
