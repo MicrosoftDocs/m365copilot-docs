@@ -34,6 +34,8 @@ The following table highlights the key differences between publishing and sharin
 
 To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-share.png" alt-text="Auto-sharing knowledge sources":::
+
 > [!NOTE]
 > Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
 
@@ -71,12 +73,13 @@ Microsoft 365 Copilot provides an option to download a ZIP package for manual de
 
 To deploy an agent manually:
 
-1. In Microsoft 365 Copilot, open the left navigation pane and select **Create agent**.
-1. At the top of the central pane, choose **My agents**.
-:::image type="content" source="assets/images/download-zip-my-agents.png" alt-text="Screenshot of the *My agents* option in the *Create agent* pane":::
+1. In Microsoft 365 Copilot, open the left navigation pane and select **New agent**.
+1. At the top of the central pane, choose **Copilot Studio** and then select **View my agents**.
+:::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-1-view-agents.png" alt-text="Screenshot of the *My agents* option":::
 1. Highlight the agent you want to download and choose the ellipses.
-:::image type="content" source="assets/images/copilot-studio-lite-more-options.png" alt-text="Screenshot of the *More options* ellipses for the highlighted agent.":::
+:::image type="content" source="assets/images/my-agents-more-options.png" alt-text="Screenshot of the *More options* ellipses for the highlighted agent.":::
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
+:::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-2-download.png" alt-text="Screenshot of the *Download .zip file* option":::
 1. [Sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 > [!NOTE]
@@ -94,37 +97,26 @@ You can select which SharePoint folders and files to share. Sharing only works w
 
 When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Manage user permissions to access file and folders directly through SharePoint.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
-
 ## Manage agents
 
-You can access the agent management features in Microsoft 365 Copilot in three ways.
+You can access the agent management features in Microsoft 365 Copilot: 
 
-To manage an agent you recently accessed, select the **More options** ellipses (**...**) in the left pane next to the name of the agent you want to manage.
-
-To manage an agent that you haven't accessed recently, either:
-
-- Select **All agents** in the left pane.
-- In the **Agent Store**, under **Your agents**, choose **See more** and then select the ellipses (**...**), next to the name of the agent you want to manage.
-
-:::image type="content" source="assets/images/manage-agent-agent-store-see-more.png" alt-text="Screenshot of Agent Store":::
-
-Or:*
-
-- Select **Create agents** in the left pane and then select the **My agents** tab.
-- On the **My agents** tab, select the **More options** ellipses (**...**) next to the name of the agent you want to manage.
-
-:::image type="content" source="assets/images/manage-agent-from-create-agent.png" alt-text="The 'My agents' tab on the Create Agent page of Microsoft 365 Copilot.":::
+   1. Expand the left navigation pane and select **All agents**.
+   1. Hover over the agent you want to manage and right-click the **More options** ellipses (**...**). If you don't see the agent you want to update, select **See more** to expand the list.
+   1. Select the appropriate option from the context menu.
+    :::image type="content" source="assets/images/agent-builder-screenshots/manage-agent-more-options.png" alt-text="Screenshot of agent management context menu":::
 
 > [!NOTE]
 > Only the agents you've created show in the **My agents** list. Shared agents from other users aren't listed.
 
 ### Edit an agent
 
-To edit an agent:
+You can edit your agents if you discover that changes are required after you've shared it.
 
-- Access the list of your agents using one of the methods described in [Manage agents](#manage-agents).
-- Choose **Edit** (the pencil icon) from the **More options** menu.
+**To edit an agent:**
+
+- Access the list of your agents as described in [Manage agents](#manage-agents).
+- Choose **Edit** from the **More options** menu.
 
 From there, you can use either the **Describe** tab to enter the changes you'd like to make using natural language, or use the **Configure** tab for more fine-tuned control in editing your agent's functionality and knowledge sources.
 
@@ -135,15 +127,16 @@ Changes made to agents are saved automatically. However, your changes won't be v
 
 ### Delete your agent
 
-You can delete agents you create. Once you delete an agent, however, you won't be able to use it and it won't be available the users you shared it with. Only the user who created an agent can delete it.
+Agents can be deleted, even after they've been shared. However, only the user who created an agent can delete it.
 
 >[!IMPORTANT]
-> Deleting an agent is permanent and can't be reversed.
+> Deleting an agent is permanent and can't be reversed. Once you delete an agent, you won't be able to use it and it won't be available the users you shared it with.
 
-To delete an agent:
+**To delete an agent:**
 
-- Access the list of your agents using one of the methods described in [Manage agents](#manage-agents).
-- Select the ellipses (**...**) and then choose **Delete** (the garbage can icon).
+- Access the list of your agents as described in [Manage agents](#manage-agents).
+- Select the **More options** menu in the upper-right corner, and then select **Delete** from the context menu.
+    :::image type="content" source="assets/images/agent-builder-screenshots/delete-agent.png" alt-text="Screenshot of delete agent option.":::
 
 ### Reassign ownership of an agent
 
