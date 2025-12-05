@@ -39,7 +39,7 @@ First, obtain the Title ID of the agent to connect. The Title ID of a Declarativ
 
 :::image type="content" source="assets/images/declarative-agents/developer-mode-title-id.png" alt-text="Screenshot of Microsoft 365 Copilot session where Copilot has returned a card with debugging information showing the Title ID":::
 
-Add the Title ID to the [worker_agents](docs/declarative-agent-manifest-1.6.md) property as the *id*. The worker_agents property was added in Declarative agent schema 1.6.
+Add the Title ID to the [worker_agents](declarative-agent-manifest-1.6.md) property as the *id*. The worker_agents property was added in Declarative agent schema 1.6.
 
 ## Best practices
 
