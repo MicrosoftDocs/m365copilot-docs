@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Add knowledge sources to a declarative agent created with Microsoft 365 Agents Toolkit
 
-You can control the knowledge available to your agent for generating responses with knowledge sources from the web and your Microsoft 365 organizational data. For a full list of the knowledge sources available, see [Add knowledge sources to your declarative agent](agent-builder-add-knowledge.md).
+You can control the knowledge available to your agent for generating responses with knowledge sources from the web and your Microsoft 365 organizational data. For a full list of the knowledge sources available, see [Add knowledge sources to your declarative agent](knowledge-sources.md).
 
 > [!IMPORTANT]
 > This guide assumes you have completed the [Create declarative agents using Microsoft 365 Agents Toolkit](build-declarative-agents.md) tutorial.

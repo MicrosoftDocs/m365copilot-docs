@@ -56,7 +56,7 @@ The Microsoft 365 Copilot Chat API (preview) enables you to programmatically eng
 
 ### Use Teams meetings as a knowledge source in Microsoft 365 Copilot
 
-Teams meetings are now available as a knowledge source when you use Microsoft 365 Copilot to create agents. For more information, see [Add knowledge sources to your declarative agent](agent-builder-add-knowledge.md).
+Teams meetings are now available as a knowledge source when you use Microsoft 365 Copilot to create agents. For more information, see [Add knowledge sources to your declarative agent](knowledge-sources.md).
 
 ## July 2025
 
@@ -154,7 +154,7 @@ A new version of the declarative agent manifest schema is available. [Declarativ
 
 ### Email as knowledge
 
-Email is now available as a knowledge source for agents build with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](agent-builder-add-knowledge.md#outlook-emails).
+Email is now available as a knowledge source for agents build with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](knowledge-sources.md#email)).
 
 ### Copilot Studio agent templates
 
@@ -171,8 +171,8 @@ Declarative agents in the Copilot experience in Word can [interact with the open
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.3](declarative-agent-manifest-1.3.md) adds support for the following capabilities:
 
 - Dataverse knowledge
-- [Teams messages as knowledge](agent-builder-add-knowledge.md#microsoft-teams-data)
-- [People knowledge](agent-builder-add-knowledge.md#people-data)
+- [Teams messages as knowledge](knowledge-sources.md#teams-messages)
+- [People knowledge](knowledge-sources.md#people)
 
 ## February 2025
 
