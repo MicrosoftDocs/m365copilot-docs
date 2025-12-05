@@ -149,7 +149,7 @@ The declarative agent has access to web content to generate its answers after yo
 
 ## Add OneDrive and SharePoint content
 
-The [OneDrive and SharePoint capability](knowledge-sources.md#sharepoint-and-onedrive) enables the agent to use OneDrive and SharePoint content as knowledge.
+The [SharePoint capability](knowledge-sources.md#sharepoint-and-onedrive) enables the agent to use OneDrive and SharePoint content as knowledge.
 
 1. Open the `main.tsp` file and add the `OneDriveAndSharePoint` capability in the `MyAgent` namespace with the following value, replacing `https://contoso.sharepoint.com/sites/ProductSupport` with a SharePoint site URL in your Microsoft 365 organization.
 
@@ -210,7 +210,7 @@ The declarative agent has access to Teams data to generate its answers after you
 
 ## Add people knowledge
 
-The [people capability](knowledge-sources.md#people) allows you to scope your agent to answer questions about individuals in an organization.
+The [people capability](knowledge-sources.md#people)) allows you to scope your agent to answer questions about individuals in an organization.
 
 1. Open the `main.tsp` file and add the `People` capability in the `MyAgent` namespace with the following content.
 

@@ -170,7 +170,7 @@ Declarative agents in the Copilot experience in Word can [interact with the open
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.3](declarative-agent-manifest-1.3.md) adds support for the following capabilities:
 
-- [Dataverse knowledge](knowledge-sources.md#dataverse)
+- Dataverse knowledge
 - [Teams messages as knowledge](knowledge-sources.md#teams-messages)
 - [People knowledge](knowledge-sources.md#people)
 
