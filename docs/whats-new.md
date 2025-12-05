@@ -154,7 +154,7 @@ A new version of the declarative agent manifest schema is available. [Declarativ
 
 ### Email as knowledge
 
-Email is now available as a knowledge source for agents build with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](agent-builder-add-knowledge.md#email).
+Email is now available as a knowledge source for agents build with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](agent-builder-add-knowledge.md#outlook-emails).
 
 ### Copilot Studio agent templates
 
@@ -170,7 +170,7 @@ Declarative agents in the Copilot experience in Word can [interact with the open
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.3](declarative-agent-manifest-1.3.md) adds support for the following capabilities:
 
-- [Dataverse knowledge](agent-builder-add-knowledge.md#dataverse)
+- Dataverse knowledge
 - [Teams messages as knowledge](agent-builder-add-knowledge.md#microsoft-teams-data)
 - [People knowledge](agent-builder-add-knowledge.md#people-data)
 
