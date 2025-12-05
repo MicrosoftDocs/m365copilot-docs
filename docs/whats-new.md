@@ -154,7 +154,7 @@ A new version of the declarative agent manifest schema is available. [Declarativ
 
 ### Email as knowledge
 
-Email is now available as a knowledge source for agents build with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](knowledge-sources.md#email)).
+Email is now available as a knowledge source for agents build with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](knowledge-sources.md#email).
 
 ### Copilot Studio agent templates
 
