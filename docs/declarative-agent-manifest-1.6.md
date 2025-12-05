@@ -729,6 +729,9 @@ An optional JSON object that specifies the Microsoft Purview sensitivity label f
 
 Identifies a declarative agent that can be used by this agent. See [Connect to other agents](declarative-agent-connected-agent.md) for usage and best practices.
 
+> [!NOTE]
+> This capability is in preview.
+
 The worker agent object contains the following property.
 
 | Property | Type   | Description |
