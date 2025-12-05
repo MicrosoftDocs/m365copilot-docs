@@ -210,7 +210,7 @@ The declarative agent has access to Teams data to generate its answers after you
 
 ## Add people knowledge
 
-The [people capability](agent-builder-add-knowledge.md#people-data) allows you to scope your agent to answer questions about individuals in an organization.
+The [people capability](knowledge-sources.md#people)) allows you to scope your agent to answer questions about individuals in an organization.
 
 1. Open the `main.tsp` file and add the `People` capability in the `MyAgent` namespace with the following content.
 
