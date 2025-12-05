@@ -104,7 +104,7 @@ You can access the agent management features in Microsoft 365 Copilot:
    1. Expand the left navigation pane and select **All agents**.
    1. Hover over the agent you want to manage and right-click the **More options** ellipses (**...**). If you don't see the agent you want to update, select **See more** to expand the list.
    1. Select the appropriate option from the context menu menu.
-    :::image type="content" source="assets/images/agent-builder-screenshots/manage-agent-teams-more-options.png" alt-text="Screenshot of Agent Store":::
+    :::image type="content" source="assets/images/agent-builder-screenshots/manage-agent-more-options.png" alt-text="Screenshot of agent management context menu":::
 
 > [!NOTE]
 > Only the agents you've created show in the **My agents** list. Shared agents from other users aren't listed.
@@ -113,7 +113,7 @@ You can access the agent management features in Microsoft 365 Copilot:
 
 To edit an agent:
 
-- Access the list of your agents using one of the methods described in [Manage agents](#manage-agents).
+- Access the list of your agents as described in [Manage agents](#manage-agents).
 - Choose **Edit** (the pencil icon) from the **More options** menu.
 
 From there, you can use either the **Describe** tab to enter the changes you'd like to make using natural language, or use the **Configure** tab for more fine-tuned control in editing your agent's functionality and knowledge sources.
