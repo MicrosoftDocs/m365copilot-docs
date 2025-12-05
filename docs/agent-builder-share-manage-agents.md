@@ -135,7 +135,6 @@ Agents can be deleted, even after they've been shared.  However, only the user w
 **To delete an agent:**
 
 - Access the list of your agents as described in [Manage agents](#manage-agents).
-- Choose **Edit** from the **More options** menu.
 - Select the **More options** menu in the upper-right corner, and then select **Delete** from the context menu.
     :::image type="content" source="assets/images/agent-builder-screenshots/delete-agent.png" alt-text="Screenshot of delete agent option.":::
 
