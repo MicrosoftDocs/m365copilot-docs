@@ -34,6 +34,8 @@ The following table highlights the key differences between publishing and sharin
 
 To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
+
 > [!NOTE]
 > Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
 
@@ -94,8 +96,6 @@ You can select which SharePoint folders and files to share. Sharing only works w
 > Only the files and folders you specifically add to the agent can be shared automatically. Full access to SharePoint sites isn't automatically available to people you share your agent with. A site administrator must grant users permission via the site settings.
 
 When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Manage user permissions to access file and folders directly through SharePoint.
-
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-auto-share.png" alt-text="Auto-sharing knowledge sources":::
 
 ## Manage agents
 
