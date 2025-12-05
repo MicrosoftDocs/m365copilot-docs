@@ -18,7 +18,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### People knowledge source in Copilot Studio lite experience
 
-The People knowledge source is now available in the Copilot Studio lite experience, allowing agents to answer questions about individuals in your organization. For more information, see [People data](agent-builder-add-knowledge.md#people-data) and [Add knowledge sources to your declarative agent](agent-builder-add-knowledge.md#people).
+The People knowledge source is now available in the Copilot Studio lite experience, allowing agents to answer questions about individuals in your organization. For more information, [Add knowledge sources to your declarative agent](agent-builder-add-knowledge.md#people-data).
 
 ### Agent Builder in Microsoft 365 Copilot is available in GCCM
 
@@ -170,9 +170,9 @@ Declarative agents in the Copilot experience in Word can [interact with the open
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.3](declarative-agent-manifest-1.3.md) adds support for the following capabilities:
 
-- [Dataverse knowledge](agent-builder-add-knowledge.md.md#dataverse)
-- [Teams messages as knowledge](agent-builder-add-knowledge.md#teams-messages)
-- [People knowledge](agent-builder-add-knowledge.md#people)
+- [Dataverse knowledge](agent-builder-add-knowledge.md#dataverse)
+- [Teams messages as knowledge](agent-builder-add-knowledge.md#microsoft-teams-data)
+- [People knowledge](agent-builder-add-knowledge.md#people-data)
 
 ## February 2025
 
