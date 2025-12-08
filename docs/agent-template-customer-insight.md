@@ -1,6 +1,6 @@
 ---
 title: Create a Customer Insights agent from a template
-description: Learn how to use the Insight Assistant template in the Copilot Studio lite experience to create a declarative agent.
+description: Learn how to use the Insight Assistant template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: article
@@ -10,7 +10,7 @@ ms.date: 09/11/2025
 
 # Use the Customer Insight Assistant template to build an agent
 
-You can use the Customer Insight Assistant template in the lite experience of Copilot Studio to build agents that help teams understand their customers by providing relevant information and insights. Agents based on this template deliver detailed customer profiles, including the customer's main industry, top products or services, corporate ethos, key priorities, main business units, senior leadership, main competitors, and industry trends. If the customer is publicly traded, the agent provides the stock symbol and stock price over the past year.
+You can use the Customer Insight Assistant template in Microsoft 365 Copilot to build agents that help teams understand their customers by providing relevant information and insights. Agents based on this template deliver detailed customer profiles, including the customer's main industry, top products or services, corporate ethos, key priorities, main business units, senior leadership, main competitors, and industry trends. If the customer is publicly traded, the agent provides the stock symbol and stock price over the past year.
 
 ## Prerequisites
 

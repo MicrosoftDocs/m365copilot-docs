@@ -1,6 +1,6 @@
 ---
 title: Create a Learning Coach agent from a template
-description: Learn how to create a declarative agent in the Copilot Studio using the Learning Coach template.
+description: Learn how to use the Learning Coach template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: article
@@ -10,7 +10,7 @@ ms.date: 09/11/2025
 
 # Use the Learning Coach template to build an agent
 
-You can use the Learning Coach template in the lite experience of Copilot Studio to build an agent that helps users understand complex topics by breaking them down into simple, intermediate, and detailed summaries. Learning Coach agents create structured learning plans and help users practice skills and prepare for tests. Theses agents provide tailored exercises, guide optimal learning processes, and offer interactive language practice.
+You can use the Learning Coach template in Microsoft 365 Copilot to build an agent that helps users understand complex topics by breaking them down into simple, intermediate, and detailed summaries. Learning Coach agents create structured learning plans and help users practice skills and prepare for tests. Theses agents provide tailored exercises, guide optimal learning processes, and offer interactive language practice.
 
 To try a Learning Coach, [install the Learning Coach agent](https://teams.microsoft.com/l/app/78079743-a11b-45d0-99cb-a69d37717373?source=share-app-dialog).
 
