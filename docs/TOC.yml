@@ -169,8 +169,6 @@ items:
         href: agent-builder-tuned-models.md
       - name: Add knowledge sources
         href: agent-builder-add-knowledge.md
-      - name: Connect to other agents
-        href: declarative-agent-connected-agent.md
       - name: Share and manage agents
         href: agent-builder-share-manage-agents.md
       - name: Availability and language support
@@ -190,6 +188,8 @@ items:
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
       href: instructions-api-plugins.md
+    - name: Connect to other agents
+      href: declarative-agent-connected-agent.md
     - name: Add capabilities and knowledge sources
       items:
       - name: Code interpreter
