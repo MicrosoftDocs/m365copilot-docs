@@ -15,6 +15,9 @@ The Microsoft 365 Copilot APIs enable you to securely access Microsoft 365 Copil
 
 Enterprise developers face a critical challenge today: how to harness the power of AI while maintaining secure access to organizational knowledge, without compromising compliance or governance. Traditional approaches force you to build complex AI systems from scratch and extract sensitive data into external sources. The Microsoft 365 Copilot APIs offer access to production-ready AI capabilities that work directly with your Microsoft 365 data.
 
+By accessing or using the Microsoft 365 Copilot APIs, you are agreeing to the [Microsoft 365 Copilot APIs Terms of Use](copilot-apis-terms.md).
+
+
 ## Copilot API capabilities
 
 The Copilot APIs provide a comprehensive set of capabilities that enable you to build AI-powered applications grounded in enterprise data.
