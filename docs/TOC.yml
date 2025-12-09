@@ -306,6 +306,8 @@ items:
     href: copilot-apis-overview.md
   - name: Use client libraries
     href: sdks/api-libraries.md
+  - name: Terms of use
+    href: copilot-apis-terms.md
   - name: API reference
     href: api/toc.yml
 - name: Extend agents at scale with Agent 365 (early access preview)

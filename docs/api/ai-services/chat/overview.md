@@ -41,7 +41,7 @@ The API supports natural language prompts and uses the Microsoft 365 Copilot sta
 
 The Chat API is available at no extra cost to users with a Microsoft 365 Copilot add-on license. Support for users without a Microsoft 365 Copilot add-on license isn't currently available.
 
-By accessing or using the Microsoft 365 Copilot Chat API, you are agreeing to the [Microsoft 365 Copilot APIs Terms of Use](../../../includes/copilot-apis-terms.md).
+By accessing or using the Microsoft 365 Copilot Chat API, you are agreeing to the [Microsoft 365 Copilot APIs Terms of Use](../../copilot-apis-terms.md).
 
 ## Known limitations
 
