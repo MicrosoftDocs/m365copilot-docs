@@ -5,7 +5,7 @@ items:
   href: search/toc.yml
 - name: Meeting insights API (preview)
   href: meeting-insights/toc.yml
-- name: Change notifications API (preview)
+- name: Change notifications API
   href: change-notifications/toc.yml
 - name: Interaction export API
   href: interaction-export/toc.yml
