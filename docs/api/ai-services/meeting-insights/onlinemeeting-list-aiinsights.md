@@ -78,7 +78,7 @@ Don't supply a request body for this method.
 If successful, this method returns a `200 OK` response code and a collection of [callAiInsight](resources/callaiinsight.md) objects in the response body.
 
 > [!NOTE]
-> The list API output has a default limit of 20 items. However, some meetings may include more AI insights. To retrieve all available data for these meetings, you can keep calling the API using the @odata.nextLink property found in response, and continue to call the API until this property is no longer provided. For more details on the @odata.nextLink property, [please see the paging documentation](/graph/paging).
+> The list API output has a default limit of 20 items. However, some meetings may include more AI insights. To retrieve all available data for these meetings, you can keep calling the API using the @odata.nextLink property found in response, and continue to call the API until this property is no longer provided. For more information, see [Paging](/graph/paging).
 
 ## Example
 
