@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 11/12/2025
+ms.date: 12/10/2025
 ms.topic: overview
 ---
 
@@ -13,6 +13,12 @@ ms.topic: overview
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
+
+## December 2025
+
+### Teams meeting AI insights APIs now generally available
+
+The Teams meeting AI insights APIs are now generally available in Microsoft Graph v1.0. These APIs enable you to retrieve AI-generated insights from Teams meetings, including action items, meeting notes, and mentions. For more information, see [List aiInsights](api/ai-services/meeting-insights/onlinemeeting-list-aiinsights.md) and [Get callAiInsight](api/ai-services/meeting-insights/callaiinsight-get.md).
 
 ## November 2025
 
