@@ -2,6 +2,8 @@
 title: Terms of use
 description: Microsoft 365 Copilot APIs PREVIEW Terms of Use
 ms.topic: article
+author: JasonFriedman10
+ms.author: jfriedman
 ms.date: 12/09/2025
 ms.localizationpriority: medium
 doc_type: conceptualPageType
@@ -29,11 +31,11 @@ b) "Microsoft 365 Copilot APIs" means (i) any form of machine accessible applica
 
 c) The Microsoft 365 Copilot APIs include:
 
-   a. REST Interface: [Microsoft 365 Copilot Retrieval API Overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview), [Microsoft 365 Copilot Search API (Preview) Overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/ai-services/search/overview), [Meeting insights API (Preview)](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/ai-services/meeting-insights/resources/callaiinsight), [Change Notifications API (Preview)](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/ai-services/change-notifications/aiinteraction-changenotifications), [Interaction export API](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/ai-services/interaction-export/resources/aiinteractionhistory?pivots=graph-v1), [Microsoft 365 Copilot Chat API (Preview) Overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/ai-services/chat/overview), [Copilot admin limited mode API](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/admin-settings/resources/copilotadminlimitedmode?pivots=graph-v1)
+   a. REST Interface: [Microsoft 365 Copilot Retrieval API Overview](api/ai-services/retrieval/overview.md), [Microsoft 365 Copilot Search API (Preview) Overview](api/ai-services/search/overview.md), [Meeting insights API (Preview)](api/ai-services/meeting-insights/resources/callaiinsight.md), [Change Notifications API (Preview)](api/ai-services/change-notifications/aiinteraction-changenotifications.md), [Interaction export API](api/ai-services/interaction-export/resources/aiinteractionhistory.md?pivots=graph-v1), [Microsoft 365 Copilot Chat API (Preview) Overview](api/ai-services/chat/overview.md), [Copilot admin limited mode API](api/admin-settings/resources/copilotadminlimitedmode.md?pivots=graph-v1)
 
    b. M365 Agent SDK: [microsoft/Agents: The Microsoft 365 Agent SDK simplifies building full stack, multichannel, trusted agents for platforms including M365, Teams, Copilot Studio, and Webchat.](https://github.com/microsoft/Agents) available under the [microsoft/Agents: The Microsoft 365 Agent SDK simplifies building full stack, multichannel, trusted agents for platforms including M365, Teams, Copilot Studio, and Webchat.](https://github.com/microsoft/Agents)namespace Microsoft.Agents.M365Copilot.Beta.Copilot.Retrieval
 
-   c. M365 Copilot APIs Client Libraries: [Microsoft 365 Copilot APIs Client Libraries (Preview) | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/sdks/api-libraries?source=recommendations&tabs=csharp)
+   c. M365 Copilot APIs Client Libraries: [Microsoft 365 Copilot APIs Client Libraries (Preview)](sdks/api-libraries.md?source=recommendations&tabs=csharp)
 
 ## 1. Application Registration
 
