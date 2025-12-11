@@ -11,7 +11,7 @@ doc_type: conceptualPageType
 
 # Microsoft 365 Copilot APIs PREVIEW Terms of Use
 
-Last Updated: November 2025
+Last Updated: December 2025
 
 Thank you for developing with Microsoft!
 
