@@ -1,6 +1,6 @@
 ---
 title: Terms of use
-description: Microsoft 365 Copilot APIs PREVIEW Terms of Use
+description: Read the preview Terms of Use for the Microsoft 365 Copilot APIs.
 ms.topic: article
 author: JasonFriedman10
 ms.author: jfriedman
