@@ -867,7 +867,7 @@ In this example, the query is filtered on items with Megan Bowen as the author.
 In this example, the query is filtered on items modified between July 22, 2024 and January 8, 2025.
 
 ```json
-"filterExpression": "LastModifiedTime >= 2024-07-22 AND LastModifiedTime <= 2025-01-08"
+"filterExpression": "LastModifiedTime>= 2024-07-22 AND LastModifiedTime<= 2025-01-08"
 ```
 
 #### Filter SharePoint results using the `FileExtension` property
