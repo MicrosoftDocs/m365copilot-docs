@@ -1,7 +1,7 @@
 ---
 title: Create declarative agents using Microsoft 365 Agents Toolkit
 description: Learn how to build a declarative agent for Microsoft 365 Copilot using Microsoft 365 Agents Toolkit.
-ms.date: 07/21/2025
+ms.date: 12/11/2025
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -66,6 +66,11 @@ Start by creating a basic declarative agent.
 1. In the new Visual Studio Code window that opens, select **Microsoft 365 Agents Toolkit**, then select **Provision** in the **Lifecycle** pane.
 
     :::image type="content" source="assets/images/build-da/ttk/provision-agent.png" alt-text="A screenshot of the Provision option in the Lifecycle pane of Agents Toolkit":::
+
+> [!NOTE]
+> Provisioning isn't available in Government Community Cloud High (GCC High) environments. If your tenant is in a GCC High environment, you have the following options:
+> - Validate the manifest files locally, package your agent as a zip file, and deploy the agent in a tenant that has a Microsoft 365 Copilot license.
+> - Provide the agent zip package to your admin and have them deploy it to your Microsoft 365 account.
 
 > [!NOTE]
 > If you prefer to create an agent based on an existing sample, select **View Samples** in Step 2, rather than **Create a New Agent/App**.
