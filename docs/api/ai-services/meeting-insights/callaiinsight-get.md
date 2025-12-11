@@ -47,18 +47,18 @@ To use application permissions for this API, tenant administrators must create a
 
 Get a single set of AI insights for an online meeting.
 
-:::zone pivot="graph-preview"
-
-``` http
-GET https://graph.microsoft.com/beta/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
-```
-
-:::zone-end
-
 :::zone pivot="graph-v1"
 
 ``` http
 GET https://graph.microsoft.com/v1.0/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
+``` http
+GET https://graph.microsoft.com/beta/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
 ```
 
 :::zone-end
@@ -91,6 +91,14 @@ The following example shows how to get a single set of AI insights for an online
 
 The following example shows a request. The IDs in the example have been shortened for readability.
 
+:::zone pivot="graph-v1"
+
+``` http
+GET https://graph.microsoft.com/v1.0/copilot/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/YTc3OT.../aiInsights/Z2HWbT...
+```
+
+:::zone-end
+
 :::zone pivot="graph-preview"
 
 ``` http
@@ -99,24 +107,18 @@ GET https://graph.microsoft.com/beta/copilot/users/b935e675-5e67-48b9-8d45-249d5
 
 :::zone-end
 
-:::zone pivot="graph-v1"
-
-GET https://graph.microsoft.com/v1.0/copilot/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/YTc3OT.../aiInsights/Z2HWbT...
-
-:::zone-end
-
 #### Response
 
 The following example shows the response. The response object shown here might be shortened for readability.
 
-:::zone pivot="graph-preview"
+:::zone pivot="graph-v1"
 
 ``` http
 HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3OT...')/aiInsights/$entity",
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3OT...')/aiInsights/$entity",
   "id": "Z2HWbT...",
   "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
   "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
@@ -138,12 +140,12 @@ Content-type: application/json
     {
       "title": "Finalize Project Timeline",
       "text": "Review and finalize the project timeline to ensure alignment with stakeholder expectations and resource availability.",
-      "ownerDisplayName": "Bella Smith",
+      "ownerDisplayName": "Bella Smith"
     },
     {
       "title": "Prepare Presentation Draft",
       "text": "Draft a presentation outlining project goals, objectives, and progress updates for review by the project stakeholders.",
-      "ownerDisplayName": "Bella Smith",
+      "ownerDisplayName": "Bella Smith"
     },
   ],
   "viewpoint": {
@@ -185,14 +187,14 @@ Content-type: application/json
 
 :::zone-end
 
-:::zone pivot="graph-v1"
+:::zone pivot="graph-preview"
 
 ``` http
 HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3OT...')/aiInsights/$entity",
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3OT...')/aiInsights/$entity",
   "id": "Z2HWbT...",
   "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
   "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
@@ -214,12 +216,12 @@ Content-type: application/json
     {
       "title": "Finalize Project Timeline",
       "text": "Review and finalize the project timeline to ensure alignment with stakeholder expectations and resource availability.",
-      "ownerDisplayName": "Bella Smith",
+      "ownerDisplayName": "Bella Smith"
     },
     {
       "title": "Prepare Presentation Draft",
       "text": "Draft a presentation outlining project goals, objectives, and progress updates for review by the project stakeholders.",
-      "ownerDisplayName": "Bella Smith",
+      "ownerDisplayName": "Bella Smith"
     },
   ],
   "viewpoint": {

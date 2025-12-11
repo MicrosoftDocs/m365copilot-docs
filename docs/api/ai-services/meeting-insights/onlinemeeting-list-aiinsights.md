@@ -43,18 +43,18 @@ To use application permissions for this API, tenant administrators must create a
 
 ## HTTP request
 
-:::zone pivot="graph-preview"
-
-``` http
-GET https://graph.microsoft.com/beta/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
-```
-
-:::zone-end
-
 :::zone pivot="graph-v1"
 
 ``` http
 GET https://graph.microsoft.com/v1.0/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
+``` http
+GET https://graph.microsoft.com/beta/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
 ```
 
 :::zone-end
@@ -84,36 +84,35 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 ### Request
 
-The following example shows a request.
-
-:::zone pivot="graph-preview"
-
-``` http
-GET https://graph.microsoft.com/beta/copilot/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/YTc3OTFhNWQtNTgwZC00OGZjLWJhYjQtOTFmNTUzMmU4MzEyqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/aiInsights
-```
-
-:::zone-end
+The following example shows a request. The IDs in the example have been shortened for readability.
 
 :::zone pivot="graph-v1"
 
 ``` http
-GET https://graph.microsoft.com/v1.0/copilot/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/YTc3OTFhNWQtNTgwZC00OGZjLWJhYjQtOTFmNTUzMmU4MzEyqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/aiInsights
+GET https://graph.microsoft.com/v1.0/copilot/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/YTc3O.../aiInsights
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
+``` http
+GET https://graph.microsoft.com/beta/copilot/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/YTc3O.../aiInsights
 ```
 
 :::zone-end
 
 ### Response
 
-The following example shows the response. The response object shown here might be shortened for readability.
+The following example shows the response. The IDs in the example have been shortened for readability.
 
-:::zone pivot="graph-preview"
+:::zone pivot="graph-v1"
 
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
-
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3O...')/aiInsights",
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3O...')/aiInsights",
   "@odata.count": 1,
   "value": [
     {
@@ -129,13 +128,14 @@ Content-Type: application/json
 
 :::zone-end
 
-:::zone pivot="graph-v1"
+:::zone pivot="graph-preview"
 
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
+
 {
-  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3O...')/aiInsights",
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3O...')/aiInsights",
   "@odata.count": 1,
   "value": [
     {
