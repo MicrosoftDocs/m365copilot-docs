@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---
 
-# Microsoft 365 Copilot APIs PREVIEW Terms of Use
+# Microsoft 365 Copilot APIs Terms of Use (preview)
 
 Last Updated: December 2025
 
