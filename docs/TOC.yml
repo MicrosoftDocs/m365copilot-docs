@@ -306,7 +306,7 @@ items:
     href: copilot-apis-overview.md
   - name: Use client libraries
     href: sdks/api-libraries.md
-  - name: Terms of use
+  - name: Terms of use (preview)
     href: copilot-apis-terms.md
   - name: API reference
     href: api/toc.yml
