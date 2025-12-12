@@ -75,9 +75,9 @@ You may NOT:
 
 7. Use M365 Copilot APIs in any manner that works around any technical limitations of the M365 Copilot APIs or of the accessed Microsoft Offering, or reverse engineer, decompile or disassemble the Microsoft APIs, except and only to the extent that applicable law expressly permits, despite this limitation;
 
-8. Use the M365 Copilot APIs, or any data obtained using the M365 Copilot APIs , to conduct performance testing of a Microsoft Offering unless expressly permitted by Microsoft pursuant to a duly executed written agreement;
+8. Use the M365 Copilot APIs, or any data obtained using the M365 Copilot APIs, to conduct performance testing of a Microsoft Offering unless expressly permitted by Microsoft pursuant to a duly executed written agreement;
 
-9. Use the M365 Copilot APIs , or any data obtained using the M365 Copilot APIs, to identify, exploit or publicly disclose any potential security vulnerabilities;
+9. Use the M365 Copilot APIs, or any data obtained using the M365 Copilot APIs, to identify, exploit or publicly disclose any potential security vulnerabilities;
 
 10. Request, use or make available any data obtained using the M365 Copilot APIs outside any permissions expressly granted by your customers in connection with using your Application;
 
@@ -111,7 +111,7 @@ You may NOT:
 
 You warrant that your Application has been developed to operate with M365 Copilot APIs content in a secure manner. Your network, operating system and the software of your servers, databases, and computer systems (collectively, "**Systems**") must be properly configured to securely operate your Application and store content collected through your Application (including the M365 Copilot APIs content). Your Application must use reasonable security measures to protect the private data of your users.
 
-We may use technology to detect, prevent or limit the impact of any issues caused by your Application (before, after, or instead of suspension of your access). This may include, for example, (i) filtering to stop spam, (ii) performing security or privacy monitoring regarding scraping, denial of service attacks, user impersonation, application impersonation, or illicit consent grant(s), or (iii) limiting or terminating your access to the M365 Copilot APIs .
+We may use technology to detect, prevent or limit the impact of any issues caused by your Application (before, after, or instead of suspension of your access). This may include, for example, (i) filtering to stop spam, (ii) performing security or privacy monitoring regarding scraping, denial of service attacks, user impersonation, application impersonation, or illicit consent grant(s), or (iii) limiting or terminating your access to the M365 Copilot APIs.
 
 You will permit Microsoft reasonable access to your Application for purposes of monitoring compliance with these Terms. You will respond to any questions by Microsoft about your compliance with these Terms.
 
@@ -127,13 +127,13 @@ The rights and requirements of this section -- **4. Security** -- will survive f
 
 ## 5. Your Compliance with Applicable Privacy and Data Protection Laws
 
-You must comply with all laws and regulations applicable to your use of the data accessed through the M365 Copilot APIs, including without limitation laws related to privacy, biometric data, data protection and confidentiality of communications. Your use of the M365 Copilot APIs is conditioned upon implementing and maintaining appropriate protections and measures for your service and Application, and that includes your responsibility to the data obtained through the use of the M365 Copilot APIs . For the data you obtained through the M365 Copilot APIs, you must:
+You must comply with all laws and regulations applicable to your use of the data accessed through the M365 Copilot APIs, including without limitation laws related to privacy, biometric data, data protection and confidentiality of communications. Your use of the M365 Copilot APIs is conditioned upon implementing and maintaining appropriate protections and measures for your service and Application, and that includes your responsibility to the data obtained through the use of the M365 Copilot APIs. For the data you obtained through the M365 Copilot APIs, you must:
 
 a) obtain all necessary consents before processing data and obtain additional consent if the processing changes ("Data Access Consents"),
 
 b) In the event you're storing data locally, ensure that data is kept up to date and implement corrections, restrictions to data, or the deletion of data as reflected in the data obtained through your use of the Microsoft Copilot APIs,
 
-c) implement proper retention and deletion policies, including deleting all data then your user abandons your Application, uninstalls your Application, closes its account with you, or abandons the account,
+c) implement proper retention and deletion policies, including deleting all data when your user abandons your Application, uninstalls your Application, closes its account with you, or abandons the account,
 
 d) maintain and comply with a written statement available to Customers and users that describes your privacy practices regarding data and information you collect and use ("Your Privacy Statement"), and that statement must be as protective as the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and
 
@@ -171,7 +171,7 @@ You will defend, hold harmless, and indemnify Microsoft from any claim or action
 
 d) **No Injunctive Relief**
 
-In no event shall you seek or be entitled to rescission, injunctive or other equitable relief, or to enjoin or restrain the operation of the M365 Copilot APIs , content or other material used or displayed through the current Microsoft website or successor site.
+In no event shall you seek or be entitled to rescission, injunctive or other equitable relief, or to enjoin or restrain the operation of the M365 Copilot APIs, content or other material used or displayed through the current Microsoft website or successor site.
 
 e) **No Third-Party Beneficiaries**
 
@@ -179,9 +179,9 @@ There are no third-party beneficiaries to this Agreement.
 
 f) **Termination**
 
-   a) We may suspend or immediately terminate these Terms, any rights granted herein, and/or your license to the M365 Copilot APIs , in our sole discretion at any time, for any reason. You may terminate these Terms at any time by ceasing your access to the M365 Copilot APIs.
+   a) We may suspend or immediately terminate these Terms, any rights granted herein, and/or your license to the M365 Copilot APIs, in our sole discretion at any time, for any reason. You may terminate these Terms at any time by ceasing your access to the M365 Copilot APIs.
 
-   b) Upon termination, all licenses granted herein immediately expire and you must cease use of the M365 Copilot APIs. You must also comply with your customers instruction to return or delete any data accessed or obtained through the M365 Copilot APIs, unless expressly permitted by Microsoft or prohibited by law. Neither party will be liable to the other for any damages resulting solely from termination of these Terms.
+   b) Upon termination, all licenses granted herein immediately expire and you must cease use of the M365 Copilot APIs. You must also comply with your customers' instruction to return or delete any data accessed or obtained through the M365 Copilot APIs, unless expressly permitted by Microsoft or prohibited by law. Neither party will be liable to the other for any damages resulting solely from termination of these Terms.
 
 ## 10. General Terms
 
