@@ -6,7 +6,7 @@ ms.author: lramosvea
 ms.topic: reference
 ms.date: 10/24/2025
 ms.localizationpriority: medium
-doc_type: conceptualPageType
+doc_type: apiPageType
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -52,10 +52,10 @@ POST https://graph.microsoft.com/v1.0/copilot/retrieval
 
 ## Request headers
 
-| Name            | Description                                                                                                |
-|:----------------|:-----------------------------------------------------------------------------------------------------------|
-| `Authorization` |`Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| `Content-Type`  | `application/json.` Required.                                                                              |
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| `Content-Type`  | `application/json.` Required.                                                                               |
 
 ## Request body
 

@@ -37,7 +37,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 | Application                            | AiEnterpriseInteraction.Read.All | Not available.                |
 
 > [!IMPORTANT]
-> The set of interactions returned varies based on Copilot licensing and the AI experiences in your tenant that write to the interaction history service.  
+> The set of interactions returned varies based on Copilot licensing and the AI experiences in your tenant that write to the interaction history service.
 
 ## HTTP request
 
@@ -70,9 +70,9 @@ This method also supports the `$filter` [OData query parameter](/graph/query-par
 
 ## Request headers
 
-| Name            | Description                                                                                                |
-|:----------------|:-----------------------------------------------------------------------------------------------------------|
-| `Authorization` |`Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 
 ## Response
 
