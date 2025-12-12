@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for t
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 12/01/2025
+ms.date: 12/12/2025
 ms.topic: article
 ---
 
@@ -16,6 +16,7 @@ This article provides information about the regional availability of Agent Build
 
 Agent Builder in Microsoft 365 Copilot is available if your [Power Platform default environment](/power-platform/admin/environments-overview#default-environment) is in any of the following countries or regions:
 
+- Arabic
 - Asia Pacific
 - Australia
 - Brazil
@@ -23,6 +24,7 @@ Agent Builder in Microsoft 365 Copilot is available if your [Power Platform defa
 - Europe
 - France
 - Germany
+- Hebrew
 - India
 - Japan
 - Korea
