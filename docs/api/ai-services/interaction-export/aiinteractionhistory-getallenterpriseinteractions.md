@@ -1,7 +1,7 @@
 ---
 title: "aiInteractionHistory: getAllEnterpriseInteractions"
 description: Get all Microsoft 365 Copilot interaction data, including user prompts to Copilot and Copilot responses.
-ms.date: 11/06/2025
+ms.date: 11/11/2025
 author: bkeerthivasa
 ms.author: bkeerthivasa
 ms.localizationpriority: high
@@ -35,6 +35,9 @@ Choose the permission or permissions marked as least privileged for this API. Us
 | Delegated (work or school account)     | Not supported.                   | Not supported.                |
 | Delegated (personal Microsoft account) | Not supported.                   | Not supported.                |
 | Application                            | AiEnterpriseInteraction.Read.All | Not available.                |
+
+> [!IMPORTANT]
+> The set of interactions returned varies based on Copilot licensing and the AI experiences in your tenant that write to the interaction history service.  
 
 ## HTTP request
 

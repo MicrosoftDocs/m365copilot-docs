@@ -1,16 +1,16 @@
 ---
 title: Create a Quiz Tutor agent from a template
-description: Learn how to create a declarative agent in the Copilot Studio with the Quiz Tutor template.
+description: Learn how to use the Quiz Tutor template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ---
 
 # Use the Quiz Tutor template to build an agent
 
-You can use the Quiz Tutor template in the lite experience of Copilot Studio to build agents that provide fun, bite-sized quizzes based on predefined training content. These quizzes can even be interactive to make the learning process more engaging. The template is designed to enhance a user's understanding and retention of the material by using varied and interesting questions and providing coaching and feedback to support learning.
+You can use the Quiz Tutor template in Microsoft 365 Copilot to build agents that provide fun, bite-sized quizzes based on predefined training content. These quizzes can even be interactive to make the learning process more engaging. The template is designed to enhance a user's understanding and retention of the material by using varied and interesting questions and providing coaching and feedback to support learning.
 
 ## Prerequisites
 
@@ -53,6 +53,6 @@ You can enhance the functionality of your Quiz Tutor agents by:
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Copilot Studio](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)

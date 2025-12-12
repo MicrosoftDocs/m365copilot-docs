@@ -45,7 +45,7 @@ Copilot responds to the user, using the information returned: "The charge of $50
 
 ## How API plugins work
 
-:::image type="content" source="assets/images/api-plugins/api-plugin-data-flow.svg" alt-text="A sequence diagram showing how an API plugin works" lightbox="assets/images/api-plugins/api-plugin-data-flow.svg":::
+:::image type="content" source="assets/images/api-plugins/api-plugin-data-flow.png" alt-text="A sequence diagram showing how an API plugin works" lightbox="assets/images/api-plugins/api-plugin-data-flow.png":::
 
 1. The user asks the agent "How much is left in the Fourth Coffee lobby renovation budget?"
 1. The agent identifies a budget-related plugin from its available plugins that has a function `GetBudget` to get budget details. It maps parts of the user's question to the parameters of the function: `budgetName=""`.

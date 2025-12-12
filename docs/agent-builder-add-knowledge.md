@@ -5,14 +5,14 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 12/04/2025
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
 
 The Agent Builder feature in Microsoft 365 Copilot provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
-This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md).
+This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md).
 
 For more information about supported knowledge sources and licensing requirements, see [Knowledge sources](/microsoft-365-copilot/extensibility/knowledge-sources).
 
@@ -21,18 +21,20 @@ For more information about supported knowledge sources and licensing requirement
 To add knowledge sources to your agent:
 
 1. In Microsoft 365 Copilot, choose **Create agent**, and go to the **Configure** tab.
-2. In the **Knowledge** section, use one of the following methods to add knowledge sources:
-   - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
-   - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
-   - **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
-3. Select the items to include. You can add:
+
+1. In the **Knowledge** section, use one of the following methods to add knowledge sources:
+   - **Search bar** - Click the search bar and browse to select files, sites, chats, or meetings.
+   - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters) in the search box.
+   - **Upload file** - Choose the arrow icon to select files from your device or the cloud icon to add files from SharePoint sites.
+
+1. Select the items to include. You can add:
    - Up to four public website URLs.
    - SharePoint files, folders, or sites.
    - Up to five Teams chat URLs.
    - Embedded files uploaded from your device.
    - Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
   
-  :::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-select-knowledge.png" alt-text="A screenshot of the Knowledge section of the Configure tab with the Picker UI showing.":::
+  :::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-select-knowledge.png" alt-text="A screenshot of the Knowledge section of the Configure tab with the Picker UI showing.":::
 
 ## Public websites
 
@@ -71,10 +73,6 @@ You can also select files or folders from the SharePoint file picker by choosing
 > The SharePoint picker might not show all the [communication sites](/microsoft-365/community/team-site-or-communication-site) that you have access to. Communication sites only show up in the **Quick Access** and **Recent** sections of the SharePoint picker.
 
 After you select a site, you can select several files and folders. Doing so adds the SharePoint file or folder to the agent's knowledge sources. When the same site includes multiple folders, select the button next to the folder name to view other folders.
-
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-sharepoint-picker-folders.png" alt-text="SharePoint file picker":::
-
-You can also upload files into SharePoint by using the picker. The file appears in the same folder after it finishes uploading and is ready for use.
 
 ### File readiness
 
@@ -158,7 +156,7 @@ The following table lists sensitivity label scenarios that aren't currently supp
 | -------- | -------- |
 | Sensitivity label with Double Key Encryption (DKE) enabled | The file is embedded but isn't used as knowledge. The builder doesn't see an error message when they upload the file. | We recommend that you avoid uploading files with DKE because they can't be used as knowledge. |
 | Sensitivity label with user-defined permissions enabled | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with user-defined permissions. |
-| Sensitivity label with extract rights enabled for the user | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with extract rights enabled. |
+| Sensitivity label with extract rights disabled for the user | The file is uploaded but agent creation fails without an error message. | Remove any uploaded files with extract rights disabled. |
 | Files with sensitivity labels from another tenant that has encryption enabled | The file is embedded in the agent but isn't used as knowledge. | We recommend that you avoid uploading files with sensitivity labels from tenants with encryption enabled because they can't be used as knowledge. |
 | Files with password protection | The file is uploaded and the builder sees an error message next to the uploaded file. | Remove any uploaded files with password protection. |
 
@@ -245,7 +243,7 @@ To scope the **Azure DevOps Work Items** area path:
 4. Choose **Select an area path** and search for or type the area path name.
 5. Select the area path to add it.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
 
 The following table lists the Copilot connectors that support scoping and the attributes that you can use to scope the data.
 
@@ -287,7 +285,7 @@ To configure your agent to prioritize your knowledge sources, on the **Configure
 
 ## Related content
 
-- [Overview of Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md)
+- [Overview of Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md)
 - [Build an agent from a template](agent-templates-overview.md)
-- [Share and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Share and manage agents](agent-builder-share-manage-agents.md)

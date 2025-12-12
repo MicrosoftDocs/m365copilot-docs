@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 05/19/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Configure authentication for API plugins in agents
