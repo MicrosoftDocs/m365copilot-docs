@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for t
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 12/01/2025
+ms.date: 12/12/2025
 ms.topic: article
 ---
 
@@ -78,6 +78,7 @@ The following authoring languages are supported:
 
 The **Describe** tab supports the following languages:
 
+- Arabic
 - Chinese (Simplified) (zh-CN)
 - Chinese (Traditional) (zh-TW)
 - Czech (cs-CZ)
