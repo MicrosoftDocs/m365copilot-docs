@@ -105,34 +105,33 @@ Content-Type: application/json
 Content-Length: 537
 
 {
-    "value": [
+  "value": [
+    {
+      "reportRefreshDate": "2025-08-20",
+      "adoptionByProduct": [
         {
-            "reportRefreshDate": "2025-08-20",
-            "adoptionByProduct": [
-                {
-                    "reportPeriod": 7,
-                    "anyAppEnabledUsers": 359229,
-                    "anyAppActiveUsers": 165115,
-                    "microsoftTeamsEnabledUsers": 359096,
-                    "microsoftTeamsActiveUsers": 123341,
-                    "wordEnabledUsers": 359096,
-                    "wordActiveUsers": 21459,
-                    "powerPointEnabledUsers": 359096,
-                    "powerPointActiveUsers": 8530,
-                    "outlookEnabledUsers": 359096,
-                    "outlookActiveUsers": 37270,
-                    "excelEnabledUsers": 359096,
-                    "excelActiveUsers": 6709,
-                    "oneNoteEnabledUsers": 359096,
-                    "oneNoteActiveUsers": 1660,
-                    "loopEnabledUsers": 359096,
-                    "loopActiveUsers": 1345,
-                    "copilotChatEnabledUsers": 359096,
-                    "copilotChatActiveUsers": 65480
-                }
-            ]
+          "reportPeriod": 7,
+          "anyAppEnabledUsers": 359229,
+          "anyAppActiveUsers": 165115,
+          "microsoftTeamsEnabledUsers": 359096,
+          "microsoftTeamsActiveUsers": 123341,
+          "wordEnabledUsers": 359096,
+          "wordActiveUsers": 21459,
+          "powerPointEnabledUsers": 359096,
+          "powerPointActiveUsers": 8530,
+          "outlookEnabledUsers": 359096,
+          "outlookActiveUsers": 37270,
+          "excelEnabledUsers": 359096,
+          "excelActiveUsers": 6709,
+          "oneNoteEnabledUsers": 359096,
+          "oneNoteActiveUsers": 1660,
+          "loopEnabledUsers": 359096,
+          "loopActiveUsers": 1345,
+          "copilotChatEnabledUsers": 359096,
+          "copilotChatActiveUsers": 65480
         }
-    ]
+      ]
+    }
+  ]
 }
-
 ```

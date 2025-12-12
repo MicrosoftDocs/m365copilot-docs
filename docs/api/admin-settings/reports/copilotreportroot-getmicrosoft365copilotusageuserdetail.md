@@ -105,27 +105,26 @@ Content-Type: application/json
 Content-Length: 10747
 
 {
-    "@odata.nextLink": "https://graph.microsoft.com/beta/reports/getMicrosoft365CopilotUsageUserDetail(period='D7')?$format=application/json&$skiptoken=MDoyOg",
-    "value": [
+  "value": [
+    {
+      "reportRefreshDate": "2025-08-20",
+      "userPrincipalName": "DC8C64D6EC3A3AA17481D7E5EB5B68A6",
+      "displayName": "C65E8D8AFA0DAB9639EDFAAEA94AFE66",
+      "lastActivityDate": "2025-08-20",
+      "copilotChatLastActivityDate": "2025-08-16",
+      "microsoftTeamsCopilotLastActivityDate": "2025-08-20",
+      "wordCopilotLastActivityDate": "2025-08-06",
+      "excelCopilotLastActivityDate": "",
+      "powerPointCopilotLastActivityDate": "2025-03-26",
+      "outlookCopilotLastActivityDate": "",
+      "oneNoteCopilotLastActivityDate": "",
+      "loopCopilotLastActivityDate": "",
+      "copilotActivityUserDetailsByPeriod": [
         {
-            "reportRefreshDate": "2025-08-20",
-            "userPrincipalName": "DC8C64D6EC3A3AA17481D7E5EB5B68A6",
-            "displayName": "C65E8D8AFA0DAB9639EDFAAEA94AFE66",
-            "lastActivityDate": "2025-08-20",
-            "copilotChatLastActivityDate": "2025-08-16",
-            "microsoftTeamsCopilotLastActivityDate": "2025-08-20",
-            "wordCopilotLastActivityDate": "2025-08-06",
-            "excelCopilotLastActivityDate": "",
-            "powerPointCopilotLastActivityDate": "2025-03-26",
-            "outlookCopilotLastActivityDate": "",
-            "oneNoteCopilotLastActivityDate": "",
-            "loopCopilotLastActivityDate": "",
-            "copilotActivityUserDetailsByPeriod": [
-                {
-                    "reportPeriod": 7
-                }
-            ]
+          "reportPeriod": 7
         }
-    ]
+      ]
+    }
+  ]
 }
 ```
