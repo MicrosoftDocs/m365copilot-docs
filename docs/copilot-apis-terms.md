@@ -1,15 +1,16 @@
 ---
 title: Microsoft 365 Copilot Terms of Use (preview)
 description: Read the preview Terms of Use for the Microsoft 365 Copilot APIs.
-ms.topic: article
 author: JasonFriedman10
 ms.author: jfriedman
-ms.date: 12/09/2025
+ms.date: 12/15/2025
+ms.service: microsoft-365-copilot
 ms.localizationpriority: medium
-doc_type: conceptualPageType
 ---
 
 # Microsoft 365 Copilot APIs Terms of Use (preview)
+
+<!-- cSpell:ignore jfriedman -->
 
 Last Updated: December 2025
 
@@ -17,7 +18,7 @@ Thank you for developing with Microsoft!
 
 By accessing or using Microsoft 365 Copilot APIs, including within a software application, website, tool, service, or product you create for human consumption or offer to Customers (your "**Application**"), you are agreeing to these terms and to comply with any accompanying documentation that applies to your use of the Microsoft 365 Copilot APIs ("**M365 Copilot API**") with Microsoft Corporation ("**Microsoft**", "**we**", "**us**", or "**our**"). You represent and warrant to us that you have the authority to accept these M365 Copilot API Terms ("**API Terms**") on behalf of yourself, a company, and/or other entity, as applicable. We may change, amend or terminate these API Terms at any time. **Your use of the Microsoft 365 Copilot APIs after any change or amendment means you agree to the new Terms. If you do not agree to the new Terms or if we terminate these Terms, you must stop using the M365 Copilot APIs.**
 
-**THIS PREVIEW IS PROVIDED "AS-IS," "WITH ALL FAULTS," AND "AS AVAILABLE." Microsoft provides no performance guarantee and Customer bear the risk of using it. The Preview is not included in any SLA and may not be covered by customer support.** We may change or not release a final or commercial version of M365 Copilot APIs in our sole discretion.
+**THIS PREVIEW IS PROVIDED "AS-IS," "WITH ALL FAULTS," AND "AS AVAILABLE." Microsoft provides no performance guarantee and Customers bear the risk of using it. The Preview is not included in any SLA and may not be covered by customer support.** We may change or not release a final or commercial version of M365 Copilot APIs in our sole discretion.
 
 ## Defined Terms
 
@@ -31,11 +32,11 @@ b) "Microsoft 365 Copilot APIs" means (i) any form of machine accessible applica
 
 c) The Microsoft 365 Copilot APIs include:
 
-   a. REST Interface: [Microsoft 365 Copilot Retrieval API Overview](api/ai-services/retrieval/overview.md), [Microsoft 365 Copilot Search API (Preview) Overview](api/ai-services/search/overview.md), [Meeting insights API (Preview)](api/ai-services/meeting-insights/resources/callaiinsight.md), [Change Notifications API](api/ai-services/change-notifications/aiinteraction-changenotifications.md), [Interaction export API](api/ai-services/interaction-export/resources/aiinteractionhistory.md?pivots=graph-v1), [Microsoft 365 Copilot Chat API (Preview) Overview](api/ai-services/chat/overview.md), [Copilot admin limited mode API](api/admin-settings/resources/copilotadminlimitedmode.md?pivots=graph-v1)
+   a. REST Interface: [Microsoft 365 Copilot APIs overview](/microsoft-365-copilot/extensibility/copilot-apis-overview)
 
-   b. M365 Agent SDK: [microsoft/Agents: The Microsoft 365 Agent SDK simplifies building full stack, multichannel, trusted agents for platforms including M365, Teams, Copilot Studio, and Webchat.](https://github.com/microsoft/Agents) available under the [microsoft/Agents: The Microsoft 365 Agent SDK simplifies building full stack, multichannel, trusted agents for platforms including M365, Teams, Copilot Studio, and Webchat.](https://github.com/microsoft/Agents)namespace Microsoft.Agents.M365Copilot.Beta.Copilot.Retrieval
+   b. M365 Agent SDK: [Build custom engine agents with Microsoft 365 Agents SDK](/microsoft-365-copilot/extensibility/m365-agents-sdk)
 
-   c. M365 Copilot APIs Client Libraries: [Microsoft 365 Copilot APIs Client Libraries (Preview)](sdks/api-libraries.md?source=recommendations&tabs=csharp)
+   c. M365 Copilot APIs Client Libraries: [Microsoft 365 Copilot APIs Client Libraries (Preview)](/microsoft-365-copilot/extensibility/sdks/api-libraries)
 
 ## 1. Application Registration
 
