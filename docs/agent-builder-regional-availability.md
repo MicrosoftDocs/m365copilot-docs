@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for t
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 12/01/2025
+ms.date: 12/12/2025
 ms.topic: article
 ---
 
@@ -76,28 +76,4 @@ The following authoring languages are supported:
 
 ### Describe tab languages
 
-The **Describe** tab supports the following languages:
-
-- Chinese (Simplified) (zh-CN)
-- Chinese (Traditional) (zh-TW)
-- Czech (cs-CZ)
-- Danish (da-DK)
-- Dutch (nl-NL)
-- English
-- Finnish (fi-FI)
-- French 
-- German (de-DE)
-- Hebrew (he-IL)
-- Hindi (hi-IN)
-- Indonesian (id-ID)
-- Italian (it-IT)
-- Japanese (ja-JP)
-- Korean (ko-KR)
-- Norwegian (Bokmål) (nb-NO)
-- Polish (pl-PL)
-- Portuguese (Brazil) (pt-BR)
-- Russian (ru-RU)
-- Spanish 
-- Swedish (sv-SE)
-- Thai (th-TH)
-- Turkish (tr-TR)
+The **Describe** tab supports all the languages that Microsoft 365 Copilot supports.
