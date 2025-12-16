@@ -15,6 +15,8 @@ The Microsoft 365 Copilot APIs enable you to securely access Microsoft 365 Copil
 
 Enterprise developers face a critical challenge today: how to harness the power of AI while maintaining secure access to organizational knowledge, without compromising compliance or governance. Traditional approaches force you to build complex AI systems from scratch and extract sensitive data into external sources. The Microsoft 365 Copilot APIs offer access to production-ready AI capabilities that work directly with your Microsoft 365 data.
 
+By accessing or using the Microsoft 365 Copilot APIs, you're agreeing to the [Microsoft 365 Copilot APIs Terms of Use (preview)](/legal/m365-copilot-apis/terms-of-use?context=/microsoft-365-copilot/extensibility/context).
+
 ## Copilot API capabilities
 
 The Copilot APIs provide a comprehensive set of capabilities that enable you to build AI-powered applications grounded in enterprise data.
@@ -29,6 +31,7 @@ The following table lists the APIs and describes their capabilities and scenario
 | [Change Notifications API (preview)](api/ai-services/change-notifications/aiinteraction-changenotifications.md) | Subscribe to change notifications for Copilot interactions across Microsoft 365. | Build applications that monitor and log AI interactions in real time, enabling proactive compliance checks, anomaly detection, and auditing. |
 | [Meeting Insights API](/microsoftteams/platform/graph-api/meeting-transcripts/meeting-insights) | Extract AI-generated meeting notes, action items, and discussion topics for Teams meetings. | Create applications that automatically extract and organize action items, decisions, and summaries from Teams meetings. Link these with project management tools, CRM systems, or custom workflows. These systems can transform meetings from time spent to value created by capturing, organizing, and activating meeting outcomes automatically. |
 | [Chat API (preview)](api/ai-services/chat/overview.md) | Enable conversational experiences powered by Microsoft 365 Copilot in your custom applications. | Integrate Microsoft 365 Copilot into your enterprise applications that can answer questions, perform tasks, and provide guidance based on Microsoft 365 data and user context. These interfaces can improve user productivity by bringing AI capabilities directly into the tools they use every day, from custom portals to mobile apps. |
+| [Copilot usage reports API](api/admin-settings/reports/resources/copilotreportroot.md) | Query user counts and usage data for Microsoft 365 Copilot in your organization. | Build reports to track the adoption of Microsoft 365 Copilot by your users. |
 
 ## Key benefits
 

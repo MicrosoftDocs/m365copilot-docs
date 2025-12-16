@@ -188,6 +188,8 @@ items:
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
       href: instructions-api-plugins.md
+    - name: Connect to other agents
+      href: declarative-agent-connected-agent.md
     - name: Add capabilities and knowledge sources
       items:
       - name: Code interpreter
@@ -306,6 +308,8 @@ items:
     href: copilot-apis-overview.md
   - name: Use client libraries
     href: sdks/api-libraries.md
+  - name: Terms of use (preview)
+    href: /legal/m365-copilot-apis/terms-of-use?context=/microsoft-365-copilot/extensibility/context
   - name: API reference
     href: api/toc.yml
 - name: Extend agents at scale with Agent 365 (early access preview)
