@@ -21,7 +21,7 @@ zone_pivot_groups: graph-api-versions
 
 Read the properties and relationships of a [copilotAdminLimitedMode](./resources/copilotadminlimitedmode.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../includes/global-only.md)]
 
 ## Permissions
 

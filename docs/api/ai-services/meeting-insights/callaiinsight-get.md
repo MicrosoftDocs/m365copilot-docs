@@ -28,7 +28,7 @@ This API returns the metadata and content of the single set of AI insights assoc
 > - This API has license requirements. For more information, see [License requirements for Teams meeting AI insights APIs](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
 > - This API works differently in one or more national clouds. For more information, see [Microsoft Teams API implementation differences in national clouds](/graph/teamwork-national-cloud-differences).
 
-[!INCLUDE [national-cloud-support](../../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
