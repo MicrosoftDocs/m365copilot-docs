@@ -26,6 +26,8 @@ To learn more about how to use the Microsoft Teams export APIs to export content
 > [!NOTE]
 > This API requires a valid Microsoft 365 Copilot license.
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -37,7 +39,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 | Application                            | AiEnterpriseInteraction.Read.All | Not available.                |
 
 > [!IMPORTANT]
-> The set of interactions returned varies based on Copilot licensing and the AI experiences in your tenant that write to the interaction history service.  
+> The set of interactions returned varies based on Copilot licensing and the AI experiences in your tenant that write to the interaction history service.
 
 ## HTTP request
 
@@ -70,9 +72,9 @@ This method also supports the `$filter` [OData query parameter](/graph/query-par
 
 ## Request headers
 
-| Name            | Description                                                                                                |
-|:----------------|:-----------------------------------------------------------------------------------------------------------|
-| `Authorization` |`Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 
 ## Response
 
