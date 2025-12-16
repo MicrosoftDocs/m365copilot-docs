@@ -6,6 +6,7 @@ ms.author: edle
 ms.localizationpriority: high
 ms.date: 08/08/2025
 ms.topic: reference
+doc_type: conceptualPageType
 ---
 
 # Get change notifications for Copilot AI interactions using Microsoft Graph

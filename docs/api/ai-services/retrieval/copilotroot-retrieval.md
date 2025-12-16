@@ -6,7 +6,7 @@ ms.author: lramosvea
 ms.topic: reference
 ms.date: 10/24/2025
 ms.localizationpriority: medium
-doc_type: conceptualPageType
+doc_type: apiPageType
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -19,6 +19,8 @@ zone_pivot_groups: graph-api-versions
 :::zone-end
 
 The Microsoft 365 Copilot Retrieval API allows for the retrieval of relevant text extracts from SharePoint, OneDrive, and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Use the Retrieval API to ground your generative AI solutions with Microsoft 365 data while optimizing for context recall.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -52,10 +54,10 @@ POST https://graph.microsoft.com/v1.0/copilot/retrieval
 
 ## Request headers
 
-| Name            | Description                                                                                                |
-|:----------------|:-----------------------------------------------------------------------------------------------------------|
-| `Authorization` |`Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| `Content-Type`  | `application/json.` Required.                                                                              |
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| `Content-Type`  | `application/json.` Required.                                                                               |
 
 ## Request body
 
