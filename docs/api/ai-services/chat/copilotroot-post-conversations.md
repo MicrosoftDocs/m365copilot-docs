@@ -6,7 +6,7 @@ ms.author: muwagerikpe
 ms.topic: reference
 ms.date: 09/26/2025
 ms.localizationpriority: medium
-doc_type: conceptualPageType
+doc_type: apiPageType
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -41,7 +41,7 @@ POST https://graph.microsoft.com/beta/copilot/conversations
 
 | Name            | Description                                                                                                 |
 |:----------------|:------------------------------------------------------------------------------------------------------------|
-| `Authorization` | `Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 | `Content-Type`  | `application/json.` Required.                                                                               |
 
 ## Request body

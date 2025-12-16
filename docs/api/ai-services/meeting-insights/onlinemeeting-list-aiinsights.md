@@ -26,6 +26,8 @@ Get the list of [callAiInsight](resources/callaiinsight.md) objects associated w
 > - This API has license requirements. For more information, see [License requirements for Teams meeting AI insights APIs](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
 > - This API works differently in one or more national clouds. For more information, see [Microsoft Teams API implementation differences in national clouds](/graph/teamwork-national-cloud-differences).
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -65,9 +67,9 @@ This method supports the `$select` [OData query parameter](/graph/query-paramete
 
 ## Request headers
 
-| Name            | Description                                                                                                |
-|:----------------|:-----------------------------------------------------------------------------------------------------------|
-| `Authorization` |`Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 
 ## Request body
 

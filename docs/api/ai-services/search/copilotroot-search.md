@@ -6,7 +6,7 @@ ms.author: swapnilsapar
 ms.topic: reference
 ms.date: 10/20/2025
 ms.localizationpriority: medium
-doc_type: conceptualPageType
+doc_type: apiPageType
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -35,10 +35,10 @@ POST https://graph.microsoft.com/beta/copilot/search
 
 ## Request headers
 
-| Name          | Description                                                                                               |
-|:--------------|:----------------------------------------------------------------------------------------------------------|
-| Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| Content-Type  | application/json. Required.                                                                               |
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| `Content-Type`  | `application/json`. Required.                                                                               |
 
 ## Request body
 
