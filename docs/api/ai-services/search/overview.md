@@ -55,7 +55,7 @@ Use these built-in features to avoid expenses and complexities, and maintain str
 
 The Search API is available at no extra cost to users with a Microsoft 365 Copilot license add-on. Support for users without a Microsoft 365 Copilot add-on license isn't currently available.
 
-By accessing or using the Microsoft 365 Copilot Search API, you're agreeing to the [Microsoft 365 Copilot APIs Terms of Use (preview)](/legal/copilot-apis/terms-of-use?context=/microsoft-365-copilot/extensibility/context).
+By accessing or using the Microsoft 365 Copilot Search API, you're agreeing to the [Microsoft 365 Copilot APIs Terms of Use (preview)](/legal/m365-copilot-apis/terms-of-use?context=/microsoft-365-copilot/extensibility/context).
 
 ## Best practices
 
