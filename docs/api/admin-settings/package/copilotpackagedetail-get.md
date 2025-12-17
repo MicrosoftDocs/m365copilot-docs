@@ -31,14 +31,14 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ## HTTP request
 
 ```http
-GET /copilot/admin/catalog/packages/{id}
+GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages/{id}
 ```
 
 ## Request headers
 
-| Name            | Description                                                                                                |
-|:----------------|:-----------------------------------------------------------------------------------------------------------|
-| `Authorization` |`Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 
 ## Request body
 
