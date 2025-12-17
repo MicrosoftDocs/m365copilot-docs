@@ -3,7 +3,7 @@ name: Update cloud support status
 
 on:
   schedule:
-  - cron: 0 11 * * 1
+  - cron: '0 11 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -86,7 +86,7 @@ jobs:
         GH_TOKEN: ${{ secrets.CLOUD_SUPPORT_PAT }}
       run: |
         $status = git status --porcelain
-        if ($status -eq $null) {
+        if (-not $status) {
           Write-Host "No changes to commit." -ForegroundColor Green
         } else {
           $timestamp = Get-Date -Format FileDateTimeUniversal
