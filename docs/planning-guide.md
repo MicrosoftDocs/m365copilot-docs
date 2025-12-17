@@ -3,9 +3,9 @@ title: Microsoft 365 Copilot Extensibility Planning Guide
 description: Plan your Copilot extensibility journey by following the key steps and considerations.
 author: jessicaaawu
 ms.author: wujessica
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/18/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -76,16 +76,16 @@ Determine the requirements that your extensibility solution needs to meet. Consi
 
 Based on your assessment of your users' needs and the technical requirements for your solution, identify what type or types of Copilot extensibility options you'll build.
 
-### Copilot connectors
+### Microsoft 365 Copilot connectors
 
-Use Copilot connectors if you need Copilot to integrate external data into Microsoft 365 applications to provide contextually relevant responses. Depending on your scenario, you can choose to do one of the following:
+Use Microsoft 365 Copilot connectors if you need Copilot to integrate external data into Microsoft 365 applications to provide contextually relevant responses. Depending on your scenario, you can choose to do one of the following:
 
 - **Use prebuilt Copilot connectors**. Identify [prebuilt Copilot connectors](/microsoftsearch/pre-built-connectors-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) that you can configure in your tenant.
 - **Build a custom Copilot connector**. If none of the existing connectors meet your needs, you can build your own. For more information, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 
 ### Agents for Copilot
 
-If Copilot connectors alone don't meet your needs, you can build an agent to tailor the Copilot experience for your business needs or to connect to your specific data sources.
+If Microsoft 365 Copilot connectors alone don't meet your needs, you can build an agent to tailor the Copilot experience for your business needs or to connect to your specific data sources.
 
 If you decide to build an agent, you need to determine the following:
 
@@ -99,8 +99,8 @@ The following table lists the low-code and pro-code options that are available b
 
 | Agent type   | Low-code tool options  | Pro-code tool options  |
 |--------| -------- |--------|
-| Declarative agent | <ul><li>Copilot Studio lite experience</li><li>Copilot Studio full experience</li></ul> | Visual Studio Code + [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)  |
-| Custom engine agent| Copilot Studio full experience | <ul><li>Visual Studio Code + Teams AI Library</li><li>Visual Studio Code + Microsoft 365 Agent SDK (Preview)</li><li>Visual Studio 2022</li><li>Semantic Kernel (optional)</li></ul> |
+| Declarative agent | <ul><li>Microsoft 365 Copilot</li><li>Copilot Studio</li></ul> | Visual Studio Code + [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)  |
+| Custom engine agent| Copilot Studio | <ul><li>Visual Studio Code + Teams SDK</li><li>Visual Studio Code + Microsoft 365 Agent SDK (Preview)</li><li>Visual Studio 2022</li><li>Semantic Kernel (optional)</li></ul> |
 
 Next, identify the data sources or plugins your agent needs. Data sources might be Microsoft 365 data (Teams messages, email, people, SharePoint sites or folders), Copilot connectors (prebuilt or custom), or plugins (for real-time data access or external actions).
 

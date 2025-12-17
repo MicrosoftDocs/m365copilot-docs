@@ -9,9 +9,9 @@ from datetime import datetime
 
 from azure.identity import DeviceCodeCredential
 from kiota_abstractions.api_error import APIError
-from microsoft_agents_m365copilot_beta.agents_m365_copilot_beta_service_client import AgentsM365CopilotBetaServiceClient
-from microsoft_agents_m365copilot_beta.generated.copilot.retrieval.retrieval_post_request_body import RetrievalPostRequestBody
-from microsoft_agents_m365copilot_beta.generated.models.retrieval_data_source import RetrievalDataSource
+from microsoft_agents_m365copilot.agents_m365_copilot_service_client import AgentsM365CopilotServiceClient
+from microsoft_agents_m365copilot.generated.copilot.retrieval.retrieval_post_request_body import RetrievalPostRequestBody
+from microsoft_agents_m365copilot.generated.models.retrieval_data_source import RetrievalDataSource
 
 scopes = ['Files.Read.All', 'Sites.Read.All']
 
@@ -35,10 +35,7 @@ credentials = DeviceCodeCredential(
     prompt_callback=auth_callback
 )
 
-client = AgentsM365CopilotBetaServiceClient(credentials=credentials, scopes=scopes)
-
-# Make sure the base URL is set to beta
-client.request_adapter.base_url = "https://graph.microsoft.com/beta"
+client = AgentsM365CopilotServiceClient(credentials=credentials, scopes=scopes)
 
 async def retrieve():
     try:

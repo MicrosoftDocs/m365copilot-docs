@@ -1,16 +1,16 @@
 ---
 title: Create an Idea Coach agent from a template
-description: Learn how to create a declarative agent in the Copilot Studio lite experience rom the Idea Coach template.
+description: Learn how to use the Idea Coach template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ---
 
 # Use the Idea Coach template to build an agent
 
-You can use the Idea Coach template in the lite experience of Copilot Studio to build an agent that helps users develop and refine their ideas and enhance their brainstorming sessions. The Idea Coach agent template uses a fun, collaborative tone to inspire creativity and ensure engaging and productive brainstorming interactions. Idea Coach agents gather user feedback to continuously improve the brainstorming experience.
+You can use the Idea Coach template in Microsoft 365 Copilot to build an agent that helps users develop and refine their ideas and enhance their brainstorming sessions. The Idea Coach agent template uses a fun, collaborative tone to inspire creativity and ensure engaging and productive brainstorming interactions. Idea Coach agents gather user feedback to continuously improve the brainstorming experience.
 
 By acting as a personal assistant, an agent based on the Idea Coach template can help users:
 
@@ -65,6 +65,6 @@ You can further enhance your Idea Coach agents through integration and added int
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Overview of Copilot Studio in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Copilot Studio](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)

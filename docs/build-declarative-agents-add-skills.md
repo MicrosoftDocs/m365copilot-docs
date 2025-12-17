@@ -27,7 +27,7 @@ The image generator capability enables agents to generate images based on user p
     }
     ```
 
-    For more information, see [Graphic art object](declarative-agent-manifest-1.5.md#graphic-art-object).
+  For more information, see [Graphic art object](declarative-agent-manifest-1.6.md#graphic-art-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
@@ -47,7 +47,7 @@ Code interpreter is an advanced tool designed to solve complex tasks via Python 
     }
     ```
 
-    For more information, see [Code interpreter object](declarative-agent-manifest-1.5.md#code-interpreter-object).
+  For more information, see [Code interpreter object](declarative-agent-manifest-1.6.md#code-interpreter-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
@@ -97,4 +97,4 @@ You've completed the declarative agent guide for Microsoft 365 Copilot. Now that
 - Learn how to [write effective instructions](declarative-agent-instructions.md) for your agent.
 - Test your agent with [Copilot developer mode](debugging-agents-copilot-studio.md) to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
 - Get answers to [frequently asked questions](transparency-faq-declarative-agent.md).
-- Learn about an alternative method of building declarative agents with [Copilot Studio](copilot-studio-lite.md).
+- Learn about an alternative method of building declarative agents with [Copilot Studio](agent-builder.md).

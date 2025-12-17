@@ -3,9 +3,9 @@ title: Agents for Microsoft 365 Copilot
 description: Choose the type of Microsoft 365 Copilot agent that works best for your scenario.
 author: jessicaaawu
 ms.author: wujessica
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 11/17/2025
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -61,7 +61,7 @@ To configure a declarative agent, you provide:
 Declarative agents have the following characteristics:
 
 - **Hosting:** Use Copilot's orchestrator and foundation model. No additional hosting is required.
-- **Tooling:** Build agents using low-code tools such as the lite experience in [Copilot Studio](copilot-studio-lite.md) or pro-code tools like Visual Studio or Visual Studio Code and  [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
+- **Tooling:** Build agents using low-code tools such as [Microsoft 365 Copilot](agent-builder.md) or pro-code tools like Visual Studio or Visual Studio Code and  [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 - **Channels:** Run in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook.
 
 ## Custom engine agents

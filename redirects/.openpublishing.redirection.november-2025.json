@@ -1,0 +1,14 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/modal-dialog-box.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/adaptive-card-edits",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/build-api-plugins-mcp.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/build-mcp-plugins",
+      "redirect_document_id": true
+    }
+  ]
+}

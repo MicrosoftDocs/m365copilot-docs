@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 10/22/2025
+ms.date: 11/06/2025
 ms.topic: concept-article
 ---
 
@@ -46,15 +46,19 @@ When sharing links are references as a knowledge source in an agent, the agent d
 
 If a SharePoint file used as a knowledge source contains null characters in the file name, the agent returns no results based on that knowledge source.
 
-### Pasting a link to a file in Copilot Studio doesn't work
+### Pasting a link to a file in Microsoft 365 Copilot doesn't work
 
-Currently, users can select a file in Copilot Studio, and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
+Currently, users can select a file in Microsoft 365 Copilot, and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
 
-**Workaround:** The user can select the file from the UI in Copilot Studio.
+**Workaround:** The user can select the file from the UI in Microsoft 365 Copilot.
 
-### Sharing agents from within the Copilot Studio lite experience can fail
+### Sharing agents from within the Microsoft 365 Copilot can fail
 
-When you share an agent via the Copilot Studio lite experience using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+When you share an agent via the Microsoft 365 Copilot using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+
+### Agents built with the Microsoft 365 Copilot don't generate files
+
+When users ask an agent built with the [Microsoft 365 Copilot](agent-builder.md) to generate files, the agent fails to generate the files. This applies to all file types (.docx, .pdf, and so on).
 
 ### Some features aren't supported in Microsoft 365 Government tenants
 

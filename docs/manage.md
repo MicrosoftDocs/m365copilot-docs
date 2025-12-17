@@ -4,8 +4,8 @@ description: Learn about admin controls for Microsoft 365 Copilot agents.
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 09/11/2025
-ms.topic: conceptual
+ms.date: 11/06/2025
+ms.topic: article
 ---
 
 # Manage agents for Microsoft 365 Copilot
@@ -16,16 +16,13 @@ Agents are packaged, distributed, and managed in the same way as other apps that
 
 ## Microsoft 365 admin center
 
-Agents for Microsoft 365 Copilot can be [packaged and distributed as Microsoft 365 apps](./agents-are-apps.md) that are centrally managed from the **Integrated Apps** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
+Agents for Microsoft 365 Copilot can be [packaged and distributed as Microsoft 365 apps](./agents-are-apps.md) that are centrally managed from the **Copilot** section of **Microsoft 365 admin center** ([admin.microsoft.com](https://admin.microsoft.com)).
 
-*Global Admin* and *Azure Application Admin* roles can deploy and uninstall apps, manage which apps are available to which users, and block apps in Microsoft 365 admin center.
-
-:::image type="content" source="./assets/images/mac-integrated-apps.png" alt-text="Screenshot of the 'Integrated apps' section of Microsoft 365 admin center":::
+:::image type="content" source="./assets/images/mac-agents.png" alt-text="Screenshot of the 'Agents' section of Microsoft 365 admin center." lightbox="./assets/images/mac-agents.png":::
 
 From Microsoft 365 admin center, admins can:
 
-- Enable/disable Copilot agents for the whole organization through Microsoft 365 admin center settings.
-- Deploy, make available, or block agents to the whole organization or specific users or groups.
+- Manage access to Copilot and Copilot agents for the whole organization or specific users or groups.
 - Review and approve agents submitted to the organizational catalog.
 - Monitor and find information about agents that have been shared across the organization.
 
@@ -42,12 +39,12 @@ Both [declarative agents](./build-declarative-agents.md) and [custom engine agen
 
 ## Agents built with Copilot Studio in Microsoft 365 Copilot
 
-Declarative agents for Microsoft 365 Copilot that are built using [Copilot Studio](copilot-studio-lite.md) can be shared with the organization as a whole, or with specific users. These agents and the users they are shared with can be and managed by the person who created the agent.
+Declarative agents for Microsoft 365 Copilot that are built using [Copilot Studio](agent-builder.md) can be shared with the organization as a whole, or with specific users. These agents and the users they are shared with can be and managed by the person who created the agent.
 
 |Control | Core scenario | Related content|
 |--|--|--|
 | Allow the following users access to Copilot agents | Enable or disable the entry point for Copilot Studio in Microsoft 365 Copilot (*Create an agent*) | [Enable or disable Copilot extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#enable-or-disable-copilot-extensibility) |
-| Share | Manage access to your agent within your organization | [Publish and manage agents](copilot-studio-lite-share-manage-agent.md#share-an-agent) |
+| Share | Manage access to your agent within your organization | [Publish and manage agents](agent-builder-share-manage-agents.md#share-an-agent) |
 
 ## Agents built with Microsoft Copilot Studio
 

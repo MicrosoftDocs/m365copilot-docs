@@ -4,21 +4,21 @@ description: Learn about API plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 08/19/2025
+ms.date: 11/12/2025
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
 
 # API plugins for Microsoft 365 Copilot
 
-API plugins enable declarative agents in Microsoft 365 Copilot to interact with REST APIs that have an [OpenAPI description](https://www.openapis.org/what-is-openapi). With an API plugin, users can ask a declarative agent to not only query a REST API for information, but to create, update, and delete data and objects. Anything the REST API can do is accessible via natural language prompts.
+API plugins enable declarative agents in Microsoft 365 Copilot to interact with REST APIs that have an [OpenAPI description](https://www.openapis.org/what-is-openapi) or MCP servers. With an API plugin, users can ask a declarative agent to not only query a REST API or MCP server for information, but to create, update, and delete data and objects. Anything the REST API or MCP server can do is accessible via natural language prompts.
 
 > [!NOTE]
-> In addition to calling REST APIs, there's a preview feature that enables a plugin to call APIs in a local library. We encourage you to experiment with this feature, but it shouldn't be used in a production plugin. For more information, see [Build API plugins for Microsoft 365 Copilot with the Office JavaScript Library](build-api-plugins-local-office-api.md).
+> In addition to calling REST APIs or MCP servers, there's a preview feature that enables a plugin to call APIs in a local library. We encourage you to experiment with this feature, but it shouldn't be used in a production plugin. For more information, see [Build API plugins for Microsoft 365 Copilot with the Office JavaScript Library](build-api-plugins-local-office-api.md).
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-An API plugin provides an OpenAPI description document and a plugin manifest that Copilot uses to learn the capabilities of the API. Copilot can then decide when an installed and enabled plugin's API is suited to answer any given prompt. To learn more about the manifest file that an API plugin requires, see [API plugin manifest schema for Microsoft 365 Copilot](./api-plugin-manifest.md).
+An API plugin provides an OpenAPI description document (when using a REST API) and a plugin manifest that Copilot uses to learn the capabilities of the API. Copilot can then decide when an installed and enabled plugin's API is suited to answer any given prompt. To learn more about the manifest file that an API plugin requires, see [API plugin manifest schema for Microsoft 365 Copilot](./api-plugin-manifest.md).
 
 For example, consider a budgets API that allows for querying and creating budgets, charging expenses, or adding funds to existing budgets. The prompt "How much is left in the Contoso travel budget" could trigger a budget plugin, making the following API call.
 
@@ -45,7 +45,7 @@ Copilot responds to the user, using the information returned: "The charge of $50
 
 ## How API plugins work
 
-:::image type="content" source="assets/images/api-plugins/api-plugin-data-flow.svg" alt-text="A sequence diagram showing how an API plugin works" lightbox="assets/images/api-plugins/api-plugin-data-flow.svg":::
+:::image type="content" source="assets/images/api-plugins/api-plugin-data-flow.png" alt-text="A sequence diagram showing how an API plugin works" lightbox="assets/images/api-plugins/api-plugin-data-flow.png":::
 
 1. The user asks the agent "How much is left in the Fourth Coffee lobby renovation budget?"
 1. The agent identifies a budget-related plugin from its available plugins that has a function `GetBudget` to get budget details. It maps parts of the user's question to the parameters of the function: `budgetName=""`.
@@ -114,11 +114,12 @@ When a declarative agent includes up to five plugins defined in the [declarative
 
 A plugin can include an unlimited number of functions. All functions are returned, even if only one function is matched. However, due to token window limits, the quality of the responses might degrade if more than 10 functions are included.
 
-The token window for inputs to and outputs from a plugin truncates large content. The functional limit is subject to change as models improve and depending on any system overhead. Optimize for small token lengths or opt for extensibility options that allow for streaming large content if necessary. 
+The token window for inputs to and outputs from a plugin truncates large content. The functional limit is subject to change as models improve and depending on any system overhead. Optimize for small token lengths or opt for extensibility options that allow for streaming large content if necessary.
 
 ## Related content
 
 - [Build API plugins from an existing API for Microsoft 365 Copilot](build-api-plugins-existing-api.md)
 - [Build API plugins with a new API for Microsoft 365 Copilot](build-api-plugins-new-api.md)
-- [API plugin manifest schema for Microsoft 365 Copilot](./api-plugin-manifest.md)
+- [Build API plugins from an MCP server for Microsoft 365 Copilot](build-api-plugins-mcp.md)
+- [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest-2.4.md)
 - [Write effective instructions for declarative agents with API plugins](instructions-api-plugins.md)

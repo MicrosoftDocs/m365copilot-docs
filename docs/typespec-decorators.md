@@ -4,7 +4,7 @@ description: Learn about the built-in decorators for building agents and API plu
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/18/2025
+ms.date: 12/03/2025
 ms.topic: reference
 ---
 
@@ -13,12 +13,25 @@ ms.topic: reference
 
 # Decorators for TypeSpec for Microsoft 365 Copilot
 
-[!INCLUDE [preview-disclaimer-typespec](includes/preview-disclaimer-typespec.md)]
-
 This reference covers the built-in decorators available in TypeSpec for Microsoft 365 Copilot, organized by their primary use case.
 
 > [!NOTE]
 > This decorator reference focuses specifically on the `@microsoft/typespec-m365-copilot` decorators, but you can use all decorators defined in TypeSpec, including [built-in decorators](https://typespec.io/docs/standard-library/built-in-decorators/) and [OpenAPI decorators](https://typespec.io/docs/libraries/openapi/reference/decorators/).
+
+| Decorator | Target | Description |
+|-----------|--------|-------------|
+| [@agent](#agent) | Agent | Define an agent with name, description, and optional ID. |
+| [@behaviorOverrides](#behavioroverrides) | Agent | Modify agent orchestration behavior settings. |
+| [@conversationStarter](#conversationstarter) | Agent | Define conversation starter prompts for users. |
+| [@customExtension](#customextension) | Agent | Add custom key-value pairs for extensibility. |
+| [@disclaimer](#disclaimer) | Agent | Display legal or compliance disclaimers to users. |
+| [@instructions](#instructions) | Agent | Define behavioral instructions and guidelines for the agent. |
+| [@actions](#actions) | Plugin | Define action metadata including names, descriptions, and URLs. |
+| [@authReferenceId](#authreferenceid) | Plugin | Specify authentication reference ID for API access. |
+| [@capabilities](#capabilities) | Plugin | Configure function capabilities like confirmations and response formatting. |
+| [@card](#card) | Plugin | Define Adaptive Card templates for function responses. |
+| [@reasoning](#reasoning) | Plugin | Provide reasoning instructions for function invocation. |
+| [@responding](#responding) | Plugin | Define response formatting instructions for functions. |
 
 ## Declarative agent decorators
 
