@@ -4,6 +4,7 @@ description: List all Copilot packages available in the tenant using the Package
 author: pomuth
 ms.author: pomuth
 ms.topic: reference
+doc_type: apiPageType
 ms.localizationpriority: high
 ms.date: 10/28/2025
 ---

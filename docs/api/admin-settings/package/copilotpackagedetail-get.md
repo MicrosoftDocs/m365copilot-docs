@@ -4,6 +4,7 @@ description: Get details of a specific Copilot package using the Copilot Package
 author: pomuth
 ms.author: pomuth
 ms.topic: reference
+doc_type: apiPageType
 ms.localizationpriority: high
 ms.date: 10/28/2025
 ---
