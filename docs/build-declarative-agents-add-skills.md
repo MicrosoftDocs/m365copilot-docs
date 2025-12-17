@@ -19,7 +19,7 @@ You can enhance the abilities of your agent by adding skills. Skills can be adde
 
 The image generator capability enables agents to generate images based on user prompts. To add image generator:
 
-1. Open the `appPackage/declarativeAgent.json` file and add the `GraphicArt` entry to the `capabilities` array.
+1. Open the `appPackage/declarativeAgent.json` file and add the `GraphicArt` entry to the `capabilities` array. For more information, see [Graphic art object](declarative-agent-manifest-1.6.md#graphic-art-object).
 
     ```json
     {
@@ -27,9 +27,7 @@ The image generator capability enables agents to generate images based on user p
     }
     ```
 
-      For more information, see [Graphic art object](declarative-agent-manifest-1.6.md#graphic-art-object).
-
-2. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
+2. In the **Lifecycle** pane of the Agents Toolkit, select **Provision**.
 
 The declarative agent will have the ability to generate images after you reload the page.
 
