@@ -88,7 +88,7 @@ If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to build 
 
 For more information about embedded files, see [Embedded file content](agent-builder-add-knowledge.md#embedded-file-content).
 
-> [!NOTE]
+> [!IMPORTANT]
 > [Microsoft Purview Information Barriers (IB)](/purview/information-barriers) isn't supported on embedded files. Any user who can access the agent can see responses grounded in the embedded file content.
 
 ## Dataverse
