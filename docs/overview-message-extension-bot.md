@@ -15,7 +15,7 @@ Message extensions are a powerful feature in Microsoft Teams and Outlook that ar
 These interactions are typically triggered via buttons and forms within Microsoft Teams and Outlook clients. This mechanism allows users to search or initiate actions in an external system, right from the compose message area, or even directly from a message. The outcomes of these interactions are delivered back to the client in the form of a richly formatted card.
 
 > [!IMPORTANT]
-> Message extensions are available in [Microsoft 365 Government Community Cloud (GCC), GCCH, and Department of Defense (DOD)](/microsoftteams/platform/concepts/app-fundamentals-overview#government-community-cloud?context=/microsoft-365-copilot/extensibility/context) environments.
+> Message extensions are available in [Microsoft 365 Government Community Cloud (GCC), Government Community Cloud High (GCCH), and Department of Defense (DOD)](/microsoftteams/platform/concepts/app-fundamentals-overview#government-community-cloud?context=/microsoft-365-copilot/extensibility/context) environments.
 
 ## Message extension with Copilot
 
