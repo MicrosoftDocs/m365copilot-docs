@@ -4,7 +4,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.localizationpriority: medium
-ms.date: 11/18/2025
+ms.date: 12/18/2025
 ms.topic: article
 ---
 
@@ -87,6 +87,9 @@ If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to build 
 > The file upload feature is available to users with usage billing enabled or with a Microsoft 365 Copilot license.
 
 For more information about embedded files, see [Embedded file content](agent-builder-add-knowledge.md#embedded-file-content).
+
+> [!NOTE]
+> [Microsoft Purview Information Barriers (IB)](/purview/information-barriers) isn't supported on embedded files. Any user who can access the agent can see responses grounded in the embedded file content.
 
 ## Dataverse
 
