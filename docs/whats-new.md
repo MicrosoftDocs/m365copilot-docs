@@ -22,7 +22,7 @@ The People knowledge source is now available in the Copilot Studio lite experien
 
 ### Agent Builder in Microsoft 365 Copilot is available in GCCM
 
-The Agent Builder feature in Microsoft 365 Copilot is now available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) environment.
+The Agent Builder feature in Microsoft 365 Copilot is now available in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
 
 ### Embedded file content file size limit increase
 

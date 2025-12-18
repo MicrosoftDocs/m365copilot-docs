@@ -15,12 +15,7 @@ A declarative agent is a customized version of Microsoft 365 Copilot that you ca
 The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
 
 > [!NOTE]
-> The Microsoft 365 Agents Toolkit is currently supported in the Government Community Cloud High (GCC High) environment; however, agent provisioning isn't available in GCC High tenants.
-
-<!--
- [!NOTE]
- [Microsoft 365 Government tenants](https://www.microsoft.com/microsoft-365/government) don't support publishing agents through the Microsoft 365 Agents Toolkit.
--->
+> [Microsoft 365 Government tenants](https://www.microsoft.com/microsoft-365/government) don't support publishing agents through the Microsoft 365 Agents Toolkit.
 
 :::image type="content" source="assets/images/build-da/ttk/agent-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
 
@@ -71,15 +66,6 @@ Start by creating a basic declarative agent.
 1. In the new Visual Studio Code window that opens, select **Microsoft 365 Agents Toolkit**, then select **Provision** in the **Lifecycle** pane.
 
     :::image type="content" source="assets/images/build-da/ttk/provision-agent.png" alt-text="A screenshot of the Provision option in the Lifecycle pane of Agents Toolkit":::
-
-> [!NOTE]
-> Provisioning isn't available in Government Community Cloud High (GCC High) environments. If your tenant is in a GCC High environment, you have the following options:
-> - Validate the manifest files locally, package your agent as a zip file, and deploy the agent in a tenant that has a Microsoft 365 Copilot license.
-> - Provide the agent zip package to your admin and have them deploy it to your Microsoft 365 account.
-
-> [!NOTE]
-> If you prefer to create an agent based on an existing sample, select **View Samples** in Step 2, rather than **Create a New Agent/App**.
-
 
 ## Test the agent
 

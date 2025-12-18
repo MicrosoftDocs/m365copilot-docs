@@ -38,7 +38,7 @@ The Power Platform default environment location is automatically set to the loca
 
 ## National cloud availability
 
-Agent Builder in Microsoft 365 Copilot is available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) national cloud environment.
+Agent Builder in Microsoft 365 Copilot is available in the Microsoft 365 Government Community Cloud Moderate (GCCM) national cloud environment.
 
 ## Language support
 

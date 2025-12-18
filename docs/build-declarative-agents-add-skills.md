@@ -1,7 +1,7 @@
 ---
 title: Add capabilities and custom actions to a declarative agent created with Microsoft 365 Agents Toolkit
 description: Learn how to add capabilities and API plugins as custom actions to declarative agents with Microsoft 365 Agents Toolkit.
-ms.date: 12/15/2025
+ms.date: 12/18/2025
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -32,13 +32,16 @@ The image generator capability enables agents to generate images based on user p
 The declarative agent will have the ability to generate images after you reload the page.
 
 > [!NOTE]
-> Image generator isn't available to agents in Government Community Cloud High (GCC High) environments.
+> Image generator isn't available to agents in Microsoft 365 Government Community Cloud High (GCCH) environments.
 
 :::image type="content" source="assets/images/build-da/ttk/graphic-art-content.png" alt-text="A screenshot showing a response from the declarative agent that contains generated graphic art":::
 
 ## Add code interpreter to the agent
 
 Code interpreter is an advanced tool designed to solve complex tasks via Python code.
+
+> [!NOTE]
+> In GCCH environments, code interpreter is only available to users with a Microsoft 365 Copilot add-on license.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `CodeInterpreter` entry to the `capabilities` array.
 
@@ -61,6 +64,9 @@ The declarative agent will have the code interpreter capability after you reload
 ## Add an API plugin as a custom action to the agent
 
 API plugins add new abilities to your agent by allowing your agent to interact with a REST API.
+
+> [!NOTE]
+> Custom actions aren't supported in GCCH environments.
 
 Before you begin, create a file named `posts-api.yml` and add the code from the [Posts API OpenAPI description document](#posts-api-openapi-description-document).
 
