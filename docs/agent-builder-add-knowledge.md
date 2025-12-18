@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 12/04/2025
+ms.date: 12/18/2025
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -105,6 +105,9 @@ You can ground your agent in Outlook email. To add email as a knowledge source, 
 You can upload files directly from your device for your agent to use as knowledge. The files that you upload become embedded content in the agent. To upload files, you can drag-and-drop from your device into the **Describe** tab or the **Configure** tab. You can also choose the arrow icon on the **Configure** tab to upload files from your device. You can upload individual files from your device, but not file folders.
 
 You can add up to 20 files as knowledge sources.
+
+> [!NOTE]
+> Embedded file content isn't supported in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
 
 Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-types-and-size-limits).
 
