@@ -23,8 +23,8 @@ Get the most recent activity data for users who are enabled for Microsoft 365 Co
 
 > [!NOTE]
 > This API only returns usage data for users who have a Microsoft 365 Copilot license.
-> **Unlicensed Copilot Chat usage**: This data isn't available through Microsoft Graph reports APIs. 
-> Instead:
+> Unlicensed Copilot Chat usage data isn't available through Microsoft Graph reports APIs. 
+> Instead, you can:
 >
 > - View unlicensed usage in the Microsoft 365 Admin Center Copilot Chat Usage report
 > - Access audit data through Microsoft Purview Audit Log
