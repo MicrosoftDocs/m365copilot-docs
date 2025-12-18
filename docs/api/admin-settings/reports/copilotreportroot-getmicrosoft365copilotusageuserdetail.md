@@ -22,6 +22,7 @@ zone_pivot_groups: graph-api-versions
 Get the most recent activity data for users who are enabled for Microsoft 365 Copilot apps.
 
 > [!IMPORTANT]
+>
 > This API only returns usage data for users who have a Microsoft 365 Copilot license.
 > Unlicensed Copilot Chat usage isn't included and can't be retrieved through any Microsoft Graph reports API.
 > Usage from unlicensed users appears only in the Microsoft 365 Admin Center Copilot Chat Usage report and is stored exclusively in the Microsoft Purview Audit Log, not in the Graph usage reports system.
