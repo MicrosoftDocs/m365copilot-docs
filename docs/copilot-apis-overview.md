@@ -32,6 +32,7 @@ The following table lists the APIs and describes their capabilities and scenario
 | [Meeting Insights API](/microsoftteams/platform/graph-api/meeting-transcripts/meeting-insights) | Extract AI-generated meeting notes, action items, and discussion topics for Teams meetings. | Create applications that automatically extract and organize action items, decisions, and summaries from Teams meetings. Link these with project management tools, CRM systems, or custom workflows. These systems can transform meetings from time spent to value created by capturing, organizing, and activating meeting outcomes automatically. |
 | [Chat API (preview)](api/ai-services/chat/overview.md) | Enable conversational experiences powered by Microsoft 365 Copilot in your custom applications. | Integrate Microsoft 365 Copilot into your enterprise applications that can answer questions, perform tasks, and provide guidance based on Microsoft 365 data and user context. These interfaces can improve user productivity by bringing AI capabilities directly into the tools they use every day, from custom portals to mobile apps. |
 | [Copilot usage reports API](api/admin-settings/reports/resources/copilotreportroot.md) | Query user counts and usage data for Microsoft 365 Copilot in your organization. | Build reports to track the adoption of Microsoft 365 Copilot by your users. |
+| [Package management API](api/admin-settings/package/overview.md) | View and manage apps and agents across Microsoft 365. | Create an inventory of all agents and apps within your organization. |
 
 ## Key benefits
 
