@@ -740,7 +740,7 @@ The worker agent object contains the following property.
 
 ### User override object
 
-Identifies capabilities in the agent that the agent end user can modify via a UI control in Microsoft 365 Copilot.
+Identifies capabilities in the agent that the agent user can modify via a UI control in Microsoft 365 Copilot.
 
 > [!NOTE]
 > When you declare `GraphConnectors` in the `path`, the system buckets and displays Microsoft provided connectors using a friendly name, and custom connectors using the connector name (e.g., CB Insights). This behavior ensures end users can easily identify and manage connector sources when configuring their agent session. For more information on connectors and publishers, see [Microsoft 365 Copilot Connectors Gallery](/microsoftsearch/connectors-gallery).
