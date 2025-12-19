@@ -84,7 +84,8 @@ If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to create
 If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to build your agent, you can upload files directly from your device or the cloud to embed the content for your agent to use as knowledge. The embedded file content is stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview). These files count against the OneDrive and SharePoint capacity in your tenant.
 
 > [!NOTE]
-> The file upload feature is available to users with usage billing enabled or with a Microsoft 365 Copilot license.
+> - The file upload feature is available to users with usage billing enabled or with a Microsoft 365 Copilot license.
+> - Embedded file content isn't supported in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
 
 For more information about embedded files, see [Embedded file content](agent-builder-add-knowledge.md#embedded-file-content).
 

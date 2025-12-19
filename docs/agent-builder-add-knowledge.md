@@ -106,6 +106,9 @@ You can upload files directly from your device for your agent to use as knowledg
 
 You can add up to 20 files as knowledge sources.
 
+> [!NOTE]
+> Embedded file content isn't supported in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
+
 Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-types-and-size-limits).
 
 > [!IMPORTANT]
