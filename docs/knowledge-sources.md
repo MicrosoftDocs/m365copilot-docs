@@ -99,6 +99,40 @@ Dataverse knowledge allows agents to respond in natural language to user queries
 > [!NOTE]
 > Dataverse knowledge isn't currently available in Microsoft 365 Copilot.
 
+### Create a DVTableSearch Skill
+
+Before you can add Dataverse knowledge to your agent, you must create a `DVTableSearch` skill in your Dataverse environment. The skill enables your agent to access and reason over the tables in your Dataverse instance.
+
+1. To create a `DVTableSearch` skill, follow these steps:
+
+1. Check if a skill already exists
+  AUTH="Bearer <token>"
+  ORG="https://org7cccfc22.crm.dynamics.com"
+  API="$ORG/api/data/v9.1"
+
+  curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
+  -H "Authorization: $AUTH" \
+  -H "Accept: application/json"
+
+ 1. Look for name or dvtablesearchid in the response. If no skill exists, proceed to Step 2.    
+1. Create the skill with the following request:
+  AUTH="Bearer <token>"
+  ORG="https://org7cccfc22.crm.dynamics.com"
+  API="$ORG/api/data/v9.1"
+
+  curl -i -X POST "$API/dvtablesearchs" \
+  -H "Authorization: $AUTH" \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{
+  "name": "Account_SystemUser_Skill",
+  "searchtype": 0,
+  "DVTableSearch_DVTableSearch_DVTableSearch": [
+  { "name": "Account", "entitylogicalname": "account" }
+  ]
+}'
+
+
 ### Add Dataverse knowledge
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable Dataverse knowledge, add the `Dataverse` value to the **capabilities** property in your agent manifest file, as shown in the following example.
