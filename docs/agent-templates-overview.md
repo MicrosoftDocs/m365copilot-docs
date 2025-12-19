@@ -1,5 +1,5 @@
 ---
-title: Copilot Studio agent templates overview
+title: Templates for agents for Microsoft 365 Copilot 
 description: Learn how to use templates to quickly create declarative agents in Microsoft 365 Copilot.
 author: lauragra
 ms.author: lauragra
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 09/11/2025
 ---
 
-# Copilot Studio agent templates
+# Agent templates overview
 
 The Agent Builder feature in Microsoft 365 Copilot includes various templates that you can use to create declarative agents for Microsoft 365 Copilot. The templates apply design guidelines and industry best practices to help you get started quickly. This enables you to spend more time customizing the logic and functionality to meet your business requirements. The agent templates accelerate the agent development process to help organizations improve overall operational efficiency.
 
