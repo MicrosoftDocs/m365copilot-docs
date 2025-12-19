@@ -15,8 +15,7 @@ Microsoft 365 Copilot connectors provide a platform for you to ingest your unstr
 This article describes how Copilot connector contents are part of Microsoft 365 Copilot and how you can configure your custom Microsoft Graph connections for Microsoft 365 Copilot.
 
 > [!NOTE]
->
-> Copilot connectors are available in the global service and in Government Community Cloud (GCC) and Government Community Cloud High (GCCH) environments. They are not available in Department of Defense (DoD) environments.
+> Copilot connectors are available in the global service and in Microsoft 365 Government Community Cloud (GCC) and Government Community Cloud High (GCCH) environments. They aren't available in Department of Defense (DoD) environments.
 
 ## How Copilot connector content surfaces in Microsoft 365 Copilot
 
