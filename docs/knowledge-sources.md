@@ -99,13 +99,17 @@ Dataverse knowledge allows agents to respond in natural language to user queries
 > [!NOTE]
 > Dataverse knowledge isn't currently available in Microsoft 365 Copilot.
 
-### Create a DVTableSearch Skill
+In your `declarativeAgent.json` the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
 
-Before you can add Dataverse knowledge to your agent, you must create a `DVTableSearch` skill in your Dataverse environment. The skill enables your agent to access and reason over the tables in your Dataverse instance.
+You can either:
 
-1. To create a `DVTableSearch` skill, follow these steps:
+- Check if a skill already exists and use its name (or its dvtablesearchid), or
+- Create a new `DVTableSearch` and use the exact name you assign to it
 
-1. Check if a skill already exists
+### Check for existing DVTableSearch skills
+
+Check if a skill already exists with the following request:
+
   AUTH="Bearer <token>"
   ORG="https://org7cccfc22.crm.dynamics.com"
   API="$ORG/api/data/v9.1"
@@ -114,8 +118,13 @@ Before you can add Dataverse knowledge to your agent, you must create a `DVTable
   -H "Authorization: $AUTH" \
   -H "Accept: application/json"
 
- 1. Look for name or dvtablesearchid in the response. If no skill exists, proceed to Step 2.    
-1. Create the skill with the following request:
+Look for name or dvtablesearchid in the response.
+
+### Create a DVTableSearch Skill
+
+Before you can add Dataverse knowledge to your agent, you must create a `DVTableSearch` skill in your Dataverse environment.
+
+ Create a skill with the following request:
   AUTH="Bearer <token>"
   ORG="https://org7cccfc22.crm.dynamics.com"
   API="$ORG/api/data/v9.1"
@@ -131,7 +140,7 @@ Before you can add Dataverse knowledge to your agent, you must create a `DVTable
   { "name": "Account", "entitylogicalname": "account" }
   ]
 }'
-
+The response contains the `dvtablesearchid` of the newly created skill. The skill enables your agent to access and reason over the tables in your Dataverse instance. Use this value in the `skill` property of your agent manifest file.
 
 ### Add Dataverse knowledge
 
