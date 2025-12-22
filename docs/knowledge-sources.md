@@ -101,28 +101,13 @@ Dataverse knowledge allows agents to respond in natural language to user queries
 
 In your `declarativeAgent.json` the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
 
-To [add Dataverse knowledge](#add-dataverse-knowledge) to your agent, you can either:
+To [add Dataverse knowledge](#add-dataverse-knowledge) to your agent, you can:
 
-- [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) (or its `dvtablesearchid`), or
-- [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill)and use the exact name you assign to it.
+1. [Obtain a bearer token](#obtain-a-bearer-token) with appropriate permissions to access Dataverse resources, and
+1. [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) (or its `dvtablesearchid`)
+1. [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill)and use the exact name you assign to it.
 
-### Check for existing DVTableSearch skills
-
-Check if a skill already exists with the following request.
-
-```bash
-AUTH="Bearer token"
-ORG="https://org7cccfc22.crm.dynamics.com"
-API="$ORG/api/data/v9.1"
-
-curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
--H "Authorization: $AUTH" \
--H "Accept: application/json"
-```
-
-Look for skill name or `dvtablesearchid` in the response.
-
-### Create a DVTableSearch Skill
+### Obtain a bearer token
 
 Creating a skill requires you to obtain a bearer token with appropriate permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
@@ -146,7 +131,29 @@ curl -X POST https://login.microsoftonline.com/<tenant_id>/oauth2/v2.0/token \
   -d "grant_type"="client_credentials"
 ```
 
-Now you can create a skill with the following request.
+The response contains the bearer token that you use in subsequent requests to Dataverse.
+
+### Check for existing DVTableSearch skills
+
+Check if a skill already exists with the following request.
+
+```bash
+AUTH="Bearer token"
+ORG="https://org7cccfc22.crm.dynamics.com"
+API="$ORG/api/data/v9.1"
+
+curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
+-H "Authorization: $AUTH" \
+-H "Accept: application/json"
+```
+
+Look for skill name or `dvtablesearchid` in the response.
+
+### Create a DVTableSearch Skill
+
+If a skill doesn't already exist,  create a skill that references the tables you want your agent to use as knowledge with the following information:
+
+Create a skill with the following request.
 
 ```bash
   AUTH="Bearer token"
