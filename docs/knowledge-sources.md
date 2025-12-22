@@ -12,7 +12,7 @@ ms.topic: article
 
 You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.6.md#capabilities-object) in the manifest reference and the **Knowledge** section in Microsoft 365 Copilot provide several options for you to unlock features for your users. This article describes the knowledge sources that you can add to your agents.
 
-The following table lists the capabilities and knowledge sources you can configure by by using Microsoft 365 Copilot or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
+The following table lists the capabilities and knowledge sources you can configure by using Microsoft 365 Copilot or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
 
 | Capability or knowledge source | Microsoft 365 Copilot | Agents Toolkit | License or metered usage required? |
 |:-------------------------------|:--------------|:--------------|:-----------------------------------|
@@ -110,13 +110,15 @@ You can either:
 
 Check if a skill already exists with the following request:
 
-  AUTH="Bearer <token>"
-  ORG="https://org7cccfc22.crm.dynamics.com"
-  API="$ORG/api/data/v9.1"
+```bash
+AUTH="Bearer <token>"
+ORG="https://org7cccfc22.crm.dynamics.com"
+API="$ORG/api/data/v9.1"
 
-  curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
-  -H "Authorization: $AUTH" \
-  -H "Accept: application/json"
+curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
+-H "Authorization: $AUTH" \
+-H "Accept: application/json"
+```
 
 Look for name or dvtablesearchid in the response.
 
@@ -124,7 +126,9 @@ Look for name or dvtablesearchid in the response.
 
 Before you can add Dataverse knowledge to your agent, you must create a `DVTableSearch` skill in your Dataverse environment.
 
- Create a skill with the following request:
+Create a skill with the following request:
+
+```bash
   AUTH="Bearer <token>"
   ORG="https://org7cccfc22.crm.dynamics.com"
   API="$ORG/api/data/v9.1"
@@ -140,6 +144,8 @@ Before you can add Dataverse knowledge to your agent, you must create a `DVTable
   { "name": "Account", "entitylogicalname": "account" }
   ]
 }'
+```
+
 The response contains the `dvtablesearchid` of the newly created skill. The skill enables your agent to access and reason over the tables in your Dataverse instance. Use this value in the `skill` property of your agent manifest file.
 
 ### Add Dataverse knowledge
