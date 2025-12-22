@@ -101,7 +101,7 @@ Dataverse knowledge allows agents to respond in natural language to user queries
 
 In your `declarativeAgent.json` the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
 
-To [add Dataverse knowledge](#add-knowledge-sources-to-your-declarative-agent) to your agent, you can either:
+To [add Dataverse knowledge](#add-dataverse-knowledge) to your agent, you can either:
 
 - [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) (or its `dvtablesearchid`), or
 - [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill)and use the exact name you assign to it.
@@ -124,7 +124,7 @@ Look for skill name or `dvtablesearchid` in the response.
 
 ### Create a DVTableSearch Skill
 
-Creating a skill requires you to obtain a bearer token with appropriate permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/authenticate-web-api).
+Creating a skill requires you to obtain a bearer token with appropriate permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
 To obtain a bearer token, use either of the following options:
 
