@@ -124,7 +124,29 @@ Look for skill name or `dvtablesearchid` in the response.
 
 ### Create a DVTableSearch Skill
 
-Create a skill with the following request.
+Creating a skill requires you to obtain a bearer token with appropriate permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/authenticate-web-api).
+
+To obtain a bearer token, use either of the following options:
+
+- Using the [Power Apps maker portal](https://make.preview.powerapps.com/)
+  1. Open **Developer Tools** (F12).
+  1. Navigate to **Network**.
+  1. Copy the bearer token from any organization request.
+
+- Using Client Credentials flow
+  1. Create an App Registration in Azure Portal.
+  1. Run the following cURL command, replacing `<tenant_id>`, `<client_id>`, and `<client_secret>` with your values.
+
+```bash
+curl -X POST https://login.microsoftonline.com/<tenant_id>/oauth2/v2.0/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "client_id"="client_ID" \
+  -d "scope=https://org16cc9af8.crm.dynamics.com/.default" \
+  -d "client_secret"="client_secret>" \
+  -d "grant_type"="client_credentials"
+```
+
+Now you can create a skill with the following request.
 
 ```bash
   AUTH="Bearer token"
