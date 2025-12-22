@@ -101,17 +101,17 @@ Dataverse knowledge allows agents to respond in natural language to user queries
 
 In your `declarativeAgent.json` the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
 
-You can either:
+To [add Dataverse knowledge](#add-knowledge-sources-to-your-declarative-agent) to your agent, you can either:
 
-- Check if a skill already exists and use its name (or its dvtablesearchid), or
-- Create a new `DVTableSearch` and use the exact name you assign to it
+- Check for existing `DVTableSearch` skills[Check for existing DVTableSearch skills](#check-for-existing-dvtablesearch-skills) (or its `dvtablesearchid`), or
+- Create a new `DVTableSearch` [Create a DVTableSearch Skill](#create-a-dvtablesearch-skill)and use the exact name you assign to it.
 
 ### Check for existing DVTableSearch skills
 
-Check if a skill already exists with the following request:
+Check if a skill already exists with the following request.
 
 ```bash
-AUTH="Bearer <token>"
+AUTH="Bearer token"
 ORG="https://org7cccfc22.crm.dynamics.com"
 API="$ORG/api/data/v9.1"
 
@@ -120,16 +120,14 @@ curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
 -H "Accept: application/json"
 ```
 
-Look for name or dvtablesearchid in the response.
+Look for skill name or `dvtablesearchid` in the response.
 
 ### Create a DVTableSearch Skill
 
-Before you can add Dataverse knowledge to your agent, you must create a `DVTableSearch` skill in your Dataverse environment.
-
-Create a skill with the following request:
+Create a skill with the following request.
 
 ```bash
-  AUTH="Bearer <token>"
+  AUTH="Bearer token"
   ORG="https://org7cccfc22.crm.dynamics.com"
   API="$ORG/api/data/v9.1"
 
