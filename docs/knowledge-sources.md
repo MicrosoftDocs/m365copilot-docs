@@ -103,8 +103,8 @@ In your `declarativeAgent.json` the skill value must be the name of an existing 
 
 To [add Dataverse knowledge](#add-knowledge-sources-to-your-declarative-agent) to your agent, you can either:
 
-- Check for existing `DVTableSearch` skills[Check for existing DVTableSearch skills](#check-for-existing-dvtablesearch-skills) (or its `dvtablesearchid`), or
-- Create a new `DVTableSearch` [Create a DVTableSearch Skill](#create-a-dvtablesearch-skill)and use the exact name you assign to it.
+- [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) (or its `dvtablesearchid`), or
+- [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill)and use the exact name you assign to it.
 
 ### Check for existing DVTableSearch skills
 
