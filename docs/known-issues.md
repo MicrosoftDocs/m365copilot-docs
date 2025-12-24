@@ -138,7 +138,7 @@ However, **no Graph API, PowerShell module, or automated reporting interface cur
 
 #### Workaround
 You can currently view Copilot Chat usage reports only in the Microsoft 365 admin center.  
-To locate the Copilot Chat usage report, see the [Microsoft 365 Copilot usage report](https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft-copilot-usage#how-do-i-get-to-the-microsoft-365-copilot-chat-usage-report).
+To locate the Copilot Chat usage report, see the [Admin Centre](https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft-copilot-usage#how-do-i-get-to-the-microsoft-365-copilot-chat-usage-report).
 
 ---
 
@@ -170,9 +170,9 @@ This error happens when Teams keeps using an older version of the agent's config
 
 4. **If the issue persists**  
    Contact Microsoft Support and provide:  
-   - **Conversation ID** (masked format recommended: `a:xxx123xyz`)  
+   - **Conversation ID** (`a:xxx123xyz`)  
    - **Agent ID**  
-   - **Time (UTC)** when the error occurred (masked format recommended: `dd‑mm‑yyyy hh:mm`)  
+   - **Time (UTC)** when the error occurred (`dd‑mm‑yyyy hh:mm`)  
    These details help Microsoft Support review the related backend logs.
 
 ## Related content
