@@ -47,6 +47,9 @@ The following table describes the available sharing options.
 | Specific users in your organization | Specific users or groups can use the sharing link to access and interact with the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
 | Only you | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
 
+> [!NOTE]
+> For Microsoft 365 Copilot agents, even if you set the sharing option to **Anyone in your organization**, an administrator must still approve and deploy the agent before it becomes available to other users in the organization.
+
 When users open the link to an agent you have shared with them, the agent opens in a browser window and is ready to use.
 
 > [!NOTE]

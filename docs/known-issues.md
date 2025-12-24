@@ -126,6 +126,55 @@ The following table lists features that aren't currently supported for custom en
 | Sensitivity labels | Sensitivity labels aren't supported. |
 | Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Edge browser. |
 
+## Limitations
+
+The following limitations describes behaviors that aren't currently supported.
+
+### Programmatic access to Copilot Chat usage data isn't available
+
+Some administrators might expect to retrieve Copilot Chat usage information - such as user activity, conversation counts, or consumption metrics - through Microsoft Graph APIs, PowerShell cmdlets, or automated scripts.
+
+However, **no Graph API, PowerShell module, or automated reporting interface currently exists** for Copilot Chat usage data. Automated retrieval of Chat usage statistics isn't supported at this time.
+
+#### Workaround
+You can currently view Copilot Chat usage reports only in the Microsoft 365 admin center.  
+To locate the Copilot Chat usage report, see the [Microsoft 365 Copilot usage report](https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft-copilot-usage#how-do-i-get-to-the-microsoft-365-copilot-chat-usage-report).
+
+---
+
+### SystemError after publishing an agent to Teams
+
+When users interact with an agent in Teams, they might see the following message:
+
+> **Sorry, something unexpected happened. We’re looking into it.  
+> Error code: SystemError.  
+> Conversation ID: a:xxx123xyz  
+> Time (UTC): 22-12-2025 14:32  
+>**
+
+This error happens when Teams keeps using an older version of the agent's configuration after you publish or republish the agent. Even if the agent worked before, Teams might not immediately refresh the updated configuration. This delay can cause a generic **SystemError** during execution.
+
+
+#### Resolution steps
+
+1. **Refresh the app in the Teams admin center**  
+   Ask your Teams admin to open the **Teams admin center**, go to **Manage apps**, locate your agent’s app, and turn it **off** and then **on** again.  
+   This action forces Teams to reload the latest configuration.
+
+2. **Reset the Teams channel in Copilot Studio**  
+   Open your agent in **Copilot Studio**, turn the **Teams channel off**, select **Save**, and then turn the channel **on** again.  
+   This step re-establishes the connection and updates the agent’s configuration for Teams.
+
+3. **Republish the agent**  
+   Publish the agent again to ensure that the latest version is available to Teams.
+
+4. **If the issue persists**  
+   Contact Microsoft Support and provide:  
+   - **Conversation ID** (masked format recommended: `a:xxx123xyz`)  
+   - **Agent ID**  
+   - **Time (UTC)** when the error occurred (masked format recommended: `dd‑mm‑yyyy hh:mm`)  
+   These details help Microsoft Support review the related backend logs.
+
 ## Related content
 
 - [Microsoft 365 Copilot Q&A](/answers/tags/466/copilot-m365-development)
