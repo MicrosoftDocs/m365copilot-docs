@@ -128,17 +128,15 @@ The following table lists features that aren't currently supported for custom en
 
 ## Limitations
 
-The following limitations describes behaviors that aren't currently supported.
+The following limitations describe behaviors that aren't currently supported.
 
 ### Programmatic access to Copilot Chat usage data isn't available
 
-Some administrators might expect to retrieve Copilot Chat usage information - such as user activity, conversation counts, or consumption metrics - through Microsoft Graph APIs, PowerShell cmdlets, or automated scripts.
-
-However, **no Graph API, PowerShell module, or automated reporting interface currently exists** for Copilot Chat usage data. Automated retrieval of Chat usage statistics isn't supported at this time.
+No Microsoft Graph API or PowerShell cmdlet currently provides Copilot Chat usage statistics - such as user, session, or consumption data - programmatically.
 
 #### Workaround
-You can currently view Copilot Chat usage reports only in the Microsoft 365 admin center.  
-To locate the Copilot Chat usage report, see the [Admin Centre](https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft-copilot-usage#how-do-i-get-to-the-microsoft-365-copilot-chat-usage-report).
+You can view Copilot Chat usage data only in the Microsoft 365 admin center.  
+To locate the report, see the [Microsoft 365 Copilot usage report](https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft-copilot-usage#how-do-i-get-to-the-microsoft-365-copilot-chat-usage-report).
 
 ---
 
