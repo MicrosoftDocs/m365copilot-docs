@@ -99,80 +99,6 @@ By using Dataverse knowledge, agents can respond in natural language to user que
 > [!NOTE]
 > Dataverse knowledge isn't currently available in Microsoft 365 Copilot.
 
-In your capabilities array for adding Dataverse as a knowledge source, the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
-
-Before you [add Dataverse knowledge](#add-dataverse-knowledge) to your agent, you must:
-
-1. [Obtain a bearer token](#obtain-a-bearer-token) with appropriate permissions to access Dataverse resources, and
-1. [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) or its `dvtablesearchid`.
-1. [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
-
-### Obtain a bearer token
-
-To create a skill, you need a bearer token with the right permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
-
-To get a bearer token, use one of the following options:
-
-- Use the [Power Apps maker portal](https://make.preview.powerapps.com/)
-  1. Open **Developer Tools** (F12).
-  1. Navigate to **Network**.
-  1. Copy the bearer token from any organization request.
-
-- Use Client Credentials flow
-  1. Create an App Registration in Azure Portal.
-  1. Run the following curl command in any terminal (preferably Git Bash). Replace `tenant_id`, `client_id`, and `client_secret` with your values.
-
-```Git Bash
-curl -X POST https://login.microsoftonline.com/<tenant_id>/oauth2/v2.0/token \
-  -H "Content-Type: application/x-www-form-urlencoded" \
-  -d "client_id"="client_ID" \
-  -d "scope=https://org16cc9af8.crm.dynamics.com/.default" \
-  -d "client_secret"="client_secret>" \
-  -d "grant_type"="client_credentials"
-```
-
-The response contains the bearer token that you use in subsequent requests to Dataverse.
-
-### Check for existing DVTableSearch skills
-
-Check if a skill already exists by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
-
-```Git Bash
-AUTH="Bearer token"
-ORG="https://org7cccfc22.crm.dynamics.com"
-API="$ORG/api/data/v9.1"
-
-curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
--H "Authorization: $AUTH" \
--H "Accept: application/json"
-```
-
-Look for the skill name or `dvtablesearchid` in the response.
-
-### Create a DVTableSearch Skill
-
-If a skill doesn't alreday exist, create it by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
-
-```Git Bash
-  AUTH="Bearer token"
-  ORG="https://org7cccfc22.crm.dynamics.com"
-  API="$ORG/api/data/v9.1"
-
-  curl -i -X POST "$API/dvtablesearchs" \
-  -H "Authorization: $AUTH" \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-  "name": "Account_SystemUser_Skill",
-  "searchtype": 0,
-  "DVTableSearch_DVTableSearch_DVTableSearch": [
-  { "name": "Account", "entitylogicalname": "account" }
-  ]
-}'
-```
-
-The response contains the `dvtablesearchid` of the newly created skill. The skill enables your agent to access and reason over the tables in your Dataverse instance. Use this value in the `skill` property of your agent manifest file.
-
 ### Add Dataverse knowledge
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, add the `Dataverse` value to the **capabilities** property in your agent manifest file to enable Dataverse knowledge, as shown in the following example.
@@ -203,6 +129,82 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
   ]
 }
 ```
+
+In your capabilities array to [add Dataverse as a knowledge source](#add-dataverse-knowledge), the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
+
+#### Prerequisite
+
+Before adding Dataverse knowledge to your agent, create a skill value by following these steps:
+
+1. [Obtain a bearer token](#obtain-a-bearer-token) with appropriate permissions to access Dataverse resources in order to create or fetch skill value
+1. [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) or its `dvtablesearchid`.
+1. [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
+
+##### Obtain a bearer token
+
+To create a skill, you need a bearer token with the right permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
+
+To get a bearer token, use one of the following options:
+
+- Use the [Power Apps maker portal](https://make.preview.powerapps.com/)
+  1. Open **Developer Tools** (F12).
+  1. Navigate to **Network**.
+  1. Copy the bearer token from any organization request.
+
+- Use Client Credentials flow
+  1. Create an App Registration in Azure Portal.
+  1. Run the following curl command in any terminal (preferably Git Bash). Replace `tenant_id`, `client_id`, and `client_secret` with your values.
+
+```Git Bash
+curl -X POST https://login.microsoftonline.com/<tenant_id>/oauth2/v2.0/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "client_id"="client_ID" \
+  -d "scope=https://org16cc9af8.crm.dynamics.com/.default" \
+  -d "client_secret"="client_secret>" \
+  -d "grant_type"="client_credentials"
+```
+
+The response contains the bearer token that you use in subsequent requests to Dataverse.
+
+##### Check for existing DVTableSearch skills
+
+Check if a skill already exists by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
+
+```Git Bash
+AUTH="Bearer token"
+ORG="https://org7cccfc22.crm.dynamics.com"
+API="$ORG/api/data/v9.1"
+
+curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
+-H "Authorization: $AUTH" \
+-H "Accept: application/json"
+```
+
+Look for the skill name or `dvtablesearchid` in the response.
+
+##### Create a DVTableSearch Skill
+
+If a skill doesn't alreday exist, create it by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
+
+```Git Bash
+  AUTH="Bearer token"
+  ORG="https://org7cccfc22.crm.dynamics.com"
+  API="$ORG/api/data/v9.1"
+
+  curl -i -X POST "$API/dvtablesearchs" \
+  -H "Authorization: $AUTH" \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{
+  "name": "Account_SystemUser_Skill",
+  "searchtype": 0,
+  "DVTableSearch_DVTableSearch_DVTableSearch": [
+  { "name": "Account", "entitylogicalname": "account" }
+  ]
+}'
+```
+
+The response contains the `dvtablesearchid` of the newly created skill. The skill enables your agent to access and reason over the tables in your Dataverse instance. Use this value in the `skill` property of your agent manifest file.
 
 ## Email
 
