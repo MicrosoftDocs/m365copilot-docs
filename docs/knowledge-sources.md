@@ -34,7 +34,7 @@ The following table lists the capabilities and knowledge sources you can configu
 
 ## Copilot connectors
 
-Microsoft 365 Copilot connectors enable you to add organizational data to your agent as grounding information. You can use Copilot connectors to ingest your line-of-business data into Microsoft Graph and Copilot can reason over your data as grounding information in responses to user prompts. For more information, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
+Microsoft 365 Copilot connectors enable you to add organizational data to your agent as grounding information. Use Copilot connectors to ingest your line-of-business data into Microsoft Graph so that Copilot can reason over your data as grounding information in responses to user prompts. For more information, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 
 For information about how to add Copilot connectors as knowledge to your agent manifest in Agents Toolkit, see [Copilot connectors object](declarative-agent-manifest-1.6.md#copilot-connectors-object).
 
@@ -50,17 +50,17 @@ For information about how to add SharePoint knowledge to your agent in Microsoft
 
 ## Web and scoped web search
 
-Web search enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, you can have your agent return any web data in its responses. You can also scope the web search to up to four public websites.
+Web search enables agents to use the search index in Bing to respond to user prompts. If you enable web search in your agent, your agent can return any web data in its responses. You can also scope the web search to up to four public websites.
 
 > [!IMPORTANT]
-> Organization administrators can disable web search for Copilot and all agents inside their organization. If your administrators disable web search, agents with web search enabled don't report an error and don't include web searches in their knowledge. [Developer mode debug cards](debugging-agents-copilot-studio.md) indicate that web search is enabled if the agent enabled it, even if your administrators disabled it. For more information, see [Manage Microsoft 365 Copilot scenarios in the Microsoft 365 admin center](/copilot/microsoft-365/microsoft-365-copilot-page#web-search-for-microsoft-365-copilot-and-microsoft-copilot).
+> Organization administrators can disable web search for Copilot and all agents inside their organization. If administrators disable web search, agents with web search enabled don't report an error and don't include web searches in their knowledge. [Developer mode debug cards](debugging-agents-copilot-studio.md) indicate that web search is enabled if the agent enabled it, even if administrators disabled it. For more information, see [Manage Microsoft 365 Copilot scenarios in the Microsoft 365 admin center](/copilot/microsoft-365/microsoft-365-copilot-page#web-search-for-microsoft-365-copilot-and-microsoft-copilot).
 
 ### Add web and scoped web search
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable web search, you add the `WebSearch` value to the **capabilities** property in your manifest file. If you want to scope your web search to specific sites,  add the **sites** property and specify up to four URLs, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, add the `WebSearch` value to the **capabilities** property in your manifest file to enable web search. To scope your web search to specific sites, add the **sites** property and specify up to four URLs, as shown in the following example.
 
 > [!NOTE]
-> You must be using [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema to add scoped web search to your agent.
+> To add scoped web search to your agent, use [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema.
 
 ```json
 {
@@ -94,35 +94,35 @@ For more information about embedded files, see [Embedded file content](agent-bui
 
 ## Dataverse
 
-Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a Dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
+By using Dataverse knowledge, agents can respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a Dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
 
 > [!NOTE]
 > Dataverse knowledge isn't currently available in Microsoft 365 Copilot.
 
-In your `declarativeAgent.json` the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
+In your capabilities array for adding Dataverse as a knowledge source, the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
 
-To [add Dataverse knowledge](#add-dataverse-knowledge) to your agent, you can:
+To [add Dataverse knowledge](#add-dataverse-knowledge) to your agent, you must:
 
 1. [Obtain a bearer token](#obtain-a-bearer-token) with appropriate permissions to access Dataverse resources, and
-1. [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) (or its `dvtablesearchid`)
-1. [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill)and use the exact name you assign to it.
+1. [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) or its `dvtablesearchid`.
+1. [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
 
 ### Obtain a bearer token
 
-Creating a skill requires you to obtain a bearer token with appropriate permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
+To create a skill, you need a bearer token with the right permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
-To obtain a bearer token, use either of the following options:
+To get a bearer token, use one of the following options:
 
-- Using the [Power Apps maker portal](https://make.preview.powerapps.com/)
+- Use the [Power Apps maker portal](https://make.preview.powerapps.com/)
   1. Open **Developer Tools** (F12).
   1. Navigate to **Network**.
   1. Copy the bearer token from any organization request.
 
-- Using Client Credentials flow
+- Use Client Credentials flow
   1. Create an App Registration in Azure Portal.
-  1. Run the following cURL command, replacing `<tenant_id>`, `<client_id>`, and `<client_secret>` with your values.
+  1. Run the following curl command in any terminal (preferably Git Bash). Replace `tenant_id`, `client_id`, and `client_secret` with your values.
 
-```bash
+```Git Bash
 curl -X POST https://login.microsoftonline.com/<tenant_id>/oauth2/v2.0/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "client_id"="client_ID" \
@@ -135,9 +135,9 @@ The response contains the bearer token that you use in subsequent requests to Da
 
 ### Check for existing DVTableSearch skills
 
-Check if a skill already exists with the following request.
+Check if a skill already exists by using the following request. To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
 
-```bash
+```Git Bash
 AUTH="Bearer token"
 ORG="https://org7cccfc22.crm.dynamics.com"
 API="$ORG/api/data/v9.1"
@@ -147,15 +147,15 @@ curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
 -H "Accept: application/json"
 ```
 
-Look for skill name or `dvtablesearchid` in the response.
+Look for the skill name or `dvtablesearchid` in the response.
 
 ### Create a DVTableSearch Skill
 
 If a skill doesn't already exist,  create a skill that references the tables you want your agent to use as knowledge with the following information:
 
-Create a skill with the following request.
+Create a skill by using the following request. To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
 
-```bash
+```Git Bash
   AUTH="Bearer token"
   ORG="https://org7cccfc22.crm.dynamics.com"
   API="$ORG/api/data/v9.1"
@@ -177,10 +177,10 @@ The response contains the `dvtablesearchid` of the newly created skill. The skil
 
 ### Add Dataverse knowledge
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable Dataverse knowledge, add the `Dataverse` value to the **capabilities** property in your agent manifest file, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, add the `Dataverse` value to the **capabilities** property in your agent manifest file to enable Dataverse knowledge, as shown in the following example.
 
 > [!NOTE]
-> You must be using [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema to add `Dataverse` knowledge.
+> To add `Dataverse` knowledge, use [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema.
 
 ```json
 {
@@ -212,7 +212,7 @@ Email knowledge allows you to scope your agent to a personal or shared mailbox, 
 
 ### Add email knowledge sources
 
-If you're using [Microsoft 365 Copilot](agent-builder.md) to create your agent, on the **Configure** tab in the **Knowledge** section, choose **My emails**.
+If you're using [Microsoft 365 Copilot](agent-builder.md) to create your agent, on the **Configure** tab in the **Knowledge** section, select **My emails**.
 
 > [!NOTE]
 > You can't currently scope your emails to a specific folder or shared mailbox when you use Microsoft 365 Copilot.
@@ -244,7 +244,7 @@ In the **folder_id** field, you can reference either well-known folder names or 
 
 In the **shared_mailbox** field, use the SMTP address of the shared mailbox.
 
-In the **group_mailboxes** field, you may specific an `array` of strings (up to 25) containing the SMTP addresses of the shared mailboxes or Microsoft 365 groups you want your agent to be scoped to.
+In the **group_mailboxes** field, you specify an `array` of strings (up to 25) containing the SMTP addresses of the shared mailboxes or Microsoft 365 groups you want your agent to be scoped to.
 
 If you reference both a shared mailbox and a folder, the agent scopes responses to the folder within the shared mailbox. If you reference a folder only, the agent scopes responses to the contents of the folder within the personal mailbox.
 
@@ -252,7 +252,7 @@ If you don't reference a shared mailbox or a folder, the agent search isn't scop
 
 ## People
 
-You can ground your agent in People data to deliver more personalized and context-aware responses. People data combines public information about individuals (such as name, position, skills, and organizational relationships) with a personal view of the user's connections, collaborators, and relevant insights. This knowledge source enables agents to:
+Ground your agent in People data to deliver more personalized and context-aware responses. People data combines public information about individuals, such as name, position, skills, and organizational relationships, with a personal view of the user's connections, collaborators, and relevant insights. This knowledge source enables agents to:
 
 - Look up user and colleague profiles, including reporting structure and contact details.
 - Identify domain experts and key collaborators within the organization.
@@ -261,12 +261,12 @@ You can ground your agent in People data to deliver more personalized and contex
 
 ### Add people knowledge source
 
-If you're using [Copilot Studio](agent-builder.md) to create your agent, the People knowledge source is enabled by default for users with a Microsoft 365 Copilot license.
+If you use [Copilot Studio](agent-builder.md) to create your agent, the People knowledge source is enabled by default for users with a Microsoft 365 Copilot license.
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable people knowledge, add the `People` value to the **capabilities** property in your agent manifest file, as shown in the following example. Declaring only the base `People` capability will allow the agent to reason on **only basic organization data** such as those available in the [profile card](/graph/api/resources/profile). If you would like to include content such as related teams messages, emails, and files between the agent user and the referenced people in the organization refer to the [version 1.6](declarative-agent-manifest-1.6.md) to use the `include_related_content` property.
+If you use [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, add the `People` value to the **capabilities** property in your agent manifest file to enable people knowledge, as shown in the following example. Declaring only the base `People` capability allows the agent to reason on **only basic organization data** such as those available in the [profile card](/graph/api/resources/profile). To include content such as related teams messages, emails, and files between the agent user and the referenced people in the organization, see the [version 1.6](declarative-agent-manifest-1.6.md) to use the `include_related_content` property.
 
 > [!NOTE]
-> You must be using [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema to add the `People` knowledge source (without related content), or [version 1.6](declarative-agent-manifest-1.6.md) or later to use the `include_related_content` property.
+> To add the `People` knowledge source (without related content), use [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema. To use the `include_related_content` property, use [version 1.6](declarative-agent-manifest-1.6.md) or later.
 >
 ```json
 {
@@ -278,7 +278,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-In case you need your agent to reason over related content (between the agent user and the referenced people), such as related teams messages, emails and files you may leverage the `include_related_content`. The default value is `false`.
+If your agent needs to reason over related content (between the agent user and the referenced people), such as related teams messages, emails, and files, leverage the `include_related_content` property. The default value is `false`.
 
 ```json
 {
@@ -299,7 +299,7 @@ Agents can return links to files shared in Teams messages, but they can't return
 
 ### Add Teams messages knowledge sources
 
-If you're using [Microsoft 365 Copilot](agent-builder.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats and meetings.** To scope your agent to specific channel, meeting, or group chats, on the **Chats** tab, select the chats that you want to add as knowledge.
+If you're using [Microsoft 365 Copilot](agent-builder.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats and meetings**. To scope your agent to specific channel, meeting, or group chats, on the **Chats** tab, select the chats that you want to add as knowledge.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable Teams messages knowledge, add the `TeamsMessage` value to the **capabilities** property in your manifest reference. If you want to scope Teams knowledge to up to five Teams resources, add the links to the **urls** property, as shown in the following example.
 
@@ -330,20 +330,20 @@ To get the URL for a group or 1:1 chat, you need a deep link that includes the *
 To get the **chatId** value for a group or 1:1 chat:
 
 1. In Microsoft Teams, go to any message in the chat.
-2. Hover over the message and choose the three dots (...).
-3. Select **Copy link**.
-4. Paste the link into Notepad or a similar application. The link looks similar to the following URL: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces//1743033793614?context=%7B%22contextType%22%3A%22chat%22%7D`.
-5. Copy the segment of the URL that falls between `chat/` and the next `/`. The segment is usually prefaced with `19:`. This is the **chatId**. In the previous example, the **chatId** is `19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces`.
-6. Add the **chatId** to the deep link. For example: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces/conversations`.
+1. Hover over the message and choose the three dots (...).
+1. Select **Copy link**.
+1. Paste the link into Notepad or a similar application. The link looks similar to the following URL: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces//1743033793614?context=%7B%22contextType%22%3A%22chat%22%7D`.
+1. Copy the segment of the URL that falls between `chat/` and the next `/`. The segment is usually prefaced with `19:`. This is the **chatId**. In the previous example, the **chatId** is `19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces`.
+1. Add the **chatId** to the deep link. For example: `https://teams.microsoft.com/l/chat/19:12ab3c4d-a123-12a3-a123-123ab12c12de_12a3bcd4-1234-1234-123a-1b2345c678d9@unq.gbl.spaces/conversations`.
 
 For more information, see [Deep link to Teams chat](/microsoftteams/platform/concepts/build-and-test/deep-link-teams).
 
 ## Teams meetings
 
-Teams meetings knowledge allows you to scope your agent to answer questions about meetings, including single meetings or meeting series. For example, your agent can respond to queries such as "Recap yesterday's meetings and list action items" or "What was said about Project X in my meetings?". This knowledge source can optionally be scoped to up to five specific meetings. This knowledge source gives the agent access to meeting metadata (subject, organizer, attendees, and title), transcript content, and meeting chats.
+By using Teams meetings knowledge, you can scope your agent to answer questions about meetings, including single meetings or meeting series. For example, your agent can respond to queries such as "Recap yesterday's meetings and list action items" or "What was said about Project X in my meetings?". You can optionally scope this knowledge source to up to five specific meetings. This knowledge source gives the agent access to meeting metadata (subject, organizer, attendees, and title), transcript content, and meeting chats.
 
 > [!NOTE]
-> Referencing a meeting series is limited to the last 4 instances of the series.
+> Referencing a meeting series is limited to the last four instances of the series.
 
 ### Add meetings knowledge source
 
