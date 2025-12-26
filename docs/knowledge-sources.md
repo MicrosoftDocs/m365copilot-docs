@@ -101,7 +101,7 @@ By using Dataverse knowledge, agents can respond in natural language to user que
 
 In your capabilities array for adding Dataverse as a knowledge source, the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
 
-To [add Dataverse knowledge](#add-dataverse-knowledge) to your agent, you must:
+Before you [add Dataverse knowledge](#add-dataverse-knowledge) to your agent, you must:
 
 1. [Obtain a bearer token](#obtain-a-bearer-token) with appropriate permissions to access Dataverse resources, and
 1. [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) or its `dvtablesearchid`.
@@ -135,7 +135,7 @@ The response contains the bearer token that you use in subsequent requests to Da
 
 ### Check for existing DVTableSearch skills
 
-Check if a skill already exists by using the following request. To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
+Check if a skill already exists by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
 
 ```Git Bash
 AUTH="Bearer token"
@@ -151,9 +151,7 @@ Look for the skill name or `dvtablesearchid` in the response.
 
 ### Create a DVTableSearch Skill
 
-If a skill doesn't already exist,  create a skill that references the tables you want your agent to use as knowledge with the following information:
-
-Create a skill by using the following request. To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
+If a skill doesn't alreday exist, create it by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
 
 ```Git Bash
   AUTH="Bearer token"
