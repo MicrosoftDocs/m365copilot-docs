@@ -52,6 +52,10 @@ Currently, users can select a file in Microsoft 365 Copilot, and the agent searc
 
 **Workaround:** The user can select the file from the UI in Microsoft 365 Copilot.
 
+### URLs returned by a declarative agent disappear in @mention responses in Microsoft 365 Copilot
+
+When you invoke a declarative agent through an @mention in Microsoft 365 Copilot, you might see URLs removed, hidden, or downgraded to plain text. This expected behavior happens because the @mention pipeline applies stricter output sanitization to block unsafe or unverified links in shared contexts such as Word, Excel, PowerPoint, Outlook, and Teams.
+
 ### Sharing agents from within the Microsoft 365 Copilot can fail
 
 When you share an agent via the Microsoft 365 Copilot using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
@@ -124,7 +128,7 @@ The following table lists features that aren't currently supported for custom en
 | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
 | Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul> |
 | Sensitivity labels | Sensitivity labels aren't supported. |
-| Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Edge browser. |
+| Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Microsoft Edge browser. |
 
 ## Related content
 
