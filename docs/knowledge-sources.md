@@ -137,7 +137,7 @@ In your capabilities array to add Dataverse as a knowledge source, the `skill` v
 Before adding Dataverse knowledge to your agent, create a `skill` value by following these steps:
 
 1. [Obtain a bearer token](#obtain-a-bearer-token) with appropriate permissions to access Dataverse resources. This helps in creating or fetching the `skill` value.
-1. [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) or its `dvtablesearchid`.
+1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`.
 1. [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
 
 ##### Obtain a bearer token
