@@ -18,9 +18,9 @@ The following known issues apply to declarative agents.
 
 ### Newly installed agents might not show in the Teams client right away
 
-In some cases, an agent installed from the store doesn't immediately show up in Copilot Chat in the Teams client.
+In some cases, an agent installed from the store doesn't immediately show up in Copilot Chat in the Microsoft Teams client.
 
-**Workaround:** The user can switch to another chat and then return to Copilot Chat.
+**Workaround:** Switch to another chat and then return to Copilot Chat.
 
 ### Power Automate Flows aren't fully supported as actions in declarative agents
 
@@ -50,11 +50,22 @@ If a SharePoint file used as a knowledge source contains null characters in the 
 
 Currently, users can select a file in Microsoft 365 Copilot, and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
 
-**Workaround:** The user can select the file from the UI in Microsoft 365 Copilot.
+**Workaround:** Select the file from the UI in Microsoft 365 Copilot.
 
 ### URLs returned by a declarative agent disappear in @mention responses in Microsoft 365 Copilot
 
 When you invoke a declarative agent through an @mention in Microsoft 365 Copilot, you might see URLs removed, hidden, or downgraded to plain text. This expected behavior happens because the @mention pipeline applies stricter output sanitization to block unsafe or unverified links in shared contexts such as Word, Excel, PowerPoint, Outlook, and Teams.
+
+**Workaround:**
+
+Consider the following points:
+
+- Avoid returning bare URLs, as they are most likely to be removed. Provide navigational text when the link is optional. For example,
+go to **Contoso Portal** > **Reports** > **Monthly Dashboard**.
+
+- Return URLs inside structured JSON fields in API plugin responses. These fields are less aggressively sanitized than natural language text.
+
+- Use Markdown link formatting (https://contoso.com/dashboard) or angle‑bracket notation (<https://contoso.com/dashboard>).
 
 ### Sharing agents from within the Microsoft 365 Copilot can fail
 
@@ -62,7 +73,7 @@ When you share an agent via the Microsoft 365 Copilot using the **Specific users
 
 ### Agents built with the Microsoft 365 Copilot don't generate files
 
-When users ask an agent built with the [Microsoft 365 Copilot](agent-builder.md) to generate files, the agent fails to generate the files. This applies to all file types (.docx, .pdf, and so on).
+When users ask an agent built with the [Microsoft 365 Copilot](agent-builder.md) to generate files, the agent fails to generate the files. This limitation applies to all file types (.docx, .pdf, and so on).
 
 ### Some features aren't supported in Microsoft 365 Government tenants
 
@@ -118,7 +129,7 @@ The following table lists features that aren't currently supported for custom en
 
 | Feature | Issue |
 | ------- | ----- |
-| Feedback | User feedback regarding agent responses isn't shared with the developer. |
+| Feedback | User feedback about agent responses isn't shared with the developer. |
 | Conversation context | Custom engine agents can't access Copilot conversation history that occurred before the user accesses the agent via `@mention`. |
 | Chat messages | Users can't edit chat messages sent to or returned by the agent. |
 | Chat messages | HTML isn't supported in agent response messages. |
