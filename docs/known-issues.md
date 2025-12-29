@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 11/06/2025
+ms.date: 12/29/2025
 ms.topic: concept-article
 ---
 
@@ -54,18 +54,17 @@ Currently, users can select a file in Microsoft 365 Copilot, and the agent searc
 
 ### URLs returned by a declarative agent disappear in @mention responses in Microsoft 365 Copilot
 
-When you invoke a declarative agent through an @mention in Microsoft 365 Copilot, you might see URLs removed, hidden, or downgraded to plain text. This expected behavior happens because the @mention pipeline applies stricter output sanitization to block unsafe or unverified links in shared contexts such as Word, Excel, PowerPoint, Outlook, and Teams.
+When you invoke a declarative agent through an @mention in Microsoft 365 Copilot, you might see URLs removed, hidden, or downgraded to plain text. This  behavior occurs because the @mention pipeline applies stricter output sanitization to block unsafe or unverified links in shared contexts such as Word, Excel, PowerPoint, Outlook, and Teams.
 
 **Workaround:**
 
-Consider the following points:
+Try one of the following approaches:
 
-- Avoid returning bare URLs, as they are most likely to be removed. Provide navigational text when the link is optional. For example,
-go to **Contoso Portal** > **Reports** > **Monthly Dashboard**.
+- Avoid returning bare URLs, as they are most likely to be removed. Provide navigational text when the link is optional. For example, go to **Contoso Portal** > **Reports** > **Monthly Dashboard**.
 
 - Return URLs inside structured JSON fields in API plugin responses. These fields are less aggressively sanitized than natural language text.
 
-- Use Markdown link formatting (https://contoso.com/dashboard) or angle‑bracket notation (<https://contoso.com/dashboard>).
+- Use Markdown link formatting `(https://contoso.com/dashboard)` or angle‑bracket notation `(<https://contoso.com/dashboard>)`.
 
 ### Sharing agents from within the Microsoft 365 Copilot can fail
 
