@@ -113,6 +113,21 @@ As you prepare to build and deploy your custom engine agent, consider the key fa
 > [!NOTE]
 > Custom engine agents are supported in app manifest version 1.21 and later versions.
 
+### Message ordering and streaming behavior
+
+Teams and Microsoft 365 Copilot render agent messages based on server timestamps, activity IDs, and the relationship between streaming updates and non‑streaming activities. When a Custom Engine Agent mixes streaming text, media attachments,and final messages within the same user turn, messages can appear out of sequence.
+Use the following guidance to maintain consistent ordering:
+
+- Use a single streaming sequence per user turn. Create one `StreamingResponse` object and finalize it with `endStream()` before sending any additional messages.
+
+- Attach media inside the same stream. Use `setAttachments()` instead of sending a separate non‑streaming activity. Separate messages can appear before or inside the stream due to timestamp differences.
+
+- Do not start a new stream before the previous one is finalized. Multiple streams in the same turn can produce unpredictable ordering in Teams and Copilot.
+
+- Serialize outgoing messages. Avoid sending messages from multiple threads in parallel. Ensure updates are awaited to maintain ordering.
+
+- Do not send streaming updates after `endStream()`. Once a stream is finalized, additional updates become independent activities and may render above earlier content. If you must send a follow‑up message, use `replyToId`. This keeps the message in the same thread and reduces ordering gaps.
+
 ### AI model selection
 
 Custom engine agents can utilize various AI models depending on the complexity of tasks and domain-specific requirements. Whether your agent needs a specific foundation model, a small language model, or a fine-tuned model for your scenario, selecting the right model is critical.
