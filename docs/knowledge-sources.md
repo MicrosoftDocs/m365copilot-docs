@@ -4,7 +4,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.localizationpriority: medium
-ms.date: 12/26/2025
+ms.date: 12/29/2025
 ms.topic: article
 ---
 
@@ -60,7 +60,7 @@ Web search enables agents to use the search index in Bing to respond to user pro
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, add the `WebSearch` value to the **capabilities** property in your manifest file to enable web search. To scope your web search to specific sites, add the **sites** property and specify up to four URLs, as shown in the following example.
 
 > [!NOTE]
-> To add scoped web search to your agent, use [version 1.2](declarative-agent-manifest-1.2.md) or later of the declarative agent manifest schema.
+> To add scoped web search to your agent, use [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema.
 
 ```json
 {
@@ -94,7 +94,7 @@ For more information about embedded files, see [Embedded file content](agent-bui
 
 ## Dataverse
 
-By using Dataverse knowledge, agents can respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a Dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
+Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a Dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
 
 > [!NOTE]
 > Dataverse knowledge isn't currently available in Microsoft 365 Copilot.
@@ -168,7 +168,7 @@ The response contains the bearer token that you use in subsequent requests to Da
 
 ##### Check for an existing DVTableSearch skill
 
-Check if a `skill` already exists by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
+Check if a `skill` already exists by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ```Git Bash
 AUTH="Bearer token"
@@ -185,7 +185,7 @@ Look for the `skill` name or `dvtablesearchid` in the response.
 
 ##### Create a DVTableSearch Skill
 
-If a `skill` doesn't already exist, create it by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
+If a `skill` doesn't already exist, create it by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ```Git Bash
   AUTH="Bearer token"
@@ -205,7 +205,7 @@ If a `skill` doesn't already exist, create it by using the following request. <b
 }'
 ```
 
-The response contains the `dvtablesearchid` of the newly created `skill`. This enables your agent to access and reason over the tables in your Dataverse instance. Use this value in the `skill` property of your agent manifest file to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
+The response contains the `dvtablesearchid` of the newly created `skill`. Use this value in the `skill` property of your agent manifest file to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
 
 ## Email
 
