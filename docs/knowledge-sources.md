@@ -130,28 +130,28 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-In your capabilities array to [add Dataverse as a knowledge source](#add-dataverse-knowledge), the skill value must be the name of an existing `DVTableSearch` skill in your Dataverse environment.
+In your capabilities array to add Dataverse as a knowledge source, the `skill` value must be the name of an existing `skill` in your Dataverse environment.
 
 #### Prerequisite
 
-Before adding Dataverse knowledge to your agent, create a skill value by following these steps:
+Before adding Dataverse knowledge to your agent, create a `skill` value by following these steps:
 
-1. [Obtain a bearer token](#obtain-a-bearer-token) with appropriate permissions to access Dataverse resources in order to create or fetch skill value
+1. [Obtain a bearer token](#obtain-a-bearer-token) with appropriate permissions to access Dataverse resources. This helps in creating or fetching the `skill` value.
 1. [Check for existing `DVTableSearch` skills](#check-for-existing-dvtablesearch-skills) or its `dvtablesearchid`.
 1. [Create a `DVTableSearch` Skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
 
 ##### Obtain a bearer token
 
-To create a skill, you need a bearer token with the right permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
+To create a `skill`, you need a bearer token with the right permissions to create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
 To get a bearer token, use one of the following options:
 
-- Use the [Power Apps maker portal](https://make.preview.powerapps.com/)
+- [Power Apps maker portal](https://make.preview.powerapps.com/)
   1. Open **Developer Tools** (F12).
   1. Navigate to **Network**.
   1. Copy the bearer token from any organization request.
 
-- Use Client Credentials flow
+- Client Credentials flow
   1. Create an App Registration in Azure Portal.
   1. Run the following curl command in any terminal (preferably Git Bash). Replace `tenant_id`, `client_id`, and `client_secret` with your values.
 
@@ -166,9 +166,9 @@ curl -X POST https://login.microsoftonline.com/<tenant_id>/oauth2/v2.0/token \
 
 The response contains the bearer token that you use in subsequent requests to Dataverse.
 
-##### Check for existing DVTableSearch skills
+##### Check for an existing DVTableSearch skill
 
-Check if a skill already exists by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
+Check if a `skill` already exists by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
 
 ```Git Bash
 AUTH="Bearer token"
@@ -180,11 +180,12 @@ curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
 -H "Accept: application/json"
 ```
 
-Look for the skill name or `dvtablesearchid` in the response.
+The response contains a list of existing `DVTableSearch` skills in your Dataverse environment.
+Look for the `skill` name or `dvtablesearchid` in the response.
 
 ##### Create a DVTableSearch Skill
 
-If a skill doesn't alreday exist, create it by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
+If a `skill` doesn't already exist, create it by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl commands.
 
 ```Git Bash
   AUTH="Bearer token"
@@ -204,7 +205,7 @@ If a skill doesn't alreday exist, create it by using the following request. <br>
 }'
 ```
 
-The response contains the `dvtablesearchid` of the newly created skill. The skill enables your agent to access and reason over the tables in your Dataverse instance. Use this value in the `skill` property of your agent manifest file.
+The response contains the `dvtablesearchid` of the newly created `skill`. This enables your agent to access and reason over the tables in your Dataverse instance. Use this value in the `skill` property of your agent manifest file to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
 
 ## Email
 
