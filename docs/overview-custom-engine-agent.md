@@ -126,7 +126,7 @@ Use the following guidance to maintain consistent ordering:
 
 - Serialize outgoing messages. Avoid sending messages from multiple threads in parallel. Ensure updates are awaited to maintain ordering.
 
-- Don't send streaming updates after `endStream()`. Once a stream is finalized, more updates become independent activities and might render above earlier content. If you must send a follow-up message, use `replyToId`. This keeps the message in the same thread and reduces ordering gaps.
+- Don’t send streaming updates after `endStream()`. Once the stream is finalized, any new updates become separate activities and may appear out of order. If you need to send a follow‑up message, use `replyToId` to keep it in the same thread and reduce sequencing issues.
 
 ### AI model selection
 
