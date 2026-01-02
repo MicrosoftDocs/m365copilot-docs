@@ -113,7 +113,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
       "name": "Dataverse",
       "knowledge_sources": [
         {
-          "host_name": "organization.crm.dynamics.com",
+          "host_name": "yourorg.crm.dynamics.com",
           "skill": "DVCopilotSkillName",
           "tables": [
             {
@@ -130,49 +130,52 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-To add Dataverse as a knowledge source, ensure that the `skill` in your capabilities array is of a pre-existing value in your Dataverse environment.
+Before running the reqest, ensure that the`skill` value in your capabilities array is pre-existing in your Dataverse environment. Also, ensure that the `host_name` value matches your organization ID.
 
-#### Prerequisite
+#### Ensure that the `skill` value exists in your Dataverse environment
 
-Before adding Dataverse knowledge to your agent, create a `skill` value by following these steps:
+Before adding Dataverse knowledge to your agent, you will need to ensure that you either use an existing `skill` value or create a new one. To fetch or create a `skill` value, you will need an organization ID and a bearer token.
 
+Follow these steps to obtain the necessary values:
+
+1. [Obtain your organization ID](#obtain-your-organization-id)
 1. [Obtain a bearer token](#obtain-a-bearer-token) to access Dataverse resources. This helps in creating or fetching the `skill` value.
 1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`.
 1. [Create a `DVTableSearch` skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
 
+##### Obtain your organization ID
+
+To obtain your organization ID, follow these steps:
+
+1. Sign in to the [Power Apps maker portal](https://make.preview.powerapps.com/). The landing page opens.
+1. Navigate to the Tables section from the left pane or press F12 to open **Developer Tools**.
+1. Navigate to **Network**.
+1. Refresh the page. Network requests appear in the Developer Tools pane.
+1. In the Search box, type `organizations` to filter the requests.
+1. Click the first request that appears in the list. A request url similar to the following appears under the **General** tab: `https://yourorg.crm.dynamics.com/api/data/v9.1/organizations`.
+1. - Copy the organization id from the url (For example: yourorg.crm.dynamics.com).
+   - Alternatively, you can also copy the organization id from the **authorization** propertly under the **Request** header.
+
+You will need this organization ID to create or fetch the `skill` value.
+
 ##### Obtain a bearer token
 
-To create a `skill` value, you need a Dataverse bearer token so that you can authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
+To create a `skill` value, you need a bearer token so that you can authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
-To obtain a bearer token, use one of the following options:
+To obtain a bearer token, follow these steps:
 
-- [Power Apps maker portal](https://make.preview.powerapps.com/)
-  1. Open **Developer Tools** (F12).
-  1. Navigate to **Network**.
-  1. Copy the bearer token from any organization request.
+1. Follow steps 1-6 in the [previous section](#obtain-your-organization-id).
+1. Copy the bearer token that appears under the **Authorization** property in the **Request** header.
 
-- Client Credentials flow
-  1. Create an app registration in [Azure Portal](https://ms.portal.azure.com/#home).
-  1. Run the following curl request in any terminal (preferably Git Bash). Replace `tenant_id`, `client_id`, and `client_secret` with your values.
-
-    ```Bash
-    curl -X POST https://login.microsoftonline.com/<tenant_id>/oauth2/v2.0/token \
-    -H "Content-Type: application/x-www-form-urlencoded" \
-    -d "client_id"="client_id" \
-    -d "scope=https://org7cccfc22.crm.dynamics.com/.default" \
-    -d "client_secret"="client_secret>" \
-    -d "grant_type"="client_credentials"
-    ```
-
-The response contains the bearer token that you use in subsequent requests to Dataverse.
+You will need this bearer token to create or fetch the `skill` value in the next steps.
 
 ##### Check for an existing DVTableSearch skill
 
-Check if a `skill` already exists by using the following request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+Check if a `skill` already exists by using the following curl request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ```Bash
 AUTH="Bearer token"
-ORG="https://org7cccfc22.crm.dynamics.com"
+ORG="yourorg.crm.dynamics.com"
 API="$ORG/api/data/v9.1"
 
 curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
@@ -189,7 +192,7 @@ If a `skill` value doesn't already exist, create it by using the following reque
 
 ```Bash
   AUTH="Bearer token"
-  ORG="https://org7cccfc22.crm.dynamics.com"
+  ORG="yourorg.crm.dynamics.com"
   API="$ORG/api/data/v9.1"
 
   curl -i -X POST "$API/dvtablesearchs" \
