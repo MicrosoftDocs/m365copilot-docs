@@ -152,7 +152,7 @@ To obtain your organization ID, follow these steps:
 1. Navigate to **Network**.
 1. Refresh the page. Network requests appear in the developer tools pane.
 1. In the **Search** box, type `organizations` to filter the requests.
-1. Click the first request that appears in the list. A request url similar to the following appears under the **General** tab: `https://yourorg.crm.dynamics.com/api/data/v9.1/organizations`.
+1. Click the first request that appears in the list. A request url (similar to the following:   https://yourorg.crm.dynamics.com/api/data/v9.1/organizations) appears under the **General** tab.
 1. - Copy the organization id from the url (For example: yourorg.crm.dynamics.com).
    - Alternatively, you can also copy the organization id from the **authorization** propertly under the **Request** header.
 
