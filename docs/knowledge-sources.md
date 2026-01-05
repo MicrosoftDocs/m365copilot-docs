@@ -138,7 +138,7 @@ Before adding Dataverse knowledge to your agent, you will need to ensure that yo
 
 Follow these steps to obtain the necessary values:
 
-1. [Obtain your organization ID](#obtain-your-organization-id)
+1. [Obtain your organization ID](#obtain-your-organization-id).
 1. [Obtain a bearer token](#obtain-a-bearer-token) to access Dataverse resources.
 1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`. If a `skill` value already exists, you can use that value in your agent manifest file without creating a new one.
 1. [Create a `DVTableSearch` skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
@@ -153,15 +153,13 @@ To obtain your organization ID, follow these steps:
 1. Navigate to **Network** and refresh the page. Network requests appear in the developer tools pane.
 1. In the **Search** box, type `org` to filter the requests.
 1. Click the first request that appears in the list. A request url (For example:\https://yourorg.crm.dynamics.com/api/data/v9.1/organizations) appears under the **General** tab.
-1. To obtain the organization url:
-  - Copy the organization url (For example: yourorg.crm.dynamics.com).
-  - Alternatively, you can also copy the organization url from the **Authorization** property under the **Request** header.
+1. Copy the organization ID (For example: yourorg.crm.dynamics.com) from the request url or from the **Authorization** property under the **Request** header.
 
 You will need this organization ID to create or fetch the `skill` value.
 
 ##### Obtain a bearer token
 
-To create or fetch a `skill` value, you need a bearer token so that you can authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
+To create or fetch a `skill` value, you also need a bearer token to authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
 To obtain a bearer token, follow these steps:
 
@@ -182,7 +180,7 @@ curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
 -H "Accept: application/json"
 ```
 
-If a `skill` value already exists, the response contains a list of existing `DVTableSearch` skills in your Dataverse environment as given in the following example response. Look for the value of the `skill` property or `dvtablesearchid` in the response.
+If a `skill` value already exists, the response contains a list of existing `DVTableSearch` skills in your Dataverse environment as given in the following example. Look for the value of the `skill` property or `dvtablesearchid` in the response.
 
 ```Bash
 {
