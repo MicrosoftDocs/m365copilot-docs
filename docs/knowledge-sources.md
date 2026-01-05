@@ -130,9 +130,9 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-Before running the reqest, ensure that the`skill` value in your capabilities array is pre-existing in your Dataverse environment. Also, ensure that the `host_name` value matches your organization ID.
+Before running the reqest, [ensure that the`skill` value in your capabilities array is pre-existing in your Dataverse environment](#fetch-a-pre-existing-skill-value-or-create-a-new-one). Also, ensure that the `host_name` value matches your organization ID.
 
-#### Prerequisites to add Dataverse as a knowledge source
+#### Fetch a pre-existing `skill` value or create a new one
 
 Before adding Dataverse knowledge to your agent, you will need to ensure that you either use an existing `skill` value or create a new one. To fetch or create a `skill` value, you will need an organization ID and a bearer token.
 
@@ -140,7 +140,7 @@ Follow these steps to obtain the necessary values:
 
 1. [Obtain your organization ID](#obtain-your-organization-id)
 1. [Obtain a bearer token](#obtain-a-bearer-token) to access Dataverse resources. This helps in creating or fetching the `skill` value.
-1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`.
+1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`. If a `skill` value already exists, you can use that value in your agent manifest file without creating a new one.
 1. [Create a `DVTableSearch` skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
 
 ##### Obtain your organization ID
@@ -148,13 +148,16 @@ Follow these steps to obtain the necessary values:
 To obtain your organization ID, follow these steps:
 
 1. Sign in to the [Power Apps maker portal](https://make.preview.powerapps.com/).
-1. Navigate to the Tables section from the left pane or press F12 to open developer tools.
+1. Navigate to the **Tables** section from the left pane. Existing tables in your Dataverse environment appear.
+1. Go to **Inspect**. The developer tools pane appears.
 1. Navigate to **Network**.
 1. Refresh the page. Network requests appear in the developer tools pane.
-1. In the **Search** box, type `organizations` to filter the requests.
-1. Click the first request that appears in the list. A request url (similar to the following:   https://yourorg.crm.dynamics.com/api/data/v9.1/organizations) appears under the **General** tab.
-1. - Copy the organization id from the url (For example: yourorg.crm.dynamics.com).
-   - Alternatively, you can also copy the organization id from the **authorization** propertly under the **Request** header.
+1. In the **Search** box, type `org` to filter the requests.
+1. Click the first request that appears in the list. A request url (similar to the following:   \https://yourorg.crm.dynamics.com/api/data/v9.1/organizations) appears under the **General** tab.
+1. To obtain the organization url:
+
+- Copy the organization url (For example: yourorg.crm.dynamics.com).
+- Alternatively, you can also copy the organization url from the **Authorization** property under the **Request** header.
 
 You will need this organization ID to create or fetch the `skill` value.
 
@@ -164,7 +167,7 @@ To create or fetch a `skill` value, you need a bearer token so that you can auth
 
 To obtain a bearer token, follow these steps:
 
-1. Follow steps 1 to 6 in the [previous section](#obtain-your-organization-id).
+1. Follow steps 1 to 7 in the [previous section](#obtain-your-organization-id).
 1. Copy the bearer token that appears under the **Authorization** property in the **Request** header.
 
 ##### Check for an existing DVTableSearch skill
@@ -182,7 +185,7 @@ curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
 ```
 
 The response contains a list of existing `DVTableSearch` skills in your Dataverse environment.
-Look for the value of the `skill` property or `dvtablesearchid` in the response.
+Look for the value of the `skill` property or `dvtablesearchid` in the response. If a `skill` value already exists, you can use that value in your agent manifest file without creating a new one.
 
 ##### Create a DVTableSearch Skill
 
