@@ -1,3 +1,5 @@
 items:
 - name: Change notifications for AI interactions
   href: aiinteraction-changenotifications.md
+- name: Change notifications for Teams meeting AI insights
+  href: aiinsights-changenotifications.md
