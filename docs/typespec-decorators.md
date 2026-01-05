@@ -554,31 +554,45 @@ Defines the adaptive card reference for a function.
 
 Simplified responseSemantics focused on the adaptive card.
 
-| Name       | Type     | Description |
-|------------|----------|-------------|
-| `dataPath` | `string` | Required. A JSONPath RFC9535 query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
-| `file`     | `string` | Required. Path to the adaptive card template. Relative to the appPackage directory. |
-| `title`    | `string` | Required. Title of a citation for the result. |
-| `url`      | `string` | Optional. URL of a citation for the result. |
+| Name         | Type                                                              | Description |
+|--------------|-------------------------------------------------------------------|-------------|
+| `dataPath`   | `string`                                                          | Required. A JSONPath RFC9535 query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
+| `file`       | `string`                                                          | Required. Path to the adaptive card template. Relative to the appPackage directory. |
+| `properties` | [CardResponseSemanticProperties](#cardresponsesemanticproperties) | Optional. Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value. |
+
+##### CardResponseSemanticProperties
+
+Allows mapping of JSONPath queries to well-known data elements for card rendering. Each JSONPath query is relative to a result value.
+
+| Name                         | Type     | Description |
+|------------------------------|----------|-------------|
+| `informationProtectionLabel` | `string` | Optional. Data sensitivity indicator of the result contents. |
+| `subTitle`                   | `string` | Optional. Subtitle of a citation for the result. |
+| `thumbnailUrl`               | `string` | Optional. URL of a thumbnail image for the result. |
+| `title`                      | `string` | Optional. Title of a citation for the result. |
+| `url`                        | `string` | Optional. URL of a citation for the result. |
 
 #### Examples
 
 ```typescript
-// Basic card configuration with data binding and static title
+// Basic card configuration with data binding
 @card(#{
   dataPath: "$.tickets",
-  file: "cards/ticketCard.json",
-  title: "Support Ticket Details"
+  file: "cards/ticketCard.json"
 })
 ```
 
 ```typescript
-// Dynamic card with URL binding and custom card file location
+// Card with property mappings for citations and metadata
 @card(#{
   dataPath: "$.projects",
-  title: "$.name",
-  url: "$.projectUrl",
-  file: "cards/project.json"
+  file: "cards/project.json",
+  properties: #{
+    title: "$.name",
+    url: "$.projectUrl",
+    subTitle: "$.description",
+    thumbnailUrl: "$.teamLogo"
+  }
 })
 ```
 
