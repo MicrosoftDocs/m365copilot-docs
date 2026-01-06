@@ -30,10 +30,7 @@ import "@microsoft/typespec-m365-copilot";
 using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
 
-@agent({
-  name: "Basic Helper Agent",
-  description: "A simple agent that provides basic information and assistance"
-})
+@agent("Basic Helper Agent", "A simple agent that provides basic information and assistance")
 @instructions("""
   You are a helpful assistant that provides basic information and support.
   Be friendly, professional, and helpful in all interactions. Provide clear,
@@ -71,10 +68,7 @@ import "@microsoft/typespec-m365-copilot";
 using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
 
-@agent({
-  name: "Knowledge Worker Assistant",
-  description: "An intelligent assistant that helps with research, file management, and finding colleagues"
-})
+@agent("Knowledge Worker Assistant", "An intelligent assistant that helps with research, file management, and finding colleagues")
 @instructions("""
   You are a knowledgeable research assistant specialized in helping knowledge workers
   find information efficiently. You can search the web for external research, access
@@ -134,10 +128,7 @@ using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
 using TypeSpec.M365.Copilot.Actions;
 
-@agent({
-  name: "Facilities Repair Agent",
-  description: "Report and track facility maintenance issues and repair requests"
-})
+@agent("Facilities Repair Agent", "Report and track facility maintenance issues and repair requests")
 @instructions("""
   You are a facilities management assistant that helps employees report and track
   maintenance issues. You can help users submit new repair requests by gathering
@@ -252,10 +243,7 @@ using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
 using TypeSpec.M365.Copilot.Actions;
 
-@agent({
-  name: "Repairs Hub Agent",
-  description: "Smart repair management agent for tracking and coordinating facility maintenance tasks"
-})
+@agent("Repairs Hub Agent", "Smart repair management agent for tracking and coordinating facility maintenance tasks")
 @instructions("""
   You are a specialized repairs management assistant that helps teams efficiently track,
   organize, and coordinate facility maintenance tasks. You excel at managing repair
@@ -315,9 +303,11 @@ namespace RepairsHub {
   @action
   @card(#{
     dataPath: "$",
-    title: "$.title",
-    url: "$.image",
-    file: "cards/card.json"
+    file: "cards/card.json",
+    properties: #{
+      title: "$.title",
+      url: "$.image"
+    }
   })
   op listRepairs(
     @query assignedTo?: string
@@ -465,10 +455,7 @@ using TypeSpec.Http;
 using TypeSpec.M365.Copilot.Agents;
 using TypeSpec.M365.Copilot.Actions;
 
-@agent({
-  name: "GitHub Project Manager",
-  description: "Smart project management agent with GitHub integration for issue tracking, pull request management, and project coordination"
-})
+@agent("GitHub Project Manager", "Smart project management agent with GitHub integration for issue tracking, pull request management, and project coordination")
 @instructions("""
   You are an intelligent project management assistant specialized in GitHub workflows
   and development team coordination. You excel at managing GitHub repositories including
