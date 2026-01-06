@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 01/06/2026
 ---
 
 # Agent templates overview
@@ -36,8 +36,7 @@ After the agent is created, choose **Go to agent** in Copilot to chat with the a
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](agent-builder.md)
-- [Declarative agents overview](overview-declarative-agent.md)
+- [Build a declarative agent with Agent Builder](agent-builder.md)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
 - [Build agents with Copilot Studio](agent-builder-build-agents.md)
 - [Publish and manage agents](agent-builder-share-manage-agents.md)
