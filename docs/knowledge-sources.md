@@ -201,7 +201,14 @@ If a `skill` value already exists, the response contains a list of existing `DVT
 }
 ```
 
-If a `skill` value already exists, use that value in your agent manifest file without creating a new one. If the `skill` value doesn't exist, proceed to the next step to create a new one.
+If a `skill` value already exists, use that value in your agent manifest file without creating a new one. If the `skill` value doesn't exist, the response will contain an empty array as given in the following example. In that case, proceed to the next step to create a new `skill` value.
+
+```json
+{
+  "@odata.context":"https://YourOrgId.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
+  "value":[]
+}
+```
 
 ##### Create a DVTableSearch Skill
 
@@ -232,16 +239,13 @@ curl -i -X POST "$API/dvtablesearchs" \
 
 ###### Response
 
-The request returns an empty value array as shown in the following example.
+The request returns No Content as shown in the following example, representing that the `DVTableSearch` skill was successfully created.
 
 ```json
-{
-  "@odata.context":"https://YourOrgId.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
-  "value":[]
-}
+HTTP/1.1 204 No Content
 ```
 
-Run the curl request to check for an existing `DVTableSearch` skill again as given in the [previous section](#check-for-an-existing-dvtablesearch-skill).
+Now run the curl request to [check for an existing `DVTableSearch` skill](#check-for-an-existing-dvtablesearch-skill).
 
 The response will contains the `dvtablesearchid` of the newly created `skill`. Use this value in the `skill` property of your agent manifest file to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
 
