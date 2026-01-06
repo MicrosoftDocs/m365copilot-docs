@@ -8,6 +8,7 @@ ms.date: 12/29/2025
 ms.topic: article
 ---
 
+<!-- markdownlint-disable MD024 -->
 # Add knowledge sources to your declarative agent
 
 You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.6.md#capabilities-object) in the manifest reference and the **Knowledge** section in Microsoft 365 Copilot provide several options for you to unlock features for your users. This article describes the knowledge sources that you can add to your agents.
@@ -130,7 +131,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-Before running the reqest, [ensure that the`skill` value in your capabilities array is pre-existing in your Dataverse environment](#fetch-a-pre-existing-skill-value-or-create-a-new-one). Also, ensure that the `host_name` value matches your organization ID.
+Before running the request, [ensure that the `skill` value in your capabilities array is pre-existing in your Dataverse environment](#fetch-a-pre-existing-skill-value-or-create-a-new-one). Also, ensure that the `host_name` value matches your organization ID.
 
 #### Fetch a pre-existing `skill` value or create a new one
 
@@ -152,8 +153,8 @@ To obtain your organization ID, follow these steps:
 1. Go to **Inspect**. The developer tools pane appears.
 1. Navigate to **Network** and refresh the page. Network requests appear in the developer tools pane.
 1. In the **Search** box, type `org` to filter the requests.
-1. Click the first request that appears in the list. A request url (For example:\https://yourorg.crm.dynamics.com/api/data/v9.1/organizations) appears under the **General** tab.
-1. Copy the organization ID (For example: yourorg.crm.dynamics.com) from the request url or from the **Authorization** property under the **Request** header.
+1. Click the first request that appears in the list. A request url (For example:\https://YourOrgID.crm.dynamics.com) appears under the **General** tab.
+1. Copy the organization ID (For example: YourOrgID.crm.dynamics.com) from the request url or from the **Authorization** property under the **Request** header.
 
 You will need this organization ID to create or fetch the `skill` value.
 
@@ -170,19 +171,23 @@ To obtain a bearer token, follow these steps:
 
 Check if a `skill` value already exists by using the curl request as given in the following example. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
-```Bash
-AUTH="Bearer token"
-ORG="yourorg.crm.dynamics.com"
+###### Request
+
+```Shell
+AUTH="Bearer {TOKEN}"
+ORG="https://YourOrgID.crm.dynamics.com"
 API="$ORG/api/data/v9.1"
 
-curl -s -X GET "$API/dvtablesearchs?$select=dvtablesearchid,name,searchtype" \
+curl -s -X GET "$API/dvtablesearchs?\$select=dvtablesearchid,name,searchtype" \
 -H "Authorization: $AUTH" \
 -H "Accept: application/json"
 ```
 
 If a `skill` value already exists, the response contains a list of existing `DVTableSearch` skills in your Dataverse environment as given in the following example. Look for the value of the `skill` property or `dvtablesearchid` in the response.
 
-```Bash
+###### Response
+
+```Shell
 {
   "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,se…),
   "value": [
@@ -202,26 +207,43 @@ If a `skill` value already exists, use that value in your agent manifest file wi
 
 If a `skill` value doesn't already exist, create it by using the request as given in the following example. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
-```Bash
-  AUTH="Bearer token"
-  ORG="yourorg.crm.dynamics.com"
-  API="$ORG/api/data/v9.1"
+###### Request
 
-  curl -i -X POST "$API/dvtablesearchs" \
-  -H "Authorization: $AUTH" \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
+```Shell
+AUTH="Bearer {TOKEN}"
+ORG="https://YourOrgID.crm.dynamics.com"
+API="$ORG/api/data/v9.1"
+
+curl -i -X POST "$API/dvtablesearchs" \
+-H "Authorization: $AUTH" \
+-H "Accept: application/json" \
+-H "Content-Type: application/json" \
+-d '{
   "name": "Account_SystemUser_Skill",
   "searchtype": 0,
   "DVTableSearch_DVTableSearch_DVTableSearch": [
-  { "name": "Account", 
-    "entitylogicalname": "account" }
+    { 
+      "name": "Account", 
+      "entitylogicalname": "account" 
+    }
   ]
 }'
 ```
 
-The response contains the `dvtablesearchid` of the newly created `skill`. Use this value in the `skill` property of your agent manifest file to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
+###### Response
+
+The request returns an empty value array as shown in the following example.
+
+```json
+{
+  "@odata.context":"https://YourOrgId.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
+  "value":[]
+}
+```
+
+Run the curl request to check for an existing `DVTableSearch` skill again as given in the [previous section](#check-for-an-existing-dvtablesearch-skill).
+
+The response will contains the `dvtablesearchid` of the newly created `skill`. Use this value in the `skill` property of your agent manifest file to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
 
 ## Email
 
