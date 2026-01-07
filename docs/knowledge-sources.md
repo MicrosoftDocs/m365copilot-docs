@@ -114,7 +114,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
       "name": "Dataverse",
       "knowledge_sources": [
         {
-          "host_name": "yourorg.crm.dynamics.com",
+          "host_name": "YourOrgID.crm.dynamics.com",
           "skill": "DVCopilotSkillName",
           "tables": [
             {
@@ -141,8 +141,8 @@ Follow these steps to obtain the necessary values:
 
 1. [Obtain your organization ID](#obtain-your-organization-id).
 1. [Obtain a bearer token](#obtain-a-bearer-token) to access Dataverse resources.
-1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`. If a `skill` value already exists, you can use that value in your agent manifest file without creating a new one.
-1. If no existing skill was found in the previous step, [create a `DVTableSearch` skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
+1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`.
+1. If no existing `skill` was found in the previous step, [create a `DVTableSearch` skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
 
 ##### Obtain your organization ID
 
