@@ -1,14 +1,14 @@
 ---
-title: Use Agent Builder in Microsoft 365 Copilot to build declarative agents
+title: Agent Builder in Microsoft 365 Copilot
 description: Learn how to use Microsoft 365 Copilot Agent Builder to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 12/01/2025
+ms.date: 01/06/2026
 ms.topic: article
 ---
 
-# Build a declarative agent with Agent Builder in Microsoft 365 Copilot
+# Agent Builder in Microsoft 365 Copilot
 
 The easiest way to build your own [declarative agents](overview-declarative-agent.md) is to use the Agent Builder feature in Microsoft 365 Copilot. It offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects.
 

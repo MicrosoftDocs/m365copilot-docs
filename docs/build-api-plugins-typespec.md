@@ -144,7 +144,7 @@ Open the `main.tsp` file and add the `@card` decorator to the `listPosts` operat
   * @param userId The ID of the user who created the post. If not provided, all posts will be returned.
   */
 @route("/posts")
-@card(#{ dataPath: "$", title: "$.title", file: "post-card.json" })
+@card(#{ dataPath: "$", file: "post-card.json", properties: #{ title: "$.title" } })
 @get op listPosts(@query userId?: integer): PostItem[];
 ```
 
@@ -298,14 +298,14 @@ namespace MyAgent {
      * @param userId The ID of the user who created the post. If not provided, all posts will be returned.
      */
     @route("/posts")
-    @card(#{ dataPath: "$", title: "$.title", file: "post-card.json" })
+    @card(#{ dataPath: "$", file: "post-card.json", properties: #{ title: "$.title" } })
     @get op listPosts(@query userId?: integer): PostItem[];
 
     /**
      * Get a blog post item by ID.
      */
     @route("/posts/{id}")
-    @card(#{ dataPath: "$", title: "$.title", file: "post-card.json" })
+    @card(#{ dataPath: "$", file: "post-card.json", properties: #{ title: "$.title" } })
     @get op getPost(@path id: integer): PostItem;
 
     /**
