@@ -142,7 +142,7 @@ Follow these steps to obtain the necessary values:
 1. [Obtain your organization ID](#obtain-your-organization-id).
 1. [Obtain a bearer token](#obtain-a-bearer-token) to access Dataverse resources.
 1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`. If a `skill` value already exists, you can use that value in your agent manifest file without creating a new one.
-1. [Create a `DVTableSearch` skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
+1. If no existing skill was found in the previous step, [create a `DVTableSearch` skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
 
 ##### Obtain your organization ID
 
