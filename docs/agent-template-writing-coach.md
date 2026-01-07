@@ -55,6 +55,6 @@ You can further enhance your Writing Coach agents with integration. For example:
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](agent-builder.md)
-- [Build agents with Copilot Studio](agent-builder-build-agents.md)
+- [Agent Builder in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Agent Builder](agent-builder-build-agents.md)
 - [Publish and manage agents](agent-builder-share-manage-agents.md)
