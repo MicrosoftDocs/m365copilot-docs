@@ -241,7 +241,7 @@ curl -i -X POST "$API/dvtablesearchs" \
 
 The request returns No Content as shown in the following example, representing that the `DVTableSearch` skill was successfully created.
 
-```json
+```http
 HTTP/1.1 204 No Content
 ```
 
