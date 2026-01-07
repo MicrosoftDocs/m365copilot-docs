@@ -135,7 +135,7 @@ Before running the request, [ensure that the `skill` value in your capabilities 
 
 #### Fetch a pre-existing `skill` value or create a new one
 
-Before adding Dataverse knowledge to your agent, you will need to ensure that you either use an existing `skill` value or create a new one. To fetch or create a `skill` value, you will need an organization ID and a bearer token.
+Before adding Dataverse knowledge to your agent, ensure that you either use an existing `skill` value or create a new one. To fetch or create a `skill` value, you will need an organization ID and a bearer token.
 
 Follow these steps to obtain the necessary values:
 
