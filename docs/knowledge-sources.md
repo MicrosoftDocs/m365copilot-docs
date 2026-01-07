@@ -102,7 +102,7 @@ Dataverse knowledge allows agents to respond in natural language to user queries
 
 ### Add Dataverse knowledge
 
-If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, add the `Dataverse` value to the **capabilities** property in your agent manifest file to enable Dataverse knowledge, as shown in the following example.
+If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, add the `Dataverse` value to the `capabilities` property in your agent manifest file to enable Dataverse knowledge, as shown in the following example.
 
 > [!NOTE]
 > To add `Dataverse` knowledge, use [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema.
@@ -133,7 +133,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 
 Before running the request, [ensure that the `skill` value in your capabilities array is pre-existing in your Dataverse environment](#fetch-a-pre-existing-skill-value-or-create-a-new-one). Also, ensure that the `host_name` value matches your organization ID.
 
-#### Fetch a pre-existing `skill` value or create a new one
+#### Fetch a pre-existing skill value or create a new one
 
 Before adding Dataverse knowledge to your agent, ensure that you either use an existing `skill` value or create a new one. To fetch or create a `skill` value, you will need an organization ID and a bearer token.
 
@@ -150,11 +150,11 @@ To obtain your organization ID, follow these steps:
 
 1. Sign in to the [Power Apps maker portal](https://make.preview.powerapps.com/).
 1. Navigate to the **Tables** section from the left pane. Existing tables in your Dataverse environment appear.
-1. Go to **Inspect**. The developer tools pane appears.
+1. Right click on your website and select **Inspect**. The developer tools pane appears.
 1. Navigate to **Network** and refresh the page. Network requests appear in the developer tools pane.
 1. In the **Search** box, type `org` to filter the requests.
 1. Click the first request that appears in the list. A request url (For example:\https://YourOrgID.crm.dynamics.com) appears under the **General** tab.
-1. Copy the organization ID (For example: YourOrgID.crm.dynamics.com) from the request url or from the **Authorization** property under the **Request** header.
+1. Copy the organization ID (For example: YourOrgID) from the request url or from the **Authorization** property under the **Request** header.
 
 You will need this organization ID to create or fetch the `skill` value.
 
