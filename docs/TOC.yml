@@ -33,10 +33,11 @@ items:
   items:
   - name: Agents overview
     href: agents-overview.md
-  - name: About declarative agents
-    href: declarative-agents.md
-  - name: About custom engine agents
-    href: custom-engine-agents.md
+    items:
+    - name: Declarative agents architecture
+      href: declarative-agents-architecture.md
+    - name: Custom engine agents architecture
+      href: custom-engine-agents-architecture.md
   - name: Build a declarative agent
     items:
     - name: Declarative agents overview
