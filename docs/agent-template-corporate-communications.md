@@ -65,5 +65,6 @@ Keep these considerations in mind:
 
 ## Related content
 
-- [Overview of Agent Builder in Microsoft 365 Copilot](agent-builder.md)
-- [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md)
+- [Agent Builder in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Agent Builder](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)
