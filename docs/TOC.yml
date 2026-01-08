@@ -33,6 +33,7 @@ items:
   items:
   - name: Agents overview
     href: agents-overview.md
+  - name: Agent architecture
     items:
     - name: Declarative agent architecture
       href: declarative-agent-architecture.md
