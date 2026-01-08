@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 01/07/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -129,6 +129,7 @@ Consider the cost implications of your agent solution design, from both the user
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
+- [Declarative agent architecture](declarative-agent-architecture.md)
 - [Custom engine agents overview](overview-custom-engine-agent.md)
+- [Custom engine agent architecture](custom-engine-agent-architecture.md)
 - [Cost considerations](cost-considerations.md)
-- [Samples collection](Samples.md)
