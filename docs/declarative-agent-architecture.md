@@ -7,9 +7,7 @@ ms.author: euloh
 ms.reviewer: jhaskett-msft
 ms.topic: concept-article
 ms.date: 12/19/2025
-ms.contributor: 
-    - mapichle
-    - ericsche
+ms.contributor: mapichle, ericsche
 ---
 
 # Declarative agent architecture
