@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 01/07/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -87,6 +87,8 @@ Custom engine agents have the following characteristics:
 
 This section describes the features and scenarios for declarative and custom engine agents to help you decide which type of agent to build.
 
+:::image type="content" source="assets/images/custom-engine-agents/copilot-agent-architecture.png" alt-text="Diagram showing custom engine agents and declarative agents with solution options and integration points." lightbox="assets/images/custom-engine-agents/copilot-agent-architecture.png":::
+
 The following table summarizes the key differences between declarative agents and custom engine agents to help you choose the right option for your use case.
 
 | Feature                   | Declarative agents                                                                                     | Custom engine agents                                                                                      |
@@ -127,6 +129,7 @@ Consider the cost implications of your agent solution design, from both the user
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
+- [Declarative agent architecture](declarative-agent-architecture.md)
 - [Custom engine agents overview](overview-custom-engine-agent.md)
+- [Custom engine agent architecture](custom-engine-agent-architecture.md)
 - [Cost considerations](cost-considerations.md)
-- [Samples collection](Samples.md)

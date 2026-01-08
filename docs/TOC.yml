@@ -33,6 +33,12 @@ items:
   items:
   - name: Agents overview
     href: agents-overview.md
+  - name: Agent architecture
+    items:
+    - name: Declarative agent architecture
+      href: declarative-agent-architecture.md
+    - name: Custom engine agent architecture
+      href: custom-engine-agent-architecture.md
   - name: Build a declarative agent
     items:
     - name: Declarative agents overview
@@ -46,7 +52,6 @@ items:
       - name: Choose between Microsoft 365 Copilot and Copilot Studio
         href: copilot-studio-experience.md
     - name: Use Visual Studio Code
-      expanded: true
       items:
       - name: Build with TypeSpec
         items:
