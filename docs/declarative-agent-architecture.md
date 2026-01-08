@@ -59,15 +59,11 @@ Declarative agents operate within specific technical limits that you must consid
 
 <sub>* Limits include external overhead such as network latency and Microsoft service processing. Optimize for about 66% of the technical limit.</sub>
 
-### Scenarios with poor fit
-
 Given these limitations, declarative agents aren't a good fit for:
 
 - Scenarios that require full document or large data contexts
 - Handling a large number of records or paginated results
 - Long-running processes that exceed timeout limits
-
-### Optimization strategies
 
 To optimize declarative agent performance, implement scenarios that include preprocessing of data provided to the agent through plugins or Copilot connectors. Use post-processing capabilities through Microsoft 365 Copilot features like code interpreter.
 
@@ -103,7 +99,7 @@ Declarative agents are optimal for:
 - **Simple workflows**: Straightforward processes that single-step operations complete.
 - **Productivity enhancement**: Tasks that enhance existing Microsoft 365 workflows without requiring complex orchestration.
 
-### Suboptimal scenarios
+### Unsuitable scenarios
 
 Declarative agents aren't suited for:
 

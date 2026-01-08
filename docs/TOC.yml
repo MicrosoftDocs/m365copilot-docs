@@ -51,7 +51,6 @@ items:
       - name: Choose between Microsoft 365 Copilot and Copilot Studio
         href: copilot-studio-experience.md
     - name: Use Visual Studio Code
-      expanded: true
       items:
       - name: Build with TypeSpec
         items:
