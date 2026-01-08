@@ -21,7 +21,7 @@ zone_pivot_groups: graph-api-versions
 
 Get the trend in the daily number of active and enabled users of Microsoft 365 Copilot for a specified time period.
 
-For more information about report views and names, see [Microsoft 365 reports - Microsoft 365 Copilot usage](/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage). The Copilot usage APIs are available as standard REST APIs under the Microsoft Graph namespace. For more information, see [Microsoft 365 Copilot APIs overview](../../../../copilot-apis-overview.md).
+For more information about report views and names, see [Microsoft 365 reports - Microsoft 365 Copilot usage](/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage). The Copilot usage APIs are available as standard REST APIs under the Microsoft Graph namespace. For more information, see [Microsoft 365 Copilot APIs overview](../../../copilot-apis-overview.md).
 
 
 ## Permissions
