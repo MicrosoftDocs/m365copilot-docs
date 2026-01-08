@@ -7,9 +7,7 @@ ms.author: euloh
 ms.reviewer: jhaskett-msft
 ms.topic: concept-article
 ms.date: 01/07/2026
-ms.contributor: 
-    - mapichle
-    - ericsche
+ms.contributor: mapichle, ericsche
 ---
 
 # Custom engine agent architecture
