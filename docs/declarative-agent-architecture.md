@@ -1,5 +1,5 @@
 ---
-title: "Declarative agents architeture"
+title: "Declarative agent architecture"
 description: Learn how declarative agents in Microsoft 365 Copilot enable developers to create AI solutions through configuration, using security and compliance frameworks.
 #customer intent: As a developer, I want to understand how to configure declarative agents so that I can create AI-powered solutions within Microsoft 365.
 author: TheBluLion
@@ -12,11 +12,11 @@ ms.contributor:
     - ericsche
 ---
 
-# Declarative agents architecture
+# Declarative agent architecture
 
 Declarative agents are conversational AI experiences that result from declared configurations loaded into Microsoft 365 Copilot. You can use declarative agents to create sophisticated AI-powered solutions through configuration rather than custom code, using the full Microsoft 365 ecosystem infrastructure and capabilities.
 
-Declarative agents can include instructions, Microsoft knowledge sources and capabilities such as SharePoint grounding and code interpreter, Microsoft 365 Copilot connectors, and API plugins that permit connectivity to external APIs. This configuration-based approach allows organizations to rapidly deploy AI agents while inheriting Microsoft 365 security, compliance, and governance frameworks.
+Declarative agents can include instructions, Microsoft knowledge sources and capabilities such as SharePoint, code interpreter, Microsoft 365 Copilot connectors, and API plugins that connect to external APIs. This configuration-based approach allows organizations to rapidly deploy AI agents while inheriting Microsoft 365 security, compliance, and governance frameworks.
 
 ## Architecture components
 
@@ -105,7 +105,7 @@ Declarative agents are optimal for:
 
 ### Suboptimal scenarios
 
-Declaritive agents aren't suited for:
+Declarative agents aren't suited for:
 
 - **Complex decision trees**: Workflows that require multiple conditional branches and iterative processing.
 - **Large data processing**: Operations that require analysis of extensive datasets or full document contexts.
@@ -116,4 +116,4 @@ Understanding these characteristics helps organizations make informed decisions 
 ## Related content
 
 - [Agents overview](agents-overview.md)
-- [Custom engine agents architecture](custom-engine-agents-architecture.md)
+- [Custom engine agent architecture](custom-engine-agent-architecture.md)

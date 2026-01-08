@@ -1,5 +1,5 @@
 ---
-title: "About custom engine agents"
+title: "Custom engine agent architecture"
 description: Discover how custom engine agents enable sophisticated AI implementations with specialized orchestration logic and multiple language model routing capabilities.
 #customer intent: As a developer, I want to understand how to integrate Microsoft's client and catalog infrastructure with custom orchestrators and language models so that I can build flexible and scalable AI solutions.
 author: TheBluLion
@@ -12,7 +12,7 @@ ms.contributor:
     - ericsche
 ---
 
-# Custom engine agents
+# Custom engine agent architecture
 
 Custom engine agents are conversational AI experiences available in the Microsoft 365 Agent store that use hosting platforms other than Microsoft 365 Copilot Chat. These agents give developers full control over orchestration, language models, and API integrations while staying compatible with Microsoft 365 ecosystems and external platforms.
 
