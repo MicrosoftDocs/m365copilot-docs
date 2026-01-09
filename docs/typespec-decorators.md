@@ -4,7 +4,7 @@ description: Learn about the built-in decorators for building agents and API plu
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/18/2025
+ms.date: 12/03/2025
 ms.topic: reference
 ---
 
@@ -17,6 +17,21 @@ This reference covers the built-in decorators available in TypeSpec for Microsof
 
 > [!NOTE]
 > This decorator reference focuses specifically on the `@microsoft/typespec-m365-copilot` decorators, but you can use all decorators defined in TypeSpec, including [built-in decorators](https://typespec.io/docs/standard-library/built-in-decorators/) and [OpenAPI decorators](https://typespec.io/docs/libraries/openapi/reference/decorators/).
+
+| Decorator | Target | Description |
+|-----------|--------|-------------|
+| [@agent](#agent) | Agent | Define an agent with name, description, and optional ID. |
+| [@behaviorOverrides](#behavioroverrides) | Agent | Modify agent orchestration behavior settings. |
+| [@conversationStarter](#conversationstarter) | Agent | Define conversation starter prompts for users. |
+| [@customExtension](#customextension) | Agent | Add custom key-value pairs for extensibility. |
+| [@disclaimer](#disclaimer) | Agent | Display legal or compliance disclaimers to users. |
+| [@instructions](#instructions) | Agent | Define behavioral instructions and guidelines for the agent. |
+| [@actions](#actions) | Plugin | Define action metadata including names, descriptions, and URLs. |
+| [@authReferenceId](#authreferenceid) | Plugin | Specify authentication reference ID for API access. |
+| [@capabilities](#capabilities) | Plugin | Configure function capabilities like confirmations and response formatting. |
+| [@card](#card) | Plugin | Define Adaptive Card templates for function responses. |
+| [@reasoning](#reasoning) | Plugin | Provide reasoning instructions for function invocation. |
+| [@responding](#responding) | Plugin | Define response formatting instructions for functions. |
 
 ## Declarative agent decorators
 
@@ -539,31 +554,45 @@ Defines the adaptive card reference for a function.
 
 Simplified responseSemantics focused on the adaptive card.
 
-| Name       | Type     | Description |
-|------------|----------|-------------|
-| `dataPath` | `string` | Required. A JSONPath RFC9535 query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
-| `file`     | `string` | Required. Path to the adaptive card template. Relative to the appPackage directory. |
-| `title`    | `string` | Required. Title of a citation for the result. |
-| `url`      | `string` | Optional. URL of a citation for the result. |
+| Name         | Type                                                              | Description |
+|--------------|-------------------------------------------------------------------|-------------|
+| `dataPath`   | `string`                                                          | Required. A JSONPath RFC9535 query that identifies a set of elements from the function response to be rendered using the template specified in each item. |
+| `file`       | `string`                                                          | Required. Path to the adaptive card template. Relative to the appPackage directory. |
+| `properties` | [CardResponseSemanticProperties](#cardresponsesemanticproperties) | Optional. Allows mapping of JSONPath queries to well-known data elements. Each JSONPath query is relative to a result value. |
+
+##### CardResponseSemanticProperties
+
+Allows mapping of JSONPath queries to well-known data elements for card rendering. Each JSONPath query is relative to a result value.
+
+| Name                         | Type     | Description |
+|------------------------------|----------|-------------|
+| `informationProtectionLabel` | `string` | Optional. Data sensitivity indicator of the result contents. |
+| `subTitle`                   | `string` | Optional. Subtitle of a citation for the result. |
+| `thumbnailUrl`               | `string` | Optional. URL of a thumbnail image for the result. |
+| `title`                      | `string` | Optional. Title of a citation for the result. |
+| `url`                        | `string` | Optional. URL of a citation for the result. |
 
 #### Examples
 
 ```typescript
-// Basic card configuration with data binding and static title
+// Basic card configuration with data binding
 @card(#{
   dataPath: "$.tickets",
-  file: "cards/ticketCard.json",
-  title: "Support Ticket Details"
+  file: "cards/ticketCard.json"
 })
 ```
 
 ```typescript
-// Dynamic card with URL binding and custom card file location
+// Card with property mappings for citations and metadata
 @card(#{
   dataPath: "$.projects",
-  title: "$.name",
-  url: "$.projectUrl",
-  file: "cards/project.json"
+  file: "cards/project.json",
+  properties: #{
+    title: "$.name",
+    url: "$.projectUrl",
+    subTitle: "$.description",
+    thumbnailUrl: "$.teamLogo"
+  }
 })
 ```
 

@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 02/03/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Adaptive Card response templates for API plugins for Microsoft 365 Copilot

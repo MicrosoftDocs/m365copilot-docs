@@ -1,7 +1,7 @@
 ---
 title: aiInteraction resource type
 description: Represents an interaction between a user and Copilot.
-ms.date: 08/08/2025
+ms.date: 11/11/2025
 doc_type: resourcePageType
 ms.topic: reference
 ms.localizationpriority: medium
@@ -22,6 +22,8 @@ zone_pivot_groups: graph-api-versions
 :::zone-end
 
 Represents an interaction between a user and Copilot.
+
+[!INCLUDE [aiinteractions-license-requirements](../../../includes/aiinteractions-license-requirements.md)]
 
 ## Methods
 

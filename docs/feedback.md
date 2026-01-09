@@ -3,7 +3,7 @@ title: Microsoft 365 Copilot Developer Community Support and Feedback Channels
 description: Find resources for help and support for Microsoft 365 Copilot extensibility.
 author: erikadoyle
 ms.author: edoyle
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 11/06/2025
 ---

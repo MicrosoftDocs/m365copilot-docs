@@ -3,7 +3,7 @@ title: Create declarative agents using Microsoft 365 Agents Toolkit and TypeSpec
 description: Learn how to build declarative agents using Microsoft 365 Agents Toolkit and TypeSpec for Microsoft 365 Copilot.
 author: slevert
 ms.author: slevert
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ---
@@ -149,7 +149,7 @@ The declarative agent has access to web content to generate its answers after yo
 
 ## Add OneDrive and SharePoint content
 
-The [OneDrive and SharePoint capability](knowledge-sources.md#sharepoint-and-onedrive) enables the agent to use OneDrive and SharePoint content as knowledge.
+The [SharePoint capability](knowledge-sources.md#sharepoint-and-onedrive) enables the agent to use OneDrive and SharePoint content as knowledge.
 
 1. Open the `main.tsp` file and add the `OneDriveAndSharePoint` capability in the `MyAgent` namespace with the following value, replacing `https://contoso.sharepoint.com/sites/ProductSupport` with a SharePoint site URL in your Microsoft 365 organization.
 
@@ -187,7 +187,7 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op teamsMessages is AgentCapabilities.TeamsMessages<Urls = [
+      op teamsMessages is AgentCapabilities.TeamsMessages<TeamsMessagesByUrl = [
         {
           url: "https://teams.microsoft.com/l/team/...",
         }
@@ -200,7 +200,7 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
 
     > [!NOTE]
     > - The URL in the `url` property must be well formed links to a Teams chat, team, or meeting chat.
-    > - Not specifying the `Urls` array causes all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
+    > - Not specifying the `TeamsMessagesByUrl` array causes all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -210,7 +210,7 @@ The declarative agent has access to Teams data to generate its answers after you
 
 ## Add people knowledge
 
-The [people capability](knowledge-sources.md#people) allows you to scope your agent to answer questions about individuals in an organization.
+The [people capability](knowledge-sources.md#people)) allows you to scope your agent to answer questions about individuals in an organization.
 
 1. Open the `main.tsp` file and add the `People` capability in the `MyAgent` namespace with the following content.
 
@@ -343,7 +343,7 @@ You completed the declarative agent guide for Microsoft 365 Copilot. Now that yo
 - Learn how to [write effective instructions](declarative-agent-instructions.md) for your agent.
 - Test your agent with [Copilot developer mode](debugging-agents-copilot-studio.md) to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
 - Get answers to [frequently asked questions](transparency-faq-declarative-agent.md).
-- Learn about an alternative method of building declarative agents with [Copilot Studio](copilot-studio-lite.md).
+- Learn about an alternative method of building declarative agents with [Copilot Studio](agent-builder.md).
 
 ## Next steps
 

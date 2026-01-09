@@ -3,7 +3,7 @@ title: Add a Dialog Box to Your Declarative Agent Adaptive Card Template (previe
 description: Learn how to add a dialog box that calls APIs to the Adaptive Card response template in your declarative agent.
 author: lauragra
 ms.author: isrumnon
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 06/13/2025
 ---

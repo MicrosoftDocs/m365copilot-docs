@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 01/05/2025
 ---
 
 # Choose between Microsoft 365 Copilot and Copilot Studio to build your agent
@@ -25,7 +25,7 @@ The following decision tree helps you map your scenario to the right tool.
 
 In summary:
 
-- **Choose Microsoft 365 Copilot** and use the Agent Builder feature if you want to quickly create an agent for yourself or a small team, using natural language and existing content (for example, a bot that answers questions from your team’s SharePoint files or emails). The lite version is simple, accessible, and integrated with the Microsoft 365 Copilot experience, so you can build agents in context without any code.
+- **Choose Microsoft 365 Copilot** and use the Agent Builder feature if you want to quickly create an agent for yourself or a small team, using natural language and existing content (for example, a bot that answers questions from your team’s SharePoint files or emails). Agent Builder is simple, accessible, and integrated with the Microsoft 365 Copilot experience, so you can build agents in context without any code.
 
 - **Choose Copilot Studio** if you need an agent for a broader audience (such as your whole department, organization, or external customers) or if the agent requires advanced capabilities like multi-step workflows or custom integrations, or you need more control over deployment and management. The full version of Copilot Studio is a standalone web portal with a rich set of tools for complex or scalable solutions.
 
@@ -79,7 +79,7 @@ IT administrators manage agent visibility, sharing, and lifecycle policies in th
 - Configure pay-as-you-go billing and review agent usage and consumption.
 - Enforce compliance using Microsoft Purview (sensitivity labels, audit logs).
 
-Admins can also manage agent sharing controls via the **Microsoft 365 Admin Center** > **Copilot** > **Settings** > **Data access** > **Agents** page. For more information, see [Share an agent](copilot-studio-lite-share-manage-agent.md#share-an-agent).
+Admins can also manage agent sharing controls via the **Microsoft 365 Admin Center** > **Copilot** > **Settings** > **Data access** > **Agents** page. For more information, see [Share an agent](agent-builder-share-manage-agents.md#share-an-agent).
 
 ## Copilot Studio governance principles
 

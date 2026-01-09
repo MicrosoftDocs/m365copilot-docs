@@ -1,16 +1,16 @@
 ---
 title: Create a Prompt Coach agent from a template 
-description: Learn how to create a declarative agent in the Copilot Studio with the Prompt Coach template.
+description: Learn how to use the Prompt Coach template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ---
 
 # Use the Prompt Coach template to build an agent
 
-You can use the Prompt Coach template in the lite experience of Copilot Studio to build agents that help new Copilot users create effective prompts. Acting as a supportive teacher, these agents guide users through prompt generation, analysis, and improvement. Key features include helping users create well-structured prompts, providing feedback, ensuring compliance with Responsible AI guidelines, troubleshooting, and suggesting examples. The goal is to help users articulate requests clearly for optimal Copilot responses.
+You can use the Prompt Coach template in Microsoft 365 Copilot to build agents that help new Copilot users create effective prompts. Acting as a supportive teacher, these agents guide users through prompt generation, analysis, and improvement. Key features include helping users create well-structured prompts, providing feedback, ensuring compliance with Responsible AI guidelines, troubleshooting, and suggesting examples. The goal is to help users articulate requests clearly for optimal Copilot responses.
 
 To try Prompt Coach, [Install the Prompt Coach agent](https://teams.microsoft.com/l/app/90680790-0a82-47bf-bab3-6c60c4221d1d?source=share-app-dialog).
 
@@ -55,6 +55,6 @@ You can further enhance your Prompt Coach agents with integrations such as the f
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Agent Builder in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Agent Builder](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)

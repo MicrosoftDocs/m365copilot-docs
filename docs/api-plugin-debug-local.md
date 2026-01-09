@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 12/02/2024
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Debug API plugins locally

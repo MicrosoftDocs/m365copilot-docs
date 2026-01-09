@@ -1,16 +1,16 @@
 ---
-title: Copilot Studio agent templates overview
-description: Learn how to use templates to quickly create declarative agents for Microsoft 365 Copilot in Copilot Studio.
+title: Templates for agents for Microsoft 365 Copilot 
+description: Learn how to use templates to quickly create declarative agents in Microsoft 365 Copilot.
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 01/06/2026
 ---
 
-# Copilot Studio agent templates
+# Agent templates overview
 
-The Copilot Studio lite experience (formerly agent builder) includes various templates that you can use to create declarative agents for Microsoft 365 Copilot. The templates apply design guidelines and industry best practices to help you get started quickly. This enables you to spend more time customizing the logic and functionality to meet your business requirements. The agent templates accelerate the agent development process to help organizations improve overall operational efficiency.
+The Agent Builder feature in Microsoft 365 Copilot includes various templates that you can use to create declarative agents for Microsoft 365 Copilot. The templates apply design guidelines and industry best practices to help you get started quickly. This enables you to spend more time customizing the logic and functionality to meet your business requirements. The agent templates accelerate the agent development process to help organizations improve overall operational efficiency.
 
 This article provides information about how to create your own agents using natural language as input.
 
@@ -36,8 +36,6 @@ After the agent is created, choose **Go to agent** in Copilot to chat with the a
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Declarative agents overview](overview-declarative-agent.md)
-- [Write effective instructions for declarative agents](declarative-agent-instructions.md)
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Agent Builder in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Agent Builder](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)
