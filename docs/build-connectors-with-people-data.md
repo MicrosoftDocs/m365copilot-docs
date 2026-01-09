@@ -16,14 +16,14 @@ ms.topic: how-to
 
 > [!IMPORTANT]
 > Microsoft 365 Copilot connectors for people data built using the Microsoft Graph API are currently in public preview with limited functionality. For more information, see [Notes and limitations](#notes-and-limitations).
-
-> [!IMPORTANT]
+>
 > The preview for people connectors has been updated with these requirements:
-> * Requires configuration of the `contentCategory` property on the `externalConnection` entity.
-> * Switch from using attribute named mapping for properties to the use of people domain specific labels.
-> * A user can now be identified either via `userPrincipalName` or `externalDirectoryObjectId`.
+>
+> - Requires configuration of the `contentCategory` property on the `externalConnection` entity.
+> - Switch from using attribute named mapping for properties to the use of people domain specific labels.
+> - A user can now be identified either via `userPrincipalName` or `externalDirectoryObjectId`.
 
-You build Microsoft 365 Copilot connectors for people data in the same way as other [Copilot connectors](overview-copilot-connector.md) using the Microsoft Graph external connections APIs. To ensure Microsoft 365 recognizes your connection as a connection containing people data, you must follow the [connection configuration](#connection-configuration-requirements) and [schema](#connection-schema-requirements) requirements, as well as [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
+You build Microsoft 365 Copilot connectors for people data in the same way as other [Copilot connectors](overview-copilot-connector.md) using the Microsoft Graph external connections APIs. To ensure Microsoft 365 recognizes your connection as containing people data, you must follow the [connection configuration](#connection-configuration-requirements) and [schema](#connection-schema-requirements) requirements, as well as [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
 
 > [!NOTE]
 > For an example connector that provides people data, see [Microsoft 365 Copilot connector for people data sample](https://aka.ms/peopleconnectors/sample).
@@ -34,28 +34,27 @@ Copilot connectors that contains people data must set the [`externalConnections`
 
 ## Connection schema requirements
 
-Microsoft 365 Copilot connectors for people data supports enrichment for following Microsoft 365 user profile entities, with a correct mapped to a label.
+Microsoft 365 Copilot connectors for people data support enrichment for the following Microsoft 365 user profile entities.
 
-* The schema must have one property with the `personAccount` label to be able to map the `externalItem` to a person.
-* Properties without a label are considered *custom properties*. 
+- The schema must have one property with the `personAccount` label to be able to map the `externalItem` to a person.
+- Properties without a label are considered *custom properties*.
 
-| Property label| Property type | Profile entity | Description |
-| ---- | ---- | -------------- | ----------- |
-| `personAccount` | `string`| [`userAccountInformation`](/graph/api/resources/useraccountinformation) | Indicates the Microsoft Entra ID user the item targets. |
-| `personName`| `string` | [`personName`](/graph/api/resources/personname) | Adds names to the user. |
-| `personCurrentPosition`| `string` | [`workPosition`](/graph/api/resources/workposition) | Describes the current position of the person. |
-| `personAddresses` | `stringCollection` | [`itemAddress`](/graph/api/resources/itemaddress) | Max 3, one each of `Home`, `Work`, and `Other`. Adds addresses to the user. |
-| `personEmails`| `stringCollection` | [`itemEmail`](/graph/api/resources/itememail) | Max 3. Adds email addresses to the user. |
-| `personPhones`| `stringCollection` | [`itemPhone`](/graph/api/resources/itemphone) | Adds phone numbers to the user. |
-| `personAwards`| `stringCollection` | [`personAward`](/graph/api/resources/personaward) | Describes awards the user earned. |
-| `personCertifications`| `stringCollection` | [`personCertification`](/graph/api/resources/personcertification) | Describes certifications the user earned. |
-| `personProjects`| `stringCollection` | [`projectParticipation`](/graph/api/resources/projectparticipation) | Describes projects the user participated in. |
-| `personSkills`| `stringCollection` | [`skillProficiency`](/graph/api/resources/skillproficiency) | Describes skills the user is proficient in. |
-| `personWebAccounts`| `stringCollection` | [`webAccount`](/graph/api/resources/webaccount) | Describes external web accounts the user has. |
-| `personWebSite`| `string` | [`webSite`](/graph/api/resources/personwebsite) | Describes a website for the user. |
-| `personAnniversaries`| `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary) | Adds one or more anniversaries tot he person |
-| `personNote`| `string` | [`personAnnotation`](/graph/api/resources/personannotation) | Adds a note to the user. |
-
+| Property label          | Property type      | Profile entity                                                          | Description                                                                 |
+|-------------------------|--------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| `personAccount`         | `string`           | [`userAccountInformation`](/graph/api/resources/useraccountinformation) | Indicates the Microsoft Entra ID user the item targets.                     |
+| `personName`            | `string`           | [`personName`](/graph/api/resources/personname)                         | Adds names to the user.                                                     |
+| `personCurrentPosition` | `string`           | [`workPosition`](/graph/api/resources/workposition)                     | Describes the current position of the person.                               |
+| `personAddresses`       | `stringCollection` | [`itemAddress`](/graph/api/resources/itemaddress)                       | Max 3, one each of `Home`, `Work`, and `Other`. Adds addresses to the user. |
+| `personEmails`          | `stringCollection` | [`itemEmail`](/graph/api/resources/itememail)                           | Max 3. Adds email addresses to the user.                                    |
+| `personPhones`          | `stringCollection` | [`itemPhone`](/graph/api/resources/itemphone)                           | Adds phone numbers to the user.                                             |
+| `personAwards`          | `stringCollection` | [`personAward`](/graph/api/resources/personaward)                       | Describes awards the user earned.                                           |
+| `personCertifications`  | `stringCollection` | [`personCertification`](/graph/api/resources/personcertification)       | Describes certifications the user earned.                                   |
+| `personProjects`        | `stringCollection` | [`projectParticipation`](/graph/api/resources/projectparticipation)     | Describes projects the user participated in.                                |
+| `personSkills`          | `stringCollection` | [`skillProficiency`](/graph/api/resources/skillproficiency)             | Describes skills the user is proficient in.                                 |
+| `personWebAccounts`     | `stringCollection` | [`webAccount`](/graph/api/resources/webaccount)                         | Describes external web accounts the user has.                               |
+| `personWebSite`         | `string`           | [`webSite`](/graph/api/resources/personwebsite)                         | Describes a website for the user.                                           |
+| `personAnniversaries`   | `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary)           | Adds one or more anniversaries tot he person                                |
+| `personNote`            | `string`           | [`personAnnotation`](/graph/api/resources/personannotation)             | Adds a note to the user.                                                    |
 
 Example schema:
 
