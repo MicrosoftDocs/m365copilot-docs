@@ -1,6 +1,6 @@
 ---
 title: copilotReportRoot resource type
-description: Container for Microsoft 365 Copilot reporting resources. Copilot APIs are available as standard REST APIs under the Microsoft Graph namespace.
+description: Container for Microsoft 365 Copilot reporting resources. Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace.
 author: mestew
 ms.author: mstewart
 ms.date: 01/08/2026
@@ -21,13 +21,11 @@ zone_pivot_groups: graph-api-versions
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 :::zone-end
 
-Represents a container for Microsoft 365 Copilot reporting resources.
+Represents a container for Microsoft 365 Copilot usage reporting resources.
+
+For more information about report views and names, see [Microsoft 365 reports - Microsoft 365 Copilot usage](/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage). Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace. For more information, see [Microsoft 365 Copilot APIs overview](../../../../copilot-apis-overview.md).
 
 ## Methods
-
-### Microsoft 365 Copilot usage
-
-For more information about report views and names, see [Microsoft 365 reports - Microsoft 365 Copilot usage](/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage). The Copilot usage APIs are available as standard REST APIs under the Microsoft Graph namespace. For more information, see [Microsoft 365 Copilot APIs overview](../../../../copilot-apis-overview.md).
 
 | Method                                                                                                   | Return type | Description                                                                                                         |
 |:---------------------------------------------------------------------------------------------------------|:------------|:--------------------------------------------------------------------------------------------------------------------|
