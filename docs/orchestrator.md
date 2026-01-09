@@ -40,13 +40,6 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
 1. **Reasoning**: The Copilot orchestrator formulates a plan comprised of multiple actions that it performs in an attempt to respond to the user's prompt.
 
-> [!IMPORTANT]
-> **Behavior when multiple API actions are executed in a single turn**
-> Declarative agents might stop responding when three or more **different API actions** are triggered within a single user turn. In these cases, the third API call might complete successfully on the backend, but the orchestrator doesn't return a response to the user.
->
-> **How to minimize this behavior:**  
-> Split the workflow across multiple user turns or reduce the number of different API actions you invoke in a single turn. This approach helps ensure that all API responses are processed reliably.
-
    1. **Context and tool selection**: The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps.
 
       The LLM might proceed to generating a response using Copilot's built-in capabilities, or it might determine that additional data is necessary.
@@ -58,6 +51,13 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
    1. **Tool initiation**: The orchestrator uses the response from the LLM to construct an API request and send the request to the tool initiator, which securely retrieves the requested information located outside of Copilot's infrastructure. It runs the request and sends the results back to the orchestrator for further processing.
 
    1. **Result analysis and response formulation**: The orchestrator integrates the API response into the ongoing context and consults the LLM in a continuous reasoning loop until the LLM deems it appropriate to generate a final response.
+
+> [!IMPORTANT]
+> **Behavior when multiple API actions are executed in a single turn**
+> Declarative agents might stop responding when three or more **different API actions** are triggered within a single user turn. In these cases, the third API call might complete successfully on the backend, but the orchestrator doesn't return a response to the user.
+>
+> **How to minimize this behavior:**  
+> Split the workflow across multiple user turns or reduce the number of different API actions you invoke in a single turn. This approach helps ensure that all API responses are processed reliably.
 
 1. **Responding**: The orchestrator compiles all the information gathered during the reasoning process and submits it to the LLM to create a final response. After ensuring the response complies with Responsible AI guidelines, it sends the response back to the orchestrator, which logs it in the context store and delivers it to the user via the Copilot UI.
 
