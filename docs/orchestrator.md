@@ -57,7 +57,9 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 1. **Natural language output**: Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
 > [!IMPORTANT]
+
 > **Behavior when multiple API actions are executed in a single turn**
+>
 > Declarative agents might stop responding when three or more **different API actions** are triggered within a single user turn. In these cases, the third API call might complete successfully on the backend, but the orchestrator doesn't return a response to the user.
 >
 > **How to minimize this behavior:**  
