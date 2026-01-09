@@ -94,6 +94,12 @@ Developer mode is only available within Microsoft 365 Copilot (Copilot for Work)
 
 Accounts used to test agents that are grounded on organizational data or that include enhanced capabilities need a Microsoft 365 Copilot Developer license. Admins can manage Microsoft 365 Copilot Developer licenses in the Microsoft 365 admin center (under **Billing > Licenses**). You can also [use PowerShell to assign Microsoft 365 licenses to user accounts](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell).
 
+### SharePoint grounding requirements
+
+Declarative agents can be created without a Microsoft 365 Copilot license, but SharePoint, OneDrive, and Microsoft Graph grounding require the signed-in user to have an active Copilot license. Without this entitlement, grounding requests fail silently and result in the message “Sorry, I wasn’t able to respond.”
+
+CDX tenant accounts without a Copilot license can publish agents but can’t perform SharePoint-based retrieval. Use the Microsoft 365 Copilot Developer License for testing scenarios in non-production environments.
+
 ## Agent capabilities and licensing models
 
 Agents for Copilot are available through multiple licensing models, each offering different levels of functionality:

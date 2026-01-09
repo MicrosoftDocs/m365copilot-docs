@@ -40,6 +40,13 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
 1. **Reasoning**: The Copilot orchestrator formulates a plan comprised of multiple actions that it performs in an attempt to respond to the user's prompt.
 
+> [!IMPORTANT]
+> **Behavior when multiple API actions are executed in a single turn**
+> Declarative agents might stop responding when three or more **different API actions** are triggered within a single user turn. In these cases, the third API call might complete successfully on the backend, but the orchestrator doesn't return a response to the user.
+>
+> **How to minimize this behavior:**  
+> Split the workflow across multiple user turns or reduce the number of different API actions you invoke in a single turn. This approach helps ensure that all API responses are processed reliably.
+
    1. **Context and tool selection**: The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps.
 
       The LLM might proceed to generating a response using Copilot's built-in capabilities, or it might determine that additional data is necessary.
