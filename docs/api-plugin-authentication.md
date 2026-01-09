@@ -4,7 +4,7 @@ description: Learn how to set up authentication for API plugins in agents runnin
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 01/09/2026
 ms.topic: article
 ---
 
@@ -32,7 +32,7 @@ Before you begin, you need to register with your OAuth 2.0 provider to get a cli
 > [!NOTE] 
 >Microsoft Teams and Declarative Agents don't provide a built-in way for users to manually clear stored OAuth credentials. The Bot Framework Token Service centrally manages tokens, and they might continue to persist after an agent is uninstalled due to SSO caching, tenant settings, or client differences. 
 >  
-> To force reauthentication, use server-side sign out by calling [`SignOutUserAsync`](https://learn.microsoft.com/dotnet/api/microsoft.bot.builder.botframeworkadapter.signoutuserasync) to invalidate bot tokens. For a full reset, you can optionally combine this method with Microsoft Graph’s [`revokeSignInSessions`](https://learn.microsoft.com/graph/api/user-revokesigninsessions) or remove the user's consent.  
+> To force reauthentication, use server-side sign out by calling [`SignOutUserAsync`](/dotnet/api/microsoft.bot.builder.botframeworkadapter.signoutuserasync) to invalidate bot tokens. For a full reset, you can optionally combine this method with Microsoft Graph’s [`revokeSignInSessions`](/graph/api/user-revokesigninsessions) or remove the user's consent.  
 >  
 > For a better user experience, consider adding a **“Log out / switch account”** action that triggers these server-side sign out flows so users are prompted to sign in again.
 
