@@ -4,7 +4,7 @@ description: Find information about custom engine agents, which are specialized 
 author: jessicaaawu
 ms.author: wujessica
 ms.localizationpriority: medium
-ms.date: 11/18/2025
+ms.date: 01/09/2026
 ms.topic: overview
 ---
 
@@ -34,7 +34,7 @@ You can use a low-code approach to build custom engine agents by using Copilot S
 
 ### Low-code approach
 
-[Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started) is a fully managed SaaS platform that simplifies building custom engine agents. You can focus on crafting effective agent experiences without worrying about infrastructure, hosting, or governance. It offers built-in compliance via Microsoft Power Platform, along with prebuilt templates and connectors for Microsoft 365 and partner services. While it supports low-code development, the real value lies in its streamlined deployment and management.
+Because [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started) is a fully managed SaaS platform that simplifies building custom engine agents, you can focus on crafting effective agent experiences without worrying about infrastructure, hosting, or governance. It offers built-in compliance via Microsoft Power Platform, along with prebuilt templates and connectors for Microsoft 365 and partner services. While it supports low-code development, the real value lies in its streamlined deployment and management.
 
 This approach is ideal for organizations looking to build and scale custom engine agents quickly, without relying heavily on development resources.
 
@@ -115,8 +115,8 @@ As you prepare to build and deploy your custom engine agent, consider the key fa
 
 ### Message ordering and streaming behavior
 
-Teams and Microsoft 365 Copilot render agent messages based on server timestamps, activity IDs, and the relationship between streaming updates and non-streaming activities. When a Custom Engine Agent mixes streaming text, media attachments, and final messages within the same user turn, messages can appear out of sequence.
-Use the following guidance to maintain consistent ordering:
+Teams and Microsoft 365 Copilot render agent messages based on server timestamps, activity IDs, and the relationship between streaming updates and non-streaming activities. When a custom engine agent mixes streaming text, media attachments, and final messages within the same user turn, messages can appear out of sequence.
+To maintain consistent ordering:
 
 - Use a single streaming sequence per user turn. Create one `StreamingResponse` object and finalize it by using `endStream()` before sending any additional messages.
 
@@ -126,7 +126,7 @@ Use the following guidance to maintain consistent ordering:
 
 - Serialize outgoing messages. Avoid sending messages from multiple threads in parallel. Ensure updates are awaited to maintain ordering.
 
-- Don’t send streaming updates after `endStream()`. Once the stream is finalized, any new updates become separate activities and may appear out of order. If you need to send a follow‑up message, use `replyToId` to keep it in the same thread and reduce sequencing issues.
+- Don't send streaming updates after `endStream()`. When the stream is finalized, any new updates become separate activities and might appear out of order. If you need to send a follow-up message, use `replyToId` to keep it in the same thread and reduce sequencing issues.
 
 ### AI model selection
 
