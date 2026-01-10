@@ -1,9 +1,9 @@
 ---
 title: "copilotReportRoot: getMicrosoft365CopilotUsageUserDetail"
-description: Recent activity data for enabled users of Microsoft 365 Copilot apps
+description: Recent activity data for enabled users of Microsoft 365 Copilot apps. Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace.
 author: mestew
 ms.author: mstewart
-ms.date: 12/18/2025
+ms.date: 01/08/2026
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: apiPageType
@@ -19,11 +19,13 @@ zone_pivot_groups: graph-api-versions
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 :::zone-end
 
-Get the most recent activity data for users who are enabled for Microsoft 365 Copilot apps.
+Get the most recent usage data for users who are enabled for Microsoft 365 Copilot apps.
+
+For more information about report views and names, see [Microsoft 365 reports - Microsoft 365 Copilot usage](/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage). Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace. For more information, see [Microsoft 365 Copilot APIs overview](../../../copilot-apis-overview.md).
 
 > [!NOTE]
 > This API only returns usage data for users who have a Microsoft 365 Copilot license.
-> Unlicensed Copilot Chat usage data isn't available through Microsoft Graph reports APIs. 
+> Unlicensed Copilot Chat usage data isn't available through Microsoft Graph reports APIs.
 > Instead, you can:
 >
 > - View unlicensed usage in the Microsoft 365 Admin Center Copilot Chat Usage report

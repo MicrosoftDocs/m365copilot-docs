@@ -63,10 +63,9 @@ Declarative agents for Microsoft 365 Copilot that are built using [Copilot Studi
 
 |Control | Core scenario | Related content|
 |--|--|--|
-| Billing | Understand SharePoint agents pricing | [Comparison of Copilot licenses, pay-as-you-go billing, and the trial promotion](/sharepoint/get-started-sharepoint-agents#comparison-of-copilot-licenses-pay-as-you-go-billing-and-the-trial-promotion) |
-| Microsoft 365 Copilot license details | Control user access to SharePoint agents | [Manage access to SharePoint agents](/sharepoint/manage-access-agents-in-sharepoint) |
-| Global administrator / AI administrator | Enable users without Microsoft 365 Copilot licenses to use and build SharePoint agents during the promotional trial | [Manage trial access to SharePoint agents with PowerShell](/sharepoint/manage-trial-agents-sharepoint-powershell) |
-| Org settings | Set up pay-as-you-go billing for SharePoint agents in the Microsoft 365 admin center | [Use agents with pay-as-you-go billing](/sharepoint/sharepoint-agents-azure-billing) |
+| Billing | Understand agents pricing | [Comparison of Copilot licenses, pay-as-you-go billing, and the trial promotion](/sharepoint/get-started-sharepoint-agents#comparison-of-copilot-licenses-pay-as-you-go-billing-and-the-trial-promotion) |
+| Microsoft 365 Copilot license details | Control user access to agents | [Manage access to agents built with SharePoint](/sharepoint/manage-access-agents-in-sharepoint) |
+| Org settings | Set up pay-as-you-go billing for agents built with SharePoint in the Microsoft 365 admin center | [Use agents with pay-as-you-go billing](/sharepoint/sharepoint-agents-azure-billing) |
 | PowerShell cmdlet | View status and details on all active and available Copilot agents in the tenant | [Get-SPOCopilotAgentInsightsReport](/powershell/module/sharepoint-online/get-spocopilotagentinsightsreport) |
 
 ## Copilot connectors
