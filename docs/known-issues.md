@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 11/06/2025
+ms.date: 01/09/2026
 ms.topic: concept-article
 ---
 
@@ -81,6 +81,12 @@ You can work around the issue in two ways:
 - Upload the file in the chat before asking for analysis.
 - Share a direct file link and ask Copilot to open it.
 
+### Programmatic access to Copilot Chat usage data isn't available
+
+Currently, no Microsoft Graph API or PowerShell cmdlet provides Copilot Chat usage statistics - such as user, session, or consumption data.
+
+**Workaround:** You can view Copilot Chat usage data only in the Microsoft 365 admin center. For more information, see [Microsoft 365 Copilot usage report](/microsoft-365/admin/activity-reports/microsoft-copilot-usage#how-do-i-get-to-the-microsoft-365-copilot-chat-usage-report).
+
 ## Copilot connectors
 
 The following known issues apply to Copilot connectors.
@@ -125,20 +131,6 @@ The following table lists features that aren't currently supported for custom en
 | Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul> |
 | Sensitivity labels | Sensitivity labels aren't supported. |
 | Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Edge browser. |
-
-## Limitations
-
-The following limitations describe behaviors that aren't currently supported.
-
-### Programmatic access to Copilot Chat usage data isn't available
-
-No Microsoft Graph API or PowerShell cmdlet currently provides Copilot Chat usage statistics - such as user, session, or consumption data - programmatically.
-
-#### Workaround
-You can view Copilot Chat usage data only in the Microsoft 365 admin center.  
-To locate the report, see the [Microsoft 365 Copilot usage report](https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft-copilot-usage#how-do-i-get-to-the-microsoft-365-copilot-chat-usage-report).
-
----
 
 ### SystemError after publishing an agent to Teams
 
