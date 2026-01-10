@@ -134,32 +134,30 @@ The following table lists features that aren't currently supported for custom en
 
 ### SystemError after publishing an agent to Teams
 
-When users interact with an agent in Teams, they might see the following message:
+When users interact with an agent in Teams, they might see the following error message:
 
-> **Sorry, something unexpected happened. We’re looking into it.  
+> Sorry, something unexpected happened. We're looking into it.  
 > Error code: SystemError.  
 > Conversation ID: a:xxx123xyz  
 > Time (UTC): 22-12-2025 14:32  
->**
 
-This error happens when Teams keeps using an older version of the agent's configuration after you publish or republish the agent. Even if the agent worked before, Teams might not immediately refresh the updated configuration. This delay can cause a generic **SystemError** during execution.
-
+This error occurs when Teams uses an older version of the agent's configuration after you publish or republish the agent. Even if the agent worked before, Teams might not immediately refresh the configuration. This delay can cause a generic **SystemError** when a user uses the agent.
 
 #### Resolution steps
 
 1. **Refresh the app in the Teams admin center**  
-   Ask your Teams admin to open the **Teams admin center**, go to **Manage apps**, locate your agent’s app, and turn it **off** and then **on** again.  
+   Ask your Teams admin to open the **Teams admin center**, go to **Manage apps**, locate your agent's app, and turn it **off** and then **on** again.  
    This action forces Teams to reload the latest configuration.
 
 2. **Reset the Teams channel in Copilot Studio**  
    Open your agent in **Copilot Studio**, turn the **Teams channel off**, select **Save**, and then turn the channel **on** again.  
-   This step re-establishes the connection and updates the agent’s configuration for Teams.
+   This step re-establishes the connection and updates the agent's configuration for Teams.
 
 3. **Republish the agent**  
    Publish the agent again to ensure that the latest version is available to Teams.
 
-4. **If the issue persists**  
-   Contact Microsoft Support and provide:  
+4. **Contact Microsoft**  
+   If the issue persists, contact Microsoft Support and provide:  
    - **Conversation ID** (`a:xxx123xyz`)  
    - **Agent ID**  
    - **Time (UTC)** when the error occurred (`dd‑mm‑yyyy hh:mm`)  
