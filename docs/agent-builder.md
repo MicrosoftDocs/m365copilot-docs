@@ -22,6 +22,8 @@ Use Microsoft 365 Copilot to create and customize agents that can be implemented
 - An agent that provides writing or presentation coaching that is tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
 
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-overview.png" alt-text="Agent Builder initial screen":::
+
 You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors. You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
 
 You can build agents from the following apps and sites:
@@ -33,7 +35,7 @@ You can build agents from the following apps and sites:
 > [!NOTE]
 > Agent Builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It is not available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that are not listed in this article.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-entry.png" alt-text="Agent Builder entry point in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-new-agent.png" alt-text="Agent Builder entry point in Microsoft 365 Copilot":::
 
 ## Governance
 
