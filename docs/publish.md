@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 01/13/2026
 ---
 # Publish agents for Microsoft 365 Copilot
 

@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 01/09/2026
+ms.date: 01/13/2026
 ms.topic: concept-article
 ---
 
@@ -81,12 +81,6 @@ You can work around the issue in two ways:
 - Upload the file in the chat before asking for analysis.
 - Share a direct file link and ask Copilot to open it.
 
-### Programmatic access to Copilot Chat usage data isn't available
-
-Currently, no Microsoft Graph API or PowerShell cmdlet provides Copilot Chat usage statistics - such as user, session, or consumption data.
-
-**Workaround:** You can view Copilot Chat usage data only in the Microsoft 365 admin center. For more information, see [Microsoft 365 Copilot usage report](/microsoft-365/admin/activity-reports/microsoft-copilot-usage#how-do-i-get-to-the-microsoft-365-copilot-chat-usage-report).
-
 ## Copilot connectors
 
 The following known issues apply to Copilot connectors.
@@ -131,37 +125,6 @@ The following table lists features that aren't currently supported for custom en
 | Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul> |
 | Sensitivity labels | Sensitivity labels aren't supported. |
 | Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Edge browser. |
-
-### SystemError after publishing an agent to Teams
-
-When users interact with an agent in Teams, they might see the following error message:
-
-> Sorry, something unexpected happened. We're looking into it.  
-> Error code: SystemError.  
-> Conversation ID: a:xxx123xyz  
-> Time (UTC): 22-12-2025 14:32  
-
-This error occurs when Teams uses an older version of the agent's configuration after you publish or republish the agent. Even if the agent worked before, Teams might not immediately refresh the configuration. This delay can cause a generic **SystemError** when a user uses the agent.
-
-#### Resolution steps
-
-1. **Refresh the app in the Teams admin center**  
-   Ask your Teams admin to open the **Teams admin center**, go to **Manage apps**, locate your agent's app, and turn it **off** and then **on** again.  
-   This action forces Teams to reload the latest configuration.
-
-2. **Reset the Teams channel in Copilot Studio**  
-   Open your agent in **Copilot Studio**, turn the **Teams channel off**, select **Save**, and then turn the channel **on** again.  
-   This step re-establishes the connection and updates the agent's configuration for Teams.
-
-3. **Republish the agent**  
-   Publish the agent again to ensure that the latest version is available to Teams.
-
-4. **Contact Microsoft**  
-   If the issue persists, contact Microsoft Support and provide:  
-   - **Conversation ID** (`a:xxx123xyz`)  
-   - **Agent ID**  
-   - **Time (UTC)** when the error occurred (`dd‑mm‑yyyy hh:mm`)  
-   These details help Microsoft Support review the related backend logs.
 
 ## Related content
 
