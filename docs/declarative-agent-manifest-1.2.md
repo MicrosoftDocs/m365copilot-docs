@@ -381,7 +381,7 @@ This issue can occur when the signed-in identity doesn’t have the required ent
 
 ### License considerations
 - SharePoint retrieval is a premium grounding capability. The signed-in user must have a Microsoft 365 Copilot license that enables SharePoint and Microsoft Graph grounding.
-- CDX tenant accounts without a Copilot license can create and publish agents, but grounded retrieval fails silently and triggers the generic runtime error.
+- Customer Digital Experience (CDX) demo tenant accounts without a Copilot license can create and publish agents, but grounded retrieval fails silently and triggers the generic runtime error.
 - Developers testing SharePoint grounding in non-production tenants should use the **Microsoft 365 Copilot Developer License**, which includes the required Graph and SharePoint access.
 
 ### Configuration checks

@@ -47,7 +47,7 @@ You can also create new actions by using Power Platform components in Microsoft 
 
 URLs returned as part of action responses - whether from API plugins, connectors, or flows - might be rendered as clickable links in the Microsoft 365 Copilot chat experience. This behavior is controlled by the Copilot runtime and isn't evaluated against domains defined in the OpenAPI specification `servers` section.
 
-URL rendering behavior for action responses is subject to platform security, trust, and policy rules and may change over time. Developers shouldn't rely on clickable URLs in action responses for production critical scenarios.
+URL rendering behavior for action responses is subject to platform security, trust, and policy rules and may change over time. Developers shouldn't rely on clickable URLs in action responses for production-critical scenarios.
 
 ## Get Microsoft 365 Copilot licenses to enable actions
 
