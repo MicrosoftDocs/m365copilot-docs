@@ -205,14 +205,14 @@ The capabilities object is the base type for objects in the `capabilities` prope
 
 ```typescript
 namespace MyAgent {
-  op webSearch is AgentCapabilities.WebSearch<TSites = [
+  op webSearch is AgentCapabilities.WebSearch<Sites = [
     {
         url: "https://contoso.com"
     }
   ]>;
 
   op od_sp is AgentCapabilities.OneDriveAndSharePoint<
-    TItemsBySharePointIds = [
+    ItemsBySharePointIds = [
       {
         site_id: "bc54a8cc-8c2e-4e62-99cf-660b3594bbfd";
         web_id: "a5377427-f041-49b5-a2e9-0d58f4343939";
@@ -220,14 +220,14 @@ namespace MyAgent {
         unique_id: "304fcfdf-8842-434d-a56f-44a1e54fbed2";
       }
     ],
-    TItemsByUrl = [
+    ItemsByUrl = [
       {
         url: "https://contoso.sharepoint.com/teams/admins/Documents/Folders1"
       }
     ]
   >;
 
-  op graphConnectors is AgentCapabilities.CopilotConnectors<TConnections = [
+  op graphConnectors is AgentCapabilities.CopilotConnectors<Connections = [
     {
         connection_id: "jiraTickets"
     }
@@ -237,7 +237,7 @@ namespace MyAgent {
 
   op codeInterpreter is AgentCapabilities.CodeInterpreter;
 
-  op teamsMessages is AgentCapabilities.TeamsMessages<TUrls = [
+  op teamsMessages is AgentCapabilities.TeamsMessages<TeamsMessagesByUrl = [
     {
         url: "https://teams.microsoft.com/l/channel/19%3ApO0102YGEBRSH6RziXCxEgB4mtb7-5hIlDzAjtxs_dg1%40thread.tacv2/G%C3%A9n%C3%A9ral?groupId=2670cf94-acf5-48f4-96d4-c58dd8937afc&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47"
     }

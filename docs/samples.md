@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 01/23/2025
+ms.date: 01/02/2026
 ---
 
 # Microsoft 365 Copilot extensibility samples
@@ -30,8 +30,8 @@ The following samples implement custom agents using Microsoft's orchestration an
 
 | Sample | Description |
 |--------|-------------|
-| [Trey Research Copilot extension (OAuth version)](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/cext-trey-research-auth) | This example demonstrates how to build your own declarative agent using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This sample includes authentication. |
-| [Trey Research Copilot extension (anonymous version)](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/cext-trey-research) | This example demonstrates how to build your own declarative agent using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This version of the Trey Research sample doesn't do authentication, but might be useful for demos and experimentation. |
+| [Trey Research Copilot extension (OAuth version)](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-trey-research-auth) | This example demonstrates how to build your own declarative agent using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This sample includes authentication. |
+| [Trey Research Copilot extension (anonymous version)](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-trey-research) | This example demonstrates how to build your own declarative agent using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This version of the Trey Research sample doesn't do authentication, but might be useful for demos and experimentation. |
 
 ## Custom engine agent samples
 
