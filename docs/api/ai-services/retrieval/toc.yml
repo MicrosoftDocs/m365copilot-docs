@@ -3,6 +3,8 @@ items:
   href: overview.md
 - name: Retrieve data
   href: copilotroot-retrieval.md
+- name: Pay-as-you-go overview
+  href: paygo-retrieval.md
 - name: Complex types
   items:
   - name: Connection item
