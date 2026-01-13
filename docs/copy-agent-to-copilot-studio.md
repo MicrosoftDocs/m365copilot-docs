@@ -5,7 +5,7 @@ description: Learn how to copy your declarative agent from Microsoft 365 Copilot
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
-ms.date: 11/18/2025
+ms.date: 01/13/2026
 ms.topic: concept-article
 ---
 # Copy an agent to Copilot Studio
@@ -87,6 +87,9 @@ After you copy your agent:
 To copy an agent to Copilot Studio, you must have a [Copilot Studio license](/microsoft-copilot-studio/billing-licensing) or [Microsoft 365 Copilot license](/microsoft-copilot-studio/billing-licensing#microsoft-365-copilot). Check your eligibility in [Copilot Studio](https://copilotstudio.microsoft.com) or ask your admin.
 
 If you don't have a Copilot Studio license, you might be eligible for a [Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial), depending on the admin settings in your organization. Admins can [block unauthorized sign-ups](/microsoft-copilot-studio/admin-block-viral-signups). Trial licenses allow for testing agents but not publishing agents outside personal use.
+
+> [!IMPORTANT]
+> Users must have the **Common Data Service (Dataverse)** entitlement enabled in their Microsoft 365 license. If this entitlement is not enabled, the feature will not work as expected.
 
 ## Copilot Studio environment requirements
 
