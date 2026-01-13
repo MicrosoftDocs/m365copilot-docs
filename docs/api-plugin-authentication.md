@@ -4,7 +4,7 @@ description: Learn how to set up authentication for API plugins in agents runnin
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 01/09/2026
+ms.date: 01/13/2026
 ms.topic: article
 ---
 

@@ -4,7 +4,7 @@ description: Learn the prerequisites for extending Microsoft 365 Copilot with ag
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
-ms.date: 11/17/2025
+ms.date: 01/13/2026
 ---
 
 # Set up your development environment for Microsoft 365 Copilot

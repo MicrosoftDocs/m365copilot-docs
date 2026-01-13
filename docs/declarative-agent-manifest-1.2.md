@@ -4,7 +4,7 @@ description: Learn about the 1.2 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 08/18/2025
+ms.date: 01/13/2026
 ms.topic: reference
 ---
 

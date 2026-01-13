@@ -4,7 +4,7 @@ description: Extend Microsoft 365 Copilot by using Power Platform and Dynamics 3
 author: jhaskett-msft
 ms.author: jhaskett
 ms.localizationpriority: medium
-ms.date: 01/09/2025
+ms.date: 01/13/2026
 ms.topic: overview
 ---
 

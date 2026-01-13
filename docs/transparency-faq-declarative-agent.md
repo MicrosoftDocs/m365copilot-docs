@@ -5,7 +5,7 @@ author: simranajwani
 ms.author: simranajwani
 ms.topic: faq
 ms.localizationpriority: medium
-ms.date: 07/21/2025
+ms.date: 01/13/2026
 ---
 
 # Declarative agents FAQ
