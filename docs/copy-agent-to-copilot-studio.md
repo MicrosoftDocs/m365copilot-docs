@@ -89,7 +89,7 @@ To copy an agent to Copilot Studio, you must have a [Copilot Studio license](/mi
 If you don't have a Copilot Studio license, you might be eligible for a [Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial), depending on the admin settings in your organization. Admins can [block unauthorized sign-ups](/microsoft-copilot-studio/admin-block-viral-signups). Trial licenses allow for testing agents but not publishing agents outside personal use.
 
 > [!IMPORTANT]
-> Users must have the **Common Data Service (Dataverse)** entitlement enabled in their Microsoft 365 license. If this entitlement is not enabled, the feature will not work as expected.
+> Users must have the **Common Data Service (Dataverse)** entitlement enabled in their Microsoft 365 license. If this entitlement isn't enabled, the feature won't work as expected.
 
 ## Copilot Studio environment requirements
 
