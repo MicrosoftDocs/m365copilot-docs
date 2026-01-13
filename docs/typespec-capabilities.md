@@ -4,7 +4,7 @@ description: Learn how to define capabilities for declarative agents using TypeS
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/18/2025
+ms.date: 12/03/2025
 ms.topic: reference
 ---
 
@@ -13,6 +13,20 @@ ms.topic: reference
 # Declarative agent capabilities in TypeSpec for Microsoft 365 Copilot
 
 TypeSpec for Microsoft 365 Copilot provides built-in capabilities that enable declarative agents to access Microsoft 365 services and external resources. Available capabilities include **CodeInterpreter**, **CopilotConnectors**, **Dataverse**, **Email**, **GraphicArt**, **Meetings**, **OneDriveAndSharePoint**, **People**, **ScenarioModels**, **TeamsMessages**, and **WebSearch**. Each capability can be configured with specific parameters to control scope.
+
+| Capability | Description |
+|------------|-------------|
+| [CodeInterpreter](#agentcapabilitiescodeinterpreter) | Generate and run Python code to solve math problems, analyze data, and create visualizations. |
+| [CopilotConnectors](#agentcapabilitiescopilotconnectors) | Search selected Microsoft 365 Copilot connectors for grounding information. |
+| [Dataverse](#agentcapabilitiesdataverse) | Search for information in Microsoft Dataverse environments and tables. |
+| [Email](#agentcapabilitiesemail) | Search through email messages in accessible mailboxes. |
+| [GraphicArt](#agentcapabilitiesgraphicart) | Create images and art based on text input. |
+| [Meetings](#agentcapabilitiesmeetings) | Search meeting content. |
+| [OneDriveAndSharePoint](#agentcapabilitiesonedriveandsharepoint) | Search SharePoint sites and OneDrive for grounding information. |
+| [People](#agentcapabilitiespeople) | Search for information about people in the organization. |
+| [ScenarioModels](#agentcapabilitiesscenariomodels) | Use task-specific models for specialized scenarios. |
+| [TeamsMessages](#agentcapabilitiesteamsmessages) | Search through Teams channels, meetings, and chats. |
+| [WebSearch](#agentcapabilitieswebsearch) | Search the web for grounding information. |
 
 ## `AgentCapabilities.CodeInterpreter`
 
@@ -424,16 +438,16 @@ op people is AgentCapabilities.People;
 Indicates that the declarative agent can use task-specific models.
 
 ```typescript
-op scenarioModels is AgentCapabilities.ScenarioModels<ModelsById = [
+op scenarioModels is AgentCapabilities.ScenarioModels<Models = [
   { id: "model-id" }
 ]>;
 ```
 
 ### Parameters
 
-| Name         | Type                                     | Description |
-|--------------|------------------------------------------|-------------|
-| `ModelsById` | Array of [ScenarioModel](#scenariomodel) | Required. An array of objects that identifies the task-specific models available to the declarative agent. |
+| Name     | Type                                     | Description |
+|----------|------------------------------------------|-------------|
+| `Models` | Array of [ScenarioModel](#scenariomodel) | Required. An array of objects that identifies the task-specific models available to the declarative agent. |
 
 ### Models
 
@@ -451,12 +465,12 @@ Identifies a task-specific model.
 
 ```typescript
 // Single specialized model for analytics
-op scenarioModels is AgentCapabilities.ScenarioModels<ModelsById = [
+op scenarioModels is AgentCapabilities.ScenarioModels<Models = [
   { id: "financial-forecasting-model-v3" }
 ]>;
 
 // Multiple models for different business scenarios
-op scenarioModels is AgentCapabilities.ScenarioModels<ModelsById = [
+op scenarioModels is AgentCapabilities.ScenarioModels<Models = [
   { id: "sentiment-analysis-model" },
   { id: "document-classification-model" },
   { id: "risk-assessment-model" }
@@ -473,9 +487,9 @@ op teamsMessages is AgentCapabilities.TeamsMessages;
 
 ### Parameters
 
-| Name   | Type                                           | Description |
-|--------|------------------------------------------------|-------------|
-| `Urls` | Array of [TeamsMessagesUrl](#teamsmessagesurl) | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
+| Name                 | Type                                           | Description |
+|----------------------|------------------------------------------------|-------------|
+| `TeamsMessagesByUrl` | Array of [TeamsMessagesUrl](#teamsmessagesurl) | Optional. An array of objects that identify the URLs of the Teams channels, meeting chats, group chats, or 1:1 chats available to the declarative agent. Omitting this property allows an unscoped search through all of channels, meetings, 1:1 chats, and group chats. |
 
 ### Models
 
@@ -496,14 +510,14 @@ Identifies a Teams channel, team, or meeting chat.
 op teamsMessages is AgentCapabilities.TeamsMessages;
 
 // Teams messages limited to specific channels and chats
-op teamsMessages is AgentCapabilities.TeamsMessages<Urls = [
+op teamsMessages is AgentCapabilities.TeamsMessages<TeamsMessagesByUrl = [
   { url: "https://teams.microsoft.com/l/channel/19%3a123abc...%40thread.skype/General?groupId=12345&tenantId=67890" },
   { url: "https://teams.microsoft.com/l/chat/19%3ameeting_abc123...%40thread.v2/0?context=%7b%22Tid%22%3a%22...%22%7d" },
   { url: "https://teams.microsoft.com/l/channel/19%3a456def...%40thread.tacv2/Engineering?groupId=54321&tenantId=09876" }
 ]>;
 
 // Teams messages for project-specific channels
-op teamsMessages is AgentCapabilities.TeamsMessages<Urls = [
+op teamsMessages is AgentCapabilities.TeamsMessages<TeamsMessagesByUrl = [
   { url: "https://teams.microsoft.com/l/channel/19%3aprojectA...%40thread.tacv2/Development?groupId=11111&tenantId=22222" },
   { url: "https://teams.microsoft.com/l/channel/19%3aprojectA...%40thread.tacv2/Testing?groupId=11111&tenantId=22222" },
   { url: "https://teams.microsoft.com/l/chat/19%3astandup_daily...%40thread.v2/0?context=%7b%22Tid%22%3a%22...%22%7d" }

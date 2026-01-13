@@ -48,7 +48,7 @@ You can extend Microsoft 365 Copilot with the intelligence of external services 
 
 - By building agents to customize Copilot.
 - By adding skills with [Teams message extension plugins](overview-message-extension-bot.md) and [Copilot Studio actions](overview-business-applications.md).
-- By extending the knowledge in Copilot with [Copilot connectors](overview-copilot-connector.md).
+- By extending the knowledge in Copilot with [Microsoft 365 Copilot connectors](overview-copilot-connector.md).
 
 To learn more and choose the best extensibility path for your users, see [Copilot extensibility planning guide](planning-guide.md) and [Agents overview](agents-overview.md).
 
@@ -111,6 +111,9 @@ The following table summarizes agent access based on user licensing type.
 | **Microsoft 365 subscribers without a Copilot add-on license** | Might see Copilot Chat entry points in some apps, but access is limited or disabled depending on tenant configuration and rollout status. These users do not have access to agent authoring or advanced agent experiences. |
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
+
+> [!NOTE]
+> Usage-based billing isn't supported in Microsoft 365 Government Community Cloud High (GCCH) and Government Community Cloud Moderate (GCCM) environments.
 
 | Capability | Copilot Chat (no usage-based billing)* | Copilot Chat (usage-based billing)** | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|

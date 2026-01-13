@@ -53,7 +53,7 @@ namespace API {
 }
 ```
 
-The Microsoft 365 Agents Toolkit can automatically register your API key. Add the `apiKey/register` action to **m365agents.yml** in your Agents Toolkit project.
+The Microsoft 365 Agents Toolkit can automatically register your API key and will also add the `apiKey/register` action to **m365agents.yml** in your Agents Toolkit project.
 
 ```yaml
 # m365agents.yml
@@ -93,7 +93,7 @@ namespace API {
 }
 ```
 
-The Microsoft 365 Agents Toolkit can automatically register your OAuth2 configuration. Add the `oauth/register` action to **m365agents.yml** in your Agents Toolkit project.
+The Microsoft 365 Agents Toolkit can automatically register your OAuth2 configuration and will also add the `oauth/register` action to **m365agents.yml** in your Agents Toolkit project.
 
 ```yaml
 # m365agents.yml

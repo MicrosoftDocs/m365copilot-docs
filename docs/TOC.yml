@@ -33,6 +33,12 @@ items:
   items:
   - name: Agents overview
     href: agents-overview.md
+  - name: Agent architecture
+    items:
+    - name: Declarative agent architecture
+      href: declarative-agent-architecture.md
+    - name: Custom engine agent architecture
+      href: custom-engine-agent-architecture.md
   - name: Build a declarative agent
     items:
     - name: Declarative agents overview
@@ -46,7 +52,6 @@ items:
       - name: Choose between Microsoft 365 Copilot and Copilot Studio
         href: copilot-studio-experience.md
     - name: Use Visual Studio Code
-      expanded: true
       items:
       - name: Build with TypeSpec
         items:
@@ -132,15 +137,17 @@ items:
     - name: Use Microsoft 365 Copilot
       items:
       - name: Overview
-        href: copilot-studio-lite.md
+        href: agent-builder.md
       - name: Build agents
-        href: copilot-studio-lite-build.md
+        href: agent-builder-build-agents.md
       - name: Build agents from template
         items:
         - name: Templates overview
           href: agent-templates-overview.md
         - name: Career Coach
           href: agent-template-career-coach.md
+        - name: Corporate Communications Crafter
+          href: agent-template-corporate-communications.md
         - name: Customer Insight Assistant
           href: agent-template-customer-insight.md
         - name: Idea Coach
@@ -153,20 +160,24 @@ items:
           href: agent-template-meeting-coach.md
         - name: Prompt Coach
           href: agent-template-prompt-coach.md
+        - name: Request for Proposal Assistant
+          href: agent-template-rfp-assistant.md
         - name: Quiz Tutor
           href: agent-template-quiz-tutor.md
         - name: Scrum Assistant
           href: agent-template-scrum-assistant.md
+        - name: Text Translator Assistant
+          href: agent-template-text-translator.md
         - name: Writing Coach
           href: agent-template-writing-coach.md
       - name: Build agents with fine-tuned models (preview)
-        href: copilot-studio-lite-tuned-models.md
+        href: agent-builder-tuned-models.md
       - name: Add knowledge sources
-        href: copilot-studio-lite-knowledge.md
+        href: agent-builder-add-knowledge.md
       - name: Share and manage agents
-        href: copilot-studio-lite-share-manage-agent.md
+        href: agent-builder-share-manage-agents.md
       - name: Availability and language support
-        href: copilot-studio-lite-availability.md
+        href: agent-builder-regional-availability.md
       - name: Use Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
@@ -182,10 +193,16 @@ items:
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
       href: instructions-api-plugins.md
+    - name: Connect to other agents
+      href: declarative-agent-connected-agent.md
     - name: Add capabilities and knowledge sources
       items:
       - name: Code interpreter
-        href: code-interpreter.md
+        items:
+        - name: Code interpreter
+          href: code-interpreter.md
+        - name: Code interpreter security architecture
+          href: code-interpreter-security.md
       - name: Image generator
         href: image-generator.md
       - name: Knowledge sources
@@ -294,8 +311,10 @@ items:
   items:
   - name: Overview
     href: copilot-apis-overview.md
-  - name: Use client libraries (preview)
+  - name: Use client libraries
     href: sdks/api-libraries.md
+  - name: Terms of use (preview)
+    href: /legal/m365-copilot-apis/terms-of-use?context=/microsoft-365-copilot/extensibility/context
   - name: API reference
     href: api/toc.yml
 - name: Extend agents at scale with Agent 365 (early access preview)
@@ -306,6 +325,8 @@ items:
     href: publish.md
   - name: Validation guidelines for agents
     href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context
+  - name: Design icons for agent acquisition and management
+    href: agent-icon-management.md
 - name: Manage
   items:
   - name: Overview

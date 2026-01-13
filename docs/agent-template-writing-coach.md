@@ -1,16 +1,16 @@
 ---
 title: Create a Writing Coach agent from a template
-description: Learn how to create a declarative agent in Copilot Studio with the Writing Coach template.
+description: Learn how to use the Writing Coach template in Microsoft 365 Copilot to create a declarative agent.
 author: kmkoenen
 ms.author: v-koenenkaty
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ---
 
 # Use the Writing Coach template to build an agent
 
-You can use the Writing Coach template in the lite experience of Copilot Studio to build agents that help users improve their writing skills and complete various writing tasks. Acting as a supportive coach, agents based on the Writing Coach template provide detailed feedback on clarity, coherence, grammar, and tone. These agents help users modify the nuance and tone of messages, translate text, and guide users through writing instructions, stories, and whitepapers.
+You can use the Writing Coach template in Microsoft 365 Copilot to build agents that help users improve their writing skills and complete various writing tasks. Acting as a supportive coach, agents based on the Writing Coach template provide detailed feedback on clarity, coherence, grammar, and tone. These agents help users modify the nuance and tone of messages, translate text, and guide users through writing instructions, stories, and whitepapers.
 
 To try a Writing Coach, [install the Writing Coach agent](https://teams.microsoft.com/l/app/f72d7797-c6ee-4fd3-9454-028d0095068b?source=share-app-dialog).
 
@@ -55,6 +55,6 @@ You can further enhance your Writing Coach agents with integration. For example:
 
 ## Related content
 
-- [Overview of Copilot Studio in Microsoft 365 Copilot](copilot-studio-lite.md)
-- [Build agents with Copilot Studio](copilot-studio-lite-build.md)
-- [Publish and manage agents](copilot-studio-lite-share-manage-agent.md)
+- [Agent Builder in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Agent Builder](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)

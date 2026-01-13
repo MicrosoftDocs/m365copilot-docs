@@ -3,9 +3,9 @@ title: Microsoft 365 Copilot extensibility samples
 description: Extend Microsoft 365 Copilot with plugins and Copilot connectors.
 author: jasonjoh
 ms.author: jasonjoh
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-ms.date: 01/23/2025
+ms.date: 01/02/2026
 ---
 
 # Microsoft 365 Copilot extensibility samples
@@ -30,8 +30,8 @@ The following samples implement custom agents using Microsoft's orchestration an
 
 | Sample | Description |
 |--------|-------------|
-| [Trey Research Copilot extension (OAuth version)](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/cext-trey-research-auth) | This example demonstrates how to build your own declarative agent using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This sample includes authentication. |
-| [Trey Research Copilot extension (anonymous version)](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/cext-trey-research) | This example demonstrates how to build your own declarative agent using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This version of the Trey Research sample doesn't do authentication, but might be useful for demos and experimentation. |
+| [Trey Research Copilot extension (OAuth version)](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-trey-research-auth) | This example demonstrates how to build your own declarative agent using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This sample includes authentication. |
+| [Trey Research Copilot extension (anonymous version)](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-trey-research) | This example demonstrates how to build your own declarative agent using Microsoft's orchestrator and LLMs, that's also capable of interacting with an API through an API plugin. This version of the Trey Research sample doesn't do authentication, but might be useful for demos and experimentation. |
 
 ## Custom engine agent samples
 
@@ -42,9 +42,9 @@ The following samples implement custom engine agents using custom orchestration 
 | [Meeting Helper with Azure OpenAI](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-ai-meeting-helper) | This example demonstrates how Azure OpenAI extracts action items from meeting transcriptions for all participants who subscribed to a meeting. It then sends these action items to each individual user in a 1:1 chat after the meeting concludes. |
 | [Virtual assistant bot](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-virtual-assistant) | This sample application demonstrates a root bot that routes inputs to skill bots for tailored responses. |
 
-## Copilot connector samples
+## Microsoft 365 Copilot connector samples
 
-The following samples implement Copilot connectors that extend Microsoft 365 Copilot.
+The following samples implement Microsoft 365 Copilot connectors that extend Microsoft 365 Copilot.
 
 | Sample | Description |
 |--------|-------------|

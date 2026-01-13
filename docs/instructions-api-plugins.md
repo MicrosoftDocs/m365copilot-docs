@@ -3,7 +3,7 @@ title: Write Instructions for Declarative Agents with API plugins
 description: Learn how to write effective instructions declarative agents that use API plugins.
 author: lauragra
 ms.author: jchudakova
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 04/02/2025
 ---
@@ -25,7 +25,7 @@ Declarative agents that call API plugins include several components that ensure 
 
 Together, these files define the agent's behavior and how it interacts with the underlying API.
 
-:::image type="content" source="assets/images/instruction-api-plugins-h-2.png" alt-text="Diagram showing the four manifest files that each reference the other" border="false":::
+:::image type="content" source="assets/images/api-plugins/instruction-api-plugins-h-2.png" alt-text="Diagram showing the four manifest files that each reference the other" border="false":::
 
 For more information about API plugins, see:
 
