@@ -42,6 +42,6 @@ Disclaimers with terms and privacy commitments for users appear on the home page
 
 ### Limitation on multiple API actions in a single turn
 
-A declarative agent might stop responding when a single user turn triggers several **different API actions**.
+A declarative agent might stop responding when a single user turn triggers three or more **different API actions**.
 
 **How to minimize the effect:** Break the request into multiple user turns or limit the number of different API actions used at once.

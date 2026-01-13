@@ -98,7 +98,7 @@ Accounts used to test agents that are grounded on organizational data or that in
 
 Declarative agents can be created without a Microsoft 365 Copilot license, but SharePoint, OneDrive, and Microsoft Graph grounding require the signed-in user to have an active Copilot license. Without this entitlement, grounding requests fail silently and result in the message **“Sorry, I wasn’t able to respond”**.
 
-CDX tenant accounts without a Copilot license can publish agents but can’t perform SharePoint-based retrieval. Use the Microsoft 365 Copilot Developer License for testing scenarios in non-production environments.
+Customer Digital Experiences (CDX) tenant accounts without a Copilot license can publish agents but can’t perform SharePoint-based retrieval. Use the Microsoft 365 Copilot Developer License for testing scenarios in non-production environments.
 
 ## Agent capabilities and licensing models
 
