@@ -53,7 +53,7 @@ The Agent Builder feature in Microsoft 365 Copilot allows you to build declarati
 | Submit to Microsoft Commercial Marketplace | ❌ | |
 
 > [!NOTE]
-> For Microsoft 365 Copilot agents, even if you set the sharing option to **Anyone in your organization**, an administrator must still approve and deploy the agent before it becomes available to other users in the organization.
+> If sharing options are restricted in your organization, when you share the agent, an admin must approve and deploy it before it's available to other users in the organization.
 
 For more information about sharing agents, see [Share an agent via Microsoft 365 Copilot](agent-builder-share-manage-agents.md#share-an-agent).
 
