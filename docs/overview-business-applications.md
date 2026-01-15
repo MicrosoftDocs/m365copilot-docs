@@ -7,8 +7,6 @@ ms.localizationpriority: medium
 ms.date: 01/13/2026
 ms.topic: overview
 ---
-
-
 # Use actions to extend Microsoft 365 Copilot
 
 Copilot Studio actions plug into Microsoft 365 Copilot to extend its skills. Actions make use of Microsoft business applications like Microsoft Power Platform.
@@ -47,7 +45,7 @@ You can also create new actions by using Power Platform components in Microsoft 
 
 URLs returned as part of action responses - whether from API plugins, connectors, or flows - might be rendered as clickable links in the Microsoft 365 Copilot chat experience. This behavior is controlled by the Copilot runtime and isn't evaluated against domains defined in the OpenAPI specification `servers` section.
 
-URL rendering behavior for action responses is subject to platform security, trust, and policy rules and may change over time. Developers shouldn't rely on clickable URLs in action responses for production-critical scenarios.
+URL rendering behavior for action responses is subject to platform security, trust, and policy rules and might change over time. Don't rely on clickable URLs in action responses for production-critical scenarios.
 
 ## Get Microsoft 365 Copilot licenses to enable actions
 
