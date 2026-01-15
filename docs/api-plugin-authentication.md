@@ -29,13 +29,6 @@ Before you begin, you need to register with your OAuth 2.0 provider to get a cli
 > - API plugins only support the authorization code flow for OAuth 2.0.
 > - OAuth 2.0 servers that return `307 Temporary Redirect` HTTP status codes from their token endpoint aren't supported.
 
-> [!NOTE] 
->Microsoft Teams and Declarative Agents don't provide a built-in way for users to manually clear stored OAuth credentials. The Bot Framework Token Service centrally manages tokens, and they might continue to persist after an agent is uninstalled due to SSO caching, tenant settings, or client differences. 
->  
-> To force reauthentication, use server-side sign out by calling [`SignOutUserAsync`](/dotnet/api/microsoft.bot.builder.botframeworkadapter.signoutuserasync) to invalidate bot tokens. For a full reset, you can optionally combine this method with Microsoft Graph’s [`revokeSignInSessions`](/graph/api/user-revokesigninsessions) or remove the user's consent.  
->  
-> For a better user experience, consider adding a **“Log out / switch account”** action that triggers these server-side sign out flows so users are prompted to sign in again.
-
 You can define this scheme in the `securitySchemes` property of an OpenAPI document. For more information, see [OAuth 2.0](https://swagger.io/docs/specification/authentication/oauth2/).
 
 ```yml
@@ -52,6 +45,13 @@ securitySchemes:
 ```
 
 To enable OAuth 2.0 authentication, you need to register an OAuth client in the Teams developer portal. You can register an OAuth client with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) in Visual Studio Code or by manually registering in the Teams developer portal.
+
+> [!NOTE] 
+> Declarative agents don't provide a built-in way for users to manually clear stored OAuth credentials. The Bot Framework Token Service centrally manages tokens, and they might continue to persist after an agent is uninstalled due to SSO caching, tenant settings, or client differences. 
+>  
+> To force reauthentication, use server-side sign out by calling [`SignOutUserAsync`](/dotnet/api/microsoft.bot.builder.botframeworkadapter.signoutuserasync) to invalidate bot tokens. For a full reset, you can optionally combine this method with the Microsoft Graph [`revokeSignInSessions`](/graph/api/user-revokesigninsessions) API or remove the user's consent.  
+>  
+> For a better user experience, consider adding a **Signt out/switch account** action that triggers these server-side sign out flows so users are prompted to sign in again.
 
 ### Register an OAuth client with Agents Toolkit
 
