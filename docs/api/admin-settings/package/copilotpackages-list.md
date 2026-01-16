@@ -42,6 +42,16 @@ GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages
 |:----------------|:------------------------------------------------------------------------------------------------------------|
 | `Authorization` | `Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 
+### Optional query parameters
+
+This method supports the `$filter` [OData query parameter](/graph/query-parameters) to help customize the response. The following properties are supported with the `$filter` OData query parameter. For examples of using the `$filter` query parameter, see [Examples](#examples).
+
+| Parameter             | Type     | Description                                                              |
+| --------------------- | -------- | ------------------------------------------------------------------------ |
+| `supportedHost`       | string   | Filter by supported host (`Copilot`, `Outlook`, `Teams`, `M365`)         |
+| `elementTypes`        | string   | Filter by element type (`Bots`, `DeclarativeAgent`, `CustomEngineAgent`) |
+| `lastUpdatedDateTime` | datetime | Filter by last updated date/time                                         |
+
 ## Request body
 
 Don't supply a request body for this method.
@@ -50,9 +60,11 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a collection of [copilotPackage](resources/copilotpackage.md) objects in the response body.
 
-### Example
+### Examples
 
-#### Request
+#### Example 1: List all packages
+
+##### Request
 
 The following example shows a request.
 
@@ -60,16 +72,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages
 ```
 
-### Optional Query Parameters
-
-| Parameter             | Type     | Description                                                             |
-| --------------------- | -------- | ----------------------------------------------------------------------- |
-| `type`                | string   | Filter by package type (`1P`, `3P`, `LOB`, `Shared`)                    |
-| `supportedHost`       | string   | Filter by supported host (`Copilot`, `Outlook`, `Teams`, `M365`)        |
-| `elementTypes`        | string   | Filter by element type (`Bot`, `DeclarativeAgent`, `CustomEngineAgent`) |
-| `lastUpdatedDateTime` | datetime | Filter by last updated date/time                                        |
-
-### Response
+##### Response
 
 The following example shows the response. The response object shown here might be shortened for readability.
 
@@ -87,6 +90,111 @@ Content-Type: application/json
       "isBlocked": false,
       "supportedHosts": ["Teams", "SharePoint"],
       "lastModifiedDateTime": "2025-10-06T00:07:20.1467852Z",
+      "availableTo": "all",
+      "deployedTo": "all"
+    }
+  ]
+}
+```
+
+#### Example 2: List packages filtered by supported host
+
+##### Request
+
+The following example shows a request.
+
+```http
+GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=supportedHosts/any(h:h eq 'Word')
+```
+
+##### Response
+
+The following example shows the response. The response object shown here might be shortened for readability.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "id": "P_19ae1zz1-cb65-505a-3d42-156df75a4xxy",
+      "displayName": "Contoso Document Formatter",
+      "type": "external",
+      "shortDescription": "Formats Word documents according to company style guide",
+      "isBlocked": false,
+      "supportedHosts": ["Word"],
+      "lastModifiedDateTime": "2025-10-06T00:07:20.1467852Z",
+      "availableTo": "all",
+      "deployedTo": "all"
+    }
+  ]
+}
+```
+
+#### Example 3: List packages filtered by element type
+
+##### Request
+
+The following example shows a request.
+
+```http
+GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=elementTypes/any(h:h eq 'OfficeAddIns')
+```
+
+##### Response
+
+The following example shows the response. The response object shown here might be shortened for readability.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "id": "P_19ae1zz1-505a-3492-9871-134df75a4xxy",
+      "displayName": "Northwind Traders Account Lookup",
+      "type": "external",
+      "shortDescription": "Look up customer account details in Outlook and add them to email",
+      "isBlocked": false,
+      "supportedHosts": ["Outlook"],
+      "lastModifiedDateTime": "2025-10-06T00:07:20.1467852Z",
+      "availableTo": "all",
+      "deployedTo": "all"
+    }
+  ]
+}
+```
+
+#### Example 4: List packages by last updated date/time
+
+##### Request
+
+The following example shows a request.
+
+```http
+GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=lastModifiedDateTime gt 2026-01-01T00:00:00.0000000Z
+```
+
+##### Response
+
+The following example shows the response. The response object shown here might be shortened for readability.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "id": "P_19ae1zz1-56bc-505a-3d42-156df75a4xxy",
+      "displayName": "Contoso HR Agent",
+      "type": "custom",
+      "shortDescription": "Agent that can answer HR questions",
+      "isBlocked": false,
+      "supportedHosts": ["Copilot"],
+      "lastModifiedDateTime": "2026-01-06T00:07:20.1467852Z",
       "availableTo": "all",
       "deployedTo": "all"
     }
