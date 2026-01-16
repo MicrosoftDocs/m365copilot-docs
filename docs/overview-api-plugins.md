@@ -73,11 +73,11 @@ Copilot responds to the user, using the information returned: "The charge of $50
 
 ## Confirming actions
 
-Copilot asks the user before sending any data to an API plugin.
+Copilot asks the user before sending any data for the first time to an API plugin.
 
-:::image type="content" source="assets/images/api-plugins/get-always-allow.png" alt-text="A screenshot of a plugin confirmation dialog.":::
+:::image type="content" source="assets/images/api-plugins/first-connection-confirmation" alt-text="A screenshot of a plugin confirmation dialog.":::
 
-By default, APIs that only retrieve data give the user an "Always allow" option, while APIs that modify data don't. Plugin developers can override these defaults. For details, see [Confirmation prompts for API plugins for Microsoft 365 Copilot](api-plugin-confirmation-prompts.md).
+After the user confirms the connection, APIs that only retrieve data don't require confirmation, while APIs that modify data do. Plugin developers can override these defaults. For details, see [Confirmation prompts for API plugins for Microsoft 365 Copilot](api-plugin-confirmation-prompts.md).
 
 ## Customizing response presentation
 
