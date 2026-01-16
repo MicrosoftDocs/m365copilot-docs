@@ -131,7 +131,7 @@ The following table lists features that aren't currently supported for custom en
 | Feedback | User feedback about agent responses isn't shared with the developer. |
 | Conversation context | Custom engine agents can't access Copilot conversation history that occurred before the user accesses the agent via `@mention`. |
 | Chat messages | Users can't edit chat messages sent to or returned by the agent. |
-| Chat messages | HTML isn't supported in agent response messages. |
+| Chat messages | HTML isn't supported in agent response messages.Messages in BizChat are immutable, and the `updateActivity` API isn’t supported. Adaptive Cards refreshed using **Action.Execute** don’t persist updated content when the chat is reopened; the original card is shown. Agent workflows in Copilot Chat should use follow‑up messages instead of relying on message edits. |
 | File attachments | Users can't upload files in agent chats and the agent can't return files for download. |
 | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li></ul> |
 | Proactive notifications | Proactive notifications aren't supported. |
