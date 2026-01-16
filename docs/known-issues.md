@@ -95,7 +95,7 @@ You can work around the issue in two ways:
 - Upload the file in the chat before asking for analysis.
 - Share a direct file link and ask Copilot to open it.
 
-## Troubleshooting SharePoint grounding issues
+### Troubleshooting SharePoint grounding issues
 
 Declarative agents might provision successfully but fail at runtime with the following message:
 
@@ -103,12 +103,12 @@ Declarative agents might provision successfully but fail at runtime with the fol
 
 This issue can occur when the signed-in identity doesn’t have the required entitlement to perform SharePoint grounding. While you can create and publish declarative agents without a Microsoft 365 Copilot license, SharePoint, OneDrive, and Microsoft Graph grounding require an active Copilot license.
 
-### License considerations
+#### License considerations
 - SharePoint retrieval is a premium grounding capability. The signed-in user must have a Microsoft 365 Copilot license that enables SharePoint and Microsoft Graph grounding.
 - Customer Digital Experience (CDX) demo tenant accounts without a Copilot license can create and publish agents, but grounded retrieval fails silently and triggers the generic runtime error.
 - Developers testing SharePoint grounding in non-production tenants should use the **Microsoft 365 Copilot Developer License**, which includes the required Graph and SharePoint access.
 
-### Configuration checks
+#### Configuration checks
 If the correct license is assigned but grounding still fails, verify the following:
 
 - The signed-in user can access the SharePoint site URL defined in `items_by_url`.
