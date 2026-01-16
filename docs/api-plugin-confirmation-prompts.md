@@ -12,19 +12,21 @@ ms.topic: article
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-By default, Microsoft 365 Copilot asks the user to confirm sending data to a plugin before it sends it to prevent unintended consequences in external systems. The user is able to see the data to be sent and is given a choice to allow or decline. For some API operations, users are given the option to always allow data to be sent, which prevents future confirmation prompts for that particular operation.
+The first time Microsoft 365 Copilot uses an API plugin, it notifies the user and asks them to allow or cancel the operation. If the user allows Copilot to connect to the plugin, all future operations that retrieve data (HTTP GET operations) do not require any confirmation. Other HTTP operations prompt the user, showing the data to be sent and giving the user a choice to allow or decline.
 
-Normally, Microsoft 365 Copilot shows the user the **Always allow** option for HTTP GET operations, and doesn't show the option for POST, PATCH, PUT, and DELETE. API plugin developers can change this behavior for individual operations in their API. Developers can also customize the text that Copilot displays to the user as part of the confirmation prompt.
+:::image type="content" source="assets/images/api-plugins/first-connection-confirmation.png" alt-text="Copilot confirmation dialog for connecting to a plugin for the first time":::
+
+API plugin developers can change this behavior for individual operations in their API. Developers can also customize the text that Copilot displays to the user as part of the confirmation prompt.
 
 ## Overriding prompt behavior
 
-Developers can control whether Microsoft 365 Copilot shows the **Always allow** option for a specific operation by adding the `x-openai-isConsequential` property in the OpenAPI document for their API. Setting this property to `true` disables the **Always allow** option, and setting it to `false` enables it. As a rule, any action with side effects in the external system should be marked with `true` to ensure the user is in control and prevent unintended consequences for actions with side effects in the external system.
+Developers can control whether Microsoft 365 Copilot asks the user for confirmation (after the initial first-time prompt) for a specific operation by adding the `x-openai-isConsequential` property in the OpenAPI document for their API. Setting this property to `false` disables the confirmation prompt, and setting it to `true` enables it. As a rule, any action with side effects in the external system should be marked with `true` to ensure the user is in control and prevent unintended consequences for actions with side effects in the external system.
 
-For example, consider an API that creates a reminder: `POST /reminders`. Because it's a POST operation, Microsoft 365 Copilot asks the user to confirm every time this API is used, and doesn't give the user the option to always allow this operation.
+For example, consider an API that creates a reminder: `POST /reminders`. Because it's a POST operation, Microsoft 365 Copilot asks the user to confirm every time this API is used.
 
 :::image type="content" source="assets/images/api-plugins/post-confirm.png" alt-text="Copilot confirmation dialog for a POST operation.":::
 
-To enable the **Always allow** option, add the `x-openai-isConsequential` property set to false as shown in the following example.
+To disable this prompt, add the `x-openai-isConsequential` property set to false as shown in the following example.
 
 ```yml
 post:
@@ -40,11 +42,7 @@ post:
     required: true
 ```
 
-Now, imagine a related API that retrieves existing reminders: `GET /reminders`. Since it's a GET, Microsoft 365 Copilot shows the user the **Always allow** option.
-
-:::image type="content" source="assets/images/api-plugins/get-always-allow.png" alt-text="Copilot confirmation dialog for a GET operation.":::
-
-This behavior can be changed by adding `x-openai-isConsequential` set to true.
+Now, imagine a related API that retrieves existing reminders: `GET /reminders`. Since it's a GET, Microsoft 365 Copilot does not prompt the user unless this is the first time Copilot is connecting to this plugin. This behavior can be changed by adding `x-openai-isConsequential` set to true.
 
 ```yml
 get:
