@@ -12,7 +12,7 @@ ms.topic: article
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-The first time Microsoft 365 Copilot uses an API plugin, it notifies the user and asks them to allow or cancel the operation. If the user allows Copilot to connect to the plugin, all future operations that retrieve data (HTTP GET operations) do not require any confirmation. Other HTTP operations prompt the user, showing the data to be sent and giving the user a choice to allow or decline.
+The first time Microsoft 365 Copilot uses an API plugin, it notifies the user and asks them to allow or cancel the operation. If the user allows Copilot to connect to the plugin, all future operations that retrieve data (HTTP GET operations) don't require any confirmation. Other HTTP operations prompt the user, showing the data to be sent and giving the user a choice to allow or decline.
 
 :::image type="content" source="assets/images/api-plugins/first-connection-confirmation.png" alt-text="Copilot confirmation dialog for connecting to a plugin for the first time":::
 
@@ -42,7 +42,7 @@ post:
     required: true
 ```
 
-Now, imagine a related API that retrieves existing reminders: `GET /reminders`. Since it's a GET, Microsoft 365 Copilot does not prompt the user unless this is the first time Copilot is connecting to this plugin. This behavior can be changed by adding `x-openai-isConsequential` set to true.
+Now, imagine a related API that retrieves existing reminders: `GET /reminders`. Since it's a GET, Microsoft 365 Copilot doesn't prompt the user unless this request is the first time Copilot is connecting to this plugin. This behavior can be changed by adding `x-openai-isConsequential` set to true.
 
 ```yml
 get:
@@ -86,7 +86,7 @@ In your plugin manifest (for example, plugin.json), replace literal strings with
     }
 ```
 
-These keys (for example, `plugin_name` and `plugin_description`,) must match entries in your localization file and conform to the regex `^[a-zA-Z_][a-zA-Z0-9_]*`.
+These keys (for example, `plugin_name` and `plugin_description`) must match entries in your localization file and conform to the regex `^[a-zA-Z_][a-zA-Z0-9_]*`.
 
 ### Step 2: Create localization files
 
