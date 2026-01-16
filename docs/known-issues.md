@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 11/06/2025
+ms.date: 01/16/2026
 ms.topic: concept-article
 ---
 
@@ -80,6 +80,28 @@ You can work around the issue in two ways:
 
 - Upload the file in the chat before asking for analysis.
 - Share a direct file link and ask Copilot to open it.
+
+## Troubleshooting SharePoint grounding issues
+
+Declarative agents might provision successfully but fail at runtime with the following message:
+
+> **“Sorry, I wasn’t able to respond.”**
+
+This issue can occur when the signed-in identity doesn’t have the required entitlement to perform SharePoint grounding. While you can create and publish declarative agents without a Microsoft 365 Copilot license, SharePoint, OneDrive, and Microsoft Graph grounding require an active Copilot license.
+
+### License considerations
+- SharePoint retrieval is a premium grounding capability. The signed-in user must have a Microsoft 365 Copilot license that enables SharePoint and Microsoft Graph grounding.
+- Customer Digital Experience (CDX) demo tenant accounts without a Copilot license can create and publish agents, but grounded retrieval fails silently and triggers the generic runtime error.
+- Developers testing SharePoint grounding in non-production tenants should use the **Microsoft 365 Copilot Developer License**, which includes the required Graph and SharePoint access.
+
+### Configuration checks
+If the correct license is assigned but grounding still fails, verify the following:
+
+- The signed-in user can access the SharePoint site URL defined in `items_by_url`.
+- The agent’s connection uses **User authentication**. Service principals aren’t supported for SharePoint grounding scenarios.
+- The user has at least **Read** permissions on the target SharePoint site.
+
+Silent grounding failures typically occur when licensing, permissions, or authentication configurations are incomplete.
 
 ## Copilot connectors
 

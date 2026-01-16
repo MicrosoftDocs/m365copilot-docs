@@ -5,7 +5,7 @@ author: simranajwani
 ms.author: simranajwani
 ms.topic: faq
 ms.localizationpriority: medium
-ms.date: 01/13/2026
+ms.date: 07/21/2025
 ---
 
 # Declarative agents FAQ
@@ -39,9 +39,3 @@ For each capability that is supported in declarative agents, we conduct several 
 ## What are the limitations of declarative agents and how can users minimize the effects?
 
 Disclaimers with terms and privacy commitments for users appear on the home page for each declarative agent. For line-of-business developers and IT admins, Copilot extensibility solutions are managed in the Microsoft 365 admin center. For more information about how Microsoft 365 Copilot uses, protects, and shares organizational information to power extensibility, see [Data, Privacy, and Security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy).
-
-### Limitation on multiple API actions in a single turn
-
-A declarative agent might stop responding when a single user turn triggers three or more **different API actions**.
-
-**How to minimize the effect:** Break the request into multiple user turns or limit the number of different API actions used at once.

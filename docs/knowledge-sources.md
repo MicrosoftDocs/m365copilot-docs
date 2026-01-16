@@ -4,7 +4,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.localizationpriority: medium
-ms.date: 12/18/2025
+ms.date: 01/16/2026
 ms.topic: article
 ---
 
@@ -47,6 +47,12 @@ When you configure your agent to use OneDrive and SharePoint content as knowledg
 For information about how to add OneDrive and SharePoint knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.6.md#onedrive-and-sharepoint-object).
 
 For information about how to add SharePoint knowledge to your agent in Microsoft 365 Copilot, see [Add knowledge sources](agent-builder-add-knowledge.md#sharepoint-content).
+
+### SharePoint grounding requirements
+
+Declarative agents can be created without a Microsoft 365 Copilot license, but SharePoint, OneDrive, and Microsoft Graph grounding require the signed-in user to have an active Copilot license. Without this entitlement, grounding requests fail silently and result in the message **“Sorry, I wasn’t able to respond”**.
+
+Customer Digital Experiences (CDX) tenant accounts without a Copilot license can publish agents but can’t perform SharePoint-based retrieval. Use the Microsoft 365 Copilot Developer License for testing scenarios in non-production environments.
 
 ## Web and scoped web search
 

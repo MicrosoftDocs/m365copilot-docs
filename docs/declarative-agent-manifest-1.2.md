@@ -4,7 +4,7 @@ description: Learn about the 1.2 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 01/13/2026
+ms.date: 08/18/2025
 ms.topic: reference
 ---
 
@@ -370,28 +370,6 @@ namespace PostsAPI {
 The following example shows a declarative agent manifest file that uses most of the manifest properties described in this article.
 
 :::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.2.json":::
-
-## Troubleshooting SharePoint grounding issues
-
-Declarative agents might provision successfully but fail at runtime with the following message:
-
-> **“Sorry, I wasn’t able to respond.”**
-
-This issue can occur when the signed-in identity doesn’t have the required entitlement to perform SharePoint grounding. While you can create and publish declarative agents without a Microsoft 365 Copilot license, SharePoint, OneDrive, and Microsoft Graph grounding require an active Copilot license.
-
-### License considerations
-- SharePoint retrieval is a premium grounding capability. The signed-in user must have a Microsoft 365 Copilot license that enables SharePoint and Microsoft Graph grounding.
-- Customer Digital Experience (CDX) demo tenant accounts without a Copilot license can create and publish agents, but grounded retrieval fails silently and triggers the generic runtime error.
-- Developers testing SharePoint grounding in non-production tenants should use the **Microsoft 365 Copilot Developer License**, which includes the required Graph and SharePoint access.
-
-### Configuration checks
-If the correct license is assigned but grounding still fails, verify the following:
-
-- The signed-in user can access the SharePoint site URL defined in `items_by_url`.
-- The agent’s connection uses **User authentication**. Service principals aren’t supported for SharePoint grounding scenarios.
-- The user has at least **Read** permissions on the target SharePoint site.
-
-Silent grounding failures typically occur when licensing, permissions, or authentication configurations are incomplete.
 
 ## Related content
 
