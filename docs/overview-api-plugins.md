@@ -75,7 +75,7 @@ Copilot responds to the user, using the information returned: "The charge of $50
 
 Copilot asks the user before sending any data for the first time to an API plugin.
 
-:::image type="content" source="assets/images/api-plugins/first-connection-confirmation" alt-text="A screenshot of a plugin confirmation dialog.":::
+:::image type="content" source="assets/images/api-plugins/first-connection-confirmation.png" alt-text="A screenshot of a plugin confirmation dialog.":::
 
 After the user confirms the connection, APIs that only retrieve data don't require confirmation, while APIs that modify data do. Plugin developers can override these defaults. For details, see [Confirmation prompts for API plugins for Microsoft 365 Copilot](api-plugin-confirmation-prompts.md).
 
@@ -93,9 +93,9 @@ The answer lies in how you describe your plugin, its skills, and the parameters 
 
 The way you describe your plugin to the orchestrator depends on the type of plugin you build, as described in the following table.
 
-| Plugin type  | Described by | Learn more|
-|----------|-----------|------------|
-|API plugins |  OpenAPI description | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md) |
+| Plugin type  | Described by | Learn more |
+|--------------|--------------|------------|
+|API plugins   |  OpenAPI description | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md) |
 | Copilot Studio actions | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)  |
 | Message extension plugins | App manifest   | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
 
