@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 Microsoft 365 Copilot Retrieval API Pay-as-you-go for non-Copilot licensed users offers access to the Retrieval API for tenant-level data sources such as SharePoint, SharePoint Embedded (Preview) and Copilot Connectors. See details under the SharePoint Embedded billing changes below. User-level data sources such as OneDrive are not available for non-Copilot licensed users via Pay-as-you-go consumption of the Retrieval API.
 
-Non-Copilot licensed users who have Pay-as-you-go enabled for Retrieval API will be able to leverage the SharePoint tool in Microsoft Foundry, via Pay-as-you-go consumption.
+Additionally, non-Copilot licensed users who have Pay-as-you-go enabled for Retrieval API will be able to leverage the SharePoint tool in Microsoft Foundry, via Pay-as-you-go consumption.
 
 #### Billing changes for SharePoint Embedded
 
@@ -42,7 +42,7 @@ Microsoft Offering uses pay-as-you-go (PAYG) billing through an Azure subscripti
 | **Meter:** Pay as you go Copilot Credit<br/>**Meter category:** Microsoft Copilot Studio<br/>**Feature tag:** m365copilotretrievalapi | $/API call | $0.10 |
 
 ## Enablement and Disablement Process
-To enable and disable this service, you can visit Microsoft 365 Admin Center → Copilot → Billing & usage → Pay-as-you-go.
+To enable and disable this service, you can visit Microsoft 365 Admin Center → Copilot → Billing & usage → Pay-as-you-go → Microsoft 365 Copilot Retrieval API.
 
 There can be a lag of around 2 hours for enablement to propagate. Once enablement has propagated, the first API call made after the propagation may fail. On the second API call and beyond, the calls should succeed. This is due to the Billing Policy configuration getting updated.
 
