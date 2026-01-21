@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 01/13/2026
 ---
 # Publish agents for Microsoft 365 Copilot
 
@@ -51,6 +51,9 @@ The Agent Builder feature in Microsoft 365 Copilot allows you to build declarati
 | Share with others | ✅ | [Share an agent via Microsoft 365 Copilot](copilot-studio-lite-publish-agent.md#create-the-agent) |
 | Submit to organizational catalog | ✅ | [Share an agent via Microsoft 365 Copilot](copilot-studio-lite-publish-agent.md#create-the-agent) |
 | Submit to Microsoft Commercial Marketplace | ❌ | |
+
+> [!NOTE]
+> If sharing options are restricted in your organization, when you share the agent, an admin must approve and deploy it before it's available to other users in the organization.
 
 For more information about sharing agents, see [Share an agent via Microsoft 365 Copilot](agent-builder-share-manage-agents.md#share-an-agent).
 
