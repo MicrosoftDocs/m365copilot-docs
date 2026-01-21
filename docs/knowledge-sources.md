@@ -139,9 +139,14 @@ Before adding Dataverse knowledge to your agent, ensure that you either use an e
 
 Follow these steps to obtain the necessary values:
 
+1. [Obtain your organization ID](#obtain-your-organization-id).
 1. [Obtain a bearer token](#obtain-a-bearer-token) to access Dataverse resources.
 1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`.
 1. If no existing `skill` was found in the previous step, [create a `DVTableSearch` skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
+
+##### Obtain your organization ID
+
+Obtain your organization ID from  [Power Apps maker portal](https://make.preview.powerapps.com/)> **Settings**> **Developer resources**.
 
 ##### Obtain a bearer token
 
