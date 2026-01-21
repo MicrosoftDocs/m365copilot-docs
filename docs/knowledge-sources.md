@@ -147,7 +147,7 @@ Follow these steps to obtain the necessary values:
 
 To create or fetch a `skill` value, you need a bearer token to authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
-To obtain a bearer token, create an App Registration in Azure Portal, then run the following curl request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+To obtain a bearer token, create an App Registration in Azure Portal, then run the following curl request. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ```Shell
 curl -X POST https://login.microsoftonline.com/<TENANT_ID>/oauth2/v2.0/token \ 
