@@ -4,7 +4,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.localizationpriority: medium
-ms.date: 12/29/2025
+ms.date: 01/21/2026
 ms.topic: article
 ---
 
@@ -139,33 +139,24 @@ Before adding Dataverse knowledge to your agent, ensure that you either use an e
 
 Follow these steps to obtain the necessary values:
 
-1. [Obtain your organization ID](#obtain-your-organization-id).
 1. [Obtain a bearer token](#obtain-a-bearer-token) to access Dataverse resources.
 1. [Check for an existing DVTableSearch skill](#check-for-an-existing-dvtablesearch-skill) or its `dvtablesearchid`.
 1. If no existing `skill` was found in the previous step, [create a `DVTableSearch` skill](#create-a-dvtablesearch-skill) and use the exact name you assign to it.
 
-##### Obtain your organization ID
-
-To obtain your organization ID, follow these steps:
-
-1. Sign in to the [Power Apps maker portal](https://make.preview.powerapps.com/).
-1. Navigate to the **Tables** section from the left pane. Existing tables in your Dataverse environment appear.
-1. Right click on your website and select **Inspect**. The developer tools pane appears.
-1. Navigate to **Network** and refresh the page. Network requests appear in the developer tools pane.
-1. In the **Search** box, type `org` to filter the requests.
-1. Click the first request that appears in the list. A request url (For example:\https://YourOrgID.crm.dynamics.com) appears under the **General** tab.
-1. Copy the organization ID (For example: YourOrgID) from the request url or from the **Authorization** property under the **Request** header.
-
-You will need this organization ID to create or fetch the `skill` value.
-
 ##### Obtain a bearer token
 
-To create or fetch a `skill` value, you also need a bearer token to authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
+To create or fetch a `skill` value, you need a bearer token to authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
-To obtain a bearer token, follow these steps:
+To obtain a bearer token, create an App Registration in Azure Portal, then run the following curl request. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
-1. Follow steps 1 to 6 in the [previous section](#obtain-your-organization-id).
-1. Copy the bearer token that appears under **Request** > **Authorization** property.
+```Shell
+curl -X POST https://login.microsoftonline.com/<TENANT_ID>/oauth2/v2.0/token \ 
+  -H "Content-Type: application/x-www-form-urlencoded" \ 
+  -d "client_id=<CLIENT_ID>" \ 
+  -d "scope=https://YourOrgID.crm.dynamics.com/.default" \ 
+  -d "client_secret=<CLIENT_SECRET>" \ 
+  -d "grant_type=client_credentials"
+```
 
 ##### Check for an existing DVTableSearch skill
 
