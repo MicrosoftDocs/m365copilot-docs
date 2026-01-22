@@ -8,7 +8,7 @@ ms.topic: overview
 ms.localizationpriority: medium
 ---
 
-## Microsoft 365 Copilot Retrieval API Pay-as-you-go for non-Copilot licensed users (Public Preview)
+# Microsoft 365 Copilot Retrieval API Pay-as-you-go for non-Copilot licensed users (Public Preview)
 
 ### Introduction
 
