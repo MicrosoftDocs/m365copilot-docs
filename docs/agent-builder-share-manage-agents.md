@@ -4,7 +4,7 @@ description: Learn how to share and manage agents built with Microsoft 365 Copil
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 12/01/2025
+ms.date: 01/13/2026
 ms.topic: article
 ---
 
@@ -32,12 +32,12 @@ The following table highlights the key differences between publishing and sharin
 
 ## Share an agent
 
-To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After creating your agent, a confirmation message will appear indicating that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
+To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After your agent is created, a confirmation message indicates that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-share.png" alt-text="Auto-sharing knowledge sources":::
 
 > [!NOTE]
-> Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
+> Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If sharing options are restricted in your organization, an admin must approve and deploy the agent before it's available to other users in the organization. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
 
 The following table describes the available sharing options.
 
