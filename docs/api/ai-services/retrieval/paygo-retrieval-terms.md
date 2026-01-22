@@ -14,11 +14,11 @@ Last Updated: January 2026
 
 **Preview Period:** The Preview Period continues in effect until January 31, 2027, or 30 days after Commercial General Availability of the Preview Feature, whichever is first. You may terminate your use of the Preview Feature at any time.
 
-**Preview Feature:** Microsoft 365 Copilot Retrieval API Pay-as-you-go for non-Copilot licensed users (“Microsoft Offering”) offers access to the Retrieval API for tenant-level data sources such as SharePoint, SharePoint Embedded (Preview), and Copilot Connectors. See details under the SharePoint Embedded billing changes below. User-level data sources such as OneDrive are not available for non-Copilot licensed users via Pay-as-you-go consumption of the Retrieval API.
+**Preview Feature:** Microsoft 365 Copilot Retrieval API Pay-as-you-go for non-Copilot licensed users (“Microsoft Offering”) offers access to the Retrieval API for tenant-level data sources such as SharePoint and Copilot Connectors. User-level data sources such as OneDrive are not available for non-Copilot licensed users via Pay-as-you-go consumption of the Retrieval API.
 
 The Retrieval API is a streamlined solution for Retrieval Augmented Generation (RAG) without the need to replicate, index, chunk, and secure your data in a separate index. The API understands the user's context and intent and performs query transformations to yield the most relevant results, which is more difficult to achieve with lexical search or even basic RAG from alternate sources.
 
-For non-Copilot licensed users leveraging the Retrieval API via Pay-as-you-go, the Retrieval API accomplishes RAG by extracting up-to-date and relevant text snippets from tenant-level data sources such as SharePoint, SharePoint Embedded (Preview), and Copilot Connectors. The Retrieval API keeps your data in place and upholds your access and governance controls. The Retrieval API ensures that synthesized responses are informed by the latest and most relevant data. This process enhances the reliability and usefulness of your generative AI solutions. The Microsoft 365 Copilot Retrieval API allows you to ground your generative AI solutions with your Microsoft 365 and non-Microsoft knowledge by returning relevant text chunks from the hybrid index that powers Microsoft 365 Copilot.
+For non-Copilot licensed users leveraging the Retrieval API via Pay-as-you-go, the Retrieval API accomplishes RAG by extracting up-to-date and relevant text snippets from tenant-level data sources such as SharePoint and Copilot Connectors. The Retrieval API keeps your data in place and upholds your access and governance controls. The Retrieval API ensures that synthesized responses are informed by the latest and most relevant data. This process enhances the reliability and usefulness of your generative AI solutions. The Microsoft 365 Copilot Retrieval API allows you to ground your generative AI solutions with your Microsoft 365 and non-Microsoft knowledge by returning relevant text chunks from the hybrid index that powers Microsoft 365 Copilot.
 
 Customers will be able to sign up for Microsoft Offering by enabling “Microsoft 365 Copilot Retrieval API” as a Pay-as-you-go service in Microsoft 365 Admin Center, linking a valid Azure subscription and Azure Resource Group for billing purposes. Customer can enable Microsoft Offering for all users in their tenant or for a specific group of users in their tenant.
 
@@ -34,9 +34,6 @@ The disablement may take up to 24 hours to propagate in the system. Charges will
 3. At least 1 Microsoft 365 Copilot license in the tenant before enablement and during use of the Microsoft Offering
 
 If any of these prerequisite requirements are no longer met after enabling Microsoft Offering, then Microsoft reserves the right to disable Microsoft Offering for the customer.
-
-**Billing changes for SharePoint Embedded**
-In the future, both Copilot-licensed users and non-Copilot licensed users will be charged for access to SharePoint Embedded data source from Retrieval API. Additionally, as part of this change, the enablement and disablement process for Pay-as-you-go access to SharePoint Embedded data source via Retrieval API will use the SharePoint Embedded billing setup and will be communicated in advance.
 
 No SLA applies to this Feature Preview.
 

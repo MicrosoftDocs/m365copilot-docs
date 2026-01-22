@@ -14,19 +14,19 @@ The Microsoft 365 Copilot APIs provide access to components that power Copilot e
 
 The Retrieval API offers a streamlined solution for Retrieval Augmented Generation (RAG) without the need to replicate, index, chunk, and secure your data in a separate index. The API understands the user's context and intent and performs query transformations to yield the most relevant results, which is more difficult to achieve with lexical search or even basic RAG from alternate sources.
 
-RAG is essential when you're building generative AI solutions and want to use Microsoft 365 knowledge. When you implement RAG, your solutions can provide more accurate, contextually relevant responses grounded in the vast repository of your organizational data. The Retrieval API accomplishes RAG by extracting up-to-date and relevant text snippets from SharePoint, SharePoint Embedded (preview), OneDrive, and Copilot connectors. The Retrieval API keeps your data in place and upholds your access and governance controls. The Retrieval API ensures that synthesized responses are informed by the latest and most relevant data. This process enhances the reliability and usefulness of your generative AI solutions.
+RAG is essential when you're building generative AI solutions and want to use Microsoft 365 knowledge. When you implement RAG, your solutions can provide more accurate, contextually relevant responses grounded in the vast repository of your organizational data. The Retrieval API accomplishes RAG by extracting up-to-date and relevant text snippets from SharePoint, OneDrive, and Copilot connectors. The Retrieval API keeps your data in place and upholds your access and governance controls. The Retrieval API ensures that synthesized responses are informed by the latest and most relevant data. This process enhances the reliability and usefulness of your generative AI solutions.
 
 To explore the API, [try a query in Graph Explorer](https://aka.ms/try_copilot_retrieval_API_overview).
 
 ## Why use the Retrieval API?
 
-The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint, SharePoint Embedded (Preview), OneDrive, and Copilot connectors while optimizing for context recall. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance.
+The Retrieval API offers a secure and compliant way to retrieve relevant text chunks from SharePoint, OneDrive, and Copilot connectors while optimizing for context recall. Thus, you don't need to to egress data, break permissions, or compromise on security and compliance.
 
-Custom knowledge applications can use the Retrieval API to ground responses on organization-specific information stored in SharePoint, SharePoint Embedded (Preview), OneDrive, and Copilot connectors. Rather than building and maintaining separate vector indexes, these applications can instead retrieve relevant context from Microsoft 365 data sources to ground large language model (LLM) responses the same way that Microsoft 365 Copilot does.
+Custom knowledge applications can use the Retrieval API to ground responses on organization-specific information stored in SharePoint, OneDrive, and Copilot connectors. Rather than building and maintaining separate vector indexes, these applications can instead retrieve relevant context from Microsoft 365 data sources to ground large language model (LLM) responses the same way that Microsoft 365 Copilot does.
 
 Finance and legal applications that require high precision in information retrieval can use the API's filtering capabilities to scope searches to specific document libraries or content types, ensuring responses only include approved sources while respecting information barriers and access controls.
 
-Multi-source applications can combine SharePoint, SharePoint Embedded (Preview), and OneDrive content with information from Microsoft 365 Copilot connectors, creating a unified knowledge base that spans both Microsoft 365 and third-party repositories while maintaining consistent security and compliance controls.
+Multi-source applications can combine SharePoint and OneDrive content with information from Microsoft 365 Copilot connectors, creating a unified knowledge base that spans both Microsoft 365 and third-party repositories while maintaining consistent security and compliance controls.
 
 Imagine a consulting firm that specializes in providing tailored solutions for their clients, with a significant portion of their work focused on data stored in SharePoint. The firm is developing a custom engine agent to assist their consultants in preparing for important client meetings. This agent must access and retrieve accurate and up-to-date information from SharePoint. The firm works with two major clients who are direct competitors in the market. Hence, the firm has a critical need to maintain rigorous security and compliance standards to ensure that one client's documents and data are never accessible to the other. The Retrieval API helps the firm manage compliance and safety risks and ensure the relevance and freshness of the data and in turn, simplifies the overall development effort.
 
@@ -57,7 +57,6 @@ Organizations can use these built-in features to avoid expenses and complexities
 The Retrieval API allows you to retrieve data from the following data sources:
 
 - SharePoint
-- SharePoint Embedded (Preview)
 - OneDrive
 - Copilot connectors
 
@@ -67,11 +66,9 @@ The API supports natural language queries and uses the Microsoft 365 Copilot sta
 
 The Retrieval API is available at no extra cost to users with a Microsoft 365 Copilot add-on license. By accessing or using the Microsoft 365 Copilot Retrieval API, you're agreeing to the [Microsoft 365 Copilot APIs Terms of Use (preview)](/legal/m365-copilot-apis/terms-of-use?context=/microsoft-365-copilot/extensibility/context).
 
-For users without a Microsoft 365 Copilot add-on license, the Retrieval API is available via Pay-as-you-go consumption (Preview) for tenant-level data sources such as SharePoint, SharePoint Embedded (Preview), and Copilot Connectors, while user-level data sources such as OneDrive are not supported. Retrieval API Pay-as-you-go consumption is currently a Public Preview feature. By accessing or using the Microsoft 365 Copilot Retrieval API Pay-as-you-go feature (Public Preview), you're agreeing to the [Microsoft 365 Copilot Retrieval API Pay-as-you-go Terms of Use (preview)](paygo-retrieval-terms.md).
+For users without a Microsoft 365 Copilot add-on license, the Retrieval API is available via Pay-as-you-go consumption (Preview) for tenant-level data sources such as SharePoint and Copilot Connectors, while user-level data sources such as OneDrive are not supported. Retrieval API Pay-as-you-go consumption is currently a Public Preview feature. By accessing or using the Microsoft 365 Copilot Retrieval API Pay-as-you-go feature (Public Preview), you're agreeing to the [Microsoft 365 Copilot Retrieval API Pay-as-you-go Terms of Use (preview)](paygo-retrieval-terms.md).
 
- Non-Copilot licensed users who have Pay-as-you-go enabled for Retrieval API will be able to leverage the SharePoint tool in Microsoft Foundry, via Pay-as-you-go consumption.
-
-SharePoint Embedded (Preview) data source in Retrieval API is currently available in Public Preview, such that users with a Microsoft 365 Copilot add-on license can access it at no extra cost, and users without a Microsoft 365 Copilot add-on license can access it via Pay-as-you-go consumption. In an upcoming feature release, the SharePoint Embedded (Preview) data source will become a Pay-as-you-go data source for all users, including those with a Microsoft 365 Copilot add-on license, and its usage will be billed via Pay-as-you-go consumption.
+Non-Copilot licensed users who have Pay-as-you-go enabled for Retrieval API will be able to leverage the SharePoint tool in Microsoft Foundry, via Pay-as-you-go consumption.
 
 For more information on how to enable and disable Pay-as-you-go consumption of the Retrieval API, as well as pricing, see [Retrieval API Pay-as-you-go overview](paygo-retrieval.md).
 

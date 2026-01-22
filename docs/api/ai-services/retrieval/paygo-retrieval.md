@@ -12,13 +12,9 @@ ms.localizationpriority: medium
 
 ### Introduction
 
-Microsoft 365 Copilot Retrieval API Pay-as-you-go for non-Copilot licensed users offers access to the Retrieval API for tenant-level data sources such as SharePoint, SharePoint Embedded (Preview) and Copilot Connectors. See details under the SharePoint Embedded billing changes below. User-level data sources such as OneDrive are not available for non-Copilot licensed users via Pay-as-you-go consumption of the Retrieval API.
+Microsoft 365 Copilot Retrieval API Pay-as-you-go for non-Copilot licensed users offers access to the Retrieval API for tenant-level data sources such as SharePoint and Copilot Connectors. User-level data sources such as OneDrive are not available for non-Copilot licensed users via Pay-as-you-go consumption of the Retrieval API.
 
 Additionally, non-Copilot licensed users who have Pay-as-you-go enabled for Retrieval API will be able to leverage the SharePoint tool in Microsoft Foundry, via Pay-as-you-go consumption.
-
-#### Billing changes for SharePoint Embedded
-
-In the future, both Copilot-licensed users and non-Copilot licensed users will be charged for access to SharePoint Embedded data source from Retrieval API. Additionally, as part of this change, the enablement and disablement process for Pay-as-you-go access to SharePoint Embedded data source via Retrieval API will use the SharePoint Embedded billing setup and will be communicated in advance.
 
 ### Prerequisites
 
@@ -26,7 +22,7 @@ In the future, both Copilot-licensed users and non-Copilot licensed users will b
 - A Microsoft 365 tenancy with M365 admin access
 - At least 1 Microsoft 365 Copilot license in the tenant before enablement and during use of the Pay-as-you-go service
 
-If any of these prerequisite requirements are no longer met after enabling this feature, then Microsoft reserves the right to disable the Pay-as-you-go service for the customer. 
+If any of these prerequisite requirements are no longer met after enabling this feature, then Microsoft reserves the right to disable the Pay-as-you-go service for the customer.
 
 No SLA applies to this Feature Preview.
 
