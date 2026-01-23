@@ -28,7 +28,7 @@ No service-level agreement (SLA) applies to this feature preview.
 
 ## Payment terms
 
-Microsoft Offering uses pay-as-you-go (PAYG) billing through an Azure subscription. Microsoft Offering billing is determined by how many API calls applications in your tenant make to the Retrieval API on behalf of non-Copilot licensed users with pay-as-you-go billing enabled for them. Customer can view this usage as meter events through the Azure subscription it chooses.
+Microsoft Offering uses pay-as-you-go billing through an Azure subscription. Microsoft Offering billing is determined by how many API calls applications in your tenant make to the Retrieval API on behalf of non-Copilot licensed users with pay-as-you-go billing enabled. Customer can view this usage as meter events through the Azure subscription it chooses.
 
 Microsoft Offering Feature Preview pricing is as follows.
 
@@ -40,11 +40,11 @@ Microsoft Offering Feature Preview pricing is as follows.
 
 To enable and disable the pay-as-you-go consumption service, in the Microsoft 365 admin center, go to **Copilot** > **Billing & usage** > **Pay-as-you-go** > **Microsoft 365 Copilot Retrieval API**.
 
-It can take about two hours for enablement to propagate. After the enablement propagates, the first API call might fail. On the second API call and beyond, the calls should succeed. This is because the Billing Policy configuration is updating.
+It can take about two hours for enablement to propagate. After the enablement propagates, the first API call might fail. On the second API call and beyond, the calls should succeed. This issue occurs because the Billing Policy configuration is updating.
 
-After the service is enabled, any app in the customer's tenant that has the required Retrieval API permissions can call the Retrieval API on behalf of a user who has Retrieval API pay-as-you-go consumption enabled for them. This includes single-tenant and multi-tenant apps in the customer's tenant.
+After the service is enabled, any app in the customer's tenant that has the required Retrieval API permissions can call the Retrieval API on behalf of a user who has pay-as-you-go enabled. These apps include single-tenant and multitenant apps in the customer's tenant.
 
-If you disable pay-as-you-go consumption, it can take about two hours for the disablement to take effect. Charges apply if the API is used during the time that the disablement isn't fully propagated. After the disablement propagates, the first API call made might result in a charge, while the system updates the Billing Policy state. After that, the disablement is complete, and no additional charges are incurred. 
+If you disable pay-as-you-go consumption, it can take about two hours for the disablement to take effect. Charges apply if the API is used during the time that the disablement isn't fully propagated. After the disablement propagates, the first API call made might result in a charge, while the system updates the Billing Policy state. After that, the disablement is complete, and no other charges are incurred. 
 
 ## Related content
 
