@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 ms.date: 01/23/2026
 ---
 
+<!-- markdownlint-disable MD024 -->
+
 # Microsoft Work IQ CLI (Public Preview)
 
 Microsoft Work IQ is a command-line interface (CLI) and Model Context Protocol (MCP) server that connects AI assistants to your Microsoft 365 Copilot data. Work IQ enables you to query your emails, meetings, documents, Teams messages, workplace insights, people-related information, and more by using natural language.
@@ -173,38 +175,17 @@ workiq accept-eula
 
 The following scenarios demonstrate how Work IQ can help you be more productive by connecting your AI assistant to your workplace data.
 
-### Scenario 1: Preparing for a meeting
-
-Before an important meeting, you want to quickly catch up on all related communications and documents. Instead of manually searching through emails and Teams messages, use Work IQ to get a comprehensive summary.
-
-**Using the CLI:**
-
-```bash
-workiq ask -q "What emails and documents were shared about the Q4 budget review meeting?"
-```
-
-**Using GitHub Copilot in VS Code:**
-
-Ask your AI assistant: "What context do I need for my upcoming Q4 budget review meeting? Check my emails and Teams messages."
-
-Work IQ searches across your Microsoft 365 data and provides a summary of:
-
-- Recent emails about the budget review
-- Documents shared by attendees
-- Related Teams discussions
-- Key decisions or action items mentioned
-
-### Scenario 2: Finding project context while coding
+### Scenario 1: Finding project context while coding
 
 When you implement a feature that was discussed in meetings or emails, Work IQ helps your AI assistant understand the business context behind the code you're writing.
 
-**Using the CLI:**
+#### Using the CLI
 
 ```bash
 workiq ask -q "What requirements did Sarah share about the customer portal authentication feature?"
 ```
 
-**Using GitHub Copilot in VS Code:**
+#### Using GitHub Copilot in VS Code
 
 While writing code, ask: "What authentication requirements did my team discuss for the customer portal? Check my meetings and emails."
 
@@ -217,11 +198,27 @@ Your AI assistant retrieves:
 
 This context helps your AI assistant provide more relevant code suggestions aligned with your team's decisions.
 
-### Scenario 3: Daily standup preparation
+### Scenario 2: Start feature implementation based on specification documents
 
-Prepare for your daily standup by quickly summarizing what happened yesterday and what's planned for today.
+You start work on a new feature based on a specification document stored in SharePoint. Work IQ summarizes the key features and requirements, and enables your AI coding assistant to create baseline implementations.
 
-**Using the CLI:**
+#### Using the CLI
+
+```bash
+workiq ask -q "Summarize the key requirements and features outlined in the specification document for the user portal testing sandbox."
+```
+
+#### Using GitHub Copilot in VS Code
+
+Ask your AI assistant: "Create a new ASP.NET Core project based on the specification document for the user portal testing sandbox."
+
+Work IQ searches across your Microsoft 365 data and provides a summary of the key requirements and features. With GitHub Copilot, a new project is created with implementations based on the spec.
+
+### Scenario 3: Analyze client feedback to make changes to code
+
+During a Microsoft Teams meeting with the client, several issues were raised by the client's IT administrator that should be fixed. Work IQ can organize and summarize the feedback from the meeting notes and enable your AI coding assistant to recommend fixes.
+
+#### Using the CLI
 
 ```bash
 workiq ask
@@ -230,21 +227,15 @@ workiq ask
 This command starts interactive mode where you can have a conversation:
 
 ```text
-You: What meetings did I have yesterday and what were the key outcomes?
-You: What's on my calendar for today?
-You: Are there any urgent emails I need to respond to?
+You: What were the specific issues raised by Alex in yesterday's meeting with Contoso?
+You: Were any of these issues flagged as blocking the rollout?
 ```
 
-**Using GitHub Copilot in VS Code:**
+#### Using GitHub Copilot in VS Code
 
-Ask your AI assistant: "Help me prepare for standup. What did I work on yesterday based on my meetings and emails, and what's on my calendar today?"
+Ask your AI assistant: "What were the specific issues raised by Alex in yesterday's meeting with Contoso? Identify the most critical issue and suggest a fix."
 
-Work IQ provides:
-
-- Summary of yesterday's meetings with key decisions
-- Today's scheduled meetings and their context
-- Pending emails that might require action
-- Teams messages that need your attention
+Work IQ searches through the Facilitator-generated meeting notes to identify the specific issues raised by the client and if any were flagged as critical or blocking.
 
 ## Security and privacy
 
