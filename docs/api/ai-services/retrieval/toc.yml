@@ -1,12 +1,14 @@
 items:
 - name: Overview
   href: overview.md
+- name: Pay-as-you-go model (preview)
+  items:
+  - name: Overview
+    href: paygo-retrieval.md
+  - name: Pay-as-you-go terms of use (preview)
+    href: /legal/m365-retrieval-paygo-tou/paygo-retrieval-terms?context=/microsoft-365-copilot/extensibility/context
 - name: Retrieve data
   href: copilotroot-retrieval.md
-- name: Pay-as-you-go overview (preview)
-  href: paygo-retrieval.md
-- name: Pay-as-you-go terms of use (preview)
-  href: /legal/m365-retrieval-paygo-tou/paygo-retrieval-terms?context=/microsoft-365-copilot/extensibility/context
 - name: Complex types
   items:
   - name: Connection item
