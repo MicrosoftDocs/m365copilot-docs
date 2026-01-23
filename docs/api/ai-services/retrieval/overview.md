@@ -4,7 +4,7 @@ description: "Use the Microsoft 365 Copilot Retrieval API to ground your AI solu
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
-ms.date: 10/24/2025
+ms.date: 01/23/2026
 ms.topic: overview
 ---
 
@@ -66,11 +66,14 @@ The API supports natural language queries and uses the Microsoft 365 Copilot sta
 
 The Retrieval API is available at no extra cost to users with a Microsoft 365 Copilot add-on license. By accessing or using the Microsoft 365 Copilot Retrieval API, you're agreeing to the [Microsoft 365 Copilot APIs Terms of Use (preview)](/legal/m365-copilot-apis/terms-of-use?context=/microsoft-365-copilot/extensibility/context).
 
-For users without a Microsoft 365 Copilot add-on license, the Retrieval API is available via Pay-as-you-go consumption (Preview) for tenant-level data sources such as SharePoint and Copilot Connectors, while user-level data sources such as OneDrive are not supported. Retrieval API Pay-as-you-go consumption is currently a Public Preview feature. By accessing or using the Microsoft 365 Copilot Retrieval API Pay-as-you-go feature (Public Preview), you're agreeing to the [Microsoft 365 Copilot Retrieval API Pay-as-you-go Terms of Use (preview)](paygo-retrieval-terms.md).
+For users without a Microsoft 365 Copilot add-on license, the Retrieval API is available via pay-as-you-go consumption (preview) for tenant-level data sources such as SharePoint and Copilot connectors. User-level data sources such as OneDrive are not supported. 
 
-Non-Copilot licensed users who have Pay-as-you-go enabled for Retrieval API will be able to leverage the SharePoint tool in Microsoft Foundry, via Pay-as-you-go consumption.
+> [!NOTE]
+> Retrieval API pay-as-you-go consumption is currently a preview feature. When you access or use Microsoft 365 Copilot Retrieval API pay-as-you-go consumption, you agree to the [Microsoft 365 Copilot Retrieval API pay-as-you-go Terms of Use (preview)](/legal/m365-retrieval-paygo-tou/paygo-retrieval-terms).
 
-For more information on how to enable and disable Pay-as-you-go consumption of the Retrieval API, as well as pricing, see [Retrieval API Pay-as-you-go overview](paygo-retrieval.md).
+Non-Copilot licensed users who have pay-as-you-go enabled for the Retrieval API can use the SharePoint tool in Microsoft Foundry via pay-as-you-go consumption.
+
+For more information about how to enable and disable pay-as-you-go consumption of the Retrieval API, as well as pricing, see [Retrieval API pay-as-you-go overview](paygo-retrieval.md).
 
 ## Best practices
 

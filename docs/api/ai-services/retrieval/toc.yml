@@ -5,8 +5,8 @@ items:
   href: copilotroot-retrieval.md
 - name: Pay-as-you-go overview (preview)
   href: paygo-retrieval.md
-- name: Pay-as-you-go Terms of use (preview)
-  href: paygo-retrieval-terms.md
+- name: Pay-as-you-go terms of use (preview)
+  href: /legal/m365-retrieval-paygo-tou/paygo-retrieval-terms?context=/microsoft-365-copilot/extensibility/context
 - name: Complex types
   items:
   - name: Connection item
