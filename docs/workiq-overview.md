@@ -160,7 +160,6 @@ workiq accept-eula
 
 | Option | Description | Default |
 | --- | --- | --- |
-| `-p, --protocol <protocol>` | Protocol to use | `rest` |
 | `-t, --tenant-id <tenant-id>` | The Entra tenant ID to use for authentication | `common` |
 | `--version` | Show version information | |
 | `-?, -h, --help` | Show help and usage information | |
