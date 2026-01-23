@@ -28,7 +28,7 @@ No service-level agreement (SLA) applies to this feature preview.
 
 ## Payment terms
 
-Microsoft Offering uses pay-as-you-go (PAYG) billing through an Azure subscription. Microsoft Offering billing is determined by how many API calls applications in your tenant make to the Retrieval API on behalf of non-Copilot licensed users with pay-as-you-go billing enabled for them. Customer can view this usage as meter events through the Azure subscription it chooses.
+Microsoft Offering uses pay-as-you-go (PAYG) billing through an Azure subscription. Microsoft Offering billing is determined by how many API calls applications in your tenant make to the Retrieval API on behalf of non-Copilot licensed users with pay-as-you-go billing enabled for them. Customers can view this usage as meter events through the Azure subscription they choose.
 
 Microsoft Offering Feature Preview pricing is as follows.
 
