@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 01/16/2026
+ms.date: 01/22/2026
 ms.topic: concept-article
 ---
 
@@ -45,6 +45,24 @@ When sharing links are references as a knowledge source in an agent, the agent d
 ### SharePoint files with null characters in the file name return no results
 
 If a SharePoint file used as a knowledge source contains null characters in the file name, the agent returns no results based on that knowledge source.
+
+### SharePoint knowledge sources can fail in agent responses
+
+Declarative agents grounded in SharePoint knowledge sources might provision successfully but fail at runtime with the following message:
+
+> **“Sorry, I wasn’t able to respond.”**
+
+This issue can occur when the signed-in user doesn’t have a Microsoft 365 Copilot license. SharePoint and OneDrive knowledge sources require an active Copilot license.
+
+Customer Digital Experience (CDX) demo tenant accounts without a Copilot license can create and publish agents, but grounded retrieval fails silently and triggers the generic runtime error. Developers testing SharePoint grounding in non-production tenants should use the **Microsoft 365 Copilot Developer License**, which includes the required Graph and SharePoint access.
+
+If the correct license is assigned but grounding still fails, verify the following:
+
+- The signed-in user can access the SharePoint site URL defined in `items_by_url`.
+- The agent's connection uses **User authentication**. Service principals aren’t supported for SharePoint grounding scenarios.
+- The user has at least **Read** permissions on the target SharePoint site.
+
+Silent grounding failures typically occur when licensing, permissions, or authentication configurations are incomplete.
 
 ### Pasting a link to a file in Microsoft 365 Copilot doesn't work
 
