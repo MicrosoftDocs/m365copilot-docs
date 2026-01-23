@@ -53,7 +53,7 @@ Before you can use Work IQ, ensure you have:
 - Administrative consent for the Work IQ application in your Microsoft Entra tenant
 
 > [!NOTE]
-> To access Microsoft 365 tenant data, the Work IQ CLI and MCP Server need to be consented to permissions that require administrative rights on the tenant. If you're not a tenant administrator, contact them to provide access. For more information about consent, see [User and admin consent overview](/entra/identity/enterprise-apps/user-admin-consent-overview).
+> To access Microsoft 365 tenant data, the Work IQ CLI and MCP Server need to be consented to permissions that require administrative rights on the tenant. If you're not a tenant administrator, contact them to provide access. For more information about consent, see [User and admin consent overview](/entra/identity/enterprise-apps/user-admin-consent-overview#admin-consent).
 
 ## Platform support
 
@@ -269,4 +269,4 @@ Work IQ is a proprietary tool, but the development team welcomes community feedb
 
 - [Model Context Protocol documentation](https://modelcontextprotocol.io/)
 - [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
-- [User and admin consent overview](/entra/identity/enterprise-apps/user-admin-consent-overview)
+- [User and admin consent overview](/entra/identity/enterprise-apps/user-admin-consent-overview#admin-consent)
