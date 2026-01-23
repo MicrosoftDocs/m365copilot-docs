@@ -317,6 +317,10 @@ items:
     href: /legal/m365-copilot-apis/terms-of-use?context=/microsoft-365-copilot/extensibility/context
   - name: API reference
     href: api/toc.yml
+- name: AI-powered development tools
+  items:
+  - name: Work IQ CLI
+    href: workiq-overview.md
 - name: Extend agents at scale with Agent 365 (early access preview)
   href: /microsoft-agent-365/overview?context=/microsoft-365-copilot/extensibility/context
 - name: Publish
