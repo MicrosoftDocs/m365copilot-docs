@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 The Microsoft 365 Copilot Retrieval API is available to users without a Microsoft 365 Copilot add-on license via pay-as-you-go consumption (preview). The pay-as-you-go model offers access to the Retrieval API for tenant-level data sources such as SharePoint and Microsoft 365 Copilot connectors. User-level data sources such as OneDrive aren't available via Retrieval API pay-as-you-go consumption.
 
-Users without Copilot licenses who have pay-as-you-go enabled for the Retrieval API can use the SharePoint tool in Microsoft Foundry via Pay-as-you-go consumption.
+Users without Copilot licenses who have pay-as-you-go enabled for the Retrieval API can use the SharePoint tool in Microsoft Foundry via pay-as-you-go consumption.
 
 ## Prerequisites
 
