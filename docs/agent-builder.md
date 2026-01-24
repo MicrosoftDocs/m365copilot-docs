@@ -73,10 +73,10 @@ You can submit feedback from within Agent Builder to help contribute to product 
 You can submit feedback by using one of the following options:
 
 - The thumbs-up or thumbs-down control on AI-generated responses in your agent test pane.
-- The **Send feedback**, button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
-- The **Send Feedback** option in the menu on the top right, as shown in the following image.
+- The **Send feedback** button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
+- The **Send Feedback** option in the menu on the top right.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-feedback-general.png" alt-text="Send feedback in Agent Builder":::
+:::image type="content" source="assets/images/agent-builder-screenshots/send-feedback.png" alt-text="Send feedback in Agent Builder":::
 
 In your feedback submission, specify that the issue is related to **Agent Builder in Microsoft 365 Copilot**.
 
@@ -86,7 +86,7 @@ For general information, see [Microsoft feedback for your organization](/microso
 
 ## Get support
 
-To get support, select **Send feedback** from within Copilot Studio.
+To get support, select **Send feedback** from within Agent Builder.
 
 In your feedback ticket, provide details about the issue you're facing and include the following pieces of information in the feedback dialog:
 
@@ -97,11 +97,9 @@ In your feedback ticket, provide details about the issue you're facing and inclu
 - Provide the session ID.
 - If the issue is related to the test pane or **Describe** tab, type "/debug" within the chat box and include the contents in your ticket.
 
-You can find and copy these details in the Copilot Studio within the **Get support** section of the **Help** dropdown menu.
+You can find and copy these details within the **Get support** section of the **Help** dropdown menu.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-get-support-1.png" alt-text="Find the support details in the Copilot Studio":::
-
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-get-support-2.png" alt-text="Copy the support details in the Copilot Studio":::
+:::image type="content" source="assets/images/agent-builder-screenshots/get-support.png" alt-text="Find the support details in Agent Builder":::
 
 ## Related content
 

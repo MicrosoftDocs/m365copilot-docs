@@ -34,7 +34,11 @@ The following table highlights the key differences between publishing and sharin
 
 To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After your agent is created, a confirmation message indicates that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-share.png" alt-text="Auto-sharing knowledge sources":::
+:::image type="content" source="assets/images/agent-builder-screenshots/share-agent.png" alt-text="Auto-sharing knowledge sources":::
+
+You can also choose the **More** menu (...) next to the agent in the left pane to share the agent.
+
+:::image type="content" source="assets/images/agent-builder-screenshots/share-agent-2.png" alt-text="Auto-sharing knowledge sources":::
 
 > [!NOTE]
 > Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If sharing options are restricted in your organization, an admin must approve and deploy the agent before it's available to other users in the organization. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
@@ -74,10 +78,10 @@ Microsoft 365 Copilot provides an option to download a ZIP package for manual de
 To deploy an agent manually:
 
 1. In Microsoft 365 Copilot, open the left navigation pane and select **New agent**.
-1. At the top of the central pane, choose **Copilot Studio** and then select **View my agents**.
-:::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-1-view-agents.png" alt-text="Screenshot of the *My agents* option":::
+1. At the top of the central pane, choose **Agent Builder** and then select **View all agents**.
+:::image type="content" source="assets/images/agent-builder-screenshots/view-all-agents.png" alt-text="Screenshot of the *My agents* option":::
 1. Highlight the agent you want to download and choose the ellipses.
-:::image type="content" source="assets/images/my-agents-more-options.png" alt-text="Screenshot of the *More options* ellipses for the highlighted agent.":::
+:::image type="content" source="assets/images/agent-builder-screenshots/my-agents-more-options.png" alt-text="Screenshot of the *More options* ellipses for the highlighted agent.":::
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
 :::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-2-download.png" alt-text="Screenshot of the *Download .zip file* option":::
 1. [Sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
