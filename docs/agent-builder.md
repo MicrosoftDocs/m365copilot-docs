@@ -10,7 +10,7 @@ ms.topic: article
 
 # Agent Builder in Microsoft 365 Copilot
 
-The easiest way to build your own [declarative agents](overview-declarative-agent.md) is to use the Agent Builder feature in Microsoft 365 Copilot. It offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects.
+The easiest way to build your own [declarative agents](overview-declarative-agent.md) is to use the Agent Builder feature in Microsoft 365 Copilot. It offers an immediate, interactive AI development experience that's perfect for quick and straightforward projects.
 
 If you need more advanced capabilities like Actions to integrate external services, we recommend that you use [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext), which provides a comprehensive set of tools and features for more complex requirements.
 
@@ -19,7 +19,7 @@ If you need more advanced capabilities like Actions to integrate external servic
 
 Use Microsoft 365 Copilot to create and customize agents that can be implemented for scenario-specific uses cases, such as:
 
-- An agent that provides writing or presentation coaching that is tailored to organizational standards
+- An agent that provides writing or presentation coaching tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-overview.png" alt-text="Agent Builder initial screen":::
@@ -33,7 +33,7 @@ You can build agents from the following apps and sites:
 - Microsoft Teams Desktop and web client
 
 > [!NOTE]
-> Agent Builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It is not available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that are not listed in this article.
+> Agent Builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It isn't available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that aren't listed in this article.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-new-agent.png" alt-text="Agent Builder entry point in Microsoft 365 Copilot":::
 
@@ -59,12 +59,12 @@ Administrators can control whether Agent Builder is available to users in their 
 
 ## Known limitations
 
-The following are current known limitations:
+The following are known limitations:
 
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
-- [Lockbox](/power-platform/admin/about-lockbox) and [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview) are not currently supported for agents created using Microsoft 365 Copilot.
+- [Lockbox](/power-platform/admin/about-lockbox) and [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview) aren't currently supported for agents created using Microsoft 365 Copilot.
 - Agents created with Microsoft 365 Copilot can't be used in Teams Chat.
-- If a tenant has disabled web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in Microsoft 365 Copilot. However, the **Web content** toggle in the **Knowledge** pane is **not** disabled. This is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
+- If a tenant disabled web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in Microsoft 365 Copilot. However, the **Web content** toggle in the **Knowledge** pane is **not** disabled. This issue is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
 
 ## Submit feedback
 
