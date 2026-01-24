@@ -34,11 +34,11 @@ The following table highlights the key differences between publishing and sharin
 
 To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After your agent is created, a confirmation message indicates that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/share-agent.png" alt-text="Auto-sharing knowledge sources":::
+:::image type="content" source="assets/images/agent-builder-screenshots/share-agent.png" alt-text="Share agents from the All agents list":::
 
 You can also choose the **More** menu (...) next to the agent in the left pane to share the agent.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/share-agent-2.png" alt-text="Auto-sharing knowledge sources":::
+:::image type="content" source="assets/images/agent-builder-screenshots/share-agent-2.png" alt-text="Share agents from the left pane":::
 
 > [!NOTE]
 > Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If sharing options are restricted in your organization, an admin must approve and deploy the agent before it's available to other users in the organization. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
