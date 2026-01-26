@@ -103,6 +103,7 @@ You can find and copy these details within the **Get support** section of the **
 
 ## Related content
 
+- [Build your first agent](https://res.public.onecdn.static.microsoft/s01-prod/pdf/Buid-an-agent-with-Agent-Builder.pdf)
 - [Build agents with Agent Builder in Microsoft 365 Copilot](agent-builder-build-agents.md) 
 - [Share and manage agents built with Microsoft 365 Copilot](agent-builder-share-manage-agents.md)
 - [Regional availability and language support](agent-builder-regional-availability.md)
