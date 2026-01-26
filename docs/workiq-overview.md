@@ -49,7 +49,7 @@ The MCP server mode is powerful because it allows your AI assistant to automatic
 ## Prerequisites
 
 - Node.js installed on your machine
-- A Microsoft 365 subscription with Copilot
+- A Microsoft 365 subscription with a Copilot license
 - Administrative consent for the Work IQ application in your Microsoft Entra tenant
 - [GitHub Copilot CLI](https://github.com/features/copilot/cli/) (Optional)
 
