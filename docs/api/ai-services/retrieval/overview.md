@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Copilot Retrieval API Overview (Preview)
+title: Microsoft 365 Copilot Retrieval API Overview
 description: "Use the Microsoft 365 Copilot Retrieval API to ground your AI solutions with accurate, secure, and contextually relevant data from SharePoint, OneDrive, and Copilot connectors."
 author: lramosvea
 ms.author: lramosvea
