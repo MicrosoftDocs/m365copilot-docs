@@ -29,7 +29,7 @@ Adding web search to your agent allows it to search the web to generate answers.
     ]
     ```
 
-    For more information, see [Web search object](declarative-agent-manifest-1.5.md#web-search-object).
+  For more information, see [Web search object](declarative-agent-manifest-1.6.md#web-search-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
@@ -54,7 +54,7 @@ You can add files in OneDrive or the contents of SharePoint sites as a knowledge
     }
     ```
 
-    For more information, see [OneDrive and SharePoint object](declarative-agent-manifest-1.5.md#onedrive-and-sharepoint-object).
+    For more information, see [OneDrive and SharePoint object](declarative-agent-manifest-1.6.md#onedrive-and-sharepoint-object).
 
     > [!NOTE]
     >
@@ -82,7 +82,7 @@ The declarative agent will have access to OneDrive and SharePoint content to gen
     }
     ```
 
-    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.5.md#microsoft-teams-messages-object).
+    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.6.md#microsoft-teams-messages-object).
 
     > [!NOTE]
     > - The url in the url object must be well formed links to a Teams chat, team, or meeting chat.
@@ -106,7 +106,7 @@ The people knowledge source allows you to scope your agent to answer questions a
     }
     ```
 
-    For more information, see [People object](declarative-agent-manifest-1.5.md#people-object).
+  For more information, see [People object](declarative-agent-manifest-1.6.md#people-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 
@@ -131,7 +131,7 @@ The email knowledge source allows you to scope your agent to use email from the 
     }
     ```
 
-    For more information, see [Email object](declarative-agent-manifest-1.5.md#email-object).
+    For more information, see [Email object](declarative-agent-manifest-1.6.md#email-object).
 
     > [!NOTE]
     >
@@ -161,7 +161,7 @@ Adding a Copilot connector makes the items ingested by that connector available 
     }
     ```
 
-    For more information, see [Copilot connectors object](declarative-agent-manifest-1.5.md#copilot-connectors-object).
+    For more information, see [Copilot connectors object](declarative-agent-manifest-1.6.md#copilot-connectors-object).
 
     > [!NOTE]
     >

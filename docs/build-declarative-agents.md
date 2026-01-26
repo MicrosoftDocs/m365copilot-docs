@@ -1,7 +1,7 @@
 ---
 title: Create declarative agents using Microsoft 365 Agents Toolkit
 description: Learn how to build a declarative agent for Microsoft 365 Copilot using Microsoft 365 Agents Toolkit.
-ms.date: 07/21/2025
+ms.date: 12/17/2025
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -66,10 +66,6 @@ Start by creating a basic declarative agent.
 1. In the new Visual Studio Code window that opens, select **Microsoft 365 Agents Toolkit**, then select **Provision** in the **Lifecycle** pane.
 
     :::image type="content" source="assets/images/build-da/ttk/provision-agent.png" alt-text="A screenshot of the Provision option in the Lifecycle pane of Agents Toolkit":::
-
-> [!NOTE]
-> If you prefer to create an agent based on an existing sample, select **View Samples** in Step 2, rather than **Create a New Agent/App**.
-
 
 ## Test the agent
 

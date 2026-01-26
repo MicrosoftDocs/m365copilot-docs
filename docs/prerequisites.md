@@ -4,7 +4,7 @@ description: Learn the prerequisites for extending Microsoft 365 Copilot with ag
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
-ms.date: 10/20/2025
+ms.date: 11/17/2025
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -48,7 +48,7 @@ You can extend Microsoft 365 Copilot with the intelligence of external services 
 
 - By building agents to customize Copilot.
 - By adding skills with [Teams message extension plugins](overview-message-extension-bot.md) and [Copilot Studio actions](overview-business-applications.md).
-- By extending the knowledge in Copilot with [Copilot connectors](overview-copilot-connector.md).
+- By extending the knowledge in Copilot with [Microsoft 365 Copilot connectors](overview-copilot-connector.md).
 
 To learn more and choose the best extensibility path for your users, see [Copilot extensibility planning guide](planning-guide.md) and [Agents overview](agents-overview.md).
 
@@ -112,10 +112,13 @@ The following table summarizes agent access based on user licensing type.
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
+> [!NOTE]
+> Usage-based billing isn't supported in Microsoft 365 Government Community Cloud High (GCCH) and Government Community Cloud Moderate (GCCM) environments.
+
 | Capability | Copilot Chat (no usage-based billing)* | Copilot Chat (usage-based billing)** | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
-|Copilot Studio lite experience |  :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|Copilot Studio full experience |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
+|Microsoft 365 Copilot |  :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|Copilot Studio |  :white_check_mark: |  :white_check_mark:   |  :white_check_mark:  |
 |[**Declarative agents**](overview-declarative-agent.md)     | |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom actions| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |

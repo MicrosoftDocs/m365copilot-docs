@@ -14,6 +14,8 @@ API plugins enable Microsoft 365 Copilot to interact with REST APIs described by
 
 The following article describes the 2.3 schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
 
+[!INCLUDE [latest-plugin-manifest](includes/latest-plugin-manifest.md)]
+
 ## Changes from previous version
 
 This schema version introduces the following changes from [version 2.2](api-plugin-manifest-2.2.md).

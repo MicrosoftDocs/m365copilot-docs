@@ -6,7 +6,7 @@ ms.author: swapnilsapar
 ms.topic: reference
 ms.date: 10/20/2025
 ms.localizationpriority: medium
-doc_type: conceptualPageType
+doc_type: apiPageType
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -16,6 +16,8 @@ doc_type: conceptualPageType
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Perform hybrid (semantic and lexical) search across OneDrive for work or school content by using natural language queries with contextual understanding. Discover relevant documents and files that you have access to, while respecting the defined access controls within the organization. Try issuing your [first query to the Microsoft 365 Copilot Search API](https://aka.ms/try_copilot_search_API_example_basic). Learn how you can [batch up to 20 requests to the Search API](/graph/json-batching?tabs=http).
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -35,10 +37,10 @@ POST https://graph.microsoft.com/beta/copilot/search
 
 ## Request headers
 
-| Name          | Description                                                                                               |
-|:--------------|:----------------------------------------------------------------------------------------------------------|
-| Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| Content-Type  | application/json. Required.                                                                               |
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| `Content-Type`  | `application/json`. Required.                                                                               |
 
 ## Request body
 

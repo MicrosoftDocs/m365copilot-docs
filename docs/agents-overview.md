@@ -3,9 +3,9 @@ title: Agents for Microsoft 365 Copilot
 description: Choose the type of Microsoft 365 Copilot agent that works best for your scenario.
 author: jessicaaawu
 ms.author: wujessica
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 01/07/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -61,7 +61,7 @@ To configure a declarative agent, you provide:
 Declarative agents have the following characteristics:
 
 - **Hosting:** Use Copilot's orchestrator and foundation model. No additional hosting is required.
-- **Tooling:** Build agents using low-code tools such as the lite experience in [Copilot Studio](copilot-studio-lite.md) or pro-code tools like Visual Studio or Visual Studio Code and  [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
+- **Tooling:** Build agents using low-code tools such as [Microsoft 365 Copilot](agent-builder.md) or pro-code tools like Visual Studio or Visual Studio Code and  [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 - **Channels:** Run in Microsoft 365 Copilot and Microsoft 365 apps like Teams, Word, Excel, and Outlook.
 
 ## Custom engine agents
@@ -86,6 +86,8 @@ Custom engine agents have the following characteristics:
 ## Choose what type of agent to build
 
 This section describes the features and scenarios for declarative and custom engine agents to help you decide which type of agent to build.
+
+:::image type="content" source="assets/images/custom-engine-agents/copilot-agent-architecture.png" alt-text="Diagram showing custom engine agents and declarative agents with solution options and integration points." lightbox="assets/images/custom-engine-agents/copilot-agent-architecture.png":::
 
 The following table summarizes the key differences between declarative agents and custom engine agents to help you choose the right option for your use case.
 
@@ -127,6 +129,7 @@ Consider the cost implications of your agent solution design, from both the user
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
+- [Declarative agent architecture](declarative-agent-architecture.md)
 - [Custom engine agents overview](overview-custom-engine-agent.md)
+- [Custom engine agent architecture](custom-engine-agent-architecture.md)
 - [Cost considerations](cost-considerations.md)
-- [Samples collection](Samples.md)

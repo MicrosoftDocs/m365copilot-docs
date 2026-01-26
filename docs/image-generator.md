@@ -5,7 +5,7 @@ author: kmkoenen
 ms.author: v-koenenkaty
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 11/12/2025
 ---
 
 # Add the image generator capability to your agent
@@ -57,16 +57,16 @@ If you're using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
 
 ### Copilot Studio
 
-If you're the using [Copilot Studio](copilot-studio-lite.md) lite experience to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Image generator**.
+If you're the using [Microsoft 365 Copilot](agent-builder.md) to create your agent, on the **Configure** tab, under **Capabilities**, choose the toggle next to **Create images**.
 
-:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section in Copilot Studio":::
+:::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section in Agent Builder in Microsoft 365 Copilot.":::
 
 > [!NOTE]
-> The image generator doesn't currently work in the test pane within Copilot Studio.
+> The image generator doesn't currently work in the test pane in Microsoft 365 Copilot.
 
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.5.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.6.md)
 - [Add the code interpreter capability to your agent](code-interpreter.md)
 - [Add knowledge sources to your declarative agent](knowledge-sources.md)

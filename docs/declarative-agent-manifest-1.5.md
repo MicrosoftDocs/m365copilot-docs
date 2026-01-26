@@ -14,6 +14,8 @@ ms.topic: reference
 
 This article describes the 1.5 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Microsoft 365 app manifest references declarative agent manifests inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
+[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
+
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification focuses on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
 ## Changes from previous version
@@ -463,11 +465,11 @@ Indicates that the declarative agent can search through email messages in the ma
 
 The email object contains the following properties.
 
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `name`   | String | Required. Must be set to `Email`. |
-| `shared_mailbox` | String | Optional. The SMTP address of a shared mailbox. |
-| `folders` | String | Optional. An array of [folder_id](#folders-object) objects. |
+| Property         | Type                                | Description |
+| ---------------- | ----------------------------------- | ----------- |
+| `name`           | String                              | Required. Must be set to `Email`. |
+| `shared_mailbox` | String                              | Optional. The SMTP address of a shared mailbox. |
+| `folders`        | Array of [Folders](#folders-object) | Optional. If present, only email in the specified folders are available to the agent. |
 
 ##### Folders object
 
@@ -572,7 +574,7 @@ The action object contains the following properties.
 
 ##### [JSON](#tab/json)
 
-``` json
+```json
 {
   "actions": [
     {

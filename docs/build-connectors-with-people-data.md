@@ -4,7 +4,7 @@ description: Learn how to build your first Microsoft 365 Copilot connector for p
 author: wictorwilen
 ms.author: wictorwilen
 ms.localizationpriority: medium
-ms.date: 07/23/2025
+ms.date: 01/08/2026
 ms.topic: how-to
 ---
 
@@ -16,42 +16,92 @@ ms.topic: how-to
 
 > [!IMPORTANT]
 > Microsoft 365 Copilot connectors for people data built using the Microsoft Graph API are currently in public preview with limited functionality. For more information, see [Notes and limitations](#notes-and-limitations).
+>
+> The preview for people connectors has been updated with these requirements:
+>
+> - Requires configuration of the `contentCategory` property on the `externalConnection` entity.
+> - Switch from using attribute named mapping for properties to the use of people domain specific labels.
+> - A user can now be identified either via `userPrincipalName` or `externalDirectoryObjectId`.
 
-You build Microsoft 365 Copilot connectors for people data in the same way as other [Copilot connectors](overview-copilot-connector.md) using the Microsoft Graph external connections APIs. To ensure Microsoft 365 recognizes your connection as containing people data, you must follow certain [schema requirements](#connection-schema-requirements) and [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
+You build Microsoft 365 Copilot connectors for people data in the same way as other [Copilot connectors](overview-copilot-connector.md) using the Microsoft Graph external connections APIs. To ensure Microsoft 365 recognizes your connection as containing people data, you must follow the [connection configuration](#connection-configuration-requirements) and [schema](#connection-schema-requirements) requirements, as well as [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
 
 > [!NOTE]
-> For an example connector that provides people data, see [Microsoft 365 Copilot connector for people data sample](https://github.com/microsoftgraph/msgraph-people-connector-sample-dotnet).
+> For an example connector that provides people data, see [Microsoft 365 Copilot connector for people data sample](https://aka.ms/peopleconnectors/sample).
+
+## Connection configuration requirements
+
+Copilot connectors that contains people data must set the [`externalConnections`](/graph/api/resources/externalconnectors-externalconnection) `contentCategory` property to have the value `people`.
 
 ## Connection schema requirements
 
-Microsoft 365 supports the following properties for enriching people data.
+Microsoft 365 Copilot connectors for people data support enrichment for the following Microsoft 365 user profile entities.
 
-| Property | Description |
-| -------- | ----------- |
-| [`accounts`](/graph/api/resources/useraccountinformation) | Max 1. Indicates the Microsoft Entra user the item extends. |
-| [`addresses`](/graph/api/resources/itemaddress) | Max 3, one each of `Home`, `Work`, and `Other`. Adds addresses to the user. |
-| [`awards`](/graph/api/resources/personaward) | Describes awards the user earned. |
-| [`certifications`](/graph/api/resources/personcertification) | Describes certifications the user earned. |
-| [`emails`](/graph/api/resources/itememail) | Max 3. Adds email addresses to the user. |
-| [`names`](/graph/api/resources/personname) | Max 1. Adds names to the user. |
-| [`notes`](/graph/api/resources/personannotation) | Max 1. Adds notes to the user. |
-| [`phones`](/graph/api/resources/itemphone) | Adds phone numbers to the user. |
-| [`positions`](/graph/api/resources/workposition) | Max 1. Adds work positions to the user. |
-| [`projects`](/graph/api/resources/projectparticipation) | Describes projects the user participated in. |
-| [`skills`](/graph/api/resources/skillproficiency) | Describes skills the user is proficient in. |
-| [`webAccounts`](/graph/api/resources/webaccount) | Describes external web accounts the user has. |
-| [`webSites`](/graph/api/resources/personwebsite) | Max 1. Describes a website for the user. |
+- The schema must have one property with the `personAccount` label to be able to map the `externalItem` to a person.
+- Properties without a label are considered *custom properties*.
 
-To ensure Microsoft 365 recognizes your connection as containing people data, your schema must include the `accounts` property, with the `userPrincipalName` set to the user principal name and `externalDirectoryObjectId` set to the object ID of the organization user.
+| Property label          | Property type      | Profile entity                                                          | Description                                                                 |
+|-------------------------|--------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| `personAccount`         | `string`           | [`userAccountInformation`](/graph/api/resources/useraccountinformation) | Indicates the Microsoft Entra ID user the item targets.                     |
+| `personName`            | `string`           | [`personName`](/graph/api/resources/personname)                         | Adds names to the user.                                                     |
+| `personCurrentPosition` | `string`           | [`workPosition`](/graph/api/resources/workposition)                     | Describes the current position of the person.                               |
+| `personAddresses`       | `stringCollection` | [`itemAddress`](/graph/api/resources/itemaddress)                       | Max 3, one each of `Home`, `Work`, and `Other`. Adds addresses to the user. |
+| `personEmails`          | `stringCollection` | [`itemEmail`](/graph/api/resources/itememail)                           | Max 3. Adds email addresses to the user.                                    |
+| `personPhones`          | `stringCollection` | [`itemPhone`](/graph/api/resources/itemphone)                           | Adds phone numbers to the user.                                             |
+| `personAwards`          | `stringCollection` | [`personAward`](/graph/api/resources/personaward)                       | Describes awards the user earned.                                           |
+| `personCertifications`  | `stringCollection` | [`personCertification`](/graph/api/resources/personcertification)       | Describes certifications the user earned.                                   |
+| `personProjects`        | `stringCollection` | [`projectParticipation`](/graph/api/resources/projectparticipation)     | Describes projects the user participated in.                                |
+| `personSkills`          | `stringCollection` | [`skillProficiency`](/graph/api/resources/skillproficiency)             | Describes skills the user is proficient in.                                 |
+| `personWebAccounts`     | `stringCollection` | [`webAccount`](/graph/api/resources/webaccount)                         | Describes external web accounts the user has.                               |
+| `personWebSite`         | `string`           | [`webSite`](/graph/api/resources/personwebsite)                         | Describes a website for the user.                                           |
+| `personAnniversaries`   | `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary)           | Adds one or more anniversaries tot he person                                |
+| `personNote`            | `string`           | [`personAnnotation`](/graph/api/resources/personannotation)             | Adds a note to the user.                                                    |
+
+Example schema:
 
 ```json
 {
-  "accounts": [
+  "baseType": "microsoft.graph.externalItem",
+  "properties": [
     {
-      "userPrincipalName": "adelev@contoso.com",
-      "externalDirectoryObjectId": "069f0701-ed79-4ea1-a3c6-e8dc165e2a2a"
+      "name": "accountInformation",
+      "type": "string",
+      "labels": ["personAccount"]
+    },
+    {
+      "name": "position",
+      "type": "string",
+      "labels": ["personCurrentPosition"]
+    },
+    {
+      "name": "skills",
+      "type": "stringCollection",
+      "labels": ["personSkills"]
+    },
+    {
+      "name": "requisitionId",
+      "type": "string"
     }
   ]
+}
+```
+
+## Serialization of JSON entities
+
+Each property, with a label, are either of type `string` or `stringCollection`, and represents a JSON serialized string representation of the Microsoft 365 profile entity being enriched.
+
+```json
+{
+  ...
+  "properties:" {
+    "accountInformation": "{\"userPrincipalName\": \"adelev@contoso.com\"}",
+    "position": "{\"detail\":{\"jobTitle\":\"ProductManager\"}}",
+    "skills@odata.type": "Collection(String)",
+    "skills": [
+      "{\"displayName\":\"Product requirements\",}",
+      "{\"displayName\":\"Customer research\"}"
+    ],
+    "requisitionId": "REQ-12345678
+  }
 }
 ```
 
@@ -70,15 +120,13 @@ After registration, you must add the connection to the list of prioritized profi
 
 - People data provided via a Copilot connector is visible to all users in the organization. Connector data is stored in the user's Microsoft 365 profile. For more information, see [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors#compliance-privacy-and-data-usage).
 - You must set the access control list (ACL) on items ingested by the connector to grant access to everyone.
-- The schema requires that `accounts` property is present to identify the user to be enriched.
-- Microsoft Graph discards people data without matching `userPrincipalName` and `externalDirectoryObjectId` in the `accounts` entity collection.
 - You must provide valid string encoded JSON objects for profile entities. Microsoft Graph ignores invalid values.
-- You must always provide profile entities as an array of entities.
-- Microsoft Graph treats any other properties, besides the [reserved profile properties](#connection-schema-requirements) in the connection schema, as a custom property.
-- Custom properties show up in profile cards as notes during the preview, but Microsoft will remove them before or at general availability.
-- Microsoft 365 might take up to 48 hours after you ingest data about a person before it becomes available in search, people experiences, or Copilot.
+- Non matched user accounts (`userPrincipalName` or `externalDirectoryObjectId`) will be ignored.
+- Microsoft Graph treats any property without a label as a custom property.
+- Custom properties might show up in profile cards as notes during the preview, but Microsoft will remove them before or at general availability.
+- Microsoft 365 might take up to 6 hours after the connection is created before it becomes available in search, people experiences, or Copilot.
 - Connections with people data don't support [staged connections](/microsoftsearch/staged-rollout-for-graph-connectors).
-- Indexed items in connections with people data only appear in people search.
+- The following labels are not yet supported `personManager`, `personAssistants`, `personColleagues`, `personAlternateContacts` and `personEmergencyContacts`.
 
 ## Related content
 
