@@ -34,7 +34,11 @@ The following table highlights the key differences between publishing and sharin
 
 To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After your agent is created, a confirmation message indicates that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-share.png" alt-text="Auto-sharing knowledge sources":::
+:::image type="content" source="assets/images/agent-builder-screenshots/share-agent.png" alt-text="Share agents from the All agents list":::
+
+You can also choose the **More** menu (...) next to the agent in the left pane to share the agent.
+
+:::image type="content" source="assets/images/agent-builder-screenshots/share-agent-2.png" alt-text="Share agents from the left pane":::
 
 > [!NOTE]
 > Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If sharing options are restricted in your organization, an admin must approve and deploy the agent before it's available to other users in the organization. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
@@ -47,10 +51,10 @@ The following table describes the available sharing options.
 | Specific users in your organization | Specific users or groups can use the sharing link to access and interact with the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
 | Only you | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
 
-When users open the link to an agent you have shared with them, the agent opens in a browser window and is ready to use.
+When users open the link to an agent you shared with them, the agent opens in a browser window and is ready to use.
 
 > [!NOTE]
-> Agent capabilities differ based on a user's license. Users can only add agents that have been shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in that agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-and-licensing-models).
+> Agent capabilities differ based on a user's license. Users can only add agents that are shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in that agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-and-licensing-models).
 
 ### Governance and admin controls
 
@@ -74,10 +78,10 @@ Microsoft 365 Copilot provides an option to download a ZIP package for manual de
 To deploy an agent manually:
 
 1. In Microsoft 365 Copilot, open the left navigation pane and select **New agent**.
-1. At the top of the central pane, choose **Copilot Studio** and then select **View my agents**.
-:::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-1-view-agents.png" alt-text="Screenshot of the *My agents* option":::
+1. At the top of the central pane, choose **Agent Builder** and then select **View all agents**.
+:::image type="content" source="assets/images/agent-builder-screenshots/view-all-agents.png" alt-text="Screenshot of the *My agents* option":::
 1. Highlight the agent you want to download and choose the ellipses.
-:::image type="content" source="assets/images/my-agents-more-options.png" alt-text="Screenshot of the *More options* ellipses for the highlighted agent.":::
+:::image type="content" source="assets/images/agent-builder-screenshots/my-agents-more-options.png" alt-text="Screenshot of the *More options* ellipses for the highlighted agent.":::
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
 :::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-2-download.png" alt-text="Screenshot of the *Download .zip file* option":::
 1. [Sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
@@ -107,11 +111,11 @@ You can access the agent management features in Microsoft 365 Copilot:
     :::image type="content" source="assets/images/agent-builder-screenshots/manage-agent-more-options.png" alt-text="Screenshot of agent management context menu":::
 
 > [!NOTE]
-> Only the agents you've created show in the **My agents** list. Shared agents from other users aren't listed.
+> Only the agents you created show in the **My agents** list. Shared agents from other users aren't listed.
 
 ### Edit an agent
 
-You can edit your agents if you discover that changes are required after you've shared it.
+You can edit your agents if you discover that changes are required after you share it.
 
 **To edit an agent:**
 
@@ -120,17 +124,17 @@ You can edit your agents if you discover that changes are required after you've 
 
 From there, you can use either the **Describe** tab to enter the changes you'd like to make using natural language, or use the **Configure** tab for more fine-tuned control in editing your agent's functionality and knowledge sources.
 
-Changes made to agents are saved automatically. However, your changes won't be visible to users until you make them available. To make changes to an existing agent available, choose **Update** in the top right corner. Your changes might take several minutes to become available for end users.
+Changes made to agents are saved automatically. However, your changes aren't visible to users until you make them available. To make changes to an existing agent available, choose **Update** in the top right corner. Your changes might take several minutes to become available for end users.
 
 > [!NOTE]
 > If you update a previously shared agent that has a SharePoint file and folder knowledge source, reshare it with the same users. Doing so automatically shares the files and folders with the users again to ensure a consistent agent experience.
 
 ### Delete your agent
 
-Agents can be deleted, even after they've been shared. However, only the user who created an agent can delete it.
+Agents can be deleted, even after they're shared. However, only the user who created an agent can delete it.
 
 >[!IMPORTANT]
-> Deleting an agent is permanent and can't be reversed. Once you delete an agent, you won't be able to use it and it won't be available the users you shared it with.
+> Deleting an agent is permanent and can't be reversed. After you delete an agent, you can't use it and it's no longer available the users you shared it with.
 
 **To delete an agent:**
 
@@ -148,13 +152,13 @@ When sharing an agent and its knowledge sources, you might encounter the errors 
 
 | Issue        | Description |
 | -------------- | ----------- |
-| Something went wrong | An internal service error has occurred. Contact support if this error continues to occur. |
+| Something went wrong | An internal service error occurred. Contact support if this error continues to occur. |
 | Couldn't share       | The user has insufficient privileges to update the sharing permissions on certain files. The error lists the files that were unable to be shared. The agent owner should go into SharePoint to try updating these permissions manually. For more information, see: <ul><li>[Share a document](https://support.microsoft.com/office/share-a-document-using-sharepoint-or-onedrive-807de6cf-1ece-41b9-a2b3-250d9a48f1e8) to learn how to share files.</li><li>[Sharing errors in SharePoint and OneDrive](/sharepoint/sharepoint-onedrive-error-message) for an error code reference.</li></ul> |
-| Agent sharing failed, knowledge access not granted | If agent sharing fails, the underlying knowledge sources might not be shared with the intended users or groups. As a result, users without access to those files won’t receive generated responses based on them. To resolve this, ensure all individuals and groups you're sharing your agent with exist in your organization, then reshare the knowledge sources by selecting them in the sharing settings to grant user access to them. |
-| Can no longer update agent | This occurs when your agent’s current sharing option is no longer compliant with new admin policies. Agent owners must change the sharing setting to a compliant option before updating their agent further. A banner guides you to make this change. |
-| We are unable to create this agent due to an error. | Occurs when the system is having trouble publishing an agent. Please try again in a few minutes. |
-| This agent includes at least one file with an unsupported sensitivity label. Please check your uploaded files and remove them. | Occurs when you upload a file with a sensitivity label that isn't supported. Check the shield icon next to your uploaded files and remove the ones that have a red error icon. For more information, see [Unsupported sensitivity label scenarios](/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge#unsupported-sensitivity-label-scenarios).
-|Your agent can't be updated because it may encourage harmful actions. | Occurs when the system detects harmful content. Review your agent's name, description, and instructions and remove any harmful content, and try to update your agent again. For more information. see [Responsible AI validation](rai-validation.md). |
+| Agent sharing failed, knowledge access not granted | If agent sharing fails, the underlying knowledge sources might not be shared with the intended users or groups. As a result, users without access to those files don’t receive generated responses based on them. To resolve this issue, ensure all individuals and groups you're sharing your agent with exist in your organization, then reshare the knowledge sources by selecting them in the sharing settings to grant user access to them. |
+| Can no longer update agent | This error occurs when your agent’s current sharing option is no longer compliant with new admin policies. Agent owners must change the sharing setting to a compliant option before updating their agent further. A banner guides you to make this change. |
+| We're unable to create this agent due to an error. | Occurs when the system is having trouble publishing an agent. Try again in a few minutes. |
+| This agent includes at least one file with an unsupported sensitivity label. Check your uploaded files and remove them. | Occurs when you upload a file with a sensitivity label that isn't supported. Check the shield icon next to your uploaded files and remove the ones that have a red error icon. For more information, see [Unsupported sensitivity label scenarios](/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge#unsupported-sensitivity-label-scenarios).
+|Your agent can't be updated because it might encourage harmful actions. | Occurs when the system detects harmful content. Review your agent's name, description, and instructions and remove any harmful content, and try to update your agent again. For more information. see [Responsible AI validation](rai-validation.md). |
 
 ## Related content
 

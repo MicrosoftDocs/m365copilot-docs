@@ -177,7 +177,9 @@ items:
       - name: Share and manage agents
         href: agent-builder-share-manage-agents.md
       - name: Availability and language support
-        href: agent-builder-regional-availability.md
+        href: copilot-studio-lite-availability.md
+      - name: Copy your agent to Copilot Studio
+        href: copy-agent-to-copilot-studio.md
       - name: Use Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
@@ -317,6 +319,10 @@ items:
     href: /legal/m365-copilot-apis/terms-of-use?context=/microsoft-365-copilot/extensibility/context
   - name: API reference
     href: api/toc.yml
+- name: AI-powered development tools
+  items:
+  - name: Work IQ CLI
+    href: workiq-overview.md
 - name: Extend agents at scale with Agent 365 (early access preview)
   href: /microsoft-agent-365/overview?context=/microsoft-365-copilot/extensibility/context
 - name: Publish

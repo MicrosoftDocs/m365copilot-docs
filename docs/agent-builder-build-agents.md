@@ -39,7 +39,7 @@ In addition to using the **Describe** tab, you can also directly configure the a
 
 The **Configure** tab provides you with the ability to view and edit information about the agent, giving you more control and more precision. The **Describe** and **Configure** tabs are in sync. The fields in the **Configure** tab update to reflect the latest changes from the **Describe** tab. You can switch between the tabs to use the experience that is most comfortable to you to author the agent.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-configure.png" alt-text="The Configure tab lets users manually edit the agent":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-configure.png" alt-text="The Configure tab lets users manually edit the agent":::
 
 The following table describes the fields that make up the agent.
 
