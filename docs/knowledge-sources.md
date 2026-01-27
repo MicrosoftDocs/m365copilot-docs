@@ -4,8 +4,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.localizationpriority: medium
-ms.date: 01/16/2026
-ms.date: 01/21/2026
+ms.date: 01/27/2026
 ms.topic: article
 ---
 
@@ -158,7 +157,7 @@ Obtain your organization ID from  [Power Apps maker portal](https://make.preview
 
 To create or fetch a `skill` value, you need a bearer token to authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
-To obtain a bearer token, create an App Registration in Azure Portal, then run the following curl request. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+To obtain a bearer token, create an [**App Registration**](https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in Azure Portal, then run the following curl request. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ```Shell
 curl -X POST https://login.microsoftonline.com/<TENANT_ID>/oauth2/v2.0/token \ 
@@ -205,7 +204,7 @@ If a `skill` value already exists, the response contains a list of existing `DVT
 
 If a `skill` value already exists, use that value in your agent manifest file without creating a new one. If the `skill` value doesn't exist, the response will contain an empty array as given in the following example. In that case, proceed to the next step to create a new `skill` value.
 
-```json
+```Shell
 {
   "@odata.context":"https://YourOrgId.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
   "value":[]
@@ -214,7 +213,7 @@ If a `skill` value already exists, use that value in your agent manifest file wi
 
 ##### Create a DVTableSearch Skill
 
-If a `skill` value doesn't already exist, create it by using the request as given in the following example. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+Use the request as given in the following example to create a DVTableSearch skill. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ###### Request
 
