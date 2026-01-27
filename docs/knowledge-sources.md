@@ -157,14 +157,14 @@ Obtain your organization ID from  [Power Apps maker portal](https://make.preview
 
 To create or fetch a `skill` value, you need a bearer token to authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
-To obtain a bearer token, create an [**App Registration**](https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in Azure Portal, then run the following curl request. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+To obtain a bearer token, create an [**New registration**](https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in Azure Portal, then run the following curl request. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ```Shell
-curl -X POST https://login.microsoftonline.com/<TENANT_ID>/oauth2/v2.0/token \ 
+curl -X POST https://login.microsoftonline.com/<tenant_ID>/oauth2/v2.0/token \ 
   -H "Content-Type: application/x-www-form-urlencoded" \ 
-  -d "client_id=<CLIENT_ID>" \ 
+  -d "client_id=<client_ID>" \ 
   -d "scope=https://YourOrgID.crm.dynamics.com/.default" \ 
-  -d "client_secret=<CLIENT_SECRET>" \ 
+  -d "client_secret=<client_secret>" \ 
   -d "grant_type=client_credentials"
 ```
 
