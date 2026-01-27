@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 09/05/2025
+ms.date: 01/13/2026
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
@@ -55,6 +55,11 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 1. **Responding**: The orchestrator compiles all the information gathered during the reasoning process and submits it to the LLM to create a final response. After ensuring the response complies with Responsible AI guidelines, it sends the response back to the orchestrator, which logs it in the context store and delivers it to the user via the Copilot UI.
 
 1. **Natural language output**: Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
+
+> [!IMPORTANT]
+> Declarative agents might stop responding when three or more **different API actions** are triggered within a single user turn. In these cases, the third API call might complete successfully on the backend, but the orchestrator doesn't return a response to the user.
+>
+> To minimize this behavior, split the workflow across multiple user turns or reduce the number of different API actions you invoke in a single turn. This approach helps ensure that all API responses are processed reliably.
 
 ## How Copilot's orchestrator matches actions to user queries
 

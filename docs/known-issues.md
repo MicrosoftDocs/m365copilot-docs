@@ -4,13 +4,13 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 01/09/2026
+ms.date: 01/22/2026
 ms.topic: concept-article
 ---
 
 # Known issues
 
-This article provides information about known issues related to Microsoft 365 Copilot extensibility and any potential workarounds, if available.
+This article provides information about known issues related to Microsoft 365 Copilot extensibility and any potential workarounds.
 
 ## Declarative agents
 
@@ -34,7 +34,7 @@ This issue applies to links from any content source, including SharePoint, Micro
 
 Prompts to get a list of items based on custom metadata aren't supported. For example, the prompt "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is based on custom metadata, doesn't work because the metadata isn't mapped to connection schema label properties.
 
-**Workaround:** This issue doesn't currently have a workaround. You can get items based on matches with the title or description of the connector item.
+**Workaround:** This issue currently doesn't have a workaround. You can get items based on matches with the title or description of the connector item.
 
 ### Sharing links to SharePoint pages don't work as knowledge sources
 
@@ -45,6 +45,24 @@ When sharing links are references as a knowledge source in an agent, the agent d
 ### SharePoint files with null characters in the file name return no results
 
 If a SharePoint file used as a knowledge source contains null characters in the file name, the agent returns no results based on that knowledge source.
+
+### SharePoint knowledge sources can fail in agent responses
+
+Declarative agents grounded in SharePoint knowledge sources might provision successfully but fail at runtime with the following message:
+
+> **“Sorry, I wasn’t able to respond.”**
+
+This issue can occur when the signed-in user doesn’t have a Microsoft 365 Copilot license. SharePoint and OneDrive knowledge sources require an active Copilot license.
+
+Customer Digital Experience (CDX) demo tenant accounts without a Copilot license can create and publish agents, but grounded retrieval fails silently and triggers the generic runtime error. Developers testing SharePoint grounding in non-production tenants should use the **Microsoft 365 Copilot Developer License**, which includes the required Graph and SharePoint access.
+
+If the correct license is assigned but grounding still fails, verify the following:
+
+- The signed-in user can access the SharePoint site URL defined in `items_by_url`.
+- The agent's connection uses **User authentication**. Service principals aren’t supported for SharePoint grounding scenarios.
+- The user has at least **Read** permissions on the target SharePoint site.
+
+Silent grounding failures typically occur when licensing, permissions, or authentication configurations are incomplete.
 
 ### Pasting a link to a file in Microsoft 365 Copilot doesn't work
 
@@ -60,7 +78,7 @@ When you invoke a declarative agent through an @mention in Microsoft 365 Copilot
 
 Try one of the following approaches:
 
-- Avoid returning bare URLs because they are most likely to be removed. Provide navigational text when the link is optional. For example, go to **Contoso Portal** > **Reports** > **Monthly Dashboard**.
+- Avoid returning bare URLs because they're most likely to be removed. Provide navigational text when the link is optional. For example, go to **Contoso Portal** > **Reports** > **Monthly Dashboard**.
 
 - Return URLs inside structured JSON fields in API plugin responses. These fields are less aggressively sanitized than natural language text.
 
@@ -130,13 +148,12 @@ The following table lists features that aren't currently supported for custom en
 | ------- | ----- |
 | Feedback | User feedback about agent responses isn't shared with the developer. |
 | Conversation context | Custom engine agents can't access Copilot conversation history that occurred before the user accesses the agent via `@mention`. |
-| Chat messages | Users can't edit chat messages sent to or returned by the agent. |
-| Chat messages | HTML isn't supported in agent response messages. |
+| Chat messages | Users can't edit chat messages sent to or returned by the agent. HTML isn't supported in agent response messages. Messages in Microsoft 365 Copilot are immutable, and the `updateActivity` API isn't supported. |
 | File attachments | Users can't upload files in agent chats and the agent can't return files for download. |
 | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li></ul> |
 | Proactive notifications | Proactive notifications aren't supported. |
 | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
-| Adaptive Cards | The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul> |
+| Adaptive Cards | Adaptive Cards refreshed using **Action.Execute** don’t persist updated content when the chat is reopened; the original card is shown. Agent workflows in Copilot Chat should use follow‑up messages instead of relying on message edits. The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul>|
 | Sensitivity labels | Sensitivity labels aren't supported. |
 | Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Microsoft Edge browser. |
 
