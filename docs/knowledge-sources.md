@@ -213,7 +213,7 @@ If a `skill` value already exists, use that value in your agent manifest file wi
 
 ##### Create a DVTableSearch Skill
 
-Use the request as given in the following example to create a DVTableSearch skill. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+Use the request as given in the following example to create a `DVTableSearch` skill. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ###### Request
 
@@ -240,7 +240,7 @@ curl -i -X POST "$API/dvtablesearchs" \
 
 ###### Response
 
-The request returns No Content as shown in the following example, representing that the `DVTableSearch` skill was successfully created.
+The request returns **204 No Content** as shown in the following example, representing that the `DVTableSearch` skill was successfully created.
 
 ```http
 HTTP/1.1 204 No Content
