@@ -174,7 +174,7 @@ Check if a `skill` value already exists by using the curl request as given in th
 
 ###### Request
 
-```Shell
+```bash
 AUTH="Bearer {TOKEN}"
 ORG="https://YourOrgID.crm.dynamics.com"
 API="$ORG/api/data/v9.1"
