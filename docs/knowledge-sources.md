@@ -240,7 +240,7 @@ curl -i -X POST "$API/dvtablesearchs" \
 
 ###### Response
 
-The request returns **204 No Content** as shown in the following example, representing that the `DVTableSearch` skill was successfully created.
+The request returns **204 No Content** as shown in the following example, indicating that the `DVTableSearch` skill was successfully created.
 
 ```http
 HTTP/1.1 204 No Content
