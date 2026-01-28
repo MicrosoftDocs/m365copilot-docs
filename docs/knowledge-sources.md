@@ -248,7 +248,7 @@ HTTP/1.1 204 No Content
 
 Now run the curl request to [check for an existing `DVTableSearch` skill](#check-for-an-existing-dvtablesearch-skill).
 
-The response will contain the `dvtablesearchid` of the newly created `skill`. Use this value in the `skill` property of your agent manifest file to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
+The response will contain the `dvtablesearchid` of the newly created `skill`. You can use either this value or the skill's `name` value in the `skill` property of your agent manifest file (as shown in the earlier manifest example) to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
 
 ## Email
 
