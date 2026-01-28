@@ -190,7 +190,7 @@ If a `skill` value already exists, the response contains a list of existing `DVT
 
 ```json
 {
-  "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,se…),
+  "@odata.context": "https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,se…),
   "value": [
     {
       "@odata.etag": "W/\"4277...\"",
