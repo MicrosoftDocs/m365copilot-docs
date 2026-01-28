@@ -206,7 +206,7 @@ If a `skill` value already exists, use that value in your agent manifest file wi
 
 ```json
 {
-  "@odata.context":"https://YourOrgId.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
+  "@odata.context":"https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
   "value":[]
 }
 ```
