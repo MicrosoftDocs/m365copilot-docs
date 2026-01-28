@@ -1,7 +1,7 @@
 ---
 agent: agent
 model: Claude Sonnet 4.5 (copilot)
-tools: ['usages', 'problems', 'fetch', 'githubRepo', 'runCommands', 'edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search']
+tools: ['search/usages', 'read/problems', 'web/fetch', 'web/githubRepo', 'execute/getTerminalOutput', 'execute/runInTerminal', 'read/terminalLastCommand', 'read/terminalSelection', 'edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search']
 description: Generate reference documentation for a Copilot API
 ---
 

@@ -1,7 +1,7 @@
 ---
 agent: agent
-model: GPT-4.1
-tools: ['usages', 'problems', 'fetch', 'githubRepo', 'runCommands', 'edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search']
+model: Claude Sonnet 4.5 (copilot)
+tools: ['execute/getTerminalOutput', 'execute/awaitTerminal', 'execute/runInTerminal', 'read/problems', 'read/readFile', 'read/terminalSelection', 'read/terminalLastCommand', 'read/getTaskOutput', 'edit/createDirectory', 'edit/createFile', 'edit/editFiles', 'search', 'web']
 description: Generate a how-to article for Microsoft 365 Copilot extensibility
 ---
 
