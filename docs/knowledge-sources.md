@@ -136,7 +136,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-Before running the request, [ensure that the `skill` value in your capabilities array is pre-existing in your Dataverse environment](#fetch-a-pre-existing-skill-value-or-create-a-new-one). Also, ensure that the `host_name` value matches your organization ID.
+Before using this configuration, [ensure that the `skill` value in your capabilities array is pre-existing in your Dataverse environment](#fetch-a-pre-existing-skill-value-or-create-a-new-one). Also, ensure that the `host_name` value matches your organization ID.
 
 #### Fetch a pre-existing skill value or create a new one
 
@@ -174,7 +174,7 @@ Check if a `skill` value already exists by using the curl request as given in th
 
 ###### Request
 
-```Shell
+```bash
 AUTH="Bearer {TOKEN}"
 ORG="https://YourOrgID.crm.dynamics.com"
 API="$ORG/api/data/v9.1"
@@ -190,7 +190,7 @@ If a `skill` value already exists, the response contains a list of existing `DVT
 
 ```json
 {
-  "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,se…),
+  "@odata.context": "https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,se…),
   "value": [
     {
       "@odata.etag": "W/\"4277...\"",
@@ -206,14 +206,14 @@ If a `skill` value already exists, use that value in your agent manifest file wi
 
 ```json
 {
-  "@odata.context":"https://YourOrgId.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
+  "@odata.context":"https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
   "value":[]
 }
 ```
 
-##### Create a DVTableSearch Skill
+##### Create a DVTableSearch skill
 
-Use the request as given in the following example to create a `DVTableSearch` skill. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+Use the request shown in the following example to create a `DVTableSearch` skill. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ###### Request
 
@@ -240,7 +240,7 @@ curl -i -X POST "$API/dvtablesearchs" \
 
 ###### Response
 
-The request returns **204 No Content** as shown in the following example, representing that the `DVTableSearch` skill was successfully created.
+The request returns **204 No Content** as shown in the following example, indicating that the `DVTableSearch` skill was successfully created.
 
 ```http
 HTTP/1.1 204 No Content
@@ -248,7 +248,7 @@ HTTP/1.1 204 No Content
 
 Now run the curl request to [check for an existing `DVTableSearch` skill](#check-for-an-existing-dvtablesearch-skill).
 
-The response will contain the `dvtablesearchid` of the newly created `skill`. Use this value in the `skill` property of your agent manifest file to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
+The response will contain the `dvtablesearchid` of the newly created `skill`. You can use either this value or the skill's `name` value in the `skill` property of your agent manifest file (as shown in the earlier manifest example) to [add Dataverse as a knowledge source](#add-dataverse-knowledge).
 
 ## Email
 
