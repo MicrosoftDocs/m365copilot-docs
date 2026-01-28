@@ -88,7 +88,7 @@ items:
         - name: Build an API plugin with TypeSpec
           href: build-api-plugins-typespec.md
         - name: Build an API plugin with an MCP server
-          href: build-api-plugins-mcp.md
+          href: build-mcp-plugins.md
         - name: Build an API plugin with a new API
           href: build-api-plugins-new-api.md
         - name: Build an API plugin from an existing API
@@ -97,6 +97,8 @@ items:
           href: build-api-plugins-local-office-api.md
         - name: Authentication
           href: api-plugin-authentication.md
+        - name: Add interactive UI widgets
+          href: declarative-agent-ui-widgets.md
         - name: Adaptive Card responses
           href: api-plugin-adaptive-cards.md
           displayName: response, response_semantics

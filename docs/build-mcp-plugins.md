@@ -116,3 +116,7 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 1. When the pop-up window closes, the agent returns a response.
 
     :::image type="content" source="assets/images/api-plugins/github-mcp-plugin-response.png" alt-text="A screenshot of the agent's response to a query for repositories":::
+
+## Related content
+
+- [Add interactive UI widgets to declarative agents by using the OpenAI Apps SDK](declarative-agent-openai-apps-sdk.md)
