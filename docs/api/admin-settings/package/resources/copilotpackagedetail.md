@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 10/28/2025
+ms.date: 01/28/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -18,34 +18,42 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 
 ## Methods
 
-| Method                                | Return type                       | Description                                                               |
-|---------------------------------------|-----------------------------------|---------------------------------------------------------------------------|
-| [List](../copilotpackages-list.md)    | `copilotPackageDetail` collection | Get the available Copilot packages.                                       |
-| [Get](../copilotpackagedetail-get.md) | `copilotPackageDetail`            | Read the properties and relationships of a `copilotPackageDetail` object. |
+| Method                                      | Return type                                                     | Description                                                               |
+|---------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------|
+| [List](../copilotpackages-list.md)          | `copilotPackageDetail` collection                               | Get the available Copilot packages.                                       |
+| [Create](../copilotpackagedetail-create.md) | [copilotPackageUpdateResponse](copilotpackageupdateresponse.md) | Create a new `copilotPackageDetail` object.                               |
+| [Get](../copilotpackagedetail-get.md)       | `copilotPackageDetail`                                          | Read the properties and relationships of a `copilotPackageDetail` object. |
+| [Update](../copilotpackagedetail-update.md) | `copilotPackageDetail`                                          | Update a `copilotPackageDetail` object.                                   |
+| [Delete](../copilotpackagedetail-delete.md) | None                                                            | Delete a `copilotPackageDetail` object.                                   |
+| [block](../copilotpackage-block.md)         | None                                                            | Block a Copilot package to prevent its usage.                             |
+| [reassign](../copilotpackage-reassign.md)   | None                                                            | Reassign ownership of a Copilot package to a different user.              |
+| [unblock](../copilotpackage-unblock.md)     | None                                                            | Unblock a Copilot package to allow its usage.                             |
+| [update](../copilotpackage-update.md)       | [copilotPackageUpdateResponse](copilotpackageupdateresponse.md) | Update a Copilot package with a new package file.                         |
 
 ## Properties
 
-| Property                | Type                                                         | Description                                                     |
-|-------------------------|--------------------------------------------------------------|-----------------------------------------------------------------|
-| `acquireUsersAndGroups` | [packageAccessEntity](packageaccessentity.md) collection     | Users/groups for whom the package is deployed.                  |
-| `allowedUsersAndGroups` | [packageAccessEntity](packageaccessentity.md) collection     | Users/groups for whom the package is available.                 |
-| `availableTo`           | [packageStatus](copilotpackage.md#packagestatus-enumeration) | Availability status of the package.                             |
-| `categories`            | String collection                                            | Category tags for the package.                                  |
-| `deployedTo`            | [packageStatus](copilotpackage.md#packagestatus-enumeration) | Deployment status of the package.                               |
-| `displayName`           | String                                                       | Display name of the package.                                    |
-| `elementDetails`        | [packageElementDetail](packageelementdetail.md) collection   | Details about each element in the package.                      |
-| `elementTypes`          | String collection                                            | Element types contained within this package.                    |
-| `id`                    | String                                                       | Unique identifier for the Copilot package within the tenant.    |
-| `isBlocked`             | Boolean                                                      | Indicates whether the package is blocked.                       |
-| `lastModifiedDateTime`  | DateTimeOffset                                               | Timestamp of last modification.                                 |
-| `longDescription`       | String                                                       | Detailed information about the package functionality and usage. |
-| `manifestVersion`       | String                                                       | Manifest schema version.                                        |
-| `publisher`             | String                                                       | Name of the publisher.                                          |
-| `sensitivity`           | String                                                       | Sensitivity classification.                                     |
-| `shortDescription`      | String                                                       | Brief description of the package's functionality.               |
-| `supportedHosts`        | String collection                                            | Host applications where this package can be used.               |
-| `type`                  | [packageType](copilotpackage.md#packagetype-enumeration)     | Type classification of the package.                             |
-| `version`               | String                                                       | Version number of the package.                                  |
+| Property                | Type                                                                     | Description                                                     |
+|-------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------|
+| `acquireUsersAndGroups` | [packageAccessEntity](packageaccessentity.md) collection                 | Users/groups for whom the package is deployed.                  |
+| `allowedUsersAndGroups` | [packageAccessEntity](packageaccessentity.md) collection                 | Users/groups for whom the package is available.                 |
+| `availableTo`           | [packageStatus](copilotpackage.md#packagestatus-enumeration)             | Availability status of the package.                             |
+| `categories`            | String collection                                                        | Category tags for the package.                                  |
+| `deployedTo`            | [packageStatus](copilotpackage.md#packagestatus-enumeration)             | Deployment status of the package.                               |
+| `displayName`           | String                                                                   | Display name of the package.                                    |
+| `elementDetails`        | [packageElementDetail](packageelementdetail.md) collection               | Details about each element in the package.                      |
+| `elementTypes`          | String collection                                                        | Element types contained within this package.                    |
+| `id`                    | String                                                                   | Unique identifier for the Copilot package within the tenant.    |
+| `isBlocked`             | Boolean                                                                  | Indicates whether the package is blocked.                       |
+| `lastModifiedDateTime`  | DateTimeOffset                                                           | Timestamp of last modification.                                 |
+| `longDescription`       | String                                                                   | Detailed information about the package functionality and usage. |
+| `manifestVersion`       | String                                                                   | Manifest schema version.                                        |
+| `publisher`             | String                                                                   | Name of the publisher.                                          |
+| `sensitivity`           | String                                                                   | Sensitivity classification.                                     |
+| `shortDescription`      | String                                                                   | Brief description of the package's functionality.               |
+| `supportedHosts`        | String collection                                                        | Host applications where this package can be used.               |
+| `type`                  | [packageType](copilotpackage.md#packagetype-enumeration)                 | Type classification of the package.                             |
+| `version`               | String                                                                   | Version number of the package.                                  |
+| `zipFile`               | Stream                                                                   | The Copilot package file.                                       |
 
 ## Relationships
 

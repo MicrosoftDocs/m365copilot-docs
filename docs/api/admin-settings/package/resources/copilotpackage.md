@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 10/28/2025
+ms.date: 01/28/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -31,25 +31,26 @@ Entity that represents a Copilot package available within a tenant, containing b
 | `shortDescription`     | String                                      | Brief description of the package's functionality.            |
 | `supportedHosts`       | String collection                           | Host applications where this package can be used.            |
 | `type`                 | [packageType](#packagetype-enumeration)     | Type classification of the package.                          |
+| `zipFile`              | Stream                                      | The Copilot package file.                                    |
 
 ### packageStatus enumeration
 
-| Value                | Description                                |
-|----------------------|--------------------------------------------|
-| `none`               | Not available or deployed to any users     |
-| `some`               | Available or deployed to some users/groups |
-| `all`                | Available or deployed to all users         |
-| `unknownFutureValue` | [Evolvable sentinel value](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations) |
+| Value                | Description                                                                                                    |
+|:---------------------|:---------------------------------------------------------------------------------------------------------------|
+| `none`               | Not available or deployed to any users.                                                                        |
+| `some`               | Available or deployed to some users/groups.                                                                    |
+| `all`                | Available or deployed to all users.                                                                            |
+| `unknownFutureValue` | [Evolvable sentinel value](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations).   |
 
 ### packageType enumeration
 
-| Value                | Description                   |
-|----------------------|-------------------------------|
-| `microsoft`          | Built by Microsoft            |
-| `external`           | Built by partners             |
-| `shared`             | Shared in your organization   |
-| `custom`             | Built by your organization    |
-| `unknownFutureValue` | [Evolvable sentinel value](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations) |
+| Value                | Description                                                                                                    |
+|:---------------------|:---------------------------------------------------------------------------------------------------------------|
+| `microsoft`          | Built by Microsoft.                                                                                            |
+| `external`           | Built by partners.                                                                                             |
+| `shared`             | Shared in your organization.                                                                                   |
+| `custom`             | Built by your organization.                                                                                    |
+| `unknownFutureValue` | [Evolvable sentinel value](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations).   |
 
 ## Relationships
 

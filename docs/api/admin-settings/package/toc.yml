@@ -7,12 +7,28 @@ items:
       href: resources/copilotpackagedetail.md
     - name: List
       href: copilotpackages-list.md
+    - name: Create
+      href: copilotpackagedetail-create.md
     - name: Get
       href: copilotpackagedetail-get.md
+    - name: Update
+      href: copilotpackagedetail-update.md
+    - name: Delete
+      href: copilotpackagedetail-delete.md
+    - name: block
+      href: copilotpackage-block.md
+    - name: reassign
+      href: copilotpackage-reassign.md
+    - name: unblock
+      href: copilotpackage-unblock.md
+    - name: update
+      href: copilotpackage-update.md
 - name: Complex types
   items:
     - name: Copilot package
       href: resources/copilotpackage.md
+    - name: Copilot package update response
+      href: resources/copilotpackageupdateresponse.md
     - name: Package access entity
       href: resources/packageaccessentity.md
     - name: Package element

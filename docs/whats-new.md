@@ -16,6 +16,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## January 2026
 
+### Package Management API expanded operations (preview)
+
+The Package Management API now supports full CRUD operations for managing agent and app packages, including create, update, and delete operations. Additionally, new administrative actions are available for blocking, unblocking, updating package files, and reassigning package ownership. For more information, see [Package Management API overview](api/admin-settings/package/overview.md).
+
 ### Retrieval API pay-as-you-go consumption (preview)
 
 The Microsoft 365 Copilot Retrieval API is now available to users without a Microsoft 365 Copilot add-on license via pay-as-you-go consumption (preview). This model provides access to the Retrieval API for tenant-level data sources such as SharePoint and Microsoft 365 Copilot connectors. For more information, see [Microsoft 365 Copilot Retrieval API pay-as-you-go consumption (preview)](api/ai-services/retrieval/paygo-retrieval.md).
