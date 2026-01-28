@@ -20,9 +20,9 @@ The following table lists the capabilities and knowledge sources you can configu
 | Code interpreter | :white_check_mark: | :white_check_mark: | No |
 | Image generator | :white_check_mark: | :white_check_mark: | No |
 | Copilot connectors | :white_check_mark: | :white_check_mark: | Yes |
-| SharePoint | :white_check_mark:| :white_check_mark: | Yes |
+| SharePoint | :white_check_mark: | :white_check_mark: | Yes |
 | OneDrive | :x: | :white_check_mark: | Yes |
-| Embedded file content | :white_check_mark:| :x: | Yes |
+| Embedded file content | :white_check_mark: | :x: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
 | Dataverse | :x: | :white_check_mark:\* | Yes |
@@ -151,7 +151,7 @@ Follow these steps to obtain the necessary values:
 
 ##### Obtain your organization ID
 
-Obtain your organization ID from  [Power Apps maker portal](https://make.preview.powerapps.com/)> **Settings**> **Developer resources**.
+Obtain your organization ID from [Power Apps maker portal](https://make.preview.powerapps.com/) > **Settings** > **Developer resources**.
 
 ##### Obtain a bearer token
 
@@ -159,7 +159,7 @@ To create or fetch a `skill` value, you need a bearer token to authenticate and 
 
 To obtain a bearer token, create a [new app registration](https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in Azure Portal, then run the following curl request. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
-```Shell
+```bash
 curl -X POST https://login.microsoftonline.com/<tenant_ID>/oauth2/v2.0/token \ 
   -H "Content-Type: application/x-www-form-urlencoded" \ 
   -d "client_id=<client_ID>" \ 
@@ -170,7 +170,7 @@ curl -X POST https://login.microsoftonline.com/<tenant_ID>/oauth2/v2.0/token \
 
 ##### Check for an existing DVTableSearch skill
 
-Check if a `skill` value already exists by using the curl request as given in the following example. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+Check if a `skill` value already exists by using the curl request as given in the following example. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ###### Request
 
@@ -188,7 +188,7 @@ If a `skill` value already exists, the response contains a list of existing `DVT
 
 ###### Response
 
-```Shell
+```json
 {
   "@odata.context": "https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,se…),
   "value": [
@@ -204,7 +204,7 @@ If a `skill` value already exists, the response contains a list of existing `DVT
 
 If a `skill` value already exists, use that value in your agent manifest file without creating a new one. If the `skill` value doesn't exist, the response will contain an empty array as given in the following example. In that case, proceed to the next step to create a new `skill` value.
 
-```Shell
+```json
 {
   "@odata.context":"https://YourOrgId.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
   "value":[]
@@ -213,11 +213,11 @@ If a `skill` value already exists, use that value in your agent manifest file wi
 
 ##### Create a DVTableSearch Skill
 
-Use the request as given in the following example to create a `DVTableSearch` skill. <br> To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+Use the request as given in the following example to create a `DVTableSearch` skill. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ###### Request
 
-```Shell
+```bash
 AUTH="Bearer {TOKEN}"
 ORG="https://YourOrgID.crm.dynamics.com"
 API="$ORG/api/data/v9.1"
@@ -311,7 +311,7 @@ If you use [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) 
 
 > [!NOTE]
 > To add the `People` knowledge source (without related content), use [version 1.3](declarative-agent-manifest-1.3.md) or later of the declarative agent manifest schema. To use the `include_related_content` property, use [version 1.6](declarative-agent-manifest-1.6.md) or later.
->
+
 ```json
 {
   "capabilities": [
