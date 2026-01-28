@@ -4,7 +4,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: kmkoenen
 ms.author: v-koenenkaty
 ms.localizationpriority: medium
-ms.date: 01/27/2026
+ms.date: 01/28/2026
 ms.topic: article
 ---
 
@@ -157,7 +157,7 @@ Obtain your organization ID from  [Power Apps maker portal](https://make.preview
 
 To create or fetch a `skill` value, you need a bearer token to authenticate and create Dataverse resources. For more information, see [Authenticate with Dataverse](/power-apps/developer/data-platform/webapi/authenticate-web-api).
 
-To obtain a bearer token, create an [new app registration](https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in Azure Portal, then run the following curl request. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+To obtain a bearer token, create a [new app registration](https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in Azure Portal, then run the following curl request. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ```Shell
 curl -X POST https://login.microsoftonline.com/<tenant_ID>/oauth2/v2.0/token \ 
