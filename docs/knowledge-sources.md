@@ -136,7 +136,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-Before running the request, [ensure that the `skill` value in your capabilities array is pre-existing in your Dataverse environment](#fetch-a-pre-existing-skill-value-or-create-a-new-one). Also, ensure that the `host_name` value matches your organization ID.
+Before using this configuration, [ensure that the `skill` value in your capabilities array is pre-existing in your Dataverse environment](#fetch-a-pre-existing-skill-value-or-create-a-new-one). Also, ensure that the `host_name` value matches your organization ID.
 
 #### Fetch a pre-existing skill value or create a new one
 
