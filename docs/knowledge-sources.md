@@ -213,7 +213,7 @@ If a `skill` value already exists, use that value in your agent manifest file wi
 
 ##### Create a DVTableSearch Skill
 
-Use the request as given in the following example to create a `DVTableSearch` skill. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
+Use the request shown in the following example to create a `DVTableSearch` skill. To run this request, you can use any terminal (preferably Git Bash) that supports curl requests.
 
 ###### Request
 
