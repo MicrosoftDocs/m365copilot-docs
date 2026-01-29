@@ -12,7 +12,7 @@ ms.date: 01/28/2026
 
 # copilotPackageUpdateResponse complex type
 
-[!INCLUDE [beta-disclaimer](../../../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Represents the response returned after updating a Copilot package using the update action.
 
