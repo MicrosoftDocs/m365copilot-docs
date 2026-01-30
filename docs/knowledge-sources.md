@@ -136,7 +136,7 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-Before you add this skill, make sure that the skill` value in your capabilities array exists in your Dataverse environment. Also, make sure that the `host_name` value matches your organization ID.
+Before you add this skill, make sure that the `skill` value in your capabilities array exists in your Dataverse environment. Also, make sure that the `host_name` value matches your organization ID.
 
 #### Fetch a preexisting skill value or create a new one
 
