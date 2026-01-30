@@ -136,97 +136,97 @@ If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents
 }
 ```
 
-Before you add this skill, make sure that the [skill` value in your capabilities array preexists in your Dataverse environment](#fetch-a-pre-existing-skill-value-or-create-a-new-one). Also, make sure that the `host_name` value matches your organization ID.
+Before you add this skill, make sure that the skill` value in your capabilities array exists in your Dataverse environment. Also, make sure that the `host_name` value matches your organization ID.
 
 #### Fetch a preexisting skill value or create a new one
 
-To fetch or create a `skill` value:
+To fetch or create a Dataverse `skill` value:
 
 1. Get your organization ID from [Power Apps maker portal](https://make.preview.powerapps.com/) > **Settings** > **Developer resources**.
-1. To create or fetch a `skill` value, you need a bearer token to [authenticate](/power-apps/developer/data-platform/webapi/authenticate-web-api) and create Dataverse resources. To get a bearer token, create a [new app registration](https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in Azure portal, then run the following curl request.
+1. Get a bearer token to [authenticate](/power-apps/developer/data-platform/webapi/authenticate-web-api) and create Dataverse resources. To get a bearer token, create a [new app registration](https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in Azure portal, and then run the following curl request.
 
-  ```bash
-  curl -X POST https://login.microsoftonline.com/<tenant_ID>/oauth2/v2.0/token \ 
-    -H "Content-Type: application/x-www-form-urlencoded" \ 
-    -d "client_id=<client_ID>" \ 
-    -d "scope=https://YourOrgID.crm.dynamics.com/.default" \ 
-    -d "client_secret=<client_secret>" \ 
-    -d "grant_type=client_credentials"
-  ```
+    ```bash
+    curl -X POST https://login.microsoftonline.com/<tenant_ID>/oauth2/v2.0/token \ 
+      -H "Content-Type: application/x-www-form-urlencoded" \ 
+      -d "client_id=<client_ID>" \ 
+      -d "scope=https://YourOrgID.crm.dynamics.com/.default" \ 
+      -d "client_secret=<client_secret>" \ 
+      -d "grant_type=client_credentials"
+    ```
 
 1. Determine whether a `skill` value already exists by using the following curl request. If a `skill` value already exists, the response contains a list of existing `DVTableSearch` skills in your Dataverse environment.
 
-  ```bash
-  AUTH="Bearer {TOKEN}"
-  ORG="https://YourOrgID.crm.dynamics.com"
-  API="$ORG/api/data/v9.1"
-  
-  curl -s -X GET "$API/dvtablesearchs?\$select=dvtablesearchid,name,searchtype" \
-  -H "Authorization: $AUTH" \
-  -H "Accept: application/json"
-  ```
-
-  **Response**
+    ```bash
+    AUTH="Bearer {TOKEN}"
+    ORG="https://YourOrgID.crm.dynamics.com"
+    API="$ORG/api/data/v9.1"
     
+    curl -s -X GET "$API/dvtablesearchs?\$select=dvtablesearchid,name,searchtype" \
+    -H "Authorization: $AUTH" \
+    -H "Accept: application/json"
+    ```
+
+    **Response**
+      
+     ```json
+      {
+      "@odata.context": "https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,se…),
+      "value": [
+        {
+          "@odata.etag": "W/\"4277...\"",
+          "dvtablesearchid": "15369...",
+          "name": "User_Account_jSd6V...",
+          "searchtype": 0
+        }
+     ]
+     }
+     ```
+
+    If a `skill` value already exists, use that value in your agent manifest file. If the `skill` value doesn't exist, the response contains an empty array.
+
+    **Response**
+  
     ```json
     {
-    "@odata.context": "https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,se…),
-    "value": [
-      {
-        "@odata.etag": "W/\"4277...\"",
-        "dvtablesearchid": "15369...",
-        "name": "User_Account_jSd6V...",
-        "searchtype": 0
-      }
-   ]
-  }
-  ```
-
-  If a `skill` value already exists, use that value in your agent manifest file. If the `skill` value doesn't exist, the response contains an empty array.
-
-  **Response**
-
-  ```json
-  {
-    "@odata.context":"https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
-    "value":[]
-  }
-  ```
+      "@odata.context":"https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
+      "value":[]
+    }
+    ```
 
 1. If no `skill` exists, create a `DVTableSearch` skill and use the name you assign to it.
 
-  **Request**
-  
-  ```bash
-  AUTH="Bearer {TOKEN}"
-  ORG="https://YourOrgID.crm.dynamics.com"
-  API="$ORG/api/data/v9.1"
-  
-  curl -i -X POST "$API/dvtablesearchs" \
-  -H "Authorization: $AUTH" \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Account_SystemUser_Skill",
-    "searchtype": 0,
-    "DVTableSearch_DVTableSearch_DVTableSearch": [
-      { 
-        "name": "Account", 
-        "entitylogicalname": "account" 
-      }
-    ]
-  }'
-  ```
-  
-  **Response**
-  
-  The request returns **204 No Content** to indicate that the `DVTableSearch` skill was successfully created.
-  
-  ```http
-  HTTP/1.1 204 No Content
-  ```
+    **Request**
+    
+    ```bash
+    AUTH="Bearer {TOKEN}"
+    ORG="https://YourOrgID.crm.dynamics.com"
+    API="$ORG/api/data/v9.1"
+    
+    curl -i -X POST "$API/dvtablesearchs" \
+    -H "Authorization: $AUTH" \
+    -H "Accept: application/json" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "name": "Account_SystemUser_Skill",
+      "searchtype": 0,
+      "DVTableSearch_DVTableSearch_DVTableSearch": [
+        { 
+          "name": "Account", 
+          "entitylogicalname": "account" 
+        }
+      ]
+    }'
+    ```
+    
+    **Response**
+    
+    The request returns **204 No Content** to indicate that the `DVTableSearch` skill was successfully created.
+    
+    ```http
+    HTTP/1.1 204 No Content
+    ```
 
-1. Run the curl request in step 3 to check for an existing `DVTableSearch` skill. The response contains the `dvtablesearchid` of the newly created `skill`. You can either use this value or the `name` value in the `skill` property of your agent manifest file.
+1. Run the curl request in Step 3 again to check for an existing `DVTableSearch` skill. The response contains the `dvtablesearchid` of the newly created `skill`. You can either use this value or the `name` value in the `skill` property of your agent manifest file.
 
 ## Email
 
