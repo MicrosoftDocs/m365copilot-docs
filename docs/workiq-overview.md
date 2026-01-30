@@ -37,6 +37,8 @@ Key capabilities include:
 | **Teams messages** | "Summarize today's messages in the Engineering channel" |
 | **People** | "Who is working on Project Alpha?" |
 
+For more information, see the [Microsoft Work IQ GitHub repo](https://github.com/microsoft/work-iq-mcp).
+
 ## How Work IQ works
 
 Work IQ operates in two modes:
@@ -257,6 +259,7 @@ Work IQ is a proprietary tool, but the development team welcomes community feedb
 
 ## Related content
 
+- [Microsoft Work IQ GitHub repo](https://github.com/microsoft/work-iq-mcp)
 - [Model Context Protocol documentation](https://modelcontextprotocol.io/)
 - [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
 - [User and admin consent overview](/entra/identity/enterprise-apps/user-admin-consent-overview#admin-consent)
