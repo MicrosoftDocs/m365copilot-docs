@@ -4,7 +4,7 @@ description: Learn how to use Adaptive Card response templates to customize API 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 02/03/2025
+ms.date: 01/30/2025
 ms.topic: article
 ---
 
@@ -217,6 +217,9 @@ The combination of this plugin manifest and API response results in the followin
 ## Using static and dynamic templates together
 
 Plugins can combine the use of both static and dynamic templates. In this scenario, the static template acts as a default template that is used if the item doesn't have the `template_selector` property present, or if its value doesn't resolve to a template in the API response.
+
+> [!NOTE]
+> When you use `Action.OpenUrl`, make sure to include the domain of the target URL in the [validDomains](/microsoft-365/extensibility/schema/root?view=m365-app-1.25&tabs=syntax#validdomains) section of your app manifest. If the domain isn't listed, Teams displays the message **URL may lead to untrusted content**.
 
 ## Ensure responsive Adaptive Cards across Microsoft 365 Copilot hubs
 
