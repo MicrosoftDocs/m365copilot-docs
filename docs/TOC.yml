@@ -177,7 +177,9 @@ items:
       - name: Share and manage agents
         href: agent-builder-share-manage-agents.md
       - name: Availability and language support
-        href: agent-builder-regional-availability.md
+        href: copilot-studio-lite-availability.md
+      - name: Copy your agent to Copilot Studio
+        href: copy-agent-to-copilot-studio.md
       - name: Use Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context
         items:
@@ -252,9 +254,9 @@ items:
       - name: Overview
         href: teams-ai-library.md
       - name: Create an agent with Teams CLI
-        href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/quickstart?context=/microsoft-365-copilot/extensibility/context
+        href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript&context=/microsoft-365-copilot/extensibility/context
       - name: Understand the code structure of agents
-        href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/code-basics?context=/microsoft-365-copilot/extensibility/context
+        href: /microsoftteams/platform/teams-ai-library/getting-started/code-basics?tabs=controller&pivots=typescript&context=/microsoft-365-copilot/extensibility/context
       - name: SDK reference
         items:
         - name: TypeScript SDK
