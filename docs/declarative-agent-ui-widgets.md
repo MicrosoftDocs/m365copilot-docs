@@ -12,38 +12,35 @@ ms.topic: how-to
 
 <!-- cSpell:ignore dotnetcli -->
 
-By using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk), you can add interactive UI widgets from a Model Context Protocol (MCP) server to ChatGPT. Declarative agents in Microsoft 365 Copilot that [use MCP servers](build-mcp-plugins.md) support these same widgets, so you can add UI to your declarative agents. If you have an existing app for ChatGPT, you can bring it to Copilot with little to no changes.
+You can add interactive UI widgets to your declarative agents by adding a [Model Context Protocol (MCP) server-based action](build-mcp-plugins.md) to your agent and extending the MCP tools used by the agent to include UI. Microsoft 365 Copilot supports UI widgets created using the following methods.
+
+- [MCP Apps](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html) - an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts.
+- [OpenAI Apps SDK](https://developers.openai.com/apps-sdk) - tools to build ChatGPT apps based on the MCP Apps standard with additional ChatGPT functionality.
+
+For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see [Supported capabilities](#supported-capabilities).
 
 :::image type="content" source="assets/images/api-plugins/mcp-server-ui-widget.png" alt-text="A screenshot of the To-do list widget in Microsoft 365 Copilot":::
-
-This guide walks you through building a sample ToDo MCP server with UI widgets and integrating it with a declarative agent in Microsoft 365 Copilot.
 
 ## Prerequisites
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
+- A remote MCP server that provides UI widgets or that you can modify to implement UI widgets
+- A tool to view MCP server responses, such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- The [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 6.3.x or later
-- [Node.js](https://nodejs.org)
-- [The devtunnel CLI](/azure/developer/dev-tunnels/get-started)
+- The pre-release version of [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 6.5.x or later
 
-## Create the MCP server
+## MCP server requirements
 
-1. Follow the [OpenAI Apps SDK Quickstart](https://developers.openai.com/apps-sdk/quickstart) to build a sample ToDo MCP server with UI widgets.
-
-1. Use the MCP inspector tool to list tools from the MCP server. Copy the JSON response to use in an upcoming step.
-    1. In your shell, run `npx @modelcontextprotocol/inspector`. Wait for the MCP inspector to open in a browser window.
-    1. Enter `http://localhost:8787/mcp` in the **URL** field, change **Connection Type** to **Via Proxy**, the select **Connect**.
-    1. Select the **Tools** tab, then select **List Tools**. Copy the response JSON.
-
-1. Use the devtunnel CLI to expose the sample running on your local machine to the internet. This tunnel allows Microsoft 365 Copilot to connect to your MCP server.
-
-    ```dotnetcli
-    devtunnel create --allow-anonymous
-    devtunnel port create --port-number 8787
-    devtunnel host
-    ```
-
-    Copy the URL from the CLI output labeled **Connect via browser**.
+- **Authentication** - OAuth 2.1 and Microsoft Entra single sign-on (SSO) are supported. Anonymous authentication is supported for development purposes. For details on authentication, see [Configure authentication for API plugins in agents](api-plugin-authentication.md).
+- **Allowed URLs** - the following URLs should be allowed by both your MCP server and your identity provider.
+  - Widget host URL for CORS - Copilot renders widget UI under an MCP server-specific host with the following URL: `{hashed-mcp-domain}.widget-renderer.usercontent.microsoft.com`, where `{hashed-mcp-domain}` is the SHA-256 hash of your MCP server's domain. You can use the [MCP Subdomain Generator](https://aka.ms/mcpwidgeturlgenerator) to generate the host URL based on your MCP server URL.
+  - OAuth 2.1 redirect URIs:
+    - `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` for Copilot
+    - `https://vscode.dev/redirect` for Visual Studio Code to fetch tools using the Agents Toolkit
+  - Microsoft Entra SSO redirect URIs:
+    - `https://teams.microsoft.com/api/platform/v1.0/oAuthConsentRedirect` for Copilot
+    - Visual Studio Code does not currently support SSO for fetching tools
+- **UI widgets** - UI widgets must be implemented according to the MCP Apps or OpenAI Apps SDK requirements.
 
 ## Create a declarative agent
 
@@ -57,7 +54,7 @@ This guide walks you through building a sample ToDo MCP server with UI widgets a
 
 1. Select **Add an Action**, then select **Start with an MCP Server**. If prompted, choose **Remote MCP server**.
 
-1. Enter the devtunnel URL you copied in the previous step, appended with `/mcp`. For example, `https://lrcnbr88-8787.usw3.devtunnels.ms/mcp/`.
+1. Enter URL to your MCP server.
 
 1. Choose a location for the agent project.
 
@@ -71,68 +68,21 @@ When you complete these steps, Agents Toolkit generates the required files for t
 
 1. Select the **ATK: Fetch action from MCP** button in the file editor, then select **ai-plugin.json**.
 
-1. Select the `add_todo` and `complete_todo` operations for the agent to use and select **OK**.
+    :::image type="content" source="assets/images/api-plugins/fetch-mcp-actions.png" alt-text="A screenshot of the 'ATK: Fetch action from MCP' and 'Start' buttons in mcp.json":::
 
-1. Open **ai-plugin.json** and locate the `mcp_tool_description` property. Replace the existing value with the **List Tools** response JSON you copied from the MCP Inspector. The new value should look like the following.
+1. Select the tools for the agent to use and select **OK**. Be sure to select at least one tool that has a UI widget.
 
-    ```json
-    "mcp_tool_description": {
-      "tools": [
-        {
-          "name": "add_todo",
-          "title": "Add todo",
-          "description": "Creates a todo item with the given title.",
-          "inputSchema": {
-            "type": "object",
-            "properties": {
-              "title": {
-                "type": "string",
-                "minLength": 1
-              }
-            },
-            "required": [
-              "title"
-            ],
-            "$schema": "http://json-schema.org/draft-07/schema#"
-          },
-          "execution": {
-            "taskSupport": "forbidden"
-          },
-          "_meta": {
-            "openai/outputTemplate": "ui://widget/todo.html",
-            "openai/toolInvocation/invoking": "Adding todo",
-            "openai/toolInvocation/invoked": "Added todo"
-          }
-        },
-        {
-          "name": "complete_todo",
-          "title": "Complete todo",
-          "description": "Marks a todo as done by id.",
-          "inputSchema": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string",
-                "minLength": 1
-              }
-            },
-            "required": [
-              "id"
-            ],
-            "$schema": "http://json-schema.org/draft-07/schema#"
-          },
-          "execution": {
-            "taskSupport": "forbidden"
-          },
-          "_meta": {
-            "openai/outputTemplate": "ui://widget/todo.html",
-            "openai/toolInvocation/invoking": "Completing todo",
-            "openai/toolInvocation/invoked": "Completed todo"
-          }
-        }
-      ]
-    }
-    ```
+1. Select the applicable authentication type.
+
+    :::image type="content" source="assets/images/api-plugins/mcp-select-authentication-type.png" alt-text="A screenshot of the prompt to choose the authentication type":::
+
+    > [!IMPORTANT]
+    > If your MCP server is in development and does not implement authentication, this step is skipped. You will need to manually add authentication to your manifest once you add authentication to your server.
+
+1. Open **ai-plugin.json** and locate the `mcp_tool_description` property. Replace the existing value with the `tools/list` response JSON from your MCP server. Use a testing tool such as MCP Inspector to get this from your server. The new value should look like the following.
+
+    > [!NOTE]
+    > This step is temporary during the public preview. Agents Toolkit will be updated to make this step unnecessary in the future.
 
 1. Select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
 
@@ -142,17 +92,103 @@ When you complete these steps, Agents Toolkit generates the required files for t
 
 1. In the **Lifecycle** pane, select **Provision**.
 
+1. If prompted, add your authentication details.
+
 1. Wait for the toolkit to report that it finishes provisioning.
 
 ## Test the agent
 
 1. Open your browser and go to [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 1. Select your agent in the left-hand sidebar. If you don't see your agent, select **All agents**.
-1. Ask the agent to add a to-do, for example, `Add a todo to "Test MCP server with UI in Copilot"`.
+1. Ask the agent to do something that invokes your MCP server.
 1. Allow the agent to connect to the MCP server when prompted.
-1. The agent renders a to-do list with the new to-do.
+1. The agent renders the UI widget.
+
+## Supported capabilities
+
+The following capabilities are supported by Microsoft 365 Copilot.
+
+### Component bridge (window.openai)
+
+| Capability                                      | Supported?                            |
+|-------------------------------------------------|---------------------------------------|
+| `window.openai.toolInput`                       | :white_check_mark:                    |
+| `window.openai.toolOutput`                      | :white_check_mark:                    |
+| `window.openai.toolResponseMetadata`            | :white_check_mark:                    |
+| `window.openai.widgetState`                     | :white_check_mark:                    |
+| `window.openai.setWidgetState(state)`           | :white_check_mark:                    |
+| `window.openai.callTool(name, args)`            | :white_check_mark:                    |
+| `window.openai.sendFollowUpMessage({ prompt })` | :white_check_mark:                    |
+| `window.openai.uploadFile(file)`                | :x:                                   |
+| `window.openai.getFileDownloadUrl({ fileId })`  | :x:                                   |
+| `window.openai.requestDisplayMode(...)`         | :white_check_mark: (full screen only) |
+| `window.openai.requestModal(...)`               | :x:                                   |
+| `window.openai.notifyIntrinsicHeight(...)`      | :white_check_mark:                    |
+| `window.openai.openExternal({ href })`          | :white_check_mark:                    |
+| `window.openai.setOpenInAppUrl({ href })`       | :x:                                   |
+| `window.openai.theme`                           | :white_check_mark:                    |
+| `window.openai.displayMode`                     | :white_check_mark:                    |
+| `window.openai.maxHeight`                       | :white_check_mark:                    |
+| `window.openai.safeArea`                        | :white_check_mark:                    |
+| `window.openai.view`                            | :white_check_mark:                    |
+| `window.openai.userAgent`                       | :white_check_mark:                    |
+| `window.openai.locale`                          | :white_check_mark:                    |
+
+### Tool descriptor _meta fields
+
+| Field                                     | Supported?         |
+|-------------------------------------------|--------------------|
+| `_meta["openai/widgetAccessible"]`        | :x:                |
+| `_meta["openai/visibility"]`              | :white_check_mark: |
+| `_meta["openai/toolInvocation/invoking"]` | :x:                |
+| `_meta["openai/toolInvocation/invoked"]`  | :x:                |
+| `_meta["openai/fileParams"]`              | :x:                |
+| `_meta["securitySchemes"]`                | :x:                |
+
+### Tool descriptor annotations
+
+| Annotation        | Supported?         |
+|-------------------|--------------------|
+| `readOnlyHint`    | :white_check_mark: |
+| `destructiveHint` | :x:                |
+| `openWorldHint`   | :x:                |
+| `idempotentHint`  | :x:                |
+
+### Component resource _meta fields
+
+| Field                                 | Supported?         |
+|---------------------------------------|--------------------|
+| `_meta["openai/widgetDescription"]`   | :x:                |
+| `_meta["openai/widgetPrefersBorder"]` | :x:                |
+| `_meta["openai/widgetCSP"]`           | :white_check_mark: |
+| `_meta["openai/widgetDomain"]`        | :x:                |
+
+#### Properties in openai/widgetsCSP object
+
+| Property           | Supported?         |
+|--------------------|--------------------|
+| `connect_domains`  | :white_check_mark: |
+| `resource_domains` | :white_check_mark: |
+| `frame_domains`    | :x:                |
+| `redirect_domains` | :x:                |
+
+### Host-provided tool result _meta fields
+
+| Field                             | Supported? |
+|-----------------------------------|------------|
+| `_meta["openai/widgetSessionId"]` | :x:        |
+
+### Client-provided _meta fields
+
+| Field                          | Supported?         |
+|--------------------------------|--------------------|
+| `_meta["openai/locale"]`       | :white_check_mark: |
+| `_meta["openai/userAgent"]`    | :white_check_mark: |
+| `_meta["openai/userLocation"]` | :white_check_mark: |
+| `_meta["openai/subject"]`      | :x:                |
 
 ## Related content
 
 - [Build plugins from an MCP server for Microsoft 365 Copilot (preview)](build-mcp-plugins.md)
+- [MCP Apps Overview](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html#learn-more)
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk)
