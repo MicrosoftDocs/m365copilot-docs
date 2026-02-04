@@ -1,6 +1,6 @@
 ---
-title: Add interactive UI widgets to declarative agents by using the OpenAI Apps SDK
-description: Learn how to add interactive UI widgets to MCP server-based declarative agents by using the OpenAI Apps SDK
+title: Add interactive UI widgets to declarative agents
+description: Learn how to add interactive UI widgets to MCP server-based declarative agents
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.date: 02/15/2026
 ms.topic: how-to
 ---
 
-# Add interactive UI widgets to declarative agents by using the OpenAI Apps SDK
+# Add interactive UI widgets to declarative agents
 
 <!-- cSpell:ignore dotnetcli -->
 
