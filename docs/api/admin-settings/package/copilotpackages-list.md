@@ -46,11 +46,11 @@ GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages
 
 This method supports the `$filter` [OData query parameter](/graph/query-parameters) to help customize the response. The following properties are supported with the `$filter` OData query parameter. For examples of using the `$filter` query parameter, see [Examples](#examples).
 
-| Parameter             | Type     | Description                                                              |
-| --------------------- | -------- | ------------------------------------------------------------------------ |
-| `supportedHost`       | string   | Filter by supported host (`Copilot`, `Outlook`, `Teams`, `M365`)         |
-| `elementTypes`        | string   | Filter by element type (`Bots`, `DeclarativeAgent`, `CustomEngineAgent`) |
-| `lastUpdatedDateTime` | datetime | Filter by last updated date/time                                         |
+| Parameter              | Type     | Description                                                              |
+| ---------------------- | -------- | ------------------------------------------------------------------------ |
+| `supportedHosts`       | string   | Filter by supported host (`Copilot`, `Outlook`, `Teams`, `M365`)         |
+| `elementTypes`         | string   | Filter by element type (`Bots`, `DeclarativeAgent`, `CustomEngineAgent`) |
+| `lastModifiedDateTime` | datetime | Filter by last updated date/time                                         |
 
 ## Request body
 
