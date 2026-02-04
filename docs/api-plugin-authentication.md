@@ -4,7 +4,7 @@ description: Learn how to set up authentication for API plugins in agents runnin
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 01/13/2026
 ms.topic: article
 ---
 
@@ -45,6 +45,13 @@ securitySchemes:
 ```
 
 To enable OAuth 2.0 authentication, you need to register an OAuth client in the Teams developer portal. You can register an OAuth client with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) in Visual Studio Code or by manually registering in the Teams developer portal.
+
+> [!NOTE] 
+> Declarative agents don't provide a built-in way for users to manually clear stored OAuth credentials. The Bot Framework Token Service centrally manages tokens, and they might continue to persist after an agent is uninstalled due to SSO caching, tenant settings, or client differences. 
+>  
+> To force reauthentication, use server-side sign out by calling [`SignOutUserAsync`](/dotnet/api/microsoft.bot.builder.botframeworkadapter.signoutuserasync) to invalidate bot tokens. For a full reset, you can optionally combine this method with the Microsoft Graph [`revokeSignInSessions`](/graph/api/user-revokesigninsessions) API or remove the user's consent.  
+>  
+> For a better user experience, consider adding a **Signt out/switch account** action that triggers these server-side sign out flows so users are prompted to sign in again.
 
 ### Register an OAuth client with Agents Toolkit
 
