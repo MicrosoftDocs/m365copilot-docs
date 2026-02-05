@@ -5,15 +5,12 @@ description: Learn how to copy your declarative agent from Microsoft 365 Copilot
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
-ms.date: 01/13/2026
+ms.date: 01/26/2026
 ms.topic: concept-article
 ---
 # Copy an agent to Copilot Studio
 
-> [!IMPORTANT]
-> This feature is not yet available for all users. Rollout is expected to complete in December 2025. This document is intended to serve as educational content to prepare for this feature.
-
-This article explains how to use the **Copy to Copilot Studio** feature in Microsoft 365 Copilot to copy an agent built in Copilot to Copilot Studio. When you copy your agent to Copilot Studio, you can take advantage of advanced lifecycle management, analytics, and governance controls.
+This article explains how to use the **Copy to Copilot Studio** feature in Microsoft 365 Copilot to copy an agent to Copilot Studio. When you copy your agent to Copilot Studio, you can take advantage of advanced lifecycle management, analytics, and governance controls.
 
 ## Why use Copilot Studio?
 
