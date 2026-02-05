@@ -101,7 +101,11 @@ Custom agents built with Copilot Studio can be published to the [Microsoft 365 C
 | Sideload for personal use | ✅ | [Install an agent in Teams and Microsoft 365 Copilot](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#install-an-agent-in-teams-and-microsoft-365-copilot) |
 | Share with others | ✅ | [Share a link so others can install an agent](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#share-a-link-so-others-can-install-an-agent) |
 | Submit to organizational catalog | ✅ | [Show an agent to the organization](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#show-to-the-organization) |
+<<<<<<< Updated upstream
 | Submit to Microsoft Commercial Marketplace | ✅ Supported via [Microsoft Partner Center](https://partner.microsoft.com/) | [Overview of multitenant mode in Copilot Studio (preview)](https://learn.microsoft.com/en-us/microsoft-copilot-studio/multi-tenant-overview) |
+=======
+| Submit to Microsoft Commercial Marketplace | ✅ Supported via [Microsoft Partner Center](https://partner.microsoft.com/)| [Overview of multitenant mode in Copilot Studio (preview)](/microsoft-copilot-studio/multi-tenant-overview) |
+>>>>>>> Stashed changes
 
 ## Copilot connectors
 
