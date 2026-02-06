@@ -26,7 +26,7 @@ Before submitting your agent to Partner Center, ensure it meets all applicable:
 
 When ready, [submit your app package](/partner-center/marketplace-offers/add-in-submission-guide#step-1-select-the-type-of-app-youre-submitting) to Microsoft Partner Center through the *Microsoft 365 and Copilot program* under the offer type **Apps and agents for Microsoft 365 and Copilot**.
 
-When Microsoft validates and approves your app package, your agent is available in the Microsoft Commercial Marketplace and ready for IT enablement. When an IT administrator enables it, the agent appears in the **Apps store** within Microsoft 365 Copilot, Microsoft Teams, Outlook, Word, Excel, and PowerPoint. It also appears in the **Agent Store** within Microsoft 365 Copilot. When the agent is deployed by an admin or acquired by a user, it appears as an installed agent for Microsoft 365 Copilot.
+When Microsoft validates and approves your app package, your agent is available in the Microsoft Commercial Marketplace and ready for IT enablement. When an IT administrator enables the agent, it appears in the **Apps store** within Microsoft 365 Copilot, Microsoft Teams, Outlook, Word, Excel, and PowerPoint. It also appears in the **Agent Store** within Microsoft 365 Copilot. When the agent is deployed by an admin or acquired by a user, it appears as an installed agent for Microsoft 365 Copilot.
 
 ## Declarative agents built with Microsoft 365 Agents Toolkit
 
