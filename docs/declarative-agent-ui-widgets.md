@@ -21,8 +21,9 @@ You can add interactive UI widgets to your declarative agents by adding a [Model
 
 For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see [Supported capabilities](#supported-capabilities).
 
-:::image type="content" source="assets/images/api-plugins/mcp-server-ui-inline-widget.png" alt-text="A screenshot of the To-do list widget in Microsoft 365 Copilot":::
-:::image type="content" source="assets/images/api-plugins/mcp-server-ui-fullscreen-widget.png" alt-text="A screenshot of the To-do list widget in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/api-plugins/mcp-server-ui-inline-widget.png" alt-text="A screenshot of the Sprint tasks widget in Microsoft 365 Copilot":::
+
+:::image type="content" source="assets/images/api-plugins/mcp-server-ui-fullscreen-widget.png" alt-text="A screenshot of the Sprint tasks widget widget in Microsoft 365 Copilot":::
 
 ## Prerequisites
 
