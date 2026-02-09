@@ -17,7 +17,6 @@ A package represents either an agent or Microsoft 365 app in the organization ca
 ## Key capabilities
 
 - Retrieve an inventory of all agents and apps within the organization, optionally filtering by:
-  - Type (Microsoft, line of business, etc.)
   - Host (Copilot, Outlook, Teams)
   - Last updated time
   - Element types contained in the app package (bots, declarative agents, etc.).
@@ -31,9 +30,9 @@ A package represents either an agent or Microsoft 365 app in the organization ca
 
 ## API list
 
-| Operation | HTTP Method | Description |
-|------------|--------------|-------------|
-| [List packages](copilotpackages-list.md) | GET `/copilot/admin/catalog/packages` | Get all apps and agents in the organization. |
+| Operation                                          | HTTP Method                                | Description                                        |
+|----------------------------------------------------|--------------------------------------------|----------------------------------------------------|
+| [List packages](copilotpackages-list.md)           | GET `/copilot/admin/catalog/packages`      | Get all apps and agents in the organization.       |
 | [Get package details](copilotpackagedetail-get.md) | GET `/copilot/admin/catalog/packages/{id}` | Get detailed metadata for a specific app or agent. |
 
 ## Resources
