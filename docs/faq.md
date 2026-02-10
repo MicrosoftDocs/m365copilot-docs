@@ -5,7 +5,7 @@ author: girliemac
 ms.author: timura
 ms.topic: best-practice
 ms.localizationpriority: medium
-ms.date: 11/18/2025
+ms.date: 02/10/2026
 ---
 
 # Frequently asked questions for Microsoft 365 Copilot extensibility
