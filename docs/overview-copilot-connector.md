@@ -12,7 +12,7 @@ ms.date: 07/21/2025
 
 Microsoft 365 Copilot connectors provide a platform for you to ingest your unstructured, line-of-business data into Microsoft Graph, so that Microsoft 365 Copilot can reason over the entirety of your enterprise content. Content ingested through Copilot connectors is added to Microsoft Graph; this unlocks semantic understanding of your users' prompts in Microsoft 365 Copilot. However, Copilot connectors are not limited to Microsoft 365 Copilot. Copilot connector content powers other Microsoft 365 intelligent experiences like Microsoft Search, Context IQ, and the Microsoft 365 Copilot app.
 
-This article describes how Copilot connector contents are part of Microsoft 365 Copilot and how you can configure your custom Microsoft Graph connections for Microsoft 365 Copilot.
+This article describes how Copilot connector contents are part of Microsoft 365 Copilot and how you can configure your custom connections for Microsoft 365 Copilot.
 
 > [!NOTE]
 > Copilot connectors are available in the global service and in Microsoft 365 Government Community Cloud (GCC) and Government Community Cloud High (GCCH) environments. They aren't available in Department of Defense (DoD) environments.
@@ -89,11 +89,7 @@ To make sure that Microsoft 365 Copilot uses your content effectively:
 - Add [user activities](/graph/api/externalconnectors-externalitem-addactivities) on your items. For a list of supported activity types, see [externalActivity](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in importance.
 - Provide meaningful descriptions in the `description` property when [creating connections](/graph/api/externalconnectors-external-post-connections). Rich descriptions improve the likelihood of displaying content in Copilot.
 
-In addition, search administrators must ensure that your Copilot connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) by using the following steps:
-
-- In the [Admin Center](https://admin.microsoft.com/), go to **Search & intelligence** > **Customizations** > **Verticals** and select **All**.
-
-- Select **Manage connector result**. Ensure that **Show results inline** is selected and that the connections that you want to enable for Search and Copilot are checked.
+In addition, administrators must ensure that your Copilot connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical).
 
 ## Related content
 
