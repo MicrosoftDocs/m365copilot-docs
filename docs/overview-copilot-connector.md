@@ -15,7 +15,7 @@ Microsoft 365 Copilot connectors allow you to bring external, line-of-business d
 - **Synced connectors** ingest and index external content into Microsoft Graph.
 - **Federated connectors (early access preview)** retrieve content in real time using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
 
-Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Context IQ, and  Microsoft 365 Copilot.
+Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Context IQ, and Microsoft 365 Copilot.
 
 For more information about federated connectors, see [Federated connectors overview](/microsoftsearch/federated-connectors-overview).
 
