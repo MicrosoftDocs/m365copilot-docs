@@ -41,7 +41,7 @@ Microsoft 365 Copilot supports two connector models tailored to different integr
 
 ## How connector content surfaces in Microsoft 365 Copilot
 
-Synced connectors ingest content into Microsoft Graph where it's semantically indexed and made available to Copilot. Users can find, summarize, and learn from this content using natural language prompts. They can also select citations in Copilot responses to preview external items stored in Microsoft Graph.
+Synced connectors ingest content into Microsoft Graph where the data semantically indexed and made available to Copilot. Users can find, summarize, and learn from this content using natural language prompts. They can also select citations in Copilot responses to preview external items stored in Microsoft Graph.
 
 Federated connectors surface real-time information from your external service. Instead of referencing indexed items, citations refer to content returned directly from your MCP server. No content is synced or stored in Microsoft Graph.
 
@@ -61,7 +61,7 @@ Synced connectors use semantic indexing to improve retrieval quality across Micr
 
 The following common properties are indexed:
 
-- **Title**: The item's title  
+- **Title**: The item's title
 - **Content**: The main body of the item
 
 Custom connectors can also use semantic indexing. To optimize retrieval, include relevant information in the **title** and **content** fields.
@@ -71,15 +71,15 @@ Custom connectors can also use semantic indexing. To optimize retrieval, include
 
 The following scenarios benefit from semantic indexing:
 
-- Topic- and keyword-based searches  
-- Queries requiring approximate matches  
-- Queries requiring contextual interpretation  
+- Topic- and keyword-based searches
+- Queries requiring approximate matches
+- Queries requiring contextual interpretation
 
 The following scenarios don't benefit from semantic indexing:
 
-- Queries without topics or keywords, such as "find bugs assigned to"  
-- Queries with multiple parameters (for example, topic + assignee)  
-- Queries requesting counts of items  
+- Queries without topics or keywords, such as "find bugs assigned to"
+- Queries with multiple parameters (for example, topic + assignee)
+- Queries requesting counts of items
 
 ## Copilot connectors gallery
 
@@ -87,7 +87,7 @@ The [Copilot connectors gallery](/microsoftsearch/connectors-gallery) includes d
 
 ## Create your own synced Copilot connector
 
-To build a synced connector, an AI administrator must [register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for required Microsoft Graph permissions in the **Microsoft Entra admin center**.  
+To build a synced connector, an AI administrator must [register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for required Microsoft Graph permissions in the **Microsoft Entra admin center**.
 
 Deployed connectors are tenant-wide unless external item security is restricted.
 
@@ -111,6 +111,6 @@ Administrators must also ensure that synced connectors are enabled for [inline r
 
 ## Related content
 
-- [Build your first Copilot connector](build-your-first-connector.md)  
-- [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)  
-- [Pre-built Copilot connectors](/microsoftsearch/pre-built-connectors-overview)
+- [Build your first Copilot connector](build-your-first-connector.md)
+- [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)
+- [Prebuilt Copilot connectors](/microsoftsearch/pre-built-connectors-overview)
