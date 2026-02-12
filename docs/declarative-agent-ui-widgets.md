@@ -18,7 +18,7 @@ ms.topic: how-to
 You can add interactive UI widgets to your declarative agents by adding a [Model Context Protocol (MCP) server-based action](build-mcp-plugins.md) to your agent and extending the MCP tools used by the agent to include UI. Microsoft 365 Copilot supports UI widgets created using the following methods.
 
 - [MCP Apps](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html) - an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts.
-- [OpenAI Apps SDK](https://developers.openai.com/apps-sdk) - tools to build ChatGPT apps based on the MCP Apps standard with additional ChatGPT functionality.
+- [OpenAI Apps SDK](https://developers.openai.com/apps-sdk) - tools to build ChatGPT apps based on the MCP Apps standard with extra ChatGPT functionality.
 
 For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see [Supported capabilities](#supported-capabilities).
 
@@ -32,7 +32,7 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
 - A remote MCP server that provides UI widgets or that you can modify to implement UI widgets
 - A tool to view MCP server responses, such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- The latest pre-release version of [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 6.5.x or later
+- The latest prerelease version of [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 6.5.x or later
 
 ## MCP server requirements
 
@@ -44,7 +44,7 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
     - `https://vscode.dev/redirect` for Visual Studio Code to fetch tools using the Agents Toolkit
   - Microsoft Entra SSO redirect URIs:
     - `https://teams.microsoft.com/api/platform/v1.0/oAuthConsentRedirect` for Copilot
-    - Visual Studio Code does not currently support SSO for fetching tools
+    - Visual Studio Code doesn't currently support SSO for fetching tools
 - **UI widgets** - UI widgets must be implemented according to the MCP Apps or OpenAI Apps SDK requirements.
 
 ## Create a declarative agent
@@ -82,9 +82,9 @@ When you complete these steps, Agents Toolkit generates the required files for t
     :::image type="content" source="assets/images/api-plugins/mcp-select-authentication-type.png" alt-text="A screenshot of the prompt to choose the authentication type":::
 
     > [!IMPORTANT]
-    > If your MCP server is in development and does not implement authentication, this step is skipped. You will need to manually add authentication to your manifest once you add authentication to your server.
+    > If your MCP server is in development and doesn't implement authentication, this step is skipped. You need to manually add authentication to your manifest once you add authentication to your server.
 
-1. Open **ai-plugin.json** and locate the `mcp_tool_description` property. Replace the existing value with the `tools/list` response JSON from your MCP server. Use a testing tool such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector) to get this from your server.
+1. Open **ai-plugin.json** and locate the `mcp_tool_description` property. Replace the existing value with the `tools/list` response JSON from your MCP server. Use a testing tool such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector) to get the response from your server.
 
     > [!NOTE]
     > This step is temporary during the public preview. Agents Toolkit will be updated to make this step unnecessary in the future.
@@ -111,7 +111,7 @@ When you complete these steps, Agents Toolkit generates the required files for t
 
 ## Supported capabilities
 
-The following capabilities are supported by Microsoft 365 Copilot.
+Microsoft 365 Copilot supports the following capabilities.
 
 ### Component bridge
 
