@@ -46,6 +46,9 @@ When you build agents, you can tailor the user experience by providing *in conte
 > [!NOTE]
 > Microsoft 365 Copilot Chat is the full-featured and secure chat experience for Microsoft 365 Copilot. Microsoft 365 Copilot Chat is available on the web via the Microsoft 365 Copilot app and is integrated into Teams and Outlook.​
 
+> [!IMPORTANT]
+> When an agent is embedded in an app, it doesn’t automatically inherit the user’s Microsoft sign-in from the host application. Even if the user is already signed in to the app, the agent can’t identify the signed-in user and might prompt them to sign in again.
+
 ## Connector availability in Microsoft 365 experiences
 
 Over 350 million users are active daily across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, PowerPoint, and the Microsoft 365 Copilot app. When you write a connector, it can reach all the apps that support Copilot extensibility across Microsoft 365.
