@@ -10,7 +10,8 @@ ms.topic: how-to
 
 # Add interactive UI widgets to declarative agents (preview)
 
-<!-- cSpell:ignore dotnetcli -->
+<!-- cSpell:ignore dotnetcli ontoolresult ontoolcancelled onhostcontextchanged -->
+
 > [!IMPORTANT]
 > This feature is currently in public preview.
 
@@ -23,7 +24,7 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
 
 :::image type="content" source="assets/images/api-plugins/mcp-server-ui-inline-widget.png" alt-text="A screenshot of the Sprint tasks widget in Microsoft 365 Copilot":::
 
-:::image type="content" source="assets/images/api-plugins/mcp-server-ui-fullscreen-widget.png" alt-text="A screenshot of the Sprint tasks widget widget in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/api-plugins/mcp-server-ui-fullscreen-widget.png" alt-text="A screenshot of the Sprint tasks widget in full-screen mode in Microsoft 365 Copilot":::
 
 ## Prerequisites
 
