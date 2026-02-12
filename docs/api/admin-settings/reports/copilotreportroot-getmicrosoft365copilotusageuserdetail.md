@@ -3,7 +3,7 @@ title: "copilotReportRoot: getMicrosoft365CopilotUsageUserDetail"
 description: Recent activity data for enabled users of Microsoft 365 Copilot apps. Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace.
 author: mestew
 ms.author: mstewart
-ms.date: 12/02/2026
+ms.date: 02/12/2026
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: apiPageType
