@@ -2,7 +2,7 @@
 title: Understand model changes in GPT 5.1+ for declarative agents
 description: Understand the differences between GPT 5.0 and GPT 5.1 and learn how to adapt declarative agents to the new intent-first behavior.
 #customer intent: As a developer, I want to understand the differences between GPT 5.0 and GPT 5.1 so that I can adapt my declarative agents to the new intent-first behavior.
-ms.date: 02/10/2026
+ms.date: 02/13/2026
 author: manuelap-msft
 ms.author: kkanjitajdin
 ms.localizationpriority: medium
