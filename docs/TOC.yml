@@ -195,6 +195,8 @@ items:
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
       href: instructions-api-plugins.md
+    - name: Understand model changes in GPT 5.1+ for declarative agents
+      href: declarative-model-migration-overview.md
     - name: Connect to other agents
       href: declarative-agent-connected-agent.md
     - name: Add capabilities and knowledge sources
@@ -227,14 +229,6 @@ items:
       href: convert-declarative-agent.md
     - name: Responsible AI validation
       href: rai-validation.md
-    - name: Understand model changes in GPT 5.1+ for declarative agents
-      items:
-      - name: Overview
-        href: declarative-model-migration-overview.md
-      - name: Design declarative agents for GPT 5.1+
-        href: declarative-model-migration-design.md
-      - name: Instruction templates and design patterns
-        href: declarative-model-migration-templates.md
   - name: Build a custom engine agent
     items:
     - name: Custom engine agent overview

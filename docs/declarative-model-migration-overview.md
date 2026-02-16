@@ -70,4 +70,4 @@ For teams deploying mission-critical agents, these changes can cause disruptions
 Learn the core principles for resilient declarative agent instruction design.
 
 > [!div class="nextstepaction"]
-> [Design stable declarative agents for GPT 5.1+](declarative-model-migration-design.md)
+> [Write effective instructions for declarative agents](declarative-agent-instructions.md)
