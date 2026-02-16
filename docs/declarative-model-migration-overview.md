@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.topic: article
 ---
 
-# Understand model changes in GPT 5.1+ for declarative agents
+# Understand model changes in GPT 5.1+
 
 GPT models continue to evolve. In GPT 5.1, the shift from literal‑first reasoning to intent‑first adaptive reasoning brings a meaningful change to declarative agents. This change influences how the model interprets instructions, sequences tasks, and generates outputs. These differences are powerful but without proper preparation, they can introduce regressions or unexpected behavior in existing agents.
 

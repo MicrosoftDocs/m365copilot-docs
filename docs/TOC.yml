@@ -195,7 +195,7 @@ items:
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
       href: instructions-api-plugins.md
-    - name: Understand model changes in GPT 5.1+ for declarative agents
+    - name: Understand model changes in GPT 5.1+
       href: declarative-model-migration-overview.md
     - name: Connect to other agents
       href: declarative-agent-connected-agent.md
