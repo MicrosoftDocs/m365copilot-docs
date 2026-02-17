@@ -264,7 +264,7 @@ Guide users through issue resolution by gathering information, checking outages,
 
 This section provides production-ready patterns and templates that you can easily add to your declarative agent instructions.
 
-## Pattern 1: Convert ambiguous multitask requests into deterministic workflows
+### Pattern 1: Convert ambiguous multitask requests into deterministic workflows
 
  By using this pattern, you remove ambiguity by defining atomic steps, explicit formulas, and required validation. This approach ensures stable, repeatable behavior across model versions.
 
@@ -290,7 +290,7 @@ Return a single Markdown table with columns: Metric | Value | Source (section/ta
 Before finalizing: confirm every metric has (a) a value, (b) a source, and (c) no assumptions. If assumptions exist, stop and ask the user.
 ```
 
-## Pattern 2: Correct parallel versus sequential structure
+### Pattern 2: Correct parallel versus sequential structure
 
 By using this pattern, you make sure the model separates parallel and sequential logic. The model executes workflows correctly without adding or reordering steps.
 
@@ -305,7 +305,7 @@ Step 1: Integrate all findings from Section A.
 Step 2: Produce the 2 page call prep summary.
 ```
 
-## Pattern 3: Explicit decision rules
+### Pattern 3: Explicit decision rules
 
 By using this pattern, you add explicit if/then rules that prevent unintended model interpretation and enforce deterministic outcomes. This approach stops the language model from trying to resolve ambiguous conditional logic on its own, which can result in blended branches ("do both") or selection of the wrong conditional path.
 
@@ -316,7 +316,7 @@ If performance is stable or improving, write the summary section.
 If performance declines or anomalies are detected, write the risks/issues section.
 ```
 
-## Pattern 4: Output contract
+### Pattern 4: Output contract
 
 Output contracts provide shape, structure, tone, and allowed content, ensuring consistency. Without explicit output constraints, your agent might produce overly long explanations, overly terse responses, or switch unpredictably across versions.
 
@@ -351,7 +351,7 @@ Use this pattern when your output must follow:
 - A compliance, audit, or customer‑facing template.
 - A business process requiring consistent formatting across teams.
 
-## Pattern 5: Clean Markdown structure
+### Pattern 5: Clean Markdown structure
 
 Clean, intentional Markdown ensures the model can reliably parse your instructions. Poorly nested lists, unclear headers, or inconsistent formatting cause merged steps, unintended hierarchy, or collapsed sections.
 
@@ -366,7 +366,7 @@ Clean, intentional Markdown ensures the model can reliably parse your instructio
 **Step 2:** Produce the 2 page call prep summary.
 ```
 
-## Pattern 6: Self-evaluation gate
+### Pattern 6: Self-evaluation gate
 
 By adding an explicit self-check step, you encourage the model to validate completeness, verify alignment with instructions, and correct omissions before responding. This step increases consistency and reliability.
 
@@ -387,7 +387,7 @@ Step 2: Produce a clear, well structured 2 page call prep summary.
 Before finalizing the output, review your response for completeness, ensure all Section A elements are accurately represented, check for inconsistencies or uncertainty, and revise the answer if needed.
 ```
 
-## Pattern 7: Steering automode reasoning
+### Pattern 7: Steering automode reasoning
 
 Explicit reasoning cues give you control over how much thinking the model applies. Without this guidance, your agent might over-explain simple answers or under-explain complex decisions.
 
@@ -412,7 +412,7 @@ Use this pattern when your workflow requires:
 - Switching between high-level summaries and deeper analysis.
 - Consistent depth across multiple agents or use cases.
 
-## Pattern 8: Apply a literal-execution header for immediate stability
+### Pattern 8: Apply a literal-execution header for immediate stability
 
 A literal-execution header helps temporarily stabilize an existing agent, especially after a model change. This pattern is especially useful as an interim fix while you update the full instruction set. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md)
 
@@ -431,7 +431,7 @@ Use this pattern when:
 - You need a fast short-term mitigation before applying deeper structural improvements.
 - You want to diagnose whether inference or instruction ambiguity is causing the problem.
 
-## Pattern 9: Evaluate and migrate existing declarative agent instructions
+### Pattern 9: Evaluate and migrate existing declarative agent instructions
 
 Use a structured evaluation prompt to quickly audit an existing agent, identify specific weaknesses, and generate precise fixes.
 
