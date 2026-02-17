@@ -76,11 +76,13 @@ Structure is one of the strongest signals used to interpret intent:
 Break multi‑action instructions into clearly separated units. This approach reduces ambiguity and prevents the model from merging or reinterpreting tasks.
 
 - Instead of: "Extract metrics and summarize findings."
-- Use: "Extract metrics." and "Summarize findings."
+- Use separate steps:
+    1. "Extract metrics."
+    1. "Summarize findings."
 
 ### Always specify tone, verbosity, and output format
 
-If you don't specify tone and level of detail, the language model might infer these attributes, which can lead to inconsistent behavior. For example, specify:
+If you don't specify tone and level of detail, the language model might infer these attributes, which can lead to inconsistent behavior across models. For example, specify:
 
 - "Tone: professional and concise."
 - "Output: Three bullet points per section."
