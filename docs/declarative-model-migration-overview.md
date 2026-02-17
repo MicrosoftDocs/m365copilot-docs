@@ -81,7 +81,7 @@ While the above advice helps you lock down your agent’s behavior when necessar
 Determine which parts of your agent's behavior truly need to be fixed and which parts can be left to the model’s discretion:
 
 - For critical structure, formatting, or compliance requirements, double down on explicit instructions and even consider adding a precautionary header note to enforce those constraints under GPT 5.1.
-- For open-ended tasks or simple goals, give GPT 5.1 clear goals and let it exercise its adaptive reasoning to find the best solution. 
+- For open-ended tasks or simple goals, give GPT 5.1 clear goals and let it exercise its adaptive reasoning to find the best solution.
 
 ## Next step
 
