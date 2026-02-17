@@ -67,7 +67,7 @@ For teams deploying mission-critical agents, these changes can cause disruptions
 
 ## Next step
 
-Learn the core principles for resilient declarative agent instruction design.
+As you adapt your declarative agents to the shift from GPT 5.0's literal-first behavior to GPT 5.1's intent-first reasoning, update how you write instructions. GPT 5.1 is more flexible and adaptive, but it's also more sensitive to ambiguity. Clear, structured, and explicit instructions are key to ensuring consistent and reliable outcomes. To help you craft instructions that align with GPT 5.1's capabilities and avoid common pitfalls, review the guidance in this article:
 
 > [!div class="nextstepaction"]
 > [Write effective instructions for declarative agents](declarative-agent-instructions.md)
