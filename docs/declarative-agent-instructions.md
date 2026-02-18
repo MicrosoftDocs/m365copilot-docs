@@ -23,7 +23,7 @@ If your declarative agent also has API plugins as actions, the OpenAPI document 
 This guidance applies to developers and makers who are using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
 
 > [!IMPORTANT]
-> As we transition to newer GPT versions, the model’s reasoning approach is evolving from a primarily literal-first interpretation to a more intent-first and adaptive style. This shift may affect how your declarative agent instructions are understood and executed, particularly in structured or step-by-step scenarios. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md)
+> As Microsoft transitions to newer GPT versions, the model’s reasoning approach is evolving from a primarily literal-first interpretation to a more intent-first and adaptive style. This shift might affect how your declarative agent instructions are understood and executed, particularly in structured or step-by-step scenarios. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
 
 ## Instruction components
 
@@ -126,8 +126,49 @@ Examples help the agent understand instructions.
 
 Your wording signals how much reasoning you want the model to apply.
 
-- To increase depth, use phrases like "Analyze," "Evaluate," "Think step by step," or "Reflect before answering."
-- To reduce depth, use phrases like "Short answer only; no explanation."
+**Deep reasoning**:
+
+To increase depth:
+
+- Use explicit reasoning verbs ("analyze", "derive", "evaluate", "justify").
+- Add meta-reasoning cues ("think step by step", "reflect", "verify logic").
+- Structure tasks into multiple dependent steps.
+
+```md
+Use deep reasoning. Break the problem into steps, analyze each step, evaluate alternatives, and justify the final decision. Reflect before answering.
+Task: Determine the optimal 3-year migration strategy given constraints A, B, and C.
+```
+
+To detect when deep reasoning selected. This approach works because GPT‑5's routing system includes reasoning-token awareness.
+
+```md
+Before answering, report in one sentence whether you needed deep reasoning or minimal reasoning to solve this. Then provide the final answer only.
+```
+
+**Moderate reasoning (balanced)**:
+
+To balance reasoning:
+
+- Ask for "concise but structured explanation".
+- Provide clear constraints, but not meta‑reasoning cues.
+
+```md
+Provide a concise but structured explanation. Include a short summary, 3 key drivers, and a final recommendation. No step-by-step reasoning required.
+Task: Explain the trade offs between solution X and Y.
+```
+
+**Fast and minimal reasoning**:
+
+To reduce depth:
+
+- Signal brevity; Specify "short, fast response; no reasoning/explanation".
+- Avoid analytical verbs and multi-step structures.
+- Use single‑intent, single-phase imperative phrasing.
+
+```md
+Short answer only. No reasoning or explanation. Provide the final result only.
+Task: Extract the product name and renewal date from this paragraph.
+```
 
 ### Avoid common prompt failures
 
@@ -149,7 +190,7 @@ A self-check step reinforces completeness and ensures the agent verifies alignme
 
 ### Apply a stabilizing header when needed
 
-When an agent shows signs of inference drift or step reordering, especially following a model update, add a short header that instructs the model to interpret the instructions literally and avoid inference. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md)
+When an agent shows signs of inference drift or step reordering, especially following a model update, add a short header that instructs the model to interpret the instructions literally and avoid inference. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
 
 ### Iterate on your instructions
 
@@ -416,7 +457,7 @@ Use this pattern when your workflow requires:
 
 ### Pattern 8: Apply a literal-execution header for immediate stability
 
-A literal-execution header helps temporarily stabilize an existing agent, especially after a model change. This pattern is especially useful as an interim fix while you update the full instruction set. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md)
+A literal-execution header helps temporarily stabilize an existing agent, especially after a model change. This pattern is especially useful as an interim fix while you update the full instruction set. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
 
 ```md
 Always interpret instructions literally.
