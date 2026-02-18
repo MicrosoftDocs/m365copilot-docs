@@ -64,7 +64,7 @@ For more information, review how to [structure instructions in Markdown](declara
 
 When knowledge sources and constraints are well defined, GPT 5.1 stays within them. When the goal matters more than the path, the model adapts its plan and combines that planning freedom with the guardrails it can identify. This makes GPT 5.1 more resilient in real-world workflows where inputs are often imperfect.
 
-### Output style is now an explicit dimension
+### Output style is an explicit dimension
 
 GPT 5.0 uses a direct and factual tone. GPT 5.1 introduces eight consistent output profiles:
 
@@ -79,7 +79,7 @@ GPT 5.0 uses a direct and factual tone. GPT 5.1 introduces eight consistent outp
 
 You can explicitly prompt for these profiles or they can be implicitly inferred. This approach reduces the need for repetitive style instructions. For more information, see how to [handle tone and style](declarative-agent-instructions.md#always-specify-tone-verbosity-and-output-format), as this guidance directly helps mitigate the differences introduced by GPT 5.1.
 
-### Reasoning is now dynamically selected
+### Reasoning is dynamically selected
 
 GPT 5.0 relied on explicit instructions to switch into deeper reasoning. GPT 5.1 introduces dynamic routing:
 
@@ -95,7 +95,7 @@ As a result:
 
 For more information, see how to [control reasoning through phrasing](declarative-agent-instructions.md#control-reasoning-through-phrasing), as this directly helps mitigate the differences introduced by GPT 5.1.
 
-### Results: faster, clearer, more reliable outputs
+### Results: adaptive speed, depth, and precision
 
 These improvements come from a fundamental change in how the system models and selects reasoning.
 
