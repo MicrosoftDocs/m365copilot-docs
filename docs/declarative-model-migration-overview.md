@@ -58,11 +58,11 @@ In practice:
 - Use **strict, step‑by‑step instructions** when the model must follow a defined business process, specific formatting rules, or a fixed reasoning or retrieval sequence.
     - Provide complete, explicit steps and clearly state any required formatting.
     - The model might require less reasoning and respond with lower latency, as long as the instructions are clear and complete.
-    - Any deviations from the process must be managed through explicit corrective instructions, because the model won't infer missing steps or reinterpret the workflow.
+    - Manage any deviations from the process through explicit corrective instructions, because the model won't infer missing steps or reinterpret the workflow.
 - Use **goal‑focused prompts** with minimal procedural detail when tools, knowledge sources, and guardrails are already well defined, and when the output format is flexible.
     - Provide clear goals, identify the tools or sources that should be used, and define the guardrails, but avoid over‑specifying the process.
     - The model might use adaptive planning and reasoning, which can increase latency when deeper reasoning, tool iteration, or exception handling is required.
-    - This approach can yield surprisingly strong intent understanding, and future model improvements might further enhance goal‑completion and planning quality.
+    - This approach can yield surprisingly strong intent understanding, and future model improvements might further enhance goal-completion and planning quality.
 
 For more information, review how to [structure instructions in Markdown](declarative-agent-instructions.md#structure-instructions-in-markdown).
 
@@ -115,7 +115,7 @@ When declarative agents require predictable outputs, formats, or fixed workflows
 
 For teams deploying mission-critical agents, these changes can cause disruptions, support escalations, and significant rework unless you either strengthen the instructions or set clear expectations and deliberately leave room to benefit from model improvements.
 
-## What types of instructions lead to unexpected outcomes across versions?
+## What types of instructions can lead to unexpected outcomes across versions?
 
 If you see unexpected results with GPT 5.1, here are some explanations for how your instructions might be interpreted:
 
