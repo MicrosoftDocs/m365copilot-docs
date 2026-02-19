@@ -6,6 +6,8 @@ ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 06/18/2025
+ms.contributors:
+  - kkanjitajdin
 ---
 
 # Write effective instructions for declarative agents
@@ -107,13 +109,13 @@ Define specialized terms, formulas, acronyms, and dataset‑specific language. T
 
 Clearly call out the names of actions, capabilities, or knowledge sources involved at each step.
 
-- **Actions**: for example, "Use `Jira` to fetch tickets."
-- **Copilot connector knowledge**: for example, "Use `ServiceNow KB` for help articles."
-- **SharePoint knowledge**: for example, "Reference SharePoint or OneDrive internal documents."
-- **Email messages**: for example, "Check user emails for relevant information."
-- **Teams messages**: for example, "Search Teams chat history."
-- **Code interpreter**: for example, "Use code interpreter to generate bar or pie charts."
-- **People knowledge**: for example, "Use people knowledge to fetch user email."
+- **Actions**: For example, "Use `Jira` to fetch tickets."
+- **Copilot connector knowledge**: For example, "Use `ServiceNow KB` for help articles."
+- **SharePoint knowledge**: For example, "Reference SharePoint or OneDrive internal documents."
+- **Email messages**: For example, "Check user emails for relevant information."
+- **Teams messages**: For example, "Search Teams chat history."
+- **Code interpreter**: For example, "Use code interpreter to generate bar or pie charts."
+- **People knowledge**: For example, "Use people knowledge to fetch user email."
 
 ### Provide examples
 
@@ -218,7 +220,7 @@ The following diagram illustrates the iterative process for creating and refinin
 
 ## Example instructions
 
-The following example instructions are for an agent that can help resolve common IT issues.
+The following example instructions are for an agent that can help resolve common IT problems.
 
 ```md
 # OBJECTIVE
@@ -307,7 +309,7 @@ Guide users through issue resolution by gathering information, checking outages,
 
 ## Instruction templates and design patterns
 
-This section provides production-ready patterns and templates that you can easily add to your declarative agent instructions.
+This section provides patterns and templates that you can add to your declarative agent instructions. The examples shown aren't prescriptive. Use them as a starting point and adapt them to the requirements of your use case.
 
 ### Pattern 1: Convert ambiguous multitask requests into deterministic workflows
 
@@ -391,9 +393,9 @@ Example shape:
 
 Use this pattern when your output must follow:
 
-- A precise format (bullets, table, JSON, multi‑page summary).
+- A precise format (bullets, table, JSON, multi-page summary).
 - A specified level of detail (short, medium, detailed).
-- A compliance, audit, or customer‑facing template.
+- A compliance, audit, or customer-facing template.
 - A business process requiring consistent formatting across teams.
 
 ### Pattern 5: Clean Markdown structure
