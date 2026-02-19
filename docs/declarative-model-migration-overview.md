@@ -38,11 +38,11 @@ GPT 5.1 introduces adaptive reasoning:
 - It dynamically selects the appropriate reasoning depth per request.
 - It replans when instructions are ambiguous or incomplete.
 - Tone and verbosity shift based on the inferred context.
-- When goals are clear but steps are not, the model plans its own approach.
+- When goals are clear but steps aren't, the model plans its own approach.
 
 This behavior produces more capable agents but also increases sensitivity to ambiguous prompts.
 
-## What this means in practice
+## What this change means in practice
 
 ### Formatting and reasoning act as control signals
 
@@ -55,8 +55,14 @@ In these cases, the model combines planning freedom with well-defined guardrails
 
 In practice:
 
-Clear, explicit process and formatting > strict execution
-Clear goals with flexible form > adaptive planning within guardrails
+- Use **strict, step‑by‑step instructions** when the model must follow a defined business process, specific formatting rules, or a fixed reasoning or retrieval sequence.
+    - Provide complete, explicit steps and clearly state any required formatting.
+    - The model might require less reasoning and respond with lower latency, as long as the instructions are clear and complete.
+    - Any deviations from the process must be managed through explicit corrective instructions, because the model will not infer missing steps or reinterpret the workflow.
+- Use **goal‑focused prompts** with minimal procedural detail when tools, knowledge sources, and guardrails are already well defined, and when the output format is flexible.
+    - Provide clear goals, identify the tools or sources that should be used, and define the guardrails, but avoid over‑specifying the process.
+    - The model might use adaptive planning and reasoning, which can increase latency when deeper reasoning, tool iteration, or exception handling is required.
+    - This approach can yield surprisingly strong intent understanding, and future model improvements may further enhance goal‑completion and planning quality.
 
 For more information, review how to [structure instructions in Markdown](declarative-agent-instructions.md#structure-instructions-in-markdown).
 
@@ -79,39 +85,23 @@ GPT 5.0 uses a direct and factual tone. GPT 5.1 introduces eight consistent outp
 
 You can explicitly prompt for these profiles or they can be implicitly inferred. This approach reduces the need for repetitive style instructions. For more information, see how to [handle tone and style](declarative-agent-instructions.md#always-specify-tone-verbosity-and-output-format), as this guidance directly helps mitigate the differences introduced by GPT 5.1.
 
-### Reasoning is dynamically selected
+### Adaptive reasoning in GPT 5.1 compared to dynamic routing in GPT 5.0
 
-GPT 5.0 relied on explicit instructions to switch into deeper reasoning. GPT 5.1 introduces dynamic routing:
-
-- The model evaluates task complexity and ambiguity.
-- It selects between multiple reasoning modes (for example, fast versus deep reasoning).
-- Each mode has multiple internal profiles optimized for speed, depth, or accuracy.
-
-As a result:
-
-- Simple tasks run faster and with less verbosity.
-- Complex tasks trigger deeper reasoning automatically.
-- Ambiguous tasks are re-planned instead of failing silently.
-
-For more information, see how to [control reasoning through phrasing](declarative-agent-instructions.md#control-reasoning-through-phrasing), as this directly helps mitigate the differences introduced by GPT 5.1.
-
-### Results: adaptive speed, depth, and precision
-
-These improvements come from a fundamental change in how the system models and selects reasoning.
+Adaptive reasoning brings fundamental changes to how the models work:
 
 - GPT 5.0 exposes a chat model and a separate reasoning model. In Auto mode, the system switches to the reasoning model only when deeper reasoning is explicitly requested or clearly required.
 - GPT 5.1 still has two primary models (instant and thinking), but each model now supports multiple reasoning levels.
-- In Auto mode, the system dynamically selects both the model and the reasoning level based on task requirements and prompt signals.
 - GPT 5.1 also supports adaptive reasoning, meaning it can choose different models and reasoning depths for different parts of the same request as it works toward completion.
+- In Auto mode, the system dynamically selects both the model and the reasoning level based on task requirements and prompt signals.
 
-Resulting behavior:
+These changes affect how the models behave:
 
 - GPT 5.1 can be faster and more concise than GPT 5.0 chat for straightforward tasks.
 - It can also be slower and more verbose than GPT 5.0 reasoning when a task genuinely demands depth.
 - It follows precise and complete instructions more closely.
 - When instructions are ambiguous or incomplete, it is more likely to re-plan rather than fail or respond narrowly.
 
-This change makes GPT 5.1 more flexible and resilient across a wider range of agent and workflow scenarios.
+For more information, see how to [control reasoning through phrasing](declarative-agent-instructions.md#control-reasoning-through-phrasing), as this directly helps mitigate the differences introduced by GPT 5.1.
 
 ## Why this change matters for declarative agents
 
@@ -125,13 +115,15 @@ Declarative agents rely heavily on predictable, structured workflows. When the u
 
 For teams deploying mission-critical agents, these changes can cause disruptions, support escalations, and significant rework unless you strengthen the instructions.
 
-## What types of instructions break across versions?
+## What types of instructions can lead to unexpected outcomes across versions?
+
+If you see unexpected results with GPT 5.1, here are some explanations for how your instructions might be interpreted:
 
 - **Ambiguous or fused tasks**: When a single instruction includes multiple actions (for example, "extract metrics and summarize"), GPT 5.1 might merge steps or infer unintended processes, which reduces accuracy and predictability.
 - **Incorrect numbering**: Numbered lists can signal a strict sequence even when none was intended, causing the model to perform steps in the wrong order.
 - **Implicit or missing formats**: If you don't explicitly define tone, structure, or verbosity, GPT 5.1 attempts to infer these aspects and might produce responses that are too brief, too verbose, or inconsistent.
 - **Weak Markdown hierarchy**: Unclear hierarchy or mixed list types can cause the model to merge sections, reorder tasks, or collapse important distinctions.
-- **No validation step**: Without an explicit final check, the model might return incomplete or partially aligned outputs because it isn't prompted to verify its own work.
+- **No validation step**: Without an explicit final check, the model might return incomplete or succinct outputs based on choosing faster reasoning.
 
 ## How to keep a fixed process, format, or tone with GPT 5.1
 

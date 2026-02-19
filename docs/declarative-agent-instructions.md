@@ -139,7 +139,9 @@ Use deep reasoning. Break the problem into steps, analyze each step, evaluate al
 Task: Determine the optimal 3-year migration strategy given constraints A, B, and C.
 ```
 
-Add these instructions to detect when deep reasoning was selected, using GPT‑5’s routing system awareness of reasoning-tokens.
+To detect when deep reasoning was selected:
+
+This approach works because GPT‑5's routing system includes reasoning-token awareness.
 
 ```md
 Before answering, report in one sentence whether you needed deep reasoning or minimal reasoning to solve this. Then provide the final answer only.
