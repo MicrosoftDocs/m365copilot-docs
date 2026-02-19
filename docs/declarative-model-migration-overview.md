@@ -48,9 +48,9 @@ This behavior produces more capable agents but also increases sensitivity to amb
 
 Formatting, business processes, reasoning cues, and retrieval steps function as control signals that influence how strictly the model should execute versus how much it should adapt.
 
-When format, business processes, reasoning steps, or tool usage must be followed exactly, you should make those instructions explicit and complete. The more strictly something needs to be executed, the more clearly it should be specified.
+When format, business processes, reasoning steps, or tool usage must be followed exactly, make those instructions explicit and complete. The more strictly something needs to be executed, the more clearly it should be specified.
 
-When tools and knowledge sources are well defined, or when the goal is more important than the exact form, GPT 5.1 can be allowed to adapt its plan and its output to best meet the user's request.
+When tools and knowledge sources are well defined, or when the goal is more important than the exact form, GPT 5.1 can adapt its plan and its output to best meet the user's request.
 In these cases, the model combines planning freedom with well-defined guardrails—respecting constraints that are explicit while flexibly determining the optimal path to the outcome.
 
 In practice:
@@ -105,7 +105,7 @@ For more information, see how to [control reasoning through phrasing](declarativ
 
 ## Why this change matters for declarative agents
 
-Declarative agents rely heavily on predictable, structured workflows. When the underlying model changes how it interprets instructions, several problems can emerge:
+When declarative agents require predictable outputs, formats, or fixed workflows, model changes can surface new interpretations of instructions that cause expectation mismatches:
 
 - Steps become reordered.
 - Parallel tasks become sequential.
@@ -113,9 +113,9 @@ Declarative agents rely heavily on predictable, structured workflows. When the u
 - Tone or verbosity drifts toward "educational" or "chatty."
 - The model creates or removes steps based on inferred context.
 
-For teams deploying mission-critical agents, these changes can cause disruptions, support escalations, and significant rework unless you strengthen the instructions.
+For teams deploying mission-critical agents, these changes can cause disruptions, support escalations, and significant rework unless you either strengthen the instructions or set clear expectations and deliberately leave room to benefit from model improvements.
 
-## What types of instructions can lead to unexpected outcomes across versions?
+## What types of instructions lead to unexpected outcomes across versions?
 
 If you see unexpected results with GPT 5.1, here are some explanations for how your instructions might be interpreted:
 
