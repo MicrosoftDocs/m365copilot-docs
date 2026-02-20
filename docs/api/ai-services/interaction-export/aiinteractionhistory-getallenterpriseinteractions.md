@@ -307,6 +307,78 @@ Content-type: application/json
 }
 ```
 
+### Example 3: Get all the Copilot interactions for a user with createdDateTime filters
+
+The following example shows a request that gets all the Copilot interactions for a user within a specific date range.
+
+> [!NOTE]
+> When using the `createdDateTime` filter, it is necessary to provide both a minimum and maximum time boundary.
+
+#### Request
+
+The following example shows a request.
+
+:::zone pivot="graph-v1"
+
+```http
+GET https://graph.microsoft.com/v1.0/copilot/users/254efcd0-5094-4fc5-b2b3-1637629393e1/interactionhistory/getallenterpriseinteractions?$filter=createdDateTime gt 2025-11-24T00:00:00Z and createdDateTime lt 2025-11-25T00:00:00Z
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
+```http
+GET https://graph.microsoft.com/beta/copilot/users/254efcd0-5094-4fc5-b2b3-1637629393e1/interactionhistory/getallenterpriseinteractions?$filter=createdDateTime gt 2025-11-24T00:00:00Z and createdDateTime lt 2025-11-25T00:00:00Z
+```
+
+:::zone-end
+
+#### Response
+
+The following example shows the response. The response object shown here might be shortened for readability.
+
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "value": [
+    {
+      "id": "1764008994427",
+      "sessionId": "19:4MaLljqiHJSD-rKYK-aqJmaGuUgmlsBgQxeXaUspdz41@thread.v2",
+      "requestId": "79699122-d834-6cc2-c1df-0332a0bd982d",
+      "appClass": "IPM.SkypeTeams.Message.Copilot.BizChat",
+      "interactionType": "userPrompt",
+      "conversationType": "bizchat",
+      "etag": "1764008994427",
+      "createdDateTime": "2025-11-24T18:29:54.427Z",
+      "locale": "en-us",
+      "contexts": [],
+      "from": {
+        "@odata.type": "#microsoft.graph.chatMessageFromIdentitySet",
+        "application": null,
+        "device": null,
+        "user": {
+          "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+          "id": "254efcd0-5094-4fc5-b2b3-1637629393e1",
+          "displayName": "8:orgid:254efcd0-5094-4fc5-b2b3-1637629393e1",
+          "userIdentityType": "aadUser",
+          "tenantId": "c9d0512d-d402-4cfa-becc-4407bcf48a2d"
+        }
+      },
+      "body": {
+        "contentType": "text",
+        "content": "What are the key action items from my recent meetings?"
+      },
+      "attachments": [],
+      "links": [],
+      "mentions": []
+    }
+  ]
+}
+```
+
 ## Related content
 
 [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)
