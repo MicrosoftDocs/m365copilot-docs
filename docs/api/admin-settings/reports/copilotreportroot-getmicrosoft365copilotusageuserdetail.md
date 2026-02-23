@@ -3,7 +3,7 @@ title: "copilotReportRoot: getMicrosoft365CopilotUsageUserDetail"
 description: Recent activity data for enabled users of Microsoft 365 Copilot apps. Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace.
 author: mestew
 ms.author: mstewart
-ms.date: 01/08/2026
+ms.date: 02/19/2026
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: apiPageType
@@ -42,7 +42,21 @@ Choose the permission or permissions marked as least privileged for this API. Us
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
 | Application                            | Reports.Read.All             | Not available.                |
 
-[!INCLUDE [rbac-copilot-usage-apis](../../includes/rbac-copilot-usage-apis.md)]
+> [!IMPORTANT]
+>
+> For delegated permissions to allow apps to read service usage reports on behalf of a user, the tenant administrator must have assigned the user one of the following Microsoft Entra ID limited administrator roles:
+>
+> - Company Administrator
+> - AI Administrator
+> - Exchange Administrator
+> - SharePoint Administrator
+> - Lync Administrator
+> - Teams Service Administrator
+> - Teams Communications Administrator
+> - Reports Reader
+>
+> For more information, see [Authorization for APIs to read Microsoft 365 usage reports](/graph/reportroot-authorization).
+
 
 ## HTTP request
 
