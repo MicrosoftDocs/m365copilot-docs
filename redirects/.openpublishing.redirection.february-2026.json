@@ -3,7 +3,7 @@
     {
       "source_path_from_root": "/docs/agent-builder-tuned-models.md",
       "redirect_url": "/copilot/microsoft-365/copilot-tuning-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
