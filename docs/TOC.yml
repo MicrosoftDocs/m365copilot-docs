@@ -81,10 +81,10 @@ items:
           href: build-declarative-agents-add-skills.md
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
-      - name: Add actions with API plugins
+      - name: Add actions with plugins
         items:
         - name: Overview
-          href: overview-api-plugins.md
+          href: overview-plugins.md
         - name: Build an API plugin with TypeSpec
           href: build-api-plugins-typespec.md
         - name: Build an API plugin with an MCP server

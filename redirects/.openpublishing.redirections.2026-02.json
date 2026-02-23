@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/overview-api-plugins.md",
+      "redirect_url": "/microsoft-365-copilot/extensibility/overview-plugins",
+      "redirect_document_id": true
+    }
+  ]
+}
