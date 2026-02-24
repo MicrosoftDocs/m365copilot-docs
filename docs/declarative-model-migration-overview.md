@@ -13,9 +13,9 @@ ms.topic: article
 
 GPT 5.1 introduces a meaningful shift in how the model interprets instructions, manages reasoning depth, and adapts its output style. Compared to GPT 5.0, the system is more explicit about following instructions precisely, more adaptive in planning when ambiguity exists, and more deliberate in choosing the right level of reasoning for each task. These changes matter most for teams building declarative agents and structured workflows where predictability, controllability, and resilience are critical.
 
-This article explains what changed, why it matters, and how to adapt your prompting patterns.
+This article explains what changed in GPT 5.1, why it matters, and how to adapt your prompting patterns.
 
-## How GPT 5.0 and GPT 5.1 differ
+## Comparing GPT 5.0 and GPT 5.1
 
 ### GPT 5.0: Literal-first behavior
 
@@ -30,25 +30,27 @@ This behavior makes GPT 5.0 predictable, but it's less forgiving when prompts ar
 
 ### GPT 5.1+: Intent-first behavior
 
-GPT 5.1 introduces adaptive reasoning:
+GPT 5.1 introduces adaptive reasoning. The model:
 
-- The model interprets what the instructions intended, not just what they said.
-- It reorganizes plans to fix or optimize them.
-- It fills gaps and infers missing steps.
-- It dynamically selects the appropriate reasoning depth per request.
-- It replans when instructions are ambiguous or incomplete.
-- Tone and verbosity shift based on the inferred context.
-- When goals are clear but steps aren't, the model plans its own approach.
+- Interprets what the instructions intended, not just what they said.
+- Reorganizes plans to fix or optimize them.
+- Fills gaps and infers missing steps.
+- Dynamically selects the appropriate reasoning depth per request.
+- Replans when instructions are ambiguous or incomplete.
+- Shifts tone and verbosity based on the inferred context.
+- Plans its own approach when goals are clear but steps aren't.
 
 This behavior produces more capable agents but also increases sensitivity to ambiguous prompts.
 
-## What this change means in practice
+## Adapting agents for GPT 5.1
+
+Your agents automatically run on GPT 5.1 as part of the Copilot platform. You don't have to make any configuration changes to existing agents. Instead, you can adapt your agents by refining the agent's instructions, behaviors, and knowledge sources to take advantage of the improved reasoning and orchestration of GPT 5.1.
 
 ### Formatting and reasoning act as control signals
 
-Formatting, business processes, reasoning cues, and retrieval steps function as control signals that influence how strictly the model should execute versus how much it should adapt.
+Formatting, business processes, reasoning cues, and retrieval steps function as control signals that influence how strictly the model should run versus how much it should adapt.
 
-When format, business processes, reasoning steps, or tool usage must be followed exactly, make those instructions explicit and complete. The more strictly something needs to be executed, the more clearly it should be specified.
+When format, business processes, reasoning steps, or tool usage must be followed exactly, make those instructions explicit and complete. The more strictly something needs to run, the more clearly it should be specified.
 
 When tools and knowledge sources are well defined, or when the goal is more important than the exact form, GPT 5.1 can adapt its plan and its output to best meet the user's request.
 In these cases, the model combines planning freedom with well-defined guardrails—respecting constraints that are explicit while flexibly determining the optimal path to the outcome.
@@ -64,13 +66,13 @@ In practice:
     - The model might use adaptive planning and reasoning, which can increase latency when deeper reasoning, tool iteration, or exception handling is required.
     - This approach can yield surprisingly strong intent understanding, and future model improvements might further enhance goal-completion and planning quality.
 
-For more information, review how to [structure instructions in Markdown](declarative-agent-instructions.md#structure-instructions-in-markdown).
+For more information, see [Structure instructions in Markdown](declarative-agent-instructions.md#structure-instructions-in-markdown).
 
-### The model blends freedom with guardrails
+### Blend freedom with guardrails
 
 When knowledge sources and constraints are well defined, GPT 5.1 stays within them. When the goal matters more than the path, the model adapts its plan and combines that planning freedom with the guardrails it can identify. This approach makes GPT 5.1 more resilient in real-world workflows where inputs are often imperfect.
 
-### Output style is an explicit dimension
+### Output style as an explicit dimension
 
 GPT 5.0 uses a direct and factual tone. GPT 5.1 introduces eight consistent output profiles:
 
@@ -83,7 +85,7 @@ GPT 5.0 uses a direct and factual tone. GPT 5.1 introduces eight consistent outp
 - **Nerdy**: Technical, detail-oriented, precise
 - **Cynical**: Skeptical, dry, and matter-of-fact
 
-You can explicitly prompt for these profiles or they can be implicitly inferred. This approach reduces the need for repetitive style instructions. For more information, see how to [handle tone and style](declarative-agent-instructions.md#always-specify-tone-verbosity-and-output-format), as this guidance directly helps mitigate the differences introduced by GPT 5.1.
+You can explicitly prompt for these profiles or they can be implicitly inferred. This approach reduces the need for repetitive style instructions. For more information, see [Handle tone and style](declarative-agent-instructions.md#always-specify-tone-verbosity-and-output-format).
 
 ### Adaptive reasoning in GPT 5.1 compared to dynamic routing in GPT 5.0
 
@@ -101,7 +103,7 @@ These changes affect how the models behave:
 - It follows precise and complete instructions more closely.
 - When instructions are ambiguous or incomplete, it's more likely to replan rather than fail or respond narrowly.
 
-For more information, see how to [control reasoning through phrasing](declarative-agent-instructions.md#control-reasoning-through-phrasing), as this directly helps mitigate the differences introduced by GPT 5.1.
+For more information, see [Control reasoning through phrasing](declarative-agent-instructions.md#control-reasoning-through-phrasing).
 
 ## Why this change matters for declarative agents
 
@@ -115,7 +117,7 @@ When declarative agents require predictable outputs, formats, or fixed workflows
 
 For teams deploying mission-critical agents, these changes can cause disruptions, support escalations, and significant rework unless you either strengthen the instructions or set clear expectations and deliberately leave room to benefit from model improvements.
 
-## What types of instructions can lead to unexpected outcomes across versions?
+## What types of instructions create unexpected outcomes across versions?
 
 If you see unexpected results with GPT 5.1, here are some explanations for how your instructions might be interpreted:
 
@@ -125,7 +127,7 @@ If you see unexpected results with GPT 5.1, here are some explanations for how y
 - **Weak Markdown hierarchy**: Unclear hierarchy or mixed list types can cause the model to merge sections, reorder tasks, or collapse important distinctions.
 - **No validation step**: Without an explicit final check, the model might return incomplete or succinct outputs based on choosing faster reasoning.
 
-## How to keep a fixed process, format, or tone with GPT 5.1
+## Apply a fixed process, format, or tone with GPT 5.1
 
 If your agent must follow a fixed workflow, rigid output format, or a specific tone of voice, adapt your instructions to account for GPT 5.1's intent-first behavior. Be more explicit and structured in how you write your agent instructions. Key strategies include:
 
@@ -136,26 +138,26 @@ If your agent must follow a fixed workflow, rigid output format, or a specific t
 
 Applying these techniques makes your agent's behavior more predictable under GPT 5.1, closely matching the structured outputs you intended. For more information, see [Best practices for agent instructions](declarative-agent-instructions.md).
 
-## Embracing GPT 5.1's adaptive reasoning
+## Embracing GPT 5.1 adaptive reasoning
 
-While the preceding advice helps you lock down your agent’s behavior when necessary, it's also important to recognize situations where you can take advantage of GPT 5.1's more adaptive reasoning instead of fighting it. GPT 5.1 is designed to be more goal-oriented and capable of improvising steps to satisfy an objective. In less strictly regulated scenarios, this approach can improve your agent's performance and user experience. Here's how to harness GPT 5.1's flexibility:
+While the preceding advice helps you lock down your agent’s behavior when necessary, it's also important to recognize situations where you can take advantage of GPT 5.1's more adaptive reasoning. GPT 5.1 is designed to be more goal-oriented and capable of improvising steps to satisfy an objective. In less strictly regulated scenarios, this approach can improve your agent's performance and user experience. To harness GPT 5.1's flexibility:
 
-- Focus on the end goal in your instructions. If the precise method isn't as important as the result, lean into GPT 5.1's intent-driven nature. Describe what outcome the agent should achieve, and let the model determine how to achieve it. For example, instead of painstakingly outlining every step for a simple task ("Step 1: do A, Step 2: do B, Step 3: do C"), you might instruct: "The agent’s goal is to accomplish A using the tools and information available, ensuring that B and C are addressed in the process." GPT 5.1 is likely to devise a reasonable plan to meet that goal. This approach yields a more concise instruction set and lets the model apply its built-in reasoning to fill in straightforward or common-sense steps.
-- Allow the model to fill in routine details. GPT 5.1 often proactively provides useful additions without being explicitly told. If these additions align with your intentions, you don't need to explicitly forbid them. Embrace the model's helpfulness for minor details. For instance, if your agent's purpose is to draft a friendly reply to customer inquiries, GPT 5.1 might naturally include a pleasant greeting and sign-off even if your instructions didn't mention them. Rather than constraining the agent to an unnaturally terse style, you can verify that its extra content is acceptable and on-tone. Use your instructions to set the overall tone ("friendly and helpful") and let the model's learned behavior fill in the polite flourishes.
-- Simplify where appropriate. With GPT 5.1, you might find you no longer need overly elaborate instruction workflows for certain tasks. The model's improved understanding of intent can reduce the need for defensive prompting. For example, GPT 5.0 might have required a complex series of checks to handle an ambiguous user request safely. GPT 5.1 is more likely to ask clarifying questions or handle ambiguity intelligently on its own. In such cases, you can remove or relax some restrictive instructions and trust the model's judgment, which can make your agent more responsive and natural. Always ensure that the agent's actions remain within acceptable bounds but avoid micro-managing the model if it's not necessary.
+- **Focus on the end goal in your instructions.** If the precise method isn't as important as the result, lean into GPT 5.1's intent-driven nature. Describe what outcome the agent should achieve, and let the model determine how to achieve it. For example, instead of outlining every step for a simple task ("Step 1: do A, Step 2: do B, Step 3: do C"), you might instruct: "The agent’s goal is to accomplish A using the tools and information available, ensuring that B and C are addressed in the process." GPT 5.1 is likely to devise a reasonable plan to meet that goal. This approach yields a more concise instruction set and lets the model apply its built-in reasoning to fill in straightforward or common-sense steps.
+- **Allow the model to fill in routine details.** GPT 5.1 often proactively provides useful additions without being explicitly told. If these additions align with your intentions, you don't need to explicitly forbid them. Embrace the model's helpfulness for minor details. For example, if your agent's purpose is to draft a friendly reply to customer inquiries, GPT 5.1 might naturally include a pleasant greeting and sign-off even if your instructions didn't mention them. Rather than constraining the agent to an unnaturally terse style, you can verify that its extra content is acceptable and on-tone. Use your instructions to set the overall tone ("friendly and helpful") and let the model's learned behavior fill in the polite flourishes.
+- **Simplify where appropriate.** With GPT 5.1, you might find you no longer need overly elaborate instruction workflows for certain tasks. The model's improved understanding of intent can reduce the need for defensive prompting. For example, GPT 5.0 might have required a complex series of checks to handle an ambiguous user request safely. GPT 5.1 is more likely to ask clarifying questions or handle ambiguity intelligently on its own. In such cases, you can remove or relax some restrictive instructions and trust the model's judgment, which can make your agent more responsive and natural. Always ensure that the agent's actions remain within acceptable bounds but avoid micro-managing the model if it isn't necessary.
 
-Determine which parts of your agent's behavior truly need to be fixed and which parts can be left to the model’s discretion:
+Determine which parts of your agent's behavior need to be fixed and which parts can be left to the model’s discretion:
 
 - For critical structure, formatting, or compliance requirements, double down on explicit instructions and even consider adding a precautionary header note to enforce those constraints under GPT 5.1.
 - For open-ended tasks or simple goals, give GPT 5.1 clear goals and let it exercise its adaptive reasoning to find the best solution.
 
+Adapting to a new foundational model can be challenging, but it’s also an opportunity to improve your declarative agent’s instructions for greater reliability and versatility. For a comprehensive list of best practices, see [writing effective instructions for declarative agents](declarative-agent-instructions.md). Many of the principles in that guide - such as using clear language, structuring instructions in Markdown, providing examples, and explicitly specifying what the agent should and shouldn’t do - are now more important than ever with GPT 5.1. In particular, apply the guidance for [step-by-step workflows](declarative-agent-instructions.md#build-step-by-step-workflows-with-transitions) and [handling of tone and style](declarative-agent-instructions.md#always-specify-tone-verbosity-and-output-format).
+
+Test your agent thoroughly with the GPT 5.1 model after you update its instructions. Try various user queries, including edge cases and ambiguous requests, to see how the agent responds. If you still observe unintended behavior, like extra steps, changes in tone, or missing details, refine your instructions further. Over time, these adjustments not only address the immediate model upgrade challenges but also make your agent more robust to future model updates.
+
+As you adapt your declarative agents to the shift from GPT 5.0's literal-first behavior to GPT 5.1's intent-first reasoning, update how you write instructions. GPT 5.1 is more flexible and adaptive, but it's also more sensitive to ambiguity. Clear, structured, and explicit instructions are key to ensuring consistent and reliable outcomes. 
+
 ## Next step
-
-Adapting to a new foundational model can be challenging, but it’s also an opportunity to improve your declarative agent’s instructions for greater reliability and versatility. For a comprehensive list of best practices, review the guidance for [writing effective instructions for declarative agents](declarative-agent-instructions.md). Many of the principles in that guide - such as using clear language, structuring instructions in Markdown, providing examples, and explicitly specifying what the agent should and shouldn’t do - are now more important than ever with GPT 5.1. In particular, pay attention to sections on [step-by-step workflows](declarative-agent-instructions.md#build-step-by-step-workflows-with-transitions) and [handling of tone and style](declarative-agent-instructions.md#always-specify-tone-verbosity-and-output-format), as these sections directly help mitigate the differences introduced by GPT 5.1.
-
-Test your agent thoroughly with the GPT 5.1 model after updating its instructions. Try various user queries, including edge cases and ambiguous requests, to see how the agent responds. If you still observe unintended behavior, like extra steps, changes in tone, or missing details, refine your instructions further. Over time, these adjustments not only address the immediate model upgrade challenges but also make your agent more robust to future model updates.
-
-As you adapt your declarative agents to the shift from GPT 5.0's literal-first behavior to GPT 5.1's intent-first reasoning, update how you write instructions. GPT 5.1 is more flexible and adaptive, but it's also more sensitive to ambiguity. Clear, structured, and explicit instructions are key to ensuring consistent and reliable outcomes. To help you craft instructions that align with GPT 5.1's capabilities and avoid common pitfalls, review the guidance in this article:
 
 > [!div class="nextstepaction"]
 > [Write effective instructions for declarative agents](declarative-agent-instructions.md)
