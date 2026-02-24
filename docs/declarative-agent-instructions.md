@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/18/2025
+ms.date: 02/24/2026
 ms.contributors:
   - kkanjitajdin
 ---
@@ -25,7 +25,7 @@ If your declarative agent also has API plugins as actions, the OpenAPI document 
 This guidance applies to developers and makers who are using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
 
 > [!IMPORTANT]
-> As Microsoft transitions to newer GPT versions, the model’s reasoning approach is evolving from a primarily literal-first interpretation to a more intent-first and adaptive style. This shift might affect how your declarative agent instructions are understood and executed, particularly in structured or step-by-step scenarios. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
+> As Microsoft transitions to newer GPT versions, the model's reasoning approach is evolving from a literal-first interpretation to a more intent-first and adaptive style. This shift might affect how your declarative agent umderstands and responds to your instructions, particularly in structured or step-by-step scenarios. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
 
 ## Instruction components
 
@@ -35,7 +35,7 @@ A well-structured set of instructions ensures that the agent understands its rol
 - General guidelines, including general directions, tone, and restrictions
 - Skills
 
-When relevant, include the following components in the instructions:
+When relevant, also include the following components in the instructions:
 
 - Step-by-step instructions
 - Error handling and limitations
@@ -70,25 +70,25 @@ Break workflows into modular, unambiguous, and nonconflicting steps. Each step s
 Structure is one of the strongest signals used to interpret intent:
 
 - Use *sections* to group related tasks into logical categories, without implying sequence.
-- Use *bullets* for parallel tasks that can be completed independently, avoiding numbering that might introduce unintended order.
+- Use *bullets* for parallel tasks that can be completed independently. Avoid numbering that might introduce unintended order.
 - Use *steps* for actions that must occur in a required sequence, and reserve them only for true workflows.
 
 ### Make tasks atomic
 
-Break multi‑action instructions into clearly separated units. This approach reduces ambiguity and prevents the model from merging or reinterpreting tasks.
+Break multiaction instructions into clearly separated units. This approach reduces ambiguity and prevents the model from merging or reinterpreting tasks.
 
-- Instead of: "Extract metrics and summarize findings."
+- Instead of: Extract metrics and summarize findings.
 - Use separate steps:
-    1. "Extract metrics."
-    1. "Summarize findings."
+    1. Extract metrics.
+    1. Summarize findings.
 
 ### Always specify tone, verbosity, and output format
 
 If you don't specify tone and level of detail, the language model might infer these attributes, which can lead to inconsistent behavior across models. For example, specify:
 
-- "Tone: professional and concise."
-- "Output: Three bullet points per section."
-- "Return only the requested format; no explanations."
+- Tone: professional and concise.
+- Output: Three bullet points per section.
+- Return only the requested format; no explanations.
 
 ### Structure instructions in Markdown
 
@@ -99,7 +99,7 @@ To provide emphasis and clarity on the order of steps, use [Markdown](https://ww
 - Highlight tool or system names (for example, `Jira`, `ServiceNow`, `Teams`) by using backticks (`````).
 - Make critical instructions bold by using `**`.
 
-Clear headings and consistent list structures help the model understand your intended hierarchy. Avoid mixing list types in ways that could introduce unintended interpretation.
+Clear headings and consistent list structures help the model understand your intended hierarchy. Avoid mixing list types in ways that can introduce unintended interpretation.
 
 ### Provide domain vocabulary
 
@@ -132,8 +132,8 @@ Your wording signals how much reasoning you want the model to apply.
 
 To increase depth:
 
-- Use explicit reasoning verbs ("analyze", "derive", "evaluate", "justify").
-- Add meta-reasoning cues ("think step by step", "reflect", "verify logic").
+- Use explicit reasoning verbs (analyze, derive, evaluate, justify).
+- Add meta-reasoning cues (think step by step, reflect, verify logic).
 - Structure tasks into multiple dependent steps.
 
 ```md
@@ -143,30 +143,30 @@ Task: Determine the optimal 3-year migration strategy given constraints A, B, an
 
 To detect when deep reasoning was selected:
 
-This approach works because GPT‑5's routing system includes reasoning-token awareness.
-
 ```md
 Before answering, report in one sentence whether you needed deep reasoning or minimal reasoning to solve this. Then provide the final answer only.
 ```
+
+This approach works because GPT‑5's routing system includes reasoning-token awareness.
 
 #### Moderate reasoning (balanced)
 
 To balance reasoning:
 
-- Ask for "concise but structured explanation".
+- Ask for concise but structured explanation.
 - Provide clear constraints, but not meta‑reasoning cues.
 
 ```md
 Provide a concise but structured explanation. Include a short summary, 3 key drivers, and a final recommendation. No step-by-step reasoning required.
-Task: Explain the trade offs between solution X and Y.
+Task: Explain the tradeoffs between solution X and Y.
 ```
 
 #### Fast and minimal reasoning
 
 To reduce depth:
 
-- Signal brevity; Specify "short, fast response; no reasoning/explanation".
-- Avoid analytical verbs and multi-step structures.
+- Signal brevity. Specify short, fast response; no reasoning/explanation.
+- Avoid analytical verbs and multistep structures.
 - Use single‑intent, single-phase imperative phrasing.
 
 ```md
@@ -176,7 +176,7 @@ Task: Extract the product name and renewal date from this paragraph.
 
 ### Avoid common prompt failures
 
-Be aware of these pitfalls and their solutions.
+Be aware of the following pitfalls and their solutions to avoid common failures.
 
 - **Overeager tool use**
   - _Problem_: The model calls tools without needed inputs.
@@ -190,11 +190,11 @@ Be aware of these pitfalls and their solutions.
 
 ### Add a final self-evaluation step
 
-A self-check step reinforces completeness and ensures the agent verifies alignment with your instructions before responding. For example, "Before finalizing, confirm that all items from Section A appear in the summary."
+A self-check step reinforces completeness and ensures that the agent verifies alignment with your instructions before responding. For example: Before finalizing, confirm that all items from Section A appear in the summary.
 
 ### Apply a stabilizing header when needed
 
-When an agent shows signs of inference drift or step reordering, especially following a model update, add a short header that instructs the model to interpret the instructions literally and avoid inference. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
+When an agent shows signs of inference drift or step reordering, especially following a model update, add a short header that instructs the model to interpret the instructions literally and avoid inference. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
 
 ### Iterate on your instructions
 
@@ -339,7 +339,7 @@ Before finalizing: confirm every metric has (a) a value, (b) a source, and (c) n
 
 ### Pattern 2: Correct parallel versus sequential structure
 
-By using this pattern, you make sure the model separates parallel and sequential logic. The model executes workflows correctly without adding or reordering steps.
+By using this pattern, you make sure the model separates parallel and sequential logic. The model runs workflows correctly without adding or reordering steps.
 
 ```md
 Section A — Extract Data  
@@ -418,7 +418,7 @@ Clean, intentional Markdown ensures the model can reliably parse your instructio
 By adding an explicit self-check step, you encourage the model to validate completeness, verify alignment with instructions, and correct omissions before responding. This step increases consistency and reliability.
 
 ```md
-## Section A: Extract Data (Non Sequential)
+## Section A: Extract Data (Non-Sequential)
 Perform these tasks when the user requests data extraction from the document:
 - Extract pricing changes.
 - Extract margin changes.
@@ -431,7 +431,7 @@ Step 1: Integrate all extracted elements from Section A.
 Step 2: Produce a clear, well structured 2 page call prep summary.
 
 ## Final Check: Self Evaluation
-Before finalizing the output, review your response for completeness, ensure all Section A elements are accurately represented, check for inconsistencies or uncertainty, and revise the answer if needed.
+Before finalizing the output, review your response for completeness, ensure that all Section A elements are accurately represented, check for inconsistencies or uncertainty, and revise the answer if needed.
 ```
 
 ### Pattern 7: Steering automode reasoning
@@ -461,7 +461,7 @@ Use this pattern when your workflow requires:
 
 ### Pattern 8: Apply a literal-execution header for immediate stability
 
-A literal-execution header helps temporarily stabilize an existing agent, especially after a model change. This pattern is especially useful as an interim fix while you update the full instruction set. For more information, [understand model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
+A literal-execution header helps temporarily stabilize an existing agent, especially after a model change. This pattern is especially useful as an interim fix while you update the full instruction set. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
 
 ```md
 Always interpret instructions literally.
