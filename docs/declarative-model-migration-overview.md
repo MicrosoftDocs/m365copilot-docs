@@ -42,9 +42,7 @@ GPT 5.1 introduces adaptive reasoning. The model:
 
 This behavior produces more capable agents but also increases sensitivity to ambiguous prompts.
 
-## Adapting agents for GPT 5.1
-
-Your agents automatically run on GPT 5.1 as part of the Copilot platform. You don't have to make any configuration changes to existing agents. Instead, you can adapt your agents by refining the agent's instructions, behaviors, and knowledge sources to take advantage of the improved reasoning and orchestration of GPT 5.1.
+## What this change means in practice
 
 ### Formatting and reasoning act as control signals
 
