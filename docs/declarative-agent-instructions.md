@@ -25,7 +25,7 @@ If your declarative agent also has API plugins as actions, the OpenAPI document 
 This guidance applies to developers and makers who are using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
 
 > [!IMPORTANT]
-> As Microsoft transitions to newer GPT versions, the model's reasoning approach is evolving from a literal-first interpretation to a more intent-first and adaptive style. This shift might affect how your declarative agent umderstands and responds to your instructions, particularly in structured or step-by-step scenarios. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
+> As Microsoft transitions to newer GPT versions, the model's reasoning approach is evolving from a literal-first interpretation to a more intent-first and adaptive style. This shift might affect how your declarative agent understands and responds to your instructions, particularly in structured or step-by-step scenarios. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
 
 ## Instruction components
 
