@@ -1,7 +1,7 @@
 ---
 title: "aiInteractionHistory: getAllEnterpriseInteractions"
 description: Get all Microsoft 365 Copilot interaction data, including user prompts to Copilot and Copilot responses.
-ms.date: 02/11/2026
+ms.date: 02/23/2026
 author: bkeerthivasa
 ms.author: bkeerthivasa
 ms.localizationpriority: high
@@ -312,7 +312,7 @@ Content-type: application/json
 The following example shows a request that gets all the Copilot interactions for a user within a specific date range.
 
 > [!NOTE]
-> When using the `createdDateTime` filter, it is necessary to provide both a minimum and maximum time boundary.
+> When you use the `createdDateTime` filter, provide both a minimum and maximum time boundary.
 
 #### Request
 
