@@ -26,7 +26,7 @@ GPT 5.0 generally prioritizes literal interpretation of instructions:
 - Produce consistent, professional, and concise output.
 - Avoid filling in missing information.
 
-This behavior makes GPT 5.0 predictable, but it's less forgiving when prompts are incomplete or when users expect the model to infer intent.
+This behavior makes GPT 5.0 predictable, but it's less accurate when prompts are incomplete or when users expect the model to infer intent.
 
 ### GPT 5.1+: Intent-first behavior
 
