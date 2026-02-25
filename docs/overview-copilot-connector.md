@@ -15,14 +15,7 @@ Microsoft 365 Copilot connectors allow you to bring external, line-of-business d
 - **Synced connectors** ingest and index external content into Microsoft Graph.
 - **Federated connectors (early access preview)** retrieve content in real time using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
 
-> [!NOTE]
-> Federated connectors are in early access preview and are available only to [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) and [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release) members. Early access preview features are still in development and are subject to change.
-
 Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Context IQ, and Microsoft 365 Copilot.
-
-For more information about federated connectors, see [Federated connectors overview](/microsoftsearch/federated-connectors-overview).
-
-
 
 > [!NOTE]
 > Copilot connectors are available in commercial environments and in Microsoft 365 Government Community Cloud (GCC) and Government Community Cloud High (GCCH). They aren't available in Department of Defense (DoD) environments.
@@ -40,6 +33,11 @@ Microsoft 365 Copilot supports two connector models tailored to different integr
 | Authentication | Microsoft Entra ID app registration | MCP-supported methods (OAuth 2.0 or service-specific) |
 | Content retrieval | Indexed search and synthesis | Real-time API calls |
 | Availability | Global, GCC, GCCH | Varies by federated connector availability |
+
+For more information about federated connectors, see [Federated connectors overview](/microsoftsearch/federated-connectors-overview).
+
+> [!NOTE]
+> Federated connectors are in early access preview and are available only to [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) and [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release) members. Early access preview features are still in development and are subject to change.
 
 ## How connector content surfaces in Microsoft 365 Copilot
 
@@ -99,7 +97,7 @@ You can create a synced Copilot connector in one of three ways:
 - Use the [connector SDK](/graph/custom-connector-sdk-sample-create)
 - Use the [Copilot connector APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)
 
-## Configure your custom Copilot connector for Microsoft 365 Copilot
+## Configure custom connectors for Microsoft 365 Copilot
 
 To ensure Microsoft 365 Copilot uses your ingested content effectively:
 
