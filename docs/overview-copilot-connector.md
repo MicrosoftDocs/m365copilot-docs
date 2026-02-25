@@ -1,103 +1,116 @@
 ---
-title: Microsoft 365 Copilot Connectors Overview
+title: Microsoft 365 Copilot connectors overview
 description: Extend the knowledge in Microsoft 365 Copilot with Copilot connectors.
-author: muwagerikpe
-ms.author: muwagerikpe
+author: lauragra
+ms.author: lauragra
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 07/21/2025
+ms.date: 02/10/2026
 ---
 
 # Microsoft 365 Copilot connectors overview
 
-Microsoft 365 Copilot connectors provide a platform for you to ingest your unstructured, line-of-business data into Microsoft Graph, so that Microsoft 365 Copilot can reason over the entirety of your enterprise content. Content ingested through Copilot connectors is added to Microsoft Graph; this unlocks semantic understanding of your users' prompts in Microsoft 365 Copilot. However, Copilot connectors are not limited to Microsoft 365 Copilot. Copilot connector content powers other Microsoft 365 intelligent experiences like Microsoft Search, Context IQ, and the Microsoft 365 Copilot app.
+Microsoft 365 Copilot connectors allow you to bring external, line-of-business data into Microsoft 365 Copilot so your users can search, reason over, and act on more of your enterprise content. The platform supports two connector models:
 
-This article describes how Copilot connector contents are part of Microsoft 365 Copilot and how you can configure your custom Microsoft Graph connections for Microsoft 365 Copilot.
+- **Synced connectors** ingest and index external content into Microsoft Graph.
+- **Federated connectors (early access preview)** retrieve content in real time using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
+
+Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Context IQ, and Microsoft 365 Copilot.
 
 > [!NOTE]
-> Copilot connectors are available in the global service and in Microsoft 365 Government Community Cloud (GCC) and Government Community Cloud High (GCCH) environments. They aren't available in Department of Defense (DoD) environments.
+> Copilot connectors are available in commercial environments and in Microsoft 365 Government Community Cloud (GCC) and Government Community Cloud High (GCCH). They aren't available in Department of Defense (DoD) environments.
 
-## How Copilot connector content surfaces in Microsoft 365 Copilot
+## Connector models
 
-When you use Copilot connectors to ingest your external content into Microsoft Graph, your users can find, summarize, and learn from your line-of-business data through natural language prompts in Microsoft 365 Copilot.
+Microsoft 365 Copilot supports two connector models tailored to different integration needs.
 
-In addition, users can hover over in-text citations in Microsoft 365 Copilot responses to get a preview of the external item referenced.
+| Capability | Synced connector | Federated connector (MCP-based) |
+|-----------|----------------------------------------------|----------------------------------|
+| Data movement | Content synced into Microsoft Graph | No data movement; query-time fetch |
+| Semantic indexing | Supported | Not applicable |
+| Schema | Defined using **externalItem** schema | Defined by MCP server resources |
+| Use cases | Knowledge repositories, document stores, LOB systems | Dynamic data or regulated content that must remain in source |
+| Authentication | Microsoft Entra ID app registration | MCP-supported methods (OAuth 2.0 or service-specific) |
+| Content retrieval | Indexed search and synthesis | Real-time API calls |
+| Availability | Global, GCC, GCCH | Varies by federated connector availability |
+
+For more information about federated connectors, see [Federated connectors overview](/microsoftsearch/federated-connectors-overview).
+
+> [!NOTE]
+> Federated connectors are in early access preview and are available only to [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) and [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release) members. Early access preview features are still in development and are subject to change.
+
+## How connector content surfaces in Microsoft 365 Copilot
+
+Synced connectors ingest content into Microsoft Graph where the data semantically indexed and made available to Copilot. Users can find, summarize, and learn from this content using natural language prompts. They can also select citations in Copilot responses to preview external items stored in Microsoft Graph.
+
+Federated connectors surface real-time information from your external service. Instead of referencing indexed items, citations refer to content returned directly from your MCP server. No content is synced or stored in Microsoft Graph.
 
 ![A screenshot of hovering over a Copilot connectors response in Microsoft 365 Copilot](assets/images/connectors-copilot-hover.png)
 
-If users want to dive deeper into the referenced content, they can select one of the reference links at the bottom of the response.
+If users want to explore referenced content, they can select one of the links at the bottom of the response.
 
 ![A screenshot of Copilot connectors reference list in Microsoft 365 Copilot](assets/images/connectors-copilot-logo.png)
 
-## Copilot connector semantic indexing
+## Synced connector semantic indexing
 
-Copilot connectors use semantic indexing to enable more efficient and meaningful data retrieval. Semantic indexing optimizes the way data is indexed and retrieved from various sources to help search experiences access data and return more relevant results.
+Synced connectors use semantic indexing to improve retrieval quality across Microsoft 365. Semantic indexing enables:
 
-Semantic indexing in Copilot connectors allows for:
+- More relevant search results beyond lexical matching
+- Approximate and contextual matches
+- Understanding of relationships between data points
 
-- Improved matching of search queries to content to provide more relevant search results than simple keyword (lexical) matches.
-- Enhanced search results that include both exact and approximate matches.
-- Contextual understanding to support complex queries that require an understanding of relationships between data.
+The following common properties are indexed:
 
-Currently, the following properties, which are common across all connectors, are indexed:
+- **Title**: The item's title
+- **Content**: The main body of the item
 
-- **Title** - The title of the item.
-- **Content** - The body of the item. This varies by connector.
-
-Custom connectors are semantically indexed as well. To take full advantage of semantic indexing in your custom connectors, include the relevant content that you want to be indexed in the **title** and **content** properties.
+Custom connectors can also use semantic indexing. To optimize retrieval, include relevant information in the **title** and **content** fields.
 
 > [!NOTE]
-> [Semantic labels](/graph/connecting-external-content-manage-schema#semantic-labels) are used for filtering results; they don't affect the semantic indexing of the property
+> [Semantic labels](/graph/connecting-external-content-manage-schema#semantic-labels) are used for filtering and don't affect semantic indexing. Federated connectors don't support semantic indexing.
 
-The following search scenarios benefit from semantic indexing:
+The following scenarios benefit from semantic indexing:
 
-- Topic and keyword-based searches
-- Searches that require approximate matches
-- Searches that require the system to understand context and relationships
+- Topic- and keyword-based searches
+- Queries requiring approximate matches
+- Queries requiring contextual interpretation
 
-Semantic indexing doesn't benefit the following scenarios:
+The following scenarios don't benefit from semantic indexing:
 
-- Queries that don't include keywords or topics, such as "find bugs assigned to" or "Find items created by".
-- Queries that involve multiple parameters, such as an assignee and a topic.
-- Queries for a total number of results. Relevance and synthesis can reduce the number of results returned.
+- Queries without topics or keywords, such as "find bugs assigned to"
+- Queries with multiple parameters (for example, topic + assignee)
+- Queries requesting counts of items
 
 ## Copilot connectors gallery
 
-The [Copilot connectors gallery](https://www.microsoft.com/microsoft-search/connectors) includes a brief description of each of the connectors created by Microsoft and our partners, and a link to each partner's website.
+The [Copilot connectors gallery](/microsoftsearch/connectors-gallery) includes descriptions of Microsoft and partner connectors with links to partner sites. With more than 100 connectors available, you can connect to Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more.
 
-With more than 100 connectors currently available, you can connect to popular Microsoft and non-Microsoft services such as Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and many more.
+## Create your own synced Copilot connector
 
-## Create your own Copilot connector
+To build a synced connector, an AI administrator must [register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for required Microsoft Graph permissions in the **Microsoft Entra admin center**.
 
-You can use the [Copilot connectors APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context) to build custom Copilot connectors that index content from line-of-business data sources into Microsoft Graph. You can use the Copilot connector APIs to create and manage external connections; define, and register external data type schemas; ingest external data items into Microsoft Graph; and sync external groups.
+Deployed connectors are tenant-wide unless external item security is restricted.
 
-## Requirements for Copilot connectors
+You can create a synced Copilot connector in one of three ways:
 
-To build Copilot connectors, you must have a search administrator in your organization do the following:
+- Use the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-your-first-connector)
+- Use the [connector SDK](/graph/custom-connector-sdk-sample-create)
+- Use the [Copilot connector APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)
 
-- [Register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for the required Microsoft Graph permissions in **Microsoft Entra admin center** ([entra.microsoft.com](https://entra.microsoft.com/)).
-    - This might not be an option if you're working in a production environment. Any deployed Copilot connector is accessible tenant-wide unless the external items security is locked down.
-- Make sure that Copilot connectors that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) via the **Agents and connectors** section under **Copilot** in the Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.com)). For more information, see [Manage connector results](/microsoftsearch/connectors-in-all-vertical).
+## Configure custom connectors for Microsoft 365 Copilot
 
-## Configuring your custom Copilot connector for Microsoft 365 Copilot
+To ensure Microsoft 365 Copilot uses your ingested content effectively:
 
-To make sure that Microsoft 365 Copilot uses your content effectively:
+- Apply [semantic labels](/graph/connecting-external-content-manage-schema). Apply all labels that match your schema, including `iconUrl`, `title`, and `url`.
+- Ingest content-rich text into the **content** property to improve grounding quality.
+- Add a [urlToItemResolver](/graph/api/resources/externalconnectors-urltoitemresolverbase) so Copilot can identify shared URLs.
+- Add [user activities](/graph/api/externalconnectors-externalitem-addactivities) to improve item ranking.
+- Provide meaningful descriptions during connection creation.
 
-- Apply [semantic labels](/graph/connecting-external-content-manage-schema). Semantic labels help Microsoft 365 Copilot interpret the semantic meaning of your schema. Apply as many of them to your schema as applicable. The `iconUrl`, `title`, and `url` labels must be applied for content to surface in Copilot. Currently, only the `title` semantic label can be used in prompts in Microsoft 365 Copilot. However, more semantic labels will be supported as the platform evolves, so applying all applicable labels will prevent you from needing to recreate your schema in the future.
-- Ingest content relevant to external items as text. Users can query against the content property of external items in Microsoft 365 Copilot. Microsoft 365 Copilot performs better on content rich items.
-- Add a [urlToItemResolver](/graph/api/resources/externalconnectors-urltoitemresolverbase) in [activitySettings](/graph/api/resources/externalconnectors-activitysettings) when you [create your connection](/graph/connecting-external-content-manage-connections#create-a-connection). A `urlToItemResolver` enables the platform to detect when users share URLs from your external content with each other. Microsoft 365 Copilot has a higher likelihood of displaying content that has been shared with that user.
-- Add [user activities](/graph/api/externalconnectors-externalitem-addactivities) on your items. For a list of supported activity types, see [externalActivity](/graph/api/resources/externalconnectors-externalactivity). Items that have more activities are boosted in importance.
-- Provide meaningful descriptions in the `description` property when [creating connections](/graph/api/externalconnectors-external-post-connections). Rich descriptions improve the likelihood of displaying content in Copilot.
-
-In addition, search administrators must ensure that your Copilot connector connections are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical) by using the following steps:
-
-- In the [Admin Center](https://admin.microsoft.com/), go to **Search & intelligence** > **Customizations** > **Verticals** and select **All**.
-
-- Select **Manage connector result**. Ensure that **Show results inline** is selected and that the connections that you want to enable for Search and Copilot are checked.
+Administrators must also ensure that synced connectors are enabled for [inline results](/microsoftsearch/connectors-in-all-vertical).
 
 ## Related content
 
 - [Build your first Copilot connector](build-your-first-connector.md)
-- [Copilot connectors overview video](https://www.youtube.com/embed/17rAOh9313g)
 - [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)
-- [Pre-built Copilot connectors](/microsoftsearch/pre-built-connectors-overview)
+- [Prebuilt Copilot connectors](/microsoftsearch/pre-built-connectors-overview)
