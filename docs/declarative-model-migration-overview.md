@@ -11,7 +11,7 @@ ms.topic: article
 
 # Understand model changes in GPT 5.1+
 
-GPT 5.1 introduces a meaningful shift in how the model interprets instructions, manages reasoning depth, and adapts its output style. Compared to GPT 5.0, the system is more explicit about following instructions precisely, more adaptive in planning when ambiguity exists, and more deliberate in choosing the right level of reasoning for each task. These changes matter most for teams building declarative agents and structured workflows where predictability, controllability, and resilience are critical.
+GPT 5.1 introduces a meaningful shift in how the orchestration layter interprets instructions, manages reasoning depth, and adapts its output style. Compared to GPT 5.0, the system is more explicit about following instructions precisely, more adaptive in planning when ambiguity exists, and more deliberate in choosing the right level of reasoning for each task. These changes matter most for teams building declarative agents and structured workflows where predictability, controllability, and resilience are critical.
 
 This article explains what changed in GPT 5.1, why it matters, and how to adapt your prompting patterns.
 
