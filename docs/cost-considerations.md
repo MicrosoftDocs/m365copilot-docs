@@ -36,20 +36,6 @@ For more details about consumption costs, see [Billing rates and management](/mi
 
 Copilot connectors allow you to enrich Copilot with external data to enhance the contextual relevance of Copilot responses.
 
-### Index quota and licensing
-
-All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Copilot connectors. 
-
-#### Eligible licenses
-
-The following licenses qualify for the 50 million item quota:
-
-- Microsoft 365 Business Basic / Standard / Premium
-- Microsoft 365 A3 / A5 / E3 / E5 / F1 / F3
-- Office 365 A3 / A5 / E1 / E3 / E5 / F3
-
-> **Note:** Connectors in preview status don't count against your quota. When the connector reaches general availability, it starts counting toward the quota.
-
 ### Access and usage
 
 Users with a valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license can access data from Copilot connectors in Copilot Chat, Copilot Search, and Microsoft Search.
