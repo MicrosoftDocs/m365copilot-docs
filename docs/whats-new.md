@@ -16,6 +16,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ## February 2026
 
+### Agent Builder availability in GCCH
 Agent Builder is now available in Government Community Cloud High (GCCH) environments. 
 
 ## January 2026
