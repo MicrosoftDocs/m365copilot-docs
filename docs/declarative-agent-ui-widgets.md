@@ -47,6 +47,66 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
     - Visual Studio Code doesn't currently support SSO for fetching tools
 - **UI widgets** - UI widgets must be implemented according to the MCP Apps or OpenAI Apps SDK requirements.
 
+## Best practices
+
+### Verify API availability
+
+Not all `window.openai.*` APIs are available on every platform or host. APIs that are unsupported are `undefined`. Always check API availability and provide a fallback if the API is unavailable.
+
+#### Examples
+
+This simple pattern avoids runtime errors by checking before calling the API.
+
+```typescript
+if (window.openai.callTool) {
+  const result = await window.openai.callTool({ name: 'myTool', params: {} });
+} else {
+  // Handle unsupported case — show fallback UI, skip the feature, etc.
+}
+```
+
+In this example, a button to enter fullscreen mode is rendered only if the host supports the `requestDisplayMode` API.
+
+```typescript
+function FullScreenButton() {
+  // Don't render the button if the host doesn't support it
+  if (!window.openai.requestDisplayMode) {
+    return null;
+  }
+
+  return (
+    <button onClick={() => window.openai.requestDisplayMode({ mode: 'fullscreen' })}>
+      Enter Fullscreen
+    </button>
+  );
+}
+```
+
+Alternatively, your widget can check availability of all APIs that it uses at startup and enable/disable features accordingly.
+
+```typescript
+interface PlatformCapabilities {
+  canCallTools: boolean;
+  canChangeDisplayMode: boolean;
+  canSendMessages: boolean;
+}
+
+function detectCapabilities(): PlatformCapabilities {
+  return {
+    canCallTools: !!window.openai.callTool,
+    canChangeDisplayMode: !!window.openai.requestDisplayMode,
+    canSendMessages: !!window.openai.sendMessage,
+  };
+}
+
+// Use at widget startup
+const capabilities = detectCapabilities();
+
+if (!capabilities.canCallTools) {
+  // Show a reduced-functionality experience
+}
+```
+
 ## Create a declarative agent
 
 1. Open Visual Studio Code and select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
@@ -67,7 +127,7 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
 
 When you complete these steps, Agents Toolkit generates the required files for the agent and opens a new Visual Studio Code window with the agent project loaded.
 
-## Update and sideload the agent
+### Update and sideload the agent
 
 1. Open the **.vscode/mcp.json** file. Select the **Start** button in the file editor.
 
@@ -101,7 +161,7 @@ When you complete these steps, Agents Toolkit generates the required files for t
 
 1. Wait for the toolkit to report that it finishes provisioning.
 
-## Test the agent
+### Test the agent
 
 1. Open your browser and go to [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 1. Select your agent in the left-hand sidebar. If you don't see your agent, select **All agents**.
@@ -134,7 +194,7 @@ Microsoft 365 Copilot supports the following capabilities.
 | `window.openai.theme`                           | `app.getHostContext()?.theme`                    | :white_check_mark:                    |
 | `window.openai.displayMode`                     | `app.getHostContext()?.displayMode`              | :white_check_mark:                    |
 | `window.openai.maxHeight`                       | `app.getHostContext()?.viewport?.maxHeight`      | :white_check_mark:                    |
-| `window.openai.safeArea`                        | `app.getHostContext()?.safeAreaInsets`            | :white_check_mark:                    |
+| `window.openai.safeArea`                        | `app.getHostContext()?.safeAreaInsets`           | :white_check_mark:                    |
 | `window.openai.view`                            | —                                                | :white_check_mark:                    |
 | `window.openai.userAgent`                       | `app.getHostContext()?.userAgent`                | :white_check_mark:                    |
 | `window.openai.locale`                          | `app.getHostContext()?.locale`                   | :white_check_mark:                    |
@@ -171,13 +231,13 @@ Microsoft 365 Copilot supports the following capabilities.
 
 ### Component resource _meta fields
 
-| OpenAI Apps SDK                       | MCP Apps equivalent    | Supported?         |
-|---------------------------------------|------------------------|-----------|
-| `_meta["openai/widgetDescription"]`   | —                      | :x:                |
+| OpenAI Apps SDK                       | MCP Apps equivalent      | Supported?         |
+|---------------------------------------|--------------------------|--------------------|
+| `_meta["openai/widgetDescription"]`   | —                        | :x:                |
 | `_meta["openai/widgetPrefersBorder"]` | `_meta.ui.prefersBorder` | :x:                |
-| `_meta["openai/widgetCSP"]`           | `_meta.ui.csp`         | :white_check_mark: |
-| `_meta["openai/widgetDomain"]`        | `_meta.ui.domain`      | :x:                |
-| —                                     | `_meta.ui.permissions` | :x:                |
+| `_meta["openai/widgetCSP"]`           | `_meta.ui.csp`           | :white_check_mark: |
+| `_meta["openai/widgetDomain"]`        | `_meta.ui.domain`        | :x:                |
+| —                                     | `_meta.ui.permissions`   | :x:                |
 
 ### Properties in CSP object
 
@@ -197,12 +257,12 @@ Microsoft 365 Copilot supports the following capabilities.
 
 ### Client-provided _meta fields
 
-| OpenAI Apps SDK                | MCP Apps equivalent          | Supported?         |
-|--------------------------------|------------------------------|--------------------|
-| `_meta["openai/locale"]`       | `_meta["openai/locale"]`     | :white_check_mark: |
-| `_meta["openai/userAgent"]`    | `_meta["openai/userAgent"]`  | :white_check_mark: |
+| OpenAI Apps SDK                | MCP Apps equivalent            | Supported?         |
+|--------------------------------|--------------------------------|--------------------|
+| `_meta["openai/locale"]`       | `_meta["openai/locale"]`       | :white_check_mark: |
+| `_meta["openai/userAgent"]`    | `_meta["openai/userAgent"]`    | :white_check_mark: |
 | `_meta["openai/userLocation"]` | `_meta["openai/userLocation"]` | :white_check_mark: |
-| `_meta["openai/subject"]`      | —                            | :x:                |
+| `_meta["openai/subject"]`      | —                              | :x:                |
 
 ## Related content
 
