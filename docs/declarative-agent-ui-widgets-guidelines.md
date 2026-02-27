@@ -60,7 +60,7 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
   :::column-end:::
 :::row-end:::
 :::row:::
-  :::column span="1":::
+  :::column:::
     :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-chart-increasing.png":::
 
     ### Scale density with intent
@@ -69,6 +69,8 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
 
     - Use the inline widget for glanceable summaries and high-level actions.
     - Use the expanded view for tasks where the user needs a larger real estate to work alongside the chat.
+  :::column-end:::
+  :::column:::
   :::column-end:::
 :::row-end:::
 
