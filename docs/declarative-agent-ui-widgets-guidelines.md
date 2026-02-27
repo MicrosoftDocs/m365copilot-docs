@@ -18,7 +18,7 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
 
 :::row:::
   :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/conversation-bubble-resize.png":::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-conversation-bubble.png":::
 
     ### Deliver conversational value
 
@@ -27,7 +27,7 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
     - Design experiences that take advantage of conversation, not replicate existing flows.
   :::column-end:::
   :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/prohibited.png":::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-prohibited.png":::
 
     ### Extract capabilities, don't replicate interfaces
 
@@ -36,6 +36,39 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
     - Require only the minimum necessary inputs
     - Return structured, reliable outputs
     - Enable model to confidently determine the next step
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-copilot.png":::
+
+    ### Design to feel native to Copilot
+
+    - Leverage Copilot’s design system, components, and interaction patterns to ensure a seamless, predictable experience.
+    - Consistency reduces cognitive load, increases predictability, and minimizes the need for users to learn new interaction models.
+  :::column-end:::
+  :::column:::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-shield.png":::
+
+    ### Preserve human control
+
+    Trust is foundational to enterprise adoption. Users must remain the ultimate decision-makers, particularly when actions affect enterprise data. Provide:
+
+    - Clear visibility into agent actions
+    - Explicit confirmations for sensitive operations
+    - Transparent outcomes of what was created, modified, or updated
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column span="1":::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-chart-increasing.png":::
+
+    ### Scale density with intent
+
+    Adapt the visual footprint of your UI to the user’s immediate need.
+
+    - Use the inline widget for glanceable summaries and high-level actions.
+    - Use the expanded view for tasks where the user needs a larger real estate to work alongside the chat.
   :::column-end:::
 :::row-end:::
 
