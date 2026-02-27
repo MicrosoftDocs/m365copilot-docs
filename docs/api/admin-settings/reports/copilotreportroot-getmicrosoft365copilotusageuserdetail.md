@@ -21,6 +21,9 @@ zone_pivot_groups: graph-api-versions
 
 Get the most recent usage data for users who are enabled for Microsoft 365 Copilot apps.
 
+> [!NOTE]
+> Tracking per-user Copilot prompt counts across tenants isn't supported due to privacy and security constraints. 
+
 For more information about report views and names, see [Microsoft 365 reports - Microsoft 365 Copilot usage](/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage). Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace. For more information, see [Microsoft 365 Copilot APIs overview](../../../copilot-apis-overview.md).
 
 > [!NOTE]
