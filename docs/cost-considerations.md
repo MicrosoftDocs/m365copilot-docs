@@ -32,10 +32,6 @@ For more details about consumption costs, see [Billing rates and management](/mi
 | Microsoft 365 Copilot Chat | Included for eligible Microsoft 365 users | Occasional users     | No charges for lightweight extensibility (instruction-based agents or public site grounding).<br><br>Metered charges apply for shared tenant data (SharePoint, Copilot connectors), tracked via Copilot Studio meters. |
 | No Copilot license or Microsoft 365 subscription              | N/A                                      | Not supported        | May be unable to access Copilot; extensibility features not guaranteed without a qualifying license.                                                                      |
 
-## Copilot connectors
-
-Copilot connectors allow you to enrich Copilot with external data to enhance the contextual relevance of Copilot responses.
-
 ### Access and usage
 
 Users with a valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license can access data from Copilot connectors in Copilot Chat, Copilot Search, and Microsoft Search.
