@@ -12,6 +12,8 @@ ms.topic: how-to
 
 This guide provides user experience (UX) guidance for developers building MCP-based UI experiences in Copilot. It covers patterns for creating native, coherent, and task-focused interactions that integrate smoothly into the conversational flow in Copilot.
 
+---
+
 ## UX principles
 
 Building a great Copilot Agent with the MCP based rich UI means delivering a focused, conversational experience that feels native to Copilot. Copilot Agents should feel like helpful extensions of the conversation surfacing the right action at the right time rather than full applications rebuilt inside Copilot.
@@ -74,6 +76,8 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
   :::column-end:::
 :::row-end:::
 
+---
+
 ## Chat surfaces
 
 Chat surfaces are the primary way users interact with agents built using the Copilot Apps SDK, defining how an app appears and behaves within the Copilot conversation.
@@ -91,3 +95,58 @@ Copilot currently supports two primary chat surfaces. Each surface serves a dist
 - **Side‑by‑side mode** is an optional surface that can be used when richer interactions are needed.
 
 :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/chat-surfaces.png" alt-text="An image comparing inline mode with side-by-side mode in Copilot chat" border="false":::
+
+---
+
+### Inline mode
+
+Inline mode is the default, in‑conversation chat surface in Copilot. Inline is not a mini-application. It enhances conversation, it does not replace it.
+
+:::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/inline-mode-examples.png" alt-text="Examples of widgets in inline mode" border="false":::
+
+#### When to use inline mode
+
+Inline is recommended for:
+
+- Previews (documents, images, drafts)
+- Confirmations
+- Simple actions
+- Quick decision prompts
+
+Inline experiences should remain concise and ideally fit within a single scroll of the response.
+
+---
+
+#### Inline mode layout
+
+:::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/inline-mode-layout.png" alt-text="Inline mode layout in Copilot chat" border="false":::
+
+- **Agent header:** Identifies the responding agent and establishes context.
+- **Inline widget:** Used to display structured content, previews, or action controls.
+- **Model response:** A short, model-generated message shown after the widget to suggests edits, next steps and related actions.
+
+---
+
+#### Inline widget
+
+Inline widgets appear directly within the chat flow, allowing users to view information and take action without leaving the conversation. They provide quick confirmations, simple actions, or visual aids.
+
+:::row:::
+    :::column:::
+        :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/inline-widget-layout.png" alt-text="Widget layout inside Copilot chat" border="false":::
+    :::column-end:::
+    :::column:::
+        ##### Layout
+
+        - **Title:** Include a title if your card is document-based or contains items with a parent element
+        - **Expand to side by side view:** Use to open a side by side mode if the card contains rich media or interactivity.
+        - **Actions:** Limit to two actions, placed at bottom of card. Actions should perform either a conversation turn or a tool call.
+    :::column-end:::
+:::row-end:::
+
+##### Interaction guidelines
+
+- **Keep interaction focused:** Avoid multi-step flows, nested navigation, or deep configuration. If the task requires iteration, comparison, or extensive editing, move to Side-by-Side.
+- **Show summaries, not systems:** Inline displays previews, not full applications. Avoid internal scrolling, pagination, tabs, filters, or multi-level grouping.
+- **Make state explicit:** Inline interactions must provide clear system feedback like loading state, disabled state, success confirmation, error state with recovery option. Never rely on model text alone to communicate system status.
+- **Preserve conversational flow:** A widget should fit comfortably within a single response scroll. It should avoid dominating the viewport. It should complement the model response, not compete with it.
