@@ -170,8 +170,6 @@ items:
           href: agent-template-text-translator.md
         - name: Writing Coach
           href: agent-template-writing-coach.md
-      - name: Build agents with fine-tuned models (preview)
-        href: agent-builder-tuned-models.md
       - name: Add knowledge sources
         href: agent-builder-add-knowledge.md
       - name: Share and manage agents
@@ -195,6 +193,8 @@ items:
       href: declarative-agent-instructions.md
     - name: Write instructions for agents with API plugins
       href: instructions-api-plugins.md
+    - name: Understand model changes in GPT 5.1+
+      href: declarative-model-migration-overview.md
     - name: Connect to other agents
       href: declarative-agent-connected-agent.md
     - name: Add capabilities and knowledge sources
