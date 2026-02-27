@@ -18,7 +18,7 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
 
 :::row:::
   :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/conversation-bubble.png" alt-text="Conversation bubble":::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/conversation-bubble-resize.png":::
 
     ### Deliver conversational value
 
@@ -27,7 +27,7 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
     - Design experiences that take advantage of conversation, not replicate existing flows.
   :::column-end:::
   :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/prohibited.png" alt-text="Prohibited":::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/prohibited.png":::
 
     ### Extract capabilities, don't replicate interfaces
 
@@ -55,4 +55,4 @@ Copilot currently supports two primary chat surfaces. Each surface serves a dist
 - All apps must support **inline mode**, where inline widgets appear before the generated model response.
 - **Side‑by‑side mode** is an optional surface that can be used when richer interactions are needed.
 
-:::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/chat-surfaces.png" alt-text="An image comparing inline mode with side-by-side mode in Copilot chat":::
+:::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/chat-surfaces.png" alt-text="An image comparing inline mode with side-by-side mode in Copilot chat" border="false":::
