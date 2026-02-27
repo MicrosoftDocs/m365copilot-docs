@@ -18,7 +18,7 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
 
 :::row:::
   :::column:::
-    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/conversation-bubble.png" alt-text="Conversation bubble":::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/conversation-bubble.png" alt-text="Conversation bubble":::
 
     ### Deliver conversational value
 
@@ -27,7 +27,7 @@ Building a great Copilot Agent with the MCP based rich UI means delivering a fo
     - Design experiences that take advantage of conversation, not replicate existing flows.
   :::column-end:::
   :::column:::
-    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/prohibited.png" alt-text="Prohibited":::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/prohibited.png" alt-text="Prohibited":::
 
     ### Extract capabilities, don't replicate interfaces
 

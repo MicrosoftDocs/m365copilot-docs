@@ -119,4 +119,4 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
 ## Related content
 
-- [Add interactive UI widgets to declarative agents by using the OpenAI Apps SDK](declarative-agent-openai-apps-sdk.md)
+- [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md)
