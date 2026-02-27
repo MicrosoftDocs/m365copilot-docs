@@ -196,17 +196,17 @@ Use side-by-side mode when the experience requires:
     :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/preserve-conversational-flow.png" alt-text="A screenshot of a widget with a Download button" border="false":::
   :::column-end:::
   :::column:::
-    ### :::white-check-mark::: Preserve conversational flow
-
-    Keep inline widgets lightweight and action-oriented. Support up to two primary actions (e.g., Approve, Edit, Download). If the task requires deep navigation, multi-step workflows, or heavy configuration, hand off to side-by-side mode.
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/use-fluent-components.png" alt-text="A screenshot of FluentUI components in a widget" border="false":::
   :::column-end:::
 :::row-end:::
 :::row:::
   :::column:::
-    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/use-fluent-components.png" alt-text="A screenshot of FluentUI components in a widget" border="false":::
+    ### :white-check-mark: Preserve conversational flow
+
+    Keep inline widgets lightweight and action-oriented. Support up to two primary actions (e.g., Approve, Edit, Download). If the task requires deep navigation, multi-step workflows, or heavy configuration, hand off to side-by-side mode.
   :::column-end:::
   :::column:::
-    ### :::x::: Use Fluent components for native fit
+    ### :x: Use Fluent components for native fit
 
     Inline experiences should feel like a natural extension of Copilot. Use Copilot-aligned Fluent components, spacing, typography, and tokens to ensure visual and interaction consistency.
   :::column-end:::
