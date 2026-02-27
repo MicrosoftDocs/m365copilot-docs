@@ -22,7 +22,7 @@ Declarative agents are customized versions of Microsoft 365 Copilot that help yo
 
 If your declarative agent also has API plugins as actions, the OpenAPI document for your plugin helps the agent understand any instructions referring to the API. For more information, see [How to make an OpenAPI document effective in extending Copilot](openapi-document-guidance.md).
 
-This guidance applies to developers and makers who are using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) or [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context) to create declarative agents.
+This guidance applies to developers and makers who are using [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder) or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to create declarative agents. For more information on how to write the instructions for your Copilot Studio agent, see [Configure high-quality instructions for generative orchestration](/microsoft-copilot-studio/guidance/generative-mode-guidance).
 
 > [!IMPORTANT]
 > As Microsoft transitions to newer GPT versions, the model's reasoning approach is evolving from a literal-first interpretation to a more intent-first and adaptive style. This shift might affect how your declarative agent understands and responds to your instructions, particularly in structured or step-by-step scenarios. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
