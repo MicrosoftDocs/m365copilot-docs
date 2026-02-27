@@ -4,9 +4,11 @@ description: Learn how to build UI widgets that look and feel native to Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 02/15/2026
-ms.topic: how-to
+ms.date: 03/10/2026
+ms.topic: article
 ---
+
+<!-- markdownlint-disable MD024 -->
 
 # User experience guidelines for interactive UI widgets in declarative agents (preview)
 
@@ -201,29 +203,131 @@ Use side-by-side mode when the experience requires:
 :::row-end:::
 :::row:::
   :::column:::
-    ### :white-check-mark: Preserve conversational flow
+    ### :white_check_mark: Preserve conversational flow
 
     Keep inline widgets lightweight and action-oriented. Support up to two primary actions (e.g., Approve, Edit, Download). If the task requires deep navigation, multi-step workflows, or heavy configuration, hand off to side-by-side mode.
   :::column-end:::
   :::column:::
-    ### :x: Use Fluent components for native fit
+    ### :white_check_mark: Use Fluent components for native fit
 
-    Inline experiences should feel like a natural extension of Copilot. Use Copilot-aligned Fluent components, spacing, typography, and tokens to ensure visual and interaction consistency.
+    Inline experiences should feel like a natural extension of Copilot. Use Copilot-aligned [Fluent 2](https://fluent2.microsoft.design/) components, spacing, typography, and tokens to ensure visual and interaction consistency.
   :::column-end:::
 :::row-end:::
 :::row:::
   :::column:::
-    {content}
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/avoid-scroll-heavy.png" alt-text="A screenshot of a widget with a large scroll bar" border="false":::
   :::column-end:::
   :::column:::
-    {content}
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/no-duplicate-features.png" alt-text="A screenshot of a widget with a natural language prompt" border="false":::
   :::column-end:::
 :::row-end:::
 :::row:::
   :::column:::
-    {content}
+    ### :x: Avoid large, scroll-heavy layouts
+
+    Inline widgets should be concise and glanceable. Avoid vertical scroll within the widget. Height should feel widget-sized, not application-sized. If content requires scrolling, complex tables, or detailed editing, transition to side-by-side mode.
   :::column-end:::
   :::column:::
-    {content}
+    ### :x: Don't duplicate Copilot features in the widget
+
+    Avoid recreating chat capabilities (prompt input, suggestions, reasoning summaries, retry controls) inside the widget. Duplication creates confusion, visual noise, and fragmented interaction models.
   :::column-end:::
 :::row-end:::
+:::row:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/image-needed.png" alt-text="Image needed" border="false":::
+  :::column-end:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/no-full-application.png" alt-text="A screenshot of a widget that mimics a full application" border="false":::
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    ### :x: Don't exceed more than two actions per widget
+
+     Support up to two actions inside a widget. For complex tasks hand over to side-by-side mode.
+  :::column-end:::
+  :::column:::
+    ### :x: Don't use a widget to resemble a full application
+
+    Inline mode should feel like a natural extension of chat, not an entire application embedded inside it.
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/no-duplicate-content.png" alt-text="A screenshot of a widget that duplicates content in the model text" border="false":::
+  :::column-end:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/image-needed.png" alt-text="Image needed" border="false":::
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    ### :x: Don't duplicate content in model text and widget
+
+    Do not repeat the same information in both the widget and the model message.
+  :::column-end:::
+  :::column:::
+    ### :x: Avoid deep navigation in widgets
+
+    Widgets should not contain multiple tabs, or deeper navigation. Consider splitting these into separate cards or tool actions.
+  :::column-end:::
+:::row-end:::
+
+---
+
+## Visual design guidelines
+
+Visual and interaction consistency is critical to Copilot's user experience. Apps are expected to align with the Fluent design system so that users experience predictable behavior, familiar controls, and consistent experiences across apps. This consistency helps users build trust, move confidently between workflows, and safely take action across multiple apps within Copilot.
+
+### Fluent Copilot theme guidelines
+
+Create beautiful, cohesive Microsoft experiences using the Fluent 2 UI kits. Built in Figma, the Fluent 2 UI kits contain design assets that map to the code libraries. That means seamless handoff from design to development.
+
+:::row:::
+  :::column:::
+    #### Color
+
+    [Fluent 2 > Color](https://fluent2.microsoft.design/color)
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/fluent-colors.png" alt-text="A screenshot of various shades of blue, labeled 60, 70, 80, 90, 100" border="false":::
+  :::column-end:::
+  :::column:::
+    #### Button
+
+    [Fluent 2 > Button](https://fluent2.microsoft.design/components/web/react/core/button/usage)
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/fluent-button.png" alt-text="A screenshot of various Fluent button components" border="false":::
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    #### Typography
+
+    [Fluent 2 > Typography](https://fluent2.microsoft.design/typography)
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/fluent-typography.png" alt-text="A screenshot of various text sizes and styles" border="false":::
+  :::column-end:::
+  :::column:::
+    #### Radius
+
+    [Fluent 2 > Shapes](https://fluent2.microsoft.design/shapes#corner-radius)
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/fluent-radius.png" alt-text="A screenshot of corner radiuses on a rectangle shape" border="false":::
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    #### Spacing
+
+    Global padding of an app card should be 24 pixels.
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/fluent-spacing.png" alt-text="A screenshot of padding around a card" border="false":::
+  :::column-end:::
+  :::column:::
+    #### Iconography
+
+    [Fluent 2 > Iconography](https://fluent2.microsoft.design/iconography)
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/fluent-icons.png" alt-text="A screenshot of various Fluent icons" border="false":::
+  :::column-end:::
+:::row-end:::
+
+## Related content
+
+- [Add interactive UI widgets to declarative agents (preview)](declarative-agent-ui-widgets.md)
+- [Fluent 2](https://fluent2.microsoft.design/)
