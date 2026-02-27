@@ -1,8 +1,8 @@
 ---
 title: Add knowledge sources to your declarative agent
 description: Learn how to add knowledge sources to your declarative agents.
-author: kmkoenen
-ms.author: v-koenenkaty
+author: lauragra
+ms.author: lauragra
 ms.localizationpriority: medium
 ms.date: 01/28/2026
 ms.topic: article

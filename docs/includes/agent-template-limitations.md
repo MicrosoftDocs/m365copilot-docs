@@ -1,6 +1,6 @@
 ---
-author: kmkoenen
-ms.author: v-koenenkaty
+author: lauragra
+ms.author: lauragra
 ms.topic: include
 ms.localizationpriority: medium
 ---
