@@ -123,7 +123,9 @@ If you see unexpected results with GPT 5.1, here are some explanations for how y
 - **Weak Markdown hierarchy**: Unclear hierarchy or mixed list types can cause the model to merge sections, reorder tasks, or collapse important distinctions.
 - **No validation step**: Without an explicit final check, the model might return incomplete or succinct outputs based on choosing faster reasoning.
 
-## Apply a fixed process, format, or tone with GPT 5.1
+## Using fixed versus adaptive reasoning
+
+### Apply a fixed process, format, or tone with GPT 5.1
 
 If your agent must follow a fixed workflow, rigid output format, or a specific tone of voice, adapt your instructions to account for GPT 5.1's intent-first behavior. Be more explicit and structured in how you write your agent instructions. Key strategies include:
 
@@ -134,7 +136,7 @@ If your agent must follow a fixed workflow, rigid output format, or a specific t
 
 Applying these techniques makes your agent's behavior more predictable under GPT 5.1, closely matching the structured outputs you intended. For more information, see [Best practices for agent instructions](declarative-agent-instructions.md).
 
-## Embracing GPT 5.1 adaptive reasoning
+### Embracing GPT 5.1 adaptive reasoning
 
 While the preceding advice helps you lock down your agent’s behavior when necessary, it's also important to recognize situations where you can take advantage of GPT 5.1's more adaptive reasoning. GPT 5.1 is designed to be more goal-oriented and capable of improvising steps to satisfy an objective. In less strictly regulated scenarios, this approach can improve your agent's performance and user experience. To harness GPT 5.1's flexibility:
 
