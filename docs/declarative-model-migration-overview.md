@@ -11,9 +11,9 @@ ms.topic: article
 
 # Understand model changes in GPT 5.1+
 
-GPT 5.1 introduces a meaningful shift in how the orchestration layter interprets instructions, manages reasoning depth, and adapts its output style. Compared to GPT 5.0, the system is more explicit about following instructions precisely, more adaptive in planning when ambiguity exists, and more deliberate in choosing the right level of reasoning for each task. These changes matter most for teams building declarative agents and structured workflows where predictability, controllability, and resilience are critical.
+GPT 5.1 introduces a meaningful shift in how the orchestration layer interprets instructions, manages reasoning depth, and adapts its output style. Compared to GPT 5.0, the system is more explicit about following instructions precisely, more adaptive in planning when ambiguity exists, and more deliberate in choosing the right level of reasoning for each task. These changes matter most for teams building declarative agents and structured workflows where predictability, controllability, and resilience are critical.
 
-This article explains what changed in GPT 5.1, why it matters, and how to adapt your prompting patterns.
+This article explains what changed in GPT 5.1, why the changes matter, and how to adapt your prompting patterns.
 
 ## Comparing GPT 5.0 and GPT 5.1
 
@@ -33,12 +33,10 @@ This behavior makes GPT 5.0 predictable, but it's less accurate when prompts are
 GPT 5.1 introduces adaptive reasoning. The model:
 
 - Interprets what the instructions intended, not just what they said.
-- Reorganizes plans to fix or optimize them.
-- Fills gaps and infers missing steps.
 - Dynamically selects the appropriate reasoning depth per request.
-- Replans when instructions are ambiguous or incomplete.
 - Shifts tone and verbosity based on the inferred context.
-- Plans its own approach when goals are clear but steps aren't.
+- Fills gaps, infers missing steps, and plans its own approach when goals are clear but steps aren't.
+- Reorganizes and replans its approach to fix or optimize outcomes when instructions are ambiguous or incomplete.
 
 This behavior produces more capable agents but also increases sensitivity to ambiguous prompts.
 
@@ -74,7 +72,7 @@ When knowledge sources and constraints are well defined, GPT 5.1 stays within th
 
 GPT 5.0 uses a direct and factual tone. GPT 5.1 introduces eight consistent output profiles:
 
-- **Default**: Balanced reasoning and clarity  
+- **Default**: Verbose, explanatory, and teacher-like
 - **Professional**: Neutral, structured, business-oriented  
 - **Friendly**: Conversational, supportive  
 - **Candid**: Direct, concise  
