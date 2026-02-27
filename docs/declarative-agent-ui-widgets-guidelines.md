@@ -102,7 +102,7 @@ Copilot currently supports two primary chat surfaces. Each surface serves a dist
 
 Inline mode is the default, in‑conversation chat surface in Copilot. Inline is not a mini-application. It enhances conversation, it does not replace it.
 
-:::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/inline-mode-examples.png" alt-text="Examples of widgets in inline mode" border="false":::
+:::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/inline-mode-examples.png" lightbox="assets/images/declarative-agents/widget-ux-guidelines/inline-mode-examples.png" alt-text="Examples of widgets in inline mode" border="false":::
 
 #### When to use inline mode
 
@@ -119,7 +119,7 @@ Inline experiences should remain concise and ideally fit within a single scroll 
 
 #### Inline mode layout
 
-:::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/inline-mode-layout.png" alt-text="Inline mode layout in Copilot chat" border="false":::
+:::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/inline-mode-layout.png" lightbox="assets/images/declarative-agents/widget-ux-guidelines/inline-mode-layout.png" alt-text="Inline mode layout in Copilot chat" border="false":::
 
 - **Agent header:** Identifies the responding agent and establishes context.
 - **Inline widget:** Used to display structured content, previews, or action controls.
@@ -132,16 +132,14 @@ Inline experiences should remain concise and ideally fit within a single scroll 
 Inline widgets appear directly within the chat flow, allowing users to view information and take action without leaving the conversation. They provide quick confirmations, simple actions, or visual aids.
 
 :::row:::
-    :::column:::
-        :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/inline-widget-layout.png" alt-text="Widget layout inside Copilot chat" border="false":::
-    :::column-end:::
-    :::column:::
-        ##### Layout
-
-        - **Title:** Include a title if your card is document-based or contains items with a parent element
-        - **Expand to side by side view:** Use to open a side by side mode if the card contains rich media or interactivity.
-        - **Actions:** Limit to two actions, placed at bottom of card. Actions should perform either a conversation turn or a tool call.
-    :::column-end:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/inline-widget-layout.png" lightbox="assets/images/declarative-agents/widget-ux-guidelines/inline-widget-layout.png" alt-text="Widget layout inside Copilot chat" border="false":::
+  :::column-end:::
+  :::column:::
+    - **Title:** Include a title if your card is document-based or contains items with a parent element
+    - **Expand to side-by-side view:** Use to open a side-by-side mode if the card contains rich media or interactivity.
+    - **Actions:** Limit to two actions, placed at bottom of card. Actions should perform either a conversation turn or a tool call.
+  :::column-end:::
 :::row-end:::
 
 ##### Interaction guidelines
@@ -150,3 +148,82 @@ Inline widgets appear directly within the chat flow, allowing users to view info
 - **Show summaries, not systems:** Inline displays previews, not full applications. Avoid internal scrolling, pagination, tabs, filters, or multi-level grouping.
 - **Make state explicit:** Inline interactions must provide clear system feedback like loading state, disabled state, success confirmation, error state with recovery option. Never rely on model text alone to communicate system status.
 - **Preserve conversational flow:** A widget should fit comfortably within a single response scroll. It should avoid dominating the viewport. It should complement the model response, not compete with it.
+
+### Side-by-side mode (optional)
+
+Side-by-side mode provides an expanded, immersive workspace that appears alongside the conversation. It is designed for richer workflows that cannot be effectively delivered within the inline surface. Unlike inline mode, which is optimized for lightweight interactions, side-by-side mode creates a dedicated workspace for deeper engagement, while preserving conversational context.
+
+Side-by-side mode is optional and should be used intentionally.
+
+#### When to use side-by-side mode
+
+Use side-by-side mode when the experience requires:
+
+- Multi-step editing or configuration
+- Iterative workflows with persistent state
+- Complex visual layouts (tables, canvases, dashboards)
+- Extended review or comparison tasks
+- Rich authoring (document drafting, design editing, structured inputs)
+- Workspace-level interaction beyond a single scroll
+- If the task can be completed in a concise, single-turn interaction, use inline mode instead.
+
+---
+
+#### Side-by-side layout
+
+:::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/side-by-side-layout.png" lightbox="assets/images/declarative-agents/widget-ux-guidelines/side-by-side-layout.png" alt-text="Side-by-side layout in Copilot chat" border="false":::
+
+- **Conversation pane:** The Copilot chat that remains the primary source of intent and control.
+- **Chiclet card:** When side-by-side mode is active, the original inline widget collapses into a compact card in the conversation, preserving context with the expanded workspace.
+- **Side-by-side panel header:** Displays the agent identity (icon and name) and includes a handoff option to the full application.
+- **App workspace:** Larger MCP-rendered surface for editing, reviewing, or managing structured content. This is a contextual workspace within Copilot, not a standalone application shell.
+- **Contextual controls:** Task-specific controls within the workspace (for example: edit tools, formatting, zoom, export).
+
+##### Interaction guidelines
+
+- **Keep workspace contextual:** Side-by-side mode provides a focused, task-specific workspace - not a full application shell. Avoid global navigation, multi-tab systems, settings panels, or unrelated features. If the experience resembles your entire SaaS product, it exceeds scope.
+- **Preserve chat as primary:** The conversation remains the source of intent and control. Users must be able to continue chatting while Side-by-side mode is open, ask clarifying questions mid-task and see Copilot reasoning alongside their workspace.
+- **Scope to the active task:** Side-by-side mode should support a single coherent workflow. Avoid switching between unrelated entities and launching nested experiences. If multiple workflows are needed, split into separate surfaces or actions.
+- **Make state explicit:** Inline interactions must provide clear system feedback like loading state, disabled state, success confirmation, error state with recovery option. Never rely on model text alone to communicate system status.
+- **Maintain progressive escalation:** Side-by-side mode should be entered intentionally. Do not default to side-by-side for simple previews or quick confirmations.
+
+---
+
+## Best practices
+
+:::row:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/preserve-conversational-flow.png" alt-text="A screenshot of a widget with a Download button" border="false":::
+  :::column-end:::
+  :::column:::
+    ### :::white-check-mark::: Preserve conversational flow
+
+    Keep inline widgets lightweight and action-oriented. Support up to two primary actions (e.g., Approve, Edit, Download). If the task requires deep navigation, multi-step workflows, or heavy configuration, hand off to side-by-side mode.
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/use-fluent-components.png" alt-text="A screenshot of FluentUI components in a widget" border="false":::
+  :::column-end:::
+  :::column:::
+    ### :::x::: Use Fluent components for native fit
+
+    Inline experiences should feel like a natural extension of Copilot. Use Copilot-aligned Fluent components, spacing, typography, and tokens to ensure visual and interaction consistency.
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    {content}
+  :::column-end:::
+  :::column:::
+    {content}
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    {content}
+  :::column-end:::
+  :::column:::
+    {content}
+  :::column-end:::
+:::row-end:::
