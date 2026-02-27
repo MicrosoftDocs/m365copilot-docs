@@ -740,7 +740,7 @@ The worker agent object contains the following property.
 
 ### User override object
 
-Identifies capabilities in the agent that the agent user can modify via a UI control in Microsoft 365 Copilot.
+Identifies capabilities configured in the [Capabilities object](#capabilities-object) that the user can modify via a UI control in Microsoft 365 Copilot. The use can override the default configuration of the capability by selecting one of the allowed actions specified in the user override object. The only supported action is `remove`, which removes the capability from being used to generate responses.
 
 > [!NOTE]
 > When you declare `GraphConnectors` in the `path`, the system buckets and displays Microsoft provided connectors using a friendly name, and custom connectors using the connector name (e.g., CB Insights). This behavior ensures end users can easily identify and manage connector sources when configuring their agent session. For more information on connectors and publishers, see [Microsoft 365 Copilot Connectors Gallery](/microsoftsearch/connectors-gallery).
@@ -751,6 +751,25 @@ The user override object contains the following properties.
 | ----------------- | --------------- | ----------- |
 | `path`            | String          | Required. A JSONPath expression identifying the capability that users can modify. The JSONPath expression allows targeting specific capabilities by name only. |
 | `allowed_actions` | Array of String | Required. Specifies that actions can be taken for the specified capabilities. The only supported action is `remove`. |
+
+#### User override object example
+
+The following example allows the user to remove the [Web search](#web-search-object) and [Microsoft Teams messages](#microsoft-teams-messages-object) capabilities.
+
+```json
+{
+  "user_overrides": [
+    {
+      "path": "$.capabilities[?(@.name == 'WebSearch')]",
+      "allowed_actions": ["remove"]
+    },
+    {
+      "path": "$.capabilities[?(@.name == 'TeamsMessages')]",
+      "allowed_actions": ["remove"]
+    }
+  ]
+}
+```
 
 ## Declarative agent manifest example
 
