@@ -1,8 +1,8 @@
 ---
 title: Image Generator Capability for Declarative Agents for Microsoft 365 Copilot
 description: Learn about the image generator capability and how to add it to your declarative agents.
-author: kmkoenen
-ms.author: v-koenenkaty
+author: lauragra
+ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
 ms.date: 11/12/2025
