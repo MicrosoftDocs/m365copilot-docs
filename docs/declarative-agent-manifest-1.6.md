@@ -740,10 +740,10 @@ The worker agent object contains the following property.
 
 ### User override object
 
-Identifies capabilities configured in the [Capabilities object](#capabilities-object) that the user can modify via a UI control in Microsoft 365 Copilot. The use can override the default configuration of the capability by selecting one of the allowed actions specified in the user override object. The only supported action is `remove`, which removes the capability from being used to generate responses.
+Identifies capabilities configured in the [Capabilities object](#capabilities-object) that the user can override via a UI control in Microsoft 365 Copilot. The only supported action is `remove`, which enables a toggle control in the UI, allowing the user to enable or disable the capability from being used to generate responses.
 
 > [!NOTE]
-> When you declare `GraphConnectors` in the `path`, the system buckets and displays Microsoft provided connectors using a friendly name, and custom connectors using the connector name (e.g., CB Insights). This behavior ensures end users can easily identify and manage connector sources when configuring their agent session. For more information on connectors and publishers, see [Microsoft 365 Copilot Connectors Gallery](/microsoftsearch/connectors-gallery).
+> When you declare `GraphConnectors` in the `path`, all available Copilot connectors are able to be toggled on or off. It is not possible to enable the toggle for specific connectors. The system buckets and displays Microsoft provided connectors using a friendly name, and custom connectors using the connector name (e.g., CB Insights). This behavior ensures end users can easily identify and manage connector sources when configuring their agent session. For more information on connectors and publishers, see [Microsoft 365 Copilot Connectors Gallery](/microsoftsearch/connectors-gallery).
 
 The user override object contains the following properties.
 
@@ -754,7 +754,7 @@ The user override object contains the following properties.
 
 #### User override object example
 
-The following example allows the user to remove the [Web search](#web-search-object) and [Microsoft Teams messages](#microsoft-teams-messages-object) capabilities.
+The following example enables toggle controls for the [Web search](#web-search-object) and [Microsoft Teams messages](#microsoft-teams-messages-object) capabilities, allowing the user to toggle the capabilities on or off.
 
 ```json
 {
