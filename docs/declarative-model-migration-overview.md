@@ -11,9 +11,9 @@ ms.topic: article
 
 # Understand model changes in GPT 5.1+
 
-GPT 5.1 introduces a meaningful shift in how the orchestration layter interprets instructions, manages reasoning depth, and adapts its output style. Compared to GPT 5.0, the system is more explicit about following instructions precisely, more adaptive in planning when ambiguity exists, and more deliberate in choosing the right level of reasoning for each task. These changes matter most for teams building declarative agents and structured workflows where predictability, controllability, and resilience are critical.
+GPT 5.1 introduces a meaningful shift in how the orchestration layer interprets instructions, manages reasoning depth, and adapts its output style. Compared to GPT 5.0, the system is more explicit about following instructions precisely, more adaptive in planning when ambiguity exists, and more deliberate in choosing the right level of reasoning for each task. These changes matter most for teams building declarative agents and structured workflows where predictability, controllability, and resilience are critical.
 
-This article explains what changed in GPT 5.1, why it matters, and how to adapt your prompting patterns.
+This article explains what changed in GPT 5.1, why the changes matter, and how to adapt your prompting patterns.
 
 ## Comparing GPT 5.0 and GPT 5.1
 
@@ -33,12 +33,10 @@ This behavior makes GPT 5.0 predictable, but it's less accurate when prompts are
 GPT 5.1 introduces adaptive reasoning. The model:
 
 - Interprets what the instructions intended, not just what they said.
-- Reorganizes plans to fix or optimize them.
-- Fills gaps and infers missing steps.
 - Dynamically selects the appropriate reasoning depth per request.
-- Replans when instructions are ambiguous or incomplete.
 - Shifts tone and verbosity based on the inferred context.
-- Plans its own approach when goals are clear but steps aren't.
+- Fills gaps, infers missing steps, and plans its own approach when goals are clear but steps aren't.
+- Reorganizes and replans its approach to fix or optimize outcomes when instructions are ambiguous or incomplete.
 
 This behavior produces more capable agents but also increases sensitivity to ambiguous prompts.
 
@@ -70,11 +68,11 @@ For more information, see [Structure instructions in Markdown](declarative-agent
 
 When knowledge sources and constraints are well defined, GPT 5.1 stays within them. When the goal matters more than the path, the model adapts its plan and combines that planning freedom with the guardrails it can identify. This approach makes GPT 5.1 more resilient in real-world workflows where inputs are often imperfect.
 
-### Output style as an explicit dimension
+## Output style as an explicit dimension
 
 GPT 5.0 uses a direct and factual tone. GPT 5.1 introduces eight consistent output profiles:
 
-- **Default**: Balanced reasoning and clarity  
+- **Default**: Verbose, explanatory, and teacher-like
 - **Professional**: Neutral, structured, business-oriented  
 - **Friendly**: Conversational, supportive  
 - **Candid**: Direct, concise  
@@ -85,7 +83,7 @@ GPT 5.0 uses a direct and factual tone. GPT 5.1 introduces eight consistent outp
 
 You can explicitly prompt for these profiles or they can be implicitly inferred. This approach reduces the need for repetitive style instructions. For more information, see [Handle tone and style](declarative-agent-instructions.md#always-specify-tone-verbosity-and-output-format).
 
-### Adaptive reasoning in GPT 5.1 compared to dynamic routing in GPT 5.0
+## Adaptive reasoning in GPT 5.1 compared to dynamic routing in GPT 5.0
 
 Adaptive reasoning brings fundamental changes to how the models work:
 
@@ -125,7 +123,9 @@ If you see unexpected results with GPT 5.1, here are some explanations for how y
 - **Weak Markdown hierarchy**: Unclear hierarchy or mixed list types can cause the model to merge sections, reorder tasks, or collapse important distinctions.
 - **No validation step**: Without an explicit final check, the model might return incomplete or succinct outputs based on choosing faster reasoning.
 
-## Apply a fixed process, format, or tone with GPT 5.1
+## Using fixed versus adaptive reasoning
+
+### Apply a fixed process, format, or tone with GPT 5.1
 
 If your agent must follow a fixed workflow, rigid output format, or a specific tone of voice, adapt your instructions to account for GPT 5.1's intent-first behavior. Be more explicit and structured in how you write your agent instructions. Key strategies include:
 
@@ -136,7 +136,7 @@ If your agent must follow a fixed workflow, rigid output format, or a specific t
 
 Applying these techniques makes your agent's behavior more predictable under GPT 5.1, closely matching the structured outputs you intended. For more information, see [Best practices for agent instructions](declarative-agent-instructions.md).
 
-## Embracing GPT 5.1 adaptive reasoning
+### Embracing GPT 5.1 adaptive reasoning
 
 While the preceding advice helps you lock down your agent’s behavior when necessary, it's also important to recognize situations where you can take advantage of GPT 5.1's more adaptive reasoning. GPT 5.1 is designed to be more goal-oriented and capable of improvising steps to satisfy an objective. In less strictly regulated scenarios, this approach can improve your agent's performance and user experience. To harness GPT 5.1's flexibility:
 

@@ -1,8 +1,8 @@
 ---
 title: Best practices for building declarative agents in Microsoft 365 Copilot
 description: Learn the best practices for building extensibility solutions for Microsoft 365 Copilot.
-author: kmkoenen
-ms.author: v-koenenkaty
+author: lauragra
+ms.author: lauragra
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 10/09/2025
