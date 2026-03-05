@@ -12,9 +12,6 @@ ms.topic: how-to
 
 <!-- cSpell:ignore dotnetcli ontoolresult ontoolcancelled onhostcontextchanged -->
 
-> [!IMPORTANT]
-> This feature is currently in public preview.
-
 You can add interactive UI widgets to your declarative agents by adding a [Model Context Protocol (MCP) server-based action](build-mcp-plugins.md) to your agent and extending the MCP tools used by the agent to include UI. Microsoft 365 Copilot supports UI widgets created using the following methods.
 
 - [MCP Apps](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html) - an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts.
