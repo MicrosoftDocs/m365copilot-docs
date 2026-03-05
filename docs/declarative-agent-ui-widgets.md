@@ -46,6 +46,8 @@ For details on which OpenAI Apps SDK capabilities are supported, see [Supported 
 
 ## Best practices
 
+For details on UX design best practices, see [User experience guidelines for interactive UI widgets in declarative agents](declarative-agent-ui-widgets-guidelines.md).
+
 ### Verify API availability
 
 Not all `window.openai.*` APIs are available on every platform or host. APIs that are unsupported are `undefined`. Always check API availability and provide a fallback if the API is unavailable.
@@ -264,4 +266,5 @@ Microsoft 365 Copilot supports the following capabilities.
 ## Related content
 
 - [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
+- [User experience guidelines for interactive UI widgets in declarative agents](declarative-agent-ui-widgets-guidelines.md)
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk)
