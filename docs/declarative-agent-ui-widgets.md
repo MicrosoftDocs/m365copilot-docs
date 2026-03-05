@@ -144,7 +144,7 @@ When you complete these steps, Agents Toolkit generates the required files for t
     > [!IMPORTANT]
     > If your MCP server is in development and doesn't implement authentication, this step is skipped. You need to manually add authentication to your manifest once you add authentication to your server.
 
-1. Open **ai-plugin.json** and locate the `mcp_tool_description` property. Replace the existing value with the `tools/list` response JSON from your MCP server. Use a testing tool such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector) to get the response from your server.
+1. Open **mcp-tools.json** and replace the existing value with the `tools/list` response JSON from your MCP server. Use a testing tool such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector) to get the response from your server.
 
     > [!NOTE]
     > This step is temporary during the public preview. Agents Toolkit will be updated to make this step unnecessary in the future.
