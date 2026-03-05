@@ -74,7 +74,7 @@ Declarative agents for Microsoft 365 Copilot that are built using [Copilot Studi
 
 | Control | Core scenario | Related content |
 |--|--|--|
-| App registrations | Register an application and grant admin consent for the required Microsoft Graph permissions | [Requirements for Copilot connectors](./overview-copilot-connector.md#requirements-for-copilot-connectors) |
+| App registrations | Register an application and grant admin consent for the required Microsoft Graph permissions | [Requirements for Copilot connectors](./overview-copilot-connector.md#create-your-own-synced-copilot-connector) |
 | Search & intelligence | Ensure that Copilot connectors that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for inline results | [Manage connector results in All vertical](/microsoftsearch/connectors-in-all-vertical) |
 | Copilot Connector management | Enable or disable a Copilot connector | [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365-copilot/extensibility/context) |
 
