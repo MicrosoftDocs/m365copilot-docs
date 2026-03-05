@@ -101,6 +101,8 @@ items:
           href: api-plugin-authentication.md
         - name: Add interactive UI widgets
           href: declarative-agent-ui-widgets.md
+        - name: UX guidelines for UI widgets
+          href: declarative-agent-ui-widgets-guidelines.md
         - name: Adaptive Card responses
           href: api-plugin-adaptive-cards.md
           displayName: response, response_semantics
