@@ -86,7 +86,13 @@ items:
         - name: Overview
           href: overview-plugins.md
         - name: Add actions with MCP plugins
-          href: build-mcp-plugins.md
+          items:
+          - name: Build an MCP plugin
+            href: build-mcp-plugins.md
+          - name: Add interactive UI widgets
+            href: declarative-agent-ui-widgets.md
+          - name: UX guidelines for UI widgets
+            href: declarative-agent-ui-widgets-guidelines.md
         - name: Add actions with API plugins
           items:
           - name: Build an API plugin with TypeSpec
@@ -99,10 +105,6 @@ items:
             href: build-api-plugins-local-office-api.md
         - name: Authentication
           href: api-plugin-authentication.md
-        - name: Add interactive UI widgets
-          href: declarative-agent-ui-widgets.md
-        - name: UX guidelines for UI widgets
-          href: declarative-agent-ui-widgets-guidelines.md
         - name: Adaptive Card responses
           href: api-plugin-adaptive-cards.md
           displayName: response, response_semantics
