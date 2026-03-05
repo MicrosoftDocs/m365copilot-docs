@@ -4,11 +4,11 @@ description: Learn how to add interactive UI widgets to MCP server-based declara
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 02/15/2026
+ms.date: 03/06/2026
 ms.topic: how-to
 ---
 
-# Add interactive UI widgets to declarative agents (preview)
+# Add interactive UI widgets to declarative agents
 
 <!-- cSpell:ignore dotnetcli ontoolresult ontoolcancelled onhostcontextchanged -->
 
@@ -263,6 +263,6 @@ Microsoft 365 Copilot supports the following capabilities.
 
 ## Related content
 
-- [Build plugins from an MCP server for Microsoft 365 Copilot (preview)](build-mcp-plugins.md)
+- [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
 - [MCP Apps Overview](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html#learn-more)
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk)

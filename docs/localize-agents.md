@@ -123,7 +123,7 @@ The following fields are localizable within the API plugin manifest.
 |`privacy_policy_url`|An absolute URL that locates a document containing the privacy policy for the plugin.| | |
 | `conversation_starters`| A list (array) of examples of questions that the plugin can answer, where each example is an object with `title` and `text`, both of which are localizable.| | |
 
-To learn more, see [API plugin manifest reference](./api-plugin-manifest.md).
+To learn more, see [Plugin manifest reference](./plugin-manifest-2.4.md).
 
 ## Related content
 

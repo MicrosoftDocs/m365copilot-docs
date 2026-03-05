@@ -8,9 +8,11 @@ ms.topic: tutorial
 ms.localizationpriority: medium
 ---
 
+<!-- cSpell:ignore GCCH -->
+
 # Add skills to a declarative agent created with Microsoft 365 Agents Toolkit
 
-You can enhance the abilities of your agent by adding skills. Skills can be added either by enabling built-in capabilities like [image generator](image-generator.md) or [code interpreter](code-interpreter.md), or by adding [API plugins](overview-api-plugins.md) as custom actions.
+You can enhance the abilities of your agent by adding skills. Skills can be added either by enabling built-in capabilities like [image generator](image-generator.md) or [code interpreter](code-interpreter.md), or by adding [MCP or API plugins](overview-plugins.md) as custom actions.
 
 > [!IMPORTANT]
 > This guide assumes you have completed the [Create declarative agents using Microsoft 365 Agents Toolkit](build-declarative-agents.md) tutorial.

@@ -33,7 +33,7 @@ Declarative agents have access to the open document by default. No changes are r
 
 ### Using the open document in API plugins
 
-If your agent includes [API plugins](overview-api-plugins.md) as custom actions, the agent decides how much of the open document to send to the API based on your API description and the instructions given to the agent. For more information, see [API plugin considerations for document contents](#api-plugin-considerations-for-document-contents).
+If your agent includes [API plugins](overview-plugins.md) as custom actions, the agent decides how much of the open document to send to the API based on your API description and the instructions given to the agent. For more information, see [API plugin considerations for document contents](#api-plugin-considerations-for-document-contents).
 
 ## Access document selection
 
@@ -57,14 +57,14 @@ Declarative agents have access to document selection by default. No changes are 
 
 ### Using document selection in API plugins
 
-If your agent includes [API plugins](overview-api-plugins.md) as custom actions, the agent can provide the document selection to the API. The agent translates the document selection based on your API specification.
+If your agent includes [API plugins](overview-plugins.md) as custom actions, the agent can provide the document selection to the API. The agent translates the document selection based on your API specification.
 
 #### API plugin considerations for document contents
 
 For the entire document or user selection, the agent decides how to best pass the data to an API plugin. You should ensure that the document or user selection is translated appropriately for your API.
 
 1. Begin by testing your agent without adding any special instructions to your agent. In most cases, the agent should translate the document contents or user selection appropriately for your API without any extra configuration.
-1. If your agent doesn't translate appropriately for your API, add instructions in the plugin manifest's `reasoning` [state object](api-plugin-manifest-2.4.md#state-object) to instruct the agent on which form to choose.
+1. If your agent doesn't translate appropriately for your API, add instructions in the plugin manifest's `reasoning` [state object](plugin-manifest-2.4.md#state-object) to instruct the agent on which form to choose.
 1. Test various selections to verify your agent handles different types and lengths of content appropriately.
 
 Here are some examples of instructions to influence how the agent translates the document contents or user selection. The actual instructions needed to get the desired result depend on your agent and your API.
@@ -125,7 +125,7 @@ Enabling image insertion in a declarative agent requires an API plugin that uses
 
 ## Related content
 
-- [API plugins for Microsoft 365 Copilot](overview-api-plugins.md)
-- [API plugin manifest schema 2.4 for Microsoft 365 Copilot](api-plugin-manifest-2.4.md)
+- [Plugins for Microsoft 365 Copilot](overview-plugins.md)
+- [Plugin manifest schema 2.4 for Microsoft 365 Copilot](plugin-manifest-2.4.md)
 - [Adaptive Card response templates for API plugins for Microsoft 365 Copilot](api-plugin-adaptive-cards.md)
 - [Adaptive Card documentation](https://adaptivecards.microsoft.com)

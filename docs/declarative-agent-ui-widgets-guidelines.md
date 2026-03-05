@@ -4,13 +4,13 @@ description: Learn how to build UI widgets that look and feel native to Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/10/2026
+ms.date: 03/06/2026
 ms.topic: article
 ---
 
 <!-- markdownlint-disable MD024 -->
 
-# User experience guidelines for interactive UI widgets in declarative agents (preview)
+# User experience guidelines for interactive UI widgets in declarative agents
 
 This guide provides user experience (UX) guidance for developers building MCP-based UI experiences in Copilot. It covers patterns for creating native, coherent, and task-focused interactions that integrate smoothly into the conversational flow in Copilot.
 
@@ -329,5 +329,5 @@ Create beautiful, cohesive Microsoft experiences using the Fluent 2 UI kits. Bui
 
 ## Related content
 
-- [Add interactive UI widgets to declarative agents (preview)](declarative-agent-ui-widgets.md)
+- [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md)
 - [Fluent 2](https://fluent2.microsoft.design/)

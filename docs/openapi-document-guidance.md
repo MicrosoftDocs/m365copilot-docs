@@ -96,4 +96,4 @@ responses:
 ## Related content
 
 - [Write instructions for agents with API plugins](./instructions-api-plugins.md)
-- [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md)
+- [Plugins for Microsoft 365 Copilot](./overview-plugins.md)

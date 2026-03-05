@@ -54,7 +54,7 @@ get:
 
 ## Customizing confirmation text
 
-Developers can specify the confirmation text by setting the `body` property in the [Confirmation object](api-plugin-manifest-2.4.md#confirmation-object) in the function's [Function capabilities object](api-plugin-manifest-2.4.md#function-capabilities-object) in the plugin manifest. The value of `body` should be indicative of what the function does. If this property isn't present in the manifest, the `description` property in the [Function object](api-plugin-manifest-2.4.md#function-object) is used instead.
+Developers can specify the confirmation text by setting the `body` property in the [Confirmation object](plugin-manifest-2.4.md#confirmation-object) in the function's [Function capabilities object](plugin-manifest-2.4.md#function-capabilities-object) in the plugin manifest. The value of `body` should be indicative of what the function does. If this property isn't present in the manifest, the `description` property in the [Function object](plugin-manifest-2.4.md#function-object) is used instead.
 
 ```json
 {
@@ -72,7 +72,7 @@ Developers can specify the confirmation text by setting the `body` property in t
 
 ## Localizing confirmation text
 
-You can configure [localizable strings](api-plugin-manifest-2.4.md#string-localization) to be used as confirmation prompts. The following steps describe the process.
+You can configure [localizable strings](plugin-manifest-2.4.md#string-localization) to be used as confirmation prompts. The following steps describe the process.
 
 ### Step 1: Use localization keys in the plugin manifest
 
@@ -122,4 +122,4 @@ Include a localizationInfo section in your app manifest that references the loca
 
 ## Related content
 
-[API plugins for Microsoft 365 Copilot](overview-api-plugins.md)
+[Plugins for Microsoft 365 Copilot](overview-plugins.md)

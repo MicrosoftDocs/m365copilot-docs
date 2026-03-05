@@ -18,7 +18,7 @@ Plugins enable declarative agents in Microsoft 365 Copilot to interact with MCP 
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-A plugin provides a plugin manifest that Copilot uses to learn the capabilities of the plugin's MCP server or API. Copilot can then decide when an installed and enabled plugin is suited to answer any given prompt. To learn more about the manifest file that a plugin requires, see [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest-2.4.md).
+A plugin provides a plugin manifest that Copilot uses to learn the capabilities of the plugin's MCP server or API. Copilot can then decide when an installed and enabled plugin is suited to answer any given prompt. To learn more about the manifest file that a plugin requires, see [Plugin manifest schema for Microsoft 365 Copilot](plugin-manifest-2.4.md).
 
 ## Plugin example
 
@@ -182,6 +182,6 @@ The token window for inputs to and outputs from a plugin truncates large content
 
 - [Build API plugins from an existing API for Microsoft 365 Copilot](build-api-plugins-existing-api.md)
 - [Build API plugins with a new API for Microsoft 365 Copilot](build-api-plugins-new-api.md)
-- [Build API plugins from an MCP server for Microsoft 365 Copilot](build-api-plugins-mcp.md)
-- [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest-2.4.md)
+- [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
+- [Plugin manifest schema for Microsoft 365 Copilot](plugin-manifest-2.4.md)
 - [Write effective instructions for declarative agents with API plugins](instructions-api-plugins.md)

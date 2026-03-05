@@ -421,7 +421,7 @@ Defines the authentication reference ID for the authentication type.
 
 ### `@capabilities`
 
-Support an action function's capabilities object as defined in the [API plugin manifest](overview-api-plugins.md) object. You can use this decorator to define simple adaptive cards with small definitions like `confirmation`. For more complex adaptive cards, you can use the `@card` decorator.
+Support an action function's capabilities object as defined in the [plugin manifest](overview-plugins.md) object. You can use this decorator to define simple adaptive cards with small definitions like `confirmation`. For more complex adaptive cards, you can use the `@card` decorator.
 
 ```typescript
 @capabilities(capabilities: valueof FunctionCapabilitiesMetadata)
