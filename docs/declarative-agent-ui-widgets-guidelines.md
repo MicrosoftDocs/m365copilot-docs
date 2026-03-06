@@ -213,12 +213,55 @@ Use side-by-side mode when the experience requires:
     Inline experiences should feel like a natural extension of Copilot. Use Copilot-aligned [Fluent 2](https://fluent2.microsoft.design/) components, spacing, typography, and tokens to ensure visual and interaction consistency.
   :::column-end:::
 :::row-end:::
+
+:::row:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/widget-state.png" alt-text="A screenshot of a widget with an 'Opening Document' indicator" border="false":::
+  :::column-end:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/no-full-application.png" alt-text="A screenshot of a widget that mimics a full application" border="false":::
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    ### :white_check_mark: Provide widget state handling
+
+    Widgets must provide clear system feedback like loading state, disabled state, success confirmation, and error state with recovery option.
+  :::column-end:::
+  :::column:::
+    ### :x: Don't use a widget to resemble a full application
+
+    Inline mode should feel like a natural extension of chat, not an entire application embedded inside it.
+  :::column-end:::
+:::row-end:::
+
+:::row:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/no-duplicate-features.png" alt-text="A screenshot of a widget with a natural language prompt" border="false":::
+  :::column-end:::
+  :::column:::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/avoid-deep-navigation.png" alt-text="A screenshot of a widget with multiple tabs" border="false":::
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    ### :x: Don't duplicate Copilot features in the widget
+
+    Avoid recreating chat capabilities (prompt input, suggestions, reasoning summaries, retry controls) inside the widget. Duplication creates confusion, visual noise, and fragmented interaction models.
+  :::column-end:::
+  :::column:::
+    ### :x: Avoid deep navigation in widgets
+
+    Widgets should not contain multiple tabs, or deeper navigation. Consider splitting these into separate cards or tool actions.
+  :::column-end:::
+:::row-end:::
+
 :::row:::
   :::column:::
     :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/avoid-scroll-heavy.png" alt-text="A screenshot of a widget with a large scroll bar" border="false":::
   :::column-end:::
   :::column:::
-    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/no-duplicate-features.png" alt-text="A screenshot of a widget with a natural language prompt" border="false":::
+    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/no-duplicate-content.png" alt-text="A screenshot of a widget that duplicates content in the model text" border="false":::
   :::column-end:::
 :::row-end:::
 :::row:::
@@ -228,49 +271,9 @@ Use side-by-side mode when the experience requires:
     Inline widgets should be concise and glanceable. Avoid vertical scroll within the widget. Height should feel widget-sized, not application-sized. If content requires scrolling, complex tables, or detailed editing, transition to side-by-side mode.
   :::column-end:::
   :::column:::
-    ### :x: Don't duplicate Copilot features in the widget
-
-    Avoid recreating chat capabilities (prompt input, suggestions, reasoning summaries, retry controls) inside the widget. Duplication creates confusion, visual noise, and fragmented interaction models.
-  :::column-end:::
-:::row-end:::
-:::row:::
-  :::column:::
-    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/image-needed.png" alt-text="Image needed" border="false":::
-  :::column-end:::
-  :::column:::
-    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/no-full-application.png" alt-text="A screenshot of a widget that mimics a full application" border="false":::
-  :::column-end:::
-:::row-end:::
-:::row:::
-  :::column:::
-    ### :x: Don't exceed more than two actions per widget
-
-     Support up to two actions inside a widget. For complex tasks hand over to side-by-side mode.
-  :::column-end:::
-  :::column:::
-    ### :x: Don't use a widget to resemble a full application
-
-    Inline mode should feel like a natural extension of chat, not an entire application embedded inside it.
-  :::column-end:::
-:::row-end:::
-:::row:::
-  :::column:::
-    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/no-duplicate-content.png" alt-text="A screenshot of a widget that duplicates content in the model text" border="false":::
-  :::column-end:::
-  :::column:::
-    :::image type="content" source="assets/images/declarative-agents/widget-ux-guidelines/image-needed.png" alt-text="Image needed" border="false":::
-  :::column-end:::
-:::row-end:::
-:::row:::
-  :::column:::
     ### :x: Don't duplicate content in model text and widget
 
     Do not repeat the same information in both the widget and the model message.
-  :::column-end:::
-  :::column:::
-    ### :x: Avoid deep navigation in widgets
-
-    Widgets should not contain multiple tabs, or deeper navigation. Consider splitting these into separate cards or tool actions.
   :::column-end:::
 :::row-end:::
 
