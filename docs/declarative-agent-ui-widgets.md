@@ -148,7 +148,7 @@ When you complete these steps, Agents Toolkit generates the required files for t
 1. Open **mcp-tools.json** and replace the existing value with the `tools/list` response JSON from your MCP server. Use a testing tool such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector) to get the response from your server.
 
     > [!NOTE]
-    > This step is temporary during the public preview. Agents Toolkit will be updated to make this step unnecessary in the future.
+    > This step is temporary. Agents Toolkit will be updated to make this step unnecessary in the future.
 
 1. Select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
 

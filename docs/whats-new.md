@@ -8,15 +8,25 @@ ms.date: 03/06/2026
 ms.topic: overview
 ---
 
+<!-- markdownlint-disable MD024 -->
+<!-- cSpell:ignore GCCH -->
+
 # What's new in Microsoft 365 Copilot extensibility
 
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## March 2026
+
+### Interactive UI widgets for declarative agents
+
+You can now add interactive UI widgets to your declarative agents by extending MCP server-based actions using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk). Widgets can render inline or in full-screen mode within Microsoft 365 Copilot. For more information, see [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md).
+
 ## February 2026
 
 ### Agent Builder availability in GCCH
+
 Agent Builder is now available in Government Community Cloud High (GCCH) environments.
 
 ## January 2026
