@@ -4,7 +4,7 @@ description: "Learn how to allow users to edit modal dialog boxes in Adaptive Ca
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: isrumnon
-ms.date: 11/07/2025
+ms.date: 03/06/2026
 ms.topic: concept-article
 ms.localizationpriority: medium
 ---
@@ -22,7 +22,7 @@ This article describes how to use the `Action.Execute` function (available start
 
 To use the modal dialog box action:
 
-- Add the [Adaptive Card template](api-plugin-adaptive-cards.md) to your [API plugin manifest](api-plugin-manifest-2.4.md).
+- Add the [Adaptive Card template](api-plugin-adaptive-cards.md) to your [plugin manifest](plugin-manifest-2.4.md).
 - Include the `Action.Execute` schema in the Adaptive Card definition.
 
 The following example shows the schema for Action.Execute.

@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/05/2025
+ms.date: 03/06/2026
 ---
 
 # Create effective OpenAPI descriptions for extending Microsoft 365 Copilot
@@ -96,4 +96,4 @@ responses:
 ## Related content
 
 - [Write instructions for agents with API plugins](./instructions-api-plugins.md)
-- [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md)
+- [Plugins for Microsoft 365 Copilot](./overview-plugins.md)
