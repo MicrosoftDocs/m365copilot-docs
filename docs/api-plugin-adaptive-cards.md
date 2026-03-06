@@ -4,7 +4,7 @@ description: Learn how to use Adaptive Card response templates to customize API 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 01/30/2025
+ms.date: 03/06/2026
 ms.topic: article
 ---
 
@@ -14,7 +14,7 @@ ms.topic: article
 
 API plugins can use Adaptive Card response templates to enhance the response that Microsoft 365 Copilot generates based on the response received from the API. The Adaptive Card renders citations within the generated response.
 
-API plugins can define an Adaptive Card response template in two ways: as a static template defined in the [API plugin manifest](api-plugin-manifest.md), or as a dynamic template returned as part of the API response. Plugin developers defined templates using the [Adaptive Card schema](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) in combination with the [Adaptive Cards template language](/adaptive-cards/templating/language).
+API plugins can define an Adaptive Card response template in two ways: as a static template defined in the [plugin manifest](plugin-manifest-2.4.md), or as a dynamic template returned as part of the API response. Plugin developers defined templates using the [Adaptive Card schema](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) in combination with the [Adaptive Cards template language](/adaptive-cards/templating/language).
 
 ## Static response templates
 
@@ -219,7 +219,7 @@ The combination of this plugin manifest and API response results in the followin
 Plugins can combine the use of both static and dynamic templates. In this scenario, the static template acts as a default template that is used if the item doesn't have the `template_selector` property present, or if its value doesn't resolve to a template in the API response.
 
 > [!NOTE]
-> When you use `Action.OpenUrl`, make sure to include the domain of the target URL in the [validDomains](/microsoft-365/extensibility/schema/root?view=m365-app-1.25&tabs=syntax#validdomains) section of your app manifest. If the domain isn't listed, Teams displays the message **URL may lead to untrusted content**.
+> When you use `Action.OpenUrl`, make sure to include the domain of the target URL in the [validDomains](/microsoft-365/extensibility/schema/root#validdomains) section of your app manifest. If the domain isn't listed, Teams displays the message **URL may lead to untrusted content**.
 
 ## Ensure responsive Adaptive Cards across Microsoft 365 Copilot hubs
 
@@ -233,4 +233,4 @@ Adaptive cards must be designed to be responsive across various surface sizes. T
 
 - [Adaptive Card designer](https://adaptivecards.microsoft.com/designer) to design and test Adaptive Cards in a visual tool.
 - [Adaptive Card documentation](/adaptive-cards)
-- [API plugin manifest reference](api-plugin-manifest.md)
+- [Plugin manifest reference](plugin-manifest-2.4.md)
