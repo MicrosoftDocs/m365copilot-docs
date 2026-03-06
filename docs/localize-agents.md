@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/04/2025
+ms.date: 03/06/2026
 ---
 
 # Localize your agent

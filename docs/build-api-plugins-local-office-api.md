@@ -4,7 +4,7 @@ description: Learn how to build API plugins for Microsoft 365 Copilot with the O
 author: rickki
 ms.author: rickki
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 03/06/2026
 ms.topic: how-to
 ---
 

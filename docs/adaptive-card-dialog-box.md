@@ -5,7 +5,7 @@ author: lauragra
 ms.author: isrumnon
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/13/2025
+ms.date: 03/06/2026
 ---
 
 # Add a dialog box to Adaptive Card templates (preview)

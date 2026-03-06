@@ -4,7 +4,7 @@ description: Learn about the 2.3 schema for a manifest file for a plugin in Micr
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 03/06/2026
 ms.topic: reference
 ---
 

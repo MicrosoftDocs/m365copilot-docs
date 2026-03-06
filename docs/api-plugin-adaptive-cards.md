@@ -4,7 +4,7 @@ description: Learn how to use Adaptive Card response templates to customize API 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 01/30/2025
+ms.date: 03/06/2026
 ms.topic: article
 ---
 

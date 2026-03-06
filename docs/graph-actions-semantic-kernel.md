@@ -4,7 +4,7 @@ description: Learn how to build Semantic Kernel plugins by using Visual Studio C
 author: fabianwilliams
 ms.author: fwilliams
 ms.localizationpriority: medium
-ms.date: 07/23/2025
+ms.date: 03/06/2026
 ms.topic: article
 ---
 

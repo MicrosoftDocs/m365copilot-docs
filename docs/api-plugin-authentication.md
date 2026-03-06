@@ -4,7 +4,7 @@ description: Learn how to set up authentication for plugins in agents running in
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 01/13/2026
+ms.date: 03/06/2026
 ms.topic: article
 ---
 

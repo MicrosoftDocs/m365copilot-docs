@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/02/2025
+ms.date: 03/06/2026
 ---
 
 # Agents are apps for Microsoft 365

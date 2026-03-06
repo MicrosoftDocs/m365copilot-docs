@@ -4,7 +4,7 @@ description: Learn about the built-in decorators for building agents and API plu
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 12/03/2025
+ms.date: 03/06/2026
 ms.topic: reference
 ---
 

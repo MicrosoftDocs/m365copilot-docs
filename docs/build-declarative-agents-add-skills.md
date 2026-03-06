@@ -1,7 +1,7 @@
 ---
 title: Add capabilities and custom actions to a declarative agent created with Microsoft 365 Agents Toolkit
 description: Learn how to add capabilities and API plugins as custom actions to declarative agents with Microsoft 365 Agents Toolkit.
-ms.date: 12/18/2025
+ms.date: 03/06/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial

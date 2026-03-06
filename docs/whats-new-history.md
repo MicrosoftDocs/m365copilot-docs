@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 06/03/2025
+ms.date: 03/06/2026
 ms.topic: overview
 ---
 

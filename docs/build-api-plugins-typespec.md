@@ -4,7 +4,7 @@ description: Learn how to build API plugins as declarative agent actions with Ty
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 03/06/2026
 ms.topic: how-to
 ---
 

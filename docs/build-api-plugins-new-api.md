@@ -4,7 +4,7 @@ description: Learn how to build API plugins with a new API for Microsoft 365 Cop
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 03/06/2026
 ms.topic: how-to
 ---
 

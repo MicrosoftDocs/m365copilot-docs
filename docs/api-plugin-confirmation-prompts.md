@@ -4,7 +4,7 @@ description: Learn about confirmation prompts for API plugins and how to change 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 01/15/2026
+ms.date: 03/06/2026
 ms.topic: article
 ---
 

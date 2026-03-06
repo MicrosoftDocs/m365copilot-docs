@@ -4,7 +4,7 @@ description: Learn about plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/10/2026
+ms.date: 03/06/2026
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---

@@ -4,7 +4,7 @@ description: "Learn how to allow users to edit modal dialog boxes in Adaptive Ca
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: isrumnon
-ms.date: 11/07/2025
+ms.date: 03/06/2026
 ms.topic: concept-article
 ms.localizationpriority: medium
 ---

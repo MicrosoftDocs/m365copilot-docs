@@ -4,7 +4,7 @@ description: Learn how to interact with documents in Microsoft 365 apps with a d
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 04/09/2025
+ms.date: 03/06/2026
 ms.topic: article
 ---
 
