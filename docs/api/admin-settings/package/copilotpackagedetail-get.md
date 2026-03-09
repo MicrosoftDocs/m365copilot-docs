@@ -69,26 +69,31 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "longDescription": "This is a detailed description for package abc. It provides comprehensive information about the package functionality, features, and usage scenarios.",
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/catalog/packages/$entity",
+  "id": "P_19ae1zz1-56bc-505a-3d42-156df75a4xxy",
+  "displayName": "Contoso Sales Agent",
+  "type": "custom",
+  "shortDescription": "Short description for package abc",
+  "isBlocked": false,
+  "supportedHosts": ["teams", "outlook", "sharePoint"],
+  "lastModifiedDateTime": "2025-10-06T00:07:20.146Z",
+  "publisher": "Contoso",
+  "availableTo": "all",
+  "deployedTo": "some",
+  "elementTypes": ["declarativeAgent"],
+  "platform": "teams",
   "version": "1.2.3",
+  "manifestVersion": "2.0",
+  "manifestId": "contoso-sales-agent",
+  "appId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+  "assetId": "asset-00042",
+  "longDescription": "This is a detailed description for package abc. It provides comprehensive information about the package functionality, features, and usage scenarios.",
   "categories": [
     "Development",
     "Productivity",
     "Tools"
   ],
-  "type": "custom",
-  "manifestVersion": "2.0",
-  "id": "abc",
-  "shortDescription": "Short description for package abc",
-  "isBlocked": false,
-  "supportedHosts": [
-    "Teams",
-    "Outlook",
-    "SharePoint"
-  ],
-  "lastModifiedDateTime": "2025-10-06T00:07:20.1467852Z",
-  "availableTo": "all",
-  "deployedTo": "all",
+  "sensitivity": "general",
   "allowedUsersAndGroups": [
     {
       "resourceId": "user-123",
@@ -99,30 +104,23 @@ Content-Type: application/json
       "resourceType": "group"
     }
   ],
+  "acquireUsersAndGroups": [],
   "elementDetails": [
     {
-      "elementType": "Bot",
+      "elementType": "bot",
       "elements": [
         {
           "id": "bot-001",
-          "definition": "{\\n\\\"botId\\\":\\\"303e399a-cecc-4511-ad38-82970baa288b\\\",\\n\\\"scopes\\\":[\\n\\\"personal\\\"\\n],\\n\\\"isNotificationOnly\\\":true,\\n\\\"supportsCalling\\\":false,\\n\\\"supportsVideo\\\":false,\\n\\\"supportsFiles\\\":false\\n}"
-        },
-        {
-          "id": "bot-002",
-          "definition": "{\\n\\\"botId\\\":\\\"203e399a-cecc-4511-ad38-82970baa288b\\\",\\n\\\"scopes\\\":[\\n\\\"personal\\\"\\n],\\n\\\"isNotificationOnly\\\":true,\\n\\\"supportsCalling\\\":false,\\n\\\"supportsVideo\\\":false,\\n\\\"supportsFiles\\\":false\\n}"
+          "definition": "{\"botId\":\"303e399a-cecc-4511-ad38-82970baa288b\",\"scopes\":[\"personal\"],\"isNotificationOnly\":true,\"supportsCalling\":false,\"supportsVideo\":false,\"supportsFiles\":false}"
         }
       ]
     },
     {
-      "elementType": "DeclarativeCopilots",
+      "elementType": "declarativeAgent",
       "elements": [
         {
           "id": "dcp-001",
-          "definition": "dcp1 json definition as string"
-        },
-        {
-          "id": "dcp-002",
-          "definition": "dcp2 json definition as string"
+          "definition": "{\"id\":\"dcp-001\",\"version\":\"v2.1\",\"name\":\"Contoso Sales Agent\"}"
         }
       ]
     }

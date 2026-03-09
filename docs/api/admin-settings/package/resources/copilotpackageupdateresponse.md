@@ -14,13 +14,13 @@ ms.date: 01/28/2026
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Represents the response returned after updating a Copilot package using the update action.
+Represents the response returned when a Copilot package is uploaded or updated.
 
 ## Properties
 
-| Property | Type   | Description                        |
-|:---------|:-------|:-----------------------------------|
-| `id`     | String | The ID of the updated package.     |
+| Property | Type   | Description                                                                             |
+|:---------|:-------|:----------------------------------------------------------------------------------------|
+| `id`     | String | Unique identifier of the package that was created or updated through package management. |
 
 ## Relationships
 

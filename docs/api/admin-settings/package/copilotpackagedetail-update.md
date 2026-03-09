@@ -71,6 +71,7 @@ The following properties cannot be updated.
 | `elementDetails`       | Complex type   |
 | `id`                   | String         |
 | `lastModifiedDateTime` | DateTimeOffset |
+| `manifestId`           | String         |
 | `manifestVersion`      | String         |
 | `publisher`            | String         |
 | `type`                 | String         |

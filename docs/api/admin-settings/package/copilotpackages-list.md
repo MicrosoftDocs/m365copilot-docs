@@ -85,10 +85,18 @@ Content-Type: application/json
       "type": "external",
       "shortDescription": "Allows direct upload of documents from Microsoft Office into Diligent Teams for sharing",
       "isBlocked": false,
-      "supportedHosts": ["Teams", "SharePoint"],
-      "lastModifiedDateTime": "2025-10-06T00:07:20.1467852Z",
+      "supportedHosts": ["outlook", "word", "excel", "powerPoint"],
+      "lastModifiedDateTime": "2023-11-20T19:02:02.241Z",
+      "publisher": "Diligent Corporation",
       "availableTo": "all",
-      "deployedTo": "all"
+      "deployedTo": "none",
+      "elementTypes": ["officeAddIn"],
+      "platform": "web",
+      "version": "1.0.0",
+      "manifestVersion": "1.1",
+      "manifestId": "diligent-teams-uploader",
+      "appId": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
+      "assetId": "asset-00001"
     }
   ]
 }
