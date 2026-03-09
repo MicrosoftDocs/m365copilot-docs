@@ -20,6 +20,7 @@ Custom engine agents enable sophisticated agent implementations. These implement
 
 Custom engine agents provide a hybrid architecture that combines Microsoft infrastructure capabilities with developer-controlled processing components. This architecture enables sophisticated agent implementations that balance platform benefits with customization requirements.
 
+<!-- Art Library Source# ConceptArt-0-000-149 -->
 :::image type="content" source="assets/images/custom-engine-agents/custom-engine-agent-architecture.png" alt-text="Diagram of custom engine agent flow showing Microsoft infrastructure, orchestrator logic, API integration, and response synthesis steps." lightbox="assets/images/custom-engine-agents/custom-engine-agent-architecture.png":::
 
 This model allows you to use the Microsoft client and catalog infrastructure while keeping full control over orchestrator, language model, and API components. Components within your control enable prompt routing to multiple language models through multiple processing loops with complete output formatting control. You achieve this capability at the cost of higher development effort.

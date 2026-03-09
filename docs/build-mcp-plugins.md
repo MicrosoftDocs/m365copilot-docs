@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 11/18/2025
+ms.date: 03/06/2026
 ---
 
 # Build plugins from an MCP server for Microsoft 365 Copilot (preview)
@@ -116,3 +116,7 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 1. When the pop-up window closes, the agent returns a response.
 
     :::image type="content" source="assets/images/api-plugins/github-mcp-plugin-response.png" alt-text="A screenshot of the agent's response to a query for repositories":::
+
+## Related content
+
+- [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md)

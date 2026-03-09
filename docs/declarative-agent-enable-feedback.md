@@ -1,8 +1,8 @@
 ---
 title: Enable feedback for your declarative agents for Microsoft 365 Copilot
 description: Learn how to configure your declarative agent to enable user feedback.
-author: kmkoenen
-ms.author: v-koenenkaty
+author: lauragra
+ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
 ms.date: 09/09/2025
@@ -51,5 +51,5 @@ To send diagnostic logs for Copilot on behalf of individual users who are having
 
 ## Related content
 
-- [Manage Microsoft feedback for your organization](https://learn.microsoft.com/microsoft-365/admin/manage/manage-feedback-ms-org?view=o365-worldwide&preserve-view=true)
+- [Manage Microsoft feedback for your organization](/microsoft-365/admin/manage/manage-feedback-ms-org)
 - [Declarative agents overview](overview-declarative-agent.md)

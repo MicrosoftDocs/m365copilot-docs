@@ -4,7 +4,7 @@ description: Learn how to build API plugins from an existing API for Microsoft 3
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 03/06/2026
 ms.topic: how-to
 ---
 
@@ -14,7 +14,7 @@ ms.topic: how-to
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-[API plugins](overview-api-plugins.md) connect your existing REST API to Microsoft 365 Copilot. You can use the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi).
+[API plugins](overview-plugins.md) connect your existing REST API to Microsoft 365 Copilot. You can use the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi).
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ To follow along with this guide, download the [Budget Tracker sample API](https:
 API plugins are a ZIP file that contains the following files.
 
 - The OpenAPI specification for the REST API.
-- An [API plugin manifest](api-plugin-manifest.md) that references the included OpenAPI specification and describes the available operations, authentication method, and response formats.
+- A [plugin manifest](plugin-manifest-2.4.md) that references the included OpenAPI specification and describes the available operations, authentication method, and response formats.
 
 1. Open Visual Studio Code. If Agents Toolkit isn't already installed, see [Install Agents Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
 

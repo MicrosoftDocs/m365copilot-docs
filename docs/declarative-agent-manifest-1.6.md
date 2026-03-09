@@ -4,7 +4,7 @@ description: Learn about the 1.6 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 12/18/2025
+ms.date: 03/06/2026
 ms.topic: reference
 ---
 
@@ -49,7 +49,7 @@ The declarative agent manifest object contains the following properties.
 | `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It must contain at least one nonwhitespace character and be 8,000 characters or less. |
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. The array can't contain more than one of each derived type of [Capabilities object](#capabilities-object). |
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. The array can't contain more than 12 objects. |
-| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of 1-10 objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
+| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of 1-10 objects that identify [plugins](plugin-manifest-2.4.md) that provide actions accessible to the declarative agent. |
 | `behavior_overrides`    | [Behavior overrides object](#behavior-overrides-object)               | Optional. Contains configuration settings that modify the behavior of the agent. |
 | `disclaimer`            | [Disclaimer object](#disclaimer-object)                               | Optional. Disclaimer text that is displayed to the user at the start of a conversation. |
 | `sensitivity_label`     | [Sensitivity label object](#sensitivity-label-object)                 | Optional. Specifies a Microsoft Purview sensitivity label for the agent. |
@@ -740,10 +740,10 @@ The worker agent object contains the following property.
 
 ### User override object
 
-Identifies capabilities in the agent that the agent user can modify via a UI control in Microsoft 365 Copilot.
+Identifies capabilities configured in the [Capabilities object](#capabilities-object) that the user can override via a UI control in Microsoft 365 Copilot. The only supported action is `remove`, which enables a toggle control in the UI, allowing the user to enable or disable the capability from being used to generate responses.
 
 > [!NOTE]
-> When you declare `GraphConnectors` in the `path`, the system buckets and displays Microsoft provided connectors using a friendly name, and custom connectors using the connector name (e.g., CB Insights). This behavior ensures end users can easily identify and manage connector sources when configuring their agent session. For more information on connectors and publishers, see [Microsoft 365 Copilot Connectors Gallery](/microsoftsearch/connectors-gallery).
+> When you declare `GraphConnectors` in the `path`, all available Copilot connectors are able to be toggled on or off. It is not possible to enable the toggle for specific connectors. The system buckets and displays Microsoft provided connectors using a friendly name, and custom connectors using the connector name (e.g., CB Insights). This behavior ensures end users can easily identify and manage connector sources when configuring their agent session. For more information on connectors and publishers, see [Microsoft 365 Copilot Connectors Gallery](/microsoftsearch/connectors-gallery).
 
 The user override object contains the following properties.
 
@@ -751,6 +751,25 @@ The user override object contains the following properties.
 | ----------------- | --------------- | ----------- |
 | `path`            | String          | Required. A JSONPath expression identifying the capability that users can modify. The JSONPath expression allows targeting specific capabilities by name only. |
 | `allowed_actions` | Array of String | Required. Specifies that actions can be taken for the specified capabilities. The only supported action is `remove`. |
+
+#### User override object example
+
+The following example enables toggle controls for the [Web search](#web-search-object) and [Microsoft Teams messages](#microsoft-teams-messages-object) capabilities, allowing the user to toggle the capabilities on or off.
+
+```json
+{
+  "user_overrides": [
+    {
+      "path": "$.capabilities[?(@.name == 'WebSearch')]",
+      "allowed_actions": ["remove"]
+    },
+    {
+      "path": "$.capabilities[?(@.name == 'TeamsMessages')]",
+      "allowed_actions": ["remove"]
+    }
+  ]
+}
+```
 
 ## Declarative agent manifest example
 

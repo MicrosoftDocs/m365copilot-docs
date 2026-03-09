@@ -4,7 +4,7 @@ description: Learn how to build API plugins for Microsoft 365 Copilot with the O
 author: rickki
 ms.author: rickki
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 03/06/2026
 ms.topic: how-to
 ---
 
@@ -260,7 +260,7 @@ The reference documentation for declarative agents is at [Declarative agent sche
     }
     ```
 
-The reference documentation for API plugins is at [API plugin manifest schema 2.4 for Microsoft 365 Copilot](api-plugin-manifest-2.4.md).
+The reference documentation for plugins is at [Plugin manifest schema 2.4 for Microsoft 365 Copilot](plugin-manifest-2.4.md).
 
 ## Create the JavaScript functions
 

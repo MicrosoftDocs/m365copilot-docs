@@ -17,7 +17,6 @@ A package represents either an agent or Microsoft 365 app in the organization ca
 ## Key capabilities
 
 - Retrieve an inventory of all agents and apps within the organization, optionally filtering by:
-  - Type (Microsoft, line of business, etc.)
   - Host (Copilot, Outlook, Teams)
   - Last updated time
   - Element types contained in the app package (bots, declarative agents, etc.).
@@ -36,17 +35,17 @@ A package represents either an agent or Microsoft 365 app in the organization ca
 
 ## API list
 
-| Operation                                                       | HTTP Method | Description                                               |
-|-----------------------------------------------------------------|-------------|-----------------------------------------------------------|
-| [List packages](copilotpackages-list.md)                        | GET         | Get all apps and agents in the organization.              |
-| [Create package](copilotpackagedetail-create.md)                | POST        | Create a new package in the organization.                 |
-| [Get package details](copilotpackagedetail-get.md)              | GET         | Get detailed metadata for a specific app or agent.        |
-| [Update package](copilotpackagedetail-update.md)                | PATCH       | Update package metadata.                                  |
-| [Delete package](copilotpackagedetail-delete.md)                | DELETE      | Delete a package from the organization.                   |
-| [block](copilotpackage-block.md)                                | POST        | Block a package to prevent its usage.                     |
-| [unblock](copilotpackage-unblock.md)                            | POST        | Unblock a package to allow its usage.                     |
-| [update (action)](copilotpackage-update.md)                     | POST        | Update a package with a new package file.                 |
-| [reassign](copilotpackage-reassign.md)                          | POST        | Reassign ownership of a package to a different user.      |
+| Operation                                                       | HTTP Method                                          | Description                                               |
+|-----------------------------------------------------------------|------------------------------------------------------|-----------------------------------------------------------|
+| [List packages](copilotpackages-list.md)                        | GET `/copilot/admin/catalog/packages`                | Get all apps and agents in the organization.              |
+| [Create package](copilotpackagedetail-create.md)                | POST `/copilot/admin/catalog/packages`               | Create a new package in the organization.                 |
+| [Get package details](copilotpackagedetail-get.md)              | GET `/copilot/admin/catalog/packages/{id}`           | Get detailed metadata for a specific app or agent.        |
+| [Update package](copilotpackagedetail-update.md)                | PATCH `/copilot/admin/catalog/packages/{id}`         | Update package metadata.                                  |
+| [Delete package](copilotpackagedetail-delete.md)                | DELETE `/copilot/admin/catalog/packages/{id}`        | Delete a package from the organization.                   |
+| [block](copilotpackage-block.md)                                | POST `/copilot/admin/catalog/packages/{id}/block`    | Block a package to prevent its usage.                     |
+| [unblock](copilotpackage-unblock.md)                            | POST `/copilot/admin/catalog/packages/{id}/unblock`  | Unblock a package to allow its usage.                     |
+| [update (action)](copilotpackage-update.md)                     | POST `/copilot/admin/catalog/packages/{id}/update`   | Update a package with a new package file.                 |
+| [reassign](copilotpackage-reassign.md)                          | POST `/copilot/admin/catalog/packages/{id}/reassign` | Reassign ownership of a package to a different user.      |
 
 ## Resources
 

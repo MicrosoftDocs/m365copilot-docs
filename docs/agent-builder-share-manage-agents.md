@@ -4,7 +4,7 @@ description: Learn how to share and manage agents built with Microsoft 365 Copil
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 01/13/2026
+ms.date: 02/23/2026
 ms.topic: article
 ---
 
@@ -145,6 +145,8 @@ Agents can be deleted, even after they're shared. However, only the user who cre
 ### Reassign ownership of an agent
 
 Microsoft 365 Copilot doesn't support transferring ownership of declarative agents to another user. For information about transferring ownership, see [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell).
+
+Admins can update the owner of a shared agent within the organization. For more information, see [Reassign ownership of shared agents](/microsoft-365/admin/manage/agent-registry#reassign-ownership-of-shared-agents).
 
 ## Troubleshooting
 

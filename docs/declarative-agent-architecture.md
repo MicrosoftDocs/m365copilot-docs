@@ -20,7 +20,8 @@ Declarative agents can include instructions, Microsoft knowledge sources and cap
 
 Declarative agents inherit the Microsoft 365 infrastructure and provide specific capabilities and constraints across different architectural components. The following image shows the component architecture of a declarative agent.
 
-:::image type="content" source="assets/images/declarative-agents/declarative-agents-architecture-diagram.png" alt-text="Diagram of the architecture of a declarative agent.":::
+<!-- Art Library Source# ConceptArt-0-000-150 -->
+:::image type="content" source="assets/images/declarative-agents/declarative-agents-architecture-diagram.png" alt-text="Diagram of the architecture of a declarative agent." lightbox="assets/images/declarative-agents/declarative-agents-architecture-diagram.png":::
 
 | Component | Considerations | Optimized for | Poor fit for |
 |-----------|---------------|---------------|--------------|
@@ -38,6 +39,7 @@ Declarative agents inherit the Microsoft 365 infrastructure and provide specific
 
 Declarative agents follow a specific data flow pattern where Microsoft manages the orchestration and processing pipeline, while developers control limited configurations.
 
+<!-- Art Library Source# ConceptArt-0-000-149 -->
 :::image type="content" source="assets/images/declarative-agents/data-flow-declarative-agents.png" alt-text="Diagram of declarative agent data flow showing sequential steps from initial prompt to response, with developer-controlled components in blue." lightbox="assets/images/declarative-agents/data-flow-declarative-agents.png":::
 
 Developers control components like instructions, knowledge and data sources, and API plugins. Because Microsoft grounding and calls to external tools happen sequentially, you can't use chained operations with grounding data or looped operation plans. This architecture isn't suitable for complex multistep operations.
