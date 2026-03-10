@@ -17,7 +17,7 @@ Use Microsoft 365 Copilot to create and customize agents that can be implemented
 - An agent that provides writing or presentation coaching tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
 
-:::image type="content" source="assets/images/copilot-studio-lite/new-agent-screen.png" alt-text="New agent screen in Agent Builder":::
+:::image type="content" source="assets/images/agent-builder-screenshots/new-agent-screen.png" alt-text="New agent screen in Agent Builder":::
 
 You can specify dedicated knowledge sources, including content on SharePoint and information provided by Microsoft 365 Copilot connectors. You can also test the agent before deploying it for use in your conversations with Microsoft 365 Copilot or sharing it with others in your organization.
 
@@ -30,7 +30,7 @@ You can build agents from the following apps and sites:
 Agent Builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It isn't available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that are not listed in this article.
 
 <!--
-:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-tabs.png" alt-text="Agent Builder entry point in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-tabs.png" alt-text="Agent Builder entry point in Microsoft 365 Copilot":::
 -->
 
 > [!NOTE]
@@ -98,9 +98,9 @@ In your feedback ticket, provide details about the issue you're facing and inclu
 
 You can find and copy these details in Agent Builder in the **Get support** section of the **Help** dropdown menu.
 
-:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-get-support.png" alt-text="Find the support details in the Copilot Studio":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-get-support.png" alt-text="Find the support details in the Copilot Studio":::
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in the Copilot Studio":::
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in the Copilot Studio":::
 
 ## Related content
 

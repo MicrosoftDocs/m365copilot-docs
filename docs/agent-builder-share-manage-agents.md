@@ -79,7 +79,7 @@ To deploy an agent manually:
 
 1. In Microsoft 365 Copilot, on the left pane, select **New agent**.
 1. On the New agent page, under **My agents**, choose **View my agents**.
-:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-view-agents.png" alt-text="Screenshot of the View my agents option on the New agent page.":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-view-agents.png" alt-text="Screenshot of the View my agents option on the New agent page.":::
 1. Highlight the agent you want to download and choose the ellipses.
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
 :::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-2-download.png" alt-text="Screenshot of the *Download .zip file* option":::

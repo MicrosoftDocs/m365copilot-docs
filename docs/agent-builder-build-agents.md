@@ -47,7 +47,7 @@ When you finish describing your agent and adding knowledge sources, view the con
 - Knowledge sources
 - Suggested prompts
 
-:::image type="content" source="assets/images/copilot-studio-lite/agent-configuration.png" alt-text="Screenshot of the Configure tab showing the agent configuration when created using natural language":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-configuration.png" alt-text="Screenshot of the Configure tab showing the agent configuration when created using natural language":::
 
 After you create your agent, [test it](#test-your-agent) in the **Agent preview** pane. You can continue to refine it by using natural language. If you want to change the starter prompt or intent, just say it in natural language - for example: "Update the agent to summarize Teams chats instead of emails."
 
@@ -91,7 +91,7 @@ To use a template to build your agent:
  
 You can further refine your agent and add knowledge sources by using natural language on the **Describe** tab, or add your refinements manually on the **Configure** tab.
 
-:::image type="content" source="assets/images/copilot-studio-lite/agent-builder-configure.png" alt-text="Screenshot of the Configure tab where users can manually configure their agent":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-configure.png" alt-text="Screenshot of the Configure tab where users can manually configure their agent":::
 
 For more information, see [Agent templates](agent-templates-overview.md) or choose one of the templates on the **Describe** or **Configure** tab.
 
