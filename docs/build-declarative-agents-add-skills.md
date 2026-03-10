@@ -1,25 +1,27 @@
 ---
 title: Add capabilities and custom actions to a declarative agent created with Microsoft 365 Agents Toolkit
 description: Learn how to add capabilities and API plugins as custom actions to declarative agents with Microsoft 365 Agents Toolkit.
-ms.date: 09/11/2025
+ms.date: 03/06/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
 ms.localizationpriority: medium
 ---
 
+<!-- cSpell:ignore GCCH -->
+
 # Add skills to a declarative agent created with Microsoft 365 Agents Toolkit
 
-You can enhance the abilities of your agent by adding skills. Skills can be added either by enabling built-in capabilities like [image generator](image-generator.md) or [code interpreter](code-interpreter.md), or by adding [API plugins](overview-api-plugins.md) as custom actions.
+You can enhance the abilities of your agent by adding skills. Skills can be added either by enabling built-in capabilities like [image generator](image-generator.md) or [code interpreter](code-interpreter.md), or by adding [MCP or API plugins](overview-plugins.md) as custom actions.
 
 > [!IMPORTANT]
 > This guide assumes you have completed the [Create declarative agents using Microsoft 365 Agents Toolkit](build-declarative-agents.md) tutorial.
 
 ## Add image generator to the agent
 
-The image generator capability enables agents to generate images based on user prompts.
+The image generator capability enables agents to generate images based on user prompts. To add image generator:
 
-1. Open the `appPackage/declarativeAgent.json` file and add the `GraphicArt` entry to the `capabilities` array.
+1. Open the `appPackage/declarativeAgent.json` file and add the `GraphicArt` entry to the `capabilities` array. For more information, see [Graphic art object](declarative-agent-manifest-1.6.md#graphic-art-object).
 
     ```json
     {
@@ -27,17 +29,21 @@ The image generator capability enables agents to generate images based on user p
     }
     ```
 
-  For more information, see [Graphic art object](declarative-agent-manifest-1.6.md#graphic-art-object).
-
-1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
+2. In the **Lifecycle** pane of the Agents Toolkit, select **Provision**.
 
 The declarative agent will have the ability to generate images after you reload the page.
+
+> [!NOTE]
+> Image generator isn't available to agents in Microsoft 365 Government Community Cloud High (GCCH) environments.
 
 :::image type="content" source="assets/images/build-da/ttk/graphic-art-content.png" alt-text="A screenshot showing a response from the declarative agent that contains generated graphic art":::
 
 ## Add code interpreter to the agent
 
 Code interpreter is an advanced tool designed to solve complex tasks via Python code.
+
+> [!NOTE]
+> In GCCH environments, code interpreter is only available to users with a Microsoft 365 Copilot add-on license.
 
 1. Open the `appPackage/declarativeAgent.json` file and add the `CodeInterpreter` entry to the `capabilities` array.
 
@@ -60,6 +66,9 @@ The declarative agent will have the code interpreter capability after you reload
 ## Add an API plugin as a custom action to the agent
 
 API plugins add new abilities to your agent by allowing your agent to interact with a REST API.
+
+> [!NOTE]
+> Custom actions aren't supported in GCCH environments.
 
 Before you begin, create a file named `posts-api.yml` and add the code from the [Posts API OpenAPI description document](#posts-api-openapi-description-document).
 

@@ -5,7 +5,7 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 12/01/2025
+ms.date: 12/18/2025
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -84,10 +84,6 @@ You can also select files or folders from the SharePoint file picker by choosing
 
 After you select a site, you can select several files and folders. Doing so adds the SharePoint file or folder to the agent's knowledge sources. When the same site includes multiple folders, select the button next to the folder name to view other folders.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-sharepoint-picker-folders.png" alt-text="SharePoint file picker":::
-
-You can also upload files into SharePoint by using the picker. The file appears in the same folder after it finishes uploading and is ready for use.
-
 ### File readiness
 
 When new files are uploaded to SharePoint, they can take up to several minutes to be ready for the agent to include in its response. You can still test your agent in the test pane if sources aren't ready. However, responses don't include information from the newly uploaded file until it's ready.
@@ -120,7 +116,13 @@ You can upload files directly from your device for your agent to use as knowledg
 
 You can add up to 20 files as knowledge sources.
 
+> [!NOTE]
+> Embedded file content isn't supported in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
+
 Embedded files are displayed on the **Configure** tab under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-types-and-size-limits).
+
+> [!IMPORTANT]
+> [Microsoft Purview Information Barriers (IB)](/purview/information-barriers) isn't supported on embedded files. Any user who can access the agent can see responses grounded in the embedded file content.
 
 To remove a file you uploaded, choose the X next to the file, and choose **Remove**.
 
@@ -257,7 +259,7 @@ To scope the **Azure DevOps Work Items** area path:
 4. Choose **Select an area path** and search for or type the area path name.
 5. Select the area path to add it.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
+:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
 
 The following table lists the Copilot connectors that support scoping and the attributes that you can use to scope the data.
 

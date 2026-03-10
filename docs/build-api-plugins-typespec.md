@@ -4,7 +4,7 @@ description: Learn how to build API plugins as declarative agent actions with Ty
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 03/06/2026
 ms.topic: how-to
 ---
 
@@ -12,7 +12,7 @@ ms.topic: how-to
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-[API plugins](overview-api-plugins.md) are custom actions for declarative agents that connect a REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi) to Microsoft 365 Copilot. This guide demonstrates how to add an API plugin to a declarative agent by using [TypeSpec](https://typespec.io/) and the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
+[API plugins](overview-plugins.md) are custom actions for declarative agents that connect a REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi) to Microsoft 365 Copilot. This guide demonstrates how to add an API plugin to a declarative agent by using [TypeSpec](https://typespec.io/) and the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 
 ## Prerequisites
 
@@ -144,7 +144,7 @@ Open the `main.tsp` file and add the `@card` decorator to the `listPosts` operat
   * @param userId The ID of the user who created the post. If not provided, all posts will be returned.
   */
 @route("/posts")
-@card(#{ dataPath: "$", title: "$.title", file: "post-card.json" })
+@card(#{ dataPath: "$", file: "post-card.json", properties: #{ title: "$.title" } })
 @get op listPosts(@query userId?: integer): PostItem[];
 ```
 
@@ -298,14 +298,14 @@ namespace MyAgent {
      * @param userId The ID of the user who created the post. If not provided, all posts will be returned.
      */
     @route("/posts")
-    @card(#{ dataPath: "$", title: "$.title", file: "post-card.json" })
+    @card(#{ dataPath: "$", file: "post-card.json", properties: #{ title: "$.title" } })
     @get op listPosts(@query userId?: integer): PostItem[];
 
     /**
      * Get a blog post item by ID.
      */
     @route("/posts/{id}")
-    @card(#{ dataPath: "$", title: "$.title", file: "post-card.json" })
+    @card(#{ dataPath: "$", file: "post-card.json", properties: #{ title: "$.title" } })
     @get op getPost(@path id: integer): PostItem;
 
     /**

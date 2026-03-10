@@ -21,6 +21,8 @@ zone_pivot_groups: graph-api-versions
 
 Update the properties of a [copilotAdminLimitedMode](resources/copilotadminlimitedmode.md) object.
 
+[!INCLUDE [national-cloud-support](../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -57,8 +59,8 @@ PATCH https://graph.microsoft.com/beta/copilot/admin/settings/limitedMode
 
 | Name            | Description                                                                                                 |
 |:----------------|:------------------------------------------------------------------------------------------------------------|
-| `Authorization` | `Bearer {token}.` Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| Content-Type    | `application/json`. Required.                                                                                 |
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| `Content-Type`  | `application/json`. Required.                                                                               |
 
 ## Request body
 

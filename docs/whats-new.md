@@ -4,9 +4,12 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 11/24/2025
+ms.date: 03/10/2026
 ms.topic: overview
 ---
+
+<!-- markdownlint-disable MD024 -->
+<!-- cSpell:ignore GCCH -->
 
 # What's new in Microsoft 365 Copilot extensibility
 
@@ -14,11 +17,33 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
-## December 2025
+## March 2026
 
 ### Use natural language to create an agent in Microsoft 365 Copilot
 
 You can now create agents more quickly with Agent Builder in Microsoft 365 Copilot by using natural language. The agent is automatically configured for you. For more information, see [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md).
+
+### Interactive UI widgets for declarative agents
+
+You can now add interactive UI widgets to your declarative agents by extending MCP server-based actions using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk). Widgets can render inline or in full-screen mode within Microsoft 365 Copilot. For more information, see [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md).
+
+## February 2026
+
+### Agent Builder availability in GCCH
+
+Agent Builder is now available in Government Community Cloud High (GCCH) environments.
+
+## January 2026
+
+### Retrieval API pay-as-you-go consumption (preview)
+
+The Microsoft 365 Copilot Retrieval API is now available to users without a Microsoft 365 Copilot add-on license via pay-as-you-go consumption (preview). This model provides access to the Retrieval API for tenant-level data sources such as SharePoint and Microsoft 365 Copilot connectors. For more information, see [Microsoft 365 Copilot Retrieval API pay-as-you-go consumption (preview)](api/ai-services/retrieval/paygo-retrieval.md).
+
+## December 2025
+
+### Teams meeting AI insights APIs now generally available
+
+The Teams meeting AI insights APIs are now generally available in Microsoft Graph v1.0. These APIs enable you to retrieve AI-generated insights from Teams meetings, including action items, meeting notes, and mentions. For more information, see [List aiInsights](api/ai-services/meeting-insights/onlinemeeting-list-aiinsights.md) and [Get callAiInsight](api/ai-services/meeting-insights/callaiinsight-get.md).
 
 ## November 2025
 
@@ -28,7 +53,7 @@ The People knowledge source is now available in the Copilot Studio lite experien
 
 ### Agent Builder in Microsoft 365 Copilot is available in GCCM
 
-The Agent Builder feature in Microsoft 365 Copilot is now available in the Microsoft 365 Government Community Cloud – Moderate (GCCM) environment.
+The Agent Builder feature in Microsoft 365 Copilot is now available in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
 
 ### Embedded file content file size limit increase
 
@@ -146,7 +171,7 @@ The Microsoft 365 Copilot APIs provide a comprehensive set of capabilities that 
 
 ### API plugin manifest version 2.3
 
-A new version of the API plugin manifest schema is available. [API plugin manifest schema 2.4 for Microsoft 365 Copilot](api-plugin-manifest-2.4.md) adds support for [Model Context Protocol (MCP) servers](https://modelcontextprotocol.io/), enhanced response semantics with file references, and improved confirmation handling.
+A new version of the API plugin manifest schema is available. [Plugin manifest schema 2.4 for Microsoft 365 Copilot](plugin-manifest-2.4.md) adds support for [Model Context Protocol (MCP) servers](https://modelcontextprotocol.io/), enhanced response semantics with file references, and improved confirmation handling.
 
 ### Declarative agent manifest version 1.4
 
@@ -176,7 +201,7 @@ Declarative agents in the Copilot experience in Word can [interact with the open
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.3](declarative-agent-manifest-1.3.md) adds support for the following capabilities:
 
-- [Dataverse knowledge](knowledge-sources.md#dataverse)
+- Dataverse knowledge
 - [Teams messages as knowledge](knowledge-sources.md#teams-messages)
 - [People knowledge](knowledge-sources.md#people)
 

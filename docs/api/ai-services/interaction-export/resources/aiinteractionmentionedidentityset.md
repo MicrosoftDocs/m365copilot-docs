@@ -24,6 +24,8 @@ Represents an entity mentioned in an AI interaction.
 
 Inherits from [identitySet](/graph/api/resources/identityset).
 
+[!INCLUDE [aiinteractions-license-requirements](../../../includes/aiinteractions-license-requirements.md)]
+
 ## Properties
 
 | Property       | Type                                                                              | Description               |

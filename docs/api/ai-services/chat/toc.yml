@@ -3,7 +3,7 @@ items:
   href: overview.md
 - name: Copilot conversation
   items:
-  - name: Copilot converstation
+  - name: Copilot conversation
     href: resources/copilotconversation.md
   - name: Create
     href: copilotroot-post-conversations.md

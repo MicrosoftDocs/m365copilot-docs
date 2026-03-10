@@ -1,8 +1,8 @@
 ---
 title: Code Interpreter Capability for Declarative Agents for Microsoft 365 Copilot
 description: Find example that show you how to use the code interpreter capability and learn how to enable it in your declarative agents.
-author: kmkoenen
-ms.author: v-koenenkaty
+author: lauragra
+ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
 ms.date: 11/12/2025

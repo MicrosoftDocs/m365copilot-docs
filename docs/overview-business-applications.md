@@ -4,11 +4,9 @@ description: Extend Microsoft 365 Copilot by using Power Platform and Dynamics 3
 author: jhaskett-msft
 ms.author: jhaskett
 ms.localizationpriority: medium
-ms.date: 01/09/2025
+ms.date: 01/13/2026
 ms.topic: overview
 ---
-
-
 # Use actions to extend Microsoft 365 Copilot
 
 Copilot Studio actions plug into Microsoft 365 Copilot to extend its skills. Actions make use of Microsoft business applications like Microsoft Power Platform.
@@ -42,6 +40,12 @@ You can also create new actions by using Power Platform components in Microsoft 
 
 > [!NOTE]
 > Dynamics plugins were available for preview only and are no longer supported. We recommend that you create an agent and add actions as needed. For more information, see [Extend bot-based message extension as agents for Microsoft 365 Copilot](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions).
+
+### URL handling in action responses
+
+URLs returned as part of action responses - whether from API plugins, connectors, or flows - might be rendered as clickable links in the Microsoft 365 Copilot chat experience. This behavior is controlled by the Copilot runtime and isn't evaluated against domains defined in the OpenAPI specification `servers` section.
+
+URL rendering behavior for action responses is subject to platform security, trust, and policy rules and might change over time. Don't rely on clickable URLs in action responses for production-critical scenarios.
 
 ## Get Microsoft 365 Copilot licenses to enable actions
 

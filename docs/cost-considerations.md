@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 11/25/2025
+ms.date: 02/24/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -31,24 +31,6 @@ For more details about consumption costs, see [Billing rates and management](/mi
 | Microsoft 365 Copilot   | Add-on license required                   | Frequent users       | No additional charges for accessing or using extensibility features (Copilot connectors, agents, plugins).                                                            |
 | Microsoft 365 Copilot Chat | Included for eligible Microsoft 365 users | Occasional users     | No charges for lightweight extensibility (instruction-based agents or public site grounding).<br><br>Metered charges apply for shared tenant data (SharePoint, Copilot connectors), tracked via Copilot Studio meters. |
 | No Copilot license or Microsoft 365 subscription              | N/A                                      | Not supported        | May be unable to access Copilot; extensibility features not guaranteed without a qualifying license.                                                                      |
-
-## Copilot connectors
-
-Copilot connectors allow you to enrich Copilot with external data to enhance the contextual relevance of Copilot responses.
-
-### Index quota and licensing
-
-All eligible Microsoft 365 enterprise customers receive 50 million items of index quota at no extra cost. This quota is used for ingesting content via Copilot connectors. 
-
-#### Eligible licenses
-
-The following licenses qualify for the 50 million item quota:
-
-- Microsoft 365 Business Basic / Standard / Premium
-- Microsoft 365 A3 / A5 / E3 / E5 / F1 / F3
-- Office 365 A3 / A5 / E1 / E3 / E5 / F3
-
-> **Note:** Connectors in preview status don't count against your quota. When the connector reaches general availability, it starts counting toward the quota.
 
 ### Access and usage
 

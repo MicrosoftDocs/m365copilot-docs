@@ -11,5 +11,9 @@
   },
   "cSpell.words": [
     "preconfigured"
-  ]
+  ],
+  "chat.tools.terminal.autoApprove": {
+    "markdownlint": true,
+    "cspell": true
+  }
 }

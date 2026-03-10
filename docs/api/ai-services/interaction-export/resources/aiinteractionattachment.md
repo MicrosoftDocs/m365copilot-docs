@@ -22,6 +22,8 @@ zone_pivot_groups: graph-api-versions
 
 Represents a message attachment, such as cards and images.
 
+[!INCLUDE [aiinteractions-license-requirements](../../../includes/aiinteractions-license-requirements.md)]
+
 ## Properties
 
 | Property       | Type   | Description                                                                                 |

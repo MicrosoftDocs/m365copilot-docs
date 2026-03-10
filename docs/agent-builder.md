@@ -1,20 +1,20 @@
 ---
-title: Use Agent Builder in Microsoft 365 Copilot to build declarative agents
+title: Agent Builder in Microsoft 365 Copilot
 description: Learn how to use Microsoft 365 Copilot Agent Builder to build declarative agents.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/21/2025
+ms.date: 01/12/2026
 ms.topic: article
 ---
 
-# Build a declarative agent with Agent Builder in Microsoft 365 Copilot
+# Agent Builder in Microsoft 365 Copilot
 
 Agent Builder in Microsoft 365 Copilot provides an easy way to build [declarative agents](overview-declarative-agent.md) for Microsoft 365. Agent Builder offers an immediate, interactive AI development experience that is perfect for quick and straightforward projects.
 
 Use Microsoft 365 Copilot to create and customize agents that can be implemented for scenario-specific uses cases, such as:
 
-- An agent that provides writing or presentation coaching that is tailored to organizational standards
+- An agent that provides writing or presentation coaching tailored to organizational standards
 - A team onboarding agent that responds with specific information about the user's new team and helps them complete onboarding tasks
 
 :::image type="content" source="assets/images/copilot-studio-lite/new-agent-screen.png" alt-text="New agent screen in Agent Builder":::
@@ -58,12 +58,12 @@ Administrators can control whether Agent Builder is available to users in their 
 
 ## Known limitations
 
-The following are current known limitations:
+The following are known limitations:
 
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
-- [Lockbox](/power-platform/admin/about-lockbox) and [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview) are not currently supported for agents created using Microsoft 365 Copilot.
+- [Lockbox](/power-platform/admin/about-lockbox) and [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview) aren't currently supported for agents created using Microsoft 365 Copilot.
 - Agents created with Microsoft 365 Copilot can't be used in Teams Chat.
-- If a tenant has disabled web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in Microsoft 365 Copilot. However, the **Web content** toggle in the **Knowledge** pane is **not** disabled. This is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
+- If a tenant disabled web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, web content is blocked as a knowledge source in Microsoft 365 Copilot. However, the **Web content** toggle in the **Knowledge** pane is **not** disabled. This issue is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
 
 ## Submit feedback
 
@@ -72,10 +72,10 @@ You can submit feedback from within Agent Builder to help contribute to product 
 You can submit feedback by using one of the following options:
 
 - The thumbs-up or thumbs-down control on AI-generated responses in your agent test pane.
-- The **Send feedback**, button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
-- The **Send Feedback** option in the menu on the top right, as shown in the following image.
+- The **Send feedback** button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
+- The **Send Feedback** option in the menu on the top right.
 
-:::image type="content" source="assets/images/copilot-studio-lite/embedded-authoring-feedback-general.png" alt-text="Send feedback in Agent Builder":::
+:::image type="content" source="assets/images/agent-builder-screenshots/send-feedback.png" alt-text="Send feedback in Agent Builder":::
 
 In your feedback submission, specify that the issue is related to **Agent Builder in Microsoft 365 Copilot**.
 
@@ -104,6 +104,7 @@ You can find and copy these details in Agent Builder in the **Get support** sect
 
 ## Related content
 
+- [Build your first agent](https://res.public.onecdn.static.microsoft/s01-prod/pdf/Buid-an-agent-with-Agent-Builder.pdf)
 - [Build agents with Agent Builder in Microsoft 365 Copilot](agent-builder-build-agents.md) 
 - [Share and manage agents built with Microsoft 365 Copilot](agent-builder-share-manage-agents.md)
 - [Regional availability and language support](agent-builder-regional-availability.md)

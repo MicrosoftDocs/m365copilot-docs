@@ -1,0 +1,11 @@
+  items:
+  - name: Copilot report root
+    items:
+    - name: Copilot report root
+      href: resources/copilotreportroot.md
+    - name: Get Copilot user count summary
+      href: copilotreportroot-getmicrosoft365copilotusercountsummary.md
+    - name: Get Copilot user count trend
+      href: copilotreportroot-getmicrosoft365copilotusercounttrend.md
+    - name: Get Copilot usage user detail
+      href: copilotreportroot-getmicrosoft365copilotusageuserdetail.md

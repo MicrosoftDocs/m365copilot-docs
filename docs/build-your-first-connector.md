@@ -104,5 +104,5 @@ In addition to these folders, you can customize other parts of the code, dependi
 - [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
 - [Microsoft 365 Agents Toolkit overview](https://aka.ms/M365AgentsToolkit)
 - [Create declarative agents using Microsoft 365 Agents Toolkit](build-declarative-agents.md)
-- [Copilot connector samples](samples.md#copilot-connector-samples)
+- [Copilot connector samples](samples.md#microsoft-365-copilot-connector-samples)
 - [Community samples](https://github.com/pnp/graph-connectors-samples)

@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/02/2025
+ms.date: 03/06/2026
 ---
 
 # Agents are apps for Microsoft 365
@@ -176,7 +176,7 @@ To learn more, see [Declarative agent manifest schema for Microsoft 365 Copilot]
 
 The API plugin manifest describes the plugin's capabilities, including the APIs it supports and the operations it can perform. It also includes metadata such as name, description, version, and a reference to the OpenAPI definition of the REST APIs with which it interacts. API plugins can be referenced from a declarative agent manifest to be used within the declarative agent experience.
 
-To learn more, see [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest.md).
+To learn more, see [Plugin manifest schema for Microsoft 365 Copilot](plugin-manifest-2.4.md).
 
 ## Related content
 

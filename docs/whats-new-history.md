@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 06/03/2025
+ms.date: 03/06/2026
 ms.topic: overview
 ---
 
@@ -32,7 +32,7 @@ A new version of the declarative agent manifest schema has been released. Versio
 
 ### API plugin manifest version 2.2
 
-A new version of the API plugin manifest schema has been released. Version 2.2 adds support for data handling attestation. To learn more, see [API plugin manifest schema 2.2 for Microsoft 365 Copilot](api-plugin-manifest-2.2.md).
+A new version of the API plugin manifest schema has been released. Version 2.2 adds support for data handling attestation. To learn more, see [Plugin manifest schema 2.2 for Microsoft 365 Copilot](plugin-manifest-2.2.md).
 
 ## October 2024
 
