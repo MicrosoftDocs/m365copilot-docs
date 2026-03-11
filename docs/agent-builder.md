@@ -29,9 +29,6 @@ You can build agents from the following apps and sites:
 
 Agent Builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It's not available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that aren't listed in this article.
 
-<!--
-:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-tabs.png" alt-text="Agent Builder entry point in Microsoft 365 Copilot":::
--->
 
 > [!NOTE]
 > If you need more advanced capabilities like Actions to integrate external services, use [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext). It provides a comprehensive set of tools and features for more complex requirements.
