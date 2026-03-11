@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot Agent Builder to build decla
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 01/12/2026
+ms.date: 03/10/2026
 ms.topic: article
 ---
 
@@ -99,8 +99,6 @@ In your feedback ticket, provide details about the issue you're facing and inclu
 You can find and copy these details in Agent Builder in the **Get support** section of the **Help** dropdown menu.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-get-support.png" alt-text="Find the support details in the Copilot Studio":::
-
-:::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-get-support-2-updated.png" alt-text="Copy the support details in the Copilot Studio":::
 
 ## Related content
 

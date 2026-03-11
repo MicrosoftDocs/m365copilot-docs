@@ -5,14 +5,12 @@ author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 12/18/2025
+ms.date: 03/10/2026
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
 
 The Agent Builder feature in Microsoft 365 Copilot provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
-
-This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md).
 
 You can add:
 - Up to four public website URLs.
@@ -21,6 +19,8 @@ You can add:
 - Embedded files uploaded from your device (on the **Configure** tab).
 - Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
 
+This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md).
+
 For information about supported knowledge sources and licensing requirements, see [Knowledge sources](/microsoft-365-copilot/extensibility/knowledge-sources).
 
 ## Add knowledge sources
@@ -28,14 +28,16 @@ For information about supported knowledge sources and licensing requirements, se
 If you're using natural language to create your agent, Agent Builder adds knowledge sources for you based on your description. You can add also add knowledge sources from the chat box:
 
 1. In Microsoft 365 Copilot, choose **New agent** on the left pane, and provide a natural language description for your agent.
-2. Choose the **Add content** link in the chat box. Use one of the following methods to add knowledge sources:
-   - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
-   - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
-   - **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
+2. Choose the plus icon (**+**) in the chat box. Use one of the following methods to add knowledge sources:
+   - **Add work content** and select, search for, or upload files.
+   - **Upload images and files** directly from your device.
+   - **Attach cloud files** that you have access to.
+  
+:::image type="content" source="assets/images/agent-builder-screenshots/add-knowledge-agent-builder-describe.png" alt-text="Screenshot of the option to add knowledge sources to an agent in Agent Builder.":::
 
 If you're configuring your agent manually, to add knowledge sources to your agent:
 
-1. In Microsoft 365 Copilot, choose **New agent** from the left pane, and go to the **Configure** tab.
+1. In Microsoft 365 Copilot, choose **New agent** from the left pane, and choose **Skip to configure**.
 2. In the **Knowledge** section, use one of the following methods to add knowledge sources:
    - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
    - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).

@@ -4,7 +4,7 @@ description: Learn how to share and manage agents built with Microsoft 365 Copil
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/23/2026
+ms.date: 03/10/2026
 ms.topic: article
 ---
 
@@ -78,9 +78,9 @@ Microsoft 365 Copilot provides an option to download a ZIP package for manual de
 To deploy an agent manually:
 
 1. In Microsoft 365 Copilot, on the left pane, select **New agent**.
-1. On the New agent page, under **My agents**, choose **View my agents**.
+1. On the New agent page, under **My agents**, choose **View all agents**.
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-view-agents.png" alt-text="Screenshot of the View my agents option on the New agent page.":::
-1. Highlight the agent you want to download and choose the ellipses.
+1. Select the agent you want to download and choose the ellipses (**...**).
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
 :::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-2-download.png" alt-text="Screenshot of the *Download .zip file* option":::
 1. [Sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
@@ -126,7 +126,7 @@ You can edit your agents if you discover that changes are required after you sha
 - Access the list of your agents using one of the methods described in [Manage agents](#manage-agents).
 - Choose **Edit** (the pencil icon) from the **More** ellipses (**...**) menu.
 
-From there, you can use natural language to describe your changes on the **Describe** tab. You can also use the **Configure** tab for more fine-tuned control over your agent's functionality and knowledge sources.
+From there, you can use natural language to describe your changes. You can also use the **Configure** tab for more fine-tuned control over your agent's functionality and knowledge sources.
 
 Changes made to agents are saved automatically. However, your changes aren't visible to users until you make them available. To make changes to an existing agent available, choose **Update** in the top right corner. Your changes might take several minutes to become available for end users.
 
