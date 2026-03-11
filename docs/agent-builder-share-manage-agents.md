@@ -113,7 +113,7 @@ To manage an agent that you haven't accessed recently, either:
 
 Or:
 
-- Select **New agent** in the left pane and then choose **View my agents**.
+- Select **New agent** in the left pane and then choose **View all agents**.
 - Select the **More** ellipses (**...**) next to the name of the agent you want to manage.
 
 > [!NOTE]
