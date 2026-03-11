@@ -35,7 +35,7 @@ Using natural language saves time and helps you create effective agents without 
 - Adds knowledge sources. For example: "Summarize my daily emails and include attachments." Agent Builder adds **My emails** as a knowledge source.
 - Integrates capabilities. For example: "Create a PowerPoint presentation from this outline" or "Analyze this Excel data and generate a chart." Agent Builder configures your agent with [code interpreter](code-interpreter.md) and [image generator](image-generator.md).
 
-You can also choose the plus sign (***+**) in the chat box to select and add or search for knowledge sources.
+You can also choose the plus sign (**+**) in the chat box to select and add or search for knowledge sources.
 
 When you finish describing your agent and adding knowledge sources, view the configuration on the **Configure** tab. The tool prepopulates:
 
