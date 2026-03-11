@@ -103,7 +103,7 @@ To build context-aware agents, reference SharePoint items or any public websites
 
 Choose knowledge sources to add to your agent in the chat box on the **Describe** tab if you're using natural language to create your agent, or select knowledge sources on the **Configure** tab.
 
-For more information, see [Add knowledge sources](copilot-studio-lite-knowledge.md).
+For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
 
 > [!NOTE]
 > The availability of knowledge sources and capabilities differs based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
