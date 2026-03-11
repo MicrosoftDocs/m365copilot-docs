@@ -199,15 +199,6 @@ Microsoft 365 Copilot supports the following capabilities.
 | `window.openai.view`                            | :white_check_mark:                    |
 | `window.openai.userAgent`                       | :white_check_mark:                    |
 | `window.openai.locale`                          | :white_check_mark:                    |
-| —                                               | :x:                                   |
-| —                                               | :x:                                   |
-| —                                               | :x:                                   |
-| —                                               | :x:                                   |
-| —                                               | :x:                                   |
-| —                                               | :x:                                   |
-| —                                               | :x:                                   |
-| —                                               | :x:                                   |
-| —                                               | :white_check_mark:                    |
 
 ### Tool descriptor _meta fields
 
@@ -238,7 +229,6 @@ Microsoft 365 Copilot supports the following capabilities.
 | `_meta["openai/widgetPrefersBorder"]` | :x:                |
 | `_meta["openai/widgetCSP"]`           | :white_check_mark: |
 | `_meta["openai/widgetDomain"]`        | :x:                |
-| —                                     | :x:                |
 
 ### Properties in CSP object
 
@@ -248,7 +238,6 @@ Microsoft 365 Copilot supports the following capabilities.
 | `resource_domains` | :white_check_mark: |
 | `frame_domains`    | :x:                |
 | `redirect_domains` | :x:                |
-| —                  | :x:                |
 
 ### Host-provided tool result _meta fields
 
