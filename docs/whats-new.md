@@ -21,7 +21,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Use natural language to create an agent in Microsoft 365 Copilot
 
-You can now create agents more quickly with Agent Builder in Microsoft 365 Copilot by using natural language. The agent is automatically configured for you. For more information, see [Build agents with Microsoft 365 Copilot](copilot-studio-lite-build.md).
+You can now create agents more quickly with Agent Builder in Microsoft 365 Copilot by using natural language. The agent is automatically configured for you. For more information, see [Use natural language to describe your agent](agent-builder-build-agents.md#use-natural-language-to-describe-your-agent-recommended).
 
 ### Interactive UI widgets for declarative agents
 
