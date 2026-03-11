@@ -18,14 +18,14 @@ This article provides information about how to create your own agents using natu
 
 To create an agent from a template:
 
-1. In Microsoft 365 Copilot, in the left pane, choose **New agent**.
-1. Under **Start with a template**, choose the template you want to use.
+1. In Microsoft 365 Copilot, in the left pane, select **New agent**.
+1. Under **Start with a template**, select the template you want to use.
 1. Using natural language, provide information to update and enhance the agent, including the agent name, description, and instructions.
 1. On the **Configure** tab, add an icon, knowledge sources, and capabilities to your agent.
 
-Changes that you make to the agent are saved automatically. When you're satisfied with your agent's behavior and content, choose **Create** on the top right corner of the tool to create your agent.
+Changes that you make to the agent are saved automatically. When you're satisfied with your agent's behavior and content, select **Create** in the upper right corner of the tool to create your agent.
 
-After the agent is created, choose **Go to agent** in Copilot to chat with the agent. You can return to your agent from the left navigation pane in Copilot.
+After the agent is created, select **Go to agent** in Copilot to chat with the agent. You can return to your agent from the left navigation pane in Copilot.
 
 ## Related content
 
