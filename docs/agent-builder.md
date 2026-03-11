@@ -95,7 +95,7 @@ In your feedback ticket, provide details about the issue you're facing and inclu
 
 You can find and copy these details in Agent Builder in the **Get support** section of the **Help** dropdown menu.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-get-support.png" alt-text="Find the support details in the Copilot Studio":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-get-support.png" alt-text="Find the support details in Agent Builder in Microsoft 365 Copilot":::
 
 ## Related content
 
