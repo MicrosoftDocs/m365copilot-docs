@@ -6,7 +6,7 @@ ms.author: lauragra
 ms.reviewer: vermaanimesh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 03/10/2026
+ms.date: 03/11/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -151,7 +151,7 @@ After you update your agent manifest, repackage your app:
 1. Submit the new package to update your existing app. If your agent is internal to your organization, use the Microsoft 365 admin center (requires tenant admin permissions).
 
     > [!NOTE]
-    > You can now convert agents and submit them to Partner Center. However, these agents will prompt users to consent to upgrade. Learn more about [conditions when an app update requires consent](/microsoftteams/apps-update-experience#conditions-when-an-app-update-requires-consent)
+    > You can now convert agents and submit them to Partner Center. However, these agents will prompt users to consent to upgrade. Learn more about [conditions when an app update requires consent](/microsoftteams/apps-update-experience#conditions-when-an-app-update-requires-consent).
 
 ## User experience
 
