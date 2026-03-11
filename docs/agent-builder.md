@@ -64,7 +64,7 @@ The following limitations are known:
 
 ## Submit feedback
 
-You can submit feedback from within Agent Builder to help contribute to product improvements for all users. Agent Builder handles feedback the same way it handles feedback for Copilot Studio. For more information about Copilot feedback, including what data is collected, how the data is handled, and what it's used for, see [Providing feedback about Microsoft Copilot with Microsoft 365 apps](https://support.microsoft.com/en-us/topic/providing-feedback-about-microsoft-copilot-with-microsoft-365-apps-c481c26a-e01a-4be3-bdd0-aee0b0b2a423).
+You can submit feedback from within Agent Builder to help contribute to product improvements for all users. Feedback from Agent Builder is handled the same way as feedback for Copilot Studio. For more information about Copilot feedback, including what data is collected, how the data is handled, and what it's used for, see [Providing feedback about Microsoft Copilot with Microsoft 365 apps](https://support.microsoft.com/en-us/topic/providing-feedback-about-microsoft-copilot-with-microsoft-365-apps-c481c26a-e01a-4be3-bdd0-aee0b0b2a423).
 
 Submit feedback by using one of the following options:
 
