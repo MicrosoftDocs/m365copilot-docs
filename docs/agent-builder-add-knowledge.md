@@ -13,6 +13,7 @@ ms.date: 03/10/2026
 The Agent Builder feature in Microsoft 365 Copilot provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
 
 You can add:
+
 - Up to four public website URLs.
 - SharePoint files, folders, or sites.
 - Up to five Teams chat URLs.
@@ -55,7 +56,8 @@ Add specific public websites as agent knowledge sources to make your agent conte
 - You can add up to four URLs.
 
 To configure your agent to use any web data as knowledge:
-- On the **Describe** tab, use natural language to ask Agent Builder to prioritize your knowledge sources.
+
+- Use natural language to ask Agent Builder to prioritize your knowledge sources.
 - On the **Configure** tab, under **Knowledge**, choose the toggle next to **Search all websites**.
 
 ## SharePoint content

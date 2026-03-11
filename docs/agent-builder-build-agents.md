@@ -30,8 +30,10 @@ Using natural language saves time and helps you create effective agents without 
 
 - Configures the agent automatically.
 - Suggests and applies refinements. For example: "Include email attachments in summaries". Agent Builder suggests:
+
     - Show only attachments from unread messages
     - Summarize attachments by file type
+
 - Adds knowledge sources. For example: "Summarize my daily emails and include attachments." Agent Builder adds **My emails** as a knowledge source.
 - Integrates capabilities. For example: "Create a PowerPoint presentation from this outline" or "Analyze this Excel data and generate a chart." Agent Builder configures your agent with [code interpreter](code-interpreter.md) and [image generator](image-generator.md).
 
@@ -47,7 +49,7 @@ When you finish describing your agent and adding knowledge sources, view the con
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-configuration.png" alt-text="Screenshot of the Configure tab showing the agent configuration when created using natural language":::
 
-After you create your agent, [test it](#test-your-agent) in the **Agent preview** pane. You can continue to refine it by using natural language. If you want to change the starter prompts or intent, just say it in natural language - for example: "Update the agent to summarize Teams chats instead of emails."
+After you create your agent, [test it](#test-your-agent) on the **Try it** tab. You can continue to refine it by using natural language. If you want to change the starter prompts or intent, just say it in natural language - for example: "Update the agent to summarize Teams chats instead of emails."
 
 > [!NOTE]
 > The natural language experience is only available when you set your Microsoft 365 language to one of the [available languages](agent-builder-regional-availability.md). If natural language isn't supported in your preferred language, you can [configure your agent manually](#use-the-configure-tab-to-create-your-agent-manually).
@@ -76,7 +78,7 @@ The following table describes the fields that make up the agent.
 | **Starter Prompts** | Starter prompts help other users understand commonly supported scenarios by your agent. Each starter prompt comes with a name and description. There's no minimum number of starter prompts. |
 <!-- markdownlint-enable MD033 -->
 
-After you create your agent, [test it](#test-your-agent) in the **Agent preview** pane. You can continue to refine your agent's instructions, knowledge, and starter prompts.
+After you create your agent, [test it](#test-your-agent) on the **Try it** tab. You can continue to refine your agent's instructions, knowledge, and starter prompts.
 
 ## Build from a template
 
@@ -93,7 +95,7 @@ You can further refine your agent and add knowledge sources by using natural lan
 
 For more information, see [Agent templates](agent-templates-overview.md).
 
-After you create your agent, [test it](#test-your-agent) in the **Agent preview** pane. You can continue to refine your agent's instructions, knowledge, and starter prompts.
+After you create your agent, [test it](#test-your-agent) on the **Try it** tab. You can continue to refine your agent's instructions, knowledge, and starter prompts.
 
 ## Add knowledge sources
 
@@ -118,7 +120,7 @@ Use natural language to add capabilities on the **Describe** tab, or configure t
 
 ## Test your agent
 
-The **Try it** tab provides an instance of the agent that you can use to test and refine your agent within the authoring experience. Use it to test the agent while you're creating or making updates to it. The **Try it** experience is enabled after the agent has name, description, and instructions. It behaves according to those instructions like a published agent, including the ability to respond to complex queries within its realm of specified knowledge. The agent updates during each turn of the conversation as you add new information by using natural language or manually on the **Configure** tab in Agent Builder.
+The **Try it** tab provides an instance of the agent that you can use to test and refine your agent within the authoring experience. Use it to test the agent while you're creating or making updates to it. The **Try it** experience is enabled after the agent has a name, description, and instructions. It behaves according to those instructions like a published agent, including the ability to respond to complex queries within its realm of specified knowledge. The agent updates during each turn of the conversation as you add new information by using natural language or manually on the **Configure** tab in Agent Builder.
 
 Some agent features aren't available in the **Try it** experience. For example, you can't use it to share prompts, provide feedback, or @mention other agents in the Microsoft 365 Copilot app. You can use these features after you create the agent.
 
