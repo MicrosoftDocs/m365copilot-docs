@@ -79,7 +79,7 @@ To deploy an agent manually:
 
 1. In Microsoft 365 Copilot, on the left pane, select **New agent**.
 1. On the New agent page, under **My agents**, choose **View all agents**.
-:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-view-agents.png" alt-text="Screenshot of the View my agents option on the New agent page.":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-view-agents.png" alt-text="Screenshot of the View all agents option on the New agent page.":::
 1. Select the agent you want to download and choose the ellipses (**...**).
 1. Choose **Download .zip file**. The .zip file includes the agent manifest and app icon.
 :::image type="content" source="assets/images/agent-builder-screenshots/deploy-agent-zip-step-2-download.png" alt-text="Screenshot of the *Download .zip file* option":::
@@ -102,7 +102,7 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ## Manage agents
 
-You can access the agent management features in Microsoft 365 Copilot: 
+You can access the agent management features in Microsoft 365 Copilot:
 
 To manage an agent you recently accessed, select the **More** ellipses (**...**) in the left pane next to the name of the agent you want to manage.
 
@@ -113,7 +113,7 @@ To manage an agent that you haven't accessed recently, either:
 
 Or:
 
-- Select **New agent** in the left pane and then choose **View my agents**.
+- Select **New agent** in the left pane and then choose **View all agents**.
 - Select the **More** ellipses (**...**) next to the name of the agent you want to manage.
 
 > [!NOTE]

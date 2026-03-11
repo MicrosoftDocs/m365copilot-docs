@@ -37,7 +37,7 @@ Using natural language saves time and helps you create effective agents without 
 - Adds knowledge sources. For example: "Summarize my daily emails and include attachments." Agent Builder adds **My emails** as a knowledge source.
 - Integrates capabilities. For example: "Create a PowerPoint presentation from this outline" or "Analyze this Excel data and generate a chart." Agent Builder configures your agent with [code interpreter](code-interpreter.md) and [image generator](image-generator.md).
 
-You can also choose the plus sign (***+**) in the chat box to select and add or search for knowledge sources.
+You can also choose the plus sign (**+**) in the chat box to select and add or search for knowledge sources.
 
 When you finish describing your agent and adding knowledge sources, view the configuration on the **Configure** tab. The tool prepopulates:
 
@@ -88,7 +88,6 @@ To use a template to build your agent:
 
 1. In Microsoft 365 Copilot, select **New agent**.
 2. On the New agent page, under **Start with a template**, choose the template you want to use. The agent is created automatically.
- 
 You can further refine your agent and add knowledge sources by using natural language, or add your refinements manually on the **Configure** tab.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-template.png" alt-text="Screenshot of the Configure tab where users can manually update agent based on a template":::
@@ -106,7 +105,7 @@ To build context-aware agents, reference SharePoint items or any public websites
 
 Choose knowledge sources to add to your agent in the chat box on the **Describe** tab if you're using natural language to create your agent, or select knowledge sources on the **Configure** tab.
 
-For more information, see [Add knowledge sources](copilot-studio-lite-knowledge.md).
+For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
 
 > [!NOTE]
 > The availability of knowledge sources and capabilities differs based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
