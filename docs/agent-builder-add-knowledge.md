@@ -41,7 +41,7 @@ If you're configuring your agent manually, to add knowledge sources to your agen
 
 1. In Microsoft 365 Copilot, choose **New agent** from the left pane, and choose **Skip to configure**.
 2. In the **Knowledge** section, use one of the following methods to add knowledge sources:
-   - **Search bar** - Type keywords to search for SharePoint items. Use this option to add sources such as email and Teams messages.
+   - **Search bar** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
    - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
    - **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
    - **Upload** - Upload files directly from your device.
