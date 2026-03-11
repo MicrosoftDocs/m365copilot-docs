@@ -29,10 +29,10 @@ If you use natural language to create your agent, Agent Builder adds knowledge s
 
 1. In Microsoft 365 Copilot, choose **New agent** on the left pane, and provide a natural language description for your agent.
 2. Choose the plus icon (**+**) in the chat box. Use one of the following methods to add knowledge sources:
+
    - **Add work content** - Select, search for, or upload files.
    - **Upload images and files** - Upload directly from your device.
    - **Attach cloud files** - Attach cloud files that you have access to.
-  
 :::image type="content" source="assets/images/agent-builder-screenshots/add-knowledge-agent-builder-describe.png" alt-text="Screenshot of the option to add knowledge sources to an agent in Agent Builder.":::
 
 If you're configuring your agent manually, to add knowledge sources to your agent:
