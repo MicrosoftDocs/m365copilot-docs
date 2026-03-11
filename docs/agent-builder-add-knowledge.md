@@ -33,6 +33,7 @@ If you use natural language to create your agent, Agent Builder adds knowledge s
    - **Add work content** - Select, search for, or upload files.
    - **Upload images and files** - Upload directly from your device.
    - **Attach cloud files** - Attach cloud files that you have access to.
+
 :::image type="content" source="assets/images/agent-builder-screenshots/add-knowledge-agent-builder-describe.png" alt-text="Screenshot of the option to add knowledge sources to an agent in Agent Builder.":::
 
 If you're configuring your agent manually, to add knowledge sources to your agent:
