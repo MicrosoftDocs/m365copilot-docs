@@ -8,7 +8,7 @@ ms.date: 01/08/2026
 ms.topic: how-to
 ---
 
-# Build Microsoft 365 Copilot connectors for people data (preview)
+# Build Microsoft 365 Copilot connectors for people data
 
 <!-- cSpell:ignore wictorwilen -->
 
