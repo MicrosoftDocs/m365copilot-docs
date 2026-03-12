@@ -4,7 +4,7 @@ description: Learn about the 1.0 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 08/18/2025
+ms.date: 03/06/2026
 ms.topic: reference
 ---
 
@@ -39,7 +39,7 @@ The declarative agent manifest object contains the following properties.
 | `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It must contain at least one nonwhitespace character and be 8,000 characters or less. |
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. The array can't contain more than one of each derived type of [Capabilities object](#capabilities-object). |
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. The array can't contain more than 12 objects. |
-| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [API plugins](api-plugin-manifest.md) that provide actions accessible to the declarative agent. |
+| `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of objects that identify [plugins](plugin-manifest-2.4.md) that provide actions accessible to the declarative agent. |
 
 ### Declarative agent manifest object example
 

@@ -4,9 +4,12 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 02/24/2026
+ms.date: 03/06/2026
 ms.topic: overview
 ---
+
+<!-- markdownlint-disable MD024 -->
+<!-- cSpell:ignore GCCH -->
 
 # What's new in Microsoft 365 Copilot extensibility
 
@@ -14,9 +17,16 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## March 2026
+
+### Interactive UI widgets for declarative agents
+
+You can now add interactive UI widgets to your declarative agents by extending MCP server-based actions using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk). Widgets can render inline or in full-screen mode within Microsoft 365 Copilot. For more information, see [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md).
+
 ## February 2026
 
 ### Agent Builder availability in GCCH
+
 Agent Builder is now available in Government Community Cloud High (GCCH) environments.
 
 ## January 2026
@@ -157,7 +167,7 @@ The Microsoft 365 Copilot APIs provide a comprehensive set of capabilities that 
 
 ### API plugin manifest version 2.3
 
-A new version of the API plugin manifest schema is available. [API plugin manifest schema 2.4 for Microsoft 365 Copilot](api-plugin-manifest-2.4.md) adds support for [Model Context Protocol (MCP) servers](https://modelcontextprotocol.io/), enhanced response semantics with file references, and improved confirmation handling.
+A new version of the API plugin manifest schema is available. [Plugin manifest schema 2.4 for Microsoft 365 Copilot](plugin-manifest-2.4.md) adds support for [Model Context Protocol (MCP) servers](https://modelcontextprotocol.io/), enhanced response semantics with file references, and improved confirmation handling.
 
 ### Declarative agent manifest version 1.4
 
