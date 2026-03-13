@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 01/22/2026
+ms.date: 03/13/2026
 ms.topic: concept-article
 ---
 
@@ -16,15 +16,9 @@ This article provides information about known issues related to Microsoft 365 Co
 
 The following known issues apply to declarative agents.
 
-### Newly installed agents might not show in the Teams client right away
-
-In some cases, an agent installed from the store doesn't immediately show up in Copilot Chat in the Microsoft Teams client.
-
-**Workaround:** The agent user can switch to another chat and then return to Copilot Chat.
-
 ### Power Automate Flows aren't fully supported as actions in declarative agents
 
-Power Automate Flows as actions in declarative agents might not run reliably and might not return results. In some cases, newly created flows may not appear in the Add Action interface within Copilot Studio, even if the action counter reflects their presence.
+Power Automate Flows as actions in declarative agents might not run reliably and might not return results. In some cases, newly created flows might not appear in the Add Action interface within Copilot Studio, even if the action counter reflects their presence.
 
 **Workaround:** Currently, no workaround for the issue that the flows might not return results is available. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
 
@@ -54,9 +48,9 @@ Declarative agents grounded in SharePoint knowledge sources might provision succ
 
 This issue can occur when the signed-in user doesn’t have a Microsoft 365 Copilot license. SharePoint and OneDrive knowledge sources require an active Copilot license.
 
-Customer Digital Experience (CDX) demo tenant accounts without a Copilot license can create and publish agents, but grounded retrieval fails silently and triggers the generic runtime error. Developers testing SharePoint grounding in non-production tenants should use the **Microsoft 365 Copilot Developer License**, which includes the required Graph and SharePoint access.
+Customer Digital Experience (CDX) demo tenant accounts without a Copilot license can create and publish agents, but grounded retrieval fails silently and triggers the generic runtime error. Developers testing SharePoint grounding in nonproduction tenants should use the **Microsoft 365 Copilot Developer License**, which includes the required Graph and SharePoint access.
 
-If the correct license is assigned but grounding still fails, verify the following:
+If the correct license is assigned but grounding still fails, verify that:
 
 - The signed-in user can access the SharePoint site URL defined in `items_by_url`.
 - The agent's connection uses **User authentication**. Service principals aren’t supported for SharePoint grounding scenarios.
@@ -64,15 +58,9 @@ If the correct license is assigned but grounding still fails, verify the followi
 
 Silent grounding failures typically occur when licensing, permissions, or authentication configurations are incomplete.
 
-### Pasting a link to a file in Microsoft 365 Copilot doesn't work
-
-Currently, users can select a file in Microsoft 365 Copilot, and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
-
-**Workaround:** Select the file from the UI in Microsoft 365 Copilot.
-
 ### URLs returned by a declarative agent disappear in @mention responses in Microsoft 365 Copilot
 
-When you invoke a declarative agent through an @mention in Microsoft 365 Copilot, you might see URLs removed, hidden, or downgraded to plain text. This occurs because the @mention pipeline applies stricter output sanitization to block unsafe or unverified links in shared contexts such as Word, Excel, PowerPoint, Outlook, and Teams.
+When you invoke a declarative agent through an @mention in Microsoft 365 Copilot, you might see URLs removed, hidden, or downgraded to plain text. This issue occurs because the @mention pipeline applies stricter output sanitization to block unsafe or unverified links in shared contexts such as Word, Excel, PowerPoint, Outlook, and Teams.
 
 **Workaround:**
 
@@ -97,7 +85,7 @@ When users ask an agent built with the [Microsoft 365 Copilot](agent-builder.md)
 The following features aren't currently supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants:
 
 - [Authenticated custom actions](/microsoft-365-copilot/extensibility/overview-api-plugins).
-- Support for metered billing for extensibility features. For details about features that require metered billing, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
+- Support for usage billing for extensibility features. For details about features that require usage billing, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 - Support for publishing agents via the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents).
 
 ### Files found via enterprise search aren't passed to code interpreter
@@ -153,7 +141,7 @@ The following table lists features that aren't currently supported for custom en
 | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li></ul> |
 | Proactive notifications | Proactive notifications aren't supported. |
 | [Citations](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=desktop%2Cbotmessage#add-citations) | The following citation types aren't supported: <ul><li>citation.appearance.encodingFormat (Adaptive Card/modal window)</li><li>Sensitivity labels</li><li>citation.appearance.image.@type</li><li>citation.appearance.image.name </li></ul> |
-| Adaptive Cards | Adaptive Cards refreshed using **Action.Execute** don’t persist updated content when the chat is reopened; the original card is shown. Agent workflows in Copilot Chat should use follow‑up messages instead of relying on message edits. The following elements of Adaptive Cards aren't supported:<ul><li>[Non-standard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul>|
+| Adaptive Cards | Adaptive Cards refreshed using **Action.Execute** don’t persist updated content when the chat is reopened; the original card is shown. Agent workflows in Copilot Chat should use follow‑up messages instead of relying on message edits. The following elements of Adaptive Cards aren't supported:<ul><li>[Nonstandard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul>|
 | Sensitivity labels | Sensitivity labels aren't supported. |
 | Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Microsoft Edge browser. |
 
