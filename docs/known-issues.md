@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 01/22/2026
+ms.date: 03/13/2026
 ms.topic: concept-article
 ---
 
@@ -15,12 +15,6 @@ This article provides information about known issues related to Microsoft 365 Co
 ## Declarative agents
 
 The following known issues apply to declarative agents.
-
-### Newly installed agents might not show in the Teams client right away
-
-In some cases, an agent installed from the store doesn't immediately show up in Copilot Chat in the Microsoft Teams client.
-
-**Workaround:** The agent user can switch to another chat and then return to Copilot Chat.
 
 ### Power Automate Flows aren't fully supported as actions in declarative agents
 
@@ -63,12 +57,6 @@ If the correct license is assigned but grounding still fails, verify the followi
 - The user has at least **Read** permissions on the target SharePoint site.
 
 Silent grounding failures typically occur when licensing, permissions, or authentication configurations are incomplete.
-
-### Pasting a link to a file in Microsoft 365 Copilot doesn't work
-
-Currently, users can select a file in Microsoft 365 Copilot, and the agent searches the file. However, if the user pastes the URL of the file in prompt, the search fails.
-
-**Workaround:** Select the file from the UI in Microsoft 365 Copilot.
 
 ### URLs returned by a declarative agent disappear in @mention responses in Microsoft 365 Copilot
 
