@@ -6,7 +6,7 @@ ms.author: lauragra
 ms.reviewer: vermaanimesh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 03/11/2026
+ms.date: 03/13/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -75,7 +75,7 @@ To update your app manifest:
     > [!NOTE]
     > Use app manifest schema version 1.21 or later. Custom engine agents are supported in manifest version 1.21 and later versions.
 
-2. In the **copilotAgents** object, change the **declarativeAgents** node to a **customEngineAgents** node, as shown in the following examples.
+1. In the **copilotAgents** object, change the **declarativeAgents** node to a **customEngineAgents** node, as shown in the following examples.
     
     **Declarative agents node**
 
@@ -134,14 +134,14 @@ To update your app manifest:
     > [!NOTE]
     > Your app manifest can include either a declarative agent node or a custom engine agent node, but not both.
 
-3. Update the app version number for your app in the **version** property.
-4. Make sure that the **id** property uses the same ID that you used in the app manifest for the declarative agent.
+1. Update the app version number for your app in the **version** property.
+1. Make sure that the **id** property uses the same ID that you used in the app manifest for the declarative agent.
 
 ## Customize your agent UX
 
 Define your agent experience for users. You can add conversation starters and suggested prompts, implement streaming responses and citations, and more. Note that you need to define and test your custom engine agent capabilities.
 
-For more information, see [Custom engine agent user experience features](ux-custom-engine-agent.md). 
+For more information, see [Custom engine agent user experience features](ux-custom-engine-agent.md).
 
 ### Update and submit your app package
 
