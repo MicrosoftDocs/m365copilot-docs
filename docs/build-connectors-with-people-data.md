@@ -89,7 +89,7 @@ Each property, with a label, is either of type `string` or `stringCollection`, a
 ```json
 {
   ...
-  "properties:" {
+  "properties": {
     "accountInformation": "{\"userPrincipalName\": \"adelev@contoso.com\"}",
     "position": "{\"detail\":{\"jobTitle\":\"ProductManager\"}}",
     "skills@odata.type": "Collection(String)",
