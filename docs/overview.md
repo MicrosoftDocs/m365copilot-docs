@@ -55,7 +55,7 @@ The following table provides some examples of the types of agents you can develo
 
 [Copilot connectors](overview-copilot-connector.md) allow you to ingest and index data from multiple sources to add knowledge to Copilot. The data that Copilot accesses powers its intelligence. By using Copilot connectors, you can bring additional enterprise data into Microsoft Graph.
 
-This enables Copilot to integrate and reason over a wider variety of data sources, which allows it to deliver more contextually relevant responses - responses tailored to the needs and data access permissions of the user. Access to data remains secure and compliant: users can only retrieve information they're authorized to view to ensure that sensitive data remains protected.
+This enables Copilot to integrate and reason over a wider variety of data sources, which allows it to deliver more contextually relevant responses that are tailored to the needs and data access permissions of the user. Access to data remains secure and compliant: users can only retrieve information they're authorized to view to ensure that sensitive data remains protected.
 
 By using Copilot connectors, you can:
 
