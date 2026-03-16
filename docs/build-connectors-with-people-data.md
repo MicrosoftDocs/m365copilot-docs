@@ -114,7 +114,7 @@ After registration, you must add the connection to the list of prioritized profi
 
 The following are guidelines and recommendations for Copilot Connectors with people data, to improve reasoning and quality in M365 Copilot chat and Copilot Search:
 
-- Reuse as mich as possible of the available properties in the profile entities, defined by the lables, instead of creating a custom property.
+- Reuse as much as possible of the available properties in the profile entities, defined by the labels, instead of creating a custom property.
 - For custom properties prefer to use a property name that is human and agent understandable. Example; prefer `requisitionId` over `reqId`.
 - When defining the schema provide a human-readable `description` for each custom property. Descriptions on properties with `people*` labels will be ignored.
 - For complex custom properties - prefer using free-text, Markdown or `YAML` over `JSON`.
@@ -129,8 +129,8 @@ The following are guidelines and recommendations for Copilot Connectors with peo
 - Microsoft 365 might take up to 6 hours after the connection is created before it becomes available in search, people experiences, or Copilot.
 - Connections with people data don't support [staged connections](/microsoftsearch/staged-rollout-for-graph-connectors).
 - The following labels are not yet supported `personManager`, `personAssistants`, `personColleagues`, `personAlternateContacts` and `personEmergencyContacts`.
-- The Copilot Connector `principal` and `principalCollection` schema property types are not yet supported, use the `colleagues` collection of the `workPosition` entity to create relationships.
-- The following Copilot Connector schema attributes are ignored: `isQueryable`, `isRefinable`, `isRetreivable`, `isSearchable`. All data about a person is being indexed by default.
+- The Copilot Connector `principal` and `principalCollection` schema property types are not yet supported. Use the `colleagues` collection of the `workPosition` entity to create relationships.
+- The following Copilot Connector schema attributes are ignored: `isQueryable`, `isRefinable`, `isRetrievable`, `isSearchable`. All data about a person is being indexed by default.
 
 ## Related content
 
