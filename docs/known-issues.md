@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 03/13/2026
+ms.date: 03/16/2026
 ms.topic: concept-article
 ---
 
@@ -29,12 +29,6 @@ This issue applies to links from any content source, including SharePoint, Micro
 Prompts to get a list of items based on custom metadata aren't supported. For example, the prompt "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is based on custom metadata, doesn't work because the metadata isn't mapped to connection schema label properties.
 
 **Workaround:** This issue currently doesn't have a workaround. You can get items based on matches with the title or description of the connector item.
-
-### Sharing links to SharePoint pages don't work as knowledge sources
-
-When sharing links are references as a knowledge source in an agent, the agent doesn't return results from that knowledge source. The following link is an example of a SharePoint sharing link:
-
-`https://contoso.sharepoint-df.com**/:p:/r/**personal/babak_microsoft_com/Documents/`
 
 ### SharePoint files with null characters in the file name return no results
 
@@ -76,10 +70,6 @@ Try one of the following approaches:
 
 When you share an agent via the Microsoft 365 Copilot using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
-### Agents built with the Microsoft 365 Copilot don't generate files
-
-When users ask an agent built with the [Microsoft 365 Copilot](agent-builder.md) to generate files, the agent fails to generate the files. This limitation applies to all file types (.docx, .pdf, and so on).
-
 ### Some features aren't supported in Microsoft 365 Government tenants
 
 The following features aren't currently supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants:
@@ -87,19 +77,6 @@ The following features aren't currently supported in [Microsoft 365 Government](
 - [Authenticated custom actions](/microsoft-365-copilot/extensibility/overview-api-plugins).
 - Support for usage billing for extensibility features. For details about features that require usage billing, see [Agent capabilities for Microsoft 365 users](/microsoft-365-copilot/extensibility/prerequisites#agent-capabilities-for-microsoft-365-users).
 - Support for publishing agents via the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents).
-
-### Files found via enterprise search aren't passed to code interpreter
-
-Code interpreter runs on files you upload in your agent or that the user explicitly attaches in the interaction. Files that Copilot finds via enterprise search aren't passed to the code interpreter runtime.
-
-As a result, depending on the query (for example, when a user asks an agent to analyze or chart a file it found in search), the agent's response might be less descriptive because code interpreter doesn't run Python code.
-
-**Workaround:**
-
-You can work around the issue in two ways:
-
-- Upload the file in the chat before asking for analysis.
-- Share a direct file link and ask Copilot to open it.
 
 ## Copilot connectors
 

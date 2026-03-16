@@ -1,36 +1,27 @@
 ---
-title: Build Microsoft 365 Copilot connectors for people data (preview)
-description: Learn how to build your first Microsoft 365 Copilot connector for people data using the Microsoft Graph SDK (preview).
+title: Build Microsoft 365 Copilot connectors for people data
+description: Learn how to build your first Microsoft 365 Copilot connector for people data using the Microsoft Graph SDK.
 author: wictorwilen
 ms.author: wictorwilen
 ms.localizationpriority: medium
-ms.date: 01/08/2026
+ms.date: 03/16/2026
 ms.topic: how-to
 ---
 
-# Build Microsoft 365 Copilot connectors for people data (preview)
+# Build Microsoft 365 Copilot connectors for people data
 
 <!-- cSpell:ignore wictorwilen -->
 
 [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors) enable you to ingest people data and knowledge from your source systems (for example human resources, talent management, or other people systems) into Microsoft Graph. Adding people data to Microsoft Graph makes it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When you ingest your data, Copilot can reason over the data and use it to respond to user questions.
 
-> [!IMPORTANT]
-> Microsoft 365 Copilot connectors for people data built using the Microsoft Graph API are currently in public preview with limited functionality. For more information, see [Notes and limitations](#notes-and-limitations).
->
-> The preview for people connectors has been updated with these requirements:
->
-> - Requires configuration of the `contentCategory` property on the `externalConnection` entity.
-> - Switch from using attribute named mapping for properties to the use of people domain specific labels.
-> - A user can now be identified either via `userPrincipalName` or `externalDirectoryObjectId`.
-
-You build Microsoft 365 Copilot connectors for people data in the same way as other [Copilot connectors](overview-copilot-connector.md) using the Microsoft Graph external connections APIs. To ensure Microsoft 365 recognizes your connection as containing people data, you must follow the [connection configuration](#connection-configuration-requirements) and [schema](#connection-schema-requirements) requirements, as well as [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
+You build Microsoft 365 Copilot connectors for people data in the same way that you build other [Copilot connectors](overview-copilot-connector.md), by using the Microsoft Graph external connections APIs. To make sure that Microsoft 365 recognizes that your connection contains people data, follow the [connection configuration](#connection-configuration-requirements) and [schema](#connection-schema-requirements) requirements, as well as [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
 
 > [!NOTE]
-> For an example connector that provides people data, see [Microsoft 365 Copilot connector for people data sample](https://aka.ms/peopleconnectors/sample).
+> For an example of a connector that provides people data, see [Microsoft 365 Copilot connector for people data sample](https://aka.ms/peopleconnectors/sample).
 
 ## Connection configuration requirements
 
-Copilot connectors that contains people data must set the [`externalConnections`](/graph/api/resources/externalconnectors-externalconnection) `contentCategory` property to have the value `people`.
+Copilot connectors that contain people data must have the value `people` in the `contentCategory` property of the [`externalConnections`](/graph/api/resources/externalconnectors-externalconnection) API.
 
 ## Connection schema requirements
 
@@ -42,19 +33,24 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 | Property label          | Property type      | Profile entity                                                          | Description                                                                 |
 |-------------------------|--------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | `personAccount`         | `string`           | [`userAccountInformation`](/graph/api/resources/useraccountinformation) | Indicates the Microsoft Entra ID user the item targets.                     |
-| `personName`            | `string`           | [`personName`](/graph/api/resources/personname)                         | Adds names to the user.                                                     |
 | `personCurrentPosition` | `string`           | [`workPosition`](/graph/api/resources/workposition)                     | Describes the current position of the person.                               |
 | `personAddresses`       | `stringCollection` | [`itemAddress`](/graph/api/resources/itemaddress)                       | Max 3, one each of `Home`, `Work`, and `Other`. Adds addresses to the user. |
-| `personEmails`          | `stringCollection` | [`itemEmail`](/graph/api/resources/itememail)                           | Max 3. Adds email addresses to the user.                                    |
-| `personPhones`          | `stringCollection` | [`itemPhone`](/graph/api/resources/itemphone)                           | Adds phone numbers to the user.                                             |
+| `personAnniversaries`   | `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary)           | Adds one or more anniversaries to the person.                               |
 | `personAwards`          | `stringCollection` | [`personAward`](/graph/api/resources/personaward)                       | Describes awards the user earned.                                           |
 | `personCertifications`  | `stringCollection` | [`personCertification`](/graph/api/resources/personcertification)       | Describes certifications the user earned.                                   |
+| `personEducationalActivities` | `stringCollection` | [`educationalActivity`](/graph/api/resources/educationalactivity) | Describes the user's educational activities.                                |
+| `personEmails`          | `stringCollection` | [`itemEmail`](/graph/api/resources/itememail)                           | Max 3. Adds email addresses to the user.                                    |
+| `personInterests`       | `stringCollection` | [`personInterest`](/graph/api/resources/personinterest)                 | Detailed information about interests of the user.                           |
+| `personLanguages`       | `stringCollection` | [`languageProficiency`](/graph/api/resources/languageproficiency)       | Detailed information about languages the user knows.                        |
+| `personName`            | `string`           | [`personName`](/graph/api/resources/personname)                         | Adds names to the user.                                                     |
+| `personNote`            | `string`           | [`personAnnotation`](/graph/api/resources/personannotation)             | Adds a note to the user.                                                    |
+| `personPatents`         | `stringCollection` | [`itemPatent`](/graph/api/resources/itempatent)                         | Describes a granted or filed patent the user is associated with.           |
+| `personPhones`          | `stringCollection` | [`itemPhone`](/graph/api/resources/itemphone)                           | Adds phone numbers to the user.                                             |
+| `personPublications`    | `stringCollection` | [`itemPublication`](/graph/api/resources/itempublication)               | Describes publications or articles the user has been associated with.      |
 | `personProjects`        | `stringCollection` | [`projectParticipation`](/graph/api/resources/projectparticipation)     | Describes projects the user participated in.                                |
 | `personSkills`          | `stringCollection` | [`skillProficiency`](/graph/api/resources/skillproficiency)             | Describes skills the user is proficient in.                                 |
 | `personWebAccounts`     | `stringCollection` | [`webAccount`](/graph/api/resources/webaccount)                         | Describes external web accounts the user has.                               |
 | `personWebSite`         | `string`           | [`webSite`](/graph/api/resources/personwebsite)                         | Describes a website for the user.                                           |
-| `personAnniversaries`   | `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary)           | Adds one or more anniversaries tot he person                                |
-| `personNote`            | `string`           | [`personAnnotation`](/graph/api/resources/personannotation)             | Adds a note to the user.                                                    |
 
 Example schema:
 
@@ -79,7 +75,8 @@ Example schema:
     },
     {
       "name": "requisitionId",
-      "type": "string"
+      "type": "string",
+      "description": "The user's requisition ID"
     }
   ]
 }
@@ -87,34 +84,40 @@ Example schema:
 
 ## Serialization of JSON entities
 
-Each property, with a label, are either of type `string` or `stringCollection`, and represents a JSON serialized string representation of the Microsoft 365 profile entity being enriched.
+Each property, with a label, is either of type `string` or `stringCollection`, and is a JSON serialized string representation of the Microsoft 365 profile entity to be enriched.
 
 ```json
 {
   ...
-  "properties:" {
+  "properties": {
     "accountInformation": "{\"userPrincipalName\": \"adelev@contoso.com\"}",
     "position": "{\"detail\":{\"jobTitle\":\"ProductManager\"}}",
     "skills@odata.type": "Collection(String)",
     "skills": [
-      "{\"displayName\":\"Product requirements\",}",
+      "{\"displayName\":\"Product requirements\"}",
       "{\"displayName\":\"Customer research\"}"
     ],
-    "requisitionId": "REQ-12345678
+    "requisitionId": "REQ-12345678"
   }
 }
 ```
 
-> [!IMPORTANT]
-> We expect changes during the public preview and ahead of general availability of this core schema configuration. Regularly check this page for updates.
-
 ## Registering the connection as a profile source
 
-After you create the connection, you must register the connection as a source of profile data and add it to the list of prioritized sources.
+After you create the connection, register it as a source of profile data and add it to the list of prioritized sources.
 
 You register the connection as a profile source by using the [profile source API](/graph/api/peopleadminsettings-post-profilesources) with `sourceId` set to the connection ID of your connector and the `webUrl` property set to an HTTPS link to either the external system or a page with additional information about the source.
 
-After registration, you must add the connection to the list of prioritized profile sources using the [Profile property settings API](/graph/api/profilepropertysetting-update). Add the URL to the profile source, in the format of `https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='connectionId')`, where `connectionId` is the unique connection ID of the connection, to the `prioritizedSourceUrls` array. This array represents the order in which Microsoft 365 composes the view of a person. If you want your connection to be the highest prioritized source, add it as the first item in the array.
+After registration, add the connection to the list of prioritized profile sources using the [Profile property settings API](/graph/api/profilepropertysetting-update). Add the URL to the profile source, in the format of `https://graph.microsoft.com/v1.0/admin/people/profileSources(sourceId='connectionId')`, where `connectionId` is the unique connection ID of the connection, to the `prioritizedSourceUrls` array. This array represents the order in which Microsoft 365 composes the view of a person. If you want your connection to be the highest prioritized source, add it as the first item in the array.
+
+## Recommendations for people connectors
+
+The following are guidelines and recommendations for Copilot connectors with people data, to improve reasoning and quality in Microsoft 365 Copilot chat and Copilot Search:
+
+- Reuse as much as possible of the available properties in the profile entities, defined by the labels, instead of creating a custom property.
+- For custom properties, use a property name humans and agents understand. For example, use `requisitionId` instead of `reqId`.
+- When you define the schema, provide a human-readable `description` for each custom property. Descriptions on properties with `person*` labels are ignored.
+- For complex custom properties, use free text, Markdown, or `YAML` instead of `JSON`.
 
 ## Notes and limitations
 
@@ -123,10 +126,11 @@ After registration, you must add the connection to the list of prioritized profi
 - You must provide valid string encoded JSON objects for profile entities. Microsoft Graph ignores invalid values.
 - Non matched user accounts (`userPrincipalName` or `externalDirectoryObjectId`) will be ignored.
 - Microsoft Graph treats any property without a label as a custom property.
-- Custom properties might show up in profile cards as notes during the preview, but Microsoft will remove them before or at general availability.
 - Microsoft 365 might take up to 6 hours after the connection is created before it becomes available in search, people experiences, or Copilot.
 - Connections with people data don't support [staged connections](/microsoftsearch/staged-rollout-for-graph-connectors).
 - The following labels are not yet supported `personManager`, `personAssistants`, `personColleagues`, `personAlternateContacts` and `personEmergencyContacts`.
+- The Copilot connector `principal` and `principalCollection` schema property types are not yet supported. Use the `colleagues` collection of the `workPosition` entity to create relationships.
+- The following Copilot connector schema attributes are ignored: `isQueryable`, `isRefinable`, `isRetrievable`, `isSearchable`. All data about a person is indexed by default.
 
 ## Related content
 
