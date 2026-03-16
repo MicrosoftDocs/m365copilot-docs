@@ -9,7 +9,7 @@ items:
   href: change-notifications/toc.yml
 - name: Interaction export API
   href: interaction-export/toc.yml
-- name: Chat API
+- name: Chat API (preview)
   href: chat/toc.yml
 - name: Complex types
   href: resources/toc.yml
