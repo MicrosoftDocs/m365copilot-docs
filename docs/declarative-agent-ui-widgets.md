@@ -4,7 +4,7 @@ description: Learn how to add interactive UI widgets to MCP server-based declara
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 03/16/2026
 ms.topic: how-to
 ---
 
@@ -31,7 +31,7 @@ For details on which OpenAI Apps SDK capabilities are supported, see [Supported 
 - A remote MCP server that provides UI widgets or that you can modify to implement UI widgets
 - A tool to view MCP server responses, such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- The latest prerelease version of [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 6.5.x or later
+- The latest version of the [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (version 6.6.0 or later)
 
 ## MCP server requirements
 
