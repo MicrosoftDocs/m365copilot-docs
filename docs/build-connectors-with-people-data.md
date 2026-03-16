@@ -76,7 +76,7 @@ Example schema:
     {
       "name": "requisitionId",
       "type": "string",
-      "description": "The users requisition ID"
+      "description": "The user's requisition ID"
     }
   ]
 }
