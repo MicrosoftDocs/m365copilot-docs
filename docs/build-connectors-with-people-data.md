@@ -4,7 +4,7 @@ description: Learn how to build your first Microsoft 365 Copilot connector for p
 author: wictorwilen
 ms.author: wictorwilen
 ms.localizationpriority: medium
-ms.date: 01/08/2026
+ms.date: 03/16/2026
 ms.topic: how-to
 ---
 
@@ -38,7 +38,7 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 | `personAnniversaries`   | `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary)           | Adds one or more anniversaries to the person.                               |
 | `personAwards`          | `stringCollection` | [`personAward`](/graph/api/resources/personaward)                       | Describes awards the user earned.                                           |
 | `personCertifications`  | `stringCollection` | [`personCertification`](/graph/api/resources/personcertification)       | Describes certifications the user earned.                                   |
-| `personEducationalActivities` | `stringCollection` | [`educationalActivity`](/graph/api/resources/educationalactivity) | Describes the users educational activities                                  |
+| `personEducationalActivities` | `stringCollection` | [`educationalActivity`](/graph/api/resources/educationalactivity) | Describes the user's educational activities                                  |
 | `personEmails`          | `stringCollection` | [`itemEmail`](/graph/api/resources/itememail)                           | Max 3. Adds email addresses to the user.                                    |
 | `personInterests`       | `stringCollection` | [`personInterest`](/graph/api/resources/personinterest)                 | Detailed information about interests of the user                            |
 | `personLanguages`       | `stringCollection` | [`languageProficiency`](/graph/api/resources/languageproficiency)       | Detailed information about languages the user knows                         |
