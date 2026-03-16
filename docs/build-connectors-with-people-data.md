@@ -35,7 +35,7 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 | `personAccount`         | `string`           | [`userAccountInformation`](/graph/api/resources/useraccountinformation) | Indicates the Microsoft Entra ID user the item targets.                     |
 | `personCurrentPosition` | `string`           | [`workPosition`](/graph/api/resources/workposition)                     | Describes the current position of the person.                               |
 | `personAddresses`       | `stringCollection` | [`itemAddress`](/graph/api/resources/itemaddress)                       | Max 3, one each of `Home`, `Work`, and `Other`. Adds addresses to the user. |
-| `personAnniversaries`   | `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary)           | Adds one or more anniversaries tot he person                                |
+| `personAnniversaries`   | `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary)           | Adds one or more anniversaries to the person.                               |
 | `personAwards`          | `stringCollection` | [`personAward`](/graph/api/resources/personaward)                       | Describes awards the user earned.                                           |
 | `personCertifications`  | `stringCollection` | [`personCertification`](/graph/api/resources/personcertification)       | Describes certifications the user earned.                                   |
 | `personEducationalActivities` | `stringCollection` | [`educationalActivity`](/graph/api/resources/educationalactivity) | Describes the users educational activities                                  |
