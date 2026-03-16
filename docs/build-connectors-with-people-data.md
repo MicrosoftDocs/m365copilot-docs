@@ -14,14 +14,14 @@ ms.topic: how-to
 
 [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors) enable you to ingest people data and knowledge from your source systems (for example human resources, talent management, or other people systems) into Microsoft Graph. Adding people data to Microsoft Graph makes it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When you ingest your data, Copilot can reason over the data and use it to respond to user questions.
 
-You build Microsoft 365 Copilot connectors for people data in the same way as other [Copilot connectors](overview-copilot-connector.md) using the Microsoft Graph external connections APIs. To ensure Microsoft 365 recognizes your connection as containing people data, you must follow the [connection configuration](#connection-configuration-requirements) and [schema](#connection-schema-requirements) requirements, as well as [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
+You build Microsoft 365 Copilot connectors for people data in the same way that you build other [Copilot connectors](overview-copilot-connector.md), by using the Microsoft Graph external connections APIs. To make sure that Microsoft 365 recognizes that your connection contains people data, follow the [connection configuration](#connection-configuration-requirements) and [schema](#connection-schema-requirements) requirements, as well as [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
 
 > [!NOTE]
-> For an example connector that provides people data, see [Microsoft 365 Copilot connector for people data sample](https://aka.ms/peopleconnectors/sample).
+> For an example of a connector that provides people data, see [Microsoft 365 Copilot connector for people data sample](https://aka.ms/peopleconnectors/sample).
 
 ## Connection configuration requirements
 
-Copilot connectors that contains people data must set the [`externalConnections`](/graph/api/resources/externalconnectors-externalconnection) `contentCategory` property to have the value `people`.
+Copilot connectors that contain people data must have the value `people` in the `contentCategory` property of the [`externalConnections`](/graph/api/resources/externalconnectors-externalconnection) API.
 
 ## Connection schema requirements
 
@@ -84,7 +84,7 @@ Example schema:
 
 ## Serialization of JSON entities
 
-Each property, with a label, are either of type `string` or `stringCollection`, and represents a JSON serialized string representation of the Microsoft 365 profile entity being enriched.
+Each property, with a label, is either of type `string` or `stringCollection`, and is a JSON serialized string representation of the Microsoft 365 profile entity to be enriched.
 
 ```json
 {
@@ -104,20 +104,20 @@ Each property, with a label, are either of type `string` or `stringCollection`, 
 
 ## Registering the connection as a profile source
 
-After you create the connection, you must register the connection as a source of profile data and add it to the list of prioritized sources.
+After you create the connection, register it as a source of profile data and add it to the list of prioritized sources.
 
 You register the connection as a profile source by using the [profile source API](/graph/api/peopleadminsettings-post-profilesources) with `sourceId` set to the connection ID of your connector and the `webUrl` property set to an HTTPS link to either the external system or a page with additional information about the source.
 
-After registration, you must add the connection to the list of prioritized profile sources using the [Profile property settings API](/graph/api/profilepropertysetting-update). Add the URL to the profile source, in the format of `https://graph.microsoft.com/v1.0/admin/people/profileSources(sourceId='connectionId')`, where `connectionId` is the unique connection ID of the connection, to the `prioritizedSourceUrls` array. This array represents the order in which Microsoft 365 composes the view of a person. If you want your connection to be the highest prioritized source, add it as the first item in the array.
+After registration, add the connection to the list of prioritized profile sources using the [Profile property settings API](/graph/api/profilepropertysetting-update). Add the URL to the profile source, in the format of `https://graph.microsoft.com/v1.0/admin/people/profileSources(sourceId='connectionId')`, where `connectionId` is the unique connection ID of the connection, to the `prioritizedSourceUrls` array. This array represents the order in which Microsoft 365 composes the view of a person. If you want your connection to be the highest prioritized source, add it as the first item in the array.
 
 ## Recommendations for people connectors
 
-The following are guidelines and recommendations for Copilot Connectors with people data, to improve reasoning and quality in M365 Copilot chat and Copilot Search:
+The following are guidelines and recommendations for Copilot connectors with people data, to improve reasoning and quality in Microsoft 365 Copilot chat and Copilot Search:
 
 - Reuse as much as possible of the available properties in the profile entities, defined by the labels, instead of creating a custom property.
-- For custom properties prefer to use a property name that is human and agent understandable. Example; prefer `requisitionId` over `reqId`.
-- When defining the schema provide a human-readable `description` for each custom property. Descriptions on properties with `person*` labels will be ignored.
-- For complex custom properties - prefer using free-text, Markdown or `YAML` over `JSON`.
+- For custom properties, use a property name humans and agents understand. For example, use `requisitionId` instead of `reqId`.
+- When you define the schema, provide a human-readable `description` for each custom property. Descriptions on properties with `people*` labels are ignored.
+- For complex custom properties, use free text, Markdown, or `YAML` instead of `JSON`.
 
 ## Notes and limitations
 
@@ -129,8 +129,8 @@ The following are guidelines and recommendations for Copilot Connectors with peo
 - Microsoft 365 might take up to 6 hours after the connection is created before it becomes available in search, people experiences, or Copilot.
 - Connections with people data don't support [staged connections](/microsoftsearch/staged-rollout-for-graph-connectors).
 - The following labels are not yet supported `personManager`, `personAssistants`, `personColleagues`, `personAlternateContacts` and `personEmergencyContacts`.
-- The Copilot Connector `principal` and `principalCollection` schema property types are not yet supported. Use the `colleagues` collection of the `workPosition` entity to create relationships.
-- The following Copilot Connector schema attributes are ignored: `isQueryable`, `isRefinable`, `isRetrievable`, `isSearchable`. All data about a person is being indexed by default.
+- The Copilot connector `principal` and `principalCollection` schema property types are not yet supported. Use the `colleagues` collection of the `workPosition` entity to create relationships.
+- The following Copilot connector schema attributes are ignored: `isQueryable`, `isRefinable`, `isRetrievable`, `isSearchable`. All data about a person is indexed by default.
 
 ## Related content
 
