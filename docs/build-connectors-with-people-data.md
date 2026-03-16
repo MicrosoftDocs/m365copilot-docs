@@ -116,7 +116,7 @@ The following are guidelines and recommendations for Copilot connectors with peo
 
 - Reuse as much as possible of the available properties in the profile entities, defined by the labels, instead of creating a custom property.
 - For custom properties, use a property name humans and agents understand. For example, use `requisitionId` instead of `reqId`.
-- When you define the schema, provide a human-readable `description` for each custom property. Descriptions on properties with `people*` labels are ignored.
+- When you define the schema, provide a human-readable `description` for each custom property. Descriptions on properties with `person*` labels are ignored.
 - For complex custom properties, use free text, Markdown, or `YAML` instead of `JSON`.
 
 ## Notes and limitations
