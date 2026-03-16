@@ -94,7 +94,7 @@ Each property, with a label, are either of type `string` or `stringCollection`, 
     "position": "{\"detail\":{\"jobTitle\":\"ProductManager\"}}",
     "skills@odata.type": "Collection(String)",
     "skills": [
-      "{\"displayName\":\"Product requirements\",}",
+      "{\"displayName\":\"Product requirements\"}",
       "{\"displayName\":\"Customer research\"}"
     ],
     "requisitionId": "REQ-12345678"
