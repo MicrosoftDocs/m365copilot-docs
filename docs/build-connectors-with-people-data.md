@@ -14,7 +14,7 @@ ms.topic: how-to
 
 [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors) enable you to ingest people data and knowledge from your source systems (for example human resources, talent management, or other people systems) into Microsoft Graph. Adding people data to Microsoft Graph makes it available to Microsoft 365 Copilot and people experiences such as the profile card and people search. When you ingest your data, Copilot can reason over the data and use it to respond to user questions.
 
-You build Microsoft 365 Copilot connectors for people data in the same way that you build other [Copilot connectors](overview-copilot-connector.md), by using the Microsoft Graph external connections APIs. To make sure that Microsoft 365 recognizes that your connection contains people data, follow the [connection configuration](#connection-configuration-requirements) and [schema](#connection-schema-requirements) requirements, as well as [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
+You build Microsoft 365 Copilot connectors for people data in the same way that you build other [Copilot connectors](overview-copilot-connector.md), by using the Microsoft Graph external connections APIs. To make sure that Microsoft 365 recognizes that your connection contains people data, follow the [connection configuration](#connection-configuration-requirements) and [schema](#connection-schema-requirements) requirements, and [register the connection as a source of profile data](#registering-the-connection-as-a-profile-source).
 
 > [!NOTE]
 > For an example of a connector that provides people data, see [Microsoft 365 Copilot connector for people data sample](https://aka.ms/peopleconnectors/sample).
@@ -47,7 +47,7 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 | `personNote`            | `string`           | [`personAnnotation`](/graph/api/resources/personannotation)             | Adds a note to the user.                                                    |
 | `personPatents` (beta)         | `stringCollection` | [`itemPatent`](/graph/api/resources/itempatent)                         | Describes a granted or filed patent the user is associated with.           |
 | `personPhones`          | `stringCollection` | [`itemPhone`](/graph/api/resources/itemphone)                           | Adds phone numbers to the user.                                             |
-| `personPublications` (beta)    | `stringCollection` | [`itemPublication`](/graph/api/resources/itempublication)               | Describes publications or articles the user has been associated with.      |
+| `personPublications` (beta)    | `stringCollection` | [`itemPublication`](/graph/api/resources/itempublication)               | Describes publications or articles the user is associated with.      |
 | `personProjects`        | `stringCollection` | [`projectParticipation`](/graph/api/resources/projectparticipation)     | Describes projects the user participated in.                                |
 | `personSkills`          | `stringCollection` | [`skillProficiency`](/graph/api/resources/skillproficiency)             | Describes skills the user is proficient in.                                 |
 | `personWebAccounts`     | `stringCollection` | [`webAccount`](/graph/api/resources/webaccount)                         | Describes external web accounts the user has.                               |
@@ -116,7 +116,7 @@ After registration, add the connection to the list of prioritized profile source
 The following are guidelines and recommendations for Copilot connectors with people data, to improve reasoning and quality in Microsoft 365 Copilot chat and Copilot Search:
 
 - Reuse as much as possible of the available properties in the profile entities, defined by the labels, instead of creating a custom property.
-- For custom properties, use a property name humans and agents understand. For example, use `requisitionId` instead of `reqId`.
+- For custom properties, use a property name users and agents understand. For example, use `requisitionId` instead of `reqId`.
 - When you define the schema, provide a human-readable `description` for each custom property. Descriptions on properties with `person*` labels are ignored.
 - For complex custom properties, use free text, Markdown, or `YAML` instead of `JSON`.
 
@@ -125,12 +125,12 @@ The following are guidelines and recommendations for Copilot connectors with peo
 - People data provided via a Copilot connector is visible to all users in the organization. Connector data is stored in the user's Microsoft 365 profile. For more information, see [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors#compliance-privacy-and-data-usage).
 - You must set the access control list (ACL) on items ingested by the connector to grant access to everyone.
 - You must provide valid string encoded JSON objects for profile entities. Microsoft Graph ignores invalid values.
-- Non matched user accounts (`userPrincipalName` or `externalDirectoryObjectId`) will be ignored.
+- Nonmatched user accounts (`userPrincipalName` or `externalDirectoryObjectId`) are ignored.
 - Microsoft Graph treats any property without a label as a custom property.
 - Microsoft 365 might take up to 6 hours after the connection is created before it becomes available in search, people experiences, or Copilot.
 - Connections with people data don't support [staged connections](/microsoftsearch/staged-rollout-for-graph-connectors).
-- The following labels are not yet supported `personManager`, `personAssistants`, `personColleagues`, `personAlternateContacts` and `personEmergencyContacts`.
-- The Copilot connector `principal` and `principalCollection` schema property types are not yet supported. Use the `colleagues` collection of the `workPosition` entity to create relationships.
+- The following labels aren't currently supported: `personManager`, `personAssistants`, `personColleagues`, `personAlternateContacts`, and `personEmergencyContacts`.
+- The Copilot connector `principal` and `principalCollection` schema property types aren't currently supported. Use the `colleagues` collection of the `workPosition` entity to create relationships.
 - The following Copilot connector schema attributes are ignored: `isQueryable`, `isRefinable`, `isRetrievable`, `isSearchable`. All data about a person is indexed by default.
 
 ## Related content
