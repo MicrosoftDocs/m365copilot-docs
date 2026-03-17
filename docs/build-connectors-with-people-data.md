@@ -29,6 +29,7 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 
 - The schema must have one property with the `personAccount` label to be able to map the `externalItem` to a person.
 - Properties without a label are considered *custom properties*.
+- Labels marked with *(beta)* are only available in the Microsoft Graph beta endpoint.
 
 | Property label          | Property type      | Profile entity                                                          | Description                                                                 |
 |-------------------------|--------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -38,15 +39,15 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 | `personAnniversaries`   | `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary)           | Adds one or more anniversaries to the person.                               |
 | `personAwards`          | `stringCollection` | [`personAward`](/graph/api/resources/personaward)                       | Describes awards the user earned.                                           |
 | `personCertifications`  | `stringCollection` | [`personCertification`](/graph/api/resources/personcertification)       | Describes certifications the user earned.                                   |
-| `personEducationalActivities` | `stringCollection` | [`educationalActivity`](/graph/api/resources/educationalactivity) | Describes the user's educational activities.                                |
+| `personEducationalActivities` *(beta)* | `stringCollection` | [`educationalActivity`](/graph/api/resources/educationalactivity) | Describes the user's educational activities.                                |
 | `personEmails`          | `stringCollection` | [`itemEmail`](/graph/api/resources/itememail)                           | Max 3. Adds email addresses to the user.                                    |
-| `personInterests`       | `stringCollection` | [`personInterest`](/graph/api/resources/personinterest)                 | Detailed information about interests of the user.                           |
-| `personLanguages`       | `stringCollection` | [`languageProficiency`](/graph/api/resources/languageproficiency)       | Detailed information about languages the user knows.                        |
+| `personInterests` *(beta)*      | `stringCollection` | [`personInterest`](/graph/api/resources/personinterest)                 | Detailed information about interests of the user.                           |
+| `personLanguages` *(beta)*      | `stringCollection` | [`languageProficiency`](/graph/api/resources/languageproficiency)       | Detailed information about languages the user knows.                        |
 | `personName`            | `string`           | [`personName`](/graph/api/resources/personname)                         | Adds names to the user.                                                     |
 | `personNote`            | `string`           | [`personAnnotation`](/graph/api/resources/personannotation)             | Adds a note to the user.                                                    |
-| `personPatents`         | `stringCollection` | [`itemPatent`](/graph/api/resources/itempatent)                         | Describes a granted or filed patent the user is associated with.           |
+| `personPatents` *(beta)*         | `stringCollection` | [`itemPatent`](/graph/api/resources/itempatent)                         | Describes a granted or filed patent the user is associated with.           |
 | `personPhones`          | `stringCollection` | [`itemPhone`](/graph/api/resources/itemphone)                           | Adds phone numbers to the user.                                             |
-| `personPublications`    | `stringCollection` | [`itemPublication`](/graph/api/resources/itempublication)               | Describes publications or articles the user has been associated with.      |
+| `personPublications` *(beta)*    | `stringCollection` | [`itemPublication`](/graph/api/resources/itempublication)               | Describes publications or articles the user has been associated with.      |
 | `personProjects`        | `stringCollection` | [`projectParticipation`](/graph/api/resources/projectparticipation)     | Describes projects the user participated in.                                |
 | `personSkills`          | `stringCollection` | [`skillProficiency`](/graph/api/resources/skillproficiency)             | Describes skills the user is proficient in.                                 |
 | `personWebAccounts`     | `stringCollection` | [`webAccount`](/graph/api/resources/webaccount)                         | Describes external web accounts the user has.                               |
