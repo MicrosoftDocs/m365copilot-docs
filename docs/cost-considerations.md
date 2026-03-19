@@ -13,7 +13,7 @@ ms.custom: [copilot-learning-hub]
 
 Before you extend Microsoft 365 Copilot with custom capabilities—such as integrating external data sources or building intelligent agents—it's important to understand the associated licensing and consumption costs.
 
-Your Microsoft 365 Copilot license type determines access to extensibility features and whether additional usage charges apply. This article  outlines the available Copilot licensing options, and breaks down cost considerations for each extensibility path.
+Your Microsoft 365 Copilot license type determines access to extensibility features and whether additional usage charges apply. This article outlines the available Copilot licensing options, and breaks down cost considerations for each extensibility path.
 
 ## Licensing options for Microsoft 365 Copilot
 
