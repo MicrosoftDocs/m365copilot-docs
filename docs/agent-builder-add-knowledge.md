@@ -46,7 +46,7 @@ If you're configuring your agent manually, to add knowledge sources to your agen
    - **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
    - **Upload** - Upload files directly from your device.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-knowledge-configure.png" alt-text="A screenshot of the Knowledge section of the Configure tab.":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-knowledge-configure.png" alt-text="A screenshot of the Knowledge section of the Configure tab." lightbox="assets/images/agent-builder-screenshots/agent-builder-knowledge-configure.png":::
 
 ## Public websites
 

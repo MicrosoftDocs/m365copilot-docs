@@ -47,7 +47,7 @@ When you finish describing your agent and adding knowledge sources, view the con
 - Knowledge sources
 - Suggested prompts
 
-:::image type="content" source="assets/images/agent-builder-screenshots/agent-configuration.png" alt-text="Screenshot of the Configure tab showing the agent configuration when created using natural language":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-configuration.png" alt-text="Screenshot of the Configure tab showing the agent configuration when created using natural language" lightbox="assets/images/agent-builder-screenshots/agent-configuration.png":::
 
 After you create your agent, [test it](#test-your-agent) on the **Try it** tab. You can continue to refine it by using natural language. If you want to change the starter prompts or intent, just say it in natural language - for example: "Update the agent to summarize Teams chats instead of emails."
 
@@ -90,7 +90,7 @@ To use a template to build your agent:
 2. On the New agent page, under **Start with a template**, choose the template you want to use. The agent is created automatically.
 3. You can further refine your agent and add knowledge sources by using natural language, or add your refinements manually on the **Configure** tab.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-template.png" alt-text="Screenshot of the Configure tab where users can manually update agent based on a template":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-template.png" alt-text="Screenshot of the Configure tab where users can manually update agent based on a template" lightbox="assets/images/agent-builder-screenshots/agent-builder-template.png":::
 
 For more information, see [Agent templates](agent-templates-overview.md).
 

@@ -72,7 +72,7 @@ Submit feedback by using one of the following options:
 - The **Send feedback** button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
 - The **Send Feedback** option in the menu on the top right.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/send-feedback.png" alt-text="Send feedback in Agent Builder":::
+:::image type="content" source="assets/images/agent-builder-screenshots/send-feedback.png" alt-text="Send feedback in Agent Builder" lightbox="assets/images/agent-builder-screenshots/send-feedback.png":::
 
 In your feedback submission, specify that the issue is related to **Agent Builder in Microsoft 365 Copilot**.
 
@@ -95,7 +95,7 @@ In your feedback ticket, provide details about the issue you're facing and inclu
 
 You can find and copy these details in Agent Builder in the **Get support** section of the **Help** dropdown menu.
 
-:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-get-support.png" alt-text="Find the support details in Agent Builder in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-get-support.png" alt-text="Find the support details in Agent Builder in Microsoft 365 Copilot" lightbox="assets/images/agent-builder-screenshots/agent-builder-get-support.png":::
 
 ## Related content
 
