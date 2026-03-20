@@ -5,41 +5,21 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 10/20/2025
+ms.date: 03/16/2026
 ms.custom: [copilot-learning-hub]
 ---
 
 # Microsoft 365 Copilot extensibility overview
 
-Microsoft 365 Copilot is an AI-powered productivity tool that integrates with Microsoft 365 apps to help users with business tasks in the flow of their work. With Copilot Chat, users can query data, gain insights, and streamline workflows in real time. You can extend Copilot to meet the needs of your users by integrating organizational knowledge and adding skills and workflows that are tailored to your business processes. This makes tasks like summarizing, content generation, and data retrieval more efficient and contextually relevant.
+Microsoft 365 Copilot is an AI-powered productivity tool that integrates with Microsoft 365 apps to help users with business tasks in the flow of their work. With Copilot Chat, users can query data, gain insights, and streamline workflows in real time. You can extend Copilot to meet the needs of your users by integrating organizational knowledge and adding skills and workflows that are tailored to your business processes. Extending Copilot makes tasks like summarizing, content generation, and data retrieval more efficient and contextually relevant.
 
 You can extend Copilot in several ways:
 
-- Use [Microsoft 365 Copilot connectors](#enhance-knowledge-in-copilot-with-connectors) to ingest organizational data, enabling Copilot to access and reason over a broader set of enterprise information.
-
 - Build [agents](#extend-copilot-with-agents) — powerful AI assistants that retrieve real-time insights and act on behalf of users—to tailor Copilot for automating specialized workflows and performing tasks.
 
+- Use [Microsoft 365 Copilot connectors](#enhance-knowledge-in-copilot-with-connectors) to ingest organizational data, enabling Copilot to access and reason over a broader set of enterprise information.
+
 - Use [Microsoft 365 Copilot APIs](#microsoft-365-copilot-apis) to programmatically access Copilot's capabilities in your custom applications and agents.
-
-## Enhance knowledge in Copilot with connectors
-
-[Copilot connectors](overview-copilot-connector.md) allow you to ingest and index data from multiple sources to add knowledge to Copilot. The data that Copilot accesses powers its intelligence. By using Copilot connectors, you can bring additional enterprise data into Microsoft Graph.
-
-This enables Copilot to integrate and reason over a wider variety of data sources, which allows it to deliver more contextually relevant responses - responses tailored to the needs and data access permissions of the user. Access to data remains secure and compliant: users can only retrieve information they're authorized to view to ensure that sensitive data remains protected.
-
-By using Copilot connectors, you can:
-
-- **Enrich Copilot** with data from your enterprise systems such as ERP, CRM, line-of-business databases, and knowledge management systems.
-- **Provide more comprehensive insights** by allowing Copilot to summarize, analyze, and respond to data from multiple sources.
-- **Use the intelligence of Copilot** in tools like Microsoft Search and ContextIQ to enable seamless integration within your existing infrastructure.
-
-### Use prebuilt Copilot connectors
-
-A number of [prebuilt Copilot connectors](/microsoftsearch/connectors-gallery) are available to configure within your tenant. These connectors enable Copilot to integrate with common enterprise applications—such as CRM systems, file storage solutions, and project management tools—without requiring any custom development.
-
-### Build a custom Copilot connector
-
-If an existing connector doesn't meet your needs, you can build a custom Copilot connector tailored to your specific business requirements. This allows you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see [Build Copilot connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context).
 
 ## Extend Copilot with agents
 
@@ -69,7 +49,27 @@ The following table provides some examples of the types of agents you can develo
 |-----------------------------------|--------------|
 | Image creation agent for marketing campaign | If you need images for your marketing campaign, you can create an agent that develops marketing assets tailored to your campaign and respects your brand guidelines. |
 | Product inventory agent for e-commerce | If your business operates in the realm of commerce, you can build an internal inventory agent by connecting it to your product database. For example, a user can ask Microsoft 365 Copilot to verify the availability of specific items, streamlining your internal processes. |
-| Legal research AI | If your organization works in the legal domain, you can build a legal research agent that uses a custom-trained LLM for case law analysis and integrates external legal databases through API plugins. |
+| Legal research AI | If your organization works in the legal domain, you can build a legal research agent that uses a custom-trained large language model (LLM) for case law analysis and integrates external legal databases through API plugins. |
+
+## Enhance knowledge in Copilot with connectors
+
+[Copilot connectors](overview-copilot-connector.md) allow you to ingest and index data from multiple sources to add knowledge to Copilot. The data that Copilot accesses powers its intelligence. By using Copilot connectors, you can bring more enterprise data into Microsoft Graph.
+
+This indexing enables Copilot to integrate and reason over a wider variety of data sources, which allows it to deliver more contextually relevant responses that are tailored to the needs and data access permissions of the user. Access to data remains secure and compliant: users can only retrieve information they're authorized to view to ensure that sensitive data remains protected.
+
+By using Copilot connectors, you can:
+
+- **Enrich Copilot** with data from your enterprise systems such as ERP, CRM, line-of-business databases, and knowledge management systems.
+- **Provide more comprehensive insights** by allowing Copilot to summarize, analyze, and respond to data from multiple sources.
+- **Use the intelligence of Copilot** in tools like Microsoft Search and ContextIQ to enable seamless integration within your existing infrastructure.
+
+### Use prebuilt Copilot connectors
+
+Many [prebuilt Copilot connectors](/microsoftsearch/connectors-gallery) are available to configure within your tenant. These connectors enable Copilot to integrate with common enterprise applications—such as CRM systems, file storage solutions, and project management tools—without requiring any custom development.
+
+### Build a custom Copilot connector
+
+If an existing connector doesn't meet your needs, you can build a custom Copilot connector tailored to your specific business requirements. Custom connectors allow you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see [Build Copilot connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context).
 
 ## Microsoft 365 Copilot APIs
 
@@ -81,19 +81,13 @@ You can integrate the following Copilot APIs:
 
 - **[Copilot Retrieval API](api/ai-services/retrieval/overview.md)** - Retrieve relevant information from Microsoft 365's semantic and lexical indexes. Whether you're building agents with Copilot's orchestration or your own models and orchestrators, this API lets you ground your solution in enterprise data—from SharePoint to external systems—via [Copilot connectors](/microsoftsearch/connectors-overview). It respects user and tenant-level governance, ensuring secure, compliant access to organizational knowledge.
 
-    > [!NOTE]
-    > The Copilot Retrieval API is currently in prerelease status and will be available for public preview soon.
-
 - **[Copilot Search API (preview)](api/ai-services/search/overview.md)** - Perform hybrid search (semantic and lexical) across OneDrive for work or school content using natural language queries with contextual understanding and intelligent results. This API enables applications to discover relevant documents and files using natural language descriptions rather than exact keyword matches, creating intuitive search experiences that understand user intent and surface the most relevant content.
 
-- **Copilot Chat API** - Send prompts directly to Copilot and receive responses so you can embed Copilot-powered conversation experiences within your own applications. This API brings Copilot to your users wherever they work.
+- **[Copilot Chat API (preview)](/microsoft-365-copilot/extensibility/api/ai-services/chat/overview)** - Send prompts directly to Copilot and receive responses so you can embed Copilot-powered conversation experiences within your own applications. This API brings Copilot to your users wherever they work.
 
-    > [!NOTE]
-    > The Copilot Chat API is currently in prerelease status and will be available for public preview soon.
+- **[Copilot Interaction Export API](/microsoft-365-copilot/extensibility/api/ai-services/interaction-export/resources/aiinteractionhistory)** - Export user interactions with Copilot, including prompts and responses. This API enables you to build data governance and protection solutions, and analyze Copilot usage in your application to optimize adoption.
 
-- **[Copilot Interaction Export API](/microsoftteams/export-teams-content)** - Export user interactions with Copilot, including prompts and responses. This API enables you to build data governance and protection solutions, as well as analyze Copilot usage in your application to optimize adoption.
-
-- **[Copilot AI Meeting Insights API](/microsoftteams/platform/graph-api/meeting-transcripts/meeting-insights)** - Access insights from the Microsoft Teams Intelligent Recap feature—including AI-generated notes, action items, and @mentions. This API is ideal for building apps that extract and apply insights from meetings to drive follow-ups and decisions, such as in HR interviews, project management, sales, or customer engagement workflows.
+- **[Copilot AI Meeting Insights API](/microsoft-365-copilot/extensibility/api/ai-services/meeting-insights/resources/callaiinsight)** - Access insights from the Microsoft Teams Intelligent Recap feature—including AI-generated notes, action items, and @mentions. This API is ideal for building apps that extract and apply insights from meetings to drive follow-ups and decisions, such as in HR interviews, project management, sales, or customer engagement workflows.
 
 ## Related content
 
