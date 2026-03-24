@@ -6,7 +6,7 @@ ms.author: lauragra
 ms.reviewer: vermaanimesh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 03/13/2026
+ms.date: 03/24/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -151,7 +151,17 @@ After you update your agent manifest, repackage your app:
 1. Submit the new package to update your existing app. If your agent is internal to your organization, use the Microsoft 365 admin center (requires tenant admin permissions).
 
     > [!NOTE]
-    > You can submit custom engine agents that you converted from a declarative agent to Partner Center. Agent users are prompted to consent to upgrade their agent. For details, see [Conditions when an app update requires consent](/microsoftteams/apps-update-experience#conditions-when-an-app-update-requires-consent).
+    > You can submit custom engine agents that you converted from a declarative agent to Partner Center. Agent users are prompted to consent to upgrade their agent. For more information, see the [next section](#partner-center-submission-and-consent-behavior).
+
+### Partner Center submission and consent behavior
+
+Custom engine agents that are converted from declarative agents can be submitted to Partner Center for distribution, subject to applicable marketplace validation and tenant policies.
+
+When a converted agent introduces changes that affect app capabilities or permissions, the agent doesn’t update automatically for existing users. In these cases, users are prompted to review and consent to the updated version of the agent before continuing to use it.
+
+Users see an update prompt in Microsoft Teams and must explicitly approve the update. Whether additional admin approval is required depends on the permissions requested and the tenant’s consent configuration.
+
+For details, see [Conditions when an app update requires consent](/microsoftteams/apps-update-experience#conditions-when-an-app-update-requires-consent)
 
 ## User experience
 
