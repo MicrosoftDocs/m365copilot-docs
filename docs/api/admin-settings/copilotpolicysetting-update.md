@@ -11,9 +11,9 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
-Update the properties of a [copilotPolicySetting](../resources/copilotpolicysetting.md) object.
+Update the properties of a [copilotPolicySetting](./resources/copilotpolicysetting.md) object.
 
 Update the value of a Copilot policy setting. The API resolves the correct underlying policy service and applies the update. If **policyId** is omitted from the request body, the API resolves the first matching tenant-level policy automatically.
 
@@ -57,8 +57,6 @@ PATCH /copilot/admin/policySettings/{id}
 
 ## Request body
 
-[!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
-
 |Property|Type|Description|
 |:---|:---|:---|
 |value|String|The new value to set for the setting. The format is setting-specific and may be a digit, URL, XML string, or JSON string. Required.|
@@ -66,7 +64,7 @@ PATCH /copilot/admin/policySettings/{id}
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an updated [copilotPolicySetting](../resources/copilotpolicysetting.md) object in the response body.
+If successful, this method returns a `200 OK` response code and an updated [copilotPolicySetting](./resources/copilotpolicysetting.md) object in the response body.
 
 ## Examples
 

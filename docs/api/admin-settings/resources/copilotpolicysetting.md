@@ -19,18 +19,18 @@ This resource is accessed through the `/copilot/admin/policySettings/{id}` endpo
 
 This resource is a contained entity within the [copilotAdmin](copilotadmin.md) resource.
 
-Inherits from [entity](../resources/entity.md).
+Inherits from [entity](/graph/api/resources/entity).
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get](../api/copilotpolicysetting-get.md)|[copilotPolicySetting](../resources/copilotpolicysetting.md)|Read the properties and relationships of a [copilotPolicySetting](../resources/copilotpolicysetting.md) object.|
-|[Update](../api/copilotpolicysetting-update.md)|[copilotPolicySetting](../resources/copilotpolicysetting.md)|Update the properties of a [copilotPolicySetting](../resources/copilotpolicysetting.md) object.|
+|[Get](../copilotpolicysetting-get.md)|[copilotPolicySetting](copilotpolicysetting.md)|Read the properties and relationships of a [copilotPolicySetting](copilotpolicysetting.md) object.|
+|[Update](../copilotpolicysetting-update.md)|[copilotPolicySetting](copilotpolicysetting.md)|Update the properties of a [copilotPolicySetting](copilotpolicysetting.md) object.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|id|String|The friendly identifier of the Copilot setting (for example, `microsoft.copilot.pinsetting`). Used as the resource key in the URL path. Read-only. Inherited from [entity](../resources/entity.md).|
+|id|String|The friendly identifier of the Copilot setting (for example, `microsoft.copilot.pinsetting`). Used as the resource key in the URL path. Read-only. Inherited from [entity](/graph/api/resources/entity).|
 |policyId|String|The ID of the tenant-level policy containing this setting in the underlying policy service. Nullable. Returns `null` when no tenant-level policy exists for this setting. If omitted on update, the API resolves the first matching tenant-level policy.|
 |value|String|The current value of the setting as a string. The format is setting-specific and may be a digit representing a state (for example, `0`, `1`), a URL, an XML string, or a JSON string. Nullable. Returns `null` when the setting has not been configured in the resolved tenant-level policy.|
 

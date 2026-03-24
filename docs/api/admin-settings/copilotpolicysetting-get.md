@@ -11,9 +11,9 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of a [copilotPolicySetting](../resources/copilotpolicysetting.md) object.
+Read the properties and relationships of a [copilotPolicySetting](./resources/copilotpolicysetting.md) object.
 
 Retrieve the current value of a Copilot policy setting by its identifier. The API resolves the correct underlying policy service (CPS or Intune) and returns the setting value along with the associated policy ID. When the setting has not been configured or no tenant-level policy exists, the API returns `200 OK` with `value` and/or `policyId` set to `null` — this is not an error condition.
 
@@ -64,7 +64,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a [copilotPolicySetting](../resources/copilotpolicysetting.md) object in the response body.
+If successful, this method returns a `200 OK` response code and a [copilotPolicySetting](./resources/copilotpolicysetting.md) object in the response body.
 
 ## Examples
 

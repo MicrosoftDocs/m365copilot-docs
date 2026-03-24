@@ -30,8 +30,8 @@ None.
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|policySettings|[copilotPolicySetting](../resources/copilotpolicysetting.md) collection|Collection of Copilot settings managed through policy services. Each setting is addressed individually by its identifier.|
-|settings|[copilotAdminSetting](../resources/copilotadminsetting.md)|Represents the settings for Copilot admin.|
+|policySettings|[copilotPolicySetting](copilotpolicysetting.md) collection|Collection of Copilot settings managed through policy services. Each setting is addressed individually by its identifier.|
+|settings|[copilotAdminSetting](copilotadminsetting.md)|Represents the settings for Copilot admin.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
