@@ -22,7 +22,7 @@ Declarative agents are customized versions of Microsoft 365 Copilot that help yo
 
 If your declarative agent also has API plugins as actions, the OpenAPI document for your plugin helps the agent understand any instructions referring to the API. For more information, see [How to make an OpenAPI document effective in extending Copilot](openapi-document-guidance.md).
 
-This guidance applies to developers and makers who use [Agent Builder in Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agent-builder) or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to create declarative agents. For more information about how to write instructions for Copilot Studio agents, see [Configure high-quality instructions for generative orchestration](/microsoft-copilot-studio/guidance/generative-mode-guidance).
+This guidance applies to developers and makers who use [Agent Builder in Microsoft 365 Copilot](agent-builder.md) or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to create declarative agents. For more information about how to write instructions for Copilot Studio agents, see [Configure high-quality instructions for generative orchestration](/microsoft-copilot-studio/guidance/generative-mode-guidance).
 
 > [!IMPORTANT]
 > Microsoft 365 Copilot periodically transitions to newer GPT versions. Because these updates are automatic, expect some behavioral change over time and be prepared to adapt prompts and instructions where precision matters. The recent move from GPT 5.0 to GPT 5.1 was a larger shift from a mostly literal interpretation of instructions to a more intent‑first, adaptive reasoning approach. This shift might affect how your declarative agent understands and responds to your instructions, particularly in structured or step-by-step scenarios. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
@@ -325,9 +325,9 @@ This section provides patterns and templates that you can add to your declarativ
 - Source of truth: Use ONLY the provided document(s) for inputs
 
 ### Steps (Sequential — do not reorder)
-Step 1: Locate inputs for [Metric1-3] in the document. Quote the section/table name where each input came from.  
-Step 2: Compute [Metric1-3] exactly as defined above. If any input is missing, stop and ask ONE question listing what's missing.  
-Step 3: Compute ROI using the ROI definition above. Do not substitute other ROI formulas.  
+Step 1: Locate inputs for [Metric1-3] in the document. Quote the section/table name where each input came from.
+Step 2: Compute [Metric1-3] exactly as defined above. If any input is missing, stop and ask ONE question listing what's missing.
+Step 3: Compute ROI using the ROI definition above. Do not substitute other ROI formulas.
 Step 4: Output ONLY the table in the format below.
 
 ### Output format
@@ -342,13 +342,13 @@ Before finalizing: confirm every metric has (a) a value, (b) a source, and (c) n
 By using this pattern, you make sure the model separates parallel and sequential logic. The model runs workflows correctly without adding or reordering steps.
 
 ```md
-Section A — Extract Data  
-- Extract pricing changes.  
-- Extract margin changes.  
-- Extract sentiment themes.  
+Section A — Extract Data
+- Extract pricing changes.
+- Extract margin changes.
+- Extract sentiment themes.
 
-Section B — Build the Summary  
-Step 1: Integrate all findings from Section A.  
+Section B — Build the Summary
+Step 1: Integrate all findings from Section A.
 Step 2: Produce the 2 page call prep summary.
 ```
 
@@ -357,9 +357,9 @@ Step 2: Produce the 2 page call prep summary.
 By using this pattern, you add explicit if/then rules that prevent unintended model interpretation and enforce deterministic outcomes. This approach stops the language model from trying to resolve ambiguous conditional logic on its own, which can result in blended branches ("do both") or selection of the wrong conditional path.
 
 ```md
-Read the product report.  
-Check category performance.  
-If performance is stable or improving, write the summary section.  
+Read the product report.
+Check category performance.
+If performance is stable or improving, write the summary section.
 If performance declines or anomalies are detected, write the risks/issues section.
 ```
 
@@ -370,9 +370,9 @@ Output contracts provide shape, structure, tone, and allowed content, ensuring c
 **Good precision**:
 
 ```md
-Produce a 2-page call-prep briefing:  
-Page 1 → key metrics: revenue, margin, YoY deltas (calculate as needed).  
-Page 2 → top themes, risks, opportunities, customer signals.  
+Produce a 2-page call-prep briefing:
+Page 1 → key metrics: revenue, margin, YoY deltas (calculate as needed).
+Page 2 → top themes, risks, opportunities, customer signals.
 Tone: Professional. Reasoning: none unless calculation required.
 ```
 
@@ -380,14 +380,14 @@ Tone: Professional. Reasoning: none unless calculation required.
 
 ```md
 ## Output Contract (Mandatory)
-Goal: [one sentence]  
-Format: [bullet list | table | 2 pages | JSON]  
-Detail level: [short | medium | detailed] — do not exceed [X] bullets per section  
-Tone: [Professional | Friendly | Efficient]  
-Include: [A, B, C]  
-Exclude: No extra recommendations, no extra context, no “helpful tips”  
-Example shape:  
-- Section 1: ...  
+Goal: [one sentence]
+Format: [bullet list | table | 2 pages | JSON]
+Detail level: [short | medium | detailed] — do not exceed [X] bullets per section
+Tone: [Professional | Friendly | Efficient]
+Include: [A, B, C]
+Exclude: No extra recommendations, no extra context, no “helpful tips”
+Example shape:
+- Section 1: ...
 - Section 2: ...
 ```
 
@@ -409,7 +409,7 @@ Clean, intentional Markdown ensures the model can reliably parse your instructio
 - Extract sentiment themes.
 
 ## Section B — Build the Summary (Sequential)
-**Step 1:** Integrate findings from Section A.  
+**Step 1:** Integrate findings from Section A.
 **Step 2:** Produce the 2 page call prep summary.
 ```
 
@@ -427,7 +427,7 @@ Use the **Vocabulary Reference** SharePoint document to interpret acronyms, doma
 
 ## Section B: Build the Summary (Sequential)
 Perform these steps **in order** when the user requests a call prep summary:
-Step 1: Integrate all extracted elements from Section A.  
+Step 1: Integrate all extracted elements from Section A.
 Step 2: Produce a clear, well structured 2 page call prep summary.
 
 ## Final Check: Self Evaluation
@@ -441,14 +441,14 @@ Explicit reasoning cues give you control over how much thinking the model applie
 **Trigger deep reasoning**:
 
 ```md
-Use deep reasoning. Break the problem into steps, analyze each step, evaluate alternatives, and justify the final decision. Reflect before answering.  
+Use deep reasoning. Break the problem into steps, analyze each step, evaluate alternatives, and justify the final decision. Reflect before answering.
 Task: Determine the optimal 3-year migration strategy given constraints A, B, and C.
 ```
 
 **Force fast and minimal reasoning**:
 
 ```md
-Short answer only. No reasoning or explanation. Provide the final result only.  
+Short answer only. No reasoning or explanation. Provide the final result only.
 Task: Extract the product name and renewal date from this paragraph.
 ```
 
@@ -465,10 +465,10 @@ A literal-execution header helps temporarily stabilize an existing agent, especi
 
 ```md
 Always interpret instructions literally.
-Never infer intent or fill in missing steps.  
-Never add context, recommendations, or assumptions.  
-Follow step order exactly with no optimization.  
-Respond concisely and only in the requested format.  
+Never infer intent or fill in missing steps.
+Never add context, recommendations, or assumptions.
+Follow step order exactly with no optimization.
+Respond concisely and only in the requested format.
 Do not call tools unless a step explicitly instructs you to do so.
 ```
 

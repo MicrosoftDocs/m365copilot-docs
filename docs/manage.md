@@ -34,7 +34,7 @@ Both [declarative agents](./build-declarative-agents.md) and [custom engine agen
 
 | Control | Core scenario | Related content |
 |--|--|--|
-| Upload custom apps | Sideload custom apps to your tenant | [Microsoft 365 Agents Toolkit requirements for Microsoft 365 Copilot agents](/microsoft-365-copilot/extensibility/prerequisites#teams-toolkit-requirements) |
+| Upload custom apps | Sideload custom apps to your tenant | [Microsoft 365 Agents Toolkit requirements for Microsoft 365 Copilot agents](prerequisites.md#teams-toolkit-requirements) |
 | Integrated apps | Manage availability of Copilot agents in your tenant | [Manage agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365-copilot/extensibility/context#manage-agents-in-the-microsoft-365-admin-center) |
 
 ## Agents built with Copilot Studio in Microsoft 365 Copilot

@@ -20,7 +20,7 @@ Users can build AI agents for Microsoft 365 by using the following tools:
 
 - **Copilot Studio:** A dedicated, standalone application that offers advanced capabilities for building, customizing, and managing agents at scale. Copilot Studio provides richer configuration options, integration with enterprise systems, and governance features that are suitable for complex scenarios or organizational deployments.
 
-For more information and a comparison of each tool, see [Choose between Microsoft 365 Copilot and Copilot Studio](/microsoft-365-copilot/extensibility/copilot-studio-experience).
+For more information and a comparison of each tool, see [Choose between Microsoft 365 Copilot and Copilot Studio](copilot-studio-experience.md).
 
 Copying an agent to Copilot Studio unlocks advanced capabilities beyond what's available in Microsoft 365 Copilot, including:
 
@@ -134,6 +134,6 @@ Agents copied to Copilot Studio are stored in [Microsoft Dataverse](/power-apps/
 
 ## Related content
 
-- [Choose between Microsoft 365 Copilot and Copilot Studio](/microsoft-365-copilot/extensibility/copilot-studio-experience)
-- [Build agents with Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/copilot-studio-lite)
+- [Choose between Microsoft 365 Copilot and Copilot Studio](copilot-studio-experience.md)
+- [Build agents with Microsoft 365 Copilot](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)

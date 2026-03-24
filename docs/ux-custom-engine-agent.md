@@ -88,4 +88,4 @@ Proactive messages are agent-initiated messages based on predefined triggers; fo
 ## Related content
 
 - [Implement asynchronous and proactive messaging in custom engine agents](custom-engine-agent-asynchronous-flow.md)
-- [Custom engine agent overview](/microsoft-365-copilot/extensibility/overview-custom-engine-agent)
+- [Custom engine agent overview](overview-custom-engine-agent.md)
