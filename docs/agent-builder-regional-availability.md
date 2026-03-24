@@ -4,7 +4,7 @@ description: Learn about the regional availability and supported languages for t
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 02/24/2026
+ms.date: 03/12/2026
 ms.topic: article
 ---
 
@@ -41,7 +41,8 @@ The Power Platform default environment location is automatically set to the loca
 Agent Builder in Microsoft 365 Copilot is available in the Microsoft 365 Government Community Cloud Moderate (GCCM) and Government Community Cloud High (GCCH) national cloud environments.
 
 > [!NOTE]
-> Sharing agents with others isn't currently available in Agent Builder in GCCH environments.
+> - The tenant admin must give users access to Agent Builder in GCCH environments. For more information, see [User access](/microsoft-365/admin/manage/agent-settings).
+> - Sharing agents with others isn't currently available in Agent Builder in GCCH environments.
 
 ## Language support
 
