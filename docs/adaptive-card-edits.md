@@ -217,6 +217,6 @@ The following request and response examples show what happens when a user takes 
 
 ## Related content
 
-- [Adaptive Card responses](/microsoft-365-copilot/extensibility/api-plugin-adaptive-cards)
-- [Add a dialog box to Adaptive Card templates](/microsoft-365-copilot/extensibility/adaptive-card-dialog-box)
-- [Declarative agent app package](/microsoft-365-copilot/extensibility/overview-declarative-agent#building-declarative-agents)
+- [Adaptive Card responses](api-plugin-adaptive-cards.md)
+- [Add a dialog box to Adaptive Card templates](adaptive-card-dialog-box.md)
+- [Declarative agent app package](overview-declarative-agent.md#building-declarative-agents)

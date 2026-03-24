@@ -69,7 +69,7 @@ You can submit feedback from within Agent Builder to help contribute to product 
 Submit feedback by using one of the following options:
 
 - The thumbs-up or thumbs-down control on AI-generated responses in your agent test pane.
-- The **Send feedback** button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](/microsoft-365-copilot/extensibility/rai-validation).
+- The **Send feedback** button if you encounter an RAI validation failure. For more information, see [Responsible AI validation checks](rai-validation.md).
 - The **Send Feedback** option in the menu on the top right.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-send-feedback.png" alt-text="Send feedback in Agent Builder":::
@@ -100,6 +100,6 @@ You can find and copy these details in Agent Builder in the **Get support** sect
 ## Related content
 
 - [Build your first agent](https://res.public.onecdn.static.microsoft/s01-prod/pdf/Buid-an-agent-with-Agent-Builder.pdf)
-- [Build agents with Agent Builder in Microsoft 365 Copilot](agent-builder-build-agents.md) 
+- [Build agents with Agent Builder in Microsoft 365 Copilot](agent-builder-build-agents.md)
 - [Share and manage agents built with Microsoft 365 Copilot](agent-builder-share-manage-agents.md)
 - [Regional availability and language support](agent-builder-regional-availability.md)

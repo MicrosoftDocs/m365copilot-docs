@@ -95,7 +95,7 @@ Microsoft provides a set of prebuilt Copilot agent plugins that you can load int
 - **DriveItemsPlugin** – Search, read, and upload files.
 - **M365 Copilot Plugin (Retrieval API Plugin)** – Search Microsoft 365 file content via semantic index.
 
-You can also [create plugins](/microsoft-365-copilot/extensibility/build-api-plugins-existing-api?tabs=toolkit) for other services using Kiota and an OpenAPI description file.
+You can also [create plugins](build-api-plugins-existing-api.md?tabs=toolkit) for other services using Kiota and an OpenAPI description file.
 
 ## Plugin capabilities and examples
 
