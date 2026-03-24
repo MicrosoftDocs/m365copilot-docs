@@ -108,7 +108,7 @@ Choose knowledge sources to add to your agent in the chat box on the **Describe*
 For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
 
 > [!NOTE]
-> The availability of knowledge sources and capabilities differs based on the user's license. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-for-microsoft-365-users).
+> The availability of knowledge sources and capabilities differs based on the user's license. For details, see [Agent capabilities and licensing models](prerequisites.md#agent-capabilities-and-licensing-models).
 
 ## Add capabilities
 
