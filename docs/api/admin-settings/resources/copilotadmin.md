@@ -1,42 +1,46 @@
 ---
-title: copilotAdmin resource type
-description: Represents a Microsoft 365 admin who can add or modify Microsoft 365 Copilot settings.
-author: gautamjain14
-ms.author: gajain
+title: "copilotAdmin resource type"
+description: "Represents a container for Copilot admin resources."
+author: "paarava"
+ms.date: 03/19/2026
 ms.localizationpriority: medium
+ms.subservice: "copilot-settings"
 doc_type: resourcePageType
-ms.topic: reference
-ms.date: 08/08/2025
-zone_pivot_groups: graph-api-versions
 ---
 
 # copilotAdmin resource type
 
-<!-- cSpell:ignore gautamjain14 gajain -->
+Namespace: microsoft.graph
 
-:::zone pivot="graph-v1"
-:::zone-end
-
-:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-:::zone-end
 
-Represents a container for Microsoft 365 Copilot admin settings.
+Represents a container for Copilot admin resources.
+
+This resource serves as a parent for managing Copilot-related administrative settings and configurations through the `/copilot/admin` endpoint.
+
+Inherits from [entity](../resources/entity.md).
+
+## Methods
+None.
 
 ## Properties
-
 None.
 
 ## Relationships
-
-| Relationship | Type                                          | Description                                                                               |
-|:-------------|:----------------------------------------------|:------------------------------------------------------------------------------------------|
-| `settings`   | [copilotAdminSetting](copilotadminsetting.md) | Set of Microsoft 365 Copilot settings that can be added or modified. Read-only. Nullable. |
+|Relationship|Type|Description|
+|:---|:---|:---|
+|policySettings|[copilotPolicySetting](../resources/copilotpolicysetting.md) collection|Collection of Copilot settings managed through policy services. Each setting is addressed individually by its identifier.|
+|settings|[copilotAdminSetting](../resources/copilotadminsetting.md)|Represents the settings for Copilot admin.|
 
 ## JSON representation
-
 The following JSON representation shows the resource type.
-
+<!-- {
+  "blockType": "resource",
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.copilotAdmin",
+  "openType": true
+}
+-->
 ``` json
 {
   "@odata.type": "#microsoft.graph.copilotAdmin"
