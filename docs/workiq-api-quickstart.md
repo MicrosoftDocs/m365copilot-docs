@@ -104,6 +104,12 @@ Delegate a task from one agent to another.
 
 Enable an AI assistant to pull Microsoft 365 context dynamically.
 
+### Prerequisites
+
+- Microsoft Entra ID–authenticated user
+- [Work IQ CLI](workiq-overview.md) installed globally
+- Microsoft 365 Copilot license for the user
+
 ### Step 1: Configure Work IQ as an MCP server
 
 ```json
@@ -121,6 +127,22 @@ Enable an AI assistant to pull Microsoft 365 context dynamically.
 **Prompt:** Summarize recent discussions about delivery risks.
 
 #### Conceptual MCP tool call
+
+```json
+{
+  "method": "tools/call",
+  "params": {
+    "name": "ask_work_iq",
+    "arguments": {
+      "question": "Summarize recent discussions about delivery risks.",
+      "fileUrls": null
+    },
+    "_meta": {
+      "progressToken": 0
+    }
+  }
+}
+```
 
 ```json
 {
