@@ -4,7 +4,6 @@ description: "Update the properties of a copilotPolicySetting object."
 author: "paarava"
 ms.date: 03/19/2026
 ms.localizationpriority: medium
-ms.subservice: "copilot-settings"
 doc_type: apiPageType
 ---
 

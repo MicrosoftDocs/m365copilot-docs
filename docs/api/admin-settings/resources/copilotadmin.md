@@ -1,29 +1,30 @@
 ---
-title: "copilotAdmin resource type"
-description: "Represents a container for Copilot admin resources."
-author: "paarava"
-ms.date: 03/19/2026
+title: copilotAdmin resource type
+description: Represents a Microsoft 365 admin who can add or modify Microsoft 365 Copilot settings.
+author: gautamjain14
+ms.author: gajain
 ms.localizationpriority: medium
-ms.subservice: "copilot-settings"
 doc_type: resourcePageType
+ms.topic: reference
+ms.date: 03/19/2026
+zone_pivot_groups: graph-api-versions
 ---
 
 # copilotAdmin resource type
 
-Namespace: microsoft.graph
+<!-- cSpell:ignore gautamjain14 gajain -->
 
+:::zone pivot="graph-v1"
+:::zone-end
+
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
-Represents a container for Copilot admin resources.
-
-This resource serves as a parent for managing Copilot-related administrative settings and configurations through the `/copilot/admin` endpoint.
-
-Inherits from [entity](../resources/entity.md).
-
-## Methods
-None.
+Represents a container for Microsoft 365 Copilot admin settings.
 
 ## Properties
+
 None.
 
 ## Relationships

@@ -4,7 +4,6 @@ description: "Represents a Copilot setting managed through a policy service (CPS
 author: "paarava"
 ms.date: 03/19/2026
 ms.localizationpriority: medium
-ms.subservice: "copilot-settings"
 doc_type: resourcePageType
 ---
 

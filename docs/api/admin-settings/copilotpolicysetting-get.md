@@ -4,7 +4,6 @@ description: "Read the properties and relationships of a copilotPolicySetting ob
 author: "paarava"
 ms.date: 03/19/2026
 ms.localizationpriority: medium
-ms.subservice: "copilot-settings"
 doc_type: apiPageType
 ---
 
