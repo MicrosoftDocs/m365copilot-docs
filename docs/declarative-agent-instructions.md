@@ -204,7 +204,7 @@ Developing instructions for declarative agents is often an iterative process. It
 1. **Publish** your agent. Responsible AI (RAI) practices are integrated into the validation process to ensure that agents uphold ethical standards. For more information, see:
     - [RAI validation](rai-validation.md)
     - [RAI tools and practices](https://www.microsoft.com/ai/tools-practices)
-    - [Apps powered by artificial intelligence](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#apps-powered-by-artificial-intelligence?context=/microsoft-365-copilot/extensibility/context)
+    - [Apps powered by artificial intelligence](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#apps-powered-by-artificial-intelligence?context=/microsoft-365/copilot/extensibility/context)
 1. **Test** your agent.
     1. To confirm that the agent brings added value when answering, compare results against Microsoft 365 Copilot.
     1. Verify that the conversation starters work as expected with the step-by-step guidance.
@@ -520,4 +520,4 @@ Use this pattern when:
 
 - [Declarative agent manifest example](declarative-agent-manifest-1.6.md#declarative-agent-manifest-example).
 - [Use Copilot Studio to create agents](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
-- [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context).
+- [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context).

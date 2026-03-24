@@ -20,7 +20,7 @@ Prompt starters, also known as conversation starters, provide predefined prompts
 
 :::image type="content" source="assets/images/agent-ux/zero-prompts.png" alt-text="A screenshot of zero prompt" border="false":::
 
-For more information, see [Create prompt suggestions](/microsoftteams/platform/bots/how-to/conversations/prompt-suggestions?context=/microsoft-365-copilot/extensibility/context).
+For more information, see [Create prompt suggestions](/microsoftteams/platform/bots/how-to/conversations/prompt-suggestions?context=/microsoft-365/copilot/extensibility/context).
 
 ## Suggested prompts
 
@@ -28,7 +28,7 @@ Suggested prompts guide users to the next best actions based on the conversation
 
 :::image type="content" source="assets/images/agent-ux/suggested-prompts.png" alt-text="A screenshot of Suggested prompt" border="false":::
 
-For more information, see [Create prompt suggestions](/microsoftteams/platform/bots/how-to/conversations/prompt-suggestions?context=/microsoft-365-copilot/extensibility/context).
+For more information, see [Create prompt suggestions](/microsoftteams/platform/bots/how-to/conversations/prompt-suggestions?context=/microsoft-365/copilot/extensibility/context).
 
 ## Streaming responses
 
@@ -36,7 +36,7 @@ Streaming responses are designed to enhance the user experience by providing vis
 
 :::image type="content" source="assets/images/agent-ux/streaming-response.png" alt-text="A screenshot of streaming response" border="false":::
 
-You can implement streaming responses by using the Teams SDK. For more information, see [Streaming messages](/microsoftteams/platform/bots/streaming-ux?context=/microsoft-365-copilot/extensibility/context).
+You can implement streaming responses by using the Teams SDK. For more information, see [Streaming messages](/microsoftteams/platform/bots/streaming-ux?context=/microsoft-365/copilot/extensibility/context).
 
 ## Citations
 
@@ -52,7 +52,7 @@ AI labels are automatically added to all agents' messages to indicate that Ai ge
 
 :::image type="content" source="assets/images/agent-ux/ai-labels.png" alt-text="A screenshot of AI labels" border="false":::
 
-For more information, see [Enhance AI-generated messages](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content#sensitivity-label?context=/microsoft-365-copilot/extensibility/context).
+For more information, see [Enhance AI-generated messages](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content#sensitivity-label?context=/microsoft-365/copilot/extensibility/context).
 
 ## Feedback loop
 
@@ -60,7 +60,7 @@ Feedback loops are mechanisms that allow users to provide feedback on an agent's
 
 :::image type="content" source="assets/images/agent-ux/feedback.png" alt-text="A screenshot of feedback loop" border="false":::
 
-For more information, see [Feedback buttons](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content#feedback-buttons?context=/microsoft-365-copilot/extensibility/context).
+For more information, see [Feedback buttons](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content#feedback-buttons?context=/microsoft-365/copilot/extensibility/context).
 
 ## Asynchronous patterns
 

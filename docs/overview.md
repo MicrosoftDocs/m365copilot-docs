@@ -69,7 +69,7 @@ Many [prebuilt Copilot connectors](/microsoftsearch/connectors-gallery) are avai
 
 ### Build a custom Copilot connector
 
-If an existing connector doesn't meet your needs, you can build a custom Copilot connector tailored to your specific business requirements. Custom connectors allow you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see [Build Copilot connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365-copilot/extensibility/context).
+If an existing connector doesn't meet your needs, you can build a custom Copilot connector tailored to your specific business requirements. Custom connectors allow you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see [Build Copilot connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365/copilot/extensibility/context).
 
 ## Microsoft 365 Copilot APIs
 
