@@ -1,6 +1,6 @@
 ---
-title: Convert Your Declarative Agent for Microsoft 365 Copilot to a Custom Engine Agent
-description: Find out how you can convert your declarative agent for Microsoft 365 Copilot to a custom engine agent to take advantage of your own orchestration and advanced functionality.
+title: "Convert declarative agent to custom engine agent: Microsoft 365 Copilot"
+description: Learn how to convert your declarative agent for Microsoft 365 Copilot to a custom engine agent. Gain full control of orchestration, AI models, and data integrations. Start converting today.
 author: lauragra
 ms.author: lauragra
 ms.reviewer: vermaanimesh
@@ -157,9 +157,9 @@ After you update your agent manifest, repackage your app:
 
 Custom engine agents that are converted from declarative agents can be submitted to Partner Center for distribution, subject to applicable marketplace validation and tenant policies.
 
-When a converted agent introduces changes that affect app capabilities or permissions, the agent doesn’t update automatically for existing users. In these cases, users are prompted to review and consent to the updated version of the agent before continuing to use it.
+When a converted agent introduces changes that affect app capabilities or permissions, the agent doesn’t update automatically for existing users. Users are prompted to review and consent to the updated version before continuing to use it.
 
-Users see an update prompt in Microsoft Teams and must explicitly approve the update. Whether additional admin approval is required depends on the permissions requested and the tenant’s consent configuration.
+Users see an update prompt in Copilot and Teams and must explicitly approve the update. Whether additional admin approval is required depends on the permissions requested and the tenant’s consent configuration.
 
 For details, see [Conditions when an app update requires consent](/microsoftteams/apps-update-experience#conditions-when-an-app-update-requires-consent)
 
