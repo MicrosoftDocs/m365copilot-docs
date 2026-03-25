@@ -7,6 +7,14 @@ items:
     href: copilotadminlimitedmode-get.md
   - name: Update
     href: copilotadminlimitedmode-update.md
+- name: Copilot policy setting
+  items:
+  - name: Copilot policy setting
+    href: resources/copilotpolicysetting.md
+  - name: Get
+    href: copilotpolicysetting-get.md
+  - name: Update
+    href: copilotpolicysetting-update.md
 - name: Copilot usage reports API
   href: reports/toc.yml
 - name: Package management API (preview)
@@ -17,3 +25,5 @@ items:
     href: resources/copilotadmin.md
   - name: Copilot admin setting
     href: resources/copilotadminsetting.md
+  - name: Copilot policy setting
+    href: resources/copilotpolicysetting.md

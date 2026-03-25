@@ -6,7 +6,7 @@ ms.author: gajain
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.topic: reference
-ms.date: 08/08/2025
+ms.date: 03/19/2026
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -28,15 +28,20 @@ Represents a container for Microsoft 365 Copilot admin settings.
 None.
 
 ## Relationships
-
-| Relationship | Type                                          | Description                                                                               |
-|:-------------|:----------------------------------------------|:------------------------------------------------------------------------------------------|
-| `settings`   | [copilotAdminSetting](copilotadminsetting.md) | Set of Microsoft 365 Copilot settings that can be added or modified. Read-only. Nullable. |
+|Relationship|Type|Description|
+|:---|:---|:---|
+|policySettings|[copilotPolicySetting](copilotpolicysetting.md) collection|Collection of Copilot settings managed through policy services. Each setting is addressed individually by its identifier.|
+|settings|[copilotAdminSetting](copilotadminsetting.md)|Represents the settings for Copilot admin.|
 
 ## JSON representation
-
 The following JSON representation shows the resource type.
-
+<!-- {
+  "blockType": "resource",
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.copilotAdmin",
+  "openType": true
+}
+-->
 ``` json
 {
   "@odata.type": "#microsoft.graph.copilotAdmin"
