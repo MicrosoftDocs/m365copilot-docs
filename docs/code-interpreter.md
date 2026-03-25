@@ -115,7 +115,7 @@ To modify that image, the user can enter the prompt *Give me a black and white v
 
 ### Generate downloadable files
 
-Code interpreter can generate and host downloadable files, enabling your agent to allow users to download files that the agent generates. When code interpreter produces output files—such as images, charts, spreadsheets, or documents—Copilot automatically presents a download link in the response. Users can select the link to save the file locally.
+Code interpreter can generate and host downloadable files, enabling your agent to allow users to download files that the agent generates. When code interpreter produces output files (such as images, charts, spreadsheets, or documents), Copilot automatically presents a download link in the response. Users can select the link to save the file locally.
 
 This capability is useful in many scenarios, for example:
 

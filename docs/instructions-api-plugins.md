@@ -129,7 +129,7 @@ In the following example, an agent creates a chart based on the data in to-do ta
 
 This example also runs multiple actions at once. This is useful initiating a series of related actions that don't require multiple user inputs.
 
-When code interpreter generates a file—such as a chart image or a spreadsheet—Copilot automatically presents a download link in the response, allowing users to save the file locally. For more information, see [Generate downloadable files](code-interpreter.md#generate-downloadable-files).
+When code interpreter generates a file (such as a chart image or a spreadsheet), Copilot automatically presents a download link in the response, allowing users to save the file locally. For more information, see [Generate downloadable files](code-interpreter.md#generate-downloadable-files).
 
 ## Related content
 
