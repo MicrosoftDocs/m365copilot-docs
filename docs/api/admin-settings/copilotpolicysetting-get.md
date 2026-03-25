@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 
 Read the properties and relationships of a [copilotPolicySetting](./resources/copilotpolicysetting.md) object.
 
-Retrieve the current value of a Copilot policy setting by its identifier. The API resolves the correct underlying policy service (CPS or Intune) and returns the setting value along with the associated policy ID. When the setting has not been configured or no tenant-level policy exists, the API returns `200 OK` with `value` and/or `policyId` set to `null` — this is not an error condition.
+Retrieve the current value of a Copilot policy setting by its identifier. The API resolves the correct underlying policy service (CPS or Intune) and returns the setting value along with the associated policy ID. When the setting isn't configured or no tenant-level policy exists, the API returns `200 OK` with `value` and/or `policyId` set to `null`—this isn't an error condition.
 
 ## Permissions
 
@@ -70,7 +70,7 @@ If successful, this method returns a `200 OK` response code and a [copilotPolicy
 
 ### Example 1: Get a configured setting
 
-The following example shows how to retrieve a Copilot setting that has been configured with a value in a tenant-level policy.
+The following example shows how to retrieve a Copilot setting that is configured with a value in a tenant-level policy.
 
 #### Request
 
@@ -108,7 +108,7 @@ Content-Type: application/json
 
 ### Example 2: Get an unconfigured setting
 
-The following example shows how to retrieve a setting where a tenant-level policy exists but the setting value has not been configured. The API returns `200 OK` with `value` as `null`.
+The following example shows how to retrieve a setting where a tenant-level policy exists but the setting value isn't configured. The API returns `200 OK` with `value` as `null`.
 
 #### Request
 
@@ -146,7 +146,7 @@ Content-Type: application/json
 
 ### Example 3: Get a setting when no policy exists
 
-The following example shows how to retrieve a setting where no tenant-level policy has been created yet. The API returns `200 OK` with both `value` and `policyId` as `null`.
+The following example shows how to retrieve a setting where no tenant-level policy is created yet. The API returns `200 OK` with both `value` and `policyId` as `null`.
 
 #### Request
 
