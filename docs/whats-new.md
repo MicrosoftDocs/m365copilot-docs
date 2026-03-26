@@ -19,6 +19,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## March 2026
 
+### Copilot policy settings API (preview)
+
+The Copilot policy settings API is now available in preview. This API provides a unified endpoint to read and update Copilot settings across multiple policy services, including Cloud Policy Service (CPS) and Microsoft Intune. For more information, see [copilotPolicySetting resource type](api/admin-settings/resources/copilotpolicysetting.md).
+
 ### Use natural language to create an agent in Microsoft 365 Copilot
 
 You can now create agents more quickly with Agent Builder in Microsoft 365 Copilot by using natural language. The agent is automatically configured for you. For more information, see [Use natural language to describe your agent](agent-builder-build-agents.md#use-natural-language-to-describe-your-agent-recommended).
