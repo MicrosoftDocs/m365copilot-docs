@@ -25,6 +25,8 @@ To get change notifications for Copilot AI interactions that a particular user i
 
 ### Permissions
 
+[!INCLUDE [permissions-intro](../../includes/permissions-intro.md)]
+
 | Permission type                        | Permissions (from least to most privileged)                          |
 |:---------------------------------------|:---------------------------------------------------------------------|
 | Delegated (work or school account)     | AiEnterpriseInteraction.Read                                         |
