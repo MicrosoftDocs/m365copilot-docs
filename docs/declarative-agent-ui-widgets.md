@@ -4,7 +4,7 @@ description: Learn how to add interactive UI widgets to MCP server-based declara
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 03/16/2026
 ms.topic: how-to
 ---
 
@@ -16,6 +16,8 @@ You can add interactive UI widgets to your declarative agents by adding a [Model
 
 - [MCP Apps](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html) - an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts.
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk) - tools to build ChatGPT apps based on the MCP Apps standard with extra ChatGPT functionality.
+
+For example MCP server plugins, see [MCP based interactive UI samples for Microsoft 365 Copilot](https://github.com/microsoft/mcp-interactiveUI-samples) on GitHub.
 
 For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see [Supported capabilities](#supported-capabilities).
 
@@ -29,7 +31,7 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
 - A remote MCP server that provides UI widgets or that you can modify to implement UI widgets
 - A tool to view MCP server responses, such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- The latest prerelease version of [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 6.5.x or later
+- [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (version 6.6.1 or later)
 
 ## MCP server requirements
 
@@ -144,11 +146,6 @@ When you complete these steps, Agents Toolkit generates the required files for t
 
     > [!IMPORTANT]
     > If your MCP server is in development and doesn't implement authentication, this step is skipped. You need to manually add authentication to your manifest once you add authentication to your server.
-
-1. Open **mcp-tools.json** and replace the existing value with the `tools/list` response JSON from your MCP server. Use a testing tool such as [MCP Inspector](https://www.npmjs.com/package/@modelcontextprotocol/inspector) to get the response from your server.
-
-    > [!NOTE]
-    > This step is temporary during the public preview. Agents Toolkit will be updated to make this step unnecessary in the future.
 
 1. Select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
 
@@ -271,3 +268,4 @@ Microsoft 365 Copilot supports the following capabilities.
 - [User experience guidelines for interactive UI widgets in declarative agents](declarative-agent-ui-widgets-guidelines.md)
 - [MCP Apps Overview](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html#learn-more)
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk)
+- [MCP based interactive UI samples for Microsoft 365 Copilot](https://github.com/microsoft/mcp-interactiveUI-samples)

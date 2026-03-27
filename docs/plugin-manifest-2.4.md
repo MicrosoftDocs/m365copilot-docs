@@ -1,22 +1,22 @@
 ---
-title: API plugin manifest schema 2.4 for Microsoft 365 Copilot
-description: Learn about the 2.4 schema for a manifest file for an API plugin in Microsoft 365 Copilot
+title: Plugin manifest schema 2.4 for Microsoft 365 Copilot
+description: Learn about the 2.4 schema for a manifest file for a plugin in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/18/2025
+ms.date: 03/25/2026
 ms.topic: reference
 ---
 
-# API plugin manifest schema 2.4 for Microsoft 365 Copilot
+# Plugin manifest schema 2.4 for Microsoft 365 Copilot
 
-API plugins enable Microsoft 365 Copilot to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
+Plugins enable Microsoft 365 Copilot to interact with MCP servers or REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). A plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the MCP tools or APIs it supports and the operations it can perform.
 
-The following article describes the 2.4 schema used by API plugin manifest files. For more information about API plugins, see [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md).
+The following article describes the 2.4 schema used by plugin manifest files. For more information about plugins, see [Plugins for Microsoft 365 Copilot](./overview-plugins.md).
 
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 2.3](api-plugin-manifest-2.3.md).
+This schema version introduces the following changes from [version 2.3](plugin-manifest-2.3.md).
 
 - Added support for Model Context Protocol (MCP) servers.
   - Added a new value for the `type` property in [Runtime object](#runtime-object): `RemoteMCPServer`.
@@ -485,7 +485,7 @@ The MCP server spec object contains the following properties.
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `url` | String | Required. The URL of the MCP server. MUST be a valid absolute URL. |
-| `mcp_tool_description` | [MCP tool description object](#mcp-tool-description-object) | Optional. Contains either a reference to an external MCP tool description file or inline tool definitions. When present, static tool definitions are used instead of dynamic discovery. When absent, the runtime MUST use dynamic tool discovery by calling the MCP server's `tools/list` method. |
+| `mcp_tool_description` | [MCP tool description object](#mcp-tool-description-object) | Required. Contains either a reference to an external MCP tool description file or inline tool definitions. |
 
 ##### MCP tool description object
 
@@ -543,21 +543,6 @@ The MCP tool description object contains the following properties.
             }
           ]
         }
-      }
-    }
-  ]
-}
-```
-
-##### MCP execution spec object example (dynamic discovery)
-
-```json
-{
-  "runtimes": [
-    {
-      "type": "RemoteMCPServer",
-      "spec": {
-        "url": "https://mcp.example.org/"
       }
     }
   ]
@@ -626,7 +611,7 @@ Here's an example of a plugin manifest file that uses most of the manifest prope
 
 ## Related content
 
-- [API plugins for Microsoft 365 Copilot](./overview-api-plugins.md)
+- [Plugins for Microsoft 365 Copilot](./overview-plugins.md)
 
 [json-schema]: https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema
 [rfc9535]: https://www.rfc-editor.org/rfc/rfc9535

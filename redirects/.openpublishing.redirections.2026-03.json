@@ -1,0 +1,29 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/overview-api-plugins.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/overview-plugins",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-manifest-2.4.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-manifest-2.4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-manifest-2.3.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-manifest-2.3",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-manifest-2.2.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-manifest-2.2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-manifest-2.1.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-manifest-2.1",
+      "redirect_document_id": true
+    }
+  ]
+}

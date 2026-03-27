@@ -4,7 +4,7 @@ description: "Learn how to allow users to edit modal dialog boxes in Adaptive Ca
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: isrumnon
-ms.date: 11/07/2025
+ms.date: 03/06/2026
 ms.topic: concept-article
 ms.localizationpriority: medium
 ---
@@ -22,7 +22,7 @@ This article describes how to use the `Action.Execute` function (available start
 
 To use the modal dialog box action:
 
-- Add the [Adaptive Card template](api-plugin-adaptive-cards.md) to your [API plugin manifest](api-plugin-manifest-2.4.md).
+- Add the [Adaptive Card template](api-plugin-adaptive-cards.md) to your [plugin manifest](plugin-manifest-2.4.md).
 - Include the `Action.Execute` schema in the Adaptive Card definition.
 
 The following example shows the schema for Action.Execute.
@@ -217,6 +217,6 @@ The following request and response examples show what happens when a user takes 
 
 ## Related content
 
-- [Adaptive Card responses](/microsoft-365-copilot/extensibility/api-plugin-adaptive-cards)
-- [Add a dialog box to Adaptive Card templates](/microsoft-365-copilot/extensibility/adaptive-card-dialog-box)
-- [Declarative agent app package](/microsoft-365-copilot/extensibility/overview-declarative-agent#building-declarative-agents)
+- [Adaptive Card responses](api-plugin-adaptive-cards.md)
+- [Add a dialog box to Adaptive Card templates](adaptive-card-dialog-box.md)
+- [Declarative agent app package](overview-declarative-agent.md#building-declarative-agents)

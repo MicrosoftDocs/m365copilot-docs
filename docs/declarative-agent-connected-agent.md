@@ -4,7 +4,7 @@ description: Learn how to connect to other declarative agents in Microsoft 365 a
 author: ajacks-msft
 ms.author: ajacks
 ms.localizationpriority: medium
-ms.date: 12/10/2025
+ms.date: 03/06/2026
 ms.topic: article
 ---
 
@@ -23,7 +23,7 @@ Use connected agents to break apart or combine agents across functions or develo
 
 ### Expand beyond what one agent can accomplish
 
-Large language models (LLMs) have a limited useful context window and set of capabilities. A single LLM agent's reliability begins to drop as [more documents are retrieved](optimize-content-retrieval.md) or [tools are enabled](overview-api-plugins.md). If an agent has lower quality after adding more knowledge or capabilities, split some of those capabilities into another agent and connect to it. The existing agent sends only the information about the task that the connected agent needs to achieve its portion. The connected agent works in its own context window, free from other documents or capabilities that are in the user conversation.
+Large language models (LLMs) have a limited useful context window and set of capabilities. A single LLM agent's reliability begins to drop as [more documents are retrieved](optimize-content-retrieval.md) or [tools are enabled](overview-plugins.md). If an agent has lower quality after adding more knowledge or capabilities, split some of those capabilities into another agent and connect to it. The existing agent sends only the information about the task that the connected agent needs to achieve its portion. The connected agent works in its own context window, free from other documents or capabilities that are in the user conversation.
 
 ### Integrate with agents developed externally
 
@@ -66,7 +66,7 @@ Conversation starters should inform both users and agents the types of prompts t
 
 ## Limitations
 
-- Declarative agents can only connect to other declarative agents through the connected agents feature. Consider using [API plugins](overview-api-plugins.md) for connecting to other systems and agents.
+- Declarative agents can only connect to other declarative agents through the connected agents feature. Consider using [MCP or API plugins](overview-plugins.md) for connecting to other systems and agents.
 
 - Communication between agents only includes text. The active agent sends a text prompt to the connected agent, which responds with a text response. Agents can't send file binaries or images to other agents.
 
