@@ -159,7 +159,7 @@ The way you describe your plugin to the orchestrator depends on the type of plug
 |---------------------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | API plugins               | OpenAPI description                                       | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md)                                                                              |
 | Copilot Studio actions    | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)                                                            |
-| Message extension plugins | App manifest                                              | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
+| Message extension plugins | App manifest                                              | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365/copilot/extensibility/context) |
 
 ## Generating plugin packages
 
