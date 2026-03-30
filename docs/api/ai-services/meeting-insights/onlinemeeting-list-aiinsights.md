@@ -3,7 +3,7 @@ title: List aiInsights
 description: Get the list of callAiInsight objects associated with an onlineMeeting.
 author: slava-tar
 ms.author: vtarasov
-ms.date: 03/23/2026
+ms.date: 03/30/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.topic: reference
