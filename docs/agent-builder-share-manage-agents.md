@@ -4,7 +4,7 @@ description: Learn how to share and manage agents built with Microsoft 365 Copil
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 03/10/2026
+ms.date: 03/30/2026
 ms.topic: article
 ---
 
@@ -24,7 +24,7 @@ The following table highlights the key differences between publishing and sharin
 | ------- | ------- | ------- |
 | **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. | Formal deployment for broad use, integration, scaled across specified channels (for example, Teams, Copilot) or the entire organization. |
 | **Mechanism** | Owner/co-owners use **Manage Sharing** to specify up to 98 users by name or email. The specified users receive direct access, but the agent remains private and not broadly discoverable. | Owner/co-owners select **Publish** in Copilot Studio, select the target channel (Teams, Copilot, and more), and complete any required approval flows. The agent becomes discoverable and accessible to intended audience. |
-| **Audience** | Up to 98 named users (individuals or groups). | Organization-wide or channel-specific. |
+| **Audience** | Up to 98 named users (individuals, groups or Teams). | Organization-wide or channel-specific. |
 | **Discoverability** | Private; only visible to specified recipients. | Public (within the chosen scope); appears in the Agent Store and specified channels. |
 | **Governance** | Minimal governance; no approval flows. | Might require approval flows, versioning, and lifecycle management. |
 | **Permissions** | Specified users can interact with, but not manage or publish, the agent. | Owner/co-owners manage publishing, updates, and lifecycle. |
@@ -48,7 +48,7 @@ The following table describes the available sharing options.
 | Sharing option | Description |
 | -------------- |------------ |
 | Anyone in your organization | Anyone in your tenant can use the sharing link to use the agent. |
-| Specific users in your organization | Specific users or groups can use the sharing link to access and interact with the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), or [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups) in your tenant's Microsoft directory. |
+| Specific users in your organization | Specific users, groups, or Teams can use the sharing link to access and interact with the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups), or Teams in your tenant's Microsoft directory. When you share to a Team, you can optionally send a notification message to the Team. The notification is posted to the Team's home channel, making it easy for team members to discover the agent and start using it. |
 | Only you | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
 
 When users open the link to an agent you shared with them, the agent opens in a browser window and is ready to use.
