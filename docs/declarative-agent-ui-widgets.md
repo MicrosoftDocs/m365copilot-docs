@@ -12,14 +12,14 @@ ms.topic: how-to
 
 <!-- cSpell:ignore dotnetcli ontoolresult ontoolcancelled onhostcontextchanged -->
 
-You can add interactive UI widgets to your declarative agents by adding a [Model Context Protocol (MCP) server-based action](build-mcp-plugins.md) to your agent and extending the MCP tools used by the agent to include UI. Microsoft 365 Copilot supports UI widgets created using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk).
+You can add interactive UI widgets to your declarative agents by adding a [Model Context Protocol (MCP) server-based action](build-mcp-plugins.md) to your agent and extending the MCP tools used by the agent to include UI. Microsoft 365 Copilot supports UI widgets created using the following methods.
+
+- [MCP Apps](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html) - an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts.
+- [OpenAI Apps SDK](https://developers.openai.com/apps-sdk) - tools to build ChatGPT apps based on the MCP Apps standard with extra ChatGPT functionality.
 
 For example MCP server plugins, see [MCP based interactive UI samples for Microsoft 365 Copilot](https://github.com/microsoft/mcp-interactiveUI-samples) on GitHub.
 
-> [!NOTE]
-> Support for [MCP Apps](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html) is coming soon.
-
-For details on which OpenAI Apps SDK capabilities are supported, see [Supported capabilities](#supported-capabilities).
+For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see [Supported capabilities](#supported-capabilities).
 
 :::image type="content" source="assets/images/api-plugins/mcp-server-ui-inline-widget.png" alt-text="A screenshot of the Sprint tasks widget in Microsoft 365 Copilot":::
 
@@ -47,6 +47,8 @@ For details on which OpenAI Apps SDK capabilities are supported, see [Supported 
 - **UI widgets** - UI widgets must be implemented according to the MCP Apps or OpenAI Apps SDK requirements.
 
 ## Best practices
+
+### User experience design
 
 For details on UX design best practices, see [User experience guidelines for interactive UI widgets in declarative agents](declarative-agent-ui-widgets-guidelines.md).
 
@@ -171,87 +173,99 @@ Microsoft 365 Copilot supports the following capabilities.
 
 ### Component bridge
 
-| OpenAI Apps SDK                                 | Supported?                            |
-|-------------------------------------------------|---------------------------------------|
-| `window.openai.toolInput`                       | :white_check_mark:                    |
-| `window.openai.toolOutput`                      | :white_check_mark:                    |
-| `window.openai.toolResponseMetadata`            | :white_check_mark:                    |
-| `window.openai.widgetState`                     | :white_check_mark:                    |
-| `window.openai.setWidgetState(state)`           | :white_check_mark:                    |
-| `window.openai.callTool(name, args)`            | :white_check_mark:                    |
-| `window.openai.sendFollowUpMessage({ prompt })` | :white_check_mark:                    |
-| `window.openai.uploadFile(file)`                | :x:                                   |
-| `window.openai.getFileDownloadUrl({ fileId })`  | :x:                                   |
-| `window.openai.requestDisplayMode(...)`         | :white_check_mark: (full screen only) |
-| `window.openai.requestModal(...)`               | :x:                                   |
-| `window.openai.notifyIntrinsicHeight(...)`      | :white_check_mark:                    |
-| `window.openai.openExternal({ href })`          | :white_check_mark:                    |
-| `window.openai.setOpenInAppUrl({ href })`       | :white_check_mark:                    |
-| `window.openai.theme`                           | :white_check_mark:                    |
-| `window.openai.displayMode`                     | :white_check_mark:                    |
-| `window.openai.maxHeight`                       | :white_check_mark:                    |
-| `window.openai.safeArea`                        | :white_check_mark:                    |
-| `window.openai.view`                            | :white_check_mark:                    |
-| `window.openai.userAgent`                       | :white_check_mark:                    |
-| `window.openai.locale`                          | :white_check_mark:                    |
+| OpenAI Apps SDK                                 | MCP Apps equivalent                              | Supported?                            |
+|-------------------------------------------------|--------------------------------------------------|---------------------------------------|
+| `window.openai.toolInput`                       | `app.ontoolinput`                                | :white_check_mark:                    |
+| `window.openai.toolOutput`                      | `app.ontoolresult`                               | :white_check_mark:                    |
+| `window.openai.toolResponseMetadata`            | `app.ontoolresult` → `params._meta`              | :white_check_mark:                    |
+| `window.openai.widgetState`                     | —                                                | :white_check_mark:                    |
+| `window.openai.setWidgetState(state)`           | Not directly available. Use alternative mechanisms including `app.updateModelContext()` | :white_check_mark:                    |
+| `window.openai.callTool(name, args)`            | `app.callServerTool({ name, arguments })`        | :white_check_mark:                    |
+| `window.openai.sendFollowUpMessage({ prompt })` | `app.sendMessage({ ... })`                       | :white_check_mark:                    |
+| `window.openai.uploadFile(file)`                | —                                                | :x:                                   |
+| `window.openai.getFileDownloadUrl({ fileId })`  | —                                                | :x:                                   |
+| `window.openai.requestDisplayMode(...)`         | `app.requestDisplayMode({ mode })`               | :white_check_mark: (full screen only) |
+| `window.openai.requestModal(...)`               | —                                                | :x:                                   |
+| `window.openai.notifyIntrinsicHeight(...)`      | `app.sendSizeChanged({ width, height })`         | :white_check_mark:                    |
+| `window.openai.openExternal({ href })`          | `app.openLink({ url })`                          | :white_check_mark:                    |
+| `window.openai.setOpenInAppUrl({ href })`       | —                                                | :white_check_mark:                    |
+| `window.openai.theme`                           | `app.getHostContext()?.theme`                    | :white_check_mark:                    |
+| `window.openai.displayMode`                     | `app.getHostContext()?.displayMode`              | :white_check_mark:                    |
+| `window.openai.maxHeight`                       | `app.getHostContext()?.viewport?.maxHeight`      | :white_check_mark:                    |
+| `window.openai.safeArea`                        | `app.getHostContext()?.safeAreaInsets`           | :white_check_mark:                    |
+| `window.openai.view`                            | —                                                | :white_check_mark:                    |
+| `window.openai.userAgent`                       | `app.getHostContext()?.userAgent`                | :white_check_mark:                    |
+| `window.openai.locale`                          | `app.getHostContext()?.locale`                   | :white_check_mark:                    |
+| —                                               | `app.ontoolinputpartial`                         | :x:                                   |
+| —                                               | `app.ontoolcancelled`                            | :x:                                   |
+| —                                               | `app.getHostContext()?.availableDisplayModes`    | :x:                                   |
+| —                                               | `app.getHostContext()?.toolInfo`                 | :x:                                   |
+| —                                               | `app.onhostcontextchanged`                       | :x:                                   |
+| —                                               | `app.onteardown`                                 | :x:                                   |
+| —                                               | `app.sendLog({ level, data })`                   | :x:                                   |
+| —                                               | `app.getHostVersion()`                           | :x:                                   |
+| —                                               | `app.getHostCapabilities()`                      | :white_check_mark:                    |
 
 ### Tool descriptor _meta fields
 
-| OpenAI Apps SDK                           | Supported?         |
-|-------------------------------------------|--------------------|
-| `_meta["openai/outputTemplate"]`          | :white_check_mark: |
-| `_meta["openai/widgetAccessible"]`        | :x:                |
-| `_meta["openai/visibility"]`              | :white_check_mark: |
-| `_meta["openai/toolInvocation/invoking"]` | :x:                |
-| `_meta["openai/toolInvocation/invoked"]`  | :x:                |
-| `_meta["openai/fileParams"]`              | :x:                |
-| `_meta["securitySchemes"]`                | :x:                |
+| OpenAI Apps SDK                           | MCP Apps equivalent              | Supported?         |
+|-------------------------------------------|----------------------------------|--------------------|
+| `_meta["openai/outputTemplate"]`          | `_meta.ui.resourceUri`           | :white_check_mark: |
+| `_meta["openai/widgetAccessible"]`        | `_meta.ui.visibility` (string[]) | :x:                |
+| `_meta["openai/visibility"]`              | `_meta.ui.visibility` (string[]) | :white_check_mark: |
+| `_meta["openai/toolInvocation/invoking"]` | —                                | :x:                |
+| `_meta["openai/toolInvocation/invoked"]`  | —                                | :x:                |
+| `_meta["openai/fileParams"]`              | —                                | :x:                |
+| `_meta["securitySchemes"]`                | —                                | :x:                |
 
 ### Tool descriptor annotations
 
-| OpenAI Apps SDK   | Supported?         |
-|-------------------|--------------------|
-| `readOnlyHint`    | :white_check_mark: |
-| `destructiveHint` | :x:                |
-| `openWorldHint`   | :x:                |
-| `idempotentHint`  | :x:                |
+| OpenAI Apps SDK   | MCP Apps equivalent | Supported?         |
+|-------------------|---------------------|--------------------|
+| `readOnlyHint`    | `readOnlyHint`      | :white_check_mark: |
+| `destructiveHint` | `destructiveHint`   | :x:                |
+| `openWorldHint`   | `openWorldHint`     | :x:                |
+| `idempotentHint`  | `idempotentHint`    | :x:                |
 
 ### Component resource _meta fields
 
-| OpenAI Apps SDK                       | Supported?         |
-|---------------------------------------|--------------------|
-| `_meta["openai/widgetDescription"]`   | :x:                |
-| `_meta["openai/widgetPrefersBorder"]` | :x:                |
-| `_meta["openai/widgetCSP"]`           | :white_check_mark: |
-| `_meta["openai/widgetDomain"]`        | :x:                |
+| OpenAI Apps SDK                       | MCP Apps equivalent      | Supported?         |
+|---------------------------------------|--------------------------|--------------------|
+| `_meta["openai/widgetDescription"]`   | —                        | :x:                |
+| `_meta["openai/widgetPrefersBorder"]` | `_meta.ui.prefersBorder` | :x:                |
+| `_meta["openai/widgetCSP"]`           | `_meta.ui.csp`           | :white_check_mark: |
+| `_meta["openai/widgetDomain"]`        | `_meta.ui.domain`        | :x:                |
+| —                                     | `_meta.ui.permissions`   | :x:                |
 
 ### Properties in CSP object
 
-| OpenAI Apps SDK    | Supported?         |
-|--------------------|--------------------|
-| `connect_domains`  | :white_check_mark: |
-| `resource_domains` | :white_check_mark: |
-| `frame_domains`    | :x:                |
-| `redirect_domains` | :x:                |
+| OpenAI Apps SDK    | MCP Apps equivalent | Supported?         |
+|--------------------|---------------------|--------------------|
+| `connect_domains`  | `connectDomains`    | :white_check_mark: |
+| `resource_domains` | `resourceDomains`   | :white_check_mark: |
+| `frame_domains`    | `frameDomains`      | :x:                |
+| `redirect_domains` | —                   | :x:                |
+| —                  | `baseUriDomains`    | :x:                |
 
 ### Host-provided tool result _meta fields
 
-| OpenAI Apps SDK                   | Supported? |
-|-----------------------------------|------------|
-| `_meta["openai/widgetSessionId"]` | :x:        |
+| OpenAI Apps SDK                   | MCP Apps equivalent | Supported? |
+|-----------------------------------|---------------------|------------|
+| `_meta["openai/widgetSessionId"]` | —                   | :x:        |
 
 ### Client-provided _meta fields
 
-| OpenAI Apps SDK                | Supported?         |
-|--------------------------------|--------------------|
-| `_meta["openai/locale"]`       | :white_check_mark: |
-| `_meta["openai/userAgent"]`    | :white_check_mark: |
-| `_meta["openai/userLocation"]` | :white_check_mark: |
-| `_meta["openai/subject"]`      | :x:                |
+| OpenAI Apps SDK                | MCP Apps equivalent            | Supported?         |
+|--------------------------------|--------------------------------|--------------------|
+| `_meta["openai/locale"]`       | `_meta["openai/locale"]`       | :white_check_mark: |
+| `_meta["openai/userAgent"]`    | `_meta["openai/userAgent"]`    | :white_check_mark: |
+| `_meta["openai/userLocation"]` | `_meta["openai/userLocation"]` | :white_check_mark: |
+| `_meta["openai/subject"]`      | —                              | :x:                |
 
 ## Related content
 
 - [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
 - [User experience guidelines for interactive UI widgets in declarative agents](declarative-agent-ui-widgets-guidelines.md)
+- [MCP Apps Overview](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html#learn-more)
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk)
 - [MCP based interactive UI samples for Microsoft 365 Copilot](https://github.com/microsoft/mcp-interactiveUI-samples)
