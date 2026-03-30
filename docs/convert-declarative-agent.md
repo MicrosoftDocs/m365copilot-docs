@@ -157,11 +157,11 @@ After you update your agent manifest, repackage your app:
 
 Custom engine agents that are converted from declarative agents can be submitted to Partner Center for distribution, subject to applicable marketplace validation and tenant policies.
 
-When a converted agent introduces changes that affect app capabilities or permissions, the agent doesn’t update automatically for existing users. Users are prompted to review and consent to the updated version before continuing to use it.
+When a converted agent introduces changes that affect capabilities or permissions, the agent doesn't update automatically for existing users. Users are prompted to review and consent to the updated version before using it.
 
-Users see an update prompt in Copilot and Teams and must explicitly approve the update. Whether additional admin approval is required depends on the permissions requested and the tenant’s consent configuration.
+Users see an update prompt in Copilot and Teams and must explicitly approve the update. Whether additional admin approval is required depends on the permissions requested and the tenant's consent configuration.
 
-For details, see [Conditions when an app update requires consent](/microsoftteams/apps-update-experience#conditions-when-an-app-update-requires-consent)
+For details, see [Conditions when an app update requires consent](/microsoftteams/apps-update-experience#conditions-when-an-app-update-requires-consent).
 
 ## User experience
 
