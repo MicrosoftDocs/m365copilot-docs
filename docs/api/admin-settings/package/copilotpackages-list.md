@@ -211,3 +211,40 @@ Content-Type: application/json
   ]
 }
 ```
+
+#### Example 5: List all agents
+
+To list all agents, use a filter for `supportedHosts` that contains `Copilot`
+
+##### Request
+
+The following example shows a request.
+
+```http
+GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=supportedHosts/any(h:h eq 'Copilot')
+```
+
+##### Response
+
+The following example shows the response. The response object shown here might be shortened for readability.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "id": "P_19ae1zz1-56bc-505a-3d42-156df75a4xxy",
+      "displayName": "Contoso HR Agent",
+      "type": "custom",
+      "shortDescription": "Agent that can answer HR questions",
+      "isBlocked": false,
+      "supportedHosts": ["Copilot"],
+      "lastModifiedDateTime": "2026-01-06T00:07:20.1467852Z",
+      "availableTo": "all",
+      "deployedTo": "all"
+    }
+  ]
+}
+```
