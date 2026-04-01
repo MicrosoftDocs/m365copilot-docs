@@ -1,12 +1,12 @@
 ---
-title: Convert Your Declarative Agent for Microsoft 365 Copilot to a Custom Engine Agent
-description: Find out how you can convert your declarative agent for Microsoft 365 Copilot to a custom engine agent to take advantage of your own orchestration and advanced functionality.
+title: "Convert your declarative agent to a custom engine agent"
+description: Learn how to convert your declarative agent for Microsoft 365 Copilot to a custom engine agent to gain full control of orchestration, AI models, and data integrations.
 author: lauragra
 ms.author: lauragra
 ms.reviewer: vermaanimesh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 11/18/2025
+ms.date: 03/24/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -75,7 +75,7 @@ To update your app manifest:
     > [!NOTE]
     > Use app manifest schema version 1.21 or later. Custom engine agents are supported in manifest version 1.21 and later versions.
 
-2. In the **copilotAgents** object, change the **declarativeAgents** node to a **customEngineAgents** node, as shown in the following examples.
+1. In the **copilotAgents** object, change the **declarativeAgents** node to a **customEngineAgents** node, as shown in the following examples.
     
     **Declarative agents node**
 
@@ -134,14 +134,14 @@ To update your app manifest:
     > [!NOTE]
     > Your app manifest can include either a declarative agent node or a custom engine agent node, but not both.
 
-3. Update the app version number for your app in the **version** property.
-4. Make sure that the **id** property uses the same ID that you used in the app manifest for the declarative agent.
+1. Update the app version number for your app in the **version** property.
+1. Make sure that the **id** property uses the same ID that you used in the app manifest for the declarative agent.
 
 ## Customize your agent UX
 
 Define your agent experience for users. You can add conversation starters and suggested prompts, implement streaming responses and citations, and more. Note that you need to define and test your custom engine agent capabilities.
 
-For more information, see [Custom engine agent user experience features](ux-custom-engine-agent.md). 
+For more information, see [Custom engine agent user experience features](ux-custom-engine-agent.md).
 
 ### Update and submit your app package
 
@@ -151,7 +151,17 @@ After you update your agent manifest, repackage your app:
 1. Submit the new package to update your existing app. If your agent is internal to your organization, use the Microsoft 365 admin center (requires tenant admin permissions).
 
     > [!NOTE]
-    > Submission of your app package to the commercial marketplace via Partner Center isn't currently supported.
+    > You can submit custom engine agents that you converted from a declarative agent to Partner Center. Agent users are prompted to consent to upgrade their agent. For more information, see the [next section](#partner-center-submission-and-consent-behavior).
+
+### Partner Center submission and consent behavior
+
+Custom engine agents that are converted from declarative agents can be submitted to Partner Center for distribution, subject to applicable marketplace validation and tenant policies.
+
+When a converted agent introduces changes that affect capabilities or permissions, the agent doesn't update automatically for existing users. Users are prompted to review and consent to the updated version before using it.
+
+Users see an update prompt in Copilot and Teams and must explicitly approve the update. Whether additional admin approval is required depends on the permissions requested and the tenant's consent configuration.
+
+For details, see [Conditions when an app update requires consent](/microsoftteams/apps-update-experience#conditions-when-an-app-update-requires-consent).
 
 ## User experience
 
