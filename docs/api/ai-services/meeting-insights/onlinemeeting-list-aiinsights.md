@@ -23,7 +23,7 @@ Get the list of [callAiInsight](resources/callaiinsight.md) objects associated w
 
 > [!NOTE]
 >
-> - Access to this API requires a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license. Payment models or evaluation mode aren't applicable; and all users of an application using this API must have the required license.
+> - Access to this API requires a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license. Payment models and evaluation mode don't apply. All users of applications that use this API must have the required license.
 > - This API works differently in one or more national clouds. For more information, see [Microsoft Teams API implementation differences in national clouds](/graph/teamwork-national-cloud-differences).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
