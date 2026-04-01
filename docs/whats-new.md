@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 03/10/2026
+ms.date: 04/01/2026
 ms.topic: overview
 ---
 
@@ -18,6 +18,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## March 2026
+
+### Package Management API expanded operations (preview)
+
+The Package Management API now supports full CRUD operations for managing agent and app packages, including create, update, and delete operations. Additionally, new administrative actions are available for blocking, unblocking, updating package files, and reassigning package ownership. For more information, see [Package Management API overview](api/admin-settings/package/overview.md).
 
 ### Use natural language to create an agent in Microsoft 365 Copilot
 
@@ -34,10 +38,6 @@ You can now add interactive UI widgets to your declarative agents by extending M
 Agent Builder is now available in Government Community Cloud High (GCCH) environments.
 
 ## January 2026
-
-### Package Management API expanded operations (preview)
-
-The Package Management API now supports full CRUD operations for managing agent and app packages, including create, update, and delete operations. Additionally, new administrative actions are available for blocking, unblocking, updating package files, and reassigning package ownership. For more information, see [Package Management API overview](api/admin-settings/package/overview.md).
 
 ### Retrieval API pay-as-you-go consumption (preview)
 
