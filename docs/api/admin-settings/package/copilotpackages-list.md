@@ -6,7 +6,7 @@ ms.author: pomuth
 ms.topic: reference
 doc_type: apiPageType
 ms.localizationpriority: high
-ms.date: 10/28/2025
+ms.date: 04/01/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -17,6 +17,8 @@ ms.date: 10/28/2025
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Retrieves a list of all packages available in the tenant.
+
+[!INCLUDE [package-management-frontier](../../includes/package-management-frontier.md)]
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 

@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: overview
 ms.localizationpriority: high
-ms.date: 01/28/2026
+ms.date: 04/01/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -13,6 +13,8 @@ ms.date: 01/28/2026
 # Agent and app Package Management API overview (preview)
 
 A package represents either an agent or Microsoft 365 app in the organization catalog. The Package Management API enables IT administrators to view and manage apps and agents across Microsoft 365. This API provides endpoints to list all apps and agents, retrieve detailed information about an individual app or agent including metadata and detailed elements.
+
+[!INCLUDE [package-management-frontier](../../includes/package-management-frontier.md)]
 
 ## Key capabilities
 

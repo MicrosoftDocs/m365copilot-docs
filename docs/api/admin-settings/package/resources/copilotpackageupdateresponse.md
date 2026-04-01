@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 01/28/2026
+ms.date: 04/01/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -15,6 +15,8 @@ ms.date: 01/28/2026
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Represents the response returned when a Copilot package is uploaded or updated.
+
+[!INCLUDE [package-management-frontier](../../../includes/package-management-frontier.md)]
 
 ## Properties
 

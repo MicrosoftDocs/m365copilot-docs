@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 01/28/2026
+ms.date: 04/01/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -15,6 +15,8 @@ ms.date: 01/28/2026
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Entity that represents a Copilot package available within a tenant, containing basic metadata and configuration information for package management.
+
+[!INCLUDE [package-management-frontier](../../../includes/package-management-frontier.md)]
 
 ## Properties
 
