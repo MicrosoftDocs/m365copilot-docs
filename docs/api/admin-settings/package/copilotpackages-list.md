@@ -6,7 +6,7 @@ ms.author: pomuth
 ms.topic: reference
 doc_type: apiPageType
 ms.localizationpriority: high
-ms.date: 10/28/2025
+ms.date: 04/01/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -17,6 +17,8 @@ ms.date: 10/28/2025
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Retrieves a list of all packages available in the tenant.
+
+[!INCLUDE [package-management-frontier](../../includes/package-management-frontier.md)]
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -88,10 +90,18 @@ Content-Type: application/json
       "type": "external",
       "shortDescription": "Allows direct upload of documents from Microsoft Office into Diligent Teams for sharing",
       "isBlocked": false,
-      "supportedHosts": ["Teams", "SharePoint"],
-      "lastModifiedDateTime": "2025-10-06T00:07:20.1467852Z",
+      "supportedHosts": ["outlook", "word", "excel", "powerPoint"],
+      "lastModifiedDateTime": "2023-11-20T19:02:02.241Z",
+      "publisher": "Diligent Corporation",
       "availableTo": "all",
-      "deployedTo": "all"
+      "deployedTo": "none",
+      "elementTypes": ["officeAddIn"],
+      "platform": "web",
+      "version": "1.0.0",
+      "manifestVersion": "1.1",
+      "manifestId": "diligent-teams-uploader",
+      "appId": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
+      "assetId": "asset-00001"
     }
   ]
 }
@@ -175,6 +185,43 @@ The following example shows a request.
 
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=lastModifiedDateTime gt 2026-01-01T00:00:00.0000000Z
+```
+
+##### Response
+
+The following example shows the response. The response object shown here might be shortened for readability.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "id": "P_19ae1zz1-56bc-505a-3d42-156df75a4xxy",
+      "displayName": "Contoso HR Agent",
+      "type": "custom",
+      "shortDescription": "Agent that can answer HR questions",
+      "isBlocked": false,
+      "supportedHosts": ["Copilot"],
+      "lastModifiedDateTime": "2026-01-06T00:07:20.1467852Z",
+      "availableTo": "all",
+      "deployedTo": "all"
+    }
+  ]
+}
+```
+
+#### Example 5: List all agents
+
+To list all agents, use a filter for `supportedHosts` that contains `Copilot`
+
+##### Request
+
+The following example shows a request.
+
+```http
+GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=supportedHosts/any(h:h eq 'Copilot')
 ```
 
 ##### Response
