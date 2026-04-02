@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 04/02/2026
 ---
 
 # Build plugins from an MCP server for Microsoft 365 Copilot
@@ -93,12 +93,15 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 1. Wait for the toolkit to report that is finished provisioning.
 
 > [!IMPORTANT]
-> While this feature is in public preview, manifest validation may fail for function parameters in the following cases.
+> Manifest validation might fail for function parameters in the following cases.
 >
 > - Nested objects in the `properties` member
 > - Properties in the `properties` member with the `minimum`, `maximum`, or `default` members present
 >
 > If the `teamsApp/validateAppPackage` step fails during provisioning, remove the unsupported members and retry the provisioning step.
+>
+> Tools and UX widgets from remote MCP servers are supported. For more information, see [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md).
+
 
 ## Use the agent
 
