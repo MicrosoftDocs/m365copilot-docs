@@ -12,11 +12,11 @@ ms.topic: overview
 
 Work IQ is the intelligence layer that personalizes Microsoft 365 Copilot for users and organizations. It understands work context, relationships, and patterns, so Copilot and agents can provide faster, more accurate, and more secure responses than connector-only approaches.
 
-Work IQ combines three integrated layers: *data*, *context*, and *skills / tools*. Together, these layers ground Copilot in organizational information and business signals so responses are relevant to how work actually happens. At the same time, Work IQ inherits existing enterprise controls — permissions, sensitivity labels, and DLP policies — and is compliant with GDPR and EU Data Boundary requirements.
+Work IQ combines three integrated layers: *data*, *context*, and *skills / tools*. Together, these layers ground Copilot in organizational information and business signals so responses are relevant to how work actually happens.
 
 :::image type="content" source="assets/images/work-iq.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills + tools layers.":::
 
-Work IQ is integrated across Copilot experiences. Licensed Microsoft 365 Copilot users encounter Work IQ in Copilot Chat (with the Work toggle) and in Copilot experiences in apps such as Word, Excel, PowerPoint, and Teams. Licensed users in Dynamics 365 and Power Apps also experience Work IQ with Dataverse-enriched context.
+For end users, Work IQ is integrated across Microsoft 365 Copilot experiences, including Copilot Chat and apps such as Word, Excel, PowerPoint, and Teams, as well as Dynamics 365 and Power Apps with Dataverse-enriched context.
 
 When it comes to extensibility, you can both extend Work IQ with your business data and extend the agents you build with the intelligence of Work IQ. Furthermore, you can leverage Work IQ intelligence within your own development workflow with Work IQ CLI. This article will walk you through the layers of Work IQ and its extensibility opportunities.
 
@@ -38,9 +38,9 @@ Work IQ also integrates Dynamics 365 and Power Apps data through Dataverse, whic
 
 ## Context
 
-The context layer expands beyond baseline grounding with continuously evolving insights that improve response speed and relevance. Work IQ helps Copilot understand how people and organizations work, including skill profiles, important projects, collaboration frequency, workflow criticality, and communication velocity. [Copilot memory](/copilot/microsoft-365/copilot-personalization-memory) includes explicit memory from [user actions](https://support.microsoft.com/topic/get-started-with-personalizing-what-microsoft-365-copilot-remembers-cba7b79a-c46f-4ca7-b46e-2fa22c563f90) (such as custom instructions and saved memories) and implicit memory inferred from chat history.
+The context layer expands beyond baseline grounding with continuously evolving insights that improve response speed and relevance. Work IQ helps Copilot understand how people and organizations work, including skill profiles, important projects, collaboration frequency, workflow criticality, and communication velocity.
 
-The [semantic index](/microsoftsearch/semantic-index-for-copilot) further improves contextual retrieval by using meaning-based retrieval instead of keyword-only matching. It creates a bounded candidate set for downstream processing and includes connector-ingested content, while preserving permissions, sensitivity labels, tenant boundaries, and other governance controls.
+[Copilot memory](/copilot/microsoft-365/copilot-personalization-memory) captures explicit [user actions](https://support.microsoft.com/topic/get-started-with-personalizing-what-microsoft-365-copilot-remembers-cba7b79a-c46f-4ca7-b46e-2fa22c563f90) (including custom instructions and saved memories) and implicit signals from chat history. The [semantic index](/microsoftsearch/semantic-index-for-copilot) improves retrieval accuracy by matching on meaning rather than keywords, and includes connector-ingested content while respecting permissions, sensitivity labels, and tenant boundaries.
 
 ### Dataverse intelligence
 
@@ -50,8 +50,7 @@ Dataverse intelligence: https://learn.microsoft.com/en-us/power-apps/maker/data-
 
 ## Skills and tools
 
-The skills and tools layer puts Work IQ intelligence into operation. Skills provide task-specific instructions that help Copilot and agents complete specialized work with higher speed and precision. Microsoft continues to add skills for scenarios such as scheduling meetings, retrieving external data, and accessing meeting details and transcripts.
-
+The skills and tools layer puts Work IQ intelligence into operation. Skills provide task-specific instructions that help Copilot and agents complete specialized work with higher speed and precision. If skills describe what actions to take, tools execute those actions. Tools are the concrete integrations—MCP server tools, API plugins, and others services—that an agent calls to actually perform work.
 
 ### Dataverse business skills
 
@@ -65,7 +64,6 @@ Tools execute the intent described by those skills. Work IQ uses purpose-built t
 Customers can also build agents and add their own skills and tools, which can be orchestrated with Work IQ experiences.
 
 ### Copilot actions
-
 
 
 ## Work IQ CLI
