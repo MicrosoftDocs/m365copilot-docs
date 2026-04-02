@@ -60,7 +60,7 @@ Microsoft Agent 365 offers a rich catalog of [Work IQ MCP](/microsoft-agent-365/
 
 ### Copilot actions
 
-Copilot actions, implemented through [plugins](/microsoft-365/copilot/extensibility/overview-plugins), enable declarative agents in Microsoft 365 Copilot to interact with MCP servers or REST APIs that have an OpenAPI description. With a plugin, users can ask a declarative agent to not only query an MCP server or REST API for information, but to create, update, and delete data and objects within an external system. Anything the MCP server or REST API can do is accessible via natural language prompts.
+[Copilot actions](/microsoft-365/copilot/extensibility/overview-plugins), implemented as plugins, enable declarative agents in Microsoft 365 Copilot to interact with MCP servers or REST APIs that have an OpenAPI description. With a plugin, users can ask a declarative agent to not only query for information, but to create, update, and delete data and objects within an external system. Anything the MCP server or REST API can do is accessible via natural language prompts.
 
 ### Work IQ CLI
 
