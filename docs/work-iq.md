@@ -60,12 +60,8 @@ Microsoft Agent 365 offers a rich catalog of [Work IQ MCP](/microsoft-agent-365/
 
 ### Copilot actions
 
-
+Copilot actions, implemented through [plugins](/microsoft-365/copilot/extensibility/overview-plugins), enable declarative agents in Microsoft 365 Copilot to interact with MCP servers or REST APIs that have an OpenAPI description. With a plugin, users can ask a declarative agent to not only query an MCP server or REST API for information, but to create, update, and delete data and objects within an external system. Anything the MCP server or REST API can do is accessible via natural language prompts.
 
 ### Work IQ CLI
 
-Developers can extend this intelligence through the Work IQ API, which exposes Copilot intelligence through a RESTful interface for building agents grounded in live work context. Solutions built this way inherit Microsoft enterprise identity, security, permissions, and compliance characteristics. Public preview for the Work IQ API is 
-expected later this month. CLI support is available today, and MCP and A2A support are planned for future updates.
-
-## Related content
-
+The [Work IQ CLI](/microsoft-365/copilot/extensibility/workiq-overview) (Public Preview) exposes your Microsoft 365 data through the Model Context Protocol, allowing AI coding assistants in your development environment to access and reason over your workplace information. Running the CLI in MCP server mode means your AI assistant can automatically pull in relevant context as you work — for example, retrieving details from a meeting where a feature was discussed and using that context to inform code suggestions and jump-start the implementation.
