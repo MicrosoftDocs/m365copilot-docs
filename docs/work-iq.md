@@ -65,3 +65,9 @@ Copilot actions, implemented through [plugins](/microsoft-365/copilot/extensibil
 ### Work IQ CLI
 
 The [Work IQ CLI](/microsoft-365/copilot/extensibility/workiq-overview) (Public Preview) exposes your Microsoft 365 data through the Model Context Protocol, allowing AI coding assistants in your development environment to access and reason over your workplace information. Running the CLI in MCP server mode means your AI assistant can automatically pull in relevant context as you work — for example, retrieving details from a meeting where a feature was discussed and using that context to inform code suggestions and jump-start the implementation.
+
+## Related content
+
+- [Microsoft Work IQ CLI](/microsoft-365/copilot/extensibility/workiq-overview)
+- [Work IQ MCP overview](/microsoft-agent-365/tooling-servers-overview)
+- [Work IQ MCP server reference](/microsoft-agent-365/mcp-server-reference/searchtools)
