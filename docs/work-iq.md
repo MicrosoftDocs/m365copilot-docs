@@ -24,17 +24,17 @@ When it comes to extensibility, you can both extend Work IQ with your business d
 
 The data layer provides secure access to structured and unstructured information from Microsoft 365, Dynamics 365, Power Apps, and connected business systems. This layer gives Copilot a foundational understanding of work across people, groups, content, and communication.
 
-### Microsoft Graph
+### Microsoft 365 tenant data
 
-[Microsoft 365 tenant data](/graph/overview) includes permission-based and information-protected content in SharePoint and OneDrive, Outlook email, and Teams meetings and chats. It also includes metadata and signals that describe collaboration, communication, and activity patterns over time.
+[Microsoft Graph](/graph/overview) data represents all the data from your Microsoft 365 tenant, including permission-based and information-protected content in SharePoint and OneDrive, including Word, Excel, PowerPoint and other file types, as well as Outlook emails, and Teams meetings and chats. It also includes metadata and signals that describe collaboration, communication, and activity patterns over time.
 
 ### Copilot connectors
 
-[Copilot connectors](/microsoft-365/copilot/connectors/) extend this foundation by ingesting data from non-Microsoft systems and line-of-business applications, including prebuilt and custom connectors. As a result, Copilot can reason over a broader business data estate within the tenant boundary.
+[Copilot connectors](/microsoft-365/copilot/connectors/) extend the foundation of your tenant data by ingesting data from non-Microsoft systems and line-of-business applications, including prebuilt and custom connectors. As a result, Copilot can reason over a broader business data estate within the tenant boundary.
 
-### Dataverse and business data
+### Business data from Dynamics 365 and Power Apps
 
-Work IQ also integrates Dynamics 365 and Power Apps data through Dataverse, which stores structured business datasets for those applications. This integration enables Copilot to reason across productivity data and systems-of-record data together, such as linking supplier issues discussed in a Teams call with downstream inventory and sales effects.
+Work IQ also integrates Dynamics 365 and Power Apps data through [Dataverse](/power-apps/maker/data-platform/), which stores structured business datasets for those applications. This integration enables Copilot to reason across productivity data and systems-of-record data together, such as linking supplier issues discussed in a Teams call with downstream inventory and sales effects.
 
 ## Context
 
@@ -44,7 +44,7 @@ The context layer expands beyond baseline grounding with continuously evolving i
 
 ### Dataverse intelligence
 
-Work IQ also includes business understanding for Dataverse data by using semantic layers such as ontologies and glossaries that capture procedural knowledge from business workflows. This helps Copilot and agents interpret how teams, customers, suppliers, and other entities work together in real operational contexts.
+Work IQ includes business understanding for Dataverse data by using semantic layers such as ontologies and glossaries that capture procedural knowledge from business workflows. This helps Copilot and agents interpret how teams, customers, suppliers, and other entities work together in real operational contexts.
 
 Dataverse intelligence: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-intelligence
 
@@ -57,7 +57,7 @@ The skills and tools layer puts Work IQ intelligence into operation. Skills prov
 Business skills overview: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-business-skill-overview
 Working with business skills: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-business-skills
 
-### MCP server tools
+### Work IQ MCP server tools
 
 Tools execute the intent described by those skills. Work IQ uses purpose-built tooling, including MCP server tools, agent flows, APIs, and plugins, to observe, retrieve, reason, and execute. In complex retrieval scenarios, the combination of skills and tools helps Copilot search and locate deeply referenced or archived content more effectively.
 
@@ -66,7 +66,8 @@ Customers can also build agents and add their own skills and tools, which can be
 ### Copilot actions
 
 
-## Work IQ CLI
+
+### Work IQ CLI
 
 Developers can extend this intelligence through the Work IQ API, which exposes Copilot intelligence through a RESTful interface for building agents grounded in live work context. Solutions built this way inherit Microsoft enterprise identity, security, permissions, and compliance characteristics. Public preview for the Work IQ API is 
 expected later this month. CLI support is available today, and MCP and A2A support are planned for future updates.
