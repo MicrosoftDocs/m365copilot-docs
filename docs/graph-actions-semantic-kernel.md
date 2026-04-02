@@ -4,7 +4,7 @@ description: Learn how to build Semantic Kernel plugins by using Visual Studio C
 author: fabianwilliams
 ms.author: fwilliams
 ms.localizationpriority: medium
-ms.date: 07/23/2025
+ms.date: 03/06/2026
 ms.topic: article
 ---
 
@@ -16,7 +16,7 @@ Microsoft 365 Copilot agent plugins allow custom engine agents built with [Seman
 
 Copilot agent plugins are custom-built, AI-powered extensions that enable natural language interactions with Microsoft 365 data by exposing functions through the Semantic Kernel and Microsoft Graph APIs. Copilot agent plugins include an OpenAPI description for an API (such as Microsoft Graph) and a plugin manifest. Semantic Kernel, powered by your choice of language model, analyzes the user's intent and determines which plugin and API operation to invoke. This enables seamless and intelligent orchestration of Microsoft 365 data.
 
-You can generate Copilot agent plugins by using Kiota, a command-line tool that simplifies plugin creation. For more information about plugin manifests, see the [API plugin manifest schema for Microsoft 365 Copilot](api-plugin-manifest-2.4.md).
+You can generate Copilot agent plugins by using Kiota, a command-line tool that simplifies plugin creation. For more information about plugin manifests, see the [Plugin manifest schema for Microsoft 365 Copilot](plugin-manifest-2.4.md).
 
 ## How Copilot agent plugins work
 
@@ -95,7 +95,7 @@ Microsoft provides a set of prebuilt Copilot agent plugins that you can load int
 - **DriveItemsPlugin** – Search, read, and upload files.
 - **M365 Copilot Plugin (Retrieval API Plugin)** – Search Microsoft 365 file content via semantic index.
 
-You can also [create plugins](/microsoft-365-copilot/extensibility/build-api-plugins-existing-api?tabs=toolkit) for other services using Kiota and an OpenAPI description file.
+You can also [create plugins](build-api-plugins-existing-api.md?tabs=toolkit) for other services using Kiota and an OpenAPI description file.
 
 ## Plugin capabilities and examples
 

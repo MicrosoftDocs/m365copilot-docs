@@ -4,11 +4,9 @@ description: Extend Microsoft 365 Copilot by using Power Platform and Dynamics 3
 author: jhaskett-msft
 ms.author: jhaskett
 ms.localizationpriority: medium
-ms.date: 01/09/2025
+ms.date: 01/13/2026
 ms.topic: overview
 ---
-
-
 # Use actions to extend Microsoft 365 Copilot
 
 Copilot Studio actions plug into Microsoft 365 Copilot to extend its skills. Actions make use of Microsoft business applications like Microsoft Power Platform.
@@ -42,6 +40,12 @@ You can also create new actions by using Power Platform components in Microsoft 
 
 > [!NOTE]
 > Dynamics plugins were available for preview only and are no longer supported. We recommend that you create an agent and add actions as needed. For more information, see [Extend bot-based message extension as agents for Microsoft 365 Copilot](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions).
+
+### URL handling in action responses
+
+URLs returned as part of action responses - whether from API plugins, connectors, or flows - might be rendered as clickable links in the Microsoft 365 Copilot chat experience. This behavior is controlled by the Copilot runtime and isn't evaluated against domains defined in the OpenAPI specification `servers` section.
+
+URL rendering behavior for action responses is subject to platform security, trust, and policy rules and might change over time. Don't rely on clickable URLs in action responses for production-critical scenarios.
 
 ## Get Microsoft 365 Copilot licenses to enable actions
 
@@ -88,20 +92,20 @@ To create an action, you can start with a custom prompt, a Power Platform connec
 
 ### Start with a prompt
 
-Prompts allow the generation of content using natural language, which includes summarizing, classifying, extracting entities, translating, assessing sentiment, and much more. For more information, see [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context).
+Prompts allow the generation of content using natural language, which includes summarizing, classifying, extracting entities, translating, assessing sentiment, and much more. For more information, see [Create a custom prompt (preview)](/ai-builder/create-a-custom-prompt?context=/microsoft-365/copilot/extensibility/context).
 
 ### Start with a Power Platform connector
 
-Power Platform connectors allow for the retrieval and update of data from data sources accessed through APIs. Connectors make it possible to access data from popular Enterprise systems such as Salesforce, Zendesk, MailChimp, and GitHub, and are routinely used by makers in their Power Apps and flows. For more information, see [Create an action from a connector (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context).
+Power Platform connectors allow for the retrieval and update of data from data sources accessed through APIs. Connectors make it possible to access data from popular Enterprise systems such as Salesforce, Zendesk, MailChimp, and GitHub, and are routinely used by makers in their Power Apps and flows. For more information, see [Create an action from a connector (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365/copilot/extensibility/context).
 
 ### Start with a conversational action
 
-Use Microsoft Copilot Studio to create conversational actions that retrieve and integrate data across multiple sources with AI, run custom logic on the results, access external APIs via connectors, and send summary results to the user. For more information, see [Create conversational actions (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context).
+Use Microsoft Copilot Studio to create conversational actions that retrieve and integrate data across multiple sources with AI, run custom logic on the results, access external APIs via connectors, and send summary results to the user. For more information, see [Create conversational actions (preview)](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365/copilot/extensibility/context).
 
 ## Related content
 
-- [Create a custom prompt](/ai-builder/create-a-custom-prompt?context=/microsoft-365-copilot/extensibility/context)
-- [Create a connector action (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365-copilot/extensibility/context)
-- [Create conversational actions](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365-copilot/extensibility/context)
-- [Use Power Automate flow actions (preview)](/power-automate/flow-plugins-m365?context=/microsoft-365-copilot/extensibility/context)
+- [Create a custom prompt](/ai-builder/create-a-custom-prompt?context=/microsoft-365/copilot/extensibility/context)
+- [Create a connector action (preview)](/connectors/create-a-connector-ai-plugin?context=/microsoft-365/copilot/extensibility/context)
+- [Create conversational actions](/microsoft-copilot-studio/copilot-conversational-plugins?context=/microsoft-365/copilot/extensibility/context)
+- [Use Power Automate flow actions (preview)](/power-automate/flow-plugins-m365?context=/microsoft-365/copilot/extensibility/context)
 - [Test your agent with Copilot developer mode](debugging-agents-copilot-studio.md) to verify if and how the copilot orchestrator selects your actions for use in response to given prompts.

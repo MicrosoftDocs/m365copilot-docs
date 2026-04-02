@@ -1,9 +1,9 @@
 ---
 title: "copilotReportRoot: getMicrosoft365CopilotUserCountSummary"
-description: Aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period
+description: Aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period. Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace.
 author: mestew
 ms.author: mstewart
-ms.date: 12/12/2025
+ms.date: 01/08/2026
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: apiPageType
@@ -21,9 +21,11 @@ zone_pivot_groups: graph-api-versions
 
 Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.
 
+For more information about report views and names, see [Microsoft 365 reports - Microsoft 365 Copilot usage](/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage). Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace. For more information, see [Microsoft 365 Copilot APIs overview](../../../copilot-apis-overview.md).
+
 ## Permissions
 
-Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
+[!INCLUDE [permissions-intro](../../includes/permissions-intro.md)]
 
 | Permission type                        | Least privileged permissions | Higher privileged permissions |
 |:---------------------------------------|:-----------------------------|:------------------------------|

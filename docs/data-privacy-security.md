@@ -1,5 +1,5 @@
 ---
-title: Data, Privacy, and Security and Microsoft 365 Copilot Extensibility 
+title: Data, Privacy, and Security and Microsoft 365 Copilot Extensibility
 description: Learn how to protect your customer's data when you extend Microsoft 365 Copilot.
 author: erikadoyle
 ms.author: edoyle
@@ -26,7 +26,7 @@ When you integrate your business workflows as agents for Copilot, your external 
 
 Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. Microsoft Graph honors the user identity-based access boundary so that the Microsoft 365 Copilot grounding process only accesses content that the current user is authorized to access. This is also true of external data within Microsoft Graph ingested from a Microsoft 365 Copilot connector.
 
-When you connect your external data to Microsoft 365 Copilot with a Microsoft 365 Copilot connector, your data flows into Microsoft Graph. You can manage permissions to view external items by associating an [access control list](/graph/connecting-external-content-manage-items?branch=main#access-control-list) (ACL) with a Microsoft Entra user and group ID or an [external group](/graph/connecting-external-content-external-groups?context=/microsoft-365-copilot/extensibility/context).
+When you connect your external data to Microsoft 365 Copilot with a Microsoft 365 Copilot connector, your data flows into Microsoft Graph. You can manage permissions to view external items by associating an [access control list](/graph/connecting-external-content-manage-items?branch=main#access-control-list) (ACL) with a Microsoft Entra user and group ID or an [external group](/graph/connecting-external-content-external-groups?context=/microsoft-365/copilot/extensibility/context).
 
 Prompts, responses, and data accessed through Microsoft Graph aren't used to train foundation LLMs, including those used by Microsoft 365 Copilot.
 
@@ -46,7 +46,7 @@ Microsoft 365 Copilot only shares data with and searches in agents or connectors
 Submission of your app package to the Microsoft Partner Center *Microsoft 365 and Copilot* program requires meeting certification policies for acceptance to Microsoft 365 in-product stores. Microsoft certification policies and guidelines regarding privacy, security, and responsible AI include:
 
 - [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies)
-- [Store validation guidelines for Copilot extensibility](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context)
+- [Store validation guidelines for Copilot extensibility](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context)
 - [Responsible AI validation checks](rai-validation.md)
 - (Optional) [Microsoft 365 App Compliance Program certification](/microsoft-365-app-certification/docs/certification)
 

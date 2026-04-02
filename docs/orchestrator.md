@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 09/05/2025
+ms.date: 01/13/2026
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
@@ -56,6 +56,11 @@ The following diagram illustrates how the Microsoft 365 Copilot orchestrator sel
 
 1. **Natural language output**: Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
 
+> [!IMPORTANT]
+> Declarative agents might stop responding when three or more **different API actions** are triggered within a single user turn. In these cases, the third API call might complete successfully on the backend, but the orchestrator doesn't return a response to the user.
+>
+> To minimize this behavior, split the workflow across multiple user turns or reduce the number of different API actions you invoke in a single turn. This approach helps ensure that all API responses are processed reliably.
+
 ## How Copilot's orchestrator matches actions to user queries
 
 When a user submits a query to your agent, the orchestrator searches the agent's full catalog of skills (_functions_) from installed actions to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general action descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot action function selection:
@@ -67,4 +72,4 @@ When a user submits a query to your agent, the orchestrator searches the agent's
 
 The orchestrator works through this list until all five function candidate slots are filled.
 
-Check out [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365-copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.
+Check out [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365/copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.

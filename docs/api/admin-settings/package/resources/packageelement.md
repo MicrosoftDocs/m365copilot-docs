@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 10/28/2025
+ms.date: 04/01/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -15,6 +15,8 @@ ms.date: 10/28/2025
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
 Represents a single element within a Copilot package, containing its unique identifier and definition.
+
+[!INCLUDE [package-management-frontier](../../../includes/package-management-frontier.md)]
 
 ## Properties
 

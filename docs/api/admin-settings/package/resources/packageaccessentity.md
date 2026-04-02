@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 10/28/2025
+ms.date: 04/01/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -16,6 +16,8 @@ ms.date: 10/28/2025
 
 Represents an access entity (user or group) with permissions to access a Copilot package.
 
+[!INCLUDE [package-management-frontier](../../../includes/package-management-frontier.md)]
+
 ## Properties
 
 | Property       | Type                                              | Description                             |
@@ -25,11 +27,11 @@ Represents an access entity (user or group) with permissions to access a Copilot
 
 ### accessEntityType enumeration
 
-| Value                | Description  |
-|----------------------|--------------|
-| `user`               | User entity  |
-| `group`              | Group entity |
-| `unknownFutureValue` | [Evolvable sentinel value](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations) |
+| Value                | Description                                                                                                    |
+|:---------------------|:---------------------------------------------------------------------------------------------------------------|
+| `user`               | User entity.                                                                                                   |
+| `group`              | Group entity.                                                                                                  |
+| `unknownFutureValue` | [Evolvable sentinel value](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations).   |
 
 ## Relationships
 

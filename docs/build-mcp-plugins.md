@@ -5,15 +5,12 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 11/18/2025
+ms.date: 03/06/2026
 ---
 
-# Build plugins from an MCP server for Microsoft 365 Copilot (preview)
+# Build plugins from an MCP server for Microsoft 365 Copilot
 
 This guide walks you through the process of integrating your service with Microsoft 365 Copilot by adding an MCP server to a declarative agent using the Microsoft 365 Agents Toolkit. By following these steps, you'll enable conversational, AI-powered access to your MCP-exposed services for business users.
-
-> [!IMPORTANT]
-> This feature is currently in public preview.
 
 ## Prerequisites
 
@@ -116,3 +113,7 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 1. When the pop-up window closes, the agent returns a response.
 
     :::image type="content" source="assets/images/api-plugins/github-mcp-plugin-response.png" alt-text="A screenshot of the agent's response to a query for repositories":::
+
+## Related content
+
+- [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md)

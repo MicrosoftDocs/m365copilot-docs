@@ -5,15 +5,12 @@ description: Learn how to copy your declarative agent from Microsoft 365 Copilot
 author: Lauragra
 ms.author: lauragra
 ms.reviewer: lauragra
-ms.date: 11/18/2025
+ms.date: 01/26/2026
 ms.topic: concept-article
 ---
 # Copy an agent to Copilot Studio
 
-> [!IMPORTANT]
-> This feature is not yet available for all users. Rollout is expected to complete in December 2025. This document is intended to serve as educational content to prepare for this feature.
-
-This article explains how to use the **Copy to Copilot Studio** feature in Microsoft 365 Copilot to copy an agent built in Copilot to Copilot Studio. When you copy your agent to Copilot Studio, you can take advantage of advanced lifecycle management, analytics, and governance controls.
+This article explains how to use the **Copy to Copilot Studio** feature in Microsoft 365 Copilot to copy an agent to Copilot Studio. When you copy your agent to Copilot Studio, you can take advantage of advanced lifecycle management, analytics, and governance controls.
 
 ## Why use Copilot Studio?
 
@@ -23,7 +20,7 @@ Users can build AI agents for Microsoft 365 by using the following tools:
 
 - **Copilot Studio:** A dedicated, standalone application that offers advanced capabilities for building, customizing, and managing agents at scale. Copilot Studio provides richer configuration options, integration with enterprise systems, and governance features that are suitable for complex scenarios or organizational deployments.
 
-For more information and a comparison of each tool, see [Choose between Microsoft 365 Copilot and Copilot Studio](/microsoft-365-copilot/extensibility/copilot-studio-experience).
+For more information and a comparison of each tool, see [Choose between Microsoft 365 Copilot and Copilot Studio](copilot-studio-experience.md).
 
 Copying an agent to Copilot Studio unlocks advanced capabilities beyond what's available in Microsoft 365 Copilot, including:
 
@@ -88,6 +85,9 @@ To copy an agent to Copilot Studio, you must have a [Copilot Studio license](/mi
 
 If you don't have a Copilot Studio license, you might be eligible for a [Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial), depending on the admin settings in your organization. Admins can [block unauthorized sign-ups](/microsoft-copilot-studio/admin-block-viral-signups). Trial licenses allow for testing agents but not publishing agents outside personal use.
 
+> [!IMPORTANT]
+> Users must have the **Common Data Service (Dataverse)** entitlement enabled in their Microsoft 365 license. If this entitlement isn't enabled, the feature won't work as expected.
+
 ## Copilot Studio environment requirements
 
 Copilot Studio uses the concept of a [Power Platform environment](/microsoft-copilot-studio/environments-first-run-experience) to store, manage, and share your organization's business data. When you copy an agent, select the environment in which to store the agent definition. The copy operation starts after you select an environment.
@@ -134,6 +134,6 @@ Agents copied to Copilot Studio are stored in [Microsoft Dataverse](/power-apps/
 
 ## Related content
 
-- [Choose between Microsoft 365 Copilot and Copilot Studio](/microsoft-365-copilot/extensibility/copilot-studio-experience)
-- [Build agents with Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/copilot-studio-lite)
+- [Choose between Microsoft 365 Copilot and Copilot Studio](copilot-studio-experience.md)
+- [Build agents with Microsoft 365 Copilot](copilot-studio-lite.md)
 - [Build agents with Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)

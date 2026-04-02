@@ -187,7 +187,7 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
     ```typescript
     namespace MyAgent {
       // Omitted for brevity
-      op teamsMessages is AgentCapabilities.TeamsMessages<Urls = [
+      op teamsMessages is AgentCapabilities.TeamsMessages<TeamsMessagesByUrl = [
         {
           url: "https://teams.microsoft.com/l/team/...",
         }
@@ -200,7 +200,7 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
 
     > [!NOTE]
     > - The URL in the `url` property must be well formed links to a Teams chat, team, or meeting chat.
-    > - Not specifying the `Urls` array causes all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
+    > - Not specifying the `TeamsMessagesByUrl` array causes all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that is available to the logged in user to be available to the agent.
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 

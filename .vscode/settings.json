@@ -8,8 +8,12 @@
   ],
   "yaml.schemas": {
     "https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml"
-},
+  },
   "cSpell.words": [
     "preconfigured"
-  ]
+  ],
+  "chat.tools.terminal.autoApprove": {
+    "markdownlint": true,
+    "cspell": true
+  }
 }
