@@ -113,9 +113,11 @@ To package the agent:
 
 ## Use the agent
 
+To use the agent:
+
 1. In your browser, go to [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 
-1. In the **Agents** section of the sidebar, locate your agent. It is listed as the name you gave in the [Create the agent](#create-the-agent) section, with `dev` appended at the end. Select the agent.
+1. In the **Agents** section of the sidebar, locate your agent. It's listed as the name you gave in the [Create the agent](#create-the-agent) section, with `dev` appended at the end. Select the agent.
 
 1. Ask the agent to find a repository or user. For example, `can you find a repo for kiota?`.
 
