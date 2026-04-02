@@ -14,6 +14,8 @@ This guide walks you through the process of integrating your service with Micros
 
 ## Prerequisites
 
+Before you begin, make sure that you have the following prerequisites:
+
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - A GitHub account
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -21,7 +23,9 @@ This guide walks you through the process of integrating your service with Micros
 
 ## Create the agent
 
-1. Open Visual Studio Code and Select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
+To create the agent:
+
+1. Open Visual Studio Code and select the **Microsoft 365 Agents Toolkit** icon in the Activity Bar.
 
 1. Select **Create a New Agent/App** in the Agents Toolkit task pane.
 
@@ -39,9 +43,11 @@ This guide walks you through the process of integrating your service with Micros
 
 1. Enter a name for the agent.
 
-Once you complete these steps, Agents Toolkit generates the required files for the agent and opens a new Visual Studio Code window with the agent project loaded.
+After you complete these steps, Agents Toolkit generates the required files for the agent and opens a new Visual Studio Code window with the agent project loaded.
 
 ## Add tools from the MCP server
+
+To add tools from the MCP server:
 
 1. Open the **.vscode/mcp.json** file. Select the **Start** button in the file editor.
 
@@ -56,7 +62,7 @@ Once you complete these steps, Agents Toolkit generates the required files for t
     :::image type="content" source="assets/images/api-plugins/mcp-tool-selection.png" alt-text="A screenshot of the tool selection interface in VS Code":::
 
     > [!IMPORTANT]
-    > Only tools from MCP servers are supported.
+    > Tools and UX widgets from remote MCP servers are supported. For more information, see [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md).
 
 1. Select **OAuth (with static registration)** as the authentication type.
 
@@ -64,13 +70,17 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
 ## Register an OAuth app with GitHub
 
-1. Go to [https://github.com/settings/developers](https://github.com/settings/developers) in your browser. Select **OAuth Apps**, then **New OAuth App**.
+To register an OAuth app:
+
+1. Go to [https://github.com/settings/developers](https://github.com/settings/developers) in your browser. Select **OAuth Apps** > **New OAuth App**.
 
 1. Add a name and homepage URL for your app, and set `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` as the **Authorization callback URL**. Select **Register application**.
 
 1. After the app is created, select **Generate a new client secret**. Copy the secret and the **Client ID** to use in the next section.
 
 ## Package and sideload the agent
+
+To package the agent:
 
 1. Open the agent project in Visual Studio Code.
 
@@ -99,8 +109,6 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 > - Properties in the `properties` member with the `minimum`, `maximum`, or `default` members present
 >
 > If the `teamsApp/validateAppPackage` step fails during provisioning, remove the unsupported members and retry the provisioning step.
->
-> Tools and UX widgets from remote MCP servers are supported. For more information, see [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md).
 
 
 ## Use the agent
