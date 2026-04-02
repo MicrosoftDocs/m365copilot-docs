@@ -38,20 +38,13 @@ Work IQ also integrates Dynamics 365 and Power Apps data through Dataverse, whic
 
 ## Context
 
-The context layer expands beyond baseline grounding with continuously evolving insights that improve response speed and relevance. Work IQ helps Copilot understand how people and organizations work, including skill profiles, important projects, collaboration frequency, workflow criticality, and communication velocity.
+The context layer expands beyond baseline grounding with continuously evolving insights that improve response speed and relevance. Work IQ helps Copilot understand how people and organizations work, including skill profiles, important projects, collaboration frequency, workflow criticality, and communication velocity. [Copilot memory](/copilot/microsoft-365/copilot-personalization-memory) includes explicit memory from [user actions](https://support.microsoft.com/topic/get-started-with-personalizing-what-microsoft-365-copilot-remembers-cba7b79a-c46f-4ca7-b46e-2fa22c563f90) (such as custom instructions and saved memories) and implicit memory inferred from chat history.
 
-Copilot memory contributes to this context through explicit and implicit memory:
-
-- Explicit memory comes from user actions, such as custom instructions and saved memories.
-- Implicit memory is inferred from chat history and evolves as durable insight grows.
-
-Microsoft is also incorporating broader activity patterns from apps such as Teams, Outlook, Word, Excel, and PowerPoint to increase memory fidelity over time.
-
-The semantic index further improves contextual retrieval by using meaning-based retrieval instead of keyword-only matching. It creates a bounded candidate set for downstream processing and includes connector-ingested content, while preserving permissions, sensitivity labels, tenant boundaries, and other governance controls.
-
-Work IQ is also adding business understanding for Dataverse data by using semantic layers such as ontologies and glossaries that capture procedural knowledge from business workflows. This helps Copilot and agents interpret how teams, customers, suppliers, and other entities work together in real operational contexts.
+The [semantic index](/microsoftsearch/semantic-index-for-copilot) further improves contextual retrieval by using meaning-based retrieval instead of keyword-only matching. It creates a bounded candidate set for downstream processing and includes connector-ingested content, while preserving permissions, sensitivity labels, tenant boundaries, and other governance controls.
 
 ### Dataverse intelligence
+
+Work IQ also includes business understanding for Dataverse data by using semantic layers such as ontologies and glossaries that capture procedural knowledge from business workflows. This helps Copilot and agents interpret how teams, customers, suppliers, and other entities work together in real operational contexts.
 
 Dataverse intelligence: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-intelligence
 
