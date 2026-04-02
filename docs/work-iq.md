@@ -32,7 +32,7 @@ The data layer provides secure access to structured and unstructured information
 
 [Copilot connectors](/microsoft-365/copilot/connectors/) extend the foundation of your tenant data by ingesting data from non-Microsoft systems and line-of-business applications, including prebuilt and custom connectors. As a result, Copilot can reason over a broader business data estate within the tenant boundary.
 
-### Business data from Dynamics 365 and Power Apps
+### Dynamics 365 and Power Apps business data
 
 Work IQ also integrates Dynamics 365 and Power Apps data through [Dataverse](/power-apps/maker/data-platform/), which stores structured business datasets for those applications. This integration enables Copilot to reason across productivity data and systems-of-record data together, such as linking supplier issues discussed in a Teams call with downstream inventory and sales effects.
 
