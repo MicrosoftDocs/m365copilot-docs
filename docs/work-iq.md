@@ -10,7 +10,7 @@ ms.topic: overview
 
 # Work IQ overview
 
-Work IQ is the intelligence layer that personalizes Microsoft 365 Copilot for users and organizations. It understands work context, relationships, and patterns, so Copilot and agents can provide faster, more accurate, and more secure responses than connector-only approaches.
+Work IQ is the intelligence layer that personalizes Microsoft 365 Copilot for users and organizations. Built atop leading foundation models from providers like OpenAI and Anthropic, it understands work context, relationships, and patterns so Copilot and agents can deliver faster, more accurate, and more secure responses than connector-only approaches.
 
 Work IQ combines three integrated layers: *data*, *context*, and *skills / tools*. Together, these layers ground Copilot in organizational information and business signals so responses are relevant to how work actually happens.
 
@@ -28,21 +28,29 @@ The data layer provides secure access to structured and unstructured information
 
 [Microsoft Graph](/graph/overview) data represents all the data from your Microsoft 365 tenant, including permission-based and information-protected content in SharePoint and OneDrive, including Word, Excel, PowerPoint and other file types, as well as Outlook emails, and Teams meetings and chats. It also includes metadata and signals that describe collaboration, communication, and activity patterns over time.
 
-### Copilot connectors
-
-[Copilot connectors](/microsoft-365/copilot/connectors/) extend the foundation of your tenant data by ingesting data from non-Microsoft systems and line-of-business applications, including prebuilt and custom connectors. As a result, Copilot can reason over a broader business data estate within the tenant boundary.
-
 ### Dynamics 365 and Power Apps business data
 
 Work IQ also integrates Dynamics 365 and Power Apps data through [Dataverse](/power-apps/maker/data-platform/), which stores structured business datasets for those applications. This integration enables Copilot to reason across productivity data and systems-of-record data together, such as linking supplier issues discussed in a Teams call with downstream inventory and sales effects.
+
+### External business data from Copilot connectors
+
+[Copilot connectors](/microsoft-365/copilot/connectors/) extend the foundation of your tenant data by ingesting data from non-Microsoft systems and line-of-business applications, including prebuilt and custom connectors. As a result, Copilot can reason over a broader business data estate within the tenant boundary.
+
+[Federated connectors](/microsoft-365/copilot/connectors/federated-connectors-overview) (early access preview) offer an alternativ way to bring your organization's data into Microsoft 365 that skips traditional indexing. Instead of crawling and syncing content into Microsoft Graph, federated connectors use Model Context Protocol (MCP) to read data in real time, making live or sensitive data sources discoverable through Copilot without inclusion to the [semantic index](#semantic-index).
 
 ## Context
 
 The context layer expands beyond baseline grounding with continuously evolving insights that improve response speed and relevance. Work IQ helps Copilot understand how people and organizations work, including skill profiles, important projects, collaboration frequency, workflow criticality, and communication velocity.
 
-[Copilot memory](/copilot/microsoft-365/copilot-personalization-memory) captures explicit [user actions](https://support.microsoft.com/topic/get-started-with-personalizing-what-microsoft-365-copilot-remembers-cba7b79a-c46f-4ca7-b46e-2fa22c563f90) (including custom instructions and saved memories) and implicit signals from chat history. The [semantic index](/microsoftsearch/semantic-index-for-copilot) improves retrieval accuracy by matching on meaning rather than keywords, and includes connector-ingested content while respecting permissions, sensitivity labels, and tenant boundaries.
+### Memory and activity signals
 
-### Dataverse intelligence
+[Copilot memory](/copilot/microsoft-365/copilot-personalization-memory) captures explicit [user actions](https://support.microsoft.com/topic/get-started-with-personalizing-what-microsoft-365-copilot-remembers-cba7b79a-c46f-4ca7-b46e-2fa22c563f90) (including custom instructions and saved memories) and implicit signals from user activity patterns.
+
+### Semantic index
+
+With [semantic indexing](/microsoftsearch/semantic-index-for-copilot), Microsoft 365 Copilot maps your organization’s data into an advanced lexical and semantic index to power search relevance and accuracy, while ensuring organizational boundaries annd permission structurs within your tenant are respected. The semantic index is a superset of content within [Microsoft Graph](#microsoft-365-tenant-data) and ingested content from [Copilot connectors](#copilot-connectors). 
+
+### Busineses understanding with Dataverse intelligence
 
 Where Work IQ grounds Copilot in work productivity artifacts like files, meetings, and messages, [Dataverse intelligence](/power-apps/maker/data-platform/data-platform-intelligence) extends this foundation to structured business data, enabling agents to understand and act on your organization's systems of record.
 
@@ -50,17 +58,17 @@ Where Work IQ grounds Copilot in work productivity artifacts like files, meeting
 
 The skills and tools layer puts Work IQ intelligence into operation. Skills provide task-specific instructions that help Copilot and agents complete specialized work with higher speed and precision. If skills describe what actions to take, tools execute those actions. Tools are the concrete integrations—MCP server tools, API plugins, and others services—that an agent calls to actually perform work.
 
-### Business skills
-
-[Business skills with Dataverse intelligence](/power-apps/maker/data-platform/data-platform-business-skill-overview) are natural-language instructions that encode your organization's processes, policies, and domain knowledge in a format agents can interpret and execute. Each skill defines how to complete a specific type of work — the steps, required inputs, and business rules that apply. At runtime, agents discover and apply relevant skills to complete tasks according to your organization's processes. When multiple agents share the same skill, they follow the same logic, ensuring consistent behavior across your organization.
-
-### Work IQ MCP tools
-
-Microsoft Agent 365 offers a rich catalog of [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) tools that enable agents to perform real-time actions within Microsoft 365 contexts, including mail, calendar, Teams, SharePoint, OneDrive, Word, Dataverse, and more. You can also build and publish custom MCP servers using the MCP Management Server, which supports connectors, Graph APIs, Dataverse custom APIs, and arbitrary REST endpoints. Agent 365 gives IT administrators centralized control to manage which Work IQ MCP servers and other MCP servers are available to agents.
-
 ### Copilot actions
 
 [Copilot actions](/microsoft-365/copilot/extensibility/overview-plugins), implemented as plugins, enable declarative agents in Microsoft 365 Copilot to interact with MCP servers or REST APIs that have an OpenAPI description. With a plugin, users can ask a declarative agent to not only query for information, but to create, update, and delete data and objects within an external system. Anything the MCP server or REST API can do is accessible via natural language prompts.
+
+### Work IQ MCP tools
+
+Microsoft Agent 365 offers a rich catalog of [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) (preview) tools that enable agents to perform real-time actions within Microsoft 365 contexts, including mail, calendar, Teams, SharePoint, OneDrive, Word, Dataverse, and more. You can also build and publish custom MCP servers using the MCP Management Server, which supports connectors, Graph APIs, Dataverse custom APIs, and arbitrary REST endpoints. You can easily add Work IQ MCP tools to your agents in [Microsoft Copilot Studio](/microsoft-copilot-studio/use-work-iq) and [Microsoft Foundry](/microsoft-agent-365/tooling-servers-overview?view=o365-worldwide#get-started-in-microsoft-foundry). Agent 365 gives IT admins centralized control to manage which Work IQ MCP servers and other MCP servers are available to agents.
+
+### Business skills
+
+[Business skills with Dataverse intelligence](/power-apps/maker/data-platform/data-platform-business-skill-overview) (preview) are natural-language instructions that encode your organization's processes, policies, and domain knowledge in a format agents can interpret and execute. Each skill defines how to complete a specific type of work — the steps, required inputs, and business rules that apply. At runtime, agents discover and apply relevant skills to complete tasks according to your organization's processes. When multiple agents share the same skill, they follow the same logic, ensuring consistent behavior across your organization.
 
 ### Work IQ CLI
 
