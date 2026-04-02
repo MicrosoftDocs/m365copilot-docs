@@ -50,7 +50,7 @@ Where Work IQ grounds Copilot in work productivity artifacts like files, meeting
 
 The skills and tools layer puts Work IQ intelligence into operation. Skills provide task-specific instructions that help Copilot and agents complete specialized work with higher speed and precision. If skills describe what actions to take, tools execute those actions. Tools are the concrete integrations—MCP server tools, API plugins, and others services—that an agent calls to actually perform work.
 
-### Business skills with Dataverse intelligence
+### Business skills
 
 [Business skills with Dataverse intelligence](/power-apps/maker/data-platform/data-platform-business-skill-overview) are natural-language instructions that encode your organization's processes, policies, and domain knowledge in a format agents can interpret and execute. Each skill defines how to complete a specific type of work — the steps, required inputs, and business rules that apply. At runtime, agents discover and apply relevant skills to complete tasks according to your organization's processes. When multiple agents share the same skill, they follow the same logic, ensuring consistent behavior across your organization.
 
