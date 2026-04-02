@@ -12,11 +12,9 @@ ms.topic: overview
 
 Work IQ is the intelligence layer that personalizes Microsoft 365 Copilot for users and organizations. It understands work context, relationships, and patterns, so Copilot and agents can provide faster, more accurate, and more secure responses than connector-only approaches.
 
-Work IQ combines three integrated layers: *data*, *context*, and *skills / tools*. Together, these layers ground Copilot in organizational information and business signals so responses are relevant to how work actually happens.
+Work IQ combines three integrated layers: *data*, *context*, and *skills / tools*. Together, these layers ground Copilot in organizational information and business signals so responses are relevant to how work actually happens. At the same time, Work IQ inherits existing enterprise controls — permissions, sensitivity labels, and DLP policies — and is compliant with GDPR and EU Data Boundary requirements.
 
 :::image type="content" source="assets/images/work-iq.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills + tools layers.":::
-
-At the same time, Work IQ honors existing enterprise controls, including user permissions, security group assignments, sensitivity labels, and Data Loss Prevention policies. It is also aligned with legal and regulatory obligations across supported regions, including GDPR and EU Data Boundary commitments.
 
 Work IQ is integrated across Copilot experiences. Licensed Microsoft 365 Copilot users encounter Work IQ in Copilot Chat (with the Work toggle) and in Copilot experiences in apps such as Word, Excel, PowerPoint, and Teams. Licensed users in Dynamics 365 and Power Apps also experience Work IQ with Dataverse-enriched context.
 
@@ -26,7 +24,7 @@ When it comes to extensibility, you can both extend Work IQ with your business d
 
 The data layer provides secure access to structured and unstructured information from Microsoft 365, Dynamics 365, Power Apps, and connected business systems. This layer gives Copilot a foundational understanding of work across people, groups, content, and communication.
 
-### Microsoft 365 tenant data
+### Microsoft Graph
 
 [Microsoft 365 tenant data](/graph/overview) includes permission-based and information-protected content in SharePoint and OneDrive, Outlook email, and Teams meetings and chats. It also includes metadata and signals that describe collaboration, communication, and activity patterns over time.
 
