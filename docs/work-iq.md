@@ -12,9 +12,11 @@ ms.topic: overview
 
 Work IQ is the intelligence layer that personalizes Microsoft 365 Copilot for users and organizations. It understands work context, relationships, and patterns, so Copilot and agents can provide faster, more accurate, and more secure responses than connector-only approaches.
 
-:::image type="content" source="assets/images/work-iq.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills and tools layers.":::
+Work IQ combines three integrated layers: *data*, *context*, and *skills / tools*. Together, these layers ground Copilot in organizational information and business signals so responses are relevant to how work actually happens.
 
-Work IQ combines three integrated layers: data, context, and skills / tools. Together, these layers ground Copilot in organizational information and business signals so responses are relevant to how work actually happens. At the same time, Work IQ honors existing enterprise controls, including user permissions, security group assignments, sensitivity labels, and Data Loss Prevention policies. It is also aligned with legal and regulatory obligations across supported regions, including GDPR and EU Data Boundary commitments.
+:::image type="content" source="assets/images/work-iq.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills + tools layers.":::
+
+At the same time, Work IQ honors existing enterprise controls, including user permissions, security group assignments, sensitivity labels, and Data Loss Prevention policies. It is also aligned with legal and regulatory obligations across supported regions, including GDPR and EU Data Boundary commitments.
 
 Work IQ is integrated across Copilot experiences. Licensed Microsoft 365 Copilot users encounter Work IQ in Copilot Chat (with the Work toggle) and in Copilot experiences in apps such as Word, Excel, PowerPoint, and Teams. Licensed users in Dynamics 365 and Power Apps also experience Work IQ with Dataverse-enriched context.
 
