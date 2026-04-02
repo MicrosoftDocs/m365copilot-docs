@@ -44,24 +44,19 @@ The context layer expands beyond baseline grounding with continuously evolving i
 
 ### Dataverse intelligence
 
-Work IQ includes business understanding for Dataverse data by using semantic layers such as ontologies and glossaries that capture procedural knowledge from business workflows. This helps Copilot and agents interpret how teams, customers, suppliers, and other entities work together in real operational contexts.
-
-Dataverse intelligence: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-intelligence
+Where Work IQ grounds Copilot in work productivity artifacts like files, meetings, and messages, [Dataverse intelligence](/power-apps/maker/data-platform/data-platform-intelligence) extends this foundation to structured business data, enabling agents to understand and act on your organization's systems of record.
 
 ## Skills and tools
 
 The skills and tools layer puts Work IQ intelligence into operation. Skills provide task-specific instructions that help Copilot and agents complete specialized work with higher speed and precision. If skills describe what actions to take, tools execute those actions. Tools are the concrete integrations—MCP server tools, API plugins, and others services—that an agent calls to actually perform work.
 
-### Dataverse business skills
+### Business skills with Dataverse intelligence
 
-Business skills overview: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-business-skill-overview
-Working with business skills: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-business-skills
+[Business skills with Dataverse intelligence](/power-apps/maker/data-platform/data-platform-business-skill-overview) are natural-language instructions that encode your organization's processes, policies, and domain knowledge in a format agents can interpret and execute. Each skill defines how to complete a specific type of work — the steps, required inputs, and business rules that apply. At runtime, agents discover and apply relevant skills to complete tasks according to your organization's processes. When multiple agents share the same skill, they follow the same logic, ensuring consistent behavior across your organization.
 
-### Work IQ MCP server tools
+### Work IQ MCP tools
 
-Tools execute the intent described by those skills. Work IQ uses purpose-built tooling, including MCP server tools, agent flows, APIs, and plugins, to observe, retrieve, reason, and execute. In complex retrieval scenarios, the combination of skills and tools helps Copilot search and locate deeply referenced or archived content more effectively.
-
-Customers can also build agents and add their own skills and tools, which can be orchestrated with Work IQ experiences.
+Microsoft Agent 365 offers a rich catalog of [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) tools that enable agents to perform real-time actions within Microsoft 365 contexts, including mail, calendar, Teams, SharePoint, OneDrive, Word, Dataverse, and more. You can also build and publish custom MCP servers using the MCP Management Server, which supports connectors, Graph APIs, Dataverse custom APIs, and arbitrary REST endpoints. Agent 365 gives IT administrators centralized control to manage which Work IQ MCP servers and other MCP servers are available to agents.
 
 ### Copilot actions
 
