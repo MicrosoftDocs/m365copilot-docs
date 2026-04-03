@@ -102,15 +102,6 @@ To package the agent:
 
 1. Wait for the toolkit to report that is finished provisioning.
 
-> [!IMPORTANT]
-> Manifest validation might fail for function parameters in the following cases.
->
-> - Nested objects in the `properties` member
-> - Properties in the `properties` member with the `minimum`, `maximum`, or `default` members present
->
-> If the `teamsApp/validateAppPackage` step fails during provisioning, remove the unsupported members and retry the provisioning step.
-
-
 ## Use the agent
 
 To use the agent:
