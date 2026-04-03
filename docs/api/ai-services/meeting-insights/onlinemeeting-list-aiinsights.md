@@ -23,7 +23,7 @@ Get the list of [callAiInsight](resources/callaiinsight.md) objects associated w
 
 > [!NOTE]
 >
-> - Usage-based payment models and evaluation mode are not supported for this API. All users of an application using this API must have the required [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license.
+> > - Usage-based payment models and evaluation mode aren't supported for this API. All users of applications that use this API must have a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license.
 > - This API works differently in one or more national clouds. For more information, see [Microsoft Teams API implementation differences in national clouds](/graph/teamwork-national-cloud-differences).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
