@@ -25,7 +25,7 @@ This API returns the metadata and content of the single set of AI insights assoc
 
 > [!NOTE]
 >
-> - Usage-based payment models and evaluation mode are not supported for this API; all users of an application using this API must have the required [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license.
+> - Usage-based payment models and evaluation mode are not supported for this API. All users of an application using this API must have the required [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license.
 > - This API works differently in one or more national clouds. For more information, see [Microsoft Teams API implementation differences in national clouds](/graph/teamwork-national-cloud-differences).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
