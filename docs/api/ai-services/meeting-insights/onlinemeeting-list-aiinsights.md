@@ -3,7 +3,7 @@ title: List aiInsights
 description: Get the list of callAiInsight objects associated with an onlineMeeting.
 author: slava-tar
 ms.author: vtarasov
-ms.date: 11/26/2025
+ms.date: 04/03/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.topic: reference
@@ -23,7 +23,7 @@ Get the list of [callAiInsight](resources/callaiinsight.md) objects associated w
 
 > [!NOTE]
 >
-> - This API has license requirements. For more information, see [License requirements for Teams meeting AI insights APIs](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
+> - Usage-based payment models and evaluation mode aren't supported for this API. All users of applications that use this API must have a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license.
 > - This API works differently in one or more national clouds. For more information, see [Microsoft Teams API implementation differences in national clouds](/graph/teamwork-national-cloud-differences).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]

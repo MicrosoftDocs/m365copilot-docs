@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 03/10/2026
+ms.date: 03/31/2026
 ms.topic: overview
 ---
 
@@ -22,6 +22,13 @@ For the latest information, announcements, and news about preview and generally 
 ### Copilot policy settings API (preview)
 
 The Copilot policy settings API is now available in preview. This API provides a unified endpoint to read and update Copilot settings across multiple policy services, including Cloud Policy Service (CPS) and Microsoft Intune. For more information, see [copilotPolicySetting resource type](api/admin-settings/resources/copilotpolicysetting.md).
+### Share agents to teams in Microsoft Teams
+
+You can now share agents built with Agent Builder in Microsoft 365 Copilot to teams as well as users and groups. For more information, see [Share and manage agents](agent-builder-share-manage-agents.md).
+
+### Package Management API expanded operations (preview)
+
+The Package Management API now supports full CRUD operations for managing agent and app packages, including create, update, and delete operations. Additionally, new administrative actions are available for blocking, unblocking, updating package files, and reassigning package ownership. For more information, see [Package Management API overview](api/admin-settings/package/overview.md).
 
 ### Use natural language to create an agent in Microsoft 365 Copilot
 
