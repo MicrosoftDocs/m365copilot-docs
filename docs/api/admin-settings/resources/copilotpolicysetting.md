@@ -30,9 +30,21 @@ Inherits from [entity](/graph/api/resources/entity).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|id|String|The friendly identifier of the Copilot setting (for example, `microsoft.copilot.pinsetting`). Used as the resource key in the URL path. Read-only. Inherited from [entity](/graph/api/resources/entity).|
+|id|String|The friendly identifier of the Copilot setting (for example, `microsoft.copilot.copilotchatpinning`). Used as the resource key in the URL path. Read-only. Inherited from [entity](/graph/api/resources/entity).|
 |policyId|String|The ID of the tenant-level policy containing this setting in the underlying policy service. Nullable. Returns `null` when no tenant-level policy exists for this setting. If omitted on update, the API resolves the first matching tenant-level policy.|
 |value|String|The current value of the setting as a string. The format is setting-specific and may be a digit representing a state (for example, `0`, `1`), a URL, an XML string, or a JSON string. Nullable. Returns `null` when the setting has not been configured in the resolved tenant-level policy.|
+
+## Supported settings
+
+The following setting identifiers are supported at launch. Only these values are accepted as the `{id}` path parameter. Requesting an unsupported identifier returns a `404 Not Found` error.
+
+| Setting ID | Setting name |
+|:---|:---|
+| `microsoft.copilot.copilotchatpinning` | Pin Microsoft 365 Copilot Chat |
+| `microsoft.copilot.blockaccesstoopenfiles` | Block Copilot Access to Open Content |
+| `microsoft.copilot.imagegeneration` | Control access to Designer Image Generation |
+| `microsoft.copilot.allowwebsearch` | Allow web search in Copilot |
+| `microsoft.copilot.allowinadmincenters` | Control Admin Copilot availability in Microsoft 365 Admin Center |
 
 ## Relationships
 None.

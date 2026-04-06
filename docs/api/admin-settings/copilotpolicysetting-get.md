@@ -46,7 +46,7 @@ GET /copilot/admin/policySettings/{id}
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|id|String|The friendly identifier of the Copilot setting. For example, `microsoft.copilot.pinsetting`. Required.|
+|id|String|The friendly identifier of the Copilot setting. For the list of supported values, see [Supported settings](./resources/copilotpolicysetting.md#supported-settings). Required.|
 
 ## Optional query parameters
 
@@ -81,7 +81,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.pinsetting
+GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
 ```
 
 #### Response
@@ -100,7 +100,7 @@ Content-Type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/policySettings/$entity",
   "@odata.type": "#microsoft.graph.copilotPolicySetting",
-  "id": "microsoft.copilot.pinsetting",
+  "id": "microsoft.copilot.copilotchatpinning",
   "value": "1",
   "policyId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
 }
@@ -119,7 +119,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.somesetting
+GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.imagegeneration
 ```
 
 #### Response
@@ -138,7 +138,7 @@ Content-Type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/policySettings/$entity",
   "@odata.type": "#microsoft.graph.copilotPolicySetting",
-  "id": "microsoft.copilot.somesetting",
+  "id": "microsoft.copilot.imagegeneration",
   "value": null,
   "policyId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
 }
@@ -157,7 +157,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.anothersetting
+GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.allowwebsearch
 ```
 
 #### Response
@@ -176,8 +176,92 @@ Content-Type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/policySettings/$entity",
   "@odata.type": "#microsoft.graph.copilotPolicySetting",
-  "id": "microsoft.copilot.anothersetting",
+  "id": "microsoft.copilot.allowwebsearch",
   "value": null,
   "policyId": null
+}
+```
+
+### Example 4: Get a setting scoped to a group-level policy
+
+The following example shows a request for a whitelisted setting that is configured in a group-level policy. This endpoint only supports settings that are not configured in any group-level policies. The API returns `422 Unprocessable Content`.
+
+#### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "get_copilotpolicysetting_groupscoped"
+}
+-->
+``` http
+GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
+```
+
+#### Response
+
+The following example shows the response.
+<!-- {
+  "blockType": "response",
+  "truncated": true
+}
+-->
+``` http
+HTTP/1.1 422 Unprocessable Content
+Content-Type: application/json
+
+{
+  "error": {
+    "code": "unprocessableEntity",
+    "message": "The setting 'microsoft.copilot.copilotchatpinning' is scoped to a group-level policy, which is not supported by this endpoint. Only tenant-level policy settings are supported.",
+    "innerError": {
+      "code": "groupScopedSettingNotSupported",
+      "request-id": "00000000-0000-0000-0000-000000000003",
+      "date": "2026-04-06T13:37:18",
+      "client-request-id": "00000000-0000-0000-0000-000000000004"
+    }
+  }
+}
+```
+
+### Example 5: Get an unsupported setting
+
+The following example shows a request for a setting identifier that isn't in the supported whitelist. The API returns `404 Not Found`.
+
+#### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "get_copilotpolicysetting_unsupported"
+}
+-->
+``` http
+GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.pinning
+```
+
+#### Response
+
+The following example shows the response.
+<!-- {
+  "blockType": "response",
+  "truncated": true
+}
+-->
+``` http
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+
+{
+  "error": {
+    "code": "notFound",
+    "message": "The setting 'microsoft.copilot.pinning' is not supported. Only whitelisted Copilot settings can be accessed through this endpoint.",
+    "innerError": {
+      "code": "unsupportedSetting",
+      "request-id": "00000000-0000-0000-0000-000000000001",
+      "date": "2026-04-06T13:37:18",
+      "client-request-id": "00000000-0000-0000-0000-000000000002"
+    }
+  }
 }
 ```

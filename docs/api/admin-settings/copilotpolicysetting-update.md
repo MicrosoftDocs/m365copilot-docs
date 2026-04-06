@@ -46,7 +46,7 @@ PATCH /copilot/admin/policySettings/{id}
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|id|String|The friendly identifier of the Copilot setting. For example, `microsoft.copilot.pinsetting`. Required.|
+|id|String|The friendly identifier of the Copilot setting. For the list of supported values, see [Supported settings](./resources/copilotpolicysetting.md#supported-settings). Required.|
 
 ## Request headers
 
@@ -81,7 +81,7 @@ The following example shows a request.
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.pinsetting
+PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
 Content-Type: application/json
 
 {
@@ -106,7 +106,7 @@ Content-Type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/policySettings/$entity",
   "@odata.type": "#microsoft.graph.copilotPolicySetting",
-  "id": "microsoft.copilot.pinsetting",
+  "id": "microsoft.copilot.copilotchatpinning",
   "value": "0",
   "policyId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
 }
@@ -125,7 +125,7 @@ The following example shows a request.
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.pinsetting
+PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
 Content-Type: application/json
 
 {
@@ -149,8 +149,102 @@ Content-Type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/policySettings/$entity",
   "@odata.type": "#microsoft.graph.copilotPolicySetting",
-  "id": "microsoft.copilot.pinsetting",
+  "id": "microsoft.copilot.copilotchatpinning",
   "value": "1",
   "policyId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+}
+```
+
+### Example 3: Update a setting scoped to a group-level policy
+
+The following example shows a request to update a whitelisted setting that is configured in a group-level policy. This endpoint only supports settings that are not configured in any group-level policies. The API returns `422 Unprocessable Content`.
+
+#### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "update_copilotpolicysetting_groupscoped"
+}
+-->
+``` http
+PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
+Content-Type: application/json
+
+{
+  "value": "0"
+}
+```
+
+#### Response
+
+The following example shows the response.
+<!-- {
+  "blockType": "response",
+  "truncated": true
+}
+-->
+``` http
+HTTP/1.1 422 Unprocessable Content
+Content-Type: application/json
+
+{
+  "error": {
+    "code": "unprocessableEntity",
+    "message": "The setting 'microsoft.copilot.copilotchatpinning' is scoped to a group-level policy, which is not supported by this endpoint. Only tenant-level policy settings are supported.",
+    "innerError": {
+      "code": "groupScopedSettingNotSupported",
+      "request-id": "00000000-0000-0000-0000-000000000003",
+      "date": "2026-04-06T13:37:18",
+      "client-request-id": "00000000-0000-0000-0000-000000000004"
+    }
+  }
+}
+```
+
+### Example 4: Update an unsupported setting
+
+The following example shows a request to update a setting identifier that isn't in the supported whitelist. The API returns `404 Not Found`.
+
+#### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "update_copilotpolicysetting_unsupported"
+}
+-->
+``` http
+PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.pinning
+Content-Type: application/json
+
+{
+  "value": "1"
+}
+```
+
+#### Response
+
+The following example shows the response.
+<!-- {
+  "blockType": "response",
+  "truncated": true
+}
+-->
+``` http
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+
+{
+  "error": {
+    "code": "notFound",
+    "message": "The setting 'microsoft.copilot.pinning' is not supported. Only whitelisted Copilot settings can be accessed through this endpoint.",
+    "innerError": {
+      "code": "unsupportedSetting",
+      "request-id": "00000000-0000-0000-0000-000000000001",
+      "date": "2026-04-06T13:37:18",
+      "client-request-id": "00000000-0000-0000-0000-000000000002"
+    }
+  }
 }
 ```
