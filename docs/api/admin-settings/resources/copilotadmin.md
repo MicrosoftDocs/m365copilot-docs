@@ -6,7 +6,7 @@ ms.author: gajain
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.topic: reference
-ms.date: 03/19/2026
+ms.date: 03/26/2026
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -28,20 +28,28 @@ Represents a container for Microsoft 365 Copilot admin settings.
 None.
 
 ## Relationships
-|Relationship|Type|Description|
-|:---|:---|:---|
-|policySettings|[copilotPolicySetting](copilotpolicysetting.md) collection|Collection of Copilot settings managed through policy services. Each setting is addressed individually by its identifier.|
-|settings|[copilotAdminSetting](copilotadminsetting.md)|Represents the settings for Copilot admin.|
+
+:::zone pivot="graph-v1"
+
+| Relationship | Type                                          | Description                                |
+|:-------------|:----------------------------------------------|:-------------------------------------------|
+| `settings`   | [copilotAdminSetting](copilotadminsetting.md) | Represents the settings for Copilot admin. |
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
+| Relationship     | Type                                                       | Description                                                                                                                  |
+|:-----------------|:-----------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
+| `policySettings` | [copilotPolicySetting](copilotpolicysetting.md) collection | Collection of Copilot settings managed through policy services. The API addresses settings individually by their identifier. |
+| `settings`       | [copilotAdminSetting](copilotadminsetting.md)              | Represents the settings for Copilot admin.                                                                                   |
+
+:::zone-end
 
 ## JSON representation
+
 The following JSON representation shows the resource type.
-<!-- {
-  "blockType": "resource",
-  "keyProperty": "id",
-  "@odata.type": "microsoft.graph.copilotAdmin",
-  "openType": true
-}
--->
+
 ``` json
 {
   "@odata.type": "#microsoft.graph.copilotAdmin"

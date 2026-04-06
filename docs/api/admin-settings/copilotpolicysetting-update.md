@@ -1,45 +1,39 @@
 ---
-title: "Update copilotPolicySetting"
-description: "Update the properties of a copilotPolicySetting object."
-author: "paarava"
-ms.date: 03/19/2026
+title: Update copilotPolicySetting
+description: Update the properties of a copilotPolicySetting object.
+author: paarava
+ms.author: paarava
+ms.topic: reference
+ms.date: 03/26/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
 
 # Update copilotPolicySetting
 
-Namespace: microsoft.graph
+<!-- markdownlint-disable MD024 -->
+<!-- cSpell:ignore paarava -->
 
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Update the properties of a [copilotPolicySetting](./resources/copilotpolicysetting.md) object.
 
-Update the value of a Copilot policy setting. The API resolves the correct underlying policy service and applies the update. If **policyId** is omitted from the request body, the API resolves the first matching tenant-level policy automatically.
+Update the value of a Copilot policy setting. The API resolves the correct underlying policy service and applies the update. If `policyId` is omitted from the request body, the API resolves the first matching tenant-level policy automatically.
 
 ## Permissions
 
-Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
+[!INCLUDE [permissions-intro](../includes/permissions-intro.md)]
 
-<!-- {
-  "blockType": "permissions",
-  "name": "copilotpolicysetting-update-permissions"
-}
--->
-|Permission type|Least privileged permission|Higher privileged permissions|
-|:---|:---|:---|
-|Delegated (work or school account)|CopilotPolicySettings.ReadWrite|Not available.|
-|Delegated (personal Microsoft account)|Not supported.|Not supported.|
-|Application|Not supported.|Not supported.|
+| Permission type                        | Least privileged permission     | Higher privileged permissions |
+|:---------------------------------------|:--------------------------------|:------------------------------|
+| Delegated (work or school account)     | CopilotPolicySettings.ReadWrite | Not available.                |
+| Delegated (personal Microsoft account) | Not supported.                  | Not supported.                |
+| Application                            | Not supported.                  | Not supported.                |
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
 ``` http
-PATCH /copilot/admin/policySettings/{id}
+PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/{id}
 ```
 
 ## Path parameters
@@ -50,17 +44,17 @@ PATCH /copilot/admin/policySettings/{id}
 
 ## Request headers
 
-|Name|Description|
-|:---|:---|
-|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
-|Content-Type|application/json. Required.|
+| Name            | Description                                                                                                 |
+|:----------------|:------------------------------------------------------------------------------------------------------------|
+| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
+| `Content-Type`  | `application/json`. Required.                                                                               |
 
 ## Request body
 
-|Property|Type|Description|
-|:---|:---|:---|
-|value|String|The new value to set for the setting. The format is setting-specific and may be a digit, URL, XML string, or JSON string. Required.|
-|policyId|String|The ID of the target tenant-level policy. If omitted, the API resolves the first matching tenant-level policy automatically. Optional.|
+| Property   | Type   | Description                                                                                                                            |
+|:-----------|:-------|:---------------------------------------------------------------------------------------------------------------------------------------|
+| `policyId` | String | The ID of the target tenant-level policy. If omitted, the API resolves the first matching tenant-level policy automatically. Optional. |
+| `value`    | String | The new value to set for the setting. The format is setting-specific and might be a digit, URL, XML string, or JSON string. Required.  |
 
 ## Response
 
@@ -75,11 +69,7 @@ The following example shows how to update a Copilot setting value with an explic
 #### Request
 
 The following example shows a request.
-<!-- {
-  "blockType": "request",
-  "name": "update_copilotpolicysetting_withpolicyid"
-}
--->
+
 ``` http
 PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
 Content-Type: application/json
@@ -93,19 +83,12 @@ Content-Type: application/json
 #### Response
 
 The following example shows the response.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.copilotPolicySetting"
-}
--->
+
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/policySettings/$entity",
-  "@odata.type": "#microsoft.graph.copilotPolicySetting",
   "id": "microsoft.copilot.copilotchatpinning",
   "value": "0",
   "policyId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
@@ -119,11 +102,7 @@ The following example shows how to update a setting value without specifying a p
 #### Request
 
 The following example shows a request.
-<!-- {
-  "blockType": "request",
-  "name": "update_copilotpolicysetting_withoutpolicyid"
-}
--->
+
 ``` http
 PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
 Content-Type: application/json
@@ -136,19 +115,12 @@ Content-Type: application/json
 #### Response
 
 The following example shows the response.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.copilotPolicySetting"
-}
--->
+
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/policySettings/$entity",
-  "@odata.type": "#microsoft.graph.copilotPolicySetting",
   "id": "microsoft.copilot.copilotchatpinning",
   "value": "1",
   "policyId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
@@ -157,7 +129,7 @@ Content-Type: application/json
 
 ### Example 3: Update a setting scoped to a group-level policy
 
-The following example shows a request to update a whitelisted setting that is configured in a group-level policy. This endpoint only supports settings that are not configured in any group-level policies. The API returns `422 Unprocessable Content`.
+The following example shows a request to update a supported setting that is configured in a group-level policy, which this endpoint doesn't support. The API returns `422 Unprocessable Content`.
 
 #### Request
 
@@ -204,7 +176,7 @@ Content-Type: application/json
 
 ### Example 4: Update an unsupported setting
 
-The following example shows a request to update a setting identifier that isn't in the supported whitelist. The API returns `404 Not Found`.
+The following example shows a request to update a setting identifier that isn't in the supported list. The API returns `404 Not Found`.
 
 #### Request
 
@@ -238,7 +210,7 @@ Content-Type: application/json
 {
   "error": {
     "code": "notFound",
-    "message": "The setting 'microsoft.copilot.pinning' is not supported. Only whitelisted Copilot settings can be accessed through this endpoint.",
+    "message": "The setting 'microsoft.copilot.pinning' is not supported. Only supported Copilot settings can be accessed through this endpoint.",
     "innerError": {
       "code": "unsupportedSetting",
       "request-id": "00000000-0000-0000-0000-000000000001",
