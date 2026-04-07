@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot Agent Builder to build decla
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 04/072026
+ms.date: 04/07/2026
 ms.topic: article
 ---
 
