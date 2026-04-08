@@ -15,7 +15,7 @@ Declarative agents enable you to customize Microsoft 365 Copilot to help you mee
 With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock more functionality for your users.
 
 > [!NOTE]
-> For information about the two approaches to building agents for Microsoft 365 Copilot, see [Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/agents-overview).
+> For information about the two approaches to building agents for Microsoft 365 Copilot, see [Agents for Microsoft 365 Copilot](agents-overview.md).
 
 ## Tailor declarative agents for your scenario
 
@@ -49,14 +49,14 @@ Users can select declarative agents from the right pane in Copilot. They can the
 The following are the core elements of a declarative agent app package:
 
 - [**App manifest**](/microsoft-365/extensibility/schema) - Describes how your app is configured, including its capabilities, required resources, and other important attributes.
-- [**App icons**](/microsoft-365-copilot/extensibility/agents-are-apps#app-icons) - The app package requires a color and outline icon for your declarative agents.
+- [**App icons**](agents-are-apps.md#app-icons) - The app package requires a color and outline icon for your declarative agents.
 - [**Declarative agents manifest**](declarative-agent-manifest-1.5.md) - Describes how your declarative agent is configured, including its required fields, capabilities, conversation starters, and actions.
-- [**Plugin manifest (optional)**](/microsoft-365-copilot/extensibility/overview-api-plugins) - Describes how your plugin is configured, including its required fields and capabilities.
+- [**Plugin manifest (optional)**](overview-api-plugins.md) - Describes how your plugin is configured, including its required fields and capabilities.
 
 You can use your tool of choice to create a declarative agent app package. To get started, choose from among the following tools:
 
 - [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
-- [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365-copilot/extensibility/context)
+- [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context)
 - [Microsoft 365 Copilot](agent-builder.md)
 - [SharePoint](/sharepoint/get-started-sharepoint-agents)
 

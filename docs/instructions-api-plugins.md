@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 04/02/2025
+ms.date: 03/25/2026
 ---
 
 # Write effective instructions for declarative agents with API plugins
@@ -29,8 +29,8 @@ Together, these files define the agent's behavior and how it interacts with the 
 
 For more information about API plugins, see:
 
-- [API plugins for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-api-plugins)
-- [How to make an OpenAPI document effective in extending Copilot capabilities](/microsoft-365-copilot/extensibility/openapi-document-guidance)
+- [API plugins for Microsoft 365 Copilot](overview-api-plugins.md)
+- [How to make an OpenAPI document effective in extending Copilot capabilities](openapi-document-guidance.md)
 
 ### Function mapping in the plugin manifest
 
@@ -81,7 +81,7 @@ The following example shows how to instruct a weather agent for multi-turn conve
 |------------------------|------------|
 |If user asks about the weather:</br></br>- Ask the user for location.</br>- Ask the user for forecast day.</br>- Ask the user for unit system.</br>- Only call **getWeather** when you collect all the values.|**User:** "What is the weather?"</br>**Agent:** "What is your location?"</br>**User**: "London"</br>**Agent**: "Do you prefer the weather information in Metric or Imperial units?"</br>**User**: "Metric"</br>**Agent**: "Do you need the weather for today or forecast for tomorrow?"</br>**User**: "Today"</br>**Agent**: "I will check the weather for London for today"</br>**Agent calls:** getWeather(location="London", forecast="today", system="Metric")|
 
-For general best practices for agent instructions, see [Write effective instructions](/microsoft-365-copilot/extensibility/declarative-agent-instructions).
+For general best practices for agent instructions, see [Write effective instructions](declarative-agent-instructions.md).
 
 ### Chaining function calls in API plugins
 
@@ -129,7 +129,9 @@ In the following example, an agent creates a chart based on the data in to-do ta
 
 This example also runs multiple actions at once. This is useful initiating a series of related actions that don't require multiple user inputs.
 
+When code interpreter generates a file (such as a chart image or a spreadsheet), Copilot automatically presents a download link in the response, allowing users to save the file locally. For more information, see [Generate downloadable files](code-interpreter.md#generate-downloadable-files).
+
 ## Related content
 
-- [Build a declarative agent with Visual Studio Code](/microsoft-365-copilot/extensibility/build-declarative-agents?tabs=ttk)
-- [API plugins for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-api-plugins)
+- [Build a declarative agent with Visual Studio Code](build-declarative-agents.md?tabs=ttk)
+- [API plugins for Microsoft 365 Copilot](overview-api-plugins.md)

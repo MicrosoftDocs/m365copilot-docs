@@ -150,7 +150,7 @@ Custom engine agent prompts and responses in Copilot Chat and Teams are stored i
 
 ## Related content
 
-- [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365-copilot/extensibility/context)
+- [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365/copilot/extensibility/context)
 - [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
 - [Publish your Foundry agent to Microsoft 365](/azure/ai-foundry/agents/how-to/publish-copilot)
 - [Integrate your Foundry agent with Microsoft Agent Toolkit](https://aka.ms/aif2m365-procode)

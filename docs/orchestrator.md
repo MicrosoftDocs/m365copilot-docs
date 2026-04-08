@@ -72,4 +72,4 @@ When a user submits a query to your agent, the orchestrator searches the agent's
 
 The orchestrator works through this list until all five function candidate slots are filled.
 
-Check out [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365-copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.
+Check out [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365/copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.

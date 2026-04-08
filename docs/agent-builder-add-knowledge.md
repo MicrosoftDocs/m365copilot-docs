@@ -22,7 +22,7 @@ You can add:
 
 This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md).
 
-For information about supported knowledge sources and licensing requirements, see [Knowledge sources](/microsoft-365-copilot/extensibility/knowledge-sources).
+For information about supported knowledge sources and licensing requirements, see [Knowledge sources](knowledge-sources.md).
 
 ## Add knowledge sources
 
@@ -189,7 +189,7 @@ When you share an agent with embedded files, you share the files with users when
 - Specific users in your organization
 - Only you
 
-When you [share the agent](/microsoft-365-copilot/extensibility/copilot-studio-agent-builder-publish#share-the-agent), the **Share** screen displays the sensitivity label if sensitivity labels are set on the embedded content.
+When you [share the agent](copilot-studio-agent-builder-publish.md#share-the-agent), the **Share** screen displays the sensitivity label if sensitivity labels are set on the embedded content.
 
 ### File types and size limits
 
@@ -251,7 +251,7 @@ To enhance the accuracy and relevance of agent responses, ground agents not only
    > * You don't have the required permissions to access the content.
    > * The scope isn't valid for the selected connector.
 
-1. Select the attribute from the list to add it. 
+1. Select the attribute from the list to add it.
 1. Your agent's knowledge is now scoped to the data associated with the scoped attribute.
 
 For example, when you use the **Azure DevOps Work Items** connector, you can scope the agent to a particular area path to ensure that the agent focuses only on the most pertinent work items.
@@ -282,7 +282,7 @@ The following table lists the Copilot connectors that support scoping and the at
 | ServiceNow Catalog | Catalog |
 | ServiceNow Tickets | Entity type (Sys_class_name/ Category/ Subcategory) |
 
-For more information about the available Copilot connectors, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext). 
+For more information about the available Copilot connectors, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
 
 ## Prioritize your knowledge sources over general knowledge
 

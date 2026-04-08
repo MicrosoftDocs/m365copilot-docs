@@ -93,7 +93,7 @@ Deployed connectors are tenant-wide unless external item security is restricted.
 
 You can create a synced Copilot connector in one of three ways:
 
-- Use the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-your-first-connector)
+- Use the [Microsoft 365 Agents Toolkit](build-your-first-connector.md)
 - Use the [connector SDK](/graph/custom-connector-sdk-sample-create)
 - Use the [Copilot connector APIs](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)
 

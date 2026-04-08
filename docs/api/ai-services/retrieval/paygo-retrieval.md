@@ -44,8 +44,8 @@ It can take about two hours for enablement to propagate. After the enablement pr
 
 After the service is enabled, any app in the customer's tenant that has the required Retrieval API permissions can call the Retrieval API on behalf of a user who has pay-as-you-go enabled. These apps include single-tenant and multitenant apps in the customer's tenant.
 
-If you disable pay-as-you-go consumption, it can take about two hours for the disablement to take effect. Charges apply if the API is used during the time that the disablement isn't fully propagated. After the disablement propagates, the first API call made might result in a charge, while the system updates the Billing Policy state. After that, the disablement is complete, and no other charges are incurred. 
+If you disable pay-as-you-go consumption, it can take about two hours for the disablement to take effect. Charges apply if the API is used during the time that the disablement isn't fully propagated. After the disablement propagates, the first API call made might result in a charge, while the system updates the Billing Policy state. After that, the disablement is complete, and no other charges are incurred.
 
 ## Related content
 
-- [Overview of the Microsoft 365 Copilot Retrieval API](/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview)
+- [Overview of the Microsoft 365 Copilot Retrieval API](overview.md)

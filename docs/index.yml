@@ -38,8 +38,8 @@ landingContent:
           - text: Build a custom engine agent
             url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent
           - text: Manage agents in the Microsoft 365 admin center
-            url: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365-copilot/extensibility/context
-  
+            url: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context
+
   - title: Extend with plugins and connectors
     linkLists:
       - linkListType: how-to-guide
@@ -56,7 +56,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Microsoft 365 Agents Toolkit
-            url: /microsoft-365/developer/overview-m365-agents-toolkit?context=/microsoft-365-copilot/extensibility/context
+            url: /microsoft-365/developer/overview-m365-agents-toolkit?context=/microsoft-365/copilot/extensibility/context
           - text: Microsoft 365 Agents SDK
             url: /microsoft-365-copilot/extensibility/m365-agents-sdk
           - text: Microsoft 365 Copilot APIs
