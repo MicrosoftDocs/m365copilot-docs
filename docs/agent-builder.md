@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot Agent Builder to build decla
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 04/07/2026
+ms.date: 04/09/2026
 ms.topic: article
 ---
 
@@ -55,15 +55,14 @@ Administrators can control whether Agent Builder is available to users in their 
 
 ## Network requirements
 
-Agent Builder requires access to the following endpoints. Make sure that none of these are blocked by your network firewall or proxy configuration.
+Agent Builder requires access to the following endpoint. Make sure that this endpoint isn't blocked by your network firewall or proxy configuration.
 
 > [!NOTE]
-> These endpoints are required in addition to the standard Microsoft 365 URLs and IP address ranges for Microsoft 365 services.
+> This endpoint is required in addition to the standard Microsoft 365 URLs and IP address ranges for Microsoft 365 services.
 
 | Domain | Required | Protocol | Uses |
 |--------|----------|----------|------|
 | *.api.powerplatform.com   | Yes      | HTTPS    | Agent authoring, configuration, publish, and share APIs    |
-| *.mos.microsoft.com       | Yes      | HTTPS    | Organizational sharing controls and access enforcement      |
 
 For general information about Microsoft 365 URLs, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
