@@ -62,7 +62,7 @@ Agent Builder requires access to the following endpoint. Make sure that this end
 
 | Domain | Required | Protocol | Uses |
 |--------|----------|----------|------|
-| *.api.powerplatform.com   | Yes      | HTTPS    | Agent authoring, configuration, publish, and share APIs    |
+| *.api.powerplatform.com   | Yes      | HTTPS    | Agent authoring, configuration, publishing, and sharing APIs    |
 
 For general information about Microsoft 365 URLs, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
