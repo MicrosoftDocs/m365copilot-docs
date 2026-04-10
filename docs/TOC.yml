@@ -303,7 +303,7 @@ items:
       href: build-your-first-connector.md
     - name: Build with SDK
       href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365/copilot/extensibility/context
-  - name: Build connectors for people data (preview)
+  - name: Build connectors for people data
     href: build-connectors-with-people-data.md
   - name: Connectors API
     items:
