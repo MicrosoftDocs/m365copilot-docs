@@ -17,6 +17,12 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## April 2026
+
+### Agent Registration API (preview)
+
+The Agent Registration API enables developers and administrators to programmatically register and manage agents within their Microsoft 365 environment. The API supports creating, retrieving, updating, and deleting agent registrations with associated metadata and agent cards. For more information, see [Agent Registration API overview](api/admin-settings/agent-registration/overview.md).
+
 ## March 2026
 
 ### Share agents to teams in Microsoft Teams
