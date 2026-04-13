@@ -238,3 +238,37 @@ Content-Type: application/json
   }
 }
 ```
+
+### Example 6: Get a setting when the tenant has too many group policies
+
+The following example shows a request for a setting when the number of group-level policies in the tenant exceeds the supported limit. The API returns `502 Bad Gateway`.
+
+#### Request
+
+The following example shows a request.
+
+``` http
+GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
+```
+
+#### Response
+
+The following example shows the response.
+
+``` http
+HTTP/1.1 502 Bad Gateway
+Content-Type: application/json
+
+{
+  "error": {
+    "code": "badGateway",
+    "message": "The operation could not be completed because the number of group-level policies exceeds the supported limit.",
+    "innerError": {
+      "code": "tooManyGroupPolicies",
+      "request-id": "00000000-0000-0000-0000-000000000005",
+      "date": "2026-04-13T11:16:52",
+      "client-request-id": "00000000-0000-0000-0000-000000000006"
+    }
+  }
+}
+```

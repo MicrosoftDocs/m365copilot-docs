@@ -19,6 +19,9 @@ Represents a Copilot setting that is managed through a policy service (CPS or In
 
 The API addresses settings individually by their identifier, and only tenant-level policies are supported. User-level and group-level policies aren't supported.
 
+> [!NOTE]
+> This API is currently in preview. During preview, if the tenant has more group-level policies than the supported limit, the API returns a `502 Bad Gateway` error with the `tooManyGroupPolicies` inner error code.
+
 ## Methods
 
 | Method                                      | Return type            | Description                                                               |
