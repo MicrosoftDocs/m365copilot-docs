@@ -4,6 +4,8 @@ description: Learn how to use templates to quickly create declarative agents in 
 author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
+ms.service: copilot-studio
+ms.subservice: agent-builder
 ms.localizationpriority: medium
 ms.date: 03/10/2026
 ---

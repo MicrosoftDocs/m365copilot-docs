@@ -26,10 +26,6 @@ The Copilot policy settings API is now available in preview. This API provides a
 
 You can now share agents built with Agent Builder in Microsoft 365 Copilot to teams as well as users and groups. For more information, see [Share and manage agents](agent-builder-share-manage-agents.md).
 
-### Package Management API expanded operations (preview)
-
-The Package Management API now supports full CRUD operations for managing agent and app packages, including create, update, and delete operations. Additionally, new administrative actions are available for blocking, unblocking, updating package files, and reassigning package ownership. For more information, see [Package Management API overview](api/admin-settings/package/overview.md).
-
 ### Use natural language to create an agent in Microsoft 365 Copilot
 
 You can now create agents more quickly with Agent Builder in Microsoft 365 Copilot by using natural language. The agent is automatically configured for you. For more information, see [Use natural language to describe your agent](agent-builder-build-agents.md#use-natural-language-to-describe-your-agent-recommended).
