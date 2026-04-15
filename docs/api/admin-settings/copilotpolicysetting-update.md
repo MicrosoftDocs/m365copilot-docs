@@ -38,9 +38,9 @@ PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/{id}
 
 ## Path parameters
 
-|Parameter|Type|Description|
-|:---|:---|:---|
-|id|String|The friendly identifier of the Copilot setting. For the list of supported values, see [Supported settings](./resources/copilotpolicysetting.md#supported-settings). Required.|
+| Parameter | Type   | Description |
+|:----------|:-------|:------------|
+| `id`      | String | The friendly identifier of the Copilot setting. For the list of supported values, see [Supported settings](./resources/copilotpolicysetting.md#supported-settings). Required. |
 
 ## Request headers
 
@@ -134,11 +134,7 @@ The following example shows a request to update a supported setting that is conf
 #### Request
 
 The following example shows a request.
-<!-- {
-  "blockType": "request",
-  "name": "update_copilotpolicysetting_groupscoped"
-}
--->
+
 ``` http
 PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
 Content-Type: application/json
@@ -151,11 +147,7 @@ Content-Type: application/json
 #### Response
 
 The following example shows the response.
-<!-- {
-  "blockType": "response",
-  "truncated": true
-}
--->
+
 ``` http
 HTTP/1.1 422 Unprocessable Content
 Content-Type: application/json
@@ -181,11 +173,7 @@ The following example shows a request to update a setting identifier that isn't 
 #### Request
 
 The following example shows a request.
-<!-- {
-  "blockType": "request",
-  "name": "update_copilotpolicysetting_unsupported"
-}
--->
+
 ``` http
 PATCH https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.pinning
 Content-Type: application/json
@@ -198,11 +186,7 @@ Content-Type: application/json
 #### Response
 
 The following example shows the response.
-<!-- {
-  "blockType": "response",
-  "truncated": true
-}
--->
+
 ``` http
 HTTP/1.1 404 Not Found
 Content-Type: application/json

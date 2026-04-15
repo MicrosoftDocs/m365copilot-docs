@@ -42,9 +42,9 @@ GET https://graph.microsoft.com/beta/copilot/admin/policySettings/{id}
 
 ## Path parameters
 
-|Parameter|Type|Description|
-|:---|:---|:---|
-|id|String|The friendly identifier of the Copilot setting. For the list of supported values, see [Supported settings](./resources/copilotpolicysetting.md#supported-settings). Required.|
+| Parameter | Type   | Description |
+|:----------|:-------|:------------|
+| `id`      | String | The friendly identifier of the Copilot setting. For the list of supported values, see [Supported settings](./resources/copilotpolicysetting.md#supported-settings). Required. |
 
 ## Optional query parameters
 
@@ -162,11 +162,7 @@ The following example shows a request for a supported setting that is configured
 #### Request
 
 The following example shows a request.
-<!-- {
-  "blockType": "request",
-  "name": "get_copilotpolicysetting_groupscoped"
-}
--->
+
 ``` http
 GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.copilotchatpinning
 ```
@@ -174,11 +170,7 @@ GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copi
 #### Response
 
 The following example shows the response.
-<!-- {
-  "blockType": "response",
-  "truncated": true
-}
--->
+
 ``` http
 HTTP/1.1 422 Unprocessable Content
 Content-Type: application/json
@@ -204,11 +196,7 @@ The following example shows a request for a setting identifier that isn't in the
 #### Request
 
 The following example shows a request.
-<!-- {
-  "blockType": "request",
-  "name": "get_copilotpolicysetting_unsupported"
-}
--->
+
 ``` http
 GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copilot.pinning
 ```
@@ -216,11 +204,7 @@ GET https://graph.microsoft.com/beta/copilot/admin/policySettings/microsoft.copi
 #### Response
 
 The following example shows the response.
-<!-- {
-  "blockType": "response",
-  "truncated": true
-}
--->
+
 ``` http
 HTTP/1.1 404 Not Found
 Content-Type: application/json

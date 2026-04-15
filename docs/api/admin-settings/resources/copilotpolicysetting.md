@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 # copilotPolicySetting resource type
 
-<!-- cSpell:ignore paarava pinsetting -->
+<!-- cSpell:ignore paarava allowinadmincenters -->
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
@@ -41,13 +41,13 @@ The API addresses settings individually by their identifier, and only tenant-lev
 
 The following setting identifiers are supported at launch. Only these values are accepted as the `{id}` path parameter. Requesting an unsupported identifier returns a `404 Not Found` error.
 
-| Setting ID | Setting name |
-|:---|:---|
-| `microsoft.copilot.copilotchatpinning` | Pin Microsoft 365 Copilot Chat |
-| `microsoft.copilot.blockaccesstoopenfiles` | Block Copilot Access to Open Content |
-| `microsoft.copilot.imagegeneration` | Control access to Designer Image Generation |
-| `microsoft.copilot.allowwebsearch` | Allow web search in Copilot |
-| `microsoft.copilot.allowinadmincenters` | Control Admin Copilot availability in Microsoft 365 Admin Center |
+| Setting ID                                 | Setting name                                                     |
+|:-------------------------------------------|:-----------------------------------------------------------------|
+| `microsoft.copilot.copilotchatpinning`     | Pin Microsoft 365 Copilot Chat                                   |
+| `microsoft.copilot.blockaccesstoopenfiles` | Block Copilot Access to Open Content                             |
+| `microsoft.copilot.imagegeneration`        | Control access to Designer Image Generation                      |
+| `microsoft.copilot.allowwebsearch`         | Allow web search in Copilot                                      |
+| `microsoft.copilot.allowinadmincenters`    | Control Admin Copilot availability in Microsoft 365 Admin Center |
 
 ## Relationships
 
