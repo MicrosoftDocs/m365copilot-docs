@@ -6,6 +6,8 @@ ms.author: jasonxian
 ms.localizationpriority: medium
 ms.date: 03/20/2026
 ms.topic: article
+ms.service: copilot-studio
+ms.subservice: agent-builder
 ---
 
 # Build agents by using Agent Builder in Microsoft 365 Copilot

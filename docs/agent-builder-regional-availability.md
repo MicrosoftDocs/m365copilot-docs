@@ -6,6 +6,8 @@ ms.author: jasonxian
 ms.localizationpriority: medium
 ms.date: 03/12/2026
 ms.topic: article
+ms.service: copilot-studio
+ms.subservice: agent-builder
 ---
 
 # Agent Builder in Microsoft 365 Copilot regional availability and language support
