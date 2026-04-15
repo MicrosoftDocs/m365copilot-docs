@@ -4,6 +4,7 @@ description: Learn about the different types of knowledge sources that you can a
 author: xwen
 ms.author: xwen
 ms.topic: concept-article
+ms.subservice: agent-builder
 ms.localizationpriority: medium
 ms.date: 03/10/2026
 ---

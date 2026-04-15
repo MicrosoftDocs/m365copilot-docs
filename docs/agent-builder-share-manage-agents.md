@@ -6,6 +6,7 @@ ms.author: jasonxian
 ms.localizationpriority: medium
 ms.date: 03/31/2026
 ms.topic: article
+ms.subservice: agent-builder
 ---
 
 # Share and manage agents

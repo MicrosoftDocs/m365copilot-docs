@@ -7,6 +7,7 @@ ms.reviewer: kmarko
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/11/2025
+ms.subservice: agent-builder
 ---
 
 # Use the Career Coach template to build an agent
