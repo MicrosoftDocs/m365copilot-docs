@@ -231,6 +231,16 @@ items:
             href: debugging-agents-copilot-studio.md
           - name: Test agents using Agents Toolkit
             href: debugging-agents-vscode.md
+    - name: Evaluate agent quality
+      items:
+        - name: Overview
+          href: agent-evals-overview.md
+        - name: Quickstart
+          href: agent-evals-quickstart.md
+        - name: Create test suites
+          href: agent-evals-create-tests.md
+        - name: CLI reference
+          href: agent-evals-cli-reference.md
     - name: Convert to custom engine agent
       href: convert-declarative-agent.md
     - name: Responsible AI validation

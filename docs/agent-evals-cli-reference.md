@@ -1,0 +1,482 @@
+---
+title: CLI reference for Microsoft 365 Copilot Agent Evaluations
+description: Complete command-line reference for the M365 Copilot Agent Evaluations CLI tool including all options, flags, and cache commands.
+ms.date: 04/15/2026
+author: lauragra
+ms.author: lauragra
+ms.topic: reference
+ms.localizationpriority: medium
+---
+
+# CLI reference: Microsoft 365 Copilot Agent Evaluations
+
+This article provides a complete command-line reference for the `runevals` command, which is part of the `@microsoft/m365-copilot-eval` package.
+
+> [!IMPORTANT]
+> This tool is currently in private preview. Features and commands are subject to change.
+
+## Synopsis
+
+```bash
+runevals [options]
+runevals cache-info
+runevals cache-clear
+runevals cache-dir
+```
+
+## Description
+
+The `runevals` command evaluates Microsoft 365 Copilot agents by sending test prompts and scoring responses using Azure AI Evaluation metrics. The tool supports batch evaluation from JSON files, inline prompts, and interactive testing.
+
+## Options
+
+### `-V, --version`
+
+Output the version number of the CLI tool.
+
+**Example:**
+
+```bash
+runevals --version
+```
+
+**Output:**
+
+```
+1.3.0-preview.1
+```
+
+### `--log-level [level]`
+
+Set the logging verbosity level. Available levels: `debug`, `info`, `warning`, `error`.
+
+- **Default**: When flag is used without a value, defaults to `info`
+- **debug**: Detailed debugging information including API payloads
+- **info**: General information about evaluation progress
+- **warning**: Warning messages only
+- **error**: Error messages only
+
+**Examples:**
+
+```bash
+# Info level (default when flag is present)
+runevals --log-level
+
+# Debug level
+runevals --log-level debug
+
+# Error level only
+runevals --log-level error
+```
+
+> [!WARNING]
+> The `debug` level may include raw API payloads and response data in console output. Redaction is pattern-based and might not catch all PII or credentials. Don't share debug output publicly without manual review.
+
+### `--prompts <prompts...>`
+
+Specify one or more prompts directly on the command line for quick testing without creating a file.
+
+**Examples:**
+
+```bash
+# Single prompt
+runevals --prompts "What is Microsoft 365?"
+
+# Multiple prompts
+runevals --prompts "What is Teams?" "What is SharePoint?" "What is OneDrive?"
+```
+
+### `--expected <responses...>`
+
+Provide expected responses to accompany prompts specified with `--prompts`. Must match the number of prompts.
+
+**Example:**
+
+```bash
+runevals --prompts "What is Microsoft Graph?" \
+  --expected "Microsoft Graph is the API gateway to Microsoft 365 data and intelligence."
+```
+
+**Multiple prompts and responses:**
+
+```bash
+runevals --prompts "What is Teams?" "What is SharePoint?" \
+  --expected "Teams is a collaboration platform" "SharePoint is a content management system"
+```
+
+### `--prompts-file <file>`
+
+Specify a custom JSON file containing test prompts. Overrides auto-discovery.
+
+**Example:**
+
+```bash
+runevals --prompts-file ./tests/my-custom-tests.json
+```
+
+**File format:**
+
+```json
+[
+  {
+    "prompt": "Test question",
+    "expected_response": "Expected answer"
+  }
+]
+```
+
+### `-o, --output <file>`
+
+Specify the output file path and format. Format is determined by file extension.
+
+**Supported formats:**
+
+- `.html` - HTML report (default, auto-opens in browser)
+- `.json` - JSON results
+- `.csv` - CSV spreadsheet
+
+**Examples:**
+
+```bash
+# HTML output
+runevals --output ./reports/results.html
+
+# JSON output
+runevals --output ./results/eval-results.json
+
+# CSV output
+runevals --output ./data/scores.csv
+```
+
+**Default behavior:**
+
+Without `--output`, results are saved to `./.evals/YYYY-MM-DD_HH-MM-SS.html`.
+
+### `-i, --interactive`
+
+Enter interactive mode for manual prompt entry and testing.
+
+**Example:**
+
+```bash
+runevals --interactive
+```
+
+In interactive mode, you'll be prompted to enter prompts one at a time, allowing for exploratory testing.
+
+### `--m365-agent-id <id>`
+
+Override the agent ID to evaluate a specific agent. Useful when testing multiple agents or when the agent ID can't be auto-detected.
+
+**Example:**
+
+```bash
+runevals --m365-agent-id "U_0dc4a8a2-b95f-edac-91c8-d802023ec2d4"
+```
+
+**Agent ID formats:**
+
+- User-scoped: `U_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+- Tenant-scoped: `T_agent-name.declarativeAgent`
+
+### `--env <environment>`
+
+Specify the environment configuration to load. Loads `env/.env.<environment>`.
+
+**Default**: `dev` (loads `env/.env.dev`)
+
+**Examples:**
+
+```bash
+# Load env/.env.dev (default)
+runevals --env dev
+
+# Load env/.env.prod
+runevals --env prod
+
+# Load env/.env.staging
+runevals --env staging
+```
+
+**Environment file precedence:**
+
+1. `.env.local` (auto-detected for Agents Toolkit projects)
+2. `.env.local.user` (secrets, auto-loaded if present)
+3. `env/.env.<environment>` (specified by `--env`)
+4. System environment variables
+
+### `--init-only`
+
+Initialize the Python environment and download dependencies without running evaluations. Useful for:
+
+- Pre-warming the cache in CI/CD pipelines
+- Troubleshooting installation issues
+- Verifying setup before running tests
+
+**Example:**
+
+```bash
+runevals --init-only
+```
+
+Often combined with `--log-level debug` for troubleshooting:
+
+```bash
+runevals --init-only --log-level debug
+```
+
+### `-h, --help`
+
+Display help information about available commands and options.
+
+**Example:**
+
+```bash
+runevals --help
+```
+
+## Cache commands
+
+The evaluation tool uses a local cache for the Python runtime and dependencies. These commands help manage the cache.
+
+### `cache-info`
+
+Display statistics about the cached Python environment including size, location, and installed packages.
+
+**Example:**
+
+```bash
+runevals cache-info
+```
+
+**Output:**
+
+```
+📦 Cache Information
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Location: C:\Users\YourName\.m365-copilot-eval\cache
+Size: 245 MB
+Python Version: 3.11.5
+Packages: 42 installed
+
+Last updated: 2026-04-10 14:23:15
+```
+
+### `cache-clear`
+
+Remove the cached Python environment and all downloaded dependencies. Use when troubleshooting installation issues or freeing disk space.
+
+**Example:**
+
+```bash
+runevals cache-clear
+```
+
+**Follow-up:**
+
+After clearing cache, reinitialize:
+
+```bash
+runevals --init-only
+```
+
+### `cache-dir`
+
+Print the absolute path to the cache directory. Useful for scripts or manual inspection.
+
+**Example:**
+
+```bash
+runevals cache-dir
+```
+
+**Output:**
+
+```
+C:\Users\YourName\.m365-copilot-eval\cache
+```
+
+**Usage in scripts:**
+
+```bash
+# Check cache directory permissions (Unix/macOS)
+chmod -R u+w $(runevals cache-dir)
+
+# View cache contents
+ls -lah $(runevals cache-dir)
+```
+
+## Environment variables
+
+The tool reads configuration from environment files and system variables.
+
+### Required variables
+
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `TENANT_ID` | Azure AD tenant ID | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
+| `AZURE_AI_OPENAI_ENDPOINT` | Azure OpenAI endpoint URL | `https://your-resource.openai.azure.com/` |
+| `AZURE_AI_API_KEY` | Azure OpenAI API key | `your-api-key-here` |
+
+### Optional variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `M365_AGENT_ID` | Agent ID to evaluate | Auto-detected from `M365_TITLE_ID` |
+| `M365_TITLE_ID` | Agent title ID (Agents Toolkit) | None |
+| `AZURE_AI_API_VERSION` | Azure OpenAI API version | `2024-12-01-preview` |
+| `AZURE_AI_MODEL_NAME` | Model for evaluations | `gpt-4o-mini` |
+
+## Examples
+
+### Basic usage
+
+Evaluate using auto-discovered prompts file:
+
+```bash
+cd /path/to/your-agent-project
+runevals
+```
+
+### Specify environment
+
+Use production environment configuration:
+
+```bash
+runevals --env prod
+```
+
+### Custom prompts file
+
+Use a specific test file:
+
+```bash
+runevals --prompts-file ./tests/regression-tests.json
+```
+
+### Inline testing
+
+Quick test with inline prompts:
+
+```bash
+runevals --prompts "What is Microsoft 365?" \
+  --expected "Microsoft 365 is a cloud-based productivity suite"
+```
+
+### Interactive mode
+
+Enter prompts manually:
+
+```bash
+runevals --interactive
+```
+
+### Custom output format
+
+Generate JSON results:
+
+```bash
+runevals --output ./results/eval-$(date +%Y%m%d).json
+```
+
+### Debug mode
+
+Run with detailed logging:
+
+```bash
+runevals --log-level debug --output ./debug-results.json
+```
+
+### Setup only
+
+Pre-cache Python environment without running tests:
+
+```bash
+runevals --init-only --log-level info
+```
+
+### Override agent ID
+
+Test a specific agent:
+
+```bash
+runevals --m365-agent-id "U_0dc4a8a2-b95f-edac-91c8-d802023ec2d4"
+```
+
+### Combined options
+
+Comprehensive evaluation with custom settings:
+
+```bash
+runevals \
+  --env staging \
+  --prompts-file ./evals/full-suite.json \
+  --output ./reports/staging-eval-$(date +%Y%m%d).html \
+  --log-level info \
+  --m365-agent-id "T_my-agent.declarativeAgent"
+```
+
+## Exit codes
+
+| Code | Meaning |
+|------|---------|
+| `0` | Success |
+| `1` | General error |
+| `2` | Invalid arguments |
+| `3` | Environment configuration error |
+| `4` | Agent not found |
+| `5` | Authentication failure |
+| `10` | Python environment setup failure |
+
+## Troubleshooting
+
+### Command not found
+
+If `runevals` command isn't found:
+
+```bash
+# Verify installation
+npm list -g @microsoft/m365-copilot-eval
+
+# Reinstall
+npm install -g @microsoft/m365-copilot-eval
+```
+
+### Permission errors
+
+If cache operations fail:
+
+```bash
+# View cache directory
+runevals cache-dir
+
+# Fix permissions (Unix/macOS)
+chmod -R u+w $(runevals cache-dir)
+
+# Fix permissions (Windows)
+icacls "$(runevals cache-dir)" /grant %USERNAME%:F /T
+```
+
+### Network issues
+
+If initialization fails behind a proxy:
+
+```bash
+# Set proxy (Unix/macOS)
+export HTTPS_PROXY=http://proxy:8080
+export HTTP_PROXY=http://proxy:8080
+
+# Set proxy (Windows PowerShell)
+$env:HTTPS_PROXY="http://proxy:8080"
+$env:HTTP_PROXY="http://proxy:8080"
+
+# Retry initialization
+runevals --init-only --log-level debug
+```
+
+## Related content
+
+- [Evaluate Microsoft 365 Copilot agents overview](agent-evals-overview.md)
+- [Quickstart: Evaluate your agent](agent-evals-quickstart.md)
+- [Create evaluation test suites](agent-evals-create-tests.md)
