@@ -320,6 +320,20 @@ items:
     href: workiq-overview.md
 - name: Extend agents at scale with Agent 365 (early access preview)
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
+- name: Evaluate agents
+  items:
+  - name: Understand agent evaluation
+    href: evaluation-understanding.md
+  - name: Design eval prompts
+    href: evaluation-designing-prompts.md
+  - name: Write assertions
+    href: evaluation-writing-assertions.md
+  - name: Derive quality signals
+    href: evaluation-quality-signals.md
+  - name: Evaluate multi-turn conversations
+    href: evaluation-multi-turn.md
+  - name: Organize test categories and iterate
+    href: evaluation-test-categories.md
 - name: Publish
   items:
   - name: Overview
