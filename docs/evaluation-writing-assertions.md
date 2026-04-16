@@ -4,7 +4,7 @@ description: Learn how to create specific, verifiable assertions that define suc
 author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
-ms.topic: concept
+ms.topic: concept-article
 ---
 
 # Write assertions

@@ -4,7 +4,7 @@ description: Learn foundational concepts, terminology, and eval-driven developme
 author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
-ms.topic: concept
+ms.topic: concept-article
 ---
 
 # Understand agent evaluation
@@ -198,7 +198,7 @@ This upfront work means:
 
 Before diving into how to create evaluations, let's establish a shared vocabulary.
 
-> 📘 **Additional resources**: For step-by-step guidance on defining your agent's purpose and key scenarios, see [Define your agent's purpose and key scenarios](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-define-purpose) on Microsoft Learn.
+> 📘 **Additional resources**: For step-by-step guidance on defining your agent's purpose and key scenarios, see [Define your agent's purpose and key scenarios](/microsoft-copilot-studio/guidance/evaluation-define-purpose) on Microsoft Learn.
 
 ### Test case
 
@@ -317,9 +317,9 @@ You can apply multiple graders to the same test case, each checking a different 
 >
 > | Concept | This Guide | Azure AI Foundry | Copilot Studio |
 > | --------- | ------------ | ------------------ | ----------------- |
-> | Mechanism that checks a single assertion and returns pass/fail | Grader | [Grader](https://learn.microsoft.com/azure/ai-foundry/concepts/evaluation-evaluators/azure-openai-graders) | — |
-> | Higher-level quality dimension that categorizes what you're measuring | Quality Signal | [Evaluator](https://learn.microsoft.com/azure/foundry/concepts/observability#evaluation) | Quality Signal |
-> | Whether evaluation is manual or automated | — | — | [Test Method](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-checklist) |
+> | Mechanism that checks a single assertion and returns pass/fail | Grader | [Grader](/azure/ai-foundry/concepts/evaluation-evaluators/azure-openai-graders) | — |
+> | Higher-level quality dimension that categorizes what you're measuring | Quality Signal | [Evaluator](/azure/foundry/concepts/observability#evaluation) | Quality Signal |
+> | Whether evaluation is manual or automated | — | — | [Test Method](/microsoft-copilot-studio/guidance/evaluation-checklist) |
 >
 > **How they fit together**: A *grader* checks one assertion (e.g., "does the response contain '15 days'?"). Multiple graded assertions roll up into a *quality signal* or *evaluator*—a higher-level dimension like "Policy Accuracy" or "Groundedness." The *test method* is orthogonal: it describes *how* you run the evaluation (manual human review vs. automated), not *what* you're checking.
 

@@ -4,7 +4,7 @@ description: Learn how to structure test suites into categories, ensure coverage
 author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
-ms.topic: concept
+ms.topic: concept-article
 ---
 
 # Organize test categories and iterate
@@ -445,6 +445,6 @@ When you implement these practices, you transform agent quality from a subjectiv
 
 ## Additional resources
 
-- [Microsoft Copilot Studio: Agent Evaluation](https://learn.microsoft.com/microsoft-copilot-studio/analytics-agent-evaluation-intro)
-- [Design and Operationalize Agent Evaluation](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-overview)
-- [Evaluation Checklist Template](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-checklist)
+- [Microsoft Copilot Studio: Agent Evaluation](/microsoft-copilot-studio/analytics-agent-evaluation-intro)
+- [Design and Operationalize Agent Evaluation](/microsoft-copilot-studio/guidance/evaluation-overview)
+- [Evaluation Checklist Template](/microsoft-copilot-studio/guidance/evaluation-checklist)

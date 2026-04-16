@@ -4,7 +4,7 @@ description: Learn how to design and run evaluations that test multi-turn conver
 author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
-ms.topic: concept
+ms.topic: concept-article
 ---
 
 # Evaluate multi-turn conversations

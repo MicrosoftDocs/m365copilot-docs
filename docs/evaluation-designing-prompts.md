@@ -4,7 +4,7 @@ description: Learn how to write effective evaluation prompts that yield actionab
 author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
-ms.topic: concept
+ms.topic: concept-article
 ---
 
 # Design eval prompts

@@ -4,7 +4,7 @@ description: Learn how to discover, track, and communicate quality signals that 
 author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
-ms.topic: concept
+ms.topic: concept-article
 ---
 
 # Derive quality signals
@@ -13,7 +13,7 @@ Quality signals provide the vocabulary for diagnosing what works and what doesn'
 
 ## Why quality signals matter
 
-Quality signals transform individual test failures into patterns you can diagnose, track, and communicate. Where assertions tell you *what* failed ("PTO-003 didn't contain '15 days'"), quality signals tell you *why* and help you prioritize ("Policy Accuracy is at 73%—our knowledge base has stale documents"). For more on this framing, see [Defining Agent Quality](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-define-quality).
+Quality signals transform individual test failures into patterns you can diagnose, track, and communicate. Where assertions tell you *what* failed ("PTO-003 didn't contain '15 days'"), quality signals tell you *why* and help you prioritize ("Policy Accuracy is at 73%—our knowledge base has stale documents"). For more on this framing, see [Defining Agent Quality](/microsoft-copilot-studio/guidance/evaluation-define-quality).
 
 ## Quality signals vs. assertions
 
