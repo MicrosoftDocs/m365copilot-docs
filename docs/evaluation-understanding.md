@@ -1,6 +1,15 @@
+---
+title: Understand agent evaluation for Microsoft 365 Copilot
+description: Learn foundational concepts, terminology, and eval-driven development for evaluating Declarative Agents and Custom Engine Agents.
+author: sathya-raveendran
+ms.author: saraveen
+ms.date: 04/16/2026
+ms.topic: concept
+---
+
 # Understand agent evaluation
 
-This guide helps developers of [Declarative Agents](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/overview-declarative-agent) and [Custom Engine Agents](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/overview-custom-engine-agent) design and run evaluations (evals) to improve agent quality. Whether you're building with Copilot Studio, the Microsoft 365 Agents SDK, or Teams AI Library, the concepts in this guide apply universally.
+This guide helps developers of [Declarative Agents](overview-declarative-agent.md) and [Custom Engine Agents](overview-custom-engine-agent.md) design and run evaluations (evals) to improve agent quality. Whether you're building with Copilot Studio, the Microsoft 365 Agents SDK, or Teams AI Library, the concepts in this guide apply universally.
 
 ## Why evaluation matters
 
@@ -80,7 +89,7 @@ How you approach evaluation depends on whether you're building a Declarative Age
 | Aspect | Declarative Agent | Custom Engine Agent |
 | -------- | ------------------- | --------------------- |
 | **What you control** | Instructions, knowledge sources, actions/plugins | Everything: orchestrator, models, tools, reasoning |
-| **Orchestration testing** | M365 Copilot orchestrator handles core orchestration. Test whether the agent follows your instructions and selects the right capabilities—use [developer mode](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio) to inspect which capabilities and actions were executed | Evaluate reasoning traces and tool selection logic directly in your orchestration code |
+| **Orchestration testing** | M365 Copilot orchestrator handles core orchestration. Test whether the agent follows your instructions and selects the right capabilities—use [developer mode](debugging-agents-copilot-studio.md) to inspect which capabilities and actions were executed | Evaluate reasoning traces and tool selection logic directly in your orchestration code |
 | **Knowledge retrieval** | Test whether the right knowledge sources are called and correct information is retrieved. Developer mode shows which capabilities executed, search text used, and number of results returned | Test your custom RAG pipeline end-to-end with full visibility into retrieval scores and chunks |
 | **Tool/Action invocation** | Test whether actions are matched and executed with correct parameters. Developer mode shows matched functions, selected functions, execution status, latency, and request/response details | Test your tool chain directly with full parameter visibility and custom logging |
 | **Safety/RAI** | Built-in guardrails from Copilot; test that your instructions don't bypass them | You own RAI compliance; must build safety evaluations yourself |
@@ -95,7 +104,7 @@ When evaluating Declarative Agents, you're testing whether your *configuration* 
 - Are the right knowledge sources being called for each query?
 - Are my actions matched and executed with correct parameters?
 
-**Testing tip**: Use [developer mode](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio) (`-developer on`) in Microsoft 365 Copilot to inspect orchestration decisions. The debug card shows:
+**Testing tip**: Use [developer mode](debugging-agents-copilot-studio.md) (`-developer on`) in Microsoft 365 Copilot to inspect orchestration decisions. The debug card shows:
 
 - Which capabilities were executed and their response stats
 - Which action functions were matched and selected
@@ -189,7 +198,7 @@ This upfront work means:
 
 Before diving into how to create evaluations, let's establish a shared vocabulary.
 
-> 📘 **Additional resources**: For step-by-step guidance on defining your agent's purpose and key scenarios, see [Define your agent's purpose and key scenarios](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/evaluation-define-purpose) on Microsoft Learn.
+> 📘 **Additional resources**: For step-by-step guidance on defining your agent's purpose and key scenarios, see [Define your agent's purpose and key scenarios](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-define-purpose) on Microsoft Learn.
 
 ### Test case
 
@@ -308,9 +317,9 @@ You can apply multiple graders to the same test case, each checking a different 
 >
 > | Concept | This Guide | Azure AI Foundry | Copilot Studio |
 > | --------- | ------------ | ------------------ | ----------------- |
-> | Mechanism that checks a single assertion and returns pass/fail | Grader | [Grader](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation-evaluators/azure-openai-graders) | — |
-> | Higher-level quality dimension that categorizes what you're measuring | Quality Signal | [Evaluator](https://learn.microsoft.com/en-us/azure/foundry/concepts/observability#evaluation) | Quality Signal |
-> | Whether evaluation is manual or automated | — | — | [Test Method](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/evaluation-checklist) |
+> | Mechanism that checks a single assertion and returns pass/fail | Grader | [Grader](https://learn.microsoft.com/azure/ai-foundry/concepts/evaluation-evaluators/azure-openai-graders) | — |
+> | Higher-level quality dimension that categorizes what you're measuring | Quality Signal | [Evaluator](https://learn.microsoft.com/azure/foundry/concepts/observability#evaluation) | Quality Signal |
+> | Whether evaluation is manual or automated | — | — | [Test Method](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-checklist) |
 >
 > **How they fit together**: A *grader* checks one assertion (e.g., "does the response contain '15 days'?"). Multiple graded assertions roll up into a *quality signal* or *evaluator*—a higher-level dimension like "Policy Accuracy" or "Groundedness." The *test method* is orthogonal: it describes *how* you run the evaluation (manual human review vs. automated), not *what* you're checking.
 

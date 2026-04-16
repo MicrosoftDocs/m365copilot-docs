@@ -1,3 +1,12 @@
+---
+title: Evaluate multi-turn conversations for Copilot agents
+description: Learn how to design and run evaluations that test multi-turn conversation flows, context retention, and multi-step tasks.
+author: sathya-raveendran
+ms.author: saraveen
+ms.date: 04/16/2026
+ms.topic: concept
+---
+
 # Evaluate multi-turn conversations
 
 Real users don't interact with agents in isolated, single-question exchanges. They have conversations—asking follow-up questions, providing information incrementally, and completing tasks that span multiple turns. Multi-turn evaluation tests your agent's ability to maintain context, complete multi-step tasks, and handle the natural flow of conversation.

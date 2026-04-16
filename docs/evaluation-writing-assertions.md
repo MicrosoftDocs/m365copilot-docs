@@ -1,3 +1,12 @@
+---
+title: Write assertions for Copilot agent evaluation
+description: Learn how to create specific, verifiable assertions that define success criteria for Copilot agent evaluation test cases.
+author: sathya-raveendran
+ms.author: saraveen
+ms.date: 04/16/2026
+ms.topic: concept
+---
+
 # Write assertions
 
 Assertions are the heart of evaluation—they define what "correct" means for each test case. A well-written assertion is specific enough that anyone can determine pass or fail, yet focused enough to pinpoint exactly what went wrong when failures occur.

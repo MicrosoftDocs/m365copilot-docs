@@ -1,3 +1,12 @@
+---
+title: Design eval prompts for Copilot agent evaluation
+description: Learn how to write effective evaluation prompts that yield actionable results when testing Copilot agents.
+author: sathya-raveendran
+ms.author: saraveen
+ms.date: 04/16/2026
+ms.topic: concept
+---
+
 # Design eval prompts
 
 The quality of your evaluation depends on the quality of your prompts. A well-designed prompt tests what you intend to test—no more, no less. This section covers how to write effective evaluation prompts that yield actionable results.

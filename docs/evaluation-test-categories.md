@@ -1,3 +1,12 @@
+---
+title: Organize test categories and iterate on Copilot agent evaluation
+description: Learn how to structure test suites into categories, ensure coverage, and establish an iteration rhythm for agent quality.
+author: sathya-raveendran
+ms.author: saraveen
+ms.date: 04/16/2026
+ms.topic: concept
+---
+
 # Organize test categories and iterate
 
 A sustainable evaluation practice requires organization. This section covers how to structure your test suites into categories, ensure comprehensive coverage, and establish an iteration rhythm that improves agent quality over time.
@@ -436,6 +445,6 @@ When you implement these practices, you transform agent quality from a subjectiv
 
 ## Additional resources
 
-- [Microsoft Copilot Studio: Agent Evaluation](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-intro)
-- [Design and Operationalize Agent Evaluation](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/evaluation-overview)
-- [Evaluation Checklist Template](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/evaluation-checklist)
+- [Microsoft Copilot Studio: Agent Evaluation](https://learn.microsoft.com/microsoft-copilot-studio/analytics-agent-evaluation-intro)
+- [Design and Operationalize Agent Evaluation](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-overview)
+- [Evaluation Checklist Template](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-checklist)

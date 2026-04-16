@@ -1,10 +1,19 @@
+---
+title: Derive quality signals for Copilot agent evaluation
+description: Learn how to discover, track, and communicate quality signals that reveal patterns across agent evaluation results.
+author: sathya-raveendran
+ms.author: saraveen
+ms.date: 04/16/2026
+ms.topic: concept
+---
+
 # Derive quality signals
 
 Quality signals provide the vocabulary for diagnosing what works and what doesn't in your agent's responses. While assertions tell you *what* failed, quality signals help you understand *why* and identify patterns across failures.
 
 ## Why quality signals matter
 
-Quality signals transform individual test failures into patterns you can diagnose, track, and communicate. Where assertions tell you *what* failed ("PTO-003 didn't contain '15 days'"), quality signals tell you *why* and help you prioritize ("Policy Accuracy is at 73%—our knowledge base has stale documents"). For more on this framing, see [Defining Agent Quality](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/evaluation-define-quality).
+Quality signals transform individual test failures into patterns you can diagnose, track, and communicate. Where assertions tell you *what* failed ("PTO-003 didn't contain '15 days'"), quality signals tell you *why* and help you prioritize ("Policy Accuracy is at 73%—our knowledge base has stale documents"). For more on this framing, see [Defining Agent Quality](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-define-quality).
 
 ## Quality signals vs. assertions
 
