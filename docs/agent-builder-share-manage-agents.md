@@ -4,7 +4,7 @@ description: Learn how to share and manage agents built with Microsoft 365 Copil
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 03/31/2026
+ms.date: 04/17/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -25,8 +25,8 @@ The following table highlights the key differences between publishing and sharin
 |         | Sharing | Publishing |
 | ------- | ------- | ------- |
 | **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. | Formal deployment for broad use, integration, scaled across specified channels (for example, Teams, Copilot) or the entire organization. |
-| **Mechanism** | Owner/co-owners use **Manage Sharing** to specify up to 98 users by name or email. The specified users receive direct access, but the agent remains private and not broadly discoverable. | Owner/co-owners select **Publish** in Copilot Studio, select the target channel (Teams, Copilot, and more), and complete any required approval flows. The agent becomes discoverable and accessible to intended audience. |
-| **Audience** | Up to 98 named users (individuals, groups, or teams). | Organization-wide or channel-specific. |
+| **Mechanism** | Owner/co-owners use **Manage Sharing** to specify individuals, groups, or teams by name or email. The specified recipients receive direct access, but the agent remains private and not broadly discoverable. | Owner/co-owners select **Publish** in Copilot Studio, select the target channel (Teams, Copilot, and more), and complete any required approval flows. The agent becomes discoverable and accessible to the intended audience. |
+| **Audience** | Named users (individuals, groups, or teams). | Organization-wide or channel-specific. |
 | **Discoverability** | Private; only visible to specified recipients. | Public (within the chosen scope); appears in the Agent Store and specified channels. |
 | **Governance** | Minimal governance; no approval flows. | Might require approval flows, versioning, and lifecycle management. |
 | **Permissions** | Specified users can interact with, but not manage or publish, the agent. | Owner/co-owners manage publishing, updates, and lifecycle. |
