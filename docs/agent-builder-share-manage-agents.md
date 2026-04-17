@@ -25,7 +25,7 @@ The following table highlights the key differences between publishing and sharin
 |         | Sharing | Publishing |
 | ------- | ------- | ------- |
 | **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. | Formal deployment for broad use, integration, scaled across specified channels (for example, Teams, Copilot) or the entire organization. |
-| **Mechanism** | Owner/co-owners use **Manage Sharing** to specify users by name or email. The specified users receive direct access, but the agent remains private and not broadly discoverable. | Owner/co-owners select **Publish** in Copilot Studio, select the target channel (Teams, Copilot, and more), and complete any required approval flows. The agent becomes discoverable and accessible to intended audience. |
+| **Mechanism** | Owner/co-owners use **Manage Sharing** to specify individuals, groups, or teams by name or email. The specified recipients receive direct access, but the agent remains private and not broadly discoverable. | Owner/co-owners select **Publish** in Copilot Studio, select the target channel (Teams, Copilot, and more), and complete any required approval flows. The agent becomes discoverable and accessible to the intended audience. |
 | **Audience** | Named users (individuals, groups, or teams). | Organization-wide or channel-specific. |
 | **Discoverability** | Private; only visible to specified recipients. | Public (within the chosen scope); appears in the Agent Store and specified channels. |
 | **Governance** | Minimal governance; no approval flows. | Might require approval flows, versioning, and lifecycle management. |
