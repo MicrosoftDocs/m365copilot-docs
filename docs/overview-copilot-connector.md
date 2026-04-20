@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 02/10/2026
+ms.date: 04/20/2026
 ---
 
 # Microsoft 365 Copilot connectors overview
@@ -13,7 +13,7 @@ ms.date: 02/10/2026
 Microsoft 365 Copilot connectors allow you to bring external, line-of-business data into Microsoft 365 Copilot so your users can search, reason over, and act on more of your enterprise content. The platform supports two connector models:
 
 - **Synced connectors** ingest and index external content into Microsoft Graph.
-- **Federated connectors (early access preview)** retrieve content in real time using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
+- **Federated connectors** retrieve content in real time using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
 
 Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Context IQ, and Microsoft 365 Copilot.
 
@@ -35,9 +35,6 @@ Microsoft 365 Copilot supports two connector models tailored to different integr
 | Availability | Global, GCC, GCCH | Varies by federated connector availability |
 
 For more information about federated connectors, see [Federated connectors overview](/microsoftsearch/federated-connectors-overview).
-
-> [!NOTE]
-> Federated connectors are in early access preview and are available only to [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) and [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release) members. Early access preview features are still in development and are subject to change.
 
 ## How connector content surfaces in Microsoft 365 Copilot
 
