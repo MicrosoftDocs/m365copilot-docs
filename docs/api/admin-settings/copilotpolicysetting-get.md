@@ -20,6 +20,8 @@ Read the properties of a [copilotPolicySetting](resources/copilotpolicysetting.m
 
 Retrieve the current value of a Copilot policy setting by its identifier. The API resolves the correct underlying policy service (CPS or Intune) and returns the setting value along with the associated policy ID.
 
+[!INCLUDE [national-cloud-support](../includes/global-only.md)]
+
 ## Permissions
 
 [!INCLUDE [permissions-intro](../includes/permissions-intro.md)]
