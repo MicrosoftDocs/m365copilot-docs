@@ -27,7 +27,7 @@ This schema version introduces the following changes from [version 2.3](plugin-m
 
 ## JSON schema
 
-To view the [JSON schema](https://json-schema.org/) described in this document, see [schema.json](https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json).
+To view the [JSON Schema](https://json-schema.org/) described in this document, see [schema.json](https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json).
 
 ## Conventions
 
