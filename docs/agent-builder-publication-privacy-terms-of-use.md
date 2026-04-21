@@ -1,8 +1,8 @@
 ---
 title: Privacy statement and terms of use for agents
 description: Provide valid privacy statement and terms of use URLs when you submit an agent from Agent Builder to your org catalog.
-author: jasonxian-msft
-ms.author: jasonxian
+author: sophie-roy3
+ms.author: sophieroy
 ms.localizationpriority: medium
 ms.date: 04/21/2026
 ms.topic: article
