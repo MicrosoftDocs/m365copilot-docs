@@ -1,8 +1,8 @@
 ---
 title: Submit agents from Agent Builder to your org catalog
 description: Learn how to submit agents built with Agent Builder to your organization's catalog for admin review and publication in the Microsoft 365 Copilot Agent Store.
-author: jasonxian-msft
-ms.author: jasonxian
+author: sophie-roy3
+ms.author: sophieroy
 ms.localizationpriority: medium
 ms.date: 04/21/2026
 ms.topic: article
