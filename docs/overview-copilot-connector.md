@@ -38,7 +38,7 @@ For more information about federated connectors, see [Federated connectors overv
 
 ## How connector content surfaces in Microsoft 365 Copilot
 
-Synced connectors ingest content into Microsoft Graph where the data semantically indexed and made available to Copilot. Users can find, summarize, and learn from this content using natural language prompts. They can also select citations in Copilot responses to preview external items stored in Microsoft Graph.
+Synced connectors ingest content into Microsoft Graph where the data is semantically indexed and made available to Copilot. Users can find, summarize, and learn from this content using natural language prompts. They can also select citations in Copilot responses to preview external items stored in Microsoft Graph.
 
 Federated connectors surface real-time information from your external service. Instead of referencing indexed items, citations refer to content returned directly from your MCP server. No content is synced or stored in Microsoft Graph.
 
