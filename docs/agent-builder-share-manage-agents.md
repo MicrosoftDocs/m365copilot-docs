@@ -90,7 +90,7 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 Use the **About this agent** dialog to update the metadata that's visible in the Agent Store and in your agent's About info in Microsoft 365 Copilot. You can open this dialog for any agent you own, whether or not it's shared or submitted to your org catalog.
 
-To open the dialog, select **More options** (the overflow menu) in the agent authoring header, and then select **About this agent**.
+To open the dialog, select the **More** ellipses (**...**) in the agent authoring header, and then select **About this agent**.
 
 The following fields are available.
 

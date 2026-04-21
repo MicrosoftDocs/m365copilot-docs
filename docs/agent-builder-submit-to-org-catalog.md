@@ -74,7 +74,7 @@ Ensure your agent is ready for organizational use before you submit.
 
 1. If your draft contains unpublished changes, select **Update** to publish them. Submission uses the latest published version of your agent.
 
-1. In the agent authoring header, select **More options** (the overflow menu), and then select **Submit to your org catalog**.
+1. In the agent authoring header, select the **More** ellipses (**...**), and then select **Submit to your org catalog**.
 
    You can also start submission from:
 
@@ -101,7 +101,7 @@ Once submitted, the dialog shows **Submitted for admin approval** along with nex
 
 ## Track submission status
 
-To check status at any time, open the agent, select **More options**, and then select **Submit to your org catalog**. The dialog shows the current state.
+To check status at any time, open the agent, select the **More** ellipses (**...**), and then select **Submit to your org catalog**. The dialog shows the current state.
 
 | Status | Meaning |
 | --- | --- |
@@ -130,7 +130,7 @@ Once your agent is approved, you can open its Agent Store listing to share the U
 
 **From the submission dialog:**
 
-1. Open the agent and select **More options** > **Submit to your org catalog**.
+1. Open the agent and select the **More** ellipses (**...**) > **Submit to your org catalog**.
 1. On the **Approved** banner, select **Go to Agent Store**.
 
 **From All agents:**
