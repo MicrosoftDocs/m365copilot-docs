@@ -97,7 +97,7 @@ The following fields are available.
 | Field | Required | Max length | Description |
 | --- | --- | --- | --- |
 | **Short description** | Yes | 80 characters | A concise summary of what the agent does. Shown in the Agent Store and in the agent's About info. Default: *Built using Microsoft 365 Copilot Agent Builder*. |
-| **Creator website** | Optional | 2,048 characters | A link to more information about you or your team. Opens when users select the creator's name in the agent details pane. Must be a valid HTTPS URL. |
+| **Creator website** | Optional | 2,048 characters | A link to more information about you or your team, such as your profile page, your team's SharePoint site, or an internal support page. Opens when users select the creator's name in the agent details pane. Must be a valid HTTPS URL. |
 | **Privacy statement** | Optional | 2,048 characters | A link to your organization's privacy statement. Must be a valid HTTPS URL. |
 | **Terms of use** | Optional | 2,048 characters | A link to your organization's terms of use. Must be a valid HTTPS URL. |
 

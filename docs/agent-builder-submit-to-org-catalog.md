@@ -88,7 +88,7 @@ Ensure your agent is ready for organizational use before you submit.
    | **Display name** | 30 characters | The name that appears in the Agent Store. |
    | **Short description** | 80 characters | A concise summary of what the agent does. Default: *Built using Microsoft 365 Copilot Agent Builder*. |
    | **Developer name** | 32 characters | Your name or your team's name. |
-   | **Creator website** | 2,048 characters | A link to more information. Opens when users select the creator's name in the agent details pane. Must be a valid HTTPS URL. Replace the default placeholder link with your own. |
+   | **Creator website** | 2,048 characters | A link to more information about you or your team, such as your profile page, your team's SharePoint site, or an internal support page. Opens when users select the creator's name in the agent details pane. Must be a valid HTTPS URL. Replace the default placeholder link with your own. |
    | **Privacy statement** | 2,048 characters | A link to your organization's privacy statement. Must be a valid HTTPS URL. Replace the default placeholder link with your organization's URL. For details, see [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md). |
    | **Terms of use** | 2,048 characters | A link to your organization's terms of use. Must be a valid HTTPS URL. Replace the default placeholder link with your organization's URL. |
 
