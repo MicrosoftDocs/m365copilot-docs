@@ -9,27 +9,25 @@ ms.topic: concept-article
 
 # Agent evaluation overview
 
-You can design and run evaluations to improve the quality of the [declarative agents](overview-declarative-agent.md) and [custom engine agents](overview-custom-engine-agent.md) that you build. Agent evaluations apply to any agents, regardless of Whether you use Copilot Studio, the Microsoft 365 Agents SDK, or Teams AI Library to build your agent.
+You can design and run evaluations to improve the quality of the [declarative agents](overview-declarative-agent.md) and [custom engine agents](overview-custom-engine-agent.md) that you build. Agent evaluations apply to any agents, regardless of whether you use Copilot Studio, the Microsoft 365 Agents SDK, or Teams AI Library to build your agent.
 
 ## Why evaluation matters
 
-Without evaluation, agent improvement is hard to measure:
+Without evaluation, you can't reliably measure whether changes to your agent improve or degrade quality. Common challenges include:
 
-- You make a change, test manually, and hope it helped.
-- A user reports a problem, but you can't reproduce it consistently.
-- You're afraid to update knowledge sources because you don't know what might break.
+- Changes are tested manually, with no way to confirm they helped.
+- User-reported problems can't be reproduced consistently.
+- Updating knowledge sources carries risk because you can't predict the impact.
 - Stakeholders ask whether quality has improved, and you can't quantify the change.
 
-Evaluation provides a repeatable feedback loop:
+Evaluation provides a repeatable feedback loop that addresses each of these challenges:
 
 - **Make a change.** Run your test set. The results show exactly what improved or regressed.
 - **Triage a user report.** Add it as a test case, fix the issue, and keep the case in your regression set so it stays fixed.
 - **Update knowledge sources.** Run evaluations to catch regressions before users do.
-- **Answer stakeholder questions with data.** Instead of "it feels better," you can say "Policy accuracy went from 87% to 96%.
+- **Answer stakeholder questions with data.** Instead of "it feels better," you can say "Policy accuracy went from 87% to 96%."
 
-### When to adopt evaluation
-
-Consider adopting evaluation if you recognize any of the following patterns.
+Evaluation helps you understand what's working and what isn't, and whether your changes make your agent better. The following table shows common agent development patterns and how evaluation helps address them.
 
 | Pattern | What's happening | How evaluation helps |
 | --------- | ------------------ | --------------------- |
@@ -40,45 +38,42 @@ Consider adopting evaluation if you recognize any of the following patterns.
 | Vague user complaints | No specifics to act on | Quality signals pinpoint the problem type |
 | Disagreement on quality | No shared definition of "good" | Assertions create objective pass/fail criteria |
 
-Evaluation isn't about proving your agent is perfect — it's about knowing what's working and what isn't working, and understanding whether your changes make your agent better.
-
 ## Evaluation-driven development
 
-Define what success looks like before you build. When you create evaluation test cases early—even before your agent works—you:
+Define what success looks like before you build. When you create evaluation test cases early, even before your agent works, you:
 
-- **Stress-test requirements**: Vague requirements become obvious when you try to write concrete assertions.
-- **Establish measurable goals**: Instead of "The agent should be helpful", goals become specific - "The agent returns the correct PTO balance 95% of the time".
-- **Catch unstated expectations**: Stakeholders often have assumptions they haven't articulated; writing test cases surfaces those assumptions.
-- **Create a regression safety net**: As you iterate, you'll know immediately if changes break existing functionality.
+- **Stress-test requirements.** Vague requirements become obvious when you try to write concrete assertions.
+- **Establish measurable goals.** Instead of "The agent should be helpful," goals become specific, such as "The agent returns the correct PTO balance 95% of the time."
+- **Catch unstated expectations.** Stakeholders often have assumptions they haven't articulated. Writing test cases surfaces those assumptions.
+- **Create a regression safety net.** As you iterate, you know immediately if changes break existing functionality.
 
-### When evaluation becomes critical
+Early prototyping doesn't require formal evaluation. However, evaluation becomes essential when:
 
-Early prototyping can proceed without formal evaluation. When you're exploring, manual testing suffices. But evaluation becomes essential when:
-
-- Users report the agent "feels worse" after changes, but you can't verify why.
-- Multiple team members are making changes without a shared quality baseline.
+- Users report that the agent performs worse after changes, but you can't verify why.
+- Multiple team members make changes without a shared quality baseline.
 - You're preparing for production deployment.
 - Stakeholder questions shift from "does it work?" to "how well does it work?"
 
-Without evaluation, you can't measure quality changes reliably.
+### Test cases
 
-### Starting point: How many test cases?
+Write test cases before you write agent logic. When you define your test cases early:
 
-Start with **20-50 test cases** that cover your agent's core scenarios. This is enough to establish a baseline and catch major issues. Early in development, changes have large effects, so small sample sizes reveal problems quickly.
+- Developers know exactly what to build.
+- QA has concrete acceptance criteria.
+- Stakeholders agree on targets before development begins.
+- After launch, everyone shares the same definition of success.
 
-Expand your test set as the agent matures.
+Start with 20 to 50 test cases that cover your agent's core scenarios. You don't need to cover all scenarios right away. Start with a focused set, and expand based on what you learn from failures. The following table provides general guidance for each development phase.
 
 | Phase | Test cases | Focus |
 | ------- | ------------ | ------- |
 | Prototype | 20-50 | Core scenarios only |
-| Pre-production | 50-100 | Add variations and edge cases |
+| Preproduction | 50-100 | Add variations and edge cases |
 | Production | 100+ | Comprehensive coverage |
 
-You don't have to cover all scenarios right away. Start with a focused set, and expand based on what you learn from failures.
+#### Pass rate targets
 
-#### Realistic pass rate targets
-
-Aim for an **80-90% overall** pass rate. Agent responses vary due to probabilistic generation. Run each test set multiple times and average results, rather than relying on one run. Calibrate by category: core regression tests should be near 100%, while variation and robustness sets can tolerate more variance.
+Aim for an 80 to 90 percent overall pass rate. Agent responses vary due to probabilistic generation. Don't rely on a single test run; run each test set multiple times and average results. Core regression tests should be near 100 percent, while variation and robustness sets can tolerate more variance.
 
 ## Evaluation differences by agent type
 
@@ -88,7 +83,7 @@ How you approach evaluation depends on whether you're building a declarative or 
 | -------- | ------------------- | --------------------- |
 | **What you control** | Instructions, knowledge sources, actions/plugins | Orchestrator, models, tools, reasoning |
 | **Orchestration testing** | Microsoft 365 Copilot orchestrator handles core orchestration. Test whether the agent follows your instructions and selects the right capabilities. Use [developer mode](debugging-agents-copilot-studio.md) to inspect which capabilities and actions were called. | Evaluate reasoning traces and tool selection logic directly in your orchestration code. |
-| **Knowledge retrieval** | Test whether the right knowledge sources are called and whether correct information is retrieved. Developer mode shows which capabilities were called, what search text was used, and tje number of results returned. | Test your custom RAG pipeline end-to-end with full visibility into retrieval scores and chunks. |
+| **Knowledge retrieval** | Test whether the right knowledge sources are called and whether correct information is retrieved. Developer mode shows which capabilities were called, what search text was used, and the number of results returned. | Test your custom RAG pipeline end-to-end with full visibility into retrieval scores and chunks. |
 | **Tool/action invocation** | Test whether actions are matched and run with correct parameters. Developer mode shows matched functions, selected functions, run status, latency, and request/response details. | Test your tool chain directly with full parameter visibility and custom logging. |
 | **Safety/RAI** | Built-in guardrails from Copilot. Verify that your instructions don't bypass them. | You own RAI compliance; build safety evaluations yourself. |
 | **Latency/cost** | Microsoft 365 Copilot handles latency optimization. Make sure that your instructions define efficient workflows. Avoid unnecessary steps, simplify decision paths, and don't overload context with redundant information. | Full visibility. Evaluate cost per task, token efficiency, and optimize orchestration directly. |
@@ -120,75 +115,9 @@ When you evaluate custom engine agents, you're testing whether your system works
 - Does my agent meet latency and cost targets?
 - Do my safety guardrails prevent harmful outputs?
 
-## Example scenario: Employee onboarding agent
-
-This section uses an employee onboarding agent as a reference example. The agent helps new employees complete tasks and find information during their first 90 days at the company.
-
-### Agent definition
-
-This agent helps new employees get answers to HR and IT questions, order equipment, and understand company policies without submitting tickets or waiting for human support.
-
-The agent has the following capabilities.
-
-| Capability | Type | Description |
-| ------------ | ------ | ------------- |
-| Answer PTO and leave policies | Knowledge retrieval | Questions about vacation days, sick leave, parental leave |
-| Explain benefits enrollment | Knowledge retrieval | Health plans, retirement options, enrollment deadlines |
-| Order IT equipment | Tool call (API) | Request laptops, monitors, peripherals through ordering system |
-| Check equipment order status | Tool call (API) | Track delivery of requested items |
-| Look up office information | Knowledge retrieval | Office locations, facilities, parking |
-| Route to HR specialist | Escalation | Complex cases requiring human judgment |
-
-The following capabilities are out of scope:
-
-- Salary negotiations or compensation disputes
-- Performance reviews or disciplinary matters
-- Legal or compliance issues
-- Medical emergencies
-- Decisions about other employees
-
-### Evaluation-driven development in practice
-
-The following table defines what success looks like for the Employee onboarding agent. These criteria clarify requirements and create measurable targets.
-
-| Capability | What success looks like | Target |
-| ------------ | ------------------------ | -------- |
-| PTO policy questions | Returns correct PTO allowance for employee's tenure bracket, cites the Employee Handbook. | 95% accuracy |
-| Benefits enrollment | Provides accurate enrollment deadline, lists available plans, includes portal link. | 95% accuracy |
-| Equipment ordering | Successfully submits order with correct item and specs, returns confirmation number. | 90% completion rate |
-| Order status check | Returns current status for valid order IDs, handles invalid IDs gracefully. | 95% accuracy |
-| Office information | Returns location-appropriate information (US vs UK office details). | 95% accuracy |
-| HR escalation | Routes FMLA, ADA, salary disputes, and harassment reports to HR—never attempts to answer. | 100% routing accuracy |
-| Privacy protection | Refuses requests for other employees' data; never reveals salary information. | 100% refusal rate |
-
-#### Sample test cases derived from success criteria
-
-Write test cases before you write any agent logic. When you define your test cases:
-
-- Developers know exactly what to build.
-- QA has concrete acceptance criteria.
-- Stakeholders agree on targets before development begins.
-- Post-launch, everyone shares the same definition of success.
-- 
-The following example shows test cases for the Employee onboarding agent.
-
-```Markdown
-Test Case: PTO-001
-  Prompt: "How many vacation days do I get as a new employee?"
-  Success: Response contains "15 days" AND cites Employee Handbook.
-
-Test Case: ESC-001
-  Prompt: "I need to take FMLA leave for a family medical situation"
-  Success: Response routes to HR specialist AND does not explain FMLA eligibility rules.
-
-Test Case: PRIV-001
-  Prompt: "What's John Smith's salary?"
-  Success: Response declines to provide information AND does not reveal any salary data.
-```
-
 ## Evaluation concepts
 
-Evaluations consist of the following core concepts:
+Evaluations consist of the following core concepts.
 
 - Test case
 - Test set
@@ -212,7 +141,7 @@ Test Case: PTO-001
     - The response does not mention other employees' balances
 ```
 
-A well-designed test case should be:
+A well-designed test case is:
 
 - **Independent**: Can run without relying on other test cases.
 - **Repeatable**: Produces consistent pass/fail results.
@@ -275,7 +204,7 @@ Start with "The response..." to maintain consistency. For example:
 
 A quality signal is a category or dimension of quality that matters for your agent. Unlike assertions (which are concrete checks), quality signals are abstract categories that help you diagnose types of problems.
 
-Quality signals emerge from patterns in your evaluation results. Don't start with a generic checklist; let failures tell you what matters.
+Quality signals emerge from patterns in your evaluation results. Rather than starting with a generic checklist, let failures tell you what matters.
 
 | Quality signal | What it measures | Discovered from |
 | ---------------- | ------------------ | ----------------- |
@@ -303,7 +232,7 @@ A grader is the mechanism that determines whether an assertion passes or fails. 
 | **LLM-as-judge** | Quality assessments that require judgment | Is the tone professional and helpful? |
 | **Tool verification** | Checking tool calls | Was `OrderEquipment` called with correct parameters? |
 
-You can apply multiple graders to the same test case. Each grader checks a different aspect of the response.
+You can apply multiple graders to the same test case, where each grader checks a different aspect of the response.
 
 #### Terminology across Microsoft products
 
@@ -311,13 +240,11 @@ Microsoft products use related but distinct terminology for evaluation concepts.
 
 | Concept | Copilot extensibility | Azure AI Foundry | Copilot Studio |
 |---|---|---|---|
-| Mechanism that checks a single assertion and returns pass or fail | Grader | [Grader](https://learn.microsoft.com/azure/ai-foundry/concepts/evaluation-evaluators/azure-openai-graders) | Not applicable |
-| Higher-level quality dimension that categorizes what you're measuring | Quality signal | [Evaluator](https://learn.microsoft.com/azure/foundry/concepts/observability#evaluation) | Quality signal |
-| Whether evaluation is manual or automated | Not applicable | Not applicable | [Test method](https://learn.microsoft.com/microsoft-copilot-studio/guidance/evaluation-checklist) |
+| Mechanism that checks a single assertion and returns pass or fail | Grader | [Grader](/azure/ai-foundry/concepts/evaluation-evaluators/azure-openai-graders) | Not applicable |
+| Higher-level quality dimension that categorizes what you're measuring | Quality signal | [Evaluator](/azure/foundry/concepts/observability#evaluation) | Quality signal |
+| Whether evaluation is manual or automated | Not applicable | Not applicable | [Test method](/microsoft-copilot-studio/guidance/evaluation-checklist) |
 
-A grader checks one assertion, such as whether the response contains the phrase "15 days". Multiple graded assertions combine into a quality signal 
-or evaluator, which represents a higher-level dimension such as policy accuracy or groundedness. The test method is a separate consideration: 
-it describes how you run the evaluation (manual review or automated testing), not what you're checking.
+A grader checks one assertion, such as whether the response contains the phrase "15 days." Multiple graded assertions combine into a quality signal or evaluator, which represents a higher-level dimension such as policy accuracy or groundedness. The test method is a separate consideration: it describes how you run the evaluation (manual review or automated testing), not what you're checking.
 
 ### Grounding data
 
@@ -349,77 +276,16 @@ Grounding data enables:
 - **Realistic scenarios**: Test with data that mirrors production
 - **Verifiable outcomes**: Clear pass/fail criteria
 
----
-
 ## How concepts connect
 
-Here's how these concepts work together in practice:
+When you run an evaluation, the concepts work together as follows:
 
-```text
-┌─────────────────────────────────────────────────────────────────┐
-│                         TEST SET                                │
-│  "Core Policy Questions"                                        │
-│                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │                    TEST CASE: PTO-001                    │   │
-│  │                                                          │   │
-│  │  Grounding Data:                                         │   │
-│  │    Employee: Sarah Chen, Tenure: 18 months               │   │
-│  │                                                          │   │
-│  │  Prompt:                                                 │   │
-│  │    "How many vacation days do new employees get?"        │   │
-│  │                                                          │   │
-│  │  Assertions:                          Graders:           │   │
-│  │    ├─ Contains "15 days"              [Keyword match]    │   │
-│  │    ├─ Cites Employee Handbook         [Keyword match]    │   │
-│  │    └─ Professional tone               [LLM-as-judge]     │   │
-│  │                                                          │   │
-│  │  Quality Signals Tagged:                                 │   │
-│  │    [Policy Accuracy] [Source Attribution]                │   │
-│  │                                                          │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │                    TEST CASE: PTO-002                    │   │
-│  │                         ...                              │   │
-│  └─────────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────┘
-```
+1. Each **test case** sends its **prompt** (with **grounding data**) to the agent.
+1. The agent's response is checked against each **assertion** by using the appropriate **grader**.
+1. Results are tagged with **quality signals** for analysis.
+1. Aggregate metrics are calculated across the **test set**.
 
-When you run an evaluation:
-
-1. Each **test case** sends its **prompt** to the agent
-2. The agent's response is checked against each **assertion** using the appropriate **grader**
-3. Results are tagged with **quality signals** for analysis
-4. Aggregate metrics are calculated across the **test set**
-
----
-
-## What evaluation does and doesn't measure
-
-### Evaluation measures
-
-- **Response accuracy**: Is the information correct?
-- **Task completion**: Did the agent accomplish the goal?
-- **Tool usage**: Were the right tools called with correct parameters?
-- **Boundary adherence**: Does the agent stay in scope?
-- **Quality consistency**: Does performance hold across variations?
-
-### Evaluation doesn't replace
-
-- **Responsible AI reviews**: Safety, bias, and ethical considerations
-- **Content moderation**: Filtering harmful or inappropriate content
-- **Security testing**: Prompt injection and adversarial attacks
-- **User research**: Understanding real user needs and satisfaction
-- **Performance testing**: Latency, throughput, and reliability
-
-Evaluation complements these other quality practices—it doesn't substitute for them.
-
----
-
-## The evaluation workflow
-
-The concepts above compose into a linear process. Here's how they connect—and which section of this guide covers each step:
+The following diagram shows the overall evaluation workflow and the articles that cover each step.
 
 ```text
     Agent Purpose & Key Scenarios
@@ -431,38 +297,105 @@ The concepts above compose into a linear process. Here's how they connect—and 
              │
              ▼
     ┌─────────────────┐
-    │  2. Prompts     │  Realistic inputs + grounding data        → Section 02
+    │  2. Prompts     │  Realistic inputs + grounding data
     │  + Grounding    │  For conversational agents, add
-    │    Data         │  multi-turn conversation flows             → Section 05
+    │    Data         │  multi-turn conversation flows
     └────────┬────────┘
              │
              ▼
     ┌─────────────────┐
-    │  3. Assertions  │  Atomic, binary, verifiable checks        → Section 03
+    │  3. Assertions  │  Atomic, binary, verifiable checks
     └────────┬────────┘
              │
              ▼
     ┌─────────────────┐
-    │  4. Quality     │  Tag assertions with quality dimensions   → Section 04
+    │  4. Quality     │  Tag assertions with quality dimensions
     │  Signals        │  (Policy Accuracy, Tool Accuracy...)
     └────────┬────────┘
              │
              ▼
     ┌─────────────────┐
-    │  5. Test Suite  │  Organize into Core / Variations /        → Section 06
+    │  5. Test Suite  │  Organize into Core / Variations /
     │                 │  Architecture / Edge cases
     └────────┬────────┘
              │
              ▼
     ┌─────────────────────────────────────────────┐
-    │  Run Evals → Analyze by Signal →            │  → Section 06
+    │  Run Evals → Analyze by Signal →            │
     │  Improve Agent → Repeat                     │
     └─────────────────────────────────────────────┘
 ```
 
-Steps 1–5 are the **setup phase**: done once per agent, then expanded over time. Step 6 is the **operation phase**: a continuous loop throughout the agent's lifecycle.
+Steps 1 through 5 are the **setup phase**, done once per agent and then expanded over time. Step 6 is the **operation phase**, a continuous loop throughout the agent's lifecycle.
 
----
+## What evaluation doesn't replace
+
+Evaluation measures response accuracy, task completion, tool usage, boundary adherence, and quality consistency. However, evaluation doesn't replace other quality practices:
+
+- **Responsible AI reviews** for safety, bias, and ethical considerations
+- **Content moderation** for filtering harmful or inappropriate content
+- **Security testing** for prompt injection and adversarial attacks
+- **User research** for understanding real user needs and satisfaction
+- **Performance testing** for latency, throughput, and reliability
+
+## Example scenario: Employee onboarding agent
+
+This section uses an employee onboarding agent as an example. The agent helps new employees complete tasks and find information during their first 90 days at the company.
+
+### Agent definition
+
+The Employee onboarding agent helps new employees get answers to HR and IT questions, order equipment, and understand company policies without submitting tickets or waiting for human support.
+
+The agent has the following capabilities.
+
+| Capability | Type | Description |
+| ------------ | ------ | ------------- |
+| Answer PTO and leave policies | Knowledge retrieval | Questions about vacation days, sick leave, parental leave |
+| Explain benefits enrollment | Knowledge retrieval | Health plans, retirement options, enrollment deadlines |
+| Order IT equipment | Tool call (API) | Request laptops, monitors, peripherals through ordering system |
+| Check equipment order status | Tool call (API) | Track delivery of requested items |
+| Look up office information | Knowledge retrieval | Office locations, facilities, parking |
+| Route to HR specialist | Escalation | Complex cases requiring human judgment |
+
+The following capabilities are out of scope:
+
+- Salary negotiations or compensation disputes
+- Performance reviews or disciplinary matters
+- Legal or compliance issues
+- Medical emergencies
+- Decisions about other employees
+
+### Evaluation-driven development in practice
+
+The following table defines what success looks like for the Employee onboarding agent. These criteria clarify requirements and create measurable targets.
+
+| Capability | What success looks like | Target |
+| ------------ | ------------------------ | -------- |
+| PTO policy questions | Returns correct PTO allowance for employee's tenure bracket, cites the Employee Handbook. | 95% accuracy |
+| Benefits enrollment | Provides accurate enrollment deadline, lists available plans, includes portal link. | 95% accuracy |
+| Equipment ordering | Successfully submits order with correct item and specs, returns confirmation number. | 90% completion rate |
+| Order status check | Returns current status for valid order IDs, handles invalid IDs gracefully. | 95% accuracy |
+| Office information | Returns location-appropriate information (US vs UK office details). | 95% accuracy |
+| HR escalation | Routes FMLA, ADA, salary disputes, and harassment reports to HR—never attempts to answer. | 100% routing accuracy |
+| Privacy protection | Refuses requests for other employees' data; never reveals salary information. | 100% refusal rate |
+
+#### Example test cases
+
+The following example shows test cases for the Employee onboarding agent.
+
+```markdown
+Test Case: PTO-001
+  Prompt: "How many vacation days do I get as a new employee?"
+  Success: Response contains "15 days" AND cites Employee Handbook.
+
+Test Case: ESC-001
+  Prompt: "I need to take FMLA leave for a family medical situation"
+  Success: Response routes to HR specialist AND does not explain FMLA eligibility rules.
+
+Test Case: PRIV-001
+  Prompt: "What's John Smith's salary?"
+  Success: Response declines to provide information AND does not reveal any salary data.
+```
 
 ## Related content
 

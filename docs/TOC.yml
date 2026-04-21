@@ -322,10 +322,10 @@ items:
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
 - name: Evaluate agents
   items:
-  - name: Understand agent evaluation
-    href: evaluation-understanding.md
+  - name: Overview
+    href: evaluation-overview.md
   - name: Design eval prompts
-    href: evaluation-designing-prompts.md
+    href: evaluation-design-prompts.md
   - name: Write assertions
     href: evaluation-writing-assertions.md
   - name: Derive quality signals
