@@ -327,7 +327,7 @@ items:
   - name: Design eval prompts
     href: evaluation-design-prompts.md
   - name: Write assertions
-    href: evaluation-writing-assertions.md
+    href: evaluation-write-assertions.md
   - name: Derive quality signals
     href: evaluation-quality-signals.md
   - name: Evaluate multi-turn conversations
