@@ -27,7 +27,7 @@ This schema version introduces the following changes from [version 2.3](plugin-m
 
 ## JSON schema
 
-The schema described in this document can be found at [https://aka.ms/json-schemas/copilot/plugin/v2.4/schema.json](https://aka.ms/json-schemas/copilot/plugin/v2.4/schema.json) in [JSON Schema](https://json-schema.org/) format.
+The schema described in this document can be found in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json)
 
 ## Conventions
 
