@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Agent evaluation overview
 
-You can design and run evaluations to improve the quality of the [declarative agents](overview-declarative-agent.md) and [custom engine agents](overview-custom-engine-agent.md) that you build. Agent evaluations apply to any agents, regardless of whether you use Copilot Studio, the Microsoft 365 Agents SDK, or Teams AI Library to build your agent.
+To improve the quality of the [declarative agents](overview-declarative-agent.md) and [custom engine agents](overview-custom-engine-agent.md) that you build, design and run evaluations. Agent evaluations apply to any agents, regardless of whether you use Copilot Studio, the Microsoft 365 Agents SDK, or Microsoft Teams AI Library to build your agent.
 
 ## Why evaluation matters
 
@@ -129,7 +129,7 @@ A test case is a single evaluation scenario that consists of:
 
 - A **prompt** (user input to test)
 - **Expected behavior** (what the agent should do)
-- **Assertions** (specific, verifiable criteria for pass/fail)
+- **Assertions** (specific, verifiable criteria for pass or fail)
 
 ```markdown
 Test Case: PTO-001
@@ -144,7 +144,7 @@ Test Case: PTO-001
 A well-designed test case is:
 
 - **Independent**: Can run without relying on other test cases.
-- **Repeatable**: Produces consistent pass/fail results.
+- **Repeatable**: Produces consistent pass or fail results.
 - **Specific**: Tests one scenario or intent.
 
 ### Test set
@@ -156,7 +156,7 @@ A test set is a collection of related test cases. Test sets allow you to:
 - Compare performance across agent versions.
 - Organize tests by capability, scenario, or quality dimension.
 
-The following is an example of a test set for the Employee onboarding agent.
+The following table shows an example of a test set for the Employee onboarding agent.
 
 | Test set name | Purpose | Test cases |
 | --------------- | --------- | ------------ |
@@ -236,9 +236,9 @@ You can apply multiple graders to the same test case, where each grader checks a
 
 #### Terminology across Microsoft products
 
-Microsoft products use related but distinct terminology for evaluation concepts. The following table maps the terms used in this guide to their equivalents in Azure AI Foundry and Microsoft Copilot Studio.
+Microsoft products use related but distinct terminology for evaluation concepts. The following table maps the terms used in this guide to their equivalents in Microsoft Foundry and Microsoft Copilot Studio.
 
-| Concept | Copilot extensibility | Azure AI Foundry | Copilot Studio |
+| Concept | Copilot extensibility | Foundry | Copilot Studio |
 |---|---|---|---|
 | Mechanism that checks a single assertion and returns pass or fail | Grader | [Grader](/azure/ai-foundry/concepts/evaluation-evaluators/azure-openai-graders) | Not applicable |
 | Higher-level quality dimension that categorizes what you're measuring | Quality signal | [Evaluator](/azure/foundry/concepts/observability#evaluation) | Quality signal |
