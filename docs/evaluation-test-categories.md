@@ -373,44 +373,46 @@ Focus on:
 
 ## Checklists
 
+This section includes checklists for coverage and agent readiness evaluations.
+
 ### Coverage checklist
 
 Use the following checklist to ensure comprehensive evaluation coverage.
 
-### Capability coverage
+#### Capability coverage
 
 - Every tool or action has at least one test case.
 - Each knowledge domain is represented.
 - Tool parameter combinations are validated.
 - Error handling is tested.
 
-### Scenario coverage
+#### Scenario coverage
 
 - Test happy paths.
 - Use ambiguous inputs to trigger clarification.
 - Validate error recovery.
 - Cover multistep workflows.
 
-### Variation coverage
+#### Variation coverage
 
 For each core scenario:
 - Include a canonical prompt.
 - Include a natural language variation.
 - Include a robustness probe, such as typos.
 
-### Boundary coverage
+#### Boundary coverage
 
 - Validate escalation conditions.
 - Handle out-of-scope requests appropriately.
 - Enforce privacy boundaries.
 - Test adversarial inputs.
 
-### Context coverage (if applicable)
+#### Context coverage (if applicable)
 
 - Represent different user contexts.
 - Test regional or role-based variations.
 
-### Multi-turn coverage (if applicable)
+#### Multi-turn coverage (if applicable)
 
 - Test slot-filling interactions.
 - Handle topic switching correctly.
@@ -421,28 +423,28 @@ For each core scenario:
 
 Use the following checklist to validate readiness. 
 
-### Before you start
+#### Before you start
 
 - Clearly define agent scope and purpose.
 - Identify key scenarios.
 - Ensure test data is available.
 - Define quality signals.
 
-### For each test case
+#### For each test case
 
 - Prompts are realistic and focused.
 - Variations are included.
 - Assertions are clear and verifiable.
 - Tool behavior is validated (if applicable).
 
-### For the test suite
+#### For the test suite
 
 - Core scenarios are covered.
 - Variations test generalization.
 - Edge cases test robustness.
 - Multi-turn flows are included (if needed).
 
-### For ongoing practice
+#### For ongoing practice
 
 - Evaluation cadence is defined.
 - Results are tracked over time.

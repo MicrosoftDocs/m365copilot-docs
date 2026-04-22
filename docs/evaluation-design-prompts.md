@@ -51,7 +51,7 @@ You can derive realistic prompts from:
 
 ### Grounded in data
 
-When grounding data is available, use specific entities, values, and identifiers. This approach makes evaluations measurable and verifiable. Grounded prompts allow precise assertions such as "The response contains '15 days'" , instead of vague checks like "The response contains the correct number".
+When grounding data is available, use specific entities, values, and identifiers. This approach makes evaluations measurable and verifiable. Grounded prompts allow precise assertions such as "The response contains '15 days'," instead of vague checks like "The response contains the correct number."
 
 **Without grounding data**  
 
@@ -113,7 +113,7 @@ The following table compares canonical prompts and natural language variants.
 
 | Technique | Canonical | Natural variant |
 |----------|----------|----------------|
-| Synonyms | "paid time off" | "vacation days", "time off", "PTO" |
+| Synonyms | "paid time off" | "vacation days," "time off," "PTO" |
 | Informal phrasing | "How many days do I receive" | "how much do I get" |
 | Implicit context | "employees with <2 years tenure" | "as a new hire" |
 | Casual casing | Proper capitalization | lowercase, minimal punctuation |
@@ -172,7 +172,7 @@ This scenario includes the following grounding data:
 **Assertions (apply to all variations):**
 
 - The response confirms the equipment order was initiated.  
-- The agent invoked the **OrderEquipment** tool .
+- The agent invoked the **OrderEquipment** tool.
 - The tool call includes "MacBook Pro 16-inch" (or equivalent).
 - The response includes an order confirmation or reference number.
 
@@ -204,7 +204,7 @@ This scenario includes the following grounding data:
 - The response lists UK bank holidays (not US holidays). 
 - The response includes at least: New Year's Day, Easter, Christmas. 
 - The response references UK policy or schedule.
-- The response doesn't mention US holidays such as July 4th or Thanksgiving. 
+- The response doesn't mention US holidays such as July 4 or Thanksgiving. 
 
 ## Prompt anti-patterns
 
@@ -261,7 +261,7 @@ This approach ensures evaluations reflect real-world usage.
 
 After you establish a strong baseline, use AI to expand coverage.
 
-- Use AI to suggest additional variations.  
+- Use AI to suggest more variations.  
 - Review each suggestion for realism and relevance.  
 - Reject prompts that are unnatural, schema-aware, or out of scope.  
 - Add prompts only where they improve coverage.  
