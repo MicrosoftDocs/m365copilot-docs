@@ -53,11 +53,6 @@
       }
     ]
   },
-  "agent_skills": [
-    {
-      "folder": "skills/research"
-    }
-  ],
   "worker_agents": [
     {
       "id": "P_2c27ae89-1f78-4ef7-824c-7d83f77eda28"

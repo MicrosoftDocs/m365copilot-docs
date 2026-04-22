@@ -21,10 +21,8 @@ Declarative agents are valuable in understanding and generating human-like text,
 This schema version introduces the following changes from [version 1.6](declarative-agent-manifest-1.6.md):
 
 - Added the optional `editorial_answers` property to define predefined question-answer pairs that the agent can use to respond to user queries based on semantic similarity.
-- Added the optional `agent_skills` property to reference skill directories containing SKILL.md files.
 - Added the optional `default_response_mode` property to the [behavior overrides object](#behavior-overrides-object) to control the default response mode for the agent.
 - Added the optional `depends_on` property to the [conversation starter object](#conversation-starters-object) to specify capability dependencies for conversation starters.
-- Added the `items_by_external_url` property to the [connection object](#connection-object) for filtering Copilot connector items by external URL.
 
 ## JSON schema
 
@@ -52,7 +50,6 @@ The declarative agent manifest object contains the following properties.
 | `disclaimer`            | [Disclaimer object](#disclaimer-object)                               | Optional. Disclaimer text that is displayed to the user at the start of a conversation. |
 | `sensitivity_label`     | [Sensitivity label object](#sensitivity-label-object)                 | Optional. Specifies a Microsoft Purview sensitivity label for the agent. |
 | `editorial_answers`     | [Editorial answers object](#editorial-answers-object)                 | Optional. Contains predefined question-answer pairs that the agent can use to respond to user queries based on semantic similarity. |
-| `agent_skills`          | Array of [Agent skill object](#agent-skill-object)                    | Optional. A list of agent skill objects that reference skill directories containing SKILL.md files. The array can't contain more than eight objects. |
 | `worker_agents`         | Array of [Worker agent object](#worker-agent-object)                  | Optional. Specifies other declarative agents that can be used by this agent. |
 | `user_overrides`        | Array of [User override object](#user-override-object)                | Optional. Specifies capabilities in the `capabilities` property that the user can modify. |
 
@@ -636,7 +633,7 @@ The depends on object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `name`   | String | Required. The name of the manifest element type. For example, `capabilities`. |
+| `name`   | String | Required. The name of the manifest element type. Must be set to `capabilities`. |
 | `id`     | String | Required. The identifier of the specific element. For example, `Email` or `WebSearch`. |
 
 ##### Depends on object example
@@ -664,14 +661,16 @@ The depends on object contains the following properties.
 
 ### Actions object
 
-Actions are an optional JSON object in the manifest. They act as developer input and can be considered as plugins.
+Actions are an optional JSON object in the manifest. They act as developer input and can be considered as plugins. An action object can be specified as a reference to a plugin manifest file using the `id` and `file` properties, or it can be an inlined representation of the plugin manifest object.
 
-The action object contains the following properties.
+The following table describes the properties for a referenced action object.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `id`     | String | Required. A unique identifier for the action. It can be a GUID. |
 | `file`   | String | Required. A path to the API plugin manifest for this action. |
+
+When specifying an action as an inlined plugin manifest, the action object must conform to the [API plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest) specification.
 
 > [!NOTE]
 > The array must contain at least one and no more than 10 objects.
@@ -680,12 +679,35 @@ The action object contains the following properties.
 
 ##### [JSON](#tab/json)
 
+The following example shows an action specified as a reference to a plugin manifest file.
+
 ```json
 {
   "actions": [
     {
       "id": "repairsPlugin",
       "file": "plugin.json"
+    }
+  ]
+}
+```
+
+The following example shows an action with an inlined plugin manifest.
+
+```json
+{
+  "actions": [
+    {
+      "schema_version": "v2.4",
+      "name_for_human": "GitHub Issues Plugin",
+      "description_for_model": "Search for GitHub issues by author, keyword or state",
+      "runtimes": [
+        {
+          "type": "OpenApi",
+          "auth": { "type": "None" },
+          "spec": { "url": "https://github.com/ai/plugins/issues/openapi.yaml" }
+        }
+      ]
     }
   ]
 }
@@ -718,7 +740,19 @@ The behavior overrides object contains the following properties.
 | ---------------------- | ----------------------------------------------------------- | ----------- |
 | `suggestions`          | [Suggestions object](#suggestions-object)                   | Optional. Contains configuration settings for the suggestions feature. |
 | `special_instructions` | [Special instructions object](#special-instructions-object) | Optional. Contains settings for injecting special instructions into the prompt. |
-| `default_response_mode` | String                                                     | Optional. The default response mode for the agent. Possible values are `Auto`, `Quick response`, and `Think deeper`. The default value is `Auto`. |
+| `default_response_mode` | String                                                     | Optional. The default response mode for the agent. This property is prefixed with `default_` because users can always override this value through the model selector UI. For details, see [Default response mode values](#default-response-mode-values). The default value is `Auto`. |
+
+#### Default response mode values
+
+The `default_response_mode` property enables agent authors to configure the default mode for their agents from the available modes in the user model selector. The value must be one of the following.
+
+- `Auto` - The agent automatically determines the best response mode based on the context of the user's query, intelligently selecting between quick responses and deeper reasoning. This is the default value if not specified.
+- `Quick response` - The agent provides fast responses optimized for low latency interactions. This mode is appropriate for agents where speed is prioritized over complex reasoning.
+- `Think deeper` - The agent uses reasoning mode to provide more thoughtful and comprehensive responses. This mode involves increased latency but is suitable for complex problem-solving scenarios where deeper analysis is beneficial.
+
+Agent authors should consider the use case when selecting a mode. For example, the increased latency involved with reasoning mode may not be appropriate for all agents, while some authors may want to always invoke reasoning for complex analytical tasks.
+
+The client respects the default mode configured in the manifest. Users can override this default via the model selector, but see a UX warning when doing so to ensure they're aware they're deviating from the agent author's intended configuration.
 
 #### Suggestions object
 
@@ -849,8 +883,8 @@ The similarity thresholds object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `min`    | Number | Required. The minimum similarity threshold. The value must be a number between 0 and 10 inclusive. |
-| `max`    | Number | Required. The maximum similarity threshold. The value must be a number between 0 and 10 inclusive. |
+| `min`    | Number | Required. The minimum similarity threshold. The value must be an integer between 0 and 10 inclusive. |
+| `max`    | Number | Required. The maximum similarity threshold. The value must be an integer between 0 and 10 inclusive. |
 
 #### Editorial answers object example
 
@@ -872,34 +906,6 @@ The similarity thresholds object contains the following properties.
       }
     ]
   }
-}
-```
-
-### Agent skill object
-
-A JSON object that references a skill directory containing a SKILL.md file with front matter metadata. Agent skills allow the declarative agent to use additional skills defined in external SKILL.md files.
-
-The agent skill object contains the following property.
-
-| Property | Type   | Description |
-| -------- | ------ | ----------- |
-| `folder` | String | Required. The relative path to the skill directory containing SKILL.md. It must contain at least one nonwhitespace character. |
-
-> [!NOTE]
-> The `agent_skills` array can't contain more than eight objects.
-
-#### Agent skill object example
-
-```json
-{
-  "agent_skills": [
-    {
-      "folder": "skills/research"
-    },
-    {
-      "folder": "skills/writing"
-    }
-  ]
 }
 ```
 
