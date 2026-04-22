@@ -57,14 +57,14 @@ Use the following common quality signals when evaluating Copilot agents:
 
 | Quality signal | Pass indicators | Fail indicators | Common causes |
 |----------------|----------------|----------------|---------------|
-| **Policy accuracy** | Correct values and dates<br>Accurate policy details<br>Consistent with current documentation | Outdated or incorrect values<br>Conflicting or fabricated details | Outdated or duplicate documents<br>Incorrect retrieval results<br>Unsupported model-generated content |
-| **Source attribution** | References to specific documents or sections<br>Clear attribution statements | No source provided<br>Vague or generic references | Missing source metadata<br>Instructions that don't require attribution |
-| **Personalization** | Region-specific or role-specific responses<br>Context-aware recommendations | Generic responses that ignore user context<br>Incorrect regional or role-based information | Missing or incomplete user context<br>Knowledge sources not segmented by audience |
-| **Tool accuracy** | Correct tool selection<br>Valid parameters and identifiers<br>All required fields populated | Missing or incorrect parameters<br>Invalid tool inputs | Ambiguous API specifications<br>Incorrect parameter mapping |
-| **Tool response handling** | Accurate communication of tool results<br>Correct handling of success and error states | Incorrect success claims<br>Ignored or misinterpreted tool errors | Missing error-handling guidance<br>Misinterpretation of tool responses |
-| **Escalation appropriateness** | Sensitive or complex issues are routed correctly<br>Compliance with escalation rules | Agent attempts to handle unsupported scenarios<br>Failure to escalate high-risk requests | Undefined escalation criteria<br>Overly permissive instructions |
-| **Privacy protection** | Refusal to disclose restricted data<br>Responses limited to authorized information | Disclosure or inference of sensitive data<br>Responses that expose protected information | Weak access controls<br>Insufficient privacy guidance |
-| **Action enablement** | Specific instructions<br>Links, identifiers, or contact details | Vague or incomplete guidance<br>Missing actionable steps | Missing procedural information in knowledge sources<br>Over-summarized responses |
+| **Policy accuracy** | Correct values and dates<br><br>Accurate policy details<br><br>Consistent with current documentation | Outdated or incorrect values<br><br>Conflicting or fabricated details | Outdated or duplicate documents<br><br>Incorrect retrieval results<br><br>Unsupported model-generated content |
+| **Source attribution** | References to specific documents or sections<br><br>Clear attribution statements | No source provided<br><br>Vague or generic references | Missing source metadata<br><br>Instructions that don't require attribution |
+| **Personalization** | Region-specific or role-specific responses<br><br>Context-aware recommendations | Generic responses that ignore user context<br><br>Incorrect regional or role-based information | Missing or incomplete user context<br><br>Knowledge sources not segmented by audience |
+| **Tool accuracy** | Correct tool selection<br><br>Valid parameters and identifiers<br><br>All required fields populated | Missing or incorrect parameters<br><br>Invalid tool inputs | Ambiguous API specifications<br><br>Incorrect parameter mapping |
+| **Tool response handling** | Accurate communication of tool results<br><br>Correct handling of success and error states | Incorrect success claims<br><br>Ignored or misinterpreted tool errors | Missing error-handling guidance<br><br>Misinterpretation of tool responses |
+| **Escalation appropriateness** | Sensitive or complex issues are routed correctly<br><br>Compliance with escalation rules | Agent attempts to handle unsupported scenarios<br><br>Failure to escalate high-risk requests | Undefined escalation criteria<br><br>Overly permissive instructions |
+| **Privacy protection** | Refusal to disclose restricted data<br><br>Responses limited to authorized information | Disclosure or inference of sensitive data<br><br>Responses that expose protected information | Weak access controls<br><br>Insufficient privacy guidance |
+| **Action enablement** | Specific instructions<br><br>Links, identifiers, or contact details | Vague or incomplete guidance<br><br>Missing actionable steps | Missing procedural information in knowledge sources<br><br>Over-summarized responses |
 
 ## How to derive quality signals
 
@@ -79,9 +79,9 @@ To derive quality signals:
 - Tag related assertions with the corresponding signal  
 - Track pass rates by signal  
 
-## Examples of quality signals in practice
+## Example of quality signals in practice
 
-### Scenario: Employee onboarding agent
+The following example shows quality signals defined for an employee onboarding agent.
 
 | Observation | Pattern identified | Quality signal |
 |-------------|------------------|----------------|
@@ -93,7 +93,7 @@ To derive quality signals:
 | Sensitive data nearly exposed | Privacy boundary risk | Privacy protection |
 | Response included next steps | Actionable response | Action enablement |
 
-### Additional examples
+The following are specific measures for quality signals.
 
 | Policy accuracy | Source attribution | Tool accuracy |
 |-----------------|-------------------|---------------|
@@ -119,6 +119,8 @@ To communicate results:
 - Track improvements over time  
 
 ## Quality signals by agent type
+
+Quality signals and priorities vary based on the type of agent you're evaluating.
 
 | Agent type | Signal | Priority |
 |------------|--------|----------|
