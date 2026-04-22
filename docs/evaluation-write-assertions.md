@@ -56,14 +56,14 @@ Verify that the response includes accurate information.
 **Pattern:** The response contains *specific value or text*.
 **Scenario:** PTO policy question.  
 **Prompt:** "How many vacation days do new employees get?"
+
 **Assertions:**
 - The response contains "15 days" or "15 days of PTO".
 - The response contains "annual" or "per year".
 - The response mentions employees with less than two years tenure.
 
-**With grounding data:**
+Include rounding data:
 
-Grounding data:
 - Policy effective date: January 1, 2024  
 - PTO for less than two years: 15 days  
 - PTO for two to five years: 20 days  
@@ -80,6 +80,7 @@ Verify that the response cites its sources.
 **Pattern:** The response cites or references *source name*.
 **Scenario:** Benefits question.  
 **Prompt:** "What health plans are available?"
+
 **Assertions:**
 - The response cites the Employee Benefits Guide.  
 - The response includes where to find more details.  
@@ -92,6 +93,7 @@ Verify that the correct tool is used.
 **Pattern:** The agent invokes *tool name*.
 **Scenario:** Equipment ordering.  
 **Prompt:** "I need to order a 16-inch MacBook Pro"
+
 **Assertions:**
 - The agent invokes the OrderEquipment tool.  
 - The tool call includes `itemType: "laptop"`.  
@@ -103,6 +105,7 @@ Verify that the correct tool is used.
 Verify that tool calls contain complete and correct parameters.
 
 **Pattern:** The tool call includes *parameter name and expected value*.
+
 **Assertions:**
 - The OrderEquipment call includes `employeeId: "EMP-12345"`.  
 - The OrderEquipment call includes `itemType: "laptop"`.  
@@ -119,6 +122,7 @@ Verify that the response correctly communicates tool results.
 - The response includes the order ID.  
 - The response communicates the delivery timeframe.  
 - The response confirms successful submission.  
+
 **Error handling:**
 - The response acknowledges the failure condition.  
 - The response suggests next steps.  
@@ -129,6 +133,7 @@ Verify that the response correctly communicates tool results.
 Verify that sensitive or complex scenarios are routed appropriately.
 
 **Pattern:** The response routes to *specialist or team*.
+
 **Assertions:**
 - The response indicates the need for human assistance.  
 - The response provides contact information or next steps.  
@@ -139,6 +144,7 @@ Verify that sensitive or complex scenarios are routed appropriately.
 Verify that inappropriate or restricted requests are declined.
 
 **Pattern:** The response declines to *prohibited action*.
+
 **Assertions:**
 - The response declines to provide restricted information.  
 - The response explains the limitation.  
@@ -149,6 +155,7 @@ Verify that inappropriate or restricted requests are declined.
 Verify that the response reflects user context.
 
 **Pattern:** The response reflects *contextual attribute*.
+
 **Assertions:**
 - The response includes location-specific information.  
 - The response excludes irrelevant regional content.  
@@ -158,6 +165,7 @@ Verify that the response reflects user context.
 Verify that the response provides all required information.
 
 **Pattern:** The response includes *required element*.
+
 **Assertions:**
 - The response includes deadlines.  
 - The response includes access points (such as portals).  
