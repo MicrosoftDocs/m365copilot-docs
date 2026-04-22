@@ -183,7 +183,7 @@ items:
       - name: Share and manage agents
         href: agent-builder-share-manage-agents.md
       - name: Availability and language support
-        href: copilot-studio-lite-availability.md
+        href: agent-builder-regional-availability.md
       - name: Copy your agent to Copilot Studio
         href: copy-agent-to-copilot-studio.md
       - name: Extend with Copilot Studio
