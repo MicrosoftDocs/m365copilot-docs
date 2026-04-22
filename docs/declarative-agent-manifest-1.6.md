@@ -338,6 +338,7 @@ The connection object contains the following properties.
 | `connection_id` | String | Required. The unique identifier of the Copilot connector. |
 | `additional_search_terms` | String | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
 | `items_by_external_id` | Array of [Item identifier object](#item-identifier-object) | Optional. Specifies specific items by ID in the Copilot connector that are available to the agent. |
+| `items_by_external_url` | Array of [External URL object](#external-url-object) | Optional. Specifies specific items by URL in the Copilot connector that are available to the agent. |
 | `items_by_path` | Array of [Path object](#path-object) | Optional. Filters the items available to the agent by item paths (the `itemPath` [semantic label](/graph/connecting-external-content-manage-schema#semantic-labels) on items). |
 | `items_by_container_name` | Array of [Container name object](#container-name-object) | Optional. Filters the items available to the agent by container name (the `containerName` semantic label on items). |
 | `items_by_container_url` | Array of [Container URL object](#container-url-object) | Optional. Filters the items available to the agent by container URL (the `containerUrl` semantic label on items). |
@@ -354,6 +355,16 @@ The item identifier object contains the following properties.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `item_id`       | String | Required. The unique identifier of the external item. |
+
+###### External URL object
+
+Identifies an external item by its URL.
+
+The external URL object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `url`    | String | Required. The URL of the external item. |
 
 ###### Path object
 
