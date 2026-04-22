@@ -16,14 +16,12 @@ This article describes how to derive quality signals from evaluation results to 
 Quality signals provide a structured way to understand *why* agent responses succeed or fail. While assertions determine whether a response passes or fails, quality signals group those outcomes into meaningful patterns that support analysis and prioritization.
 
 Quality signals enable teams to:
-- Identify recurring failure patterns
-- Prioritize improvements based on impact
-- Track progress across iterations
-- Communicate results clearly to stakeholders
+- Identify recurring failure patterns.
+- Prioritize improvements based on impact.
+- Track progress across iterations.
+- Communicate results clearly to stakeholders.
 
-## Quality signals and assertions
-
-Quality signals represent categories of evaluation, while assertions are individual checks within those categories.
+Quality signals represent categories of evaluation, while assertions are individual checks within those categories. The following table compares assertions and quality signals.
 
 | Aspect | Assertions | Quality signals |
 |--------|-----------|----------------|
@@ -31,29 +29,11 @@ Quality signals represent categories of evaluation, while assertions are individ
 | Purpose | Determine pass or fail | Diagnose patterns |
 | Quantity | Many per test case | Few per agent |
 | Origin | Defined before testing | Derived from results |
-| Example | "Contains '15 days'" | Policy Accuracy |
+| Example | Contains "15 days" | Policy accuracy |
 
-### Examples
-
-**Policy accuracy** quality signal examples:
-- Contains correct PTO duration
-- Includes correct enrollment deadline
-- Doesn't reference outdated policy
-
-**Source attribution** quality signal examples:
-- Cites authoritative documents
-- References specific sections
-
-**Tool success** quality signal examples:
-- Invokes correct tool
-- Uses valid parameters
-- Returns correct outcome
-
-## How to identify quality signals
+## Identify quality signals from evaluation results
 
 Identify quality signals from patterns in evaluation results rather than predefined checklists. This approach ensures that signals reflect real agent behavior.
-
-### Identify signals from evaluation results
 
 Use the following process to identify quality signals:
 
@@ -70,198 +50,72 @@ The following example shows how patterns in evaluation results map to quality si
 
 | Observation | Pattern identified | Quality signal |
 |------------|-------------------|----------------|
-| Correct PTO values returned | Accurate knowledge retrieval | Policy Accuracy |
-| Source cited in response | Attribution included | Source Attribution |
+| Correct PTO values returned | Accurate knowledge retrieval | Policy accuracy |
+| Source cited in response | Attribution included | Source attribution |
 | Incorrect regional information returned | Context not used | Personalization |
-| Tool invoked with incorrect parameters | Execution error | Tool Accuracy |
-| Request routed to HR appropriately | Correct escalation | Escalation Appropriateness |
-| Sensitive data nearly exposed | Privacy boundary risk | Privacy Protection |
-| Response included next steps | Actionable response | Action Enablement |
+| Tool invoked with incorrect parameters | Execution error | Tool accuracy |
+| Request routed to HR appropriately | Correct escalation | Escalation appropriateness |
+| Sensitive data nearly exposed | Privacy boundary risk | Privacy protection |
+| Response included next steps | Actionable response | Action enablement |
 
 ## Common quality signals
 
-This section defines common quality signals used in agent evaluations and provides examples of how they apply.
+The following common quality signals used in agent evaluations and provides examples of how they apply.
 
-### Policy accuracy
+- **Policy accuracy** - Measures whether responses align with authoritative knowledge sources.
+- **Source attribution** - Measures whether responses clearly identify information sources.
+- **Personalization** - Measures whether responses use relevant user context.
+- **Tool accuracy** - Measures whether tool calls are executed correctly.
+- **Tool response handling** - Measures whether the agent correctly interprets tool output.
+- **Escalation appropriateness** - Measures whether the system routes requests to human support when needed.
+- **Privacy protection** - Measures whether sensitive information is safeguarded.
+- **Action enablement** - Measures whether responses provide clear next steps.
 
-Policy accuracy measures whether responses align with authoritative knowledge sources.
+| Quality signal | Pass indicators | Fail indicators | Common causes |
+|---|---|---|---|
+| **Policy accuracy** | <li>Correct values and dates</li><li>Accurate policy details</li><li>Consistent with current documentation</li> | <li>Outdated or incorrect values</li><li>Conflicting or fabricated details</li> | <li>Outdated or duplicate documents</li><li>Incorrect retrieval results</li><li>Unsupported model-generated content</li> |
+| **Source attribution** | <li>References to specific documents or sections</li><li>Clear attribution statements</li> | <li>No source provided</li><li>Vague or generic references</li> | <li>Missing source metadata</li><li>Instructions that don't require attribution</li> |
+| **Personalization** | <li>Region-specific or role-specific responses</li><li>Context-aware recommendations</li> | <li>Generic responses that ignore user context</li><li>Incorrect regional or role-based information</li> | <li>Missing or incomplete user context</li><li>Knowledge sources not segmented by audience</li> |
+| **Tool accuracy** | <li>Correct tool selection</li><li>Valid parameters and identifiers</li><li>All required fields populated</li> | <li>Missing or incorrect parameters</li><li>Invalid tool inputs</li> | <li>Ambiguous API specifications</li><li>Incorrect parameter mapping</li> |
+| **Tool response handling** | <li>Accurate communication of tool results</li><li>Correct handling of success and error states</li> | <li>Incorrect success claims</li><li>Ignored or misinterpreted tool errors</li> | <li>Missing error-handling guidance</li><li>Misinterpretation of tool responses</li> |
+| **Escalation appropriateness** | <li>Sensitive or complex issues are routed correctly</li><li>Compliance with escalation rules</li> | <li>Agent attempts to handle unsupported scenarios</li><li>Failure to escalate high-risk requests</li> | <li>Undefined escalation criteria</li><li>Overly permissive instructions</li> |
+| **Privacy protection** | <li>Refusal to disclose restricted data</li><li>Responses limited to authorized information</li> | <li>Disclosure or inference of sensitive data</li><li>Responses that expose protected information</li> | <li>Weak access controls</li><li>Insufficient privacy guidance</li> |
+| **Action enablement** | <li>Specific instructions</li><li>Links, identifiers, or contact details</li> | <li>Vague or incomplete guidance</li><li>Missing actionable steps</li> | <li>Missing procedural information in knowledge sources</li><li>Over-summarized responses</li> |
 
-- **Pass indicators**
-  - Correct values and dates
-  - Accurate policy details
-  - Consistent with current documentation
+### Quality signal examples
 
-- **Fail indicators**
-  - Outdated or incorrect values
-  - Conflicting or fabricated details
+The following table provides examples for common quality signals.
 
-- **Common causes**
-  - Outdated or duplicate documents
-  - Incorrect retrieval results
-  - Unsupported model-generated content
-
-### Source attribution
-
-Source attribution measures whether responses clearly identify information sources.
-
-- **Pass indicators**
-  - References to specific documents or sections
-  - Clear attribution statements
-
-- **Fail indicators**
-  - No source provided
-  - Vague or generic references
-
-- **Common causes**
-  - Missing source metadata
-  - Instructions that don't require attribution
-
-### Personalization
-
-Personalization measures whether responses use relevant user context.
-
-- **Pass indicators**
-  - Region-specific or role-specific responses
-  - Context-aware recommendations
-
-- **Fail indicators**
-  - Generic responses that ignore user context
-  - Incorrect regional or role-based information
-
-- **Common causes**
-  - Missing or incomplete user context
-  - Knowledge sources not segmented by audience
-
-### Tool accuracy
-
-Tool accuracy measures whether tool calls are executed correctly.
-
-- **Pass indicators**
-  - Correct tool selection
-  - Valid parameters and identifiers
-  - All required fields populated
-
-- **Fail indicators**
-  - Missing or incorrect parameters
-  - Invalid tool inputs
-
-- **Common causes**
-  - Ambiguous API specifications
-  - Incorrect parameter mapping
-
-### Tool response handling
-
-Tool response handling measures whether the agent correctly interprets tool output.
-
-- **Pass indicators**
-  - Accurate communication of tool results
-  - Correct handling of success and error states
-
-- **Fail indicators**
-  - Incorrect success claims
-  - Ignored or misinterpreted tool errors
-
-- **Common causes**
-  - Missing error-handling guidance
-  - Misinterpretation of tool responses
-
-### Escalation appropriateness
-
-Escalation appropriateness measures whether the system routes requests to human support when needed.
-
-- **Pass indicators**
-  - Sensitive or complex issues are routed correctly
-  - Compliance with escalation rules
-
-- **Fail indicators**
-  - Agent attempts to handle unsupported scenarios
-  - Failure to escalate high-risk requests
-
-- **Common causes**
-  - Undefined escalation criteria
-  - Overly permissive instructions
-
-### Privacy protection
-
-Privacy protection measures whether sensitive information is safeguarded.
-
-- **Pass indicators**
-  - Refusal to disclose restricted data
-  - Responses limited to authorized information
-
-- **Fail indicators**
-  - Disclosure or inference of sensitive data
-  - Responses that expose protected information
-
-- **Common causes**
-  - Weak access controls
-  - Insufficient privacy guidance
-
-### Action enablement
-
-Action enablement measures whether responses provide clear next steps.
-
-- **Pass indicators**
-  - Specific instructions
-  - Links, identifiers, or contact details
-
-- **Fail indicators**
-  - Vague or incomplete guidance
-  - Missing actionable steps
-
-- **Common causes**
-  - Missing procedural information in knowledge sources
-  - Over-summarized responses
+| Policy accuracy | Source attribution | Tool success |
+|---|---|---|
+| Contains correct PTO duration. | Cites authoritative documents. | Invokes correct tool. |
+| Includes correct enrollment deadline. | References specific sections. | Uses valid parameters. |
+| Doesn't reference outdated policy. | | Returns correct outcome. |
 
 ## Quality signals by agent type
 
-Different agent types require different evaluation priorities. The following sections outline common signal priorities.
+Different agent types require different evaluation priorities. The following table lists signal priorities for common agent types.
 
-For multi-step conversations, see [Evaluate multi-turn conversations](evaluation-multi-turn.md).
+For multi-step conversations, see [Evaluate multiturn conversations](evaluation-multi-turn.md).
 
-### Knowledge-grounded agents
-
-Knowledge-grounded agents focus on retrieving and presenting accurate information.
-
-| Signal | Priority |
-|--------|----------|
-| Policy accuracy | High |
-| Source attribution | High |
-| Completeness | Medium |
-| Personalization | Medium |
-
-### Tool-calling agents
-
-Tool-calling agents perform actions through integrations.
-
-| Signal | Priority |
-|--------|----------|
-| Tool accuracy | High |
-| Tool response handling | High |
-| Action enablement | High |
-| Error recovery | Medium |
-
-### Hybrid agents
-
-Hybrid agents combine knowledge retrieval and tool execution.
-
-| Signal | Priority |
-|--------|----------|
-| Routing accuracy | High |
-| Knowledge signals | Medium |
-| Tool signals | Medium |
-| Escalation appropriateness | Medium |
-
-### Customer-facing agents
-
-Customer-facing agents interact directly with external users.
-
-| Signal | Priority |
-|--------|----------|
-| Privacy protection | High |
-| Tone and professionalism | High |
-| Escalation appropriateness | High |
-| Resolution completeness | Medium |
+| Agent type | Description | Signal | Priority |
+|---|---|---|---|
+| **Knowledge-grounded** | Focus on retrieving and presenting accurate information. | Policy accuracy | High |
+| | | Source attribution | High |
+| | | Completeness | Medium |
+| | | Personalization | Medium |
+| **Tool-calling** | Perform actions through integrations. | Tool accuracy | High |
+| | | Tool response handling | High |
+| | | Action enablement | High |
+| | | Error recovery | Medium |
+| **Hybrid** | Combine knowledge retrieval and tool execution. | Routing accuracy | High |
+| | | Knowledge signals | Medium |
+| | | Tool signals | Medium |
+| | | Escalation appropriateness | Medium |
+| **Customer-facing** | Interact directly with external users. | Privacy protection | High |
+| | | Tone and professionalism | High |
+| | | Escalation appropriateness | High |
+| | | Resolution completeness | Medium |
 
 ## Implement quality signal tracking
 
@@ -318,4 +172,4 @@ Each signal must include clear pass and fail criteria.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Evaluate multi-turn conversations](evaluation-multi-turn.md) to assess conversational scenarios.
+> [Evaluate multiturn conversations](evaluation-multi-turn.md)
