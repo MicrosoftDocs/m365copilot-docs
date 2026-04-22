@@ -215,33 +215,33 @@ A multiturn test case typically includes:
 
 #### Conversation
 
-Turn 1  
-User: "I want to sign up for health insurance."  
-Agent:
+**Turn 1**  
+**User**: "I want to sign up for health insurance."  
+**Agent**:
 - Acknowledges request  
 - Asks for plan preference (HMO vs. PPO)
 
-Turn 2  
-User: "What's the difference?"  
-Agent:
+**Turn 2**  
+**User**: "What's the difference?"  
+**Agent**:
 - Explains key differences between HMO and PPO  
 - Re-asks for plan selection
 
-Turn 3  
-User: "I'll go with the PPO."  
-Agent:
+**Turn 3**  
+**User**: "I'll go with the PPO."  
+**Agent**:
 - Confirms selection  
 - Asks for coverage level (individual or family)
 
-Turn 4  
-User: "Family coverage. I have a spouse and two kids."  
-Agent:
+**Turn 4**  
+**User**: "Family coverage. I have a spouse and two kids."  
+**Agent**:
 - Confirms dependent scenario  
 - Requests dependent details (names, ages, etc.)
 
-Turn 5  
-User: [Provides dependent information]  
-Agent:
+**Turn 5**  
+**User**: [Provides dependent information]  
+**Agent**:
 - Confirms all collected information  
 - Submits enrollment  
 - Provides confirmation summary
@@ -260,28 +260,28 @@ Agent:
 
 **Conversation:**
 
-Turn 1  
-User: "I need to take some time off."  
-Agent:
+**Turn 1**  
+**User**: "I need to take some time off."  
+**Agent**:
 - Acknowledges request  
 - Asks what type of time off (PTO, sick leave, personal leave)
 
-Turn 2  
-User: "It's for a medical procedure."  
-Agent:
+**Turn 2**  
+**User**: "It's for a medical procedure."  
+**Agent**:
 - Identifies likely category  
 - Asks whether the request is for the user or a family member  
 
-Turn 3  
-User: "It's for me. It's a minor surgery."  
-Agent:
+**Turn 3**  
+**User**: "It's for me. It's a minor surgery."  
+**Agent**:
 - Determines this is likely sick leave  
 - Provides relevant policy information  
 - Asks about expected duration  
 
-Turn 4  
-User: "About a week."  
-Agent:
+**Turn 4**  
+**User**: "About a week."  
+**Agent**:
 - Confirms eligibility and process  
 - Provides next steps (for example, how to request leave)  
 - Offers to initiate the request if applicable  
@@ -299,29 +299,29 @@ Agent:
 
 **Conversation:**
 
-Turn 1  
-User: "Order me a MacBook Pro 16-inch."  
-Agent:
+**Turn 1**  
+**User**: "Order me a MacBook Pro 16-inch."  
+**Agent**:
 - Attempts to submit the order  
 
 System/tool response:  
 - Error: Item out of stock  
 
-Agent:
+**Agent**:
 - Communicates the issue clearly  
 - Does not obscure or ignore the failure  
 - Suggests alternatives (for example, different model or size)
 
-Turn 2  
-User: "When will it be back in stock?"  
-Agent:
+**Turn 2**  
+**User**: "When will it be back in stock?"  
+**Agent**:
 - Checks availability or provides restock estimate if available  
 - If unavailable, communicates that clearly  
 - Offers to notify the user or suggest alternatives  
 
-Turn 3  
-User: "Can I get the 14-inch instead?"  
-Agent:
+**Turn 3**  
+**User**: "Can I get the 14-inch instead?"  
+**Agent**:
 - Confirms availability of the alternative  
 - Submits the new order  
 - Provides confirmation (order details, expected delivery)
