@@ -15,7 +15,12 @@ This article explains how to design evaluation prompts that produce clear, actio
 
 ## Anatomy of an effective evaluation prompt
 
-Effective evaluation prompts share four characteristics.
+Effective evaluation prompts share four characteristics:
+
+- Single intent
+- Realistic phrasing
+- Grounded in data
+- Self-contained
 
 ### Single intent
 
@@ -23,8 +28,8 @@ Each prompt should test one user goal or question. Multi-intent prompts make it 
 
 | Multi-intent (avoid) | Single intent (preferred) |
 |----------------------|--------------------------|
-| "What's my PTO balance and can you order me a laptop?" | "What's my PTO balance?" |
-| "Tell me about health benefits and also the 401k match" | "What health insurance plans are available?" |
+| What's my PTO balance and can you order me a laptop? | What's my PTO balance? |
+| Tell me about health benefits and also the 401k match. | What health insurance plans are available? |
 
 To test multiple capabilities together, use multi-turn conversation evaluations instead of combining intents into a single prompt.
 
@@ -34,8 +39,8 @@ Prompts should reflect how users actually communicate, including informal langua
 
 | Overly formal | Realistic |
 |---------------|-----------|
-| "Please provide information regarding the annual paid time off allocation for employees in their first year of employment." | "How many vacation days do new hires get?" |
-| "I would like to initiate a request for procurement of computing equipment." | "I need to order a laptop." |
+| Please provide information regarding the annual paid time off allocation for employees in their first year of employment. | How many vacation days do new hires get? |
+| I would like to initiate a request for procurement of computing equipment. | I need to order a laptop. |
 
 You can derive realistic prompts from:
 
@@ -46,11 +51,11 @@ You can derive realistic prompts from:
 
 ### Grounded in data
 
-When grounding data is available, use specific entities, values, and identifiers. This approach makes evaluations measurable and verifiable.
+When grounding data is available, use specific entities, values, and identifiers. This approach makes evaluations measurable and verifiable. Grounded prompts allow precise assertions such as "The response contains '15 days'" , instead of vague checks like "The response contains the correct number".
 
 **Without grounding data**  
-Prompt:  
-"What's the PTO policy for engineers?"
+
+Prompt: "What's the PTO policy for engineers?"
 
 **With grounding data**  
 
@@ -62,16 +67,7 @@ Grounding data:
 - Manager: Lisa Park  
 - Location: Austin office  
 
-Prompt:  
-"I'm in the engineering team—how many vacation days do I get?"
-
-Grounded prompts allow precise assertions such as:
-
-- "The response contains '15 days'"  
-
-instead of vague checks like:
-
-- "The response contains the correct number"
+Prompt: "I'm in the engineering team — how many vacation days do I get?"
 
 ### Self-contained (single-turn)
 
@@ -79,26 +75,22 @@ For single-turn evaluations, each prompt must include all required context. The 
 
 | Depends on context (avoid) | Self-contained |
 |----------------------------|----------------|
-| "What about the other health plan?" | "What does the PPO health plan cover?" |
-| "And how much does that cost?" | "What's the employee cost for the PPO health plan?" |
-| "Can you order that instead?" | "Can you order a 16-inch MacBook Pro?" |
+| What about the other health plan? | What does the PPO health plan cover? |
+| And how much does that cost? | What's the employee cost for the PPO health plan? |
+| Can you order that instead? | Can you order a 16-inch MacBook Pro? |
 
 For scenarios that span multiple turns, use [multi-turn conversations](evaluation-multi-turn.md).
 
 ## Prompt variations
 
-Users don't all ask the same question in the same way. To test generalization, create three variations of each prompt.
+Users don't all ask the same question in the same way. To test generalization, create three variations of each prompt. Canonical prompts:
 
-### Canonical prompt
+- Include all required parameters. 
+- Use precise terminology.  
+- Avoid ambiguity.  
+- Represent an ideal query.  
 
 The canonical prompt is explicit, complete, and unambiguous. It serves as the baseline.
-
-**Characteristics:**
-
-- Includes all required parameters  
-- Uses precise terminology  
-- Avoids ambiguity  
-- Represents an ideal query  
 
 **Example:**
 
@@ -106,20 +98,18 @@ The canonical prompt is explicit, complete, and unambiguous. It serves as the ba
 
 ### Natural language variant
 
-The natural language variant reflects everyday conversational phrasing.
+The natural language variant reflects everyday conversational phrasing. Natural language variants:
 
-**Characteristics:**
-
-- Uses casual, conversational language  
-- May include synonyms or informal terms  
-- Avoids technical identifiers  
-- Remains complete enough to answer  
+- Use casual, conversational language.  
+- Might include synonyms or informal terms.  
+- Avoid technical identifiers.  
+- Remain complete enough to answer.  
 
 **Example:**
 
-"hey, how much vacation do I get as a new hire?"
+"Hey, how much vacation do I get as a new hire?"
 
-**Variation techniques:**
+The following table compares canonical prompts and natural language variants.
 
 | Technique | Canonical | Natural variant |
 |----------|----------|----------------|
@@ -130,20 +120,18 @@ The natural language variant reflects everyday conversational phrasing.
 
 ### Robustness probe
 
-The robustness probe evaluates how well the agent handles imperfect input.
+The robustness probe evaluates how well the agent handles imperfect input. Robustness probes:
 
-**Characteristics:**
-
-- Includes realistic typos  
-- Contains grammatical errors  
-- Uses shorthand or abbreviations  
-- Tests intent recognition under noise  
+- Include realistic typos.  
+- Contain grammatical errors.  
+- Use shorthand or abbreviations.  
+- Test intent recognition under noise.  
 
 **Example:**
 
 "whats my vacaton days entitlement"
 
-**Patterns to test:**
+The following table shows examples of patterns to test.
 
 | Pattern | Example |
 |--------|--------|
@@ -159,7 +147,7 @@ The following examples demonstrate all three prompt types for a single scenario.
 
 ### Scenario: Equipment ordering
 
-**Grounding data:**
+This scenario includes the following grounding data:
 
 - Employee: Sarah Chen  
 - Department: Product Design  
@@ -167,7 +155,7 @@ The following examples demonstrate all three prompt types for a single scenario.
 - Equipment budget: $3,500  
 - Approved items: MacBook Pro (14-inch or 16-inch), External monitor, Keyboard, Mouse  
 
-**Prompt variations:**
+#### Prompt variations
 
 **Canonical**
 
@@ -183,21 +171,21 @@ The following examples demonstrate all three prompt types for a single scenario.
 
 **Assertions (apply to all variations):**
 
-- The response confirms the equipment order was initiated  
-- The agent invoked the **OrderEquipment** tool  
-- The tool call includes "MacBook Pro 16-inch" (or equivalent)  
-- The response includes an order confirmation or reference number  
+- The response confirms the equipment order was initiated.  
+- The agent invoked the **OrderEquipment** tool .
+- The tool call includes "MacBook Pro 16-inch" (or equivalent).
+- The response includes an order confirmation or reference number.
 
 ### Scenario: Policy question with personalization
 
-**Grounding data:**
+This scenario includes the following grounding data:
 
 - Employee: James Wright  
-- Location: London, UK office  
+- Location: London, UK office      
 - Tenure: 6 months  
 - Employment type: Full-time  
 
-**Prompt variations:**
+#### Prompt variations
 
 **Canonical**
 
@@ -205,7 +193,7 @@ The following examples demonstrate all three prompt types for a single scenario.
 
 **Natural language**
 
-"I work in the London office—what bank holidays do I get off?"
+"I work in the London office — what bank holidays do I get off?"
 
 **Robustness probe**
 
@@ -213,10 +201,10 @@ The following examples demonstrate all three prompt types for a single scenario.
 
 **Assertions (apply to all variations):**
 
-- The response lists UK bank holidays (not US holidays)  
-- The response includes at least: New Year's Day, Easter, Christmas  
-- The response references UK policy or schedule  
-- The response does not mention US holidays such as July 4th or Thanksgiving  
+- The response lists UK bank holidays (not US holidays). 
+- The response includes at least: New Year's Day, Easter, Christmas. 
+- The response references UK policy or schedule.
+- The response doesn't mention US holidays such as July 4th or Thanksgiving. 
 
 ## Prompt anti-patterns
 
@@ -224,65 +212,63 @@ Avoid these common mistakes.
 
 ### Multi-intent prompts
 
-**Problem:** You can't determine which intent caused a failure.
+Avoid multi-intent prompts. When your prompt covers multiple intents, you can't determine which intent caused a failure.
 
-**Avoid:**
-
-"What's my PTO balance, and can you tell me about health insurance options, and I might need a laptop too?"
-
-**Fix:** Split into separate prompts or use multithreaded evaluation.
+- **Avoid:** What's my PTO balance, and can you tell me about health insurance options, and I might need a laptop too?
+- **Use instead:** Split into separate prompts or use multithreaded evaluation.
 
 ### Schema-aware prompts
 
-**Problem:** Users don't know internal APIs or tool names.
+Schema-aware prompts don't work well because users don't know internal APIs or tool names.
 
-**Avoid:**
-
-"Call the GetPTOBalance API for employee ID 12345"
-
-**Fix:**
-
-"What's my current vacation balance?"
+- **Avoid:** "Call the GetPTOBalance API for employee ID 12345"
+- **Use instead:** "What's my current vacation balance?"
 
 ### Vague prompts
 
-**Problem:** You can't define measurable assertions.
+If your prompt is vague, you can't define measurable assertions.
 
-**Avoid:**
-
-"Help me with HR stuff"
-
-**Fix:**
-
-"How do I enroll in the dental insurance plan?"
+- **Avoid:** "Help me with HR stuff"
+- **Use instead:** "How do I enroll in the dental insurance plan?"
 
 ### Leading prompts
 
-**Problem:** Prompts hint at the correct answer.
+Leading prompts hint at the correct answer.
 
-**Avoid:**
-
-"The PTO policy says 15 days, right?"
-
-**Fix:**
-
-"How many PTO days do new employees receive?"
+- **Avoid:** "The PTO policy says 15 days, right?"
+- **Use instead:** "How many PTO days do new employees receive?"
 
 ### Not self-contained (single-turn)
 
-**Problem:** Prompts depend on prior context.
+Avoid prompts that depend on prior context.
 
-**Avoid:**
+- **Avoid:** "What about the other option?"
+- **Use instead:** "What's the difference between the HMO and PPO health plans?"
 
-"What about the other option?"
+## Generate prompts from user scenarios
 
-**Fix:**
+Start with real user intent instead of feature lists.
 
-"What's the difference between the HMO and PPO health plans?"
+- Collect representative user questions.  
+- Group by scenario (for example, policy lookup, actions, escalation).  
+- Write a canonical prompt for each scenario.  
+- Add natural language and robustness variants.  
+- Ground prompts with concrete data.  
+
+This approach ensures evaluations reflect real-world usage.
+
+## AI-assisted prompt expansion (optional)
+
+After you establish a strong baseline, use AI to expand coverage.
+
+- Use AI to suggest additional variations.  
+- Review each suggestion for realism and relevance.  
+- Reject prompts that are unnatural, schema-aware, or out of scope.  
+- Add prompts only where they improve coverage.  
 
 ## Prompt coverage checklist
 
-Use this checklist to ensure complete coverage.
+Use this checklist to ensure that your prompt coverage is complete.
 
 ### Capability coverage
 
@@ -311,28 +297,7 @@ For each scenario, include:
 
 - Different user locations  
 - Different tenure levels  
-- Different roles or departments  
-
-## Generate prompts from user scenarios
-
-Start with real user intent instead of feature lists.
-
-- Collect representative user questions.  
-- Group by scenario (for example, policy lookup, actions, escalation).  
-- Write a canonical prompt for each scenario.  
-- Add natural language and robustness variants.  
-- Ground prompts with concrete data.  
-
-This approach ensures evaluations reflect real-world usage.
-
-## AI-assisted prompt expansion (optional)
-
-After establishing a strong baseline, use AI to expand coverage.
-
-- Use AI to suggest additional variations.  
-- Review each suggestion for realism and relevance.  
-- Reject prompts that are unnatural, schema-aware, or out of scope.  
-- Add prompts only where they improve coverage.  
+- Different roles or departments
 
 ## Next step
 
