@@ -206,6 +206,13 @@ Start by creating a small core test set.
 - Run tests to establish a baseline.
 - Iterate until core tests pass consistently.
 
+#### Example
+
+**Week 1-2:** Core tests only
+  - 10-20 test cases
+  - Cover essential functionality
+  - Target: Get to 90%+ pass rate
+
 ### Stage 2: Expand with variations
 
 After core tests are stable:
@@ -214,6 +221,13 @@ After core tests are stable:
 - Evaluate how well the agent generalizes.
 - Address brittleness where variations fail.
 
+#### Example
+
+**Week 3-4:** Core + Variations
+  - 40-60 test cases
+  - Test phrasing flexibility
+  - Target: 85%+ on variations
+
 ### Stage 3: Add diagnostic tests
 
 When troubleshooting becomes necessary:
@@ -221,68 +235,12 @@ When troubleshooting becomes necessary:
 - Introduce architecture tests for failing components.
 - Add edge cases observed in real usage.
 
-### Example test suite
-
-The following example shows the progression of a test suite.
-
-**Week 1-2:** Core tests only
-  - 10-20 test cases
-  - Cover essential functionality
-  - Target: Get to 90%+ pass rate
-
-**Week 3-4:** Core + Variations
-  - 40-60 test cases
-  - Test phrasing flexibility
-  - Target: 85%+ on variations
+#### Example
 
 **Week 5-6:** Full suite
   - 80-100 test cases
   - Comprehensive coverage
   - Diagnostic capability
-
-## Coverage checklist
-
-Use the following checklist to ensure comprehensive evaluation coverage.
-
-### Capability coverage
-
-- Every tool or action has at least one test case.
-- Each knowledge domain is represented.
-- Tool parameter combinations are validated.
-- Error handling is tested.
-
-### Scenario coverage
-
-- Test happy paths.
-- Use ambiguous inputs to trigger clarification.
-- Validate error recovery.
-- Cover multistep workflows.
-
-### Variation coverage
-
-For each core scenario:
-- Include a canonical prompt.
-- Include a natural language variation.
-- Include a robustness probe, such as typos.
-
-### Boundary coverage
-
-- Validate escalation conditions.
-- Handle out-of-scope requests appropriately.
-- Enforce privacy boundaries.
-- Test adversarial inputs.
-
-### Context coverage (if applicable)
-
-- Represent different user contexts.
-- Test regional or role-based variations.
-
-### Multi-turn coverage (if applicable)
-
-- Test slot-filling interactions.
-- Handle topic switching correctly.
-- Process corrections accurately.
-- Retain context across turns.
 
 ## Iteration loop
 
@@ -359,7 +317,6 @@ Focus on patterns rather than isolated failures:
 - Are failures concentrated in a specific workflow or scenario?
 - Do multiple failures share the same underlying cause?
 
-
 ### Improve your agent
 
 Use your analysis to make targeted improvements:
@@ -414,9 +371,55 @@ Focus on:
 - Variation robustness.
 - Guardrail effectiveness.
 
-## Evaluation checklist
+## Checklists
 
-Use this checklist to validate readiness. For a downloadable version, see the [agent eval guidance kit](https://github.com/microsoft/PowerPnPGuidanceHub/tree/main/guidance/agentevalguidancekit) on GitHub.
+### Coverage checklist
+
+Use the following checklist to ensure comprehensive evaluation coverage.
+
+### Capability coverage
+
+- Every tool or action has at least one test case.
+- Each knowledge domain is represented.
+- Tool parameter combinations are validated.
+- Error handling is tested.
+
+### Scenario coverage
+
+- Test happy paths.
+- Use ambiguous inputs to trigger clarification.
+- Validate error recovery.
+- Cover multistep workflows.
+
+### Variation coverage
+
+For each core scenario:
+- Include a canonical prompt.
+- Include a natural language variation.
+- Include a robustness probe, such as typos.
+
+### Boundary coverage
+
+- Validate escalation conditions.
+- Handle out-of-scope requests appropriately.
+- Enforce privacy boundaries.
+- Test adversarial inputs.
+
+### Context coverage (if applicable)
+
+- Represent different user contexts.
+- Test regional or role-based variations.
+
+### Multi-turn coverage (if applicable)
+
+- Test slot-filling interactions.
+- Handle topic switching correctly.
+- Process corrections accurately.
+- Retain context across turns.
+
+### Evaluation checklist
+
+Use the following checklist to validate readiness. 
 
 ### Before you start
 
