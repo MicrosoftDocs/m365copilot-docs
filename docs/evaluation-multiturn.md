@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Evaluate multiturn conversations
 
-Real users do not interact with agents through isolated, single-question exchanges. Instead, they engage in conversations that include follow-up questions, incremental information sharing, and multistep task completion.
+Real users don't interact with agents through isolated, single-question exchanges. Instead, they engage in conversations that include follow-up questions, incremental information sharing, and multistep task completion.
 
 Multiturn evaluation helps ensure that your agent can maintain context, complete tasks across multiple steps, and respond appropriately throughout a realistic conversation flow.
 
@@ -19,17 +19,17 @@ Use multiturn evaluation when testing scenarios that require context retention o
 
 | Scenario | Why multiturn is needed |
 |----------|--------------------------|
-| Slot filling | The agent must collect multiple pieces of information |
-| Clarification flows | The agent must resolve ambiguous user input |
-| Multi-step tasks | The task requires multiple exchanges to complete |
-| Context-dependent follow-ups | Later questions depend on earlier responses |
-| Progressive disclosure | Information is provided incrementally |
+| Slot filling | The agent must collect multiple pieces of information. |
+| Clarification flows | The agent must resolve ambiguous user input. |
+| Multi-step tasks | The task requires multiple exchanges to complete. |
+| Context-dependent follow-ups | Later questions depend on earlier responses. |
+| Progressive disclosure | Information is provided incrementally. |
 
 ### Single-turn vs. multiturn evaluation
 
 Start with single-turn evaluations for coverage, then add multiturn evaluations to test realistic interactions.
 
-| Aspect | Single-turn | multiturn |
+| Aspect | Single-turn | Multiturn |
 |--------|-------------|------------|
 | Tests | Individual question-answer pairs | Complete conversations |
 | Context | Each prompt is independent | Turns build on each other |
@@ -39,13 +39,13 @@ Start with single-turn evaluations for coverage, then add multiturn evaluations 
 
 ## Key metrics for multiturn evaluation
 
-Multiturn evaluation requires additional metrics beyond single-turn accuracy. These metrics assess how well the agent performs across an entire conversation.
+Multiturn evaluation requires extra metrics beyond single-turn accuracy. These metrics assess how well the agent performs across an entire conversation.
 
 ### Conversation completeness
 
 Conversation completeness measures whether the agent achieves the user’s goal by the end of the interaction.
 
-**Complete example**
+**Success example**
 
 **Turn 1**
 - **User**: "I need to order a laptop"  
@@ -61,7 +61,7 @@ Conversation completeness measures whether the agent achieves the user’s goal 
 
 ✅ The user goal (ordering a laptop) is achieved.
 
-**Incomplete example**
+**Failure example**
 
 **Turn 1**
 - **User**: "I need to order a laptop"  
@@ -71,23 +71,11 @@ Conversation completeness measures whether the agent achieves the user’s goal 
 - **User**: "MacBook Pro"  
 - **Agent**: "MacBook Pro is a great choice! Is there anything else?"
 
-❌ The order was not submitted and the user goal is not achieved.
+❌ The order wasn't submitted and the user goal isn't achieved.
 
 ### Knowledge retention
 
 Knowledge retention measures whether the agent remembers and uses information provided in earlier turns.
-
-**Failure example**
-
-**Turn 1**
-- **User**: "My employee ID is EMP-12345"  
-- **Agent**: "Thanks! How can I help you today?"
-
-**Turn 2**
-- **User**: "I want to check my PTO balance"  
-- **Agent**: "I'd be happy to help. What's your employee ID?"
-
-❌ The agent forgot the employee ID from the previous turn.
 
 **Success example**
 
@@ -101,21 +89,21 @@ Knowledge retention measures whether the agent remembers and uses information pr
 
 ✅ The agent used the previously provided employee ID without asking again.
 
-### Role adherence
-
-Role adherence measures whether the agent maintains its defined scope and responsibilities throughout the conversation.
-
 **Failure example**
 
 **Turn 1**
-- **User**: "What's the PTO policy?"  
-- **Agent**: Provides correct PTO policy information  
+- **User**: "My employee ID is EMP-12345"  
+- **Agent**: "Thanks! How can I help you today?"
 
 **Turn 2**
-- **User**: "Can you write a poem about vacation?"  
-- **Agent**: "Sure! Here's a poem about sunny beaches..."
+- **User**: "I want to check my PTO balance"  
+- **Agent**: "I'd be happy to help. What's your employee ID?"
 
-❌ The agent drifted from its role as an HR assistant.
+❌ The agent forgot the employee ID from the previous turn.
+
+### Role adherence
+
+Role adherence measures whether the agent maintains its defined scope and responsibilities throughout the conversation.
 
 **Success example**
 
@@ -128,6 +116,18 @@ Role adherence measures whether the agent maintains its defined scope and respon
 - **Agent**: "I'm here to help with HR and onboarding questions. Is there anything else about PTO I can help with?"
 
 ✅ The agent stayed within its role and redirected appropriately.
+
+**Failure example**
+
+**Turn 1**
+- **User**: "What's the PTO policy?"  
+- **Agent**: Provides correct PTO policy information  
+
+**Turn 2**
+- **User**: "Can you write a poem about vacation?"  
+- **Agent**: "Sure! Here's a poem about sunny beaches..."
+
+❌ The agent drifted from its role as an HR assistant.
 
 ### Conversation relevancy
 
@@ -143,7 +143,7 @@ Conversation relevancy measures whether each response is directly relevant to th
 - **User**: "What's the difference in cost?"  
 - **Agent**: "The PPO offers more flexibility in choosing doctors."
 
-❌ The response does not address the user’s question about cost.
+❌ The response doesn't address the user’s question about cost.
 
 ### Context consistency
 
@@ -165,8 +165,6 @@ Context consistency measures whether the agent maintains consistent facts and in
 
 Designing effective multiturn evaluations requires defining both the conversation flow and expected behaviors.
 
-### Test case structure
-
 A multiturn test case typically includes:
 
 - Test case ID and description
@@ -175,7 +173,7 @@ A multiturn test case typically includes:
 - Expected behaviors
 - Assertions
 
-**Example**
+### Example
 
 - **Test case ID**: CONV-001  
 - **Description**: Equipment ordering flow  
@@ -186,7 +184,7 @@ A multiturn test case typically includes:
 - Department: Product Design  
 - Budget: $3,500  
 
-**Conversation**
+#### Conversation
 
 **Turn 1**
 - **User**: "I need to get my laptop set up"
@@ -204,8 +202,7 @@ A multiturn test case typically includes:
 - **User**: "Actually, change it to 64GB"
 - **Expected behavior**: Update the order
 
-
-### Slot-filling conversation
+### Slot-filling conversation example
 
 **Scenario**: Benefits enrollment (slot filling)  
 **Goal**: Collect all required information and complete enrollment  
@@ -216,7 +213,7 @@ A multiturn test case typically includes:
 - Dependent information (if applicable)
 - Effective date
 
-**Conversation:**
+#### Conversation
 
 Turn 1  
 User: "I want to sign up for health insurance."  
@@ -251,7 +248,7 @@ Agent:
 
 **Assertions:**
 - All required slots are collected before submission  
-- The agent does not skip required inputs  
+- The agent doesn't skip required inputs  
 - The agent explains options when prompted  
 - The final confirmation includes all captured details  
 - The task completes successfully without unnecessary turns  
@@ -290,10 +287,10 @@ Agent:
 - Offers to initiate the request if applicable  
 
 **Assertions:**
-- The agent does not assume intent from the initial ambiguous request  
-- Clarifying questions are relevant and progressively narrow the scope  
-- The final response reflects the user's actual situation  
-- The agent transitions from clarification to resolution effectively  
+- The agent doesn't assume intent from the initial ambiguous request.  
+- Clarifying questions are relevant and progressively narrow the scope.  
+- The final response reflects the user's actual situation.  
+- The agent transitions from clarification to resolution effectively.  
 
 ### Error recovery conversation
 
@@ -342,24 +339,24 @@ Multiturn evaluation requires both conversation-level and turn-level validation.
 
 ### Conversation-level assertions
 
-- The conversation achieves the user's goal
-- The number of turns is within an expected range
-- The agent maintains consistent information
-- The agent maintains its role
-- The agent does not request duplicate information
+- The conversation achieves the user's goal.
+- The number of turns is within an expected range.
+- The agent maintains consistent information.
+- The agent maintains its role.
+- The agent doesn't request duplicate information.
 
 ### Turn-level assertions
 
-- The response acknowledges prior context
-- The response asks appropriate follow-up questions
-- The agent performs expected actions
-- The response confirms actions taken
+- The response acknowledges prior context.
+- The response asks appropriate follow-up questions.
+- The agent performs expected actions.
+- The response confirms actions taken.
 
 ### Conditional assertions
 
-- When the user corrects information, the agent updates subsequent responses
-- When an action fails, the agent communicates the issue and provides alternatives
-- When a user asks an out-of-scope question, the agent redirects appropriately
+- When the user corrects information, the agent updates subsequent responses.
+- When an action fails, the agent communicates the issue and provides alternatives.
+- When a user asks an out-of-scope question, the agent redirects appropriately.
 
 ## Example: End-to-end multiturn evaluation
 
@@ -380,31 +377,31 @@ A new employee orders equipment and asks a benefits question during the same con
 ### Conversation
 
 **Turn 1**
-- **User**: "I'm starting next week and need to set up my workstation"
-- **Expected behavior**: Welcome and ask about equipment needs
+- **User**: "I'm starting next week and need to set up my workstation."
+- **Expected behavior**: Welcome and ask about equipment needs.
 
 **Turn 2**
-- **User**: "I need a MacBook Pro 16 inch with 64GB RAM and a 27-inch monitor"
-- **Expected behavior**: Submit order and confirm
+- **User**: "I need a MacBook Pro 16 inch with 64GB RAM and a 27-inch monitor."
+- **Expected behavior**: Submit order and confirm.
 
 **Turn 3**
 - **User**: "When is the deadline to sign up for health insurance?"
-- **Expected behavior**: Provide benefits information without losing context
+- **Expected behavior**: Provide benefits information without losing context.
 
 **Turn 4**
 - **User**: "Can you confirm what I ordered?"
-- **Expected behavior**: Recall and summarize the order
+- **Expected behavior**: Recall and summarize the order.
 
 ### Expected outcomes
 
-- Equipment order is completed
-- Benefits question is answered accurately
-- Context is retained across turns
-- Information is not re-requested
+- Equipment order is completed.
+- Benefits question is answered accurately.
+- Context is retained across turns.
+- Information isn't re-requested.
 
 ## Common pitfalls
 
-Be aware of these common issues when designing and evaluating multi-turn conversations:
+Be aware of these common issues when designing and evaluating multiturn conversations:
 
 - Evaluating turns in isolation instead of within full conversation context, which can hide failures related to memory, continuity, and task completion.  
 - Testing only ideal (happy path) scenarios, which fails to reflect real user behavior such as ambiguity, corrections, and interruptions.  
@@ -416,7 +413,7 @@ Be aware of these common issues when designing and evaluating multi-turn convers
 
 ## Best practices
 
-Use these practices to design effective and scalable multi-turn evaluations:
+Use these practices to design effective and scalable multiturn evaluations:
 
 - Start with a small set of high-value scenarios that represent the most common or critical conversation flows.  
 - Define a clear user goal for each test case and use goal completion as the primary success metric.  
