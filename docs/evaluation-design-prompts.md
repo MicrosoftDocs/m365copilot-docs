@@ -302,4 +302,4 @@ For each scenario, include:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Write assertions](evaluation-writing-assertions.md).
+> [Write assertions](evaluation-write-assertions.md).

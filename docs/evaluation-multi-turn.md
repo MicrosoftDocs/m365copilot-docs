@@ -1,23 +1,23 @@
 ---
-title: Evaluate multiturn conversations for Copilot agents
-description: Learn how to design and run evaluations that test multiturn conversation flows, context retention, and multi-step task completion.
+title: Evaluate multi-turn conversations for Copilot agents
+description: Learn how to design and run evaluations that test multi-turn conversation flows, context retention, and multi-step task completion.
 author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
 ms.topic: concept-article
 ---
 
-# Evaluate multiturn conversations
+# Evaluate multi-turn conversations
 
 Real users don't interact with agents through isolated, single-question exchanges. Instead, they engage in conversations that include follow-up questions, incremental information sharing, and multistep task completion.
 
-Multiturn evaluation helps ensure that your agent can maintain context, complete tasks across multiple steps, and respond appropriately throughout a realistic conversation flow.
+Multi-turn evaluation helps ensure that your agent can maintain context, complete tasks across multiple steps, and respond appropriately throughout a realistic conversation flow.
 
-## When to use multiturn evaluation
+## When to use multi-turn evaluation
 
-Use multiturn evaluation when testing scenarios that require context retention or multiple steps to complete a task.
+Use multi-turn evaluation when testing scenarios that require context retention or multiple steps to complete a task.
 
-| Scenario | Why multiturn is needed |
+| Scenario | Why multi-turn is needed |
 |----------|--------------------------|
 | Slot filling | The agent must collect multiple pieces of information. |
 | Clarification flows | The agent must resolve ambiguous user input. |
@@ -25,11 +25,11 @@ Use multiturn evaluation when testing scenarios that require context retention o
 | Context-dependent follow-ups | Later questions depend on earlier responses. |
 | Progressive disclosure | Information is provided incrementally. |
 
-### Single-turn vs. multiturn evaluation
+### Single-turn vs. multi-turn evaluation
 
-Start with single-turn evaluations for coverage, then add multiturn evaluations to test realistic interactions.
+Start with single-turn evaluations for coverage, then add multi-turn evaluations to test realistic interactions.
 
-| Aspect | Single-turn | Multiturn |
+| Aspect | Single-turn | Multi-turn |
 |--------|-------------|------------|
 | Tests | Individual question-answer pairs | Complete conversations |
 | Context | Each prompt is independent | Turns build on each other |
@@ -37,9 +37,9 @@ Start with single-turn evaluations for coverage, then add multiturn evaluations 
 | Failure diagnosis | Easier to isolate issues | Requires turn-by-turn analysis |
 | Use case | Testing specific responses | Testing conversation flow |
 
-## Key metrics for multiturn evaluation
+## Key metrics for multi-turn evaluation
 
-Multiturn evaluation requires extra metrics beyond single-turn accuracy. These metrics assess how well the agent performs across an entire conversation.
+Multi-turn evaluation requires extra metrics beyond single-turn accuracy. These metrics assess how well the agent performs across an entire conversation.
 
 ### Conversation completeness
 
@@ -161,11 +161,11 @@ Context consistency measures whether the agent maintains consistent facts and in
 
 ❌ The agent contradicts earlier information by changing the number of vacation days.
 
-## Design multiturn test cases
+## Design multi-turn test cases
 
-Designing effective multiturn evaluations requires defining both the conversation flow and expected behaviors.
+Designing effective multi-turn evaluations requires defining both the conversation flow and expected behaviors.
 
-A multiturn test case typically includes:
+A multi-turn test case typically includes:
 
 - Test case ID and description
 - Grounding data
@@ -333,9 +333,9 @@ System/tool response:
 - The user successfully completes the task after the failure  
 - The agent maintains context across the failure and recovery steps  
 
-## Multiturn assertions
+## Multi-turn assertions
 
-Multiturn evaluation requires both conversation-level and turn-level validation.
+Multi-turn evaluation requires both conversation-level and turn-level validation.
 
 ### Conversation-level assertions
 
@@ -358,7 +358,7 @@ Multiturn evaluation requires both conversation-level and turn-level validation.
 - When an action fails, the agent communicates the issue and provides alternatives.
 - When a user asks an out-of-scope question, the agent redirects appropriately.
 
-## Example: End-to-end multiturn evaluation
+## Example: End-to-end multi-turn evaluation
 
 ### Test case: New hire setup
 
@@ -401,7 +401,7 @@ A new employee orders equipment and asks a benefits question during the same con
 
 ## Common pitfalls
 
-Be aware of these common issues when designing and evaluating multiturn conversations:
+Be aware of these common issues when designing and evaluating multi-turn conversations:
 
 - Evaluating turns in isolation instead of within full conversation context, which can hide failures related to memory, continuity, and task completion.  
 - Testing only ideal (happy path) scenarios, which fails to reflect real user behavior such as ambiguity, corrections, and interruptions.  
@@ -413,7 +413,7 @@ Be aware of these common issues when designing and evaluating multiturn conversa
 
 ## Best practices
 
-Use these practices to design effective and scalable multiturn evaluations:
+Use these practices to design effective and scalable multi-turn evaluations:
 
 - Start with a small set of high-value scenarios that represent the most common or critical conversation flows.  
 - Define a clear user goal for each test case and use goal completion as the primary success metric.  

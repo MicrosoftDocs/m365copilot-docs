@@ -300,5 +300,5 @@ Success criteria clarify requirements and create measurable targets for the agen
 - [Design eval prompts](evaluation-design-prompts.md)
 - [Write assertions](evaluation-write-assertions.md)
 - [Derive quality signals](evaluation-quality-signals.md)
-- [Evaluate multi-turn conversations](evaluation-multiturn.md)
+- [Evaluate multi-turn conversations](evaluation-multi-turn.md)
 - [Organize test categories and iterate](evaluation-test-categories.md)
