@@ -4,6 +4,21 @@
       "source_path_from_root": "/docs/overview-business-applications.md",
       "redirect_url": "/microsoft-copilot-studio/copilot-connectors-in-copilot-studio",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-authentication.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-confirmation-prompts.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-confirmation-prompts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-debug-local.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-debug-local",
+      "redirect_document_id": false
     }
   ]
 }
