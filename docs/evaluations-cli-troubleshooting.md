@@ -88,7 +88,7 @@ If the tool connects but returns no agent, your `TENANT_ID` may not match the te
 az account show --query tenantId
 ```
 
-Or follow the instructions in [Get required environment variables](evaluations-cli-overview.md#tenant-id-microsoft-entra-id).
+Or follow the instructions in [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
 
 ### Azure OpenAI API key errors
 

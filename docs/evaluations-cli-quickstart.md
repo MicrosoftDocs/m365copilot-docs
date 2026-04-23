@@ -19,7 +19,7 @@ Before you begin, ensure you have:
 - A Microsoft 365 Copilot agent deployed to your tenant.
 - Node.js 24.12.0 or later (`node --version` to check).
 - Access to an Azure OpenAI resource with GPT-4o-mini deployed.
-- Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Get required environment variables](evaluations-cli-overview.md#get-required-environment-variables).
+- Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
 
 > [!NOTE]
 > This quickstart assumes you're using a Windows development environment. Authentication support for other operating systems is coming soon.
@@ -67,7 +67,7 @@ You'll create the `evals/evals.json` dataset in Step 4. The `.evals/` report fol
 Choose the option that matches your project type.
 
 > [!TIP]
-> For details on where to obtain each value, see [Get required environment variables](evaluations-cli-overview.md#get-required-environment-variables).
+> For details on where to obtain each value, see [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
 
 ### Microsoft 365 Agents Toolkit projects
 
@@ -180,7 +180,7 @@ If you don't see these results, see [Troubleshooting](evaluations-cli-troublesho
 Now that you've run your first evaluation, explore more capabilities:
 
 - [Create evaluation test suites](evaluations-cli-create-tests.md) - Design comprehensive datasets and multi-turn scenarios.
-- [CLI reference](evaluations-cli-cli-reference.md) - Explore all commands and options, including interactive mode, output formats, and cache commands.
+- [CLI reference](evaluations-cli-reference.md) - Explore all commands and options, including interactive mode, output formats, and cache commands.
 - [Troubleshooting](evaluations-cli-troubleshooting.md) - Resolve issues and find support channels.
 
 ## Related content

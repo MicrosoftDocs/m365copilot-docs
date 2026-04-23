@@ -311,7 +311,7 @@ ls -lah $(runevals cache-dir)
 
 ## Environment variables
 
-The tool reads configuration from environment files and system variables. For step-by-step instructions on obtaining these values, see [Get required environment variables](evaluations-cli-overview.md#get-required-environment-variables).
+The tool reads configuration from environment files and system variables. For step-by-step instructions on obtaining these values, see [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
 
 ### Required variables
 
