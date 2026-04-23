@@ -125,6 +125,8 @@ runevals --prompts-file ./tests/my-custom-tests.json
 ]
 ```
 
+For the full dataset schema, see [Dataset schema and test design](agent-evals-create-tests.md#schema-overview).
+
 ### `-o, --output <file>`
 
 Specify the output file path and format. Format is determined by file extension.
@@ -309,13 +311,13 @@ ls -lah $(runevals cache-dir)
 
 ## Environment variables
 
-The tool reads configuration from environment files and system variables.
+The tool reads configuration from environment files and system variables. For step-by-step instructions on obtaining these values, see [Get required environment variables](agent-evals-overview.md#get-required-environment-variables).
 
 ### Required variables
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `TENANT_ID` | Azure AD tenant ID | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
+| `TENANT_ID` | Microsoft Entra tenant ID | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
 | `AZURE_AI_OPENAI_ENDPOINT` | Azure OpenAI endpoint URL | `https://your-resource.openai.azure.com/` |
 | `AZURE_AI_API_KEY` | Azure OpenAI API key | `your-api-key-here` |
 
@@ -332,7 +334,7 @@ The tool reads configuration from environment files and system variables.
 
 ### Basic usage
 
-Evaluate using auto-discovered prompts file:
+Evaluate using the auto-discovered dataset file:
 
 ```bash
 cd /path/to/your-agent-project
@@ -347,7 +349,7 @@ Use production environment configuration:
 runevals --env prod
 ```
 
-### Custom prompts file
+### Custom dataset file
 
 Use a specific test file:
 
@@ -431,52 +433,11 @@ runevals \
 
 ## Troubleshooting
 
-### Command not found
-
-If `runevals` command isn't found:
-
-```bash
-# Verify installation
-npm list -g @microsoft/m365-copilot-eval
-
-# Reinstall
-npm install -g @microsoft/m365-copilot-eval
-```
-
-### Permission errors
-
-If cache operations fail:
-
-```bash
-# View cache directory
-runevals cache-dir
-
-# Fix permissions (Unix/macOS)
-chmod -R u+w $(runevals cache-dir)
-
-# Fix permissions (Windows)
-icacls "$(runevals cache-dir)" /grant %USERNAME%:F /T
-```
-
-### Network issues
-
-If initialization fails behind a proxy:
-
-```bash
-# Set proxy (Unix/macOS)
-export HTTPS_PROXY=http://proxy:8080
-export HTTP_PROXY=http://proxy:8080
-
-# Set proxy (Windows PowerShell)
-$env:HTTPS_PROXY="http://proxy:8080"
-$env:HTTP_PROXY="http://proxy:8080"
-
-# Retry initialization
-runevals --init-only --log-level debug
-```
+For common issues with installation, authentication, runtime errors, cache problems, and proxy setup, see the central [Troubleshooting](evaluations-cli-troubleshooting.md) article.
 
 ## Related content
 
-- [Evaluate Microsoft 365 Copilot agents overview](agent-evals-overview.md)
-- [Quickstart: Evaluate your agent](agent-evals-quickstart.md)
-- [Create evaluation test suites](agent-evals-create-tests.md)
+- [Evaluate Microsoft 365 Copilot agents overview](evaluations-cli-overview.md)
+- [Quickstart: Evaluate your agent](evaluations-cli-quickstart.md)
+- [Dataset schema and test design](evaluations-cli-create-tests.md)
+- [Troubleshooting](evaluations-cli-troubleshooting.md)

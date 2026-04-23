@@ -231,16 +231,6 @@ items:
             href: debugging-agents-copilot-studio.md
           - name: Test agents using Agents Toolkit
             href: debugging-agents-vscode.md
-    - name: Evaluate agent quality
-      items:
-        - name: Overview
-          href: agent-evals-overview.md
-        - name: Quickstart
-          href: agent-evals-quickstart.md
-        - name: Create test suites
-          href: agent-evals-create-tests.md
-        - name: CLI reference
-          href: agent-evals-cli-reference.md
     - name: Convert to custom engine agent
       href: convert-declarative-agent.md
     - name: Responsible AI validation
@@ -343,6 +333,20 @@ items:
   items:
   - name: Work IQ CLI
     href: workiq-overview.md
+- name: Use the Agent Evaluation CLI
+  items:
+  - name: Overview
+    href: evaluations-cli-overview.md
+  - name: Quickstart
+    href: evaluations-cli-quickstart.md
+  - name: Create test suites
+    href: evaluations-cli-create-tests.md
+  - name: CLI reference
+    href: evaluations-cli-reference.md
+  - name: Troubleshooting
+    href: evaluations-cli-troubleshooting.md
+  - name: License terms
+    href: /legal/m365-copilot-agent-eval-tool/license-terms?context=/microsoft-365/copilot/extensibility/context
 - name: Extend agents at scale with Agent 365 (early access preview)
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
 - name: Publish
