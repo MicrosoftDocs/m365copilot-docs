@@ -95,6 +95,7 @@ Variation tests verify that the agent can handle different phrasings of the same
 **PTO policy variations**
 - **PTO-001-a**: “How many vacation days do new hires get?”
 - **PTO-001-b**: “what’s my PTO as a new employee”
+<!-- cspell:ignore vacaton -->
 - **PTO-001-c**: “vacaton days for someone who just started?”
 - **PTO-001-d**: “annual leave entitlement for first year?”
 
