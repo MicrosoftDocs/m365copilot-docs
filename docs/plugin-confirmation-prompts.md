@@ -1,24 +1,59 @@
 ---
-title: Confirmation prompts for API plugins for Microsoft 365 Copilot
-description: Learn about confirmation prompts for API plugins and how to change default confirmation behavior for Microsoft 365 Copilot
+title: Confirmation prompts for MCP and API plugins for Microsoft 365 Copilot
+description: Learn about confirmation prompts for MCP and API plugins and how to change default confirmation behavior for Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 04/23/2026
 ms.topic: article
 ---
 
-# Confirmation prompts for API plugins for Microsoft 365 Copilot
+# Confirmation prompts for MCP and API plugins for Microsoft 365 Copilot
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-The first time Microsoft 365 Copilot uses an API plugin, it notifies the user and asks them to allow or cancel the operation. If the user allows Copilot to connect to the plugin, all future operations that retrieve data (HTTP GET operations) don't require any confirmation. Other HTTP operations prompt the user, showing the data to be sent and giving the user a choice to allow or decline.
+The first time Microsoft 365 Copilot uses an Model Context Protocol (MCP) or API plugin, it notifies the user and asks them to allow or cancel the operation. If the user allows Copilot to connect to the plugin, all future operations that retrieve data (HTTP GET operations) don't require any confirmation. Other HTTP operations prompt the user, showing the data to be sent and giving the user a choice to allow or decline.
 
 :::image type="content" source="assets/images/api-plugins/first-connection-confirmation.png" alt-text="Copilot confirmation dialog for connecting to a plugin for the first time":::
 
-API plugin developers can change this behavior for individual operations in their API. Developers can also customize the text that Copilot displays to the user as part of the confirmation prompt.
+Plugin developers can change this behavior for individual operations in their MCP server or API. Developers can also customize the text that Copilot displays to the user as part of the confirmation prompt.
 
 ## Overriding prompt behavior
+
+### [MCP plugins](#tab/mcp)
+
+Developers can control whether Microsoft 365 Copilot asks the user for confirmation (after the initial first-time prompt) for a specific tool by setting the `readOnlyHint` property to `true` for the tool in the MCP server's `tools/list` response. For more information, see the [MCP schema reference](https://modelcontextprotocol.io/specification/2025-11-25/schema#toolannotations-readonlyhint).
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "tools": [
+      {
+        "name": "get_weather",
+        "title": "Weather Information Provider",
+        "description": "Get current weather information for a location",
+        "annotations": {
+          "readOnlyHint": true,
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "location": {
+              "type": "string",
+              "description": "City name or zip code"
+            }
+          },
+          "required": ["location"]
+        }
+      }
+    ]
+  }
+}
+```
+
+### [API plugins](#tab/api)
 
 Developers can control whether Microsoft 365 Copilot asks the user for confirmation (after the initial first-time prompt) for a specific operation by adding the `x-openai-isConsequential` property in the OpenAPI document for their API. Setting this property to `false` disables the confirmation prompt, and setting it to `true` enables it. As a rule, any action with side effects in the external system should be marked with `true` to ensure the user is in control and prevent unintended consequences for actions with side effects in the external system.
 
@@ -51,6 +86,8 @@ get:
   description: Gets a list of existing reminders
   operationId: GetReminders
 ```
+
+---
 
 ## Customizing confirmation text
 
