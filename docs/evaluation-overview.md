@@ -4,13 +4,13 @@ description: Learn foundational concepts, terminology, and eval-driven developme
 author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
+ms.date: 04/22/2026
 ms.topic: concept-article
-ms.localizationpriority: medium
 ---
 
 # Agent evaluation overview
 
-To improve the quality of the [declarative agents](overview-declarative-agent.md) and [custom engine agents](overview-custom-engine-agent.md) that you build, design and run evaluations. Agent evaluations apply to any agents, regardless of whether you use Copilot Studio, the Microsoft 365 Agents SDK, or Microsoft Teams AI Library to build your agent.
+To improve the quality of your [declarative agents](overview-declarative-agent.md) and [custom engine agents](overview-custom-engine-agent.md), design and run agent evaluations. Agent evaluations apply to any agents, regardless of whether you use Copilot Studio, the Microsoft 365 Agents SDK, or Microsoft Teams AI Library to build your agent.
 
 ## Why evaluation matters
 
