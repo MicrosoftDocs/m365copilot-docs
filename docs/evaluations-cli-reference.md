@@ -1,5 +1,5 @@
 ---
-title: CLI reference for Microsoft 365 Copilot Agent Evaluations
+title: Agent Evaluations CLI reference
 description: Complete command-line reference for the M365 Copilot Agent Evaluations CLI tool including all options, flags, and cache commands.
 ms.date: 04/22/2026
 author: lauragra
@@ -8,12 +8,9 @@ ms.topic: reference
 ms.localizationpriority: medium
 ---
 
-# CLI reference: Microsoft 365 Copilot Agent Evaluations
+# Agent Evaluations CLI reference
 
 This article provides a complete command-line reference for the `runevals` command, which is part of the `@microsoft/m365-copilot-eval` package.
-
-> [!IMPORTANT]
-> This tool is currently in private preview. Features and commands are subject to change.
 
 ## Synopsis
 
@@ -26,7 +23,7 @@ runevals cache-dir
 
 ## Description
 
-The `runevals` command evaluates Microsoft 365 Copilot agents by sending test prompts and scoring responses using Azure AI Evaluation metrics. The tool supports batch evaluation from JSON files, inline prompts, and interactive testing.
+The `runevals` command evaluates Microsoft 365 Copilot agents by sending test prompts and scoring responses using Azure AI + machine learning Evaluation metrics. The tool supports batch evaluation from JSON files, inline prompts, and interactive testing.
 
 ## Options
 
@@ -50,11 +47,11 @@ runevals --version
 
 Set the logging verbosity level. Available levels: `debug`, `info`, `warning`, `error`.
 
-- **Default**: When flag is used without a value, defaults to `info`
-- **debug**: Detailed debugging information including API payloads
-- **info**: General information about evaluation progress
-- **warning**: Warning messages only
-- **error**: Error messages only
+- **Default**: When you use the flag without a value, it defaults to `info`.
+- **debug**: Detailed debugging information, including API payloads.
+- **info**: General information about evaluation progress.
+- **warning**: Warning messages only.
+- **error**: Error messages only.
 
 **Examples:**
 
@@ -70,7 +67,7 @@ runevals --log-level error
 ```
 
 > [!WARNING]
-> The `debug` level may include raw API payloads and response data in console output. Redaction is pattern-based and might not catch all PII or credentials. Don't share debug output publicly without manual review.
+> The `debug` level might include raw API payloads and response data in console output. Redaction is pattern-based and might not catch all PII or credentials. Don't share debug output publicly without manual review.
 
 ### `--prompts <prompts...>`
 
@@ -88,7 +85,7 @@ runevals --prompts "What is Teams?" "What is SharePoint?" "What is OneDrive?"
 
 ### `--expected <responses...>`
 
-Provide expected responses to accompany prompts specified with `--prompts`. Must match the number of prompts.
+Provide expected responses to accompany prompts specified with `--prompts`. The number of responses must match the number of prompts.
 
 **Example:**
 
@@ -106,7 +103,7 @@ runevals --prompts "What is Teams?" "What is SharePoint?" \
 
 ### `--prompts-file <file>`
 
-Specify a custom JSON file containing test prompts. Overrides auto-discovery.
+Specify a custom JSON file containing test prompts. This file overrides auto-discovery.
 
 **Example:**
 
@@ -129,7 +126,7 @@ For the full dataset schema, see [Dataset schema and test design](evaluations-cl
 
 ### `-o, --output <file>`
 
-Specify the output file path and format. Format is determined by file extension.
+Specify the output file path and format. The format is determined by the file extension.
 
 **Supported formats:**
 
@@ -152,7 +149,7 @@ runevals --output ./data/scores.csv
 
 **Default behavior:**
 
-Without `--output`, results are saved to `./.evals/YYYY-MM-DD_HH-MM-SS.html`.
+Without `--output`, the command saves results to `./.evals/YYYY-MM-DD_HH-MM-SS.html`.
 
 ### `-i, --interactive`
 
@@ -164,11 +161,11 @@ Enter interactive mode for manual prompt entry and testing.
 runevals --interactive
 ```
 
-In interactive mode, you'll be prompted to enter prompts one at a time, allowing for exploratory testing.
+In interactive mode, you're prompted to enter prompts one at a time, so you can do exploratory testing.
 
 ### `--m365-agent-id <id>`
 
-Override the agent ID to evaluate a specific agent. Useful when testing multiple agents or when the agent ID can't be auto-detected.
+Override the agent ID to evaluate a specific agent. This parameter is useful when testing multiple agents or when the agent ID can't be auto-detected.
 
 **Example:**
 
@@ -183,7 +180,7 @@ runevals --m365-agent-id "U_0dc4a8a2-b95f-edac-91c8-d802023ec2d4"
 
 ### `--env <environment>`
 
-Specify the environment configuration to load. Loads `env/.env.<environment>`.
+Specify the environment configuration to load. This parameter loads `env/.env.<environment>`.
 
 **Default**: `dev` (loads `env/.env.dev`)
 
@@ -203,17 +200,17 @@ runevals --env staging
 **Environment file precedence:**
 
 1. `.env.local` (auto-detected for Agents Toolkit projects)
-2. `.env.local.user` (secrets, auto-loaded if present)
-3. `env/.env.<environment>` (specified by `--env`)
-4. System environment variables
+1. `.env.local.user` (secrets, auto-loaded if present)
+1. `env/.env.<environment>` (specified by `--env`)
+1. System environment variables
 
 ### `--init-only`
 
-Initialize the Python environment and download dependencies without running evaluations. Useful for:
+Initializes the Python environment and downloads dependencies without running evaluations. This option is useful for:
 
-- Pre-warming the cache in CI/CD pipelines
-- Troubleshooting installation issues
-- Verifying setup before running tests
+- Prewarming the cache in CI/CD pipelines
+- Troubleshooting installation problems
+- Verifying the setup before running tests
 
 **Example:**
 
@@ -221,7 +218,7 @@ Initialize the Python environment and download dependencies without running eval
 runevals --init-only
 ```
 
-Often combined with `--log-level debug` for troubleshooting:
+For troubleshooting, combine this option with `--log-level debug`:
 
 ```bash
 runevals --init-only --log-level debug
@@ -229,7 +226,7 @@ runevals --init-only --log-level debug
 
 ### `-h, --help`
 
-Display help information about available commands and options.
+Displays help information about available commands and options.
 
 **Example:**
 
@@ -239,11 +236,11 @@ runevals --help
 
 ## Cache commands
 
-The evaluation tool uses a local cache for the Python runtime and dependencies. These commands help manage the cache.
+The evaluation tool uses a local cache for the Python runtime and dependencies. These commands help you manage the cache.
 
 ### `cache-info`
 
-Display statistics about the cached Python environment including size, location, and installed packages.
+Displays statistics about the cached Python environment, including size, location, and installed packages.
 
 **Example:**
 
@@ -267,7 +264,7 @@ Last updated: 2026-04-10 14:23:15
 
 ### `cache-clear`
 
-Remove the cached Python environment and all downloaded dependencies. Use when troubleshooting installation issues or freeing disk space.
+Removes the cached Python environment and all downloaded dependencies. Use this command when troubleshooting installation issues or freeing disk space.
 
 **Example:**
 
@@ -277,7 +274,7 @@ runevals cache-clear
 
 **Follow-up:**
 
-After clearing cache, reinitialize:
+After clearing the cache, reinitialize:
 
 ```bash
 runevals --init-only
@@ -285,7 +282,7 @@ runevals --init-only
 
 ### `cache-dir`
 
-Print the absolute path to the cache directory. Useful for scripts or manual inspection.
+Prints the absolute path to the cache directory. This feature is useful for scripts or manual inspection.
 
 **Example:**
 
@@ -318,7 +315,7 @@ The tool reads configuration from environment files and system variables. For st
 | Variable | Description | Example |
 |----------|-------------|---------|
 | `TENANT_ID` | Microsoft Entra tenant ID | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
-| `AZURE_AI_OPENAI_ENDPOINT` | Azure OpenAI endpoint URL | `https://your-resource.openai.azure.com/` |
+| `AZURE_AI_OPENAI_ENDPOINT` | Azure OpenAI in Foundry Models endpoint URL | `https://your-resource.openai.azure.com/` |
 | `AZURE_AI_API_KEY` | Azure OpenAI API key | `your-api-key-here` |
 
 ### Optional variables
@@ -334,7 +331,7 @@ The tool reads configuration from environment files and system variables. For st
 
 ### Basic usage
 
-Evaluate using the auto-discovered dataset file:
+Evaluate by using the auto-discovered dataset file:
 
 ```bash
 cd /path/to/your-agent-project
@@ -433,11 +430,10 @@ runevals \
 
 ## Troubleshooting
 
-For common issues with installation, authentication, runtime errors, cache problems, and proxy setup, see the central [Troubleshooting](evaluations-cli-troubleshooting.md) article.
+For common issues with installation, authentication, runtime errors, cache problems, and proxy setup, see the  [Troubleshooting](evaluations-cli-troubleshooting.md) article.
 
 ## Related content
 
 - [Evaluate Microsoft 365 Copilot agents overview](evaluations-cli-overview.md)
 - [Quickstart: Evaluate your agent](evaluations-cli-quickstart.md)
 - [Dataset schema and test design](evaluations-cli-create-tests.md)
-- [Troubleshooting](evaluations-cli-troubleshooting.md)

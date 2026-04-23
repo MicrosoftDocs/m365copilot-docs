@@ -19,7 +19,7 @@ Before you begin, make sure that you have:
 - A Microsoft 365 Copilot agent deployed to your tenant.
 - [Node.js](https://nodejs.org/en/download) 24.12.0 or later (use `node --version` to check).
 - Access to an Azure OpenAI in Foundry Models resource with GPT-4o-mini deployed.
-- Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
+- Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Get values for  environment variables](evaluations-get-env-values.md).
 
 > [!NOTE]
 > This quickstart assumes you're using a Windows development environment. Authentication support for other operating systems is coming soon.
@@ -178,6 +178,6 @@ If you don't see these results, see [Troubleshooting](evaluations-cli-troublesho
 ## Related content
 
 - [Agents Evaluation CLI overview](evaluations-cli-overview.md)
-- [Create evaluation test suites](evaluations-cli-create-tests.md)
+- [Dataset schema and test design](evaluations-cli-create-tests.md)
 - [CLI reference](evaluations-cli-reference.md)
-- [Troubleshooting](evaluations-cli-troubleshooting.md)
+- [Troubleshooting and support](evaluations-cli-troubleshooting.md)

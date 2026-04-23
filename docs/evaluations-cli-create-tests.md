@@ -4,13 +4,13 @@ description: Learn the dataset schema, test design patterns, and advanced evalua
 ms.date: 04/22/2026
 author: lauragra
 ms.author: lauragra
-ms.topic: how-to
+ms.topic: concept-article
 ms.localizationpriority: medium
 ---
 
 # Dataset schema and test design
 
-Evaluation datasets are JSON files containing prompts and expected responses. This article defines the dataset schema, documents where the tool looks for datasets, and shows how to design effective tests — including advanced scenarios like multi-turn conversations and categorized test suites.
+Evaluation datasets are JSON files containing prompts and expected responses. This article defines the dataset schema, documents where the tool looks for datasets, and shows how to design effective tests - including advanced scenarios like mult-turn conversations and categorized test suites.
 
 ## Schema overview
 
@@ -85,7 +85,7 @@ my-agent/
 
 ### Starter file creation
 
-If no dataset file is found, the tool prompts you to create a starter file:
+If the tool doesn't find a dataset file, it prompts you to create a starter file:
 
 ```
 ⚠️  No prompts file found in current directory or ./evals/
@@ -101,7 +101,7 @@ Organize your tests into categories that reflect the agent's behavior you want t
 
 ### Knowledge verification
 
-Test whether your agent correctly accesses and uses its knowledge base:
+Test whether your agent correctly accesses and uses its knowledge base.
 
 ```json
 {
@@ -112,7 +112,7 @@ Test whether your agent correctly accesses and uses its knowledge base:
 
 ### Instruction following
 
-Verify the agent follows specific instructions:
+Verify the agent follows specific instructions.
 
 ```json
 {
@@ -123,7 +123,7 @@ Verify the agent follows specific instructions:
 
 ### Tool usage
 
-Test whether the agent correctly uses available tools and plugins:
+Test whether the agent correctly uses available tools and plugins.
 
 ```json
 {
@@ -132,9 +132,9 @@ Test whether the agent correctly uses available tools and plugins:
 }
 ```
 
-### Edge cases
+### Microsoft Edge cases
 
-Test boundary conditions and unusual inputs:
+Test boundary conditions and unusual inputs.
 
 ```json
 {
@@ -145,7 +145,7 @@ Test boundary conditions and unusual inputs:
 
 ### Safety and appropriateness
 
-Ensure the agent handles inappropriate requests properly:
+Ensure the agent handles inappropriate requests properly.
 
 ```json
 {
@@ -228,7 +228,7 @@ Use consistent `testId` prefixes and `category` tags so you can filter and analy
 
 ### Per-prompt categorization and scoring
 
-Use the optional `category` field to group items so you can analyze scores by dimension (knowledge, tools, safety, edge cases, regression):
+Use the optional `category` field to group items so you can analyze scores by dimension (knowledge, tools, safety, edge cases, regression).
 
 ```json
 {
@@ -253,7 +253,7 @@ Use the optional `category` field to group items so you can analyze scores by di
 
 ### Dataset organization strategies
 
-For large projects, organize tests by category across multiple files:
+For large projects, organize tests by category across multiple files.
 
 ```
 evals/
@@ -264,7 +264,7 @@ evals/
 └── regression.json           # Previously fixed issues
 ```
 
-Run specific dataset files:
+Run specific dataset files.
 
 ```bash
 runevals --prompts-file ./evals/knowledge-base.json
@@ -273,7 +273,7 @@ runevals --prompts-file ./evals/tool-usage.json
 
 ### Regression tests
 
-When fixing issues, add tests to prevent regression. Use `testId` and `notes` to link back to bug tracking:
+When you fix problems, add tests to prevent regression. Use `testId` and `notes` to link back to bug tracking.
 
 ```json
 {
@@ -345,7 +345,7 @@ When fixing issues, add tests to prevent regression. Use `testId` and `notes` to
 
 ## Sample datasets
 
-Sample datasets are available in the public repository:
+You can find sample datasets in the public repository:
 
 - [Basic test suite](https://github.com/microsoft/M365-Copilot-Agent-Evals/tree/HEAD/samples/basic)
 - [Regression suite](https://github.com/microsoft/M365-Copilot-Agent-Evals/tree/HEAD/samples/regression)
@@ -353,7 +353,7 @@ Sample datasets are available in the public repository:
 
 ## Interactive and inline testing
 
-For exploratory testing without a dataset file, use interactive mode:
+Use interactive mode for exploratory testing without a dataset file:
 
 ```bash
 runevals --interactive
@@ -429,7 +429,7 @@ When tests score poorly:
 
 ### Track scores over time
 
-Save test results to compare across versions:
+Save test results to compare across versions.
 
 ```bash
 runevals --output ./evals/results/v1.2.0-results.json
@@ -443,5 +443,5 @@ runevals --output ./evals/results/v1.2.0-results.json
 
 ## Related content
 
-- [Evaluate Microsoft 365 Copilot agents overview](evaluations-cli-overview.md)
-- [Quickstart: Evaluate your agent](evaluations-cli-quickstart.md)
+- [Agent Evaluations CLI overview](evaluations-cli-overview.md)
+- [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md)

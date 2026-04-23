@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Microsoft 365 Copilot Agent Evaluations
+title: Troubleshoot the Agent Evaluations CLI
 description: Resolve common setup, authentication, runtime, and environment issues for the M365 Copilot Agent Evaluations CLI.
 ms.date: 04/22/2026
 author: lauragra
@@ -8,12 +8,9 @@ ms.topic: troubleshooting
 ms.localizationpriority: medium
 ---
 
-# Troubleshoot Microsoft 365 Copilot Agent Evaluations
+# Troubleshoot the Agent Evaluations CLI
 
-This article consolidates troubleshooting guidance for the M365 Copilot Agent Evaluations CLI. Issues are grouped by the stage of the workflow they affect: setup, authentication, runtime, and environment.
-
-> [!IMPORTANT]
-> This tool is currently in private preview. Features and commands are subject to change.
+This article provides troubleshooting information for the Microsoft 365 Copilot Agent Evaluations CLI. Issues are grouped by the stage of the workflow they affect: setup, authentication, runtime, and environment.
 
 ## Setup issues
 
@@ -88,7 +85,7 @@ If the tool connects but returns no agent, your `TENANT_ID` may not match the te
 az account show --query tenantId
 ```
 
-Or follow the instructions in [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
+You can also follow the instructions in [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
 
 ### Azure OpenAI API key errors
 

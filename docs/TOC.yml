@@ -339,6 +339,8 @@ items:
     href: evaluations-cli-overview.md
   - name: Quickstart
     href: evaluations-cli-quickstart.md
+  - name: Get environment variables
+    href: evaluations-cli-get-env-variables.md
   - name: Create test suites
     href: evaluations-cli-create-tests.md
   - name: CLI reference
