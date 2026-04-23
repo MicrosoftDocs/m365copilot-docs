@@ -116,7 +116,7 @@ If the tool can't find your agent:
 If evaluations start but fail mid-run:
 
 - Run with verbose logging to see detailed errors: `runevals --log-level debug`.
-- Check exit codes for the general failure category. See [Exit codes](agent-evals-cli-reference.md#exit-codes) in the CLI reference.
+- Check exit codes for the general failure category. See [Exit codes](evaluations-cli-reference.md#exit-codes) in the CLI reference.
 
 > [!WARNING]
 > The `--log-level debug` option may include raw API payloads and response data in console output. Redaction is pattern-based and might not catch all PII or custom credentials. Don't share debug-level output publicly without manual review.
@@ -190,5 +190,5 @@ If the troubleshooting steps above don't resolve your issue, file an issue in th
 
 - [Evaluate Microsoft 365 Copilot agents overview](evaluations-cli-overview.md)
 - [Quickstart: Evaluate your agent](evaluations-cli-quickstart.md)
-- [CLI reference](evaluations-cli-cli-reference.md)
+- [CLI reference](evaluations-cli-reference.md)
 - [Create evaluation test suites](evaluations-cli-create-tests.md)

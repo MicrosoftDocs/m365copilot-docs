@@ -56,9 +56,9 @@ The evaluation tool uses environment variables to authenticate and connect to yo
 
 These values enable authentication and allow the tool to run LLM-based evaluation scoring.
 
-## Next steps
+## Related content
 
 - [Quickstart: Run your first evaluation](evaluations-cli-quickstart.md)
-- [Dataset schema and test design](evaluations-cli-datasets.md)
+- [Dataset schema and test design](evaluations-cli-create-tests.md)
 - [CLI reference](evaluations-cli-reference.md)
 - [Troubleshooting and support](evaluations-cli-troubleshooting.md)

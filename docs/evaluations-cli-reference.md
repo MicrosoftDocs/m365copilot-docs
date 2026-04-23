@@ -125,7 +125,7 @@ runevals --prompts-file ./tests/my-custom-tests.json
 ]
 ```
 
-For the full dataset schema, see [Dataset schema and test design](agent-evals-create-tests.md#schema-overview).
+For the full dataset schema, see [Dataset schema and test design](evaluations-cli-create-tests.md#schema-overview).
 
 ### `-o, --output <file>`
 
@@ -311,7 +311,7 @@ ls -lah $(runevals cache-dir)
 
 ## Environment variables
 
-The tool reads configuration from environment files and system variables. For step-by-step instructions on obtaining these values, see [Get required environment variables](agent-evals-overview.md#get-required-environment-variables).
+The tool reads configuration from environment files and system variables. For step-by-step instructions on obtaining these values, see [Get required environment variables](evaluations-cli-overview.md#get-required-environment-variables).
 
 ### Required variables
 

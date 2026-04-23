@@ -19,7 +19,7 @@ Before you begin, ensure you have:
 - A Microsoft 365 Copilot agent deployed to your tenant.
 - Node.js 24.12.0 or later (`node --version` to check).
 - Access to an Azure OpenAI resource with GPT-4o-mini deployed.
-- Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Get required environment variables](agent-evals-overview.md#get-required-environment-variables).
+- Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Get required environment variables](evaluations-cli-overview.md#get-required-environment-variables).
 
 > [!NOTE]
 > This quickstart assumes you're using a Windows development environment. Authentication support for other operating systems is coming soon.
@@ -67,7 +67,7 @@ You'll create the `evals/evals.json` dataset in Step 4. The `.evals/` report fol
 Choose the option that matches your project type.
 
 > [!TIP]
-> For details on where to obtain each value, see [Get required environment variables](agent-evals-overview.md#get-required-environment-variables).
+> For details on where to obtain each value, see [Get required environment variables](evaluations-cli-overview.md#get-required-environment-variables).
 
 ### Microsoft 365 Agents Toolkit projects
 
@@ -125,7 +125,7 @@ Create `evals/evals.json` with a small set of prompts and expected responses:
 > [!TIP]
 > If you skip this step, the tool offers to generate a starter file with sample prompts the first time you run `runevals`.
 
-For full dataset schema, categories, and advanced patterns, see [Create evaluation test suites](agent-evals-create-tests.md).
+For full dataset schema, categories, and advanced patterns, see [Create evaluation test suites](evaluations-cli-create-tests.md).
 
 ## Step 5: Run your first evaluation
 
@@ -173,7 +173,7 @@ The report includes scores for each prompt:
 - **Tool Call Accuracy** (1-5): How appropriately tools were used
 - **Citations** (0-1): Whether citations are present
 
-If you don't see these results, see [Troubleshooting](agent-evals-troubleshooting.md).
+If you don't see these results, see [Troubleshooting](evaluations-cli-troubleshooting.md).
 
 ## Next steps
 
