@@ -1,10 +1,10 @@
 ---
-title: Configure Authentication for plugins in Agents in Microsoft 365 Copilot
+title: Configure Authentication for plugins in agents in Microsoft 365 Copilot
 description: Learn how to set up authentication for plugins in agents running in Microsoft 365 Copilot.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 04/23/2026
 ms.topic: article
 ---
 
@@ -29,7 +29,20 @@ Before you begin, you need to register with your OAuth 2.0 provider to get a cli
 > - MCP and API plugins only support the authorization code flow for OAuth 2.0.
 > - OAuth 2.0 servers that return `307 Temporary Redirect` HTTP status codes from their token endpoint aren't supported.
 
-You can define this scheme in the `securitySchemes` property of an OpenAPI document. For more information, see [OAuth 2.0](https://swagger.io/docs/specification/authentication/oauth2/).
+To enable OAuth 2.0 authentication, you need to register an OAuth client in the Teams developer portal. You can register an OAuth client with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) in Visual Studio Code or by manually registering in the Teams developer portal.
+
+> [!NOTE]
+> Declarative agents don't provide a built-in way for users to manually clear stored OAuth credentials. The Bot Framework Token Service centrally manages tokens, and they might continue to persist after an agent is uninstalled due to SSO caching, tenant settings, or client differences.
+>
+> To force reauthentication, use server-side sign out by calling [`SignOutUserAsync`](/dotnet/api/microsoft.bot.builder.botframeworkadapter.signoutuserasync) to invalidate bot tokens. For a full reset, you can optionally combine this method with the Microsoft Graph [`revokeSignInSessions`](/graph/api/user-revokesigninsessions) API or remove the user's consent.
+>
+> For a better user experience, consider adding a **Sign out/switch account** action that triggers these server-side sign out flows so users are prompted to sign in again.
+
+### Register an OAuth client with Agents Toolkit
+
+ Agents Toolkit registers your OAuth client and updates your app package for you when you [create an agent with an MCP plugin](build-mcp-plugins.md) (if the server requires authentication) or [create an agent with API plugin from an existing OpenAPI document](build-api-plugins-existing-api.md).
+
+For API plugins, you must have the `securitySchemes` property defined in your OpenAPI document. For more information, see [OAuth 2.0](https://swagger.io/docs/specification/authentication/oauth2/).
 
 ```yml
 securitySchemes:
@@ -43,19 +56,6 @@ securitySchemes:
         scopes:
           scope: description
 ```
-
-To enable OAuth 2.0 authentication, you need to register an OAuth client in the Teams developer portal. You can register an OAuth client with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) in Visual Studio Code or by manually registering in the Teams developer portal.
-
-> [!NOTE]
-> Declarative agents don't provide a built-in way for users to manually clear stored OAuth credentials. The Bot Framework Token Service centrally manages tokens, and they might continue to persist after an agent is uninstalled due to SSO caching, tenant settings, or client differences.
->
-> To force reauthentication, use server-side sign out by calling [`SignOutUserAsync`](/dotnet/api/microsoft.bot.builder.botframeworkadapter.signoutuserasync) to invalidate bot tokens. For a full reset, you can optionally combine this method with the Microsoft Graph [`revokeSignInSessions`](/graph/api/user-revokesigninsessions) API or remove the user's consent.
->
-> For a better user experience, consider adding a **Sign out/switch account** action that triggers these server-side sign out flows so users are prompted to sign in again.
-
-### Register an OAuth client with Agents Toolkit
-
- Agents Toolkit registers your OAuth client and updates your app package for you when you [create an agent with an MCP plugin](build-mcp-plugins.md) (if the server requires authentication) or [create an agent with API plugin from an existing OpenAPI document](build-api-plugins-existing-api.md). For API plugins, you must have the `securitySchemes` property defined in your OpenAPI document.
 
 If your OAuth provider supports PKCE, uncomment the following line of code in m365agents.yml in your agent project before provisioning the agent.
 
@@ -72,7 +72,7 @@ If your OAuth provider supports PKCE, uncomment the following line of code in m3
 1. Fill in the following fields.
 
     - **Registration name**: A friendly name for your registration.
-    - **Base URL**: Your API's base URL. This value should correspond to an entry in the [`servers` array](https://swagger.io/docs/specification/v3_0/api-host-and-base-path/) in your OpenAPI document.
+    - **Base URL**: Your API's base URL. This value should correspond to the URL in the `url` property of the [MCP server spec object](plugin-manifest-2.4.md#mcp-server-spec-object) in the plugin manifest for MCP-based plugins, or an entry in the [`servers` array](https://swagger.io/docs/specification/v3_0/api-host-and-base-path/) in your OpenAPI document for API plugins.
     - **Client ID**: The client ID or application ID issued by your OAuth 2.0 provider.
     - **Client secret**: Your client secret issued by your OAuth 2.0 provider.
     - **Authorization endpoint**: The URL from your OAuth 2.0 provider that apps use to [request an authorization code](/entra/identity-platform/v2-oauth2-auth-code-flow#request-an-authorization-code)
@@ -109,7 +109,7 @@ Microsoft Entra ID SSO authentication allows seamless single sign-on (SSO) integ
 1. Fill in the following fields.
 
     - **Registration name**: A friendly name for your registration.
-    - **Base URL**: Your API's base URL. This value should correspond to an entry in the [`servers` array](https://swagger.io/docs/specification/v3_0/api-host-and-base-path/) in your OpenAPI document.
+    - **Base URL**: Your API's base URL. This value should correspond to the URL in the `url` property of the [MCP server spec object](plugin-manifest-2.4.md#mcp-server-spec-object) in the plugin manifest for MCP-based plugins, or an entry in the [`servers` array](https://swagger.io/docs/specification/v3_0/api-host-and-base-path/) in your OpenAPI document for API plugins.
     - **Restrict usage by org**: Select which Microsoft 365 organization has access to your app to access API endpoints.
     - **Restrict usage by app**: Select **Any Teams app** if you don’t know your final app ID. After you publish your app, bind this registration with your published app ID.
     - **Client ID**: The client ID of the app registered in Microsoft Entra.
