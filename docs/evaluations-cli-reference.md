@@ -1,7 +1,7 @@
 ---
 title: CLI reference for Microsoft 365 Copilot Agent Evaluations
 description: Complete command-line reference for the M365 Copilot Agent Evaluations CLI tool including all options, flags, and cache commands.
-ms.date: 04/15/2026
+ms.date: 04/22/2026
 author: lauragra
 ms.author: lauragra
 ms.topic: reference

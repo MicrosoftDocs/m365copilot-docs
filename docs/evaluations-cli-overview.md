@@ -19,7 +19,7 @@ This tool enables you to run structured evaluations, analyze results, and iterat
 The evaluation tool provides the following capabilities:
 
 - Run batch and interactive evaluations.
-- Automatically score responses using Azure AI evaluation metrics.
+- Automatically score responses using Azure AI + machine learning evaluation metrics.
 - Test using JSON datasets, inline prompts, or interactive input.
 - Generate reports in HTML, JSON, or CSV formats. 
 
@@ -38,14 +38,14 @@ Each response is scored using standard evaluation metrics:
 Evaluations follow a consistent workflow:
 
 1. Install and configure the CLI.
-2. Provide environment configuration and credentials.
-3. Create a dataset of test prompts.
-4. Run evaluations against your agent.
-5. Review results and iterate.
+1. Provide environment configuration and credentials.
+1. Create a dataset of test prompts.
+1. Run evaluations against your agent.
+1. Review results and iterate.
 
 ## Required environment variables
 
-The evaluation tool uses environment variables to authenticate and connect to your tenant and Azure OpenAI resource.
+The evaluation tool uses environment variables to authenticate and connect to your tenant and Azure OpenAI in Foundry Models resource.
 
 | Variable | Description |
 |----------|------------|

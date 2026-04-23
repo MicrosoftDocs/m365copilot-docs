@@ -1,7 +1,7 @@
 ---
 title: Quickstart - Use the Agent Evaluations CLI
 description: Get started quickly with evaluating your Microsoft 365 Copilot agent using the M365 Copilot Agent Evaluations CLI tool.
-ms.date: 04/15/2026
+ms.date: 04/22/2026
 author: lauragra
 ms.author: lauragra
 ms.topic: quickstart
@@ -10,15 +10,15 @@ ms.localizationpriority: high
 
 # Quickstart: Use the Agent Evaluations CLI
 
-This quickstart walks you through installing the M365 Copilot Agent Evaluations tool, configuring your environment, creating your first dataset, and running an evaluation. Follow the steps in order.
+The Microsoft 365 Copilot Agent Evaluations CLI (@microsoft/m365-copilot-eval) helps you test, measure, and improve the quality of your agents through automated prompt evaluation and AI-based scoring. This quickstart walks you through installing the Agent Evaluations tool, configuring your environment, creating your first dataset, and running an evaluation.
 
 ## Prerequisites
 
-Before you begin, ensure you have:
+Before you begin, make sure that you have:
 
 - A Microsoft 365 Copilot agent deployed to your tenant.
-- Node.js 24.12.0 or later (`node --version` to check).
-- Access to an Azure OpenAI resource with GPT-4o-mini deployed.
+- [Node.js](https://nodejs.org/en/download) 24.12.0 or later (use `node --version` to check).
+- Access to an Azure OpenAI in Foundry Models resource with GPT-4o-mini deployed.
 - Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
 
 > [!NOTE]
@@ -26,7 +26,7 @@ Before you begin, ensure you have:
 
 ## Step 1: Install the CLI
 
-Install the M365 Copilot Agent Evaluations CLI globally using npm:
+Install the Agent Evaluations CLI globally by using npm:
 
 ```bash
 npm install -g @microsoft/m365-copilot-eval
@@ -48,7 +48,7 @@ Run the evaluation tool from **your Microsoft 365 agent project directory** (whe
 cd /path/to/your-agent-project
 ```
 
-Your agent project should include the following:
+Your agent project should include the following files and folders:
 
 ```
 my-agent/
@@ -60,18 +60,18 @@ my-agent/
     └── <generated reports> # Results written here (YYYY-MM-DD_HH-MM-SS.html)
 ```
 
-You'll create the `evals/evals.json` dataset in Step 4. The `.evals/` report folder is created automatically on first run.
+You create the `evals/evals.json` dataset in Step 4. The `.evals/` report folder is created automatically on first run.
 
 ## Step 3: Configure environment variables
 
 Choose the option that matches your project type.
 
 > [!TIP]
-> For details on where to obtain each value, see [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
+If you built your agent by using Microsoft 365 Agents Toolkit, you already have `.env.local` with your agent configuration. Create `.env.local.user` in your project root for secrets:
 
 ### Microsoft 365 Agents Toolkit projects
 
-If you built your agent with Microsoft 365 Agents Toolkit, you already have `.env.local` with your agent configuration. Create `.env.local.user` in your project root for secrets:
+### Non-Microsoft 365 Agents Toolkit projects
 
 ```ini
 # .env.local.user (NOT checked in — secrets go here)
@@ -145,7 +145,7 @@ runevals --env dev
 
 A successful run produces:
 
-- A completion message in the terminal similar to the following:
+- A completion message in the terminal similar to the following message.
 
   ```
   🚀 M365 Copilot Agent Evaluations CLI
@@ -167,22 +167,17 @@ A successful run produces:
 
 The report includes scores for each prompt:
 
-- **Relevance** (1-5): How well the response addresses the prompt
-- **Coherence** (1-5): How logical and well-structured the response is
-- **Groundedness** (1-5): How well supported by citations
-- **Tool Call Accuracy** (1-5): How appropriately tools were used
-- **Citations** (0-1): Whether citations are present
+- **Relevance** (1-5): How well the response addresses the prompt.
+- **Coherence** (1-5): How logical and well-structured the response is.
+- **Groundedness** (1-5): How well supported by citations.
+- **Tool Call Accuracy** (1-5): How appropriately tools were used.
+- **Citations** (0-1): Whether citations are present.
 
 If you don't see these results, see [Troubleshooting](evaluations-cli-troubleshooting.md).
 
-## Next steps
-
-Now that you've run your first evaluation, explore more capabilities:
-
-- [Create evaluation test suites](evaluations-cli-create-tests.md) - Design comprehensive datasets and multi-turn scenarios.
-- [CLI reference](evaluations-cli-reference.md) - Explore all commands and options, including interactive mode, output formats, and cache commands.
-- [Troubleshooting](evaluations-cli-troubleshooting.md) - Resolve issues and find support channels.
-
 ## Related content
 
-- [Evaluate Microsoft 365 Copilot agents overview](evaluations-cli-overview.md)
+- [Agents Evaluation CLI overview](evaluations-cli-overview.md)
+- [Create evaluation test suites](evaluations-cli-create-tests.md)
+- [CLI reference](evaluations-cli-reference.md)
+- [Troubleshooting](evaluations-cli-troubleshooting.md)
