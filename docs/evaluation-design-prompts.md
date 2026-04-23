@@ -135,6 +135,7 @@ The robustness probe evaluates how well the agent handles imperfect input. Robus
 
 The following table shows examples of patterns to test.
 
+<!-- cspell:ignore whats vacaton -->
 | Pattern | Example |
 |--------|--------|
 | Typos | "vacaton" instead of "vacation" |
