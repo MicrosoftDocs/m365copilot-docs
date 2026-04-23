@@ -1,6 +1,6 @@
 ---
-title: Configure Authentication for plugins in agents in Microsoft 365 Copilot
-description: Learn how to set up authentication for plugins in agents running in Microsoft 365 Copilot.
+title: Configure Authentication for MCP and API plugins in agents in Microsoft 365 Copilot
+description: Learn how to set up authentication for MCP and API plugins in agents running in Microsoft 365 Copilot.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.date: 04/23/2026
 ms.topic: article
 ---
 
-# Configure authentication for plugins in agents
+# Configure authentication for MCP and API plugins in agents
 
 You can configure authentication for MCP and API plugins in agents running in Microsoft 365 Copilot by using any of the four supported authentication schemes to seamlessly connect to their backend APIs:
 
