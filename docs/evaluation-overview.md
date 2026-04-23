@@ -5,6 +5,7 @@ author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
 ms.topic: concept-article
+ms.localizationpriority: medium
 ---
 
 # Agent evaluation overview

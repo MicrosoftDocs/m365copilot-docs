@@ -5,6 +5,7 @@ author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
 ms.topic: concept-article
+ms.localizationpriority: medium
 ---
 
 # Organize test categories and iterate on evaluation
@@ -421,7 +422,7 @@ For each core scenario:
 
 ### Evaluation checklist
 
-Use the following checklist to validate readiness. 
+Use the following checklist to validate readiness.
 
 #### Before you start
 

@@ -5,6 +5,7 @@ author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
 ms.topic: concept-article
+ms.localizationpriority: medium
 ---
 
 # Design evaluation prompts
@@ -87,7 +88,7 @@ Users don't all ask the same question in the same way. To test generalization, c
 
 - Include all required parameters. 
 - Use precise terminology.  
-- Avoid ambiguity.  
+- Avoid ambiguity.
 - Represent an ideal query.  
 
 The canonical prompt is explicit, complete, and unambiguous. It serves as the baseline.
@@ -129,7 +130,8 @@ The robustness probe evaluates how well the agent handles imperfect input. Robus
 
 **Example:**
 
-"whats my vacaton days entitlement"
+<!-- cspell:ignore whats vacaton -->
+`whats my vacaton days entitlement`
 
 The following table shows examples of patterns to test.
 
@@ -302,4 +304,4 @@ For each scenario, include:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Write assertions](evaluation-write-assertions.md).
+> [Write assertions](evaluation-write-assertions.md)

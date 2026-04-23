@@ -5,6 +5,7 @@ author: sathya-raveendran
 ms.author: saraveen
 ms.date: 04/16/2026
 ms.topic: concept-article
+ms.localizationpriority: medium
 ---
 
 # Derive quality signals for Copilot agent evaluation
@@ -175,4 +176,4 @@ Instead, define signals using explicit, observable behaviors tied to evaluation 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Evaluate multiturn conversations](evaluation-multi-turn.md)
+> [Evaluate multi-turn conversations](evaluation-multi-turn.md)
