@@ -10,7 +10,7 @@ ms.topic: article
 
 # Configure authentication for MCP and API plugins in agents
 
-You can configure authentication for MCP and API plugins in agents running in Microsoft 365 Copilot by using any of the four supported authentication schemes to seamlessly connect to their backend APIs:
+You can configure authentication for Model Context Protocol (MCP) and API plugins in agents running in Microsoft 365 Copilot by using any of the four supported authentication schemes to seamlessly connect to their backend APIs:
 
 - OAuth 2.0 authorization code flow
 - Microsoft Entra ID single-sign on (SSO) authentication
