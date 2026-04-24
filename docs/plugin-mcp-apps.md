@@ -50,7 +50,7 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
 
 ### User experience design
 
-For details on UX design best practices, see [User experience guidelines for interactive UI widgets in declarative agents](declarative-agent-ui-widgets-guidelines.md).
+For details on UX design best practices, see [User experience guidelines for interactive UI widgets in declarative agents](plugin-mcp-apps-guidelines.md).
 
 ### Verify API availability
 
@@ -279,7 +279,7 @@ Yes. Anonymous authentication is supported for development purposes. However, yo
 ## Related content
 
 - [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
-- [User experience guidelines for interactive UI widgets in declarative agents](declarative-agent-ui-widgets-guidelines.md)
+- [User experience guidelines for MCP apps in declarative agents for Microsoft 365 Copilot](plugin-mcp-apps-ui-guidelines.md)
 - [MCP Apps Overview](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html#learn-more)
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk)
 - [MCP based interactive UI samples for Microsoft 365 Copilot](https://github.com/microsoft/mcp-interactiveUI-samples)

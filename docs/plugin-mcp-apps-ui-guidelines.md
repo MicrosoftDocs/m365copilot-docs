@@ -332,5 +332,5 @@ Create beautiful, cohesive Microsoft experiences using the Fluent 2 UI kits. Bui
 
 ## Related content
 
-- [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md)
+- [Add MCP apps to declarative agents in Microsoft 365 Copilot](plugin-mcp-apps.md)
 - [Fluent 2](https://fluent2.microsoft.design/)

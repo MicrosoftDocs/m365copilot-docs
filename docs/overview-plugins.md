@@ -139,7 +139,7 @@ Copilot asks the user before sending any data for the first time to a plugin.
 
 :::image type="content" source="assets/images/api-plugins/first-connection-confirmation.png" alt-text="A screenshot of a plugin confirmation dialog.":::
 
-After the user confirms the connection, MCP server tools and APIs that only retrieve data don't require confirmation, while tools and APIs that modify data do. Plugin developers can override these defaults. For details, see [Confirmation prompts for API plugins for Microsoft 365 Copilot](api-plugin-confirmation-prompts.md).
+After the user confirms the connection, MCP server tools and APIs that only retrieve data don't require confirmation, while tools and APIs that modify data do. Plugin developers can override these defaults. For details, see [Confirmation prompts for MCP and API plugins for Microsoft 365 Copilot](plugin-confirmation-prompts.md).
 
 ## Customizing response presentation
 
