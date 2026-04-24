@@ -10,11 +10,11 @@ ms.date: 04/24/2026
 
 # Troubleshoot MCP apps in Microsoft 365 Copilot
 
-This guide provides troubleshooting advice for common issues you might encounter when developing an [MCP app to integrate with a declarative agent](plugin-mcp-apps.md) inside Microsoft 365 Copilot.
+This guide provides troubleshooting advice for common issues you might encounter when developing a [Model Context Protocol (MCP) app to integrate with a declarative agent](plugin-mcp-apps.md) inside Microsoft 365 Copilot.
 
 ## Enable developer mode
 
-[Enabling developer mode](prerequisites.md#enabling-developer-mode) surfaces logs and error in agent responses. This information is essential for debugging. To enable developer mode, type the following in Microsoft Copilot.
+[Enabling developer mode](prerequisites.md#enabling-developer-mode) surfaces logs and error in agent responses. This information is essential for debugging. To enable developer mode, type the following command in Microsoft Copilot.
 
 ```text
 -developer on
@@ -26,9 +26,9 @@ MCP tools available to your agent show up in the **Actions** section of the debu
 
 ### No tools listed
 
-If the **Actions** section of the debug information card does not list any MCP tools, check the following.
+If the **Actions** section of the debug information card doesn't list any MCP tools, check the following.
 
-- Confirm your MCP server is running and you are connecting to the correct MCP endpoint in your plugin manifest.
+- Confirm your MCP server is running and you're connecting to the correct MCP endpoint in your plugin manifest.
 - Verify your plugin manifest includes the expected tools in the `functions` property.
 - Verify that the MCP server runtime specified in the `runtimes` property in your plugin manifest:
   - References the tools in the `mcp_tool_description` property by either:
@@ -54,7 +54,7 @@ If the **Actions** section of the debug information card does not list any MCP t
 
 ### Tools not triggering from Copilot chat
 
-- Revisit your tool and parameter descriptions to ensure they provide sufficient context. Consider rewriting using "Use this when..." phrasing.
+- Revisit your tool and parameter descriptions to ensure they provide sufficient context. Consider rewriting using "Use this function/parameter when..." phrasing.
 - Keep descriptions under 1024 characters - text beyond 1024 characters is ignored.
 - Ensure tool visibility is set correctly.
   - For MCP apps, `_meta.ui.visibility` includes `model`.
@@ -69,14 +69,14 @@ If the **Actions** section of the debug information card does not list any MCP t
 
 ### Widget doesn't render
 
-If the correct MCP tool is called but your UI widget does not render in the response, your MCP server is likely only returning structured content with no UI component. Ensure that UI binding is configured correctly.
+If the correct MCP tool is called but your UI widget doesn't render in the response, your MCP server is likely only returning structured content with no UI component. Ensure that UI binding is configured correctly.
 
 - For MCP apps, tool definition includes `_meta.ui.resourceUri` set to a registered HTML resource with MIME type `text/html;profile=mcp-app`.
 - For OpenAI SDK apps, tool definition includes `_meta["openai/outputTemplate"]` set to a registered HTML resource with MIME type `text/html+skybridge`.
 
 ### Widget fails to load
 
-- Open your browser's developer tools and check for Content Security Policy (CSP) violations in the console. Ensure that requests from the widget's host URL are allow-listed. For more details, see [MCP server requirements for MCP apps](plugin-mcp-apps.md#mcp-server-requirements-for-mcp-apps).
+- Open your browser's developer tools and check for Content Security Policy (CSP) violations in the console. Ensure that requests from the widget's host URL are allow-listed. For more information, see [MCP server requirements for MCP apps](plugin-mcp-apps.md#mcp-server-requirements-for-mcp-apps).
 - Verify that your widget compiles all HTML and JavaScript dependencies into a single file with no external unresolved assets.
 
 ### Widget loads with no data
@@ -100,17 +100,17 @@ Anchor tags `<a>` don't work for external links in Copilot. Use the appropriate 
 
 ### Fullscreen doesn't work in some Copilot hosts
 
-Fullscreen view is not supported across all Copilot hosts. As a best practice, always check for host capabilities and conditionally display UI elements (such as a fullscreen button). For more details, see [Verify API availability](plugin-mcp-apps.md#verify-api-availability).
+Fullscreen view isn't supported across all Copilot hosts. As a best practice, always check for host capabilities and conditionally display UI elements (such as a fullscreen button). For more information, see [Verify API availability](plugin-mcp-apps.md#verify-api-availability).
 
 ## Response issues
 
 ### Tool result expiry issues
 
-Ensure tool responses sent via `content` or `structuredContent` are not excessively large. If your widget requires rich metadata that isn't useful for the model, such as avatar URLs or UI-specific details, include the full data in `_meta` and provide a concise summary in `content`. This ensures the model retains key information while supporting an effective multi-turn experience.
+Ensure tool responses sent via `content` or `structuredContent` aren't excessively large. If your widget requires rich metadata that isn't useful for the model, such as avatar URLs or UI-specific details, include the full data in `_meta` and provide a concise summary in `content`. This ensures the model retains key information while supporting an effective multi-turn experience.
 
 ### Duplicate data in widget and text summary
 
-You can resolve this with one of the following options.
+You can resolve this problem with one of the following options.
 
 - **Optimize data separation:** use `_meta` for widget-specific data and `content` for model-visible summaries.
 - **Steer formatting:** use instructions in the declarative agent manifest to guide how responses are structured and presented.
@@ -125,9 +125,9 @@ If you see errors in your debug information card similar to:
 OAuth authentication failed: The App ID used in the request does not match the App ID in the authentication configuration. (HTTP 404)
 ```
 
-Go to the [Teams developer portal](https://dev.teams.microsoft.com). Find your OAuth client or SSO client registration and verify that the App ID in your plugin matches the registered App ID.
+Go to the [Teams developer portal](https://dev.teams.microsoft.com). Find your OAuth client or single sign-on (SSO) client registration and verify that the App ID in your plugin matches the registered App ID.
 
-### Base URL in auth configuration does not match the plugin
+### Base URL in auth configuration doesn't match the plugin
 
 If you see errors in your debug information card similar to:
 
@@ -145,7 +145,7 @@ If you see errors in your debug information card similar to:
 OAuth authentication failed: No matching configuration found for referenceID in 'runtime.auth' section of the action manifest
 ```
 
-Go to the [Teams developer portal](https://dev.teams.microsoft.com). Find your OAuth client or SSO client registration and verify that the ID in your MCP server's runtime's `auth.reference_id` matchs the registration's ID in the developer portal.
+Go to the [Teams developer portal](https://dev.teams.microsoft.com). Find your OAuth client or SSO client registration and verify that the ID in your MCP server's runtime's `auth.reference_id` matches the registration's ID in the developer portal.
 
 ### Organization policy restricts access
 
@@ -159,7 +159,7 @@ Contact your organization's administrators to review and enable access for your 
 
 ### Sign in button is inactive or displays general error
 
-If your sign in button is inactive or disabled, or selecting it gives a general "Request cannot be processed" error, this could indicate temporary authentication or session issues. Retry the query. If the issue persists, reinsall the app or contact your organization's administrators.
+If your sign in button is inactive or disabled, or selecting it gives a general "Request cannot be processed" error, this could indicate temporary authentication or session issues. Retry the query. If the issue persists, reinstall the app or contact your organization's administrators.
 
 ### Sign in popup fails to open
 
@@ -167,7 +167,7 @@ Enable popups for the site in your browser's settings and try again.
 
 ### Incorrect credentials error
 
-If you see an "Incorrect credentials" error in the sign in popup or chat response, ensure you are entering the correct credentials. If the error persists, ensure that the user has required permissions.
+If you see an "Incorrect credentials" error in the sign in popup or chat response, ensure you're entering the correct credentials. If the error persists, ensure that the user has the required permissions.
 
 ### Sign in URL not found
 
@@ -179,7 +179,7 @@ Check details in the authentication popup and contact your organization's admini
 
 ### Consent dialog appears during sign in
 
-If a consent dialog appears requesting permissions or business justification, review any requested permissions and provide a business justification if required. If you are unsure, or if the consent dialog requests permissions that require admin consent, contact your organization's administrators.
+If a consent dialog appears requesting permissions or business justification, review any requested permissions and provide a business justification if necessary. If you're unsure, or if the consent dialog requests permissions that require admin consent, contact your organization's administrators.
 
 ## Related content
 
