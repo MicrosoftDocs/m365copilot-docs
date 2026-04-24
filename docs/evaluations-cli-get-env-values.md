@@ -16,7 +16,7 @@ For the list of variables and where to put them, see [Agent Evaluations CLI over
 
 ## Before you begin
 
-Gather the following before you collect values:
+Gather the following items before you collect values:
 
 - Access to the Azure subscription that hosts your Azure OpenAI in Foundry Models resource.
 - Sign-in access to the Microsoft 365 tenant where your Copilot agent is deployed.
@@ -59,7 +59,7 @@ az login --tenant <tenant-domain-or-id>
 
 ## Get your Azure OpenAI endpoint and API key
 
-The evaluation tool uses an Azure OpenAI in Foundry Models resource to score responses. You need both the resource endpoint and one of its keys.
+The evaluation tool uses an Azure OpenAI resource to score responses. You need both the resource endpoint and one of its keys.
 
 ### Prerequisites
 
@@ -95,7 +95,7 @@ If you need to rotate a key, use **Regenerate Key 1** or **Regenerate Key 2** on
 
 ### Microsoft 365 Agents Toolkit projects
 
-If you built your agent with the Microsoft 365 Agents Toolkit, you don't need to set `M365_AGENT_ID` directly. The CLI auto-detects the agent ID from `M365_TITLE_ID`, which the Agents Toolkit writes to `.env.local` during provisioning.
+If you built your agent by using the Microsoft 365 Agents Toolkit, you don't need to set `M365_AGENT_ID` directly. The CLI auto-detects the agent ID from `M365_TITLE_ID`, which the Agents Toolkit writes to `.env.local` during provisioning.
 
 To confirm, open `.env.local` in your project root and look for a line similar to:
 
@@ -103,9 +103,9 @@ To confirm, open `.env.local` in your project root and look for a line similar t
 M365_TITLE_ID="U_0dc4a8a2-b95f-edac-91c8-d802023ec2d4"
 ```
 
-### non-Agents Toolkit projects
+### Non-Microsoft 365 Agents Toolkit projects
 
-Set `M365_AGENT_ID` explicitly in `env/.env.<environment>`. Obtain the value from the location where your agent was published — for example, the Teams admin center, the Microsoft 365 admin center, or the deployment output from your publishing pipeline.
+Set `M365_AGENT_ID` explicitly in `env/.env.<environment>`. Get the value from the location where your agent was published - for example, the Microsoft Teams admin center, the Microsoft 365 admin center, or the deployment output from your publishing pipeline.
 
 ### Override the agent at run time
 
@@ -129,19 +129,19 @@ AZURE_AI_MODEL_NAME="gpt-4o-mini"           # actual name in Foundry
 | Variable | Default | When to change |
 |----------|---------|----------------|
 | `AZURE_AI_API_VERSION` | `2024-12-01-preview` | Your resource requires a different Azure OpenAI REST API version. |
-| `AZURE_AI_MODEL_NAME` | `gpt-4o-mini` | You want to score with a different deployment in your Azure OpenAI in Foundry Models resource. |
+| `AZURE_AI_MODEL_NAME` | `gpt-4o-mini` | You want to score with a different deployment in your Azure OpenAI resource. |
 
-`AZURE_AI_MODEL_NAME` must match the deployment name exactly as it appears in your Azure OpenAI in Foundry Models resource.
+`AZURE_AI_MODEL_NAME` must match the deployment name exactly as it appears in your Azure OpenAI resource.
 
-### Get `AZURE_AI_MODEL_NAME` from Foundry
+### Get `AZURE_AI_MODEL_NAME` from Microsoft Foundry
 
 1. Sign in to the [Azure portal](https://portal.azure.com) and open your **Azure OpenAI** resource.
-1. Select **Resource Management** > **Model deployments** (or open the resource in Azure AI Foundry).
+1. Select **Resource Management** > **Model deployments** (or open the resource in Foundry).
 1. Copy the **Deployment name** of the model you want to use for scoring.
 
 ## Validate your values
 
-After you've gathered the values and added them to the appropriate env file (see [Step 3 of the Quickstart](evaluations-cli-quickstart.md#step-3-configure-environment-variables)), run:
+After you gather the values and add them to the appropriate env file (see [Step 3 of the Quickstart](evaluations-cli-quickstart.md#step-3-configure-environment-variables)), run:
 
 ```bash
 runevals --init-only --log-level debug
@@ -150,7 +150,7 @@ runevals --init-only --log-level debug
 This command loads your environment, initializes the Python runtime, and surfaces configuration errors without running evaluations. If it completes without error, your values are loaded correctly.
 
 > [!WARNING]
-> `--log-level debug` may print raw API payloads. Review the output before sharing it — redaction is pattern-based and might not catch every key or identifier.
+> `--log-level debug` might print raw API payloads. Review the output before sharing it. Redaction is pattern-based and might not catch every key or identifier.
 
 ## Troubleshooting
 

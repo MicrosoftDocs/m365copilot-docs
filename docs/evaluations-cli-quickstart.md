@@ -74,13 +74,21 @@ If you built your agent by using Microsoft 365 Agents Toolkit, you already have 
 
 ### Microsoft 365 Agents Toolkit projects
 
-### Non-Microsoft 365 Agents Toolkit projects
+Add secrets to `.env.local.user`:
 
 ```ini
 # .env.local.user (NOT checked in — secrets go here)
 AZURE_AI_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
 AZURE_AI_API_KEY="your-api-key-here"
 TENANT_ID="your-tenant-id-here"
+```
+
+Add the following optional overrides to `.env.local` (alongside your existing agent configuration):
+
+```ini
+# .env.local
+AZURE_AI_API_VERSION="2024-12-01-preview"   # default
+AZURE_AI_MODEL_NAME="gpt-4o-mini"           # default
 ```
 
 Add `.env.local.user` to your `.gitignore`:
@@ -90,8 +98,6 @@ Add `.env.local.user` to your `.gitignore`:
 .env.local.user
 env/.env.local.user
 ```
-
-### Non-Microsoft 365 Agents Toolkit projects
 
 Create `env/.env.dev` in your project directory:
 
