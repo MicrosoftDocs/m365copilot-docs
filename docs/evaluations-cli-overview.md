@@ -47,12 +47,14 @@ Evaluations follow a consistent workflow:
 
 The evaluation tool uses environment variables to authenticate and connect to your tenant and Azure OpenAI in Foundry Models resource.
 
-| Variable | Description |
-|----------|------------|
-| TENANT_ID | Microsoft Entra tenant ID where your agent is deployed |
-| AZURE_AI_OPENAI_ENDPOINT | Azure OpenAI endpoint URL |
-| AZURE_AI_API_KEY | Azure OpenAI API key |
-| M365_AGENT_ID (optional) | Explicit agent ID for evaluation |
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `TENANT_ID` | Microsoft Entra tenant ID where your agent is deployed. | None |
+| `AZURE_AI_OPENAI_ENDPOINT` | Azure OpenAI endpoint URL. | None |
+| `AZURE_AI_API_KEY` | Azure OpenAI API key. | None |
+| `M365_AGENT_ID` (optional) | Explicit agent ID for evaluation. | Auto-detected from `M365_TITLE_ID` |
+| `AZURE_AI_API_VERSION` (optional) | Azure OpenAI REST API version. | `2024-12-01-preview` |
+| `AZURE_AI_MODEL_NAME` (optional) | Model deployment name in your Azure OpenAI in Foundry Models resource. | `gpt-4o-mini` |
 
 These values enable authentication and allow the tool to run LLM-based evaluation scoring. For details about how to get these values, see [Get values for  environment variables](evaluations-get-env-values.md).
 

@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ---
 
-# Get values for Agent Evaluations CLI environment variables
+# Get values for environment variables
 
 The Microsoft 365 Copilot Agent Evaluations CLI (`@microsoft/m365-copilot-eval`) reads connection and authentication settings from environment variables. This article shows you where to obtain each value. 
 
@@ -117,16 +117,27 @@ runevals --m365-agent-id "U_0dc4a8a2-b95f-edac-91c8-d802023ec2d4"
 
 For details, see [`--m365-agent-id`](evaluations-cli-reference.md#--m365-agent-id-id) in the CLI reference.
 
-## Override API version and model (optional)
+## Set the API version and model
 
-The CLI provides sensible defaults for the evaluation model. Set these variables only if you need to override them:
+Two additional variables control which Azure OpenAI REST API version and which model deployment the CLI uses for scoring. They have working defaults, so you can omit them and accept the defaults, or set them explicitly in your env file:
+
+```ini
+AZURE_AI_API_VERSION="2024-12-01-preview"   # version
+AZURE_AI_MODEL_NAME="gpt-4o-mini"           # actual name in Foundry
+```
 
 | Variable | Default | When to change |
 |----------|---------|----------------|
 | `AZURE_AI_API_VERSION` | `2024-12-01-preview` | Your resource requires a different Azure OpenAI REST API version. |
-| `AZURE_AI_MODEL_NAME` | `gpt-4o-mini` | You want to score with a different deployment in your Azure OpenAI resource. |
+| `AZURE_AI_MODEL_NAME` | `gpt-4o-mini` | You want to score with a different deployment in your Azure OpenAI in Foundry Models resource. |
 
-`AZURE_AI_MODEL_NAME` must match the **deployment name** in your Azure OpenAI resource, not the underlying model name.
+`AZURE_AI_MODEL_NAME` must match the deployment name exactly as it appears in your Azure OpenAI in Foundry Models resource.
+
+### Get `AZURE_AI_MODEL_NAME` from Foundry
+
+1. Sign in to the [Azure portal](https://portal.azure.com) and open your **Azure OpenAI** resource.
+1. Select **Resource Management** > **Model deployments** (or open the resource in Azure AI Foundry).
+1. Copy the **Deployment name** of the model you want to use for scoring.
 
 ## Validate your values
 
