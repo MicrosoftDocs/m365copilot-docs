@@ -87,12 +87,18 @@ items:
           items:
           - name: Build an MCP plugin
             href: build-mcp-plugins.md
-          - name: Add interactive UI widgets
-            href: declarative-agent-ui-widgets.md
-          - name: UX guidelines for UI widgets
-            href: declarative-agent-ui-widgets-guidelines.md
-          - name: Troubleshooting guide
+          - name: Authentication
+            href: plugin-authentication.md
+          - name: Add UI with MCP apps
+            href: plugin-mcp-apps.md
+          - name: UX guidelines for MCP apps
+            href: plugin-mcp-apps-ui-guidelines.md
+          - name: Troubleshoot MCP apps
             href: plugin-mcp-apps-troubleshooting.md
+          - name: Confirmation prompts
+            href: plugin-confirmation-prompts.md
+          - name: Debug locally
+            href: plugin-debug-local.md
         - name: Add actions with API plugins
           items:
           - name: Build an API plugin with TypeSpec
@@ -103,6 +109,10 @@ items:
             href: build-api-plugins-existing-api.md
           - name: Build an API plugin with an Office JavaScript Library API
             href: build-api-plugins-local-office-api.md
+          - name: Authentication
+            href: plugin-authentication.md
+          - name: Confirmation prompts
+            href: plugin-confirmation-prompts.md
           - name: Adaptive Card responses
             href: api-plugin-adaptive-cards.md
             displayName: response, response_semantics
@@ -110,14 +120,10 @@ items:
             href: adaptive-card-edits.md
           - name: Dialog boxes
             href: adaptive-card-dialog-box.md
+          - name: Debug locally
+            href: plugin-debug-local.md
           - name: Best practices for writing OpenAPI specs
             href: openapi-document-guidance.md
-        - name: Authentication
-          href: plugin-authentication.md
-        - name: Confirmation prompts
-          href: plugin-confirmation-prompts.md
-        - name: Debug locally
-          href: plugin-debug-local.md
         - name: Plugin manifest reference
           items:
           - name: Version 2.4
