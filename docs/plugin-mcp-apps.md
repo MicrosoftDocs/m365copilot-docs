@@ -1,14 +1,14 @@
 ---
-title: Add interactive UI widgets to declarative agents
-description: Learn how to add interactive UI widgets to MCP server-based declarative agents
+title: Add MCP apps to declarative agents in Microsoft 365 Copilot
+description: Learn how to add MCP apps to MCP server-based declarative agents in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/16/2026
+ms.date: 04/24/2026
 ms.topic: how-to
 ---
 
-# Add interactive UI widgets to declarative agents
+# Add MCP apps to declarative agents in Microsoft 365 Copilot
 
 <!-- cSpell:ignore dotnetcli ontoolresult ontoolcancelled onhostcontextchanged -->
 

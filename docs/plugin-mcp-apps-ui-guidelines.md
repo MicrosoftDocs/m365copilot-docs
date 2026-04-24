@@ -1,6 +1,6 @@
 ---
-title: User experience guidelines for interactive UI widgets in declarative agents
-description: Learn how to build UI widgets that look and feel native to Copilot
+title: User experience guidelines for MCP apps in declarative agents for Microsoft 365 Copilot
+description: Learn how to build MCP apps that look and feel native to Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
@@ -10,15 +10,15 @@ ms.topic: article
 
 <!-- markdownlint-disable MD024 -->
 
-# User experience guidelines for interactive UI widgets in declarative agents
+# User experience guidelines for MCP apps in declarative agents for Microsoft 365 Copilot
 
-This guide provides user experience (UX) guidance for developers building MCP-based UI experiences in Copilot. It covers patterns for creating native, coherent, and task-focused interactions that integrate smoothly into the conversational flow in Copilot.
+This guide provides user experience (UX) guidance for developers building MCP-based UI experiences in Microsoft 365 Copilot. It covers patterns for creating native, coherent, and task-focused interactions that integrate smoothly into the conversational flow in Copilot.
 
 ---
 
 ## UX principles
 
-Building a great Copilot Agent with the MCP based rich UI means delivering a focused, conversational experience that feels native to Copilot. Copilot Agents should feel like helpful extensions of the conversation surfacing the right action at the right time rather than full applications rebuilt inside Copilot.
+Building a great Copilot agent with the MCP based rich UI means delivering a focused, conversational experience that feels native to Copilot. Copilot agents should feel like helpful extensions of the conversation surfacing the right action at the right time rather than full applications rebuilt inside Copilot.
 
 :::row:::
   :::column:::
