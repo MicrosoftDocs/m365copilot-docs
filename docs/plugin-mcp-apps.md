@@ -50,7 +50,7 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
 
 ### User experience design
 
-For details on UX design best practices, see [User experience guidelines for interactive UI widgets in declarative agents](plugin-mcp-apps-guidelines.md).
+For details on UX design best practices, see [User experience guidelines for MCP apps in declarative agents for Microsoft 365 Copilot](plugin-mcp-apps-ui-guidelines.md).
 
 ### Verify API availability
 
