@@ -91,6 +91,8 @@ items:
             href: declarative-agent-ui-widgets.md
           - name: UX guidelines for UI widgets
             href: declarative-agent-ui-widgets-guidelines.md
+          - name: Troubleshooting guide
+            href: plugin-mcp-apps-troubleshooting.md
         - name: Add actions with API plugins
           items:
           - name: Build an API plugin with TypeSpec
