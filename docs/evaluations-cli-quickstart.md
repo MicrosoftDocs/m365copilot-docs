@@ -19,6 +19,9 @@ Before you begin, make sure that you have:
 - A Microsoft 365 Copilot agent deployed to your tenant.
 - [Node.js](https://nodejs.org/en/download) 24.12.0 or later (use `node --version` to check).
 - Access to an Azure OpenAI in Foundry Models resource with GPT-4o-mini deployed.
+- Microsoft Entra admin consent granted for the Agent Evaluations CLI in your
+  tenant. If you aren't a tenant admin, ask your admin to grant consent before
+  you run `runevals` for the first time. For more information, see the instructions in the [Grant admin consent](https://github.com/microsoft/work-iq/blob/main/ADMIN-INSTRUCTIONS.md).
 - Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Get values for  environment variables](evaluations-get-env-values.md).
 
 > [!NOTE]
