@@ -61,6 +61,9 @@ Work IQ can reason over:
 
 Use the guide below to select the right protocol.
 
+> [!NOTE]
+> The following table contains **recommendations** for the best suited protocol for specific scenarios, not strict rules. Use the protocol that works best for you.
+
 |              | REST API                                                              | A2A                                                                   | MCP                                                                                   |
 |--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | **Use when** | You're building an app or service that calls Work IQ programmatically | Another agent needs to delegate a task to WorkIQ and get results back | An AI assistant (Copilot, Claude, etc.) needs to invoke WorkIQ as a tool for the user |
