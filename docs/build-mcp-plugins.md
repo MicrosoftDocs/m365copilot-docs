@@ -5,17 +5,16 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 04/02/2026
 ---
 
-# Build plugins from an MCP server for Microsoft 365 Copilot (preview)
+# Build plugins from an MCP server for Microsoft 365 Copilot
 
 This guide walks you through the process of integrating your service with Microsoft 365 Copilot by adding an MCP server to a declarative agent using the Microsoft 365 Agents Toolkit. By following these steps, you'll enable conversational, AI-powered access to your MCP-exposed services for business users.
 
-> [!IMPORTANT]
-> This feature is currently in public preview.
-
 ## Prerequisites
+
+Before you begin, make sure that you have the following prerequisites:
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - A GitHub account
@@ -24,7 +23,9 @@ This guide walks you through the process of integrating your service with Micros
 
 ## Create the agent
 
-1. Open Visual Studio Code and Select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
+To create the agent:
+
+1. Open Visual Studio Code and select the **Microsoft 365 Agents Toolkit** icon in the Activity Bar.
 
 1. Select **Create a New Agent/App** in the Agents Toolkit task pane.
 
@@ -42,9 +43,11 @@ This guide walks you through the process of integrating your service with Micros
 
 1. Enter a name for the agent.
 
-Once you complete these steps, Agents Toolkit generates the required files for the agent and opens a new Visual Studio Code window with the agent project loaded.
+After you complete these steps, Agents Toolkit generates the required files for the agent and opens a new Visual Studio Code window with the agent project loaded.
 
 ## Add tools from the MCP server
+
+To add tools from the MCP server:
 
 1. Open the **.vscode/mcp.json** file. Select the **Start** button in the file editor.
 
@@ -59,7 +62,7 @@ Once you complete these steps, Agents Toolkit generates the required files for t
     :::image type="content" source="assets/images/api-plugins/mcp-tool-selection.png" alt-text="A screenshot of the tool selection interface in VS Code":::
 
     > [!IMPORTANT]
-    > Only tools from MCP servers are supported.
+    > Tools and UX widgets from remote MCP servers are supported. For more information, see [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md).
 
 1. Select **OAuth (with static registration)** as the authentication type.
 
@@ -67,13 +70,17 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
 ## Register an OAuth app with GitHub
 
-1. Go to [https://github.com/settings/developers](https://github.com/settings/developers) in your browser. Select **OAuth Apps**, then **New OAuth App**.
+To register an OAuth app:
+
+1. Go to [https://github.com/settings/developers](https://github.com/settings/developers) in your browser. Select **OAuth Apps** > **New OAuth App**.
 
 1. Add a name and homepage URL for your app, and set `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` as the **Authorization callback URL**. Select **Register application**.
 
 1. After the app is created, select **Generate a new client secret**. Copy the secret and the **Client ID** to use in the next section.
 
 ## Package and sideload the agent
+
+To package the agent:
 
 1. Open the agent project in Visual Studio Code.
 
@@ -95,19 +102,13 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
 1. Wait for the toolkit to report that is finished provisioning.
 
-> [!IMPORTANT]
-> While this feature is in public preview, manifest validation may fail for function parameters in the following cases.
->
-> - Nested objects in the `properties` member
-> - Properties in the `properties` member with the `minimum`, `maximum`, or `default` members present
->
-> If the `teamsApp/validateAppPackage` step fails during provisioning, remove the unsupported members and retry the provisioning step.
-
 ## Use the agent
+
+To use the agent:
 
 1. In your browser, go to [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 
-1. In the **Agents** section of the sidebar, locate your agent. It is listed as the name you gave in the [Create the agent](#create-the-agent) section, with `dev` appended at the end. Select the agent.
+1. In the **Agents** section of the sidebar, locate your agent. It's listed as the name you gave in the [Create the agent](#create-the-agent) section, with `dev` appended at the end. Select the agent.
 
 1. Ask the agent to find a repository or user. For example, `can you find a repo for kiota?`.
 

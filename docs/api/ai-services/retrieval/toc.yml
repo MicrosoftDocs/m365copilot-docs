@@ -6,7 +6,7 @@ items:
   - name: Overview
     href: paygo-retrieval.md
   - name: Terms of use (preview)
-    href: /legal/m365-retrieval-paygo-tou/paygo-retrieval-terms?context=/microsoft-365-copilot/extensibility/context
+    href: /legal/m365-retrieval-paygo-tou/paygo-retrieval-terms?context=/microsoft-365/copilot/extensibility/context
 - name: Retrieve data
   href: copilotroot-retrieval.md
 - name: Complex types

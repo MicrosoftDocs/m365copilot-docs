@@ -20,7 +20,7 @@ As an independent software publisher, you can distribute your Copilot app packag
 Before submitting your agent to Partner Center, ensure it meets all applicable:
 
 - [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies)
-- [Microsoft 365 store validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context)
+- [Microsoft 365 store validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context)
 - [Responsible AI validation checks](rai-validation.md)
 - (Optional) [Microsoft 365 App Compliance Program certification](/microsoft-365-app-certification/docs/certification)
 
@@ -43,7 +43,7 @@ When Microsoft validates and approves your app package, your agent is available 
 
 ## Declarative agents built with Microsoft 365 Copilot
 
-The Agent Builder feature in Microsoft 365 Copilot allows you to build declarative agents for Microsoft 365 Copilot quickly, and easily share them within your organization. 
+The Agent Builder feature in Microsoft 365 Copilot allows you to build declarative agents for Microsoft 365 Copilot quickly, and easily share them within your organization.
 
 | Sharing method | Supported | Learn more |
 |--|--|--|
@@ -63,7 +63,7 @@ Declarative agents built with Copilot Studio are more customizable and feature-r
 
 | Distribution method | Support | Learn more |
 |--|--|--|
-| Sideload for personal use | ✅ | [Create a Copilot agent](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#create-a-copilot-agent?context=/microsoft-365-copilot/extensibility/context) |
+| Sideload for personal use | ✅ | [Create a Copilot agent](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#create-a-copilot-agent?context=/microsoft-365/copilot/extensibility/context) |
 | Share with others | ✅ | [Publishing a Copilot agent](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#publishing-a-copilot-agent) |
 | Submit to organizational catalog | ✅ | [Publishing a Copilot agent](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#publishing-a-copilot-agent)|
 | Submit to Microsoft Commercial Marketplace | ❌ | |
@@ -83,7 +83,7 @@ Custom-built [SharePoint agents](https://support.microsoft.com/office/get-starte
 
 Agents Toolkit supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
 
-[Store submission requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365-copilot/extensibility/context) include a number of [custom engine agent UX](./ux-custom-engine-agent.md) best practices to ensure the best possible user experience.
+[Store submission requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context) include a number of [custom engine agent UX](./ux-custom-engine-agent.md) best practices to ensure the best possible user experience.
 
 | Distribution method | Support | Learn more |
 |--|--|--|

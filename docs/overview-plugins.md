@@ -4,7 +4,7 @@ description: Learn about plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 04/13/2026
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -147,6 +147,12 @@ Copilot generates conversational responses using data from MCP server or API res
 
 :::image type="content" source="assets/images/api-plugins/adaptive-card-citation.png" alt-text="A screenshot of an Adaptive Card response from an API plugin":::
 
+## URL handling in action responses
+
+URLs returned as part of action responses - whether from API plugins, connectors, or flows - might be rendered as clickable links in the Microsoft 365 Copilot chat experience. This behavior is controlled by the Copilot runtime and isn't evaluated against domains defined in the OpenAPI specification `servers` section.
+
+URL rendering behavior for action responses is subject to platform security, trust, and policy rules and might change over time. Don't rely on clickable URLs in action responses for production-critical scenarios.
+
 ## Optimize your plugin for Copilot orchestrator
 
 Microsoft 365 Copilot can uniquely choose the right skill from the many skills in its repertoire. But how can you make sure Copilot chooses _your plugin_ to provide the right skill?
@@ -159,7 +165,7 @@ The way you describe your plugin to the orchestrator depends on the type of plug
 |---------------------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | API plugins               | OpenAPI description                                       | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md)                                                                              |
 | Copilot Studio actions    | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)                                                            |
-| Message extension plugins | App manifest                                              | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context) |
+| Message extension plugins | App manifest                                              | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365/copilot/extensibility/context) |
 
 ## Generating plugin packages
 

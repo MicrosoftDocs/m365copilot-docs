@@ -4,7 +4,7 @@ description: Learn about the 2.4 schema for a manifest file for a plugin in Micr
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 03/25/2026
 ms.topic: reference
 ---
 
@@ -27,7 +27,7 @@ This schema version introduces the following changes from [version 2.3](plugin-m
 
 ## JSON schema
 
-The schema described in this document can be found at [https://aka.ms/json-schemas/copilot/plugin/v2.4/schema.json](https://aka.ms/json-schemas/copilot/plugin/v2.4/schema.json) in [JSON Schema](https://json-schema.org/) format.
+To view the [JSON Schema](https://json-schema.org/) described in this document, see [schema.json](https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json).
 
 ## Conventions
 
@@ -485,7 +485,7 @@ The MCP server spec object contains the following properties.
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `url` | String | Required. The URL of the MCP server. MUST be a valid absolute URL. |
-| `mcp_tool_description` | [MCP tool description object](#mcp-tool-description-object) | Optional. Contains either a reference to an external MCP tool description file or inline tool definitions. When present, static tool definitions are used instead of dynamic discovery. When absent, the runtime MUST use dynamic tool discovery by calling the MCP server's `tools/list` method. |
+| `mcp_tool_description` | [MCP tool description object](#mcp-tool-description-object) | Required. Contains either a reference to an external MCP tool description file or inline tool definitions. |
 
 ##### MCP tool description object
 
@@ -543,21 +543,6 @@ The MCP tool description object contains the following properties.
             }
           ]
         }
-      }
-    }
-  ]
-}
-```
-
-##### MCP execution spec object example (dynamic discovery)
-
-```json
-{
-  "runtimes": [
-    {
-      "type": "RemoteMCPServer",
-      "spec": {
-        "url": "https://mcp.example.org/"
       }
     }
   ]

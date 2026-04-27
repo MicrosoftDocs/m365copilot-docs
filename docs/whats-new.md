@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 04/15/2026
 ms.topic: overview
 ---
 
@@ -17,7 +17,21 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## April 2026
+
+### Copilot policy settings API (preview)
+
+The Copilot policy settings API is now available in preview. This API provides a unified endpoint to read and update Copilot settings across multiple policy services, including Cloud Policy Service (CPS) and Microsoft Intune. For more information, see [copilotPolicySetting resource type](api/admin-settings/resources/copilotpolicysetting.md).
+
 ## March 2026
+
+### Share agents to teams in Microsoft Teams
+
+You can now share agents built with Agent Builder in Microsoft 365 Copilot to teams as well as users and groups. For more information, see [Share and manage agents](agent-builder-share-manage-agents.md).
+
+### Use natural language to create an agent in Microsoft 365 Copilot
+
+You can now create agents more quickly with Agent Builder in Microsoft 365 Copilot by using natural language. The agent is automatically configured for you. For more information, see [Use natural language to describe your agent](agent-builder-build-agents.md#use-natural-language-to-describe-your-agent-recommended).
 
 ### Interactive UI widgets for declarative agents
 
@@ -127,7 +141,7 @@ You can convert your declarative agent to a custom engine agent to take advantag
 
 ### Prioritize declarative agent knowledge sources
 
-You can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, for Microsoft 365 Copilot, see [Prioritize your knowledge sources](agent-builder-add-knowledge.md#prioritize-your-knowledge-sources-over-general-knowledge); for Microsoft 365 Agents Toolkit, see [Special instructions object](/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.4#special-instructions-object).
+You can configure your agent to prioritize the knowledge sources that you provide rather than general knowledge in its responses. For more information, for Microsoft 365 Copilot, see [Prioritize your knowledge sources](agent-builder-add-knowledge.md#prioritize-your-knowledge-sources-over-general-knowledge); for Microsoft 365 Agents Toolkit, see [Special instructions object](declarative-agent-manifest-1.4.md#special-instructions-object).
 
 ### Custom engine agents generally available
 
@@ -137,7 +151,7 @@ Custom engine agents for Microsoft 365 Copilot are now generally available (GA).
 
 ### Maximum number of conversation starters for declarative agents
 
-You can now add up to 12 conversation starters to your declarative agent when you use the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-declarative-agents) to create your agent.
+You can now add up to 12 conversation starters to your declarative agent when you use the [Microsoft 365 Agents Toolkit](build-declarative-agents.md) to create your agent.
 
 ### Embedded file content as knowledge
 
@@ -145,21 +159,21 @@ Use the file upload feature in Microsoft 365 Copilot to upload files from your d
 
 ### Use the Retrieval API (preview) to retrieve data
 
-The Microsoft 365 Copilot Retrieval API (preview) allows you to retrieve relevant content from SharePoint and Copilot connectors. For more information, see [Overview of the Retrieval API](/microsoft-365-copilot/extensibility/api-reference/retrieval-api-overview).
+The Microsoft 365 Copilot Retrieval API (preview) allows you to retrieve relevant content from SharePoint and Copilot connectors. For more information, see [Overview of the Retrieval API](api/ai-services/retrieval/overview.md).
 
 ### Microsoft 365 Copilot API client libraries
 
-Use the Copilot API libraries to work with Microsoft 365 Copilot APIs. For more information, see [Microsoft 365 Copilot APIs (preview)](/microsoft-365-copilot/extensibility/sdks/api-libraries).
+Use the Copilot API libraries to work with Microsoft 365 Copilot APIs. For more information, see [Microsoft 365 Copilot APIs (preview)](sdks/api-libraries.md).
 
 ### Outlook email and Teams chats knowledge in Microsoft 365 Copilot
 
-Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](/microsoft-365-copilot/extensibility/copilot-studio-lite-build).
+Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](copilot-studio-lite-build.md).
 
 ## May 2025
 
 ### Microsoft 365 Agents Toolkit
 
-Use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to [Build declarative agents](/microsoft-365-copilot/extensibility/build-declarative-agents) and [Build Copilot connectors](build-your-first-connector.md).
+Use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to [Build declarative agents](build-declarative-agents.md) and [Build Copilot connectors](build-your-first-connector.md).
 
 ### Microsoft 365 Copilot APIs
 
@@ -227,5 +241,5 @@ You can now build agents for Microsoft 365 users who don't have a Microsoft 365 
 
 ## Related content
 
-- [Microsoft 365 Copilot extensibility overview](/microsoft-365-copilot/extensibility/)
+- [Microsoft 365 Copilot extensibility overview](overview.md)
 - [What's new history](whats-new-history.md)
