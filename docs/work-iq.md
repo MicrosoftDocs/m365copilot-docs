@@ -16,7 +16,7 @@ Work IQ combines three integrated layers: *data*, *context*, and *skills / tools
 
 :::image type="content" source="assets/images/work-iq.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills + tools layers." border="false":::
 
-For end users, Work IQ is integrated across Microsoft 365 Copilot experiences, including Copilot Chat and apps such as Word, Excel, PowerPoint, and Teams, as well as Dynamics 365 and Power Apps with Dataverse-enriched context.
+For users, Work IQ is integrated across Microsoft 365 Copilot experiences, including Copilot Chat and apps such as Word, Excel, PowerPoint, and Teams, as well as Dynamics 365 and Power Apps with Dataverse-enriched context.
 
 When it comes to extensibility, you can both extend Work IQ with your business data and extend the agents you build with the intelligence of Work IQ. Furthermore, you can leverage Work IQ intelligence within your own development workflow with Work IQ CLI. This article explains the extensibility opportunities within each layer of Work IQ.
 
