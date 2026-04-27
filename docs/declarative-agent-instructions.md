@@ -57,6 +57,9 @@ The following diagram shows the primary components of declarative agent instruct
 - **Supplement with examples** to minimize ambiguity.
 - **Define any terms** that are nonstandard or unique to the organization in the instructions.
 
+> [!IMPORTANT]
+> Do not store or offload declarative agent instructions in SharePoint documents (or any other knowledge source) to work around the 8,000-character instruction limit.  Knowledge source content is not a trusted maker instructions, and is subject to Cross-Prompt Injection Attack (XPIA) classifiers — directive-like language can be blocked, truncated, or sanitized at runtime, causing unpredictable agent behavior. This pattern also expands the attack surface: anyone with edit access to the referenced document can alter agent behavior at runtime, bypassing the manifest's authoring, versioning, and governance controls. Knowledge sources are designed to ground factual responses, not to serve as system-level instructions, and the platform makes no guarantee they will be honored as authoritative directives
+
 ### Build step-by-step workflows with transitions
 
 Break workflows into modular, unambiguous, and nonconflicting steps. Each step should include:
