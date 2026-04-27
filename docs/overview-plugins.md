@@ -4,7 +4,7 @@ description: Learn about plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 04/13/2026
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -146,6 +146,12 @@ After the user confirms the connection, MCP server tools and APIs that only retr
 Copilot generates conversational responses using data from MCP server or API responses. Plugins can customize these responses by providing Adaptive Card templates to display data in a structured way.
 
 :::image type="content" source="assets/images/api-plugins/adaptive-card-citation.png" alt-text="A screenshot of an Adaptive Card response from an API plugin":::
+
+## URL handling in action responses
+
+URLs returned as part of action responses - whether from API plugins, connectors, or flows - might be rendered as clickable links in the Microsoft 365 Copilot chat experience. This behavior is controlled by the Copilot runtime and isn't evaluated against domains defined in the OpenAPI specification `servers` section.
+
+URL rendering behavior for action responses is subject to platform security, trust, and policy rules and might change over time. Don't rely on clickable URLs in action responses for production-critical scenarios.
 
 ## Optimize your plugin for Copilot orchestrator
 

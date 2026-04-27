@@ -3,7 +3,7 @@ title: Get callAiInsight
 description: Get a callAiInsight object associated with an onlineMeeting.
 author: slava-tar
 ms.author: vtarasov
-ms.date: 04/01/2026
+ms.date: 04/03/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.topic: reference
@@ -25,7 +25,7 @@ This API returns the metadata and content of the single set of AI insights assoc
 
 > [!NOTE]
 >
-> - Access to this API requires a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license. Payment models and evaluation mode don't apply. All users of applications that use this API must have the required license.
+> - Usage-based payment models and evaluation mode aren't supported for this API. All users of applications that use this API must have a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license.
 > - This API works differently in one or more national clouds. For more information, see [Microsoft Teams API implementation differences in national clouds](/graph/teamwork-national-cloud-differences).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
