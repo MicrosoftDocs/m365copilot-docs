@@ -167,6 +167,8 @@ When you complete these steps, Agents Toolkit generates the required files for t
 1. Allow the agent to connect to the MCP server when prompted.
 1. The agent renders the UI widget.
 
+If the widget doesn't appear or behave as expected, see [Troubleshoot MCP apps in Microsoft 365 Copilot](plugin-mcp-apps-troubleshooting.md).
+
 ## Supported MCP Apps capabilities in Copilot
 
 Microsoft 365 Copilot supports the following capabilities.
@@ -280,6 +282,7 @@ Yes. Anonymous authentication is supported for development purposes. However, yo
 
 - [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
 - [User experience guidelines for MCP apps in declarative agents for Microsoft 365 Copilot](plugin-mcp-apps-ui-guidelines.md)
+- [Troubleshoot MCP apps in Microsoft 365 Copilot](plugin-mcp-apps-troubleshooting.md)
 - [MCP Apps Overview](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html#learn-more)
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk)
 - [MCP based interactive UI samples for Microsoft 365 Copilot](https://github.com/microsoft/mcp-interactiveUI-samples)
