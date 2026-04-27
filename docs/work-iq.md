@@ -36,7 +36,7 @@ Work IQ also integrates Dynamics 365 and Power Apps data through [Dataverse](/po
 
 [Copilot connectors](/microsoft-365/copilot/connectors/) extend the foundation of your tenant data by ingesting data from non-Microsoft systems and line-of-business applications, including prebuilt and custom connectors. As a result, Copilot can reason over a broader business data estate within the tenant boundary.
 
-[Federated connectors](/microsoft-365/copilot/connectors/federated-connectors-overview) (early access preview) offer an alternativ way to bring your organization's data into Microsoft 365 that skips traditional indexing. Instead of crawling and syncing content into Microsoft Graph, federated connectors use Model Context Protocol (MCP) to read data in real time, making live or sensitive data sources discoverable through Copilot without inclusion to the [semantic index](#semantic-index).
+[Federated connectors](/microsoft-365/copilot/connectors/federated-connectors-overview) (early access preview) offer an alternative way to bring your organization's data into Microsoft 365 that skips traditional indexing. Instead of crawling and syncing content into Microsoft Graph, federated connectors use Model Context Protocol (MCP) to read data in real time, making live or sensitive data sources discoverable through Copilot without inclusion to the [semantic index](#semantic-index).
 
 ## Context
 
@@ -48,7 +48,7 @@ The context layer expands beyond baseline grounding with continuously evolving i
 
 ### Semantic index
 
-With [semantic indexing](/microsoftsearch/semantic-index-for-copilot), Microsoft 365 Copilot maps your organization’s data into an advanced lexical and semantic index to power search relevance and accuracy, while ensuring organizational boundaries annd permission structurs within your tenant are respected. The semantic index is a superset of content within [Microsoft Graph](#microsoft-365-tenant-data) and ingested content from [Copilot connectors](#external-business-data-from-copilot-connectors).
+With [semantic indexing](/microsoftsearch/semantic-index-for-copilot), Microsoft 365 Copilot maps your organization’s data into an advanced lexical and semantic index to power search relevance and accuracy, while ensuring organizational boundaries and permission structures within your tenant are respected. The semantic index is a superset of content within [Microsoft Graph](#microsoft-365-tenant-data) and ingested content from [Copilot connectors](#external-business-data-from-copilot-connectors).
 
 ### Busineses understanding with Dataverse intelligence
 
@@ -64,7 +64,7 @@ The skills and tools layer puts Work IQ intelligence into operation. Skills prov
 
 ### Work IQ MCP tools
 
-Microsoft Agent 365 offers a rich catalog of [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) (preview) tools that enable agents to perform real-time actions within Microsoft 365 contexts, including mail, calendar, Teams, SharePoint, OneDrive, Word, Dataverse, and more. You can also build and publish custom MCP servers using the MCP Management Server, which supports connectors, Graph APIs, Dataverse custom APIs, and arbitrary REST endpoints. You can easily add Work IQ MCP tools to your agents in [Microsoft Copilot Studio](/microsoft-copilot-studio/use-work-iq) and [Microsoft Foundry](/microsoft-agent-365/tooling-servers-overview#get-started-in-microsoft-foundry). Agent 365 gives IT admins centralized control to manage which Work IQ MCP servers and other MCP servers are available to agents.
+Microsoft Agent 365 offers a rich catalog of [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) (preview) tools that enable agents to perform real-time actions within Microsoft 365 contexts, including mail, calendar, Teams, SharePoint, OneDrive, Word, Dataverse, and more. You can also build and publish custom MCP servers using the MCP Management Server, which supports connectors, Microsoft Graph APIs, Dataverse custom APIs, and arbitrary REST endpoints. You can easily add Work IQ MCP tools to your agents in [Microsoft Copilot Studio](/microsoft-copilot-studio/use-work-iq) and [Microsoft Foundry](/microsoft-agent-365/tooling-servers-overview#get-started-in-microsoft-foundry). Agent 365 gives IT admins centralized control to manage which Work IQ MCP servers and other MCP servers are available to agents.
 
 ### Business skills
 
