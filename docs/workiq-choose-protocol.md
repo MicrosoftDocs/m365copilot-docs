@@ -14,10 +14,11 @@ Work IQ supports multiple protocols so you can choose the interaction model th
 
 ## Overview of protocols
 
-| Protocol                     | Best for            | Interaction model          |
-|------------------------------|---------------------|----------------------------|
-| A2A (Agent-to-Agent)         | Multi-agent systems | Structured task delegation |
-| MCP (Model Context Protocol) | Developer tools     | Tool-based context access  |
+| Protocol                     | Best for                  | Interaction model          |
+|------------------------------|---------------------------|----------------------------|
+| REST                         | Applications and services | HTTP requests/responses    |
+| A2A (Agent-to-Agent)         | Multi-agent systems       | Structured task delegation |
+| MCP (Model Context Protocol) | Developer tools           | Tool-based context access  |
 
 All protocols:
 

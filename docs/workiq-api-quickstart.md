@@ -12,7 +12,7 @@ ms.date: 03/31/2026
 
 <!-- markdownlint-disable MD024 -->
 
-This article provides one quickstart per protocol so you can get up and running quickly.
+This article provides one quickstart per protocol so you can get up and running quickly. For more detailed examples, see [Work IQ Samples](https://github.com/microsoft/work-iq-samples) on GitHub.
 
 ## REST API quickstart
 

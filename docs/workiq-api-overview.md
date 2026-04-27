@@ -14,11 +14,11 @@ ms.date: 03/31/2026
 
 The Work IQ API enables developers to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
 
-Work IQ provides multiple interaction models - REST, Agent-to-Agent (A2A), and Model Context Protocol (MCP) — so you can choose the protocol that best fits your application or agent architecture.
+Work IQ provides multiple protocols to interact with agents - REST, Agent-to-Agent (A2A), and Model Context Protocol (MCP) — so you can choose the protocol that best fits your application or agent architecture.
 
 ## What is Work IQ?
 
-Work IQ is a Microsoft 365 Copilot API surface designed for agents, orchestrators, and developer tools that need to understand work context.
+Work IQ is the intelligence layer behind Microsoft 365 Copilot and agents. Unlike systems that simply retrieve content, it understands how work actually happens. It combines data from Microsoft 365 (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships. It applies the inference needed to reason across all of it and surface next-best actions. Work IQ orchestrates every layer of intelligence - from assembling context to grounding responses, selecting skills, and invoking tools - while honoring enterprise permissions and governance.
 
 All Work IQ requests:
 
@@ -40,15 +40,15 @@ Traditional AI integrations often require building custom pipelines to extract, 
 
 Work IQ supports the following protocols:
 
-| Protocol | Description                             | Typical scenarios                    |
-|----------|-----------------------------------------|--------------------------------------|
-| REST     | Conversational, request/response API    | Service-hosted agents, orchestrators |
-| A2A      | Structured agent-to-agent communication | Multi-agent systems, delegation      |
-| MCP      | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
+| Protocol          | Description                             | Typical scenarios                    |
+|-------------------|-----------------------------------------|--------------------------------------|
+| REST              | Conversational, request/response API    | Service-hosted agents, orchestrators |
+| A2A               | Structured agent-to-agent communication | Multi-agent systems, delegation      |
+| MCP (coming soon) | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
 
 ## Supported functionality
 
-Depending on the protocol and user permissions, Work IQ can reason over:
+Work IQ can reason over:
 
 - Email messages
 - Meetings and calendar data
@@ -61,11 +61,11 @@ Depending on the protocol and user permissions, Work IQ can reason over:
 
 Use the guide below to select the right protocol.
 
-| If you need to...                           | Use  |
-|---------------------------------------------|------|
-| Call Copilot from a service or backend      | REST |
-| Delegate tasks between agents               | A2A  |
-| Give an AI assistant access to work context | MCP  |
+|              | REST API                                                              | A2A                                                                   | MCP                                                                                   |
+|--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| **Use when** | You're building an app or service that calls Work IQ programmatically | Another agent needs to delegate a task to WorkIQ and get results back | An AI assistant (Copilot, Claude, etc.) needs to invoke WorkIQ as a tool for the user |
+| **Caller**   | Your app or backend                                                   | Another agent                                                         | An LLM-based client                                                                   |
+| **Example**  | "My web app sends a question to WorkIQ and renders the reply."        | "Our ops agent asks WorkIQ to investigate a regression."              | "A user asks Copilot a question and it calls WorkIQ to answer."                       |
 
 ## API examples
 
@@ -206,9 +206,17 @@ Work IQ uses Microsoft Entra ID delegated authentication.
 
 ## How Work IQ compares to Copilot Chat API
 
-| Area              | Copilot Chat API    | Work IQ                             |
-|-------------------|---------------------|-------------------------------------|
-| Primary focus     | Conversational chat | Agentic and orchestration scenarios |
-| Protocols         | REST                | REST, A2A, MCP                      |
-| Integration style | Chat-centric        | Agent- and tool-centric             |
-| Typical usage     | Embedded chat       | Agents, orchestrators, IDEs         |
+Work IQ is the production-ready evolution of the Copilot Chat API. When Work IQ reaches General Availability in May, it becomes the recommended, fully supported way to integrate with the Copilot agent in production scenarios. It is backed by enterprise SLAs, stable contracts, and long-term support commitments.
+
+**What this means for you:**
+
+- New projects should build on Work IQ from day one.
+- Existing integrations using the Copilot Chat API will continue to work. The Copilot Chat API will remain in public preview for experimentation and early-stage development, but it is not covered by production SLAs.
+- Migrating is straightforward — Work IQ preserves the concepts you already know and adds the reliability, governance, and support guarantees required for production workloads.
+
+We recommend planning your move to Work IQ ahead of your product's release to take full advantage of production support at launch.
+
+## Related content
+
+- [Choose a Work IQ protocol (preview)](workiq-choose-protocol.md)
+- [Work IQ API quickstarts (preview)](workiq-api-quickstart.md)
