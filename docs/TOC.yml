@@ -318,7 +318,7 @@ items:
   items:
   - name: Work IQ CLI
     href: workiq-overview.md
-- name: Extend agents at scale with Agent 365 (early access preview)
+- name: Extend agents at scale with Agent 365
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
 - name: Publish
   items:
