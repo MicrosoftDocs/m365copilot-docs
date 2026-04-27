@@ -52,6 +52,8 @@ You can derive realistic prompts from:
 
 ### Grounded in data
 
+Prompts should be grounded in data. `
+
 When grounding data is available, use specific entities, values, and identifiers. This approach makes evaluations measurable and verifiable. Grounded prompts allow precise assertions such as "The response contains '15 days'," instead of vague checks like "The response contains the correct number."
 
 **Without grounding data**  
@@ -84,14 +86,16 @@ For scenarios that span multiple turns, use [multi-turn conversations](evaluatio
 
 ## Prompt variations
 
-Users don't all ask the same question in the same way. To test generalization, create three variations of each prompt. Canonical prompts:
+Users don't all ask the same question in the same way. To test generalization, create three variations of each prompt. 
+
+### Canonical prompts
+
+Canonical prompts are explicit, complete, and unambiguous. They serve as the baseline.
 
 - Include all required parameters. 
 - Use precise terminology.  
 - Avoid ambiguity.
-- Represent an ideal query.  
-
-The canonical prompt is explicit, complete, and unambiguous. It serves as the baseline.
+- Represent an ideal query.
 
 **Example:**
 
@@ -184,7 +188,7 @@ This scenario includes the following grounding data:
 This scenario includes the following grounding data:
 
 - Employee: James Wright  
-- Location: London, UK office      
+- Location: London, UK office                  
 - Tenure: 6 months  
 - Employment type: Full-time  
 
@@ -200,7 +204,7 @@ This scenario includes the following grounding data:
 
 **Robustness probe**
 
-"uk office holidays off this yr?"
+"UK office holidays off this yr?"
 
 **Assertions (apply to all variations):**
 
@@ -236,7 +240,7 @@ If your prompt is vague, you can't define measurable assertions.
 
 ### Leading prompts
 
-Leading prompts hint at the correct answer.
+Prompts that hint at the expected answer don't test the agent's real reasoning effectiveness.
 
 - **Avoid:** "The PTO policy says 15 days, right?"
 - **Use instead:** "How many PTO days do new employees receive?"
@@ -288,7 +292,7 @@ For each scenario, include:
 - Natural language variant  
 - Robustness probe  
 
-### Edge cases
+### Microsoft Edge cases
 
 - Very short prompts  
 - Very long prompts  

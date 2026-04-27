@@ -3,7 +3,6 @@ title: Agent evaluation overview
 description: Learn foundational concepts, terminology, and eval-driven development for evaluating declarative agents and custom engine agents.
 author: sathya-raveendran
 ms.author: saraveen
-ms.date: 04/16/2026
 ms.date: 04/22/2026
 ms.topic: concept-article
 ---
@@ -40,6 +39,14 @@ Evaluations consist of the following core concepts:
 - Assertion
 - Quality signal
 - Grader
+- Grounding data
+
+When you run an evaluation:
+
+- Each test case sends its prompt to the agent.
+- The agent's response is checked against each assertion using the appropriate grader.
+- Results are tagged with quality signals for analysis.
+- Aggregate metrics are calculated across the test set.
 
 ### Test case
 
@@ -51,9 +58,9 @@ A test case is a single evaluation scenario that consists of:
 
 A well-designed test case is:
 
-- **Independent**
-- **Repeatable**
-- **Specific**
+- **Independent** - Can run without relying on other tests. 
+- **Repeatable** - Produces consistent pass or fail results.
+- **Specific** - Tests one scenario or intent.
 
 #### Example
 
@@ -79,9 +86,9 @@ A test set is a collection of related test cases that allows you to:
 
 A prompt is the user input you're testing. Good evaluation prompts are:
 
-- **Realistic**
-- **Single-intent**
-- **Grounded in real data**
+- **Realistic**  - Phrased how real users actually ask.
+- **Single-intent** - Test one thing at a time (for single-turn evals).
+- **Grounded in real data** - Use real entity names and values when you have test data.
 
 ### Assertion
 
@@ -122,6 +129,30 @@ Common grader types include:
 - **LLM-as-judge** – Evaluate tone or quality
 - **Tool verification** – Validate API or tool execution
 
+### Grounding data
+
+Grounding data (test data or synthetic data) provides realistic values for prompts and assertions. Grounding data enables:
+
+- Concrete assertions
+- Realistic scenarios
+- Clear pass/fail validation
+
+**Without grounding data:**
+
+- Prompt: "What's my PTO balance?"
+- Assertion: "The response contains the correct balance"  
+  - Not verifiable
+
+**With grounding data:**
+
+- Employee: Sarah Chen  
+- Tenure: 18 months  
+- PTO balance: 12 days  
+
+- Prompt: "What's my PTO balance?"
+- Assertion: "The response contains '12 days'"  
+  - Verifiable
+
 ## Evaluation-driven development
 
 Define what success looks like before you build your agent. Creating test cases early helps you:
@@ -155,29 +186,6 @@ Apply the following guidance to define your pass rates:
 - Core regression tests should approach **100% consistency**.
 - Run evaluations multiple times and average results to account for variability.
 
-## Grounding data
-
-Grounding data (test data or synthetic data) provides realistic values for prompts and assertions. Grounding data enables:
-
-- Concrete assertions
-- Realistic scenarios
-- Clear pass/fail validation
-
-**Without grounding data:**
-
-- Prompt: "What's my PTO balance?"
-- Assertion: "The response contains the correct balance"  
-  → Not verifiable
-
-**With grounding data:**
-
-- Employee: Sarah Chen  
-- Tenure: 18 months  
-- PTO balance: 12 days  
-
-- Prompt: "What's my PTO balance?"
-- Assertion: "The response contains '12 days'"  
-  → Verifiable
 
 ## Declarative vs custom engine agents
 

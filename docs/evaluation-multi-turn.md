@@ -188,20 +188,37 @@ A multi-turn test case typically includes:
 #### Conversation
 
 **Turn 1**
-- **User**: "I need to get my laptop set up"
-- **Expected behavior**: Ask about preferences
+- **User**: "I need to get my laptop set up."
+- **Expected behavior**: Ask about preferences.
 
 **Turn 2**
 - **User**: "MacBook Pro"
-- **Expected behavior**: Ask for specifications
+- **Expected behavior**: Ask for specifications.
 
 **Turn 3**
 - **User**: "16 inch with 32GB RAM"
-- **Expected behavior**: Confirm and submit order
+- **Expected behavior**: Confirm and submit order.
 
 **Turn 4**
-- **User**: "Actually, change it to 64GB"
-- **Expected behavior**: Update the order
+- **User**: "Actually, change it to 64GB."
+- **Expected behavior**: Update the order.
+
+#### Conversation-level assertions
+
+- The conversation completes with a confirmed equipment order.
+- The final order reflects the corrected specification (64GB).
+- The agent never asks for employee ID (should infer from context).
+- Total turns to completion is ≤6.
+
+#### Turn-level assertions
+
+- **Turn 3**:
+  - Agent invokes OrderEquipment tool.
+  - Tool call includes model: "MacBook Pro 16-inch".
+  - Tool call includes specs that contain "32GB".
+- **Turn 4**:
+  - Agent invokes UpdateOrder or modifies previous order.
+  - Final confirmation shows "64GB".
 
 ### Slot-filling conversation example
 

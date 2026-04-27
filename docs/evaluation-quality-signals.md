@@ -29,9 +29,11 @@ Assertions and quality signals work together in an evaluation workflow:
 - **Assertions** determine whether a response passes or fails.
 - **Quality signals** group assertion outcomes into higher-level patterns.
 
-After defining assertions, derive quality signals from their outcomes and use those signals to track performance across scenarios.
+After you define assertions, derive quality signals from the assertion outcomes and use those signals to track performance across scenarios.
 
 ### Assertions vs. quality signals
+
+The following table compares assertions and quality signals.
 
 | Aspect   | Assertions              | Quality signals        |
 |----------|------------------------|-----------------------|
@@ -43,7 +45,7 @@ After defining assertions, derive quality signals from their outcomes and use th
 
 ## Common quality signals
 
-Use the following common quality signals when evaluating Copilot agents:
+Use the following common quality signals when you evaluate Copilot agents:
 
 - **Policy accuracy** – Measures whether responses align with authoritative knowledge sources  
 - **Source attribution** – Measures whether responses clearly identify information sources  
@@ -58,9 +60,9 @@ Use the following common quality signals when evaluating Copilot agents:
 
 | Quality signal | Pass indicators | Fail indicators | Common causes |
 |----------------|----------------|----------------|---------------|
-| **Policy accuracy** | Correct values and dates<br><br>Accurate policy details<br><br>Consistent with current documentation | Outdated or incorrect values<br><br>Conflicting or fabricated details | Outdated or duplicate documents<br><br>Incorrect retrieval results<br><br>Unsupported model-generated content |
-| **Source attribution** | References to specific documents or sections<br><br>Clear attribution statements | No source provided<br><br>Vague or generic references | Missing source metadata<br><br>Instructions that don't require attribution |
-| **Personalization** | Region-specific or role-specific responses<br><br>Context-aware recommendations | Generic responses that ignore user context<br><br>Incorrect regional or role-based information | Missing or incomplete user context<br><br>Knowledge sources not segmented by audience |
+| **Policy accuracy** | Correct values and dates<br><br>Accurate policy details<br><br>Consistent with current documentation | Outdated or incorrect values<br><br>Conflicting or fabricated details | Outdated or duplicate documents<br><br>Incorrect retrieval results<br><br>Model hallucinations |
+| **Source attribution** | References to specific documents or sections<br><br>Clear attribution statements | No source provided<br><br>Vague or generic references | Missing source metadata<br><br>Instructions don't emphasize attribution |
+| **Personalization** | Region-specific or role-specific responses<br><br>Context-aware recommendations | Generic responses that ignore user context<br><br>Incorrect regional or role-based information | User context unavailable for agent<br><br>Knowledge sources not segmented by audience |
 | **Tool accuracy** | Correct tool selection<br><br>Valid parameters and identifiers<br><br>All required fields populated | Missing or incorrect parameters<br><br>Invalid tool inputs | Ambiguous API specifications<br><br>Incorrect parameter mapping |
 | **Tool response handling** | Accurate communication of tool results<br><br>Correct handling of success and error states | Incorrect success claims<br><br>Ignored or misinterpreted tool errors | Missing error-handling guidance<br><br>Misinterpretation of tool responses |
 | **Escalation appropriateness** | Sensitive or complex issues are routed correctly<br><br>Compliance with escalation rules | Agent attempts to handle unsupported scenarios<br><br>Failure to escalate high-risk requests | Undefined escalation criteria<br><br>Overly permissive instructions |
@@ -108,16 +110,52 @@ Use quality signals to drive evaluation workflows and communicate insights.
 
 To apply quality signals:
 
-- **Tag assertions** – Associate each assertion with a quality signal  
-- **Calculate metrics** – Aggregate pass and fail results by signal  
-- **Prioritize issues** – Focus on signals with low pass rates or high impact  
-- **Track progress** – Monitor signal performance across agent versions  
+- **Tag assertions** – Add signal tags to each assertion in your test cases. 
 
-To communicate results:
+    Test Case: PTO-001  
+    Prompt: "How many vacation days do new employees get?"  
 
-- Link failures to root causes  
-- Quantify performance gaps  
-- Track improvements over time  
+    Assertions:  
+    - The response contains "15 days".  
+      [Signal: Policy Accuracy]  
+
+    - The response cites the Employee Handbook.  
+      [Signal: Source Attribution]  
+
+    - The response mentions the <2 year tenure bracket.  
+      [Signal: Personalization]
+  
+- **Calculate metrics** – Aggregate pass and fail results by signal. 
+
+    | Quality signal | Test cases | Pass | Fail | Pass rate |
+    | -------------- | ---------- | ---- | ---- | --------- |
+    | Policy Accuracy | 25 | 23 | 2 | 92% |
+    | Source Attribution | 25 | 20 | 5 | 80% |
+    | Personalization | 15 | 11 | 4 | 73% |
+    | Tool Accuracy | 12 | 10 | 2 | 83% |
+    | Escalation Appropriateness | 8 | 8 | 0 | 100% |
+    | Privacy Protection | 10 | 10 | 0 | 100% |
+
+- **Prioritize issues** – Focus on signals with low pass rates or high impact.
+
+    1. **Personalization (73%)** - Biggest gap, investigate first.
+    1. **Source attribution (80%)** - Second priority.
+    1. **Tool accuracy (83%)** - Third priority.
+    1. **Policy accuracy (92%)** - Minor issues, monitor.
+
+- **Track progress** – Monitor signal pass rates across agent versions.  
+
+    - Version 1.0 > 1.1 > 1.2 > 1.3
+    - Personalization: 73% > 78% > 85% > 91% (improving)
+    - Source attribution: 80% > 82% > 88% > 90% (improving)
+    - Tool accuracy: 83% > 85% > 84% > 92% (improved after v1.2 regression)
+
+Quality signals transform stakeholder conversations.
+
+- **Without signals:** The agent isn't performing well. Users are complaining.
+- **With signals:** Policy Accuracy is at 92% — we're hitting our target. But Personalization dropped to 73% after the last update. Specifically, UK employees are getting US holiday information. We identified the root cause: the context retrieval isn't passing location data. Fix is in progress for next release.
+
+This specificity enables targeted fixes, quantitative progress tracking, and clearer stakeholder communication.
 
 ## Quality signals by agent type
 

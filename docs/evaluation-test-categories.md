@@ -93,11 +93,11 @@ Variation tests verify that the agent can handle different phrasings of the same
 #### Example: Employee onboarding agent
 
 **PTO policy variations**
-- **PTO-001-a**: “How many vacation days do new hires get?”
-- **PTO-001-b**: “what’s my PTO as a new employee”
+- **PTO-001-a**: "How many vacation days do new hires get?"
+- **PTO-001-b**: "what’s my PTO as a new employee"
 <!-- cspell:ignore vacaton -->
-- **PTO-001-c**: “vacaton days for someone who just started?”
-- **PTO-001-d**: “annual leave entitlement for first year?”
+- **PTO-001-c**: "vacaton days for someone who just started?"
+- **PTO-001-d**: "annual leave entitlement for first year?"
 
 **Equipment order variations**
 - **EQ-001-a**: “I need to order a laptop”
@@ -287,29 +287,33 @@ Analyze results to identify patterns and root causes, not just individual failur
 
 #### Analyze by quality signal
 
-Group failures by quality signal to identify systemic issues:
+Analyze quality signals to prioritize areas to deep dive.
 
-- **Policy accuracy** – Are answers factually correct?
-- **Source attribution** – Are sources cited when required?
-- **Personalization** – Is user context used correctly?
-- **Tool accuracy** – Are tools invoked correctly with valid parameters?
-- **Escalation and privacy** – Are sensitive scenarios handled appropriately?
-
-This grouping helps you identify which capability needs improvement.
+| Quality signal | Score | Status |
+|---|---|---|
+| Policy accuracy | 23/25 (92%) | ✓ |
+| Source attribution | 20/25 (80%) | ⚠ |
+| Personalization | 11/15 (73%) | ✗ (Focus here) |
+| Tool accuracy | 10/12 (83%) | ⚠ |
+| Escalation | 8/8 (100%) | ✓ |
+| Privacy | 10/10 (100%) | ✓ |
 
 #### Analyze by test category
 
-Evaluate performance across categories:
+Evaluate performance across categories. Look for patterns such as:
 
-- **Core tests** – Detect regressions in essential functionality.
-- **Variation tests** – Reveal brittleness in phrasing.
-- **Architecture tests** – Identify failures in specific components.
-- **Edge case tests** – Validate guardrails and robustness.
-
-Look for patterns such as:
 - Failures clustered in specific scenarios.
 - Repeated issues across similar test cases.
 - Consistent weaknesses in a category or capability.
+
+The following table shows an example.
+
+| Category | Score |
+|---|---|
+| Core | 17/18 (94%) - One regression |
+| Variations | 38/45 (84%) - Some brittleness |
+| Architecture | 23/25 (92%) |
+| Edge Cases | 19/20 (95%) |
 
 #### Identify root causes
 
@@ -372,6 +376,16 @@ Focus on:
 - Core test stability.
 - Variation robustness.
 - Guardrail effectiveness.
+
+The following table shows an example.
+
+| Version | Core | Variations | Arch | Edge | Notes |
+| ------- | ---- | ---------- | ---- | ---- | ----- |
+| v1.0 | 72% | 65% | 68% | 85% | Initial release |
+| v1.1 | 85% | 78% | 80% | 90% | Improved prompts |
+| v1.2 | 94% | 84% | 88% | 95% | Added citations |
+| v1.3 | 88% | 82% | 85% | 95% | Regression - KB update |
+| v1.4 | 96% | 91% | 92% | 98% | Fixed KB, added tests |
 
 ## Checklists
 
