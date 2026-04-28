@@ -18,6 +18,8 @@ Evaluation datasets are JSON files. The tool supports two equivalent shapes: a v
 
 ### Versioned schema (recommended)
 
+The following schema is the simplest valid schema for single-turn evaluations.
+
 ```json
 {
   "schemaVersion": "1.0.0",
@@ -132,7 +134,7 @@ Test whether the agent correctly uses available tools and plugins.
 }
 ```
 
-### Microsoft Edge cases
+### Edge cases
 
 Test boundary conditions and unusual inputs.
 

@@ -113,7 +113,7 @@ AZURE_AI_MODEL_NAME="gpt-4o-mini"           # default
 
 ## Step 4: Create your first dataset
 
-Create `evals/evals.json` with a small set of prompts and expected responses:
+Create `evals/evals.json` with a small set of prompts and expected responses. This example uses the simplest valid schema for single-turn evaluations.
 
 ```json
 {

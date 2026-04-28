@@ -169,16 +169,16 @@ runevals --init-only --log-level debug
 
 ## Get support
 
-If the troubleshooting steps above don't resolve your issue, file an issue in the public GitHub repository.
+If the troubleshooting steps above don't resolve your issue, file an issue in the [M365 Copilot Agent Evaluations GitHub repo](https://github.com/microsoft/m365-copilot-eval).
 
-**Before filing an issue, collect:**
+Before you file an issue, collect:
 
-- The CLI version: `runevals --version`
-- The exact command you ran
-- Error output (redact any PII, keys, or tenant-specific identifiers)
-- Your operating system and Node.js version: `node --version`
+- The CLI version: `runevals --version`.
+- The exact command you ran.
+- Error output (redact any PII, keys, or tenant-specific identifiers).
+- Your operating system and Node.js version: `node --version`.
 
-**File the issue:**
+To file the issue:
 
 - Open a new issue at [microsoft/M365-Copilot-Agent-Evals — Issues](https://github.com/microsoft/M365-Copilot-Agent-Evals/issues).
 - Apply the appropriate label (for example, `setup`, `authentication`, `runtime`, `environment`) to help triage.
