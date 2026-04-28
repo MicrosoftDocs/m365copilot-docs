@@ -41,7 +41,7 @@ Use a consistent structure to improve clarity and evaluation reliability. Start 
 - The response contains...
 - The response cites...
 - The response indicates...
-- The response does not...
+- The response doesn't...
 - The response routes to...
 
 This structure ensures assertions focus on observable outcomes.
@@ -72,7 +72,7 @@ Include rounding data:
 
 **Assertions:**
 - The response contains "15 days" for the queried tenure bracket.  
-- The response does not include "10 days".
+- The response doesn't include "10 days".
 
 ### Source attribution assertions
 
@@ -157,14 +157,14 @@ Verify that sensitive or complex scenarios are routed appropriately.
 **Prompt:** "I need to take extended leave for a family medical situation"
 
 **Assertions:**
-- The response indicates this requires HR specialist assistance.
+- The response indicates this prompt requires HR specialist assistance.
 - The response doesn't attempt to explain FMLA eligibility rules.
 - The response provides information about how to reach HR.
 - The response acknowledges the sensitivity of the situation.
 
 ### Refusal assertions
 
-Verify that inappropriate or restricted requests are declined.
+Verify that the system declines inappropriate or restricted requests.
 
 **Pattern:** The response declines to `<prohibited action>`.
 
@@ -195,7 +195,7 @@ Verify that the response reflects user context.
 - The response excludes irrelevant regional content.
 - The response lists UK bank holidays.
 - The response includes Boxing Day (UK-specific).
-- The response doesn't mention US holidays (July 4th, Thanksgiving).
+- The response doesn't mention US holidays (July 4, Thanksgiving).
 - The response references the UK holiday schedule.
 
 ### Completeness assertions
@@ -251,24 +251,24 @@ Budget: $4,000
 ### Tool invocation assertions
 
 - The agent invoked `OrderEquipment` at least once.
-- The agent made separate calls for laptop and monitor (or batch call).
+- The agent made separate calls for laptop and monitor (or Azure Batch call).
 
 ### Parameter assertions
 
 Laptop order parameter assertions:
 
-3. The call includes itemType: "laptop".
-4. The call includes model containing "MacBook Pro".
-5. The call includes size: "16" or "16-inch".
-6. The call includes specs containing "M3 Max".
-7. The call includes specs containing "64GB".
-8. The call includes employeeId: "EMP-54321".
-9. The call includes approver or managerId: referencing Katrin Pold.
+3. The call includes `itemType: "laptop"`.
+4. The call includes `model` containing "MacBook Pro".
+5. The call includes `size: "16"` or `"16-inch"`.
+6. The call includes `specs` containing "M3 Max".
+7. The call includes `specs` containing "64GB".
+8. The call includes `employeeId: "EMP-54321"`.
+9. The call includes `approver` or `managerId` referencing Katrin Pold.
 
 Monitor order parameter assertions:
 
-10. The call includes itemType: "monitor".
-11. The call includes size: "27" or "27-inch".
+10. The call includes `itemType: "monitor"`.
+11. The call includes `size: "27"` or `"27-inch"`.
 
 ### Response assertions
 
@@ -302,7 +302,7 @@ Assertions:
 
 - The response contains [specific fact from knowledge source].
 - The response cites [source document or section].
-- The response does not contain [outdated or incorrect information].
+- The response doesn't contain [outdated or incorrect information].
 - The response addresses the user's specific question.
 
 ### Tool call
