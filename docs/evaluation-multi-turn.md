@@ -178,7 +178,7 @@ Designing effective multi-turn evaluations requires defining both the conversati
 - **Description**: Equipment ordering flow  
 
 **Grounding data**
-- Employee: Sarah Chen  
+- Employee: Katrin Pold  
 - Employee ID: EMP-54321  
 - Department: Product Design  
 - Budget: $3,500  

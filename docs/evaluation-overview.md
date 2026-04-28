@@ -139,7 +139,7 @@ Grounding data (test data or synthetic data) provides realistic values for promp
 
 **Example: With grounding data**
 
-- Employee: Sarah Chen  
+- Employee: Katrin Pold  
 - Tenure: 18 months  
 - PTO balance: 12 days  
 - Prompt: "What's my PTO balance?"
@@ -160,6 +160,8 @@ Evaluation connects the core concepts into a repeatable workflow:
 This process creates a continuous loop:
 
 Run evaluations > Analyze results > Improve the agent > Repeat
+
+ :::image type="content" source="assets/images/evaluations/evaluation-workflow.png" alt-text="The evaluation workflow is an interative process of improving, analyzing signals, and running evaluations." lightbox="assets/images/evaluations/evaluation-workflow.png":::
 
 ## What evaluation doesn't replace
 
@@ -183,6 +185,8 @@ Define what success looks like before you build your agent. Creating test cases 
 - Create a regression safety net.
 
 Start with focused test cases for core scenarios. As your agent evolves, expand coverage with variations and edge cases. Maintain regression tests for stability.
+
+ :::image type="content" source="assets/images/evaluations/core-policy-questions.png" alt-text="Test set for core policy questions with grounding data, prompt, assertions, and quality signals." lightbox="assets/images/evaluations/core-policy-questions.png":::
 
 ### Test coverage guidance
 

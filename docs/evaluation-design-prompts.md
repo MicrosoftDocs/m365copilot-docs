@@ -154,7 +154,7 @@ The following examples demonstrate all three prompt types for a single scenario.
 
 This scenario includes the following grounding data:
 
-- Employee: Sarah Chen  
+- Employee: Katrin Pold  
 - Department: Product Design  
 - Start date: 2024-01-15  
 - Equipment budget: $3,500  
