@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Dataset schema and test design
 
-Evaluation datasets are JSON files containing prompts and expected responses. This article defines the dataset schema, documents where the tool looks for datasets, and shows how to design effective tests - including advanced scenarios like mult-turn conversations and categorized test suites.
+Evaluation datasets are JSON files containing prompts and expected responses. This article defines the dataset schema, documents where the tool looks for datasets, and shows how to design effective tests - including advanced scenarios like multi-turn conversations, per-item evaluator configuration, and categorized test suites.
 
 ## Schema overview
 
@@ -18,7 +18,7 @@ Evaluation datasets are JSON files. The tool supports two equivalent shapes: a v
 
 ### Versioned schema (recommended)
 
-The following schema is the simplest valid schema for single-turn evaluations.
+The simplest valid dataset requires only `schemaVersion` and an `items` array with `prompt` and `expected_response` fields.
 
 ```json
 {
@@ -32,18 +32,126 @@ The following schema is the simplest valid schema for single-turn evaluations.
 }
 ```
 
+Schema version `1.2.0` adds support for default and per-item evaluator configuration, evaluator mode control, named items, and multi-turn conversations. For details, see [Configure evaluators](#configure-evaluators) and [Multi-turn evaluation patterns](#multi-turn-evaluation-patterns).
+
 ### Schema fields
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `schemaVersion` | string | Recommended | Semantic version (for example, `"1.0.0"`). Backward compatibility is guaranteed within a major version. |
-| `items` | array | Yes | Array of prompt/response pairs. |
-| `items[].prompt` | string | Yes | The prompt or instruction sent to the agent. |
-| `items[].expected_response` | string | Yes | The reference response used for scoring. |
+| `schemaVersion` | string | Recommended | Semantic version (for example, `"1.0.0"` or `"1.2.0"`). Backward compatibility is guaranteed within a major version. Use `"1.2.0"` to enable evaluator configuration, evaluator modes, and native multi-turn support. |
+| `items` | array | Yes | Array of test items. Each item is either a single-turn prompt/response pair or a named multi-turn conversation. |
 | `description` | string | Optional | Free-text description of the dataset (for example, `"Regression tests for Q1 2026 release"`). |
+| `default_evaluators` | object | Optional | Evaluators applied to every item in the dataset unless overridden. Each key is an evaluator name (for example, `"Relevance"`, `"Coherence"`); the value is an options object (use `{}` for defaults). Requires `schemaVersion` `"1.2.0"` or later. |
+| `items[].prompt` | string | Conditional | The prompt or instruction sent to the agent. Required for single-turn items. Don't use with `turns`. |
+| `items[].expected_response` | string | Conditional | The reference response used for scoring. Required for single-turn items. Don't use with `turns`. |
+| `items[].name` | string | Optional | Display name for the test item (for example, `"Expense policy flow"`). Especially useful for identifying multi-turn items in reports. |
+| `items[].turns` | array | Conditional | Ordered array of turn objects for a multi-turn conversation within a single item. Each turn contains `prompt`, `expected_response`, and optionally `evaluators` and `evaluators_mode`. Don't use with top-level `prompt`/`expected_response`. Requires `schemaVersion` `"1.2.0"` or later. |
+| `items[].evaluators` | object | Optional | Per-item evaluator overrides. Each key is an evaluator name; the value is an options object (for example, `{ "citation_format": "mixed" }`). Behavior depends on `evaluators_mode`. Requires `schemaVersion` `"1.2.0"` or later. |
+| `items[].evaluators_mode` | string | Optional | Controls how `items[].evaluators` combines with `default_evaluators`. Use `"extend"` (default) to merge per-item evaluators with defaults, or `"replace"` to use only the per-item evaluators and ignore defaults. Requires `schemaVersion` `"1.2.0"` or later. |
 | `items[].testId` | string | Optional | Stable identifier for cross-version comparison (for example, `"REG-001"`). |
 | `items[].category` | string | Optional | Category tag (for example, `"knowledge-base"`, `"tool-usage"`). |
 | `items[].notes` | string | Optional | Freeform notes, such as a linked bug ID. |
+
+### Configure evaluators
+
+Schema version `1.2.0` lets you control which evaluators run and how they're configured, at both the dataset level and the individual item level.
+
+#### Default evaluators
+
+Use `default_evaluators` at the top level to specify evaluators that apply to every item in the dataset. Each key is an evaluator name and the value is an options object. Use an empty object (`{}`) to apply the evaluator with its default settings.
+
+```json
+{
+  "schemaVersion": "1.2.0",
+  "default_evaluators": {
+    "Relevance": {},
+    "Coherence": {}
+  },
+  "items": [
+    {
+      "prompt": "What is Microsoft Graph?",
+      "expected_response": "A unified API endpoint for Microsoft services."
+    }
+  ]
+}
+```
+
+In this example, every item is scored for Relevance and Coherence by using default settings.
+
+#### Per-item evaluator overrides
+
+Use the `evaluators` field on an individual item (or turn) to add or override evaluators for that specific test. Use `evaluators_mode` to control how per-item evaluators combine with `default_evaluators`:
+
+- **`"extend"`** (default) — Merges per-item evaluators with the defaults. The item is scored by both the default evaluators and any additional evaluators specified on the item.
+- **`"replace"`** — Ignores the defaults entirely. Only the evaluators specified on the item are used.
+
+```json
+{
+  "schemaVersion": "1.2.0",
+  "default_evaluators": {
+    "Relevance": {},
+    "Coherence": {}
+  },
+  "items": [
+    {
+      "prompt": "What is Microsoft Graph?",
+      "expected_response": "A unified API endpoint for Microsoft services.",
+      "evaluators": {
+        "Citations": { "citation_format": "mixed" }
+      },
+      "evaluators_mode": "extend"
+    }
+  ]
+}
+```
+
+In this example, the item is scored for Relevance (default), Coherence (default), and Citations with `citation_format` set to `"mixed"` (per-item override).
+
+### Complete schema example
+
+The following example shows every schema feature in a single dataset: top-level defaults, a single-turn item with evaluator overrides, and a named multi-turn item with per-turn evaluator configuration.
+
+```json
+{
+  "schemaVersion": "1.2.0",
+  "default_evaluators": {
+    "Relevance": {},
+    "Coherence": {}
+  },
+  "items": [
+    {
+      "prompt": "What is Microsoft Graph?",
+      "expected_response": "A unified API endpoint for Microsoft services.",
+      "evaluators": {
+        "Citations": { "citation_format": "mixed" }
+      },
+      "evaluators_mode": "extend"
+    },
+    {
+      "name": "Expense policy flow",
+      "turns": [
+        {
+          "prompt": "I spent $250 on dinner. Is that okay?",
+          "expected_response": "The per-diem meal allowance is $200."
+        },
+        {
+          "prompt": "What should I do about the overage?",
+          "expected_response": "Request manager approval.",
+          "evaluators": {
+            "ExactMatch": { "case_sensitive": false }
+          },
+          "evaluators_mode": "replace"
+        }
+      ]
+    }
+  ]
+}
+```
+
+Key details in this example:
+
+- The first item is a single-turn test. It inherits `Relevance` and `Coherence` from `default_evaluators` and adds `Citations` through the `"extend"` mode.
+- The second item is a named multi-turn conversation (`"Expense policy flow"`) with two turns. The first turn inherits the default evaluators. The second turn uses `"replace"` mode, so only `ExactMatch` runs - the defaults are ignored for that turn.
 
 ### Legacy array schema
 
@@ -134,7 +242,7 @@ Test whether the agent correctly uses available tools and plugins.
 }
 ```
 
-### Edge cases
+### Microsoft Edge cases
 
 Test boundary conditions and unusual inputs.
 
@@ -203,7 +311,46 @@ Test how the agent handles errors gracefully:
 
 ### Multi-turn evaluation patterns
 
-Each item in a dataset is evaluated independently. To represent multi-turn conversations, design sequential items where later prompts reference context established by earlier ones:
+Schema version `1.2.0` supports multi-turn conversations. Use the `turns` array within an item to define an ordered sequence of prompts and expected responses that form a single conversation flow. Each turn can optionally include its own evaluator configuration.
+
+```json
+{
+  "schemaVersion": "1.2.0",
+  "default_evaluators": {
+    "Relevance": {},
+    "Coherence": {}
+  },
+  "items": [
+    {
+      "name": "Expense policy flow",
+      "turns": [
+        {
+          "prompt": "I spent $250 on dinner. Is that okay?",
+          "expected_response": "The per-diem meal allowance is $200."
+        },
+        {
+          "prompt": "What should I do about the overage?",
+          "expected_response": "Request manager approval.",
+          "evaluators": {
+            "ExactMatch": { "case_sensitive": false }
+          },
+          "evaluators_mode": "replace"
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Key details:**
+
+- Each item with a `turns` array is evaluated as a single conversation. Turns are sent in sequence, with each turn building on the conversation context of the previous ones.
+- Use the `name` field to give multi-turn items a readable label in reports.
+- You can apply `evaluators` and `evaluators_mode` on individual turns. In the preceding example, the second turn uses `"replace"` mode so only `ExactMatch` runs for that turn.
+
+#### Sequential items pattern (schema version 1.0.0)
+
+If you're using schema version `1.0.0`, you can approximate multi-turn conversations by designing sequential items where later prompts reference context established by earlier ones. Use consistent `testId` prefixes and `category` tags to group and filter related items in results.
 
 ```json
 {
@@ -226,7 +373,8 @@ Each item in a dataset is evaluated independently. To represent multi-turn conve
 }
 ```
 
-Use consistent `testId` prefixes and `category` tags so you can filter and analyze results per conversation flow.
+> [!NOTE]
+> With sequential items, each item is evaluated independently. The agent doesn't carry conversation context between items. For true multi-turn evaluation with shared context, use the `turns` array with schema version `1.2.0`.
 
 ### Per-prompt categorization and scoring
 
@@ -437,13 +585,10 @@ Save test results to compare across versions.
 runevals --output ./evals/results/v1.2.0-results.json
 ```
 
-## Next steps
-
-- [Run evaluations with CI/CD pipelines](https://github.com/microsoft/M365-Copilot-Agent-Evals/blob/HEAD/CICD_CACHE_GUIDE.md)
-- [CLI reference](evaluations-cli-reference.md) - Complete command and option reference.
-- [Troubleshooting](evaluations-cli-troubleshooting.md) - Resolve common issues and get support.
-
 ## Related content
 
+- [Run evaluations with CI/CD pipelines](https://github.com/microsoft/M365-Copilot-Agent-Evals/blob/HEAD/CICD_CACHE_GUIDE.md)
+- [CLI reference](evaluations-cli-reference.md)
+- [Troubleshooting](evaluations-cli-troubleshooting.md)
 - [Agent Evaluations CLI overview](evaluations-cli-overview.md)
 - [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md)
