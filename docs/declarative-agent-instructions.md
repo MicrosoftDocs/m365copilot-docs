@@ -48,6 +48,9 @@ The following diagram shows the primary components of declarative agent instruct
 
 :::image type="content" source="assets/images/instruction-components.png" alt-text="Diagram of the components of agent instructions, including purpose, guidelines, and skills" border="false":::
 
+> [!IMPORTANT]
+> Don't store or offload declarative agent instructions in SharePoint documents (or any other knowledge source) to work around the 8,000-character instruction limit. Knowledge source content is not trusted maker-authored instruction content and is subject to cross-prompt injection attacks (XPIA) classifiers — directive-like language can be blocked, truncated, or sanitized at runtime, causing unpredictable agent behavior. This pattern also expands the attack surface: anyone with edit access to the referenced document can alter agent behavior at runtime, bypassing the manifest's authoring, versioning, and governance controls. Knowledge sources are designed to ground factual responses, not to serve as system-level instructions, and the platform makes no guarantee they will be honored as agent instructions.
+
 ## Best practices for agent instructions
 
 ### Use clear actionable language
@@ -56,9 +59,6 @@ The following diagram shows the primary components of declarative agent instruct
 - **Use precise, specific verbs**, such as "ask", "search", "send", "check", or "use".
 - **Supplement with examples** to minimize ambiguity.
 - **Define any terms** that are nonstandard or unique to the organization in the instructions.
-
-> [!IMPORTANT]
-> Don't store or offload declarative agent instructions in SharePoint documents (or any other knowledge source) to work around the 8,000-character instruction limit. Knowledge source content is not trusted maker-authored instruction content and is subject to cross-prompt injection attacks (XPIA) classifiers — directive-like language can be blocked, truncated, or sanitized at runtime, causing unpredictable agent behavior. This pattern also expands the attack surface: anyone with edit access to the referenced document can alter agent behavior at runtime, bypassing the manifest's authoring, versioning, and governance controls. Knowledge sources are designed to ground factual responses, not to serve as system-level instructions, and the platform makes no guarantee they will be honored as agent instructions.
 
 ### Build step-by-step workflows with transitions
 
