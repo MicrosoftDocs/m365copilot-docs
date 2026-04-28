@@ -161,7 +161,7 @@ This process creates a continuous loop:
 
 Run evaluations > Analyze results > Improve the agent > Repeat
 
- :::image type="content" source="assets/images/evaluations/evaluation-workflow.png" alt-text="The evaluation workflow is an interative process of improving, analyzing signals, and running evaluations." lightbox="assets/images/evaluations/evaluation-workflow.png":::
+:::image type="content" source="assets/images/evaluations/evaluation-workflow.png" alt-text="The evaluation workflow is an interative process of improving, analyzing signals, and running evaluations." lightbox="assets/images/evaluations/evaluation-workflow.png":::
 
 ## What evaluation doesn't replace
 
@@ -186,7 +186,7 @@ Define what success looks like before you build your agent. Creating test cases 
 
 Start with focused test cases for core scenarios. As your agent evolves, expand coverage with variations and edge cases. Maintain regression tests for stability.
 
- :::image type="content" source="assets/images/evaluations/core-policy-questions.png" alt-text="Test set for core policy questions with grounding data, prompt, assertions, and quality signals." lightbox="assets/images/evaluations/core-policy-questions.png":::
+:::image type="content" source="assets/images/evaluations/core-policy-questions.png" alt-text="Test set for core policy questions with grounding data, prompt, assertions, and quality signals." lightbox="assets/images/evaluations/core-policy-questions.png":::
 
 ### Test coverage guidance
 
