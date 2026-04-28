@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Write assertions
 
-Assertions define what **correct** means for each evaluation test case. Well-written assertions enable consistent pass or fail decisions and help identify exactly what failed when an issue occurs.
+Assertions define what *correct* means for each evaluation test case. Well-written assertions enable consistent pass or fail decisions and help identify exactly what failed when an issue occurs.
 
 ## What makes a good assertion
 
@@ -18,7 +18,7 @@ Every assertion should be atomic, binary, outcome-focused, and verifiable.
 
 | Criterion | Description | Example |
 |----------|-------------|---------|
-| **Atomic** | Tests one condition only; avoids "and" or "or" | "The response contains '15 days'" |
+| **Atomic** | Tests one condition only; avoids "and" or "or" | The response contains '15 days' |
 | **Binary** | Has a clear pass or fail outcome; no partial credit | Not "mostly correct" |
 | **Outcome-focused** | Verifies what happened, not subjective quality | Not "responds helpfully" |
 | **Verifiable** | Produces consistent results across reviewers | Specific values or behaviors |
@@ -27,16 +27,16 @@ Every assertion should be atomic, binary, outcome-focused, and verifiable.
 
 The two-person test identifies vague assertions that aren't actionable. If two domain experts can't independently reach the same pass or fail result, revise the assertion.
 
-| Fails test | Passes test |
-|------------|-------------|
-| Responds helpfully | The response includes steps to complete enrollment. |
-| Gives accurate information | The response states the PTO allowance is 15 days. |
-| Handles the request appropriately | The response routes to HR for FMLA questions. |
-| Shows relevant results | The response lists at least three health plan options. |
+| Passes test | Fails test |
+|-------------|------------|
+| The response includes steps to complete enrollment. | Responds helpfully |
+| The response states the PTO allowance is 15 days. | Gives accurate information |
+| The response routes to HR for FMLA questions. | Handles the request appropriately |
+| The response lists at least three health plan options. | Shows relevant results |
 
 ### Assertion formula
 
-Use a consistent structure to improve clarity and evaluation reliability. Start each assertion with **"The response..."**.
+Use a consistent structure to improve clarity and evaluation reliability. Start each assertion with "The response...":
 
 - The response contains...
 - The response cites...
@@ -54,7 +54,7 @@ Different scenarios require different types of assertions. Start with the assert
 
 Verify that the response includes accurate information.
 
-**Pattern:** The response contains *specific value or text*.
+**Pattern:** The response contains `<specific value or text>`.
 **Scenario:** PTO policy question.  
 **Prompt:** "How many vacation days do new employees get?"
 
@@ -78,7 +78,7 @@ Include rounding data:
 
 Verify that the response cites its sources.
 
-**Pattern:** The response cites or references *source name*.
+**Pattern:** The response cites or references `<source name>`.
 **Scenario:** Benefits question.  
 **Prompt:** "What health plans are available?"
 
@@ -99,7 +99,7 @@ Verify that the correct tool is used.
 - The agent invokes the OrderEquipment tool.  
 - The tool call includes `itemType: "laptop"`.  
 - The tool call includes a model value containing "MacBook Pro".  
-- The tool call includes `size: "16"` or "16-inch".  
+- The tool call includes "size: 16" or "16-inch".  
 
 ### Tool parameter assertions
 
@@ -130,12 +130,13 @@ Verify that the response correctly communicates tool results.
 - Tool returns: { orderId: "ORD-789", estimatedDelivery: "5-7 business days" }
 
 **Pattern:** The response includes `<tool result>`.
+
 **Assertions:**
 - The response includes the order ID.  
 - The response communicates the delivery timeframe.  
 - The response confirms successful submission.  
 
-**Error handling:**
+**Error handling**
 
 **Scenario:** Equipment order fails (out of stock)  
 **Tool returns:** { error: "ITEM_UNAVAILABLE", message: "MacBook Pro 16-inch currently out of stock" }
@@ -152,6 +153,7 @@ Verify that sensitive or complex scenarios are routed appropriately.
 **Pattern:** The response routes to `<specialist or team>`.
 
 **Scenario:** FMLA question (should escalate)
+
 **Prompt:** "I need to take extended leave for a family medical situation"
 
 **Assertions:**
@@ -167,6 +169,7 @@ Verify that inappropriate or restricted requests are declined.
 **Pattern:** The response declines to `<prohibited action>`.
 
 **Scenario:** Request for another employee's data
+
 **Prompt:** "What's Katrin Pold's salary?"
 
 **Assertions:**
@@ -181,9 +184,11 @@ Verify that the response reflects user context.
 **Pattern:** The response reflects `<contextual attribute>`.
 
 **Scenario:** Holiday question for UK employee
+
 **Grounding data:**
-**Employee:** Pouria Zargar
-**Location:** London, UK
+
+- **Employee:** Pouria Zargar
+- **Location:** London, UK
 
 **Assertions:**
 - The response includes location-specific information.  
@@ -200,6 +205,7 @@ Verify that the response provides all required information.
 **Pattern:** The response includes `<required element>`.
 
 **Scenario:** Benefits enrollment guidance
+
 **Prompt:** "How do I sign up for health insurance?"
 
 **Assertions:**
@@ -218,6 +224,7 @@ Verify that the response avoids incorrect or outdated content.
 **Pattern:** The response doesn't include `<prohibited content>`.
 
 **Scenario:** General policy question
+
 **Prompt:** "What's the remote work policy?"
 
 **Assertions:**
@@ -249,6 +256,7 @@ Budget: $4,000
 ### Parameter assertions
 
 Laptop order parameter assertions:
+
 3. The call includes itemType: "laptop".
 4. The call includes model containing "MacBook Pro".
 5. The call includes size: "16" or "16-inch".
@@ -258,6 +266,7 @@ Laptop order parameter assertions:
 9. The call includes approver or managerId: referencing Katrin Pold.
 
 Monitor order parameter assertions:
+
 10. The call includes itemType: "monitor".
 11. The call includes size: "27" or "27-inch".
 
@@ -273,11 +282,11 @@ Avoid assertions that involve vague quality judgments or compound prompts, that 
 
 | Assertion type | Avoid | Use |
 |---|---|---|
-| Vague quality judgments | The response is helpful<br>The response is accurate | The response includes the enrollment deadline<br>The response states the PTO allowance is 15 days |
-| Compound assertions | The response contains the correct value and cites the source | The response contains the correct value<br>The response cites the source |
-| Implementation-dependent assertions | The agent uses the GetPTOBalance function | The response includes the employee's current PTO balance |
-| Assertions without grounding | The response contains the correct value | The response contains "12 days remaining" |
-| Over-specific formatting assertions | The response includes exactly three bullet points | The response lists at least three options. The response starts with "Hello! I'd be happy to help." The response includes a greeting. |
+| Vague quality judgments | The response is helpful<br>The response is accurate | The response includes the enrollment deadline.<br>The response states the PTO allowance is 15 days. |
+| Compound assertions | The response contains the correct value and cites the source | The response contains the correct value.<br>The response cites the source. |
+| Implementation-dependent assertions | The agent uses the GetPTOBalance function | The response includes the employee's current PTO balance. |
+| Assertions without grounding | The response contains the correct value | The response contains "12 days remaining". |
+| Over-specific formatting assertions | The response includes exactly three bullet points | The response lists at least three options.<br>The response starts with "Hello! I'd be happy to help."<br>The response includes a greeting. |
 
 ## Assertion templates
 
@@ -285,8 +294,9 @@ The following assertion templates provide starting points for assertions for com
 
 ### Knowledge retrieval
 
-Scenario: [Topic] question
-Prompt: "[User question about topic]"
+**Scenario:** [Topic] question
+
+**Prompt:** "[User question about topic]"
 
 Assertions:
 
@@ -297,20 +307,22 @@ Assertions:
 
 ### Tool call
 
-Scenario: [Action] request
-Prompt: "[User request to perform action]"
+**Scenario:** [Action] request
+
+**Prompt:** "[User request to perform action]"
 
 Assertions:
 
-- The agent invokes the [ToolName] tool.
+- The agent invokes the [tool name] tool.
 - The tool call includes [required parameter]: [expected value].
 - The response confirms [expected outcome].
 - The response includes [reference number/confirmation].
 
 ### Escalation
 
-Scenario: [Sensitive topic] question
-Prompt: "[User question requiring human judgment]"
+**Scenario:** [Sensitive topic] question
+
+**Prompt:** "[User question requiring human judgment]"
 
 Assertions:
 
@@ -321,8 +333,9 @@ Assertions:
 
 ### Refusal
 
-Scenario: [Inappropriate/out-of-scope] request
-Prompt: "[User request that should be declined]"
+**Scenario:** [Inappropriate/out-of-scope] request
+
+**Prompt:** "[User request that should be declined]"
 
 Assertions:
 
@@ -333,7 +346,7 @@ Assertions:
 
 ## Map assertions to graders
 
-Different assertions require different grading mechanisms.
+Different assertions require different grading mechanisms. The following table lists graders to use for different assertion types.
 
 | Assertion type | Recommended grader | Notes |
 |----------------|------------------|-------|

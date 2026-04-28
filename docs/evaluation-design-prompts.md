@@ -52,9 +52,9 @@ You can derive realistic prompts from:
 
 ### Grounded in data
 
-Prompts should be grounded in data. `
+Prompts should be grounded in data. When grounding data is available, use specific entities, values, and identifiers. This approach makes evaluations measurable and verifiable. 
 
-When grounding data is available, use specific entities, values, and identifiers. This approach makes evaluations measurable and verifiable. Grounded prompts allow precise assertions such as "The response contains '15 days'," instead of vague checks like "The response contains the correct number."
+Grounded prompts allow precise assertions such as "The response contains 15 days," instead of vague checks like "The response contains the correct number."
 
 **Without grounding data**  
 
@@ -74,13 +74,13 @@ Prompt: "I'm in the engineering team — how many vacation days do I get?"
 
 ### Self-contained (single-turn)
 
-For single-turn evaluations, each prompt must include all required context. The agent can't rely on prior conversation turns.
+For single-turn evaluations, each prompt must include all required context. The agent can't rely on prior conversation turns. The following table shows examples of self-contained prompts.
 
-| Depends on context (avoid) | Self-contained |
-|----------------------------|----------------|
-| What about the other health plan? | What does the PPO health plan cover? |
-| And how much does that cost? | What's the employee cost for the PPO health plan? |
-| Can you order that instead? | Can you order a 16-inch MacBook Pro? |
+| Self-contained | Depends on context (avoid) |
+|----------------|----------------------------|
+| What does the PPO health plan cover? | What about the other health plan? |
+| What's the employee cost for the PPO health plan? | And how much does that cost? |
+| Can you order a 16-inch MacBook Pro? | Can you order that instead? |
 
 For scenarios that span multiple turns, use [multi-turn conversations](evaluation-multi-turn.md).
 
@@ -97,7 +97,7 @@ Canonical prompts are explicit, complete, and unambiguous. They serve as the bas
 - Avoid ambiguity.
 - Represent an ideal query.
 
-**Example:**
+**Example**
 
 "How many paid time off days do employees with less than two years of tenure receive annually according to the current PTO policy?"
 
@@ -110,7 +110,7 @@ The natural language variant reflects everyday conversational phrasing. Natural 
 - Avoid technical identifiers.  
 - Remain complete enough to answer.  
 
-**Example:**
+**Example**
 
 "Hey, how much vacation do I get as a new hire?"
 
@@ -130,12 +130,10 @@ The robustness probe evaluates how well the agent handles imperfect input. Robus
 - Include realistic typos.  
 - Contain grammatical errors.  
 - Use shorthand or abbreviations.  
-- Test intent recognition under noise.  
-
-**Example:**
-
+- Test intent recognition under noise.
+-  
 <!-- cspell:ignore whats vacaton -->
-`whats my vacaton days entitlement`
+**Example:** "whats my vacaton days entitlement"
 
 The following table shows examples of patterns to test.
 
@@ -213,9 +211,9 @@ This scenario includes the following grounding data:
 - The response references UK policy or schedule.
 - The response doesn't mention US holidays such as July 4 or Thanksgiving. 
 
-## Prompt anti-patterns
+## Patterns to avoid
 
-Avoid these common mistakes.
+Avoid the following prompt patterns.
 
 ### Multi-intent prompts
 
@@ -226,14 +224,14 @@ Avoid multi-intent prompts. When your prompt covers multiple intents, you can't 
 
 ### Schema-aware prompts
 
-Schema-aware prompts don't work well because users don't know internal APIs or tool names.
+Avoid schema-aware prompts. Schema-aware prompts don't work well because users don't know internal APIs or tool names.
 
 - **Avoid:** "Call the GetPTOBalance API for employee ID 12345"
 - **Use instead:** "What's my current vacation balance?"
 
 ### Vague prompts
 
-If your prompt is vague, you can't define measurable assertions.
+Avoid vague prompts. If your prompt is vague, you can't define measurable assertions.
 
 - **Avoid:** "Help me with HR stuff"
 - **Use instead:** "How do I enroll in the dental insurance plan?"
@@ -266,12 +264,7 @@ This approach ensures evaluations reflect real-world usage.
 
 ## AI-assisted prompt expansion (optional)
 
-After you establish a strong baseline, use AI to expand coverage.
-
-- Use AI to suggest more variations.  
-- Review each suggestion for realism and relevance.  
-- Reject prompts that are unnatural, schema-aware, or out of scope.  
-- Add prompts only where they improve coverage.  
+After you establish a strong baseline, use AI to expand coverage. Ask AI to suggest more variations. Review each suggestion for realism and relevance. Reject prompts that are unnatural, schema-aware, or out of scope.  Add prompts only where they improve coverage.  
 
 ## Prompt coverage checklist
 
@@ -286,13 +279,11 @@ Use this checklist to ensure that your prompt coverage is complete.
 
 ### Variation coverage
 
-For each scenario, include:
-
 - Canonical prompt  
 - Natural language variant  
 - Robustness probe  
 
-### Microsoft Edge cases
+### Edge cases
 
 - Very short prompts  
 - Very long prompts  

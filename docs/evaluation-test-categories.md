@@ -142,9 +142,9 @@ Architecture tests isolate individual components to help diagnose problems. They
 
 **Routing logic**
 - **ARCH-R-001**: Ambiguous query (could be HR or IT).
-- **ARCH-R-002**: Clear HR question → knowledge path.
-- **ARCH-R-003**: Clear action request → tool path.
-- **ARCH-R-004**: Sensitive topic → escalation path.
+- **ARCH-R-002**: Clear HR question > knowledge path.
+- **ARCH-R-003**: Clear action request > tool path.
+- **ARCH-R-004**: Sensitive topic > escalation path.
 
 **Integration**
 - **ARCH-I-001**: Context from user profile used correctly.
@@ -366,7 +366,7 @@ Run all categories when:
 
 ## Track results over time
 
-Monitoring trends helps you identify regressions and improvements.
+Monitoring trends helps you identify regressions and improvements. To monitor your results:
 
 - Compare pass rates across versions.
 - Identify patterns in failures.

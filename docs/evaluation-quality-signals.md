@@ -10,9 +10,9 @@ ms.localizationpriority: medium
 
 # Derive quality signals for Copilot agent evaluation
 
-This article explains how to derive quality signals from evaluation results to diagnose issues, identify patterns, and improve Copilot agent performance.
-
 Quality signals provide a structured way to understand _why_ agent responses succeed or fail. They help teams group evaluation outcomes into meaningful categories, prioritize improvements, and track progress over time.
+
+This article explains how to derive quality signals from evaluation results to diagnose issues, identify patterns, and improve Copilot agent performance.
 
 By using quality signals, teams can:
 - Identify recurring failure patterns
@@ -29,12 +29,6 @@ Assertions and quality signals work together in an evaluation workflow:
 - **Assertions** determine whether a response passes or fails.
 - **Quality signals** group assertion outcomes into higher-level patterns.
 
-After you define assertions, derive quality signals from the assertion outcomes and use those signals to track performance across scenarios.
-
-### Assertions vs. quality signals
-
-The following table compares assertions and quality signals.
-
 | Aspect   | Assertions              | Quality signals        |
 |----------|------------------------|-----------------------|
 | Level    | Specific and concrete  | Abstract and categorical |
@@ -42,6 +36,8 @@ The following table compares assertions and quality signals.
 | Quantity | Many per test case     | Few per agent         |
 | Origin   | Defined before testing | Derived from results  |
 | Example  | Contains "15 days"     | Policy accuracy       |
+
+After you define assertions, derive quality signals from the assertion outcomes and use those signals to track performance across scenarios.
 
 ## Common quality signals
 
@@ -58,6 +54,8 @@ Use the following common quality signals when you evaluate Copilot agents:
 
 ### Signal evaluation and common causes
 
+The following table lists indicators for each quality signal.
+
 | Quality signal | Pass indicators | Fail indicators | Common causes |
 |----------------|----------------|----------------|---------------|
 | **Policy accuracy** | Correct values and dates<br><br>Accurate policy details<br><br>Consistent with current documentation | Outdated or incorrect values<br><br>Conflicting or fabricated details | Outdated or duplicate documents<br><br>Incorrect retrieval results<br><br>Model hallucinations |
@@ -71,18 +69,16 @@ Use the following common quality signals when you evaluate Copilot agents:
 
 ## How to derive quality signals
 
-Derive quality signals from patterns in evaluation results rather than predefined checklists.
+Quality signals are derived from patterns in evaluation results rather than predefined checklists. To derive quality signals:
 
-To derive quality signals:
+- Run an initial set of evaluation test cases.  
+- Review failed responses across test cases.  
+- Identify recurring patterns in failures.  
+- Define each pattern as a quality signal.  
+- Tag related assertions with the corresponding signal. 
+- Track pass rates by signal.  
 
-- Run an initial set of evaluation test cases  
-- Review failed responses across test cases  
-- Identify recurring patterns in failures  
-- Define each pattern as a quality signal  
-- Tag related assertions with the corresponding signal  
-- Track pass rates by signal  
-
-## Example of quality signals in practice
+## Quality signals in practice
 
 The following example shows quality signals defined for an employee onboarding agent.
 
@@ -106,24 +102,22 @@ The following are specific measures for quality signals.
 
 ## Apply and communicate quality signals
 
-Use quality signals to drive evaluation workflows and communicate insights.
-
-To apply quality signals:
+Use quality signals to drive evaluation workflows and communicate insights. To apply quality signals:
 
 - **Tag assertions** – Add signal tags to each assertion in your test cases. 
 
-    Test Case: PTO-001  
-    Prompt: "How many vacation days do new employees get?"  
+    **Test Case:** PTO-001  
+    **Prompt:** "How many vacation days do new employees get?"  
 
-    Assertions:  
+    **Assertions:**  
     - The response contains "15 days".  
-      [Signal: Policy Accuracy]  
+      Signal: Policy Accuracy  
 
     - The response cites the Employee Handbook.  
-      [Signal: Source Attribution]  
+      Signal: Source Attribution  
 
     - The response mentions the <2 year tenure bracket.  
-      [Signal: Personalization]
+      Signal: Personalization
   
 - **Calculate metrics** – Aggregate pass and fail results by signal. 
 
@@ -150,12 +144,14 @@ To apply quality signals:
     - Source attribution: 80% > 82% > 88% > 90% (improving)
     - Tool accuracy: 83% > 85% > 84% > 92% (improved after v1.2 regression)
 
-Quality signals transform stakeholder conversations.
+Quality signals transform stakeholder conversations. This specificity enables targeted fixes, quantitative progress tracking, and clearer stakeholder communication.
 
-- **Without signals:** The agent isn't performing well. Users are complaining.
-- **With signals:** Policy Accuracy is at 92% — we're hitting our target. But Personalization dropped to 73% after the last update. Specifically, UK employees are getting US holiday information. We identified the root cause: the context retrieval isn't passing location data. Fix is in progress for next release.
+**Without signals:** 
+The agent isn't performing well. Users are complaining.
 
-This specificity enables targeted fixes, quantitative progress tracking, and clearer stakeholder communication.
+**With signals:** 
+Policy Accuracy is at 92% — we're hitting our target. But Personalization dropped to 73% after the last update. Specifically, UK employees are getting US holiday information. We identified the root cause: the context retrieval isn't passing location data. Fix is in progress for next release.
+
 
 ## Quality signals by agent type
 

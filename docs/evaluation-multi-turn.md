@@ -164,9 +164,7 @@ Context consistency measures whether the agent maintains consistent facts and in
 
 ## Design multi-turn test cases
 
-Designing effective multi-turn evaluations requires defining both the conversation flow and expected behaviors.
-
-A multi-turn test case typically includes:
+Designing effective multi-turn evaluations requires defining both the conversation flow and expected behaviors. A multi-turn test case typically includes:
 
 - Test case ID and description
 - Grounding data
@@ -174,7 +172,7 @@ A multi-turn test case typically includes:
 - Expected behaviors
 - Assertions
 
-### Example
+### Example: Equipment order
 
 - **Test case ID**: CONV-001  
 - **Description**: Equipment ordering flow  
@@ -220,7 +218,7 @@ A multi-turn test case typically includes:
   - Agent invokes UpdateOrder or modifies previous order.
   - Final confirmation shows "64GB".
 
-### Slot-filling conversation example
+### Example: Slot-filling conversation
 
 **Scenario**: Benefits enrollment (slot filling)  
 **Goal**: Collect all required information and complete enrollment  
@@ -265,18 +263,18 @@ A multi-turn test case typically includes:
 - Provides confirmation summary
 
 **Assertions:**
-- All required slots are collected before submission  
-- The agent doesn't skip required inputs  
-- The agent explains options when prompted  
-- The final confirmation includes all captured details  
-- The task completes successfully without unnecessary turns  
+- All required slots are collected before submission.  
+- The agent doesn't skip required inputs. 
+- The agent explains options when prompted.  
+- The final confirmation includes all captured details.  
+- The task completes successfully without unnecessary turns.  
 
-### Clarification conversation
+### Example: Clarification conversation
 
 **Scenario**: Ambiguous request (clarification)  
 **Goal**: Resolve ambiguity by gathering sufficient context before responding  
 
-**Conversation:**
+##### Conversation
 
 **Turn 1**  
 **User**: "I need to take some time off."  
@@ -310,7 +308,7 @@ A multi-turn test case typically includes:
 - The final response reflects the user's actual situation.  
 - The agent transitions from clarification to resolution effectively.  
 
-### Error recovery conversation
+### Example: Error recovery conversation
 
 **Scenario**: Order failure and recovery  
 **Goal**: Handle failures transparently and guide the user to a successful outcome  
@@ -345,11 +343,11 @@ System/tool response:
 - Provides confirmation (order details, expected delivery)
 
 **Assertions:**
-- The agent clearly communicates failures and their causes  
-- The agent offers actionable alternatives or next steps  
-- The conversation progresses toward recovery, not dead ends  
-- The user successfully completes the task after the failure  
-- The agent maintains context across the failure and recovery steps  
+- The agent clearly communicates failures and their causes.  
+- The agent offers actionable alternatives or next steps.  
+- The conversation progresses toward recovery, not dead ends.  
+- The user successfully completes the task after the failure.  
+- The agent maintains context across the failure and recovery steps.  
 
 ## Multi-turn assertions
 
