@@ -63,7 +63,7 @@ The evaluation tool uses an Azure OpenAI resource to score responses. You need b
 
 ### Prerequisites
 
-Your Azure OpenAI resource must have a chat model deployed. By default, the CLI uses `gpt-4o-mini`; to use a different deployment, set [`AZURE_AI_MODEL_NAME`](#override-api-version-and-model-optional).
+Your Azure OpenAI resource must have a chat model deployed. By default, the CLI uses `gpt-4o-mini`; to use a different deployment, set [`AZURE_AI_MODEL_NAME`](#set-the-api-version-and-model).
 
 ### Get `AZURE_AI_OPENAI_ENDPOINT`
 

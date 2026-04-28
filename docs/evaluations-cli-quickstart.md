@@ -22,7 +22,7 @@ Before you begin, make sure that you have:
 - Microsoft Entra admin consent granted for the Agent Evaluations CLI in your
   tenant. If you aren't a tenant admin, ask your admin to grant consent before
   you run `runevals` for the first time. For more information, see the instructions in the [Grant admin consent](https://github.com/microsoft/work-iq/blob/main/ADMIN-INSTRUCTIONS.md).
-- Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Get values for  environment variables](evaluations-get-env-values.md).
+- Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Get values for  environment variables](evaluations-cli-get-env-values.md).
 
 > [!NOTE]
 > This quickstart assumes you're using a Windows development environment. Authentication support for other operating systems is coming soon.
