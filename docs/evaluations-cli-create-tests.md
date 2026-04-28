@@ -242,7 +242,7 @@ Test whether the agent correctly uses available tools and plugins.
 }
 ```
 
-### Microsoft Edge cases
+### Edge cases
 
 Test boundary conditions and unusual inputs.
 
@@ -268,7 +268,7 @@ Ensure the agent handles inappropriate requests properly.
 
 ### Write clear prompts
 
-**Good example:**
+The following is an example of a clear prompt.
 
 ```json
 {
@@ -277,7 +277,7 @@ Ensure the agent handles inappropriate requests properly.
 }
 ```
 
-**Avoid ambiguity:**
+Avoid ambiguous prompts like the following example.
 
 ```json
 {
@@ -287,7 +287,7 @@ Ensure the agent handles inappropriate requests properly.
 
 ### Include realistic scenarios
 
-Base tests on actual user questions:
+Base tests on actual user questions.
 
 ```json
 {
@@ -298,7 +298,7 @@ Base tests on actual user questions:
 
 ### Cover error handling
 
-Test how the agent handles errors gracefully:
+Test how the agent handles errors gracefully.
 
 ```json
 {
@@ -342,7 +342,7 @@ Schema version `1.2.0` supports multi-turn conversations. Use the `turns` array 
 }
 ```
 
-**Key details:**
+Key details:
 
 - Each item with a `turns` array is evaluated as a single conversation. Turns are sent in sequence, with each turn building on the conversation context of the previous ones.
 - Use the `name` field to give multi-turn items a readable label in reports.
@@ -503,20 +503,20 @@ You can find sample datasets in the public repository:
 
 ## Interactive and inline testing
 
-Use interactive mode for exploratory testing without a dataset file:
+Use interactive mode for exploratory testing without a dataset file.
 
 ```bash
 runevals --interactive
 ```
 
-For quick, single-prompt tests, pass prompts inline:
+For quick, single-prompt tests, pass prompts inline.
 
 ```bash
 runevals --prompts "What is Microsoft Graph?" \
   --expected "Microsoft Graph is the API gateway to Microsoft 365 data and intelligence."
 ```
 
-Multiple prompts:
+Multiple prompts.
 
 ```bash
 runevals --prompts "What is Teams?" "What is SharePoint?" \
@@ -529,7 +529,7 @@ Each test is automatically scored on multiple dimensions.
 
 ### Relevance (1-5)
 
-How well the response addresses the prompt.
+Relevance measures how well the response addresses the prompt:
 
 - **5**: Perfectly addresses the question
 - **3**: Partially addresses the question
@@ -537,7 +537,7 @@ How well the response addresses the prompt.
 
 ### Coherence (1-5)
 
-How logical and well-structured the response is.
+Coherence measures how logical and well-structured the response is:
 
 - **5**: Clear, logical, well-organized
 - **3**: Somewhat organized but could be clearer
@@ -545,15 +545,15 @@ How logical and well-structured the response is.
 
 ### Groundedness (1-5)
 
-How well the response is supported by sources and citations.
+Groundedness measures how well the response is supported by sources and citations:
 
 - **5**: Fully grounded with appropriate citations
 - **3**: Partially grounded with some citations
 - **1**: No grounding or citations
 
-### Tool Call Accuracy (1-5)
+### Tool call accuracy (1-5)
 
-How appropriately the agent uses available tools.
+Tool call accuracy measures how appropriately the agent uses available tools:
 
 - **5**: Perfect tool selection and usage
 - **3**: Correct tool but suboptimal usage
@@ -561,7 +561,7 @@ How appropriately the agent uses available tools.
 
 ### Citations (0-1)
 
-Whether the response includes proper citations.
+Citations measures whether the response includes proper citations:
 
 - **1**: Citations present and appropriate
 - **0**: No citations or inappropriate citations

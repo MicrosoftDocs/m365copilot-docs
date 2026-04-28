@@ -180,12 +180,12 @@ Before you file an issue, collect:
 
 To file the issue:
 
-- Open a new issue at [microsoft/M365-Copilot-Agent-Evals — Issues](https://github.com/microsoft/M365-Copilot-Agent-Evals/issues).
+- Open a new issue at [M365 Copilot Agent Evaluations — Issues](https://github.com/microsoft/M365-Copilot-Agent-Evals/issues).
 - Apply the appropriate label (for example, `setup`, `authentication`, `runtime`, `environment`) to help triage.
 
 ## Related content
 
-- [Evaluate Microsoft 365 Copilot agents overview](evaluations-cli-overview.md)
-- [Quickstart: Evaluate your agent](evaluations-cli-quickstart.md)
+- [Agent Evaluations CLI overview](evaluations-cli-overview.md)
+- [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md)
+- [Dataset schema and test design](evaluations-cli-create-tests.md)
 - [CLI reference](evaluations-cli-reference.md)
-- [Create evaluation test suites](evaluations-cli-create-tests.md)

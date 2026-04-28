@@ -60,7 +60,7 @@ These values enable authentication and allow the tool to run LLM-based evaluatio
 
 ## Related content
 
-- [Quickstart: Run your first evaluation](evaluations-cli-quickstart.md)
+- [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md)
 - [Dataset schema and test design](evaluations-cli-create-tests.md)
 - [CLI reference](evaluations-cli-reference.md)
 - [Troubleshooting and support](evaluations-cli-troubleshooting.md)

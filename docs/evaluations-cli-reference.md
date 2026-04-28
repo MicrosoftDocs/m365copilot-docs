@@ -31,13 +31,13 @@ The `runevals` command evaluates Microsoft 365 Copilot agents by sending test pr
 
 Output the version number of the CLI tool.
 
-**Example:**
+Example:
 
 ```bash
 runevals --version
 ```
 
-**Output:**
+Output:
 
 ```
 1.3.0-preview.1
@@ -434,6 +434,6 @@ For common issues with installation, authentication, runtime errors, cache probl
 
 ## Related content
 
-- [Evaluate Microsoft 365 Copilot agents overview](evaluations-cli-overview.md)
-- [Quickstart: Evaluate your agent](evaluations-cli-quickstart.md)
+- [Agent Evaluations CLI overview](evaluations-cli-overview.md)
+- [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md)
 - [Dataset schema and test design](evaluations-cli-create-tests.md)
