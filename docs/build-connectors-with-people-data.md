@@ -4,7 +4,7 @@ description: Learn how to build your first Microsoft 365 Copilot connector for p
 author: wictorwilen
 ms.author: wictorwilen
 ms.localizationpriority: medium
-ms.date: 03/17/2026
+ms.date: 04/17/2026
 ms.topic: how-to
 ---
 
@@ -39,15 +39,15 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 | `personAnniversaries`   | `stringCollection` | [`personAnniversary`](/graph/api/resources/personanniversary)           | Adds one or more anniversaries to the person.                               |
 | `personAwards`          | `stringCollection` | [`personAward`](/graph/api/resources/personaward)                       | Describes awards the user earned.                                           |
 | `personCertifications`  | `stringCollection` | [`personCertification`](/graph/api/resources/personcertification)       | Describes certifications the user earned.                                   |
-| `personEducationalActivities` *(beta)* | `stringCollection` | [`educationalActivity`](/graph/api/resources/educationalactivity) | Describes the user's educational activities.                                |
+| `personEducationalActivities`  | `stringCollection` | [`educationalActivity`](/graph/api/resources/educationalactivity) | Describes the user's educational activities.                                |
 | `personEmails`          | `stringCollection` | [`itemEmail`](/graph/api/resources/itememail)                           | Max 3. Adds email addresses to the user.                                    |
-| `personInterests` (beta)      | `stringCollection` | [`personInterest`](/graph/api/resources/personinterest)                 | Detailed information about interests of the user.                           |
-| `personLanguages` (beta)      | `stringCollection` | [`languageProficiency`](/graph/api/resources/languageproficiency)       | Detailed information about languages the user knows.                        |
+| `personInterests`      | `stringCollection` | [`personInterest`](/graph/api/resources/personinterest)                 | Detailed information about interests of the user.                           |
+| `personLanguages`      | `stringCollection` | [`languageProficiency`](/graph/api/resources/languageproficiency)       | Detailed information about languages the user knows.                        |
 | `personName`            | `string`           | [`personName`](/graph/api/resources/personname)                         | Adds names to the user.                                                     |
 | `personNote`            | `string`           | [`personAnnotation`](/graph/api/resources/personannotation)             | Adds a note to the user.                                                    |
-| `personPatents` (beta)         | `stringCollection` | [`itemPatent`](/graph/api/resources/itempatent)                         | Describes a granted or filed patent the user is associated with.           |
+| `personPatents`         | `stringCollection` | [`itemPatent`](/graph/api/resources/itempatent)                         | Describes a granted or filed patent the user is associated with.           |
 | `personPhones`          | `stringCollection` | [`itemPhone`](/graph/api/resources/itemphone)                           | Adds phone numbers to the user.                                             |
-| `personPublications` (beta)    | `stringCollection` | [`itemPublication`](/graph/api/resources/itempublication)               | Describes publications or articles the user is associated with.      |
+| `personPublications`    | `stringCollection` | [`itemPublication`](/graph/api/resources/itempublication)               | Describes publications or articles the user is associated with.      |
 | `personProjects`        | `stringCollection` | [`projectParticipation`](/graph/api/resources/projectparticipation)     | Describes projects the user participated in.                                |
 | `personSkills`          | `stringCollection` | [`skillProficiency`](/graph/api/resources/skillproficiency)             | Describes skills the user is proficient in.                                 |
 | `personWebAccounts`     | `stringCollection` | [`webAccount`](/graph/api/resources/webaccount)                         | Describes external web accounts the user has.                               |

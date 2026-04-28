@@ -16,7 +16,6 @@ items:
 - name: What's new
   href: whats-new.md
 - name: Get started
-  expanded: true
   items:
   - name: Planning guide
     href: planning-guide.md
@@ -29,7 +28,6 @@ items:
   - name: Learning resources
     href: /collections/p11pb18wmq6xqq
 - name: Build an agent
-  expanded: true
   items:
   - name: Agents overview
     href: agents-overview.md
@@ -183,18 +181,11 @@ items:
       - name: Share and manage agents
         href: agent-builder-share-manage-agents.md
       - name: Availability and language support
-        href: copilot-studio-lite-availability.md
+        href: agent-builder-regional-availability.md
       - name: Copy your agent to Copilot Studio
         href: copy-agent-to-copilot-studio.md
-      - name: Use Copilot Studio
-        href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context
-        items:
-        - name: Copilot Studio actions
-          href: overview-business-applications.md
-        - name: Power Automate flow actions
-          href: /power-automate/flow-plugins-m365?context=/microsoft-365/copilot/extensibility/context
-        - name: Prompts
-          href: /ai-builder/create-a-custom-prompt?context=/microsoft-365/copilot/extensibility/context
+      - name: Extend with Copilot Studio
+        href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context        
     - name: Best practices for building agents
       href: declarative-agent-best-practices.md
     - name: Write effective instructions
@@ -272,13 +263,7 @@ items:
         - name: .NET SDK
           href: /dotnet/api/?view=msteams-sdk-dotnet-latest&preserve-view=true
     - name: Use Microsoft Copilot Studio
-      items:
-      - name: Quickstart
-        href: /microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365/copilot/extensibility/context
-      - name: Key concepts
-        href: /microsoft-copilot-studio/authoring-fundamentals?context=/microsoft-365/copilot/extensibility/context
-      - name: Create and delete agents
-        href: /microsoft-copilot-studio/authoring-first-bot?context=/microsoft-365/copilot/extensibility/context
+      href: /microsoft-copilot-studio/fundamentals-what-is-copilot-studio?context=/microsoft-365/copilot/extensibility/context
     - name: User experience
       items:
       - name: User experience features
@@ -351,6 +336,20 @@ items:
     href: /legal/m365-copilot-agent-eval-tool/license-terms?context=/microsoft-365/copilot/extensibility/context
 - name: Extend agents at scale with Agent 365 (early access preview)
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
+- name: Evaluate agents
+  items:
+  - name: Overview
+    href: evaluation-overview.md
+  - name: Design evaluation prompts
+    href: evaluation-design-prompts.md
+  - name: Write assertions
+    href: evaluation-write-assertions.md
+  - name: Derive quality signals
+    href: evaluation-quality-signals.md
+  - name: Evaluate multi-turn conversations
+    href: evaluation-multi-turn.md
+  - name: Organize test categories and iterate
+    href: evaluation-test-categories.md
 - name: Publish
   items:
   - name: Overview

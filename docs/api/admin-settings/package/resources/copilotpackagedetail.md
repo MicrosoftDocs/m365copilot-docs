@@ -23,14 +23,7 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 | Method                                      | Return type                                                     | Description                                                               |
 |---------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------|
 | [List](../copilotpackages-list.md)          | `copilotPackageDetail` collection                               | Get the available Copilot packages.                                       |
-| [Create](../copilotpackagedetail-create.md) | [copilotPackageUpdateResponse](copilotpackageupdateresponse.md) | Create a new `copilotPackageDetail` object.                               |
 | [Get](../copilotpackagedetail-get.md)       | `copilotPackageDetail`                                          | Read the properties and relationships of a `copilotPackageDetail` object. |
-| [Update](../copilotpackagedetail-update.md) | `copilotPackageDetail`                                          | Update a `copilotPackageDetail` object.                                   |
-| [Delete](../copilotpackagedetail-delete.md) | None                                                            | Delete a `copilotPackageDetail` object.                                   |
-| [block](../copilotpackage-block.md)         | None                                                            | Block a Copilot package to prevent its usage.                             |
-| [reassign](../copilotpackage-reassign.md)   | None                                                            | Reassign ownership of a Copilot package to a different user.              |
-| [unblock](../copilotpackage-unblock.md)     | None                                                            | Unblock a Copilot package to allow its usage.                             |
-| [update](../copilotpackage-update.md)       | [copilotPackageUpdateResponse](copilotpackageupdateresponse.md) | Update a Copilot package with a new package file.                         |
 
 ## Properties
 
