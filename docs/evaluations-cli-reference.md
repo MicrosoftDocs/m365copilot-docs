@@ -430,7 +430,7 @@ runevals \
 
 ## Troubleshooting
 
-For common issues with installation, authentication, runtime errors, cache problems, and proxy setup, see the  [Troubleshooting](evaluations-cli-troubleshooting.md) article.
+For common issues with installation, authentication, runtime errors, cache problems, and proxy setup, see the [Troubleshooting](evaluations-cli-troubleshooting.md) article.
 
 ## Related content
 

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get values for environment variables
 
-The Microsoft 365 Copilot Agent Evaluations CLI (`@microsoft/m365-copilot-eval`) reads connection and authentication settings from environment variables. This article shows you where to obtain each value. 
+The Microsoft 365 Copilot Agent Evaluations CLI (`@microsoft/m365-copilot-eval`) reads connection and authentication settings from environment variables. This article shows you where to obtain each value.
 
 For the list of variables and where to put them, see [Agent Evaluations CLI overview](evaluations-cli-overview.md#required-environment-variables) and [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md#step-3-configure-environment-variables).
 
