@@ -164,7 +164,7 @@ The report includes scores for each prompt:
 - **Groundedness** (1-5): How well supported by citations.
 - **Tool Call Accuracy** (1-5): How appropriately tools were used.
 - **Citations** (0-1): Whether citations are present.
-- **ExactMatch (boolean):** — Pass or fail string match, with the `case_sensitive` option (default is `true`).
+- **ExactMatch (Boolean):** — Pass or fail string match, with the `case_sensitive` option (default is `true`).
 - **PartialMatch (0.0-1.0):** — Continuous similarity score, with the threshold option (default is `0.5`).
 
 If you don't see these results, see [Troubleshooting](evaluations-cli-troubleshooting.md).

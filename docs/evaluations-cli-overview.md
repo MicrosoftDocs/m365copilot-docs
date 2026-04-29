@@ -34,7 +34,7 @@ Each response is scored using standard evaluation metrics:
 - **Groundedness (1–5):** Use of supporting sources or citations.
 - **Tool call accuracy (1–5):** Correct use of connected tools.
 - **Citations (0–1):** Presence of correct citations.
-- **ExactMatch (boolean):** — Pass or fail string match, with the `case_sensitive` option (default is `true`).
+- **ExactMatch (Boolean):** — Pass or fail string match, with the `case_sensitive` option (default is `true`).
 - **PartialMatch (0.0-1.0):** — Continuous similarity score, with the threshold option (default is `0.5`).
 
 ## How the evaluation workflow works
