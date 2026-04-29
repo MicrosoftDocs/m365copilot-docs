@@ -494,14 +494,6 @@ When you fix problems, add tests to prevent regression. Use `testId` and `notes`
 }
 ```
 
-## Sample datasets
-
-You can find sample datasets in the public repository:
-
-- [Basic test suite](https://github.com/microsoft/M365-Copilot-Agent-Evals/tree/HEAD/samples/basic)
-- [Regression suite](https://github.com/microsoft/M365-Copilot-Agent-Evals/tree/HEAD/samples/regression)
-- [Multi-turn scenarios](https://github.com/microsoft/M365-Copilot-Agent-Evals/tree/HEAD/samples/multi-turn)
-
 ## Interactive and inline testing
 
 Use interactive mode for exploratory testing without a dataset file.
@@ -588,7 +580,6 @@ runevals --output ./evals/results/v1.2.0-results.json
 
 ## Related content
 
-- [Run evaluations with CI/CD pipelines](https://github.com/microsoft/M365-Copilot-Agent-Evals/blob/HEAD/CICD_CACHE_GUIDE.md)
 - [CLI reference](evaluations-cli-reference.md)
 - [Troubleshooting](evaluations-cli-troubleshooting.md)
 - [Agent Evaluations CLI overview](evaluations-cli-overview.md)
