@@ -255,8 +255,7 @@ runevals cache-info
 **Output:**
 
 ```
-📦 Cache Information
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Cache Information
 
 Location: C:\Users\YourName\.m365-copilot-eval\cache
 Size: 245 MB
