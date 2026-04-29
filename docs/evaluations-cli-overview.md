@@ -1,5 +1,5 @@
 ---
-title: Agent Evaluations CLI overview
+title: Agent Evaluations CLI overview (preview)
 description: Learn how to evaluate Microsoft 365 Copilot agents using automated testing and AI-powered metrics.
 ms.date: 04/28/2026
 author: lauragra
@@ -9,11 +9,14 @@ ms.topic: overview
 ms.localizationpriority: high
 ---
 
-# Agent Evaluations CLI overview
+# Agent Evaluations CLI overview (preview)
 
 The Microsoft 365 Copilot Agent Evaluations CLI (@microsoft/m365-copilot-eval) helps you test, measure, and improve the quality of your agents through automated prompt evaluation and AI-based scoring.
 
 This tool enables you to run structured evaluations, analyze results, and iterate on your agent behavior with measurable feedback.
+
+> [!NOTE]
+> The Agent Evaluations CLI is currently in preview. Features and functionality are subject to change.
 
 ## What you can do
 

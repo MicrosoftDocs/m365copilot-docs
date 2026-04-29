@@ -1,5 +1,5 @@
 ---
-title: Get values for Agent Evaluations CLI environment variables
+title: Get values for Agent Evaluations CLI (preview) environment variables
 description: Find your tenant ID, Azure OpenAI endpoint, API key, and agent ID so you can configure the M365 Copilot Agent Evaluations CLI.
 ms.date: 04/28/2026
 author: lauragra
@@ -14,6 +14,9 @@ ms.localizationpriority: medium
 The Microsoft 365 Copilot Agent Evaluations CLI (`@microsoft/m365-copilot-eval`) reads connection and authentication settings from environment variables. This article shows you where to obtain each value.
 
 For the list of variables and where to put them, see [Agent Evaluations CLI overview](evaluations-cli-overview.md#required-environment-variables) and [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md#step-3-configure-environment-variables).
+
+> [!NOTE]
+> The Agent Evaluations CLI is currently in preview. Features and functionality are subject to change.
 
 ## Before you begin
 

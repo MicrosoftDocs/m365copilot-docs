@@ -1,5 +1,5 @@
 ---
-title: Agent Evaluations CLI reference
+title: Agent Evaluations CLI reference (preview)
 description: Complete command-line reference for the M365 Copilot Agent Evaluations CLI tool including all options, flags, and cache commands.
 ms.date: 04/28/2026
 author: lauragra
@@ -9,9 +9,12 @@ ms.topic: reference
 ms.localizationpriority: medium
 ---
 
-# Agent Evaluations CLI reference
+# Agent Evaluations CLI reference (preview)
 
 This article provides a complete command-line reference for the `runevals` command, which is part of the `@microsoft/m365-copilot-eval` package.
+
+> [!NOTE]
+> The Agent Evaluations CLI is currently in preview. Features and functionality are subject to change.
 
 ## Synopsis
 

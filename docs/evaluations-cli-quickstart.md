@@ -1,5 +1,5 @@
 ---
-title: Quickstart - Use the Agent Evaluations CLI
+title: Quickstart - Use the Agent Evaluations CLI (preview)
 description: Get started quickly with evaluating your Microsoft 365 Copilot agent using the M365 Copilot Agent Evaluations CLI tool.
 ms.date: 04/28/2026
 author: lauragra
@@ -9,9 +9,12 @@ ms.topic: quickstart
 ms.localizationpriority: high
 ---
 
-# Quickstart: Use the Agent Evaluations CLI
+# Quickstart: Use the Agent Evaluations CLI (preview)
 
 The Microsoft 365 Copilot Agent Evaluations CLI (@microsoft/m365-copilot-eval) helps you test, measure, and improve the quality of your agents through automated prompt evaluation and AI-based scoring. This quickstart walks you through installing the Agent Evaluations tool, configuring your environment, creating your first dataset, and running an evaluation.
+
+> [!NOTE]
+> The Agent Evaluations CLI is currently in preview. Features and functionality are subject to change.
 
 ## Prerequisites
 
