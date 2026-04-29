@@ -158,18 +158,15 @@ A successful run produces:
 - A completion message in the terminal similar to the following message.
 
   ```
-  🚀 M365 Copilot Agent Evaluations CLI
+  M365 Copilot Agent Evaluations CLI
 
-  📂 Loading environment: dev
-  🤖 Agent ID: T_my-agent.declarativeAgent
-  📄 Using prompts file: ./evals/evals.json
+  Loading environment: dev
+  Agent ID: T_my-agent.declarativeAgent
+  Using prompts file: ./evals/evals.json
 
-  📊 Running evaluations...
+  Running evaluations...
 
-  ─────────────────────────────────────────────────────────────
-
-  ✓ Evals completed successfully!
-
+  Evals completed successfully!
   Results saved to: ./.evals/2026-04-22_14-30-45.html
   ```
 
@@ -187,7 +184,7 @@ If you don't see these results, see [Troubleshooting](evaluations-cli-troublesho
 
 ## Related content
 
-- [Agents Evaluation CLI overview](evaluations-cli-overview.md)
+- [Agent Evaluations CLI overview](evaluations-cli-overview.md)
 - [Dataset schema and test design](evaluations-cli-create-tests.md)
 - [CLI reference](evaluations-cli-reference.md)
 - [Troubleshooting and support](evaluations-cli-troubleshooting.md)

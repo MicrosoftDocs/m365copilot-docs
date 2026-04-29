@@ -181,7 +181,7 @@ Before you file an issue, collect:
 
 To file the issue:
 
-- Open a new issue at [M365 Copilot Agent Evaluations — Issues](https://github.com/microsoft/M365-Copilot-Agent-Evals/issues).
+- Open a new issue at [M365 Copilot Agent Evaluations — Issues](https://github.com/microsoft/m365-copilot-eval/issues).
 - Apply the appropriate label (for example, `setup`, `authentication`, `runtime`, `environment`) to help triage.
 
 ## Related content
