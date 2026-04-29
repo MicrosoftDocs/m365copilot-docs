@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot the Agent Evaluations CLI
 description: Resolve common setup, authentication, runtime, and environment issues for the M365 Copilot Agent Evaluations CLI.
-ms.date: 04/22/2026
+ms.date: 04/28/2026
 author: lauragra
 ms.author: lauragra
+ms.reviewer: sakov
 ms.topic: troubleshooting
 ms.localizationpriority: medium
 ---

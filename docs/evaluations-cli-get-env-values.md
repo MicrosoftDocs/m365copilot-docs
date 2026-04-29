@@ -1,9 +1,10 @@
 ---
 title: Get values for Agent Evaluations CLI environment variables
 description: Find your tenant ID, Azure OpenAI endpoint, API key, and agent ID so you can configure the M365 Copilot Agent Evaluations CLI.
-ms.date: 04/23/2026
+ms.date: 04/28/2026
 author: lauragra
 ms.author: lauragra
+ms.reviewer: sakov
 ms.topic: how-to
 ms.localizationpriority: medium
 ---

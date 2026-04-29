@@ -1,9 +1,10 @@
 ---
 title: Dataset schema and test design for agent evaluations
 description: Learn the dataset schema, test design patterns, and advanced evaluation scenarios for Microsoft 365 Copilot agents.
-ms.date: 04/22/2026
+ms.date: 04/28/2026
 author: lauragra
 ms.author: lauragra
+ms.reviewer: sakov
 ms.topic: concept-article
 ms.localizationpriority: medium
 ---
