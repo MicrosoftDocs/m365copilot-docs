@@ -13,8 +13,6 @@ ms.localizationpriority: high
 
 The Microsoft 365 Copilot Agent Evaluations CLI (@microsoft/m365-copilot-eval) helps you test, measure, and improve the quality of your agents through automated prompt evaluation and AI-based scoring.
 
-This tool enables you to run structured evaluations, analyze results, and iterate on your agent behavior with measurable feedback.
-
 > [!NOTE]
 > The Agent Evaluations CLI is currently in preview. Features and functionality are subject to change.
 
@@ -36,6 +34,8 @@ Each response is scored using standard evaluation metrics:
 - **Groundedness (1–5):** Use of supporting sources or citations.
 - **Tool call accuracy (1–5):** Correct use of connected tools.
 - **Citations (0–1):** Presence of correct citations.
+- **ExactMatch (boolean):** — Pass or fail string match, with the `case_sensitive` option (default is `true`).
+- **PartialMatch (0.0-1.0):** — Continuous similarity score, with the threshold option (default is `0.5`).
 
 ## How the evaluation workflow works
 

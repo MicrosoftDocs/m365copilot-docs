@@ -85,14 +85,8 @@ Add secrets to `.env.local.user`:
 AZURE_AI_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
 AZURE_AI_API_KEY="your-api-key-here"
 TENANT_ID="your-tenant-id-here"
-```
-
-Add the following optional overrides to `.env.local` (alongside your existing agent configuration):
-
-```ini
-# .env.local
-AZURE_AI_API_VERSION="2024-12-01-preview"   # default
-AZURE_AI_MODEL_NAME="gpt-4o-mini"           # default
+AZURE_AI_API_VERSION="2024-12-01-preview" # default
+AZURE_AI_MODEL_NAME="gpt-4o-mini" # default
 ```
 
 Add `.env.local.user` to your `.gitignore`:
@@ -101,18 +95,6 @@ Add `.env.local.user` to your `.gitignore`:
 # User-specific secrets — never commit
 .env.local.user
 env/.env.local.user
-```
-
-Create `env/.env.dev` in your project directory:
-
-```ini
-# env/.env.dev
-M365_AGENT_ID="your-agent-id"
-AZURE_AI_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
-AZURE_AI_API_KEY="your-api-key-here"
-TENANT_ID="your-tenant-id-here"
-AZURE_AI_API_VERSION="2024-12-01-preview"   # default
-AZURE_AI_MODEL_NAME="gpt-4o-mini"           # default
 ```
 
 ## Step 4: Create your first dataset
@@ -182,6 +164,8 @@ The report includes scores for each prompt:
 - **Groundedness** (1-5): How well supported by citations.
 - **Tool Call Accuracy** (1-5): How appropriately tools were used.
 - **Citations** (0-1): Whether citations are present.
+- **ExactMatch (boolean):** — Pass or fail string match, with the `case_sensitive` option (default is `true`).
+- **PartialMatch (0.0-1.0):** — Continuous similarity score, with the threshold option (default is `0.5`).
 
 If you don't see these results, see [Troubleshooting](evaluations-cli-troubleshooting.md).
 
