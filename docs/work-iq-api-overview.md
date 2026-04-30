@@ -67,11 +67,11 @@ Use the guide below to select the right protocol.
 > [!NOTE]
 > The following table contains **recommendations** for the best suited protocol for specific scenarios, not strict rules. Use the protocol that works best for you.
 
-|              | A2A                                                                   | REST API (coming soon)                                                | MCP                                                                                   |
-|--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+|              | A2A                                                                    | REST API (coming soon)                                                | MCP                                                                                    |
+|--------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 | **Use when** | Another agent needs to delegate a task to Work IQ and get results back | You're building an app or service that calls Work IQ programmatically | An AI assistant (Copilot, Claude, etc.) needs to invoke Work IQ as a tool for the user |
-| **Caller**   | Another agent                                                         | Your app or backend                                                   | An LLM-based client                                                                   |
-| **Example**  | "Our ops agent asks Work IQ to investigate a regression."              | "My web app sends a question to Work IQ and renders the reply."        | "A user asks Copilot a question and it calls Work IQ to answer."                       |
+| **Caller**   | Another agent                                                          | Your app or backend                                                   | An LLM-based client                                                                    |
+| **Example**  | "Our ops agent asks Work IQ to investigate a regression."              | "My web app sends a question to Work IQ and renders the reply."       | "A user asks Copilot a question and it calls Work IQ to answer."                       |
 
 ## API examples
 
@@ -101,9 +101,16 @@ A2A-Version: 1.0
     "message": {
       "role": "ROLE_USER",
       "messageId": "<message-guid>",
-      "parts": [{ "text": "What meetings do I have today?" }],
+      "parts": [
+        {
+          "text": "What meetings do I have today?"
+        }
+      ],
       "metadata": {
-        "Location": { "timeZoneOffset": -480, "timeZone": "America/Los_Angeles" }
+        "Location": {
+          "timeZoneOffset": -480,
+          "timeZone": "America/Los_Angeles"
+        }
       }
     }
   }
@@ -123,12 +130,18 @@ A2A-Version: 1.0
     "task": {
       "id": "<task-id>",
       "contextId": "ctx-1",
-      "status": { "state": "TASK_STATE_COMPLETED" },
+      "status": {
+        "state": "TASK_STATE_COMPLETED"
+      },
       "artifacts": [
         {
           "artifactId": "<artifact-id>",
           "name": "Answer",
-          "parts": [{ "text": "Today you have: 9 AM standup, 11 AM review with Dana, 2 PM customer call." }]
+          "parts": [
+            {
+              "text": "Today you have: 9 AM standup, 11 AM review with Dana, 2 PM customer call."
+            }
+          ]
         }
       ]
     }
@@ -150,7 +163,11 @@ Pass the `contextId` from the previous response in the next message:
       "role": "ROLE_USER",
       "messageId": "<message-guid-2>",
       "contextId": "ctx-1",
-      "parts": [{ "text": "Tell me more about the 2 PM customer call." }]
+      "parts": [
+        {
+          "text": "Tell me more about the 2 PM customer call."
+        }
+      ]
     }
   }
 }
@@ -169,7 +186,13 @@ Pass the `contextId` from the previous response in the next message:
 Use MCP to expose Microsoft 365 work context as tools for AI assistants running in developer environments.
 
 > [!IMPORTANT]
-> **Current state:** Today, Microsoft 365 work context is available through [individual MCP servers for specific workloads](https://learn.microsoft.com/en-us/microsoft-agent-365/tooling-servers-overview). **Coming soon:** A single, unified remote Work IQ MCP server will consolidate these into one server with a curated set of tools and skills -- simplifying configuration and providing a consistent developer experience.
+>
+> - **Current state:** Today, Microsoft 365 work context is available through [individual MCP servers for specific workloads](/microsoft-agent-365/tooling-servers-overview).
+> - **Coming soon:** A single, unified remote Work IQ MCP server will consolidate these into one server with a curated set of tools and skills -- simplifying configuration and providing a consistent developer experience.
+
+### Local MCP
+
+Install the [Microsoft Work IQ CLI (preview)](work-iq-cli.md) and configure it as a local MCP server.
 
 #### Example MCP server configuration
 
