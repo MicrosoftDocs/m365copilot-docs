@@ -11,6 +11,8 @@ items:
     href: agents-are-apps.md
   - name: Copilot orchestrator
     href: orchestrator.md
+  - name: Work IQ
+    href: work-iq.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 - name: What's new
