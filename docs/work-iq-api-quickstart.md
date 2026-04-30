@@ -382,7 +382,6 @@ dotnet run -- --token WAM --agent-id <AGENT_ID> --appid <APP_ID> --tenant <TENAN
 ## Related content
 
 - [Sample code on GitHub](https://github.com/microsoft/work-iq-samples)
-- [Work IQ overview](work-iq.md)
 - [Work IQ APIs overview](work-iq-api-overview.md)
 - [A2A protocol specification](https://a2a-protocol.org/latest/specification/)
 - [A2A .NET SDK](https://github.com/a2aproject/a2a-dotnet)
