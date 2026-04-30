@@ -14,7 +14,7 @@ ms.date: 04/30/2026
 
 The Work IQ API enables developers to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
 
-Work IQ provides multiple protocols to interact with agents - REST, Agent-to-Agent (A2A), and Model Context Protocol (MCP) — so you can choose the protocol that best fits your application or agent architecture.
+Work IQ provides multiple protocols to interact with agents - Agent-to-Agent (A2A), Model Context Protocol (MCP), and REST — so you can choose the protocol that best fits your application or agent architecture. In this public preview, A2A and local MCP are available today; REST and remote MCP are coming soon.
 
 By accessing or using the Microsoft Work IQ APIs, you're agreeing to the [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context).
 
@@ -254,7 +254,7 @@ Work IQ uses Microsoft Entra ID delegated authentication.
 
 ## How Work IQ compares to Copilot Chat API
 
-Work IQ is the production-ready evolution of the Copilot Chat API. When Work IQ reaches General Availability in May, it becomes the recommended, fully supported way to integrate with the Copilot agent in production scenarios. It is backed by enterprise SLAs, stable contracts, and long-term support commitments.
+Work IQ will be the production-ready evolution of the Copilot Chat API. When Work IQ reaches General Availability (as soon as May), it will become the recommended, fully supported way to integrate with the Copilot agent in production scenarios. It will be backed by enterprise SLAs, stable contracts, and long-term support commitments.
 
 **What this means for you:**
 
