@@ -324,7 +324,7 @@ items:
     href: work-iq-cli.md
   - name: Terms of use (preview)
     href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
-- name: Extend agents at scale with Agent 365 (early access preview)
+- name: Extend agents at scale with Agent 365
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
 - name: Evaluate agents
   items:
