@@ -46,8 +46,8 @@ Work IQ supports the following protocols:
 |--------------------------|-----------------------------------------|--------------------------------------|
 | A2A                      | Structured agent-to-agent communication | Multi-agent systems, delegation      |
 | Local MCP                | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
+| Remote MCP               | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
 | REST (coming soon)       | Conversational, request/response API    | Service-hosted agents, orchestrators |
-| Remote MCP (coming soon) | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
 
 ## Supported functionality
 
