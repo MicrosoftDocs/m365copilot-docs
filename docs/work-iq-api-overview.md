@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 03/31/2026
+ms.date: 04/30/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -79,11 +79,11 @@ Use the guide below to select the right protocol.
 
 Use A2A for agent collaboration and delegation, where agents operate autonomously and exchange structured tasks instead of simple API calls. Work IQ supports both **A2A v1.0** and v0.3, dispatched via the `A2A-Version` request header.
 
-| | |
-|--|--|
-| **Endpoint** | `https://workiq.svc.cloud.microsoft/a2a/` |
-| **Token audience** | `api://workiq.svc.cloud.microsoft` |
-| **Scope** | `WorkIQAgent.Ask` |
+#### Work IQ Gateway
+
+- Endpoint: `https://workiq.svc.cloud.microsoft/a2a/`
+- Token audience: `api://workiq.svc.cloud.microsoft`
+- Scope: `WorkIQAgent.Ask`
 
 #### Example request — sync (`SendMessage`)
 
@@ -177,7 +177,7 @@ Pass the `contextId` from the previous response in the next message:
 
 - JSON-RPC envelope required (`jsonrpc`, `id`, `method`, `params`)
 - POST to base URL — method name is inside the body, not the URL path
-- Supports synchronous (`SendMessage`) and streaming (`SendStreamingMessage` via SSE)
+- Supports synchronous (`SendMessage`) and streaming (`SendStreamingMessage` via Server-Sent Events (SSE))
 - Multi-turn via `contextId`
 - `Location` metadata required for time-sensitive queries
 
