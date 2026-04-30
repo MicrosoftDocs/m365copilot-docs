@@ -87,7 +87,7 @@ The fastest way to get started is by using GitHub Copilot CLI:
    /plugin marketplace add github/copilot-plugins
    ```
 
-1. Install WorkIQ.
+1. Install Work IQ.
 
    ```bash
    /plugin install workiq@copilot-plugins
