@@ -4,7 +4,7 @@ description: Retrieve the properties of an agentRegistration object.
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 04/13/2026
+ms.date: 04/30/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---

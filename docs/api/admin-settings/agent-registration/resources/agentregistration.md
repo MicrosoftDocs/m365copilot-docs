@@ -4,7 +4,7 @@ description: Represents an agent registration containing metadata, endpoint conf
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 04/13/2026
+ms.date: 04/30/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
