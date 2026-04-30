@@ -4,6 +4,11 @@
       "source_path_from_root": "/docs/overview-business-applications.md",
       "redirect_url": "/microsoft-copilot-studio/copilot-connectors-in-copilot-studio",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/workiq-overview.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq-cli",
+      "redirect_document_id": true
     }
   ]
 }
