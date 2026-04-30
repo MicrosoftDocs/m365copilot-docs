@@ -44,9 +44,9 @@ Work IQ supports the following protocols:
 
 | Protocol                 | Description                             | Typical scenarios                    |
 |--------------------------|-----------------------------------------|--------------------------------------|
-| REST                     | Conversational, request/response API    | Service-hosted agents, orchestrators |
 | A2A                      | Structured agent-to-agent communication | Multi-agent systems, delegation      |
-| MCP                      | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
+| Local MCP                | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
+| REST (coming soon)       | Conversational, request/response API    | Service-hosted agents, orchestrators |
 | Remote MCP (coming soon) | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
 
 ## Supported functionality
@@ -67,91 +67,109 @@ Use the guide below to select the right protocol.
 > [!NOTE]
 > The following table contains **recommendations** for the best suited protocol for specific scenarios, not strict rules. Use the protocol that works best for you.
 
-|              | REST API                                                              | A2A                                                                   | MCP                                                                                   |
+|              | A2A                                                                   | REST API (coming soon)                                                | MCP                                                                                   |
 |--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| **Use when** | You're building an app or service that calls Work IQ programmatically | Another agent needs to delegate a task to Work IQ and get results back | An AI assistant (Copilot, Claude, etc.) needs to invoke Work IQ as a tool for the user |
-| **Caller**   | Your app or backend                                                   | Another agent                                                         | An LLM-based client                                                                   |
-| **Example**  | "My web app sends a question to Work IQ and renders the reply."        | "Our ops agent asks Work IQ to investigate a regression."              | "A user asks Copilot a question and it calls Work IQ to answer."                       |
+| **Use when** | Another agent needs to delegate a task to Work IQ and get results back | You're building an app or service that calls Work IQ programmatically | An AI assistant (Copilot, Claude, etc.) needs to invoke Work IQ as a tool for the user |
+| **Caller**   | Another agent                                                         | Your app or backend                                                   | An LLM-based client                                                                   |
+| **Example**  | "Our ops agent asks Work IQ to investigate a regression."              | "My web app sends a question to Work IQ and renders the reply."        | "A user asks Copilot a question and it calls Work IQ to answer."                       |
 
 ## API examples
 
-### REST API
-
-Use the REST API for synchronous, conversational interactions with Copilot capabilities from a service or orchestrator.
-
-#### Example request
-
-```http
-POST https://{workiq-endpoint}/conversations/{conversationId}/chat
-Authorization: Bearer {access-token}
-Content-Type: application/json
-
-{
-  "message": {
-    "role": "user",
-    "content": "Summarize my recent meetings and list action items."
-  }
-}
-```
-
-#### Example response (simplified)
-
-```json
-{
-  "conversationId": "conversation-123",
-  "status": "completed",
-  "messages": [
-    {
-      "role": "assistant",
-      "content": "Here is a summary of your recent meetings and identified action items..."
-    }
-  ]
-}
-```
-
-#### Key characteristics
-
-- Multi-turn conversations supported
-- Runs in delegated user context
-- Permissions and compliance enforced automatically
-
 ### Agent-to-Agent (A2A) protocol
 
-Use A2A for agent collaboration and delegation, where agents operate autonomously and exchange structured tasks instead of simple API calls.
+Use A2A for agent collaboration and delegation, where agents operate autonomously and exchange structured tasks instead of simple API calls. Work IQ supports both **A2A v1.0** and v0.3, dispatched via the `A2A-Version` request header.
 
-#### Example task request
+| | |
+|--|--|
+| **Endpoint** | `https://workiq.svc.cloud.microsoft/a2a/` |
+| **Token audience** | `api://workiq.svc.cloud.microsoft` |
+| **Scope** | `WorkIQAgent.Ask` |
 
-```json
+#### Example request — sync (`SendMessage`)
+
+```http
+POST https://workiq.svc.cloud.microsoft/a2a/
+Authorization: Bearer {access-token}
+Content-Type: application/json
+A2A-Version: 1.0
+
 {
-  "taskId": "task-001",
-  "intent": "analyze_documents",
-  "payload": {
-    "query": "Find documents related to performance considerations"
+  "jsonrpc": "2.0",
+  "id": "<request-guid>",
+  "method": "SendMessage",
+  "params": {
+    "message": {
+      "role": "ROLE_USER",
+      "messageId": "<message-guid>",
+      "parts": [{ "text": "What meetings do I have today?" }],
+      "metadata": {
+        "Location": { "timeZoneOffset": -480, "timeZone": "America/Los_Angeles" }
+      }
+    }
   }
 }
 ```
 
-#### Example task response
+> [!NOTE]
+> The `A2A-Version: 1.0` header is required to use v1.0 method names (`SendMessage`, `SendStreamingMessage`). Omitting it defaults to v0.3.
+
+#### Example response
 
 ```json
 {
-  "taskId": "task-001",
-  "status": "completed",
+  "jsonrpc": "2.0",
+  "id": "<request-guid>",
   "result": {
-    "summary": "Several documents discuss performance and scalability considerations."
+    "task": {
+      "id": "<task-id>",
+      "contextId": "ctx-1",
+      "status": { "state": "TASK_STATE_COMPLETED" },
+      "artifacts": [
+        {
+          "artifactId": "<artifact-id>",
+          "name": "Answer",
+          "parts": [{ "text": "Today you have: 9 AM standup, 11 AM review with Dana, 2 PM customer call." }]
+        }
+      ]
+    }
+  }
+}
+```
+
+#### Multi-turn conversations
+
+Pass the `contextId` from the previous response in the next message:
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": "<request-guid-2>",
+  "method": "SendMessage",
+  "params": {
+    "message": {
+      "role": "ROLE_USER",
+      "messageId": "<message-guid-2>",
+      "contextId": "ctx-1",
+      "parts": [{ "text": "Tell me more about the 2 PM customer call." }]
+    }
   }
 }
 ```
 
 #### Key characteristics
 
-- Structured intent and payload
-- Designed for agent collaboration
-- Supports stateful, multi-turn workflows
+- JSON-RPC envelope required (`jsonrpc`, `id`, `method`, `params`)
+- POST to base URL — method name is inside the body, not the URL path
+- Supports synchronous (`SendMessage`) and streaming (`SendStreamingMessage` via SSE)
+- Multi-turn via `contextId`
+- `Location` metadata required for time-sensitive queries
 
-### Model Context Protocol (MCP)
+### Remote Model Context Protocol (MCP)
 
 Use MCP to expose Microsoft 365 work context as tools for AI assistants running in developer environments.
+
+> [!IMPORTANT]
+> **Current state:** Today, Microsoft 365 work context is available through [individual MCP servers for specific workloads](https://learn.microsoft.com/en-us/microsoft-agent-365/tooling-servers-overview). **Coming soon:** A single, unified remote Work IQ MCP server will consolidate these into one server with a curated set of tools and skills -- simplifying configuration and providing a consistent developer experience.
 
 #### Example MCP server configuration
 
@@ -200,6 +218,7 @@ Use MCP to expose Microsoft 365 work context as tools for AI assistants runnin
 - Optimized for IDEs and CLIs
 - Context pulled dynamically when needed
 - Reduces manual prompt construction
+- Single server with consolidated tools (coming soon)
 
 ## Authentication and security
 
