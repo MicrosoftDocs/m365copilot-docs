@@ -16,6 +16,8 @@ The Work IQ API enables developers to build agentic and AI-powered applications 
 
 Work IQ provides multiple protocols to interact with agents - REST, Agent-to-Agent (A2A), and Model Context Protocol (MCP) — so you can choose the protocol that best fits your application or agent architecture.
 
+By accessing or using the Microsoft Work IQ APIs, you're agreeing to the [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context).
+
 ## What is Work IQ?
 
 Work IQ is the intelligence layer behind Microsoft 365 Copilot and agents. Unlike systems that simply retrieve content, it understands how work actually happens. It combines data from Microsoft 365 (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships. It applies the inference needed to reason across all of it and surface next-best actions. Work IQ orchestrates every layer of intelligence - from assembling context to grounding responses, selecting skills, and invoking tools - while honoring enterprise permissions and governance.
@@ -40,11 +42,12 @@ Traditional AI integrations often require building custom pipelines to extract, 
 
 Work IQ supports the following protocols:
 
-| Protocol          | Description                             | Typical scenarios                    |
-|-------------------|-----------------------------------------|--------------------------------------|
-| REST              | Conversational, request/response API    | Service-hosted agents, orchestrators |
-| A2A               | Structured agent-to-agent communication | Multi-agent systems, delegation      |
-| MCP (coming soon) | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
+| Protocol                 | Description                             | Typical scenarios                    |
+|--------------------------|-----------------------------------------|--------------------------------------|
+| REST                     | Conversational, request/response API    | Service-hosted agents, orchestrators |
+| A2A                      | Structured agent-to-agent communication | Multi-agent systems, delegation      |
+| MCP                      | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
+| Remote MCP (coming soon) | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
 
 ## Supported functionality
 
@@ -162,7 +165,7 @@ Use MCP to expose Microsoft 365 work context as tools for AI assistants runnin
 }
 ```
 
-#### Example tool-based query
+#### Example agent-based query
 
 ##### Prompt
 
