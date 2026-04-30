@@ -65,9 +65,7 @@ az login --tenant <tenant-domain-or-id>
 
 The evaluation tool uses an Azure OpenAI resource to score responses. You need both the endpoint URL and API key from your Azure OpenAI resource for evaluations. The Azure OpenAI endpoint can be in any tenant or account. You configure the evaluations tool by using `AZURE_AI_OPENAI_ENDPOINT` and `AZURE_AI_API_KEY`.
 
-### Prerequisites
-
-Your Azure OpenAI resource must have a chat model deployed. By default, the CLI uses `gpt-4o-mini`; to use a different deployment, set [`AZURE_AI_MODEL_NAME`](#set-the-api-version-and-model).
+Your Azure OpenAI resource must have a chat model deployed. By default, the CLI uses `gpt-4o-mini`; to use a different deployment, see [Set the API version and model](#set-the-api-version-and-model).
 
 If you don't already have an Azure OpenAI resource with a deployed model, follow these steps to create one:
 
