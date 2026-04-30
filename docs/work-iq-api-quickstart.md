@@ -107,7 +107,7 @@ Enable an AI assistant to pull Microsoft 365 context dynamically.
 ### Prerequisites
 
 - Microsoft Entra ID–authenticated user
-- [Work IQ CLI](workiq-overview.md) installed globally
+- [Work IQ CLI](work-iq-cli.md) installed globally
 - Microsoft 365 Copilot license for the user
 
 ### Step 1: Configure Work IQ as an MCP server

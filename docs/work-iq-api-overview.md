@@ -66,9 +66,9 @@ Use the guide below to select the right protocol.
 
 |              | REST API                                                              | A2A                                                                   | MCP                                                                                   |
 |--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| **Use when** | You're building an app or service that calls Work IQ programmatically | Another agent needs to delegate a task to WorkIQ and get results back | An AI assistant (Copilot, Claude, etc.) needs to invoke WorkIQ as a tool for the user |
+| **Use when** | You're building an app or service that calls Work IQ programmatically | Another agent needs to delegate a task to Work IQ and get results back | An AI assistant (Copilot, Claude, etc.) needs to invoke Work IQ as a tool for the user |
 | **Caller**   | Your app or backend                                                   | Another agent                                                         | An LLM-based client                                                                   |
-| **Example**  | "My web app sends a question to WorkIQ and renders the reply."        | "Our ops agent asks WorkIQ to investigate a regression."              | "A user asks Copilot a question and it calls WorkIQ to answer."                       |
+| **Example**  | "My web app sends a question to Work IQ and renders the reply."        | "Our ops agent asks Work IQ to investigate a regression."              | "A user asks Copilot a question and it calls Work IQ to answer."                       |
 
 ## API examples
 
@@ -222,4 +222,4 @@ We recommend planning your move to Work IQ ahead of your product's release to ta
 ## Related content
 
 - [Choose a Work IQ protocol (preview)](workiq-choose-protocol.md)
-- [Work IQ API quickstarts (preview)](workiq-api-quickstart.md)
+- [Work IQ API quickstarts (preview)](work-iq-api-quickstart.md)
