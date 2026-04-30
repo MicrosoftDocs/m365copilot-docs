@@ -76,7 +76,7 @@ If you don't already have an Azure OpenAI resource with a deployed model, follow
 
    :::image type="content" source="assets/images/evaluations/search-azure-portal.png" alt-text="Screenshot of the Azure portal search bar showing the Azure OpenAI service." lightbox="assets/images/evaluations/search-azure-portal.png":::
 
-1. After you select Azure OpenAI, select **Create** to create an AI Foundry resource.
+1. After you select Azure OpenAI, select **Create** to create an AI Microsoft Foundry resource.
 
    :::image type="content" source="assets/images/evaluations/create-ai-foundry.png" alt-text="Screenshot of the Azure OpenAI service page with the Create AI Foundry resource button." lightbox="assets/images/evaluations/create-ai-foundry.png":::
 
@@ -92,7 +92,7 @@ If you don't already have an Azure OpenAI resource with a deployed model, follow
 
    :::image type="content" source="assets/images/evaluations/model-deployments.png" alt-text="Screenshot of the AI Foundry portal left navigation with Models + endpoints selected." lightbox="assets/images/evaluations/model-deployments.png":::
 
-1. Select **Deploy model** > **Deploy base model**. We recommend the `gpt-4o-mini` model.
+1. Select **Deploy model** > **Deploy base model**. Use the `gpt-4o-mini` model.
 
    :::image type="content" source="assets/images/evaluations/deploy-model.png" alt-text="Screenshot of the Deploy model dropdown showing the Deploy base model option." lightbox="assets/images/evaluations/deploy-model.png":::
 
@@ -113,26 +113,8 @@ If you don't already have an Azure OpenAI resource with a deployed model, follow
 
 1. Add these values to your env file. For details, see [Step 3 of the Quickstart](evaluations-cli-quickstart.md#step-3-configure-environment-variables).
 
-### Get `AZURE_AI_OPENAI_ENDPOINT`
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Open your **Azure OpenAI** resource.
-1. Select **Resource Management** > **Keys and Endpoint**.
-1. Copy the **Endpoint** value. It looks like `https://<your-resource>.openai.azure.com/`.
-
-Include the trailing slash exactly as shown.
-
-### Get `AZURE_AI_API_KEY`
-
-On the same **Keys and Endpoint** page:
-
-1. Select **Show Keys**.
-1. Copy **KEY 1** (or **KEY 2**).
-
 > [!WARNING]
-> Treat API keys as secrets. Store them in `.env.local.user` or `env/.env.<environment>` — never in source control. See [Configure environment variables](evaluations-cli-quickstart.md#step-3-configure-environment-variables) for the correct file for your project type.
-
-If you need to rotate a key, use **Regenerate Key 1** or **Regenerate Key 2** on the same page, then update your env file.
+> Treat API keys as secrets. Store them in `.env.local.user` or `env/.env.<environment>` - never in source control. See [Configure environment variables](evaluations-cli-quickstart.md#step-3-configure-environment-variables) for the correct file for your project type.
 
 ## Get your agent ID (`M365_AGENT_ID`)
 
@@ -167,7 +149,7 @@ For details, see [`--m365-agent-id`](evaluations-cli-reference.md#--m365-agent-i
 
 ## Set the API version and model
 
-Two additional variables control which Azure OpenAI REST API version and which model deployment the CLI uses for scoring. They have working defaults, so you can omit them and accept the defaults, or set them explicitly in your env file:
+Two variables control which Azure OpenAI REST API version and which model deployment the CLI uses for scoring. They have working defaults, so you can accept the defaults or set them explicitly in your env file:
 
 ```ini
 AZURE_AI_API_VERSION="2024-12-01-preview"   # version
@@ -181,7 +163,7 @@ AZURE_AI_MODEL_NAME="gpt-4o-mini"           # actual name in Foundry
 
 `AZURE_AI_MODEL_NAME` must match the deployment name exactly as it appears in your Azure OpenAI resource.
 
-### Get `AZURE_AI_MODEL_NAME` from Microsoft Foundry
+### Get `AZURE_AI_MODEL_NAME` from Foundry
 
 1. Sign in to the [Azure portal](https://portal.azure.com) and open your **Azure OpenAI** resource.
 1. Select **Resource Management** > **Model deployments** (or open the resource in Foundry).
