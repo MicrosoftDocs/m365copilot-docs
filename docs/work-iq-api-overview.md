@@ -118,7 +118,7 @@ A2A-Version: 1.0
 ```
 
 > [!NOTE]
-> The `A2A-Version: 1.0` header is required to use v1.0 method names (`SendMessage`, `SendStreamingMessage`). Omitting it defaults to v0.3.
+> The `A2A-Version: 1.0` header is required to use v1.0 method names (`SendMessage`). Omitting it defaults to v0.3.
 
 #### Example response
 
@@ -177,7 +177,7 @@ Pass the `contextId` from the previous response in the next message:
 
 - JSON-RPC envelope required (`jsonrpc`, `id`, `method`, `params`)
 - POST to base URL — method name is inside the body, not the URL path
-- Supports synchronous (`SendMessage`) and streaming (`SendStreamingMessage` via Server-Sent Events (SSE))
+- Supports synchronous (`SendMessage`)
 - Multi-turn via `contextId`
 - `Location` metadata required for time-sensitive queries
 
