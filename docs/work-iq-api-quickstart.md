@@ -75,9 +75,6 @@ You (or your organization admin) can use the Microsoft Entra admin center or the
 
 The **WorkIQAgent.Ask** permission lets the app, on behalf of the signed-in user, query their Microsoft 365 work intelligence (mail, files, meetings, chats) through Work IQ.
 
-> [!TIP]
-> **Building a server-side agent (web app)?** This quickstart uses a **public-client** registration (mobile/desktop) for the simplest path to a working sample. If your application is a server-side service that calls Work IQ on behalf of an end user (for example, a web agent that signs the user in and then forwards their identity to Work IQ), use a **confidential-client** registration with a client secret or certificate, and exchange the user's token via the [On-Behalf-Of (OBO) flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). The Work IQ API surface and the **WorkIQAgent.Ask** delegated permission are the same in both flows.
-
 ### [Azure CLI](#tab/azure-cli)
 
 1. Create the Work IQ service principal in your organization.
@@ -138,6 +135,9 @@ The **WorkIQAgent.Ask** permission lets the app, on behalf of the signed-in user
 ---
 
 You should now have two values: `APP_ID` and `TENANT_ID`. Pass these values to the sample via `--appid` and `--tenant`.
+
+> [!TIP]
+> **Building a server-side agent (web app)?** This quickstart uses a **public-client** registration (mobile/desktop) for the simplest path to a working sample. If your application is a server-side service that calls Work IQ on behalf of an end user (for example, a web agent that signs the user in and then forwards their identity to Work IQ), use a **confidential-client** registration with a client secret or certificate, and exchange the user's token via the [On-Behalf-Of (OBO) flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). The Work IQ API surface and the **WorkIQAgent.Ask** delegated permission are the same in both flows.
 
 ---
 
