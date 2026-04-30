@@ -19,6 +19,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## April 2026
 
+### Agent Registration API (preview)
+
+The Agent Registration API enables developers and administrators to programmatically register and manage agents within their Microsoft 365 environment. The API supports creating, retrieving, updating, and deleting agent registrations with associated metadata and agent cards. For more information, see [Agent Registration API overview](api/admin-settings/agent-registration/overview.md).
+
 ### Copilot policy settings API (preview)
 
 The Copilot policy settings API is now available in preview. This API provides a unified endpoint to read and update Copilot settings across multiple policy services, including Cloud Policy Service (CPS) and Microsoft Intune. For more information, see [copilotPolicySetting resource type](api/admin-settings/resources/copilotpolicysetting.md).

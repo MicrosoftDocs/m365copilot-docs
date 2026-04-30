@@ -63,5 +63,5 @@ landingContent:
             url: /microsoft-365-copilot/extensibility/copilot-apis-overview
           - text: Copilot Studio documentation
             url: /microsoft-copilot-studio/
-          - text: Microsoft Agent 365 (early access preview)
+          - text: Microsoft Agent 365
             url: /microsoft-agent-365/overview
