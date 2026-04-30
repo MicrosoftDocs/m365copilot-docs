@@ -180,6 +180,10 @@ items:
         href: agent-builder-add-knowledge.md
       - name: Share and manage agents
         href: agent-builder-share-manage-agents.md
+      - name: Submit to your org catalog
+        href: agent-builder-submit-to-org-catalog.md
+      - name: Privacy statement and terms of use
+        href: agent-builder-publication-privacy-terms-of-use.md
       - name: Availability and language support
         href: agent-builder-regional-availability.md
       - name: Copy your agent to Copilot Studio
