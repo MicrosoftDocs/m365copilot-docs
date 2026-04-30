@@ -224,5 +224,4 @@ We recommend planning your move to Work IQ ahead of your product's release to ta
 
 ## Related content
 
-- [Choose a Work IQ protocol (preview)](workiq-choose-protocol.md)
 - [Work IQ API quickstarts (preview)](work-iq-api-quickstart.md)
