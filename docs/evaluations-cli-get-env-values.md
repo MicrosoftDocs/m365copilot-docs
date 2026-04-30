@@ -78,38 +78,38 @@ If you don't already have an Azure OpenAI resource with a deployed model, follow
 
 1. After you select Azure OpenAI, select **Create** to create an AI Foundry resource.
 
-   :::image type="content" source="assets/images/evaluations/create-ai-foundry.png" alt-text="Screenshot of the Azure OpenAI service page with the Create AI Foundry resource button." lightbox="assets/images/evaluations/create-ai-foundry.png:::
+   :::image type="content" source="assets/images/evaluations/create-ai-foundry.png" alt-text="Screenshot of the Azure OpenAI service page with the Create AI Foundry resource button." lightbox="assets/images/evaluations/create-ai-foundry.png":::
 
 1. On the **Create AI Foundry resource** form, fill in the details, and then select **Review + create**.
 
-   :::image type="content" source="assets/images/evaluations/create-foundry-resource.png" alt-text="Screenshot of the Create AI Foundry resource form with the Review + create button." lightbox="assets/images/evaluations/create-foundry-resource.png:::
+   :::image type="content" source="assets/images/evaluations/create-foundry-resource.png" alt-text="Screenshot of the Create AI Foundry resource form with the Review + create button." lightbox="assets/images/evaluations/create-foundry-resource.png":::
 
 1. After the resource is deployed, open the [Azure AI Foundry portal](https://ai.azure.com).
 
-   :::image type="content" source="assets/images/evaluations/foundry-portal.png" alt-text="Screenshot of the resource deployment complete page with a link to the Azure AI Foundry portal." lightbox="assets/images/evaluations/foundry-portal.png:::
+   :::image type="content" source="assets/images/evaluations/foundry-portal.png" alt-text="Screenshot of the resource deployment complete page with a link to the Azure AI Foundry portal." lightbox="assets/images/evaluations/foundry-portal.png":::
 
 1. In the left navigation, select **Models + endpoints**.
 
-   :::image type="content" source="assets/images/evaluations/model-deployments.png" alt-text="Screenshot of the AI Foundry portal left navigation with Models + endpoints selected." lightbox="assets/images/evaluations/model-deployments.png:::
+   :::image type="content" source="assets/images/evaluations/model-deployments.png" alt-text="Screenshot of the AI Foundry portal left navigation with Models + endpoints selected." lightbox="assets/images/evaluations/model-deployments.png":::
 
 1. Select **Deploy model** > **Deploy base model**. We recommend the `gpt-4o-mini` model.
 
-   :::image type="content" source="assets/images/evaluations/deploy-model.png" alt-text="Screenshot of the Deploy model dropdown showing the Deploy base model option." lightbox="assets/images/evaluations/deploy-model.png:::
+   :::image type="content" source="assets/images/evaluations/deploy-model.png" alt-text="Screenshot of the Deploy model dropdown showing the Deploy base model option." lightbox="assets/images/evaluations/deploy-model.png":::
 
 1. Select **Confirm**, and then select **Customize**.
 
-   :::image type="content" source="assets/images/evaluations/select-model.png" alt-text="Screenshot of the model deployment confirmation dialog with the Customize button." lightbox="assets/images/evaluations/select-model.png:::
+   :::image type="content" source="assets/images/evaluations/select-model.png" alt-text="Screenshot of the model deployment confirmation dialog with the Customize button." lightbox="assets/images/evaluations/select-model.png":::
 
 1. Change the capacity to **50K tokens per minute**.
 
-   :::image type="content" source="assets/images/evaluations/change-capacity.png" alt-text="Screenshot of the model deployment customization page showing the token capacity setting." lightbox="assets/images/evaluations/change-capacity.png:::
+   :::image type="content" source="assets/images/evaluations/change-capacity.png" alt-text="Screenshot of the model deployment customization page showing the token capacity setting." lightbox="assets/images/evaluations/change-capacity.png":::
 
-   :::image type="content" source="assets/images/evaluations/token-rate.png" alt-text="Screenshot of the token capacity set to 50K tokens per minute." lightbox="assets/images/evaluations/token-rate.png:::
+   :::image type="content" source="assets/images/evaluations/token-rate.png" alt-text="Screenshot of the token capacity set to 50K tokens per minute." lightbox="assets/images/evaluations/token-rate.png":::
 
 1. Select **Deploy** and wait a few minutes for the model to deploy.
 1. After deployment finishes, you're redirected to the API endpoint and API key page. Copy the endpoint and key values shown.
 
-   :::image type="content" source="assets/images/evaluations/copy-values.png" alt-text="Screenshot of the API endpoint and API key values on the model deployment page." lightbox="assets/images/evaluations/copy-values.png:::
+   :::image type="content" source="assets/images/evaluations/copy-values.png" alt-text="Screenshot of the API endpoint and API key values on the model deployment page." lightbox="assets/images/evaluations/copy-values.png":::
 
 1. Add these values to your env file. For details, see [Step 3 of the Quickstart](evaluations-cli-quickstart.md#step-3-configure-environment-variables).
 
