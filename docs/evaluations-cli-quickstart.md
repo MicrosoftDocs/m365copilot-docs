@@ -1,7 +1,7 @@
 ---
 title: Quickstart - Use the Agent Evaluations CLI (preview)
 description: Get started quickly with evaluating your Microsoft 365 Copilot agent using the M365 Copilot Agent Evaluations CLI tool.
-ms.date: 04/28/2026
+ms.date: 05/01/2026
 author: lauragra
 ms.author: lauragra
 ms.reviewer: sakov
@@ -157,15 +157,17 @@ A successful run produces:
 
 - An HTML report saved to `./.evals/YYYY-MM-DD_HH-MM-SS.html` that opens automatically in your browser.
 
-The report includes scores for each prompt:
+The report includes scores for each prompt.
 
-- **Relevance** (1-5): How well the response addresses the prompt.
-- **Coherence** (1-5): How logical and well-structured the response is.
-- **Groundedness** (1-5): How well supported by citations.
-- **Tool Call Accuracy** (1-5): How appropriately tools were used.
-- **Citations** (0-1): Whether citations are present.
-- **ExactMatch (Boolean):** — Pass or fail string match, with the `case_sensitive` option.
-- **PartialMatch (0.0-1.0):** — Continuous similarity score, with the threshold option (default is `0.5`).
+| Evaluator | Type | Scale | Default Threshold | Default |
+|-----------|------|-------|-------------------|---------|
+| Relevance | LLM-based | 1-5 | 3 | Yes |
+| Coherence | LLM-based | 1-5 | 3 | Yes |
+| Groundedness | LLM-based | 1-5 | 3 | No |
+| Similarity | LLM-based | 1-5 | 3 | No |
+| Citations | Count-based | >= 0 | 1 | No |
+| ExactMatch | String match | boolean | N/A | No |
+| PartialMatch | String match | 0.0-1.0 | 0.5 | No |
 
 If you don't see these results, see [Troubleshooting](evaluations-cli-troubleshooting.md).
 
