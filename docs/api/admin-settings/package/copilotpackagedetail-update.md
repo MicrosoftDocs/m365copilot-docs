@@ -6,7 +6,7 @@ ms.author: pomuth
 ms.topic: reference
 doc_type: apiPageType
 ms.localizationpriority: high
-ms.date: 04/01/2026
+ms.date: 05/01/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -18,7 +18,7 @@ ms.date: 04/01/2026
 
 Update a [copilotPackageDetail](resources/copilotpackagedetail.md) object.
 
-[!INCLUDE [package-management-frontier](../../includes/package-management-frontier.md)]
+[!INCLUDE [package-management-license](../../includes/package-management-license.md)]
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 

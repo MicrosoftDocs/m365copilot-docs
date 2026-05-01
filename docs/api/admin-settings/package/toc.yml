@@ -7,14 +7,10 @@ items:
       href: resources/copilotpackagedetail.md
     - name: List
       href: copilotpackages-list.md
-    - name: Create
-      href: copilotpackagedetail-create.md
     - name: Get
       href: copilotpackagedetail-get.md
     - name: Update
       href: copilotpackagedetail-update.md
-    - name: Delete
-      href: copilotpackagedetail-delete.md
     - name: block
       href: copilotpackage-block.md
     - name: reassign
