@@ -1,7 +1,7 @@
 ---
 title: Agent Evaluations CLI overview (preview)
 description: Learn how to evaluate Microsoft 365 Copilot agents using automated testing and AI-powered metrics.
-ms.date: 04/28/2026
+ms.date: 05/01/2026
 author: lauragra
 ms.author: lauragra
 ms.reviewer: sakov
@@ -27,15 +27,17 @@ The evaluation tool provides the following capabilities:
 
 ## Evaluation metrics
 
-Each response is scored using standard evaluation metrics:
+Each response is scored using standard evaluation metrics.
 
-- **Relevance (1–5):** How well the response addresses the prompt.
-- **Coherence (1–5):** Logical structure and clarity.
-- **Groundedness (1–5):** Use of supporting sources or citations.
-- **Tool call accuracy (1–5):** Correct use of connected tools.
-- **Citations (0–1):** Presence of correct citations.
-- **ExactMatch (Boolean):** — Pass or fail string match, with the `case_sensitive` option.
-- **PartialMatch (0.0-1.0):** — Continuous similarity score, with the threshold option (default is `0.5`).
+| Evaluator | Type | Scale | Default Threshold | Default |
+|-----------|------|-------|-------------------|---------|
+| Relevance | LLM-based | 1-5 | 3 | Yes |
+| Coherence | LLM-based | 1-5 | 3 | Yes |
+| Groundedness | LLM-based | 1-5 | 3 | No |
+| Similarity | LLM-based | 1-5 | 3 | No |
+| Citations | Count-based | >= 0 | 1 | No |
+| ExactMatch | String match | boolean | N/A | No |
+| PartialMatch | String match | 0.0-1.0 | 0.5 | No |
 
 ## How the evaluation workflow works
 
