@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 04/01/2026
+ms.date: 05/01/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -16,7 +16,7 @@ ms.date: 04/01/2026
 
 Extended entity that inherits from [copilotPackage](copilotpackage.md) and provides comprehensive detailed information about a Copilot package.
 
-[!INCLUDE [package-management-frontier](../../../includes/package-management-frontier.md)]
+[!INCLUDE [package-management-license](../../../includes/package-management-license.md)]
 
 ## Methods
 
@@ -24,6 +24,10 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 |---------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------|
 | [List](../copilotpackages-list.md)          | `copilotPackageDetail` collection                               | Get the available Copilot packages.                                       |
 | [Get](../copilotpackagedetail-get.md)       | `copilotPackageDetail`                                          | Read the properties and relationships of a `copilotPackageDetail` object. |
+| [Update](../copilotpackagedetail-update.md) | `copilotPackageDetail`                                          | Update a `copilotPackageDetail` object.                                   |
+| [Block](../copilotpackage-block.md)         | None                                                            | Block a Copilot package to prevent its usage.                             |
+| [Reassign](../copilotpackage-reassign.md)   | None                                                            | Reassign ownership of a Copilot package to a different user.              |
+| [Unblock](../copilotpackage-unblock.md)     | None                                                            | Unblock a Copilot package to allow its usage.                             |
 
 ## Properties
 
