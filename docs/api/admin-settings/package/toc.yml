@@ -17,8 +17,6 @@ items:
       href: copilotpackage-reassign.md
     - name: unblock
       href: copilotpackage-unblock.md
-    - name: update
-      href: copilotpackage-update.md
 - name: Complex types
   items:
     - name: Copilot package

@@ -28,7 +28,6 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 | [block](../copilotpackage-block.md)         | None                                                            | Block a Copilot package to prevent its usage.                             |
 | [reassign](../copilotpackage-reassign.md)   | None                                                            | Reassign ownership of a Copilot package to a different user.              |
 | [unblock](../copilotpackage-unblock.md)     | None                                                            | Unblock a Copilot package to allow its usage.                             |
-| [update](../copilotpackage-update.md)       | [copilotPackageUpdateResponse](copilotpackageupdateresponse.md) | Update a Copilot package with a new package file.                         |
 
 ## Properties
 
