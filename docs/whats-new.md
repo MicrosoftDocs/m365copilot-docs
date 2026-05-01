@@ -21,7 +21,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Package Management API updates (preview)
 
-The Package Management API has new capabilities for IT administrators to manage apps and agents in their Microsoft 365 organization. Administrators can now block and unblock packages to control their availability, and update package metadata. For more information, see [Package Management API overview](api/admin-settings/package/overview.md).
+The Package Management API has new capabilities for IT administrators to manage apps and agents in their Microsoft 365 organization. Administrators can now block and unblock packages to control their availability, update package metadata, and reassign package ownership. For more information, see [Package Management API overview](api/admin-settings/package/overview.md).
 
 ## April 2026
 
