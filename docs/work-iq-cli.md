@@ -10,7 +10,7 @@ ms.date: 01/23/2026
 
 <!-- markdownlint-disable MD024 -->
 
-# Microsoft Work IQ CLI (Public Preview)
+# Microsoft Work IQ CLI (preview)
 
 Microsoft Work IQ is a command-line interface (CLI) and Model Context Protocol (MCP) server that connects AI assistants to your Microsoft 365 Copilot data. Work IQ enables you to query your emails, meetings, documents, Teams messages, workplace insights, people-related information, and more by using natural language.
 
@@ -87,7 +87,7 @@ The fastest way to get started is by using GitHub Copilot CLI:
    /plugin marketplace add github/copilot-plugins
    ```
 
-1. Install WorkIQ.
+1. Install Work IQ.
 
    ```bash
    /plugin install workiq@copilot-plugins

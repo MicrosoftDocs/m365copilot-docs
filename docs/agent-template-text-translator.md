@@ -5,6 +5,8 @@ author: lauragra
 ms.author: lauragra
 ms.reviewer: kmarko
 ms.topic: article
+ms.service: copilot-studio
+ms.subservice: agent-builder
 ms.localizationpriority: medium
 ms.date: 12/01/2025
 ---
