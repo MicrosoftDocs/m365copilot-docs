@@ -166,8 +166,6 @@ cd dotnet/a2a
 dotnet run -- --token WAM --appid <APP_ID> --tenant <TENANT_ID>
 ```
 
-Add `--stream` for streaming mode (`SendStreamingMessage` via SSE).
-
 ### Run the sample (raw HTTP, no SDK)
 
 The `dotnet/a2a-raw` sample shows the wire protocol with no SDK abstraction. Using this sample is useful for porting to non-.NET languages.
@@ -195,7 +193,7 @@ You > quit
 
 ### How it works
 
-Work IQ accepts A2A v1.0 over **JSON-RPC** at `https://workiq.svc.cloud.microsoft/a2a/`. (A2A v1.0 also defines a REST binding at `/v1/message:send` and `/v1/message:stream`; Work IQ might expose this REST binding in a future preview update.)
+Work IQ accepts A2A v1.0 over **JSON-RPC** at `https://workiq.svc.cloud.microsoft/a2a/`. (A2A v1.0 also defines a REST binding at `/v1/message:send`; Work IQ might expose this REST binding in a future preview update.)
 
 #### Work IQ Gateway
 
@@ -235,7 +233,7 @@ A2A-Version: 1.0
 }
 ```
 
-The `A2A-Version: 1.0` request header enables v1.0 method names (`SendMessage`, `SendStreamingMessage`) on the gateway. Without it, the server defaults to v0.3 and returns a JSON-RPC `-32601 "Method not found"` for v1.0 method names.
+The `A2A-Version: 1.0` request header enables v1.0 method names (`SendMessage`) on the gateway. Without it, the server defaults to v0.3 and returns a JSON-RPC `-32601 "Method not found"` for v1.0 method names.
 
 The response is a JSON-RPC envelope with `result.task` containing the agent's task and a `contextId` for multi-turn:
 
@@ -295,10 +293,10 @@ To maintain conversation state, pass the `contextId` from the previous response 
 ### Key protocol details (A2A v1.0)
 
 - **JSON-RPC envelope required:** every request must include `jsonrpc`, `id`, `method`, `params`.
-- **POST to base URL:** the method (`SendMessage`, `SendStreamingMessage`) is inside the JSON-RPC body, not the URL path.
+- **POST to base URL:** the method (`SendMessage`) is inside the JSON-RPC body, not the URL path.
 - **Field-presence parts:** parts are flat objects with one of `text`, `url`, `raw`, or `data` set; no `kind` discriminator.
 - **SCREAMING_SNAKE_CASE enums:** roles use `ROLE_USER` / `ROLE_AGENT`; states use `TASK_STATE_WORKING` / `TASK_STATE_COMPLETED` / `TASK_STATE_FAILED` / etc.
-- **Result wrapper:** task responses appear under `result.task`; streaming events under `result.statusUpdate` or `result.artifactUpdate`.
+- **Result wrapper:** task responses appear under `result.task`.
 - **Version dispatch:** `A2A-Version: 1.0` selects v1.0; omitting the header (or sending `A2A-Version: 0.3`) selects v0.3, the no-header default.
 
 ### Agent discovery
@@ -348,7 +346,6 @@ dotnet run -- --token WAM --agent-id <AGENT_ID> --appid <APP_ID> --tenant <TENAN
 | Capability                   | Status                                                              |
 |------------------------------|---------------------------------------------------------------------|
 | `SendMessage` (sync)         | ✅ Available                                                        |
-| `SendStreamingMessage` (SSE) | ✅ Available                                                        |
 | Multi-turn (`contextId`)     | ✅ Available                                                        |
 | Text parts                   | ✅ Available                                                        |
 | Citations                    | ✅ Available (delivery shape is being modernized; see release notes) |
