@@ -23,7 +23,6 @@ A package represents either an agent or Microsoft 365 app in the organization ca
   - Last updated time
   - Element types contained in the app package (bots, declarative agents, etc.).
 - Retrieve more metadata for a specific app or agent.
-- Create, update, and delete custom packages.
 - Block, unblock, and reassign ownership of packages.
 
 ## Example scenarios
@@ -31,7 +30,6 @@ A package represents either an agent or Microsoft 365 app in the organization ca
 - Organization admin retrieves the inventory of all Copilot agents and Microsoft 365 apps.
 - Admin reviews package details, including availability and deployment status.
 - Admin reviews agent element details, including declarativeAgent or customEngineAgent element object.
-- Admin uploads a new custom agent package for organizational use.
 - Admin blocks a package to prevent its usage across the organization.
 - Admin reassigns package ownership when an employee leaves the organization.
 
@@ -42,9 +40,9 @@ A package represents either an agent or Microsoft 365 app in the organization ca
 | [List packages](copilotpackages-list.md)                        | GET `/copilot/admin/catalog/packages`                | Get all apps and agents in the organization.              |
 | [Get package details](copilotpackagedetail-get.md)              | GET `/copilot/admin/catalog/packages/{id}`           | Get detailed metadata for a specific app or agent.        |
 | [Update package](copilotpackagedetail-update.md)                | PATCH `/copilot/admin/catalog/packages/{id}`         | Update package metadata.                                  |
-| [block](copilotpackage-block.md)                                | POST `/copilot/admin/catalog/packages/{id}/block`    | Block a package to prevent its usage.                     |
-| [unblock](copilotpackage-unblock.md)                            | POST `/copilot/admin/catalog/packages/{id}/unblock`  | Unblock a package to allow its usage.                     |
-| [reassign](copilotpackage-reassign.md)                          | POST `/copilot/admin/catalog/packages/{id}/reassign` | Reassign ownership of a package to a different user.      |
+| [Block](copilotpackage-block.md)                                | POST `/copilot/admin/catalog/packages/{id}/block`    | Block a package to prevent its usage.                     |
+| [Unblock](copilotpackage-unblock.md)                            | POST `/copilot/admin/catalog/packages/{id}/unblock`  | Unblock a package to allow its usage.                     |
+| [Reassign](copilotpackage-reassign.md)                          | POST `/copilot/admin/catalog/packages/{id}/reassign` | Reassign ownership of a package to a different user.      |
 
 ## Resources
 

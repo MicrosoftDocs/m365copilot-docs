@@ -55,30 +55,6 @@ The following properties can be updated.
 |:------------------------|:----------------------------------------------------------------------------------------|:--------------------------------------------------------|
 | `allowedUsersAndGroups` | [packageAccessEntity](resources/packageaccessentity.md) collection                      | Users/groups for whom the package is available.         |
 | `acquireUsersAndGroups` | [packageAccessEntity](resources/packageaccessentity.md) collection                      | Users/groups for whom the package is deployed.          |
-| `availableTo`           | [packageStatus](resources/copilotpackage.md#packagestatus-enumeration)                  | Availability status of the package.                     |
-| `categories`            | String collection                                                                       | Category tags for the package.                          |
-| `deployedTo`            | [packageStatus](resources/copilotpackage.md#packagestatus-enumeration)                  | Deployment status of the package.                       |
-| `displayName`           | String                                                                                  | Display name of the package.                            |
-| `elementTypes`          | String collection                                                                       | Element types contained within this package.            |
-| `isBlocked`             | Boolean                                                                                 | Indicates whether the package is blocked.               |
-| `longDescription`       | String                                                                                  | Detailed description of the package.                    |
-| `sensitivity`           | String                                                                                  | Sensitivity classification.                             |
-| `shortDescription`      | String                                                                                  | Brief description of the package.                       |
-| `supportedHosts`        | String collection                                                                       | Host applications where this package can be used.       |
-
-The following properties cannot be updated.
-
-| Property               | Type           |
-|:-----------------------|:---------------|
-| `elementDetails`       | Complex type   |
-| `id`                   | String         |
-| `lastModifiedDateTime` | DateTimeOffset |
-| `manifestId`           | String         |
-| `manifestVersion`      | String         |
-| `publisher`            | String         |
-| `type`                 | String         |
-| `version`              | String         |
-| `zipFile`              | Edm.Stream     |
 
 ## Response
 

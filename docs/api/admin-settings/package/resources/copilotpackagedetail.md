@@ -25,9 +25,9 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 | [List](../copilotpackages-list.md)          | `copilotPackageDetail` collection                               | Get the available Copilot packages.                                       |
 | [Get](../copilotpackagedetail-get.md)       | `copilotPackageDetail`                                          | Read the properties and relationships of a `copilotPackageDetail` object. |
 | [Update](../copilotpackagedetail-update.md) | `copilotPackageDetail`                                          | Update a `copilotPackageDetail` object.                                   |
-| [block](../copilotpackage-block.md)         | None                                                            | Block a Copilot package to prevent its usage.                             |
-| [reassign](../copilotpackage-reassign.md)   | None                                                            | Reassign ownership of a Copilot package to a different user.              |
-| [unblock](../copilotpackage-unblock.md)     | None                                                            | Unblock a Copilot package to allow its usage.                             |
+| [Block](../copilotpackage-block.md)         | None                                                            | Block a Copilot package to prevent its usage.                             |
+| [Reassign](../copilotpackage-reassign.md)   | None                                                            | Reassign ownership of a Copilot package to a different user.              |
+| [Unblock](../copilotpackage-unblock.md)     | None                                                            | Unblock a Copilot package to allow its usage.                             |
 
 ## Properties
 
