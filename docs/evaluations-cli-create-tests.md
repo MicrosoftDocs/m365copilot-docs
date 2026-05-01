@@ -1,7 +1,7 @@
 ---
 title: Dataset schema and test design for agent evaluations
 description: Learn the dataset schema, test design patterns, and advanced evaluation scenarios for Microsoft 365 Copilot agents.
-ms.date: 04/28/2026
+ms.date: 05/01/2026
 author: lauragra
 ms.author: lauragra
 ms.reviewer: sakov
@@ -544,20 +544,25 @@ Groundedness measures how well the response is supported by sources and citation
 - **3**: Partially grounded with some citations
 - **1**: No grounding or citations
 
-### Tool call accuracy (1-5)
+### Similarity (1-5)
 
-Tool call accuracy measures how appropriately the agent uses available tools:
+Similarity measures how closely the response matches the expected output:
 
-- **5**: Perfect tool selection and usage
-- **3**: Correct tool but suboptimal usage
-- **1**: Wrong tool or unnecessary calls
+- **5**: Response is semantically equivalent to the expected output
+- **3**: Response partially matches the expected output
+- **1**: Response doesn't match the expected output
 
-### Citations (0-1)
+### Citations (>= 0)
 
-Citations measures whether the response includes proper citations:
+Citations is a count-based evaluator that counts the number of valid citations in the response. A score of `0` means no citations are present. Configure a minimum threshold to set a pass/fail bar.
 
-- **1**: Citations present and appropriate
-- **0**: No citations or inappropriate citations
+### ExactMatch
+
+ExactMatch is a string match evaluator with a Boolean result. The response passes if it contains the expected string exactly. Supports a `case_sensitive` option (default: `false`).
+
+### PartialMatch (0.0-1.0)
+
+PartialMatch is a string match evaluator that returns a continuous similarity score between `0.0` and `1.0`. Use the `threshold` option to set the minimum score required to pass (default: `0.5`).
 
 ## Continuous improvement
 
