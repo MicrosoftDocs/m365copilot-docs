@@ -86,25 +86,25 @@ You can select which SharePoint folders and files to share. Sharing only works w
 
 When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Manage user permissions to access file and folders directly through SharePoint.
 
-## Update your agent's About info
+## Update your agent's About information
 
-Use the **About this agent** dialog to update the metadata that's visible in the Agent Store and in your agent's About info in Microsoft 365 Copilot. You can open this dialog for any agent you own, whether or not it's shared or submitted to your org catalog.
+Use the **About this agent** dialog to update the metadata that's visible in the Agent Store and in your agent's About information in Microsoft 365 Copilot. You can open this dialog for any agent you own, whether or not it's shared or submitted to your org catalog.
 
 To open the dialog, select the **More** ellipses (**...**) in the agent authoring header, and then select **About this agent**.
 
 The following fields are available.
 
-| Field | Required | Max length | Description |
+| Field | Required or optional | Maximum length | Description |
 | --- | --- | --- | --- |
-| **Short description** | Yes | 80 characters | A concise summary of what the agent does. Shown in the Agent Store and in the agent's About info. Default: *Built using Microsoft 365 Copilot Agent Builder*. |
+| **Short description** | Required | 80 characters | A concise summary of what the agent does. Shown in the Agent Store and in the agent's About information. Default: *Built using Microsoft 365 Copilot Agent Builder*. |
 | **Creator website** | Optional | 2,048 characters | A link to more information about you or your team, such as your profile page, your team's SharePoint site, or an internal support page. Opens when users select the creator's name in the agent details pane. Must be a valid HTTPS URL. |
 | **Privacy statement** | Optional | 2,048 characters | A link to your organization's privacy statement. Must be a valid HTTPS URL. |
 | **Terms of use** | Optional | 2,048 characters | A link to your organization's terms of use. Must be a valid HTTPS URL. |
 
-A default placeholder URL is provided for **Creator website**, **Privacy statement**, and **Terms of use**. Replace each placeholder with a URL that's appropriate for your agent, otherwise Agent Builder shows a warning on the field.
+A default placeholder URL is provided for **Creator website**, **Privacy statement**, and **Terms of use**. Replace each placeholder with a URL that's appropriate for your agent; otherwise, Agent Builder shows a warning on the field.
 
 > [!NOTE]
-> Values you save in **About this agent** pre-populate the corresponding fields in the submission dialog when you submit your agent to your org catalog. For more information, see [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md).
+> Values you save in **About this agent** prepopulate the corresponding fields in the submission dialog when you submit your agent to your org catalog. For more information, see [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md).
 
 ## Submit an agent to your org catalog
 
