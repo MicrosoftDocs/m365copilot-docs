@@ -4,7 +4,7 @@ description: Provide valid privacy statement and terms of use URLs when you subm
 author: sophie-roy3
 ms.author: sophieroy
 ms.localizationpriority: medium
-ms.date: 04/21/2026
+ms.date: 05/04/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -14,17 +14,17 @@ ms.subservice: agent-builder
 
 When you [submit an agent from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md), you must provide links to your organization's privacy statement and terms of use. These URLs appear in the agent details pane in the Agent Store, where users can review them before they install the agent.
 
-## Obtain your URLs
+## Get your URLs
 
-Privacy statement and terms of use URLs are specific to your organization. Work with your IT department or legal team to obtain:
+Privacy statement and terms of use URLs are specific to your organization. Work with your IT department or legal team to get:
 
 - Your organization's **privacy statement** URL, which explains how your agent collects, uses, and protects user data.
-- Your organization's **terms of use** URL, which describes the conditions under which users may interact with your agent.
+- Your organization's **terms of use** URL, which describes the conditions under which users can interact with your agent.
 
 Both URLs must be:
 
 - Valid, resolvable HTTPS URLs.
-- Accessible to all users in your organization who may install the agent.
+- Accessible to all users in your organization who might install the agent.
 
 Default placeholder URLs aren't suitable for production submissions. Agent Builder shows a warning on these fields if the URL matches a default link.
 
