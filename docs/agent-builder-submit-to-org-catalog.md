@@ -93,7 +93,7 @@ Make sure that your agent is ready for organizational use before you submit.
    | **Terms of use** | 2,048 characters | A link to your organization's terms of use. Must be a valid HTTPS URL. Replace the default placeholder link with your organization's URL. |
 
    > [!TIP]
-   > **Short description**, **Creator website**, **Privacy statement**, and **Terms of use** are prepopulated from your agent's **About this agent** settings. To set these values without starting a submission, use **About this agent** from the agent authoring header. For more information, see [Update your agent's About info](agent-builder-share-manage-agents.md#update-your-agents-about-info).
+   > **Short description**, **Creator website**, **Privacy statement**, and **Terms of use** are prepopulated from your agent's **About this agent** settings. To set these values without starting a submission, use **About this agent** from the agent authoring header. For more information, see [Update your agent's About info](agent-builder-share-manage-agents.md#update-your-agents-about-information).
 
 1. Select **Continue**. Agent Builder saves your changes, publishes the updated version, and submits it for admin review.
 
@@ -143,4 +143,4 @@ After your agent is approved, you can open its Agent Store listing to share the 
 
 - [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md)
 - [Share and manage agents](agent-builder-share-manage-agents.md)
-- [Publish agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents)
+- [Manage agent requests in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-requests)
