@@ -4,7 +4,7 @@ description: Learn how to share and manage agents built with Microsoft 365 Copil
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 04/17/2026
+ms.date: 05/05/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
