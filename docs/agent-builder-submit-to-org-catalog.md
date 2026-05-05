@@ -12,9 +12,9 @@ ms.subservice: agent-builder
 
 # Submit agents from Agent Builder to your org catalog
 
-Agents you build with Agent Builder in Microsoft 365 Copilot can be submitted to your organization's catalog for broader use. When you submit, an admin reviews the agent in the Microsoft 365 admin center and, if approved, publishes it to the Agent Store under **Built by your org**. From there, the agent is available as a trusted, organization-approved solution for users across your tenant.
+You can submit agents you build with Agent Builder in Microsoft 365 Copilot to your organization's catalog for broader use. When you submit your agent, an admin reviews it in the Microsoft 365 admin center and, after they approve, publishes it to the Agent Store under **Built by your org**. From there, the agent is available as a trusted, organization-approved solution for users across your tenant.
 
-This article describes how to submit an agent, track its approval status, and manage its Agent Store listing after approval. For admin-side actions, see [Publish agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents).
+This article describes how to submit an agent, track its approval status, and manage its Agent Store listing after approval. For details about the admin actions, see [Publish agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents).
 
 ## Sharing and the Agent Store
 
@@ -23,25 +23,25 @@ Agents built with Agent Builder can reach other users through two separate paths
 - **Share your agent** with specific people or groups. You manage the shared agent, including its sharing settings and updates. Changes you publish are visible to shared users right away.
 - **Submit your agent to your org catalog.** An admin reviews and publishes the agent to the Agent Store. The admin manages the Agent Store listing, including availability. Changes apply to the Agent Store listing only after an admin approves a resubmission.
 
-The shared version and the Agent Store version are tracked as two separate entries. You can continue iterating on your shared agent at any time, including changing who it's shared with or keeping it private for testing, without affecting the Agent Store version. When you're ready to roll a meaningful update into the Agent Store, resubmit for admin review.
+The shared version and the Agent Store version are tracked as two separate entries. You can continue iterating on your shared agent at any time, including changing who it's shared with or keeping it private for testing, without affecting the Agent Store version. When you're ready to roll a meaningful update into the Agent Store, resubmit the agent for admin review.
 
 The following table highlights the key differences between the two paths.
 
 | | Sharing | Submit to your org catalog |
 | --- | --- | --- |
-| **Managed by** | The maker | The maker authors the agent; an admin manages the Agent Store listing |
-| **Audience** | Named users, groups, or teams | Anyone in your organization, based on admin availability settings |
-| **Review** | None | Admin review in the [Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents) |
-| **Distribution** | Shareable link | Agent Store, under **Built by your org** |
-| **Update cycle** | Changes apply immediately when you publish | Changes apply only after admin approval of a resubmission |
-| **When to use** | Iterating, piloting, or distributing to a known audience | Broad organizational availability for a production-ready agent |
+| **Managed by** | The maker | The maker authors the agent; an admin manages the Agent Store listing. |
+| **Audience** | Named users, groups, or teams | Anyone in your organization, based on admin availability settings. |
+| **Review** | None | Admin review in the [Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents). |
+| **Distribution** | Shareable link | Agent Store, under **Built by your org**. |
+| **Update cycle** | Changes apply immediately when you publish | Changes apply only after admin approval of a resubmission. |
+| **When to use** | Iterating, piloting, or distributing to a known audience | Broad organizational availability for a production-ready agent. |
 
 > [!NOTE]
 > Sharing limits set by your admin apply only to the shared version. They don't restrict who can install the Agent Store version. Admin availability settings in the Microsoft 365 admin center control who sees the Agent Store version.
 
 ## What admins review
 
-When you submit, your admin reviews the following to validate security, compliance, and data-access behavior:
+When you submit your agent, your admin reviews the following to validate security, compliance, and data access behavior:
 
 - The agent's display name and short description
 - Configured capabilities and knowledge sources
@@ -53,7 +53,7 @@ For details, see [Publish agents in the Microsoft 365 admin center](/microsoft-3
 
 ## Before you submit
 
-Ensure your agent is ready for organizational use before you submit.
+Make sure that your agent is ready for organizational use before you submit.
 
 ### Prerequisites
 
@@ -64,7 +64,7 @@ Ensure your agent is ready for organizational use before you submit.
 ### Best practices
 
 - **Use governed knowledge sources.** Prefer SharePoint sites and other shared sources that your intended audience can access.
-- **Disclose personal knowledge usage.** If your agent uses personal Work IQ knowledge sources, such as Microsoft Teams meetings, chats, or emails, mention this in the short description so users know the agent may reference their personal work data.
+- **Disclose personal knowledge usage.** If your agent uses personal Work IQ knowledge sources, such as Microsoft Teams meetings, chats, or emails, mention this in the short description so users know the agent might reference their personal work data.
 - **Design for organizational scale.** Use neutral, professional language in the agent's description and starter prompts. Test with sample users before you submit.
 - **Provide complete metadata.** Include accurate developer information and links to your organization's privacy statement and terms of use. For more information, see [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md).
 
@@ -93,11 +93,11 @@ Ensure your agent is ready for organizational use before you submit.
    | **Terms of use** | 2,048 characters | A link to your organization's terms of use. Must be a valid HTTPS URL. Replace the default placeholder link with your organization's URL. |
 
    > [!TIP]
-   > **Short description**, **Creator website**, **Privacy statement**, and **Terms of use** are pre-populated from your agent's **About this agent** settings. To set these values without starting a submission, use **About this agent** from the agent authoring header. For more information, see [Update your agent's About info](agent-builder-share-manage-agents.md#update-your-agents-about-info).
+   > **Short description**, **Creator website**, **Privacy statement**, and **Terms of use** are prepopulated from your agent's **About this agent** settings. To set these values without starting a submission, use **About this agent** from the agent authoring header. For more information, see [Update your agent's About info](agent-builder-share-manage-agents.md#update-your-agents-about-info).
 
 1. Select **Continue**. Agent Builder saves your changes, publishes the updated version, and submits it for admin review.
 
-Once submitted, the dialog shows **Submitted for admin approval** along with next steps.
+After you submit, the dialog shows **Submitted for admin approval** along with next steps.
 
 ## Track submission status
 
@@ -126,7 +126,7 @@ After approval, subsequent submissions are reviewed as updates to the same agent
 
 ## Find your agent in the Agent Store
 
-Once your agent is approved, you can open its Agent Store listing to share the URL with users. Use either of the following methods.
+After your agent is approved, you can open its Agent Store listing to share the URL with users. Use either of the following methods.
 
 **From the submission dialog:**
 
