@@ -33,7 +33,7 @@ Default placeholder URLs aren't suitable for production submissions. Agent Build
 The privacy statement and terms of use URLs apply to both the shared version of your agent and the Agent Store version. When you save these URLs, either in the submission dialog or in the **About this agent** dialog, both versions are updated.
 
 > [!NOTE]
-> To update these URLs after approval, resubmit your agent for admin review. Changes to the shared version apply immediately. Changes to the Agent Store version apply only after admin approval.
+> To update these URLs after approval, resubmit your agent for admin review. Changes to the version you share directly in Agent Builder apply immediately. Changes to the Agent Store version apply only after admin approval.
 
 ## Related content
 
