@@ -184,7 +184,7 @@ When sharing an agent and its knowledge sources, you might encounter the errors 
 - [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md)
 - [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md)
 - [Publish agents for Microsoft 365 Copilot](publish.md)
-- [Publish agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents)
+- [Manage agent requests in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-requests)
 - [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)
 - [Upload into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
 - [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell)
