@@ -37,11 +37,11 @@ Plan My Day agents are useful for the following tasks.
 | Task | Description |
 |---|---|
 | Plan My Day | Generates a full executive daily briefing pulling calendar, emails, Teams messages, SharePoint and OneDrive activity, and personal events into a structured, prioritized summary. |
-| Top Priorities | Returns only the top 3–5 most urgent and impactful items for the day, scored by business impact, time sensitivity, strategic alignment and people blocked. |
+| Top Priorities | Returns only the top three to five most urgent and impactful items for the day, scored by business impact, time sensitivity, strategic alignment, and people blocked. |
 | Pending Decisions | Surfaces items where others are blocked waiting on the user's input - approvals, reviews, and replies - ordered by how long they have been waiting. |
 | Weekly Look-Ahead | Provides a full week summary with milestones, meeting load statistics, team out-of-office notices, and optimization suggestions. |
-| Delegation | Recommends meetings and tasks that could be handled by someone else, based on priority scoring and the user's meeting load. |
-| Today's Meetings | Displays a chronological view of all meetings with attendees, join links, attached documents, prep status, location and conflict flags, in addition to focus blocks. |
+| Delegation | Recommends meetings and tasks that someone else could handle, based on priority scoring and the user's meeting load. |
+| Today's Meetings | Displays a chronological view of all meetings with attendees, join links, attached documents, prep status, location, and conflict flags, in addition to focus blocks. |
 
 ## Extension opportunities
 

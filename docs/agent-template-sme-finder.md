@@ -8,7 +8,7 @@ ms.topic: conceptual
 
 # Use the SME Finder template to build an agent
 
-You can use the SME Finder template in Microsoft 365 Copilot to build an agent that helps employees find the most credible Subject Matter Experts inside their organization for any topic, product, process, or customer question. It returns ranked experts with cited evidence from SharePoint, Teams, Outlook, Calendar, and organizational data - plus a ready-to-send outreach message.
+You can use the SME Finder template in Microsoft 365 Copilot to build an agent that helps employees find the most credible subject matter experts inside their organization for any topic, product, process, or customer question. It returns ranked experts with cited evidence from SharePoint, Teams, Outlook, Calendar, and organizational data - plus a ready-to-send outreach message.
 
 The SME Finder uses a professional, evidence-based, and respectful tone, matching the user's language and formality while staying grounded in observable Microsoft 365 signals.
 

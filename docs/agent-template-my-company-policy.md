@@ -8,9 +8,9 @@ ms.topic: conceptual
 
 # Use the My Company Policy template to build an agent
 
-You can use the My Company Policy template in Microsoft 365 Copilot to build an agent that serves as a centralized company knowledge assistant-answering HR policy questions, surfacing holiday and PTO information, sharing employee service links, and delivering public company information including quarterly earnings. It gives employees a single conversational interface grounded exclusively in authoritative company documents stored in SharePoint and on the corporate website.
+Use the My Company Policy template in Microsoft 365 Copilot to build an agent that serves as a centralized company knowledge assistant. It answers HR policy questions, surfaces holiday and PTO information, shares employee service links, and delivers public company information including quarterly earnings. It gives employees a single conversational interface grounded exclusively in authoritative company documents stored in SharePoint and on the corporate website.
 
-The My Company Policy agent uses a professional, approachable, and concise tone - neutral and non-judgmental on sensitive HR topics - always citing the specific document, policy number, and section where information was found.
+The My Company Policy agent uses a professional, approachable, and concise tone - neutral and non-judgmental on sensitive HR topics - always citing the specific document, policy number, and section where it found the information.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Before you work with the template, make sure that you have:
 ## Capabilities
 
 > [!NOTE]
-> This template works best when grounded in additional context, such as a SharePoint knowledge source. [Use the Agent Builder to search for a SharePoint file, folder or site](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge#sharepoint-content) that provides authoritative policy documents relevant to this agent.
+> This template works best when grounded in additional context, such as a SharePoint knowledge source. [Use the Agent Builder to search for a SharePoint file, folder, or site](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge#sharepoint-content) that provides authoritative policy documents relevant to this agent.
 
 With appropriate grounding, agents built on the My Company Policy template can offer:
 

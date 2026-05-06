@@ -37,7 +37,7 @@ Status Update Agent agents are useful for the following tasks.
 | Task | Description |
 |---|---|
 | Daily Wrap Up | Pulls together everything worked on across emails, meetings, Teams chats, and files to provide an encouraging end-of-day recap with highlights and an affirmation. |
-| Weekly Reflection | Surfaces the top 5 most meaningful accomplishments from the past week's M365 activity, focusing on outcomes and impact. |
+| Weekly Reflection | Surfaces the top five most meaningful accomplishments from the past week's M365 activity, focusing on outcomes and impact. |
 | Create a Brag Doc | Captures meaningful accomplishments with date, theme, outcome, impact, and collaborators in a structured document to share with a manager. |
 | Manager Status Email Drafter | Drafts a polished weekly status email organized into Highlights, In-Progress, Blockers, and Looking Ahead, staged as a draft for review before sending. |
 | Goal Alignment Check-In | Maps recent work activity to each of the user's goals with specific accomplishments as evidence, and flags goals where movement has been limited. |
