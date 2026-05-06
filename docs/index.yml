@@ -8,7 +8,7 @@ metadata:
   description: Explore extensibility options for Microsoft 365 Copilot, including declarative agents, custom engine agents, and Microsoft 365 Copilot connectors. Learn how to build and publish Copilot solutions.
   author: lauragra
   ms.author: lauragra
-  ms.date: 09/04/2025
+  ms.date: 05/06/2026
   ms.topic: landing-page
   ms.custom:
     - copilot-extensibility
@@ -21,22 +21,24 @@ landingContent:
       - linkListType: get-started
         links:
           - text: Overview
-            url: /microsoft-365-copilot/extensibility/overview
+            url: /microsoft-365/copilot/extensibility/overview
           - text: Planning guide
-            url: /microsoft-365-copilot/extensibility/planning-guide
+            url: /microsoft-365/copilot/extensibility/planning-guide
           - text: Licensing and cost considerations
-            url: /microsoft-365-copilot/extensibility/cost-considerations
+            url: /microsoft-365/copilot/extensibility/cost-considerations
 
   - title: Create and manage agents
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Agents overview
-            url: /microsoft-365-copilot/extensibility/agents-overview
+            url: /microsoft-365/copilot/extensibility/agents-overview
           - text: Build a declarative agent
-            url: /microsoft-365-copilot/extensibility/overview-declarative-agent
+            url: /microsoft-365/copilot/extensibility/overview-declarative-agent
           - text: Build a custom engine agent
-            url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent
+            url: /microsoft-365/copilot/extensibility/overview-custom-engine-agent
+          - text: Evaluate agents
+            url: /microsoft-365/copilot/extensibility/evaluation-overview
           - text: Manage agents in the Microsoft 365 admin center
             url: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context
 
@@ -45,11 +47,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Add plugins to declarative agents
-            url: /microsoft-365-copilot/extensibility/overview-api-plugins
+            url: /microsoft-365/copilot/extensibility/overview-api-plugins
           - text: Use Copilot connectors
-            url: /microsoft-365-copilot/extensibility/overview-copilot-connector
+            url: /microsoft-365/copilot/extensibility/overview-copilot-connector
           - text: Build a custom Copilot connector
-            url: /microsoft-365-copilot/extensibility/build-your-first-connector
+            url: /microsoft-365/copilot/extensibility/build-your-first-connector
 
   - title: Use developer tools and APIs
     linkLists:
@@ -58,10 +60,10 @@ landingContent:
           - text: Microsoft 365 Agents Toolkit
             url: /microsoft-365/developer/overview-m365-agents-toolkit?context=/microsoft-365/copilot/extensibility/context
           - text: Microsoft 365 Agents SDK
-            url: /microsoft-365-copilot/extensibility/m365-agents-sdk
+            url: /microsoft-365/copilot/extensibility/m365-agents-sdk
+          - text: Work IQ APIs (preview)
+            url: /microsoft-365/copilot/extensibility/work-iq-api-overview
           - text: Microsoft 365 Copilot APIs
-            url: /microsoft-365-copilot/extensibility/copilot-apis-overview
-          - text: Copilot Studio documentation
-            url: /microsoft-copilot-studio/
+            url: /microsoft-365/copilot/extensibility/copilot-apis-overview
           - text: Microsoft Agent 365
             url: /microsoft-agent-365/overview
