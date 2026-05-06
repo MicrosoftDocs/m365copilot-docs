@@ -19,17 +19,9 @@ items:
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 
-- name: Plan
-  items:
-  - name: Planning guide
-    href: planning-guide.md
-  - name: Cost considerations
-    href: cost-considerations.md
-  - name: Set up your dev environment
-    href: prerequisites.md
-  - name: Samples collection
-    href: samples.md
-
+- name: Planning guide
+  href: planning-guide.md
+  
 - name: Extend Copilot with agents
   items:
   - name: Agents overview
@@ -53,10 +45,16 @@ items:
       href: declarative-agent-tool-comparison.md
     - name: Choose between Microsoft 365 Copilot and Copilot Studio
       href: copilot-studio-experience.md
+  - name: Cost considerations
+    href: cost-considerations.md
+  - name: Set up your dev environment
+    href: prerequisites.md
+  - name: Samples
+    href: samples.md
   - name: FAQ
     href: faq.md
 
-- name: Use Agent Builder to build a declarative agent
+- name: Use Agent Builder
   items:
   - name: Overview
     href: agent-builder.md
@@ -103,7 +101,7 @@ items:
   - name: Extend with Copilot Studio
     href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context
 
-- name: Use Agents Toolkit to build a declarative agent
+- name: Use Agents Toolkit
   items:
   - name: Overview
     href: /microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context
@@ -197,7 +195,7 @@ items:
       - name: Version 1.0
         href: declarative-agent-manifest-1.0.md
  
-- name: Declarative agent concepts
+- name: Enhance declarative agents
   items:
   - name: Best practices for building agents
     href: declarative-agent-best-practices.md
@@ -240,10 +238,8 @@ items:
   - name: Responsible AI validation
     href: rai-validation.md   
     
-- name: Build a custom engine agent
+- name: Build custom engine agents
   items:
-  - name: Custom engine agent overview
-    href: overview-custom-engine-agent.md
   - name: Build with Microsoft 365 Agents SDK
     items:
     - name: Overview
@@ -320,19 +316,6 @@ items:
     - name: License terms
       href: /legal/m365-copilot-agent-eval-tool/license-terms?context=/microsoft-365/copilot/extensibility/context
 
-- name: Publish and manage agents
-  items:
-  - name: Publish agents
-    href: publish.md
-  - name: Validation guidelines
-    href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context
-  - name: Design icons for agent acquisition and management
-    href: agent-icon-management.md
-  - name: Manage agents
-    href: manage.md
-  - name: Manage agents in Microsoft 365 admin center
-    href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context
-
 - name: Add knowledge with Copilot connectors
   items:
   - name: Copilot connectors in Microsoft 365 Copilot
@@ -389,8 +372,18 @@ items:
 - name: Extend agents at scale with Agent 365
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
 
-
-
+- name: Publish and manage agents
+  items:
+  - name: Publish agents
+    href: publish.md
+  - name: Validation guidelines
+    href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context
+  - name: Design icons for agent acquisition and management
+    href: agent-icon-management.md
+  - name: Manage agents
+    href: manage.md
+  - name: Manage agents in Microsoft 365 admin center
+    href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context
   
 - name: Known issues
   href: known-issues.md
