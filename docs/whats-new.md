@@ -21,7 +21,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Evaluate agents by suing the evaluation framework and the Agent Evaluations CLI tool
 
-Evaluate agents by using a comprehensive evaluation framework and tooling to refine agent performance. The Agent Evaluations CLI tool enables developers to create, run, and analyze tests for their agents, evaluate quality signals, design prompts, analyze multi-turn conversations, and define custom assertions. For more information, see [Agent evaluation overview](evaluation-overview.md) and [Agent Evaluations CLI overview](evaluations-cli-overview.md).
+Evaluate agents by using a comprehensive evaluation framework and tooling to refine agent performance. The Agent Evaluations CLI tool enables developers to create, run, and analyze tests for their agents. For more information, see [Agent evaluation overview](evaluation-overview.md) and [Agent Evaluations CLI overview](evaluations-cli-overview.md).
 
 ### Package Management API updates (preview)
 
