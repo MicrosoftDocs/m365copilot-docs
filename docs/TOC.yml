@@ -121,16 +121,16 @@ items:
         href: typespec-decorators.md
       - name: Capabilities
         href: typespec-capabilities.md
-    - name: Build with JSON
-      items:
-      - name: Create the agent
-        href: build-declarative-agents.md
-      - name: Customize agent behavior
-        href: build-declarative-agents-customize-behavior.md
-      - name: Add knowledge sources
-        href: build-declarative-agents-add-knowledge.md
-      - name: Add skills
-        href: build-declarative-agents-add-skills.md
+  - name: Build with JSON
+    items:
+    - name: Create the agent
+      href: build-declarative-agents.md
+    - name: Customize agent behavior
+      href: build-declarative-agents-customize-behavior.md
+    - name: Add knowledge sources
+      href: build-declarative-agents-add-knowledge.md
+    - name: Add skills
+      href: build-declarative-agents-add-skills.md
     - name: Retrieve capabilities IDs
       href: declarative-agent-capabilities-ids.md
     - name: Add actions with plugins
@@ -197,7 +197,7 @@ items:
  
 - name: Enhance declarative agents
   items:
-  - name: Best practices for building agents
+  - name: Best practices
     href: declarative-agent-best-practices.md
   - name: Write effective instructions
     href: declarative-agent-instructions.md
