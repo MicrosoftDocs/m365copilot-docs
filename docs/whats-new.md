@@ -19,7 +19,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ## May 2026
 
-### Evaluate agents by using the evaluation framework and the Agent Evaluations CLI tool
+### Evaluate agents
 
 Evaluate agents by using a comprehensive evaluation framework and tooling to refine agent performance. The Agent Evaluations CLI tool enables developers to create, run, and analyze tests for their agents. For more information, see [Agent evaluation overview](evaluation-overview.md) and [Agent Evaluations CLI overview](evaluations-cli-overview.md).
 
