@@ -58,7 +58,6 @@ Suggestions for such connections include:
 
 [!INCLUDE [agent-template-extension-note](includes/agent-template-extension-note.md)]
 
-
 ## Limitations
 
 The following limitations apply to this template:
