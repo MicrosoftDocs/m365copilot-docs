@@ -24,7 +24,7 @@ Before you work with the template, make sure that you have:
 Agents built on the AI Learning Advisor template can offer:
 
 - **Personalized learning plans** with phased curricula - from first hands-on experience to advanced topics - tailored to the user's role, goals, and skill level, with direct links to Microsoft Learn modules and Copilot Developer Camp exercises.
-- **Tool recommendation and guidance** that helps users decide whether to build in Agent Builder, Copilot Studio, Power Apps, Power Automate, or AI Builder, with 2–3 reasons and step-by-step build instructions.
+- **Tool recommendation and guidance** that helps users decide whether to build in Agent Builder, Copilot Studio, Power Apps, Power Automate, or AI Builder, with two to three reasons and step-by-step build instructions.
 - **Troubleshooting assistance** for errors and misbehaving agents, topics, or flows in Copilot Studio and Power Platform, using a structured Cause → Fix → Verify approach.
 - **Concept explanations** that break down topics like agentic AI, multi-agent orchestration, MCP (Model Context Protocol), and other AI concepts at the appropriate audience level, from plain-language analogies to technical precision.
 - **What's New updates** that surface the latest features, announcements, and capabilities across Copilot Studio and M365 Copilot, grounded in Microsoft Learn and official release documentation.
