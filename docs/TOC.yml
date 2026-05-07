@@ -19,40 +19,42 @@ items:
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 
-- name: Planning guide
-  href: planning-guide.md
+- name: Plan your extensibility solution
+  items:
+  - name: Planning guide
+    href: planning-guide.md
+  - name: Set up your development environment
+    href: prerequisites.md
+  - name: Cost considerations
+    href: cost-considerations.md
   
 - name: Extend Copilot with agents
   items:
   - name: Agents overview
     href: agents-overview.md
   - name: Declarative agents
-    href: overview-declarative-agent.md
     items:
+    - name: Overview
+      href: declarative-agent-overview.md
+    - name: Architecture
+      href: declarative-agent-architecture.md
     - name: Declarative agents FAQ
       href: transparency-faq-declarative-agent.md
   - name: Custom engine agents
-    href: overview-custom-engine-agent.md
-  - name: Agent architecture
     items:
-    - name: Declarative agent architecture
-      href: declarative-agent-architecture.md
-    - name: Custom engine agent architecture
+    - name: Overview
+      href: custom-engine-agent-overview.md
+    - name: Architecture
       href: custom-engine-agent-architecture.md
+    href: overview-custom-engine-agent.md     
   - name: Choose your development tool
     items:
     - name: Tools overview
       href: declarative-agent-tool-comparison.md
     - name: Choose between Microsoft 365 Copilot and Copilot Studio
       href: copilot-studio-experience.md
-  - name: Cost considerations
-    href: cost-considerations.md
-  - name: Set up your dev environment
-    href: prerequisites.md
   - name: Samples
     href: samples.md
-  - name: FAQ
-    href: faq.md
 
 - name: Use Agent Builder
   items:
@@ -387,5 +389,7 @@ items:
   
 - name: Known issues
   href: known-issues.md
+- name: FAQ
+  href: faq.md
 - name: Support and feedback
   href: feedback.md
