@@ -1,8 +1,10 @@
 ---
 title: Use the AI Learning Advisor template to build an agent
 description: Learn about the AI Learning Advisor template for Microsoft 365 Copilot.
-author: 
-ms.author: 
+author: krmarko
+ms.author: krmarko
+ms.reviewer: kjette
+ms.date: 05/06/2026
 ms.topic: conceptual
 ---
 
@@ -16,7 +18,7 @@ The AI Learning Advisor uses a friendly, encouraging, and professional tone, lea
 
 Before you work with the template, make sure that you have:
 
-- A working knowledge of how to [build agents with Microsoft 365 Copilot](agent-builder-build-agents).
+- A working knowledge of how to [build agents with Microsoft 365 Copilot](agent-builder-build-agents.md).
 - An understanding of how to [write effective instructions for declarative agents](declarative-agent-instructions).
 
 ## Capabilities
@@ -69,6 +71,6 @@ The following limitations apply to this template:
 
 ## Related content
 
-- [Agent Builder in Microsoft 365 Copilot](agent-builder)
-- [Build agents with Agent Builder](agent-builder-build-agents)
-- [Publish and manage agents](agent-builder-share-manage-agents)
+- [Agent Builder in Microsoft 365 Copilot](agent-builder.md)
+- [Build agents with Agent Builder](agent-builder-build-agents.md)
+- [Publish and manage agents](agent-builder-share-manage-agents.md)
