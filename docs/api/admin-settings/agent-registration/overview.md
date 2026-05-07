@@ -1,5 +1,5 @@
 ---
-title: Agent Registration API overview (preview)
+title: Agent Registration API overview 
 description: Learn about the Agent Registration API for programmatically registering and managing agents in Microsoft 365.
 author: Ganeshkrish18
 ms.author: gakrishn
@@ -10,7 +10,7 @@ ms.date: 04/30/2026
 
 <!-- cSpell:ignore gakrishn Ganeshkrish18 -->
 
-# Agent Registration API overview (preview)
+# Agent Registration API overview 
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
