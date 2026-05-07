@@ -19,9 +19,9 @@ For the latest information, announcements, and news about preview and generally 
 
 ## May 2026
 
-### New agent templates
+### New agent templates added to Agent Builder
 
-Eight new agent templates are now available in Microsoft 365 Copilot to help you quickly build declarative agents for common workplace scenarios:
+Eight new agent templates are now available in Agent Builder to help you quickly build declarative agents for common workplace scenarios:
 
 - [AI Learning Advisor](agent-template-ai-learning-advisor.md)
 - [Executive Briefing Agent](agent-template-executive-briefing.md)
