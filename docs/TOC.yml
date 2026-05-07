@@ -38,7 +38,7 @@ items:
       href: overview-declarative-agent.md
     - name: Architecture
       href: declarative-agent-architecture.md
-    - name: Declarative agents FAQ
+    - name: FAQ
       href: transparency-faq-declarative-agent.md
   - name: Custom engine agents
     items:
@@ -46,12 +46,11 @@ items:
       href: overview-custom-engine-agent.md
     - name: Architecture
       href: custom-engine-agent-architecture.md
-    href: overview-custom-engine-agent.md     
   - name: Choose your development tool
     items:
     - name: Tools overview
       href: declarative-agent-tool-comparison.md
-    - name: Choose between Microsoft 365 Copilot and Copilot Studio
+    - name: Choose between Agent Builder and Copilot Studio
       href: copilot-studio-experience.md
   - name: Samples
     href: samples.md
