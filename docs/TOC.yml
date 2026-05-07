@@ -35,7 +35,7 @@ items:
   - name: Declarative agents
     items:
     - name: Overview
-      href: declarative-agent-overview.md
+      href: overview-declarative-agent.md
     - name: Architecture
       href: declarative-agent-architecture.md
     - name: Declarative agents FAQ
@@ -43,7 +43,7 @@ items:
   - name: Custom engine agents
     items:
     - name: Overview
-      href: custom-engine-agent-overview.md
+      href: overview-custom-engine-agent.md
     - name: Architecture
       href: custom-engine-agent-architecture.md
     href: overview-custom-engine-agent.md     
