@@ -238,7 +238,10 @@ items:
     href: convert-declarative-agent.md
   - name: Responsible AI validation
     href: rai-validation.md   
-    
+
+- name: Extend agents at scale with Agent 365
+  href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
+
 - name: Build custom engine agents
   items:
   - name: Build with Microsoft 365 Agents SDK
@@ -369,9 +372,6 @@ items:
     href: work-iq-cli.md
   - name: Terms of use (preview)
     href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
-
-- name: Extend agents at scale with Agent 365
-  href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
 
 - name: Publish and manage agents
   items:
