@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/05/2026
+ms.date: 05/07/2026
 ms.topic: overview
 ---
 
@@ -18,6 +18,21 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## May 2026
+
+### New agent templates added to Agent Builder
+
+Eight new agent templates are now available in Agent Builder to help you quickly build declarative agents for common workplace scenarios:
+
+- [AI Learning Advisor](agent-template-ai-learning-advisor.md)
+- [Executive Briefing Agent](agent-template-executive-briefing.md)
+- [My Company Policy](agent-template-my-company-policy.md)
+- [Personal News Digest](agent-template-personal-news-digest.md)
+- [Plan My Day](agent-template-plan-my-day.md)
+- [Project Delta Digest](agent-template-project-delta-digest.md)
+- [SME Finder](agent-template-sme-finder.md)
+- [Status Update Agent](agent-template-status-update-agent.md)
+
+For more information, see [Agent templates overview](agent-templates-overview.md).
 
 ### Evaluate agents
 

@@ -152,12 +152,16 @@ items:
         items:
         - name: Templates overview
           href: agent-templates-overview.md
+        - name: AI Learning Advisor
+          href: agent-template-ai-learning-advisor.md
         - name: Career Coach
           href: agent-template-career-coach.md
         - name: Corporate Communications Crafter
           href: agent-template-corporate-communications.md
         - name: Customer Insight Assistant
           href: agent-template-customer-insight.md
+        - name: Executive Briefing Agent
+          href: agent-template-executive-briefing.md           
         - name: Idea Coach
           href: agent-template-idea-coach.md
         - name: Interview Question Assistant
@@ -166,14 +170,26 @@ items:
           href: agent-template-learning-coach.md
         - name: Meeting Coach
           href: agent-template-meeting-coach.md
+        - name: My Company Policy
+          href: agent-template-my-company-policy.md           
+        - name: Personal News Digest
+          href: agent-template-personal-news-digest.md           
+        - name: Plan My Day
+          href: agent-template-plan-my-day.md           
+        - name: Project Delta Digest
+          href: agent-template-project-delta-digest.md           
         - name: Prompt Coach
           href: agent-template-prompt-coach.md
         - name: Request for Proposal Assistant
           href: agent-template-rfp-assistant.md
         - name: Quiz Tutor
-          href: agent-template-quiz-tutor.md
+          href: agent-template-quiz-tutor.md      
         - name: Scrum Assistant
           href: agent-template-scrum-assistant.md
+        - name: SME Finder
+          href: agent-template-sme-finder.md
+        - name: Status Update Agent
+          href: agent-template-status-update-agent.md                      
         - name: Text Translator Assistant
           href: agent-template-text-translator.md
         - name: Writing Coach
