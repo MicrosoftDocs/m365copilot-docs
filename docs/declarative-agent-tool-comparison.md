@@ -4,7 +4,7 @@ description: Learn which tools are most suited for different use cases when crea
 ms.author: lauragra
 author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/06/2026
+ms.date: 05/07/2026
 ms.topic: article
 ---
 
@@ -19,8 +19,8 @@ Several tools are available to help you build declarative agents for Copilot. Th
 | **Tool** | **Coding approach** |**Description** | **Recommended use case** |
 |:------------|:------------| :------------| :------------|
 | [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) | Pro-code | Agents Toolkit enables the creation of declarative agents and custom engine agents with advanced features, such as custom API actions, Adaptive Cards, the Microsoft 365 Agents SDK, the Microsoft 365 Agents Playground for local testing, and CI/CD (Continuous Integration/Continuous Delivery) integration. | Developers who need full control over their coding environment, source control, and direct API integration. |
-| [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context) | Low-code | Copilot Studio allows users to create declarative agents using a drag-and-drop interface. It provides control over business logic and workflow automation and allows users to create declarative agents with advanced features, such as custom API actions, Adaptive Cards, and ALM through Power Platform pipelines. |  Information workers and business users who need a low-code, easy-to-use solution that includes [Power Platform integration](/power-platform/developer/get-started). |
-| [Microsoft 365 Copilot](agent-builder.md) | No-code | Microsoft 365 Copilot offers a simple interface for business users to build declarative agents. Users just need to describe what the agent should do or author an agent with a simple configuration experience. | Business users with no coding experience that want to customize Copilot to increase personal and group productivity. From writer coach to onboarding buddy, users can easily create and share agents that answer questions from knowledge sources, generate images, process data, solve math problems, and more. |
+| [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context) | Low-code | Copilot Studio allows users to create declarative agents using a drag-and-drop interface. It provides control over business logic and workflow automation and allows users to create declarative agents with advanced features, such as custom API actions, Adaptive Cards, and application lifecycle management (ALM) through Power Platform pipelines. |  Information workers and business users who need a low-code, easy-to-use solution that includes [Power Platform integration](/power-platform/developer/get-started). |
+| [Microsoft 365 Copilot](agent-builder.md) | No-code | Microsoft 365 Copilot offers a simple interface for business users to build declarative agents. Users just need to describe what the agent should do or author an agent with a simple configuration experience. | Business users with no coding experience that want to customize Copilot to increase personal and group productivity. From writing coach to onboarding buddy, users can easily create and share agents that answer questions from knowledge sources, generate images, process data, solve math problems, and more. |
 | [SharePoint](/sharepoint/get-started-sharepoint-agents) | No-code | Agents created in SharePoint are declarative agents that run within SharePoint, Teams, and Microsoft 365 Copilot. They provide responses based on the data available in an organization's SharePoint implementation. | Business users who want to customize Copilot for a specific purpose or to specify specific sites, document libraries, and files for Copilot to search. |
 
 ## Tool requirements and access
@@ -95,7 +95,7 @@ The [SharePoint](https://support.microsoft.com/office/get-started-with-sharepoin
 |:------------|:------------|
 | **Customization:** Site owners, content owners, or editors can create agents tailored to specific needs. | **Content limitations:** As with all agents, if the agent can't find information in its defined knowledge sources, it might provide outdated content from the internet. |
 | **Defined sources:** Agents draw on context from specific SharePoint sites and document libraries. | **Scalability:** Not suitable for large-scale or highly complex applications.  |
-| **Ease of access:** Integrated directly into SharePoint, making it easy for users to access and interact with the agents.  | **Functionality and visibility limitations:** Declarative agents built in SharePoint can't integrate with or use declarative agents not built in SharePoint in Copilot Chat. |
+| **Ease of access:** Integrated directly into SharePoint, making it easy for users to access and interact with the agents.  | **Functionality and visibility limitations:** Declarative agents built in SharePoint can't integrate with or use declarative agents that weren't built in SharePoint when used in Copilot Chat. |
 | **Personalized user experience:** Provides a personalized user experience based on the specific SharePoint content.  | |
 | **Integration with SharePoint:**  Uses existing SharePoint features like document libraries. | |
 | **Integration with Teams:** SharePoint agents are discoverable directly in Microsoft Teams chats and in the Teams Store under the **Agents** category, so users can add them to chats from the **Add Agents and Bots** option. | |
