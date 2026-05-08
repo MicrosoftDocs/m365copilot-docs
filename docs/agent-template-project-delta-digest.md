@@ -54,7 +54,7 @@ You can enhance the functionality of your Project Delta Digest agents by connect
 
 Suggestions for such connections include:
 
-- **Combining record-system connectors with knowledge sources:** Add a Copilot connector for Azure DevOps, Jira, or ServiceNow to pull in work item status, sprint data, and task assignments, and pair it with a Confluence or SharePoint knowledge source so release notes and runbooks appear inline with issue summaries.
+- **Combining record-system connectors with knowledge sources:** Add a Copilot connector for [Azure DevOps](/microsoft-365/copilot/connectors/azure-devops-work-items-overview), [Jira](/microsoft-365/copilot/connectors/jira-cloud-overview), or [ServiceNow](/microsoft-365/copilot/connectors/servicenow-tickets-overview) to pull in work item status, sprint data, and task assignments, and pair it with a [Confluence](/microsoft-365/copilot/connectors/confluence-cloud-overview) or SharePoint knowledge source so release notes and runbooks appear inline with issue summaries.
 - **Adding Outlook and Teams signals for richer risk context:** Enable Microsoft Graph capabilities to pull in recent customer escalations from email threads or incident channels, enriching the Risks & Impact section with real-time communication signals.
 - **Customizing the digest structure for your team:** Extend the default section template with team-specific sections such as SLA breaches, support escalation counts, or test-pass rates - tailored by adjusting the agent's instructions to match your project methodology.
 
