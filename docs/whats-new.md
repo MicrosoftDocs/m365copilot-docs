@@ -23,7 +23,6 @@ For the latest information, announcements, and news about preview and generally 
 
 Eight new agent templates are now available in Agent Builder to help you quickly build declarative agents for common workplace scenarios:
 
-- [AI Learning Advisor](agent-template-ai-learning-advisor.md)
 - [Executive Briefing Agent](agent-template-executive-briefing.md)
 - [My Company Policy](agent-template-my-company-policy.md)
 - [Personal News Digest](agent-template-personal-news-digest.md)

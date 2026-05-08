@@ -152,8 +152,6 @@ items:
         items:
         - name: Templates overview
           href: agent-templates-overview.md
-        - name: AI Learning Advisor
-          href: agent-template-ai-learning-advisor.md
         - name: Career Coach
           href: agent-template-career-coach.md
         - name: Corporate Communications Crafter
