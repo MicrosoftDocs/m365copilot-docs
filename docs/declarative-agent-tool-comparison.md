@@ -31,7 +31,7 @@ The following table describes the prerequisites for using each tool and where ag
 | **Tool** | **Requirements** | **Tool access** | **Publishes agents to** |
 |:------------|:------------| :------------| :------------|
 | Agents Toolkit | <ul><li> Microsoft 365 subscription (with sideloading enabled)</li> <li>Visual Studio Code, Visual Studio, or the Agents Toolkit CLI </li> <li> Azure subscription (optional)</li></ul> |  Get [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit) for Visual Studio Code, Visual Studio, or as a CLI.  |  <ul><li> Users with Microsoft 365 subscriptions ([with limited capabilities](prerequisites.md#agent-capabilities-and-licensing-models))</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>   |
-| Copilot Studio| <ul><li> Microsoft 365 subscription </li> <li> A Copilot Studio license — either a standalone Copilot Studio subscription or the Copilot Studio for Microsoft Teams plan included in select Microsoft 365 subscriptions ([compare plans](/microsoft-copilot-studio/requirements-licensing-subscriptions))</li></ul> |  Sign up for [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions). | <ul><li> Users with Microsoft 365 subscriptions ([with limited capabilities](prerequisites.md#agent-capabilities-and-licensing-models))</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> <li> Mobile apps, messaging platforms </li> </ul>  |
+| Copilot Studio | <ul><li> Microsoft 365 subscription </li> <li> A Copilot Studio license — either a standalone Copilot Studio subscription or the Copilot Studio for Microsoft Teams plan included in select Microsoft 365 subscriptions ([compare plans](/microsoft-copilot-studio/requirements-licensing-subscriptions))</li></ul> |  Sign up for [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions). | <ul><li> Users with Microsoft 365 subscriptions ([with limited capabilities](prerequisites.md#agent-capabilities-and-licensing-models))</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> <li> Mobile apps, messaging platforms </li> </ul>  |
 | Agent Builder | Microsoft 365 subscription | Select the  **Create agent** option in Microsoft 365 Copilot or Teams. | <ul><li> Users with Microsoft 365 subscriptions ([with limited capabilities](prerequisites.md#agent-capabilities-and-licensing-models))</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>|
 | SharePoint | <ul><li> Microsoft 365 subscription </li> <li> Site admin or owner permissions </li></ul> |  Get started with [SharePoint](https://www.microsoft.com/microsoft-365/sharepoint/collaboration).   |  SharePoint sites, Microsoft 365 Copilot, and Microsoft Teams |
 
@@ -61,7 +61,7 @@ The following table lists the pros and cons for using Agents Toolkit.
 
 ## Agent Builder
 
-Agent Builder in Microsoft 365 Copilot is a great option for users with no coding experience who need a guided process for building declarative agents. You can access Microsoft 365 Copilot through the following apps and paths:
+Agent Builder in Microsoft 365 Copilot is a great option for users with no coding experience who need a guided process for building declarative agents. You can access Agent Builder in Microsoft 365 Copilot through the following apps and paths:
 
 - **Microsoft 365 Copilot app:** Select the **Create agent** option.
 - **Microsoft Teams:** Select the **Microsoft 365 Copilot** tab, expand the navigation, and then choose **Create agent**.
@@ -95,7 +95,7 @@ The [SharePoint](https://support.microsoft.com/office/get-started-with-sharepoin
 |:------------|:------------|
 | **Customization:** Site owners, content owners, or editors can create agents tailored to specific needs. | **Content limitations:** As with all agents, if the agent can't find information in its defined knowledge sources, it might provide outdated content from the internet. |
 | **Defined sources:** Agents draw on context from specific SharePoint sites and document libraries. | **Scalability:** Not suitable for large-scale or highly complex applications.  |
-| **Ease of access:** Integrated directly into SharePoint, making it easy for users to access and interact with the agents.  | **Functionality and visibility limitations:** Declarative agents built in SharePoint can't integrate with or use declarative agents that weren't built in SharePoint when used in Copilot Chat. |
+| **Ease of access:** Integrated directly into SharePoint, making it easy for users to access and interact with the agents.  | **Functionality and visibility limitations:** When used in Copilot Chat, declarative agents built in SharePoint can't integrate with or use declarative agents built outside SharePoint. |
 | **Personalized user experience:** Provides a personalized user experience based on the specific SharePoint content.  | |
 | **Integration with SharePoint:**  Uses existing SharePoint features like document libraries. | |
 | **Integration with Teams:** SharePoint agents are discoverable directly in Microsoft Teams chats and in the Teams Store under the **Agents** category, so users can add them to chats from the **Add Agents and Bots** option. | |
