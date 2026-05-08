@@ -4,7 +4,7 @@ description: Learn how to share and manage agents built with Microsoft 365 Copil
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 04/17/2026
+ms.date: 05/05/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -15,22 +15,6 @@ ms.subservice: agent-builder
 You can share the agents you create using Microsoft 365 Copilot with users in your organization. Sharing an agent provides limited direct access to it for a specified set of users. While ideal for team collaboration, sharing an agent doesn't allow for deployment across the organization or integration with other channels.
 
 This article describes how to share and manage the agents you build using the Agent Builder feature in Microsoft 365 Copilot. To publish an agent across multiple channels, you need to use Copilot Studio. For more information, see [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
-
-## Differences between sharing and publishing agents
-
-Sharing an agent is intended for limited, direct access to it. This approach is ideal for collaborating or getting feedback as you create your agent, but can't be used for formal deployment or integration.
-
-The following table highlights the key differences between publishing and sharing your declarative agents.
-
-|         | Sharing | Publishing |
-| ------- | ------- | ------- |
-| **Purpose** | Collaboration, feedback, testing, or limited access for specific individuals or groups. | Formal deployment for broad use, integration, scaled across specified channels (for example, Teams, Copilot) or the entire organization. |
-| **Mechanism** | Owner/co-owners use **Manage Sharing** to specify individuals, groups, or teams by name or email. The specified recipients receive direct access, but the agent remains private and not broadly discoverable. | Owner/co-owners select **Publish** in Copilot Studio, select the target channel (Teams, Copilot, and more), and complete any required approval flows. The agent becomes discoverable and accessible to the intended audience. |
-| **Audience** | Named users (individuals, groups, or teams). | Organization-wide or channel-specific. |
-| **Discoverability** | Private; only visible to specified recipients. | Public (within the chosen scope); appears in the Agent Store and specified channels. |
-| **Governance** | Minimal governance; no approval flows. | Might require approval flows, versioning, and lifecycle management. |
-| **Permissions** | Specified users can interact with, but not manage or publish, the agent. | Owner/co-owners manage publishing, updates, and lifecycle. |
-| **Integration** | Not integrated; sharing is only available via direct access. | Can be integrated into Teams, Copilot, or other Microsoft 365 surfaces. |
 
 ## Share an agent
 
@@ -102,6 +86,34 @@ You can select which SharePoint folders and files to share. Sharing only works w
 
 When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Manage user permissions to access file and folders directly through SharePoint.
 
+## Update your agent's About information
+
+Use the **About this agent** dialog to update the metadata that's visible in the Agent Store and in your agent's About information in Microsoft 365 Copilot. You can open this dialog for any agent you own, whether or not it's shared or submitted to your org catalog.
+
+To open the dialog, select the **More** ellipses (**...**) in the agent authoring header, and then select **About this agent**.
+
+The following fields are available.
+
+| Field | Required or optional | Maximum length | Description |
+| --- | --- | --- | --- |
+| **Short description** | Required | 80 characters | A concise summary of what the agent does. Shown in the Agent Store and in the agent's About information. Default: *Built using Microsoft 365 Copilot Agent Builder*. |
+| **Creator website** | Optional | 2,048 characters | A link to more information about you or your team, such as your profile page, your team's SharePoint site, or an internal support page. Opens when users select the creator's name in the agent details pane. Must be a valid HTTPS URL. |
+| **Privacy statement** | Optional | 2,048 characters | A link to your organization's privacy statement. Must be a valid HTTPS URL. |
+| **Terms of use** | Optional | 2,048 characters | A link to your organization's terms of use. Must be a valid HTTPS URL. |
+
+A default placeholder URL is provided for **Creator website**, **Privacy statement**, and **Terms of use**. Replace each placeholder with a URL that's appropriate for your agent; otherwise, Agent Builder shows a warning on the field.
+
+> [!NOTE]
+> Values you save in **About this agent** prepopulate the corresponding fields in the submission dialog when you submit your agent to your org catalog. For more information, see [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md).
+
+## Submit an agent to your org catalog
+
+The shared version of your agent and the Agent Store version are managed separately. You manage the shared version and can continue iterating on it, changing who it's shared with, or keeping it private for testing, at any time. Your admin manages the Agent Store version after you submit the agent for review.
+
+To make your agent broadly discoverable in your organization, submit it to your org catalog. An admin reviews the submission in the [Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents) and, if approved, publishes the agent in the **Built by your org** section of the Agent Store.
+
+For the submission flow, required fields, approval status tracking, and post-approval updates, see [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md).
+
 ## Manage agents
 
 You can access the agent management features in Microsoft 365 Copilot:
@@ -169,7 +181,10 @@ When sharing an agent and its knowledge sources, you might encounter the errors 
 
 ## Related content
 
+- [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md)
+- [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md)
 - [Publish agents for Microsoft 365 Copilot](publish.md)
+- [Manage agent requests in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-requests)
 - [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)
 - [Upload into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
 - [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell)
