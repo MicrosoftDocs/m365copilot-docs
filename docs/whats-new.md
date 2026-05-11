@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/07/2026
+ms.date: 05/11/2026
 ms.topic: overview
 ---
 
@@ -18,6 +18,14 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## May 2026
+
+### Declarative agent manifest version 1.7
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.7](declarative-agent-manifest-1.7.md) adds the following:
+
+- Added the optional `editorial_answers` property for predefined question and answer pairs based on semantic similarity.
+- Added the optional `default_response_mode` property to the [Behavior overrides object](declarative-agent-manifest-1.7.md#behavior-overrides-object) to control the default response mode.
+- Added the optional `depends_on` property to the [Conversation starters object](declarative-agent-manifest-1.7.md#conversation-starters-object) to specify capability dependencies for conversation starters.
 
 ### New agent templates added to Agent Builder
 
