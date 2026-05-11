@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 09/12/2025
+ms.date: 05/11/2026
 ---
 
 # Copilot extensibility in the Microsoft 365 ecosystem
@@ -64,7 +64,7 @@ Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other M
 
 ## Unified app model
 
-The Microsoft 365 ecosystem provides a unified app model for distributing and managing agents, Teams apps, Outlook Add-ins, SharePoint Framework solutions, and more. The app package for Microsoft 365 is a zip file that contains one or more configuration (manifest) files and your app icons.
+The Microsoft 365 ecosystem provides a unified app model for distributing and managing agents, Teams apps, Office Add-ins, and more. The app package for Microsoft 365 is a zip file that contains one or more configuration (manifest) files and your app icons.
 
 To learn more, see [Agents are apps for Microsoft 365](agents-are-apps.md).
 
