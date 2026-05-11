@@ -11,6 +11,8 @@ items:
     href: agents-are-apps.md
   - name: Copilot orchestrator
     href: orchestrator.md
+  - name: Work IQ
+    href: work-iq.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 - name: What's new
@@ -158,6 +160,8 @@ items:
           href: agent-template-corporate-communications.md
         - name: Customer Insight Assistant
           href: agent-template-customer-insight.md
+        - name: Executive Briefing Agent
+          href: agent-template-executive-briefing.md           
         - name: Idea Coach
           href: agent-template-idea-coach.md
         - name: Interview Question Assistant
@@ -166,14 +170,26 @@ items:
           href: agent-template-learning-coach.md
         - name: Meeting Coach
           href: agent-template-meeting-coach.md
+        - name: My Company Policy
+          href: agent-template-my-company-policy.md           
+        - name: Personal News Digest
+          href: agent-template-personal-news-digest.md           
+        - name: Plan My Day
+          href: agent-template-plan-my-day.md           
+        - name: Project Delta Digest
+          href: agent-template-project-delta-digest.md           
         - name: Prompt Coach
           href: agent-template-prompt-coach.md
         - name: Request for Proposal Assistant
           href: agent-template-rfp-assistant.md
         - name: Quiz Tutor
-          href: agent-template-quiz-tutor.md
+          href: agent-template-quiz-tutor.md      
         - name: Scrum Assistant
           href: agent-template-scrum-assistant.md
+        - name: SME Finder
+          href: agent-template-sme-finder.md
+        - name: Status Update Agent
+          href: agent-template-status-update-agent.md                      
         - name: Text Translator Assistant
           href: agent-template-text-translator.md
         - name: Writing Coach
@@ -187,7 +203,7 @@ items:
       - name: Copy your agent to Copilot Studio
         href: copy-agent-to-copilot-studio.md
       - name: Extend with Copilot Studio
-        href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context        
+        href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context
     - name: Best practices for building agents
       href: declarative-agent-best-practices.md
     - name: Write effective instructions
@@ -316,12 +332,48 @@ items:
     href: /legal/m365-copilot-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
   - name: API reference
     href: api/toc.yml
-- name: AI-powered development tools
+- name: Enhance AI solutions with Work IQ APIs
   items:
+  - name: Overview
+    href: work-iq-api-overview.md
+  - name: Quickstart
+    href: work-iq-api-quickstart.md
   - name: Work IQ CLI
-    href: workiq-overview.md
-- name: Extend agents at scale with Agent 365 (early access preview)
+    href: work-iq-cli.md
+  - name: Terms of use (preview)
+    href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
+- name: Extend agents at scale with Agent 365
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
+- name: Evaluate agents
+  items:
+  - name: Overview
+    href: evaluation-overview.md
+  - name: Design evaluation prompts
+    href: evaluation-design-prompts.md
+  - name: Write assertions
+    href: evaluation-write-assertions.md
+  - name: Derive quality signals
+    href: evaluation-quality-signals.md
+  - name: Evaluate multi-turn conversations
+    href: evaluation-multi-turn.md
+  - name: Organize test categories and iterate
+    href: evaluation-test-categories.md
+  - name: Use the Agent Evaluations CLI (preview)
+    items:
+    - name: Overview
+      href: evaluations-cli-overview.md
+    - name: Quickstart
+      href: evaluations-cli-quickstart.md
+    - name: Get environment variables
+      href: evaluations-cli-get-env-values.md
+    - name: Create datasets
+      href: evaluations-cli-create-tests.md
+    - name: CLI reference
+      href: evaluations-cli-reference.md
+    - name: Troubleshooting
+      href: evaluations-cli-troubleshooting.md
+    - name: License terms
+      href: /legal/m365-copilot-agent-eval-tool/license-terms?context=/microsoft-365/copilot/extensibility/context
 - name: Publish
   items:
   - name: Overview
