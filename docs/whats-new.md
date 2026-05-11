@@ -21,7 +21,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Declarative agent manifest version 1.7
 
-A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.7](declarative-agent-manifest-1.7.md) adds the following:
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.7](declarative-agent-manifest-1.7.md) adds the following features:
 
 - Added the optional `editorial_answers` property so agents can match semantically similar user queries to predefined question and answer pairs.
 - Added the optional `default_response_mode` property to the [Behavior overrides object](declarative-agent-manifest-1.7.md#behavior-overrides-object) so you can set the agent's default mode to `Auto`, `Reasoning`, or `Quick response`.
