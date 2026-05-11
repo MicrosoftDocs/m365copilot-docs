@@ -1,7 +1,7 @@
 ---
 agent: agent
-model: GPT-4.1
-tools: ['usages', 'problems', 'fetch', 'githubRepo', 'runCommands', 'edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search']
+model: Claude Opus 4.6 (copilot)
+tools: [execute/getTerminalOutput, execute/runInTerminal, read/problems, read/readFile, read/terminalSelection, read/terminalLastCommand, edit/createDirectory, edit/createFile, edit/editFiles, search, web]
 description: Generate declarative agent manifest schema reference
 ---
 
@@ -16,7 +16,7 @@ To do this, follow these steps:
 1. Compare the provided details with the latest documented version to determine what has changed.
 1. Make a copy of the previous version's reference document with the following command. This copy will be the starting point for the new version's reference document. `copy declarative-agent-manifest-{previous-version}.md declarative-agent-manifest-{new-version}.md`
 1. Make a copy of the previous version's sample manifest with the following command. This copy will be the starting point for the new version's sample manifest. `copy declarative-agent-sample-manifest-{previous-version}.json declarative-agent-sample-manifest-{new-version}.json`
-1. Make any changes and additions to the new version document. Use the [schema-reference.md](../../templates/schema-reference.md) template file for guidance.
+1. Make any changes and additions to the new version document. Use the [schema-reference.md](../../templates/schema-reference.md) template file for guidance. Set the `ms.date` value in the YAML front matter to today's date in `MM/dd/yyyy` format.
 1. Update the sample manifest with any new properties.
 1. Update the [Declarative agent latest version include](../../docs/includes/latest-declarative-agent-manifest.md) file to indicate the new version.
 1. Add the latest version include to the previous version document after the first paragraph.
