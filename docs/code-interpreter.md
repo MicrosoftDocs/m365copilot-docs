@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 03/25/2026
+ms.date: 05/11/2026
 ---
 
 # Add the code interpreter capability to your agent

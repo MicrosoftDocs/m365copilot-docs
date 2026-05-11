@@ -4,7 +4,7 @@ description: Learn how to connect to other declarative agents in Microsoft 365 a
 author: ajacks-msft
 ms.author: ajacks
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 05/11/2026
 ms.topic: article
 ---
 

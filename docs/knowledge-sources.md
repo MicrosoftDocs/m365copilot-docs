@@ -4,7 +4,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 01/28/2026
+ms.date: 05/11/2026
 ms.topic: article
 ---
 

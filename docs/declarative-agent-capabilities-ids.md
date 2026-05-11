@@ -4,7 +4,7 @@ description: Learn how to retrieve capabilities IDs for your declarative agent m
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/13/2024
+ms.date: 05/11/2026
 ms.topic: article
 ---
 
