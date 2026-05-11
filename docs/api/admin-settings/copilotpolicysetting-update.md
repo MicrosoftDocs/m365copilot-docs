@@ -20,6 +20,8 @@ Update the properties of a [copilotPolicySetting](./resources/copilotpolicysetti
 
 Update the value of a Copilot policy setting. The API resolves the correct underlying policy service and applies the update. If `policyId` is omitted from the request body, the API resolves the first matching tenant-level policy automatically.
 
+[!INCLUDE [national-cloud-support](../includes/global-only.md)]
+
 ## Permissions
 
 [!INCLUDE [permissions-intro](../includes/permissions-intro.md)]
