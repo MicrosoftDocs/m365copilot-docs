@@ -670,7 +670,7 @@ The following table describes the properties for a referenced action object.
 | `id`     | String | Required. A unique identifier for the action. It can be a GUID. |
 | `file`   | String | Required. A path to the API plugin manifest for this action. |
 
-When specifying an action as an inlined plugin manifest, the action object must conform to the [API plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest) specification.
+When specifying an action as an inlined plugin manifest, the action object must conform to the [plugin manifest](plugin-manifest-2.4.md) specification.
 
 > [!NOTE]
 > The array must contain at least one and no more than 10 objects.
