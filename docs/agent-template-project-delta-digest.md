@@ -5,7 +5,7 @@ author: krmarko
 ms.author: krmarko
 ms.reviewer: kjette
 ms.date: 05/06/2026 
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Use the Project Delta Digest template to build an agent
