@@ -4,7 +4,7 @@ description: Learn how to build API plugins for Microsoft 365 Copilot with the O
 author: rickki
 ms.author: rickki
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 05/11/2026
 ms.topic: how-to
 ---
 
@@ -185,7 +185,7 @@ The reference documentation for the manifest JSON is at [Microsoft 365 app manif
     }
     ```
 
-The reference documentation for declarative agents is at [Declarative agent schema 1.6 for Microsoft 365 Copilot](declarative-agent-manifest-1.6.md).
+The reference documentation for declarative agents is at [Declarative agent schema for Microsoft 365 Copilot](declarative-agent-manifest-1.7.md).
 
 ### Configure the plugin
 
