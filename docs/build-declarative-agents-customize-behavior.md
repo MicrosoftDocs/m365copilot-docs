@@ -1,7 +1,7 @@
 ---
 title: Add instructions and conversation starters to a declarative agent created with Microsoft 365 Agents Toolkit
 description: Learn how to customize the behavior of a declarative agent by adding instructions and conversation starters with Microsoft 365 Agents Toolkit.
-ms.date: 05/19/2025
+ms.date: 05/11/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial

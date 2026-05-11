@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/12/2025
+ms.date: 05/11/2026
 ---
 
 # Add the image generator capability to your agent

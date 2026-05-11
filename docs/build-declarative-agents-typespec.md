@@ -5,7 +5,7 @@ author: slevert
 ms.author: slevert
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 05/11/2026
 ---
 
 # Create declarative agents using Microsoft 365 Agents Toolkit and TypeSpec
