@@ -4,7 +4,7 @@ description: Learn how to connect to other declarative agents in Microsoft 365 a
 author: ajacks-msft
 ms.author: ajacks
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 05/11/2026
 ms.topic: article
 ---
 
@@ -35,13 +35,13 @@ An agent might work well with a set of documents and actions but still be diffic
 
 ## Enabling connected agents
 
-Connect to other declarative agents by including the agents' title IDs in the existing [declarative agent's manifest](declarative-agent-manifest-1.6.md).
+Connect to other declarative agents by including the agents' title IDs in the existing [declarative agent's manifest](declarative-agent-manifest-1.7.md).
 
 First, get the title ID of the agent to connect. The title ID of a declarative agent is a string of a single letter, an underscore, and a GUID. You can find it in the output of the **Provision** command in the Microsoft 365 Agents Toolkit or in [developer mode](debugging-agents-copilot-studio.md).
 
 :::image type="content" source="assets/images/declarative-agents/developer-mode-title-id.png" alt-text="Screenshot of Microsoft 365 Copilot session where Copilot has returned a card with debugging information showing the title ID":::
 
-Add the title ID to the [worker_agents](declarative-agent-manifest-1.6.md) property as the `id`. The `worker_agents` property was added in declarative agent schema version 1.6.
+Add the title ID to the [worker_agents](declarative-agent-manifest-1.7.md) property as the `id`. The `worker_agents` property was added in declarative agent schema version 1.6.
 
 ## Best practices
 

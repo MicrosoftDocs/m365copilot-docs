@@ -4,14 +4,14 @@ description: Learn about plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 04/13/2026
+ms.date: 05/11/2026
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
 
 # Plugins for Microsoft 365 Copilot
 
-Plugins enable declarative agents in Microsoft 365 Copilot to interact with MCP servers or REST APIs that have an [OpenAPI description](https://www.openapis.org/what-is-openapi). With an plugin, users can ask a declarative agent to not only query an MCP server or REST API for information, but to create, update, and delete data and objects. Anything the MCP server or REST API can do is accessible via natural language prompts.
+Plugins enable declarative agents in Microsoft 365 Copilot to interact with Model Context Protocol (MCP) servers or REST APIs that have an [OpenAPI description](https://www.openapis.org/what-is-openapi). By using a plugin, users can ask a declarative agent to not only query an MCP server or REST API for information, but also to create, update, and delete data and objects. Anything the MCP server or REST API can do is accessible through natural language prompts.
 
 > [!NOTE]
 > In addition to calling MCP servers or REST APIs, there's a preview feature that enables a plugin to call APIs in a local library. We encourage you to experiment with this feature, but it shouldn't be used in a production plugin. For more information, see [Build API plugins for Microsoft 365 Copilot with the Office JavaScript Library](build-api-plugins-local-office-api.md).
@@ -139,7 +139,7 @@ Copilot asks the user before sending any data for the first time to a plugin.
 
 :::image type="content" source="assets/images/api-plugins/first-connection-confirmation.png" alt-text="A screenshot of a plugin confirmation dialog.":::
 
-After the user confirms the connection, MCP server tools and APIs that only retrieve data don't require confirmation, while tools and APIs that modify data do. Plugin developers can override these defaults. For details, see [Confirmation prompts for API plugins for Microsoft 365 Copilot](api-plugin-confirmation-prompts.md).
+After the user confirms the connection, MCP server tools and APIs that only retrieve data don't require confirmation, while tools and APIs that modify data do. Plugin developers can override these defaults. For details, see [Confirmation prompts for MCP and API plugins for Microsoft 365 Copilot](plugin-confirmation-prompts.md).
 
 ## Customizing response presentation
 
@@ -178,7 +178,7 @@ There are two tools developers can use to generate API plugin packages.
 
 ### Declarative agent plugins
 
-When a declarative agent includes up to five plugins defined in the [declarative agent manifest](declarative-agent-manifest-1.6.md), the plugins are always injected into the prompt. When more than five plugins are defined, the agent uses semantic matching. Semantic matching is based on the plugin's description, not on any of the individual functions within the plugin itself.
+When a declarative agent includes up to five plugins defined in the [declarative agent manifest](declarative-agent-manifest-1.7.md), the agent always injects the plugins into the prompt. When the agent includes more than five plugins, it uses semantic matching. Semantic matching is based on the plugin's description, not on any of the individual functions within the plugin itself.
 
 A plugin can include an unlimited number of functions. All functions are returned, even if only one function is matched. However, due to token window limits, the quality of the responses might degrade if more than 10 functions are included.
 
