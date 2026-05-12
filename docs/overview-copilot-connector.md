@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 04/20/2026
+ms.date: 05/12/2026
 ---
 
 # Microsoft 365 Copilot connectors overview
