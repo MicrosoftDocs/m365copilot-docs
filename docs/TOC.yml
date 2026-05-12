@@ -52,7 +52,7 @@ items:
       href: declarative-agent-tool-comparison.md
     - name: Choose between Agent Builder and Copilot Studio
       href: copilot-studio-experience.md
-  - name: Samples
+  - name: Agent samples
     href: samples.md
 
 - name: Use Agent Builder
