@@ -29,7 +29,7 @@ Before you begin, you need to register with your OAuth 2.0 provider to get a cli
 > - MCP and API plugins only support the authorization code flow for OAuth 2.0.
 > - OAuth 2.0 servers that return `307 Temporary Redirect` HTTP status codes from their token endpoint aren't supported.
 
-To enable OAuth 2.0 authentication, you need to register an OAuth client in the Teams developer portal. You can register an OAuth client with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) in Visual Studio Code or by manually registering in the Teams developer portal.
+To enable OAuth 2.0 authentication, register an OAuth client in the Teams developer portal. You can register an OAuth client by using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) in Visual Studio Code or by manually registering in the Teams developer portal.
 
 > [!NOTE]
 > Declarative agents don't provide a built-in way for users to manually clear stored OAuth credentials. The Bot Framework Token Service centrally manages tokens, and they might continue to persist after an agent is uninstalled due to SSO caching, tenant settings, or client differences.
@@ -40,9 +40,9 @@ To enable OAuth 2.0 authentication, you need to register an OAuth client in the 
 
 ### Register an OAuth client with Agents Toolkit
 
- Agents Toolkit registers your OAuth client and updates your app package for you when you [create an agent with an MCP plugin](build-mcp-plugins.md) (if the server requires authentication) or [create an agent with API plugin from an existing OpenAPI document](build-api-plugins-existing-api.md).
+ Agents Toolkit registers your OAuth client and updates your app package when you [create an agent with an MCP plugin](build-mcp-plugins.md) (if the server requires authentication) or [create an agent with API plugin from an existing OpenAPI document](build-api-plugins-existing-api.md).
 
-For API plugins, you must have the `securitySchemes` property defined in your OpenAPI document. For more information, see [OAuth 2.0](https://swagger.io/docs/specification/authentication/oauth2/).
+For API plugins, you must define the `securitySchemes` property in your OpenAPI document. For more information, see [OAuth 2.0](https://swagger.io/docs/specification/authentication/oauth2/).
 
 ```yml
 securitySchemes:

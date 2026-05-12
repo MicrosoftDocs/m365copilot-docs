@@ -14,7 +14,7 @@ This guide provides troubleshooting advice for common issues you might encounter
 
 ## Enable developer mode
 
-[Enabling developer mode](prerequisites.md#enabling-developer-mode) surfaces logs and error in agent responses. This information is essential for debugging. To enable developer mode, type the following command in Microsoft Copilot.
+[Enabling developer mode](prerequisites.md#enabling-developer-mode) surfaces logs and errors in agent responses. This information is essential for debugging. To enable developer mode, type the following command in Microsoft Copilot.
 
 ```text
 -developer on
@@ -26,7 +26,7 @@ MCP tools available to your agent show up in the **Actions** section of the debu
 
 ### No tools listed
 
-If the **Actions** section of the debug information card doesn't list any MCP tools, check the following.
+If the **Actions** section of the debug information card doesn't list any MCP tools, check the following items.
 
 - Confirm your MCP server is running and you're connecting to the correct MCP endpoint in your plugin manifest.
 - Verify your plugin manifest includes the expected tools in the `functions` property.
@@ -54,8 +54,8 @@ If the **Actions** section of the debug information card doesn't list any MCP to
 
 ### Tools not triggering from Copilot chat
 
-- Revisit your tool and parameter descriptions to ensure they provide sufficient context. Consider rewriting using "Use this function/parameter when..." phrasing.
-- Keep descriptions under 1024 characters - text beyond 1024 characters is ignored.
+- Revisit your tool and parameter descriptions to ensure they provide sufficient context. Consider rewriting them using "Use this function/parameter when..." phrasing.
+- Keep descriptions under 1,024 characters. Text beyond 1,024 characters is ignored.
 - Ensure tool visibility is set correctly.
   - For MCP apps, `_meta.ui.visibility` includes `model`.
   - For OpenAI SDK apps, `meta["openai/visibility"]` is set to `public`.
@@ -82,10 +82,10 @@ If the correct MCP tool is called but your UI widget doesn't render in the respo
 ### Widget loads with no data
 
 - Verify the tool's response structure.
-  - `content` should contain the data (model) only.
-  - `structuredContent` should contain the data and the widget.
-  - `_meta` should contain the widget only.
-- Ensure the required data is present in `structuredContent` or `_meta`.
+  - `content` should contain only the data (model).
+  - `structuredContent` should contain both the data and the widget.
+  - `_meta` should contain only the widget.
+- Ensure `structuredContent` or `_meta` includes the required data.
 
 ### Widget has a double scrollbar
 
@@ -106,16 +106,16 @@ Fullscreen view isn't supported across all Copilot hosts. As a best practice, al
 
 ### Tool result expiry issues
 
-Ensure tool responses sent via `content` or `structuredContent` aren't excessively large. If your widget requires rich metadata that isn't useful for the model, such as avatar URLs or UI-specific details, include the full data in `_meta` and provide a concise summary in `content`. This ensures the model retains key information while supporting an effective multi-turn experience.
+Ensure tool responses sent through `content` or `structuredContent` aren't excessively large. If your widget requires rich metadata that isn't useful for the model, such as avatar URLs or UI-specific details, include the full data in `_meta` and provide a concise summary in `content`. This approach ensures the model retains key information while supporting an effective multiturm experience.
 
 ### Duplicate data in widget and text summary
 
-You can resolve this problem with one of the following options.
+Resolve this problem by using one of the following options:
 
 - **Optimize data separation:** use `_meta` for widget-specific data and `content` for model-visible summaries.
 - **Steer formatting:** use instructions in the declarative agent manifest to guide how responses are structured and presented.
 
-## Authentication issues
+## Authentication problems
 
 ### App ID mismatch between auth configuration and plugin
 
@@ -159,7 +159,7 @@ Contact your organization's administrators to review and enable access for your 
 
 ### Sign in button is inactive or displays general error
 
-If your sign in button is inactive or disabled, or selecting it gives a general "Request cannot be processed" error, this could indicate temporary authentication or session issues. Retry the query. If the issue persists, reinstall the app or contact your organization's administrators.
+If your sign in button is inactive or disabled, or selecting it gives a general "Request cannot be processed" error, this condition might indicate temporary authentication or session problems. Retry the query. If the problem continues, reinstall the app or contact your organization's administrators.
 
 ### Sign in popup fails to open
 
@@ -167,19 +167,19 @@ Enable popups for the site in your browser's settings and try again.
 
 ### Incorrect credentials error
 
-If you see an "Incorrect credentials" error in the sign in popup or chat response, ensure you're entering the correct credentials. If the error persists, ensure that the user has the required permissions.
+If you see an "Incorrect credentials" error in the sign in popup or chat response, make sure you're entering the correct credentials. If the error persists, ensure that the user has the required permissions.
 
 ### Sign in URL not found
 
-Uninstall and reinstall the app, then try signing in again.
+Uninstall and reinstall the app, and then try signing in again.
 
 ### Internal server error during authentication
 
-Check details in the authentication popup and contact your organization's administrators for permissions issues.
+Check details in the authentication popup and contact your organization's administrators for permissions problems.
 
 ### Consent dialog appears during sign in
 
-If a consent dialog appears requesting permissions or business justification, review any requested permissions and provide a business justification if necessary. If you're unsure, or if the consent dialog requests permissions that require admin consent, contact your organization's administrators.
+If a consent dialog appears requesting permissions or business justification, review the requested permissions and provide a business justification if necessary. If you're unsure, or if the consent dialog requests permissions that require admin consent, contact your organization's administrators.
 
 ## Related content
 
