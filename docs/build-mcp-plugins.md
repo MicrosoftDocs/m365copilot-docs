@@ -62,7 +62,7 @@ To add tools from the MCP server:
     :::image type="content" source="assets/images/api-plugins/mcp-tool-selection.png" alt-text="A screenshot of the tool selection interface in VS Code":::
 
     > [!IMPORTANT]
-    > Tools and UX widgets from remote MCP servers are supported. For more information, see [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md).
+    > The agent supports tools and UX widgets from remote MCP servers. For more information, see [Add MCP apps to declarative agents in Microsoft 365 Copilot](plugin-mcp-apps.md).
 
 1. Select **OAuth (with static registration)** as the authentication type.
 
@@ -120,4 +120,4 @@ To use the agent:
 
 ## Related content
 
-- [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md)
+- [Add MCP apps to declarative agents in Microsoft 365 Copilot](plugin-mcp-apps.md)
