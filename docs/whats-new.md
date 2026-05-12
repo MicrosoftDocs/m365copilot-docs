@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 04/15/2026
+ms.date: 05/11/2026
 ms.topic: overview
 ---
 
@@ -17,7 +17,43 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## May 2026
+
+### Declarative agent manifest version 1.7
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.7](declarative-agent-manifest-1.7.md) adds the following features:
+
+- Added the optional `editorial_answers` property so agents can match semantically similar user queries to predefined question and answer pairs.
+- Added the optional `default_response_mode` property to the [Behavior overrides object](declarative-agent-manifest-1.7.md#behavior-overrides-object) so you can set the agent's default mode to `Auto`, `Reasoning`, or `Quick response`.
+- Added the optional `depends_on` property to the [Conversation starters object](declarative-agent-manifest-1.7.md#conversation-starters-object) to specify capability dependencies for conversation starters.
+
+### New agent templates added to Agent Builder
+
+Seven new agent templates are now available in Agent Builder to help you quickly build declarative agents for common workplace scenarios:
+
+- [Executive Briefing Agent](agent-template-executive-briefing.md)
+- [My Company Policy](agent-template-my-company-policy.md)
+- [Personal News Digest](agent-template-personal-news-digest.md)
+- [Plan My Day](agent-template-plan-my-day.md)
+- [Project Delta Digest](agent-template-project-delta-digest.md)
+- [SME Finder](agent-template-sme-finder.md)
+- [Status Update Agent](agent-template-status-update-agent.md)
+
+For more information, see [Agent templates overview](agent-templates-overview.md).
+
+### Evaluate agents
+
+Evaluate agents by using a comprehensive evaluation framework and tooling to refine agent performance. The Agent Evaluations CLI tool enables developers to create, run, and analyze tests for their agents. For more information, see [Agent evaluation overview](evaluation-overview.md) and [Agent Evaluations CLI overview](evaluations-cli-overview.md).
+
+### Package Management API updates (preview)
+
+The Package Management API has new capabilities for IT administrators to manage apps and agents in their Microsoft 365 organization. Administrators can now block and unblock packages to control their availability, update package metadata, and reassign package ownership. For more information, see [Package Management API overview](api/admin-settings/package/overview.md).
+
 ## April 2026
+
+### Agent Registration API (preview)
+
+The Agent Registration API enables developers and administrators to programmatically register and manage agents within their Microsoft 365 environment. The API supports creating, retrieving, updating, and deleting agent registrations with associated metadata and agent cards. For more information, see [Agent Registration API overview](api/admin-settings/agent-registration/overview.md).
 
 ### Copilot policy settings API (preview)
 

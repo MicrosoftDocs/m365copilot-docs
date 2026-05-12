@@ -4,7 +4,7 @@ description: Learn about plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 04/13/2026
+ms.date: 05/11/2026
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -178,7 +178,7 @@ There are two tools developers can use to generate API plugin packages.
 
 ### Declarative agent plugins
 
-When a declarative agent includes up to five plugins defined in the [declarative agent manifest](declarative-agent-manifest-1.6.md), the plugins are always injected into the prompt. When more than five plugins are defined, the agent uses semantic matching. Semantic matching is based on the plugin's description, not on any of the individual functions within the plugin itself.
+When a declarative agent includes up to five plugins defined in the [declarative agent manifest](declarative-agent-manifest-1.7.md), the agent always injects the plugins into the prompt. When the agent includes more than five plugins, it uses semantic matching. Semantic matching is based on the plugin's description, not on any of the individual functions within the plugin itself.
 
 A plugin can include an unlimited number of functions. All functions are returned, even if only one function is matched. However, due to token window limits, the quality of the responses might degrade if more than 10 functions are included.
 
