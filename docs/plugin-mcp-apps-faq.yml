@@ -1,0 +1,102 @@
+### YamlMime:FAQ
+metadata:
+  title: Troubleshoot MCP apps in Microsoft 365 Copilot - Common issues and fixes
+  description: Fix common issues with MCP apps in Microsoft 365 Copilot, including widget rendering problems, tool discovery failures, authentication errors, and response issues.
+  author: jasonjoh
+  ms.date: 04/24/2026
+  ms.localizationpriority: medium
+
+title: Troubleshoot MCP apps in Microsoft 365 Copilot
+summary: |
+  This guide provides troubleshooting advice for common issues you might encounter when developing a [Model Context Protocol (MCP) app to integrate with a declarative agent](plugin-mcp-apps.md) inside Microsoft 365 Copilot.
+
+  ## Enable developer mode
+
+  [Enabling developer mode](prerequisites.md#enabling-developer-mode) surfaces logs and error in agent responses. This information is essential for debugging. To enable developer mode, type the following command in Microsoft Copilot.
+
+  ```text
+  -developer on
+  ```
+
+  MCP tools available to your agent show up in the **Actions** section of the debug information card. For details about the debug information card, see [Use developer mode in Microsoft 365 Copilot to test and debug agents](debugging-agents-copilot-studio.md).
+
+sections:
+- name: Discovery and entry problems
+  questions:
+  - question: No tools listed
+    answer: |
+      If the **Actions** section of the debug information card doesn't list any MCP tools, check the following.
+
+      - Confirm your MCP server is running and you're connecting to the correct MCP endpoint in your plugin manifest.
+      - Verify your plugin manifest includes the expected tools in the `functions` property.
+      - Verify that the MCP server runtime specified in the `runtimes` property in your plugin manifest:
+        - References the tools in the `mcp_tool_description` property by either:
+          - Referencing a JSON file that contains the tool descriptions in the `file` property **OR**
+          - Listing the tool descriptions inline in the `tools` property
+        - Includes the tool names in the `run_for_functions` property.
+
+      ```json
+      "runtimes": [
+        {
+          "type": "RemoteMCPServer",
+          "spec": {
+            "url": "https://api.contoso.com/mcp",
+            "mcp_tool_description": "mcp-tools.json"
+          },
+          "run_for_functions": [
+            "get_widget",
+            "create_widget"
+          ]
+        }
+      ]
+      ```
+
+  - question: Tools not triggering from Copilot chat
+    answer: |
+      - Revisit your tool and parameter descriptions to ensure they provide sufficient context. Consider rewriting using "Use this function/parameter when..." phrasing.
+      - Keep descriptions under 1024 characters - text beyond 1024 characters is ignored.
+      - Ensure tool visibility is set correctly.
+        - For MCP apps, `_meta.ui.visibility` includes `model`.
+        - For OpenAI SDK apps, `meta["openai/visibility"]` is set to `public`.
+
+  - question: The wrong tool is selected
+    answer: |
+      - Avoid tools with similar names or overlapping descriptions.
+      - Add clear differentiators in descriptions explaining when each tool should be used.
+
+- name: Widget issues
+  questions:
+  - question: Widget doesn't render
+    answer: |
+      If the correct MCP tool is called but your UI widget doesn't render in the response, your MCP server is likely only returning structured content with no UI component. Ensure that UI binding is configured correctly.
+
+      - For MCP apps, tool definition includes `_meta.ui.resourceUri` set to a registered HTML resource with MIME type `text/html;profile=mcp-app`.
+      - For OpenAI SDK apps, tool definition includes `_meta["openai/outputTemplate"]` set to a registered HTML resource with MIME type `text/html+skybridge`.
+
+  - question: Widget fails to load
+    answer: |
+      - Open your browser's developer tools and check for Content Security Policy (CSP) violations in the console. Ensure that requests from the widget's host URL are allow-listed. For more information, see [MCP server requirements for MCP apps](plugin-mcp-apps.md#mcp-server-requirements-for-mcp-apps).
+      - Verify that your widget compiles all HTML and JavaScript dependencies into a single file with no external unresolved assets.
+
+  - question: Widget loads with no data
+    answer: |
+      - Verify the tool's response structure.
+        - `content` should contain the data (model) only.
+        - `structuredContent` should contain the data and the widget.
+        - `_meta` should contain the widget only.
+      - Ensure the required data is present in `structuredContent` or `_meta`.
+
+  - question: Widget has a double scrollbar
+    answer: |
+      The Copilot host container already has a scroll with max height. Disable inner scroll in your widget by setting `overflow: hidden` in your container styles.
+
+  - question: Hyperlinks in widget don't open
+    answer: |
+      Anchor tags `<a>` don't work for external links in Copilot. Use the appropriate platform APIs instead.
+
+      - For MCP apps, use `app.openLink`.
+      - For OpenAI SDK apps, use `window.openai.openExternal`.
+
+  - question: Fullscreen doesn't work in some Copilot hosts
+    answer: |
+      Fullscreen view isn't supported across all Copilot hosts. As a best practice, always check for host capabilities and conditionally display UI elements (such as a fullscreen button). For more information, see [Verify API availability](plugin-mcp-apps.md#verify-api-availability).
