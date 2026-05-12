@@ -6,6 +6,31 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/docs/api-plugin-authentication.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-confirmation-prompts.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-confirmation-prompts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-debug-local.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-debug-local",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-ui-widgets.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-mcp-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-ui-widgets-guidelines.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugin-mcp-apps-ui-guidelines",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/docs/workiq-overview.md",
       "redirect_url": "/microsoft-365/copilot/extensibility/work-iq-cli",
       "redirect_document_id": true

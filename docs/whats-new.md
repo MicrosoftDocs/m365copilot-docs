@@ -71,7 +71,7 @@ You can now create agents more quickly with Agent Builder in Microsoft 365 Copil
 
 ### Interactive UI widgets for declarative agents
 
-You can now add interactive UI widgets to your declarative agents by extending MCP server-based actions using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk). Widgets can render inline or in full-screen mode within Microsoft 365 Copilot. For more information, see [Add interactive UI widgets to declarative agents](declarative-agent-ui-widgets.md).
+You can now add interactive UI widgets to your declarative agents by extending MCP server-based actions using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk). Widgets can render inline or in full-screen mode within Microsoft 365 Copilot. For more information, see [Add MCP apps to declarative agents in Microsoft 365 Copilot](plugin-mcp-apps.md).
 
 ## February 2026
 
