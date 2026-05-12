@@ -12,7 +12,7 @@ ms.topic: article
 
 <!-- markdownlint-disable MD024 -->
 
-Plugins enable declarative agents in Microsoft 365 Copilot to call Model Context Protocol (MCP) servers or REST APIs to retrieve data and perform tasks. The MCP or API server must be addressable over the internet in order for Microsoft 365 Copilot to reach them. Typically, debugging tools host debug sessions on `localhost` (127.0.0.1), which is only accessible from the machine running the debugging tool. By using a reverse proxy, such as [dev tunnels](/azure/developer/dev-tunnels/overview), you can expose your debug session to the internet to enable debugging calls from Microsoft 365 Copilot.
+Plugins enable declarative agents in Microsoft 365 Copilot to call Model Context Protocol (MCP) servers or REST APIs to retrieve data and perform tasks. Microsoft 365 Copilot must reach the MCP or API server over the internet. Typically, debugging tools host debug sessions on `localhost` (127.0.0.1), which is only accessible from the machine running the debugging tool. By using a reverse proxy, such as [dev tunnels](/azure/developer/dev-tunnels/overview), you can expose your debug session to the internet to enable debugging calls from Microsoft 365 Copilot.
 
 This article shows you how to use the `devtunnel` tool to enable local debugging for your MCP server or API.
 
@@ -26,7 +26,7 @@ This article shows you how to use the `devtunnel` tool to enable local debugging
 
 ## Create a persistent dev tunnel
 
-The `devtunnel` CLI allows you to create a persistent dev tunnel - a tunnel that you can stop and start as needed without the hosted URL changing. Using a tunnel with a persistent URL simplifies debugging for plugins since there's no need to update your declarative agent app packages with new URLs.
+The `devtunnel` CLI enables you to create a persistent dev tunnel - a tunnel that you can stop and start as needed without the hosted URL changing. Using a tunnel with a persistent URL simplifies debugging for plugins since you don't need to update your declarative agent app packages with new URLs.
 
 1. If you aren't already logged in to the devtunnel CLI, use `devtunnel user login --help` to see the available options. Log in to the CLI before proceeding.
 
@@ -60,7 +60,7 @@ Once the tunnel is enabled, you can stop the tunnel with **CTRL + C**. You can r
 
 ## Using the dev tunnel
 
-To use your dev tunnel for debugging, you need to sideload an app package with the dev tunnel's URL in place of the server's URL.
+To use your dev tunnel for debugging, sideload an app package with the dev tunnel's URL in place of the server's URL.
 
 ### [MCP plugins](#tab/mcp)
 

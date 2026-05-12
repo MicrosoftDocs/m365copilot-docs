@@ -12,7 +12,7 @@ ms.topic: article
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-The first time Microsoft 365 Copilot uses an Model Context Protocol (MCP) or API plugin, it notifies the user and asks them to allow or cancel the operation. If the user allows Copilot to connect to the plugin, all future operations that retrieve data (HTTP GET operations) don't require any confirmation. Other HTTP operations prompt the user, showing the data to be sent and giving the user a choice to allow or decline.
+The first time Microsoft 365 Copilot uses a Model Context Protocol (MCP) or API plugin, it notifies the user and asks them to allow or cancel the operation. If the user allows Copilot to connect to the plugin, all future operations that retrieve data (HTTP GET operations) don't require any confirmation. Other HTTP operations prompt the user, showing the data to be sent and giving the user a choice to allow or decline.
 
 :::image type="content" source="assets/images/api-plugins/first-connection-confirmation.png" alt-text="Copilot confirmation dialog for connecting to a plugin for the first time":::
 
