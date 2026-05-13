@@ -35,7 +35,7 @@ When you build agents, you can tailor the user experience by providing *in conte
 
 - **In-context experience**: An in-app experience where users interact with Microsoft 365 Copilot Chat in the context of an app, such as a Teams chat or a Word document. Users can `@`-mention the agent and interact with it directly within the app experience.
 
-  To build in-context experiences, you typically use actions (API plugins) that extend Microsoft 365 Copilot's skills in the flow of a host app. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems.
+  To build in-context experiences, use actions (API plugins) that extend Microsoft 365 Copilot's skills in the flow of a host app. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This capability also enables Microsoft 365 Copilot to interact with external systems.
 
 - **Immersive experience**: The full experience of the Copilot app in Microsoft 365. Users chat directly with the agent embedded in Copilot.
 
