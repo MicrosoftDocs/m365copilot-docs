@@ -4,22 +4,28 @@ description: Learn the prerequisites for extending Microsoft 365 Copilot with ag
 author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
-ms.date: 11/17/2025
+ms.date: 05/13/2026
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
 
 You can build agents to extend, enrich, and customize Microsoft 365 Copilot for the unique way your customers work. This article describes how to set up your development environment to extend Microsoft 365 Copilot.
 
-Microsoft 365 Copilot Chat is a broadly accessible AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend its capabilities and can be grounded on instructions or the web. Users in tenants that have Copilot Studio metering enabled and users with Microsoft 365 Copilot licenses have access to agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft 365 Copilot connectors.
+Microsoft 365 Copilot Chat is a broadly accessible AI chat interface that is available to all Microsoft 365 users. Copilot Chat users have access to agents that extend its capabilities and can be grounded on instructions or the web. Users in tenants that have Copilot Studio pay-as-you-go billing enabled (consumed as Copilot Credits) and users with Microsoft 365 Copilot licenses have access to agents with enhanced capabilities, such as grounding with SharePoint data and Microsoft 365 Copilot connectors.
 
-For Microsoft 365 Copilot license information, see [License options](/copilot/microsoft-365/microsoft-365-copilot-licensing).
+For Microsoft 365 Copilot license information, see [License options](/microsoft-365/copilot/microsoft-365-copilot-licensing).
+
+> [!NOTE]
+> Beyond declarative and custom engine agents, the broader Copilot extensibility stack also includes **Work IQ** and **Agent 365** as platform pillars for agent identity, governance, and orchestration. For more information, see [Agents overview](agents-overview.md).
 
 ## Copilot development environment
 
 You have the following options for a Copilot development environment:
 
 - A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities.
+
+    > [!IMPORTANT]
+    > Eligibility for the Microsoft 365 Developer Program is limited to Visual Studio Professional/Enterprise subscribers, ISV Success Program members, eligible Microsoft AI Cloud Partner Program (MAICPP) partners, and Premier/Unified Support customers. 
 
     At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities.
 
@@ -40,7 +46,7 @@ Contact your Microsoft representative to add Copilot to your Microsoft plan. Ent
 
 ### Organizations without Microsoft 365 Copilot licenses
 
-You can develop Copilot extensibility solutions for users in organizations without Copilot licenses, with some limitations to your agent capabilities. If you want to take advantage of agent capabilities such as grounding on organizational data, you can enable Copilot Studio metering.
+You can develop Copilot extensibility solutions for users in organizations without Copilot licenses, with some limitations to your agent capabilities. If you want to take advantage of agent capabilities such as grounding on organizational data, you can enable Copilot Studio pay-as-you-go billing (Copilot Credits).
 
 ## Requirements for Copilot extensibility options
 
@@ -57,15 +63,15 @@ To learn more and choose the best extensibility path for your users, see [Copilo
 To build agents, you need to complete prerequisites depending on the tool that you choose to use.
 
 > [!NOTE]
-> Some agent capabilities are only available to users in tenants with Copilot Studio metered usage enabled or users with Microsoft 365 Copilot licenses. For example, if you want to build agents that are grounded in organizational data, you need to enable metering or purchase a Microsoft 365 Copilot license.
+> Some agent capabilities are only available to users in tenants with Copilot Studio pay-as-you-go billing enabled (consumed as Copilot Credits) or users with Microsoft 365 Copilot licenses. For example, if you want to build agents that are grounded in organizational data, you need to enable pay-as-you-go billing or purchase a Microsoft 365 Copilot license.
 
 #### Microsoft 365 Agents Toolkit requirements
 
-You can use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data via SharePoint or Copilot connectors, you need to either set up billing in your tenant or purchase a Microsoft 365 Copilot license.
+You can use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data, you need to either set up pay-as-you-go billing in your tenant or purchase a Microsoft 365 Copilot license.
 
 To build agents with Agents Toolkit and other IDEs, you must have your admin enable the ability to sideload a *custom app* to your tenant.
 
-To enable sideloading, from Teams admin center, select **Teams apps** > **Setup policies** > **Global (Org-wide default)**, and switch the  **Upload custom apps** toggle to **On**.
+To enable sideloading, from Teams admin center, select **Teams apps** > **Setup policies** > **Global (Org-wide default)**, and switch the **Upload custom apps** toggle to **On**.
 
 :::image type="content" source="./assets/images/tac-setup-policies.png" alt-text="Screenshot of org-wide setup policy with 'Upload custom apps' toggle enabled in Teams admin center":::
 
@@ -73,7 +79,7 @@ To manage your sideloaded custom apps, including agents, from the Teams client, 
 
 #### Copilot Studio requirements
 
-Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Copilot connectors, you need to either set up billing in your tenant or purchase a Copilot Studio license. For more information, see [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
+Copilot Studio is available to all Microsoft 365 users. You can use Copilot Studio to create agents and actions. If you want to build agents that are grounded on organizational data via SharePoint or Copilot connectors, you need to either set up pay-as-you-go billing in your tenant or purchase a Copilot Studio license. For more information, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
 The following steps are required for you to use Copilot Studio to build agents:
 
@@ -88,7 +94,7 @@ To enable developer mode, in Copilot Chat, type `-developer on`. To disable deve
 
 :::image type="content" source="./assets/images/developer-mode-on.png" alt-text="Screenshot of `Microsoft 365 Copilot` session where user has typed `-developer on` to successfully enable developer mode":::
 
-Developer mode is only available within Microsoft 365 Copilot (Copilot for Work) experiences. For more information, see [Debugging agents](debugging-agents-copilot-studio.md).
+Developer mode is only available within the licensed Microsoft 365 Copilot experience. For more information, see [Debugging agents](debugging-agents-copilot-studio.md).
 
 ## Microsoft 365 Copilot developer licenses
 
@@ -99,21 +105,23 @@ Accounts used to test agents that are grounded on organizational data or that in
 Agents for Copilot are available through multiple licensing models, each offering different levels of functionality:
 
 - **Microsoft 365 with a Microsoft 365 Copilot add-on license** - Users with a Microsoft 365 subscription and a Copilot add-on license have full access to Copilot agent experiences across supported apps and platforms.
-- **Usage-based billing (pay-as-you-go)** - Tenants can enable agent access without a full license, with some limitations to agent configuration options.
+- **Microsoft 365 Copilot Business** - A standalone SKU introduced for small and medium businesses. Provides Copilot agent access aligned with Microsoft 365 Business plans.
+- **Microsoft 365 E7 (Frontier Suite)** - A bundle that includes Microsoft 365 E5, Microsoft 365 Copilot, and Agent 365 capabilities for enterprise customers.
+- **Usage-based billing (pay-as-you-go)** - Tenants can enable agent access without a full license, with some limitations to agent configuration options. Consumption is measured in Copilot Credits.
 - **Microsoft 365 without a Copilot add-on license** - Users might see Copilot Chat entry points in some apps, but access to agent experiences is limited or disabled based on tenant settings.
 
 The following table summarizes agent access based on user licensing type.
 
 | Licensing model                                              | Agent access |
 |--------------------------------------------------------|-------------|
-| **Licensed users**                                     | Have both a Microsoft 365 subscription and the Copilot add-on license. They receive full access to Copilot Chat and agent experiences across supported apps and platforms. This license also enables usage of agents grounded in tenant data (SharePoint, Microsoft Graph) and is required for authoring agents in Copilot Studio. |
-| **Usage-based billing (pay-as-you-go users)**                              | Belong to tenants with usage-based billing enabled. They can access Copilot Chat and agents without a full Copilot license. Usage billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features—such as agent interactions or grounding—might require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. |
+| **Licensed users**                                     | Have both a Microsoft 365 subscription and the Copilot add-on license (including Microsoft 365 Copilot Business and the E7 Frontier Suite, where applicable). They receive full access to Copilot Chat and agent experiences across supported apps and platforms. This license also enables usage of agents grounded in tenant data (SharePoint, Microsoft Graph) and is required for authoring agents in Copilot Studio. |
+| **Usage-based billing (pay-as-you-go users)**                              | Belong to tenants with pay-as-you-go billing enabled (consumed as Copilot Credits). Users can access Copilot Chat and agents without a full Copilot license. Usage billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features—such as agent interactions or grounding—might require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. |
 | **Microsoft 365 subscribers without a Copilot add-on license** | Might see Copilot Chat entry points in some apps, but access is limited or disabled depending on tenant configuration and rollout status. These users do not have access to agent authoring or advanced agent experiences. |
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
 > [!NOTE]
-> Usage-based billing isn't supported in Microsoft 365 Government Community Cloud High (GCCH) and Government Community Cloud Moderate (GCCM) environments.
+> Usage-based billing isn't supported in Microsoft 365 Government Community Cloud High (GCCH) and Government Community Cloud Moderate (GCCM) environments. Microsoft 365 Copilot itself is generally available in GCC High; pay-as-you-go billing for Copilot Studio in GCC High is announced but not yet GA.
 
 | Capability | Copilot Chat (no usage-based billing)* | Copilot Chat (usage-based billing)** | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
@@ -124,8 +132,10 @@ The following table lists the agent types and agent capabilities that are availa
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom instructions | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code interpreter | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image generator| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MCP Apps (interactive UI widgets) | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scoped web search | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embedded knowledge | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copilot connectors</br> | :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SharePoint data</br>| :x: | :white_check_mark: | :white_check_mark: |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom knowledge:</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embedded file content</br>| :x: | :white_check_mark: | :white_check_mark: |
@@ -147,12 +157,17 @@ The following table lists the agent types and agent capabilities that are availa
 
 ### Can I use my Microsoft 365 Developer Program subscription to develop with Copilot?
 
-You can use your Microsoft 365 Developer Program subscription to build agents with limited capabilities that are grounded on web search. Because Microsoft 365 Developer Program subscriptions don't support commerce, you can't purchase Microsoft 365 Copilot licenses or enable metering, so you can't use your subscription to build agents grounded on organizational data or add other capabilities.
+You can use your Microsoft 365 Developer Program subscription to build agents with limited capabilities that are grounded on web search. Because Microsoft 365 Developer Program subscriptions don't support commerce, you can't purchase Microsoft 365 Copilot licenses or enable pay-as-you-go billing, so you can't use your subscription to build agents grounded on organizational data or add other capabilities.
 
 ### I'm not an ISV and I don't have a Microsoft 365 Copilot license. Can I get a Microsoft 365 Copilot development environment?
 
-If you have a Microsoft 365 subscription, you can build and test agents in Microsoft 365 Copilot Chat, with limited capabilities. You need to enable metering in your tenant or purchase a Microsoft 365 Copilot license if you want to build agents that are grounded in organizational data.
+If you have a Microsoft 365 subscription, you can build and test agents in Microsoft 365 Copilot Chat, with limited capabilities. You need to enable pay-as-you-go billing in your tenant or purchase a Microsoft 365 Copilot license if you want to build agents that are grounded in organizational data.
 
 ## Security and privacy
 
 Copilot uses existing permissions and policies to deliver the most relevant information, building on our existing commitments to data security and data privacy in the enterprise. For information about how Copilot uses and protects organizational data, see [Data, Privacy, and Security for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-privacy). For data privacy and security considerations for developing different Copilot extensibility solutions, see [Data, Privacy, and Security considerations of extending Microsoft 365 Copilot](data-privacy-security.md).
+
+## Related content
+
+- [Microsoft 365 Copilot extensibility overview](overview.md)
+- [Cost considerations](cost-considerations.md)
