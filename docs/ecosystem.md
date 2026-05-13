@@ -108,4 +108,4 @@ For more information for Copilot extensibility solution developers, see [Data, P
 
 ## Related content
 
-- [Extensibility guide for ISVs](/microsoft-cloud/dev/copilot/isv/isv-extensibility-story)
+- [Agents are apps for Microsoft 365](agents-are-apps.md)
