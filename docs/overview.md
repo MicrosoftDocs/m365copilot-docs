@@ -55,10 +55,10 @@ The following table provides some examples of the types of agents you can develo
 
 ## Enhance knowledge in Copilot with connectors
 
-[Copilot connectors](overview-copilot-connector.md) enable you to bring external, line-of-business data into Microsoft 365 Copilot so your users can search, reason over, and act on more of your enterprise content. The platform supports two connector models:
+[Copilot connectors](overview-copilot-connector.md) bring external line-of-business data into Microsoft 365 Copilot so your users can search, reason over, and act on more of your enterprise content. The platform supports two connector models:
 
 - **Synced connectors** ingest and index external content into Microsoft Graph.
-- **Federated connectors** retrieve content in real time using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
+- **Federated connectors** retrieve content in real time by using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
 
 Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Context IQ, and Microsoft 365 Copilot.
 
