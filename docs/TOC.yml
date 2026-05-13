@@ -142,10 +142,18 @@ items:
         items:
         - name: Build an MCP plugin
           href: build-mcp-plugins.md
-        - name: Add interactive UI widgets
-          href: declarative-agent-ui-widgets.md
-        - name: UX guidelines for UI widgets
-          href: declarative-agent-ui-widgets-guidelines.md
+        - name: Authentication
+          href: plugin-authentication.md
+        - name: Add UI with MCP apps
+          href: plugin-mcp-apps.md
+        - name: UX guidelines for MCP apps
+          href: plugin-mcp-apps-ui-guidelines.md
+        - name: Troubleshoot MCP apps
+          href: plugin-mcp-apps-troubleshooting.md
+        - name: Confirmation prompts
+          href: plugin-confirmation-prompts.md
+        - name: Debug locally
+          href: plugin-debug-local.md
       - name: Add actions with API plugins
         items:
         - name: Build an API plugin with TypeSpec
@@ -156,21 +164,21 @@ items:
           href: build-api-plugins-existing-api.md
         - name: Build an API plugin with an Office JavaScript Library API
           href: build-api-plugins-local-office-api.md
-      - name: Authentication
-        href: api-plugin-authentication.md
-      - name: Adaptive Card responses
-        href: api-plugin-adaptive-cards.md
-        displayName: response, response_semantics
-      - name: Dialog boxes
-        href: adaptive-card-dialog-box.md
-      - name: Allow Adaptive Card edits (preview)
-        href: adaptive-card-edits.md
-      - name: Confirmation prompts
-        href: api-plugin-confirmation-prompts.md
-      - name: Debug locally
-        href: api-plugin-debug-local.md
-      - name: Best practices for writing OpenAPI specs
-        href: openapi-document-guidance.md
+        - name: Authentication
+          href: plugin-authentication.md
+        - name: Confirmation prompts
+          href: plugin-confirmation-prompts.md
+        - name: Adaptive Card responses
+          href: api-plugin-adaptive-cards.md
+          displayName: response, response_semantics
+        - name: Allow Adaptive Card edits (preview)
+          href: adaptive-card-edits.md
+        - name: Dialog boxes
+          href: adaptive-card-dialog-box.md
+        - name: Debug locally
+          href: plugin-debug-local.md
+        - name: Best practices for writing OpenAPI specs
+          href: openapi-document-guidance.md
       - name: Plugin manifest reference
         items:
         - name: Version 2.4
@@ -364,6 +372,17 @@ items:
     - name: Use external groups
       href: /graph/connecting-external-content-external-groups?context=/microsoft-365/copilot/extensibility/context
 
+- name: Enhance AI solutions with Work IQ APIs
+  items:
+  - name: Overview
+    href: work-iq-api-overview.md
+  - name: Quickstart
+    href: work-iq-api-quickstart.md
+  - name: Work IQ CLI
+    href: work-iq-cli.md
+  - name: Terms of use (preview)
+    href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
+
 - name: Enhance AI solutions with Microsoft 365 Copilot APIs
   items:
   - name: Overview
@@ -376,17 +395,6 @@ items:
     href: /legal/m365-copilot-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
   - name: API reference
     href: api/toc.yml
-
-- name: Enhance AI solutions with Work IQ APIs
-  items:
-  - name: Overview
-    href: work-iq-api-overview.md
-  - name: Quickstart
-    href: work-iq-api-quickstart.md
-  - name: Work IQ CLI
-    href: work-iq-cli.md
-  - name: Terms of use (preview)
-    href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
 
 - name: Known issues
   href: known-issues.md

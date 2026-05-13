@@ -71,6 +71,35 @@ Many [prebuilt Copilot connectors](/microsoftsearch/connectors-gallery) are avai
 
 If an existing connector doesn't meet your needs, you can build a custom Copilot connector tailored to your specific business requirements. Custom connectors allow you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see [Build Copilot connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365/copilot/extensibility/context).
 
+## Microsoft Work IQ APIs (preview)
+
+[Microsoft Work IQ APIs](work-iq-api-overview.md) enable you to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
+
+Work IQ is the intelligence layer behind Microsoft 365 Copilot and agents. It combines Microsoft 365 work data—emails, meetings, documents, and chats—with context such as relationships, preferences, and work patterns to assemble context, ground responses, select skills, and invoke tools. By calling the Work IQ APIs, your applications can tap into this same intelligence without building custom indexing, vector stores, or compliance pipelines.
+
+All Work IQ requests execute in the context of the signed-in user, honor Microsoft 365 permissions and sensitivity labels, and remain within the Microsoft 365 trust boundary, so your applications can reason over work data without exporting or duplicating content.
+
+You can use Work IQ to reason over:
+
+- Email messages
+- Meetings and calendar data
+- Documents in OneDrive and SharePoint
+- Microsoft Teams messages
+- People and organizational context
+- Enterprise search results
+
+### Choose a protocol
+
+Work IQ provides multiple protocols so you can pick the one that best fits your application or agent architecture:
+
+- **Agent-to-Agent (A2A)** - Use for structured agent-to-agent communication and delegation, where agents operate autonomously and exchange structured tasks. Ideal for multi-agent systems.
+
+- **Model Context Protocol (MCP)** - Use for tool-based context access from LLM-based clients such as Copilot or AI coding assistants in IDEs and CLIs.
+
+- **REST (coming soon)** - Use for conversational, request/response scenarios where your app or backend calls Work IQ programmatically, such as service-hosted agents and orchestrators.
+
+For more information, see the [Work IQ API overview](work-iq-api-overview.md).
+
 ## Microsoft 365 Copilot APIs
 
 [Microsoft 365 Copilot APIs](copilot-apis-overview.md) enable you to securely integrate Microsoft 365 Copilot features into your applications and custom engine agents, all while adhering to Microsoft 365's robust compliance, security, and responsible AI standards.
