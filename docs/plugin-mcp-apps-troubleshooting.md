@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 04/24/2026
+ms.date: 05/13/2026
 ---
 
 # Troubleshoot MCP apps in Microsoft 365 Copilot
@@ -106,7 +106,7 @@ Fullscreen view isn't supported across all Copilot hosts. As a best practice, al
 
 ### Tool result expiry issues
 
-Ensure tool responses sent through `content` or `structuredContent` aren't excessively large. If your widget requires rich metadata that isn't useful for the model, such as avatar URLs or UI-specific details, include the full data in `_meta` and provide a concise summary in `content`. This approach ensures the model retains key information while supporting an effective multiturm experience.
+Ensure tool responses sent through `content` or `structuredContent` aren't excessively large. If your widget requires rich metadata that isn't useful for the model, such as avatar URLs or UI-specific details, include the full data in `_meta` and provide a concise summary in `content`. This approach ensures the model retains key information while supporting an effective multiturn experience.
 
 ### Duplicate data in widget and text summary
 
@@ -164,6 +164,18 @@ If your sign in button is inactive or disabled, or selecting it gives a general 
 ### Sign in popup fails to open
 
 Enable popups for the site in your browser's settings and try again.
+
+### Sign in popup opens but gets stuck or never closes
+
+If the sign in popup opens and the user completes authentication, but the popup never closes and Copilot doesn't receive the auth result, the popup's `window.opener` reference was likely destroyed during the OAuth redirect chain. Without `window.opener`, the popup can't communicate the auth result back to Copilot. A common symptom is that sign in fails the first time but succeeds on retry, because cached credentials skip the page that destroyed `window.opener`.
+
+Check the following items in your OAuth redirect chain.
+
+- **JavaScript nullifying `window.opener`:** Some login pages set `window.opener = null` as a blanket security measure against reverse tabnabbing. If any page in the auth redirect chain runs this code, the popup loses its connection to Copilot. Scope tabnabbing protections to user-initiated navigation only, and don't clear `window.opener` during in-popup redirects.
+- **`Cross-Origin-Opener-Policy` header set to `same-origin`:** If any page in the redirect chain serves a `Cross-Origin-Opener-Policy: same-origin` response header, the browser permanently severs the `window.opener` reference on cross-origin navigation. Ensure all pages in your OAuth redirect chain either omit the `Cross-Origin-Opener-Policy` header (which defaults to `unsafe-none`) or explicitly set it to `unsafe-none`.
+- **Links using `rel="noopener"`:** Anchor tags with `rel="noopener"` strip `window.opener` from the target page. Don't use `rel="noopener"` for navigation within the auth popup.
+
+To debug this issue, open your browser's developer tools on the popup window and type `window.opener` in the **Console** at each step of the redirect chain. If `window.opener` returns `null` before the final redirect, identify which page cleared it. You can also check the **Network** tab response headers for `Cross-Origin-Opener-Policy` values on each page in the chain.
 
 ### Incorrect credentials error
 
