@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 03/16/2026
+ms.date: 05/13/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -17,7 +17,9 @@ You can extend Copilot in several ways:
 
 - Build [agents](#extend-copilot-with-agents) — powerful AI assistants that retrieve real-time insights and act on behalf of users—to tailor Copilot for automating specialized workflows and performing tasks.
 
-- Use [Microsoft 365 Copilot connectors](#enhance-knowledge-in-copilot-with-connectors) to ingest organizational data, enabling Copilot to access and reason over a broader set of enterprise information.
+- Use [Microsoft 365 Copilot connectors](#enhance-knowledge-in-copilot-with-connectors) to bring organizational data into Microsoft 365 Copilot, enabling Copilot to access and reason over a broader set of enterprise information.
+
+- Use [Microsoft Work IQ APIs](#microsoft-work-iq-apis-preview) to build agentic and AI-powered applications that securely reason over Microsoft 365 work context.
 
 - Use [Microsoft 365 Copilot APIs](#microsoft-365-copilot-apis) to programmatically access Copilot's capabilities in your custom applications and agents.
 
@@ -53,9 +55,12 @@ The following table provides some examples of the types of agents you can develo
 
 ## Enhance knowledge in Copilot with connectors
 
-[Copilot connectors](overview-copilot-connector.md) allow you to ingest and index data from multiple sources to add knowledge to Copilot. The data that Copilot accesses powers its intelligence. By using Copilot connectors, you can bring more enterprise data into Microsoft Graph.
+[Copilot connectors](overview-copilot-connector.md) enable you to bring external, line-of-business data into Microsoft 365 Copilot so your users can search, reason over, and act on more of your enterprise content. The platform supports two connector models:
 
-This indexing enables Copilot to integrate and reason over a wider variety of data sources, which allows it to deliver more contextually relevant responses that are tailored to the needs and data access permissions of the user. Access to data remains secure and compliant: users can only retrieve information they're authorized to view to ensure that sensitive data remains protected.
+- **Synced connectors** ingest and index external content into Microsoft Graph.
+- **Federated connectors** retrieve content in real time using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
+
+Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Context IQ, and Microsoft 365 Copilot.
 
 By using Copilot connectors, you can:
 
@@ -77,7 +82,7 @@ If an existing connector doesn't meet your needs, you can build a custom Copilot
 
 Work IQ is the intelligence layer behind Microsoft 365 Copilot and agents. It combines Microsoft 365 work data—emails, meetings, documents, and chats—with context such as relationships, preferences, and work patterns to assemble context, ground responses, select skills, and invoke tools. By calling the Work IQ APIs, your applications can tap into this same intelligence without building custom indexing, vector stores, or compliance pipelines.
 
-All Work IQ requests execute in the context of the signed-in user, honor Microsoft 365 permissions and sensitivity labels, and remain within the Microsoft 365 trust boundary, so your applications can reason over work data without exporting or duplicating content.
+All Work IQ requests run in the context of the signed-in user, respect Microsoft 365 permissions and sensitivity labels, and remain within the Microsoft 365 trust boundary, so your applications can reason over work data without exporting or duplicating content.
 
 You can use Work IQ to reason over:
 
@@ -88,15 +93,11 @@ You can use Work IQ to reason over:
 - People and organizational context
 - Enterprise search results
 
-### Choose a protocol
-
 Work IQ provides multiple protocols so you can pick the one that best fits your application or agent architecture:
 
 - **Agent-to-Agent (A2A)** - Use for structured agent-to-agent communication and delegation, where agents operate autonomously and exchange structured tasks. Ideal for multi-agent systems.
 
 - **Model Context Protocol (MCP)** - Use for tool-based context access from LLM-based clients such as Copilot or AI coding assistants in IDEs and CLIs.
-
-- **REST (coming soon)** - Use for conversational, request/response scenarios where your app or backend calls Work IQ programmatically, such as service-hosted agents and orchestrators.
 
 For more information, see the [Work IQ API overview](work-iq-api-overview.md).
 
