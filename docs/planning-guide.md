@@ -108,7 +108,7 @@ Finally, if your agent involves complex workflows, you might need a custom orche
 
 ### Work IQ APIs
 
-If you want your application or agent to reason over Microsoft 365 work data—rather than just retrieve it—consider the [Microsoft Work IQ API](work-iq-api-overview.md) (in public preview). Work IQ is the intelligence layer behind Microsoft 365 Copilot. It combines Microsoft 365 data (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships, and applies the inference needed to reason across all of it and surface next-best actions.
+If you want your application or agent to reason over Microsoft 365 work data - rather than just retrieve it - consider the [Microsoft Work IQ API](work-iq-api-overview.md) (in public preview). Work IQ is the intelligence layer behind Microsoft 365 Copilot. It combines Microsoft 365 data (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships, and applies the inference needed to reason across all of it and surface next-best actions.
 
 The Work IQ API enables developers to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls. All requests run in the context of the signed-in user, respect Microsoft 365 permissions and sensitivity labels, and remain within the Microsoft 365 trust boundary, so you can reason over work data without exporting or duplicating content.
 
