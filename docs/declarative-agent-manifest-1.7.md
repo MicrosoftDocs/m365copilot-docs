@@ -752,7 +752,9 @@ The `default_response_mode` property enables agent authors to configure the defa
 
 Agent authors should consider the use case when selecting a mode. For example, the increased latency involved with reasoning mode may not be appropriate for all agents, while some authors may want to always invoke reasoning for complex analytical tasks.
 
-The client respects the default mode configured in the manifest. Users can override this default via the model selector, but see a UX warning when doing so to ensure they're aware they're deviating from the agent author's intended configuration.
+The client respects the default mode configured in the manifest. Users can override this default via the model selector.
+
+Known issue: Default response mode is not applied when the agent is invoked via @mention from the main Copilot experience.
 
 #### Suggestions object
 
