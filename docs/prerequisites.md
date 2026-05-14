@@ -25,7 +25,7 @@ You have the following options for a Copilot development environment:
 - A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities.
 
     > [!IMPORTANT]
-    > Eligibility for the Microsoft 365 Developer Program is limited to Visual Studio Professional or Enterprise subscribers, ISV Success Program members, eligible Microsoft AI Cloud Partner Program (MAICPP) partners, and Premier or Unified Support customers. 
+    > Eligibility for the Microsoft 365 Developer Program is limited to Visual Studio Professional or Enterprise subscribers, ISV Success Program members, eligible Microsoft AI Cloud Partner Program (MAICPP) partners, and Premier or Unified Support customers.
 
     At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities.
 

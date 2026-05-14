@@ -356,7 +356,7 @@ items:
     href: manage.md
   - name: Manage agents in Microsoft 365 admin center
     href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context
-  
+
 - name: Add knowledge with Copilot connectors
   items:
   - name: Copilot connectors in Microsoft 365 Copilot
