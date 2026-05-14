@@ -95,6 +95,8 @@ items:
             href: plugin-mcp-apps.md
           - name: UX guidelines for MCP apps
             href: plugin-mcp-apps-ui-guidelines.md
+          - name: Add citations
+            href: plugin-citations.md
           - name: Troubleshoot MCP apps
             href: plugin-mcp-apps-troubleshooting.md
           - name: Confirmation prompts
@@ -113,6 +115,8 @@ items:
             href: build-api-plugins-local-office-api.md
           - name: Authentication
             href: plugin-authentication.md
+          - name: Add citations
+            href: plugin-citations.md
           - name: Confirmation prompts
             href: plugin-confirmation-prompts.md
           - name: Adaptive Card responses
@@ -169,7 +173,7 @@ items:
         - name: Customer Insight Assistant
           href: agent-template-customer-insight.md
         - name: Executive Briefing Agent
-          href: agent-template-executive-briefing.md           
+          href: agent-template-executive-briefing.md
         - name: Idea Coach
           href: agent-template-idea-coach.md
         - name: Interview Question Assistant
@@ -179,25 +183,25 @@ items:
         - name: Meeting Coach
           href: agent-template-meeting-coach.md
         - name: My Company Policy
-          href: agent-template-my-company-policy.md           
+          href: agent-template-my-company-policy.md
         - name: Personal News Digest
-          href: agent-template-personal-news-digest.md           
+          href: agent-template-personal-news-digest.md
         - name: Plan My Day
-          href: agent-template-plan-my-day.md           
+          href: agent-template-plan-my-day.md
         - name: Project Delta Digest
-          href: agent-template-project-delta-digest.md           
+          href: agent-template-project-delta-digest.md
         - name: Prompt Coach
           href: agent-template-prompt-coach.md
         - name: Request for Proposal Assistant
           href: agent-template-rfp-assistant.md
         - name: Quiz Tutor
-          href: agent-template-quiz-tutor.md      
+          href: agent-template-quiz-tutor.md
         - name: Scrum Assistant
           href: agent-template-scrum-assistant.md
         - name: SME Finder
           href: agent-template-sme-finder.md
         - name: Status Update Agent
-          href: agent-template-status-update-agent.md                      
+          href: agent-template-status-update-agent.md
         - name: Text Translator Assistant
           href: agent-template-text-translator.md
         - name: Writing Coach
