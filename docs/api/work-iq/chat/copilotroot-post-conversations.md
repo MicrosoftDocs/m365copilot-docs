@@ -22,15 +22,13 @@ This documentation covers creating Copilot conversations using the Chat API. Lea
 
 ## Permissions
 
-[!INCLUDE [permissions-intro](../../includes/permissions-intro.md)]
+[!INCLUDE [permissions-intro](../includes/permissions-intro.md)]
 
-| Permission type                        | Least privileged permissions    | Higher privileged permissions |
-|:---------------------------------------|:--------------------------------|:------------------------------|
-| Delegated (work or school account)     | Sites.Read.All, Mail.Read, People.Read.All, OnlineMeetingTranscript.Read.All, Chat.Read, ChannelMessage.Read.All, ExternalItem.Read.All\* | Not supported. |
-| Delegated (personal Microsoft account) | Not supported.                  | Not supported.                |
-| Application                            | Not supported.                  | Not supported.                |
-
-\* You need all of these Microsoft Graph permissions to successfully call the Work IQ Chat API.
+| Permission type                        | Least privileged permissions | Higher privileged permissions |
+|:---------------------------------------|:-----------------------------|:------------------------------|
+| Delegated (work or school account)     | WorkIQAgent.Ask.Selected     | WorkIQAgent.Ask               |
+| Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
+| Application                            | Not supported.               | Not supported.                |
 
 ## HTTP request
 
@@ -40,10 +38,10 @@ POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations
 
 ## Request headers
 
-| Name            | Description                                                                                                 |
-|:----------------|:------------------------------------------------------------------------------------------------------------|
-| `Authorization` | `Bearer {token}`. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| `Content-Type`  | `application/json.` Required.                                                                               |
+| Name            | Description                   |
+|:----------------|:------------------------------|
+| `Authorization` | `Bearer {token}`. Required.   |
+| `Content-Type`  | `application/json.` Required. |
 
 ## Request body
 

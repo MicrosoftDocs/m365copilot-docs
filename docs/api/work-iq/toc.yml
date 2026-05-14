@@ -1,3 +1,5 @@
 items:
+- name: Work IQ API permissions
+  href: permissions.md
 - name: Chat API (preview)
   href: chat/toc.yml

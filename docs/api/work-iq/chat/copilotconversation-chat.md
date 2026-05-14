@@ -22,15 +22,13 @@ This documentation covers continuing synchronous Copilot conversations using the
 
 ## Permissions
 
-[!INCLUDE [permissions-intro](../../includes/permissions-intro.md)]
+[!INCLUDE [permissions-intro](../includes/permissions-intro.md)]
 
-| Permission type                        | Least privileged permissions    | Higher privileged permissions |
-|:---------------------------------------|:--------------------------------|:------------------------------|
-| Delegated (work or school account)     | Sites.Read.All, Mail.Read, People.Read.All, OnlineMeetingTranscript.Read.All, Chat.Read, ChannelMessage.Read.All, ExternalItem.Read.All\* | Not supported. |
-| Delegated (personal Microsoft account) | Not supported.                  | Not supported.                |
-| Application                            | Not supported.                  | Not supported.                |
-
-\* You need all of these Microsoft Graph permissions to successfully call the Work IQ Chat API.
+| Permission type                        | Least privileged permissions | Higher privileged permissions |
+|:---------------------------------------|:-----------------------------|:------------------------------|
+| Delegated (work or school account)     | WorkIQAgent.Ask.Selected     | WorkIQAgent.Ask               |
+| Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
+| Application                            | Not supported.               | Not supported.                |
 
 ## HTTP request
 
