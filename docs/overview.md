@@ -60,7 +60,7 @@ The following table provides some examples of the types of agents you can develo
 - **Synced connectors** ingest and index external content into Microsoft Graph.
 - **Federated connectors** retrieve content in real time by using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
 
-Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Context IQ, and Microsoft 365 Copilot.
+Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search.
 
 By using Copilot connectors, you can:
 
