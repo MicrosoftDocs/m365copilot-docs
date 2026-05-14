@@ -173,7 +173,7 @@ The `data_path` property is a JSONPath ([RFC 9535](https://datatracker.ietf.org/
 
 ## Going beyond response semantics
 
-**As a first preference,** consider adding [rich UI widgets to your agent](build-mcp-apps.md). This approach is more future-ready and AI-native, allowing more intelligent, adaptive, and seamless interactions.
+**As a first preference,** consider adding [rich UI widgets to your agent](plugin-mcp-apps.md). This approach is more future-ready and AI-native, allowing more intelligent, adaptive, and seamless interactions.
 
 **Add an Adaptive Card as a last resort** if — and only if — you need one of:
 
