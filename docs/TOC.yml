@@ -162,8 +162,6 @@ items:
           href: plugin-mcp-apps.md
         - name: UX guidelines for MCP apps
           href: plugin-mcp-apps-ui-guidelines.md
-        - name: Add citations
-          href: plugin-citations.md
         - name: Troubleshoot MCP apps
           href: plugin-mcp-apps-troubleshooting.md
         - name: Confirmation prompts
@@ -182,8 +180,6 @@ items:
           href: build-api-plugins-local-office-api.md
         - name: Authentication
           href: plugin-authentication.md
-        - name: Add citations
-          href: plugin-citations.md
         - name: Confirmation prompts
           href: plugin-confirmation-prompts.md
         - name: Adaptive Card responses
