@@ -219,7 +219,7 @@ items:
         href: declarative-agent-manifest-1.2.md
       - name: Version 1.0
         href: declarative-agent-manifest-1.0.md
- 
+
 - name: Enhance declarative agents
   items:
   - name: Best practices
@@ -396,6 +396,8 @@ items:
     href: work-iq-cli.md
   - name: Terms of use (preview)
     href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
+  - name: API reference
+    href: api/work-iq/toc.yml
 
 - name: Enhance AI solutions with Microsoft 365 Copilot APIs
   items:
