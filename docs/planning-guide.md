@@ -101,7 +101,7 @@ Finally, if your agent involves complex workflows, you might need a custom orche
 
 ### Microsoft 365 Copilot connectors
 
-Use Microsoft 365 Copilot connectors if you need Copilot to integrate external data into Microsoft 365 applications to provide contextually relevant responses. Depending on your scenario, you can choose to do one of the following:
+Use Microsoft 365 Copilot connectors if you need Copilot to integrate external data into Microsoft 365 applications to provide contextually relevant responses. Depending on your scenario, you can choose of the following options:
 
 - **Use prebuilt Copilot connectors**. Identify [prebuilt Copilot connectors](/microsoftsearch/pre-built-connectors-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) that you can configure in your tenant.
 - **Build a custom Copilot connector**. If none of the existing connectors meet your needs, you can build your own. For more information, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
@@ -126,9 +126,9 @@ If you want to integrate Copilot's capabilities into your custom application or 
 
 - **Knowledge access** - Use the [Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/overview) and [AI Meeting Insights API](/microsoft-365/copilot/extensibility/api/ai-services/meeting-insights/resources/callaiinsight) to securely access Microsoft 365 knowledge, including indexed enterprise data and AI-generated meeting content.
 
-- **Conversational integration** - To embed Copilot-powered chat experiences into your own applications, the [Copilot Chat API (preview)](/microsoft-365/copilot/extensibility/api/ai-services/chat/overview) allows you to send prompts and receive responses directly from Copilot.
+- **Conversational integration** - To embed Copilot-powered chat experiences into your own applications, use the [Copilot Chat API (preview)](/microsoft-365/copilot/extensibility/api/ai-services/chat/overview). It allows you to send prompts and receive responses directly from Copilot.
 
-- **Governance and insights** - If you're building a data governance solution—or looking to understand how users are interacting with Copilot—the [Copilot Interaction Export API](/microsoft-365/copilot/extensibility/api/ai-services/interaction-export/resources/aiinteractionhistory) allows you to export user prompts and responses. This can help you ensure compliance, monitor usage, and drive adoption strategies.
+- **Governance and insights** - If you're building a data governance solution or looking to understand how users  interact with Copilot, use the [Copilot Interaction Export API](/microsoft-365/copilot/extensibility/api/ai-services/interaction-export/resources/aiinteractionhistory) to export user prompts and responses. This data can help you ensure compliance, monitor usage, and drive adoption strategies.
 
 ## Consider costs
 

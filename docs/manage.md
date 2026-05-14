@@ -39,7 +39,7 @@ Both [declarative agents](./build-declarative-agents.md) and [custom engine agen
 
 ## Agents built with Agent Builder in Microsoft 365 Copilot
 
-Declarative agents for Microsoft 365 Copilot that are built using [Agent Builder](agent-builder.md) can be shared with the organization as a whole, or with specific users. These agents and the users they are shared with can be  managed by the person who created the agent.
+You can share declarative agents for Microsoft 365 Copilot that you build by using [Agent Builder](agent-builder.md) with your entire organization or with specific users. You can manage these agents and the users you share them with.
 
 |Control | Core scenario | Related content|
 |--|--|--|
