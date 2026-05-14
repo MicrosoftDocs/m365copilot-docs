@@ -25,7 +25,7 @@ You have the following options for a Copilot development environment:
 - A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities.
 
     > [!IMPORTANT]
-    > Eligibility for the Microsoft 365 Developer Program is limited to Visual Studio Professional/Enterprise subscribers, ISV Success Program members, eligible Microsoft AI Cloud Partner Program (MAICPP) partners, and Premier/Unified Support customers. 
+    > Eligibility for the Microsoft 365 Developer Program is limited to Visual Studio Professional or Enterprise subscribers, ISV Success Program members, eligible Microsoft AI Cloud Partner Program (MAICPP) partners, and Premier or Unified Support customers. 
 
     At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities.
 
@@ -67,7 +67,7 @@ To build agents, you need to complete prerequisites depending on the tool that y
 
 #### Microsoft 365 Agents Toolkit requirements
 
-You can use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data, you need to either set up pay-as-you-go billing in your tenant or purchase a Microsoft 365 Copilot license.
+You can use the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to build agents without a Microsoft 365 Copilot license. If you want to build agents that are grounded on organizational data, you need to either set up pay-as-you-go billing in your tenant or purchase a Microsoft 365 Copilot license.
 
 To build agents with Agents Toolkit and other IDEs, you must have your admin enable the ability to sideload a *custom app* to your tenant.
 
@@ -115,7 +115,7 @@ The following table summarizes agent access based on user licensing type.
 | Licensing model                                              | Agent access |
 |--------------------------------------------------------|-------------|
 | **Licensed users**                                     | Have both a Microsoft 365 subscription and the Copilot add-on license (including Microsoft 365 Copilot Business and the E7 Frontier Suite, where applicable). They receive full access to Copilot Chat and agent experiences across supported apps and platforms. This license also enables usage of agents grounded in tenant data (SharePoint, Microsoft Graph) and is required for authoring agents in Copilot Studio. |
-| **Usage-based billing (pay-as-you-go users)**                              | Belong to tenants with pay-as-you-go billing enabled (consumed as Copilot Credits). Users can access Copilot Chat and agents without a full Copilot license. Usage billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features—such as agent interactions or grounding—might require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. |
+| **Usage-based billing (pay-as-you-go users)**                              | Belong to tenants with pay-as-you-go billing enabled (consumed as Copilot Credits). Users can access Copilot Chat and agents without a full Copilot license. Usage billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features - such as agent interactions or grounding - might require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. |
 | **Microsoft 365 subscribers without a Copilot add-on license** | Might see Copilot Chat entry points in some apps, but access is limited or disabled depending on tenant configuration and rollout status. These users do not have access to agent authoring or advanced agent experiences. |
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).

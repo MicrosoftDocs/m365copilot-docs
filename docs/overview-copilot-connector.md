@@ -120,7 +120,7 @@ The following samples implement Microsoft 365 Copilot connectors that extend Mic
 
 You can find the latest list of samples from the community in the [Microsoft Adoption center sample solution gallery](https://adoption.microsoft.com/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1):
 
-- [Copilot connector samples](https://adoption.microsoft.com/en-us/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Copilot+connectors)
+- [Copilot connector samples](https://adoption.microsoft.com/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Copilot+connectors)
 
 ## Related content
 
