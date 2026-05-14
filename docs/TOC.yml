@@ -63,34 +63,48 @@ items:
     href: agent-builder-build-agents.md
   - name: Build agents from template
     items:
-    - name: Templates overview
-      href: agent-templates-overview.md
-    - name: Career Coach
-      href: agent-template-career-coach.md
-    - name: Corporate Communications Crafter
-      href: agent-template-corporate-communications.md
-    - name: Customer Insight Assistant
-      href: agent-template-customer-insight.md
-    - name: Idea Coach
-      href: agent-template-idea-coach.md
-    - name: Interview Question Assistant
-      href: agent-template-interview-questions.md
-    - name: Learning Coach
-      href: agent-template-learning-coach.md
-    - name: Meeting Coach
-      href: agent-template-meeting-coach.md
-    - name: Prompt Coach
-      href: agent-template-prompt-coach.md
-    - name: Request for Proposal Assistant
-      href: agent-template-rfp-assistant.md
-    - name: Quiz Tutor
-      href: agent-template-quiz-tutor.md
-    - name: Scrum Assistant
-      href: agent-template-scrum-assistant.md
-    - name: Text Translator Assistant
-      href: agent-template-text-translator.md
-    - name: Writing Coach
-      href: agent-template-writing-coach.md
+      - name: Templates overview
+        href: agent-templates-overview.md
+      - name: Career Coach
+        href: agent-template-career-coach.md
+      - name: Corporate Communications Crafter
+        href: agent-template-corporate-communications.md
+      - name: Customer Insight Assistant
+        href: agent-template-customer-insight.md
+      - name: Executive Briefing Agent
+        href: agent-template-executive-briefing.md
+      - name: Idea Coach
+        href: agent-template-idea-coach.md
+      - name: Interview Question Assistant
+        href: agent-template-interview-questions.md
+      - name: Learning Coach
+        href: agent-template-learning-coach.md
+      - name: Meeting Coach
+        href: agent-template-meeting-coach.md
+      - name: My Company Policy
+        href: agent-template-my-company-policy.md
+      - name: Personal News Digest
+        href: agent-template-personal-news-digest.md
+      - name: Plan My Day
+        href: agent-template-plan-my-day.md
+      - name: Project Delta Digest
+        href: agent-template-project-delta-digest.md
+      - name: Prompt Coach
+        href: agent-template-prompt-coach.md
+      - name: Request for Proposal Assistant
+        href: agent-template-rfp-assistant.md
+      - name: Quiz Tutor
+        href: agent-template-quiz-tutor.md
+      - name: Scrum Assistant
+        href: agent-template-scrum-assistant.md
+      - name: SME Finder
+        href: agent-template-sme-finder.md
+      - name: Status Update Agent
+        href: agent-template-status-update-agent.md
+      - name: Text Translator Assistant
+        href: agent-template-text-translator.md
+      - name: Writing Coach
+        href: agent-template-writing-coach.md
   - name: Add knowledge sources
     href: agent-builder-add-knowledge.md
   - name: Share and manage agents
@@ -104,81 +118,81 @@ items:
 
 - name: Use Agents Toolkit
   items:
-  - name: Overview
-    href: /microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context
-  - name: Build with TypeSpec
-    items:
     - name: Overview
-      href: overview-typespec.md
-    - name: Get started
-      href: build-declarative-agents-typespec.md
-    - name: Scenarios
-      href: typespec-scenarios.md
-    - name: Authentication
-      href: typespec-authentication.md
-    - name: TypeSpec reference
+      href: /microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context
+    - name: Build with TypeSpec
       items:
-      - name: Decorators
-        href: typespec-decorators.md
-      - name: Capabilities
-        href: typespec-capabilities.md
-  - name: Build with JSON
-    items:
-    - name: Create the agent
-      href: build-declarative-agents.md
-    - name: Customize agent behavior
-      href: build-declarative-agents-customize-behavior.md
-    - name: Add knowledge sources
-      href: build-declarative-agents-add-knowledge.md
-    - name: Add skills
-      href: build-declarative-agents-add-skills.md
-    - name: Retrieve capabilities IDs
-      href: declarative-agent-capabilities-ids.md
-    - name: Add actions with plugins
-      items:
-      - name: Overview
-        href: overview-plugins.md
-      - name: Add actions with MCP plugins
-        items:
-        - name: Build an MCP plugin
-          href: build-mcp-plugins.md
+        - name: Overview
+          href: overview-typespec.md
+        - name: Get started
+          href: build-declarative-agents-typespec.md
+        - name: Scenarios
+          href: typespec-scenarios.md
         - name: Authentication
-          href: plugin-authentication.md
-        - name: Add UI with MCP apps
-          href: plugin-mcp-apps.md
-        - name: UX guidelines for MCP apps
-          href: plugin-mcp-apps-ui-guidelines.md
-        - name: Troubleshoot MCP apps
-          href: plugin-mcp-apps-troubleshooting.md
+          href: typespec-authentication.md
+        - name: TypeSpec reference
+          items:
+            - name: Decorators
+              href: typespec-decorators.md
+            - name: Capabilities
+              href: typespec-capabilities.md
+    - name: Build with JSON
+      items:
+        - name: Create the agent
+          href: build-declarative-agents.md
+        - name: Customize agent behavior
+          href: build-declarative-agents-customize-behavior.md
+        - name: Add knowledge sources
+          href: build-declarative-agents-add-knowledge.md
+        - name: Add skills
+          href: build-declarative-agents-add-skills.md
+        - name: Retrieve capabilities IDs
+          href: declarative-agent-capabilities-ids.md
+        - name: Add actions with plugins
+          items:
+            - name: Overview
+              href: overview-plugins.md
+            - name: Add actions with MCP plugins
+              items:
+              - name: Build an MCP plugin
+                href: build-mcp-plugins.md
+              - name: Authentication
+                href: plugin-authentication.md
+              - name: Add UI with MCP apps
+                href: plugin-mcp-apps.md
+              - name: UX guidelines for MCP apps
+                href: plugin-mcp-apps-ui-guidelines.md
+              - name: Troubleshoot MCP apps
+                href: plugin-mcp-apps-troubleshooting.md
         - name: Confirmation prompts
           href: plugin-confirmation-prompts.md
         - name: Debug locally
           href: plugin-debug-local.md
-      - name: Add actions with API plugins
-        items:
-        - name: Build an API plugin with TypeSpec
-          href: build-api-plugins-typespec.md
-        - name: Build an API plugin with a new API
-          href: build-api-plugins-new-api.md
-        - name: Build an API plugin from an existing API
-          href: build-api-plugins-existing-api.md
-        - name: Build an API plugin with an Office JavaScript Library API
-          href: build-api-plugins-local-office-api.md
-        - name: Authentication
-          href: plugin-authentication.md
-        - name: Confirmation prompts
-          href: plugin-confirmation-prompts.md
-        - name: Adaptive Card responses
-          href: api-plugin-adaptive-cards.md
-          displayName: response, response_semantics
-        - name: Allow Adaptive Card edits (preview)
-          href: adaptive-card-edits.md
-        - name: Dialog boxes
-          href: adaptive-card-dialog-box.md
-        - name: Debug locally
-          href: plugin-debug-local.md
-        - name: Best practices for writing OpenAPI specs
-          href: openapi-document-guidance.md
+    - name: Add actions with API plugins
+      items:
+      - name: Build an API plugin with TypeSpec
+        href: build-api-plugins-typespec.md
+      - name: Build an API plugin with a new API
+        href: build-api-plugins-new-api.md
+      - name: Build an API plugin from an existing API
+        href: build-api-plugins-existing-api.md
+      - name: Build an API plugin with an Office JavaScript Library API
+        href: build-api-plugins-local-office-api.md
+      - name: Authentication
+        href: plugin-authentication.md
+      - name: Confirmation prompts
+        href: plugin-confirmation-prompts.md
+      - name: Adaptive Card responses
+        href: api-plugin-adaptive-cards.md
+        displayName: response, response_semantics
+      - name: Allow Adaptive Card edits (preview)
+        href: adaptive-card-edits.md
+      - name: Dialog boxes
+        href: adaptive-card-dialog-box.md
+      - name: Debug locally
+        href: plugin-debug-local.md
+      - name: Best practices for writing OpenAPI specs
+        href: openapi-document-guidance.md
       - name: Plugin manifest reference
         items:
         - name: Version 2.4
@@ -240,10 +254,10 @@ items:
     href: localize-agents.md
   - name: Test and debug agents
     items:
-        - name: Test agents using Copilot Studio
-          href: debugging-agents-copilot-studio.md
-        - name: Test agents using Agents Toolkit
-          href: debugging-agents-vscode.md
+    - name: Test agents using Copilot Studio
+      href: debugging-agents-copilot-studio.md
+    - name: Test agents using Agents Toolkit
+      href: debugging-agents-vscode.md
   - name: Convert to custom engine agent
     href: convert-declarative-agent.md
   - name: Responsible AI validation
