@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 11/18/2025
+ms.date: 05/13/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -76,13 +76,6 @@ Determine the requirements that your extensibility solution needs to meet. Consi
 
 Based on your assessment of your users' needs and the technical requirements for your solution, identify what type or types of Copilot extensibility options you'll build.
 
-### Microsoft 365 Copilot connectors
-
-Use Microsoft 365 Copilot connectors if you need Copilot to integrate external data into Microsoft 365 applications to provide contextually relevant responses. Depending on your scenario, you can choose to do one of the following:
-
-- **Use prebuilt Copilot connectors**. Identify [prebuilt Copilot connectors](/microsoftsearch/pre-built-connectors-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) that you can configure in your tenant.
-- **Build a custom Copilot connector**. If none of the existing connectors meet your needs, you can build your own. For more information, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
-
 ### Agents for Copilot
 
 If Microsoft 365 Copilot connectors alone don't meet your needs, you can build an agent to tailor the Copilot experience for your business needs or to connect to your specific data sources.
@@ -106,19 +99,40 @@ Next, identify the data sources or plugins your agent needs. Data sources might 
 
 Finally, if your agent involves complex workflows, you might need a custom orchestrator. For information to help you design your solution, see [using Copilot Studio](/microsoft-copilot-studio/authoring-fundamentals), [Semantic Kernel](/semantic-kernel/overview/), or [LangChain](https://www.langchain.com/).
 
+### Microsoft 365 Copilot connectors
+
+Use Microsoft 365 Copilot connectors if you need Copilot to integrate external data into Microsoft 365 applications to provide contextually relevant responses. Depending on your scenario, choose from the following options:
+
+- **Use prebuilt Copilot connectors**. Identify [prebuilt Copilot connectors](/microsoftsearch/pre-built-connectors-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) that you can configure in your tenant.
+- **Build a custom Copilot connector**. If none of the existing connectors meet your needs, build your own. For more information, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
+
+### Work IQ APIs (preview)
+
+If you want your application or agent to reason over Microsoft 365 work data - rather than just retrieve it - consider the [Microsoft Work IQ API](work-iq-api-overview.md) (preview). Work IQ is the intelligence layer behind Microsoft 365 Copilot. It combines Microsoft 365 data (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships, and applies the inference needed to reason across all of it and surface next-best actions.
+
+The Work IQ API enables developers to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls. All requests run in the context of the signed-in user, respect Microsoft 365 permissions and sensitivity labels, and remain within the Microsoft 365 trust boundary, so you can reason over work data without exporting or duplicating content.
+
+Consider Work IQ when your solution needs to:
+
+- **Reduce custom data plumbing** - Rely on Copilot's grounding, context, and reasoning instead of building and maintaining your own retrieval pipelines, vector stores, and compliance enforcement.
+- **Integrate at the protocol that fits your architecture** - Work IQ supports multiple protocols that share the same underlying intelligence runtime. Choose the protocol that best fits your application or agent.
+- **Reason over multiple Microsoft 365 signals** - Work IQ can reason over email messages, meetings and calendar data, documents in OneDrive and SharePoint, Microsoft Teams messages, people and organizational context, and enterprise search results.
+
+Use Work IQ alongside other extensibility options. For example, an agent might use Copilot connectors to bring external business data into Microsoft 365 and then use Work IQ to reason across that data together with the user's emails, meetings, and documents.
+
 ### Microsoft 365 Copilot APIs
 
 If you want to integrate Copilot's capabilities into your custom application or agent, the [Microsoft 365 Copilot APIs](copilot-apis-overview.md) provide programmatic access to key features in Copilot, including:
 
-- **Knowledge access** - Use the Retrieval API (available for public preview soon) and [AI Meeting Insights API](/microsoftteams/platform/graph-api/meeting-transcripts/meeting-insights) to securely access Microsoft 365 knowledge, including indexed enterprise data and AI-generated meeting content.
+- **Knowledge access** - Use the [Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/overview) and [AI Meeting Insights API](/microsoft-365/copilot/extensibility/api/ai-services/meeting-insights/resources/callaiinsight) to securely access Microsoft 365 knowledge, including indexed enterprise data and AI-generated meeting content.
 
-- **Conversational integration** - To embed Copilot-powered chat experiences into your own applications, the Copilot Chat API (available for public preview soon) allows you to send prompts and receive responses directly from Copilot.
+- **Conversational integration** - To embed Copilot-powered chat experiences into your own applications, use the [Copilot Chat API (preview)](/microsoft-365/copilot/extensibility/api/ai-services/chat/overview). It allows you to send prompts and receive responses directly from Copilot.
 
-- **Governance and insights** - If you're building a data governance solution—or looking to understand how users are interacting with Copilot—the [Copilot Interaction Export API](/microsoftteams/export-teams-content#microsoft-365-copilot-interactions--microsoft-365-chat-preview) allows you to export user prompts and responses. This can help you ensure compliance, monitor usage, and drive adoption strategies.
+- **Governance and insights** - If you're building a data governance solution or looking to understand how users interact with Copilot, use the [Copilot Interaction Export API](/microsoft-365/copilot/extensibility/api/ai-services/interaction-export/resources/aiinteractionhistory) to export user prompts and responses. This data can help you ensure compliance, monitor usage, and drive adoption strategies.
 
 ## Consider costs
 
-Consider the cost implications of your solution design, from both the user and hosting perspectives. For more details, see [Cost considerations for Copilot Extensibility](cost-considerations.md).
+Consider the cost implications of your solution design, from both the user and hosting perspectives. For more details, see [Cost considerations](cost-considerations.md).
 
 ## Address RAI and compliance considerations
 
@@ -147,6 +161,5 @@ The following table provides examples of extensibility solutions that use differ
 
 - [Agents overview](agents-overview.md)
 - [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md)
-- [Set up your dev environment](prerequisites.md)
-- [Choose your development tool](declarative-agent-tool-comparison.md)
+- [Work IQ API overview (preview)](work-iq-api-overview.md)
 - [Microsoft 365 Copilot APIs overview](copilot-apis-overview.md)

@@ -26,6 +26,8 @@ landingContent:
             url: /microsoft-365/copilot/extensibility/planning-guide
           - text: Licensing and cost considerations
             url: /microsoft-365/copilot/extensibility/cost-considerations
+          - text: Choose your development tool
+            url: /microsoft-365/copilot/extensibility/declarative-agent-tool-comparison
 
   - title: Create and manage agents
     linkLists:
