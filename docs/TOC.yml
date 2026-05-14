@@ -27,7 +27,7 @@ items:
     href: prerequisites.md
   - name: Cost considerations
     href: cost-considerations.md
-  
+
 - name: Extend Copilot with agents
   items:
   - name: Agents overview
@@ -261,7 +261,7 @@ items:
   - name: Convert to custom engine agent
     href: convert-declarative-agent.md
   - name: Responsible AI validation
-    href: rai-validation.md   
+    href: rai-validation.md
 
 - name: Extend agents at scale with Agent 365
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
