@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/11/2026
+ms.date: 05/13/2026
 ---
 
 # Copilot extensibility in the Microsoft 365 ecosystem
@@ -35,7 +35,7 @@ When you build agents, you can tailor the user experience by providing *in conte
 
 - **In-context experience**: An in-app experience where users interact with Microsoft 365 Copilot Chat in the context of an app, such as a Teams chat or a Word document. Users can `@`-mention the agent and interact with it directly within the app experience.
 
-  To build in-context experiences, you can use actions and declarative agents. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This also enables Microsoft 365 Copilot to interact with external systems.
+  To build in-context experiences, use actions (API plugins) that extend Microsoft 365 Copilot's skills in the flow of a host app. *In-context* experiences bring additional information to the chat experience with Microsoft 365 Copilot, allowing it to reason over and provide responses in the context of the conversation. This capability also enables Microsoft 365 Copilot to interact with external systems.
 
 - **Immersive experience**: The full experience of the Copilot app in Microsoft 365. Users chat directly with the agent embedded in Copilot.
 
@@ -44,21 +44,21 @@ When you build agents, you can tailor the user experience by providing *in conte
 :::image type="content" source="assets/images/copilot-experiences.png" alt-text="This illustration shows two distinct copilot user experiences, in context and immersive" border="false":::
 
 > [!NOTE]
-> Microsoft 365 Copilot Chat is the full-featured and secure chat experience for Microsoft 365 Copilot. Microsoft 365 Copilot Chat is available on the web via the Microsoft 365 Copilot app and is integrated into Teams and Outlook.​
+> Microsoft 365 Copilot Chat is the full-featured and secure chat experience for Microsoft 365 Copilot. Microsoft 365 Copilot Chat is available on the web via the Microsoft 365 Copilot app and is integrated into Teams, Outlook, and other Microsoft 365 apps.
 
 > [!IMPORTANT]
-> When an agent is embedded in an app, it doesn’t automatically inherit the user’s Microsoft sign-in from the host application. Even if the user is already signed in to the app, the agent can’t identify the signed-in user and might prompt them to sign in again.
+> When an agent runs in an app, it doesn't always automatically inherit the user's Microsoft sign-in from the host application. Depending on the host app and authentication configuration, users who are already signed in to the app might still be prompted to sign in again.
 
 ## Connector availability in Microsoft 365 experiences
 
-Over 350 million users are active daily across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, PowerPoint, and the Microsoft 365 Copilot app. When you write a connector, it can reach all the apps that support Copilot extensibility across Microsoft 365.
+Millions of users are active daily across applications in the Microsoft 365 ecosystem, including Teams, Outlook, Word, Excel, PowerPoint, and the Microsoft 365 Copilot app. When you write a connector, it can reach all the apps that support Copilot extensibility across Microsoft 365.
 
 Your connector also runs outside of Copilot experiences. The following table lists all the ways the skills and knowledge from your connectors are available to users within an organization.
 
 |Copilot extensibility type|Microsoft 365 product availability|Learn more|
 |----------|-----------|------------|
-|[Copilot connectors](/microsoft-copilot-studio/copilot-plugins-overview?context=/microsoft-365/copilot/extensibility/context)|Microsoft 365 Copilot, Power Automate, Power apps, Azure Logic apps| [Extend agent capabilities with Copilot connectors](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio)|
-|[Microsoft 365 Copilot connectors](./overview-graph-connector.md) |Microsoft 365 Copilot, Microsoft Search, Context IQ in Outlook and the web, Microsoft 365 Copilot app (microsoft365.com)|[Graph connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
+|[Copilot connectors](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio?context=/microsoft-365/copilot/extensibility/context)|Microsoft 365 Copilot, Power Automate, Power Apps, Azure Logic Apps| [Extend agent capabilities with Copilot connectors](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio)|
+|[Microsoft 365 Copilot connectors](./overview-copilot-connector.md) |Microsoft 365 Copilot, Microsoft Search, Microsoft 365 Copilot app (microsoft365.com)|[Copilot connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
 
 Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other Microsoft 365 apps and services are published and managed, both within your organization and within in-product app stores of Microsoft 365 products.
 
@@ -70,7 +70,7 @@ To learn more, see [Agents are apps for Microsoft 365](agents-are-apps.md).
 
 ### Microsoft 365 and Copilot program for Partner Center
 
-For independent software vendors (ISVs), the **Microsoft 365 and Copilot** program (formerly known as *Office store*) within [Microsoft Partner Center](https://partner.microsoft.com) is available for publishing Microsoft 365 apps, services, and Copilot extensibility solutions.
+For independent software vendors (ISVs), the **Microsoft 365 and Copilot** program (which consolidates the former *Microsoft Teams Store*, *Office Store*, and *AppSource for Microsoft 365*) within [Microsoft Partner Center](https://partner.microsoft.com) is available for publishing Microsoft 365 apps, services, and Copilot extensibility solutions.
 
 After your solution is purchased and deployed by an organization, your agent's actions are incorporated into a unified catalog that represents Copilot's available skill list.
 
@@ -94,7 +94,7 @@ Microsoft 365 provides a rich set of developer resources for extending Microsoft
 
 ### Copilot Studio
 
-[Microsoft Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) is the graphical *low-code* option for copilot extensibility, including Microsoft 365 agents, custom agents, and actions (plugins). Copilot Studio (previously known as *Power Virtual Agents*) is available as a standalone web app [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com/) and also as an [app for Microsoft Teams](https://aka.ms/PVATeamsApp?azure-portal=true).
+[Microsoft Copilot Studio](/microsoft-copilot-studio/copilot-plugins-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) is the graphical *low-code* option for copilot extensibility, including Microsoft 365 agents, custom agents, and actions (plugins). Copilot Studio is available as a standalone web app [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com/) and also as an [app for Microsoft Teams](https://aka.ms/PVATeamsApp?azure-portal=true).
 
 ### Copilot developer mode
 
@@ -108,4 +108,4 @@ For more information for Copilot extensibility solution developers, see [Data, P
 
 ## Related content
 
-- [Extensibility guide for ISVs](/microsoft-cloud/dev/copilot/isv/isv-extensibility-story)
+- [Agents are apps for Microsoft 365](agents-are-apps.md)
