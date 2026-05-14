@@ -4,7 +4,7 @@ description: Learn about admin controls for Microsoft 365 Copilot agents.
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 11/06/2025
+ms.date: 05/13/2026
 ms.topic: article
 ---
 
@@ -37,13 +37,13 @@ Both [declarative agents](./build-declarative-agents.md) and [custom engine agen
 | Upload custom apps | Sideload custom apps to your tenant | [Microsoft 365 Agents Toolkit requirements](prerequisites.md#microsoft-365-agents-toolkit-requirements) |
 | Integrated apps | Manage availability of Copilot agents in your tenant | [Manage agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365/copilot/extensibility/context#manage-agents-in-the-microsoft-365-admin-center) |
 
-## Agents built with Copilot Studio in Microsoft 365 Copilot
+## Agents built with Agent Builder in Microsoft 365 Copilot
 
-Declarative agents for Microsoft 365 Copilot that are built using [Copilot Studio](agent-builder.md) can be shared with the organization as a whole, or with specific users. These agents and the users they are shared with can be and managed by the person who created the agent.
+Declarative agents for Microsoft 365 Copilot that are built using [Agent Builder](agent-builder.md) can be shared with the organization as a whole, or with specific users. These agents and the users they are shared with can be  managed by the person who created the agent.
 
 |Control | Core scenario | Related content|
 |--|--|--|
-| Allow the following users access to Copilot agents | Enable or disable the entry point for Copilot Studio in Microsoft 365 Copilot (*Create an agent*) | [Enable or disable Copilot extensibility](/microsoft-365/admin/manage/manage-plugins-for-copilot-in-integrated-apps?context=/microsoft-365/copilot/extensibility/context#enable-or-disable-copilot-extensibility) |
+| Allow the following users access to Copilot agents | Enable or disable the entry point for Agent Builder in Microsoft 365 Copilot (*Create an agent*) | [Manage agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context#enable-or-disable-copilot-extensibility) |
 | Share | Manage access to your agent within your organization | [Publish and manage agents](agent-builder-share-manage-agents.md#share-an-agent) |
 
 ## Agents built with Microsoft Copilot Studio
@@ -76,7 +76,7 @@ Declarative agents for Microsoft 365 Copilot that are built using [Copilot Studi
 |--|--|--|
 | App registrations | Register an application and grant admin consent for the required Microsoft Graph permissions | [Requirements for Copilot connectors](./overview-copilot-connector.md#create-your-own-synced-copilot-connector) |
 | Search & intelligence | Ensure that Copilot connectors that you intend for Microsoft Search and Microsoft 365 Copilot are enabled for inline results | [Manage connector results in All vertical](/microsoftsearch/connectors-in-all-vertical) |
-| Copilot Connector management | Enable or disable a Copilot connector | [Simplify connector deployment in Teams admin center](/graph/connecting-external-content-deploy-teams?context=/microsoft-365/copilot/extensibility/context) |
+| Copilot connector management | Enable or disable a Copilot connector | [Deploy connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview) |
 
 ## Related content
 
