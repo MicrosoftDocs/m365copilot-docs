@@ -1,9 +1,12 @@
 items:
 - name: Microsoft 365 Copilot extensibility
   href: index.yml
+
+- name: What's new
+  href: whats-new.md
+
 - name: Overview
   href: overview.md
-- name: Explore
   items:
   - name: Agents in the Microsoft 365 ecosystem
     href: ecosystem.md
@@ -15,70 +18,134 @@ items:
     href: work-iq.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
-- name: What's new
-  href: whats-new.md
-- name: Get started
+
+- name: Plan your extensibility solution
   items:
   - name: Planning guide
     href: planning-guide.md
+  - name: Set up your development environment
+    href: prerequisites.md
   - name: Cost considerations
     href: cost-considerations.md
-  - name: Set up your dev environment
-    href: prerequisites.md
-  - name: Samples collection
-    href: samples.md
-  - name: Learning resources
-    href: /collections/p11pb18wmq6xqq
-- name: Build an agent
+
+- name: Extend Copilot with agents
   items:
   - name: Agents overview
     href: agents-overview.md
-  - name: Agent architecture
+  - name: Declarative agents
     items:
-    - name: Declarative agent architecture
-      href: declarative-agent-architecture.md
-    - name: Custom engine agent architecture
-      href: custom-engine-agent-architecture.md
-  - name: Build a declarative agent
-    items:
-    - name: Declarative agents overview
+    - name: Overview
       href: overview-declarative-agent.md
-    - name: Declarative agents FAQ
+    - name: Architecture
+      href: declarative-agent-architecture.md
+    - name: FAQ
       href: transparency-faq-declarative-agent.md
-    - name: Choose your development tool
+  - name: Custom engine agents
+    items:
+    - name: Overview
+      href: overview-custom-engine-agent.md
+    - name: Architecture
+      href: custom-engine-agent-architecture.md
+  - name: Choose your development tool
+    items:
+    - name: Tools overview
+      href: declarative-agent-tool-comparison.md
+    - name: Choose between Agent Builder and Copilot Studio
+      href: copilot-studio-experience.md
+  - name: Agent samples
+    href: samples.md
+
+- name: Use Agent Builder
+  items:
+  - name: Overview
+    href: agent-builder.md
+  - name: Build agents
+    href: agent-builder-build-agents.md
+  - name: Build agents from template
+    items:
+    - name: Templates overview
+      href: agent-templates-overview.md
+    - name: Career Coach
+      href: agent-template-career-coach.md
+    - name: Corporate Communications Crafter
+      href: agent-template-corporate-communications.md
+    - name: Customer Insight Assistant
+      href: agent-template-customer-insight.md
+    - name: Executive Briefing Agent
+      href: agent-template-executive-briefing.md
+    - name: Idea Coach
+      href: agent-template-idea-coach.md
+    - name: Interview Question Assistant
+      href: agent-template-interview-questions.md
+    - name: Learning Coach
+      href: agent-template-learning-coach.md
+    - name: Meeting Coach
+      href: agent-template-meeting-coach.md
+    - name: My Company Policy
+      href: agent-template-my-company-policy.md
+    - name: Personal News Digest
+      href: agent-template-personal-news-digest.md
+    - name: Plan My Day
+      href: agent-template-plan-my-day.md
+    - name: Project Delta Digest
+      href: agent-template-project-delta-digest.md
+    - name: Prompt Coach
+      href: agent-template-prompt-coach.md
+    - name: Request for Proposal Assistant
+      href: agent-template-rfp-assistant.md
+    - name: Quiz Tutor
+      href: agent-template-quiz-tutor.md
+    - name: Scrum Assistant
+      href: agent-template-scrum-assistant.md
+    - name: SME Finder
+      href: agent-template-sme-finder.md
+    - name: Status Update Agent
+      href: agent-template-status-update-agent.md
+    - name: Text Translator Assistant
+      href: agent-template-text-translator.md
+    - name: Writing Coach
+      href: agent-template-writing-coach.md
+  - name: Add knowledge sources
+    href: agent-builder-add-knowledge.md
+  - name: Share and manage agents
+    href: agent-builder-share-manage-agents.md
+  - name: Availability and language support
+    href: agent-builder-regional-availability.md
+  - name: Copy your agent to Copilot Studio
+    href: copy-agent-to-copilot-studio.md
+  - name: Extend with Copilot Studio
+    href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context
+
+- name: Use Agents Toolkit
+  items:
+  - name: Overview
+    href: /microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context
+  - name: Build with TypeSpec
+    items:
+    - name: Overview
+      href: overview-typespec.md
+    - name: Get started
+      href: build-declarative-agents-typespec.md
+    - name: Scenarios
+      href: typespec-scenarios.md
+    - name: Authentication
+      href: typespec-authentication.md
+    - name: TypeSpec reference
       items:
-      - name: Tools overview
-        href: declarative-agent-tool-comparison.md
-      - name: Choose between Microsoft 365 Copilot and Copilot Studio
-        href: copilot-studio-experience.md
-    - name: Use Visual Studio Code
+      - name: Decorators
+        href: typespec-decorators.md
+      - name: Capabilities
+        href: typespec-capabilities.md
+    - name: Build with JSON
       items:
-      - name: Build with TypeSpec
-        items:
-        - name: Overview
-          href: overview-typespec.md
-        - name: Get started
-          href: build-declarative-agents-typespec.md
-        - name: Scenarios
-          href: typespec-scenarios.md
-        - name: Authentication
-          href: typespec-authentication.md
-        - name: TypeSpec reference
-          items:
-            - name: Decorators
-              href: typespec-decorators.md
-            - name: Capabilities
-              href: typespec-capabilities.md
-      - name: Build with JSON
-        items:
-        - name: Create the agent
-          href: build-declarative-agents.md
-        - name: Customize agent behavior
-          href: build-declarative-agents-customize-behavior.md
-        - name: Add knowledge sources
-          href: build-declarative-agents-add-knowledge.md
-        - name: Add skills
-          href: build-declarative-agents-add-skills.md
+      - name: Create the agent
+        href: build-declarative-agents.md
+      - name: Customize agent behavior
+        href: build-declarative-agents-customize-behavior.md
+      - name: Add knowledge sources
+        href: build-declarative-agents-add-knowledge.md
+      - name: Add skills
+        href: build-declarative-agents-add-skills.md
       - name: Retrieve capabilities IDs
         href: declarative-agent-capabilities-ids.md
       - name: Add actions with plugins
@@ -97,261 +164,155 @@ items:
             href: plugin-mcp-apps-ui-guidelines.md
           - name: Troubleshoot MCP apps
             href: plugin-mcp-apps-troubleshooting.md
-          - name: Confirmation prompts
-            href: plugin-confirmation-prompts.md
-          - name: Debug locally
-            href: plugin-debug-local.md
-        - name: Add actions with API plugins
-          items:
-          - name: Build an API plugin with TypeSpec
-            href: build-api-plugins-typespec.md
-          - name: Build an API plugin with a new API
-            href: build-api-plugins-new-api.md
-          - name: Build an API plugin from an existing API
-            href: build-api-plugins-existing-api.md
-          - name: Build an API plugin with an Office JavaScript Library API
-            href: build-api-plugins-local-office-api.md
-          - name: Authentication
-            href: plugin-authentication.md
-          - name: Confirmation prompts
-            href: plugin-confirmation-prompts.md
-          - name: Adaptive Card responses
-            href: api-plugin-adaptive-cards.md
-            displayName: response, response_semantics
-          - name: Allow Adaptive Card edits (preview)
-            href: adaptive-card-edits.md
-          - name: Dialog boxes
-            href: adaptive-card-dialog-box.md
-          - name: Debug locally
-            href: plugin-debug-local.md
-          - name: Best practices for writing OpenAPI specs
-            href: openapi-document-guidance.md
-        - name: Plugin manifest reference
-          items:
-          - name: Version 2.4
-            href: plugin-manifest-2.4.md
-          - name: Version 2.3
-            href: plugin-manifest-2.3.md
-          - name: Version 2.2
-            href: plugin-manifest-2.2.md
-          - name: Version 2.1
-            href: plugin-manifest-2.1.md
-      - name: Declarative agent manifest reference
-        items:
-        - name: Version 1.7
-          href: declarative-agent-manifest-1.7.md
-        - name: Version 1.6
-          href: declarative-agent-manifest-1.6.md
-        - name: Version 1.5
-          href: declarative-agent-manifest-1.5.md
-        - name: Version 1.4
-          href: declarative-agent-manifest-1.4.md
-        - name: Version 1.3
-          href: declarative-agent-manifest-1.3.md
-        - name: Version 1.2
-          href: declarative-agent-manifest-1.2.md
-        - name: Version 1.0
-          href: declarative-agent-manifest-1.0.md
-    - name: Use Microsoft 365 Copilot
+      - name: Confirmation prompts
+        href: plugin-confirmation-prompts.md
+      - name: Debug locally
+        href: plugin-debug-local.md
+    - name: Add actions with API plugins
       items:
-      - name: Overview
-        href: agent-builder.md
-      - name: Build agents
-        href: agent-builder-build-agents.md
-      - name: Build agents from template
+      - name: Build an API plugin with TypeSpec
+        href: build-api-plugins-typespec.md
+      - name: Build an API plugin with a new API
+        href: build-api-plugins-new-api.md
+      - name: Build an API plugin from an existing API
+        href: build-api-plugins-existing-api.md
+      - name: Build an API plugin with an Office JavaScript Library API
+        href: build-api-plugins-local-office-api.md
+      - name: Authentication
+        href: plugin-authentication.md
+      - name: Confirmation prompts
+        href: plugin-confirmation-prompts.md
+      - name: Adaptive Card responses
+        href: api-plugin-adaptive-cards.md
+        displayName: response, response_semantics
+      - name: Allow Adaptive Card edits (preview)
+        href: adaptive-card-edits.md
+      - name: Dialog boxes
+        href: adaptive-card-dialog-box.md
+      - name: Debug locally
+        href: plugin-debug-local.md
+      - name: Best practices for writing OpenAPI specs
+        href: openapi-document-guidance.md
+      - name: Plugin manifest reference
         items:
-        - name: Templates overview
-          href: agent-templates-overview.md
-        - name: Career Coach
-          href: agent-template-career-coach.md
-        - name: Corporate Communications Crafter
-          href: agent-template-corporate-communications.md
-        - name: Customer Insight Assistant
-          href: agent-template-customer-insight.md
-        - name: Executive Briefing Agent
-          href: agent-template-executive-briefing.md
-        - name: Idea Coach
-          href: agent-template-idea-coach.md
-        - name: Interview Question Assistant
-          href: agent-template-interview-questions.md
-        - name: Learning Coach
-          href: agent-template-learning-coach.md
-        - name: Meeting Coach
-          href: agent-template-meeting-coach.md
-        - name: My Company Policy
-          href: agent-template-my-company-policy.md
-        - name: Personal News Digest
-          href: agent-template-personal-news-digest.md
-        - name: Plan My Day
-          href: agent-template-plan-my-day.md
-        - name: Project Delta Digest
-          href: agent-template-project-delta-digest.md
-        - name: Prompt Coach
-          href: agent-template-prompt-coach.md
-        - name: Request for Proposal Assistant
-          href: agent-template-rfp-assistant.md
-        - name: Quiz Tutor
-          href: agent-template-quiz-tutor.md
-        - name: Scrum Assistant
-          href: agent-template-scrum-assistant.md
-        - name: SME Finder
-          href: agent-template-sme-finder.md
-        - name: Status Update Agent
-          href: agent-template-status-update-agent.md
-        - name: Text Translator Assistant
-          href: agent-template-text-translator.md
-        - name: Writing Coach
-          href: agent-template-writing-coach.md
-      - name: Add knowledge sources
-        href: agent-builder-add-knowledge.md
-      - name: Share and manage agents
-        href: agent-builder-share-manage-agents.md
-      - name: Availability and language support
-        href: agent-builder-regional-availability.md
-      - name: Copy your agent to Copilot Studio
-        href: copy-agent-to-copilot-studio.md
-      - name: Extend with Copilot Studio
-        href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context
-    - name: Best practices for building agents
-      href: declarative-agent-best-practices.md
-    - name: Write effective instructions
-      href: declarative-agent-instructions.md
-    - name: Write instructions for agents with API plugins
-      href: instructions-api-plugins.md
-    - name: Understand model changes in GPT 5.1+
-      href: declarative-model-migration-overview.md
-    - name: Connect to other agents
-      href: declarative-agent-connected-agent.md
-    - name: Add capabilities and knowledge sources
+        - name: Version 2.4
+          href: plugin-manifest-2.4.md
+        - name: Version 2.3
+          href: plugin-manifest-2.3.md
+        - name: Version 2.2
+          href: plugin-manifest-2.2.md
+        - name: Version 2.1
+          href: plugin-manifest-2.1.md
+    - name: Declarative agent manifest reference
+      items:
+      - name: Version 1.7
+        href: declarative-agent-manifest-1.7.md
+      - name: Version 1.6
+        href: declarative-agent-manifest-1.6.md
+      - name: Version 1.5
+        href: declarative-agent-manifest-1.5.md
+      - name: Version 1.4
+        href: declarative-agent-manifest-1.4.md
+      - name: Version 1.3
+        href: declarative-agent-manifest-1.3.md
+      - name: Version 1.2
+        href: declarative-agent-manifest-1.2.md
+      - name: Version 1.0
+        href: declarative-agent-manifest-1.0.md
+
+- name: Enhance declarative agents
+  items:
+  - name: Best practices
+    href: declarative-agent-best-practices.md
+  - name: Write effective instructions
+    href: declarative-agent-instructions.md
+  - name: Write instructions for agents with API plugins
+    href: instructions-api-plugins.md
+  - name: Understand model changes in GPT 5.1+
+    href: declarative-model-migration-overview.md
+  - name: Connect to other agents
+    href: declarative-agent-connected-agent.md
+  - name: Add capabilities and knowledge sources
+    items:
+    - name: Code interpreter
       items:
       - name: Code interpreter
-        items:
-        - name: Code interpreter
-          href: code-interpreter.md
-        - name: Code interpreter security architecture
-          href: code-interpreter-security.md
-      - name: Image generator
-        href: image-generator.md
-      - name: Knowledge sources
-        href: knowledge-sources.md
-    - name: Enable user feedback for your agent
-      href: declarative-agent-enable-feedback.md
-    - name: Optimize content retrieval
-      href: optimize-content-retrieval.md
-    - name: Document interaction
-      href: declarative-agent-document-interaction.md
-    - name: Localize your agent
-      href: localize-agents.md
-    - name: Test and debug agents
-      items:
-          - name: Test agents using Copilot Studio
-            href: debugging-agents-copilot-studio.md
-          - name: Test agents using Agents Toolkit
-            href: debugging-agents-vscode.md
-    - name: Convert to custom engine agent
-      href: convert-declarative-agent.md
-    - name: Responsible AI validation
-      href: rai-validation.md
-  - name: Build a custom engine agent
+        href: code-interpreter.md
+      - name: Code interpreter security architecture
+        href: code-interpreter-security.md
+    - name: Image generator
+      href: image-generator.md
+    - name: Knowledge sources
+      href: knowledge-sources.md
+  - name: Enable user feedback for your agent
+    href: declarative-agent-enable-feedback.md
+  - name: Optimize content retrieval
+    href: optimize-content-retrieval.md
+  - name: Document interaction
+    href: declarative-agent-document-interaction.md
+  - name: Localize your agent
+    href: localize-agents.md
+  - name: Test and debug agents
     items:
-    - name: Custom engine agent overview
-      href: overview-custom-engine-agent.md
-    - name: Build with Microsoft 365 Agents SDK
-      items:
-      - name: Overview
-        href: m365-agents-sdk.md
-      - name: Create and deploy agents with the SDK
-        href: create-deploy-agents-sdk.md
-      - name: Start with the Agents Toolkit for Visual Studio
-        href: /microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=/microsoft-365/copilot/extensibility/context
-      - name: Start with the Agents Toolkit for Visual Studio Code
-        href: /microsoft-365/agents-sdk/create-new-toolkit-project-vsc?context=/microsoft-365/copilot/extensibility/context
-      - name: SDK reference
-        items:
-        - name: .NET SDK
-          href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true
-        - name: JavaScript SDK
-          href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true
-        - name: Python SDK
-          href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true
-    - name: Use Teams SDK
-      items:
-      - name: Overview
-        href: teams-ai-library.md
-      - name: Create an agent with Teams CLI
-        href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript&context=/microsoft-365/copilot/extensibility/context
-      - name: Understand the code structure of agents
-        href: /microsoftteams/platform/teams-ai-library/getting-started/code-basics?tabs=controller&pivots=typescript&context=/microsoft-365/copilot/extensibility/context
-      - name: SDK reference
-        items:
-        - name: TypeScript SDK
-          href: /javascript/api/teams-sdk-typescript
-        - name: .NET SDK
-          href: /dotnet/api/?view=msteams-sdk-dotnet-latest&preserve-view=true
-    - name: Use Microsoft Copilot Studio
-      href: /microsoft-copilot-studio/fundamentals-what-is-copilot-studio?context=/microsoft-365/copilot/extensibility/context
-    - name: User experience
-      items:
-      - name: User experience features
-        href: ux-custom-engine-agent.md
-      - name: Asynchronous and proactive messaging
-        href: custom-engine-agent-asynchronous-flow.md
-    - name: Bring agents to Copilot
-      href: bring-agents-to-copilot.md
-    - name: Invoke actions with Semantic Kernel
-      href: graph-actions-semantic-kernel.md
-- name: Add knowledge with Copilot connectors
-  items:
-  - name: Copilot connectors in Microsoft 365 Copilot
-    href: overview-copilot-connector.md
-  - name: Delegate connector administration
-    href: connector-admin-delegation.md
-  - name: Prebuilt connectors gallery
-    href: /microsoftsearch/connectors-gallery?context=/microsoft-365/copilot/extensibility/context
-  - name: Build your first connector
-    items:
-    - name: Build with Agents Toolkit
-      href: build-your-first-connector.md
-    - name: Build with SDK
-      href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365/copilot/extensibility/context
-  - name: Build connectors for people data
-    href: build-connectors-with-people-data.md
-  - name: Connectors API
-    items:
-    - name: Overview
-      href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365/copilot/extensibility/context
-    - name: Manage connections
-      href: /graph/connecting-external-content-manage-connections?context=/microsoft-365/copilot/extensibility/context
-    - name: Manage schema
-      href: /graph/connecting-external-content-manage-schema?context=/microsoft-365/copilot/extensibility/context
-    - name: Manage items
-      href: /graph/connecting-external-content-manage-items?context=/microsoft-365/copilot/extensibility/context
-    - name: Use external groups
-      href: /graph/connecting-external-content-external-groups?context=/microsoft-365/copilot/extensibility/context
-- name: Enhance AI solutions with Microsoft 365 Copilot APIs
-  items:
-  - name: Overview
-    href: copilot-apis-overview.md
-  - name: Use client libraries
-    href: sdks/api-libraries.md
-  - name: Best practices
-    href: /graph/best-practices-concept?context=/microsoft-365/copilot/extensibility/context
-  - name: Terms of use (preview)
-    href: /legal/m365-copilot-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
-  - name: API reference
-    href: api/toc.yml
-- name: Enhance AI solutions with Work IQ APIs
-  items:
-  - name: Overview
-    href: work-iq-api-overview.md
-  - name: Quickstart
-    href: work-iq-api-quickstart.md
-  - name: Work IQ CLI
-    href: work-iq-cli.md
-  - name: Terms of use (preview)
-    href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
+    - name: Test agents using Copilot Studio
+      href: debugging-agents-copilot-studio.md
+    - name: Test agents using Agents Toolkit
+      href: debugging-agents-vscode.md
+  - name: Convert to custom engine agent
+    href: convert-declarative-agent.md
+  - name: Responsible AI validation
+    href: rai-validation.md
+
 - name: Extend agents at scale with Agent 365
   href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
+
+- name: Build custom engine agents
+  items:
+  - name: Build with Microsoft 365 Agents SDK
+    items:
+    - name: Overview
+      href: m365-agents-sdk.md
+    - name: Create and deploy agents with the SDK
+      href: create-deploy-agents-sdk.md
+    - name: Start with the Agents Toolkit for Visual Studio
+      href: /microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=/microsoft-365/copilot/extensibility/context
+    - name: Start with the Agents Toolkit for Visual Studio Code
+      href: /microsoft-365/agents-sdk/create-new-toolkit-project-vsc?context=/microsoft-365/copilot/extensibility/context
+    - name: SDK reference
+      items:
+      - name: .NET SDK
+        href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true
+      - name: JavaScript SDK
+        href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true
+      - name: Python SDK
+        href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true
+  - name: Use Teams SDK
+    items:
+    - name: Overview
+      href: teams-ai-library.md
+    - name: Create an agent with Teams CLI
+      href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript&context=/microsoft-365/copilot/extensibility/context
+    - name: Understand the code structure of agents
+      href: /microsoftteams/platform/teams-ai-library/getting-started/code-basics?tabs=controller&pivots=typescript&context=/microsoft-365/copilot/extensibility/context
+    - name: SDK reference
+      items:
+      - name: TypeScript SDK
+        href: /javascript/api/teams-sdk-typescript
+      - name: .NET SDK
+        href: /dotnet/api/?view=msteams-sdk-dotnet-latest&preserve-view=true
+  - name: Use Microsoft Copilot Studio
+    href: /microsoft-copilot-studio/fundamentals-what-is-copilot-studio?context=/microsoft-365/copilot/extensibility/context
+  - name: User experience
+    items:
+    - name: User experience features
+      href: ux-custom-engine-agent.md
+    - name: Asynchronous and proactive messaging
+      href: custom-engine-agent-asynchronous-flow.md
+  - name: Bring agents to Copilot
+    href: bring-agents-to-copilot.md
+  - name: Invoke actions with Semantic Kernel
+    href: graph-actions-semantic-kernel.md
+
 - name: Evaluate agents
   items:
   - name: Overview
@@ -382,23 +343,76 @@ items:
       href: evaluations-cli-troubleshooting.md
     - name: License terms
       href: /legal/m365-copilot-agent-eval-tool/license-terms?context=/microsoft-365/copilot/extensibility/context
-- name: Publish
+
+- name: Publish and manage agents
   items:
-  - name: Overview
+  - name: Publish agents
     href: publish.md
-  - name: Validation guidelines for agents
+  - name: Validation guidelines
     href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context
   - name: Design icons for agent acquisition and management
     href: agent-icon-management.md
-- name: Manage
-  items:
-  - name: Overview
+  - name: Manage agents
     href: manage.md
   - name: Manage agents in Microsoft 365 admin center
     href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context
-- name: FAQ
-  href: faq.md
+
+- name: Add knowledge with Copilot connectors
+  items:
+  - name: Copilot connectors in Microsoft 365 Copilot
+    href: overview-copilot-connector.md
+  - name: Delegate connector administration
+    href: connector-admin-delegation.md
+  - name: Prebuilt connectors gallery
+    href: /microsoftsearch/connectors-gallery?context=/microsoft-365/copilot/extensibility/context
+  - name: Build your first connector
+    items:
+    - name: Build with Agents Toolkit
+      href: build-your-first-connector.md
+    - name: Build with SDK
+      href: /graph/custom-connector-sdk-sample-overview?context=/microsoft-365/copilot/extensibility/context
+  - name: Build connectors for people data
+    href: build-connectors-with-people-data.md
+  - name: Connectors API
+    items:
+    - name: Overview
+      href: /graph/connecting-external-content-connectors-api-overview?context=/microsoft-365/copilot/extensibility/context
+    - name: Manage connections
+      href: /graph/connecting-external-content-manage-connections?context=/microsoft-365/copilot/extensibility/context
+    - name: Manage schema
+      href: /graph/connecting-external-content-manage-schema?context=/microsoft-365/copilot/extensibility/context
+    - name: Manage items
+      href: /graph/connecting-external-content-manage-items?context=/microsoft-365/copilot/extensibility/context
+    - name: Use external groups
+      href: /graph/connecting-external-content-external-groups?context=/microsoft-365/copilot/extensibility/context
+
+- name: Enhance AI solutions with Work IQ APIs
+  items:
+  - name: Overview
+    href: work-iq-api-overview.md
+  - name: Quickstart
+    href: work-iq-api-quickstart.md
+  - name: Work IQ CLI
+    href: work-iq-cli.md
+  - name: Terms of use (preview)
+    href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
+
+- name: Enhance AI solutions with Microsoft 365 Copilot APIs
+  items:
+  - name: Overview
+    href: copilot-apis-overview.md
+  - name: Use client libraries
+    href: sdks/api-libraries.md
+  - name: Best practices
+    href: /graph/best-practices-concept?context=/microsoft-365/copilot/extensibility/context
+  - name: Terms of use (preview)
+    href: /legal/m365-copilot-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
+  - name: API reference
+    href: api/toc.yml
+
 - name: Known issues
   href: known-issues.md
+- name: FAQ
+  href: faq.md
 - name: Support and feedback
   href: feedback.md
