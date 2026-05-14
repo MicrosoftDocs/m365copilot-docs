@@ -12,22 +12,22 @@ ms.date: 05/15/2026
 
 # Show citations with response semantics
 
-Citations build trust that a Microsoft 365 Copilot response is accurate and grounded. Citations are added automatically in the response body for Copilot synthesized responses. However, they might or might not allow the end user to open the source of information. When Copilot grounds a response on public web content, the URL is cited automatically.
+Citations build trust that a Microsoft 365 Copilot response is accurate and grounded. The response body automatically includes citations for Copilot synthesized responses. However, the end user might or might not be able to open the source of information. When Copilot grounds a response on public web content, the URL is cited automatically.
 
 For content coming from a [Model Context Protocol (MCP) server](build-mcp-plugins.md) or an [API](build-api-plugins-existing-api.md), that content must return a URL that an end user can open and review. You define [`response_semantics`](plugin-manifest-2.4.md#response-semantics-object) in your plugin definition so that Copilot knows where that URL is located in the plugin response, and can make the citation clickable with the right link.
 
-If you skip this step, plugin content is still cited, but only with a representative pill or icon. The end user can't click through and confirm the data from your site. That's why clickable citations are also a Microsoft 365 Copilot Agents store policy requirement for apps published to the store.
+If you skip this step, the response still includes a citation, but only with a representative pill or icon. The end user can't click through and confirm the data from your site. That's why clickable citations are also a Microsoft 365 Copilot Agents store policy requirement for apps published to the store.
 
 :::image type="content" source="assets/images/declarative-agents/citations/citation-hover-experience.png" alt-text="On hover experience for clickable citations in a Copilot response.":::
 
 > [!IMPORTANT]
-> You do **not** need an Adaptive Card to get citations. Response semantics alone — a `data_path` plus a few `properties` mappings — is enough for Copilot to render a clickable citation pointing back to your source.
+> You don't need an Adaptive Card to get citations. Response semantics alone - a `data_path` plus a few `properties` mappings - is enough for Copilot to render a clickable citation pointing back to your source.
 >
 > Consider using interactive [MCP apps](plugin-mcp-apps.md) for rich UX beyond citations.
 
 ## Using response semantics
 
-Response semantics defined in your plugin manifest is a contract between your MCP server or API and Copilot.
+Response semantics defined in your plugin manifest act as a contract between your MCP server or API and Copilot.
 
 1. Your tool returns JSON.
 1. In the [plugin manifest](plugin-manifest-2.4.md#response-semantics-object):
@@ -37,11 +37,11 @@ Response semantics defined in your plugin manifest is a contract between your MC
 
 1. Copilot renders a citation for each item. Users click through to your source.
 
-This configuration also enables citations to work for your tool response not just in Copilot, but also in [ChatGPT Apps](https://developers.openai.com/api/docs/mcp) — with no additional modifications.
+This configuration also enables citations to work for your tool response not just in Copilot, but also in [ChatGPT Apps](https://developers.openai.com/api/docs/mcp) — with no extra modifications.
 
 ## Minimum configuration
 
-Your `response_semantics` configuration is driven by the shape of your tool's response, not by the protocol of your tool response. The same manifest schema is used by Copilot agents with all tool protocols (MCP, OpenAPI, message extensions).
+Your `response_semantics` configuration is driven by the shape of your tool's response, not by the protocol of your tool response. Copilot agents with all tool protocols (MCP, OpenAPI, message extensions) use the same manifest schema.
 
 Most tool responses fall into one of two shapes:
 
@@ -50,7 +50,7 @@ Most tool responses fall into one of two shapes:
 
 ### Array of results (search-style)
 
-Tools that returns multiple items typically return an array under a `results` (or equivalent) key, as shown in the following example.
+Tools that return multiple items typically return an array under a `results` (or equivalent) key, as shown in the following example.
 
 ```json
 {
@@ -92,7 +92,7 @@ The `data_path` property points to the array. Each element produces its own clic
 
 ### Single object (fetch-style)
 
-The following example shows a response with exactly one record — a document, an entity, a file — to be cited as one source.
+The following example shows a response with exactly one record - a document, an entity, a file - to be cited as one source.
 
 ```json
 {
@@ -121,11 +121,11 @@ The following example shows a minimum response semantics configuration in the pl
 }
 ```
 
-The `data_path` property set to `$` selects the root object as a single citation item. This is the right choice whenever the tool returns one record — even if the record includes nested fields like `metadata`.
+The `data_path` property set to `$` selects the root object as a single citation item. This is the right choice whenever the tool returns one record - even if the record includes nested fields like `metadata`.
 
 ### MCP content wrapper
 
-MCP tools wrap their response in a `content` array of `TextContentBlock` items. Copilot parses the `text` field of each block as JSON and then applies your `data_path` against the parsed value. The shape inside the `text` string is what drives your configuration — not the outer `content` wrapper.
+MCP tools wrap their response in a `content` array of `TextContentBlock` items. Copilot parses the `text` field of each block as JSON and then applies your `data_path` against the parsed value. The shape inside the `text` string is what drives your configuration - not the outer `content` wrapper.
 
 #### Example MCP response
 
@@ -149,13 +149,13 @@ The following properties are available on citations. All values are relative JSO
 | Property                       | Required          | What it does                                                                         |
 |--------------------------------|-------------------|--------------------------------------------------------------------------------------|
 | `title`                        | Yes (practically) | The clickable heading of the citation.                                               |
-| `subtitle`                     | No                | Second line — dates, authors, categories.                                            |
+| `subtitle`                     | No                | Second line - dates, authors, categories.                                            |
 | `url`                          | Yes (practically) | Where the citation navigates on click. Must be a canonical link back to your source. |
 | `thumbnail_url`                | No                | Small image shown alongside the citation.                                            |
 | `information_protection_label` | No                | Sensitivity (IP) label for the content.                                              |
 
 > [!NOTE]
-> If `url` is missing, the citation isn't clickable. This is a very common reason developers see non-functional citations.
+> If `url` is missing, the citation isn't clickable. This missing property is a very common reason developers see non-functional citations.
 
 ## Setting `data_path`
 
@@ -175,12 +175,12 @@ The `data_path` property is a JSONPath ([RFC 9535](https://datatracker.ietf.org/
 
 **As a first preference,** consider adding [rich UI widgets to your agent](plugin-mcp-apps.md). This approach is more future-ready and AI-native, allowing more intelligent, adaptive, and seamless interactions.
 
-**Add an Adaptive Card as a last resort** if — and only if — you need one of:
+**Add an Adaptive Card as a last resort** if - and only if - you need one of the following conditions:
 
-- A **custom visual layout for the citation alone** (multi-column, image banners, formatted text blocks), or multiple fields rendered in the citation card body (beyond title, subtitle, and URL).
-- **Action buttons** beyond the default "click the citation" behavior (for example, `Action.Execute`, multi-button toolbars).
+- A **custom visual layout for the citation alone** (multicolumn, image banners, formatted text blocks), or multiple fields rendered in the citation card body (beyond title, subtitle, and URL).
+- **Action buttons** beyond the default "click the citation" behavior (for example, `Action.Execute`, multibutton toolbars).
 
-For the vast majority of citation scenarios — "show me the source and let me click through" — skip Adaptive Cards entirely. They add complexity, are harder to debug, and the default citation UI is clean and consistent with the rest of Copilot.
+For the vast majority of citation scenarios - "show me the source and let me click through" - skip Adaptive Cards entirely. They add complexity, are harder to debug, and the default citation UI is clean and consistent with the rest of Copilot.
 
 ### Example with Adaptive Card
 
@@ -221,27 +221,27 @@ For the vast majority of citation scenarios — "show me the source and let me c
 }
 ```
 
-Notice the `${title}`, `${subtitle}`, and `${url}` tokens — these are populated by the same `properties` map above. The Adaptive Card is a **presentation layer** on top of response semantics; it doesn't replace it.
+Notice the `${title}`, `${subtitle}`, and `${url}` tokens - these tokens are populated by the same `properties` map shown earlier. The Adaptive Card is a **presentation layer** on top of response semantics; it doesn't replace it.
 
 ## Known limitations
 
-Plan around these when designing your tool and manifest:
+Plan around these limitations when designing your tool and manifest:
 
 - **Unstructured MCP text isn't parseable.** If your MCP tool returns plain narrative text (not JSON) inside a `TextContentBlock`, `response_semantics` can't extract citations from it. Return structured JSON inside the text block instead.
-- **Critique / multi-model flows.** Pipelines that run a primary model, a verifier, and then a synthesis step have been observed to drop citations in the final synthesis.
-- **Dynamic tool fetching.** When tools are discovered dynamically at runtime, manifest-level `response_semantics` might not apply. Prefer static tool registration if citations are important.
-- If you see any of the above or other issues, click the thumbs-down button and share feedback (along with diagnostics if possible). Use easy-to-triage hashtags like `#citations`.
+- **Critique / multimodel flows.** Pipelines that run a primary model, a verifier, and then a synthesis step drop citations in the final synthesis.
+- **Dynamic tool fetching.** When you discover tools dynamically at runtime, manifest-level `response_semantics` might not apply. Prefer static tool registration if citations are important.
+- If you see any of the preceding problems or other problems, click the thumbs-down button and share feedback (along with diagnostics if possible). Use easy-to-triage hashtags like `#citations`.
 
 ## Troubleshooting checklist
 
-If citations aren't showing, use the following checklist.
+If citations don't show up, use the following checklist.
 
 - Is `data_path` pointing to the right node? Paste your tool's raw JSON response into a JSONPath tester and confirm your expression returns the array or object you expect.
 - Does each item have a non-empty `url`? Missing URLs result in non-clickable citations.
 - For MCP tools, is the `text` field inside `TextContentBlock` valid JSON? Parse it manually to confirm.
 - Is the schema flat? If you have deeply nested arrays, try returning a single flat array.
-- Did you declare `response_semantics` per function (inside that function's `capabilities` in the plugin manifest) and not at the plugin root? It must be scoped to the function.
-- Removed the Adaptive Card? Try the minimum config first — the default citation UI almost always renders correctly when `data_path`, `title`, and `url` are correct.
+- Did you declare `response_semantics` per function (inside that function's `capabilities` in the plugin manifest) and not at the plugin root? You must scope it to the function.
+- Removed the Adaptive Card? Try the minimum config first. The default citation UI almost always renders correctly when `data_path`, `title`, and `url` are correct.
 
 ## Example
 
