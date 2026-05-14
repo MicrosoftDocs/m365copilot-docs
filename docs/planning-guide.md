@@ -128,7 +128,7 @@ If you want to integrate Copilot's capabilities into your custom application or 
 
 - **Conversational integration** - To embed Copilot-powered chat experiences into your own applications, the [Copilot Chat API (preview)](/microsoft-365/copilot/extensibility/api/ai-services/chat/overview) allows you to send prompts and receive responses directly from Copilot.
 
-- **Governance and insights** - If you're building a data governance solution—or looking to understand how users are interacting with Copilot—the [Copilot Interaction Export API](microsoft-365/copilot/extensibility/api/ai-services/interaction-export/resources/aiinteractionhistory) allows you to export user prompts and responses. This can help you ensure compliance, monitor usage, and drive adoption strategies.
+- **Governance and insights** - If you're building a data governance solution—or looking to understand how users are interacting with Copilot—the [Copilot Interaction Export API](/microsoft-365/copilot/extensibility/api/ai-services/interaction-export/resources/aiinteractionhistory) allows you to export user prompts and responses. This can help you ensure compliance, monitor usage, and drive adoption strategies.
 
 ## Consider costs
 
