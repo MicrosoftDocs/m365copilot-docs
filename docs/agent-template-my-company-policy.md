@@ -24,7 +24,7 @@ Before you work with the template, make sure that you have:
 ## Capabilities
 
 > [!NOTE]
-> This template works best when grounded in additional context, such as a SharePoint knowledge source. [Use the Agent Builder to search for a SharePoint file, folder, or site](agent-builder-add-knowledge.md#sharepoint-content) that provides authoritative policy documents relevant to this agent.
+> This template works best when grounded in additional context, such as a SharePoint knowledge source. [Use the Agent Builder to search for a SharePoint file, folder, or site](agent-builder-add-knowledge.md#sharepoint-and-onedrive-content) that provides authoritative policy documents relevant to this agent.
 
 With appropriate grounding, agents built on the My Company Policy template can offer:
 

@@ -47,7 +47,7 @@ When you configure your agent to use SharePoint and OneDrive content as knowledg
 
 For information about how to add SharePoint and OneDrive knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.7.md#onedrive-and-sharepoint-object).
 
-For information about how to add SharePoint and OneDrive knowledge to your agent in Microsoft 365 Copilot, see [Add knowledge sources](agent-builder-add-knowledge.md#sharepoint-content).
+For information about how to add SharePoint and OneDrive knowledge to your agent in Microsoft 365 Copilot, see [Add knowledge sources](agent-builder-add-knowledge.md#sharepoint-and-onedrive-content).
 
 > [!NOTE]
 > SharePoint and OneDrive knowledge sources require the signed-in user to have an active Microsoft 365 Copilot license. If the user doesn't have a license, requests fail with the message **Sorry, I wasn’t able to respond**.
