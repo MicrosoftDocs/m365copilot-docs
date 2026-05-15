@@ -48,7 +48,7 @@ For details, see [Copy an agent to Copilot Studio](copy-agent-to-copilot-studio.
 
 ### Use the Search API (preview) to perform semantic search
 
-The Microsoft 365 Copilot Search API (preview) enables developers to perform semantic search across OneDrive content using natural language queries with contextual understanding and intelligent results. For more information, see [Overview of the Search API](api/ai-services/search/overview.md).
+The Microsoft 365 Copilot Search API (preview) enables developers to perform semantic search across OneDrive content by using natural language queries with contextual understanding and intelligent results. For more information, see [Overview of the Search API](api/ai-services/search/overview.md).
 
 ### Users with usage billing have access to additional knowledge sources in Microsoft 365 Copilot
 
@@ -82,7 +82,7 @@ Added the `disclaimers` property to the [Declarative agent manifest object](decl
 
 ### Embedded file content file size limit increase
 
-You can now upload files up to 100 MBs in size when you embed file content as knowledge in Microsoft 365 Copilot. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
+You can now upload files up to 100 MB when you embed file content as knowledge in Microsoft 365 Copilot. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
 
 ### Increased SharePoint file limit for agents
 
@@ -138,7 +138,7 @@ Add Outlook email and Teams group, channel, and meeting chats as knowledge when 
 
 ### Microsoft 365 Agents Toolkit
 
-Use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to [Build declarative agents](build-declarative-agents.md) and [Build Copilot connectors](build-your-first-connector.md).
+Use the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to [build declarative agents](build-declarative-agents.md) and [build Copilot connectors](build-your-first-connector.md).
 
 ### Microsoft 365 Copilot APIs
 
@@ -150,7 +150,7 @@ A new version of the API plugin manifest schema is available. [Plugin manifest s
 
 ### Declarative agent manifest version 1.4
 
-A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.4](declarative-agent-manifest-1.4.md) adds the following.
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.4](declarative-agent-manifest-1.4.md) adds the following features.
 
 - Added the `behavior_overrides` property to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object).
 - Added the `part_type` and `part_id` properties to the [Items by SharePoint IDs object](declarative-agent-manifest-1.4.md#items-by-sharepoint-ids-object).
@@ -160,7 +160,7 @@ A new version of the declarative agent manifest schema is available. [Declarativ
 
 ### Email as knowledge
 
-Email is now available as a knowledge source for agents build with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](knowledge-sources.md#email).
+Email is now available as a knowledge source for agents built with the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit). For more information, see [Email knowledge](knowledge-sources.md#email).
 
 ### Copilot Studio agent templates
 
@@ -192,13 +192,13 @@ You can add specific public websites as agent knowledge sources to make your age
 
 ### Custom engine agents available in Copilot app (preview)
 
-Custom engine agents are now available to users who have Microsoft 365 Copilot licenses or users in tenants with metering enabled in the Microsoft 365 Copilot app (for preview), in addition to Teams.
+Users with Microsoft 365 Copilot licenses or users in tenants with metering enabled can now access custom engine agents in the Microsoft 365 Copilot app (preview), in addition to Teams.
 
 ## January 2025
 
 ### Links are no longer redacted in Copilot responses
 
-Links to organizational and web resources are no longer redacted from Copilot responses. Links that don't explicitly match grounding data or resources defined in the agent manifest continue to be redacted.
+Copilot responses no longer redact links to organizational and web resources. Links that don't explicitly match grounding data or resources defined in the agent manifest continue to be redacted.
 
 ### Build agents for Microsoft 365 Copilot Chat
 
