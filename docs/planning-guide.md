@@ -106,7 +106,7 @@ Use Microsoft 365 Copilot connectors if you need Copilot to integrate external d
 - **Use prebuilt Copilot connectors**. Identify [prebuilt Copilot connectors](/microsoftsearch/pre-built-connectors-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) that you can configure in your tenant.
 - **Build a custom Copilot connector**. If none of the existing connectors meet your needs, build your own. For more information, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 
-### Work IQ APIs (preview)
+### Work IQ API (preview)
 
 If you want your application or agent to reason over Microsoft 365 work data - rather than just retrieve it - consider the [Microsoft Work IQ API](work-iq-api-overview.md) (preview). Work IQ is the intelligence layer behind Microsoft 365 Copilot. It combines Microsoft 365 data (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships, and applies the inference needed to reason across all of it and surface next-best actions.
 

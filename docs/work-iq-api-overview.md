@@ -254,7 +254,7 @@ Work IQ uses Microsoft Entra ID delegated authentication.
 
 ## How Work IQ compares to Copilot Chat API
 
-Work IQ will be the production-ready evolution of the Copilot Chat API. When Work IQ reaches General Availability (as soon as May), it will become the recommended, fully supported way to integrate with the Copilot agent in production scenarios. It will be backed by enterprise SLAs, stable contracts, and long-term support commitments.
+Work IQ will be the production-ready evolution of the Copilot Chat API. When Work IQ reaches general availability (May 2026), it will become the recommended, fully supported way to integrate with the Copilot agent in production scenarios. It will be backed by enterprise SLAs, stable contracts, and long-term support commitments.
 
 **What this means for you:**
 
