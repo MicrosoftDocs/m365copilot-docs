@@ -7,17 +7,18 @@ ms.topic: concept-article
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 03/10/2026
+ms.date: 05/15/2026
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
 
-The Agent Builder feature in Microsoft 365 Copilot provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable them to deliver more accurate, relevant, and personalized responses.
+The Agent Builder feature in Microsoft 365 Copilot provides a simple interface for you to integrate knowledge sources to make your declarative agent more intelligent and context-aware. These knowledge sources ground your agent in enterprise data, public content, and user-specific information to enable it to deliver more accurate, relevant, and personalized responses.
 
 You can add:
 
 - Up to four public website URLs.
 - SharePoint files, folders, or sites.
+- Up to 50 OneDrive files.
 - Up to five Teams chat URLs.
 - Embedded files uploaded from your device (on the **Configure** tab).
 - Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
@@ -30,8 +31,8 @@ For information about supported knowledge sources and licensing requirements, se
 
 If you use natural language to create your agent, Agent Builder adds knowledge sources for you based on your description. You can also add knowledge sources from the chat box:
 
-1. In Microsoft 365 Copilot, choose **New agent** on the left pane, and provide a natural language description for your agent.
-2. Choose the plus icon (**+**) in the chat box. Use one of the following methods to add knowledge sources:
+1. In Microsoft 365 Copilot, choose **New agent** in the left pane, and provide a natural language description for your agent.
+1. Choose the plus icon (**+**) in the chat box. Use one of the following methods to add knowledge sources:
 
    - **Add work content** - Select, search for, or upload files.
    - **Upload images and files** - Upload directly from your device.
@@ -42,10 +43,10 @@ If you use natural language to create your agent, Agent Builder adds knowledge s
 If you're configuring your agent manually, to add knowledge sources to your agent:
 
 1. In Microsoft 365 Copilot, choose **New agent** from the left pane, and choose **Skip to configure**.
-2. In the **Knowledge** section, use one of the following methods to add knowledge sources:
-   - **Search bar** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
+1. In the **Knowledge** section, use one of the following methods to add knowledge sources:
+   - **Search** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
    - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
-   - **Picker** - Use the file picker UI to browse for and select SharePoint files or folders.
+   - **Browse** - Use the **Attach cloud files** picker to browse for and select SharePoint or OneDrive files or folders.
    - **Upload** - Upload files directly from your device.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-knowledge-configure.png" alt-text="A screenshot of the Knowledge section of the Configure tab.":::
@@ -63,39 +64,41 @@ To configure your agent to use any web data as knowledge:
 - Use natural language to ask Agent Builder to prioritize your knowledge sources.
 - On the **Configure** tab, under **Knowledge**, choose the toggle next to **Search all websites**.
 
-## SharePoint content
+## SharePoint and OneDrive content
 
-Reference specific SharePoint sites, files, and folders as agent knowledge sources. When you reference sources from SharePoint, consider the following limits:
+Reference specific sites, files, and folders as agent knowledge sources. When you reference sources from SharePoint or OneDrive, consider the following limits:
 
 - Select up to 100 SharePoint files for each agent.
-- The agent respects existing permissions and [sensitivity labels](/purview/sensitivity-labels) for files already uploaded to SharePoint.
+- Select up to 50 OneDrive files for each agent.
+- The agent respects existing permissions and [sensitivity labels](/purview/sensitivity-labels) for files already uploaded to SharePoint or OneDrive.
 - Although there isn't a direct file size limit on the knowledge files you select, the agent can only reason over specific [file types](#file-types-and-size-limits).
 
 > [!NOTE]
+
 > - If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
 > - To optimize for Copilot, keep the contents of files that you select concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 
-### Entering a URL for a SharePoint site, folder, or file
+### Enter a URL for files, folders, or sites
 
-You can enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
+Enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
-After you provide the SharePoint URL, press **Enter** to add it as a knowledge source.
+For OneDrive, enter the URL for a file or folder, but use **Copy link** to get the URL, do not copy it from the browser address bar.
 
-### SharePoint file picker
+After you provide the URL, press **Enter** to add it as a knowledge source.
 
-You can also select files or folders from the SharePoint file picker by choosing the cloud icon in the **Knowledge** section. The left pane on the picker displays your recently accessed SharePoint sites. To view more SharePoint sites, select **More places**. If you recently created a site, it appears after several minutes.
+### Browse to select files, folders, or sites
+
+Select the **Attach cloud files** cloud icon in the **Knowledge** section to open the file picker. The picker displays your recently accessed SharePoint and OneDrive sites. To view more SharePoint sites, select **More places** at the bottom of the left pane. If you recently created a site, it appears after several minutes.
 
 > [!NOTE]
 > The SharePoint picker might not show all the [communication sites](/microsoft-365/community/team-site-or-communication-site) that you have access to. Communication sites only show up in the **Quick Access** and **Recent** sections of the SharePoint picker.
 
-After you select a site, you can select several files and folders. When you select files and folders, you add the SharePoint file or folder to the agent's knowledge sources. When the same site includes multiple folders, select the button next to the folder name to view other folders.
-
 ### File readiness
 
-When new files are uploaded to SharePoint, they can take up to several minutes to be ready for the agent to include in its response. You can still test your agent in the test pane if sources aren't ready. However, responses don't include information from the newly uploaded file until it's ready.
+When you upload new files to SharePoint or OneDrive, it can take up to several minutes for the agent to include them in its response. You can still test your agent in the test pane if sources aren't ready. However, responses don't include information from the newly uploaded file until it's ready.
 
-You can check the file readiness in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When you rename or delete the underlying file uploaded to SharePoint, the agent picks up the changes. You can also select the reload button on top of the **Knowledge** section to manually reload the state.
+You can check the file readiness in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When you rename or delete the underlying file uploaded to SharePoint or OneDrive, the agent picks up the changes. You can also select the refresh button on top of the **Knowledge** section to manually reload the state.
 
 ## Microsoft Teams data
 
@@ -104,6 +107,7 @@ You can ground your agent in Microsoft Teams data, including Teams chat messages
 You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents' responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, select the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
 
 > [!IMPORTANT]
+
 > - Teams knowledge is only available to users with a Microsoft 365 Copilot add-on license.
 > - You can't scope to individual meetings. When you select **My Teams chats and meetings**, agents search all meeting transcripts and the whole calendar.
 > - Depending on the size of past transcripts, agents might not have access to all meeting transcripts.
@@ -212,6 +216,7 @@ The following table lists the file types that you can add as knowledge to your a
 \* Only supported for SharePoint in Microsoft 365.
 
 > [!NOTE]
+
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
 > - To optimize for Copilot, keep the contents of files that you upload concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 
@@ -249,9 +254,9 @@ To enhance the accuracy and relevance of agent responses, ground agents not only
    > [!NOTE]
    > If the attribute doesn't appear in the search results, it might be because:
    >
-   > * Your administrator didn't configure the scoped content.
-   > * You don't have the required permissions to access the content.
-   > * The scope isn't valid for the selected connector.
+   > - Your administrator didn't configure the scoped content.
+   > - You don't have the required permissions to access the content.
+   > - The scope isn't valid for the selected connector.
 
 1. Select the attribute from the list to add it.
 1. Your agent's knowledge is now scoped to the data associated with the scoped attribute.
@@ -261,10 +266,10 @@ For example, when you use the **Azure DevOps Work Items** connector, you can sco
 To scope the **Azure DevOps Work Items** area path:
 
 1. Under **Choose other data sources**, select **Azure DevOps Work Items**.
-2. Select **Add** next to the connections that are relevant to your tasks.
-3. Select the arrow to return to the **Knowledge** section.
-4. Select **Select an area path** and search for or type the area path name.
-5. Select the area path to add it.
+1. Select **Add** next to the connections that are relevant to your tasks.
+1. Select the arrow to return to the **Knowledge** section.
+1. Select **Select an area path** and search for or type the area path name.
+1. Select the area path to add it.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/embedded-authoring-copilot-connectors.png" alt-text="A screenshot of the Knowledge section of the Configure tab with Choose other data sources highlight and several Copilot connectors shown.":::
 
