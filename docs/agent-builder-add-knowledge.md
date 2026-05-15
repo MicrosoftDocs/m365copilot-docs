@@ -83,7 +83,7 @@ Reference specific sites, files, and folders as agent knowledge sources. When yo
 
 Enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
-For OneDrive, enter the URL for a file or folder, but use **Copy link** to get the URL, do not copy it from the browser address bar.
+For OneDrive, enter the URL for a file or folder, but use **Copy link** to get the URL, don't copy it from the browser address bar.
 
 After you provide the URL, press **Enter** to add it as a knowledge source.
 

@@ -24,7 +24,7 @@ Before you work with the template, make sure that you have:
 ## Capabilities
 
 > [!IMPORTANT]
-> This template works best when grounded in additional context - preferably in Copilot Connectors (recommended under Extension Opportunities), or a SharePoint knowledge source. Use the Agent Builder to search for [one of the recommended Copilot Connectors](agent-builder-add-knowledge.md#copilot-connectors), or [a SharePoint file, folder or site](agent-builder-add-knowledge.md#sharepoint-and-onedrive-content) that provides authoritative project information relevant to this agent.
+> This template works best when grounded in additional context - preferably in Copilot Connectors (recommended under Extension Opportunities), or a SharePoint knowledge source. Use the Agent Builder to search for [one of the recommended Copilot Connectors](agent-builder-add-knowledge.md#copilot-connectors), or [a SharePoint file, folder, or site](agent-builder-add-knowledge.md#sharepoint-and-onedrive-content) that provides authoritative project information relevant to this agent.
 
 With appropriate grounding, agents built on the Project Delta Digest template can offer:
 
