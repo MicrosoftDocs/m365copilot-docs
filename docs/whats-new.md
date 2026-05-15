@@ -88,6 +88,5 @@ The Microsoft 365 Copilot Retrieval API is now available to users without a Micr
 
 
 ## Related content
-
 - [Microsoft 365 Copilot extensibility overview](overview.md)
 - [What's new history](whats-new-history.md)
