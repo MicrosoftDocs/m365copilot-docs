@@ -45,7 +45,7 @@ If you're configuring your agent manually, to add knowledge sources to your agen
 1. In Microsoft 365 Copilot, choose **New agent** from the left pane, and choose **Skip to configure**.
 1. In the **Knowledge** section, use one of the following methods to add knowledge sources:
    - **Search** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
-   - **Enter URL** - Add a public website or SharePoint link (must be two levels deep and without query parameters).
+   - **Enter URL** - Add a public website, a SharePoint link (must be two levels deep and without query parameters), or a OneDrive shared link.
    - **Browse** - Use the **Attach cloud files** picker to browse for and select SharePoint or OneDrive files or folders.
    - **Upload** - Upload files directly from your device.
 
@@ -74,7 +74,7 @@ Reference specific sites, files, and folders as agent knowledge sources. When yo
 - Although there isn't a direct file size limit on the knowledge files you select, the agent can only reason over specific [file types](#file-types-and-size-limits).
 
 > [!NOTE]
-
+>
 > - If [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) is enabled, you can't use SharePoint as a knowledge source.
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
 > - To optimize for Copilot, keep the contents of files that you select concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
@@ -107,7 +107,7 @@ You can ground your agent in Microsoft Teams data, including Teams chat messages
 You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents' responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, select the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
 
 > [!IMPORTANT]
-
+>
 > - Teams knowledge is only available to users with a Microsoft 365 Copilot add-on license.
 > - You can't scope to individual meetings. When you select **My Teams chats and meetings**, agents search all meeting transcripts and the whole calendar.
 > - Depending on the size of past transcripts, agents might not have access to all meeting transcripts.
@@ -216,7 +216,7 @@ The following table lists the file types that you can add as knowledge to your a
 \* Only supported for SharePoint in Microsoft 365.
 
 > [!NOTE]
-
+>
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
 > - To optimize for Copilot, keep the contents of files that you upload concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 

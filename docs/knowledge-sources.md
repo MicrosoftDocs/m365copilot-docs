@@ -21,7 +21,7 @@ The following table lists the capabilities and knowledge sources you can configu
 | Image generator | :white_check_mark: | :white_check_mark: | No |
 | Copilot connectors | :white_check_mark: | :white_check_mark: | Yes |
 | SharePoint | :white_check_mark: | :white_check_mark: | Yes |
-| OneDrive | :x: | :white_check_mark: | Yes |
+| OneDrive | :white_check_mark: | :white_check_mark: | Yes |
 | Embedded file content | :white_check_mark: | :x: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
@@ -90,7 +90,7 @@ If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to create
 If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to build your agent, you can upload files directly from your device or the cloud to embed the content for your agent to use as knowledge. The embedded file content is stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview). These files count against the OneDrive and SharePoint capacity in your tenant.
 
 > [!NOTE]
-
+>
 > - The file upload feature is available to users with usage billing enabled or with a Microsoft 365 Copilot license.
 > - Embedded file content isn't supported in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
 
