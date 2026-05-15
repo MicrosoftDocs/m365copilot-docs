@@ -228,7 +228,6 @@ Notice the `${title}`, `${subtitle}`, and `${url}` tokens - these tokens are pop
 Plan around these limitations when designing your tool and manifest:
 
 - **Unstructured MCP text isn't parseable.** If your MCP tool returns plain narrative text (not JSON) inside a `TextContentBlock`, `response_semantics` can't extract citations from it. Return structured JSON inside the text block instead.
-- **Critique / multimodel flows.** Pipelines that run a primary model, a verifier, and then a synthesis step drop citations in the final synthesis.
 - **Dynamic tool fetching.** When you discover tools dynamically at runtime, manifest-level `response_semantics` might not apply. Prefer static tool registration if citations are important.
 - If you see any of the preceding problems or other problems, click the thumbs-down button and share feedback (along with diagnostics if possible). Use easy-to-triage hashtags like `#citations`.
 
@@ -241,39 +240,6 @@ If citations don't show up, use the following checklist.
 - For MCP tools, is the `text` field inside `TextContentBlock` valid JSON? Parse it manually to confirm.
 - Is the schema flat? If you have deeply nested arrays, try returning a single flat array.
 - Did you declare `response_semantics` per function (inside that function's `capabilities` in the plugin manifest) and not at the plugin root? You must scope it to the function.
-- Removed the Adaptive Card? Try the minimum config first. The default citation UI almost always renders correctly when `data_path`, `title`, and `url` are correct.
-
-## Example
-
-### Tool response
-
-```json
-{
-  "content": [
-    {
-      "type": "text",
-      "text": "{\"results\":[{\"title\":\"Forecasting AI adoption\",\"publishedDate\":\"2026-03-12\",\"url\":\"https://research.example.com/ai-2026\"},{\"title\":\"Enterprise AI spend\",\"publishedDate\":\"2026-02-20\",\"url\":\"https://research.example.com/spend\"}]}"
-    }
-  ]
-}
-```
-
-### Manifest function capability
-
-```json
-"capabilities": {
-  "response_semantics": {
-    "data_path": "$.results",
-    "properties": {
-      "title": "$.title",
-      "subtitle": "$.publishedDate",
-      "url": "$.url"
-    }
-  }
-}
-```
-
-**What the user sees:** two clickable citation cards under the Copilot response, each linking to the source URL.
 
 ## Related content
 
