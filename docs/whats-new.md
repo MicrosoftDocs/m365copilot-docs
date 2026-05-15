@@ -19,6 +19,10 @@ For the latest information, announcements, and news about preview and generally 
 
 ## May 2026
 
+### OneDrive knowledge in Agent Builder
+
+Add OneDrive files and folders as knowledge when you use Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
+
 ### Declarative agent manifest version 1.7
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.7](declarative-agent-manifest-1.7.md) adds the following features:
