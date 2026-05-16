@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/11/2026
+ms.date: 05/15/2026
 ms.topic: overview
 ---
 
@@ -21,7 +21,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### OneDrive knowledge in Agent Builder
 
-Add OneDrive files and folders as knowledge when you use Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
+Add OneDrive files and folders as knowledge when you use Agent Builder in Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
 
 ### Declarative agent manifest version 1.7
 
