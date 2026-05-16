@@ -89,8 +89,6 @@ Agent Builder is now available in Government Community Cloud High (GCCH) environ
 
 The Microsoft 365 Copilot Retrieval API is now available to users without a Microsoft 365 Copilot add-on license via pay-as-you-go consumption (preview). This model provides access to the Retrieval API for tenant-level data sources such as SharePoint and Microsoft 365 Copilot connectors. For more information, see [Microsoft 365 Copilot Retrieval API pay-as-you-go consumption (preview)](api/ai-services/retrieval/paygo-retrieval.md).
 
-
-
 ## Related content
 - [Microsoft 365 Copilot extensibility overview](overview.md)
 - [What's new history](whats-new-history.md)
