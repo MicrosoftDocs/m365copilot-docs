@@ -19,7 +19,7 @@ You can extend Copilot in several ways:
 
 - Use [Microsoft 365 Copilot connectors](#enhance-knowledge-in-copilot-with-connectors) to bring organizational data into Microsoft 365 Copilot, enabling Copilot to access and reason over a broader set of enterprise information.
 
-- Use [Microsoft Work IQ APIs](#microsoft-work-iq-apis-preview) to build agentic and AI-powered applications that securely reason over Microsoft 365 work context.
+- Use the [Microsoft Work IQ API](#microsoft-work-iq-api-preview) to build agentic and AI-powered applications that securely reason over Microsoft 365 work context.
 
 - Use [Microsoft 365 Copilot APIs](#microsoft-365-copilot-apis) to programmatically access Copilot's capabilities in your custom applications and agents.
 
@@ -76,11 +76,11 @@ Many [prebuilt Copilot connectors](/microsoftsearch/connectors-gallery) are avai
 
 If an existing connector doesn't meet your needs, you can build a custom Copilot connector tailored to your specific business requirements. Custom connectors allow you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see [Build Copilot connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365/copilot/extensibility/context).
 
-## Microsoft Work IQ APIs (preview)
+## Microsoft Work IQ API (preview)
 
-[Microsoft Work IQ APIs](work-iq-api-overview.md) enable you to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
+The [Microsoft Work IQ API](work-iq-api-overview.md) enables you to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
 
-Work IQ is the intelligence layer behind Microsoft 365 Copilot and agents. It combines Microsoft 365 work data—emails, meetings, documents, and chats—with context such as relationships, preferences, and work patterns to assemble context, ground responses, select skills, and invoke tools. By calling the Work IQ APIs, your applications can tap into this same intelligence without building custom indexing, vector stores, or compliance pipelines.
+Work IQ is the intelligence layer behind Microsoft 365 Copilot and agents. It combines Microsoft 365 work data - emails, meetings, documents, and chats - with context such as relationships, preferences, and work patterns to assemble context, ground responses, select skills, and invoke tools. By calling the Work IQ API, your applications can tap into this same intelligence without building custom indexing, vector stores, or compliance pipelines.
 
 All Work IQ requests run in the context of the signed-in user, respect Microsoft 365 permissions and sensitivity labels, and remain within the Microsoft 365 trust boundary, so your applications can reason over work data without exporting or duplicating content.
 
