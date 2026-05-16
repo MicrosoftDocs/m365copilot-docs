@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/11/2026
+ms.date: 05/15/2026
 ms.topic: overview
 ---
 
@@ -18,6 +18,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## May 2026
+
+### OneDrive knowledge in Agent Builder
+
+Add folders and up to 50 OneDrive files as knowledge when you use Agent Builder in Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
 
 ### Declarative agent manifest version 1.7
 
@@ -84,8 +88,6 @@ Agent Builder is now available in Government Community Cloud High (GCCH) environ
 ### Retrieval API pay-as-you-go consumption (preview)
 
 The Microsoft 365 Copilot Retrieval API is now available to users without a Microsoft 365 Copilot add-on license via pay-as-you-go consumption (preview). This model provides access to the Retrieval API for tenant-level data sources such as SharePoint and Microsoft 365 Copilot connectors. For more information, see [Microsoft 365 Copilot Retrieval API pay-as-you-go consumption (preview)](api/ai-services/retrieval/paygo-retrieval.md).
-
-
 
 ## Related content
 - [Microsoft 365 Copilot extensibility overview](overview.md)
