@@ -21,7 +21,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### OneDrive knowledge in Agent Builder
 
-Add OneDrive files and folders as knowledge when you use Agent Builder in Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
+Add up to 50 OneDrive files and folders as knowledge when you use Agent Builder in Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
 
 ### Declarative agent manifest version 1.7
 
