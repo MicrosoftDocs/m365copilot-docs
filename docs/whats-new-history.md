@@ -86,7 +86,7 @@ You can now upload files up to 100 MB when you embed file content as knowledge i
 
 ### Increased SharePoint file limit for agents
 
-You can now specify up to 100 SharePoint files as knowledge when you use Microsoft 365 Copilot, up from a limit of 20 files. For more information, see [SharePoint content](agent-builder-add-knowledge.md#sharepoint-content).
+You can now specify up to 100 SharePoint files as knowledge when you use Microsoft 365 Copilot, up from a limit of 20 files. For more information, see [SharePoint content](agent-builder-add-knowledge.md#sharepoint-and-onedrive-content).
 
 ### Build Microsoft 365 Copilot connectors for people data (preview)
 
