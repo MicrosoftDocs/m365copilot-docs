@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 05/15/2026
 ---
 
-<!-- cSpell:ignore hayrapetyan mhayrapetyan -->
+<!-- cSpell:ignore hayrapetyan mhayrapetyan azurecli -->
 
 # Work IQ API permissions reference
 
@@ -34,13 +34,13 @@ An organization administrator must create a service principal for the Work IQ AP
     }
     ```
 
-1. Select **Run query**. A **201 Created** response confirms success. A conflict error means the service principal already exists - it's OK to proceed to the next step.
+1. Select **Run query**. A **201 Created** response confirms success. A conflict error means the service principal already exists.
 
 ### [Azure CLI](#tab/azure-cli)
 
 Run the following command to create the Work IQ API service principal.
 
-```bash
+```azurecli
 az ad sp create --id fdcc1f02-fc51-4226-8753-f668596af7f7
 ```
 
