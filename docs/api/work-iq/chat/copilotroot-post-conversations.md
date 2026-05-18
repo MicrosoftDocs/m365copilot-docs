@@ -26,7 +26,7 @@ This documentation covers creating Copilot conversations using the Chat API. Lea
 
 | Permission type                        | Least privileged permissions | Higher privileged permissions |
 |:---------------------------------------|:-----------------------------|:------------------------------|
-| Delegated (work or school account)     | WorkIQAgent.Ask.Selected     | WorkIQAgent.Ask               |
+| Delegated (work or school account)     | WorkIQAgent.Ask              | Not available.                |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
 | Application                            | Not supported.               | Not supported.                |
 
@@ -86,5 +86,6 @@ Content-Type: application/json
 ## Related content
 
 - [Overview of the Work IQ Chat API](overview.md)
+- [Work IQ Samples](https://github.com/microsoft/work-iq-samples)
 - [Continue synchronous conversations with Microsoft 365 Copilot using the Work IQ Chat API](copilotconversation-chat.md)
 - [Continue streamed conversations with Microsoft 365 Copilot using the Work IQ Chat API](copilotconversation-chatoverstream.md)
