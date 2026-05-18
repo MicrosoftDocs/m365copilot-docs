@@ -49,18 +49,22 @@ Users can select declarative agents from the right pane in Copilot. They can the
 A declarative agent is defined by a set of configuration elements that describe its identity, behavior, and capabilities. These elements apply regardless of how the agent is authored or deployed.
 
 **Agent definition (configuration)**
+
 - Defines the agent’s purpose, scope, and behavior.
 - Includes instructions, conversation patterns, and constraints that guide how the agent responds.
 
 **Capabilities (actions)**
+
 - Specify what the agent can do.
 - Can include operations or integrations with external systems and services.
 
 **Knowledge sources**
+
 - Provide the information the agent uses to generate responses.
 - Can include structured or unstructured data from internal or external sources or APIs.
 
 **App metadata (hosting and distribution)**
+
 - Describes how the agent is identified and surfaced in its host environment.
 - Includes attributes such as name, description, and visual representation (for example, icons).
 
