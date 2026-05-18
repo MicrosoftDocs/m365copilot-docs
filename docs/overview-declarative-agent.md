@@ -64,7 +64,7 @@ A declarative agent is defined by a set of configuration elements that describe 
 - Describes how the agent is identified and surfaced in its host environment.
 - Includes attributes such as name, description, and visual representation (for example, icons).
 
-You can use your tool of choice to create a declarative agent app package. To get started, choose from among the following tools:
+You can use your tool of choice to create a declarative agent:
 
 - [Agent Builder in Microsoft 365 Copilot](agent-builder.md)
 - [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context)
