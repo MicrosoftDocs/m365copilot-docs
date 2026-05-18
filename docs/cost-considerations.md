@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/13/2026
+ms.date: 05/15/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -84,6 +84,15 @@ Custom engine agents are hosted outside of Microsoft 365 Copilot using your own 
 | **License requirements** | Requires Microsoft 365 Copilot add-on license, or Copilot Chat access through an eligible Microsoft 365 license.   | No additional license required.                                                                                         |
 | **Hosting**       | Hosted by Microsoft 365 Copilot (no additional hosting costs).                                                       | Hosted externally (incurs hosting costs, such as Azure AI Foundry).                                                      |
 | **Usage cost**    | For users with Microsoft 365 Copilot add-on licenses, no extra charges. <br><br>For users without licenses:<br> - No charges for agents with instructions only or grounded only in public data.<br> - Usage-based billing charges (Copilot Credits) for shared tenant data usage (for example, SharePoint, Copilot connectors). | Varies based on license:<ul><li>No charges with Copilot license.</li><li>Usage-based billing charges (Copilot Credits) without license if shared data is used.</li></ul> |
+
+## Work IQ API
+
+The [Work IQ API](work-iq-api-overview.md) provides an AI-native interface to Microsoft 365 work intelligence. With this API, you can build applications that query emails, meetings, files, and organizational knowledge by using natural language grounded in Microsoft 365 data.
+
+> [!NOTE]
+> Work IQ is currently in preview. Features and APIs might change before general availability.
+
+Each user calling the Work IQ API must have a Microsoft 365 Copilot add-on license. There are no additional usage-based billing charges for licensed users. Support for users without a Microsoft 365 Copilot license isn't currently available.
 
 ## Microsoft 365 Copilot APIs
 

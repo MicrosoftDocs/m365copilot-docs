@@ -63,7 +63,7 @@ landingContent:
             url: /microsoft-365/developer/overview-m365-agents-toolkit?context=/microsoft-365/copilot/extensibility/context
           - text: Microsoft 365 Agents SDK
             url: /microsoft-365/copilot/extensibility/m365-agents-sdk
-          - text: Work IQ APIs (preview)
+          - text: Work IQ API (preview)
             url: /microsoft-365/copilot/extensibility/work-iq-api-overview
           - text: Microsoft 365 Copilot APIs
             url: /microsoft-365/copilot/extensibility/copilot-apis-overview

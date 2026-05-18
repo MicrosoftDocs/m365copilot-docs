@@ -21,7 +21,7 @@ The following table lists the capabilities and knowledge sources you can configu
 | Image generator | :white_check_mark: | :white_check_mark: | No |
 | Copilot connectors | :white_check_mark: | :white_check_mark: | Yes |
 | SharePoint | :white_check_mark: | :white_check_mark: | Yes |
-| OneDrive | :x: | :white_check_mark: | Yes |
+| OneDrive | :white_check_mark: | :white_check_mark: | Yes |
 | Embedded file content | :white_check_mark: | :x: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
@@ -43,11 +43,11 @@ For information about how to add Copilot connectors to your agent in Microsoft 3
 
 ## SharePoint and OneDrive
 
-When you configure your agent to use OneDrive and SharePoint content as knowledge, Copilot searches SharePoint and OneDrive files, folders, or sites that a user has access to for grounding information.
+When you configure your agent to use SharePoint and OneDrive content as knowledge, Copilot searches SharePoint and OneDrive files, folders, or sites that a user has access to for grounding information.
 
-For information about how to add OneDrive and SharePoint knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.7.md#onedrive-and-sharepoint-object).
+For information about how to add SharePoint and OneDrive knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.7.md#onedrive-and-sharepoint-object).
 
-For information about how to add SharePoint knowledge to your agent in Microsoft 365 Copilot, see [Add knowledge sources](agent-builder-add-knowledge.md#sharepoint-content).
+For information about how to add SharePoint and OneDrive knowledge to your agent in Microsoft 365 Copilot, see [Add knowledge sources](agent-builder-add-knowledge.md#sharepoint-and-onedrive-content).
 
 > [!NOTE]
 > SharePoint and OneDrive knowledge sources require the signed-in user to have an active Microsoft 365 Copilot license. If the user doesn't have a license, requests fail with the message **Sorry, I wasn’t able to respond**.
@@ -90,6 +90,7 @@ If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to create
 If you're using [Microsoft 365 Copilot](agent-builder-build-agents.md) to build your agent, you can upload files directly from your device or the cloud to embed the content for your agent to use as knowledge. The embedded file content is stored in [SharePoint Embedded](/sharepoint/dev/embedded/overview). These files count against the OneDrive and SharePoint capacity in your tenant.
 
 > [!NOTE]
+>
 > - The file upload feature is available to users with usage billing enabled or with a Microsoft 365 Copilot license.
 > - Embedded file content isn't supported in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
 
