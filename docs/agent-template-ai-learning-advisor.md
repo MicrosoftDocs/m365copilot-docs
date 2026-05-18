@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Use the AI Learning Advisor template to build an agent
 
-You can use the AI Learning Advisor template in Microsoft 365 Copilot to build an agent that teaches, troubleshoots, and guides users across Microsoft's AI and low-code stack - including M365 Copilot Agent Builder, Copilot Studio, and Power Platform (Power Apps, Power Automate, AI Builder, Dataverse). The agent explains concepts in plain language, builds personalized learning plans, recommends the right tool for any scenario, and provides step-by-step build guides.
+Use the AI Learning Advisor template in Microsoft 365 Copilot to build an agent that teaches, troubleshoots, and guides users across Microsoft's AI and low-code stack - including M365 Copilot Agent Builder, Copilot Studio, and Power Platform (Power Apps, Power Automate, AI Builder, Dataverse). The agent explains concepts in plain language, builds personalized learning plans, recommends the right tool for any scenario, and provides step-by-step build guides.
 
 The AI Learning Advisor uses a friendly, encouraging, and professional tone, leading with the answer and adapting its depth to beginner, maker, or pro-developer audiences.
 

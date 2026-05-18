@@ -33,7 +33,7 @@ A new version of the declarative agent manifest schema is available. [Declarativ
 
 ### New agent templates added to Agent Builder
 
-Eight new agent templates are now available in Agent Builder to help you quickly build declarative agents for common workplace scenarios:
+Agent Builder now includes eight new agent templates to help you quickly build declarative agents for common workplace scenarios:
 
 - [AI Learning Advisor](agent-template-ai-learning-advisor.md)
 - [Executive Briefing Agent](agent-template-executive-briefing.md)
