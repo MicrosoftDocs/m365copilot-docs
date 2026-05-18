@@ -18,6 +18,14 @@ Work IQ APIs are protected by Microsoft Entra ID. Applications that access the W
 
 An organization administrator must create a service principal for the Work IQ API before applications can request access tokens for it. This is a one-time setup step for the organization.
 
+### [Azure CLI](#tab/azure-cli)
+
+Run the following command to create the Work IQ API service principal.
+
+```azurecli
+az ad sp create --id fdcc1f02-fc51-4226-8753-f668596af7f7
+```
+
 ### [Graph Explorer](#tab/graph-explorer)
 
 1. Go to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) and sign in with an admin account.
@@ -35,14 +43,6 @@ An organization administrator must create a service principal for the Work IQ AP
     ```
 
 1. Select **Run query**. A **201 Created** response confirms success. A conflict error means the service principal already exists.
-
-### [Azure CLI](#tab/azure-cli)
-
-Run the following command to create the Work IQ API service principal.
-
-```azurecli
-az ad sp create --id fdcc1f02-fc51-4226-8753-f668596af7f7
-```
 
 ---
 
