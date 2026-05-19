@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 01/07/2026
+ms.date: 05/18/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -99,7 +99,7 @@ The following table summarizes the key differences between declarative agents an
 | Customization             | Limited to Copilot's orchestrator and models.                                                           | Fully customizable, including choice of AI models and orchestration.                                       |
 | Proactive interactions    | Not supported; rely on user-initiated interactions.                                                     | Enable agents to trigger actions automatically, even without direct user input.                            |
 | Channels                  | Integrated into Microsoft 365 apps.                                                                     | Available for Microsoft 365 and external apps.                                                             |
-| Setup complexity          | Can be developed with low-code tools (Copilot Studio) and pro-code tools (Visual Studio Code/Agents Toolkit). | Varies from simple setups in Copilot Studio to advanced pro-code implementations using Visual Studio or VS Code. |
+| Setup complexity          | Can be developed with low-code tools (Agent Builder) and pro-code tools (Visual Studio Code/Agents Toolkit). | Varies from simple setups in Copilot Studio to advanced pro-code implementations using Visual Studio or Visual Studio Code. |
 | Engine hosting            | Hosted in Microsoft 365.                                                                                | Hosted in Microsoft 365 with Copilot Studio or externally with custom solutions such as Azure AI.         |
 | Deployment options        | Within my organization or publish in the commercial store for my customers (ISVs).                      | Within my organization or publish in the commercial store for my customers (ISVs).                         |
 | Compliance and security   | Inherits Microsoft 365 compliance, RAI, and security standards                                           | Must ensure your own compliance, RAI practices, and security measures.                                     |
@@ -133,4 +133,3 @@ Consider the cost implications of your agent solution design, from both the user
 - [Declarative agent architecture](declarative-agent-architecture.md)
 - [Custom engine agents overview](overview-custom-engine-agent.md)
 - [Custom engine agent architecture](custom-engine-agent-architecture.md)
-- [Cost considerations](cost-considerations.md)
