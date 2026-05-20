@@ -27,5 +27,9 @@ items:
     href: resources/copilotwebcontext.md
   - name: Copilot conversation response message
     href: resources/copilotconversationresponsemessage.md
-  - name: Copilot conversation attribution
-    href: resources/copilotconversationattribution.md
+  - name: Copilot conversation reference
+    href: resources/copilotconversationreference.md
+  - name: Copilot conversation reference map
+    href: resources/copilotconversationreferencemap.md
+  - name: Search sensitivity label info
+    href: resources/searchsensitivitylabelinfo.md

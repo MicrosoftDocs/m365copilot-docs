@@ -27,14 +27,14 @@ Represents a Copilot conversation being created or continued through the [Work I
 
 ## Properties
 
-| Property          | Type                                                                                   | Description                                                                                                                         |
-|:------------------|:---------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
-| `createdDateTime` | DateTimeOffset                                                                         | The timestamp when the Copilot conversation was created.                                                                            |
-| `displayName`     | String                                                                                 | The display name for the Copilot conversation.                                                                                      |
-| `id`              | String                                                                                 | The identifier for a Copilot conversation. This is used as a path parameter when continuing a synchronous or streamed conversation. |
-| `messages`        | [copilotConversationResponseMessage](copilotconversationresponsemessage.md) collection | The latest turn count in the conversation when the last message was added.                                                          |
-| `state`           | [copilotConversationState](#copilotconversationstate-enumeration)                      | The Copilot conversation state.                                                                                                     |
-| `turnCount`       | Int32                                                                                  | The latest turn count in the conversation when the last message was added.                                                          |
+| Property          | Type                                                              | Description                                                                                                                         |
+|:------------------|:------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
+| `agentId`         | String                                                            | The unique identifier of the agent associated with the conversation.                                                                |
+| `createdDateTime` | DateTimeOffset                                                    | The date and time when the conversation was created.                                                                                |
+| `displayName`     | String                                                            | The display name of the conversation.                                                                                               |
+| `id`              | String                                                            | The unique identifier of the conversation. This is used as a path parameter when continuing a synchronous or streamed conversation. |
+| `state`           | [copilotConversationState](#copilotconversationstate-enumeration) | The state of the conversation.                                                                                                      |
+| `turnCount`       | Int32                                                             | The number of turns in the conversation.                                                                                            |
 
 ### copilotConversationState enumeration
 
@@ -47,7 +47,9 @@ An [evolvable enumeration](/graph/best-practices-concept#handling-future-members
 
 ## Relationships
 
-None.
+| Relationship | Type                                                                                   | Description                                       |
+|:-------------|:---------------------------------------------------------------------------------------|:--------------------------------------------------|
+| `messages`   | [copilotConversationResponseMessage](copilotconversationresponsemessage.md) collection | The ordered list of messages in the conversation. |
 
 ## JSON representation
 
@@ -57,6 +59,7 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.copilotConversation",
   "id": "String",
+  "agentId": "String",
   "createdDateTime": "DateTimeOffset",
   "displayName": "String",
   "state": "String",
