@@ -67,5 +67,7 @@ landingContent:
             url: /microsoft-365/copilot/extensibility/work-iq-api-overview
           - text: Microsoft 365 Copilot APIs
             url: /microsoft-365/copilot/extensibility/copilot-apis-overview
+          - text: Interactive Demo
+            url: https://aka.ms/copilot.dev
           - text: Microsoft Agent 365
             url: /microsoft-agent-365/overview

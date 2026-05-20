@@ -88,6 +88,8 @@ The following example shows a request to retrieve data from SharePoint. The requ
 
 The following example shows the request.
 
+[▶ Try it in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true&apiLog=true)
+
 :::zone pivot="graph-preview"
 
 ```http
