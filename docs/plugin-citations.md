@@ -5,10 +5,10 @@ author: akhilsaivalluri
 ms.author: avalluri
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/15/2026
+ms.date: 05/18/2026
 ---
 
-<!-- cSpell:ignore akhilsaivalluri avalluri -->
+<!-- cSpell:ignore akhilsaivalluri avalluri treyresearch EMEA -->
 
 # Show citations with response semantics
 
@@ -37,8 +37,6 @@ Response semantics defined in your plugin manifest act as a contract between you
 
 1. Copilot renders a citation for each item. Users click through to your source.
 
-This configuration also enables citations to work for your tool response not just in Copilot, but also in [ChatGPT Apps](https://developers.openai.com/api/docs/mcp) — with no extra modifications.
-
 ## Minimum configuration
 
 Your `response_semantics` configuration is driven by the shape of your tool's response, not by the protocol of your tool response. Copilot agents with all tool protocols (MCP, OpenAPI, message extensions) use the same manifest schema.
@@ -56,18 +54,18 @@ Tools that return multiple items typically return an array under a `results` (or
 {
   "results": [
     {
-      "id": "vr-001",
+      "id": "tr-001",
       "title": "Forecasting AI adoption in the enterprise (2026)",
-      "url": "https://research.vanta.example.com/ai-adoption-2026",
+      "url": "https://www.treyresearch.net/notes/ai-adoption-2026",
       "publishedDate": "2026-03-12",
-      "thumbnailUrl": "https://research.vanta.example.com/assets/vanta-logo.png"
+      "thumbnailUrl": "https://www.treyresearch.net/assets/trey-research-logo.png"
     },
     {
-      "id": "vr-005",
+      "id": "tr-005",
       "title": "Enterprise AI spend, deep dive",
-      "url": "https://research.vanta.example.com/ai-spend",
+      "url": "https://www.treyresearch.net/notes/ai-spend",
       "publishedDate": "2026-03-28",
-      "thumbnailUrl": "https://research.vanta.example.com/assets/vanta-logo.png"
+      "thumbnailUrl": "https://www.treyresearch.net/assets/trey-research-logo.png"
     }
   ]
 }
@@ -96,13 +94,13 @@ The following example shows a response with exactly one record - a document, an 
 
 ```json
 {
-  "id": "vr-001",
+  "id": "tr-001",
   "title": "Forecasting AI adoption in the enterprise (2026)",
-  "text": "Vanta Research surveyed 412 enterprise CIOs across North America and EMEA between January and February 2026. We forecast that 64% of Fortune 500 firms will be running at least one production generative AI workload by end of 2026, up from 38% at the close of 2025...",
-  "url": "https://research.vanta.example.com/ai-adoption-2026",
+  "text": "Trey Research surveyed 412 enterprise CIOs across North America and EMEA between January and February 2026. We forecast that 64% of Fortune 500 firms will be running at least one production generative AI workload by end of 2026, up from 38% at the close of 2025...",
+  "url": "https://www.treyresearch.net/notes/ai-adoption-2026",
   "publishedDate": "2026-03-12",
-  "thumbnailUrl": "https://research.vanta.example.com/assets/vanta-logo.png",
-  "metadata": { "source": "vanta-research", "category": "AI" }
+  "thumbnailUrl": "https://www.treyresearch.net/assets/trey-research-logo.png",
+  "metadata": { "source": "trey-research", "category": "AI" }
 }
 ```
 
@@ -134,7 +132,7 @@ MCP tools wrap their response in a `content` array of `TextContentBlock` items. 
   "content": [
     {
       "type": "text",
-      "text": "{\"id\":\"vr-001\",\"title\":\"Forecasting AI adoption in the enterprise (2026)\",\"url\":\"https://research.vanta.example.com/ai-adoption-2026\"}"
+      "text": "{\"id\":\"tr-001\",\"title\":\"Forecasting AI adoption in the enterprise (2026)\",\"url\":\"https://www.treyresearch.net/notes/ai-adoption-2026\"}"
     }
   ]
 }
@@ -152,7 +150,6 @@ The following properties are available on citations. All values are relative JSO
 | `subtitle`                     | No                | Second line - dates, authors, categories.                                            |
 | `url`                          | Yes (practically) | Where the citation navigates on click. Must be a canonical link back to your source. |
 | `thumbnail_url`                | No                | Small image shown alongside the citation.                                            |
-| `information_protection_label` | No                | Sensitivity (IP) label for the content.                                              |
 
 > [!NOTE]
 > If `url` is missing, the citation isn't clickable. This missing property is a very common reason developers see non-functional citations.
@@ -222,14 +219,6 @@ For the vast majority of citation scenarios - "show me the source and let me cli
 ```
 
 Notice the `${title}`, `${subtitle}`, and `${url}` tokens - these tokens are populated by the same `properties` map shown earlier. The Adaptive Card is a **presentation layer** on top of response semantics; it doesn't replace it.
-
-## Known limitations
-
-Plan around these limitations when designing your tool and manifest:
-
-- **Unstructured MCP text isn't parseable.** If your MCP tool returns plain narrative text (not JSON) inside a `TextContentBlock`, `response_semantics` can't extract citations from it. Return structured JSON inside the text block instead.
-- **Dynamic tool fetching.** When you discover tools dynamically at runtime, manifest-level `response_semantics` might not apply. Prefer static tool registration if citations are important.
-- If you see any of the preceding problems or other problems, click the thumbs-down button and share feedback (along with diagnostics if possible). Use easy-to-triage hashtags like `#citations`.
 
 ## Troubleshooting checklist
 
