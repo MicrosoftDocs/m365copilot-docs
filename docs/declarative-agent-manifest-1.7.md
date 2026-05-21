@@ -4,7 +4,7 @@ description: Learn about the 1.7 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 05/11/2026
+ms.date: 05/14/2026
 ms.topic: reference
 ---
 
@@ -752,7 +752,10 @@ The `default_response_mode` property enables agent authors to configure the defa
 
 Agent authors should consider the use case when selecting a mode. For example, the increased latency involved with reasoning mode may not be appropriate for all agents, while some authors may want to always invoke reasoning for complex analytical tasks.
 
-The client respects the default mode configured in the manifest. Users can override this default via the model selector, but see a UX warning when doing so to ensure they're aware they're deviating from the agent author's intended configuration.
+The client respects the default mode configured in the manifest. Users can override this default via the model selector.
+
+> [!NOTE]
+> Default response mode isn't applied when the agent is invoked via @mention from the main Copilot experience. This is a known issue.
 
 #### Suggestions object
 
