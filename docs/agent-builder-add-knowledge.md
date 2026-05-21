@@ -7,7 +7,7 @@ ms.topic: concept-article
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 05/15/2026
+ms.date: 05/21/2026
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
