@@ -41,7 +41,7 @@ The following table highlights the key differences between the two paths.
 
 ## What admins review
 
-When you submit your agent, your admin reviews the following to validate security, compliance, and data access behavior:
+When you submit your agent, the admin reviews the following items to validate security, compliance, and data access behavior:
 
 - The agent's display name and short description
 - Configured capabilities and knowledge sources
@@ -49,22 +49,22 @@ When you submit your agent, your admin reviews the following to validate securit
 - Developer information (developer name, creator website, privacy statement, terms of use)
 - Metadata about the underlying declarative agent
 
-For details, see [Publish agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents).
+For more information, see [Publish agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents).
 
 ## Before you submit
 
-Make sure that your agent is ready for organizational use before you submit.
+Make sure that your agent is ready for organizational use before you submit it.
 
 ### Prerequisites
 
-- Your agent is published. The **Submit to your org catalog** menu item is disabled until the agent is published at least once.
+- You published your agent. The **Submit to your org catalog** menu item is disabled until you publish the agent at least once.
 - Your agent is complete, production-ready, and compliant with your organization's standards, rules, and policies.
 - Users who install the agent have access to the knowledge sources it uses.
 
 ### Best practices
 
 - **Use governed knowledge sources.** Prefer SharePoint sites and other shared sources that your intended audience can access.
-- **Disclose personal knowledge usage.** If your agent uses personal Work IQ knowledge sources, such as Microsoft Teams meetings, chats, or emails, mention this in the short description so users know the agent might reference their personal work data.
+- **Disclose personal knowledge usage.** If your agent uses personal Work IQ knowledge sources, such as Microsoft Teams meetings, chats, or emails, mention this usage in the short description so users know the agent might reference their personal work data.
 - **Design for organizational scale.** Use neutral, professional language in the agent's description and starter prompts. Test with sample users before you submit.
 - **Provide complete metadata.** Include accurate developer information and links to your organization's privacy statement and terms of use. For more information, see [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md).
 
@@ -101,7 +101,7 @@ After you submit, the dialog shows **Submitted for admin approval** along with n
 
 ## Track submission status
 
-To check status at any time, open the agent, select the **More** ellipses (**...**), and then select **Submit to your org catalog**. The dialog shows the current state.
+To check the status at any time, open the agent, select the **More** ellipses (**...**), and then select **Submit to your org catalog**. The dialog shows the current state.
 
 | Status | Meaning |
 | --- | --- |
@@ -122,11 +122,11 @@ Changes you publish in Agent Builder don't automatically flow through to the Age
 After approval, subsequent submissions are reviewed as updates to the same agent, not as new submissions. Admins see incremental changes to facilitate faster review.
 
 > [!IMPORTANT]
-> Changes published in Agent Builder update the shared version immediately. The Agent Store version doesn't update until an admin approves your resubmission. Until then, users who install the agent from the Agent Store continue to see the last approved version.
+> Changes you publish in Agent Builder update the shared version immediately. The Agent Store version doesn't update until an admin approves your resubmission. Until then, users who install the agent from the Agent Store continue to see the last approved version.
 
 ## Find your agent in the Agent Store
 
-After your agent is approved, you can open its Agent Store listing to share the URL with users. Use either of the following methods.
+After your agent is approved, open its Agent Store listing to share the URL with users. Use either of the following methods.
 
 **From the submission dialog:**
 
