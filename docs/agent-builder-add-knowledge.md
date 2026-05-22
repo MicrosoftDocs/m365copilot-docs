@@ -7,7 +7,7 @@ ms.topic: concept-article
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 05/15/2026
+ms.date: 05/21/2026
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -83,7 +83,7 @@ Reference specific sites, files, and folders as agent knowledge sources. When yo
 
 Enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
-For OneDrive, enter the URL for a file or folder, but use **Copy link** to get the URL, don't copy it from the browser address bar.
+For OneDrive, enter a shareable link to a file or folder (for example, a URL copied from the browser or share options), not a local or relative path (for example, `C:\Users\YourName\Documents\File.xlsx`).
 
 After you provide the URL, press **Enter** to add it as a knowledge source.
 
