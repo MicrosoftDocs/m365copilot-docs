@@ -4,7 +4,7 @@ description: Provide valid privacy statement and terms of use URLs when you subm
 author: sophie-roy3
 ms.author: sophieroy
 ms.localizationpriority: medium
-ms.date: 05/04/2026
+ms.date: 05/22/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
