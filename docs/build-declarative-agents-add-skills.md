@@ -1,7 +1,7 @@
 ---
 title: Add capabilities and custom actions to a declarative agent created with Microsoft 365 Agents Toolkit
 description: Learn how to add capabilities and API plugins as custom actions to declarative agents with Microsoft 365 Agents Toolkit.
-ms.date: 03/06/2026
+ms.date: 05/11/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -21,7 +21,7 @@ You can enhance the abilities of your agent by adding skills. Skills can be adde
 
 The image generator capability enables agents to generate images based on user prompts. To add image generator:
 
-1. Open the `appPackage/declarativeAgent.json` file and add the `GraphicArt` entry to the `capabilities` array. For more information, see [Graphic art object](declarative-agent-manifest-1.6.md#graphic-art-object).
+1. Open the `appPackage/declarativeAgent.json` file and add the `GraphicArt` entry to the `capabilities` array. For more information, see [Graphic art object](declarative-agent-manifest-1.7.md#graphic-art-object).
 
     ```json
     {
@@ -53,7 +53,7 @@ Code interpreter is an advanced tool designed to solve complex tasks via Python 
     }
     ```
 
-  For more information, see [Code interpreter object](declarative-agent-manifest-1.6.md#code-interpreter-object).
+  For more information, see [Code interpreter object](declarative-agent-manifest-1.7.md#code-interpreter-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
 

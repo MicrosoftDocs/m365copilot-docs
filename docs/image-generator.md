@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/12/2025
+ms.date: 05/11/2026
 ---
 
 # Add the image generator capability to your agent
@@ -67,6 +67,6 @@ If you're the using [Microsoft 365 Copilot](agent-builder.md) to create your age
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.6.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.7.md)
 - [Add the code interpreter capability to your agent](code-interpreter.md)
 - [Add knowledge sources to your declarative agent](knowledge-sources.md)

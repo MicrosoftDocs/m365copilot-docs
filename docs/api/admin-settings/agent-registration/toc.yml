@@ -1,0 +1,15 @@
+items:
+- name: Overview
+  href: overview.md
+- name: Agent registration
+  items:
+  - name: Agent registration
+    href: resources/agentregistration.md
+  - name: Create
+    href: agentregistration-create.md
+  - name: Get
+    href: agentregistration-get.md
+  - name: Update
+    href: agentregistration-update.md
+  - name: Delete
+    href: agentregistration-delete.md

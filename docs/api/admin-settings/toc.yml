@@ -17,6 +17,8 @@ items:
     href: copilotpolicysetting-update.md
 - name: Copilot usage reports API
   href: reports/toc.yml
+- name: Agent Registration API (preview)
+  href: agent-registration/toc.yml
 - name: Package management API (preview)
   href: package/toc.yml
 - name: Complex types

@@ -4,7 +4,7 @@ description: Learn about the 1.6 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 05/11/2026
 ms.topic: reference
 ---
 
@@ -13,6 +13,8 @@ ms.topic: reference
 # Declarative agent schema 1.6 for Microsoft 365 Copilot
 
 This article describes the 1.6 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Microsoft 365 app manifest references declarative agent manifests inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
+
+[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification focuses on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
@@ -336,6 +338,7 @@ The connection object contains the following properties.
 | `connection_id` | String | Required. The unique identifier of the Copilot connector. |
 | `additional_search_terms` | String | Optional. A Keyword Query Language (KQL) query to filter items based on fields in the connection's schema. |
 | `items_by_external_id` | Array of [Item identifier object](#item-identifier-object) | Optional. Specifies specific items by ID in the Copilot connector that are available to the agent. |
+| `items_by_external_url` | Array of [External URL object](#external-url-object) | Optional. Specifies specific items by URL in the Copilot connector that are available to the agent. |
 | `items_by_path` | Array of [Path object](#path-object) | Optional. Filters the items available to the agent by item paths (the `itemPath` [semantic label](/graph/connecting-external-content-manage-schema#semantic-labels) on items). |
 | `items_by_container_name` | Array of [Container name object](#container-name-object) | Optional. Filters the items available to the agent by container name (the `containerName` semantic label on items). |
 | `items_by_container_url` | Array of [Container URL object](#container-url-object) | Optional. Filters the items available to the agent by container URL (the `containerUrl` semantic label on items). |
@@ -352,6 +355,16 @@ The item identifier object contains the following properties.
 | Property        | Type   | Description |
 | --------------- | ------ | ----------- |
 | `item_id`       | String | Required. The unique identifier of the external item. |
+
+###### External URL object
+
+Identifies an external item by its URL.
+
+The external URL object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `url`    | String | Required. The URL of the external item. |
 
 ###### Path object
 

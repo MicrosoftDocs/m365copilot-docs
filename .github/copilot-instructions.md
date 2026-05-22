@@ -37,7 +37,6 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Content quality requirements
 
-* Acrolinx score must be 80 or higher (runs automatically in PR validation)
 * OpenPublishing build must succeed (runs automatically in CI)
 * No hard tabs (use spaces for indentation)
 * Files must end with a single newline character
@@ -70,7 +69,6 @@ Always reference these instructions first and fallback to search or bash command
 * `cspell.json` — Spell checking dictionary and configuration
 * `docs/docfx.json` — DocFX build configuration
 * `.openpublishing.publish.config.json` — OpenPublishing build settings
-* `.acrolinx-config.edn` — Content quality scoring configuration
 * `docs/TOC.yml` — Table of contents structure
 
 ### Content types in this repository
@@ -133,7 +131,6 @@ Always reference these instructions first and fallback to search or bash command
 * **Image cleanup script**: 45-50 seconds for 142 images. NEVER CANCEL.
 * **VS Code Learn Authoring Pack**: Real-time validation, no waiting required.
 * **OpenPublishing build**: Runs in CI, typically 5-10 minutes. Cannot be run locally.
-* **Acrolinx validation**: Runs in PR validation, typically 2-5 minutes depending on content volume.
 
 ## Troubleshooting
 
@@ -143,7 +140,6 @@ Always reference these instructions first and fallback to search or bash command
 * **MD004 lint error**: Use dash (-) instead of asterisk (*) for lists
 * **Missing newline**: Add single blank line at end of file
 * **Hard tabs detected**: Replace tabs with spaces (VS Code: View -> Command Palette -> "Convert Indentation to Spaces")
-* **Acrolinx score below 80**: Review scorecard feedback and improve writing quality
 * **OpenPublishing build failure**: Check error messages in PR status checks
 
 ### When validation fails

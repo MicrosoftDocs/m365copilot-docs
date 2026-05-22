@@ -1,31 +1,31 @@
 ---
-title: Add interactive UI widgets to declarative agents
-description: Learn how to add interactive UI widgets to MCP server-based declarative agents
+title: MCP apps in Microsoft 365 Copilot - Build interactive UI widgets
+description: Learn how to build MCP apps for Microsoft 365 Copilot to create interactive UI widgets in declarative agents using MCP Apps or OpenAI Apps SDK.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/16/2026
+ms.date: 04/24/2026
 ms.topic: how-to
 ---
 
-# Add interactive UI widgets to declarative agents
+# Add MCP apps to declarative agents in Microsoft 365 Copilot
 
 <!-- cSpell:ignore dotnetcli ontoolresult ontoolcancelled onhostcontextchanged -->
 
-You can add interactive UI widgets to your declarative agents by adding a [Model Context Protocol (MCP) server-based action](build-mcp-plugins.md) to your agent and extending the MCP tools used by the agent to include UI. Microsoft 365 Copilot supports UI widgets created using the following methods.
+MCP apps are interactive UI widgets that run inside Microsoft 365 Copilot, powered by Model Context Protocol (MCP) servers. They allow declarative agents to go beyond text responses and deliver rich, actionable experiences directly in the Copilot chat. You can add MCP apps to your declarative agents by adding an [MCP server-based action](build-mcp-plugins.md) to your agent and extending the MCP tools used by the agent to include UI. Microsoft 365 Copilot supports UI widgets created using the following methods.
 
 - [MCP Apps](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html) - an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts.
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk) - tools to build ChatGPT apps based on the MCP Apps standard with extra ChatGPT functionality.
 
 For example MCP server plugins, see [MCP based interactive UI samples for Microsoft 365 Copilot](https://github.com/microsoft/mcp-interactiveUI-samples) on GitHub.
 
-For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see [Supported capabilities](#supported-capabilities).
+For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see [Supported MCP Apps capabilities in Copilot](#supported-mcp-apps-capabilities-in-copilot).
 
-:::image type="content" source="assets/images/api-plugins/mcp-server-ui-inline-widget.png" alt-text="A screenshot of the Sprint tasks widget in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/api-plugins/mcp-server-ui-inline-widget.png" alt-text="A screenshot of an MCP app rendering an inline Sprint tasks widget in Microsoft 365 Copilot":::
 
-:::image type="content" source="assets/images/api-plugins/mcp-server-ui-fullscreen-widget.png" alt-text="A screenshot of the Sprint tasks widget in full-screen mode in Microsoft 365 Copilot":::
+:::image type="content" source="assets/images/api-plugins/mcp-server-ui-fullscreen-widget.png" alt-text="A screenshot of an MCP app rendering a Sprint tasks widget in full-screen mode in Microsoft 365 Copilot":::
 
-## Prerequisites
+## Prerequisites for MCP apps
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - A remote MCP server that provides UI widgets or that you can modify to implement UI widgets
@@ -33,7 +33,7 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (version 6.6.1 or later)
 
-## MCP server requirements
+## MCP server requirements for MCP apps
 
 - **Authentication** - OAuth 2.1 and Microsoft Entra single sign-on (SSO) are supported. Anonymous authentication is supported for development purposes. For details on authentication, see [Configure authentication for API plugins in agents](api-plugin-authentication.md).
 - **Allowed URLs** - the following URLs should be allowed by both your MCP server and your identity provider.
@@ -46,11 +46,11 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
     - Visual Studio Code doesn't currently support SSO for fetching tools
 - **UI widgets** - UI widgets must be implemented according to the MCP Apps or OpenAI Apps SDK requirements.
 
-## Best practices
+## Best practices for MCP apps in Copilot
 
 ### User experience design
 
-For details on UX design best practices, see [User experience guidelines for interactive UI widgets in declarative agents](declarative-agent-ui-widgets-guidelines.md).
+For details on UX design best practices, see [User experience guidelines for MCP apps in declarative agents for Microsoft 365 Copilot](plugin-mcp-apps-ui-guidelines.md).
 
 ### Verify API availability
 
@@ -167,7 +167,9 @@ When you complete these steps, Agents Toolkit generates the required files for t
 1. Allow the agent to connect to the MCP server when prompted.
 1. The agent renders the UI widget.
 
-## Supported capabilities
+If the widget doesn't appear or behave as expected, see [Troubleshoot MCP apps in Microsoft 365 Copilot](plugin-mcp-apps-troubleshooting.md).
+
+## Supported MCP Apps capabilities in Copilot
 
 Microsoft 365 Copilot supports the following capabilities.
 
@@ -262,10 +264,25 @@ Microsoft 365 Copilot supports the following capabilities.
 | `_meta["openai/userLocation"]` | `_meta["openai/userLocation"]` | :white_check_mark: |
 | `_meta["openai/subject"]`      | —                              | :x:                |
 
+## Frequently asked questions about MCP apps in Copilot
+
+### What are MCP apps?
+
+MCP apps are interactive UI widgets delivered by MCP servers that render directly inside Microsoft 365 Copilot. They extend declarative agents beyond text-only responses, enabling rich experiences like data visualizations, forms, and task management interfaces.
+
+### What is the difference between MCP Apps and OpenAI Apps SDK?
+
+[MCP Apps](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html) is an open extension to the MCP standard that enables MCP servers to deliver interactive UIs to any compatible host. The [OpenAI Apps SDK](https://developers.openai.com/apps-sdk) builds on the MCP Apps standard and adds extra functionality specific to ChatGPT. Microsoft 365 Copilot supports both, though not all capabilities are available. See [Supported MCP Apps capabilities in Copilot](#supported-mcp-apps-capabilities-in-copilot) for details.
+
+### Can I use MCP apps without authentication during development?
+
+Yes. Anonymous authentication is supported for development purposes. However, you need to add authentication before deploying to production. OAuth 2.1 and Microsoft Entra single sign-on (SSO) are the supported authentication methods. For details, see [Configure authentication for API plugins in agents](plugin-authentication.md).
+
 ## Related content
 
 - [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
-- [User experience guidelines for interactive UI widgets in declarative agents](declarative-agent-ui-widgets-guidelines.md)
+- [User experience guidelines for MCP apps in declarative agents for Microsoft 365 Copilot](plugin-mcp-apps-ui-guidelines.md)
+- [Troubleshoot MCP apps in Microsoft 365 Copilot](plugin-mcp-apps-troubleshooting.md)
 - [MCP Apps Overview](https://modelcontextprotocol.github.io/ext-apps/api/documents/Overview.html#learn-more)
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk)
 - [MCP based interactive UI samples for Microsoft 365 Copilot](https://github.com/microsoft/mcp-interactiveUI-samples)

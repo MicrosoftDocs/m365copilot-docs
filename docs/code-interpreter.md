@@ -5,12 +5,12 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 03/25/2026
+ms.date: 05/11/2026
 ---
 
 # Add the code interpreter capability to your agent
 
-You can enhance the user experience of your declarative agents for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](declarative-agent-manifest-1.6.md#capabilities-object) in the manifest reference, and the **Capabilities** section in Microsoft 365 Copilot, provide several options for you to unlock features for your users.
+You can enhance the user experience of your declarative agents for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](declarative-agent-manifest-1.7.md#capabilities-object) in the manifest reference, and the **Capabilities** section in Microsoft 365 Copilot, provide several options for you to unlock features for your users.
 
 Code interpreter is an advanced tool designed to solve complex tasks via Python code. It uses the reasoning model to write and run code, enabling users to solve complex math problems, analyze data, generate visualizations, and more. After the code runs, code interpreter outputs the results and the related code that it generates. It can also produce downloadable images or files based on the scenario, and accepts files as input for modification and analysis.
 
@@ -136,6 +136,6 @@ The agent generates the Excel file and presents a download link in the response.
 ## Related content
 
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.6.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.7.md)
 - [Add the image generator capability to your agent](image-generator.md)
 - [Add knowledge sources to your declarative agent](knowledge-sources.md)
