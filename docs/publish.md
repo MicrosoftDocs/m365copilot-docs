@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 02/12/2026
+ms.date: 05/05/2026
 ---
 # Publish agents for Microsoft 365 Copilot
 
@@ -48,14 +48,14 @@ The Agent Builder feature in Microsoft 365 Copilot allows you to build declarati
 | Sharing method | Supported | Learn more |
 |--|--|--|
 | Sideload for personal use | ✅ | [Create an agent with Microsoft 365 Copilot](copilot-studio-lite-publish-agent.md#create-the-agent) |
-| Share with others | ✅ | [Share an agent via Microsoft 365 Copilot](copilot-studio-lite-publish-agent.md#create-the-agent) |
-| Submit to organizational catalog | ✅ | [Share an agent via Microsoft 365 Copilot](copilot-studio-lite-publish-agent.md#create-the-agent) |
+| Share with others | ✅ | [Share an agent via Microsoft 365 Copilot](agent-builder-share-manage-agents.md#share-an-agent) |
+| Submit to organizational catalog | ✅ | [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md) |
 | Submit to Microsoft Commercial Marketplace | ❌ | |
 
 > [!NOTE]
-> If sharing options are restricted in your organization, when you share the agent, an admin must approve and deploy it before it's available to other users in the organization.
+> If sharing options are restricted in your organization, makers can submit agents to the organizational catalog for admin review. Once approved, the agent is published to the Agent Store under **Built by your org**. For details, see [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md).
 
-For more information about sharing agents, see [Share an agent via Microsoft 365 Copilot](agent-builder-share-manage-agents.md#share-an-agent).
+For more information about sharing agents, see [Share and manage agents](agent-builder-share-manage-agents.md). To publish an agent to your organization's Agent Store, see [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md).
 
 ## Declarative agents built with Copilot Studio
 
