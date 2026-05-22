@@ -70,7 +70,7 @@ Agent Builder in Microsoft 365 Copilot is a great option for users with no codin
 |:------------|:------------|
 | **Ease of use:** Designed for users to build agents right inside of Microsoft 365 Copilot with no coding experience, using a natural language interface.  |  **Complex workflows:** Doesn't support complex workflows and integrations. |
 | **Quick setup:** Provides a guided process for building agents. | **Slower feature rollout:** Some advanced features are available in Agents Toolkit before they're available in Agent Builder.  |
-| **Accessibility:** Suitable for creating personal and group productivity agents without having to write code.  |  |
+| **Accessibility:** Suitable for creating personal and group productivity agents without having to write code, with an option to submit the agent to the organization's catalog.  |  |
 | **Straightforward agent testing:** The test pane allows users to test the agent user experience directly within the tool. | |
 | **Variety of knowledge sources:** Easily add public web, SharePoint, Copilot connector data, and more as agent knowledge sources.| |
 | **Generate rich content:** Image generation and code interpreter are enabled by default.| |
