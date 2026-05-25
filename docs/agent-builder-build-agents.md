@@ -4,7 +4,7 @@ description: Learn how to build agents by using the Agent Builder feature in Mic
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 03/20/2026
+ms.date: 05/25/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
