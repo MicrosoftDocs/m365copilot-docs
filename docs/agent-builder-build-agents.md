@@ -122,7 +122,7 @@ Use natural language to add capabilities on the **Describe** tab, or configure t
 
 ## Set the default response mode
 
-In the **Model** section of the **Configure** tab, you can set the default response mode for your agent. The response mode controls how the agent approaches each question, whether it prioritizes speed or takes more time for in-depth analysis. Users can always override this setting by using the model selector when using the agent.
+In the **Model** section of the **Configure** tab, set the default response mode for your agent. The response mode controls how the agent approaches each question, whether it prioritizes speed or takes more time for in-depth analysis. Users can always override this setting by using the model selector when using the agent.
 
 The following response modes are available:
 
