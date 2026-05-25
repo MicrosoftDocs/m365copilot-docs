@@ -23,6 +23,10 @@ For the latest information, announcements, and news about preview and generally 
 
 Add folders and up to 50 OneDrive files as knowledge when you use Agent Builder in Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
 
+### Set default response mode in Agent Builder
+
+When you build an agent in Agent Builder in Microsoft 365 Copilot, you can now set the default response mode for your agent. Choose from **Auto**, **Quick response**, or **Think deeper** to control whether your agent prioritizes speed or in-depth analysis. Users can always override this setting when using the agent. For more information, see [Set the default response mode](agent-builder-build-agents.md#set-the-default-response-mode).
+
 ### Declarative agent manifest version 1.7
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.7](declarative-agent-manifest-1.7.md) adds the following features:
