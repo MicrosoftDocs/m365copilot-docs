@@ -28,7 +28,7 @@ You have the following options for a Copilot development environment:
     > [!IMPORTANT]
     > Eligibility for the Microsoft 365 Developer Program is limited to Visual Studio Professional or Enterprise subscribers, ISV Success Program members, eligible Microsoft AI Cloud Partner Program (MAICPP) partners, and Premier or Unified Support customers.
 
-    If you provision a Configurable Sandbox, the subscription doesn't support commerce, so you can't ground your agent on organizational data or add other capabilities.
+    If you provision a configurable sandbox, the subscription doesn't support commerce, so you can't ground your agent on organizational data or add other capabilities.
 
 - An eligible [Microsoft 365 or Office 365 production environment](#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
