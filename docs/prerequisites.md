@@ -5,7 +5,7 @@ author: maisarissi
 ms.author: maisarissi
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/22/2026
+ms.date: 05/26/2026
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -23,11 +23,11 @@ For Microsoft 365 Copilot license information, see [License options](/microsoft-
 
 You have the following options for a Copilot development environment:
 
-- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription. Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents. 
+- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription. Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents.
 
-    If you choose an instant sandbox, you get a preconfigured E5 developer environment that provisions in minutes and comes preloaded with sample users, Microsoft Teams data packs, and preconfigured custom apps. The instant sandbox option has add-on commerce enabled. You can purchase additional services, including Microsoft 365 Copilot, directly from within the sandbox. For details about setup requirements, see [Set up a Microsoft 365 developer sandbox subscription](/office/developer-program/microsoft-365-developer-program-get-started).
+    If you choose an instant sandbox, you get a preconfigured E5 developer environment that provisions in minutes and comes preloaded with sample users, Microsoft Teams data packs, and preconfigured custom apps. The instant sandbox option has add-on purchases enabled. You can purchase additional services, including Microsoft 365 Copilot, directly from within the sandbox. For details about setup requirements, see [Set up a Microsoft 365 developer sandbox subscription](/office/developer-program/microsoft-365-developer-program-get-started).
 
-    If you provision a configurable sandbox, the subscription doesn't support commerce. You can't purchase a Copilot license and therefore you can't ground agents on organizational data or add other capabilities when you choose this option. 
+    If you provision a configurable sandbox, the subscription doesn't support commerce. You can't purchase a Copilot license and therefore you can't ground agents on organizational data or add other capabilities when you choose this option.
 
     > [!IMPORTANT]
     > Eligibility for the Microsoft 365 Developer Program is limited to Visual Studio Professional or Enterprise subscribers, ISV Success Program members, eligible Microsoft AI Cloud Partner Program (MAICPP) partners, and Premier or Unified Support customers.
