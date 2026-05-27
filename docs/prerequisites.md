@@ -5,7 +5,7 @@ author: maisarissi
 ms.author: maisarissi
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/26/2026
+ms.date: 05/27/2026
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -118,7 +118,7 @@ The following table summarizes agent access based on user licensing type.
 | Licensing model                                              | Agent access |
 |--------------------------------------------------------|-------------|
 | **Licensed users**                                     | Have both a Microsoft 365 subscription and the Copilot add-on license (including Microsoft 365 Copilot Business and the E7 Frontier Suite, where applicable). They receive full access to Copilot Chat and agent experiences across supported apps and platforms. This license also enables usage of agents grounded in tenant data (SharePoint, Microsoft Graph) and is required for authoring agents in Copilot Studio. |
-| **Usage-based billing (pay-as-you-go users)**                              | Belong to tenants with pay-as-you-go billing enabled (consumed as Copilot Credits). Users can access Copilot Chat and agents without a full Copilot license. Usage billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features - such as agent interactions or grounding - might require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. |
+| **Usage-based billing (pay-as-you-go users)**                              | Belong to tenants with pay-as-you-go billing enabled (consumed as Copilot Credits). Users can access Copilot Chat and agents without a full Copilot license. Usage billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features - such as agent interactions or grounding - might require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. For agents that use SharePoint files as knowledge sources, the billing policy must be [connected to the SharePoint agents service](/microsoft-365/copilot/pay-as-you-go/setup#connect-a-billing-policy) and users must be in the [security group assigned to the billing policy](/sharepoint/manage-access-agents-in-sharepoint#manage-who-can-access-the-agents). |
 | **Microsoft 365 subscribers without a Copilot add-on license** | Might see Copilot Chat entry points in some apps, but access is limited or disabled depending on tenant configuration and rollout status. These users do not have access to agent authoring or advanced agent experiences. |
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
