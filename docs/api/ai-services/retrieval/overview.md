@@ -19,7 +19,7 @@ RAG is essential when you're building generative AI solutions and want to use Mi
 To explore the API, [try a query in Graph Explorer](https://aka.ms/try_copilot_retrieval_API_overview).
 
 > [!TIP]
-> Do you want to explore the Retrieval API before writing code? Try the [Interactive Demo](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true&apiLog=true) to see a live request and response with your Microsoft 365 data.
+> Do you want to explore the Retrieval API before writing code? Try the [Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true&apiLog=true) to see a live request and response with your Microsoft 365 data.
 
 ## Why use the Retrieval API?
 

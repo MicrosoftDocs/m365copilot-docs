@@ -194,7 +194,7 @@ Use MCP to expose Microsoft 365 work context as tools for AI assistants runnin
 
 Install the [Microsoft Work IQ CLI (preview)](work-iq-cli.md) and configure it as a local MCP server.
 
-[▶ See it in action in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
+[▶ See it in action in the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
 
 #### Example MCP server configuration
 
@@ -268,5 +268,5 @@ We recommend planning your move to Work IQ ahead of your product's release to ta
 
 ## Related content
 
-- [Try the APIs in the Interactive Demo](https://aka.ms/copilot.dev)
+- [Try the APIs in the Interactive Demo (preview)](https://aka.ms/copilot.dev)
 - [Work IQ API quickstarts (preview)](work-iq-api-quickstart.md)

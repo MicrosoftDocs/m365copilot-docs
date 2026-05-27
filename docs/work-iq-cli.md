@@ -124,7 +124,7 @@ Use the following links to add Work IQ as an MCP server in VS Code:
 
 Add the following configuration to your MCP settings file.
 
-[▶ Set up with the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&setup=true)
+[▶ Set up with the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&setup=true)
 
 ```json
 {
