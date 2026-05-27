@@ -3,8 +3,9 @@ title: Set Up Your Development Environment to Extend Microsoft 365 Copilot
 description: Learn the prerequisites for extending Microsoft 365 Copilot with agents, plugins, and connectors.
 author: maisarissi
 ms.author: maisarissi
-ms.topic: how-to
-ms.date: 05/13/2026
+ms.topic: article
+ms.localizationpriority: medium
+ms.date: 05/26/2026
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -22,12 +23,14 @@ For Microsoft 365 Copilot license information, see [License options](/microsoft-
 
 You have the following options for a Copilot development environment:
 
-- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription (without a Microsoft 365 Copilot license). Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents with limited capabilities.
+- A [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) sandbox subscription. Microsoft 365 Developer Program members who [qualify for a developer subscription](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-) can use their subscription to develop agents.
+
+    If you choose an instant sandbox, you get a preconfigured E5 developer environment that provisions in minutes and comes preloaded with sample users, Microsoft Teams data packs, and preconfigured custom apps. The instant sandbox option has add-on purchases enabled. You can purchase additional services, including Microsoft 365 Copilot, directly from within the sandbox. For details about setup requirements, see [Set up a Microsoft 365 developer sandbox subscription](/office/developer-program/microsoft-365-developer-program-get-started).
+
+    If you provision a configurable sandbox, the subscription doesn't support commerce. You can't purchase a Copilot license and therefore you can't ground agents on organizational data or add other capabilities when you choose this option.
 
     > [!IMPORTANT]
     > Eligibility for the Microsoft 365 Developer Program is limited to Visual Studio Professional or Enterprise subscribers, ISV Success Program members, eligible Microsoft AI Cloud Partner Program (MAICPP) partners, and Premier or Unified Support customers.
-
-    At this time, because the subscription doesn't support commerce, you can't ground your agent on organizational data or add other capabilities.
 
 - An eligible [Microsoft 365 or Office 365 production environment](#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
 
@@ -156,7 +159,7 @@ The following table lists the agent types and agent capabilities that are availa
 
 ### Can I use my Microsoft 365 Developer Program subscription to develop with Copilot?
 
-You can use your Microsoft 365 Developer Program subscription to build agents with limited capabilities that are grounded on web search. Because Microsoft 365 Developer Program subscriptions don't support commerce, you can't purchase Microsoft 365 Copilot licenses or enable pay-as-you-go billing, so you can't use your subscription to build agents grounded on organizational data or add other capabilities.
+Yes, you can use your Microsoft 365 Developer Program subscription to build agents. If you provision an instant sandbox, it has add-on purchases enabled. You can purchase additional services, including Microsoft 365 Copilot, directly from within the sandbox. This option enables you to build agents grounded on organizational data and access other enhanced capabilities. If you provision a configurable sandbox, the subscription doesn't support commerce, so you can't purchase Microsoft 365 Copilot licenses or enable pay-as-you-go billing. Agent capabilities are limited to web search grounding. For more information, see [Set up a Microsoft 365 developer sandbox subscription](/office/developer-program/microsoft-365-developer-program-get-started).
 
 ### I'm not an ISV and I don't have a Microsoft 365 Copilot license. Can I get a Microsoft 365 Copilot development environment?
 
