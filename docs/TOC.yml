@@ -161,6 +161,8 @@ items:
         href: overview-plugins.md
       - name: Add actions with MCP plugins
         items:
+        - name: Dynamic tool discovery overview
+          href: plugin-dynamic-tool-discovery.md
         - name: Build an MCP plugin
           href: build-mcp-plugins.md
         - name: Authentication
