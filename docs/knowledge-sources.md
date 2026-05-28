@@ -370,7 +370,7 @@ By using Teams meetings knowledge, you can scope your agent to answer questions 
 
 ### Add meetings knowledge source
 
-If you're using [Agent Builder](agent-builder-build-agents.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats and meetings**. The ability to scope to Meetings is coming soon in Microsoft 365 Copilot.
+If you're using [Agent Builder](agent-builder-build-agents.md) to create your agent, on the **Configure** tab, in the **Knowledge** section, select the search bar and choose **My Teams chats and meetings**. The ability to scope to Meetings is coming soon in Agent Builder.
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, to enable meetings knowledge, add the `Meetings` value to the **capabilities** property in your agent manifest file, as shown in the following example. If you want to scope the agent to specific meetings, add the meeting's UID to the `items_by_id` property. For instructions on finding the ID of a meeting, see [Get the ID of a meeting](/troubleshoot/exchange/calendars/cdl/get-meeting-id).
 
