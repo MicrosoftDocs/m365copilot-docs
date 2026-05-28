@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 # copilotConversationReference resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents a conversation reference.
 

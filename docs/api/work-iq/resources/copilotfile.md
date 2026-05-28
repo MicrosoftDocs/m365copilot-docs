@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 # copilotFile resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 OneDrive or SharePoint file being sent as context into a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 

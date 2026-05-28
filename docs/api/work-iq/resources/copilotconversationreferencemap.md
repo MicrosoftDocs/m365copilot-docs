@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 # copilotConversationReferenceMap resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 A keyed map of [copilotConversationReference](copilotconversationreference.md) objects.
 

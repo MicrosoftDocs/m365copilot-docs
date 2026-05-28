@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 # copilotWebContext resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Determines how web search grounding is used in a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 

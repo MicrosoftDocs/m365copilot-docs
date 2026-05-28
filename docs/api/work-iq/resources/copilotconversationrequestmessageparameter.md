@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 # copilotConversationRequestMessageParameter resource type
 
-[!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents a chat message being sent into a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 
