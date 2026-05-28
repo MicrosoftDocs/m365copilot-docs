@@ -407,6 +407,8 @@ items:
     href: work-iq-api-quickstart.md
   - name: Work IQ CLI
     href: work-iq-cli.md
+  - name: REST API
+    href: api/work-iq/toc.yml
   - name: Terms of use (preview)
     href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
 
