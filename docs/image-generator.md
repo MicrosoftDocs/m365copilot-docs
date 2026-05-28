@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 05/11/2026
+ms.date: 05/27/2026
 ---
 
 # Add the image generator capability to your agent
@@ -57,7 +57,7 @@ If you're using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
 
 ### Agent Builder
 
-Image generator is enabled by default in [Agent Builder](agent-builder.md). To disable or reenable the capability, select **Skip to configure**, and under **Capabilities**, choose the toggle next to **Create documents, charts, and code**.
+Image generator is enabled by default in [Agent Builder](agent-builder.md). To disable or reenable the capability, select **Skip to configure**, and under **Capabilities**, choose the toggle next to **Create images**.
 
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section in Agent Builder in Microsoft 365 Copilot.":::
 
