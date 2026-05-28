@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/15/2026
+ms.date: 05/28/2026
 ms.topic: overview
 ---
 
@@ -25,7 +25,7 @@ Add folders and up to 50 OneDrive files as knowledge when you use Agent Builder 
 
 ### Set default response mode in Agent Builder
 
-When you build an agent in Agent Builder in Microsoft 365 Copilot, you can now set the default response mode for your agent. Choose from **Auto**, **Quick response**, or **Think deeper** to control whether your agent prioritizes speed or in-depth analysis. Users can always override this setting when using the agent. For more information, see [Set the default response mode](agent-builder-build-agents.md#set-the-default-response-mode).
+When you build an agent in Agent Builder in Microsoft 365 Copilot, you can now set the default response mode for your agent. For more information, see [Set the default response mode](agent-builder-build-agents.md#set-the-default-response-mode).
 
 ### Declarative agent manifest version 1.7
 
