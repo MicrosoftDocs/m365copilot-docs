@@ -14,7 +14,7 @@ Work IQ is the intelligence layer that personalizes Microsoft 365 Copilot for us
 
 Work IQ combines three integrated layers: *data*, *context*, and *skills / tools*. Together, these layers ground Copilot in organizational information and business signals so responses are relevant to how work actually happens.
 
-:::image type="content" source="assets/diagrams/work-iq-layers.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills + tools layers." border="false":::
+:::image type="content" source="../assets/diagrams/work-iq-layers.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills + tools layers." border="false":::
 
 For users, Work IQ is integrated across Microsoft 365 Copilot experiences, including Copilot Chat and apps such as Word, Excel, PowerPoint, and Teams, as well as Dynamics 365 and Power Apps with Dataverse-enriched context.
 
@@ -60,7 +60,7 @@ The skills and tools layer puts Work IQ intelligence into operation. Skills prov
 
 ### Copilot actions
 
-[Copilot actions](/microsoft-365/copilot/extensibility/overview-plugins), implemented as plugins, enable declarative agents in Microsoft 365 Copilot to interact with MCP servers or REST APIs that have an OpenAPI description. With a plugin, users can ask a declarative agent to not only query for information, but to create, update, and delete data and objects within an external system. Anything the MCP server or REST API can do is accessible via natural language prompts.
+[Copilot actions](../overview-plugins.md), implemented as plugins, enable declarative agents in Microsoft 365 Copilot to interact with MCP servers or REST APIs that have an OpenAPI description. With a plugin, users can ask a declarative agent to not only query for information, but to create, update, and delete data and objects within an external system. Anything the MCP server or REST API can do is accessible via natural language prompts.
 
 ### Work IQ MCP tools
 
@@ -72,10 +72,10 @@ Microsoft Agent 365 offers a rich catalog of [Work IQ MCP](/microsoft-agent-365/
 
 ### Work IQ CLI
 
-The [Work IQ CLI](/microsoft-365/copilot/extensibility/workiq-overview) (preview) exposes your Microsoft 365 data through the Model Context Protocol, allowing AI coding assistants in your development environment to access and reason over your workplace information. Running the CLI in MCP server mode means your AI assistant can automatically pull in relevant context as you work — for example, retrieving details from a meeting where a feature was discussed and using that context to inform code suggestions and jump-start the implementation.
+The [Work IQ CLI](cli.md) (preview) exposes your Microsoft 365 data through the Model Context Protocol, allowing AI coding assistants in your development environment to access and reason over your workplace information. Running the CLI in MCP server mode means your AI assistant can automatically pull in relevant context as you work — for example, retrieving details from a meeting where a feature was discussed and using that context to inform code suggestions and jump-start the implementation.
 
 ## Related content
 
-- [Microsoft Work IQ CLI](/microsoft-365/copilot/extensibility/workiq-overview)
+- [Microsoft Work IQ CLI](cli.md)
 - [Work IQ MCP overview](/microsoft-agent-365/tooling-servers-overview)
 - [Work IQ MCP server reference](/microsoft-agent-365/mcp-server-reference/searchtools)
