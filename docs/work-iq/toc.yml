@@ -9,7 +9,7 @@ items:
 #  href: a2a/toc.yml
 - name: REST API
   href: rest/toc.yml
-#- name: MCP
-#  href: mcp/toc.yml
+- name: MCP
+  href: mcp/toc.yml
 - name: Terms of use (preview)
   href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
