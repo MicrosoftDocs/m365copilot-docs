@@ -192,7 +192,7 @@ Use MCP to expose Microsoft 365 work context as tools for AI assistants runnin
 
 ### Local MCP
 
-Install the [Microsoft Work IQ CLI (preview)](work-iq-cli.md) and configure it as a local MCP server.
+Install the [Microsoft Work IQ CLI (preview)](cli.md) and configure it as a local MCP server.
 
 #### Example MCP server configuration
 
@@ -266,4 +266,4 @@ We recommend planning your move to Work IQ ahead of your product's release to ta
 
 ## Related content
 
-- [Work IQ API quickstarts (preview)](work-iq-api-quickstart.md)
+- [Work IQ API quickstarts (preview)](api-quickstart.md)

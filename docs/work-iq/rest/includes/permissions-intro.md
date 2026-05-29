@@ -7,4 +7,4 @@ ms.localizationpriority: medium
 
 <!-- markdownlint-disable MD041-->
 
-Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions only if your app requires it. To learn more about these permissions, see the [permissions reference](../permissions.md).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions only if your app requires it. To learn more about these permissions, see the [permissions reference](../../permissions.md).
