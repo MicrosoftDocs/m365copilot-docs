@@ -1,0 +1,15 @@
+items:
+- name: Overview
+  href: api-overview.md
+- name: Quickstart
+  href: api-quickstart.md
+- name: CLI
+  href: cli.md
+#- name: A2A
+#  href: a2a/toc.yml
+- name: REST API
+  href: rest/toc.yml
+#- name: MCP
+#  href: mcp/toc.yml
+- name: Terms of use (preview)
+  href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
