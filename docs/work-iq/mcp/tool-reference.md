@@ -339,11 +339,9 @@ The following path segments are blocked:
 - `/servicePrincipals/`
 
 > [!NOTE]
-> The complete list of allowed and blocked paths is subject to per-tenant policy configuration and may vary. <!-- TODO: Document the full default policy -->
+> The complete list of allowed and blocked paths is subject to per-tenant policy configuration and may vary.
 
 ## Error handling
-
-<!-- TODO: Document error response format, common error codes, and retry behavior -->
 
 When a tool call fails, the Work IQ MCP server returns errors with the following information:
 
@@ -352,24 +350,6 @@ When a tool call fails, the Work IQ MCP server returns errors with the following
 - Request correlation IDs for troubleshooting
 
 The server does not perform automatic retries — errors are passed through to the MCP client for client-side retry decisions.
-
-## Missing information
-
-> [!IMPORTANT]
-> The following information is not yet available in the source design documents and needs to be added to complete this reference:
->
-> - **Detailed parameter schemas**: Exact parameter names, types (string, object, array, etc.), required vs. optional status, default values, and validation constraints for each tool.
-> - **Request body schemas**: JSON schema definitions for the `body` parameter used by `create_entity`, `update_entity`, and `do_action`.
-> - **Response schemas**: Documented response formats and types for each tool (for example, `ReadResult`, `WriteResult`, `EntityFetchResult`).
-> - **Error codes and messages**: Complete list of error codes, error response format, and troubleshooting guidance.
-> - **`fetch` parallel behavior**: How multiple paths are specified and how results are returned when fetching in parallel.
-> - **`upload_blob` details**: Content type handling, size limits, and supported upload targets.
-> - **`ask` response format**: Structure of the response from the BizChat agent.
-> - **`search_paths` response format**: Structure and fields of the search results.
-> - **`get_schema` format values**: Supported values for the `format` parameter.
-> - **Rate limiting details**: Throttling behavior, per-user limits, and how `Retry-After` headers are surfaced.
-> - **Supported Graph paths**: Complete list of supported Microsoft Graph resource paths and operations.
-> - **Query parameter support**: Which OData query parameters (`$filter`, `$select`, `$orderby`, `$expand`, `$top`) are supported and any restrictions beyond `$skip`/`$skiptoken`.
 
 ## Related content
 
