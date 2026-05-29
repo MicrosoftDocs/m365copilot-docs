@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 # copilotConversationLocation resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Represents user location information during a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 

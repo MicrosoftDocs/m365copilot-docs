@@ -14,7 +14,7 @@ doc_type: apiPageType
 
 # copilotConversation: chat
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
 The Work IQ Chat API allows you to create and continue multi-turn conversations with Microsoft 365 Copilot, while respecting the defined access controls within the organization. Use the Chat API to continue synchronous conversations with Microsoft 365 Copilot.
 
@@ -22,7 +22,7 @@ This documentation covers continuing synchronous Copilot conversations using the
 
 ## Permissions
 
-[!INCLUDE [permissions-intro](../includes/permissions-intro.md)]
+[!INCLUDE [permissions-intro](includes/permissions-intro.md)]
 
 | Permission type                        | Least privileged permissions | Higher privileged permissions |
 |:---------------------------------------|:-----------------------------|:------------------------------|

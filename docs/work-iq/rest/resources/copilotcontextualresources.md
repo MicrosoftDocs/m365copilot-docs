@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 # copilotContextualResources resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Optional contextual resources being sent into a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 

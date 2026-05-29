@@ -13,7 +13,7 @@ doc_type: resourcePageType
 
 # copilotContextMessage resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Represents extra context for a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 

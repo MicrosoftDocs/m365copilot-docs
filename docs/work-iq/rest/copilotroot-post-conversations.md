@@ -14,7 +14,7 @@ doc_type: apiPageType
 
 # Create copilotConversation
 
-[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 
 The Work IQ Chat API allows you to create and continue multi-turn conversations with Microsoft 365 Copilot, while respecting the defined access controls within the organization. Use the Chat API to integrate Microsoft 365 Copilot into your generative AI solutions.
 
@@ -22,7 +22,7 @@ This documentation covers creating Copilot conversations using the Chat API. Lea
 
 ## Permissions
 
-[!INCLUDE [permissions-intro](../includes/permissions-intro.md)]
+[!INCLUDE [permissions-intro](includes/permissions-intro.md)]
 
 | Permission type                        | Least privileged permissions | Higher privileged permissions |
 |:---------------------------------------|:-----------------------------|:------------------------------|
