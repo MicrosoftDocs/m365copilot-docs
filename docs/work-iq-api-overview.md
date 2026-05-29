@@ -42,12 +42,12 @@ Traditional AI integrations often require building custom pipelines to extract, 
 
 Work IQ supports the following protocols:
 
-| Protocol                 | Description                             | Typical scenarios                    |
-|--------------------------|-----------------------------------------|--------------------------------------|
-| A2A                      | Structured agent-to-agent communication | Multi-agent systems, delegation      |
-| Local MCP                | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
-| Remote MCP               | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
-| REST (coming soon)       | Conversational, request/response API    | Service-hosted agents, orchestrators |
+| Protocol   | Description                             | Typical scenarios                    |
+|------------|-----------------------------------------|--------------------------------------|
+| A2A        | Structured agent-to-agent communication | Multi-agent systems, delegation      |
+| Local MCP  | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
+| Remote MCP | Tool-based context access               | IDEs, CLIs, AI coding assistants     |
+| REST       | Conversational, request/response API    | Service-hosted agents, orchestrators |
 
 ## Supported functionality
 
