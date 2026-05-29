@@ -15,7 +15,7 @@ items:
   - name: Copilot orchestrator
     href: orchestrator.md
   - name: Work IQ
-    href: work-iq.md
+    href: work-iq/index.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 
