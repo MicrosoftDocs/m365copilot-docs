@@ -1,12 +1,14 @@
 ---
 title: Dynamic tool discovery for MCP plugins in Microsoft 365 Copilot
 description: Learn how dynamic tool discovery enables declarative agents in Microsoft 365 Copilot to resolve MCP server tools at runtime, keeping capabilities up to date without republishing the agent.
-author: jasonjoh
-ms.author: jasonjoh
+author: amitharjani93
+ms.author: amith
 ms.localizationpriority: medium
 ms.date: 05/27/2026
 ms.topic: overview
 ---
+
+<!-- cSpell:ignore amith amitharjani93 XPIA -->
 
 # Dynamic tool discovery for MCP plugins in Microsoft 365 Copilot
 
@@ -32,7 +34,7 @@ The following table summarizes the differences.
 | User-specific tool surfaces (for example, by SKU, role, or entitlement) | Not supported. Every user sees the same manifest-defined tool list. | Supported. The MCP server can return a tool list tailored to the signed-in user.                        |
 | Time to roll out a new tool capability | Days to weeks, gated on the agent republish cycle                                             | Near real time, gated only on MCP server deployment and runtime validation                              |
 | Time to retire a deprecated tool    | Days to weeks                                                                                    | Near real time                                                                                          |
-| Trust and safety checks on tool definitions | Performed at publish time during store validation                                        | Publish-time agent-level validation **plus** runtime RAI and XPIA validation on every newly discovered or modified tool before it is activated |
+| Trust and safety checks on tool definitions | Performed at publish time during store validation                                        | Publish-time agent-level validation **plus** runtime responsible AI (RAI) and cross-prompt injection attack (XPIA) validation on every newly discovered or modified tool before it is activated |
 
 ## Availability and rollout
 
@@ -69,12 +71,11 @@ Dynamic tool discovery doesn't bypass the trust and safety model that applies to
 
 - **ISV (3P) apps** continue to rely on the existing extensibility governance stack: publisher attestation and M365 certification, the tenant and ISV service contract and terms of use, and store validation performed at publish time.
 - **Line-of-business (LOB) apps** continue to rely on the tenant's existing internal onboarding and compliance procedures for first-party and internal apps.
-- **Runtime validation**: every newly discovered or modified tool is screened by responsible AI (RAI) and cross-prompt injection attack (XPIA) classifiers before the tool is activated for end users. The process blocks tool changes that fail validation.
+- **Runtime validation**: every newly discovered or modified tool is screened by RAI and XPIA classifiers before the tool is activated for end users. The process blocks tool changes that fail validation.
 
 Together, these processes guarantee that the assurances customers rely on at publish time continue to hold as tools evolve at runtime.
 
 ## Related content
 
-- [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
 - [Plugins for Microsoft 365 Copilot](overview-plugins.md)
-- [Configure authentication for plugins in agents](plugin-authentication.md)
+- [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
