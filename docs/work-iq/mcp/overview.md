@@ -10,13 +10,13 @@ ms.date: 05/29/2026
 
 # Work IQ MCP overview (preview)
 
-The Work IQ MCP server exposes Microsoft 365 intelligence capabilities to AI agents through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). It provides a set of 10 generic tools that enable agents to read, create, update, and delete Microsoft 365 entities, invoke Microsoft 365 Copilot for natural-language reasoning, and discover API schemas — all through a single MCP endpoint.
+The Work IQ MCP server exposes Microsoft 365 intelligence capabilities to AI agents through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). It provides a set of generic tools that enable agents to read, create, update, and delete Microsoft 365 entities, invoke Microsoft 365 Copilot for natural-language reasoning, and discover API schemas — all through a single MCP endpoint.
 
 ## Design principles
 
 Work IQ MCP is built on the following design principles:
 
-- **Fewer tools, more paths.** 10 generic tools operate on resource paths. New workloads add paths, not tools — the tool surface never grows.
+- **Fewer tools, more paths.** Generic tools operate on resource paths. New workloads add paths, not tools — the tool surface never grows.
 - **Introspection over enumeration.** Agents ask for schemas at runtime (`get_schema`) rather than loading thousands of type definitions into context.
 - **Policy over scopes.** Four broad OAuth permissions gate capability; fine-grained access control is enforced per path, method, and tenant policy.
 
@@ -27,7 +27,6 @@ The 10 tools are organized into four categories:
 | Category | Tools | Description |
 |----------|-------|-------------|
 | Entity tools | `fetch`, `create_entity`, `update_entity`, `delete_entity`, `do_action`, `call_function` | CRUD operations and actions on Microsoft 365 resources via Microsoft Graph |
-| Binary tools | `fetch_blob`, `upload_blob` | Download and upload binary content (files, attachments) |
 | Copilot tools | `ask`, `list_agents` | Invoke Microsoft 365 Copilot for natural-language intelligence and discover available agents |
 | Schema tools | `get_schema`, `search_paths` | Discover available API paths and retrieve OpenAPI schemas at runtime |
 
