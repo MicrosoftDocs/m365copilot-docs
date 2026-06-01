@@ -44,10 +44,9 @@ Dynamic tool discovery shifts *when tools are discovered* from publish time to r
 
 ### Distinguishing agents with dynamic discovery from static discovery
 
-Admins can identify which agents in their tenant use dynamic tool discovery versus static tool discovery from the Microsoft 365 admin center:
+Admins can identify which agents in their tenant use dynamic tool discovery from the agent details view in the Microsoft 365 admin center. In the **Data & tools** tab of the agent details view, an information banner under the **Tools** section indicates that the agent uses an MCP server whose tools can change at runtime.
 
-- The agent details view indicates whether an agent uses dynamic tool discovery. For agents that use dynamic discovery, the details view shows a placeholder explaining that the tool list is resolved at runtime, instead of enumerating a fixed tool list that would quickly become stale.
-- *[Placeholder: exact label, location, and screenshot of the dynamic-vs-static indicator in the Integrated Apps view in MAC. To be confirmed with the admin experience team.]*
+:::image type="content" source="assets/images/api-plugins/mcp-dynamic-discovery-admin-view.png" alt-text="A screenshot of the Data and tools tab of the agent details view in the Microsoft 365 admin center, showing the information banner that the agent's MCP server may use other tools changed by the publisher.":::
 
 The agent and connector catalog list view itself is unchanged. The discovery mechanism is surfaced on the per-agent details page, not in catalog-level listings.
 
