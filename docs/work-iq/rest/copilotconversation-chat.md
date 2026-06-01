@@ -1,5 +1,5 @@
 ---
-title: "copilotConversation: chat"
+title: "Work IQ - copilotConversation: chat"
 description: Continue synchronous conversations with the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -12,7 +12,7 @@ doc_type: apiPageType
 <!-- markdownlint-disable MD024 -->
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotConversation: chat
+# Work IQ - copilotConversation: chat
 
 [!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
 

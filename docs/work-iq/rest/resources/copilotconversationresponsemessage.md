@@ -1,5 +1,5 @@
 ---
-title: copilotConversationResponseMessage resource type
+title: Work IQ - copilotConversationResponseMessage resource type
 description: Represents a message in a Copilot conversation being continued through the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotConversationResponseMessage resource type
+# Work IQ - copilotConversationResponseMessage resource type
 
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 

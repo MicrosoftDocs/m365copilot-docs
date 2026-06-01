@@ -1,5 +1,5 @@
 ---
-title: copilotFile resource type
+title: Work IQ - copilotFile resource type
 description: OneDrive or SharePoint file being sent as context into a Copilot conversation through the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotFile resource type
+# Work IQ - copilotFile resource type
 
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 

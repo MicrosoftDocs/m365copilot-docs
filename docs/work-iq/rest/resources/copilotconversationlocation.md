@@ -1,5 +1,5 @@
 ---
-title: copilotConversationLocation resource type
+title: Work IQ - copilotConversationLocation resource type
 description: Represents user location information during a Copilot conversation through the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotConversationLocation resource type
+# Work IQ - copilotConversationLocation resource type
 
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 

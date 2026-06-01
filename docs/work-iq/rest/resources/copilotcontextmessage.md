@@ -1,5 +1,5 @@
 ---
-title: copilotContextMessage resource type
+title: Work IQ - copilotContextMessage resource type
 description: Represents extra context for a Copilot conversation through the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotContextMessage resource type
+# Work IQ - copilotContextMessage resource type
 
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 

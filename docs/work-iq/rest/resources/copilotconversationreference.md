@@ -1,5 +1,5 @@
 ---
-title: copilotConversationReference resource type
+title: Work IQ - copilotConversationReference resource type
 description: Represents a copilotConversationReference.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotConversationReference resource type
+# Work IQ - copilotConversationReference resource type
 
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
