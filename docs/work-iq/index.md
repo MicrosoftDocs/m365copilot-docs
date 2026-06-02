@@ -4,7 +4,7 @@ description: Learn how to extend agents with Work IQ a workplace intelligence la
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 06/01/2026
+ms.date: 06/02/2026
 ms.topic: overview
 ---
 
