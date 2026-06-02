@@ -177,6 +177,8 @@ Install the [Microsoft Work IQ CLI (preview)](cli.md) and configure it as a loca
 
 [▶ See it in action in the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
 
+[▶ See it in action in the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
+
 #### Example MCP server configuration
 
 ```json
@@ -245,3 +247,4 @@ Work IQ is the recommended foundation for new agentic and AI-powered application
 - [Work IQ REST API overview (preview)](rest/overview.md)
 - [Microsoft Work IQ CLI (preview)](cli.md)
 - [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)
+- [Try the APIs in the Interactive Demo (preview)](https://aka.ms/copilot.dev)
