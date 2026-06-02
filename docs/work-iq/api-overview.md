@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/01/2026
+ms.date: 06/02/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -20,15 +20,7 @@ By accessing or using the Microsoft Work IQ APIs, you're agreeing to the [Micros
 
 ## What is Work IQ?
 
-Work IQ is a workplace intelligence layer that delivers a semantic understanding of everything happening across your business. Unlike systems that simply retrieve content, it understands how work actually happens. It combines data from Microsoft 365 (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships. It applies the inference needed to reason across all of it and surface next-best actions. Work IQ orchestrates every layer of intelligence - from assembling context to grounding responses, selecting skills, and invoking tools - while honoring enterprise permissions and governance.
-
-All Work IQ requests:
-
-- Execute in the context of the signed-in user
-- Honor Microsoft 365 permissions and sensitivity labels
-- Remain within the Microsoft 365 trust boundary
-
-This allows applications to reason over work data without exporting or duplicating content.
+Work IQ is a workplace intelligence layer that combines Microsoft 365 data with contextual understanding so agents can reason over work and take action. For a full overview of Work IQ capabilities, see [Work IQ overview](index.md).
 
 ## Why use Work IQ?
 
