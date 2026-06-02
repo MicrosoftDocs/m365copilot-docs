@@ -54,7 +54,6 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 | `personWebSite`         | `string`           | [`webSite`](/graph/api/resources/personwebsite)                         | Describes a website for the user.                                           |
 | `personWorkPositions` (beta) | `stringCollection` | [`workPosition`](/graph/api/resources/workposition)                | Describes the historical work positions of the user.                        |
 
-
 Example schema:
 
 ```json
