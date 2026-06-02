@@ -12,7 +12,7 @@ ms.topic: overview
 
 Work IQ is a workplace intelligence layer that delivers a semantic understanding of everything happening across your business. It understands work context, relationships, and patterns so agents can deliver faster, more accurate, and more secure responses than connector-only approaches.
 
-Work IQ combines four integrated components: *data*, *context*, *tools*, and *workspaces*. Together, these layers ground agents in organizational information and business signals so responses are relevant to how work actually happens.
+Work IQ combines four integrated components: *chat*, *context*, *tools*, and *workspaces*. Together, these components ground agents in organizational information and business signals so responses are relevant to how work actually happens.
 
 :::image type="content" source="../assets/diagrams/work-iq-layers.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills + tools layers." border="false":::
 
