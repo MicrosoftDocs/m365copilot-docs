@@ -1,6 +1,6 @@
 ---
 title: Work IQ - searchSensitivityLabelInfo resource type
-description: Describes the information protection label that details how to properly apply a sensitivity label to information.
+description: Describes the information protection label that details how to apply a sensitivity label to information.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference

@@ -1,6 +1,6 @@
 ---
 title: Use the Work IQ Chat API to chat with Microsoft 365 Copilot.
-description: Use the Chat API to integrate Microsoft 365 Copilot into your custom generative AI solutions.
+description: Use the Work IQ Chat API to integrate Microsoft 365 Copilot into your custom generative AI solutions.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
