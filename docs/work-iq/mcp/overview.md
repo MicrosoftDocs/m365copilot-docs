@@ -10,13 +10,13 @@ ms.date: 06/02/2026
 
 # Work IQ MCP overview (preview)
 
-The Work IQ MCP server exposes Microsoft 365 intelligence capabilities to AI agents through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). It provides a set of generic tools that enable agents to read, create, update, and delete Microsoft 365 entities, invoke Microsoft 365 Copilot for natural-language reasoning, and discover API schemas — all through a single MCP endpoint.
+The Work IQ MCP server exposes Microsoft 365 intelligence capabilities to AI agents through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). It provides a set of generic tools that enable agents to read, create, update, and delete Microsoft 365 entities, invoke Microsoft 365 Copilot for natural-language reasoning, and discover API schemas - all through a single MCP endpoint.
 
 ## Design principles
 
 Work IQ MCP is built on the following design principles:
 
-- **Fewer tools, more paths.** Generic tools operate on resource paths. New workloads add paths, not tools — the tool surface never grows.
+- **Fewer tools, more paths.** Generic tools operate on resource paths. New workloads add paths, not tools - the tool surface never grows.
 - **Introspection over enumeration.** Agents ask for schemas at runtime (`get_schema`) rather than loading thousands of type definitions into context.
 - **Policy over scopes.** Four broad OAuth permissions gate capability; fine-grained access control is enforced per path, method, and tenant policy.
 
@@ -34,7 +34,7 @@ For detailed information about each tool, including parameters, see [Work IQ MCP
 
 ## How tools work
 
-Tools operate on **relative resource paths** — the path identifies the resource, the tool is the verb:
+Tools work with **relative resource paths**. The path shows the resource, and the tool acts as the verb:
 
 ```text
 fetch /me/messages                         → read my emails
@@ -49,7 +49,7 @@ New workloads, backends, and data sources add **paths**, not tools. The tool sur
 
 ## Authentication
 
-The Work IQ MCP server uses Microsoft Entra ID for authentication. MCP clients discover the authentication configuration automatically through the `/.well-known/oauth-protected-resource` endpoint. For details on required permissions, see [Work IQ API permissions reference](../permissions.md).
+The Work IQ MCP server uses Microsoft Entra ID for authentication. MCP clients automatically discover the authentication configuration through the `/.well-known/oauth-protected-resource` endpoint. For details on required permissions, see [Work IQ API permissions reference](../permissions.md).
 
 ## Related content
 

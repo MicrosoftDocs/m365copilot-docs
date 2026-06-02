@@ -16,7 +16,7 @@ Work IQ combines four integrated components: *data*, *context*, *tools*, and *wo
 
 :::image type="content" source="../assets/diagrams/work-iq-layers.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills + tools layers." border="false":::
 
-Work IQ is a secure platform that enables any agentic system to access and reason over an organization’s data, context, and tools. It continuously builds a rich, up-to-date semantic understanding across Microsoft 365, organizational systems, and external sources, with built-in governance that respects existing permissions and policies. Combining chat, context, tools and workspaces, Work IQ supports high-volume, multi-step interactions and scales to handle even the largest and most complex data estates. It works across frameworks and runtimes through standard protocols and provides the foundation for building agents, applications, and workflows that deliver faster, more intelligent, efficient outcomes.
+Work IQ is a secure platform that enables any agentic system to access and reason over an organization’s data, context, and tools. It continuously builds a rich, up-to-date semantic understanding across Microsoft 365, organizational systems, and external sources, with built-in governance that respects existing permissions and policies. Combining chat, context, tools, and workspaces, Work IQ supports high-volume, multistep interactions and scales to handle even the largest and most complex data estates. It works across frameworks and runtimes through standard protocols and provides the foundation for building agents, applications, and workflows that deliver faster, more intelligent, efficient outcomes.
 
 When it comes to extensibility, you can both extend Work IQ with your business data and extend the agents you build with the intelligence of Work IQ. Furthermore, you can leverage Work IQ intelligence within your own development workflow with Work IQ API. This article explains the extensibility opportunities within each layer of Work IQ.
 
@@ -26,7 +26,7 @@ The data layer provides secure access to structured and unstructured information
 
 ### Microsoft 365 tenant data
 
-[Microsoft Graph](/graph/overview) data represents all the data from your Microsoft 365 tenant, including permission-based and information-protected content in SharePoint and OneDrive, including Word, Excel, PowerPoint and other file types, as well as Outlook emails, and Teams meetings and chats. It also includes metadata and signals that describe collaboration, communication, and activity patterns over time.
+[Microsoft Graph](/graph/overview) data represents all the data from your Microsoft 365 tenant, including permission-based and information-protected content in SharePoint and OneDrive, including Word, Excel, PowerPoint, and other file types, as well as Outlook emails, and Teams meetings and chats. It also includes metadata and signals that describe collaboration, communication, and activity patterns over time.
 
 ### Dynamics 365 and Power Apps business data
 
