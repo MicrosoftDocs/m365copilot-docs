@@ -68,7 +68,7 @@ The [Work IQ CLI](cli.md) (preview) exposes your Microsoft 365 data through the 
 
 ## Related content
 
-- [Work IQ API quickstart (preview)](api-quickstart.md)
+- [Work IQ A2A quickstart (preview)](a2a/quickstart.md)
 - [Microsoft Work IQ API (preview)](api-overview.md)
 - [Work IQ REST API overview (preview)](rest/overview.md)
 - [Microsoft Work IQ CLI (preview)](cli.md)

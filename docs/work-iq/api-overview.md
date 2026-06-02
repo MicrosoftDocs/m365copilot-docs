@@ -249,7 +249,7 @@ Work IQ is the recommended foundation for new agentic and AI-powered application
 
 ## Related content
 
-- [Work IQ API quickstart (preview)](api-quickstart.md)
+- [Work IQ A2A quickstart (preview)](a2a/quickstart.md)
 - [Work IQ REST API overview (preview)](rest/overview.md)
 - [Microsoft Work IQ CLI (preview)](cli.md)
 - [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)

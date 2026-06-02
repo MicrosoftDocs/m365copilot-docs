@@ -1,12 +1,10 @@
 items:
 - name: Overview
   href: api-overview.md
-- name: Quickstart
-  href: api-quickstart.md
 - name: CLI
   href: cli.md
-#- name: A2A
-#  href: a2a/toc.yml
+- name: A2A
+  href: a2a/toc.yml
 - name: REST API
   href: rest/toc.yml
 - name: MCP

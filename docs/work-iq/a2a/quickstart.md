@@ -1,5 +1,5 @@
 ---
-title: Work IQ API quickstart (preview)
+title: Work IQ A2A quickstart (preview)
 description: Learn how to quickly test the Work IQ API using Agent-to-Agent (A2A) protocol
 author: MSFTgraph-sorceress
 ms.author: hstoffels
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 06/01/2026
 ---
 
-# Work IQ API quickstart (preview)
+# Work IQ A2A quickstart (preview)
 
 <!-- cSpell:ignore AADSTS MSAL -->
 

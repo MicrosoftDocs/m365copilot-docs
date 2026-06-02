@@ -1,6 +1,6 @@
 ---
-title: Work IQ Agent2Agent (A2A) overview (preview)
-description: Learn how to use Work IQ through the AgentToAgent(A2A) protocol to enable AI agents to communicate and collaborate with Work IQ.
+title: Work IQ Agent-to-Agent (A2A) overview (preview)
+description: Learn how to use Work IQ through the Agent-to-Agent(A2A) protocol to enable AI agents to communicate and collaborate with Work IQ.
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
@@ -10,17 +10,21 @@ ms.date: 05/29/2026
 
 <!-- markdownlint-disable MD024 -->
 
-# Work IQ Agent2Agent (A2A) overview (preview)
+# Work IQ Agent-to-Agent (A2A) overview (preview)
 
-The [AgentToAgent (A2A) protocol](https://a2a-protocol.org/latest/) enables AI agents to communicate and collaborate with Work IQ. Agents can operate autonomously and exchange structured tasks instead of simple API calls with Work IQ.
+The [Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/) enables AI agents to communicate and collaborate with Work IQ. Agents can operate autonomously and exchange structured tasks instead of simple API calls with Work IQ.
 
 ## Protocol version
 
-Work IQ supports both A2A version 1.0 and 0.3, dispatched via the `A2A-Version` request header. If the `A2A-Version` header is omitted, Work IQ defaults to 0.3 for backward compatability. We recommend using version 1.0 by setting `A2A-Version: 1.0` in your request headers.
+Work IQ supports both A2A version 1.0 and 0.3, dispatched via the `A2A-Version` request header. If the `A2A-Version` header is omitted, Work IQ defaults to 0.3 for backward compatibility. Use version 1.0 by setting `A2A-Version: 1.0` in your request headers.
+
+## Authentication
+
+Work IQ A2A uses Microsoft Entra ID delegated authentication. For more information, see [Work IQ API permissions reference](../permissions.md).
 
 ## Agent discovery
 
-Work IQ hosts Agent Cards for its available agents at the standard `/.well-known/agent-card.json' endpoint.
+Work IQ hosts Agent Cards for its available agents at the standard `/.well-known/agent-card.json` endpoint.
 
 - For the default agent: `https://workiq.svc.cloud.microsoft/a2a/.well-known/agent-card.json`
 - For a specific agent: `https://workiq.svc.cloud.microsoft/a2a/{agent-id}/.well-known/agent-card.json`
@@ -172,3 +176,64 @@ Pass the `contextId` from the previous response in the next message:
 ## Task management
 
 Work IQ supports the [GetTask](https://a2a-protocol.org/latest/specification/#313-get-task), [CancelTask](https://a2a-protocol.org/latest/specification/#315-cancel-task), and [SubscribeToTask](https://a2a-protocol.org/latest/specification/#316-subscribe-to-task) methods for managing tasks.
+
+### Example
+
+#### Request
+
+```http
+POST https://workiq.svc.cloud.microsoft/a2a/
+Authorization: Bearer {access-token}
+Content-Type: application/json
+A2A-Version: 1.0
+
+{
+  "jsonrpc": "2.0",
+  "id": "<request-guid-3>",
+  "method": "GetTask",
+  "params": {
+    "id": "<task-id>"
+  }
+}
+```
+
+#### Response
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": "<request-guid-3>",
+  "result": {
+    "id": "<task-id>",
+    "contextId": "<ctx-id>",
+    "status": {
+      "state": "TASK_STATE_COMPLETED",
+      "message": {
+        "role": "ROLE_AGENT",
+        "parts": [],
+        "messageId": "<msg-id>",
+        "contextId": "<ctx-id>"
+      },
+      "timestamp": "2026-06-02T14:58:31.3516247+00:00"
+    },
+    "artifacts": [
+      {
+        "artifactId": "<artifact-id>",
+        "name": "Answer",
+        "parts": [
+          {
+            "text": "Good afternoon! \uD83D\uDE0A  \n\nHope your day is going well so far. What can I help you with today?"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+## Related content
+
+- [Work IQ A2A quickstart (preview)](quickstart.md)
+- [Work IQ API overview (preview)](../api-overview.md)
+- [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)
+- [A2A protocol specification](https://a2a-protocol.org/latest/)
