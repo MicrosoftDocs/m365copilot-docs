@@ -4,7 +4,7 @@ description: Learn how to build your first Microsoft 365 Copilot connector for p
 author: wictorwilen
 ms.author: wictorwilen
 ms.localizationpriority: medium
-ms.date: 04/17/2026
+ms.date: 06/02/2026
 ms.topic: how-to
 ---
 
