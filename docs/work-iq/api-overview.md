@@ -14,7 +14,7 @@ ms.date: 04/30/2026
 
 The Work IQ API enables developers to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
 
-Work IQ provides multiple protocols to interact with agents - Agent-to-Agent (A2A), Model Context Protocol (MCP), and REST — so you can choose the protocol that best fits your application or agent architecture. In this public preview, A2A and local MCP are available today; REST and remote MCP are coming soon.
+Work IQ provides multiple protocols to interact with agents - Agent-to-Agent (A2A), Model Context Protocol (MCP), and REST — so you can choose the protocol that best fits your application or agent architecture.
 
 By accessing or using the Microsoft Work IQ APIs, you're agreeing to the [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context).
 
@@ -77,13 +77,7 @@ Use the guide below to select the right protocol.
 
 ### Agent-to-Agent (A2A) protocol
 
-Use A2A for agent collaboration and delegation, where agents operate autonomously and exchange structured tasks instead of simple API calls. Work IQ supports both **A2A v1.0** and v0.3, dispatched via the `A2A-Version` request header.
-
-#### Work IQ Gateway
-
-- Endpoint: `https://workiq.svc.cloud.microsoft/a2a/`
-- Token audience: `api://workiq.svc.cloud.microsoft`
-- Scope: `WorkIQAgent.Ask`
+Use A2A for agent collaboration and delegation, where agents operate autonomously and exchange structured tasks instead of simple API calls. Work IQ supports both A2A v1.0 and v0.3, dispatched via the `A2A-Version` request header.
 
 #### Example request — sync (`SendMessage`)
 
@@ -183,12 +177,7 @@ Pass the `contextId` from the previous response in the next message:
 
 ### Remote Model Context Protocol (MCP)
 
-Use MCP to expose Microsoft 365 work context as tools for AI assistants running in developer environments.
-
-> [!IMPORTANT]
->
-> - **Current state:** Today, Microsoft 365 work context is available through [individual MCP servers for specific workloads](/microsoft-agent-365/tooling-servers-overview).
-> - **Coming soon:** A single, unified remote Work IQ MCP server will consolidate these into one server with a curated set of tools and skills -- simplifying configuration and providing a consistent developer experience.
+Use [remote MCP](mcp/overview.md) to expose Microsoft 365 work context as tools for AI assistants running in developer environments.
 
 ### Local MCP
 
