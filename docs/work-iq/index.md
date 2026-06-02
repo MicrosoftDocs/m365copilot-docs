@@ -50,7 +50,7 @@ The context layer expands beyond baseline grounding with continuously evolving i
 
 With [semantic indexing](/microsoftsearch/semantic-index-for-copilot), Work IQ maps your organization’s data into an advanced lexical and semantic index to power search relevance and accuracy, while ensuring organizational boundaries and permission structures within your tenant are respected. The semantic index is a superset of content within [Microsoft Graph](#microsoft-365-tenant-data) and ingested content from [Copilot connectors](#external-business-data-from-copilot-connectors).
 
-### Busineses understanding with Dataverse intelligence
+### Business understanding with Dataverse intelligence
 
 Where Work IQ grounds agents in work productivity artifacts like files, meetings, and messages, [Dataverse intelligence](/power-apps/maker/data-platform/data-platform-intelligence) extends this foundation to structured business data, enabling agents to understand and act on your organization's systems of record.
 
