@@ -94,11 +94,6 @@
       "source_path_from_root": "/docs/api/work-iq/resources/searchsensitivitylabelinfo.md",
       "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/searchsensitivitylabelinfo",
       "redirect_document_id": true
-    },
-    {
-      "source_path_from_root": "/docs/work-iq.md",
-      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq",
-      "redirect_document_id": true
     }
   ]
 }
