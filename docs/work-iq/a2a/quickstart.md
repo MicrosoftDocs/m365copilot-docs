@@ -15,7 +15,7 @@ ms.date: 06/02/2026
 > [!IMPORTANT]
 > Work IQ is in **public preview**. Features and APIs might change before general availability and do not have a set SLA.
 
-Work IQ is a workplace intelligence layer that delivers a semantic understanding of everything happening across your business. It enables developers to build agents, applications, and workflows that securely reason over Microsoft 365 and connected business systems, with grounded, permission-aware context applied automatically. This eliminates the need to build custom retrieval pipelines, orchestration logic, or compliance enforcement for workplace intelligence.
+Work IQ is a workplace intelligence layer that delivers a semantic understanding of everything happening across your business. It enables developers to build agents, applications, and workflows that securely reason over Microsoft 365 and connected business systems, with grounded, permission-aware context applied automatically. This approach eliminates the need to build custom retrieval pipelines, orchestration logic, or compliance enforcement for workplace intelligence.
 
 This quickstart covers the Agent-to-Agent (A2A) protocol. A2A is an [open standard](https://a2a-protocol.org) for agent communication and supports synchronous mode against the Work IQ Gateway. Streaming mode (Server-Sent Events (SSE)) support is coming soon.
 
@@ -305,7 +305,7 @@ To invoke a specific agent, pass its **agent ID** via `--agent-id`. There are tw
 
 #### Recommended: WorkIQ CLI `list-agents` (experimental)
 
-The [WorkIQ CLI](../cli.md) ships an experimental `list-agents` command that prints the agents available to your signed-in user.
+The [WorkIQ CLI](../cli.md) includes an experimental `list-agents` command that lists the agents available to your signed-in user.
 
 ```bash
 workiq config set experimental=true
