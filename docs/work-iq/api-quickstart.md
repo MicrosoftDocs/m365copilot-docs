@@ -5,7 +5,7 @@ author: MSFTgraph-sorceress
 ms.author: hstoffels
 ms.topic: quickstart
 ms.localizationpriority: medium
-ms.date: 04/30/2026
+ms.date: 06/01/2026
 ---
 
 # Work IQ API quickstart (preview)
@@ -15,7 +15,7 @@ ms.date: 04/30/2026
 > [!IMPORTANT]
 > Work IQ is in **public preview**. Features and APIs might change before general availability and do not have a set SLA.
 
-Work IQ is Microsoft's AI-native interface to Microsoft 365 work intelligence. It lets you build applications that can query emails, meetings, files, and organizational knowledge using natural language; grounded in your Microsoft 365 data.
+Work IQ is a workplace intelligence layer that delivers a semantic understanding of everything happening across your business. It enables developers to build agents, applications, and workflows that securely reason over Microsoft 365 and connected business systems, with grounded, permission-aware context applied automatically. This eliminates the need to build custom retrieval pipelines, orchestration logic, or compliance enforcement for workplace intelligence.
 
 This quickstart covers the Agent-to-Agent (A2A) protocol. A2A is an [open standard](https://a2a-protocol.org) for agent communication and supports synchronous mode against the Work IQ Gateway. Streaming mode (Server-Sent Events (SSE)) support is coming soon.
 

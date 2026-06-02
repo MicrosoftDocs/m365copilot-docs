@@ -1,11 +1,11 @@
 ---
 title: Microsoft Work IQ API (preview)
-description: Learn about the Work IQ API for building AI applications that securely reason over Microsoft 365 data using REST, A2A, and MCP protocols.
+description: Learn about the Work IQ API for building AI applications that securely reason over workplace intelligence data using REST, A2A, and MCP protocols.
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 04/30/2026
+ms.date: 06/01/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -14,13 +14,13 @@ ms.date: 04/30/2026
 
 The Work IQ API enables developers to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
 
-Work IQ provides multiple protocols to interact with agents - Agent-to-Agent (A2A), Model Context Protocol (MCP), and REST — so you can choose the protocol that best fits your application or agent architecture.
+Work IQ provides multiple protocols to interact with agents - Agent-to-Agent (A2A), Model Context Protocol (MCP), and REST - so you can choose the protocol that best fits your application or agent architecture.
 
 By accessing or using the Microsoft Work IQ APIs, you're agreeing to the [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context).
 
 ## What is Work IQ?
 
-Work IQ is the intelligence layer behind Microsoft 365 Copilot and agents. Unlike systems that simply retrieve content, it understands how work actually happens. It combines data from Microsoft 365 (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships. It applies the inference needed to reason across all of it and surface next-best actions. Work IQ orchestrates every layer of intelligence - from assembling context to grounding responses, selecting skills, and invoking tools - while honoring enterprise permissions and governance.
+Work IQ is a workplace intelligence layer that delivers a semantic understanding of everything happening across your business. Unlike systems that simply retrieve content, it understands how work actually happens. It combines data from Microsoft 365 (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships. It applies the inference needed to reason across all of it and surface next-best actions. Work IQ orchestrates every layer of intelligence - from assembling context to grounding responses, selecting skills, and invoking tools - while honoring enterprise permissions and governance.
 
 All Work IQ requests:
 
@@ -69,7 +69,7 @@ Use the guide below to select the right protocol.
 
 |              | A2A                                                                    | REST API (coming soon)                                                | MCP                                                                                    |
 |--------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| **Use when** | Another agent needs to delegate a task to Work IQ and get results back | You're building an app or service that calls Work IQ programmatically | An AI assistant (Copilot, Claude, etc.) needs to invoke Work IQ as a tool for the user |
+| **Use when** | Another agent needs to delegate a task to Work IQ and get results back | You're building an app or service that calls Work IQ programmatically | An AI assistant needs to invoke Work IQ as a tool for the user |
 | **Caller**   | Another agent                                                          | Your app or backend                                                   | An LLM-based client                                                                    |
 | **Example**  | "Our ops agent asks Work IQ to investigate a regression."              | "My web app sends a question to Work IQ and renders the reply."       | "A user asks Copilot a question and it calls Work IQ to answer."                       |
 
@@ -183,6 +183,8 @@ Use [remote MCP](mcp/overview.md) to expose Microsoft 365 work context as tool
 
 Install the [Microsoft Work IQ CLI (preview)](cli.md) and configure it as a local MCP server.
 
+[▶ See it in action in the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
+
 #### Example MCP server configuration
 
 ```json
@@ -241,18 +243,13 @@ Work IQ uses Microsoft Entra ID delegated authentication.
 - Application-only authentication is not supported
 - Microsoft 365 permissions, sensitivity labels, and compliance policies are enforced automatically
 
-## How Work IQ compares to Copilot Chat API
+## Path forward for new development
 
-Work IQ is the production-ready evolution of the Copilot Chat API. When Work IQ reaches general availability (May 2026), it becomes the recommended, fully supported way to integrate with the Copilot agent in production scenarios. It's backed by enterprise SLAs, stable contracts, and long-term support commitments.
-
-**What this means for you:**
-
-- New projects should build on Work IQ from day one.
-- Existing integrations using the Copilot Chat API will continue to work. The Copilot Chat API will remain in public preview for experimentation and early-stage development, but it is not covered by production SLAs.
-- Migrating is straightforward — Work IQ preserves the concepts you already know and adds the reliability, governance, and support guarantees required for production workloads.
-
-We recommend planning your move to Work IQ ahead of your product's release to take full advantage of production support at launch.
+Work IQ is the recommended foundation for new agentic and AI-powered applications on Microsoft 365 data. Build new development on Work IQ APIs to take advantage of unified protocols, integrated governance, and continued investment.
 
 ## Related content
 
-- [Work IQ API quickstarts (preview)](api-quickstart.md)
+- [Work IQ API quickstart (preview)](api-quickstart.md)
+- [Work IQ REST API overview (preview)](rest/overview.md)
+- [Microsoft Work IQ CLI (preview)](cli.md)
+- [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)
