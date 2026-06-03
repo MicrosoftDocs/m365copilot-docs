@@ -1,0 +1,99 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/work-iq-api-overview.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/api-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/work-iq-api-quickstart.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/work-iq-cli.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/cli",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/copilotconversation-chat.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/copilotconversation-chat",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/copilotconversation-chatoverstream.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/copilotconversation-chatoverstream",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/copilotroot-post-conversations.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/copilotroot-post-conversations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/overview.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/permissions.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/permissions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotcontextmessage.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotcontextmessage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotcontextualresources.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotcontextualresources",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotconversation.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotconversation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotconversationlocation.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotconversationlocation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotconversationreference.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotconversationreference",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotconversationreferencemap.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotconversationreferencemap",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotconversationrequestmessageparameter.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotconversationrequestmessageparameter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotconversationresponsemessage.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotconversationresponsemessage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotfile.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotfile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/copilotwebcontext.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/copilotwebcontext",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/docs/api/work-iq/resources/searchsensitivitylabelinfo.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/work-iq/rest/resources/searchsensitivitylabelinfo",
+      "redirect_document_id": true
+    }
+  ]
+}

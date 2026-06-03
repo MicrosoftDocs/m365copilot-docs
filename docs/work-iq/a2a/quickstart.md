@@ -1,21 +1,21 @@
 ---
-title: Work IQ API quickstart (preview)
+title: Work IQ A2A quickstart (preview)
 description: Learn how to quickly test the Work IQ API using Agent-to-Agent (A2A) protocol
 author: MSFTgraph-sorceress
 ms.author: hstoffels
 ms.topic: quickstart
 ms.localizationpriority: medium
-ms.date: 04/30/2026
+ms.date: 06/02/2026
 ---
 
-# Work IQ API quickstart (preview)
+# Work IQ A2A quickstart (preview)
 
 <!-- cSpell:ignore AADSTS MSAL -->
 
 > [!IMPORTANT]
 > Work IQ is in **public preview**. Features and APIs might change before general availability and do not have a set SLA.
 
-Work IQ is Microsoft's AI-native interface to Microsoft 365 work intelligence. It lets you build applications that can query emails, meetings, files, and organizational knowledge using natural language; grounded in your Microsoft 365 data.
+Work IQ is a workplace intelligence layer that delivers a semantic understanding of everything happening across your business. It enables developers to build agents, applications, and workflows that securely reason over Microsoft 365 and connected business systems, with grounded, permission-aware context applied automatically. This approach eliminates the need to build custom retrieval pipelines, orchestration logic, or compliance enforcement for workplace intelligence.
 
 This quickstart covers the Agent-to-Agent (A2A) protocol. A2A is an [open standard](https://a2a-protocol.org) for agent communication and supports synchronous mode against the Work IQ Gateway. Streaming mode (Server-Sent Events (SSE)) support is coming soon.
 
@@ -305,7 +305,7 @@ To invoke a specific agent, pass its **agent ID** via `--agent-id`. There are tw
 
 #### Recommended: WorkIQ CLI `list-agents` (experimental)
 
-The [WorkIQ CLI](work-iq-cli.md) ships an experimental `list-agents` command that prints the agents available to your signed-in user.
+The [WorkIQ CLI](../cli.md) includes an experimental `list-agents` command that lists the agents available to your signed-in user.
 
 ```bash
 workiq config set experimental=true
@@ -379,7 +379,7 @@ dotnet run -- --token WAM --agent-id <AGENT_ID> --appid <APP_ID> --tenant <TENAN
 ## Related content
 
 - [Sample code on GitHub](https://github.com/microsoft/work-iq-samples)
-- [Work IQ API overview](work-iq-api-overview.md)
+- [Work IQ API overview](../api-overview.md)
 - [A2A protocol specification](https://a2a-protocol.org/latest/specification/)
 - [A2A .NET SDK](https://github.com/a2aproject/a2a-dotnet)
 - [A2A v0.3 → v1.0 migration guide](https://github.com/a2aproject/a2a-dotnet/blob/main/docs/migration-guide-v1.md)

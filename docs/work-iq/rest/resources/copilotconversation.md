@@ -1,5 +1,5 @@
 ---
-title: copilotConversation resource type
+title: Work IQ - copilotConversation resource type
 description: Represents a Copilot conversation being created or continued through the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,9 +11,9 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotConversation resource type
+# Work IQ - copilotConversation resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Represents a Copilot conversation being created or continued through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 

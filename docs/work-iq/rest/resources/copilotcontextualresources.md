@@ -1,5 +1,5 @@
 ---
-title: copilotContextualResources resource type
+title: Work IQ - copilotContextualResources resource type
 description: Optional contextual resources being sent into a Copilot conversation through the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,9 +11,9 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotContextualResources resource type
+# Work IQ - copilotContextualResources resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Optional contextual resources being sent into a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 

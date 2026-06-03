@@ -15,7 +15,7 @@ items:
   - name: Copilot orchestrator
     href: orchestrator.md
   - name: Work IQ
-    href: work-iq.md
+    href: work-iq/index.md
   - name: Data, Privacy, and Security
     href: data-privacy-security.md
 
@@ -400,17 +400,7 @@ items:
       href: /graph/connecting-external-content-external-groups?context=/microsoft-365/copilot/extensibility/context
 
 - name: Enhance AI solutions with Work IQ APIs
-  items:
-  - name: Overview
-    href: work-iq-api-overview.md
-  - name: Quickstart
-    href: work-iq-api-quickstart.md
-  - name: Work IQ CLI
-    href: work-iq-cli.md
-  - name: REST API
-    href: api/work-iq/toc.yml
-  - name: Terms of use (preview)
-    href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
+  href: work-iq/toc.yml
 
 - name: Enhance AI solutions with Microsoft 365 Copilot APIs
   items:

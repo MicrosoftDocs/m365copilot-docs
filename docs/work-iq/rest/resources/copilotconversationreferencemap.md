@@ -1,5 +1,5 @@
 ---
-title: copilotConversationReferenceMap resource type
+title: Work IQ - copilotConversationReferenceMap resource type
 description: A keyed map of conversation references
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,9 +11,9 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotConversationReferenceMap resource type
+# Work IQ - copilotConversationReferenceMap resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 A keyed map of [copilotConversationReference](copilotconversationreference.md) objects.
 
