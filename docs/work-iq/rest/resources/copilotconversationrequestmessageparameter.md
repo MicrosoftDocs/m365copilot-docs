@@ -1,5 +1,5 @@
 ---
-title: copilotConversationRequestMessageParameter resource type
+title: Work IQ - copilotConversationRequestMessageParameter resource type
 description: Represents a chat message being sent into a Copilot conversation through the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,9 +11,9 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotConversationRequestMessageParameter resource type
+# Work IQ - copilotConversationRequestMessageParameter resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Represents a chat message being sent into a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 

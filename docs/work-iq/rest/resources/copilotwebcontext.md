@@ -1,5 +1,5 @@
 ---
-title: copilotWebContext resource type
+title: Work IQ - copilotWebContext resource type
 description: Determines how web search grounding is used in a Copilot conversation through the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -11,9 +11,9 @@ doc_type: resourcePageType
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# copilotWebContext resource type
+# Work IQ - copilotWebContext resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
 
 Determines how web search grounding is used in a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 
