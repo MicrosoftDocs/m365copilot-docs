@@ -161,14 +161,14 @@ items:
         href: overview-plugins.md
       - name: Add actions with MCP plugins
         items:
-        - name: Dynamic tool discovery overview
-          href: plugin-dynamic-tool-discovery.md
         - name: Build an MCP plugin
           href: build-mcp-plugins.md
         - name: Authentication
           href: plugin-authentication.md
         - name: Add UI with MCP apps
           href: plugin-mcp-apps.md
+        - name: Dynamic tool discovery
+          href: plugin-dynamic-tool-discovery.md
         - name: UX guidelines for MCP apps
           href: plugin-mcp-apps-ui-guidelines.md
         - name: Add citations

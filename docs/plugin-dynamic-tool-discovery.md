@@ -38,7 +38,7 @@ The following table summarizes the differences.
 
 ## Availability and rollout
 
-Dynamic tool discovery is rolling out first to **Microsoft-published agents** in Microsoft 365 Copilot. Support for **agents published by other providers** and for **tenant-built and deployed agents** will follow.
+Dynamic tool discovery is rolling out first to **Microsoft-published agents** in Microsoft 365 Copilot. Support for agents published by other providers and for tenant-built and deployed agents will follow.
 
 ## Transparency, governance, and audit for admins
 
