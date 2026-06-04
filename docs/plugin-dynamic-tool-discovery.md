@@ -4,7 +4,7 @@ description: Learn how dynamic tool discovery enables declarative agents in Micr
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 05/27/2026
+ms.date: 06/04/2026
 ms.topic: overview
 ---
 
