@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/15/2026
+ms.date: 05/28/2026
 ms.topic: overview
 ---
 
@@ -23,12 +23,16 @@ For the latest information, announcements, and news about preview and generally 
 
 Add folders and up to 50 OneDrive files as knowledge when you use Agent Builder in Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
 
+### Set default response mode in Agent Builder
+
+When you build an agent in Agent Builder in Microsoft 365 Copilot, you can now set the default response mode for your agent. For more information, see [Set the default response mode](agent-builder-build-agents.md#set-the-default-response-mode).
+
 ### Declarative agent manifest version 1.7
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.7](declarative-agent-manifest-1.7.md) adds the following features:
 
 - Added the optional `editorial_answers` property so agents can match semantically similar user queries to predefined question and answer pairs.
-- Added the optional `default_response_mode` property to the [Behavior overrides object](declarative-agent-manifest-1.7.md#behavior-overrides-object) so you can set the agent's default mode to `Auto`, `Reasoning`, or `Quick response`.
+- Added the optional `default_response_mode` property to the [Behavior overrides object](declarative-agent-manifest-1.7.md#behavior-overrides-object) so you can set the agent's default mode to `Auto`, `Think deeper`, or `Quick response`.
 - Added the optional `depends_on` property to the [Conversation starters object](declarative-agent-manifest-1.7.md#conversation-starters-object) to specify capability dependencies for conversation starters.
 
 ### New agent templates added to Agent Builder

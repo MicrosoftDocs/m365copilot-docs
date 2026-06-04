@@ -122,7 +122,9 @@ Use the following links to add Work IQ as an MCP server in VS Code:
 
 ### Manual MCP configuration
 
-Add the following configuration to your MCP settings file:
+Add the following configuration to your MCP settings file.
+
+[▶ Set up with the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&setup=true)
 
 ```json
 {
@@ -261,5 +263,5 @@ Work IQ is a proprietary tool, but the development team welcomes community feedb
 
 - [Microsoft Work IQ GitHub repo](https://github.com/microsoft/work-iq-mcp)
 - [Model Context Protocol documentation](https://modelcontextprotocol.io/)
-- [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)
+- [Build plugins from an MCP server for Microsoft 365 Copilot](../build-mcp-plugins.md)
 - [User and admin consent overview](/entra/identity/enterprise-apps/user-admin-consent-overview#admin-consent)
