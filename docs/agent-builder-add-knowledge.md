@@ -79,7 +79,7 @@ When you reference a SharePoint list, the following limits apply:
 - A SharePoint list can have a maximum of 20,000 items (rows).
 - Document libraries aren't supported as lists.
 - Referencing lookup columns in SharePoint lists isn't supported.
-- The **Attachments** column doesn't support indexing or reasoning over attachments. No error occurs and the list is still indexed, but the agent doesn't return responses based on the attachment contents.
+- Attachment columns don't support indexing or reasoning over attachments. No error occurs and the list is still indexed, but the agent doesn't return responses based on the attachment contents.
 - Selecting a SharePoint site doesn't ground the agent on lists in that site. To use a list as knowledge, select the specific list.
 
 > [!NOTE]
