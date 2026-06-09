@@ -76,10 +76,9 @@ Reference specific files, folders, lists, and sites as agent knowledge sources. 
 
 When you reference a SharePoint list, the following limits apply:
 
-- A list can have a maximum of 20,000 items (rows).
-- Document libraries aren't supported as lists.
-- Lookup columns aren't supported.
-- Attachment columns aren't indexed. No error occurs and the list is still added as knowledge, but the agent doesn't return responses based on attachment contents.
+- A list can have a maximum of 20,000 items (rows) and 50 MB of raw text. If your list exceeds either limit, the agent truncates it and notes the truncation in its response.
+- Lookup columns aren't indexed. No error occurs and the list is still added as knowledge, but the agent doesn't return responses based on the contents of lookup columns.
+- Attachment columns aren't supported.
 - Selecting a SharePoint site doesn't include its lists. To use a list as knowledge, select the specific list.
 
 > [!NOTE]
@@ -92,7 +91,7 @@ When you reference a SharePoint list, the following limits apply:
 
 Enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
-You can also add a SharePoint list by URL. Copy a direct link to the specific list (not a filtered or grouped view) and paste it as the URL. Entering a SharePoint site URL doesn't include the lists in that site, so enter the list's own URL.
+You can also add a SharePoint list by URL. On the list, select **Share** or **Copy link** to get the link, then paste it as the URL. Use a direct link to the specific list, not a filtered or grouped view. A SharePoint site URL doesn't include the lists in that site, so enter the list's own URL.
 
 For OneDrive, enter a shareable link to a file or folder (for example, a URL copied from the browser or share options), not a local or relative path (for example, `C:\Users\YourName\Documents\File.xlsx`).
 
