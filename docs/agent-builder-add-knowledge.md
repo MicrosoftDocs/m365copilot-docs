@@ -90,7 +90,7 @@ When you reference a SharePoint list, the following limits apply:
 
 Enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
-You can also enter a URL for a SharePoint list. Copy the link to the list and paste it as the URL.
+You can also add a SharePoint list by URL. Copy a direct link to the specific list (not a filtered or grouped view) and paste it as the URL. Entering a SharePoint site URL doesn't include the lists in that site, so enter the list's own URL.
 
 For OneDrive, enter a shareable link to a file or folder (for example, a URL copied from the browser or share options), not a local or relative path (for example, `C:\Users\YourName\Documents\File.xlsx`).
 
