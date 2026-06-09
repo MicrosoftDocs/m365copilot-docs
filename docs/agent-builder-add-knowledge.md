@@ -7,7 +7,7 @@ ms.topic: concept-article
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 05/21/2026
+ms.date: 06/09/2026
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -17,7 +17,7 @@ The Agent Builder feature in Microsoft 365 Copilot provides a simple interface f
 You can add:
 
 - Up to four public website URLs.
-- SharePoint files, folders, or sites.
+- SharePoint files, folders, lists, or sites.
 - Up to 50 OneDrive files.
 - Up to five Teams chat URLs.
 - Embedded files uploaded from your device (on the **Configure** tab).
@@ -46,7 +46,7 @@ If you're configuring your agent manually, to add knowledge sources to your agen
 1. In the **Knowledge** section, use one of the following methods to add knowledge sources:
    - **Search** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
    - **Enter URL** - Add a public website, a SharePoint link (must be two levels deep and without query parameters), or a OneDrive shared link.
-   - **Browse** - Use the **Attach cloud files** picker to browse for and select SharePoint or OneDrive files or folders.
+   - **Browse** - Use the **Attach cloud files** picker to browse for and select SharePoint or OneDrive files, folders, or lists.
    - **Upload** - Upload files directly from your device.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-knowledge-configure.png" alt-text="A screenshot of the Knowledge section of the Configure tab.":::
@@ -66,12 +66,19 @@ To configure your agent to use any web data as knowledge:
 
 ## SharePoint and OneDrive content
 
-Reference specific sites, files, and folders as agent knowledge sources. When you reference sources from SharePoint or OneDrive, consider the following limits:
+Reference specific files, folders, lists, and sites as agent knowledge sources. When you reference sources from SharePoint or OneDrive, consider the following limits:
 
 - Select up to 100 SharePoint files for each agent.
+- Select up to one SharePoint list for each agent.
 - Select up to 50 OneDrive files for each agent.
 - The agent respects existing permissions and [sensitivity labels](/purview/sensitivity-labels) for files already uploaded to SharePoint or OneDrive.
 - Although there isn't a direct file size limit on the knowledge files you select, the agent can only reason over specific [file types](#file-types-and-size-limits).
+
+When you reference a SharePoint list, the following limits apply:
+
+- A SharePoint list can have a maximum of 20,000 items (rows).
+- Referencing attachment columns or lookup columns in SharePoint lists isn't supported.
+- Selecting a SharePoint site doesn't ground the agent on lists in that site. To use a list as knowledge, select the specific list.
 
 > [!NOTE]
 >
@@ -79,17 +86,21 @@ Reference specific sites, files, and folders as agent knowledge sources. When yo
 > - Agents respond best to queries based on data in Excel when the data is in one sheet within a workbook.
 > - To optimize for Copilot, keep the contents of files that you select concise. For more information, see [Length of documents that you provide to Copilot](https://support.microsoft.com/topic/keep-it-short-and-sweet-a-guide-on-the-length-of-documents-that-you-provide-to-copilot-66de2ffd-deb2-4f0c-8984-098316104389).
 
-### Enter a URL for files, folders, or sites
+### Enter a URL for files, folders, lists, or sites
 
 Enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
+
+You can also enter a URL for a SharePoint list. Copy the link to the list and paste it as the URL.
 
 For OneDrive, enter a shareable link to a file or folder (for example, a URL copied from the browser or share options), not a local or relative path (for example, `C:\Users\YourName\Documents\File.xlsx`).
 
 After you provide the URL, press **Enter** to add it as a knowledge source.
 
-### Browse to select files, folders, or sites
+### Browse to select files, folders, lists, or sites
 
 Select the **Attach cloud files** cloud icon in the **Knowledge** section to open the file picker. The picker displays your recently accessed SharePoint and OneDrive sites. To view more SharePoint sites, select **More places** at the bottom of the left pane. If you recently created a site, it appears after several minutes.
+
+To browse for a SharePoint list, select **Recent lists** in the left pane of the picker, and then select the list that you want to add.
 
 > [!NOTE]
 > The SharePoint picker might not show all the [communication sites](/microsoft-365/community/team-site-or-communication-site) that you have access to. Communication sites only show up in the **Quick Access** and **Recent** sections of the SharePoint picker.
