@@ -4,7 +4,7 @@ description: Continue streamed conversations with the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 05/15/2026
+ms.date: 06/10/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -33,7 +33,7 @@ This documentation covers continuing streamed Copilot conversations using the Ch
 ## HTTP request
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/{conversationId}/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/{conversationId}/chatOverStream
 ```
 
 ## Request headers
@@ -71,7 +71,7 @@ The following example shows how to send a prompt to the Chat API using the strea
 The following example shows the request.
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
@@ -271,7 +271,7 @@ The following example shows how to use a OneDrive or SharePoint file as context 
 The following example shows the request.
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
@@ -458,7 +458,7 @@ The following example shows how to toggle off web search grounding when sending 
 The following example shows the request.
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
@@ -623,7 +623,7 @@ The following example shows how to send more context with a chat message to the 
 The following example shows the request.
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
