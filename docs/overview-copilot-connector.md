@@ -5,17 +5,17 @@ author: lauragra
 ms.author: lauragra
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/12/2026
+ms.date: 06/05/2026
 ---
 
 # Microsoft 365 Copilot connectors overview
 
-Microsoft 365 Copilot connectors bring external, line-of-business data into Microsoft 365 Copilot so your users can search, reason over, and act on more of your enterprise content. The platform supports two connector models:
+Microsoft 365 Copilot connectors bring external, line-of-business data into Microsoft 365 Copilot so your users can search and reason over more of your enterprise content. The platform supports two connector models:
 
 - **Synced connectors** ingest and index external content into Microsoft Graph.
 - **Federated connectors** retrieve content in real time by using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
 
-Both connector types power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Context IQ, and Microsoft 365 Copilot.
+Synced and federated connectors power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Copilot in Excel, and the Researcher agent.
 
 > [!NOTE]
 > Copilot connectors are available in commercial environments and in Microsoft 365 Government Community Cloud (GCC) and Government Community Cloud High (GCCH). They aren't available in Department of Defense (DoD) environments.
@@ -28,13 +28,13 @@ Microsoft 365 Copilot supports two connector models tailored to different integr
 |-----------|----------------------------------------------|----------------------------------|
 | Data movement | Content synced into Microsoft Graph | No data movement; query-time fetch |
 | Semantic indexing | Supported | Not applicable |
-| Schema | Defined using **externalItem** schema | Defined by MCP server resources |
+| Schema | Defined using **externalItem** schema | Defined by MCP server tools |
 | Use cases | Knowledge repositories, document stores, LOB systems | Dynamic data or regulated content that must remain in source |
 | Authentication | Microsoft Entra ID app registration | MCP-supported methods (OAuth 2.0 or service-specific) |
 | Content retrieval | Indexed search and synthesis | Real-time API calls |
 | Availability | Global, GCC, GCCH | Varies by federated connector availability |
 
-For more information about federated connectors, see [Federated connectors overview](/microsoftsearch/federated-connectors-overview).
+For more information about federated connectors, see [Federated connectors overview](/microsoft-365/copilot/connectors/federated-connectors-overview).
 
 ## How connector content surfaces in Microsoft 365 Copilot
 
@@ -80,7 +80,7 @@ The following scenarios don't benefit from semantic indexing:
 
 ## Copilot connectors gallery
 
-The [Copilot connectors gallery](/microsoftsearch/connectors-gallery) includes descriptions of Microsoft and partner connectors with links to partner sites. With more than 100 connectors available, you can connect to Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more.
+The [Copilot connectors gallery](/microsoft-365/copilot/connectors/connectors-gallery) includes descriptions of Microsoft and partner connectors with links to partner sites. With more than 100 connectors available, you can connect to Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more.
 
 ## Create your own synced Copilot connector
 
@@ -126,4 +126,3 @@ You can find the latest list of samples from the community in the [Microsoft Ado
 
 - [Build your first Copilot connector](build-your-first-connector.md)
 - [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)
-- [Prebuilt Copilot connectors](/microsoftsearch/pre-built-connectors-overview)
