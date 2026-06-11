@@ -474,6 +474,8 @@ A successful response contains a JSON string in the `text` property of a [TextCo
 
 ##### Request
 
+[▶ Try it in the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq&setup=true)
+
 ```json
 {
   "method": "tools/call",
