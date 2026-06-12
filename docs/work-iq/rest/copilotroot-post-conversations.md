@@ -4,7 +4,7 @@ description: Use the Work IQ Chat API to integrate Microsoft 365 Copilot into yo
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 05/15/2026
+ms.date: 06/10/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -33,7 +33,7 @@ This documentation covers creating Copilot conversations using the Chat API. Lea
 ## HTTP request
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations
 ```
 
 ## Request headers
@@ -60,7 +60,7 @@ The following example shows how to create a Copilot conversation through the Wor
 The following example shows the request.
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations
 Content-Type: application/json
 
 {}
