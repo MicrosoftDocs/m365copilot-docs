@@ -77,7 +77,6 @@ Reference specific files, folders, lists, and sites as agent knowledge sources. 
 When you reference a SharePoint list, the following limits apply:
 
 - A list can have a maximum of 20,000 items (rows) and 50 MB of raw text. If your list exceeds either limit, the agent truncates it and notes the truncation in its response.
-- Lookup columns aren't indexed. No error occurs and the list is still added as knowledge, but the agent doesn't return responses based on the contents of lookup columns.
 - Attachment columns aren't supported.
 - Selecting a SharePoint site doesn't include its lists. To use a list as knowledge, select the specific list.
 
