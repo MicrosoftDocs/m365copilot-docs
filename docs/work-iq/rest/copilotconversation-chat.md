@@ -4,7 +4,7 @@ description: Continue synchronous conversations with the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 05/15/2026
+ms.date: 06/10/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -33,7 +33,7 @@ This documentation covers continuing synchronous Copilot conversations using the
 ## HTTP request
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/{conversationId}/chat
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/{conversationId}/chat
 ```
 
 ## Request headers
@@ -71,7 +71,7 @@ The following example shows how to send a prompt to the Chat API using the synch
 The following example shows the request.
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
 Content-Type: application/json
 
 {
@@ -177,7 +177,7 @@ The following example shows how to use a OneDrive or SharePoint file as context 
 The following example shows the request.
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
 Content-Type: application/json
 
 {
@@ -280,7 +280,7 @@ The following example shows how to toggle off web search grounding when sending 
 The following example shows the request.
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
 Content-Type: application/json
 
 {
@@ -360,7 +360,7 @@ The following example shows how to send more context with a chat message to the 
 The following example shows the request.
 
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/0d110e7e-2b7e-4270-a899-fd2af6fde333/chat
 Content-Type: application/json
 
 {
