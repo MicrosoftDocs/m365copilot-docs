@@ -29,6 +29,7 @@ Agent Builder in Microsoft 365 Copilot is available if your [Power Platform defa
 - Japan
 - Korea
 - Norway
+- Singapore
 - South Africa
 - Sweden
 - Switzerland
