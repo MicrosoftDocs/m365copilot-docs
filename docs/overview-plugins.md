@@ -4,7 +4,7 @@ description: Learn about plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/11/2026
+ms.date: 06/19/2026
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -12,9 +12,6 @@ ms.custom: [copilot-learning-hub]
 # Plugins for Microsoft 365 Copilot
 
 Plugins enable declarative agents in Microsoft 365 Copilot to interact with Model Context Protocol (MCP) servers or REST APIs that have an [OpenAPI description](https://www.openapis.org/what-is-openapi). By using a plugin, users can ask a declarative agent to not only query an MCP server or REST API for information, but also to create, update, and delete data and objects. Anything the MCP server or REST API can do is accessible through natural language prompts.
-
-> [!NOTE]
-> In addition to calling MCP servers or REST APIs, there's a preview feature that enables a plugin to call APIs in a local library. We encourage you to experiment with this feature, but it shouldn't be used in a production plugin. For more information, see [Build API plugins for Microsoft 365 Copilot with the Office JavaScript Library](build-api-plugins-local-office-api.md).
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
