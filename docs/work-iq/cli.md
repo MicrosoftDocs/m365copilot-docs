@@ -1,5 +1,5 @@
 ---
-title: Microsoft Work IQ CLI (preview)
+title: Microsoft Work IQ CLI
 description: Learn how to use Microsoft Work IQ CLI and MCP server to query your Microsoft 365 Copilot data using natural language from AI assistants and IDEs.
 author: slevert
 ms.author: slevert
@@ -10,7 +10,7 @@ ms.date: 05/12/2026
 
 <!-- markdownlint-disable MD024 -->
 
-# Microsoft Work IQ CLI (preview)
+# Microsoft Work IQ CLI
 
 Microsoft Work IQ is a command-line interface (CLI) and Model Context Protocol (MCP) server that connects AI assistants to your Microsoft 365 Copilot data. Work IQ enables you to query your emails, meetings, documents, Teams messages, workplace insights, people-related information, and more by using natural language.
 
@@ -19,9 +19,6 @@ By using Work IQ, you can ask questions like:
 - "What did my manager say about the project deadline?"
 - "Find my recent documents about Q4 planning"
 - "Summarize today's messages in the Engineering channel and propose a plan of action"
-
-> [!IMPORTANT]
-> Work IQ is currently in public preview. Features and APIs might change.
 
 ## What is the Work IQ CLI?
 
@@ -41,9 +38,9 @@ For more information, see the [Microsoft Work IQ GitHub repo](https://github.com
 
 ## How Work IQ works
 
-Work IQ operates in two modes:
+Work IQ CLI operates in two modes:
 
-- **CLI mode**: Run queries directly from your terminal by using the `workiq ask` command.
+- **CLI mode**: Run queries directly from your terminal by using commands such as `workiq ask`.
 - **MCP server mode**: Integrate with AI assistants like GitHub Copilot in VS Code or in the CLI, allowing your coding assistant to access your Microsoft 365 data contextually.
 
 The MCP server mode is powerful because it allows your AI assistant to automatically pull in relevant workplace context when you're working on code. For example, if you're implementing a feature discussed in a recent meeting, your AI assistant can access that meeting context to provide more relevant suggestions and even start the implementation.
@@ -51,7 +48,8 @@ The MCP server mode is powerful because it allows your AI assistant to automatic
 ## Prerequisites
 
 - Node.js installed on your machine
-- A Microsoft 365 subscription with a Copilot license
+- A usage-based billing plan set up in Copilot Studio with an Azure subscription and resource group assigned. For more information about Work IQ billing, see [Understand usage-based billing and cost management for Copilot Credits](/microsoft-365/copilot/usage-based-billing-overview-copilot-credits).
+- The user assigned to the billing plan
 - Administrative consent for the Work IQ application in your Microsoft Entra tenant
 - [GitHub Copilot CLI](https://github.com/features/copilot/cli/) (Optional)
 
@@ -124,7 +122,7 @@ Use the following links to add Work IQ as an MCP server in VS Code:
 
 Add the following configuration to your MCP settings file.
 
-[▶ Set up with the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&setup=true)
+[▶ Set up with the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&setup=true)
 
 ```json
 {

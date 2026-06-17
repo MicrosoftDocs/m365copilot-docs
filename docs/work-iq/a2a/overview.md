@@ -1,5 +1,5 @@
 ---
-title: Work IQ Agent-to-Agent (A2A) overview (preview)
+title: Work IQ Agent-to-Agent (A2A) overview
 description: Learn how to use Work IQ through the Agent-to-Agent(A2A) protocol to enable AI agents to communicate and collaborate with Work IQ.
 author: jasonjoh
 ms.author: jasonjoh
@@ -10,7 +10,7 @@ ms.date: 06/02/2026
 
 <!-- markdownlint-disable MD024 -->
 
-# Work IQ Agent-to-Agent (A2A) overview (preview)
+# Work IQ Agent-to-Agent (A2A) overview
 
 The [Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/) enables AI agents to communicate and collaborate with Work IQ. Agents can operate autonomously and exchange structured tasks instead of simple API calls with Work IQ.
 
@@ -233,7 +233,7 @@ A2A-Version: 1.0
 
 ## Related content
 
-- [Work IQ A2A quickstart (preview)](quickstart.md)
-- [Work IQ API overview (preview)](../api-overview.md)
-- [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)
+- [Work IQ A2A quickstart](quickstart.md)
+- [Work IQ API overview](../api-overview.md)
+- [Microsoft Work IQ APIs Terms of Use](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)
 - [A2A protocol specification](https://a2a-protocol.org/latest/)

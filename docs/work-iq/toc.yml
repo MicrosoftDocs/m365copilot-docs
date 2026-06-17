@@ -1,6 +1,8 @@
 items:
 - name: Overview
   href: api-overview.md
+- name: Enable Work IQ
+  href: enable-work-iq.md
 - name: CLI
   href: cli.md
 - name: A2A
