@@ -106,9 +106,9 @@ Use Microsoft 365 Copilot connectors if you need Copilot to integrate external d
 - **Use prebuilt Copilot connectors**. Identify [prebuilt Copilot connectors](/microsoftsearch/pre-built-connectors-overview?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext) that you can configure in your tenant.
 - **Build a custom Copilot connector**. If none of the existing connectors meet your needs, build your own. For more information, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 
-### Work IQ API (preview)
+### Work IQ API
 
-If you want your application or agent to reason over Microsoft 365 work data - rather than just retrieve it - consider the [Microsoft Work IQ API](work-iq-api-overview.md) (preview). Work IQ is the intelligence layer behind Microsoft 365 Copilot. It combines Microsoft 365 data (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships, and applies the inference needed to reason across all of it and surface next-best actions.
+If you want your application or agent to reason over Microsoft 365 work data - rather than just retrieve it - consider the [Microsoft Work IQ API](work-iq-api-overview.md). Work IQ is the intelligence layer behind Microsoft 365 Copilot. It combines Microsoft 365 data (emails, meetings, documents, chats) with memory of patterns, preferences, and relationships, and applies the inference needed to reason across all of it and surface next-best actions.
 
 The Work IQ API enables developers to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls. All requests run in the context of the signed-in user, respect Microsoft 365 permissions and sensitivity labels, and remain within the Microsoft 365 trust boundary, so you can reason over work data without exporting or duplicating content.
 
@@ -161,5 +161,5 @@ The following table provides examples of extensibility solutions that use differ
 
 - [Agents overview](agents-overview.md)
 - [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md)
-- [Work IQ API overview (preview)](work-iq-api-overview.md)
+- [Work IQ API overview](work-iq-api-overview.md)
 - [Microsoft 365 Copilot APIs overview](copilot-apis-overview.md)

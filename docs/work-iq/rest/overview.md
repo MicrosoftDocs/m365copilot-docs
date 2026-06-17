@@ -1,5 +1,5 @@
 ---
-title: Work IQ REST API Overview (Preview)
+title: Work IQ REST API Overview
 description: Use the Work IQ REST API to programmatically start and continue conversations with Microsoft 365 Copilot.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
@@ -10,7 +10,7 @@ ms.topic: overview
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
-# Overview of the Work IQ REST API (preview)
+# Overview of the Work IQ REST API
 
 The Work IQ REST API enables you to programmatically engage in multiturn conversations with Microsoft 365 Copilot while using enterprise search grounding and web search grounding.
 
@@ -38,12 +38,6 @@ The REST API uses the following capabilities to answer natural language prompts:
 - Web search grounding
 
 The API supports natural language prompts and uses the Microsoft 365 Copilot stack to return relevant answers, all within the Microsoft 365 trust boundary. In addition, the REST API allows you to provide your OneDrive and SharePoint files as context and toggle web search grounding. These options give you more control over how the REST API addresses your prompts.
-
-## Licensing
-
-Users with a Microsoft 365 Copilot add-on license can use the REST API at no extra cost. Support for users without a Microsoft 365 Copilot add-on license isn't currently available.
-
-By accessing or using the Work IQ REST API, you agree to the [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context).
 
 ## Known limitations
 

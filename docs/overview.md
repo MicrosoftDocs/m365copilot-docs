@@ -19,7 +19,7 @@ You can extend Copilot in several ways:
 
 - Use [Microsoft 365 Copilot connectors](#enhance-knowledge-in-copilot-with-connectors) to bring organizational data into Microsoft 365 Copilot, enabling Copilot to access and reason over a broader set of enterprise information.
 
-- Use the [Microsoft Work IQ API](#microsoft-work-iq-api-preview) to build agentic and AI-powered applications that securely reason over Microsoft 365 work context.
+- Use the [Microsoft Work IQ API](#microsoft-work-iq-api) to build agentic and AI-powered applications that securely reason over Microsoft 365 work context.
 
 - Use [Microsoft 365 Copilot APIs](#microsoft-365-copilot-apis) to programmatically access Copilot's capabilities in your custom applications and agents.
 
@@ -76,7 +76,7 @@ Many [prebuilt Copilot connectors](/microsoftsearch/connectors-gallery) are avai
 
 If an existing connector doesn't meet your needs, you can build a custom Copilot connector tailored to your specific business requirements. Custom connectors allow you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see [Build Copilot connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365/copilot/extensibility/context).
 
-## Microsoft Work IQ API (preview)
+## Microsoft Work IQ API
 
 The [Microsoft Work IQ API](work-iq-api-overview.md) enables you to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
 

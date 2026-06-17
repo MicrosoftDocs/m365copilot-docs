@@ -14,37 +14,8 @@ ms.date: 05/15/2026
 
 Work IQ APIs are protected by Microsoft Entra ID. Applications that access the Work IQ APIs must use [Microsoft Entra ID OAuth 2.0](/entra/architecture/auth-oauth2) to authenticate and request authorization. This article lists the permissions exposed by Work IQ APIs.
 
-## Enable Work IQ API in your organization
-
-An organization administrator must create a service principal for the Work IQ API before applications can request access tokens for it. This is a one-time setup step for the organization.
-
-### [Azure CLI](#tab/azure-cli)
-
-Run the following command to create the Work IQ API service principal.
-
-```azurecli
-az ad sp create --id fdcc1f02-fc51-4226-8753-f668596af7f7
-```
-
-### [Graph Explorer](#tab/graph-explorer)
-
-1. Go to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) and sign in with an admin account.
-
-1. Set the method to **POST** and the URL to `https://graph.microsoft.com/v1.0/servicePrincipals`. Graph Explorer surfaces relevant scopes based on the URL and method, so the URL must be entered before consenting in the next step.
-
-1. Select **Modify permissions** and consent to `Application.ReadWrite.All`. This step is a one-time admin action and grants the scope **only for your own Graph Explorer session**. It doesn't change organization-wide permissions.
-
-1. Enter the following in the **Request body**.
-
-    ```json
-    {
-      "appId": "fdcc1f02-fc51-4226-8753-f668596af7f7"
-    }
-    ```
-
-1. Select **Run query**. A **201 Created** response confirms success. A conflict error means the service principal already exists.
-
----
+> [!IMPORTANT]
+> An organization administrator must [enable Work IQ in your organization](enable-work-iq.md) before these permissions can be used by applications.
 
 ## Application ID URI
 

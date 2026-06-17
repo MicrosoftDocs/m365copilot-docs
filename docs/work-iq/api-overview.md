@@ -1,5 +1,5 @@
 ---
-title: Microsoft Work IQ API (preview)
+title: Microsoft Work IQ API
 description: Learn about the Work IQ API for building AI applications that securely reason over workplace intelligence data using REST, A2A, and MCP protocols.
 author: jasonjoh
 ms.author: jasonjoh
@@ -10,13 +10,13 @@ ms.date: 06/02/2026
 
 <!-- markdownlint-disable MD024 -->
 
-# Work IQ API overview (preview)
+# Work IQ API overview
 
 The Work IQ API enables developers to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
 
 Work IQ provides multiple protocols to interact with agents - Agent-to-Agent (A2A), Model Context Protocol (MCP), and REST - so you can choose the protocol that best fits your application or agent architecture.
 
-By accessing or using the Microsoft Work IQ APIs, you're agreeing to the [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context).
+By accessing or using the Microsoft Work IQ APIs, you're agreeing to the [Microsoft Work IQ APIs Terms of Use](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context).
 
 ## What is Work IQ?
 
@@ -54,7 +54,7 @@ Work IQ can reason over:
 
 ## Choose a protocol
 
-Use the guide below to select the right protocol.
+Use the following guide to select the right protocol.
 
 > [!NOTE]
 > The following table contains **recommendations** for the best suited protocol for specific scenarios, not strict rules. Use the protocol that works best for you.
@@ -173,11 +173,11 @@ Use [remote MCP](mcp/overview.md) to expose Microsoft 365 work context as tool
 
 ### Local MCP
 
-Install the [Microsoft Work IQ CLI (preview)](cli.md) and configure it as a local MCP server.
+Install the [Microsoft Work IQ CLI](cli.md) and configure it as a local MCP server.
 
-[▶ See it in action in the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
+[▶ See it in action in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
 
-[▶ See it in action in the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
+[▶ See it in action in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
 
 #### Example MCP server configuration
 
@@ -232,19 +232,26 @@ Install the [Microsoft Work IQ CLI (preview)](cli.md) and configure it as a loca
 
 Work IQ uses Microsoft Entra ID delegated authentication.
 
-- Requests run in the context of the signed-in user
-- On-behalf-of (OBO) flows are supported
-- Application-only authentication is not supported
-- Microsoft 365 permissions, sensitivity labels, and compliance policies are enforced automatically
+- Requests run in the context of the signed-in user.
+- On-behalf-of (OBO) flows are supported.
+- Application-only authentication isn't supported.
+- Microsoft 365 permissions, sensitivity labels, and compliance policies are enforced automatically.
 
 ## Path forward for new development
 
 Work IQ is the recommended foundation for new agentic and AI-powered applications on Microsoft 365 data. Build new development on Work IQ APIs to take advantage of unified protocols, integrated governance, and continued investment.
 
+## Licensing requirements
+
+You pay for use of the Work IQ API through a usage-based model that uses Copilot Credits. For more information, see [Understand usage-based billing and cost management for Copilot Credits](/microsoft-365/copilot/usage-based-billing-overview-copilot-credits).
+
 ## Related content
 
-- [Work IQ A2A quickstart (preview)](a2a/quickstart.md)
-- [Work IQ REST API overview (preview)](rest/overview.md)
-- [Microsoft Work IQ CLI (preview)](cli.md)
-- [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)
-- [Try the APIs in the Interactive Demo (preview)](https://aka.ms/copilot.dev)
+- [Work IQ A2A quickstart](a2a/quickstart.md)
+- [Work IQ REST API overview](rest/overview.md)
+- [Microsoft Work IQ CLI](cli.md)
+- [Microsoft Work IQ APIs Terms of Use](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)
+- [Understand usage-based billing and cost management for Copilot Credits](/microsoft-365/copilot/usage-based-billing-overview-copilot-credits)
+- [Managing AI experiences enabled by usage-based billing](/microsoft-365/copilot/usage-based-billing-manage-copilot-credits)
+- [Discovery setting for AI experiences enabled by usage-based billing](/microsoft-365/copilot/discovery-setting-ai-experiences)
+- [Try the APIs in the Interactive Demo](https://aka.ms/copilot.dev)

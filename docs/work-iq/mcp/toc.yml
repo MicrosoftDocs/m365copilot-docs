@@ -1,5 +1,11 @@
 items:
 - name: Overview
   href: overview.md
+- name: Entity model
+  href: entity-model.md
 - name: Tool reference
   href: tool-reference.md
+- name: Rego policy
+  href: policy-governance-mcp.md
+- name: GitHub Copilot CLI quickstart
+  href: github-copilot-cli.md

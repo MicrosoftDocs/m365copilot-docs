@@ -1,5 +1,5 @@
 ---
-title: Work IQ MCP tool reference (preview)
+title: Work IQ MCP tool reference
 description: Reference documentation for all tools exposed by the Work IQ MCP server, including parameters and usage examples.
 author: jasonjoh
 ms.author: jasonjoh
@@ -9,9 +9,9 @@ ms.date: 06/02/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
-<!-- cSpell:ignore eykd bbkr SNWE Uplg -->
+<!-- cSpell:ignore bizchat bbkr enddatetime eykd SNWE startdatetime Uplg -->
 
-# Work IQ MCP tool reference (preview)
+# Work IQ MCP tool reference
 
 The Work IQ MCP server exposes 10 tools through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). This article provides a reference for each tool, including its purpose, parameters, and usage examples.
 
@@ -474,7 +474,7 @@ A successful response contains a JSON string in the `text` property of a [TextCo
 
 ##### Request
 
-[▶ Try it in the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq&setup=true)
+[▶ Try it in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq&setup=true)
 
 ```json
 {
