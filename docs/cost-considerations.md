@@ -89,10 +89,9 @@ Custom engine agents are hosted outside of Microsoft 365 Copilot using your own 
 
 The [Work IQ API](work-iq-api-overview.md) provides an AI-native interface to Microsoft 365 work intelligence. With this API, you can build applications that query emails, meetings, files, and organizational knowledge by using natural language grounded in Microsoft 365 data.
 
-> [!NOTE]
-> Work IQ is currently in preview. Features and APIs might change before general availability.
+You pay for use of the Work IQ API through a consumption-based model that uses Copilot Credits.
 
-Each user calling the Work IQ API must have a Microsoft 365 Copilot add-on license. There are no additional usage-based billing charges for licensed users. Support for users without a Microsoft 365 Copilot license isn't currently available.
+For more information, see the [Work IQ General Availability announcement](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability).
 
 ## Microsoft 365 Copilot APIs
 
