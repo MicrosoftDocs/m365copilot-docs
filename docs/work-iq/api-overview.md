@@ -59,7 +59,7 @@ Use the following guide to select the right protocol.
 > [!NOTE]
 > The following table contains **recommendations** for the best suited protocol for specific scenarios, not strict rules. Use the protocol that works best for you.
 
-|              | A2A                                                                    | REST API (coming soon)                                                | MCP                                                                                    |
+|              | A2A                                                                    | REST API                                                              | MCP                                                                                    |
 |--------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 | **Use when** | Another agent needs to delegate a task to Work IQ and get results back | You're building an app or service that calls Work IQ programmatically | An AI assistant needs to invoke Work IQ as a tool for the user |
 | **Caller**   | Another agent                                                          | Your app or backend                                                   | An LLM-based client                                                                    |

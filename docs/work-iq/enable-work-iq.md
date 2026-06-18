@@ -56,8 +56,6 @@ az ad sp create --id fdcc1f02-fc51-4226-8753-f668596af7f7
 
 ---
 
-You should now have two values: `APP_ID` and `TENANT_ID`. Keep these values available as you'll use them when testing with the A2A sample code via `--appid` and `--tenant` parameters.
-
 Your tenant is now ready to test. To test your configuration by using the provided sample code, see the [A2A quickstart](./a2a/quickstart.md) guide.
 
 ---
