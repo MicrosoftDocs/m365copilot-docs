@@ -56,7 +56,8 @@
     },
     "fileMetadata": {
       "zone_pivot_group_filename": {
-        "api/**/*.md": "copilot/extensibility/api/zone-pivot-groups.json"
+        "api/**/*.md": "copilot/extensibility/api/zone-pivot-groups.json",
+        "work-iq/rest/**/*.md": "copilot/extensibility/work-iq/rest/zone-pivot-groups.json"
       }
     },
     "template": [],

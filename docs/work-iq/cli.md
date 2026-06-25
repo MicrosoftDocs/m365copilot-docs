@@ -69,6 +69,9 @@ Work IQ supports the following platforms:
 
 You can install Work IQ globally by using npm or run it directly by using npx.
 
+### Supportability
+After the General Availability of Work IQ on June 16, 2026, all customers using preview versions of Work IQ CLI must upgrade to a supported GA version. Requests for support first require reproducing the issue on a GA build. Support for preview versions published before June 16, 2026, such as version 0.4.x or 0.5.x, is no longer offered.
+
 ### Install by using GitHub Copilot CLI
 
 The fastest way to get started is by using GitHub Copilot CLI:
@@ -99,10 +102,16 @@ The fastest way to get started is by using GitHub Copilot CLI:
    You: Find documents I worked on yesterday
    ```
 
-### Install globally
+### Install globally using npm
 
 ```bash
 npm install -g @microsoft/workiq
+```
+
+### Update globally using npm
+
+```bash
+npm update -g @microsoft/workiq
 ```
 
 ### Run by using npx (no installation required)

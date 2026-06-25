@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/02/2026
+ms.date: 06/18/2026
 ---
 
 # Work IQ MCP overview
@@ -50,6 +50,9 @@ New workloads, backends, and data sources add **paths**, not tools. The tool sur
 ## Authentication
 
 The Work IQ MCP server uses Microsoft Entra ID for authentication. MCP clients automatically discover the authentication configuration through the `/.well-known/oauth-protected-resource` endpoint. For details on required permissions, see [Work IQ API permissions reference](../permissions.md).
+
+> [!NOTE]
+> The Work IQ service principal is created automatically in the tenant when Work IQ is used for the first time. In some corner cases, such as configuring Work IQ MCP policy in the Microsoft 365 admin center before any MCP use in the tenant, the service principal might not exist yet and policy configuration can fail. Tenant administrators can provision it by following the steps in [Enable your tenant for Work IQ](../enable-work-iq.md).
 
 ## Related content
 

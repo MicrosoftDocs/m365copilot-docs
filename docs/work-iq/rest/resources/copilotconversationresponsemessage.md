@@ -4,16 +4,22 @@ description: Represents a message in a Copilot conversation being continued thro
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 05/15/2026
+ms.date: 06/24/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
+zone_pivot_groups: work-iq-rest-api-versions
 ---
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
 # Work IQ - copilotConversationResponseMessage resource type
 
+:::zone pivot="work-iq-rest-beta"
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+:::zone-end
+
+:::zone pivot="work-iq-rest-prod"
+:::zone-end
 
 Represents a message in a Copilot conversation being continued through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 
