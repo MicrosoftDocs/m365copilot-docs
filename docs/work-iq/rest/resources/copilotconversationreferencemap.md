@@ -4,16 +4,22 @@ description: A keyed map of conversation references
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 05/20/2026
+ms.date: 06/24/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
+zone_pivot_groups: work-iq-rest-api-versions
 ---
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
 # Work IQ - copilotConversationReferenceMap resource type
 
+:::zone pivot="work-iq-rest-beta"
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+:::zone-end
+
+:::zone pivot="work-iq-rest-prod"
+:::zone-end
 
 A keyed map of [copilotConversationReference](copilotconversationreference.md) objects.
 

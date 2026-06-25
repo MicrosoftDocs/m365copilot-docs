@@ -1,0 +1,10 @@
+# YamlMime:ZonePivotGroups
+groups:
+- id: work-iq-rest-api-versions
+  title: Work IQ ReST API versions
+  prompt: Choose an API version
+  pivots:
+  - id: work-iq-rest-prod
+    title: Production
+  - id: work-iq-rest-beta
+    title: Beta

@@ -4,9 +4,10 @@ description: Use the Work IQ Chat API to integrate Microsoft 365 Copilot into yo
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 06/10/2026
+ms.date: 06/24/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
+zone_pivot_groups: work-iq-rest-api-versions
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -14,7 +15,12 @@ doc_type: apiPageType
 
 # Work IQ - Create copilotConversation
 
+:::zone pivot="work-iq-rest-beta"
 [!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
+:::zone-end
+
+:::zone pivot="work-iq-rest-prod"
+:::zone-end
 
 The Work IQ Chat API allows you to create and continue multi-turn conversations with Microsoft 365 Copilot, while respecting the defined access controls within the organization. Use the Chat API to integrate Microsoft 365 Copilot into your generative AI solutions.
 
@@ -32,9 +38,21 @@ This documentation covers creating Copilot conversations using the Chat API. Lea
 
 ## HTTP request
 
+:::zone pivot="work-iq-rest-prod"
+
+```http
+POST https://workiq.svc.cloud.microsoft/rest/conversations
+```
+
+:::zone-end
+
+:::zone pivot="work-iq-rest-beta"
+
 ```http
 POST https://workiq.svc.cloud.microsoft/rest/beta/conversations
 ```
+
+:::zone-end
 
 ## Request headers
 
@@ -59,12 +77,27 @@ The following example shows how to create a Copilot conversation through the Wor
 
 The following example shows the request.
 
+:::zone pivot="work-iq-rest-prod"
+
+```http
+POST https://workiq.svc.cloud.microsoft/rest/conversations
+Content-Type: application/json
+
+{}
+```
+
+:::zone-end
+
+:::zone pivot="work-iq-rest-beta"
+
 ```http
 POST https://workiq.svc.cloud.microsoft/rest/beta/conversations
 Content-Type: application/json
 
 {}
 ```
+
+:::zone-end
 
 ### Response
 
