@@ -147,6 +147,8 @@ items:
     items:
     - name: Create the agent
       href: build-declarative-agents.md
+    - name: Manage environments and versions
+      href: declarative-agents-multi-environment.md
     - name: Customize agent behavior
       href: build-declarative-agents-customize-behavior.md
     - name: Add knowledge sources
