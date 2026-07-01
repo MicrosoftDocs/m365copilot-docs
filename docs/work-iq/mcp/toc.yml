@@ -7,5 +7,9 @@ items:
   href: tool-reference.md
 - name: Rego policy
   href: policy-governance-mcp.md
-- name: GitHub Copilot CLI quickstart
-  href: github-copilot-cli.md
+- name: Quickstarts
+  items:
+  - name: GitHub Copilot CLI
+    href: quickstart/github-copilot-cli.md
+  - name: Microsoft Foundry
+    href: quickstart/foundry.md

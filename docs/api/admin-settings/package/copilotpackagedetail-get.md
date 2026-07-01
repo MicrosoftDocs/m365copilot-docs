@@ -30,7 +30,7 @@ Retrieves detailed information for a specific agent or app by ID.
 |:---------------------------------------|:-----------------------------|:------------------------------|
 | Delegated (work or school account)     | CopilotPackages.Read.All     | CopilotPackages.ReadWrite.All |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
-| Application                            | Not supported.               | Not supported.                |
+| Application                            | CopilotPackages.Read.All     | CopilotPackages.ReadWrite.All |
 
 ## HTTP request
 

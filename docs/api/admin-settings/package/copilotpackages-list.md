@@ -30,7 +30,7 @@ Retrieves a list of all packages available in the tenant.
 |:---------------------------------------|:-----------------------------|:------------------------------|
 | Delegated (work or school account)     | CopilotPackages.Read.All     | CopilotPackages.ReadWrite.All |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
-| Application                            | Not supported.               | Not supported.                |
+| Application                            | CopilotPackages.Read.All     | CopilotPackages.ReadWrite.All |
 
 ## HTTP request
 
@@ -53,6 +53,7 @@ This method supports the `$filter` [OData query parameter](/graph/query-paramete
 | `supportedHosts`       | string   | Filter by supported host (`Copilot`, `Outlook`, `Teams`, `M365`)         |
 | `elementTypes`         | string   | Filter by element type (`Bots`, `DeclarativeAgent`, `CustomEngineAgent`) |
 | `lastModifiedDateTime` | datetime | Filter by last updated date/time                                         |
+| `platform`             | string   | Filter by platform (`teams`, `outlook`, `web`)                           |
 
 ## Request body
 

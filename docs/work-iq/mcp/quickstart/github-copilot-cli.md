@@ -104,6 +104,6 @@ Copilot CLI uses the Work IQ MCP server to call the appropriate tools. The resul
 
 ## Related content
 
-- [Work IQ MCP overview](overview.md)
-- [Work IQ MCP tool reference](tool-reference.md)
-- [Policy governance for Work IQ MCP](policy-governance-mcp.md)
+- [Work IQ MCP overview](../overview.md)
+- [Work IQ MCP tool reference](../tool-reference.md)
+- [Policy governance for Work IQ MCP](../policy-governance-mcp.md)
