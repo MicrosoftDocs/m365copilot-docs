@@ -5,14 +5,20 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 05/01/2026
+ms.date: 06/30/2026
+zone_pivot_groups: graph-api-versions
 ---
 
 <!-- cSpell: ignore pomuth -->
 
 # copilotPackage resource type
 
+:::zone pivot="graph-v1"
+:::zone-end
+
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Entity that represents a Copilot package available within a tenant, containing basic metadata and configuration information for package management.
 

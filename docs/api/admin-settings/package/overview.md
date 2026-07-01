@@ -1,16 +1,16 @@
 ---
-title: Package Management API overview (preview)
+title: Package Management API overview
 description: Learn about the Package Management API for managing agent and app packages in Microsoft 365 organizations.
 author: pomuth
 ms.author: pomuth
 ms.topic: overview
 ms.localizationpriority: high
-ms.date: 05/01/2026
+ms.date: 06/30/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
 
-# Agent and app Package Management API overview (preview)
+# Agent and app Package Management API overview
 
 A package represents either an agent or Microsoft 365 app in the organization catalog. The Package Management API enables IT administrators to view and manage apps and agents across Microsoft 365. This API provides endpoints to list all apps and agents, retrieve detailed information about an individual app or agent including metadata and detailed elements.
 
@@ -39,10 +39,10 @@ A package represents either an agent or Microsoft 365 app in the organization ca
 |-----------------------------------------------------------------|------------------------------------------------------|-----------------------------------------------------------|
 | [List packages](copilotpackages-list.md)                        | GET `/copilot/admin/catalog/packages`                | Get all apps and agents in the organization.              |
 | [Get package details](copilotpackagedetail-get.md)              | GET `/copilot/admin/catalog/packages/{id}`           | Get detailed metadata for a specific app or agent.        |
-| [Update package](copilotpackagedetail-update.md)                | PATCH `/copilot/admin/catalog/packages/{id}`         | Update package metadata.                                  |
-| [Block](copilotpackage-block.md)                                | POST `/copilot/admin/catalog/packages/{id}/block`    | Block a package to prevent its usage.                     |
-| [Unblock](copilotpackage-unblock.md)                            | POST `/copilot/admin/catalog/packages/{id}/unblock`  | Unblock a package to allow its usage.                     |
-| [Reassign](copilotpackage-reassign.md)                          | POST `/copilot/admin/catalog/packages/{id}/reassign` | Reassign ownership of a package to a different user.      |
+| [Update package](copilotpackagedetail-update.md) (preview)      | PATCH `/copilot/admin/catalog/packages/{id}`         | Update package metadata.                                  |
+| [Block](copilotpackage-block.md) (preview)                      | POST `/copilot/admin/catalog/packages/{id}/block`    | Block a package to prevent its usage.                     |
+| [Unblock](copilotpackage-unblock.md) (preview)                  | POST `/copilot/admin/catalog/packages/{id}/unblock`  | Unblock a package to allow its usage.                     |
+| [Reassign](copilotpackage-reassign.md) (preview)                | POST `/copilot/admin/catalog/packages/{id}/reassign` | Reassign ownership of a package to a different user.      |
 
 ## Resources
 

@@ -9,13 +9,13 @@ items:
       href: copilotpackages-list.md
     - name: Get
       href: copilotpackagedetail-get.md
-    - name: Update
+    - name: Update (preview)
       href: copilotpackagedetail-update.md
-    - name: block
+    - name: Block (preview)
       href: copilotpackage-block.md
-    - name: reassign
+    - name: Reassign (preview)
       href: copilotpackage-reassign.md
-    - name: unblock
+    - name: Unblock (preview)
       href: copilotpackage-unblock.md
 - name: Complex types
   items:
