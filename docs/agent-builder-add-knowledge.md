@@ -127,6 +127,8 @@ You can upload files directly from your device for your agent to use as knowledg
 
 You can add up to 20 files as knowledge sources.
 
+Embedded files are stored in the default geography of the tenant, not in the user's preferred data location (PDL).
+
 > [!NOTE]
 > Embedded file content isn't supported in Microsoft 365 for Government Community Cloud Moderate (GCCM) environments.
 

@@ -4,7 +4,7 @@ description: Learn about the 2.4 schema for a manifest file for a plugin in Micr
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/25/2026
+ms.date: 07/01/2026
 ms.topic: reference
 ---
 
@@ -485,7 +485,7 @@ The MCP server spec object contains the following properties.
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `url` | String | Required. The URL of the MCP server. MUST be a valid absolute URL. |
-| `mcp_tool_description` | [MCP tool description object](#mcp-tool-description-object) | Required. Contains either a reference to an external MCP tool description file or inline tool definitions. |
+| `mcp_tool_description` | [MCP tool description object](#mcp-tool-description-object) | Optional. Contains either a reference to an external MCP tool description file or inline tool definitions. |
 
 ##### MCP tool description object
 
