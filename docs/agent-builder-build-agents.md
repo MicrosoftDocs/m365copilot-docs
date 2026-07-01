@@ -120,7 +120,7 @@ Use natural language to add capabilities on the **Describe** tab, or configure t
 - [Code interpreter](code-interpreter.md) - Solves complex math problems, analyzes data, and generates visualizations. To add this capability, select the toggle next to **Create documents, charts, and code**.
 - [Image generator](image-generator.md) - Generates images based on user prompts. To add this capability, select the toggle next to **Create images**.
 
-### Built-in actions
+## Built-in actions
 
 Every agent you build in Agent Builder can also take action on the user's behalf across their Outlook emails and meetings, just like in Microsoft 365 Copilot Chat. These capabilities are always available and use the user's existing permissions.
 
