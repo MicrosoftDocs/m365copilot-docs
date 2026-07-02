@@ -1,11 +1,12 @@
 ---
 title: Extend Microsoft 365 Copilot
 description: Extend, enrich, and customize Microsoft 365 Copilot with Copilot connectors and agents.
+#customer intent: As a developer, I want to understand the Microsoft 365 Copilot extensibility and API options so that I can choose the right approach for my scenario.
 author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/13/2026
+ms.date: 06/18/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -113,7 +114,7 @@ You can integrate the following Copilot APIs:
 
 - **[Copilot Search API (preview)](api/ai-services/search/overview.md)** - Perform hybrid search (semantic and lexical) across OneDrive for work or school content using natural language queries with contextual understanding and intelligent results. This API enables applications to discover relevant documents and files using natural language descriptions rather than exact keyword matches, creating intuitive search experiences that understand user intent and surface the most relevant content.
 
-- **[Copilot Chat API (preview)](api/ai-services/chat/overview.md)** - Send prompts directly to Copilot and receive responses so you can embed Copilot-powered conversation experiences within your own applications. This API brings Copilot to your users wherever they work.
+- **[Copilot Chat API (preview)](api/ai-services/chat/overview.md)** - Send prompts directly to Copilot and receive responses so you can embed Copilot-powered conversation experiences within your own applications. This API brings Copilot to your users wherever they work. The Chat API returns textual responses and doesn't perform actions like creating files, sending emails, or scheduling meetings; see [Known limitations](api/ai-services/chat/overview.md#known-limitations).
 
 - **[Copilot Interaction Export API](api/ai-services/interaction-export/resources/aiinteractionhistory.md)** - Export user interactions with Copilot, including prompts and responses. This API enables you to build data governance and protection solutions, and analyze Copilot usage in your application to optimize adoption.
 

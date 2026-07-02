@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/15/2026
+ms.date: 06/18/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -103,3 +103,4 @@ The [Microsoft 365 Copilot APIs](copilot-apis-overview.md) are available at no a
 - [Agents overview](agents-overview.md)
 - [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md)
 - [Microsoft 365 Copilot APIs overview](copilot-apis-overview.md)
+- [Microsoft 365 Copilot APIs client libraries](sdks/api-libraries.md)

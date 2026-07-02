@@ -1,7 +1,8 @@
 ---
 title: Create declarative agents using Microsoft 365 Agents Toolkit
 description: Learn how to build a declarative agent for Microsoft 365 Copilot using Microsoft 365 Agents Toolkit.
-ms.date: 12/17/2025
+#customer intent: As a developer, I want to build and provision a declarative agent by using Microsoft 365 Agents Toolkit so that I can deliver a customized Microsoft 365 Copilot experience.
+ms.date: 06/18/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -19,7 +20,7 @@ The agent that you build in this tutorial targets licensed Microsoft 365 Copilot
 
 :::image type="content" source="assets/images/build-da/ttk/agent-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
 
-For overview information, see [Declarative agents for Microsoft 365 Copilot](overview-declarative-agent.md).
+For overview information, see [Declarative agents for Microsoft 365 Copilot](overview-declarative-agent.md). To compare agent types, see [Agents for Microsoft 365 Copilot](agents-overview.md).
 
 [!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
 
@@ -43,7 +44,7 @@ You should be familiar with the following standards and guidelines for declarati
 
 - Standards for compliance, performance, security, and user experience described in [Microsoft Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
 
-## Create a declarative agent
+## Create and provision a declarative agent with Microsoft 365 Agents Toolkit
 
 Start by creating a basic declarative agent.
 

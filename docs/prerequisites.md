@@ -5,7 +5,7 @@ author: maisarissi
 ms.author: maisarissi
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/27/2026
+ms.date: 06/18/2026
 ---
 
 # Set up your development environment for Microsoft 365 Copilot
@@ -124,7 +124,7 @@ The following table summarizes agent access based on user licensing type.
 The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
 > [!NOTE]
-> Usage-based billing isn't supported in Microsoft 365 Government Community Cloud High (GCCH) and Government Community Cloud Moderate (GCCM) environments.
+> Usage-based billing isn't supported in Microsoft 365 Government Community Cloud High (GCCH) and Government Community Cloud (GCC) environments.
 
 | Capability | Copilot Chat (no usage-based billing)* | Copilot Chat (usage-based billing)** | Microsoft 365 Copilot (licensed) |
 |:--------------------------|:---------------------------|:-----------------------------|:------------------------|
@@ -155,6 +155,9 @@ The following table lists the agent types and agent capabilities that are availa
 > [!NOTE]
 > For details about data, privacy, and security for web search in Microsoft 365 Copilot Chat and Microsoft 365 Copilot, see [Data, privacy, and security for web search](/copilot/microsoft-365/manage-public-web-access).
 
+> [!NOTE]
+> Agents grounded in shared tenant work data aren't currently available in Microsoft 365 Government Community Cloud (GCC), Government Community Cloud High (GCCH), or Department of Defense (DoD) environments.
+
 ## Frequently asked questions
 
 ### Can I use my Microsoft 365 Developer Program subscription to develop with Copilot?
@@ -173,3 +176,4 @@ Copilot uses existing permissions and policies to deliver the most relevant info
 
 - [Microsoft 365 Copilot extensibility overview](overview.md)
 - [Cost considerations](cost-considerations.md)
+- [Microsoft 365 Copilot APIs client libraries](sdks/api-libraries.md)

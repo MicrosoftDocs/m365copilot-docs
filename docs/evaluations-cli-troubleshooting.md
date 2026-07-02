@@ -1,7 +1,8 @@
 ---
 title: Troubleshoot the Agent Evaluations CLI (preview)
 description: Resolve common setup, authentication, runtime, and environment issues for the M365 Copilot Agent Evaluations CLI.
-ms.date: 04/28/2026
+#customer intent: As a developer running agent evaluations, I want to diagnose why the CLI can't find my agent so that I can fix my environment configuration and run evaluations successfully.
+ms.date: 06/18/2026
 author: lauragra
 ms.author: lauragra
 ms.reviewer: sakov
@@ -107,7 +108,7 @@ Problems that occur when running evaluations after successful setup.
 
 If the tool can't find your agent:
 
-- Verify `M365_AGENT_ID` (or `M365_TITLE_ID` for Agents Toolkit projects) is correct.
+- Verify `M365_AGENT_ID` is correct. For Agents Toolkit projects the CLI auto-detects it from `M365_TITLE_ID` in `.env.local`, so check that value instead — see [Get your agent ID](evaluations-cli-get-env-values.md#get-your-agent-id-m365_agent_id).
 - Confirm your agent is deployed to the tenant specified by `TENANT_ID`.
 - Ensure you have permission to access the agent.
 - Try specifying the agent ID explicitly: `runevals --m365-agent-id "<your-agent-id>"`.

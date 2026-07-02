@@ -410,6 +410,8 @@ items:
   items:
   - name: Overview
     href: copilot-apis-overview.md
+  - name: Security and authentication
+    href: copilot-apis-security-authentication.md
   - name: Use client libraries
     href: sdks/api-libraries.md
   - name: Best practices

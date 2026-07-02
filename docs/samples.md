@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 01/02/2026
+ms.date: 06/18/2026
 ---
 
 # Microsoft 365 Copilot extensibility samples
@@ -23,6 +23,15 @@ The following declarative agent samples are available from the PNP community.
 | [Learning Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-LearningCoach) | Helps users understand complex topics by breaking them down into simple, intermediate, and advanced summaries, and also provides guided practice and learning plans. It employs various techniques for learning complex topics, including glossaries, analogies, practice exercises and structured study plans. |
 | [Prompt Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-PromptCoach) | Assists users in creating effective and well-structured prompts for Copilot. Offering analysis, compliance checks and improvement suggestions. It asks for information on the goal, context, source, and expectations to generate effective prompts and provides detailed analyses for to help elevate your prompt writing prowess. |
 | [Writing Coach](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples/da-WritingCoach) | Provides detailed feedback on writing, helps change the tone of messages, translates text, and helps writing instructions, stories, blog posts, and whitepapers. It focuses on clarity, coherence, grammar, and overall impact, offering specific improvements and alternatives for various types of document authoring. |
+
+### Add capabilities to declarative agents
+
+The PnP community samples listed above demonstrate declarative agents that you can use as starting points. You can enhance these agents by adding built-in capabilities such as code interpreter and image generator through the declarative agent manifest. These capabilities were introduced in [version 1.2 of the declarative agent manifest schema](declarative-agent-manifest-1.2.md) and can be enabled by using the [Copilot Studio agent builder](agent-builder.md) or the [Microsoft 365 Agents Toolkit](build-declarative-agents.md).
+
+For details on how to enable each capability, see:
+
+- [Add the code interpreter capability to your agent](code-interpreter.md)
+- [Add the image generator capability to your agent](image-generator.md)
 
 ## Declarative agent with API plugin samples
 

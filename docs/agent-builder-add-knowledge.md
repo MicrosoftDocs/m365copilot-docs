@@ -1,13 +1,14 @@
 ---
 title: Add knowledge sources to your declarative agent in Microsoft 365 Copilot
 description: Learn about the different types of knowledge sources that you can add to your declarative agent when you build your agent with the Agent Builder feature in Microsoft 365 Copilot.
+#customer intent: As an agent maker, I want to understand the SharePoint and OneDrive knowledge-source limits and how my agent answers from general knowledge versus my sources so that I can configure grounding that behaves predictably.
 author: xwen
 ms.author: xwen
 ms.topic: concept-article
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 05/21/2026
+ms.date: 06/18/2026
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -17,7 +18,7 @@ The Agent Builder feature in Microsoft 365 Copilot provides a simple interface f
 You can add:
 
 - Up to four public website URLs.
-- SharePoint files, folders, or sites.
+- Up to 100 SharePoint files, folders, or sites.
 - Up to 50 OneDrive files.
 - Up to five Teams chat URLs.
 - Embedded files uploaded from your device (on the **Configure** tab).
@@ -68,10 +69,12 @@ To configure your agent to use any web data as knowledge:
 
 Reference specific sites, files, and folders as agent knowledge sources. When you reference sources from SharePoint or OneDrive, consider the following limits:
 
-- Select up to 100 SharePoint files for each agent.
-- Select up to 50 OneDrive files for each agent.
-- The agent respects existing permissions and [sensitivity labels](/purview/sensitivity-labels) for files already uploaded to SharePoint or OneDrive.
-- Although there isn't a direct file size limit on the knowledge files you select, the agent can only reason over specific [file types](#file-types-and-size-limits).
+| Limit or behavior | Detail |
+|-------------------|--------|
+| SharePoint files | Select up to 100 SharePoint files for each agent. |
+| OneDrive files | Select up to 50 OneDrive files for each agent. |
+| Permissions and sensitivity labels | The agent respects existing permissions and [sensitivity labels](/purview/sensitivity-labels) for files already uploaded to SharePoint or OneDrive. |
+| File size | Although there isn't a direct file size limit on the knowledge files you select, the agent can only reason over specific [file types](#file-types-and-size-limits). |
 
 > [!NOTE]
 >
@@ -130,7 +133,7 @@ You can add up to 20 files as knowledge sources.
 Embedded files are stored in the default geography of the tenant, not in the user's preferred data location (PDL).
 
 > [!NOTE]
-> Embedded file content isn't supported in Microsoft 365 for Government Community Cloud Moderate (GCCM) environments.
+> Embedded file content isn't supported in Microsoft 365 Government Community Cloud (GCC) environments.
 
 The **Configure** tab displays embedded files under **Uploaded files**. Files can take a few minutes to upload and appear gray until they're fully uploaded. The upload time can vary based on the file size and internet speed. For information about size limits for embedded files, see [File size limits](#file-types-and-size-limits).
 
@@ -306,7 +309,7 @@ Some user requests don't require knowledge-based searches; the agent can respond
 - Translate this phrase into Spanish: "Hello, how are you?"
 - What is 1+1?
 
-When you enable this feature, the agent answers simple questions that don't require searching by using its general knowledge. It uses your knowledge sources only to answer search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states it can't find the information.
+When you enable this feature, the agent answers simple questions that don't require searching by using its general knowledge, and it uses your knowledge sources only to answer search-based questions. If the agent can't find relevant information in the knowledge sources you provide, it responds with a fallback message that states it can't find the information. To restrict your agent to your own knowledge sources, use the **Only use specified sources** setting to have the agent prioritize the sources you designate. This setting prioritizes rather than fully blocks general AI knowledge—Agent Builder can't fully block it—so for stricter control, see the note that follows.
 
 To configure your agent to prioritize your knowledge sources, on the **Configure** tab, select the toggle next to **Only use specified sources**.
 

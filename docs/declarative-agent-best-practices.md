@@ -1,11 +1,12 @@
 ---
 title: Best practices for building declarative agents in Microsoft 365 Copilot
 description: Learn the best practices for building extensibility solutions for Microsoft 365 Copilot.
+#customer intent: As a developer building an agent that grounds on Microsoft 365 data, I want to understand Retrieval API grounding best practices so that I can scope retrieval, avoid data egress, and respect permissions.
 author: lauragra
 ms.author: lauragra
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 10/09/2025
+ms.date: 06/18/2026
 ---
 
 
@@ -64,6 +65,35 @@ Keep the following key considerations in mind when choosing [knowledge sources](
 
 - **Test responses with and without knowledge:** Test some queries before and after adding knowledge sources. For example, ask a question that should be answered from a particular document. Without the document, does the agent struggle or generate false information? After you add the document, does the agent find the answer? If you notice the agent still isn’t using the information, you might need to adjust your instructions. Or, if the agent is overusing a knowledge source, consider removing that source or refining instructions to use it only in context. 
 
+## Ground custom engine agents with the Retrieval API
+
+If you build a custom engine agent or custom knowledge application that grounds responses on
+Microsoft 365 data, the [Microsoft 365 Copilot Retrieval API](api/ai-services/retrieval/overview.md)
+provides Retrieval Augmented Generation (RAG) over SharePoint, OneDrive, and Copilot connectors
+without copying or re-indexing your content. Apply the following best practices when you ground
+an agent with the Retrieval API:
+
+- **Avoid data egress by retrieving in place:** The Retrieval API returns relevant text chunks
+  from the hybrid index that powers Microsoft 365 Copilot, so you don't need to export, duplicate,
+  or re-index your organizational data in a separate store. Retrieving data in place preserves your
+  existing security and compliance controls. For more information, see
+  [Manage compliance and safety risks](api/ai-services/retrieval/overview.md#manage-compliance-and-safety-risks).
+
+- **Scope retrieval with Keyword Query Language (KQL):** Use the `filterExpression` parameter to
+  scope retrieval before the query runs - for example, filter by site path, file type, author, or
+  date range - so the agent only draws on approved sources. By default, no scoping is applied.
+  Validate your KQL before calling the API: if the `filterExpression` has incorrect syntax, the
+  query runs **with no scoping** rather than failing. For more information, see
+  [Best practices](api/ai-services/retrieval/overview.md#best-practices) and the
+  [filterExpression reference](api/ai-services/retrieval/copilotroot-retrieval.md).
+
+- **Rely on the Microsoft 365 permission model and grant least-privilege access:** The Retrieval API
+  honors Microsoft 365 permissions, so a user only receives results from content they're already
+  allowed to access. Grant your app only the permissions it needs: **Files.Read.All** and
+  **Sites.Read.All** for SharePoint and OneDrive, and **ExternalItem.Read.All** for Copilot
+  connectors. For more information, see
+  [Known limitations](api/ai-services/retrieval/overview.md#known-limitations).
+
 ## Test and iterate
 
 Even after following all the design best practices and guidelines, thoroughly test your agent to verify that it works as intended. Apply the following best practices to test and iterate on your agent:
@@ -83,6 +113,7 @@ Even after following all the design best practices and guidelines, thoroughly te
 ## Related content
 
 - [Build agents with Copilot Studio](agent-builder-build-agents.md)
+- [Overview of the Microsoft 365 Copilot Retrieval API](api/ai-services/retrieval/overview.md)
 - [Build agents with Agents Toolkit](declarative-agent-tool-comparison.md#agents-toolkit)
 - [Write effective  instructions for declarative agents](declarative-agent-instructions.md)
 - [Add knowledge sources to your declarative agent in Copilot Studio](agent-builder-add-knowledge.md)

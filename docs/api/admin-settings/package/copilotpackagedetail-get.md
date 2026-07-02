@@ -19,7 +19,7 @@ zone_pivot_groups: graph-api-versions
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 :::zone-end
 
-Retrieves detailed information for a specific agent or app by ID.
+Retrieves detailed information for a specific agent by ID.
 
 [!INCLUDE [package-management-license](../../includes/package-management-license.md)]
 

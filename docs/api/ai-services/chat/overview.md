@@ -1,10 +1,11 @@
 ---
 title: Microsoft 365 Copilot Chat API Overview (Preview)
 description: Use the Microsoft 365 Copilot Chat API to programmatically start and continue conversations with Microsoft 365 Copilot.
+#customer intent: As a developer integrating the Microsoft 365 Copilot Chat API, I want to understand synchronous versus streamed (SSE) responses so that I can choose the right endpoint for my application.
 author: muwagerikpe
 ms.author: muwagerikpe
 ms.localizationpriority: medium
-ms.date: 09/18/2025
+ms.date: 06/18/2026
 ms.topic: overview
 ---
 
@@ -36,6 +37,10 @@ The Chat API can use the following capabilities to answer natural language promp
 - Web search grounding
 
 The API supports natural language prompts and uses the Microsoft 365 Copilot stack to return relevant answers, all within the Microsoft 365 trust boundary. In addition, the Chat API allows you to provide your OneDrive and SharePoint files as context and toggle web search grounding. These options give you more control over how the Chat API addresses your prompts.
+
+## Synchronous and streamed responses
+
+After you create a conversation, you can continue it in one of two ways. The [synchronous endpoint](copilotconversation-chat.md) returns the full response in a single reply. The [streamed endpoint](copilotconversation-chatoverstream.md) returns a stream of server-sent events (SSE) with a `Content-Type` of `text/event-stream`, so your application can render the response progressively as it's generated. Choose the synchronous endpoint when you want a single complete reply, and the streamed endpoint when you want to display incremental output. Streamed conversations aren't supported in Graph Explorer.
 
 ## Licensing
 

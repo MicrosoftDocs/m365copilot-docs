@@ -1,10 +1,10 @@
 ---
 title: Connect to other agents from a declarative agent
-description: Learn how to connect to other declarative agents in Microsoft 365 apps with a declarative agent
+description: Learn how to declare connected (worker) agents in a declarative agent manifest using the worker_agents property, enabling agent-to-agent interaction mediated by Microsoft 365 Copilot Chat.
 author: ajacks-msft
 ms.author: ajacks
 ms.localizationpriority: medium
-ms.date: 05/11/2026
+ms.date: 06/18/2026
 ms.topic: article
 ---
 
@@ -12,7 +12,10 @@ ms.topic: article
 
 <!-- cSpell:ignore ajacks -->
 
-When users interact with a declarative agent in Microsoft 365 Copilot Chat, it can connect to other agents to retrieve extra information or perform actions. Users see the agent-to-agent interaction but don't need to select connected agents themselves. Declarative agents must specify the other agents they can connect to in their manifest definition.
+When users interact with a declarative agent in Microsoft 365 Copilot Chat, it can connect to other agents to retrieve extra information or perform actions. You declare these connections in the agent manifest by listing agent title IDs in the [`worker_agents`](declarative-agent-manifest-1.7.md) property. At runtime, Copilot Chat acts as the broker that mediates the interaction—users see the agent-to-agent exchange but don't need to select connected agents themselves.
+
+> [!NOTE]
+> Manifest-declared connected agents are a separate mechanism from the [Copilot Chat API](api/ai-services/chat/overview.md), which enables conversational experiences powered by Microsoft 365 Copilot inside your own custom applications.
 
 > [!NOTE]
 > Users must install each connected agent before they can use them. For more information, see [Deploying connected agents to users in the organization](/microsoft-365/admin/manage/agent-registry).

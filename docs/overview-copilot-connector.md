@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/05/2026
+ms.date: 06/18/2026
 ---
 
 # Microsoft 365 Copilot connectors overview
@@ -18,7 +18,7 @@ Microsoft 365 Copilot connectors bring external, line-of-business data into Micr
 Synced and federated connectors power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Copilot in Excel, and the Researcher agent.
 
 > [!NOTE]
-> Copilot connectors are available in commercial environments and in Microsoft 365 Government Community Cloud (GCC) and Government Community Cloud High (GCCH). They aren't available in Department of Defense (DoD) environments.
+> Copilot connectors are available in commercial environments and in Microsoft 365 Government Community Cloud (GCC), Government Community Cloud High (GCCH), and Department of Defense (DoD) environments.
 
 ## Connector models
 
@@ -32,7 +32,7 @@ Microsoft 365 Copilot supports two connector models tailored to different integr
 | Use cases | Knowledge repositories, document stores, LOB systems | Dynamic data or regulated content that must remain in source |
 | Authentication | Microsoft Entra ID app registration | MCP-supported methods (OAuth 2.0 or service-specific) |
 | Content retrieval | Indexed search and synthesis | Real-time API calls |
-| Availability | Global, GCC, GCCH | Varies by federated connector availability |
+| Availability | Global, GCC, GCCH, DoD | Varies by federated connector availability |
 
 For more information about federated connectors, see [Federated connectors overview](/microsoft-365/copilot/connectors/federated-connectors-overview).
 

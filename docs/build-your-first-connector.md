@@ -1,10 +1,11 @@
 ---
 title: Build Your First Connector for Microsoft 365 Copilot
 description: Learn how to build your first Microsoft 365 Copilot connector by using the Microsoft 365 Agents Toolkit.
+#customer intent: As a developer, I want to build my first Microsoft 365 Copilot connector by using the Microsoft 365 Agents Toolkit so that I can ingest my line-of-business data into Microsoft Graph for Copilot.
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 06/18/2026
 ms.topic: how-to
 ---
 
@@ -79,6 +80,9 @@ Use the following steps to build your first connector.
         > [!NOTE]
         > To complete this step, you must be a Search Admin. This step enables results from the connector to be used by Microsoft 365 Copilot Chat. If you are only going to use this connector as a [knowledge source for a declarative agent](knowledge-sources.md#copilot-connectors), this step isn't necessary.
 
+    > [!TIP]
+    > If you need to look up the Connection ID programmatically instead of in the admin center, you can [query your existing connectors in Graph Explorer](declarative-agent-capabilities-ids.md#microsoft-365-copilot-connectors) by using the `ExternalConnection.Read.All` scope.
+
 1. To verify that the items were indexed, choose the relevant connector name. Check the **Items indexed** field to see how many issues were indexed.
 
     :::image type="content" source="assets/images/atk-copilot-connectors/items-indexed.png" alt-text="Github issues connector with 11 items indexed displayed":::
@@ -106,3 +110,4 @@ In addition to these folders, you can customize other parts of the code, dependi
 - [Create declarative agents using Microsoft 365 Agents Toolkit](build-declarative-agents.md)
 - [Copilot connector samples](overview-copilot-connector.md#microsoft-365-copilot-connector-samples)
 - [Community samples](https://github.com/pnp/graph-connectors-samples)
+- [Find your connector's ID by querying connectors in Graph Explorer (ExternalConnection.Read.All)](declarative-agent-capabilities-ids.md#microsoft-365-copilot-connectors)

@@ -1,11 +1,12 @@
 ---
 title: Agents for Microsoft 365 Copilot
 description: Choose the type of Microsoft 365 Copilot agent that works best for your scenario.
+#customer intent: As a developer evaluating Microsoft 365 Copilot extensibility options, I want to compare declarative agents and custom engine agents so that I can choose the right approach for my scenario.
 author: jessicaaawu
 ms.author: wujessica
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/18/2026
+ms.date: 06/18/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -133,3 +134,5 @@ Consider the cost implications of your agent solution design, from both the user
 - [Declarative agent architecture](declarative-agent-architecture.md)
 - [Custom engine agents overview](overview-custom-engine-agent.md)
 - [Custom engine agent architecture](custom-engine-agent-architecture.md)
+- [Build a declarative agent with Microsoft 365 Agents Toolkit](build-declarative-agents.md)
+- [Build a declarative agent with TypeSpec and Microsoft 365 Agents Toolkit](build-declarative-agents-typespec.md)

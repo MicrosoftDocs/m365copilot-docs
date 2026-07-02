@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 05/27/2026
+ms.date: 06/18/2026
 ---
 
 # Add the image generator capability to your agent
@@ -66,6 +66,7 @@ Image generator is enabled by default in [Agent Builder](agent-builder.md). To d
 
 ## Related content
 
+- [Microsoft 365 Copilot extensibility samples](samples.md)
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Declarative agent manifest reference](declarative-agent-manifest-1.7.md)
 - [Add the code interpreter capability to your agent](code-interpreter.md)

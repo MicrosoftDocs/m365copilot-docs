@@ -4,7 +4,7 @@ description: Learn how to set up authentication for MCP and API plugins in agent
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 04/23/2026
+ms.date: 06/18/2026
 ms.topic: article
 ---
 
@@ -19,9 +19,9 @@ You can configure authentication for Model Context Protocol (MCP) and API plugin
 
 ## OAuth 2.0 authorization code flow
 
-A plugin can access an MCP server or API using a bearer token obtained through the OAuth 2.0 authorization code flow, with optional Proof Key for Code Exchange (PKCE) support.
+A plugin can access an MCP server or API using a bearer token obtained through the OAuth 2.0 authorization code flow, with optional Proof Key for Code Exchange (PKCE) support. In this flow, Microsoft 365 Copilot opens the sign-in experience, the OAuth provider returns an authorization response to Teams, and Teams exchanges the authorization code for tokens.
 
-Before you begin, you need to register with your OAuth 2.0 provider to get a client ID and secret. If your OAuth provider requires you to specify allowed redirect URIs during app registration, make sure to include `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` in the list.
+Before you begin, register with your OAuth 2.0 provider to get a client ID and secret. Configure `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` as an allowed redirect URI or authorization callback URL in the OAuth provider registration. Teams uses this callback URL to receive the authorization response from your provider.
 
 > [!IMPORTANT]
 > Plugin support for OAuth 2.0 has the following limitations.
@@ -65,6 +65,8 @@ If your OAuth provider supports PKCE, uncomment the following line of code in m3
 
 ### Register an OAuth client in Teams developer portal
 
+The OAuth client registration in the Teams developer portal connects your agent's plugin configuration to the OAuth provider registration that issues tokens for your MCP server or API. The values in this registration must match your OAuth provider, your plugin manifest, and the protected API endpoint. Mismatched base URLs, app restrictions, or registration IDs can prevent users from signing in or can block token exchange.
+
 1. Open [Teams developer portal](https://dev.teams.microsoft.com/tools). Select **Tools** -> **OAuth client registration**.
 
 1. If you have no existing registrations, select **Register client**. If you have existing registrations, select **New OAuth client registration**.
@@ -73,13 +75,18 @@ If your OAuth provider supports PKCE, uncomment the following line of code in m3
 
     - **Registration name**: A friendly name for your registration.
     - **Base URL**: Your API's base URL. This value should correspond to the URL in the `url` property of the [MCP server spec object](plugin-manifest-2.4.md#mcp-server-spec-object) in the plugin manifest for MCP-based plugins, or an entry in the [`servers` array](https://swagger.io/docs/specification/v3_0/api-host-and-base-path/) in your OpenAPI document for API plugins.
+    - **Restrict usage by org**: Select which Microsoft 365 organizations can use this OAuth registration to access your API endpoints. Use **My organization only** for development or testing in one tenant. Use **Any Microsoft 365 organization** when the plugin must work across tenants.
+    - **Restrict usage by app**: Select **Any Teams app** during development if you don't know the final Teams app ID. After your app has a stable app ID, bind the registration to **Existing Teams app ID** so only that app can use the OAuth registration.
     - **Client ID**: The client ID or application ID issued by your OAuth 2.0 provider.
     - **Client secret**: Your client secret issued by your OAuth 2.0 provider.
     - **Authorization endpoint**: The URL from your OAuth 2.0 provider that apps use to [request an authorization code](/entra/identity-platform/v2-oauth2-auth-code-flow#request-an-authorization-code)
     - **Token endpoint**: The URL from your OAuth 2.0 provider that apps use to [redeem a code for an access token](/entra/identity-platform/v2-oauth2-auth-code-flow#redeem-a-code-for-an-access-token)
     - **Refresh endpoint**: The URL from your OAuth 2.0 provider that apps use to [refresh the access token](/entra/identity-platform/v2-oauth2-auth-code-flow#refresh-the-access-token)
-    - **Scope**: The permission scope defined by your API that allows access.
+    - **Scope**: The permissions your plugin requests from the OAuth provider. Use the scope values required by your provider and API. If your provider uses the Microsoft identity platform and your plugin needs refresh tokens, include `offline_access` with any API-specific delegated scopes.
     - **Enable Proof Key for Code Exchange (PKCE)**: Enable this setting if your OAuth provider supports PKCE.
+
+    > [!NOTE]
+    > For Cowork MCP plugins, follow the same OAuth client registration model in this article. If the plugin must work across tenants, set **Restrict usage by org** to **Any Microsoft 365 organization**. If your OAuth provider uses the Microsoft identity platform and the plugin needs automatic token refresh, include `offline_access` in **Scope** with any API-specific delegated scopes.
 
 1. Select **Save**.
 

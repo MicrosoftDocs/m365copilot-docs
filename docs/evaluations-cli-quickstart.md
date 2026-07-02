@@ -1,7 +1,8 @@
 ---
 title: Quickstart - Use the Agent Evaluations CLI (preview)
 description: Get started quickly with evaluating your Microsoft 365 Copilot agent using the M365 Copilot Agent Evaluations CLI tool.
-ms.date: 05/01/2026
+#customer intent: As a developer setting up agent evaluations, I want to configure my agent ID and environment variables so that the runevals CLI can find and evaluate my agent.
+ms.date: 06/18/2026
 author: lauragra
 ms.author: lauragra
 ms.reviewer: sakov
@@ -77,6 +78,8 @@ Choose the option that matches your project type.
 > If you built your agent by using Microsoft 365 Agents Toolkit, you already have `.env.local` with your agent configuration. Create `.env.local.user` in your project root for secrets.
 
 ### Microsoft 365 Agents Toolkit projects
+
+You don't set `M365_AGENT_ID` directly — the CLI auto-detects it from `M365_TITLE_ID` in `.env.local`. For details, see [Get your agent ID](evaluations-cli-get-env-values.md#get-your-agent-id-m365_agent_id).
 
 Add secrets to `.env.local.user`:
 

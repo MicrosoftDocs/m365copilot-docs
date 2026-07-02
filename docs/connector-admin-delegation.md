@@ -1,11 +1,12 @@
 ---
 title: Grant administrative rights to AI Administrators to manage Microsoft 365 Copilot connectors
 description: Learn how to delegate permissions to AI administrators so they can configure and administer Copilot connectors without a Global Administrator.
+#customer intent: As an IT administrator, I want to understand how to delegate connector management rights to AI Administrators so that they can manage Copilot connectors without a Global Administrator.
 author: bala5765
 ms.author: bak
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/24/2025
+ms.date: 06/18/2026
 ---
 
 # Grant administrative rights to AI Administrators to manage connectors
@@ -70,6 +71,9 @@ After the script runs, existing users with the **AI Administrator** role have ad
 
 To ensure that administrative rights were granted successfully:
 
+> [!NOTE]
+> This article covers the create and ingest scopes `ExternalItem.ReadWrite.OwnedBy` and `ExternalConnection.ReadWrite.OwnedBy`, which let AI Administrators create connections and ingest items. To instead query or list existing connections, an admin uses the distinct `ExternalConnection.Read.All` scope. For those steps, see [find your connector's ID by querying connectors in Graph Explorer](declarative-agent-capabilities-ids.md#microsoft-365-copilot-connectors).
+
 1. Sign in to the Microsoft Entra admin center as an AI Administrator.
 1. Go to the **App registrations** section and create a new application.
 1. Add ExternalItem.ReadWrite.OwnedBy and ExternalConnection.ReadWrite.OwnedBy permissions to the application.
@@ -111,3 +115,4 @@ No, granting these privileges is optional. Organizations can choose whether to d
 
 - [Delegate app registration permissions in Microsoft Entra ID](/entra/identity/role-based-access-control/delegate-app-roles)
 - [Application registration permissions for custom roles in Microsoft Entra ID](/entra/identity/role-based-access-control/custom-available-permissions)
+- [Query existing Copilot connectors in Graph Explorer (ExternalConnection.Read.All)](declarative-agent-capabilities-ids.md#microsoft-365-copilot-connectors)

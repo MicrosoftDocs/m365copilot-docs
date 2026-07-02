@@ -1,10 +1,11 @@
 ---
 title: Build API plugins as declarative agent actions using TypeSpec for Microsoft 365 Copilot
 description: Learn how to build API plugins as declarative agent actions with TypeSpec for Microsoft 365 Copilot
+#customer intent: As a developer, I want to build and provision an API plugin with TypeSpec and the Microsoft 365 Agents Toolkit so that I can add custom actions to my declarative agent in Microsoft 365 Copilot.
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 06/18/2026
 ms.topic: how-to
 ---
 
@@ -24,6 +25,14 @@ ms.topic: how-to
 
 > [!TIP]
 > For the best results, make sure that the API you are generating follows the guidelines detailed in [How to make an OpenAPI document effective in extending Copilot](openapi-document-guidance.md).
+
+## Set up the API plugin project in VS Code
+
+This article assumes you already have a declarative agent project that was created with the Microsoft 365 Agents Toolkit and TypeSpec. You add an API plugin to that project by defining its REST API operations in TypeSpec, and then provisioning the agent. The following sections walk through each operation.
+
+1. If you don't already have an agent project, create one by following [Create a declarative agent](build-declarative-agents-typespec.md#create-a-declarative-agent). When prompted, select **Start with TypeSpec for Microsoft 365 Copilot**.
+1. Open your agent project in Visual Studio Code, and open the `main.tsp` file in the project root.
+1. Define your API plugin by adding operations to `main.tsp` as shown in the following sections. When you're finished, provision the agent as described in [Provision and test the custom actions](#provision-and-test-the-custom-actions).
 
 ## Adding a `GET` operation
 
@@ -194,7 +203,9 @@ Open the `main.tsp` file and within the `PostsAPI` namespace, add the following 
 
 This code defines the REST API `DELETE /posts/{id}`, which deletes an existing blog post.
 
-## Test the custom actions
+## Provision and test the custom actions
+
+Use the **Lifecycle** pane in the Microsoft 365 Agents Toolkit to provision your agent and its API plugin, then test the custom actions in Microsoft 365 Copilot.
 
 1. Select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
 1. In the **Lifecycle** pane, select **Provision**.

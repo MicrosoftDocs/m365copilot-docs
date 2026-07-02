@@ -1,9 +1,10 @@
 ---
 title: Microsoft 365 Copilot Retrieval API pay-as-you-go consumption (preview)
 description: "Learn about Microsoft 365 Copilot Retrieval API pay-as-you-go billing and enablement for users without a Microsoft 365 Copilot add-on license."
+#customer intent: As a Microsoft 365 administrator, I want to know the prerequisites and billing for Retrieval API pay-as-you-go consumption so that I can enable it correctly for non-Copilot-licensed users.
 author: JasonFriedman10
 ms.author: jfriedman
-ms.date: 01/13/2026
+ms.date: 06/18/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ---

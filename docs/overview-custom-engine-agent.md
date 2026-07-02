@@ -1,10 +1,11 @@
 ---
 title: Custom Engine Agents for Microsoft 365
 description: Find information about custom engine agents, which are specialized chat experiences built on any large language model (LLM) and tailored for specific domain or workflows, and considerations for development and deployment.
+#customer intent: As a developer building a custom engine agent for Microsoft 365 Copilot, I want to understand the requirements and design and deployment considerations so that I can plan hosting, orchestration, and model choices before I build.
 author: jessicaaawu
 ms.author: wujessica
 ms.localizationpriority: medium
-ms.date: 01/13/2026
+ms.date: 06/18/2026
 ms.topic: overview
 ---
 
@@ -106,9 +107,11 @@ The following table provides scenario examples and the recommended development a
 | **Surgical planning in healthcare** | A hospital builds an agent for surgical teams to plan and schedule surgeries. The agent collaborates with doctors, nurses, and administrative staff and integrates with Patient Information and scheduling systems. The agent facilitates collaboration with all members of the team to plan, create appointments, resolve conflicts, and set reminders and notifications. | Use the **Teams SDK** because the agent operates in a multi-user, collaborative environment. Publishing within Teams channels or meetings allows seamless interaction, while the built-in Action Planner orchestrator connects to scheduling and patient information systems. |
 | **Employee onboarding assistant**   | A company wants to provide a lightweight AI assistant for new employees to answer HR FAQs, guide them through document completion, and point them to internal resources. The agent will mostly handle standard processes and documentation that are already available in Microsoft 365. | Use **Copilot Studio** because it enables rapid, low-code development, and deployment. The agent can use built-in Microsoft 365 knowledge and connectors, making it ideal for straightforward workflows that don’t require custom AI models or multi-channel orchestration. |
 
-## Design and deployment considerations
+## Requirements, design, and deployment considerations
 
 As you prepare to build and deploy your custom engine agent, consider the key factors described in this section to ensure performance, compliance, and sustainability.
+
+Requirements depend on your development approach: hosting for models and orchestrators varies by the [development approach](#development-approaches-for-custom-engine-agents) you choose, you can bring your own orchestration and foundation models, and custom engine agents require app manifest version 1.21 or later. For a high-level summary of what you need to build a custom engine agent, see [Agents for Microsoft 365 Copilot](agents-overview.md).
 
 > [!NOTE]
 > Custom engine agents are supported in app manifest version 1.21 and later versions.
@@ -148,8 +151,13 @@ For more information, see [Cost considerations for Copilot extensibility](cost-c
 
 Custom engine agent prompts and responses in Copilot Chat and Teams are stored in compliance with Microsoft 365 product terms and conditions and are managed as per the customer's instructions. To view and manage this stored data, admins can use Content Search or Microsoft Purview.
 
+For more information about governance and admin controls for agents, see [Governance and admin controls for agent sharing](data-privacy-security.md#governance-and-admin-controls-for-agent-sharing).
+
+If you're building a custom engine agent that calls the Microsoft 365 Copilot APIs, see [Security and authentication for Microsoft 365 Copilot APIs](copilot-apis-security-authentication.md) for details about how the APIs handle authentication, authorization, and organizational policy enforcement.
+
 ## Related content
 
+- [Agents for Microsoft 365 Copilot](agents-overview.md)
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365/copilot/extensibility/context)
 - [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
 - [Publish your Foundry agent to Microsoft 365](/azure/ai-foundry/agents/how-to/publish-copilot)

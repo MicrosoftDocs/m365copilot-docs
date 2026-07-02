@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 05/13/2026
+ms.date: 06/18/2026
 ---
 
 # Agents are apps for Microsoft 365
@@ -184,3 +184,5 @@ To learn more, see [Plugin manifest schema for Microsoft 365 Copilot](plugin-man
 - [Manage extensibility for Microsoft 365 Copilot](manage.md)
 - [Publish agents for Microsoft 365 Copilot](publish.md)
 - [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema)
+- [Data, Privacy, and Security considerations for extending Microsoft 365 Copilot](data-privacy-security.md)
+- [Microsoft 365 Copilot APIs overview](copilot-apis-overview.md#from-app-registration-to-api-client)
