@@ -4,7 +4,7 @@ description: Learn about the 2.3 schema for a manifest file for a plugin in Micr
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 06/19/2026
 ms.topic: reference
 ---
 
@@ -20,7 +20,7 @@ The following article describes the 2.3 schema used by API plugin manifest files
 
 This schema version introduces the following changes from [version 2.2](plugin-manifest-2.2.md).
 
-- Added support for [calling functions in an Office Add-in](build-api-plugins-local-office-api.md).
+- Added support for calling functions in an Office Add-in.
   - Renamed the OpenAPI runtime object to [Runtime object](#runtime-object) and made the following changes.
     - Added a new value for the `type` property: `LocalPlugin`.
     - Change the type of the `spec` property to [OpenAPI specification object](#openapi-specification-object) or [Local endpoint specification object](#local-endpoint-specification-object).

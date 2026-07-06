@@ -190,8 +190,6 @@ items:
           href: build-api-plugins-new-api.md
         - name: Build an API plugin from an existing API
           href: build-api-plugins-existing-api.md
-        - name: Build an API plugin with an Office JavaScript Library API
-          href: build-api-plugins-local-office-api.md
         - name: Authentication
           href: plugin-authentication.md
         - name: Confirmation prompts
