@@ -46,7 +46,7 @@ If you're configuring your agent manually, to add knowledge sources to your agen
 1. In Microsoft 365 Copilot, choose **New agent** from the left pane, and choose **Skip to configure**.
 1. In the **Knowledge** section, use one of the following methods to add knowledge sources:
    - **Search** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
-   - **Enter URL** - Add a public website, a SharePoint link (must be two levels deep and without query parameters), or a OneDrive shared link.
+- **Enter URL** - Add a public website, a SharePoint link that includes the site path (for example, `.../sites/<site-name>/...`) and doesn't include query parameters, or a OneDrive shared link.
    - **Browse** - Use the **Attach cloud files** picker to browse for and select SharePoint or OneDrive files, folders, or lists.
    - **Upload** - Upload files directly from your device.
 
@@ -80,7 +80,7 @@ Reference specific files, folders, lists, and sites as agent knowledge sources. 
 When you reference a SharePoint list, the following limits apply:
 
 - A list can have a maximum of 20,000 items (rows) and 50 MB of raw text. If your list exceeds either limit, the agent truncates it and notes the truncation in its response.
-- Attachment columns aren't supported.
+- The Attachments column (list attachments) isn't indexed or used for grounding; agents don't answer from attachment contents.
 - Selecting a SharePoint site doesn't include its lists. To use a list as knowledge, select the specific list.
 
 > [!NOTE]
@@ -93,7 +93,7 @@ When you reference a SharePoint list, the following limits apply:
 
 Enter a URL for a SharePoint site, folder, or file, such as `contoso.sharepoint.com/sites/policies`. The agent searches the URL and subpaths. For example, a URL such as `contoso.sharepoint.com/sites` also includes subpaths like `contoso.sharepoint.com/sites/policies`. The agent uses relevant information to provide a targeted response.
 
-You can also add a SharePoint list by URL. On the list, select **Share** or **Copy link** to get the link, then paste it as the URL. Use a direct link to the specific list, not a filtered or grouped view. A SharePoint site URL doesn't include the lists in that site, so enter the list's own URL.
+You can also add a SharePoint list by URL. On the list, select **Share** or **Copy link** to get the link, then paste the list URL (without query parameters). Use a direct link to the specific list, not a filtered or grouped view. A SharePoint site URL doesn't include the lists in that site, so enter the list's own URL.
 
 For OneDrive, enter a shareable link to a file or folder (for example, a URL copied from the browser or share options), not a local or relative path (for example, `C:\Users\YourName\Documents\File.xlsx`).
 
