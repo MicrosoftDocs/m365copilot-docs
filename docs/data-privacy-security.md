@@ -1,11 +1,11 @@
 ---
 title: Data, Privacy, and Security and Microsoft 365 Copilot Extensibility
-description: Learn how to protect your customer's data when you extend Microsoft 365 Copilot.
+description: Learn how to protect your customer's data when you extend Microsoft 365 Copilot, including governance and admin controls for agent sharing.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 09/05/2025
+ms.date: 06/18/2026
 ---
 
 # Data, privacy, and security considerations for extending Microsoft 365 Copilot
@@ -29,6 +29,72 @@ Microsoft 365 Copilot presents only data that each individual can access using t
 When you connect your external data to Microsoft 365 Copilot by using a synced Microsoft 365 Copilot connector, your data flows into Microsoft Graph. You can manage permissions to view external items by associating an [access control list](/graph/connecting-external-content-manage-items?branch=main#access-control-list) (ACL) with a Microsoft Entra user and group ID or an [external group](/graph/connecting-external-content-external-groups?context=/microsoft-365/copilot/extensibility/context).
 
 Prompts, responses, and data accessed through Microsoft Graph aren't used to train foundation LLMs, including those used by Microsoft 365 Copilot.
+
+## Governance and admin controls for agent sharing
+
+Agents in Microsoft 365 Copilot operate within existing Microsoft 365 data access boundaries. They do not grant new permissions or provide access to data beyond what a user is already authorized to access. Instead, agents package repeatable prompts and configured data sources, while respecting the controls enforced across Microsoft 365.
+
+IT administrators can use Microsoft 365 controls and tools to manage how agents are shared, discovered, and governed across their lifecycle.
+
+### Permission inheritance
+
+Agents respect existing Microsoft 365 permissions. If a user does not have access to a SharePoint site, Teams channel, or Outlook mailbox, the agent cannot retrieve or display content from those sources.
+
+Agents do not introduce new privileges. They operate within the same identity-based access model enforced by Microsoft Graph across Microsoft 365 services.
+
+### DLP, retention, and compliance controls
+
+Agents interact with data that remains governed by existing Microsoft 365 data loss prevention (DLP), retention, and compliance policies. Content accessed through connected services, such as SharePoint, Exchange, and Teams, continues to be subject to the policies configured for those services.
+
+Organizations with DLP and retention policies in place can expect those policies to apply to the underlying data accessed by agents. The behavior of agent interactions may depend on how those interactions are processed within Microsoft 365.
+
+### Audit logs and activity reports
+
+Microsoft 365 audit logs and reporting capabilities provide visibility into Copilot activity, including agent-related usage. These capabilities help administrators monitor usage and understand how Copilot experiences are used across the organization.
+
+The level of detail available in logs and reports may vary depending on the service and configuration.
+
+### Admin center management
+
+IT admins manage agent visibility, sharing, and lifecycle policies from the Microsoft 365 admin center via the **Copilot** > **Agents** page. From this page, admins can:
+
+- View agent inventory and agent metadata.
+- Enable, disable, assign, block, or remove agents to align with organizational policies.
+- Configure pay-as-you-go billing and review agent usage and consumption.
+
+For step-by-step procedures, see [Manage extensibility for Microsoft 365 Copilot](manage.md).
+
+### Agent sharing controls
+
+Admins configure agent sharing restrictions from the **Microsoft 365 admin center** > **Copilot** > **Settings** > **Data access** > **Agents** page. Available sharing options include:
+
+- All users in the organization
+- Specific users or groups
+- No users (sharing disabled)
+
+For more information, see [Share an agent](agent-builder-share-manage-agents.md#share-an-agent).
+
+### Microsoft Purview integration
+
+Organizations can enforce compliance using Microsoft Purview capabilities, including:
+
+- **Sensitivity labels** — Labels applied to SharePoint and OneDrive files are respected by agents when surfacing content.
+- **Audit logs** — Agent activity is captured in unified audit logs.
+- **Content Search** — Admins can use Content Search or Microsoft Purview to view and manage stored data.
+
+Custom engine agent prompts and responses in Copilot Chat and Teams are stored in compliance with Microsoft 365 product terms and conditions and are managed according to the customer's instructions.
+
+### Copilot Studio agent governance
+
+Agents built in Copilot Studio support additional governance controls through the Power Platform admin center, including:
+
+- **Application Lifecycle Management (ALM)** — Development across dev, test, and production environments.
+- **Connector governance** — Admins control which systems agents can connect to, reducing risk of unauthorized access.
+- **Environment-level DLP** — Data loss prevention, role-based access, and auditing enforced at the environment level.
+- **Publishing oversight** — Publishing to an organization's app catalog requires admin approval, ensuring visibility and control over what becomes broadly available.
+- **Telemetry and usage analytics** — Monitoring of agent behavior to ensure policy alignment.
+
+For more information, see [Copilot Studio security and governance](/microsoft-copilot-studio/security-and-governance).
 
 ## Considerations for line-of-business developers
 

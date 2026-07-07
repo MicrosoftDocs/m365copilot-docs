@@ -1,14 +1,14 @@
 ---
-title: Work IQ MCP overview (preview)
+title: Work IQ MCP overview
 description: Learn how to use Work IQ through the Model Context Protocol (MCP) to give AI agents tool-based access to Microsoft 365 data.
 author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/02/2026
+ms.date: 06/18/2026
 ---
 
-# Work IQ MCP overview (preview)
+# Work IQ MCP overview
 
 The Work IQ MCP server exposes Microsoft 365 intelligence capabilities to AI agents through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). It provides a set of generic tools that enable agents to read, create, update, and delete Microsoft 365 entities, invoke Microsoft 365 Copilot for natural-language reasoning, and discover API schemas - all through a single MCP endpoint.
 
@@ -26,7 +26,7 @@ The 10 tools are organized into four categories:
 
 | Category | Tools | Description |
 |----------|-------|-------------|
-| Entity tools | `fetch`, `create_entity`, `update_entity`, `delete_entity`, `do_action`, `call_function` | CRUD operations and actions on Microsoft 365 resources via Microsoft Graph |
+| Entity tools | `fetch`, `create_entity`, `update_entity`, `delete_entity`, `do_action`, `call_function` | CRUD operations and actions on Microsoft 365 resources |
 | Copilot tools | `ask`, `list_agents` | Invoke Microsoft 365 Copilot for natural-language intelligence and discover available agents |
 | Schema tools | `get_schema`, `search_paths` | Discover available API paths and retrieve OpenAPI schemas at runtime |
 
@@ -50,6 +50,9 @@ New workloads, backends, and data sources add **paths**, not tools. The tool sur
 ## Authentication
 
 The Work IQ MCP server uses Microsoft Entra ID for authentication. MCP clients automatically discover the authentication configuration through the `/.well-known/oauth-protected-resource` endpoint. For details on required permissions, see [Work IQ API permissions reference](../permissions.md).
+
+> [!NOTE]
+> The Work IQ service principal is created automatically in the tenant when Work IQ is used for the first time. In some corner cases, such as configuring Work IQ MCP policy in the Microsoft 365 admin center before any MCP use in the tenant, the service principal might not exist yet and policy configuration can fail. Tenant administrators can provision it by following the steps in [Enable your tenant for Work IQ](../enable-work-iq.md).
 
 ## Related content
 

@@ -214,6 +214,40 @@ The combination of this plugin manifest and API response results in the followin
 
 :::image type="content" source="assets/images/api-plugins/api-plugin-credit-card.png" alt-text="An Adaptive Card rendering a credit transaction.":::
 
+### Prevent blank Adaptive Cards when an array in the API response is empty
+
+Adaptive Cards can render blank when an array property in the API response is empty and the template doesn't include conditional logic to handle that scenario.
+
+The following example shows an API response where the `recommendations` array contains no items:
+
+`{"answer":"","recommendations":[],"followUpMessage":""}`
+
+In this case:
+
+1. The recommendations array has no items.
+1. The Adaptive Card template attempts to iterate over the array without checking whether data is available.
+
+To prevent a blank card from rendering, bind the template to the correct array property and add conditional logic to control rendering.
+
+Bind to the array by using `data_path`:
+
+`"data_path": "$.recommendations"`
+
+Iterate over objects only when data exists:
+
+```json
+{ "type": "ColumnSet", "$data": "${$root}", "$when": "${title != null && title != ''}" }
+```
+
+Optionally, provide fallback text when the array is empty:
+
+```json
+{ "type": "TextBlock", "text": "No recommendations available", "$when": "${length($root) == 0}" }
+```
+
+>[!TIP]
+> Always validate `data_path` and include `$when` conditions for empty arrays to prevent blank Adaptive Cards.
+
 ## Using static and dynamic templates together
 
 Plugins can combine the use of both static and dynamic templates. In this scenario, the static template acts as a default template that is used if the item doesn't have the `template_selector` property present, or if its value doesn't resolve to a template in the API response.

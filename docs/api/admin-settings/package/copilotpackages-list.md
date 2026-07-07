@@ -6,7 +6,8 @@ ms.author: pomuth
 ms.topic: reference
 doc_type: apiPageType
 ms.localizationpriority: high
-ms.date: 05/01/2026
+ms.date: 06/30/2026
+zone_pivot_groups: graph-api-versions
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -14,7 +15,9 @@ ms.date: 05/01/2026
 
 # List packages
 
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
 Retrieves a list of all packages available in the tenant.
 
@@ -30,13 +33,25 @@ Retrieves a list of all packages available in the tenant.
 |:---------------------------------------|:-----------------------------|:------------------------------|
 | Delegated (work or school account)     | CopilotPackages.Read.All     | CopilotPackages.ReadWrite.All |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
-| Application                            | Not supported.               | Not supported.                |
+| Application                            | CopilotPackages.Read.All     | CopilotPackages.ReadWrite.All |
 
 ## HTTP request
+
+:::zone pivot="graph-v1"
+
+```http
+GET https://graph.microsoft.com/v1.0/copilot/admin/catalog/packages
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
 
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages
 ```
+
+:::zone-end
 
 ## Request headers
 
@@ -48,11 +63,12 @@ GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages
 
 This method supports the `$filter` [OData query parameter](/graph/query-parameters) to help customize the response. The following properties are supported with the `$filter` OData query parameter. For examples of using the `$filter` query parameter, see [Examples](#examples).
 
-| Parameter              | Type     | Description                                                              |
-| ---------------------- | -------- | ------------------------------------------------------------------------ |
-| `supportedHosts`       | string   | Filter by supported host (`Copilot`, `Outlook`, `Teams`, `M365`)         |
-| `elementTypes`         | string   | Filter by element type (`Bots`, `DeclarativeAgent`, `CustomEngineAgent`) |
-| `lastModifiedDateTime` | datetime | Filter by last updated date/time                                         |
+| Parameter              | Type     | Description                                                                  |
+|------------------------|----------|------------------------------------------------------------------------------|
+| `supportedHosts`       | string   | Filter by supported host (`Copilot`, `Outlook`, `Teams`, `M365`)             |
+| `elementTypes`         | string   | Filter by element type (`Bots`, `DeclarativeAgent`, `CustomEngineAgent`)     |
+| `lastModifiedDateTime` | datetime | Filter by last updated date/time                                             |
+| `platform`             | string   | Filter by platform (`Copilot Studio`, `Microsoft 365 Copilot Agent Builder`) |
 
 ## Request body
 
@@ -70,9 +86,21 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 The following example shows a request.
 
+:::zone pivot="graph-v1"
+
+```http
+GET https://graph.microsoft.com/v1.0/copilot/admin/catalog/packages
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages
 ```
+
+:::zone-end
 
 ##### Response
 
@@ -113,9 +141,21 @@ Content-Type: application/json
 
 The following example shows a request.
 
+:::zone pivot="graph-v1"
+
+```http
+GET https://graph.microsoft.com/v1.0/copilot/admin/catalog/packages?$filter=supportedHosts/any(h:h eq 'Word')
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=supportedHosts/any(h:h eq 'Word')
 ```
+
+:::zone-end
 
 ##### Response
 
@@ -148,9 +188,21 @@ Content-Type: application/json
 
 The following example shows a request.
 
+:::zone pivot="graph-v1"
+
+```http
+GET https://graph.microsoft.com/v1.0/copilot/admin/catalog/packages?$filter=elementTypes/any(h:h eq 'OfficeAddIns')
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=elementTypes/any(h:h eq 'OfficeAddIns')
 ```
+
+:::zone-end
 
 ##### Response
 
@@ -183,9 +235,21 @@ Content-Type: application/json
 
 The following example shows a request.
 
+:::zone pivot="graph-v1"
+
+```http
+GET https://graph.microsoft.com/v1.0/copilot/admin/catalog/packages?$filter=lastModifiedDateTime gt 2026-01-01T00:00:00.0000000Z
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=lastModifiedDateTime gt 2026-01-01T00:00:00.0000000Z
 ```
+
+:::zone-end
 
 ##### Response
 
@@ -220,9 +284,21 @@ To list all agents, use a filter for `supportedHosts` that contains `Copilot`
 
 The following example shows a request.
 
+:::zone pivot="graph-v1"
+
+```http
+GET https://graph.microsoft.com/v1.0/copilot/admin/catalog/packages?$filter=supportedHosts/any(h:h eq 'Copilot')
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages?$filter=supportedHosts/any(h:h eq 'Copilot')
 ```
+
+:::zone-end
 
 ##### Response
 

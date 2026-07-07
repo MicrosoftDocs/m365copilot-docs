@@ -1,11 +1,12 @@
 ---
 title: Add knowledge sources to your declarative agent
 description: Learn how to add knowledge sources to your declarative agents.
+#customer intent: As an agent maker, I want to find the limits, licensing, and permissions that apply to each knowledge source in one place so that I can configure grounding that behaves predictably.
 author: lauragra
 ms.author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/11/2026
-ms.topic: article
+ms.date: 06/18/2026
+ms.topic: overview
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -47,7 +48,7 @@ When you configure your agent to use SharePoint and OneDrive content as knowledg
 
 For information about how to add SharePoint and OneDrive knowledge to your agent manifest in Agents Toolkit, see [OneDrive and SharePoint object](declarative-agent-manifest-1.7.md#onedrive-and-sharepoint-object).
 
-For information about how to add SharePoint and OneDrive knowledge to your agent in Agent Builder, see [Add knowledge sources](agent-builder-add-knowledge.md#sharepoint-and-onedrive-content).
+For information about how to add SharePoint and OneDrive knowledge to your agent in Agent Builder—and for the per-agent limits and how permissions and sensitivity labels are handled—see [SharePoint and OneDrive content](agent-builder-add-knowledge.md#sharepoint-and-onedrive-content).
 
 > [!NOTE]
 > SharePoint and OneDrive knowledge sources require the signed-in user to have an active Microsoft 365 Copilot license. If the user doesn't have a license, requests fail with the message **Sorry, I wasn’t able to respond**.
@@ -92,7 +93,7 @@ If you're using [Agent Builder](agent-builder-build-agents.md) to build your age
 > [!NOTE]
 >
 > - The file upload feature is available to users with usage billing enabled or with a Microsoft 365 Copilot license.
-> - Embedded file content isn't supported in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
+> - Embedded file content isn't supported in Microsoft 365 Government Community Cloud (GCC) environments.
 
 For more information about embedded files, see [Embedded file content](agent-builder-add-knowledge.md#embedded-file-content).
 
@@ -147,11 +148,11 @@ To fetch or create a Dataverse `skill` value:
 1. Get a bearer token to [authenticate](/power-apps/developer/data-platform/webapi/authenticate-web-api) and create Dataverse resources. To get a bearer token, create a [new app registration](https://ms.portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in Azure portal, and then run the following curl request.
 
     ```bash
-    curl -X POST https://login.microsoftonline.com/<tenant_ID>/oauth2/v2.0/token \ 
-      -H "Content-Type: application/x-www-form-urlencoded" \ 
-      -d "client_id=<client_ID>" \ 
-      -d "scope=https://YourOrgID.crm.dynamics.com/.default" \ 
-      -d "client_secret=<client_secret>" \ 
+    curl -X POST https://login.microsoftonline.com/<tenant_ID>/oauth2/v2.0/token \
+      -H "Content-Type: application/x-www-form-urlencoded" \
+      -d "client_id=<client_ID>" \
+      -d "scope=https://YourOrgID.crm.dynamics.com/.default" \
+      -d "client_secret=<client_secret>" \
       -d "grant_type=client_credentials"
     ```
 
@@ -161,14 +162,14 @@ To fetch or create a Dataverse `skill` value:
     AUTH="Bearer {TOKEN}"
     ORG="https://YourOrgID.crm.dynamics.com"
     API="$ORG/api/data/v9.1"
-    
+
     curl -s -X GET "$API/dvtablesearchs?\$select=dvtablesearchid,name,searchtype" \
     -H "Authorization: $AUTH" \
     -H "Accept: application/json"
     ```
 
     **Response**
-      
+
      ```json
      {
       "@odata.context": "https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,se…),
@@ -186,7 +187,7 @@ To fetch or create a Dataverse `skill` value:
     If a `skill` value already exists, use that value in your agent manifest file. If the `skill` value doesn't exist, the response contains an empty array.
 
     **Response**
-  
+
     ```json
     {
       "@odata.context":"https://YourOrgID.crm.dynamics.com/api/data/v9.1/$metadata#dvtablesearchs(dvtablesearchid,name,searchtype)",
@@ -197,12 +198,12 @@ To fetch or create a Dataverse `skill` value:
 1. If no `skill` exists, create a `DVTableSearch` skill and use the name you assign to it.
 
     **Request**
-    
+
     ```bash
     AUTH="Bearer {TOKEN}"
     ORG="https://YourOrgID.crm.dynamics.com"
     API="$ORG/api/data/v9.1"
-    
+
     curl -i -X POST "$API/dvtablesearchs" \
     -H "Authorization: $AUTH" \
     -H "Accept: application/json" \
@@ -211,18 +212,18 @@ To fetch or create a Dataverse `skill` value:
       "name": "Account_SystemUser_Skill",
       "searchtype": 0,
       "DVTableSearch_DVTableSearch_DVTableSearch": [
-        { 
-          "name": "Account", 
-          "entitylogicalname": "account" 
+        {
+          "name": "Account",
+          "entitylogicalname": "account"
         }
       ]
     }'
     ```
-    
+
     **Response**
-    
+
     The request returns **204 No Content** to indicate that the `DVTableSearch` skill was successfully created.
-    
+
     ```http
     HTTP/1.1 204 No Content
     ```

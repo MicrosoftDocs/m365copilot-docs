@@ -4,16 +4,22 @@ description: Represents user location information during a Copilot conversation 
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 05/15/2026
+ms.date: 06/24/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
+zone_pivot_groups: work-iq-rest-api-versions
 ---
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
 # Work IQ - copilotConversationLocation resource type
 
+:::zone pivot="work-iq-rest-beta"
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+:::zone-end
+
+:::zone pivot="work-iq-rest-prod"
+:::zone-end
 
 Represents user location information during a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 

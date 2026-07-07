@@ -5,7 +5,7 @@ author: krmarko
 ms.author: krmarko
 ms.reviewer: kjette
 ms.date: 05/18/2026
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Use the AI Learning Advisor template to build an agent

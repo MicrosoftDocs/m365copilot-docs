@@ -1,75 +1,62 @@
 ---
 title: Work IQ overview
-description: Learn how to extend agents with Work IQ a workplace intelligence layer that delivers a semantic understanding of everything happening across your business in enterprise data, context, and execution capabilities.
+description: Learn how Work IQ provides production-ready workplace intelligence for agents, with chat, context, tools, and workspaces accessible via A2A, MCP, and REST APIs on a usage-based pricing model.
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 06/02/2026
+ms.date: 06/16/2026
 ms.topic: overview
 ---
 
 # Work IQ overview
 
-Work IQ is a workplace intelligence layer that delivers a semantic understanding of everything happening across your business. It understands work context, relationships, and patterns so agents can deliver faster, more accurate, and more secure responses than connector-only approaches.
+Work IQ is a workplace intelligence layer that enables agents to access and reason over organizational data, context, and tools. It continuously builds a semantic understanding across Microsoft 365 and external systems with built-in, permission-aware governance.
 
-Work IQ combines four integrated components: *chat*, *context*, *tools*, and *workspaces*. Together, these components ground agents in organizational information and business signals so responses are relevant to how work actually happens.
+Combining chat, context, tools, and workspaces, Work IQ supports high-volume, multistep interactions and works across frameworks and runtimes through standard protocols. It provides the foundation for building agents, applications, and workflows that deliver faster, more intelligent, efficient outcomes.
 
-:::image type="content" source="../assets/diagrams/work-iq-layers.png" alt-text="Diagram showing Work IQ with integrated data, context, and skills + tools layers." border="false":::
+:::image type="content" source="../assets/diagrams/work-iq-api.png" alt-text="Diagram showing the Work IQ API with chat, context, tools, and workspaces components accessible via A2A, MCP, and REST protocols." border="false":::
 
-Work IQ is a secure platform that enables any agentic system to access and reason over an organization’s data, context, and tools. It continuously builds a rich, up-to-date semantic understanding across Microsoft 365, organizational systems, and external sources, with built-in governance that respects existing permissions and policies. Combining chat, context, tools, and workspaces, Work IQ supports high-volume, multistep interactions and scales to handle even the largest and most complex data estates. It works across frameworks and runtimes through standard protocols and provides the foundation for building agents, applications, and workflows that deliver faster, more intelligent, efficient outcomes.
+Work IQ API endpoints include A2A, a remote MCP server, and a REST API. Usage is independent of Microsoft 365 Copilot licensing and available through usage-based billing. Enterprise governance and cost management controls are available in the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-When it comes to extensibility, you can both extend Work IQ with your business data and extend the agents you build with the intelligence of Work IQ. Furthermore, you can leverage Work IQ intelligence within your own development workflow with Work IQ API. This article explains the extensibility opportunities within each layer of Work IQ.
+## Chat
 
-## Data
-
-The data layer provides secure access to structured and unstructured information from Microsoft 365, Dynamics 365, Power Apps, and connected business systems. This layer gives agents a foundational understanding of work across people, groups, content, and communication.
-
-### Microsoft 365 tenant data
-
-[Microsoft Graph](/graph/overview) data represents all the data from your Microsoft 365 tenant, including permission-based and information-protected content in SharePoint and OneDrive, including Word, Excel, PowerPoint, and other file types, as well as Outlook emails, and Teams meetings and chats. It also includes metadata and signals that describe collaboration, communication, and activity patterns over time.
-
-### Dynamics 365 and Power Apps business data
-
-Work IQ also integrates Dynamics 365 and Power Apps data through [Dataverse](/power-apps/maker/data-platform/), which stores structured business datasets for those applications. This integration enables agents to reason across productivity data and systems-of-record data together, such as linking supplier issues discussed in a Teams call with downstream inventory and sales effects.
-
-### External business data from Copilot connectors
-
-[Copilot connectors](/microsoft-365/copilot/connectors/) extend the foundation of your tenant data by ingesting data from non-Microsoft systems and line-of-business applications, including prebuilt and custom connectors. As a result, Work IQ can reason over a broader business data estate within the tenant boundary.
-
-[Federated connectors](/microsoft-365/copilot/connectors/federated-connectors-overview) (early access preview) offer an alternative way to bring your organization's data into Microsoft 365 that skips traditional indexing. Instead of crawling and syncing content into Microsoft Graph, federated connectors use Model Context Protocol (MCP) to read data in real time, making live or sensitive data sources discoverable without inclusion to the [semantic index](#semantic-index).
+Chat is optimized for conversational intelligence. Work IQ supports A2A for agent-to-agent collaboration and REST for web application interactions, enabling agents to delegate work, maintain continuity, and deliver fully processed, Copilot-quality responses.
 
 ## Context
 
-The context layer expands beyond baseline grounding with continuously evolving insights that improve response speed and relevance. Work IQ helps agents understand how people and organizations work, including skill profiles, important projects, collaboration frequency, workflow criticality, and communication velocity.
+Context is optimized by eliminating orchestration overhead. Work IQ assembles and grounds context internally across organizational data to provide agent-ready inputs, so agents don't need to stitch together raw signals or manage retrieval pipelines.
 
-### Memory and activity signals
+## Tools
 
-[Copilot memory](/copilot/microsoft-365/copilot-personalization-memory) captures explicit [user actions](https://support.microsoft.com/topic/get-started-with-personalizing-what-microsoft-365-copilot-remembers-cba7b79a-c46f-4ca7-b46e-2fa22c563f90) (including custom instructions and saved memories) and implicit signals from user activity patterns.
+Tools are optimized for fast, composable actions. A compact set of generic tools and skills lets agents reason, retrieve data, and act across Microsoft 365 through a simplified, agent-friendly surface with centralized governance.
 
-### Semantic index
+The [Work IQ MCP](/microsoft-copilot-studio/use-work-iq) collapses hundreds of operations into just 10 generic tools that provide direct access to Microsoft 365 data (mail, calendar, files, people, chat, and sites) and the ability to act on that data. These tools function as simple verbs (such as fetch, create, and update), while resource paths define what the agent is working with. This separation keeps the surface area small while remaining flexible and extensible as new data sources and scenarios emerge.
 
-With [semantic indexing](/microsoftsearch/semantic-index-for-copilot), Work IQ maps your organization’s data into an advanced lexical and semantic index to power search relevance and accuracy, while ensuring organizational boundaries and permission structures within your tenant are respected. The semantic index is a superset of content within [Microsoft Graph](#microsoft-365-tenant-data) and ingested content from [Copilot connectors](#external-business-data-from-copilot-connectors).
+A key capability of Work IQ allows agents to dynamically discover how data is structured at runtime. Instead of relying on predefined models or integrations, agents can understand what data exists, how it's organized, and how to interact with it as needed - turning every data source into a self-describing interface.
 
-### Business understanding with Dataverse intelligence
+## Workspaces
 
-Where Work IQ grounds agents in work productivity artifacts like files, meetings, and messages, [Dataverse intelligence](/power-apps/maker/data-platform/data-platform-intelligence) extends this foundation to structured business data, enabling agents to understand and act on your organization's systems of record.
+Workspaces are optimized for long-running agent workflows. SharePoint Embedded working storage gives agents a persistent space within your Microsoft 365 tenant boundary to manage intermediate data and outputs - supporting reliable task progression, reuse of results, and seamless handoff across agents and experiences.
 
-## Skills and tools
+## Security, authorization, and governance
 
-The skills and tools layer puts Work IQ intelligence into operation. Skills provide task-specific instructions that help agents complete specialized work with higher speed and precision. If skills describe what actions to take, tools execute those actions. Tools are the concrete integrations—MCP server tools, API plugins, and others services—that an agent calls to actually perform work.
+Work IQ centralizes control at a single point, combining simplified authorization with fine-grained policy enforcement. Instead of relying on hundreds of static OAuth scopes, the Work IQ MCP uses a small set of broad permissions to establish high-level access boundaries. A [Rego-based policy engine](https://www.openpolicyagent.org/docs/policy-language) enforces detailed, context-aware rules on every request. It evaluates factors like resource paths, request methods, user identity, and data content to control exactly what actions are allowed. Actions are user scoped, meaning every request runs in the context of a specific user and only accesses what that user is allowed to see or do.
 
-### Business skills
+Work IQ embeds observability and governance directly into the platform. Every tool invocation is logged and evaluated, enabling auditability, usage analytics, rate limiting, and real-time compliance enforcement across agents and data sources.
 
-[Business skills with Dataverse intelligence](/power-apps/maker/data-platform/data-platform-business-skill-overview) (preview) are natural-language instructions that encode your organization's processes, policies, and domain knowledge in a format agents can interpret and execute. Each skill defines how to complete a specific type of work — the steps, required inputs, and business rules that apply. At runtime, agents discover and apply relevant skills to complete tasks according to your organization's processes. When multiple agents share the same skill, they follow the same logic, ensuring consistent behavior across your organization.
+## Access and pricing
 
-### Work IQ CLI
+Work IQ API access is independent of Microsoft 365 Copilot licensing and available through usage-based billing.
 
-The [Work IQ CLI](cli.md) (preview) exposes your Microsoft 365 data through the Model Context Protocol, allowing AI coding assistants in your development environment to access and reason over your workplace information. Running the CLI in MCP server mode means your AI assistant can automatically pull in relevant context as you work — for example, retrieving details from a meeting where a feature was discussed and using that context to inform code suggestions and jump-start the implementation.
+- For Microsoft 365 Copilot licensed users, Work IQ is available in all Microsoft 365 Copilot experiences and agents. It is subject to usage-based billing for custom and third-party agents.
+- Users without a Microsoft 365 Copilot license are billed based on usage.
+
+Work IQ cost is variable based on usage and can be managed in the [Microsoft 365 admin center](https://admin.microsoft.com/). To learn more, see [Licensing](https://aka.ms/WorkIQ/licensing).
 
 ## Related content
 
-- [Work IQ A2A quickstart (preview)](a2a/quickstart.md)
-- [Microsoft Work IQ API (preview)](api-overview.md)
-- [Work IQ REST API overview (preview)](rest/overview.md)
-- [Microsoft Work IQ CLI (preview)](cli.md)
-- [Microsoft Work IQ APIs Terms of Use (preview)](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)
+- [Work IQ A2A quickstart](a2a/quickstart.md)
+- [Microsoft Work IQ API overview](api-overview.md)
+- [Work IQ REST API overview](rest/overview.md)
+- [Microsoft Work IQ CLI](cli.md)
+- [Microsoft Work IQ APIs Terms of Use](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)

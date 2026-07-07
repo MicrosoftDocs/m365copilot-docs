@@ -5,7 +5,7 @@ author: lauragra
 ms.author: lauragra
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 01/05/2025
+ms.date: 06/18/2026
 ---
 
 # Choose between Microsoft 365 Copilot and Copilot Studio to build your agent
@@ -81,6 +81,8 @@ IT administrators manage agent visibility, sharing, and lifecycle policies in th
 
 Admins can also manage agent sharing controls via the **Microsoft 365 Admin Center** > **Copilot** > **Settings** > **Data access** > **Agents** page. For more information, see [Share an agent](agent-builder-share-manage-agents.md#share-an-agent).
 
+For more information about how governance controls ensure privacy when sharing agents, see [Governance and admin controls for agent sharing](data-privacy-security.md#governance-and-admin-controls-for-agent-sharing).
+
 ## Copilot Studio governance principles
 
 Copilot Studio supports the creation of more sophisticated agents, often by makers or developers. These agents can integrate external data sources, call APIs, orchestrate complex workflows, and connect to systems beyond Microsoft 365—ideal for departmental or enterprise-wide solutions.
@@ -92,7 +94,7 @@ Copilot Studio applies the following key governance principles:
 - **Environment-level policies** - Data loss prevention (DLP), role-based access, and auditing are enforced at the environment level.
 - **Flexible deployment** - Agents can be published across Teams, websites, and custom endpoints with granular access controls.
 - **Secure collaboration** - Agents support view/edit rights for cross-functional teamwork with oversight.
-- **Development and publishing oversight** - Application Lifecycle Management (ALM) supports dev/test/prod environments, and publishing to an organization’s app catalog requires admin approval. This ensures visibility and control over what becomes broadly available.
+- **Development and publishing oversight** - Publishing to an organization's app catalog requires admin approval, ensuring visibility and control over what becomes broadly available.
 
 IT administrators use the Power Platform admin center to manage:
 
@@ -100,6 +102,8 @@ IT administrators use the Power Platform admin center to manage:
 - Lifecycle policies and publishing workflows.
 - Compliance via Microsoft Purview (sensitivity labels, audit logs, retention).
 - Telemetry and usage analytics to monitor agent behavior and ensure policy alignment.
+
+For more information about how governance controls ensure privacy when sharing agents, see [Governance and admin controls for agent sharing](data-privacy-security.md#governance-and-admin-controls-for-agent-sharing). For Copilot Studio-specific security details, see [Copilot Studio security and governance](/microsoft-copilot-studio/security-and-governance).
 
 ## Related content
 

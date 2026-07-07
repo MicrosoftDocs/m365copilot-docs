@@ -6,7 +6,8 @@ ms.author: pomuth
 ms.topic: reference
 doc_type: apiPageType
 ms.localizationpriority: high
-ms.date: 05/01/2026
+ms.date: 06/30/2026
+zone_pivot_groups: graph-api-versions
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -14,9 +15,11 @@ ms.date: 05/01/2026
 
 # Get Copilot package details
 
+:::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+:::zone-end
 
-Retrieves detailed information for a specific agent or app by ID.
+Retrieves detailed information for a specific agent by ID.
 
 [!INCLUDE [package-management-license](../../includes/package-management-license.md)]
 
@@ -30,13 +33,25 @@ Retrieves detailed information for a specific agent or app by ID.
 |:---------------------------------------|:-----------------------------|:------------------------------|
 | Delegated (work or school account)     | CopilotPackages.Read.All     | CopilotPackages.ReadWrite.All |
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
-| Application                            | Not supported.               | Not supported.                |
+| Application                            | CopilotPackages.Read.All     | CopilotPackages.ReadWrite.All |
 
 ## HTTP request
+
+:::zone pivot="graph-v1"
+
+```http
+GET https://graph.microsoft.com/v1.0/copilot/admin/catalog/packages/{id}
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
 
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages/{id}
 ```
+
+:::zone-end
 
 ## Request headers
 
@@ -58,9 +73,21 @@ If successful, this method returns a `200 OK` response code and a [copilotPackag
 
 The following example shows a request.
 
+:::zone pivot="graph-v1"
+
+```http
+GET https://graph.microsoft.com/v1.0/copilot/admin/catalog/packages/abc
+```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages/abc
 ```
+
+:::zone-end
 
 #### Response
 
@@ -71,7 +98,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/admin/catalog/packages/$entity",
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/admin/catalog/packages/$entity",
   "id": "P_19ae1zz1-56bc-505a-3d42-156df75a4xxy",
   "displayName": "Contoso Sales Agent",
   "type": "custom",

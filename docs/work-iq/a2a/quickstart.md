@@ -1,6 +1,6 @@
 ---
-title: Work IQ A2A quickstart (preview)
-description: Learn how to quickly test the Work IQ API using Agent-to-Agent (A2A) protocol
+title: Work IQ A2A quickstart
+description: Learn how to test your tenant configuration using the Agent-to-Agent (A2A) protocol
 author: MSFTgraph-sorceress
 ms.author: hstoffels
 ms.topic: quickstart
@@ -8,59 +8,27 @@ ms.localizationpriority: medium
 ms.date: 06/02/2026
 ---
 
-# Work IQ A2A quickstart (preview)
+# Work IQ A2A quickstart
 
-<!-- cSpell:ignore AADSTS MSAL -->
-
-> [!IMPORTANT]
-> Work IQ is in **public preview**. Features and APIs might change before general availability and do not have a set SLA.
-
-Work IQ is a workplace intelligence layer that delivers a semantic understanding of everything happening across your business. It enables developers to build agents, applications, and workflows that securely reason over Microsoft 365 and connected business systems, with grounded, permission-aware context applied automatically. This approach eliminates the need to build custom retrieval pipelines, orchestration logic, or compliance enforcement for workplace intelligence.
-
-This quickstart covers the Agent-to-Agent (A2A) protocol. A2A is an [open standard](https://a2a-protocol.org) for agent communication and supports synchronous mode against the Work IQ Gateway. Streaming mode (Server-Sent Events (SSE)) support is coming soon.
+<!-- cSpell:ignore AADSTS MSAL azurecli -->
 
 ## Prerequisites
 
-- A user with a Microsoft 365 Copilot license
+- [Enable your tenant for Work IQ](../enable-work-iq.md)
 - [.NET SDK](https://dotnet.microsoft.com/download/dotnet/8.0) version 8 or later for running the sample code
-- A user with organization admin access for the one-time [Work IQ setup](#enable-work-iq-api-in-your-organization)
 
-## Enable Work IQ API in your organization
+## Register the application in Microsoft Entra
 
-> ⏱️ ~5 minutes, one-time per organization.
+Register an application with permissions to access Work IQ. When you register the app, you get two values: `APP_ID` and `TENANT_ID`. Use these values with the A2A sample to test your tenant configuration.
 
-This section creates two things in your organization:
-
-- The **Work IQ service principal** (provisions the Work IQ resource so your users can request tokens for it)
-- An **app registration** that your client code uses to authenticate, with the `WorkIQAgent.Ask` delegated permission
-
-You (or your organization admin) can use the Microsoft Entra admin center or the Azure CLI to complete this step.
+> [!TIP]
+> **Building a server-side agent (web app)?** This quickstart uses a **public-client** registration (mobile/desktop) for the simplest path to a working sample. If your application is a server-side service that calls Work IQ on behalf of an end user (for example, a web agent that signs the user in and then forwards their identity to Work IQ), use a **confidential-client** registration with a client secret or certificate. Exchange the user's token by using the [On-Behalf-Of (OBO) flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). The Work IQ API surface and the **WorkIQAgent.Ask** delegated permission are the same in both flows.
 
 ### [Admin center](#tab/entra-admin)
 
-#### Step 1. Create the Work IQ service principal (Graph Explorer)
-
-1. Go to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) and sign in with an admin account.
-
-1. Set the method to **POST** and the URL to `https://graph.microsoft.com/v1.0/servicePrincipals`. Graph Explorer surfaces relevant scopes based on the URL and method, so the URL must be entered before consenting in the next step.
-
-1. Select **Modify permissions** and consent to `Application.ReadWrite.All`. This step is a one-time admin action and grants the scope **only for your own Graph Explorer session**. It doesn't change organization-wide permissions.
-
-1. Enter the following in the **Request body**.
-
-    ```json
-    {
-      "appId": "fdcc1f02-fc51-4226-8753-f668596af7f7"
-    }
-    ```
-
-1. Select **Run query**. A **201 Created** response confirms success. A conflict error means the service principal already exists - it's OK to proceed to the next step.
-
-#### Step 2. Create the app registration
-
-1. Go to the [Microsoft Entra admin center](https://entra.microsoft.com). IN the left-hand navigation pane, select **Entra ID**, then **App registrations**.
+1. Go to the [Microsoft Entra admin center](https://entra.microsoft.com). In the left-hand navigation pane, select **Entra ID**, and then select **App registrations**.
 1. Select **New registration**.
-1. Add a descriptive name, set **Supported account types** to  **Accounts in this organizational directory only**. Select **Register**.
+1. Add a descriptive name, set **Supported account types** to **Accounts in this organizational directory only**, and select **Register**.
 1. Copy the **Application (client) ID**. This value is your `APP_ID`.
 1. Select **Authentication**. Select **Add a platform** (or **Add Redirect URI**). In the dialog, select **Mobile and desktop applications**.
    - Select the suggested URI: `https://login.microsoftonline.com/common/oauth2/nativeclient`.
@@ -69,7 +37,7 @@ You (or your organization admin) can use the Microsoft Entra admin center or the
      - `ms-appx-web://microsoft.aad.brokerplugin/<APP_ID>` (where `<APP_ID>` is your `APP_ID`)
    - Under **Advanced settings**, set **Allow public client flows** to **Yes**.
    - Select **Save**.
-1. Select **API permissions**, **Add a permission**, then **APIs my organization uses**. Search for `Work IQ`, then select **Delegated permissions**. Select **WorkIQAgent.Ask** then select **Add permissions**.
+1. Select **API permissions**, **Add a permission**, and then **APIs my organization uses**. Search for `Work IQ`, and then select **Delegated permissions**. Select **WorkIQAgent.Ask** and then select **Add permissions**.
 1. Select **Grant admin consent for [your tenant]**. Review the confirmation dialog and select **Yes**.
 1. Copy your **Directory (tenant) ID** from the **Microsoft Entra ID** overview page.
 
@@ -77,15 +45,9 @@ The **WorkIQAgent.Ask** permission lets the app, on behalf of the signed-in user
 
 ### [Azure CLI](#tab/azure-cli)
 
-1. Create the Work IQ service principal in your organization.
+1. Create the app registration *(Choose your own display name)*.
 
-    ```bash
-    az ad sp create --id fdcc1f02-fc51-4226-8753-f668596af7f7
-    ```
-
-1. Create the app registration.
-
-    ```bash
+    ```azurecli
     APP_ID=$(az ad app create \
       --display-name "Work IQ Samples Client" \
       --sign-in-audience AzureADMyOrg \
@@ -96,7 +58,7 @@ The **WorkIQAgent.Ask** permission lets the app, on behalf of the signed-in user
 
 1. Create the service principal for the app.
 
-    ```bash
+    ```azurecli
     az ad sp create --id $APP_ID
     ```
 
@@ -106,7 +68,7 @@ The **WorkIQAgent.Ask** permission lets the app, on behalf of the signed-in user
     - `login.microsoftonline.com/common/oauth2/nativeclient`      : legacy MSAL native
     - `ms-appx-web://microsoft.aad.brokerplugin/<APP_ID>`         : WAM broker on Windows
 
-    ```bash
+    ```azurecli
     az ad app update --id $APP_ID \
       --public-client-redirect-uris \
         "http://localhost" \
@@ -119,7 +81,7 @@ The **WorkIQAgent.Ask** permission lets the app, on behalf of the signed-in user
     > [!NOTE]
     > `dcc1f02-fc51-4226-8753-f668596af7f7` is the Work IQ application ID, and `0b1715fd-f4bf-4c63-b16d-5be31f9847c2` is the scope ID for **WorkIQAgent.Ask**.
 
-    ```bash
+    ```azurecli
     az ad app permission add --id $APP_ID \
       --api fdcc1f02-fc51-4226-8753-f668596af7f7 \
       --api-permissions "0b1715fd-f4bf-4c63-b16d-5be31f9847c2=Scope"
@@ -128,20 +90,13 @@ The **WorkIQAgent.Ask** permission lets the app, on behalf of the signed-in user
 
 1. Get your tenant ID.
 
-    ```bash
+    ```azurecli
     az account show --query tenantId -o tsv
     ```
 
 ---
 
-You should now have two values: `APP_ID` and `TENANT_ID`. Pass these values to the sample via `--appid` and `--tenant`.
-
-> [!TIP]
-> **Building a server-side agent (web app)?** This quickstart uses a **public-client** registration (mobile/desktop) for the simplest path to a working sample. If your application is a server-side service that calls Work IQ on behalf of an end user (for example, a web agent that signs the user in and then forwards their identity to Work IQ), use a **confidential-client** registration with a client secret or certificate, and exchange the user's token via the [On-Behalf-Of (OBO) flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). The Work IQ API surface and the **WorkIQAgent.Ask** delegated permission are the same in both flows.
-
----
-
-## Quick start: A2A protocol
+## Quickstart: A2A protocol
 
 The [Agent-to-Agent (A2A)](https://a2a-protocol.org) protocol is an open standard for agent communication. Work IQ supports both A2A v1.0 (this quickstart) and v0.3. The `A2A-Version` request header controls version dispatch.
 
@@ -150,7 +105,7 @@ The [Agent-to-Agent (A2A)](https://a2a-protocol.org) protocol is an open standar
 
 ### Get the sample code
 
-Clone the sample repository with the following command.
+Clone the sample repository by using the following command.
 
 ```bash
 git clone https://github.com/microsoft/work-iq-samples.git
@@ -193,7 +148,7 @@ You > quit
 
 ### How it works
 
-Work IQ accepts A2A v1.0 over **JSON-RPC** at `https://workiq.svc.cloud.microsoft/a2a/`. (A2A v1.0 also defines a REST binding at `/v1/message:send`; Work IQ might expose this REST binding in a future preview update.)
+Work IQ accepts A2A v1.0 over **JSON-RPC** at `https://workiq.svc.cloud.microsoft/a2a/`. (A2A v1.0 also defines a REST binding at `/v1/message:send`; Work IQ might expose this REST binding in a future update.)
 
 #### Work IQ Gateway
 
@@ -301,7 +256,7 @@ To maintain conversation state, pass the `contextId` from the previous response 
 
 ### Agent discovery
 
-To invoke a specific agent, pass its **agent ID** via `--agent-id`. There are two ways to find an agent's ID.
+To invoke a specific agent, pass its **agent ID** through `--agent-id`. You can find an agent's ID in two ways.
 
 #### Recommended: WorkIQ CLI `list-agents` (experimental)
 
@@ -317,8 +272,8 @@ Each row shows the agent's display name, provider, and agent ID (the second line
 #### Alternative: copy from the Microsoft 365 Copilot URL
 
 1. Go to the Microsoft 365 Copilot Chat website: [https://m365.cloud.microsoft/chat/](https://m365.cloud.microsoft/chat/).
-2. Select your agent in the left navigation.
-3. The agent ID is in the browser address bar after `/chat/agent/`:
+1. Select your agent in the left navigation.
+1. The agent ID appears in the browser address bar after `/chat/agent/`:
 
 ```text
 https://m365.cloud.microsoft/chat/agent/P_c0fd1ab0-cbf3-7eb9-1a7d-2d823549ef31.8ad61c39-5b6e-447c-b26a-a64eee436502
@@ -367,7 +322,7 @@ dotnet run -- --token WAM --agent-id <AGENT_ID> --appid <APP_ID> --tenant <TENAN
 | Symptom | Fix |
 |---------|-----|
 | `401 Unauthorized` | Token `aud` doesn't match `api://workiq.svc.cloud.microsoft`. Check the audience claim. |
-| `403 Forbidden` (no scope error) | User missing Microsoft 365 Copilot license. Assign and wait 15–30 min. |
+| `403 Forbidden` (no scope error) | User not a member of a usage-based billing plan. Assign and wait 15–30 min. |
 | `403 Forbidden` with `Required scopes = [...]` | Admin consent for `WorkIQAgent.Ask` wasn't granted. Rerun admin consent (admin setup, step 6 / Azure CLI step 3). |
 | WAM `IncorrectConfiguration` (3399614466) | App registration is missing the broker redirect URI. Readd `ms-appx-web://microsoft.aad.brokerplugin/<APP_ID>` and try again. |
 | WAM still fails after the redirect URI is set | Single-tenant app + `/common` authority mismatch. Pass `--tenant <TENANT_ID>` so Microsoft Identity Client uses the tenant-specific authority. |
@@ -380,6 +335,7 @@ dotnet run -- --token WAM --agent-id <AGENT_ID> --appid <APP_ID> --tenant <TENAN
 
 - [Sample code on GitHub](https://github.com/microsoft/work-iq-samples)
 - [Work IQ API overview](../api-overview.md)
+- [Enable Work IQ in your tenant](../enable-work-iq.md)
 - [A2A protocol specification](https://a2a-protocol.org/latest/specification/)
 - [A2A .NET SDK](https://github.com/a2aproject/a2a-dotnet)
 - [A2A v0.3 → v1.0 migration guide](https://github.com/a2aproject/a2a-dotnet/blob/main/docs/migration-guide-v1.md)

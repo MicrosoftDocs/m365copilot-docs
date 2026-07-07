@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/build-api-plugins-local-office-api.md",
+      "redirect_url": "/office/dev/add-ins/excel/excel-skills",
+      "redirect_document_id": false
+    }
+  ]
+}

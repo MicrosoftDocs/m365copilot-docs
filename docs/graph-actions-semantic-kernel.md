@@ -1,10 +1,11 @@
 ---
 title: Invoke Microsoft Graph Actions with Semantic Kernel
 description: Learn how to build Semantic Kernel plugins by using Visual Studio Code and Kiota Copilot agent plugins.
+#customer intent: As a developer building custom engine agents, I want to invoke Microsoft Graph actions through Semantic Kernel plugins so that I can perform Microsoft 365 tasks from natural language prompts.
 author: fabianwilliams
 ms.author: fwilliams
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 06/18/2026
 ms.topic: article
 ---
 
@@ -110,6 +111,9 @@ The following table provides examples of prompts and the Copilot agent plugins t
 | Create a calendar event titled Sync Meeting.     | Creates a new calendar event.                       | CalendarPlugin       | Confirms creation with start and end time.            | Time formats like "1500 to 1530 Eastern" work. |
 | Show me what a user worked on for Semantic Kernel.        | Retrieves file content metadata.                     | Microsoft 365 Copilot Plugin  | Summarizes document details.                      | Requires accessible file (for example, OneDrive).     |
 | Check my email from my manager, summarize it, and set up a meeting. | Retrieves email, summarizes, creates event.       | Multiple plugins      | Confirms meeting setup and summary.              | Uses Contacts, Messages, and Calendar plugins. |
+
+> [!NOTE]
+> The actionable tasks in this table—such as sending email or creating calendar events—are performed by **Semantic Kernel agent plugins** calling Microsoft Graph, not by the [Microsoft 365 Copilot Chat API](api/ai-services/chat/overview.md). As noted in the Chat API's [known limitations](api/ai-services/chat/overview.md#known-limitations), the Chat API doesn't support action or content generation skills like creating files, sending emails, or scheduling meetings.
 
 ## Get started with Copilot agent plugins
 

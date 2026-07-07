@@ -1,11 +1,12 @@
 ---
 title: Agents, Actions, and Connectors in the Microsoft 365 Ecosystem
 description: Agents, actions, and connectors run across the Microsoft 365 ecosystem. Learn how the Microsoft 365 ecosystem extends the reach of your apps, services, and data.
+#customer intent: As a developer, I want to understand how connectors surface across the Microsoft 365 ecosystem so that I can choose the right connector model.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/13/2026
+ms.date: 06/18/2026
 ---
 
 # Copilot extensibility in the Microsoft 365 ecosystem
@@ -60,6 +61,8 @@ Your connector also runs outside of Copilot experiences. The following table lis
 |[Copilot connectors](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio?context=/microsoft-365/copilot/extensibility/context)|Microsoft 365 Copilot, Power Automate, Power Apps, Azure Logic Apps| [Extend agent capabilities with Copilot connectors](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio)|
 |[Microsoft 365 Copilot connectors](./overview-copilot-connector.md) |Microsoft 365 Copilot, Microsoft Search, Microsoft 365 Copilot app (microsoft365.com)|[Copilot connector experiences](/graph/connecting-external-content-experiences?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)|
 
+Microsoft 365 Copilot connectors come in two models: *synced* connectors ingest and index external content into Microsoft Graph, while *federated* connectors retrieve content in real time by using Model Context Protocol (MCP) without indexing data into Microsoft Graph. For a detailed comparison, see [Microsoft 365 Copilot connectors overview](./overview-copilot-connector.md).
+
 Microsoft is simplifying the way Microsoft 365 Copilot extensibility and other Microsoft 365 apps and services are published and managed, both within your organization and within in-product app stores of Microsoft 365 products.
 
 ## Unified app model
@@ -105,6 +108,8 @@ Microsoft 365 Copilot [developer mode](debugging-agents-copilot-studio.md) provi
 Microsoft 365 Copilot is compliant with existing privacy, security, and compliance commitments to Microsoft 365 commercial customers, including the General Data Protection Regulation (GDPR) and European Union (EU) Data Boundary. Microsoft 365 Copilot presents only data that each individual can access using the same underlying controls for data access used in other Microsoft 365 services. For more information, see Microsoft [privacy policy and service documentation](https://privacy.microsoft.com/) and [commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai).
 
 For more information for Copilot extensibility solution developers, see [Data, Privacy, and Security considerations for extending Microsoft 365 Copilot](./data-privacy-security.md).
+
+IT admins govern agent sharing, visibility, and lifecycle through the Microsoft 365 admin center and Microsoft Purview. For more information, see [Governance and admin controls for agent sharing](data-privacy-security.md#governance-and-admin-controls-for-agent-sharing).
 
 ## Related content
 

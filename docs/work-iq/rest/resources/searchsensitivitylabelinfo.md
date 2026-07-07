@@ -4,16 +4,22 @@ description: Describes the information protection label that details how to appl
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 05/20/2026
+ms.date: 06/24/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
+zone_pivot_groups: work-iq-rest-api-versions
 ---
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan -->
 
 # Work IQ - searchSensitivityLabelInfo resource type
 
+:::zone pivot="work-iq-rest-beta"
 [!INCLUDE [beta-disclaimer](../includes/beta-disclaimer.md)]
+:::zone-end
+
+:::zone pivot="work-iq-rest-prod"
+:::zone-end
 
 Describes the information protection label that details how to properly apply a sensitivity label to information.
 

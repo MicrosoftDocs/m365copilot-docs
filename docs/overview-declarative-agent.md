@@ -4,7 +4,7 @@ description: Learn how you can use declarative agents to meet business needs. De
 author: aycabas
 ms.author: aycabas
 ms.localizationpriority: medium
-ms.date: 05/18/2026
+ms.date: 06/18/2026
 ms.topic: overview
 ---
 
@@ -91,3 +91,4 @@ Declarative agents must pass validation checks for Responsible AI (RAI). For inf
 - [Agents are apps for Microsoft 365](agents-are-apps.md)
 - [Build agents with Agent Builder](agent-builder-build-agents.md)
 - [Build agents with Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context)
+- [Connect to other agents from a declarative agent](declarative-agent-connected-agent.md)

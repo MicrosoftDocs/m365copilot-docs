@@ -51,6 +51,10 @@ For CRUD operation, use a standard description as follows:
 
 For actions and functions, briefly describe what the action or function does.
 
+### Property or parameter tables
+
+For any property tables or parameter tables, **always** sort the rows alphabetically by the property or parameter name.
+
 ~~~md
 ---
 title: {api-method-name}

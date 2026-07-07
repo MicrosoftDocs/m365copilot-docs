@@ -1,10 +1,11 @@
 ---
 title: User experience guidelines for MCP apps in declarative agents for Microsoft 365 Copilot
 description: Learn how to build MCP apps that look and feel native to Microsoft 365 Copilot
+#customer intent: As a developer building MCP apps for Microsoft 365 Copilot, I want UX guidance so that I can build experiences that feel native to Copilot.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 06/18/2026
 ms.topic: article
 ---
 
@@ -20,63 +21,39 @@ This guide provides user experience (UX) guidance for developers building MCP-ba
 
 Building a great Copilot agent with the MCP based rich UI means delivering a focused, conversational experience that feels native to Copilot. Copilot agents should feel like helpful extensions of the conversation surfacing the right action at the right time rather than full applications rebuilt inside Copilot.
 
-:::row:::
-  :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-conversation-bubble.png":::
+### Deliver conversational value
 
-    ### Deliver conversational value
+- Agent should provide greater value inside Copilot than as a standalone UI.
+- Leverage natural language, thread context, and multi-turn interaction to enable workflows that would be difficult or inefficient in a traditional navigation model.
+- Design experiences that take advantage of conversation, not replicate existing flows.
 
-    - Agent should provide greater value inside Copilot than as a standalone UI.
-    - Leverage natural language, thread context, and multi-turn interaction to enable workflows that would be difficult or inefficient in a traditional navigation model.
-    - Design experiences that take advantage of conversation, not replicate existing flows.
-  :::column-end:::
-  :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-prohibited.png":::
+### Extract capabilities, don't replicate interfaces
 
-    ### Extract capabilities, don't replicate interfaces
+Avoid porting your full application experience into Copilot. Instead, identify high-value, atomic capabilities that can be exposed as tools. Each capability should:
 
-    Avoid porting your full application experience into Copilot. Instead, identify high-value, atomic capabilities that can be exposed as tools. Each capability should:
+- Require only the minimum necessary inputs.
+- Return structured, reliable outputs.
+- Enable the model to confidently determine the next step.
 
-    - Require only the minimum necessary inputs
-    - Return structured, reliable outputs
-    - Enable model to confidently determine the next step
-  :::column-end:::
-:::row-end:::
-:::row:::
-  :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-copilot.png":::
+### Design to feel native to Copilot
 
-    ### Design to feel native to Copilot
+- Leverage Copilot's design system, components, and interaction patterns to ensure a seamless, predictable experience.
+- Consistency reduces cognitive load, increases predictability, and minimizes the need for users to learn new interaction models.
 
-    - Leverage Copilot’s design system, components, and interaction patterns to ensure a seamless, predictable experience.
-    - Consistency reduces cognitive load, increases predictability, and minimizes the need for users to learn new interaction models.
-  :::column-end:::
-  :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-shield.png":::
+### Preserve human control
 
-    ### Preserve human control
+Trust is foundational to enterprise adoption. Users must remain the ultimate decision-makers, particularly when actions affect enterprise data. Provide:
 
-    Trust is foundational to enterprise adoption. Users must remain the ultimate decision-makers, particularly when actions affect enterprise data. Provide:
+- Clear visibility into agent actions
+- Explicit confirmations for sensitive operations
+- Transparent outcomes of what was created, modified, or updated
 
-    - Clear visibility into agent actions
-    - Explicit confirmations for sensitive operations
-    - Transparent outcomes of what was created, modified, or updated
-  :::column-end:::
-:::row-end:::
-:::row:::
-  :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-chart-increasing.png":::
+### Scale density with intent
 
-    ### Scale density with intent
+Adapt the visual footprint of your UI to the user's immediate need.
 
-    Adapt the visual footprint of your UI to the user’s immediate need.
-
-    - Use the inline widget for glanceable summaries and high-level actions.
-    - Use the expanded view for tasks where the user needs a larger real estate to work alongside the chat.
-  :::column-end:::
-  :::column:::
-  :::column-end:::
-:::row-end:::
+- Use the inline widget for glanceable summaries and high-level actions.
+- Use the expanded view for tasks where the user needs a larger real estate to work alongside the chat.
 
 ---
 

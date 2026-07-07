@@ -1,11 +1,12 @@
 ---
 title: Extend Microsoft 365 Copilot
 description: Extend, enrich, and customize Microsoft 365 Copilot with Copilot connectors and agents.
+#customer intent: As a developer, I want to understand the Microsoft 365 Copilot extensibility and API options so that I can choose the right approach for my scenario.
 author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/13/2026
+ms.date: 06/18/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -19,7 +20,7 @@ You can extend Copilot in several ways:
 
 - Use [Microsoft 365 Copilot connectors](#enhance-knowledge-in-copilot-with-connectors) to bring organizational data into Microsoft 365 Copilot, enabling Copilot to access and reason over a broader set of enterprise information.
 
-- Use the [Microsoft Work IQ API](#microsoft-work-iq-api-preview) to build agentic and AI-powered applications that securely reason over Microsoft 365 work context.
+- Use the [Microsoft Work IQ API](#microsoft-work-iq-api) to build agentic and AI-powered applications that securely reason over Microsoft 365 work context.
 
 - Use [Microsoft 365 Copilot APIs](#microsoft-365-copilot-apis) to programmatically access Copilot's capabilities in your custom applications and agents.
 
@@ -76,7 +77,7 @@ Many [prebuilt Copilot connectors](/microsoftsearch/connectors-gallery) are avai
 
 If an existing connector doesn't meet your needs, you can build a custom Copilot connector tailored to your specific business requirements. Custom connectors allow you to bring in proprietary data, connect to specialist systems, or integrate unique workflows into Copilot. For more information, see [Build Copilot connectors for Microsoft 365 Copilot](/graph/connecting-external-content-build-quickstart?context=/microsoft-365/copilot/extensibility/context).
 
-## Microsoft Work IQ API (preview)
+## Microsoft Work IQ API
 
 The [Microsoft Work IQ API](work-iq-api-overview.md) enables you to build agentic and AI-powered applications that securely reason over Microsoft 365 data while preserving existing permissions, compliance, and governance controls.
 
@@ -113,7 +114,7 @@ You can integrate the following Copilot APIs:
 
 - **[Copilot Search API (preview)](api/ai-services/search/overview.md)** - Perform hybrid search (semantic and lexical) across OneDrive for work or school content using natural language queries with contextual understanding and intelligent results. This API enables applications to discover relevant documents and files using natural language descriptions rather than exact keyword matches, creating intuitive search experiences that understand user intent and surface the most relevant content.
 
-- **[Copilot Chat API (preview)](api/ai-services/chat/overview.md)** - Send prompts directly to Copilot and receive responses so you can embed Copilot-powered conversation experiences within your own applications. This API brings Copilot to your users wherever they work.
+- **[Copilot Chat API (preview)](api/ai-services/chat/overview.md)** - Send prompts directly to Copilot and receive responses so you can embed Copilot-powered conversation experiences within your own applications. This API brings Copilot to your users wherever they work. The Chat API returns textual responses and doesn't perform actions like creating files, sending emails, or scheduling meetings; see [Known limitations](api/ai-services/chat/overview.md#known-limitations).
 
 - **[Copilot Interaction Export API](api/ai-services/interaction-export/resources/aiinteractionhistory.md)** - Export user interactions with Copilot, including prompts and responses. This API enables you to build data governance and protection solutions, and analyze Copilot usage in your application to optimize adoption.
 

@@ -1,10 +1,11 @@
 ---
 title: Build API plugins with a new API for Microsoft 365 Copilot
 description: Learn how to build API plugins with a new API for Microsoft 365 Copilot
+#customer intent: As a developer, I want to build an API plugin with a new API so that I can connect a REST API to Microsoft 365 Copilot.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 06/18/2026
 ms.topic: how-to
 ---
 
@@ -17,7 +18,22 @@ ms.topic: how-to
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
-- [Node.js](https://nodejs.org/) 20.x or 22.x
+- [Node.js](https://nodejs.org/) 20.x or 22.x. To confirm your installed version, run `node --version`.
+<!-- REVIEW (D6 / ADO 7509274 — SME-gated; do not assert a number): The supported
+Node.js versions for THIS plugin-build path are unconfirmed. Repo statements currently
+DISAGREE and must NOT be cross-imported: build-api-plugins-new-api.md=20.x/22.x;
+build-api-plugins-local-office-api.md=18,20,22,24; build-your-first-connector.md=18,20,22;
+eval CLI=24.12.0+. Per the D6 hard rule, do not invent versions and do not import the
+eval-CLI number. An SME must establish the authoritative matrix before any labeled
+"Supported Node.js versions" section is added here. The numbers above are quotes of
+existing doc text for SME triage only — none is asserted as correct. -->
+<!-- REVIEW-ASSIST (auto, non-authoritative — human must verify)
+attempt: This page's published value (20.x/22.x) matches its own Learn page, but the four-page conflict and the D6 do-not-assert rule remain unresolved.
+confidence: MEDIUM
+learn-safe: page-consistent only (no cross-path authority)
+sources: learn.microsoft.com/microsoft-365-copilot/extensibility/build-api-plugins-new-api; internal: workiq confirms only this page's number
+verify: WorkIQ confirmed the published page states 20.x/22.x but did not reconcile the differing numbers on the other build pages.
+recommendation: Hold — do not assert a Node.js matrix; SME must reconcile the four pages per ADO 7509274. -->
 
 ## Create the plugin and API
 

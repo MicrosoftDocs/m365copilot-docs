@@ -147,6 +147,8 @@ items:
     items:
     - name: Create the agent
       href: build-declarative-agents.md
+    - name: Manage environments and versions
+      href: declarative-agents-multi-environment.md
     - name: Customize agent behavior
       href: build-declarative-agents-customize-behavior.md
     - name: Add knowledge sources
@@ -188,8 +190,6 @@ items:
           href: build-api-plugins-new-api.md
         - name: Build an API plugin from an existing API
           href: build-api-plugins-existing-api.md
-        - name: Build an API plugin with an Office JavaScript Library API
-          href: build-api-plugins-local-office-api.md
         - name: Authentication
           href: plugin-authentication.md
         - name: Confirmation prompts
@@ -408,6 +408,8 @@ items:
   items:
   - name: Overview
     href: copilot-apis-overview.md
+  - name: Security and authentication
+    href: copilot-apis-security-authentication.md
   - name: Use client libraries
     href: sdks/api-libraries.md
   - name: Best practices

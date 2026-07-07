@@ -30,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 |:---------------------------------------|:------------------------------|:------------------------------|
 | Delegated (work or school account)     | CopilotPackages.ReadWrite.All | Not available.                |
 | Delegated (personal Microsoft account) | Not supported.                | Not supported.                |
-| Application                            | CopilotPackages.ReadWrite.All | Not available.                |
+| Application                            | Not available.                | Not available.                |
 
 ## HTTP request
 

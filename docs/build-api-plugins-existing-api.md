@@ -1,10 +1,11 @@
 ---
 title: Build API plugins from an existing API for Microsoft 365 Copilot
 description: Learn how to build API plugins from an existing API for Microsoft 365 Copilot
+#customer intent: As a developer, I want to build an API plugin from an existing API so that I can connect my REST API to Microsoft 365 Copilot.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 06/18/2026
 ms.topic: how-to
 ---
 

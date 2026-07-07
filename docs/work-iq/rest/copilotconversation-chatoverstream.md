@@ -4,9 +4,10 @@ description: Continue streamed conversations with the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 05/15/2026
+ms.date: 06/24/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
+zone_pivot_groups: work-iq-rest-api-versions
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -14,7 +15,12 @@ doc_type: apiPageType
 
 # Work IQ - copilotConversation: chatOverStream
 
+:::zone pivot="work-iq-rest-beta"
 [!INCLUDE [beta-disclaimer](includes/beta-disclaimer.md)]
+:::zone-end
+
+:::zone pivot="work-iq-rest-prod"
+:::zone-end
 
 The Work IQ Chat API allows you to create and continue multi-turn conversations with Microsoft 365 Copilot, while respecting the defined access controls within the organization. Use the Chat API to continue streamed conversations with Microsoft 365 Copilot.
 
@@ -32,9 +38,21 @@ This documentation covers continuing streamed Copilot conversations using the Ch
 
 ## HTTP request
 
+:::zone pivot="work-iq-rest-prod"
+
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/{conversationId}/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/conversations/{conversationId}/chatOverStream
 ```
+
+:::zone-end
+
+:::zone pivot="work-iq-rest-beta"
+
+```http
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/{conversationId}/chatOverStream
+```
+
+:::zone-end
 
 ## Request headers
 
@@ -70,8 +88,10 @@ The following example shows how to send a prompt to the Chat API using the strea
 
 The following example shows the request.
 
+:::zone pivot="work-iq-rest-prod"
+
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
@@ -83,6 +103,26 @@ Content-Type: application/json
   }
 }
 ```
+
+:::zone-end
+
+:::zone pivot="work-iq-rest-beta"
+
+```http
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+Content-Type: application/json
+
+{
+  "message": {
+    "text": "What meeting do I have at 9 AM tomorrow morning?"
+  },
+  "locationHint": {
+    "timeZone": "America/New_York"
+  }
+}
+```
+
+:::zone-end
 
 #### Response
 
@@ -270,8 +310,10 @@ The following example shows how to use a OneDrive or SharePoint file as context 
 
 The following example shows the request.
 
+:::zone pivot="work-iq-rest-prod"
+
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
@@ -290,6 +332,33 @@ Content-Type: application/json
   }
 }
 ```
+
+:::zone-end
+
+:::zone pivot="work-iq-rest-beta"
+
+```http
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+Content-Type: application/json
+
+{
+  "message": {
+    "text": "Summarize this document for me."
+  },
+  "locationHint": {
+    "timeZone": "America/New_York"
+  },
+  "contextualResources": {
+    "files": [
+      {
+        "uri": "https://contoso.sharepoint.com/sites/Engineering/Shared%20Documents/Specs/Business-Model.docx"
+      }
+    ]
+  }
+}
+```
+
+:::zone-end
 
 #### Response
 
@@ -457,8 +526,10 @@ The following example shows how to toggle off web search grounding when sending 
 
 The following example shows the request.
 
+:::zone pivot="work-iq-rest-prod"
+
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
@@ -475,6 +546,31 @@ Content-Type: application/json
   }
 }
 ```
+
+:::zone-end
+
+:::zone pivot="work-iq-rest-beta"
+
+```http
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+Content-Type: application/json
+
+{
+  "message": {
+    "text": "What is the highest grossing movie at the global box office this year?"
+  },
+  "locationHint": {
+    "timeZone": "America/New_York"
+  },
+  "contextualResources": {
+    "webContext": {
+      "isWebEnabled": false
+    }
+  }
+}
+```
+
+:::zone-end
 
 #### Response
 
@@ -622,8 +718,10 @@ The following example shows how to send more context with a chat message to the 
 
 The following example shows the request.
 
+:::zone pivot="work-iq-rest-prod"
+
 ```http
-POST https://workiq.svc.cloud.microsoft/rest/beta/copilot/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+POST https://workiq.svc.cloud.microsoft/rest/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
 Content-Type: application/json
 
 {
@@ -640,6 +738,31 @@ Content-Type: application/json
   }
 }
 ```
+
+:::zone-end
+
+:::zone pivot="work-iq-rest-beta"
+
+```http
+POST https://workiq.svc.cloud.microsoft/rest/beta/conversations/d0f6bffa-49d4-43c6-b93b-e7183f92b765/chatOverStream
+Content-Type: application/json
+
+{
+  "message": {
+    "text": "What is the birthday of my best friend, John Doe?"
+  },
+  "additionalContext": [
+    {
+      "text": "John Doe's birthday is on January 1st."
+    }
+  ],
+  "locationHint": {
+    "timeZone": "America/New_York"
+  }
+}
+```
+
+:::zone-end
 
 #### Response
 
