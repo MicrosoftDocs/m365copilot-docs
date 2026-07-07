@@ -80,7 +80,7 @@ Reference specific files, folders, lists, and sites as agent knowledge sources. 
 When you reference a SharePoint list, the following limits apply:
 
 - A list can have a maximum of 20,000 items (rows) and 50 MB of raw text. If your list exceeds either limit, the agent truncates it and notes the truncation in its response.
-- The Attachments column (list attachments) isn't indexed or used for grounding; agents don't answer from attachment contents.
+- The **Attachments** column (list attachments) isn't indexed or used for grounding; agents don't answer from attachment contents.
 - Selecting a SharePoint site doesn't include its lists. To use a list as knowledge, select the specific list.
 
 > [!NOTE]
