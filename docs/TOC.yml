@@ -248,6 +248,8 @@ items:
           href: plugin-manifest-2.1.md
     - name: Declarative agent manifest reference
       items:
+      - name: Version 1.8
+        href: declarative-agent-manifest-1.8.md
       - name: Version 1.7
         href: declarative-agent-manifest-1.7.md
       - name: Version 1.6
