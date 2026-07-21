@@ -26,7 +26,7 @@ To learn more about how to use the Microsoft Teams export APIs to export content
 > [!NOTE]
 > This API requires a valid Microsoft 365 Copilot license with the `Microsoft Copilot with Graph‑grounded chat` service plan.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 

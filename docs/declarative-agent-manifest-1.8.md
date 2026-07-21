@@ -1,34 +1,31 @@
 ---
-title: Declarative agent schema 1.7 for Microsoft 365 Copilot
-description: Learn about the 1.7 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
+title: Declarative agent schema 1.8 for Microsoft 365 Copilot
+description: Learn about the 1.8 schema for a manifest file for declarative agents in Microsoft 365 Copilot.
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 05/14/2026
+ms.date: 07/01/2026
 ms.topic: reference
 ---
 
 <!-- markdownlint-disable MD024 MD059 -->
 
-# Declarative agent schema 1.7 for Microsoft 365 Copilot
+# Declarative agent schema 1.8 for Microsoft 365 Copilot
 
-This article describes the 1.7 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Microsoft 365 app manifest references declarative agent manifests inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
+This article describes the 1.8 schema used by the declarative agent manifest. The manifest is a machine-readable document that provides a Large Language Model (LLM) with the necessary instructions, knowledge, and actions to specialize in addressing a select set of user problems. Microsoft 365 app manifest references declarative agent manifests inside an [app package](agents-are-apps.md#app-package). For details, see the [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema/declarative-agent-ref).
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification focuses on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
-[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
-
 ## Changes from previous version
 
-This schema version introduces the following changes from [version 1.6](declarative-agent-manifest-1.6.md):
+This schema version introduces the following changes from [version 1.7](declarative-agent-manifest-1.7.md):
 
-- Added the optional `editorial_answers` property to define predefined question-answer pairs that the agent can use to respond to user queries based on semantic similarity.
-- Added the optional `default_response_mode` property to the [behavior overrides object](#behavior-overrides-object) to control the default response mode for the agent.
-- Added the optional `depends_on` property to the [conversation starter object](#conversation-starters-object) to specify capability dependencies for conversation starters.
+- Added the new `EmailActions` capability to enable write operations on email such as triage, supervised send, delete, inbox rules, auto-reply, and folder management. See [Email actions object](#email-actions-object).
+- Added the new `MeetingActions` capability to enable meeting and calendar actions such as scheduling events, creating time-finding polls, and surfacing time insights. See [Meeting actions object](#meeting-actions-object).
 
 ## JSON schema
 
-You can find the schema described in this document in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.7/schema.json).
+You can find the schema described in this document in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.8/schema.json).
 
 [!INCLUDE [declarative-agent-manifest-conventions](includes/declarative-agent-manifest-conventions.md)]
 
@@ -40,7 +37,7 @@ The declarative agent manifest object contains the following properties.
 
 | Property                | Type                                                                  | Description |
 | ----------------------- | --------------------------------------------------------------------- | ----------- |
-| `version`               | String                                                                | Required. The schema version. Set to `v1.7`. |
+| `version`               | String                                                                | Required. The schema version. Set to `v1.8`. |
 | `id`                    | String                                                                | Optional. An identifier for the manifest. |
 | `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It must contain at least one nonwhitespace character and be 100 characters or less. |
 | `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It must contain at least one nonwhitespace character and be 1,000 characters or less. |
@@ -63,7 +60,7 @@ The following code shows an example of the required fields in a declarative agen
 
 ```json
 {
-  "version": "v1.7",
+  "version": "v1.8",
   "name": "Repairs agent",
   "description": "This declarative agent is meant to help track any tickets and repairs",
   "instructions": "This declarative agent needs to look at my Service Now and Jira tickets/instances to help me keep track of open items"
@@ -99,9 +96,11 @@ The capabilities object is the base type for objects in the `capabilities` prope
 - [Dataverse object](#dataverse-object)
 - [Microsoft Teams messages object](#microsoft-teams-messages-object)
 - [Email object](#email-object)
+- [Email actions object](#email-actions-object)
 - [People object](#people-object)
 - [Scenario models object](#scenario-models-object)
 - [Meetings object](#meetings-object)
+- [Meeting actions object](#meeting-actions-object)
 - [Embedded knowledge object](#embedded-knowledge-object)
 
 [!INCLUDE [declarative-agent-capabilities-license-requirement](includes/declarative-agent-capabilities-license-requirement.md)]
@@ -178,6 +177,9 @@ The capabilities object is the base type for objects in the `capabilities` prope
     },
     {
       "name": "People"
+    },
+    {
+      "name": "EmailActions"
     },
     {
       "name": "ScenarioModels",
@@ -492,6 +494,43 @@ The folders object contains the following property.
 | ----------- | ------ | ----------- |
 | `folder_id` | String | Required. The well-known folder name or folder ID of the folder to reference. |
 
+#### Email actions object
+
+Indicates that the declarative agent can perform write operations on email in the mailboxes the user has access to. This capability enables email write operations such as triage (archive, flag, mark read, pin, move, copy, report junk), supervised send, delete, inbox rules (create/get), auto-reply, and folder management (create/list). This capability is separate from the `Email` capability, which is read-only (search). Developers who want email write access should use `EmailActions`; those who want only email search should use `Email`.
+
+> [!NOTE]
+> `EmailActions` operates independently of the `Email` capability. Any scope restrictions configured in the `Email` capability (such as `folders`, `shared_mailbox`, or `group_mailboxes`) do not apply to `EmailActions`. The two capabilities can be declared together or independently.
+
+The email actions object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `name`   | String | Required. Must be set to `EmailActions`. |
+
+##### Email actions object example
+
+###### [JSON](#tab/json)
+
+```json
+{
+  "capabilities": [
+    {
+      "name": "EmailActions"
+    }
+  ]
+}
+```
+
+###### [TypeSpec](#tab/tsp)
+
+```typescript
+namespace MyAgent {
+  op emailActions is AgentCapabilities.EmailActions;
+}
+```
+
+---
+
 #### People object
 
 Indicates that the declarative agent can search for information about people in the organization. Refer to [People knowledge](knowledge-sources.md#people) for more details on the data returned by base People capability.
@@ -546,6 +585,40 @@ The meeting identifier object contains the following properties.
 | `id`        | String  | Required. The unique identifier for the meeting. For instructions on finding the ID of a meeting, see [Get the ID of a meeting](/troubleshoot/exchange/calendars/cdl/get-meeting-id). |
 | `is_series` | Boolean | Required. Indicates whether the meeting is a series. |
 
+#### Meeting actions object
+
+Indicates that the declarative agent can perform meeting and calendar actions, such as scheduling events, creating time-finding polls, or surfacing time insights. The specific actions supported may evolve over time.
+
+The meeting actions object contains the following property.
+
+| Property | Type   | Description |
+| -------- | ------ | ----------- |
+| `name`   | String | Required. Must be set to `MeetingActions`. |
+
+##### Meeting actions object example
+
+###### [JSON](#tab/json)
+
+```json
+{
+  "capabilities": [
+    {
+      "name": "MeetingActions"
+    }
+  ]
+}
+```
+
+###### [TypeSpec](#tab/tsp)
+
+```typescript
+namespace MyAgent {
+  op meetingActions is AgentCapabilities.MeetingActions;
+}
+```
+
+---
+
 ### Embedded knowledge object
 
 Indicates that the declarative agent can use files locally in the app package.
@@ -563,10 +636,10 @@ Embedded knowledge files have a maximum file size of 1 MB and must be one of the
 
 The embedded knowledge object contains the following properties:
 
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `name` | String | Required. Must be set to `EmbeddedKnowledge`. |
-| `files` | Array of [File object](#file-object) | Optional. List of objects identifying files that contain knowledge the agent can use for grounding. Maximum size of the array is 10. You must specify either `embedded_resource_snapshot_id` or `files`, but not both. |
+| Property                         | Type                                 | Description |
+| -------------------------------- | ------------------------------------ | ----------- |
+| `name`                           | String                               | Required. Must be set to `EmbeddedKnowledge`. |
+| `files`                          | Array of [File object](#file-object) | Required. List of objects identifying files that contain knowledge the agent can use for grounding. Maximum size of the array is 10. |
 
 #### EmbeddedKnowledge object example
 
@@ -818,11 +891,11 @@ Identifies a declarative agent that can be used by this agent. See [Connect to o
 > [!NOTE]
 > This capability is in preview.
 
-The worker agent object contains the following property.
+The worker agent object contains the following properties.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
-| `id`     | String | The title ID of the application that contains the declarative agent. This is returned when publishing the application with the Microsoft 365 Agents Toolkit or may be found in the [agent metadata section of the developer mode card](debugging-agents-vscode.md#agent-metadata-section). You must specify either `id` or `file`, but not both. |
+| `id`     | String | Optional. The title ID of the application that contains the declarative agent. This is returned when publishing the application with the Microsoft 365 Agents Toolkit or may be found in the [agent metadata section of the developer mode card](debugging-agents-vscode.md#agent-metadata-section). You must specify either `id` or `file`, but not both. |
 
 ### User override object
 
@@ -918,7 +991,7 @@ The similarity thresholds object contains the following properties.
 
 The following example shows a declarative agent manifest file that uses most of the manifest properties described in this article.
 
-:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.7.json":::
+:::code language="json" source="includes/sample-manifests/declarative-agent-sample-manifest-1.8.json":::
 
 ## Related content
 

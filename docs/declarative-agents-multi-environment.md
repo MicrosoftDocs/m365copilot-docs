@@ -214,6 +214,6 @@ This approach treats both target environments and agent versions as deployment t
 - [Microsoft 365 Agents Toolkit overview](/microsoftteams/platform/toolkit/agents-toolkit-fundamentals)
 - [Agents Toolkit CLI reference](/microsoftteams/platform/toolkit/agents-toolkit-cli)
 - [Provision and deploy with Agents Toolkit](/microsoftteams/platform/toolkit/provision)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.7.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.8.md)
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Publish agents](publish.md)
