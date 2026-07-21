@@ -87,7 +87,7 @@ Instructions change how an agent behaves.
     """)
     ```
 
-  The contents of this decorator are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.7.md#declarative-agent-manifest-object).
+  The contents of this decorator are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.8.md#declarative-agent-manifest-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -113,7 +113,7 @@ Conversation starters are hints that are displayed to the user to demonstrate ho
     })
     ```
 
-  For more information, see [Conversation starters object](declarative-agent-manifest-1.7.md#conversation-starters-object).
+  For more information, see [Conversation starters object](declarative-agent-manifest-1.8.md#conversation-starters-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -137,7 +137,7 @@ The [web search capability](knowledge-sources.md#web-and-scoped-web-search) enab
     }
     ```
 
-    For more information, see [Web search object](declarative-agent-manifest-1.7.md#web-search-object).
+    For more information, see [Web search object](declarative-agent-manifest-1.8.md#web-search-object).
 
     > [!NOTE]
     > Not specifying the `Sites` array causes all web content to be available to the agent.
@@ -166,7 +166,7 @@ The [SharePoint capability](knowledge-sources.md#sharepoint-and-onedrive) enable
     }
     ```
 
-    For more information, see [OneDrive and SharePoint object](declarative-agent-manifest-1.7.md#onedrive-and-sharepoint-object).
+    For more information, see [OneDrive and SharePoint object](declarative-agent-manifest-1.8.md#onedrive-and-sharepoint-object).
 
     > [!NOTE]
     >
@@ -197,7 +197,7 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) allows the 
     }
     ```
 
-    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.7.md#microsoft-teams-messages-object).
+    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.8.md#microsoft-teams-messages-object).
 
     > [!NOTE]
     > - The URL in the `url` property must be well formed links to a Teams chat, team, or meeting chat.
@@ -223,7 +223,7 @@ The [people capability](knowledge-sources.md#people)) allows you to scope your a
     }
     ```
 
-  For more information, see [People object](declarative-agent-manifest-1.7.md#people-object).
+  For more information, see [People object](declarative-agent-manifest-1.8.md#people-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -249,7 +249,7 @@ The [email capability](knowledge-sources.md#email) allows you to scope your agen
     }
     ```
 
-    For more information, see [Email object](declarative-agent-manifest-1.7.md#email-object).
+    For more information, see [Email object](declarative-agent-manifest-1.8.md#email-object).
 
     > [!NOTE]
     >
@@ -276,7 +276,7 @@ The [image generator capability](image-generator.md) enables agents to generate 
     }
     ```
 
-  For more information, see [Graphic art object](declarative-agent-manifest-1.7.md#graphic-art-object).
+  For more information, see [Graphic art object](declarative-agent-manifest-1.8.md#graphic-art-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -298,7 +298,7 @@ The [code interpreter capability](code-interpreter.md) is an advanced tool desig
     }
     ```
 
-  For more information, see [Code interpreter object](declarative-agent-manifest-1.7.md#code-interpreter-object).
+  For more information, see [Code interpreter object](declarative-agent-manifest-1.8.md#code-interpreter-object).
 
 1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
 
@@ -326,7 +326,7 @@ You can add items ingested by a Copilot connector to the available knowledge for
     }
     ```
 
-    For more information, see [Copilot connectors object](declarative-agent-manifest-1.7.md#copilot-connectors-object).
+    For more information, see [Copilot connectors object](declarative-agent-manifest-1.8.md#copilot-connectors-object).
 
     > [!NOTE]
     > Not specifying the `Connections` array causes content from all Copilot connectors in your Microsoft 365 organization that are available to the logged in user to be available to the agent.

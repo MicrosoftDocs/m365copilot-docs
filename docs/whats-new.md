@@ -19,6 +19,15 @@ For the latest information, announcements, and news about preview and generally 
 
 ## July 2026
 
+### Declarative agent manifest version 1.8
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.8](declarative-agent-manifest-1.8.md) adds the following features:
+
+- Added the new `EmailActions` capability to enable write operations on email such as triage, supervised send, delete, inbox rules, auto-reply, and folder management.
+- Added the new `MeetingActions` capability to enable meeting and calendar actions such as scheduling events, creating time-finding polls, and surfacing time insights.
+- Added the `file` property to the worker agent object as an alternative to `id` for referencing worker agents by file path.
+- Added the `embedded_resource_snapshot_id` property to the embedded knowledge object.
+
 ### New version parameter for Copilot usage reports API
 
 A `version` parameter is added to the [getMicrosoft365CopilotUserCountSummary](api/admin-settings/reports/copilotreportroot-getmicrosoft365copilotusercountsummary.md), [getMicrosoft365CopilotUserCountTrend](api/admin-settings/reports/copilotreportroot-getmicrosoft365copilotusercounttrend.md), and [getMicrosoft365CopilotUsageUserDetail](api/admin-settings/reports/copilotreportroot-getmicrosoft365copilotusageuserdetail.md) APIs that developers can use to request extra information in the generated reports.
