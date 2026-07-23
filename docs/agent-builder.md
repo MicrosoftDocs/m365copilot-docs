@@ -51,10 +51,6 @@ Agents you create by using Microsoft 365 Copilot don't consume the tenant's Data
 
 For information about data subject rights and responding to requests to rectify personal data, see [Personal data requests for Copilot Studio](/microsoft-copilot-studio/personal-data-summary).
 
-## Admin controls
-
-Administrators can control whether Agent Builder is available to users in their organization. For information about agent admin controls, see [Manage agents for Microsoft 365 Copilot in Integrated Apps](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
-
 ## Network requirements
 
 Agent Builder requires access to the following endpoint. Make sure that this endpoint isn't blocked by your network firewall or proxy configuration.
