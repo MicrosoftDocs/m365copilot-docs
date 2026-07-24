@@ -5,7 +5,7 @@ author: carolkigoonya
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 11/17/2025
+ms.date: 07/23/2026
 ---
 
 # Use developer mode in Microsoft 365 Copilot to test and debug agents
@@ -39,6 +39,20 @@ The agent metadata provides key details about the agent and the current debuggin
 - **Agent version** – The version number of the agent currently in use.
 - **Conversation ID** - Identifies the active chat session or conversation.
 - **Request ID** - Identifies the specific prompt within the conversation.
+
+> [!NOTE]
+> The prefix in the **Agent ID** indicates how the agent is distributed:
+> 
+> - `U_` indicates a user-scoped (sideloaded) agent.
+> - `T_` indicates a tenant-scoped agent (published to the tenant store or org catalog).
+> - `P_` indicates a publicly available agent.
+>
+> For related publishing guidance, see:
+>
+> - [Sideload your app in Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
+> - [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md)
+> - [Publish agents in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents)
+> - [Publish agents for Microsoft 365 Copilot](publish.md)
 
 ### Agent capabilities
 

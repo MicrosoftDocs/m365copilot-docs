@@ -4,7 +4,7 @@ description: Learn how to build your first Microsoft 365 Copilot connector for p
 author: wictorwilen
 ms.author: wictorwilen
 ms.localizationpriority: medium
-ms.date: 06/02/2026
+ms.date: 07/20/2026
 ms.topic: how-to
 ---
 
@@ -29,7 +29,6 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 
 - The schema must have one property with the `personAccount` label to be able to map the `externalItem` to a person.
 - Properties without a label are considered *custom properties*.
-- Labels marked with `(beta)` are only available in the Microsoft Graph beta endpoint.
 
 | Property label          | Property type      | Profile entity                                                          | Description                                                                 |
 |-------------------------|--------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -52,7 +51,7 @@ Microsoft 365 Copilot connectors for people data support enrichment for the foll
 | `personSkills`          | `stringCollection` | [`skillProficiency`](/graph/api/resources/skillproficiency)             | Describes skills the user is proficient in.                                 |
 | `personWebAccounts`     | `stringCollection` | [`webAccount`](/graph/api/resources/webaccount)                         | Describes external web accounts the user has.                               |
 | `personWebSite`         | `string`           | [`webSite`](/graph/api/resources/personwebsite)                         | Describes a website for the user.                                           |
-| `personWorkPositions` (beta) | `stringCollection` | [`workPosition`](/graph/api/resources/workposition)                | Describes the historical work positions of the user.                        |
+| `personWorkPositions`   | `stringCollection` | [`workPosition`](/graph/api/resources/workposition)                | Describes the historical work positions of the user.                        |
 
 Example schema:
 
@@ -127,6 +126,7 @@ The following are guidelines and recommendations for Copilot connectors with peo
 - You must set the access control list (ACL) on items ingested by the connector to grant access to everyone.
 - You must provide valid string encoded JSON objects for profile entities. Microsoft Graph ignores invalid values.
 - Nonmatched user accounts (`userPrincipalName` or `externalDirectoryObjectId`) are ignored.
+- Microsoft Graph ignores accounts without an Exchange Online mailbox.
 - Microsoft Graph treats any property without a label as a custom property.
 - Microsoft 365 might take up to 6 hours after the connection is created before it becomes available in search, people experiences, or Copilot.
 - Connections with people data don't support [staged connections](/microsoftsearch/staged-rollout-for-graph-connectors).

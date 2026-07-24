@@ -553,9 +553,6 @@ The meeting identifier object contains the following properties.
 
 Indicates that the declarative agent can use files locally in the app package.
 
-> [!IMPORTANT]
-> This feature is not yet available.
-
 Embedded knowledge files have a maximum file size of 1 MB and must be one of the following document types:
 
 - Word document (.doc, .docx)
