@@ -55,7 +55,7 @@ Registering in the Teams developer portal is optional if you use Agents Toolkit 
     - **Restrict usage by org**: Select which Microsoft 365 organization has access to your app to access API endpoints.
     - **Restrict usage by app**: Select **Any Teams app** if you don't know your final app ID. After you publish your app, bind this registration with your published app ID.
     - **Client ID**: The client ID of the app registered in Entra.
-    - **Scope**: The delegated permissions your plugin requests from Microsoft Entra. Microsoft 365 Copilot requests these permissions when it acquires the SSO token and presents them to the user when consent is required. Include your API's own scope (such as `access_as_user`), plus any downstream permissions your API needs if it uses the on-behalf-of flow. For more information, see [Access downstream APIs with the on-behalf-of flow](#access-downstream-apis-with-the-on-behalf-of-flow).
+    - **Scope**: The delegated permissions that Microsoft 365 Copilot asks the user to consent to. Use this field to request consent for the extra permissions your API needs to run an on-behalf-of flow (for example, Microsoft Graph permissions). For more information, see [Access downstream APIs with the on-behalf-of flow](#access-downstream-apis-with-the-on-behalf-of-flow).
 
 1. Select **Save**.
 
@@ -106,38 +106,44 @@ If your MCP server or API validates the client application ID, make sure that th
 As defense in depth, also confirm that the token carries the delegated scope your API expects (the `scp` claim, such as `access_as_user`) and reject app-only tokens (an `idtyp` claim of `app`).
 
 > [!IMPORTANT]
-> Make the audience your API accepts match the token version. Because this article configures v2.0 tokens, the `aud` claim is the client ID GUID, so accept that value. If your API also accepts v1.0 tokens, additionally allow `api://<client-ID>` and the Application ID URI. A common failure is an API that accepts only the `api://` or Application ID URI form: it rejects valid v2.0 tokens - whose `aud` is the bare client ID - with `401 Unauthorized`, which can cause repeated sign-in prompts. For more information, see [How 401 and 403 responses affect the sign-in experience](#how-401-and-403-responses-affect-the-sign-in-experience).
+> Make the audience your API accepts match the token version. Because this article configures v2.0 tokens, the `aud` claim is the client ID GUID, so accept that value. If your API also accepts v1.0 tokens, additionally allow `api://<client-ID>` and the Application ID URI. A common failure is an API that accepts only the `api://` or Application ID URI form: it rejects valid v2.0 tokens - whose `aud` is the bare client ID - with `401 Unauthorized`, which can trap the user in a repeating consent prompt. For more information, see [How 401 and 403 responses affect the sign-in experience](#how-401-and-403-responses-affect-the-sign-in-experience).
 
 ### How 401 and 403 responses affect the sign-in experience
 
-After SSO is wired up, the HTTP status code your backend returns affects the sign-in experience in Microsoft 365 Copilot:
+The HTTP status code your backend returns controls whether Microsoft 365 Copilot shows a consent prompt:
 
-- Because [Step 3](#step-3-update-the-entra-app-registration) pre-authorizes Microsoft 365 Copilot, the agent typically acquires the token silently - users don't see a sign-in prompt during normal use.
-- A sign-in prompt can appear when your backend returns `401 Unauthorized`. Copilot prompts the user to sign in or grant consent, then retries the request.
+- **`401 Unauthorized` triggers a consent prompt.** Copilot displays a consent request for the permissions declared in the auth config **Scope** field, then retries the request.
+- **`403 Forbidden` doesn't.** Copilot surfaces the error to the user without prompting for consent.
+
+Because [Step 3](#step-3-update-the-entra-app-registration) pre-authorizes Microsoft 365 Copilot, the agent acquires the base token silently, so users don't see a prompt during normal use.
 
 | Your backend returns | What Microsoft 365 Copilot does |
 | --- | --- |
-| `401 Unauthorized` | Prompts the user to sign in or grant consent, then retries the request. If your API rejects a token that consent can't fix - for example, a valid token rejected because of an audience mismatch - the user can see repeated sign-in prompts. |
-| `403 Forbidden` | Surfaces the error to the user without prompting to sign in again. |
+| `401 Unauthorized` | Displays a consent prompt for the configured scopes, then retries the request with the same token. |
+| `403 Forbidden` | Surfaces the error to the user. It doesn't display a consent prompt. |
+
+> [!IMPORTANT]
+> The consent prompt only records the user's consent - it does **not** change the token that Microsoft 365 Copilot SSO issues. After the user consents, Copilot retries with the **same** `access_as_user` token. Consent grants your app the requested permissions so that the on-behalf-of exchange can succeed on the retry; it doesn't upgrade the token that Copilot sends to your API.
 
 Use the status codes deliberately:
 
-- Return `401` for missing, expired, or otherwise invalid authentication, or when consent could resolve the failure - for example, when the [on-behalf-of flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow) needs the user to grant consent.
-- Return `403` when the caller is authenticated but not authorized, so the user isn't prompted to sign in again for a failure that consent can't fix.
+- Return `401` only when you want to request consent - for example, when your API's on-behalf-of exchange needs downstream permissions that the user hasn't consented to yet.
+- Return `403` for an authentication or authorization failure, such as an invalid, expired, or unauthorized token. If you return `401` for these failures, Copilot shows a consent prompt that can't fix the problem, which can trap the user in a repeating consent loop.
 
 > [!TIP]
-> Repeated sign-in prompts usually mean your API returns `401` for a token it should accept. The most common cause is an audience mismatch: the token's `aud` is the client ID GUID, but the API accepts only the `api://` or Application ID URI form. Fix the audience validation in [Step 4](#step-4-add-the-new-token-audience-to-your-api) rather than re-consenting.
+> A repeating consent prompt usually means your API returns `401` for a token it should accept. A common cause is an audience mismatch: the token's `aud` is the client ID GUID, but the API accepts only the `api://` or Application ID URI form. Fix the audience validation in [Step 4](#step-4-add-the-new-token-audience-to-your-api) - re-consenting can't resolve it.
 
 ### Access downstream APIs with the on-behalf-of flow
 
-The SSO token authenticates the signed-in user to *your* API - its audience is your app and its scope is your API's own permission, such as `access_as_user`. It doesn't grant access to Microsoft Graph or any other downstream API.
+> [!IMPORTANT]
+> Microsoft 365 Copilot SSO only ever issues `access_as_user` tokens. To acquire more privileged permissions, it's up to your API or MCP server to run an on-behalf-of (OBO) flow that exchanges the `access_as_user` token for a more privileged token. Use the **Scope** configuration to declare the permissions you need consent for, and return `401 Unauthorized` to trigger a consent request on the client.
 
-To call a downstream API as the signed-in user, exchange the SSO token for a downstream access token by using the [on-behalf-of (OBO) flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). The OBO exchange runs in your backend and requires a client secret or certificate on your app registration.
+The SSO token authenticates the signed-in user to *your* API - its audience is your app and its scope is your API's own permission, `access_as_user`. It doesn't grant access to Microsoft Graph or any other downstream API. To call a downstream API as the signed-in user, exchange the SSO token for a downstream access token by using the [on-behalf-of (OBO) flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). The OBO exchange runs in your backend and requires a client secret or certificate on your app registration.
 
 If the downstream API requires the user to consent to its permissions, two settings work together to prompt for that consent:
 
 - **Scope**: List the downstream delegated permissions in the **Scope** field of the auth config ([Step 2](#step-2-create-the-entra-sso-auth-config)), so that Microsoft 365 Copilot requests them and presents them to the user for consent.
-- **401 Unauthorized**: Return `401` from your API when the OBO exchange fails because consent is required - for example, when Microsoft Entra returns an `invalid_grant` or `interaction_required` error. Copilot then prompts the user to sign in and grant consent, and retries the request.
+- **401 Unauthorized**: Return `401` from your API when the OBO exchange fails because consent is required - for example, when Microsoft Entra returns an `invalid_grant` or `interaction_required` error. Copilot then displays a consent prompt, the user consents, and Copilot retries the request. The retried request carries the same `access_as_user` token; consent grants the downstream permissions so the OBO exchange succeeds on the retry.
 
 Without both, the user is never prompted and the OBO exchange keeps failing. For more information, see [Microsoft Entra SSO consent isn't prompted](plugin-authentication-troubleshooting.md#microsoft-entra-sso-consent-isnt-prompted).
 
