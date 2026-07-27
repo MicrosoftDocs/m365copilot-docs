@@ -4,7 +4,7 @@ description: Learn how to configure Microsoft Entra single sign-on (SSO) authent
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 07/27/2026
 ms.topic: how-to
 ---
 
@@ -92,12 +92,66 @@ Regardless of how you created the auth config in Step 2, complete the following 
 
 1. Select **Expose an API** under **Manage**. Select **Add a client application** and add the client ID of the Microsoft Enterprise token store, `ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b`.
 
+1. Select **Manifest** under **Manage**. Set the `requestedAccessTokenVersion` property to `2`, and save. This configures the app to issue v2.0 access tokens, which this article assumes. The token version also determines the format of the `iss` (issuer) and `aud` (audience) claims that your API validates in [Step 4](#step-4-add-the-new-token-audience-to-your-api).
+
+    > [!NOTE]
+    > With v2.0 tokens, your API validates the issuer `https://login.microsoftonline.com/<tenant-ID>/v2.0`. Don't accept the v1.0 issuer `https://sts.windows.net/<tenant-ID>/`. A token-version mismatch is a common cause of `401 Unauthorized` errors.
+
 ## Step 4: Add the new token audience to your API
 
-Update your MCP server or API to allow the new identifier URI as the token audience. If your MCP server or API validates the client application ID, make sure that the Microsoft Enterprise token store's client ID (`ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b`) is added as an allowed client application.
+Update your MCP server or API to validate the token audience. Because the app registration requests v2.0 tokens (see [Step 3](#step-3-update-the-entra-app-registration)), the `aud` (audience) claim is the app's **client ID** (a GUID), not the `api://` Application ID URI. Configure your API to accept the client ID as a valid audience.
+
+If your MCP server or API validates the client application ID, make sure that the Microsoft Enterprise token store's client ID (`ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b`) is added as an allowed client application.
+
+As defense in depth, also confirm that the token carries the delegated scope your API expects (the `scp` claim, such as `access_as_user`) and reject app-only tokens (an `idtyp` claim of `app`).
+
+> [!IMPORTANT]
+> Make the audience your API accepts match the token version. Because this article configures v2.0 tokens, the `aud` claim is the client ID GUID, so accept that value. If your API also accepts v1.0 tokens, additionally allow `api://<client-ID>` and the Application ID URI. A common failure is an API that accepts only the `api://` or Application ID URI form: it rejects valid v2.0 tokens - whose `aud` is the bare client ID - with `401 Unauthorized`, which can cause repeated sign-in prompts. For more information, see [How 401 and 403 responses affect the sign-in experience](#how-401-and-403-responses-affect-the-sign-in-experience).
 
 > [!TIP]
 > If your MCP server or API uses the [on-behalf-of flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow) to get access to another web API that requires the user to grant consent, return a `401 Unauthorized` error to cause the agent to prompt the user to sign in to grant consent.
+
+### How 401 and 403 responses affect the sign-in experience
+
+After SSO is wired up, the HTTP status code your backend returns affects the sign-in experience in Microsoft 365 Copilot:
+
+- Because [Step 3](#step-3-update-the-entra-app-registration) pre-authorizes Microsoft 365 Copilot, the agent typically acquires the token silently - users don't see a sign-in prompt during normal use.
+- A sign-in prompt can appear when your backend returns `401 Unauthorized`. Copilot prompts the user to sign in or grant consent, then retries the request.
+
+| Your backend returns | What Microsoft 365 Copilot does |
+| --- | --- |
+| `401 Unauthorized` | Prompts the user to sign in or grant consent, then retries the request. If your API rejects a token that consent can't fix - for example, a valid token rejected because of an audience mismatch - the user can see repeated sign-in prompts. |
+| `403 Forbidden` | Surfaces the error to the user without prompting to sign in again. |
+
+Use the status codes deliberately:
+
+- Return `401` for missing, expired, or otherwise invalid authentication, or when consent could resolve the failure - for example, when the [on-behalf-of flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow) needs the user to grant consent.
+- Return `403` when the caller is authenticated but not authorized, so the user isn't prompted to sign in again for a failure that consent can't fix.
+
+> [!TIP]
+> Repeated sign-in prompts usually mean your API returns `401` for a token it should accept. The most common cause is an audience mismatch: the token's `aud` is the client ID GUID, but the API accepts only the `api://` or Application ID URI form. Fix the audience validation in [Step 4](#step-4-add-the-new-token-audience-to-your-api) rather than re-consenting.
+
+## Validate tokens with Azure App Service Easy Auth
+
+If you host your MCP server or API on Azure App Service, you can offload token validation to the platform's built-in authentication (known as *Easy Auth*) instead of validating the bearer token in your own code. Easy Auth validates the Copilot SSO token at the platform edge, before your code runs. Configure it under **App Service** -> **Settings** -> **Authentication** with a **Microsoft** identity provider:
+
+| Setting | Value | Why |
+| --- | --- | --- |
+| App registration | The existing Entra app from [Step 1](#step-1-register-an-entra-app-to-secure-your-mcp-server) | The API and the token audience must be the same app. |
+| Supported account types | Single tenant, for an agent restricted to your organization | Locks validation to your directory. Choose account types that match your agent's intended tenancy. |
+| Issuer URL | `https://login.microsoftonline.com/<tenant-ID>/v2.0` | Must match the token issuer. |
+| Allowed token audiences | The app's **client ID** | Must equal the `aud` in the v2.0 SSO token, not the `api://` form. |
+| Client application requirement | Allow requests from specific client applications | Restricts which app can call the API. |
+| Allowed client applications | The Microsoft Enterprise token store, `ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b` | This is the client that calls your API for Copilot SSO. If it's missing when the policy is enabled, valid tokens are rejected with `403`. App Service already allows the app's own registration by default. |
+| Unauthenticated requests | HTTP 401 Unauthorized | Rejects anonymous callers. |
+
+> [!IMPORTANT]
+> Easy Auth performs authentication and a limited built-in authorization check (issuer, audience, and allowed client applications), but not fine-grained, scope-based authorization. It doesn't inspect the `scp` scope claim or reject app-only tokens by claim. If your server exposes privileged tools or requires a specific delegated scope such as `access_as_user`, keep those checks in your code in addition to Easy Auth.
+
+> [!NOTE]
+> Easy Auth runs only on Azure, so validating locally never proves that your audience, issuer, and allowed-client configuration is correct. Test against the deployed App Service instance.
+
+For more information, see [Authentication and authorization in Azure App Service](/azure/app-service/overview-authentication-authorization) and [Configure MCP server authorization in Azure App Service](/azure/app-service/configure-authentication-mcp).
 
 ## Related content
 
