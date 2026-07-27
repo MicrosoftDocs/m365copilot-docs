@@ -55,7 +55,7 @@ Registering in the Teams developer portal is optional if you use Agents Toolkit 
     - **Restrict usage by org**: Select which Microsoft 365 organization has access to your app to access API endpoints.
     - **Restrict usage by app**: Select **Any Teams app** if you don't know your final app ID. After you publish your app, bind this registration with your published app ID.
     - **Client ID**: The client ID of the app registered in Entra.
-    - **Scope**: The permissions your plugin requests from Entra. As with OAuth 2.0, use the scope values required by your Entra app and API.
+    - **Scope**: The delegated permissions your plugin requests from Microsoft Entra. Microsoft 365 Copilot requests these permissions when it acquires the SSO token and presents them to the user when consent is required. Include your API's own scope (such as `access_as_user`), plus any downstream permissions your API needs if it uses the on-behalf-of flow. For more information, see [Access downstream APIs with the on-behalf-of flow](#access-downstream-apis-with-the-on-behalf-of-flow).
 
 1. Select **Save**.
 
@@ -108,9 +108,6 @@ As defense in depth, also confirm that the token carries the delegated scope you
 > [!IMPORTANT]
 > Make the audience your API accepts match the token version. Because this article configures v2.0 tokens, the `aud` claim is the client ID GUID, so accept that value. If your API also accepts v1.0 tokens, additionally allow `api://<client-ID>` and the Application ID URI. A common failure is an API that accepts only the `api://` or Application ID URI form: it rejects valid v2.0 tokens - whose `aud` is the bare client ID - with `401 Unauthorized`, which can cause repeated sign-in prompts. For more information, see [How 401 and 403 responses affect the sign-in experience](#how-401-and-403-responses-affect-the-sign-in-experience).
 
-> [!TIP]
-> If your MCP server or API uses the [on-behalf-of flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow) to get access to another web API that requires the user to grant consent, return a `401 Unauthorized` error to cause the agent to prompt the user to sign in to grant consent.
-
 ### How 401 and 403 responses affect the sign-in experience
 
 After SSO is wired up, the HTTP status code your backend returns affects the sign-in experience in Microsoft 365 Copilot:
@@ -131,27 +128,18 @@ Use the status codes deliberately:
 > [!TIP]
 > Repeated sign-in prompts usually mean your API returns `401` for a token it should accept. The most common cause is an audience mismatch: the token's `aud` is the client ID GUID, but the API accepts only the `api://` or Application ID URI form. Fix the audience validation in [Step 4](#step-4-add-the-new-token-audience-to-your-api) rather than re-consenting.
 
-## Validate tokens with Azure App Service Easy Auth
+### Access downstream APIs with the on-behalf-of flow
 
-If you host your MCP server or API on Azure App Service, you can offload token validation to the platform's built-in authentication (known as *Easy Auth*) instead of validating the bearer token in your own code. Easy Auth validates the Copilot SSO token at the platform edge, before your code runs. Configure it under **App Service** -> **Settings** -> **Authentication** with a **Microsoft** identity provider:
+The SSO token authenticates the signed-in user to *your* API - its audience is your app and its scope is your API's own permission, such as `access_as_user`. It doesn't grant access to Microsoft Graph or any other downstream API.
 
-| Setting | Value | Why |
-| --- | --- | --- |
-| App registration | The existing Entra app from [Step 1](#step-1-register-an-entra-app-to-secure-your-mcp-server) | The API and the token audience must be the same app. |
-| Supported account types | Single tenant, for an agent restricted to your organization | Locks validation to your directory. Choose account types that match your agent's intended tenancy. |
-| Issuer URL | `https://login.microsoftonline.com/<tenant-ID>/v2.0` | Must match the token issuer. |
-| Allowed token audiences | The app's **client ID** | Must equal the `aud` in the v2.0 SSO token, not the `api://` form. |
-| Client application requirement | Allow requests from specific client applications | Restricts which app can call the API. |
-| Allowed client applications | The Microsoft Enterprise token store, `ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b` | This is the client that calls your API for Copilot SSO. If it's missing when the policy is enabled, valid tokens are rejected with `403`. App Service already allows the app's own registration by default. |
-| Unauthenticated requests | HTTP 401 Unauthorized | Rejects anonymous callers. |
+To call a downstream API as the signed-in user, exchange the SSO token for a downstream access token by using the [on-behalf-of (OBO) flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). The OBO exchange runs in your backend and requires a client secret or certificate on your app registration.
 
-> [!IMPORTANT]
-> Easy Auth performs authentication and a limited built-in authorization check (issuer, audience, and allowed client applications), but not fine-grained, scope-based authorization. It doesn't inspect the `scp` scope claim or reject app-only tokens by claim. If your server exposes privileged tools or requires a specific delegated scope such as `access_as_user`, keep those checks in your code in addition to Easy Auth.
+If the downstream API requires the user to consent to its permissions, two settings work together to prompt for that consent:
 
-> [!NOTE]
-> Easy Auth runs only on Azure, so validating locally never proves that your audience, issuer, and allowed-client configuration is correct. Test against the deployed App Service instance.
+- **Scope**: List the downstream delegated permissions in the **Scope** field of the auth config ([Step 2](#step-2-create-the-entra-sso-auth-config)), so that Microsoft 365 Copilot requests them and presents them to the user for consent.
+- **401 Unauthorized**: Return `401` from your API when the OBO exchange fails because consent is required - for example, when Microsoft Entra returns an `invalid_grant` or `interaction_required` error. Copilot then prompts the user to sign in and grant consent, and retries the request.
 
-For more information, see [Authentication and authorization in Azure App Service](/azure/app-service/overview-authentication-authorization) and [Configure MCP server authorization in Azure App Service](/azure/app-service/configure-authentication-mcp).
+Without both, the user is never prompted and the OBO exchange keeps failing. For more information, see [Microsoft Entra SSO consent isn't prompted](plugin-authentication-troubleshooting.md#microsoft-entra-sso-consent-isnt-prompted).
 
 ## Related content
 
