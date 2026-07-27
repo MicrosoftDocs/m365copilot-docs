@@ -123,7 +123,7 @@ Because [Step 3](#step-3-update-the-entra-app-registration) pre-authorizes Micro
 | `403 Forbidden` | Surfaces the error to the user. It doesn't display a consent prompt. |
 
 > [!IMPORTANT]
-> The consent prompt only records the user's consent - it does **not** change the token that Microsoft 365 Copilot SSO issues. After the user consents, Copilot retries with the **same** `access_as_user` token. Consent grants your app the requested permissions so that the on-behalf-of exchange can succeed on the retry; it doesn't upgrade the token that Copilot sends to your API.
+> The consent prompt only records the user's consent - it does **not** change the token that Microsoft 365 Copilot SSO issues. After the user consents, Microsoft 365 Copilot calls back your API or MCP server with the same `access_as_user` token, which your backend should then use for an on-behalf-of request. Consent grants your app the requested permissions so that the on-behalf-of exchange can succeed on the retry; it doesn't upgrade the token that Copilot sends to your API.
 
 Use the status codes deliberately:
 
