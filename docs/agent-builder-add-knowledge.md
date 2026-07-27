@@ -45,10 +45,11 @@ If you're configuring your agent manually, to add knowledge sources to your agen
 
 1. In Microsoft 365 Copilot, choose **New agent** from the left pane, and choose **Skip to configure**.
 1. In the **Knowledge** section, use one of the following methods to add knowledge sources:
-   - **Search** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
-- **Enter URL** - Add a public website, a SharePoint link that includes the site path (for example, `.../sites/<site-name>/...`) and doesn't include query parameters, or a OneDrive shared link.
-   - **Browse** - Use the **Attach cloud files** picker to browse for and select SharePoint or OneDrive files, folders, or lists.
-   - **Upload** - Upload files directly from your device.
+
+    - **Search** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
+    - **Enter URL** - Add a public website, a SharePoint link that includes the site path (for example, `.../sites/<site-name>/...`) and doesn't include query parameters, or a OneDrive shared link.
+    - **Browse** - Use the **Attach cloud files** picker to browse for and select SharePoint or OneDrive files, folders, or lists.
+    - **Upload** - Upload files directly from your device.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-knowledge-configure.png" alt-text="A screenshot of the Knowledge section of the Configure tab.":::
 
@@ -113,6 +114,12 @@ To browse for a SharePoint list, select **Recent lists** in the left pane of the
 When you upload new files to SharePoint or OneDrive, it can take up to several minutes for the agent to include them in its response. You can still test your agent in the test pane if sources aren't ready. However, responses don't include information from the newly uploaded file until it's ready.
 
 You can check the file readiness in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When you rename or delete the underlying file uploaded to SharePoint or OneDrive, the agent picks up the changes. You can also select the refresh button on top of the **Knowledge** section to manually reload the state.
+
+## OneNote pages
+
+You can choose specific OneNote pages from the file picker to upload as knowledge. You can only select individual OneNote pages; the option to select a whole OneNote notebook isn't available. When you select **My SharePoint files, folders, and sites**, OneNote pages are included.
+
+Use the file picker to add OneNote pages. Agent Builder doesn't support entering OneNote page URLs.
 
 ## Microsoft Teams data
 

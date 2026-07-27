@@ -8,7 +8,6 @@ ms.localizationpriority: medium
 ms.date: 07/09/2026
 ms.topic: overview
 ---
-
 <!-- markdownlint-disable MD024 -->
 # Add knowledge sources to your declarative agent
 
@@ -29,6 +28,7 @@ The following table lists the capabilities and knowledge sources you can configu
 | Dataverse | :x: | :white_check_mark:\* | Yes |
 | Email | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
 | People | :white_check_mark: | :white_check_mark: | Yes (license only) |
+| OneNote pages | :white_check_mark: | :x: | No |
 | Teams messages | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
 | Teams meetings | :white_check_mark: | :white_check_mark: | Yes (license only) |
 
@@ -330,6 +330,12 @@ If your agent needs to reason over related content (between the agent user and t
   ]
 }
 ```
+
+## OneNote pages
+
+When you use Microsoft 365 Copilot to build your agent, you can choose specific OneNote pages from the file picker to upload as knowledge. You can only select individual OneNote pages. The option to select a whole OneNote notebook isn't available. 
+
+Use the file picker to add OneNote pages. Agent Builder doesn't support entering OneNote page URLs.
 
 ## Teams messages
 
