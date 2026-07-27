@@ -7,7 +7,7 @@ metadata:
   title: Extend Microsoft 365 Copilot
   description: Explore extensibility options for Microsoft 365 Copilot, including declarative agents, custom engine agents, and Microsoft 365 Copilot connectors. Learn how to build and publish Copilot solutions.
   author: lauragra
-  ms.author: lauragra
+  ms.author: jasonjoh
   ms.date: 05/06/2026
   ms.topic: landing-page
   ms.custom:

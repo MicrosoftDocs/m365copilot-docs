@@ -2,7 +2,7 @@
 title:  Choose between Agent Builder in Microsoft 365 Copilot and Copilot Studio to build your agent
 description: Learn how to determine whether Microsoft 365 Copilot or Copilot Studio is the best tool for building your agent.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.topic: concept-article
 ms.localizationpriority: medium
 ms.date: 06/18/2026
@@ -69,12 +69,12 @@ The Agent Builder feature in Microsoft 365 Copilot allows users to create agents
 
 Agent Builder applies the following key governance principles:
 
-- **No new privileges** - Agents respect existing Microsoft 365 permissions. If a user doesn't have access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.  
+- **No new privileges** - Agents respect existing Microsoft 365 permissions. If a user doesn't have access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.
 - **Built-in visibility and auditing capabilities** - Agents are surfaced within Microsoft 365. Standard audit logs, activity reports, and DLP/retention policies apply.
 
 IT administrators manage agent visibility, sharing, and lifecycle policies in the Microsoft 365 admin center via the **Copilot** > **Agents** page. Admins can:
 
-- View agent inventory and agent metadata.  
+- View agent inventory and agent metadata.
 - Enable, disable, assign, block, or remove agents to align with organizational policies.
 - Configure pay-as-you-go billing and review agent usage and consumption.
 - Enforce compliance using Microsoft Purview (sensitivity labels, audit logs).

@@ -2,7 +2,7 @@
 title: Known Issues in Microsoft 365 Copilot Extensibility
 description: Find information about current known issues related to Microsoft 365 Copilot extensibility and the recommended workarounds.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 03/16/2026
 ms.topic: concept-article

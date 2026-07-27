@@ -2,7 +2,7 @@
 title: What's New for Microsoft 365 Copilot Developers
 description: Find out what's new in Microsoft 365 Copilot extensibility, including declarative agents, custom engine agents, connectors, Copilot APIs, and more.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 07/15/2026
 ms.topic: overview

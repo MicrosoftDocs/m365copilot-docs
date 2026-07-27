@@ -2,7 +2,7 @@
 title: Asynchronous and Proactive Messaging in Custom Engine Agents for Microsoft 365
 description: Lear how to use asynchronous and proactive messaging patterns in your custom engine agents.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.reviewer: vermaanimesh
 ms.topic: article
 ms.localizationpriority: medium

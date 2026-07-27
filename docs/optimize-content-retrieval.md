@@ -2,7 +2,7 @@
 title: Optimize Content Retrieval in Your Agent
 description: Find best practices to optimize how your agent in Microsoft 365 Copilot retrieves content from SharePoint and embedded content.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.topic: best-practice
 ms.localizationpriority: medium
 ms.date: 08/07/2025
@@ -19,7 +19,7 @@ Declarative agents extend Microsoft 365 Copilot to customize the experience for 
 
 You can reference specific SharePoint files via the `OneDriveAndSharePoint` object in the [agent manifest](declarative-agent-manifest-1.5.md#onedrive-and-sharepoint-object), either by URL or by ID.
 
-When you specify up to 20 files, Copilot searches the full contents of all files. Copilot has full access to all the file content and returns the appropriate content to the user based on their query. 
+When you specify up to 20 files, Copilot searches the full contents of all files. Copilot has full access to all the file content and returns the appropriate content to the user based on their query.
 
 To optimize the content that Copilot returns, choose the most relevant SharePoint files to specify in your manifest. For example, if a folder contains eight files and only five are relevant to the user's task, specify the five files individually instead of referencing the folder. To ensure that Copilot searches the full file contents, the best practice is to limit the total page count of the relevant files that you specify to no more than 300 pages.
 

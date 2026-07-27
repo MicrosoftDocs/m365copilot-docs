@@ -1,8 +1,8 @@
 ---
-title: Templates for agents for Microsoft 365 Copilot 
+title: Templates for agents for Microsoft 365 Copilot
 description: Learn how to use templates to quickly create declarative agents in Microsoft 365 Copilot.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.topic: concept-article
 ms.service: copilot-studio
 ms.subservice: agent-builder
