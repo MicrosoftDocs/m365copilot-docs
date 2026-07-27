@@ -86,7 +86,7 @@ Regardless of how you created the auth config in Step 2, complete the following 
     ```
 
     > [!NOTE]
-    > You can't add multiple URIs through the Entra admin center's UI. The UI only displays the first URI in the list. Adding multiple URIs doesn't affect your existing URIs and scopes even if they show differently in the UI.
+    > The **Expose an API** UI doesn't let you configure multiple Application ID URIs. If you need to keep your existing URIs, add the new URI in the **Manifest** section instead.
 
 1. Select **Authentication** under **Manage**. Add `https://teams.microsoft.com/api/platform/v1.0/oAuthConsentRedirect` to the **Redirect URIs** in the **Web** platform.
 
