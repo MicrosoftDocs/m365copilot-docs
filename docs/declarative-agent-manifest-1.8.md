@@ -849,6 +849,8 @@ The special instructions object contains the following property.
 | ---------------------------- | ------- | ----------- |
 | `discourage_model_knowledge` | Boolean | Required. If set to `true`, the agent doesn't use model knowledge when generating responses. The default value is `false`. |
 
+To learn when and how to use this property, see [Ground responses to configured knowledge sources](declarative-agent-instructions.md#ground-responses-to-configured-knowledge-sources).
+
 ### Disclaimer object
 
 A disclaimer is an optional JSON object in the manifest that specifies disclaimer text. The agent displays this text to the user at the start of a conversation.

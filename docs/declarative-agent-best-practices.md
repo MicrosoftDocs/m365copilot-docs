@@ -6,9 +6,8 @@ author: lauragra
 ms.author: jasonjoh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 07/27/2026
 ---
-
 
 # Best practices for building declarative agents
 
@@ -17,6 +16,8 @@ Declarative agents are AI assistants that customize Microsoft 365 Copilot for sp
 ## Declarative agent components
 
 A declarative agent consists of several components. It's important to apply best practices to your design for each component of your agent. The following table provides recommended best practices for each agent component.
+
+<!-- markdownlint-disable MD033 -->
 
 | Component | Description | Best practice |
 | --------- | ----------- | ------------- |
@@ -27,6 +28,8 @@ A declarative agent consists of several components. It's important to apply best
 | Capabilities  | Optional built-in AI capabilities (such as [Code Interpreter](code-interpreter.md) and [Image Generator](image-generator.md)).  | Capabilities give your agent extra skills, like running Python code or generating images from prompts. Only add capabilities that align with your agent’s goals. For example, Code Interpreter might be great for a data analysis agent. |
 | Actions (APIs/plugins)  | External actions the agent can take via API plugins (Copilot connectors, custom web APIs, and Power Platform connectors), defined in the agent manifest.  | If your agent needs to query external systems or perform transactions, you can integrate API-based plugins. Each action corresponds to an API operation.<br><br>Design actions carefully: provide an OpenAPI document with clear operation descriptions and add those actions in the agent manifest.<br><br>For each action, note whether it’s consequential (that is, writes or changes external data). Any create/update/delete type action must have `isConsequential: true`. Read-only queries can be marked nonconsequential.  |
 | Conversation starters (sample prompts)  | Examples of queries a user can ask the agent, shown as suggestions or help tips.  | Include a minimum of three sample prompts that reflect the core capabilities of your agent. These help users understand how to use the agent. For example: <br><ul><li> Draft an email to **person** about **subject**.</li><li> Compare and contrast the proposals in **file** and **file**.</li> <li>Create a line graph to show sales trends over the last six months.</li></ul> |
+
+<!-- markdownlint-enable MD033 -->
 
 ## Best practices for agent instructions
 
@@ -41,7 +44,6 @@ The following table provides information about how you can plan, test, and itera
 | **Collaborative iteration**| Work with cross-functional teammates—such as product managers, writers, and engineers—to review and improve instructions. Test how instructions behave in different apps and keep a record of changes. | Improves instruction quality through teamwork and helps maintain consistency over time. |
 | **Instruction diagnostics**| To understand how instructions perform, use tools like logs and user feedback. Look for patterns where agent responses aren't helpful and revise the instructions to improve the responses. | Helps you improve instructions based on real usage and user experience. |
 | **Instruction architecture**| Break instructions into smaller, reusable parts. Use tags and templates to stay organized and apply consistent patterns across agents.  | Makes it easier to manage instructions and reuse them across multiple agents and scenarios. |
-
 
 For more information and specific guidance for creating agent instructions, see [Write effective  instructions for declarative agents](declarative-agent-instructions.md).
 
@@ -62,6 +64,8 @@ Keep the following key considerations in mind when choosing [knowledge sources](
 - **Scope team chats:** If you add teams conversations, you have two options: all your teams chats/meetings, or specific ones. Generally, adding specific chat threads yields more targeted results and less noise. For example, grounding an agent in a particular project channel’s history, rather than sifting through every chat you’ve ever had, will help it answer project-specific questions more accurately.
 
 - **Use SharePoint and connectors for structured data:** For more static or structured knowledge, SharePoint is ideal. If you have a knowledge base in PDF or Office documents, host them on a SharePoint site and add that site as a source. If you require other systems, like database records or CRM data, see if a Copilot connector exists for them or add an API plugin.
+
+- **Discourage model knowledge:** Adding knowledge sources alone doesn't prevent the model from drawing on its built-in training knowledge. To ensure that the agent relies only on your configured sources, set the `discourage_model_knowledge` property to `true` in the `special_instructions` object of your agent manifest. When enabled, the agent does its best to avoid using model knowledge in its responses. For more information, see [Special instructions object](declarative-agent-manifest-1.8.md#special-instructions-object). You can also reinforce this in your instructions; for more information, see [Ground responses to configured knowledge sources](declarative-agent-instructions.md#ground-responses-to-configured-knowledge-sources).
 
 - **Test responses with and without knowledge:** Test some queries before and after adding knowledge sources. For example, ask a question that should be answered from a particular document. Without the document, does the agent struggle or generate false information? After you add the document, does the agent find the answer? If you notice the agent still isn’t using the information, you might need to adjust your instructions. Or, if the agent is overusing a knowledge source, consider removing that source or refining instructions to use it only in context.
 
