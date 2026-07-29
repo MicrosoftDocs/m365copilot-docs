@@ -2,7 +2,7 @@
 title: Allow inline editing of Adaptive Card responses in agents for Microsoft 365 Copilot
 description: "Learn how to allow users to edit modal dialog boxes in Adaptive Card responses in agents for Microsoft 365 Copilot."
 author: Lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.reviewer: isrumnon
 ms.date: 03/06/2026
 ms.topic: concept-article

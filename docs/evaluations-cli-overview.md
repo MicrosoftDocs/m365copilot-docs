@@ -3,7 +3,7 @@ title: Agent Evaluations CLI overview (preview)
 description: Learn how to evaluate Microsoft 365 Copilot agents using automated testing and AI-powered metrics.
 ms.date: 06/19/2026
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.reviewer: sakov
 ms.topic: overview
 ms.localizationpriority: high

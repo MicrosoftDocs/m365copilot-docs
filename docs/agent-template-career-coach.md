@@ -2,7 +2,7 @@
 title: Create a Career Coach agent from a template
 description: Learn how to use the Career Coach template in Microsoft 365 Copilot to create a declarative agent.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.reviewer: kmarko
 ms.topic: article
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ ms.subservice: agent-builder
 
 # Use the Career Coach template to build an agent
 
-You can use the Career Coach template in Microsoft 365 Copilot to build an agent that provides personalized suggestions and action plans to help users advance in their careers. The career coach offers tailored advice on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.  
+You can use the Career Coach template in Microsoft 365 Copilot to build an agent that provides personalized suggestions and action plans to help users advance in their careers. The career coach offers tailored advice on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.
 
 The Career Coach uses a professional and supportive tone to make interactions contextually relevant and encouraging.
 

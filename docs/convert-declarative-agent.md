@@ -2,7 +2,7 @@
 title: "Convert your declarative agent to a custom engine agent"
 description: Learn how to convert your declarative agent for Microsoft 365 Copilot to a custom engine agent to gain full control of orchestration, AI models, and data integrations.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.reviewer: vermaanimesh
 ms.topic: article
 ms.localizationpriority: medium
@@ -42,57 +42,57 @@ To update your app manifest:
 1. Add a **bots** node and include your bot ID in the **id** field. The following example shows the schema for the **bots** node.
 
     ```json
-        "bots": [ 
-            { 
-                "botId": "${{BOT_ID}}", 
-                "scopes": [ 
-                    "copilot", 
-                    "personal", 
-                    "team" 
-                ], 
-                "supportsFiles": false, 
-                "isNotificationOnly": false, 
-                "commandLists": [ 
-                    { 
-                        "scopes": [ 
-                            "copilot", 
-                            "personal" 
-                        ], 
-                        "commands": [ 
-                            { 
-                                "title": "How can you help me?", 
-                                "description": "How can you help me?" 
-                            } 
-                        ] 
-                    } 
-                ] 
-            } 
-        ], 
+        "bots": [
+            {
+                "botId": "${{BOT_ID}}",
+                "scopes": [
+                    "copilot",
+                    "personal",
+                    "team"
+                ],
+                "supportsFiles": false,
+                "isNotificationOnly": false,
+                "commandLists": [
+                    {
+                        "scopes": [
+                            "copilot",
+                            "personal"
+                        ],
+                        "commands": [
+                            {
+                                "title": "How can you help me?",
+                                "description": "How can you help me?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
     ```
 
     For more information about the schema for the bots node, see [bots object](/microsoft-365/extensibility/schema/root-bots).
-    
+
     > [!NOTE]
     > Use app manifest schema version 1.21 or later. Custom engine agents are supported in manifest version 1.21 and later versions.
 
 1. In the **copilotAgents** object, change the **declarativeAgents** node to a **customEngineAgents** node, as shown in the following examples.
-    
+
     **Declarative agents node**
 
     ```json
-    "copilotAgents": { 
-        "declarativeAgents": [             
-            { 
-                "id": "declarativeAgent", 
-                "file": "declarativeAgent.json" 
-            } 
-        ] 
-    }, 
+    "copilotAgents": {
+        "declarativeAgents": [
+            {
+                "id": "declarativeAgent",
+                "file": "declarativeAgent.json"
+            }
+        ]
+    },
     ```
 
     **Replace with custom engine agents node**
 
-    ```json  
+    ```json
     "copilotAgents": {
         "customEngineAgents": [
             {
@@ -102,13 +102,13 @@ To update your app manifest:
         ]
     },
     "bots": [
-        { 
+        {
           "botId": "${{BOT_ID}}",
             "scopes": [
                 "copilot",
                 "personal",
                 "team"
-            ], 
+            ],
             "supportsFiles": false,
             "isNotificationOnly": false,
             "commandLists": [
@@ -165,7 +165,7 @@ For details, see [Conditions when an app update requires consent](/microsoftteam
 
 ## User experience
 
-The transition from a declarative agent to a custom engine agent is seamless for the user. If the name and logo you use in your app package are the same, users won't see any visible changes.  
+The transition from a declarative agent to a custom engine agent is seamless for the user. If the name and logo you use in your app package are the same, users won't see any visible changes.
 
 If users pinned the agent, they need to pin the agent again after you publish the update.
 

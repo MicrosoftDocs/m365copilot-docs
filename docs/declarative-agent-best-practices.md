@@ -3,12 +3,11 @@ title: Best practices for building declarative agents in Microsoft 365 Copilot
 description: Learn the best practices for building extensibility solutions for Microsoft 365 Copilot.
 #customer intent: As a developer building an agent that grounds on Microsoft 365 data, I want to understand Retrieval API grounding best practices so that I can scope retrieval, avoid data egress, and respect permissions.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 07/27/2026
 ---
-
 
 # Best practices for building declarative agents
 
@@ -17,6 +16,8 @@ Declarative agents are AI assistants that customize Microsoft 365 Copilot for sp
 ## Declarative agent components
 
 A declarative agent consists of several components. It's important to apply best practices to your design for each component of your agent. The following table provides recommended best practices for each agent component.
+
+<!-- markdownlint-disable MD033 -->
 
 | Component | Description | Best practice |
 | --------- | ----------- | ------------- |
@@ -27,6 +28,8 @@ A declarative agent consists of several components. It's important to apply best
 | Capabilities  | Optional built-in AI capabilities (such as [Code Interpreter](code-interpreter.md) and [Image Generator](image-generator.md)).  | Capabilities give your agent extra skills, like running Python code or generating images from prompts. Only add capabilities that align with your agent’s goals. For example, Code Interpreter might be great for a data analysis agent. |
 | Actions (APIs/plugins)  | External actions the agent can take via API plugins (Copilot connectors, custom web APIs, and Power Platform connectors), defined in the agent manifest.  | If your agent needs to query external systems or perform transactions, you can integrate API-based plugins. Each action corresponds to an API operation.<br><br>Design actions carefully: provide an OpenAPI document with clear operation descriptions and add those actions in the agent manifest.<br><br>For each action, note whether it’s consequential (that is, writes or changes external data). Any create/update/delete type action must have `isConsequential: true`. Read-only queries can be marked nonconsequential.  |
 | Conversation starters (sample prompts)  | Examples of queries a user can ask the agent, shown as suggestions or help tips.  | Include a minimum of three sample prompts that reflect the core capabilities of your agent. These help users understand how to use the agent. For example: <br><ul><li> Draft an email to **person** about **subject**.</li><li> Compare and contrast the proposals in **file** and **file**.</li> <li>Create a line graph to show sales trends over the last six months.</li></ul> |
+
+<!-- markdownlint-enable MD033 -->
 
 ## Best practices for agent instructions
 
@@ -42,28 +45,29 @@ The following table provides information about how you can plan, test, and itera
 | **Instruction diagnostics**| To understand how instructions perform, use tools like logs and user feedback. Look for patterns where agent responses aren't helpful and revise the instructions to improve the responses. | Helps you improve instructions based on real usage and user experience. |
 | **Instruction architecture**| Break instructions into smaller, reusable parts. Use tags and templates to stay organized and apply consistent patterns across agents.  | Makes it easier to manage instructions and reuse them across multiple agents and scenarios. |
 
-
 For more information and specific guidance for creating agent instructions, see [Write effective  instructions for declarative agents](declarative-agent-instructions.md).
 
 ## Choose the right knowledge sources
 
-You can ground your declarative agents in public and organizational knowledge – such as SharePoint content, user data like emails and chats, and public websites.  
+You can ground your declarative agents in public and organizational knowledge – such as SharePoint content, user data like emails and chats, and public websites.
 
 Keep the following key considerations in mind when choosing [knowledge sources](agent-builder-add-knowledge.md) for your agent:
 
 - **Relevance over quantity:** Be selective about what knowledge you add. Consider whether the source will help the agent answer the kinds of questions you expect users to ask.
 
-- **Use SharePoint and connectors for structured data:** For more static or structured knowledge, SharePoint is ideal. If you have a knowledge base in PDF or Office documents, host them on a SharePoint site and add that site as a source. If you require other systems (like database records or CRM data), see if a Copilot connector exists for them or add an API plugin.  
+- **Use SharePoint and connectors for structured data:** For more static or structured knowledge, SharePoint is ideal. If you have a knowledge base in PDF or Office documents, host them on a SharePoint site and add that site as a source. If you require other systems (like database records or CRM data), see if a Copilot connector exists for them or add an API plugin.
 
 - **Licensing and access considerations:** Some knowledge features require the user to have a Microsoft 365 copilot license. Keep this in mind if you plan to share the agent. If someone without a Copilot license tries to use it, those personal knowledge sources won’t function for them. Also, permissions matter - the agent can only retrieve content that the user has access to.
 
-- **Data freshness and maintenance:** The agent’s knowledge of added sources updates over time. Periodically review and refresh the knowledge sources.  
+- **Data freshness and maintenance:** The agent’s knowledge of added sources updates over time. Periodically review and refresh the knowledge sources.
 
 - **Scope team chats:** If you add teams conversations, you have two options: all your teams chats/meetings, or specific ones. Generally, adding specific chat threads yields more targeted results and less noise. For example, grounding an agent in a particular project channel’s history, rather than sifting through every chat you’ve ever had, will help it answer project-specific questions more accurately.
 
 - **Use SharePoint and connectors for structured data:** For more static or structured knowledge, SharePoint is ideal. If you have a knowledge base in PDF or Office documents, host them on a SharePoint site and add that site as a source. If you require other systems, like database records or CRM data, see if a Copilot connector exists for them or add an API plugin.
 
-- **Test responses with and without knowledge:** Test some queries before and after adding knowledge sources. For example, ask a question that should be answered from a particular document. Without the document, does the agent struggle or generate false information? After you add the document, does the agent find the answer? If you notice the agent still isn’t using the information, you might need to adjust your instructions. Or, if the agent is overusing a knowledge source, consider removing that source or refining instructions to use it only in context. 
+- **Discourage model knowledge:** Adding knowledge sources alone doesn't prevent the model from drawing on its built-in training knowledge. To ensure that the agent relies only on your configured sources, set the `discourage_model_knowledge` property to `true` in the `special_instructions` object of your agent manifest. When enabled, the agent does its best to avoid using model knowledge in its responses. For more information, see [Special instructions object](declarative-agent-manifest-1.8.md#special-instructions-object). You can also reinforce this in your instructions; for more information, see [Ground responses to configured knowledge sources](declarative-agent-instructions.md#ground-responses-to-configured-knowledge-sources).
+
+- **Test responses with and without knowledge:** Test some queries before and after adding knowledge sources. For example, ask a question that should be answered from a particular document. Without the document, does the agent struggle or generate false information? After you add the document, does the agent find the answer? If you notice the agent still isn’t using the information, you might need to adjust your instructions. Or, if the agent is overusing a knowledge source, consider removing that source or refining instructions to use it only in context.
 
 ## Ground custom engine agents with the Retrieval API
 
@@ -98,9 +102,9 @@ an agent with the Retrieval API:
 
 Even after following all the design best practices and guidelines, thoroughly test your agent to verify that it works as intended. Apply the following best practices to test and iterate on your agent:
 
-- **Use the built-in test chat:** In the right pane in Agent Builder in Microsoft 365 Copilot, you can chat with a live preview of your agent while building it. Do this frequently. Try all your conversation starters and sample prompts. Also, test edge questions, long questions, irrelevant questions, and so on, to see how the agent responds. If something odd happens, refine your instructions or knowledge sources and test again.  
+- **Use the built-in test chat:** In the right pane in Agent Builder in Microsoft 365 Copilot, you can chat with a live preview of your agent while building it. Do this frequently. Try all your conversation starters and sample prompts. Also, test edge questions, long questions, irrelevant questions, and so on, to see how the agent responds. If something odd happens, refine your instructions or knowledge sources and test again.
 
-- **Test in multiple apps:** If you have access to the Microsoft 365 Copilot experience in Microsoft 365 apps, such as Word, Excel, Teams, and Outlook, add your agent in each of those places to see how it behaves outside of the authoring environment. You might notice that in Word, for example, certain responses, such as suggested actions, behave differently than in Teams. Catch those discrepancies early. Your agent must be functional across all Microsoft 365 apps.  
+- **Test in multiple apps:** If you have access to the Microsoft 365 Copilot experience in Microsoft 365 apps, such as Word, Excel, Teams, and Outlook, add your agent in each of those places to see how it behaves outside of the authoring environment. You might notice that in Word, for example, certain responses, such as suggested actions, behave differently than in Teams. Catch those discrepancies early. Your agent must be functional across all Microsoft 365 apps.
 
 - **Check the confirmation flows:** If your agent uses actionable functions that require confirmations, fully test those loops. For example, type a query that triggers the action, verify that the confirmation prompt text is clear, select **Allow** (or whatever the button says), and then check the result. Also, test choosing **Cancel/Deny** to see how the agent reacts.
 

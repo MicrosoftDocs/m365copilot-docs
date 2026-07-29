@@ -4,7 +4,7 @@ description: Resolve common setup, authentication, runtime, and environment issu
 #customer intent: As a developer running agent evaluations, I want to diagnose why the CLI can't find my agent so that I can fix my environment configuration and run evaluations successfully.
 ms.date: 06/18/2026
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.reviewer: sakov
 ms.topic: troubleshooting
 ms.localizationpriority: medium

@@ -30,7 +30,7 @@ When Microsoft validates and approves your app package, your agent is available 
 
 ## Declarative agents built with Microsoft 365 Agents Toolkit
 
-[Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
+[Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-agent.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
 
 [Responsible AI validation checks](rai-validation.md) run on your declarative agent during manifest validation, including when you sideload or publish your agent.
 
@@ -81,7 +81,7 @@ Custom-built [SharePoint agents](https://support.microsoft.com/office/get-starte
 
 ## Custom engine agent built with Agents Toolkit
 
-Agents Toolkit supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-copilot.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
+Agents Toolkit supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-agent.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
 
 [Store submission requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context) include a number of [custom engine agent UX](./ux-custom-engine-agent.md) best practices to ensure the best possible user experience.
 

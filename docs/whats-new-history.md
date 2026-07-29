@@ -2,7 +2,7 @@
 title: What's New Archive for Microsoft 365 Copilot Extensibility
 description: Find out what's new in Microsoft 365 Copilot extensibility, including plugins, declarative agents, custom engine agents, connectors, and more.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 05/15/2026
 ms.topic: overview

@@ -4,7 +4,7 @@ description: Get started quickly with evaluating your Microsoft 365 Copilot agen
 #customer intent: As a developer setting up agent evaluations, I want to configure my agent ID and environment variables so that the runevals CLI can find and evaluate my agent.
 ms.date: 06/18/2026
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.reviewer: sakov
 ms.topic: quickstart
 ms.localizationpriority: high
