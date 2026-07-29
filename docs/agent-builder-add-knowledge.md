@@ -8,7 +8,7 @@ ms.topic: concept-article
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 07/29/2026
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -127,10 +127,12 @@ You can ground your agent in Microsoft Teams data, including Teams chat messages
 
 You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents' responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, select the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
 
+You can also scope your agents to specific meetings. Scoping knowledge to specific meetings improves the accuracy and relevancy of agents' responses. To scope Teams knowledge to specific meetings, on the **Configure** tab, in the **Knowledge** section, select the search bar. In the window that opens, choose the **Meetings** tab, and select the specific meetings to add.
+
 > [!IMPORTANT]
 >
 > - Teams knowledge is only available to users with a Microsoft 365 Copilot add-on license.
-> - You can't scope to individual meetings. When you select **My Teams chats and meetings**, agents search all meeting transcripts and the whole calendar.
+> - When you select **My Teams chats and meetings**, agents search all meeting transcripts and the whole calendar. To limit the scope, add specific meetings instead.
 > - Depending on the size of past transcripts, agents might not have access to all meeting transcripts.
 
 ## Outlook emails
