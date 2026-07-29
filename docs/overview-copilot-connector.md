@@ -2,7 +2,7 @@
 title: Microsoft 365 Copilot connectors overview
 description: Extend the knowledge in Microsoft 365 Copilot with Copilot connectors.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
 ms.date: 06/18/2026

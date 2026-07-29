@@ -288,7 +288,7 @@ The OneDrive and SharePoint object contains the following properties.
 | `items_by_sharepoint_ids` | Array of [Items by SharePoint IDs object](#items-by-sharepoint-ids-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If you omit both the `items_by_sharepoint_ids` and the `items_by_url` properties, the declarative agent can access all OneDrive and SharePoint sources in the organization. |
 | `items_by_url`            | Array of [Items by URL object](#items-by-url-object)                       | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If you omit both the `items_by_sharepoint_ids` and the `items_by_url` properties, the declarative agent can access all OneDrive and SharePoint sources in the organization. |
 
-For information about how to optimize SharePoint content for Copilot, see [Optimize SharePoint content retrieval](optimize-sharepoint-content.md).
+For information about how to optimize SharePoint content for Copilot, see [Optimize content retrieval](optimize-content-retrieval.md).
 
 ##### Items by SharePoint IDs object
 
@@ -848,6 +848,8 @@ The special instructions object contains the following property.
 | Property                     | Type    | Description |
 | ---------------------------- | ------- | ----------- |
 | `discourage_model_knowledge` | Boolean | Required. If set to `true`, the agent doesn't use model knowledge when generating responses. The default value is `false`. |
+
+To learn when and how to use this property, see [Ground responses to configured knowledge sources](declarative-agent-instructions.md#ground-responses-to-configured-knowledge-sources).
 
 ### Disclaimer object
 

@@ -1,7 +1,7 @@
 ---
 title: Choose the Right Tool to Build a Declarative Agent for Microsoft 365 Copilot
 description: Learn which tools are most suited for different use cases when creating a declarative agent.
-ms.author: lauragra
+ms.author: jasonjoh
 author: lauragra
 ms.localizationpriority: medium
 ms.date: 05/08/2026

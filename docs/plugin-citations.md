@@ -1,11 +1,11 @@
 ---
-title: Show citations with response semantics in declarative agents
-description: Learn how to use response semantics so that MCP or API plugin content surfaced by your declarative agent renders as clickable, source-linked citations in Microsoft 365 Copilot.
+title: Show citations with response semantics in Copilot MCP connectors and agents
+description: Learn how to use response semantics so that MCP or API plugin content surfaced by your agent renders as clickable, source-linked citations in Microsoft 365 Copilot.
 author: akhilsaivalluri
 ms.author: avalluri
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/18/2026
+ms.date: 07/06/2026
 ---
 
 <!-- cSpell:ignore akhilsaivalluri avalluri treyresearch EMEA -->
@@ -17,6 +17,8 @@ Citations build trust that a Microsoft 365 Copilot response is accurate and grou
 For content coming from a [Model Context Protocol (MCP) server](build-mcp-plugins.md) or an [API](build-api-plugins-existing-api.md), that content must return a URL that an end user can open and review. You define [`response_semantics`](plugin-manifest-2.4.md#response-semantics-object) in your plugin definition so that Copilot knows where that URL is located in the plugin response, and can make the citation clickable with the right link.
 
 If you skip this step, the response still includes a citation, but only with a representative pill or icon. The end user can't click through and confirm the data from your site. That's why clickable citations are also a Microsoft 365 Copilot Agents store policy requirement for apps published to the store.
+
+Copilot can also infer citation metadata automatically from common field names, so you no longer need to explicitly define `response_semantics`. Explicit `response_semantics` still take precedence when you provide them. Relying on this dynamic fallback is especially useful when you use [dynamic tool discovery](plugin-dynamic-tool-discovery.md), where the tool surface can change at runtime. For more information, see [Dynamic response semantics](#dynamic-response-semantics-zero-config-fallback).
 
 :::image type="content" source="assets/images/declarative-agents/citations/citation-hover-experience.png" alt-text="On hover experience for clickable citations in a Copilot response.":::
 
@@ -36,6 +38,8 @@ Response semantics defined in your plugin manifest act as a contract between you
     - You tell Copilot **which fields on each item map to the citation's title, subtitle, and URL** (`properties`).
 
 1. Copilot renders a citation for each item. Users click through to your source.
+
+If you provide explicit `properties` mappings, Copilot uses them as-is. Dynamic inference applies only when those mappings are absent. For more information, see [Dynamic response semantics](#dynamic-response-semantics-zero-config-fallback).
 
 ## Minimum configuration
 
@@ -139,6 +143,67 @@ MCP tools wrap their response in a `content` array of `TextContentBlock` items. 
 ```
 
 The parser unwraps the `text` payload first, leaving a single object. You use the [single object](#single-object-fetch-style) configuration (`"data_path": "$"`). An MCP search tool that returns an array inside the `text` field uses the [array of results](#array-of-results-search-style) configuration (`data_path: "$.results"`).
+
+## Dynamic response semantics (zero-config fallback)
+
+Explicit `response_semantics` works well only when your tools are stable and unchanging. That's often not the case: a connector built on a third-party MCP server frequently updates its tools, so you have to keep the manifest in sync as the server evolves. When the server changes but the manifest doesn't, structured grounding silently falls back to raw text and citations stop rendering.
+
+When your manifest omits the explicit `properties` mappings, Copilot infers citation fields by scanning each result object against a prioritized list of well-known aliases. This zero-config fallback is especially useful with [dynamic tool discovery](plugin-dynamic-tool-discovery.md), where you can't pin a manifest to a fixed tool surface.
+
+### Field aliases
+
+For each citation field, Copilot checks the following aliases in priority order and uses the first match it finds.
+
+| Citation field | Aliases (priority order) |
+| --- | --- |
+| URL | `display_url`, `displayUrl`, `web_url`, `webUrl`, `url`, `citation_url`, `citationUrl`, `reference_url`, `referenceUrl`, `website_url`, `websiteUrl`, `web_link`, `webLink`, `link`, `href` |
+| Title | `display_title`, `displayTitle`, `title`, `name`, `display_name`, `displayName`, `web_title`, `webTitle`, `subject`, `heading`, `caption` |
+| Subtitle | `subtitle`, `description`, `summary`, `snippet`, `source`, `provider`, `site_name`, `siteName`, `highlight` |
+| Thumbnail | `thumbnail_url`, `thumbnailUrl`, `thumbnail`, `image_url`, `imageUrl`, `logo_url`, `logoUrl`, `icon_url`, `iconUrl` |
+| Array of results | `results`, `items`, `data`, `value`, `records`, `entries` |
+
+### Resolution rules
+
+- **URL is the hard requirement.** If no non-empty URL is found, Copilot skips the element and emits no citation.
+- **Title falls back to the hostname** if no title alias is present.
+- **Subtitle and thumbnail are opportunistic.** Copilot includes them when it recognizes a matching field and omits them otherwise.
+
+### Example
+
+If your MCP tool returns the following response, you don't need to define `response_semantics` explicitly. Copilot infers the citation fields from the well-known aliases.
+
+```json
+{
+  "isError": false,
+  "content": [
+    {
+      "type": "text",
+      "text": "<stringified results>"
+    }
+  ]
+}
+```
+
+The `text` field contains the stringified results:
+
+```json
+{
+  "results": [
+    {
+      "url": "https://example.com/result1",
+      "title": "Result 1",
+      "subtitle": "Subtitle for Result 1"
+    },
+    {
+      "url": "https://example.com/result2",
+      "title": "Result 2",
+      "subtitle": "Subtitle for Result 2"
+    }
+  ]
+}
+```
+
+Because `results`, `url`, `title`, and `subtitle` all match well-known aliases, Copilot renders a clickable citation for each item. Any of the equivalent aliases work in their place - for example, `items` or `data` instead of `results`, or `webUrl` or `href` instead of `url`.
 
 ## Citation properties
 

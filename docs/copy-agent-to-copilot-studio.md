@@ -3,7 +3,7 @@ title: Copy an agent to Copilot Studio
 description: Learn how to copy your declarative agent from Microsoft 365 Copilot to Copilot Studio to take advantage of complex features and workflows.
 #customer intent: As a developer, I can copy my declaractive agent to Copilot Studio.
 author: Lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.reviewer: lauragra
 ms.date: 01/26/2026
 ms.topic: concept-article

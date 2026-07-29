@@ -1,8 +1,8 @@
 ---
-title: Create a Prompt Coach agent from a template 
+title: Create a Prompt Coach agent from a template
 description: Learn how to use the Prompt Coach template in Microsoft 365 Copilot to create a declarative agent.
 author: lauragra
-ms.author: lauragra
+ms.author: jasonjoh
 ms.reviewer: kmarko
 ms.topic: article
 ms.service: copilot-studio

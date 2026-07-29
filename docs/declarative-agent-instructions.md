@@ -5,10 +5,12 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/11/2026
+ms.date: 07/27/2026
 ms.contributors:
   - kkanjitajdin
 ---
+
+<!-- cSpell:ignore kkanjitajdin XPIA -->
 
 # Write effective instructions for declarative agents
 
@@ -120,6 +122,12 @@ Clearly call out the names of actions, capabilities, or knowledge sources involv
 - **Code interpreter**: For example, "Use code interpreter to generate bar or pie charts."
 - **People knowledge**: For example, "Use people knowledge to fetch user email."
 
+### Ground responses to configured knowledge sources
+
+Language models have built-in knowledge from their training data. In many agent scenarios, you want the agent to rely only on the knowledge sources you configure—not the model's internal knowledge. This approach ensures that responses are accurate, consistent, and traceable to your organizational data.
+
+The recommended way to prevent the model from drawing on its built-in knowledge is to set the `discourage_model_knowledge` property to `true` in the `special_instructions` object of your agent manifest. When enabled, the agent does its best to avoid generating responses from model knowledge and relies on your configured knowledge sources instead. For more information, see [Special instructions object](declarative-agent-manifest-1.6.md#special-instructions-object).
+
 ### Provide examples
 
 Examples help the agent understand instructions.
@@ -182,14 +190,14 @@ Task: Extract the product name and renewal date from this paragraph.
 Be aware of the following pitfalls and their solutions to avoid common failures.
 
 - **Overeager tool use**
-  - _Problem_: The model calls tools without needed inputs.
-  - _Solution_: Add instruction "Only call the tool if necessary inputs are available; otherwise, ask the user."
+  - Problem: The model calls tools without needed inputs.
+  - Solution: Add instruction "Only call the tool if necessary inputs are available; otherwise, ask the user."
 - **Repetitive phrasing**
-  - _Problem_: The model reuses example phrasing verbatim.
-  - _Solution_: Encourage varied responses and natural language. Consider adding more than one example instead of just one (few-shot prompting). Experiment with removing the example to save on tokens.
+  - Problem: The model reuses example phrasing verbatim.
+  - Solution: Encourage varied responses and natural language. Consider adding more than one example instead of just one (few-shot prompting). Experiment with removing the example to save on tokens.
 - **Verbose explanations**
-  - _Problem_: The model overexplains or provides excessive formatting.
-  - _Solution_: To limit verbosity or formatting, add constraints and concise examples.
+  - Problem: The model overexplains or provides excessive formatting.
+  - Solution: To limit verbosity or formatting, add constraints and concise examples.
 
 ### Add a final self-evaluation step
 

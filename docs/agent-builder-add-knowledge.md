@@ -8,7 +8,7 @@ ms.topic: concept-article
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 07/29/2026
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -45,10 +45,11 @@ If you're configuring your agent manually, to add knowledge sources to your agen
 
 1. In Microsoft 365 Copilot, choose **New agent** from the left pane, and choose **Skip to configure**.
 1. In the **Knowledge** section, use one of the following methods to add knowledge sources:
-   - **Search** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
-- **Enter URL** - Add a public website, a SharePoint link that includes the site path (for example, `.../sites/<site-name>/...`) and doesn't include query parameters, or a OneDrive shared link.
-   - **Browse** - Use the **Attach cloud files** picker to browse for and select SharePoint or OneDrive files, folders, or lists.
-   - **Upload** - Upload files directly from your device.
+
+    - **Search** - Type keywords to search for items. Use this option to add sources such as email and Teams messages.
+    - **Enter URL** - Add a public website, a SharePoint link that includes the site path (for example, `.../sites/<site-name>/...`) and doesn't include query parameters, or a OneDrive shared link.
+    - **Browse** - Use the **Attach cloud files** picker to browse for and select SharePoint or OneDrive files, folders, or lists.
+    - **Upload** - Upload files directly from your device.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/agent-builder-knowledge-configure.png" alt-text="A screenshot of the Knowledge section of the Configure tab.":::
 
@@ -114,16 +115,24 @@ When you upload new files to SharePoint or OneDrive, it can take up to several m
 
 You can check the file readiness in the **Knowledge** section in the **Configure** tab; the file has the word "Preparing" next to it. When you rename or delete the underlying file uploaded to SharePoint or OneDrive, the agent picks up the changes. You can also select the refresh button on top of the **Knowledge** section to manually reload the state.
 
+## OneNote pages
+
+You can choose specific OneNote pages from the file picker to upload as knowledge. You can only select individual OneNote pages; the option to select a whole OneNote notebook isn't available. When you select **My SharePoint files, folders, and sites**, OneNote pages are included.
+
+Use the file picker to add OneNote pages. Agent Builder doesn't support entering OneNote page URLs.
+
 ## Microsoft Teams data
 
 You can ground your agent in Microsoft Teams data, including Teams chat messages and meeting information. To use all chat messages, meeting transcripts, and calendars that you have access to as knowledge, select **My Teams chats and meetings**.
 
 You can also scope your agents to specific chats, including team channels, group chats, and meeting chats. Scoping knowledge to specific chats improves the accuracy and relevancy of agents' responses. To scope Teams knowledge to specific chats, on the **Configure** tab, in the **Knowledge** section, select the search bar. In the window that opens, choose the **Chats** tab, and select the specific chats to add. You can add up to five chats.
 
+You can also scope your agents to specific meetings. Scoping knowledge to specific meetings improves the accuracy and relevancy of agents' responses. To scope Teams knowledge to specific meetings, on the **Configure** tab, in the **Knowledge** section, select the search bar. In the window that opens, choose the **Meetings** tab, and select the specific meetings to add.
+
 > [!IMPORTANT]
 >
 > - Teams knowledge is only available to users with a Microsoft 365 Copilot add-on license.
-> - You can't scope to individual meetings. When you select **My Teams chats and meetings**, agents search all meeting transcripts and the whole calendar.
+> - When you select **My Teams chats and meetings**, agents search all meeting transcripts and the whole calendar. To limit the scope, add specific meetings instead.
 > - Depending on the size of past transcripts, agents might not have access to all meeting transcripts.
 
 ## Outlook emails
