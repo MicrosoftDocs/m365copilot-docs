@@ -135,24 +135,23 @@ To deploy an agent manually:
 1. [Sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 > [!NOTE]
->
 > - The ZIP package can't include embedded files. Remove any embedded file content from the ZIP package.
 > - Sideloading agents in Teams isn't supported on macOS.
 
 ### Automatically share SharePoint files and folders
 
-When you share an agent, Copilot users might not have access to all the underlying knowledge sources. You can share SharePoint knowledge sources with others when the **Share** option is set to **Specific users in your organization**.
+When you share an agent, Copilot users might not have access to all the underlying knowledge sources. You can share SharePoint knowledge sources with others when the **Share** option is set to **Specific users in your organization**. However, the agent respects the end user's information and sensitivity privileges. So, if the user doesn't have access to a knowledge source, the agent doesn't include the content that knowledge source contains when generating a response.
 
-You can select which SharePoint folders and files to share. Sharing only works when the author of the agent already has permissions to share or to update the sharing permissions. File sensitivity labels are respected during sharing.
+You can select which SharePoint folders and files to share. Sharing only works when the author of the agent already has permissions to share or to update the sharing permissions. [File sensitivity labels](/purview/sensitivity-labels) applied to files in SharePoint or OneDrive are respected. If the sharing on a file or folder fails, the agent is still shared with the users. The author needs to contact the file owners or the SharePoint site admin to grant permission to the file or folder directly from SharePoint.
 
 > [!NOTE]
-> Only the files and folders you specifically add to the agent can be shared automatically. Full access to SharePoint sites isn't automatically available to people you share your agent with. A site member would need to grant explicit access to the site.
+> Only the files and folders you specifically add to the agent can be shared automatically. Full access to SharePoint sites isn't automatically available to people you share your agent with. A site administrator must grant users permission via the site settings.
 
 When a user's access to the agent is removed, it doesn't affect their access to the shared file or folders. Manage user permissions to access file and folders directly through SharePoint.
 
 ## Update your agent's About information
 
-Use the **About this agent** dialog to update the metadata that's visible in the Agent Store and in your agent's About information in Microsoft 365 Copilot. You can open this dialog for any agent you own.
+Use the **About this agent** dialog to update the metadata that's visible in the Agent Store and in your agent's About information in Microsoft 365 Copilot. You can open this dialog for any agent you own, whether or not it's shared or submitted to your org catalog.
 
 To open the dialog, select the **More** ellipses (**...**) in the agent authoring header, and then select **About this agent**.
 
@@ -160,21 +159,21 @@ The following fields are available.
 
 | Field | Required or optional | Maximum length | Description |
 | --- | --- | --- | --- |
-| **Short description** | Required | 80 characters | A concise summary of what the agent does. Shown in the Agent Store and in the agent's About information. Default: *Built using Microsoft 365 Copilot*. |
-| **Creator website** | Optional | 2,048 characters | A link to more information about you or your team, such as your profile page, your team's SharePoint site, or an internal support page. Opens in a new tab. |
+| **Short description** | Required | 80 characters | A concise summary of what the agent does. Shown in the Agent Store and in the agent's About information. Default: *Built using Microsoft 365 Copilot Agent Builder*. |
+| **Creator website** | Optional | 2,048 characters | A link to more information about you or your team, such as your profile page, your team's SharePoint site, or an internal support page. Opens when users select the creator's name in the agent details pane. Must be a valid HTTPS URL. |
 | **Privacy statement** | Optional | 2,048 characters | A link to your organization's privacy statement. Must be a valid HTTPS URL. |
 | **Terms of use** | Optional | 2,048 characters | A link to your organization's terms of use. Must be a valid HTTPS URL. |
 
-A default placeholder URL is provided for **Creator website**, **Privacy statement**, and **Terms of use**. Replace each placeholder with a URL that's appropriate for your agent; otherwise, Agent Store submission might be rejected.
+A default placeholder URL is provided for **Creator website**, **Privacy statement**, and **Terms of use**. Replace each placeholder with a URL that's appropriate for your agent; otherwise, Agent Builder shows a warning on the field.
 
 > [!NOTE]
 > Values you save in **About this agent** prepopulate the corresponding fields in the submission dialog when you submit your agent to your org catalog. For more information, see [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md).
 
 ## Submit an agent to your org catalog
 
-The shared version of your agent and the Agent Store version are managed separately. You manage the shared version and can continue iterating on it, changing who it's shared with, or keeping it private.
+The shared version of your agent and the Agent Store version are managed separately. You manage the shared version and can continue iterating on it, changing who it's shared with, or keeping it private for testing, at any time. Your admin manages the Agent Store version after you submit the agent for review.
 
-To make your agent broadly discoverable in your organization, submit it to your org catalog. An admin reviews the submission in the [Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#request-to-add-agents-to-the-catalog).
+To make your agent broadly discoverable in your organization, submit it to your org catalog. An admin reviews the submission in the [Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents) and, if approved, publishes the agent in the **Built by your org** section of the Agent Store.
 
 For the submission flow, required fields, approval status tracking, and post-approval updates, see [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md).
 
@@ -206,14 +205,14 @@ You can edit your agents if you discover that changes are required after you sha
 
 From there, you can use natural language to describe your changes. You can also use the **Configure** tab for more fine-tuned control over your agent's functionality and knowledge sources.
 
-Changes made to agents are saved automatically. However, your changes aren't visible to users until you make them available. To make changes to an existing agent available, choose **Update** in the agent details.
+Changes made to agents are saved automatically. However, your changes aren't visible to users until you make them available. To make changes to an existing agent available, choose **Update** in the top right corner. Your changes might take several minutes to become available for end users.
 
 > [!NOTE]
-> If you update a previously shared agent that has a SharePoint file and folder knowledge source, share it again with the same users. Doing so automatically shares the files and folders with the users with the latest content.
+> If you update a previously shared agent that has a SharePoint file and folder knowledge source, reshare it with the same users. Doing so automatically shares the files and folders with the users again to ensure a consistent agent experience.
 
 ### Delete your agent
 
-You can delete agents you create. After you delete an agent, however, you won't be able to use it and it won't be available to the users you shared it with. Only the user who created an agent can delete it, but any owner can manage its sharing settings.
+You can delete agents you create. After you delete an agent, however, you won't be able to use it and it won't be available to the users you shared it with. Only the user who created an agent can delete it.
 
 > [!IMPORTANT]
 > Deleting an agent is permanent and can't be reversed.
@@ -233,15 +232,15 @@ Admins can update the owner of a shared agent within the organization. For more 
 
 When sharing an agent and its knowledge sources, you might encounter the errors listed in the following table.
 
-| Issue | Description |
-| --- | --- |
+| Issue        | Description |
+| -------------- | ----------- |
 | Something went wrong | An internal service error occurred. Contact support if this error continues to occur. |
-| Couldn't share | The user has insufficient privileges to update the sharing permissions on certain files. The error lists the files that were unable to be shared. The agent owner should grant the required permissions on those files and try sharing again. |
-| Agent sharing failed, knowledge access not granted | If agent sharing fails, the underlying knowledge sources might not be shared with the intended users or groups. As a result, users without access to the knowledge sources won't be able to use the agent. |
-| Can no longer update agent | This error occurs when your agent's current sharing option is no longer compliant with new admin policies. Agent owners must change the sharing setting to a compliant option. |
+| Couldn't share       | The user has insufficient privileges to update the sharing permissions on certain files. The error lists the files that were unable to be shared. The agent owner should go into SharePoint to try updating these permissions manually. For more information, see: <ul><li>[Share a document](https://support.microsoft.com/office/share-a-document-using-sharepoint-or-onedrive-807de6cf-1ece-41b9-a2b3-250d9a48f1e8) to learn how to share files.</li><li>[Sharing errors in SharePoint and OneDrive](/sharepoint/sharepoint-onedrive-error-message) for an error code reference.</li></ul> |
+| Agent sharing failed, knowledge access not granted | If agent sharing fails, the underlying knowledge sources might not be shared with the intended users or groups. As a result, users without access to those files don’t receive generated responses based on them. To resolve this issue, ensure all individuals and groups you're sharing your agent with exist in your organization, then reshare the knowledge sources by selecting them in the sharing settings to grant user access to them. |
+| Can no longer update agent | This error occurs when your agent’s current sharing option is no longer compliant with new admin policies. Agent owners must change the sharing setting to a compliant option before updating their agent further. A banner guides you to make this change. |
 | We're unable to create this agent due to an error. | Occurs when the system is having trouble publishing an agent. Try again in a few minutes. |
-| This agent includes at least one file with an unsupported sensitivity label. Check your uploaded files and remove them. | Occurs when you upload a file with a sensitivity label that isn't supported. |
-| Your agent can't be updated because it might encourage harmful actions. | Occurs when the system detects harmful content. Review your agent's name, description, and instructions and remove any harmful content. |
+| This agent includes at least one file with an unsupported sensitivity label. Check your uploaded files and remove them. | Occurs when you upload a file with a sensitivity label that isn't supported. Check the shield icon next to your uploaded files and remove the ones that have a red error icon. For more information, see [Unsupported sensitivity label scenarios](copilot-studio-lite-knowledge.md#unsupported-sensitivity-label-scenarios).
+|Your agent can't be updated because it might encourage harmful actions. | Occurs when the system detects harmful content. Review your agent's name, description, and instructions and remove any harmful content, and try to update your agent again. For more information. see [Responsible AI validation](rai-validation.md). |
 
 ## Related content
 
