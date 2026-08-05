@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot Agent Builder to build decla
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 04/09/2026
+ms.date: 07/23/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -30,7 +30,6 @@ You can build agents from the following apps and sites:
 - Microsoft Teams Desktop and web client
 
 Agent Builder is available on both the Work and Web options on the Microsoft 365 Copilot app toolbar. It's not available on mobile versions of the apps and sites listed, or for Microsoft 365 Copilot locations that aren't listed in this article.
-
 
 > [!NOTE]
 > If you need more advanced capabilities like Actions to integrate external services, use [Microsoft Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext). It provides a comprehensive set of tools and features for more complex requirements.
@@ -73,7 +72,7 @@ For general information about Microsoft 365 URLs, see [Microsoft 365 URLs and IP
 The following limitations are known:
 
 - Auto sharing SharePoint files and folders is only supported when sharing with specific security groups and not everyone in the organization. You need to manually update the file and folder permission that the agent uses to grant permission to the intended users for the agent to return information from those knowledge sources.
-- [Lockbox](/power-platform/admin/about-lockbox) and [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview) aren't currently supported for agents created by using Microsoft 365 Copilot.
+- [Customer Managed Keys](/azure/storage/common/customer-managed-keys-overview) aren't currently supported for agents created by using Microsoft 365 Copilot.
 - You can't use agents created by using Microsoft 365 Copilot in Teams Chat.
 - If a tenant admin disables web content via the [Allow web search in Copilot](/copilot/microsoft-365/manage-public-web-access#controls-available-to-manage-web-search) policy, Microsoft 365 Copilot blocks web content as a knowledge source. However, the **Web content** toggle in the **Knowledge** pane isn't disabled. This issue is a UI limitation. The **Allow web search in Copilot** policy takes precedence over the UI setting.
 
