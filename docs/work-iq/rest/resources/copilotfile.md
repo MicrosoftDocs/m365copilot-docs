@@ -23,6 +23,8 @@ zone_pivot_groups: work-iq-rest-api-versions
 
 OneDrive or SharePoint file being sent as context into a Copilot conversation through the [Work IQ Chat API](../copilotroot-post-conversations.md).
 
+Use a `copilotFile` in the [copilotContextualResources](copilotcontextualresources.md) `files` collection to ground a chat message with a OneDrive or SharePoint file. The [copilotConversationRequestMessageParameter](copilotconversationrequestmessageparameter.md) contains the prompt text, while [copilotContextMessage](copilotcontextmessage.md) provides additional text context.
+
 ## Properties
 
 | Property | Type   | Description                                 |
