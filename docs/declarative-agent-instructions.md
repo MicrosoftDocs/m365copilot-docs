@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 07/27/2026
+ms.date: 08/05/2026
 ms.contributors:
   - kkanjitajdin
 ---
@@ -27,7 +27,7 @@ If your declarative agent also has API plugins as actions, the OpenAPI document 
 This guidance applies to developers and makers who use [Agent Builder in Microsoft 365 Copilot](agent-builder.md) or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to create declarative agents. For more information about how to write instructions for Copilot Studio agents, see [Configure high-quality instructions for generative orchestration](/microsoft-copilot-studio/guidance/generative-mode-guidance).
 
 > [!IMPORTANT]
-> Microsoft 365 Copilot periodically transitions to newer GPT versions. Because these updates are automatic, expect some behavioral change over time and be prepared to adapt prompts and instructions where precision matters. The recent move from GPT 5.0 to GPT 5.1 was a larger shift from a mostly literal interpretation of instructions to a more intent‑first, adaptive reasoning approach. This shift might affect how your declarative agent understands and responds to your instructions, particularly in structured or step-by-step scenarios. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
+> Microsoft 365 Copilot periodically transitions to newer models. Because these updates are automatic, expect some behavioral change over time and be prepared to adapt prompts and instructions where precision matters. Model changes can affect how your declarative agent understands and responds to your instructions, particularly in structured or step-by-step scenarios.
 
 ## Instruction components
 
@@ -158,8 +158,6 @@ To detect when deep reasoning was selected:
 Before answering, report in one sentence whether you needed deep reasoning or minimal reasoning to solve this. Then provide the final answer only.
 ```
 
-This approach works because GPT‑5's routing system includes reasoning-token awareness.
-
 #### Moderate reasoning (balanced)
 
 To balance reasoning:
@@ -205,7 +203,7 @@ A self-check step reinforces completeness and ensures that the agent verifies al
 
 ### Apply a stabilizing header when needed
 
-When an agent shows signs of inference drift or step reordering, especially following a model update, add a short header that instructs the model to interpret the instructions literally and avoid inference. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
+When an agent shows signs of inference drift or step reordering, add a short header that instructs the model to interpret the instructions literally and avoid inference. For more information, see [Pattern 8: Apply a literal-execution header for immediate stability](#pattern-8-apply-a-literal-execution-header-for-immediate-stability).
 
 ### Iterate on your instructions
 
@@ -472,7 +470,7 @@ Use this pattern when your workflow requires:
 
 ### Pattern 8: Apply a literal-execution header for immediate stability
 
-A literal-execution header helps temporarily stabilize an existing agent, especially after a model change. This pattern is especially useful as an interim fix while you update the full instruction set. For more information, see [Model changes in GPT 5.1+ for declarative agents](declarative-model-migration-overview.md).
+A literal-execution header helps temporarily stabilize an existing agent. This pattern is especially useful as an interim fix while you update the full instruction set.
 
 ```md
 Always interpret instructions literally.
@@ -485,16 +483,16 @@ Do not call tools unless a step explicitly instructs you to do so.
 
 Use this pattern when:
 
-- You observe reordering, added steps, or excessive reasoning after upgrading to GPT 5.1+.
+- You observe reordering, added steps, or excessive reasoning in your agent's responses.
 - You need a fast short-term mitigation before applying deeper structural improvements.
 - You want to diagnose whether inference or instruction ambiguity is causing the problem.
 
-### Pattern 9: Evaluate and migrate existing declarative agent instructions
+### Pattern 9: Evaluate existing declarative agent instructions
 
 Use a structured evaluation prompt to quickly audit an existing agent, identify specific weaknesses, and generate precise fixes.
 
 ```md
-You are reviewing Data Access (DA) agent instructions for 5.1 stability.
+You are reviewing Data Access (DA) agent instructions for stability.
 
 INPUT
 <instructions>
@@ -522,7 +520,7 @@ OUTPUT (concise)
 
 Use this pattern when:
 
-- You're migrating an existing agent from GPT 5.0 to GPT 5.1 or later.
+- You're auditing an existing agent that behaves inconsistently.
 - You're unsure which parts of the instruction set are fragile or ambiguous.
 - You want a repeatable evaluation process for multiple declarative agents across an organization.
 - You need a quick way to identify which issues are structural, stylistic, or safety related.
