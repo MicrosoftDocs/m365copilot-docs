@@ -1,10 +1,10 @@
 ---
 title: Share and manage agents built with Microsoft 365 Copilot
 description: Learn how to share and manage agents built with Microsoft 365 Copilot.
-author: jasonxian-msft
-ms.author: jasonxian
+author: maosuri
+ms.author: maosuri
 ms.localizationpriority: medium
-ms.date: 05/22/2026
+ms.date: 08/04/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -12,13 +12,13 @@ ms.subservice: agent-builder
 
 # Share and manage agents
 
-You can share the agents you create using Microsoft 365 Copilot with users in your organization. Sharing an agent provides limited direct access to it for a specified set of users. While ideal for team collaboration, sharing an agent doesn't allow for deployment across the organization or integration with other channels.
+You can share the agents you create using Microsoft 365 Copilot with users in your organization. Sharing an agent provides limited direct access to it for a specified set of users. While ideal for limited team collaboration, sharing agents is separate from publishing them across multiple channels or to your organization's agent store.
 
-This article describes how to share and manage the agents you build using the Agent Builder feature in Microsoft 365 Copilot. To publish an agent across multiple channels, you need to use Copilot Studio. For more information, see [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
+This article describes how to share and manage the agents you build using the Agent Builder feature in Microsoft 365 Copilot. To publish an agent across multiple channels, you need to use Copilot Studio. For more information, see [Publish agents for Microsoft 365 Copilot](publish.md).
 
 ## Share an agent
 
-To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After your agent is created, a confirmation message indicates that the agent is private and only available to you. To share the agent with others, select the **Share** button and choose who should have access.
+To share your agent, after you [build and test](agent-builder-build-agents.md) it in Microsoft 365 Copilot, choose **Create**. After your agent is created, a confirmation message indicates that the agent is ready to share. Select **Share** to open the share dialog.
 
 :::image type="content" source="assets/images/agent-builder-screenshots/share-agent.png" alt-text="Share agents from the All agents list" lightbox="assets/images/agent-builder-screenshots/share-agent.png":::
 
@@ -26,21 +26,84 @@ You can also choose the **More** menu (...) next to the agent in the left pane t
 
 :::image type="content" source="assets/images/agent-builder-screenshots/share-agent-2.png" alt-text="Share agents from the left pane":::
 
+### Understand agent ownership and roles
+
+Agents support multiple owners, so you're no longer limited to a single creator. All owners have equal rights and can edit, share, and manage the agent. Multi-owner support helps teams:
+
+- Avoid single points of failure when the original creator is unavailable.
+- Collaborate on agent authoring and maintenance.
+- Control who can edit an agent versus who can only chat with it.
+
+The share dialog uses two access levels:
+
+| Role in UI | What it means | Can chat | Can edit and manage |
+| --- | --- | --- | --- |
+| Can edit | Owner—full rights | Yes | Yes |
+| Can chat | Chat user | Yes | No |
+
+An owner is anyone with **Can edit** access. All owners have equal rights, including the ability to add or remove people, switch roles, and turn on org-wide sharing.
+
 > [!NOTE]
-> Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If sharing options are restricted in your organization, an admin must approve and deploy the agent before it's available to other users in the organization. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
+> Sharing with a group as an owner (Can edit) isn't supported. You can add a group only as a chat user (Can chat). To grant owner rights, add individual users.
 
-The following table describes the available sharing options.
+### Open the share dialog
 
-| Sharing option | Description |
-| -------------- |------------ |
-| Anyone in your organization | Anyone in your tenant can use the sharing link to use the agent. |
-| Specific users in your organization | Specific users, groups, or teams can use the sharing link to access and interact with the agent. You must specify the names or emails of individuals, [security groups](/microsoft-365/admin/create-groups/compare-groups#security-groups), [security-enabled](/graph/api/group-update) [Microsoft 365 groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups), or teams in your organization's Microsoft Entra ID directory.<br /><br />When you share to a team, you can optionally send a notification message to the team. The notification is posted to the team's home channel to make it easy for team members to discover and use the agent. |
-| Only you | Only the author of the agent can use the agent. No one else can use the sharing link. This sharing option is selected by default. |
+1. Open the agent you want to share.
+2. Select **Share**.
+3. The share dialog lists everyone who has access, their role, and the org-wide sharing toggle. You can copy the chat link at any time.
 
-When users open the link to an agent you shared with them, the agent opens in a browser window and is ready to use.
+### Add owners and chat users
+
+To add people to your agent:
+
+1. In the share dialog, enter a name, group, or email in the **Add a name, group, or email** box.
+2. On the **Add people** panel, set the role for the people you're adding:
+   - Choose **Can edit** to add them as an owner with full edit and management rights.
+   - Choose **Can chat** to add them as a chat user who can only interact with the agent.
+3. Leave the **Send notification** checkbox selected to email the new users so they know they have access. Clear it if you don't want to send an email.
+4. Select **Add**.
+
+> [!TIP]
+> To add someone as a chat user instead, choose **Can chat** in the role dropdown before selecting **Add**.
+
+> [!IMPORTANT]
+> You can't add a group as an owner. When you add a group, it can only be a chat user (Can chat). To give someone owner (Can edit) rights, add them as an individual user.
+
+When sharing completes, you get a confirmation and can copy the chat link to share it directly.
+
+### Switch a user's role
+
+As an owner, you can change any shared user's role at any time.
+
+1. Open the **Share** dialog.
+2. Select the role dropdown next to the user.
+3. Choose a new option:
+   - **Can edit** – promote the user to an owner with full rights.
+   - **Can chat** – change the user to a chat user.
+   - **Remove** – revoke the user's access.
+
+Changes take effect immediately.
+
+### Copy edit and chat links
+
+The share dialog surfaces links so you can share access without navigating away:
+
+- **Chat link** – for chat users who only need to interact with the agent.
+- **Edit link** – for owners who need to author and manage the agent.
+
+Select **Copy chat link** (or the **Edit link**) and paste it into email, chat, or documentation.
+
+### Enable org-wide sharing
+
+To make an agent available to everyone in your tenant, turn on org-wide sharing for chat access.
+
+1. Open the **Share** dialog.
+2. Turn on the **Org-wide sharing for chat access** toggle.
+
+When the toggle is on, the agent becomes visible in the agent store to other users in the same tenant, so they can discover and start chatting with it.
 
 > [!NOTE]
-> Agent capabilities differ based on a user's license. Users can only add agents that are shared with them when they have the type of Microsoft 365 Copilot license required for accessing the capabilities configured in that agent. If a user doesn't have the appropriate license for an agent's capabilities, attempts to use the agent might result in an error. For details, see [Agent capabilities for Microsoft 365 users](prerequisites.md#agent-capabilities-and-licensing-models).
+> Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If your admin changes the policy, you might need to update your agent's sharing settings to remain compliant.
 
 ### Governance and admin controls
 
@@ -55,7 +118,7 @@ Admins can configure one of the following options in the Microsoft 365 admin cen
 > [!NOTE]
 > Changes to admin controls apply only to new sharing actions. Existing shared agents remain accessible unless you manually update the sharing option.
 
-When org-wide sharing is disabled, the **Anyone in your organization** option appears grayed out with a tooltip that explains the restriction.
+When org-wide sharing is disabled, the **Org-wide sharing for chat access** toggle appears grayed out with a tooltip that explains the restriction.
 
 ### Deploy an agent via ZIP package
 
