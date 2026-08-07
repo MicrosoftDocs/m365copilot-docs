@@ -9,7 +9,7 @@ ms.date: 06/02/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
-<!-- cSpell:ignore bizchat bbkr enddatetime eykd SNWE startdatetime Uplg -->
+<!-- cSpell:ignore bizchat bbkr enddatetime eykd SNWE startdatetime Uplg FdvcmtJUSE -->
 
 # Work IQ MCP tool reference
 
@@ -34,7 +34,7 @@ Reads one or more entities by resource path. Supports fetching multiple paths in
 
 #### Response
 
-A successful response contains a `results` property that is an array of objects with the following properties. There is one object for each resource path in the `entityUrls` parameter of the request.
+A successful response contains a `results` property that is an array of objects with the following properties. There's one object for each resource path in the `entityUrls` parameter of the request.
 
 | Property     | Type    | Description                                  |
 |--------------|---------|----------------------------------------------|
@@ -43,7 +43,7 @@ A successful response contains a `results` property that is an array of objects 
 
 > [!NOTE]
 >
-> - Collection results are subject to per-tenant policy limits. A default `$top` of 25 is injected if not specified, with a maximum cap of 100.
+> - Per-tenant policy limits apply to collection results. If you don't specify a value, a default `$top` of 25 is injected, with a maximum cap of 100.
 > - Chat messages are capped at 10 per request.
 > - The `$skip` and `$skiptoken` query parameters are blocked.
 
@@ -108,6 +108,69 @@ A successful response contains a `results` property that is an array of objects 
       "statusCode": 200
     }
   ]
+}
+```
+
+---
+
+### fetch_blob
+
+Fetches binary content, such as documents, images, and Office files from a relative Work IQ path. The content is returned as a Base64-encoded string with metadata.
+
+#### Parameters
+
+| Parameter | Type   | Required | Description                                                                                                                                 |
+|-----------|--------|----------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| `path`    | string | Yes      | The relative path to the binary content (for example, `/drives/{drive-id}/items/{item-id}/content`)                                         |
+| `format`  | string | No       | File conversion format (for example, `pdf`). Supported only by drive-content endpoints that accept the Microsoft Graph `$format` parameter. |
+| `agentId` | string | No       | Reserved for future use.                                                                                                                    |
+
+#### Response
+
+A successful response exposes the following properties through the MCP `structuredContent` field.
+
+| Property        | Type    | Description                            |
+|-----------------|---------|----------------------------------------|
+| `statusCode`    | integer | The HTTP status code for the response. |
+| `contentType`   | string  | The MIME type of the returned content. |
+| `blobName`      | string  | The file name, when available.         |
+| `sizeBytes`     | integer | The size of the raw content in bytes.  |
+| `base64Content` | string  | The binary content encoded as Base64.  |
+
+> [!NOTE]
+>
+> - The default raw-file limit is 4 MB and can be configured per path.
+> - Clients must Base64-decode `base64Content` to recover the original bytes.
+> - The blob payload isn't duplicated in the MCP text content field. Clients must read it from `structuredContent`.
+> - A file exceeding the configured limit returns an MCP tool error containing the configured limit; it doesn't return blob content.
+
+#### Example
+
+##### Request
+
+```json
+{
+  "method": "tools/call",
+  "params": {
+    "name": "fetch_blob",
+    "arguments": {
+      "path": "/me/drive/items/01ABCDEF/content"
+    }
+  }
+}
+```
+
+##### Response
+
+```json
+{
+  "structuredContent": {
+    "statusCode": 200,
+    "contentType": "text/plain",
+    "blobName": "notes.txt",
+    "sizeBytes": 14,
+    "base64Content": "SGVsbG8sIFdvcmtJUSE="
+  }
 }
 ```
 
@@ -451,7 +514,7 @@ Copilot tools provide natural-language intelligence by invoking Microsoft 365 Co
 
 ### ask
 
-Asks Microsoft 365 Copilot (or a specific agent) a natural-language question about the user's data. When an `agentId` is provided, the request is routed to that specific agent. When omitted, the request goes to the built-in Microsoft 365 Copilot agent.
+Asks Microsoft 365 Copilot (or a specific agent) a natural-language question about the user's data. When you provide an `agentId`, the request goes to that specific agent. When you omit it, the request goes to the built-in Microsoft 365 Copilot agent.
 
 #### Parameters
 
@@ -503,7 +566,7 @@ A successful response contains a JSON string in the `text` property of a [TextCo
 
 ### list_agents
 
-Lists available agents that can be used with the `ask` tool. Returns a JSON array of available agents, with the built-in Microsoft 365 Copilot agent always included.
+Lists available agents that you can use with the `ask` tool. Returns a JSON array of available agents, and the built-in Microsoft 365 Copilot agent is always included.
 
 #### Parameters
 
@@ -682,7 +745,7 @@ A successful response contains a `paths` property in the `structuredContent` fie
 
 ## Allowed resource paths
 
-Entity tools operate on relative resource paths. The following path prefixes are allowed by default:
+Entity tools work with relative resource paths. By default, the following path prefixes are allowed:
 
 - `/me/`
 - `/users/`
@@ -694,7 +757,7 @@ The following path segments are blocked:
 - `/servicePrincipals/`
 
 > [!NOTE]
-> The complete list of allowed and blocked paths is subject to per-tenant policy configuration and may vary.
+> The complete list of allowed and blocked paths depends on per-tenant policy configuration and might vary.
 
 ## Error handling
 
@@ -704,7 +767,7 @@ When a tool call fails, the Work IQ MCP server returns errors with the following
 - `Retry-After` headers for throttling responses (passed through from Microsoft Graph)
 - Request correlation IDs for troubleshooting
 
-The server does not perform automatic retries — errors are passed through to the MCP client for client-side retry decisions.
+The server doesn't perform automatic retries. The MCP client receives errors and makes client-side retry decisions.
 
 ## Related content
 

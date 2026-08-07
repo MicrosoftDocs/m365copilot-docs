@@ -5,7 +5,7 @@ description: Use the Copilot APIs to securely access Microsoft 365 Copilot capab
 author: lramosvea
 ms.author: lramosvea
 ms.topic: article
-ms.date: 06/18/2026
+ms.date: 08/06/2026
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---
@@ -19,7 +19,7 @@ Enterprise developers face a critical challenge today: how to harness the power 
 By accessing or using the Microsoft 365 Copilot APIs, you're agreeing to the [Microsoft 365 Copilot APIs Terms of Use (preview)](/legal/m365-copilot-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context).
 
 > [!TIP]
-> Do you want to explore the APIs before writing code? Try the [Interactive Demo (preview)](https://aka.ms/copilot.dev?k=API) to see live API requests and responses with your Microsoft 365 data.
+> Do you want to explore the APIs before writing code? Try the [Interactive Demo](https://aka.ms/copilot.dev?k=API) to see live API requests and responses with your Microsoft 365 data.
 
 ## Copilot API capabilities
 

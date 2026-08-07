@@ -4,7 +4,7 @@ description: Use the Retrieval API to ground data from SharePoint, OneDrive, and
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 10/24/2025
+ms.date: 08/06/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 zone_pivot_groups: graph-api-versions
@@ -88,7 +88,7 @@ The following example shows a request to retrieve data from SharePoint. The requ
 
 The following example shows the request.
 
-[▶ Try it in the Interactive Demo (preview)](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true&apiLog=true)
+[▶ Try it in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true&apiLog=true)
 
 :::zone pivot="graph-preview"
 
