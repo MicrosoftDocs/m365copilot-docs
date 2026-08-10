@@ -1,7 +1,7 @@
 ---
-title: Agent Evaluations CLI reference (preview)
+title: Agent Evaluations CLI reference
 description: Complete command-line reference for the M365 Copilot Agent Evaluations CLI tool including all options, flags, and cache commands.
-ms.date: 04/28/2026
+ms.date: 08/04/2026
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -9,12 +9,9 @@ ms.topic: reference
 ms.localizationpriority: medium
 ---
 
-# Agent Evaluations CLI reference (preview)
+# Agent Evaluations CLI reference
 
 This article provides a complete command-line reference for the `runevals` command, which is part of the `@microsoft/m365-copilot-eval` package.
-
-> [!NOTE]
-> The Agent Evaluations CLI is currently in preview. Features and functionality are subject to change.
 
 ## Synopsis
 
@@ -27,7 +24,7 @@ runevals cache-dir
 
 ## Description
 
-The `runevals` command evaluates Microsoft 365 Copilot agents by sending test prompts and scoring responses using Azure AI + machine learning Evaluation metrics. The tool supports batch evaluation from JSON files, inline prompts, and interactive testing.
+The `runevals` command evaluates Microsoft 365 Copilot agents by sending test prompts and scoring responses using Microsoft Foundry cloud evaluation and built-in metrics. The tool supports batch evaluation from JSON files, inline prompts, and interactive testing.
 
 ## Options
 
@@ -43,8 +40,8 @@ runevals --version
 
 Output:
 
-```
-1.3.0-preview.1
+```text
+1.15.0
 ```
 
 ### `--log-level [level]`
@@ -254,7 +251,7 @@ runevals cache-info
 
 **Output:**
 
-```
+```text
 Cache Information
 
 Location: C:\Users\YourName\.m365-copilot-eval\cache
@@ -295,7 +292,7 @@ runevals cache-dir
 
 **Output:**
 
-```
+```text
 C:\Users\YourName\.m365-copilot-eval\cache
 ```
 
@@ -318,8 +315,7 @@ The tool reads configuration from environment files and system variables. For st
 | Variable | Description | Example |
 |----------|-------------|---------|
 | `TENANT_ID` | Microsoft Entra tenant ID | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
-| `AZURE_AI_OPENAI_ENDPOINT` | Azure OpenAI in Foundry Models endpoint URL | `https://your-resource.openai.azure.com/` |
-| `AZURE_AI_API_KEY` | Azure OpenAI API key | `your-api-key-here` |
+| `AZURE_AI_PROJECT_ENDPOINT` | Microsoft Foundry project endpoint | `https://<account>.services.ai.azure.com/api/projects/<project>` |
 
 ### Optional variables
 
@@ -327,8 +323,7 @@ The tool reads configuration from environment files and system variables. For st
 |----------|-------------|---------|
 | `M365_AGENT_ID` | Agent ID to evaluate | Auto-detected from `M365_TITLE_ID` |
 | `M365_TITLE_ID` | Agent title ID (Agents Toolkit) | None |
-| `AZURE_AI_API_VERSION` | Azure OpenAI API version | `2024-12-01-preview` |
-| `AZURE_AI_MODEL_NAME` | Model for evaluations | `gpt-4o-mini` |
+| `AZURE_AI_MODEL_NAME` | Model for evaluations | `gpt-5-mini` |
 
 ## Examples
 

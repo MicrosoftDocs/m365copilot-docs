@@ -1,7 +1,7 @@
 ---
-title: Evaluators reference for Agent Evaluations CLI (preview)
+title: Evaluators reference for Agent Evaluations CLI
 description: Learn about the evaluation metrics available in the Microsoft 365 Copilot Agent Evaluations CLI, including LLM-based, retrieval, and string-matching evaluators.
-ms.date: 06/19/2026
+ms.date: 08/04/2026
 author: jasonjoh
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 <!-- cSpell:ignore Likert BLEU -->
 
-# Evaluators reference for Agent Evaluations CLI (preview)
+# Evaluators reference for Agent Evaluations CLI
 
 The Microsoft 365 Copilot Agent Evaluations CLI includes a set of evaluators that automatically score your agent's responses. Each evaluator measures a different aspect of quality, from semantic relevance to exact string matching. This article describes each evaluator, its scoring behavior, configuration options, and how to use it in your test datasets.
 
@@ -37,7 +37,7 @@ The following table summarizes all available evaluators.
 
 ## LLM-based evaluators
 
-LLM-based evaluators use an Azure OpenAI model (configured via your environment variables) to judge the quality of the agent's response. These evaluators are powered by the [Azure AI Evaluation SDK](/azure/ai-studio/concepts/evaluation-metrics-built-in). Scores range from 1 to 5 on a Likert scale, where higher values indicate better quality. By default, a score of 3 or higher is required to pass. You can change the required score in your test configuration.
+LLM-based evaluators use an Azure OpenAI model in your Microsoft Foundry project (configured via your environment variables) to judge the quality of the agent's response. These evaluators are powered by the [Azure AI Evaluation SDK](/azure/ai-studio/concepts/evaluation-metrics-built-in). Scores range from 1 to 5 on a Likert scale, where higher values indicate better quality. By default, a score of 3 or higher is required to pass. You can change the required score in your test configuration.
 
 ### Relevance
 

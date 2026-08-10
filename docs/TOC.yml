@@ -370,7 +370,7 @@ items:
     href: evaluation-multi-turn.md
   - name: Organize test categories and iterate
     href: evaluation-test-categories.md
-  - name: Use the Agent Evaluations CLI (preview)
+  - name: Use the Agent Evaluations CLI
     items:
     - name: Overview
       href: evaluations-cli-overview.md
@@ -382,6 +382,8 @@ items:
       href: evaluations-cli-create-tests.md
     - name: Evaluators reference
       href: evaluations-cli-evaluators.md
+    - name: Add custom evaluators
+      href: evaluations-cli-custom-evaluators.md
     - name: CLI reference
       href: evaluations-cli-reference.md
     - name: Troubleshooting

@@ -1,8 +1,8 @@
 ---
-title: Quickstart - Use the Agent Evaluations CLI (preview)
+title: Quickstart - Use the Agent Evaluations CLI
 description: Get started quickly with evaluating your Microsoft 365 Copilot agent using the M365 Copilot Agent Evaluations CLI tool.
 #customer intent: As a developer setting up agent evaluations, I want to configure my agent ID and environment variables so that the runevals CLI can find and evaluate my agent.
-ms.date: 06/18/2026
+ms.date: 08/04/2026
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -10,12 +10,9 @@ ms.topic: quickstart
 ms.localizationpriority: high
 ---
 
-# Quickstart: Use the Agent Evaluations CLI (preview)
+# Quickstart: Use the Agent Evaluations CLI
 
 The Microsoft 365 Copilot Agent Evaluations CLI (@microsoft/m365-copilot-eval) helps you test, measure, and improve the quality of your agents through automated prompt evaluation and AI-based scoring. This quickstart walks you through installing the Agent Evaluations tool, configuring your environment, creating your first dataset, and running an evaluation.
-
-> [!NOTE]
-> The Agent Evaluations CLI is currently in preview. Features and functionality are subject to change.
 
 ## Prerequisites
 
@@ -23,11 +20,12 @@ Before you begin, make sure that you have:
 
 - A Microsoft 365 Copilot agent deployed to your tenant.
 - [Node.js](https://nodejs.org/en/download) 24.12.0 or later (use `node --version` to check).
-- Access to an Azure OpenAI in Foundry Models resource with GPT-4o-mini deployed.
-- Microsoft Entra admin consent granted for the Agent Evaluations CLI in your
+- Copilot credits available in your tenant. The Agent Evaluations CLI consumes Copilot credits when it sends test prompts to your agent. Your tenant admin turns on usage-based (metered) billing in the [Microsoft 365 admin center](https://admin.microsoft.com) by going to the **Copilot** > **Cost Management** node. For more information, see [Manage Copilot credits](/microsoft-365/copilot/usage-based-billing-manage-copilot-credits).
+- A Microsoft Foundry project with a GPT-5 model deployed to score responses. For more information, see [Get values for environment variables](evaluations-cli-get-env-values.md).
+- Microsoft Entra admin consent granted for Work IQ in your
   tenant. If you aren't a tenant admin, ask your admin to grant consent before
   you run `runevals` for the first time. For more information, see [Grant admin consent](https://github.com/microsoft/work-iq/blob/main/ADMIN-INSTRUCTIONS.md).
-- Your tenant ID, Azure OpenAI endpoint, and API key. If you don't have these values, see [Get values for  environment variables](evaluations-cli-get-env-values.md).
+- Your tenant ID and Microsoft Foundry project endpoint. If you don't have these values, see [Get values for environment variables](evaluations-cli-get-env-values.md).
 
 > [!NOTE]
 > This quickstart assumes you're using a Windows development environment. Authentication support for other operating systems is coming soon.
@@ -58,7 +56,7 @@ cd /path/to/your-agent-project
 
 Your agent project should include the following files and folders:
 
-```
+```text
 my-agent/
 ├── .env.local              # Agent configuration (Agents Toolkit projects)
 ├── .env.local.user         # Secrets — never committed
@@ -85,12 +83,12 @@ Add secrets to `.env.local.user`:
 
 ```ini
 # .env.local.user (NOT checked in — secrets go here)
-AZURE_AI_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
-AZURE_AI_API_KEY="your-api-key-here"
 TENANT_ID="your-tenant-id-here"
-AZURE_AI_API_VERSION="2024-12-01-preview" # default
-AZURE_AI_MODEL_NAME="gpt-4o-mini" # default
+AZURE_AI_PROJECT_ENDPOINT="https://<account>.services.ai.azure.com/api/projects/<project>"
+AZURE_AI_MODEL_NAME="gpt-5-mini" # default
 ```
+
+The Agent Evaluations CLI scores responses by using Microsoft Foundry cloud evaluation, which authenticates with Microsoft Entra. Sign in with the Azure CLI (`az login`) before you run `runevals`. For details about these values, see [Get values for environment variables](evaluations-cli-get-env-values.md).
 
 Add `.env.local.user` to your `.gitignore`:
 
@@ -145,7 +143,7 @@ A successful run produces:
 
 - A completion message in the terminal similar to the following message.
 
-  ```
+  ```text
   M365 Copilot Agent Evaluations CLI
 
   Loading environment: dev

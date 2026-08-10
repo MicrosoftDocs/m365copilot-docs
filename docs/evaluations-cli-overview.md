@@ -1,7 +1,7 @@
 ---
-title: Agent Evaluations CLI overview (preview)
+title: Agent Evaluations CLI overview
 description: Learn how to evaluate Microsoft 365 Copilot agents using automated testing and AI-powered metrics.
-ms.date: 06/19/2026
+ms.date: 08/04/2026
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -9,19 +9,16 @@ ms.topic: overview
 ms.localizationpriority: high
 ---
 
-# Agent Evaluations CLI overview (preview)
+# Agent Evaluations CLI overview
 
 The Microsoft 365 Copilot Agent Evaluations CLI (@microsoft/m365-copilot-eval) helps you test, measure, and improve the quality of your agents with structured evaluations and rich result reports with AI-based scoring.
-
-> [!NOTE]
-> The Agent Evaluations CLI is currently in preview. Features and functionality are subject to change.
 
 ## What you can do
 
 The evaluation tool provides the following capabilities:
 
 - Run batch and interactive evaluations.
-- Automatically score responses using Azure AI + machine learning evaluation metrics.
+- Automatically score responses by using Microsoft Foundry cloud evaluation and built-in metrics.
 - Test using JSON datasets, inline prompts, or interactive input.
 - Generate reports in HTML, JSON, or CSV formats.
 
@@ -55,19 +52,17 @@ Evaluations follow a consistent workflow:
 
 ## Required environment variables
 
-The evaluation tool uses environment variables to authenticate and connect to your tenant and Azure OpenAI in Foundry Models resource.
+The evaluation tool uses environment variables to authenticate and connect to your tenant and Microsoft Foundry project.
 
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `TENANT_ID` | Microsoft Entra tenant ID where your agent is deployed. | None |
-| `AZURE_AI_OPENAI_ENDPOINT` | Azure OpenAI endpoint URL. | None |
-| `AZURE_AI_API_KEY` | Azure OpenAI API key. | None |
+| `AZURE_AI_PROJECT_ENDPOINT` | Microsoft Foundry project endpoint used for cloud evaluation. | None |
+| `AZURE_AI_MODEL_NAME` | Model deployment name in your Microsoft Foundry project. | `gpt-5-mini` |
 | `M365_TITLE_ID` (optional) | Title ID used to auto-detect the Microsoft 365 agent ID for evaluation. | None |
 | `M365_AGENT_ID` (optional) | Explicit agent ID for evaluation. | Auto-detected from `M365_TITLE_ID` |
-| `AZURE_AI_API_VERSION` | Azure OpenAI REST API version. | `2024-12-01-preview` |
-| `AZURE_AI_MODEL_NAME` | Model deployment name in your Azure OpenAI in Foundry Models resource. | `gpt-4o-mini` |
 
-These values enable authentication and allow the tool to run LLM-based evaluation scoring. For details about how to get these values, see [Get values for environment variables](evaluations-cli-get-env-values.md).
+These values enable authentication and allow the tool to run LLM-based evaluation scoring by using Microsoft Foundry. For details about how to get these values, see [Get values for environment variables](evaluations-cli-get-env-values.md).
 
 ## Related content
 
