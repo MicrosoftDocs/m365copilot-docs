@@ -4,7 +4,7 @@ description: Learn about plugins in Microsoft 365 Copilot
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 08/05/2026
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -166,6 +166,9 @@ Developers can use two tools to generate API plugin packages:
 
 - The [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) in [Visual Studio](https://visualstudio.microsoft.com/) or [Visual Studio Code](https://code.visualstudio.com/) creates plugin packages based on an existing MCP server or OpenAPI description. Agents Toolkit also has starter projects with an example API and corresponding plugin package.
 - [Kiota](/openapi/kiota/overview) is a command line tool and a Visual Studio Code extension that generates plugin packages based on an existing OpenAPI description.
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — You can also attach and check actions from the command line. `wiqd agent add action` adds an action to a declarative agent, and `wiqd agent validate --mode deep` confirms that an action's OpenAPI description is reachable and well-formed and that a referenced plugin manifest declares the right authentication scheme. An alpha `wiqd plugin` command tree also exists, but its interface is subject to change. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ## Limitations
 

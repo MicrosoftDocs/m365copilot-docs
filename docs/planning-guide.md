@@ -5,7 +5,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/13/2026
+ms.date: 08/05/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -144,6 +144,9 @@ Regardless of the solution you choose, you need to be sure that it meets RAI and
 ## Outline your development approach
 
 After you choose your Copilot extensibility path, decide how you'll structure your development process. Choose the appropriate development tools, such as Agents Toolkit, Copilot Studio, Microsoft 365 Agents SDK or Azure AI based on your use case. To build your solution, start with a minimum viable product (MVP), and then refine based on feedback and performance.
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — If you're building a declarative agent, `wiqd` gives you one command surface that works the same on your laptop, in CI, and inside Visual Studio Code, so your tooling doesn't fragment across lifecycle phases. Named environments - such as `local`, `dev`, `staging`, and `prod` - map to your rollout plan. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 The following table provides examples of extensibility solutions that use different Copilot extensibility options for various user scenarios.
 

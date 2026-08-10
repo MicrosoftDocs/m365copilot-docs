@@ -5,7 +5,9 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 08/05/2026
+ms.date: 08/10/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ms.contributors:
   - kkanjitajdin
 ---
@@ -226,6 +228,9 @@ Developing instructions for declarative agents is often an iterative process. It
 The following diagram illustrates the iterative process for creating and refining declarative agent instructions.
 
 :::image type="content" source="assets/images/instruction-process.png" alt-text="Diagram showing the iterative steps to create and refine agent instructions" border="false":::
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — Work IQ Dev Tools supports creating evaluations for declarative agents so you can measure how instruction changes affect agent behavior. Create evaluations for the behaviors you want to test, then run them against a provisioned agent as you refine its instructions. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ## Example instructions
 

@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/22/2026
+ms.date: 08/05/2026
 ---
 # Publish agents for Microsoft 365 Copilot
 
@@ -33,6 +33,10 @@ When Microsoft validates and approves your app package, your agent is available 
 [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) supports publishing agents to your organizational catalog and also submission to the Microsoft Commercial Marketplace. [Agents](./overview-declarative-agent.md) are packaged, distributed, and managed using the same [Microsoft 365 app package](./agents-are-apps.md) as [Teams apps that are integrated](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) to run across the Microsoft 365 ecosystem.
 
 [Responsible AI validation checks](rai-validation.md) run on your declarative agent during manifest validation, including when you sideload or publish your agent.
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — Use `wiqd` to publish declarative agents to your organizational catalog from the command line. Run `wiqd agent validate --mode deep` to surface manifest problems before submission, and then run `wiqd agent package` and `wiqd agent publish --env prod`. Admin approval still applies before the agent appears in the catalog. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+
 
 | Distribution method | Supported | Learn more |
 |--|--|--|
