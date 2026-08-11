@@ -3,8 +3,10 @@ title: Agent evaluation overview
 description: Learn foundational concepts, terminology, and eval-driven development for evaluating declarative agents and custom engine agents.
 author: sathya-raveendran
 ms.author: saraveen
-ms.date: 04/22/2026
+ms.date: 08/10/2026
 ms.topic: concept-article
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Agent evaluation overview
@@ -235,6 +237,9 @@ Use [developer mode](debugging-agents-copilot-studio.md) (`-developer on`) in Mi
 - Run details including latency, request parameters, and response status.
 
 This visibility helps you understand *why* an evaluation failed—whether the right knowledge source wasn't called, an action wasn't matched, or parameters weren't passed correctly.
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — Work IQ Dev Tools supports creating and running evaluations for declarative agents. Create evaluations for the behaviors you expect from an agent, then use the results to measure quality and guide improvements. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ### Custom engine agents
 

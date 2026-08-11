@@ -6,7 +6,7 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 08/05/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -45,6 +45,9 @@ You can deploy these agents as-is or further customize them by incorporating you
 ### Build your own agent
 
 If a prebuilt agent doesn't meet your needs, you can build your own agent [from a template](agent-builder-templates.md) or design something from scratch specifically for your workflows and business processes. Whether you need a highly specialized AI assistant or an advanced automation solution, you can develop agents using low-code or pro-code tools that match your preferred development environment and deployment needs. For more information, see [Agents overview](agents-overview.md).
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — For declarative agents, `wiqd` provides a single command-line surface that spans the full lifecycle — scaffold, validate, provision, package, publish, and monitor — so you can build from a terminal, in CI, or in Visual Studio Code. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 The following table provides some examples of the types of agents you can develop for your organization.
 

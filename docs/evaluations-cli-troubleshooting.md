@@ -1,8 +1,8 @@
 ---
-title: Troubleshoot the Agent Evaluations CLI (preview)
+title: Troubleshoot the Agent Evaluations CLI
 description: Resolve common setup, authentication, runtime, and environment issues for the M365 Copilot Agent Evaluations CLI.
 #customer intent: As a developer running agent evaluations, I want to diagnose why the CLI can't find my agent so that I can fix my environment configuration and run evaluations successfully.
-ms.date: 06/18/2026
+ms.date: 08/04/2026
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -10,12 +10,9 @@ ms.topic: troubleshooting
 ms.localizationpriority: medium
 ---
 
-# Troubleshoot the Agent Evaluations CLI (preview)
+# Troubleshoot the Agent Evaluations CLI
 
 This article provides troubleshooting information for the Microsoft 365 Copilot Agent Evaluations CLI. Issues are grouped by the stage of the workflow they affect: setup, authentication, runtime, and environment.
-
-> [!NOTE]
-> The Agent Evaluations CLI is currently in preview. Features and functionality are subject to change.
 
 ## Setup issues
 
@@ -71,7 +68,7 @@ runevals --init-only --log-level debug
 
 ## Authentication issues
 
-Problems with tenant, agent, or Azure OpenAI credentials.
+Problems with tenant, agent, or Microsoft Foundry access.
 
 ### Authentication errors
 
@@ -92,13 +89,14 @@ az account show --query tenantId
 
 You can also follow the instructions in [Required environment variables](evaluations-cli-overview.md#required-environment-variables).
 
-### Azure OpenAI API key errors
+### Foundry scoring errors
 
 If evaluation scoring fails with a 401 or 403 error:
 
-- Verify `AZURE_AI_API_KEY` is correct and not expired.
-- Confirm `AZURE_AI_OPENAI_ENDPOINT` matches the resource the key belongs to.
-- Check that `gpt-4o-mini` (or the model set in `AZURE_AI_MODEL_NAME`) is deployed in your Azure OpenAI resource.
+- Verify you're signed in by using the Azure CLI (`az login`) to the tenant that hosts your Microsoft Foundry project.
+- Confirm your account has the **Azure AI Developer** role on the Foundry project.
+- Confirm `AZURE_AI_PROJECT_ENDPOINT` points to the correct Microsoft Foundry project.
+- Check that `gpt-5-mini` (or the model set in `AZURE_AI_MODEL_NAME`) is deployed in your Microsoft Foundry project.
 
 ## Runtime issues
 

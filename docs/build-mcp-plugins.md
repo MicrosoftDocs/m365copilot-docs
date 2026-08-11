@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 08/05/2026
 ---
 
 # Build a plugin for a declarative agent from an MCP server
@@ -91,6 +91,9 @@ To publish and sideload the agent:
 1. Read the message in the dialog and select **Confirm** to continue.
 
 1. Wait for the toolkit to report that it's finished provisioning.
+
+> [!NOTE]
+> **Work IQ Dev Tools (preview)** — You can also drive the package-and-sideload loop from the command line with the `wiqd` CLI: `wiqd agent package` builds the app package and `wiqd agent provision --env local` deploys it to your tenant for testing. To register a remote MCP server like the one in this walkthrough as a connector inside the app package, use `wiqd plugin add connector`, an alpha command whose interface might change. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ## Step 4: Use the agent
 
