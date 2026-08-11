@@ -2,7 +2,7 @@
 title: Create declarative agents using Microsoft 365 Agents Toolkit
 description: Learn how to build a declarative agent for Microsoft 365 Copilot using Microsoft 365 Agents Toolkit.
 #customer intent: As a developer, I want to build and provision a declarative agent by using Microsoft 365 Agents Toolkit so that I can deliver a customized Microsoft 365 Copilot experience.
-ms.date: 06/18/2026
+ms.date: 08/05/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -47,6 +47,9 @@ You should be familiar with the following standards and guidelines for declarati
 ## Create and provision a declarative agent with Microsoft 365 Agents Toolkit
 
 Start by creating a basic declarative agent.
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — As an alternative to the Visual Studio Code steps in this tutorial, [get started with Work IQ Dev Tools](https://aka.ms/wiqd/docs) for a simpler, faster command-line workflow. The Microsoft 365 Agents Toolkit steps that follow might be a better fit for your workflow.
 
 1. Open Visual Studio Code.
 

@@ -4,7 +4,7 @@ description: Learn about the 1.8 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 07/01/2026
+ms.date: 08/10/2026
 ms.topic: reference
 ---
 
@@ -28,6 +28,9 @@ This schema version introduces the following changes from [version 1.7](declarat
 You can find the schema described in this document in [JSON Schema](https://json-schema.org/) format [here](https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.8/schema.json).
 
 [!INCLUDE [declarative-agent-manifest-conventions](includes/declarative-agent-manifest-conventions.md)]
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — Because this schema is large and changes over time, validating against the current shipping version matters. `wiqd agent validate` runs the Microsoft Validation Layer — the same engine the platform uses to accept a manifest — offline and in under a second, catching missing required fields, wrong types, invalid enum values, unresolved cross-file references, and constraints that JSON schema alone can't express, such as the maximum number of conversation starters. The Visual Studio Code extension surfaces the same diagnostics inline as you type. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ## Declarative agent manifest object
 

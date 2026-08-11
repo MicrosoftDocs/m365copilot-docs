@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jasonjoh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 09/25/2025
+ms.date: 08/05/2026
 ---
 
 # Responsible AI validation
@@ -43,6 +43,9 @@ CityRanker is a travel assistant that helps the user find the best and worst cit
 ## Resolve validation failures
 
 If your agent fails one of these validation checks, you're prompted to review your agent for violations. Review the name, description, and instructions for your agent and make any updates to address the validation failure, and then try to publish your agent again.
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — Catch schema and manifest problems locally before you publish, so RAI validation isn't where you first discover something is wrong. `wiqd agent validate` runs static, offline, sub-second checks for issues like missing required fields and invalid enum values. It doesn't perform RAI validation itself — Responsible AI review remains a platform-side step. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ## Related content
 

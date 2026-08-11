@@ -4,7 +4,7 @@ description: Learn which tools are most suited for different use cases when crea
 ms.author: jasonjoh
 author: lauragra
 ms.localizationpriority: medium
-ms.date: 05/08/2026
+ms.date: 08/05/2026
 ms.topic: article
 ---
 
@@ -40,6 +40,10 @@ The following table describes the prerequisites for using each tool and where ag
 ## Agents Toolkit
 
 If your scenario involves the full control, scalability, and direct API integration of a pro-code approach, [Agents Toolkit](./build-declarative-agents.md) is the best tool to use to create your declarative agent.
+
+> [!TIP]
+> **Work IQ Dev Tools (preview)** — `wiqd` isn't a separate authoring tool. It's a command-line layer over the declarative agent lifecycle that shells out to Agents Toolkit for provisioning. You can drive validate, package, and publish steps from a terminal or CI while still using Agents Toolkit underneath. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+
 
 The following table lists the pros and cons for using Agents Toolkit.
 

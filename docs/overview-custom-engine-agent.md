@@ -5,7 +5,7 @@ description: Find information about custom engine agents, which are specialized 
 author: jessicaaawu
 ms.author: wujessica
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 08/05/2026
 ms.topic: overview
 ---
 
@@ -87,6 +87,9 @@ The following table provides a quick comparison of the available approaches.
 | **Orchestrator**                | Copilot Studio | Teams AI Action Planner | Bring your own (for example, Semantic Kernel, LangChain) | Bring your own (for example, Semantic Kernel or LangChain) |
 | **AI Models**                   | Copilot Studio | Any model of your choice | Any model of your choice | Foundry OpenAI or custom models |
 | **Supported programming languages** | Not applicable (low-code) | C#, TypeScript, JavaScript, Python | C#, JavaScript, Python | Python, C# |
+
+> [!NOTE]
+> **Work IQ Dev Tools (preview)** — `wiqd` targets declarative agents, not custom engine agents. If you build both surfaces, you can use `wiqd` for the declarative side - validating, provisioning, packaging, and publishing - while you continue to build your custom engine agent with the tools described here. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ### Key considerations
 

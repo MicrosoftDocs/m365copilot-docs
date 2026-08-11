@@ -73,6 +73,9 @@ The `id` field in the [app manifest](agents-are-apps.md#app-manifest) and the En
 
 For details on the app package, manifest fields, and distribution, see [Agents are apps for Microsoft 365](agents-are-apps.md). For a full explanation of how authentication and organizational policies apply to Copilot API calls, see [Security and authentication for Microsoft 365 Copilot APIs](copilot-apis-security-authentication.md).
 
+> [!NOTE]
+> **Work IQ Dev Tools (preview)** — If you're building a declarative agent, `wiqd` can reduce this setup step: with named environments, `wiqd agent provision` performs the Microsoft 365 app registration for the agent and writes the resulting IDs back into the environment file, so app registration isn't a manual first step. This process applies to declarative agent provisioning, not to Copilot API clients in general. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+
 ## REST API integration
 
 The Copilot APIs are available as standard REST APIs under the Microsoft Graph namespace (`graph.microsoft.com/v1.0/copilot` and `graph.microsoft.com/beta/copilot`). This integration makes the APIs accessible from any programming language or platform that supports HTTP requests. The APIs use the same [authentication and authorization](/graph/auth/) process that other Microsoft Graph APIs use. All Copilot APIs respect your organization's existing policies, including identity access, conditional access, sensitivity labels, and permission trimming, by default.
