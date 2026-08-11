@@ -1,0 +1,14 @@
+name: Enforce live source branch
+on:
+  pull_request:
+    branches: [live] # only PRs targeting live
+jobs:
+  check-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require default branch as source
+        run: |
+          if [ "${{ github.head_ref }}" != "main" ]; then
+            echo "PRs into 'live' must come from the default branch (main). Source was '${{ github.head_ref }}'."
+            exit 1
+          fi
