@@ -15,6 +15,8 @@ items:
     href: resources/connectionitem.md
   - name: Data source configuration
     href: resources/datasourceconfiguration.md
+  - name: SharePoint Embedded configuration (preview)
+    href: resources/sharepointembeddedconfiguration.md
   - name: External item configuration
     href: resources/externalitemconfiguration.md
   - name: Retrieval response
@@ -23,5 +25,7 @@ items:
     href: resources/retrievalhit.md
   - name: Retrieval extract
     href: resources/retrievalextract.md
+  - name: Retrieval thumbnail (preview)
+    href: resources/retrievalthumbnail.md
   - name: Search response metadata dictionary
     href: resources/searchresourcemetadatadictionary.md

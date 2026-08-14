@@ -4,7 +4,7 @@ description: Use the Retrieval API to ground data from SharePoint, OneDrive, and
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 08/06/2026
+ms.date: 08/14/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 zone_pivot_groups: graph-api-versions
@@ -18,7 +18,7 @@ zone_pivot_groups: graph-api-versions
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 :::zone-end
 
-The Microsoft 365 Copilot Retrieval API allows for the retrieval of relevant text extracts from SharePoint, OneDrive, and Copilot connectors content that the calling user has access to, while respecting the defined access controls within the tenant. Use the Retrieval API to ground your generative AI solutions with Microsoft 365 data while optimizing for context recall.
+The Microsoft 365 Copilot Retrieval API retrieves relevant text extracts from SharePoint, OneDrive, and Copilot connectors content. The API security trims content for the calling user and respects the defined access controls within the tenant. Use the Retrieval API to ground your generative AI solutions with Microsoft 365 data while optimizing for context recall.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -26,13 +26,13 @@ The Microsoft 365 Copilot Retrieval API allows for the retrieval of relevant tex
 
 [!INCLUDE [permissions-intro](../../includes/permissions-intro.md)]
 
-| Permission type                        | Least privileged permissions    | Higher privileged permissions |
-|:---------------------------------------|:---------------------------------------------|:------------------------------|
-| Delegated (work or school account)     | Files.Read.All, Sites.Read.All\*               | ExternalItem.Read.All         |
-| Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
-| Application                            | Not supported.               | Not supported.                |
+| Permission type                        | Least privileged permissions     | Higher privileged permissions |
+|:---------------------------------------|:---------------------------------|:------------------------------|
+| Delegated (work or school account)     | Files.Read.All, Sites.Read.All\* | ExternalItem.Read.All         |
+| Delegated (personal Microsoft account) | Not supported.                   | Not supported.                |
+| Application                            | Not supported.                   | Not supported.                |
 
-\* You need both Files.Read.All and Sites.Read.All permissions to retrieve SharePoint and OneDrive content.
+\* To retrieve SharePoint and OneDrive content, you need both Files.Read.All and Sites.Read.All permissions.
 
 ## HTTP request
 
@@ -65,14 +65,32 @@ In the request body, supply a JSON representation of the parameters.
 
 The following table lists the optional and required parameters that you can use when you call this action.
 
-| Parameter                 | Type                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|:--------------------------|:----------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `queryString`             | String                                                          | Natural language query string used to retrieve relevant text extracts. This parameter has a limit of 1,500 characters. Your `queryString` should be a single sentence, and you should avoid spelling errors in context-rich keywords. Required.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `dataSource`              | String                                                          | Indicates whether extracts should be retrieved from SharePoint, OneDrive, or Copilot connectors. Acceptable values are `sharePoint`, `oneDriveBusiness`, and `externalItem`. Required.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `dataSourceConfiguration` | [dataSourceConfiguration](resources/datasourceconfiguration.md) | Contains additional configuration information for applicable data sources. `dataSourceConfiguration` includes an object called `externalItem`, where you can configure Copilot connectors retrieval. Optional.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `filterExpression`        | String                                                          | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint, OneDrive, or Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint and OneDrive properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). If you are not familiar with the schema of your desired Copilot connector, or you do not know which properties are marked queryable, reach out to the admin or developer who configured your desired Copilot connector. Microsoft will not resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. You can use multiple properties and operators when constructing your `filterExpression`. By default, no scoping is applied. Ensure that this parameter has correct KQL syntax before calling the API. Otherwise, the query executes as if there is no `filterExpression`. Optional. For best practices for filtered queries, see [Best practices](overview.md#best-practices). |
-| `resourceMetadata`        | String collection                                               | A list of metadata fields to be returned for each item in the response. Only retrievable metadata properties can be included in this list. By default, no metadata is returned. Optional.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `maximumNumberOfResults`  | Int32                                                           | The number of results that are returned in the response. Must be between 1 and 25. By default, returns up to 25 results. Optional.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+:::zone pivot="graph-v1"
+
+| Parameter                 | Type                                                            | Description |
+|:--------------------------|:----------------------------------------------------------------|:------------|
+| `queryString`             | String                                                          | Natural language query string used to retrieve relevant text extracts. This parameter has a limit of 1,500 characters. Your `queryString` should be a single sentence, and you should avoid spelling errors in context-rich keywords. Required. |
+| `dataSource`              | String                                                          | Indicates whether extracts should be retrieved from SharePoint, OneDrive, or Copilot connectors. Acceptable values are `sharePoint`, `oneDriveBusiness`, and `externalItem`. Required. |
+| `dataSourceConfiguration` | [dataSourceConfiguration](resources/datasourceconfiguration.md) | Contains extra configuration information for applicable data sources. `dataSourceConfiguration` includes an object called `externalItem`, where you can configure Copilot connectors retrieval. Optional. |
+| `filterExpression`        | String                                                          | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint, OneDrive, or Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint and OneDrive properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). Reach out to the admin or developer who configured your desired Copilot connector for a list of properties marked queryable. Microsoft won't resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. You can use multiple properties and operators when constructing your `filterExpression`. By default, no scoping is applied. Ensure that this parameter has correct KQL syntax before calling the API. Otherwise, the query executes as if there's no `filterExpression`. Optional. For best practices for filtered queries, see [Best practices](overview.md#best-practices). |
+| `resourceMetadata`        | String collection                                               | A list of metadata fields to be returned for each item in the response. Only retrievable metadata properties can be included in this list. By default, no metadata is returned. Optional. |
+| `maximumNumberOfResults`  | Int32                                                           | The number of results that are returned in the response. Must be between 1 and 25. By default, returns up to 25 results. Optional. |
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
+| Parameter                 | Type                                                            | Description |
+|:--------------------------|:----------------------------------------------------------------|:------------|
+| `queryString`             | String                                                          | Natural language query string used to retrieve relevant text extracts. This parameter has a limit of 1,500 characters. Your `queryString` should be a single sentence, and you should avoid spelling errors in context-rich keywords. Required. |
+| `dataSource`              | String                                                          | Indicates whether extracts should be retrieved from SharePoint, OneDrive, or Copilot connectors. Acceptable values are `sharePoint`, `oneDriveBusiness`, and `externalItem`. Required. |
+| `dataSourceConfiguration` | [dataSourceConfiguration](resources/datasourceconfiguration.md) | Contains extra configuration information for applicable data sources. `dataSourceConfiguration` includes an object called `externalItem`, where you can configure Copilot connectors retrieval. Optional. |
+| `filterExpression`        | String                                                          | [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) expression with queryable SharePoint, OneDrive, or Copilot connectors properties and attributes to scope the retrieval before the query runs. You can use `AND`, `OR`, `NOT`, and inequality operators where applicable when constructing your `filterExpression`. Supported SharePoint and OneDrive properties for filtering are: `Author`, `FileExtension`, `Filename`, `FileType`, `InformationProtectionLabelId`, `LastModifiedTime`, `ModifiedBy`, `Path`, `SiteID`, and `Title`. When filtering on Copilot connectors content, you can use any property marked as [queryable in the Copilot connector schema](/graph/connecting-external-content-manage-schema#property-attributes). Reach out to the admin or developer who configured your desired Copilot connector for a list of properties marked queryable. Microsoft won't resolve any issues with filtering on SharePoint and Copilot connectors properties not mentioned here. You can use multiple properties and operators when constructing your `filterExpression`. By default, no scoping is applied. Ensure that this parameter has correct KQL syntax before calling the API. Otherwise, the query executes as if there's no `filterExpression`. Optional. For best practices for filtered queries, see [Best practices](overview.md#best-practices). |
+| `resourceMetadata`        | String collection                                               | A list of metadata fields to be returned for each item in the response. Only retrievable metadata properties can be included in this list. By default, no metadata is returned. Optional. |
+| `maximumNumberOfResults`  | Int32                                                           | The number of results that are returned in the response. Must be between 1 and 25. By default, returns up to 25 results. Optional. |
+| `includeThumbnails`       | Boolean                                                         | Indicates whether to include page numbers and thumbnails in the retrieval response if available. If multiple extracts reference the same page, only a single copy of the associated thumbnail is returned with the retrieval hit. Optional. |
+
+:::zone-end
 
 ## Response
 
@@ -103,7 +121,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "10"
+  "maximumNumberOfResults": 10
 }
 ```
 
@@ -122,7 +140,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "10"
+  "maximumNumberOfResults": 10
 }
 ```
 
@@ -213,7 +231,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "10"
+  "maximumNumberOfResults": 10
 }
 ```
 
@@ -232,7 +250,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "10"
+  "maximumNumberOfResults": 10
 }
 ```
 
@@ -288,7 +306,7 @@ Content-Type: application/json
 
 ### Example 3: Batch requests to the Retrieval API
 
-The following example shows how to [batch requests to the Retrieval API](/graph/json-batching?tabs=http). The Retrieval API supports up to 20 requests per batch. `id` in the request payload must be a String that uniquely identifies each request in the batch.
+The following example shows how to [batch requests to the Retrieval API](/graph/json-batching?tabs=http). The Retrieval API supports up to 20 requests per batch. The `id` in the request payload must be a string that uniquely identifies each request in the batch.
 
 #### Request
 
@@ -484,7 +502,7 @@ Content-Type: application/json
 
 ### Example 4: Retrieve data from a specific SharePoint site
 
-The following example shows a request to retrieve data from a specific Sharepoint site. The `filterExpression` parameter specifies the path to the site. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
+The following example shows a request to retrieve data from a specific SharePoint site. The `filterExpression` parameter specifies the path to the site. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes up to four documents.
 
 #### Request
 
@@ -504,7 +522,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "4"
+  "maximumNumberOfResults": 4
 }
 ```
 
@@ -524,7 +542,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "4"
+  "maximumNumberOfResults": 4
 }
 ```
 
@@ -596,7 +614,7 @@ Content-Type: application/json
 
 ### Example 5: Retrieve data from multiple SharePoint sites
 
-The following example shows a request to retrieve data from multiple Sharepoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
+The following example shows a request to retrieve data from multiple SharePoint sites. The `filterExpression` parameter specifies the paths to the sites. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response should include a maximum of four documents.
 
 #### Request
 
@@ -616,7 +634,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "4"
+  "maximumNumberOfResults": 4
 }
 ```
 
@@ -636,7 +654,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "4"
+  "maximumNumberOfResults": 4
 }
 ```
 
@@ -727,9 +745,9 @@ Content-Type: application/json
 }
 ```
 
-### Example 6: Retrieve data from Copilot connectors using specific connection IDs
+### Example 6: Retrieve data from Copilot connectors by using specific connection IDs
 
-The following example shows a request that restricts Copilot connectors retrieval to specific connection IDs. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes a maximum of 10 documents.
+The following example shows a request that restricts Copilot connectors retrieval to specific connection IDs. The request asks for the `title` and `author` metadata to be returned for each item from which a text extract is retrieved. The response includes up to 10 documents.
 
 #### Request
 
@@ -760,7 +778,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "10"
+  "maximumNumberOfResults": 10
 }
 ```
 
@@ -791,7 +809,7 @@ Content-Type: application/json
     "title",
     "author"
   ],
-  "maximumNumberOfResults": "10"
+  "maximumNumberOfResults": 10
 }
 ```
 
@@ -848,11 +866,11 @@ Content-Type: application/json
 
 ### Example 7: Use filter expressions
 
-The following are examples of KQL expressions that can be used in the `filterExpression` property for specific scenarios.
+The following examples show KQL expressions that you can use in the `filterExpression` property for specific scenarios.
 
 #### Filter on Copilot connector properties
 
-In this example, `Label_Title` is a queryable property in the ServiceNow Copilot connector schema. The query is filtered on items that contain `Corporate VPN` in the `Label_Title` property.
+In this example, `Label_Title` is a queryable property in the ServiceNow Copilot connector schema. The query filters on items that contain `Corporate VPN` in the `Label_Title` property.
 
 ```json
 "filterExpression": "Label_Title:\"Corporate VPN\""
@@ -860,15 +878,15 @@ In this example, `Label_Title` is a queryable property in the ServiceNow Copilot
 
 #### Filter SharePoint results on the `Author` property
 
-In this example, the query is filtered on items with Megan Bowen as the author.
+In this example, the query filters on items with Megan Bowen as the author.
 
 ```json
 "filterExpression": "Author:\"Megan Bowen\""
 ```
 
-#### Filter SharePoint results on a specific Date Range using the `LastModifiedTime` property
+#### Filter SharePoint results on a specific date range using the `LastModifiedTime` property
 
-In this example, the query is filtered on items modified between July 22, 2024 and January 8, 2025.
+In this example, the query filters on items modified between July 22, 2024 and January 8, 2025.
 
 ```json
 "filterExpression": "LastModifiedTime>= 2024-07-22 AND LastModifiedTime<= 2025-01-08"
@@ -876,7 +894,7 @@ In this example, the query is filtered on items modified between July 22, 2024 a
 
 #### Filter SharePoint results using the `FileExtension` property
 
-In this example, the query is filtered on files with the .docx, .pdf, or .pptx file extension.
+In this example, the query filters on files with the .docx, .pdf, or .pptx file extension.
 
 ```json
 "filterExpression": "FileExtension:\"docx\" OR FileExtension:\"pdf\" OR FileExtension:\"pptx\""
@@ -884,7 +902,7 @@ In this example, the query is filtered on files with the .docx, .pdf, or .pptx f
 
 #### Filter SharePoint results using the `Filename` property
 
-In this example, the query is filtered on files named `Contoso Mission Statement.docx`.
+In this example, the query filters on files named `Contoso Mission Statement.docx`.
 
 ```json
 "filterExpression": "Filename:\"Contoso Mission Statement.docx\""
@@ -892,7 +910,7 @@ In this example, the query is filtered on files named `Contoso Mission Statement
 
 #### Filter SharePoint results using the `FileType` property
 
-In this example, the query is filtered on PDF files, PowerPoint presentations, and Word documents.
+In this example, the query filters on PDF files, PowerPoint presentations, and Word documents.
 
 ```json
 "filterExpression": "FileType:\"pdf\" OR FileType:\"pptx\" OR FileType:\"docx\""
@@ -900,7 +918,7 @@ In this example, the query is filtered on PDF files, PowerPoint presentations, a
 
 #### Determine the sensitivity of SharePoint results by filtering using the `InformationProtectionLabelId` property
 
-In this example, the query is filtered on items with a specific information protection label.
+In this example, the query filters on items with a specific information protection label.
 
 ```json
 "filterExpression": "InformationProtectionLabelId:\"f0ddcc93-d3c0-4993-b5cc-76b0a283e252\""
@@ -908,7 +926,7 @@ In this example, the query is filtered on items with a specific information prot
 
 #### Filter SharePoint results using the `ModifiedBy` property
 
-In this example, the query is filtered on items modified by Adele Vance.
+In this example, the query filters on items modified by Adele Vance.
 
 ```json
 "filterExpression": "ModifiedBy:\"Adele Vance\""
@@ -916,7 +934,7 @@ In this example, the query is filtered on items modified by Adele Vance.
 
 #### Filter SharePoint results using the `SiteID` property
 
-In this example, the query is filtered on items from a specific SharePoint site.
+In this example, the query filters on items from a specific SharePoint site.
 
 ```json
 "filterExpression": "SiteID:\"e2cf7e40-d689-41de-99ee-a423811a253c\""
@@ -924,11 +942,119 @@ In this example, the query is filtered on items from a specific SharePoint site.
 
 #### Filter SharePoint results using the `Title` property
 
-In this example, the query is filtered on items with `Windows 10 Device` in the title.
+In this example, the query filters on items with `Windows 10 Device` in the title.
 
 ```json
 "filterExpression": "Title:\"Windows 10 Device\""
 ```
+
+:::zone pivot="graph-preview"
+
+### Example 8: Include thumbnails for extracts
+
+The following example shows a request that adds the `includeThumbnails` property and the associated response that includes thumbnails and the associated page numbers.
+
+#### Request
+
+```http
+POST https://graph.microsoft.com/beta/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "How to setup corporate VPN?",
+  "dataSource": "sharePoint",
+  "filterExpression": "FileType:\"pdf\" OR FileType:\"pptx\" OR FileType:\"docx\"",
+  "resourceMetadata": [
+    "title",
+    "author"
+  ],
+  "maximumNumberOfResults": 2,
+  "includeThumbnails": true
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR1/VPNAccess.docx",
+      "extracts": [
+        {
+          "text": "To configure the VPN, click the Wi-Fi icon on your corporate device and select the VPN option.",
+          "relevanceScore": 0.8374363553387588,
+          "pageNumbers": [
+            1
+          ]
+        },
+        {
+          "text": "You will need to sign in with 2FA to access the corporate VPN.",
+          "relevanceScore": 0.7465472642498679,
+          "pageNumbers": [
+            2
+          ]
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "title": "VPN Access",
+        "author": "John Doe"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f71f1f74-bf1f-4e6b-b266-c777ea76e2s8",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00"
+      },
+      "thumbnails": [
+        {
+          "pageNumber": 1,
+          "content": "base64/9j/4AAQSkZJRgABAQEAYABgAAD/2wBD",
+          "mimeType": "image/jpg"
+        },
+        {
+          "pageNumber": 2,
+          "content": "base64/9j/4AAQSkZJRgABAQEAYABgAAD/2wBD",
+          "mimeType": "image/jpg"
+        },
+      ]
+    },
+    {
+      "webUrl": "https://contoso.sharepoint.com/sites/HR2/VPNConfig.docx",
+      "extracts": [
+        {
+          "text": "Have your VPN username and password ready prior to starting the configuration.",
+          "relevanceScore": 0.6465472642498679,
+          "pageNumbers": [
+            1,2
+          ]
+        }
+      ],
+      "resourceType": "listItem",
+      "resourceMetadata": {
+        "title": "VPN Config",
+        "author": "Elisa Mueller"
+      },
+      "sensitivityLabel": {
+        "sensitivityLabelId": "f0ddcc93-d3c0-4993-b5cc-76b0a283e252",
+        "displayName": "Confidential\\Any User (No Protection)",
+        "toolTip": "Data is classified as Confidential but is NOT PROTECTED to allow access by approved NDA business partners. If a higher level of protection is needed, please use the Sensitivity button on the tool bar to change the protection level.",
+        "priority": 4,
+        "color": "#FF8C00"
+      }
+    }
+  ]
+}
+```
+
+:::zone-end
 
 ## Related content
 
