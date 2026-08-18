@@ -245,7 +245,7 @@ Work IQ is the recommended foundation for new agentic and AI-powered application
 
 ## Licensing requirements
 
-Your agreement governing use of Microsoft Online Services, including the [Microsoft Product Terms](https://www.microsoft.com/licensing/terms), licenses the Work IQ API. You pay for use of the Work IQ API through a usage-based model that uses Copilot Credits. For more information, see [Understand usage-based billing and cost management for Copilot Credits](/microsoft-365/copilot/usage-based-billing-overview-copilot-credits).
+Work IQ API is licensed under your agreement governing use of Microsoft Online Services, including the [Microsoft Product Terms](https://www.microsoft.com/licensing/terms). You pay for use of the Work IQ API through a usage-based model that uses Copilot Credits. For more information, see [Understand usage-based billing and cost management for Copilot Credits](/microsoft-365/copilot/usage-based-billing-overview-copilot-credits).
 
 ## Related content
 
