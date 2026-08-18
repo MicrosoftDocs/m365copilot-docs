@@ -4,7 +4,7 @@ description: Represents a single result within the list of retrieval results.
 author: lramosvea
 ms.author: lramosvea
 ms.topic: reference
-ms.date: 10/24/2025
+ms.date: 08/14/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 zone_pivot_groups: graph-api-versions
@@ -16,20 +16,34 @@ zone_pivot_groups: graph-api-versions
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 :::zone-end
 
-:::zone pivot="graph-v1"
-:::zone-end
-
 Represents a single result within the list of retrieval results.
 
 ## Properties
 
-| Property           | Type                                                                    | Description |
-|:-------------------|:------------------------------------------------------------------------|:------------|
-| `extracts`         | [retrievalExtract](retrievalextract.md) collection                      | An array of text extracts extracted from the document for Retrieval-Augmented Generation. Currently, only one text snippet is extracted. |
-| `resourceMetadata` | [searchResourceMetadataDictionary](searchresourcemetadatadictionary.md) | The requested [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft 365 Copilot connectors](/graph/connecting-external-content-manage-schema) metadata from the request payload (empty if not applicable). |
-| `resourceType`     | [retrievalEntityType](#retrievalentitytype-enumeration)                 | The resource type of the item. |
-| `sensitivityLabel` | [searchSensitivityLabelInfo](../../resources/searchsensitivitylabelinfo.md)             | A JSON object with information about the document's sensitivity label. |
-| `webUrl`           | String                                                                  | The URL of the item in which the extract was retrieved. |
+:::zone pivot="graph-v1"
+
+| Property           | Type                                                                        | Description |
+|:-------------------|:----------------------------------------------------------------------------|:------------|
+| `extracts`         | [retrievalExtract](retrievalextract.md) collection                          | An array of text extracts extracted from the document for Retrieval-Augmented Generation. Currently, only one text snippet is extracted. |
+| `resourceMetadata` | [searchResourceMetadataDictionary](searchresourcemetadatadictionary.md)     | The requested [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft 365 Copilot connectors](/graph/connecting-external-content-manage-schema) metadata from the request payload (empty if not applicable). |
+| `resourceType`     | [retrievalEntityType](#retrievalentitytype-enumeration)                     | The resource type of the item. |
+| `sensitivityLabel` | [searchSensitivityLabelInfo](../../resources/searchsensitivitylabelinfo.md) | A JSON object with information about the document's sensitivity label. |
+| `webUrl`           | String                                                                      | The URL of the item in which the extract was retrieved. |
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
+| Property           | Type                                                                        | Description |
+|:-------------------|:----------------------------------------------------------------------------|:------------|
+| `extracts`         | [retrievalExtract](retrievalextract.md) collection                          | An array of text extracts extracted from the document for Retrieval-Augmented Generation. Currently, only one text snippet is extracted. |
+| `resourceMetadata` | [searchResourceMetadataDictionary](searchresourcemetadatadictionary.md)     | The requested [SharePoint](/sharepoint/crawled-and-managed-properties-overview) and [Microsoft 365 Copilot connectors](/graph/connecting-external-content-manage-schema) metadata from the request payload (empty if not applicable). |
+| `resourceType`     | [retrievalEntityType](#retrievalentitytype-enumeration)                     | The resource type of the item. |
+| `sensitivityLabel` | [searchSensitivityLabelInfo](../../resources/searchsensitivitylabelinfo.md) | A JSON object with information about the document's sensitivity label. |
+| `thumbnails`       | [retrievalThumbnail](../resources/retrievalthumbnail.md) collection         | The collection of thumbnails for the document if requested and available. |
+| `webUrl`           | String                                                                      | The URL of the item in which the extract was retrieved. |
+
+:::zone-end
 
 ### retrievalEntityType enumeration
 
@@ -53,6 +67,8 @@ None.
 
 The following JSON representation shows the resource type.
 
+:::zone pivot="graph-v1"
+
 ```json
 {
   "@odata.type": "#microsoft.graph.retrievalHit",
@@ -71,3 +87,33 @@ The following JSON representation shows the resource type.
   }
 }
 ```
+
+:::zone-end
+
+:::zone pivot="graph-preview"
+
+```json
+{
+  "@odata.type": "#microsoft.graph.retrievalHit",
+  "webUrl": "String",
+  "sensitivityLabel": {
+    "@odata.type": "microsoft.graph.searchSensitivityLabelInfo"
+  },
+  "extracts": [
+    {
+      "@odata.type": "microsoft.graph.retrievalExtract"
+    }
+  ],
+  "resourceType": "String",
+  "resourceMetadata": {
+    "@odata.type": "microsoft.graph.searchResourceMetadataDictionary"
+  },
+  "thumbnails": [
+    {
+      "@odata.type": "microsoft.graph.retrievalThumbnail"
+    }
+  ]
+}
+```
+
+:::zone-end
