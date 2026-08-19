@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/16/2026
+ms.date: 08/19/2026
 ms.topic: concept-article
 ---
 
@@ -16,17 +16,17 @@ This article provides information about known issues related to Microsoft 365 Co
 
 The following known issues apply to declarative agents.
 
-### Power Automate Flows aren't fully supported as actions in declarative agents
+### Power Automate flows aren't fully supported as actions in declarative agents
 
-Power Automate Flows as actions in declarative agents might not run reliably and might not return results. In some cases, newly created flows might not appear in the Add Action interface within Copilot Studio, even if the action counter reflects their presence.
+Power Automate flows as actions in declarative agents might not run reliably and might not return results. In some cases, newly created flows might not appear in the **Add Action** interface within Copilot Studio, even if the action counter reflects their presence.
 
-**Workaround:** Currently, no workaround for the issue that the flows might not return results is available. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
+**Workaround:** Currently, no workaround is available for the issue that the flows might not return results. You can improve the trigger success for the flow by editing the description on the flow details page outside of Copilot Studio.
 
 This issue applies to links from any content source, including SharePoint, Microsoft 365 Copilot connectors, and plugins.
 
 ### Prompts to get a list based on custom metadata aren't supported
 
-Prompts to get a list of items based on custom metadata aren't supported. For example, the prompt "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is based on custom metadata, doesn't work because the metadata isn't mapped to connection schema label properties.
+Prompts to get a list of items based on custom metadata aren't supported. For example, the prompt "Get a list of ServiceNow tickets assigned to me" where **Assigned To** is based on custom metadata, doesn't work because the metadata isn't mapped to connection schema label properties.
 
 **Workaround:** This issue currently doesn't have a workaround. You can get items based on matches with the title or description of the connector item.
 
@@ -68,7 +68,7 @@ Try one of the following approaches:
 
 ### Sharing agents from within the Microsoft 365 Copilot can fail
 
-When you share an agent via the Microsoft 365 Copilot using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
+When you share an agent via the Microsoft 365 Copilot by using the **Specific users in your organization** option, the search results might include [distribution groups](/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups). Sharing an agent with a distribution group can cause the share to fail.
 
 ### Some features aren't supported in Microsoft 365 Government tenants
 
@@ -84,7 +84,7 @@ The following known issues apply to Copilot connectors.
 
 ### Prompts to get items based on custom metadata aren't supported
 
-Prompts to get a list of items based on custom metadata, such as "Get a list of ServiceNow tickets assigned to me" where "Assigned To" is custom metadata because the field isn't mapped to label properties of the connection schema, aren't supported.
+Prompts to get a list of items based on custom metadata aren't supported. For example, the prompt "Get a list of ServiceNow tickets assigned to me" doesn't work when "Assigned To" is custom metadata because the field isn't mapped to label properties of the connection schema.
 
 ## API plugins
 
@@ -100,7 +100,7 @@ The following OpenAPI features aren't supported for API plugins:
 - [OAuth grant flows](https://oauth.net/2/grant-types) other than vanilla Authcode and PKCE Authcode.
 - Dual authentication flows (OAuth/Entra SSO + HTTP Bearer token) for a single API endpoint.
 - Settings UI to reset always allow states. As a workaround, uninstall the app to reset the allow state.
-- Settings UI to sign out. As a workaround, uninstall the app to reset the allow state or implement a function that the user can invoke using natural language.
+- Settings UI to sign out. As a workaround, uninstall the app to reset the allow state or implement a function that the user can invoke by using natural language.
 - Multiple response semantics for a single function.
 - **OpenURL** and **ToggleVisbility** adaptive card actions in response semantics.
 - Task modules and stage views in response semantics.
@@ -113,7 +113,7 @@ The following table lists features that aren't currently supported for custom en
 | ------- | ----- |
 | Feedback | User feedback about agent responses isn't shared with the developer. |
 | Conversation context | Custom engine agents can't access Copilot conversation history that occurred before the user accesses the agent via `@mention`. |
-| Chat messages | Users can't edit chat messages sent to or returned by the agent. HTML isn't supported in agent response messages. Messages in Microsoft 365 Copilot are immutable, and the `updateActivity` API isn't supported. |
+| Chat messages | Users can't edit chat messages sent to or returned by the agent. The agent response messages don't support HTML. Messages in Microsoft 365 Copilot are immutable, and the `updateActivity` API isn't supported. |
 | File attachments | Custom engine agents don't support file or image attachments in agent chats. Images uploaded in chat aren't passed to the agent for processing. Scenarios that require users to upload images to a custom engine agent, such as extracting text from an uploaded image, aren't supported. |
 | [Rich cards](/previous-versions/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0#types-of-rich-cards&preserve-view=true) | The following elements of rich cards aren't supported:<ul><li>Sign-in</li><li>Hero card</li><li>Thumbnail card</li><li>Connector card</li><li>Animation card</li><li>Audio card</li><li>Receipt card</li></ul> |
 | Proactive notifications | Proactive notifications aren't supported. |
@@ -121,6 +121,28 @@ The following table lists features that aren't currently supported for custom en
 | Adaptive Cards | Adaptive Cards refreshed using **Action.Execute** don’t persist updated content when the chat is reopened; the original card is shown. Agent workflows in Copilot Chat should use follow‑up messages instead of relying on message edits. The following elements of Adaptive Cards aren't supported:<ul><li>[Nonstandard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul>|
 | Sensitivity labels | Sensitivity labels aren't supported. |
 | Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Microsoft Edge browser. |
+
+## Copilot Studio agents
+
+The following known issues apply to agents built with Copilot Studio and added to Microsoft 365 Copilot or Microsoft Teams.
+
+### Agents that use a third-party model return an "Agent Blocked" error
+
+An agent that you add to Microsoft 365 Copilot or Microsoft Teams returns an "Agent Blocked" error in response to prompts. The on-screen error message suggests updating the agent to use another large language model (LLM) available to you.
+
+This issue occurs when the agent is configured to use a third-party model, such as Claude Sonnet 4.6, which is an Anthropic model. Anthropic models are provided by an AI provider that operates as a Microsoft subprocessor. An administrator must enable access to these models and grant it to users. In the EU, access is off by default. Users who aren't granted access to the model receive the "Agent Blocked" error.
+
+**Workaround:** Choose one of the following options.
+
+**Option A**: Keep the current model and grant access. An AI Administrator or Global Administrator does the following steps:
+
+1. In the Microsoft 365 admin center, go to **Copilot** > **Settings** > **View all**.
+2. Open **AI providers operating as Microsoft subprocessors**.
+3. Select the AI provider for your model.
+4. Under **Choose who can access...**, add the affected users or, preferably, the Microsoft Entra security group that the users belong to, and then select **Save**. Assignments support individual users, security groups, and nested groups.
+5. Wait 10–15 minutes for the assignment to propagate, and then have an affected user retry the agent.
+
+**Option B**: Switch the agent to a different model for an immediate unblock. In Copilot Studio, edit the agent's model (generative AI) setting and change it from the third-party model to the default Microsoft model. This change makes the agent available to all assigned users immediately, without an Anthropic access assignment.
 
 ## Related content
 
