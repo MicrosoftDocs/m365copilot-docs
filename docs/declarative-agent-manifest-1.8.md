@@ -829,9 +829,6 @@ Agent authors should consider the use case when selecting a mode. For example, t
 
 The client respects the default mode configured in the manifest. Users can override this default via the model selector.
 
-> [!NOTE]
-> Default response mode isn't applied when the agent is invoked via @mention from the main Copilot experience. This is a known issue.
-
 #### Suggestions object
 
 An optional JSON object that contains configuration settings for the suggestions feature.

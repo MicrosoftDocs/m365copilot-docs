@@ -4,7 +4,7 @@ description: Learn how to build agents by using the Agent Builder feature in Mic
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 05/26/2026
+ms.date: 08/19/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -131,9 +131,6 @@ The following response modes are available:
 | **Auto** (default) | The agent automatically chooses the best approach based on each question, balancing speed and depth of analysis. |
 | **Quick response** | The agent replies quickly, keeping responses concise. This mode is best for straightforward questions that don't require in-depth analysis. |
 | **Think deeper** | The agent takes more time to carefully analyze the question before responding. This mode works best for complex tasks that benefit from a more thorough answer. |
-
-> [!NOTE]
-> The default response mode isn't applied when the agent is invoked via @mention from the main Copilot experience. This is a known issue.
 
 ## Test your agent
 
