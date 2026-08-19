@@ -4,7 +4,7 @@ description: Learn how to build agents by using the Agent Builder feature in Mic
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 05/26/2026
+ms.date: 06/15/2026
 ms.topic: article
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -119,6 +119,18 @@ Use natural language to add capabilities on the **Describe** tab, or configure t
 
 - [Code interpreter](code-interpreter.md) - Solves complex math problems, analyzes data, and generates visualizations. To add this capability, select the toggle next to **Create documents, charts, and code**.
 - [Image generator](image-generator.md) - Generates images based on user prompts. To add this capability, select the toggle next to **Create images**.
+
+## Built-in actions
+
+Every agent you build in Agent Builder can also take action on the user's behalf across their Outlook emails and meetings, just like in Microsoft 365 Copilot Chat. These capabilities are always available and use the user's existing permissions.
+
+| Capability | What the agent can do |
+| ---------- | --------------------- |
+| **Email actions** | Manage and send mail in Outlook on the user's behalf: triage messages (archive, flag, pin, move, copy, mark as read, report junk), send mail with the user's confirmation, delete messages, manage inbox rules and automatic replies, and organize folders. |
+| **Meeting actions** | Manage the user's calendar: schedule meetings, create time-finding polls, reclaim meeting time, and surface Viva Insights time analytics. |
+
+> [!NOTE]
+> Email and meeting actions are always on.
 
 ## Set the default response mode
 
