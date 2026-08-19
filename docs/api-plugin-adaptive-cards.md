@@ -4,7 +4,7 @@ description: Learn how to use Adaptive Card response templates to customize API 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 08/19/2026
 ms.topic: article
 ---
 
@@ -12,13 +12,13 @@ ms.topic: article
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-API plugins can use Adaptive Card response templates to enhance the response that Microsoft 365 Copilot generates based on the response received from the API. The Adaptive Card renders citations within the generated response.
+API plugins can use Adaptive Card response templates to enhance the response that Microsoft 365 Copilot generates based on the response it receives from the API. The Adaptive Card renders citations within the generated response.
 
-API plugins can define an Adaptive Card response template in two ways: as a static template defined in the [plugin manifest](plugin-manifest-2.4.md), or as a dynamic template returned as part of the API response. Plugin developers defined templates using the [Adaptive Card schema](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) in combination with the [Adaptive Cards template language](/adaptive-cards/templating/language).
+API plugins can define an Adaptive Card response template in two ways: as a static template defined in the [plugin manifest](plugin-manifest-2.4.md), or as a dynamic template returned as part of the API response. Plugin developers define templates by using the [Adaptive Card schema](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) in combination with the [Adaptive Cards template language](/adaptive-cards/templating/language).
 
 ## Static response templates
 
-Static response templates are a good choice if your API always returns items of the same type, and the format of the Adaptive Card doesn't need to change often. A static template is defined in the `static_template` property of the `response_semantics` object in the plugin manifest, as shown in the following example.
+Static response templates are a good choice if your API always returns items of the same type, and the format of the Adaptive Card doesn't need to change often. Define a static template in the `static_template` property of the `response_semantics` object in the plugin manifest, as shown in the following example.
 
 ```json
 "functions": [
@@ -61,8 +61,8 @@ Static response templates are a good choice if your API always returns items of 
 ]
 ```
 
-- The `response_semantics.data_path` property is set to `$`. This value is a [JSONPath query](https://www.rfc-editor.org/rfc/rfc9535) that indicates that the root of the JSON response contains the relevant data.
-- The `static_template.body["$data"]` property is set to `${$root}`, which is Adaptive Card template language syntax to override any prior data scoping and break back to the root. Setting this value here isn't strictly needed, since the `data_path` is already set to the root.
+- Set the `response_semantics.data_path` property to `. This value is a [JSONPath query](https://www.rfc-editor.org/rfc/rfc9535) that indicates that the root of the JSON response contains the relevant data.
+The `static_template.body["$data"]` property value is `${$root}`, which is Adaptive Card template language syntax to override any prior data scoping and break back to the root. Setting this value isn't strictly needed, since the `data_path` is already set to the root.
 - The `text` property of the first `TextBlock` uses the Adaptive Card template syntax `${if(name, name, 'N/A')}`. This references the `name` property in the API response. The `if` function specifies that if `name` has a value, use that value, otherwise, use `N/A`.
 - The `text` property of the second `TextBlock` uses the Adaptive Card template syntax `${if(availableFunds, formatNumber(availableFunds, 2), 'N/A')}`. This references the `availableFunds` property in the API response. The `formatNumber` function renders the number to a string with two decimal places.
 
@@ -252,14 +252,18 @@ Optionally, provide fallback text when the array is empty:
 
 Plugins can combine the use of both static and dynamic templates. In this scenario, the static template acts as a default template that is used if the item doesn't have the `template_selector` property present, or if its value doesn't resolve to a template in the API response.
 
-> [!NOTE]
-> When you use `Action.OpenUrl`, make sure to include the domain of the target URL in the [validDomains](/microsoft-365/extensibility/schema/root#validdomains) section of your app manifest. If the domain isn't listed, Teams displays the message **URL may lead to untrusted content**.
+## Add domains to your app manifest
+
+Add any domains that your Adaptive Card uses to the [validDomains](/microsoft-365/extensibility/schema/root#validdomains) section of your app manifest.
+
+- When you use `Action.OpenUrl`, make sure to include the domain of the target URL in the `validDomains` property. If the domain isn't listed, Teams displays the message **URL may lead to untrusted content**.
+- Image URLs that your API plugin or declarative agent returns in an Adaptive Card response must have their domain listed in the `validDomains` property. If the domain isn't listed, Microsoft 365 Copilot doesn't render the image.
 
 ## Ensure responsive Adaptive Cards across Microsoft 365 Copilot hubs
 
-Adaptive cards must be designed to be responsive across various surface sizes. This ensures a seamless user experience, regardless of the device or platform being used. To achieve this, make sure to validate the Adaptive Cards on different Microsoft 365 Copilot hubs, including Teams, Word, and PowerPoint, and to validate various viewport widths by contracting and expanding the Copilot UI. This ensures that Adaptive Cards function optimally and provide a consistent experience across all platforms. Apply the following best practices:
+Adaptive cards must be designed to be responsive across various surface sizes. This design ensures a seamless user experience, regardless of the device or platform being used. To achieve this goal, validate the Adaptive Cards on different Microsoft 365 Copilot hubs, including Teams, Word, and PowerPoint. Also, validate various viewport widths by contracting and expanding the Copilot UI. This process ensures that Adaptive Cards function optimally and provide a consistent experience across all platforms. Apply the following best practices:
 
-- Avoid using multi-column layouts whenever possible. Single-column layouts tend to render well even at the narrowest viewport widths.
+- Avoid using multicolumn layouts whenever possible. Single-column layouts tend to render well even at the narrowest viewport widths.
 - Refrain from placing text and image elements in the same row unless the image is a small icon or avatar.
 - Avoid assigning a fixed width to elements within the Adaptive Card; instead, allow them to resize according to the viewport width. You can, however, assign a fixed width to small images such as icons and avatars.
 
