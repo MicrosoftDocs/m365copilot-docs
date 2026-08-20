@@ -260,6 +260,20 @@ Include:
 - Potential contradictions with existing Learn content.
 - Recommendation to write, edit, link, or avoid duplicating content.
 
+### Interactive demo opportunity assessment
+
+For every Copilot API overview, request example, quickstart, Work IQ article, or MCP tool reference in scope, apply `.github/instructions/interactive-demo.instructions.md` and record:
+
+- Whether the interactive demo covers the same product and reader task.
+- The appropriate link type: explorer landing, example-specific, scenario, or informational.
+- The exact section where the link belongs.
+- Whether to remove an equivalent Graph Explorer call to action.
+- How the writer must verify the production link.
+
+If a link is applicable, include its target section in the file work manifest's intended edit
+regions. If no matching experience exists, record that conclusion without widening the
+manifest.
+
 ### Placement plan
 
 - User-provided placement input, if any.

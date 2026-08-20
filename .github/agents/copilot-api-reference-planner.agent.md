@@ -82,6 +82,10 @@ For each API method:
 - Entry to add to `${workspaceFolder}/docs/whats-new.md`
 - Row to add to `${workspaceFolder}/docs/copilot-apis-overview.md` (only if NOT an admin API)
 - Any other index pages, overview pages, or navigation files that reference similar APIs and should include the new API
+- An interactive demo opportunity assessment following
+  `.github/instructions/interactive-demo.instructions.md` for the overview and every request
+  example. Identify the exact applicable link type and placement, or record that no matching
+  interactive demo experience exists.
 
 ### File manifest
 
@@ -102,3 +106,5 @@ Provide a complete list of all files to create and all existing files to modify,
 - Enumerations MUST be documented in the consuming resource's reference file, NOT in a separate file. The plan should reflect this.
 - For `toc.yml` entries, derive human-friendly names from resource or complex type names by treating them as camelCase. For example, `copilotPackage` would become `Copilot package`. Avoid repeating the name of an entity in the method entries underneath that entity (for example, use `List` instead of `List Copilot packages` under the `Copilot package` resource).
 - The plan should be detailed enough that someone (or the `copilot-api-reference-writer` agent) could execute it without needing to re-analyze the API specification.
+- When an interactive demo link is applicable, include its article and request section in the
+  file manifest and require production verification before publication.

@@ -1,0 +1,65 @@
+name: Validate Interactive Demo links
+
+on:
+  pull_request:
+    paths:
+      - "docs/**/*.md"
+      - ".github/workflows/validate-interactive-demo-links.yml"
+      - "scripts/validate-interactive-demo-links.mjs"
+  schedule:
+    - cron: "0 17 * * 4"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate Interactive Demo redirects
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            mapfile -t changed < <(
+              git diff --name-only --diff-filter=ACMR \
+                "${{ github.event.pull_request.base.sha }}" \
+                "${{ github.event.pull_request.head.sha }}"
+            )
+            # A change to the validator or its workflow re-scans all docs; otherwise
+            # only validate the changed Markdown files under docs/.
+            tooling_changed=false
+            for file in "${changed[@]}"; do
+              if [ "$file" = "scripts/validate-interactive-demo-links.mjs" ] \
+                || [ "$file" = ".github/workflows/validate-interactive-demo-links.yml" ]; then
+                tooling_changed=true
+                break
+              fi
+            done
+            if [ "$tooling_changed" = true ]; then
+              echo "Validator tooling changed; scanning all docs."
+              node scripts/validate-interactive-demo-links.mjs
+            else
+              files=()
+              for file in "${changed[@]}"; do
+                case "$file" in
+                  docs/*.md) files+=("$file") ;;
+                esac
+              done
+              if [ "${#files[@]}" -eq 0 ]; then
+                echo "No Markdown files changed."
+                exit 0
+              fi
+              node scripts/validate-interactive-demo-links.mjs "${files[@]}"
+            fi
+          else
+            node scripts/validate-interactive-demo-links.mjs
+          fi

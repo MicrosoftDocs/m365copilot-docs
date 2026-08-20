@@ -352,6 +352,20 @@ Do not require `.docops/output` artifacts to be staged for PR. They are review a
 
 ### Pass 8: Links, TOC, and repository readiness
 
+- Apply `.github/instructions/interactive-demo.instructions.md` to every changed Copilot API
+  overview, request example, quickstart, Work IQ article, and MCP tool reference.
+- Flag a missed Interactive Demo opportunity when the experience covers the same product and
+  reader task.
+- Verify every added Interactive Demo link resolves through `aka.ms/copilot.dev`, preserves its
+  query parameters, reaches `interactivedemo.microsoft.com`, and restores the documented
+  product, mode, tool or scenario, arguments, and panels.
+- Flag duplicate Graph Explorer and Interactive Demo calls to action when both reproduce the
+  same request. Don't flag Graph Explorer links for examples the Interactive Demo doesn't
+  cover.
+- Produce a completed, ready-to-paste PR verification table for every change set that adds
+  Interactive Demo links. If an existing PR description is in scope, verify that it contains
+  the table.
+
 - Verify internal links resolve to existing files.
 - Verify TOC entries point to existing files and are placed in the approved location.
 - Verify relative links are correct from the changed file locations.

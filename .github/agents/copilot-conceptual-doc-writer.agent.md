@@ -137,6 +137,16 @@ If the article's real spine is an ordered procedure that produces a result rathe
 - Use repository conventions for YAML front matter, headings, links, includes, image references, and TOC entries.
 - Use lowercase, hyphenated file names for new Markdown files unless the target folder uses another established convention.
 
+### Interactive demo links
+
+For files and edit regions identified by the plan's interactive demo opportunity assessment, follow `.github/instructions/interactive-demo.instructions.md`.
+
+- Add the planned explorer or informational link in the specified section.
+- Generate the deep link through the production experience's **Share this page** action when available; don't invent routes or parameters.
+- Verify the visible `aka.ms/copilot.dev` link before committing.
+- Remove an equivalent Graph Explorer call to action only when the interactive demo reproduces that same reader task.
+- If verification fails or production isn't ready, leave the link out and report the blocker.
+
 ## Claim altitude and marker discipline
 
 Every product-behavior claim sits at an **altitude**, from the internal mechanism that
