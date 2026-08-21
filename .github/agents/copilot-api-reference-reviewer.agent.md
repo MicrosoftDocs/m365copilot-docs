@@ -60,6 +60,9 @@ For each method reference file:
 - Verify relative paths for includes are correct based on the folder structure.
 - Verify `toc.yml` entries point to files that exist.
 - Verify enumeration cross-references (e.g., links from a detail resource to the base resource's enum section) are correct.
+- Apply `.github/instructions/interactive-demo.instructions.md` to each overview and request example. Flag missed opportunities, unverified or mismatched deep links, and duplicate Graph Explorer calls to action for requests the interactive demo reproduces.
+- Require each added interactive demo link to preserve its query parameters, resolve to `interactivedemo.microsoft.com`, and restore the documented product, mode, request inputs, and visible panels.
+- Produce a completed, ready-to-paste PR verification table for every change set that adds interactive demo links. If an existing PR description is in scope, verify that it contains the table.
 
 ### Pass 5: Markdown quality
 

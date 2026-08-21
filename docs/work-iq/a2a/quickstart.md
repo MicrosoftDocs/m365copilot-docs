@@ -5,7 +5,7 @@ author: MSFTgraph-sorceress
 ms.author: hstoffels
 ms.topic: quickstart
 ms.localizationpriority: medium
-ms.date: 06/02/2026
+ms.date: 08/20/2026
 ---
 
 # Work IQ A2A quickstart
@@ -271,7 +271,7 @@ Each row shows the agent's display name, provider, and agent ID (the second line
 
 #### Alternative: copy from the Microsoft 365 Copilot URL
 
-1. Go to the Microsoft 365 Copilot Chat website: [https://m365.cloud.microsoft/chat/](https://m365.cloud.microsoft/chat/).
+1. Go to the [Microsoft 365 Copilot Chat](https://m365.cloud.microsoft/chat/) website.
 1. Select your agent in the left navigation.
 1. The agent ID appears in the browser address bar after `/chat/agent/`:
 
@@ -292,6 +292,8 @@ Pass the agent ID as an argument to the sample
 ```bash
 dotnet run -- --token WAM --agent-id <AGENT_ID> --appid <APP_ID> --tenant <TENANT_ID>
 ```
+
+[▶ Open an agent-specific inventory prompt in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fa2a&message=Which+inventory+items+need+attention+today%3F&agentId=a1b2c3d4-e5f6-4890-abcd-ef1234567890).
 
 > [!NOTE]
 > Some Microsoft 365 agents (notably Word, Excel, and PowerPoint agents in the Copilot Chat UI) are designed to run in the context of those Office products and don't produce useful responses when invoked headlessly via A2A.

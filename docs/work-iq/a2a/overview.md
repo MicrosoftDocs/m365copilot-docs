@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/02/2026
+ms.date: 08/20/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -13,6 +13,8 @@ ms.date: 06/02/2026
 # Work IQ Agent-to-Agent (A2A) overview
 
 The [Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/) enables AI agents to communicate and collaborate with Work IQ. Agents can operate autonomously and exchange structured tasks instead of simple API calls with Work IQ.
+
+[Explore Work IQ A2A in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fa2a).
 
 ## Protocol version
 
