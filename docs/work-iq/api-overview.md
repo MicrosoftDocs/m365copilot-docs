@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/29/2026
+ms.date: 08/20/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -176,7 +176,7 @@ Use [remote MCP](mcp/overview.md) to expose Microsoft 365 work context as tool
 
 Install the [Microsoft Work IQ CLI](cli.md) and configure it as a local MCP server.
 
-[▶ See it in action in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
+[▶ Explore Local MCP in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq&tool=ask)
 
 #### Example MCP server configuration
 

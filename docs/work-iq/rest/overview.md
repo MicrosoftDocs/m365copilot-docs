@@ -4,7 +4,7 @@ description: Use the Work IQ REST API to programmatically start and continue con
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.localizationpriority: medium
-ms.date: 05/15/2026
+ms.date: 08/20/2026
 ms.topic: overview
 ---
 
@@ -13,6 +13,8 @@ ms.topic: overview
 # Overview of the Work IQ REST API
 
 The Work IQ REST API enables you to programmatically engage in multiturn conversations with Microsoft 365 Copilot while using enterprise search grounding and web search grounding.
+
+[Explore the Work IQ REST API in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Frest-api).
 
 ## Why use the REST API?
 
@@ -51,7 +53,6 @@ The following limitations apply to the REST API:
 - Toggling off web search grounding is a single-turn action. You must toggle off web search grounding for each chat message where it isn't required.
 - The REST API is subject to all limitations of the [Microsoft 365 Copilot semantic index](/microsoftsearch/semantic-index-for-copilot).
 - The REST API returns AI-generated responses. AI-generated content might be inaccurate, so verify it before use.
-- Graph explorer doesn't support streamed conversations with the REST API.
 
 ## Next step
 

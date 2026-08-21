@@ -4,7 +4,7 @@ description: Continue synchronous conversations with the Work IQ Chat API.
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 06/24/2026
+ms.date: 08/20/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 zone_pivot_groups: work-iq-rest-api-versions
@@ -86,7 +86,7 @@ The following example shows how to send a prompt to the Chat API using the synch
 
 #### Request
 
-The following example shows the request.
+The following example shows the request. [▶ Open this prefilled prompt in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Frest-api&message=What+meeting+do+I+have+at+9+AM+tomorrow+morning%3F&mode=live).
 
 :::zone pivot="work-iq-rest-prod"
 
