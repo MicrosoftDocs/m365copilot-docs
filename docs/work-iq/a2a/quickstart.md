@@ -271,7 +271,7 @@ Each row shows the agent's display name, provider, and agent ID (the second line
 
 #### Alternative: copy from the Microsoft 365 Copilot URL
 
-1. Go to the Microsoft 365 Copilot Chat website: [https://m365.cloud.microsoft/chat/](https://m365.cloud.microsoft/chat/).
+1. Go to the [Microsoft 365 Copilot Chat](https://m365.cloud.microsoft/chat/) website.
 1. Select your agent in the left navigation.
 1. The agent ID appears in the browser address bar after `/chat/agent/`:
 
