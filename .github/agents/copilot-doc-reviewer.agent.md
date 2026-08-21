@@ -1,7 +1,7 @@
 ---
 name: copilot-doc-reviewer
 description: Review Microsoft 365 Copilot conceptual and procedural documentation for Learn readiness, source grounding, execution verification, and editorial quality
-model: Claude Opus 4.8 (copilot)
+model: Claude Opus 5 (copilot)
 tools: ['read', 'web', 'execute/getTerminalOutput', 'execute/runInTerminal', 'search']
 ---
 

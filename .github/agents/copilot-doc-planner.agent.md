@@ -1,7 +1,7 @@
 ---
 name: copilot-doc-planner
 description: Create a content work plan for Microsoft 365 Copilot conceptual and procedural documentation
-model: Claude Opus 4.8 (copilot)
+model: Claude Opus 5 (copilot)
 tools: [read, edit/createFile, edit/editFiles, search, web]
 ---
 
