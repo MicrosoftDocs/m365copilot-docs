@@ -178,8 +178,6 @@ Install the [Microsoft Work IQ CLI](cli.md) and configure it as a local MCP serv
 
 [▶ See it in action in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
 
-[▶ See it in action in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq)
-
 #### Example MCP server configuration
 
 ```json
