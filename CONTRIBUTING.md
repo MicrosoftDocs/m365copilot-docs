@@ -19,6 +19,12 @@ Writing should follow the [Microsoft Writing Style Guide](https://learn.microsof
 
 You can use any text editor to edit Markdown files. However, we recommend using Visual Studio Code with the Learn Authoring Pack. Visual Studio Code should prompt you to install this extension the first time you open this workspace. The extension include a number of capabilities that will make contributing easier.
 
+## Interactive demo links
+
+When you add or substantially revise a Copilot API overview, request example, quickstart, Work IQ article, or MCP tool reference, evaluate whether the [Interactive Demo](https://interactivedemo.microsoft.com/) covers the same reader task.
+
+Follow `.github/instructions/interactive-demo.instructions.md` to choose, create, verify, and document the link. Verify every link against production before committing it. If no matching experience exists, note the opportunity in the PR instead of adding a generic link.
+
 ## Validations
 
 This repository runs a number of validations on all pull requests that must pass before the PR can be merged.

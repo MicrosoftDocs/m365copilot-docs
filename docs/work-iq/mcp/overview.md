@@ -5,12 +5,15 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 08/20/2026
 ---
 
 # Work IQ MCP overview
 
 The Work IQ MCP server exposes Microsoft 365 intelligence capabilities to AI agents through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). It provides a set of generic tools that enable agents to read, create, update, and delete Microsoft 365 entities, invoke Microsoft 365 Copilot for natural-language reasoning, and discover API schemas - all through a single MCP endpoint.
+
+> [!TIP]
+> Explore the Work IQ MCP tools in the [Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote). You can inspect tool schemas, load examples, and preview responses in Demo mode.
 
 ## Design principles
 

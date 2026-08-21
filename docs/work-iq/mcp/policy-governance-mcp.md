@@ -32,7 +32,7 @@ By default, mutation operations aren't allowed for safety. This restriction incl
 
 To review or edit Work IQ MCP policy settings, open the Microsoft 365 admin center:
 
-1. Go to [https://admin.microsoft.com](https://admin.microsoft.com).
+1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 1. Sign in with an account that has permission to manage tenant-level Work IQ or Copilot settings.
 

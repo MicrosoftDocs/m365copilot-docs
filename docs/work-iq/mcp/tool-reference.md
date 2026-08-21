@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 06/02/2026
+ms.date: 08/20/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -50,6 +50,8 @@ A successful response contains a `results` property that is an array of objects 
 #### Example
 
 ##### Request
+
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=fetch&args=%7B%22entityUrls%22%3A%5B%22%2Fme%2Fmessages%22%5D%7D)
 
 ```json
 {
@@ -148,6 +150,8 @@ A successful response exposes the following properties through the MCP `structur
 
 ##### Request
 
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=fetch_blob&args=%7B%22path%22%3A%22%2Fme%2Fphoto%2F%24value%22%7D)
+
 ```json
 {
   "method": "tools/call",
@@ -200,6 +204,8 @@ A successful response contains an object in the `structuredContent` property wit
 #### Example
 
 ##### Request
+
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=create_entity&args=%7B%22parentUrl%22%3A%22%2Fme%2Fmessages%22%2C%22jsonBody%22%3A%7B%22subject%22%3A%22Hello+world%21%22%7D%7D)
 
 ```json
 {
@@ -284,6 +290,8 @@ A successful response contains an object in the `structuredContent` property wit
 
 ##### Request
 
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=update_entity&args=%7B%22entityUrl%22%3A%22%2Fme%2Fmessages%2FAAMkADk0...%22%2C%22jsonBody%22%3A%7B%22subject%22%3A%22Updated%3A+Hello+world%21%22%7D%7D)
+
 ```json
 {
   "method": "tools/call",
@@ -361,6 +369,8 @@ A successful response contains a `statusCode` property set to 204 in the `struct
 
 ##### Request
 
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=delete_entity&args=%7B%22entityUrl%22%3A%22%2Fme%2Fmessages%2FAAMkADk0MDkyMzM3LTlmNzAtNDhmM....%22%7D)
+
 ```json
 {
   "method": "tools/call",
@@ -408,6 +418,8 @@ A successful response contains an object in the `structuredContent` property wit
 
 ##### Request
 
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=do_action&args=%7B%22actionUrl%22%3A%22%2Fme%2Fmessages%2FAAMkADk0...%2Fsend%22%2C%22jsonBody%22%3A%7B%7D%7D)
+
 ```json
 {
   "method": "tools/call",
@@ -453,6 +465,8 @@ A successful response contains an object in the `structuredContent` property wit
 #### Example
 
 ##### Request
+
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=call_function&args=%7B%22functionUrl%22%3A%22%2Fme%2FcalendarView%3Fstartdatetime%3D2026-06-01T17%3A51%3A49.607Z%26enddatetime%3D2026-06-08T17%3A51%3A49.607Z%22%7D)
 
 ```json
 {
@@ -539,7 +553,7 @@ A successful response contains a JSON string in the `text` property of a [TextCo
 
 ##### Request
 
-[▶ Try it in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fmcp&server=workiq&tool=ask_work_iq&setup=true)
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=ask&args=%7B%22question%22%3A%22Do+I+have+any+meetings+today%3F%22%7D)
 
 ```json
 {
@@ -585,6 +599,8 @@ A successful response contains a JSON string in the `text` property of a [TextCo
 #### Example
 
 ##### Request
+
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=list_agents&args=%7B%7D)
 
 ```json
 {
@@ -639,6 +655,8 @@ A successful response contains the JSON schema or TypeScript definitions in the 
 #### Example
 
 ##### Request
+
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=get_schema&args=%7B%22path%22%3A%22%2Fme%2Fmessages%22%2C%22operationType%22%3A%22fetch%22%7D)
 
 ```json
 {
@@ -703,6 +721,8 @@ A successful response contains a `paths` property in the `structuredContent` fie
 #### Example
 
 ##### Request
+
+[▶ Open this example in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fwork-iq%2Fmcp&server=workiq-remote&tool=search_paths&args=%7B%22filter%22%3A%22messages%22%7D)
 
 ```json
 {

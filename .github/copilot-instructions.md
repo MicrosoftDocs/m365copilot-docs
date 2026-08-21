@@ -157,3 +157,4 @@ Always reference these instructions first and fallback to search or bash command
 * Use the repository structure to understand where to place new content
 * Leverage includes for reusable content across multiple articles
 * Remember this is documentation-only - no application code to build or run
+* For every new or substantially revised Copilot API overview, request example, quickstart, Work IQ article, or MCP tool reference, follow `.github/instructions/interactive-demo.instructions.md`. Add an applicable interactive demo link only after verifying it against production, or record why no matching experience exists.

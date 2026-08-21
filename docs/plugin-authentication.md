@@ -4,7 +4,7 @@ description: Learn how to set up authentication for MCP and API plugins in agent
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 08/12/2026
 ms.topic: article
 ---
 
@@ -25,6 +25,9 @@ Choose the authentication scheme that matches how your MCP server or API protect
 | OAuth 2.0 authorization code flow    | Supported     | Supported     | [Configure OAuth 2.0 authentication](plugin-authentication-oauth.md)               |
 | API key                              | Not supported | Supported     | [Configure API key authentication](plugin-authentication-api-key.md)               |
 | No authentication (anonymous)        | Supported     | Supported     | [Configure no authentication (anonymous)](plugin-authentication-none.md)           |
+
+> [!NOTE]
+> This article covers authentication for **plugins**, which you configure in the plugin manifest. Registering an MCP server as an *agent connector* is a different surface: you declare authorization for the `agentConnectors` node in the Microsoft 365 app manifest. Its supported authorization types differ from the plugin schemes in this table. For example, API key authentication is supported for API plugins only and isn't supported for MCP plugins. This difference between the two manifests is expected, not an error. For agent connector authorization, see [Register MCP servers as agent connectors](/microsoftteams/platform/m365-apps/agent-connectors).
 
 ## How plugin authentication works
 

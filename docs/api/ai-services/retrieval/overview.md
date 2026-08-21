@@ -4,7 +4,7 @@ description: "Use the Microsoft 365 Copilot Retrieval API to ground your AI solu
 author: lramosvea
 ms.author: lramosvea
 ms.localizationpriority: medium
-ms.date: 08/06/2026
+ms.date: 08/20/2026
 ms.topic: overview
 ---
 
@@ -16,10 +16,10 @@ The Retrieval API offers a streamlined solution for Retrieval Augmented Generati
 
 RAG is essential when you're building generative AI solutions and want to use Microsoft 365 knowledge. When you implement RAG, your solutions can provide more accurate, contextually relevant responses grounded in the vast repository of your organizational data. The Retrieval API accomplishes RAG by extracting up-to-date and relevant text snippets from SharePoint, OneDrive, and Copilot connectors. The Retrieval API keeps your data in place and upholds your access and governance controls. The Retrieval API ensures that synthesized responses are informed by the latest and most relevant data. This process enhances the reliability and usefulness of your generative AI solutions.
 
-To explore the API, [try a query in Graph Explorer](https://aka.ms/try_copilot_retrieval_API_overview).
+To explore the API, [try a query in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true).
 
 > [!TIP]
-> Do you want to explore the Retrieval API before writing code? Try the [Interactive Demo](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true&apiLog=true) to see a live request and response with your Microsoft 365 data.
+> Do you want to explore the Retrieval API before writing code? Try the [Interactive Demo](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true) to see a live request and response with your Microsoft 365 data.
 
 ## Why use the Retrieval API?
 
