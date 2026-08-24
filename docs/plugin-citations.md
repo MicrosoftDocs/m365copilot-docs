@@ -5,7 +5,7 @@ author: akhilsaivalluri
 ms.author: avalluri
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 07/06/2026
+ms.date: 08/07/2026
 ---
 
 <!-- cSpell:ignore akhilsaivalluri avalluri treyresearch EMEA -->
@@ -127,7 +127,7 @@ The `data_path` property set to `$` selects the root object as a single citation
 
 ### MCP content wrapper
 
-MCP tools wrap their response in a `content` array of `TextContentBlock` items. Copilot parses the `text` field of each block as JSON and then applies your `data_path` against the parsed value. The shape inside the `text` string is what drives your configuration - not the outer `content` wrapper.
+MCP tools wrap their response in a `content` array of `TextContentBlock` items. Copilot parses the `text` field of each block as JSON and then applies your `data_path` against the parsed value. The shape inside the `text` string drives your configuration - not the outer `content` wrapper.
 
 #### Example MCP response
 
@@ -237,6 +237,9 @@ The `data_path` property is a JSONPath ([RFC 9535](https://datatracker.ietf.org/
 
 **As a first preference,** consider adding [rich UI widgets to your agent](plugin-mcp-apps.md). This approach is more future-ready and AI-native, allowing more intelligent, adaptive, and seamless interactions.
 
+> [!NOTE]
+> The Adaptive Card guidance in this section applies only to [declarative agents](overview-declarative-agent.md). The `staticTemplate` property and Adaptive Card rendering for citations aren't supported by Copilot connectors.
+
 **Add an Adaptive Card as a last resort** if - and only if - you need one of the following conditions:
 
 - A **custom visual layout for the citation alone** (multicolumn, image banners, formatted text blocks), or multiple fields rendered in the citation card body (beyond title, subtitle, and URL).
@@ -283,11 +286,11 @@ For the vast majority of citation scenarios - "show me the source and let me cli
 }
 ```
 
-Notice the `${title}`, `${subtitle}`, and `${url}` tokens - these tokens are populated by the same `properties` map shown earlier. The Adaptive Card is a **presentation layer** on top of response semantics; it doesn't replace it.
+Notice the `${title}`, `${subtitle}`, and `${url}` tokens. The same `properties` map you saw earlier populates these tokens. The Adaptive Card is a **presentation layer** on top of response semantics; it doesn't replace it.
 
 ## Troubleshooting checklist
 
-If citations don't show up, use the following checklist.
+If citations don't show up, use the following checklist:
 
 - Is `data_path` pointing to the right node? Paste your tool's raw JSON response into a JSONPath tester and confirm your expression returns the array or object you expect.
 - Does each item have a non-empty `url`? Missing URLs result in non-clickable citations.
