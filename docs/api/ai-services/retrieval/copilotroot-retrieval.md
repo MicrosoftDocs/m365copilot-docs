@@ -106,7 +106,7 @@ The following example shows a request to retrieve data from SharePoint. The requ
 
 The following example shows the request.
 
-[▶ Try it in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true)
+[▶ Try it in the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fcopilot%2Fsearch-and-retrieval-api&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true)
 
 :::zone pivot="graph-preview"
 
@@ -1059,5 +1059,5 @@ Content-Type: application/json
 ## Related content
 
 - [Overview of the Microsoft 365 Copilot Retrieval API](overview.md)
-- [Try with the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fsearch&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true)
+- [Try with the Interactive Demo](https://aka.ms/copilot.dev?page=%2Fcopilot%2Fsearch-and-retrieval-api&query=How+to+setup+corporate+VPN%3F&expand=retrieval&submit=true)
 - [Batch requests](/graph/json-batching)
