@@ -4,7 +4,7 @@ description: Learn how to configure dynamic client registration (DCR) for MCP pl
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 08/28/2026
 ms.topic: how-to
 ---
 
@@ -20,12 +20,15 @@ DCR builds on the OAuth 2.0 authorization code flow. Unlike static OAuth, you do
 > - DCR without a client secret isn't supported yet. The authorization server must issue a client secret during registration.
 > - PKCE is enabled by default for DCR.
 
+> [!WARNING]
+> DCR isn't available for an MCP server that's protected by Microsoft Entra ID. Microsoft Entra ID doesn't publish an [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) registration endpoint, so there's nothing for the Enterprise token store to register a client against. For a server that's protected by Microsoft Entra ID, register the OAuth client statically instead. For more information, see [Configure OAuth 2.0 authentication](plugin-authentication-oauth.md).
+
 Configure DCR in two steps: confirm the prerequisites and create the DCR auth config.
 
 ## Step 1: Confirm prerequisites
 
 - Your MCP server exposes OAuth 2.0 protected resource metadata at its `.well-known/oauth-protected-resource` endpoint ([RFC 9728](https://datatracker.ietf.org/doc/html/rfc9728)), identifying the authorization server that protects it.
-- The authorization server publishes its metadata at the `.well-known/oauth-authorization-server` endpoint ([RFC 8414](https://datatracker.ietf.org/doc/html/rfc8414)), including a `registration_endpoint`, and supports dynamic client registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) that issues a client secret.
+- The authorization server publishes its metadata at the `.well-known/oauth-authorization-server` endpoint ([RFC 8414](https://datatracker.ietf.org/doc/html/rfc8414)), including a `registration_endpoint`, and supports dynamic client registration ([RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) that issues a client secret. Microsoft Entra ID doesn't publish this endpoint, so an MCP server that's protected by Microsoft Entra ID can't use DCR.
 
 ## Step 2: Create the DCR auth config
 

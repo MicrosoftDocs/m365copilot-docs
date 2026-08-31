@@ -5,7 +5,7 @@ description: Learn how to build API plugins from an existing API for Microsoft 3
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 08/28/2026
 ms.topic: how-to
 ---
 
@@ -63,10 +63,10 @@ API plugins are a ZIP file that contains the following files.
 Once you complete these steps, Agents Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded.
 
 > [!NOTE]
-> If your identity server requires Proof Key for Code Exchange (PKCE), uncomment the following line in **m365agents.yml** in the API plugin project.
+> Proof Key for Code Exchange (PKCE) is enabled by default. If your identity server doesn't support PKCE, disable it by adding the following line to **m365agents.yml** in the API plugin project.
 >
 > ```yml
-> # isPKCEEnabled: true
+> isPKCEEnabled: false
 > ```
 
 ## Package and sideload the plugin
