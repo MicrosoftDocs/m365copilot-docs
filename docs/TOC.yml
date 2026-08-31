@@ -111,6 +111,8 @@ items:
     href: agent-builder-add-knowledge.md
   - name: Share and manage agents
     href: agent-builder-share-manage-agents.md
+  - name: Monitor agents
+    href: agent-builder-monitor-agents.md
   - name: Submit to your org catalog
     href: agent-builder-submit-to-org-catalog.md
     items:
