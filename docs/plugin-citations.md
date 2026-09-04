@@ -5,7 +5,7 @@ author: akhilsaivalluri
 ms.author: avalluri
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 08/07/2026
+ms.date: 08/25/2026
 ---
 
 <!-- cSpell:ignore akhilsaivalluri avalluri treyresearch EMEA -->
@@ -14,9 +14,9 @@ ms.date: 08/07/2026
 
 Citations build trust that a Microsoft 365 Copilot response is accurate and grounded. The response body automatically includes citations for Copilot synthesized responses. However, the end user might or might not be able to open the source of information. When Copilot grounds a response on public web content, the URL is cited automatically.
 
-For content coming from a [Model Context Protocol (MCP) server](build-mcp-plugins.md) or an [API](build-api-plugins-existing-api.md), that content must return a URL that an end user can open and review. You define [`response_semantics`](plugin-manifest-2.4.md#response-semantics-object) in your plugin definition so that Copilot knows where that URL is located in the plugin response, and can make the citation clickable with the right link.
+For content coming from a [Model Context Protocol (MCP) server](build-mcp-plugins.md) or an [API](build-api-plugins-existing-api.md), that content can return a URL that an end user can open and review. You define [`response_semantics`](plugin-manifest-2.4.md#response-semantics-object) in your plugin definition so that Copilot knows where that URL is located in the plugin response, and can make the citation clickable with the right link.
 
-If you skip this step, the response still includes a citation, but only with a representative pill or icon. The end user can't click through and confirm the data from your site. That's why clickable citations are also a Microsoft 365 Copilot Agents store policy requirement for apps published to the store.
+If you skip this step, the response can still include a citation, but only with a representative pill or icon. The end user can't click through and confirm the data from your site.
 
 Copilot can also infer citation metadata automatically from common field names, so you no longer need to explicitly define `response_semantics`. Explicit `response_semantics` still take precedence when you provide them. Relying on this dynamic fallback is especially useful when you use [dynamic tool discovery](plugin-dynamic-tool-discovery.md), where the tool surface can change at runtime. For more information, see [Dynamic response semantics](#dynamic-response-semantics-zero-config-fallback).
 

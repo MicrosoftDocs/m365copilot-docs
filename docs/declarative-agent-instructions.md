@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 08/10/2026
+ms.date: 08/11/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
 ms.contributors:
@@ -54,6 +54,10 @@ The following diagram shows the primary components of declarative agent instruct
 
 > [!IMPORTANT]
 > Don't store or offload declarative agent instructions in SharePoint documents (or any other knowledge source) to work around the 8,000-character instruction limit. Knowledge source content is not trusted maker-authored instruction content and is subject to cross-prompt injection attacks (XPIA) classifiers — directive-like language can be blocked, truncated, or sanitized at runtime, causing unpredictable agent behavior. This pattern also expands the attack surface: anyone with edit access to the referenced document can alter agent behavior at runtime, bypassing the manifest's authoring, versioning, and governance controls. Knowledge sources are designed to ground factual responses, not to serve as system-level instructions, and the platform makes no guarantee they will be honored as agent instructions.
+
+### Reference skills at a high level
+
+Skills are a distinct component of a declarative agent, not instructions that you write inline. A skill packages its own instructions, resources, and scripts, and the agent loads a skill's contents only when a task requires them. In your agent's instructions, refer to skills at a high level and point to the actual skills configured in the agent, rather than duplicating a skill's detailed steps in the instructions. To learn what skills are, their limits, and how to add them, see [Custom skills in declarative agents](declarative-agent-skills.md).
 
 ## Best practices for agent instructions
 
