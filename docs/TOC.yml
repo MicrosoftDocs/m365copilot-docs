@@ -38,6 +38,8 @@ items:
       href: overview-declarative-agent.md
     - name: Architecture
       href: declarative-agent-architecture.md
+    - name: Custom skills (preview)
+      href: declarative-agent-skills.md
     - name: FAQ
       href: transparency-faq-declarative-agent.md
   - name: Custom engine agents
@@ -109,6 +111,8 @@ items:
       href: agent-template-writing-coach.md
   - name: Add knowledge sources
     href: agent-builder-add-knowledge.md
+  - name: Add custom skills (preview)
+    href: agent-builder-add-skills.md
   - name: Share and manage agents
     href: agent-builder-share-manage-agents.md
   - name: Monitor agents
@@ -155,8 +159,10 @@ items:
       href: build-declarative-agents-customize-behavior.md
     - name: Add knowledge sources
       href: build-declarative-agents-add-knowledge.md
-    - name: Add skills
-      href: build-declarative-agents-add-skills.md
+    - name: Add capabilities and custom actions
+      href: build-declarative-agents-add-capabilities.md
+    - name: Add custom skills (preview)
+      href: build-declarative-agents-add-custom-skills.md
     - name: Retrieve capabilities IDs
       href: declarative-agent-capabilities-ids.md
     - name: Add actions with plugins
