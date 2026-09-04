@@ -8,6 +8,7 @@
     "Agentdev",
     "agentic",
     "Agentlocal",
+    "agentstoolkit",
     "amith",
     "amitharjani",
     "APIKEYAUTH",
@@ -161,6 +162,7 @@
     "taskpane",
     "Tavily",
     "teamsapp",
+    "TEAMSFX",
     "templating",
     "testdev",
     "testlocal",
@@ -172,7 +174,8 @@
     "vscodeversion",
     "wiqd",
     "workiq",
-    "wujessica"
+    "wujessica",
+    "xwen"
   ],
   "ignoreWords": [],
   "flagWords": [

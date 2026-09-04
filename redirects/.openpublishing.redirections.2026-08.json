@@ -4,6 +4,11 @@
       "source_path_from_root": "/docs/declarative-model-migration-overview.md",
       "redirect_url": "/microsoft-365/copilot/extensibility/declarative-agent-instructions",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-declarative-agents-add-skills.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/build-declarative-agents-add-capabilities",
+      "redirect_document_id": false
     }
   ]
 }
