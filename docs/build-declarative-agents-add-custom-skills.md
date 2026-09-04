@@ -86,6 +86,8 @@ If you set the variable after you install the Visual Studio Code extension, rest
 1. Add your instructions to **SKILL.md** and save the file.
 1. Select **Provision** in the left pane to make the declarative agent available in your environment.
 
+---
+
 ## Limits and known issues
 
 In the Agents Toolkit, you add a skill as a directory (you can't use `.zip`), and the complete app package is limited to 10 MB. You can add up to eight skills per agent, with a maximum directory depth of three and up to 400 files across the skill directory. For the full support matrix and known issues, see [Custom skills in declarative agents](declarative-agent-skills.md#support-matrix).
@@ -93,5 +95,5 @@ In the Agents Toolkit, you add a skill as a directory (you can't use `.zip`), an
 ## Related content
 
 - [Custom skills in declarative agents](declarative-agent-skills.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.9.md)
 - [Add custom skills to your declarative agent in Agent Builder](agent-builder-add-skills.md)
+<!-- [Declarative agent manifest reference](declarative-agent-manifest-1.9.md)-->
