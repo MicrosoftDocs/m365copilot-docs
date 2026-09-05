@@ -4,7 +4,7 @@ description: Learn how to configure Microsoft Entra single sign-on (SSO) authent
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 08/21/2026
 ms.topic: how-to
 ---
 
@@ -24,7 +24,7 @@ Your MCP server or API must be secured by an Entra app registration. If you don'
 
 Entra SSO authentication relies on an **authentication configuration** (auth config) - a record stored in the Microsoft Enterprise token store that Microsoft 365 Copilot uses to obtain tokens for your MCP plugin. You can create the auth config in three ways. The recommended approaches - Microsoft 365 Agents Toolkit and the declarative agent developer skill - create the auth config and update your plugin manifest automatically. You can then use the Microsoft Teams developer portal to manage and refine the auth config.
 
-However you create it, the auth config has an **auth config ID** and an **Application ID URI**. You use the **Application ID URI** in [Step 3](#step-3-update-the-entra-app-registration) and [Step 4](#step-4-add-the-new-token-audience-to-your-api).
+However you create it, the auth config has an **auth config ID** and an **Application ID URI**. You use the **Application ID URI** in [Step 3](#step-3-update-the-entra-app-registration).
 
 > [!IMPORTANT]
 > Even when Agents Toolkit or the declarative agent developer skill creates the auth config automatically, you must still complete [Step 3](#step-3-update-the-entra-app-registration) and [Step 4](#step-4-add-the-new-token-audience-to-your-api).
@@ -55,7 +55,7 @@ Registering in the Teams developer portal is optional if you use Agents Toolkit 
     - **Restrict usage by org**: Select which Microsoft 365 organization has access to your app to access API endpoints.
     - **Restrict usage by app**: Select **Any Teams app** if you don't know your final app ID. After you publish your app, bind this registration with your published app ID.
     - **Client ID**: The client ID of the app registered in Entra.
-    - **Scope**: The permissions your plugin requests from Entra. As with OAuth 2.0, use the scope values required by your Entra app and API.
+    - **Scope**: The delegated permissions that Microsoft 365 Copilot asks the user to consent to. Use this field to request consent for the extra permissions your API needs to run an on-behalf-of flow (for example, Microsoft Graph permissions). For more information, see [Access downstream APIs with the on-behalf-of flow](#access-downstream-apis-with-the-on-behalf-of-flow).
 
 1. Select **Save**.
 
@@ -86,18 +86,57 @@ Regardless of how you created the auth config in Step 2, complete the following 
     ```
 
     > [!NOTE]
-    > You can't add multiple URIs through the Entra admin center's UI. The UI only displays the first URI in the list. Adding multiple URIs doesn't affect your existing URIs and scopes even if they show differently in the UI.
+    > The **Expose an API** UI doesn't let you configure multiple Application ID URIs. If you need to keep your existing URIs, add the new URI in the **Manifest** section instead.
+
+1. Select **Expose an API** under **Manage**, and then select **Add a scope**. Add a delegated scope for access to your API, such as `access_as_user`, and enable it for user and admin consent.
 
 1. Select **Authentication** under **Manage**. Add `https://teams.microsoft.com/api/platform/v1.0/oAuthConsentRedirect` to the **Redirect URIs** in the **Web** platform.
 
-1. Select **Expose an API** under **Manage**. Select **Add a client application** and add the client ID of the Microsoft Enterprise token store, `ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b`.
+1. Select **Expose an API** under **Manage**. Select **Add a client application**, add the client ID of the Microsoft Enterprise token store (`ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b`), and authorize it for the delegated scope you created.
+
+1. Select **Manifest** under **Manage**. Set the `requestedAccessTokenVersion` property to `2`, and save. This configures the app to issue v2.0 access tokens, which this article assumes. The token version also determines the format of the `iss` (issuer) and `aud` (audience) claims that your API validates in [Step 4](#step-4-add-the-new-token-audience-to-your-api).
+
+    > [!NOTE]
+    > With v2.0 tokens, a single-tenant API validates the exact issuer `https://login.microsoftonline.com/<tenant-ID>/v2.0` and the expected `tid` (tenant ID) claim. Don't accept the v1.0 issuer `https://sts.windows.net/<tenant-ID>/`. For a multitenant API, allow only tenants your app supports and enforce tenant-aware authorization and data isolation. The **Restrict usage by org** setting in the auth config doesn't replace tenant validation in your API. A token-version mismatch is a common cause of `401 Unauthorized` errors.
 
 ## Step 4: Add the new token audience to your API
 
-Update your MCP server or API to allow the new identifier URI as the token audience. If your MCP server or API validates the client application ID, make sure that the Microsoft Enterprise token store's client ID (`ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b`) is added as an allowed client application.
+Update your MCP server or API to validate the token audience. Because the app registration requests v2.0 tokens (see [Step 3](#step-3-update-the-entra-app-registration)), the `aud` (audience) claim is the app's **client ID** (a GUID), not the `api://` Application ID URI. Configure your API to accept the client ID as a valid audience.
 
-> [!TIP]
-> If your MCP server or API uses the [on-behalf-of flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow) to get access to another web API that requires the user to grant consent, return a `401 Unauthorized` error to cause the agent to prompt the user to sign in to grant consent.
+If your MCP server or API validates the client application ID, make sure that the Microsoft Enterprise token store's client ID (`ab3be6b7-f5df-413d-ac2d-abf1e3fd9c0b`) is added as an allowed client application.
+
+Require the token's `scp` claim to contain the delegated scope your API expects, such as `access_as_user`. App-only tokens don't contain an `scp` claim, so reject any token that doesn't contain the required delegated scope. Don't rely only on the optional `idtyp` claim to identify app-only tokens.
+
+> [!IMPORTANT]
+> Make the audience your API accepts match the token version. Because this article configures v2.0 tokens, the `aud` claim is the client ID GUID, so accept that value. If your API also accepts v1.0 tokens, additionally allow `api://<client-ID>` and the Application ID URI. A common failure is an API that accepts only the `api://` or Application ID URI form: it rejects valid v2.0 tokens - whose `aud` is the bare client ID - with `401 Unauthorized`, which can trap the user in a repeating consent prompt. For more information, see [How 401 and 403 responses affect the sign-in experience](#how-401-and-403-responses-affect-the-sign-in-experience).
+
+### How 401 and 403 responses affect the sign-in experience
+
+Because [Step 3](#step-3-update-the-entra-app-registration) pre-authorizes Microsoft 365 Copilot, the agent acquires the base token silently, so users don't see a prompt during normal use. The HTTP status code your backend returns controls whether Microsoft 365 Copilot shows a consent prompt.
+
+| Your backend returns | What Microsoft 365 Copilot does |
+| --- | --- |
+| `401 Unauthorized` | Displays a consent prompt for the configured scopes, then retries the request. |
+| `403 Forbidden` | Surfaces the error to the user. It doesn't display a consent prompt. |
+
+> [!IMPORTANT]
+> The consent prompt only records the user's consent - it does **not** change the token that Microsoft 365 Copilot SSO issues. After the user consents, Microsoft 365 Copilot calls back your API or MCP server with the same `access_as_user` token, which your backend should then use for an on-behalf-of request. Consent grants your app the requested permissions so that the on-behalf-of exchange can succeed on the retry; it doesn't upgrade the token that Copilot sends to your API.
+
+For guidance on choosing the correct status code and resolving repeated consent prompts, see [Troubleshoot Microsoft Entra SSO consent and 401 or 403 responses](plugin-authentication-troubleshooting.md#microsoft-entra-sso-consent-isnt-prompted).
+
+### Access downstream APIs with the on-behalf-of flow
+
+> [!IMPORTANT]
+> Microsoft 365 Copilot SSO sends your API a delegated token scoped to your API, typically with an `access_as_user` scope. It doesn't issue tokens for downstream APIs. To access a downstream API, your API or MCP server must run an on-behalf-of (OBO) flow. Use the **Scope** configuration to declare the downstream permissions you need consent for, and return `401 Unauthorized` to trigger a consent request on the client.
+
+The SSO token authenticates the signed-in user to *your* API - its audience is your app and its scope is your API's own permission, `access_as_user`. It doesn't grant access to Microsoft Graph or any other downstream API. To call a downstream API as the signed-in user, exchange the SSO token for a downstream access token by using the [on-behalf-of (OBO) flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow). The OBO exchange runs in your backend and requires a client secret or certificate on your app registration.
+
+If the downstream API requires the user to consent to its permissions, two settings work together to prompt for that consent:
+
+- **Scope**: List the downstream delegated permissions in the **Scope** field of the auth config ([Step 2](#step-2-create-the-entra-sso-auth-config)), so that Microsoft 365 Copilot requests them and presents them to the user for consent.
+- **401 Unauthorized**: Return `401` from your API when the OBO exchange fails because consent is required - for example, when Microsoft Entra returns an `invalid_grant` or `interaction_required` error. Copilot then displays a consent prompt, the user consents, and Copilot retries the request. The retried request carries the same `access_as_user` token; consent grants the downstream permissions so the OBO exchange succeeds on the retry.
+
+When consent hasn't already been granted, without both settings the user isn't prompted and the OBO exchange keeps failing. For more information, see [Microsoft Entra SSO consent isn't prompted](plugin-authentication-troubleshooting.md#microsoft-entra-sso-consent-isnt-prompted).
 
 ## Related content
 
