@@ -270,6 +270,8 @@ LOB entities can contain hundreds of thousands or more records. Summaries and da
 
 Users recognize names such as company, contact, owner, or parent account, but LOB APIs usually store these relationships as record IDs. Design relationship fields so users enter recognizable names rather than record IDs. Label the field as a related record; an indicator such as `Company: Contoso 🔗` can reinforce that the server will resolve the name.
 
+:::image type="content" source="assets/images/lob-mcp-apps/hubspot-relationship-field.png" lightbox="assets/images/lob-mcp-apps/hubspot-relationship-field.png" alt-text="HubSpot contact form with a Company relationship field and lookup indicator":::
+
 When the user selects **Save**, resolve each relationship to exactly one matching record that the user is authorized to access and associate before calling the create API. Never select the first match when a name is ambiguous:
 
 ```text
