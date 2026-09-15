@@ -195,6 +195,8 @@ items:
           href: plugin-dynamic-tool-discovery.md
         - name: UX guidelines for MCP apps
           href: plugin-mcp-apps-ui-guidelines.md
+        - name: Design line-of-business MCP apps
+          href: plugin-mcp-apps-lob-design-principles.md
         - name: Add citations
           href: plugin-citations.md
           displayName: response, response_semantics
