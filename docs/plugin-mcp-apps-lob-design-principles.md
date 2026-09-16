@@ -29,13 +29,13 @@ The following design principles, based on the [Salesforce](https://github.com/mi
 
 ## Map the LOB data model before defining tools
 
-Before defining tools, review the conversation flow and requirements for the scenarios the LOB MCP app will support, together with the LOB application's data model. Each LOB application has its own out-of-the-box data model, which organizations can customize extensively. Verify each entity and field against the current environment, including its API name, user-facing label, data type, required or read-only status, accepted values, and relationships. Do not assume that a sample schema matches the target LOB configuration.
+Before defining the MCP tools that Copilot can call, review the supported conversation scenarios and the LOB application's data model. Each LOB application has an out-of-the-box data model, but organizations can customize it extensively. Therefore, the product's default schema or a reference sample might not match the target environment. Verify each entity and field, including its API name, label, data type, required or read-only status, accepted values, and relationships.
 
 Work with the LOB application customization team to identify environment-specific changes. Keep the MCP server, tool schemas, and app widgets aligned with the current data model so they do not drift from the LOB system.
 
 ## Separate responsibilities across MCP app components
 
-LOB MCP apps coordinate customized business rules, source-system permissions, related records, and consequential updates across agent instructions, MCP tools, LOB integration, and the app widget. Keep these responsibilities separate so rules are enforced consistently and each layer can be secured, tested, and changed independently.
+LOB MCP apps must apply customized business rules, preserve source-system permissions, resolve related records, and handle consequential updates across agent instructions, MCP tools, LOB integration, and the app widget. Keep these responsibilities separate so rules are enforced consistently and each layer can be secured, tested, and changed independently.
 
 - **Use agent instructions and tool descriptions to guide tool selection and argument preparation.** Validate every tool call on the server; do not rely on instructions to enforce permissions, allowed values, relationships, or query safety.
 - **Use the MCP server entry point—the code that receives incoming MCP requests—to route tool calls.** Keep business rules, value translation, relationship resolution, and result preparation in the tool handlers or helper code used by those handlers.
@@ -54,7 +54,7 @@ For MCP endpoint options, see [MCP authentication](plugin-authentication.md).
 
 ## Build a contextual experience, not another application
 
-LOB systems already provide full applications for broad workflows, exploration, and administration. Do not recreate that application inside Microsoft 365 Copilot. Use an LOB MCP app for the focused UI needed by the current conversation, and direct broader work to the LOB system.
+LOB systems already provide full applications for broad workflows, exploration, and administration. Do not recreate that application or replicate its screens inside an MCP app. Replicating full screens increases load time and makes the experience feel less conversational. Use an LOB MCP app for the focused UI needed by the current conversation, and direct broader work to the LOB system.
 
 Let the conversation establish the task and use the app widget when the task benefits from structured review or interaction.
 
@@ -82,11 +82,11 @@ The initial request may instead name the related view the user wants:
 
 > **User:** "Show opportunities for the Global account."
 
-Do not force every related-record request through this exploration pattern. When the initial request already names the related view, resolve the primary record and open the app widget directly in that view rather than making the user navigate from the primary-record view.
+Use the related-entity traversal experience only when users need to explore across records. Traversal screens are heavier because they maintain context and load multiple related views. For independent operations, use a focused app widget designed for that task.
 
 ### Prefill app widgets with conversation context
 
-LOB create forms can contain many required, controlled-value, and relationship fields. Users often provide some of this information in their request. Prefill those values in the create form so the user can review them and complete the remaining fields without repeating information.
+When a user creates an LOB record, the form can contain many required, controlled-value, and relationship fields. Users often provide some of this information in their request. Prefill those values in the create form so the user can review them and complete the remaining fields without repeating information. This pattern uses the conversation to supply context and the app widget to provide structured review and interaction.
 
 > **User:** "Create a contact for Maya Chen at Contoso with the email `maya@contoso.com`."
 
@@ -110,6 +110,8 @@ Use [Work IQ](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibil
 
 LOB systems typically expose large, complex APIs with many entities and operations. Do not mirror the entire API as MCP tools. Define a focused set of business operations that users need, and give each tool a distinct name, description, and input schema. Keep supporting work, such as building API filters and resolving related record names, inside the MCP server.
 
+Design tools and app widgets together. Reuse a small set of optimized app widgets for common interaction types, such as lists, forms, and detail views, rather than creating a separate widget for every tool or entity. This keeps the user experience consistent and reduces widget code, loading overhead, and maintenance.
+
 Create separate tools for common operations such as get, create, and update:
 
 ```text
@@ -122,15 +124,45 @@ Also avoid one unrestricted tool that accepts any entity and action. Its broad s
 
 ### Handle record matches before viewing or editing
 
-Users usually search for LOB records by business names, such as account, company, or contact names, rather than by stable record IDs. These names are often proper nouns, and users might enter partial values or make spelling mistakes. A search can therefore match zero, one, or multiple records. Resolve the request to a stable record ID, and never assume that the first match is the intended record. Declare the supported search fields and record-ID parameter in the tool schema.
+Users usually search for LOB records by business names, such as account, company, or contact names, rather than by stable record IDs, which often contain many digits and are impractical to remember or enter in conversation. For example, a Salesforce record can have an 18-character ID such as `0015g00000ABCDeAAH`, which a user is unlikely to know or type. Business names are often proper nouns, and users might enter partial values or make spelling mistakes. A search can therefore match zero, one, or multiple records. Use a name-to-ID resolution pattern to turn the user's text into a verified stable record ID before viewing or editing. This prevents the operation from being applied to the wrong record. Never assume that the first match is the intended record. Declare the supported search fields and record-ID parameter in the tool schema.
 
 > **User:** "Edit the Global account."
 
-Use the agent instructions to tell Copilot which tool to call and how to handle each result:
+First, call the tool with the user's text:
 
-> Edit-by-name: call the matching get tool with its declared name filter. If exactly one record matches, call the same tool again with its ID and `action="edit"`. If multiple records match, show a list with identifying fields and **Edit** controls. If no records match, report that no record was found.
+```text
+get_accounts(name="Global")
+```
 
-Use the server-side tool definition to identify the matching Account tool and its supported inputs:
+The MCP server maps the text to a supported `Contains` or `LIKE` search with a result limit. For more information about mapping filters to LOB query operators, see [Build filtered lists on the MCP server](#build-filtered-lists-on-the-mcp-server). This discovers candidate records when the user has not provided the exact stored name. Return lightweight candidate results with each stable ID and the recognizable fields needed to distinguish records:
+
+```json
+{
+  "structuredContent": {
+    "type": "accounts",
+    "items": [
+      {
+        "id": "0015g00000ABCDeAAH",
+        "name": "Global Media"
+      },
+      {
+        "id": "0015g00000FGHIjAAH",
+        "name": "Global Manufacturing"
+      }
+    ]
+  }
+}
+```
+
+After the candidate results return, continue based on the match count. For a single unambiguous match, call the tool again with its ID and the requested action. For multiple matches, display a list with **View** or **Edit** controls; the selected control calls the tool with that record's ID. In either case, the second call uses the resolved ID and requested action:
+
+```text
+get_accounts(account_id="0015g00000ABCDeAAH", action="edit")
+```
+
+If no records match, let the user refine the search.
+
+Capture this two-call pattern in the agent instructions, and declare both the name filter and record-ID input in the tool definition:
 
 ```python
 {
@@ -139,8 +171,6 @@ Use the server-side tool definition to identify the matching Account tool and it
     "handler": get_accounts,
 }
 ```
-
-A show request can return one matching record or a list. An edit request must resolve one stable record ID before opening the app widget's edit form.
 
 ### Map controlled values and dependencies
 
@@ -215,6 +245,8 @@ LOB records contain many data types, and each can require a different parameter 
 | Related record | Equality | One parameter | `account_id` |
 | Number | Lower and upper bounds | `*_min`, `*_max` | `amount_min`, `amount_max` |
 | Date | Start and end bounds | `*_from`, `*_to` | `close_date_from`, `close_date_to` |
+
+For text filters used to locate one record, `Contains` or `LIKE` results are candidates rather than a verified identity. Resolve the intended candidate to its stable record ID before a view or edit operation.
 
 Validate and format every value before adding it to the LOB query. Execute all conditions as one server-side query rather than asking Copilot to combine results from several tool calls, which can lose filters or produce inconsistent results. Return one authoritative structured list.
 
