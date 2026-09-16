@@ -17,7 +17,7 @@ This article provides developers and architects with core design patterns and co
 
 ## Why LOB MCP apps require additional design
 
-MCP apps add an interactive app widget to an MCP tool response. Copilot provides the conversational entry point, the MCP server connects to an external system, and the app widget lets users review, explore, or act on data without leaving the conversation.
+In a declarative agent, MCP apps add an interactive app widget to an MCP tool response. Microsoft 365 Copilot provides the conversational entry point, the MCP server connects to an external system, and the app widget lets users review, explore, or act on data without leaving the conversation.
 
 Users working in Microsoft 365 Copilot often need to retrieve information or perform actions in line-of-business (LOB) systems such as Salesforce, ServiceNow, HubSpot, Microsoft Dynamics 365, SAP business applications, Workday, Jira, and Coupa. These packaged enterprise applications include extensive prebuilt data structures, relationships, and business logic, which organizations often customize further. As a result, even two deployments of the same LOB product can expose different fields, values, relationships, permissions, and workflows. User requests are also varied and can combine business names, filters, related records, and actions without following a fixed structure.
 
@@ -44,7 +44,7 @@ LOB MCP apps must apply customized business rules, preserve source-system permis
 
 ## Match authentication to the LOB system
 
-Microsoft 365 Copilot and the LOB system are separate authentication boundaries. LOB systems support different methods, so verify what the target system supports before choosing an approach:
+Authentication to the MCP endpoint and authentication from the MCP server to the LOB system are separate boundaries. The following options describe downstream LOB authentication. Verify what the target system supports before choosing an approach:
 
 - **Delegated identity** uses each user's sign-in token. It preserves per-user permissions and audit history, but requires LOB support, additional authentication setup, and token management.
 - **Application identity** uses a client ID with a secret or certificate. It simplifies service-to-service access, but the LOB system attributes actions to the application instead of the user.
@@ -82,7 +82,7 @@ The initial request may instead name the related view the user wants:
 
 > **User:** "Show opportunities for the Global account."
 
-Use the related-entity traversal experience only when users need to explore across records. Traversal screens are heavier because they maintain context and load multiple related views. For independent operations, use a focused app widget designed for that task.
+Use the related-entity traversal experience only when users need to explore across records. Traversal screens are heavier because they maintain context and load multiple related views. Keep inline app widgets focused; when traversal requires more space, use an expanded surface that preserves the conversation. For independent operations, use a focused app widget designed for that task.
 
 ### Prefill app widgets with conversation context
 
