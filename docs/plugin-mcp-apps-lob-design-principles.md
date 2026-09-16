@@ -5,11 +5,11 @@ description: Learn core design patterns and common pitfalls for building MCP app
 author: kaul-vineet
 ms.author: vineetkaul
 ms.localizationpriority: medium
-ms.date: 09/15/2026
+ms.date: 09/16/2026
 ms.topic: article
 ---
 
-<!-- cSpell:ignore casefold closedwon Coupa ITSM kaul picklist picklists vineet vineetkaul -->
+<!-- cSpell:ignore casefold closedwon ITSM kaul vineet vineetkaul -->
 
 # Design line-of-business MCP apps for Microsoft 365 Copilot
 
@@ -17,11 +17,11 @@ This article provides developers and architects with core design patterns and co
 
 ## Why LOB MCP apps require additional design
 
-MCP apps add an interactive widget to an MCP tool response. Copilot provides the conversational entry point, the MCP server connects to an external system, and the widget lets users review, explore, or act on data without leaving the conversation.
+MCP apps add an interactive app widget to an MCP tool response. Copilot provides the conversational entry point, the MCP server connects to an external system, and the app widget lets users review, explore, or act on data without leaving the conversation.
 
-Users working in Microsoft 365 Copilot often need information or actions from line-of-business (LOB) systems such as Salesforce, ServiceNow, HubSpot, Microsoft Dynamics 365, SAP business applications, Workday, Jira, and Coupa. These packaged enterprise applications provide prebuilt data structures and business logic for core business processes, but organizations often customize them extensively. User requests involving these systems also tend to be complex and varied. They can combine business names, filters, related records, and actions without following a fixed structure. For example, a user might ask Copilot, “Find Global Fizz and show its related open records.”
+Users working in Microsoft 365 Copilot often need to retrieve information or perform actions in line-of-business (LOB) systems such as Salesforce, ServiceNow, HubSpot, Microsoft Dynamics 365, SAP business applications, Workday, Jira, and Coupa. These packaged enterprise applications include extensive prebuilt data structures, relationships, and business logic, which organizations often customize further. As a result, even two deployments of the same LOB product can expose different fields, values, relationships, permissions, and workflows. User requests are also varied and can combine business names, filters, related records, and actions without following a fixed structure.
 
-Fulfilling this request requires more than a standard MCP design that exposes tools to retrieve or update data. LOB systems combine complex and customized schemas, interdependent records, controlled values, permissions, and consequential business workflows. The MCP app must resolve business names, follow relationships, validate inputs against the current configuration, preserve access controls, and coordinate multi-step operations. These requirements call for deliberate patterns for tool boundaries, filtering, relationship resolution, and interactive workflows.
+For example, a user might ask Copilot, “Find Global Fizz and show its related open records.” Supporting requests like this requires more than exposing tools that retrieve or update data. The MCP app must interpret business terms, validate them against the target environment, resolve related records, preserve access controls, and coordinate multi-step workflows. These requirements call for deliberate patterns across tool design, data handling, and interactive experiences.
 
 For foundational guidance, see [Build an MCP plugin](build-mcp-plugins.md), [Add UI with MCP apps](plugin-mcp-apps.md), and [UX guidelines for MCP apps](plugin-mcp-apps-ui-guidelines.md).
 
@@ -31,16 +31,16 @@ The following design principles, based on the [Salesforce](https://github.com/mi
 
 Before defining tools, review the conversation flow and requirements for the scenarios the LOB MCP app will support, together with the LOB application's data model. Each LOB application has its own out-of-the-box data model, which organizations can customize extensively. Verify each entity and field against the current environment, including its API name, user-facing label, data type, required or read-only status, accepted values, and relationships. Do not assume that a sample schema matches the target LOB configuration.
 
-Work with the LOB application customization team to identify environment-specific changes. Keep the MCP server, tool schemas, and widgets aligned with the current data model so they do not drift from the LOB system.
+Work with the LOB application customization team to identify environment-specific changes. Keep the MCP server, tool schemas, and app widgets aligned with the current data model so they do not drift from the LOB system.
 
 ## Separate responsibilities across MCP app components
 
-LOB MCP apps coordinate customized business rules, source-system permissions, related records, and consequential updates across agent instructions, MCP tools, LOB integration, and the widget. Keep these responsibilities separate so rules are enforced consistently and each layer can be secured, tested, and changed independently.
+LOB MCP apps coordinate customized business rules, source-system permissions, related records, and consequential updates across agent instructions, MCP tools, LOB integration, and the app widget. Keep these responsibilities separate so rules are enforced consistently and each layer can be secured, tested, and changed independently.
 
-- **Use the agent instruction file and tool descriptions to guide tool selection and argument preparation.** Validate every tool call on the server; do not rely on instructions to enforce permissions, allowed values, relationships, or query safety.
+- **Use agent instructions and tool descriptions to guide tool selection and argument preparation.** Validate every tool call on the server; do not rely on instructions to enforce permissions, allowed values, relationships, or query safety.
 - **Use the MCP server entry point—the code that receives incoming MCP requests—to route tool calls.** Keep business rules, value translation, relationship resolution, and result preparation in the tool handlers or helper code used by those handlers.
 - **Use the LOB client or adapter for downstream authentication and API communication.** Keep pagination, retries, throttling, and source-system error handling behind this boundary.
-- **Build and maintain the widget in its source files.** The widget displays results, collects input, and uses the host bridge to call MCP tools. It must not store credentials, make authorization decisions, or call the LOB API directly. Generate the deployable widget HTML from this source; do not edit generated files directly.
+- **Build and maintain the app widget in its source files.** The app widget displays results, collects input, and uses the host bridge to call MCP tools. It must not store credentials, make authorization decisions, or call the LOB API directly. Generate the deployable app widget HTML from this source; do not edit generated files directly.
 
 ## Match authentication to the LOB system
 
@@ -48,7 +48,7 @@ Microsoft 365 Copilot and the LOB system are separate authentication boundaries.
 
 - **Delegated identity** uses each user's sign-in token. It preserves per-user permissions and audit history, but requires LOB support, additional authentication setup, and token management.
 - **Application identity** uses a client ID with a secret or certificate. It simplifies service-to-service access, but the LOB system attributes actions to the application instead of the user.
-- **Shared credential** uses one private token, API key, or service-account password for everyone. It is simple to configure, but cannot provide per-user permissions or attribution.
+- **Shared credential** uses one private token, API key, or service-account password for everyone. It is simple to configure, but the LOB system cannot apply per-user permissions or attribution.
 
 For MCP endpoint options, see [MCP authentication](plugin-authentication.md).
 
@@ -56,25 +56,25 @@ For MCP endpoint options, see [MCP authentication](plugin-authentication.md).
 
 LOB systems already provide full applications for broad workflows, exploration, and administration. Do not recreate that application inside Microsoft 365 Copilot. Use an LOB MCP app for the focused UI needed by the current conversation, and direct broader work to the LOB system.
 
-Let the conversation establish the task and use the widget when the task benefits from structured review or interaction.
+Let the conversation establish the task and use the app widget when the task benefits from structured review or interaction.
 
 > **User:** "Show my open opportunities closing this month."
 
-The widget can present the filtered records for review and editing without reproducing the full CRM experience.
+The app widget can present the filtered records for review and editing without reproducing the full CRM experience.
 
-### Let users traverse related business entities in the widget
+### Let users traverse related business entities in the app widget
 
-LOB information is often distributed across related entities. Understanding an account, case, employee, or supplier can require viewing its associated records while keeping the primary record in context. Use widget state and UX features such as expandable sections or detail views so users can explore these relationships without making a separate conversational request for each entity.
+LOB information is often distributed across related entities. Understanding an account, case, employee, or supplier can require viewing its associated records while keeping the primary record in context. Use app widget state and UX features such as expandable sections or detail views so users can explore these relationships without making a separate conversational request for each entity.
 
-For example, when a user asks Copilot for an account, the returned account becomes the primary record that the widget keeps in context:
+For example, when a user asks Copilot for an account, the returned account becomes the primary record that the app widget keeps in context:
 
 > **User:** "Show the Global account."
 
-Show the account's key fields with controls for related entities such as Opportunities, Cases, and Contacts. Preserve the account context in widget state. When a selected view needs related data, invoke the appropriate MCP tool through the host bridge using the current account ID. Load related records only when the user opens that view, and keep the primary record visible.
+Show the account's key fields with controls for related entities such as Opportunities, Cases, and Contacts. Preserve the account context in app widget state. When a selected view needs related data, invoke the appropriate MCP tool through the host bridge using the current account ID. Load related records only when the user opens that view, and keep the primary record visible.
 
 Use lists to show the key fields for review, and add an **Edit** button that opens the detailed form for the selected record.
 
-:::image type="content" source="assets/images/lob-mcp-apps/related-entity-360-modal.png" lightbox="assets/images/lob-mcp-apps/related-entity-360-modal.png" alt-text="In-widget 360-degree view showing related business records":::
+:::image type="content" source="assets/images/lob-mcp-apps/related-entity-360-modal.png" lightbox="assets/images/lob-mcp-apps/related-entity-360-modal.png" alt-text="App widget 360-degree view showing related business records":::
 
 The conversation establishes the business context once, and the UI lets the user continue exploring that context through direct interaction.
 
@@ -82,9 +82,9 @@ The initial request may instead name the related view the user wants:
 
 > **User:** "Show opportunities for the Global account."
 
-Do not force every related-record request through this exploration pattern. When the initial request already names the related view, resolve the primary record and open the widget directly in that view rather than making the user navigate from the primary-record view.
+Do not force every related-record request through this exploration pattern. When the initial request already names the related view, resolve the primary record and open the app widget directly in that view rather than making the user navigate from the primary-record view.
 
-### Prefill widgets with conversation context
+### Prefill app widgets with conversation context
 
 LOB create forms can contain many required, controlled-value, and relationship fields. Users often provide some of this information in their request. Prefill those values in the create form so the user can review them and complete the remaining fields without repeating information.
 
@@ -100,7 +100,7 @@ show_create_form(
 
 :::image type="content" source="assets/images/lob-mcp-apps/hubspot-prefilled-contact.png" lightbox="assets/images/lob-mcp-apps/hubspot-prefilled-contact.png" alt-text="HubSpot contact form prefilled with information from the user's request":::
 
-The widget opens with those values populated so the user can review them and complete any missing fields. Treat prefilled values as user input: validate them on the MCP server before creating the record.
+The app widget opens with those values populated so the user can review them and complete any missing fields. Treat prefilled values as user input: validate them on the MCP server before creating the record.
 
 Use [Work IQ](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/work-iq/) when Microsoft 365 work context can improve the task. It can help ground requests involving “my” and provide relevant context for creating or updating records.
 
@@ -140,7 +140,7 @@ Use the server-side tool definition to identify the matching Account tool and it
 }
 ```
 
-A show request can return one matching record or a list. An edit request must resolve one stable record ID before opening the edit widget.
+A show request can return one matching record or a list. An edit request must resolve one stable record ID before opening the app widget's edit form.
 
 ### Map controlled values and dependencies
 
@@ -148,7 +148,7 @@ LOB systems often use controlled-value fields, also called picklists, choice fie
 
 Controlled-value fields accept only values configured in the target LOB environment. Stored values can be text codes, numbers, or other system identifiers. Using a display label, arbitrary text, or a stale stored value in queries or other CRUD requests can cause validation errors, failed writes, or missing results.
 
-Retrieve labels and codes from the LOB metadata API and cache them for reference. If the LOB system does not provide a metadata API, maintain and verify the mappings through administrative configuration. Refresh the cached or configured mappings when the source configuration changes so the tools and widgets do not drift.
+Retrieve labels and codes from the LOB metadata API and cache them for reference. If the LOB system does not provide a metadata API, maintain and verify the mappings through administrative configuration. Refresh the cached or configured mappings when the source configuration changes so the tools and app widgets do not drift.
 
 For example, the following case-insensitive lookup translates a user-facing label into its stored code:
 
@@ -160,7 +160,7 @@ if normalized_value not in label_to_code:
 status_code = label_to_code[normalized_value]
 ```
 
-When controlled-value fields have dependencies—one selection controls another—capture those relationships in the metadata used by the MCP server and widget. For example, if **Category** controls **Subcategory**, selecting **Hardware** should show only its allowed subcategories. Validate the selected combination on the MCP server before writing to the LOB system.
+When controlled-value fields have dependencies—one selection controls another—capture those relationships in the metadata used by the MCP server and app widget. For example, if **Category** controls **Subcategory**, selecting **Hardware** should show only its allowed subcategories. Validate the selected combination on the MCP server before writing to the LOB system.
 
 ```python
 valid_codes = dependencies[category_code]
@@ -220,7 +220,8 @@ Validate and format every value before adding it to the LOB query. Execute all c
 
 When the user refines the request in a later turn, retain the applicable filters and add or replace only the conditions that changed:
 
-> **User:** "Show deals worth at least 20,000."  
+> **User:** "Show deals worth at least 20,000."
+>
 > **User:** "Now show only the closed-won deals."
 
 ```text
@@ -233,7 +234,7 @@ Return the same structured list type after each refinement so the host renders t
 
 ### Limit and cache list results
 
-LOB entities can contain thousands of records, and their APIs can be slow or throttled. Returning large lists increases response time and payload size, while displaying them overwhelms the widget and occupies too much space in Microsoft 365 Copilot.
+LOB entities can contain thousands of records, and their APIs can be slow or throttled. Returning large lists increases response time and payload size, while displaying them overwhelms the app widget and occupies too much space in Microsoft 365 Copilot.
 
 Apply default and maximum result limits on the MCP server, use predictable sorting, and indicate when more records are available. Let users refine their filters or use an explicit **Load more** action backed by server-side pagination.
 
@@ -262,7 +263,7 @@ Resolve the related values on the MCP server before returning the structured lis
 
 ### Build aggregations on the MCP server
 
-LOB entities can contain hundreds of thousands or more records. Summaries and dashboards can aggregate this data across categories, stages, owners, or time periods. Do not retrieve all underlying records and ask Copilot or the widget to calculate the result. Use LOB aggregation APIs or grouped queries on the MCP server and return only the calculated data the widget needs. If the LOB API does not support aggregation, calculate the result on the MCP server from a bounded, paginated data set and make the scope clear to the user.
+LOB entities can contain hundreds of thousands or more records. Summaries and dashboards can aggregate this data across categories, stages, owners, or time periods. Do not retrieve all underlying records and ask Copilot or the app widget to calculate the result. Use LOB aggregation APIs or grouped queries on the MCP server and return only the calculated data the app widget needs. If the LOB API does not support aggregation, calculate the result on the MCP server from a bounded, paginated data set and make the scope clear to the user.
 
 :::image type="content" source="assets/images/lob-mcp-apps/server-aggregated-sales-pipeline.png" lightbox="assets/images/lob-mcp-apps/server-aggregated-sales-pipeline.png" alt-text="Sales pipeline dashboard built from server-aggregated opportunity data":::
 
@@ -282,7 +283,7 @@ If a name is unresolved or ambiguous, keep the form and its values open, and sho
 
 :::image type="content" source="assets/images/lob-mcp-apps/relationship-resolution-suggestions.png" lightbox="assets/images/lob-mcp-apps/relationship-resolution-suggestions.png" alt-text="Relationship-resolution alert showing suggested matching records":::
 
-Return this correctable condition in `structuredContent` rather than setting top-level `isError`, so the widget can request a correction without treating the tool call as failed.
+Return this correctable condition in `structuredContent` rather than setting top-level `isError`, so the app widget can request a correction without treating the tool call as failed.
 
 ### Protect relationship changes during updates
 
@@ -310,6 +311,8 @@ convert_lead(lead_id="lead_123", create_opportunity=true)
 
 The dedicated tool calls the LOB system's native operation rather than reconstructing it through generic create or update calls, which can bypass validation, related-record creation, workflow behavior, and audit history.
 
+Resolving an incident through ServiceNow's native action is another example of a dedicated business operation.
+
 :::image type="content" source="assets/images/lob-mcp-apps/servicenow-resolve-incident.png" lightbox="assets/images/lob-mcp-apps/servicenow-resolve-incident.png" alt-text="ServiceNow incident resolution performed through a dedicated action":::
 
 ## Start building an LOB MCP app
@@ -317,6 +320,6 @@ The dedicated tool calls the LOB system's native operation rather than reconstru
 Use one of the following options to apply these design principles:
 
 - **Customize a working app:** Open the **MCP Apps** tab in the [Microsoft Copilot Agent Kit's Agent Library](https://github.com/microsoft/Power-CAT-Copilot-Studio-Kit/blob/main/AGENT_LIBRARY.md) to download working LOB MCP apps for Salesforce CRM, ServiceNow ITSM, and HubSpot CRM. Together, these apps demonstrate the patterns in this article and can be adapted to your organization's data model and workflows.
-- **Explore the source code:** Review the [MCP interactive UI samples](https://github.com/microsoft/mcp-interactiveUI-samples) for the server, widget, and deployment source.
+- **Explore the source code:** Review the [MCP interactive UI samples](https://github.com/microsoft/mcp-interactiveUI-samples) for the server, app widget, and deployment source.
 
 Connect an app to a development environment, try the experiences discussed in this article, and adapt them to your own LOB workflows.
