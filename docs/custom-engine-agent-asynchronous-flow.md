@@ -25,7 +25,7 @@ Each user query should receive an initial response within 15 seconds. For long-r
 
 Asynchronous messages are sent after the agent completes a background task initiated by the user. This pattern is useful for scenarios like order tracking or status updates.
 
-For example, if a user orders a laptop, your agent can confirm the request and later send a follow-up message to the user when the order is placed. The following example shows how to use the [Bot Framework](/azure/bot-service/bot-service-overview) to send an asynchronous message regarding the laptop order.
+For example, if a user orders a laptop, your agent can confirm the request and later send a follow-up message to the user when the order is placed. The following example shows how to use the [Bot Framework](/azure/bot-service/bot-overview) to send an asynchronous message regarding the laptop order.
 
 ```javascript
 app.message(
