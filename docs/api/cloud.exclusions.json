@@ -1,0 +1,12 @@
+[
+  {
+    "apiPath": "/copilot/conversations",
+    "operation": "POST",
+    "cloud": "UsGov"
+  },
+  {
+    "apiPath": "/copilot/conversations",
+    "operation": "POST",
+    "cloud": "China"
+  }
+]
