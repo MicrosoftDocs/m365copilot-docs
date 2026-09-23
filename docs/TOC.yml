@@ -469,7 +469,7 @@ items:
     href: sdks/api-libraries.md
   - name: Best practices
     href: /graph/best-practices-concept?context=/microsoft-365/copilot/extensibility/context
-  - name: Terms of use (preview)
+  - name: Terms of use
     href: /legal/m365-copilot-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
   - name: API reference
     href: api/toc.yml
