@@ -13,5 +13,5 @@ items:
   href: mcp/toc.yml
 - name: Permissions
   href: permissions.md
-- name: Terms of use (preview)
+- name: Terms of use
   href: /legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context
