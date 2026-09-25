@@ -4,13 +4,13 @@ description: Learn how Work IQ provides production-ready workplace intelligence 
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 09/25/2026
 ms.topic: overview
 ---
 
 # Work IQ overview
 
-Work IQ is a workplace intelligence layer that enables agents to access and reason over organizational data, context, and tools. It continuously builds a semantic understanding across Microsoft 365 and external systems with built-in, permission-aware governance.
+Work IQ is a workplace intelligence layer that enables agents to access and reason over organizational and business data, context, and tools. It continuously builds a semantic understanding across Microsoft 365 and external systems with built-in, permission-aware governance.
 
 Combining chat, context, tools, and workspaces, Work IQ supports high-volume, multistep interactions and works across frameworks and runtimes through standard protocols. It provides the foundation for building agents, applications, and workflows that deliver faster, more intelligent, efficient outcomes.
 
@@ -24,7 +24,9 @@ Chat is optimized for conversational intelligence. Work IQ supports A2A for agen
 
 ## Context
 
-Context is optimized by eliminating orchestration overhead. Work IQ assembles and grounds context internally across organizational data to provide agent-ready inputs, so agents don't need to stitch together raw signals or manage retrieval pipelines.
+Context is optimized by eliminating orchestration overhead. Work IQ assembles and grounds context internally across organizational and business data to provide agent-ready inputs, so agents don't need to stitch together raw signals or manage retrieval pipelines.
+
+In addition to productivity data from Microsoft 365 applications, Work IQ also includes [business and workflow data](https://go.microsoft.com/fwlink/?LinkId=2379836) from Dynamics 365 and Power Platform.
 
 ## Tools
 
@@ -60,3 +62,4 @@ Work IQ cost is variable based on usage and can be managed in the [Microsoft 365
 - [Work IQ REST API overview](rest/overview.md)
 - [Microsoft Work IQ CLI](cli.md)
 - [Microsoft Work IQ APIs Terms of Use](/legal/work-iq-apis/terms-of-use?context=/microsoft-365/copilot/extensibility/context)
+- [Business Applications in Work IQ](https://go.microsoft.com/fwlink/?LinkId=2379836)
