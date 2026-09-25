@@ -5,7 +5,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 07/09/2026
+ms.date: 09/25/2026
 ms.topic: overview
 ---
 <!-- markdownlint-disable MD024 -->
@@ -25,7 +25,7 @@ The following table lists the capabilities and knowledge sources you can configu
 | Embedded file content | :white_check_mark: | :x: | Yes |
 | Web search | :white_check_mark: | :white_check_mark: | No |
 | Scoped web search | :white_check_mark: | :white_check_mark: | No |
-| Dataverse | :x: | :white_check_mark:\* | Yes |
+| Dataverse | :white_check_mark: | :white_check_mark:\* | Yes |
 | Email | :white_check_mark: | :white_check_mark:\* | Yes (license only) |
 | People | :white_check_mark: | :white_check_mark: | Yes (license only) |
 | OneNote pages | :white_check_mark: | :x: | No |
@@ -120,10 +120,9 @@ For more information about embedded files, see [Embedded file content](agent-bui
 
 Dataverse knowledge allows agents to respond in natural language to user queries about their CRM data or data from tables in Microsoft Dataverse. You can add a Dataverse instance as a knowledge source and add synonyms and a glossary to help the system better interpret customized data in your tables. For more information, see [Add a Dataverse knowledge source](/microsoft-copilot-studio/knowledge-add-dataverse).
 
-> [!NOTE]
-> Dataverse knowledge isn't currently available in Agent Builder.
-
 ### Add Dataverse knowledge
+
+If you use [Agent Builder](agent-builder-build-agents.md) to build your agent, select **Dynamics 365 and Power Apps** on the **Configure** tab in the **Knowledge** section. Select **+** to locate the app you want to include and select the app, or leave it as is to search across all apps. You can access Dataverse knowledge in Agent Builder through [Business Applications in Work IQ](/power-platform/business-applications-work-iq), which an administrator must first [enable](/power-platform/admin/business-applications-work-iq/business-applications-work-iq-quickstart).
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, add the `Dataverse` value to the `capabilities` property in your agent manifest file to enable Dataverse knowledge, as shown in the following example.
 
