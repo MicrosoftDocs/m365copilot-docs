@@ -5,7 +5,7 @@ author: kangxh75
 ms.author: allenk
 ms.topic: quickstart
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 09/25/2026
 ---
 
 <!-- cSpell:ignore kangxh allenk workiq -->
@@ -82,9 +82,9 @@ To manage or inspect available skills, run:
 
 You see `workiq` in the skills list.
 
-## Play with your Microsoft 365 data
+## Play with your Microsoft 365 and business application data
 
-After the Work IQ MCP server and skills load, ask Copilot CLI to retrieve Microsoft 365 business data through Work IQ. The first request might prompt you to authenticate with Microsoft Entra ID.
+After the Work IQ MCP server and skills load, ask Copilot CLI to retrieve Microsoft 365, Power Platform, and Dynamics 365 business data through Work IQ. The first request might prompt you to authenticate with Microsoft Entra ID.
 
 For example, try prompts like:
 
@@ -98,6 +98,10 @@ Find recent messages about the Contoso account.
 
 ```text
 Retrieve the latest email related to the quarterly business review.
+```
+
+```text
+Show me my highest-priority open cases.
 ```
 
 Copilot CLI uses the Work IQ MCP server to call the appropriate tools. The result depends on the signed-in user's Microsoft 365 permissions, the application's OAuth permissions, and tenant policy. If policy or permissions block a request, revise the request or contact your administrator.

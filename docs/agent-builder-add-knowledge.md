@@ -8,7 +8,7 @@ ms.topic: concept-article
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 07/29/2026
+ms.date: 09/25/2026
 ---
 
 # Add knowledge sources to your declarative agent in Microsoft 365 Copilot
@@ -23,6 +23,7 @@ You can add:
 - Up to five Teams chat URLs.
 - Embedded files uploaded from your device (on the **Configure** tab).
 - Microsoft 365 Copilot connectors (if enabled by your organization's administrator).
+- Dynamics 365 and Power Apps data (if *Business Applications in Work IQ* is enabled by your organization's administrator).
 
 This article describes the supported knowledge sources and the steps to configure them in Microsoft 365 Copilot. For general information about building agents with Microsoft 365 Copilot, see [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md).
 
@@ -315,6 +316,19 @@ The following table lists the Copilot connectors that support scoping and the at
 | ServiceNow Tickets | Entity type (Sys_class_name/ Category/ Subcategory) |
 
 For more information about the available Copilot connectors, see the [Connectors gallery](/microsoftsearch/connectors-gallery?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext).
+
+## Dynamics 365 and Power Apps data
+
+[Business Applications in Work IQ](/power-platform/business-applications-work-iq) helps agents understand and use business data and processes from Dynamics 365 and Power Platform. Connect your business applications to give agents the context they need to answer questions, follow business processes, and take action within your existing permissions and controls.
+
+> [!NOTE]
+> Admins must first enable *Business Applications in Work IQ* in the Microsoft 365 admin center and also enable Work IQ for each Power Platform environment. For more information, see [Set Up Business Applications in Work IQ](/power-platform/admin/copilot/business-applications-work-iq-quickstart).
+
+Adding Dataverse as a knowledge source provides read access to the content and doesn't allow creating, updating, or deleting records.  
+
+Using Agent Builder, you can determine which apps are included as data sources, and access to the apps, tables, and data. However, the Dataverse security settings regulate all data. No responses are provided to users who don't already have access to the specified apps or data.
+
+If you don't choose specific apps, queries run across all apps that you have access to. For more information, see [Knowledge sources](./knowledge-sources.md#dataverse).
 
 ## Prioritize your knowledge sources over general knowledge
 

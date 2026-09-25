@@ -5,7 +5,7 @@ author: slevert
 ms.author: slevert
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 05/12/2026
+ms.date: 09/25/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -22,7 +22,7 @@ By using Work IQ, you can ask questions like:
 
 ## What is the Work IQ CLI?
 
-The Work IQ CLI bridges the gap between AI coding assistants and your Microsoft 365 data. By exposing your Microsoft 365 Copilot data through the Model Context Protocol, Work IQ enables AI assistants in your development environment to access and reason over your workplace information.
+The Work IQ CLI bridges the gap between AI coding assistants and your Microsoft 365 and business application data. By exposing your work-related data through the Model Context Protocol, Work IQ enables AI assistants in your development environment to access and reason over your workplace information.
 
 Key capabilities include:
 
@@ -33,6 +33,7 @@ Key capabilities include:
 | **Documents** | "Find my recent PowerPoint presentations" |
 | **Teams messages** | "Summarize today's messages in the Engineering channel" |
 | **People** | "Who is working on Project Alpha?" |
+| **Business applications** | "How many opportunities are closing next month?" |
 
 For more information, see the [Microsoft Work IQ GitHub repo](https://github.com/microsoft/work-iq-mcp).
 
@@ -94,12 +95,13 @@ The fastest way to get started is by using GitHub Copilot CLI:
    /plugin install workiq@copilot-plugins
    ```
 
-1. Restart Copilot CLI and start querying your Microsoft 365 data.
+1. Restart Copilot CLI and start querying your Microsoft 365 and business application data.
 
    ```text
    You: What are my upcoming meetings this week?
    You: Summarize emails from Sarah about the budget
    You: Find documents I worked on yesterday
+   You: Show me my highest-priority open cases.
    ```
 
 ### Install globally using npm
@@ -247,6 +249,29 @@ You: Were any of these issues flagged as blocking the rollout?
 Ask your AI assistant: "What were the specific issues raised by Alex in yesterday's meeting with Contoso? Identify the most critical issue and suggest a fix."
 
 Work IQ searches through the Facilitator-generated meeting notes to identify the specific issues raised by the client and if any were flagged as critical or blocking.
+
+### Scenario 4: Find accessible Power Platform environments
+
+You're developing a solution that works with Power Platform resources and need to determine which environments you can work in. Work IQ can help you identify the environments you have access to based on your permissions, so you can determine where to continue your development work.
+
+#### Using the CLI
+
+```bash
+workiq ask
+```
+
+This command starts interactive mode where you can have a conversation:
+
+```text
+You: Find the power platform environments I have access to
+You: Which of those environments contain Q4 sales data?
+```
+
+#### Using GitHub Copilot in VS Code
+
+Ask your AI assistant: "Find the Power Platform environments I have access to, and of those which contain Q4 sales data."
+
+Work IQ searches through your accessible Power Platform environments to identify which ones you have access to, and checks the list against your Dynamics 365 Sales data for Q4 sales information. 
 
 ## Security and privacy
 
