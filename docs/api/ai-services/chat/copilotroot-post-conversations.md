@@ -19,7 +19,7 @@ The Microsoft 365 Copilot Chat API allows you to create and continue multi-turn 
 
 This documentation covers creating Copilot conversations using the Chat API. Learn how to continue [synchronous conversations](copilotconversation-chat.md) or [streamed conversations](copilotconversation-chatoverstream.md) with the Chat API.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
