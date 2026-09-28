@@ -5,12 +5,13 @@ author: lauragra
 ms.author: jasonjoh
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 07/06/2026
 ---
 
 # Add the image generator capability to your agent
 
 The image generator capability enables declarative agents for Microsoft 365 Copilot to generate images based on user prompts. Image generator uses the existing [Designer](https://designer.microsoft.com/) functionality to create visually appealing and contextually relevant graphics, and includes the following features:
+
 
 - **Multiple image generation**: For each user prompt, the agent generates four images.
 - **Interactive image options**: Users can select each generated image to view it in full size. They can download, copy, or view content credentials for the full-size image. They can also select the side arrow to scroll through the four images.
@@ -19,19 +20,18 @@ The image generator capability enables declarative agents for Microsoft 365 Copi
 - **Clipboard and sharing**: Users can copy the generated images to their clipboard to paste into other applications, or they can share the generated images directly from the interface.
 
 The image generator capability is available to Copilot Chat users with no metered usage or Microsoft 365 Copilot license.
+The availability of the image generator capability depends on the user's license and tenant configuration. For details, see [Agent capabilities and licensing models](prerequisites.md#agent-capabilities-and-licensing-models).
 
 ## Image generator examples
 
 The following examples show what users can do with the image generation capability in your agent.
 
 **User prompt**: Create an image of a serene beach at sunset with palm trees and gentle waves.
-
 The following image shows the result.
 
 :::image type="content" source="assets/images/image-gen-beach-prompt.png" alt-text="Beach image response to the user prompt":::
 
 **User prompt**: Design a flyer for a summer music festival and add a date for May 15, 2024.
-
 The following image shows the result.
 
 :::image type="content" source="assets/images/image-gen-flier-prompt.png" alt-text="Festival flyer image response to the user prompt":::
@@ -57,12 +57,11 @@ If you're using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)
 
 ### Agent Builder
 
-Image generator is enabled by default in [Agent Builder](agent-builder.md). To disable or reenable the capability, select **Skip to configure**, and under **Capabilities**, choose the toggle next to **Create images**.
-
 :::image type="content" source="assets/images/capabilities-toggle.png" alt-text="Screenshot of the Capabilities section in Agent Builder in Microsoft 365 Copilot.":::
+Image generator is always enabled in [Agent Builder](agent-builder.md). This capability is automatically included for all agents.
 
 > [!NOTE]
-> The image generator doesn't currently work in the test pane in Agent Builder.
+> The image generator capability doesn't currently work in the **Try it** test pane in Agent Builder. Test image generation after publishing your agent.
 
 ## Related content
 
