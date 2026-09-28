@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 07/15/2026
+ms.date: 08/27/2026
 ms.topic: overview
 ---
 
@@ -16,6 +16,12 @@ ms.topic: overview
 As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-overview) for the unique way your customers work. This article provides the latest information about what's new in Microsoft 365 Copilot extensibility.
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
+
+## August 2026
+
+### Review requested packages in the Package Management API
+
+Administrators can review the agents that users in the organization requested by filtering [List packages](api/admin-settings/package/copilotpackages-list.md) on the `requestStatus` or `requestType` property.
 
 ## July 2026
 
