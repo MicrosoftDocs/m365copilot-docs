@@ -2,9 +2,10 @@
 title: Use the Personal News Digest template to build an agent
 description: Learn about the Personal News Digest template for Microsoft 365 Copilot.
 author: krmarko
-ms.author: krmarko
+ms.author: jasonjoh
 ms.reviewer: kjette
-ms.date: 05/06/2026 
+ms.date: 07/06/2026
+
 ms.topic: article
 ---
 
@@ -46,8 +47,8 @@ Personal News Digest agents are useful for the following tasks.
 | Leadership Updates | Surfaces messages and newsletters from the CEO, C-suite, or skip-level leaders in the past 30 days with key quotes. |
 
 ## Extension opportunities
-
 You can enhance the functionality of your Personal News Digest agents by connecting to resources via Microsoft 365 Copilot connectors or API plugins, depending on the source system in use.
+Enhance your Personal News Digest agents by connecting to additional resources via Microsoft 365 Copilot connectors or API plugins.
 
 Suggestions for such connections include:
 
