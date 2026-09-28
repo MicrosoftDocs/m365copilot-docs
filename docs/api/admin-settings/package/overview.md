@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: overview
 ms.localizationpriority: high
-ms.date: 06/30/2026
+ms.date: 08/27/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -23,6 +23,7 @@ A package represents an agent in the organization catalog. The Package Managemen
   - Platform (Copilot Studio, Microsoft 365 Copilot Agent Builder)
   - Last updated time
   - Element types contained in the agent package (bots, declarative agents, and more).
+  - Request status or request type, to review the agents that users in the organization requested.
 - Retrieve more metadata for a specific agent.
 - Block, unblock, and reassign ownership of packages.
 
@@ -30,20 +31,23 @@ A package represents an agent in the organization catalog. The Package Managemen
 
 - Organization admin retrieves the inventory of all agents.
 - Admin reviews package details, including availability and deployment status.
+- Admin reviews the agents that users requested, so that they can triage pending demand.
 - Admin reviews agent element details, including declarativeAgent or customEngineAgent element object.
 - Admin blocks a package to prevent its usage across the organization.
 - Admin reassigns package ownership when an employee leaves the organization.
 
 ## API list
 
-| Operation                                                       | HTTP Method                                          | Description                                               |
-|-----------------------------------------------------------------|------------------------------------------------------|-----------------------------------------------------------|
-| [List packages](copilotpackages-list.md)                        | GET `/copilot/admin/catalog/packages`                | Get all agents in the organization.                       |
-| [Get package details](copilotpackagedetail-get.md)              | GET `/copilot/admin/catalog/packages/{id}`           | Get detailed metadata for a specific agent.               |
-| [Update package](copilotpackagedetail-update.md) (preview)      | PATCH `/copilot/admin/catalog/packages/{id}`         | Update package metadata.                                  |
-| [Block](copilotpackage-block.md) (preview)                      | POST `/copilot/admin/catalog/packages/{id}/block`    | Block a package to prevent its usage.                     |
-| [Unblock](copilotpackage-unblock.md) (preview)                  | POST `/copilot/admin/catalog/packages/{id}/unblock`  | Unblock a package to allow its usage.                     |
-| [Reassign](copilotpackage-reassign.md) (preview)                | POST `/copilot/admin/catalog/packages/{id}/reassign` | Reassign ownership of a package to a different user.      |
+| Operation                                                                   | HTTP Method                                          | Description                                          |
+|-----------------------------------------------------------------------------|------------------------------------------------------|------------------------------------------------------|
+| [List packages](copilotpackages-list.md)                                    | GET `/copilot/admin/catalog/packages`                | Get all agents in the organization.                  |
+| [Get package details](copilotpackagedetail-get.md)                          | GET `/copilot/admin/catalog/packages/{id}`           | Get detailed metadata for a specific agent.          |
+| [Update package](copilotpackagedetail-update.md) (preview)                  | PATCH `/copilot/admin/catalog/packages/{id}`         | Update package metadata.                             |
+| [Block](copilotpackage-block.md) (preview)                                  | POST `/copilot/admin/catalog/packages/{id}/block`    | Block a package to prevent its usage.                |
+| [Unblock](copilotpackage-unblock.md) (preview)                              | POST `/copilot/admin/catalog/packages/{id}/unblock`  | Unblock a package to allow its usage.                |
+| [Reassign](copilotpackage-reassign.md) (preview)                            | POST `/copilot/admin/catalog/packages/{id}/reassign` | Reassign ownership of a package to a different user. |
+| [List agent requests](copilotpackages-list.md#filter-by-request-properties) | GET `/copilot/admin/catalog/packages`                | Get all active agent requests in the organization.   |
+| [Get agent request details](copilotpackagedetail-get.md)                    | GET `/copilot/admin/catalog/packages/{id}`           | Get detailed metadata for a specific agent request.  |
 
 ## Resources
 
