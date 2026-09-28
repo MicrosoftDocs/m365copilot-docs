@@ -339,7 +339,7 @@ For more information about the available Copilot connectors, see the [Connectors
 [Business Applications in Work IQ](/power-platform/business-applications-work-iq) helps agents understand and use business data and processes from Dynamics 365 and Power Platform. Connect your business applications to give agents the context they need to answer questions, follow business processes, and take action within your existing permissions and controls.
 
 > [!NOTE]
-> Admins must first enable **Business Applications in Work IQ** in the Microsoft 365 admin center and also enable Work IQ for each Power Platform environment.     For more information, see [Set Up Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/quickstart).
+> Admins must first enable *Business Applications in Work IQ* in the Microsoft 365 admin center and also enable Work IQ for each Power Platform environment. For more information, see [Set Up Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/quickstart?toc=/power-platform/business-applications-work-iq/toc.json&bc=/power-platform/breadcrumb/TOC.json).
 
 Adding Dataverse as a knowledge source provides read access to the content and doesn't allow creating, updating, or deleting records.
 
