@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/15/2026
+ms.date: 09/30/2026
 ms.topic: overview
 ---
 
@@ -30,9 +30,9 @@ The People knowledge source is now available in the Copilot Studio lite experien
 
 The Agent Builder feature in Microsoft 365 Copilot is now available in Microsoft 365 Government Community Cloud Moderate (GCCM) environments.
 
-### Embedded file content file size limit increase
+### Embedded file content file size limit increased to 512 MB
 
-You can now upload files up to 512 MB in size when you embed file content as knowledge in Agent Builder in Microsoft 365 Copilot. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
+You can now upload files up to 512 MB in size when you embed file content as knowledge in Agent Builder in Microsoft 365 Copilot. For more information, see [File types and size limits](agent-builder-add-knowledge.md#file-types-and-size-limits).
 
 ## October 2025
 
@@ -44,7 +44,7 @@ Tenant administrators can now govern who is allowed to share agents created in M
 
 You can copy your declarative agent from Microsoft 365 Copilot to Copilot Studio by using the **Copy to full experience** feature. This unlocks advanced lifecycle management, analytics, governance controls, and deeper enterprise integration options.
 
-For details, see [Copy an agent to Copilot Studio](copy-agent-to-copilot-studio.md).
+For details, see [Copy an agent from Agent Builder to Copilot Studio](copy-agent-to-copilot-studio.md).
 
 ### Use the Search API (preview) to perform semantic search
 
@@ -68,7 +68,7 @@ Teams meetings are now available as a knowledge source when you use Microsoft 36
 
 ### Scope Copilot connector data sources
 
-You can now scope Copilot connectors to specific data attributes when you use Microsoft 365 Copilot to create your agent. For more information, see [Scope Copilot connector data sources](copilot-studio-agent-builder-knowledge.md).
+You can now scope Copilot connectors to specific data attributes when you use Microsoft 365 Copilot to create your agent. For more information, see [Scope Copilot connector data sources](agent-builder-add-knowledge.md#scope-copilot-connector-data-sources).
 
 ### Declarative agent manifest version 1.5
 
@@ -80,9 +80,9 @@ A new version of the declarative agent manifest schema is available. [Declarativ
 
 Added the `disclaimers` property to the [Declarative agent manifest object](declarative-agent-manifest-1.4.md#declarative-agent-manifest-object) in schema version 1.4.
 
-### Embedded file content file size limit increase
+### Embedded file content file size limit increased to 100 MB
 
-You can now upload files up to 100 MB when you embed file content as knowledge in Microsoft 365 Copilot. For more information, see [File size limits](copilot-studio-agent-builder-knowledge.md#file-size-limits).
+You can now upload files up to 100 MB when you embed file content as knowledge in Microsoft 365 Copilot. For more information, see [File types and size limits](agent-builder-add-knowledge.md#file-types-and-size-limits).
 
 ### Increased SharePoint file limit for agents
 
@@ -132,7 +132,7 @@ Use the Copilot API libraries to work with Microsoft 365 Copilot APIs. For more 
 
 ### Outlook email and Teams chats knowledge in Microsoft 365 Copilot
 
-Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](copilot-studio-lite-build.md).
+Add Outlook email and Teams group, channel, and meeting chats as knowledge when you use Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources in Agent Builder](agent-builder-add-knowledge.md).
 
 ## May 2025
 

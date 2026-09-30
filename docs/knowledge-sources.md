@@ -5,7 +5,7 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/25/2026
+ms.date: 09/30/2026
 ms.topic: overview
 ---
 <!-- markdownlint-disable MD024 -->
@@ -122,7 +122,7 @@ Dataverse knowledge allows agents to respond in natural language to user queries
 
 ### Add Dataverse knowledge
 
-If you use [Agent Builder](agent-builder-build-agents.md) to build your agent, select **Dynamics 365 and Power Apps** on the **Configure** tab in the **Knowledge** section. Select **+** to locate the app you want to include and select the app, or leave it as is to search across all apps. You can access Dataverse knowledge in Agent Builder through [Business Applications in Work IQ](/power-platform/business-applications-work-iq), which an administrator must first [enable](/power-platform/admin/business-applications-work-iq/business-applications-work-iq-quickstart).
+If you use [Agent Builder](agent-builder-build-agents.md) to build your agent, select **Dynamics 365 and Power Apps** on the **Configure** tab in the **Knowledge** section. Select **+** to locate the app you want to include and select the app, or leave it as is to search across all apps. You can access Dataverse knowledge in Agent Builder through [Business Applications in Work IQ](/power-platform/business-applications-work-iq), which an administrator must first [enable](/power-platform/admin/business-applications-work-iq/quickstart?toc=/power-platform/business-applications-work-iq/toc.json&bc=/power-platform/breadcrumb/TOC.json).
 
 If you're using [Agents Toolkit and Visual Studio Code](build-declarative-agents.md) to create your agent, add the `Dataverse` value to the `capabilities` property in your agent manifest file to enable Dataverse knowledge, as shown in the following example.
 
@@ -332,7 +332,7 @@ If your agent needs to reason over related content (between the agent user and t
 
 ## OneNote pages
 
-When you use Microsoft 365 Copilot to build your agent, you can choose specific OneNote pages from the file picker to upload as knowledge. You can only select individual OneNote pages. The option to select a whole OneNote notebook isn't available. 
+When you use Microsoft 365 Copilot to build your agent, you can choose specific OneNote pages from the file picker to upload as knowledge. You can only select individual OneNote pages. The option to select a whole OneNote notebook isn't available.
 
 Use the file picker to add OneNote pages. Agent Builder doesn't support entering OneNote page URLs.
 

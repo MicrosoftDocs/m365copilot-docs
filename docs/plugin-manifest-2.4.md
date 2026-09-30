@@ -4,11 +4,14 @@ description: Learn about the 2.4 schema for a manifest file for a plugin in Micr
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 07/01/2026
+ms.date: 09/30/2026
 ms.topic: reference
 ---
 
 # Plugin manifest schema 2.4 for Microsoft 365 Copilot
+
+> [!NOTE]
+> In this reference, *plugin* means the technical MCP or API custom action configured through a plugin manifest for a declarative agent. For the broader customer-facing plugin product, package, registry, and lifecycle, see [Plugins for Microsoft 365 Copilot](plugins-overview.md).
 
 Plugins enable Microsoft 365 Copilot to interact with MCP servers or REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). A plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the MCP tools or APIs it supports and the operations it can perform.
 

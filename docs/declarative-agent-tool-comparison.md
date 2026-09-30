@@ -1,16 +1,22 @@
 ---
-title: Choose the Right Tool to Build a Declarative Agent for Microsoft 365 Copilot
-description: Learn which tools are most suited for different use cases when creating a declarative agent.
+title: Compare tools for declarative agents
+description: Compare Work IQ Dev Tools, Agent Builder, Copilot Studio, Agents Toolkit, and SharePoint for building declarative agents.
 ms.author: jasonjoh
 author: lauragra
 ms.localizationpriority: medium
-ms.date: 08/05/2026
-ms.topic: article
+ms.date: 09/30/2026
+ms.topic: concept-article
 ---
 
-# Choose the right tool to build your declarative agent
+# Compare tools for declarative agents
+
+<!-- markdownlint-disable MD033 -->
+<a id="choose-the-right-tool-to-build-your-declarative-agent"></a>
+<!-- markdownlint-enable MD033 -->
 
 Declarative agents enable you to extend Microsoft 365 Copilot to meet the unique needs of your users. You can build declarative agents using a pro-code, low-code, or no-code approach. This article provides information about the tools that are available for building declarative agents and the pros and cons for each.
+
+For the plugin-wide decision that includes Agent Builder, Work IQ Dev Tools, Cowork, Copilot Studio, and GitHub Copilot, see [Choose development tools for your plugin](choose-plugin-development-tools.md).
 
 ## Tools for building declarative agents
 
@@ -18,6 +24,7 @@ Several tools are available to help you build declarative agents for Copilot. Th
 
 | **Tool** | **Coding approach** |**Description** | **Recommended use case** |
 |:------------|:------------| :------------| :------------|
+| [Work IQ Dev Tools](https://aka.ms/wiqd/docs) | Pro-code | Work IQ Dev Tools is a preview command-line and Visual Studio Code experience for creating, validating, provisioning, packaging, publishing, monitoring, and evaluating declarative-agent projects. Its core extension provides the default lifecycle backend. | Pro-code developers who want a guided, source-controlled declarative-agent lifecycle with terminal or continuous integration workflows. |
 | [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) | Pro-code | Agents Toolkit enables the creation of declarative agents and custom engine agents with advanced features, such as custom API actions, Adaptive Cards, the Microsoft 365 Agents SDK, the Microsoft 365 Agents Playground for local testing, and CI/CD (Continuous Integration/Continuous Delivery) integration. | Developers who need full control over their coding environment, source control, and direct API integration. |
 | [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context) | Low-code | Copilot Studio allows users to create declarative agents using a drag-and-drop interface. It provides control over business logic and workflow automation and allows users to create declarative agents with advanced features, such as custom API actions, Adaptive Cards, and application lifecycle management (ALM) through Power Platform pipelines. |  Information workers and business users who need a low-code, easy-to-use solution that includes [Power Platform integration](/power-platform/developer/get-started). |
 | [Agent Builder](agent-builder.md) | No-code | The Agent Builder feature of Microsoft 365 Copilot offers a simple interface for business users to build declarative agents. Users just need to describe what the agent should do or author an agent with a simple configuration experience. | Business users with no coding experience that want to customize Copilot to increase personal and group productivity. From writing coach to onboarding buddy, users can easily create and share agents that answer questions from knowledge sources, generate images, process data, solve math problems, and more. |
@@ -30,6 +37,7 @@ The following table describes the prerequisites for using each tool and where ag
 <!-- markdownlint-disable MD033 -->
 | **Tool** | **Requirements** | **Tool access** | **Publishes agents to** |
 |:------------|:------------| :------------| :------------|
+| Work IQ Dev Tools | <ul><li>Node.js 24 or later</li><li>PowerShell 7 or later on Windows</li><li>Microsoft 365 account with access to Copilot</li><li>Azure subscription for provisioning</li></ul> | Install [Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/installation/). The default installer includes the CLI, Visual Studio Code extension, and Copilot CLI agent. | <ul><li>Direct users or the tenant through supported sharing</li><li>The organization catalog through `wiqd agent publish`</li></ul> |
 | Agents Toolkit | <ul><li> Microsoft 365 subscription (with sideloading enabled)</li> <li>Visual Studio Code, Visual Studio, or the Agents Toolkit CLI </li> <li> Azure subscription (optional)</li></ul> |  Get [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit) for Visual Studio Code, Visual Studio, or as a CLI.  |  <ul><li> Users with Microsoft 365 subscriptions ([with limited capabilities](prerequisites.md#agent-capabilities-and-licensing-models))</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>   |
 | Copilot Studio | <ul><li> Microsoft 365 subscription </li> <li> A Copilot Studio license — either a standalone Copilot Studio subscription or the Copilot Studio for Microsoft Teams plan included in select Microsoft 365 subscriptions ([compare plans](/microsoft-copilot-studio/requirements-licensing-subscriptions))</li></ul> |  Sign up for [Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions). | <ul><li> Users with Microsoft 365 subscriptions ([with limited capabilities](prerequisites.md#agent-capabilities-and-licensing-models))</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> <li> Mobile apps, messaging platforms </li> </ul>  |
 | Agent Builder | Microsoft 365 subscription | Select the  **Create agent** option in Microsoft 365 Copilot or Teams. | <ul><li> Users with Microsoft 365 subscriptions ([with limited capabilities](prerequisites.md#agent-capabilities-and-licensing-models))</li> <li> Users with Microsoft 365 Copilot licenses or metering enabled </li> </ul>|
@@ -37,13 +45,26 @@ The following table describes the prerequisites for using each tool and where ag
 
 <!-- markdownlint-enable MD033 -->
 
-## Agents Toolkit
+## Work IQ Dev Tools
 
-If your scenario involves the full control, scalability, and direct API integration of a pro-code approach, [Agents Toolkit](./build-declarative-agents.md) is the best tool to use to create your declarative agent.
+Work IQ Dev Tools is a preview pro-code route for declarative agents. It combines a CLI, live Visual Studio Code manifest diagnostics, named environments, automation output, and an optional Copilot CLI agent that can drive the lifecycle conversationally.
+
+| **Pros** | **Cons** |
+|:------------|:------------|
+| **Guided lifecycle:** Create, edit, validate, provision, package, publish, share, monitor, and evaluate declarative-agent projects through one command surface. | **Preview surface:** Commands, output, feature flags, and packaging behavior can change before general availability. |
+| **Fast validation:** Run offline Microsoft Validation Layer checks, package-first deep validation, and live diagnostics in Visual Studio Code. | **Declarative-agent scope:** WIQD doesn't build custom engine agents. |
+| **Automation support:** Use named environments, stable JSON envelopes, documented exit codes, and trusted-pipeline authentication for supported core lifecycle operations. | **Split authentication:** Pipeline authentication for core lifecycle commands doesn't authenticate Work IQ monitoring, evaluations, or other extensions. |
+| **Testing and quality tools:** Send test prompts, use the preview DevUI, run quality evaluations, and query the Insights Agent for usage and health. | **Feature gates:** Work IQ commands are experimental, DevUI is preview, and agent skills and other capabilities can require feature flags. |
+| **Plugin-package route:** The alpha `wiqd plugin` surface can compose supported agents, skills, and remote MCP connectors into a Microsoft 365 app package. | **Alpha plugin boundary:** The plugin surface doesn't provide public-store submission or a `wiqd plugin publish` command. |
+
+Use [Agents Toolkit](./build-declarative-agents.md) directly when you need lower-level manifest, package, or command control, or a capability outside the supported WIQD scope.
 
 > [!TIP]
-> **Work IQ Dev Tools (preview)** — `wiqd` isn't a separate authoring tool. It's a command-line layer over the declarative agent lifecycle that shells out to Agents Toolkit for provisioning. You can drive validate, package, and publish steps from a terminal or CI while still using Agents Toolkit underneath. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+> Work IQ Dev Tools targets declarative agents, not custom engine agents. For custom orchestration, models, hosting, or multi-channel scenarios, use the [Microsoft 365 Agents SDK or another supported custom-engine approach](overview-custom-engine-agent.md#development-approaches-for-custom-engine-agents).
 
+## Agents Toolkit
+
+For pro-code declarative-agent development, start with [Work IQ Dev Tools (preview)](https://aka.ms/wiqd/docs) when its supported lifecycle fits your scenario. Use [Agents Toolkit](./build-declarative-agents.md) directly when you need lower-level manifest, package, or command control, or capabilities outside the supported Work IQ Dev Tools scope.
 
 The following table lists the pros and cons for using Agents Toolkit.
 
@@ -107,8 +128,8 @@ The [SharePoint](https://support.microsoft.com/office/get-started-with-sharepoin
 ## Related content
 
 - [Declarative agents for Microsoft 365 Copilot overview](./overview-declarative-agent.md)
-- [Create declarative agents using Agents Toolkit](./build-declarative-agents.md)
+- [Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](./build-declarative-agents.md)
 - [Set up Microsoft 365 Copilot - admin guide](/copilot/microsoft-365/microsoft-365-copilot-setup)
-- [Build agents with Microsoft 365 Copilot](agent-builder-build-agents.md)
+- [Build agents in Agent Builder](agent-builder-build-agents.md)
 - [Create and delete agents using Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext)
 - [Get started with agents in SharePoint](/sharepoint/get-started-sharepoint-agents)

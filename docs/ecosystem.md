@@ -6,7 +6,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 09/30/2026
 ---
 
 # Copilot extensibility in the Microsoft 365 ecosystem
@@ -85,7 +85,7 @@ Line-of-business developers and IT admins can publish agents and manage both cus
 
 For more information about deploying agents, actions, and Copilot connectors to your organization, see [Publish agents for Microsoft 365 Copilot](./publish.md).
 
-To learn more about managing agents, see [Manage extensibility for Microsoft 365 Copilot](manage.md).
+To learn more about managing agents, see [Compare admin controls for agents by build tool](manage.md).
 
 ## Comprehensive tools and support
 
@@ -109,7 +109,7 @@ Microsoft 365 Copilot is compliant with existing privacy, security, and complian
 
 For more information for Copilot extensibility solution developers, see [Data, Privacy, and Security considerations for extending Microsoft 365 Copilot](./data-privacy-security.md).
 
-IT admins govern agent sharing, visibility, and lifecycle through the Microsoft 365 admin center and Microsoft Purview. For more information, see [Governance and admin controls for agent sharing](data-privacy-security.md#governance-and-admin-controls-for-agent-sharing).
+IT admins govern agent sharing, visibility, and lifecycle through the Microsoft 365 admin center and Microsoft Purview. For more information, see [Governance and admin controls for plugin sharing](data-privacy-security.md#governance-and-admin-controls-for-plugin-sharing).
 
 ## Related content
 

@@ -1,7 +1,8 @@
 ---
 title: Add instructions and conversation starters to a declarative agent created with Microsoft 365 Agents Toolkit
 description: Learn how to customize the behavior of a declarative agent by adding instructions and conversation starters with Microsoft 365 Agents Toolkit.
-ms.date: 05/11/2026
+#customer intent: As a developer, I want to add instructions and conversation starters to my declarative agent in Agents Toolkit so that it behaves as intended and shows users how to start.
+ms.date: 09/30/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -16,7 +17,7 @@ You can customize the behavior of your declarative agent in the agent's manifest
 - [Conversation starters](#add-conversation-starters-to-the-agent) are hints that are displayed to the user to demonstrate how they can get started using the declarative agent.
 
 > [!IMPORTANT]
-> This guide assumes you have completed the [Create declarative agents using Microsoft 365 Agents Toolkit](build-declarative-agents.md) tutorial.
+> This guide assumes you have completed the [Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](build-declarative-agents.md) tutorial.
 
 ## Add instructions to the agent
 
@@ -25,16 +26,16 @@ Start by adding instructions to the agent to phrase its responses as poems.
 1. Open the `appPackage/instructions.txt` file and replace its contents with the following text.
 
     ```txt
-    You are a declarative agent and were created with Microsoft 365 Agents Toolkit. You are an expert at creating poems.
+    You are an expert at creating poems.
 
     Every time a user asks a question, you **must** turn the answer into a poem. The poem **must** not use the quote markdown and use regular text.
     ```
 
-  The contents of this file are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.8.md#declarative-agent-manifest-object).
+    The contents of this file are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.8.md#declarative-agent-manifest-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Microsoft 365 Agents Toolkit.
 
-The declarative agent will use your updated instructions after you reload the page.
+The declarative agent uses your updated instructions after you reload the page.
 
 :::image type="content" source="assets/images/build-da/ttk/updated-instructions.png" alt-text="A screenshot of an answer from a declarative agent based on updated instructions":::
 
@@ -59,15 +60,15 @@ Next, add some conversation starters to the agent.
     ]
     ```
 
-  For more information, see [Conversation starters object](declarative-agent-manifest-1.8.md#conversation-starters-object).
+    For more information, see [Conversation starters object](declarative-agent-manifest-1.8.md#conversation-starters-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
-The updated conversation starters will be available in your declarative agent after you refresh the page.
+The updated conversation starters are available in your declarative agent after you refresh the page.
 
 :::image type="content" source="assets/images/build-da/ttk/conversation-starters.png" alt-text="A screenshot showing the conversation starters from the declarative agent in Microsoft 365 Copilot":::
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Add knowledge sources](build-declarative-agents-add-knowledge.md)
+> [Add knowledge sources to a declarative agent created with Microsoft 365 Agents Toolkit](build-declarative-agents-add-knowledge.md)

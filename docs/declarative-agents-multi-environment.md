@@ -1,31 +1,34 @@
 ---
-title: Manage environments and versions for declarative agents
-description: Learn how to use environment files in the Microsoft 365 Agents Toolkit to deploy declarative agents across multiple environments and agent versions simultaneously.
+title: Manage environments and versions for declarative agents with Microsoft 365 Agents Toolkit
+description: Learn how to use environment files in Microsoft 365 Agents Toolkit to provision declarative agents across multiple environments and agent versions simultaneously.
+#customer intent: As a developer, I want to use Agents Toolkit environment files so that I can provision one declarative agent to multiple environments and run parallel versions without duplicating manifests.
 author: sebastienlevert
 ms.author: slevert
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 06/29/2026
+ms.date: 09/30/2026
 ---
 
-# Manage environments and versions for declarative agents
+# Manage environments and versions for declarative agents with Microsoft 365 Agents Toolkit
 
-As your declarative agent matures, you need to deploy it to multiple environments—development, staging, and production—and eventually run parallel versions so you can pilot new capabilities without disrupting existing users. Maintaining a separate set of manifest files for every environment and version combination doesn't scale.
+As your declarative agent matures, you need to provision it to multiple environments—development, staging, and production—and eventually run parallel versions so you can pilot new capabilities without disrupting existing users. Maintaining a separate set of manifest files for every environment and version combination doesn't scale.
 
-The Microsoft 365 Agents Toolkit addresses both requirements, target environment and agent version, with the same mechanism: environment files. By defining one `.env.*` file per deployment target and using `${{VAR_NAME}}` placeholders throughout your manifest, declarative agent file, and `m365agents.yml`, you can provision any environment or version with a single command—`atk provision --env <target>`—without duplicating a single file.
+Microsoft 365 Agents Toolkit addresses both requirements, target environment and agent version, with the same mechanism: environment files. By defining one `.env.*` file per target and using `${{VAR_NAME}}` placeholders throughout your manifest, declarative agent file, and `m365agents.yml`, you can provision any environment or version with a single command—`atk provision --env <target>`—without duplicating a single file.
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 ## Two axes, one system
 
 Environment management for declarative agents has two dimensions:
 
-- **Target environments**: The same agent deployed to different tenants or app registrations—development, staging, production, or customer-specific tenants.
+- **Target environments**: The same agent provisioned to different tenants or app registrations—development, staging, production, or customer-specific tenants.
 - **Agent versions**: Multiple variants of the same agent running in parallel—for example, v1 stable, v2 preview, or an experimental branch.
 
-Both dimensions are handled the same way. You define an environment file for each deployment target, and the `${{VAR_NAME}}` placeholders in your manifest, declarative agent file, and `m365agents.yml` resolve at provision time.
+Both dimensions are handled the same way. You define an environment file for each target, and the `${{VAR_NAME}}` placeholders in your manifest, declarative agent file, and `m365agents.yml` resolve at provision time.
 
 ## Model target environments
 
-Most teams deploy to at least two environments—development and production—and many add a staging environment between them. Create one file per environment in the `env/` folder:
+Most teams provision to at least two environments—development and production—and many add a staging environment between them. Create one file per environment in the `env/` folder:
 
 ```text
 env/
@@ -113,10 +116,10 @@ Use variables in your manifest for any value that differs between versions:
 }
 ```
 
-The result is one manifest file that produces two distinct installable apps in the same tenant. Users who received the preview install see v2; all other users remain on v1.
+The result is one manifest file that produces two distinct apps in the same tenant. Users who are given access to the preview use v2; all other users continue to use v1.
 
 > [!NOTE]
-> The Teams app ID is the key to this pattern. The platform treats apps with different IDs as separate installations, regardless of how much code they share. This separation also enables A/B testing of agent personas without any impact on production users.
+> The Teams app ID is the key to this pattern. The platform treats apps with different IDs as separate apps, regardless of how much code they share. This separation also enables A/B testing of agent personas without any impact on production users.
 
 ## Branch the agent definition itself
 
@@ -158,6 +161,8 @@ Because the output zip path includes `${{TEAMSFX_ENV}}`, each environment produc
 
 To scale this pattern across all environments, use a matrix in GitHub Actions or Azure DevOps to provision each environment from a single workflow:
 
+<!-- PM-REVIEW (09/25/2026): Verify the npm package name @microsoft/m365agentstoolkit-cli. -->
+
 ```yaml
 strategy:
   matrix:
@@ -179,7 +184,7 @@ steps:
   - run: atk deploy --env ${{ matrix.target }}
 ```
 
-Each matrix job loads the correct `.env.*` file and retrieves its secret from the explicitly mapped GitHub secret. The explicit mapping is required because GitHub secret names only allow uppercase letters, digits, and underscores (for example, a target name like `prod-v2` can't be used directly as a secret name). With this configuration, promoting a change from staging to production becomes a workflow trigger rather than a manual step.
+Each matrix job loads the correct `.env.*` file and retrieves its secret from the explicitly mapped GitHub secret. The explicit mapping is required because GitHub secret names only allow uppercase letters, digits, and underscores (for example, a target name like `prod-v2` can't be used directly as a secret name). With this configuration, provisioning a change to production after it passes staging becomes a workflow trigger rather than a manual step.
 
 > [!WARNING]
 > Don't store production secrets in `.env.prod`. Use `.env.prod.user` for local development and your CI/CD secret store for pipeline runs. Ensure the `.user` files are excluded by `.gitignore` and never committed. Your CI/CD pipeline should inject `SECRET_*` variables at runtime.
@@ -201,19 +206,19 @@ This convention makes the `env/` folder self-documenting. Any team member can de
 
 Moving from one manifest per environment to one repo with many environment files changes how your team operates:
 
-- **Parallel versions without code duplication**: Deploy v1 and v2 to the same production tenant for real-user pilots without forking your codebase.
+- **Parallel versions without code duplication**: Provision v1 and v2 to the same production tenant for real-user pilots without forking your codebase.
 - **Single-command promotion**: Passing `--env prod` is the complete promotion step. No file edits or manual merge steps required.
 - **Consistent CI/CD across environments**: A single workflow handles every environment with identical steps, eliminating configuration drift between development and production.
 - **Simplified onboarding**: A new team member can get started by filling in `.env.dev.user`. No manifest changes are required.
-- **Auditable deployments**: Each environment has a single source-of-truth file. Comparing what changed between `prod` and `prod-v2` is a diff of two files.
+- **Auditable environments**: Each environment has a single source-of-truth file. Comparing what changed between `prod` and `prod-v2` is a diff of two files.
 
 This approach treats both target environments and agent versions as deployment targets, using the same tooling and conventions throughout.
 
 ## Related content
 
-- [Microsoft 365 Agents Toolkit overview](/microsoftteams/platform/toolkit/agents-toolkit-fundamentals)
-- [Agents Toolkit CLI reference](/microsoftteams/platform/toolkit/agents-toolkit-cli)
-- [Provision and deploy with Agents Toolkit](/microsoftteams/platform/toolkit/provision)
+- [Microsoft 365 Agents Toolkit overview](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context)
+- [Agents Toolkit CLI reference](/microsoftteams/platform/toolkit/agents-toolkit-cli?context=/microsoft-365/copilot/extensibility/context)
+- [Provision and deploy with Agents Toolkit](/microsoftteams/platform/toolkit/provision?context=/microsoft-365/copilot/extensibility/context)
 - [Declarative agent manifest reference](declarative-agent-manifest-1.8.md)
 - [Declarative agents overview](overview-declarative-agent.md)
 - [Publish agents](publish.md)

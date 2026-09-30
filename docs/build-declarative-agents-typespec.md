@@ -1,42 +1,39 @@
 ---
-title: Create declarative agents using Microsoft 365 Agents Toolkit and TypeSpec for Microsoft 365 Copilot
+title: Create declarative agents by using Microsoft 365 Agents Toolkit and TypeSpec for Microsoft 365 Copilot
 description: Learn how to build declarative agents using Microsoft 365 Agents Toolkit and TypeSpec for Microsoft 365 Copilot.
 #customer intent: As a developer, I want to build a declarative agent by using TypeSpec and Microsoft 365 Agents Toolkit so that I can define and provision a customized Microsoft 365 Copilot experience as code.
 author: slevert
 ms.author: slevert
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 09/30/2026
 ---
 
-# Create declarative agents using Microsoft 365 Agents Toolkit and TypeSpec
+# Create declarative agents by using Microsoft 365 Agents Toolkit and TypeSpec
 
-A [declarative agent](overview-declarative-agent.md) is a customized version of Microsoft 365 Copilot that users can personalize by declaring specific instructions, actions, and knowledge. This guide shows how to build a declarative agent by using [TypeSpec](https://typespec.io/) and the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
+A [declarative agent](overview-declarative-agent.md) provides a goal-directed conversational experience powered by Microsoft 365 Copilot. You define its purpose, instructions, knowledge, and actions. This guide shows how to build a declarative agent by using [TypeSpec](https://typespec.io/) and [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context).
 
 > [!NOTE]
 > The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 [!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
 
 ## Prerequisites
 
-Before you start, make sure that Microsoft 365 Copilot is available for your organization.
-
-For your development environment, use one of the following options:
-
-- A sandbox Microsoft 365 organization with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
-- An [eligible Microsoft 365 or Office 365 production environment](prerequisites.md#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
+- A Microsoft 365 tenant where you can upload custom apps. **Provision** fails if custom app upload isn't enabled. To enable custom app upload, see [Microsoft 365 Agents Toolkit requirements](prerequisites.md#microsoft-365-agents-toolkit-requirements). For development environment and licensing options, see [Copilot development environment](prerequisites.md#copilot-development-environment).
 
 To complete the steps described in this article, you need the following resources:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Microsoft 365 Agents Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-a-prerelease-version)
+- [Microsoft 365 Agents Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode&context=/microsoft-365/copilot/extensibility/context)
 
 [!INCLUDE [toolkit-version-note](includes/toolkit-version-note.md)]
 
 Familiarize yourself with the following standards and guidelines for declarative agents for Microsoft 365 Copilot:
 
-- Standards for compliance, performance, security, and user experience described in [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
+- Standards for compliance, performance, security, and user experience described in [Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines).
 
 ## Create a declarative agent
 
@@ -64,6 +61,8 @@ Start by creating a basic declarative agent.
 
 ### Test the agent
 
+<!-- PM-REVIEW (09/25/2026): Confirm the current Copilot UI for finding and opening an agent ("Copilot application," "conversation drawer icon"). -->
+
 1. Go to the Copilot application at [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 
 1. Next to the **New Chat** button, select the conversation drawer icon.
@@ -82,14 +81,14 @@ Instructions change how an agent behaves.
 
     ```typescript
     @instructions("""
-      You are a declarative agent and were created with Team Toolkit. You are an expert at creating poems.
+      You are an expert at creating poems.
       Every time a user asks a question, you **must** turn the answer into a poem. The poem **must** not use the quote markdown and use regular text.
     """)
     ```
 
-  The contents of this decorator are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.8.md#declarative-agent-manifest-object).
+    The contents of this decorator are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.8.md#declarative-agent-manifest-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The declarative agent uses your updated instructions after you reload the page.
 
@@ -113,9 +112,9 @@ Conversation starters are hints that Copilot displays to users to show how they 
     })
     ```
 
-  For more information, see [Conversation starters object](declarative-agent-manifest-1.8.md#conversation-starters-object).
+    For more information, see [Conversation starters object](declarative-agent-manifest-1.8.md#conversation-starters-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The updated conversation starters are available in your declarative agent after you refresh the page.
 
@@ -142,7 +141,7 @@ The [web search capability](knowledge-sources.md#web-and-scoped-web-search) enab
     > [!NOTE]
     > If you don't specify the `Sites` array, the agent can access all web content.
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The declarative agent can access web content to generate its answers after you reload the page.
 
@@ -173,7 +172,7 @@ The [SharePoint capability](knowledge-sources.md#sharepoint-and-onedrive) enable
     > - URLs should be full path to SharePoint items (site, document library, folder, or file). You can use the "Copy direct link" option in SharePoint to get the full path or files and folders. Right-click on the file or folder and select **Details**. Navigate to **Path** and select the copy icon.
     > - If you don't specify the `ItemsByUrl` array (or the alternative `ItemsBySharePointIds` array), the agent can access all OneDrive and SharePoint content in your Microsoft 365 organization that the signed-in user can access.
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The declarative agent has access to OneDrive and SharePoint content to generate its answers after you reload the page.
 
@@ -200,10 +199,11 @@ The [Teams messages capability](knowledge-sources.md#teams-messages) enables the
     For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.8.md#microsoft-teams-messages-object).
 
     > [!NOTE]
-    > - The URL in the `url` property must be well formed links to a Teams chat, team, or meeting chat.
+    >
+    > - The URL in the `url` property must be a well-formed link to a Teams chat, team, or meeting chat.
     > - If you don't specify the `TeamsMessagesByUrl` array, the agent can access all Teams channels, teams, meetings, 1:1 chat, and group chats in your Microsoft 365 organization that the authenticated user can access.
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The declarative agent can access Teams data to generate its answers after you reload the page.
 
@@ -223,9 +223,9 @@ The [people capability](knowledge-sources.md#people) enables you to scope your a
     }
     ```
 
-  For more information, see [People object](declarative-agent-manifest-1.8.md#people-object).
+    For more information, see [People object](declarative-agent-manifest-1.8.md#people-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The declarative agent has access to people knowledge after you reload the page.
 
@@ -256,7 +256,7 @@ The [email capability](knowledge-sources.md#email) enables you to scope your age
     > - This example accesses the user of the agent's mailbox. To access a shared mailbox instead, add the optional `shared_mailbox` property set to the email address of the shared mailbox.
     > - The `Folders` array limits the mailbox access to specific folders. To access the entire mailbox, omit the `folders` array.
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The declarative agent has access to email knowledge after you reload the page.
 
@@ -276,9 +276,9 @@ The [image generator capability](image-generator.md) enables agents to generate 
     }
     ```
 
-  For more information, see [Graphic art object](declarative-agent-manifest-1.8.md#graphic-art-object).
+    For more information, see [Graphic art object](declarative-agent-manifest-1.8.md#graphic-art-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The declarative agent can generate images after you reload the page.
 
@@ -298,9 +298,9 @@ The [code interpreter capability](code-interpreter.md) is an advanced tool desig
     }
     ```
 
-  For more information, see [Code interpreter object](declarative-agent-manifest-1.8.md#code-interpreter-object).
+    For more information, see [Code interpreter object](declarative-agent-manifest-1.8.md#code-interpreter-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The declarative agent has the code interpreter capability after you reload the page.
 
@@ -312,7 +312,7 @@ The declarative agent has the code interpreter capability after you reload the p
 
 Add items ingested by a Copilot connector to the available knowledge for the agent.
 
-1. Open the `main.tsp` file and add the `GraphConnectors` capability in the `MyAgent` namespace with the following value, replacing `policieslocal` with a valid Copilot connector ID in your Microsoft 365 organization. For more information on finding Copilot connector IDs, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md#microsoft-365-copilot-connectors).
+1. Open the `main.tsp` file and add the `GraphConnectors` capability in the `MyAgent` namespace with the following value, replacing `policieslocal` with a valid Copilot connector ID in your Microsoft 365 organization. For more information on finding Copilot connector IDs, see [Retrieve capability IDs for the declarative agent manifest](declarative-agent-capabilities-ids.md#copilot-connectors).
 
     ```typescript
     namespace MyAgent {
@@ -331,7 +331,7 @@ Add items ingested by a Copilot connector to the available knowledge for the age
     > [!NOTE]
     > If you don't specify the `Connections` array, the agent gets content from all Copilot connectors in your Microsoft 365 organization that the signed-in user can access.
 
-1. Select **Provision** in the **Lifecycle** pane of the Microsoft 365 Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
 The declarative agent can access Copilot connectors content to generate its answers after you reload the page.
 
@@ -342,11 +342,13 @@ The declarative agent can access Copilot connectors content to generate its answ
 You completed the declarative agent guide for Microsoft 365 Copilot. Now that you're familiar with using TypeSpec to build a declarative agent, you can learn more in the following articles.
 
 - Learn how to [write effective instructions](declarative-agent-instructions.md) for your agent.
-- Test your agent with [Copilot developer mode](debugging-agents-copilot-studio.md) to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
+- Test your agent with developer mode to verify if and how the Copilot orchestrator selects your knowledge sources for use in response to given prompts. For more information, see [Test and debug agents in Microsoft 365 Agents Toolkit by using developer mode](debugging-agents-vscode.md).
 - Get answers to [frequently asked questions](transparency-faq-declarative-agent.md).
-- Learn about an alternative method of building declarative agents with [Copilot Studio](agent-builder.md).
+- Learn about other ways to build declarative agents: no-code in [Agent Builder](agent-builder.md), or low-code in [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context).
 
 ## Next steps
+
+<!-- PM-REVIEW (09/25/2026): "API plugin"/"custom actions" terminology pending PM guidance; see plugins-overview.md:50. -->
 
 > [!div class="nextstepaction"]
 > [Build an action with TypeSpec](./build-api-plugins-typespec.md)

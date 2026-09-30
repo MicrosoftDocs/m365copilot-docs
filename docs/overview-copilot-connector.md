@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 09/30/2026
 ---
 
 # Microsoft 365 Copilot connectors overview
@@ -14,6 +14,8 @@ Microsoft 365 Copilot connectors bring external, line-of-business data into Micr
 
 - **Synced connectors** ingest and index external content into Microsoft Graph.
 - **Federated connectors** retrieve content in real time by using Model Context Protocol (MCP) without indexing data into Microsoft Graph.
+
+A Copilot connector can provide external data access as a capability of a Microsoft 365 Copilot plugin. Connector implementation, authentication, packaging, and availability depend on the connector model and target Microsoft experience. For help deciding whether your plugin needs a connector, see [Connectors as plugin capabilities](plugin-type-connectors.md).
 
 Synced and federated connectors power Microsoft 365 Copilot and other Microsoft 365 intelligent experiences, such as Microsoft Search, Copilot in Excel, and the Researcher agent.
 
@@ -33,6 +35,9 @@ Microsoft 365 Copilot supports two connector models tailored to different integr
 | Authentication | Microsoft Entra ID app registration | MCP-supported methods (OAuth 2.0 or service-specific) |
 | Content retrieval | Indexed search and synthesis | Real-time API calls |
 | Availability | Global, GCC, GCCH, DoD | Varies by federated connector availability |
+
+> [!IMPORTANT]
+> Authentication requirements differ between synced connectors, federated connectors, MCP plugins, and agent connectors. The authentication guidance for [MCP and API plugins](plugin-authentication.md) doesn't automatically apply to Copilot connectors. Follow the product-specific guidance for the connector model you choose.
 
 For more information about federated connectors, see [Federated connectors overview](/microsoft-365/copilot/connectors/federated-connectors-overview).
 
@@ -82,6 +87,12 @@ The following scenarios don't benefit from semantic indexing:
 
 The [Copilot connectors gallery](/microsoft-365/copilot/connectors/connectors-gallery) includes descriptions of Microsoft and partner connectors with links to partner sites. With more than 100 connectors available, you can connect to Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more.
 
+## Prerequisites
+
+Before you implement a connector, prepare the development environment, target Microsoft experience, required licenses, administrator roles, identities, permissions, data source, and test users. For the general readiness checklist, see [Set up your development environment](prerequisites.md).
+
+Additional requirements depend on the connector model and implementation approach. Follow the linked build guidance for the specific roles, permissions, tools, and services that you need.
+
 ## Create your own synced Copilot connector
 
 To build a synced connector, an AI administrator must [register an application](/graph/toolkit/get-started/add-aad-app-registration) and [grant admin consent](/graph/connecting-external-content-deploy-teams#update-microsoft-graph-permissions) for required Microsoft Graph permissions in the **Microsoft Entra admin center**.
@@ -124,5 +135,9 @@ You can find the latest list of samples from the community in the [Microsoft Ado
 
 ## Related content
 
+- [Connectors as plugin capabilities](plugin-type-connectors.md)
+- [Build or reuse connectors](build-reuse-connectors.md)
+- [Set up your development environment](prerequisites.md)
+- [MCP servers as plugin capabilities](plugin-type-mcp-servers.md)
 - [Build your first Copilot connector](build-your-first-connector.md)
 - [Copilot connectors API](/graph/connecting-external-content-connectors-api-overview?context=microsoft-365-copilot/extensibility/context)

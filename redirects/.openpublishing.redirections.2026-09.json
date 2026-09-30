@@ -1,0 +1,14 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/agents-are-apps.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/plugins-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/choose-plugin-capabilities.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/choose-plugin-components",
+      "redirect_document_id": true
+    }
+  ]
+}
