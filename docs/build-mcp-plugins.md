@@ -5,16 +5,20 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 08/05/2026
+ms.date: 09/30/2026
 ---
 
 # Build a plugin for a declarative agent from an MCP server
 
 This guide shows you how to integrate your service with a declarative agent for Microsoft 365 Copilot by adding an MCP server as a plugin using the Microsoft 365 Agents Toolkit. By following these steps, you enable conversational, AI-powered access to your MCP-exposed services for business users.
 
+This walkthrough creates a declarative agent with an MCP plugin. The plugin manifest connects the agent to a remote MCP server; it doesn't package or host the running server.
+
+In the broader Microsoft 365 Copilot plugin model, the MCP server provides an MCP-based capability. This walkthrough covers the declarative-agent integration route, not every way that a Microsoft experience can connect to an MCP server.
+
 This walkthrough uses the [GitHub MCP server](https://github.com/github/github-mcp-server) as an example. The GitHub MCP server is a remote MCP server, provided and maintained by GitHub, that exposes tools for working with repositories, issues, pull requests, and other GitHub features. You use it here to build an agent that can search GitHub repositories and users from natural language prompts. You can follow the same steps with your own MCP server.
 
-Build and use the plugin in four steps: create an OAuth client for authentication, create the agent, publish and sideload the agent, and use the agent.
+Build and test the capability in four steps: create an OAuth client for authentication, create the agent, provision and sideload it for development, and use the agent.
 
 ## Prerequisites
 
@@ -78,9 +82,13 @@ After you complete these steps, Agents Toolkit generates the required files for 
 
 Agents Toolkit configures the generated plugin manifest (`ai-plugin.json`) for [dynamic tool discovery](plugin-dynamic-tool-discovery.md), so the agent resolves the MCP server's tools - including any that return UI widgets ([MCP apps](plugin-mcp-apps.md)) - at runtime, and you don't add tools manually. To pin a fixed, curated set of tools instead, see [Configure pinned tools with Agents Toolkit](plugin-dynamic-tool-discovery.md#configure-pinned-tools-with-agents-toolkit).
 
-## Step 3: Publish and sideload the agent
+<!-- markdownlint-disable MD033 -->
+<a id="step-3-publish-and-sideload-the-agent"></a>
+<!-- markdownlint-enable MD033 -->
 
-To publish and sideload the agent:
+## Step 3: Provision and sideload the agent for development
+
+To provision and sideload the agent in your development tenant:
 
 1. In the Agents Toolkit **Accounts** pane, select **Sign in to Microsoft 365**. (If you're already signed in, continue to the next step).
 

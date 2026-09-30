@@ -1,26 +1,29 @@
 ---
-title: Retrieving capabilities IDs for declarative agent manifest
-description: Learn how to retrieve capabilities IDs for your declarative agent manifest
+title: Retrieve capability IDs for the declarative agent manifest
+description: Learn how to retrieve capability IDs for your declarative agent manifest.
+#customer intent: As a developer, I want to retrieve Copilot connector and SharePoint IDs so that I can scope the capabilities in my declarative agent manifest.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 05/11/2026
-ms.topic: article
+ms.date: 09/30/2026
+ms.topic: how-to
 ---
 
 <!-- markdownlint-disable MD024 MD051 -->
 <!-- cspell:ignore BQGGRREGN -->
 
-# Retrieving capabilities IDs for declarative agent manifest
+# Retrieve capability IDs for the declarative agent manifest
 
-This article describes methods for developers to retrieve the necessary IDs to include Copilot connectors and SharePoint/OneDrive files within the `capabilities` section of their [declarative agent manifest](declarative-agent-manifest-1.8.md). Developers can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
+This article describes how to retrieve the IDs that you need to include Copilot connectors and SharePoint/OneDrive files in the `capabilities` section of your [declarative agent manifest](declarative-agent-manifest-1.8.md). You can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
-## Microsoft 365 Copilot connectors
+## Copilot connectors
 
-This section describes how developers can retrieve the value to set in the `connection_id` property of the [Connection object](declarative-agent-manifest-1.8.md#connection-object) in the [Copilot connectors object](declarative-agent-manifest-1.8.md#copilot-connectors-object) in the manifest.
+This section describes how to retrieve the value to set in the `connection_id` property of the [Connection object](declarative-agent-manifest-1.8.md#connection-object) in the [Copilot connectors object](declarative-agent-manifest-1.8.md#copilot-connectors-object) in the manifest.
 
 > [!IMPORTANT]
-> Querying for Microsoft 365 Copilot connectors requires an admin account.
+> Querying for Copilot connectors requires an admin account.
+
+<!-- PM-REVIEW (09/25/2026): Confirm the least-privilege role or permission (for example, ExternalConnection.Read.All consent) instead of "admin account" for retrieving connector and SharePoint IDs. -->
 
 ### [Graph Explorer](#tab/explorer)
 
@@ -89,7 +92,7 @@ This section describes how developers can retrieve the value to set in the `conn
 
 ## Retrieving SharePoint IDs
 
-This section describes how developers can retrieve the value to set in the following properties within the `items_by_sharepoint_ids` property of the [`OneDriveAndSharePoint` object](declarative-agent-manifest-1.8.md#onedrive-and-sharepoint-object):
+This section describes how to retrieve the value to set in the following properties within the `items_by_sharepoint_ids` property of the [`OneDriveAndSharePoint` object](declarative-agent-manifest-1.8.md#onedrive-and-sharepoint-object):
 
 - `site_id`
 - `list_id`
@@ -131,7 +134,7 @@ This section describes how developers can retrieve the value to set in the follo
           ]
         }
       ]
-   }
+    }
     ```
 
 1. Select **Run query**.

@@ -4,7 +4,7 @@ description: Learn about the 1.2 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 09/30/2026
 ms.topic: reference
 ---
 
@@ -28,7 +28,7 @@ This schema version introduces the following changes from [version 1.0](declarat
 
 ## JSON schema
 
-You can find the schema described in this document in [JSON Schema](https://json-schema.org/) format [here](https://aka.ms/json-schemas/copilot/declarative-agent/v1.2/schema.json).
+The schema described in this article is available as a [JSON Schema file](https://aka.ms/json-schemas/copilot/declarative-agent/v1.2/schema.json).
 
 [!INCLUDE [declarative-agent-manifest-conventions](includes/declarative-agent-manifest-conventions.md)]
 
@@ -231,7 +231,7 @@ The items by SharePoint IDs object contains the following properties.
 | `unique_id` | String | Optional. A unique GUID identifier used to scope a folder or file in the document library specified by the `list_id` property. |
 
 > [!TIP]
-> For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieve capability IDs for the declarative agent manifest](declarative-agent-capabilities-ids.md).
 
 ##### Items by URL object
 
@@ -263,7 +263,7 @@ The connection object contains the following property.
 | `connection_id` | String | Required. The unique identifier of the Copilot connector. |
 
 > [!TIP]
-> For instructions on getting the unique identifier for a Copilot connector, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For instructions on getting the unique identifier for a Copilot connector, see [Retrieve capability IDs for the declarative agent manifest](declarative-agent-capabilities-ids.md).
 
 #### Graphic art object
 

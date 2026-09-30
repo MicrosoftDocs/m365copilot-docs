@@ -5,7 +5,7 @@ description: Find information about custom engine agents, which are specialized 
 author: jessicaaawu
 ms.author: wujessica
 ms.localizationpriority: medium
-ms.date: 08/05/2026
+ms.date: 09/30/2026
 ms.topic: overview
 ---
 
@@ -154,7 +154,7 @@ For more information, see [Cost considerations for Copilot extensibility](cost-c
 
 Custom engine agent prompts and responses in Copilot Chat and Teams are stored in compliance with Microsoft 365 product terms and conditions and are managed as per the customer's instructions. To view and manage this stored data, admins can use Content Search or Microsoft Purview.
 
-For more information about governance and admin controls for agents, see [Governance and admin controls for agent sharing](data-privacy-security.md#governance-and-admin-controls-for-agent-sharing).
+For more information about governance and admin controls for agents, see [Governance and admin controls for plugin sharing](data-privacy-security.md#governance-and-admin-controls-for-plugin-sharing).
 
 If you're building a custom engine agent that calls the Microsoft 365 Copilot APIs, see [Security and authentication for Microsoft 365 Copilot APIs](copilot-apis-security-authentication.md) for details about how the APIs handle authentication, authorization, and organizational policy enforcement.
 

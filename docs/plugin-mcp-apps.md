@@ -4,7 +4,7 @@ description: Learn how to build MCP apps for Microsoft 365 Copilot to create int
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 09/30/2026
 ms.topic: how-to
 ---
 
@@ -35,7 +35,7 @@ For details on which MCP Apps or OpenAI Apps SDK capabilities are supported, see
 
 ## MCP server requirements for MCP apps
 
-- **Authentication** - Copilot supports OAuth 2.1 and Microsoft Entra single sign-on (SSO). For development purposes, Copilot supports anonymous authentication by using the **None** option in Agents Toolkit. For more information about authentication, see [Configure authentication for API plugins in agents](api-plugin-authentication.md).
+- **Authentication** - Copilot supports OAuth 2.1 and Microsoft Entra single sign-on (SSO). For development purposes, Copilot supports anonymous authentication by using the **None** option in Agents Toolkit. For more information about authentication, see [Configure authentication for API plugins in agents](plugin-authentication.md).
 - **Allowed URLs** - Both your MCP server and your identity provider must allow the following URLs.
   - Widget host URL for CORS - Copilot renders widget UI under an MCP server-specific host with the following URL: `{hashed-mcp-domain}.widget-renderer.usercontent.microsoft.com`, where `{hashed-mcp-domain}` is the SHA-256 hash of your MCP server's domain. You can use the [Widget Host URL Generator](https://aka.ms/mcpwidgeturlgenerator) to generate the host URL based on your MCP server URL.
   - OAuth 2.1 redirect URIs:
@@ -241,6 +241,11 @@ Yes. Anonymous authentication is supported for development purposes. However, yo
 
 ## Related content
 
+- [MCP servers as plugin capabilities](plugin-type-mcp-servers.md)
+- [Build or reuse MCP servers](build-reuse-mcp-servers.md)
+- [Integrate and test your plugin components](integrate-test-plugin-components.md)
+- [Package a plugin](package-plugin.md)
+- [Validate a plugin](validate-plugin.md)
 - [User experience guidelines for MCP apps in declarative agents for Microsoft 365 Copilot](plugin-mcp-apps-ui-guidelines.md)
 - [Troubleshoot MCP apps in Microsoft 365 Copilot](plugin-mcp-apps-troubleshooting.md)
 - [MCP based interactive UI samples for Microsoft 365 Copilot](https://github.com/microsoft/mcp-interactiveUI-samples)

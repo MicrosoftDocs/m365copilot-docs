@@ -1,55 +1,49 @@
 ---
-title: Create declarative agents using Microsoft 365 Agents Toolkit
-description: Learn how to build a declarative agent for Microsoft 365 Copilot using Microsoft 365 Agents Toolkit.
+title: Create declarative agents by using Microsoft 365 Agents Toolkit and JSON
+description: Learn how to build a declarative agent for Microsoft 365 Copilot by using Microsoft 365 Agents Toolkit and JSON.
 #customer intent: As a developer, I want to build and provision a declarative agent by using Microsoft 365 Agents Toolkit so that I can deliver a customized Microsoft 365 Copilot experience.
-ms.date: 08/05/2026
+ms.date: 09/30/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
 ms.localizationpriority: medium
 ---
 
-# Tutorial: Create declarative agents by using Microsoft 365 Agents Toolkit
+# Tutorial: Create declarative agents by using Microsoft 365 Agents Toolkit and JSON
 
-A declarative agent is a customized version of Microsoft 365 Copilot that you can use to create personalized experiences by declaring specific instructions, actions, and knowledge. This guide provides information about how to build a declarative agent by using [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
+A [declarative agent](overview-declarative-agent.md) provides a goal-directed conversational experience powered by Microsoft 365 Copilot. You define its purpose, instructions, knowledge, and actions. This guide provides information about how to build a declarative agent by using [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context).
 
 The agent that you build in this tutorial targets licensed Microsoft 365 Copilot users. You can also build agents for Microsoft 365 Copilot Chat users, with limited capabilities. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
 
 > [!NOTE]
-> [Microsoft 365 Government tenants](https://www.microsoft.com/microsoft-365/government) don't support publishing agents through the Microsoft 365 Agents Toolkit.
+> [Microsoft 365 Government tenants](https://www.microsoft.com/microsoft-365/government) don't support publishing agents through Agents Toolkit.
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 :::image type="content" source="assets/images/build-da/ttk/agent-answer.png" alt-text="Screenshot shows the answer from the declarative agent in Microsoft 365 Copilot.":::
 
-For overview information, see [Declarative agents for Microsoft 365 Copilot](overview-declarative-agent.md). To compare agent types, see [Agents for Microsoft 365 Copilot](agents-overview.md).
+For overview information, see [Declarative agents for Microsoft 365 Copilot](overview-declarative-agent.md). To compare agent types, see [Compare declarative and custom engine agents](agents-overview.md).
 
 [!INCLUDE [copilot-in-word-and-powerpoint](includes/copilot-in-word-and-powerpoint.md)]
 
 ## Prerequisites
 
-Before you start, make sure that Microsoft 365 Copilot is available for your organization.
-
-The following options are available for your development environment:
-
-- A sandbox Microsoft 365 organization with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
-- An [eligible Microsoft 365 or Office 365 production environment](prerequisites.md#organizations-with-microsoft-365-copilot-licenses) with a Microsoft 365 Copilot license.
+- A Microsoft 365 tenant where you can upload custom apps. **Provision** fails if custom app upload isn't enabled. To enable custom app upload, see [Microsoft 365 Agents Toolkit requirements](prerequisites.md#microsoft-365-agents-toolkit-requirements). For development environment and licensing options, see [Copilot development environment](prerequisites.md#copilot-development-environment).
 
 The following resources are required to complete the steps described in this article:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Microsoft 365 Agents Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-a-prerelease-version)
+- [Microsoft 365 Agents Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode&context=/microsoft-365/copilot/extensibility/context)
 
 [!INCLUDE [toolkit-version-note](includes/toolkit-version-note.md)]
 
 You should be familiar with the following standards and guidelines for declarative agents for Microsoft 365 Copilot:
 
-- Standards for compliance, performance, security, and user experience described in [Microsoft Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
+- Standards for compliance, performance, security, and user experience described in [Microsoft Teams Store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines).
 
 ## Create and provision a declarative agent with Microsoft 365 Agents Toolkit
 
 Start by creating a basic declarative agent.
-
-> [!TIP]
-> **Work IQ Dev Tools (preview)** — As an alternative to the Visual Studio Code steps in this tutorial, [get started with Work IQ Dev Tools](https://aka.ms/wiqd/docs) for a simpler, faster command-line workflow. The Microsoft 365 Agents Toolkit steps that follow might be a better fit for your workflow.
 
 1. Open Visual Studio Code.
 
@@ -73,6 +67,8 @@ Start by creating a basic declarative agent.
 
 ## Test the agent
 
+<!-- PM-REVIEW (09/25/2026): Confirm the current Copilot UI for finding and opening an agent ("Copilot application," "conversation drawer icon"). -->
+
 1. Go to the Copilot application at [https://m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat).
 
 1. Next to the **New Chat** button, select the conversation drawer icon.
@@ -88,4 +84,4 @@ Start by creating a basic declarative agent.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Customize behavior with instructions and conversation starters](build-declarative-agents-customize-behavior.md)
+> [Add instructions and conversation starters to a declarative agent created with Microsoft 365 Agents Toolkit](build-declarative-agents-customize-behavior.md)

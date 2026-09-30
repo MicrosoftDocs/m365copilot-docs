@@ -1,7 +1,8 @@
 ---
 title: Add capabilities and custom actions to a declarative agent created with Microsoft 365 Agents Toolkit
 description: Learn how to add capabilities and API plugins as custom actions to declarative agents with Microsoft 365 Agents Toolkit.
-ms.date: 09/03/2026
+#customer intent: As a developer, I want to add built-in capabilities and an API plugin to my declarative agent in Agents Toolkit so that it can generate images, run code, and call a REST API.
+ms.date: 09/30/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -12,10 +13,12 @@ ms.localizationpriority: medium
 
 # Add capabilities and custom actions to a declarative agent created with Microsoft 365 Agents Toolkit
 
-You can enhance the abilities of your agent by adding capabilities or custom actions. You can enhance your agent by enabling built-in capabilities like [image generator](image-generator.md) or [code interpreter](code-interpreter.md), or by adding [MCP or API plugins](overview-plugins.md) as custom actions.
+You can enhance the abilities of your agent by adding capabilities or custom actions. You can enhance your agent by enabling built-in capabilities like [image generator](image-generator.md) or [code interpreter](code-interpreter.md), or by adding [MCP or API plugins](overview-plugins.md) as custom actions. This tutorial adds an API plugin. To add an MCP server, see [Build or reuse MCP servers](build-reuse-mcp-servers.md) and [Build a plugin for a declarative agent from an MCP server](build-mcp-plugins.md).
+
+<!-- PM-REVIEW (09/25/2026): "API plugin"/"custom actions" terminology pending PM guidance; see plugins-overview.md:50. -->
 
 > [!IMPORTANT]
-> This guide assumes you have completed the [Create declarative agents using Microsoft 365 Agents Toolkit](build-declarative-agents.md) tutorial.
+> This guide assumes you have completed the [Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](build-declarative-agents.md) tutorial.
 
 ## Add image generator to the agent
 
@@ -29,9 +32,9 @@ The image generator capability enables agents to generate images based on user p
     }
     ```
 
-2. In the **Lifecycle** pane of the Agents Toolkit, select **Provision**.
+1. In the **Lifecycle** pane of Microsoft 365 Agents Toolkit, select **Provision**.
 
-The declarative agent will have the ability to generate images after you reload the page.
+The declarative agent can generate images after you reload the page.
 
 > [!NOTE]
 > Image generator isn't available to agents in Microsoft 365 Government Community Cloud High (GCCH) environments.
@@ -53,11 +56,11 @@ Code interpreter is an advanced tool designed to solve complex tasks via Python 
     }
     ```
 
-  For more information, see [Code interpreter object](declarative-agent-manifest-1.8.md#code-interpreter-object).
+    For more information, see [Code interpreter object](declarative-agent-manifest-1.8.md#code-interpreter-object).
 
-1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
-The declarative agent will have the code interpreter capability after you reload the page.
+The declarative agent has the code interpreter capability after you reload the page.
 
 :::image type="content" source="assets/images/build-da/ttk/code-interpreter-graph-content.png" alt-text="A screenshot showing a response from the declarative agent that contains a generated graph":::
 
@@ -80,15 +83,15 @@ Before you begin, create a file named `posts-api.yml` and add the code from the 
 
 1. Select all available APIs, then select **OK**.
 
-    :::image type="content" source="assets/images/build-da/ttk/select-apis.png" alt-text="A screenshot of the API selection dialog in Visual Studio code":::
+    :::image type="content" source="assets/images/build-da/ttk/select-apis.png" alt-text="A screenshot of the API selection dialog in Visual Studio Code":::
 
 1. Select **manifest.json**.
 
 1. Review the warning in the dialog. When you're ready to proceed, select **Add**.
 
-1. Select **Provision** in the **Lifecycle** pane of the Agents Toolkit.
+1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
-The declarative agent will have access to your plugin content to generate its answers after you reload the page.
+The declarative agent has access to your plugin content to generate its answers after you reload the page.
 
 :::image type="content" source="assets/images/build-da/ttk/plugin-response.png" alt-text="A screenshot showing a response from the declarative agent that contains API plugin content":::
 
@@ -102,8 +105,8 @@ The following OpenAPI description is for the [JSONPlaceHolder API](https://jsonp
 
 You've completed the declarative agent guide for Microsoft 365 Copilot. Now that you're familiar with the capabilities of a declarative agent, you can learn more about declarative agents in the following articles.
 
-- Learn how to [build declarative agents with TypeSpec](build-declarative-agents-typespec.md).
+- [Create declarative agents by using Microsoft 365 Agents Toolkit and TypeSpec](build-declarative-agents-typespec.md)
 - Learn how to [write effective instructions](declarative-agent-instructions.md) for your agent.
-- Test your agent with [Copilot developer mode](debugging-agents-copilot-studio.md) to verify if and how the copilot orchestrator selects your knowledge sources for use in response to given prompts.
+- Test your agent with developer mode to verify if and how the Copilot orchestrator selects your knowledge sources for use in response to given prompts. For more information, see [Test and debug agents in Microsoft 365 Agents Toolkit by using developer mode](debugging-agents-vscode.md).
 - Get answers to [frequently asked questions](transparency-faq-declarative-agent.md).
-- Learn about an alternative method of building declarative agents with [Copilot Studio](agent-builder.md).
+- Learn about other ways to build declarative agents: no-code in [Agent Builder](agent-builder.md), or low-code in [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context).

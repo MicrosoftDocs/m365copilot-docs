@@ -4,7 +4,7 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 08/27/2026
+ms.date: 09/30/2026
 ms.topic: concept-article
 ---
 
@@ -74,7 +74,7 @@ When you share an agent via the Microsoft 365 Copilot by using the **Specific us
 
 The following features aren't currently supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants:
 
-- [Authenticated custom actions](overview-api-plugins.md).
+- [Authenticated custom actions](overview-plugins.md).
 - Support for usage billing for extensibility features. For details about features that require usage billing, see [Agent capabilities and licensing models](prerequisites.md#agent-capabilities-and-licensing-models).
 - Support for publishing agents via the [Microsoft 365 Agents Toolkit](build-declarative-agents.md).
 
@@ -102,12 +102,14 @@ The following OpenAPI features aren't supported for API plugins:
 - Settings UI to reset always allow states. As a workaround, uninstall the app to reset the allow state.
 - Settings UI to sign out. As a workaround, uninstall the app to reset the allow state or implement a function that the user can invoke by using natural language.
 - Multiple response semantics for a single function.
-- **OpenURL** and **ToggleVisbility** adaptive card actions in response semantics.
+- **OpenURL** and **ToggleVisibility** adaptive card actions in response semantics.
 - Task modules and stage views in response semantics.
 
 ## Custom engine agents
 
 The following table lists features that aren't currently supported for custom engine agents that run in Microsoft 365 Copilot. These issues apply to custom engine agents built using the Microsoft 365 Agents Toolkit and the Microsoft 365 Agents SDK.
+
+<!-- markdownlint-disable MD033 -->
 
 | Feature | Issue |
 | --- | --- |
@@ -122,6 +124,8 @@ The following table lists features that aren't currently supported for custom en
 | Adaptive Cards | Adaptive Cards refreshed using **Action.Execute** don’t persist updated content when the chat is reopened; the original card is shown. Agent workflows in Copilot Chat should use follow‑up messages instead of relying on message edits. The following elements of Adaptive Cards aren't supported:<ul><li>[Nonstandard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul> |
 | Sensitivity labels | Sensitivity labels aren't supported. |
 | Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Microsoft Edge browser. |
+
+<!-- markdownlint-enable MD033 -->
 
 ## Copilot Studio agents
 

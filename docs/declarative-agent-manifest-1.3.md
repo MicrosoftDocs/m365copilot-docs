@@ -4,7 +4,7 @@ description: Learn about the 1.3 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 03/06/2026
+ms.date: 09/30/2026
 ms.topic: reference
 ---
 
@@ -284,7 +284,7 @@ The items by SharePoint IDs object contains the following properties.
 | `search_associated_sites` | Boolean | Optional. Indicates whether to enable searching associated sites. This value is only applicable when the `site_id` value references a SharePoint HubSite. |
 
 > [!TIP]
-> For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieve capability IDs for the declarative agent manifest](declarative-agent-capabilities-ids.md).
 
 ##### Items by URL object
 
@@ -316,7 +316,7 @@ The connection object contains the following property.
 | `connection_id` | String | Required. The unique identifier of the Copilot connector. |
 
 > [!TIP]
-> For instructions on getting the unique identifier for a Copilot connector, see [Retrieving capabilities IDs for declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For instructions on getting the unique identifier for a Copilot connector, see [Retrieve capability IDs for the declarative agent manifest](declarative-agent-capabilities-ids.md).
 
 #### Graphic art object
 

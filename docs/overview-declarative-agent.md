@@ -1,85 +1,88 @@
 ---
-title: Declarative Agents for Microsoft 365 Copilot
-description: Learn how you can use declarative agents to meet business needs. Declarative agents customize Microsoft 365 Copilot via instructions, actions, and knowledge.
+title: Declarative agents for Microsoft 365 Copilot
+description: Learn when a declarative agent can provide the conversational experience for a Microsoft 365 Copilot plugin and what dependencies to record before you build or reuse it.
 author: aycabas
 ms.author: aycabas
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 09/30/2026
 ms.topic: overview
 ---
 
 # Declarative agents for Microsoft 365 Copilot
 
-Declarative agents enable you to customize Microsoft 365 Copilot to help you meet the unique business needs of your users. When you build a declarative agent, you provide the instructions, actions, and knowledge to tailor Copilot for your business scenarios. Declarative agents run on the same orchestrator, foundation models, and trusted AI services that power Microsoft 365 Copilot. By building declarative agents, you can optimize collaboration, increase productivity, and streamline workflows in your organization.
+Declarative agents provide a goal-directed conversational experience that is powered by Microsoft 365 Copilot. You define the agent's purpose, instructions, knowledge, and supported actions to address a business scenario. A plugin can include or reference an agent with other supported capabilities, such as skills, Copilot connectors, or MCP-based tools.
 
-With declarative agents, you can establish consistent, personalized experiences and automate intricate processes, ranging from team onboarding to efficient resolution of customer issues. You can also add capabilities to your agent to unlock more functionality for your users.
+Choose a declarative agent when users need a dedicated conversational experience with behavior and capabilities tailored to a specific outcome. You don't need to create an agent when an existing Microsoft experience or approved agent can use the selected skills, connectors, or tools.
 
 > [!NOTE]
 > For information about the two approaches to building agents for Microsoft 365 Copilot, see [Agents for Microsoft 365 Copilot](agents-overview.md).
 
-## Tailor declarative agents for your scenario
+<!-- markdownlint-disable MD033 -->
+<a id="tailor-declarative-agents-for-your-scenario"></a>
+<!-- markdownlint-enable MD033 -->
 
-Declarative agents are powered by Microsoft 365 Copilot. They use the same scalable infrastructure and platform but are scoped to meet your specific business needs. The following examples illustrate possible use cases for your agents:
+## Decide whether you need a declarative agent
 
-- **Employee IT self-help with enhanced knowledge** - Your employees can resolve their technical issues without relying on the internal IT help desk. You can streamline and simplify IT workflows by building a declarative agent to expedite resolution of common issues. This specialized agent draws from internal knowledge stored in SharePoint sites to provide employees fast and effective assistance, while reducing costs for the organization.
+Consider a declarative agent when the solution requires:
 
-- **Real-time customer support with seamless system integrations** - Increase your customer support team's productivity by enhancing your existing process with a declarative agent that seamlessly integrates with a plugin for the order management system to access and provide real-time order updates to customers.
+- A named conversational experience for a defined audience and outcome.
+- Instructions and constraints that apply consistently across conversations.
+- Curated knowledge sources for grounding.
+- Actions, skills, connectors, or MCP-based capabilities selected for the scenario.
+- Conversation starters and metadata that help users understand what the agent does.
+
+For example, an employee-support agent can use approved organizational knowledge to answer common questions. A customer-support agent can combine instructions and knowledge with an external capability that retrieves current order information.
 
 :::image type="content" source="assets/images/declarative-agent-scenarios.png" alt-text="A diagram that shows two scenarios of declarative agents mentioned in the article." lightbox="assets/images/declarative-agent-scenarios.png" :::
 
-## Explore the benefits of declarative agents
+An agent might not be the right component when:
 
-Some of the core benefits of using declarative agents as part of your business processes include:
+- Users already work in a supported experience that can use the required capability directly.
+- An existing approved agent meets the outcome and can be configured or extended.
+- The solution requires complete control of the orchestration, model, hosting, or user interface. In that case, compare [declarative and custom engine agents](agents-overview.md).
 
-- **Familiar UI** - Declarative agents use the same friendly UI within Microsoft 365 Copilot. Users can adopt and engage with agents tailored to their business scenarios that look and feel like Microsoft 365 Copilot.
-- **Enhanced enterprise knowledge** - Similar to Microsoft 365 Copilot, declarative agents can also use enterprise data from SharePoint, OneDrive, Copilot connectors, and uploaded files. By applying existing enterprise knowledge and the familiar Copilot interface, you can streamline workflows and make it easier for users to engage with data within the organization.
-- **Seamless integration with plugins** - Enterprises can extend declarative agents by using plugins to retrieve data and run tasks on external systems. Declarative agents can use multiple plugins at the same time.
-- **Prioritized security, privacy, and compliance** - Declarative agents are built on a secure foundation and inherit all data protections provided by Microsoft 365 Copilot. Enterprise admins have visibility into and control over the distribution of declarative agents within their tenant via the Microsoft 365 admin center.
+For detailed fit and limitation guidance, see [Declarative agent architecture](declarative-agent-architecture.md).
 
-Users engage with declarative agents within the Microsoft 365 Copilot UI or within Microsoft 365 apps.
+## Understand what the agent contributes
 
-The following image shows the agent experience in Microsoft 365 Copilot.
+A declarative agent is defined by configuration that describes:
 
-:::image type="content" source="assets/images/declarative-agent-showcase.png" alt-text="Screenshots that show declarative agents running on Microsoft 365 Copilot." lightbox="assets/images/declarative-agent-showcase.png" :::
+- **Identity and behavior**: The agent's name, purpose, instructions, conversation starters, constraints, and visual representation.
+- **Knowledge**: The approved information sources that ground responses.
+- **Capabilities**: The actions, skills, connectors, or tools the agent can use.
+- **Host and distribution metadata**: The information required to surface the agent in supported Microsoft experiences.
 
-Users can select declarative agents from the right pane in Copilot. They can then view the conversation starters provided, or they can ask the agent what it can do, and then they can use prompts related to the purpose of the agent.
+Users engage with declarative agents in Microsoft 365 Copilot and supported Microsoft 365 apps.
 
-## Building declarative agents
+:::image type="content" source="assets/images/declarative-agent-showcase.png" alt-text="Screenshots that show declarative agents running in Microsoft 365 Copilot." lightbox="assets/images/declarative-agent-showcase.png" :::
 
-A declarative agent is defined by a set of configuration elements that describe its identity, behavior, and capabilities. These elements apply regardless of how the agent is authored or deployed.
+<!-- markdownlint-disable MD033 -->
+<a id="building-declarative-agents"></a>
+<!-- markdownlint-enable MD033 -->
 
-**Agent definition (configuration)**
+## Decide whether to build or reuse
 
-- Defines the agent’s purpose, scope, and behavior.
-- Includes instructions, conversation patterns, and constraints that guide how the agent responds.
+Before you build an agent:
 
-**Capabilities (actions)**
+- Review agents that are already approved for the target users and experiences.
+- Determine whether an existing agent can be reused, copied, configured, or extended.
+- Confirm who owns the agent instructions, knowledge, connections, and support.
+- Identify any gaps that require a new agent.
 
-- Specify what the agent can do.
-- Can include operations or integrations with external systems and services.
+If you reuse an agent, confirm that its owner supports the intended users, data, capabilities, sharing scope, and lifecycle.
 
-**Knowledge sources**
+## Record agent dependencies
 
-- Provide the information the agent uses to generate responses.
-- Can include structured or unstructured data from internal or external sources or APIs.
+As you decide whether to build or reuse an agent, note:
 
-**App metadata (hosting and distribution)**
+- Target users, outcome, and Microsoft experiences.
+- Instructions, knowledge sources, and conversation requirements.
+- Required skills, connectors, actions, or MCP-based capabilities.
+- Identity, permissions, consent, and data boundaries.
+- Availability, language, licensing, and environment requirements.
+- Owner, support contact, and success measures.
 
-- Describes how the agent is identified and surfaced in its host environment.
-- Includes attributes such as name, description, and visual representation (for example, icons).
-
-You can use your tool of choice to create a declarative agent:
-
-- [Agent Builder in Microsoft 365 Copilot](agent-builder.md)
-- [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context)
-- [Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context)
-- [SharePoint](/sharepoint/get-started-sharepoint-agents)
-
-To help you choose the right tool for your scenarios, see [Choose the right tool to build your declarative agent](./declarative-agent-tool-comparison.md).
-
-## Responsible AI
-
-Declarative agents must pass validation checks for Responsible AI (RAI). For information about RAI validation, see [Responsible AI validation checks](rai-validation.md).
+After you decide to build or reuse an agent, [choose development tools](choose-plugin-development-tools.md).
 
 ## National cloud support
 
@@ -87,8 +90,11 @@ Declarative agents must pass validation checks for Responsible AI (RAI). For inf
 
 ## Related content
 
+- [Choose capabilities for your plugin](choose-plugin-components.md)
 - [Agents in the Microsoft 365 ecosystem](ecosystem.md)
-- [Agents are apps for Microsoft 365](agents-are-apps.md)
+- [Declarative agent architecture](declarative-agent-architecture.md)
+- [Declarative agents FAQ](transparency-faq-declarative-agent.md)
+- [Choose development tools for your plugin](choose-plugin-development-tools.md)
 - [Build agents with Agent Builder](agent-builder-build-agents.md)
 - [Build agents with Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context)
-- [Connect to other agents from a declarative agent](declarative-agent-connected-agent.md)
+- [Responsible AI validation checks](rai-validation.md)
