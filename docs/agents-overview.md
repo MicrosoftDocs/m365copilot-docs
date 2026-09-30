@@ -1,16 +1,20 @@
 ---
-title: Agents for Microsoft 365 Copilot
-description: Choose the type of Microsoft 365 Copilot agent that works best for your scenario.
+title: Compare declarative and custom engine agents
+description: Compare declarative and custom engine agents for Microsoft 365 Copilot and choose the approach that fits your scenario.
 #customer intent: As a developer evaluating Microsoft 365 Copilot extensibility options, I want to compare declarative agents and custom engine agents so that I can choose the right approach for my scenario.
 author: jessicaaawu
 ms.author: wujessica
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 08/05/2026
+ms.date: 09/30/2026
 ms.custom: [copilot-learning-hub]
 ---
 
-# Agents for Microsoft 365 Copilot
+# Compare declarative and custom engine agents
+
+<!-- markdownlint-disable MD033 -->
+<a id="agents-for-microsoft-365-copilot"></a>
+<!-- markdownlint-enable MD033 -->
 
 Microsoft 365 Copilot is an AI-powered productivity tool that enhances workflows across Microsoft 365 applications like Copilot Chat, Outlook, Teams, and Word, using enterprise data from Microsoft Graph. Although Copilot provides powerful built-in capabilities, organizations often need to integrate additional knowledge, data sources, or applications to address specific use cases.
 

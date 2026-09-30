@@ -5,7 +5,7 @@ author: carolkigoonya
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 07/23/2026
+ms.date: 09/30/2026
 ---
 
 # Use developer mode in Microsoft 365 Copilot to test and debug agents
@@ -42,7 +42,7 @@ The agent metadata provides key details about the agent and the current debuggin
 
 > [!NOTE]
 > The prefix in the **Agent ID** indicates how the agent is distributed:
-> 
+>
 > - `U_` indicates a user-scoped (sideloaded) agent.
 > - `T_` indicates a tenant-scoped agent (published to the tenant store or org catalog).
 > - `P_` indicates a publicly available agent.

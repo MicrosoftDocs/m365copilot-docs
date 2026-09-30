@@ -1,10 +1,11 @@
 ---
-title: TypeSpec agents for Microsoft 365 Copilot scenarios
+title: TypeSpec agent scenarios for Microsoft 365 Copilot
 description: End-to-end scenarios using TypeSpec from basic to advanced scenarios, including capabilities, authentication, and real-world examples.
+#customer intent: As a developer, I want complete TypeSpec examples for common agent scenarios so that I can adapt a working pattern for my own agent.
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/18/2025
+ms.date: 09/30/2026
 ms.topic: reference
 ---
 
@@ -56,7 +57,7 @@ No **card.json** file is required in this scenario.
 
 **Use Case**: A knowledge worker assistant that can search the web for information, access an organization's SharePoint content, and find information about colleagues in the organization.
 
-**What it does**: This agent helps knowledge workers by combining web search for external information, file access for document retrieval, and people search for finding colleagues and their contact information. Perfect for research tasks and collaboration scenarios.
+**What it does**: This agent helps knowledge workers by combining web search for external information, file access for document retrieval, and people search for finding colleagues and their contact information. This pattern fits research and collaboration scenarios.
 
 ### [main.tsp](#tab/main)
 
@@ -111,6 +112,8 @@ No **card.json** file is required in this scenario.
 ---
 
 ## Simple agent with anonymous API action
+
+<!-- PM-REVIEW (09/25/2026): "API plugin"/"custom actions" terminology pending PM guidance; see plugins-overview.md:50. -->
 
 **Use Case**: A facilities management agent that helps users report and track maintenance issues using a public repairs API.
 
@@ -387,7 +390,7 @@ namespace RepairsHub {
 
 ### [card.json](#tab/card)
 
-The **card.json** file needs to located in the **appPackage/cards** folder.
+The **card.json** file must be located in the **appPackage/cards** folder.
 
 ```json
 {
@@ -441,7 +444,7 @@ The **card.json** file needs to located in the **appPackage/cards** folder.
 
 **Use Case**: A project management agent that helps development teams manage their GitHub repositories, track issues, manage pull requests, and coordinate project activities using GitHub's comprehensive API.
 
-**What it does**: This sophisticated agent serves as a project management assistant that integrates with GitHub to help development teams streamline their workflows. It can create and manage issues, review and merge pull requests, track project milestones, and provide insights about repository activity. The OAuth2 authentication ensures secure access to GitHub repositories with appropriate permissions, allowing teams to manage their projects efficiently through natural language interactions.
+**What it does**: This agent serves as a project management assistant that integrates with GitHub to help development teams streamline their workflows. It can create and manage issues, review and merge pull requests, track project milestones, and provide insights about repository activity. The OAuth2 authentication ensures secure access to GitHub repositories with appropriate permissions, allowing teams to manage their projects efficiently through natural language interactions.
 
 ### [main.tsp](#tab/main)
 
@@ -494,18 +497,12 @@ using TypeSpec.M365.Copilot.Actions;
     descriptionForHuman: "Use this API to manage GitHub repositories, track issues, and coordinate development projects"
 })
 @server("https://api.github.com", "GitHub API")
-@useAuth(OAuth2Auth<[
-  OAuthFlow<AuthorizationCodeFlow> & {
-    authorizationUrl: "https://github.com/login/oauth/authorize";
-    tokenUrl: "https://github.com/login/oauth/access_token";
-    scopes: {
-      "repo": "Full control of private repositories";
-      "issues": "Read and write repository issues";
-      "pull_requests": "Read and write pull requests";
-      "project": "Read and write project data";
-    };
-  }
-]>)
+@useAuth(OAuth2Auth<[{
+  type: OAuth2FlowType.authorizationCode;
+  authorizationUrl: "https://github.com/login/oauth/authorize";
+  tokenUrl: "https://github.com/login/oauth/access_token";
+  scopes: ["repo", "issues", "pull_requests", "project"];
+}]>)
 namespace GitHubAPI {
   // Issue Management
   @route("/repos/{owner}/{repo}/issues")
@@ -713,4 +710,11 @@ These examples demonstrate the progression from simple to complex TypeSpec agent
 - [Authenticated API integration](#advanced-agent-with-api-key-authentication): Secure access with API keys
 - [Complex GitHub integration](#complex-agent-with-oauth2-and-github-api-integration): Advanced OAuth2 with comprehensive GitHub API access for project management
 
-Each example builds upon the previous ones, showing how to add capabilities, authentication, and custom actions to create increasingly sophisticated agents for real-world scenarios.
+Each example builds upon the previous ones, showing how to add capabilities, authentication, and custom actions to create more complex agents for real-world scenarios.
+
+## Related content
+
+- [TypeSpec for Microsoft 365 Copilot overview](overview-typespec.md)
+- [Create declarative agents by using Microsoft 365 Agents Toolkit and TypeSpec](build-declarative-agents-typespec.md)
+- [Authentication support in TypeSpec for Microsoft 365 Copilot](typespec-authentication.md)
+- [Decorators for TypeSpec for Microsoft 365 Copilot](typespec-decorators.md)

@@ -4,13 +4,16 @@ description: Learn how to set up authentication for MCP and API plugins in agent
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 08/12/2026
+ms.date: 09/30/2026
 ms.topic: article
 ---
 
 # Configure authentication for MCP and API plugins in agents
 
 Agents in Microsoft 365 Copilot connect to backend services through plugins. A plugin can wrap a Model Context Protocol (MCP) server or an API described by an OpenAPI document. To let a plugin access a protected MCP server or API, you configure an authentication scheme so Microsoft 365 Copilot can obtain and send the right credentials on behalf of the signed-in user.
+
+> [!NOTE]
+> In this article, *plugin* means the technical MCP or API custom action configured through a plugin manifest for a declarative agent. For the broader customer-facing plugin product, package, registry, and lifecycle, see [Plugins for Microsoft 365 Copilot](plugins-overview.md).
 
 This documentation set uses MCP plugins (also called MCP servers or MCP actions) as the default walkthrough. The same configuration steps apply to API plugins built from an OpenAPI document, except where noted in each article.
 

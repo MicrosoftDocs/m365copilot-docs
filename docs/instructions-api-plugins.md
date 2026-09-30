@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 03/25/2026
+ms.date: 09/30/2026
 ---
 
 # Write effective instructions for declarative agents with API plugins
@@ -29,7 +29,7 @@ Together, these files define the agent's behavior and how it interacts with the 
 
 For more information about API plugins, see:
 
-- [API plugins for Microsoft 365 Copilot](overview-api-plugins.md)
+- [Plugins for Microsoft 365 Copilot](overview-plugins.md)
 - [How to make an OpenAPI document effective in extending Copilot capabilities](openapi-document-guidance.md)
 
 ### Function mapping in the plugin manifest
@@ -134,4 +134,4 @@ When code interpreter generates a file (such as a chart image or a spreadsheet),
 ## Related content
 
 - [Build a declarative agent with Visual Studio Code](build-declarative-agents.md?tabs=ttk)
-- [API plugins for Microsoft 365 Copilot](overview-api-plugins.md)
+- [Plugins for Microsoft 365 Copilot](overview-plugins.md)

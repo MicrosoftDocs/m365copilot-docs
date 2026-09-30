@@ -1,38 +1,43 @@
 ---
 title: TypeSpec for Microsoft 365 Copilot overview
-description: Learn about TypeSpec for Microsoft 365 Copilot, a powerful domain-specific language for building declarative agents and API plugins
+description: Learn about TypeSpec for Microsoft 365 Copilot, a domain-specific language for building declarative agents and API plugins.
+#customer intent: As a developer, I want to understand what TypeSpec for Microsoft 365 Copilot provides so that I can decide whether to author my declarative agents and actions in TypeSpec.
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/18/2025
+ms.date: 09/30/2026
 ms.topic: overview
 ---
 
 # TypeSpec for Microsoft 365 Copilot overview
 
-TypeSpec for Microsoft 365 Copilot is a powerful domain-specific language (DSL) that enables developers to create declarative agents and API plugins using a clean, expressive syntax. Built on the foundation of [TypeSpec](https://typespec.io/), this specialized language provides Microsoft 365-specific decorators and capabilities that streamline the development process for extending Microsoft 365 Copilot. TypeSpec serves as an alternative to manually authoring JSON manifest files, offering a more developer-friendly approach with enhanced productivity and maintainability.
+TypeSpec for Microsoft 365 Copilot is a domain-specific language (DSL) that you can use to create declarative agents and API plugins with a clean, expressive syntax. Built on the foundation of [TypeSpec](https://typespec.io/), this specialized language provides Microsoft 365-specific decorators and capabilities that streamline the development process for extending Microsoft 365 Copilot. TypeSpec serves as an alternative to manually authoring JSON manifest files, offering a more developer-friendly approach with enhanced productivity and maintainability.
 
-TypeSpec for Microsoft 365 Copilot transforms how developers build Copilot extensibility solutions by providing a high-level abstraction layer over complex JSON schemas and OpenAPI files. The language automatically generates the required manifest files and configurations, reducing development time and minimizing errors. With its rich IntelliSense support, type safety, and comprehensive validation, TypeSpec empowers developers to focus on building innovative AI-powered experiences rather than wrestling with configuration details.
+<!-- PM-REVIEW (09/25/2026): "API plugin"/"custom actions" terminology pending PM guidance; see plugins-overview.md:50. -->
+
+TypeSpec for Microsoft 365 Copilot provides a high-level abstraction layer over complex JSON schemas and OpenAPI files. The language automatically generates the required manifest files and configurations, reducing development time and minimizing errors. With IntelliSense support, type safety, and comprehensive validation, you can focus on your agent's behavior rather than on configuration details.
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 ## Type safety and developer experience
 
-TypeSpec for Microsoft 365 Copilot provides a strongly typed development experience that catches errors at compile time rather than runtime. The language includes comprehensive type checking for all Microsoft 365 Copilot-specific constructs, ensuring that your declarative agents and API plugins are correctly configured before deployment. This type safety extends to all aspects of your agent definition, from basic metadata to complex capability configurations and API operation definitions.
+TypeSpec for Microsoft 365 Copilot provides a strongly typed development experience that catches errors at compile time rather than runtime. The language includes comprehensive type checking for all Microsoft 365 Copilot-specific constructs, ensuring that your declarative agents and API plugins are correctly configured before you provision them. This type safety extends to all aspects of your agent definition, from basic metadata to complex capability configurations and API operation definitions.
 
-The developer experience is enhanced through rich IntelliSense support in Visual Studio Code and Visual Studio, providing real-time feedback, auto-completion, and inline documentation. The language integrates seamlessly with the [Microsoft 365 Agents Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit), offering a complete development workflow from creation to deployment. Error messages are clear and actionable, helping developers quickly identify and resolve issues during development.
+IntelliSense support in Visual Studio Code and Visual Studio provides real-time feedback, auto-completion, and inline documentation. The language integrates with [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context), offering a complete development workflow from creation through provisioning and publishing. Error messages are clear and actionable, helping you quickly identify and resolve issues during development.
 
 ## Simplified agent and plugin authoring
 
-TypeSpec dramatically simplifies the process of creating declarative agents and API plugins by replacing verbose JSON configurations with intuitive, decorator-based syntax. Instead of manually crafting complex manifest files, developers can use semantic decorators like `@agent`, `@instructions`, and `@capabilities` to define their agents. This approach reduces the likelihood of configuration errors and makes the codebase more maintainable and readable.
+TypeSpec simplifies the process of creating declarative agents and API plugins by replacing verbose JSON configurations with intuitive, decorator-based syntax. Instead of manually crafting complex manifest files, you can use semantic decorators like `@agent`, `@instructions`, and `@capabilities` to define your agents. This approach reduces the likelihood of configuration errors and makes the codebase more maintainable and readable.
 
-When working with complex API surfaces, TypeSpec excels where traditional OpenAPI files become unwieldy and difficult to manage. Large OpenAPI specifications with hundreds of endpoints, complex nested schemas, and intricate authentication patterns can be challenging to author, maintain, and understand. TypeSpec addresses these pain points by providing higher-level abstractions that automatically generate the underlying OpenAPI specifications. Developers can focus on defining business logic and API behavior using TypeSpec's expressive syntax, while the compiler handles the tedious details of OpenAPI compliance, schema validation, and cross-reference management.
+When working with complex API surfaces, TypeSpec helps where traditional OpenAPI files become unwieldy and difficult to manage. Large OpenAPI specifications with hundreds of endpoints, complex nested schemas, and intricate authentication patterns can be challenging to author, maintain, and understand. TypeSpec addresses these pain points by providing higher-level abstractions that automatically generate the underlying OpenAPI specifications. You can focus on defining business logic and API behavior using TypeSpec's expressive syntax, while the compiler handles the details of OpenAPI compliance, schema validation, and cross-reference management.
 
-The language provides built-in decorators for all Microsoft 365 Copilot capabilities, including web search, OneDrive and SharePoint integration, Teams messages, code interpreter, and more. API plugins benefit from automatic OpenAPI specification generation, where TypeSpec operations are seamlessly converted into REST API definitions. This automation eliminates the need to maintain separate API documentation and ensures consistency between your TypeSpec definitions and the resulting API contracts.
+The language provides built-in decorators for all Microsoft 365 Copilot capabilities, including web search, OneDrive and SharePoint integration, Teams messages, code interpreter, and more. API plugins benefit from automatic OpenAPI specification generation, where TypeSpec operations are converted into REST API definitions. This automation eliminates the need to maintain separate API documentation and ensures consistency between your TypeSpec definitions and the resulting API contracts.
 
 ## Automatic manifest generation and validation
 
-One of the most powerful features of TypeSpec for Microsoft 365 Copilot is its ability to automatically generate valid manifest files from your TypeSpec definitions. The language compiler analyzes your TypeSpec code and produces the appropriate JSON manifests for declarative agents and API plugins, ensuring they conform to the latest schema requirements. This generation process includes comprehensive validation, catching common configuration errors before they reach production.
+TypeSpec for Microsoft 365 Copilot automatically generates valid manifest files from your TypeSpec definitions. The language compiler analyzes your TypeSpec code and produces the appropriate JSON manifests for declarative agents and API plugins, ensuring they conform to the latest schema requirements. This generation process includes comprehensive validation, catching common configuration errors before they reach production.
 
-The automatic generation extends beyond basic manifest creation to include complex configurations such as adaptive cards, authentication settings, and capability-specific metadata. TypeSpec validates all references, ensures proper data binding for adaptive cards, and verifies that all required properties are present. This validation occurs during the build process, providing immediate feedback to developers and preventing deployment of invalid configurations.
+The automatic generation extends beyond basic manifest creation to include complex configurations such as Adaptive Cards, authentication settings, and capability-specific metadata. TypeSpec validates all references, ensures proper data binding for Adaptive Cards, and verifies that all required properties are present. This validation occurs during the build process, so you get immediate feedback and don't provision invalid configurations.
 
 ## Examples
 
@@ -41,6 +46,13 @@ Here are practical examples demonstrating TypeSpec for Microsoft 365 Copilot syn
 ### Basic declarative agent
 
 ```typescript
+import "@typespec/http";
+import "@typespec/openapi3";
+import "@microsoft/typespec-m365-copilot";
+
+using TypeSpec.Http;
+using TypeSpec.M365.Copilot.Agents;
+
 @agent(
   "Customer Support Assistant",
   "An AI agent that helps with customer support inquiries and ticket management"
@@ -103,7 +115,8 @@ import "@typespec/http";
 import "@microsoft/typespec-m365-copilot";
 
 using TypeSpec.Http;
-using Microsoft.M365Copilot;
+using TypeSpec.M365.Copilot.Agents;
+using TypeSpec.M365.Copilot.Actions;
 
 @agent(
   "Project Management Assistant",
@@ -149,16 +162,16 @@ namespace ProjectAPI {
 
 ## Get started
 
-Ready to start building with TypeSpec for Microsoft 365 Copilot? Follow these steps:
+To start building with TypeSpec for Microsoft 365 Copilot, see the following resources:
 
-- **[Learn about our decorators](typespec-decorators.md)** - Comprehensive reference for all Microsoft 365 Copilot decorators including @agent, @instructions, @capabilities, and more
-- **[Learn about our capabilities](typespec-capabilities.md)** - Detailed guide to agent capabilities like web search, OneDrive integration, Teams messages, and code interpreter
-- **[Learn about authentication](typespec-authentication.md)** - Understanding authentication patterns and security configurations for TypeSpec-based agents and plugins
-- **[Build declarative agents with TypeSpec](build-declarative-agents-typespec.md)** - Step-by-step tutorial for creating a declarative agent using TypeSpec and the Microsoft 365 Agents Toolkit
-- **[Build API plugins with TypeSpec](build-api-plugins-typespec.md)** - Complete guide to creating API plugins with REST operations, adaptive cards, and authentication
-- **[Start with a sample](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples)** - Community-provided samples that can get you inspired!
+- [Decorators for TypeSpec for Microsoft 365 Copilot](typespec-decorators.md) - Reference for the Microsoft 365 Copilot decorators, including `@agent`, `@instructions`, `@capabilities`, and more.
+- [Declarative agent capabilities in TypeSpec for Microsoft 365 Copilot](typespec-capabilities.md) - Guide to agent capabilities like web search, OneDrive integration, Teams messages, and code interpreter.
+- [Authentication support in TypeSpec for Microsoft 365 Copilot](typespec-authentication.md) - Authentication patterns and security configurations for TypeSpec-based agents and plugins.
+- [Create declarative agents by using Microsoft 365 Agents Toolkit and TypeSpec](build-declarative-agents-typespec.md) - Step-by-step tutorial for creating a declarative agent by using TypeSpec and Agents Toolkit.
+- [Build API plugins with TypeSpec for Microsoft 365 Copilot](build-api-plugins-typespec.md) - Guide to creating API plugins with REST operations, Adaptive Cards, and authentication.
+- [Start with a sample](https://github.com/pnp/copilot-pro-dev-samples/tree/main/samples) - Community-provided samples.
 
 ## Related content
 
-- [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) - The official development toolkit for building Copilot agents
+- [Microsoft 365 Agents Toolkit overview](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context) - Overview of the generally available Microsoft 365 Agents Toolkit.
 - [TypeSpec language documentation](https://typespec.io/) - Official TypeSpec language specification and guides

@@ -7,7 +7,7 @@ ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/03/2026
+ms.date: 09/30/2026
 ---
 
 # Add custom skills to a declarative agent created with Microsoft 365 Agents Toolkit (preview)
@@ -19,11 +19,11 @@ A custom skill is a modular, reusable component that you add to a declarative ag
 To learn what custom skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Custom skills in declarative agents](declarative-agent-skills.md).
 
 > [!IMPORTANT]
-> This guide assumes you completed the [Create declarative agents using Microsoft 365 Agents Toolkit](build-declarative-agents.md) tutorial. Adding a custom skill requires declarative agent manifest version 1.9. If your using an agent created with an older version of the Agents Toolkit, you might need to update the version of your agent manifest. <!--For more information, see [Declarative agent manifest reference](declarative-agent-manifest-1.9.md).-->
+> This guide assumes you completed the [Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](build-declarative-agents.md) tutorial. Adding a custom skill requires declarative agent manifest version 1.9. If you're using an agent created with an older version of Agents Toolkit, you might need to update the version of your agent manifest. <!--For more information, see [Declarative agent manifest reference](declarative-agent-manifest-1.9.md).-->
 
 ## Prerequisites
 
-- [Microsoft 365 Agents Toolkit CLI](/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli) or the [Microsoft 365 Agents Tookit Visual Studio Code extension](/microsoftteams/platform/toolkit/agents-toolkit-fundamentals)
+- [Microsoft 365 Agents Toolkit CLI](/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli) or the [Microsoft 365 Agents Toolkit Visual Studio Code extension](/microsoftteams/platform/toolkit/agents-toolkit-fundamentals)
 
 ### Enable agent skills
 

@@ -1,7 +1,7 @@
 ---
 title: Agent Evaluations CLI overview
 description: Learn how to evaluate Microsoft 365 Copilot agents using automated testing and AI-powered metrics.
-ms.date: 08/04/2026
+ms.date: 09/30/2026
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -12,6 +12,9 @@ ms.localizationpriority: high
 # Agent Evaluations CLI overview
 
 The Microsoft 365 Copilot Agent Evaluations CLI (@microsoft/m365-copilot-eval) helps you test, measure, and improve the quality of your agents with structured evaluations and rich result reports with AI-based scoring.
+
+> [!IMPORTANT]
+> For deployed declarative agents, start with [Work IQ Dev Tools (preview)](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided workflow. Work IQ Dev Tools manages the compatible Agent Evaluations CLI version and exposes it through `wiqd agent eval`. Use the standalone CLI guidance in this section when you need lower-level command control or maintain an existing `runevals` workflow.
 
 ## What you can do
 

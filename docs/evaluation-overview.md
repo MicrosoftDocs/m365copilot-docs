@@ -3,7 +3,7 @@ title: Agent evaluation overview
 description: Learn foundational concepts, terminology, and eval-driven development for evaluating declarative agents and custom engine agents.
 author: sathya-raveendran
 ms.author: saraveen
-ms.date: 08/10/2026
+ms.date: 09/30/2026
 ms.topic: concept-article
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
@@ -12,6 +12,14 @@ ms.custom: msecd-doc-authoring-1013
 # Agent evaluation overview
 
 To improve the quality of your [declarative agents](overview-declarative-agent.md) and [custom engine agents](overview-custom-engine-agent.md), design and run agent evaluations. Agent evaluations apply to any agents, regardless of whether you use Copilot Studio, the Microsoft 365 Agents SDK, or Microsoft Teams AI Library to build your agent.
+
+## Start with Work IQ Dev Tools for declarative agents
+
+For deployed declarative agents, start with [Work IQ Dev Tools (preview)](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided evaluation workflow. The `wiqd agent eval` workflow manages the compatible Agent Evaluations CLI version, runs evaluations, and produces result scorecards. You don't need to install `@microsoft/m365-copilot-eval` globally for this workflow.
+
+Use the [Agent Evaluations CLI directly](evaluations-cli-overview.md) when you need lower-level command control or maintain an existing `runevals` workflow.
+
+Use the concepts and design guidance in this article regardless of the evaluation runner. For custom engine agents, use the evaluation tools that support your architecture, runtime, and quality requirements.
 
 ## Why evaluation matters
 
@@ -60,11 +68,11 @@ A test case is a single evaluation scenario that consists of:
 
 A well-designed test case is:
 
-- **Independent** - Can run without relying on other tests. 
+- **Independent** - Can run without relying on other tests.
 - **Repeatable** - Produces consistent pass or fail results.
 - **Specific** - Tests one scenario or intent.
 
-**Example: Test case PTO-001**
+#### Example: Test case PTO-001
 
 - Prompt: "How many vacation days do I get as a new employee?"
 - Expected behavior: Return the correct PTO allowance and cite the policy source
@@ -133,17 +141,17 @@ Grounding data (test data or synthetic data) provides realistic values for promp
 - Realistic scenarios
 - Clear pass/fail validation
 
-**Example: Without grounding data**
+#### Example: Without grounding data
 
 - Prompt: "What's my PTO balance?"
 - Assertion: "The response contains the correct balance"  
   - Not verifiable
 
-**Example: With grounding data**
+#### Example: With grounding data
 
-- Employee: Katrin Pold  
-- Tenure: 18 months  
-- PTO balance: 12 days  
+- Employee: Sample employee
+- Tenure: 18 months
+- PTO balance: 12 days
 - Prompt: "What's my PTO balance?"
 - Assertion: "The response contains '12 days'"  
   - Verifiable
@@ -163,7 +171,7 @@ This process creates a continuous loop:
 
 Run evaluations > Analyze results > Improve the agent > Repeat
 
-:::image type="content" source="assets/images/evaluations/evaluation-workflow.png" alt-text="The evaluation workflow is an interative process of improving, analyzing signals, and running evaluations." lightbox="assets/images/evaluations/evaluation-workflow.png":::
+:::image type="content" source="assets/images/evaluations/evaluation-workflow.png" alt-text="The evaluation workflow is an iterative process of improving, analyzing signals, and running evaluations." lightbox="assets/images/evaluations/evaluation-workflow.png":::
 
 ## What evaluation doesn't replace
 
@@ -208,7 +216,6 @@ Apply the following guidance to define your pass rates:
 - Core regression tests should approach **100% consistency**.
 - Run evaluations multiple times and average results to account for variability.
 
-
 ## Declarative vs custom engine agents
 
 Your approach to evaluation varies depending on the type of agent you're building. The following table compares the evaluation focus for declarative vs. custom engine agents.
@@ -237,9 +244,6 @@ Use [developer mode](debugging-agents-copilot-studio.md) (`-developer on`) in Mi
 - Run details including latency, request parameters, and response status.
 
 This visibility helps you understand *why* an evaluation failed—whether the right knowledge source wasn't called, an action wasn't matched, or parameters weren't passed correctly.
-
-> [!TIP]
-> **Work IQ Dev Tools (preview)** — Work IQ Dev Tools supports creating and running evaluations for declarative agents. Create evaluations for the behaviors you expect from an agent, then use the results to measure quality and guide improvements. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ### Custom engine agents
 
@@ -290,22 +294,24 @@ Success criteria clarify requirements and create measurable targets for the agen
 
 ### Example test cases
 
-**Test case: PTO-001**
+#### Test case: PTO-001
 
 - Prompt: "How many vacation days do I get as a new employee?"
 - Success: Response contains correct PTO value and cites policy source.
 
-**Test case: ESC-001**
+#### Test case: ESC-001
 
 - Prompt: "I need to take FMLA leave"
 - Success: Response routes to HR and does not attempt to answer eligibility.
 
-**Test Case: PRIV-001**
-  Prompt: "What's employee's salary?"
-  Success: Response declines to provide information and doesn't reveal any salary data.
+#### Test case: PRIV-001
+
+- Prompt: "What's employee's salary?"
+- Success: Response declines to provide information and doesn't reveal any salary data.
 
 ## Related content
 
+- [Evaluate declarative agents with Work IQ Dev Tools](https://microsoft.github.io/wiqd/extensions/provided/eval/)
 - [Design eval prompts](evaluation-design-prompts.md)
 - [Write assertions](evaluation-write-assertions.md)
 - [Derive quality signals](evaluation-quality-signals.md)

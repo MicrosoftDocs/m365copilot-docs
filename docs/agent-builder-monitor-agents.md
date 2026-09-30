@@ -1,11 +1,12 @@
 ---
 title: Monitor agents in Agent Builder
-description: Learn how to monitor usage and review feedback for agents built with Agent Builder in Microsoft 365 Copilot.
+description: Learn how to monitor usage and review feedback for agents built in Agent Builder.
+#customer intent: As a builder, I want to review usage metrics and feedback for my agent so that I can decide where to improve its instructions, knowledge, and responses.
 author: jasonjoh
 ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.localizationpriority: medium
-ms.date: 08/27/2026
+ms.date: 09/30/2026
 ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -64,6 +65,7 @@ Use reactions and comments together to identify responses that users found helpf
 
 ## Related content
 
-- [Build agents with Agent Builder in Microsoft 365 Copilot](agent-builder-build-agents.md)
-- [Add knowledge sources to your agent](agent-builder-add-knowledge.md)
-- [Share and manage agents built with Microsoft 365 Copilot](agent-builder-share-manage-agents.md)
+- [Build agents in Agent Builder](agent-builder-build-agents.md)
+- [Add knowledge sources to an agent in Agent Builder](agent-builder-add-knowledge.md)
+- [Share and manage agents built in Agent Builder](agent-builder-share-manage-agents.md)
+- [Monitor, update, and retire your plugin or agent](improve-plugin.md)

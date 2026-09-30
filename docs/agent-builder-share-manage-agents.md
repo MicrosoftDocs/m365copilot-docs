@@ -1,22 +1,25 @@
 ---
-title: Share and manage agents built with Microsoft 365 Copilot
-description: Learn how to share and manage agents built with Microsoft 365 Copilot.
+title: Share and manage agents built in Agent Builder
+description: Learn how to share agents built in Agent Builder with users in your organization, manage owners and chat users, and maintain your agents.
+#customer intent: As a builder, I want to share an agent I built in Agent Builder and manage who can use and edit it so that my team can use the agent without oversharing it.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 07/21/2026
-ms.topic: article
+ms.date: 09/30/2026
+ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ---
 
-# Share and manage agents
+# Share and manage agents built in Agent Builder
 
-You can share the agents you create by using Microsoft 365 Copilot with users in your organization. Agents support multiple owners, so you can share ownership across your team. Any owner can edit, manage, and maintain the agent. Sharing an agent provides direct access to it for a specified set of users. While ideal for team collaboration, sharing an agent doesn't allow for deployment across the organization or integration with other channels.
+You can share the agents you build in Agent Builder with users in your organization. Agents support multiple owners, so you can share ownership across your team. Any owner can edit, manage, and maintain the agent. Sharing an agent provides direct access to it for a specified set of users. While ideal for team collaboration, sharing an agent doesn't allow for deployment across the organization or integration with other channels.
 
-This article describes how to share and manage the agents you build using the Agent Builder feature in Microsoft 365 Copilot. To publish an agent across multiple channels, you need to use Copilot Studio. For more information, see [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
+This article describes how to share and manage the agents you build in Agent Builder. To publish an agent across multiple channels, you need to use Copilot Studio. For more information, see [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
 ## Share an agent
+
+<!-- PM-REVIEW (09/25/2026): Confirm the sharing options for agents built in Agent Builder, including agents with embedded files. This article is the single source of truth for them. -->
 
 After you [build and test](agent-builder-build-agents.md) your agent in Microsoft 365 Copilot, select **Create**. After your agent is created, a confirmation message indicates that the agent is private and only available to you. To share the agent with others, select **Share** to open the share dialog.
 
@@ -106,11 +109,11 @@ Admins can configure one of the following options in the Microsoft 365 admin cen
 
 When org-wide sharing is disabled, the **Org-wide sharing for chat access** toggle appears grayed out with a tooltip that explains the restriction.
 
-### Deploy an agent via ZIP package
+### Download a ZIP package to sideload your agent
 
-Microsoft 365 Copilot provides an option to download a ZIP package for manual deployment. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
+Microsoft 365 Copilot provides an option to download a ZIP package for manual sideloading. This ZIP package contains the files you need to [sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
-To deploy an agent manually:
+To download the ZIP package and sideload your agent manually:
 
 1. In Microsoft 365 Copilot, on the left pane, select **New agent**.
 1. On the New agent page, under **My agents**, choose **View all agents**.
@@ -121,6 +124,7 @@ To deploy an agent manually:
 1. [Sideload your agent into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload).
 
 > [!NOTE]
+>
 > - The ZIP package can't include embedded files. Remove any embedded file content from the ZIP package.
 > - Sideloading agents in Teams isn't supported on macOS.
 
@@ -137,11 +141,13 @@ When a user's access to the agent is removed, it doesn't affect their access to 
 
 ## Update your agent's About information
 
-Use the **About this agent** dialog to update the metadata that's visible in the Agent Store and in your agent's About information in Microsoft 365 Copilot. You can open this dialog for any agent you own, whether or not it's shared or submitted to your org catalog.
+Use the **About this agent** dialog to update the metadata that's visible in the Agent Store and in your agent's About information in Microsoft 365 Copilot. You can open this dialog for any agent you own, whether or not it's shared or published to your org catalog.
 
 To open the dialog, select the **More** ellipses (**...**) in the agent authoring header, and then select **About this agent**.
 
 The following fields are available.
+
+<!-- PM-REVIEW (09/25/2026): Confirm the default short description UI string "Built using Microsoft 365 Copilot Agent Builder". Preserved verbatim as a literal UI string. -->
 
 | Field | Required or optional | Maximum length | Description |
 | --- | --- | --- | --- |
@@ -153,15 +159,15 @@ The following fields are available.
 A default placeholder URL is provided for **Creator website**, **Privacy statement**, and **Terms of use**. Replace each placeholder with a URL that's appropriate for your agent; otherwise, Agent Builder shows a warning on the field.
 
 > [!NOTE]
-> Values you save in **About this agent** prepopulate the corresponding fields in the submission dialog when you submit your agent to your org catalog. For more information, see [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md).
+> Values you save in **About this agent** prepopulate the corresponding fields in the **Submit to your org catalog** dialog when you submit your agent to your org catalog. For more information, see [Privacy statement and terms of use for agents in Agent Builder](agent-builder-publication-privacy-terms-of-use.md).
 
 ## Submit an agent to your org catalog
 
-The shared version of your agent and the Agent Store version are managed separately. You manage the shared version and can continue iterating on it, changing who it's shared with, or keeping it private for testing, at any time. Your admin manages the Agent Store version after you submit the agent for review.
+The shared version of your agent and the Agent Store version are managed separately. You manage the shared version and can continue iterating on it, changing who it's shared with, or keeping it private for testing, at any time. Your admin manages the Agent Store version after you publish the agent.
 
-To make your agent broadly discoverable in your organization, submit it to your org catalog. An admin reviews the submission in the [Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents) and, if approved, publishes the agent in the **Built by your org** section of the Agent Store.
+To make your agent broadly discoverable in your organization, publish it to your org catalog. An admin reviews the agent in the [Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents) and, if approved, deploys the agent to the **Built by your org** section of the Agent Store.
 
-For the submission flow, required fields, approval status tracking, and post-approval updates, see [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md).
+For the submission steps, required fields, approval status tracking, and post-approval updates, see [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md).
 
 ## Manage agents
 
@@ -220,24 +226,24 @@ To reassign ownership via PowerShell, see [Reassign an agent's owner with PowerS
 
 When sharing an agent and its knowledge sources, you might encounter the errors listed in the following table.
 
+<!-- markdownlint-disable MD033 -->
 | Issue        | Description |
 | -------------- | ----------- |
 | Something went wrong | An internal service error occurred. Contact support if this error continues to occur. |
 | Couldn't share       | The user has insufficient privileges to update the sharing permissions on certain files. The error lists the files that were unable to be shared. The agent owner should go into SharePoint to try updating these permissions manually. For more information, see: <ul><li>[Share a document](https://support.microsoft.com/office/share-a-document-using-sharepoint-or-onedrive-807de6cf-1ece-41b9-a2b3-250d9a48f1e8) to learn how to share files.</li><li>[Sharing errors in SharePoint and OneDrive](/sharepoint/sharepoint-onedrive-error-message) for an error code reference.</li></ul> |
 | Agent sharing failed, knowledge access not granted | If agent sharing fails, the underlying knowledge sources might not be shared with the intended users or groups. As a result, users without access to those files don’t receive generated responses based on them. To resolve this issue, ensure all individuals and groups you're sharing your agent with exist in your organization, then reshare the knowledge sources by selecting them in the sharing settings to grant user access to them. |
 | Can no longer update agent | This error occurs when your agent's current sharing settings are no longer compliant with new admin policies. Agent owners must change the sharing settings to a compliant option before updating the agent further. A banner guides you to make this change. |
-| We're unable to create this agent due to an error. | Occurs when the system is having trouble publishing an agent. Try again in a few minutes. |
-| This agent includes at least one file with an unsupported sensitivity label. Check your uploaded files and remove them. | Occurs when you upload a file with a sensitivity label that isn't supported. Check the shield icon next to your uploaded files and remove the ones that have a red error icon. For more information, see [Unsupported sensitivity label scenarios](copilot-studio-lite-knowledge.md#unsupported-sensitivity-label-scenarios).
+| We're unable to create this agent due to an error. | Occurs when the system has trouble creating the agent. Try again in a few minutes. |
+| This agent includes at least one file with an unsupported sensitivity label. Check your uploaded files and remove them. | Occurs when you upload a file with a sensitivity label that isn't supported. Check the shield icon next to your uploaded files and remove the ones that have a red error icon. For more information, see [Unsupported sensitivity label scenarios](agent-builder-add-knowledge.md#unsupported-sensitivity-label-scenarios). |
 |Your agent can't be updated because it might encourage harmful actions. | Occurs when the system detects harmful content. Review your agent's name, description, and instructions and remove any harmful content, and try to update your agent again. For more information. see [Responsible AI validation](rai-validation.md). |
+<!-- markdownlint-enable MD033 -->
 
 ## Related content
 
 - [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md)
-- [Privacy statement and terms of use](agent-builder-publication-privacy-terms-of-use.md)
-- [Publish agents for Microsoft 365 Copilot](publish.md)
+- [Privacy statement and terms of use for agents in Agent Builder](agent-builder-publication-privacy-terms-of-use.md)
+- [Publish and distribute plugins for Microsoft 365 Copilot](publish.md)
 - [Manage agent requests in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-requests)
 - [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)
 - [Upload into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
 - [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell)
-
-

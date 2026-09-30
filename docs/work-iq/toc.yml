@@ -1,15 +1,17 @@
 items:
-- name: Overview
+- name: Work IQ overview
+  href: index.md
+- name: API overview
   href: api-overview.md
 - name: Enable Work IQ
   href: enable-work-iq.md
-- name: CLI
+- name: Work IQ CLI
   href: cli.md
-- name: A2A
+- name: Agent-to-Agent (A2A)
   href: a2a/toc.yml
 - name: REST API
   href: rest/toc.yml
-- name: MCP
+- name: Model Context Protocol (MCP)
   href: mcp/toc.yml
 - name: Permissions
   href: permissions.md
