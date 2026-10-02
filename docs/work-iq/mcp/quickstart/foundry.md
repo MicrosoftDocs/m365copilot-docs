@@ -68,7 +68,7 @@ Connect the remote Work IQ MCP server as a tool in your Foundry project.
    | **Authorization URL** | `https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/authorize` |
    | **Token URL** | `https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token` |
    | **Refresh URL** | `https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token` |
-   | **Scopes** | `api://workiq.svc.cloud.microsoft/WorkIQAgent.Ask,offline_access` |
+   | **Scopes** | `api://workiq.svc.cloud.microsoft/WorkIQAgent.Ask offline_access` |
 
 1. Replace `{tenant-id}` with the Directory (tenant) ID from your app registration.
 1. Save the tool connection.
