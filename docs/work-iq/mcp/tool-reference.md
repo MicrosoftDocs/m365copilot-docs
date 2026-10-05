@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 08/20/2026
+ms.date: 10/05/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -13,7 +13,7 @@ ms.date: 08/20/2026
 
 # Work IQ MCP tool reference
 
-The Work IQ MCP server exposes 10 tools through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). This article provides a reference for each tool, including its purpose, parameters, and usage examples.
+The Work IQ MCP server exposes tools through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). This article provides a reference for each tool, including its purpose, parameters, and usage examples.
 
 Work IQ MCP uses Microsoft Entra authentication and the signed-in user's Microsoft 365 permissions when its tools access Microsoft Graph resource paths. A separate tenant policy layer evaluates each tool request and blocks mutation operations by default. Administrators can enable supported create, update, delete, and action requests through tenant policy. For details, see [Policy governance for Work IQ MCP](policy-governance-mcp.md).
 
@@ -578,6 +578,35 @@ A successful response contains a JSON string in the `text` property of a [TextCo
 
 ---
 
+### retrieve
+
+Searches Microsoft 365 data and connected enterprise sources that the signed-in user can access. The tool returns model-friendly grounding Markdown with inline citations and structured metadata for each cited source. The `grounding` strategy is the default. This tool is available in public preview.
+
+#### Parameters
+
+| Parameter      | Type         | Required | Description                                                                                                                                                                                                                           |
+|----------------|--------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `query`        | string       | Yes      | The natural-language query that describes what to search for.                                                                                                                                                                         |
+| `agentId`      | string       | No       | The ID of an agent to use for retrieval. If omitted, retrieval uses the built-in Microsoft 365 Copilot agent. Don't combine a nondefault agent ID with a nonempty `capabilities` array.                                                 |
+| `strategy`     | string       | No       | The retrieval strategy. Valid values are `grounding` and `copilot`. The default is `grounding`. Use `copilot` when data might be outside the Microsoft 365 index or when you use the `GraphConnectors` or `Dataverse` capability.          |
+| `capabilities` | object array | No       | A source allow-list for the request. Supported capability names are `People`, `Meetings`, `OneDriveAndSharePoint`, `Email`, `TeamsMessages`, `GraphConnectors`, and `Dataverse`. Omit it or pass an empty array to search all sources available to the agent and strategy. |
+
+#### Response
+
+The authoritative response payload is in the `application/vnd.ms-workiq.retrieval` property of `structuredContent`.
+
+| Property        | Type         | Description                                                                                                         |
+|-----------------|--------------|---------------------------------------------------------------------------------------------------------------------|
+| `markdown`      | string       | Model-friendly grounding content with inline citations that correspond to IDs in `retrievalHits`.                  |
+| `retrievalHits` | object array | Structured source metadata, including source URLs, identifiers, and source-specific metadata when available.       |
+| `resultCount`   | integer      | The number of retrieval hits.                                                                                       |
+| `stoppedReason` | string       | The terminal retrieval status, such as `completed`, `cancelled`, or `error`.                                        |
+| `conversationId` | string     | The conversation identifier, when returned.                                                                         |
+
+For request examples, capability-specific scoping, SharePoint Embedded support, response-processing guidance, and error handling, see [Use the `retrieve` tool in Work IQ MCP](retrieve.md).
+
+---
+
 ### list_agents
 
 Lists available agents that you can use with the `ask` tool. Returns a JSON array of available agents, and the built-in Microsoft 365 Copilot agent is always included.
@@ -792,5 +821,7 @@ The server doesn't perform automatic retries. The MCP client receives errors and
 ## Related content
 
 - [Work IQ MCP overview](overview.md)
+- [Use the retrieve tool in Work IQ MCP](retrieve.md)
+- [Migrate agentic retrieval workflows to Work IQ MCP](migrate-retrieval-api.md)
 - [Work IQ API overview](../api-overview.md)
 - [Work IQ API permissions reference](../permissions.md)
