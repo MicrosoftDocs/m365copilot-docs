@@ -1,14 +1,14 @@
 ### YamlMime:Landing
 
 title: Extending Microsoft 365 Copilot with plugins
-summary: Package and share an existing declarative agent with Work IQ Dev Tools, or follow the complete lifecycle to prepare, build, test, publish, govern, update, and retire a plugin.
+summary: Create a plugin from existing capabilities with Work IQ Dev Tools, or follow the complete lifecycle to prepare, build, test, publish, govern, update, and retire a plugin.
 
 metadata:
   title: Extending Microsoft 365 Copilot with plugins
-  description: Package and share an existing declarative agent with Work IQ Dev Tools, or follow the complete plugin lifecycle from planning and development through publishing, governance, updates, and retirement.
+  description: Create a plugin from existing capabilities with Work IQ Dev Tools, or follow the complete plugin lifecycle from planning and development through publishing, governance, updates, and retirement.
   author: lauragra
   ms.author: jasonjoh
-  ms.date: 09/29/2026
+  ms.date: 09/30/2026
   ms.topic: landing-page
   ms.custom:
     - copilot-extensibility
@@ -22,7 +22,7 @@ landingContent:
         links:
           - text: What is a plugin?
             url: plugins-overview.md
-          - text: "Quickstart: Share an existing agent"
+          - text: "Quickstart: Create your first plugin with Work IQ Dev Tools"
             url: quickstart-plugin.md
           - text: Prepare to build your plugin
             url: planning-guide.md
@@ -35,16 +35,25 @@ landingContent:
             url: build-reuse-plugin.md
           - text: Package and test
             url: package-plugin.md
-          - text: "\u200B"
-            url: "#"
+          - text: Validate and test your plugin
+            url: validate-plugin.md
 
-  - title: Publish, deploy, and manage plugins
+  - title: Publish and make plugins available
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Publish and distribute
+          - text: Publish or share
             url: publish.md
           - text: Make available and govern
             url: govern-plugins.md
-          - text: Monitor, update, and retire
+
+  - title: Monitor, update, and retire plugins
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Monitor your plugin
+            url: monitor-plugin.md
+          - text: Improve and update your plugin
             url: improve-plugin.md
+          - text: Retire your plugin
+            url: retire-plugin.md

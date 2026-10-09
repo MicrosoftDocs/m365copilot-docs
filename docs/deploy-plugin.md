@@ -1,6 +1,6 @@
 ---
-title: Make Microsoft 365 Copilot Plugins and Agents Available
-description: As an administrator, use the publishing record to review, acquire, approve, assign, enable, configure, and verify a Microsoft 365 Copilot plugin or agent.
+title: Make your Microsoft 365 Copilot plugin available
+description: Complete the publishing-method and administration actions required to make a published or shared Microsoft 365 Copilot plugin available to its intended users.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
@@ -8,101 +8,91 @@ ms.date: 09/30/2026
 ms.topic: how-to
 ---
 
-# Make plugins and agents available
+# Make your plugin available
 
-Use this page if you administer the organization receiving the plugin or agent. Start from the publishing record supplied by the publisher, then complete only the actions required by that distribution route.
+Make a published or shared plugin available to its intended users. Complete only the review, installation, assignment, and access actions that the publishing or sharing method requires.
 
-You enter this stage with the exact publishing record and an identified owner or administrator for the next action.
-
-Some supported direct-sharing routes are completed by the owner and intended users without an administrator. Don't treat development sideloading or direct sharing as a substitute for a production route that requires organizational review or assignment.
-
-> [!NOTE]
-> Administrators who need an end-to-end lifecycle map should begin with [Administer Microsoft 365 Copilot plugins and agents](administrator-guide.md).
+Start with the plugin package. Check separately managed agents, connectors, or remote MCP servers only when their settings are required for the plugin to work.
 
 ## Before you begin
 
 Have:
 
-- The exact identity and version that was published or shared.
-- The publisher or creator identity and any publisher provenance supplied by the route.
-- The publishing route and its submission, offer, or org catalog identifier.
-- The intended users or groups and target Microsoft 365 experiences.
-- Included agents, skills, connectors, MCP servers, and other components, including their descriptions and dependencies.
+- The exact plugin package identity and version.
+- How the plugin was delivered: direct sharing, organization upload, or Microsoft Marketplace.
+- The intended users or groups and supported Microsoft 365 experiences.
 - Required licenses, permissions, consent, connections, and external services.
-- An owner for support, updates, and removal.
 
-## Follow the distribution route
+If the package is still awaiting review, track its status before completing steps that require publication. If the publishing result is unclear, return to [Publish or share your plugin](publish.md).
 
-### Direct and personal sharing
+## Choose the distribution method
 
-- For an Agent Builder agent, the owner follows [Share and manage agents](agent-builder-share-manage-agents.md#share-an-agent).
-- For a declarative agent or alpha plugin package shared with WIQD, the owner follows the applicable `wiqd agent share` or `wiqd plugin share` procedure and confirms the intended users or tenant can access it.
-- For another supported direct-sharing route, follow the authoring experience's ownership, sharing, and access procedure.
+Use the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) administration map to locate the relevant controls. Use the instructions for the method that delivered your package.
 
-Confirm that the intended users can access the shared solution and complete any required connections.
+### Direct sharing
 
-### Organizational catalog
+Some authoring experiences let an owner share a plugin with specific people, groups, or an organization. Approval depends on the sharing method and audience.
 
-- For a declarative agent published with `wiqd agent publish`, follow the [Work IQ Dev Tools agent lifecycle](https://microsoft.github.io/wiqd/concepts/agent-lifecycle/), then complete any required organizational-catalog actions.
-- For an alpha WIQD plugin package uploaded as a custom app, follow the administration procedure for the resulting Microsoft 365 app package. The `wiqd plugin` surface doesn't publish to the org catalog.
-- For an Agent Builder submission, follow [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md) and [Manage agent requests](/microsoft-365/admin/manage/agent-requests?context=/microsoft-365/copilot/extensibility/context).
-- For an organizational submission from Microsoft 365 Agents Toolkit, Copilot Studio, or another supported app-package route, follow [Manage agent requests](/microsoft-365/admin/manage/agent-requests?context=/microsoft-365/copilot/extensibility/context) or [Manage agents in Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context), as specified by the publishing procedure.
+1. Confirm that the owner shared the plugin with the intended audience. For Work IQ Dev Tools, `wiqd plugin share` publishes the plugin to the plugin registry for the selected audience. For other methods, follow the method-specific guidance to confirm where the plugin is published and who can access it.
+1. Complete any review required by that sharing method. For example, in Cowork, [organization-wide sharing requires administrator approval](/microsoft-365/copilot/cowork/cowork-manage-plugins#org-wide-sharing-requires-admin-approval); sharing with specific people doesn't require that approval.
+1. Have users complete any required sign-in, consent, or connections.
+1. Verify that an intended user can find and use the plugin.
 
-Review the submitted object, publish or approve it when required, and select who can install or access it.
+Direct sharing doesn't create a Microsoft Marketplace offer. Check the selected method before assuming the plugin appears in an organization-wide catalog.
 
-### Public or Marketplace offering
+### Organization upload
 
-Confirm the exact Microsoft Marketplace offer and package version. When the offer requires organizational acquisition or assignment, follow the administration procedure documented for the offer type, then [manage the agent in Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context) when applicable.
+When an administrator uploads the package to your organization:
 
-### Direct connector deployment
+1. In the Microsoft 365 admin center, go to **Agents** > **Tools** > **Registry**. [Upload the plugin package](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#upload-plugins-or-skills), review its components, and select the intended users.
+1. If the plugin is already in the registry but isn't installed for those users, find it under **Agents** > **Tools** > **Plugins** and [install it](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#install-a-tool) for the intended audience.
+1. Open **Users** and [confirm the availability scope](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#manage-plugin-availability-for-users).
+1. If access is blocked by policy, check the **your organization** publisher category under **Agents** > **Settings** > **Agent and plugin access**.
+1. Complete any required permissions, consent, connections, or external-service configuration.
 
-For a Copilot connector, follow [Deploy Copilot connectors](/microsoft-365/copilot/connectors/deployment-overview?context=/microsoft-365/copilot/extensibility/context) to create the connection, select users, configure content, and manage synchronization.
+For the administration procedures, see [Manage plugins, skills, and MCP servers](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context).
 
-If the route isn't listed, follow the post-publishing procedure documented for its package type and authoring tool. Don't infer an approval, assignment, or enablement requirement from a different route.
+### Microsoft Marketplace distribution
 
-## Complete the administrator actions
+For a plugin published through Microsoft Marketplace:
 
-1. Review or acquire the exact artifact identified in the publishing record.
-1. Approve the solution when required by the distribution route or organizational policy.
-1. Assign the solution to the intended users or groups.
-1. Enable it in each applicable Microsoft 365 experience.
-1. Configure required connections, authentication, permissions, consent, and external services.
-1. Verify that intended users can find, access, connect to, and use it in each supported experience.
-1. Record the audience, verified experiences, completed actions, connections, owner, and date.
+1. Confirm the exact offer, publisher, and package version.
+1. Follow the offer's customer acquisition and installation instructions. If administrator installation applies, find the plugin under **Agents** > **Tools** > **Plugins** and follow [Install a tool](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#install-a-tool).
+1. Confirm that the appropriate publisher category is allowed under **Agents** > **Settings** > **Agent and plugin access** when organization policy restricts access.
+1. Set user availability when the method requires administrator action.
+1. Complete the documented permissions, consent, connections, or customer configuration.
+1. Verify that intended users can find and use the plugin.
 
-Installing a tool, assigning an agent, and configuring a connector are separate operations. Complete each operation that the solution requires.
+Publication through Microsoft Marketplace doesn't automatically make the plugin available in every customer organization.
 
-## Record the availability result
+## Complete required configuration
 
-Record:
+Configure a packaged agent, connector, remote MCP server, connection, permission, or external service separately only when the plugin requires that setting to work.
 
-- Intended users or groups.
-- Enabled Microsoft 365 experiences.
-- Completed reviews, approvals, acquisition, assignment, and enablement actions.
-- Required connections, authentication, permissions, consent, and external services.
-- Responsible owner or administrator.
-- Verification date, tested users, and tested experiences.
-- Known blockers, limitations, or follow-up actions.
+For component boundaries and task routing, see the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) administration map.
 
-You leave this stage with a verified availability record or a documented blocker and owner.
+## Verify availability
 
-## If a required route or control isn't available
+1. Confirm that the expected plugin version is installed or shared with the intended audience.
+1. Confirm that the intended users or groups have access.
+1. Test the plugin in its supported Microsoft 365 experiences.
+1. Verify any required sign-in, consent, connections, and external services.
+1. Confirm that an intended user can successfully perform the intended task.
+1. If the method restricts access to a selected audience, confirm that a user outside that audience can't use it.
 
-Stop and record the plugin or agent as blocked. Identify the missing route, permission, product capability, or owner. Don't substitute a sharing link or development sideload for a supported production route.
-
-Return to [choose how to publish and distribute your plugin](publish.md) if the selected publishing route can't reach the intended audience.
-
-> [!NOTE]
-> Administration experiences and interface labels can vary during the rollout. Follow the linked product documentation for the current procedure and interface.
+If users can't access the plugin, check its status, publisher-category policy, user availability, installation, and required connections. In Cowork, users can also [turn a plugin off for their own conversations](/microsoft-365/copilot/cowork/cowork-manage-plugins#how-users-interact-with-deployed-plugins). Record the audience, experience, package version, verification result, and owner of any issue.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Govern access, tools, and connections](manage.md)
+> [Govern plugin access and connections](manage.md)
 
 ## Related content
 
-- [Make plugins and agents available and govern access](govern-plugins.md)
-- [Manage agent requests](/microsoft-365/admin/manage/agent-requests?context=/microsoft-365/copilot/extensibility/context)
-- [Manage tools for agents](/microsoft-365/admin/manage/manage-tools-for-agent?context=/microsoft-365/copilot/extensibility/context)
+- [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365)
+- [Publish or share your plugin](publish.md)
+- [Govern plugin access and connections](manage.md)
+- [Monitor your plugin](monitor-plugin.md)
+- [Improve and update your plugin](improve-plugin.md)
+- [Retire your plugin](retire-plugin.md)
 - [For administrators](administrator-guide.md)

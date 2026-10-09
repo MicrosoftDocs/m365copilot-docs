@@ -1,133 +1,123 @@
 ---
-title: Monitor, update, and retire your plugin or agent
-description: Monitor a deployed Microsoft 365 Copilot plugin or agent, release tested updates through its publishing route, restrict access, and retire it cleanly.
+title: Improve and update your Microsoft 365 Copilot plugin
+description: Evaluate a Microsoft 365 Copilot plugin, apply fixes and improvements, release a tested package update, and verify the rollout.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/06/2026
 ms.topic: how-to
 ---
 
-# Monitor, update, and retire your plugin or agent
+# Improve and update your plugin
 
-After users can access the plugin or agent, manage its operational lifecycle through the product-specific surfaces for each object. There isn't one universal dashboard or action that monitors or changes the plugin package, its components, connections, external services, and Microsoft 365 app package together.
+Improve your plugin by using monitoring evidence and evaluations to find what needs to change. Apply the fix or improvement, release the exact package you tested, and confirm that the updated plugin keeps working for intended users.
 
-You enter this stage with an available object, its publishing and availability records, and identified operational and support owners.
+Builders maintain and test the package. Microsoft 365 administrators complete organizational rollout actions when required. Service owners maintain the connectors, remote MCP servers, identities, and external services the plugin uses.
 
-Start with the outcome you need.
+## Before you begin
 
-| Operational need | What to do |
-|---|---|
-| Understand use, health, or adoption | [Monitor usage and health](#monitor-usage-and-health) through the available product-specific signals. |
-| Diagnose an issue or measure a change | [Evaluate behavior and quality](#evaluate-behavior-and-quality) with evidence appropriate to the object and decision. |
-| Improve behavior or release a fix | [Release an update](#release-an-update) through the required build, package, publish, and availability steps. |
-| Limit use or change responsibility | [Restrict access](#restrict-or-block-access) or [transfer ownership](#transfer-ownership-or-support) where the product supports it. |
-| End the solution lifecycle | [Retire the plugin or agent](#retire-the-plugin-or-agent) and address every dependent object and service. |
+Have:
 
-## Monitor usage and health
+- The current plugin identity and package version.
+- How the current version reached users: direct sharing, administrator upload, or Microsoft Marketplace.
+- Monitoring evidence, user feedback, support cases, or a planned improvement.
+- Representative tasks and acceptance criteria.
+- The affected users and Microsoft 365 experiences.
+- Access to the plugin source and affected capabilities.
+- Owners for required connections and external services.
 
-| What you need to observe | Start with |
-|---|---|
-| Usage and health for a provisioned declarative agent from a terminal or automated workflow | Enable the experimental Work IQ surface and run `wiqd agent monitor`, which queries the Insights Agent for that agent. See the [Work IQ Dev Tools Work IQ extension](https://microsoft.github.io/wiqd/extensions/provided/workiq/). |
-| Responsiveness and detailed turn behavior for a deployed declarative agent | Send a prompt with the experimental `wiqd agent ask` command, or use the preview [Work IQ DevUI](https://microsoft.github.io/wiqd/extensions/provided/devui/) to inspect plugin selection, retrieval, citations, identifiers, and raw results. |
-| Usage, engagement, knowledge use, reactions, and comments for an Agent Builder agent | [Monitor agents in Agent Builder](agent-builder-monitor-agents.md) |
-| Organization-wide agent inventory and ownership | [Manage the agent registry](/microsoft-365/admin/manage/agent-registry?context=/microsoft-365/copilot/extensibility/context) |
-| Natural-language answers about aggregate agent usage and adoption trends in Copilot Chat | [Microsoft 365 Insights Agent](insights-agent-overview.md) |
-| Activity for an MCP server managed as a tool | [Manage tools for agents](/microsoft-365/admin/manage/manage-tools-for-agent?context=/microsoft-365/copilot/extensibility/context#monitor-and-observe-mcp-server-activity) |
-| Copilot connector users, content, and synchronization | [Deploy Copilot connectors](/microsoft-365/copilot/connectors/deployment-overview?context=/microsoft-365/copilot/extensibility/context#customize-connector-settings-optional) |
+If you don't yet know what needs to change, start with [Monitor your plugin](monitor-plugin.md).
 
-Availability, assignment, installation, or deployment isn't evidence of adoption or actual use. Follow the linked product-specific usage-reporting guidance for the object and Microsoft 365 experience.
+## Establish a baseline
 
-Monitoring coverage varies by object and product. Don't treat an agent-specific report as evidence for every component in a plugin.
+1. State the problem or improvement you want to address.
+1. Identify the affected package version, users, experiences, capabilities, and dependencies.
+1. Define representative tasks and measurable acceptance criteria.
+1. Run the tasks against the current package and record the results.
+1. If your organization administers the plugin, record its current status, user availability, and installation state in **Agents** > **Tools** > **Plugins**.
+1. Preserve the evidence you need to compare the current and updated behavior.
 
-## Evaluate behavior and quality
+For a plugin that includes an agent, use [Agent evaluation overview](evaluation-overview.md) to design an evaluation when response quality, instructions, knowledge, or tool use is part of the change. Evaluation can provide pre-release evidence and help investigate post-deployment quality concerns, including those raised by usage signals, user feedback, or agent and dependency changes.
 
-Start with the operational signal, user report, support case, or product change that requires action. Identify the affected object, version, audience, Microsoft experience, dependency, and owner before you change the solution.
+Agent evaluation isn't required for every plugin. It doesn't replace capability testing, package validation, or testing the complete user experience.
 
-Evaluation supports two lifecycle decisions. During **Package and test**, use it as pre-release evidence when agent quality must be measured. After deployment, rerun appropriate evaluations when usage signals, user reports, model or dependency changes, or a proposed update could affect behavior.
+For deployed declarative agents, use the guided [`wiqd agent eval` workflow](https://microsoft.github.io/wiqd/extensions/provided/eval/). For direct command-line or pipeline control, see [Agent Evaluations CLI overview](evaluations-cli-overview.md).
 
-Evaluation is contextual, not a universal post-deployment requirement. Use it when you need evidence that a change to instructions, knowledge, or tools improved the experience. It doesn't replace troubleshooting or release checks: package, validate, and test every update as required by its components, publishing route, and target experiences.
+## Apply and test the change
 
-- For evaluation concepts and test design, see [Agent evaluation overview](evaluation-overview.md).
-- For command-line and pipeline evaluation, see [Agent Evaluations CLI overview](evaluations-cli-overview.md).
-- For a guided WIQD evaluation workflow against a deployed declarative agent, use [`wiqd agent eval`](https://microsoft.github.io/wiqd/extensions/provided/eval/).
+1. Update the plugin source or affected capability.
+1. Update separately operated services or configuration when the change requires it.
+1. Test each changed capability and affected dependency.
+1. Run the baseline tasks and evaluations again.
+1. Compare the results with the acceptance criteria.
+1. Investigate regressions before you create the release package.
 
-Record the signal or evaluation result that led to the change.
+When the change affects a connector, remote MCP server, identity, permission, or external service, involve the owner of that dependency. Don't assume that changing the package updates a separately operated service.
 
-## Release an update
+## Create and validate the package
 
-An update follows the lifecycle again: **change → test components → package and test the new version → publish through the supported route → complete the required availability actions → recheck the intended experiences**.
+1. Assign a new package version and check the identity requirements for your publishing method.
+1. [Create the plugin package](package-plugin.md).
+1. [Validate and test the exact package](validate-plugin.md) you intend to release.
+1. Test required sign-in, consent, connections, and external services.
+1. Test the package in every Microsoft 365 experience you intend to support.
+1. Record known limitations, required configuration, and the available rollback or replacement option.
 
-A functional change must return to **Package and test** before the updated version is republished.
+Don't publish a package that differs from the package you validated.
 
-Use the development and publishing route supported by the object. Work IQ Dev Tools is one update route; Agent Builder, Microsoft 365 Agents Toolkit, Copilot Studio, organizational deployment, and Microsoft Marketplace have their own procedures.
+## Publish and roll out the update
 
-| Route | Update procedure |
-|---|---|
-| Work IQ Dev Tools declarative agent | Follow the documented edit, validate, provision, package, publish, and monitor loop in the [agent lifecycle](https://microsoft.github.io/wiqd/concepts/agent-lifecycle/). |
-| Alpha WIQD plugin package | Rebuild, statically validate, provision the intended environment, package, run deep validation, and repeat the supported sharing or administrator-upload route. The `wiqd plugin` surface doesn't provide a publish or rollback command. |
-| Agent Builder direct sharing | Publish the change in Agent Builder. Verify the behavior for the shared audience. |
-| Agent Builder org catalog | Publish the change, then [resubmit the approved agent](agent-builder-submit-to-org-catalog.md#update-an-approved-agent). |
-| Microsoft 365 Agents Toolkit | [Package](package-plugin.md), [test](validate-plugin.md), and republish the updated app package. |
-| Copilot Studio | Publish the updated agent, then follow its supported organizational availability procedure. |
-| Microsoft Marketplace | Submit the updated offer through Microsoft Partner Center and complete certification when required. |
+Choose a [supported publishing or sharing method](publish.md) for the updated package and intended audience. Check its instructions for how to update an existing plugin; don't assume that sharing or uploading a new version replaces its registry entry or carries over availability settings.
 
-Confirm which version reached each audience. A shared version and an org-catalog version can have different update and approval states.
+| How the current version reached users | Where to start with the update | Who acts |
+| --- | --- | --- |
+| Direct sharing | Follow the same tool's [sharing instructions](publish.md#share-your-plugin-directly) for the tested package and intended audience. | Plugin owner |
+| Administrator upload | Give the tested package to the administrator, who follows [Upload plugins or skills](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#upload-plugins-or-skills) and verifies the resulting registry entry and user scope. | Plugin owner and administrator |
+| Microsoft Marketplace | Check the supported offer type and follow the applicable Partner Center procedure linked from [Publish your plugin through Microsoft Marketplace](publish-plugin-publicly.md). Wait for any required review and publication before directing customers to the update. | Publisher and customer administrator, where needed |
 
-Rollback and restore aren't available for every object or publishing route. Use the linked product-specific procedure to confirm whether a previous version can be restored and which packages, components, connections, or external services require separate action.
+Before release, confirm whether the method reuses the package identity or creates a separate entry, whether previous user availability and installation settings carry over, and how to replace or restore a version if needed. If a second entry appears, verify that intended users have moved to the new version before restricting the old one. Don't remove an entry still in use.
 
-## Restrict or block access
+Then:
 
-Choose a control based on the object and intended effect:
+1. Publish, upload, or share the exact tested package by the selected method and record whether it was submitted, published, shared, rejected, or blocked.
+1. Give the administrator or rollout owner the exact package version, intended users, required configuration, known limitations, and support contact.
+1. Complete only the applicable steps to [make the updated plugin available](deploy-plugin.md). Approval, assignment, and installation requirements depend on the method and organization settings.
+1. Update separately controlled agents, connections, identities, remote MCP servers, or external services when required.
+1. Confirm which package version reached each audience.
 
-- For agents, use the documented availability, assignment, blocking, or removal control.
-- For plugins, skills, MCP servers, and connectors represented as tools, use the documented tool action.
-- For direct sharing, update the sharing settings on the shared object.
-- For connector content and synchronization, update the connection configuration.
+For an alpha Work IQ Dev Tools plugin, `wiqd plugin share` publishes to the plugin registry for the selected audience; public-store submission happens separately in Partner Center. Follow the [Work IQ Dev Tools plugin guide](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) for its provision, package, validate, and share sequence when preparing another release.
 
-See [Govern access, tools, and connections](manage.md) for the control-to-surface map.
+Before rollout, confirm whether the method supports restoring a previous version. Replacing the package doesn't automatically restore an external service, connection, identity, data, or permission change.
 
-Blocking or removing one object doesn't necessarily disable an external service or remove indexed data. Review each dependency separately.
+## Verify the update
 
-## Transfer ownership or support
+1. Test the representative tasks with an intended user in each supported experience.
+1. Confirm that the user received the expected package version.
+1. Confirm that sign-in, consent, connections, tool calls, and external services work.
+1. Where the plugin is administered in your organization, check that its status, user availability, and installation state match the intended audience in **Agents** > **Tools** > **Plugins**. Check for any superseded version still in use.
+1. Repeat the evaluations used to approve the change.
+1. Review usage signals, feedback, errors, and support cases after rollout.
+1. If the update fails its acceptance criteria, follow the supported rollback or replacement procedure and restore affected dependencies when required.
 
-When ownership or support responsibility changes:
+The update is complete when the intended audience has the correct package version, its access settings match the intended rollout, the representative tasks meet their acceptance criteria, and every unresolved issue has an owner and next action.
 
-1. Confirm that the product supports ownership transfer or reassignment for the object.
-1. Transfer or reassign the supported object through its product-specific procedure.
-1. Update support contacts, source repositories, publishing records, credentials, app registrations, connections, external services, and escalation paths as applicable.
-1. Verify that the new owner can monitor, update, restrict, and retire every object they are expected to manage.
-1. Record any dependency that retains a different owner.
+## Record the update
 
-Don't treat transfer of one agent, package, or catalog record as transfer of every component and external dependency.
+Record:
 
-## Retire the plugin or agent
-
-1. Identify every published, shared, deployed, and connected object in the solution.
-1. Notify the affected users and support owners.
-1. Remove availability through each publishing or administration route.
-1. Remove or reassign connections, app registrations, permissions, service accounts, and external-service access that are no longer needed.
-1. Reassign ownership or delete the object according to its product-specific procedure.
-1. Record the final state, retirement date, owner, and location of the archived source and artifacts.
-
-Retirement is complete when users can no longer access the retired object, its dependencies are removed or reassigned, and its final state is recorded.
-
-For an alpha WIQD plugin project, `wiqd plugin delete` tears down the resources provisioned for the selected environment. It doesn't remove every shared package, administrator upload, catalog record, connection, credential, or external service. Complete the applicable retirement actions above. See [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/).
-
-## Record the lifecycle outcome
-
-Record one or more outcomes:
-
-- An improved, tested, and republished version, including its publishing route and verified audience.
-- A documented access, assignment, ownership, connection, or support change.
-- A safely retired object with dependencies, credentials, data, ownership, and user communication addressed.
-
-You leave this stage with a recorded update, operational change, or retirement outcome.
+- Previous and updated package versions.
+- Change, reason, affected capabilities, and dependencies.
+- Baseline, evaluation, validation, and user-test results.
+- Publishing method, audience, rollout status, and applicable registry state.
+- Configuration or service changes.
+- Known limitations, rollback option, and support owner.
 
 ## Related content
 
-- [Make plugins and agents available and govern access](govern-plugins.md)
-- [Make plugins and agents available](deploy-plugin.md)
-- [Govern access, tools, and connections](manage.md)
-- [Monitor agents in Agent Builder](agent-builder-monitor-agents.md)
-- [Agent evaluation overview](evaluation-overview.md)
+- [Monitor your plugin](monitor-plugin.md)
+- [Package your plugin](package-plugin.md)
+- [Validate and test your plugin](validate-plugin.md)
+- [Publish or share your plugin](publish.md)
+- [Make your plugin available](deploy-plugin.md)
+- [Manage plugins, skills, and MCP servers](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context)
+- [Retire your plugin](retire-plugin.md)

@@ -1,6 +1,6 @@
 ---
-title: Choose how to publish and distribute your plugin
-description: Choose the supported public, organizational, or direct-sharing route for a tested Microsoft 365 Copilot plugin.
+title: Publish or share your Microsoft 365 Copilot plugin
+description: Choose a supported method to publish or share a tested Microsoft 365 Copilot plugin package with its intended audience.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: how-to
@@ -8,109 +8,100 @@ ms.localizationpriority: medium
 ms.date: 09/30/2026
 ---
 
-# Choose how to publish and distribute your plugin
+# Publish or share your plugin
 
 <!-- markdownlint-disable MD033 -->
 <a id="publish-agents-for-microsoft-365-copilot"></a>
 <!-- markdownlint-enable MD033 -->
 
-**Publishing** is the supplier action that submits or releases a tested plugin through a supported route. **Distribution** is the outcome that makes the published plugin available to its intended audience.
+Publish or share your tested plugin with the people who need it. You can publish it for customers through Microsoft Marketplace, publish it within your organization, or share it directly when your development tool supports that option.
 
-Publishing is separate from administrator approval, acquisition, assignment, deployment, enablement, connection, and use. Those actions happen after publishing when the selected route requires them.
+The publishing or sharing method must support the plugin package, its components, the target Microsoft 365 experiences, and the intended audience.
 
-You enter this stage with the exact tested artifact and its completed publishing-readiness record.
-
-| Term | Meaning |
-|---|---|
-| Share | Give a named audience direct access through a supported sharing workflow. |
-| Submit | Send an object into a review, approval, or certification workflow. |
-| Publish | Put an object into a supported distribution path. |
-| Distribute | Make the published object reachable through its intended channel. |
+Publishing or sharing doesn't automatically complete installation, assignment, access, or connection setup. The required next steps depend on the method.
 
 ## Before you begin
 
 Have:
 
-- The exact tested artifact or published version you intend to distribute.
-- The intended audience and Microsoft 365 experiences.
-- A publishing route that supports the package type, components, authoring tool, and audience.
-- The publisher, support owner, customer-facing information, and required legal links.
+- The exact plugin package that passed validation and testing.
+- The intended audience and target Microsoft 365 experiences.
+- A publishing or sharing method supported by the package and development tool.
+- The plugin name, description, support details, and legal information required by that method.
 
-## Choose a publishing route
+## Choose how to publish or share
 
-| Intended audience | Actor and object | Destination and review | Who acts next |
-|---|---|---|---|
-| Customers in multiple organizations | A publisher submits an eligible offer and the exact tested artifact. | Microsoft Marketplace through the Microsoft 365 and Copilot program in Microsoft Partner Center. Complete the required certification and review. | The customer or customer administrator follows the offer's acquisition and administration procedure. See [Publish publicly through Microsoft Marketplace](publish-plugin-publicly.md). |
-| Users in one organization | A publisher or creator submits the tested plugin, agent, or supported package. | The supported org catalog or organizational publishing flow. Complete product-specific or administrator review when the route requires it. | An administrator and the intended users complete the route's availability and installation actions. See [Publish your plugin or agent to your organization](publish-plugin-organization.md). |
-| Specific people or groups | An owner shares the supported object. | The sharing workflow provided by the authoring experience. Direct sharing doesn't establish org-catalog or Marketplace publication. | The owner and intended users confirm access and required connections. See [Use supported direct sharing](#use-supported-direct-sharing). |
-| One developer or test user | A developer installs the test artifact. | A development environment or sideloading context. This isn't a production publishing route. | The developer or test user returns to [Package your plugin](package-plugin.md) and [test and validate your plugin](validate-plugin.md). |
+| Who needs your plugin? | Method | Follow this procedure |
+|---|---|---|
+| Customers in multiple organizations | Microsoft Marketplace | [Publish your plugin through Microsoft Marketplace](publish-plugin-publicly.md) |
+| Users in your organization | An organization publishing, administrator-upload, or tenant-sharing method supported by your development tool and package | [Publish your plugin to your organization](publish-plugin-organization.md) |
+| Specific people, groups, or your organization through direct sharing | A plugin-sharing workflow supported by your development tool | [Share your plugin directly](#share-your-plugin-directly) |
 
-If none of the routes supports the tested package and intended audience, publishing is blocked. Don't submit a different package type or use a sharing link as a substitute for a supported production route.
+> [!NOTE]
+> This article covers plugin packages. To publish or share an existing standalone (unpackaged) agent, use the product-specific guidance for [Agent Builder](agent-builder-share-manage-agents.md), [Copilot Studio](/microsoft-copilot-studio/microsoft-365-copilot-extend-with-agents#publish-and-configure-an-agent-for-microsoft-365-copilot), or [Work IQ Dev Tools](https://microsoft.github.io/wiqd/concepts/agent-lifecycle/).
 
-<!-- markdownlint-disable MD033 -->
-<a id="microsoft-365-and-copilot-program"></a>
-<!-- markdownlint-enable MD033 -->
+Administrator approval is required only when the selected method or your organization's policy requires it.
 
-## Publish to customers or an organization
+Installing a package for development or testing doesn't publish it for production use. If none of the methods supports the tested package and intended audience, publishing is blocked.
 
-Use the route that matches the audience:
+## Share your plugin directly
 
-- For customers in multiple organizations, follow [Publish publicly through Microsoft Marketplace](publish-plugin-publicly.md).
-- For users in one organization, follow [Publish your plugin or agent to your organization](publish-plugin-organization.md).
+For an alpha plugin package built with Work IQ Dev Tools, use `wiqd plugin share`. Follow [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) for supported audiences, commands, and requirements.
 
-The publishing route determines the submission mechanism, required metadata, review process, and resulting catalog or marketplace status.
+For Work IQ Dev Tools, `wiqd plugin share` publishes the plugin to the plugin registry for the selected audience. For other methods, follow the method-specific guidance to confirm the publication destination and audience. Direct sharing doesn't publish the plugin to Microsoft Marketplace unless that method explicitly supports Marketplace publication.
 
-## Use supported direct sharing
+After sharing, confirm that the intended users can access the plugin and complete any required sign-in or connections.
 
-Some authoring experiences let creators share a plugin, agent, or packaged experience directly with specific people or groups:
+## Prepare your publishing information
 
-- For an agent built with Agent Builder, see [Share and manage agents built in Agent Builder](agent-builder-share-manage-agents.md).
-- For an agent built with Copilot Studio, use the sharing and availability options in [Publish and configure an agent for Microsoft 365 Copilot](/microsoft-copilot-studio/microsoft-365-copilot-extend-with-agents#publish-and-configure-an-agent-for-microsoft-365-copilot).
-- For a supported WIQD declarative agent, use `wiqd agent share`. For an alpha WIQD plugin package, use `wiqd plugin share` for specific users or the tenant. These commands provide direct sharing; they don't create a public Marketplace offer or replace an organizational catalog route.
+The method you select might require:
 
-Direct sharing is product-specific. It can grant access to a named audience without creating a marketplace offer or an organization-managed catalog entry. Follow the authoring experience's rules for ownership, permissions, updates, and removal.
+- Plugin name, package identity, version, description, icons, and listing information.
+- Publisher contact and support information.
+- Privacy statement and terms of use.
+- Required licenses, accounts, permissions, consent, and connections.
+- Supported Microsoft 365 experiences and known limitations.
+- Instructions for components, connections, or services that administrators or users must configure separately.
 
-## Prepare publishing information
+Explain what the package includes and what remains external. For example, a package can include connection information for a remote MCP server while the server runs separately.
 
-The selected route can require:
+Use the method-specific procedure as the source of truth for required information, fields, and policies.
 
-- Plugin identity, package version, name, descriptions, icons, and other listing assets.
-- Publisher or creator identity, contact information, and any publisher provenance supplied by the route, such as Microsoft, the organization or its users, or a third party.
-- Support information, privacy statement, and terms of use.
-- Required licenses, regions, environments, accounts, permissions, and connections.
-- Disclosures for data access, external services, known limitations, and customer configuration.
-- Update, support, security-response, and removal responsibilities.
+## Publish or share the tested package
 
-Use the route-specific procedure as the source of truth for required fields and policies.
+Follow the selected method by using the exact package version that passed validation and testing.
 
-## Record the publishing result
+Check and record the result:
 
-Record:
+| Status | What it means | Next step |
+|---|---|---|
+| Submitted or in review | The package is awaiting review, approval, or certification. Publication isn't complete. | Track the submission and address any requested changes. |
+| Published | The plugin is published through the selected organizational or Marketplace method. | Complete any required steps to make it available to users. |
+| Shared | The plugin is shared through the selected method with the intended audience. The result isn't necessarily an organization-wide catalog or Microsoft Marketplace publication. | Verify the publication destination, access, and required connections. |
+| Rejected or blocked | A requirement prevents publication or sharing. | Resolve the issue, repeat affected tests, and try again. |
 
-- The plugin or agent name, package or artifact identifier, and exact version.
-- The publishing route and the submission, offer, title, or catalog identifier supplied by the route.
-- The current status, such as submitted, in review, published, rejected, or blocked.
-- The publisher or creator identity and any publisher provenance supplied by the route.
-- The intended users or groups and the supported Microsoft 365 experiences.
-- The included agents, skills, connectors, MCP servers, and other required components, including their descriptions and dependencies.
-- The required licenses, permissions, consent, connections, external services, and customer configuration.
-- Known limitations and the owner for support, updates, security response, and removal.
-- The publisher and the administrator, customer, or owner who acts next.
-- The administrator or customer actions required after publication.
+Update the release record with:
 
-Publishing and distribution are complete when the tested plugin has entered the supported marketplace, org catalog, organizational publishing flow, or direct-sharing context for its intended audience.
+- The package identity and exact version.
+- The publishing or sharing method, destination, and result.
+- The intended audience.
+- The required follow-up actions, configuration, and owners.
 
-> [!IMPORTANT]
-> **Publisher complete:** Send the publishing record to the administrator or customer responsible for availability. Don't substitute sideloading or a sharing link when the intended production route requires administrative review, approval, or assignment.
+Submission, publication, and sharing are distinct outcomes. A submitted package remains pending until the selected method reports it as published.
 
-You leave this stage with a published, submitted, or shared object; a complete publishing record; and an identified next owner.
+## Next step: Make your plugin available and govern access
 
-Continue to [choose what happens after publishing](govern-plugins.md). Publication doesn't automatically approve, acquire, deploy, enable, connect, or assign the plugin.
+After you publish or share your plugin, confirm how the intended users can access it. Depending on the publishing method, an administrator might need to install the package, select users, or configure access. Users might also need to sign in or connect an account.
+
+Continue to [Make your plugin available and govern access](govern-plugins.md). Use the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) administration map to find the page for a task.
+
+If your submission is still awaiting review, track its status before proceeding with steps that require a published package.
 
 ## Related content
 
 - [Package your plugin](package-plugin.md)
 - [Test and validate your plugin](validate-plugin.md)
-- [Publish publicly through Microsoft Marketplace](publish-plugin-publicly.md)
-- [Publish your plugin or agent to your organization](publish-plugin-organization.md)
-- [Make plugins and agents available and govern access](govern-plugins.md)
+- [Publish your plugin through Microsoft Marketplace](publish-plugin-publicly.md)
+- [Publish your plugin to your organization](publish-plugin-organization.md)
+- [Make your plugin available and govern access](govern-plugins.md)
+- [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365)

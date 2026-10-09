@@ -14,7 +14,7 @@ ms.custom: [copilot-learning-hub]
 
 Start with the problem your plugin should solve: who needs it, what they need to accomplish, and where they need to use it. Then identify the information, actions, and existing capabilities the solution might need.
 
-You don't need to choose capabilities, development tools, or a publishing route yet. Record what you know and the constraints that could affect those choices. You'll use that plan in [Choose capabilities for your plugin](choose-plugin-components.md).
+You don't need to choose capabilities, development tools, or a publishing method yet. Record what you know and the constraints that could affect those choices. You'll use that plan in [Choose capabilities for your plugin](choose-plugin-components.md).
 
 ## Define the outcome
 
@@ -53,7 +53,7 @@ For each promising asset, record its owner, what it does, where it works, who ca
 
 List the Microsoft experiences in which users need the solution and the audience that should have access. For example, the audience might be a development team, selected users, one organization, or customers in multiple organizations.
 
-Record any known requirements for environments, regions, licensing, discovery, acquisition, and connections. Support can differ by experience, capability, package, and publishing route. Confirm those combinations when you choose components and a distribution route.
+Record any known requirements for environments, regions, licensing, discovery, acquisition, and connections. Support can differ by experience, capability, package, and publishing method. Confirm those combinations when you choose capabilities and a publishing method.
 
 ## Record constraints that could change the design
 
@@ -68,7 +68,7 @@ You don't need to complete every review at this stage. Identify requirements or 
 | **Licensing and cost** | What licenses, usage charges, hosting costs, or servicing costs might affect the choice? |
 | **Operations** | Who will own support, monitoring, updates, access changes, and eventual retirement? |
 
-Use [Data, privacy, and security](data-privacy-security.md) and [Licensing and cost considerations](cost-considerations.md) for the detailed checks. You'll choose and confirm the supported publishing route later.
+Use [Data, privacy, and security](data-privacy-security.md) and [Licensing and cost considerations](cost-considerations.md) for the detailed checks. You choose and confirm the supported publishing method later.
 
 ## What to take to the next step
 
