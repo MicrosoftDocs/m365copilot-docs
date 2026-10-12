@@ -8,11 +8,9 @@ ms.localizationpriority: medium
 ms.date: 10/05/2026
 ---
 
-<!-- cSpell:ignore cutover hstoffels -->
-
 # Migrate agentic retrieval workflows to Work IQ MCP
 
-This guide helps you migrate an agentic application from the [Copilot Retrieval API](https://learn.microsoft.com/microsoft-365/copilot/extensibility/api/ai-services/retrieval/overview) to the Work IQ MCP `retrieve` tool.
+This guide helps you migrate an agentic application from the [Copilot Retrieval API](../../api/ai-services/retrieval/overview.md) to the Work IQ MCP `retrieve` tool.
 
 > [!IMPORTANT]
 > The `retrieve` tool is available in public preview.
@@ -35,7 +33,7 @@ Keep the existing Copilot Retrieval API integration, or run both paths during a 
 - Depends on legacy KQL or `filterExpression` behavior. Additional filter support for the `retrieve` tool is on the roadmap.
 
 > [!IMPORTANT]
-> Migration is not a mechanical endpoint substitution. The application changes from consuming document extracts returned by a REST retrieval endpoint to consuming model-facing grounding Markdown plus structured source metadata returned by an MCP tool.
+> Migration isn't a mechanical endpoint substitution. The application changes from consuming document extracts returned by a REST retrieval endpoint to consuming model-facing grounding Markdown plus structured source metadata returned by an MCP tool.
 
 ## Compare the integration models
 
@@ -82,7 +80,7 @@ Don't remove Microsoft Graph permissions that other Graph operations still requi
    - Is issued for the Work IQ resource.
    - Contains `WorkIQAgent.Ask` in the `scp` claim.
 1. [Configure Work IQ MCP policy](policy-governance-mcp.md) in the Microsoft 365 admin center, if applicable.
-1. [Set up usage-based billing for Copilot Credits](https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-copilot-credits-setup) and assign the migration users to a spending policy that includes Work IQ API.
+1. [Set up usage-based billing for Copilot Credits](/microsoft-365/copilot/usage-based-billing-copilot-credits-setup) and assign the migration users to a spending policy that includes Work IQ API.
 
 Microsoft 365 Copilot licensing or Copilot Retrieval API pay-as-you-go configuration doesn't automatically configure Copilot Credits or a Work IQ API spending policy.
 
@@ -167,7 +165,7 @@ The `retrieve` tool also supports SharePoint Embedded content that the signed-in
 
 Additional filter support is on the roadmap. Until the filters required by your application are available, validate every returned hit against the intended corpus and fail closed when the requested scope can't be represented.
 
-### Add sources that weren't available through the document API
+### Add sources that weren't available through the retrieval API
 
 Use capability objects to constrain email, meetings, Teams messages, people, connectors, or Dataverse.
 
@@ -218,14 +216,14 @@ Use a corpus and scope that both products can represent. Compare:
 
 ### Broader agentic comparison
 
-Evaluate Work IQ capabilities that don't have a direct document-Retrieval-API equivalent:
+Evaluate Work IQ capabilities that don't have a direct document retrieval API equivalent:
 
 - Cross-source retrieval across files, email, meetings, Teams, and people.
 - Connected enterprise sources with `copilot`.
-- Citation-bearing Markdown that can be inserted directly into a model context.
+- Citation-bearing Markdown that you can insert directly into a model context.
 - Source metadata for navigation, evaluation, and auditing.
 
-Don't combine the two groups into one claim of strict feature equivalence. The broader comparison demonstrates the value of Work IQ for agentic workflows; the matched comparison measures migration compatibility.
+Don't combine the two groups into one claim of strict feature equivalence. The broader comparison demonstrates the value of Work IQ for agentic workflows. The matched comparison measures migration compatibility.
 
 ## Validate authorization, governance, and billing
 

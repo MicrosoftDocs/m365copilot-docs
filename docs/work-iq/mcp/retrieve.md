@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.date: 10/05/2026
 ---
 
-<!-- cSpell:ignore hstoffels multistep rerank reranking -->
+<!-- cSpell:ignore rerank -->
 
 # Use the `retrieve` tool in Work IQ MCP
 
@@ -23,7 +23,7 @@ Unlike the `ask` tool, `retrieve` doesn't produce a final answer to the user's q
 - Structured metadata for each cited source.
 - A terminal status and result count.
 
-The `retrieve` tool can search Microsoft 365 data such as email, files, meetings, Teams messages, and people. With the `copilot` strategy, it can also search connected enterprise sources available to Microsoft 365 Copilot.
+The `retrieve` tool can search Microsoft 365 data such as email, files, meetings, Teams messages, and people. By using the `copilot` strategy, it can also search connected enterprise sources available to Microsoft 365 Copilot.
 
 > [!IMPORTANT]
 > Work IQ uses delegated authentication. Retrieval runs in the context of the signed-in user and doesn't grant access to content that the user can't otherwise access.
@@ -89,7 +89,7 @@ Use `copilot` when the source is unknown or might be outside the Microsoft 365 i
 
 ## Limit a request to specific source types
 
-Use `capabilities` to provide a source allow-list for one retrieval request. If you omit `capabilities` or pass an empty array, Work IQ searches all sources available to the selected agent and strategy.
+Use `capabilities` to provide a source allow list for one retrieval request. If you omit `capabilities` or pass an empty array, Work IQ searches all sources available to the selected agent and strategy.
 
 Supported capability names are:
 
@@ -255,7 +255,7 @@ The exact optional metadata varies by source type.
 
 Pass the `markdown` value to the model as grounding context. The Markdown contains inline references such as `[^h1]` that correspond to `retrievalHits[].id`.
 
-Don't parse the Markdown to obtain stable application fields. Its format is optimized for model consumption and can evolve.
+Don't parse the Markdown to obtain stable application fields. Its format is optimized for model consumption and can change.
 
 ### Use retrieval hits for application logic
 
