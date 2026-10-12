@@ -55,7 +55,7 @@ For information about data subject rights and responding to requests to rectify 
 
 ## Admin controls
 
-Administrators can control whether Agent Builder is available to users in their organization. For information about agent admin controls, see [Manage agents for Microsoft 365 Copilot in Integrated Apps](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps). For the broader post-publishing model, see [Make plugins and agents available and govern access](govern-plugins.md).
+Administrators can control whether Agent Builder is available to users in their organization. For information about agent admin controls, see [Manage agents for Microsoft 365 Copilot in Integrated Apps](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps). For the broader post-publishing model, see the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) administration map.
 
 ## Network requirements
 

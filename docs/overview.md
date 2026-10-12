@@ -18,7 +18,7 @@ ms.custom: [copilot-learning-hub]
 
 Start by deciding where people will use the experience:
 
-- **Inside Microsoft 365 Copilot experiences.** Build or configure supported agents, connectors, skills, and tools, and then follow the package, distribution, and governance guidance for the selected route.
+- **Inside Microsoft 365 Copilot experiences.** Build or configure supported agents, connectors, skills, and tools, and then follow the package, publishing, and governance guidance for the selected method.
 - **In your apps and custom agents.** Use APIs and SDKs to add Microsoft 365 work context and Copilot capabilities to experiences that you own and operate.
 
 You can use both approaches in one solution. Choose the primary path based on the user experience, runtime, distribution model, and operating responsibilities.
@@ -49,7 +49,7 @@ You can use both approaches in one solution. Choose the primary path based on th
 | Build a declarative agent that uses Copilot's orchestrator and models | [Declarative agents](overview-declarative-agent.md) |
 | Add reusable instructions or workflows to a declarative agent | [Skills as plugin capabilities](plugin-type-skills.md) |
 | Ground Microsoft 365 Copilot in approved external organizational data | [Microsoft 365 Copilot connectors](overview-copilot-connector.md) |
-| Make remote MCP tools available through a supported route | [MCP servers and plugins](plugin-type-mcp-servers.md) |
+| Make remote MCP tools available through a supported method | [MCP servers and plugins](plugin-type-mcp-servers.md) |
 | Maintain or evaluate a Teams message extension integration | [Message extensions](overview-message-extension-bot.md) |
 | Build and distribute a plugin that brings supported capabilities together | [Plugins for Microsoft 365 Copilot](plugins-overview.md) |
 | Build an application that uses Microsoft 365 work context | [Work IQ APIs](work-iq/index.md) |
@@ -66,14 +66,14 @@ A solution can combine multiple paths. For example:
 - An application can use a Copilot API while a separately packaged agent gives users a related experience inside Microsoft 365 Copilot.
 - A custom engine agent can use Work IQ APIs and also follow the package or distribution requirements of its target channel.
 
-Using an API doesn't by itself select a package or distribution route. Each part of a combined solution retains its own identity, authentication, deployment, distribution, and governance requirements.
+Using an API doesn't by itself select a package or publishing method. Each part of a combined solution retains its own identity, authentication, deployment, distribution, and governance requirements.
 
 ## Plan and continue
 
 - [Plan your plugin](planning-guide.md) across data, identity, security, distribution, compatibility, cost, and ownership.
 - [For builders](builder-guide.md), choose a development experience and implementation guidance.
 - [For administrators](administrator-guide.md), prepare the organization and identify applicable controls.
-- [For ISVs and software publishers](isv-publisher-guide.md), determine the supported customer distribution route.
+- [For ISVs and software publishers](isv-publisher-guide.md), determine the supported customer publishing method.
 
 ## Related content
 

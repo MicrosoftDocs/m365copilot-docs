@@ -242,7 +242,7 @@ When sharing an agent and its knowledge sources, you might encounter the errors 
 
 - [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md)
 - [Privacy statement and terms of use for agents in Agent Builder](agent-builder-publication-privacy-terms-of-use.md)
-- [Publish and distribute plugins for Microsoft 365 Copilot](publish.md)
+- [Publish or share a plugin for Microsoft 365 Copilot](publish.md)
 - [Manage agent requests in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-requests)
 - [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)
 - [Upload into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)

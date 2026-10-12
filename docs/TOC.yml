@@ -9,12 +9,12 @@ items:
     items:
     - name: Build plugins
       href: builder-guide.md
-    - name: Administer plugins and agents
+    - name: Administer plugins
       href: administrator-guide.md
     - name: Publish plugins for customers
       href: isv-publisher-guide.md
 
-  - name: "Quickstart: Share an existing agent"
+  - name: "Quickstart: Create your first plugin with Work IQ Dev Tools"
     href: quickstart-plugin.md
 
   - name: Prepare to build your plugin
@@ -58,6 +58,12 @@ items:
         items:
         - name: Build agents
           href: agent-builder-build-agents.md
+        - name: Share and manage agents
+          href: agent-builder-share-manage-agents.md
+        - name: Submit agents to your org catalog
+          href: agent-builder-submit-to-org-catalog.md
+        - name: Add privacy statement and terms of use
+          href: agent-builder-publication-privacy-terms-of-use.md
         - name: Agent Builder templates
           href: agent-templates-overview.md
         - name: Add knowledge sources
@@ -324,77 +330,46 @@ items:
     - name: Review Microsoft 365 app validation guidelines
       href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context
 
-  - name: Publish and distribute
+  - name: Publish or share
     href: publish.md
     items:
-    - name: Publish publicly through Microsoft Marketplace
+    - name: Publish your plugin through Microsoft Marketplace
       href: publish-plugin-publicly.md
     - name: Publish to your organization
       href: publish-plugin-organization.md
-      items:
-      - name: Share and manage Agent Builder agents
-        href: agent-builder-share-manage-agents.md
-      - name: Submit Agent Builder agents to your org catalog
-        href: agent-builder-submit-to-org-catalog.md
-      - name: Add privacy statement and terms of use
-        href: agent-builder-publication-privacy-terms-of-use.md
 
   - name: Make available and govern
     href: govern-plugins.md
     items:
-    - name: Make plugins and agents available
+    - name: Make your plugin available
       href: deploy-plugin.md
-      items:
-      - name: Manage agent requests in Microsoft 365 admin center
-        href: /microsoft-365/admin/manage/agent-requests?context=/microsoft-365/copilot/extensibility/context
-      - name: Manage agents in Microsoft 365 admin center
-        href: /microsoft-365/admin/manage/manage-copilot-agents-integrated-apps?context=/microsoft-365/copilot/extensibility/context
-      - name: Manage tools for agents in Microsoft 365 admin center
-        href: /microsoft-365/admin/manage/manage-tools-for-agent?context=/microsoft-365/copilot/extensibility/context
-      - name: Deploy Copilot connectors
-        href: /microsoft-365/copilot/connectors/deployment-overview?context=/microsoft-365/copilot/extensibility/context
-
-    - name: Govern access, tools, and connections
+    - name: Govern plugin access and connections
       href: manage.md
       items:
-      - name: Manage the agent registry in Microsoft 365 admin center
-        href: /microsoft-365/admin/manage/agent-registry?context=/microsoft-365/copilot/extensibility/context
-      - name: Agent settings in Microsoft 365 admin center
-        href: /microsoft-365/admin/manage/agent-settings?context=/microsoft-365/copilot/extensibility/context
       - name: Delegate Copilot connector administration
         href: connector-admin-delegation.md
-      - name: Microsoft Agent 365 overview
-        href: /microsoft-agent-365/overview?context=/microsoft-365/copilot/extensibility/context
 
   - name: Monitor, update, and retire
-    href: improve-plugin.md
     items:
-    - name: Monitor usage and health
-      href: improve-plugin.md#monitor-usage-and-health
+    - name: Monitor your plugin
+      href: monitor-plugin.md
+    - name: Monitor agents in Agent Builder
+      href: agent-builder-monitor-agents.md
+    - name: Analyze adoption with Microsoft 365 Insights Agent
+      href: insights-agent-overview.md
       items:
-      - name: Monitor agents in Agent Builder
-        href: agent-builder-monitor-agents.md
-      - name: Analyze adoption with Microsoft 365 Insights Agent
-        href: insights-agent-overview.md
-        items:
-        - name: Quickstart
-          href: insights-agent-quickstart.md
-        - name: Sample prompts
-          href: insights-agent-sample-prompts.md
-        - name: Prompt and capabilities reference
-          href: insights-agent-prompt-reference.md
-        - name: Troubleshooting
-          href: insights-agent-troubleshooting.md
-    - name: Evaluate behavior and quality
-      href: improve-plugin.md#evaluate-behavior-and-quality
-    - name: Release an update
-      href: improve-plugin.md#release-an-update
-    - name: Restrict or block access
-      href: improve-plugin.md#restrict-or-block-access
-    - name: Transfer ownership or support
-      href: improve-plugin.md#transfer-ownership-or-support
-    - name: Retire the plugin or agent
-      href: improve-plugin.md#retire-the-plugin-or-agent
+      - name: Quickstart
+        href: insights-agent-quickstart.md
+      - name: Sample prompts
+        href: insights-agent-sample-prompts.md
+      - name: Prompt and capabilities reference
+        href: insights-agent-prompt-reference.md
+      - name: Troubleshooting
+        href: insights-agent-troubleshooting.md
+    - name: Improve and update your plugin
+      href: improve-plugin.md
+    - name: Retire your plugin
+      href: retire-plugin.md
 
 - name: Apps and APIs
   href: apps-agents-overview.md
