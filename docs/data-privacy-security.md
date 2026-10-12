@@ -82,7 +82,7 @@ During planning, define the outcomes that administrators and service owners requ
 - Monitor inventory, activity, reports, consumption, and audit information.
 - Restrict, block, remove, or retire access when requirements change.
 
-Available controls and administration surfaces vary by component and Microsoft experience. Identify the required governance outcome while you plan. Select the supported package and administration model later, and follow [Make available and govern](govern-plugins.md) for operational guidance.
+Available controls and administration surfaces vary by component and Microsoft experience. Identify the required governance outcome while you plan. Select the supported package and administration model later, and follow [Govern plugin access and connections](manage.md) for operational guidance.
 
 ## Plan for the intended distribution scope
 
@@ -114,5 +114,5 @@ Use these requirements when you [choose capabilities for your plugin](choose-plu
 - [Plan your plugin](planning-guide.md)
 - [Choose capabilities for your plugin](choose-plugin-components.md)
 - [Choose development tools for your plugin](choose-plugin-development-tools.md)
-- [Make plugins and agents available and govern access](govern-plugins.md)
+- [Govern plugin access and connections](manage.md)
 - [Copilot Studio security and governance](/microsoft-copilot-studio/security-and-governance)

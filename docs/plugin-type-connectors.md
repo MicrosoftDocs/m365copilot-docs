@@ -50,7 +50,7 @@ Before you build a connector:
 - Review the [Microsoft-built connectors gallery](/microsoft-365/copilot/connectors/connectors-gallery-microsoft) and [partner-built connectors gallery](/microsoft-365/copilot/connectors/connectors-gallery-partners).
 - Confirm that an existing organizational connection isn't already available.
 - Compare synced and federated models against the freshness, indexing, and data-residency requirements.
-- Confirm that the connector type is supported by the target Microsoft experiences and distribution route.
+- Confirm that the connector type is supported by the target Microsoft experiences and publishing method.
 - Identify gaps that require a custom connector or service.
 
 If you reuse a connector or connection, confirm its owner, audience, service-level expectations, schema, permissions, and support lifecycle.

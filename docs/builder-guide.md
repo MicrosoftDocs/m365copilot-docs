@@ -31,9 +31,9 @@ For a plugin, complete each stage in order.
 | Prepare to build your plugin | Defined outcome, audience, target experiences, capabilities, tools, dependencies, constraints, and owners | [Plan your plugin](planning-guide.md) |
 | Build or reuse capabilities | Working components with recorded versions, dependencies, owners, limitations, and development evidence | [Build or reuse capabilities for your plugin](build-reuse-plugin.md) |
 | Package and test | Integrated components and an exact versioned package tested for structure, references, dependencies, permissions, target-experience behavior, and agent quality when required | [Integrate capabilities](integrate-test-plugin-components.md) |
-| Publish and distribute | The tested plugin published or shared through a supported route, with the destination and next owner recorded | [Choose how to publish and distribute your plugin](publish.md) |
-| Make available and govern | Intended users can access and use the plugin, required connections work, and applicable controls are applied | [Make plugins and agents available and govern access](govern-plugins.md) |
-| Monitor, update, and retire | Usage and feedback reviewed, behavior evaluated when appropriate, updates tested and released, ownership or access adjusted, and retirement completed safely | [Monitor, update, and retire](improve-plugin.md) |
+| Publish or share | The tested plugin published or shared through a supported method, with the destination and next owner recorded | [Publish or share your plugin](publish.md) |
+| Make available and govern | Intended users can access and use the plugin, required connections work, and applicable controls are applied | [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) |
+| Monitor, update, and retire | Usage and feedback reviewed, behavior evaluated when appropriate, updates tested and released, ownership or access adjusted, and retirement completed safely | [Monitor](monitor-plugin.md), [improve and update](improve-plugin.md), or [retire](retire-plugin.md) |
 
 Define the required capabilities and target Microsoft experiences before you select a development tool. Then use [Choose development tools for your plugin](choose-plugin-development-tools.md) to compare the available authoring and packaging paths, including Microsoft 365 Agents Toolkit for supported Microsoft 365 app packages.
 

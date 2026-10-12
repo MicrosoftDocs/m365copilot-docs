@@ -85,7 +85,7 @@ Line-of-business developers and IT admins can publish agents and manage both cus
 
 For more information about deploying agents, actions, and Copilot connectors to your organization, see [Publish agents for Microsoft 365 Copilot](./publish.md).
 
-To learn more about managing agents, see [Compare admin controls for agents by build tool](manage.md).
+To learn more about managing agents, see [Agent Registry in Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry?context=/microsoft-365/copilot/extensibility/context).
 
 ## Comprehensive tools and support
 

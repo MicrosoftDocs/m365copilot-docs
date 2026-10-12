@@ -10,12 +10,12 @@ ms.topic: how-to
 
 # Test and validate your plugin for Microsoft 365 Copilot
 
-Validate and test the exact versioned artifact that you created in [Package your plugin](package-plugin.md). This is the third step in Package and test: validate the package, install it, and confirm its access, behavior, and supported Microsoft 365 experiences.
+Validate and test the exact versioned plugin package that you created in [Package your plugin](package-plugin.md). This step is the third step in **Package and test**: validate the package, install it, and confirm its access, behavior, and supported Microsoft 365 experiences.
 
 The components and external services referenced by the plugin must already work individually and together. This article tests the packaged plugin; it doesn't replace component-level testing or certification.
 
 > [!IMPORTANT]
-> Use the exact artifact you intend to publish. If your packaging route doesn't support your intended components and target experiences, return to [Package your plugin](package-plugin.md) and choose a supported route.
+> Use the exact artifact you intend to publish. If your packaging method doesn't support your intended capabilities and target experiences, return to [Package your plugin](package-plugin.md) and choose a supported method.
 
 ## Before you begin
 
@@ -30,23 +30,21 @@ Prepare:
 
 Use the validation procedure for your packaging route.
 
-| Packaging route | Validation procedure |
+| Plugin package route | Validation procedure |
 |---|---|
-| Work IQ Dev Tools | After you create the package, use `wiqd agent validate --mode deep` to validate the resolved app package. In automated workflows, inspect the JSON `data.valid` result instead of relying only on the process exit code. See [Validation and Microsoft Validation Layer](https://microsoft.github.io/wiqd/concepts/validation-mvl/). |
 | Alpha WIQD plugin package | After `wiqd plugin package` creates the artifact, run `wiqd plugin validate --mode deep`. This package-first validation checks the top-level app manifest, skills, and remote MCP connectors that static plugin validation doesn't cover. In automated workflows, inspect the structured validation result rather than relying only on the process exit code. See [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/#validation-as-a-first-class-step). |
-| Microsoft 365 Agents Toolkit | Use **Validate app package using validation rules** or run `atk validate --app-package-file-path <path>`. See [Validate your app](/microsoftteams/platform/toolkit/teamsfx-preview-and-customize-app-manifest?context=/microsoft-365/copilot/extensibility/context#validate-your-app). |
-| Copilot Studio | Complete the [publish and configure workflow](/microsoft-copilot-studio/microsoft-365-copilot-extend-with-agents#publish-and-configure-an-agent-for-microsoft-365-copilot) and resolve errors before you download the `.zip`. |
-| Another plugin-specific workflow | Follow the validation procedure documented for that package type. |
+| Plugin package built with Microsoft 365 Agents Toolkit | Use **Validate app package using validation rules** or run `atk validate --app-package-file-path <path>`. Confirm that the workflow supports the plugin package and its components. See [Validate your app](/microsoftteams/platform/toolkit/teamsfx-preview-and-customize-app-manifest?context=/microsoft-365/copilot/extensibility/context#validate-your-app). |
+| Plugin package built with another plugin-specific workflow | Follow the validation procedure documented for that package type. |
 
-Confirm that the generated artifact passes the requirements defined for its package type, uses the intended identity, version, and environment, and contains no credentials, secrets, test data, logs, or unrelated files.
+Confirm that the generated plugin package passes the requirements defined for its package type, uses the intended identity, version, and environment, and contains no credentials, secrets, test data, logs, or unrelated files.
 
 Fix package errors, create a new package version, and repeat validation before installing it.
 
 ## Install or sideload the package
 
-1. Use the installation or sideloading procedure for your packaging route.
-1. Install the exact artifact that passed package validation.
-1. Record the artifact version, test environment, identity, and installation result.
+1. Use the installation or sideloading procedure for your plugin packaging route.
+1. Install the exact plugin package that passed package validation.
+1. Record the package version, test environment, identity, and installation result.
 1. Confirm that the installed plugin and expected components are recognized.
 
 If installation fails, fix the package, create a new version, reinstall it, and retest.
@@ -72,7 +70,7 @@ Record the identities, permissions, authentication, consent, connections, endpoi
 
 ## Test supported experiences
 
-Install and test the package in every Microsoft 365 experience you intend to support. Don't infer support in one experience from results in another.
+Install and test the plugin package in every Microsoft 365 experience you intend to support. Don't infer support in one experience from results in another.
 
 Record the experiences, environments, limitations, unsupported combinations, and accepted risks for the release.
 
@@ -100,4 +98,4 @@ Continue to [publish and distribute the plugin](publish.md).
 
 - [Package your plugin](package-plugin.md)
 - [Evaluate agent quality](evaluation-overview.md)
-- [Choose how to publish and distribute your plugin](publish.md)
+- [Publish or share your plugin](publish.md)
