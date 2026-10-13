@@ -169,7 +169,7 @@ Additional filter support is on the roadmap. Until the filters required by your 
 
 Use capability objects to constrain email, meetings, Teams messages, people, or currently available connectors.
 
-Use `copilot` for `GraphConnectors`. Dataverse and Power BI are roadmap sources, not currently supported retrieval sources. Dataverse needs further evaluation before it can be described as supported, and it isn't a near-term priority. No delivery timeline is committed.
+Use `copilot` for `GraphConnectors`. Dataverse and Power BI are roadmap sources, not currently supported retrieval sources. 
 
 ## Convert response handling
 
