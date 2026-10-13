@@ -5,6 +5,10 @@ items:
   href: entity-model.md
 - name: Tool reference
   href: tool-reference.md
+- name: Use the retrieve tool
+  href: retrieve.md
+- name: Migrate from the Copilot Retrieval API
+  href: migrate-retrieval-api.md
 - name: Rego policy
   href: policy-governance-mcp.md
 - name: Quickstarts
