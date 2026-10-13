@@ -5,15 +5,15 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 08/20/2026
+ms.date: 10/13/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
-<!-- cSpell:ignore bizchat bbkr enddatetime eykd SNWE startdatetime Uplg FdvcmtJUSE -->
+<!-- cSpell:ignore bbkr eykd SNWE Uplg FdvcmtJUSE -->
 
 # Work IQ MCP tool reference
 
-The Work IQ MCP server exposes 10 tools through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). This article provides a reference for each tool, including its purpose, parameters, and usage examples.
+The Work IQ MCP server exposes tools through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io). This article provides a reference for each tool, including its purpose, parameters, and usage examples.
 
 Work IQ MCP uses Microsoft Entra authentication and the signed-in user's Microsoft 365 permissions when its tools access Microsoft Graph resource paths. A separate tenant policy layer evaluates each tool request and blocks mutation operations by default. Administrators can enable supported create, update, delete, and action requests through tenant policy. For details, see [Policy governance for Work IQ MCP](policy-governance-mcp.md).
 
@@ -43,9 +43,9 @@ A successful response contains a `results` property that is an array of objects 
 
 > [!NOTE]
 >
-> - Per-tenant policy limits apply to collection results. If you don't specify a value, a default `$top` of 25 is injected, with a maximum cap of 100.
+> - Per-tenant policy limits apply to collection results. If you don't specify a value, the system injects a default `$top` of 25, with a maximum cap of 100.
 > - Chat messages are capped at 10 per request.
-> - The `$skip` and `$skiptoken` query parameters are blocked.
+> - The system blocks the `$skip` and `$skiptoken` query parameters.
 
 #### Example
 
@@ -395,7 +395,7 @@ A successful response contains a `statusCode` property set to 204 in the `struct
 
 ### do_action
 
-Executes a side-effect action such as sending mail, copying, or moving items.
+Runs a side-effect action such as sending mail, copying, or moving items.
 
 #### Parameters
 
@@ -528,7 +528,7 @@ Copilot tools provide natural-language intelligence by invoking Microsoft 365 Co
 
 ### ask
 
-Asks Microsoft 365 Copilot (or a specific agent) a natural-language question about the user's data. When you provide an `agentId`, the request goes to that specific agent. When you omit it, the request goes to the built-in Microsoft 365 Copilot agent.
+Asks Microsoft 365 Copilot (or a specific agent) a natural-language question about your data. When you provide an `agentId`, the request goes to that specific agent. When you omit it, the request goes to the built-in Microsoft 365 Copilot agent.
 
 #### Parameters
 
@@ -575,6 +575,40 @@ A successful response contains a JSON string in the `text` property of a [TextCo
   "conversationId": "cc7d6f5202cb4c5b814b120440e48ede"
 }
 ```
+
+---
+
+### retrieve
+
+Searches Microsoft 365 data and connected enterprise sources that the signed-in user can access. The tool returns model-friendly grounding Markdown with inline citations and structured metadata for each cited source. The `grounding` strategy is the default.
+
+> [!IMPORTANT]
+> The `retrieve` tool is available in public preview.
+
+#### Parameters
+
+| Parameter      | Type         | Required | Description                                                                                                                                                                                                                           |
+|----------------|--------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `query`        | string       | Yes      | The natural-language query that describes what to search for.                                                                                                                                                                         |
+| `agentId`      | string       | No       | The ID of an agent to use for retrieval. If you omit this parameter, retrieval uses the built-in Microsoft 365 Copilot agent. Don't combine a nondefault agent ID with a nonempty `capabilities` array. |
+| `strategy`     | string       | No       | The retrieval strategy. Valid values are `grounding` and `copilot`. The default is `grounding`. Use `copilot` when data might be outside the Microsoft 365 index or when you use the `GraphConnectors` capability. |
+| `capabilities` | object array | No       | A source allow list for the request. Currently supported capability names are `People`, `Meetings`, `OneDriveAndSharePoint`, `Email`, `TeamsMessages`, and `GraphConnectors`. Omit it or pass an empty array to search all sources available to the agent and strategy. |
+
+Dataverse and Power BI are roadmap sources, not currently supported retrieval sources. Although the schema includes a `Dataverse` capability name, Dataverse needs further evaluation before it can be described as supported, and it isn't a near-term priority. No delivery timeline is committed.
+
+#### Response
+
+The authoritative response payload is in the `application/vnd.ms-workiq.retrieval` property of `structuredContent`.
+
+| Property         | Type         | Description                                                                                                  |
+|------------------|--------------|--------------------------------------------------------------------------------------------------------------|
+| `markdown`       | string       | Model-friendly grounding content with inline citations that correspond to IDs in `retrievalHits`.            |
+| `retrievalHits`  | object array | Structured source metadata, including source URLs, identifiers, and source-specific metadata when available. |
+| `resultCount`    | integer      | The number of retrieval hits.                                                                                |
+| `stoppedReason`  | string       | The terminal retrieval status, such as `completed`, `cancelled`, or `error`.                                 |
+| `conversationId` | string       | The conversation identifier, when returned.                                                                  |
+
+For request examples, capability-specific scoping, SharePoint Embedded support, response-processing guidance, and error handling, see [Use the `retrieve` tool in Work IQ MCP](retrieve.md).
 
 ---
 
@@ -628,7 +662,7 @@ A successful response contains a JSON string in the `text` property of a [TextCo
 
 ## Schema tools
 
-Schema tools enable runtime discovery of available API paths and their OpenAPI schemas. These tools allow agents to discover what operations are available without loading large schema definitions into context upfront.
+Schema tools enable runtime discovery of available API paths and their OpenAPI schemas. By using these tools, agents can discover what operations are available without loading large schema definitions into context upfront.
 
 ### get_schema
 
@@ -641,8 +675,8 @@ Retrieves the OpenAPI schema for a specific operation, identified by path and op
 
 | Parameter       | Type   | Required | Description                                                                                                                                                                               |
 |-----------------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `operationIds`  | string | No       | The operation ID of the API to get the schema for (for example, `me.CreateMessages`). Use `operationIds` or `path`, not both.                                                             |
-| `path`          | string | No       | The API path to get the schema for (for example, `/me/messages`). Use `operationIds` or `path`, not both.                                                                                 |
+| `operationIds`  | string | No       | The operation ID of the API to get the schema for (for example, `me.CreateMessages`). Use `operationIds` or `path`, but not both.                                                             |
+| `path`          | string | No       | The API path to get the schema for (for example, `/me/messages`). Use `operationIds` or `path`, but not both.                                                                                 |
 | `operationType` | string | Yes      | The operation type. Valid values are `fetch`, `create`, and `update`.                                                                                                                     |
 | `format`        | string | No       | The desired output format. Valid values are `jsonschema` ([JSON Schema](https://json-schema.org/) format) and `typescript` (TypeScript definitions). If omitted, JSON schema is returned. |
 | `backend`       | string | No       | Reserved for future use.                                                                                                                                                                  |
@@ -792,5 +826,7 @@ The server doesn't perform automatic retries. The MCP client receives errors and
 ## Related content
 
 - [Work IQ MCP overview](overview.md)
+- [Use the retrieve tool in Work IQ MCP](retrieve.md)
+- [Migrate agentic retrieval workflows to Work IQ MCP](migrate-retrieval-api.md)
 - [Work IQ API overview](../api-overview.md)
 - [Work IQ API permissions reference](../permissions.md)
