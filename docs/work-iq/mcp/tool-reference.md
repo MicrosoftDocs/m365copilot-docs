@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 10/05/2026
+ms.date: 10/13/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -587,12 +587,14 @@ Searches Microsoft 365 data and connected enterprise sources that the signed-in 
 
 #### Parameters
 
-| Parameter      | Type         | Required | Description                                                                                                                                                                                                                                                                |
-|----------------|--------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `query`        | string       | Yes      | The natural-language query that describes what to search for.                                                                                                                                                                                                              |
-| `agentId`      | string       | No       | The ID of an agent to use for retrieval. If you omit this parameter, retrieval uses the built-in Microsoft 365 Copilot agent. Don't combine a nondefault agent ID with a nonempty `capabilities` array.                                                                                    |
-| `strategy`     | string       | No       | The retrieval strategy. Valid values are `grounding` and `copilot`. The default is `grounding`. Use `copilot` when data might be outside the Microsoft 365 index or when you use the `GraphConnectors` or `Dataverse` capability.                                          |
-| `capabilities` | object array | No       | A source allow list for the request. Supported capability names are `People`, `Meetings`, `OneDriveAndSharePoint`, `Email`, `TeamsMessages`, `GraphConnectors`, and `Dataverse`. Omit it or pass an empty array to search all sources available to the agent and strategy. |
+| Parameter      | Type         | Required | Description                                                                                                                                                                                                                           |
+|----------------|--------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `query`        | string       | Yes      | The natural-language query that describes what to search for.                                                                                                                                                                         |
+| `agentId`      | string       | No       | The ID of an agent to use for retrieval. If you omit this parameter, retrieval uses the built-in Microsoft 365 Copilot agent. Don't combine a nondefault agent ID with a nonempty `capabilities` array. |
+| `strategy`     | string       | No       | The retrieval strategy. Valid values are `grounding` and `copilot`. The default is `grounding`. Use `copilot` when data might be outside the Microsoft 365 index or when you use the `GraphConnectors` capability. |
+| `capabilities` | object array | No       | A source allow list for the request. Currently supported capability names are `People`, `Meetings`, `OneDriveAndSharePoint`, `Email`, `TeamsMessages`, and `GraphConnectors`. Omit it or pass an empty array to search all sources available to the agent and strategy. |
+
+Dataverse and Power BI are roadmap sources, not currently supported retrieval sources. Although the schema includes a `Dataverse` capability name, Dataverse needs further evaluation before it can be described as supported, and it isn't a near-term priority. No delivery timeline is committed.
 
 #### Response
 

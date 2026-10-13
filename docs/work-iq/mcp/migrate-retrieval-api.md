@@ -5,7 +5,7 @@ author: MSFTgraph-sorceress
 ms.author: hstoffels
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 10/05/2026
+ms.date: 10/13/2026
 ---
 
 # Migrate agentic retrieval workflows to Work IQ MCP
@@ -23,7 +23,7 @@ Work IQ MCP is a strong migration target when your application:
 
 - Uses delegated user authentication.
 - Uses retrieved content as grounding for a model or agent.
-- Benefits from searching email, meetings, Teams messages, people, Dataverse, or connected enterprise sources in addition to files.
+- Benefits from searching email, meetings, Teams messages, people, or currently available connected enterprise sources in addition to files.
 - Can consume model-friendly Markdown and a structured source-metadata sidecar.
 - Can use MCP tool discovery instead of a fixed REST-only contract.
 
@@ -167,9 +167,9 @@ Additional filter support is on the roadmap. Until the filters required by your 
 
 ### Add sources that weren't available through the retrieval API
 
-Use capability objects to constrain email, meetings, Teams messages, people, connectors, or Dataverse.
+Use capability objects to constrain email, meetings, Teams messages, people, or currently available connectors.
 
-Use `copilot` for `GraphConnectors` and `Dataverse`.
+Use `copilot` for `GraphConnectors`. Dataverse and Power BI are roadmap sources, not currently supported retrieval sources. Dataverse needs further evaluation before it can be described as supported, and it isn't a near-term priority. No delivery timeline is committed.
 
 ## Convert response handling
 

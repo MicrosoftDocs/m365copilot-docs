@@ -5,7 +5,7 @@ author: MSFTgraph-sorceress
 ms.author: hstoffels
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 10/05/2026
+ms.date: 10/13/2026
 ---
 
 <!-- cSpell:ignore rerank -->
@@ -51,7 +51,10 @@ The `strategy` parameter controls where Work IQ searches.
 
 If you omit `strategy`, Work IQ uses `grounding`.
 
-The `GraphConnectors` and `Dataverse` capabilities aren't supported with `grounding`. Use `copilot` when you include either capability.
+The `GraphConnectors` capability isn't supported with `grounding`. Use `copilot` when you include it.
+
+> [!NOTE]
+> Dataverse and Power BI are roadmap sources, not currently supported retrieval sources. Dataverse needs further evaluation before it can be described as supported, and it isn't a near-term priority. No delivery timeline is committed.
 
 ## Run a basic retrieval
 
@@ -99,7 +102,8 @@ Supported capability names are:
 - `Email`
 - `TeamsMessages`
 - `GraphConnectors`
-- `Dataverse`
+
+The schema also includes a `Dataverse` capability name, but Dataverse isn't currently a supported retrieval source. Don't use it to imply current support.
 
 ### Search a SharePoint site, SharePoint Embedded container, or OneDrive location
 
