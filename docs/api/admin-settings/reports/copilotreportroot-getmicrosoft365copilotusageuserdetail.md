@@ -44,20 +44,7 @@ For more information about report views and names, see [Microsoft 365 reports - 
 | Delegated (personal Microsoft account) | Not supported.               | Not supported.                |
 | Application                            | Reports.Read.All             | Not available.                |
 
-> [!IMPORTANT]
->
-> For delegated permissions to allow apps to read service usage reports on behalf of a user, the tenant administrator must have assigned the user one of the following Microsoft Entra ID limited administrator roles:
->
-> - Company Administrator
-> - AI Administrator
-> - Exchange Administrator
-> - SharePoint Administrator
-> - Lync Administrator
-> - Teams Service Administrator
-> - Teams Communications Administrator
-> - Reports Reader
->
-> For more information, see [Authorization for APIs to read Microsoft 365 usage reports](/graph/reportroot-authorization).
+[!INCLUDE [rbac-copilot-usage-details-apis](../../includes/rbac-copilot-usage-details-apis.md)]
 
 ## HTTP request
 
