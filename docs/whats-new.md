@@ -17,6 +17,12 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
+## October 2026
+
+### Daily user detail for Copilot usage reports
+
+A new [getMicrosoft365CopilotUsageUserDetailByDate](api/admin-settings/reports/copilotreportroot-getmicrosoft365copilotusageuserdetailbydate.md) function returns user-level Microsoft 365 Copilot usage detail for a single selected date, providing the user-date grain that complements the existing period-based usage report.
+
 ## August 2026
 
 ### Review requested packages in the Package Management API

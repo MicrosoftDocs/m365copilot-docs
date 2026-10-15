@@ -3,7 +3,7 @@ title: copilotReportRoot resource type
 description: Container for Microsoft 365 Copilot reporting resources. Copilot usage reports APIs are available as standard REST APIs under the Microsoft Graph namespace.
 author: mestew
 ms.author: mstewart
-ms.date: 01/08/2026
+ms.date: 10/09/2026
 ms.localizationpriority: medium
 ms.topic: reference
 doc_type: resourcePageType
@@ -27,11 +27,12 @@ For more information about report views and names, see [Microsoft 365 reports - 
 
 ## Methods
 
-| Method                                                                                                   | Return type | Description                                                                                                         |
-|:---------------------------------------------------------------------------------------------------------|:------------|:--------------------------------------------------------------------------------------------------------------------|
-| [getMicrosoft365CopilotUserCountSummary](../copilotreportroot-getmicrosoft365copilotusercountsummary.md) | Stream      | Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.         |
-| [getMicrosoft365CopilotUserCountTrend](../copilotreportroot-getmicrosoft365copilotusercounttrend.md)     | Stream      | Get the trend in the daily number of active and enabled users of Microsoft 365 Copilot for a specified time period. |
-| [getMicrosoft365CopilotUsageUserDetail](../copilotreportroot-getmicrosoft365copilotusageuserdetail.md)   | Stream      | Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.                                  |
+| Method                                                                                                             | Return type | Description                                                                                                         |
+|:-------------------------------------------------------------------------------------------------------------------|:------------|:--------------------------------------------------------------------------------------------------------------------|
+| [getMicrosoft365CopilotUserCountSummary](../copilotreportroot-getmicrosoft365copilotusercountsummary.md)           | Stream      | Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.         |
+| [getMicrosoft365CopilotUserCountTrend](../copilotreportroot-getmicrosoft365copilotusercounttrend.md)               | Stream      | Get the trend in the daily number of active and enabled users of Microsoft 365 Copilot for a specified time period. |
+| [getMicrosoft365CopilotUsageUserDetail](../copilotreportroot-getmicrosoft365copilotusageuserdetail.md)             | Stream      | Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.                                  |
+| [getMicrosoft365CopilotUsageUserDetailByDate](../copilotreportroot-getmicrosoft365copilotusageuserdetailbydate.md) | Stream      | Get user-level Microsoft 365 Copilot usage detail for a single selected date.                                       |
 
 ## Properties
 
