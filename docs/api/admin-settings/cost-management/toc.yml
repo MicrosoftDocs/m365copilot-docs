@@ -1,0 +1,101 @@
+items:
+- name: Overview
+  href: overview.md
+- name: Spending policy
+  items:
+  - name: Spending policy
+    href: resources/spendingpolicy.md
+  - name: List
+    href: spendingpolicy-list.md
+  - name: Create
+    href: spendingpolicy-create.md
+  - name: Get
+    href: spendingpolicy-get.md
+  - name: Update
+    href: spendingpolicy-update.md
+  - name: Delete
+    href: spendingpolicy-delete.md
+  - name: List assigned groups
+    href: selectedgroupsspendingpolicy-list-assignedgroups.md
+  - name: Add assigned group
+    href: selectedgroupsspendingpolicy-post-assignedgroups.md
+  - name: Remove assigned group
+    href: selectedgroupsspendingpolicy-delete-assignedgroups.md
+- name: Spending policy service setting
+  items:
+  - name: Spending policy service setting
+    href: resources/spendingpolicyservicesetting.md
+  - name: List
+    href: spendingpolicyservicesetting-list.md
+  - name: Create
+    href: spendingpolicyservicesetting-create.md
+  - name: Get
+    href: spendingpolicyservicesetting-get.md
+  - name: Update
+    href: spendingpolicyservicesetting-update.md
+- name: Alert setting
+  items:
+  - name: Cost management alert setting
+    href: resources/costmanagementalertsetting.md
+  - name: Get
+    href: costmanagementalertsetting-get.md
+  - name: Update
+    href: costmanagementalertsetting-update.md
+  - name: Delete
+    href: costmanagementalertsetting-delete.md
+  - name: List recipients
+    href: costmanagementalertsetting-list-recipients.md
+  - name: Add recipient
+    href: costmanagementalertsetting-post-recipients.md
+  - name: Remove recipient
+    href: costmanagementalertsetting-delete-recipients.md
+- name: User balance
+  items:
+  - name: Cost management user balance
+    href: resources/costmanagementuserbalance.md
+  - name: Get
+    href: costmanagementuserbalance-get.md
+- name: User service balance
+  items:
+  - name: Cost management user service balance
+    href: resources/costmanagementuserservicebalance.md
+  - name: List
+    href: costmanagementuserservicebalance-list.md
+  - name: Get
+    href: costmanagementuserservicebalance-get.md
+- name: Tenant credit balance
+  items:
+  - name: Cost management root
+    href: resources/costmanagementroot.md
+  - name: Get tenant credit balance
+    href: costmanagementroot-gettenantcreditbalance.md
+- name: Resource types
+  items:
+  - name: All users spending policy
+    href: resources/allusersspendingpolicy.md
+  - name: Selected groups spending policy
+    href: resources/selectedgroupsspendingpolicy.md
+- name: Complex types
+  items:
+  - name: Cost management tenant credit balance
+    href: resources/costmanagementtenantcreditbalance.md
+  - name: Cost management billing method balance
+    href: resources/costmanagementbillingmethodbalance.md
+  - name: Cost management data status
+    href: resources/costmanagementdatastatus.md
+  - name: Cost management quantity
+    href: resources/costmanagementquantity.md
+  - name: Limited cost management quantity
+    href: resources/limitedcostmanagementquantity.md
+  - name: Unlimited cost management quantity
+    href: resources/unlimitedcostmanagementquantity.md
+  - name: Selection data status
+    href: resources/selectiondatastatus.md
+  - name: Cost management unevaluated service
+    href: resources/costmanagementunevaluatedservice.md
+  - name: Cost management alert threshold
+    href: resources/costmanagementalertthreshold.md
+  - name: Percentage cost management alert threshold
+    href: resources/percentagecostmanagementalertthreshold.md
+  - name: Absolute cost management alert threshold
+    href: resources/absolutecostmanagementalertthreshold.md

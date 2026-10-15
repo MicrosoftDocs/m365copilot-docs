@@ -21,6 +21,8 @@ items:
   href: agent-registration/toc.yml
 - name: Package management API
   href: package/toc.yml
+- name: Cost Management API
+  href: cost-management/toc.yml
 - name: Complex types
   items:
   - name: Copilot admin
