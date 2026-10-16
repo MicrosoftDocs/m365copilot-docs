@@ -33,7 +33,7 @@ The `retrieve` tool can search Microsoft 365 data such as email, files, meetings
 Complete the following prerequisites:
 
 - [Enable your tenant for Work IQ](../enable-work-iq.md).
-- [Set up usage-based billing for Copilot Credits](https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-copilot-credits-setup) and assign the calling users to a spending policy that includes Work IQ API.
+- [Set up usage-based billing for Copilot Credits](/microsoft-365/copilot/usage-based-billing-copilot-credits-setup) and assign the calling users to a spending policy that includes Work IQ API.
 - Register a client application and grant the delegated `WorkIQAgent.Ask` permission. For more information, see [Work IQ API permissions reference](../permissions.md).
 - Connect an MCP client to `https://workiq.svc.cloud.microsoft/mcp`.
 - If your organization uses Work IQ MCP policy, confirm that Work IQ MCP is enabled. For more information, see [Policy governance for Work IQ MCP](policy-governance-mcp.md).

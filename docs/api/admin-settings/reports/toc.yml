@@ -9,3 +9,5 @@
       href: copilotreportroot-getmicrosoft365copilotusercounttrend.md
     - name: Get Copilot usage user detail
       href: copilotreportroot-getmicrosoft365copilotusageuserdetail.md
+    - name: Get Copilot usage user detail by date (preview)
+      href: copilotreportroot-getmicrosoft365copilotusageuserdetailbydate.md
