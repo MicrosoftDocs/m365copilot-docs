@@ -4,7 +4,7 @@ description: Represents a message in a Copilot conversation being continued thro
 author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.topic: reference
-ms.date: 06/24/2026
+ms.date: 10/02/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 zone_pivot_groups: work-iq-rest-api-versions
@@ -25,14 +25,17 @@ Represents a message in a Copilot conversation being continued through the [Work
 
 ## Properties
 
-| Property           | Type                                                                  | Description                                                                                                                           |
-|:-------------------|:----------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
-| `adaptiveCards`    | Edm.Untyped collection                                                | List of raw JSON representations of adaptive cards. This property may be empty.                                                       |
-| `createdDateTime`  | DateTimeOffset                                                        | The timestamp when the chat message was created.                                                                                      |
-| `id`               | String                                                                | The identifier for the Copilot conversation. This is used as a path parameter when continuing a synchronous or streamed conversation. |
-| `references`       | [copilotConversationReferenceMap](copilotconversationreferencemap.md) | A keyed map of conversation references.                                                                                               |
-| `sensitivityLabel` | [searchSensitivityLabelInfo](searchsensitivitylabelinfo.md)           | Defines the highest sensitivity (most restricted) resource used to create the chat message.                                           |
-| `text`             | String                                                                | The chat message text. This either recaps the submitted prompt or articulates the Work IQ Chat API's response.                        |
+| Property           | Type                                                                           | Description                                                                                                                       |
+|:-------------------|:-------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------|
+| `adaptiveCards`    | Edm.Untyped collection                                                         | List of raw JSON representations of adaptive cards. This property may be empty.                                                   |
+| `attributions`     | [copilotConversationAttribution](copilotconversationattribution.md) collection | The citations and annotations included in the message. This property is an empty collection when the message has no attributions. |
+| `createdDateTime`  | DateTimeOffset                                                                 | The timestamp when the chat message was created.                                                                                  |
+| `id`               | String                                                                         | The unique identifier of the message.                                                                                             |
+| `references`       | [copilotConversationReferenceMap](copilotconversationreferencemap.md)          | A keyed map of conversation references.                                                                                           |
+| `sensitivityLabel` | [searchSensitivityLabelInfo](searchsensitivitylabelinfo.md)                    | Defines the highest sensitivity (most restricted) resource used to create the chat message.                                       |
+| `text`             | String                                                                         | The chat message text. This either recaps the submitted prompt or articulates the Work IQ Chat API's response.                    |
+
+Use `attributions` to render the citations and annotations associated with response text. Each attribution identifies its type, source, display text, destination URL, and optional image metadata. The `references` property is a separate keyed map of conversation reference metadata.
 
 ## Relationships
 
@@ -51,6 +54,11 @@ The following JSON representation shows the resource type.
   "adaptiveCards": [
     {
       "@odata.type": "#microsoft.graph.Edm.Untyped"
+    }
+  ],
+  "attributions": [
+    {
+      "@odata.type": "#microsoft.graph.copilotConversationAttribution"
     }
   ],
   "references": {
