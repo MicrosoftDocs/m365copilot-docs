@@ -4,7 +4,7 @@ description: Update an agentRegistration object.
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 04/30/2026
+ms.date: 09/18/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -49,6 +49,7 @@ In the request body, supply a JSON representation of the properties to update on
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
+| `a2aAuthorization` | [a2aAuthorization](resources/a2aauthorization.md) | Authorization configuration used to invoke an Agent2Agent server. Optional. When supplied, the `type` property is required. |
 | `agentCard` | [Json](/graph/api/resources/json) | Flexible JSON manifest containing agent card information. Optional. |
 | `agentIdentityBlueprintId` | String | Agent identity blueprint identifier. Optional. |
 | `agentIdentityId` | String | Entra agent identity identifier. Optional. |
@@ -65,11 +66,13 @@ In the request body, supply a JSON representation of the properties to update on
 
 If successful, this method returns a `200 OK` response code. It doesn't return anything in the response body.
 
-## Example
+## Examples
 
-### Request
+### Example 1: Update agent properties
 
-The following example shows a request.
+#### Request
+
+The following example updates general properties of an agent registration.
 
 ```http
 PATCH https://graph.microsoft.com/beta/copilot/agentRegistrations/550e8400-e29b-41d4-a716-446655440000
@@ -84,7 +87,33 @@ Content-Type: application/json
 }
 ```
 
-### Response
+#### Response
+
+The following example shows the response.
+
+```http
+HTTP/1.1 200 OK
+```
+
+### Example 2: Update A2A authorization
+
+#### Request
+
+The following example updates the authorization configuration used to invoke an Agent2Agent server.
+
+```http
+PATCH https://graph.microsoft.com/beta/copilot/agentRegistrations/550e8400-e29b-41d4-a716-446655440000
+Content-Type: application/json
+
+{
+  "a2aAuthorization": {
+    "referenceId": "8c4e2a71-6b9d-43f5-a0e8-7d1c3b5f9a62",
+    "type": "apiKeyPluginVault"
+  }
+}
+```
+
+#### Response
 
 The following example shows the response.
 
