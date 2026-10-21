@@ -4,7 +4,7 @@ description: Create a new agentRegistration object.
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 04/30/2026
+ms.date: 09/18/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -82,6 +82,10 @@ Content-Type: application/json
   "managedByAppId": "7c3f8d45-e29b-41d4-a716-556677889900",
   "agentIdentityId": "identity-550e8400-e29b-41d4-a716-446655440000",
   "agentIdentityBlueprintId": "blueprint-550e8400-e29b-41d4-a716-446655440000",
+  "a2aAuthorization": {
+    "referenceId": "2f1a9b8c-4d3e-4a7f-9c6b-1e5d8a2f7b30",
+    "type": "oAuthPluginVault"
+  },
   "agentCard": {
     "name": "Contoso Travel Booking Agent",
     "version": "1.0.0",
