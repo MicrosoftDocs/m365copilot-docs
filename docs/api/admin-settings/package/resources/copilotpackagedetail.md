@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 06/30/2026
+ms.date: 08/07/2026
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -54,7 +54,7 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 |----------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `activeUsers`              | Int32                                                                                    | The number of active users in the last 30 days.                                                                                                                                       |
 | `acquireUsersAndGroups`    | [packageAccessEntity](packageaccessentity.md) collection                                 | Collection of users and groups that have acquired or installed this package for use within the tenant.                                                                                |
-| `agentIdentityId`          | String                                                                                   | The Microsoft Entra Agent ID of the agent. Inherited from copilotPackage.                                                                                                             |
+| `agentIdentityId`          | String                                                                                   | Identifier of the Microsoft Entra agent identity associated with the Copilot package. Read-only. Inherited from copilotPackage.                                                       |
 | `allowedUsersAndGroups`    | [packageAccessEntity](packageaccessentity.md) collection                                 | Collection of users and groups that are currently permitted to access and use this package within the tenant.                                                                         |
 | `appId`                    | String                                                                                   | Associated Azure AD application registration ID for this package. Inherited from copilotPackage.                                                                                      |
 | `assetId`                  | String                                                                                   | Identifier used to reference this package in the asset store. Inherited from copilotPackage.                                                                                          |

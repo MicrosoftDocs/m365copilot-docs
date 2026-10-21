@@ -170,7 +170,8 @@ Content-Type: application/json
       "manifestVersion": "1.1",
       "manifestId": "diligent-teams-uploader",
       "appId": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
-      "assetId": "asset-00001"
+      "assetId": "asset-00001",
+      "agentIdentityId": "11111111-2222-3333-4444-555555555555"
     }
   ]
 }

@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 08/27/2026
+ms.date: 10/20/2026
 ms.topic: overview
 ---
 
@@ -32,6 +32,10 @@ A new [getMicrosoft365CopilotUsageUserDetailByDate](api/admin-settings/reports/c
 ### Review requested packages in the Package Management API
 
 Administrators can review the agents that users in the organization requested by filtering [List packages](api/admin-settings/package/copilotpackages-list.md) on the `requestStatus` or `requestType` property.
+
+### Copilot package agent identity
+
+The Package Management API now returns the Microsoft Entra agent identity identifier associated with a Copilot package in the `agentIdentityId` property. The property is available when you [list Copilot packages](api/admin-settings/package/copilotpackages-list.md) or [get Copilot package details](api/admin-settings/package/copilotpackagedetail-get.md).
 
 ## July 2026
 

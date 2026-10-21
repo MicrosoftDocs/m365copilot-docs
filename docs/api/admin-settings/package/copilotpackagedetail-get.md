@@ -6,7 +6,7 @@ ms.author: pomuth
 ms.topic: reference
 doc_type: apiPageType
 ms.localizationpriority: high
-ms.date: 06/30/2026
+ms.date: 08/07/2026
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -116,6 +116,7 @@ Content-Type: application/json
   "manifestId": "contoso-sales-agent",
   "appId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
   "assetId": "asset-00042",
+  "agentIdentityId": "11111111-2222-3333-4444-555555555555",
   "longDescription": "This is a detailed description for package abc. It provides comprehensive information about the package functionality, features, and usage scenarios.",
   "categories": [
     "Development",

@@ -13,3 +13,7 @@ items:
     href: agentregistration-update.md
   - name: Delete
     href: agentregistration-delete.md
+- name: Complex types
+  items:
+  - name: A2A authorization
+    href: resources/a2aauthorization.md

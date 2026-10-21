@@ -4,7 +4,7 @@ description: Represents an agent registration containing metadata, endpoint conf
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 04/30/2026
+ms.date: 09/18/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -30,6 +30,7 @@ Represents an agent registration containing metadata, endpoint configuration, an
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
+| `a2aAuthorization` | [a2aAuthorization](a2aauthorization.md) | Authorization configuration used to invoke an Agent2Agent server. Optional. |
 | `agentCard` | [Json](/graph/api/resources/json) | Flexible JSON manifest containing agent card information following public manifest specifications. Can include display name, description, icon URL, version, provider, capabilities, skills, security, and other manifest-defined fields. |
 | `agentIdentityBlueprintId` | String | Agent identity blueprint identifier. |
 | `agentIdentityId` | String | Entra agent identity identifier. |
@@ -69,6 +70,9 @@ The following JSON representation shows the resource type.
   "originatingStore": "String",
   "agentIdentityId": "String",
   "agentIdentityBlueprintId": "String",
+  "a2aAuthorization": {
+    "@odata.type": "microsoft.graph.a2aAuthorization"
+  },
   "agentCard": {
     "@odata.type": "microsoft.graph.Json"
   }
