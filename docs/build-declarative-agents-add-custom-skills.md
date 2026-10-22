@@ -19,7 +19,7 @@ A custom skill is a modular, reusable component that you add to a declarative ag
 To learn what custom skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Custom skills in declarative agents](declarative-agent-skills.md).
 
 > [!IMPORTANT]
-> This guide assumes you completed the [Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](build-declarative-agents.md) tutorial. Adding a custom skill requires declarative agent manifest version 1.9. If you're using an agent created with an older version of Agents Toolkit, you might need to update the version of your agent manifest. <!--For more information, see [Declarative agent manifest reference](declarative-agent-manifest-1.9.md).-->
+> This guide assumes you completed the [Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](build-declarative-agents.md) tutorial. Adding a custom skill requires declarative agent manifest version 1.9. If you're using an agent created with an older version of Agents Toolkit, you might need to update the version of your agent manifest. For more information, see [Declarative agent manifest reference](declarative-agent-manifest-1.9.md).
 
 ## Prerequisites
 

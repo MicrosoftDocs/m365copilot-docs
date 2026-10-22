@@ -14,11 +14,11 @@ ms.topic: how-to
 
 # Retrieve capability IDs for the declarative agent manifest
 
-This article describes how to retrieve the IDs that you need to include Copilot connectors and SharePoint/OneDrive files in the `capabilities` section of your [declarative agent manifest](declarative-agent-manifest-1.8.md). You can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
+This article describes how to retrieve the IDs that you need to include Copilot connectors and SharePoint/OneDrive files in the `capabilities` section of your [declarative agent manifest](declarative-agent-manifest-1.9.md). You can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
 ## Copilot connectors
 
-This section describes how to retrieve the value to set in the `connection_id` property of the [Connection object](declarative-agent-manifest-1.8.md#connection-object) in the [Copilot connectors object](declarative-agent-manifest-1.8.md#copilot-connectors-object) in the manifest.
+This section describes how to retrieve the value to set in the `connection_id` property of the [Connection object](declarative-agent-manifest-1.9.md#connection-object) in the [Copilot connectors object](declarative-agent-manifest-1.9.md#copilot-connectors-object) in the manifest.
 
 > [!IMPORTANT]
 > Querying for Copilot connectors requires an admin account.
@@ -92,7 +92,7 @@ This section describes how to retrieve the value to set in the `connection_id` p
 
 ## Retrieving SharePoint IDs
 
-This section describes how to retrieve the value to set in the following properties within the `items_by_sharepoint_ids` property of the [`OneDriveAndSharePoint` object](declarative-agent-manifest-1.8.md#onedrive-and-sharepoint-object):
+This section describes how to retrieve the values to set in the following properties within the `items_by_sharepoint_ids` property of the [`OneDriveAndSharePoint` object](declarative-agent-manifest-1.9.md#onedrive-and-sharepoint-object):
 
 - `site_id`
 - `list_id`

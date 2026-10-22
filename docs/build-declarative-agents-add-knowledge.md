@@ -30,7 +30,7 @@ Adding web search to your agent allows it to search the web to generate answers.
     ]
     ```
 
-    For more information, see [Web search object](declarative-agent-manifest-1.8.md#web-search-object).
+    For more information, see [Web search object](declarative-agent-manifest-1.9.md#web-search-object).
 
 1. Select **Provision** in the **Lifecycle** pane of Microsoft 365 Agents Toolkit.
 
@@ -55,7 +55,7 @@ You can add files in OneDrive or the contents of SharePoint sites as a knowledge
     }
     ```
 
-    For more information, see [OneDrive and SharePoint object](declarative-agent-manifest-1.8.md#onedrive-and-sharepoint-object).
+    For more information, see [OneDrive and SharePoint object](declarative-agent-manifest-1.9.md#onedrive-and-sharepoint-object).
 
     > [!NOTE]
     >
@@ -83,7 +83,7 @@ The declarative agent has access to OneDrive and SharePoint content to generate 
     }
     ```
 
-    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.8.md#microsoft-teams-messages-object).
+    For more information, see [Microsoft Teams messages object](declarative-agent-manifest-1.9.md#microsoft-teams-messages-object).
 
     > [!NOTE]
     >
@@ -108,7 +108,7 @@ The people knowledge source allows you to scope your agent to answer questions a
     }
     ```
 
-    For more information, see [People object](declarative-agent-manifest-1.8.md#people-object).
+    For more information, see [People object](declarative-agent-manifest-1.9.md#people-object).
 
 1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 
@@ -133,7 +133,7 @@ The email knowledge source allows you to scope your agent to use email from the 
     }
     ```
 
-    For more information, see [Email object](declarative-agent-manifest-1.8.md#email-object).
+    For more information, see [Email object](declarative-agent-manifest-1.9.md#email-object).
 
     > [!NOTE]
     >
@@ -163,7 +163,7 @@ Adding a [Copilot connector](overview-copilot-connector.md) makes the items inge
     }
     ```
 
-    For more information, see [Copilot connectors object](declarative-agent-manifest-1.8.md#copilot-connectors-object).
+    For more information, see [Copilot connectors object](declarative-agent-manifest-1.9.md#copilot-connectors-object).
 
     > [!NOTE]
     >
