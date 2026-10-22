@@ -31,7 +31,7 @@ Start by adding instructions to the agent to phrase its responses as poems.
     Every time a user asks a question, you **must** turn the answer into a poem. The poem **must** not use the quote markdown and use regular text.
     ```
 
-    The contents of this file are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.8.md#declarative-agent-manifest-object).
+    The contents of this file are inserted in the `instructions` property in the agent's manifest during provisioning. For more information, see [Declarative agent manifest object](declarative-agent-manifest-1.9.md#declarative-agent-manifest-object).
 
 1. Select **Provision** in the **Lifecycle** pane of Microsoft 365 Agents Toolkit.
 
@@ -60,7 +60,7 @@ Next, add some conversation starters to the agent.
     ]
     ```
 
-    For more information, see [Conversation starters object](declarative-agent-manifest-1.8.md#conversation-starters-object).
+    For more information, see [Conversation starters object](declarative-agent-manifest-1.9.md#conversation-starters-object).
 
 1. Select **Provision** in the **Lifecycle** pane of Agents Toolkit.
 

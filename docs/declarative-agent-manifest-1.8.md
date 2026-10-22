@@ -16,6 +16,8 @@ This article describes the 1.8 schema used by the declarative agent manifest. Th
 
 Declarative agents are valuable in understanding and generating human-like text, making them versatile for tasks like writing and answering questions. This specification focuses on the declarative agent manifest that acts as a structured framework to specialize and enhance functionalities a specific user needs.
 
+[!INCLUDE [latest-declarative-agent-manifest](includes/latest-declarative-agent-manifest.md)]
+
 ## Changes from previous version
 
 This schema version introduces the following changes from [version 1.7](declarative-agent-manifest-1.7.md):

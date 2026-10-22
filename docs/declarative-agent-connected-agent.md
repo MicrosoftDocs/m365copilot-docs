@@ -40,13 +40,13 @@ An agent might work well with a set of documents and actions but still be diffic
 
 ## Enabling connected agents
 
-You must register connected agents in the [Microsoft Agent 365 agent registry](/microsoft-365/admin/manage/agent-registry). Connect to other agents by including the agents' title IDs in the existing [declarative agent's manifest](declarative-agent-manifest-1.8.md). The other agent must be a declarative agent or have a [registered Agent2Agent agent card](api/admin-settings/agent-registration/overview.md).
+You must register connected agents in the [Microsoft Agent 365 agent registry](/microsoft-365/admin/manage/agent-registry). Connect to other agents by including the agents' title IDs in the existing [declarative agent's manifest](declarative-agent-manifest-1.9.md). The other agent must be a declarative agent or have a [registered Agent2Agent agent card](api/admin-settings/agent-registration/overview.md).
 
 First, get the title ID of the agent to connect. The title ID of an agent is a string of a single letter, an underscore, and a GUID. For a declarative agent, find it in the output of the **Provision** command in the Microsoft 365 Agents Toolkit or in [developer mode](debugging-agents-copilot-studio.md). For a Microsoft 365 Agent Registration, it's the `id` property of the [agentRegistration object](api/admin-settings/agent-registration/resources/agentregistration.md).
 
 :::image type="content" source="assets/images/declarative-agents/developer-mode-title-id.png" alt-text="Screenshot of Microsoft 365 Copilot session where Copilot has returned a card with debugging information showing the title ID":::
 
-Add the title ID to the [worker_agents](declarative-agent-manifest-1.8.md) property as the `id`. The `worker_agents` property was added in declarative agent schema version 1.6.
+Add the title ID to the [worker_agents](declarative-agent-manifest-1.9.md) property as the `id`. The `worker_agents` property was added in declarative agent schema version 1.6.
 
 ### Authentication and authorization
 
