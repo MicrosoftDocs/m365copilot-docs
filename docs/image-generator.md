@@ -67,6 +67,6 @@ Image generator is always enabled in [Agent Builder](agent-builder.md). This cap
 
 - [Microsoft 365 Copilot extensibility samples](samples.md)
 - [Declarative agents overview](overview-declarative-agent.md)
-- [Declarative agent manifest reference](declarative-agent-manifest-1.8.md)
+- [Declarative agent manifest reference](declarative-agent-manifest-1.9.md)
 - [Add the code interpreter capability to your agent](code-interpreter.md)
 - [Add knowledge sources to your declarative agent](knowledge-sources.md)

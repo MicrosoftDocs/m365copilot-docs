@@ -400,6 +400,8 @@ items:
       href: typespec-capabilities.md
   - name: Declarative agent manifest reference
     items:
+    - name: Version 1.9
+      href: declarative-agent-manifest-1.9.md
     - name: Version 1.8
       href: declarative-agent-manifest-1.8.md
     - name: Version 1.7

@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 10/20/2026
+ms.date: 10/22/2026
 ms.topic: overview
 ---
 
@@ -18,6 +18,14 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## October 2026
+
+### Declarative agent manifest version 1.9
+
+A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.9](declarative-agent-manifest-1.9.md) adds the following features:
+
+- Added the new top-level `agent_skills` property, which references skill directories that follow the Agent Skills standard.
+- Added the new `Fabric` capability, which enables the agent to query and visualize Microsoft Fabric data within conversations.
+- Made the `instructions` property on the root manifest object optional.
 
 ### Govern Copilot credit consumption with the Cost Management API
 
