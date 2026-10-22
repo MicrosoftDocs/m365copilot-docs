@@ -22,7 +22,6 @@ This schema version introduces the following changes from [version 1.8](declarat
 
 - Added the new top-level `agent_skills` property, which references skill directories that follow the Agent Skills standard. See [Agent skill object](#agent-skill-object).
 - Added the new `Fabric` capability, which enables the agent to ground its responses in Microsoft Fabric data. See [Fabric object](#fabric-object).
-- The `instructions` property on the root manifest object is now optional (it was required in version 1.8). See [Declarative agent manifest object](#declarative-agent-manifest-object).
 
 ## JSON schema
 
@@ -45,7 +44,7 @@ The declarative agent manifest object contains the following properties.
 | `id`                    | String                                                                | Optional. An identifier for the manifest. |
 | `name`                  | String                                                                | Required. Localizable. The name of the declarative agent. It must contain at least one nonwhitespace character and be 100 characters or less. |
 | `description`           | String                                                                | Required. Localizable. The description of the declarative agent. It must contain at least one nonwhitespace character and be 1,000 characters or less. |
-| `instructions`          | String                                                                | Optional. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It must contain at least one nonwhitespace character and be 8,000 characters or less. |
+| `instructions`          | String                                                                | Required. The detailed instructions or guidelines on how the declarative agent should behave, its functions, and any behaviors to avoid. It must contain at least one nonwhitespace character and be 8,000 characters or less. |
 | `capabilities`          | Array of [Capabilities object](#capabilities-object)                  | Optional. Contains an array of objects that define capabilities of the declarative agent. The array can't contain more than one of each derived type of [Capabilities object](#capabilities-object). |
 | `conversation_starters` | Array of [Conversation starter object](#conversation-starters-object) | Optional. Title and Text are localizable. A list of examples of questions that the declarative agent can answer. The array can't contain more than 12 objects. |
 | `actions`               | Array of [Action object](#actions-object)                             | Optional. A list of 1-10 objects that identify [plugins](plugin-manifest-2.4.md) that provide actions accessible to the declarative agent. |
