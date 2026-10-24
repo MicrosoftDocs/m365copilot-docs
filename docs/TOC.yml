@@ -68,6 +68,8 @@ items:
           href: agent-templates-overview.md
         - name: Add knowledge sources
           href: agent-builder-add-knowledge.md
+        - name: Add connected agents
+          href: agent-builder-add-connected-agents.md
         - name: Availability and language support
           href: agent-builder-regional-availability.md
         - name: Copy your agent to Copilot Studio
