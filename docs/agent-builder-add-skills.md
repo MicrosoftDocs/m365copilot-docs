@@ -1,5 +1,5 @@
 ---
-title: Add custom skills to your declarative agent in Agent Builder (preview)
+title: Add custom skills to your declarative agent in Agent Builder
 description: Learn how to add custom skills to your declarative agent by uploading a skill package in Agent Builder.
 #customer intent: As an agent owner, I want to add a custom skill package to my declarative agent in Agent Builder so that my agent can perform a specific packaged task reliably.
 author: jasonjoh
@@ -12,15 +12,11 @@ ms.localizationpriority: medium
 ms.date: 09/30/2026
 ---
 
-# Add custom skills to your declarative agent in Agent Builder (preview)
+# Add custom skills to your declarative agent in Agent Builder
 
 A custom skill is a modular, reusable component that you add to a declarative agent to help it perform a specific packaged task. A skill is a directory that contains a required `SKILL.md` file with instructions, plus optional resource files and scripts. This article describes how to add a custom skill to an agent built in Agent Builder, either by describing the skill in natural language or by uploading a skill package.
 
-Skills in Agent Builder are in preview and are available only to organizations enrolled in the Microsoft Frontier Program.
-
-To learn what custom skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Custom skills in declarative agents (preview)](declarative-agent-skills.md).
-
-[!INCLUDE [preview-disclaimer-skills](includes/preview-disclaimer-skills.md)]
+To learn what custom skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Custom skills in declarative agents](declarative-agent-skills.md).
 
 ## Prerequisites
 
@@ -28,7 +24,7 @@ To learn what custom skills are, why to use them, and the full support matrix, s
 - Your organization must be enrolled in the Microsoft Frontier Program.
 
 > [!NOTE]
-> In Agent Builder, you can add up to eight skills per agent, and each skill package is a compressed `.zip` file of up to 50 MB. For the full support matrix and limits, see [Custom skills in declarative agents (preview)](declarative-agent-skills.md#support-matrix).
+> In Agent Builder, you can add up to eight skills per agent, and each skill package is a compressed `.zip` file of up to 50 MB. For the full support matrix and limits, see [Custom skills in declarative agents](declarative-agent-skills.md#support-matrix).
 
 ## Create a skill from a description
 
@@ -101,4 +97,4 @@ For the supported file and script types, see [Supported file and script types](d
 
 ## Related content
 
-- [Custom skills in declarative agents (preview)](declarative-agent-skills.md)
+- [Custom skills in declarative agents](declarative-agent-skills.md)
