@@ -1,6 +1,9 @@
 items:
 - name: Microsoft 365 Copilot extensibility
   href: index.yml
+  items:
+  - name: Ways to extend Microsoft 365 Copilot
+    href: overview.md
 
 - name: Plugins
   items:
@@ -34,6 +37,9 @@ items:
         items:
         - name: Declarative agents
           href: overview-declarative-agent.md
+          items:
+          - name: Declarative agents FAQ
+            href: transparency-faq-declarative-agent.md
         - name: Custom engine agents
           href: overview-custom-engine-agent.md
       - name: Skills
@@ -44,6 +50,9 @@ items:
         href: plugin-type-mcp-servers.md
     - name: Choose development tools
       href: choose-plugin-development-tools.md
+      items:
+      - name: Choose between Agent Builder and Copilot Studio
+        href: copilot-studio-experience.md
 
   - name: Build or reuse capabilities
     href: build-reuse-plugin.md
@@ -53,6 +62,10 @@ items:
     - name: Build a declarative agent
       href: build-reuse-declarative-agents.md
       items:
+      - name: Architecture
+        href: declarative-agent-architecture.md
+      - name: Copilot orchestrator
+        href: orchestrator.md
       - name: Build with Agent Builder
         href: agent-builder.md
         items:
@@ -65,7 +78,51 @@ items:
         - name: Add privacy statement and terms of use
           href: agent-builder-publication-privacy-terms-of-use.md
         - name: Agent Builder templates
-          href: agent-templates-overview.md
+          items:
+          - name: Templates overview
+            href: agent-templates-overview.md
+          - name: AI Learning Advisor
+            href: agent-template-ai-learning-advisor.md
+          - name: Career Coach
+            href: agent-template-career-coach.md
+          - name: Corporate Communications Crafter
+            href: agent-template-corporate-communications.md
+          - name: Customer Insight Assistant
+            href: agent-template-customer-insight.md
+          - name: Executive Briefing Agent
+            href: agent-template-executive-briefing.md
+          - name: Idea Coach
+            href: agent-template-idea-coach.md
+          - name: Interview Question Assistant
+            href: agent-template-interview-questions.md
+          - name: Learning Coach
+            href: agent-template-learning-coach.md
+          - name: Meeting Coach
+            href: agent-template-meeting-coach.md
+          - name: My Company Policy
+            href: agent-template-my-company-policy.md
+          - name: Personal News Digest
+            href: agent-template-personal-news-digest.md
+          - name: Plan My Day
+            href: agent-template-plan-my-day.md
+          - name: Project Delta Digest
+            href: agent-template-project-delta-digest.md
+          - name: Prompt Coach
+            href: agent-template-prompt-coach.md
+          - name: Request for Proposal Assistant
+            href: agent-template-rfp-assistant.md
+          - name: Quiz Tutor
+            href: agent-template-quiz-tutor.md
+          - name: Scrum Assistant
+            href: agent-template-scrum-assistant.md
+          - name: SME Finder
+            href: agent-template-sme-finder.md
+          - name: Status Update Agent
+            href: agent-template-status-update-agent.md
+          - name: Text Translator Assistant
+            href: agent-template-text-translator.md
+          - name: Writing Coach
+            href: agent-template-writing-coach.md
         - name: Add knowledge sources
           href: agent-builder-add-knowledge.md
         - name: Availability and language support
@@ -127,6 +184,8 @@ items:
           href: localize-agents.md
       - name: Optimize your agent
         items:
+        - name: Best practices
+          href: declarative-agent-best-practices.md
         - name: Enable user feedback
           href: declarative-agent-enable-feedback.md
         - name: Optimize content retrieval
@@ -225,7 +284,7 @@ items:
     - name: Build or reuse a skill
       href: build-reuse-skills.md
       items:
-      - name: Custom skills
+      - name: Skills
         href: declarative-agent-skills.md
       - name: Build with Agent Builder
         href: agent-builder-add-skills.md

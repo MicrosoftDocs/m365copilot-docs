@@ -1,7 +1,7 @@
 ---
 name: copilot-api-reference-reviewer
 description: Review Copilot API reference documentation for accuracy and completeness
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 5.5 (copilot)
 tools: ['read', 'web', 'execute/getTerminalOutput', 'execute/runInTerminal', 'search']
 ---
 

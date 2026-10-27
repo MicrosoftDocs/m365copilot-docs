@@ -1,7 +1,7 @@
 ---
-title: Add custom skills to your declarative agent in Agent Builder
-description: Learn how to add custom skills to your declarative agent by uploading a skill package in Agent Builder.
-#customer intent: As an agent owner, I want to add a custom skill package to my declarative agent in Agent Builder so that my agent can perform a specific packaged task reliably.
+title: Add skills to your declarative agent in Agent Builder
+description: Learn how to add skills to your declarative agent by uploading a skill package in Agent Builder.
+#customer intent: As an agent owner, I want to add a skill package to my declarative agent in Agent Builder so that my agent can perform a specific packaged task reliably.
 author: jasonjoh
 ms.author: jasonjoh
 ai-usage: ai-assisted
@@ -9,22 +9,23 @@ ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/26/2026
 ---
 
-# Add custom skills to your declarative agent in Agent Builder
+# Add skills to your declarative agent in Agent Builder
 
-A custom skill is a modular, reusable component that you add to a declarative agent to help it perform a specific packaged task. A skill is a directory that contains a required `SKILL.md` file with instructions, plus optional resource files and scripts. This article describes how to add a custom skill to an agent built in Agent Builder, either by describing the skill in natural language or by uploading a skill package.
+A skill is a modular, reusable component that you add to a declarative agent to help it perform a specific packaged task. A skill is a directory that contains a required `SKILL.md` file with instructions, plus optional resource files and scripts. This article describes how to add a skill to an agent built in Agent Builder, either by describing the skill in natural language or by uploading a skill package.
 
-To learn what custom skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Custom skills in declarative agents](declarative-agent-skills.md).
+To learn what skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Skills in declarative agents](declarative-agent-skills.md).
+
+[!INCLUDE [skills-restrictions](includes/skills-restrictions.md)]
 
 ## Prerequisites
 
 - A qualifying Microsoft 365 Copilot license, or access through pay-as-you-go. For details, see [Agent capabilities and licensing models](prerequisites.md#agent-capabilities-and-licensing-models).
-- Your organization must be enrolled in the Microsoft Frontier Program.
 
 > [!NOTE]
-> In Agent Builder, you can add up to eight skills per agent, and each skill package is a compressed `.zip` file of up to 50 MB. For the full support matrix and limits, see [Custom skills in declarative agents](declarative-agent-skills.md#support-matrix).
+> In Agent Builder, you can add up to eight skills per agent, and each skill package is a compressed `.zip` file of up to 50 MB. For the full support matrix and limits, see [Skills in declarative agents](declarative-agent-skills.md#support-matrix).
 
 ## Create a skill from a description
 
@@ -97,4 +98,4 @@ For the supported file and script types, see [Supported file and script types](d
 
 ## Related content
 
-- [Custom skills in declarative agents](declarative-agent-skills.md)
+- [Skills in declarative agents](declarative-agent-skills.md)

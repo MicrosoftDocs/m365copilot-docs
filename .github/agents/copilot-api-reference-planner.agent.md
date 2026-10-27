@@ -1,7 +1,7 @@
 ---
 name: copilot-api-reference-planner
 description: Create a content plan for Copilot API reference documentation
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 5.5 (copilot)
 tools: [read, edit/createFile, edit/editFiles, search, web]
 ---
 

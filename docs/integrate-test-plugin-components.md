@@ -45,7 +45,7 @@ Use the applicable product-specific testing guidance:
 
 - [Debug agents using Copilot Studio](debugging-agents-copilot-studio.md)
 - [Debug agents using Agents Toolkit](debugging-agents-vscode.md)
-- [Review custom skill support and known issues](declarative-agent-skills.md#support-matrix)
+- [Review skill support and known issues](declarative-agent-skills.md#support-matrix)
 - [Build and test a custom Copilot connector](build-your-first-connector.md)
 - [Debug MCP and API plugins locally](plugin-debug-local.md)
 - [Test a deployed declarative agent with Work IQ DevUI](https://microsoft.github.io/wiqd/extensions/provided/devui/)

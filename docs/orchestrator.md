@@ -1,75 +1,77 @@
 ---
-title: How the Microsoft 365 Copilot Orchestrator Chooses Actions
-description: Learn how the Microsoft 365 Copilot orchestrator determines which skill to apply for a given user prompt.
+title: How the Microsoft 365 Copilot orchestrator chooses actions
+description: Understand how Microsoft 365 Copilot selects and invokes actions, and how plugin descriptions, tool definitions, and agent instructions influence that behavior.
 author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 01/13/2026
+ms.date: 10/23/2026
 ---
-
-<!-- markdownlint-disable MD024 MD051 -->
 
 # Overview of the Microsoft 365 Copilot orchestrator
 
-Microsoft 365 Copilot is your personal assistant for work. It helps with various general tasks, such as writing, summarizing, researching, and more. Copilot has different skills that correspond to these different types of tasks. For example, Copilot can summarize action items from a meeting, suggest edits to a file, or track down resources and experts on a given topic within your organization. Each skill has its own parameters and outputs that are tailored to the specific task.
+The Microsoft 365 Copilot orchestrator coordinates the language model, available context, and capabilities it uses to respond to a user request. For declarative agents, those capabilities can include knowledge retrieval, built-in capabilities, and actions provided by [MCP or API plugins](overview-plugins.md).
 
-Like any copilot, Microsoft 365 Copilot is trained with data at a point in time. To retrieve and process new and real-time information, especially data that's specific to your organization and workflows, agents require actions. Actions within an agent extend Microsoft 365 Copilot's skills and utility for end users, enabling it to choose the right skill from its full repertoire.
-
-But how does your agent know which skill to use when you ask for help? How does it interpret your request and match it to the best skill available? That's the job of the Microsoft 365 Copilot orchestrator.
-
-This article explains the logic behind Copilot's skill selection process and how you can ensure that Copilot uses the right action from your agent at every opportunity to benefit your users.
-
-[!INCLUDE [preview-disclaimer](includes/preview-disclaimer.md)]
+This article focuses on how your agent's configuration influences action selection and invocation. You provide instructions, tool definitions, and external services; Microsoft manages the conversational runtime. For the broader division of responsibilities, see [Declarative agent architecture](declarative-agent-architecture.md).
 
 ## Copilot orchestrator
 
-Between the user's natural language input and Copilot's natural language output, the Copilot orchestrator works behind the scenes to select and run the right skills from the right actions within your agent.
+The orchestrator uses the agent's configuration and the available context to determine whether to respond directly, retrieve knowledge, or invoke a tool. Not every request requires an external action.
 
-The orchestration layer represents the interface between foundation Large Language Models (LLMs) and the many ways you can extend, enrich, and customize Copilot for the way your customers work.
+:::image type="content" source="assets/images/copilot-stack.png" alt-text="Conceptual diagram connecting agents, AI orchestration, language models, organizational data, and infrastructure.":::
 
-:::image type="content" source="assets/images/copilot-stack.png" alt-text="Diagram of the AI orchestration layer, situated between Copilot extensibility options and the Microsoft AI Cloud stack (Foundation models, Your data, AI infrastructure)":::
+For example, a user might ask, "What tickets are assigned to me right now?" An agent with an appropriate ticketing action can retrieve current information from the ticketing service rather than relying on model knowledge.
 
-The following diagram illustrates how the Microsoft 365 Copilot orchestrator selects the right action, with the right skill, at the right time, even when there are multiple options to choose from.
+The following diagram illustrates an API-action interaction. It's a conceptual view, not a fixed execution sequence or a guarantee that every request uses Microsoft Graph or an external API.
 
-:::image type="content" source="assets/images/copilot_orchestrator_sequence_v2.png" alt-text="Visual illustration of the sequential steps in the text following this image." lightbox="assets/images/copilot_orchestrator_sequence_v2.png":::
+:::image type="content" source="assets/images/copilot_orchestrator_sequence_v2.png" alt-text="Conceptual example of a ticket query progressing through platform checks, tool selection, API execution, result analysis, and a response." lightbox="assets/images/copilot_orchestrator_sequence_v2.png":::
 
-1. **Natural language input**: The user submits a query to your agent, such as "What tickets are assigned to me right now?"
+1. **Interpret the request.** Copilot uses the prompt, agent instructions, conversation history, and available app context to identify the user's task. Platform safety and policy checks can affect whether and how the request proceeds.
+1. **Select relevant capabilities.** Copilot determines whether configured knowledge or tools can help. For an external action, plugin and tool descriptions help identify an appropriate operation.
+1. **Determine inputs and invoke the tool.** Copilot maps available information to the tool's parameters. Instructions should guide it to ask for missing required information rather than invent values. External calls use the configured [authentication](plugin-authentication.md) and [confirmation behavior](plugin-confirmation-prompts.md).
+1. **Interpret the result.** Copilot uses the returned data or error to determine the next step. The interaction can include another call, a request for clarification, or a response to the user.
+1. **Respond to the user.** Copilot generates a response using the available context and results. The response should reflect what the service actually returned or changed.
 
-1. **Preliminary checks**: Copilot conducts several checks on the query, including responsible AI checks and security measures to ensure it doesn't pose any risks. If the query fails any of these checks, Copilot terminates the interaction.
+Declarative agents support [chaining function calls](instructions-api-plugins.md#chaining-function-calls-in-api-plugins), including passing one API call's output to another and combining API actions with SharePoint knowledge or code interpreter. Design and test the required interactions rather than assuming a fixed number of calls always complete in a turn. Follow the current [plugin limitations](overview-plugins.md#limitations) and the limits of your external services.
 
-1. **Reasoning**: The Copilot orchestrator formulates a plan comprised of multiple actions that it performs in an attempt to respond to the user's prompt.
-
-   1. **Context and tool selection**: The orchestrator retrieves the user's conversation context from the context store and integrates data from Microsoft Graph to refine the context. It then adjusts the initial query based on this updated context and forwards it to the LLM (large language model) to guide the next steps.
-
-      The LLM might proceed to generating a response using Copilot's built-in capabilities, or it might determine that additional data is necessary.
-
-      If more information is needed, the orchestrator does a search for the actions with the right skill for the task from the agent's enabled actions based on the descriptions of the actions and their functions.
-
-   1. **Function matching and parameter determination**: The orchestrator formulates a new prompt that incorporates the user's initial query, the updated context, and the selected actions, and presents it to the LLM. The LLM evaluates the input and specifies the optimal action and function within that action to address the task. It then provides the orchestrator with the necessary function details and parameters required to gather the needed information.
-
-   1. **Tool initiation**: The orchestrator uses the response from the LLM to construct an API request and send the request to the tool initiator, which securely retrieves the requested information located outside of Copilot's infrastructure. It runs the request and sends the results back to the orchestrator for further processing.
-
-   1. **Result analysis and response formulation**: The orchestrator integrates the API response into the ongoing context and consults the LLM in a continuous reasoning loop until the LLM deems it appropriate to generate a final response.
-
-1. **Responding**: The orchestrator compiles all the information gathered during the reasoning process and submits it to the LLM to create a final response. After ensuring the response complies with Responsible AI guidelines, it sends the response back to the orchestrator, which logs it in the context store and delivers it to the user via the Copilot UI.
-
-1. **Natural language output**: Finally, the orchestrator delivers the response to the user and updates the conversation state. Copilot is ready for its next prompt.
-
-> [!IMPORTANT]
-> Declarative agents might stop responding when three or more **different API actions** are triggered within a single user turn. In these cases, the third API call might complete successfully on the backend, but the orchestrator doesn't return a response to the user.
->
-> To minimize this behavior, split the workflow across multiple user turns or reduce the number of different API actions you invoke in a single turn. This approach helps ensure that all API responses are processed reliably.
+Platform protections and user confirmations don't replace authorization or business-rule checks in your external service. If the workflow requires exact execution order, transactions, or recovery, implement those requirements in the service rather than relying on model instructions.
 
 ## How Copilot's orchestrator matches actions to user queries
 
-When a user submits a query to your agent, the orchestrator searches the agent's full catalog of skills (_functions_) from installed actions to identify up to five skills that best match the query. The orchestrator first tries to match on exact words (**lexical match**) and expands its search scope as needed to include matches on descriptive meanings (**semantic match**), working from specific function names to general action descriptions, until all five function candidate slots are filled. Specifically, the following list shows the hierarchy of matching mechanisms for Copilot action function selection:
+Plugin selection and individual tool invocation are different decisions. A plugin's description helps Copilot identify the relevant service or domain. The tools available from that plugin then describe the operations Copilot can invoke and the inputs they require.
 
-1. Lexical match on function name.
-2. Semantic match on function description.
-3. Lexical match on action name (adds all action functions to candidate list).
-4. Semantic match on action name (adds all action functions to candidate list).
+When plugin selection uses semantic matching, the match is based on the plugin's description, not the descriptions of individual functions. A matched plugin makes its functions or tools available; it isn't a fixed shortlist of five functions. For the current selection behavior and context constraints, see [MCP and API plugin limitations](overview-plugins.md#limitations).
 
-The orchestrator works through this list until all five function candidate slots are filled.
+Provide useful descriptions at each level:
 
-Check out [Validation guidelines for agents](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines#description?context=/microsoft-365/copilot/extensibility/context) to learn more about writing good descriptions to ensure that Copilot chooses the right skill for each user query to your agent.
+| Configuration | What to describe |
+|---------------|------------------|
+| Plugin description | The service's purpose, supported user tasks, and domain. Make the description specific enough to distinguish it from other plugins. |
+| Function or tool definition | The operation's purpose, when to use it, and whether it retrieves or changes data. For API plugins, map the function name to the OpenAPI `operationId`. |
+| Parameters | Required inputs, types, formats, and meaningful examples. Distinguish identifiers from display names and make optional behavior clear. |
+| Results and errors | The data returned, what a successful operation means, and how failures are represented. Keep payloads relevant to the task. |
+
+For API plugins, follow [Create effective OpenAPI descriptions](openapi-document-guidance.md). For MCP plugins, check whether tool definitions are [discovered dynamically or pinned in the plugin manifest](plugin-dynamic-tool-discovery.md#how-dynamic-tool-discovery-differs-from-pinned-tools). With dynamic discovery, changes to the server's tool definitions can affect selection without republishing the agent.
+
+## Improve and evaluate action selection
+
+Descriptions and instructions influence selection. They don't guarantee that a particular tool is invoked for every phrasing of a request.
+
+- **Clarify overlapping operations.** If multiple tools appear suitable, explain their different purposes and required inputs. Distinguish read operations from operations that change data.
+- **Connect tasks to tools in the instructions.** Explain when to use the configured tools, how to collect missing information, and how to use earlier results in follow-up requests. See [Instructions for agents with API plugins](instructions-api-plugins.md).
+- **Keep the available tools focused.** Expose the operations needed for the agent's tasks. More tool definitions and larger payloads consume context and can reduce response quality.
+- **Test the actual selections and results.** Include paraphrased prompts, ambiguous requests, missing inputs, multistep tasks, canceled confirmations, and service failures. Check the operations and parameters the service received, not just the final wording.
+- **Repeat tests when definitions change.** Rerun representative cases after changes to plugin descriptions, tool definitions, instructions, or the platform. Include MCP server updates when using dynamic discovery.
+
+> [!IMPORTANT]
+> A missing or incomplete conversational response doesn't establish whether an external operation completed. Check the service's outcome before retrying an operation that changes data, and design the service to handle repeated requests safely.
+
+For broader design recommendations, see [Declarative agent best practices](declarative-agent-best-practices.md). For repeatable test cases and assertions, see [Agent evaluation overview](evaluation-overview.md).
+
+## Related content
+
+- [MCP and API plugins for declarative agents](overview-plugins.md)
+- [Write effective instructions for declarative agents](declarative-agent-instructions.md)
+- [Chaining function calls in API plugins](instructions-api-plugins.md#chaining-function-calls-in-api-plugins)
+- [Dynamic tool discovery for MCP plugins](plugin-dynamic-tool-discovery.md)
+- [Confirmation prompts for MCP and API plugins](plugin-confirmation-prompts.md)

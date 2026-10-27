@@ -1,0 +1,14 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/ecosystem.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-tool-comparison.md",
+      "redirect_url": "/microsoft-365/copilot/extensibility/choose-plugin-development-tools",
+      "redirect_document_id": false
+    }
+  ]
+}

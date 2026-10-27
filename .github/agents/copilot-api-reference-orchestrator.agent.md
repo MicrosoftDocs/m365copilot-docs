@@ -1,7 +1,7 @@
 ---
 name: copilot-api-reference-orchestrator
 description: Orchestrate end-to-end API reference documentation generation with planning, writing, review, and revision cycles
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 5.5 (copilot)
 tools: ['read', 'agent']
 agents: ['copilot-api-reference-planner', 'copilot-api-reference-writer', 'copilot-api-reference-reviewer']
 ---
