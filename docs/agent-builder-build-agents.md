@@ -5,7 +5,7 @@ description: Learn how to build declarative agents in Agent Builder by using nat
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/26/2026
 ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -121,9 +121,9 @@ You automatically get these capabilities whether you use natural language on the
 
 [!INCLUDE [agent-builder-actions-note](includes/agent-builder-actions-note.md)]
 
-### Skills (preview)
+### Skills
 
-You can add skills to an agent built in Agent Builder, either by providing a skill package or by describing the skill in natural language. Skills in Agent Builder are in preview and are available only to organizations enrolled in the Microsoft Frontier Program. For more information, see [Add custom skills to your declarative agent in Agent Builder (preview)](agent-builder-add-skills.md).
+You can add skills to an agent built in Agent Builder, either by providing a skill package or by describing the skill in natural language. For more information, see [Add skills to your declarative agent in Agent Builder](agent-builder-add-skills.md).
 
 ## Set the default response mode
 

@@ -1,73 +1,72 @@
 ---
 title: "Declarative agent architecture"
-description: Learn how declarative agents in Microsoft 365 Copilot enable developers to create AI solutions through configuration, using security and compliance frameworks.
-#customer intent: As a developer, I want to understand how to configure declarative agents so that I can create AI-powered solutions within Microsoft 365.
+description: Understand the managed runtime, developer responsibilities, data flow, and design constraints of declarative agents in Microsoft 365 Copilot.
+#customer intent: As a developer, I want to understand which parts of a declarative agent I control so that I can choose an architecture that fits my scenario.
 author: TheBluLion
 ms.author: euloh
 ms.reviewer: jhaskett-msft
 ms.topic: concept-article
-ms.date: 07/09/2026
+ms.localizationpriority: medium
+ms.date: 10/23/2026
 ms.contributor: mapichle, ericsche
 ---
 
 # Declarative agent architecture
 
-Declarative agents are conversational AI experiences that result from declared configurations loaded into Microsoft 365 Copilot. You can use declarative agents to create sophisticated AI-powered solutions through configuration rather than custom code, using the full Microsoft 365 ecosystem infrastructure and capabilities.
+Declarative agents run on Microsoft 365 Copilot's managed orchestration and language-model infrastructure. You configure the agent's instructions, knowledge sources, and supported capabilities rather than implementing and hosting your own conversational runtime.
 
-Declarative agents can include instructions, Microsoft knowledge sources and capabilities such as SharePoint, code interpreter, Microsoft 365 Copilot connectors, and API plugins that connect to external APIs. This configuration-based approach allows organizations to rapidly deploy AI agents while inheriting Microsoft 365 security, compliance, and governance frameworks.
+An agent can use Microsoft 365 knowledge sources, built-in capabilities such as code interpreter, [custom skills (preview)](declarative-agent-skills.md), and actions provided by MCP servers or REST APIs. It can also delegate tasks to [connected agents](declarative-agent-connected-agent.md). Availability depends on the authoring tool, manifest version, target experience, licensing, and organizational policies.
+
+Use this article to understand the boundary between the managed platform and the components you configure or operate. For a comparison with an architecture that gives you control over orchestration and model hosting, see [Compare declarative and custom engine agents](agents-overview.md).
 
 ## Architecture components
 
-Declarative agents inherit the Microsoft 365 infrastructure and provide specific capabilities and constraints across different architectural components. The following image shows the component architecture of a declarative agent.
+Microsoft 365 Copilot provides the runtime that interprets user requests, retrieves relevant context, selects capabilities, and generates responses. Your configuration and external services determine what the agent can use to complete a task.
 
 <!-- Art Library Source# ConceptArt-0-000-150 -->
 :::image type="content" source="assets/images/declarative-agents/declarative-agents-architecture-diagram.png" alt-text="Diagram of the architecture of a declarative agent." lightbox="assets/images/declarative-agents/declarative-agents-architecture-diagram.png":::
 
-| Component | Considerations | Optimized for | Poor fit for |
-|-----------|---------------|---------------|--------------|
-| Client | Inherits Microsoft 365 client support; minimal developer effort required.<br /><br />Constrained Microsoft support and delivery timelines. | Microsoft 365 ecosystem | Web chat and external clients. |
-| Infrastructure | Consider whether the Microsoft 365 infrastructure meets your current needs. | Using existing Microsoft 365 app ecosystem features: policies, governance, catalog, publication, audit, retention, data loss prevention (DLP). | Privatized network/storage needs. |
-| Catalog | Inherits the Microsoft 365 app catalog and publication process. Less effort for developers but no developer control. | Microsoft 365 app ecosystem catalog | Blended catalog of Microsoft 365 and non-Microsoft 365 agents and clients. |
-| Security and compliance | Inherits Microsoft 365 controls and commitments. Reduced developer effort but no developer control. | Microsoft 365 ecosystem organizations that want lower SecOps overhead | Organizations that require different security and compliance postures. |
-| Orchestrator and language model | Not within developer's control. | Microsoft 365 Copilot licensed users, Copilot Tuning organizations, and Microsoft 365 Copilot Chat | Complex intent or dictionary use cases. |
-| Tool calling | Provides best of both worlds for calling Microsoft owned capabilities and external tools. | Microsoft 365 workloads | On-premises APIs and data sources. Non OpenAPI-based specs. Streaming API workloads. |
+| Component | Managed platform | Developer responsibilities |
+|-----------|------------------|----------------------------|
+| Client | Hosts conversations in supported Microsoft 365 experiences. | Choose target experiences and test their supported interactions, document context, and response formats. |
+| Infrastructure | Hosts the Copilot orchestration and model runtime. | Configure the agent and host any external APIs, MCP servers, or other services it uses. |
+| Catalog and distribution | Provides supported acquisition, publishing, and administration experiences. | Select the supported package and distribution route, maintain versions, and work with administrators on access and deployment. |
+| Security and compliance | Applies Microsoft 365 identity, data-access, and platform protections. | Configure permissions and authentication, evaluate data flows, and enforce authorization and data protection in external services. |
+| Orchestrator and language model | Selects and invokes capabilities and generates responses. | Write instructions and tool descriptions, configure supported behavior settings, and evaluate the resulting behavior. You don't replace the managed orchestrator with custom runtime code. |
+| Knowledge and capabilities | Retrieves supported knowledge and runs enabled built-in capabilities. | Select relevant sources and capabilities, confirm user access, and test retrieval quality. |
+| Tool calling | Invokes configured MCP or API actions through the supported integration. | Define tool inputs and outputs, configure authentication and confirmations, and implement reliable service behavior. |
 
-When you scope web search to specific website URLs, a declarative agent grounds on Bing-indexed web content rather than querying the source directly. For dynamically generated content, this approach can make results incomplete or stale. For more information, see [Web search grounding and dynamic content](knowledge-sources.md#web-search-grounding-and-dynamic-content).
+Supported configuration settings influence the managed runtime; they don't give you full control over its implementation. For example, the manifest supports a [default response mode](declarative-agent-manifest-1.9.md#default-response-mode-values), which users can override. Follow the selected manifest schema and authoring tool for available settings.
 
 > [!NOTE]
-> Cross prompt injection attacks (XPIA) are a type of security vulnerability in conversational AI systems. Malicious input in one prompt or conversation context manipulates or alters the behavior of the AI in subsequent prompts or sessions, potentially leading to unintended or harmful outputs. This vulnerability occurs when information from previous user inputs or contexts is improperly handled, allowing an attacker to inject instructions or data that persist and influence future interactions. Content filtering and inline disengagement are common mitigations for XPIA.
+> Retrieved content and tool responses can contain untrusted instructions. Platform protections don't replace authorization checks in your services or evaluation of the agent's behavior. Plan the applicable [data, privacy, and security requirements](data-privacy-security.md).
 
 ## Declarative agent data flow
 
-Declarative agents follow a specific data flow pattern where Microsoft manages the orchestration and processing pipeline, while developers control limited configurations.
+The following conceptual flow describes how an agent uses its configuration and capabilities. It isn't a fixed execution sequence or a guarantee of how many retrievals or tool calls occur.
 
-<!-- Art Library Source# ConceptArt-0-000-149 -->
-:::image type="content" source="assets/images/declarative-agents/data-flow-declarative-agents.png" alt-text="Diagram of declarative agent data flow showing sequential steps from initial prompt to response, with developer-controlled components in blue." lightbox="assets/images/declarative-agents/data-flow-declarative-agents.png":::
+1. **Receive a request.** The user submits a prompt in a supported experience. Conversation history and available app context can contribute to the request.
+1. **Select relevant context and capabilities.** Copilot uses the agent's instructions, knowledge configuration, and tool descriptions to determine how to address the request.
+1. **Retrieve information or invoke actions.** Copilot retrieves available knowledge or calls an enabled capability. External actions use the configured authentication and [confirmation behavior](plugin-confirmation-prompts.md). External services enforce their own authorization and business rules.
+1. **Generate a response.** Copilot uses the available context and capability results to respond. Depending on the task, the interaction can include further calls, requests for user input, or delegation to a connected agent.
 
-Developers control components like instructions, knowledge and data sources, and API plugins. Because Microsoft grounding and calls to external tools happen sequentially, you can't use chained operations with grounding data or looped operation plans. This architecture isn't suitable for complex multistep operations.
+Declarative agents can chain API calls, use one call's output as another call's input, and combine SharePoint knowledge or code interpreter with API actions. For supported patterns and examples, see [Chaining function calls in API plugins](instructions-api-plugins.md#chaining-function-calls-in-api-plugins).
 
-The sequential processing model ensures consistent performance and security but limits the types of workflows that you can implement. Design solutions that work within this constraint and don't require iterative reasoning loops.
+Instructions guide model behavior; they aren't a substitute for application logic that must enforce a transaction, exact execution order, or recovery procedure. Implement those requirements in an API or workflow service, or evaluate a custom engine architecture when you need to own the orchestration.
 
-This model works well for scenarios where the agent can provide complete responses based on a single grounding operation and external tool call. However, it struggles with workflows that require multiple interdependent operations.
+### Design for capability-specific limits
 
-Declarative agents operate within specific technical limits that you must consider when you design solutions.
+Check limits in the guidance for each capability and integration. A manifest field's character limit, a knowledge-source configuration limit, and a runtime context limit describe different constraints.
 
-| Limit type | Value | Considerations |
-|------------|-------|----------------|
-| Grounding record limit | 50 items | Affects the amount of contextual data available |
-| Plugin response limit | 25 items | Constrains external API response sizes |
-| Token limit | 4,096* | Includes all context and response data |
-| Timeout limit | 45 seconds* | Includes network latency and processing time |
+| Area | Design consideration | Guidance |
+|------|----------------------|----------|
+| Agent configuration | Use properties and capabilities supported by the selected schema version and authoring tool. | [Declarative agent manifest reference](declarative-agent-manifest-1.9.md) |
+| Knowledge retrieval | Select relevant sources and follow source-specific file, scope, access, and indexing requirements. A response doesn't necessarily include every item in a source. | [Knowledge sources](knowledge-sources.md) and [Optimize content retrieval](optimize-content-retrieval.md) |
+| Tool definitions and payloads | Keep tools focused and inputs and outputs relevant. Large plugin inputs and outputs can be truncated, and effective context limits can change with models and system overhead. | [MCP and API plugin limitations](overview-plugins.md#limitations) |
+| Document context | Follow the host app's supported document interactions and content formats rather than assuming all document content is represented identically. | [Interact with documents](declarative-agent-document-interaction.md) |
+| Service behavior and latency | Test response times, authentication failures, service errors, and the limits of your external APIs or MCP servers. | [Integrate and test components](integrate-test-plugin-components.md) |
 
-<sub>* Limits include external overhead such as network latency and Microsoft service processing. Optimize for about 66% of the technical limit.</sub>
-
-Given these limitations, declarative agents aren't a good fit for:
-
-- Scenarios that require full document or large data contexts
-- Handling a large number of records or paginated results
-- Long-running processes that exceed timeout limits
-
-To optimize declarative agent performance, implement scenarios that include preprocessing of data provided to the agent through plugins or Copilot connectors. Use post-processing capabilities through Microsoft 365 Copilot features like code interpreter.
+For large data sets, design APIs to filter, aggregate, or return the relevant subset rather than sending all records into a conversation. When a scenario needs document content, test the supported host experience: declarative agents can access the entire open document in Word and PowerPoint, subject to the [document-format considerations](declarative-agent-document-interaction.md#document-format).
 
 ## Advantages and limitations
 
@@ -77,45 +76,50 @@ Key advantages and primary limitations of declarative agents help determine when
 
 Declarative agents provide significant benefits for organizations that want to implement AI solutions within existing Microsoft 365 environments:
 
-- **Infrastructure inheritance**: Agents automatically inherit existing Microsoft deployment, client, governance, and authentication structures without extra development effort.
-- **Access to Microsoft capabilities**: Provides direct access to Microsoft capabilities, including advanced AI features and productivity integrations.
-- **Reduced complexity**: Configuration-based approach eliminates the need for custom infrastructure development and maintenance.
+- **Managed conversational runtime**: Microsoft hosts the orchestrator and model infrastructure, so you don't need to implement that runtime.
+- **Access to Microsoft capabilities**: Agents can use supported knowledge sources and built-in capabilities alongside external tools.
+- **Configuration-based customization**: Instructions, capabilities, and actions tailor the experience without requiring a custom conversational engine. External integrations can still require code and hosting.
 
 ### Primary limitations
 
 The declarative approach also introduces constraints that might limit certain use cases:
 
-- **Limited orchestration control**: Developers don't control iterative reasoning loops and complex workflow orchestration.
-- **Restricted customization**: Custom corpus development isn't possible except in limited scenarios such as Copilot Tuning.
-- **Sequential processing**: The sequential nature of grounding and tool calling prevents complex multistep operations.
-- **Dynamic web content considerations**: Declarative agents work best with supported knowledge sources and web content that is available through web search. Dynamically generated or non-OpenAPI web sources can lead to incomplete, inconsistent, or out-of-date grounding results.
+- **Managed orchestration**: You influence behavior through supported configuration rather than controlling every runtime decision. Evaluate representative tasks instead of treating instructions as a deterministic workflow engine.
+- **Platform and host dependencies**: Capabilities, response presentation, licensing, and administration depend on the selected Microsoft 365 experience. Confirm support in each target host.
+- **Context and retrieval constraints**: Knowledge retrieval and tool results must fit the available context. Large sources or payloads don't guarantee complete coverage in a response.
+- **Dynamic web content considerations**: Scoped web search uses Bing-indexed content rather than directly querying the underlying data source. Dynamically generated content can be incomplete or stale. Use a supported API integration when the task requires direct access to current, structured data. See [Web search grounding and dynamic content](knowledge-sources.md#web-search-grounding-and-dynamic-content).
+- **Ongoing evaluation**: Platform and model updates can change behavior. Test instructions, retrieval, and tool use as the agent and its dependencies evolve.
 
 ## Use case alignment
 
-Declarative agents work best for scenarios that align with their architectural strengths and that avoid areas where limitations become problematic. 
+Choose the architecture based on the control your solution requires, not simply on whether the task has multiple steps.
 
 ### Optimal scenarios
 
 Declarative agents are optimal for:
 
 - **Information retrieval**: Agents that primarily need to search and summarize information from Microsoft 365 or external sources.
-- **Simple workflows**: Straightforward processes that single-step operations complete.
-- **Productivity enhancement**: Tasks that enhance existing Microsoft 365 workflows without requiring complex orchestration.
+- **Assisted actions**: Agents that combine knowledge and supported API or MCP actions to help users complete a task.
+- **Document assistance and analysis**: Agents that work with supported document context or use capabilities such as code interpreter.
+- **Productivity enhancement**: Tasks that benefit from a managed conversational experience within Microsoft 365.
 
 ### Unsuitable scenarios
 
-Declarative agents aren't suited for:
+Consider a custom engine agent or a separately implemented workflow when your requirements include:
 
-- **Complex decision trees**: Workflows that require multiple conditional branches and iterative processing.
-- **Large data processing**: Operations that require analysis of extensive datasets or full document contexts.
-- **Custom AI models**: Scenarios that require specialized language models or custom training data.
-- **Reliable recency from dynamic sites**: Agents that must reliably return the most-recent or chronologically ordered items from a dynamic or AJAX-rendered website.
+- **Custom runtime control**: You must implement your own orchestration, model hosting, or user interface rather than use the managed Copilot runtime.
+- **Durable business processes**: The system must enforce exact execution order, transaction boundaries, retries, or recovery independently of a conversation.
+- **Large-scale data processing**: The task requires exhaustive processing of a data set rather than retrieval or analysis of relevant conversational context. Perform that processing in a service and expose the appropriate result to the agent.
+- **Direct access to dynamic sources**: The task requires current, ordered results from a source that isn't adequately represented in web search. Provide a supported API or MCP integration instead of relying on scoped web search alone.
 
-Understanding these characteristics helps organizations make informed decisions about when declarative agents provide the optimal balance of capability and simplicity for their AI implementation requirements.
+These requirements don't always exclude a declarative agent as the conversational interface. A service can own the business process while the agent gathers inputs, invokes a supported action, and presents the result.
 
 ## Related content
 
 - [Agents overview](agents-overview.md)
 - [Custom engine agent architecture](custom-engine-agent-architecture.md)
-- [Overview of API plugins](overview-plugins.md)
+- [MCP and API plugins for declarative agents](overview-plugins.md)
+- [Chaining function calls in API plugins](instructions-api-plugins.md#chaining-function-calls-in-api-plugins)
+- [Connect to other agents](declarative-agent-connected-agent.md)
+- [Plan data, privacy, and security](data-privacy-security.md)
 - [Web and scoped web search](knowledge-sources.md#web-and-scoped-web-search)

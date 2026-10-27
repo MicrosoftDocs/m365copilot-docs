@@ -5,7 +5,7 @@ description: Learn how to use Agent Builder to build declarative agents for Micr
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/26/2026
 ms.topic: overview
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -24,7 +24,7 @@ Use Agent Builder to create and customize agents for scenario-specific use cases
 
 You can specify dedicated knowledge sources, including content on SharePoint and information provided by [Copilot connectors](overview-copilot-connector.md). You can also test the agent before you use, share, or publish it.
 
-Agent Builder also lets you add skills to an agent you build in Agent Builder, either by providing a skill or by creating one through natural language. Skills in Agent Builder are in preview and available only to organizations enrolled in the Microsoft Frontier Program. For more information, see [Add custom skills to your declarative agent in Agent Builder (preview)](agent-builder-add-skills.md).
+Agent Builder also lets you add skills to an agent you build in Agent Builder, either by providing a skill or by creating one through natural language. For more information, see [Add skills to your declarative agent in Agent Builder](agent-builder-add-skills.md).
 
 <!-- PM-REVIEW (09/25/2026): Confirm the Agent Builder entry points and URLs in the following list (microsoft365.com/chat, office.com/chat, Teams desktop and web, and the Work and Web options on the Microsoft 365 Copilot app toolbar). Kept as-is pending PM confirmation. -->
 You can build agents from the following apps and sites:
@@ -120,7 +120,7 @@ You can find and copy these details in Agent Builder in the **Get support** sect
 - [Build your first agent](https://res.public.onecdn.static.microsoft/s01-prod/pdf/Buid-an-agent-with-Agent-Builder.pdf)
 - [Build agents in Agent Builder](agent-builder-build-agents.md)
 - [Agent Builder templates](agent-templates-overview.md)
-- [Add custom skills to your declarative agent in Agent Builder (preview)](agent-builder-add-skills.md)
+- [Add skills to your declarative agent in Agent Builder](agent-builder-add-skills.md)
 - [Share and manage agents built in Agent Builder](agent-builder-share-manage-agents.md)
 - [Agent Builder regional availability and language support](agent-builder-regional-availability.md)
 - [Copy an agent from Agent Builder to Copilot Studio](copy-agent-to-copilot-studio.md)

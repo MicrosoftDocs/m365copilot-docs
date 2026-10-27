@@ -4,7 +4,7 @@ description: Build, configure, extend, or reuse the skills required by your Micr
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/26/2026
 ms.topic: how-to
 ---
 
@@ -31,9 +31,9 @@ Use the path supported by the selected development tool and target experience.
 
 | Development approach | Start with |
 |---|---|
-| Agent Builder | [Add custom skills with Agent Builder](agent-builder-add-skills.md) |
+| Agent Builder | [Add skills with Agent Builder](agent-builder-add-skills.md) |
 | Work IQ Dev Tools | [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) |
-| Microsoft 365 Agents Toolkit | [Add custom skills with Agents Toolkit](build-declarative-agents-add-custom-skills.md) |
+| Microsoft 365 Agents Toolkit | [Add skills with Agents Toolkit](build-declarative-agents-add-custom-skills.md) |
 | Cowork | [Build plugins for Copilot Cowork](/microsoft-365-copilot/cowork/cowork-plugin-development) |
 
 GitHub Copilot can assist with skill instructions, supporting scripts, resources, tests, and repository changes. The target experience and authoring tool determine the supported skill format and runtime.
@@ -43,7 +43,7 @@ GitHub Copilot can assist with skill instructions, supporting scripts, resources
 WIQD provides two different skill-authoring routes:
 
 - `wiqd plugin add skill` adds a top-level skill to a standalone plugin project. The plugin can be skill-only or combine the skill with supported agents or remote MCP connectors. The entire `wiqd plugin` command tree is alpha.
-- `wiqd agent add skill` adds a skill to an existing declarative-agent project. This route uses the `agent-skills` preview flag, which is off by default.
+- `wiqd agent add skill` adds a skill to an existing declarative-agent project. This route uses the `agent-skills` feature flag, which is off by default.
 
 Both routes create a `SKILL.md`-based capability, but they operate on different project types. In the WIQD plugin format, the skill name must match its folder name, and its description should include the phrases that should activate it. See [What is a plugin?](https://microsoft.github.io/wiqd/concepts/plugins/) and the [plugin authoring reference](https://microsoft.github.io/wiqd/getting-started/plugin-reference/).
 
@@ -61,7 +61,7 @@ Complete the applicable work:
 1. Test expected, ambiguous, unsupported, and failure scenarios.
 1. Record the skill version, owner, dependencies, known limitations, and support process.
 
-For current support and runtime constraints, see [Custom skills in declarative agents](declarative-agent-skills.md).
+For current support and runtime constraints, see [Skills in declarative agents](declarative-agent-skills.md).
 
 ## Confirm that the skill is working
 
@@ -80,5 +80,5 @@ Continue with any other components in the plan. When they are complete, [integra
 
 - [Skills as plugin capabilities](plugin-type-skills.md)
 - [Build or reuse capabilities for your plugin](build-reuse-plugin.md)
-- [Add custom skills with Agent Builder](agent-builder-add-skills.md)
-- [Add custom skills with Agents Toolkit](build-declarative-agents-add-custom-skills.md)
+- [Add skills with Agent Builder](agent-builder-add-skills.md)
+- [Add skills with Agents Toolkit](build-declarative-agents-add-custom-skills.md)

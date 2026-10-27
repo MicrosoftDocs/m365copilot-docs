@@ -1,25 +1,25 @@
 ---
-title: Add custom skills to a declarative agent created with Microsoft 365 Agents Toolkit (preview)
-description: Learn how to add custom skills to a declarative agent by using the Microsoft 365 Agents Toolkit CLI or Visual Studio Code extension.
-#customer intent: As a developer, I want to add a custom skill to my declarative agent with the Agents Toolkit so that I can package reusable instructions, resources, and scripts into my agent.
+title: Add skills to a declarative agent created with Microsoft 365 Agents Toolkit
+description: Learn how to add skills to a declarative agent by using the Microsoft 365 Agents Toolkit CLI or Visual Studio Code extension.
+#customer intent: As a developer, I want to add a skill to my declarative agent with the Agents Toolkit so that I can package reusable instructions, resources, and scripts into my agent.
 author: jasonjoh
 ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/26/2026
 ---
 
-# Add custom skills to a declarative agent created with Microsoft 365 Agents Toolkit (preview)
+# Add skills to a declarative agent created with Microsoft 365 Agents Toolkit
 
-[!INCLUDE [preview-disclaimer-skills](includes/preview-disclaimer-skills.md)]
+[!INCLUDE [skills-restrictions](includes/skills-restrictions.md)]
 
-A custom skill is a modular, reusable component that you add to a declarative agent to package instructions, resources, and scripts for a specific task. This article describes how to add a custom skill to a declarative agent by using the Microsoft 365 Agents Toolkit (ATK) command-line interface (CLI) or the Visual Studio Code extension.
+A skill is a modular, reusable component that you add to a declarative agent to package instructions, resources, and scripts for a specific task. This article describes how to add a skill to a declarative agent by using the Microsoft 365 Agents Toolkit (ATK) command-line interface (CLI) or the Visual Studio Code extension.
 
-To learn what custom skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Custom skills in declarative agents](declarative-agent-skills.md).
+To learn what skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Skills in declarative agents](declarative-agent-skills.md).
 
 > [!IMPORTANT]
-> This guide assumes you completed the [Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](build-declarative-agents.md) tutorial. Adding a custom skill requires declarative agent manifest version 1.9. If you're using an agent created with an older version of Agents Toolkit, you might need to update the version of your agent manifest. For more information, see [Declarative agent manifest reference](declarative-agent-manifest-1.9.md).
+> This guide assumes you completed the [Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](build-declarative-agents.md) tutorial. Adding a skill requires declarative agent manifest version 1.9. If you're using an agent created with an older version of Agents Toolkit, you might need to update the version of your agent manifest. For more information, see [Declarative agent manifest reference](declarative-agent-manifest-1.9.md).
 
 ## Prerequisites
 
@@ -88,12 +88,12 @@ If you set the variable after you install the Visual Studio Code extension, rest
 
 ---
 
-## Limits and known issues
+## Limits
 
-In the Agents Toolkit, you add a skill as a directory (you can't use `.zip`), and the complete app package is limited to 10 MB. You can add up to eight skills per agent, with a maximum directory depth of three and up to 400 files across the skill directory. For the full support matrix and known issues, see [Custom skills in declarative agents](declarative-agent-skills.md#support-matrix).
+In the Agents Toolkit, you add a skill as a directory (you can't use `.zip`), and the complete app package is limited to 10 MB. You can add up to eight skills per agent, with a maximum directory depth of three and up to 350 files across the skill directory. For the full support matrix, see [Skills in declarative agents](declarative-agent-skills.md#support-matrix).
 
 ## Related content
 
-- [Custom skills in declarative agents](declarative-agent-skills.md)
-- [Add custom skills to your declarative agent in Agent Builder](agent-builder-add-skills.md)
+- [Skills in declarative agents](declarative-agent-skills.md)
+- [Add skills to your declarative agent in Agent Builder](agent-builder-add-skills.md)
 <!-- [Declarative agent manifest reference](declarative-agent-manifest-1.9.md)-->

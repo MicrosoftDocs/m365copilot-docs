@@ -4,7 +4,7 @@ description: Build, configure, extend, or reuse the declarative agent required b
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/26/2026
 ms.topic: how-to
 ---
 
@@ -39,7 +39,7 @@ Use the development tool that you chose in [Choose development tools for your pl
 
 Use `wiqd agent create` to scaffold a source-controlled declarative-agent project. During the build stage, edit the project, add supported OpenAPI or remote MCP actions with `wiqd agent add action`, and run offline static validation with `wiqd agent validate`.
 
-`wiqd agent add skill` adds a skill to an existing declarative-agent project. This capability is behind the `agent-skills` preview flag, which is off by default. Confirm the current flag, schema, and lifecycle requirements in the [WIQD command reference](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-skill).
+Use `wiqd agent add skill` to add a skill to an existing declarative-agent project. This capability is behind the `agent-skills` feature flag, which is off by default. Confirm the current flag, schema, and lifecycle requirements in the [WIQD command reference](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-skill).
 
 You can enter commands directly or drive the documented workflow conversationally through Copilot CLI with the `wiqd:wiqd` agent. WIQD targets declarative agents, not custom engine agents.
 
