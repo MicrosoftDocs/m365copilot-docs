@@ -225,7 +225,7 @@ items:
     - name: Build or reuse a skill
       href: build-reuse-skills.md
       items:
-      - name: Custom skills
+      - name: Skills
         href: declarative-agent-skills.md
       - name: Build with Agent Builder
         href: agent-builder-add-skills.md

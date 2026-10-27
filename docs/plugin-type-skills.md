@@ -62,4 +62,4 @@ After you decide to build or reuse a skill, [choose development tools](choose-pl
 - [Choose capabilities for your plugin](choose-plugin-components.md)
 - [Choose development tools for your plugin](choose-plugin-development-tools.md)
 - [Add skills with Agent Builder](agent-builder-add-skills.md)
-- [Add custom skills with Agents Toolkit](build-declarative-agents-add-custom-skills.md)
+- [Add skills with Agents Toolkit](build-declarative-agents-add-custom-skills.md)

@@ -57,7 +57,7 @@ The following diagram shows the primary components of declarative agent instruct
 
 ### Reference skills at a high level
 
-Skills are a distinct component of a declarative agent, not instructions that you write inline. A skill packages its own instructions, resources, and scripts, and the agent loads a skill's contents only when a task requires them. In your agent's instructions, refer to skills at a high level and point to the actual skills configured in the agent, rather than duplicating a skill's detailed steps in the instructions. To learn what skills are, their limits, and how to add them, see [Custom skills in declarative agents](declarative-agent-skills.md).
+Skills are a distinct component of a declarative agent, not instructions that you write inline. A skill packages its own instructions, resources, and scripts, and the agent loads a skill's contents only when a task requires them. In your agent's instructions, refer to skills at a high level and point to the actual skills configured in the agent, rather than duplicating a skill's detailed steps in the instructions. To learn what skills are, their limits, and how to add them, see [Skills in declarative agents](declarative-agent-skills.md).
 
 ## Best practices for agent instructions
 

@@ -4,7 +4,7 @@ description: Compare Agent Builder, Work IQ Dev Tools, Microsoft 365 Agents Tool
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/26/2026
 ms.topic: concept-article
 ---
 
@@ -31,8 +31,8 @@ The following matrix lists only component routes that are documented by the link
 | Development tool | Documented component route | Target experience or host | Lifecycle role | Status and authoritative source |
 |---|---|---|---|---|
 | Agent Builder | Declarative agent | Microsoft 365 Copilot | Create, test, share, and submit an agent through the managed authoring experience | Documented route: [Agent Builder in Microsoft 365 Copilot](agent-builder.md) |
-| Agent Builder | Custom skill added to an Agent Builder declarative agent | Microsoft 365 Copilot | Create or upload a reusable skill for the agent | Preview; Microsoft Frontier Program enrollment required: [Add custom skills in Agent Builder](agent-builder-add-skills.md) |
-| Work IQ Dev Tools | Declarative agent project, including tool-supported API or remote MCP actions and preview agent skills | Microsoft 365 Copilot | Create, edit, validate, provision, package, publish to the organization, share, test, monitor, and evaluate the project | Preview; individual capabilities can require feature flags: [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs) |
+| Agent Builder | Skill added to an Agent Builder declarative agent | Microsoft 365 Copilot | Create or upload a reusable skill for the agent | Documented route: [Add skills in Agent Builder](agent-builder-add-skills.md) |
+| Work IQ Dev Tools | Declarative agent project, including tool-supported API or remote MCP actions and agent skills | Microsoft 365 Copilot | Create, edit, validate, provision, package, publish to the organization, share, test, monitor, and evaluate the project | Preview: [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs) |
 | Work IQ Dev Tools | Microsoft 365 app package that composes a declarative agent, skill, or remote MCP connector in a documented combination | Microsoft 365 and Copilot experiences supported by the selected components and package | Create or import, compose, validate, provision, package, export, and share the plugin | The `wiqd plugin` command tree is alpha and doesn't publish to the public store: [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) |
 | Microsoft 365 Agents Toolkit | Declarative agent in a supported Microsoft 365 app package | Microsoft 365 Copilot | Create, validate, provision, package, test, and publish the app package | Documented route: [Build or reuse declarative agents](build-reuse-declarative-agents.md) |
 | Microsoft 365 Agents Toolkit | Synced Copilot connector | Microsoft 365 Copilot and Microsoft Search | Build the connector, package the app, deploy the connection, and test indexed content | Documented route: [Build your first custom Copilot connector](build-your-first-connector.md) |

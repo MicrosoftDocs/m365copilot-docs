@@ -5,7 +5,7 @@ description: Learn about the regional availability and supported languages for A
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/26/2026
 ms.topic: reference
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -51,11 +51,11 @@ Agent Builder is available in the Microsoft 365 Government Community Cloud (GCC)
 > - Sharing agents with others isn't available in Agent Builder in GCCH environments.
 
 <!-- PM-REVIEW (09/25/2026): Confirm whether GCC and GCCH have feature gaps beyond embedded file content, and whether the Microsoft Frontier Program is available in GCC and GCCH. Only the confirmed gaps are stated here. -->
+
 Some Agent Builder features aren't available in every national cloud environment:
 
 - Embedded file content isn't supported as a knowledge source in GCC. For more information, see [Embedded file content](agent-builder-add-knowledge.md#embedded-file-content).
-
-Skills are available only to organizations enrolled in the Microsoft Frontier Program in supported environments. For more information, see [Add custom skills to your declarative agent in Agent Builder (preview)](agent-builder-add-skills.md).
+- Skills aren't available in Agent Builder in GCC.
 
 ## Language support
 
