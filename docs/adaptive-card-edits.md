@@ -219,4 +219,3 @@ The following request and response examples show what happens when a user takes 
 
 - [Adaptive Card responses](api-plugin-adaptive-cards.md)
 - [Add a dialog box to Adaptive Card templates](adaptive-card-dialog-box.md)
-- [Declarative agent app package](overview-declarative-agent.md#building-declarative-agents)

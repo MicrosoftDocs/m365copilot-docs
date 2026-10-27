@@ -1,116 +1,74 @@
 ---
 title: Choose between Agent Builder and Copilot Studio to build your agent
-description: Learn how to determine whether Agent Builder or Copilot Studio is the best tool for building your agent.
+description: Compare Agent Builder and Copilot Studio by authoring needs, integrations, publishing channels, and lifecycle requirements.
 author: lauragra
 ms.author: jasonjoh
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/23/2026
 ---
 
 # Choose between Agent Builder and Copilot Studio to build your agent
 
-Agent Builder and Copilot Studio are powerful tools for building secure, scalable, and intelligent agents that work across Microsoft 365 and line-of-business systems. Both tools allow you to create agents, but they serve different needs. This article describes the differences between the two to help you choose the best one for your scenario.
+Use Agent Builder for guided configuration of declarative agents in Microsoft 365 Copilot. Use Copilot Studio when you need its workflow, integration, publishing, or application lifecycle capabilities. Choose based on the required capabilities and operating model, not audience size alone.
 
-When choosing which tool to use, consider the following factors:
+This article compares these two managed authoring options. For pro-code tools and other authoring routes, see [Choose development tools for your plugin](choose-plugin-development-tools.md).
 
-- **Audience** – Who will use the agent?
-- **Deployment scope** – How widely do you plan to share the agent?
-- **Functionality** – What tasks will the agent perform?
-- **Governance needs** – Does your agent require granular application lifecycle management?
+## Choose a starting point
 
-The following decision tree helps you map your scenario to the right tool.
+Use the following decision guide:
 
-:::image type="content" source="assets/images/copilot-studio-agent-builder/copilot-studio-decision-flow.png" alt-text="A flow chart that shows the decision points for choosing between Agent Builder and Copilot Studio.":::
+1. **Do users need an external channel, such as a customer-facing website?** Evaluate Copilot Studio and confirm that the selected experience supports the required channel and authentication.
+1. **Do you need external-service actions, workflow logic, or structured development, test, and production environments?** Evaluate Copilot Studio's supported tools, workflows, and lifecycle features.
+1. **Can the scenario be met with instructions and supported knowledge and capabilities in Microsoft 365 Copilot?** Start with Agent Builder and confirm its supported configuration, sharing, and publishing options.
 
-In summary:
+Agent Builder supports organizational distribution through [sharing](agent-builder-share-manage-agents.md) and [submission to your org catalog](agent-builder-submit-to-org-catalog.md), subject to the applicable policies and approvals. Needing users across several departments doesn't by itself require Copilot Studio.
 
-- **Choose Agent Builder** if you want to quickly create an agent for yourself or a small team, using natural language and existing content (for example, a bot that answers questions from your team’s SharePoint files or emails). Agent Builder is simple, accessible, and integrated with the Microsoft 365 Copilot experience, so you can build agents in context without any code.
-
-- **Choose Copilot Studio** if you need an agent for a broader audience (such as your whole department, organization, or external customers) or if the agent requires advanced capabilities like multi-step workflows or custom integrations, or you need more control over deployment and management. The full version of Copilot Studio is a standalone web portal with a rich set of tools for complex or scalable solutions.
+Copilot Studio capabilities, channels, and billing vary by the selected harness. Review [Harnesses in Copilot Studio](/microsoft-copilot-studio/harnesses-overview) before treating a feature as available in every Copilot Studio agent.
 
 > [!NOTE]
 > If you create your agent in Agent Builder and you later want to take advantage of the features available in Copilot Studio, you can [copy your agent to Copilot Studio](#copy-agents-from-agent-builder-to-copilot-studio).
 
-The following table provides a more detailed feature comparison.
+## Compare authoring and lifecycle needs
 
-<!-- markdownlint-disable MD033 -->
+The following comparison highlights decision factors rather than an exhaustive feature or licensing matrix. For current support, see the linked product guidance.
 
 | Feature | Agent Builder | Copilot Studio |
 | ------- | --------------- | --------------- |
-| Access point | [Microsoft 365 Copilot app](https://www.microsoft365.com/copilot) | [Copilot Studio](https://copilotstudio.microsoft.com) |
-| User type | Information workers | Makers and developers |
-| Agent target audience | Individuals or small teams. | Department, organization, or external customers. |
-| Agent type | Lightweight Q&A agents with organizational knowledge. | Agents with complex scenarios like multi-step workflows or business system integration, and that require enterprise governance and robust controls. |
-| Key capabilities | <ul><li>Natural language authoring</li><li>Content-focused Q&A scenarios based on organization context from Microsoft Graph</li><li>Respects user permissions to Microsoft 365 data</li><li>Uses the Microsoft 365 Copilot orchestrator, foundation models, and services</li></ul> | <ul><li>Broad and external publishing</li><li>Supports multi-step logic, approvals, and branching workflows</li><li>Supports advanced AI models and integration with Azure AI services</li><li>Provides access to prebuilt and custom connectors to connect with data sources beyond Microsoft 365</li><li>Autonomous capabilities</li><li>Lifecycle management tools including versioning; development, test, and production environments; role-based access controls; and telemetry and analytics.</li></ul>  |
-| Use cases | Use Agent Builder to build:<br /><ul><li>Project FAQ bots that answers common questions based on project documentation.</li><li>Product documentation assistants that help employees find information from internal product manuals or wikis.</li><li>Onboarding agents that help new team members get answers from internal knowledge bases.</li></ul> |  Use Copilot Studio to build:<br /><ul><li>Customer support agents that create support tickets and escalates issues to a human.</li><li>IT help desk triage agents that handle employee IT requests and routes them to the right support team.</li><li>Sales assistants for CRM that retrieve sales data, makes notes, or kicks off an approval workflow.</li></ul> |
-| Management and governance | Managed primarily through the Microsoft 365 admin center. | Managed through the Power Platform admin center with finer-grained controls for enterprise scenarios. |
-
-<!-- markdownlint-enable MD033 -->
+| Authoring approach | Guided natural-language configuration without a source-code project. | Managed authoring with the logic, tools, and workflows supported by the selected harness. |
+| Knowledge and capabilities | Supported Microsoft 365 knowledge sources and built-in capabilities. Custom skills are in preview; see [Agent Builder overview](agent-builder.md). | Knowledge, tools, connectors, and other capabilities supported by the selected Copilot Studio experience. |
+| External actions | Doesn't support authoring actions that integrate external services. Copy to Copilot Studio or select a separate pro-code route when required. | Supports integrations and business workflows through the applicable tools and connectors. |
+| Audience and distribution | Users in your organization, through supported sharing and org-catalog publishing. | Internal or external users, through channels supported by the selected harness. |
+| Lifecycle | Configure, test, share, and submit an agent for organizational publication through the Agent Builder experience. | Use supported environment, application lifecycle management, deployment, and analytics capabilities. |
+| Governance | Microsoft 365 agent controls and the permissions and policies of the configured data sources. | Power Platform environment and connector controls, plus applicable Microsoft 365 agent and channel controls. |
+| Example fit | An onboarding or project-information agent grounded in approved organizational content. | An IT request workflow with approvals, or a customer-support experience with service integration and escalation. |
 
 ## Copy agents from Agent Builder to Copilot Studio
 
-You can copy an agent created in Agent Builder to Copilot Studio when you need advanced capabilities or broader integration options. This process ensures that work done in Agent Builder isn't lost and can be extended in Copilot Studio without a need to start over.
+If an Agent Builder agent needs capabilities available in Copilot Studio, use the supported copy workflow rather than recreating its configuration.
 
-Transitioning to Copilot Studio unlocks additional features, such as richer customization, governance controls, and expanded connectors. When you copy your agent, the agent's core configuration and instructions are preserved, and you can enhance them with the advanced settings available only in Copilot Studio.
-
-Consider copying an agent to Copilot Studio when:
-
-- You need enterprise-grade deployment options.
-- You want to integrate with more data sources or apply advanced security policies.
-
-For more information, see [Copy an agent from Agent Builder to Copilot Studio](copy-agent-to-copilot-studio.md).
+Copying creates a separate snapshot, not a synchronized upgrade. Some knowledge sources and capabilities aren't copied or need reconfiguration. Review the supported configuration, licensing, and environment requirements in [Copy an agent from Agent Builder to Copilot Studio](copy-agent-to-copilot-studio.md), then test the copied agent before publishing it.
 
 ## Licensing requirements
 
-Both Agent Builder and Copilot Studio are included with a Microsoft 365 Copilot add-on license for authenticated users. If you don’t have a Copilot license, you can use Copilot Credits or a pay-as-you-go plan to access either experience.
+Confirm maker access separately from end-user access and consumption. Requirements depend on the configured capabilities, target users, publishing channel, tenant billing setup, and Copilot Studio harness.
 
-You can also use Agent Builder for free to build agents grounded on web knowledge only. For more information, see [Using agents in Microsoft 365 Copilot Chat](/copilot/agents).
+Use [Agent capabilities and licensing models](prerequisites.md#agent-capabilities-and-licensing-models) and [Plan licensing and cost](cost-considerations.md) for Microsoft 365 considerations. For Copilot Studio, follow the billing guidance for the [selected harness](/microsoft-copilot-studio/harnesses-overview#compare-harnesses) and the [Copilot Studio Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2320995).
 
 ## Agent Builder governance principles
 
-Agent Builder allows users to create agents that package repeatable prompts and content connections. These agents help retrieve insights from Microsoft Graph. They operate within existing enterprise boundaries and respect Microsoft 365 controls.
+Choose Agent Builder when its authoring, sharing, and publishing controls meet your operating model. Confirm agent availability and sharing policies with your Microsoft 365 administrators, and review data-source access for the intended users.
 
-Agent Builder applies the following key governance principles:
-
-- **No new privileges** - Agents respect existing Microsoft 365 permissions. If a user doesn't have access to a SharePoint site, Teams channel, or Outlook mailbox, the agent doesn't surface content from those sources.
-- **Built-in visibility and auditing capabilities** - Agents are surfaced within Microsoft 365. Standard audit logs, activity reports, and DLP/retention policies apply.
-
-IT administrators manage agent visibility, sharing, and lifecycle policies in the Microsoft 365 admin center via the **Copilot** > **Agents** page. Admins can:
-
-- View agent inventory and agent metadata.
-- Enable, disable, assign, block, or remove agents to align with organizational policies.
-- Configure pay-as-you-go billing and review agent usage and consumption.
-- Enforce compliance using Microsoft Purview (sensitivity labels, audit logs).
-
-Admins can also manage agent sharing controls via the **Microsoft 365 Admin Center** > **Copilot** > **Settings** > **Data access** > **Agents** page. For more information, see [Share an agent](agent-builder-share-manage-agents.md#share-an-agent).
-
-For more information about how governance controls ensure privacy when sharing agents, see [Governance and admin controls for plugin sharing](data-privacy-security.md#governance-and-admin-controls-for-plugin-sharing).
+For supported controls, see [Agent Builder admin controls](agent-builder.md#admin-controls) and [Share and manage agents](agent-builder-share-manage-agents.md). For organizational publication and update approval, see [Submit agents to your org catalog](agent-builder-submit-to-org-catalog.md).
 
 ## Copilot Studio governance principles
 
-Copilot Studio supports the creation of more sophisticated agents, often by makers or developers. These agents can integrate external data sources, call APIs, orchestrate complex workflows, and connect to systems beyond Microsoft 365—ideal for departmental or enterprise-wide solutions.
+Choose Copilot Studio when environment-level policies, connector governance, and structured release management are part of your requirements. Management can span Power Platform and Microsoft 365; publishing a Copilot Studio agent to Microsoft 365 doesn't remove the applicable Microsoft 365 controls.
 
-Copilot Studio applies the following key governance principles:
-
-- **Structured development** - Application Lifecycle Management (ALM) enables development across dev, test, and production environments.
-- **Connector governance** - Admins control which systems agents can connect to, reducing risk of unauthorized access.
-- **Environment-level policies** - Data loss prevention (DLP), role-based access, and auditing are enforced at the environment level.
-- **Flexible deployment** - Agents can be published across Teams, websites, and custom endpoints with granular access controls.
-- **Secure collaboration** - Agents support view/edit rights for cross-functional teamwork with oversight.
-- **Development and publishing oversight** - Publishing to an organization's app catalog requires admin approval, ensuring visibility and control over what becomes broadly available.
-
-IT administrators use the Power Platform admin center to manage:
-
-- Agent environments and connectors.
-- Lifecycle policies and publishing workflows.
-- Compliance via Microsoft Purview (sensitivity labels, audit logs, retention).
-- Telemetry and usage analytics to monitor agent behavior and ensure policy alignment.
-
-For more information about how governance controls ensure privacy when sharing agents, see [Governance and admin controls for plugin sharing](data-privacy-security.md#governance-and-admin-controls-for-plugin-sharing). For Copilot Studio-specific security details, see [Copilot Studio security and governance](/microsoft-copilot-studio/security-and-governance).
+Follow [Copilot Studio security and governance](/microsoft-copilot-studio/security-and-governance) and [Application lifecycle management guidance](/microsoft-copilot-studio/guidance/alm) for the supported controls and procedures. For shared data and service responsibilities, see [Plan data, privacy, and security](data-privacy-security.md).
 
 ## Related content
 
-- [Choose the right tool to build your declarative agent](declarative-agent-tool-comparison.md)
+- [Choose development tools for your plugin](choose-plugin-development-tools.md)
 - [Agent Builder overview](agent-builder.md)
-- [Use Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions)
+- [Harnesses in Copilot Studio](/microsoft-copilot-studio/harnesses-overview)

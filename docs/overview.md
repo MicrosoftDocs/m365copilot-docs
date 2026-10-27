@@ -6,15 +6,11 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/23/2026
 ms.custom: [copilot-learning-hub]
 ---
 
 # Ways to extend Microsoft 365 Copilot
-
-<!-- markdownlint-disable MD033 -->
-<a id="microsoft-365-copilot-extensibility-overview"></a>
-<!-- markdownlint-enable MD033 -->
 
 Start by deciding where people will use the experience:
 
@@ -29,18 +25,6 @@ You can use both approaches in one solution. Choose the primary path based on th
 |---|---|---|
 | Inside Microsoft 365 Copilot experiences | [Plugins for Microsoft 365 Copilot](plugins-overview.md) | You want to build or configure a plugin with supported agents, skills, connectors, or MCP-based tools |
 | In your apps and custom agents | [Build Copilot-powered apps and agents](apps-agents-overview.md) | You want to use Microsoft 365 work context or Copilot capabilities in an experience that you host and operate |
-
-<!-- markdownlint-disable MD033 -->
-<a id="extend-copilot-with-agents"></a>
-<a id="what-are-agents"></a>
-<a id="prebuilt-agents-you-can-integrate"></a>
-<a id="build-your-own-agent"></a>
-<a id="enhance-knowledge-in-copilot-with-connectors"></a>
-<a id="use-prebuilt-copilot-connectors"></a>
-<a id="build-a-custom-copilot-connector"></a>
-<a id="microsoft-work-iq-api"></a>
-<a id="microsoft-365-copilot-apis"></a>
-<!-- markdownlint-enable MD033 -->
 
 ## Choose by what you want to create
 
@@ -58,6 +42,26 @@ You can use both approaches in one solution. Choose the primary path based on th
 
 For help comparing declarative and custom engine agents, see [Compare declarative and custom engine agents](agents-overview.md).
 
+## Agent in-app experience
+
+Plan how users will interact with the agent in each target Microsoft 365 experience:
+
+- **In-context experience**: Users work with an agent within a supported app, such as Teams or Word, while continuing their work in that app.
+- **Immersive experience**: Users have a dedicated conversation with an agent in Microsoft 365 Copilot, focused on its purpose, knowledge, and capabilities.
+
+:::image type="content" source="assets/images/copilot-experiences.png" alt-text="Illustration of in-context and immersive agent experiences in Microsoft 365 Copilot." border="false":::
+
+Availability and behavior depend on the agent type, host app, capabilities, licensing, and organizational policies. Don't assume that an agent or capability works in every Microsoft 365 app. For document-specific behavior, see [Work with documents in declarative agents](declarative-agent-document-interaction.md).
+
+> [!IMPORTANT]
+> An agent doesn't always inherit the user's sign-in from the host app. External actions and services can require a separate sign-in or consent, even when the user is already signed in to Microsoft 365. Plan the applicable [authentication requirements](plugin-authentication.md).
+
+## Connector availability in Microsoft 365 experiences
+
+Microsoft 365 Copilot connectors make external organizational content available to supported Copilot and Microsoft Search experiences. Synced connectors index content in Microsoft Graph; federated connectors retrieve content at query time. For model-specific capabilities and availability, see the [Copilot connectors overview](overview-copilot-connector.md).
+
+Connectors used by Copilot Studio and Power Platform provide a different integration route for agents, apps, and workflows. Don't assume that the same connector configuration works across both models. See [Extend agent capabilities with Copilot connectors](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio).
+
 ## Combine both paths
 
 A solution can combine multiple paths. For example:
@@ -68,9 +72,20 @@ A solution can combine multiple paths. For example:
 
 Using an API doesn't by itself select a package or publishing method. Each part of a combined solution retains its own identity, authentication, deployment, distribution, and governance requirements.
 
+## Unified app model
+
+Microsoft 365 uses app packages to distribute supported agents and other app capabilities. A plugin package can bring together supported capabilities, but packaging alone doesn't make them available in every host app.
+
+Choose a supported [packaging path](package-plugin.md), then follow the applicable [publishing or sharing guidance](publish.md). Organization distribution and public distribution have different review, access, and connection requirements. After distribution, [govern plugin access and connections](manage.md).
+
+## Security and governance
+
+For each component, identify its data flows, permissions, external services, and responsible AI requirements. Microsoft 365 access controls don't replace the security responsibilities of external services. See [Plan data, privacy, and security](data-privacy-security.md).
+
 ## Plan and continue
 
 - [Plan your plugin](planning-guide.md) across data, identity, security, distribution, compatibility, cost, and ownership.
+- [Choose development tools](choose-plugin-development-tools.md) for the selected capabilities. Use [developer mode](debugging-agents-copilot-studio.md) to inspect declarative-agent behavior while testing.
 - [For builders](builder-guide.md), choose a development experience and implementation guidance.
 - [For administrators](administrator-guide.md), prepare the organization and identify applicable controls.
 - [For ISVs and software publishers](isv-publisher-guide.md), determine the supported customer publishing method.
