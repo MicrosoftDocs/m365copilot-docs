@@ -1,7 +1,7 @@
 ---
 name: copilot-api-reference-writer
 description: Generate reference documentation for a Copilot API
-model: Claude Opus 4.6 (copilot)
+model: Claude Opus 5.5 (copilot)
 tools: ['read', 'web', 'execute/getTerminalOutput', 'execute/runInTerminal', 'edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search']
 ---
 
