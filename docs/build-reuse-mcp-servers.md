@@ -4,7 +4,7 @@ description: Reuse or build an MCP server and connect its tools and resources to
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/28/2026
 ms.topic: how-to
 ---
 
@@ -41,6 +41,9 @@ GitHub Copilot can assist with server code, schemas, tests, and repository chang
 ## Connect the server
 
 Use the integration supported by the selected development tool and target experience.
+
+> [!NOTE]
+> Use WIQD to create a plugin that references a remote MCP server. For manual configuration through the `agentConnectors` array in the Microsoft 365 app manifest, see [Configure remote MCP servers for Microsoft 365 Copilot plugins](configure-plugin-mcp-servers.md). This configuration differs from the MCP plugin manifest used for declarative-agent actions. Support depends on the target experience.
 
 | Development approach | Start with |
 |---|---|

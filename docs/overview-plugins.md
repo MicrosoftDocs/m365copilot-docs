@@ -4,7 +4,7 @@ description: Learn how MCP and API plugins add custom actions to declarative age
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 10/28/2026
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -32,7 +32,7 @@ A plugin provides a plugin manifest that Copilot uses to learn the capabilities 
 
 For plugins based on an MCP server, Copilot resolves the plugin's tools dynamically at runtime by default, directly from the MCP server. Dynamic tool discovery means you get the latest tools the MCP server exposes without waiting for the agent to be repackaged and republished. When building the agent, a developer can optionally pin a fixed set of tools in the plugin manifest instead. REST API plugins always use the tools defined in the plugin manifest. For more information, see [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md) and [Dynamic tool discovery for MCP plugins in Microsoft 365 Copilot](plugin-dynamic-tool-discovery.md).
 
-This default applies to plugins only. It doesn't extend to agent connectors, which register an MCP server through the `agentConnectors` node in the Microsoft 365 app manifest rather than through a plugin manifest. For agent connectors, dynamic tool discovery requires app manifest version 1.29 or later *and* a host that permits it. For more information, see [Register MCP servers as agent connectors](/microsoftteams/platform/m365-apps/agent-connectors).
+This default applies to MCP plugins used as declarative-agent actions. For a plugin that references a remote MCP server through `agentConnectors` in the Microsoft 365 app manifest, dynamic tool discovery requires app manifest version 1.29 or later *and* a host that permits it. For more information, see [Configure remote MCP servers for Microsoft 365 Copilot plugins](configure-plugin-mcp-servers.md).
 
 ## Plugin example
 
