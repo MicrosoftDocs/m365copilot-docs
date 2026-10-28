@@ -4,7 +4,7 @@ description: Learn how to configure OAuth 2.0 authorization code flow authentica
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 08/28/2026
+ms.date: 10/28/2026
 ms.topic: how-to
 ---
 
@@ -23,7 +23,7 @@ Register an app with your OAuth 2.0 provider (your identity provider) to get a *
 For an MCP server that requires authorization, set the `type` property of the [runtime authentication object](plugin-manifest-2.4.md#runtime-authentication-object) to `OAuthPluginVault`. `None` and `ApiKeyPluginVault` don't apply to an MCP server that requires authorization. Only the auth config ID is stored in the manifest - no client ID, client secret, or token is written to it. To register the client dynamically instead of statically, keep `type` as `OAuthPluginVault` and create the auth config through [dynamic client registration (DCR)](plugin-authentication-dynamic-client-registration.md), which isn't available for a server that's protected by Microsoft Entra ID.
 
 > [!NOTE]
-> These values apply to the plugin manifest. If you instead register your MCP server as an *agent connector* in the `agentConnectors` node of the Microsoft 365 app manifest, use `OAuthPluginVault` or `DynamicClientRegistration` there as well. Don't use `AzureKeyVault`: it exists only in the `devPreview` schema, so a package that targets a numbered schema version fails validation. For more information, see [Register MCP servers as agent connectors](/microsoftteams/platform/m365-apps/agent-connectors).
+> These values apply to the MCP plugin manifest for declarative-agent actions. If you instead configure a plugin's remote MCP server through `agentConnectors` in the Microsoft 365 app manifest, use `OAuthPluginVault` or, for a server that supports DCR, `DynamicClientRegistration`. App manifest schemas 1.29 and 1.30 also include `AzureKeyVault`, but schema acceptance doesn't establish support in the target experience. For configuration and host requirements, see [Configure remote MCP servers for Microsoft 365 Copilot plugins](configure-plugin-mcp-servers.md).
 
 ## Step 2: Configure the redirect URI
 
