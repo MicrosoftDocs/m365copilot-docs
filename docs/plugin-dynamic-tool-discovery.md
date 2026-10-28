@@ -4,7 +4,7 @@ description: Learn how dynamic tool discovery enables declarative agents in Micr
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 08/12/2026
+ms.date: 10/28/2026
 ms.topic: overview
 ---
 
@@ -18,7 +18,7 @@ Dynamic tool discovery enables declarative agents that use [MCP server-based plu
 > Dynamic tool discovery includes tools that return interactive UI widgets ([MCP apps](plugin-mcp-apps.md)). The agent renders these widgets with no extra configuration.
 
 > [!NOTE]
-> This article covers dynamic tool discovery for plugins, where an MCP server is registered through a plugin manifest for a declarative agent. Registering an MCP server as an *agent connector* uses a different manifest — the `agentConnectors` node in the Microsoft 365 app manifest. For agent connectors, dynamic tool discovery requires app manifest version 1.29 or later *and* a host that permits it. For more information, see [Register MCP servers as agent connectors](/microsoftteams/platform/m365-apps/agent-connectors).
+> This article covers MCP plugins used as declarative-agent actions. For a plugin that references a remote MCP server through `agentConnectors` in the Microsoft 365 app manifest, dynamic tool discovery requires app manifest version 1.29 or later *and* a host that permits it. For more information, see [Configure remote MCP servers for Microsoft 365 Copilot plugins](configure-plugin-mcp-servers.md).
 
 ## How dynamic tool discovery differs from pinned tools
 

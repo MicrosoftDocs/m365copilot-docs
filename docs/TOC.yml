@@ -321,6 +321,8 @@ items:
     - name: Build or reuse an MCP server
       href: build-reuse-mcp-servers.md
       items:
+      - name: Configure remote MCP servers for plugins
+        href: configure-plugin-mcp-servers.md
       - name: Connect an MCP server with Agents Toolkit
         href: build-mcp-plugins.md
       - name: Add UI with MCP apps
