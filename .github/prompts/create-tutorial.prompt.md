@@ -23,5 +23,5 @@ To do this, follow these steps:
 
 You MUST do all of these steps:
 
-1. Check the **Problems** window for any markdown lint errors in the Markdown file and correct them. Repeat until you have removed all issues. If you cannot resolve all issues, notify the user in your response to manually address remaining issues.
+1. Only when committing, run `markdownlint` and `cspell` with the repository configs and correct any issues. Otherwise, defer validation until commit and report that it wasn't run. Report any unresolved issues.
 1. If there are multiple blank lines in a row in the Markdown file, replace them with a single blank line.

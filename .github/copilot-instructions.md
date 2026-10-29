@@ -14,10 +14,11 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Essential validation workflow
 
-* Run markdown linting: `markdownlint docs --config .markdownlint.json --ignore **\node_modules\**` — takes ~3 seconds. Always fix lint errors before committing.
-* Run spell checking: `cspell --config cspell.json "docs/**/*.md"` — takes ~3 seconds. Add unknown but valid words to cspell.json.
-* Clean unused images: `pwsh scripts/CleanupUnusedImages.ps1` — takes ~45-50 seconds. NEVER CANCEL this operation.
-* ALWAYS run all validation steps before creating a pull request.
+* Run only `markdownlint` and `cspell`, using the repository configs, immediately before committing.
+* Don't run validation commands during drafting, editing, or review, or when handing off uncommitted changes. Report that validation was deferred until commit.
+* Don't rerun validation just to create a pull request if the committed content hasn't changed.
+* Don't run the unused image cleanup script as part of Copilot or agent work.
+* This policy applies to all agents and prompts in this repository. Content review and source verification remain part of authoring; they don't require additional validation tools.
 
 ### Content authoring
 
@@ -32,8 +33,8 @@ Always reference these instructions first and fallback to search or bash command
 
 1. `markdownlint docs --config .markdownlint.json` — must pass with zero errors
 2. `cspell --config cspell.json "docs/**/*.md"` — fix spelling or add words to cspell.json
-3. `pwsh scripts/CleanupUnusedImages.ps1` — verify no unused images
-4. Visual Studio Code should show no problems in the Problems window
+
+These are the only required local validation commands. Don't require a clean VS Code Problems window or run additional validation scripts. Automated CI checks remain unchanged.
 
 ### Content quality requirements
 
@@ -88,28 +89,27 @@ Always reference these instructions first and fallback to search or bash command
 2. Add required YAML front matter (title, description, author, ms.author, ms.topic, ms.localizationpriority, ms.date)
 3. Update `docs/TOC.yml` to include new file in navigation
 4. Add any new images to `docs/assets/images/` with descriptive names
-5. Run validation: `markdownlint docs --config .markdownlint.json && cspell --config cspell.json "docs/**/*.md"`
+5. Immediately before committing, run the two commands under **Required validation before every commit**.
 
 ### Updating existing documentation
 
 1. When updating technical information in articles, update the `ms.date` value in YAML front matter to the current date
 2. This helps track when content was last revised and ensures accurate metadata
 3. Use the format: `ms.date: MM/dd/yyyy` (e.g., `ms.date: 01/15/2024`)
-4. Run validation after updates: `markdownlint docs --config .markdownlint.json && cspell --config cspell.json "docs/**/*.md"`
+4. Defer validation until immediately before committing, then run the two required commands.
 
 ### Updating sample manifests
 
 1. Edit JSON files in `docs/includes/sample-manifests/`
 2. Ensure JSON is valid and properly formatted
 3. Update corresponding documentation that references the manifest
-4. Test validation workflow
+4. Defer validation until immediately before committing, then run the two required commands.
 
 ### Managing images
 
 1. Add images to `docs/assets/images/` with descriptive names
 2. Reference images using relative paths: `![Alt text](assets/images/filename.png)`
-3. Run cleanup script periodically: `pwsh scripts/CleanupUnusedImages.ps1`
-4. Ensure all images are used and properly referenced
+3. Ensure all images are used and properly referenced
 
 ### Handling spell check issues
 
@@ -128,7 +128,6 @@ Always reference these instructions first and fallback to search or bash command
 
 * **markdownlint validation**: 2-3 seconds for full repository. NEVER CANCEL.
 * **cspell validation**: 3-4 seconds for full repository. NEVER CANCEL.
-* **Image cleanup script**: 45-50 seconds for 142 images. NEVER CANCEL.
 * **VS Code Learn Authoring Pack**: Real-time validation, no waiting required.
 * **OpenPublishing build**: Runs in CI, typically 5-10 minutes. Cannot be run locally.
 
@@ -146,13 +145,11 @@ Always reference these instructions first and fallback to search or bash command
 
 1. Read error messages carefully
 2. Fix issues one at a time
-3. Re-run validation after each fix
-4. Check VS Code Problems window for real-time feedback
-5. Use Learn Authoring Pack features for automated fixes where available
+3. Re-run the affected required command after fixes, before committing
 
 ## Working with GitHub Copilot in this repository
 
-* Always run validation commands after making any content changes
+* Run only `markdownlint` and `cspell` immediately before committing; otherwise defer validation
 * Focus on content quality and adherence to Microsoft style guidelines
 * Use the repository structure to understand where to place new content
 * Leverage includes for reusable content across multiple articles

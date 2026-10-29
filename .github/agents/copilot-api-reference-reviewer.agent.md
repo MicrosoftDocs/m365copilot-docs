@@ -66,12 +66,12 @@ For each method reference file:
 
 ### Pass 5: Markdown quality
 
-- Run `markdownlint` on all generated or modified files and report any lint errors.
+- Only when committing, run `markdownlint` with the repository config on all generated or modified files and report any lint errors. Otherwise, defer validation until commit.
 - Check for multiple blank lines in a row.
 - Check for trailing whitespace.
 - Check for hard tabs.
 - Verify files end with a single newline character.
-- Run `cspell` on all generated or modified files and report any spelling issues.
+- Only when committing, run `cspell` with the repository config on all generated or modified files and report any spelling issues. Otherwise, report that validation wasn't run.
 
 ## Output format
 
