@@ -5,7 +5,7 @@ author: marina-hayrapetyan
 ms.author: mhayrapetyan
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 10/29/2026
+ms.date: 10/30/2026
 ---
 
 <!-- cSpell:ignore hayrapetyan mhayrapetyan azurecli -->

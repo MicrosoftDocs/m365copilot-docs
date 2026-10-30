@@ -1,19 +1,19 @@
 ---
-title: SharePoint Tools provider for Work IQ
-description: Learn about SharePoint scenarios, required permissions, and scope-filtered resource paths in the SharePoint Tools provider for Work IQ.
+title: SharePoint Tools for Work IQ
+description: Learn about SharePoint scenarios, required permissions, and scope-filtered resource paths for SharePoint Tools in Work IQ.
 author: patrick-rodgers
 ms.author: patrodg
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 10/29/2026
+ms.date: 10/30/2026
 ---
 
-# SharePoint Tools provider for Work IQ
+# SharePoint Tools for Work IQ
 
 By using SharePoint Tools in Work IQ, agents can work with SharePoint content and workflows. These tools offer the same capabilities as Copilot in SharePoint. Use these tools to build experiences that discover site content, work with OneDrive, organize files, maintain lists and document libraries, and manage collaboration workflows.
 
 > [!NOTE]
-> The SharePoint Tools provider is available in public preview.
+> The SharePoint Tools are available in public preview.
 
 Work IQ exposes SharePoint Tools through resource paths under `/sharepoint`. Agents use the Work IQ MCP interface to discover available paths and inspect their schemas, rather than loading a separate catalog of SharePoint-specific tools. For more information about this model, see [Work IQ MCP entity model](mcp/entity-model.md).
 
@@ -31,7 +31,7 @@ Your agent or application needs **either `WorkIQ.Read` or `WorkIQ.Act`** in its 
 Work IQ filters the `/sharepoint` paths exposed during discovery according to the scopes in the access token. A read-only token doesn't expose paths for actions that change data. Use runtime path and schema discovery to determine which operations are available to your application.
 
 > [!NOTE]
-> If your access token contains **only** the `WorkIQAgent.Ask` scope, the `/sharepoint` paths are hidden. The Ask scope alone doesn't provide access to the SharePoint Tools provider. Your application needs `WorkIQ.Read` or `WorkIQ.Act` for these paths to be discoverable.
+> If your access token contains **only** the `WorkIQAgent.Ask` scope, the `/sharepoint` paths are hidden. The Ask scope alone doesn't provide access to SharePoint Tools in Work IQ. Your application needs `WorkIQ.Read` or `WorkIQ.Act` for these paths to be discoverable.
 
 OAuth scopes don't grant access beyond the signed-in user's existing SharePoint permissions. Tenant governance policies also apply to requests. For more information, see [Policy governance for Work IQ MCP](mcp/policy-governance-mcp.md).
 
