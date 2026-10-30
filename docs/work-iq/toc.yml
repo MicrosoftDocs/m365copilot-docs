@@ -7,6 +7,8 @@ items:
   href: enable-work-iq.md
 - name: Work IQ CLI
   href: cli.md
+- name: SharePoint Tools (preview)
+  href: sharepoint-iq.md
 - name: Agent-to-Agent (A2A)
   href: a2a/toc.yml
 - name: REST API
