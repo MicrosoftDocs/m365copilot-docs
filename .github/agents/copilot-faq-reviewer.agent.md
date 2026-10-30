@@ -55,14 +55,15 @@ For each question and answer:
 
 ### Pass 5: Markdown quality
 
-- Run `markdownlint` on the generated FAQ file and report any lint errors:
+- Only when committing, run `markdownlint` on the generated FAQ file and report any lint errors:
   ```
   markdownlint <file-path> --config .markdownlint.json
   ```
-- Run `cspell` on the generated FAQ file and report any spelling issues:
+- Only when committing, run `cspell` on the generated FAQ file and report any spelling issues:
   ```
   cspell --config cspell.json <file-path>
   ```
+- Otherwise, defer both commands until commit and report that validation wasn't run.
 - Check for multiple blank lines in a row.
 - Check for trailing whitespace.
 - Check for hard tabs.
