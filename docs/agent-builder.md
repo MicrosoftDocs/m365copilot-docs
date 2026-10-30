@@ -5,7 +5,7 @@ description: Learn how to use Agent Builder to build declarative agents for Micr
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 10/20/2026
+ms.date: 10/30/2026
 ms.topic: overview
 ms.service: copilot-studio
 ms.subservice: agent-builder

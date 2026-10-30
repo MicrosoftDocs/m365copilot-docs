@@ -5,7 +5,7 @@ description: Learn how to build declarative agents in Agent Builder by using nat
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 10/20/2026
+ms.date: 10/30/2026
 ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder

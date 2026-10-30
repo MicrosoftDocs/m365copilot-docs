@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 10/20/2026
+ms.date: 10/30/2026
 ---
 
 # Add connected agents in Agent Builder
@@ -47,10 +47,10 @@ Choose agents whose capabilities match a task you want your agent to delegate. R
 
 ## Add a connected agent
 
-<!-- PM-REVIEW (10/20/2026): Verify this procedure in the Ignite build before publication. The specification describes Plugins > Add and browse/search/add, but the picker filters, add/remove controls, and final test-chat labels aren't confirmed. No live UI execution or screenshots have been verified. -->
+<!-- PM-REVIEW (10/30/2026): Procedures use the Browse, Preview, and Remove labels from the supplied draft. Verify these procedures in the release build before publication. No live UI execution or screenshots have been verified. -->
 
 1. Open your agent in Agent Builder. For an existing agent, select **Edit**. For help finding your agent, see [Edit an agent](agent-builder-share-manage-agents.md#edit-an-agent).
-1. On the **Configure** tab, find the **Plugins** section and select **Add**.
+1. On the **Configure** tab, find the **Plugins** section and select **Browse**.
 1. In the plugin picker, browse or search for the declarative agent you want to connect.
 1. Select the agent and add it to your current agent.
 
@@ -62,7 +62,7 @@ If an agent doesn't appear, check the [prerequisites](#prerequisites) and [suppo
 
 Test delegation before making your changes available to users. Agent Builder's test chat uses your agent's current unpublished configuration, including its connected agents.
 
-1. Open the test chat in Agent Builder by clicking "Preview" tab on the right top. For general testing guidance, see [Test your agent](agent-builder-build-agents.md#test-your-agent).
+1. Select the **Preview** tab in the upper-right corner of Agent Builder to open the test chat. For general testing guidance, see [Test your agent](agent-builder-build-agents.md#test-your-agent).
 1. Enter a prompt that calls for a connected agent's specialized knowledge or capabilities. For example, if you connected an IT support agent to an onboarding agent, try: "I'm joining the team next week. How do I request a work laptop?"
 1. Review the response and any connected-agent invocation errors. Try prompts for each connected agent to check that your agent can delegate the intended tasks.
 1. Resolve any configuration or access errors and test again.
@@ -76,7 +76,7 @@ Remove a connection when your agent no longer needs another agent's capabilities
 
 1. Open your agent for editing in Agent Builder.
 1. On the **Configure** tab, find the connected agent in the **Plugins** section.
-1. Click "remove" from the ellipse menu of the connected agent.
+1. Open the connected agent's ellipsis (**...**) menu, and then select **Remove**.
 1. Test your agent again to check how it handles tasks without that connection.
 1. Select **Update** to make the change available to users.
 
@@ -91,7 +91,7 @@ Removing the connection doesn't delete the other agent.
 | A connected agent is unavailable. | Review the reason shown with the agent. If the agent was deleted or your access was revoked, the connection remains visible rather than being silently removed. Remove the connection if you no longer need it. If your access was revoked, contact the owner to request access. |
 | A connected-agent call fails in test chat. | Review the error shown in test chat. Check that the connected agent is still available and that you have access, then test again. |
 
-<!-- INTERACTIVE-DEMO (10/20/2026): Evaluated the production product catalog at https://interactivedemo.microsoft.com/. It lists developer API, protocol, and CLI experiences, but no Agent Builder plugin-picker experience for adding connected declarative agents. No unrelated demo link was added. -->
+<!-- INTERACTIVE-DEMO (10/30/2026): Evaluated the production product catalog at https://interactivedemo.microsoft.com/. It lists developer API, protocol, and CLI experiences, but no Agent Builder plugin-picker experience for adding connected declarative agents. No unrelated demo link was added. -->
 
 ## Related content
 
