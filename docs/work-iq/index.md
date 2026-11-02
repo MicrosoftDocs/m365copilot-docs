@@ -4,7 +4,7 @@ description: Learn how Work IQ provides production-ready workplace intelligence 
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 09/25/2026
+ms.date: 11/02/2026
 ms.topic: overview
 ---
 
@@ -17,6 +17,8 @@ Combining chat, context, tools, and workspaces, Work IQ supports high-volume, mu
 :::image type="content" source="../assets/diagrams/work-iq-api.png" alt-text="Diagram showing the Work IQ API with chat, context, tools, and workspaces components accessible via A2A, MCP, and REST protocols." border="false":::
 
 Work IQ API endpoints include A2A, a remote MCP server, and a REST API. Usage is independent of Microsoft 365 Copilot licensing and available through usage-based billing. Enterprise governance and cost management controls are available in the [Microsoft 365 admin center](https://admin.microsoft.com/).
+
+Connected enterprise sources participate in Work IQ Copilot, entity, and schema tools. Connected enterprise sources refer to data sources connected in Copilot Chat.
 
 ## Chat
 
