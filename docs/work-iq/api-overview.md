@@ -54,8 +54,6 @@ Work IQ can reason over:
 - Enterprise search results
 - Data from connected enterprise systems through Copilot Connectors
 
-Connected enterprise sources participate in Work IQ Copilot, entity, and schema tools. Connected enterprise sources refer to data sources connected in Copilot Chat.
-
 ## Choose a protocol
 
 Use the following guide to select the right protocol.
