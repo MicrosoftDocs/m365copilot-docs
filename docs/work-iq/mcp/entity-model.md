@@ -14,7 +14,7 @@ ms.date: 11/02/2026
 
 Work IQ MCP uses a path-based entity model. Instead of exposing a separate tool for every Microsoft 365 entity or connector operation, Work IQ MCP exposes a small set of generic tools that operate on resource paths.
 
-A resource path identifies a resource or supported operation in Microsoft 365 or a connected source in Copilot Chat. The selected tool indicates what the agent wants to do with that path.
+A resource path identifies a resource or supported operation in Microsoft 365 or a connected source. The selected tool indicates what the agent wants to do with that path.
 
 ## What is an entity?
 
