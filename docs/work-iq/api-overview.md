@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 11/02/2026
+ms.date: 11/03/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -52,6 +52,7 @@ Work IQ can reason over:
 - People and organizational context
 - Microsoft Planner plans
 - Enterprise search results
+- Data from connected enterprise systems through Copilot Connectors
 
 Connected enterprise sources participate in Work IQ Copilot, entity, and schema tools. Connected enterprise sources refer to data sources connected in Copilot Chat.
 
