@@ -51,6 +51,8 @@ items:
     - name: Choose development tools
       href: choose-plugin-development-tools.md
       items:
+      - name: Work IQ Dev Tools documentation
+        href: https://aka.ms/wiqd/docs
       - name: Choose between Agent Builder and Copilot Studio
         href: copilot-studio-experience.md
 
@@ -343,6 +345,10 @@ items:
     - name: Create the plugin package
       href: package-plugin.md
       items:
+      - name: Build a plugin with Work IQ Dev Tools
+        href: https://microsoft.github.io/wiqd/getting-started/build-a-plugin/
+      - name: Configure CI/CD with Work IQ Dev Tools
+        href: plugin-ci-cd.md
       - name: Design agent icons
         href: agent-icon-management.md
     - name: Validate and test the package

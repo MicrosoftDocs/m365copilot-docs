@@ -4,8 +4,10 @@ description: Choose a supported packaging path and create the exact versioned ar
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/03/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Package your plugin for Microsoft 365 Copilot
@@ -37,6 +39,8 @@ Don't use packaging to resolve an unfinished component or integration. Return to
 | A plugin package supported by another plugin-specific workflow | Follow the documented command, UI action, or automated workflow for that package. | The installable plugin package identified by that procedure. |
 
 If no packaging route supports your plugin's components and target experiences, stop. Choose a supported method or revise the plugin. Don't combine or rename artifacts to create an unsupported package.
+
+To automate WIQD source checks, candidate packaging, and package-first validation, see [Configure plugin CI/CD with Work IQ Dev Tools](plugin-ci-cd.md).
 
 > [!NOTE]
 > Static `wiqd plugin validate` checks only the declarative-agent surface and referenced API-plugin or OpenAPI files. A skill-only or connector-only plugin can pass the static check without its top-level capabilities being validated. Package-first deep validation is required to check the built app package.

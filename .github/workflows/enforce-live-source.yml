@@ -2,6 +2,9 @@ name: Enforce live source branch
 on:
   pull_request:
     branches: [live] # only PRs targeting live
+permissions:
+  contents: read
+  pull-requests: read
 jobs:
   check-source:
     runs-on: ubuntu-latest

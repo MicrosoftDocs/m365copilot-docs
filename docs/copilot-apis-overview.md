@@ -5,7 +5,7 @@ description: Use the Copilot APIs to securely access Microsoft 365 Copilot capab
 author: lramosvea
 ms.author: lramosvea
 ms.topic: article
-ms.date: 08/06/2026
+ms.date: 11/02/2026
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---
@@ -38,6 +38,7 @@ The following table lists the APIs and describes their capabilities and scenario
 | [Chat API (preview)](api/ai-services/chat/overview.md) | Enable conversational experiences powered by Microsoft 365 Copilot in your custom applications. | Integrate Microsoft 365 Copilot into your enterprise applications that can answer questions, perform tasks, and provide guidance based on Microsoft 365 data and user context. These interfaces can improve user productivity by bringing AI capabilities directly into the tools they use every day, from custom portals to mobile apps. |
 | [Copilot usage reports API](api/admin-settings/reports/resources/copilotreportroot.md) | Query user counts and usage data for Microsoft 365 Copilot in your organization. | Build reports to track the adoption of Microsoft 365 Copilot by your users. |
 | [Package management API](api/admin-settings/package/overview.md) | View and manage agents across your organization. | Create an inventory of all agents within your organization. |
+| [Cost Management API (preview)](api/admin-settings/cost-management/overview.md) | View your organization's Copilot credit balance, manage spending policies and threshold alerts, check per-user consumption, and review users' requests for Copilot credits. | Build a cost governance dashboard that caps Copilot credit spending for a pilot group, alerts admins as usage approaches the limit, diagnoses why a user can't consume a service, and approves pending credit requests in bulk. |
 
 > [!NOTE]
 > The Chat API returns textual responses; it answers questions and provides guidance but doesn't perform actions like creating files, sending emails, or scheduling meetings. For details, see the Chat API [known limitations](api/ai-services/chat/overview.md#known-limitations).

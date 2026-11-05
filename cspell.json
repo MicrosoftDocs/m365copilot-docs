@@ -189,12 +189,14 @@
     "toolsets",
     "Typeof",
     "typespec",
+    "unbilled",
     "unconfigured",
     "vscodeversion",
     "wiqd",
     "workiq",
     "wujessica",
-    "xwen"
+    "xwen",
+    "zamartin"
   ],
   "ignoreWords": [],
   "flagWords": [

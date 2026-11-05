@@ -4,7 +4,7 @@ description: The Copilot Cost Management administration root.
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 10/02/2026
+ms.date: 11/02/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -15,7 +15,7 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-The Copilot Cost Management administration root, contained by the `copilot` singleton at `/copilot/costManagement`. Reading the root itself isn't supported in this version; use the contained collections and the bound [getTenantCreditBalance](../costmanagementroot-gettenantcreditbalance.md) function.
+The Copilot Cost Management administration root, contained by the `copilot` singleton at `/copilot/costManagement`. Reading the root itself isn't supported in this version; use the contained collections, the contained [usageReports](costmanagementusagereportroot.md) root for reported consumption, and the bound [getTenantCreditBalance](../costmanagementroot-gettenantcreditbalance.md) function.
 
 ## Methods
 
@@ -33,7 +33,9 @@ The Copilot Cost Management administration root, contained by the `copilot` sing
 
 | Relationship       | Type                                                           | Description                                                                       |
 |:-------------------|:---------------------------------------------------------------|:----------------------------------------------------------------------------------|
+| `creditRequests`   | [creditRequest](creditrequest.md) collection                   | The users' credit requests in the tenant, newest first. Excludes audit-only requests. |
 | `spendingPolicies` | [spendingPolicy](spendingpolicy.md) collection                 | The spending policies that govern Copilot Credits consumption.                    |
+| `usageReports`     | [costManagementUsageReportRoot](costmanagementusagereportroot.md) | Reported consumption of Copilot Credits, split by user, group, service, and funding. Nullable. |
 | `userBalances`     | [costManagementUserBalance](costmanagementuserbalance.md) collection | Per-user consumption balances, addressed by the user's identifier.          |
 
 ## JSON representation
