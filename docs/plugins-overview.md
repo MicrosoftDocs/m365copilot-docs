@@ -4,8 +4,10 @@ description: Learn what a Microsoft 365 Copilot plugin includes and how to take 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/02/2026
 ms.topic: overview
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # What is a Microsoft 365 Copilot plugin?
@@ -52,6 +54,7 @@ After you publish or share your plugin, users might still need approval, install
 ## Get started
 
 - **Have an existing declarative-agent source project?** Follow [Quickstart: Create your first plugin with Work IQ Dev Tools](quickstart-plugin.md).
+- **Want to create and package a plugin with pro-code tools?** Follow [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) in the GitHub documentation.
 - **Want to build or reuse capabilities?** Start with [Plan your plugin](planning-guide.md).
 - **Need to administer a plugin?** See the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) administration map.
 - **Want to publish for customers?** See [Build and publish plugins for customers](isv-publisher-guide.md).
