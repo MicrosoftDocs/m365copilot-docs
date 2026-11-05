@@ -5,7 +5,9 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 10/13/2026
+ms.date: 10/26/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -815,13 +817,17 @@ The following path segments are blocked:
 
 ## Error handling
 
-When a tool call fails, the Work IQ MCP server returns errors with the following information:
+Check both the HTTP response and the MCP tool result to determine whether a call succeeded. An HTTP `200 OK` response means the MCP response was delivered; it doesn't guarantee that the tool completed successfully.
 
-- HTTP status code from the downstream service
-- `Retry-After` headers for throttling responses (passed through from Microsoft Graph)
-- Request correlation IDs for troubleshooting
+Tool execution failures are reported in the tool result with `isError: true` and error details in `content`. For example, a Copilot chat request through the `ask` tool can return HTTP `200 OK` while its tool result reports a downstream `429 Too Many Requests` error. This is a failed tool call, not a successful answer. Reporting tool execution failures in the result follows the [MCP specification for tool error handling](https://modelcontextprotocol.io/specification/2025-11-25/server/tools#error-handling).
 
-The server doesn't perform automatic retries. The MCP client receives errors and makes client-side retry decisions.
+Error details can include:
+
+- The HTTP status code from the downstream service.
+- A retry delay, when available. Don't assume that a downstream `Retry-After` header is always forwarded to the MCP client. A Copilot chat throttling error can report an unknown retry delay.
+- Request correlation IDs and timestamps for troubleshooting.
+
+The server doesn't perform automatic retries. The MCP client makes retry decisions based on the tool result as well as the HTTP status. For throttling, honor the retry delay when provided. If the delay is missing or unknown, use exponential backoff with jitter and a bounded retry count. Avoid immediate or unlimited retries. Retain correlation IDs and timestamps if throttling persists and you need support.
 
 ## Related content
 

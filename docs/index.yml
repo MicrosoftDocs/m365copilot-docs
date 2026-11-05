@@ -8,7 +8,7 @@ metadata:
   description: Create a plugin from existing capabilities with Work IQ Dev Tools, or follow the complete plugin lifecycle from planning and development through publishing, governance, updates, and retirement.
   author: lauragra
   ms.author: jasonjoh
-  ms.date: 09/30/2026
+  ms.date: 11/03/2026
   ms.topic: landing-page
   ms.custom:
     - copilot-extensibility
@@ -35,6 +35,8 @@ landingContent:
             url: build-reuse-plugin.md
           - text: Package and test
             url: package-plugin.md
+          - text: Build a plugin with Work IQ Dev Tools (GitHub)
+            url: https://microsoft.github.io/wiqd/getting-started/build-a-plugin/
           - text: Validate and test your plugin
             url: validate-plugin.md
 
@@ -44,6 +46,8 @@ landingContent:
         links:
           - text: Publish or share
             url: publish.md
+          - text: Configure plugin CI/CD with Work IQ Dev Tools
+            url: plugin-ci-cd.md
           - text: Make available and govern
             url: govern-plugins.md
 

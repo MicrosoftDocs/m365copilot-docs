@@ -4,8 +4,10 @@ description: Follow the Microsoft 365 Copilot plugin lifecycle as a builder, or 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/03/2026
 ms.topic: overview
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Build solutions for Microsoft 365 Copilot
@@ -37,6 +39,8 @@ For a plugin, complete each stage in order.
 
 Define the required capabilities and target Microsoft experiences before you select a development tool. Then use [Choose development tools for your plugin](choose-plugin-development-tools.md) to compare the available authoring and packaging paths, including Microsoft 365 Agents Toolkit for supported Microsoft 365 app packages.
 
+For a pro-code plugin workflow, use the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs) on GitHub. Start with [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) for the supported creation, validation, provisioning, packaging, and sharing procedure.
+
 Before implementation, confirm that the required identities, environments, services, permissions, licenses, and owners are available.
 
 ## Related content
@@ -47,3 +51,4 @@ Before implementation, confirm that the required identities, environments, servi
 - [Choose capabilities for your plugin](choose-plugin-components.md)
 - [Choose development tools for your plugin](choose-plugin-development-tools.md)
 - [Build or reuse capabilities for your plugin](build-reuse-plugin.md)
+- [Configure plugin CI/CD with Work IQ Dev Tools](plugin-ci-cd.md)

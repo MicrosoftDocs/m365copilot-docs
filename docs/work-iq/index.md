@@ -4,8 +4,10 @@ description: Learn how Work IQ provides production-ready workplace intelligence 
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 09/25/2026
+ms.date: 10/26/2026
 ms.topic: overview
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Work IQ overview
@@ -54,6 +56,8 @@ Work IQ API access is independent of Microsoft 365 Copilot licensing and availab
 - Users without a Microsoft 365 Copilot license are billed based on usage.
 
 Work IQ cost is variable based on usage and can be managed in the [Microsoft 365 admin center](https://admin.microsoft.com/). To learn more, see [Licensing](https://aka.ms/WorkIQ/licensing).
+
+Work IQ API usage consumes Copilot Credits shared with other eligible services. For capacity planning and billing guidance, see [Manage shared Copilot Credits](../cost-considerations.md#manage-shared-copilot-credits).
 
 ## Related content
 
