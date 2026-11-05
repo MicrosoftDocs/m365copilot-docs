@@ -69,6 +69,18 @@ items:
     href: resources/costmanagementroot.md
   - name: Get tenant credit balance
     href: costmanagementroot-gettenantcreditbalance.md
+- name: Credit request
+  items:
+  - name: Credit request
+    href: resources/creditrequest.md
+  - name: List
+    href: creditrequest-list.md
+  - name: Get
+    href: creditrequest-get.md
+  - name: Update
+    href: creditrequest-update.md
+  - name: Batch record decisions
+    href: creditrequest-batchrecorddecisions.md
 - name: Usage reports
   items:
   - name: Cost management usage report root
@@ -153,3 +165,9 @@ items:
     href: resources/percentagecostmanagementalertthreshold.md
   - name: Absolute cost management alert threshold
     href: resources/absolutecostmanagementalertthreshold.md
+  - name: Credit request update item
+    href: resources/creditrequestupdateitem.md
+  - name: Credit request update response
+    href: resources/creditrequestupdateresponse.md
+  - name: Credit request update response item
+    href: resources/creditrequestupdateresponseitem.md

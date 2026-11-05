@@ -5,7 +5,7 @@ author: DanielSaunders
 ms.author: dsaunders
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 10/27/2026
+ms.date: 11/03/2026
 ---
 
 <!-- cSpell:ignore dsaunders -->
@@ -14,7 +14,7 @@ ms.date: 10/27/2026
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-The Microsoft 365 Copilot Cost Management API helps administrators govern and observe tenant consumption of Copilot and AI **credits** through Microsoft Graph, rooted at `/copilot/costManagement`. The contract is unit-aware and credit-denominated. It covers the tenant credit balance snapshot, spending policy management, group audience scoping, per-service settings, notify-only threshold alerts and their recipients, per-user consumption balances, and usage reports that break down consumption by user, security group, governed service, and funding class.
+The Microsoft 365 Copilot Cost Management API helps administrators govern and observe tenant consumption of Copilot and AI **credits** through Microsoft Graph, rooted at `/copilot/costManagement`. The contract is unit-aware and credit-denominated. It covers the tenant credit balance snapshot, spending policy management, group audience scoping, per-service settings, notify-only threshold alerts and their recipients, per-user consumption balances, the review of users' credit requests, and usage reports that break down consumption by user, security group, governed service, and funding class.
 
 The API is credit-denominated and deliberately excludes purchase forecasts. It doesn't return any currency, invoice, price, or settlement amounts.
 
@@ -27,6 +27,7 @@ The API is credit-denominated and deliberately excludes purchase forecasts. It d
 - Configure per-service settings that govern or exclude individual AI services within a policy.
 - Configure notify-only threshold alerts and manage their recipients.
 - Diagnose a user's per-service consumption balance and understand why a user can or can't consume a service.
+- List, review, approve, or reject users' requests for Copilot credits, individually or in bulk.
 - Report consumption for one completed UTC day by user, security group, and governed service, with ranking and paging.
 - Report a calendar month's consumption by funding class (prepaid, pay-as-you-go, unbilled overage, and non-billable).
 - Read one user's raw usage detail over a timestamp window, broken down by service and session.
@@ -37,6 +38,7 @@ The API is credit-denominated and deliberately excludes purchase forecasts. It d
 - An administrator adds or removes a governed service on an existing policy.
 - A support administrator diagnoses why a user can no longer consume a service by reading that user's per-service balance.
 - A FinOps reader lists the tenant's enabled spending policies and reviews their configured limits.
+- An AI administrator reviews pending credit requests for Work IQ and approves them in bulk.
 - A FinOps analyst splits yesterday's consumption by service to see where credits went across AI experiences.
 - A billing administrator closes a month by reviewing its consumption by funding class, including unbilled overage.
 - A FinOps analyst or business unit lead ranks the highest-consuming users or security groups for a day.
@@ -45,6 +47,8 @@ The API is credit-denominated and deliberately excludes purchase forecasts. It d
 ## Personas and roles
 
 Target personas include the AI Administrator and License Administrator for policy management; the FinOps/Global Reader and Billing Administrator for reads; and the Support/Helpdesk administrator for per-user diagnostics. For usage reports, target personas include the FinOps analyst and Billing Administrator for the service and funding reports, and the FinOps analyst and business unit (BU) lead for the user and group rankings. Creating a spending policy also requires the Billing Administrator or Global Administrator directory role at runtime.
+
+Billing Administrators, Global Administrators, AI Administrators, Global Readers, and AI Readers can read credit requests. Global Administrators, Billing Administrators, and AI Administrators can approve or reject them.
 
 ## Permissions
 
@@ -66,6 +70,8 @@ This API uses the `CopilotCostManagement-*` permission family. Most operations s
 | `CopilotCostManagement-Assignment.Read.All`     | Read a policy's group audience.                                                 |
 | `CopilotCostManagement-Assignment.ReadWrite.All` | Add and remove a policy's group audience.                                       |
 | `CopilotCostManagement-UserData.Read.All`       | Read a named user's balance diagnostics, including consumption and the selected `spendingPolicyId`. Also read user and group usage records and raw per-user usage detail, including services, sessions, native session identifiers, and first and last activity timestamps. |
+| `CopilotCostManagement-CreditReq.Read.All`      | Read credit requests.                                                           |
+| `CopilotCostManagement-CreditReq.ReadWrite.All` | Read credit requests and approve or reject them.                                |
 
 ## API list
 
@@ -93,6 +99,10 @@ This API uses the `CopilotCostManagement-*` permission family. Most operations s
 | [Get costManagementUserBalance](costmanagementuserbalance-get.md)                                       | GET `/copilot/costManagement/userBalances/{userId}`                                                    | Retrieve a user's consumption balance.                      |
 | [List costManagementUserServiceBalances](costmanagementuserservicebalance-list.md)                      | GET `/copilot/costManagement/userBalances/{userId}/serviceBalances`                                    | List a user's per-service balance rows.                     |
 | [Get costManagementUserServiceBalance](costmanagementuserservicebalance-get.md)                         | GET `/copilot/costManagement/userBalances/{userId}/serviceBalances/{serviceId}`                        | Retrieve one service's balance row for a user.              |
+| [List creditRequests](creditrequest-list.md)                                                            | GET `/copilot/costManagement/creditRequests`                                                           | List the tenant's credit requests.                          |
+| [Get creditRequest](creditrequest-get.md)                                                               | GET `/copilot/costManagement/creditRequests/{id}`                                                      | Retrieve a credit request.                                  |
+| [Update creditRequest](creditrequest-update.md)                                                         | PATCH `/copilot/costManagement/creditRequests/{id}`                                                    | Approve or reject a credit request.                         |
+| [Batch record decisions](creditrequest-batchrecorddecisions.md)                                         | POST `/copilot/costManagement/creditRequests/batchRecordDecisions`                                     | Approve or reject credit requests in bulk.                  |
 | [List costManagementUserUsageRecords](costmanagementuserusagerecord-list.md)                            | GET `/copilot/costManagement/usageReports/userUsageRecords`                                            | List reported consumption per user for one completed UTC day. |
 | [Get costManagementUserUsageRecord](costmanagementuserusagerecord-get.md)                               | GET `/copilot/costManagement/usageReports/userUsageRecords/{userId}`                                   | Retrieve one user's reported consumption for one completed UTC day. |
 | [List costManagementGroupUsageRecords](costmanagementgroupusagerecord-list.md)                          | GET `/copilot/costManagement/usageReports/groupUsageRecords`                                           | List reported consumption per security group for one completed UTC day. |
@@ -109,6 +119,9 @@ This API uses the `CopilotCostManagement-*` permission family. Most operations s
 - To mutate an existing policy and its child resources (service settings and reference links), include an `If-Match` header with the parent policy's ETag. Service settings and reference links don't have their own ETag. The parent policy manages concurrency and appears as `parentEtag` on a service setting. When you create a policy, it has no existing ETag and doesn't use `If-Match`.
 - The `serviceSettings` collection doesn't support `DELETE`. Set `state` to `disabled` to remove a service. The entry stays in that state.
 - Manage the `assignedGroups` and `recipients` relationships as reference navigation properties with `$ref` add and remove.
+- Credit requests carry their own strong ETag, returned as `@odata.etag` and in the `ETag` response header. [Update creditRequest](creditrequest-update.md) requires an `If-Match` header; the [batchRecordDecisions](creditrequest-batchrecorddecisions.md) action takes a per-item `etag` instead.
+- A credit request decision that matches the current state is a no-op that preserves the ETag, `decisionBy`, and timestamps. The ETag is still checked, so a same-state decision with a stale ETag fails with `preconditionFailed`.
+- Credit requests can't be created or deleted through the API. Users create them outside Microsoft Graph, and the service retains them according to its retention policy.
 
 ## Usage report time selectors and paging
 
@@ -150,14 +163,23 @@ Error responses use the standard OData `error` and `innerError` envelope. The `i
 | Alert recipient reference doesn't resolve to a real user in the tenant directory                                 | 400  | `alertRecipientNotFound`     |
 | Supplying a server-managed field on PATCH                                                                        | 400  | `invalidRequest`             |
 | Stale `If-Match` on a mutating operation                                                                         | 412  | `preconditionFailed`         |
+| Missing `If-Match` on a credit request update                                                                    | 428  | `preconditionRequired`       |
+| Malformed, weak (`W/`), or `*` `If-Match` on a credit request update                                             | 400  | `invalidRequest`             |
 | Conflicting concurrent state transition                                                                          | 409  | `invalidTransition`          |
 | Upstream evaluator failed for every service, so no balance row could be produced                                 | 503  | `sourceUnavailable`          |
+| Credit request ID doesn't exist                                                                                  | 404  | `itemNotFound`               |
+| Invalid bulk decision payload, such as an empty list, more than 100 items, or duplicate request IDs              | 400  | `invalidRequest`             |
+| Unsupported credit request state transition on update                                                            | 400  | `invalidRequest`             |
+| Credit request list or count dependency failure                                                                  | 503  | `serviceNotAvailable`        |
 | Usage report source failed. Don't treat this response as zero consumption.                                       | 503  | `sourceUnavailable`          |
 | API throttling. Honor the `Retry-After` header.                                                                  | 429  | `tooManyRequests`            |
+
+The [batchRecordDecisions](creditrequest-batchrecorddecisions.md) action returns per-item failures in a `200 OK` response, not as HTTP errors.
 
 ## Related content
 
 - [spendingPolicy resource type](resources/spendingpolicy.md)
 - [costManagementUserBalance resource type](resources/costmanagementuserbalance.md)
+- [creditRequest resource type](resources/creditrequest.md)
 - [costManagementUsageReportRoot resource type](resources/costmanagementusagereportroot.md)
 - [costManagementUserUsageRecord resource type](resources/costmanagementuserusagerecord.md)
