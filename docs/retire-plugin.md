@@ -4,7 +4,7 @@ description: Take down a Microsoft 365 Copilot plugin, remove access, clean up p
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/06/2026
 ms.topic: how-to
 ---
 
@@ -44,10 +44,10 @@ Complete the actions needed for your retirement scope. You might need more than 
 
 | What you need to do | Action | Who acts |
 | --- | --- | --- |
-| Block access in your organization | [Block the plugin](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#block-a-tool) in **Agents** > **Tools** > **Plugins**. | Microsoft 365 administrator |
-| Remove an administrator-deployed installation | [Uninstall the plugin](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#uninstall-a-tool). Also [restrict availability](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#manage-plugin-availability-for-users) or block access if users must not add it again. | Microsoft 365 administrator |
-| Delete a package uploaded by your organization | [Delete the uploaded package](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#delete-a-tool). This action isn't available for Marketplace packages. | Microsoft 365 administrator |
-| Stop direct sharing | Follow the authoring tool's removal procedure, where supported. Check whether recipients retain access and arrange [blocking](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#block-a-tool) when needed. For Cowork, see [Block a plugin that's already been shared](/microsoft-365/copilot/cowork/cowork-manage-plugins#block-a-plugin-thats-already-been-shared). | Plugin owner and administrator |
+| Block access in your organization | [Block the plugin](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#block-a-plugin-or-skill) in **Agents** > **Tools** > **Plugins**. | Microsoft 365 administrator |
+| Remove an administrator-deployed installation | [Uninstall the plugin](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#uninstall-a-plugin-or-skill). Also [restrict availability](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#manage-plugin-availability-for-users) or block access if users must not add it again. | Microsoft 365 administrator |
+| Delete a package uploaded by your organization | [Delete the uploaded package](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#delete-a-plugin-or-skill). This action isn't available for Marketplace packages. | Microsoft 365 administrator |
+| Stop direct sharing | Follow the authoring tool's removal procedure, where supported. Check whether recipients retain access and arrange [blocking](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#block-a-plugin-or-skill) when needed. For Cowork, see [Block a plugin that's already been shared](/microsoft-365/copilot/cowork/cowork-manage-plugins#block-a-plugin-thats-already-been-shared). | Plugin owner and administrator |
 | End public distribution | Follow the applicable Partner Center offer procedure; start from [Publish your plugin through Microsoft Marketplace](publish-plugin-publicly.md). Notify customers and coordinate retirement of existing installations with their administrators. | Publisher and customer administrators |
 
 After applying the controls:
@@ -58,7 +58,7 @@ After applying the controls:
 
 Blocking can take effect differently across Microsoft 365 experiences. In Cowork, a block applies to new conversations; conversations already using the plugin continue until they end. See [Block a plugin that's already been shared](/microsoft-365/copilot/cowork/cowork-manage-plugins#block-a-plugin-thats-already-been-shared).
 
-Blocking the package also blocks its included agents, but leaves associated MCP servers and connectors available to other plugins. See [Block a tool](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#block-a-tool). If an agent also exists separately with its own Agent Registry controls, check the applicable [agent actions](/microsoft-365/admin/manage/agent-actions?context=/microsoft-365/copilot/extensibility/context).
+Blocking the package also blocks its included agents, but leaves associated MCP servers and connectors available to other plugins. See [Block a tool](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#block-a-plugin-or-skill). If an agent also exists separately with its own Agent Registry controls, check the applicable [agent actions](/microsoft-365/admin/manage/agent-actions?context=/microsoft-365/copilot/extensibility/context).
 
 ## Clean up resources
 

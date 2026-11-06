@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 10/26/2026
+ms.date: 11/04/2026
 ---
 
 # Add skills to your declarative agent in Agent Builder
