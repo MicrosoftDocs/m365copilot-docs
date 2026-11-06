@@ -5,7 +5,7 @@ description: Maintain, restrict, or revoke access to a Microsoft 365 Copilot plu
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/06/2026
 ms.topic: how-to
 ---
 
@@ -22,9 +22,9 @@ Use the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugi
 | Change who can use the plugin | **Agents** > **Tools** > **Plugins** > **Users** | [Manage plugin availability for users](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#manage-plugin-availability-for-users) | The intended audience can use it; users outside the scope can't. |
 | Set allowed publisher categories | **Agents** > **Settings** > **Agent and plugin access** | [Manage plugin availability at the organization level](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#manage-plugin-availability-at-the-organization-level) | The selected category matches organizational policy. |
 | Respond to access requests | **Agents** > **Tools** > **Requests** | [Review plugin access requests](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#review-plugin-access-requests) | The request is approved or rejected; verify the requester's resulting access. |
-| Stop use across the organization | **Agents** > **Tools** > **Plugins** | [Block a tool](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#block-a-tool) | The plugin is blocked; test access in a new conversation. |
+| Stop use across the organization | **Agents** > **Tools** > **Plugins** | [Block a tool](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#block-a-plugin-or-skill) | The plugin is blocked; test access in a new conversation. |
 | Restore use | **Agents** > **Tools** > **Plugins** | Follow the [supported plugin controls](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#manage-plugins-and-skills) for the affected package. | Its status and availability match the intended audience. |
-| Change an administrator installation | **Agents** > **Tools** > **Plugins** | [Install](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#install-a-tool) or [uninstall](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#uninstall-a-tool) as needed. | The installation state matches the plan. |
+| Change an administrator installation | **Agents** > **Tools** > **Plugins** | [Install](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#install-a-plugin-or-skill) or [uninstall](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#uninstall-a-plugin-or-skill) as needed. | The installation state matches the plan. |
 
 Restricted plugins can remain discoverable and users can request access. Blocking is a separate package control. In Cowork, [blocking takes effect for new conversations](/microsoft-365/copilot/cowork/cowork-manage-plugins#block-a-plugin-thats-already-been-shared); conversations already using the plugin continue until they end.
 

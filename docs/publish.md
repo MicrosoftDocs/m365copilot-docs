@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/06/2026
 ---
 
 # Publish or share your plugin
@@ -38,7 +38,7 @@ Have:
 | Specific people, groups, or your organization through direct sharing | A plugin-sharing workflow supported by your development tool | [Share your plugin directly](#share-your-plugin-directly) |
 
 > [!NOTE]
-> This article covers plugin packages. To publish or share an existing standalone (unpackaged) agent, use the product-specific guidance for [Agent Builder](agent-builder-share-manage-agents.md), [Copilot Studio](/microsoft-copilot-studio/microsoft-365-copilot-extend-with-agents#publish-and-configure-an-agent-for-microsoft-365-copilot), or [Work IQ Dev Tools](https://microsoft.github.io/wiqd/concepts/agent-lifecycle/).
+> This article covers plugin packages. To publish or share an existing standalone (unpackaged) agent, use the product-specific guidance for [Agent Builder](agent-builder-share-manage-agents.md), [Copilot Studio](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams), or [Work IQ Dev Tools](https://microsoft.github.io/wiqd/concepts/agent-lifecycle/).
 
 Administrator approval is required only when the selected method or your organization's policy requires it.
 

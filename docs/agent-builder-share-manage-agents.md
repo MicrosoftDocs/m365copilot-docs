@@ -5,7 +5,7 @@ description: Learn how to share agents built in Agent Builder with users in your
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/06/2026
 ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -165,7 +165,7 @@ A default placeholder URL is provided for **Creator website**, **Privacy stateme
 
 The shared version of your agent and the Agent Store version are managed separately. You manage the shared version and can continue iterating on it, changing who it's shared with, or keeping it private for testing, at any time. Your admin manages the Agent Store version after you publish the agent.
 
-To make your agent broadly discoverable in your organization, publish it to your org catalog. An admin reviews the agent in the [Microsoft 365 admin center](/microsoft-365/admin/manage/agent-registry#publish-agents) and, if approved, deploys the agent to the **Built by your org** section of the Agent Store.
+To make your agent broadly discoverable in your organization, publish it to your org catalog. An admin reviews the agent in the [Microsoft 365 admin center](/microsoft-agent-365/admin/agent-requests#requested-agents-pending-review) and, if approved, deploys the agent to the **Built by your org** section of the Agent Store.
 
 For the submission steps, required fields, approval status tracking, and post-approval updates, see [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md).
 
@@ -218,7 +218,7 @@ Any owner of an agent can delete it. After you delete an agent, you can't use it
 
 You can share ownership of an agent directly by adding users with the **Can edit** role in the share dialog. All owners have equal rights to edit, share, and manage the agent. For more information, see [Add owners and chat users](#add-owners-and-chat-users).
 
-Admins can also update the owner of a shared agent within the organization. For more information, see [Reassign ownership of shared agents](/microsoft-365/admin/manage/agent-registry#reassign-ownership-of-shared-agents).
+Admins can also update the owner of a shared agent within the organization. For more information, see [Reassign ownership of shared agents](/microsoft-agent-365/admin/agent-actions#assign-new-owner-to-an-agent).
 
 To reassign ownership via PowerShell, see [Reassign an agent's owner with PowerShell](/power-platform/release-plan/2025wave2/microsoft-copilot-studio/reassign-agents-owner-powershell).
 
