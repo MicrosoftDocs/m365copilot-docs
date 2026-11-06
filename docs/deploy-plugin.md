@@ -4,7 +4,7 @@ description: Complete the publishing-method and administration actions required 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/06/2026
 ms.topic: how-to
 ---
 
@@ -45,7 +45,7 @@ Direct sharing doesn't create a Microsoft Marketplace offer. Check the selected 
 When an administrator uploads the package to your organization:
 
 1. In the Microsoft 365 admin center, go to **Agents** > **Tools** > **Registry**. [Upload the plugin package](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#upload-plugins-or-skills), review its components, and select the intended users.
-1. If the plugin is already in the registry but isn't installed for those users, find it under **Agents** > **Tools** > **Plugins** and [install it](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#install-a-tool) for the intended audience.
+1. If the plugin is already in the registry but isn't installed for those users, find it under **Agents** > **Tools** > **Plugins** and [install it](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#install-a-plugin-or-skill) for the intended audience.
 1. Open **Users** and [confirm the availability scope](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#manage-plugin-availability-for-users).
 1. If access is blocked by policy, check the **your organization** publisher category under **Agents** > **Settings** > **Agent and plugin access**.
 1. Complete any required permissions, consent, connections, or external-service configuration.
@@ -57,7 +57,7 @@ For the administration procedures, see [Manage plugins, skills, and MCP servers]
 For a plugin published through Microsoft Marketplace:
 
 1. Confirm the exact offer, publisher, and package version.
-1. Follow the offer's customer acquisition and installation instructions. If administrator installation applies, find the plugin under **Agents** > **Tools** > **Plugins** and follow [Install a tool](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#install-a-tool).
+1. Follow the offer's customer acquisition and installation instructions. If administrator installation applies, find the plugin under **Agents** > **Tools** > **Plugins** and follow [Install a tool](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context#install-a-plugin-or-skill).
 1. Confirm that the appropriate publisher category is allowed under **Agents** > **Settings** > **Agent and plugin access** when organization policy restricts access.
 1. Set user availability when the method requires administrator action.
 1. Complete the documented permissions, consent, connections, or customer configuration.

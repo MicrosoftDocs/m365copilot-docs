@@ -7,7 +7,7 @@ ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 10/26/2026
+ms.date: 11/04/2026
 ---
 
 # Skills in declarative agents
