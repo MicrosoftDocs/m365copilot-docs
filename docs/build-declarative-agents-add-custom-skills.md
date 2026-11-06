@@ -7,7 +7,7 @@ ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 10/26/2026
+ms.date: 11/05/2026
 ---
 
 # Add skills to a declarative agent created with Microsoft 365 Agents Toolkit
@@ -91,6 +91,12 @@ If you set the variable after you install the Visual Studio Code extension, rest
 ## Limits
 
 In the Agents Toolkit, you add a skill as a directory (you can't use `.zip`), and the complete app package is limited to 10 MB. You can add up to eight skills per agent, with a maximum directory depth of three and up to 350 files across the skill directory. For the full support matrix, see [Skills in declarative agents](declarative-agent-skills.md#support-matrix).
+
+## Publish your agent
+
+Independent software vendors (ISVs) can submit declarative agents that include skills to Microsoft Marketplace. Use Work IQ Dev Tools to validate and build the submittable package from an existing declarative agent project. For the public third-party path, Work IQ Dev Tools doesn't submit the offer on your behalf. Use Partner Center to upload the package, complete the store listing, and submit the offer for certification.
+
+For the end-to-end workflow, see [Partner Center Publishing (3P)](https://github.com/microsoft/wiqd/blob/main/plugins/wiqd/skills/wiqd/workflows/partner-center.md) and the [Microsoft Marketplace step-by-step submission guide](/partner-center/marketplace-offers/add-in-submission-guide).
 
 ## Related content
 
