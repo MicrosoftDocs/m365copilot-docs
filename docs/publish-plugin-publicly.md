@@ -5,7 +5,7 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/06/2026
 ---
 
 # Publish your plugin through Microsoft Marketplace
@@ -65,20 +65,16 @@ Keep the listing consistent with the exact package you tested. Describe external
 
 ## Submit your plugin
 
-Follow the [add-in submission guide](/partner-center/marketplace-offers/add-in-submission-guide) and the requirements for your selected offer type:
+Confirm the documented submission procedure for your package type and included capabilities before creating an offer in [Microsoft Partner Center](https://partner.microsoft.com/).
 
-1. Sign in to [Microsoft Partner Center](https://partner.microsoft.com/).
-1. Open **Marketplace offers** and select the **Microsoft 365 and Copilot** tab. If the program isn't available, confirm that the publisher account is enrolled.
-1. Select **New offer** and choose the offer type that supports your plugin package.
-1. Add the required listing and technical information.
-1. Upload the package or manifest required by the selected offer type.
-1. Provide the certification reviewers with the requested testing instructions and access information through the submission process.
-1. Review the submission and submit it for certification.
+The [Microsoft Marketplace step-by-step submission guide](/partner-center/marketplace-offers/add-in-submission-guide) describes the general Partner Center workflow and uses Office Add-in examples. It doesn't establish that a composed plugin package is eligible or identify an offer type for that package. Don't use an Office Add-in procedure as a substitute for confirmed plugin-package instructions.
+
+Once eligibility is confirmed, follow the offer-specific instructions to provide the listing, supported package or manifest, and certification testing information.
 
 Record the offer ID, submitted package version, submission date, submission status, and responsible owner.
 
 > [!NOTE]
-> Supported sharing methods can publish a plugin to the plugin registry without creating a Marketplace offer. Work IQ Dev Tools sharing and organizational publishing commands don't replace Microsoft Partner Center submission for public Marketplace distribution.
+> Work IQ Dev Tools sharing grants direct access to a shared deployment. Its organizational publishing command submits the plugin to the organization catalog for administrator approval. Neither operation creates a Marketplace offer or replaces Microsoft Partner Center submission for public distribution. See [Publishing and existing projects](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/#publishing-and-existing-projects).
 
 ## Complete the review
 
@@ -118,5 +114,4 @@ Continue to [Make your plugin available and govern access](govern-plugins.md) fo
 ## Related content
 
 - [Publish or share your plugin](publish.md)
-- [For ISVs and software publishers](isv-publisher-guide.md)
 - [Publish your plugin to your organization](publish-plugin-organization.md)

@@ -4,7 +4,7 @@ description: Build, configure, extend, or reuse the declarative agent required b
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 10/26/2026
+ms.date: 11/06/2026
 ms.topic: how-to
 ---
 
@@ -32,16 +32,16 @@ Use the development tool that you chose in [Choose development tools for your pl
 |---|---|
 | Agent Builder | [Agent Builder overview](agent-builder.md) and [build an agent](agent-builder-build-agents.md) |
 | Work IQ Dev Tools | [Work IQ Dev Tools quickstart](https://microsoft.github.io/wiqd/getting-started/quickstart/) |
-| Copilot Studio | [Build agents with Copilot Studio](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context) |
+| Copilot Studio | [Connect and configure an agent for Teams and Microsoft Copilot](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams) |
 | Microsoft 365 Agents Toolkit | [Microsoft 365 Agents Toolkit overview](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context), using [TypeSpec](build-declarative-agents-typespec.md) or [JSON](build-declarative-agents.md) as supported |
 
 ### Work IQ Dev Tools
 
-Use `wiqd agent create` to scaffold a source-controlled declarative-agent project. During the build stage, edit the project, add supported OpenAPI or remote MCP actions with `wiqd agent add action`, and run offline static validation with `wiqd agent validate`.
+Use `wiqd agent create` to scaffold a source-controlled declarative-agent project. During the build stage, edit the project, add supported OpenAPI or remote MCP actions with `wiqd agent add action`, and run offline source validation with `wiqd agent validate --mode source`. If you omit `--mode`, the command defaults to package validation against an existing ZIP, not offline source validation.
 
 Use `wiqd agent add skill` to add a skill to an existing declarative-agent project. This capability is behind the `agent-skills` feature flag, which is off by default. Confirm the current flag, schema, and lifecycle requirements in the [WIQD command reference](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-skill).
 
-You can enter commands directly or drive the documented workflow conversationally through Copilot CLI with the `wiqd:wiqd` agent. WIQD targets declarative agents, not custom engine agents.
+You can enter commands directly or drive the documented workflow conversationally through the WIQD coding-assistant plugin. Install the plugin separately from the CLI as described in [Install Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/installation/). WIQD targets declarative agents, not custom engine agents.
 
 GitHub Copilot can assist with project files, instructions, configuration, code, and tests. It doesn't replace the authoring tool, runtime, or component-specific requirements.
 
