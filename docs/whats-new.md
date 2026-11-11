@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/02/2026
+ms.date: 11/11/2026
 ms.topic: overview
 ---
 
@@ -18,6 +18,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## November 2026
+
+### Skills in Copilot Chat
+
+Skills in Microsoft 365 Copilot Chat are generally available. Author reusable task instructions with optional resources and scripts for use directly in Chat, without creating a declarative agent. Users can select a skill explicitly or allow Copilot to select it automatically. Developers can distribute skills through supported plugin packages. See [Build skills for Copilot Chat](build-copilot-chat-skills.md).
 
 ### Review Copilot credit requests with the Cost Management API
 
@@ -123,13 +127,13 @@ The Agent Registration API enables developers and administrators to programmatic
 
 ### Copilot policy settings API (preview)
 
-The Copilot policy settings API is now available in preview. This API provides a unified endpoint to read and update Copilot settings across multiple policy services, including Cloud Policy Service (CPS) and Microsoft Intune. For more information, see [copilotPolicySetting resource type](api/admin-settings/resources/copilotpolicysetting.md).
+The Copilot policy settings API is now in preview. This API provides a unified endpoint to read and update Copilot settings across multiple policy services, including Cloud Policy Service (CPS) and Microsoft Intune. For more information, see [copilotPolicySetting resource type](api/admin-settings/resources/copilotpolicysetting.md).
 
 ## March 2026
 
 ### Share agents to teams in Microsoft Teams
 
-You can now share agents built with Agent Builder in Microsoft 365 Copilot to teams as well as users and groups. For more information, see [Share and manage agents](agent-builder-share-manage-agents.md).
+You can now share agents that you built with Agent Builder in Microsoft 365 Copilot to teams as well as users and groups. For more information, see [Share and manage agents](agent-builder-share-manage-agents.md).
 
 ### Use natural language to create an agent in Microsoft 365 Copilot
 
@@ -137,7 +141,7 @@ You can now create agents more quickly with Agent Builder in Microsoft 365 Copil
 
 ### Interactive UI widgets for declarative agents
 
-You can now add interactive UI widgets to your declarative agents by extending MCP server-based actions using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk). Widgets can render inline or in full-screen mode within Microsoft 365 Copilot. For more information, see [Add MCP apps to declarative agents in Microsoft 365 Copilot](plugin-mcp-apps.md).
+You can now add interactive UI widgets to your declarative agents by extending MCP server-based actions by using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk). Widgets can render inline or in full-screen mode within Microsoft 365 Copilot. For more information, see [Add MCP apps to declarative agents in Microsoft 365 Copilot](plugin-mcp-apps.md).
 
 ## February 2026
 
@@ -149,7 +153,7 @@ Agent Builder is now available in Government Community Cloud High (GCCH) environ
 
 ### Retrieval API pay-as-you-go consumption (preview)
 
-The Microsoft 365 Copilot Retrieval API is now available to users without a Microsoft 365 Copilot add-on license via pay-as-you-go consumption (preview). This model provides access to the Retrieval API for tenant-level data sources such as SharePoint and Microsoft 365 Copilot connectors. For more information, see [Microsoft 365 Copilot Retrieval API pay-as-you-go consumption (preview)](api/ai-services/retrieval/paygo-retrieval.md).
+The Microsoft 365 Copilot Retrieval API is now available to users without a Microsoft 365 Copilot add-on license through pay-as-you-go consumption (preview). This model provides access to the Retrieval API for tenant-level data sources such as SharePoint and Microsoft 365 Copilot connectors. For more information, see [Microsoft 365 Copilot Retrieval API pay-as-you-go consumption (preview)](api/ai-services/retrieval/paygo-retrieval.md).
 
 ## Related content
 

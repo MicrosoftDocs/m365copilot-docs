@@ -4,7 +4,7 @@ description: Build, configure, extend, or reuse the skills required by your Micr
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/11/2026
 ms.topic: how-to
 ---
 
@@ -19,7 +19,7 @@ For declarative agents, Agent Builder and Agents Toolkit don't support reuse acr
 Before you create a skill:
 
 1. Review approved skills that already perform the required job.
-1. Confirm that the skill format and capabilities are supported by the target agent or Microsoft experience.
+1. Confirm that the target agent or Microsoft experience supports the skill format and capabilities.
 1. Review its instructions, resources, scripts, tools, and data access.
 1. Check the target experience's documented reuse limits before adapting existing skill content.
 1. Confirm ownership, versioning, sharing, support, and update expectations.
@@ -33,6 +33,7 @@ Use the path supported by the selected development tool and target experience.
 
 | Development approach | Start with |
 |---|---|
+| Copilot Chat skill authoring and plugin distribution | [Build skills for Copilot Chat](build-copilot-chat-skills.md) |
 | Agent Builder | [Add skills with Agent Builder](agent-builder-add-skills.md) |
 | Work IQ Dev Tools | [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) |
 | Microsoft 365 Agents Toolkit | [Add skills with Agents Toolkit](build-declarative-agents-add-custom-skills.md) |
@@ -44,10 +45,10 @@ GitHub Copilot can assist with skill instructions, supporting scripts, resources
 
 WIQD provides two different skill-authoring routes:
 
-- `wiqd plugin add skill` adds a top-level skill to a standalone plugin project. The plugin can be skill-only or combine the skill with supported agents or remote MCP connectors. The entire `wiqd plugin` command tree is alpha.
+- `wiqd plugin add skill` adds a top-level skill to a standalone plugin project. The plugin can be skill-only or combine the skill with supported agents or remote MCP connectors. The entire `wiqd plugin` command tree is in preview.
 - `wiqd agent add skill` adds a skill to an existing declarative-agent project. This route uses the `agent-skills` feature flag, which is off by default.
 
-Both routes create a `SKILL.md`-based capability, but they operate on different project types. In the WIQD plugin format, the skill name must match its folder name, and its description should include the phrases that should activate it. See [What is a plugin?](https://microsoft.github.io/wiqd/concepts/plugins/) and the [plugin authoring reference](https://microsoft.github.io/wiqd/getting-started/plugin-reference/).
+Both routes create a `SKILL.md`-based capability, but they operate on different project types. In the WIQD plugin format, the skill name must match its folder name, and its description should include the phrases that activate it. See [What is a plugin?](https://microsoft.github.io/wiqd/concepts/plugins/) and the [plugin authoring reference](https://microsoft.github.io/wiqd/getting-started/plugin-reference/).
 
 WIQD source validation (`wiqd plugin validate --mode source`) doesn't inspect skill content. After packaging, run `wiqd plugin validate --mode package --package-file "<path-to-existing-zip>"` with the actual ZIP path. Package validation uploads a captured copy of that ZIP to the Microsoft 365 validation service and might require authentication. Review the returned findings; a pass doesn't establish runtime behavior. See [Validation and MVL](https://microsoft.github.io/wiqd/concepts/validation-mvl/).
 
@@ -63,7 +64,7 @@ Complete the applicable work:
 1. Test expected, ambiguous, unsupported, and failure scenarios.
 1. Record the skill version, owner, dependencies, known limitations, and support process.
 
-For current support and runtime constraints in declarative agents, see [Skills in declarative agents](declarative-agent-skills.md). For Copilot Cowork, see [Companion file limits](/copilot/cowork/cowork-plugin-development#companion-file-limits).
+For skills used directly in Copilot Chat, see [Build skills for Copilot Chat](build-copilot-chat-skills.md). For current support and runtime constraints in declarative agents, see [Skills in declarative agents](declarative-agent-skills.md). For Copilot Cowork, see [Companion file limits](/copilot/cowork/cowork-plugin-development#companion-file-limits). Apply the requirements of every target host when you distribute a skill to more than one experience.
 
 ## Confirm that the skill is working
 
@@ -76,7 +77,7 @@ The skill is ready for integration when:
 - Unsupported or failed operations produce understandable behavior.
 - Ownership, versioning, limitations, and test evidence are recorded.
 
-Continue with any other components in the plan. When they are complete, [integrate and test your components](integrate-test-plugin-components.md).
+Continue with any other components in the plan. When they're complete, [integrate and test your components](integrate-test-plugin-components.md).
 
 ## Related content
 

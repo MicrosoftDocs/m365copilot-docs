@@ -4,7 +4,7 @@ description: Choose a supported packaging path and create the exact versioned ar
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/03/2026
+ms.date: 11/11/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
@@ -23,10 +23,10 @@ Packaging is tool-specific. Some tools create the plugin package automatically, 
 
 Complete [integration testing](integrate-test-plugin-components.md). Confirm that:
 
-- The components are built and tested individually and together.
-- Dependencies, authentication, permissions, connections, endpoints, and external services are configured.
+- You built and tested the components individually and together.
+- You configured dependencies, authentication, permissions, connections, endpoints, and external services.
 - You know which Microsoft 365 experiences the plugin must support.
-- The component versions, known limitations, and unresolved issues are recorded.
+- You recorded the component versions, known limitations, and unresolved issues.
 
 Don't use packaging to resolve an unfinished component or integration. Return to [Build or reuse](build-reuse-plugin.md) when a required component doesn't work.
 
@@ -39,6 +39,8 @@ Don't use packaging to resolve an unfinished component or integration. Return to
 | A plugin package supported by another plugin-specific workflow | Follow the documented command, UI action, or automated workflow for that package. | The installable plugin package identified by that procedure. |
 
 If no packaging route supports your plugin's components and target experiences, stop. Choose a supported method or revise the plugin. Don't combine or rename artifacts to create an unsupported package.
+
+For skills used directly in Copilot Chat, package plugin-level skills through the app manifest's `agentSkills` property. This differs from the declarative agent manifest's `agent_skills` property. A standalone `SKILL.md` or skill ZIP accepted by Chat isn't a complete plugin app package. See [Package a skill in a plugin](build-copilot-chat-skills.md#package-a-skill-in-a-plugin).
 
 To automate WIQD source checks, candidate packaging, and package-first validation, see [Configure plugin CI/CD with Work IQ Dev Tools](plugin-ci-cd.md).
 
@@ -65,7 +67,7 @@ Check that:
 
 ## Record publishing readiness
 
-Carry a publishing-readiness record into [testing and validation](validate-plugin.md), and complete it before publishing. Record:
+Bring a publishing readiness record into [testing and validation](validate-plugin.md), and complete it before publishing. Record:
 
 - Package or artifact identity and exact version.
 - Components, remote services, and external references.

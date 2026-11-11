@@ -7,7 +7,7 @@ ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/11/2026
 ---
 
 # Add skills to a declarative agent created with Microsoft 365 Agents Toolkit
@@ -17,6 +17,8 @@ ms.date: 11/06/2026
 A skill is a modular, reusable component that you add to a declarative agent to package instructions, resources, and scripts for a specific task. This article describes how to add a skill to a declarative agent by using the Microsoft 365 Agents Toolkit (ATK) command-line interface (CLI) or the Visual Studio Code extension.
 
 To learn what skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Skills in declarative agents](declarative-agent-skills.md).
+
+This guide adds agent-scoped skills. To distribute a skill for use directly in Copilot Chat through a plugin, see [Build skills for Copilot Chat](build-copilot-chat-skills.md#package-a-skill-in-a-plugin).
 
 > [!IMPORTANT]
 > This guide assumes you completed the [Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](build-declarative-agents.md) tutorial. Adding a skill requires declarative agent manifest version 1.9. If you're using an agent created with an older version of Agents Toolkit, you might need to update the version of your agent manifest. For more information, see [Declarative agent manifest reference](declarative-agent-manifest-1.9.md).
@@ -102,4 +104,4 @@ For the end-to-end workflow, see [Partner Center Publishing (3P)](https://github
 
 - [Skills in declarative agents](declarative-agent-skills.md)
 - [Add skills to your declarative agent in Agent Builder](agent-builder-add-skills.md)
-<!-- [Declarative agent manifest reference](declarative-agent-manifest-1.9.md)-->
+- [Declarative agent manifest reference](declarative-agent-manifest-1.9.md)

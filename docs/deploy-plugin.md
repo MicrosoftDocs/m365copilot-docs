@@ -4,7 +4,7 @@ description: Complete the publishing-method and administration actions required 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/11/2026
 ms.topic: how-to
 ---
 
@@ -64,6 +64,12 @@ For a plugin published through Microsoft Marketplace:
 1. Verify that intended users can find and use the plugin.
 
 Publication through Microsoft Marketplace doesn't automatically make the plugin available in every customer organization.
+
+### Skills in Copilot Chat
+
+For a plugin that contains skills, verify that the intended audience can discover and use the installed plugin in Copilot Chat. Uploading, publishing, or assigning a package isn't proof that its skills are available to a user.
+
+If you also target Copilot Cowork, verify availability in both products. Don't assume that creating, sharing, or installing a skill in one product completes every step in the other. See [Test discovery and invocation](build-copilot-chat-skills.md#test-discovery-and-invocation).
 
 ## Complete required configuration
 
