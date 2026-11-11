@@ -4,7 +4,7 @@ description: Learn how MCP and API plugins add custom actions to declarative age
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 10/28/2026
+ms.date: 11/06/2026
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -179,7 +179,7 @@ Developers can use two tools to generate API plugin packages:
 - [Kiota](/openapi/kiota/overview) is a command line tool and a Visual Studio Code extension that generates plugin packages based on an existing OpenAPI description.
 
 > [!TIP]
-> **Work IQ Dev Tools (preview)** — You can also attach and check actions from the command line. `wiqd agent add action` adds an action to a declarative agent, and `wiqd agent validate --mode deep` confirms that an action's OpenAPI description is reachable and well-formed and that a referenced plugin manifest declares the right authentication scheme. An alpha `wiqd plugin` command tree also exists, but its interface is subject to change. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+> **Work IQ Dev Tools (preview)** — You can also attach actions and check saved agent source from the command line. `wiqd agent add action` adds an action to a declarative agent, and `wiqd agent validate --mode source` runs offline checks on the saved `appPackage/declarativeAgent.json`. A passing source check doesn't establish runtime or OpenAPI endpoint reachability, authentication correctness, or final-package acceptance. If you omit `--mode`, validation defaults to `package`, which uploads a temporary copy of an existing ZIP to Teams Developer Portal and might require sign-in. For validation modes and coverage, see [Agent validation](https://microsoft.github.io/wiqd/cli/agent/agent-validate/) and [Validation](https://microsoft.github.io/wiqd/concepts/validation-mvl/). An alpha `wiqd plugin` command tree also exists, but its interface is subject to change. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ## Limitations
 

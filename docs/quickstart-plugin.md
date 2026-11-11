@@ -1,27 +1,46 @@
 ---
-title: "Quickstart: Package and Share an Existing Declarative Agent with Work IQ Dev Tools"
-description: Use the local source for an existing declarative agent to validate, provision, package, deep-validate, share, and test it in Microsoft 365 Copilot.
+title: "Quickstart: Package an existing declarative agent as a plugin with Work IQ Dev Tools"
+description: Use the local source for an existing declarative agent to validate, provision, package, and share it as a plugin with Work IQ Dev Tools.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ms.topic: quickstart
 ---
 
-# Quickstart: Create your first plugin with Work IQ Dev Tools
+# Quickstart: Package an existing declarative agent as a plugin with Work IQ Dev Tools
 
-The [Work IQ Dev Tools](https://microsoft.github.io/wiqd/) command-line interface (CLI) enables you to package your existing declarative agent, skill, or Model Context Protocol (MCP) server as a plugin. The CLI can also validate the package, provision the plugin, and share it with your tenant.
+Use [Work IQ Dev Tools](https://microsoft.github.io/wiqd/) with the local source for an existing declarative agent to validate, provision, package, and share it as a plugin. This quickstart starts from an existing source project, not a new-agent scaffold.
 
 > [!IMPORTANT]
 > The entire `wiqd plugin` command tree is alpha and subject to change. If the steps in this walkthrough don't work, confirm current commands, supported component combinations, target experiences, and feature requirements in [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/).
 
 ## Prerequisites
 
-- Node.js 24 or later
+- [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli) with an active Copilot subscription
+- The WIQD coding-assistant plugin for GitHub Copilot CLI (see the installation commands in this section)
+- Node.js 24.15 or later and npm, available on your `PATH`, for the WIQD CLI and installation script. These tools aren't required just to begin conversational or file-based authoring.
 - PowerShell 7 or later (Windows only)
 - A Microsoft 365 account with access to Copilot
 - [Custom app upload enabled](prerequisites.md#microsoft-365-agents-toolkit-requirements) in your tenant
 - A supported declarative agent source project
+
+After installing GitHub Copilot CLI, install the WIQD coding-assistant plugin:
+
+```powershell
+copilot plugin install wiqd@awesome-copilot
+```
+
+Alternatively, add the WIQD marketplace and install the plugin from there:
+
+```powershell
+copilot plugin marketplace add microsoft/wiqd
+copilot plugin install wiqd@wiqd
+```
+
+Start a new GitHub Copilot CLI session after installation.
+
+The coding-assistant plugin provides authoring guidance; it doesn't install the `wiqd` CLI. Install the CLI separately before running validation and lifecycle commands. Confirm the CLI installation with `wiqd --version` and check its prerequisites with `wiqd doctor`.
 
 ## Confirm that you have a supported starting project
 
@@ -64,37 +83,39 @@ If you don't have an existing project, you can follow the steps in [Tutorial: Cr
 
 1. Ask GitHub Copilot to create a plugin with your existing declarative agent, skill, or MCP server. For example:
 
-    ```powershell
+    ```text
     Create a plugin named My Plugin by using the agent in "..\My Agent"
     ```
 
 ## Validate the plugin project
 
-If GitHub Copilot didn't validate the plugin automatically, ask it to validate the project before you provision or package it.
+Explicitly select offline source validation before you provision or package the plugin. In GitHub Copilot CLI, ask:
 
-```powershell
-Validate the plugin
+```text
+Validate the plugin source offline in the dev environment
 ```
+
+Select `--mode source` explicitly for offline validation (`wiqd plugin validate --mode source --env dev`); omitting the mode defaults to package validation. Source validation checks saved declarative-agent source and references, plus basic plugin project guards. It doesn't fully validate skills, root connectors, or the complete app package, and a pass doesn't establish runtime behavior.
 
 ## Provision the plugin
 
+> [!IMPORTANT]
+> This example uses the standard shared `dev` environment. Check the effective lifecycle configuration and selected environment file under `environmentFolderPath` (default `env`) for `AGENT_SCOPE=shared` before provisioning for sharing. An environment named `dev` alone doesn't establish shared scope. Keep the same environment for provisioning, packaging, validation, and sharing.
+
 Ask GitHub Copilot to provision the plugin.
 
-```powershell
+```text
 Provision the plugin using the dev environment
 ```
 
-Wait for provisioning to complete. You can now test your plugin in Microsoft Copilot Chat.
-
-> [!IMPORTANT]
-> The plugin must be provisioned by using the `dev` environment of the project to enable agent sharing.
+Wait for provisioning to complete. Provisioning doesn't establish that every plugin capability is available in Copilot Chat; support depends on the component and target Microsoft 365 experience.
 
 ## Package the plugin
 
 Ask GitHub Copilot to package the plugin.
 
-```powershell
-Package the plugin
+```text
+Package the plugin using the dev environment
 ```
 
 > [!IMPORTANT]
@@ -102,24 +123,28 @@ Package the plugin
 
 ## Validate the package
 
-Ask GitHub Copilot to validate the packaged plugin. This step runs a more detailed validation against the generated ZIP package.
+After packaging, locate the generated ZIP and confirm that the file exists. In GitHub Copilot CLI, provide its actual path and ask:
 
-```powershell
-Validate the packaged zip
+```text
+Validate this existing plugin ZIP in package mode using the dev environment
 ```
+
+Package validation uses `--mode package` and an existing ZIP supplied through `--package-file`, not an automatic build. Review the returned verdict and findings. Exit code `0` means the selected checks passed; warnings can still be reported. Blocking findings or incomplete results aren't a pass, and package validation doesn't prove runtime behavior.
+
+The current validation modes are `source`, `package`, and `marketplace`. `source` is the explicit offline check. The default, `package`, requires an existing ZIP, uploads a captured copy to the Microsoft 365 validation service, and might require authentication. `marketplace` adds policy and evidence checks; it isn't official store approval. Validation doesn't automatically build a ZIP, sign you in, or provision the plugin. For details, see [Validation and MVL](https://microsoft.github.io/wiqd/concepts/validation-mvl/).
 
 ## Share the plugin
 
-You can now ask GitHub Copilot to share your package, either with specific users or groups inside your organization, or with your entire organization.
+You can now ask GitHub Copilot to share your plugin deployment, either with specific users inside your organization or with your entire organization. Confirm `AGENT_SCOPE=shared` in the selected environment before sharing. The sharing audience (`--scope users` or `--scope tenant`) doesn't change the deployment scope.
 
-```powershell
-Share the plugin with AmberR@contoso.com
+```text
+Share the plugin with AmberR@contoso.com using the dev environment
 ```
 
 Or:
 
-```powershell
-Share the plugin with my organization
+```text
+Share the plugin with my organization using the dev environment
 ```
 
 > [!IMPORTANT]
@@ -129,16 +154,18 @@ Share the plugin with my organization
 
 As an alternative to sharing your plugin, you can request to publish your plugin to your organization's plugin registry. Your organization admins can then review your plugin and approve or deny the request.
 
-```powershell
-Publish my package to the plugin registry so all users in my tenant can use it
+```text
+Submit my plugin to the organization catalog for admin approval using the dev environment
 ```
+
+Sharing grants direct access; catalog submission is a separate operation and isn't administrator approval or completed user installation.
 
 ## Delete the package (optional)
 
-If this was just a test plugin, you can ask GitHub Copilot to remove the agent. This action deletes any provisioned cloud resources.
+If this plugin is just a test plugin, ask GitHub Copilot to remove the plugin. This action deletes any provisioned cloud resources.
 
-```powershell
-Delete the plugin
+```text
+Delete the plugin using the dev environment
 ```
 
 ## Related content

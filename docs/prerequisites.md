@@ -5,7 +5,7 @@ author: maisarissi
 ms.author: maisarissi
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/06/2026
 ---
 
 # Set up your development environment for your plugin
@@ -60,7 +60,7 @@ You can also purchase a Microsoft 365 Copilot license and set up a development e
 
 ### Organizations with Microsoft 365 Copilot licenses
 
-You can develop Copilot extensibility solutions by working directly in a [Microsoft 365 production environment](/copilot/microsoft-365/microsoft-365-copilot-overview#availability) with a [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise#FAQ) license.
+You can develop Copilot extensibility solutions by working directly in a [Microsoft 365 production environment](/copilot/plan/copilot-overview) with a [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/enterprise#FAQ) license.
 
 Contact your Microsoft representative to add Copilot to your Microsoft plan. Enterprise customers need to be on the Current Channel or Monthly Enterprise Channel for Microsoft 365 apps to have access to Copilot.
 
@@ -73,7 +73,7 @@ You can develop Copilot extensibility solutions for users in organizations witho
 You can extend Microsoft 365 Copilot with the intelligence of external services and data in several ways:
 
 - By building agents to customize Copilot.
-- By adding [Teams message extensions](overview-message-extension-bot.md) and [Copilot Studio actions](/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context).
+- By adding [Teams message extensions](overview-message-extension-bot.md) and [Copilot Studio agents](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams).
 - By extending the knowledge in Copilot with [Microsoft 365 Copilot connectors](overview-copilot-connector.md).
 
 To learn more and choose the best extensibility path for your users, see [Copilot extensibility planning guide](planning-guide.md) and [Agents overview](agents-overview.md).
@@ -89,13 +89,13 @@ To build agents, you need to complete prerequisites depending on the tool that y
 
 [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is a preview pro-code route for supported declarative-agent and plugin-package scenarios. Before you install it, confirm:
 
-- Node.js 24 or later. The supported installer can install Node.js when required.
+- Node.js 24.15 or later and npm on your `PATH` for CLI and installation-script execution. The installer doesn't install Node.js. These aren't required just to begin conversational or file-based authoring.
 - PowerShell 7 or later on Windows.
 - A Microsoft 365 account with access to Copilot.
 - An Azure subscription when you provision agents.
 - A development or test tenant that permits the required custom-app installation, sharing, or catalog actions.
 
-The default installer installs the WIQD CLI, its Visual Studio Code extension, and the `wiqd:wiqd` Copilot CLI agent. After installation, sign in interactively for local development and run `wiqd doctor` to verify the environment. See [Install Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/installation/) and [Work IQ Dev Tools authentication](https://microsoft.github.io/wiqd/getting-started/authentication/).
+The installation script installs the WIQD CLI, its Visual Studio Code extension, and the public WIQD coding-assistant plugin for detected supported hosts unless you skip those integrations. It doesn't install the host. You can instead install the coding-assistant plugin from its marketplace, but that doesn't install the WIQD CLI. After installation, start a new host session. Sign in interactively before tenant operations and run `wiqd doctor` to verify the CLI environment. See [Install Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/installation/) and [Work IQ Dev Tools authentication](https://microsoft.github.io/wiqd/getting-started/authentication/).
 
 For continuous integration, use the documented trusted-pipeline authentication for supported core lifecycle commands. Don't run `wiqd auth login` in a pipeline or expose credentials to untrusted pull-request jobs. Work IQ monitoring, evaluation, and other extensions have separate authentication requirements. See [CI/CD authentication](https://microsoft.github.io/wiqd/getting-started/ci-cd-authentication/).
 
@@ -118,7 +118,7 @@ Copilot Studio is available to all Microsoft 365 users. You can use Copilot Stud
 The following steps are required for you to use Copilot Studio to build agents:
 
 - Your Power Platform admin or Dynamics 365 admin must [enable Generative AI features](/power-platform/admin/geographical-availability-copilot) in Power Platform admin center.
-- Your Microsoft 365 tenant admin must [deploy the Copilot Studio app in the Microsoft 365 admin center](/microsoft-copilot-studio/copilot-plugins-overview#deploy-the-copilot-studio-app-in-microsoft-365-admin-center-admin).
+- For requirements to make your agent available in Teams and Microsoft 365 Copilot, see [Connect and configure an agent for Teams and Microsoft Copilot](/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#prerequisites).
 
 ### Enabling developer mode
 
@@ -149,7 +149,7 @@ The following table summarizes agent access based on user licensing type.
 | Licensing model                                              | Agent access |
 |--------------------------------------------------------|-------------|
 | **Licensed users**                                     | Have both a Microsoft 365 subscription and the Copilot add-on license (including Microsoft 365 Copilot Business and the E7 Frontier Suite, where applicable). They receive full access to Copilot Chat and agent experiences across supported apps and platforms. This license also enables usage of agents grounded in tenant data (SharePoint, Microsoft Graph) and is required for authoring agents in Copilot Studio. |
-| **Usage-based billing (pay-as-you-go users)**                              | Belong to tenants with pay-as-you-go billing enabled (consumed as Copilot Credits). Users can access Copilot Chat and agents without a full Copilot license. Usage billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features - such as agent interactions or grounding - might require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. For agents that use SharePoint files as knowledge sources, the billing policy must be [connected to the SharePoint agents service](/microsoft-365/copilot/pay-as-you-go/setup#connect-a-billing-policy) and users must be in the [security group assigned to the billing policy](/sharepoint/manage-access-agents-in-sharepoint#manage-who-can-access-the-agents). |
+| **Usage-based billing (pay-as-you-go users)**                              | Belong to tenants with pay-as-you-go billing enabled (consumed as Copilot Credits). Users can access Copilot Chat and agents without a full Copilot license. Usage billing applies to agents grounded in tenant data, while agents grounded in public data or instructions are free to use. Some advanced features - such as agent interactions or grounding - might require additional configuration. An Azure subscription and billing policy setup in the Microsoft 365 admin center are required. For agents that use SharePoint files as knowledge sources, the billing policy must be [connected to the SharePoint agents service](/copilot/implement/setup-pay-as-you-go#connect-a-billing-policy-to-the-copilot-pay-as-you-go-service) and users must be in the [security group assigned to the billing policy](/sharepoint/manage-access-agents-in-sharepoint#manage-who-can-access-the-agents). |
 | **Microsoft 365 subscribers without a Copilot add-on license** | Might see Copilot Chat entry points in some apps, but access is limited or disabled depending on tenant configuration and rollout status. These users do not have access to agent authoring or advanced agent experiences. |
 
 The following table lists the agent types and agent capabilities that are available to users based on licensing and usage billing configuration in the tenant. For information about usage billing rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
