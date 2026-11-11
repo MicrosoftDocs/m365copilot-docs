@@ -4,7 +4,7 @@ description: Learn when to use a skill in a Microsoft 365 Copilot plugin and wha
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/11/2026
 ms.topic: concept-article
 ---
 
@@ -15,7 +15,15 @@ A **skill** provides reusable instructions or a workflow that teaches an agent o
 A plugin can bring together a skill with other supported capabilities, such as agents, Copilot connectors, or MCP-based tools. The plugin is the unit of extensibility; the skill remains a distinct reusable capability.
 
 > [!IMPORTANT]
-> Skill availability, sharing, automatic use, and host support vary by Microsoft experience. Current documentation primarily covers adding skills to agents. Follow the guidance for the authoring experience and target host instead of assuming that every skill can be packaged or distributed independently.
+> Skill availability, sharing, automatic use, and host support vary by Microsoft experience. Skills can be used directly in Copilot Chat, distributed through supported plugins, or attached to declarative agents. Follow the guidance for the authoring experience and target host; their packaging requirements and limits aren't interchangeable.
+
+## Choose the target experience
+
+| Target | Start with |
+|---|---|
+| A skill used directly in Microsoft 365 Copilot Chat, including a skill distributed in a plugin | [Build skills for Copilot Chat](build-copilot-chat-skills.md) |
+| A skill attached to a declarative agent | [Skills in declarative agents](declarative-agent-skills.md) |
+| A skill in a Copilot Cowork plugin | [Build plugins for Copilot Cowork](/copilot/cowork/cowork-plugin-development) |
 
 ## Decide whether you need a skill
 
@@ -40,7 +48,7 @@ Before you build a skill:
 
 - Search for an approved skill that already performs the job.
 - Check the target experience's documented reuse limits before adapting existing skill content.
-- Confirm that the skill format and its resources are supported by the target authoring tool and Microsoft experience.
+- Confirm that the target authoring tool and Microsoft experience support the skill format and its resources.
 - Review the instructions and supporting files for data, security, responsible AI, and maintenance requirements.
 - Identify any gaps that require a new or extended skill.
 
@@ -63,5 +71,6 @@ After you decide to build or reuse a skill, [choose development tools](choose-pl
 
 - [Choose capabilities for your plugin](choose-plugin-components.md)
 - [Choose development tools for your plugin](choose-plugin-development-tools.md)
+- [Build skills for Copilot Chat](build-copilot-chat-skills.md)
 - [Add skills with Agent Builder](agent-builder-add-skills.md)
 - [Add skills with Agents Toolkit](build-declarative-agents-add-custom-skills.md)

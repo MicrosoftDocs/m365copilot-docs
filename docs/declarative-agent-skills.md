@@ -7,10 +7,12 @@ ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 11/04/2026
+ms.date: 11/11/2026
 ---
 
 # Skills in declarative agents
+
+This article covers skills attached to a declarative agent. To author a skill for use directly in Microsoft 365 Copilot Chat without creating an agent, see [Build skills for Copilot Chat](build-copilot-chat-skills.md). The support matrix in this article applies to agent-scoped skills, not to all skills or plugin packages.
 
 [!INCLUDE [skills-restrictions](includes/skills-restrictions.md)]
 

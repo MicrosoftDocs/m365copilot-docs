@@ -4,7 +4,7 @@ description: Compare Agent Builder, Work IQ Dev Tools, Microsoft 365 Agents Tool
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/11/2026
 ms.topic: concept-article
 ---
 
@@ -33,6 +33,8 @@ The following matrix lists only component routes that the linked source document
 |---|---|---|---|---|
 | Agent Builder | Declarative agent | Microsoft 365 Copilot | Create, test, share, and submit an agent through the managed authoring experience | Documented route: [Agent Builder in Microsoft 365 Copilot](agent-builder.md) |
 | Agent Builder | Skill added to an Agent Builder declarative agent | Microsoft 365 Copilot | Create or upload a reusable skill for the agent | Documented route: [Add skills in Agent Builder](agent-builder-add-skills.md) |
+| Copilot Chat | Personal skill used directly in Chat | Microsoft 365 Copilot Chat | Create or edit a skill conversationally, or upload an authored skill | Authoring guidance: [Build skills for Copilot Chat](build-copilot-chat-skills.md) |
+| Work IQ Dev Tools | Skill registered at the plugin level in a Microsoft 365 app package | Copilot Chat and other hosts supported by the selected components | Create, package, validate, and distribute the plugin | Skills in Chat are generally available; WIQD remains in preview and `wiqd plugin` remains alpha. See [Package a skill in a plugin](build-copilot-chat-skills.md#package-a-skill-in-a-plugin). |
 | Work IQ Dev Tools | Declarative agent project, including tool-supported API or remote MCP actions and agent skills | Microsoft 365 Copilot | Create, edit, validate, provision, package, publish to the organization, share, test, monitor, and evaluate the project | Preview: [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs) |
 | Work IQ Dev Tools | Microsoft 365 app package that composes a declarative agent, skill, or remote MCP connector in a documented combination | Microsoft 365 and Copilot experiences supported by the selected components and package | Create, compose, validate, provision, package, export, share, and submit the plugin to the organization catalog | The `wiqd plugin` command tree is alpha and doesn't publish to the public store: [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) |
 | Microsoft 365 Agents Toolkit | Declarative agent in a supported Microsoft 365 app package | Microsoft 365 Copilot | Create, validate, provision, package, test, and publish the app package | Documented route: [Build or reuse declarative agents](build-reuse-declarative-agents.md) |
