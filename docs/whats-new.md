@@ -25,6 +25,10 @@ Administrators can list, review, approve, and reject users' requests for Copilot
 
 ## October 2026
 
+### List tools in the Package Management API
+
+Administrators can now use the `elementTypes` filter on [List packages](api/admin-settings/package/copilotpackages-list.md#filter-by-element-type) to return plugins, MCP servers, and skills in addition to agents, and can combine the `elementTypes` filter with request filters to review requests for plugins and MCP servers.
+
 ### Declarative agent manifest version 1.9
 
 A new version of the declarative agent manifest schema is available. [Declarative agent manifest schema version 1.9](declarative-agent-manifest-1.9.md) adds the following features:

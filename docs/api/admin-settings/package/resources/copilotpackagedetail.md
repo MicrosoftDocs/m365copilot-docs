@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 08/07/2026
+ms.date: 10/29/2026
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -64,7 +64,7 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 | `deployedTo`               | [packageAcquireStatus](copilotpackage.md#packageacquirestatus-enumeration)               | Enum value indicating the current deployment scope of the package. Inherited from copilotPackage.                                                                                     |
 | `displayName`              | String                                                                                   | Human-readable name of the package shown to users and administrators. Inherited from copilotPackage.                                                                                  |
 | `elementDetails`           | [packageElementDetail](packageelementdetail.md) collection                               | Collection of detailed information about each element contained within the package, including type and configuration.                                                                 |
-| `elementTypes`             | String collection                                                                        | Collection of element types contained within this package. Inherited from copilotPackage.                                                                                             |
+| `elementTypes`             | String collection                                                                        | Collection of element types contained within this package (for example, `bot`, `declarativeAgent`). For tools, possible values include `AgentConnectors` and `AgentSkills`. Supports `$filter` on [List packages](../copilotpackages-list.md#filter-by-element-type). Inherited from copilotPackage. |
 | `exceptionRate`            | Double                                                                                   | The number of exceptions encountered by the agent in the last 30 days.                                                                                                                |
 | `governanceMetadata`       | String                                                                                   | The agentic classification of the agent. Possible values are: `PromptAgent`, `HostedAgent`, `WorkflowAgent`, `ManagedAgent`, `Unmanaged`, and `AIApp`. Inherited from copilotPackage. |
 | `id`                       | String                                                                                   | Unique identifier for the Copilot package within the tenant. Inherited from copilotPackage.                                                                                           |

@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 08/27/2026
+ms.date: 10/29/2026
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -35,7 +35,7 @@ Entity that represents a Copilot package available within a tenant, containing b
 | `createdDateTime`      | DateTimeOffset                                                          | The date and time that the agent package was created.                                                                                                  |
 | `deployedTo`           | [packageAcquireStatus](#packageacquirestatus-enumeration)               | Enum value indicating the current deployment scope of the package within the tenant (`acquiredForAll`, `acquiredForSome`, `acquiredForNone`).          |
 | `displayName`          | String                                                                  | Human-readable name of the package shown to users and administrators.                                                                                  |
-| `elementTypes`         | String collection                                                       | Collection of element types contained within this package (for example, `bot`, `declarativeAgent`).                                                    |
+| `elementTypes`         | String collection                                                       | Collection of element types contained within this package (for example, `bot`, `declarativeAgent`). For tools, possible values include `AgentConnectors` and `AgentSkills`. Supports `$filter` on [List packages](../copilotpackages-list.md#filter-by-element-type). |
 | `governanceMetadata`   | String                                                                  | The agentic classification of the agent. Possible values are: `PromptAgent`, `HostedAgent`, `WorkflowAgent`, `ManagedAgent`, `Unmanaged`, and `AIApp`. |
 | `id`                   | String                                                                  | Unique identifier for the Copilot package within the tenant.                                                                                           |
 | `isBlocked`            | Boolean                                                                 | Boolean flag indicating whether the package is administratively blocked from use within the tenant.                                                    |
