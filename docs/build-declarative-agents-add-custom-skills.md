@@ -7,7 +7,7 @@ ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 11/05/2026
+ms.date: 11/06/2026
 ---
 
 # Add skills to a declarative agent created with Microsoft 365 Agents Toolkit
@@ -90,7 +90,7 @@ If you set the variable after you install the Visual Studio Code extension, rest
 
 ## Limits
 
-In the Agents Toolkit, you add a skill as a directory (you can't use `.zip`), and the complete app package is limited to 10 MB. You can add up to eight skills per agent, with a maximum directory depth of three and up to 350 files across the skill directory. For the full support matrix, see [Skills in declarative agents](declarative-agent-skills.md#support-matrix).
+In the Agents Toolkit, you add a skill as a directory (you can't use `.zip`), and the complete app package is limited to 10 MB. You can add up to eight skills per agent, with a maximum directory depth of three and up to 350 files across all skills. For the full support matrix, see [Skills in declarative agents](declarative-agent-skills.md#support-matrix).
 
 ## Publish your agent
 

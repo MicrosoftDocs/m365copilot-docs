@@ -4,7 +4,7 @@ description: Learn when to use a skill in a Microsoft 365 Copilot plugin and wha
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/06/2026
 ms.topic: concept-article
 ---
 
@@ -22,7 +22,7 @@ A plugin can bring together a skill with other supported capabilities, such as a
 Choose a skill when:
 
 - The solution requires repeatable instructions or a workflow for a specific job.
-- The expertise should be reusable across supported agents or experiences.
+- The agent or supported experience needs modular instructions for the job.
 - The work can be expressed through instructions and supporting resources.
 - The skill can call approved tools or scripts when the target experience supports them.
 
@@ -34,10 +34,12 @@ A skill might not be the right component when:
 
 ## Decide whether to build or reuse
 
+Agent Builder and Agents Toolkit don't support reuse across declarative agents. For more information, see the support matrix in [Skills in declarative agents](declarative-agent-skills.md#support-matrix). Don't assume that a skill attached to one agent is available to another agent or Microsoft experience.
+
 Before you build a skill:
 
 - Search for an approved skill that already performs the job.
-- Determine whether an existing skill can be reused as-is or configured for the scenario.
+- Check the target experience's documented reuse limits before adapting existing skill content.
 - Confirm that the skill format and its resources are supported by the target authoring tool and Microsoft experience.
 - Review the instructions and supporting files for data, security, responsible AI, and maintenance requirements.
 - Identify any gaps that require a new or extended skill.
