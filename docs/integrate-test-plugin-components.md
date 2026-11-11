@@ -4,7 +4,7 @@ description: Confirm that the agents, skills, connectors, and MCP-based capabili
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/11/2026
 ms.topic: how-to
 ---
 
@@ -45,7 +45,8 @@ Use the applicable product-specific testing guidance:
 
 - [Debug agents using Copilot Studio](debugging-agents-copilot-studio.md)
 - [Debug agents using Agents Toolkit](debugging-agents-vscode.md)
-- [Review skill support and known issues](declarative-agent-skills.md#support-matrix)
+- [Test skill discovery and invocation in Copilot Chat](build-copilot-chat-skills.md#test-discovery-and-invocation)
+- [Review declarative-agent skill support](declarative-agent-skills.md#support-matrix)
 - [Build and test a custom Copilot connector](build-your-first-connector.md)
 - [Debug MCP and API plugins locally](plugin-debug-local.md)
 - [Test a deployed declarative agent with Work IQ DevUI](https://microsoft.github.io/wiqd/extensions/provided/devui/)
@@ -66,6 +67,8 @@ Test the end-to-end scenarios from the solution brief rather than testing only i
 1. Verify that logs and diagnostics identify the components involved.
 
 When testing in Microsoft 365 Copilot, you can enter `-developer on` in Copilot Chat to inspect agent metadata and action selection. Enter `-developer off` when you finish.
+
+For a plugin containing skills, test explicit selection and automatic invocation separately. If the package combines an agent and a skill, verify that users can discover and use both. If a skill requires a connector or MCP tool, confirm that the capability is invoked instead of judging success only from the final response. Test Chat and Cowork separately when you claim support for both.
 
 ## Test failures and boundaries
 

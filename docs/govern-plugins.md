@@ -4,7 +4,7 @@ description: Choose the administration tasks required to make a published or sha
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/11/2026
 ms.topic: overview
 ---
 
@@ -45,6 +45,8 @@ The inventories are related but not interchangeable:
 For authoritative procedures, see [Manage plugins, skills, and MCP servers](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context), [Agent Registry](/microsoft-365/admin/manage/agent-registry?context=/microsoft-365/copilot/extensibility/context), [Agent Requests](/microsoft-365/admin/manage/agent-requests?context=/microsoft-365/copilot/extensibility/context), and [agent details](/microsoft-365/admin/manage/agent-details?context=/microsoft-365/copilot/extensibility/context).
 
 Manage the plugin package to control its installation and availability. Also check separate controls when a packaged agent has an Agent Registry record, a connector requires separate connection or policy controls, a remote MCP server has separate hosting or runtime controls, or an app registration, permission, or external service is managed by another product. A control on the plugin doesn't automatically govern every dependency.
+
+For plugins containing skills used directly in Copilot Chat, verify discovery and invocation for the intended audience after installation. Users can explicitly select a skill or allow automatic invocation; the user's automatic-invocation setting is distinct from administrator-managed plugin availability. For authoring and host boundaries, see [Build skills for Copilot Chat](build-copilot-chat-skills.md).
 
 > [!NOTE]
 > This guidance covers plugin packages and their included capabilities. For an existing standalone (unpackaged) agent, use [Agent Registry](/microsoft-365/admin/manage/agent-registry?context=/microsoft-365/copilot/extensibility/context). For standalone skills or MCP servers, see [Manage plugins, skills, and MCP servers](/microsoft-365/admin/manage/manage-plugins-skills-mcp-servers?context=/microsoft-365/copilot/extensibility/context). For connector connections and policies, use the product that owns the connector.
