@@ -124,6 +124,7 @@ The following table lists features that aren't currently supported for custom en
 | Adaptive Cards | Adaptive Cards refreshed using **Action.Execute** don’t persist updated content when the chat is reopened; the original card is shown. Agent workflows in Copilot Chat should use follow‑up messages instead of relying on message edits. The following elements of Adaptive Cards aren't supported:<ul><li>[Nonstandard elements](https://adaptivecards.microsoft.com/?topic=Component.graph.microsoft.com/event)</li><li>Dynamic Adaptive Card refresh</li><li>Typeahead</li><li>@mention</li><li>Password control</li></ul> |
 | Sensitivity labels | Sensitivity labels aren't supported. |
 | Microsoft 365 app support | Custom engine agents aren't supported in Outlook, Word, Excel, PowerPoint, and the Microsoft Edge browser. |
+| Suggested actions (Quick Replies) | Suggested actions (Quick Replies) for custom engine agents in Microsoft 365 Copilot support text only. Additional properties, such as separate title and value fields, aren't supported. When a user selects a suggested action, the text is inserted into the compose box, where the user can review, edit, or send it. Because the compose box supports text input, additional structured properties associated with the suggested action aren't preserved. |
 
 <!-- markdownlint-enable MD033 -->
 
