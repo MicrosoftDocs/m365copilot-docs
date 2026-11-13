@@ -1,7 +1,7 @@
 ---
-title: Get values for Agent Evaluations CLI environment variables
-description: Find your tenant ID, Microsoft Foundry project endpoint, and agent ID so you can configure the M365 Copilot Agent Evaluations CLI.
-ms.date: 08/04/2026
+title: Get values for Microsoft 365 Copilot Evaluations CLI environment variables
+description: Find your tenant ID, Microsoft Foundry project endpoint, and agent ID so you can configure the Microsoft 365 Copilot Evaluations CLI.
+ms.date: 11/12/2026
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -11,9 +11,9 @@ ms.localizationpriority: medium
 
 # Get values for environment variables
 
-The Microsoft 365 Copilot Agent Evaluations CLI (`@microsoft/m365-copilot-eval`) reads connection and authentication settings from environment variables. This article shows you where to obtain each value.
+The Microsoft 365 Copilot Evaluations CLI (`@microsoft/m365-copilot-eval`) reads connection and authentication settings from environment variables. This article shows you where to obtain each value.
 
-For the list of variables and where to put them, see [Agent Evaluations CLI overview](evaluations-cli-overview.md#required-environment-variables) and [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md#step-3-configure-environment-variables).
+For the list of variables and where to put them, see [Microsoft 365 Copilot Evaluations CLI overview](evaluations-cli-overview.md#required-environment-variables) and [Quickstart: Use the Microsoft 365 Copilot Evaluations CLI](evaluations-cli-quickstart.md#step-3-configure-environment-variables).
 
 ## Before you begin
 
@@ -199,7 +199,7 @@ Use the following table to troubleshoot issues you might encounter.
 
 ## Related content
 
-- [Agent Evaluations CLI overview](evaluations-cli-overview.md)
-- [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md)
-- [Agent Evaluations CLI reference](evaluations-cli-reference.md)
+- [Microsoft 365 Copilot Evaluations CLI overview](evaluations-cli-overview.md)
+- [Quickstart: Use the Microsoft 365 Copilot Evaluations CLI](evaluations-cli-quickstart.md)
+- [Microsoft 365 Copilot Evaluations CLI reference](evaluations-cli-reference.md)
 - [Troubleshooting and support](evaluations-cli-troubleshooting.md)
