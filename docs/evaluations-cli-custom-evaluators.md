@@ -1,8 +1,8 @@
 ---
 title: Add custom evaluators to your agent evaluations
-description: Learn how to author LLM-judge and code-only custom evaluators for the Microsoft 365 Copilot Agent Evaluations CLI and reference them from your datasets.
+description: Learn how to author LLM-judge and code-only custom evaluators for the Microsoft 365 Copilot Evaluations CLI and reference them from your datasets.
 #customer intent: As a developer running agent evaluations, I want to author custom evaluators so that I can score agent responses against domain-specific criteria the built-in evaluators don't cover.
-ms.date: 08/04/2026
+ms.date: 11/12/2026
 author: jasonjoh
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Add custom evaluators to your agent evaluations
 
-The Microsoft 365 Copilot Agent Evaluations CLI (`@microsoft/m365-copilot-eval`) includes a set of [built-in evaluators](evaluations-cli-evaluators.md). When the built-in evaluators don't cover your scenario, you can author *custom evaluators* to score agent responses against domain-specific criteria, such as regulatory compliance, brand tone, or a custom relevance rubric.
+The Microsoft 365 Copilot Evaluations CLI (`@microsoft/m365-copilot-eval`) includes a set of [built-in evaluators](evaluations-cli-evaluators.md). When the built-in evaluators don't cover your scenario, you can author *custom evaluators* to score agent responses against domain-specific criteria, such as regulatory compliance, brand tone, or a custom relevance rubric.
 
 Two kinds of custom evaluators exist, and the CLI automatically distinguishes between them:
 
@@ -282,7 +282,7 @@ For richer logs, run the CLI with `--log-level debug`.
 
 ## Related content
 
-- [Agent Evaluations CLI overview](evaluations-cli-overview.md)
+- [Microsoft 365 Copilot Evaluations CLI overview](evaluations-cli-overview.md)
 - [Evaluators reference](evaluations-cli-evaluators.md)
 - [Dataset schema and test design](evaluations-cli-create-tests.md)
 - [CLI reference](evaluations-cli-reference.md)

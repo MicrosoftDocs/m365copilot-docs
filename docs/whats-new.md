@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/11/2026
+ms.date: 11/12/2026
 ms.topic: overview
 ---
 
@@ -113,7 +113,7 @@ For more information, see [Agent templates overview](agent-templates-overview.md
 
 ### Evaluate agents
 
-Evaluate agents by using a comprehensive evaluation framework and tooling to refine agent performance. The Agent Evaluations CLI tool enables developers to create, run, and analyze tests for their agents. For more information, see [Agent evaluation overview](evaluation-overview.md) and [Agent Evaluations CLI overview](evaluations-cli-overview.md).
+Evaluate agents by using a comprehensive evaluation framework and tooling to refine agent performance. The Microsoft 365 Copilot Evaluations CLI tool enables developers to create, run, and analyze tests for their agents. For more information, see [Agent evaluation overview](evaluation-overview.md) and [Microsoft 365 Copilot Evaluations CLI overview](evaluations-cli-overview.md).
 
 ### Package Management API updates (preview)
 

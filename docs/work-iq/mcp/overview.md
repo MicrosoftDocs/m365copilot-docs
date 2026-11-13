@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 10/05/2026
+ms.date: 11/10/2026
 ---
 
 # Work IQ MCP overview
@@ -63,6 +63,7 @@ The Work IQ MCP server uses Microsoft Entra ID for authentication. MCP clients a
 
 ## Related content
 
+- [Work IQ Listen developer guide (preview)](../listen.md)
 - [Work IQ API overview](../api-overview.md)
 - [Work IQ MCP tool reference](tool-reference.md)
 - [Use the retrieve tool in Work IQ MCP](retrieve.md)

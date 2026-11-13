@@ -15,6 +15,9 @@ Use [Work IQ Dev Tools](https://microsoft.github.io/wiqd/) with the local source
 > [!IMPORTANT]
 > The entire `wiqd plugin` command tree is alpha and subject to change. If the steps in this walkthrough don't work, confirm current commands, supported component combinations, target experiences, and feature requirements in [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/).
 
+> [!TIP]
+> Watch Work IQ Dev Tools build a Copilot plugin from a prompt and publish it to the Agent Store in the [interactive demo](https://interactivedemo.microsoft.com/work-iq/dev-tools).
+
 ## Prerequisites
 
 - [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli) with an active Copilot subscription

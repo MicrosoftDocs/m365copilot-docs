@@ -74,6 +74,7 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 | `longDescription`          | String                                                                                   | Comprehensive description providing detailed information about the package functionality, features, and usage.                                                                        |
 | `manifestId`               | String                                                                                   | Unique identifier declared in the package manifest. Not updatable after creation. Inherited from copilotPackage.                                                                      |
 | `manifestVersion`          | String                                                                                   | Version of the manifest schema used to define this package. Not updatable. Inherited from copilotPackage.                                                                             |
+| `owners`                   | [packageAccessEntity](packageaccessentity.md) collection                                 | Collection of accountable users and groups that own the package. Not updatable after creation. Inherited from copilotPackage.                                                         |
 | `platform`                 | String                                                                                   | The host platform this package targets (e.g., teams, outlook, web). Inherited from copilotPackage.                                                                                    |
 | `publisher`                | String                                                                                   | Name of the organization or entity that published this package. Inherited from copilotPackage.                                                                                        |
 | `requestStatus`            | [copilotPackageRequestStatus](copilotpackage.md#copilotpackagerequeststatus-enumeration) | Nullable. Status of the request associated with this package. Supports `$filter` with `eq` on [List packages](../copilotpackages-list.md). Inherited from copilotPackage.             |
@@ -133,6 +134,11 @@ The following JSON representation shows the resource type.
   "longDescription": "String",
   "manifestId": "String",
   "manifestVersion": "String",
+  "owners": [
+    {
+      "@odata.type": "microsoft.graph.packageAccessEntity"
+    }
+  ],
   "platform": "String",
   "publisher": "String",
   "requestStatus": "String",

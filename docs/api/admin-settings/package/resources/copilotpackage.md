@@ -42,6 +42,7 @@ Entity that represents a Copilot package available within a tenant, containing b
 | `lastModifiedDateTime` | DateTimeOffset                                                          | Timestamp of the last modification made to the package configuration or metadata.                                                                      |
 | `manifestId`           | String                                                                  | Unique identifier declared in the package manifest. Not updatable after creation.                                                                      |
 | `manifestVersion`      | String                                                                  | Version of the manifest schema used to define this package. Not updatable after creation.                                                              |
+| `owners`               | [packageAccessEntity](packageaccessentity.md) collection                | Collection of accountable users and groups that own the package. Not updatable after creation.                                                         |
 | `platform`             | String                                                                  | The host platform this package targets (for example, `teams`, `outlook`, `web`). Supports $filter with eq.                                             |
 | `publisher`            | String                                                                  | Name of the organization or entity that published this package.                                                                                        |
 | `requestStatus`        | [copilotPackageRequestStatus](#copilotpackagerequeststatus-enumeration) | Nullable. Status of the request associated with this package. Supports `$filter` with `eq` on [List packages](../copilotpackages-list.md).             |
@@ -124,6 +125,11 @@ The following JSON representation shows the resource type.
   "lastModifiedDateTime": "DateTimeOffset",
   "manifestId": "String",
   "manifestVersion": "String",
+  "owners": [
+    {
+      "@odata.type": "microsoft.graph.packageAccessEntity"
+    }
+  ],
   "platform": "String",
   "publisher": "String",
   "requestStatus": "String",
