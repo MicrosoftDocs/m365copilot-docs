@@ -375,7 +375,7 @@ items:
         href: evaluation-multi-turn.md
       - name: Organize evaluation tests
         href: evaluation-test-categories.md
-      - name: Use the Agent Evaluations CLI
+      - name: Use the Microsoft 365 Copilot Evaluations CLI
         href: evaluations-cli-overview.md
         items:
         - name: Quickstart
@@ -386,6 +386,8 @@ items:
           href: evaluations-cli-create-tests.md
         - name: Evaluators reference
           href: evaluations-cli-evaluators.md
+        - name: Tool-call evaluators (v2 preview)
+          href: evaluations-cli-tool-call-evaluators.md
         - name: Add custom evaluators
           href: evaluations-cli-custom-evaluators.md
         - name: CLI reference

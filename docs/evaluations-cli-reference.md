@@ -1,7 +1,7 @@
 ---
-title: Agent Evaluations CLI reference
-description: Complete command-line reference for the M365 Copilot Agent Evaluations CLI tool including all options, flags, and cache commands.
-ms.date: 08/04/2026
+title: Microsoft 365 Copilot Evaluations CLI reference
+description: Command-line reference for the Microsoft 365 Copilot Evaluations CLI, including options, flags, cache commands, and v2 preview tool discovery.
+ms.date: 11/12/2026
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -9,7 +9,7 @@ ms.topic: reference
 ms.localizationpriority: medium
 ---
 
-# Agent Evaluations CLI reference
+# Microsoft 365 Copilot Evaluations CLI reference
 
 This article provides a complete command-line reference for the `runevals` command, which is part of the `@microsoft/m365-copilot-eval` package.
 
@@ -25,6 +25,8 @@ runevals cache-dir
 ## Description
 
 The `runevals` command evaluates Microsoft 365 Copilot agents by sending test prompts and scoring responses using Microsoft Foundry cloud evaluation and built-in metrics. The tool supports batch evaluation from JSON files, inline prompts, and interactive testing.
+
+CLI v1 uses the npm `latest` tag. CLI v2 uses `preview` and also evaluates Copilot responses that use plugins. In v2, a run without a configured agent ID evaluates Microsoft 365 Copilot chat. For preview setup and schema v2 examples, see [Tool-call evaluators](evaluations-cli-tool-call-evaluators.md).
 
 ## Options
 
@@ -179,6 +181,28 @@ runevals --m365-agent-id "U_0dc4a8a2-b95f-edac-91c8-d802023ec2d4"
 - User-scoped: `U_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
 - Tenant-scoped: `T_agent-name.declarativeAgent`
 
+For v2 preview plugin scenarios, omit this option and remove `M365_AGENT_ID` and legacy `AGENT_ID` from your shell and loaded environment files.
+
+### `--list-tools <agent-id>` (v2 preview)
+
+List consent identifiers and copy-ready evaluator identities for a declarative agent's actions. This option isn't supported for standalone plugins. Dynamically discovered tools might not appear; confirm their identities in `diagnostics.tool_calls` after an evaluation.
+
+```powershell
+npx -y --package @microsoft/m365-copilot-eval@preview runevals --list-tools "<your-agent-id>"
+```
+
+For standalone plugin consent names and the three-part evaluator identity, see [Find tool-call names](evaluations-cli-tool-call-evaluators.md#find-tool-call-names).
+
+### `--evaluate-only <file>`
+
+Re-score saved responses and available diagnostics without executing prompts. Each item or turn must include a `response`. Configure a judge if you select LLM-based evaluators; Microsoft 365 execution authentication isn't needed.
+
+```powershell
+runevals --evaluate-only results\captured-responses.json --output results\rescored.html
+```
+
+Tool-call re-scoring requires CLI v2 preview and retained tool-call evidence. For details, see [Diagnostics and saved-response evaluation](evaluations-cli-tool-call-evaluators.md#diagnostics-and-saved-response-evaluation).
+
 ### `--env <environment>`
 
 Specify the environment configuration to load. This parameter loads `env/.env.<environment>`.
@@ -315,7 +339,7 @@ The tool reads configuration from environment files and system variables. For st
 | Variable | Description | Example |
 |----------|-------------|---------|
 | `TENANT_ID` | Microsoft Entra tenant ID | `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` |
-| `AZURE_AI_PROJECT_ENDPOINT` | Microsoft Foundry project endpoint | `https://<account>.services.ai.azure.com/api/projects/<project>` |
+| `AZURE_AI_PROJECT_ENDPOINT` | Microsoft Foundry project endpoint for LLM-based scoring. Not required for deterministic-only evaluation. | `https://<account>.services.ai.azure.com/api/projects/<project>` |
 
 ### Optional variables
 
@@ -324,6 +348,7 @@ The tool reads configuration from environment files and system variables. For st
 | `M365_AGENT_ID` | Agent ID to evaluate | Auto-detected from `M365_TITLE_ID` |
 | `M365_TITLE_ID` | Agent title ID (Agents Toolkit) | None |
 | `AZURE_AI_MODEL_NAME` | Model for evaluations | `gpt-5-mini` |
+| `EVALS_SUPPRESS_DIAGNOSTICS` | Set to `true` to omit retained diagnostics. Doesn't redact prompts, responses, evaluator options, or native validation messages. Suppressed evidence can't be replayed. | Unset |
 
 ## Examples
 
@@ -432,6 +457,6 @@ For common issues with installation, authentication, runtime errors, cache probl
 
 ## Related content
 
-- [Agent Evaluations CLI overview](evaluations-cli-overview.md)
-- [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md)
+- [Microsoft 365 Copilot Evaluations CLI overview](evaluations-cli-overview.md)
+- [Quickstart: Use the Microsoft 365 Copilot Evaluations CLI](evaluations-cli-quickstart.md)
 - [Dataset schema and test design](evaluations-cli-create-tests.md)

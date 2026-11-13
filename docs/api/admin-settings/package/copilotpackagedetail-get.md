@@ -135,6 +135,12 @@ Content-Type: application/json
     }
   ],
   "acquireUsersAndGroups": [],
+  "owners": [
+    {
+      "resourceId": "user-789",
+      "resourceType": "user"
+    }
+  ],
   "elementDetails": [
     {
       "elementType": "bot",

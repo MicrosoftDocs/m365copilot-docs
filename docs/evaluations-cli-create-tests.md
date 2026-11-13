@@ -1,7 +1,7 @@
 ---
 title: Dataset schema and test design for agent evaluations
-description: Learn the dataset schema, test design patterns, and advanced evaluation scenarios for Microsoft 365 Copilot agents.
-ms.date: 05/01/2026
+description: Learn the dataset schema, test design patterns, retrieval and tool-call evaluation setup for Microsoft 365 Copilot agents and plugins.
+ms.date: 11/12/2026
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -19,9 +19,12 @@ Evaluation datasets are JSON files containing prompts and expected responses. Th
 
 Evaluation datasets are JSON files. The tool supports two equivalent shapes: a versioned object (recommended) and a legacy array.
 
-### Versioned schema (recommended)
+### Versioned schema
 
-The simplest valid dataset requires only `schemaVersion` and an `items` array with `prompt` and `expected_response` fields.
+> [!NOTE]
+> CLI v1 supports two dataset shapes: a versioned object (recommended) and a legacy array. CLI v2 requires a versioned object containing `schemaVersion` and `items`.
+
+A dataset uses `schemaVersion` and an `items` array. The following example includes `expected_response` for evaluators that compare a response with a reference answer. Evaluators such as Relevance, Coherence, and the v2 preview tool-call evaluators don't require `expected_response`.
 
 ```json
 {
@@ -37,25 +40,35 @@ The simplest valid dataset requires only `schemaVersion` and an `items` array wi
 
 Schema version `1.6.0` adds support for default and per-item evaluator configuration, evaluator mode control, named items, and multi-turn conversations. For details, see [Configure evaluators](#configure-evaluators) and [Multi-turn evaluation patterns](#multi-turn-evaluation-patterns).
 
+Choose the dataset schema version that matches your CLI version:
+
+- **CLI v1 (`latest`):** Use schema v1. The schema v1 examples in this article remain applicable.
+- **CLI v2 (`preview`):** Use `schemaVersion` `"2.0.0"` and the [schema v2 definition](https://raw.githubusercontent.com/microsoft/m365-copilot-eval/refs/heads/main/schema/v2/eval-document.schema.json). CLI v2 doesn't accept schema v1 or unversioned datasets, regardless of which evaluators you select.
+
+Evaluating standalone plugins through Microsoft 365 Copilot requires CLI v2. Tool-call evaluators also require CLI v2, whether evaluating a standalone plugin or a declarative agent. CLI v1 continues to support evaluating declarative agents, including agents with plugin actions, using its supported evaluators.
+
 ### Schema fields
 
 You can find the evaluation dataset schema in [JSON Schema](https://json-schema.org/) format on [GitHub](https://raw.githubusercontent.com/microsoft/m365-copilot-eval/refs/heads/main/schema/v1/eval-document.schema.json).
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `schemaVersion` | string | Recommended | Semantic version (for example, `"1.0.0"` or `"1.6.0"`). Backward compatibility is guaranteed within a major version. Use `"1.6.0"` to enable evaluator configuration, evaluator modes, and native multi-turn support. |
+| `schemaVersion` | string | Required in CLI v2; recommended in CLI v1 | Dataset schema version. Use `"2.0.0"` with CLI v2 (`preview`), or a supported v1 schema version with CLI v1 (`latest`). Backward compatibility is guaranteed within a schema major version. |
 | `items` | array | Yes | Array of test items. Each item is either a single-turn prompt/response pair or a named multi-turn conversation. |
 | `description` | string | Optional | Free-text description of the dataset (for example, `"Regression tests for Q1 2026 release"`). |
 | `default_evaluators` | object | Optional | Evaluators applied to every item in the dataset unless overridden. Each key is an evaluator name (for example, `"Relevance"`, `"Coherence"`); the value is an options object (use `{}` for defaults). Requires `schemaVersion` `"1.2.0"` or later. |
 | `items[].prompt` | string | Conditional | The prompt or instruction sent to the agent. Required for single-turn items. Don't use with `turns`. |
-| `items[].expected_response` | string | Conditional | The reference response used for scoring. Required for single-turn items. Don't use with `turns`. |
+| `items[].expected_response` | string | Conditional | The reference response used for scoring. Required by evaluators such as Similarity, ExactMatch, and PartialMatch, but not by tool-call evaluators. Don't use with `turns`. |
 | `items[].name` | string | Optional | Display name for the test item (for example, `"Expense policy flow"`). Especially useful for identifying multi-turn items in reports. |
-| `items[].turns` | array | Conditional | Ordered array of turn objects for a multi-turn conversation within a single item. Each turn contains `prompt`, `expected_response`, and optionally `evaluators` and `evaluators_mode`. Don't use with top-level `prompt`/`expected_response`. Requires `schemaVersion` `"1.2.0"` or later. |
+| `items[].turns` | array | Conditional | Ordered array of turn objects for a multiturm conversation within a single item. Each turn contains `prompt`, `expected_response` when required by the selected evaluators, and optionally `evaluators` and `evaluators_mode`. Don't use with top-level `prompt`/`expected_response`. Requires `schemaVersion` `"1.2.0"` or later. |
 | `items[].evaluators` | object | Optional | Per-item evaluator overrides. Each key is an evaluator name; the value is an options object (for example, `{ "citation_format": "mixed" }`). Behavior depends on `evaluators_mode`. Requires `schemaVersion` `"1.2.0"` or later. |
 | `items[].evaluators_mode` | string | Optional | Controls how `items[].evaluators` combines with `default_evaluators`. Use `"extend"` (default) to merge per-item evaluators with defaults, or `"replace"` to use only the per-item evaluators and ignore defaults. Requires `schemaVersion` `"1.2.0"` or later. |
 | `items[].testId` | string | Optional | Stable identifier for cross-version comparison (for example, `"REG-001"`). |
 | `items[].category` | string | Optional | Category tag (for example, `"knowledge-base"`, `"tool-usage"`). |
 | `items[].notes` | string | Optional | Freeform notes, such as a linked bug ID. |
+| `default_allowed_tools` | array of strings | Optional | Consent identifiers approved for the dataset. For usage with tool-call evaluators in v2 preview, see [Allow tool calls](#allow-tool-calls). |
+| `items[].allowed_tools` / `items[].turns[].allowed_tools` | array of strings | Optional | Consent identifiers approved for a prompt or turn. These aren't evaluator tool identities. |
+| `items[].allowed_tools_mode` / `items[].turns[].allowed_tools_mode` | string | Optional | `"extend"` (default) combines `allowed_tools` with `default_allowed_tools`. `"replace"` uses only the prompt's or turn's list. Use `"replace"` with `allowed_tools: []` to approve no tool-confirmation requests for that prompt or turn. |
 
 ### Configure evaluators
 
@@ -111,6 +124,15 @@ Use the `evaluators` field on an individual item (or turn) to add or override ev
 ```
 
 In this example, the item is scored for Relevance (default), Coherence (default), and Citations with `citation_format` set to `"mixed"` (per-item override).
+
+#### Allow tool calls
+
+When evaluating tool calls that request confirmation, configure both approval and evaluator expectations. `default_allowed_tools` at document level and `allowed_tools` per prompt or turn let the CLI approve tool-confirmation prompts. Every requested consent identifier must be allowed; otherwise, the prompt stops with a `toolCallNotAllowed` error.
+
+> [!IMPORTANT]
+> Allowing a call grants consent. Use reviewed scenarios and start with read-only operations. An evaluator expectation doesn't grant consent, and approval doesn't force tool selection or prove execution. Tools that don't request confirmation aren't controlled by this list, so it isn't a security boundary.
+
+Consent identifiers differ from the three-part tool identity in an evaluator's `calls[].tool`. Don't split consent identifiers to populate evaluator fields. For discovery commands, configuration, and complete schema v2 datasets, see [Tool-call evaluators](evaluations-cli-tool-call-evaluators.md).
 
 ### Complete schema example
 
@@ -239,6 +261,8 @@ Verify the agent follows specific instructions.
 ### Tool usage
 
 Test whether the agent correctly uses available tools and plugins.
+
+The following response-based example doesn't prove that a tool was selected or executed. To check runtime behavior, use [ToolCallSelection or ToolCallExecution](evaluations-cli-tool-call-evaluators.md) in CLI v2 preview.
 
 ```json
 {
@@ -591,5 +615,5 @@ runevals --output ./evals/results/v1.6.0-results.json
 
 - [CLI reference](evaluations-cli-reference.md)
 - [Troubleshooting](evaluations-cli-troubleshooting.md)
-- [Agent Evaluations CLI overview](evaluations-cli-overview.md)
-- [Quickstart: Use the Agent Evaluations CLI](evaluations-cli-quickstart.md)
+- [Microsoft 365 Copilot Evaluations CLI overview](evaluations-cli-overview.md)
+- [Quickstart: Use the Microsoft 365 Copilot Evaluations CLI](evaluations-cli-quickstart.md)

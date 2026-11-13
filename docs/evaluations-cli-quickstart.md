@@ -1,8 +1,8 @@
 ---
-title: Quickstart - Use the Agent Evaluations CLI
-description: Get started quickly with evaluating your Microsoft 365 Copilot agent using the M365 Copilot Agent Evaluations CLI tool.
+title: Quickstart - Use the Microsoft 365 Copilot Evaluations CLI
+description: Get started with evaluating your Microsoft 365 Copilot agent using the Microsoft 365 Copilot Evaluations CLI.
 #customer intent: As a developer setting up agent evaluations, I want to configure my agent ID and environment variables so that the runevals CLI can find and evaluate my agent.
-ms.date: 09/30/2026
+ms.date: 11/12/2026
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -10,12 +10,15 @@ ms.topic: quickstart
 ms.localizationpriority: high
 ---
 
-# Quickstart: Use the Agent Evaluations CLI
+# Quickstart: Use the Microsoft 365 Copilot Evaluations CLI
 
-The Microsoft 365 Copilot Agent Evaluations CLI (@microsoft/m365-copilot-eval) helps you test, measure, and improve the quality of your agents through automated prompt evaluation and AI-based scoring. This quickstart walks you through installing the Agent Evaluations tool, configuring your environment, creating your first dataset, and running an evaluation.
+The Microsoft 365 Copilot Evaluations CLI (`@microsoft/m365-copilot-eval`) helps you test, measure, and improve the quality of your agents through automated prompt evaluation and AI-based scoring. This quickstart walks you through installing the CLI, configuring your environment, creating your first dataset, and running an evaluation.
+
+> [!NOTE]
+> This quickstart uses CLI v1 (`latest`) to evaluate a deployed agent. For CLI v2 preview, plugin scenarios, and the new ToolCallSelection and ToolCallExecution evaluators, see [Tool-call evaluators](evaluations-cli-tool-call-evaluators.md).
 
 > [!IMPORTANT]
-> For deployed declarative agents, start with [Work IQ Dev Tools (preview)](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided workflow. Work IQ Dev Tools manages the compatible Agent Evaluations CLI version, so you don't need to install `@microsoft/m365-copilot-eval` globally. Follow this quickstart when you need lower-level command control or maintain an existing `runevals` workflow.
+> For deployed declarative agents, start with [Work IQ Dev Tools (preview)](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided workflow. Work IQ Dev Tools manages the compatible Microsoft 365 Copilot Evaluations CLI version, so you don't need to install `@microsoft/m365-copilot-eval` globally. Follow this quickstart when you need lower-level command control or maintain an existing `runevals` workflow.
 
 ## Prerequisites
 
@@ -23,7 +26,7 @@ Before you begin, make sure that you have:
 
 - A Microsoft 365 Copilot agent deployed to your tenant.
 - [Node.js](https://nodejs.org/en/download) 24.12.0 or later (use `node --version` to check).
-- Copilot credits available in your tenant. The Agent Evaluations CLI consumes Copilot credits when it sends test prompts to your agent. Your tenant admin turns on usage-based (metered) billing in the [Microsoft 365 admin center](https://admin.microsoft.com) by going to the **Copilot** > **Cost Management** node. For more information, see [Manage Copilot credits](/microsoft-365/copilot/usage-based-billing-manage-copilot-credits).
+- Copilot credits available in your tenant. The Microsoft 365 Copilot Evaluations CLI consumes Copilot credits when it sends test prompts to your agent. Your tenant admin turns on usage-based (metered) billing in the [Microsoft 365 admin center](https://admin.microsoft.com) by going to the **Copilot** > **Cost Management** node. For more information, see [Manage Copilot credits](/microsoft-365/copilot/usage-based-billing-manage-copilot-credits).
 - A Microsoft Foundry project with a GPT-5 model deployed to score responses. For more information, see [Get values for environment variables](evaluations-cli-get-env-values.md).
 - Microsoft Entra admin consent granted for Work IQ in your
   tenant. If you aren't a tenant admin, ask your admin to grant consent before
@@ -35,10 +38,10 @@ Before you begin, make sure that you have:
 
 ## Step 1: Install the CLI
 
-Install the Agent Evaluations CLI globally by using npm:
+Install the Microsoft 365 Copilot Evaluations CLI v1 globally by using npm:
 
 ```bash
-npm install -g @microsoft/m365-copilot-eval
+npm install -g @microsoft/m365-copilot-eval@latest
 ```
 
 Verify the installation:
@@ -91,7 +94,7 @@ AZURE_AI_PROJECT_ENDPOINT="https://<account>.services.ai.azure.com/api/projects/
 AZURE_AI_MODEL_NAME="gpt-5-mini" # default
 ```
 
-The Agent Evaluations CLI scores responses by using Microsoft Foundry cloud evaluation, which authenticates with Microsoft Entra. Sign in with the Azure CLI (`az login`) before you run `runevals`. For details about these values, see [Get values for environment variables](evaluations-cli-get-env-values.md).
+The Microsoft 365 Copilot Evaluations CLI scores responses by using Microsoft Foundry cloud evaluation, which authenticates with Microsoft Entra. Sign in with the Azure CLI (`az login`) before you run `runevals`. For details about these values, see [Get values for environment variables](evaluations-cli-get-env-values.md).
 
 Add `.env.local.user` to your `.gitignore`:
 
@@ -147,7 +150,7 @@ A successful run produces:
 - A completion message in the terminal similar to the following message.
 
   ```text
-  M365 Copilot Agent Evaluations CLI
+  Microsoft 365 Copilot Evaluations CLI
 
   Loading environment: dev
   Agent ID: T_my-agent.declarativeAgent
@@ -177,7 +180,7 @@ If you don't see these results, see [Troubleshooting](evaluations-cli-troublesho
 
 ## Related content
 
-- [Agent Evaluations CLI overview](evaluations-cli-overview.md)
+- [Microsoft 365 Copilot Evaluations CLI overview](evaluations-cli-overview.md)
 - [Dataset schema and test design](evaluations-cli-create-tests.md)
 - [CLI reference](evaluations-cli-reference.md)
 - [Troubleshooting and support](evaluations-cli-troubleshooting.md)

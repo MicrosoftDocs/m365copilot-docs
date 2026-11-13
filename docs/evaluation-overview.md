@@ -3,7 +3,7 @@ title: Agent evaluation overview
 description: Learn foundational concepts, terminology, and eval-driven development for evaluating declarative agents and custom engine agents.
 author: sathya-raveendran
 ms.author: saraveen
-ms.date: 09/30/2026
+ms.date: 11/12/2026
 ms.topic: concept-article
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
@@ -15,9 +15,9 @@ To improve the quality of your [declarative agents](overview-declarative-agent.m
 
 ## Start with Work IQ Dev Tools for declarative agents
 
-For deployed declarative agents, start with [Work IQ Dev Tools (preview)](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided evaluation workflow. The `wiqd agent eval` workflow manages the compatible Agent Evaluations CLI version, runs evaluations, and produces result scorecards. You don't need to install `@microsoft/m365-copilot-eval` globally for this workflow.
+For deployed declarative agents, start with [Work IQ Dev Tools (preview)](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided evaluation workflow. The `wiqd agent eval` and `wiqd plugin eval` workflows manage the compatible Microsoft 365 Copilot Evaluations CLI version, run evaluations, and produce result scorecards. You don't need to install `@microsoft/m365-copilot-eval` globally for this workflow.
 
-Use the [Agent Evaluations CLI directly](evaluations-cli-overview.md) when you need lower-level command control or maintain an existing `runevals` workflow.
+Use the [Microsoft 365 Copilot Evaluations CLI directly](evaluations-cli-overview.md) when you need lower-level command control or maintain an existing `runevals` workflow.
 
 Use the concepts and design guidance in this article regardless of the evaluation runner. For custom engine agents, use the evaluation tools that support your architecture, runtime, and quality requirements.
 

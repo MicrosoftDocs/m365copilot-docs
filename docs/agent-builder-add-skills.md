@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 11/11/2026
+ms.date: 11/12/2026
 ---
 
 # Add skills to your declarative agent in Agent Builder
@@ -24,7 +24,7 @@ For a personal skill used directly in Copilot Chat without an agent, see [Build 
 
 ## Prerequisites
 
-- A qualifying Microsoft 365 Copilot license, or access through pay-as-you-go. For details, see [Agent capabilities and licensing models](prerequisites.md#agent-capabilities-and-licensing-models).
+- An eligible Microsoft 365 subscription that provides access to Microsoft 365 Copilot Chat. A Microsoft 365 Copilot add-on license isn't required. Some agent capabilities require a Microsoft 365 Copilot license or pay-as-you-go. For details, see [Agent capabilities and licensing models](prerequisites.md#agent-capabilities-and-licensing-models).
 
 > [!NOTE]
 > In Agent Builder, you can add up to eight skills per agent, and each skill package is a compressed `.zip` file of up to 50 MB. For the full support matrix and limits, see [Skills in declarative agents](declarative-agent-skills.md#support-matrix).
