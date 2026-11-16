@@ -8,7 +8,7 @@ Use this template for new tutorial articles that guide users through a process o
 
 ### Examples
 
-- [Tutorial: Create declarative agents using Microsoft 365 Agents Toolkit](../docs/build-declarative-agents.md)
+- [Tutorial: Create declarative agents using Microsoft 365 Agents Toolkit](/plugins/build-declarative-agents)
 - [Add skills to a declarative agent created with Microsoft 365 Agents Toolkit](../docs/build-declarative-agents-add-skills.md)
 
 ## Template

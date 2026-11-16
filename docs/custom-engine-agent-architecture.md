@@ -40,5 +40,5 @@ Custom engine agents provide different capabilities and constraints across archi
 
 ## Related content
 
-- [Agents overview](agents-overview.md)
-- [Declarative agent architecture](declarative-agent-architecture.md)
+- [Agents overview](/plugins/agents-overview)
+- [Declarative agent architecture](/plugins/declarative-agent-architecture)

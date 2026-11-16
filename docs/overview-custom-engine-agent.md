@@ -114,7 +114,7 @@ The following table provides scenario examples and the recommended development a
 
 As you prepare to build and deploy your custom engine agent, consider the key factors described in this section to ensure performance, compliance, and sustainability.
 
-Requirements depend on your development approach: hosting for models and orchestrators varies by the [development approach](#development-approaches-for-custom-engine-agents) you choose, you can bring your own orchestration and foundation models, and custom engine agents require app manifest version 1.21 or later. For a high-level summary of what you need to build a custom engine agent, see [Agents for Microsoft 365 Copilot](agents-overview.md).
+Requirements depend on your development approach: hosting for models and orchestrators varies by the [development approach](#development-approaches-for-custom-engine-agents) you choose, you can bring your own orchestration and foundation models, and custom engine agents require app manifest version 1.21 or later. For a high-level summary of what you need to build a custom engine agent, see [Agents for Microsoft 365 Copilot](/plugins/agents-overview).
 
 > [!NOTE]
 > Custom engine agents are supported in app manifest version 1.21 and later versions.
@@ -148,19 +148,19 @@ Ensure that your custom agent is compliant, secure, and aligned with [Responsibl
 
 Consider licensing, consumption, and hosting costs associated with your custom engine agent.
 
-For more information, see [Cost considerations for Copilot extensibility](cost-considerations.md).
+For more information, see [Cost considerations for Copilot extensibility](/plugins/cost-considerations).
 
 ## Privacy and compliance
 
 Custom engine agent prompts and responses in Copilot Chat and Teams are stored in compliance with Microsoft 365 product terms and conditions and are managed as per the customer's instructions. To view and manage this stored data, admins can use Content Search or Microsoft Purview.
 
-For more information about governance and admin controls for agents, see [Governance and admin controls for plugin sharing](data-privacy-security.md#governance-and-admin-controls-for-plugin-sharing).
+For more information about governance and admin controls for agents, see [Governance and admin controls for plugin sharing](/plugins/data-privacy-security#governance-and-admin-controls-for-plugin-sharing).
 
 If you're building a custom engine agent that calls the Microsoft 365 Copilot APIs, see [Security and authentication for Microsoft 365 Copilot APIs](copilot-apis-security-authentication.md) for details about how the APIs handle authentication, authorization, and organizational policy enforcement.
 
 ## Related content
 
-- [Agents for Microsoft 365 Copilot](agents-overview.md)
+- [Agents for Microsoft 365 Copilot](/plugins/agents-overview)
 - [Create and deploy an agent with Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started?context=/microsoft-365/copilot/extensibility/context)
 - [Create and deploy an agent with Microsoft 365 Agents SDK](create-deploy-agents-sdk.md)
 - [Publish your Foundry agent to Microsoft 365](/azure/ai-foundry/agents/how-to/publish-copilot)

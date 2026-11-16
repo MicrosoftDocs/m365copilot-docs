@@ -27,8 +27,8 @@ Before building a new plugin, browse the [Copilot Plugin Catalog](https://aka.ms
 | Who it's for | Builders extending supported Copilot experiences | Developers who own and operate the application experience or agent runtime |
 | What you build | A plugin that brings supported skills, tools, and agents into Copilot | An app that calls APIs or uses SDKs for Microsoft 365 work context and Copilot capabilities |
 | Distribution | Plugin registry distribution for your organization, or an eligible public submission through Partner Center and Microsoft Marketplace | The deployment and distribution channel for your own application platform |
-| Where to start | [Microsoft plugins hub](/plugins), then [What is a plugin?](plugins-overview.md) | [Build Copilot-powered apps](apps-agents-overview.md) |
-| Next | [Plan your plugin](planning-guide.md) | Select the APIs, SDKs, runtime, and hosting model on the app path |
+| Where to start | [Microsoft plugins hub](/plugins), then [What is a plugin?](/plugins/plugins-overview) | [Build Copilot-powered apps](apps-agents-overview.md) |
+| Next | [Plan your plugin](/plugins/planning-guide) | Select the APIs, SDKs, runtime, and hosting model on the app path |
 
 ## Build a plugin
 
@@ -40,16 +40,16 @@ During **Prepare**, choose a capability for the customer's task:
 
 | Task | Capability guidance |
 |---|---|
-| Provide a goal-directed conversation using Copilot's orchestrator and models | [Declarative agents](overview-declarative-agent.md) |
-| Teach a repeatable task through instructions and resources | [Skills as plugin capabilities](plugin-type-skills.md) |
-| Ingest external content into Microsoft Graph | [Copilot connectors (synced)](overview-copilot-connector.md) |
-| Retrieve external content in real time through MCP | [Copilot connectors (federated)](overview-copilot-connector.md) |
-| Reference a remote MCP server from an app manifest | [Plugin connectors (`agentConnectors[]`)](configure-plugin-mcp-servers.md) |
-| Give a declarative agent a technical MCP or API action | [MCP and API plugins for declarative agents](overview-plugins.md) |
+| Provide a goal-directed conversation using Copilot's orchestrator and models | [Declarative agents](/plugins/overview-declarative-agent) |
+| Teach a repeatable task through instructions and resources | [Skills as plugin capabilities](/plugins/plugin-type-skills) |
+| Ingest external content into Microsoft Graph | [Copilot connectors (synced)](/plugins/overview-copilot-connector) |
+| Retrieve external content in real time through MCP | [Copilot connectors (federated)](/plugins/overview-copilot-connector) |
+| Reference a remote MCP server from an app manifest | [Plugin connectors (`agentConnectors[]`)](/plugins/configure-plugin-mcp-servers) |
+| Give a declarative agent a technical MCP or API action | [MCP and API plugins for declarative agents](/plugins/overview-plugins) |
 
 Power Platform connectors used in Copilot Studio are a different integration model. Don't treat them as equivalent to Copilot connectors or plugin connectors.
 
-For professional development, start with [Work IQ Dev Tools](choose-plugin-development-tools.md), choose a documented environment, and add Agents Toolkit or an SDK only when the scenario needs it. Follow the product-specific authoring, testing, and distribution procedure for each selected capability.
+For professional development, start with [Work IQ Dev Tools](/plugins/choose-plugin-development-tools), choose a documented environment, and add Agents Toolkit or an SDK only when the scenario needs it. Follow the product-specific authoring, testing, and distribution procedure for each selected capability.
 
 ## Build Copilot into your own app
 
@@ -65,4 +65,4 @@ For example, publishing a plugin doesn't host its remote MCP server or finish cu
 
 ## Next step
 
-For the plugin path, enter **Prepare** with [Plan your plugin](planning-guide.md). For the app path, continue to [Build Copilot-powered apps](apps-agents-overview.md).
+For the plugin path, enter **Prepare** with [Plan your plugin](/plugins/planning-guide). For the app path, continue to [Build Copilot-powered apps](apps-agents-overview.md).

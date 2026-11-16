@@ -21,7 +21,7 @@ Declarative agents are tools that enhance the Microsoft 365 Copilot experience. 
 
 Custom engine agents use custom foundation models and orchestrators and can be tailored to specific enterprise needs. Custom engine agents include agents built with Copilot Studio, Teams SDK, and Azure AI Foundry. Custom engine agents currently work as standalone and Teams apps.
 
-For more information, see [Agents for Microsoft 365](agents-overview.md).
+For more information, see [Agents for Microsoft 365](/plugins/agents-overview).
 
 ### What's the difference between actions and plugins?
 
@@ -29,9 +29,9 @@ A **Microsoft 365 Copilot plugin** is an installable package that can bring toge
 
 An **API plugin** or **MCP plugin** is an integration that provides actions to a declarative agent, such as a function or tool to close a support ticket. It uses an API or MCP plugin manifest, not the Microsoft 365 app manifest that describes the installable package.
 
-When a plugin package includes the agent, the API or MCP actions remain available through that agent. They don't become independently available capabilities of the package. For the manifest relationship and integration choices, see [Plugins and declarative agent actions](plugins-overview.md#plugins-and-declarative-agent-actions).
+When a plugin package includes the agent, the API or MCP actions remain available through that agent. They don't become independently available capabilities of the package. For the manifest relationship and integration choices, see [Plugins and declarative agent actions](/plugins/plugins-overview#plugins-and-declarative-agent-actions).
 
-To add actions to an agent, follow [MCP and API plugins for declarative agents](overview-plugins.md). For Copilot Studio, use the [tools and connectors supported by Copilot Studio](/microsoft-copilot-studio/advanced-connectors).
+To add actions to an agent, follow [MCP and API plugins for declarative agents](/plugins/overview-plugins). For Copilot Studio, use the [tools and connectors supported by Copilot Studio](/microsoft-copilot-studio/advanced-connectors).
 
 ### What's the difference between Power Platform connectors and API plugins?
 
@@ -43,7 +43,7 @@ The orchestrator and connector mechanisms in Copilot Studio differ from API-base
 
 ### What are the differences between Copilot connectors and Power Platform connectors?
 
-[Microsoft 365 Copilot connectors](overview-copilot-connector.md) enable you to bring additional information into Microsoft Graph to make it discoverable across various Microsoft 365 experiences, including Microsoft 365 Copilot. The connection is synchronous to data-providing services; it replicates data into Microsoft 365 for use in Copilot and other scenarios.
+[Microsoft 365 Copilot connectors](/plugins/overview-copilot-connector) enable you to bring extra information into Microsoft Graph to make it discoverable across various Microsoft 365 experiences, including Microsoft 365 Copilot. The connection is synchronous to data-providing services. It replicates data into Microsoft 365 for use in Copilot and other scenarios.
 
 Power Platform connectors enable agents to interact with other systems to retrieve information in near real-time (for example, "Get ticket #1234") and to establish read/write actions (for example, "Create a ticket").
 
@@ -65,9 +65,9 @@ For information about data retention in Copilot, see [Learn about retention for 
 
 ### What licenses do I need to purchase to develop declarative agents or custom engine agents?
 
-You can build declarative agents grounded on web search with limited capabilities without a Microsoft 365 Copilot license. If you have a [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing), you don't need additional licenses to build declarative agents with additional capabilities, including Copilot connectors and plugins. For details, see [Microsoft 365 Copilot developer licenses](prerequisites.md#microsoft-365-copilot-developer-licenses).
+You can build declarative agents based on web search with limited capabilities without a Microsoft 365 Copilot license. If you have a [Microsoft 365 Copilot license](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365#Pricing), you don't need additional licenses to build declarative agents with extra capabilities, including Copilot connectors and plugins. For details, see [Microsoft 365 Copilot developer licenses](/plugins/prerequisites#microsoft-365-copilot-developer-licenses).
 
-You don't need a [Copilot Studio license](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) to build agents; however, if you want to ground your agent in organizational data, you either need a license or you need to set up consumption metering in your tenant. For details, see [Copilot Studio requirements](prerequisites.md#copilot-studio-requirements) and [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
+You don't need a [Copilot Studio license](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio#Pricing) to build agents; however, if you want to ground your agent in organizational data, you either need a license or you need to set up consumption metering in your tenant. For details, see [Copilot Studio requirements](/plugins/prerequisites#copilot-studio-requirements) and [Manage message capacity](/microsoft-copilot-studio/requirements-messages-management).
 
 If you build AI solutions other than agents, a Copilot Studio license is required.
 
@@ -85,15 +85,15 @@ You don't need a Microsoft 365 Copilot license to build custom engine agents by 
 
 ### Which pro-code development tool is recommended?
 
-[Work IQ Dev Tools (WIQD)](https://aka.ms/wiqd/docs) is the recommended pro-code starting point for supported declarative-agent and plugin scenarios. It provides source-controlled projects and command-line lifecycle workflows. Toolkit-based walkthroughs remain available for existing projects and workflows that require them. WIQD doesn't target custom engine agents. See [Choose development tools for your plugin](choose-plugin-development-tools.md) for capability and target-experience requirements.
+[Work IQ Dev Tools (WIQD)](https://aka.ms/wiqd/docs) is the recommended pro-code starting point for supported declarative-agent and plugin scenarios. It provides source-controlled projects and command-line lifecycle workflows. Toolkit-based walkthroughs remain available for existing projects and workflows that require them. WIQD doesn't target custom engine agents. See [Choose development tools for your plugin](/plugins/choose-plugin-development-tools) for capability and target-experience requirements.
 
 ### What do I need to connect to an API?
 
-For a supported pro-code declarative-agent scenario, use Work IQ Dev Tools to add an API action from an OpenAPI description. The API plugin manifest configures the action, and the containing agent is distributed in an app package. Your REST API remains separately hosted. Add detailed descriptions to the OpenAPI document so Copilot knows how to use the API; large or complex APIs might need to be simplified. See [Add MCP and API actions to declarative agents](overview-plugins.md).
+For a supported pro-code declarative-agent scenario, use Work IQ Dev Tools to add an API action from an OpenAPI description. The API plugin manifest configures the action, and the containing agent is distributed in an app package. You host your REST API separately. Add detailed descriptions to the OpenAPI document so Copilot knows how to use the API. You might need to simplify large or complex APIs. See [Add MCP and API actions to declarative agents](/plugins/overview-plugins).
 
 ### Should I use JSON manifests or TypeSpec for building agents and plugins?
 
-For new supported pro-code declarative-agent and plugin scenarios, start with [Work IQ Dev Tools](choose-plugin-development-tools.md#start-with-work-iq-dev-tools). The following comparison applies when you choose a Toolkit-based workflow; it isn't a recommendation to switch from WIQD to Toolkit.
+For new supported pro-code declarative-agent and plugin scenarios, start with [Work IQ Dev Tools](/plugins/choose-plugin-development-tools#start-with-work-iq-dev-tools). The following comparison applies when you choose a Toolkit-based workflow; it isn't a recommendation to switch from WIQD to Toolkit.
 
 Within that workflow, the choice between JSON manifests and TypeSpec depends on your development preferences and project complexity:
 
@@ -112,7 +112,7 @@ Within that workflow, the choice between JSON manifests and TypeSpec depends on 
 - You're migrating existing JSON-based configurations
 - You want to understand the underlying manifest format in detail
 
-For developers who choose the Toolkit-based TypeSpec workflow, TypeSpec offers type safety, automatic generation, and reduced boilerplate code. For more information, see [TypeSpec for Microsoft 365 Copilot overview](overview-typespec.md).
+For developers who choose the Toolkit-based TypeSpec workflow, TypeSpec offers type safety, automatic generation, and reduced boilerplate code. For more information, see [TypeSpec for Microsoft 365 Copilot overview](/plugins/overview-typespec).
 
 ## Azure AI questions
 
@@ -154,7 +154,7 @@ If you want to use Azure AI services, we recommend you to build custom engine ag
 
 If you choose to work with OpenAI models, such as GPT-4 turbo, you can take advantage of the web-based interface of [Azure OpenAI Studio](https://oai.azure.com/), which comes with the **Deploy to Teams** feature that generates a code template that you can modify, test, and deploy using Agents Toolkit.
 
-To learn more about the difference between custom engine agents and declarative agents, see [Agents for Microsoft 365](agents-overview.md).
+To learn more about the difference between custom engine agents and declarative agents, see [Agents for Microsoft 365](/plugins/agents-overview).
 
 ---
 
