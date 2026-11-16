@@ -15,7 +15,7 @@ Use APIs when people interact with an application that you host and operate. Thi
 
 This is the **Build Copilot into your own app** path: build Copilot capabilities into an app you own with APIs, SDKs, Microsoft Graph and Work IQ app guidance. You finish with a choice of services, runtime, hosting, and application lifecycle.
 
-To package supported skills, tools, and agents for Copilot instead, follow the [plugin path](plugins-overview.md). A custom engine agent's orchestration, hosting, and runtime belong on this app path, even when the solution also has separately packaged capabilities.
+To package supported skills, tools, and agents for Copilot instead, follow the [plugin path](/plugins/plugins-overview). A custom engine agent's orchestration, hosting, and runtime belong on this app path, even when the solution also has separately packaged capabilities.
 
 ## Choose an approach
 
@@ -49,7 +49,7 @@ Before implementation:
 - Define deployment environments, monitoring, support, versioning, and incident response.
 - Determine whether any part of the solution also requires a plugin or Microsoft 365 app package.
 
-If the solution also requires a plugin, see [Plan your plugin](planning-guide.md).
+If the solution also requires a plugin, see [Plan your plugin](/plugins/planning-guide).
 
 ## Follow the application lifecycle
 
@@ -68,7 +68,7 @@ Choose [Work IQ APIs](work-iq/index.md), [Microsoft 365 Copilot APIs](copilot-ap
 ## Related content
 
 - [Ways to extend Microsoft 365 Copilot](overview.md)
-- [For builders](builder-guide.md)
+- [For builders](/plugins/builder-guide)
 - [Microsoft 365 Copilot APIs overview](copilot-apis-overview.md)
 - [Work IQ APIs](work-iq/index.md)
 - [Build a custom engine agent](overview-custom-engine-agent.md)

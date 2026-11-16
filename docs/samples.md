@@ -28,12 +28,12 @@ The following declarative agent samples are available from the PNP community.
 
 ### Add capabilities to declarative agents
 
-The PnP community samples listed above demonstrate declarative agents that you can use as starting points. You can enhance these agents by adding built-in capabilities such as code interpreter and image generator through the declarative agent manifest. These capabilities were introduced in [version 1.2 of the declarative agent manifest schema](declarative-agent-manifest-1.2.md). Use [Agent Builder](agent-builder.md) for a supported no-code configuration. For supported pro-code scenarios, [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is recommended; follow each sample's own setup instructions if it uses Toolkit.
+The PnP community samples listed above demonstrate declarative agents that you can use as starting points. You can enhance these agents by adding built-in capabilities such as code interpreter and image generator through the declarative agent manifest. These capabilities were introduced in [version 1.2 of the declarative agent manifest schema](declarative-agent-manifest-1.2.md). Use [Agent Builder](/plugins/agent-builder) for a supported no-code configuration. For supported pro-code scenarios, [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is recommended; follow each sample's own setup instructions if it uses Toolkit.
 
 For details on how to enable each capability, see:
 
-- [Add the code interpreter capability to your agent](code-interpreter.md)
-- [Add the image generator capability to your agent](image-generator.md)
+- [Add the code interpreter capability to your agent](/plugins/code-interpreter)
+- [Add the image generator capability to your agent](/plugins/image-generator)
 
 ## Declarative agent with API plugin samples
 

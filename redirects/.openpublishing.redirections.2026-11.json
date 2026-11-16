@@ -1,0 +1,744 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/docs/adaptive-card-dialog-box.md",
+      "redirect_url": "/plugins/adaptive-card-dialog-box",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/adaptive-card-edits.md",
+      "redirect_url": "/plugins/adaptive-card-edits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/administrator-guide.md",
+      "redirect_url": "/plugins/administrator-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-add-knowledge.md",
+      "redirect_url": "/plugins/agent-builder-add-knowledge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-add-skills.md",
+      "redirect_url": "/plugins/agent-builder-add-skills",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-build-agents.md",
+      "redirect_url": "/plugins/agent-builder-build-agents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-monitor-agents.md",
+      "redirect_url": "/plugins/agent-builder-monitor-agents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-publication-privacy-terms-of-use.md",
+      "redirect_url": "/plugins/agent-builder-publication-privacy-terms-of-use",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-regional-availability.md",
+      "redirect_url": "/plugins/agent-builder-regional-availability",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-share-manage-agents.md",
+      "redirect_url": "/plugins/agent-builder-share-manage-agents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder-submit-to-org-catalog.md",
+      "redirect_url": "/plugins/agent-builder-submit-to-org-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-builder.md",
+      "redirect_url": "/plugins/agent-builder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-icon-management.md",
+      "redirect_url": "/plugins/agent-icon-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-ai-learning-advisor.md",
+      "redirect_url": "/plugins/agent-template-ai-learning-advisor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-career-coach.md",
+      "redirect_url": "/plugins/agent-template-career-coach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-corporate-communications.md",
+      "redirect_url": "/plugins/agent-template-corporate-communications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-customer-insight.md",
+      "redirect_url": "/plugins/agent-template-customer-insight",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-executive-briefing.md",
+      "redirect_url": "/plugins/agent-template-executive-brief",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-idea-coach.md",
+      "redirect_url": "/plugins/agent-template-idea-coach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-interview-questions.md",
+      "redirect_url": "/plugins/agent-template-interview-questions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-learning-coach.md",
+      "redirect_url": "/plugins/agent-template-learning-coach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-meeting-coach.md",
+      "redirect_url": "/plugins/agent-template-meeting-coach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-my-company-policy.md",
+      "redirect_url": "/plugins/agent-template-my-company-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-personal-news-digest.md",
+      "redirect_url": "/plugins/agent-template-personal-news-digest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-plan-my-day.md",
+      "redirect_url": "/plugins/agent-template-plan-my-day",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-project-delta-digest.md",
+      "redirect_url": "/plugins/agent-template-project-delta-digest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-prompt-coach.md",
+      "redirect_url": "/plugins/agent-template-prompt-coach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-quiz-tutor.md",
+      "redirect_url": "/plugins/agent-template-quiz-tutor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-rfp-assistant.md",
+      "redirect_url": "/plugins/agent-template-request-for-proposal-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-scrum-assistant.md",
+      "redirect_url": "/plugins/agent-template-scrum-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-sme-finder.md",
+      "redirect_url": "/plugins/agent-template-expert-finder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-status-update-agent.md",
+      "redirect_url": "/plugins/agent-template-status-update-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-text-translator.md",
+      "redirect_url": "/plugins/agent-template-text-translator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-template-writing-coach.md",
+      "redirect_url": "/plugins/agent-template-writing-coach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agent-templates-overview.md",
+      "redirect_url": "/plugins/agent-templates-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/agents-overview.md",
+      "redirect_url": "/plugins/agents-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/api-plugin-adaptive-cards.md",
+      "redirect_url": "/plugins/api-plugin-adaptive-cards",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-api-plugins-existing-api.md",
+      "redirect_url": "/plugins/build-api-plugins-existing-api",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-api-plugins-new-api.md",
+      "redirect_url": "/plugins/build-api-plugins-new-api",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-api-plugins-typespec.md",
+      "redirect_url": "/plugins/build-api-plugins-typespec",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-connectors-with-people-data.md",
+      "redirect_url": "/plugins/build-connectors-with-people-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-copilot-chat-skills.md",
+      "redirect_url": "/plugins/build-copilot-chat-skills",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-declarative-agents-add-capabilities.md",
+      "redirect_url": "/plugins/build-declarative-agents-add-capabilities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-declarative-agents-add-custom-skills.md",
+      "redirect_url": "/plugins/build-declarative-agents-add-custom-skills",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-declarative-agents-add-knowledge.md",
+      "redirect_url": "/plugins/build-declarative-agents-add-knowledge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-declarative-agents-customize-behavior.md",
+      "redirect_url": "/plugins/build-declarative-agents-customize-behavior",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-declarative-agents-typespec.md",
+      "redirect_url": "/plugins/build-declarative-agents-typespec",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-declarative-agents.md",
+      "redirect_url": "/plugins/build-declarative-agents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-mcp-plugins.md",
+      "redirect_url": "/plugins/build-mcp-plugins",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-reuse-connectors.md",
+      "redirect_url": "/plugins/build-reuse-connectors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-reuse-declarative-agents.md",
+      "redirect_url": "/plugins/build-reuse-declarative-agents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-reuse-mcp-servers.md",
+      "redirect_url": "/plugins/build-reuse-mcp-servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-reuse-plugin.md",
+      "redirect_url": "/plugins/build-reuse-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-reuse-skills.md",
+      "redirect_url": "/plugins/build-reuse-skills",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/build-your-first-connector.md",
+      "redirect_url": "/plugins/build-your-first-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/builder-guide.md",
+      "redirect_url": "/plugins/builder-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/choose-plugin-components.md",
+      "redirect_url": "/plugins/choose-plugin-components",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/choose-plugin-development-tools.md",
+      "redirect_url": "/plugins/choose-plugin-development-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/code-interpreter-security.md",
+      "redirect_url": "/plugins/code-interpreter-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/code-interpreter.md",
+      "redirect_url": "/plugins/code-interpreter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/configure-plugin-mcp-servers.md",
+      "redirect_url": "/plugins/configure-plugin-mcp-servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/connector-admin-delegation.md",
+      "redirect_url": "/plugins/connector-admin-delegation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/copilot-studio-experience.md",
+      "redirect_url": "/plugins/copilot-studio-experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/copy-agent-to-copilot-studio.md",
+      "redirect_url": "/plugins/copy-agent-to-copilot-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/cost-considerations.md",
+      "redirect_url": "/plugins/cost-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/data-privacy-security.md",
+      "redirect_url": "/plugins/data-privacy-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/debugging-agents-copilot-studio.md",
+      "redirect_url": "/plugins/debugging-agents-copilot-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/debugging-agents-vscode.md",
+      "redirect_url": "/plugins/debugging-agents-vscode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-architecture.md",
+      "redirect_url": "/plugins/declarative-agent-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-best-practices.md",
+      "redirect_url": "/plugins/declarative-agent-best-practices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-capabilities-ids.md",
+      "redirect_url": "/plugins/declarative-agent-capabilities-ids",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-connected-agent.md",
+      "redirect_url": "/plugins/declarative-agent-connected-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-document-interaction.md",
+      "redirect_url": "/plugins/declarative-agent-document-interaction",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-enable-feedback.md",
+      "redirect_url": "/plugins/declarative-agent-enable-feedback",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-instructions.md",
+      "redirect_url": "/plugins/declarative-agent-instructions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agent-skills.md",
+      "redirect_url": "/plugins/declarative-agent-skills",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/declarative-agents-multi-environment.md",
+      "redirect_url": "/plugins/declarative-agents-multi-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/deploy-plugin.md",
+      "redirect_url": "/plugins/deploy-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluation-design-prompts.md",
+      "redirect_url": "/plugins/evaluation-design-prompts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluation-multi-turn.md",
+      "redirect_url": "/plugins/evaluation-multi-turn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluation-overview.md",
+      "redirect_url": "/plugins/evaluation-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluation-quality-signals.md",
+      "redirect_url": "/plugins/evaluation-quality-signals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluation-test-categories.md",
+      "redirect_url": "/plugins/evaluation-test-categories",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluation-write-assertions.md",
+      "redirect_url": "/plugins/evaluation-write-assertions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluations-cli-create-tests.md",
+      "redirect_url": "/plugins/evaluations-cli-create-tests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluations-cli-custom-evaluators.md",
+      "redirect_url": "/plugins/evaluations-cli-custom-evaluators",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluations-cli-evaluators.md",
+      "redirect_url": "/plugins/evaluations-cli-evaluators",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluations-cli-get-env-values.md",
+      "redirect_url": "/plugins/evaluations-cli-get-env-values",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluations-cli-overview.md",
+      "redirect_url": "/plugins/evaluations-cli-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluations-cli-quickstart.md",
+      "redirect_url": "/plugins/evaluations-cli-quickstart",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluations-cli-reference.md",
+      "redirect_url": "/plugins/evaluations-cli-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluations-cli-tool-call-evaluators.md",
+      "redirect_url": "/plugins/evaluations-cli-tool-call-evaluators",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/evaluations-cli-troubleshooting.md",
+      "redirect_url": "/plugins/evaluations-cli-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/govern-plugins.md",
+      "redirect_url": "/plugins/govern-plugins",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/image-generator.md",
+      "redirect_url": "/plugins/image-generator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/improve-plugin.md",
+      "redirect_url": "/plugins/improve-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/insights-agent-overview.md",
+      "redirect_url": "/plugins/insights-agent-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/insights-agent-prompt-reference.md",
+      "redirect_url": "/plugins/insights-agent-prompt-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/insights-agent-quickstart.md",
+      "redirect_url": "/plugins/insights-agent-quickstart",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/insights-agent-sample-prompts.md",
+      "redirect_url": "/plugins/insights-agent-sample-prompts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/insights-agent-troubleshooting.md",
+      "redirect_url": "/plugins/insights-agent-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/instructions-api-plugins.md",
+      "redirect_url": "/plugins/instructions-api-plugins",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/integrate-test-plugin-components.md",
+      "redirect_url": "/plugins/integrate-test-plugin-components",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/isv-publisher-guide.md",
+      "redirect_url": "/plugins/isv-publisher-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/knowledge-sources.md",
+      "redirect_url": "/plugins/knowledge-sources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/localize-agents.md",
+      "redirect_url": "/plugins/localize-agents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/manage.md",
+      "redirect_url": "/plugins/manage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/monitor-plugin.md",
+      "redirect_url": "/plugins/monitor-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/openapi-document-guidance.md",
+      "redirect_url": "/plugins/openapi-document-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/optimize-content-retrieval.md",
+      "redirect_url": "/plugins/optimize-content-retrieval",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/orchestrator.md",
+      "redirect_url": "/plugins/orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/overview-copilot-connector.md",
+      "redirect_url": "/plugins/overview-copilot-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/overview-declarative-agent.md",
+      "redirect_url": "/plugins/overview-declarative-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/overview-plugins.md",
+      "redirect_url": "/plugins/overview-plugins",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/overview-typespec.md",
+      "redirect_url": "/plugins/overview-typespec",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/package-plugin.md",
+      "redirect_url": "/plugins/package-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/planning-guide.md",
+      "redirect_url": "/plugins/planning-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-authentication-api-key.md",
+      "redirect_url": "/plugins/plugin-authentication-api-key",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-authentication-dynamic-client-registration.md",
+      "redirect_url": "/plugins/plugin-authentication-dynamic-client-registration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-authentication-entra-sso.md",
+      "redirect_url": "/plugins/plugin-authentication-entra-sso",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-authentication-none.md",
+      "redirect_url": "/plugins/plugin-authentication-none",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-authentication-oauth.md",
+      "redirect_url": "/plugins/plugin-authentication-oauth",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-authentication-troubleshooting.md",
+      "redirect_url": "/plugins/plugin-authentication-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-authentication.md",
+      "redirect_url": "/plugins/plugin-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-ci-cd.md",
+      "redirect_url": "/plugins/plugin-ci-cd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-citations.md",
+      "redirect_url": "/plugins/plugin-citations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-confirmation-prompts.md",
+      "redirect_url": "/plugins/plugin-confirmation-prompts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-debug-local.md",
+      "redirect_url": "/plugins/plugin-debug-local",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-dynamic-tool-discovery.md",
+      "redirect_url": "/plugins/plugin-dynamic-tool-discovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-mcp-apps-lob-design-principles.md",
+      "redirect_url": "/plugins/plugin-mcp-apps-lob-design-principles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-mcp-apps-troubleshooting.md",
+      "redirect_url": "/plugins/plugin-mcp-apps-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-mcp-apps-ui-guidelines.md",
+      "redirect_url": "/plugins/plugin-mcp-apps-ui-guidelines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-mcp-apps.md",
+      "redirect_url": "/plugins/plugin-mcp-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-type-connectors.md",
+      "redirect_url": "/plugins/plugin-type-connectors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-type-mcp-servers.md",
+      "redirect_url": "/plugins/plugin-type-mcp-servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugin-type-skills.md",
+      "redirect_url": "/plugins/plugin-type-skills",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/plugins-overview.md",
+      "redirect_url": "/plugins/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/prerequisites.md",
+      "redirect_url": "/plugins/prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/publish-plugin-organization.md",
+      "redirect_url": "/plugins/publish-plugin-organization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/publish-plugin-publicly.md",
+      "redirect_url": "/plugins/publish-plugin-publicly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/publish.md",
+      "redirect_url": "/plugins/publish",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/quickstart-plugin.md",
+      "redirect_url": "/plugins/quickstart-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/rai-validation.md",
+      "redirect_url": "/plugins/responsible-ai-validation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/retire-plugin.md",
+      "redirect_url": "/plugins/retire-plugin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/transparency-faq-declarative-agent.md",
+      "redirect_url": "/plugins/transparency-faq-declarative-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/typespec-authentication.md",
+      "redirect_url": "/plugins/typespec-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/typespec-scenarios.md",
+      "redirect_url": "/plugins/typespec-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/docs/validate-plugin.md",
+      "redirect_url": "/plugins/validate-plugin",
+      "redirect_document_id": false
+    }
+  ]
+}

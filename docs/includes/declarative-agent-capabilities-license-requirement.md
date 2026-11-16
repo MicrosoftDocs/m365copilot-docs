@@ -12,4 +12,4 @@ ms.localizationpriority: medium
 > - **Available with metered usage or a license**: Require either metered usage to be enabled or a Microsoft 365 Copilot license.
 > - **Available only with a license**: Require a Microsoft 365 Copilot license. Metered usage alone doesn't provide access.
 >
-> Users can access a declarative agent only if they meet the requirements for all capabilities it uses. For details about each capability's availability, see [Agent capabilities and licensing models](../prerequisites.md#agent-capabilities-and-licensing-models).
+> Users can access a declarative agent only if they meet the requirements for all capabilities it uses. For details about each capability's availability, see [Agent capabilities and licensing models](/plugins/prerequisites#agent-capabilities-and-licensing-models).

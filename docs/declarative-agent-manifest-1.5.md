@@ -287,7 +287,7 @@ The OneDrive and SharePoint object contains the following properties.
 | `items_by_sharepoint_ids` | Array of [Items by SharePoint IDs object](#items-by-sharepoint-ids-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If you omit both the `items_by_sharepoint_ids` and the `items_by_url` properties, the declarative agent can access all OneDrive and SharePoint sources in the organization. |
 | `items_by_url`            | Array of [Items by URL object](#items-by-url-object)                       | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If you omit both the `items_by_sharepoint_ids` and the `items_by_url` properties, the declarative agent can access all OneDrive and SharePoint sources in the organization. |
 
-For information about how to optimize SharePoint content for Copilot, see [Optimize content retrieval](optimize-content-retrieval.md).
+For information about how to optimize SharePoint content for Copilot, see [Optimize content retrieval](/plugins/optimize-content-retrieval).
 
 ##### Items by SharePoint IDs object
 
@@ -304,7 +304,7 @@ The items by SharePoint IDs object contains the following properties.
 | `part_id`                 | String  | Optional. A unique GUID identifier used to represent part of a SharePoint item such as a OneNote page. |
 
 > [!TIP]
-> For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieve capability IDs for the declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieve capability IDs for the declarative agent manifest](/plugins/declarative-agent-capabilities-ids).
 
 ##### Items by URL object
 
@@ -342,7 +342,7 @@ The connection object contains the following properties.
 | `items_by_container_url` | Array of [Container URL object](#container-url-object) | Optional. Filters the items available to the agent by container URL (the `containerUrl` semantic label on items). |
 
 > [!TIP]
-> For instructions on getting the unique identifier for a Copilot connector, see [Retrieve capability IDs for the declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For instructions on getting the unique identifier for a Copilot connector, see [Retrieve capability IDs for the declarative agent manifest](/plugins/declarative-agent-capabilities-ids).
 
 ###### Item identifier object
 
@@ -396,7 +396,7 @@ The container URL object contains the following properties.
 
 #### Graphic art object
 
-Indicates that the declarative agent can create images and art based on the text input from the user. For more information, see [Image generator](image-generator.md).
+Indicates that the declarative agent can create images and art based on the text input from the user. For more information, see [Image generator](/plugins/image-generator).
 
 The graphic art object contains the following property.
 
@@ -406,7 +406,7 @@ The graphic art object contains the following property.
 
 #### Code interpreter object
 
-Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more. For more information, see [Code interpreter](code-interpreter.md).
+Indicates that the declarative agent can generate and execute Python code to solve complex math problems, analyze data, generate visualizations, and more. For more information, see [Code interpreter](/plugins/code-interpreter).
 
 The code interpreter object contains the following property.
 
@@ -662,5 +662,5 @@ The following example shows a declarative agent manifest file that uses most of 
 
 ## Related content
 
-- [Write effective instructions for declarative agents](declarative-agent-instructions.md)
+- [Write effective instructions for declarative agents](/plugins/declarative-agent-instructions)
 - [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema)

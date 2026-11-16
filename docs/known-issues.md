@@ -81,9 +81,9 @@ When you share an agent via the Microsoft 365 Copilot by using the **Specific us
 
 The following features aren't currently supported in [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government) tenants:
 
-- [Authenticated custom actions](overview-plugins.md).
-- Support for usage billing for extensibility features. For details about features that require usage billing, see [Agent capabilities and licensing models](prerequisites.md#agent-capabilities-and-licensing-models).
-- Support for publishing agents via the [Microsoft 365 Agents Toolkit](build-declarative-agents.md).
+- [Authenticated custom actions](/plugins/overview-plugins).
+- Support for usage billing for extensibility features. For details about features that require usage billing, see [Agent capabilities and licensing models](/plugins/prerequisites#agent-capabilities-and-licensing-models).
+- Support for publishing agents via the [Microsoft 365 Agents Toolkit](/plugins/build-declarative-agents).
 
 ## Copilot connectors
 

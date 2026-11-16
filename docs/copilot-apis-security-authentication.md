@@ -54,12 +54,12 @@ This means your application benefits from enterprise-grade security when it uses
 
 Compliance controls, audit logging, and monitoring apply to Copilot API interactions. These controls help your organization meet regulatory requirements and maintain visibility into how AI capabilities are used. Audit logging for Copilot and AI interactions is available through [Microsoft Purview](/purview/audit-copilot).
 
-For detailed information about governance controls, data loss prevention, retention policies, and admin settings for agents, see [Data, privacy, and security for Microsoft 365 Copilot extensibility](data-privacy-security.md).
+For detailed information about governance controls, data loss prevention, retention policies, and admin settings for agents, see [Data, privacy, and security for Microsoft 365 Copilot extensibility](/plugins/data-privacy-security).
 
 ## Related content
 
 - [Microsoft 365 Copilot APIs overview](copilot-apis-overview.md)
 - [Authentication and authorization basics for Microsoft Graph](/graph/auth/auth-concepts)
-- [Data, privacy, and security for Microsoft 365 Copilot extensibility](data-privacy-security.md)
+- [Data, privacy, and security for Microsoft 365 Copilot extensibility](/plugins/data-privacy-security)
 - [Custom engine agents for Microsoft 365](overview-custom-engine-agent.md)
-- [Configure authentication for MCP and API plugins in agents](plugin-authentication.md) — covers a different scenario: how an agent's MCP or API plugin (including Microsoft Entra SSO) authenticates to its own backend, rather than how your app authenticates to call the Copilot APIs described here.
+- [Configure authentication for MCP and API plugins in agents](/plugins/plugin-authentication) — covers a different scenario: how an agent's MCP or API plugin (including Microsoft Entra SSO) authenticates to its own backend, rather than how your app authenticates to call the Copilot APIs described here.
