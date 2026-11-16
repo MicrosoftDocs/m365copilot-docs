@@ -15,6 +15,9 @@ Skills in Microsoft 365 Copilot Chat are generally available. A skill packages t
 
 You can author a skill for use directly in Copilot Chat without creating a declarative agent. Users can select an installed skill explicitly or let Copilot select it automatically when it's relevant. Users control automatic invocation for each skill.
 
+> [!IMPORTANT]
+> In tenants that use [Microsoft Purview Information Barriers (IB)](/purview/information-barriers), skills aren't supported in Copilot Chat. This restriction applies to personal skills and skills distributed as part of a plugin.
+
 ## Choose the skill's scope
 
 | Target | Authoring and distribution path |
