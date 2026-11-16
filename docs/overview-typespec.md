@@ -5,7 +5,7 @@ description: Learn about TypeSpec for Microsoft 365 Copilot, a domain-specific l
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ms.topic: overview
 ---
 
@@ -23,7 +23,7 @@ TypeSpec for Microsoft 365 Copilot provides a high-level abstraction layer over 
 
 TypeSpec for Microsoft 365 Copilot provides a strongly typed development experience that catches errors at compile time rather than runtime. The language includes comprehensive type checking for all Microsoft 365 Copilot-specific constructs, ensuring that your declarative agents and API plugins are correctly configured before you provision them. This type safety extends to all aspects of your agent definition, from basic metadata to complex capability configurations and API operation definitions.
 
-IntelliSense support in Visual Studio Code and Visual Studio provides real-time feedback, auto-completion, and inline documentation. The language integrates with [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context), offering a complete development workflow from creation through provisioning and publishing. Error messages are clear and actionable, helping you quickly identify and resolve issues during development.
+IntelliSense support in Visual Studio Code and Visual Studio provides real-time feedback, auto-completion, and inline documentation. The TypeSpec walkthroughs in this documentation use Microsoft 365 Agents Toolkit for compilation, provisioning, and publishing. Those procedures remain available; the WIQD recommendation doesn't imply that WIQD supports the same TypeSpec workflow. Error messages are clear and actionable, helping you quickly identify and resolve issues during development.
 
 ## Simplified agent and plugin authoring
 

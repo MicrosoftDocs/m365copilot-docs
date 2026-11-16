@@ -5,7 +5,8 @@ description: Learn how to build API plugins from an existing API for Microsoft 3
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 08/28/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: how-to
 ---
 
@@ -15,7 +16,9 @@ ms.topic: how-to
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-[API plugins](overview-plugins.md) connect your existing REST API to Microsoft 365 Copilot. You can use the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to generate a plugin from an existing REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi).
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
+
+[API plugins](overview-plugins.md) let a declarative agent call your existing REST API. Use the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to create an agent project with an API action integration based on your API's [OpenAPI specification](https://www.openapis.org/what-is-openapi).
 
 ## Prerequisites
 
@@ -29,14 +32,16 @@ ms.topic: how-to
 
 To follow along with this guide, download the [Budget Tracker sample API](https://github.com/microsoftgraph/msgraph-sample-copilot-plugin) and configure it to run on your local development machine. Build the sample at least once to generate the **BudgetTracker.json** file for the API.
 
-## Create the plugin
+## Create the agent and API plugin
 
 [!INCLUDE [toolkit-version-note](includes/toolkit-version-note.md)]
 
-API plugins are a ZIP file that contains the following files.
+The API plugin's configuration includes:
 
 - The OpenAPI specification for the REST API.
 - A [plugin manifest](plugin-manifest-2.4.md) that references the included OpenAPI specification and describes the available operations, authentication method, and response formats.
+
+Include these files in the containing agent's app package alongside its app manifest, agent definition, and icons. The API plugin manifest isn't itself an installable package.
 
 1. Open Visual Studio Code. If Agents Toolkit isn't already installed, see [Install Agents Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit) for installation instructions.
 
@@ -56,22 +61,24 @@ API plugins are a ZIP file that contains the following files.
 
     :::image type="content" source="assets/images/api-plugins/select-operations-ttk.png" alt-text="The Agents Toolkit UI to select operations":::
 
-1. Choose a location for the API plugin project.
+1. Choose a location for the agent project.
 
-1. Enter `Budget Tracker` as a name for the plugin.
+1. Enter `Budget Tracker` as a name for the agent project.
 
-Once you complete these steps, Agents Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded.
+When you complete these steps, Agents Toolkit generates the agent project and its API plugin configuration, and opens the project in a new Visual Studio Code window.
 
 > [!NOTE]
-> Proof Key for Code Exchange (PKCE) is enabled by default. If your identity server doesn't support PKCE, disable it by adding the following line to **m365agents.yml** in the API plugin project.
+> Proof Key for Code Exchange (PKCE) is enabled by default. If your identity server doesn't support PKCE, disable it by adding the following line to **m365agents.yml** in the agent project.
 >
 > ```yml
 > isPKCEEnabled: false
 > ```
 
-## Package and sideload the plugin
+## Provision and sideload the agent
 
-1. Open the plugin project in Visual Studio Code.
+Sideloading makes the containing agent and its API action available for development testing. It doesn't install the API plugin as an independent capability. This procedure isn't a general distribution method for a composed plugin package. For sharing and publishing routes, see [Choose how to publish and distribute your plugin](publish.md).
+
+1. Open the agent project in Visual Studio Code.
 
 1. Select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
 
@@ -91,11 +98,11 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
     :::image type="content" source="assets/images/api-plugins/provision-complete-ttk.png" alt-text="The Agents Toolkit message confirming successful provisioning":::
 
-Your plugin is now available to test with your user account in Microsoft 365 Copilot in Microsoft Teams.
+Your agent is now available to test with your user account in Microsoft 365 Copilot in Microsoft Teams.
 
-## Use the plugin
+## Test the agent's API action
 
-1. Open Teams in your browser and sign in with the Microsoft 365 account you used to upload your plugin.
+1. Open Teams in your browser and sign in with the Microsoft 365 account you used to sideload your agent.
 
 1. Select **Chat** in the left-hand Activity Bar.
 

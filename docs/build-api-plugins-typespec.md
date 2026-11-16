@@ -5,13 +5,15 @@ description: Learn how to build API plugins as declarative agent actions with Ty
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 11/09/2026
 ms.topic: how-to
 ---
 
 # Build API plugins with TypeSpec for Microsoft 365 Copilot
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 [API plugins](overview-plugins.md) are custom actions for declarative agents that connect a REST API with an [OpenAPI specification](https://www.openapis.org/what-is-openapi) to Microsoft 365 Copilot. This guide demonstrates how to add an API plugin to a declarative agent by using [TypeSpec](https://typespec.io/) and the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
 

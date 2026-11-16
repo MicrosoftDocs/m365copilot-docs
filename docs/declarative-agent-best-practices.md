@@ -6,7 +6,8 @@ author: lauragra
 ms.author: jasonjoh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 10/23/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ---
 
 # Best practices for building declarative agents
@@ -88,7 +89,7 @@ For test-case design, assertions, and repeatable evaluation, see [Agent evaluati
 ## Related content
 
 - [Build agents with Agent Builder](agent-builder-build-agents.md)
-- [Build agents with Agents Toolkit](choose-plugin-development-tools.md#microsoft-365-agents-toolkit)
+- [Build agents with Work IQ Dev Tools (recommended for supported pro-code scenarios)](choose-plugin-development-tools.md#start-with-work-iq-dev-tools)
 - [Write effective instructions for declarative agents](declarative-agent-instructions.md)
 - [Add knowledge sources to your declarative agent](knowledge-sources.md)
 - [Confirmation prompts for MCP and API plugins](plugin-confirmation-prompts.md)

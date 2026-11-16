@@ -4,7 +4,7 @@ description: Follow the Microsoft 365 Copilot plugin lifecycle as a builder, or 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/03/2026
+ms.date: 11/09/2026
 ms.topic: overview
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
@@ -37,7 +37,7 @@ For a plugin, complete each stage in order.
 | Make available and govern | Intended users can access and use the plugin, required connections work, and applicable controls are applied | [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) |
 | Monitor, update, and retire | Usage and feedback reviewed, behavior evaluated when appropriate, updates tested and released, ownership or access adjusted, and retirement completed safely | [Monitor](monitor-plugin.md), [improve and update](improve-plugin.md), or [retire](retire-plugin.md) |
 
-Define the required capabilities and target Microsoft experiences before you select a development tool. Then use [Choose development tools for your plugin](choose-plugin-development-tools.md) to compare the available authoring and packaging paths, including Microsoft 365 Agents Toolkit for supported Microsoft 365 app packages.
+Define the required capabilities and target Microsoft experiences before you select a development tool. For supported pro-code declarative-agent and plugin scenarios, Work IQ Dev Tools is recommended. Use [Choose development tools for your plugin](choose-plugin-development-tools.md) to confirm capability support and compare no-code, low-code, and other supported paths.
 
 For a pro-code plugin workflow, use the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs) on GitHub. Start with [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) for the supported creation, validation, provisioning, packaging, and sharing procedure.
 

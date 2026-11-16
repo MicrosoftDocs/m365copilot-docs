@@ -27,6 +27,13 @@ Always reference these instructions first and fallback to search or bash command
 * All content files use YAML front matter with required metadata fields
 * Use dashes (-) for unordered lists, not asterisks (*) to avoid MD004 lint errors
 
+### Heading anchors and cross-links
+
+- Use the automatically generated anchor for the current Markdown heading. Never add or retain legacy heading aliases, including HTML `<a id="..."></a>` or `<a name="..."></a>` elements.
+- When a heading changes or a legacy alias is removed, update all cross-links in this repository that use the old anchor to use the current heading anchor.
+- If you can't confidently determine the replacement anchor, log the cross-link's source file, location, and existing target for user review. Don't guess a target or preserve a legacy alias as a workaround.
+- Remove any markdownlint disable/enable comments used solely to surround legacy anchors. Never add lint suppressions to permit legacy anchors.
+
 ## Validation
 
 ### Required validation before every commit

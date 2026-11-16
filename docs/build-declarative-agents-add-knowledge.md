@@ -2,7 +2,7 @@
 title: Add knowledge sources to a declarative agent created with Microsoft 365 Agents Toolkit
 description: Learn how to add knowledge sources to declarative agents with Microsoft 365 Agents Toolkit, including web search, Microsoft 365 data, and Copilot connectors.
 #customer intent: As a developer, I want to add knowledge sources to my declarative agent in Agents Toolkit so that it grounds responses on the right web and organizational content.
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -10,6 +10,8 @@ ms.localizationpriority: medium
 ---
 
 # Add knowledge sources to a declarative agent created with Microsoft 365 Agents Toolkit
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 You can control the knowledge available to your agent for generating responses with knowledge sources from the web and your Microsoft 365 organizational data. For a full list of the knowledge sources available, see [Add knowledge sources to your declarative agent](knowledge-sources.md).
 

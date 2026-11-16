@@ -5,7 +5,8 @@ description: Learn how to build declarative agents in Agent Builder by using nat
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 10/26/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -146,6 +147,8 @@ Some agent features aren't available in the **Try it** experience. For example, 
 The **Try it** experience includes suggested prompts, which when selected invoke the prompt and start the conversation. You can select **New chat** to start a new conversation with the agent to view the suggested prompts again.
 
 ## Next step
+
+If you're including the agent in a plugin package, see [Package your plugin](package-plugin.md). For direct sharing and other distribution options, see [Choose how to publish and distribute your plugin](publish.md). Not every sharing scenario requires a ZIP package.
 
 > [!div class="nextstepaction"]
 > [Share and manage agents built in Agent Builder](agent-builder-share-manage-agents.md)

@@ -4,7 +4,7 @@ description: Take down a Microsoft 365 Copilot plugin, remove access, clean up p
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/16/2026
 ms.topic: how-to
 ---
 
@@ -78,7 +78,7 @@ Review:
 - Connector connections and indexed data. To review connection state before cleanup, see [View connection details](/microsoft-365/copilot/connectors/view-details?context=/microsoft-365/copilot/extensibility/context).
 - Infrastructure, scheduled jobs, alerts, and support processes.
 
-For an alpha Work IQ Dev Tools project, the [plugin guide](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) describes `wiqd plugin delete` as tearing down resources provisioned for the selected environment. Check the command's effects before running it, then verify and clean up any remaining package records, connections, credentials, and external services through their owning products.
+For a Work IQ Dev Tools project, the [plugin guide](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) describes `wiqd plugin delete` as tearing down resources provisioned for the selected environment. Check the command's effects before running it, then verify and clean up any remaining package records, connections, credentials, and external services through their owning products.
 
 ## Verify retirement
 

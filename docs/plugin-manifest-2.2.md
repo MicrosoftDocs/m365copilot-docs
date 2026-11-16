@@ -1,21 +1,22 @@
 ---
-title: Plugin manifest schema 2.2 for Microsoft 365 Copilot
-description: Learn about the 2.2 schema for a manifest file for a plugin in Microsoft 365 Copilot
+title: API plugin manifest schema 2.2 for Microsoft 365 Copilot
+description: Learn about the 2.2 API plugin manifest schema for actions in declarative agents for Microsoft 365 Copilot.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: reference
 ---
 
-# Plugin manifest schema 2.2 for Microsoft 365 Copilot
+# API plugin manifest schema 2.2 for Microsoft 365 Copilot
 
 > [!NOTE]
-> In this reference, *plugin* means the technical API custom action configured through a plugin manifest for a declarative agent. For the broader customer-facing plugin product, package, registry, and lifecycle, see [Plugins for Microsoft 365 Copilot](plugins-overview.md).
+> This schema describes an API plugin that provides actions to a declarative agent. It isn't the Microsoft 365 app manifest for the installable plugin package. See [Plugins and declarative agent actions](plugins-overview.md#plugins-and-declarative-agent-actions) for the manifest relationship.
 
 API plugins enable Microsoft 365 Copilot to interact with REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). The OpenAPI description in an API plugin describes the REST APIs that Copilot can interact with. In addition, an API plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the APIs it supports and the operations it can perform.
 
-The following article describes the 2.2 schema used by API plugin manifest files. For more information about API plugins, see [Plugins for Microsoft 365 Copilot](./overview-plugins.md).
+The following article describes the 2.2 schema used by API plugin manifest files. For more information about API plugins, see [MCP and API plugins for declarative agents](overview-plugins.md).
 
 [!INCLUDE [latest-plugin-manifest](includes/latest-plugin-manifest.md)]
 
@@ -505,7 +506,7 @@ Here's an example of a plugin manifest file that uses most of the manifest prope
 
 ## Related content
 
-- [Plugins for Microsoft 365 Copilot](./overview-plugins.md)
+- [MCP and API plugins for declarative agents](overview-plugins.md)
 
 [json-schema]: https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema
 [rfc9535]: https://www.rfc-editor.org/rfc/rfc9535

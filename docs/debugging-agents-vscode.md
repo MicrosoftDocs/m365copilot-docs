@@ -5,10 +5,12 @@ author: carolkigoonya
 ms.author: jasonjoh
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 05/19/2025
+ms.date: 11/09/2026
 ---
 
 # Use developer mode to test and debug agents in Microsoft 365 Agents Toolkit
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 Testing is an important part of the process of developing [declarative agents](overview-declarative-agent.md) for Microsoft 365 Copilot Chat. You can use [developer mode](debugging-agents-copilot-studio.md) while testing your agent to verify whether and how the Copilot orchestrator selects your knowledge sources for use in response to given prompts.
 

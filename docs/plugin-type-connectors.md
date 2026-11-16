@@ -1,47 +1,47 @@
 ---
 title: Copilot connectors as plugin capabilities
-description: Learn when to use a Copilot connector in a Microsoft 365 Copilot plugin and what data, access, reuse, and ownership decisions to record before you build or reuse it.
+description: Compare connector models for a Microsoft 365 Copilot plugin solution and distinguish data-access dependencies from plugin package contents.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: concept-article
 ---
 
 # Copilot connectors as plugin capabilities
 
-Copilot connectors provide approved access to enterprise or third-party data and services. A plugin can bring together a connector with agents, skills, or MCP-based capabilities.
+Your solution might need a connector to retrieve external information or perform actions in another service. This article compares three options: Microsoft 365 Copilot synced connectors, Microsoft 365 Copilot federated connectors, and Power Platform connectors. Each option works differently and has its own setup and management requirements. Using a connector doesn't necessarily mean including it in your plugin package.
 
-Connector implementations differ in how they retrieve data, authenticate, run, and participate in a plugin package:
+Start with your [capability choices](choose-plugin-components.md) and the target product. A connector that works in one product isn't necessarily supported in another.
 
-- **Synced connectors** ingest and index external content in Microsoft Graph.
-- **Federated connectors** retrieve content in real time without indexing it in Microsoft Graph.
+## Microsoft 365 Copilot synced connectors
 
-For a detailed comparison, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
+Synced connectors ingest and index external content in Microsoft Graph. Use this model when your solution needs organizational knowledge made available through the Microsoft 365 index. For model details, see [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md).
 
-> [!IMPORTANT]
-> Connector packaging, publishing, authentication, and host support vary by connector type. A common plugin model doesn't make every connector available in every Microsoft experience.
+You can reuse a prebuilt connector or build a custom connector with the connector SDK or Microsoft Graph APIs. A retained [Toolkit-based synced-connector walkthrough](build-your-first-connector.md) is also available. See the [Copilot connectors API overview](/graph/connecting-external-content-connectors-api-overview).
 
-## Decide whether you need a connector
+For supported plugin composition, [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is the recommended pro-code tool. Composing a plugin doesn't replace implementing and operating the selected connector service.
 
-Choose a connector when:
+Admins deploy and manage connections in the Microsoft 365 admin center. Follow [Deploy connectors in the Microsoft 365 admin center](/microsoft-365/copilot/connectors/deployment-overview) for configuration, permissions, and synchronization guidance.
 
-- Users need approved access to data outside Microsoft 365.
-- The source must be indexed in Microsoft Graph or retrieved in real time through a supported connector model.
-- The source requires schema mapping, permissions, security trimming, freshness, or connection management.
-- A prebuilt or custom connector is supported by the target Microsoft experience.
+## Microsoft 365 Copilot federated connectors
 
-## Compare connectors and MCP servers
+Federated connectors retrieve data from the source at query time without indexing it in Microsoft Graph. Use this model when your solution needs current information from an external system in supported Copilot experiences. See [Federated connectors overview](/microsoft-365/copilot/connectors/federated-connectors-overview) for current capabilities and availability.
 
-Connectors and MCP servers can both connect Microsoft experiences to external systems, but they serve different primary needs.
+You can reuse an available federated connector or build a custom integration around an external MCP server. The server exposes the source-specific tools and runs separately from the plugin package. Follow [Set up custom federated connectors](/microsoft-365/copilot/connectors/set-up-custom-federated-connectors) for the development and configuration path.
 
-| Requirement | Consider |
-|---|---|
-| Make external content available through a supported indexed or federated data-access model | Connector |
-| Expose remotely hosted tools or resources for discovery and invocation | MCP server |
-| Ground responses in external content and perform operations in the source system | A connector and an MCP-based capability, when the target experience supports both |
+Using MCP doesn't make a federated connector interchangeable with a direct MCP server integration. Federated connectors have their own configuration and availability controls. For other remote tool integrations, see [MCP servers as plugin capabilities](plugin-type-mcp-servers.md).
 
-The supported read and write behavior depends on the connector or MCP model. Don't choose solely from the protocol name; compare the required user experience, data flow, identity, runtime, and host support.
+Admins manage federated connector availability in the Microsoft 365 admin center. See [Manage federated connectors](/microsoft-365/copilot/connectors/manage-federated-connectors) for the connector-specific controls.
+
+## Power Platform connectors
+
+Power Platform connectors expose actions and triggers for services used by products such as Copilot Studio, Power Automate, and Power Apps. In a supported agent-based solution, a connector can supply actions or access to data. This model is distinct from indexing content with a synced Copilot connector or retrieving it through a federated Copilot connector. See [Power Platform connectors overview](/connectors/overview).
+
+Reuse a prebuilt connector or create a custom connector in the supported Power Platform product. For the authoring options, see [Custom connectors overview](/connectors/custom-connectors/).
+
+Configure agent connections in Copilot Studio and apply the applicable Power Platform admin policies. See [Create and manage connections](/microsoft-copilot-studio/authoring-connections) and [Advanced connector policies](/power-platform/admin/advanced-connector-policies).
 
 ## Decide whether to build or reuse
 
@@ -49,7 +49,7 @@ Before you build a connector:
 
 - Review the [Microsoft-built connectors gallery](/microsoft-365/copilot/connectors/connectors-gallery-microsoft) and [partner-built connectors gallery](/microsoft-365/copilot/connectors/connectors-gallery-partners).
 - Confirm that an existing organizational connection isn't already available.
-- Compare synced and federated models against the freshness, indexing, and data-residency requirements.
+- Compare the connector models against the data-access, freshness, indexing, and workflow requirements.
 - Confirm that the connector type is supported by the target Microsoft experiences and publishing method.
 - Identify gaps that require a custom connector or service.
 
@@ -57,16 +57,22 @@ If you reuse a connector or connection, confirm its owner, audience, service-lev
 
 ## Record connector dependencies
 
+Distinguish what belongs in the plugin package from what you must configure separately. Use the target product's guidance to determine which connector-related components or references the package supports and which connections, services, or environments require separate setup and management.
+
 As you decide whether to build or reuse a connector, note:
 
 - External source, required content, and supported operations.
-- Synced, federated, prebuilt, or custom connector model.
+- Synced Copilot connector, federated Copilot connector, or Power Platform connector, and whether it's prebuilt or custom.
 - Application and user identity, authentication, consent, and permissions.
 - Schema, freshness, security trimming, and data-governance requirements.
 - External service, connection, environment, and availability requirements.
+- Any connector-related components or references supported in the plugin package, and dependencies that require separate configuration.
 - Owner, support contact, and intended distribution scope.
 
-After you decide to build or reuse a connector, [choose development tools](choose-plugin-development-tools.md).
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build or reuse capabilities for your plugin](build-reuse-plugin.md)
 
 ## Related content
 

@@ -5,12 +5,13 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ---
 
 # Write effective instructions for declarative agents with API plugins
 
-Declarative agents tailor Microsoft 365 Copilot to meet the specific needs of an organization. When you build declarative agents with [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit), you can add skills to your agent via API plugins. API plugins enable your agent to query and interact with an organization's data via APIs.
+Declarative agents tailor Microsoft 365 Copilot to meet the specific needs of an organization. You can add custom actions through API plugins. For supported pro-code scenarios, [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is recommended. These integrations let your agent query and interact with an organization's data through APIs; they aren't the reusable instruction files described in [Skills as plugin capabilities](plugin-type-skills.md).
 
 This article describes the agent architecture and provides best practices for writing instructions for declarative agents that include API plugins.
 
@@ -29,7 +30,7 @@ Together, these files define the agent's behavior and how it interacts with the 
 
 For more information about API plugins, see:
 
-- [Plugins for Microsoft 365 Copilot](overview-plugins.md)
+- [MCP and API plugins for declarative agents](overview-plugins.md)
 - [How to make an OpenAPI document effective in extending Copilot capabilities](openapi-document-guidance.md)
 
 ### Function mapping in the plugin manifest
@@ -134,4 +135,4 @@ When code interpreter generates a file (such as a chart image or a spreadsheet),
 ## Related content
 
 - [Build a declarative agent with Visual Studio Code](build-declarative-agents.md?tabs=ttk)
-- [Plugins for Microsoft 365 Copilot](overview-plugins.md)
+- [MCP and API plugins for declarative agents](overview-plugins.md)

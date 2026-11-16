@@ -4,7 +4,7 @@ description: Author reusable skills for Microsoft 365 Copilot Chat and distribut
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/11/2026
+ms.date: 11/16/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
@@ -114,9 +114,6 @@ For a direct skill upload, provide either `SKILL.md` alone or a ZIP with `SKILL.
 ## Package a skill in a plugin
 
 [Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) provides a pro-code workflow for creating, validating, provisioning, packaging, and sharing a skill-based plugin.
-
-> [!NOTE]
-> Work IQ Dev Tools is in preview, and its `wiqd plugin` command tree is alpha. General availability of skills in Copilot Chat doesn't change the tool's release status.
 
 1. Follow the WIQD installation and authentication prerequisites in [Build a plugin](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/).
 1. Create a plugin project, and add a skill:

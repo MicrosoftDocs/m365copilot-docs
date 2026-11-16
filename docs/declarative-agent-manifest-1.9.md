@@ -4,7 +4,8 @@ description: Learn about the 1.9 schema for a manifest file for declarative agen
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: reference
 ---
 
@@ -30,7 +31,7 @@ You can find the schema described in this document in [JSON Schema](https://json
 [!INCLUDE [declarative-agent-manifest-conventions](includes/declarative-agent-manifest-conventions.md)]
 
 > [!TIP]
-> **Work IQ Dev Tools (preview)** — Because this schema is large and changes over time, validating against the current shipping version matters. `wiqd agent validate` runs the Microsoft Validation Layer — the same engine the platform uses to accept a manifest — offline and in under a second, catching missing required fields, wrong types, invalid enum values, unresolved cross-file references, and constraints that JSON schema alone can't express, such as the maximum number of conversation starters. The Visual Studio Code extension surfaces the same diagnostics inline as you type. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+> **Work IQ Dev Tools** — Use `wiqd agent validate --mode source` for offline diagnostics on saved declarative-agent source, including schema and semantic checks. The Visual Studio Code extension shows manifest diagnostics while you edit. Source checks don't validate the final package. To validate a built ZIP, use `wiqd agent validate --mode package --package-file <path-to-zip>`; this uploads the ZIP and can require sign-in. For current modes and prerequisites, see the [WIQD command reference](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-validate).
 
 ## Declarative agent manifest object
 
@@ -760,14 +761,14 @@ The depends on object contains the following properties.
 
 ### Actions object
 
-Actions are an optional JSON object in the manifest. They act as developer input and can be considered as plugins. An action object can be specified as a reference to a plugin manifest file using the `id` and `file` properties, or it can be an inlined representation of the plugin manifest object.
+Each object in the optional `actions` array identifies an API or MCP plugin that provides actions to this agent, not an independently available plugin package. An action object can reference an API or MCP plugin manifest file using the `id` and `file` properties, or inline the plugin manifest object. For the manifest relationship, see [Plugins and declarative agent actions](plugins-overview.md#plugins-and-declarative-agent-actions).
 
 The following table describes the properties for a referenced action object.
 
 | Property | Type   | Description |
 | -------- | ------ | ----------- |
 | `id`     | String | Required. A unique identifier for the action. It can be a GUID. |
-| `file`   | String | Required. A path to the API plugin manifest for this action. |
+| `file`   | String | Required. A path to the API or MCP plugin manifest for this action. |
 
 When specifying an action as an inlined plugin manifest, the action object must conform to the [plugin manifest](plugin-manifest-2.4.md) specification.
 

@@ -6,7 +6,7 @@ author: sebastienlevert
 ms.author: slevert
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ---
 
 # Manage environments and versions for declarative agents with Microsoft 365 Agents Toolkit

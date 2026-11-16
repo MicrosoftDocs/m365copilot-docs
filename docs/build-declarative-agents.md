@@ -2,7 +2,8 @@
 title: Create declarative agents by using Microsoft 365 Agents Toolkit and JSON
 description: Learn how to build a declarative agent for Microsoft 365 Copilot by using Microsoft 365 Agents Toolkit and JSON.
 #customer intent: As a developer, I want to build and provision a declarative agent by using Microsoft 365 Agents Toolkit so that I can deliver a customized Microsoft 365 Copilot experience.
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -85,3 +86,5 @@ Start by creating a basic declarative agent.
 
 > [!div class="nextstepaction"]
 > [Add instructions and conversation starters to a declarative agent created with Microsoft 365 Agents Toolkit](build-declarative-agents-customize-behavior.md)
+
+If this agent is part of a plugin, return to [Build or reuse capabilities for your plugin](build-reuse-plugin.md) to integrate it with your other components.

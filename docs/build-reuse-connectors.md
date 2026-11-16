@@ -4,7 +4,7 @@ description: Configure an existing connector or build the connector required by 
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ms.topic: how-to
 ---
 
@@ -29,10 +29,12 @@ Don't create a duplicate connection when an approved connection already meets th
 
 Use the connector model and implementation technology identified in the development plan.
 
+Work IQ Dev Tools is recommended for [supported plugin composition](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/). Building a synced ingestion service or a federated connector remains a separate implementation task; don't infer WIQD support from a Toolkit template.
+
 | Requirement | Start with |
 |---|---|
 | Understand synced and federated connector models | [Microsoft 365 Copilot connectors overview](overview-copilot-connector.md) |
-| Build a custom connector with Agents Toolkit | [Build your first custom Copilot connector](build-your-first-connector.md) |
+| Follow the retained Toolkit-based synced-connector workflow | [Build your first custom Copilot connector](build-your-first-connector.md) |
 | Build with the Microsoft Graph connectors SDK | [Microsoft Graph connectors SDK overview](/graph/custom-connector-sdk-sample-overview?context=/microsoft-365/copilot/extensibility/context) |
 | Manage connections, schema, items, or external groups through an API | [Microsoft Graph connectors API overview](/graph/connecting-external-content-connectors-api-overview?context=/microsoft-365/copilot/extensibility/context) |
 | Build a connector for people data | [Build connectors for people data](build-connectors-with-people-data.md) |

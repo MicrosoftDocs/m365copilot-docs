@@ -5,7 +5,8 @@ description: Learn how to use Agent Builder to build declarative agents for Micr
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 10/26/2026
+ms.date: 11/12/2026
+ai-usage: ai-assisted
 ms.topic: overview
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -37,6 +38,10 @@ Agent Builder is available on both the Work and Web options on the Microsoft 365
 
 [!INCLUDE [agent-builder-actions-note](includes/agent-builder-actions-note.md)]
 
+## Plan your plugin
+
+If your agent will be part of a plugin, [choose the capabilities your plugin needs](choose-plugin-components.md) before you build.
+
 ## Licensing
 
 Access to Agent Builder, and the capabilities you can add to an agent, depend on the licenses assigned in your tenant. For details, see [Agent capabilities and licensing models](prerequisites.md#agent-capabilities-and-licensing-models), [Plan licensing and cost for Microsoft 365 Copilot extensibility](cost-considerations.md), and [Microsoft 365 Copilot licensing](/copilot/microsoft-365/microsoft-365-copilot-licensing).
@@ -55,7 +60,7 @@ For information about data subject rights and responding to requests to rectify 
 
 ## Admin controls
 
-Administrators can control whether Agent Builder is available to users in their organization. For information about agent admin controls, see [Manage agents for Microsoft 365 Copilot in Integrated Apps](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps). For the broader post-publishing model, see the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) administration map.
+Creating agents in Agent Builder is a core Copilot capability when agents are enabled. Administrators can't disable agent creation in Agent Builder separately while keeping agents enabled. They can control agent access, org-wide sharing, and approval for catalog publishing. For details, see [Governance and admin controls](agent-builder-share-manage-agents.md#governance-and-admin-controls). For the broader post-publishing model, see the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) administration map.
 
 ## Network requirements
 

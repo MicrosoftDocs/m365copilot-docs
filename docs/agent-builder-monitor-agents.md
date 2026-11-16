@@ -6,7 +6,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
 ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -65,6 +65,7 @@ Use reactions and comments together to identify responses that users found helpf
 
 ## Related content
 
+- [Monitor, update, and retire your plugin or agent](improve-plugin.md)
 - [Build agents in Agent Builder](agent-builder-build-agents.md)
 - [Add knowledge sources to an agent in Agent Builder](agent-builder-add-knowledge.md)
 - [Share and manage agents built in Agent Builder](agent-builder-share-manage-agents.md)

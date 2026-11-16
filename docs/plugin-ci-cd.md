@@ -6,7 +6,7 @@ ms.author: routlaw
 ms.service: microsoft-365-copilot
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 11/03/2026
+ms.date: 11/16/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
 #customer intent: As a plugin developer, I want to automate validation, candidate testing, and release submission with Work IQ Dev Tools so that I can release tested plugin updates.
@@ -29,10 +29,10 @@ To run the WIQD commands in your existing pipelines or workflows, ensure you hav
 - Node.js 24.15.0 or later and an exact approved WIQD release on the runner. Follow the [WIQD installation instructions](https://microsoft.github.io/wiqd/getting-started/installation/), and record the installed version with `wiqd --version`.
 - PowerShell 7 to use the command examples in this article.
 - A configured WIQD environment for tenant-backed commands. Follow [WIQD environment configuration](https://microsoft.github.io/wiqd/concepts/environments/) to prepare the environment files. Separate testing and production environments or Microsoft 365 tenants are optional, not prerequisites. `dev`, `staging`, and `prod` are conventional names, not guarantees about the tenant or deployment scope.
-- A Microsoft 365 identity authorized for the selected provisioning, deep-validation, and publishing operations, with the required delegated consent. Grant only the permissions needed by those operations, as listed in the [WIQD consent and resource limits](https://microsoft.github.io/wiqd/getting-started/ci-cd-authentication/#consent-and-resource-limits).
+- A Microsoft 365 identity authorized for the selected provisioning, package-validation, and publishing operations, with the required delegated consent. Grant only the permissions needed by those operations, as listed in the [WIQD consent and resource limits](https://microsoft.github.io/wiqd/getting-started/ci-cd-authentication/#consent-and-resource-limits).
 - For declarative-agent evaluations, a provisioned target, a reviewed prompts file, an approved quality threshold, and separately configured evaluation authentication and EULA acceptance. Follow the [WIQD agent evaluation guide](https://microsoft.github.io/wiqd/extensions/provided/eval/) for detailed setup and requirements. Agent evaluation isn't required for plugins without agents, such as skill-only or tool-only plugins; keep their applicable component and target-experience tests.
 
-Follow your CI/CD provider's documentation for platform setup and workflow authoring. For example, see [Create your first Azure pipeline](/azure/devops/pipelines/create-first-pipeline?view=azure-devops) or [Implement GitHub Actions](/training/modules/implement-github-actions/).
+Follow your CI/CD provider's documentation for platform setup and workflow authoring. For example, see [Create your first Azure pipeline](/azure/devops/pipelines/create-first-pipeline) or [Implement GitHub Actions](/training/modules/implement-github-actions/).
 
 ## Choose the pipeline scenarios
 
@@ -40,8 +40,8 @@ Configure separate jobs so that untrusted changes can't access deployment creden
 
 | Scenario | When to run | WIQD operations | Gate |
 |---|---|---|---|
-| Pull-request validation | When a pull request is opened and after each update to its proposed changes | Offline plugin validation; optional offline publishing readiness | Static checks pass, with their coverage limits recorded |
-| Candidate build and testing | Approved changes on a trusted branch, or an authorized manual run | Provision the plugin in the selected environment, package, deep-validate, test, and evaluate applicable agents | Package, component, experience, and quality checks pass |
+| Pull-request validation | When a pull request is opened and after each update to its proposed changes | Offline source validation; optional offline publishing readiness | Source checks pass, with their coverage limits recorded |
+| Candidate build and testing | Approved changes on a trusted branch, or an authorized manual run | Provision the plugin in the selected environment, build and validate the package, test, and evaluate applicable agents | Package, component, experience, and quality checks pass |
 | Release submission | Approved candidate and release authorization | Confirm the release configuration and validated package, then publish to the organization app catalog | Successful submission followed by administrator approval and rollout verification |
 
 Keep your project's component build and tests. WIQD doesn't provide a universal compile command for every plugin or update the remote services your plugin references.
@@ -52,7 +52,7 @@ If you adapt the [WIQD pipeline setup guide](https://microsoft.github.io/wiqd/ge
 
 Run offline validation without Microsoft 365 credentials. These checks don't provision resources, invoke an agent, or submit anything to the registry.
 
-To add a static check to an existing job:
+To add a source check to an existing job:
 
 1. Check out the proposed source and install the approved WIQD release.
 1. Run your project's applicable component tests.
@@ -67,7 +67,7 @@ This GitHub Actions step checks the declarative-agent source surface in a standa
   run: |
     $ErrorActionPreference = 'Stop'
     $PSNativeCommandUseErrorActionPreference = $false
-    $text = wiqd plugin validate --path .\plugins\contoso --env dev --mode static --json
+    $text = wiqd plugin validate --path .\plugins\contoso --env dev --mode source --json
     if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
     $result = ($text -join "`n") | ConvertFrom-Json
     if ($result.status -cne 'success') { throw 'Plugin source validation failed.' }
@@ -75,7 +75,9 @@ This GitHub Actions step checks the declarative-agent source surface in a standa
 
 The same PowerShell body can run in an Azure Pipelines `pwsh:` step. Don't inject lifecycle or evaluation credentials into either provider's untrusted pull request job.
 
-Static validation covers declarative-agent manifests and referenced API-plugin or OpenAPI files. It doesn't validate the top-level app manifest, standalone skill content, or root connector declarations. A skill-only or connector-only plugin can pass because no declarative-agent checks apply, not because every component is valid.
+Source validation checks saved declarative-agent source and requires readable plugin project JSON files. It doesn't fully validate the top-level app manifest schema, standalone skills, root connectors, or referenced API and OpenAPI content. A skill-only or connector-only plugin can report no declarative-agent source coverage, not that every component is valid. Review the returned checked-file list and findings.
+
+Specify `--mode source` explicitly for an offline job. Bare `wiqd plugin validate` defaults to `package`, which uploads an already-built ZIP and can require sign-in. See the [WIQD validation command reference](https://microsoft.github.io/wiqd/cli/reference/#wiqd-plugin-validate).
 
 For an additional offline publishing-readiness check, run the following command and apply the same exit-code and JSON checks:
 
@@ -83,11 +85,11 @@ For an additional offline publishing-readiness check, run the following command 
 wiqd plugin publish --path .\plugins\contoso --env dev --dry-run --no-runtime --no-network --json
 ```
 
-This check doesn't submit the plugin. Runtime and network checks are disabled, and declarative-agent phases are skipped when no agent is present. Neither offline check replaces package-first deep validation or tests in the target Microsoft 365 experience.
+This check doesn't submit the plugin. Runtime and network checks are disabled, and declarative-agent phases are skipped when no agent is present. Neither offline check replaces validation of the built package or tests in the target Microsoft 365 experience.
 
 ## Configure authentication for trusted jobs
 
-Provisioning, deep validation, and publishing require credentials that the pull request job doesn't have. Review the documented authentication modes with your tenant administrator, confirm support in your selected WIQD release, and then inject credentials only into trusted steps.
+Provisioning, package validation, and publishing require credentials that the pull request job doesn't have. Review the documented authentication modes with your tenant administrator, confirm support in your selected WIQD release, and then inject credentials only into trusted steps.
 
 > [!WARNING]
 > Don't use username/password authentication. Use refresh-token mode once support in your selected WIQD release is confirmed. Use password mode only when your organization's security policy explicitly permits it. Don't weaken MFA or Conditional Access requirements to make the pipeline succeed. Refresh tokens are also sensitive credentials and require protected storage and restricted access.
@@ -142,14 +144,14 @@ To prepare a candidate:
 
 1. Select the approved source revision and plugin package version.
 1. If the selected environment is already provisioned, make its established environment state available through your approved secure persistence mechanism. Preserve all lifecycle-required values, not just the app ID. Don't restore credentials by downloading a project archive or auth cache.
-1. Run component builds, tests, and offline plugin validation.
+1. Run component builds, tests, and offline source validation.
 1. Provision or update the selected environment if needed for this candidate.
-1. If provisioning changes inputs covered by static validation, revalidate the affected source.
+1. If provisioning changes inputs covered by source validation, revalidate the affected source.
 1. Package the project.
-1. Deep-validate the exact generated ZIP.
+1. Validate the exact generated ZIP with package mode.
 1. Keep the ZIP, validation result, source revision, package version, WIQD version, and environment identity with the candidate record.
 
-The following PowerShell example covers a candidate that requires provisioning or an update to its tenant resources. Run it inside a trusted job after authentication is configured. If the selected environment is already identity-bound and no provisioning update is needed, omit the provision command. Repeat static validation only when its inputs have changed. Replace the project path and `dev` environment with your candidate configuration. The helper stops on native errors, malformed JSON, or an unsuccessful envelope.
+The following PowerShell example covers a candidate that requires provisioning or an update to its tenant resources. Run it inside a trusted job after authentication is configured. If the selected environment is already identity-bound and no provisioning update is needed, omit the provision command. Repeat source validation only when its inputs have changed. Replace the project path and `dev` environment with your candidate configuration. The helper stops on native errors, malformed JSON, or an unsuccessful envelope.
 
 The example writes the full validation JSON to `.artifacts\validation.json` as intermediate evidence. Restrict access and review the payload for tenant information, identifiers, URLs, and sensitive content before retaining or sharing it. Sanitize the evidence before upload; don't upload the artifact directory automatically.
 
@@ -172,16 +174,16 @@ New-Item -ItemType Directory -Path $artifactDirectory -Force | Out-Null
 $package = Join-Path $artifactDirectory 'plugin-dev.zip'
 $common = @('--path', $project, '--env', $environment, '--json')
 
-Invoke-WiqdJson (@('plugin', 'validate', '--mode', 'static') + $common) | Out-Null
+Invoke-WiqdJson (@('plugin', 'validate', '--mode', 'source') + $common) | Out-Null
 Invoke-WiqdJson (@('plugin', 'provision') + $common) | Out-Null
-Invoke-WiqdJson (@('plugin', 'validate', '--mode', 'static') + $common) | Out-Null
+Invoke-WiqdJson (@('plugin', 'validate', '--mode', 'source') + $common) | Out-Null
 Invoke-WiqdJson (@('plugin', 'package', '--output', $package) + $common) | Out-Null
 if (-not (Test-Path -LiteralPath $package -PathType Leaf)) { throw 'Package output is missing.' }
-$validation = Invoke-WiqdJson (@('plugin', 'validate', '--mode', 'deep', '--package-file', $package) + $common)
+$validation = Invoke-WiqdJson (@('plugin', 'validate', '--mode', 'package', '--package-file', $package) + $common)
 $validation | ConvertTo-Json -Depth 100 | Set-Content -LiteralPath (Join-Path $artifactDirectory 'validation.json')
 ```
 
-Deep validation submits the built ZIP to the platform's App Validation Library and reports its package checks. It doesn't establish runtime behavior, connection readiness, remote-service health, or Partner Center acceptance. It requires authenticated service access and isn't an offline pull-request check. Missing authentication, a service failure, or a rejected package blocks the candidate.
+Package mode submits the already-built ZIP to the platform's package-validation service and reports its findings. It doesn't build the ZIP or sign in automatically, and it doesn't establish runtime behavior, connection readiness, remote-service health, or Partner Center acceptance. It requires authenticated service access and isn't an offline pull-request check. Missing authentication, a service failure, or a rejected package blocks the candidate.
 
 Provisioning normally precedes packaging because it writes the selected environment file and the `TEAMS_APP_ID` that packaging consumes. If the environment is already identity-bound and no provisioning update is needed, omit the provision command and package against that existing state. Re-provisioning uses that identity, but a fresh checkout doesn't preserve it automatically. Securely retain the stable IDs between runs; don't publish environment files, user-secret files, auth caches, or the entire workspace as artifacts.
 
@@ -246,7 +248,7 @@ if ($result.status -cne 'success') { throw 'Plugin submission failed.' }
 
 Keep the publishing result with the release record.
 
-`wiqd plugin publish` accepts a project and environment, not a previously built ZIP through `--package-file`. Deep-validating a captured ZIP doesn't prove that publishing submits those exact bytes. Keep the approved source and environment state fixed, qualify the publishing behavior of your pinned WIQD release, and verify the resulting submitted version. Don't describe this as an immutable ZIP-promotion workflow.
+`wiqd plugin publish` accepts a project and environment, not a previously built ZIP through `--package-file`. Validating a captured ZIP doesn't prove that publishing submits those exact bytes. Keep the approved source and environment state fixed, qualify the publishing behavior of your pinned WIQD release, and verify the resulting submitted version. Don't describe this as an immutable ZIP-promotion workflow.
 
 The [WIQD plugin guide](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/#validation-as-a-first-class-step) distinguishes these outcomes:
 

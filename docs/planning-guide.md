@@ -6,82 +6,68 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.custom: [copilot-learning-hub]
 ---
 
 # Plan your plugin
 
-Start with the problem your plugin should solve: who needs it, what they need to accomplish, and where they need to use it. Then identify the information, actions, and existing capabilities the solution might need.
+Prepare for your plugin by defining who needs it, what they need to accomplish, and which products they use. Use this checklist to record your choices and the questions you need to resolve before you build.
 
-You don't need to choose capabilities, development tools, or a publishing method yet. Record what you know and the constraints that could affect those choices. You'll use that plan in [Choose capabilities for your plugin](choose-plugin-components.md).
-
-## Define the outcome
-
-Write a short description of the solution that answers:
-
-- Who will use it?
-- What task or problem will it address?
-- What result would show that it works?
-- Where do users need to find and use it?
-
-Also identify who will build, administer, publish, and support the solution. One person or team might fill several roles.
-
-If your goal is to use Microsoft 365 work context or Copilot capabilities in an application or custom agent that you host, see [Build Copilot-powered apps and agents](apps-agents-overview.md).
+Your capability and distribution choices can remain provisional while you work through this checklist. Refine them as you confirm requirements for the products and routes you're considering.
 
 ## Describe what the solution needs to do
 
-List the knowledge and actions required to produce the outcome. Focus on the user's task rather than how you'll implement it.
+Start with the user's task rather than how you'll implement it. Record:
 
-Consider:
-
-- What organizational content or business context does the solution need?
+- What information or business context does the solution need?
 - What questions, tasks, or workflows should it support?
-- Does it need to retrieve information or create, update, or send anything?
-- Which Microsoft 365 data, external data, APIs, tools, or services are involved?
+- Does it only need to retrieve information, or must it also create, update, send, or delete anything?
+- Which Microsoft 365 data, external data sources, APIs, or services are involved?
 - Which actions could have consequential effects and need confirmation or human oversight?
 
-These requirements will help you compare agents, skills, Copilot connectors, MCP servers, and other capabilities in the next step.
+Use these answers to compare possible capabilities and identify constraints in the planning checklist. You don't need to select the components or development tools yet.
 
-## Look for capabilities you can reuse
+## Planning checklist
 
-Check whether part of the solution already exists. Candidates might include agents, skills, Copilot connectors, MCP servers, APIs, applications, or services.
+| Decision | What to record | Guidance |
+|---|---|---|
+| Outcome and users | The job your plugin should help people complete, its intended users, and how you'll measure success. | [What is a plugin?](plugins-overview.md) |
+| Target products | Where users need to find and use the plugin, including any region or release-state constraints. | [Check product requirements](#check-product-requirements) |
+| Build or reuse | Existing plugins that could meet the need, or components you can reuse, their owners, and any gaps you need to build. | Browse the [Copilot Plugin Catalog](https://aka.ms/CopilotPluginCatalog) for existing plugins; see [Build or reuse capabilities](build-reuse-plugin.md) for component reuse. |
+| Capabilities | The smallest set of capabilities that meets the users' needs, and how those capabilities work together. | [Choose capabilities for your plugin](choose-plugin-components.md) |
+| Licensing and cost | User and maker licenses, usage-based charges, external hosting, and ongoing support costs for the products and route you choose. | [Plan licensing and cost](cost-considerations.md) |
+| Identity and authentication | Required identities, authentication methods, permissions, consent, and connections for each component and external service. | [Plan identity, authentication, and permissions](data-privacy-security.md#plan-identity-authentication-and-permissions) |
+| Data, privacy, and security | Data sources and flows, access boundaries, privacy and compliance requirements, and actions that need human oversight. | [Plan data, privacy, and security](data-privacy-security.md) |
+| Distribution route | Whether you intend to share for testing, publish to your organization, or publish for customers across organizations, and the admin and user actions that follow. | [Publish or share your plugin](publish.md) |
+| Maintenance | Who owns the plugin and its external services, support, monitoring, updates, ownership handover, and retirement. | [Monitor, update, and retire](improve-plugin.md) |
 
-For each promising asset, record its owner, what it does, where it works, who can use it, and any known permissions or reuse restrictions. You can confirm technical compatibility after you choose the components and tools.
+If your goal is to use Microsoft 365 work context or Copilot capabilities in an application or custom agent that you host, see [Build Copilot-powered apps and agents](apps-agents-overview.md).
 
-## Identify where and how it will be used
+## Check product requirements
 
-List the Microsoft experiences in which users need the solution and the audience that should have access. For example, the audience might be a development team, selected users, one organization, or customers in multiple organizations.
+Confirm requirements in the documentation for each product you plan to use:
 
-Record any known requirements for environments, regions, licensing, discovery, acquisition, and connections. Support can differ by experience, capability, package, and publishing method. Confirm those combinations when you choose capabilities and a publishing method.
+- [Agent Builder](agent-builder.md) for declarative agents built in Microsoft 365 Copilot.
+- [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) for its agent authoring and publishing paths.
+- [Copilot Cowork](/copilot/cowork/) for extending Cowork.
+- [Copilot connectors](overview-copilot-connector.md) for external data access.
 
-## Record constraints that could change the design
+Check the product's supported capabilities, authentication, package, licensing, and distribution requirements. Don't assume that passing checks in one product establishes support in another.
 
-You don't need to complete every review at this stage. Identify requirements or open questions that could affect what you build:
+## Carry the plan forward
 
-| Area | Questions to record |
-|---|---|
-| **Identity and access** | Which identities, permissions, authentication methods, consent, and external connections might be needed? |
-| **Data and security** | What data will the solution access or change? What privacy, compliance, retention, and oversight requirements apply? |
-| **Distribution** | Who should be able to discover and use it? Will it need organizational deployment or distribution to multiple customers? |
-| **Compatibility** | Are there known experience, region, package, manifest, rollout, or connection constraints? |
-| **Licensing and cost** | What licenses, usage charges, hosting costs, or servicing costs might affect the choice? |
-| **Operations** | Who will own support, monitoring, updates, access changes, and eventual retirement? |
+Keep your checklist with the project. For each unresolved question, record who can answer it and whether the answer could change the capabilities, target product, cost, or publishing route.
 
-Use [Data, privacy, and security](data-privacy-security.md) and [Licensing and cost considerations](cost-considerations.md) for the detailed checks. You choose and confirm the supported publishing method later.
+Before you begin implementation, confirm that you have permission to reuse the selected assets and that each component and external dependency has an owner.
 
-## What to take to the next step
+## Next step
 
-Keep a brief record of:
+> [!div class="nextstepaction"]
+> [Choose capabilities for your plugin](choose-plugin-components.md)
 
-- The intended users, their problem, and the outcome you want.
-- The experiences and audience the solution must support.
-- The knowledge, data, tasks, and actions it needs.
-- Existing capabilities or services worth reusing.
-- Constraints and open questions that could affect the design.
-- The people or teams who can resolve those questions.
-
-You're ready for [Choose capabilities for your plugin](choose-plugin-components.md) when you have enough information to compare what to build and what to reuse. Leave implementation details open when they depend on the components and tools you select.
+Then continue to [Build or reuse capabilities for your plugin](build-reuse-plugin.md).
 
 ## Related content
 

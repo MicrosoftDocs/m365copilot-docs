@@ -5,15 +5,19 @@ description: Learn how to add knowledge sources to your declarative agents.
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ms.topic: overview
 ---
 <!-- markdownlint-disable MD024 -->
 # Add knowledge sources to your declarative agent
 
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
+
 You can enhance the user experience of your declarative agent by adding capabilities like [code interpreter](code-interpreter.md) and [image generator](image-generator.md) and knowledge sources to enhance and customize your agent's knowledge. The [capabilities object](declarative-agent-manifest-1.9.md#capabilities-object) in the manifest reference and the **Knowledge** section in Microsoft 365 Copilot provide several options for you to unlock features for your users. This article describes the knowledge sources that you can add to your agents.
 
 The following table lists the capabilities and knowledge sources you can configure by using Agent Builder in Microsoft 365 Copilot or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and indicates whether users require a Microsoft 365 Copilot license or metered usage to access agents with that capability or knowledge source.
+
+This table describes the Agent Builder and Toolkit configuration paths, not WIQD feature coverage. For the recommended pro-code route, confirm the supported configuration in the [WIQD documentation](https://aka.ms/wiqd/docs).
 
 | Capability or knowledge source | Agent Builder | Agents Toolkit | License or metered usage required? |
 |:-------------------------------|:--------------|:--------------|:-----------------------------------|

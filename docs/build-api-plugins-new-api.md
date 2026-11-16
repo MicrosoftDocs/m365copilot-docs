@@ -5,7 +5,8 @@ description: Learn how to build API plugins with a new API for Microsoft 365 Cop
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: how-to
 ---
 
@@ -13,7 +14,9 @@ ms.topic: how-to
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-[API plugins](overview-plugins.md) connect a REST API to Microsoft 365 Copilot. You can use the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to quickly generate a plugin and a corresponding REST API that you can use as a starting point for your plugin development.
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
+
+[API plugins](overview-plugins.md) let a declarative agent call a REST API. Use the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to generate an agent project, an API plugin manifest, and a REST API implementation as a starting point.
 
 - Requirements specified in [Requirements for Copilot extensibility options](prerequisites.md#requirements-for-copilot-extensibility-options)
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -35,7 +38,7 @@ sources: learn.microsoft.com/microsoft-365-copilot/extensibility/build-api-plugi
 verify: WorkIQ confirmed the published page states 20.x/22.x but did not reconcile the differing numbers on the other build pages.
 recommendation: Hold — do not assert a Node.js matrix; SME must reconcile the four pages per ADO 7509274. -->
 
-## Create the plugin and API
+## Create the agent and API
 
 [!INCLUDE [toolkit-version-note](includes/toolkit-version-note.md)]
 
@@ -55,15 +58,15 @@ recommendation: Hold — do not assert a Node.js matrix; SME must reconcile the 
 
 1. Select your preferred programming language: JavaScript or TypeScript. This guide assumes TypeScript.
 
-1. Choose a location for the API plugin project.
+1. Choose a location for the agent project.
 
-1. Enter `Repairs Agent` as a name for your plugin project.
+1. Enter `Repairs Agent` as a name for your agent project.
 
-Once you complete these steps, Agents Toolkit generates the required files for the plugin and opens a new Visual Studio Code window with the plugin project loaded. For details on the project, see the **README.md** file in the generated project's root directory.
+When you complete these steps, Agents Toolkit generates the agent and API project files, including the API plugin manifest, and opens the project in a new Visual Studio Code window. For details, see the **README.md** file in the generated project's root directory.
 
-## Run the plugin
+## Run the API and sideload the agent
 
-1. In the Visual Studio Code window with the plugin project loaded, select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
+1. In the Visual Studio Code window with the agent project loaded, select the **Microsoft 365 Agents Toolkit** icon in the left-hand Activity Bar.
 
 1. In the **Accounts** pane, select **Sign in to Microsoft 365**. (If you're already signed in continue to the next step).
 
@@ -73,9 +76,9 @@ Once you complete these steps, Agents Toolkit generates the required files for t
 
 1. Select either **Debug in Copilot (Edge)** or **Debug in Copilot (Chrome)**, then press **F5** to start debugging.
 
-Agents Toolkit builds the project, creates the plugin package, and sideloads it for your user account. Once that is done, a new browser window opens to the Microsoft Teams app.
+Agents Toolkit builds the project, creates an app package containing the agent and its API plugin configuration, and sideloads the agent for your user account. It also starts the API locally. A new browser window opens to the Microsoft Teams app.
 
-## Test the plugin
+## Test the agent's API action
 
 1. In Microsoft Teams in your browser, select **Copilot**.
 
@@ -83,7 +86,7 @@ Agents Toolkit builds the project, creates the plugin package, and sideloads it 
 
 1. Send a message to Copilot about repairs. For example, try `Which repairs are assigned to Karin?`.
 
-At this point, the plugin is running locally on your development machine without authentication. In order to add authentication, deploy the solution to Azure.
+At this point, the REST API is running locally on your development machine without authentication. To add authentication, deploy the API to Azure.
 
 ## Deploy to Azure and enable authentication
 
@@ -99,9 +102,9 @@ At this point, the plugin is running locally on your development machine without
 
 1. Wait for the provisioning steps to complete, then select **Deploy** in the **Lifecycle** pane.
 
-Once you complete these steps, the plugin is deployed as an Azure Function with authentication.
+When you complete these steps, you deploy the REST API as an Azure Function with authentication. The agent calls that hosted API through its API plugin configuration.
 
-## Test the plugin with authentication
+## Test the agent with the authenticated API
 
 1. In Microsoft Teams in your browser, select **Copilot**.
 

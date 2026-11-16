@@ -5,10 +5,12 @@ author: lauragra
 ms.author: jasonjoh
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/06/2026
+ms.date: 11/09/2026
 ---
 
 # Add the code interpreter capability to your agent
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 You can enhance the user experience of your declarative agents for Microsoft 365 Copilot by adding the code interpreter capability. The [**capabilities** element](declarative-agent-manifest-1.9.md#capabilities-object) in the manifest reference, and the **Capabilities** section in Agent Builder, provide several options for you to unlock features for your users.
 

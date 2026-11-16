@@ -20,7 +20,7 @@ A *skill* is a modular capability that you add to a declarative agent to help it
 
 Skills are a distinct component of a declarative agent. In earlier guidance, the word *skills* referred to task descriptions that you wrote inline within an agent's instructions. Skills replace that approach: instead of writing task detail directly in the instructions, you package it as a separate component that the agent references. For guidance on how instructions should reference skills, see [Write effective instructions for declarative agents](declarative-agent-instructions.md).
 
-You can add skills to a declarative agent by using [Agent Builder](agent-builder.md) or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit).
+You can add skills to a declarative agent by using [Agent Builder](agent-builder.md). For supported pro-code scenarios, [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is recommended. Its `wiqd agent add skill` route requires the `agent-skills` feature flag, which is off by default; see [Choose the skill implementation path](build-reuse-skills.md#work-iq-dev-tools). The [Toolkit-based walkthrough](build-declarative-agents-add-custom-skills.md) remains available for existing Toolkit projects.
 
 ## What is a skill
 
@@ -46,6 +46,8 @@ Skills help you build more reliable, repeatable agent workflows:
 ## Support matrix
 
 Some limits differ depending on whether you add the skill with Agent Builder or Agents Toolkit.
+
+The following table describes those two authoring paths, not WIQD limits or feature coverage. For the recommended pro-code route, confirm current requirements in the [WIQD documentation](https://aka.ms/wiqd/docs).
 
 | Item                                  | Agent Builder                              | Agents Toolkit                                                     |
 |:--------------------------------------|:-------------------------------------------|:-------------------------------------------------------------------|

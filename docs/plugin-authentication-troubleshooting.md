@@ -4,7 +4,8 @@ description: Troubleshoot common authentication problems for MCP and API plugins
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: troubleshooting
 ---
 
@@ -137,6 +138,7 @@ If a consent dialog appears requesting permissions or business justification, re
 
 ## Related content
 
+- [Build or reuse capabilities for your plugin](build-reuse-plugin.md)
 - [Configure authentication for MCP and API plugins in agents](plugin-authentication.md)
 - [Configure OAuth 2.0 authentication](plugin-authentication-oauth.md)
 - [Configure Microsoft Entra SSO authentication](plugin-authentication-entra-sso.md)
