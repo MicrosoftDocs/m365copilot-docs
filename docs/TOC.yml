@@ -360,7 +360,7 @@ items:
   - name: Publish & distribute
     href: publish.md
     items:
-    - name: Publish your plugin through Microsoft Marketplace
+    - name: Publish your plugin to Microsoft Marketplace
       href: publish-plugin-publicly.md
     - name: Publish to your organization
       href: publish-plugin-organization.md
