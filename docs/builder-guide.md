@@ -14,15 +14,17 @@ ms.custom: msecd-doc-authoring-1013
 
 Choose what you want to build, then follow the applicable supported path. If you're building a plugin, follow the plugin lifecycle from planning through monitoring, updates, and retirement.
 
-## Choose the applicable journey
+## Choose where to start
 
-| Your goal | Start with |
+| If you want to... | Start here |
 |---|---|
-| Bring supported capabilities together in a plugin for Microsoft experiences | [Plugins for Microsoft 365 Copilot](plugins-overview.md) |
-| Build an app that uses Microsoft 365 work context or Copilot capabilities | [Build Copilot-powered apps and agents](apps-agents-overview.md) |
-| Build an agent with your own orchestration, models, hosting, or runtime | [Custom engine agents](overview-custom-engine-agent.md) |
+| Package your capabilities, such as agents, skills, connectors, and MCP servers, as a plugin that people can use in Microsoft 365 Copilot and other supported Microsoft apps | [Plugins for Microsoft 365 Copilot](plugins-overview.md) |
+| Use Copilot or Microsoft 365 data, such as email, files, and meetings, in your own app or agent | [Build Copilot-powered apps and agents](apps-agents-overview.md) |
+| Build an agent that uses your own AI models, orchestration, and hosting | [Custom engine agents](overview-custom-engine-agent.md) |
 
-For a complete comparison, see [Ways to extend Microsoft 365 Copilot](overview.md).
+If you already have a custom engine agent, you can package it in a plugin to manage a single version of it and publish it to supported Microsoft apps. You can also include related capabilities, such as skills, connectors, and MCP servers, in the same plugin.
+
+Not sure which option fits? Compare all options in [Ways to extend Microsoft 365 Copilot](overview.md).
 
 ## Follow the plugin lifecycle
 
