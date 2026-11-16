@@ -9,8 +9,8 @@ Use this template for any article that describes how to accomplish a specific ta
 
 ### Examples
 
-- [Build API plugins from an existing API for Microsoft 365 Copilot](../docs/build-api-plugins-existing-api.md)
-- [Build your first custom Copilot connector using Microsoft 365 Agents Toolkit](../docs/build-your-first-connector.md)
+- [Build API plugins from an existing API for Microsoft 365 Copilot](/plugins/build-api-plugins-existing-api)
+- [Build your first custom Copilot connector using Microsoft 365 Agents Toolkit](/plugins/build-your-first-connector)
 
 ## Template
 

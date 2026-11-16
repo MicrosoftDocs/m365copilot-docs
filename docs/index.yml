@@ -22,7 +22,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is a plugin?
-            url: plugins-overview.md
+            url: /plugins/plugins-overview
           - text: Compare plugins and Copilot-powered apps
             url: overview.md
           - text: Browse the Copilot Plugin Catalog
@@ -30,20 +30,20 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Plan your plugin
-            url: planning-guide.md
+            url: /plugins/planning-guide
           - text: Choose capabilities
-            url: choose-plugin-components.md
+            url: /plugins/choose-plugin-components
           - text: Choose development tools
-            url: choose-plugin-development-tools.md
+            url: /plugins/choose-plugin-development-tools
 
   - title: Build or reuse
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: "Quickstart: Package an existing declarative agent as a plugin with Work IQ Dev Tools"
-            url: quickstart-plugin.md
+            url: /plugins/quickstart-plugin
           - text: Build or reuse capabilities
-            url: build-reuse-plugin.md
+            url: /plugins/build-reuse-plugin
           - text: Build a plugin with Work IQ Dev Tools
             url: https://microsoft.github.io/wiqd/getting-started/build-a-plugin/
 
@@ -52,27 +52,27 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Package and test
-            url: package-plugin.md
+            url: /plugins/package-plugin
           - text: Validate and test your plugin
-            url: validate-plugin.md
+            url: /plugins/validate-plugin
 
   - title: Publish & distribute
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Publish or share
-            url: publish.md
+            url: /plugins/publish
           - text: Configure plugin CI/CD with Work IQ Dev Tools
-            url: plugin-ci-cd.md
+            url: /plugins/plugin-ci-cd
 
   - title: Make available, govern & use
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Make your plugin available
-            url: deploy-plugin.md
+            url: /plugins/deploy-plugin
           - text: Govern plugin access and connections
-            url: manage.md
+            url: /plugins/manage
           - text: Use plugins with Copilot Cowork
             url: /copilot/cowork/cowork-plugins
 
@@ -81,8 +81,8 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Monitor your plugin
-            url: monitor-plugin.md
+            url: /plugins/monitor-plugin
           - text: Improve and update your plugin
-            url: improve-plugin.md
+            url: /plugins/improve-plugin
           - text: Retire your plugin
-            url: retire-plugin.md
+            url: /plugins/retire-plugin

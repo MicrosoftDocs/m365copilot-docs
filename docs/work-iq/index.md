@@ -57,7 +57,7 @@ Work IQ API access is independent of Microsoft 365 Copilot licensing and availab
 
 Work IQ cost is variable based on usage and can be managed in the [Microsoft 365 admin center](https://admin.microsoft.com/). To learn more, see [Licensing](https://aka.ms/WorkIQ/licensing).
 
-Work IQ API usage consumes Copilot Credits shared with other eligible services. For capacity planning and billing guidance, see [Manage shared Copilot Credits](../cost-considerations.md#manage-shared-copilot-credits).
+Work IQ API usage consumes Copilot Credits shared with other eligible services. For capacity planning and billing guidance, see [Manage shared Copilot Credits](/plugins/cost-considerations#manage-shared-copilot-credits).
 
 ## Related content
 

@@ -12,11 +12,11 @@ ms.topic: reference
 # API and MCP plugin manifest schema 2.4 for Microsoft 365 Copilot
 
 > [!NOTE]
-> This schema describes API and MCP plugins that provide actions to a declarative agent. It isn't the Microsoft 365 app manifest for the installable plugin package. See [Plugins and declarative agent actions](plugins-overview.md#plugins-and-declarative-agent-actions) for the manifest relationship. To assemble the installable package, see [Package your plugin](package-plugin.md).
+> This schema describes API and MCP plugins that provide actions to a declarative agent. It isn't the Microsoft 365 app manifest for the installable plugin package. See [Plugins and declarative agent actions](/plugins/plugins-overview#plugins-and-declarative-agent-actions) for the manifest relationship. To assemble the installable package, see [Package your plugin](/plugins/package-plugin).
 
 API and MCP plugins enable declarative agents in Microsoft 365 Copilot to interact with MCP servers or REST APIs described by an [OpenAPI description](https://www.openapis.org/what-is-openapi). A plugin includes a plugin manifest file that provides metadata about the plugin, such as the plugin's name, description, and version. The plugin manifest also includes information about the plugin's capabilities, such as the MCP tools or APIs it supports and the operations it can perform.
 
-The following article describes the 2.4 schema used by API and MCP plugin manifest files. For more information about these action integrations, see [MCP and API plugins for declarative agents](overview-plugins.md).
+The following article describes the 2.4 schema used by API and MCP plugin manifest files. For more information about these action integrations, see [MCP and API plugins for declarative agents](/plugins/overview-plugins).
 
 ## Changes from previous version
 
@@ -49,7 +49,7 @@ JSON objects defined in this document support only the described properties. Unr
 
 ### String localization
 
-Localizable strings can use a localization key instead of a literal value. The syntax is `[[key_name]]`, where `key_name` is the key name in the `localizationKeys` property in your localization files. For details on localization, see [Localize your agent](localize-agents.md).
+Localizable strings can use a localization key instead of a literal value. The syntax is `[[key_name]]`, where `key_name` is the key name in the `localizationKeys` property in your localization files. For details on localization, see [Localize your agent](/plugins/localize-agents).
 
 #### Localized string example
 
@@ -615,7 +615,7 @@ Here's an example of a plugin manifest file that uses most of the manifest prope
 
 ## Related content
 
-- [MCP and API plugins for declarative agents](overview-plugins.md)
+- [MCP and API plugins for declarative agents](/plugins/overview-plugins)
 
 [json-schema]: https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema
 [rfc9535]: https://www.rfc-editor.org/rfc/rfc9535

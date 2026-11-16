@@ -21,7 +21,7 @@ For the latest information, announcements, and news about preview and generally 
 
 ### Skills in Copilot Chat
 
-Skills in Microsoft 365 Copilot Chat are generally available. Author reusable task instructions with optional resources and scripts for use directly in Chat, without creating a declarative agent. Users can select a skill explicitly or allow Copilot to select it automatically. Developers can distribute skills through supported plugin packages. See [Build skills for Copilot Chat](build-copilot-chat-skills.md).
+Skills in Microsoft 365 Copilot Chat are generally available. Author reusable task instructions with optional resources and scripts for use directly in Chat, without creating a declarative agent. Users can select a skill explicitly or allow Copilot to select it automatically. Developers can distribute skills through supported plugin packages. See [Build skills for Copilot Chat](/plugins/build-copilot-chat-skills).
 
 ### Review Copilot credit requests with the Cost Management API
 
@@ -82,11 +82,11 @@ A `version` parameter is added to the [getMicrosoft365CopilotUserCountSummary](a
 
 ### OneDrive knowledge in Agent Builder
 
-Add folders and up to 50 OneDrive files as knowledge when you use Agent Builder in Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](agent-builder-add-knowledge.md).
+Add folders and up to 50 OneDrive files as knowledge when you use Agent Builder in Microsoft 365 Copilot to build your agent. For more information, see [Add knowledge sources](/plugins/agent-builder-add-knowledge).
 
 ### Set default response mode in Agent Builder
 
-When you build an agent in Agent Builder in Microsoft 365 Copilot, you can now set the default response mode for your agent. For more information, see [Set the default response mode](agent-builder-build-agents.md#set-the-default-response-mode).
+When you build an agent in Agent Builder in Microsoft 365 Copilot, you can now set the default response mode for your agent. For more information, see [Set the default response mode](/plugins/agent-builder-build-agents#set-the-default-response-mode).
 
 ### Declarative agent manifest version 1.7
 
@@ -100,20 +100,20 @@ A new version of the declarative agent manifest schema is available. [Declarativ
 
 Agent Builder now includes eight new agent templates to help you quickly build declarative agents for common workplace scenarios:
 
-- [AI Learning Advisor](agent-template-ai-learning-advisor.md)
-- [Executive Briefing Agent](agent-template-executive-briefing.md)
-- [My Company Policy](agent-template-my-company-policy.md)
-- [Personal News Digest](agent-template-personal-news-digest.md)
-- [Plan My Day](agent-template-plan-my-day.md)
-- [Project Delta Digest](agent-template-project-delta-digest.md)
-- [SME Finder](agent-template-sme-finder.md)
-- [Status Update Agent](agent-template-status-update-agent.md)
+- [AI Learning Advisor](/plugins/agent-template-ai-learning-advisor)
+- [Executive Briefing Agent](/plugins/agent-template-executive-briefing)
+- [My Company Policy](/plugins/agent-template-my-company-policy)
+- [Personal News Digest](/plugins/agent-template-personal-news-digest)
+- [Plan My Day](/plugins/agent-template-plan-my-day)
+- [Project Delta Digest](/plugins/agent-template-project-delta-digest)
+- [SME Finder](/plugins/agent-template-sme-finder)
+- [Status Update Agent](/plugins/agent-template-status-update-agent)
 
-For more information, see [Agent templates overview](agent-templates-overview.md).
+For more information, see [Agent templates overview](/plugins/agent-templates-overview).
 
 ### Evaluate agents
 
-Evaluate agents by using a comprehensive evaluation framework and tooling to refine agent performance. The Microsoft 365 Copilot Evaluations CLI tool enables developers to create, run, and analyze tests for their agents. For more information, see [Agent evaluation overview](evaluation-overview.md) and [Microsoft 365 Copilot Evaluations CLI overview](evaluations-cli-overview.md).
+Evaluate agents by using a comprehensive evaluation framework and tooling to refine agent performance. The Microsoft 365 Copilot Evaluations CLI tool enables developers to create, run, and analyze tests for their agents. For more information, see [Agent evaluation overview](/plugins/evaluation-overview) and [Microsoft 365 Copilot Evaluations CLI overview](/plugins/evaluations-cli-overview).
 
 ### Package Management API updates (preview)
 
@@ -133,15 +133,15 @@ The Copilot policy settings API is now in preview. This API provides a unified e
 
 ### Share agents to teams in Microsoft Teams
 
-You can now share agents that you built with Agent Builder in Microsoft 365 Copilot to teams as well as users and groups. For more information, see [Share and manage agents](agent-builder-share-manage-agents.md).
+You can now share agents that you built with Agent Builder in Microsoft 365 Copilot to teams as well as users and groups. For more information, see [Share and manage agents](/plugins/agent-builder-share-manage-agents).
 
 ### Use natural language to create an agent in Microsoft 365 Copilot
 
-You can now create agents more quickly with Agent Builder in Microsoft 365 Copilot by using natural language. The agent is automatically configured for you. For more information, see [Use natural language to describe your agent](agent-builder-build-agents.md#use-natural-language-to-describe-your-agent-recommended).
+You can now create agents more quickly with Agent Builder in Microsoft 365 Copilot by using natural language. The agent is automatically configured for you. For more information, see [Use natural language to describe your agent](/plugins/agent-builder-build-agents#use-natural-language-to-describe-your-agent-recommended).
 
 ### Interactive UI widgets for declarative agents
 
-You can now add interactive UI widgets to your declarative agents by extending MCP server-based actions by using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk). Widgets can render inline or in full-screen mode within Microsoft 365 Copilot. For more information, see [Add MCP apps to declarative agents in Microsoft 365 Copilot](plugin-mcp-apps.md).
+You can now add interactive UI widgets to your declarative agents by extending MCP server-based actions by using the [OpenAI Apps SDK](https://developers.openai.com/apps-sdk). Widgets can render inline or in full-screen mode within Microsoft 365 Copilot. For more information, see [Add MCP apps to declarative agents in Microsoft 365 Copilot](/plugins/plugin-mcp-apps).
 
 ## February 2026
 

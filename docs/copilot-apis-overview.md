@@ -93,5 +93,5 @@ Microsoft Graph APIs generally provide CRUD operations on Microsoft 365 data. Th
 - [Call AI insight](api/ai-services/meeting-insights/resources/callaiinsight.md)
 - [Custom engine agents for Microsoft 365](overview-custom-engine-agent.md)
 - [Security and authentication for Microsoft 365 Copilot APIs](copilot-apis-security-authentication.md)
-- [Licensing and cost considerations for Copilot extensibility options](cost-considerations.md)
-- [Connect to other agents from a declarative agent](declarative-agent-connected-agent.md)
+- [Licensing and cost considerations for Copilot extensibility options](/plugins/cost-considerations)
+- [Connect to other agents from a declarative agent](/plugins/declarative-agent-connected-agent)
