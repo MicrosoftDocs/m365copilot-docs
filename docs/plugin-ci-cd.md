@@ -18,7 +18,7 @@ Use Work IQ Dev Tools (WIQD) to add continuous integration and continuous delive
 
 This guide is for developers integrating WIQD into an existing CI/CD system. It documents the requirements and command sequences, not how to set up a full CI/CD environment. You are expected to configure your system's jobs, triggers, runners, secrets, approvals, and artifact handling, and integrate the examples into that system. Before you begin, prepare the runner, environments, and credentials listed in [Prerequisites](#prerequisites).
 
-The release destination is your tenant's organization app catalog, where an administrator approves submitted plugins before users can discover them. Direct sharing is a separate distribution method. This workflow doesn't automate administrator approval or public-store publication through Partner Center.
+The release destination is your tenant's organization app catalog, where an administrator approves submitted plugins before users can discover them. Direct sharing is a separate distribution method. This workflow doesn't automate administrator approval. Public Partner Center submission uses the separate `wiqd publish pc` workflow.
 
 ## Prerequisites
 
@@ -250,13 +250,15 @@ Keep the publishing result with the release record.
 
 `wiqd plugin publish` accepts a project and environment, not a previously built ZIP through `--package-file`. Validating a captured ZIP doesn't prove that publishing submits those exact bytes. Keep the approved source and environment state fixed, qualify the publishing behavior of your pinned WIQD release, and verify the resulting submitted version. Don't describe this as an immutable ZIP-promotion workflow.
 
-The [WIQD plugin guide](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/#validation-as-a-first-class-step) distinguishes these outcomes:
+WIQD provides separate commands for these distribution routes:
 
 | Operation | Outcome | Remaining action |
 |---|---|---|
 | `wiqd plugin publish` | Submission to the tenant organization app catalog | Administrator approval before users can discover the plugin |
 | `wiqd plugin share` | Direct access for named users or the tenant | Verify the authorized audience, installation, and connections |
-| `wiqd plugin package` followed by Partner Center submission | Package prepared for a public-store process | Partner Center submission, certification, and publication aren't automated by WIQD |
+| `wiqd publish pc` for a plugin package | Partner Center offer preparation, upload, authorized submission, and status tracking | Microsoft controls certification and live publication |
+
+For public submission, follow [Publish to Partner Center with WIQD](https://microsoft.github.io/wiqd/getting-started/publish-to-partner-center/). Marketplace authentication is separate from the core pipeline credentials used in this article. Unattended submission requires explicit authorization and a trusted persistent runner with a previously established interactive seller session and access to its protected OS credential store. Clean-runner, service-principal, and workload-identity authentication aren't supported for Marketplace publishing; use an authenticated operator when those runner requirements aren't met.
 
 WIQD doesn't document a plugin registry slot-promotion or rollback command. Establish the supported replacement or recovery procedure before release, and don't assume a package update restores separately operated services or permissions. Follow [Improve and update your plugin](improve-plugin.md) for rollout verification and recovery planning.
 
