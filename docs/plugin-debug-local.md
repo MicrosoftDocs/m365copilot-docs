@@ -4,11 +4,13 @@ description: Learn how to enable communication between Microsoft 365 Copilot and
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 04/23/2026
+ms.date: 11/09/2026
 ms.topic: article
 ---
 
 # Debug MCP and API plugins locally
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 <!-- markdownlint-disable MD024 -->
 

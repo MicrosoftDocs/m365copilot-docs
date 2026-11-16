@@ -4,18 +4,21 @@ description: Learn how to set up authentication for MCP and API plugins in agent
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 10/28/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: article
 ---
 
 # Configure authentication for MCP and API plugins in agents
 
-Agents in Microsoft 365 Copilot connect to backend services through plugins. A plugin can wrap a Model Context Protocol (MCP) server or an API described by an OpenAPI document. To let a plugin access a protected MCP server or API, you configure an authentication scheme so Microsoft 365 Copilot can obtain and send the right credentials on behalf of the signed-in user.
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
+
+Declarative agents in Microsoft 365 Copilot connect to backend services through API or MCP plugins. These action integrations connect the agent to a Model Context Protocol (MCP) server or an API described by an OpenAPI document. Configure authentication so Microsoft 365 Copilot can obtain and send the right credentials on behalf of the signed-in user.
 
 > [!NOTE]
-> In this article, *plugin* means the technical MCP or API custom action configured through a plugin manifest for a declarative agent. For the broader customer-facing plugin product, package, registry, and lifecycle, see [Plugins for Microsoft 365 Copilot](plugins-overview.md).
+> This article configures authentication in an API or MCP plugin manifest for a declarative agent. It doesn't configure the outer installable package. See [Plugins and declarative agent actions](plugins-overview.md#plugins-and-declarative-agent-actions) for the manifest relationship.
 
-This documentation set uses MCP plugins (also called MCP servers or MCP actions) as the default walkthrough. The same configuration steps apply to API plugins built from an OpenAPI document, except where noted in each article.
+The authentication walkthroughs use an MCP plugin as the default example. The MCP plugin is the agent's integration with the remote server, not the server itself. The same configuration steps apply to API plugins built from an OpenAPI document, except where noted in each article.
 
 ## Supported authentication schemes
 
@@ -34,25 +37,27 @@ Choose the authentication scheme that matches how your MCP server or API protect
 
 ## How plugin authentication works
 
-Each scheme relies on an **authentication configuration** (auth config) - a record stored in the Microsoft Enterprise token store that holds the credentials or client details needed to authenticate to your MCP server or API. You create the auth config in one of three ways:
+For schemes that require credentials, an **authentication configuration** (auth config) is a record stored in the Microsoft Enterprise token store that holds the credentials or client details needed to authenticate to your MCP server or API. Anonymous access doesn't require an auth config. Choose the supported configuration path for your project:
 
+- **[Work IQ Dev Tools (recommended)](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-action)** configures authentication when you add an OpenAPI or remote MCP action with `wiqd agent add action`. To configure a supported authentication type in an existing plugin manifest, use [`wiqd agent add auth`](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-auth). Follow the scheme-specific WIQD guidance below for the correct options, then complete the agent's provisioning workflow for your environment.
 - **[Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit)** creates the auth config and updates your plugin manifest automatically as you build the agent.
 - **The declarative agent developer skill** (MCP plugins only) creates the auth config and updates the manifest for you from natural-language instructions.
 - **The Microsoft Teams developer portal** lets you create the auth config manually, or manage one that Agents Toolkit or the skill created.
 
-Your plugin manifest references the auth config by its ID in the [runtime authentication object](plugin-manifest-2.4.md#runtime-authentication-object). At runtime, Microsoft 365 Copilot uses the auth config to obtain a token or API key from the token store and includes it when the plugin calls your MCP server or API.
+For authenticated schemes, your plugin manifest references the auth config by its ID in the [runtime authentication object](plugin-manifest-2.4.md#runtime-authentication-object). At runtime, Microsoft 365 Copilot uses the auth config to obtain a token or API key from the token store and includes it when the plugin calls your MCP server or API.
 
-Follow the article for your chosen authentication scheme to configure that specific type.
+Start with the WIQD section for your chosen authentication scheme. The same articles retain Toolkit, developer-skill, portal, and manual alternatives where supported.
 
-- [Configure Microsoft Entra SSO authentication](plugin-authentication-entra-sso.md)
-- [Configure dynamic client registration](plugin-authentication-dynamic-client-registration.md)
-- [Configure OAuth 2.0 authentication](plugin-authentication-oauth.md)
-- [Configure API key authentication](plugin-authentication-api-key.md)
-- [Configure anonymous authentication](plugin-authentication-none.md)
+- [Configure Microsoft Entra SSO authentication with WIQD](plugin-authentication-entra-sso.md#use-work-iq-dev-tools-recommended)
+- [Configure dynamic client registration with WIQD](plugin-authentication-dynamic-client-registration.md#use-work-iq-dev-tools-recommended)
+- [Configure OAuth 2.0 authentication with WIQD](plugin-authentication-oauth.md#use-work-iq-dev-tools-recommended)
+- [Configure API key authentication with WIQD](plugin-authentication-api-key.md#use-work-iq-dev-tools-recommended)
+- [Configure anonymous authentication with WIQD](plugin-authentication-none.md#use-work-iq-dev-tools-recommended)
 
 > [!NOTE]
-> For Cowork MCP plugins, follow the same authentication configuration model described in these articles. If your OAuth provider uses the Microsoft identity platform and the plugin needs automatic token refresh, include `offline_access` in the **Scope** field with any API-specific delegated scopes.
+> For a plugin package that connects Cowork to a remote MCP server, follow [authentication in the app manifest](configure-plugin-mcp-servers.md#configure-authentication). Shared credential-registration steps don't make that configuration interchangeable with an agent's MCP plugin manifest configuration. If your OAuth provider uses the Microsoft identity platform and the connection needs automatic token refresh, include `offline_access` in the OAuth configuration's **Scope** field with any API-specific delegated scopes.
 
 ## Related content
 
+- [Build or reuse capabilities for your plugin](build-reuse-plugin.md)
 - [Troubleshoot MCP and API plugin authentication](plugin-authentication-troubleshooting.md)

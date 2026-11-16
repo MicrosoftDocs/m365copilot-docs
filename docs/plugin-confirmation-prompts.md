@@ -4,7 +4,8 @@ description: Learn about confirmation prompts for MCP and API plugins and how to
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: article
 ---
 
@@ -162,4 +163,4 @@ Include a localizationInfo section in your app manifest that references the loca
 
 ## Related content
 
-[Plugins for Microsoft 365 Copilot](overview-plugins.md)
+[MCP and API plugins for declarative agents](overview-plugins.md)

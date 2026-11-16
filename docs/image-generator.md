@@ -5,13 +5,14 @@ author: lauragra
 ms.author: jasonjoh
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 07/06/2026
+ms.date: 11/09/2026
 ---
 
 # Add the image generator capability to your agent
 
-The image generator capability enables declarative agents for Microsoft 365 Copilot to generate images based on user prompts. Image generator uses the existing [Designer](https://designer.microsoft.com/) functionality to create visually appealing and contextually relevant graphics, and includes the following features:
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
+The image generator capability enables declarative agents for Microsoft 365 Copilot to generate images based on user prompts. Image generator uses the existing [Designer](https://designer.microsoft.com/) functionality to create visually appealing and contextually relevant graphics, and includes the following features:
 
 - **Multiple image generation**: For each user prompt, the agent generates four images.
 - **Interactive image options**: Users can select each generated image to view it in full size. They can download, copy, or view content credentials for the full-size image. They can also select the side arrow to scroll through the four images.

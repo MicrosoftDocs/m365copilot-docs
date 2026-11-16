@@ -5,12 +5,14 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 11/10/2026
 ---
 
 # Microsoft 365 Copilot extensibility samples
 
 This article provides links to code samples to help you develop Copilot extensibility solutions, including agents, Microsoft 365 Copilot connectors, and plugins.
+
+Looking for available plugins rather than development samples? Browse the [Copilot Plugin Catalog](https://aka.ms/CopilotPluginCatalog), a public registry of available plugins.
 
 ## Declarative agent samples
 
@@ -26,7 +28,7 @@ The following declarative agent samples are available from the PNP community.
 
 ### Add capabilities to declarative agents
 
-The PnP community samples listed above demonstrate declarative agents that you can use as starting points. You can enhance these agents by adding built-in capabilities such as code interpreter and image generator through the declarative agent manifest. These capabilities were introduced in [version 1.2 of the declarative agent manifest schema](declarative-agent-manifest-1.2.md) and can be enabled by using the [Copilot Studio agent builder](agent-builder.md) or the [Microsoft 365 Agents Toolkit](build-declarative-agents.md).
+The PnP community samples listed above demonstrate declarative agents that you can use as starting points. You can enhance these agents by adding built-in capabilities such as code interpreter and image generator through the declarative agent manifest. These capabilities were introduced in [version 1.2 of the declarative agent manifest schema](declarative-agent-manifest-1.2.md). Use [Agent Builder](agent-builder.md) for a supported no-code configuration. For supported pro-code scenarios, [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is recommended; follow each sample's own setup instructions if it uses Toolkit.
 
 For details on how to enable each capability, see:
 

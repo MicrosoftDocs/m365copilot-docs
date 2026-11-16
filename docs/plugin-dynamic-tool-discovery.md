@@ -4,13 +4,16 @@ description: Learn how dynamic tool discovery enables declarative agents in Micr
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 10/28/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: overview
 ---
 
 <!-- cSpell:ignore amith amitharjani93 XPIA -->
 
 # Dynamic tool discovery for MCP plugins in Microsoft 365 Copilot
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 Dynamic tool discovery enables declarative agents that use [MCP server-based plugins](build-mcp-plugins.md) to resolve their available tools at runtime, directly from the MCP server, instead of being limited to the tool list captured in the agent's plugin manifest at publish time. This feature lets users access the latest capabilities of an MCP server in near real time, without waiting for the agent to be repackaged, revalidated, and republished.
 
@@ -147,5 +150,5 @@ Together, these processes guarantee that the assurances customers rely on at pub
 
 ## Related content
 
-- [Plugins for Microsoft 365 Copilot](overview-plugins.md)
+- [MCP and API plugins for declarative agents](overview-plugins.md)
 - [Build plugins from an MCP server for Microsoft 365 Copilot](build-mcp-plugins.md)

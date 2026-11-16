@@ -6,11 +6,13 @@ ms.author: jasonjoh
 ms.reviewer: vermaanimesh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 03/24/2026
+ms.date: 11/09/2026
 ms.custom: [copilot-learning-hub]
 ---
 
 # Convert your declarative agent to a custom engine agent
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 Microsoft 365 Copilot provides a migration capability that allows you to convert declarative agents, including message extensions that were promoted to declarative agents, to custom engine agents. When you convert your declarative agent to a custom engine agent, you have full control of the orchestration, AI models, and data integrations and can take advantage of advanced functionality to create more sophisticated workflows.
 

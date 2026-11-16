@@ -4,13 +4,20 @@ description: Find information about current known issues related to Microsoft 36
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: concept-article
 ---
 
 # Known issues
 
 This article provides information about known issues related to Microsoft 365 Copilot extensibility and any potential workarounds.
+
+## Plugins
+
+For package layout and Cowork-specific troubleshooting, see [Build plugins for Copilot Cowork](/copilot/cowork/cowork-plugin-development). For current Work IQ Dev Tools commands and options, see the [WIQD command reference](https://microsoft.github.io/wiqd/cli/reference/).
+
+If your plugin includes a declarative agent or depends on a connector, review the [declarative-agent issues](#declarative-agents) and [Copilot connector issues](#copilot-connectors). The [API plugin issues](#api-plugins) apply to actions within a declarative agent, not the outer installable plugin package.
 
 ## Declarative agents
 

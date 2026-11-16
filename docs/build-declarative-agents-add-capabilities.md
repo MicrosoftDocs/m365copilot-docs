@@ -2,7 +2,7 @@
 title: Add capabilities and custom actions to a declarative agent created with Microsoft 365 Agents Toolkit
 description: Learn how to add capabilities and API plugins as custom actions to declarative agents with Microsoft 365 Agents Toolkit.
 #customer intent: As a developer, I want to add built-in capabilities and an API plugin to my declarative agent in Agents Toolkit so that it can generate images, run code, and call a REST API.
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 author: sebastienlevert
 ms.author: slevert
 ms.topic: tutorial
@@ -12,6 +12,8 @@ ms.localizationpriority: medium
 <!-- cSpell:ignore GCCH -->
 
 # Add capabilities and custom actions to a declarative agent created with Microsoft 365 Agents Toolkit
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 You can enhance the abilities of your agent by adding capabilities or custom actions. You can enhance your agent by enabling built-in capabilities like [image generator](image-generator.md) or [code interpreter](code-interpreter.md), or by adding [MCP or API plugins](overview-plugins.md) as custom actions. This tutorial adds an API plugin. To add an MCP server, see [Build or reuse MCP servers](build-reuse-mcp-servers.md) and [Build a plugin for a declarative agent from an MCP server](build-mcp-plugins.md).
 

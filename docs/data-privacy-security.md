@@ -5,7 +5,8 @@ author: erikadoyle
 ms.author: edoyle
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ---
 
 # Plan data, privacy, and security
@@ -107,6 +108,11 @@ As you plan, keep track of:
 - The unresolved requirements that depend on the selected components or tools.
 
 Use these requirements when you [choose capabilities for your plugin](choose-plugin-components.md) and [choose development tools](choose-plugin-development-tools.md). After implementation, confirm them through [plugin validation](validate-plugin.md) and the applicable product-specific security and administration guidance.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Choose capabilities for your plugin](choose-plugin-components.md)
 
 ## Related content
 

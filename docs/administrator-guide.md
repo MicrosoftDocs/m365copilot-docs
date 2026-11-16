@@ -4,7 +4,8 @@ description: Follow the Microsoft 365 Copilot plugin lifecycle as an administrat
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: overview
 ---
 
@@ -20,7 +21,7 @@ Identify the exact plugin package and the capabilities or dependencies that requ
 |---|---|
 | Plugin package | The exact package identity, version, publishing method, availability, and assignment state. |
 | Included agent | The agent identity, version, owner, and applicable Agent Registry controls. |
-| Skill | The declared skill, the package that includes it, and any separate availability control. |
+| Skill | Whether the skill is separately packaged or bundled with other capabilities; a bundled skill doesn't have its own blocking control. |
 | MCP server | The server, endpoint, exposed tools, authentication requirements, and applicable tool controls. |
 | Connector | The connector model, connection, owner, supported experiences, and applicable data or policy controls. |
 | Connection | The account, authentication method, user or organizational scope, and revocation procedure. |
@@ -32,12 +33,25 @@ These objects can use different administration surfaces and enforcement mechanis
 
 | Stage | What you need to do |
 |---|---|
-| Prepare to build your plugin | Define allowed audiences, identity and consent requirements, data boundaries, licensing, support, governance outcomes, and permitted capabilities. |
-| Build or reuse capabilities | Provide approved development environments, registrations, permissions, data access, test users, and external-service requirements. |
-| Package and test | Review the package identity, ownership, declared components, permissions, data flows, dependencies, test evidence, limitations, and support information. |
-| Publish or share | Confirm the supported method, intended audience, acquisition or approval process, assignment model, ownership, and support responsibilities. |
-| Make available and govern | Complete only the required review, acquisition, assignment, enablement, connection, access, tool, and blocking actions for the selected method. |
-| Monitor, update, and retire | Monitor available signals, evaluate behavior when appropriate, review updates, adjust access, investigate issues, transfer ownership where supported, and retire the solution and its dependencies safely. |
+| Prepare | Define allowed audiences, identity and consent requirements, data boundaries, licensing, support, governance outcomes, and permitted capabilities. |
+| Build or reuse | Provide approved development environments, registrations, permissions, data access, test users, and external-service requirements. |
+| Package & test | Review the package identity, ownership, declared components, permissions, data flows, dependencies, test evidence, limitations, and support information. |
+| Publish & distribute | Confirm the supported method, intended audience, acquisition or approval process, assignment model, ownership, and support responsibilities. |
+| Make available & govern | Complete only the required review, acquisition, assignment, enablement, connection, access, tool, and blocking actions for the selected method. |
+| Monitor, update & retire | Monitor available signals, evaluate behavior when appropriate, review updates, adjust access, investigate issues, transfer ownership where supported, and retire the solution and its dependencies safely. |
+| Discover & use | Direct users to the supported product's discovery and setup guidance; confirm that they can complete sign-in, consent, connections, and intended tasks. |
+
+Use [Make plugins and agents available and govern access](govern-plugins.md) to separate publishing, approval, availability, assignment, consent, connections, and removal. These steps aren't interchangeable.
+
+## Govern skills at the package boundary
+
+Use **Agents** > **Tools** > **Registry** to review plugin and separately packaged skill records in the Microsoft 365 admin center. For plugin user availability, use **Agents** > **Tools** > **Plugins** > *plugin* > **Users**. Follow [Manage plugins, skills, and MCP servers](/microsoft-agent-365/admin/manage-plugins-skills-mcp-servers) for supported actions.
+
+For a bundled skill, apply the plugin's controls. You can't block an individual skill inside a package today. Blocking a package that contains an agent also blocks that agent; a package with an agent and a skill appears under both Tools and Agents as one entity.
+
+Don't assume every skill is stored in the plugin registry. Skills used in Word, Excel, and PowerPoint are stored in OneDrive today. An individual MCP tool's blocking control isn't a skill-level control.
+
+For object-specific restrictions, see [Govern access, tools, and connections for plugins and agents](manage.md). Keep Power Platform connector policies and product connection settings separate from package approval.
 
 ## Operate approved plugins
 
@@ -55,26 +69,18 @@ Start with the publishing record supplied by the builder or publisher. Confirm:
 - Known limitations.
 - Support and update owner.
 
-Complete only the actions required by the selected method. Not every method requires review, acquisition, assignment, enablement, or connection. A per-user connection isn't the same as organization-level deployment. Package availability and component or runtime controls can be separate operations.
-
-| What you need to do | Start with |
-|---|---|
-| Complete the review, acquisition, assignment, enablement, connection, and access actions the method requires | [Make your plugin available](deploy-plugin.md) |
-| Identify an included capability or dependency that requires a separate control | [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) |
-| Monitor use and investigate problems | [Monitor your plugin](monitor-plugin.md) |
-| Evaluate, improve, and roll out an update | [Improve and update your plugin](improve-plugin.md) |
-| Take down the plugin and clean up resources | [Retire your plugin](retire-plugin.md) |
-
-These actions can use different administration surfaces and enforcement mechanisms. Don't assume that one approval, assignment, or block propagates to every Microsoft experience or dependency unless the linked product procedure confirms it.
+Use this record to agree who completes rollout and who supports the plugin afterward. Complete only the actions required by the distribution method. A per-user connection isn't an organization-level deployment, and package availability doesn't grant access to every dependency.
 
 ## Find administration guidance
 
-- To distinguish Agent Registry from Tools Registry and direct package and capability tasks, see the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) administration map.
-- To complete method-specific rollout actions, see [Make your plugin available](deploy-plugin.md).
-- To manage and restrict access over time, see [Govern plugin access and connections](manage.md).
-- To investigate usage or failures, see [Monitor your plugin](monitor-plugin.md).
-- To evaluate, improve, and release a change, see [Improve and update your plugin](improve-plugin.md).
-- To take down the plugin, see [Retire your plugin](retire-plugin.md).
+| What you need to do | Start with |
+|---|---|
+| Understand the separate setup and access steps | [Make plugins and agents available and govern access](govern-plugins.md) |
+| Locate the right Microsoft 365 administration page | [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) |
+| Complete rollout for intended users | [Make plugins and agents available](deploy-plugin.md) |
+| Restrict access or manage individual objects | [Govern access, tools, and connections](manage.md) |
+| Investigate usage or failures | [Monitor your plugin](monitor-plugin.md) |
+| Support, update, hand over, or retire the solution | [Choose a lifecycle task](improve-plugin.md#choose-a-task) |
 
 Use the linked product administration articles as the source of truth for current procedures, interface labels, availability, and enforcement behavior.
 
@@ -93,12 +99,12 @@ Use the linked product administration articles as the source of truth for curren
 - [Choose capabilities for your plugin](choose-plugin-components.md)
 - [Choose development tools for your plugin](choose-plugin-development-tools.md)
 - [Build or reuse capabilities for your plugin](build-reuse-plugin.md)
-- [Publish or share your plugin](publish.md)
+- [Choose how to publish and distribute your plugin](publish.md)
 - [Test and validate your plugin](validate-plugin.md)
-- [Make your plugin available and govern access](govern-plugins.md)
+- [Make plugins and agents available and govern access](govern-plugins.md)
 - [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365)
-- [Make your plugin available](deploy-plugin.md)
-- [Govern plugin access and connections](manage.md)
+- [Make plugins and agents available](deploy-plugin.md)
+- [Govern access, tools, and connections](manage.md)
 - [Monitor your plugin](monitor-plugin.md)
-- [Improve and update your plugin](improve-plugin.md)
+- [Monitor, update, and retire your plugin or agent](improve-plugin.md)
 - [Retire your plugin](retire-plugin.md)

@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
 ms.localizationpriority: medium
-ms.date: 11/12/2026
+ms.date: 11/16/2026
 ---
 
 # Add skills to your declarative agent in Agent Builder
@@ -101,3 +101,4 @@ For the supported file and script types, see [Supported file and script types](d
 ## Related content
 
 - [Skills in declarative agents](declarative-agent-skills.md)
+- [Choose how to share or publish your skill as part of a plugin](publish.md)

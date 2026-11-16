@@ -7,14 +7,18 @@ ms.author: jasonjoh
 ai-usage: ai-assisted
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 11/11/2026
+ms.date: 11/16/2026
 ---
 
 # Add skills to a declarative agent created with Microsoft 365 Agents Toolkit
 
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
+
 [!INCLUDE [skills-restrictions](includes/skills-restrictions.md)]
 
-A skill is a modular, reusable component that you add to a declarative agent to package instructions, resources, and scripts for a specific task. This article describes how to add a skill to a declarative agent by using the Microsoft 365 Agents Toolkit (ATK) command-line interface (CLI) or the Visual Studio Code extension.
+A skill is a modular component that you add to a declarative agent to package instructions, resources, and scripts for a specific task. During **Build or reuse**, use this article when your chosen project already uses Microsoft 365 Agents Toolkit (ATK). You finish with a skill registered in the agent, saved task instructions, and a provisioned test version.
+
+For a new professional-developer plugin project, start with [Work IQ Dev Tools](quickstart-plugin.md) and a [documented environment](choose-plugin-development-tools.md#choose-your-environment). Keep this Toolkit procedure when its project controls fit your selected agent route; it isn't a requirement for every plugin.
 
 To learn what skills are, why to use them, and the full support matrix, supported file types, sandbox behavior, and governance, see [Skills in declarative agents](declarative-agent-skills.md).
 
@@ -47,6 +51,8 @@ Agent skills support is controlled by the `TEAMSFX_AGENT_SKILLS` environment var
 
 If you set the variable after you install the Visual Studio Code extension, restart Visual Studio Code completely.
 
+**Verify:** The restarted tool process sees `TEAMSFX_AGENT_SKILLS` set to `true`. A user-level Windows setting doesn't change a process that was already running.
+
 ## Add a skill to your agent
 
 ### [CLI](#tab/cli)
@@ -63,30 +69,65 @@ If you set the variable after you install the Visual Studio Code extension, rest
     atk add skill --from PATH_TO_SKILL
     ```
 
+    **Verify:** The project contains the skill directory and `SKILL.md`, and the declarative-agent manifest references that skill. Follow the [support matrix](declarative-agent-skills.md#support-matrix); this import option doesn't establish reuse across agents.
+
+1. Edit the skill's `SKILL.md` with the task instructions, resources, and supported scripts.
+
+    **Verify:** The saved file retains its required metadata and describes the task, expected output, and boundaries.
+
 1. Provision the declarative agent to make it available in your environment:
 
     ```powershell
     atk provision --env local
     ```
 
+    **Verify:** Provisioning succeeds for the intended tenant and environment. Test the skill's task in the intended agent; provisioning success doesn't establish runtime behavior.
+
 ### [Visual Studio Code](#tab/vscode)
 
 1. Open your agent project in Visual Studio Code.
+
+    **Verify:** The workspace is the intended existing Toolkit agent project.
+
 1. Select **Microsoft 365 Agents Toolkit**, and then select **Add Skill** in the Agents Toolkit pane on the left.
 
     :::image type="content" source="assets/images/declarative-agents/skills/toolkit-add-skill.png" alt-text="A screenshot of the Add Skill button in the Microsoft 365 Agents Toolkit pane":::
+
+    **Verify:** The skill authoring prompt opens for this project.
 
 1. Select **Create a new skill**.
 
     :::image type="content" source="assets/images/declarative-agents/skills/toolkit-create-a-new-skill.png" alt-text="A screenshot of the Agents Toolkit prompt to create a new skill":::
 
+    **Verify:** The tool requests details for a new skill.
+
 1. Enter a name for the skill, and then enter a description.
-1. Choose whether you want to keep the skill scoped to this agent only or expose it to all Copilot surfaces.
+
+    **Verify:** The name and description identify the intended task and when to use it.
+
+1. Review the scope offered by the tool and choose the option appropriate to the target agent and supported distribution route.
+
+    **Verify:** The selection matches your plan. A scope option doesn't establish compatibility with every Copilot surface or support for cross-agent reuse.
+
 1. Select **manifest.json** when prompted for the manifest, and then select **Add**.
-1. Open **manifest.json** and ensure that the declarative agent manifest version is set to **1.9**.
+
+    **Verify:** The selected app manifest belongs to this project and the tool adds the skill files and reference.
+
+1. Open the declarative-agent manifest referenced by **manifest.json** and ensure that its version is set to `v1.9`.
+
+    **Verify:** The declarative-agent manifest, rather than the app manifest's separate schema version, meets the required version.
+
 1. Open the **./appPackage/skills/your-skill-name/SKILL.md** (replace **your-skill-name** with the name of your skill).
+
+    **Verify:** The agent's new skill registration references this file.
+
 1. Add your instructions to **SKILL.md** and save the file.
+
+    **Verify:** The saved instructions define the task, expected output, and boundaries, and retain required skill metadata.
+
 1. Select **Provision** in the left pane to make the declarative agent available in your environment.
+
+    **Verify:** Provisioning succeeds for the intended tenant and environment. Test the task in the target agent before treating the skill as ready.
 
 ---
 
@@ -98,7 +139,11 @@ In the Agents Toolkit, you add a skill as a directory (you can't use `.zip`), an
 
 Independent software vendors (ISVs) can submit declarative agents that include skills to Microsoft Marketplace. Use Work IQ Dev Tools to validate and build the submittable package from an existing declarative agent project. For the public third-party path, Work IQ Dev Tools doesn't submit the offer on your behalf. Use Partner Center to upload the package, complete the store listing, and submit the offer for certification.
 
-For the end-to-end workflow, see [Partner Center Publishing (3P)](https://github.com/microsoft/wiqd/blob/main/plugins/wiqd/skills/wiqd/workflows/partner-center.md) and the [Microsoft Marketplace step-by-step submission guide](/partner-center/marketplace-offers/add-in-submission-guide).
+Use the [WIQD agent component lifecycle](https://microsoft.github.io/wiqd/concepts/agent-lifecycle/) for the existing source project and the [Microsoft Marketplace submission guide](/partner-center/marketplace-offers/add-in-submission-guide) for common Partner Center steps. Follow the confirmed agent submission route, not an Office Add-in example or an assumed offer type for composed plugins.
+
+## Next step
+
+Enter **Package & test** with [Integrate and test your components](integrate-test-plugin-components.md). When the agent is ready for public distribution, continue to [Publish through Microsoft Marketplace](publish-plugin-publicly.md).
 
 ## Related content
 

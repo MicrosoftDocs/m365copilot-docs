@@ -5,13 +5,15 @@ description: Learn how to configure authentication for TypeSpec-based solutions 
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ms.topic: reference
 ---
 
 <!-- markdownlint-disable MD024 -->
 
 # Authentication support in TypeSpec for Microsoft 365 Copilot
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 TypeSpec for Microsoft 365 Copilot supports multiple authentication methods to secure API plugins and integrate with external services. The supported authentication types include:
 

@@ -5,7 +5,8 @@ description: Learn how to submit agents built with Agent Builder to your organiz
 author: sophie-roy3
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -144,6 +145,7 @@ After your agent is approved, open its Agent Store listing to share the URL with
 
 ## Related content
 
+- [Publish a plugin or agent to your organization](publish.md#publish-to-your-organization)
 - [Privacy statement and terms of use for agents in Agent Builder](agent-builder-publication-privacy-terms-of-use.md)
 - [Share and manage agents built in Agent Builder](agent-builder-share-manage-agents.md)
 - [Manage agent requests in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-requests)

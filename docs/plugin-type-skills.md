@@ -1,18 +1,19 @@
 ---
 title: Skills as plugin capabilities
-description: Learn when to use a skill in a Microsoft 365 Copilot plugin and what reuse, ownership, and dependency decisions to record before you build or reuse it.
+description: Choose a skill implementation for your task and target experience, then follow that product's authoring, limits, and publishing guidance.
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
 ms.date: 11/11/2026
+ai-usage: ai-assisted
 ms.topic: concept-article
 ---
 
 # Skills as plugin capabilities
 
-A **skill** provides reusable instructions or a workflow that teaches an agent or supported Microsoft experience how to perform a specific job. A skill is represented by a directory with a required `SKILL.md` file and can include supporting resources or scripts.
+During **Prepare**, choose a skill when you need instructions and resources for a repeatable task. This page helps you select the implementation for the experience where the task runs. You finish with a skill design, the applicable product procedure, and the dependencies to carry into **Build or reuse**.
 
-A plugin can bring together a skill with other supported capabilities, such as agents, Copilot connectors, or MCP-based tools. The plugin is the unit of extensibility; the skill remains a distinct reusable capability.
+A skill uses a required `SKILL.md` file and can include supporting resources or scripts. The target product determines which files, execution behavior, packaging, and distribution methods it supports. A shared file format doesn't establish cross-agent reuse or cross-host support.
 
 > [!IMPORTANT]
 > Skill availability, sharing, automatic use, and host support vary by Microsoft experience. Skills can be used directly in Copilot Chat, distributed through supported plugins, or attached to declarative agents. Follow the guidance for the authoring experience and target host; their packaging requirements and limits aren't interchangeable.
@@ -22,55 +23,49 @@ A plugin can bring together a skill with other supported capabilities, such as a
 | Target | Start with |
 |---|---|
 | A skill used directly in Microsoft 365 Copilot Chat, including a skill distributed in a plugin | [Build skills for Copilot Chat](build-copilot-chat-skills.md) |
-| A skill attached to a declarative agent | [Skills in declarative agents](declarative-agent-skills.md) |
 | A skill in a Copilot Cowork plugin | [Build plugins for Copilot Cowork](/copilot/cowork/cowork-plugin-development) |
+| A skill attached to a declarative agent | [Skills in declarative agents](declarative-agent-skills.md) |
 
 ## Decide whether you need a skill
 
-Choose a skill when:
+Choose a skill when you can define the job, expected inputs, output, and boundaries as task-specific instructions. Keep those instructions separate from the agent's general behavior.
 
-- The solution requires repeatable instructions or a workflow for a specific job.
-- The agent or supported experience needs modular instructions for the job.
-- The work can be expressed through instructions and supporting resources.
-- The skill can call approved tools or scripts when the target experience supports them.
+Choose a different capability when you primarily need:
 
-A skill might not be the right component when:
+- A complete conversational experience: consider a [declarative agent](overview-declarative-agent.md).
+- External organizational content: compare [Copilot connectors (synced or federated)](plugin-type-connectors.md).
+- Remotely hosted tools: consider an [MCP server](plugin-type-mcp-servers.md).
 
-- The requirement is the complete conversational experience. Consider a [declarative agent](overview-declarative-agent.md).
-- The requirement is primarily access to external data. Consider a [connector](plugin-type-connectors.md).
-- The requirement is to expose remotely hosted tools or resources. Consider an [MCP server](plugin-type-mcp-servers.md).
+Don't assume a skill script can access the network, install packages, or call authenticated services. Check the runtime rules for the selected product before designing its dependencies.
 
-## Decide whether to build or reuse
+## Choose the skill implementation
 
-Agent Builder and Agents Toolkit don't support reuse across declarative agents. For more information, see the support matrix in [Skills in declarative agents](declarative-agent-skills.md#support-matrix). Don't assume that a skill attached to one agent is available to another agent or Microsoft experience.
+| Where the task runs | Product guidance | What to decide here |
+|---|---|---|
+| A declarative agent in Microsoft 365 Copilot | [Skills in declarative agents](declarative-agent-skills.md) | Choose [Agent Builder](agent-builder-add-skills.md) or [Agents Toolkit](build-declarative-agents-add-custom-skills.md), then use that route's file and package limits. |
+| Copilot Cowork | [Build plugins for Copilot Cowork](/copilot/cowork/cowork-plugin-development) and its [companion file limits](/copilot/cowork/cowork-plugin-development#companion-file-limits) | Use the Cowork skill and plugin requirements, not declarative-agent limits. |
+| A new source-controlled plugin | [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/) and the [plugin authoring reference](https://microsoft.github.io/wiqd/getting-started/plugin-reference/) | Distinguish a top-level plugin skill from a skill added to an existing declarative-agent project. Verify the intended product's runtime separately. |
 
-Before you build a skill:
+The [declarative-agent support matrix](declarative-agent-skills.md#support-matrix) lists **Reuse across agents: Not supported** for Agent Builder and Agents Toolkit. Don't plan to attach one agent's skill to another as a supported reuse workflow.
 
-- Search for an approved skill that already performs the job.
-- Check the target experience's documented reuse limits before adapting existing skill content.
-- Confirm that the target authoring tool and Microsoft experience support the skill format and its resources.
-- Review the instructions and supporting files for data, security, responsible AI, and maintenance requirements.
-- Identify any gaps that require a new or extended skill.
+Excel custom skills are stored in OneDrive, not in the plugin registry. These are separate product routes; don't infer registry distribution or other hosts' storage and availability from the use of `SKILL.md`.
 
-If you reuse a skill, confirm who owns its content, versioning, testing, support, and distribution.
+For declarative-agent skills, the product reference also owns the [script sandbox rules](declarative-agent-skills.md#script-execution-sandbox), storage, sensitivity behavior, and file limits. Use the Cowork reference for Cowork constraints instead of applying those rules across products.
 
-## Record skill dependencies
+## Record the design and dependencies
 
-As you decide whether to build or reuse a skill, note:
+Before handing off to the product's build steps, record:
 
-- The job, inputs, expected output, and success criteria.
-- The agent or supported Microsoft experience that uses the skill.
-- Required knowledge, connectors, MCP-based tools, scripts, or other resources.
-- Authentication, permissions, data, and execution requirements.
-- Format, version, sharing, and host constraints.
-- Owner, support contact, and test requirements.
+- The job, inputs, expected output, and representative success and failure cases.
+- The intended agent or product, authoring tool, and supported skill format.
+- The resources and scripts needed, and whether the target runtime supports them.
+- Any Copilot connector (synced or federated), remote MCP tool, or Power Platform connector dependency, using the precise type.
+- Required authentication, permissions, data, and external services.
+- The content owner, version, support contact, review requirements, and test plan.
+- The supported publishing route for the exact artifact.
 
-After you decide to build or reuse a skill, [choose development tools](choose-plugin-development-tools.md).
+Independent software vendors can submit declarative agents that include skills through Partner Center, as described in [Publish your agent](build-declarative-agents-add-custom-skills.md#publish-your-agent). That published route doesn't establish eligibility for every standalone skill or composed plugin package.
 
-## Related content
+## Next step
 
-- [Choose capabilities for your plugin](choose-plugin-components.md)
-- [Choose development tools for your plugin](choose-plugin-development-tools.md)
-- [Build skills for Copilot Chat](build-copilot-chat-skills.md)
-- [Add skills with Agent Builder](agent-builder-add-skills.md)
-- [Add skills with Agents Toolkit](build-declarative-agents-add-custom-skills.md)
+Finish **Prepare** by [choosing development tools](choose-plugin-development-tools.md), then enter **Build or reuse** through the selected product's skill procedure above.

@@ -5,7 +5,8 @@ author: lauragra
 ms.author: jasonjoh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 08/05/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ---
 
 # Responsible AI validation
@@ -32,7 +33,7 @@ If your agent fails RAI validation, you can't publish it until the failures are 
 
 Consider the following example of an agent scenario that fails RAI validation checks.
 
-**Validation issue: Encourages harmful actions**
+### Validation issue: Encourages harmful actions
 
 CityRanker is a travel assistant that helps the user find the best and worst cities to visit based on various criteria.
 
@@ -45,7 +46,7 @@ CityRanker is a travel assistant that helps the user find the best and worst cit
 If your agent fails one of these validation checks, you're prompted to review your agent for violations. Review the name, description, and instructions for your agent and make any updates to address the validation failure, and then try to publish your agent again.
 
 > [!TIP]
-> **Work IQ Dev Tools (preview)** — Catch schema and manifest problems locally before you publish, so RAI validation isn't where you first discover something is wrong. `wiqd agent validate` runs static, offline, sub-second checks for issues like missing required fields and invalid enum values. It doesn't perform RAI validation itself — Responsible AI review remains a platform-side step. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+> **Work IQ Dev Tools** — Catch schema and manifest problems locally before you publish with `wiqd agent validate --mode source`. This mode runs offline diagnostics on saved declarative-agent source; it doesn't perform platform-side RAI validation. Specify the mode explicitly: the default is `package`, which uploads a built ZIP and can require sign-in. For more information, see the [WIQD command reference](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-validate).
 
 ## Related content
 

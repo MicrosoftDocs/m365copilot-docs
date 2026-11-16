@@ -5,7 +5,8 @@ author: girliemac
 ms.author: timura
 ms.topic: best-practice
 ms.localizationpriority: medium
-ms.date: 11/18/2025
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ---
 
 # Frequently asked questions for Microsoft 365 Copilot extensibility
@@ -24,13 +25,15 @@ For more information, see [Agents for Microsoft 365](agents-overview.md).
 
 ### What's the difference between actions and plugins?
 
-Although *actions* and *plugins* are sometimes used interchangeably, an action is actually a single API call from a plugin (For example, "Close ticket #1234"), and a plugin is a set of functions (such as close, create, resolve.).
+A **Microsoft 365 Copilot plugin** is an installable package that can bring together supported skills, tools, and agents.
 
-In general, actions are the functionality that provides skills to Copilot within declarative agents. You can use Copilot Studio to build actions from Power Platform connectors, or you can create conversational, prompt, or flow connectors by using the Copilot Studio design canvas. You can use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit), or any technology stack that supports standard REST APIs, to build actions as API plugins.
+An **API plugin** or **MCP plugin** is an integration that provides actions to a declarative agent, such as a function or tool to close a support ticket. It uses an API or MCP plugin manifest, not the Microsoft 365 app manifest that describes the installable package.
 
-With actions, you can light up agents that work *in-context* of Microsoft 365 Copilot, or you can use them to provide skills to agents that work in *immersive* experiences, such as declarative agents.
+When a plugin package includes the agent, the API or MCP actions remain available through that agent. They don't become independently available capabilities of the package. For the manifest relationship and integration choices, see [Plugins and declarative agent actions](plugins-overview.md#plugins-and-declarative-agent-actions).
 
-### What's the difference between Power Platform plugins and API connectors?
+To add actions to an agent, follow [MCP and API plugins for declarative agents](overview-plugins.md). For Copilot Studio, use the [tools and connectors supported by Copilot Studio](/microsoft-copilot-studio/advanced-connectors).
+
+### What's the difference between Power Platform connectors and API plugins?
 
 Both Power Platform connectors and API plugins allow for the calling of a standard REST API given an OpenAPI definition (Swagger) that describes it. Power Platform connectors are used from Power Platform, which includes Copilot Studio, and API plugins are defined in a Microsoft Teams or Microsoft 365 app package along with declarative agents.
 
@@ -70,19 +73,29 @@ If you build AI solutions other than agents, a Copilot Studio license is require
 
 You don't need a Microsoft 365 Copilot license to build custom engine agents by using Teams SDK. Instead, the cost depends on the Azure services consumed in the app. For details, see the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
-## Agents Toolkit questions
+<!-- markdownlint-disable MD033 -->
+<a id="agents-toolkit-questions"></a>
+<!-- markdownlint-enable MD033 -->
 
-### What is the value of using Agents Toolkit?
+## Development tool questions
 
-If you're already a Visual Studio Code user, Agents Toolkit runs on Visual Studio Code with GitHub integration. Also, you can take advantage of features like CI/CD, and multitenants support.
+<!-- markdownlint-disable MD033 -->
+<a id="what-is-the-value-of-using-agents-toolkit"></a>
+<!-- markdownlint-enable MD033 -->
+
+### Which pro-code development tool is recommended?
+
+[Work IQ Dev Tools (WIQD)](https://aka.ms/wiqd/docs) is the recommended pro-code starting point for supported declarative-agent and plugin scenarios. It provides source-controlled projects and command-line lifecycle workflows. Toolkit-based walkthroughs remain available for existing projects and workflows that require them. WIQD doesn't target custom engine agents. See [Choose development tools for your plugin](choose-plugin-development-tools.md) for capability and target-experience requirements.
 
 ### What do I need to connect to an API?
 
-Unlike the low-code solution that uses a Power Platform connector to connect an API, Agents Toolkit lets you build an application package so Copilot can directly access a REST API without any intermediate layer. You just need to include an OpenAPI definition. It's important to add detailed descriptions to the OpenAPI definition so Copilot knows how to use the API. In some cases, you might need to simplify large or complex APIs.
+For a supported pro-code declarative-agent scenario, use Work IQ Dev Tools to add an API action from an OpenAPI description. The API plugin manifest configures the action, and the containing agent is distributed in an app package. Your REST API remains separately hosted. Add detailed descriptions to the OpenAPI document so Copilot knows how to use the API; large or complex APIs might need to be simplified. See [Add MCP and API actions to declarative agents](overview-plugins.md).
 
 ### Should I use JSON manifests or TypeSpec for building agents and plugins?
 
-The choice between JSON manifests and TypeSpec depends on your development preferences and project complexity:
+For new supported pro-code declarative-agent and plugin scenarios, start with [Work IQ Dev Tools](choose-plugin-development-tools.md#start-with-work-iq-dev-tools). The following comparison applies when you choose a Toolkit-based workflow; it isn't a recommendation to switch from WIQD to Toolkit.
+
+Within that workflow, the choice between JSON manifests and TypeSpec depends on your development preferences and project complexity:
 
 **Use TypeSpec when:**
 
@@ -99,7 +112,7 @@ The choice between JSON manifests and TypeSpec depends on your development prefe
 - You're migrating existing JSON-based configurations
 - You want to understand the underlying manifest format in detail
 
-For most developers, TypeSpec provides a better development experience with type safety, automatic generation, and reduced boilerplate code. For more information, see [TypeSpec for Microsoft 365 Copilot overview](overview-typespec.md).
+For developers who choose the Toolkit-based TypeSpec workflow, TypeSpec offers type safety, automatic generation, and reduced boilerplate code. For more information, see [TypeSpec for Microsoft 365 Copilot overview](overview-typespec.md).
 
 ## Azure AI questions
 

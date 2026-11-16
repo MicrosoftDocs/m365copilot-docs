@@ -4,11 +4,14 @@ description: Learn how to configure API key authentication for API plugins in ag
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: how-to
 ---
 
 # Configure API key authentication
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 Some APIs use API keys for authorization. An API key is a shared secret that the client includes in API requests to authenticate and gain access. API plugins support sending the API key in three ways:
 
@@ -17,7 +20,7 @@ Some APIs use API keys for authorization. An API key is a shared secret that the
 - As a query parameter
 
 > [!NOTE]
-> API key authentication applies to API plugins (built from an OpenAPI document) only. Model Context Protocol (MCP) plugins don't support API key authentication. For MCP plugins, use [OAuth 2.0](plugin-authentication-oauth.md) (including [dynamic client registration](plugin-authentication-dynamic-client-registration.md)) or [Microsoft Entra SSO](plugin-authentication-entra-sso.md) authentication.
+> For declarative-agent actions, API key authentication applies to API plugins built from an OpenAPI document, not MCP plugins. For an agent's MCP plugin, use [OAuth 2.0](plugin-authentication-oauth.md) (including [dynamic client registration](plugin-authentication-dynamic-client-registration.md)) or [Microsoft Entra SSO](plugin-authentication-entra-sso.md). A package-level remote MCP connection uses a different configuration; see [authentication in the app manifest](configure-plugin-mcp-servers.md#configure-authentication).
 
 Configure API key authentication in two steps: add the API key to your OpenAPI document and create the API key auth config.
 
@@ -62,9 +65,19 @@ securitySchemes:
 
 ## Step 2: Create the API key auth config
 
-API key authentication relies on an **authentication configuration** (auth config) - a record stored in the Microsoft Enterprise token store that Microsoft 365 Copilot uses to send the API key when your plugin calls the API. You can create the auth config by using Microsoft 365 Agents Toolkit or the Microsoft Teams developer portal. The declarative agent developer skill doesn't support API key authentication, because it builds MCP plugins.
+API key authentication relies on an **authentication configuration** (auth config) - a record stored in the Microsoft Enterprise token store that Microsoft 365 Copilot uses to send the API key when your plugin calls the API. Start with WIQD for a supported pro-code project. Toolkit and Microsoft Teams developer portal procedures remain available as alternatives. The declarative agent developer skill doesn't support API key authentication, because it builds MCP plugins.
 
-### Use Microsoft 365 Agents Toolkit (recommended)
+### Use Work IQ Dev Tools (recommended)
+
+For an existing API plugin manifest, use [`wiqd agent add auth`](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-auth) with `--plugin-manifest`, `--auth-name`, and `--auth-type api-key`. Set `--api-key-in` to `header` or `query` and `--api-key-name` to the name from your OpenAPI security scheme. If the API accepts its key as a bearer token instead, select `--auth-type bearer-token`.
+
+When adding an action from an OpenAPI document, [`wiqd agent add action`](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-action) accepts `--api-key` for API-key or bearer credentials. The command documents environment placeholders when the value is omitted. Follow the selected command's credential handling and complete the project's provisioning workflow. These API-key options don't establish API key support for an agent's MCP plugin.
+
+<!-- markdownlint-disable MD033 -->
+<a id="use-microsoft-365-agents-toolkit-recommended"></a>
+<!-- markdownlint-enable MD033 -->
+
+### Use Microsoft 365 Agents Toolkit
 
 When you [create an API plugin from an existing OpenAPI document](build-api-plugins-existing-api.md) in [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit), the toolkit registers the API key, creates the auth config, and updates your plugin manifest for you. You must define the `securitySchemes` property in your OpenAPI document.
 
