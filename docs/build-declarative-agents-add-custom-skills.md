@@ -137,9 +137,9 @@ In the Agents Toolkit, you add a skill as a directory (you can't use `.zip`), an
 
 ## Publish your agent
 
-Independent software vendors (ISVs) can submit declarative agents that include skills to Microsoft Marketplace. Use Work IQ Dev Tools to validate and build the submittable package from an existing declarative agent project. For the public third-party path, Work IQ Dev Tools doesn't submit the offer on your behalf. Use Partner Center to upload the package, complete the store listing, and submit the offer for certification.
+Independent software vendors (ISVs) can submit declarative agents that include skills to Microsoft Marketplace. Use Work IQ Dev Tools to validate and build the submittable package from an existing declarative agent project. For plugin packages, `wiqd publish pc` can create the Partner Center offer, populate the draft listing, upload the package and images, submit for certification with separate authorization, and track status. Partner Center account enrollment and verification remain portal steps, and Microsoft controls certification and publication.
 
-Use the [WIQD agent component lifecycle](https://microsoft.github.io/wiqd/concepts/agent-lifecycle/) for the existing source project and the [Microsoft Marketplace submission guide](/partner-center/marketplace-offers/add-in-submission-guide) for common Partner Center steps. Follow the confirmed agent submission route, not an Office Add-in example or an assumed offer type for composed plugins.
+Follow [Publish to Partner Center with WIQD](https://microsoft.github.io/wiqd/getting-started/publish-to-partner-center/) for prerequisites, package validation, listing setup, submission, and status tracking. Portal submission remains an alternative; see the [Microsoft Marketplace submission guide](/partner-center/marketplace-offers/add-in-submission-guide). Follow the confirmed agent submission route, not an Office Add-in example or an assumed offer type for composed plugins.
 
 ## Next step
 

@@ -86,7 +86,7 @@ Submit through Microsoft Partner Center and track the review. The offer is publi
 
 Marketplace publication doesn't make the plugin available in every customer organization. Each customer's administrator still installs the plugin, allows its publisher category, and sets availability. Users then complete required acquisition or access steps, sign-in, consent, and connections.
 
-Follow [Publish your plugin through Microsoft Marketplace](publish-plugin-publicly.md) for eligibility, submission, review, and customer onboarding guidance. Direct sharing and organization submission don't create a Marketplace offer.
+Follow [Publish your plugin to Microsoft Marketplace](publish-plugin-publicly.md) for eligibility, submission, review, and customer onboarding guidance. Direct sharing and organization submission don't create a Marketplace offer.
 
 ## Record the publishing result
 
@@ -123,7 +123,7 @@ Use the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugi
 
 - [Package your plugin](package-plugin.md)
 - [Test and validate your plugin](validate-plugin.md)
-- [Publish your plugin through Microsoft Marketplace](publish-plugin-publicly.md)
+- [Publish your plugin to Microsoft Marketplace](publish-plugin-publicly.md)
 - [Publish your plugin or agent to your organization](publish-plugin-organization.md)
 - [Make your plugin available and govern access](govern-plugins.md)
 - [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365)

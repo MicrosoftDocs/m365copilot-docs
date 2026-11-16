@@ -4,7 +4,7 @@ description: Follow the Microsoft 365 Copilot plugin lifecycle as an ISV or soft
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
 ms.topic: overview
 ---
 
@@ -25,7 +25,7 @@ Track the plugin package, Marketplace offer, catalog listing, and external runti
 | Prepare to build your plugin | Define the target customers, business outcome, supported Microsoft experiences, components, publisher identity, commercial model, support model, data handling, licensing, and distribution scope. | [Plan your plugin](planning-guide.md) |
 | Build or reuse capabilities | Create or reuse the required components by using supported development tools, and confirm that each works with its required development or test dependencies. | [Build or reuse capabilities for your plugin](build-reuse-plugin.md) |
 | Package and test | Integrate the components, prepare the exact versioned publishing artifact, and validate manifests, metadata, identity, permissions, authentication, dependencies, customer setup, claimed Microsoft experiences, and agent quality when required. | [Integrate capabilities](integrate-test-plugin-components.md) |
-| Publish or share | Submit the tested plugin package through the supported Marketplace, registry, organizational, or sharing method. Complete the applicable certification process, and record the package, offer, listing, or catalog result. | [Publish your plugin through Microsoft Marketplace](publish-plugin-publicly.md) |
+| Publish or share | Submit the tested plugin package through the supported Marketplace, registry, organizational, or sharing method. Complete the applicable certification process, and record the package, offer, listing, or catalog result. | [Publish your plugin to Microsoft Marketplace](publish-plugin-publicly.md) |
 | Make available and govern | Give customer administrators the information they need to acquire, approve, assign, enable, connect, and govern the solution. | [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugins-with-microsoft-agent-365) |
 | Monitor, update, and retire | Maintain support, review available signals and customer feedback, evaluate behavior when appropriate, validate and publish updates, communicate breaking changes, transfer ownership where supported, manage deprecation, and retire the solution and its dependencies safely. | [Monitor](monitor-plugin.md), [improve and update](improve-plugin.md), or [retire](retire-plugin.md) |
 
@@ -33,10 +33,13 @@ Track the plugin package, Marketplace offer, catalog listing, and external runti
 
 Choose the publishing method that supports the plugin package, audience, and destination. These methods don't use one shared intake or certification process.
 
+For supported pro-code scenarios, start with [Work IQ Dev Tools (WIQD)](choose-plugin-development-tools.md). WIQD provides separate commands for direct sharing, organization app-catalog submission, and public Partner Center submission.
+
 | Your goal | Start with |
 |---|---|
-| Publish an eligible plugin publicly | Follow [Publish your plugin through Microsoft Marketplace](publish-plugin-publicly.md) and the applicable Partner Center, Marketplace, and certification procedures. |
-| Publish or share a plugin with one organization | Follow [Publish your plugin to your organization](publish-plugin-organization.md). |
+| Publish an eligible plugin publicly | Use `wiqd publish pc` to prepare and submit the Partner Center offer and track its status. Follow [Publish your plugin to Microsoft Marketplace](publish-plugin-publicly.md) and the [WIQD Partner Center guide](https://microsoft.github.io/wiqd/getting-started/publish-to-partner-center/). Microsoft controls certification and live publication. |
+| Share a plugin for testing or direct access | Use `wiqd plugin share` for selected users or the tenant, after meeting the shared-deployment prerequisites. Follow [Share for testing](publish.md#share-for-testing). Direct sharing isn't organization app-catalog submission. |
+| Publish a plugin to an organization's app catalog | Use `wiqd plugin publish --env <env>` to submit the provisioned plugin in the tested environment for administrator approval. Follow [Publish your plugin to your organization](publish-plugin-organization.md). |
 | Combine a public package with an externally hosted application or service | Follow the lifecycle requirements for both parts, and document which identity, deployment, support, and governance requirements apply to each part. |
 
 > [!NOTE]

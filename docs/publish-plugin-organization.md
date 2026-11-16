@@ -104,5 +104,5 @@ Use the [Manage plugins with Microsoft Agent 365](govern-plugins.md#manage-plugi
 ## Related content
 
 - [Choose how to publish and distribute your plugin](publish.md)
-- [Publish your plugin through Microsoft Marketplace](publish-plugin-publicly.md)
+- [Publish your plugin to Microsoft Marketplace](publish-plugin-publicly.md)
 - [Make your plugin available and govern access](govern-plugins.md)
