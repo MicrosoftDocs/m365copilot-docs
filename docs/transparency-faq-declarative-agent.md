@@ -5,7 +5,8 @@ author: simranajwani
 ms.author: simranajwani
 ms.topic: faq
 ms.localizationpriority: medium
-ms.date: 10/23/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ---
 
 # Declarative agents FAQ
@@ -18,7 +19,7 @@ Declarative agents customize Copilot through instructions, knowledge sources, an
 
 ## What can declarative agents do?
 
-Agents can answer questions, summarize configured knowledge, and invoke supported actions in Microsoft 365 Copilot and supported apps. Available capabilities depend on the authoring tool, licensing, policies, and host experience. See [Agent in-app experiences](overview.md#agent-in-app-experience) and [Declarative agent architecture](declarative-agent-architecture.md).
+Agents can answer questions, summarize configured knowledge, and invoke supported actions in Microsoft 365 Copilot and supported apps. Available capabilities depend on the authoring tool, licensing, policies, and host experience. For more information, see [Declarative agent architecture](declarative-agent-architecture.md).
 
 ## What are declarative agents' intended uses?
 

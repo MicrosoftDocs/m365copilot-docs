@@ -5,7 +5,8 @@ description: Learn how to share agents built in Agent Builder with users in your
 author: jasonxian-msft
 ms.author: jasonxian
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/12/2026
+ai-usage: ai-assisted
 ms.topic: how-to
 ms.service: copilot-studio
 ms.subservice: agent-builder
@@ -28,7 +29,7 @@ After you [build and test](agent-builder-build-agents.md) your agent in Microsof
 The share dialog lists everyone who has access, their role, the org-wide sharing toggle, and a link you can copy at any time.
 
 > [!NOTE]
-> Your admin might apply a policy that restricts certain agent sharing options. This governance change applies at the time of implementation and doesn't revoke existing agent access permissions. If sharing options are restricted in your organization, an admin must approve and deploy the agent before it's available to other users in the organization. If governance policies change, be sure to update the sharing options for your agent to be compliant before you make updates to your agent.
+> Your admin might apply a policy that restricts certain agent sharing options. These changes don't automatically revoke existing agent access permissions. Disabling org-wide sharing doesn't prevent direct sharing with specific individuals. Publishing to your org catalog requires admin approval. If governance policies change, update your agent's sharing options to comply before you update the agent.
 
 ### Understand the roles
 
@@ -92,22 +93,35 @@ To make an agent available to everyone in your tenant, turn on org-wide sharing 
 1. Open the **Share** dialog.
 1. Turn on the **Org-wide sharing for chat access** toggle.
 
-When you turn on the toggle, other users in the same tenant can see the agent in the Agent Store, so they can discover it and start chatting.
+For administrator-reviewed publication in the Agent Store, [submit your agent to your org catalog](agent-builder-submit-to-org-catalog.md). Sharing and catalog submission are separate paths.
 
 ### Governance and admin controls
 
-Tenant admins can manage who can share agents at the organizational level. These controls help maintain compliance and prevent oversharing.
+Creating agents in Agent Builder is a core Copilot capability when agents are enabled. Admins can't disable agent creation in Agent Builder separately while keeping agents enabled.
 
-Admins can configure one of the following options in the Microsoft 365 admin center:
+An agent built in Agent Builder customizes Copilot with instructions and selected knowledge sources for a specific task. It doesn't introduce new platform capabilities beyond Copilot. Creating an agent doesn't itself grant additional data permissions. However, owners still need to review what they share, including any uploaded knowledge.
+
+Admins can control access to agents, org-wide sharing, and approval for catalog publishing:
+
+- **Agent access:** In the Microsoft 365 admin center, go to **Agents** > **Settings** > **User access**. Choose **All users**, **No users**, or **Specific users or groups** to control who can access and install agents and plugins. This setting controls agent and plugin access, not Agent Builder creation independently. For details, see [User access](/microsoft-agent-365/admin/agent-settings#user-access).
+- **Org-wide sharing:** In **Agents** > **Settings** > **Sharing**, control who can share agents built in Agent Builder with the organization.
+- **Catalog publishing:** New agents are private to their creator until shared or published. Publishing an agent to your org catalog requires admin review and approval. For details, see [Submit an agent to your org catalog](#submit-an-agent-to-your-org-catalog).
+
+For org-wide sharing, admins can configure one of the following options:
 
 - **All users (default):** Everyone can share agents with the organization.
-- **Specific users or groups:** Limit sharing permissions to selected users or groups.
-- **No users:** Disable org-wide sharing completely.
+- **Specific users or groups:** Limit org-wide sharing permissions to selected users or groups.
+- **No users:** Disable org-wide sharing. Users can still share directly with specific individuals.
 
 > [!NOTE]
-> Changes to admin controls apply only to new sharing actions. Existing shared agents remain accessible unless you manually update the sharing settings.
+> Changes to the sharing setting apply only to new sharing actions. Existing shared agents remain accessible unless you manually update their sharing settings.
 
-When org-wide sharing is disabled, the **Org-wide sharing for chat access** toggle appears grayed out with a tooltip that explains the restriction.
+When org-wide sharing is disabled, the **Org-wide sharing for chat access** toggle appears grayed out with a tooltip that explains the restriction. For details, see [Sharing settings](/microsoft-agent-365/admin/agent-settings#sharing). This setting applies only to agents built in Agent Builder.
+
+Access to an agent and access to its knowledge sources are distinct:
+
+- **SharePoint and OneDrive sources:** Existing file permissions and sensitivity labels apply. Sharing the agent alone doesn't grant access to all its source content. Owners can separately share selected SharePoint files and folders if they have permission to do so. For details, see [Automatically share SharePoint files and folders](#automatically-share-sharepoint-files-and-folders).
+- **Uploaded files:** Files uploaded from a device become embedded knowledge. Anyone who can access the agent can receive responses grounded in that content, subject to the embedded content's sensitivity-label permissions. Review uploaded content before sharing the agent. For details, see [Embedded file content](agent-builder-add-knowledge.md#embedded-file-content).
 
 ### Download a ZIP package to sideload your agent
 
@@ -240,7 +254,7 @@ When sharing an agent and its knowledge sources, you might encounter the errors 
 
 - [Submit agents from Agent Builder to your org catalog](agent-builder-submit-to-org-catalog.md)
 - [Privacy statement and terms of use for agents in Agent Builder](agent-builder-publication-privacy-terms-of-use.md)
-- [Publish or share a plugin for Microsoft 365 Copilot](publish.md)
+- [Share a plugin or agent for testing](publish.md#share-for-testing)
 - [Manage agent requests in the Microsoft 365 admin center](/microsoft-365/admin/manage/agent-requests)
 - [Publish and deploy your agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels)
 - [Upload into Microsoft Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)

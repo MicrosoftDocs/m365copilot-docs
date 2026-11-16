@@ -4,11 +4,13 @@ description: Learn how to build MCP apps for Microsoft 365 Copilot to create int
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ms.topic: how-to
 ---
 
 # Add MCP apps to declarative agents in Microsoft 365 Copilot
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 <!-- cSpell:ignore dotnetcli ontoolresult ontoolcancelled onhostcontextchanged -->
 

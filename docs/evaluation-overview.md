@@ -3,7 +3,7 @@ title: Agent evaluation overview
 description: Learn foundational concepts, terminology, and eval-driven development for evaluating declarative agents and custom engine agents.
 author: sathya-raveendran
 ms.author: saraveen
-ms.date: 11/12/2026
+ms.date: 11/16/2026
 ms.topic: concept-article
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
@@ -15,7 +15,7 @@ To improve the quality of your [declarative agents](overview-declarative-agent.m
 
 ## Start with Work IQ Dev Tools for declarative agents
 
-For deployed declarative agents, start with [Work IQ Dev Tools (preview)](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided evaluation workflow. The `wiqd agent eval` and `wiqd plugin eval` workflows manage the compatible Microsoft 365 Copilot Evaluations CLI version, run evaluations, and produce result scorecards. You don't need to install `@microsoft/m365-copilot-eval` globally for this workflow.
+For deployed declarative agents, start with [Work IQ Dev Tools](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided evaluation workflow. The `wiqd agent eval` and `wiqd plugin eval` workflows manage the compatible Microsoft 365 Copilot Evaluations CLI version, run evaluations, and produce result scorecards. You don't need to install `@microsoft/m365-copilot-eval` globally for this workflow.
 
 Use the [Microsoft 365 Copilot Evaluations CLI directly](evaluations-cli-overview.md) when you need lower-level command control or maintain an existing `runevals` workflow.
 
@@ -144,7 +144,7 @@ Grounding data (test data or synthetic data) provides realistic values for promp
 #### Example: Without grounding data
 
 - Prompt: "What's my PTO balance?"
-- Assertion: "The response contains the correct balance"  
+- Assertion: "The response contains the correct balance"
   - Not verifiable
 
 #### Example: With grounding data
@@ -153,7 +153,7 @@ Grounding data (test data or synthetic data) provides realistic values for promp
 - Tenure: 18 months
 - PTO balance: 12 days
 - Prompt: "What's my PTO balance?"
-- Assertion: "The response contains '12 days'"  
+- Assertion: "The response contains '12 days'"
   - Verifiable
 
 ## How evaluation works
@@ -184,6 +184,8 @@ Evaluation measures response accuracy, task completion, tool usage, boundary adh
 - **Performance testing** for latency, throughput, and reliability.
 
 Use evaluation alongside these practices to ensure a complete quality strategy.
+
+For a plugin that includes an agent, use evaluations as part of [integration and quality checks during development](build-reuse-plugin.md#check-integration-and-quality).
 
 ## Evaluation-driven development
 

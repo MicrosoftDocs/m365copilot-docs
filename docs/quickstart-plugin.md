@@ -4,7 +4,8 @@ description: Use the local source for an existing declarative agent to validate,
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/09/2026
+ai-usage: ai-assisted
+ms.date: 11/16/2026
 ms.topic: quickstart
 ---
 
@@ -12,8 +13,7 @@ ms.topic: quickstart
 
 Use [Work IQ Dev Tools](https://microsoft.github.io/wiqd/) with the local source for an existing declarative agent to validate, provision, package, and share it as a plugin. This quickstart starts from an existing source project, not a new-agent scaffold.
 
-> [!IMPORTANT]
-> The entire `wiqd plugin` command tree is alpha and subject to change. If the steps in this walkthrough don't work, confirm current commands, supported component combinations, target experiences, and feature requirements in [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/).
+This walkthrough doesn't create a new agent or reconstruct source from an installed agent. If you're starting a new plugin instead, follow [Build a plugin with Work IQ Dev Tools](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/).
 
 > [!TIP]
 > Watch Work IQ Dev Tools build a Copilot plugin from a prompt and publish it to the Agent Store in the [interactive demo](https://interactivedemo.microsoft.com/work-iq/dev-tools).
@@ -22,7 +22,7 @@ Use [Work IQ Dev Tools](https://microsoft.github.io/wiqd/) with the local source
 
 - [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli) with an active Copilot subscription
 - The WIQD coding-assistant plugin for GitHub Copilot CLI (see the installation commands in this section)
-- Node.js 24.15 or later and npm, available on your `PATH`, for the WIQD CLI and installation script. These tools aren't required just to begin conversational or file-based authoring.
+- Node.js 24.15 or later and npm, available on your `PATH`, for the WIQD CLI and installation script
 - PowerShell 7 or later (Windows only)
 - A Microsoft 365 account with access to Copilot
 - [Custom app upload enabled](prerequisites.md#microsoft-365-agents-toolkit-requirements) in your tenant
@@ -40,6 +40,8 @@ Alternatively, add the WIQD marketplace and install the plugin from there:
 copilot plugin marketplace add microsoft/wiqd
 copilot plugin install wiqd@wiqd
 ```
+
+Install the WIQD CLI using the [installation script](https://microsoft.github.io/wiqd/getting-started/installation/#path-2-use-the-installation-script).
 
 Start a new GitHub Copilot CLI session after installation.
 
@@ -62,12 +64,12 @@ The lifecycle file can be `m365agents.yml`, `m365agents.local.yml`, `teamsapp.ym
 
 This quickstart doesn't apply when:
 
-- You have only a published agent or installed package and no local source project. Work IQ Dev Tools doesn't document a supported way to reconstruct the source project from a deployed title. Recover the original source repository or use the original authoring tool.
+- You have only a published agent or installed package and no local source project. Work IQ Dev Tools don't support reconstructing the source project from a deployed title. Recover the original source repository or use the original authoring tool.
 - The agent exists only in a managed authoring experience, such as Agent Builder or Copilot Studio. Use that tool's publishing and sharing procedure.
 - You have a custom engine agent. This Work IQ Dev Tools route supports declarative agents.
 - You have only an agent package `.zip`. The lifecycle commands require the source project and its lifecycle file.
 
-If you don't have an existing project, you can follow the steps in [Tutorial: Create declarative agents by using Microsoft 365 Agents Toolkit and JSON](build-declarative-agents.md) to create a basic agent.
+If you don't have an existing project, start with the [WIQD quickstart](https://microsoft.github.io/wiqd/getting-started/quickstart/) to create a plugin and add a declarative agent. WIQD is the recommended pro-code starting point for supported scenarios.
 
 > [!NOTE]
 > `wiqd plugin import` imports supported Open Plugin, Claude plugin, or Cursor plugin formats. It doesn't import an existing Microsoft 365 declarative agent project or package. For more information, see [Import / export (interop)](https://microsoft.github.io/wiqd/getting-started/build-a-plugin/#import--export-interop).
@@ -97,8 +99,6 @@ Explicitly select offline source validation before you provision or package the 
 ```text
 Validate the plugin source offline in the dev environment
 ```
-
-Select `--mode source` explicitly for offline validation (`wiqd plugin validate --mode source --env dev`); omitting the mode defaults to package validation. Source validation checks saved declarative-agent source and references, plus basic plugin project guards. It doesn't fully validate skills, root connectors, or the complete app package, and a pass doesn't establish runtime behavior.
 
 ## Provision the plugin
 
@@ -155,7 +155,7 @@ Share the plugin with my organization using the dev environment
 
 ## Publish the plugin to your organization's plugin registry
 
-As an alternative to sharing your plugin, you can request to publish your plugin to your organization's plugin registry. Your organization admins can then review your plugin and approve or deny the request.
+Instead of sharing your plugin, you can request to publish your plugin to your organization's plugin registry. Your organization admins can review your plugin and approve or deny the request.
 
 ```text
 Submit my plugin to the organization catalog for admin approval using the dev environment

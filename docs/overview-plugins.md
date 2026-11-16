@@ -4,7 +4,8 @@ description: Learn how MCP and API plugins add custom actions to declarative age
 author: jasonjoh
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: overview
 ms.custom: [copilot-learning-hub]
 ---
@@ -13,20 +14,15 @@ ms.custom: [copilot-learning-hub]
 
 # MCP and API plugins for declarative agents
 
-<!-- markdownlint-disable MD033 -->
-<a id="plugins-for-microsoft-365-copilot"></a>
-<!-- markdownlint-enable MD033 -->
-
 MCP and API plugins are custom actions that enable declarative agents in Microsoft 365 Copilot to interact with [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) servers or REST APIs that have an [OpenAPI description](https://www.openapis.org/what-is-openapi). By using one of these plugins, users can ask a declarative agent to query an MCP server or REST API for information and, when supported, create, update, and delete data and objects through natural language prompts.
 
 This article uses *plugin* for the technical MCP or API custom action used by a declarative agent. For the customer-facing plugin product, package, registry, and lifecycle, see [Plugins for Microsoft 365 Copilot](plugins-overview.md).
 
-> [!IMPORTANT]
-> This article uses *plugin* only for MCP and API actions in declarative agents. Package, publishing, and governance requirements vary by route.
+During **Build or reuse**, use this article to choose an MCP or API action and understand how the orchestrator invokes it. You finish with the technical action model and a product procedure to implement it. The resulting action is a dependency of the agent, not a separate public-distribution promise.
 
 [!INCLUDE [api-plugins-declarative-agents-only](includes/api-plugins-declarative-agents-only.md)]
 
-A plugin provides a plugin manifest that Copilot uses to learn the capabilities of the plugin's MCP server or API. Copilot can then decide when an installed and enabled plugin is suited to answer any given prompt. To learn more about the manifest file that a plugin requires, see [Plugin manifest schema for Microsoft 365 Copilot](plugin-manifest-2.4.md).
+An API or MCP plugin uses a plugin manifest that Copilot reads to learn about the API or MCP server available to the agent. Copilot can then decide when the agent should use that integration to answer a prompt. To learn more about this manifest, see [API and MCP plugin manifest schema](plugin-manifest-2.4.md). The installable package uses a separate Microsoft 365 app manifest.
 
 ## How Copilot discovers MCP server tools
 
@@ -157,37 +153,43 @@ The Microsoft 365 Copilot chat experience might render URLs returned as part of 
 
 Platform security, trust, and policy rules govern URL rendering behavior for action responses and it might change over time. Don't rely on clickable URLs in action responses for production-critical scenarios.
 
-## Help the Copilot orchestrator choose your plugin
+## Help the Copilot orchestrator choose your agent's actions
 
-Microsoft 365 Copilot can uniquely choose the right skill from the many skills in its repertoire. But how can you make sure Copilot chooses *your plugin* to provide the right skill?
+Describe the API or MCP integration, its functions or tools, and their inputs accurately so the orchestrator can select the right action for the user's request. These descriptions concern the agent's actions, not the name or store description of the outer plugin package.
 
-The answer lies in how you describe your plugin, its skills, and the parameters for initiation of skills. Specify concise and accurate descriptions in your plugin manifest to best ensure that the Copilot orchestrator knows when and how to invoke your plugin.
+| Action integration | Where to describe it | Learn more |
+|---|---|---|
+| API plugin | Plugin manifest and OpenAPI operation and parameter descriptions | [Create effective OpenAPI descriptions](openapi-document-guidance.md) |
+| MCP plugin | Plugin manifest and MCP tool descriptions; tool definitions come from the server at runtime or are pinned in the manifest | [Dynamic tool discovery and pinned tools](plugin-dynamic-tool-discovery.md) |
 
-The way you describe your plugin to the orchestrator depends on the type of plugin you build, as described in the following table.
+Functions and MCP tools aren't the same as the reusable instruction files described in [Skills as plugin capabilities](plugin-type-skills.md).
 
-| Plugin type               | Described by                                              | Learn more                                                                                                                                                                    |
-|---------------------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| API plugins               | OpenAPI description                                       | [How to make an OpenAPI document effective in extending Copilot](./openapi-document-guidance.md)                                                                              |
-| Copilot Studio actions    | Names and descriptions in Copilot Studio conversation map | [Orchestrate copilot topics and actions with generative AI](/microsoft-copilot-studio/advanced-generative-actions)                                                            |
-| Message extension plugins | App manifest                                              | [Guidelines for message extension plugins](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365/copilot/extensibility/context) |
+## Build a declarative agent with API or MCP actions
 
-## Build a declarative agent plugin
+For professional development, start with [Work IQ Dev Tools](choose-plugin-development-tools.md). Choose a documented environment first, then add a tool in the following list when you need its project-generation or integration capabilities:
 
-Developers can use two tools to generate API plugin packages:
+- [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is the recommended tool. Use `wiqd agent add action` to add a supported OpenAPI or remote MCP action to a declarative-agent project.
+- Existing Toolkit-based walkthroughs remain available for an [MCP server](build-mcp-plugins.md), an [OpenAPI description](build-api-plugins-existing-api.md), or a [new REST API](build-api-plugins-new-api.md). Follow those procedures when working with a Toolkit project.
+- [Kiota](/openapi/kiota/overview) can generate an API plugin manifest from an existing OpenAPI description.
 
-- The [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) in [Visual Studio](https://visualstudio.microsoft.com/) or [Visual Studio Code](https://code.visualstudio.com/) creates plugin packages based on an existing MCP server or OpenAPI description. Agents Toolkit also has starter projects with an example API and corresponding plugin package.
-- [Kiota](/openapi/kiota/overview) is a command line tool and a Visual Studio Code extension that generates plugin packages based on an existing OpenAPI description.
+The API or MCP plugin manifest configures the agent's action integration. Package and distribute the containing agent through its supported app-package route; the action manifest isn't an independently installable plugin package.
 
 > [!TIP]
-> **Work IQ Dev Tools (preview)** — You can also attach actions and check saved agent source from the command line. `wiqd agent add action` adds an action to a declarative agent, and `wiqd agent validate --mode source` runs offline checks on the saved `appPackage/declarativeAgent.json`. A passing source check doesn't establish runtime or OpenAPI endpoint reachability, authentication correctness, or final-package acceptance. If you omit `--mode`, validation defaults to `package`, which uploads a temporary copy of an existing ZIP to Teams Developer Portal and might require sign-in. For validation modes and coverage, see [Agent validation](https://microsoft.github.io/wiqd/cli/agent/agent-validate/) and [Validation](https://microsoft.github.io/wiqd/concepts/validation-mvl/). An alpha `wiqd plugin` command tree also exists, but its interface is subject to change. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+> **Work IQ Dev Tools** is generally available. `wiqd agent add action` adds an action to a declarative-agent project, and `wiqd agent validate --mode source` runs offline checks on saved agent source. A passing source check doesn't establish runtime or OpenAPI endpoint reachability, authentication correctness, or final-package acceptance. If you omit `--mode`, validation defaults to `package`, which uploads a copy of an existing ZIP and might require sign-in. For validation modes and coverage, see the [WIQD command reference](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-validate) and [Validation and MVL](https://microsoft.github.io/wiqd/concepts/validation-mvl/).
 
 ## Limitations
+
+These limits concern API and MCP plugins used as declarative-agent actions, not the number of skills, agents, or connectors in an installable plugin package.
 
 When a declarative agent includes up to five plugins defined in the [declarative agent manifest](declarative-agent-manifest-1.7.md), the agent always injects the plugins into the prompt. When the agent includes more than five plugins, it uses semantic matching. Semantic matching is based on the plugin's description, not on any of the individual functions or tools within the plugin itself.
 
 A plugin can include an unlimited number of functions or MCP tools. All of a matched plugin's functions or tools are returned, even if only one is matched. For an MCP plugin that uses [dynamic tool discovery](plugin-dynamic-tool-discovery.md), the tools resolved from the MCP server at runtime count toward this total. Due to token window limits, the quality of the responses might degrade if more than 10 functions or tools are included.
 
 The token window for inputs to and outputs from a plugin truncates large content. The functional limit is subject to change as models improve and depending on any system overhead. Optimize for small token lengths or opt for extensibility options that allow for streaming large content if necessary.
+
+## Next step
+
+Implement the selected [MCP action](build-mcp-plugins.md) or [API action](build-api-plugins-existing-api.md). After the components work individually, enter **Package & test** with [Integrate and test your components](integrate-test-plugin-components.md).
 
 ## Related content
 
@@ -196,5 +198,5 @@ The token window for inputs to and outputs from a plugin truncates large content
 - [Dynamic tool discovery for MCP plugins in Microsoft 365 Copilot](plugin-dynamic-tool-discovery.md)
 - [Build API plugins from an existing API for Microsoft 365 Copilot](build-api-plugins-existing-api.md)
 - [Build API plugins with a new API for Microsoft 365 Copilot](build-api-plugins-new-api.md)
-- [Plugin manifest schema for Microsoft 365 Copilot](plugin-manifest-2.4.md)
+- [API and MCP plugin manifest schema for Microsoft 365 Copilot](plugin-manifest-2.4.md)
 - [Write effective instructions for declarative agents with API plugins](instructions-api-plugins.md)

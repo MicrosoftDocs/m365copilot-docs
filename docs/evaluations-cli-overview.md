@@ -1,7 +1,8 @@
 ---
 title: Microsoft 365 Copilot Evaluations CLI overview
-description: Learn how to evaluate Microsoft 365 Copilot agents and, in v2 preview, plugins using automated testing and built-in evaluators.
-ms.date: 11/12/2026
+description: Learn how to evaluate Microsoft 365 Copilot agents using automated testing and AI-powered metrics.
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 author: lauragra
 ms.author: jasonjoh
 ms.reviewer: sakov
@@ -14,7 +15,7 @@ ms.localizationpriority: high
 The Microsoft 365 Copilot Evaluations CLI (`@microsoft/m365-copilot-eval`), previously named Agent Evaluations CLI, helps you test, measure, and improve the quality of your agents with structured evaluations and result reports. CLI v2 preview also supports evaluating Microsoft 365 Copilot responses that use plugins.
 
 > [!IMPORTANT]
-> For deployed declarative agents, start with [Work IQ Dev Tools (preview)](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided workflow. Work IQ Dev Tools manages the compatible Microsoft 365 Copilot Evaluations CLI version and exposes it through `wiqd agent eval`. Use the standalone CLI guidance in this section when you need lower-level command control or maintain an existing `runevals` workflow.
+> For deployed declarative agents, start with [Work IQ Dev Tools](https://microsoft.github.io/wiqd/extensions/provided/eval/) for a guided workflow. Work IQ Dev Tools manages the compatible Microsoft 365 Copilot Evaluations CLI version and exposes it through `wiqd agent eval`. Use the standalone CLI guidance in this section when you need lower-level command control or maintain an existing `runevals` workflow.
 
 ## Choose a CLI version
 
@@ -84,6 +85,7 @@ These values enable authentication and allow the tool to run LLM-based evaluatio
 
 ## Related content
 
+- [Check integration and quality during plugin development](build-reuse-plugin.md#check-integration-and-quality)
 - [Quickstart: Use the Microsoft 365 Copilot Evaluations CLI](evaluations-cli-quickstart.md)
 - [Dataset schema and test design](evaluations-cli-create-tests.md)
 - [Evaluators reference](evaluations-cli-evaluators.md)

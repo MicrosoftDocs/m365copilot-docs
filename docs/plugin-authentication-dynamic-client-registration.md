@@ -4,11 +4,13 @@ description: Learn how to configure dynamic client registration (DCR) for MCP pl
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 08/28/2026
+ms.date: 11/10/2026
 ms.topic: how-to
 ---
 
 # Configure dynamic client registration
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 Dynamic client registration (DCR) enables a plugin to register an OAuth client with your identity provider automatically, without requiring you to manually create a client ID and secret ahead of time. Instead of statically registering an OAuth app and copying the credentials into an auth config, the authorization server issues client credentials on demand following [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591).
 
@@ -32,12 +34,22 @@ Configure DCR in two steps: confirm the prerequisites and create the DCR auth co
 
 ## Step 2: Create the DCR auth config
 
-DCR authentication relies on an **authentication configuration** (auth config) - a record stored in the Microsoft Enterprise token store that Microsoft 365 Copilot uses to obtain and refresh tokens for your MCP plugin. You can create the DCR auth config in two ways: Microsoft 365 Agents Toolkit and the declarative agent developer skill. Both create the auth config and update your plugin manifest automatically.
+DCR authentication relies on an **authentication configuration** (auth config) - a record stored in the Microsoft Enterprise token store that Microsoft 365 Copilot uses to obtain and refresh tokens for your MCP plugin. Start with WIQD for a supported pro-code project; the Toolkit and developer-skill procedures remain available as alternatives.
 
 > [!NOTE]
-> The Microsoft Teams developer portal doesn't support DCR yet. Use Agents Toolkit or the declarative agent developer skill.
+> The Microsoft Teams developer portal doesn't support DCR yet. Use the WIQD MCP action workflow or one of the automated alternatives below.
 
-### Use Microsoft 365 Agents Toolkit (recommended)
+### Use Work IQ Dev Tools (recommended)
+
+Use `wiqd agent add action` with the server's HTTPS endpoint in `--mcp-server-url` and select `--mcp-auth-type oauth-dynamic`. Your server and authorization provider must meet the metadata and client-secret requirements in [Step 1](#step-1-confirm-prerequisites). DCR isn't available for a server protected by Microsoft Entra ID.
+
+Follow the [WIQD MCP action command guidance](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-action) and complete the project's provisioning workflow. The existing-manifest `wiqd agent add auth` command doesn't offer a DCR authentication type; use the MCP action route for this scheme.
+
+<!-- markdownlint-disable MD033 -->
+<a id="use-microsoft-365-agents-toolkit-recommended"></a>
+<!-- markdownlint-enable MD033 -->
+
+### Use Microsoft 365 Agents Toolkit
 
 When you [build an agent with an MCP plugin](build-mcp-plugins.md) in [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) and select **dynamic client registration** as the authentication type, no further input is required. Agents Toolkit fetches the registration details from the well-known endpoint of your MCP server, registers a new client with the authorization server automatically, creates the auth config in the Enterprise token store, and updates the [runtime authentication object](plugin-manifest-2.4.md#runtime-authentication-object) in your plugin manifest.
 
@@ -50,7 +62,7 @@ The declarative agent developer skill (`declarative-agent-developer`) is an agen
 
 ## Plugin manifest
 
-No action is required from you - this section is for reference only, to show the changes that Agents Toolkit and the declarative agent developer skill make to the plugin manifest for you. DCR uses the same [runtime authentication object](plugin-manifest-2.4.md#runtime-authentication-object) as OAuth 2.0: the `type` property is set to `OAuthPluginVault`, and the `reference_id` is set to the **auth config ID**.
+This section shows the resulting plugin manifest configuration for reference. DCR uses the same [runtime authentication object](plugin-manifest-2.4.md#runtime-authentication-object) as OAuth 2.0: the `type` property is set to `OAuthPluginVault`, and the `reference_id` is set to the **auth config ID**.
 
 ```json
 "auth": {

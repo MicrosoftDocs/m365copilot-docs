@@ -5,13 +5,15 @@ description: End-to-end scenarios using TypeSpec from basic to advanced scenario
 author: slevert
 ms.author: slevert
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ms.topic: reference
 ---
 
 <!-- markdownlint-disable MD024 -->
 
 # TypeSpec agent scenarios for Microsoft 365 Copilot
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 This guide provides complete examples of creating TypeSpec agents for Microsoft 365 Copilot, from simple basic agents to complex implementations with multiple capabilities and authentication methods.
 

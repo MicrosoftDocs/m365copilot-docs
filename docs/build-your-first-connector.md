@@ -5,11 +5,16 @@ description: Build and test a synced Copilot connector component by using Micros
 author: RachitMalik12
 ms.author: malikrachit
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: how-to
 ---
 
 # Build your first synced Copilot connector with Microsoft 365 Agents Toolkit
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
+
+This walkthrough retains Toolkit's synced-connector template. It builds an ingestion service, not the remote MCP connector configuration used by a WIQD plugin.
 
 [Microsoft 365 Copilot connectors](overview-copilot-connector.md) enable you to ingest your line-of-business data into Microsoft Graph to make it available to Microsoft 365 Copilot. When your data is ingested, Copilot can reason over the data and use it to respond to user prompts.
 
@@ -119,6 +124,8 @@ To customize this template for your custom data, you can update the content of t
 In addition to these folders, you can customize other parts of the code, depending on the scenario. You can search the code for comments starting with the `[Customization point]` string. These comments indicate areas for potential customization.
 
 ## Next step
+
+Use the [connector integration checks](integrate-test-plugin-components.md#verify-components-in-the-integrated-scenario) to verify authentication, schema, indexing, freshness, and permissions. Include [failure and boundary tests](integrate-test-plugin-components.md#test-failures-and-boundaries) for expired authentication, denied access, and unavailable connections or data sources.
 
 Record the connection ID, schema, environment, permissions, test evidence, and connector owner in your implementation record. If your plugin includes other components, build them before you [integrate and test your plugin components](integrate-test-plugin-components.md).
 

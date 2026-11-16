@@ -5,11 +5,14 @@ description: Find information about custom engine agents, which are specialized 
 author: jessicaaawu
 ms.author: wujessica
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ms.topic: overview
 ---
 
 # Custom engine agents for Microsoft 365 overview
+
+> [!NOTE]
+> [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is recommended for supported pro-code declarative-agent and plugin scenarios, but it doesn't target custom engine agents. This article covers the separate SDK, hosting, and integration choices for custom engine agents.
 
 Custom engine agents expand the capabilities of Microsoft 365 Copilot by allowing organizations to build AI-powered assistants tailored to their specific needs. Unlike standard Copilot experiences, custom engine agents provide full control over orchestration, AI models, and data integrations, enabling businesses to create advanced workflows that align with their unique requirements. These agents can be created using [Copilot Studio](#low-code-approach), the [Microsoft 365 Agents SDK](#microsoft-365-agents-sdk), [Teams SDK](#teams-sdk) or [Microsoft Foundry](#integrate-microsoft-foundry-agents), depending on your preferred development approach and hosting environment.
 
@@ -41,9 +44,9 @@ This approach is ideal for organizations looking to build and scale custom engin
 
 ### Pro-code approach
 
-For pro-code development, use Visual Studio or Visual Studio Code with the [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) extension. This toolkit streamlines agent development by providing prebuilt templates, easy debugging, and streamlined deployment workflows. It's ideal for developers who want a fully customized experience.
+For pro-code custom engine development, choose a supported SDK and provide your own orchestration and hosting. Existing [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) templates and walkthroughs remain available for scaffolding, debugging, and deployment.
 
-When building agents with the toolkit, choose between two SDKs depending on your needs.
+Choose between the following SDKs based on your needs.
 
 #### Microsoft 365 Agents SDK
 
@@ -87,9 +90,6 @@ The following table provides a quick comparison of the available approaches.
 | **Orchestrator**                | Copilot Studio | Teams AI Action Planner | Bring your own (for example, Semantic Kernel, LangChain) | Bring your own (for example, Semantic Kernel or LangChain) |
 | **AI Models**                   | Copilot Studio | Any model of your choice | Any model of your choice | Foundry OpenAI or custom models |
 | **Supported programming languages** | Not applicable (low-code) | C#, TypeScript, JavaScript, Python | C#, JavaScript, Python | Python, C# |
-
-> [!NOTE]
-> **Work IQ Dev Tools (preview)** — `wiqd` targets declarative agents, not custom engine agents. If you build both surfaces, you can use `wiqd` for the declarative side - validating, provisioning, packaging, and publishing - while you continue to build your custom engine agent with the tools described here. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ### Key considerations
 

@@ -4,17 +4,25 @@ description: Learn how to configure anonymous access for MCP and API plugins in 
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 11/10/2026
 ms.topic: how-to
 ---
 
 # Configure anonymous authentication
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 For Model Context Protocol (MCP) servers or APIs that don't require any authentication, or for developer environments where authentication isn't yet implemented, plugins can access the MCP server or API anonymously.
 
 This article uses MCP plugins as the default walkthrough. The same steps apply to API plugins built from an OpenAPI document, except where noted.
 
 Unlike the other authentication schemes, anonymous access requires no registration, credentials, or auth config - you set the authentication type to `None` directly in the plugin manifest.
+
+## Use Work IQ Dev Tools (recommended)
+
+When adding an MCP action, use `wiqd agent add action` with the server's HTTPS endpoint in `--mcp-server-url` and select `--mcp-auth-type none`. This is also the command's default MCP authentication type. No auth config registration is needed. See the [WIQD action command guidance](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-action).
+
+For an existing plugin manifest, use the `None` configuration below. The `wiqd agent add auth` command doesn't offer an anonymous authentication type.
 
 ## Add anonymous authentication to the plugin manifest
 

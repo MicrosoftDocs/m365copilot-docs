@@ -5,14 +5,16 @@ author: jessicaaawu
 ms.author: wujessica
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 10/26/2026
+ms.date: 11/16/2026
 ms.custom: [copilot-learning-hub, msecd-doc-authoring-1013]
 ai-usage: ai-assisted
 ---
 
 # Plan licensing and cost
 
-Use this article while you [plan your plugin](planning-guide.md) or another Microsoft 365 Copilot extensibility solution. Record the cost categories that can affect the design now, and confirm the final licenses, meters, and service prices after you choose the capabilities and development tools.
+Use this article while you [plan your plugin](planning-guide.md) or another Microsoft 365 Copilot extensibility solution. Costs vary by product and distribution route. Don't assume that a plugin is free to use in every product or that a user license covers every component and external service.
+
+Record the cost categories that affect your design, and then confirm the current licensing and billing requirements for the products, capabilities, and publishing route you select.
 
 ## Identify cost categories
 
@@ -28,80 +30,28 @@ Account for:
 
 A plugin can bring together components that use different licensing and billing models. Record costs for the plugin experience and for each independently operated component or service.
 
-## Licensing options for Microsoft 365 Copilot
+## Check product-specific licensing and billing
 
-Microsoft 365 Copilot is available with two different license options:
+Use the product documentation rather than a cross-product cost comparison:
 
-- **Microsoft 365 Copilot Chat** is included in your Microsoft 365 subscription at no additional charge. It provides access to web-based Copilot Chat and optional [pay-as-you-go access](/copilot/microsoft-365/pay-as-you-go/overview) to work-based chat. This option is ideal for occasional users of Copilot and agents.
-- **Microsoft 365 Copilot add-on license** is available with an [eligible Microsoft 365 subscription](/copilot/microsoft-365/microsoft-365-copilot-licensing#microsoft-365-copilot-license). It includes both web-based and work-based Copilot Chat and unlocks embedded Copilot features in Word, Excel, Outlook, and Teams. This option is ideal for frequent users of Copilot and agents and users who want AI assistance integrated throughout their workflow.
+- **Microsoft 365 Copilot and Agent Builder:** Review [Microsoft Copilot license options](/copilot/plan/copilot-license-options) and the [Agent Builder licensing guidance](agent-builder.md#licensing).
+- **Copilot Cowork:** Review [Cowork access and consumption](#cowork-access-and-consumption) and [usage-based billing for Copilot Credits](/copilot/plan/usage-based-billing-overview-copilot-credits).
+- **Copilot Studio:** Follow the licensing guidance for your agent's harness, starting with the [Copilot Studio overview](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio); for the standard harness, see [licensing](/microsoft-copilot-studio/billing-licensing) and [billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
+- **Power Platform capabilities:** Review the [Power Platform licensing overview](/power-platform/admin/pricing-billing-skus) for product-specific use rights, capacity, and consumption guidance.
 
-Your license type determines access to Copilot capabilities and whether usage-based billing charges apply when using extensibility options like Copilot connectors or agents.
+For each product, record the licenses and billing configuration needed by makers, administrators, and users. Check the requirements for the capabilities and connections you select; don't infer them from the outer plugin package.
 
-For more information about consumption costs, see [Copilot Studio licensing](/microsoft-copilot-studio/billing-licensing) and [Copilot Credits billing rates](/microsoft-copilot-studio/requirements-messages-management). For more information about licensing, see [License options for Microsoft 365 Copilot](/microsoft-365-copilot/microsoft-365-copilot-licensing) and [Decide which Copilot is right for you](/microsoft-365-copilot/which-copilot-for-your-organization).
+## Cowork access and consumption
 
-| **License type** | **Cost**   | **Best for** | **Extensibility consumption costs**  |
-| ------- | ------ | ---------  | ------------ |
-| Microsoft 365 Copilot   | Add-on license required | Frequent users       | No extra charges for accessing or using extensibility features (Copilot connectors, agents, plugins).   |
-| Microsoft 365 Copilot Chat | Included for eligible Microsoft 365 users | Occasional users     | No charges for lightweight extensibility (instruction-based agents or public site grounding).<br><br>Usage-based billing charges apply for shared tenant data (SharePoint, Copilot connectors), metered in Copilot Credits via Copilot Studio. |
-| No Copilot license or Microsoft 365 subscription              | N/A                                      | Not supported        | Can't access Copilot; extensibility features require a qualifying license.                                                                      |
+Copilot Cowork uses usage-based billing. Access comes only from a spending policy that includes the user and selects **Cowork**. Settings on the **All Agents** > **Cowork** entry no longer control access.
 
-### Access and usage
+Work with your billing administrator to plan the policy scope, spending limits, and billing method. For the current access model, see [Manage Copilot Cowork for your organization](/copilot/cowork/cowork-admin-governance). For configuration, see [Manage spending policies](/copilot/implement/usage-based-billing-manage-copilot-credits).
 
-Users with a valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license can access data from Copilot connectors in Copilot Chat, Copilot Search, and Microsoft Search.
+## Account for external services
 
-If you build a connector and your admin configures it in the admin center, licensed users in your organization can automatically retrieve its data through Copilot Chat.
+Packaging a capability doesn't remove the cost of operating its dependencies. Include hosting, model usage, storage, networking, credentials, monitoring, and support for any remote MCP servers, APIs, or other services your plugin uses.
 
-## Agents in Copilot
-
-Agents are AI assistants that automate tasks and answer queries across the Microsoft 365 ecosystem, including Copilot Chat, Microsoft Teams, and other Microsoft 365 apps. This section covers the costs of declarative agents and custom engine agents.
-
-### Declarative agents
-
-<!-- markdownlint-disable MD024 -->
-
-#### Usage Cost
-
-To use a declarative agent, users must have a Microsoft 365 Copilot add-on license, or access to Microsoft 365 Copilot Chat through an eligible Microsoft 365 license.
-
-If a user doesn't have a Copilot license and usage-based billing is enabled in the tenant, using declarative agents might result in consumption charges or limited functionality, depending on how the agent is built.
-
-- Agents that rely on instructions or public website grounding **don't** incur extra costs.
-- Agents that access shared tenant data (such as SharePoint or Copilot connectors) **generate usage-based billing charges** (metered in Copilot Credits) via Copilot Studio.
-
-#### Hosting Cost
-
-Declarative agents are hosted by Microsoft 365 Copilot and don't incur additional hosting costs.
-
-### Custom engine agents
-
-#### Usage Cost
-
-Users don't need a Copilot license to access custom engine agents in Microsoft 365 Copilot Chat. However, usage costs vary based on the user's license:
-
-- Users with a Microsoft 365 Copilot license don't incur additional charges.
-- Users without a Microsoft 365 Copilot license might incur **usage-based billing charges** if the agent interacts with shared tenant data (SharePoint or Copilot connectors), metered in Copilot Credits via Copilot Studio.
-
-#### Hosting Cost
-
-Custom engine agents are hosted outside of Microsoft 365 Copilot using your own orchestrator and/or models. Hosting these agents might incur additional hosting costs, such as:
-
-- **Copilot Studio** – For users with a Microsoft 365 Copilot add-on license, agents built in Copilot Studio for Teams, SharePoint, and Copilot Chat are included at no extra charge. Users without a Microsoft 365 Copilot license might need to purchase a Copilot Studio license or Power Platform plan, and usage-based billing (Copilot Credits) or Power Platform capacity limits might apply.
-- **Azure AI Foundry** – For AI-powered processing, model hosting, and natural language understanding. See [Azure AI Foundry pricing](https://azure.microsoft.com/pricing/details/ai-foundry/).
-- **Azure App Service** – For hosting services and APIs that support your agent. See [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/).
-- **Azure Bot Service** – For publishing agents across multiple channels. See [Azure AI Bot Service pricing](https://azure.microsoft.com/pricing/details/bot-services/).
-
-> [!NOTE]
-> Your total cost varies based on the AI models, orchestration complexity, and cloud services you use to deploy and maintain your agent.
-
-<!-- markdownlint-enable MD024 -->
-
-### Cost comparison: declarative agent vs custom engine agent
-
-| Feature           | Declarative agents                                                                                                  | Custom engine agents                                                                                                   |
-|-------------------|----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| **License requirements** | Requires Microsoft 365 Copilot add-on license, or Copilot Chat access through an eligible Microsoft 365 license.   | No additional license required.                                                                                         |
-| **Hosting**       | Hosted by Microsoft 365 Copilot (no additional hosting costs).                                                       | Hosted externally (incurs hosting costs, such as Azure AI Foundry).                                                      |
-| **Usage cost**    | For users with Microsoft 365 Copilot add-on licenses, no extra charges. <br><br>For users without licenses:<br> - No charges for agents with instructions only or grounded only in public data.<br> - Usage-based billing charges (Copilot Credits) for shared tenant data usage (for example, SharePoint, Copilot connectors). | Varies based on license.<br><br>Users with a Copilot license don't incur additional charges. Users without a Copilot license might incur usage-based billing charges (Copilot Credits) when shared data is used. |
+If you're building a custom engine app or agent, follow the [app development path](apps-agents-overview.md) and budget for your own orchestration, models, and hosting. Existing service pricing resources include [Azure AI Foundry pricing](https://azure.microsoft.com/pricing/details/ai-foundry/), [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/), and [Azure AI Bot Service pricing](https://azure.microsoft.com/pricing/details/bot-services/).
 
 ## Work IQ API
 
@@ -122,7 +72,7 @@ Use the following controls with your administrator to limit competing consumptio
 | Control | What it does | Scope and limitations |
 | --- | --- | --- |
 | Select supported services in spending policies | Include Cowork and exclude Work IQ API from a policy when its users shouldn't consume credits through Work IQ API. Turn off **Auto-apply new services** if future services require review. | Review all applicable policies, including the default policy. Excluding a service from one policy doesn't exclude it from other policies. Copilot Studio consumption is managed separately in the Power Platform admin center. See [Manage spending policies](/microsoft-365/copilot/usage-based-billing-manage-copilot-credits). |
-| Set policy and per-user limits | Limit monthly consumption for selected user groups and the services covered by their policies. | Limits don't reserve credits. If multiple policies cover a user for the same service, the policy with the highest per-user limit takes precedence. See [How spending policies apply to users](/microsoft-365/copilot/usage-based-billing-manage-copilot-credits#understand-how-spending-policies-apply-to-users). |
+| Set policy and per-user limits | Limit monthly consumption for selected user groups and the services covered by their policies. | Limits don't reserve credits. If multiple policies cover a user for the same service, the policy with the highest per-user limit takes precedence. See [How spending policies apply to users](/copilot/implement/usage-based-billing-manage-copilot-credits#understand-how-user-or-identity-based-spending-policies-apply-to-users). |
 | Restrict Copilot Studio authoring | Use the **Copilot Author** setting in the Power Platform admin center to limit authoring access to a security group. | Authoring restrictions don't stop consumption by existing agents. See [Manage Copilot Studio access](/power-platform/admin/manage-copilot-studio-copilot-credits-capacity#if-i-use-the-pay-as-you-go-plan-can-i-grant-my-users-access-to-copilot-studio). |
 | Review environment allocations and overage settings | Reduce unused environment allocations to leave more prepaid credits available in the shared tenant pool. | A lower allocation isn't a hard cap if the environment can draw from the tenant pool or use pay-as-you-go billing. See [Manage capacity](/power-platform/admin/manage-copilot-studio-copilot-credits-capacity#manage-capacity). |
 | Set per-agent monthly limits | Configure notifications and a hard stop for individual Copilot Studio agents. | Enforcement isn't instantaneous, and an agent's limit doesn't stop the agent flows it calls. See [Manage monthly consumption limits](/power-platform/admin/manage-copilot-studio-copilot-credits-capacity#manage-monthly-consumption-limits-for-copilot-studio-agents). |

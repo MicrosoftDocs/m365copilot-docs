@@ -4,11 +4,13 @@ description: Learn how to configure Microsoft Entra single sign-on (SSO) authent
 author: amitharjani93
 ms.author: amith
 ms.localizationpriority: medium
-ms.date: 07/14/2026
+ms.date: 11/10/2026
 ms.topic: how-to
 ---
 
 # Configure Microsoft Entra SSO authentication
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 Microsoft Entra single sign-on (SSO) authentication enables users to authenticate with their existing Microsoft Entra ID credentials. This integration simplifies access management and ensures secure connections to Model Context Protocol (MCP) servers or APIs without requiring extra credentials. Your MCP server or API must use Entra ID to control access.
 
@@ -22,14 +24,24 @@ Your MCP server or API must be secured by an Entra app registration. If you don'
 
 ## Step 2: Create the Entra SSO auth config
 
-Entra SSO authentication relies on an **authentication configuration** (auth config) - a record stored in the Microsoft Enterprise token store that Microsoft 365 Copilot uses to obtain tokens for your MCP plugin. You can create the auth config in three ways. The recommended approaches - Microsoft 365 Agents Toolkit and the declarative agent developer skill - create the auth config and update your plugin manifest automatically. You can then use the Microsoft Teams developer portal to manage and refine the auth config.
+Entra SSO authentication relies on an **authentication configuration** (auth config) - a record stored in the Microsoft Enterprise token store that Microsoft 365 Copilot uses to obtain tokens for your MCP plugin. Start with WIQD for a supported pro-code project. The Toolkit, developer-skill, and Teams developer portal procedures remain available as alternatives.
 
 However you create it, the auth config has an **auth config ID** and an **Application ID URI**. You use the **Application ID URI** in [Step 3](#step-3-update-the-entra-app-registration) and [Step 4](#step-4-add-the-new-token-audience-to-your-api).
 
 > [!IMPORTANT]
-> Even when Agents Toolkit or the declarative agent developer skill creates the auth config automatically, you must still complete [Step 3](#step-3-update-the-entra-app-registration) and [Step 4](#step-4-add-the-new-token-audience-to-your-api).
+> Regardless of how you create the auth config, you must still complete [Step 3](#step-3-update-the-entra-app-registration) and [Step 4](#step-4-add-the-new-token-audience-to-your-api).
 
-### Use Microsoft 365 Agents Toolkit (recommended)
+### Use Work IQ Dev Tools (recommended)
+
+For an MCP action, use `wiqd agent add action` with `--mcp-server-url`, `--mcp-auth-type entra-sso`, and `--mcp-client-id` set to the Entra app's client ID from Step 1. For an OpenAPI action, use `--openapi-auth-identity-provider microsoft-entra` and `--openapi-auth-client-id`. See the [WIQD action command guidance](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-action) for the other required action options.
+
+For an existing plugin manifest, use [`wiqd agent add auth`](https://microsoft.github.io/wiqd/cli/reference/#wiqd-agent-add-auth) with `--plugin-manifest`, `--auth-name`, and `--auth-type microsoft-entra`. Supply the identity-provider options documented for that command, including `--oauth-client-id`. Complete the project's provisioning workflow, obtain the auth config's **Application ID URI**, and continue with Step 3 and Step 4.
+
+<!-- markdownlint-disable MD033 -->
+<a id="use-microsoft-365-agents-toolkit-recommended"></a>
+<!-- markdownlint-enable MD033 -->
+
+### Use Microsoft 365 Agents Toolkit
 
 When you [build an agent with an MCP plugin](build-mcp-plugins.md) in [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit), the toolkit prompts you for an authentication type as you add the MCP server plugin. Select **Microsoft Entra SSO** and provide the **client ID** of the Entra app from Step 1. Agents Toolkit creates the auth config in the Enterprise token store, generates the auth config ID, and updates the [runtime authentication object](plugin-manifest-2.4.md#runtime-authentication-object) in your plugin manifest automatically.
 

@@ -4,13 +4,16 @@ description: Learn when a declarative agent can provide the conversational exper
 author: aycabas
 ms.author: aycabas
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ms.topic: overview
 ---
 
 # Declarative agents for Microsoft 365 Copilot
 
-Declarative agents provide a goal-directed conversational experience that's powered by Microsoft 365 Copilot. You define the agent's purpose, instructions, knowledge, and supported actions to address a business scenario. A plugin can include or reference an agent with other supported capabilities, such as skills, Copilot connectors, or MCP-based tools.
+Declarative agents provide a goal-directed conversational experience that's powered by Microsoft 365 Copilot. You define the agent's purpose, instructions, knowledge, and supported actions to address a business scenario.
+
+A declarative agent can be one component of a plugin. For how agents fit with skills, tools, and other capabilities, see [Plugins for Microsoft 365 Copilot](plugins-overview.md).
 
 Choose a declarative agent when users need a dedicated conversational experience with behavior and capabilities tailored to a specific outcome. You don't need to create an agent when an existing Microsoft experience or approved agent can use the selected skills, connectors, or tools.
 
@@ -83,10 +86,9 @@ After you decide to build or reuse an agent, [choose development tools](choose-p
 ## Related content
 
 - [Choose capabilities for your plugin](choose-plugin-components.md)
-- [Agent in-app experiences](overview.md#agent-in-app-experience)
 - [Declarative agent architecture](declarative-agent-architecture.md)
 - [Declarative agents FAQ](transparency-faq-declarative-agent.md)
 - [Choose development tools for your plugin](choose-plugin-development-tools.md)
 - [Build agents with Agent Builder](agent-builder-build-agents.md)
-- [Build agents with Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context)
+- [Build agents with Work IQ Dev Tools (recommended for supported pro-code scenarios)](https://aka.ms/wiqd/docs)
 - [Responsible AI validation checks](rai-validation.md)

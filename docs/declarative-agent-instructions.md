@@ -5,7 +5,7 @@ author: lauragra
 ms.author: jchudakova
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 08/11/2026
+ms.date: 11/09/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
 ms.contributors:
@@ -26,7 +26,7 @@ Declarative agents are customized versions of Microsoft 365 Copilot that help yo
 
 If your declarative agent also has API plugins as actions, the OpenAPI document for your plugin helps the agent understand any instructions referring to the API. For more information, see [How to make an OpenAPI document effective in extending Copilot](openapi-document-guidance.md).
 
-This guidance applies to developers and makers who use [Agent Builder in Microsoft 365 Copilot](agent-builder.md) or [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) to create declarative agents. For more information about how to write instructions for Copilot Studio agents, see [Configure high-quality instructions for generative orchestration](/microsoft-copilot-studio/guidance/generative-mode-guidance).
+This guidance applies to developers and makers who create declarative agents with [Agent Builder in Microsoft 365 Copilot](agent-builder.md), [Work IQ Dev Tools](https://aka.ms/wiqd/docs), or the retained Toolkit-based workflows. WIQD is recommended for supported pro-code scenarios. For more information about how to write instructions for Copilot Studio agents, see [Configure high-quality instructions for generative orchestration](/microsoft-copilot-studio/guidance/generative-mode-guidance).
 
 > [!IMPORTANT]
 > Microsoft 365 Copilot periodically transitions to newer models. Because these updates are automatic, expect some behavioral change over time and be prepared to adapt prompts and instructions where precision matters. Model changes can affect how your declarative agent understands and responds to your instructions, particularly in structured or step-by-step scenarios.
@@ -227,14 +227,14 @@ Developing instructions for declarative agents is often an iterative process. It
     1. Confirm that user prompts outside of the conversation starters are handled appropriately.
 1. **Iterate** on instructions to explore whether you can further improve the output.
     - Modify instructions to change the behavior of the agent.
-    - Try adding knowledge like web search, OneDrive/SharePoint, or Microsoft 365 Copilot connectors, if needed using Agents Toolkit or Copilot Studio.
+    - Try adding knowledge like web search, OneDrive/SharePoint, or Microsoft 365 Copilot connectors, using a supported configuration in Work IQ Dev Tools or Copilot Studio.
 
 The following diagram illustrates the iterative process for creating and refining declarative agent instructions.
 
 :::image type="content" source="assets/images/instruction-process.png" alt-text="Diagram showing the iterative steps to create and refine agent instructions" border="false":::
 
 > [!TIP]
-> **Work IQ Dev Tools (preview)** — Work IQ Dev Tools supports creating evaluations for declarative agents so you can measure how instruction changes affect agent behavior. Create evaluations for the behaviors you want to test, then run them against a provisioned agent as you refine its instructions. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+> **Work IQ Dev Tools** — Work IQ Dev Tools supports creating evaluations for declarative agents so you can measure how instruction changes affect agent behavior. Create evaluations for the behaviors you want to test, then run them against a provisioned agent as you refine its instructions. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ## Example instructions
 

@@ -5,10 +5,14 @@ author: sarahcritchley
 ms.author: scritchley
 ms.topic: concept-article
 ms.localizationpriority: medium
-ms.date: 5/19/2025
+ms.date: 11/09/2026
 ---
 
 # Bring your agents into Microsoft 365 Copilot
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
+
+This guide covers a custom engine agent integrated through the Agents SDK, not a WIQD declarative-agent workflow.
 
 You might have agents within your organization that you built using C#, JavaScript, or Python, and that are hosted on Azure or another hosting infrastructure. These agents are specialized experiences that might be focused on a specific area utilize AI services, and are already integrated to web or custom apps. You can use the Microsoft 365 Agents Toolkit to surface your agent in Microsoft 365 Copilot Chat. This allows users to use the unified Microsoft 365 Copilot UI to work with agents built across the enterprise, making your agents more discoverable and accessible to users.
 
@@ -22,7 +26,7 @@ The built-in channel adapters in the Microsoft 365 Agents SDK support a number o
 
 To bring your agent into Copilot, you need modify some components of your agent, as described in this section.
 
-We recommend that you start with the Microsoft 365 Agents Toolkit and use the Echo/Empty Agent sample (currently available in C# in Visual Studio and JavaScript in Visual Studio Code). To familiarize yourself with the Agents SDK structure, go through the steps to test and deploy your agent using the Agents Toolkit and the SDK; these tools simplify the tasks described.
+The Toolkit-based workflow uses the Echo/Empty Agent sample (currently available in C# in Visual Studio and JavaScript in Visual Studio Code). To familiarize yourself with the Agents SDK structure, go through the steps to test and deploy your agent using the Agents Toolkit and the SDK.
 
 1. Create your app registration and Azure Bot Service record to handle channel communication - The Microsoft 365 Agents SDK uses Azure Bot Service to handle the communication between channels and your code, managing components related to those channels. You need to  [Create an Azure Bot Service resource](/azure/bot-service/abs-quickstart) with an app registration that you reference in your agent manually.
 

@@ -17,10 +17,13 @@ items:
     - name: Publish plugins for customers
       href: isv-publisher-guide.md
 
-  - name: "Quickstart: Create your first plugin with Work IQ Dev Tools"
+  - name: Copilot Plugin Catalog
+    href: https://aka.ms/CopilotPluginCatalog
+
+  - name: "Quickstart: Package an existing declarative agent as a plugin with Work IQ Dev Tools"
     href: quickstart-plugin.md
 
-  - name: Prepare to build your plugin
+  - name: Prepare
     items:
     - name: Plan your plugin
       href: planning-guide.md
@@ -40,8 +43,6 @@ items:
           items:
           - name: Declarative agents FAQ
             href: transparency-faq-declarative-agent.md
-        - name: Custom engine agents
-          href: overview-custom-engine-agent.md
       - name: Skills
         href: plugin-type-skills.md
       - name: Connectors
@@ -56,7 +57,7 @@ items:
       - name: Choose between Agent Builder and Copilot Studio
         href: copilot-studio-experience.md
 
-  - name: Build or reuse capabilities
+  - name: Build or reuse
     href: build-reuse-plugin.md
     items:
     - name: Set up your development environment
@@ -131,11 +132,11 @@ items:
           href: agent-builder-regional-availability.md
         - name: Copy your agent to Copilot Studio
           href: copy-agent-to-copilot-studio.md
-      - name: Build with Work IQ Dev Tools
+      - name: Build with Work IQ Dev Tools (recommended)
         href: https://aka.ms/wiqd/docs
       - name: Build with Copilot Studio
         href: /microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=/microsoft-365/copilot/extensibility/context
-      - name: Build with Agents Toolkit
+      - name: Agents Toolkit workflows
         href: /microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context
         items:
         - name: Build with TypeSpec
@@ -195,7 +196,22 @@ items:
       - name: Add MCP and API actions
         href: overview-plugins.md
         items:
-        - name: API plugins
+        - name: MCP actions (MCP plugins)
+          items:
+          - name: Connect an MCP server to your agent
+            href: build-mcp-plugins.md
+          - name: Dynamic tool discovery
+            href: plugin-dynamic-tool-discovery.md
+          - name: Add UI with MCP apps
+            href: plugin-mcp-apps.md
+            items:
+            - name: UX guidelines
+              href: plugin-mcp-apps-ui-guidelines.md
+            - name: Design line-of-business MCP apps
+              href: plugin-mcp-apps-lob-design-principles.md
+            - name: Troubleshoot MCP apps
+              href: plugin-mcp-apps-troubleshooting.md
+        - name: API actions (API plugins)
           items:
           - name: Build an API plugin with TypeSpec
             href: build-api-plugins-typespec.md
@@ -234,54 +250,6 @@ items:
           displayName: response, response_semantics
         - name: Debug locally
           href: plugin-debug-local.md
-
-    - name: Build a custom engine agent
-      items:
-      - name: Architecture
-        href: custom-engine-agent-architecture.md
-      - name: Convert a declarative agent
-        href: convert-declarative-agent.md
-      - name: Build with Microsoft 365 Agents SDK
-        href: m365-agents-sdk.md
-        items:
-        - name: Create and deploy agents with the SDK
-          href: create-deploy-agents-sdk.md
-        - name: Start with the Agents Toolkit for Visual Studio
-          href: /microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=/microsoft-365/copilot/extensibility/context
-        - name: Start with the Agents Toolkit for Visual Studio Code
-          href: /microsoft-365/agents-sdk/create-new-toolkit-project-vsc?context=/microsoft-365/copilot/extensibility/context
-        - name: SDK reference
-          items:
-          - name: .NET SDK
-            href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true
-          - name: JavaScript SDK
-            href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true
-          - name: Python SDK
-            href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true
-      - name: Build with Teams SDK
-        href: teams-ai-library.md
-        items:
-        - name: Create an agent with Teams CLI
-          href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript&context=/microsoft-365/copilot/extensibility/context
-        - name: Understand the code structure of agents
-          href: /microsoftteams/platform/teams-ai-library/getting-started/code-basics?tabs=controller&pivots=typescript&context=/microsoft-365/copilot/extensibility/context
-        - name: SDK reference
-          items:
-          - name: TypeScript SDK
-            href: /javascript/api/teams-sdk-typescript
-          - name: .NET SDK
-            href: /dotnet/api/?view=msteams-sdk-dotnet-latest&preserve-view=true
-      - name: Build with Copilot Studio
-        href: /microsoft-copilot-studio/fundamentals-what-is-copilot-studio?context=/microsoft-365/copilot/extensibility/context
-      - name: User experience
-        href: ux-custom-engine-agent.md
-        items:
-        - name: Asynchronous and proactive messaging
-          href: custom-engine-agent-asynchronous-flow.md
-      - name: Bring custom engine agents to Copilot
-        href: bring-agents-to-copilot.md
-      - name: Invoke actions with Semantic Kernel
-        href: graph-actions-semantic-kernel.md
 
     - name: Build or reuse a skill
       href: build-reuse-skills.md
@@ -325,22 +293,10 @@ items:
     - name: Build or reuse an MCP server
       href: build-reuse-mcp-servers.md
       items:
-      - name: Configure remote MCP servers for plugins
+      - name: Configure remote MCP servers for plugin packages
         href: configure-plugin-mcp-servers.md
-      - name: Connect an MCP server with Agents Toolkit
-        href: build-mcp-plugins.md
-      - name: Add UI with MCP apps
-        href: plugin-mcp-apps.md
-      - name: Dynamic tool discovery
-        href: plugin-dynamic-tool-discovery.md
-      - name: UX guidelines for MCP apps
-        href: plugin-mcp-apps-ui-guidelines.md
-      - name: Design line-of-business MCP apps
-        href: plugin-mcp-apps-lob-design-principles.md
-      - name: Troubleshoot MCP apps
-        href: plugin-mcp-apps-troubleshooting.md
 
-  - name: Package and test
+  - name: Package & test
     items:
     - name: Integrate capabilities
       href: integrate-test-plugin-components.md
@@ -401,7 +357,7 @@ items:
     - name: Review Microsoft 365 app validation guidelines
       href: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines?context=/microsoft-365/copilot/extensibility/context
 
-  - name: Publish or share
+  - name: Publish & distribute
     href: publish.md
     items:
     - name: Publish your plugin through Microsoft Marketplace
@@ -409,7 +365,7 @@ items:
     - name: Publish to your organization
       href: publish-plugin-organization.md
 
-  - name: Make available and govern
+  - name: Make available & govern
     href: govern-plugins.md
     items:
     - name: Make your plugin available
@@ -420,7 +376,7 @@ items:
       - name: Delegate Copilot connector administration
         href: connector-admin-delegation.md
 
-  - name: Monitor, update, and retire
+  - name: Monitor, update & retire
     items:
     - name: Monitor your plugin
       href: monitor-plugin.md
@@ -442,9 +398,67 @@ items:
     - name: Retire your plugin
       href: retire-plugin.md
 
-- name: Apps and APIs
+  - name: Discover & use (end users)
+    items:
+    - name: Verify access in the intended experience
+      href: deploy-plugin.md#verify-availability
+    - name: Use plugins with Copilot Cowork
+      href: /copilot/cowork/cowork-plugins
+
+- name: Build Copilot into your own app
   href: apps-agents-overview.md
   items:
+  - name: Custom engine agents
+    items:
+    - name: Overview
+      href: overview-custom-engine-agent.md
+    - name: Build a custom engine agent
+      items:
+      - name: Architecture
+        href: custom-engine-agent-architecture.md
+      - name: Convert a declarative agent
+        href: convert-declarative-agent.md
+      - name: Build with Microsoft 365 Agents SDK
+        href: m365-agents-sdk.md
+        items:
+        - name: Create and deploy agents with the SDK
+          href: create-deploy-agents-sdk.md
+        - name: Agents Toolkit workflow for Visual Studio
+          href: /microsoft-365/agents-sdk/create-new-toolkit-project-vs?context=/microsoft-365/copilot/extensibility/context
+        - name: Agents Toolkit workflow for Visual Studio Code
+          href: /microsoft-365/agents-sdk/create-new-toolkit-project-vsc?context=/microsoft-365/copilot/extensibility/context
+        - name: SDK reference
+          items:
+          - name: .NET SDK
+            href: /dotnet/api/?view=m365-agents-sdk&preserve-view=true
+          - name: JavaScript SDK
+            href: /javascript/api/overview/agents-overview?view=agents-sdk-js-latest&preserve-view=true
+          - name: Python SDK
+            href: /python/api/agent-sdk-python/agents-overview?view=agent-sdk-python-latest&preserve-view=true
+      - name: Build with Teams SDK
+        href: teams-ai-library.md
+        items:
+        - name: Create an agent with Teams CLI
+          href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript&context=/microsoft-365/copilot/extensibility/context
+        - name: Understand the code structure of agents
+          href: /microsoftteams/platform/teams-ai-library/getting-started/code-basics?tabs=controller&pivots=typescript&context=/microsoft-365/copilot/extensibility/context
+        - name: SDK reference
+          items:
+          - name: TypeScript SDK
+            href: /javascript/api/teams-sdk-typescript
+          - name: .NET SDK
+            href: /dotnet/api/?view=msteams-sdk-dotnet-latest&preserve-view=true
+      - name: Build with Copilot Studio
+        href: /microsoft-copilot-studio/fundamentals-what-is-copilot-studio?context=/microsoft-365/copilot/extensibility/context
+      - name: User experience
+        href: ux-custom-engine-agent.md
+        items:
+        - name: Asynchronous and proactive messaging
+          href: custom-engine-agent-asynchronous-flow.md
+      - name: Bring custom engine agents to Copilot
+        href: bring-agents-to-copilot.md
+      - name: Invoke actions with Semantic Kernel
+        href: graph-actions-semantic-kernel.md
   - name: Work IQ APIs
     href: work-iq/toc.yml
   - name: Microsoft 365 Copilot APIs
@@ -489,7 +503,7 @@ items:
       href: declarative-agent-manifest-1.2.md
     - name: Version 1.0
       href: declarative-agent-manifest-1.0.md
-  - name: Plugin manifest reference
+  - name: API and MCP plugin manifest reference
     items:
     - name: Version 2.4
       href: plugin-manifest-2.4.md
