@@ -70,16 +70,21 @@ In the request URL, provide the following query parameters with values.
 
 | Parameter | Type   | Description |
 |-----------|--------|-------------|
-| `period`  | String | Required. The number of previous days over which to report aggregated usage. The supported values depend on the value of `version`. For `v1`, they are: `D7`, `D30`, `D90`, `D180`, `ALL`. For `v2`, they are `D7`, `D28`, `D90`, `D180`, `ALL`. The first four values follow the format `Dn` where `n` represents the number of previous days over which to aggregate data. `ALL` indicates to report usage for all supported periods (7, 30, 90, and 180 days for `v1`, 7, 28, 90, and 180 days for `v2`). |
+| `period`  | String | Required. The number of previous days over which to report aggregated usage. The supported values are `D7`, `D28`, `D90`, `D180`, `ALL`. The first four values follow the format `Dn` where `n` represents the number of previous days over which to aggregate data. `ALL` indicates to report usage for all supported periods. |
 | `version` | String | Optional. The requested report version. The supported value is `v2` (default). |
 
-### Report versions
+### Report fields
 
-Version 1 reports contain the following information.
+Returned reports contain the following information.
 
 - Report Refresh Date
 - User Principal Name
 - Display Name
+- Report Period
+- Prompts submitted for all apps
+- Prompts submitted for Copilot Chat (work)
+- Prompts submitted for Copilot Chat (web)
+- Active Usage Days for all apps
 - Last Activity Date
 - Copilot Chat Last Activity Date
 - Microsoft Teams Copilot Last Activity Date
@@ -89,19 +94,10 @@ Version 1 reports contain the following information.
 - Outlook Copilot Last Activity Date
 - OneNote Copilot Last Activity Date
 - Loop Copilot Last Activity Date
-- Report Period
-
-Version 2 reports contain all of the information from version 1, with the following additional information.
-
-- Prompts submitted for all apps
-- Prompts submitted for Copilot Chat (work)
-- Prompts submitted for Copilot Chat (web)
-- Active Usage Days for all apps
 - Copilot Chat (work) Last Activity Date
 - Copilot Chat (web) Last Activity Date
 - Microsoft 365 Copilot Last Activity Date
 - Edge Last Activity Date
-- Copilot Agent Last Activity Date
 
 ## Request headers
 
