@@ -61,12 +61,12 @@ In the request URL, provide the following query parameters with values.
 
 | Parameter | Type   | Description |
 |-----------|--------|-------------|
-| `period`  | String | Required. The number of previous days over which to report aggregated usage. The supported values depend on the value of `version`. For `v1`, they are: `D7`, `D30`, `D90`, `D180`, `ALL`. For `v2`, they are `D7`, `D28`, `D90`, `D180`, `ALL`. The first four values follow the format `Dn` where `n` represents the number of previous days over which to aggregate data. `ALL` indicates to report usage for all supported periods (7, 30, 90, and 180 days for `v1`, 7, 28, 90, and 180 days for `v2`). |
+| `period`  | String | Required. The number of previous days over which to report aggregated usage. The supported values are `D7`, `D28`, `D90`, `D180`, `ALL`. The first four values follow the format `Dn` where `n` represents the number of previous days over which to aggregate data. `ALL` indicates to report usage for all supported periods. |
 | `version` | String | Optional. The requested report version. The supported value is `v2` (default). |
 
-### Report versions
+### Report fields
 
-Version 1 reports contain the following information.
+Returned reports contain the following information.
 
 - Report Refresh Date
 - Report Date
@@ -89,9 +89,6 @@ Version 1 reports contain the following information.
 - Copilot Chat Enabled Users
 - Copilot Chat Active Users
 - Report Period
-
-Version 2 reports contain all of the information from version 1, with the following additional information.
-
 - Edge Enabled Users
 - Edge Active Users
 - Microsoft 365 Copilot Enabled Users
