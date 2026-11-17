@@ -64,8 +64,9 @@ After generating the files, review the content and fix any issues:
 - Verify the H1 title matches the planned title.
 - Verify all questions from the content plan are included as H2 headings.
 - Verify all links point to existing files using correct relative paths.
-- Check for markdown lint errors by running: `markdownlint <file-path> --config .markdownlint.json`.
-- Fix any lint errors. Repeat until all issues are resolved.
+- Only when committing, check for markdown lint errors by running: `markdownlint <file-path> --config .markdownlint.json`.
+- Fix any lint errors before committing.
 - If there are multiple blank lines in a row, replace them with a single blank line.
 - Ensure the file ends with a single newline character.
-- Run spell checking: `cspell --config cspell.json <file-path>` and fix any issues or add valid words to cspell.json.
+- Only when committing, run spell checking: `cspell --config cspell.json <file-path>` and fix any issues or add valid words to cspell.json.
+- Otherwise, defer both commands until commit and report that validation wasn't run.

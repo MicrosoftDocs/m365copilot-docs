@@ -371,9 +371,10 @@ Do not require `.docops/output` artifacts to be staged for PR. They are review a
 - Verify relative links are correct from the changed file locations.
 - Verify includes use correct relative paths.
 - Check for multiple blank lines, trailing whitespace, hard tabs, and missing final newline.
-- Run targeted validation with `markdownlint` and `cspell` only, using the repository configs
+- Only when committing, run validation with `markdownlint` and `cspell`, using the repository configs
   (`--config .markdownlint.json` and `--config cspell.json`). Do not use `markdownlint-cli2`
   or any other validator. Report issues, distinguishing new issues from pre-existing repo noise.
+  Otherwise, defer validation until commit and report that it wasn't run.
 
 ## Output format
 

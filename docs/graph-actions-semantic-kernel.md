@@ -5,7 +5,7 @@ description: Learn how to build Semantic Kernel plugins by using Visual Studio C
 author: fabianwilliams
 ms.author: fwilliams
 ms.localizationpriority: medium
-ms.date: 06/18/2026
+ms.date: 11/16/2026
 ms.topic: article
 ---
 
@@ -93,10 +93,10 @@ Microsoft provides a set of prebuilt Copilot agent plugins that you can load int
 - **ContactsPlugin** – Manage address book entries.
 - **MessagesPlugin** – Interact with your inbox.
 - **CalendarPlugin** – Create or list meetings.
-- **DriveItemsPlugin** – Search, read, and upload files.
+- **DriveItemPlugin** – Download file content. The sample doesn't expose an upload operation.
 - **M365 Copilot Plugin (Retrieval API Plugin)** – Search Microsoft 365 file content via semantic index.
 
-You can also [create plugins](build-api-plugins-existing-api.md?tabs=toolkit) for other services using Kiota and an OpenAPI description file.
+You can also [create plugins](/plugins/build-api-plugins-existing-api?tabs=toolkit) for other services by using Kiota and an OpenAPI description file.
 
 ## Plugin capabilities and examples
 
@@ -121,7 +121,7 @@ The following table provides examples of prompts and the Copilot agent plugins t
 
 Before you start, make sure that you have:
 
-- A Microsoft Entra ID admin account
+- A Microsoft Entra account with permission to register an application. Depending on your organization's policies, an administrator might need to register the app or grant consent.
 - A Microsoft 365 developer tenant (If you don't have a developer tenant, you might qualify for one through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [.NET SDK](https://dotnet.microsoft.com/en-us/download)
@@ -130,27 +130,39 @@ Before you start, make sure that you have:
 ### Register the Microsoft Identity Platform app
 
 1. Go to **Azure Active Directory > App registrations > New registration**.
-2. Fill in the name and supported account types.
-3. Set redirect URI: `http://localhost`.
-4. Record the Application (client) ID and Directory (tenant) ID.
+1. Enter the name and select the supported account types.
+1. Set the redirect URI to `http://localhost`.
+1. Record the Application (client) ID and Directory (tenant) ID.
+1. For the sample's device code flow, under **Authentication** > **Advanced settings**, set **Allow public client flows** to **Yes**, then save. See [Configure desktop apps that call web APIs](/entra/identity-platform/scenario-desktop-app-configuration#enable-public-client-flow).
 
 ### Configure permissions
 
+The [sample authentication provider](https://github.com/microsoft/semantic-kernel/blob/main/dotnet/samples/Demos/CopilotAgentPlugins/CopilotAgentPluginsDemoSample/BearerAuthenticationProviderWithCancellationToken.cs) uses delegated device code authentication.
+
 1. Go to **API permissions > Add a permission**.
-2. Choose Microsoft Graph > Delegated permissions.
-3. Add: `Contacts.Read`, `Mail.Read`, `Calendars.Read`, `Files.Read`.
-4. Select **Grant admin consent**.
+1. Choose **Microsoft Graph** > **Delegated permissions**.
+1. Add only the permissions needed for the operations you plan to use, as described in the following table.
 
-### Configure secrets (if applicable)
+| Operation | Delegated permission |
+|---|---|
+| [Read contacts](/graph/api/user-list-contacts) | `Contacts.Read` |
+| [List email](/graph/api/user-list-messages) | `Mail.ReadBasic` for subjects, senders, and timestamps; `Mail.Read` for message bodies and summaries. |
+| [Send email](/graph/api/user-sendmail) | `Mail.Send` |
+| [List calendar events](/graph/api/calendar-list-events) | `Calendars.ReadBasic` for basic properties; `Calendars.Read` for details such as event bodies. |
+| [Create calendar events](/graph/api/user-post-events) | `Calendars.ReadWrite` also allows reading events. Meeting invitations don't require `Mail.Send`. |
+| [Download file content](/graph/api/driveitem-get-content) | `Files.Read` for the signed-in user's files. |
 
-1. Go to **Certificates & secrets > New client secret**.
-2. Copy the secret value.
+Obtain consent during sign-in if your tenant permits user consent; otherwise, request administrator approval. See [User and admin consent](/entra/identity/enterprise-apps/user-admin-consent-overview).
+
+The sample requests [`https://graph.microsoft.com/.default`](/entra/identity-platform/scopes-oidc#the-default-scope), so keep the app registration and consent grants limited to the intended operations. Loading fewer plugins doesn't narrow existing grants. If you later add permissions, obtain additional consent through your organization's approval process before retrying; rerunning the sample doesn't automatically grant them.
+
+For the Retrieval API plugin, configure its separate [permissions and prerequisites](api/ai-services/retrieval/copilotroot-retrieval.md#permissions).
 
 ### Update app settings
 
 1. Copy `appsettings.json` to `appsettings.Development.json`.
-2. Fill in: `TenantId`, `ClientId`, `ClientSecret`, `RedirectUri`.
-3. For OpenAI or Azure OpenAI: also set `ApiKey`, `ModelId`.
+1. In the `MsGraph` section, fill in `TenantId` and `ClientId` from your app registration. The sample authentication provider uses `WithDefaultRedirectUri()`; it doesn't read the `RedirectUri` setting or a `ClientSecret`.
+1. For OpenAI or Azure OpenAI: also set `ApiKey`, `ModelId`.
 
 ### Run the application
 
@@ -169,7 +181,6 @@ Follow the prompts to authenticate, choose the LLM, select plugins, and run quer
 #### Option 2: Integrate into your own app
 
 If you're integrating Copilot agent plugin functionality into your own .NET application, you need to configure your project with the appropriate libraries. This includes assemblies for configuration, authentication, logging, and support for Microsoft Graph and Semantic Kernel plugins. To ensure that your project builds successfully and has access to all required features, add the following required NuGet packages.
-
 
 ```bash
 dotnet add package Microsoft.Extensions.Configuration

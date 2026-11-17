@@ -51,7 +51,7 @@ follow `.github/instructions/interactive-demo.instructions.md`.
   before the matching request.
 - Generate the deep link through the production experience's **Share this page** action when
   available; don't invent routes or parameters.
-- Verify the visible `aka.ms/copilot.dev` link before committing.
+- Verify the visible `aka.ms/copilot.dev` link before adding it.
 - Remove an equivalent Graph Explorer call to action only when the interactive demo reproduces
   that same reader task.
 - If verification fails or production isn't ready, don't add the link and report the blocker.
@@ -406,7 +406,7 @@ Before reporting completion:
 - Verify TOC entries point to the intended files.
 - Remove multiple blank lines, trailing whitespace, and hard tabs.
 - Ensure Markdown files end with a single newline.
-- Run targeted validation with `markdownlint` and `cspell` only, using the repository configs (`markdownlint <files> --config .markdownlint.json` and `cspell --config cspell.json "<files>"`). Do not use `markdownlint-cli2` or any other validator. Report any issues that remain unresolved, distinguishing them from pre-existing repository noise.
+- Only when committing, run validation with `markdownlint` and `cspell`, using the repository configs (`markdownlint <files> --config .markdownlint.json` and `cspell --config cspell.json "<files>"`). Do not use `markdownlint-cli2` or any other validator. Report any issues that remain unresolved, distinguishing them from pre-existing repository noise. Otherwise, defer validation until commit and report that it wasn't run.
 - Derive the changed-file list mechanically by running `git --no-pager diff --stat` rather than from memory, and confirm every changed file and region matches your owned manifest subset. If the diff shows a file or region you do not own, revert that change before reporting completion.
 
 ## Completion response

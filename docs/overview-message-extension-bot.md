@@ -5,10 +5,13 @@ author: girliemac
 ms.author: timura
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 09/30/2026
+ms.date: 11/09/2026
 ---
 
 # Message extensions for Microsoft 365 Copilot
+
+> [!NOTE]
+> [Work IQ Dev Tools](https://aka.ms/wiqd/docs) is recommended for supported pro-code declarative-agent and plugin scenarios. This article describes the separate message-extension workflow, including Toolkit-based scaffolding; don't assume that WIQD provides the same templates or lifecycle.
 
 > [!IMPORTANT]
 > This article describes an existing message extension integration. Support, availability, and publishing guidance can vary by Microsoft experience and rollout. Verify the current requirements for your target experience before choosing this route.
@@ -38,7 +41,7 @@ Your users can do much more than just search queries. With the integration of me
 
 There are a few ways to build [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), but to extend the capabilities for Copilot, you need to build your extension with [Bot Framework](https://dev.botframework.com/) SDK, which is used to create various bots, including Teams bots.
 
-For development, you can use [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) for Visual Studio Code to build your message extensions. The toolkit helps you to create a project by scaffolding a template that suits your needs.
+The Toolkit-based message-extension workflow uses [Microsoft 365 Agents Toolkit](https://aka.ms/M365AgentsToolkit) for Visual Studio Code to scaffold a project from a message-extension template.
 
 ## Related content
 

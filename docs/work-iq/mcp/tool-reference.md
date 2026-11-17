@@ -5,7 +5,9 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 11/02/2026
+ms.date: 11/11/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -605,13 +607,21 @@ Dataverse and Power BI are roadmap sources, not currently supported retrieval so
 
 The authoritative response payload is in the `application/vnd.ms-workiq.retrieval` property of `structuredContent`.
 
+The payload returns grounding content and source metadata in `results`. The top-level `markdown` and `retrievalHits` fields aren't included.
+
 | Property         | Type         | Description                                                                                                  |
 |------------------|--------------|--------------------------------------------------------------------------------------------------------------|
-| `markdown`       | string       | Model-friendly grounding content with inline citations that correspond to IDs in `retrievalHits`.            |
-| `retrievalHits`  | object array | Structured source metadata, including source URLs, identifiers, and source-specific metadata when available. |
-| `resultCount`    | integer      | The number of retrieval hits.                                                                                |
+| `results`        | object array | Retrieved results. Each entry contains an `id`, model-friendly `markdown`, and source metadata when available. |
+| `resultCount`    | integer      | The number of returned results. |
+| `searchMetadata` | object       | Optional search metadata, such as query alteration information. |
 | `stoppedReason`  | string       | The terminal retrieval status, such as `completed`, `cancelled`, or `error`.                                 |
 | `conversationId` | string       | The conversation identifier, when returned.                                                                  |
+
+Use each `results[].markdown` value for model grounding and metadata from that same result to identify and link to the source. Source metadata can include URLs, entity identifiers, content-protection information, sensitivity labels, relevance scores, and source-specific `resourceMetadata` facets. An empty `results` array means no results were returned.
+
+For clients migrating from the earlier response format, `results` replaces the top-level `markdown` and `retrievalHits` properties.
+
+Read retrieved content from `structuredContent["application/vnd.ms-workiq.retrieval"].results`, not from the MCP `content` array. The `content` array can be empty even when results are returned.
 
 For request examples, capability-specific scoping, SharePoint Embedded support, response-processing guidance, and error handling, see [Use the `retrieve` tool in Work IQ MCP](retrieve.md).
 
@@ -822,13 +832,17 @@ Connector paths are discovered through `search_paths` and inspected with `get_sc
 
 ## Error handling
 
-When a tool call fails, the Work IQ MCP server returns errors with the following information:
+Check both the HTTP response and the MCP tool result to determine whether a call succeeded. An HTTP `200 OK` response means the MCP response was delivered; it doesn't guarantee that the tool completed successfully.
 
-- HTTP status code from the downstream service
-- `Retry-After` headers for throttling responses (passed through from Microsoft Graph)
-- Request correlation IDs for troubleshooting
+Tool execution failures are reported in the tool result with `isError: true` and error details in `content`. For example, a Copilot chat request through the `ask` tool can return HTTP `200 OK` while its tool result reports a downstream `429 Too Many Requests` error. This is a failed tool call, not a successful answer. Reporting tool execution failures in the result follows the [MCP specification for tool error handling](https://modelcontextprotocol.io/specification/2025-11-25/server/tools#error-handling).
 
-The server doesn't perform automatic retries. The MCP client receives errors and makes client-side retry decisions.
+Error details can include:
+
+- The HTTP status code from the downstream service.
+- A retry delay, when available. Don't assume that a downstream `Retry-After` header is always forwarded to the MCP client. A Copilot chat throttling error can report an unknown retry delay.
+- Request correlation IDs and timestamps for troubleshooting.
+
+The server doesn't perform automatic retries. The MCP client makes retry decisions based on the tool result as well as the HTTP status. For throttling, honor the retry delay when provided. If the delay is missing or unknown, use exponential backoff with jitter and a bounded retry count. Avoid immediate or unlimited retries. Retain correlation IDs and timestamps if throttling persists and you need support.
 
 ## Related content
 

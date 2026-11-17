@@ -6,7 +6,7 @@ ms.author: jasonjoh
 ms.reviewer: vermaanimesh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 07/11/2025
+ms.date: 11/13/2026
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -87,7 +87,7 @@ export async function getToken() {
   });
 
   if (!response.ok) {
-    throw new Error(`Error! status: ${response.status}`);
+    throw new Error(`Token request failed with status ${response.status}`);
   }
 
   const data = await response.json();
@@ -96,15 +96,10 @@ export async function getToken() {
 
   let accessToken;
     try {
-      accessToken = getToken();
-      if (!accessToken) {
-        console.log("No access token found, fetching a new one");
-        const tokenResponse = await getToken();
-        accessToken = tokenResponse.access_token;
-        if (!accessToken) {
-          throw new Error("Failed to obtain access token");
-        }
-        setAccessToken(accessToken);
+      const tokenResponse = await getToken();
+      accessToken = tokenResponse?.access_token;
+      if (typeof accessToken !== "string" || !accessToken.trim()) {
+        throw new Error("Failed to obtain access token");
       }
     } catch (error) {
       console.error("Error retrieving access token:", error);
@@ -137,8 +132,20 @@ export async function getToken() {
       }
     );
 
+    if (!createConversationResponse.ok) {
+      throw new Error(
+        `Create conversation request failed with status ${createConversationResponse.status}`
+      );
+    }
+
     const createConversationResponseData =
       await createConversationResponse.json();
+    if (
+      typeof createConversationResponseData?.id !== "string" ||
+      !createConversationResponseData.id.trim()
+    ) {
+      throw new Error("Create conversation response did not contain a conversation ID");
+    }
     console.log("Create conversation response", createConversationResponseData);
     const body = {
       text: "Hello proactive world",
@@ -156,6 +163,9 @@ export async function getToken() {
         body: JSON.stringify(body),
       }
     );
+    if (!response.ok) {
+      throw new Error(`Send message request failed with status ${response.status}`);
+    }
 ```
 
 The following table summarizes the proactive message process.

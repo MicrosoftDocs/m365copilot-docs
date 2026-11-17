@@ -4,8 +4,10 @@ description: Learn how Work IQ provides production-ready workplace intelligence 
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 11/03/2026
+ms.date: 11/17/2026
 ms.topic: overview
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Work IQ overview
@@ -19,6 +21,8 @@ Combining chat, context, tools, and workspaces, Work IQ supports high-volume, mu
 Work IQ API endpoints include A2A, a remote MCP server, and a REST API. Usage is independent of Microsoft 365 Copilot licensing and available through usage-based billing. Enterprise governance and cost management controls are available in the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
 Connected enterprise sources participate in Work IQ Copilot, entity, and schema tools. Connected enterprise sources refer to data sources connected in Copilot Chat.
+
+Participation in Work IQ APIs is subject to enablement by connector developers.
 
 ## Chat
 
@@ -58,6 +62,8 @@ Work IQ API access is independent of Microsoft 365 Copilot licensing and availab
 - Users without a Microsoft 365 Copilot license are billed based on usage.
 
 Work IQ cost is variable based on usage and can be managed in the [Microsoft 365 admin center](https://admin.microsoft.com/). To learn more, see [Licensing](https://aka.ms/WorkIQ/licensing).
+
+Work IQ API usage consumes Copilot Credits shared with other eligible services. For capacity planning and billing guidance, see [Manage shared Copilot Credits](/plugins/cost-considerations#manage-shared-copilot-credits).
 
 ## Related content
 

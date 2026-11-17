@@ -5,11 +5,13 @@ author: jessicaaawu
 ms.author: scritchley
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/15/2025
+ms.date: 11/09/2026
 ms.custom: [copilot-learning-hub]
 ---
 
 # Create and deploy an agent with Microsoft 365 Agents SDK
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 The Microsoft 365 Agents SDK enables you to build custom engine agents by using the AI stack of your choice, then deploy them to Microsoft 365 Copilot. With the Microsoft 365 Agents Toolkit for Visual Studio and Visual Studio Code, you can use the built-in templates to scaffold your projects.
 
@@ -29,11 +31,15 @@ You can use the Microsoft 365 Agents SDK to:
 
 You can get started with the Microsoft 365 Agents SDK in one of three ways:
 
-- [Use the Microsoft 365 Agents Toolkit](#use-the-agents-toolkit-recommended) (recommended) - Available in C#, JavaScript, and Python for Visual Studio and Visual Studio Code, the toolkit provides scaffolding and templates to help you set up your agent project.
+- [Use the Microsoft 365 Agents Toolkit](#use-the-agents-toolkit) - The retained Toolkit workflow provides scaffolding and templates for C#, JavaScript, and Python projects in Visual Studio and Visual Studio Code.
 - [Clone a sample project](#clone-a-sample-project-or-use-the-cli) - Start with a working example and open it in your preferred IDE.
 - [Use the CLI](#clone-a-sample-project-or-use-the-cli) - Generate a new agent using command-line tools.
 
-### Use the Agents Toolkit (recommended)
+<!-- markdownlint-disable MD033 -->
+<a id="use-the-agents-toolkit-recommended"></a>
+<!-- markdownlint-enable MD033 -->
+
+### Use the Agents Toolkit
 
 The Microsoft 365 Agents Toolkit helps you quickly scaffold agent projects using built-in templates for Visual Studio and Visual Studio Code.
 

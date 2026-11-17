@@ -75,5 +75,5 @@ After generating the files, review the content and fix any issues.
 - Verify every required section is present and in the correct order, all headings and tables match the template, and all JSON examples are valid.
 - Use correct relative paths for includes based on folder structure.
 - Ensure all file links point to existing files.
-- Check the **Problems** window for markdown lint errors and correct them. Repeat until there are no issues. If you cannot resolve all issues, notify the user to address them manually.
+- Only when committing, run `markdownlint` and `cspell` with the repository configs and correct any issues. Otherwise, defer validation until commit and report that it wasn't run. Report any unresolved issues.
 - If there are multiple blank lines in a row, replace them with a single blank line.

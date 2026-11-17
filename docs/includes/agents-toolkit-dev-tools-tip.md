@@ -8,4 +8,4 @@ ms.localizationpriority: medium
 <!-- markdownlint-disable MD041-->
 
 > [!TIP]
-> [Work IQ Dev Tools](https://aka.ms/wiqd/docs) (preview) and [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/overview-agents-toolkit?context=/microsoft-365/copilot/extensibility/context) provide related pro-code workflows. To choose based on your capability, package route, and target experience, see [Choose development tools for your plugin](../choose-plugin-development-tools.md).
+> **Recommended:** Start with [Work IQ Dev Tools](https://aka.ms/wiqd/docs) for supported pro-code declarative-agent and plugin scenarios. See the [WIQD quickstart](https://microsoft.github.io/wiqd/getting-started/quickstart/). Toolkit-based instructions remain available for existing projects and workflows that require them. Check [capability and target-experience support](/plugins/choose-plugin-development-tools) before choosing a tool: WIQD doesn't target custom engine agents.

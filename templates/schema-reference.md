@@ -90,7 +90,7 @@ JSON objects defined in this document support only the described properties. Unr
 
 ### String localization
 
-Localizable strings can use a localization key instead of a literal value. The syntax is `[[key_name]]`, where `key_name` is the key name in the `localizationKeys` property in your localization files. For details on localization, see [Localize your agent](localize-agents.md).
+Localizable strings can use a localization key instead of a literal value. The syntax is `[[key_name]]`, where `key_name` is the key name in the `localizationKeys` property in your localization files. For details on localization, see [Localize your agent](/plugins/localize-agents).
 
 ## {schema-type} manifest object
 
@@ -203,7 +203,7 @@ The following example shows a {schema-type} manifest file that uses most of the 
 
 <!-- For declarative agent manifest reference, use the following -->
 
-- [Write effective instructions for declarative agents](declarative-agent-instructions.md)
+- [Write effective instructions for declarative agents](/plugins/declarative-agent-instructions)
 - [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema)
 
 <!-- For API plugin manifest reference, use the following -->

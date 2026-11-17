@@ -69,6 +69,70 @@ items:
     href: resources/costmanagementroot.md
   - name: Get tenant credit balance
     href: costmanagementroot-gettenantcreditbalance.md
+- name: Credit request
+  items:
+  - name: Credit request
+    href: resources/creditrequest.md
+  - name: List
+    href: creditrequest-list.md
+  - name: Get
+    href: creditrequest-get.md
+  - name: Update
+    href: creditrequest-update.md
+  - name: Batch record decisions
+    href: creditrequest-batchrecorddecisions.md
+- name: Usage reports
+  items:
+  - name: Cost management usage report root
+    href: resources/costmanagementusagereportroot.md
+- name: User usage record
+  items:
+  - name: Cost management user usage record
+    href: resources/costmanagementuserusagerecord.md
+  - name: List
+    href: costmanagementuserusagerecord-list.md
+  - name: Get
+    href: costmanagementuserusagerecord-get.md
+- name: Group usage record
+  items:
+  - name: Cost management group usage record
+    href: resources/costmanagementgroupusagerecord.md
+  - name: List
+    href: costmanagementgroupusagerecord-list.md
+  - name: Get
+    href: costmanagementgroupusagerecord-get.md
+- name: Service usage record
+  items:
+  - name: Cost management service usage record
+    href: resources/costmanagementserviceusagerecord.md
+  - name: List
+    href: costmanagementserviceusagerecord-list.md
+  - name: Get
+    href: costmanagementserviceusagerecord-get.md
+- name: Funding usage record
+  items:
+  - name: Cost management funding usage record
+    href: resources/costmanagementfundingusagerecord.md
+  - name: List
+    href: costmanagementfundingusagerecord-list.md
+- name: User usage detail
+  items:
+  - name: Cost management user usage detail
+    href: resources/costmanagementuserusagedetail.md
+  - name: Get
+    href: costmanagementuserusagedetail-get.md
+- name: User usage service detail
+  items:
+  - name: Cost management user usage service detail
+    href: resources/costmanagementuserusageservicedetail.md
+  - name: List
+    href: costmanagementuserusageservicedetail-list.md
+- name: User usage session detail
+  items:
+  - name: Cost management user usage session detail
+    href: resources/costmanagementuserusagesessiondetail.md
+  - name: List
+    href: costmanagementuserusagesessiondetail-list.md
 - name: Resource types
   items:
   - name: All users spending policy
@@ -83,6 +147,8 @@ items:
     href: resources/costmanagementbillingmethodbalance.md
   - name: Cost management data status
     href: resources/costmanagementdatastatus.md
+  - name: Cost management usage data status
+    href: resources/costmanagementusagedatastatus.md
   - name: Cost management quantity
     href: resources/costmanagementquantity.md
   - name: Limited cost management quantity
@@ -99,3 +165,9 @@ items:
     href: resources/percentagecostmanagementalertthreshold.md
   - name: Absolute cost management alert threshold
     href: resources/absolutecostmanagementalertthreshold.md
+  - name: Credit request update item
+    href: resources/creditrequestupdateitem.md
+  - name: Credit request update response
+    href: resources/creditrequestupdateresponse.md
+  - name: Credit request update response item
+    href: resources/creditrequestupdateresponseitem.md

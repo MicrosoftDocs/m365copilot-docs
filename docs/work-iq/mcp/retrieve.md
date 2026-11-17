@@ -5,7 +5,7 @@ author: MSFTgraph-sorceress
 ms.author: hstoffels
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 10/13/2026
+ms.date: 11/11/2026
 ---
 
 <!-- cSpell:ignore rerank -->
@@ -216,22 +216,32 @@ structuredContent
   -> application/vnd.ms-workiq.retrieval
 ```
 
-A successful payload has the following shape.
+The response returns grounding content and source metadata together in each `results` entry.
+
+Read retrieved content from `structuredContent["application/vnd.ms-workiq.retrieval"].results`, not from the MCP `content` array. The `content` array can be empty even when results are returned.
+
+### Structured results
+
+The `results` array replaces the earlier top-level `markdown` and `retrievalHits` properties. Update clients to read each result's `markdown` and source metadata from the same entry.
+
+The following example shows a successful response with an empty MCP `content` array.
 
 ```json
 {
+  "content": [],
   "structuredContent": {
     "application/vnd.ms-workiq.retrieval": {
-      "markdown": "Project Northwind requires phishing-resistant authentication... [^h1]",
-      "retrievalHits": [
+      "results": [
         {
           "id": "h1",
+          "markdown": "Project Northwind requires phishing-resistant authentication... [^h1]",
           "resourceId": "01ABC...",
           "webUrl": "https://contoso.sharepoint.com/sites/ProjectNorthwind/...",
           "entityUrl": "/drives/{drive-id}/items/{item-id}",
-          "entityType": "document",
+          "entityType": "Files",
           "driveId": "b!example",
           "itemId": "01ABC...",
+          "contentProtection": "allowed",
           "resourceMetadata": {
             "document": {
               "title": "Customer identity requirements",
@@ -246,24 +256,53 @@ A successful payload has the following shape.
         }
       ],
       "resultCount": 1,
+      "searchMetadata": {
+        "queryAlterationResponse": {
+          "alteredQuery": "Project Northwind customer identity requirements"
+        }
+      },
       "stoppedReason": "completed",
       "conversationId": "d488527d-9d34-4e47-a0a8-9c58e46d7252"
     }
-  }
+  },
+  "isError": false
 }
 ```
 
-The exact optional metadata varies by source type.
+| Property | Type | Description |
+|---|---|---|
+| `results` | object array | Retrieved results, each containing Markdown and source metadata. An empty array represents no results. |
+| `resultCount` | integer | The number of returned results. |
+| `searchMetadata` | object | Optional search metadata. For example, `queryAlterationResponse.alteredQuery` can describe an altered query. The available fields can vary. |
+| `stoppedReason` | string | The terminal retrieval status: `completed`, `cancelled`, or `error`. |
+| `conversationId` | string | The conversation identifier, when returned. |
+
+Each `results` entry can contain the following properties. Metadata fields depend on the source type and are included only when available.
+
+| Property | Type | Description |
+|---|---|---|
+| `id` | string | The source identifier used by inline citations such as `[^h1]`. |
+| `markdown` | string | Model-friendly grounding content for this result. |
+| `resourceId` | string | The source resource identifier, when available. |
+| `webUrl` | string | The source URL, when available. |
+| `entityUrl` | string | A relative Microsoft Graph URL for the source entity, when available. |
+| `entityType` | string | The source entity category, such as `Files`. |
+| `driveId`, `itemId` | string | Microsoft Graph navigation identifiers for files, when available. |
+| `chatId`, `teamId`, `channelId`, `messageId`, `replyToId` | string | Microsoft Graph navigation identifiers for Teams messages, when available. |
+| `contentProtection` | string | The content-protection evaluation result, when available. Don't treat a missing, failed, blocked, or unrecognized value as an allow decision. |
+| `resourceMetadata` | object | Source-specific metadata facets, such as `document`, `email`, `meeting`, `video`, `web`, `chat`, or `image`. |
+| `sensitivityLabel` | object | Sensitivity-label metadata for the source, when available. |
+| `relevanceScore` | number | The source relevance score, when available. |
 
 ### Use Markdown for model grounding
 
-Pass the `markdown` value to the model as grounding context. The Markdown contains inline references such as `[^h1]` that correspond to `retrievalHits[].id`.
+Pass each `results[].markdown` value to the model as grounding context. Use metadata from the same result to identify and link to the source, evaluate results, and record audit data. An empty `results` array means no results were returned.
 
 Don't parse the Markdown to obtain stable application fields. Its format is optimized for model consumption and can change.
 
-### Use retrieval hits for application logic
+### Use source metadata for application logic
 
-Use `retrievalHits` for programmatic operations such as:
+Use `results` for programmatic operations such as:
 
 - Resolving citations to source URLs.
 - Displaying source titles and authors.
@@ -310,8 +349,8 @@ For reliable agentic workflows:
 1. Discover the `retrieve` schema through `tools/list`.
 1. Choose `grounding` when the request is fully satisfiable from the Microsoft 365 index; otherwise use `copilot`.
 1. Use capabilities for explicit source constraints.
-1. Pass `markdown` to the model.
-1. Use `retrievalHits` for code, citations, evaluation, and auditing.
+1. Pass each result's `markdown` to the model and use metadata from that same result to identify and link to the source.
+1. Use `results` for code, citations, evaluation, and auditing.
 1. Preserve source security metadata such as sensitivity labels.
 1. Treat an empty result as a valid retrieval outcome, not automatically as a system failure.
 1. Surface policy denials and authentication failures instead of retrying them as transient errors.

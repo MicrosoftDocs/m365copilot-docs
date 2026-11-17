@@ -1,14 +1,15 @@
 ### YamlMime:Landing
 
-title: Extending Microsoft 365 Copilot with plugins
-summary: Create a plugin from existing capabilities with Work IQ Dev Tools, or follow the complete lifecycle to prepare, build, test, publish, govern, update, and retire a plugin.
+title: Extend Microsoft 365 Copilot with Plugins
+summary: Build and manage plugins for Microsoft 365 Copilot, from planning through publishing and retirement.
 
 metadata:
-  title: Extending Microsoft 365 Copilot with plugins
-  description: Create a plugin from existing capabilities with Work IQ Dev Tools, or follow the complete plugin lifecycle from planning and development through publishing, governance, updates, and retirement.
+  title: Extend Microsoft 365 Copilot with Plugins
+  description: Build and manage plugins for Microsoft 365 Copilot, from planning and development through testing, publishing, governance, and retirement.
   author: lauragra
   ms.author: jasonjoh
-  ms.date: 09/30/2026
+  ms.date: 11/11/2026
+  ai-usage: ai-assisted
   ms.topic: landing-page
   ms.custom:
     - copilot-extensibility
@@ -16,44 +17,72 @@ metadata:
   ms.collection: m365-copilot-extensibility
 
 landingContent:
-  - title: Get started with plugins
+  - title: Prepare
     linkLists:
-      - linkListType: get-started
+      - linkListType: overview
         links:
           - text: What is a plugin?
-            url: plugins-overview.md
-          - text: "Quickstart: Create your first plugin with Work IQ Dev Tools"
-            url: quickstart-plugin.md
-          - text: Prepare to build your plugin
-            url: planning-guide.md
+            url: /plugins/plugins-overview
+          - text: Compare plugins and Copilot-powered apps
+            url: overview.md
+          - text: Browse the Copilot Plugin Catalog
+            url: https://aka.ms/CopilotPluginCatalog
+      - linkListType: how-to-guide
+        links:
+          - text: Plan your plugin
+            url: /plugins/planning-guide
+          - text: Choose capabilities
+            url: /plugins/choose-plugin-components
+          - text: Choose development tools
+            url: /plugins/choose-plugin-development-tools
 
-  - title: Build and test plugins
+  - title: Build or reuse
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: "Quickstart: Package an existing declarative agent as a plugin with Work IQ Dev Tools"
+            url: /plugins/quickstart-plugin
           - text: Build or reuse capabilities
-            url: build-reuse-plugin.md
-          - text: Package and test
-            url: package-plugin.md
-          - text: Validate and test your plugin
-            url: validate-plugin.md
+            url: /plugins/build-reuse-plugin
+          - text: Build a plugin with Work IQ Dev Tools
+            url: https://microsoft.github.io/wiqd/getting-started/build-a-plugin/
 
-  - title: Publish and make plugins available
+  - title: Package & test
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Package and test
+            url: /plugins/package-plugin
+          - text: Validate and test your plugin
+            url: /plugins/validate-plugin
+
+  - title: Publish & distribute
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Publish or share
-            url: publish.md
-          - text: Make available and govern
-            url: govern-plugins.md
+            url: /plugins/publish
+          - text: Configure plugin CI/CD with Work IQ Dev Tools
+            url: /plugins/plugin-ci-cd
 
-  - title: Monitor, update, and retire plugins
+  - title: Make available, govern & use
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Make your plugin available
+            url: /plugins/deploy-plugin
+          - text: Govern plugin access and connections
+            url: /plugins/manage
+          - text: Use plugins with Copilot Cowork
+            url: /copilot/cowork/cowork-plugins
+
+  - title: Monitor, update & retire
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Monitor your plugin
-            url: monitor-plugin.md
+            url: /plugins/monitor-plugin
           - text: Improve and update your plugin
-            url: improve-plugin.md
+            url: /plugins/improve-plugin
           - text: Retire your plugin
-            url: retire-plugin.md
+            url: /plugins/retire-plugin

@@ -4,11 +4,13 @@ description: Introduction of Microsoft 365 Agents SDK to build custom engine age
 author: girliemac
 ms.author: timura
 ms.localizationpriority: medium
-ms.date: 07/21/2025
+ms.date: 11/09/2026
 ms.topic: overview
 ---
 
 # Build custom engine agents with Microsoft 365 Agents SDK
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 **Microsoft 365 Agents SDK** is a comprehensive framework for building full-stack, multi-channel agents that operate seamlessly across Microsoft 365 Copilot, Teams, third-party platforms, custom applications, and websites. It integrates effortlessly with AI services like Azure AI Foundry and orchestration layers such as Semantic Kernel.
 

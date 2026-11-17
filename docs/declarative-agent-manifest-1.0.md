@@ -177,7 +177,7 @@ The OneDrive and SharePoint object contains the following properties.
 | `items_by_sharepoint_ids` | Array of [Items by SharePoint IDs object](#items-by-sharepoint-ids-object) | Optional. An array of objects that identify SharePoint or OneDrive sources using IDs. If you omit both the `items_by_sharepoint_ids` and the `items_by_url` properties, the declarative agent can access all OneDrive and SharePoint sources in the organization. |
 | `items_by_url`            | Array of [Items by URL object](#items-by-url-object)                       | Optional. An array of objects that identify SharePoint or OneDrive sources by URL. If you omit both the `items_by_sharepoint_ids` and the `items_by_url` properties, the declarative agent can access all OneDrive and SharePoint sources in the organization. |
 
-For information about how to optimize SharePoint content for Copilot, see [Optimize content retrieval](optimize-content-retrieval.md).
+For information about how to optimize SharePoint content for Copilot, see [Optimize content retrieval](/plugins/optimize-content-retrieval).
 
 ##### Items by SharePoint IDs object
 
@@ -191,7 +191,7 @@ The items by SharePoint IDs object contains the following properties.
 | `unique_id` | String | Optional. A unique GUID identifier used to scope a folder or file in the document library specified by the `list_id` property. |
 
 > [!TIP]
-> For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieve capability IDs for the declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For information about how to get the unique identifiers for a SharePoint or OneDrive resource, see [Retrieve capability IDs for the declarative agent manifest](/plugins/declarative-agent-capabilities-ids).
 
 ##### Items by URL object
 
@@ -223,7 +223,7 @@ The connection object contains the following property.
 | `connection_id` | String | Required. The unique identifier of the Copilot connector. |
 
 > [!TIP]
-> For instructions on getting the unique identifier for a Copilot connector, see [Retrieve capability IDs for the declarative agent manifest](declarative-agent-capabilities-ids.md).
+> For instructions on getting the unique identifier for a Copilot connector, see [Retrieve capability IDs for the declarative agent manifest](/plugins/declarative-agent-capabilities-ids).
 
 ### Conversation starters object
 
@@ -313,5 +313,5 @@ The following example shows a declarative agent manifest file that uses most of 
 
 ## Related content
 
-- [Write effective instructions for declarative agents](declarative-agent-instructions.md)
+- [Write effective instructions for declarative agents](/plugins/declarative-agent-instructions)
 - [Microsoft 365 app manifest reference](/microsoft-365/extensibility/schema)

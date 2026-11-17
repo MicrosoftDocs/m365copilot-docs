@@ -5,7 +5,7 @@ description: Use the Copilot APIs to securely access Microsoft 365 Copilot capab
 author: lramosvea
 ms.author: lramosvea
 ms.topic: article
-ms.date: 08/06/2026
+ms.date: 11/09/2026
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ---
@@ -38,6 +38,7 @@ The following table lists the APIs and describes their capabilities and scenario
 | [Chat API (preview)](api/ai-services/chat/overview.md) | Enable conversational experiences powered by Microsoft 365 Copilot in your custom applications. | Integrate Microsoft 365 Copilot into your enterprise applications that can answer questions, perform tasks, and provide guidance based on Microsoft 365 data and user context. These interfaces can improve user productivity by bringing AI capabilities directly into the tools they use every day, from custom portals to mobile apps. |
 | [Copilot usage reports API](api/admin-settings/reports/resources/copilotreportroot.md) | Query user counts and usage data for Microsoft 365 Copilot in your organization. | Build reports to track the adoption of Microsoft 365 Copilot by your users. |
 | [Package management API](api/admin-settings/package/overview.md) | View and manage agents across your organization. | Create an inventory of all agents within your organization. |
+| [Cost Management API (preview)](api/admin-settings/cost-management/overview.md) | View your organization's Copilot credit balance, manage spending policies and threshold alerts, check per-user consumption, and review users' requests for Copilot credits. | Build a cost governance dashboard that caps Copilot credit spending for a pilot group, alerts admins as usage approaches the limit, diagnoses why a user can't consume a service, and approves pending credit requests in bulk. |
 
 > [!NOTE]
 > The Chat API returns textual responses; it answers questions and provides guidance but doesn't perform actions like creating files, sending emails, or scheduling meetings. For details, see the Chat API [known limitations](api/ai-services/chat/overview.md#known-limitations).
@@ -74,7 +75,7 @@ The `id` field in the [app manifest](agents-are-apps.md#app-manifest) and the En
 For details on the app package, manifest fields, and distribution, see [Agents are apps for Microsoft 365](agents-are-apps.md). For a full explanation of how authentication and organizational policies apply to Copilot API calls, see [Security and authentication for Microsoft 365 Copilot APIs](copilot-apis-security-authentication.md).
 
 > [!NOTE]
-> **Work IQ Dev Tools (preview)** — If you're building a declarative agent, `wiqd` can reduce this setup step: with named environments, `wiqd agent provision` performs the Microsoft 365 app registration for the agent and writes the resulting IDs back into the environment file, so app registration isn't a manual first step. This process applies to declarative agent provisioning, not to Copilot API clients in general. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
+> **Work IQ Dev Tools** — If you're building a declarative agent, `wiqd` can reduce this setup step: with named environments, `wiqd agent provision` performs the Microsoft 365 app registration for the agent and writes the resulting IDs back into the environment file, so app registration isn't a manual first step. This process applies to declarative agent provisioning, not to Copilot API clients in general. For more information, see the [Work IQ Dev Tools documentation](https://aka.ms/wiqd/docs).
 
 ## REST API integration
 
@@ -92,5 +93,5 @@ Microsoft Graph APIs generally provide CRUD operations on Microsoft 365 data. Th
 - [Call AI insight](api/ai-services/meeting-insights/resources/callaiinsight.md)
 - [Custom engine agents for Microsoft 365](overview-custom-engine-agent.md)
 - [Security and authentication for Microsoft 365 Copilot APIs](copilot-apis-security-authentication.md)
-- [Licensing and cost considerations for Copilot extensibility options](cost-considerations.md)
-- [Connect to other agents from a declarative agent](declarative-agent-connected-agent.md)
+- [Licensing and cost considerations for Copilot extensibility options](/plugins/cost-considerations)
+- [Connect to other agents from a declarative agent](/plugins/declarative-agent-connected-agent)

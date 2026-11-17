@@ -6,11 +6,13 @@ ms.author: jasonjoh
 ms.reviewer: vermaanimesh
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 03/24/2026
+ms.date: 11/09/2026
 ms.custom: [copilot-learning-hub]
 ---
 
 # Convert your declarative agent to a custom engine agent
+
+[!INCLUDE [agents-toolkit-dev-tools-tip](includes/agents-toolkit-dev-tools-tip.md)]
 
 Microsoft 365 Copilot provides a migration capability that allows you to convert declarative agents, including message extensions that were promoted to declarative agents, to custom engine agents. When you convert your declarative agent to a custom engine agent, you have full control of the orchestration, AI models, and data integrations and can take advantage of advanced functionality to create more sophisticated workflows.
 
@@ -20,10 +22,10 @@ This article describes the steps to take to convert a declarative agent to a cus
 
 The steps in this article require you to have the following prerequisites:
 
-- An existing declarative agent built with the [Microsoft 365 Agents Toolkit](build-declarative-agents.md).
+- An existing declarative agent built with the [Microsoft 365 Agents Toolkit](/plugins/build-declarative-agents).
 
     > [!Note]
-    > Agents built using [Microsoft 365 Copilot](agent-builder.md) aren't currently supported.
+    > Agents built using [Microsoft 365 Copilot](/plugins/agent-builder) aren't currently supported.
 
 - A custom bot and the bot ID. For information about how to create a custom bot, see [Bots and agents](/microsoftteams/platform/bots/build-a-bot).
 - Visual Studio Code with the Microsoft 365 Agents Toolkit extension installed.
@@ -172,6 +174,6 @@ If users pinned the agent, they need to pin the agent again after you publish th
 ## Related content
 
 - [Custom engine agent overview](overview-custom-engine-agent.md)
-- [Agents overview](agents-overview.md)
+- [Agents overview](/plugins/agents-overview)
 - [Upgrade your bot to a custom engine agent](/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started)
 - [App manifest](/microsoftteams/platform/resources/schema/manifest-schema)
