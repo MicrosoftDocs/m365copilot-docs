@@ -8,24 +8,30 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Bootstrap the environment
 
-* Verify PowerShell Core is available: `pwsh --version`
-* Verify Node.js is available: `node --version && npm --version`
-* Install required validation tools: `npm install -g markdownlint-cli cspell`
+- Verify PowerShell Core is available: `pwsh --version`
+- Verify Node.js is available: `node --version && npm --version`
+- Install required validation tools: `npm install -g markdownlint-cli cspell`
 
 ### Essential validation workflow
 
-* Run only `markdownlint` and `cspell`, using the repository configs, immediately before committing.
-* Don't run validation commands during drafting, editing, or review, or when handing off uncommitted changes. Report that validation was deferred until commit.
-* Don't rerun validation just to create a pull request if the committed content hasn't changed.
-* Don't run the unused image cleanup script as part of Copilot or agent work.
-* This policy applies to all agents and prompts in this repository. Content review and source verification remain part of authoring; they don't require additional validation tools.
+- Run only `markdownlint` and `cspell`, using the repository configs, immediately before committing. Validate only Markdown files you added or modified for the current task, not the entire repository or unrelated pre-existing changes.
+- Don't run validation commands during drafting, editing, or review, or when handing off uncommitted changes. Report that validation was deferred until commit.
+- Don't rerun validation just to create a pull request if the committed content hasn't changed.
+- Don't run the unused image cleanup script as part of Copilot or agent work.
+- This policy applies to all agents and prompts in this repository. Content review and source verification remain part of authoring; they don't require additional validation tools.
 
 ### Content authoring
 
-* Use Visual Studio Code with the Learn Authoring Pack extension for real-time validation
-* Follow the [Microsoft Writing Style Guide](https://learn.microsoft.com/style-guide/welcome/)
-* All content files use YAML front matter with required metadata fields
-* Use dashes (-) for unordered lists, not asterisks (*) to avoid MD004 lint errors
+- Use Visual Studio Code with the Learn Authoring Pack extension for real-time validation
+- Follow the [Microsoft Writing Style Guide](https://learn.microsoft.com/style-guide/welcome/)
+- All content files use YAML front matter with required metadata fields
+- Use dashes (-) for unordered lists, not asterisks (*) to avoid MD004 lint errors
+
+### Author metadata for new files
+
+- When creating a new file that requires author metadata, set `author` to the current user's GitHub username and `ms.author` to the current user's email alias (not their full email address).
+- Use known values for the user you're working with. If either value is unknown, ask the user for the missing value before creating the file. Don't guess or assume the email alias matches the GitHub username.
+- Don't copy `author` or `ms.author` values from existing files, templates, or source material. This rule applies to all agents and prompts in this repository.
 
 ### Heading anchors and cross-links
 
@@ -38,62 +44,64 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Required validation before every commit
 
-1. `markdownlint docs --config .markdownlint.json` — must pass with zero errors
-2. `cspell --config cspell.json "docs/**/*.md"` — fix spelling or add words to cspell.json
+1. `markdownlint --config .markdownlint.json <modified-markdown-files>` — must pass with zero errors
+2. `cspell --config cspell.json <modified-markdown-files>` — fix spelling or add words to cspell.json
+
+Replace `<modified-markdown-files>` with an explicit, space-separated list of quoted paths to Markdown files you added or modified for the current task. Exclude deleted files and unrelated pre-existing changes. Don't pass directories or repository-wide globs. If you haven't added or modified any Markdown files, skip both commands.
 
 These are the only required local validation commands. Don't require a clean VS Code Problems window or run additional validation scripts. Automated CI checks remain unchanged.
 
 ### Content quality requirements
 
-* OpenPublishing build must succeed (runs automatically in CI)
-* No hard tabs (use spaces for indentation)
-* Files must end with a single newline character
-* No trailing whitespace
-* Proper heading hierarchy (no skipped heading levels)
+- OpenPublishing build must succeed (runs automatically in CI)
+- No hard tabs (use spaces for indentation)
+- Files must end with a single newline character
+- No trailing whitespace
+- Proper heading hierarchy (no skipped heading levels)
 
 ### Common lint fixes
 
-* MD047: Add single newline at end of file
-* MD009: Remove trailing spaces
-* MD004: Use dash (-) instead of asterisk (*) for unordered lists
-* MD033: Avoid inline HTML unless specifically allowed in .markdownlint.json
-* MD032: Add blank lines around lists
+- MD047: Add single newline at end of file
+- MD009: Remove trailing spaces
+- MD004: Use dash (-) instead of asterisk (*) for unordered lists
+- MD033: Avoid inline HTML unless specifically allowed in .markdownlint.json
+- MD032: Add blank lines around lists
 
 ## Repository Structure
 
 ### Key directories
 
-* `docs/` — Main documentation content (Markdown files)
-* `docs/includes/` — Reusable content snippets and shared manifests
-* `docs/assets/images/` — All documentation images
-* `docs/assets/scripts/` — PowerShell utility scripts
-* `docs/api/` — API documentation with zone pivots
-* `.github/workflows/` — GitHub Actions (EOL blocker validation)
-* `scripts/` — Repository maintenance scripts
+- `docs/` — Main documentation content (Markdown files)
+- `docs/includes/` — Reusable content snippets and shared manifests
+- `docs/assets/images/` — All documentation images
+- `docs/assets/scripts/` — PowerShell utility scripts
+- `docs/api/` — API documentation with zone pivots
+- `.github/workflows/` — GitHub Actions (EOL blocker validation)
+- `scripts/` — Repository maintenance scripts
 
 ### Important configuration files
 
-* `.markdownlint.json` — Markdown linting rules and exceptions
-* `cspell.json` — Spell checking dictionary and configuration
-* `docs/docfx.json` — DocFX build configuration
-* `.openpublishing.publish.config.json` — OpenPublishing build settings
-* `docs/TOC.yml` — Table of contents structure
+- `.markdownlint.json` — Markdown linting rules and exceptions
+- `cspell.json` — Spell checking dictionary and configuration
+- `docs/docfx.json` — DocFX build configuration
+- `.openpublishing.publish.config.json` — OpenPublishing build settings
+- `docs/TOC.yml` — Table of contents structure
 
 ### Content types in this repository
 
-* **Conceptual articles** — Overview and guidance content
-* **How-to guides** — Step-by-step tutorials
-* **API reference** — Generated and hand-authored API documentation
-* **Sample manifests** — JSON examples in `docs/includes/sample-manifests/`
-* **Includes** — Reusable content snippets
-* **Assets** — Images, scripts, and supporting files
+- **Conceptual articles** — Overview and guidance content
+- **How-to guides** — Step-by-step tutorials
+- **API reference** — Generated and hand-authored API documentation
+- **Sample manifests** — JSON examples in `docs/includes/sample-manifests/`
+- **Includes** — Reusable content snippets
+- **Assets** — Images, scripts, and supporting files
 
 ## Common Tasks
 
 ### Adding new documentation
 
 1. Create Markdown file in appropriate `docs/` subdirectory
-2. Add required YAML front matter (title, description, author, ms.author, ms.topic, ms.localizationpriority, ms.date)
+2. Add required YAML front matter (title, description, author, ms.author, ms.topic, ms.localizationpriority, ms.date), following **Author metadata for new files** for `author` and `ms.author`.
 3. Update `docs/TOC.yml` to include new file in navigation
 4. Add any new images to `docs/assets/images/` with descriptive names
 5. Immediately before committing, run the two commands under **Required validation before every commit**.
@@ -133,20 +141,20 @@ These are the only required local validation commands. Don't require a clean VS 
 
 ## Expected Timing and Tolerances
 
-* **markdownlint validation**: 2-3 seconds for full repository. NEVER CANCEL.
-* **cspell validation**: 3-4 seconds for full repository. NEVER CANCEL.
-* **VS Code Learn Authoring Pack**: Real-time validation, no waiting required.
-* **OpenPublishing build**: Runs in CI, typically 5-10 minutes. Cannot be run locally.
+- **markdownlint validation**: Runtime depends on the number of modified Markdown files. NEVER CANCEL.
+- **cspell validation**: Runtime depends on the number of modified Markdown files. NEVER CANCEL.
+- **VS Code Learn Authoring Pack**: Real-time validation, no waiting required.
+- **OpenPublishing build**: Runs in CI, typically 5-10 minutes. Cannot be run locally.
 
 ## Troubleshooting
 
 ### Common issues and solutions
 
-* **"Unknown word" in cspell**: Add to cspell.json or fix spelling
-* **MD004 lint error**: Use dash (-) instead of asterisk (*) for lists
-* **Missing newline**: Add single blank line at end of file
-* **Hard tabs detected**: Replace tabs with spaces (VS Code: View -> Command Palette -> "Convert Indentation to Spaces")
-* **OpenPublishing build failure**: Check error messages in PR status checks
+- **"Unknown word" in cspell**: Add to cspell.json or fix spelling
+- **MD004 lint error**: Use dash (-) instead of asterisk (*) for lists
+- **Missing newline**: Add single blank line at end of file
+- **Hard tabs detected**: Replace tabs with spaces (VS Code: View -> Command Palette -> "Convert Indentation to Spaces")
+- **OpenPublishing build failure**: Check error messages in PR status checks
 
 ### When validation fails
 
@@ -156,9 +164,9 @@ These are the only required local validation commands. Don't require a clean VS 
 
 ## Working with GitHub Copilot in this repository
 
-* Run only `markdownlint` and `cspell` immediately before committing; otherwise defer validation
-* Focus on content quality and adherence to Microsoft style guidelines
-* Use the repository structure to understand where to place new content
-* Leverage includes for reusable content across multiple articles
-* Remember this is documentation-only - no application code to build or run
-* For every new or substantially revised Copilot API overview, request example, quickstart, Work IQ article, or MCP tool reference, follow `.github/instructions/interactive-demo.instructions.md`. Add an applicable interactive demo link only after verifying it against production, or record why no matching experience exists.
+- Run only `markdownlint` and `cspell` on Markdown files you added or modified for the current task immediately before committing; otherwise defer validation
+- Focus on content quality and adherence to Microsoft style guidelines
+- Use the repository structure to understand where to place new content
+- Leverage includes for reusable content across multiple articles
+- Remember this is documentation-only - no application code to build or run
+- For every new or substantially revised Copilot API overview, request example, quickstart, Work IQ article, or MCP tool reference, follow `.github/instructions/interactive-demo.instructions.md`. Add an applicable interactive demo link only after verifying it against production, or record why no matching experience exists.
