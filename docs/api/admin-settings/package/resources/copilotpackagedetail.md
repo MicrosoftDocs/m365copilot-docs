@@ -4,17 +4,15 @@ description: Reference for the copilotPackageDetail resource in the Copilot Pack
 author: pomuth
 ms.author: pomuth
 ms.topic: reference
+doc_type: resourcePageType
 ms.localizationpriority: high
-ms.date: 10/29/2026
+ms.date: 11/17/2026
 zone_pivot_groups: graph-api-versions
 ---
 
 <!-- cSpell: ignore pomuth -->
 
 # copilotPackageDetail resource type
-
-:::zone pivot="graph-v1"
-:::zone-end
 
 :::zone pivot="graph-preview"
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
@@ -44,6 +42,7 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 | [Update](../copilotpackagedetail-update.md) | `copilotPackageDetail`                                          | Update a `copilotPackageDetail` object.                                   |
 | [Block](../copilotpackage-block.md)         | None                                                            | Block a Copilot package to prevent its usage.                             |
 | [Reassign](../copilotpackage-reassign.md)   | None                                                            | Reassign ownership of a Copilot package to a different user.              |
+| [Reject](../copilotpackage-reject.md)       | None                                                            | Reject a pending package title submission.                                |
 | [Unblock](../copilotpackage-unblock.md)     | None                                                            | Unblock a Copilot package to allow its usage.                             |
 
 :::zone-end
@@ -52,8 +51,8 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 
 | Property                   | Type                                                                                     | Description                                                                                                                                                                           |
 |----------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `activeUsers`              | Int32                                                                                    | The number of active users in the last 30 days.                                                                                                                                       |
 | `acquireUsersAndGroups`    | [packageAccessEntity](packageaccessentity.md) collection                                 | Collection of users and groups that have acquired or installed this package for use within the tenant.                                                                                |
+| `activeUsers`              | Int32                                                                                    | The number of active users in the last 30 days.                                                                                                                                       |
 | `agentIdentityId`          | String                                                                                   | Identifier of the Microsoft Entra agent identity associated with the Copilot package. Read-only. Inherited from copilotPackage.                                                       |
 | `allowedUsersAndGroups`    | [packageAccessEntity](packageaccessentity.md) collection                                 | Collection of users and groups that are currently permitted to access and use this package within the tenant.                                                                         |
 | `appId`                    | String                                                                                   | Associated Azure AD application registration ID for this package. Inherited from copilotPackage.                                                                                      |
@@ -77,6 +76,7 @@ Extended entity that inherits from [copilotPackage](copilotpackage.md) and provi
 | `owners`                   | [packageAccessEntity](packageaccessentity.md) collection                                 | Collection of accountable users and groups that own the package. Not updatable after creation. Inherited from copilotPackage.                                                         |
 | `platform`                 | String                                                                                   | The host platform this package targets (e.g., teams, outlook, web). Inherited from copilotPackage.                                                                                    |
 | `publisher`                | String                                                                                   | Name of the organization or entity that published this package. Inherited from copilotPackage.                                                                                        |
+| `requestMetadata`          | [copilotPackageRequestMetadata](copilotpackagerequestmetadata.md)                        | Nullable request details when loaded. Null on a regular detail read doesn't prove that no pending requests exist. See the linked type for version-specific availability and loading requirements. |
 | `requestStatus`            | [copilotPackageRequestStatus](copilotpackage.md#copilotpackagerequeststatus-enumeration) | Nullable. Status of the request associated with this package. Supports `$filter` with `eq` on [List packages](../copilotpackages-list.md). Inherited from copilotPackage.             |
 | `requestType`              | [copilotPackageRequestType](copilotpackage.md#copilotpackagerequesttype-enumeration)     | Nullable. Kind of request associated with this package. Supports `$filter` with `eq` on [List packages](../copilotpackages-list.md). Inherited from copilotPackage.                   |
 | `sensitivity`              | String                                                                                   | Sensitivity classification level indicating data handling requirements or compliance restrictions for the package.                                                                    |
@@ -141,6 +141,9 @@ The following JSON representation shows the resource type.
   ],
   "platform": "String",
   "publisher": "String",
+  "requestMetadata": {
+    "@odata.type": "microsoft.graph.copilotPackageRequestMetadata"
+  },
   "requestStatus": "String",
   "requestType": "String",
   "sensitivity": "String",

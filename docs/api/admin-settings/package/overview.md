@@ -5,7 +5,7 @@ author: pomuth
 ms.author: pomuth
 ms.topic: overview
 ms.localizationpriority: high
-ms.date: 10/30/2026
+ms.date: 11/13/2026
 ---
 
 <!-- cSpell: ignore pomuth -->
@@ -25,6 +25,8 @@ A package represents an agent or a tool, such as a plugin, MCP server, or skill,
   - Element types contained in the package, including agent types (bots, declarative agents, and more) and tool types (plugins, MCP servers, and skills).
   - Request status or request type, to review the agents and tools that users in the organization requested.
 - Retrieve more metadata for a specific agent or tool.
+- Inspect explicit assignees and creation times for an agent request when retrieving package details.
+- Reject a pending package title submission by its staged title and version (preview).
 - Block, unblock, and reassign ownership of packages.
 
 ## Example scenarios
@@ -32,6 +34,7 @@ A package represents an agent or a tool, such as a plugin, MCP server, or skill,
 - Organization admin retrieves the inventory of all agents.
 - Admin reviews package details, including availability and deployment status.
 - Admin reviews the agents that users requested, so that they can triage pending demand.
+- Admin inspects an agent request's explicit assignees and rejects a pending package title submission in beta.
 - Admin retrieves an inventory of the plugins, MCP servers, and skills in the organization.
 - Admin reviews pending requests for MCP servers.
 - Admin reviews agent element details, including declarativeAgent or customEngineAgent element object.
@@ -50,6 +53,7 @@ A package represents an agent or a tool, such as a plugin, MCP server, or skill,
 | [Reassign](copilotpackage-reassign.md) (preview)                            | POST `/copilot/admin/catalog/packages/{id}/reassign` | Reassign ownership of a package to a different user. |
 | [List package requests](copilotpackages-list.md#filter-by-request-properties) | GET `/copilot/admin/catalog/packages`                | Get active requests for agents and tools in the organization. |
 | [Get agent request details](copilotpackagedetail-get.md)                    | GET `/copilot/admin/catalog/packages/{id}`           | Get detailed metadata for a specific agent request.  |
+| [Reject package title](copilotpackage-reject.md) (preview)                  | POST `/copilot/admin/catalog/packages/{packageId}/reject` | Reject a pending staged package title/version submission. |
 
 ## Resources
 
