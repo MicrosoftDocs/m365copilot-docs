@@ -32,7 +32,7 @@ Chat is optimized for conversational intelligence. Work IQ supports A2A for agen
 
 Context is optimized by eliminating orchestration overhead. Work IQ assembles and grounds context internally across organizational and business data to provide agent-ready inputs, so agents don't need to stitch together raw signals or manage retrieval pipelines.
 
-In addition to productivity data from Microsoft 365 applications, Work IQ also includes [business and workflow data](https://go.microsoft.com/fwlink/?LinkId=2379836) from Dynamics 365 and Power Platform, and data from connected enterprise systems through [Copilot Connectors](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview).
+In addition to productivity data from Microsoft 365 applications, Work IQ also includes [business and workflow data](https://go.microsoft.com/fwlink/?LinkId=2379836) from Dynamics 365 and Power Platform, and data from connected enterprise systems through [Copilot Connectors](/microsoft-365/copilot/connectors/overview).
 
 ## Tools
 
@@ -52,7 +52,7 @@ Work IQ centralizes control at a single point, combining simplified authorizatio
 
 Work IQ embeds observability and governance directly into the platform. Every tool invocation is logged and evaluated, enabling auditability, usage analytics, rate limiting, and real-time compliance enforcement across agents and data sources.
 
-Existing administrator controls in the Microsoft 365 admin center to allow or block Copilot Connectors also apply when Connectors are accessed through Work IQ APIs. For details on these controls, see [Manage sync connectors](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector) and [Manage federated connectors](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-federated-connectors).
+Existing administrator controls in the Microsoft 365 admin center to allow or block Copilot Connectors also apply when Connectors are accessed through Work IQ APIs. For details on these controls, see [Manage sync connectors](/microsoft-365/copilot/connectors/manage-connector) and [Manage federated connectors](/microsoft-365/copilot/connectors/manage-federated-connectors).
 
 ## Access and pricing
 
