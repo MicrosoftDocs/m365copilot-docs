@@ -5,6 +5,12 @@ items:
   href: api-overview.md
 - name: Enable Work IQ
   href: enable-work-iq.md
+- name: Work IQ in ChatGPT
+  href: chatgpt-plugin.md
+- name: Work IQ in Claude
+  href: claude.md
+- name: Work IQ in Gemini Enterprise
+  href: gemini-enterprise.md
 - name: Work IQ CLI
   href: cli.md
 - name: Work IQ Listen (preview)
