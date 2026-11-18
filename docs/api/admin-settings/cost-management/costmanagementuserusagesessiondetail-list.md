@@ -4,7 +4,7 @@ description: Get a list of costManagementUserUsageSessionDetail objects.
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 10/27/2026
+ms.date: 11/13/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -28,7 +28,9 @@ The collection is server-paged, with a default page size of 20 and a maximum of 
 |:---------------------------------------|:-----------------------------------------|:-------------------------------|
 | Delegated (work or school account)     | CopilotCostManagement-UserData.Read.All  | CopilotCostManagement.Read.All |
 | Delegated (personal Microsoft account) | Not supported.                           | Not supported.                 |
-| Application                            | Not supported.                           | Not supported.                 |
+| Application                            | CopilotCostManagement-UserData.Read.All  | CopilotCostManagement.Read.All |
+
+This table describes the Graph permission model. See [permission availability and authorization](overview.md#permission-availability-and-authorization) for deployment requirements.
 
 ## HTTP request
 
