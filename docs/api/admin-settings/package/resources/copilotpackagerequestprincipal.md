@@ -1,20 +1,23 @@
 ---
 title: copilotPackageRequestPrincipal resource type
-description: Represents an explicit assignee of a Copilot package request.
+description: Represents an explicit recipient returned in a Copilot package request snapshot.
 author: dmicrosoft
 ms.author: digorgaz
 ms.topic: reference
 ms.date: 11/17/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
-zone_pivot_groups: graph-api-versions
 ---
+
+<!-- cSpell:ignore dmicrosoft digorgaz -->
 
 # copilotPackageRequestPrincipal resource type
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Represents an explicit assignee of a [copilotPackageRequestInfo](copilotpackagerequestinfo.md) object. Inherits from [identity](/graph/api/resources/identity).
+Represents a member of the `assignees` collection in [copilotPackageRequestInfo](copilotpackagerequestinfo.md).
+
+Inherits from [identity](/graph/api/resources/identity?view=graph-rest-beta&preserve-view=true). The source order and duplicates are preserved. Groups and broad audiences aren't expanded.
 
 ## Methods
 
@@ -24,22 +27,22 @@ None.
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
-| `displayName` | String | Nullable resolved name of the explicit assignee. Inherited from `identity`. |
-| `id` | String | Nullable source identifier; its meaning depends on the principal type. Inherited from `identity`. |
-| `principalType` | [copilotPackageRequestPrincipalType](#copilotpackagerequestprincipaltype-enumeration) | Kind of principal returned for this assignee. |
-| `userPrincipalName` | String | Nullable user principal name when available for a user or agent user; not inferred from an email address. |
+| `displayName` | String | Nullable. Resolved recipient name. Inherited from `identity`. |
+| `id` | String | Nullable. Source recipient identifier. Interpretation depends on `principalType`; not always a navigable directory object. Inherited from `identity`. |
+| `principalType` | [copilotPackageRequestPrincipalType](#copilotpackagerequestprincipaltype-enumeration) | Non-nullable. Source principal kind. Missing or unrecognized kinds use `unknownFutureValue` without dropping the recipient. |
+| `userPrincipalName` | String | Nullable. Resolved user principal name for `user` or `agentUser` recipients. Null when unavailable and for other kinds; never inferred from email or creator identity. |
 
 ### copilotPackageRequestPrincipalType enumeration
 
-An [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations) with the following possible values. An absent or unrecognized source kind is represented by `unknownFutureValue`.
+An [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations) with the following values. Both this read-side enumeration and [Publish](copilotpackagepublishprincipal.md) use lowercase `user` and `group`. The agent principal vocabulary differs: this enumeration uses `agentApplication`, while Publish uses `agentIdentity`.
 
-| Value |
-|:------|
-| `user` |
-| `group` |
-| `agentApplication` |
-| `agentUser` |
-| `unknownFutureValue` |
+| Value | Description |
+|:------|:------------|
+| `user` | A user recipient. |
+| `group` | A group recipient. |
+| `agentApplication` | An agent application recipient. |
+| `agentUser` | An agent user recipient. |
+| `unknownFutureValue` | A missing, unrecognized, or future source principal kind. |
 
 ## Relationships
 

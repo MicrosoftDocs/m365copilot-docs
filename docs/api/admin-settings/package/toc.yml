@@ -19,16 +19,38 @@ items:
       href: copilotpackage-reject.md
     - name: Unblock (preview)
       href: copilotpackage-unblock.md
+    - name: Publish (beta)
+      href: copilotpackagepublishresult-publish.md
+    - name: Approve (beta)
+      href: copilotpackage-approve.md
+    - name: Activate template (beta)
+      href: copilotpackageactivationresult-activate.md
+    - name: Restore (beta)
+      href: copilotpackage-restore.md
+- name: Copilot package policy template (beta)
+  items:
+    - name: Copilot package policy template
+      href: resources/copilotpackagepolicytemplate.md
+    - name: List
+      href: copilotpackagepolicytemplate-list.md
+    - name: Get
+      href: copilotpackagepolicytemplate-get.md
+    - name: Update
+      href: copilotpackagepolicytemplate-update.md
+    - name: List policy definitions
+      href: copilotpackagepolicydefinition-list.md
+    - name: Copy
+      href: copilotpackagepolicytemplate-copy.md
+- name: Copilot package policy definition (beta)
+  items:
+    - name: Copilot package policy definition
+      href: resources/copilotpackagepolicydefinition.md
+    - name: List applicable definitions
+      href: copilotpackagepolicydefinition-list.md
 - name: Complex types
   items:
     - name: Copilot package
       href: resources/copilotpackage.md
-    - name: Copilot package request info
-      href: resources/copilotpackagerequestinfo.md
-    - name: Copilot package request metadata
-      href: resources/copilotpackagerequestmetadata.md
-    - name: Copilot package request principal
-      href: resources/copilotpackagerequestprincipal.md
     - name: Copilot package update response
       href: resources/copilotpackageupdateresponse.md
     - name: Package access entity
@@ -37,3 +59,61 @@ items:
       href: resources/packageelement.md
     - name: Package element detail
       href: resources/packageelementdetail.md
+    - name: Copilot package publish scope (beta)
+      href: resources/copilotpackagepublishscope.md
+    - name: Copilot package policy configuration (beta)
+      href: resources/copilotpackagepolicyconfiguration.md
+    - name: Copilot package policy selection (beta)
+      href: resources/copilotpackagepolicyselection.md
+    - name: Copilot package policy choice selection (beta)
+      href: resources/copilotpackagepolicychoiceselection.md
+    - name: Copilot package policy choice definition (beta)
+      href: resources/copilotpackagepolicychoicedefinition.md
+    - name: Copilot package policy value constraint (beta)
+      href: resources/copilotpackagepolicyvalueconstraint.md
+    - name: Copilot package policy value (beta)
+      href: resources/copilotpackagepolicyvalue.md
+    - name: Copilot package policy Boolean value (beta)
+      href: resources/copilotpackagepolicybooleanvalue.md
+    - name: Copilot package policy integer value (beta)
+      href: resources/copilotpackagepolicyintegervalue.md
+    - name: Copilot package policy string value (beta)
+      href: resources/copilotpackagepolicystringvalue.md
+    - name: Copilot package policy integer collection value (beta)
+      href: resources/copilotpackagepolicyintegercollectionvalue.md
+    - name: Copilot package policy string collection value (beta)
+      href: resources/copilotpackagepolicystringcollectionvalue.md
+    - name: Copilot package install scope (beta)
+      href: resources/copilotpackageinstallscope.md
+    - name: Copilot package publish principal (beta)
+      href: resources/copilotpackagepublishprincipal.md
+    - name: Copilot package publish result (beta)
+      href: resources/copilotpackagepublishresult.md
+    - name: Copilot package publish step result (beta)
+      href: resources/copilotpackagepublishstepresult.md
+    - name: Copilot package permission consent result (beta)
+      href: resources/copilotpackagepermissionconsentresult.md
+    - name: Copilot package policy assignment result (beta)
+      href: resources/copilotpackagepolicyassignmentresult.md
+    - name: Copilot package template publication result (beta)
+      href: resources/copilotpackagetemplatepublicationresult.md
+    - name: Copilot package policy provisioning result (beta)
+      href: resources/copilotpackagepolicyprovisioningresult.md
+    - name: Copilot package request metadata (beta)
+      href: resources/copilotpackagerequestmetadata.md
+    - name: Copilot package request info (beta)
+      href: resources/copilotpackagerequestinfo.md
+    - name: Copilot package request principal (beta)
+      href: resources/copilotpackagerequestprincipal.md
+    - name: Copilot package manager scope (beta)
+      href: resources/copilotpackageagentmanagerscope.md
+    - name: Copilot package activation principal (beta)
+      href: resources/copilotpackageactivationprincipal.md
+    - name: Copilot package activation result (beta)
+      href: resources/copilotpackageactivationresult.md
+    - name: Copilot package activation step (beta)
+      href: resources/copilotpackageactivationstep.md
+    - name: Copilot package activation policy result (beta)
+      href: resources/copilotpackageactivationpolicyresult.md
+    - name: Copilot package activation error (beta)
+      href: resources/copilotpackageactivationerror.md
