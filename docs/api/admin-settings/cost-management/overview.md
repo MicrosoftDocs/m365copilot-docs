@@ -5,7 +5,7 @@ author: DanielSaunders
 ms.author: dsaunders
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 11/13/2026
+ms.date: 11/17/2026
 ---
 
 <!-- cSpell:ignore dsaunders -->
@@ -68,7 +68,17 @@ Billing Administrators, Global Administrators, AI Administrators, Global Readers
 
 ## Permissions
 
-This API uses the `CopilotCostManagement-*` permission family. Most operations support only delegated (work or school account) permissions. The tenant credit balance read ([getTenantCreditBalance](costmanagementroot-gettenantcreditbalance.md)) also supports the `CopilotCostManagement.Read.All` application permission, and the service and funding usage reports also support the `CopilotCostManagement-Reports.Read.All` and `CopilotCostManagement.Read.All` application permissions. Personal Microsoft accounts aren't supported. Choose the least privileged permission for each operation.
+This API uses `CopilotCostManagement.Read.All` and the granular `CopilotCostManagement-*` permissions. The Graph permission model maps both delegated (work or school account) and application permissions to tenant credit balance, spending policy, settings, recipient, assignment, user balance, and usage report reads. Personal Microsoft accounts aren't supported. Choose the least privileged permission listed for each operation, and review [permission availability and authorization](#permission-availability-and-authorization) before relying on a mapping.
+
+`CopilotCostManagement.Read.All` is the broadest read permission. It's a higher privileged alternative to the granular permissions on covered GET operations, except for the tenant credit balance operation, where it's the least privileged permission. It doesn't authorize POST, PATCH, or DELETE operations and doesn't cover credit requests. Read the operation's permission table rather than assuming that every Cost Management endpoint accepts it.
+
+Both access schemes require administrator consent. The broad permission includes sensitive organizational data: tenant and user balances, usage reports, spending policies and their configuration, group assignments, and creator, modifier, and alert-recipient identities. Application access reads this data without a signed-in user. Prefer a granular permission when your app needs only one category of data.
+
+### Permission availability and authorization
+
+The permission tables don't guarantee that an operation is available with every listed permission. Availability of `CopilotCostManagement.Read.All` for spending policy, settings, recipient, assignment, and user balance reads isn't yet confirmed for delegated or application access. Confirm availability for your app's access type before relying on this permission for these reads.
+
+Consent doesn't replace API authorization. Delegated calls must still pass the applicable directory-role checks. Application calls must pass application-authorization checks, and both access schemes remain subject to tenant isolation. Beta status doesn't waive these requirements.
 
 > [!IMPORTANT]
 > Some Microsoft 365 Copilot Cost Management permissions might not yet appear in the API permission picker in the Microsoft Entra admin center. Normal administrator-consent and API authorization requirements still apply.
@@ -77,9 +87,11 @@ This API uses the `CopilotCostManagement-*` permission family. Most operations s
 >
 > This scope-name flow applies only to delegated permissions; it does not configure or grant application permissions.
 
+### Permission reference
+
 | Permission                                      | Operations                                                                      |
 |:------------------------------------------------|:--------------------------------------------------------------------------------|
-| `CopilotCostManagement.Read.All`                | Read the tenant credit balance snapshot. Also read all usage reports with delegated permissions. Application access applies only to the tenant credit balance and the service and funding usage reports. |
+| `CopilotCostManagement.Read.All`                | Read the tenant credit balance snapshot, spending policies and their settings, alert recipients, group assignments, named-user balances and service balances, and all usage reports. The Graph model maps these reads for delegated and application access, subject to the availability and authorization requirements. Doesn't cover credit requests or writes. |
 | `CopilotCostManagement-Reports.Read.All`        | Read aggregate service and funding usage reports.                               |
 | `CopilotCostManagement-Policy.Read.All`         | Read spending policies, per-service settings, alert thresholds, and recipients. |
 | `CopilotCostManagement-Policy.ReadWrite.All`    | Create, update, and delete policies, service settings, alerts, and recipients.  |
@@ -130,7 +142,7 @@ Read `billingInstrument.provisioningStatus` through the existing policy GET. Res
 
 ### User balances
 
-Read a balance by user ID, and then check all service balances or one service's balance.
+Read a balance by user ID, and then check all service balances or one service's balance. The parent collection `GET /copilot/costManagement/userBalances` isn't listable and returns a `404` response; a permission mapping doesn't make it listable.
 
 | Operation | HTTP method | Description |
 |:----------|:------------|:------------|

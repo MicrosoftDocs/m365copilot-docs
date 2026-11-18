@@ -4,7 +4,7 @@ description: Retrieve the properties and relationships of a costManagementAlertS
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 10/02/2026
+ms.date: 11/13/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -24,9 +24,11 @@ Retrieve the notify-only alert configuration for a spending policy, represented 
 
 | Permission type                        | Least privileged permissions          | Higher privileged permissions |
 |:---------------------------------------|:--------------------------------------|:------------------------------|
-| Delegated (work or school account)     | CopilotCostManagement-Policy.Read.All | CopilotCostManagement-Policy.ReadWrite.All                |
+| Delegated (work or school account)     | CopilotCostManagement-Policy.Read.All | CopilotCostManagement-Policy.ReadWrite.All, CopilotCostManagement.Read.All |
 | Delegated (personal Microsoft account) | Not supported.                        | Not supported.                |
-| Application                            | Not supported.                        | Not supported.                |
+| Application                            | CopilotCostManagement-Policy.Read.All | CopilotCostManagement-Policy.ReadWrite.All, CopilotCostManagement.Read.All |
+
+This table describes the Graph permission model. See [permission availability and authorization](overview.md#permission-availability-and-authorization) for deployment requirements.
 
 ## HTTP request
 

@@ -5,7 +5,7 @@ author: DanielSaunders
 ms.author: dsaunders
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/13/2026
 ---
 
 <!-- cSpell:ignore dsaunders -->
@@ -46,14 +46,14 @@ Processed user usage records and raw user usage detail aren't interchangeable. T
 
 ## Permissions
 
-Choose the least privileged permission for the operation. Personal Microsoft accounts aren't supported.
+Choose the least privileged permission for the operation. The following table describes the Graph permission model. For deployment requirements, see [permission availability and authorization](overview.md#permission-availability-and-authorization). Personal Microsoft accounts aren't supported.
 
-| Reports | Least privileged permission | Supported access |
+| Reports | Least privileged permission | Access in the Graph permission model |
 |:--------|:---------------------------|:-----------------|
-| User records, group records, and raw user detail, including services and sessions | `CopilotCostManagement-UserData.Read.All` | Delegated work or school account only |
+| User records, group records, and raw user detail, including services and sessions | `CopilotCostManagement-UserData.Read.All` | Delegated work or school account, or application |
 | Service records and funding records | `CopilotCostManagement-Reports.Read.All` | Delegated work or school account, or application |
 
-`CopilotCostManagement.Read.All` is a higher privileged alternative. It doesn't enable application access to reports that support only delegated access. For consent guidance, see [Cost Management API permissions](overview.md#permissions); check each operation's reference for its permission requirements.
+`CopilotCostManagement.Read.All` is a higher privileged alternative for all usage report GET operations in both access schemes. Both the granular permissions and the broad permission require administrator consent. For consent guidance, see [Cost Management API permissions](overview.md#permissions). Check each operation's reference for its permission requirements.
 
 ## Time selectors
 

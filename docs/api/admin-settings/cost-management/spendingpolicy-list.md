@@ -24,9 +24,11 @@ Get a list of [spendingPolicy](resources/spendingpolicy.md) objects. The returne
 
 | Permission type                        | Least privileged permissions             | Higher privileged permissions |
 |:---------------------------------------|:-----------------------------------------|:------------------------------|
-| Delegated (work or school account)     | CopilotCostManagement-Policy.Read.All    | CopilotCostManagement-Policy.ReadWrite.All                |
+| Delegated (work or school account)     | CopilotCostManagement-Policy.Read.All    | CopilotCostManagement-Policy.ReadWrite.All, CopilotCostManagement.Read.All |
 | Delegated (personal Microsoft account) | Not supported.                           | Not supported.                |
-| Application                            | Not supported.                           | Not supported.                |
+| Application                            | CopilotCostManagement-Policy.Read.All    | CopilotCostManagement-Policy.ReadWrite.All, CopilotCostManagement.Read.All |
+
+This table describes the Graph permission model. See [permission availability and authorization](overview.md#permission-availability-and-authorization) for deployment requirements.
 
 ## HTTP request
 
