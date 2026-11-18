@@ -1,26 +1,25 @@
 ---
 title: copilotPackageRequestInfo resource type
-description: Represents an individual request associated with a Copilot package.
+description: Represents the package request type, identifier, display contact, and explicit recipients of a Copilot package request.
 author: dmicrosoft
 ms.author: digorgaz
 ms.topic: reference
 ms.date: 11/17/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
-zone_pivot_groups: graph-api-versions
 ---
+
+<!-- cSpell:ignore dmicrosoft digorgaz -->
 
 # copilotPackageRequestInfo resource type
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Represents an individual request in a [copilotPackageRequestMetadata](copilotpackagerequestmetadata.md) snapshot.
+Represents one member of the `requests` collection in [copilotPackageRequestMetadata](copilotpackagerequestmetadata.md).
 
-A publication request has no explicit assignees. Its `requestedBy` contact is the resolved requester (a user or agent user) when its identity, name, and address can be verified; otherwise, the contact is null.
+Use this row's `packageRequestType` to distinguish requests for the same package. The package-level `requestType` can summarize a different row.
 
-For other requests, `assignees` preserves all explicit members in source order, including duplicates. The `requestedBy` contact comes from the first explicit assignee, regardless of principal type, or is null when none exists. A present first assignee can have null `name` and `address`. An empty assignee collection doesn't imply that the request has no audience.
-
-For availability and selection requirements, see [Get Copilot package details](../copilotpackagedetail-get.md#optional-query-parameters).
+For [Approve](../copilotpackage-approve.md), use the selected row's `identifier` and exact stored `packageVersion`. The version isn't the package's current/manifest/latest version, and missing information must not be replaced with another row's values. The normalized type identifies the row; callers don't supply a request-type override to approval.
 
 ## Methods
 
@@ -30,11 +29,25 @@ None.
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
-| `additionalMetadata` | Json | Nullable JSON object for additional data. The current native request-metadata projection doesn't emit this property. |
-| `assignees` | [copilotPackageRequestPrincipal](copilotpackagerequestprincipal.md) collection | Explicit assignees associated with the request. This collection isn't a deployment audience. |
-| `identifier` | String | Nullable business request identifier. It isn't a package title ID and can't be used in the package Reject URL. |
-| `requestedBy` | [emailAddress](/graph/api/resources/emailaddress) | Nullable display contact associated with the request. This isn't an authorization identity. See the request-source behavior described above for the proposed beta projection. |
-| `requestedDateTime` | DateTimeOffset | Nullable date and time when the request was created, not when the package was created or modified. |
+| `additionalMetadata` | microsoft.graph.Json | Nullable. Additional collected request data, represented as a JSON object. Read-only. |
+| `assignees` | [copilotPackageRequestPrincipal](copilotpackagerequestprincipal.md) collection | Non-nullable. Explicit recipients for a nonpublication request, in source order with duplicates retained; groups aren't expanded. In the matching implementation, publication rows return an empty collection rather than treating requester identity as deployment recipients. Empty doesn't prove no audience. |
+| `identifier` | String | Nullable. Opaque business request identifier. Not a Graph resource key, package identifier, or immutable submission identifier; a later request can reuse it. |
+| `packageRequestType` | [copilotPackageRequestType](copilotpackage.md#copilotpackagerequesttype-enumeration) | Nullable. This row's normalized request type. Missing or unrecognized source kinds map to `null`. Read-only. |
+| `packageVersion` | String | Nullable and computed. Exact nonblank stored version of this individual request, preserved verbatim. Missing/null/empty/whitespace-only source becomes null; no trimming or fallback to the package, latest, manifest, or another row. Required to approve a supported individual request. |
+| `requestedBy` | [emailAddress](/graph/api/resources/emailaddress?view=graph-rest-beta&preserve-view=true) | Nullable. In the matching implementation, publication rows use the resolved requester's display profile and return null if it can't be established. Other rows use the first explicit assignee's display contact, or null when no explicit assignee exists; a present assignee can have null contact fields. Not an authorization identifier; a missing contact isn't proof no request exists. |
+| `requestedDateTime` | DateTimeOffset | Nullable. Request submission timestamp, when known. Not the package creation time or a concurrency token. |
+
+### copilotPackageRequestType enumeration
+
+The `packageRequestType` property uses the existing [copilotPackageRequestType](copilotpackage.md#copilotpackagerequesttype-enumeration) enumeration.
+
+| Value | Description |
+|:------|:------------|
+| `publish` | A request to publish a package. |
+| `activate` | A Hire request for a package. |
+| `access` | An Access request for a package. |
+| `update` | A request to update a published package. |
+| `unknownFutureValue` | Evolvable enumeration sentinel. The current row mapper uses `null` for unrecognized source kinds. |
 
 ## Relationships
 
@@ -56,6 +69,8 @@ The following JSON representation shows the resource type.
     }
   ],
   "identifier": "String",
+  "packageRequestType": "String",
+  "packageVersion": "String",
   "requestedBy": {
     "@odata.type": "microsoft.graph.emailAddress"
   },

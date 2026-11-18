@@ -62,6 +62,7 @@ This method supports the `$select` [OData query parameter](/graph/query-paramete
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 | `$select` | String | Use the exact selection `id,requestMetadata` to return only the package ID and request metadata. Use the package's exact title ID; this selection doesn't resolve an alternate staged ID. |
+| `version` | String | Select the exact package/title version. Omit to retain versionless lookup, not to select "latest". Some pending first-publication titles require an explicit version to resolve. |
 
 :::zone-end
 
@@ -112,7 +113,6 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/admin/catalog/packages/$entity",
   "id": "P_19ae1zz1-56bc-505a-3d42-156df75a4xxy",
   "displayName": "Contoso Sales Agent",
   "type": "custom",
@@ -184,7 +184,7 @@ Content-Type: application/json
 
 #### Request
 
-The following example shows a request to get a package's request metadat. For field meanings and availability, see [copilotPackageRequestMetadata](resources/copilotpackagerequestmetadata.md).
+The following example shows a request to get a package's request metadata. For field meanings and availability, see [copilotPackageRequestMetadata](resources/copilotpackagerequestmetadata.md).
 
 ```http
 GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages/T_87654321-4321-4321-4321-210987654321?$select=id,requestMetadata

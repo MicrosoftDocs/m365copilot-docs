@@ -22,7 +22,7 @@ Work IQ API endpoints include A2A, a remote MCP server, and a REST API. Usage is
 
 Connected enterprise sources participate in Work IQ Copilot, entity, and schema tools. Connected enterprise sources refer to data sources connected in Copilot Chat.
 
-Participation in Work IQ APIs is subject to enablement by connector developers.
+Connector developers must enable participation in Work IQ APIs.
 
 ## Chat
 

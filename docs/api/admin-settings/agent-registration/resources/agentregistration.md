@@ -4,7 +4,7 @@ description: Represents an agent registration containing metadata, endpoint conf
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 09/18/2026
+ms.date: 11/13/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -34,15 +34,15 @@ Represents an agent registration containing metadata, endpoint configuration, an
 | `agentCard` | [Json](/graph/api/resources/json) | Flexible JSON manifest containing agent card information following public manifest specifications. Can include display name, description, icon URL, version, provider, capabilities, skills, security, and other manifest-defined fields. |
 | `agentIdentityBlueprintId` | String | Agent identity blueprint identifier. |
 | `agentIdentityId` | String | Entra agent identity identifier. |
-| `createdBy` | String | The unique identifier of the user or app who created the agent registration. |
+| `createdBy` | String | The unique identifier of the user or app who created the agent registration. Required on create. |
 | `description` | String | The agent description providing an overview of its purpose and capabilities. |
-| `displayName` | String | Display name for the agent instance. Required. |
+| `displayName` | String | Display name for the agent instance. Required on create. |
 | `id` | String | Unique identifier for the agent registration. Inherited from [entity](/graph/api/resources/entity). |
 | `lastPublishedBy` | String | The unique identifier of the last person to publish the agent. |
 | `managedByAppId` | String | Application identifier managing this agent. |
 | `originatingStore` | String | Name of the store or system where the agent originated. |
 | `ownerIds` | String collection | List of owner identifiers for the agent. Either owners or `managedByAppId` is required. |
-| `sourceAgentId` | String | Original agent identifier from source system. |
+| `sourceAgentId` | String | Original agent identifier from the source system. Required on create; must be non-null, non-empty, and contain at least one non-whitespace character. Reads of legacy registrations can return `null`. On update, omission or `null` preserves the stored value; an empty string is applied. |
 | `sourceCreatedDateTime` | DateTimeOffset | The date and time when the agent instance was created from source. |
 | `sourceLastModifiedDateTime` | DateTimeOffset | The date and time when the agent instance was last modified from source. |
 
