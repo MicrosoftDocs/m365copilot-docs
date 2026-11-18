@@ -4,7 +4,7 @@ description: The Copilot Cost Management usage reporting root.
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 10/27/2026
+ms.date: 11/06/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -15,7 +15,9 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-The Copilot Cost Management usage reporting root, contained by [costManagementRoot](costmanagementroot.md) at `/copilot/costManagement/usageReports`. It's the containment parent for the usage report collections, which report consumption of Copilot Credits by user, security group, governed service, and funding class, and for raw per-user usage detail. Every usage report requires a time selector query parameter. For details, see [Usage report time selectors and paging](../overview.md#usage-report-time-selectors-and-paging).
+The Copilot Cost Management usage reporting root, contained by [costManagementRoot](costmanagementroot.md) at `/copilot/costManagement/usageReports`. It's the containment parent for the usage report collections, which report consumption of Copilot Credits by user, security group, governed service, and funding class, and for raw per-user usage detail.
+
+To choose a report and learn about required time selectors, paging, filtering, and ordering, see the [Usage reports overview](../usage-reports-overview.md). This page describes the root resource's methods, properties, and relationships.
 
 > [!NOTE]
 > The root itself isn't readable. `GET /copilot/costManagement/usageReports` returns a `404` response and carries no data. Use the contained collections instead.

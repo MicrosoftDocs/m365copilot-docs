@@ -4,7 +4,7 @@ description: Per-service balance and enforcement-selection diagnosis for a user.
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 10/02/2026
+ms.date: 11/06/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -15,7 +15,9 @@ doc_type: resourcePageType
 
 [!INCLUDE [beta-disclaimer](../../../includes/beta-disclaimer.md)]
 
-Per-service balance and enforcement-selection diagnosis for a user. Keyed by `serviceId`; a user holds at most one balance per service.
+Per-service balance and enforcement-selection diagnosis for a user. Contained by [costManagementUserBalance](costmanagementuserbalance.md) through its `serviceBalances` relationship and keyed by `serviceId`; a user holds at most one balance per service.
+
+Use `isConsumptionAllowed` and `accessDecisionReason` to understand the access decision, and `spendingPolicyId` to identify the selected [spending policy](spendingpolicy.md). For historical consumption by service rather than a user's current balance, see [Usage reports](../usage-reports-overview.md).
 
 ## Methods
 

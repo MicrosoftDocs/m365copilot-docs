@@ -1,9 +1,15 @@
 items:
 - name: Overview
   href: overview.md
+- name: Cost management root
+  items:
+  - name: Resource type
+    href: resources/costmanagementroot.md
+  - name: Get tenant credit balance
+    href: costmanagementroot-gettenantcreditbalance.md
 - name: Spending policy
   items:
-  - name: Spending policy
+  - name: Resource type
     href: resources/spendingpolicy.md
   - name: List
     href: spendingpolicy-list.md
@@ -15,63 +21,65 @@ items:
     href: spendingpolicy-update.md
   - name: Delete
     href: spendingpolicy-delete.md
-  - name: List assigned groups
-    href: selectedgroupsspendingpolicy-list-assignedgroups.md
-  - name: Add assigned group
-    href: selectedgroupsspendingpolicy-post-assignedgroups.md
-  - name: Remove assigned group
-    href: selectedgroupsspendingpolicy-delete-assignedgroups.md
-- name: Spending policy service setting
-  items:
-  - name: Spending policy service setting
-    href: resources/spendingpolicyservicesetting.md
-  - name: List
-    href: spendingpolicyservicesetting-list.md
-  - name: Create
-    href: spendingpolicyservicesetting-create.md
-  - name: Get
-    href: spendingpolicyservicesetting-get.md
-  - name: Update
-    href: spendingpolicyservicesetting-update.md
-- name: Alert setting
-  items:
-  - name: Cost management alert setting
-    href: resources/costmanagementalertsetting.md
-  - name: Get
-    href: costmanagementalertsetting-get.md
-  - name: Update
-    href: costmanagementalertsetting-update.md
-  - name: Delete
-    href: costmanagementalertsetting-delete.md
-  - name: List recipients
-    href: costmanagementalertsetting-list-recipients.md
-  - name: Add recipient
-    href: costmanagementalertsetting-post-recipients.md
-  - name: Remove recipient
-    href: costmanagementalertsetting-delete-recipients.md
+  - name: Policy types
+    items:
+    - name: All users spending policy
+      href: resources/allusersspendingpolicy.md
+    - name: Selected groups spending policy
+      href: resources/selectedgroupsspendingpolicy.md
+  - name: Assigned groups
+    items:
+    - name: List
+      href: selectedgroupsspendingpolicy-list-assignedgroups.md
+    - name: Add
+      href: selectedgroupsspendingpolicy-post-assignedgroups.md
+    - name: Remove
+      href: selectedgroupsspendingpolicy-delete-assignedgroups.md
+  - name: Service settings
+    items:
+    - name: Resource type
+      href: resources/spendingpolicyservicesetting.md
+    - name: List
+      href: spendingpolicyservicesetting-list.md
+    - name: Create
+      href: spendingpolicyservicesetting-create.md
+    - name: Get
+      href: spendingpolicyservicesetting-get.md
+    - name: Update
+      href: spendingpolicyservicesetting-update.md
+  - name: Alerts and recipients
+    items:
+    - name: Resource type
+      href: resources/costmanagementalertsetting.md
+    - name: Get
+      href: costmanagementalertsetting-get.md
+    - name: Update
+      href: costmanagementalertsetting-update.md
+    - name: Delete
+      href: costmanagementalertsetting-delete.md
+    - name: List recipients
+      href: costmanagementalertsetting-list-recipients.md
+    - name: Add recipient
+      href: costmanagementalertsetting-post-recipients.md
+    - name: Remove recipient
+      href: costmanagementalertsetting-delete-recipients.md
 - name: User balance
   items:
-  - name: Cost management user balance
+  - name: Resource type
     href: resources/costmanagementuserbalance.md
   - name: Get
     href: costmanagementuserbalance-get.md
-- name: User service balance
-  items:
-  - name: Cost management user service balance
-    href: resources/costmanagementuserservicebalance.md
-  - name: List
-    href: costmanagementuserservicebalance-list.md
-  - name: Get
-    href: costmanagementuserservicebalance-get.md
-- name: Tenant credit balance
-  items:
-  - name: Cost management root
-    href: resources/costmanagementroot.md
-  - name: Get tenant credit balance
-    href: costmanagementroot-gettenantcreditbalance.md
+  - name: Service balances
+    items:
+    - name: Resource type
+      href: resources/costmanagementuserservicebalance.md
+    - name: List
+      href: costmanagementuserservicebalance-list.md
+    - name: Get
+      href: costmanagementuserservicebalance-get.md
 - name: Credit request
   items:
-  - name: Credit request
+  - name: Resource type
     href: resources/creditrequest.md
   - name: List
     href: creditrequest-list.md
@@ -83,62 +91,54 @@ items:
     href: creditrequest-batchrecorddecisions.md
 - name: Usage reports
   items:
-  - name: Cost management usage report root
+  - name: Overview
+    href: usage-reports-overview.md
+  - name: Usage report root
     href: resources/costmanagementusagereportroot.md
-- name: User usage record
-  items:
-  - name: Cost management user usage record
-    href: resources/costmanagementuserusagerecord.md
-  - name: List
-    href: costmanagementuserusagerecord-list.md
-  - name: Get
-    href: costmanagementuserusagerecord-get.md
-- name: Group usage record
-  items:
-  - name: Cost management group usage record
-    href: resources/costmanagementgroupusagerecord.md
-  - name: List
-    href: costmanagementgroupusagerecord-list.md
-  - name: Get
-    href: costmanagementgroupusagerecord-get.md
-- name: Service usage record
-  items:
-  - name: Cost management service usage record
-    href: resources/costmanagementserviceusagerecord.md
-  - name: List
-    href: costmanagementserviceusagerecord-list.md
-  - name: Get
-    href: costmanagementserviceusagerecord-get.md
-- name: Funding usage record
-  items:
-  - name: Cost management funding usage record
-    href: resources/costmanagementfundingusagerecord.md
-  - name: List
-    href: costmanagementfundingusagerecord-list.md
-- name: User usage detail
-  items:
-  - name: Cost management user usage detail
-    href: resources/costmanagementuserusagedetail.md
-  - name: Get
-    href: costmanagementuserusagedetail-get.md
-- name: User usage service detail
-  items:
-  - name: Cost management user usage service detail
-    href: resources/costmanagementuserusageservicedetail.md
-  - name: List
-    href: costmanagementuserusageservicedetail-list.md
-- name: User usage session detail
-  items:
-  - name: Cost management user usage session detail
-    href: resources/costmanagementuserusagesessiondetail.md
-  - name: List
-    href: costmanagementuserusagesessiondetail-list.md
-- name: Resource types
-  items:
-  - name: All users spending policy
-    href: resources/allusersspendingpolicy.md
-  - name: Selected groups spending policy
-    href: resources/selectedgroupsspendingpolicy.md
+  - name: User usage record
+    items:
+    - name: Resource type
+      href: resources/costmanagementuserusagerecord.md
+    - name: List
+      href: costmanagementuserusagerecord-list.md
+    - name: Get
+      href: costmanagementuserusagerecord-get.md
+  - name: Group usage record
+    items:
+    - name: Resource type
+      href: resources/costmanagementgroupusagerecord.md
+    - name: List
+      href: costmanagementgroupusagerecord-list.md
+    - name: Get
+      href: costmanagementgroupusagerecord-get.md
+  - name: Service usage record
+    items:
+    - name: Resource type
+      href: resources/costmanagementserviceusagerecord.md
+    - name: List
+      href: costmanagementserviceusagerecord-list.md
+    - name: Get
+      href: costmanagementserviceusagerecord-get.md
+  - name: Funding usage record
+    items:
+    - name: Resource type
+      href: resources/costmanagementfundingusagerecord.md
+    - name: List
+      href: costmanagementfundingusagerecord-list.md
+  - name: User usage detail
+    items:
+    - name: Resource type
+      href: resources/costmanagementuserusagedetail.md
+    - name: Get
+      href: costmanagementuserusagedetail-get.md
+    - name: Service detail resource type
+      href: resources/costmanagementuserusageservicedetail.md
+    - name: List services
+      href: costmanagementuserusageservicedetail-list.md
+    - name: Session detail resource type
+      href: resources/costmanagementuserusagesessiondetail.md
+    - name: List sessions
+      href: costmanagementuserusagesessiondetail-list.md
 - name: Complex types
   items:
   - name: Cost management tenant credit balance

@@ -4,7 +4,7 @@ description: One user's raw usage detail over a timestamp window.
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 10/27/2026
+ms.date: 11/06/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -18,6 +18,8 @@ doc_type: resourcePageType
 One user's raw, billable-flagged consumption of Copilot Credits over a required `startDateTime` and `endDateTime` timestamp window, bounded to the latest processed watermark rather than reprocessed. The detail is keyed on `userId`.
 
 This resource is distinct from [costManagementUserUsageRecord](costmanagementuserusagerecord.md). A user usage record is a processed, date-bounded report for one completed UTC day that can be ranked across users. A user usage detail is raw, timestamp-bounded, and read for one user at a time. The `sessionCount` values of the two resources aren't guaranteed to be equal.
+
+Its [service details](costmanagementuserusageservicedetail.md) and [session details](costmanagementuserusagesessiondetail.md) are breakdowns of this user's raw activity, not separate tenant-wide reports. For shared time-window and paging guidance, see [Usage reports](../usage-reports-overview.md).
 
 > [!NOTE]
 > The parent collection `GET /copilot/costManagement/usageReports/userUsageDetails` isn't listable and returns a `404` response. Read a detail by the user's identifier instead.

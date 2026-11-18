@@ -4,7 +4,7 @@ description: A policy that governs Copilot Credits consumption for an audience.
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 10/27/2026
+ms.date: 11/06/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -25,6 +25,20 @@ The audience type can't be changed by updating a policy. Changing the audience t
 Policies are created `disabled`. For a group-scoped policy, link at least one group before the service can enable it. Read `status` to observe provisioning; clients don't write this property, and at least one service must remain enabled. Read `serviceSettings`, `emailThresholdSettings`, and group assignments through their own endpoints; these relationships aren't expandable.
 
 Updates, deletion, and changes to child settings or references use the parent policy's ETag through `If-Match`. Read a fresh policy before a mutation and use the returned ETag for the next mutation. Updates aren't permitted while a policy is provisioning, provisioning has failed, or the service has disabled it because of subscription or linked-resource state.
+
+## Related settings and audience
+
+A spending policy brings together an audience, consumption limits, service settings, and optional alerts. Use the following resources and operations with the policy:
+
+| Task | Resource or operation |
+|:-----|:----------------------|
+| Apply limits to every user in the tenant | [allUsersSpendingPolicy](allusersspendingpolicy.md) |
+| Apply limits to selected security groups | [selectedGroupsSpendingPolicy](selectedgroupsspendingpolicy.md); [list](../selectedgroupsspendingpolicy-list-assignedgroups.md), [add](../selectedgroupsspendingpolicy-post-assignedgroups.md), or [remove](../selectedgroupsspendingpolicy-delete-assignedgroups.md) assigned groups |
+| Configure the services governed by the policy | [spendingPolicyServiceSetting](spendingpolicyservicesetting.md) |
+| Configure notify-only thresholds and recipients | [costManagementAlertSetting](costmanagementalertsetting.md) |
+| Diagnose which policy governs a user's service access | [costManagementUserServiceBalance](costmanagementuserservicebalance.md), including `spendingPolicyId` and `accessDecisionReason` |
+
+For consumption reports rather than policy configuration, see [Usage reports](../usage-reports-overview.md).
 
 ## Methods
 
