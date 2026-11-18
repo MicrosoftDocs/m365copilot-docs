@@ -4,7 +4,7 @@ description: A policy that governs Copilot Credits consumption for an audience.
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 11/06/2026
+ms.date: 11/17/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -22,7 +22,9 @@ A policy that governs Copilot Credits consumption for an audience. This is an ab
 
 The audience type can't be changed by updating a policy. Changing the audience type requires deleting and recreating the policy, which creates a new identifier and resets the new policy's consumption accounting.
 
-Policies are created `disabled`. For a group-scoped policy, link at least one group before the service can enable it. Read `status` to observe provisioning; clients don't write this property, and at least one service must remain enabled. Read `serviceSettings`, `emailThresholdSettings`, and group assignments through their own endpoints; these relationships aren't expandable.
+Policies are created `disabled`. For a group-scoped policy, link at least one group before the service can enable it. Read `status` to observe the policy lifecycle, not billing resource provisioning; clients don't write this property, and at least one service must remain enabled. Read `serviceSettings`, `emailThresholdSettings`, and group assignments through their own endpoints; these relationships aren't expandable.
+
+For pay-as-you-go funding, the optional `billingInstrument` describes the complete Azure provisioning target and its resource lifecycle. Read `billingInstrument.provisioningStatus` independently of the policy's `status`. A successfully provisioned billing resource doesn't mean that the policy is enabled.
 
 Updates, deletion, and changes to child settings or references use the parent policy's ETag through `If-Match`. Read a fresh policy before a mutation and use the returned ETag for the next mutation. Updates aren't permitted while a policy is provisioning, provisioning has failed, or the service has disabled it because of subscription or linked-resource state.
 
@@ -35,6 +37,7 @@ A spending policy brings together an audience, consumption limits, service setti
 | Apply limits to every user in the tenant | [allUsersSpendingPolicy](allusersspendingpolicy.md) |
 | Apply limits to selected security groups | [selectedGroupsSpendingPolicy](selectedgroupsspendingpolicy.md); [list](../selectedgroupsspendingpolicy-list-assignedgroups.md), [add](../selectedgroupsspendingpolicy-post-assignedgroups.md), or [remove](../selectedgroupsspendingpolicy-delete-assignedgroups.md) assigned groups |
 | Configure the services governed by the policy | [spendingPolicyServiceSetting](spendingpolicyservicesetting.md) |
+| Supply an Azure billing target and read resource provisioning state | [costManagementBillingInstrument](costmanagementbillinginstrument.md), through the existing policy create, update, and get operations |
 | Configure notify-only thresholds and recipients | [costManagementAlertSetting](costmanagementalertsetting.md) |
 | Diagnose which policy governs a user's service access | [costManagementUserServiceBalance](costmanagementuserservicebalance.md), including `spendingPolicyId` and `accessDecisionReason` |
 
@@ -54,6 +57,7 @@ For consumption reports rather than policy configuration, see [Usage reports](..
 
 | Property               | Type                                                                        | Description                                                                                                                                                                              |
 |:-----------------------|:----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `billingInstrument`    | [costManagementBillingInstrument](costmanagementbillinginstrument.md) | The Azure billing target for pay-as-you-go funding. Optional in a create request: you can create a policy without supplying Azure provisioning coordinates. To specify an explicit target, supply all three writable coordinates. Required when an update changes stored non-pay-as-you-go funding to include `payAsYouGo`. Doesn't support nested partial updates or replacement of an already-pay-as-you-go instrument. Supports `$select`, including nested properties; doesn't support `$filter` or `$orderby`. |
 | `billingMethods`       | [costManagementBillingMethods](#costmanagementbillingmethods-enumeration)   | How consumption under this policy is funded. This is a flags value, so combined values such as `prepaidCredits,payAsYouGo` are valid. Optional at creation and updatable with `PATCH`. When omitted at creation, the value is `notSpecified`. |
 | `createdBy`            | [identitySet](/graph/api/resources/identityset)                             | The identity that created the policy. An identity detail that isn't available is returned as `null`. Read-only.                                                                        |
 | `createdDateTime`      | DateTimeOffset                                                              | When the policy was created. Read-only. Supports `$filter` (`eq`, `ne`) and `$orderby`.                                                                                                 |
@@ -102,6 +106,9 @@ The following JSON representation shows the resource type.
 ```json
 {
   "@odata.type": "#microsoft.graph.spendingPolicy",
+  "billingInstrument": {
+    "@odata.type": "microsoft.graph.costManagementBillingInstrument"
+  },
   "billingMethods": "String",
   "createdBy": {
     "@odata.type": "microsoft.graph.identitySet"

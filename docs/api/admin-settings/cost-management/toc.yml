@@ -21,6 +21,8 @@ items:
     href: spendingpolicy-update.md
   - name: Delete
     href: spendingpolicy-delete.md
+  - name: Billing instrument
+    href: resources/costmanagementbillinginstrument.md
   - name: Policy types
     items:
     - name: All users spending policy

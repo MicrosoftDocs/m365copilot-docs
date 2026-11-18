@@ -5,7 +5,7 @@ author: DanielSaunders
 ms.author: dsaunders
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 11/06/2026
+ms.date: 11/13/2026
 ---
 
 <!-- cSpell:ignore dsaunders -->
@@ -26,6 +26,7 @@ Start with the task you want to accomplish. The reference navigation groups each
 |:-----|:-----------|:--------------------------------|
 | Check the tenant's credit balance | [Cost management root](resources/costmanagementroot.md) | [Get tenant credit balance](costmanagementroot-gettenantcreditbalance.md) returns a snapshot by billing method. |
 | Configure spending limits for an audience | [Spending policy](resources/spendingpolicy.md) | Choose a policy type, assign groups, configure service settings, and manage alerts and recipients. |
+| Supply an Azure billing target for pay-as-you-go funding | [Billing instrument](resources/costmanagementbillinginstrument.md) | Supply the target through policy create or a non-pay-as-you-go to pay-as-you-go update, then read resource provisioning state through policy get. |
 | Diagnose whether a user can consume a service | [User balance](resources/costmanagementuserbalance.md) | Read the user's service balances to inspect the selected policy, remaining quantity, and access decision. |
 | Review requests for more credits | [Credit request](resources/creditrequest.md) | List requests, read a request, and approve or reject requests individually or in a batch. |
 | Analyze consumption over time | [Usage reports](usage-reports-overview.md) | Read daily user, group, and service records, monthly funding records, or one user's raw service and session detail. |
@@ -36,6 +37,7 @@ Use **User balance** for a user's current consumption allowance and **Usage repo
 
 - Read the tenant-wide credit balance snapshot, with one row per billing method.
 - Create, read, update, and delete spending policies that cap Copilot Credits consumption for an audience.
+- Supply an Azure billing target for pay-as-you-go provisioning and read its resource provisioning state independently of policy status.
 - Scope a policy to every user in the tenant (`allUsersSpendingPolicy`) or to selected groups (`selectedGroupsSpendingPolicy`).
 - Manage a policy's group audience through `$ref` reference links.
 - Configure per-service settings that govern or exclude individual AI services within a policy.
@@ -100,6 +102,10 @@ The operations are grouped by task, matching the reference navigation. Each reso
 ### Spending policies and related settings
 
 Manage policies and their assigned groups, service settings, and alerts.
+
+For pay-as-you-go funding, the [billingInstrument](resources/costmanagementbillinginstrument.md) property supplies the Azure subscription, resource group, and supported billing geography in which the service provisions a Power Platform account. It's optional at creation, but a complete target is required when a policy update changes stored non-pay-as-you-go funding to include `payAsYouGo`. It doesn't define replacement of an already-pay-as-you-go instrument.
+
+Read `billingInstrument.provisioningStatus` through the existing policy GET. Resource provisioning is separate from the policy lifecycle: `succeeded` doesn't imply that the policy is enabled. The operation doesn't introduce a separate billing endpoint.
 
 | Operation | HTTP method | Description |
 |:----------|:------------|:------------|
