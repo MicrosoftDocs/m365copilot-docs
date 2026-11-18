@@ -4,7 +4,7 @@ description: A spending policy that governs only the users in its assigned group
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 10/02/2026
+ms.date: 11/13/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -36,6 +36,7 @@ All properties are inherited from [spendingPolicy](spendingpolicy.md). This type
 
 | Property               | Type                                                                        | Description                                                                 |
 |:-----------------------|:----------------------------------------------------------------------------|:----------------------------------------------------------------------------|
+| `billingInstrument`    | [costManagementBillingInstrument](costmanagementbillinginstrument.md) | Inherited from [spendingPolicy](spendingpolicy.md). The Azure billing target and its resource provisioning state. |
 | `billingMethods`       | [costManagementBillingMethods](spendingpolicy.md#costmanagementbillingmethods-enumeration) | Inherited from [spendingPolicy](spendingpolicy.md). How consumption is funded. |
 | `createdBy`            | [identitySet](/graph/api/resources/identityset)                             | Inherited from [spendingPolicy](spendingpolicy.md). The identity that created the policy. Read-only. |
 | `createdDateTime`      | DateTimeOffset                                                              | Inherited from [spendingPolicy](spendingpolicy.md). When the policy was created. Read-only. |
@@ -62,6 +63,9 @@ The following JSON representation shows the resource type.
 ```json
 {
   "@odata.type": "#microsoft.graph.selectedGroupsSpendingPolicy",
+  "billingInstrument": {
+    "@odata.type": "microsoft.graph.costManagementBillingInstrument"
+  },
   "billingMethods": "String",
   "createdBy": {
     "@odata.type": "microsoft.graph.identitySet"

@@ -5,7 +5,7 @@ author: DanielSaunders
 ms.author: dsaunders
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 11/03/2026
+ms.date: 11/17/2026
 ---
 
 <!-- cSpell:ignore dsaunders -->
@@ -18,10 +18,26 @@ The Microsoft 365 Copilot Cost Management API helps administrators govern and ob
 
 The API is credit-denominated and deliberately excludes purchase forecasts. It doesn't return any currency, invoice, price, or settlement amounts.
 
+## Find the right API
+
+Start with the task you want to accomplish. The reference navigation groups each resource with its operations and related child resources.
+
+| Task | Start here | Related resources and operations |
+|:-----|:-----------|:--------------------------------|
+| Check the tenant's credit balance | [Cost management root](resources/costmanagementroot.md) | [Get tenant credit balance](costmanagementroot-gettenantcreditbalance.md) returns a snapshot by billing method. |
+| Configure spending limits for an audience | [Spending policy](resources/spendingpolicy.md) | Choose a policy type, assign groups, configure service settings, and manage alerts and recipients. |
+| Supply an Azure billing target for pay-as-you-go funding | [Billing instrument](resources/costmanagementbillinginstrument.md) | Supply the target through policy create or a non-pay-as-you-go to pay-as-you-go update, then read resource provisioning state through policy get. |
+| Diagnose whether a user can consume a service | [User balance](resources/costmanagementuserbalance.md) | Read the user's service balances to inspect the selected policy, remaining quantity, and access decision. |
+| Review requests for more credits | [Credit request](resources/creditrequest.md) | List requests, read a request, and approve or reject requests individually or in a batch. |
+| Analyze consumption over time | [Usage reports](usage-reports-overview.md) | Read daily user, group, and service records, monthly funding records, or one user's raw service and session detail. |
+
+Use **User balance** for a user's current consumption allowance and **Usage reports** for consumption during a reporting period. They answer different questions and aren't interchangeable.
+
 ## Key capabilities
 
 - Read the tenant-wide credit balance snapshot, with one row per billing method.
 - Create, read, update, and delete spending policies that cap Copilot Credits consumption for an audience.
+- Supply an Azure billing target for pay-as-you-go provisioning and read its resource provisioning state independently of policy status.
 - Scope a policy to every user in the tenant (`allUsersSpendingPolicy`) or to selected groups (`selectedGroupsSpendingPolicy`).
 - Manage a policy's group audience through `$ref` reference links.
 - Configure per-service settings that govern or exclude individual AI services within a policy.
@@ -52,7 +68,17 @@ Billing Administrators, Global Administrators, AI Administrators, Global Readers
 
 ## Permissions
 
-This API uses the `CopilotCostManagement-*` permission family. Most operations support only delegated (work or school account) permissions. The tenant credit balance read ([getTenantCreditBalance](costmanagementroot-gettenantcreditbalance.md)) also supports the `CopilotCostManagement.Read.All` application permission, and the service and funding usage reports also support the `CopilotCostManagement-Reports.Read.All` and `CopilotCostManagement.Read.All` application permissions. Personal Microsoft accounts aren't supported. Choose the least privileged permission for each operation.
+This API uses `CopilotCostManagement.Read.All` and the granular `CopilotCostManagement-*` permissions. The Graph permission model maps both delegated (work or school account) and application permissions to tenant credit balance, spending policy, settings, recipient, assignment, user balance, and usage report reads. Personal Microsoft accounts aren't supported. Choose the least privileged permission listed for each operation, and review [permission availability and authorization](#permission-availability-and-authorization) before relying on a mapping.
+
+`CopilotCostManagement.Read.All` is the broadest read permission. It's a higher privileged alternative to the granular permissions on covered GET operations, except for the tenant credit balance operation, where it's the least privileged permission. It doesn't authorize POST, PATCH, or DELETE operations and doesn't cover credit requests. Read the operation's permission table rather than assuming that every Cost Management endpoint accepts it.
+
+Both access schemes require administrator consent. The broad permission includes sensitive organizational data: tenant and user balances, usage reports, spending policies and their configuration, group assignments, and creator, modifier, and alert-recipient identities. Application access reads this data without a signed-in user. Prefer a granular permission when your app needs only one category of data.
+
+### Permission availability and authorization
+
+The permission tables don't guarantee that an operation is available with every listed permission. Availability of `CopilotCostManagement.Read.All` for spending policy, settings, recipient, assignment, and user balance reads isn't yet confirmed for delegated or application access. Confirm availability for your app's access type before relying on this permission for these reads.
+
+Consent doesn't replace API authorization. Delegated calls must still pass the applicable directory-role checks. Application calls must pass application-authorization checks, and both access schemes remain subject to tenant isolation. Beta status doesn't waive these requirements.
 
 > [!IMPORTANT]
 > Some Microsoft 365 Copilot Cost Management permissions might not yet appear in the API permission picker in the Microsoft Entra admin center. Normal administrator-consent and API authorization requirements still apply.
@@ -61,9 +87,11 @@ This API uses the `CopilotCostManagement-*` permission family. Most operations s
 >
 > This scope-name flow applies only to delegated permissions; it does not configure or grant application permissions.
 
+### Permission reference
+
 | Permission                                      | Operations                                                                      |
 |:------------------------------------------------|:--------------------------------------------------------------------------------|
-| `CopilotCostManagement.Read.All`                | Read the tenant credit balance snapshot. Also read all usage reports with delegated permissions. Application access applies only to the tenant credit balance and the service and funding usage reports. |
+| `CopilotCostManagement.Read.All`                | Read the tenant credit balance snapshot, spending policies and their settings, alert recipients, group assignments, named-user balances and service balances, and all usage reports. The Graph model maps these reads for delegated and application access, subject to the availability and authorization requirements. Doesn't cover credit requests or writes. |
 | `CopilotCostManagement-Reports.Read.All`        | Read aggregate service and funding usage reports.                               |
 | `CopilotCostManagement-Policy.Read.All`         | Read spending policies, per-service settings, alert thresholds, and recipients. |
 | `CopilotCostManagement-Policy.ReadWrite.All`    | Create, update, and delete policies, service settings, alerts, and recipients.  |
@@ -75,9 +103,24 @@ This API uses the `CopilotCostManagement-*` permission family. Most operations s
 
 ## API list
 
+The operations are grouped by task, matching the reference navigation. Each resource reference describes its properties and related operations.
+
+### Tenant credit balance
+
 | Operation                                                                                               | HTTP method                                                                                            | Description                                                 |
 |:--------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|:------------------------------------------------------------|
 | [Get tenant credit balance](costmanagementroot-gettenantcreditbalance.md)                               | GET `/copilot/costManagement/getTenantCreditBalance`                                                 | Get the tenant-wide credit balance snapshot.                |
+
+### Spending policies and related settings
+
+Manage policies and their assigned groups, service settings, and alerts.
+
+For pay-as-you-go funding, the [billingInstrument](resources/costmanagementbillinginstrument.md) property supplies the Azure subscription, resource group, and supported billing geography in which the service provisions a Power Platform account. It's optional at creation, but a complete target is required when a policy update changes stored non-pay-as-you-go funding to include `payAsYouGo`. It doesn't define replacement of an already-pay-as-you-go instrument.
+
+Read `billingInstrument.provisioningStatus` through the existing policy GET. Resource provisioning is separate from the policy lifecycle: `succeeded` doesn't imply that the policy is enabled. The operation doesn't introduce a separate billing endpoint.
+
+| Operation | HTTP method | Description |
+|:----------|:------------|:------------|
 | [List spendingPolicies](spendingpolicy-list.md)                                                         | GET `/copilot/costManagement/spendingPolicies`                                                         | Get a list of spending policies.                            |
 | [Create spendingPolicy](spendingpolicy-create.md)                                                       | POST `/copilot/costManagement/spendingPolicies`                                                        | Create a new spending policy.                               |
 | [Get spendingPolicy](spendingpolicy-get.md)                                                             | GET `/copilot/costManagement/spendingPolicies/{id}`                                                    | Retrieve a spending policy.                                 |
@@ -96,23 +139,29 @@ This API uses the `CopilotCostManagement-*` permission family. Most operations s
 | [List recipients](costmanagementalertsetting-list-recipients.md)                                        | GET `/copilot/costManagement/spendingPolicies/{id}/emailThresholdSettings/recipients`                  | List the alert recipients.                                  |
 | [Add recipient](costmanagementalertsetting-post-recipients.md)                                          | POST `/copilot/costManagement/spendingPolicies/{id}/emailThresholdSettings/recipients/$ref`            | Add an alert recipient.                                     |
 | [Remove recipient](costmanagementalertsetting-delete-recipients.md)                                     | DELETE `/copilot/costManagement/spendingPolicies/{id}/emailThresholdSettings/recipients/{userId}/$ref` | Remove an alert recipient.                                  |
+
+### User balances
+
+Read a balance by user ID, and then check all service balances or one service's balance. The parent collection `GET /copilot/costManagement/userBalances` isn't listable and returns a `404` response; a permission mapping doesn't make it listable.
+
+| Operation | HTTP method | Description |
+|:----------|:------------|:------------|
 | [Get costManagementUserBalance](costmanagementuserbalance-get.md)                                       | GET `/copilot/costManagement/userBalances/{userId}`                                                    | Retrieve a user's consumption balance.                      |
 | [List costManagementUserServiceBalances](costmanagementuserservicebalance-list.md)                      | GET `/copilot/costManagement/userBalances/{userId}/serviceBalances`                                    | List a user's per-service balance rows.                     |
 | [Get costManagementUserServiceBalance](costmanagementuserservicebalance-get.md)                         | GET `/copilot/costManagement/userBalances/{userId}/serviceBalances/{serviceId}`                        | Retrieve one service's balance row for a user.              |
+
+### Credit requests
+
+| Operation | HTTP method | Description |
+|:----------|:------------|:------------|
 | [List creditRequests](creditrequest-list.md)                                                            | GET `/copilot/costManagement/creditRequests`                                                           | List the tenant's credit requests.                          |
 | [Get creditRequest](creditrequest-get.md)                                                               | GET `/copilot/costManagement/creditRequests/{id}`                                                      | Retrieve a credit request.                                  |
 | [Update creditRequest](creditrequest-update.md)                                                         | PATCH `/copilot/costManagement/creditRequests/{id}`                                                    | Approve or reject a credit request.                         |
 | [Batch record decisions](creditrequest-batchrecorddecisions.md)                                         | POST `/copilot/costManagement/creditRequests/batchRecordDecisions`                                     | Approve or reject credit requests in bulk.                  |
-| [List costManagementUserUsageRecords](costmanagementuserusagerecord-list.md)                            | GET `/copilot/costManagement/usageReports/userUsageRecords`                                            | List reported consumption per user for one completed UTC day. |
-| [Get costManagementUserUsageRecord](costmanagementuserusagerecord-get.md)                               | GET `/copilot/costManagement/usageReports/userUsageRecords/{userId}`                                   | Retrieve one user's reported consumption for one completed UTC day. |
-| [List costManagementGroupUsageRecords](costmanagementgroupusagerecord-list.md)                          | GET `/copilot/costManagement/usageReports/groupUsageRecords`                                           | List reported consumption per security group for one completed UTC day. |
-| [Get costManagementGroupUsageRecord](costmanagementgroupusagerecord-get.md)                             | GET `/copilot/costManagement/usageReports/groupUsageRecords/{groupId}`                                 | Retrieve one security group's reported consumption for one completed UTC day. |
-| [List costManagementServiceUsageRecords](costmanagementserviceusagerecord-list.md)                      | GET `/copilot/costManagement/usageReports/serviceUsageRecords`                                         | List reported consumption per governed service for one completed UTC day. |
-| [Get costManagementServiceUsageRecord](costmanagementserviceusagerecord-get.md)                         | GET `/copilot/costManagement/usageReports/serviceUsageRecords/{serviceId}`                             | Retrieve one service's reported consumption for one completed UTC day. |
-| [List costManagementFundingUsageRecords](costmanagementfundingusagerecord-list.md)                      | GET `/copilot/costManagement/usageReports/fundingUsageRecords`                                         | List reported consumption per funding class for a calendar month. |
-| [Get costManagementUserUsageDetail](costmanagementuserusagedetail-get.md)                               | GET `/copilot/costManagement/usageReports/userUsageDetails/{userId}`                                   | Retrieve one user's raw usage detail over a timestamp window. |
-| [List costManagementUserUsageServiceDetails](costmanagementuserusageservicedetail-list.md)              | GET `/copilot/costManagement/usageReports/userUsageDetails/{userId}/services`                          | List one user's raw consumption by governed service.        |
-| [List costManagementUserUsageSessionDetails](costmanagementuserusagesessiondetail-list.md)              | GET `/copilot/costManagement/usageReports/userUsageDetails/{userId}/sessions`                          | List one user's raw usage grouped by session.               |
+
+### Usage reports
+
+For the user, group, service, funding, and raw user detail operations, see [Choose a report](usage-reports-overview.md#choose-a-report). The [Usage reports overview](usage-reports-overview.md) explains which report to use and how to query it.
 
 ## Concurrency and removal semantics
 
@@ -125,22 +174,9 @@ This API uses the `CopilotCostManagement-*` permission family. Most operations s
 
 ## Usage report time selectors and paging
 
-Usage reports live under `/copilot/costManagement/usageReports`. Every usage report request requires a time selector, supplied as query parameters. Requests without the required selectors are rejected with a `400 unsupportedQuery` response.
+Every usage report request requires a time selector: a completed UTC day, a calendar month, or a timestamp window, depending on the report. For the requirements and examples, see [Time selectors](usage-reports-overview.md#time-selectors).
 
-| Selector family     | Parameters                     | Format                                                         | Used by                                                     |
-|:--------------------|:-------------------------------|:---------------------------------------------------------------|:------------------------------------------------------------|
-| Completed UTC day   | `startDate`, `endDate`         | Date, `YYYY-MM-DD`. Inclusive start and exclusive end. `endDate` must equal `startDate` plus one day, and its UTC midnight must not be later than the current time. | User, group, and service usage records (list and get)       |
-| Calendar month      | `month`                        | String, `YYYY-MM`. Date ranges are rejected.                   | Funding usage records                                       |
-| Timestamp window    | `startDateTime`, `endDateTime` | DateTimeOffset, UTC ISO 8601, up to seven fractional digits. Inclusive start and exclusive end. Currently, `startDateTime` must be earlier than `endDateTime`, `endDateTime` can't be later than the current time, the window can be at most 24 hours long, and the window can't cross a UTC calendar-month boundary. The end can equal midnight UTC on the first day of the next month. | User usage detail, and its services and sessions            |
-
-Invalid selectors are rejected, not clamped. Current-day, future, and multi-day ranges on the completed-UTC-day reports return a `400` response, as do timestamp windows that currently don't meet the timestamp-window limits in the table. Validation doesn't enforce an oldest permitted `startDate` or `month`.
-
-- **Paging.** The user, group, and service usage records and the user usage sessions use server-driven paging with `$skiptoken`; `$skip` isn't supported. Follow the complete `@odata.nextLink` URL unchanged. The continuation keeps the original selectors, filter, and order, but it isn't a point-in-time snapshot. Later pages read current data, so rows can repeat or be missed between pages. A `nextLink` whose dates differ from the original request is rejected with a `400` response. On the user, group, and service usage records, `$top` accepts an integer from 1 through 100 with a default of 10, and values outside that range are rejected, not capped. The user usage sessions have a separate default page size of 20 and a maximum of 100. Funding usage records and the user usage services aren't paged.
-- **Filtering.** The user, group, and service usage records support `$filter` on `userId`, `groupId`, and `serviceId` respectively, by using only the `eq` operator. Other operators, such as `in`, aren't supported.
-- **Ordering.** Only `consumedQuantity` supports `$orderby`. Ties are broken internally, and ordering on the dimension key isn't supported.
-- **Units.** Every quantity carries a `unit`, currently `copilotCredit`. No currency, invoice, price, or settlement amounts are returned.
-- **Processed versus raw.** `userUsageRecords` returns processed consumption for one completed UTC day that you can rank across users. `userUsageDetails` returns one user's raw, billable-flagged usage over a timestamp window, with service and session breakdowns. The two measurements, including their `sessionCount` values, aren't guaranteed to be equal.
-- **Not-readable parents.** `GET /copilot/costManagement/usageReports` returns a `404` response and carries no data. `GET /copilot/costManagement/usageReports/userUsageDetails` isn't listable; read the detail by user ID instead.
+The report-specific guide also covers [paging](usage-reports-overview.md#paging), [filtering and ordering](usage-reports-overview.md#filtering-and-ordering), and [interpreting results and errors](usage-reports-overview.md#interpret-results-and-errors).
 
 ## Error conditions
 
@@ -181,5 +217,5 @@ The [batchRecordDecisions](creditrequest-batchrecorddecisions.md) action returns
 - [spendingPolicy resource type](resources/spendingpolicy.md)
 - [costManagementUserBalance resource type](resources/costmanagementuserbalance.md)
 - [creditRequest resource type](resources/creditrequest.md)
-- [costManagementUsageReportRoot resource type](resources/costmanagementusagereportroot.md)
-- [costManagementUserUsageRecord resource type](resources/costmanagementuserusagerecord.md)
+- [Usage reports overview](usage-reports-overview.md)
+- [costManagementRoot resource type](resources/costmanagementroot.md)

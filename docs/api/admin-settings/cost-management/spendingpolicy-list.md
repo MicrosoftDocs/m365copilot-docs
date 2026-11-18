@@ -4,7 +4,7 @@ description: Get a list of spendingPolicy objects.
 author: DanielSaunders
 ms.author: dsaunders
 ms.topic: reference
-ms.date: 10/02/2026
+ms.date: 11/13/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -24,9 +24,11 @@ Get a list of [spendingPolicy](resources/spendingpolicy.md) objects. The returne
 
 | Permission type                        | Least privileged permissions             | Higher privileged permissions |
 |:---------------------------------------|:-----------------------------------------|:------------------------------|
-| Delegated (work or school account)     | CopilotCostManagement-Policy.Read.All    | CopilotCostManagement-Policy.ReadWrite.All                |
+| Delegated (work or school account)     | CopilotCostManagement-Policy.Read.All    | CopilotCostManagement-Policy.ReadWrite.All, CopilotCostManagement.Read.All |
 | Delegated (personal Microsoft account) | Not supported.                           | Not supported.                |
-| Application                            | Not supported.                           | Not supported.                |
+| Application                            | CopilotCostManagement-Policy.Read.All    | CopilotCostManagement-Policy.ReadWrite.All, CopilotCostManagement.Read.All |
+
+This table describes the Graph permission model. See [permission availability and authorization](overview.md#permission-availability-and-authorization) for deployment requirements.
 
 ## HTTP request
 
@@ -46,6 +48,8 @@ This method supports `$select`, `$top`, `$count`, `$orderby` (on `displayName` a
 
 For example, use `$filter=status eq microsoft.graph.spendingPolicyStatus'enabled'`. Read service settings, alert settings, recipients, and group assignments on their dedicated endpoints. If the service returns an `@odata.nextLink` property, follow that URL unchanged to get the next page.
 
+You can select `billingInstrument` or its nested properties with `$select`. The instrument and its members don't support `$filter` or `$orderby`; filtering on the policy's `status` doesn't filter resource provisioning state.
+
 ## Request headers
 
 | Name            | Description                                                                                               |
@@ -59,6 +63,8 @@ Don't supply a request body for this method.
 ## Response
 
 If successful, this method returns a `200 OK` response code and a collection of [spendingPolicy](resources/spendingpolicy.md) objects in the response body.
+
+Pay-as-you-go policy items can include an inline [billingInstrument](resources/costmanagementbillinginstrument.md). Its coordinates, resource ID, and provisioning state describe the same tracked instrument. The service omits unavailable or unrecorded `provisioningStatus` and unavailable `billingResourceId`; neither omission indicates success. Use [Get spendingPolicy](spendingpolicy-get.md) to read an individual policy's resource provisioning state independently of the policy's `status`.
 
 ## Example
 
@@ -89,7 +95,14 @@ Content-type: application/json
       "status": "enabled",
       "periodLimit": { "@odata.type": "#microsoft.graph.limitedCostManagementQuantity", "value": 10000, "unit": "copilotCredit" },
       "perUserLimit": { "@odata.type": "#microsoft.graph.limitedCostManagementQuantity", "value": 500, "unit": "copilotCredit" },
-      "billingMethods": "prepaidCredits",
+      "billingMethods": "prepaidCredits,payAsYouGo",
+      "billingInstrument": {
+        "billingSubscriptionId": "11111111-2222-3333-4444-555555555555",
+        "billingResourceGroup": "Finance",
+        "billingRegion": "UnitedStates",
+        "billingResourceId": "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/Finance/providers/Microsoft.PowerPlatform/accounts/generated-account",
+        "provisioningStatus": "succeeded"
+      },
       "createdDateTime": "2026-07-27T09:15:00Z",
       "createdBy": { "user": { "id": "aa110000-0000-0000-0000-000000000000", "displayName": "Alex Admin" } },
       "lastModifiedDateTime": "2026-07-27T09:19:00Z",
