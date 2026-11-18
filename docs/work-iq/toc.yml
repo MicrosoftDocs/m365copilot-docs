@@ -17,6 +17,10 @@ items:
   href: listen.md
 - name: SharePoint Tools (preview)
   href: sharepoint-iq.md
+- name: Office Document Tools (preview)
+  href: office-agent-iq.md
+- name: Copilot Pages Tools (preview)
+  href: pages-iq.md
 - name: Engage Tools for Work IQ (preview)
   href: engage-tools-for-work-iq.md
 - name: Agent-to-Agent (A2A)
