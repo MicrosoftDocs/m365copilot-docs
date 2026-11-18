@@ -169,6 +169,8 @@ Additional filter support is on the roadmap. Until the filters required by your 
 
 Use capability objects to constrain email, meetings, Teams messages, people, or currently available connectors.
 
+Copilot connectors participate in retrieval only for data sources connected in Copilot Chat.
+
 Use `copilot` for `GraphConnectors`. Dataverse and Power BI are roadmap sources, not currently supported retrieval sources.
 
 ## Convert response handling
