@@ -44,9 +44,9 @@ An [evolvable enumeration](/graph/best-practices-concept#handling-future-members
 
 Use the existing [Create spendingPolicy](../spendingpolicy-create.md) and [Update spendingPolicy](../spendingpolicy-update.md) operations.
 
-For guidance on choosing a billing region, see [Set up usage-based billing for Copilot Credits](https://learn.microsoft.com/en-us/copilot/implement/usage-based-billing-copilot-credits-setup).
+For guidance on choosing a billing region, see [Set up usage-based billing for Copilot Credits](/copilot/implement/usage-based-billing-copilot-credits-setup).
 
-For examples of Power Platform location names and codes, see the **Location** columns in [Power Platform's regional availability table](https://learn.microsoft.com/en-us/power-platform/admin/unified-experience/unified-environment-types-and-templates#regional-availability-for-finance-and-operations-apps). That table describes environment availability, not the complete set of supported billing regions for this API.
+For examples of Power Platform location names and codes, see the **Location** columns in [Power Platform's regional availability table](/power-platform/admin/unified-experience/unified-environment-types-and-templates#regional-availability-for-finance-and-operations-apps). That table describes environment availability, not the complete set of supported billing regions for this API.
 
 - At creation, **billingInstrument** is optional. You can create a policy without supplying an explicit Azure billing target in the request. To specify a pay-as-you-go provisioning target, supply all three writable coordinates.
 - Every supplied object must contain all three writable coordinates: **billingSubscriptionId**, **billingResourceGroup**, and **billingRegion**, including on `PATCH`. Empty or partial objects and null coordinates are invalid. An explicit null wrapper doesn't clear the instrument or select defaults.
