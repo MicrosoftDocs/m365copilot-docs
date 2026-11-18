@@ -6,7 +6,7 @@ ms.author: pomuth
 ms.topic: reference
 doc_type: apiPageType
 ms.localizationpriority: high
-ms.date: 08/07/2026
+ms.date: 11/17/2026
 zone_pivot_groups: graph-api-versions
 ---
 
@@ -53,6 +53,18 @@ GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages/{id}
 
 :::zone-end
 
+:::zone pivot="graph-preview"
+
+## Optional query parameters
+
+This method supports the `$select` [OData query parameter](/graph/query-parameters) to help customize the response.
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+| `$select` | String | Use the exact selection `id,requestMetadata` to return only the package ID and request metadata. Use the package's exact title ID; this selection doesn't resolve an alternate staged ID. |
+
+:::zone-end
+
 ## Request headers
 
 | Name            | Description                                                                                                 |
@@ -67,7 +79,9 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a [copilotPackageDetail](resources/copilotpackagedetail.md) object in the response body.
 
-### Example
+## Examples
+
+### Example 1: Get package details
 
 #### Request
 
@@ -91,7 +105,7 @@ GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages/abc
 
 #### Response
 
-The following example shows the response.
+The following example shows the response to the package detail request. The response object shown here might be shortened for readability.
 
 ```http
 HTTP/1.1 200 OK
@@ -163,3 +177,65 @@ Content-Type: application/json
   ]
 }
 ```
+
+:::zone pivot="graph-preview"
+
+### Example 2: Select request metadata
+
+#### Request
+
+The following example shows a request to get a package's request metadat. For field meanings and availability, see [copilotPackageRequestMetadata](resources/copilotpackagerequestmetadata.md).
+
+```http
+GET https://graph.microsoft.com/beta/copilot/admin/catalog/packages/T_87654321-4321-4321-4321-210987654321?$select=id,requestMetadata
+```
+
+#### Response
+
+The first entry in the `requests` property illustrates a publication request: `requestedBy` is the resolved requester's display contact and `assignees` is empty. The second entry illustrates a different request: `requestedBy` is the first explicit assignee, while `assignees` preserves all explicit members in order. A null contact isn't proof that no request exists. See [copilotPackageRequestInfo](resources/copilotpackagerequestinfo.md) for field meanings.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": "T_87654321-4321-4321-4321-210987654321",
+  "requestMetadata": {
+    "requests": [
+      {
+        "identifier": "request-publish",
+        "assignees": [],
+        "requestedBy": {
+          "name": "Alex Example",
+          "address": "alex@example.com"
+        },
+        "requestedDateTime": "2026-10-01T12:00:00Z"
+      },
+      {
+        "identifier": "request-access",
+        "assignees": [
+          {
+            "id": "11111111-1111-1111-1111-111111111111",
+            "displayName": "Jordan Example",
+            "userPrincipalName": "jordan@example.com",
+            "principalType": "user"
+          },
+          {
+            "id": "22222222-2222-2222-2222-222222222222",
+            "displayName": "Example Team",
+            "userPrincipalName": null,
+            "principalType": "group"
+          }
+        ],
+        "requestedBy": {
+          "name": "Jordan Example",
+          "address": "jordan@example.com"
+        },
+        "requestedDateTime": "2026-10-01T13:00:00Z"
+      }
+    ]
+  }
+}
+```
+
+:::zone-end

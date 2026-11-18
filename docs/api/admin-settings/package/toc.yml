@@ -15,12 +15,20 @@ items:
       href: copilotpackage-block.md
     - name: Reassign (preview)
       href: copilotpackage-reassign.md
+    - name: Reject (preview)
+      href: copilotpackage-reject.md
     - name: Unblock (preview)
       href: copilotpackage-unblock.md
 - name: Complex types
   items:
     - name: Copilot package
       href: resources/copilotpackage.md
+    - name: Copilot package request info
+      href: resources/copilotpackagerequestinfo.md
+    - name: Copilot package request metadata
+      href: resources/copilotpackagerequestmetadata.md
+    - name: Copilot package request principal
+      href: resources/copilotpackagerequestprincipal.md
     - name: Copilot package update response
       href: resources/copilotpackageupdateresponse.md
     - name: Package access entity
