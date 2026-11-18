@@ -4,7 +4,7 @@ description: Update an agentRegistration object.
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 09/18/2026
+ms.date: 11/13/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -47,6 +47,8 @@ PATCH https://graph.microsoft.com/beta/copilot/agentRegistrations/{id}
 
 In the request body, supply a JSON representation of the properties to update on the [agentRegistration](resources/agentregistration.md) object.
 
+Properties that you don't include in the request retain their existing values.
+
 | Property | Type | Description |
 |:---------|:-----|:------------|
 | `a2aAuthorization` | [a2aAuthorization](resources/a2aauthorization.md) | Authorization configuration used to invoke an Agent2Agent server. Optional. When supplied, the `type` property is required. |
@@ -59,7 +61,7 @@ In the request body, supply a JSON representation of the properties to update on
 | `managedByAppId` | String | Application identifier managing this agent. Optional. |
 | `originatingStore` | String | Name of the store or system where the agent originated. Optional. |
 | `ownerIds` | String collection | List of owner identifiers for the agent. Optional. |
-| `sourceAgentId` | String | Original agent identifier from source system. Optional. |
+| `sourceAgentId` | String | Original agent identifier from the source system. Optional. Omitting this property or supplying `null` preserves the stored value. Supplying an empty string updates the stored value to an empty string. |
 | `sourceLastModifiedDateTime` | DateTimeOffset | The date and time when the agent instance was last modified from source. Optional. |
 
 ## Response

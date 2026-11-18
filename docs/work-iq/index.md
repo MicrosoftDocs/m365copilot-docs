@@ -4,7 +4,7 @@ description: Learn how Work IQ provides production-ready workplace intelligence 
 author: erikadoyle
 ms.author: edoyle
 ms.localizationpriority: medium
-ms.date: 10/26/2026
+ms.date: 11/17/2026
 ms.topic: overview
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
@@ -20,6 +20,10 @@ Combining chat, context, tools, and workspaces, Work IQ supports high-volume, mu
 
 Work IQ API endpoints include A2A, a remote MCP server, and a REST API. Usage is independent of Microsoft 365 Copilot licensing and available through usage-based billing. Enterprise governance and cost management controls are available in the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
+Connected enterprise sources participate in Work IQ Copilot, entity, and schema tools. Connected enterprise sources refer to data sources connected in Copilot Chat.
+
+Connector developers must enable participation in Work IQ APIs.
+
 ## Chat
 
 Chat is optimized for conversational intelligence. Work IQ supports A2A for agent-to-agent collaboration and REST for web application interactions, enabling agents to delegate work, maintain continuity, and deliver fully processed, Copilot-quality responses.
@@ -28,7 +32,7 @@ Chat is optimized for conversational intelligence. Work IQ supports A2A for agen
 
 Context is optimized by eliminating orchestration overhead. Work IQ assembles and grounds context internally across organizational and business data to provide agent-ready inputs, so agents don't need to stitch together raw signals or manage retrieval pipelines.
 
-In addition to productivity data from Microsoft 365 applications, Work IQ also includes [business and workflow data](https://go.microsoft.com/fwlink/?LinkId=2379836) from Dynamics 365 and Power Platform.
+In addition to productivity data from Microsoft 365 applications, Work IQ also includes [business and workflow data](https://go.microsoft.com/fwlink/?LinkId=2379836) from Dynamics 365 and Power Platform, and data from connected enterprise systems through [Copilot Connectors](/microsoft-365/copilot/connectors/overview).
 
 ## Tools
 
@@ -47,6 +51,8 @@ Workspaces are optimized for long-running agent workflows. SharePoint Embedded w
 Work IQ centralizes control at a single point, combining simplified authorization with fine-grained policy enforcement. Instead of relying on hundreds of static OAuth scopes, the Work IQ MCP uses a small set of broad permissions to establish high-level access boundaries. A [Rego-based policy engine](https://www.openpolicyagent.org/docs/policy-language) enforces detailed, context-aware rules on every request. It evaluates factors like resource paths, request methods, user identity, and data content to control exactly what actions are allowed. Actions are user scoped, meaning every request runs in the context of a specific user and only accesses what that user is allowed to see or do.
 
 Work IQ embeds observability and governance directly into the platform. Every tool invocation is logged and evaluated, enabling auditability, usage analytics, rate limiting, and real-time compliance enforcement across agents and data sources.
+
+Existing administrator controls in the Microsoft 365 admin center to allow or block Copilot Connectors also apply when Connectors are accessed through Work IQ APIs. For details on these controls, see [Manage sync connectors](/microsoft-365/copilot/connectors/manage-connector) and [Manage federated connectors](/microsoft-365/copilot/connectors/manage-federated-connectors).
 
 ## Access and pricing
 

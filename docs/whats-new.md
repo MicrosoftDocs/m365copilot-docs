@@ -4,7 +4,7 @@ description: Find out what's new in Microsoft 365 Copilot extensibility, includi
 author: lauragra
 ms.author: jasonjoh
 ms.localizationpriority: medium
-ms.date: 11/12/2026
+ms.date: 11/13/2026
 ms.topic: overview
 ---
 
@@ -18,6 +18,10 @@ As a developer, you can extend, enrich, and customize [Microsoft 365 Copilot](/m
 For the latest information, announcements, and news about preview and generally available (GA) features, follow the [Microsoft 365 Copilot developer blog](https://devblogs.microsoft.com/microsoft365dev/category/microsoft-365-copilot/).
 
 ## November 2026
+
+### Agent registration request contract clarifications
+
+The Agent Registration API reference clarifies that [`sourceAgentId` is required on create](api/admin-settings/agent-registration/agentregistration-create.md#request-body) and must be non-null, non-empty, and contain at least one non-whitespace character. For [updates](api/admin-settings/agent-registration/agentregistration-update.md#request-body), omitting `sourceAgentId` or supplying `null` preserves the stored value, while supplying an empty string updates it to an empty string. Reads of legacy [agent registrations](api/admin-settings/agent-registration/resources/agentregistration.md#properties) can return `null` for this property.
 
 ### Skills in Copilot Chat
 
