@@ -4,7 +4,7 @@ description: Create a new agentRegistration object.
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 09/18/2026
+ms.date: 11/05/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -51,10 +51,12 @@ The following table lists the required properties when you create an agentRegist
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
-| `displayName` | String | Display name for the agent instance. Required. |
 | `createdBy` | String | The unique identifier of the user or app who created the agent registration. Required. |
+| `displayName` | String | Display name for the agent instance. Required. |
 | `sourceCreatedDateTime` | DateTimeOffset | The date and time when the agent instance was created from source. Required. |
 | `sourceLastModifiedDateTime` | DateTimeOffset | The date and time when the agent instance was last modified from source. Required. |
+
+If the agent originates in a source system, supply that system's original agent identifier in `sourceAgentId`. Use a non-empty value that contains a non-whitespace character. This is the source-system identifier; use the registration's `id` to address the Microsoft Graph resource.
 
 ## Response
 
@@ -73,11 +75,14 @@ Content-Type: application/json
 {
   "displayName": "Contoso Travel Booking Agent",
   "description": "Helps users search and book flights and hotels",
+  "createdBy": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "sourceCreatedDateTime": "2025-02-15T10:00:00Z",
+  "sourceLastModifiedDateTime": "2025-03-10T14:30:00Z",
   "ownerIds": [
     "3fa85f64-5717-4562-b3fc-2c963f66afa6",
     "8b7e9c42-1234-5678-90ab-def123456789"
   ],
-  "sourceAgentId": "contoso-sales-assistant-v1",
+  "sourceAgentId": "contoso-travel-booking-v1",
   "originatingStore": "ContosoAgentStore",
   "managedByAppId": "7c3f8d45-e29b-41d4-a716-556677889900",
   "agentIdentityId": "identity-550e8400-e29b-41d4-a716-446655440000",

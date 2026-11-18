@@ -4,7 +4,7 @@ description: Represents an agent registration containing metadata, endpoint conf
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 09/18/2026
+ms.date: 11/05/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -34,17 +34,17 @@ Represents an agent registration containing metadata, endpoint configuration, an
 | `agentCard` | [Json](/graph/api/resources/json) | Flexible JSON manifest containing agent card information following public manifest specifications. Can include display name, description, icon URL, version, provider, capabilities, skills, security, and other manifest-defined fields. |
 | `agentIdentityBlueprintId` | String | Agent identity blueprint identifier. |
 | `agentIdentityId` | String | Entra agent identity identifier. |
-| `createdBy` | String | The unique identifier of the user or app who created the agent registration. |
+| `createdBy` | String | The unique identifier of the user or app who created the agent registration. Required on create. |
 | `description` | String | The agent description providing an overview of its purpose and capabilities. |
-| `displayName` | String | Display name for the agent instance. Required. |
+| `displayName` | String | Display name for the agent instance. Required on create. |
 | `id` | String | Unique identifier for the agent registration. Inherited from [entity](/graph/api/resources/entity). |
 | `lastPublishedBy` | String | The unique identifier of the last person to publish the agent. |
 | `managedByAppId` | String | Application identifier managing this agent. |
 | `originatingStore` | String | Name of the store or system where the agent originated. |
 | `ownerIds` | String collection | List of owner identifiers for the agent. Either owners or `managedByAppId` is required. |
-| `sourceAgentId` | String | Original agent identifier from source system. |
-| `sourceCreatedDateTime` | DateTimeOffset | The date and time when the agent instance was created from source. |
-| `sourceLastModifiedDateTime` | DateTimeOffset | The date and time when the agent instance was last modified from source. |
+| `sourceAgentId` | String | Original agent identifier from the source system. This value can be null. Use the registration's `id` to address the Microsoft Graph resource. |
+| `sourceCreatedDateTime` | DateTimeOffset | The date and time when the agent instance was created from source. Required on create. |
+| `sourceLastModifiedDateTime` | DateTimeOffset | The date and time when the agent instance was last modified from source. Required on create. |
 
 ## Relationships
 
