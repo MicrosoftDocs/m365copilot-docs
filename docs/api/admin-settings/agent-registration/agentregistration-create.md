@@ -4,7 +4,7 @@ description: Create a new agentRegistration object.
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 11/05/2026
+ms.date: 11/13/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -53,6 +53,7 @@ The following table lists the required properties when you create an agentRegist
 |:---------|:-----|:------------|
 | `createdBy` | String | The unique identifier of the user or app who created the agent registration. Required. |
 | `displayName` | String | Display name for the agent instance. Required. |
+| `sourceAgentId` | String | Original agent identifier from the source system. Required. Must be non-null, non-empty, and contain at least one non-whitespace character. |
 | `sourceCreatedDateTime` | DateTimeOffset | The date and time when the agent instance was created from source. Required. |
 | `sourceLastModifiedDateTime` | DateTimeOffset | The date and time when the agent instance was last modified from source. Required. |
 

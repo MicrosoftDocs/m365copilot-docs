@@ -4,7 +4,7 @@ description: Represents an agent registration containing metadata, endpoint conf
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 11/05/2026
+ms.date: 11/13/2026
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ---
@@ -42,9 +42,9 @@ Represents an agent registration containing metadata, endpoint configuration, an
 | `managedByAppId` | String | Application identifier managing this agent. |
 | `originatingStore` | String | Name of the store or system where the agent originated. |
 | `ownerIds` | String collection | List of owner identifiers for the agent. Either owners or `managedByAppId` is required. |
-| `sourceAgentId` | String | Original agent identifier from the source system. This value can be null. Use the registration's `id` to address the Microsoft Graph resource. |
-| `sourceCreatedDateTime` | DateTimeOffset | The date and time when the agent instance was created from source. Required on create. |
-| `sourceLastModifiedDateTime` | DateTimeOffset | The date and time when the agent instance was last modified from source. Required on create. |
+| `sourceAgentId` | String | Original agent identifier from the source system. Required on create; must be non-null, non-empty, and contain at least one non-whitespace character. Reads of legacy registrations can return `null`. On update, omission or `null` preserves the stored value; an empty string is applied. |
+| `sourceCreatedDateTime` | DateTimeOffset | The date and time when the agent instance was created from source. |
+| `sourceLastModifiedDateTime` | DateTimeOffset | The date and time when the agent instance was last modified from source. |
 
 ## Relationships
 

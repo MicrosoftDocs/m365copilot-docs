@@ -4,7 +4,7 @@ description: Update an agentRegistration object.
 author: Ganeshkrish18
 ms.author: gakrishn
 ms.topic: reference
-ms.date: 11/05/2026
+ms.date: 11/13/2026
 ms.localizationpriority: medium
 doc_type: apiPageType
 ---
@@ -61,7 +61,7 @@ Properties that you don't include in the request retain their existing values.
 | `managedByAppId` | String | Application identifier managing this agent. Optional. |
 | `originatingStore` | String | Name of the store or system where the agent originated. Optional. |
 | `ownerIds` | String collection | List of owner identifiers for the agent. Optional. |
-| `sourceAgentId` | String | Original agent identifier from the source system. If you update this property, use a non-empty value that contains a non-whitespace character. Optional. |
+| `sourceAgentId` | String | Original agent identifier from the source system. Optional. Omitting this property or supplying `null` preserves the stored value. Supplying an empty string updates the stored value to an empty string. |
 | `sourceLastModifiedDateTime` | DateTimeOffset | The date and time when the agent instance was last modified from source. Optional. |
 
 ## Response
