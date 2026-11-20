@@ -5,7 +5,7 @@ author: jasonjoh
 ms.author: jasonjoh
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 11/11/2026
+ms.date: 11/16/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1013
 ---
@@ -31,10 +31,11 @@ Reads one or more entities by resource path. Supports fetching multiple paths in
 
 #### Parameters
 
-| Parameter    | Type         | Required | Description                                                                                 |
-|--------------|--------------|----------|---------------------------------------------------------------------------------------------|
-| `entityUrls` | string array | Yes      | The relative resource paths to fetch (for example, `/me/messages`, `/me/events/{event-id}`) |
-| `agentId`    | string       | No       | Reserved for future use.                                                                    |
+| Parameter    | Type         | Required | Description                                                                                    |
+|--------------|--------------|----------|------------------------------------------------------------------------------------------------|
+| `entityUrls` | string array | Yes      | The relative resource paths to fetch (for example, `/me/messages`, `/me/events/{event-id}`)    |
+| `query`      | string       | No       | Natural-language intent for [untrusted-content sanitization](#untrusted-content-sanitization). |
+| `agentId`    | string       | No       | Reserved for future use.                                                                       |
 
 #### Response
 
@@ -843,6 +844,23 @@ Error details can include:
 - Request correlation IDs and timestamps for troubleshooting.
 
 The server doesn't perform automatic retries. The MCP client makes retry decisions based on the tool result as well as the HTTP status. For throttling, honor the retry delay when provided. If the delay is missing or unknown, use exponential backoff with jitter and a bounded retry count. Avoid immediate or unlimited retries. Retain correlation IDs and timestamps if throttling persists and you need support.
+
+## Untrusted-content sanitization
+
+> [!IMPORTANT]
+> Untrusted-content sanitization is available in preview.
+
+Specific Work IQ tools can transform Microsoft 365 content in an intent-aware sanitization process. This process removes or neutralizes injected harmful instructions (cross-prompt injection attacks) while preserving benign content. This content transformation capability applies only to the following paths and content.
+
+| Work IQ path | Sanitization behavior and scope |
+|---|---|
+| MCP `ask`, A2A, and REST | The tools sanitize email, calendar-invitation, and Word-document grounding content before Microsoft 365 Copilot uses it to synthesize an answer. The Word-document scope includes extracted text from `.doc`, `.docx`, and `.docm` files. This sanitization is a built-in defense that improves the safety of synthesized responses. |
+| MCP `retrieve` | The tools sanitize email, calendar-invitation, and Word-document source content before building cited Markdown. Items selected for sanitization receive an untrusted-content annotation and metadata that indicate whether sanitization completed. This sanitization is a built-in defense that improves the safety of synthesized responses. |
+| MCP `fetch` | The tools sanitize eligible email and calendar-invitation fields (`subject`, `bodyPreview`, and `body`/`body.content`) before returning them, but only when you supply `query` to request sanitization. Items selected for sanitization receive an annotation and metadata that indicate whether sanitization completed. |
+
+Sanitization for `fetch` is limited to mailbox-message and calendar-event paths where `$select` is absent or includes `body`, `bodyPreview`, or `subject`. The tools only sanitize the email `subject`, `bodyPreview`, and `body.content` fields, and the calendar-invitation `subject`, `bodyPreview`, and `body` fields. `fetch` doesn't sanitize other object types and fields, including attachments and Word documents.
+
+Sanitization reduces the risk of content but doesn't guarantee that content is accurate or safe. You're still responsible for application-specific filtering and sensitive-information redaction.
 
 ## Related content
 
