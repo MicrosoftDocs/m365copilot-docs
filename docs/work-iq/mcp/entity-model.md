@@ -25,6 +25,9 @@ In Work IQ MCP, an entity is a resource that an agent can read or act on through
 - Teams chats and messages
 - Files in OneDrive and SharePoint
 - People and profile data
+- SharePoint content and workflows
+- Office documents
+- Viva Engage communities
 
 Supported entity categories will expand as more Microsoft 365 workloads are added to Work IQ MCP.
 
