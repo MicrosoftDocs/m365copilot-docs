@@ -15,6 +15,8 @@ items:
   href: cli.md
 - name: Work IQ Listen (preview)
   href: listen.md
+- name: Real-time transcripts (preview)
+  href: real-time-transcripts.md
 - name: SharePoint Tools (preview)
   href: sharepoint-iq.md
 - name: Office Document Tools (preview)
