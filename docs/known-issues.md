@@ -103,7 +103,7 @@ The following OpenAPI features aren't supported for API plugins:
 
 - Nested objects in API method request bodies or parameters.
 - Polymorphic references (`oneOf`, `allOf`, `anyOf`) and circular references. As a workaround, use a flattened schema.
-- API keys in custom headers, query parameters, or cookies.
+- API keys in cookies. API keys in the `Authorization` header as a bearer token, in a custom header, or in a query parameter are supported. For details, see [Configure API key authentication](/plugins/plugin-authentication-api-key).
 - [OAuth grant flows](https://oauth.net/2/grant-types) other than vanilla Authcode and PKCE Authcode.
 - Dual authentication flows (OAuth/Entra SSO + HTTP Bearer token) for a single API endpoint.
 - Settings UI to reset always allow states. As a workaround, uninstall the app to reset the allow state.
