@@ -23,7 +23,7 @@ Before you start, make sure you have:
 - A Microsoft Foundry project with a deployed model.
 - The **Foundry Project Manager** role on the Foundry project to create the Work IQ connection.
 - The **Foundry User** role on the Foundry project for the developer identity, agent runtime identity, and users involved in OAuth flows.
-- A Microsoft 365 Copilot license for each user who calls Work IQ through your agent.
+- Usage-based billing with Copilot Credits set up for your organization. Calling Work IQ through the MCP endpoint uses Copilot Credits billing and doesn't require connector licensing. For setup details, see [Enable your tenant for Work IQ](../../enable-work-iq.md) and [Understand usage-based billing and cost management for Copilot Credits](/microsoft-365-copilot/usage-based-billing-overview-copilot-credits).
 - A Microsoft Entra Global Administrator who can grant admin consent for the `WorkIQAgent.Ask` delegated permission.
 
 > [!NOTE]
